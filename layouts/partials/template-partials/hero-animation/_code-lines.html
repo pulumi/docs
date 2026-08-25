@@ -20,12 +20,13 @@
 {{- $oy := .originY -}}
 {{- $colors := .colors -}}
 {{- $kind := .kind -}}
+{{- $clipPrefix := .clipPrefix | default "hal-lc" -}}
 {{- $idx := 0 -}}
 {{- range $row, $line := .lines }}
     {{- if $line }}
         {{- $chars := 0 }}{{ range $line }}{{ $chars = add $chars (strings.RuneCount (index . 1)) }}{{ end }}
         {{- $y := printf "%.2f" (add $oy (add 13.47 (mul $row 18))) }}
-        <text {{ if eq $kind "code" }}data-code-line data-chars="{{ $chars }}" clip-path="url(#hal-lc{{ $idx }})"{{ else }}data-term-line{{ end }} y="{{ $y }}" xml:space="preserve">
+        <text {{ if eq $kind "code" }}data-code-line data-chars="{{ $chars }}" clip-path="url(#{{ $clipPrefix }}{{ $idx }})"{{ else }}data-term-line{{ end }} y="{{ $y }}" xml:space="preserve">
             {{- $col := 0 -}}
             {{- range $line -}}
                 <tspan x="{{ printf "%.3f" (add $ox (mul $col $CW)) }}" fill="{{ index $colors (index . 0) }}">{{ index . 1 }}</tspan>

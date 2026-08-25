@@ -29,6 +29,21 @@ const AGENT_WEIGHTS: { [agent: string]: number } = {
     "opencode": 4,
 };
 
+// Unselected agent and language logos recede to violet-400 when the choice
+// lands; everything is authored (and reset to) the full violet-700.
+const LOGO_FILL = "#5A30C5";
+const LOGO_DIM_FILL = "#9077F3";
+
+// Where the chosen language's icon parks in the code panel (bbox center, from
+// the storyboard's TypeScript icon at 596,168 - 619.4,191.4).
+const PANEL_LANG_CENTER = { x: 607.72, y: 179.72 };
+
+// The write beat always takes the same wall time; per-character speed adapts
+// to the chosen language's example. Bursts (blank-line groups in the source)
+// pause for a fixed number of character-units.
+const TYPE_SECONDS = 2.7;
+const TYPE_PAUSE_UNITS = 40;
+
 const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 
 const CI_PR_REST_X = -10;
@@ -80,7 +95,16 @@ function init(): void {
 
     const codeLines = qa<SVGTextElement>(root, "[data-code-line]");
     const lineClips = qa<SVGRectElement>(root, "[data-lc]");
+    const editorGroups = qa<SVGGElement>(root, "[data-editor-lang]");
     const caret = q<SVGRectElement>(root, "[data-caret]");
+
+    const langRow = q<SVGGElement>(root, "[data-lang-row]");
+    const langTiles = qa<SVGGElement>(root, "[data-lang]");
+    const langRects = qa<SVGRectElement>(root, "[data-lang-rect]");
+    const langLogos = qa<SVGGElement>(root, "[data-lang-logo]");
+    const langStroke = q<SVGRectElement>(root, "[data-lang-stroke]");
+    const langHalo = q<SVGRectElement>(root, "[data-lang-halo]");
+    const panelLang = q<SVGGElement>(root, "[data-panel-lang]");
 
     const termClip = q<SVGGElement>(root, "[data-term-clip]");
     const termScroll = q<SVGGElement>(root, "[data-term-scroll]");
@@ -162,16 +186,128 @@ function init(): void {
         gsap.set([aFill, glyph], { autoAlpha: 1 });
     }
 
+    // ------------------------------------------------------------------
+    // The language. A uniform-random pick each pass; the chosen tile takes
+    // the selection chrome, its icon travels to the code panel's corner, and
+    // the matching editor example types in.
+    // ------------------------------------------------------------------
+    let chosenLang = 0;
+    const langDelta = { x: 0, y: 0 };
+
+    const agentPaths = tileLogos.map(g => qa<SVGPathElement>(g, "path"));
+    const langPaths = langLogos.map(g => qa<SVGPathElement>(g, "path"));
+
+    function dimUnselected(paths: SVGPathElement[][], keep: number): void {
+        const targets: SVGPathElement[] = [];
+        paths.forEach((ps, i) => {
+            if (i !== keep) {
+                targets.push.apply(targets, ps);
+            }
+        });
+        gsap.to(targets, { attr: { fill: LOGO_DIM_FILL }, duration: 0.35 });
+    }
+
+    function adoptLanguage(): void {
+        panelLang.appendChild(langLogos[chosenLang]);
+        gsap.set(panelLang, { autoAlpha: 1 });
+    }
+
+    // Typing state for the active language, rebuilt each pass: per-line
+    // character counts plus pause segments between blank-line bursts, mapped
+    // onto one 0..1 progress tween.
+    type TypeSegment = { line: number; startU: number; units: number };
+    let typeSegments: TypeSegment[] = [];
+    let typeTotal = 1;
+    let activeEditor: SVGGElement | null = null;
+    let activeLines: SVGTextElement[] = [];
+    let activeClips: SVGRectElement[] = [];
+
+    function prepareTyping(): void {
+        const lang = langTiles[chosenLang].getAttribute("data-language") || "";
+        activeEditor = editorGroups.filter(g => g.getAttribute("data-editor-lang") === lang)[0];
+        activeLines = qa<SVGTextElement>(activeEditor, "[data-code-line]");
+        activeClips = qa<SVGRectElement>(root as HTMLElement, '[data-lc="' + lang + '"]');
+        typeSegments = [];
+        let u = 0;
+        let prevRow = -1;
+        for (let i = 0; i < activeLines.length; i++) {
+            const row = Math.round((parseFloat(activeClips[i].getAttribute("y") || "166") - 166) / 18);
+            if (prevRow >= 0 && row - prevRow > 1) {
+                u += TYPE_PAUSE_UNITS;
+            }
+            const chars = parseInt(activeLines[i].getAttribute("data-chars") || "0", 10);
+            typeSegments.push({ line: i, startU: u, units: chars });
+            u += chars;
+            prevRow = row;
+        }
+        typeTotal = Math.max(1, u);
+    }
+
+    function renderTyping(p: number): void {
+        const u = p * typeTotal;
+        let caretClip: SVGRectElement | null = null;
+        let caretChars = 0;
+        for (let i = 0; i < typeSegments.length; i++) {
+            const seg = typeSegments[i];
+            const clip = activeClips[seg.line];
+            if (u >= seg.startU + seg.units) {
+                clip.setAttribute("width", String(seg.units * CW + 2));
+                caretClip = clip;
+                caretChars = seg.units;
+            } else if (u > seg.startU) {
+                const c = Math.floor(u - seg.startU);
+                clip.setAttribute("width", String(c * CW + 2));
+                caretClip = clip;
+                caretChars = c;
+            } else {
+                break;
+            }
+        }
+        if (caretClip) {
+            caret.setAttribute("x", String(CODE_TEXT_X + caretChars * CW));
+            caret.setAttribute("y", caretClip.getAttribute("y") || "166");
+        }
+    }
+
     function reset(): void {
         for (let i = 0; i < tileLogos.length; i++) {
             if (tileLogos[i].parentNode !== tiles[i]) {
                 tiles[i].appendChild(tileLogos[i]);
             }
         }
+        for (let i = 0; i < langLogos.length; i++) {
+            if (langLogos[i].parentNode !== langTiles[i]) {
+                langTiles[i].appendChild(langLogos[i]);
+            }
+        }
         chosen = pickAgent();
         const bb = tileLogos[chosen].getBBox();
         perch.x = PERCH.x - (bb.x + bb.width / 2);
         perch.y = PERCH.bottom - (bb.y + bb.height);
+
+        chosenLang = Math.floor(Math.random() * langTiles.length);
+        const lb = langLogos[chosenLang].getBBox();
+        langDelta.x = PANEL_LANG_CENTER.x - (lb.x + lb.width / 2);
+        langDelta.y = PANEL_LANG_CENTER.y - (lb.y + lb.height / 2);
+        prepareTyping();
+
+        const agentAndLangPaths: SVGPathElement[] = [];
+        agentPaths.concat(langPaths).forEach(ps => {
+            agentAndLangPaths.push.apply(agentAndLangPaths, ps);
+        });
+        gsap.killTweensOf(agentAndLangPaths);
+        gsap.set(agentAndLangPaths, { attr: { fill: LOGO_FILL } });
+
+        gsap.set(langRow, { autoAlpha: 0, y: 16 });
+        const lx = parseFloat(langRects[chosenLang].getAttribute("x") || "215");
+        gsap.set(langStroke, { autoAlpha: 0, attr: { x: lx + 0.5, y: 411.5 } });
+        gsap.set(langHalo, { autoAlpha: 0, attr: { x: lx - 2.5, y: 408.5 } });
+        gsap.set(panelLang, { autoAlpha: 0, x: 0, y: 0 });
+
+        gsap.set(editorGroups, { autoAlpha: 0 });
+        if (activeEditor) {
+            gsap.set(activeEditor, { autoAlpha: 1 });
+        }
 
         gsap.set(tiles, { autoAlpha: 0, scale: 0.9, transformOrigin: "50% 50%" });
         gsap.set(prompt, { autoAlpha: 0, scale: 0.96, transformOrigin: "50% 50%" });
@@ -314,6 +450,7 @@ function init(): void {
 
     tl.set(aStroke, { autoAlpha: 1 }, 1.95);
     tl.to(aStroke, { attr: { "stroke-dashoffset": "0" }, duration: 0.35, ease: "power1.inOut" }, 1.95);
+    tl.call(() => dimUnselected(agentPaths, chosen), undefined, 2.0);
     tl.set(aStroke, { attr: { "stroke-dasharray": "none" } }, 2.32);
     tl.fromTo(
         aOuter,
@@ -331,54 +468,42 @@ function init(): void {
         2.1,
     );
 
-    tl.call(adoptProtagonist, undefined, 2.44);
-    tl.call(() => blink(promptBlink, promptCaret, false), undefined, 2.45);
-    tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.45);
-    tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(glyph, { y: () => perch.y, duration: 0.75, ease: "power2.out" }, 2.55);
+    tl.fromTo(langRow, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 0.45);
+    tl.fromTo(langStroke, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, immediateRender: false }, 2.5);
+    const langCellX = () => parseFloat(langRects[chosenLang].getAttribute("x") || "215");
+    tl.fromTo(
+        langHalo,
+        { autoAlpha: 0, attr: { x: () => langCellX() + 0.5, y: 411.5, width: 33, height: 33, rx: 7.5 } },
+        { autoAlpha: 1, attr: { x: () => langCellX() - 2.5, y: 408.5, width: 39, height: 39, rx: 7.5 }, duration: 0.25, ease: "power2.out", immediateRender: false },
+        2.55,
+    );
+    tl.call(() => dimUnselected(langPaths, chosenLang), undefined, 2.55);
 
-    const CHAR_T = 0.0075;
-    const bursts: number[][] = [
-        [0, 1],
-        [2, 3],
-        [4, 5, 6, 7, 8, 9, 10],
-    ];
-    let cursor = 3.4;
-    bursts.forEach((burst, b) => {
-        tl.call(() => blink(caretBlink, caret, false), undefined, cursor);
-        burst.forEach(k => {
-            const chars = parseInt(codeLines[k].getAttribute("data-chars") || "0", 10);
-            const clip = lineClips[k];
-            const rowTop = clip.getAttribute("y");
-            const type = trackProxy({ c: 0 });
-            tl.call(() => gsap.set(caret, { opacity: 1, attr: { y: rowTop as string, x: CODE_TEXT_X } }), undefined, cursor);
-            tl.to(
-                type,
-                {
-                    c: chars,
-                    duration: chars * CHAR_T,
-                    ease: "none",
-                    snap: { c: 1 },
-                    onUpdate: () => {
-                        const w = type.c * CW;
-                        clip.setAttribute("width", String(w + 2));
-                        caret.setAttribute("x", String(CODE_TEXT_X + w));
-                    },
-                },
-                cursor,
-            );
-            cursor += chars * CHAR_T;
-        });
-        if (b < bursts.length - 1) {
-            tl.call(() => blink(caretBlink, caret, true), undefined, cursor + 0.01);
-            cursor += 0.35;
-        }
-    });
-    tl.call(() => blink(caretBlink, caret, true), undefined, cursor + 0.01);
-    const doneWriting = cursor + 0.4;
+    tl.call(adoptProtagonist, undefined, 2.7);
+    tl.call(adoptLanguage, undefined, 2.7);
+    tl.call(() => blink(promptBlink, promptCaret, false), undefined, 2.71);
+    tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.7);
+    tl.to(langRow, { autoAlpha: 0, duration: 0.25 }, 2.85);
+    tl.to(panelLang, { x: () => langDelta.x, y: () => langDelta.y, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(glyph, { y: () => perch.y, duration: 0.75, ease: "power2.out" }, 2.8);
+
+    const TYPE_START = 3.65;
+    const typeProxy = trackProxy({ p: 0 });
+    tl.call(
+        () => {
+            blink(caretBlink, caret, false);
+            gsap.set(caret, { opacity: 1, attr: { x: CODE_TEXT_X, y: activeClips.length ? (activeClips[0].getAttribute("y") as string) : "166" } });
+        },
+        undefined,
+        TYPE_START - 0.01,
+    );
+    tl.to(typeProxy, { p: 1, duration: TYPE_SECONDS, ease: "none", onUpdate: () => renderTyping(typeProxy.p) }, TYPE_START);
+    tl.call(() => blink(caretBlink, caret, true), undefined, TYPE_START + TYPE_SECONDS + 0.01);
+    const doneWriting = TYPE_START + TYPE_SECONDS + 0.35;
 
     tl.to(aStroke, { autoAlpha: 0, duration: 0.25 }, doneWriting);
     tl.call(() => blink(caretBlink, caret, false), undefined, doneWriting - 0.02);
@@ -405,7 +530,10 @@ function init(): void {
     tl.to(badgeBodies[0], { autoAlpha: 1, duration: 0.3 }, testsBadgeAt + 0.15);
 
     const rollA = testsBadgeAt + 0.75;
-    tl.to(codeLines, { y: -22, opacity: 0, duration: 0.2, stagger: 0.02, ease: "power1.in" }, rollA - 0.15);
+    // The wipe targets whichever language's lines are active this pass, so it
+    // spawns from a callback rather than a fixed-target timeline child.
+    tl.call(() => gsap.to(activeLines, { y: -22, opacity: 0, duration: 0.2, stagger: 0.02, ease: "power1.in" }), undefined, rollA - 0.15);
+    tl.to(panelLang, { autoAlpha: 0, duration: 0.3 }, rollA);
     tl.to(aFill, { autoAlpha: 0, duration: 0.35 }, rollA);
     const shellA = trackProxy({ top: PANEL_OUTER.y, h: 310, rx: 21.5 });
     tl.to(

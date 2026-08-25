@@ -1,34 +1,121 @@
 # The text content of the homepage hero animation (the agent-loop scene):
-# the Pulumi program the agent types and the pulumi up stream in the terminal.
+# the Pulumi program the agent types — one example per language, adapted from
+# the classic code-selector hero — and the pulumi up stream in the terminal.
 #
-# To change either, edit the plain-text sources below, then run
+# To change any of them, edit the plain-text sources below, then run
 #
 #   yarn --cwd theme gen:hero-text
 #
-# which re-highlights them with shiki (min-light theme; TypeScript for the
-# editor, bash for the terminal — the same highlighting the storyboards used)
-# and rewrites the generated colors/editor/terminal sections underneath.
-# Nothing runs at build or page-load time; the runs below are what
-# layouts/partials/template-partials/hero-animation/_code-lines.html renders,
-# with every x position derived from monospace column math (Monaspace Neon,
-# 7.44141px advance at font-size 12). A blank line is a blank row. If you add
-# or remove terminal rows, shift TERM_SCROLL_END in
-# theme/src/ts/hero-animation.ts by 18px per row.
+# which re-highlights them with shiki (min-light theme; each language's own
+# grammar for the editor, bash for the terminal — the same highlighting the
+# storyboards used) and rewrites the generated colors/editors/terminal
+# sections underneath. Nothing runs at build or page-load time; the runs
+# below are what _code-lines.html renders, with every x position derived from
+# monospace column math (Monaspace Neon, 7.44141px advance at font-size 12).
+#
+# Editor examples must fit the code panel: at most 13 rows, and lines longer
+# than ~68 characters clip at the panel's right edge. A blank line is a blank
+# row and separates the typing animation's bursts. If you add or remove
+# terminal rows, shift TERM_SCROLL_END in theme/src/ts/hero-animation.ts by
+# 18px per row.
 
-editor_source: |
-  import * as aws from "@pulumi/aws";
-  import * as awsx from "@pulumi/awsx";
+editor_sources:
+  typescript: |
+    import * as aws from "@pulumi/aws";
+    import * as awsx from "@pulumi/awsx";
 
-  const vpc = new awsx.ec2.Vpc("vpc");
-  const azs = await aws.getAvailabilityZones({ state: "available" });
+    const vpc = new awsx.ec2.Vpc("vpc");
+    const azs = await aws.getAvailabilityZones({ state: "available" });
 
-  const subnets = azs.names.map((az, i) =>
-    new aws.ec2.Subnet(`subnet-${i}`, {
-      vpcId: vpc.vpcId,
-      cidrBlock: `10.0.${i}.0/24`,
-      availabilityZone: az,
+    const subnets = azs.names.map((az, i) =>
+      new aws.ec2.Subnet(`subnet-${i}`, {
+        vpcId: vpc.vpcId,
+        cidrBlock: `10.0.${i}.0/24`,
+        availabilityZone: az,
+      })
+    );
+  python: |
+    import pulumi_aws as aws
+    import pulumi_awsx as awsx
+
+    azs = aws.get_availability_zones(state="available")
+    vpc = awsx.ec2.Vpc("vpc")
+
+    for i, az in enumerate(azs.names):
+        aws.ec2.Subnet(f"subnet-{i}",
+            vpc_id=vpc.vpc_id,
+            cidr_block=f"10.0.{i}.0/24",
+            availability_zone=az,
+        )
+  go: |
+    pulumi.Run(func(ctx *pulumi.Context) error {
+      vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
+      azs, _ := aws.GetAvailabilityZones(ctx, nil, nil)
+      for i, az := range azs.Names {
+        name := fmt.Sprintf("subnet-%d", i)
+        ec2.NewSubnet(ctx, name, &ec2.SubnetArgs{
+          VpcId:            vpc.VpcId,
+          CidrBlock:        pulumi.Sprintf("10.0.%d.0/24", i),
+          AvailabilityZone: pulumi.String(az),
+        })
+      }
+      return nil
     })
-  );
+  csharp: |
+    var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
+    var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
+
+    var subnets = azs.Apply(zones =>
+        zones.Names.Select((az, i) =>
+            new Subnet($"subnet-{i}", new()
+            {
+                VpcId = vpc.VpcId,
+                CidrBlock = $"10.0.{i}.0/24",
+                AvailabilityZone = az,
+            })
+        ).ToList()
+    );
+  java: |
+    Pulumi.run(ctx -> {
+        var vpc = new Vpc("vpc");
+        var azs = AwsFunctions.getAvailabilityZonesPlain().join();
+
+        var names = azs.names();
+        for (int i = 0; i < names.size(); i++) {
+            new Subnet("subnet-" + i, SubnetArgs.builder()
+                .vpcId(vpc.id())
+                .cidrBlock("10.0." + i + ".0/24")
+                .availabilityZone(names.get(i))
+                .build());
+        }
+    });
+  hcl: |
+    resource "awsx_ec2_vpc" "vpc" {}
+
+    data "aws_availability_zones" "azs" {
+      state = "available"
+    }
+
+    resource "aws_subnet" "subnet" {
+      count             = length(data.aws_availability_zones.azs.names)
+      vpc_id            = awsx_ec2_vpc.vpc.vpc_id
+      cidr_block        = "10.0.${count.index}.0/24"
+      availability_zone = data.aws_availability_zones.azs.names[count.index]
+    }
+  yaml: |
+    variables:
+      azs:
+        fn::invoke:
+          function: aws:getAvailabilityZones
+    resources:
+      vpc:
+        type: awsx:ec2:Vpc
+      subnet-0:
+        type: aws:ec2:Subnet
+        properties:
+          vpcId: ${vpc.vpcId}
+          cidrBlock: "10.0.0.0/24"
+          availabilityZone: ${azs.names[0]}
 
 terminal_source: |
   pulumi up
@@ -87,85 +174,426 @@ colors:
   pun: "#212121" # punctuation
   tbl: "#2B5581" # terminal arguments, table text
 
-editor:
-  - - [kw, "import"]
-    - [id, " *"]
-    - [kw, " as"]
-    - [txt, " aws"]
-    - [kw, " from"]
-    - [str, " \"@pulumi/aws\""]
-    - [txt, ";"]
-  - - [kw, "import"]
-    - [id, " *"]
-    - [kw, " as"]
-    - [txt, " awsx"]
-    - [kw, " from"]
-    - [str, " \"@pulumi/awsx\""]
-    - [txt, ";"]
-  - []
-  - - [kw, "const"]
-    - [id, " vpc"]
-    - [kw, " = new"]
-    - [id, " awsx"]
-    - [mem, "."]
-    - [id, "ec2"]
-    - [mem, ".Vpc"]
-    - [txt, "("]
-    - [str, "\"vpc\""]
-    - [txt, ");"]
-  - - [kw, "const"]
-    - [id, " azs"]
-    - [kw, " = await"]
-    - [id, " aws"]
-    - [mem, ".getAvailabilityZones"]
-    - [txt, "({ state"]
-    - [kw, ":"]
-    - [str, " \"available\""]
-    - [txt, " });"]
-  - []
-  - - [kw, "const"]
-    - [id, " subnets"]
-    - [kw, " ="]
-    - [id, " azs"]
-    - [mem, "."]
-    - [id, "names"]
-    - [mem, ".map"]
-    - [txt, "((az"]
-    - [pun, ","]
-    - [txt, " i)"]
-    - [kw, " =>"]
-  - - [kw, "  new"]
-    - [id, " aws"]
-    - [mem, "."]
-    - [id, "ec2"]
-    - [mem, ".Subnet"]
-    - [txt, "("]
-    - [str, "`subnet-"]
-    - [kw, "${"]
-    - [txt, "i"]
-    - [kw, "}"]
-    - [str, "`"]
-    - [pun, ","]
-    - [txt, " {"]
-  - - [txt, "    vpcId"]
-    - [kw, ":"]
-    - [id, " vpc"]
-    - [txt, ".vpcId"]
-    - [pun, ","]
-  - - [txt, "    cidrBlock"]
-    - [kw, ":"]
-    - [str, " `10.0."]
-    - [kw, "${"]
-    - [txt, "i"]
-    - [kw, "}"]
-    - [str, ".0/24`"]
-    - [pun, ","]
-  - - [txt, "    availabilityZone"]
-    - [kw, ":"]
-    - [txt, " az"]
-    - [pun, ","]
-  - - [txt, "  })"]
-  - - [txt, ");"]
+editors:
+  typescript:
+    - - [kw, "import"]
+      - [id, " *"]
+      - [kw, " as"]
+      - [txt, " aws"]
+      - [kw, " from"]
+      - [str, " \"@pulumi/aws\""]
+      - [txt, ";"]
+    - - [kw, "import"]
+      - [id, " *"]
+      - [kw, " as"]
+      - [txt, " awsx"]
+      - [kw, " from"]
+      - [str, " \"@pulumi/awsx\""]
+      - [txt, ";"]
+    - []
+    - - [kw, "const"]
+      - [id, " vpc"]
+      - [kw, " = new"]
+      - [id, " awsx"]
+      - [mem, "."]
+      - [id, "ec2"]
+      - [mem, ".Vpc"]
+      - [txt, "("]
+      - [str, "\"vpc\""]
+      - [txt, ");"]
+    - - [kw, "const"]
+      - [id, " azs"]
+      - [kw, " = await"]
+      - [id, " aws"]
+      - [mem, ".getAvailabilityZones"]
+      - [txt, "({ state"]
+      - [kw, ":"]
+      - [str, " \"available\""]
+      - [txt, " });"]
+    - []
+    - - [kw, "const"]
+      - [id, " subnets"]
+      - [kw, " ="]
+      - [id, " azs"]
+      - [mem, "."]
+      - [id, "names"]
+      - [mem, ".map"]
+      - [txt, "((az"]
+      - [pun, ","]
+      - [txt, " i)"]
+      - [kw, " =>"]
+    - - [kw, "  new"]
+      - [id, " aws"]
+      - [mem, "."]
+      - [id, "ec2"]
+      - [mem, ".Subnet"]
+      - [txt, "("]
+      - [str, "`subnet-"]
+      - [kw, "${"]
+      - [txt, "i"]
+      - [kw, "}"]
+      - [str, "`"]
+      - [pun, ","]
+      - [txt, " {"]
+    - - [txt, "    vpcId"]
+      - [kw, ":"]
+      - [id, " vpc"]
+      - [txt, ".vpcId"]
+      - [pun, ","]
+    - - [txt, "    cidrBlock"]
+      - [kw, ":"]
+      - [str, " `10.0."]
+      - [kw, "${"]
+      - [txt, "i"]
+      - [kw, "}"]
+      - [str, ".0/24`"]
+      - [pun, ","]
+    - - [txt, "    availabilityZone"]
+      - [kw, ":"]
+      - [txt, " az"]
+      - [pun, ","]
+    - - [txt, "  })"]
+    - - [txt, ");"]
+  python:
+    - - [kw, "import"]
+      - [txt, " pulumi_aws"]
+      - [kw, " as"]
+      - [txt, " aws"]
+    - - [kw, "import"]
+      - [txt, " pulumi_awsx"]
+      - [kw, " as"]
+      - [txt, " awsx"]
+    - []
+    - - [txt, "azs"]
+      - [kw, " ="]
+      - [txt, " aws"]
+      - [pun, "."]
+      - [mem, "get_availability_zones"]
+      - [pun, "(state"]
+      - [kw, "="]
+      - [str, "\"available\""]
+      - [pun, ")"]
+    - - [txt, "vpc"]
+      - [kw, " ="]
+      - [txt, " awsx"]
+      - [pun, "."]
+      - [txt, "ec2"]
+      - [pun, "."]
+      - [mem, "Vpc"]
+      - [pun, "("]
+      - [str, "\"vpc\""]
+      - [pun, ")"]
+    - []
+    - - [kw, "for"]
+      - [txt, " i"]
+      - [pun, ","]
+      - [txt, " az"]
+      - [kw, " in"]
+      - [mem, " enumerate"]
+      - [pun, "(azs.names):"]
+    - - [txt, "    aws"]
+      - [pun, "."]
+      - [txt, "ec2"]
+      - [pun, "."]
+      - [mem, "Subnet"]
+      - [pun, "("]
+      - [kw, "f"]
+      - [str, "\"subnet-"]
+      - [id, "{"]
+      - [pun, "i"]
+      - [id, "}"]
+      - [str, "\""]
+      - [pun, ","]
+    - - [pun, "        vpc_id"]
+      - [kw, "="]
+      - [pun, "vpc.vpc_id,"]
+    - - [pun, "        cidr_block"]
+      - [kw, "=f"]
+      - [str, "\"10.0."]
+      - [id, "{"]
+      - [pun, "i"]
+      - [id, "}"]
+      - [str, ".0/24\""]
+      - [pun, ","]
+    - - [pun, "        availability_zone"]
+      - [kw, "="]
+      - [pun, "az,"]
+    - - [pun, "    )"]
+  go:
+    - - [txt, "pulumi."]
+      - [mem, "Run"]
+      - [txt, "("]
+      - [kw, "func"]
+      - [txt, "(ctx"]
+      - [kw, " *"]
+      - [mem, "pulumi"]
+      - [txt, "."]
+      - [mem, "Context"]
+      - [txt, ")"]
+      - [kw, " error"]
+      - [txt, " {"]
+    - - [txt, "  vpc, _"]
+      - [kw, " :="]
+      - [txt, " awsx."]
+      - [mem, "NewVpc"]
+      - [txt, "(ctx,"]
+      - [str, " \"vpc\""]
+      - [txt, ","]
+      - [id, " nil"]
+      - [txt, ")"]
+    - - [txt, "  azs, _"]
+      - [kw, " :="]
+      - [txt, " aws."]
+      - [mem, "GetAvailabilityZones"]
+      - [txt, "(ctx,"]
+      - [id, " nil"]
+      - [txt, ","]
+      - [id, " nil"]
+      - [txt, ")"]
+    - - [kw, "  for"]
+      - [txt, " i, az"]
+      - [kw, " := range"]
+      - [txt, " azs.Names {"]
+    - - [txt, "    name"]
+      - [kw, " :="]
+      - [txt, " fmt."]
+      - [mem, "Sprintf"]
+      - [txt, "("]
+      - [str, "\"subnet-"]
+      - [id, "%d"]
+      - [str, "\""]
+      - [txt, ", i)"]
+    - - [txt, "    ec2."]
+      - [mem, "NewSubnet"]
+      - [txt, "(ctx, name,"]
+      - [kw, " &"]
+      - [mem, "ec2"]
+      - [txt, "."]
+      - [mem, "SubnetArgs"]
+      - [txt, "{"]
+    - - [txt, "      VpcId:            vpc.VpcId,"]
+    - - [txt, "      CidrBlock:        pulumi."]
+      - [mem, "Sprintf"]
+      - [txt, "("]
+      - [str, "\"10.0."]
+      - [id, "%d"]
+      - [str, ".0/24\""]
+      - [txt, ", i),"]
+    - - [txt, "      AvailabilityZone: pulumi."]
+      - [mem, "String"]
+      - [txt, "(az),"]
+    - - [txt, "    })"]
+    - - [txt, "  }"]
+    - - [kw, "  return"]
+      - [id, " nil"]
+    - - [txt, "})"]
+  csharp:
+    - - [kw, "var"]
+      - [txt, " vpc"]
+      - [kw, " = new"]
+      - [mem, " Pulumi"]
+      - [txt, "."]
+      - [mem, "Awsx"]
+      - [txt, "."]
+      - [mem, "Ec2"]
+      - [txt, "."]
+      - [mem, "Vpc"]
+      - [txt, "("]
+      - [str, "\"vpc\""]
+      - [txt, ");"]
+    - - [kw, "var"]
+      - [txt, " azs"]
+      - [kw, " ="]
+      - [id, " GetAvailabilityZones"]
+      - [txt, "."]
+      - [mem, "Invoke"]
+      - [txt, "("]
+      - [kw, "new"]
+      - [txt, "() { State"]
+      - [kw, " ="]
+      - [str, " \"available\""]
+      - [txt, " });"]
+    - []
+    - - [kw, "var"]
+      - [txt, " subnets"]
+      - [kw, " ="]
+      - [id, " azs"]
+      - [txt, "."]
+      - [mem, "Apply"]
+      - [txt, "(zones"]
+      - [kw, " =>"]
+    - - [id, "    zones"]
+      - [txt, "."]
+      - [id, "Names"]
+      - [txt, "."]
+      - [mem, "Select"]
+      - [txt, "((az"]
+      - [pun, ","]
+      - [txt, " i)"]
+      - [kw, " =>"]
+    - - [kw, "        new"]
+      - [mem, " Subnet"]
+      - [txt, "("]
+      - [str, "$\"subnet-{i}\""]
+      - [pun, ","]
+      - [kw, " new"]
+      - [txt, "()"]
+    - - [txt, "        {"]
+    - - [txt, "            VpcId"]
+      - [kw, " ="]
+      - [id, " vpc"]
+      - [txt, "."]
+      - [id, "VpcId"]
+      - [pun, ","]
+    - - [txt, "            CidrBlock"]
+      - [kw, " ="]
+      - [str, " $\"10.0.{i}.0/24\""]
+      - [pun, ","]
+    - - [txt, "            AvailabilityZone"]
+      - [kw, " ="]
+      - [txt, " az"]
+      - [pun, ","]
+    - - [txt, "        })"]
+    - - [txt, "    )."]
+      - [mem, "ToList"]
+      - [txt, "()"]
+    - - [txt, ");"]
+  java:
+    - - [id, "Pulumi"]
+      - [pun, "."]
+      - [mem, "run"]
+      - [txt, "(ctx"]
+      - [kw, " ->"]
+      - [txt, " {"]
+    - - [kw, "    var"]
+      - [txt, " vpc"]
+      - [kw, " = new"]
+      - [mem, " Vpc("]
+      - [str, "\"vpc\""]
+      - [mem, ")"]
+      - [txt, ";"]
+    - - [kw, "    var"]
+      - [txt, " azs"]
+      - [kw, " ="]
+      - [id, " AwsFunctions"]
+      - [pun, "."]
+      - [mem, "getAvailabilityZonesPlain"]
+      - [txt, "()"]
+      - [pun, "."]
+      - [mem, "join"]
+      - [txt, "();"]
+    - []
+    - - [kw, "    var"]
+      - [txt, " names"]
+      - [kw, " ="]
+      - [id, " azs"]
+      - [pun, "."]
+      - [mem, "names"]
+      - [txt, "();"]
+    - - [kw, "    for"]
+      - [txt, " ("]
+      - [kw, "int"]
+      - [txt, " i"]
+      - [kw, " ="]
+      - [id, " 0"]
+      - [txt, "; i"]
+      - [kw, " <"]
+      - [id, " names"]
+      - [pun, "."]
+      - [mem, "size"]
+      - [txt, "(); i"]
+      - [kw, "++"]
+      - [txt, ") {"]
+    - - [kw, "        new"]
+      - [mem, " Subnet("]
+      - [str, "\"subnet-\""]
+      - [kw, " +"]
+      - [mem, " i"]
+      - [pun, ","]
+      - [id, " SubnetArgs"]
+      - [pun, "."]
+      - [mem, "builder()"]
+    - - [pun, "            ."]
+      - [mem, "vpcId("]
+      - [id, "vpc"]
+      - [pun, "."]
+      - [mem, "id())"]
+    - - [pun, "            ."]
+      - [mem, "cidrBlock("]
+      - [str, "\"10.0.\""]
+      - [kw, " +"]
+      - [mem, " i"]
+      - [kw, " +"]
+      - [str, " \".0/24\""]
+      - [mem, ")"]
+    - - [pun, "            ."]
+      - [mem, "availabilityZone("]
+      - [id, "names"]
+      - [pun, "."]
+      - [mem, "get(i))"]
+    - - [pun, "            ."]
+      - [mem, "build())"]
+      - [txt, ";"]
+    - - [txt, "    }"]
+    - - [txt, "});"]
+  hcl:
+    - - [mem, "resource"]
+      - [txt, " \"awsx_ec2_vpc\" \"vpc\" {}"]
+    - []
+    - - [mem, "data"]
+      - [txt, " \"aws_availability_zones\" \"azs\" {"]
+    - - [txt, "  state"]
+      - [kw, " ="]
+      - [str, " \"available\""]
+    - - [txt, "}"]
+    - []
+    - - [mem, "resource"]
+      - [txt, " \"aws_subnet\" \"subnet\" {"]
+    - - [txt, "  count"]
+      - [kw, "             ="]
+      - [mem, " length(data"]
+      - [txt, "."]
+      - [mem, "aws_availability_zones"]
+      - [txt, "."]
+      - [mem, "azs"]
+      - [txt, "."]
+      - [mem, "names)"]
+    - - [txt, "  vpc_id"]
+      - [kw, "            ="]
+      - [txt, " awsx_ec2_vpc.vpc.vpc_id"]
+    - - [txt, "  cidr_block"]
+      - [kw, "        ="]
+      - [str, " \"10.0."]
+      - [kw, "${"]
+      - [str, "count"]
+      - [txt, "."]
+      - [str, "index"]
+      - [kw, "}"]
+      - [str, ".0/24\""]
+    - - [txt, "  availability_zone"]
+      - [kw, " ="]
+      - [txt, " data.aws_availability_zones.azs.names[count.index]"]
+    - - [txt, "}"]
+  yaml:
+    - - [kw, "variables:"]
+    - - [kw, "  azs:"]
+    - - [kw, "    fn::invoke:"]
+    - - [kw, "      function:"]
+      - [str, " aws:getAvailabilityZones"]
+    - - [kw, "resources:"]
+    - - [kw, "  vpc:"]
+    - - [kw, "    type:"]
+      - [str, " awsx:ec2:Vpc"]
+    - - [kw, "  subnet-0:"]
+    - - [kw, "    type:"]
+      - [str, " aws:ec2:Subnet"]
+    - - [kw, "    properties:"]
+    - - [kw, "      vpcId:"]
+      - [str, " ${vpc.vpcId}"]
+    - - [kw, "      cidrBlock:"]
+      - [str, " \"10.0.0.0/24\""]
+    - - [kw, "      availabilityZone:"]
+      - [str, " ${azs.names[0]}"]
 
 terminal:
   - - [mem, "pulumi"]
