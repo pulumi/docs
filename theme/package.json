@@ -31,6 +31,7 @@
         "prettier": "2.8.8",
         "sass": "^1.102.0",
         "sass-loader": "^16.0.8",
+        "shiki": "^4.4.3",
         "tailwindcss": "^4",
         "terser-webpack-plugin": "^5.6.1",
         "ts-loader": "^9.6.2",
@@ -44,6 +45,7 @@
         "build": "yarn build:color-theme && yarn run webpack --mode production",
         "start": "yarn run concurrently 'yarn --cwd stencil run start' 'yarn run webpack --watch' --raw --kill-others",
         "lint": "prettier --check .",
-        "lint-fix": "prettier --write ."
+        "lint-fix": "prettier --write .",
+        "gen:hero-text": "node scripts/gen-hero-text.mjs"
     }
 }

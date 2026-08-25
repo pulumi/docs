@@ -1,46 +1,111 @@
 # The text content of the homepage hero animation (the agent-loop scene):
 # the Pulumi program the agent types and the pulumi up stream in the terminal.
-# Rendered by layouts/partials/template-partials/hero-animation/_code-lines.html.
 #
-# Each line is a list of [color, text] runs; colors are keys into the palette
-# below. The font is monospace (Monaspace Neon, 7.44141px advance at
-# font-size 12), so every run's x position is derived from the number of
-# characters before it — to change the text, just edit the strings, and use
-# literal spaces for indentation and column alignment. An empty list is a
-# blank line. The editor's per-line typing duration is derived from line
-# length automatically.
+# To change either, edit the plain-text sources below, then run
 #
-# The palette is the storyboard's GitHub-light syntax scheme.
+#   yarn --cwd theme gen:hero-text
+#
+# which re-highlights them with shiki (min-light theme; TypeScript for the
+# editor, bash for the terminal — the same highlighting the storyboards used)
+# and rewrites the generated colors/editor/terminal sections underneath.
+# Nothing runs at build or page-load time; the runs below are what
+# layouts/partials/template-partials/hero-animation/_code-lines.html renders,
+# with every x position derived from monospace column math (Monaspace Neon,
+# 7.44141px advance at font-size 12). A blank line is a blank row. If you add
+# or remove terminal rows, shift TERM_SCROLL_END in
+# theme/src/ts/hero-animation.ts by 18px per row.
+
+editor_source: |
+  import * as aws from "@pulumi/aws";
+  import * as awsx from "@pulumi/awsx";
+
+  const vpc = new awsx.ec2.Vpc("vpc");
+  const azs = await aws.getAvailabilityZones({ state: "available" });
+
+  const subnets = azs.names.map((az, i) =>
+    new aws.ec2.Subnet(`subnet-${i}`, {
+      vpcId: vpc.vpcId,
+      cidrBlock: `10.0.${i}.0/24`,
+      availabilityZone: az,
+    })
+  );
+
+terminal_source: |
+  pulumi up
+
+  Loading policy packs...
+
+  Previewing update (prod)
+       Type                                          Name              Status
+   +   pulumi:pulumi:Stack                           vpc-demo-prod      created
+   +   ├─ awsx:ec2:Vpc                               vpc               created
+   +   │  └─ aws:ec2/vpc:Vpc                         vpc               created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-1      created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-2      created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-3      created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-1     created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-2     created
+   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-3     created
+   +   │     ├─ aws:ec2/internetGateway:InternetGateway  vpc           created
+   +   │     ├─ aws:ec2/eip:Eip                      vpc-1             created
+   +   │     ├─ aws:ec2/eip:Eip                      vpc-2             created
+   +   │     ├─ aws:ec2/eip:Eip                      vpc-3             created
+   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-1             created
+   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-2             created
+   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-3             created
+   +   │     ├─ aws:ec2/routeTable:RouteTable        vpc-public-1      created
+   +   │     ├─ aws:ec2/routeTable:RouteTable        vpc-private-1     created
+   +   │     ├─ aws:ec2/route:Route                  vpc-public-1      created
+   +   │     ├─ aws:ec2/route:Route                  vpc-private-1     created
+   +   │     └─ aws:ec2/routeTableAssociation:RouteTableAssociation  vpc-public-1  created
+   +   ├─ aws:ec2/subnet:Subnet                      subnet-0          created
+   +   ├─ aws:ec2/subnet:Subnet                      subnet-1          created
+   +   ├─ aws:ec2/subnet:Subnet                      subnet-2          created
+   +   └─ aws:ec2/subnet:Subnet                      subnet-3          created
+
+  Outputs:
+      vpcId: "vpc-0a1b2c3d4e5f67890"
+
+  Resources:
+      + 23 created
+
+  Policy Packs run:
+      Name                    Version
+      cis-aws                 1.0.2
+      nist-aws                1.0.2
+      pci-dss-aws             2.0.4
+      iso-27001-aws           1.0.0
+
+  Duration: 1m47s
 
 colors:
   kw: "#D32F2F" # keywords
-  id: "#1976D2" # identifiers
-  str: "#22863A" # strings
-  mem: "#6F42C1" # members, methods; terminal headings
+  id: "#1976D2" # identifiers, numbers
   txt: "#24292E" # plain text
+  str: "#22863A" # strings
+  mem: "#6F42C1" # members, methods; terminal commands
   pun: "#212121" # punctuation
-  tbl: "#2B5581" # terminal resource table + tree glyphs
+  tbl: "#2B5581" # terminal arguments, table text
 
 editor:
   - - [kw, "import"]
     - [id, " *"]
     - [kw, " as"]
-    - [txt, " aws "]
-    - [kw, "from"]
+    - [txt, " aws"]
+    - [kw, " from"]
     - [str, " \"@pulumi/aws\""]
     - [txt, ";"]
   - - [kw, "import"]
     - [id, " *"]
     - [kw, " as"]
-    - [txt, " awsx "]
-    - [kw, "from"]
+    - [txt, " awsx"]
+    - [kw, " from"]
     - [str, " \"@pulumi/awsx\""]
     - [txt, ";"]
   - []
   - - [kw, "const"]
     - [id, " vpc"]
-    - [kw, " ="]
-    - [kw, " new"]
+    - [kw, " = new"]
     - [id, " awsx"]
     - [mem, "."]
     - [id, "ec2"]
@@ -50,8 +115,7 @@ editor:
     - [txt, ");"]
   - - [kw, "const"]
     - [id, " azs"]
-    - [kw, " ="]
-    - [kw, " await"]
+    - [kw, " = await"]
     - [id, " aws"]
     - [mem, ".getAvailabilityZones"]
     - [txt, "({ state"]
@@ -68,8 +132,8 @@ editor:
     - [mem, ".map"]
     - [txt, "((az"]
     - [pun, ","]
-    - [txt, " i) "]
-    - [kw, "=>"]
+    - [txt, " i)"]
+    - [kw, " =>"]
   - - [kw, "  new"]
     - [id, " aws"]
     - [mem, "."]
@@ -107,156 +171,64 @@ terminal:
   - - [mem, "pulumi"]
     - [tbl, " up"]
   - []
-  - - [mem, "Loading policy packs..."]
+  - - [mem, "Loading"]
+    - [tbl, " policy packs..."]
   - []
-  - - [mem, "Previewing update"]
+  - - [mem, "Previewing"]
+    - [tbl, " update"]
     - [txt, " (prod)"]
   - - [mem, "     Type"]
-    - [tbl, "                                          Name"]
-    - [tbl, "              Status"]
+    - [tbl, "                                          Name              Status"]
   - - [mem, " +"]
-    - [tbl, "   pulumi:pulumi:Stack"]
-    - [tbl, "                           vpc-demo-prod"]
-    - [tbl, "      created"]
+    - [tbl, "   pulumi:pulumi:Stack                           vpc-demo-prod      created"]
   - - [mem, " +"]
-    - [tbl, "   ├─"]
-    - [tbl, " awsx:ec2:Vpc"]
-    - [tbl, "                               vpc"]
-    - [tbl, "               created"]
+    - [tbl, "   ├─ awsx:ec2:Vpc                               vpc               created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "  └─"]
-    - [tbl, " aws:ec2/vpc:Vpc"]
-    - [tbl, "                         vpc"]
-    - [tbl, "               created"]
+    - [tbl, "   │  └─ aws:ec2/vpc:Vpc                         vpc               created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-public-1"]
-    - [tbl, "      created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-public-1      created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-public-2"]
-    - [tbl, "      created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-public-2      created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-public-3"]
-    - [tbl, "      created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-public-3      created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-private-1"]
-    - [tbl, "     created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-private-1     created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-private-2"]
-    - [tbl, "     created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-private-2     created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                vpc-private-3"]
-    - [tbl, "     created"]
+    - [tbl, "   │     ├─ aws:ec2/subnet:Subnet                vpc-private-3     created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/internetGateway:InternetGateway"]
-    - [tbl, "  vpc"]
-    - [tbl, "           created"]
+    - [tbl, "   │     ├─ aws:ec2/internetGateway:InternetGateway  vpc           created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/eip:Eip"]
-    - [tbl, "                      vpc-1"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/eip:Eip                      vpc-1             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/eip:Eip"]
-    - [tbl, "                      vpc-2"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/eip:Eip                      vpc-2             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/eip:Eip"]
-    - [tbl, "                      vpc-3"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/eip:Eip                      vpc-3             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/natGateway:NatGateway"]
-    - [tbl, "        vpc-1"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/natGateway:NatGateway        vpc-1             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/natGateway:NatGateway"]
-    - [tbl, "        vpc-2"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/natGateway:NatGateway        vpc-2             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/natGateway:NatGateway"]
-    - [tbl, "        vpc-3"]
-    - [tbl, "             created"]
+    - [tbl, "   │     ├─ aws:ec2/natGateway:NatGateway        vpc-3             created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/routeTable:RouteTable"]
-    - [tbl, "        vpc-public-1"]
-    - [tbl, "      created"]
+    - [tbl, "   │     ├─ aws:ec2/routeTable:RouteTable        vpc-public-1      created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/routeTable:RouteTable"]
-    - [tbl, "        vpc-private-1"]
-    - [tbl, "     created"]
+    - [tbl, "   │     ├─ aws:ec2/routeTable:RouteTable        vpc-private-1     created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/route:Route"]
-    - [tbl, "                  vpc-public-1"]
-    - [tbl, "      created"]
+    - [tbl, "   │     ├─ aws:ec2/route:Route                  vpc-public-1      created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     ├─"]
-    - [tbl, " aws:ec2/route:Route"]
-    - [tbl, "                  vpc-private-1"]
-    - [tbl, "     created"]
+    - [tbl, "   │     ├─ aws:ec2/route:Route                  vpc-private-1     created"]
   - - [mem, " +"]
-    - [tbl, "   │"]
-    - [tbl, "     └─"]
-    - [tbl, " aws:ec2/routeTableAssociation:RouteTableAssociation"]
-    - [tbl, "  vpc-public-1"]
-    - [tbl, "  created"]
+    - [tbl, "   │     └─ aws:ec2/routeTableAssociation:RouteTableAssociation  vpc-public-1  created"]
   - - [mem, " +"]
-    - [tbl, "   ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                      subnet-0"]
-    - [tbl, "          created"]
+    - [tbl, "   ├─ aws:ec2/subnet:Subnet                      subnet-0          created"]
   - - [mem, " +"]
-    - [tbl, "   ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                      subnet-1"]
-    - [tbl, "          created"]
+    - [tbl, "   ├─ aws:ec2/subnet:Subnet                      subnet-1          created"]
   - - [mem, " +"]
-    - [tbl, "   ├─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                      subnet-2"]
-    - [tbl, "          created"]
+    - [tbl, "   ├─ aws:ec2/subnet:Subnet                      subnet-2          created"]
   - - [mem, " +"]
-    - [tbl, "   └─"]
-    - [tbl, " aws:ec2/subnet:Subnet"]
-    - [tbl, "                      subnet-3"]
-    - [tbl, "          created"]
+    - [tbl, "   └─ aws:ec2/subnet:Subnet                      subnet-3          created"]
   - []
   - - [mem, "Outputs:"]
   - - [mem, "    vpcId:"]
@@ -267,17 +239,18 @@ terminal:
     - [id, " 23"]
     - [tbl, " created"]
   - []
-  - - [mem, "Policy Packs run:"]
-  - - [tbl, "    Name                    Version"]
-  - - [tbl, "    cis-aws"]
+  - - [mem, "Policy"]
+    - [tbl, " Packs run:"]
+  - - [mem, "    Name"]
+    - [tbl, "                    Version"]
+  - - [mem, "    cis-aws"]
     - [id, "                 1.0.2"]
-  - - [tbl, "    nist-aws"]
+  - - [mem, "    nist-aws"]
     - [id, "                1.0.2"]
-  - - [tbl, "    pci-dss-aws"]
+  - - [mem, "    pci-dss-aws"]
     - [id, "             2.0.4"]
-  - - [tbl, "    iso-27001-aws"]
+  - - [mem, "    iso-27001-aws"]
     - [id, "           1.0.0"]
   - []
   - - [mem, "Duration:"]
-    - [id, " 1"]
-    - [tbl, "m47s"]
+    - [tbl, " 1m47s"]
