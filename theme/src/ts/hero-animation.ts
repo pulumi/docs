@@ -33,6 +33,7 @@ const GLYPH_IN_TILE = { x: -112.605, y: 96.661 };
 const GLYPH_AT_TAB = -30; // pushed up by the ROLE tab
 const GLYPH_AT_PLATE = -70; // pushed up by the isometric plate
 
+const CUBE_H = 84.752; // vertical edge length of the subnet cubes (extrusion height)
 const TERM_SCROLL_END = -466; // lands the stream on Outputs / Duration
 const TERM_FOLD_Y = 410; // stream lines with baselines beyond this start below the fold
 
@@ -122,6 +123,9 @@ function init(): void {
         gsap.set(promptCaret, { opacity: 0, attr: { x: PROMPT_TEXT_X } });
 
         gsap.set(aFill, { autoAlpha: 0, scale: 0.9, transformOrigin: "50% 50%", attr: TILE_FILL });
+        // Hidden dash state carries margin on both sides ("1 2" pattern,
+        // offset 1.5) — parking the offset exactly at the pattern boundary
+        // leaves antialiased slivers of the stroke's rounded corners visible.
         gsap.set(aStroke, {
             autoAlpha: 0,
             attr: {
@@ -130,8 +134,8 @@ function init(): void {
                 "width": TILE_FILL.width,
                 "height": TILE_FILL.height,
                 "rx": TILE_FILL.rx,
-                "stroke-dasharray": "1",
-                "stroke-dashoffset": "1",
+                "stroke-dasharray": "1 2",
+                "stroke-dashoffset": "1.5",
             },
         });
         gsap.set(aOuter, { autoAlpha: 0, attr: TILE_OUTER });
@@ -169,7 +173,7 @@ function init(): void {
         gsap.set(ciSpins, { autoAlpha: 0, scale: 0.6, transformOrigin: "50% 50%" });
         gsap.set(ciChecks, { autoAlpha: 0 });
 
-        gsap.set(badgeRects, { attr: { "stroke-dasharray": "1", "stroke-dashoffset": "1" } });
+        gsap.set(badgeRects, { attr: { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" } });
         gsap.set(badgeBodies, { autoAlpha: 0 });
 
         gsap.set(policyRow, { autoAlpha: 1 });
@@ -181,10 +185,11 @@ function init(): void {
         gsap.set(diagram, { autoAlpha: 1 });
         gsap.set(plate, { autoAlpha: 0, scale: 0.85, svgOrigin: "372 260" });
         gsap.set(plateDetail, { autoAlpha: 0 });
-        cubes.forEach(cube => {
-            gsap.set(cube, { autoAlpha: 0, scale: 0.05, svgOrigin: cube.getAttribute("data-o") || "372 260" });
-        });
-        gsap.set(qa(root as HTMLElement, "[data-cube-edge]"), { attr: { "stroke-dasharray": "1", "stroke-dashoffset": "1" } });
+        // Cubes start flattened onto the plate: top face dropped onto the
+        // bottom face, vertical edges at zero height.
+        gsap.set(cubes, { autoAlpha: 0 });
+        gsap.set(qa(root as HTMLElement, "[data-cube-top]"), { y: CUBE_H });
+        gsap.set(qa(root as HTMLElement, "[data-cube-edge]"), { scaleY: 0.001, transformOrigin: "50% 100%" });
         gsap.set(cubeLabels, { autoAlpha: 0 });
     }
 
@@ -254,7 +259,11 @@ function init(): void {
     tl.to(prompt, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 0.5);
     const promptChars = 39;
     const promptType = { c: 0 };
-    tl.set(promptCaret, { opacity: 1 }, 0.7);
+    // Caret visibility is driven by callbacks, never by timeline children:
+    // zero-duration sets rewind to their recorded prior values when the
+    // playhead wraps for the loop, which is what left a stray block cursor
+    // floating on the next iteration's opening frame.
+    tl.call(() => gsap.set(promptCaret, { opacity: 1 }), undefined, 0.75);
     tl.to(
         promptType,
         {
@@ -277,6 +286,10 @@ function init(): void {
     //    scales out from it.
     tl.set(aStroke, { autoAlpha: 1 }, 1.95);
     tl.to(aStroke, { attr: { "stroke-dashoffset": "0" }, duration: 0.35, ease: "power1.inOut" }, 1.95);
+    // Once drawn, drop the dash entirely — a plain solid stroke can't leak
+    // dash-boundary artifacts (and stays immune to non-scaling-stroke's
+    // screen-space dash units).
+    tl.set(aStroke, { attr: { "stroke-dasharray": "none" } }, 2.32);
     tl.fromTo(aOuter, { autoAlpha: 0, attr: TILE_FILL }, { autoAlpha: 1, attr: TILE_OUTER, duration: 0.3, ease: "power2.out" }, 2.1);
 
     // -- The other agents bow out; the tile morphs into the code panel and
@@ -305,7 +318,7 @@ function init(): void {
             const clip = lineClips[k];
             const rowTop = clip.getAttribute("y");
             const type = { c: 0 };
-            tl.set(caret, { opacity: 1, attr: { y: rowTop as string, x: CODE_TEXT_X } }, cursor);
+            tl.call(() => gsap.set(caret, { opacity: 1, attr: { y: rowTop as string, x: CODE_TEXT_X } }), undefined, cursor);
             tl.to(
                 type,
                 {
@@ -334,13 +347,14 @@ function init(): void {
     // -- Writing is done: the working stroke drops, the shell opens room
     //    below the code surface for the CI row.
     tl.to(aStroke, { autoAlpha: 0, duration: 0.25 }, doneWriting);
-    // Stop the blink before fading the caret — a paused blink can't relight it.
+    // Stop the blink before fading the caret — a paused blink can't relight
+    // it. The fade itself runs outside the timeline (see the caret note above).
     tl.call(() => blink(caretBlink, caret, false), undefined, doneWriting - 0.02);
-    tl.to(caret, { opacity: 0, duration: 0.15 }, doneWriting);
+    tl.call(() => gsap.to(caret, { opacity: 0, duration: 0.15 }), undefined, doneWriting);
     tl.to(aOuter, { attr: { height: 310 }, duration: 0.45, ease: "power2.out" }, doneWriting + 0.05);
 
     const ciAt = doneWriting + 0.45; // ~7.15
-    tl.fromTo(ciPr, { autoAlpha: 0, x: -24 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "power2.out" }, ciAt);
+    tl.fromTo(ciPr, { autoAlpha: 0, x: -16 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "power2.out" }, ciAt);
     tl.to(ciSpins, { autoAlpha: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.7)" }, ciAt + 0.15);
 
     // -- Checks flip one by one, then the PR merges.
@@ -357,6 +371,7 @@ function init(): void {
     // -- ALL TESTS PASSED: border draws left to right, label fades in.
     const testsBadgeAt = mergedAt + 0.35;
     tl.to(badgeRects[0], { attr: { "stroke-dashoffset": "0" }, duration: 0.4, ease: "power1.inOut" }, testsBadgeAt);
+    tl.set(badgeRects[0], { attr: { "stroke-dasharray": "none" } }, testsBadgeAt + 0.45);
     tl.to(badgeBodies[0], { autoAlpha: 1, duration: 0.3 }, testsBadgeAt + 0.15);
 
     // -- Roll up: the code wipes, the shell collapses onto its bottom edge
@@ -428,6 +443,7 @@ function init(): void {
     // -- ALL POLICY PACKS RUN.
     const packsAt = scrollAt + 2.15;
     tl.to(badgeRects[1], { attr: { "stroke-dashoffset": "0" }, duration: 0.4, ease: "power1.inOut" }, packsAt);
+    tl.set(badgeRects[1], { attr: { "stroke-dasharray": "none" } }, packsAt + 0.45);
     tl.to(badgeBodies[1], { autoAlpha: 1, duration: 0.3 }, packsAt + 0.15);
 
     // -- Roll up: the terminal wipes and the shell closes onto the policy
@@ -444,14 +460,17 @@ function init(): void {
     tl.to(plateDetail, { autoAlpha: 1, duration: 0.4 }, plateAt + 0.15);
     tl.to(glyph, { y: GLYPH_AT_PLATE, duration: 0.5, ease: "power2.out" }, plateAt + 0.05);
 
-    // -- The subnet cubes grow up off the plate, edges drawing on; each AZ
-    //    label lands shortly after its cube.
+    // -- The subnet cubes extrude up out of the plate: the bottom face fades
+    //    in flat, then the top face rises while the vertical edges stretch in
+    //    lockstep (same ease, both linear in progress, so the corners stay
+    //    joined through the overshoot). Each AZ label lands after its cube.
     const cubesAt = plateAt + 0.6;
     cubes.forEach((cube, i) => {
         const at = cubesAt + i * 0.15;
-        tl.to(cube, { autoAlpha: 1, scale: 1, duration: 0.55, ease: "back.out(1.2)" }, at);
-        tl.to(qa(cube, "[data-cube-edge]"), { attr: { "stroke-dashoffset": "0" }, duration: 0.5, ease: "power2.out" }, at + 0.05);
-        tl.to(cubeLabels[i], { autoAlpha: 1, duration: 0.25 }, at + 0.35);
+        tl.to(cube, { autoAlpha: 1, duration: 0.2 }, at);
+        tl.to(qa(cube, "[data-cube-top]"), { y: 0, duration: 0.55, ease: "back.out(1.2)" }, at + 0.1);
+        tl.to(qa(cube, "[data-cube-edge]"), { scaleY: 1, duration: 0.55, ease: "back.out(1.2)" }, at + 0.1);
+        tl.to(cubeLabels[i], { autoAlpha: 1, duration: 0.25 }, at + 0.5);
     });
 
     // -- Hold on the finished infrastructure, then collapse out and loop.

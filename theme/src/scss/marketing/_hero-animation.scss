@@ -5,12 +5,23 @@
 
 .hero-animation {
     width: 100%;
-    max-width: 744px;
+    max-width: 620px;
 
     svg {
         display: block;
         width: 100%;
         height: auto;
+    }
+
+    // Strokes stay at their designed pixel weight no matter how far the SVG
+    // scales (thin hairlines don't vanish on mobile, and the scale-in
+    // entrances don't thicken their outlines). The dash-drawn rects (the
+    // tile's working stroke and the two badge borders) are excluded: with
+    // non-scaling-stroke, Chrome measures their pathLength-normalized dashes
+    // in screen units, which hides the draw-on and leaks dash-boundary
+    // slivers.
+    :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect]) {
+        vector-effect: non-scaling-stroke;
     }
 }
 
