@@ -127,8 +127,18 @@ async function fetchSnapshot(obs, cacheDir) {
                 "Refusing to trust unverified snapshot content -- investigate before updating OBSERVATIONS.",
         );
     }
-    console.log(`  ${obs.date} (${obs.timestamp}): digest verified, fetching content...`);
+    console.log(`  ${obs.date} (${obs.timestamp}): CDX metadata verified, fetching content...`);
     const contentUrl = `https://web.archive.org/web/${obs.timestamp}id_/https://${SPEC_HOST_PATH}`;
+    // Note on what is and isn't verified here: the CDX digest checked above
+    // is the base32 SHA-1 of the *raw captured bytes* as transmitted over the
+    // wire (confirmed by comparing a fetched snapshot's decoded length against
+    // the CDX API's own `length` column, which is smaller -- the archive
+    // stores the original gzip-compressed response). `fetch()` transparently
+    // decompresses, so the JSON text below cannot be rehashed against that
+    // digest; what's verified is that the archive's own metadata for this
+    // exact timestamp still matches what was recorded on 2026-08-25, not the
+    // bytes of this particular fetch. That is an acceptable bar for a
+    // one-time, human-reviewed script whose only output is a committed diff.
     const res = await fetchWithBackoff(contentUrl);
     const text = await res.text();
     const spec = JSON.parse(text);
@@ -276,13 +286,21 @@ function updateMeta(meta, { totalNewlyDated, totalDateless }) {
     return next;
 }
 
+function requireValue(argv, i, flag) {
+    const v = argv[i + 1];
+    if (v === undefined || v.startsWith("--")) {
+        throw new Error(`${flag} requires a value`);
+    }
+    return v;
+}
+
 function parseArgs(argv) {
     const args = { cacheDir: path.join(ROOT, ".openapi-wayback-cache"), dryRun: false, seedLedger: null };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i];
         if (a === "--dry-run") args.dryRun = true;
-        else if (a === "--cache-dir") args.cacheDir = argv[++i];
-        else if (a === "--seed-ledger") args.seedLedger = argv[++i];
+        else if (a === "--cache-dir") args.cacheDir = requireValue(argv, i++, "--cache-dir");
+        else if (a === "--seed-ledger") args.seedLedger = requireValue(argv, i++, "--seed-ledger");
         else throw new Error(`unknown argument: ${a}`);
     }
     return args;
