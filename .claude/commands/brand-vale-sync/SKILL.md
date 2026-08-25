@@ -48,8 +48,18 @@ edit the brand guide side of anything (that's `pulumi/marketing-web`).
    serialization", where *runtime* has too many live meanings) is **correctly
    absent** — note it in the PR body as intentionally unmirrored rather than
    forcing a noisy rule. When adding a retired name, decide the tier:
-   - single fixed replacement → `Substitutions.yml` (auto-fixable, blocker)
-   - context-dependent replacement → `DeprecatedProductNames.yml` (flag-only)
+   - single fixed replacement, right in every context → `Substitutions.yml`
+     (auto-fixable, blocker)
+   - replacement usually right, but the guide's carve-outs apply (historical
+     prose, or a name mapping to more than one current term) →
+     `RetiredNames.yml` (auto-fixable, blocker; the message asks the reader to
+     confirm the swap fits the sentence)
+   - no single fixed replacement → `DeprecatedProductNames.yml` (flag-only,
+     blocker)
+   - no safe regex at all → leave unmirrored and note it in the PR body
+
+   All four tiers block. The tier decides how much the message hedges, not
+   whether the finding may ship — `BRAND-SYNC.yaml` carries the same rule.
 1. **Validate.** Run Vale (`make lint-prose ARGS=<a couple of touched content
    files>` or `vale` on a scratch fixture exercising each new/changed token,
    positive and negative cases) to prove the rules compile and match as

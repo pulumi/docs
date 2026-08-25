@@ -49,11 +49,15 @@ sections:
           "Retired and disallowed names" rows for RENAMED products, where the
           brand table names the replacement but the guide's preamble
           ("historical usage is fine", "some replacements can't be
-          automated") means it can't be applied blindly. Advisory tier.
+          automated") means it can't be applied blindly. Blocker tier, like
+          every other retired-name rule -- the hedge lives in the message,
+          not in whether the finding blocks.
       - rule: Pulumi.DeprecatedProductNames
         mirrors: >-
-          "Retired and disallowed names" rows with no fixed replacement at all
-          (Pulumi Service, IAS).
+          "Retired and disallowed names" rows whose replacement a human has to
+          choose (Pulumi Service). Also carries IAS, whose replacement IS fixed
+          (-> Discovery) but which is short, all-caps, and rare enough that
+          flag-only costs nothing; revisit if it ever shows up in volume.
       - rule: Pulumi.Nomenclature
         mirrors: >-
           "Product names" table — canonical casing of every product name.
