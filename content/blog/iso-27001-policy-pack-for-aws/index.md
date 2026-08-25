@@ -1,6 +1,7 @@
 ---
 title: "Enforce ISO 27001 Across Your AWS Infrastructure"
 date: 2026-06-30
+updated: 2026-08-25
 authors:
     - dan-biwer
 meta_desc: "Align your AWS infrastructure to ISO/IEC 27001:2022 with a pre-built Pulumi policy pack of 238 ready-to-run security policies."
@@ -78,7 +79,7 @@ Adopting any pack means you skip the authoring work entirely, inherit framework 
 
 ## Get started today
 
-The ISO 27001 pack is available now to every Pulumi Cloud user:
+The ISO 27001 pack is available now on the [Business Critical edition](/pricing/#pre-built-policy-packs) of Pulumi Cloud:
 
 1. Browse the [pack reference](/docs/reference/pre-built-policy-packs/iso-27001/aws/) to see all 238 policies and how they map to the standard's controls.
 1. Explore the full [pre-built packs index](/docs/insights/policy/policy-packs/pre-built-packs/).
