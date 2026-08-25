@@ -29,14 +29,35 @@ const AGENT_WEIGHTS: { [agent: string]: number } = {
     "opencode": 4,
 };
 
+// Per-pass language odds: real usage share, with brand-new HCL boosted to
+// just above YAML and Java at the floor.
+const LANG_WEIGHTS: { [lang: string]: number } = {
+    typescript: 51,
+    python: 29,
+    go: 7.5,
+    csharp: 5,
+    hcl: 3.5,
+    yaml: 3,
+    java: 1,
+};
+
 // Unselected agent and language logos recede to violet-400 when the choice
 // lands; everything is authored (and reset to) the full violet-700.
 const LOGO_FILL = "#5A30C5";
 const LOGO_DIM_FILL = "#9077F3";
 
-// Where the chosen language's icon parks in the code panel (bbox center, from
-// the storyboard's TypeScript icon at 596,168 - 619.4,191.4).
+// Where the chosen language's icon parks in the code panel (bbox center and
+// box size, from the storyboard's TypeScript icon at 596,168 - 619.4,191.4).
 const PANEL_LANG_CENTER = { x: 607.72, y: 179.72 };
+const PANEL_LANG_SIZE = 23.44;
+
+// The language pill's flow layout (storyboard frame 1): labels at font-size 10
+// with 0.05em tracking, centered in the pill with a constant gap; the chosen
+// item grows an 18px icon prefix and a ring with asymmetric padding.
+const LANG_ADV = 10 * (CW / 12) + 0.5;
+const LANG_PILL = { x: 203, width: 338, gap: 18.6, minPad: 10 };
+const LANG_ICON = { size: 18, gap: 7, centerY: 426 };
+const LANG_RING_PAD = { left: 10.5, right: 9.5 };
 
 // The write beat always takes the same wall time; per-character speed adapts
 // to the chosen language's example. Bursts (blank-line groups in the source)
@@ -99,11 +120,11 @@ function init(): void {
     const caret = q<SVGRectElement>(root, "[data-caret]");
 
     const langRow = q<SVGGElement>(root, "[data-lang-row]");
-    const langTiles = qa<SVGGElement>(root, "[data-lang]");
-    const langRects = qa<SVGRectElement>(root, "[data-lang-rect]");
+    const langShorts = qa<SVGTextElement>(root, "[data-lang-short]");
+    const langFulls = qa<SVGTextElement>(root, "[data-lang-full]");
+    const langRing = q<SVGRectElement>(root, "[data-lang-ring]");
+    const langIcons = q<SVGGElement>(root, "[data-lang-icons]");
     const langLogos = qa<SVGGElement>(root, "[data-lang-logo]");
-    const langStroke = q<SVGRectElement>(root, "[data-lang-stroke]");
-    const langHalo = q<SVGRectElement>(root, "[data-lang-halo]");
     const panelLang = q<SVGGElement>(root, "[data-panel-lang]");
 
     const termClip = q<SVGGElement>(root, "[data-term-clip]");
@@ -146,10 +167,12 @@ function init(): void {
 
     const tileWeights = tiles.map(tile => AGENT_WEIGHTS[tile.getAttribute("data-agent") || ""] || 0);
 
-    function pickAgent(): number {
-        let r = Math.random() * 100;
-        for (let i = 0; i < tileWeights.length; i++) {
-            r -= tileWeights[i];
+    function pickWeighted(weights: number[]): number {
+        let sum = 0;
+        weights.forEach(w => (sum += w));
+        let r = Math.random() * sum;
+        for (let i = 0; i < weights.length; i++) {
+            r -= weights[i];
             if (r < 0) {
                 return i;
             }
@@ -187,15 +210,21 @@ function init(): void {
     }
 
     // ------------------------------------------------------------------
-    // The language. A uniform-random pick each pass; the chosen tile takes
-    // the selection chrome, its icon travels to the code panel's corner, and
-    // the matching editor example types in.
+    // The language. A uniform-random pick each pass; the chosen label gains
+    // the selection ring, expands to its full name (where one exists), grows
+    // its icon, and the icon travels to the code panel's corner while the
+    // matching editor example types in.
     // ------------------------------------------------------------------
     let chosenLang = 0;
-    const langDelta = { x: 0, y: 0 };
+    const langNames = langShorts.map(t => t.getAttribute("data-language") || "");
+    const langWeights = langNames.map(name => LANG_WEIGHTS[name] || 0);
+    const langShortW = langShorts.map(t => (t.textContent || "").length * LANG_ADV);
+    const langFullByName: { [name: string]: SVGTextElement } = {};
+    langFulls.forEach(t => {
+        langFullByName[t.getAttribute("data-language") || ""] = t;
+    });
 
     const agentPaths = tileLogos.map(g => qa<SVGPathElement>(g, "path"));
-    const langPaths = langLogos.map(g => qa<SVGPathElement>(g, "path"));
 
     function dimUnselected(paths: SVGPathElement[][], keep: number): void {
         const targets: SVGPathElement[] = [];
@@ -207,9 +236,73 @@ function init(): void {
         gsap.to(targets, { attr: { fill: LOGO_DIM_FILL }, duration: 0.35 });
     }
 
+    function chosenFull(): SVGTextElement | null {
+        return langFullByName[langNames[chosenLang]] || null;
+    }
+
+    // Pill flow layout: labels centered with a constant gap; the chosen item
+    // takes an icon prefix and (if it has one) its full name. restX/selX are
+    // the label positions before and after selection.
+    const restX: number[] = [];
+    const selX: number[] = [];
+    const ringBox = { x: 0, w: 0 };
+    const iconRow = { x: 0, y: LANG_ICON.centerY };
+
+    function layoutLangRow(): void {
+        const fullEl = chosenFull();
+        const fullW = fullEl ? (fullEl.textContent || "").length * LANG_ADV : langShortW[chosenLang];
+        const selWidths = langShortW.slice();
+        selWidths[chosenLang] = LANG_ICON.size + LANG_ICON.gap + fullW;
+        const place = (ws: number[], out: number[]) => {
+            let total = -LANG_PILL.gap;
+            ws.forEach(w => (total += w + LANG_PILL.gap));
+            let x = LANG_PILL.x + Math.max(LANG_PILL.minPad, (LANG_PILL.width - total) / 2);
+            for (let i = 0; i < ws.length; i++) {
+                out[i] = x;
+                x += ws[i] + LANG_PILL.gap;
+            }
+        };
+        place(langShortW, restX);
+        const itemX: number[] = [];
+        place(selWidths, itemX);
+        for (let i = 0; i < itemX.length; i++) {
+            selX[i] = itemX[i];
+        }
+        selX[chosenLang] = itemX[chosenLang] + LANG_ICON.size + LANG_ICON.gap;
+        ringBox.x = itemX[chosenLang] - LANG_RING_PAD.left;
+        ringBox.w = selWidths[chosenLang] + LANG_RING_PAD.left + LANG_RING_PAD.right;
+        iconRow.x = itemX[chosenLang] + LANG_ICON.size / 2;
+    }
+
+    // The chosen language's icon is positioned by one manual transform
+    // (translate + scale about the origin, placing its native bbox center),
+    // so GSAP transforms must never touch panelLang — only its opacity.
+    const iconT = { x: 0, y: 0, k: 1 };
+    const iconCenter = { x: 0, y: 0 };
+    let panelK = 1;
+
+    function applyIconT(): void {
+        const tx = iconT.x - iconT.k * iconCenter.x;
+        const ty = iconT.y - iconT.k * iconCenter.y;
+        panelLang.setAttribute("transform", "translate(" + tx + " " + ty + ") scale(" + iconT.k + ")");
+    }
+
+    function selectLanguage(): void {
+        const fullEl = chosenFull();
+        if (fullEl) {
+            gsap.to(langShorts[chosenLang], { autoAlpha: 0, duration: 0.2 });
+            gsap.fromTo(fullEl, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, delay: 0.08 });
+        }
+        gsap.to(
+            langShorts.filter((_t, i) => i !== chosenLang),
+            { attr: { fill: LOGO_DIM_FILL }, duration: 0.35 },
+        );
+    }
+
     function adoptLanguage(): void {
         panelLang.appendChild(langLogos[chosenLang]);
-        gsap.set(panelLang, { autoAlpha: 1 });
+        applyIconT();
+        gsap.fromTo(panelLang, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25 });
     }
 
     // Typing state for the active language, rebuilt each pass: per-line
@@ -223,7 +316,7 @@ function init(): void {
     let activeClips: SVGRectElement[] = [];
 
     function prepareTyping(): void {
-        const lang = langTiles[chosenLang].getAttribute("data-language") || "";
+        const lang = langNames[chosenLang];
         activeEditor = editorGroups.filter(g => g.getAttribute("data-editor-lang") === lang)[0];
         activeLines = qa<SVGTextElement>(activeEditor, "[data-code-line]");
         activeClips = qa<SVGRectElement>(root as HTMLElement, '[data-lc="' + lang + '"]');
@@ -276,33 +369,48 @@ function init(): void {
             }
         }
         for (let i = 0; i < langLogos.length; i++) {
-            if (langLogos[i].parentNode !== langTiles[i]) {
-                langTiles[i].appendChild(langLogos[i]);
+            if (langLogos[i].parentNode !== langIcons) {
+                langIcons.appendChild(langLogos[i]);
             }
         }
-        chosen = pickAgent();
+        chosen = pickWeighted(tileWeights);
         const bb = tileLogos[chosen].getBBox();
         perch.x = PERCH.x - (bb.x + bb.width / 2);
         perch.y = PERCH.bottom - (bb.y + bb.height);
 
-        chosenLang = Math.floor(Math.random() * langTiles.length);
+        chosenLang = pickWeighted(langWeights);
+        layoutLangRow();
         const lb = langLogos[chosenLang].getBBox();
-        langDelta.x = PANEL_LANG_CENTER.x - (lb.x + lb.width / 2);
-        langDelta.y = PANEL_LANG_CENTER.y - (lb.y + lb.height / 2);
+        const lSize = Math.max(lb.width, lb.height);
+        iconCenter.x = lb.x + lb.width / 2;
+        iconCenter.y = lb.y + lb.height / 2;
+        panelK = PANEL_LANG_SIZE / lSize;
+        iconT.x = iconRow.x;
+        iconT.y = iconRow.y;
+        iconT.k = LANG_ICON.size / lSize;
+        applyIconT();
         prepareTyping();
 
-        const agentAndLangPaths: SVGPathElement[] = [];
-        agentPaths.concat(langPaths).forEach(ps => {
-            agentAndLangPaths.push.apply(agentAndLangPaths, ps);
+        const allAgentPaths: SVGPathElement[] = [];
+        agentPaths.forEach(ps => {
+            allAgentPaths.push.apply(allAgentPaths, ps);
         });
-        gsap.killTweensOf(agentAndLangPaths);
-        gsap.set(agentAndLangPaths, { attr: { fill: LOGO_FILL } });
+        gsap.killTweensOf(allAgentPaths);
+        gsap.set(allAgentPaths, { attr: { fill: LOGO_FILL } });
+
+        const allLabels = (langShorts as SVGTextElement[]).concat(langFulls);
+        gsap.killTweensOf(allLabels);
+        gsap.set(langShorts, { autoAlpha: 1, attr: { fill: LOGO_FILL } });
+        langShorts.forEach((t, i) => gsap.set(t, { x: restX[i] }));
+        gsap.set(langFulls, { autoAlpha: 0 });
+        const fullEl = chosenFull();
+        if (fullEl) {
+            gsap.set(fullEl, { x: selX[chosenLang] });
+        }
 
         gsap.set(langRow, { autoAlpha: 0, y: 16 });
-        const lx = parseFloat(langRects[chosenLang].getAttribute("x") || "215");
-        gsap.set(langStroke, { autoAlpha: 0, attr: { x: lx + 0.5, y: 411.5 } });
-        gsap.set(langHalo, { autoAlpha: 0, attr: { x: lx - 2.5, y: 408.5 } });
-        gsap.set(panelLang, { autoAlpha: 0, x: 0, y: 0 });
+        gsap.set(langRing, { autoAlpha: 0, attr: { x: ringBox.x, width: ringBox.w } });
+        gsap.set(panelLang, { autoAlpha: 0 });
 
         gsap.set(editorGroups, { autoAlpha: 0 });
         if (activeEditor) {
@@ -469,22 +577,16 @@ function init(): void {
     );
 
     tl.fromTo(langRow, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 0.45);
-    tl.fromTo(langStroke, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, immediateRender: false }, 2.5);
-    const langCellX = () => parseFloat(langRects[chosenLang].getAttribute("x") || "215");
-    tl.fromTo(
-        langHalo,
-        { autoAlpha: 0, attr: { x: () => langCellX() + 0.5, y: 411.5, width: 33, height: 33, rx: 7.5 } },
-        { autoAlpha: 1, attr: { x: () => langCellX() - 2.5, y: 408.5, width: 39, height: 39, rx: 7.5 }, duration: 0.25, ease: "power2.out", immediateRender: false },
-        2.55,
-    );
-    tl.call(() => dimUnselected(langPaths, chosenLang), undefined, 2.55);
+    tl.to(langShorts, { x: (i: number) => selX[i], duration: 0.4, ease: "power2.inOut" }, 2.45);
+    tl.call(selectLanguage, undefined, 2.45);
+    tl.fromTo(langRing, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, 2.55);
+    tl.call(adoptLanguage, undefined, 2.55);
 
     tl.call(adoptProtagonist, undefined, 2.7);
-    tl.call(adoptLanguage, undefined, 2.7);
     tl.call(() => blink(promptBlink, promptCaret, false), undefined, 2.71);
     tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.7);
     tl.to(langRow, { autoAlpha: 0, duration: 0.25 }, 2.85);
-    tl.to(panelLang, { x: () => langDelta.x, y: () => langDelta.y, duration: 0.7, ease: "power2.inOut" }, 2.85);
+    tl.to(iconT, { x: PANEL_LANG_CENTER.x, y: PANEL_LANG_CENTER.y, k: () => panelK, duration: 0.7, ease: "power2.inOut", onUpdate: applyIconT }, 2.85);
     tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 2.85);
     tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 2.85);
     tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 2.85);
