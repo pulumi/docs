@@ -18,7 +18,7 @@ config:
   www.pulumi.com:enableWaf: "true"
   www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
-  www.pulumi.com:enableSupportForm: "true"
+  www.pulumi.com:enableSupportForm: "false"
   www.pulumi.com:intercomTicketTypeId: "3036244"
   www.pulumi.com:intercomApiKey:
     secure: AAABABqrMKEtK06xtI+MNA7niGyBS1pe7ns9Se96vKEXESNWcRn9RNX7E06uraYBygHF1PUifKZZemQCgnWUtwufpHxBn+wb4j0qKC/lCuB7fhn65DkgVaYaswY=

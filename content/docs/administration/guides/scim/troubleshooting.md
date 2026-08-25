@@ -22,7 +22,7 @@ This page describes how to resolve issues that may occur when configuring SCIM p
 
 ## User provisioning failures
 
-These errors can occur when attempting to create (POST), replace (PUT), or update (PATCH) a user. If you encounter difficulties resolving these issues, please contact our [customer support](https://pulumi.com/support/new/) for assistance.
+These errors can occur when attempting to create (POST), replace (PUT), or update (PATCH) a user. If you encounter difficulties resolving these issues, please contact our [customer support](/support/new/) for assistance.
 
 ### Email already in use
 

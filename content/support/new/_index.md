@@ -32,10 +32,10 @@ form:
             label: Subject
         description:
             label: Description
-            help: Please enter the details of your request. It always helps to include code snippets, current behavior, and expected behavior when encountering issues. Markdown is welcome.
+            help: Enter the details of your request. It always helps to include code snippets, current behavior, and expected behavior when encountering issues. Markdown is welcome.
     submit: Submit
     submitting: Submitting…
-    error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or open a ticket at https://pulumi.com/support/new/.
+    error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or ask the community in Pulumi Slack at https://slack.pulumi.com/.
 
 confirmation:
     title: Request received. We're on it.

@@ -1,0 +1,50 @@
+name: Support form tests
+
+# Runs the unit suite for the /api/support Lambda (payload validation, the
+# handler's status paths, and the Intercom ticket-filing client) on any PR that
+# touches it.
+#
+# The suite existed before this workflow did, and nothing ran it: `make test`
+# covers only the example programs, and `make ci_pull_request` previews the
+# Pulumi stack without compiling or testing infrastructure/ on its own. That
+# gap was not theoretical -- when the Intercom client replaced the logging stub,
+# three handler tests started reaching api.intercom.io with no credentials and
+# failing, and CI stayed green because nothing was running them.
+#
+# Deliberately standalone rather than folded into the PR gate: ci_pull_request
+# needs AWS and Pulumi credentials and degrades to a plain build without them,
+# so it skips on fork PRs. A dependency-free unit suite should run for everyone.
+on:
+  pull_request:
+    paths:
+      - 'infrastructure/support-form/**'
+      - 'infrastructure/package.json'
+      - 'infrastructure/tsconfig.json'
+      - 'infrastructure/yarn.lock'
+      - '.github/workflows/support-form-tests.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: support-form-tests-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run support-form test suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: infrastructure/yarn.lock
+      - name: Install deps
+        run: yarn --cwd infrastructure install --frozen-lockfile
+      - name: Run suite
+        run: yarn --cwd infrastructure test-support-form

@@ -62,4 +62,4 @@ To configure Pulumi with the SAML metadata:
 
 Auth0 troubleshooting: [SAML app error messages](https://auth0.com/docs/troubleshoot/authentication-issues/troubleshoot-saml-configurations)
 
-For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](https://pulumi.com/support/new/).
+For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](/support/new/).

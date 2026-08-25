@@ -12,7 +12,7 @@ import * as assert from "assert";
 import { test } from "node:test";
 
 import { FunctionUrlEvent, supportFormHandler } from "./handler";
-import { normalizeOrganization, validateSubmission } from "./validation";
+import { LIMITS, normalizeOrganization, validateSubmission } from "./validation";
 
 function validPayload(): Record<string, unknown> {
     return {
@@ -80,6 +80,17 @@ test("rejects organization names that fail the naming rules", () => {
     }
 });
 
+test("blames an over-long organization on its length, not its characters", () => {
+    const result = validateSubmission({ ...validPayload(), organization: "a".repeat(LIMITS.organization + 1) });
+    assert.ok(!result.ok);
+    if (!result.ok) {
+        assert.match(result.fields.organization || "", /characters/);
+        assert.doesNotMatch(result.fields.organization || "", /hyphens/);
+    }
+    // The bound itself is LIMITS.organization, so a name exactly at it passes.
+    assert.ok(validateSubmission({ ...validPayload(), organization: "a".repeat(LIMITS.organization) }).ok);
+});
+
 test("rejects priorities outside the closed set", () => {
     const result = validateSubmission({ ...validPayload(), priority: "everything" });
     assert.ok(!result.ok);
@@ -115,6 +126,28 @@ test("rejects too-short descriptions", () => {
 // --- Handler-level tests ---
 
 const SECRET = "test-secret";
+const TICKET_ID = "ticket-42";
+
+// handler.ts files an Intercom ticket on the accept path, so every test below
+// that expects a 200 would otherwise reach api.intercom.io with no credentials
+// — hanging or 401-ing depending on the network. Replacing the global fetch for
+// the whole file (node --test gives each test file its own process, and runs
+// tests non-concurrently) makes that impossible by construction rather than
+// test by test. intercomCalls records the traffic so the paths that must *not*
+// file a ticket can assert on it. The request shape itself is covered in
+// intercom.test.ts.
+const intercomCalls: string[] = [];
+let intercomUp = true;
+
+globalThis.fetch = async input => {
+    const url = String(input);
+    intercomCalls.push(url);
+    if (!intercomUp) {
+        return new Response("service unavailable", { status: 503 });
+    }
+    const body = url.endsWith("/contacts/search") ? { data: [{ id: "contact-1" }] } : { id: TICKET_ID };
+    return new Response(JSON.stringify(body), { status: 200 });
+};
 
 function postEvent(body: unknown, overrides: Partial<FunctionUrlEvent> = {}): FunctionUrlEvent {
     return {
@@ -136,6 +169,9 @@ test("handler accepts a valid submission", async () => {
     const parsed = JSON.parse(response.body);
     assert.strictEqual(parsed.ok, true);
     assert.ok(parsed.id);
+    // id is minted locally; ticketId has to come back from Intercom, so
+    // asserting it is what catches the result being dropped on the floor.
+    assert.strictEqual(parsed.ticketId, TICKET_ID);
     assert.strictEqual(response.headers["cache-control"], "no-store");
 });
 
@@ -201,18 +237,54 @@ test("handler decodes base64-encoded bodies", async () => {
     assert.strictEqual((await supportFormHandler(event)).statusCode, 200);
 });
 
+test("handler rejects an empty body", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const event = postEvent(validPayload());
+    event.body = "";
+    const response = await supportFormHandler(event);
+    assert.strictEqual(response.statusCode, 400);
+    assert.strictEqual(JSON.parse(response.body).error, "empty_body");
+});
+
 test("handler returns field errors as a 422", async () => {
     process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const before = intercomCalls.length;
     const response = await supportFormHandler(postEvent({ ...validPayload(), email: "nope" }));
     assert.strictEqual(response.statusCode, 422);
     const parsed = JSON.parse(response.body);
     assert.strictEqual(parsed.error, "validation_failed");
     assert.ok(parsed.fields.email);
+    // A submission that failed validation must never reach Intercom.
+    assert.strictEqual(intercomCalls.length, before);
+});
+
+test("handler reports a ticket-creation failure as a 502", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    intercomUp = false;
+    try {
+        const response = await supportFormHandler(postEvent(validPayload()));
+        assert.strictEqual(response.statusCode, 502);
+        const parsed = JSON.parse(response.body);
+        assert.strictEqual(parsed.ok, false);
+        assert.strictEqual(parsed.error, "ticket_creation_failed");
+        // The id still comes back so a failed submission can be traced to its
+        // support_request_ticket_failed log entry.
+        assert.ok(parsed.id);
+    } finally {
+        intercomUp = true;
+    }
 });
 
 test("handler swallows honeypot submissions with a fake success", async () => {
     process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const before = intercomCalls.length;
     const response = await supportFormHandler(postEvent({ ...validPayload(), website: "https://spam.example" }));
     assert.strictEqual(response.statusCode, 200);
-    assert.strictEqual(JSON.parse(response.body).ok, true);
+    const parsed = JSON.parse(response.body);
+    assert.strictEqual(parsed.ok, true);
+    // The whole point of the honeypot: it looks like success to the bot but
+    // files nothing. The absent ticketId is what distinguishes it from a real
+    // acceptance.
+    assert.strictEqual(intercomCalls.length, before);
+    assert.strictEqual(parsed.ticketId, undefined);
 });

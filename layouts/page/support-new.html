@@ -70,9 +70,9 @@
                 </div>
 
                 <div class="mb-6">
-                    <label class="form-label" for="support-priority">{{ $fields.priority.label }}</label>
+                    <label class="form-label" for="support-priority">{{ $fields.priority.label }} <span aria-hidden="true">*</span></label>
                     <select class="form-select" id="support-priority" name="priority"
-                            aria-describedby="support-priority-error">
+                            required aria-describedby="support-priority-error">
                         {{ range $fields.priority.options }}
                             <option value="{{ .value }}">{{ .label }}</option>
                         {{ end }}

@@ -41,7 +41,7 @@ help_links:
         - label: Talk to sales about pricing
           url: /contact/
         - label: Open a support ticket
-          url: https://pulumi.com/support/new/
+          url: /support/new/
         - label: Ask the community on Slack
           url: https://slack.pulumi.com/
 ---

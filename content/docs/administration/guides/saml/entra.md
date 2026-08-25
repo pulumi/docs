@@ -115,4 +115,4 @@ sign in to your Entra ID instance, and then immediately be redirected back to Pu
 
 ## Troubleshooting
 
-For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](https://pulumi.com/support/new/).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](/support/new/).

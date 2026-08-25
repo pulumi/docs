@@ -34,8 +34,11 @@ export const LIMITS = {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Pulumi organization names: alphanumeric start, then alphanumeric, hyphen, or
-// underscore, 40 chars max (matches the Pulumi Cloud org-name rules).
-const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,39}$/;
+// underscore (matches the Pulumi Cloud org-name rules). The length bound is
+// LIMITS.organization rather than a repeat count here, so the two rules have
+// one source of truth apiece — and an over-long name gets told it's too long
+// instead of being blamed on its characters.
+const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
 
 export interface SupportRequest {
     email: string;
@@ -137,6 +140,8 @@ export function validateSubmission(input: unknown): ValidationResult {
         organization = organizationRaw ? normalizeOrganization(organizationRaw) : undefined;
         if (!organization) {
             fields.organization = "Enter your Pulumi organization name.";
+        } else if (organization.length > LIMITS.organization) {
+            fields.organization = `Keep the organization name under ${LIMITS.organization} characters.`;
         } else if (!ORGANIZATION_PATTERN.test(organization)) {
             fields.organization =
                 "Enter just the organization name from https://app.pulumi.com/PULUMI_ORG_NAME " +

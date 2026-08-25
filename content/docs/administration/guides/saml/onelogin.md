@@ -110,4 +110,4 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](https://pulumi.com/support/new/).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](/support/new/).

@@ -26,7 +26,13 @@ const ENDPOINT = "/api/support";
 const DRAFT_KEY = "pulumi-support-form-draft";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,39}$/;
+const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
+const ORGANIZATION_MAX = 40;
+
+// The API's closed priority enum. Mirrors PRIORITIES in
+// infrastructure/support-form/validation.ts, and the option values the layout
+// renders from form.fields.priority.options in the page's front matter.
+const PRIORITIES = ["normal", "urgent"];
 
 // Field keys are the API payload keys; ids are the DOM ids in the layout.
 const FIELD_IDS: Record<string, string> = {
@@ -52,6 +58,26 @@ function normalizeOrganization(raw: string): string {
         value = value.slice(0, slash);
     }
     return value.trim();
+}
+
+// Fills a control without clobbering what the user already typed.
+//
+// A <select> always reports a value (its first option is selected by default),
+// so the emptiness guard that protects the text inputs would skip it every
+// time — which is why both the draft restore and the ?priority= prefill used to
+// silently do nothing. Selects are matched against their own options instead,
+// which doubles as validation: a bogus value is ignored rather than blanking
+// the control. Returns whether the value was applied.
+function setControlValue(input: FormControl, value: string): boolean {
+    if (input instanceof HTMLSelectElement) {
+        if (!Array.from(input.options).some(option => option.value === value)) {
+            return false;
+        }
+    } else if (input.value) {
+        return false;
+    }
+    input.value = value;
+    return true;
 }
 
 function init() {
@@ -129,12 +155,16 @@ function init() {
             if (!value) {
                 return "Enter your Pulumi organization name.";
             }
-            if (!ORGANIZATION_PATTERN.test(normalizeOrganization(value))) {
+            const normalized = normalizeOrganization(value);
+            if (normalized.length > ORGANIZATION_MAX) {
+                return `Keep the organization name under ${ORGANIZATION_MAX} characters.`;
+            }
+            if (!ORGANIZATION_PATTERN.test(normalized)) {
                 return "Enter just the organization name from https://app.pulumi.com/PULUMI_ORG_NAME (letters, numbers, hyphens, and underscores).";
             }
             return null;
         },
-        priority: () => null,
+        priority: value => (PRIORITIES.indexOf(value) !== -1 ? null : "Choose a priority."),
         subject: value => (value ? null : "Enter a subject."),
         description: value =>
             value.length >= 10 ? null : "Describe the issue in at least a few words.",
@@ -212,22 +242,26 @@ function init() {
         }
     }
 
-    function restoreDraft(): void {
+    // Returns the fields it actually restored, so the query-param prefill below
+    // doesn't overwrite a recovered draft.
+    function restoreDraft(): Set<string> {
+        const restored = new Set<string>();
         try {
             const raw = sessionStorage.getItem(DRAFT_KEY);
             if (!raw) {
-                return;
+                return restored;
             }
             const draft = JSON.parse(raw) as Record<string, string>;
             for (const field of draftFields) {
                 const input = control(field);
-                if (input && !input.value && typeof draft[field] === "string") {
-                    input.value = draft[field];
+                if (input && typeof draft[field] === "string" && setControlValue(input, draft[field])) {
+                    restored.add(field);
                 }
             }
         } catch (e) {
             // Ignore unreadable drafts.
         }
+        return restored;
     }
 
     function clearDraft(): void {
@@ -244,15 +278,16 @@ function init() {
         draftTimer = window.setTimeout(saveDraft, 500);
     });
 
-    restoreDraft();
+    const restoredFields = restoreDraft();
 
     // Query-param prefill, e.g. /support/new/?priority=urgent&subject=CLI+crash.
+    // A recovered draft is the user's own work, so it wins over the URL.
     const params = new URLSearchParams(window.location.search);
     for (const field of ["priority", "subject", "email", "organization"]) {
         const value = params.get(field);
         const input = control(field);
-        if (value && input && !input.value) {
-            input.value = value;
+        if (value && input && !restoredFields.has(field)) {
+            setControlValue(input, value);
         }
     }
 
