@@ -71,7 +71,7 @@ In this section, you will run a number of commands in the Pulumi CLI that will e
 
 ### pulumi stack
 
-The [pulumi stack](/docs/iac/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and [output](/docs/concepts/inputs-outputs/#outputs) names and values of the current stack.
+The [pulumi stack](/docs/iac/cli/commands/pulumi_stack/) command is used to provide a quick overview of the current stack's status and configuration. Running this command will list the management details, resources, and [output](/docs/iac/concepts/inputs-outputs/#outputs) names and values of the current stack.
 
 Run the `pulumi stack` command as shown below:
 

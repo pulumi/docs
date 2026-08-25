@@ -3,7 +3,7 @@ title_tag: Deploy a Helm Chart to a Kubernetes Cluster
 title: Helm Chart on Kubernetes
 layout: template
 schema_type: howto
-meta_desc: Deploy a Helm chart to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a Helm chart to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Helm chart to a Kubernetes cluster with Pulumi.
 template:

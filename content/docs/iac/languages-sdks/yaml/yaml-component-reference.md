@@ -75,7 +75,7 @@ The value of `resources` is an object whose keys are logical resource names by w
 
 ### Outputs
 
-The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi Component and whose values are potentially computed expressions that resolve to the values of the desired outputs.
+The value of [`outputs`](https://www.pulumi.com/docs/iac/concepts/stacks/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi Component and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
 ```yaml
 outputs:

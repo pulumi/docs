@@ -3,7 +3,7 @@ title_tag: Deploy a Managed Kubernetes Cluster to Google Cloud
 title: Kubernetes Cluster on Google Cloud
 layout: template
 schema_type: howto
-meta_desc: Deploy a managed Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE) in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a managed Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE) in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on Google Cloud with Pulumi and Google Kubernetes Engine (GKE).
 template:

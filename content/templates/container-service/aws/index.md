@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to AWS
 title: Container Service on AWS
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on AWS with Pulumi, Amazon ECS on Fargate, and Amazon ECR in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a container service on AWS with Pulumi, Amazon ECS on Fargate, and Amazon ECR in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on AWS with Pulumi and Amazon ECS.
 template:

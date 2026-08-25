@@ -51,7 +51,7 @@ sections:
       - icon: code
         title: Cloud-native infrastructure as code
         description: |
-          Define your apps and infrastructure in your language of choice: TypeScript, Python, Go, C#, or Java. Then deploy to any cloud, with built-in policy enforcement and secrets management.
+          Define your apps and infrastructure in your language of choice: TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL. Then deploy to any cloud, with built-in policy enforcement and secrets management.
       - icon: robot
         title: Neo, your AI infrastructure agent
         description: |

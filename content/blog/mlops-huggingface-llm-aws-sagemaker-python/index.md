@@ -98,7 +98,7 @@ mkdir newSageMaker && cd newSageMaker
 pulumi new sagemaker-aws-python
 ```
 
-While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/concepts/stack/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
+While creating a new project from the `sagemaker-aws-python` Pulumi template, you will be prompted for a [project](https://www.pulumi.com/docs/iac/concepts/projects/) name, description, [stack](https://www.pulumi.com/docs/iac/concepts/stacks/) name, and Amazon Web Service [Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/). You can proceed with defaults, or supply your own.
 
 After responding to all prompts, the `pulumi new` command will proceed to setup a [Python Virtual Environment] (venv) and download all dependencies into the [venv].
 

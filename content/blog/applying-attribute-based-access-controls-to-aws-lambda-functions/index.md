@@ -557,7 +557,7 @@ Resources:
 Duration: 7s
 ```
 
-For the purposes of testing, we are now going to create a specific [AWS Provider resource](https://www.pulumi.com/docs/concepts/resources/providers/) that we can pass the IAM Role details to assume.
+For the purposes of testing, we are now going to create a specific [AWS Provider resource](https://www.pulumi.com/docs/iac/concepts/providers/) that we can pass the IAM Role details to assume.
 
 {{< chooser language "typescript,csharp,python,go,yaml" >}}
 {{% choosable language typescript %}}

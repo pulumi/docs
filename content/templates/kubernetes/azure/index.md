@@ -3,7 +3,7 @@ title_tag: Deploy a Managed Kubernetes Cluster to Azure
 title: Kubernetes Cluster on Azure
 layout: template
 schema_type: howto
-meta_desc: Deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
 template:

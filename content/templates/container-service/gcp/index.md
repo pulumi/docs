@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to Google Cloud
 title: Container Service on Google Cloud
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on Google Cloud with Pulumi, Cloud Run, and Artifact Registry in TypeScript, Python, Go, C#, or HCL.
+meta_desc: Deploy a container service on Google Cloud with Pulumi, Cloud Run, and Artifact Registry in TypeScript, Python, Go, .NET, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on Google Cloud with Pulumi and Google Cloud Run.
 template:

@@ -159,4 +159,5 @@ Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the sta
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 - [Pulumi vs. CDKTF](/docs/iac/comparisons/cdktf/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
+- [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/)
 - [Migrating from AWS CDK to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/)

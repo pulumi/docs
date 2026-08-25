@@ -32,6 +32,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [HCP Terraform (Terraform Cloud)](/docs/iac/comparisons/terraform-cloud/)
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 * [AWS CDK](/docs/iac/comparisons/aws-cdk/)
+* [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/)
 * [CDKTF](/docs/iac/comparisons/cdktf/)
 * [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)

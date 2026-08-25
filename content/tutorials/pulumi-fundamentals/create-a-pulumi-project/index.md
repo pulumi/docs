@@ -147,8 +147,8 @@ Feel free to explore the other files as well.
 Now let's move on to creating your first real bit of infrastructure with Pulumi:
 some Docker images!
 
-<!-- [^1]: [project](https://www.pulumi.com/docs/concepts/glossary/#project) -->
-<!-- [^2]: [program](https://www.pulumi.com/docs/concepts/glossary/#program) -->
-<!-- [^3]: [stack](https://www.pulumi.com/docs/concepts/glossary/#stack) -->
+<!-- [^1]: [project](https://www.pulumi.com/docs/reference/glossary/#project) -->
+<!-- [^2]: [program](https://www.pulumi.com/docs/reference/glossary/#program) -->
+<!-- [^3]: [stack](https://www.pulumi.com/docs/reference/glossary/#stack) -->
 
 {{< tutorials/stepper >}}

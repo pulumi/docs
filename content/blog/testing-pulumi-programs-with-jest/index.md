@@ -541,7 +541,7 @@ export const timeURL = new aws.lambda.FunctionUrl("time-url", {
 export const audioURL = timeURL.functionUrl;
 ```
 
-Finally, open `index.ts` (which should still be empty) and add a couple of lines to import the `resources` module and export the function URL as a Pulumi [stack output](/docs/concepts/stack#outputs):
+Finally, open `index.ts` (which should still be empty) and add a couple of lines to import the `resources` module and export the function URL as a Pulumi [stack output](/docs/iac/concepts/stacks/#outputs):
 
 ```typescript
 import "./resources";

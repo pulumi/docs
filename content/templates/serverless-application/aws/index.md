@@ -3,7 +3,7 @@ title_tag: Deploy a Serverless Application to AWS
 title: AWS Serverless Application
 layout: template
 schema_type: howto
-meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
 template:
