@@ -582,18 +582,18 @@ function init(): void {
     tl.fromTo(langRing, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, 2.55);
     tl.call(adoptLanguage, undefined, 2.55);
 
-    tl.call(adoptProtagonist, undefined, 2.7);
-    tl.call(() => blink(promptBlink, promptCaret, false), undefined, 2.71);
-    tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.7);
-    tl.to(langRow, { autoAlpha: 0, duration: 0.25 }, 2.85);
-    tl.to(iconT, { x: PANEL_LANG_CENTER.x, y: PANEL_LANG_CENTER.y, k: () => panelK, duration: 0.7, ease: "power2.inOut", onUpdate: applyIconT }, 2.85);
-    tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 2.85);
-    tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 2.85);
-    tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 2.85);
-    tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 2.85);
-    tl.to(glyph, { y: () => perch.y, duration: 0.75, ease: "power2.out" }, 2.8);
+    tl.call(adoptProtagonist, undefined, 3.5);
+    tl.call(() => blink(promptBlink, promptCaret, false), undefined, 3.51);
+    tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 3.5);
+    tl.to(langRow, { autoAlpha: 0, duration: 0.25 }, 3.65);
+    tl.to(iconT, { x: PANEL_LANG_CENTER.x, y: PANEL_LANG_CENTER.y, k: () => panelK, duration: 0.7, ease: "power2.inOut", onUpdate: applyIconT }, 3.65);
+    tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 3.65);
+    tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 3.65);
+    tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 3.65);
+    tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 3.65);
+    tl.to(glyph, { y: () => perch.y, duration: 0.75, ease: "power2.out" }, 3.6);
 
-    const TYPE_START = 3.65;
+    const TYPE_START = 4.45;
     const typeProxy = trackProxy({ p: 0 });
     tl.call(
         () => {
