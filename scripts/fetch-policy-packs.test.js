@@ -132,6 +132,21 @@ test("a bare-string exemption is rejected rather than silently ignored", () => {
     );
 });
 
+test("a malformed exemption is reported even when the forward check also fails", () => {
+    // Validate our own inputs before comparing them against the world: otherwise the
+    // registry mismatch throws first and the bad exemption ships unreported.
+    assert.throws(
+        () =>
+            audit({
+                packs: ["a-private-pack"],
+                allowlistUndocumented: [{ pack: "quietly-hidden" }],
+                products: new Set(["quietly-hidden"]),
+                nonProducts: new Map([["a-private-pack", "private"]]),
+            }),
+        /"why:"/,
+    );
+});
+
 test("a pack cannot be both documented and exempted", () => {
     assert.throws(
         () =>

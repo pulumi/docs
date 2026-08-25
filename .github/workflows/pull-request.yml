@@ -90,6 +90,12 @@ jobs:
           restore-keys: |
             hugo-resources-
 
+      # Node's built-in runner over scripts/*.test.js -- no Hugo, no cluster, no
+      # toolchains, so it runs on every PR. `make test` is gated on static/programs
+      # changes in scheduled-test.yml, which would leave this coverage off content PRs.
+      - name: Run unit tests
+        run: make test-unit
+
       - name: Build and deploy
         run: make ci_pull_request
         env:

@@ -213,25 +213,6 @@ function parseRegistryListing(body, org) {
 // Forward: nothing documented may be a non-product. Reverse: no product may go
 // undocumented without a recorded reason.
 function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProducts, warn = console.warn }) {
-    // Gate the allowlist on what the registry says we actually publish as products.
-    const notProducts = packs.filter((p) => !products.has(p));
-    if (notProducts.length) {
-        const detail = notProducts
-            .map((p) => `${p} (source: ${nonProducts.get(p) ?? "absent from the listing"})`)
-            .join(", ");
-        throw new Error(
-            `these entries in data/policy_packs.yaml are not published Pulumi products: ${detail}\n` +
-                `       Only packs the registry returns with source: "pulumi" may be documented. A pack\n` +
-                `       can be built in policy-packs-internal and resolvable through\n` +
-                `       /api/orgs/${org}/policypacks while still being private to the org.\n` +
-                `       Remove the entry, or publish the pack as a product before documenting it.`,
-        );
-    }
-
-    // ...and the other way round: a pack we publish as a product but do not document is
-    // the same failure this PR was opened to fix, just pointing the other way. Anything
-    // the registry calls a product needs either an entry above or a line in
-    // `undocumented:` saying why not.
     // The exemption list is the one input here with nothing behind it, so validate it or
     // the reason it exists to record isn't actually required: `- pack: foo` with no `why:`
     // would silence the check exactly as well as a real exemption, and it is the shortest
@@ -255,6 +236,26 @@ function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProduc
                 `       a page above: ${alsoDocumented.join(", ")}. Remove the "undocumented:" entry.`,
         );
     }
+
+    // Gate the allowlist on what the registry says we actually publish as products.
+    const notProducts = packs.filter((p) => !products.has(p));
+    if (notProducts.length) {
+        const detail = notProducts
+            .map((p) => `${p} (source: ${nonProducts.get(p) ?? "absent from the listing"})`)
+            .join(", ");
+        throw new Error(
+            `these entries in data/policy_packs.yaml are not published Pulumi products: ${detail}\n` +
+                `       Only packs the registry returns with source: "pulumi" may be documented. A pack\n` +
+                `       can be built in policy-packs-internal and resolvable through\n` +
+                `       /api/orgs/${org}/policypacks while still being private to the org.\n` +
+                `       Remove the entry, or publish the pack as a product before documenting it.`,
+        );
+    }
+
+    // ...and the other way round: a pack we publish as a product but do not document is
+    // the same failure this PR was opened to fix, just pointing the other way. Anything
+    // the registry calls a product needs either an entry above or a line in
+    // `undocumented:` saying why not.
     // A pack that loses product status leaves a permanent, invisible exemption behind --
     // which is how hitrust-awsnative survived as long as it did. Harmless but stale, so
     // this says something rather than throwing.

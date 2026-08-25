@@ -151,7 +151,7 @@ test:
 	$(MAKE) test-unit
 	$(MAKE) test-programs
 
-# Unit tests: the components suite plus the scripts/*.test.js files. Fast; no network.
+# Unit tests: the scripts/*.test.js files. Fast; no network.
 .PHONY: test-unit
 test-unit:
 	./scripts/run-unit-tests.sh
