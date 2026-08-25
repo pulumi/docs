@@ -16,24 +16,24 @@ schema_type: auto
 
 social:
     twitter: |
-        A Professional Services customer has migrated more than 4,000 resources from Terraform to Pulumi on their own — using a tool we built after hitting the same gaps on every migration.
+        Migrations are hard, but most of the hard part is mechanical. We built a tool that automates it — and a recent customer has used it to migrate more than 4,000 resources from Terraform to Pulumi entirely on their own.
 
-        Here's the pipeline that made it repeatable.
+        Here's the pipeline.
     linkedin: |
-        Every Terraform-to-Pulumi migration we ran hit the same walls. State files full of plaintext secrets. Import IDs composed by hand, one resource at a time. A single bad ID failing the whole import. And a class of resources that cannot be imported at all, with an error message that points in the wrong direction.
+        Everyone knows migrations are hard. What running Terraform-to-Pulumi migrations taught us is how much of the hard part is mechanical: import IDs composed by hand, secrets extracted from plaintext state, a single bad ID failing a whole import. And some gaps aren't in anyone's program — no AWS API will return an RDS master password, and some Terraform resources ship without an importer at all.
 
-        We built a tool that turns the import step into a pipeline, and an agent skill that drives it and validates every stage before moving to the next.
+        So we automated it: a tool that runs the import as a pipeline, and an agent skill that drives it and validates every stage.
 
-        A recent Professional Services customer adopted it and has since migrated more than 4,000 resources on their own, without Pulumi engineers in the loop.
+        A recent customer picked it up and has migrated more than 4,000 resources on their own — no Pulumi engineers in the loop.
 
-        We wrote up how the pipeline works and the gap each stage closes.
+        We wrote up the pipeline and the gap each stage closes.
     bluesky: |
-        Some Terraform resources can't be imported into Pulumi at all, and the error message points in the wrong direction. That's one of five gaps we kept hitting on migrations, so we built a tool that closes them. One customer has migrated 4,000+ resources with it on their own.
+        Some Terraform resources can't be imported into Pulumi at all — the upstream provider ships no importer. That's one of five gaps our migration tool closes automatically. With it, one recent customer has migrated 4,000+ resources on their own.
 
         We wrote up the pipeline.
 ---
 
-Migrating a live Terraform workspace to Pulumi is very doable — teams do it every day — but the import step has always carried more manual work than it should: discovering import IDs one resource at a time, extracting values from state files full of plaintext secrets, chasing down post-import diffs. None of that is deep or difficult; it's mechanical, which means it can be automated. We built [`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) — and a set of agent skills that drive it — to do exactly that, turning migration into a repeatable, validated pipeline. One recent customer has used it to migrate more than 4,000 resources entirely on their own.
+Migrations are hard — nobody needs convincing of that. But migrating from Terraform to Pulumi shouldn't be harder than it has to be, and most of what makes the import step slow is mechanical: discovering import IDs one resource at a time, extracting secrets safely from state, chasing down post-import diffs the program didn't cause. Much of it isn't even specific to Pulumi — it follows from how cloud APIs and Terraform providers are designed. We built [`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) — and a set of agent skills that drive it — to automate that work, turning migration into a repeatable, validated pipeline. One recent customer has used it to migrate more than 4,000 resources entirely on their own.
 
 <!--more-->
 
@@ -44,12 +44,12 @@ Pulumi already ships a capable [`pulumi import`](/docs/iac/guides/migration/impo
 - **Import IDs don't write themselves.** Every resource needs the right ID in the right format, and composite IDs (a Lambda permission is `FunctionName/StatementId`, Route53 records and security group rules have their own schemes) must be composed from resource attributes. Doing this by hand for a 300-resource stack is slow and error-prone.
 - **Terraform state contains plaintext secrets.** Anything — or anyone, including an AI agent — that reads the state file to extract values sees database passwords and API keys in the clear.
 - **One bad ID fails the whole import.** `pulumi import` commits already-succeeded steps but aborts on the first failure, so a large import becomes a loop of run, fail, fix one ID, run again.
-- **The cloud API doesn't return everything.** Write-only fields, IaC-only defaults, and asset contents never come back from a provider's Read call, so freshly imported state produces diffs the program didn't cause.
-- **Some resources can't be imported at all.** Association and toggle resources like `aws_iam_policy_attachment` or `aws_vpn_gateway_route_propagation` declare no importer, and `pulumi import` fails on them with a misleading `resource '<id>' does not exist`.
+- **The cloud API doesn't return everything.** Some fields are write-only by deliberate AWS design — no AWS API will ever return an RDS master password or an ACM private key, and Lambda's `GetFunction` returns a presigned URL rather than the code itself. Others the API does return, but the Terraform provider's Read doesn't populate them in state (Secrets Manager's `secretString`, for example). Either way, freshly imported state produces diffs the program didn't cause.
+- **Some resources can't be imported at all.** Association and toggle resources like `aws_iam_policy_attachment` or `aws_vpn_gateway_route_propagation` ship from the upstream Terraform provider with no importer defined, and `pulumi import` fails on them with a misleading `resource '<id>' does not exist`.
 
 Bridged providers like `aws` (AWS Classic) add one more layer: the Pulumi resource model is translated from the Terraform provider's schema, so property names, nested shapes, and `MaxItems=1` flattening all differ from what's sitting in the Terraform state you're migrating from.
 
-None of these is a reason to put off migrating. They're mechanical problems with mechanical answers — but without tooling, they're where the hours go. `pulumi-tool-import` addresses each of them directly. It's a Pulumi tool plugin whose commands form a pipeline, and it ships with agent skills that orchestrate the pipeline while an agent (or a human) hand-authors the Pulumi program the migration lands on.
+Notice that most of these gaps don't originate in Pulumi. Write-only fields are AWS API security design, missing importers are upstream Terraform provider decisions, and API rate limits are a fact of life for large stacks. They land on whoever runs the migration, whatever the destination — which is exactly why they deserve tooling rather than hours of hand-work. `pulumi-tool-import` addresses each of them directly. It's a Pulumi tool plugin whose commands form a pipeline, and it ships with agent skills that orchestrate the pipeline while an agent (or a human) hand-authors the Pulumi program the migration lands on.
 
 ## The pipeline
 
