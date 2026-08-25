@@ -20,11 +20,11 @@ Security is a team effort that's best established from the outset. Pulumi Cloud 
 
 ### Choose your compliance approach
 
-Modern enterprises face rigorous compliance requirements. Pulumi Cloud is SOC 2 Type II certified and AWS-reviewed for compliance best practices. The infrastructure hosting Pulumi Cloud aligns with IT security standards including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001/27001/27017/27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. Learn more at [Pulumi Security](/security/).
+Modern enterprises face rigorous compliance requirements. Pulumi Cloud is SOC 2 Type II certified. The infrastructure hosting Pulumi Cloud aligns with IT security standards including SOC 1/SSAE 16/ISAE 3402, SOC 2, SOC 3, FISMA, FedRAMP, DOD SRG Levels 2 and 4, PCI DSS Level 1, EU Model Clauses, ISO 9001/27001/27017/27018, ITAR, IRAP, FIPS 140-2, MLPS Level 3, and MTCS. Learn more at [Pulumi Security](/security/).
 
 Use Pulumi's Policy as Code engine, [Pulumi Policies](/docs/insights/policy/), to enforce compliant infrastructure practices. Pulumi Policies includes hundreds of out-of-the-box policies for AWS, Azure, Google Cloud, and Kubernetes, spanning CIS, HITRUST, NIST, PCI DSS, ISO 27001, and CMMC. You can also write custom policies for your specific industry or enterprise requirements.
 
-Pulumi Policies identifies issues in existing cloud infrastructure and prevents new problems from being introduced. Configure it at warning or error levels, and apply it flexibly across projects—for example, GDPR rules might only apply to infrastructure in European regions. Pulumi Policies also features automatic remediations.
+Pulumi Policies identifies issues in existing cloud infrastructure and prevents new problems from being introduced. Configure each policy as advisory, mandatory, or remediate, and apply policies flexibly across projects—for example, GDPR rules might only apply to infrastructure in European regions. Pulumi Policies also features automatic remediations.
 
 Pulumi Cloud maintains an audit log of every activity and who performed it for complete visibility.
 

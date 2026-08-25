@@ -29,7 +29,9 @@ const OUTPUT_DIR = path.join(ROOT, "data", "policy_pack_policies");
 // never on every run, and never to "today" just because the script ran.
 const LASTMOD_FILE = path.join(ROOT, "data", "policy_pack_lastmod.json");
 
-if (!TOKEN) {
+// Guarded so the pure helpers below can be required by scripts/fetch-policy-packs.test.js
+// without a token; the fetching path still refuses to run without one.
+if (!TOKEN && require.main === module) {
     console.error("error: PULUMI_ACCESS_TOKEN is not set. This script calls authenticated");
     console.error("       Pulumi Cloud policy pack endpoints and cannot run without a token.");
     process.exit(1);
@@ -136,8 +138,8 @@ function loadLastmodLedger() {
 // them apart, which is how the private hitrust-awsnative pack ended up with a public
 // reference page (pulumi/docs#21055).
 //
-// The registry listing does carry the distinction, in `source`. Two real records, from
-// @danbiwer on 2026-08-24:
+// The registry listing does carry the distinction, in `source`. Verified against the
+// live listing for the `pulumi` org on 2026-08-25 (36 packs: 23 `pulumi`, 13 `private`):
 //
 //     { "source": "private", "publisher": "pulumi",
 //       "name": "approved-component-versions-bad", "version": "1.0.4", ... }
@@ -149,35 +151,132 @@ function loadLastmodLedger() {
 // command rather than by whoever publishes the pack, so an engineer testing something
 // cannot set it by accident.
 //
-// This fails closed. If the listing cannot be read or does not look the way it did
-// above, the job stops rather than falling back to publishing unverified pages: a
-// broken check should cost us a nightly sync, not put a private pack on the website.
+// The response is `ListPolicyPacksResponse` in the published Pulumi Cloud OpenAPI spec:
+// a required `policyPacks` array plus an optional `continuationToken` for paging.
+//
+// This fails closed. If the listing cannot be read, looks different from the above, or
+// is only partly readable, the job stops rather than falling back to publishing
+// unverified pages: a broken check should cost us a nightly sync, not put a private pack
+// on the website.
 async function fetchRegistryProducts(org) {
     const body = await fetchJSON(`/api/registry/policypacks?orgLogin=${encodeURIComponent(org)}`);
-    // The envelope key isn't pinned here -- only the record shape above is confirmed --
-    // so accept a bare array or the usual wrappers.
-    const rows = Array.isArray(body)
-        ? body
-        : Array.isArray(body?.policyPacks)
-          ? body.policyPacks
-          : Array.isArray(body?.items)
-            ? body.items
-            : null;
-    if (!rows || !rows.some((r) => typeof r?.source === "string")) {
+    return parseRegistryListing(body, org);
+}
+
+// The pure half of the above, split out so the shape handling is testable without a token.
+function parseRegistryListing(body, org) {
+    const rows = body?.policyPacks;
+    if (!Array.isArray(rows)) {
         throw new Error(
-            `could not read the registry policy pack listing for the "${org}" org: expected a list\n` +
-                `       of records carrying "name" and "source". The API shape may have changed --\n` +
-                `       see the comment above fetchRegistryProducts in this file.`,
+            `could not read the registry policy pack listing for the "${org}" org: expected a\n` +
+                `       "policyPacks" array. The API shape may have changed -- see the comment above\n` +
+                `       fetchRegistryProducts in this file.`,
+        );
+    }
+    // The response pages, and no documented query parameter asks for page two. A partial
+    // read is worse than no read: it fails documented packs that are fine, and it hides
+    // products nobody documented from the check below, which is the one thing that check
+    // exists to catch. Stop rather than trust an incomplete list.
+    if (body.continuationToken) {
+        throw new Error(
+            `the registry policy pack listing for the "${org}" org is paginated\n` +
+                `       (continuationToken present) and this script only reads the first page. Teach it\n` +
+                `       to follow the token before trusting the result.`,
         );
     }
     const products = new Set();
     const nonProducts = new Map();
     for (const row of rows) {
         if (!row?.name) continue;
+        // Distinguish "present but carries no source" from "absent from the listing"; the
+        // caller reports the latter, and conflating them sends whoever reads the error
+        // looking for a deleted pack that is right there.
         if (row.source === "pulumi") products.add(row.name);
-        else nonProducts.set(row.name, row.source);
+        else nonProducts.set(row.name, row.source ?? "(no source field)");
+    }
+    // A listing with rows but no products is a shape problem, never an allowlist problem.
+    // `source` going missing for this org's records would otherwise surface as the
+    // allowlist error below naming every documented pack as privately published, which is
+    // the most alarming possible misreading of an upstream schema change.
+    if (rows.length && !products.size) {
+        throw new Error(
+            `the registry listing for the "${org}" org returned ${rows.length} record(s) but not\n` +
+                `       one with source: "pulumi". That is far more likely a change to the API's\n` +
+                `       "source" field than every pack being unpublished at once -- see the comment\n` +
+                `       above fetchRegistryProducts.`,
+        );
     }
     return { products, nonProducts };
+}
+
+// Both directions of the gate, pure so it can be exercised without the network.
+// Forward: nothing documented may be a non-product. Reverse: no product may go
+// undocumented without a recorded reason.
+function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProducts, warn = console.warn }) {
+    // Gate the allowlist on what the registry says we actually publish as products.
+    const notProducts = packs.filter((p) => !products.has(p));
+    if (notProducts.length) {
+        const detail = notProducts
+            .map((p) => `${p} (source: ${nonProducts.get(p) ?? "absent from the listing"})`)
+            .join(", ");
+        throw new Error(
+            `these entries in data/policy_packs.yaml are not published Pulumi products: ${detail}\n` +
+                `       Only packs the registry returns with source: "pulumi" may be documented. A pack\n` +
+                `       can be built in policy-packs-internal and resolvable through\n` +
+                `       /api/orgs/${org}/policypacks while still being private to the org.\n` +
+                `       Remove the entry, or publish the pack as a product before documenting it.`,
+        );
+    }
+
+    // ...and the other way round: a pack we publish as a product but do not document is
+    // the same failure this PR was opened to fix, just pointing the other way. Anything
+    // the registry calls a product needs either an entry above or a line in
+    // `undocumented:` saying why not.
+    // The exemption list is the one input here with nothing behind it, so validate it or
+    // the reason it exists to record isn't actually required: `- pack: foo` with no `why:`
+    // would silence the check exactly as well as a real exemption, and it is the shortest
+    // path for whoever is unblocking a red nightly at 08:00. The bare-string form
+    // (`- foo`) is worse still -- `e.pack` is undefined, so the pack stays unaccounted for
+    // and the check fires naming a pack the author believes they just listed.
+    const undocumented = allowlistUndocumented || [];
+    const unexplained = undocumented.filter((e) => !e?.pack || !String(e?.why || "").trim());
+    if (unexplained.length) {
+        throw new Error(
+            `every entry under "undocumented:" in data/policy_packs.yaml needs both a "pack:" and\n` +
+                `       a "why:": ${JSON.stringify(unexplained)}\n` +
+                `       The list records why a product stays unlisted; it is not a way to silence the\n` +
+                `       check below.`,
+        );
+    }
+    const alsoDocumented = undocumented.map((e) => e.pack).filter((p) => packs.includes(p));
+    if (alsoDocumented.length) {
+        throw new Error(
+            `these packs are listed under "undocumented:" in data/policy_packs.yaml but also have\n` +
+                `       a page above: ${alsoDocumented.join(", ")}. Remove the "undocumented:" entry.`,
+        );
+    }
+    // A pack that loses product status leaves a permanent, invisible exemption behind --
+    // which is how hitrust-awsnative survived as long as it did. Harmless but stale, so
+    // this says something rather than throwing.
+    const staleExemptions = undocumented.map((e) => e.pack).filter((p) => !products.has(p));
+    if (staleExemptions.length) {
+        warn(
+            `warning: these "undocumented:" entries in data/policy_packs.yaml are no longer\n` +
+                `         published products: ${staleExemptions.join(", ")}. Drop them once confirmed.`,
+        );
+    }
+
+    const accountedFor = new Set([...packs, ...undocumented.map((e) => e.pack)]);
+    const undocumentedProducts = [...products].filter((p) => !accountedFor.has(p));
+    if (undocumentedProducts.length) {
+        throw new Error(
+            `these packs are published as Pulumi products but have no reference page:\n` +
+                `       ${undocumentedProducts.join(", ")}\n` +
+                `       Add an entry to data/policy_packs.yaml, or list the pack under\n` +
+                `       "undocumented:" there with the reason it stays unlisted.`,
+        );
+    }
+
 }
 
 async function main() {
@@ -201,39 +300,8 @@ async function main() {
 
     const packs = entries.map((e) => e.pack);
 
-    // Gate the allowlist on what the registry says we actually publish as products.
     const { products, nonProducts } = await fetchRegistryProducts(org);
-    const notProducts = packs.filter((p) => !products.has(p));
-    if (notProducts.length) {
-        const detail = notProducts
-            .map((p) => `${p} (source: ${nonProducts.get(p) ?? "absent from the listing"})`)
-            .join(", ");
-        throw new Error(
-            `these entries in data/policy_packs.yaml are not published Pulumi products: ${detail}\n` +
-                `       Only packs the registry returns with source: "pulumi" may be documented. A pack\n` +
-                `       can be built in policy-packs-internal and resolvable through\n` +
-                `       /api/orgs/${org}/policypacks while still being private to the org.\n` +
-                `       Remove the entry, or publish the pack as a product before documenting it.`,
-        );
-    }
-
-    // ...and the other way round: a pack we publish as a product but do not document is
-    // the same failure this PR was opened to fix, just pointing the other way. Anything
-    // the registry calls a product needs either an entry above or a line in
-    // `undocumented:` saying why not.
-    const accountedFor = new Set([
-        ...packs,
-        ...(allowlist.undocumented || []).map((e) => e.pack),
-    ]);
-    const undocumentedProducts = [...products].filter((p) => !accountedFor.has(p));
-    if (undocumentedProducts.length) {
-        throw new Error(
-            `these packs are published as Pulumi products but have no reference page:\n` +
-                `       ${undocumentedProducts.join(", ")}\n` +
-                `       Add an entry to data/policy_packs.yaml, or list the pack under\n` +
-                `       "undocumented:" there with the reason it stays unlisted.`,
-        );
-    }
+    auditAllowlist({ org, packs, allowlistUndocumented: allowlist.undocumented, products, nonProducts });
 
     console.log(`Fetching ${packs.length} policy packs from ${API} (org: ${org})...`);
 
@@ -317,7 +385,11 @@ async function main() {
     }
 }
 
-main().catch((err) => {
-    console.error(`error: ${err.message}`);
-    process.exit(1);
-});
+if (require.main === module) {
+    main().catch((err) => {
+        console.error(`error: ${err.message}`);
+        process.exit(1);
+    });
+}
+
+module.exports = { parseRegistryListing, auditAllowlist, latestVersionTag, unclosedFences };
