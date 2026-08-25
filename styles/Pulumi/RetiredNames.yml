@@ -2,39 +2,36 @@
 # brand guide's "Retired and disallowed names" table gives the new one.
 #
 # Advisory (`level: warning`, and deliberately NOT on the `blocker:` list in
-# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml), because
-# the brand guide's own preamble carves out two cases a blanket auto-fix gets
-# wrong, and both occur in this repo:
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml) — not
+# because these names are any less retired, but because the REPLACEMENT this
+# rule proposes isn't reliably right. The brand guide's own preamble names the
+# two cases, and both occur in this repo:
 #
 #   1. "Historical usage is fine. Prose that intentionally describes past
 #      behavior ... is acceptable." content/case-studies/unity.md says "Pulumi
 #      Neo is our AI platform engineer, replacing Pulumi Copilot with expanded
-#      capabilities" — mechanically applying the swap produces "Neo ...
-#      replacing Neo". The same page carries a heading anchor `{#copilot}`
-#      that a rename would break.
+#      capabilities" — applying the swap produces "Neo ... replacing Neo". The
+#      same page carries a heading anchor `{#copilot}` a rename would break.
 #   2. "Some replacements can't be automated." "Insights" resolves to the
 #      Discovery *product* in most sentences but to the "Discovery &
 #      governance" *category* in others (its own row in the brand table), and
 #      the docs IA still lives under /docs/insights/.
 #
-# So these need a human or a reviewing model to confirm each swap in context.
-# The fix is still deterministic (the brand table names the replacement), so
-# the rule stays on the `deterministic_fix:` list — review-existing-content
-# applies it only after confirming the swap preserves meaning, which is
-# exactly the judgment gate these rows need.
+# A finding whose proposed fix is wrong some of the time can't carry a
+# must-resolve-before-merge gate, so these surface as advisory and a human or
+# reviewing model picks the right name. The fix is still deterministic enough
+# to stay on `deterministic_fix:` — review-existing-content applies it only
+# after confirming the swap preserves meaning, which is exactly the judgment
+# these rows need.
 #
-# Rows graduate to Substitutions.yml (error, blocker) once the repo-wide
-# backlog for that name reaches zero — this file is deliberately the place a
-# retired name waits while its content migration is still outstanding, so that
-# adopting a brand rename never turns into a blocker on every PR that touches
-# an unmigrated page. Vale-visible backlog at the time of writing, excluding
-# the content/blog and generated-CLI trees that .vale.ini exempts (tracked for
-# migration in pulumi/docs#21133):
-# self-managed backend 40, Pulumi Insights 24, Insights scan 3, Insights
-# account 2, Pulumi Copilot 2, Policy Violations 3, Insights supergraph 1,
-# Insights resources 1.
+# The tier axis is swap safety, NOT backlog size. A retired term whose
+# replacement is always correct belongs in Substitutions.yml at blocker tier
+# even with unmigrated pages behind it, because the PR review is diff-scoped
+# (vale-findings-filter.py --pr intersects findings with PR-added lines), so a
+# blocker only ever fires on a line an author is writing today. Outstanding
+# content migrations are tracked in pulumi/docs#21133.
 extends: substitution
-message: '''%s'' is a retired name; the brand guide replaces it with ''%s''. Confirm it fits this sentence — historical prose ("X replaced Y") and heading anchors are legitimate exceptions.'
+message: 'Use ''%s'' — ''%s'' is a retired name. Confirm the replacement fits this sentence; historical prose ("X replaced Y") and heading anchors are legitimate exceptions.'
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
 ignorecase: true
@@ -48,5 +45,3 @@ swap:
   '\bInsights supergraph\b': resource graph
   '\bInsights resources\b': discovered resources
   '\bPolicy Violations\b': policy findings
-  '\bself-managed backend\b': DIY backend
-  '\bself-managed backends\b': DIY backends
