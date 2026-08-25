@@ -15,7 +15,7 @@ youll_learn:
 prereqs:
     - The [Pulumi CLI](/docs/iac/download-install/)
     - A [Pulumi Cloud account](https://app.pulumi.com/signup) and [access token](/docs/pulumi-cloud/accounts/#access-tokens)
-    - A Pulumi Cloud organization with a subscription to the [Enterprise edition](https://pulumi.com/pricing) (or above)
+    - A Pulumi Cloud organization with a subscription to the [Essentials edition](https://pulumi.com/pricing) or above
     - Familiarity with Bash scripting, JavaScript, and Node.js
 estimated_time: 10
 collections:
@@ -24,7 +24,7 @@ collections:
 
 ## Log into Pulumi Cloud
 
-Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/signin) with an account that has access to a Pulumi organization with an [Enterprise edition](https://pulumi.com/pricing) subscription. Once you've done so, you can log in with the Pulumi CLI and be prompted to :
+Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi.com/signin) with an account that has access to a Pulumi organization with an [Essentials edition](https://pulumi.com/pricing) subscription. Once you've done so, you can log in with the Pulumi CLI and be prompted to :
 
 ```bash
 $ pulumi login

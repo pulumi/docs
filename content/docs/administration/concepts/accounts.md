@@ -95,4 +95,4 @@ For users who signed up with email, you can enable multi-factor authentication (
 
 ## Subscription
 
-Your individual account is on the Pulumi Individual Edition and this cannot be changed. To collaborate with others, create an organization.
+Your individual account is on the Pulumi Free edition and this cannot be changed. To collaborate with others, create an organization.

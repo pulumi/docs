@@ -1,6 +1,6 @@
 ---
 title_tag: "Enable SAML SSO for Self-hosted Environments"
-meta_desc: Learn how to make the self-hosted Pulumi ready for SAML SSO with any IdP. Self-hosting is available on the Business Critical edition.
+meta_desc: Learn how to make the self-hosted Pulumi ready for SAML SSO with any IdP. Self-hosting is available on the Enterprise+ edition.
 title: SAML SSO
 h1: SAML SSO for self-hosted Pulumi Cloud
 menu:

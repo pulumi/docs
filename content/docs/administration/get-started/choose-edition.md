@@ -24,13 +24,13 @@ Your edition determines the level of support, training, and features available t
 Pulumi’s community has grown to hundreds of thousands of practitioners worldwide. Check out the [Pulumi Community](/community/) to connect!
 {{%/notes%}}
 
-### Individual and Team editions
+### Free and Essentials editions
 
 Perfect for smaller teams or getting started. Access community support through GitHub [Discussions](https://github.com/pulumi/pulumi/discussions) and [Issues](https://github.com/pulumi/pulumi/issues), [Community Slack](https://slack.pulumi.com), and free workshops.
 
 You can also make use of the [Pulumi Neo](/product/neo/), detailed documentation in the [Pulumi Registry](/registry/), and the [examples repo](https://github.com/pulumi/examples) to help you get started.
 
-### Enterprise and Business Critical editions
+### Pro and Enterprise+ editions
 
 Designed for larger organizations with mission-critical workloads. These editions include:
 
@@ -39,7 +39,7 @@ Designed for larger organizations with mission-critical workloads. These edition
 - **Priority access**: Prioritized bugs and feature requests, plus product roadmap reviews
 - **Custom training**: Tailored onboarding and ongoing training for your team
 
-Access your support through the [support portal](https://support.pulumi.com/hc/en-us) if you're on the Enterprise or Business Critical edition.
+Access your support through the [support portal](https://support.pulumi.com/hc/en-us) if you're on the Pro or Enterprise+ edition.
 
 {{% notes type="info" %}}
 Learn more about the differences between [the editions](/pricing/).

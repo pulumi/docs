@@ -24,7 +24,7 @@ Neo acts on behalf of the user invoking it, and Neo can only do what that user c
 The rest of this page describes which user Neo acts as on each surface, the ceiling that user's RBAC sets, and the controls that narrow it further.
 
 {{% notes type="info" %}}
-Neo has no identity of its own: by default a task carries the acting user's full set of [role](/docs/administration/concepts/rbac/) assignments. On Enterprise and Business Critical editions, a task can instead assume a single role, and then runs with that role's permissions in place of the user's own assignments. You can only assume a role you already hold, so this narrows Neo's access and never widens it. Per-task roles are still rolling out; if your organization doesn't have them yet, the levers for constraining Neo are the acting user's RBAC and the ESC environments they can open.
+Neo has no identity of its own: by default a task carries the acting user's full set of [role](/docs/administration/concepts/rbac/) assignments. On the Pro and Enterprise+ editions, a task can instead assume a single role, and then runs with that role's permissions in place of the user's own assignments. You can only assume a role you already hold, so this narrows Neo's access and never widens it. Per-task roles are still rolling out; if your organization doesn't have them yet, the levers for constraining Neo are the acting user's RBAC and the ESC environments they can open.
 {{% /notes %}}
 
 ## Execution identity per surface

@@ -139,14 +139,15 @@ For more information, see [Deleting your account](/docs/administration/concepts/
 
 Sign up with the identity provider your organization uses, then
 [download the CLI](/docs/get-started/) and sign in when it prompts you. The
-Individual edition is free forever and needs no credit card. It covers one user,
-unlimited projects, stacks, and environments, and unlimited updates and history.
+Free edition costs nothing and needs no credit card. It covers one user,
+unlimited projects, stacks, and environments, unlimited updates and history, and
+up to 2,000 managed resources.
 
-### Are organizations available on the Individual edition?
+### Are organizations available on the Free edition?
 
-No. The Individual edition covers a single user, which suits private projects but
+No. The Free edition covers a single user, which suits private projects but
 not a team. Organizations — the shared workspace where several engineers work on
-the same projects — start with the Team edition. Enterprise and Business Critical
+the same projects — start with the Essentials edition. Pro and Enterprise+
 add [role-based access control](/docs/administration/concepts/rbac/) and
 [SAML/SSO](/docs/administration/guides/saml/) on top of that.
 
@@ -154,14 +155,15 @@ add [role-based access control](/docs/administration/concepts/rbac/) and
 
 Yes. You can move up an edition at any time from your organization's
 **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin).
-Your stacks, environments, and history carry over untouched. Business Critical is
-priced per organization, so [contact us](/contact/?form=sales) for that one.
+Your stacks, environments, and history carry over untouched. Enterprise+ is
+quoted per organization, so [contact us](/contact/?form=sales) for that one.
 
 ### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
-Those editions are retired and don't include newer capabilities such as
-[Pulumi Deployments](/docs/deployments/), [Pulumi Insights](/docs/insights/), and
-[Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+These are the grandfathered SKUs from before Pulumi Cloud moved to editions, not
+the current Pro edition. They are retired and don't include newer capabilities
+such as [Pulumi Deployments](/docs/deployments/),
+[Pulumi Insights](/docs/insights/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.
 
@@ -182,20 +184,22 @@ To discuss that, [contact us](/contact/).
 
 ### What editions are available?
 
-- **Individual** is free forever for one user, and covers state management,
-  unlimited projects, stacks, and environments, and unlimited updates and history.
+- **Free** covers one user, state management, unlimited projects, stacks, and
+  environments, unlimited updates and history, and up to 2,000 managed resources.
 
-- **Team** adds organizations for up to 10 users, secure collaboration and CI/CD,
-  resource search, webhooks, and automatic secrets rotation.
+- **Essentials** adds organizations with unlimited users, secure collaboration
+  and CI/CD, Resource Search and Property Search, webhooks, automatic secrets
+  rotation, audit logs, and policy results in advisory mode.
 
-- **Enterprise** adds unlimited users, SAML/SSO and role-based access control,
-  audit logs, drift detection and remediation, time-to-live stacks, and
-  customer-managed keys.
+- **Pro** adds SAML/SSO and advanced role-based access control,
+  organization-managed policy enforcement, preventative policies, custom policy
+  packs, scheduled Neo tasks, automated audit log export, drift detection and
+  remediation, time-to-live stacks, and customer-managed keys.
 
-- **Business Critical** adds [self-hosting](/docs/administration/self-hosting/),
-  built-in compliance frameworks,
-  [SCIM](/docs/administration/guides/scim/) user and group sync, audit
-  log export, and 24x7 support.
+- **Enterprise+** adds [self-hosting](/docs/administration/self-hosting/),
+  conformance packs for NIST, PCI DSS, HITRUST, SOC 2, and CIS,
+  [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
+  custom policy packs, and policy remediation.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 

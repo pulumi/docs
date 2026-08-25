@@ -58,7 +58,7 @@ deployment:
 pricing:
     title: Pricing
     description: |
-        Self-Hosted Pulumi is available as an additional license for the Business Critical Edition of Pulumi and provided as part of a guided Proof of Concept.
+        Self-Hosted Pulumi is available as an additional license for the Pulumi Enterprise+ edition and provided as part of a guided Proof of Concept.
 questions:
     title: Talk to a Human
     description: |
