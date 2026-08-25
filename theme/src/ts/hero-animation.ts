@@ -57,7 +57,7 @@ const PANEL_LANG_SIZE = 15;
 // with 0.05em tracking, centered in the pill with a constant gap; the chosen
 // item grows an 18px icon prefix and a ring with asymmetric padding.
 const LANG_ADV = 10 * (CW / 12) + 0.5;
-const LANG_PILL = { x: 203, width: 338, gap: 18.6, minPad: 10 };
+const LANG_PILL = { x: 203, width: 338, gap: 18.6, minPad: 10, restPad: 22 };
 const LANG_ICON = { size: 18, gap: 7, centerY: 426 };
 const LANG_RING_PAD = { left: 10.5, right: 9.5 };
 
@@ -264,7 +264,16 @@ function init(): void {
                 x += ws[i] + LANG_PILL.gap;
             }
         };
-        place(langShortW, restX);
+        // At rest the labels are justified across the pill; selection gathers
+        // them into the tighter centered flow the storyboard shows.
+        let restTotal = 0;
+        langShortW.forEach(w => (restTotal += w));
+        const restGap = (LANG_PILL.width - 2 * LANG_PILL.restPad - restTotal) / (langShortW.length - 1);
+        let rx = LANG_PILL.x + LANG_PILL.restPad;
+        for (let i = 0; i < langShortW.length; i++) {
+            restX[i] = rx;
+            rx += langShortW[i] + restGap;
+        }
         const itemX: number[] = [];
         place(selWidths, itemX);
         for (let i = 0; i < itemX.length; i++) {
@@ -579,7 +588,24 @@ function init(): void {
     );
 
     tl.fromTo(langRow, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, 0.45);
-    tl.to(langShorts, { x: (i: number) => selX[i], duration: 0.4, ease: "power2.inOut" }, 2.45);
+    // The reflow is proxy-driven: per-target function values proved unreliable
+    // under repeatRefresh on later loops, while proxies rewound by reset()
+    // re-read the current pass's layout on every update.
+    const slideT = trackProxy({ p: 0 });
+    tl.to(
+        slideT,
+        {
+            p: 1,
+            duration: 0.4,
+            ease: "power2.inOut",
+            onUpdate: () => {
+                for (let i = 0; i < langShorts.length; i++) {
+                    gsap.set(langShorts[i], { x: restX[i] + (selX[i] - restX[i]) * slideT.p });
+                }
+            },
+        },
+        2.45,
+    );
     tl.call(selectLanguage, undefined, 2.45);
     tl.fromTo(langRing, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, 2.55);
     tl.call(adoptLanguage, undefined, 2.55);
