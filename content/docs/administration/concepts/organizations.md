@@ -41,6 +41,10 @@ Creating an organization will start a free trial that has access to all features
 At the end of the trial, you can choose the Team, Enterprise, or Business Critical edition.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
+{{% notes type="info" %}}
+[Organization-managed users](/docs/administration/concepts/org-managed-users/) can't create organizations. If an organization created your account through SAML or SCIM, the option isn't available to you.
+{{% /notes %}}
+
 To create an organization:
 
 1. Select the create organization button at the top of the navigation.
@@ -58,6 +62,14 @@ you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
 For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/faq/pulumi-cloud/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+
+### Backing membership doesn't grant Pulumi membership {#backing-membership}
+
+Being in the backing GitHub organization, GitLab group, or Bitbucket workspace doesn't put you in the Pulumi organization. It only makes you someone an admin can add.
+
+Once you connect the matching identity to your Pulumi account, you appear on the list of people a Pulumi organization admin can invite or add. Until an admin does that, you have no access.
+
+If you're in the GitHub organization but don't see anything in Pulumi, this is why. Ask an organization admin to add you.
 
 ## Inviting members to an organization
 
@@ -84,11 +96,7 @@ To switch to a different organization:
 
 ## Organization roles
 
-| Role | Description |
-|--------|--------|
-| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and role-based access control, adjusting billing information, and controlling the organization settings. |
-| Member | Members are able to view and edit stacks they have access to and view members and teams. |
-| Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
+Every member of an organization has a role: the built-in Admin, Member, or Billing Manager, or a custom role. For what each one grants, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## Updating billing information
 
@@ -181,6 +189,8 @@ Pulumi organization.
 
 A Pulumi organization can also be backed by a [SAML 2.0 identity provider](/docs/administration/guides/saml/).
 
+This setting goes by more than one name. The docs and the console call it the organization's **identity provider**, and you configure it under **Membership Requirements**; the console also refers to it as the organization backend, which is the name the REST API uses. They all mean the same thing.
+
 ### Changing identity providers
 
 Every organization is backed by an identity that governs the membership to your organization.
@@ -189,6 +199,8 @@ By default, when you create a new Pulumi organization, it uses the Pulumi identi
 Only organization admins can change the organization identity provider.
 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
+
+Switching an organization to SAML has one further prerequisite: the admin making the change can't belong to other, unrelated Pulumi organizations. Pulumi rejects the change otherwise. Either hand the change to an admin who belongs only to this organization, or leave the other organizations first.
 
 To change an organization's identity provider:
 
@@ -199,6 +211,10 @@ To change an organization's identity provider:
 ### Disconnecting identity providers
 
 In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, select a new identity provider.
+
+{{% notes type="warning" %}}
+Switching away from SAML discards the organization's SAML configuration and everything derived from it: its SAML identities, its SAML member roster, and its SCIM access token. If you switch back to SAML later, you have to reconfigure [SCIM](/docs/administration/guides/scim/) with a newly issued token and re-provision your users.
+{{% /notes %}}
 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
 
@@ -230,15 +246,22 @@ those users will lose access to Pulumi organization.
 
 ### Bitbucket identity provider
 
-[BitBucket Workspaces](https://support.atlassian.com/bitbucket-cloud/docs/what-is-a-workspace/)
+[Bitbucket workspaces](https://support.atlassian.com/bitbucket-cloud/docs/what-is-a-workspace/)
 
 To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
 Bitbucket workspace
-must first grant the Pulumi Oauth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
+must first grant the Pulumi OAuth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
 to their Bitbucket account and workspace membership information.
 
+Two further requirements apply, and neither is obvious from the console:
+
+* **You need admin or owner rights in the Bitbucket workspace.** Granting the OAuth app read access isn't enough by itself. The person making the change in Pulumi must be an admin or owner of the workspace; a contributor or plain member gets an error.
+* **A personal Bitbucket account with no workspace won't work.** Pulumi backs the organization with a workspace, so the account has to have one.
+
 Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
-members that they can add or invite to the Pulumi organization.
+members that they can add or invite to the Pulumi organization. Adding them is a separate step from their workspace membership. See [Backing membership doesn't grant Pulumi membership](#backing-membership).
+
+Bitbucket is an Atlassian product, and Pulumi labels the identity after Atlassian rather than Bitbucket. The control in your account settings is **Connect Atlassian**, and a connected Bitbucket identity is listed as **Atlassian**.
 
 ### SAML Single Sign-on (SSO)
 

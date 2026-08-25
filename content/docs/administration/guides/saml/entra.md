@@ -89,6 +89,10 @@ Entra ID application.
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 To configure your Pulumi organization to accept SAML SSO requests from Entra ID, you will need to
 download the SAML application's configuration data and then pass that to Pulumi.
 
