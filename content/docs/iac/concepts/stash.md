@@ -14,10 +14,10 @@ menu:
 
 The `Stash` resource is a built-in Pulumi resource that allows you to save values to your stack's state for later retrieval. A stash takes a single input value and stores it in state, making it available as an output property. Stashes are commonly used to persist computed values, pass data between program executions, or save intermediate results that need to be accessed later.
 
-Every `Stash` resource accepts any value as its `input` property and exposes two output properties:
+Every `Stash` resource accepts any value as its `input` property. It then exposes two output properties — one for the value it stashed, and one that echoes back the value you most recently passed in:
 
 - `output` — the value saved in state. This value is stateful: it persists the original `input` value even after the `input` property is changed in a later deployment.
-- `input` — the most recent value passed to the resource. Reference this when you need the current value rather than the stashed one.
+- `input` — an echo of the most recent value passed to the resource. Reference this output when you need the current value rather than the stashed one.
 
 {{% notes type="info" %}}
 The built-in `Stash` resource was added in Pulumi v3.208.0. Upgrade the Pulumi CLI if your version predates it.
@@ -442,7 +442,24 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-// Coming later
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.resources.Stash;
+import com.pulumi.resources.StashArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var firstDeployer = new Stash("firstDeployer", StashArgs.builder()
+                .input(System.getProperty("user.name"))
+                .build());
+
+            // The output will always show the original deployer, even if others run updates later
+            ctx.export("originalDeployer", firstDeployer.output());
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -533,7 +550,26 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-// Coming later
+package myproject;
+
+import java.time.Instant;
+
+import com.pulumi.Pulumi;
+import com.pulumi.resources.Stash;
+import com.pulumi.resources.StashArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var creationTime = new Stash("creationTime", StashArgs.builder()
+                .input(Instant.now().toString())
+                .build());
+
+            // This will always return the original creation time
+            ctx.export("firstDeployed", creationTime.output());
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -637,7 +673,29 @@ return await Deployment.RunAsync(() =>
 {{% choosable language java %}}
 
 ```java
-// Coming later
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.resources.Stash;
+import com.pulumi.resources.StashArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            // Generate a random password once
+            var randomPassword = generatePassword();
+
+            // Stash it so it doesn't change on subsequent deployments
+            var passwordStash = new Stash("passwordStash", StashArgs.builder()
+                .input(Output.ofSecret(randomPassword))
+                .build());
+
+            // Use the stashed password for database configuration
+            ctx.export("dbPassword", passwordStash.output());
+        });
+    }
+}
 ```
 
 {{% /choosable %}}
