@@ -291,6 +291,7 @@ function init(): void {
     const iconT = { x: 0, y: 0, k: 1 };
     const iconCenter = { x: 0, y: 0 };
     let panelK = 1;
+    let iconPop: any = null;
 
     function applyIconT(): void {
         const tx = iconT.x - iconT.k * iconCenter.x;
@@ -315,7 +316,7 @@ function init(): void {
         const kEnd = iconT.k;
         iconT.k = kEnd * 0.7;
         applyIconT();
-        gsap.to(iconT, { k: kEnd, duration: 0.35, ease: "back.out(1.7)", onUpdate: applyIconT });
+        iconPop = gsap.to(iconT, { k: kEnd, duration: 0.35, ease: "back.out(1.7)", onUpdate: applyIconT });
         gsap.fromTo(panelLang, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25 });
     }
 
@@ -394,7 +395,10 @@ function init(): void {
 
         chosenLang = pickWeighted(langWeights);
         layoutLangRow();
-        gsap.killTweensOf(iconT);
+        if (iconPop) {
+            iconPop.kill();
+            iconPop = null;
+        }
         const lb = langLogos[chosenLang].getBBox();
         const lSize = Math.max(lb.width, lb.height);
         iconCenter.x = lb.x + lb.width / 2;
