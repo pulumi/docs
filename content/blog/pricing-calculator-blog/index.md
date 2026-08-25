@@ -44,7 +44,7 @@ Pulumi Cloud pricing is straightforward- a charge per resource hour for every re
 Today we are making available a simple tool for estimating your cost on the Team Edition of Pulumi Cloud to get prospective customers to the information as quickly as possible.
 <!--more-->
 
-Just input the number of resources in all your cloud accounts and the percentage of time they will be up (12 hours a day would be 50% of the time) and you have an estimate of your costs! If you are already using Pulumi for your Infrastructure as Code (IaC) you can run a `pulumi preview` to see the resource count in a stack. Add your estimated deployment minutes to see Pulumi Deployments costs included. The amount of time it takes to run an update on a stack locally is a good starting place for estimating deployment costs. Toggle from Per Month to Per Day to see your daily cost estimate instead of monthly.
+Just input the number of resources in all your cloud accounts and the percentage of time they will be up (12 hours a day would be 50% of the time) and you have an estimate of your costs! If you are already using Pulumi for your infrastructure as code (IaC) you can run a `pulumi preview` to see the resource count in a stack. Add your estimated deployment minutes to see Pulumi Deployments costs included. The amount of time it takes to run an update on a stack locally is a good starting place for estimating deployment costs. Toggle from Per Month to Per Day to see your daily cost estimate instead of monthly.
 
 {{< blog/cta-button "Calculate Pulumi Cloud Costs" "/pricing/#calculator" "_blank" >}}
 

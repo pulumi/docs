@@ -13,7 +13,7 @@ We’re pleased to announce that unit testing with Node.js, Python, .NET, and Go
 
 <!--more-->
 
-Pulumi brings testing to Infrastructure as Code. Testing your infrastructure code will provide early bug notification, cleaner and more extensible code, and simplify refactoring. We implemented testing with these goals in mind.
+Pulumi brings testing to infrastructure as code. Testing your infrastructure code will provide early bug notification, cleaner and more extensible code, and simplify refactoring. We implemented testing with these goals in mind.
 
 - Run code without the engine
 - Write tests using existing test tools and frameworks
