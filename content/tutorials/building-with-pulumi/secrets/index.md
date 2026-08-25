@@ -258,7 +258,7 @@ S3cr37
 
 {{% /choosable %}}
 
-To learn more about Pulumi secrets, see the [secrets documentation](/docs/concepts/secrets/).
+To learn more about Pulumi secrets, see the [secrets documentation](/docs/iac/concepts/secrets/).
 
 ---
 
