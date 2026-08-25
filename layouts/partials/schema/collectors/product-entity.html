@@ -58,35 +58,41 @@
        either way, since they contribute no number. Derived from the data file —
        which is where the pricing cards live now — so live structured data can't
        drift from /pricing/. */}}
+  {{/* errorf doesn't halt the template, so each check gates the work below it —
+       see layouts/shortcodes/blog/card.html. Both would otherwise carry on and
+       merge an offers block with empty prices, which `hugo server` keeps
+       serving after it reports the error. */}}
   {{ $px := partialCached "pricing/data.html" . "pricing-data" }}
   {{ $neo := index $px.features "neo" }}
   {{ if not $neo }}
     {{ errorf "product-entity.html: no `neo` feature in data/pulumi_pricing.yaml, so the Neo AggregateOffer has no editions to price." }}
-  {{ end }}
-  {{ $amounts := slice }}
-  {{ $carriesNeo := false }}
-  {{ range $px.editions }}
-    {{ if eq .id $neo.min_edition }}{{ $carriesNeo = true }}{{ end }}
-    {{ if $carriesNeo }}
-      {{ $price := replace (replace (printf "%v" (.card.price | default "")) "$" "") "," "" }}
-      {{ if findRE `^[0-9]+(\.[0-9]+)?$` $price }}
-        {{ $amounts = $amounts | append (float $price) }}
+  {{ else }}
+    {{ $amounts := slice }}
+    {{ $carriesNeo := false }}
+    {{ range $px.editions }}
+      {{ if eq .id $neo.min_edition }}{{ $carriesNeo = true }}{{ end }}
+      {{ if $carriesNeo }}
+        {{ $price := replace (replace (printf "%v" (.card.price | default "")) "$" "") "," "" }}
+        {{ if findRE `^[0-9]+(\.[0-9]+)?$` $price }}
+          {{ $amounts = $amounts | append (float $price) }}
+        {{ end }}
       {{ end }}
     {{ end }}
+    {{ if not $amounts }}
+      {{ errorf "product-entity.html: no numeric edition prices from %s up in data/pulumi_pricing.yaml, so the Neo AggregateOffer has no price range." $neo.min_edition }}
+    {{ else }}
+      {{ $sorted := sort $amounts }}
+      {{ $schema = merge $schema (dict "offers" (dict
+        "@type" "AggregateOffer"
+        "priceCurrency" "USD"
+        "lowPrice" (index $sorted 0)
+        "highPrice" (index $sorted (sub (len $sorted) 1))
+        "availability" "https://schema.org/InStock"
+        "url" "https://www.pulumi.com/pricing/"
+        "offerCount" (len $amounts)
+      )) }}
+    {{ end }}
   {{ end }}
-  {{ if not $amounts }}
-    {{ errorf "product-entity.html: no numeric edition prices from %s up in data/pulumi_pricing.yaml, so the Neo AggregateOffer has no price range." $neo.min_edition }}
-  {{ end }}
-  {{ $sorted := sort $amounts }}
-  {{ $schema = merge $schema (dict "offers" (dict
-    "@type" "AggregateOffer"
-    "priceCurrency" "USD"
-    "lowPrice" (index $sorted 0)
-    "highPrice" (index $sorted (sub (len $sorted) 1))
-    "availability" "https://schema.org/InStock"
-    "url" "https://www.pulumi.com/pricing/"
-    "offerCount" (len $amounts)
-  )) }}
 {{ else if eq .RelPermalink "/pricing/" }}
   {{/* Pricing page: build real per-edition Offers from data/pulumi_pricing.yaml, plus an AggregateOffer.
        Only editions with a parseable numeric price become Offers - contact-sales editions, whose card
