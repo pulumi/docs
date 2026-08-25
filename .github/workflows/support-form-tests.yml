@@ -21,10 +21,19 @@ name: Support form tests
 # supportForm.ts fails this suite. Filtering to support-form/** would let that
 # PR go green and land the breakage on the next unrelated support-form PR, which
 # would then look like the culprit.
+#
+# versioned-docs is excluded because it is a separate Pulumi program with its
+# own Pulumi.yaml, package.json and tsconfig.json, and the main program only
+# reaches it by stack reference — `tsc -p tsconfig.json` never compiles a line
+# of it. Without the exclusion this job would run, pass, and report green on a
+# PR it had not examined at all, which is worse than not running: a check that
+# looks like coverage and isn't. (Nothing in CI type-checks that program today;
+# that gap is tracked separately.)
 on:
   pull_request:
     paths:
       - 'infrastructure/**'
+      - '!infrastructure/versioned-docs/**'
       - '.github/workflows/support-form-tests.yml'
 
 permissions:
