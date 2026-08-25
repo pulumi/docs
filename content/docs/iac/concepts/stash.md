@@ -14,11 +14,18 @@ menu:
 
 The `Stash` resource is a built-in Pulumi resource that allows you to save values to your stack's state for later retrieval. A stash takes a single input value and stores it in state, making it available as an output property. Stashes are commonly used to persist computed values, pass data between program executions, or save intermediate results that need to be accessed later.
 
-Every `Stash` resource accepts any value as its `input` property and makes that value available through its `output` property. The `output` value is stateful and persists the original `input` value even when the `input` property is updated in subsequent deployments. The current `input` value is always available as an output property if you need to reference the updated value.
+Every `Stash` resource accepts any value as its `input` property and exposes two output properties:
+
+- `output` — the value saved in state. This value is stateful: it persists the original `input` value even after the `input` property is changed in a later deployment.
+- `input` — the most recent value passed to the resource. Reference this when you need the current value rather than the stashed one.
+
+{{% notes type="info" %}}
+The built-in `Stash` resource was added in Pulumi v3.208.0. Upgrade the Pulumi CLI if your version predates it.
+{{% /notes %}}
 
 ## Create a stash {#create-stash}
 
-To create a new stash, instantiate a `Stash` resource and provide a value for the `input` property. The stash will store this value in your stack's state and make it available through the `output` property.
+To create a new stash, instantiate a `Stash` resource and provide a value for the `input` property. The stash stores this value in your stack's state and makes it available through the `output` property.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -120,7 +127,7 @@ public class App {
 ```yaml
 resources:
   myStash:
-    type: pulumi:pulumi:Stash
+    type: pulumi:index:Stash
     properties:
       input: "Hello, World!"
 
@@ -132,11 +139,11 @@ outputs:
 
 {{< /chooser >}}
 
-Stash is like any other resource in that its name must be unique across the whole program.
+Like any other resource, a `Stash` needs a name that is unique across your program.
 
 ## Stashing complex values
 
-The `input` property of a `Stash` resource can accept any value, including complex objects, arrays, and nested structures. The value will be serialized as a Pulumi property value when stored in state.
+The `input` property of a `Stash` resource can accept any value, including complex objects, arrays, and nested structures. The value is serialized as a Pulumi property value when stored in state.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -226,7 +233,7 @@ var configStash = new Stash("configStash", StashArgs.builder()
 ```yaml
 resources:
   configStash:
-    type: pulumi:pulumi:Stash
+    type: pulumi:index:Stash
     properties:
       input:
         region: us-west-2
@@ -242,7 +249,7 @@ resources:
 
 ## Stashing secret values
 
-The `Stash` resource respects secret annotations. If the `input` value is marked as a secret, the `output` will also be secret, and the value will be encrypted in your stack's state.
+The `Stash` resource respects secret annotations. If the `input` value is marked as a secret, the `output` is also secret, and the value is encrypted in your stack's state.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -304,7 +311,7 @@ return new Dictionary<string, object?>
 
 ```java
 var apiKeyStash = new Stash("apiKeyStash", StashArgs.builder()
-    .input(Output.secret("my-secret-api-key"))
+    .input(Output.ofSecret("my-secret-api-key"))
     .build());
 
 // The output is also marked as secret
@@ -317,7 +324,7 @@ ctx.export("apiKey", apiKeyStash.output());
 ```yaml
 resources:
   apiKeyStash:
-    type: pulumi:pulumi:Stash
+    type: pulumi:index:Stash
     properties:
       input:
         fn::secret: my-secret-api-key
@@ -330,25 +337,25 @@ outputs:
 
 {{< /chooser >}}
 
-When viewing stashed secret values, their plaintext content will not be shown by default. Instead, they will be displayed as `[secret]` in the CLI. Pass `--show-secrets` to the command run to reveal the plaintext value.
+The CLI does not show the plaintext content of a stashed secret by default; it displays `[secret]` instead. Pass `--show-secrets` to the command to reveal the plaintext value.
 
 ## Updating stashed values
 
-To update the value stored in a `Stash` you need to replace it. There are a few ways to do this.
+To update the value stored in a `Stash` you need to replace it. Three ways to do that:
 
-1. Using the [`--target-replace`](/docs/iac/operations/stack-management/targeted-updates/#replacing-a-single-resource) argument to `up` to tell the engine to replace it.
-1. Using `pulumi state taint` to mark the resource to be replaced on the next deployment.
-1. Using the `TriggerReplacement` resource option to trigger the resource to replace on a change of value.
+1. Pass the [`--target-replace`](/docs/iac/operations/stack-management/targeted-updates/#replacing-a-single-resource) argument to `pulumi up` to tell the engine to replace the stash.
+1. Run [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) to mark the resource for replacement on the next deployment.
+1. Set the [`replacementTrigger`](/docs/iac/concepts/resources/options/replacementtrigger/) resource option to replace the stash whenever a trigger value changes.
 
-Without a replacement, any changes to the `input` property will be reflected in the `input` output property, but the `output` property will not change. It will continue to return the original value the `Stash` was constructed with.
+Without a replacement, changes to the `input` property are reflected in the `input` output property, but the `output` property does not change. It continues to return the original value the `Stash` was constructed with.
 
 ## Deleting a stash
 
-To delete a `Stash` resource, remove it from your program and run `pulumi up`. Pulumi will remove the stash from your stack's state during the update.
+To delete a `Stash` resource, remove it from your program and run `pulumi up`. Pulumi removes the stash — and the value it holds — from your stack's state during the update.
 
 ## Common use cases
 
-The `Stash` resource is useful for keeping track of a computed value across deployments. Examples include things like the first user running the deployment, the first time the stack was created, a generated random value that needs to be stable.
+The `Stash` resource is useful for keeping track of a computed value across deployments — for example, the first user to run the deployment, the time the stack was first created, or a generated random value that needs to stay stable.
 
 ### Capturing the first deployment user
 
@@ -535,7 +542,7 @@ return await Deployment.RunAsync(() =>
 
 ### Preserving a stable random value
 
-When you need a random value that remains constant across deployments:
+Use a stash when you need a random value that remains constant across deployments. In these examples, `generatePassword` is your own helper function that produces a fresh value on every run; the stash is what keeps the first value stable.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -543,14 +550,13 @@ When you need a random value that remains constant across deployments:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as random from "@pulumi/random";
 
 // Generate a random password once
-const randomPassword = generatePassword()
+const randomPassword = generatePassword();
 
 // Stash it so it doesn't change on subsequent deployments
 const passwordStash = new pulumi.Stash("passwordStash", {
-    input: pulumi.secret(randomPassword.result),
+    input: pulumi.secret(randomPassword),
 });
 
 // Use the stashed password for database configuration
@@ -562,14 +568,13 @@ export const dbPassword = passwordStash.output;
 
 ```python
 import pulumi
-import pulumi_random as random
 
 # Generate a random password once
 random_password = generatePassword()
 
 # Stash it so it doesn't change on subsequent deployments
 password_stash = pulumi.Stash("passwordStash",
-    input=pulumi.Output.secret(random_password.result))
+    input=pulumi.Output.secret(random_password))
 
 # Use the stashed password for database configuration
 pulumi.export("dbPassword", password_stash.output)
@@ -581,20 +586,16 @@ pulumi.export("dbPassword", password_stash.output)
 ```go
 import (
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-    "github.com/pulumi/pulumi-random/sdk/v4/go/random"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Generate a random password once
-        randomPassword, err := generatePassword()
-        if err != nil {
-            return err
-        }
+        randomPassword := generatePassword()
 
         // Stash it so it doesn't change on subsequent deployments
         passwordStash, err := pulumi.NewStash(ctx, "passwordStash", &pulumi.StashArgs{
-            Input: pulumi.ToSecret(randomPassword.Result),
+            Input: pulumi.ToSecret(randomPassword),
         })
         if err != nil {
             return err
@@ -612,7 +613,6 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Pulumi.Random;
 
 return await Deployment.RunAsync(() =>
 {
@@ -622,7 +622,7 @@ return await Deployment.RunAsync(() =>
     // Stash it so it doesn't change on subsequent deployments
     var passwordStash = new Stash("passwordStash", new StashArgs
     {
-        Input = Output.CreateSecret(randomPassword.Result),
+        Input = Output.CreateSecret(randomPassword),
     });
 
     // Use the stashed password for database configuration
@@ -643,3 +643,9 @@ return await Deployment.RunAsync(() =>
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Next steps
+
+- [Resource options](/docs/iac/concepts/resources/options/) — including [`replacementTrigger`](/docs/iac/concepts/resources/options/replacementtrigger/), used above to update a stashed value.
+- [Stacks](/docs/iac/concepts/stacks/) and [state and backends](/docs/iac/concepts/state-and-backends/) — where stashed values are stored.
+- [Secrets](/docs/iac/concepts/secrets/) — how Pulumi encrypts secret values in state.

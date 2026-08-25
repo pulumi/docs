@@ -90,8 +90,8 @@ By default, this tag will be tagged as `latest`; if you'd like to tag it using s
 $ docker tag e9ae3c220b23 $REPO_URL:v2.0
 ```
 
-After building and tagging, we then need to authenticate with the ECR registry. Each authentication token covers a
-single registry and lasts 12 hours. The AWS CLI provides an easy way to do this:
+After building and tagging, we then need to authenticate with the ECR registry. Each authentication token lasts 12 hours
+and can be used with any ECR registry your IAM principal has access to. The AWS CLI can do this for you:
 
 ```bash
 $ aws ecr get-login-password | docker login --username AWS --password-stdin $(echo $REPO_URL | cut -d/ -f1)
@@ -144,9 +144,9 @@ To use your private repository from an ECS task definition, reference it like so
 
 {{< example-program path="awsx-load-balanced-fargate-ecr" >}}
 
-For information about ECS, refer to the [ECS guide](/docs/clouds/aws/guides/ecs/). For
+For information about ECS, refer to the [ECS guide](/docs/iac/guides/clouds/aws/ecs/). For
 information about consuming ECR images from ECS services specifically, see
-[Using Amazon ECR Images with Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
+[Using Amazon ECR Images with Amazon ECS](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
 
 ### Consuming a Private Repository from EKS
 
@@ -156,7 +156,7 @@ To use your private repository from a Kubernetes service, such as one using EKS,
 
 This example uses the [EKS package](https://www.pulumi.com/registry/packages/eks/) to provision the cluster and the [Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/) to deploy the container image to it.
 
-For information about EKS, refer to the [EKS guide](/docs/clouds/aws/guides/eks/).
+For information about EKS, refer to the [EKS guide](/docs/iac/guides/clouds/aws/eks/).
 
 ### IAM Permissions Required to use ECR
 
@@ -181,7 +181,7 @@ policy permissions to access your Amazon ECR registry. The following example def
 }
 ```
 
-See the [AWS IAM guide](/docs/clouds/aws/guides/iam/) for instructions on how to manage
+See the [AWS IAM guide](/docs/iac/guides/clouds/aws/iam/) for instructions on how to manage
 such policies.
 
 ## Managing Container Image Lifecycles using Policies
@@ -193,7 +193,7 @@ given strings. This allows the automation of cleaning up unused images, for exam
 count. You should expect that after creating a lifecycle policy the affected images are expired within 24 hours.
 
 The AWSx ECR components make it easy to configure a repository's lifecycle policy, using the
-`lifeCyclePolicyArgs` property on the `Repository` class's constructor. Using this property, there are two main ways
+`lifecyclePolicy` property on the `Repository` class's constructor. Using this property, there are two main ways
 to control how an image is purged from the repository:
 
 1. Once a maximum number of images has been reached (`maximumNumberOfImages`).
@@ -201,9 +201,8 @@ to control how an image is purged from the repository:
 
 ### Lifecycle Policy Rules
 
-For more details, refer to [Amazon ECR Lifecycle Policies](
-https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html), however we will now examine
-a number of examples to demonstrate how lifecycle policies are applied.
+For details on the rule syntax, the available actions, and worked examples, refer to [Amazon ECR Lifecycle
+Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html).
 
 ## Additional ECR Resources
 

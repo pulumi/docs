@@ -199,6 +199,14 @@ TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "co
 # re-entrant review merging a pre-rename body still validates. compose-review.py
 # emits only the current spelling (its STYLE_HEADING) — keep these in sync.
 STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
+# What a bucket finding looks like: a column-0 line starting with `**` (with an
+# optional `- ` prefix). This is THE bullet-recognition rule for the pinned
+# format, exported rather than kept local because every consumer needs the same
+# answer to "is this line a new finding?" — extract_bucket_bullets and
+# extract_finding_paragraphs below, scrape-review-outcomes.py's paragraph walk,
+# and review-worklist.py's _bullet_blocks. Four private copies had already
+# drifted into existence; one definition is the point.
+FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -400,10 +408,8 @@ def extract_bucket_bullets(body: str, heading_substring: str) -> list[str]:
         return []
     start, end = span
     bullets = []
-    # Match any column-0 line starting with `**` (with optional `- ` prefix).
-    finding_re = re.compile(r"^(?:- )?\*\*\S")
     for line in body.splitlines()[start:end]:
-        if finding_re.match(line):
+        if FINDING_START_RE.match(line):
             bullets.append(line)
     return bullets
 
@@ -2388,13 +2394,12 @@ def _finding_paragraphs(ctx: Context, heading_substring: str) -> list[tuple[int,
     if span is None:
         return []
     start, end = span
-    finding_re = re.compile(r"^(?:- )?\*\*\S")
     paragraphs: list[tuple[int, str]] = []
     current_start = None
     current: list[str] = []
     for i in range(start + 1, end):
         line = ctx.body_lines[i]
-        if finding_re.match(line):
+        if FINDING_START_RE.match(line):
             if current:
                 paragraphs.append((current_start + 1, "\n".join(current)))
             current_start = i

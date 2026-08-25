@@ -349,10 +349,10 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [debugging]: https://en.wikipedia.org/wiki/Debugging
 [printf-debugging]: https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html
 [repl]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
-[input-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/#inputs
-[output-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/#outputs
-[apply-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/apply/
-[all-docs]: https://www.pulumi.com/docs/concepts/inputs-outputs/all/
+[input-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#inputs
+[output-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#outputs
+[apply-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/apply/
+[all-docs]: https://www.pulumi.com/docs/iac/concepts/inputs-outputs/all/
 [code-spelunking]: https://queue.acm.org/detail.cfm?id=945136
 [vs-code-debug-repl]: https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl
 [vs-code-launch-configs]: https://code.visualstudio.com/docs/editor/debugging#_launch-configurations

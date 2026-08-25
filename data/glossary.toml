@@ -78,7 +78,7 @@ link = "/docs/iac/concepts/resources/options/import/"
 
 [[entries]]
 term = "Internal Developer Platform (IDP)"
-description = "Pulumi's set of building blocks for platform teams to deliver self-service infrastructure to developers: [organization templates](#organization-template), [no-code stacks](#no-code-stacks), [private registries](#private-registry), and [policy](#policy-as-code) enforcement working together as a platform layer on top of Pulumi IaC, ESC, and Cloud."
+description = "Pulumi's set of building blocks for platform teams to deliver self-service infrastructure to developers: [organization templates](#organization-template), [no-code stacks](#no-code-stacks), [private registries](#private-registry), and [policy](#pulumi-policies) enforcement working together as a platform layer on top of Pulumi IaC, ESC, and Cloud."
 link = "/docs/idp/"
 
 [[entries]]
@@ -132,8 +132,8 @@ description = "Distributable units of Pulumi code. A [Pulumi package](#pulumi-pa
 link = "/docs/iac/concepts/packages/"
 
 [[entries]]
-term = "Policy as Code"
-description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Insights](#pulumi-insights), regardless of how they were created."
+term = "Pulumi Policies"
+description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Discovery](#pulumi-discovery), regardless of how they were created."
 link = "/docs/insights/policy/"
 
 [[entries]]
@@ -163,7 +163,7 @@ link = "/docs/iac/concepts/projects/project-file/"
 
 [[entries]]
 term = "Pulumi Cloud"
-description = "The managed SaaS at `app.pulumi.com` that stores [stack](#stack) [state](#state), [secrets](#secrets), environments, deployment settings, policies, audit logs, and Insights data. It is Pulumi's default [backend](#backend) and the host for collaboration, governance, and automation features."
+description = "The managed SaaS at `app.pulumi.com` that stores [stack](#stack) [state](#state), [secrets](#secrets), environments, deployment settings, policies, audit logs, and Discovery data. It is Pulumi's default [backend](#backend) and the host for collaboration, governance, and automation features."
 link = "/product/pulumi-cloud/"
 
 [[entries]]
@@ -177,8 +177,8 @@ description = "Environments, [Secrets](#secrets), and Configuration. A [Pulumi C
 link = "/docs/esc/"
 
 [[entries]]
-term = "Pulumi Insights"
-description = "The Discovery & Governance product in [Pulumi Cloud](#pulumi-cloud). It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable graph, and enforces [policy as code](#policy-as-code) on top of them."
+term = "Pulumi Discovery"
+description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and makes them available to [Pulumi Policies](#pulumi-policies) for evaluation."
 link = "/docs/insights/"
 
 [[entries]]
@@ -228,7 +228,7 @@ link = "/docs/iac/concepts/providers/"
 
 [[entries]]
 term = "Resource Search"
-description = "The [Pulumi Insights](#pulumi-insights) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
+description = "The [Pulumi Discovery](#pulumi-discovery) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
 link = "/docs/insights/discovery/search/"
 
 [[entries]]

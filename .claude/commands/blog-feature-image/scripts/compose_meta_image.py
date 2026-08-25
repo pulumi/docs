@@ -308,9 +308,10 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
     final.paste(canvas, (0, 0), canvas if canvas.mode == "RGBA" else None)
 
     # Stamp a PNG Software tag so the render is positively identifiable as our
-    # pipeline's output (rather than relying on absence of metadata). The lint
-    # allowlist in scripts/lint/lint-markdown.js must accept this exact string —
-    # keep FEATURE_IMAGE_SOFTWARE there in sync if this value changes.
+    # pipeline's output. The lint allowlist in scripts/lint/lint-markdown.js
+    # accepts only this string and "Figma" — an untagged PNG is a lint failure,
+    # so dropping this stamp would fail every image this script renders. Keep
+    # FEATURE_IMAGE_SOFTWARE there in sync if this value changes.
     meta = PngImagePlugin.PngInfo()
     meta.add_text("Software", "pulumi-blog-feature-image")
     final.save(str(output), "PNG", pnginfo=meta)

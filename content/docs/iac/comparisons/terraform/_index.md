@@ -25,7 +25,7 @@ aliases:
 
 Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference is how much choice you get: Pulumi runs programs written in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/), while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses [HCL](https://developer.hashicorp.com/terraform/language) exclusively. A general-purpose language is the recommended path, because it brings the testing frameworks, package managers, IDE tooling, and AI coding agents that already understand your code. If you're coming from HCL and haven't written much general-purpose code, [Language Essentials](/docs/iac/guides/basics/language-essentials/) covers the small set of constructs you need. HCL is also a supported language inside Pulumi, so an existing HCL codebase is not a reason to rule Pulumi out.
 
-This page covers what each tool is, a feature-by-feature comparison, real-world results from teams that have adopted Pulumi, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform.
+This page covers what each tool is, a feature-by-feature comparison, real-world results from teams that have adopted Pulumi, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform. If you're also weighing AWS CDK, see [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/) for a three-way comparison.
 
 ## What is Pulumi?
 
