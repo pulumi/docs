@@ -101,10 +101,14 @@ sections:
         h1: CIS Kubernetes - Azure (AKS)
         metaDesc: Complete list of CIS Kubernetes Benchmark compliance policies for Azure AKS.
         weight: 2
-      # `cis-kubernetes-gcp`, not `cis-kubernetes-google-cloud`. Both are published,
-      # but only this one is still built by policy-packs-internal; the -google-cloud
-      # name is a stale earlier publish that no longer receives updates.
-      - pack: cis-kubernetes-gcp
+      # `cis-kubernetes-google-cloud`, not `cis-kubernetes-gcp`. Both names exist in the
+      # org, and the obvious-looking one is the wrong one: policy-packs-internal builds
+      # and publishes under `cis-kubernetes-gcp`, but that name was never made a product,
+      # so every automated release has gone to a *private* pack. The public pack is
+      # `cis-kubernetes-google-cloud`, hand-uploaded once and left at 1.0.0. Same 50
+      # policies either way -- the 1.0.1 bump was a dependency update. @danbiwer is
+      # renaming the pack upstream so releases land on the public name (2026-08-25).
+      - pack: cis-kubernetes-google-cloud
         source: packs/cis/kubernetes/gcp
         slug: google-cloud
         title: Google Cloud (GKE)
@@ -263,10 +267,6 @@ undocumented:
     why: >-
       Its page (aws-organizations-tag-policies/aws.md) is hand-written prose pointing at
       the integration guide, not a policy listing. Stays hand-maintained.
-  - pack: cis-kubernetes-google-cloud
-    why: >-
-      A stale earlier publish, superseded by cis-kubernetes-gcp. See the cis-kubernetes
-      section above.
 
 # Packs the org holds that are NOT products, and so never appear in the registry listing
 # with source: "pulumi". Verified against the live listing on 2026-08-25: all 12 come back
