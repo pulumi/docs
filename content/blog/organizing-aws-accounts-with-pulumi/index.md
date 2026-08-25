@@ -84,7 +84,7 @@ const devAccount = new aws.organizations.Account(
     // This flag tells Pulumi to protect this resource from being deleted
     // during a `pulumi destroy` operation. It also means you need to
     // first unprotect it if you do wish to delete it using Pulumi.
-    // https://www.pulumi.com/docs/concepts/options/protect/
+    // https://www.pulumi.com/docs/iac/concepts/resources/options/protect/
     { protect: true }
 );
 ```

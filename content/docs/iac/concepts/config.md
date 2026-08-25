@@ -162,7 +162,7 @@ func main() {
 var config = new Pulumi.Config();
 var name = config.Require("name");
 var lucky = config.GetInt32("lucky") ?? 42;
-var secret = config.RequireSecret("secret")
+var secret = config.RequireSecret("secret");
 ```
 
 {{% /choosable %}}

@@ -1,3 +1,8 @@
+# Cached Wayback Machine snapshots used by scripts/backfill-openapi-lastmod.js
+# (a one-time, manually-run script -- these are large fetched artifacts, not
+# source).
+/.openapi-wayback-cache/
+
 # Hugo default output directory
 /public
 # Hugo generated resources directory. Note: if the generated files
@@ -138,6 +143,12 @@ _vendor/
 /.applied.paths
 /.fix-scope-report.json
 /.review-snapshot/
+# Author-side worklist state for `/address-review` — one file per PR,
+# recording the disposition (fixed / refuted / deferred / accepted /
+# not-applicable) chosen for every finding in that PR's pinned review. Local
+# working state for the walkthrough, never a commit.
+/.review-worklist-*.json
+
 # Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
 # and `.glowup-scope-report.json`, the scope gate's report). Both are written
 # to the repo root before the `make lint` re-gate, so an unignored one makes

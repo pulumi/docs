@@ -236,4 +236,4 @@ Each stack that is created in a project will have a file named `Pulumi.<stacknam
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them into source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings. When using ephemeral stacks, the stack settings are typically not checked into source control.
 
-For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/concepts/config/) and [Secrets](/docs/concepts/secrets/) documentation.
+For more information about configuration and how to manage these files on the command line and programmatically, refer to the [Configuration](/docs/iac/concepts/config/) and [Secrets](/docs/iac/concepts/secrets/) documentation.

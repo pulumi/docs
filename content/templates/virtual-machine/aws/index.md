@@ -3,7 +3,7 @@ title_tag: Deploy a Virtual Machine to AWS
 title: Virtual Machine on AWS
 layout: template
 schema_type: howto
-meta_desc: Deploy an Amazon EC2 virtual machine on AWS running Amazon Linux 2023 with Pulumi in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy an Amazon EC2 virtual machine on AWS running Amazon Linux 2023 with Pulumi in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on AWS with Pulumi and Amazon EC2.
 template:

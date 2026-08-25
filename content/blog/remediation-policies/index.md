@@ -441,7 +441,7 @@ Both Azure and Kubernetes have ways to automatically remediate policy problems a
 
 In some ways, remediation policies are reminiscent of [Aspect Oriented Programming (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), a popular technique in the Java community in the 2000s. Generally speaking, AOP was seen as too "magical" for widespread use. However, for targeted compliance scenarios like those discussed earlier, this approach strikes the right balance. Furthermore, we took great steps to ensure you can always find out precisely when and why a remediation changed things.
 
-Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/concepts/options/transformations/) to perform in-memory modifications of resources as they get registered, either one at a time or across the whole stack. These run within a process and can hook resource registrations and mutate their state. The reason remediation policies are so different and interesting, however, is that they can be applied to programs without the program itself even having to opt-in. This is precisely what enables cross-organization enforcement.
+Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/iac/concepts/resources/options/transformations/) to perform in-memory modifications of resources as they get registered, either one at a time or across the whole stack. These run within a process and can hook resource registrations and mutate their state. The reason remediation policies are so different and interesting, however, is that they can be applied to programs without the program itself even having to opt-in. This is precisely what enables cross-organization enforcement.
 
 ## Winding Down
 

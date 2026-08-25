@@ -52,12 +52,17 @@
 #     | sort
 #
 # Menu group headers (`menu:` below) are defined in config/_default/menus.yml.
+#
+# `feature:` is the data/pulumi_pricing.yaml feature id that decides which edition
+# the generated pages' Pulumi Cloud callout names. Pulumi Best Practices is the only
+# section here on Team and above; the compliance frameworks are Business Critical.
 
 org: pulumi
 
 sections:
   - id: cis
     menu: reference-pre-built-policy-packs-cis
+    feature: compliance-policy-packs
     # Bolded in the page intro: "...policies in the **CIS 8.1** pack for **AWS**."
     framework: CIS 8.1
     packs:
@@ -85,6 +90,7 @@ sections:
 
   - id: cis-kubernetes
     menu: reference-pre-built-policy-packs-cis-kubernetes
+    feature: compliance-policy-packs
     framework: CIS Kubernetes
     packs:
       - pack: cis-kubernetes-aws
@@ -118,6 +124,7 @@ sections:
 
   - id: cmmc
     menu: reference-pre-built-policy-packs-cmmc
+    feature: compliance-policy-packs
     framework: CMMC 2.0
     packs:
       - pack: cmmc-aws
@@ -130,6 +137,7 @@ sections:
 
   - id: hitrust
     menu: reference-pre-built-policy-packs-hitrust
+    feature: compliance-policy-packs
     framework: HITRUST CSF 11.5
     packs:
       - pack: hitrust-aws
@@ -156,6 +164,7 @@ sections:
 
   - id: iso-27001
     menu: reference-pre-built-policy-packs-iso-27001
+    feature: compliance-policy-packs
     framework: ISO/IEC 27001:2022
     packs:
       - pack: iso-27001-aws
@@ -182,6 +191,7 @@ sections:
 
   - id: nist
     menu: reference-pre-built-policy-packs-nist
+    feature: compliance-policy-packs
     framework: NIST SP 800-53
     packs:
       - pack: nist-aws
@@ -208,6 +218,7 @@ sections:
 
   - id: pci-dss
     menu: reference-pre-built-policy-packs-pci-dss
+    feature: compliance-policy-packs
     framework: PCI DSS v4.0.1
     packs:
       - pack: pci-dss-aws
@@ -234,6 +245,7 @@ sections:
 
   - id: pulumi-best-practices
     menu: reference-pre-built-policy-packs-pulumi-best-practices
+    feature: pre-built-policy-packs
     framework: Pulumi Best Practices
     packs:
       - pack: pulumi-best-practices-aws
