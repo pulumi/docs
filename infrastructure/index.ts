@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation, getViewerIpFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 import { SupportFormApi } from "./supportForm";
 
 const stackConfig = new pulumi.Config();
@@ -953,6 +953,38 @@ if (config.versionedDocsStack) {
 // optional — dev stacks and PR previews without enableSupportForm get no origin
 // or behavior, and the form's frontend degrades gracefully when POSTs to
 // /api/support fail.
+// Origin request policy for /api/support*.
+//
+// An explicit whitelist rather than "every viewer header except Host", because
+// this is an API endpoint and the handler reads exactly one thing from the
+// viewer's own headers: content-type. Forwarding nothing else means a caller
+// cannot smuggle a header the origin might one day interpret. If the handler
+// ever needs another viewer header, it has to be added here — nothing else
+// reaches the Lambda.
+//
+// CloudFront-Viewer-Address is the second item and is not a viewer header at
+// all: CloudFront sets it from the TCP connection and overwrites anything the
+// client sent, so it cannot be forged. It is how the handler learns the
+// submitter's address, which is otherwise unknowable — requestContext's sourceIp
+// is the edge node, because CloudFront is what invokes the Function URL. A
+// managed header is preferred over a CloudFront Function that stamps the same
+// value: there is no edge code to typo, and no way for it to fail closed and
+// 502 the endpoint.
+//
+// Host is dropped by construction, which Lambda Function URL origins require.
+// The x-origin-verify shared secret is unaffected — it is an origin
+// customHeaders entry (see SupportFormApi.getOrigin), added by CloudFront
+// regardless of this policy.
+const supportFormOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("support-form-origin-request", {
+    comment: "POST /api/support: forwards the content type and the viewer's address, nothing else.",
+    cookiesConfig: { cookieBehavior: "none" },
+    queryStringsConfig: { queryStringBehavior: "none" },
+    headersConfig: {
+        headerBehavior: "whitelist",
+        headers: { items: ["content-type", "CloudFront-Viewer-Address"] },
+    },
+});
+
 const supportFormOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const supportFormBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 let supportForm: SupportFormApi | undefined;
@@ -975,16 +1007,14 @@ if (config.enableSupportForm) {
         allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
         cachedMethods: ["GET", "HEAD"],
         cachePolicyId: noCacheKeyPolicy.id,
-        // Forwards Content-Type (and the rest of the viewer request) while
-        // stripping Host, which Function URL origins require.
-        originRequestPolicyId: allViewerExceptHostHeaderId,
+        originRequestPolicyId: supportFormOriginRequestPolicy.id,
         responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
-        // API traffic gets no edge redirects and no markdown negotiation. The one
-        // function it does carry stamps the viewer's IP as x-viewer-ip, which is
-        // the only way the handler can learn the submitter's address — see
-        // getViewerIpFunctionAssociation.
+        // API traffic gets no edge redirects, no markdown negotiation, and no
+        // edge functions at all. The submitter's address arrives as the
+        // CloudFront-managed CloudFront-Viewer-Address header instead — see the
+        // origin request policy above.
         lambdaFunctionAssociations: [],
-        functionAssociations: [getViewerIpFunctionAssociation()],
+        functionAssociations: [],
     });
 }
 

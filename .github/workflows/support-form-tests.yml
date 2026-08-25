@@ -50,5 +50,24 @@ jobs:
           cache-dependency-path: infrastructure/yarn.lock
       - name: Install deps
         run: yarn --cwd infrastructure install --frozen-lockfile
+      # Tee'd rather than run bare so the count can be asserted afterwards.
+      # check-suites-compiled.js proves every suite will be reached; this proves
+      # the runner actually executed assertions once it got there. A suite whose
+      # tests were all commented out would satisfy the first check and not this
+      # one. `pipefail` keeps a genuine test failure failing the step, which a
+      # bare pipe into tee would otherwise mask.
       - name: Run suite
-        run: yarn --cwd infrastructure test-support-form
+        shell: bash
+        run: |
+          set -o pipefail
+          yarn --cwd infrastructure test-support-form 2>&1 | tee /tmp/support-form-tests.log
+
+      - name: Assert the suite actually ran
+        shell: bash
+        run: |
+          count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' /tmp/support-form-tests.log | tail -1)
+          if [ -z "$count" ] || [ "$count" -eq 0 ]; then
+            echo "::error::The support-form suite reported ${count:-no} tests. Something is not running."
+            exit 1
+          fi
+          echo "support-form suite ran $count tests."

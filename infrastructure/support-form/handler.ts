@@ -39,42 +39,60 @@ export interface FunctionUrlResult {
     body: string;
 }
 
-// Longest value accepted from x-viewer-ip. An IPv6 address with a zone index
-// fits comfortably; anything longer is not an address we stamped.
-const MAX_IP_LENGTH = 64;
+// Longest value accepted from CloudFront-Viewer-Address. An IPv6 address plus a
+// port fits comfortably; anything longer is not an address CloudFront set.
+const MAX_ADDRESS_LENGTH = 64;
+
+// Where a logged address came from. Recorded alongside the address itself
+// because the two sources mean very different things, and a record that
+// silently mixed them would be worse than no record: "edge" is not the
+// submitter, and must never be read as though it were.
+export type IpSource = "viewer" | "edge" | "unknown";
+
+export interface ClientAddress {
+    ip: string | undefined;
+    source: IpSource;
+}
 
 // The submitter's IP address, for the abuse trail in the logs below.
 //
 // requestContext.http.sourceIp is NOT it: CloudFront invokes the Function URL,
-// so that field is always the edge node's address (a 3.x CLOUDFRONT_ORIGIN_FACING
-// IP), identical in shape for every submission and useless for tracing anyone.
+// so that field is the edge node's address (a 3.x CLOUDFRONT_ORIGIN_FACING IP),
+// identical in shape for every submission and useless for tracing anyone.
 //
-// X-Forwarded-For is not the answer either, and this is the trap worth naming.
-// CloudFront *appends* the viewer to whatever X-Forwarded-For the viewer already
-// sent, so the header is partly attacker-authored by the time it leaves the
-// edge; and Lambda Function URLs are documented to truncate it to the leftmost
-// value, which is precisely the part the attacker controls. Reading it would log
-// a forged address that looks authentic — worse than logging the edge.
+// X-Forwarded-For is not the answer either. CloudFront appends the viewer to
+// whatever X-Forwarded-For the caller already sent, so the header is partly
+// caller-authored by the time it leaves the edge, and reading the wrong end of
+// it logs a forged address that looks authentic. (A Function URL may also
+// collapse the chain before the handler sees it; we could not find that
+// documented either way, which is reason enough not to depend on the shape.)
 //
-// So the address is stamped at the edge instead: a CloudFront Function writes
-// event.viewer.ip (CloudFront's own view of the TCP peer, unforgeable, and
-// overwriting anything the client sent) into x-viewer-ip. See
-// getViewerIpFunctionAssociation in ../cloudfrontFunctions.ts.
+// CloudFront-Viewer-Address avoids all of it. CloudFront sets it from the TCP
+// connection and overwrites anything the client sent, so it cannot be forged,
+// and it is forwarded by the origin request policy rather than produced by edge
+// code that could fail. Trusting it is sound because the caller already proved
+// the request came through our distribution: supportFormHandler rejects anything
+// without the x-origin-verify shared secret before this is ever called.
 //
-// Trusting that header is only sound because the caller already proved it came
-// through our distribution: supportFormHandler rejects anything without the
-// x-origin-verify shared secret before this is ever called. On a direct Function
-// URL invocation there is no valid secret, so we never reach here — and the
-// requestContext fallback below is the honest AWS-supplied peer anyway.
-export function clientIp(event: FunctionUrlEvent): string | undefined {
-    const stamped = event.headers?.["x-viewer-ip"];
-    if (typeof stamped === "string") {
-        const value = stamped.trim();
-        if (value.length > 0 && value.length <= MAX_IP_LENGTH) {
-            return value;
+// The value is "<ip>:<port>" and is IPv6-capable ("2001:db8::1:443"), so the
+// address is everything before the LAST colon.
+export function clientAddress(event: FunctionUrlEvent): ClientAddress {
+    const forwarded = event.headers?.["cloudfront-viewer-address"];
+    if (typeof forwarded === "string") {
+        const value = forwarded.trim();
+        if (value.length > 0 && value.length <= MAX_ADDRESS_LENGTH) {
+            const lastColon = value.lastIndexOf(":");
+            const ip = lastColon === -1 ? value : value.slice(0, lastColon);
+            if (ip.length > 0) {
+                return { ip, source: "viewer" };
+            }
         }
     }
-    return event.requestContext?.http?.sourceIp;
+    // No viewer address: either the origin request policy is not forwarding it
+    // (a misconfiguration, or mid-deploy propagation) or this is a direct
+    // Function URL invocation, where sourceIp really is the caller's own peer.
+    const peer = event.requestContext?.http?.sourceIp;
+    return { ip: peer, source: peer ? "edge" : "unknown" };
 }
 
 function jsonResponse(statusCode: number, body: object, extraHeaders: Record<string, string> = {}): FunctionUrlResult {
@@ -114,6 +132,12 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         return jsonResponse(403, { ok: false, error: "forbidden" });
     }
 
+    // Resolved once, and deliberately only after the secret check: the viewer
+    // address is trustworthy precisely because CloudFront vouched for this
+    // request. Computed here rather than at each log site so the success path,
+    // which runs after the Intercom ticket already exists, cannot fail on it.
+    const address = clientAddress(event);
+
     const method = (event.requestContext?.http?.method || "").toUpperCase();
     if (method !== "POST") {
         return jsonResponse(405, { ok: false, error: "method_not_allowed" }, { allow: "POST" });
@@ -146,7 +170,8 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
             JSON.stringify({
                 type: "support_request_spam_dropped",
                 receivedAt: new Date().toISOString(),
-                sourceIp: clientIp(event),
+                sourceIp: address.ip,
+                ipSource: address.source,
             }),
         );
         return jsonResponse(200, { ok: true, id: crypto.randomUUID() });
@@ -168,7 +193,8 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
                 type: "support_request_ticket_failed",
                 id,
                 error: err instanceof Error ? err.message : String(err),
-                sourceIp: clientIp(event),
+                sourceIp: address.ip,
+                ipSource: address.source,
                 request: result.value,
             }),
         );
@@ -183,7 +209,8 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
             id,
             ticketId,
             receivedAt: new Date().toISOString(),
-            sourceIp: clientIp(event),
+            sourceIp: address.ip,
+            ipSource: address.source,
             request: result.value,
         }),
     );

@@ -67,21 +67,13 @@ function normalizeOrganization(raw: string): string {
 // time — which is why both the draft restore and the ?priority= prefill used to
 // silently do nothing. Selects are matched against their own options instead,
 // which doubles as validation: a bogus value is ignored rather than blanking
-// the control. Returns whether this call actually changed the control.
+// the control. Returns whether the value was applied.
 function setControlValue(input: FormControl, value: string): boolean {
     if (input instanceof HTMLSelectElement) {
         if (!Array.from(input.options).some(option => option.value === value)) {
             return false;
         }
     } else if (input.value) {
-        return false;
-    }
-    // Reports false when the control already held this value, so a caller can
-    // tell "the user chose this" from "it was already the default". A <select>
-    // is always in the draft (it always has a value, so saveDraft always stores
-    // it), and treating that as a deliberate choice would let a stale default
-    // silently outrank an explicit ?priority= in the URL.
-    if (input.value === value) {
         return false;
     }
     input.value = value;
@@ -179,12 +171,16 @@ function init() {
         // unsubmittable with no server round trip to explain why.
         priority: value => {
             const select = control("priority");
-            if (!(select instanceof HTMLSelectElement)) {
-                return null;
+            if (select instanceof HTMLSelectElement) {
+                return Array.from(select.options).some(option => option.value === value)
+                    ? null
+                    : "Choose a priority.";
             }
-            return Array.from(select.options).some(option => option.value === value)
-                ? null
-                : "Choose a priority.";
+            // Not a <select> — someone changed the layout. Fall back to
+            // "non-empty" rather than passing anything through: the server's
+            // closed enum is still authoritative, but silently accepting any
+            // string here would cost the user a round trip to find that out.
+            return value ? null : "Choose a priority.";
         },
         subject: value => (value ? null : "Enter a subject."),
         description: value =>
@@ -248,10 +244,41 @@ function init() {
     // windows, blocked storage) — degrade to no persistence.
     const draftFields = ["email", "name", "organization", "priority", "subject", "description"];
 
+    // Fields the user has actually interacted with. The draft holds only these,
+    // which is what lets the query-param prefill below tell a real choice from a
+    // default: a <select> always reports a value, so saving every field would
+    // put priority: "normal" in the draft after a single keystroke elsewhere,
+    // and a stale default would then outrank an explicit ?priority= in the URL.
+    // Saving only touched fields also means "differs from the default" never has
+    // to stand in for "the user chose it" — the two are not the same, and a user
+    // who deliberately picks the default is entitled to have that stick.
+    const touched = new Set<string>();
+
+    const fieldById: Record<string, string> = {};
+    for (const field of Object.keys(FIELD_IDS)) {
+        fieldById[FIELD_IDS[field]] = field;
+    }
+
+    function markTouched(event: Event): void {
+        const target = event.target as HTMLElement | null;
+        const field = target && target.id ? fieldById[target.id] : undefined;
+        if (field) {
+            touched.add(field);
+        }
+    }
+
+    // `change` as well as `input`, because a <select> fires only the former in
+    // some browsers when navigated by keyboard.
+    form.addEventListener("input", markTouched);
+    form.addEventListener("change", markTouched);
+
     function saveDraft(): void {
         try {
             const draft: Record<string, string> = {};
             for (const field of draftFields) {
+                if (!touched.has(field)) {
+                    continue;
+                }
                 const input = control(field);
                 if (input && input.value) {
                     draft[field] = input.value;
@@ -263,10 +290,10 @@ function init() {
         }
     }
 
-    // Returns the fields the draft actually changed, so the query-param prefill
-    // below doesn't overwrite the user's own recovered work. A field whose draft
-    // value merely matched what was already there isn't in the set — that's a
-    // default, not a choice.
+    // Returns the fields recovered from the draft. Everything in a draft was
+    // touched by the user, so these are choices, and the prefill must not
+    // overwrite them. They are also re-marked as touched so the next save keeps
+    // them rather than dropping what was just restored.
     function restoreDraft(): Set<string> {
         const restored = new Set<string>();
         try {
@@ -277,8 +304,10 @@ function init() {
             const draft = JSON.parse(raw) as Record<string, string>;
             for (const field of draftFields) {
                 const input = control(field);
-                if (input && typeof draft[field] === "string" && setControlValue(input, draft[field])) {
+                if (input && typeof draft[field] === "string" && draft[field]) {
+                    setControlValue(input, draft[field]);
                     restored.add(field);
+                    touched.add(field);
                 }
             }
         } catch (e) {

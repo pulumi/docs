@@ -11,7 +11,7 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
-import { clientIp, FunctionUrlEvent, supportFormHandler } from "./handler";
+import { clientAddress, FunctionUrlEvent, supportFormHandler } from "./handler";
 import { LIMITS, normalizeOrganization, validateSubmission } from "./validation";
 
 function validPayload(): Record<string, unknown> {
@@ -240,11 +240,13 @@ test("handler decodes base64-encoded bodies", async () => {
 // --- Client-IP attribution ---
 //
 // requestContext.http.sourceIp is CloudFront's edge node, never the submitter.
-// The real address is stamped at the edge into x-viewer-ip; these pin that it is
-// preferred, and that nothing a caller can author gets logged in its place.
+// The real address arrives as the CloudFront-managed CloudFront-Viewer-Address
+// header; these pin that it is preferred, that nothing a caller can author gets
+// logged in its place, and that a fallback is labelled as one.
 
 const EDGE_IP = "3.172.120.71";
 const VIEWER_IP = "198.51.100.9";
+const VIEWER_HEADER = "cloudfront-viewer-address";
 
 function ipEvent(headers: Record<string, any> = {}): FunctionUrlEvent {
     return {
@@ -253,41 +255,54 @@ function ipEvent(headers: Record<string, any> = {}): FunctionUrlEvent {
     };
 }
 
-test("prefers the edge-stamped viewer address over the CloudFront edge", () => {
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": VIEWER_IP })), VIEWER_IP);
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": `  ${VIEWER_IP}  ` })), VIEWER_IP);
+test("reads the viewer address CloudFront forwarded, stripping the port", () => {
+    assert.deepStrictEqual(clientAddress(ipEvent({ [VIEWER_HEADER]: `${VIEWER_IP}:52001` })), {
+        ip: VIEWER_IP,
+        source: "viewer",
+    });
+    assert.deepStrictEqual(clientAddress(ipEvent({ [VIEWER_HEADER]: `  ${VIEWER_IP}:443  ` })), {
+        ip: VIEWER_IP,
+        source: "viewer",
+    });
+});
+
+test("keeps an IPv6 viewer address intact by splitting on the last colon", () => {
+    assert.deepStrictEqual(clientAddress(ipEvent({ [VIEWER_HEADER]: "2001:db8::1:443" })), {
+        ip: "2001:db8::1",
+        source: "viewer",
+    });
 });
 
 test("never reads X-Forwarded-For, which is partly caller-authored", () => {
-    // CloudFront appends the viewer to whatever the caller sent, and Function
-    // URLs truncate the result to the leftmost value — the attacker's half. If
-    // this ever starts returning 1.2.3.4, the abuse trail has been poisoned.
-    const event = ipEvent({ "x-forwarded-for": "1.2.3.4, 198.51.100.9" });
-    assert.strictEqual(clientIp(event), EDGE_IP);
+    // CloudFront appends the viewer to whatever the caller already sent, so the
+    // header is half attacker-authored. If this ever starts returning 1.2.3.4,
+    // the abuse trail has been poisoned.
+    const result = clientAddress(ipEvent({ "x-forwarded-for": "1.2.3.4, 198.51.100.9" }));
+    assert.deepStrictEqual(result, { ip: EDGE_IP, source: "edge" });
 });
 
-test("ignores an x-viewer-ip the caller tried to author itself", () => {
-    // The edge function overwrites rather than appends, so a client-supplied
-    // value never survives to the origin. These cover the header arriving
-    // malformed anyway: oversized, empty, or not a string at all.
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": "A".repeat(65) })), EDGE_IP);
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": "" })), EDGE_IP);
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": "   " })), EDGE_IP);
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": ["1.2.3.4"] })), EDGE_IP);
-    assert.strictEqual(clientIp(ipEvent({ "x-viewer-ip": 5 })), EDGE_IP);
+test("marks a fallback as edge, so it can't be mistaken for the submitter", () => {
+    // The whole point of ipSource: a record that fell back must never read as an
+    // attributed one. Malformed values fall back rather than being trusted.
+    for (const value of ["", "   ", "A".repeat(65), ["1.2.3.4"], 5, null, {}]) {
+        assert.deepStrictEqual(clientAddress(ipEvent({ [VIEWER_HEADER]: value } as any)), {
+            ip: EDGE_IP,
+            source: "edge",
+        });
+    }
+    assert.deepStrictEqual(clientAddress({}), { ip: undefined, source: "unknown" });
 });
 
 test("never throws, whatever the headers hold", () => {
-    // This runs inside the success-path log, after the Intercom ticket exists.
-    // A throw there would 502 a request that already filed, and the user would
-    // resubmit into a duplicate.
-    for (const headers of [{}, { "x-viewer-ip": null }, { "x-viewer-ip": {} }]) {
-        assert.doesNotThrow(() => clientIp(ipEvent(headers as any)));
+    // This feeds the success-path log, which runs after the Intercom ticket
+    // already exists. A throw there would 502 a request that had filed, and the
+    // user would resubmit into a duplicate.
+    for (const headers of [{}, { [VIEWER_HEADER]: null }, { [VIEWER_HEADER]: {} }]) {
+        assert.doesNotThrow(() => clientAddress(ipEvent(headers as any)));
     }
-    assert.strictEqual(clientIp({}), undefined);
 });
 
-test("logs the stamped address, not the edge, on an accepted submission", async () => {
+test("logs the viewer address and its provenance on an accepted submission", async () => {
     process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
     const logged: string[] = [];
     const realLog = console.log;
@@ -296,7 +311,7 @@ test("logs the stamped address, not the edge, on an accepted submission", async 
     };
     try {
         const event = postEvent(validPayload());
-        (event.headers as Record<string, string>)["x-viewer-ip"] = VIEWER_IP;
+        (event.headers as Record<string, string>)[VIEWER_HEADER] = `${VIEWER_IP}:52001`;
         (event.headers as Record<string, string>)["x-forwarded-for"] = "1.2.3.4";
         await supportFormHandler(event);
     } finally {
@@ -305,6 +320,7 @@ test("logs the stamped address, not the edge, on an accepted submission", async 
     const accepted = logged.map(l => JSON.parse(l)).find(l => l.type === "support_request_accepted");
     assert.ok(accepted, "expected a support_request_accepted record");
     assert.strictEqual(accepted.sourceIp, VIEWER_IP);
+    assert.strictEqual(accepted.ipSource, "viewer");
 });
 
 test("handler rejects an empty body", async () => {
