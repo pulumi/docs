@@ -31,4 +31,6 @@ Only organization admins can be SAML admins. If you want to designate a member o
 When a user stops being a SAML admin, they will automatically lose all other login methods.
 {{% /notes %}}
 
+Losing every login method other than single sign-on is the same thing that happens to an [organization-managed user](/docs/administration/concepts/org-managed-users/).
+
 Only one SAML admin per organization is supported at this time.
