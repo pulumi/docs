@@ -46,10 +46,12 @@ const LANG_WEIGHTS: { [lang: string]: number } = {
 const LOGO_FILL = "#5A30C5";
 const LOGO_DIM_FILL = "#9077F3";
 
-// Where the chosen language's icon parks in the code panel (bbox center and
-// box size, from the storyboard's TypeScript icon at 596,168 - 619.4,191.4).
-const PANEL_LANG_CENTER = { x: 607.72, y: 179.72 };
-const PANEL_LANG_SIZE = 23.44;
+// Where the chosen language's icon parks in the code panel: tucked into the
+// top-right corner and kept small so a long second code line never runs
+// underneath it (the storyboard's 23.4px icon at 596,168 sat lower and
+// larger).
+const PANEL_LANG_CENTER = { x: 615.5, y: 172.5 };
+const PANEL_LANG_SIZE = 15;
 
 // The language pill's flow layout (storyboard frame 1): labels at font-size 10
 // with 0.05em tracking, centered in the pill with a constant gap; the chosen
