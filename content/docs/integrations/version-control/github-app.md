@@ -25,7 +25,7 @@ aliases:
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
-The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [DIY backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
+The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 {{% /notes %}}
 
 ## Installation and configuration

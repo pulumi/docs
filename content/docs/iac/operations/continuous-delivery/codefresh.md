@@ -21,7 +21,7 @@ aliases:
 [Codefresh](https://codefresh.io) is a CI/CD platform for Kubernetes and Argo CD, now part of Octopus Deploy. Its CI pipelines run each step as a container, so you run Pulumi in a pipeline step that uses the official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container image. That image ships the Pulumi CLI and every language runtime, so the same pipeline works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/) Pulumi supports.
 
 {{% notes type="info" %}}
-This guide assumes Pulumi Cloud as the [state backend](/docs/iac/concepts/state-and-backends/). Pulumi can also run in CI/CD with a DIY backend, but Pulumi Cloud is assumed throughout because it simplifies pipeline authentication and is the most common choice.
+This guide assumes Pulumi Cloud as the [state backend](/docs/iac/concepts/state-and-backends/). Pulumi can also run in CI/CD with a self-managed backend, but Pulumi Cloud is assumed throughout because it simplifies pipeline authentication and is the most common choice.
 {{% /notes %}}
 
 {{< pulumi-docker-images-note >}}

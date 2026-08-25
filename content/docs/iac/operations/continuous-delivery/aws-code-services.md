@@ -25,7 +25,7 @@ AWS Code Services are a suite of [developer tools](https://aws.amazon.com/produc
 Pulumi runs in **CodeBuild**: it executes your Pulumi program to compute the desired state of your cloud resources, and CodeBuild supplies the compute environment to do that. **CodePipeline** then invokes CodeBuild as one stage of a larger pipeline, so a Pulumi update can run wherever it fits in your existing release process.
 
 {{% notes type="info" %}}
-This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [DIY backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
+This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
 {{% /notes %}}
 
 {{< pulumi-docker-images-note >}}

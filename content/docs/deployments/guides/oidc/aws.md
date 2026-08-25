@@ -59,7 +59,7 @@ Once you have created the identity provider, you will see a notification at the 
 1. In the **Web identity** section:
     * Select `api.pulumi.com/oidc` under **Identity provider**.
     * Select the name of your Pulumi organization under **Audience**. Then select **Next**.
-1. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi Deployments runs. Then select **Next**.
+1. On the **Add permissions** page, select the permissions that you want to grant to your Pulumi deployments. Then select **Next**.
 1. Provide a name and optional description for the IAM role. Then select **Create role**.
 
 Make a note of the IAM role's ARN; it will be necessary to enable OIDC for your deployment.

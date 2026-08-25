@@ -24,11 +24,15 @@
 # exactly the judgment gate these rows need.
 #
 # Rows graduate to Substitutions.yml (error, blocker) once the repo-wide
-# backlog for that name reaches zero, the way `self-managed backend` did in
-# the PR that added this file. Vale-visible backlog at that time, excluding
-# the content/blog and generated-CLI trees that .vale.ini exempts:
-# Pulumi Insights 24, Insights scan 3, Insights account 2, Pulumi Copilot 2,
-# Policy Violations 3, Insights supergraph 1, Insights resources 1.
+# backlog for that name reaches zero — this file is deliberately the place a
+# retired name waits while its content migration is still outstanding, so that
+# adopting a brand rename never turns into a blocker on every PR that touches
+# an unmigrated page. Vale-visible backlog at the time of writing, excluding
+# the content/blog and generated-CLI trees that .vale.ini exempts (tracked for
+# migration in pulumi/docs#21133):
+# self-managed backend 40, Pulumi Insights 24, Insights scan 3, Insights
+# account 2, Pulumi Copilot 2, Policy Violations 3, Insights supergraph 1,
+# Insights resources 1.
 extends: substitution
 message: '''%s'' is a retired name; the brand guide replaces it with ''%s''. Confirm it fits this sentence — historical prose ("X replaced Y") and heading anchors are legitimate exceptions.'
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
@@ -44,3 +48,5 @@ swap:
   '\bInsights supergraph\b': resource graph
   '\bInsights resources\b': discovered resources
   '\bPolicy Violations\b': policy findings
+  '\bself-managed backend\b': DIY backend
+  '\bself-managed backends\b': DIY backends

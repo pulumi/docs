@@ -23,7 +23,8 @@
 #   1. Wrong in every context AND zero repo-wide backlog -> Substitutions.yml
 #      (error, blocker).
 #   2. A rename, or any row with a live backlog -> RetiredNames.yml (warning,
-#      advisory). Rows graduate to tier 1 once their backlog reaches zero.
+#      advisory). Rows graduate to tier 1 once their backlog reaches zero;
+#      the outstanding content migrations are tracked in pulumi/docs#21133.
 #   3. No single fixed replacement -> DeprecatedProductNames.yml (flag-only).
 #   4. No safe regex at all -> leave unmirrored and note it in the PR body.
 

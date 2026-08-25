@@ -1086,7 +1086,7 @@ public class App {
 
 {{< /chooser >}}
 
-This split only works cleanly when both stacks can reliably read and write state and each other's outputs regardless of which machine or CI runner is doing the reading — which is exactly what the [Pulumi Cloud state backend](/docs/iac/concepts/state-and-backends/) is built for. A DIY backend (an S3 bucket or similar) can technically serve the same `StackReference` calls, but you take on the access control, availability, and durability of that storage yourself, on top of the infrastructure you actually set out to manage. Pulumi Cloud handles state locking, versioned state history, and encrypted output storage for you, and layers Pulumi ESC and Pulumi Deployments on top for exactly this build-stack/deploy-stack promotion workflow — it's the backend to default to for anything beyond a single-developer experiment.
+This split only works cleanly when both stacks can reliably read and write state and each other's outputs regardless of which machine or CI runner is doing the reading — which is exactly what the [Pulumi Cloud state backend](/docs/iac/concepts/state-and-backends/) is built for. A self-managed backend (an S3 bucket or similar) can technically serve the same `StackReference` calls, but you take on the access control, availability, and durability of that storage yourself, on top of the infrastructure you actually set out to manage. Pulumi Cloud handles state locking, versioned state history, and encrypted output storage for you, and layers Pulumi ESC and Pulumi Deployments on top for exactly this build-stack/deploy-stack promotion workflow — it's the backend to default to for anything beyond a single-developer experiment.
 
 ## Choosing between `docker-build` and `docker`
 

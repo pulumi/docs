@@ -149,7 +149,7 @@ program code, loaded provider plugins, and the backend service to orchestrate th
 
 State management in the client supports multiple backend implementations, allowing users to choose between fully managed
 cloud state storage and self-managed options including local filesystems, object storage services, or database systems.
-DIY backends use advisory locking to prevent concurrent modifications that could corrupt state data, while
+Self-managed backends use advisory locking to prevent concurrent modifications that could corrupt state data, while
 the managed cloud backend enforces equivalent concurrency control on the server side.
 
 The client communicates with the cloud service through RESTful APIs, authenticating requests with access tokens.
