@@ -17,9 +17,12 @@ const CW_PROMPT = 14 * (CW / 12) - 0.7;
 const PROMPT_TEXT_X = 213;
 const CODE_TEXT_X = 122;
 
-// Shell geometry (storyboard measurements).
-const TILE_FILL = { x: 209.5, y: 165.5, width: 98.813, height: 99.213, rx: 15.5 };
-const TILE_OUTER = { x: 203.5, y: 159.5, width: 111.581, height: 112.032, rx: 19.5 };
+// Shell geometry (storyboard measurements). The tile-state geometry is
+// derived per pass from the chosen tile's rect; the halo is the storyboard's
+// outer-shell offset from the tile fill.
+const HALO_PAD = 6;
+const HALO_GROW = 12.8;
+const HALO_RX = 19.5;
 const PANEL_FILL = { x: 112, y: 157, width: 520, height: 257, rx: 16 };
 const PANEL_STROKE = { x: 112.5, y: 157.5, width: 519, height: 256, rx: 15.5 };
 const PANEL_OUTER = { x: 104.5, y: 149.5, width: 535, height: 272, rx: 21.5 };
@@ -27,11 +30,17 @@ const PILL_BOTTOM = 521.5; // shared bottom anchor: CI pill bottom edge
 const CI_ROW_RIDE = 62; // how far the CI row rides between panel and pill state
 const SLOT_REDISTRIBUTE = 10; // status slots shift left this much in the pill
 
-// The glyph is authored at its code-panel position (y=100); these are the
-// translations to its other stations.
-const GLYPH_IN_TILE = { x: -112.605, y: 96.661 };
-const GLYPH_AT_TAB = -30; // pushed up by the ROLE tab
+// The protagonist perch: every glyph station in the storyboard is really
+// "bottom edge ~12.6px above the thing below it", so logos of any height
+// anchor by their bbox bottom-center. Measured from the robot at the
+// code-panel station: center x 371.5, bottom y 136.89.
+const PERCH = { x: 371.5, bottom: 136.89 };
+const GLYPH_AT_TAB = -30; // pushed up by the ROLE tab, relative to the perch
 const GLYPH_AT_PLATE = -70; // pushed up by the isometric plate
+
+// Per-pass protagonist odds, in tile DOM order: Claude Code, Codex, Cursor,
+// GitHub Copilot, Pulumi Neo, opencode.
+const AGENT_WEIGHTS = [66, 15, 8, 3.5, 3.5, 4];
 
 const CUBE_H = 84.752; // vertical edge length of the subnet cubes (extrusion height)
 const TERM_SCROLL_END = -466; // lands the stream on Outputs / Duration
@@ -58,6 +67,8 @@ function init(): void {
     }
 
     const tiles = qa<SVGGElement>(root, "[data-tile]");
+    const tileRects = qa<SVGRectElement>(root, "[data-tile-rect]");
+    const tileLogos = qa<SVGGElement>(root, "[data-tile-logo]");
     const prompt = q<SVGGElement>(root, "[data-prompt]");
     const promptClip = q<SVGRectElement>(root, "[data-prompt-clip]");
     const promptCaret = q<SVGRectElement>(root, "[data-prompt-caret]");
@@ -71,6 +82,13 @@ function init(): void {
 
     const glyph = q<SVGGElement>(root, "[data-glyph]");
     const glyphFloat = q<SVGGElement>(root, "[data-glyph-f]");
+    // The robot baked into the glyph wrapper only serves the static finished
+    // frame (no-JS / reduced motion); in motion the wrapper adopts the chosen
+    // tile's logo each pass.
+    const glyphStatic = q<SVGPathElement>(root, "[data-glyph-static]");
+    if (glyphStatic && glyphStatic.parentNode) {
+        glyphStatic.parentNode.removeChild(glyphStatic);
+    }
 
     const codeLines = qa<SVGTextElement>(root, "[data-code-line]");
     const lineClips = qa<SVGRectElement>(root, "[data-lc]");
@@ -112,35 +130,106 @@ function init(): void {
     const cubeLabels = qa<SVGTextElement>(root, "[data-cube-label]");
 
     // ------------------------------------------------------------------
+    // The protagonist. Each pass picks a weighted-random agent; shell A
+    // starts at that tile's cell, and at morph time the glyph wrapper adopts
+    // that tile's logo, anchored by its bbox bottom-center to the shared
+    // perch point.
+    // ------------------------------------------------------------------
+    let chosen = 0;
+    const perch = { x: 0, y: 0 };
+
+    function pickAgent(): number {
+        let r = Math.random() * 100;
+        for (let i = 0; i < AGENT_WEIGHTS.length; i++) {
+            r -= AGENT_WEIGHTS[i];
+            if (r < 0) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    function cellFill(): { x: number; y: number; width: number; height: number; rx: number } {
+        const r = tileRects[chosen];
+        return {
+            x: parseFloat(r.getAttribute("x") || "0"),
+            y: parseFloat(r.getAttribute("y") || "0"),
+            width: parseFloat(r.getAttribute("width") || "0"),
+            height: parseFloat(r.getAttribute("height") || "0"),
+            rx: 16,
+        };
+    }
+
+    function cellHalo(): { x: number; y: number; width: number; height: number; rx: number } {
+        const c = cellFill();
+        return { x: c.x - HALO_PAD, y: c.y - HALO_PAD, width: c.width + HALO_GROW, height: c.height + HALO_GROW, rx: HALO_RX };
+    }
+
+    // Timeline proxies that must be rewound each pass — with repeatRefresh
+    // the timeline re-records start values on every loop, so anything a
+    // proxy tween mutated has to be put back by reset().
+    const loopProxies: Array<{ obj: any; initial: any }> = [];
+
+    function trackProxy<T>(obj: T): T {
+        loopProxies.push({ obj: obj, initial: Object.assign({}, obj) });
+        return obj;
+    }
+
+    // At morph time the chosen tile hands over: its logo moves into the glyph
+    // wrapper (same user-space coordinates, so the swap is invisible), the
+    // tile group bows out, and shell A's fill takes over as the surface.
+    function adoptProtagonist(): void {
+        glyphFloat.appendChild(tileLogos[chosen]);
+        gsap.set(tiles[chosen], { autoAlpha: 0 });
+        gsap.set([aFill, glyph], { autoAlpha: 1 });
+    }
+
+    // ------------------------------------------------------------------
     // Reset: put the finished-state markup into the opening state. Runs once
     // up front and again on every loop (the closing collapse leaves the stage
-    // dark; this brings the agent grid back).
+    // dark; this brings the agent grid back and picks the next protagonist).
     // ------------------------------------------------------------------
     function reset(): void {
+        // Send the previous pass's protagonist logo home before re-picking.
+        for (let i = 0; i < tileLogos.length; i++) {
+            if (tileLogos[i].parentNode !== tiles[i]) {
+                tiles[i].appendChild(tileLogos[i]);
+            }
+        }
+        chosen = pickAgent();
+        const bb = tileLogos[chosen].getBBox();
+        perch.x = PERCH.x - (bb.x + bb.width / 2);
+        perch.y = PERCH.bottom - (bb.y + bb.height);
+
         gsap.set(tiles, { autoAlpha: 0, scale: 0.9, transformOrigin: "50% 50%" });
         gsap.set(prompt, { autoAlpha: 0, scale: 0.96, transformOrigin: "50% 50%" });
         gsap.set(promptClip, { attr: { width: 0 } });
         gsap.set(promptCaret, { opacity: 0, attr: { x: PROMPT_TEXT_X } });
 
-        gsap.set(aFill, { autoAlpha: 0, scale: 0.9, transformOrigin: "50% 50%", attr: TILE_FILL });
+        const cf = cellFill();
+        gsap.set(aFill, { autoAlpha: 0, scale: 1, attr: cf });
         // Hidden dash state carries margin on both sides ("1 2" pattern,
         // offset 1.5) — parking the offset exactly at the pattern boundary
         // leaves antialiased slivers of the stroke's rounded corners visible.
         gsap.set(aStroke, {
             autoAlpha: 0,
             attr: {
-                "x": TILE_FILL.x,
-                "y": TILE_FILL.y,
-                "width": TILE_FILL.width,
-                "height": TILE_FILL.height,
-                "rx": TILE_FILL.rx,
+                "x": cf.x,
+                "y": cf.y,
+                "width": cf.width,
+                "height": cf.height,
+                "rx": cf.rx,
                 "stroke-dasharray": "1 2",
                 "stroke-dashoffset": "1.5",
             },
         });
-        gsap.set(aOuter, { autoAlpha: 0, attr: TILE_OUTER });
+        gsap.set(aOuter, { autoAlpha: 0, attr: cellHalo() });
 
-        gsap.set(glyph, { x: GLYPH_IN_TILE.x, y: GLYPH_IN_TILE.y, autoAlpha: 0 });
+        gsap.set(glyph, { x: 0, y: 0, autoAlpha: 0 });
+
+        for (let i = 0; i < loopProxies.length; i++) {
+            Object.assign(loopProxies[i].obj, loopProxies[i].initial);
+        }
 
         gsap.set(lineClips, { attr: { width: 0 } });
         gsap.set(codeLines, { y: 0, opacity: 1 });
@@ -165,8 +254,11 @@ function init(): void {
         gsap.set(termScroll, { y: 0 });
         gsap.set(termLines, { opacity: 0 });
 
-        gsap.set(ciRow, { y: -CI_ROW_RIDE });
-        gsap.set(badgeTests, { y: -CI_ROW_RIDE });
+        // The closing collapse fades these GROUPS; restore them (their
+        // contents are individually hidden below, so nothing shows early).
+        gsap.set(ciRow, { autoAlpha: 1, y: -CI_ROW_RIDE });
+        gsap.set(badgeTests, { autoAlpha: 1, y: -CI_ROW_RIDE });
+        gsap.set(badgePolicy, { autoAlpha: 1 });
         ciSlots.forEach((slot, i) => gsap.set(slot, { x: slotX[i] + SLOT_REDISTRIBUTE }));
         gsap.set(ciPr, { autoAlpha: 0 });
         gsap.set(ciMerge, { autoAlpha: 0 });
@@ -237,28 +329,24 @@ function init(): void {
     // ------------------------------------------------------------------
     // The master timeline. One pass through the story, then a hold on the
     // finished diagram, a quick collapse, and a repeat (onRepeat re-runs
-    // reset(), which restores the opening state).
+    // reset(), which restores the opening state and picks a new protagonist;
+    // repeatRefresh re-records tween start values and re-evaluates the
+    // function-based glyph destinations for the new pick).
     // ------------------------------------------------------------------
     reset();
-    const tl = gsap.timeline({ repeat: -1, paused: true, onRepeat: reset });
+    const tl = gsap.timeline({ repeat: -1, paused: true, repeatRefresh: true, onRepeat: reset });
 
-    // -- Agent grid staggers in, centre-out (tile 1 is the shell trio).
-    const gridIn: Array<{ targets: gsap.TweenTarget; delay: number }> = [
-        { targets: tiles[0], delay: 0 }, // Codex (closest to centre)
-        { targets: tiles[3], delay: 0.06 }, // Pulumi Neo
-        { targets: [aFill, glyph], delay: 0.12 }, // Claude Code
-        { targets: tiles[1], delay: 0.18 }, // Cursor
-        { targets: tiles[2], delay: 0.24 }, // Copilot
-        { targets: tiles[4], delay: 0.3 }, // opencode
-    ];
-    gridIn.forEach(entry => {
-        tl.to(entry.targets, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, entry.delay);
+    // -- Agent grid staggers in, centre-out. Delays are per cell (DOM order:
+    //    Claude Code, Codex, Cursor, Copilot, Neo, opencode).
+    const gridDelays = [0.12, 0, 0.18, 0.24, 0.06, 0.3];
+    tiles.forEach((tile, i) => {
+        tl.to(tile, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, gridDelays[i]);
     });
 
     // -- Prompt pill appears and the ask types in.
     tl.to(prompt, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 0.5);
     const promptChars = 39;
-    const promptType = { c: 0 };
+    const promptType = trackProxy({ c: 0 });
     // Caret visibility is driven by callbacks, never by timeline children:
     // zero-duration sets rewind to their recorded prior values when the
     // playhead wraps for the loop, which is what left a stray block cursor
@@ -281,26 +369,44 @@ function init(): void {
     );
     tl.call(() => blink(promptBlink, promptCaret, true), undefined, 1.8);
 
-    // -- Execute: the Claude Code tile takes the double outline. The inner
+    // -- Execute: the chosen tile takes the double outline. The inner
     //    #5A30C5 stroke is the "agent is working" flag; the outer shell
-    //    scales out from it.
+    //    scales out from it. The halo's from/to geometry is function-based so
+    //    repeatRefresh re-evaluates it for each pass's cell.
     tl.set(aStroke, { autoAlpha: 1 }, 1.95);
     tl.to(aStroke, { attr: { "stroke-dashoffset": "0" }, duration: 0.35, ease: "power1.inOut" }, 1.95);
     // Once drawn, drop the dash entirely — a plain solid stroke can't leak
     // dash-boundary artifacts (and stays immune to non-scaling-stroke's
     // screen-space dash units).
     tl.set(aStroke, { attr: { "stroke-dasharray": "none" } }, 2.32);
-    tl.fromTo(aOuter, { autoAlpha: 0, attr: TILE_FILL }, { autoAlpha: 1, attr: TILE_OUTER, duration: 0.3, ease: "power2.out" }, 2.1);
+    tl.fromTo(
+        aOuter,
+        {
+            autoAlpha: 0,
+            attr: { x: () => cellFill().x, y: () => cellFill().y, width: () => cellFill().width, height: () => cellFill().height, rx: 16 },
+        },
+        {
+            autoAlpha: 1,
+            attr: { x: () => cellHalo().x, y: () => cellHalo().y, width: () => cellHalo().width, height: () => cellHalo().height, rx: HALO_RX },
+            duration: 0.3,
+            ease: "power2.out",
+            immediateRender: false,
+        },
+        2.1,
+    );
 
-    // -- The other agents bow out; the tile morphs into the code panel and
-    //    the glyph detaches and arcs up to its perch.
+    // -- The agents bow out (the chosen tile hands its logo to the glyph
+    //    wrapper and shell A's fill takes its place a beat earlier — an
+    //    invisible swap); the tile morphs into the code panel and the glyph
+    //    detaches and arcs up to its perch.
+    tl.call(adoptProtagonist, undefined, 2.44);
     tl.call(() => blink(promptBlink, promptCaret, false), undefined, 2.45);
-    tl.to([tiles[4], tiles[2], tiles[1], tiles[3], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.45);
+    tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.45);
     tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 2.6);
     tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 2.6);
     tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(glyph, { x: 0, duration: 0.7, ease: "power2.inOut" }, 2.6);
-    tl.to(glyph, { y: 0, duration: 0.75, ease: "power2.out" }, 2.55);
+    tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 2.6);
+    tl.to(glyph, { y: () => perch.y, duration: 0.75, ease: "power2.out" }, 2.55);
 
     // -- The agent writes the program: three bursts, block caret tracking the
     //    head, blinking through the beats between bursts.
@@ -317,7 +423,7 @@ function init(): void {
             const chars = parseInt(codeLines[k].getAttribute("data-chars") || "0", 10);
             const clip = lineClips[k];
             const rowTop = clip.getAttribute("y");
-            const type = { c: 0 };
+            const type = trackProxy({ c: 0 });
             tl.call(() => gsap.set(caret, { opacity: 1, attr: { y: rowTop as string, x: CODE_TEXT_X } }), undefined, cursor);
             tl.to(
                 type,
@@ -382,7 +488,7 @@ function init(): void {
     const rollA = testsBadgeAt + 0.75; // ~10.1
     tl.to(codeLines, { y: -22, opacity: 0, duration: 0.2, stagger: 0.02, ease: "power1.in" }, rollA - 0.15);
     tl.to(aFill, { autoAlpha: 0, duration: 0.35 }, rollA);
-    const shellA = { top: PANEL_OUTER.y, h: 310, rx: 21.5 };
+    const shellA = trackProxy({ top: PANEL_OUTER.y, h: 310, rx: 21.5 });
     tl.to(
         shellA,
         {
@@ -415,7 +521,7 @@ function init(): void {
     tl.to(bFill, { attr: { height: 257 }, duration: 0.7, ease: "power3.out" }, unfoldAt);
     tl.to(bStroke, { attr: { height: 256 }, duration: 0.7, ease: "power3.out" }, unfoldAt);
     tl.to(tab, { y: 0, duration: 0.35, ease: "power2.out" }, unfoldAt + 0.1);
-    tl.to(glyph, { y: GLYPH_AT_TAB, duration: 0.35, ease: "power2.out" }, unfoldAt + 0.16);
+    tl.to(glyph, { y: () => perch.y + GLYPH_AT_TAB, duration: 0.35, ease: "power2.out" }, unfoldAt + 0.16);
     tl.set(termClip, { opacity: 1 }, unfoldAt + 0.1);
 
     // -- pulumi up streams: lines land whole; the rest of the stream sits
@@ -461,7 +567,7 @@ function init(): void {
     const plateAt = rollB + 0.9;
     tl.to(plate, { autoAlpha: 1, scale: 1, duration: 0.6, ease: "power3.out" }, plateAt);
     tl.to(plateDetail, { autoAlpha: 1, duration: 0.4 }, plateAt + 0.15);
-    tl.to(glyph, { y: GLYPH_AT_PLATE, duration: 0.5, ease: "power2.out" }, plateAt + 0.05);
+    tl.to(glyph, { y: () => perch.y + GLYPH_AT_PLATE, duration: 0.5, ease: "power2.out" }, plateAt + 0.05);
 
     // -- The subnet cubes extrude up out of the plate: the bottom face fades
     //    in flat, then the top face rises while the vertical edges stretch in
