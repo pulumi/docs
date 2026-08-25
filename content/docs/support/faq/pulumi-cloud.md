@@ -131,7 +131,7 @@ You can delete your personal account from your account settings in [Pulumi Cloud
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [Deleting your account](/docs/administration/concepts/organizations/#deleting-your-account).
+For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 ## Pricing
 
