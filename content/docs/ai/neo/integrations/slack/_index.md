@@ -44,7 +44,7 @@ _Slack will prompt you to add Neo to the channel if it's not there already._
 
 ## How permissions work
 
-Tasks started from Slack run with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the Pulumi Cloud user linked to your Slack identity.
+Tasks started from Slack run with the [RBAC permissions](/docs/administration/concepts/rbac/) of the Pulumi Cloud user linked to your Slack identity.
 
 ## Limitations
 

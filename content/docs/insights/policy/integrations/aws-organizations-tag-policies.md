@@ -9,6 +9,7 @@ menu:
         name: AWS Organizations Tag Policies
         parent: integrations
         weight: 2
+pulumi_cloud_feature: pre-built-policy-packs
 ---
 
 ## Overview

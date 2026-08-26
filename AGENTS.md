@@ -31,16 +31,16 @@ Do not substitute other tools or commands, or change `package.json` to use pnpm 
 
 ## Code & Content Rules
 
-For all content files, follow `STYLE-GUIDE.md`. If a rule is not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.
+For all content files, Pulumi's **voice, tone, prose, product naming, and grammar** are defined in the **Pulumi brand guide** ([brand.pulumi.com](https://brand.pulumi.com/)), which is also exposed to agents through the public **brand MCP server**. Consult the relevant section (voice, writing style, or terminology) before writing or reviewing — the **terminology** section is the canonical reference for product/feature names and the retired names never to use again. `STYLE-GUIDE.md` covers only this site's Hugo/repo mechanics (shortcodes, links, navigation, code fences, etc.) and points to the brand guide for each topic it doesn't own. If the brand MCP is unavailable, fall back to the offline Vale mirror in `styles/Pulumi/` — which mirrors the same terminology — and say so in your review or PR body rather than working from memory. If a rule is in neither, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.
+
+**Precedence:** wherever the brand guide overlaps with anything in this repo — these conventions, `STYLE-GUIDE.md`, or any skill (including the social, SEO, and AEO guidance that still lives in this repo), the brand guide takes priority. That specialized guidance stays in the repo for now; if the brand guide later grows its own, the brand guide's version wins.
 
 Meta files like this one, `BUILD-AND-DEPLOY.md`, and agent instruction/skill files (e.g., `.claude/commands/*.md`) are exempt from formatting rules (heading case, trailing newlines, etc.).
 
 For all content files (docs, blogs, tutorials, etc.):
 
 - **Markdown**: Must always end with a newline.
-- **Headings**:  
-  - H1 = Title Case  
-  - H2+ = Sentence case
+- **Headings**: Sentence case at every level (H1 included), and sentence case for nav menu labels. See the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/) section. Hugo heading mechanics (one H1, FAQ `?` exception) live in `STYLE-GUIDE.md`.
 - **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.
 - **TypeScript program files** (`static/programs/`): Use hand-written constructor style — resource name and opening `{` on the same line, `}, {` inline when an opts argument follows:
   ```typescript
@@ -58,7 +58,7 @@ For all content files (docs, blogs, tutorials, etc.):
   - Code examples go under `/static/programs` with a language suffix in the filename.  
   - Mirror the structure of existing content; do not invent new layouts.
 - **Includes**: Use Hugo shortcodes for shared content, never raw Markdown copy-paste.  
-- **Naming**: Use lowercase for non-proper nouns (e.g. “stack,” not “Stack”).  
+- **Naming**: Product, feature, and category names — canonical casing, preferred terms, retired names — come from the brand guide's terminology section. Never introduce a name from memory: check the retired-names table first (e.g. it's Pulumi Discovery now, not “Pulumi Insights”; Pulumi Neo, not “Copilot”). Non-proper nouns stay lowercase (“stack,” not “Stack”).  
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Diagrams**: Prefer Mermaid diagrams over ASCII art. The site renders Mermaid natively via a Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced code blocks. See [Mermaid docs](https://mermaid.js.org/) for syntax.
 - **Images on template-driven pages**: Place new images for template-driven pages (homepage, product pages, event pages, case studies — anything rendered through `layouts/partials/template-partials/*`) under `assets/fingerprinted/`, mirroring the path you'd use under `static/`. The template partials route every `<img>` through `layouts/partials/fingerprinted-img.html`, which content-hashes filenames, converts rasters to WebP, and generates responsive `srcset`s. Frontmatter paths still look like `/images/foo.svg`; the partial resolves them. Missing assets cause a build panic, so there is no silent fallback. `meta_image` and assets used by non-template layouts can stay in `static/`.
@@ -269,6 +269,10 @@ Before starting any documentation task, check `.claude/commands/` for a relevant
 
 ## PR Lifecycle for AI-Assisted Contributions
 
-Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, mention `@claude #update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Bare `@claude` (no hashtag) is for ad-hoc help,
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, mention `@claude #update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Bare `@claude` (no hashtag) is for ad-hoc help, not for refreshing the review.
+
+**Shipping a PR includes finishing its review.** A PR is done when every finding the pre-merge review raised — 🚨 blockers, ⚠️ low-confidence findings, and ✏️ style suggestions alike — has been fixed, refuted, deferred to a filed issue, or explicitly accepted with a stated reason. Clearing 🚨 and stopping is not a shortcut; it is the failure mode the pipeline's own outcome telemetry measures (`ignored_low_confidence` in `scrape-review-outcomes.py`).
+
+Agents: treat this as expected behavior on every PR you open here, asked for or not. Use the **`/address-review`** skill (`.claude/commands/address-review/SKILL.md`) — offer to watch for the review when the PR goes ready for review, walk **every** finding with the user when it lands, and say so plainly (once, then drop it) when a merge would leave items undecided. `python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> --state .review-worklist-<N>.json --require-clean` is the machine answer to "is anything still open?"
 
 For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.

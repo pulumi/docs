@@ -70,4 +70,4 @@ Neo usage limits are available to organizations on a paid plan. The **Manage tok
 ## Next steps
 
 - [Neo settings](/docs/ai/neo/settings/) — configure Neo for your organization
-- [Billing managers](/docs/administration/organizations-teams/billing-managers/) — grant billing access without full admin rights
+- [Billing managers](/docs/administration/concepts/billing-managers/) — grant billing access without full admin rights

@@ -95,7 +95,7 @@ sections:
         icon: puzzle-piece
         title: One module, many languages
         description: |
-          Pulumi Cloud automatically converts your team's Terraform modules into typed, multi-language components in Pulumi-supported languages — TypeScript, Python, Go, C#, Java, even YAML.
+          Pulumi Cloud automatically converts your team's Terraform modules into typed, multi-language components in Pulumi-supported languages — TypeScript, Python, Go, .NET, Java, even YAML.
         link: /docs/idp/concepts/terraform-modules/
 
       - variant: text
@@ -109,7 +109,7 @@ sections:
     label: HCL as a first-class Pulumi language
     heading: HCL joins the family
     description: |
-      HCL (HashiCorp Configuration Language) is now a fully supported Pulumi language, alongside TypeScript, Python, Go, C#, Java, and Pulumi YAML.
+      HCL (HashiCorp Configuration Language) is now a fully supported Pulumi language, alongside TypeScript, Python, Go, .NET, Java, and Pulumi YAML.
     cards:
       - variant: image-left
         image: /images/releases/august-2026/release-hcl.svg

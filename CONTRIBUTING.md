@@ -48,6 +48,29 @@ A pinned review goes **stale** when you push new commits after it ran. One case 
 
 Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing `<!-- CLAUDE_REVIEW N/M -->` comment and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
 
+### Working the review to zero
+
+A review is finished when every finding it raised has an outcome — not when the 🚨 count hits zero. The pinned comment carries three actionable buckets and they are all yours: **🚨 Outstanding** (must be resolved or refuted before merge), **⚠️ Low-confidence** (doesn't block, still needs a decision), and the **✏️ style suggestions** posted inline on the Files-changed tab. 💡 Pre-existing is the one optional bucket — that's not debt this PR created.
+
+Five outcomes count as done, and no others:
+
+| Outcome | When | What it takes |
+|---|---|---|
+| **Fixed** | The finding is right | Push the change. A small push that lands only on flagged lines refreshes the review by itself |
+| **Refuted** | The finding is wrong | Dispute it in a `@claude #update-review` mention, with evidence. The model concedes cleanly or explains why it's holding |
+| **Deferred** | Real, but out of scope here | File an issue and link it in the PR thread |
+| **Accepted** | Shipping as-is on purpose | Say why, in the PR. An accepted blocker that nobody explained reads as an oversight |
+| **Not applicable** | The finding mis-anchored | Say what it actually points at. Several of these in one review usually means the review went stale — refresh it |
+
+This matters past your own PR. After a PR closes, `scrape-review-outcomes.py` derives what happened to each finding and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned. A finding you fixed but never refreshed scrapes as ignored; a finding you disagreed with but never disputed scrapes as ignored too. Both push the pipeline toward flagging *more*, not less.
+
+Working the list by hand is fine. If you'd rather not, **`/address-review`** does it with you: it watches for the review to land, enumerates every item — inline style suggestions included — into one checklist, walks them a finding at a time with a proposed fix for each, batches the fixes into a single push, and writes the `#update-review` mention. It won't call the PR done while anything is undecided. The same check standalone:
+
+```bash
+python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> \
+  --state .review-worklist-<N>.json --require-clean
+```
+
 ### Don't fight the pinned comment
 
 The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.

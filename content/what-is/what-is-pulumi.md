@@ -19,7 +19,7 @@ Pulumi treats infrastructure as software: instead of a templating language or a 
 | **Pulumi** | Infrastructure as code platform | Defines, deploys, and manages cloud infrastructure as real code |
 | **Languages** | TypeScript, Python, JavaScript, Go, .NET, Java, YAML, HCL | General-purpose languages plus a declarative option, with full IDE, test, and package support |
 | **Cloud providers** | AWS, Azure, Google Cloud, Kubernetes, 180+ providers | One consistent programming model across every provider |
-| **Pulumi Cloud** | Managed platform layer | State backend, secrets and configuration via Pulumi ESC, policy as code, Pulumi Insights, and Neo (Pulumi's AI infrastructure agent) |
+| **Pulumi Cloud** | Managed platform layer | State backend, secrets and configuration via Pulumi ESC, policy as code, Pulumi Discovery, and Neo (Pulumi's AI infrastructure agent) |
 | **Competitors** | Terraform, OpenTofu, AWS CloudFormation, AWS CDK, Crossplane | Pulumi differs by using general-purpose languages instead of a DSL or fixed templates |
 
 ## The evolution of infrastructure management
@@ -222,7 +222,7 @@ Pulumi's CLI, SDKs, and providers are free and open source. Pulumi Cloud, the ma
 
 ### What is Pulumi Cloud?
 
-Pulumi Cloud is the managed platform layer that sits on top of Pulumi's open source engine. It provides state storage, Pulumi ESC for secrets and configuration, policy as code, Pulumi Insights for cloud estate visibility, and Neo, an AI infrastructure agent — the collaboration and governance capabilities teams need once more than one person touches the same infrastructure.
+Pulumi Cloud is the managed platform layer that sits on top of Pulumi's open-source engine. It provides state storage, Pulumi ESC for secrets and configuration, policy as code, Pulumi Discovery for cloud estate visibility, and Neo, an AI infrastructure agent — the collaboration and governance capabilities teams need once more than one person touches the same infrastructure.
 
 ## Learn more
 

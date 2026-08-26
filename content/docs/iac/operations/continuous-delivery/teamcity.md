@@ -40,9 +40,9 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
-Store the token outside of source control. Add it as a [build parameter](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) of type **Password** named `env.PULUMI_ACCESS_TOKEN` so TeamCity keeps the value encrypted and masks it in build logs. Define it on a parent project to reuse it across every build configuration underneath. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Store the token outside of source control. Add it as a [build parameter](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) of type **Password** named `env.PULUMI_ACCESS_TOKEN` so TeamCity keeps the value encrypted and masks it in build logs. Define it on a parent project to reuse it across every build configuration underneath. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places.
 
@@ -127,6 +127,6 @@ A clean build agent starts with an empty plugin cache, so Pulumi re-downloads it
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
+- [OIDC Issuers](/docs/administration/guides/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your Git host for pull request reporting.

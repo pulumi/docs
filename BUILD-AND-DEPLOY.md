@@ -1224,7 +1224,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Tests:** Runs `make test` on ~425 example programs across:
 
-- Languages: TypeScript, Python, Go, C#, Java, YAML
+- Languages: TypeScript, Python, Go, .NET, Java, YAML
 - Clouds: AWS, GCP, Azure, Kubernetes
 - Scenarios: Simple deployments, complex architectures
 
@@ -4007,7 +4007,7 @@ Complete reference of all build and deployment scripts.
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |
 | **ONLY_TEST** | Test single program | `aws-s3-typescript` | User |
-| **GOGC** | Go GC tuning | `3` | Workflow |
+| **GOMEMLIMIT** | Go soft memory ceiling for Hugo (CI only) | `12GiB` | build-site.sh |
 
 ### AWS Resource Naming Conventions
 

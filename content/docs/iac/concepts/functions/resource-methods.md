@@ -50,7 +50,8 @@ func (r *Cluster) GetKubeconfig(ctx *Context, args *ClusterGetKubeconfigArgs) (p
 ```python
 def get_kubeconfig(self,
                    profile_name: Optional[pulumi.Input[str]] = None,
-                   role_arn: Optional[pulumi.Input[str]] = None) -> Output[str]
+                   role_arn: Optional[pulumi.Input[str]] = None) -> Output[str]:
+    ...
 ```
 
 </pulumi-choosable>

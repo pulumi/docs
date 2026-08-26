@@ -114,5 +114,5 @@ If you want to learn more about Pulumi and the AWS Static Website component, her
 * If you want to learn about other Pulumi components, the [registry](/registry/) page catalogs them all.
 * If you want to view more examples of how to use Pulumi, go to the Pulumi [examples](https://github.com/pulumi/examples) repo.
 * If you want to delve deeper into Pulumi, the [Getting Started](/docs/get-started/) guide is a good first step.
-* If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/concepts/) page.
+* If you’re interested in learning more about Pulumi concepts, try the [Concepts](/docs/iac/concepts/) page.
 * If you want to learn more about Angular, see their [Getting Started](https://angular.io/start) docs.

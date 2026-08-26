@@ -21,6 +21,10 @@ aliases:
 
 Pulumi Cloud integrates with GitLab to post merge request previews, deploy infrastructure on push, create ephemeral review stacks, and report commit statuses. Once configured, the integration automatically registers webhooks on your GitLab group and manages authentication for you.
 
+{{% notes type="info" %}}
+This page covers the GitLab deployments integration. Backing a Pulumi organization's *membership* with a GitLab group is a separate feature. See [Identity providers](/docs/administration/concepts/identity-providers/#gitlab).
+{{% /notes %}}
+
 ## Installation and configuration
 
 {{% notes type="info" %}}
@@ -128,7 +132,7 @@ The Pulumi GitLab integration posts results back to GitLab regardless of which C
 
 ## OIDC authentication
 
-Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) for configuration details.
+Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/guides/oidc-issuers/gitlab/) for configuration details.
 
 ## Template sources
 
@@ -155,3 +159,9 @@ If deployments aren't triggering on push or merge request events:
 1. Verify deployment settings are enabled under **Stack** > **Settings** > **Deploy**.
 1. Check that the branch matches your configured deployment branch.
 1. If using path filters, confirm that the changed files match your glob patterns.
+
+## Learn more
+
+- [Identity providers](/docs/administration/concepts/identity-providers/#gitlab) — backing your Pulumi organization's membership with a GitLab group.
+- [Pulumi Deployments](/docs/deployments/concepts/) — the deployment engine this integration triggers.
+- [Version control integrations](/docs/integrations/version-control/) — the same capabilities on GitHub, Bitbucket, and Azure DevOps.

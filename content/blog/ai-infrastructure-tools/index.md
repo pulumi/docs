@@ -62,7 +62,7 @@ The term covers two distinct categories that share almost no vendors.
 
 **AI-powered infrastructure management** is the inverse: AI tools that manage cloud infrastructure. They generate [infrastructure as code](/what-is/what-is-infrastructure-as-code/), run deployments, detect drift, and remediate policy violations. The pitch is that modern infrastructure (multi-cloud, containers, microservices, regulated workloads) has gotten too complex for humans to manage by hand and too varied for scripted automation to keep up with.
 
-Most organizations end up needing both: somewhere to run their ML workloads, and something to keep the rest of the cloud sane.
+Most organizations end up needing both: somewhere to run their ML workloads, and something to keep the rest of the cloud sane. For the full definition, including the control-plane layer that provisions and governs the rest of the stack, see [what is AI infrastructure](/what-is/what-is-ai-infrastructure/).
 
 ## Part 1: Tools for building AI infrastructure
 
