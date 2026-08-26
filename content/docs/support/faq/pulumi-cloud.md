@@ -111,17 +111,17 @@ For detailed steps, see [Deleting an organization](/docs/administration/concepts
 
 ### How do I link an existing Pulumi account to my company's organization?
 
-To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
+Your account needs the identity that backs your company's organization. How you get it depends on the kind of identity provider the organization uses.
 
-If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com/signin) and connect that identity provider, then accept the organization invite.
+For **GitHub, GitLab, and Atlassian (Bitbucket)**, connect the identity to your existing account: navigate to your profile in [Pulumi Cloud](https://app.pulumi.com/signin), connect that identity provider, then accept the organization invite.
 
-If this fails, delete your account, then accept the organization invite.
+You don't have to sign in to Pulumi Cloud with that provider. Signing in with email is fine. What matters is that the identity is connected to your account, and that it belongs to the GitHub organization, GitLab group, or Bitbucket workspace backing the Pulumi organization.
 
-{{% notes type="warning" %}}
-Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
-{{% /notes %}}
+For **SAML/SSO**, authenticating through the identity provider is what establishes the identity, so you do have to complete a single sign-on. Start it from your existing account rather than signing in to the organization directly, which can produce an "Email already in use" error. See [Connect SAML SSO to an existing account](/docs/administration/guides/saml/#connect-saml-sso-to-an-existing-account).
 
-For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization).
+If your account offers no way to connect an identity provider, see [If the identity options aren't there](/docs/administration/concepts/accounts/#identity-options-missing).
+
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization) and [Identity providers](/docs/administration/concepts/identity-providers/).
 
 ## Account
 
@@ -131,7 +131,7 @@ You can delete your personal account from your account settings in [Pulumi Cloud
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [Deleting your account](/docs/administration/concepts/organizations/#deleting-your-account).
+For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 ## Pricing
 

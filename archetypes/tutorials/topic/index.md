@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-title_tag: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" " " | humanize }}"
+title_tag: "{{ replace .Name "-" " " | humanize }}"
 layout: topic
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.

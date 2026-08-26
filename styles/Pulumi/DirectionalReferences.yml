@@ -1,5 +1,5 @@
 extends: existence
-message: "Directional reference ('%s') -- link directly to the target (an `#anchor` or relative path) rather than relying on 'above'/'below' (STYLE-GUIDE.md §Inclusive Language)."
+message: "Directional reference ('%s') -- link directly to the target (an `#anchor` or relative path) rather than relying on 'above'/'below' (brand guide: writing style)."
 level: warning
 ignorecase: true
 nonword: false

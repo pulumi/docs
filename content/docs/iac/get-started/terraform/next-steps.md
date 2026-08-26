@@ -355,7 +355,7 @@ Reach out to us via these support channels:
 
 * **[Pulumi Community Slack](https://slack.pulumi.com/)**: Real-time community support
 * **[GitHub Issues](https://github.com/pulumi/pulumi/issues)**: Bug reports and feature requests
-* **[Pulumi Support](https://support.pulumi.com/)**: Professional support for Pulumi Cloud customers
+* **[Pulumi Support](/support/new/)**: Professional support for Pulumi Cloud customers
 
 ### Open source contributions
 

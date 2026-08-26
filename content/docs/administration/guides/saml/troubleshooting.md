@@ -16,7 +16,7 @@ aliases:
 
 ## Locked out of your organization
 
-If you are locked out of your Pulumi organization due to a SAML configuration error or an expired certificate, a [SAML admin](/docs/administration/guides/saml/saml-admin/) can log in using an alternative login method to resolve the issue. If your organization does not have a SAML admin configured, [contact support](https://support.pulumi.com/).
+If you are locked out of your Pulumi organization due to a SAML configuration error or an expired certificate, a [SAML admin](/docs/administration/guides/saml/saml-admin/) can log in using an alternative login method to resolve the issue. If your organization does not have a SAML admin configured, [contact support](/support/new/).
 
 ## Validation error while trying to save an IdP-provided metadata XML in Pulumi Cloud
 

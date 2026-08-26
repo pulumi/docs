@@ -226,3 +226,9 @@ assets/images/generated/
 # Written to the repo root (prettier resolves --ignore-path patterns relative to
 # the ignore file's own directory) and removed when the run exits.
 /.prettierignore.union
+
+# Compiled output for the theme unit tests (see theme/tsconfig.test.json).
+/theme/bin-test/
+
+# Playwright MCP session artifacts (browser snapshots written into the repo root).
+.playwright-mcp/
