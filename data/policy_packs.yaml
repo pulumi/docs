@@ -281,9 +281,17 @@ undocumented:
       the integration guide, not a policy listing. Stays hand-maintained.
 
 # Packs the org holds that are NOT products, and so never appear in the registry listing
-# with source: "pulumi". Verified against the live listing on 2026-08-25: all 12 come back
-# source: "private". Recorded only so an audit that diffs the repo against the org does
-# not re-add them; the check already keeps them out.
+# with source: "pulumi". Verified against the live listing on 2026-08-25, which returned 13
+# packs as source: "private" -- cis-kubernetes-gcp plus the 12 named further down.
+# hitrust-awsnative is the exception: it is no longer in the org at all. Recorded only so
+# an audit that diffs the repo against the org does not re-add them; the check already
+# keeps them out.
+#   cis-kubernetes-gcp              The name policy-packs-internal publishes under, and the
+#                                   plausible-looking half of the pair -- but never a
+#                                   product. Document `cis-kubernetes-google-cloud`
+#                                   instead; see the cis-kubernetes section above.
+#                                   @danbiwer is renaming upstream, after which this name
+#                                   stops being published at all.
 #   hitrust-awsnative               Built here and resolvable through
 #                                   /api/orgs/pulumi/policypacks, but never a product: it
 #                                   was published privately to the org. Removed on

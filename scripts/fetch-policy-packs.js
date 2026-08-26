@@ -251,10 +251,6 @@ function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProduc
         );
     }
 
-    // ...and the other way round: a pack we publish as a product but do not document is
-    // the same failure this PR was opened to fix, just pointing the other way. Anything
-    // the registry calls a product needs either an entry above or a line in
-    // `undocumented:` saying why not.
     // A pack that loses product status leaves a permanent, invisible exemption behind --
     // which is how hitrust-awsnative survived as long as it did. Harmless but stale, so
     // this says something rather than throwing.
@@ -266,6 +262,10 @@ function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProduc
         );
     }
 
+    // ...and the other way round: a pack we publish as a product but do not document is
+    // the same failure this check exists to catch, just pointing the other way. Anything
+    // the registry calls a product needs either an entry above or a line in
+    // `undocumented:` saying why not.
     const accountedFor = new Set([...packs, ...undocumented.map((e) => e.pack)]);
     const undocumentedProducts = [...products].filter((p) => !accountedFor.has(p));
     if (undocumentedProducts.length) {
