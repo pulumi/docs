@@ -117,6 +117,16 @@ sections:
         mirrors: Second-person imperative over narrative "we".
       - rule: Pulumi.BannedWords
         mirrors: Inclusive-language avoid list.
+      - rule: Pulumi.CommandBackticks
+        mirrors: >-
+          "Text formatting" — CLI commands are set in code font. The token list
+          (which commands to look for) is repo-owned; only the formatting rule
+          itself comes from the guide.
+      - rule: Pulumi.Spelling
+        mirrors: >-
+          American English spelling. The Hunspell dictionary and
+          ignore/tech-vocabulary.txt are repo-owned; the guide supplies only
+          the American-English standard the rule enforces.
 
   # get_guidelines({section: "voice"}) / brand.pulumi.com/voice/voice-and-tone/
   voice:

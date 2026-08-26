@@ -94,3 +94,9 @@ blocker:
 #   Pulumi.NarrativeWe            - imperative rewrite is editorial (let's create -> create), not a swap.
 #   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /
 #   Pulumi.EmDashDensity / Pulumi.Repetition - AI-prose heuristics; inherently judgment/rewrite.
+#   Pulumi.Spelling               - Hunspell flags the word but proposes nothing, and the right fix is
+#                                   often to ADD the term to styles/Pulumi/ignore/tech-vocabulary.txt
+#                                   rather than change the prose. Advisory while the vocabulary settles.
+#   Pulumi.Overcapitalization     - "Stack"->"stack" looks mechanical but the same word is a legitimate
+#                                   proper noun inside a console page name (the Stacks view), which the
+#                                   rule can't see.
