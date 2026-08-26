@@ -63,7 +63,7 @@ The change takes effect immediately and is recorded in your [audit logs](/docs/a
 A given GitHub organization, GitLab group, or Bitbucket workspace can back only one Pulumi organization. If it already backs another one, Pulumi rejects the change.
 {{% /notes %}}
 
-The **Membership Requirements** section does not appear for individual accounts or for legacy per-stack organizations, because membership works differently for those.
+The **Membership Requirements** section does not appear for individual organizations or for legacy per-stack organizations, because membership works differently for those.
 
 ## GitHub
 

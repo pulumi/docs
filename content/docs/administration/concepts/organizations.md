@@ -87,7 +87,7 @@ Pulumi organization administrators can monitor current organization members and 
 
 ## Switching between organizations
 
-The organization menu displays your individual account and all of the organizations you belong.
+The organization menu displays your individual organization and all of the organizations you belong to.
 
 To switch to a different organization:
 
@@ -124,7 +124,7 @@ If you need a legal entity name on invoices that is different from your organiza
 
 ## Transferring stacks
 
-Stack admins can transfer individual stacks between personal accounts and organizations, or between organizations. Organization admins can transfer stacks in bulk.
+Stack admins can transfer stacks one at a time between their individual organization and a shared organization, or between shared organizations. Organization admins can transfer stacks in bulk.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 
@@ -132,7 +132,7 @@ To transfer an individual stack:
 
 1. Navigate to the stack and then the stack's **Settings**.
 1. Select **Transfer stack**.
-1. Provide the destination personal account or organization name and select **Transfer**.
+1. Provide the destination organization name and select **Transfer**.
 
 To transfer stacks in bulk:
 
@@ -164,17 +164,9 @@ To delete an organization:
 1. Navigate to **Settings**.
 1. Select **Delete organization**.
 
-Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
+Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization.
 
 For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
-
-## Deleting your account
-
-You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
-
-Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
-
-For more information, see [How can I delete my Pulumi account?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-my-pulumi-account)
 
 ## Organization identity providers
 
