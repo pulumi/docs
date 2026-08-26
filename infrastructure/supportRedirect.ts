@@ -78,7 +78,9 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     targetOriginId: "unused-placeholder",
                     // allow-all so plain-HTTP requests get one 301 to the HTTPS target, not an https:// hop first.
                     viewerProtocolPolicy: "allow-all",
-                    allowedMethods: ["GET", "HEAD", "OPTIONS"],
+                    // CloudFront enforces allowedMethods before the viewer-request function runs, and this is its
+                    // only POST-capable set — anything narrower 403s non-GET requests instead of redirecting them.
+                    allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
                     cachedMethods: ["GET", "HEAD"],
                     // AWS-managed CachingDisabled policy — the function generates every response.
                     cachePolicyId: "4135ea2d-6df8-44a3-b632-99711092ca9d",
