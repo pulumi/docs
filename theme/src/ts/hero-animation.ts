@@ -508,7 +508,7 @@ function init(): void {
         gsap.set(badgeTests, { autoAlpha: 1, y: -CI_ROW_RIDE });
         gsap.set(badgePolicy, { autoAlpha: 1 });
         ciSlots.forEach((slot, i) => gsap.set(slot, { x: slotX[i] + SLOT_REDISTRIBUTE }));
-        gsap.set(ciPr, { autoAlpha: 0 });
+        gsap.set(ciPr, { autoAlpha: 0, scale: 1, transformOrigin: "50% 50%" });
         gsap.set(ciMerge, { autoAlpha: 0 });
         gsap.set(ciSpins, { autoAlpha: 0, scale: 0.6, transformOrigin: "50% 50%" });
         gsap.set(ciChecks, { autoAlpha: 0 });
@@ -689,8 +689,8 @@ function init(): void {
         tl.fromTo(ciChecks[i], { autoAlpha: 0, scale: 0.6, transformOrigin: "50% 50%" }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, at + 0.05);
     });
     const mergedAt = flipsAt + 4 * 0.35 + 0.1;
-    tl.to(ciPr, { autoAlpha: 0, x: CI_PR_REST_X - 10, duration: 0.2, ease: "power2.in" }, mergedAt);
-    tl.fromTo(ciMerge, { autoAlpha: 0, scale: 0.8, transformOrigin: "50% 50%" }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }, mergedAt);
+    tl.to(ciPr, { autoAlpha: 0, scale: 0.6, transformOrigin: "50% 50%", duration: 0.16, ease: "power2.in" }, mergedAt);
+    tl.fromTo(ciMerge, { autoAlpha: 0, scale: 0.5, transformOrigin: "50% 50%" }, { autoAlpha: 1, scale: 1, duration: 0.32, ease: "back.out(1.7)" }, mergedAt + 0.1);
 
     const testsBadgeAt = mergedAt + 0.35;
     tl.to(badgeRects[0], { attr: { "stroke-dashoffset": "0" }, duration: 0.4, ease: "power1.inOut" }, testsBadgeAt);
