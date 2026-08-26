@@ -30,7 +30,7 @@ social:
 
 [Terraform](https://developer.hashicorp.com/terraform/intro) is a proven infrastructure as code tool with a large [provider and module ecosystem](https://registry.terraform.io/). Many teams choose Pulumi when they want to keep that infrastructure as code model, but write and maintain infrastructure with general-purpose programming languages, familiar package managers, IDEs, [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and software engineering patterns, while still understanding the refactoring tradeoffs in Terraform's own [module refactoring guidance](https://developer.hashicorp.com/terraform/language/modules/develop/refactoring).
 
-Why choose Pulumi over Terraform? Pulumi's [language SDKs](https://www.pulumi.com/docs/iac/languages-sdks/) let teams define cloud infrastructure in TypeScript, JavaScript, Python, Go, .NET, or Java — with YAML and HCL also supported as authoring languages — while adding first-class workflows for refactoring with [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/), [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/), [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/options/deletebeforereplace/), [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/), [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [Pulumi stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and incremental migration with [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/). Pulumi does not remove every hard problem in cloud infrastructure, but it gives teams stronger tools for many day-to-day pain points.
+Why choose Pulumi over Terraform? Pulumi's [language SDKs](https://www.pulumi.com/docs/iac/languages-sdks/) let teams define cloud infrastructure in TypeScript, JavaScript, Python, Go, .NET, or Java — with YAML and HCL also supported as authoring languages — while adding first-class workflows for refactoring with [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/resources/options/aliases/), [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/), [protect](https://www.pulumi.com/docs/iac/concepts/resources/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/resources/options/deletebeforereplace/), [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/resources/options/replaceonchanges/), [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [Pulumi stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and incremental migration with [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/). Pulumi does not remove every hard problem in cloud infrastructure, but it gives teams stronger tools for many day-to-day pain points.
 
 <!--more-->
 
@@ -43,9 +43,9 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Need | Terraform pattern | Pulumi advantage | What still needs care |
 | --- | --- | --- | --- |
 | Languages and tooling | HCL plus Terraform-specific functions and expressions | Pulumi supports general-purpose languages, YAML, and now [HCL](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) natively, with the normal IDE, test, and package workflows for each | Teams still need code review and shared conventions |
-| Refactoring | Moved blocks or state commands for resource identity changes | [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/) can map old resource identities to new ones during refactors | Aliases must model the old identity correctly |
+| Refactoring | Moved blocks or state commands for resource identity changes | [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/resources/options/aliases/) can map old resource identities to new ones during refactors | Aliases must model the old identity correctly |
 | Secrets | Sensitive values can still require careful state and plan handling | Pulumi tracks [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/) and encrypts secret values in state | Secrets are still available to code at runtime |
-| Lifecycle safety | Lifecycle meta-arguments and plan review | Pulumi resource options such as [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/options/deletebeforereplace/), and [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/) make intent explicit | Provider behavior and replacement semantics still matter |
+| Lifecycle safety | Lifecycle meta-arguments and plan review | Pulumi resource options such as [protect](https://www.pulumi.com/docs/iac/concepts/resources/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/resources/options/deletebeforereplace/), and [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/resources/options/replaceonchanges/) make intent explicit | Provider behavior and replacement semantics still matter |
 | Environments | Workspaces or separate configurations | [Pulumi stacks](https://www.pulumi.com/docs/iac/concepts/stacks/) model environments with per-stack config, secrets, history, and outputs | Stack boundaries still need thoughtful design |
 | Code reuse | Modules and HCL composition patterns | Pulumi components and packages use normal language abstractions | Over-abstracted components can become hard to use |
 | Imports and migration | Import blocks, generated config, and state operations | [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
@@ -103,7 +103,7 @@ const queue = new aws.sqs.Queue("app-jobs", {
 });
 ```
 
-[Aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/) are not a substitute for review. They work when the old identity is modeled correctly, including details such as name, parent, type, project, and stack when those changed.
+[Aliases](https://www.pulumi.com/docs/iac/concepts/resources/options/aliases/) are not a substitute for review. They work when the old identity is modeled correctly, including details such as name, parent, type, project, and stack when those changed.
 
 ## Handle secrets with encrypted configuration and secret outputs
 
@@ -140,7 +140,7 @@ const database = new aws.rds.Instance("orders-db", {
 });
 ```
 
-These controls are guardrails, not guarantees. Provider bugs, cloud API eventual consistency, and replacement behavior still require preview review and operational judgment. [`replaceOnChanges`](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/) applies to custom resources only, not component resources.
+These controls are guardrails, not guarantees. Provider bugs, cloud API eventual consistency, and replacement behavior still require preview review and operational judgment. [`replaceOnChanges`](https://www.pulumi.com/docs/iac/concepts/resources/options/replaceonchanges/) applies to custom resources only, not component resources.
 
 ## Model environments with stacks
 
