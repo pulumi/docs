@@ -81,11 +81,6 @@ module.exports = {
                 return 890;
             }
 
-            // Then using.
-            if (page.href.startsWith("/docs/using-pulumi/")) {
-                return 880;
-            }
-
             // Top-level pages again rank highest.
             if (page.kind === "section") {
                 return 870
