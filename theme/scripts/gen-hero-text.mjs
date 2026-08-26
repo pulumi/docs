@@ -74,37 +74,54 @@ function normalizeColor(color) {
 function toRuns(highlighter, code, lang, palette) {
     const { tokens } = highlighter.codeToTokens(code, { lang, theme: "min-light" });
     const lines = tokens.map(line => {
-        // Per-character colors, spaces unassigned, trailing whitespace dropped.
         const chars = [];
         for (const token of line) {
             for (const ch of token.content) {
                 chars.push({ ch, color: ch === " " ? null : normalizeColor(token.color) });
             }
         }
-        while (chars.length && chars[chars.length - 1].color === null) {
+        while (chars.length && chars[chars.length - 1].ch === " ") {
             chars.pop();
         }
-        // Spaces join the run that follows them, matching the hand-authored
-        // leading-pad style the renderer has always consumed.
-        for (let i = chars.length - 1; i >= 0; i--) {
-            if (chars[i].color === null) {
-                chars[i].color = chars[i + 1] ? chars[i + 1].color : null;
-            }
-        }
+        // Segments are [colorKey, startColumn, text] and never begin with a
+        // space or contain runs of 2+ spaces: hugo --minify collapses
+        // whitespace inside the tspans, so indentation and column alignment
+        // must live in explicit column offsets, with only single interior
+        // spaces (which the minifier preserves) inside a segment.
         const runs = [];
-        for (const c of chars) {
-            let key = COLOR_KEYS[c.color];
+        let i = 0;
+        while (i < chars.length) {
+            if (chars[i].ch === " ") {
+                i++;
+                continue;
+            }
+            const color = chars[i].color;
+            const start = i;
+            let text = "";
+            let j = i;
+            while (j < chars.length) {
+                const c = chars[j];
+                if (c.ch !== " ") {
+                    if (c.color !== color) {
+                        break;
+                    }
+                    text += c.ch;
+                    j++;
+                } else if (j + 1 < chars.length && chars[j + 1].ch !== " " && chars[j + 1].color === color) {
+                    text += " ";
+                    j++;
+                } else {
+                    break;
+                }
+            }
+            let key = COLOR_KEYS[color];
             if (!key) {
-                key = "c" + c.color.slice(1);
-                COLOR_KEYS[c.color] = key;
+                key = "c" + color.slice(1);
+                COLOR_KEYS[color] = key;
             }
-            palette[key] = c.color;
-            const last = runs[runs.length - 1];
-            if (last && last[0] === key) {
-                last[1] += c.ch;
-            } else {
-                runs.push([key, c.ch]);
-            }
+            palette[key] = color;
+            runs.push([key, start, text]);
+            i = j;
         }
         return runs;
     });
@@ -121,9 +138,9 @@ function yamlLines(lines, indent) {
             buf.push(`${indent}- []`);
             continue;
         }
-        buf.push(`${indent}- - [${line[0][0]}, ${JSON.stringify(line[0][1])}]`);
+        buf.push(`${indent}- - [${line[0][0]}, ${line[0][1]}, ${JSON.stringify(line[0][2])}]`);
         for (const item of line.slice(1)) {
-            buf.push(`${indent}  - [${item[0]}, ${JSON.stringify(item[1])}]`);
+            buf.push(`${indent}  - [${item[0]}, ${item[1]}, ${JSON.stringify(item[2])}]`);
         }
     }
     return buf.join("\n");
