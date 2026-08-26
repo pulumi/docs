@@ -90,7 +90,7 @@ SAML single sign-on is configured by an organization admin, not by individual us
 
 You can associate your Pulumi account with more than one identity. In addition to the one you signed up with, you can connect GitHub, GitLab, Google, Atlassian, and SAML SSO identities, and disconnect them again later.
 
-Connecting an additional identity is what lets you join organizations backed by that system. To be invited to an organization, your account must be linked to the organization's backing identity provider — only then do you appear in the list of users an organization admin can invite. Connecting an identity doesn't add you to the organizations that identity backs: an organization admin still has to invite or add you. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
+Connecting an additional identity is what lets you join organizations backed by that system. To be invited to an organization, your account must be linked to the organization's backing identity provider — only then do you appear in the list of users an organization admin can invite. Connecting the identity doesn't add you to those organizations by itself; an organization admin still has to invite or add you. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
 
 To connect an identity:
 
