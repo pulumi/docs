@@ -51,7 +51,7 @@ function formHtml(extraPriorities: string[] = []): string {
           <p id="support-description-error" hidden></p>
           <div class="sr-only" aria-hidden="true">
             <label for="support-leave-blank">Leave this field empty</label>
-            <input id="support-leave-blank" name="leave_blank" type="text" tabindex="-1">
+            <input id="support-leave-blank" name="leave_blank" type="text" tabindex="-1" autocomplete="off">
           </div>
           <div role="alert" data-support-form-banner hidden></div>
           <button type="submit" data-support-form-submit data-label="Submit" data-busy-label="Submitting…"></button>
@@ -497,6 +497,9 @@ test("the rendered layout still provides every id the module depends on", () => 
     assert.ok(
         /id="support-leave-blank"[^>]*name="leave_blank"/.test(layout),
         "the honeypot must keep a name with no autofill semantics");
+    assert.ok(
+        /id="support-leave-blank"[^>]*autocomplete="off"/.test(layout),
+        "the honeypot must opt out of autofill — the other half of the same mitigation");
 });
 
 // --- The client half of the honeypot -------------------------------------
@@ -721,6 +724,34 @@ test("keeps the honeypot on a name autofill will not recognise", () => {
     const honeypot = h.control("leave-blank");
     assert.ok(honeypot, "the honeypot must exist");
     assert.strictEqual(honeypot.name, "leave_blank");
-    assert.strictEqual(honeypot.getAttribute("autocomplete"), null, "the fixture mirrors the layout's own attributes");
+    assert.strictEqual(honeypot.getAttribute("autocomplete"), "off", "the honeypot opts out of autofill");
     assert.strictEqual(h.doc.getElementById("support-website"), null, "the autofill-prone name must be gone");
+});
+
+test("validates the same string it posts, not the raw control value", async () => {
+    // A value at the limit padded with a character the sanitizer strips. Reading
+    // the raw value made the client stricter than the API here (blocked at 201
+    // for a string the server would have measured as 200) and looser on the
+    // minimum, which is the round trip the mirroring exists to save.
+    const h = mount();
+    fillValid(h);
+    const subject = h.control("subject");
+    subject.value = "a".repeat(200) + "\u0000";
+    subject.dispatchEvent(new h.win.Event("input", { bubbles: true }));
+    await h.submit();
+
+    assert.strictEqual(h.errorText("subject"), "", "a value that sanitizes to the limit must be accepted");
+    assert.strictEqual(h.fetchCalls.length, 1, "and must actually be posted");
+    assert.strictEqual(h.fetchCalls[0].body.subject.length, 200);
+
+    // The other direction: long enough only because of characters that get stripped.
+    const h2 = mount();
+    fillValid(h2);
+    const description = h2.control("description");
+    description.value = "abcdefg" + "\u0000".repeat(5);
+    description.dispatchEvent(new h2.win.Event("input", { bubbles: true }));
+    await h2.submit();
+
+    assert.ok(h2.errorText("description"), "a description only long enough before sanitizing must be caught here");
+    assert.strictEqual(h2.fetchCalls.length, 0, "and must not cost a round trip");
 });

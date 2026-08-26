@@ -235,7 +235,14 @@ function init() {
         if (!input) {
             return true;
         }
-        const message = validators[field](input.value.trim());
+        // Sanitized first, so this measures the same string buildPayload posts
+        // and the server measures. Validating the raw value made every length
+        // check disagree with the payload in both directions: a 201-character
+        // subject containing one stripped character was blocked here but would
+        // have been accepted, and a 12-character description with 5 stripped
+        // characters passed here and came back a 422 for a rule this module
+        // exists to mirror.
+        const message = validators[field](sanitizeText(input.value).trim());
         if (message) {
             setError(field, message);
             return false;
