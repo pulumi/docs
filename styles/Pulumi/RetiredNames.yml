@@ -1,0 +1,93 @@
+# Retired product names that were RENAMED — the old name is retired, and the
+# brand guide's "Retired and disallowed names" table gives the new one.
+#
+# BLOCKING (`level: error`, and on the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml): shipping
+# a retired product name is a correctness error, not a style preference.
+#
+# It blocks even though the replacement this rule names isn't always the right
+# one, because those are separate questions. `blocker` asks whether the finding
+# may ship. `deterministic_fix` asks whether the reviewer must author the
+# correction. The two lists are independent by design -- PoliciesSingular
+# blocks with a fix that needs conjugating, DeprecatedProductNames blocks with
+# no fix at all.
+#
+# What this rule is still separate from Substitutions.yml FOR is the message.
+# The brand guide's preamble carves out two cases a blanket swap gets wrong,
+# and both occur in this repo, so the finding tells the reader to check rather
+# than to apply:
+#
+#   1. "Historical usage is fine. Prose that intentionally describes past
+#      behavior ... is acceptable." content/case-studies/unity.md says "Pulumi
+#      Neo is our AI platform engineer, replacing Pulumi Copilot with expanded
+#      capabilities" — applying the swap produces "Neo ... replacing Neo". The
+#      same page carries a heading anchor `{#copilot}` a rename would break.
+#   2. "Some replacements can't be automated." "Insights" resolves to the
+#      Discovery *product* in most sentences but to the "Discovery &
+#      governance" *category* in others (its own row in the brand table), and
+#      the docs IA still lives under /docs/insights/.
+#
+# Neither case needs the rule demoted. A 🚨 finding is "resolve or refute", so
+# the historical-prose author refutes it in one line; and review-existing-
+# content applies the swap only after confirming it preserves meaning, which is
+# what keeps the automated lane from writing "Neo replacing Neo". Demoting it
+# would instead expose a dead brand name to the per-file advisory cap, which
+# drops findings silently -- blockers bypass both caps.
+#
+# Outstanding content migrations are tracked in pulumi/docs#21133; that backlog
+# is a migration question, not a tiering one, because the PR review is
+# diff-scoped (vale-findings-filter.py --pr intersects findings with the lines
+# a diff added), so a blocker only ever fires on a line an author writes today.
+extends: substitution
+message: 'Use ''%s'' — ''%s'' is a retired name. Confirm the replacement fits this sentence; historical prose ("X replaced Y") and heading anchors are legitimate exceptions.'
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
+level: error
+ignorecase: true
+action:
+  name: replace
+swap:
+  '\bPulumi CrossGuard\b': Pulumi Policies
+  '\bCrossGuard\b': Pulumi Policies
+  '\bPulumi Copilot\b': Pulumi Neo
+  '\bPulumi Insights\b': Pulumi Discovery
+  '\bInsights account\b': cloud account
+  '\bInsights accounts\b': cloud accounts
+  '\bInsights scan\b': Discovery scan
+  '\bInsights scans\b': Discovery scans
+  '\bInsights supergraph\b': resource graph
+  '\bInsights resource\b': discovered resource
+  '\bInsights resources\b': discovered resources
+  '(?-i)\bPolicy Violation\b': policy finding
+  '(?-i)\bPolicy Violations\b': policy findings
+  # Category label, not a product name. Every row below is pinned case-sensitive
+  # with (?-i), for two distinct reasons: some collide with the CORRECT spelling
+  # (`Discovery & Governance` vs `Discovery & governance`), and the rest collide
+  # with ordinary lowercase English -- "View account discovery progress" is the
+  # act of discovering accounts, and "insights and policy compliance data" is a
+  # plain noun phrase. Both were live false positives under ignorecase.
+  '\bInsights & Governance\b': Discovery & governance
+  '(?-i)\bInsights and Policy\b': Discovery & governance
+  '\bInsights 2\.0\b': Discovery & governance
+  '(?-i)\bDiscovery & Governance\b': Discovery & governance
+  # The brand table also retires "Discovery and governance", but that string is
+  # indistinguishable from legitimate prose -- "Pulumi Discovery and governance
+  # work together" is the product plus the concept, not the category label, and
+  # no regex separates the two. Left unmirrored per the tier-4 rule in
+  # BRAND-SYNC.yaml; the ampersand form above is unambiguous and is mirrored.
+  # The console row of the brand table (Pulumi Console / Pulumi Cloud Console /
+  # Pulumi UI) is already mirrored in Nomenclature.yml, which is also a blocker.
+  # Do not add it here too: both rules carry `action: replace`, so a duplicate
+  # would offer the author two one-click fixes with different replacements on
+  # the same span.
+  #
+  # "Policy as Code" is deliberately absent. The brand table retires it only as
+  # a PRODUCT name -- "policy as code" the practice is fine -- and case doesn't
+  # separate the two. 169 occurrences across 94 files (113 of them in blog) run
+  # both ways: "Pulumi Policy as Code" (airgapped.md) and "Pulumi's Policy as
+  # Code engine" name the product and SHOULD swap, while "**Policy as Code**
+  # acts as a form of testing" describes the practice and must not. A blocker
+  # that auto-proposes "Pulumi Policies" would be wrong on the majority. Tier 4,
+  # unmirrored -- the model review can still catch the product-name uses.
+  '(?-i)\bInsights Policy\b': Pulumi Policies
+  '(?-i)\bInsights Discovery\b': Discovery
+  '(?-i)\bAccount Discovery\b': Discovery

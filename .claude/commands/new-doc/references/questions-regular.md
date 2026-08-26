@@ -8,18 +8,18 @@ Complete patterns for gathering metadata for regular documentation pages. Ask fo
 
 ## Field 1: Title
 
-Generate Title Case version from the user's description.
+Generate a sentence-case version from the user's description (the brand standard is sentence case at every heading level, the page title included).
 
 ```
 Question: "What should the page title be?"
 Options:
-- "{Suggested Title in Title Case} (Recommended)"
+- "{Suggested title in sentence case} (Recommended)"
 - "Enter a different title"
 ```
 
 **Logic:**
 
-- Convert user's description to Title Case (capitalize major words)
+- Convert user's description to sentence case (capitalize only the first word and proper nouns)
 - Present as recommended option
 - If user selects "Enter different", prompt for text input
 - Store result as `{title}`
@@ -87,6 +87,6 @@ Options:
 - Always provide smart suggestions based on context
 - Make recommended option first choice
 - Validate input when user enters custom values
-- Use Title Case for page titles (Field 1)
+- Use sentence case for page titles (Field 1)
 - Keep meta descriptions concise and descriptive (Field 3)
 - Ensure filenames follow kebab-case convention (Field 4)

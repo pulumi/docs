@@ -1,26 +1,52 @@
-# Flags the deprecated "Pulumi Service" name (the pre-2022 name for Pulumi Cloud).
+# Flags retired product names whose *replacement is context-dependent* — the
+# dead name is always wrong, but a human (or reviewing model) has to pick the
+# right current name for the sentence, so these are existence (flag-only)
+# findings, never auto-substitutions. Retired names whose replacement IS fixed
+# live in one of two sibling files: Substitutions.yml when the replacement is
+# right in every context, and RetiredNames.yml when it's right in most and the
+# message has to hedge (Pulumi Insights -> Pulumi Discovery and CrossGuard ->
+# Pulumi Policies are both in RetiredNames.yml). All three files block; the
+# file a row lives in decides how much its message hedges, not whether the
+# finding may ship.
 #
-# This is an existence rule (flag-only), NOT a substitution: the correct current
-# name is context-dependent. "Pulumi Service" most often resolves to Pulumi
-# Cloud, but in many places it means a more specific product -- e.g. the External
-# Secrets Operator pushes secrets to a *Pulumi ESC environment*, and the "Pulumi
-# Service provider" is now the "Pulumi Cloud provider". An auto-replace would
-# mechanically pick the wrong one, so we surface it for a human to resolve.
+# This is an offline mirror of the "Retired and disallowed names" table in the
+# brand guide's Names & terminology section (the source of truth; see
+# styles/Pulumi/BRAND-SYNC.yaml).
 #
-# Matches "Pulumi Service" / "Pulumi service" / "pulumi service" (ignorecase) but
-# not:
-#   - the plural "Pulumi Services" (the IDP Services concept; "e" to "s" is not
-#     a word boundary, so the base token already excludes this)
-#   - "Pulumi Service Provider" / "Pulumi Service provider", i.e. the
-#     `pulumi-pulumiservice` Terraform/Pulumi provider, which still carries its
-#     historic name upstream (the provider repo, its registry package name
-#     `pulumiservice`, and this site's own provider doc all still say "Pulumi
-#     Service Provider"). Renaming the provider is a product/IA decision with
-#     URL-alias consequences, well outside this lint rule's remit, so the
-#     negative lookahead exempts it rather than flagging false positives.
+# NO LOOKBEHINDS. Vale evaluates a token against a scoped substring, and a
+# negative lookbehind at the start of that window is silently dropped, so the
+# same sentence flags or doesn't depending on how much text precedes it. It is
+# reproducible: with these tokens written as `(?<!VS Code )\bCopilot\b`, the
+# line "GitHub Copilot works well. Microsoft Copilot exists. VS Code Copilot
+# too." is clean under an 8-character H1 and flags "VS Code Copilot" under a
+# 17-character one. Lookaheads are evaluated inside the window and are stable
+# across the same sweep, so `Pulumi Service` below keeps its two.
+#
+# Token notes (case-sensitive, so the generic lowercase words never flag):
+#
+#   - "Pulumi Service": pre-2022 name of Pulumi Cloud, but resolves to a
+#     different product in different sentences (Pulumi Cloud most often; Pulumi
+#     ESC or Pulumi Deployments where the sentence is about secrets or remote
+#     execution). The lookaheads exclude the plural "Pulumi Services" (the IDP
+#     Services concept) and "Pulumi Service provider" — the
+#     `pulumi-pulumiservice` provider still carries its historic name upstream
+#     (registry package id `pulumiservice`), and renaming it is a product/IA
+#     decision with URL-alias consequences, outside this lint rule's remit.
+#   - "IAS": the retired Insights acronym.
+#
+# Intentionally NOT mirrored here (see the brand-vale-sync skill's
+# "intentionally unmirrored" rule): bare "Insights" and bare "Copilot". Both
+# would need a lookbehind to avoid double-flagging the "Pulumi Insights" /
+# "Pulumi Copilot" that RetiredNames.yml already covers, and bare
+# "Copilot" collides with the GitHub, Microsoft, and VS Code products this
+# site legitimately references (content/docs/ai/skills/, the RBAC scope
+# tables). Without a reliable lookbehind there is no safe regex for either, so
+# they stay model-review territory rather than becoming a noisy blocker.
 extends: existence
-message: "'%s' is the former name of Pulumi Cloud. Use the specific current product for this context -- e.g. Pulumi Cloud, Pulumi ESC, or Pulumi Deployments (STYLE-GUIDE.md §Product Names)."
-level: warning
-ignorecase: true
+message: "'%s' is a retired product name. Choose the current name for this context — see the brand guide's Names & terminology page (retired-names table)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
+level: error
+ignorecase: false
 tokens:
-  - '\bPulumi Service\b(?!s\b)(?!\s+provider\b)'
+  - '\bPulumi Service\b(?!s\b)(?!\s+[Pp]rovider\b)'
+  - '\bIAS\b'

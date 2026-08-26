@@ -1,0 +1,137 @@
+# Brand-guide sync manifest for the Vale mirror.
+#
+# Vale runs offline in CI and can't call the brand MCP server, so the rules in
+# this directory are a LOCAL MIRROR of the mechanically enforceable subset of
+# the Pulumi brand guide (brand.pulumi.com — the source of truth). This file
+# records which brand section each mirror rule tracks, so drift is detectable
+# mechanically instead of by folklore.
+#
+# The scheduled brand-style-sync workflow (.github/workflows/brand-style-sync.yml,
+# following .claude/commands/brand-vale-sync/SKILL.md) re-reads each listed
+# brand section through the brand MCP server, compares it against the rule it
+# feeds, and opens a PR when they've drifted — e.g. a newly retired product
+# name that Substitutions/DeprecatedProductNames don't know about yet. After a
+# verified sync (drift fixed, or confirmed none), it updates last_synced.
+#
+# When YOU change one of these rules by hand, ask first whether the change
+# belongs upstream in the brand guide; the mirror never leads, it follows.
+# Rules not listed here (AI-drafting tells, Hugo mechanics like
+# CrossReferenceHeadings and CommandBackticks, repo conventions) are owned by
+# this repo and are not part of the sync.
+
+# Tier rule for a retired name, in the order the sync job should try them:
+# Every retired name blocks -- shipping one is a correctness error. Backlog
+# size is NOT a criterion: the PR review is diff-scoped, so a blocker fires
+# only on a line an author is writing today. What the tiers actually pick is
+# how much the finding's message must hedge:
+#   1. Replacement right in every context -> Substitutions.yml. Message names
+#      the swap outright.
+#   2. Replacement usually right, but the brand guide's carve-outs apply
+#      (historical prose, or a name resolving to more than one current term)
+#      -> RetiredNames.yml. Message asks the reader to confirm it fits.
+#      Outstanding content migrations are tracked in pulumi/docs#21133.
+#   3. No single fixed replacement -> DeprecatedProductNames.yml (flag-only).
+#   4. No safe regex at all -> leave unmirrored and note it below.
+
+# Intentionally unmirrored rows of the "Retired and disallowed names" table,
+# verified against the live brand guide on 2026-08-26. Listed so the sync job
+# stops rediscovering them as drift every week:
+#
+#   - "runtime code" -> "function serialization". The guide itself says
+#     *runtime* has too many unrelated live meanings to swap on sight.
+#   - "Discovery and governance" -> "Discovery & governance". Indistinguishable
+#     from legitimate prose: "Pulumi Discovery and governance work together" is
+#     the product plus the concept, not the category label. The ampersand form
+#     IS mirrored, since it's unambiguous.
+#   - "Policy as Code" -> "Pulumi Policies". Retired only as a PRODUCT name;
+#     "policy as code" the practice is fine, and case doesn't separate them.
+#     169 occurrences across 94 files run both ways -- "Pulumi Policy as Code"
+#     names the product and should swap, "Policy as Code acts as a form of
+#     testing" describes the practice and must not.
+#   - "Pulumi Service provider (PSP)" -> "Pulumi Cloud provider". Excluded by a
+#     lookahead in DeprecatedProductNames; renaming the provider is a product/IA
+#     decision with URL-alias consequences, outside this lint rule's remit.
+#   - bare "Insights" and bare "Copilot". Both need a lookbehind to avoid
+#     double-flagging the "Pulumi Insights"/"Pulumi Copilot" already covered,
+#     and Vale lookbehinds are position-unstable. See DeprecatedProductNames.yml.
+#
+# The console row (Pulumi Console / Pulumi Cloud Console / Pulumi UI) IS
+# mirrored, but in Nomenclature.yml, not RetiredNames.yml. Don't add it to both:
+# both carry `action: replace`, so a duplicate offers two one-click fixes with
+# different replacements on the same span.
+
+last_synced: "2026-08-26"
+
+sections:
+  # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/
+  terminology:
+    rules:
+      - rule: Pulumi.Substitutions
+        mirrors: >-
+          "Retired and disallowed names" rows with a single fixed replacement,
+          plus the package-terminology and lifecycle-stage rows
+          (public beta -> public preview).
+      - rule: Pulumi.RetiredNames
+        mirrors: >-
+          "Retired and disallowed names" rows for RENAMED products, where the
+          brand table names the replacement but the guide's preamble
+          ("historical usage is fine", "some replacements can't be
+          automated") means it can't be applied blindly. Blocker tier, like
+          every other retired-name rule -- the hedge lives in the message,
+          not in whether the finding blocks.
+      - rule: Pulumi.DeprecatedProductNames
+        mirrors: >-
+          "Retired and disallowed names" rows whose replacement a human has to
+          choose (Pulumi Service). Also carries IAS, whose replacement IS fixed
+          (-> Discovery) but which is short, all-caps, and rare enough that
+          flag-only costs nothing; revisit if it ever shows up in volume.
+      - rule: Pulumi.Nomenclature
+        mirrors: >-
+          "Product names" table — canonical casing of every product name.
+      - rule: Pulumi.PoliciesSingular
+        mirrors: >-
+          The "Pulumi Policies is a singular proper noun" rule.
+      - rule: Pulumi.ThirdPartyNames
+        mirrors: >-
+          "General terminology rules" — "match each project's own casing for
+          names like Kubernetes, GitHub, and npm". Non-Pulumi names only;
+          Nomenclature owns the Pulumi product table.
+      - rule: Pulumi.Overcapitalization
+        mirrors: >-
+          "General terminology rules" — don't overcapitalize concepts (stack,
+          environment, token, ...).
+
+  # get_guidelines({section: "writing-style"}) / brand.pulumi.com/voice/writing-style/
+  writing-style:
+    rules:
+      - rule: Pulumi.HeadingSentenceCase
+        mirrors: >-
+          "Headings and titles" — sentence case at every level, H1 included.
+          Front-matter titles are checked through this same rule by
+          scripts/lint/frontmatter-title-case.py. Vale does read front matter
+          -- substitution rules match a title_tag: today -- but this rule is
+          scoped to headings, and front matter isn't parsed as one.
+      - rule: Pulumi.FutureTense
+        mirrors: Present tense for product behavior.
+      - rule: Pulumi.NarrativeWe
+        mirrors: Second-person imperative over narrative "we".
+      - rule: Pulumi.BannedWords
+        mirrors: Inclusive-language avoid list.
+      - rule: Pulumi.CommandBackticks
+        mirrors: >-
+          "Text formatting" — CLI commands are set in code font. The token list
+          (which commands to look for) is repo-owned; only the formatting rule
+          itself comes from the guide.
+      - rule: Pulumi.Spelling
+        mirrors: >-
+          American English spelling. The Hunspell dictionary and
+          ignore/tech-vocabulary.txt are repo-owned; the guide supplies only
+          the American-English standard the rule enforces.
+
+  # get_guidelines({section: "voice"}) / brand.pulumi.com/voice/voice-and-tone/
+  voice:
+    rules:
+      - rule: Pulumi.WordChoice
+        mirrors: '"Words and phrases" prefer/avoid pairs (click -> select, ...).'
+      - rule: Pulumi.Difficulty
+        mirrors: Avoid difficulty qualifiers (easy, simple, just).

@@ -118,7 +118,13 @@ jobs:
           # UNMEASURED job shape: the 2026-08-10 campaign scored re-rendering a
           # pinned review, not open-ended ad-hoc work, so this tracks that
           # decision rather than being justified by it.
-          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+          # The public Pulumi brand MCP server (voice/writing-style/terminology
+          # source of truth) is wired via `claude_args --mcp-config`; its tools
+          # are in --allowed-tools. No auth: the server is public.
+          claude_args: |
+            --model claude-opus-5 --effort medium
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"
 
 env:
   ESC_ACTION_OIDC_AUTH: true

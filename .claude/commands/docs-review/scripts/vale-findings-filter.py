@@ -106,6 +106,9 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.WordChoice": "word choice",
     "Pulumi.Nomenclature": "nomenclature",
     "Pulumi.DeprecatedProductNames": "deprecated product name",
+    "Pulumi.RetiredNames": "retired product name",
+    "Pulumi.ThirdPartyNames": "third-party name",
+    "Pulumi.Spelling": "misspelling",
     "Pulumi.BannedWords": "inclusive language",
     "Pulumi.Difficulty": "difficulty qualifier",
     "Pulumi.PoliciesSingular": "agreement",
@@ -243,12 +246,29 @@ def cap(findings: list[dict]) -> list[dict]:
     Blocker findings bypass both caps -- a blocker silently dropped by a cap
     would understate the 🚨 count. They still count toward neither cap, so a
     file with many blockers doesn't starve its advisory findings.
+
+    Advisory findings are de-duplicated per file on (category, message) before
+    the cap applies, keeping the earliest line. One repeated defect is one
+    thing for the author to fix, and without this a single vocabulary gap eats
+    the whole per-file budget: measured on a real post, `superintelligence`
+    recurred 27 times and took 8 of the 10 advisory slots, silently dropping
+    every heading-case and difficulty-qualifier finding in the file. The
+    surviving bullet still reads correctly for every occurrence, because the
+    message names the term rather than the position.
     """
     blockers = [f for f in findings if f.get("blocker")]
     advisory = [f for f in findings if not f.get("blocker")]
     advisory.sort(key=lambda f: (f["file"], f["line"]))
-    by_file: dict[str, list[dict]] = defaultdict(list)
+    seen: set[tuple[str, str, str]] = set()
+    deduped: list[dict] = []
     for f in advisory:
+        key = (f["file"], f.get("category", ""), f.get("message", ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(f)
+    by_file: dict[str, list[dict]] = defaultdict(list)
+    for f in deduped:
         by_file[f["file"]].append(f)
     capped: list[dict] = []
     for filename in sorted(by_file):

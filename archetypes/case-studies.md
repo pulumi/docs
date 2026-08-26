@@ -5,10 +5,11 @@
 #
 # The slug is the customer name, lowercase and hyphenated.
 
-title_tag: "{{ replace .Name "-" " " | title }} | Case Studies"
+title_tag: "{{ replace .Name "-" " " | humanize }} | Case Studies"
 
 # An outcome-oriented headline, not just the company name (e.g.
-# "Starburst: 112x Deployment Acceleration"). H1 = Title Case.
+# "Starburst: 112x deployment acceleration"). Sentence case, per the
+# brand guide (brand.pulumi.com/voice/writing-style/).
 title: ""
 layout: case-studies
 

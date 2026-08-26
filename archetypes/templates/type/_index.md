@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }} Templates"
+title: "{{ replace .Name "-" " " | humanize }} Templates"
 layout: overview
 meta_desc: Pulumi program templates that make it easy to deploy {{ replace .Name "-" " " }}s on AWS, Azure, or Google Cloud Platform.
 

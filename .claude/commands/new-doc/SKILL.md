@@ -157,7 +157,7 @@ Gather all required metadata using AskUserQuestion with smart suggestions.
 
 **For regular pages**, follow all patterns in `new-doc:references:questions-regular`:
 
-1. Title (with Title Case suggestion)
+1. Title (with sentence-case suggestion)
 2. Title tag (with "| Pulumi Docs" format)
 3. Meta description (50-160 chars validation)
 4. Filename (kebab-case validation)

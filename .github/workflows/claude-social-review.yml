@@ -289,7 +289,13 @@ jobs:
             Use the Write tool. Do not run `gh pr comment`. Your response text is
             discarded — the only output that counts is the `.social-review.md` file.
             Writing it is mandatory, even if every platform passes.
-          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Glob,Grep,Agent,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"'
+          # The public Pulumi brand MCP server (voice/writing-style/terminology
+          # source of truth) is wired via `claude_args --mcp-config`; its tools
+          # are in --allowed-tools. No auth: the server is public.
+          claude_args: |
+            --model claude-sonnet-5
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Glob,Grep,Agent,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"
 
       # The review agent occasionally finishes without writing the file (it puts
       # the review in its response text instead). Degrade to a warning rather

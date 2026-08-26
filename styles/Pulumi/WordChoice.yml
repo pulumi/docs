@@ -1,4 +1,6 @@
-# Word-choice preferences from STYLE-GUIDE.md: the flagged word isn't *wrong*,
+# Word-choice preferences from the brand guide's voice section ("Words and
+# phrases"), which BRAND-SYNC.yaml records as this rule's source: the flagged
+# word isn't *wrong*,
 # the house style just prefers another one ("select" is device-neutral where
 # "click" assumes a mouse). Split out of Substitutions.yml, which holds only
 # terminology-correctness swaps, so the pinned PR review can tier them apart:
@@ -8,7 +10,8 @@
 # Warning, not error: these must still clear MinAlertLevel = warning in
 # .vale.ini to surface as advisory nags at all.
 extends: substitution
-message: "Use '%s' instead of '%s' (STYLE-GUIDE.md)."
+message: "Use '%s' instead of '%s' (brand guide: voice, words and phrases)."
+link: "https://brand.pulumi.com/voice/voice-and-tone/"
 level: warning
 ignorecase: true
 action:
