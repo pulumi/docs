@@ -11,6 +11,7 @@ import { createHighlighter } from "shiki";
 import fs from "fs";
 
 const FILE = new URL("../../data/hero_agent_loop.yaml", import.meta.url).pathname;
+const OUT_FILE = new URL("../../data/hero_agent_loop_generated.yaml", import.meta.url).pathname;
 
 const SHIKI_LANGS = {
     typescript: "ts",
@@ -174,10 +175,16 @@ const terminalRuns = toRuns(highlighter, terminal, "bash", palette);
 
 const colors = ["colors:"].concat(Object.keys(palette).map(key => `  ${key}: "${palette[key]}"${COLOR_NOTES[key] ? " # " + COLOR_NOTES[key] : ""}`)).join("\n");
 
-const cut = src.indexOf("\ncolors:");
-if (cut === -1) {
-    throw new Error(`missing "colors:" section in ${FILE}`);
-}
-const head = src.slice(0, cut + 1);
-fs.writeFileSync(FILE, head + colors + "\n\neditors:\n" + editorSections.join("\n") + "\n\nterminal:\n" + yamlLines(terminalRuns, "  ") + "\n");
-console.log(`wrote ${FILE}: ${Object.keys(sources).length} editors, ${terminalRuns.length} terminal rows, ${Object.keys(palette).length} colors`);
+const HEADER =
+    "# GENERATED FILE — DO NOT EDIT.\n" +
+    "# Written by theme/scripts/gen-hero-text.mjs from the plain-text sources in\n" +
+    "# data/hero_agent_loop.yaml; edit those and run\n" +
+    "#   yarn --cwd theme gen:hero-text\n" +
+    "#\n" +
+    "# Runs are [color, startColumn, text] segments; _code-lines.html positions\n" +
+    "# each from its column offset (Monaspace Neon, 7.44141px advance at\n" +
+    "# font-size 12). Segment text carries no leading or doubled spaces, since\n" +
+    "# the production build's HTML minifier collapses whitespace inside tspans.\n";
+
+fs.writeFileSync(OUT_FILE, HEADER + "\n" + colors + "\n\neditors:\n" + editorSections.join("\n") + "\n\nterminal:\n" + yamlLines(terminalRuns, "  ") + "\n");
+console.log(`wrote ${OUT_FILE}: ${Object.keys(sources).length} editors, ${terminalRuns.length} terminal rows, ${Object.keys(palette).length} colors`);
