@@ -1,7 +1,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ range .Data.Pages }}
-  {{ if not (or .Params.private .Params.block_external_search_index .Params.redirect_to .Params.redirect_url (not (partial "taxonomy-indexable.html" .))) }}
+  {{ if not (or .Params.private .Params.block_external_search_index .Params.redirect_to .Params.redirect_url .Params.sitemap_exclude (not (partial "taxonomy-indexable.html" .))) }}
   {{ $lastmod := .Lastmod }}
   {{ if in (slice "home" "section" "taxonomy" "term") .Kind }}
   {{ range .RegularPagesRecursive }}
