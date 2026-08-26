@@ -64,8 +64,10 @@ const LANG_RING_PAD = { left: 10.5, right: 9.5 };
 // The write beat always takes the same wall time; per-character speed adapts
 // to the chosen language's example. Bursts (blank-line groups in the source)
 // pause for a fixed number of character-units.
-const TYPE_SECONDS = 2.7;
-const TYPE_PAUSE_UNITS = 40;
+const TYPE_SECONDS = 1.5;
+const TYPE_PAUSE_UNITS = 50;
+const TYPE_CHUNK_MIN = 5;
+const TYPE_CHUNK_MAX = 13;
 
 const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 
@@ -323,7 +325,7 @@ function init(): void {
     // Typing state for the active language, rebuilt each pass: per-line
     // character counts plus pause segments between blank-line bursts, mapped
     // onto one 0..1 progress tween.
-    type TypeSegment = { line: number; startU: number; units: number };
+    type TypeSegment = { line: number; startU: number; units: number; chunks: number[] };
     let typeSegments: TypeSegment[] = [];
     let typeTotal = 1;
     let activeEditor: SVGGElement | null = null;
@@ -344,7 +346,15 @@ function init(): void {
                 u += TYPE_PAUSE_UNITS;
             }
             const chars = parseInt(activeLines[i].getAttribute("data-chars") || "0", 10);
-            typeSegments.push({ line: i, startU: u, units: chars });
+            // Text lands in chunks, like tokens streaming, rather than
+            // character by character; boundaries are re-rolled each pass.
+            const chunks: number[] = [];
+            let c = 0;
+            while (c < chars) {
+                c = Math.min(chars, c + TYPE_CHUNK_MIN + Math.floor(Math.random() * (TYPE_CHUNK_MAX - TYPE_CHUNK_MIN + 1)));
+                chunks.push(c);
+            }
+            typeSegments.push({ line: i, startU: u, units: chars, chunks: chunks });
             u += chars;
             prevRow = row;
         }
@@ -363,7 +373,15 @@ function init(): void {
                 caretClip = clip;
                 caretChars = seg.units;
             } else if (u > seg.startU) {
-                const c = Math.floor(u - seg.startU);
+                const raw = u - seg.startU;
+                let c = 0;
+                for (let k = 0; k < seg.chunks.length; k++) {
+                    if (raw >= seg.chunks[k]) {
+                        c = seg.chunks[k];
+                    } else {
+                        break;
+                    }
+                }
                 clip.setAttribute("width", String(c * CW + 2));
                 caretClip = clip;
                 caretChars = c;
@@ -721,10 +739,10 @@ function init(): void {
     const streamAt = unfoldAt + 0.55;
     const aboveFold = termLines.filter(line => parseFloat(line.getAttribute("y") || "0") <= TERM_FOLD_Y);
     const belowFold = termLines.filter(line => parseFloat(line.getAttribute("y") || "0") > TERM_FOLD_Y);
-    tl.to(aboveFold, { opacity: 1, duration: 0.05, stagger: 0.045 }, streamAt);
-    tl.set(belowFold, { opacity: 1 }, streamAt + 0.5);
+    tl.to(aboveFold, { opacity: 1, duration: 0.04, stagger: 0.028 }, streamAt);
+    tl.set(belowFold, { opacity: 1 }, streamAt + 0.35);
 
-    const polAt = streamAt + 0.6;
+    const polAt = streamAt + 0.45;
     tl.to(polShield, { autoAlpha: 1, x: 0, duration: 0.3, ease: "power2.out" }, polAt);
     tl.to(polStacks, { autoAlpha: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.4)" }, polAt + 0.1);
 
@@ -736,15 +754,15 @@ function init(): void {
         tl.to(polChecks[i], { attr: { fill: "#1C7D41" }, duration: 0.25 }, at);
     });
 
-    const scrollAt = polFlipsAt + 0.7;
-    tl.to(termScroll, { y: TERM_SCROLL_END, duration: 2, ease: "power1.inOut" }, scrollAt);
+    const scrollAt = polFlipsAt + 0.35;
+    tl.to(termScroll, { y: TERM_SCROLL_END, duration: 1.7, ease: "power1.inOut" }, scrollAt);
 
-    const packsAt = scrollAt + 2.15;
+    const packsAt = scrollAt + 2.1;
     tl.to(badgeRects[1], { attr: { "stroke-dashoffset": "0" }, duration: 0.4, ease: "power1.inOut" }, packsAt);
     tl.set(badgeRects[1], { attr: { "stroke-dasharray": "none" } }, packsAt + 0.45);
     tl.to(badgeBodies[1], { autoAlpha: 1, duration: 0.3 }, packsAt + 0.15);
 
-    const rollB = packsAt + 0.7;
+    const rollB = packsAt + 0.9;
     tl.to(termClip, { opacity: 0, duration: 0.25 }, rollB - 0.1);
     tl.to(tab, { y: 34, duration: 0.3, ease: "power2.in" }, rollB - 0.1);
     tl.to([bFill, bStroke], { autoAlpha: 0, duration: 0.3 }, rollB);
