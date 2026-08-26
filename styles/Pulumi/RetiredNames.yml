@@ -55,3 +55,31 @@ swap:
   '\bInsights supergraph\b': resource graph
   '\bInsights resources\b': discovered resources
   '(?-i)\bPolicy Violations\b': policy findings
+  # Category label, not a product name. The retired spellings differ from the
+  # correct one only by the capital G / the word "and", so the two that collide
+  # with `Discovery & governance` itself are pinned case-sensitive.
+  '\bInsights & Governance\b': Discovery & governance
+  '\bInsights and Policy\b': Discovery & governance
+  '\bInsights 2\.0\b': Discovery & governance
+  '(?-i)\bDiscovery & Governance\b': Discovery & governance
+  # The brand table also retires "Discovery and governance", but that string is
+  # indistinguishable from legitimate prose -- "Pulumi Discovery and governance
+  # work together" is the product plus the concept, not the category label, and
+  # no regex separates the two. Left unmirrored per the tier-4 rule in
+  # BRAND-SYNC.yaml; the ampersand form above is unambiguous and is mirrored.
+  # The console row of the brand table (Pulumi Console / Pulumi Cloud Console /
+  # Pulumi UI) is already mirrored in Nomenclature.yml, which is also a blocker.
+  # Do not add it here too: both rules carry `action: replace`, so a duplicate
+  # would offer the author two one-click fixes with different replacements on
+  # the same span.
+  #
+  # "Policy as Code" is deliberately absent. The brand table retires it only as
+  # a PRODUCT name -- "policy as code" the practice is fine -- and case doesn't
+  # separate the two: all 34 occurrences in content/ are title-cased bold labels
+  # for the practice ("**Policy as Code**: Security and compliance requirements
+  # can be enforced programmatically"), where swapping in "Pulumi Policies"
+  # would be wrong. Their real defect is the title casing, which is a different
+  # rule's job. Tier 4, unmirrored.
+  '\bInsights Policy\b': Pulumi Policies
+  '\bInsights Discovery\b': Discovery
+  '\bAccount Discovery\b': Discovery

@@ -31,9 +31,35 @@
 #      -> RetiredNames.yml. Message asks the reader to confirm it fits.
 #      Outstanding content migrations are tracked in pulumi/docs#21133.
 #   3. No single fixed replacement -> DeprecatedProductNames.yml (flag-only).
-#   4. No safe regex at all -> leave unmirrored and note it in the PR body.
+#   4. No safe regex at all -> leave unmirrored and note it below.
 
-last_synced: "2026-08-24"
+# Intentionally unmirrored rows of the "Retired and disallowed names" table,
+# verified against the live brand guide on 2026-08-26. Listed so the sync job
+# stops rediscovering them as drift every week:
+#
+#   - "runtime code" -> "function serialization". The guide itself says
+#     *runtime* has too many unrelated live meanings to swap on sight.
+#   - "Discovery and governance" -> "Discovery & governance". Indistinguishable
+#     from legitimate prose: "Pulumi Discovery and governance work together" is
+#     the product plus the concept, not the category label. The ampersand form
+#     IS mirrored, since it's unambiguous.
+#   - "Policy as Code" -> "Pulumi Policies". Retired only as a PRODUCT name;
+#     "policy as code" the practice is fine, and case doesn't separate them.
+#     All 34 occurrences in content/ are title-cased labels for the practice,
+#     where the swap would be wrong. Their defect is the casing, not the name.
+#   - "Pulumi Service provider (PSP)" -> "Pulumi Cloud provider". Excluded by a
+#     lookahead in DeprecatedProductNames; renaming the provider is a product/IA
+#     decision with URL-alias consequences, outside this lint rule's remit.
+#   - bare "Insights" and bare "Copilot". Both need a lookbehind to avoid
+#     double-flagging the "Pulumi Insights"/"Pulumi Copilot" already covered,
+#     and Vale lookbehinds are position-unstable. See DeprecatedProductNames.yml.
+#
+# The console row (Pulumi Console / Pulumi Cloud Console / Pulumi UI) IS
+# mirrored, but in Nomenclature.yml, not RetiredNames.yml. Don't add it to both:
+# both carry `action: replace`, so a duplicate offers two one-click fixes with
+# different replacements on the same span.
+
+last_synced: "2026-08-26"
 
 sections:
   # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/
