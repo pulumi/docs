@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 
 const CW = 7.44141;
-const CW_PROMPT = 14 * (CW / 12) - 0.7;
+const CW_PROMPT = 13.5 * (CW / 12) - 0.675;
 
 const PROMPT_TEXT_X = 213;
 const CODE_TEXT_X = 122;
@@ -32,12 +32,12 @@ const AGENT_WEIGHTS: { [agent: string]: number } = {
 // Per-pass language odds: real usage share, with brand-new HCL boosted to
 // just above YAML and Java at the floor.
 const LANG_WEIGHTS: { [lang: string]: number } = {
-    typescript: 51,
-    python: 29,
-    go: 7.5,
-    csharp: 5,
-    hcl: 3.5,
-    yaml: 3,
+    typescript: 40,
+    python: 30,
+    go: 10,
+    csharp: 10,
+    hcl: 7,
+    yaml: 2,
     java: 1,
 };
 
@@ -74,7 +74,7 @@ const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 const CI_PR_REST_X = -10;
 
 const CUBE_H = 84.752;
-const TERM_SCROLL_END = -592;
+const TERM_SCROLL_END = -862;
 const TERM_FOLD_Y = 410;
 
 function q<T extends Element>(root: Element, sel: string): T {
@@ -573,7 +573,7 @@ function init(): void {
     });
 
     tl.to(prompt, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "power2.out" }, 0.5);
-    const promptChars = 39;
+    const promptChars = 40;
     const promptType = trackProxy({ c: 0 });
     tl.call(() => gsap.set(promptCaret, { opacity: 1 }), undefined, 0.75);
     tl.to(

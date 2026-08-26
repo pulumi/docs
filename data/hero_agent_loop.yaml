@@ -116,43 +116,58 @@ editor_sources:
           availabilityZone: ${azs.names[0]}
 
 terminal_source: |
-  pulumi up
+  $ pulumi up
 
   Loading policy packs...
 
   Previewing update (prod)
-       Type                                          Name              Status
-   +   pulumi:pulumi:Stack                           vpc-demo-prod      created
-   +   ├─ awsx:ec2:Vpc                               vpc               created
-   +   │  └─ aws:ec2/vpc:Vpc                         vpc               created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-1      created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-2      created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-public-3      created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-1     created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-2     created
-   +   │     ├─ aws:ec2/subnet:Subnet                vpc-private-3     created
-   +   │     ├─ aws:ec2/internetGateway:InternetGateway  vpc           created
-   +   │     ├─ aws:ec2/eip:Eip                      vpc-1             created
-   +   │     ├─ aws:ec2/eip:Eip                      vpc-2             created
-   +   │     ├─ aws:ec2/eip:Eip                      vpc-3             created
-   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-1             created
-   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-2             created
-   +   │     ├─ aws:ec2/natGateway:NatGateway        vpc-3             created
-   +   │     ├─ aws:ec2/routeTable:RouteTable        vpc-public-1      created
-   +   │     ├─ aws:ec2/routeTable:RouteTable        vpc-private-1     created
-   +   │     ├─ aws:ec2/route:Route                  vpc-public-1      created
-   +   │     ├─ aws:ec2/route:Route                  vpc-private-1     created
-   +   │     └─ aws:ec2/routeTableAssociation:RouteTableAssociation  vpc-public-1  created
-   +   ├─ aws:ec2/subnet:Subnet                      subnet-0          created
-   +   ├─ aws:ec2/subnet:Subnet                      subnet-1          created
-   +   ├─ aws:ec2/subnet:Subnet                      subnet-2          created
-   +   └─ aws:ec2/subnet:Subnet                      subnet-3          created
+
+   +   pulumi:pulumi:Stack                     network        create
+   +   ├─ awsx:ec2:Vpc                         vpc            create
+   +   │  └─ aws:ec2:Vpc                       vpc            create
+   +   │     ├─ aws:ec2:InternetGateway        vpc            create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-2   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-2          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-2   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-2   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-2   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-2          create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-1   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-1          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-1   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-1   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-1   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-1          create
+   +   │     ├─ aws:ec2:Subnet                 vpc-private-1  create
+   +   │     │  └─ aws:ec2:RouteTable          vpc-private-1  create
+   +   │     │     ├─ aws:ec2:RouteTableAssoc  vpc-private-1  create
+   +   │     │     └─ aws:ec2:Route            vpc-private-1  create
+   +   │     ├─ aws:ec2:Subnet                 vpc-private-2  create
+   +   │     │  └─ aws:ec2:RouteTable          vpc-private-2  create
+   +   │     │     ├─ aws:ec2:RouteTableAssoc  vpc-private-2  create
+   +   │     │     └─ aws:ec2:Route            vpc-private-2  create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-3   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-3          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-3   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-3   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-3   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-3          create
+   +   │     └─ aws:ec2:Subnet                 vpc-private-3  create
+   +   │        └─ aws:ec2:RouteTable          vpc-private-3  create
+   +   │           ├─ aws:ec2:RouteTableAssoc  vpc-private-3  create
+   +   │           └─ aws:ec2:Route            vpc-private-3  create
+   +   ├─ aws:ec2:Subnet                       subnet-1       create
+   +   ├─ aws:ec2:Subnet                       subnet-5       create
+   +   ├─ aws:ec2:Subnet                       subnet-3       create
+   +   ├─ aws:ec2:Subnet                       subnet-4       create
+   +   ├─ aws:ec2:Subnet                       subnet-0       create
+   +   └─ aws:ec2:Subnet                       subnet-2       create
 
   Outputs:
       vpcId: "vpc-0a1b2c3d4e5f67890"
 
   Resources:
-      + 23 created
+      + 40 created
 
   Policy Packs run:
       Name                    Version

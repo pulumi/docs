@@ -293,7 +293,7 @@ sections:
     description: |
       Coding agents have reset the pace at which we build software. Pulumi brings that same agent-driven velocity to infrastructure.
 
-      Open source and powered by languages agents know well, Pulumi is **software-driven infrastructure** that gives humans and agents the tools they need to build and scale infrastructure — safely.
+      Open source and powered by languages agents know well, Pulumi is **infrastructure as software** that gives humans and agents the tools they need to build and scale infrastructure collaboratively and safely.
     cta_text: Explore the platform
     cta_link: /product/
     cards:
