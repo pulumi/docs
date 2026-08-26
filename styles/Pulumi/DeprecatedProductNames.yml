@@ -1,9 +1,13 @@
 # Flags retired product names whose *replacement is context-dependent* — the
 # dead name is always wrong, but a human (or reviewing model) has to pick the
 # right current name for the sentence, so these are existence (flag-only)
-# findings, never auto-substitutions. Retired names with a single fixed
-# replacement (Pulumi Insights -> Pulumi Discovery, CrossGuard -> Pulumi
-# Policies, ...) live in Substitutions.yml instead.
+# findings, never auto-substitutions. Retired names whose replacement IS fixed
+# live in one of two sibling files: Substitutions.yml when the replacement is
+# right in every context, and RetiredNames.yml when it's right in most and the
+# message has to hedge (Pulumi Insights -> Pulumi Discovery and CrossGuard ->
+# Pulumi Policies are both in RetiredNames.yml). All three files block; the
+# file a row lives in decides how much its message hedges, not whether the
+# finding may ship.
 #
 # This is an offline mirror of the "Retired and disallowed names" table in the
 # brand guide's Names & terminology section (the source of truth; see
