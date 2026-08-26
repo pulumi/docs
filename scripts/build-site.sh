@@ -27,15 +27,44 @@ printf "Generating meta images...\n\n"
 node scripts/generate-meta-images.mjs
 
 printf "Running Hugo...\n\n"
-if [ "$1" == "preview" ]; then
+# Hugo previously ran under GOGC=3, which collects once the heap grows 3% over
+# live heap. That capped memory but cost 1.7-3x in wall time, since every
+# allocation-heavy operation (image processing above all) drags a full GC behind
+# it. GOMEMLIMIT expresses the actual intent -- "do not exhaust the runner" --
+# as a soft ceiling, letting Go collect at its normal rate until the build
+# approaches the limit.
+#
+# CI only: this script is the local build path too (`make build`,
+# scripts/laptop-deploy.sh), and 12GiB is sized for the CI runner's 16GB shared
+# with the Node and Pulumi steps -- on a 16GB laptop it would be no ceiling at
+# all. An explicit GOMEMLIMIT always wins, so a memory-constrained machine can
+# set its own.
+if [ -n "${CI:-}" ]; then
+    export GOMEMLIMIT="${GOMEMLIMIT:-12GiB}"
+fi
+
+# --gc prunes cache entries the build no longer references, which is what bounds
+# the growth of the cached resources/ tree (nothing else reclaims superseded
+# entries). The guard below is on the non-preview branches, so this covers every
+# non-preview build under CI: the two deploy workflows, plus any CI job that runs
+# `make build` (pulumi-cli-docs.yml does). That is fine because all of them build
+# the full site and so reference the same set of entries. PR preview builds are
+# the ones deliberately excluded -- they share the same cache namespace, and a
+# build pruning against a narrower view could drop entries the others still need.
+hugo_gc=()
+if [ -n "${CI:-}" ]; then
+    hugo_gc=(--gc)
+fi
+
+if [ "${1:-}" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
+    hugo --minify --buildFuture --templateMetrics -e "preview"
 else
     if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then
         export HUGO_BASEURL="https://www.pulumi-test.io"
-        GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
+        hugo "${hugo_gc[@]}" --minify --buildFuture --templateMetrics -e "preview"
     else
-        GOGC=3 hugo --minify --templateMetrics -e "production"
+        hugo "${hugo_gc[@]}" --minify --templateMetrics -e "production"
     fi
 fi
 
