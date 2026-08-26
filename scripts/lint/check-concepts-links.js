@@ -19,6 +19,9 @@
  *   node scripts/lint/check-concepts-links.js              # scan the repo
  *   node scripts/lint/check-concepts-links.js <file> ...    # scan specific files
  *   node scripts/lint/check-concepts-links.js --self-test    # run built-in fixtures
+ *   node scripts/lint/check-concepts-links.js --print-baseline  # print a fresh
+ *       baseline (in the same {_note, files} envelope loadBaseline() reads) for
+ *       every currently-scanned file with a violation
  *
  * Exceptions: the ratchet baseline lives in
  * scripts/lint/concepts-links-baseline.json. Once PR #21138 and PR #21145
@@ -33,7 +36,7 @@ const path = require("path");
 const REPO_ROOT = path.resolve(__dirname, "../..");
 const BASELINE_PATH = path.join(__dirname, "concepts-links-baseline.json");
 
-const SCAN_ROOTS = ["content", "layouts", "theme", "assets", "data"];
+const SCAN_ROOTS = ["content", "layouts", "theme", "assets", "data", "archetypes", "static", "scripts"];
 
 const EXCLUDED_DIR_SEGMENTS = [
     "node_modules",
@@ -43,6 +46,12 @@ const EXCLUDED_DIR_SEGMENTS = [
     "static-prebuilt",
     path.join("theme", "stencil", "www"),
     path.join("theme", "stencil", "dist"),
+    // This guard's own directory: its doc comments, usage examples, and
+    // --self-test fixtures all contain the literal string /docs/concepts/
+    // on purpose, and scanning them would be 100% self-referential noise,
+    // not a real link anyone will ever click. scripts/search/rank.js and
+    // any other genuine script under scripts/ are still scanned.
+    path.join("scripts", "lint"),
 ];
 
 const SCANNABLE_EXTENSIONS = new Set([
@@ -221,12 +230,32 @@ function collectDefaultFiles() {
     return files;
 }
 
+const DEFAULT_BASELINE_NOTE =
+    "Ratchet baseline for scripts/lint/check-concepts-links.js. Every entry here " +
+    "is a KNOWN, already-fixed occurrence of an internal link to the retired " +
+    "/docs/concepts/* URL space, tracked while its fix is still open for review. " +
+    "Once the fix merges, that entry drops to 0 real occurrences and should be " +
+    "pruned. Do not add new entries here to silence a real finding -- fix the " +
+    "link instead. A file's count going lower than what is recorded here only " +
+    "prints a warning, never fails; going higher fails the build. Note: this is " +
+    "a count-only ratchet, not a line-level one -- swapping one stale link for a " +
+    "different stale link in the same file keeps the count unchanged and passes.";
+
 function loadBaseline() {
     try {
         const parsed = JSON.parse(fs.readFileSync(BASELINE_PATH, "utf8"));
         return parsed.files || {};
     } catch (e) {
         return {};
+    }
+}
+
+function loadBaselineNote() {
+    try {
+        const parsed = JSON.parse(fs.readFileSync(BASELINE_PATH, "utf8"));
+        return parsed._note || DEFAULT_BASELINE_NOTE;
+    } catch (e) {
+        return DEFAULT_BASELINE_NOTE;
     }
 }
 
@@ -270,10 +299,10 @@ function main() {
 
     if (printBaseline) {
         const counts = {};
-        for (const [file, violations] of byFile.entries()) {
-            counts[file] = violations.length;
+        for (const file of [...byFile.keys()].sort()) {
+            counts[file] = byFile.get(file).length;
         }
-        console.log(JSON.stringify(counts, Object.keys(counts).sort(), 4));
+        console.log(JSON.stringify({ _note: loadBaselineNote(), files: counts }, null, 4));
         return;
     }
 
@@ -281,15 +310,13 @@ function main() {
 
     let failed = false;
     const staleFiles = [];
+    const overLimitReport = [];
 
     for (const [file, violations] of byFile.entries()) {
         const allowed = baseline[file] || 0;
-        console.log(`\n${file} (${violations.length} occurrence(s), ${allowed} allowed by baseline):`);
-        for (const v of violations) {
-            console.log(`  ${file}:${v.line}: ${v.text}`);
-        }
         if (violations.length > allowed) {
             failed = true;
+            overLimitReport.push({ file, violations, allowed });
         }
     }
 
@@ -298,6 +325,23 @@ function main() {
         const foundCount = found ? found.length : 0;
         if (foundCount < allowed) {
             staleFiles.push(`${file}: baseline allows ${allowed}, found ${foundCount}`);
+        }
+    }
+
+    if (!failed) {
+        // Green run: a single summary line. The full per-file, per-occurrence
+        // detail below is only useful when something needs fixing, and
+        // printing it every time on every passing run buries that signal
+        // under ~50+ lines of baselined-and-fine noise.
+        console.log(
+            `No new /docs/concepts/* internal links found (${byFile.size} file(s) with baselined occurrences, all within their allowance).`
+        );
+    } else {
+        for (const { file, violations, allowed } of overLimitReport) {
+            console.log(`\n${file} (${violations.length} occurrence(s), ${allowed} allowed by baseline):`);
+            for (const v of violations) {
+                console.log(`  ${file}:${v.line}: ${v.text}`);
+            }
         }
     }
 
@@ -321,8 +365,6 @@ function main() {
         );
         process.exit(1);
     }
-
-    console.log("\nNo new /docs/concepts/* internal links found.");
 }
 
 function runSelfTest() {
