@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: "Modern infrastructure as code in Python, TypeScript, Go, or C#. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
+meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
 layout: gads-template
 block_external_search_index: true
 
@@ -22,14 +22,14 @@ customer_quote:
 overview:
     title: Infrastructure as Code<br/>in Real Programming Languages
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, C#, Java, or YAML — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
 
 key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, C#, Java, and YAML. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
+            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
           features:
               - title: Code faster with real languages
                 description: |

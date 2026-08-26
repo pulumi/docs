@@ -3,7 +3,7 @@ title_tag: Deploy a Static Website to Azure
 title: Azure Static Website
 layout: template
 schema_type: howto
-meta_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN.
 template:

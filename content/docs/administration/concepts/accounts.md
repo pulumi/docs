@@ -90,7 +90,7 @@ SAML single sign-on is configured by an organization admin, not by individual us
 
 You can associate your Pulumi account with more than one identity. In addition to the one you signed up with, you can connect GitHub, GitLab, Google, Atlassian, and SAML SSO identities, and disconnect them again later.
 
-Connecting an additional identity is what lets you join organizations backed by that system. To be invited to an organization, your account must be linked to the organization's backing identity provider — only then do you appear in the list of users an organization admin can invite. Only organization admins can add members to an organization.
+Connecting an additional identity is what lets you join organizations backed by that system. To be invited to an organization, your account must be linked to the organization's backing identity provider — only then do you appear in the list of users an organization admin can invite. Connecting an identity doesn't add you to the organizations that identity backs: an organization admin still has to invite or add you. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
 
 To connect an identity:
 
@@ -101,6 +101,13 @@ To connect an identity:
 {{% notes type="info" %}}
 If you already have an account and try to sign in to a SAML-backed organization directly, you may hit an "Email already in use" error that the sign-in screen cannot resolve. Connect the organization's SAML SSO identity to your existing account instead — see [Connect SAML SSO to an existing account](/docs/administration/guides/saml/#connect-saml-sso-to-an-existing-account).
 {{% /notes %}}
+
+#### If the identity options aren't there {#identity-options-missing}
+
+The controls for connecting identities aren't available to every account. Two things remove them:
+
+- **Your account is organization-managed.** An account that an organization created through SAML or SCIM can't connect additional identity providers. See [Organization-managed users](/docs/administration/concepts/org-managed-users/).
+- **The provider isn't configured for your deployment.** In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), a provider only appears if the deployment has been configured with OAuth credentials for it. Ask whoever administers your deployment.
 
 ## Verifying your email address
 

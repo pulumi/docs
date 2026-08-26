@@ -46,7 +46,7 @@ The `apply` method does not apply to Pulumi YAML. YAML is a declarative language
 
 ## Printing output values { search.keywords="pulumi.apply" }
 
-Suppose you want to print the ID of a resource you've created. These kinds of values are outputs - values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
+Suppose you want to print the ID of a resource you've created. These kinds of values are outputs—values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
 
 {{< chooser language "typescript,python,go,csharp,java" / >}}
 
@@ -146,7 +146,7 @@ Diagnostics:
     Calling __str__ on an Output[T] is not supported.
     To get the value of an Output[T] as an Output[str] consider:
     1. o.apply(lambda v: f"prefix{v}suffix")
-    See https://www.pulumi.com/docs/concepts/inputs-outputs for more details.
+    See https://www.pulumi.com/docs/iac/concepts/inputs-outputs/ for more details.
     This function may throw in a future version of Pulumi.
 ```
 
@@ -173,7 +173,7 @@ Diagnostics:
     To get the value of an Output<T> as an Output<string> consider:
     1. o.Apply(v => $"prefix{v}suffix")
     2. Output.Format($"prefix{hostname}suffix");
-    See https://www.pulumi.com/docs/concepts/inputs-outputs for more details.
+    See https://www.pulumi.com/docs/iac/concepts/inputs-outputs/ for more details.
     This function may throw in a future version of Pulumi.
 ```
 
@@ -247,7 +247,7 @@ vpc.vpc_id.apply(lambda id: print('VPC ID:', id))
 ```
 
 {{% notes %}}
-The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. For details on how errors returned from the callback surface during an update, see [Handling errors in apply](#handling-errors-in-apply).
+The function `ApplyT` spawns a goroutine to await the availability of the implicated dependencies. Its callback can also return an error, which fails the update; see [Handling errors in apply](#handling-errors-in-apply) for the details and for the cancellation-aware variant.
 {{% /notes %}}
 
 {{% /choosable %}}
@@ -296,7 +296,7 @@ Diagnostics:
 
 ## Accessing nested output values
 
-Sometimes a resource has an output property that is an array or a more complex object multiple levels of nested values. For example, if you created an [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/) as shown below:
+Sometimes a resource has an output property that is an array or a more complex object with multiple levels of nested values. Consider, for example, this [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/):
 
 {{< chooser language "typescript,python,go,csharp,java" / >}}
 
@@ -413,7 +413,7 @@ Suppose you want to validate your certificate by creating an [Amazon Route 53 re
 
 An easier way to access deeply nested properties is by using _lifting_. Lifting allows you to access properties and elements directly from a {{< pulumi-output >}} without needing an {{< pulumi-apply >}}.
 
-Lifting is handled automatically by Pulumi's type system, making it largely transparent to use. When you access a property or array element on an output value, Pulumi automatically "lifts" that access into the output context, returning a new output that will resolve to that nested value. This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack.
+Lifting is handled automatically by Pulumi's type system, so in most cases you don't need to think about it. When you access a property or array element on an output value, Pulumi automatically "lifts" that access into the output context, returning a new output that will resolve to that nested value. This approach is easier to read and write and does not lose any important dependency information that is needed to properly create and maintain the stack.
 
 {{% notes type="info" %}}
 Lifting works in most scenarios for accessing nested properties and array elements. However, you may occasionally encounter runtime errors with lifting depending on your language. For example, in TypeScript, if an output resolves to `undefined`, using lifting to reference `outputThatResolvesToUndefined.someProperty` would cause a runtime error. In such cases, use `apply` with appropriate null checking instead.
@@ -438,7 +438,7 @@ Returning to the certificate validation example from the previous section, you c
 ```
 
 {{< notes type="warning" >}}
-**Python implementation note**: In Python, output lifting is implemented by overriding the special `__getattr__` method on resources. The expression `resource.output` (which results in a call to `resource.__getattr__("output")`) becomes `resource.apply(lambda r: r.output)`. This means that using `hasattr`, which calls `__getattr__` under the hood and looks for an `AttributeError` to determine whether or not a property exists, will not work as expected on resource outputs.
+**Python implementation note**: In Python, output lifting is implemented by overriding the special `__getattr__` method on the `Output` class. The expression `output.property` (which results in a call to `Output.__getattr__("property")`) becomes `output.apply(lambda v: v.property)`. Because that override returns an output instead of raising `AttributeError` for a missing attribute, `hasattr`—which relies on that error to decide whether a property exists—does not work as expected on output values.
 {{< /notes >}}
 
 {{% /choosable %}}
@@ -474,10 +474,10 @@ Returning to the certificate validation example from the previous section, you c
 
 ### Outputs and strings
 
-Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
+Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/iac/concepts/inputs-outputs/apply/).
 
 {{% notes type="info" %}}
-For the common case of building a string from output values, Pulumi's [output helpers](/docs/concepts/inputs-outputs/helpers/#string-interpolation) provide a more concise alternative that doesn't require calling `apply` directly.
+For the common case of building a string from output values, Pulumi's [output helpers](/docs/iac/concepts/inputs-outputs/helpers/#string-interpolation) provide a more concise alternative that doesn't require calling `apply` directly.
 {{% /notes %}}
 
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
@@ -581,7 +581,7 @@ The returned value of the call to {{< pulumi-apply >}} is a new `pulumi.Output<s
 
 ### Outputs and JSON
 
-Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues. For a consolidated reference of all JSON helpers, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/#json-helpers).
+Many cloud resources require JavaScript Object Notation (JSON) documents, such as policies that control access to resources. The Pulumi SDK provides helper methods in most languages to make it easier to work with Pulumi outputs and JSON documents. These helper methods have similar names and function signatures to their plain-value analogues. For a consolidated reference of all JSON helpers, see [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/#json-helpers).
 
 #### Converting JSON objects to strings
 
@@ -650,7 +650,7 @@ const validated = name.apply(n => {
 });
 ```
 
-The update fails whether or not `validated` is later used in the program.
+The update fails even if `validated` is never used later in the program.
 
 {{% /choosable %}}
 
@@ -667,7 +667,7 @@ def validate(n: str) -> str:
 validated = name.apply(validate)
 ```
 
-The update fails whether or not `validated` is later used in the program.
+The update fails even if `validated` is never used later in the program.
 
 {{% /choosable %}}
 
@@ -707,7 +707,7 @@ var validated = name.Apply(n =>
 });
 ```
 
-The update fails whether or not `validated` is later used in the program.
+The update fails even if `validated` is never used later in the program.
 
 {{% /choosable %}}
 
@@ -724,7 +724,7 @@ var validated = name.applyValue(n -> {
 });
 ```
 
-The update fails whether or not `validated` is later used in the program.
+The update fails even if `validated` is never used later in the program.
 
 {{% /choosable %}}
 
@@ -734,7 +734,7 @@ To handle a potential failure gracefully and continue rather than failing the up
 
 ## Converting inputs to outputs
 
-Resource arguments in Pulumi accept `Input<T>` values, which means they will take either a plain value or an `Output<T>`. In most programs this flexibility is all you need. There are situations, however, where you have a value typed as `Input<T>` and need to ensure it is a definite `Output<T>`—most commonly to call `apply` on it.
+Resource arguments in Pulumi accept `Input<T>` values, which means they will take either a plain value or an `Output<T>`. In most programs this flexibility is all you need. Occasionally, though, you have a value typed as `Input<T>` and need a definite `Output<T>`—most commonly to call `apply` on it.
 
 This situation arises most often in the following cases:
 
