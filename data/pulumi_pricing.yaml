@@ -361,7 +361,7 @@ categories:
       - id: cicd-integrations
         name: CI/CD integrations
         link: /docs/iac/operations/continuous-delivery/
-        tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+        tooltip: AWS Code Services, Azure DevOps, Bitbucket, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
         available_from: individual
 
       - id: drift-detection
