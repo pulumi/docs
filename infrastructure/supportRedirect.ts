@@ -57,7 +57,6 @@ export class SupportRedirect extends pulumi.ComponentResource {
                 aliases: [args.domain],
                 // The cheapest price class is plenty: the only content served is a redirect.
                 priceClass: "PriceClass_100",
-                httpVersion: "http2",
                 isIpv6Enabled: true,
 
                 // CloudFront requires an origin, but the redirect function answers every request, so it never
