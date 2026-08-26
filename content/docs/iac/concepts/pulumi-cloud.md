@@ -33,7 +33,7 @@ For a detailed, capability-by-capability comparison of Pulumi Cloud and open sou
 
 An organization is the top-level account in Pulumi Cloud that groups related projects, stacks, and people. It is the primary unit of collaboration: [teams](/docs/administration/concepts/rbac/teams/) and [role-based access control](/docs/administration/concepts/rbac/), billing, and shared [Pulumi ESC](/docs/esc/) environments all belong to an organization. The organization name is also the first segment of a stack's fully qualified name, in the form `<organization>/<project>/<stack>`.
 
-When you sign up for Pulumi Cloud, you automatically get a personal organization named after your username. You can also create organizations for your teams or be invited to existing ones. You can be a member of multiple organizations at once, and you switch between them in the Pulumi Cloud console or with the [`pulumi org`](/docs/iac/cli/commands/pulumi_org/) CLI commands.
+When you sign up for Pulumi Cloud, you automatically get an individual organization named after your username. You can also create organizations for your teams or be invited to existing ones. You can be a member of multiple organizations at once, and you switch between them in the Pulumi Cloud console or with the [`pulumi org`](/docs/iac/cli/commands/pulumi_org/) CLI commands.
 
 ### Getting the current organization programmatically
 
