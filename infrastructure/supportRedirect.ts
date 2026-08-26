@@ -104,7 +104,9 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     minimumProtocolVersion: "TLSv1.2_2021",
                 },
             },
-            { parent: this },
+            // protect: the pulumi-service repo's CNAME depends on this distribution's generated domain name, which an
+            // accidental delete/replace would silently regenerate.
+            { parent: this, protect: true },
         );
 
         super.registerOutputs({});
