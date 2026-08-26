@@ -73,6 +73,15 @@ Connecting these additional identities lets you join Pulumi organizations that a
 
 To be invited as a member of a Pulumi organization, you must connect your account with the organization's backing [identity provider](/docs/administration/concepts/identity-providers/). Once your account is linked to your third-party identity, you show up on the list of users that the organization admin can invite.
 
+Connecting an identity doesn't add you to the organizations that identity backs. An organization admin still has to invite or add you. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
+
+#### If the identity options aren't there {#identity-options-missing}
+
+The controls for connecting identities aren't available to every account. Two things remove them:
+
+* **Your account is organization-managed.** An account that an organization created through SAML or SCIM can't connect additional identity providers. See [Organization-managed users](/docs/administration/concepts/org-managed-users/).
+* **The provider isn't configured for your deployment.** In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), a provider only appears if the deployment has been configured with OAuth credentials for it. Ask whoever administers your deployment.
+
 ## Password Reset
 
 For users who signed up with email, you may change your password by:

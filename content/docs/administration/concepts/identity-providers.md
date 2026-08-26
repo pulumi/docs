@@ -29,6 +29,8 @@ A user who belongs to the backing system but has not been added to the Pulumi or
 
 These options are mutually exclusive. An organization uses one identity provider at a time, and selecting a new one replaces the old one.
 
+This setting goes by more than one name. The docs and the console call it the organization's **identity provider**, and you configure it under **Membership Requirements**; the console also refers to it as the organization backend, which is the name the REST API uses. They all mean the same thing.
+
 ## Before you change identity providers
 
 Changing an organization's identity provider takes effect immediately, and Pulumi does not check in advance whether your existing members can meet the new requirement. Anyone who cannot is locked out until they can.
@@ -45,7 +47,7 @@ Members who do not meet the new requirement are not deleted. Their membership re
 
 Changing the identity provider requires the `organization:change_backend` permission, shown as **Change organization backend** in Pulumi Cloud. Organization admins have it by default, and you can grant it to a [custom role](/docs/administration/concepts/rbac/roles/). See [Organization settings scopes](/docs/administration/reference/rbac-scopes/org-settings/).
 
-Some providers add a requirement on top of this one. To select a Bitbucket workspace, you must also be an admin of that workspace. See [Bitbucket](#bitbucket).
+Some providers add a requirement on top of this one. To select a Bitbucket workspace, you must also be an admin or owner of that workspace. See [Bitbucket](#bitbucket).
 
 ## Changing your organization's identity provider
 
@@ -92,16 +94,16 @@ GitLab lets group owners grant memberships that expire. A member whose GitLab gr
 A Bitbucket-backed organization draws its membership from a [Bitbucket workspace](https://support.atlassian.com/bitbucket-cloud/docs/what-is-a-workspace/). Bitbucket identities are labeled **Atlassian** in your account settings.
 
 {{% notes type="info" %}}
-Unlike GitHub and GitLab, Bitbucket requires that whoever makes the change be an admin of the target Bitbucket workspace. Bitbucket's member-listing API behaves differently for admins than for other members, so Pulumi verifies this up front rather than failing later.
+Unlike GitHub and GitLab, Bitbucket requires that whoever makes the change be an admin or owner of the target Bitbucket workspace. Bitbucket's member-listing API behaves differently for admins than for other members, so Pulumi verifies this up front rather than failing later. A personal Bitbucket account with no workspace cannot back a Pulumi organization at all.
 {{% /notes %}}
 
 To back your organization with Bitbucket:
 
 1. Connect an Atlassian identity to your Pulumi account under **Account settings** > **Identity providers**, granting the Pulumi OAuth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes) to your account and workspace membership information.
-1. Confirm that you are an admin of the workspace.
+1. Confirm that you are an admin or owner of the workspace.
 1. [Change your organization's identity provider](#changing-your-organizations-identity-provider) and select the Bitbucket workspace.
 
-Once the change is complete, admins can see the list of Bitbucket workspace members and add or invite them to the Pulumi organization.
+Once the change is complete, admins can see the list of Bitbucket workspace members and add or invite them to the Pulumi organization. Adding them is a separate step from their workspace membership. See [Backing membership doesn't grant Pulumi membership](/docs/administration/concepts/organizations/#backing-membership).
 
 ## SAML 2.0
 
@@ -112,9 +114,9 @@ A SAML-backed organization draws its membership from the users your identity pro
 Configuring SAML is covered by the [SAML SSO guides](/docs/administration/guides/saml/). Two things are specific to switching your organization to SAML:
 
 - **You become the organization owner.** Pulumi makes the user who applies the SAML configuration the organization owner, so that an error in the identity provider metadata cannot lock everyone out of the organization.
-- **Your account cannot have other commitments.** You must not belong to unrelated Pulumi organizations, and your individual account must not own any stacks or environments. Transfer or delete them first.
+- **Your account cannot have other commitments.** {{< saml-conversion-prereq >}} Your individual account must also not own any stacks or environments. Transfer or delete them first.
 
-[SCIM provisioning](/docs/administration/guides/scim/) is available only for SAML-backed organizations, and the **SAML & SCIM** settings tab appears only once your organization is SAML-backed. Switching a SAML organization to another identity provider stops SCIM provisioning.
+[SCIM provisioning](/docs/administration/guides/scim/) is available only for SAML-backed organizations, and the **SAML & SCIM** settings tab appears only once your organization is SAML-backed.
 
 Members of a SAML organization can sign in with the organization name pre-filled by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.
 
@@ -123,6 +125,10 @@ Members of a SAML organization can sign in with the organization name pre-filled
 You remove a third-party identity provider by selecting a different one — there is no "none" option. To go back to managing membership entirely in Pulumi Cloud, follow [Changing your organization's identity provider](#changing-your-organizations-identity-provider) and select **Pulumi**.
 
 This is also how you remove a SAML SSO configuration.
+
+{{% notes type="warning" %}}
+Switching away from SAML discards the organization's SAML configuration and everything derived from it: its SAML identities, its SAML member roster, and its SCIM access token. If you switch back to SAML later, you have to reconfigure [SCIM](/docs/administration/guides/scim/) with a newly issued token and re-provision your users.
+{{% /notes %}}
 
 ## Learn more
 

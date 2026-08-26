@@ -33,7 +33,7 @@ It's been another exciting few weeks here at Pulumi! We've caught our breath fro
 
 ### `dependsOn` can now await a fully-deployed Helm `Chart` resource
 
-Pulumi's [`dependsOn` option](/docs/concepts/resources#dependson) enables you to write programs that deploy resources in a specific order. Previously, using this option with a Helm `Chart` resource could be confusing because Pulumi would consider the resource ready once it had registered the chart, even if Helm was still deploying some of the resources defined by the chart. Now, you can depend on a new `ready` attribute that will ensure that none of the dependent resources are deployed until the chart is deployed. For example, the code sample below creates an NGINX Ingress Controller and then creates a Kubernetes `ConfigMap` that depends on the controller being fully deployed.
+Pulumi's [`dependsOn` option](/docs/iac/concepts/resources/options/dependson/) enables you to write programs that deploy resources in a specific order. Previously, using this option with a Helm `Chart` resource could be confusing because Pulumi would consider the resource ready once it had registered the chart, even if Helm was still deploying some of the resources defined by the chart. Now, you can depend on a new `ready` attribute that will ensure that none of the dependent resources are deployed until the chart is deployed. For example, the code sample below creates an NGINX Ingress Controller and then creates a Kubernetes `ConfigMap` that depends on the controller being fully deployed.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";

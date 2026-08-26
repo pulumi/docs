@@ -41,6 +41,10 @@ Creating an organization will start a free trial that has access to all features
 At the end of the trial, you can choose the Team, Enterprise, or Business Critical edition.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
+{{% notes type="info" %}}
+[Organization-managed users](/docs/administration/concepts/org-managed-users/) can't create organizations. If an organization created your account through SAML or SCIM, the option isn't available to you.
+{{% /notes %}}
+
 To create an organization:
 
 1. Select the create organization button at the top of the navigation.
@@ -58,6 +62,14 @@ you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
 For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/faq/pulumi-cloud/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+
+### Backing membership doesn't grant Pulumi membership {#backing-membership}
+
+Being in the backing GitHub organization, GitLab group, or Bitbucket workspace doesn't put you in the Pulumi organization. It only makes you someone an admin can add.
+
+Once you connect the matching identity to your Pulumi account, you appear on the list of people a Pulumi organization admin can invite or add. Until an admin does that, you have no access.
+
+If you're in the GitHub organization but don't see anything in Pulumi, this is why. Ask an organization admin to add you.
 
 ## Inviting members to an organization
 
@@ -84,11 +96,7 @@ To switch to a different organization:
 
 ## Organization roles
 
-| Role | Description |
-|--------|--------|
-| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and role-based access control, adjusting billing information, and controlling the organization settings. |
-| Member | Members are able to view and edit stacks they have access to and view members and teams. |
-| Billing Manager | Billing Managers are able to adjust billing information and view other Billing Managers. They do not have read or write access to stacks, teams, or policies. |
+Every member of an organization has a role: the built-in Admin, Member, or Billing Manager, or a custom role. For what each one grants, see [Roles](/docs/administration/concepts/rbac/roles/#pulumi-defined-roles). For delegating billing access without admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## Updating billing information
 

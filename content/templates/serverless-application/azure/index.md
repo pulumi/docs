@@ -3,7 +3,7 @@ title_tag: Deploy a Serverless Application to Azure
 title: Azure Serverless Application
 layout: template
 schema_type: howto
-meta_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
 template:

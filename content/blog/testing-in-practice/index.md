@@ -128,7 +128,7 @@ In this simple example, we'll use Automation API to create an S3 bucket and perf
 - delete the file
 - delete the stack with the bucket
 
-The following code sets up the Pulumi [stack](/docs/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) by letting developers choose the tools and SDKs.
+The following code sets up the Pulumi [stack](/docs/iac/concepts/) and S3 bucket with Automation API. It's interesting to note that the tests don't import the Pulumi AWS SDK and uses a combination of Python's built-in `unittest` framework and Amazon's [`boto3`](https://aws.amazon.com/sdk-for-python/) Python library. This illustrates the extensibility and flexibility of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) by letting developers choose the tools and SDKs.
 
 ```python
 import os

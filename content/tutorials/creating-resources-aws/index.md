@@ -149,7 +149,7 @@ You will now define your EC2 instance resource below.
 If you are deploying resources in a region other than the `us-east-1` region, make sure to replace the AMI ID value with the ID that is [specific to your region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html). Otherwise you may run into an `InvalidAMIID.NotFound` error.
 {{< /notes >}}
 
-All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming).
+All resources have a required [`name`](https://www.pulumi.com/docs/iac/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#autonaming).
 
 The logical name is how the resource is known inside Pulumi. This is the value provided to the required `name` argument.
 
