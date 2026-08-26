@@ -70,7 +70,7 @@ sections:
   - icon: package
     heading: Pre-built Policy Packs
     link: /docs/insights/policy/policy-packs/pre-built-packs/
-    description: Use ready-made compliance rules for CIS, HITRUST, NIST, and PCI DSS with no code required.
+    description: Use ready-made compliance rules for CIS, HITRUST, NIST, PCI DSS, ISO 27001, and CMMC with no code required.
   - icon: arrows-clockwise
     heading: Policy Groups
     link: /docs/insights/policy/policy-groups/

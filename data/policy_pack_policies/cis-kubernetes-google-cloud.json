@@ -1,7 +1,7 @@
 {
   "applied": false,
   "displayName": "",
-  "name": "cis-kubernetes-gcp",
+  "name": "cis-kubernetes-google-cloud",
   "policies": [
     {
       "configSchema": {
@@ -2006,6 +2006,6 @@
       "severity": "high"
     }
   ],
-  "version": 2,
-  "versionTag": "1.0.1"
+  "version": 1,
+  "versionTag": "1.0.0"
 }

@@ -9,7 +9,28 @@
 # Markdown file is needed.
 #
 # THE RULE: only document packs that are built from the pulumi/policy-packs-internal
-# repo, i.e. the ones we ship to customers as pre-built compliance packs.
+# repo AND are published as Pulumi products.
+#
+# Both halves matter, and the second is not implied by the first. A pack can be built
+# there, publish cleanly, and be returned by /api/orgs/pulumi/policypacks while still
+# being private to the org -- that endpoint lists what the org holds, not what we sell.
+# That is exactly how hitrust-awsnative got a public reference page (pulumi/docs#21055).
+#
+# Both halves are enforced by scripts/fetch-policy-packs.js, so a bad entry fails the
+# nightly job rather than publishing a page:
+#
+#   built there     every entry must carry a `source:` naming its packs/... directory.
+#   a product       the registry listing for the org must return the pack with
+#                   `source: "pulumi"`. Privately published packs come back
+#                   `source: "private"` instead, and a deleted one not at all.
+#   complete        the obligation also runs the other way: every product the registry
+#                   returns needs a page above, or an `undocumented:` entry below saying
+#                   why not. This file is no longer just an allowlist -- it is a claim
+#                   about the whole product set, and the check holds it to that.
+#
+# Note the pack's own `source:` key below is the repo directory, unrelated to the
+# registry's `source` field. And do not switch that check to `publisher`: every pack in
+# our org is published by pulumi, so it would admit the private ones too.
 #
 # This is why the file is an allowlist rather than "document everything in the org".
 # The `pulumi` org is also where we publish policy packs for our OWN internal use,
@@ -86,10 +107,14 @@ sections:
         h1: CIS Kubernetes - Azure (AKS)
         metaDesc: Complete list of CIS Kubernetes Benchmark compliance policies for Azure AKS.
         weight: 2
-      # `cis-kubernetes-gcp`, not `cis-kubernetes-google-cloud`. Both are published,
-      # but only this one is still built by policy-packs-internal; the -google-cloud
-      # name is a stale earlier publish that no longer receives updates.
-      - pack: cis-kubernetes-gcp
+      # `cis-kubernetes-google-cloud`, not `cis-kubernetes-gcp`. Both names exist in the
+      # org, and the obvious-looking one is the wrong one: policy-packs-internal builds
+      # and publishes under `cis-kubernetes-gcp`, but that name was never made a product,
+      # so every automated release has gone to a *private* pack. The public pack is
+      # `cis-kubernetes-google-cloud`, hand-uploaded once and left at 1.0.0. Same 50
+      # policies either way -- the 1.0.1 bump was a dependency update. @danbiwer is
+      # renaming the pack upstream so releases land on the public name (2026-08-25).
+      - pack: cis-kubernetes-google-cloud
         source: packs/cis/kubernetes/gcp
         slug: google-cloud
         title: Google Cloud (GKE)
@@ -136,16 +161,6 @@ sections:
         h1: HITRUST CSF 11.5 - Google Cloud
         metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for Google Cloud.
         weight: 3
-      # Targets the AWS Cloud Control provider (@pulumi/aws-native) rather than the
-      # classic AWS provider. None of its policies carry HITRUST control metadata, so
-      # the whole page renders as an unmapped policy list.
-      - pack: hitrust-awsnative
-        source: packs/hitrust/awsnative
-        slug: aws-native
-        title: AWS Native
-        h1: HITRUST CSF 11.5 - AWS Native
-        metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for the AWS Native provider.
-        weight: 4
 
   - id: iso-27001
     menu: reference-pre-built-policy-packs-iso-27001
@@ -255,14 +270,35 @@ sections:
         metaDesc: Complete list of Pulumi Best Practices compliance policies for Google Cloud.
         weight: 3
 
-# Every pack that policy-packs-internal builds AND publishes to the `pulumi` org now
-# has a page above, with two deliberate exceptions:
-#
-#   aws-organizations-tag-policies  Its page (aws-organizations-tag-policies/aws.md)
-#                                   is hand-written prose pointing at the integration
-#                                   guide, not a policy listing. Stays hand-maintained.
-#   cis-kubernetes-google-cloud     A stale earlier publish, superseded by
-#                                   cis-kubernetes-gcp. See the cis-kubernetes section.
+# Product packs that deliberately get no generated page. The registry check treats any
+# other pack returned with source: "pulumi" as a page we are missing, so a new product
+# either gets an entry above or a reason here -- it cannot be ignored silently. Both
+# keys are required: an entry with no `why:` fails the check rather than silencing it.
+undocumented:
+  - pack: aws-organizations-tag-policies
+    why: >-
+      Its page (aws-organizations-tag-policies/aws.md) is hand-written prose pointing at
+      the integration guide, not a policy listing. Stays hand-maintained.
+
+# Packs the org holds that are NOT products, and so never appear in the registry listing
+# with source: "pulumi". Verified against the live listing on 2026-08-25, which returned 13
+# packs as source: "private" -- cis-kubernetes-gcp plus the 12 named further down.
+# hitrust-awsnative is the exception: it is no longer in the org at all. Recorded only so
+# an audit that diffs the repo against the org does not re-add them; the check already
+# keeps them out.
+#   cis-kubernetes-gcp              The name policy-packs-internal publishes under, and the
+#                                   plausible-looking half of the pair -- but never a
+#                                   product. Document `cis-kubernetes-google-cloud`
+#                                   instead; see the cis-kubernetes section above.
+#                                   @danbiwer is renaming upstream, after which this name
+#                                   stops being published at all.
+#   hitrust-awsnative               Built here and resolvable through
+#                                   /api/orgs/pulumi/policypacks, but never a product: it
+#                                   was published privately to the org. Removed on
+#                                   2026-08-24 after @danbiwer flagged that it had been
+#                                   documented in error (pulumi/docs#21055), and since
+#                                   deleted from the org by @jkodroff. The registry check
+#                                   under THE RULE now blocks this class of mistake.
 #
 # The org additionally holds packs this repo does not build — internal, experimental,
 # or customer one-offs. They must NOT be documented:
