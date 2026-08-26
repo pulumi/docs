@@ -1,6 +1,6 @@
 # Flags "the Stack"-style generic references to a Pulumi stack capitalized as
 # if "Stack" were a proper noun, per the brand writing-style guide and
-# STYLE-GUIDE.md's Headings section ("use capitalization only for proper
+# the brand guide's terminology section, general rules ("use capitalization only for proper
 # nouns... use 'stack' not 'Stack'").
 #
 # A second token below flags capitalized mid-sentence "Infrastructure as

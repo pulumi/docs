@@ -4,10 +4,20 @@
 #
 # Deliberately ABSENT so they keep flagging: real misspellings found during the
 # harvest (Kubernernetes, Twillio, Pulumni, flabergasted, legitimitely,
-# assigninging, conbuckettainer) and third-party names in the wrong case
-# (Gitlab, Javascript, Cloudformation, Postgresql, VMWare) -- the brand guide
-# says to match each project's own casing. Note the dictionary already accepts
-# "Github" and "Goto", so those two miscasings can't be caught this way.
+# assigninging, conbuckettainer), non-words (programmatical, Doublecheck), and
+# miscased product names no other rule owns (Cloudtrail, Cloudwatch, Dockerhub,
+# Elasticache, Huggingface, Intellisense, Pagerduty, VSphere, ESBuild) -- their
+# correct spellings are camelCase, which `filters` skips, so only the wrong
+# form flags.
+#
+# PRESENT ON PURPOSE, even though they're wrong: the miscasings Pulumi.
+# ThirdPartyNames already owns (Gitlab, Javascript, Typescript, Cloudformation,
+# Postgresql, Wordpress, VMWare, Nodejs, Hashicorp, Oauth). That rule blocks
+# and names the exact swap; leaving them out here too would render the same
+# defect twice -- once in the counted 🚨 bucket and once in the advisory block.
+# Hunspell accepts most of them anyway (this file is not what makes them pass),
+# and "Github"/"Goto" are accepted outright, which is why case-correctness is
+# ThirdPartyNames' job and not this file's.
 #
 # One word per line, case-sensitive. Add a word when a review flags a term that
 # is genuinely correct; fix the prose otherwise.
@@ -131,8 +141,6 @@ Civo
 cli
 CLI's
 Cloudformation
-Cloudtrail
-Cloudwatch
 CNCF's
 codeblock
 Codefresh
@@ -168,6 +176,8 @@ Corretto
 Cosgrove
 CRD's
 cron
+crossguard
+CrossGuard
 Crossplane
 Crossplane's
 crypto
@@ -221,13 +231,11 @@ Docker's
 dockerfile
 Dockerfile
 Dockerfiles
-Dockerhub
 Dockerized
 docstrings
 Dogecoin
 Dominik
 dotfile
-Doublecheck
 DSL's
 dumbing
 Dutchie
@@ -236,7 +244,6 @@ dvchost
 ebooks
 eks
 eksctl
-Elasticache
 Elkjop
 Elon
 else's
@@ -257,7 +264,7 @@ Equinix
 Eron
 errored
 erroring
-ESBuild
+esbuild
 ESC's
 ESXi
 ETags
@@ -321,6 +328,7 @@ hacky
 hardcode
 hardcoded
 hardcoding
+Hashicorp
 hashivault
 HATech
 Hathway
@@ -340,7 +348,6 @@ http
 httpbin
 HTTPRoute
 HTTPRoutes
-Huggingface
 Humanitec
 IDE's
 impactful
@@ -350,8 +357,6 @@ initializer
 Initializer
 initializer's
 inspec
-Intellisense
-intellisense
 interdependencies
 interop
 interoperate
@@ -504,6 +509,7 @@ NUnit
 Nutanix
 Nvidia
 nx
+Oauth
 OAuth
 offboarded
 offboarding
@@ -522,8 +528,6 @@ orgs
 Osmani
 otel
 overprovisioned
-pagerduty
-Pagerduty
 Palo
 Pankaj
 parallelization
@@ -560,7 +564,6 @@ priori
 productionized
 productized
 Prodvana
-programmatical
 Protip
 proxied
 pseudocode
@@ -806,7 +809,6 @@ Vova
 vpc
 VPC's
 VSCode
-VSphere
 Walkthrough
 walkthrough
 walkthroughs

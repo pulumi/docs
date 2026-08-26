@@ -1,5 +1,5 @@
 # Flags future tense used for product behavior ("Neo will pause", "the CLI
-# will prompt") where the Google style guide -- and STYLE-GUIDE.md §Grammar
+# will prompt") where the Google style guide -- and the brand guide's writing-style section §Grammar
 # and punctuation -- call for present tense ("Neo pauses", "the CLI prompts").
 #
 # Deliberately NOT a blanket 'will' flagger: Google.Will (disabled in

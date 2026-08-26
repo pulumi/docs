@@ -1,9 +1,21 @@
 # Rows are deliberately absent where a correctly-cased proper noun is followed
 # by a generic lowercase noun -- "Pulumi deployments" (the deployment runs, not
 # the product) and "Pulumi discovery" (the act of discovering). No regex tells
-# those from the product names, and this rule is blocker-tier with an
-# auto-applied fix, so a wrong swap is worse than a missed one. The
-# all-lowercase forms are still caught: lowercase "pulumi" is always a miscue.
+# those from the product names, and this rule blocks while naming an exact
+# replacement the reviewer is asked to apply, so a wrong swap is worse than a
+# missed one. (Nothing auto-applies it: `deterministic_fix` describes the fix,
+# not a decision to apply it -- see vale-deterministic-fixes.yaml's header.)
+#
+# The same principle removes the all-lowercase form wherever it collides with a
+# real CLI command group: `pulumi cloud` (pulumi cloud api), `pulumi policy`
+# (12 subcommands), and `pulumi neo` (pulumi neo resume) are commands, not
+# miscased product names. A subcommand allowlist can't rescue them, because the
+# bare group name is just as legitimate -- "Run pulumi neo to start a session"
+# and "the pulumi policy CLI commands" are both correct prose, and both were
+# live false positives on shipping pages before these rows came out. Code spans
+# are scoped out of Vale, but front matter isn't, and meta_desc can't use
+# backticks. The PLURAL forms stay: `pulumi policies` and `pulumi deployments`
+# are not commands (the commands are singular), so they're unambiguous.
 extends: substitution
 message: "Use Pulumi's canonical spelling: '%s' instead of '%s' (brand guide: Names & terminology)."
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
@@ -19,11 +31,8 @@ swap:
   '\bPulumi IAC\b': Pulumi IaC
   '\bpulumi idp\b': Pulumi IDP
   '\bPulumi Idp\b': Pulumi IDP
-  '\bpulumi cloud\b': Pulumi Cloud
   '\bpulumi discovery\b': Pulumi Discovery
   '\bpulumi policies\b': Pulumi Policies
-  '\bpulumi policy\b(?!\s+(?:ls|new|publish|rm|group|enable|disable|validate-config)\b)': Pulumi Policies
-  '\bpulumi neo\b': Pulumi Neo
   '\bPulumi neo\b': Pulumi Neo
   '\bpulumi kubernetes operator\b': Pulumi Kubernetes Operator
   '\bPulumi kubernetes operator\b': Pulumi Kubernetes Operator

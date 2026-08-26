@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | title }} Template"
+title: "{{ replace .Name "-" " " | humanize }} Template"
 layout: template
 
 # Make sure this is description accurate for this template.
-meta_desc: The {{ replace .Name "-" " " | title }} template makes it easy to deploy a static website on $CLOUD with Pulumi, some service, and some other cloud service.
+meta_desc: The {{ replace .Name "-" " " | humanize }} template makes it easy to deploy a static website on $CLOUD with Pulumi, some service, and some other cloud service.
 
 # Be sure to replace this image.
 # Figma source file:

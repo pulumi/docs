@@ -14,7 +14,14 @@ The `file-path` argument is optional. If not provided, the command will attempt 
 
 ## Requires the `pulumi-brand` MCP server
 
-This skill delegates **all** voice, tone, prose, terminology, grammar, and naming judgment to the Pulumi brand guide served by the **`pulumi-brand` MCP server** (`https://brand.pulumi.com/mcp`). It deliberately keeps no local copy of those rules. Before analyzing anything, confirm the server is reachable and load its voice, writing-style, and terminology guidance. **If you can't reach it, stop and tell the user the brand guide is unavailable — do not fall back to your own notions of Pulumi style.**
+This skill delegates **all** voice, tone, prose, terminology, grammar, and naming judgment to the Pulumi brand guide served by the **`pulumi-brand` MCP server** (`https://brand.pulumi.com/mcp`). It deliberately keeps no local copy of those rules. Before analyzing anything, confirm the server is reachable and load its voice, writing-style, and terminology guidance.
+
+**If you can't reach it, what to do depends on who's waiting:**
+
+- **Interactive run** (a human asked for a glow-up): stop and say the brand guide is unavailable. Don't fall back to your own notions of Pulumi style.
+- **Unattended run** (`content-review-article.yml`'s scheduled `glowup` mode — no one is watching): do **not** silently abort. Aborting here skips the run without emitting the `{"verdict": ...}` sentinel the lane needs to close out its ledger entry, so the page is consumed from the queue and nothing is recorded. Instead, restrict the pass to what doesn't need the guide — structure, headings, examples, link integrity, and the offline Vale mirror in `styles/Pulumi/`, which is a mirror of the same terminology — skip every voice/tone/naming judgment, emit the sentinel as normal, and state plainly in the PR body that the brand guide was unreachable and terminology was checked against the offline mirror only. A reviewer can then decide whether to re-run.
+
+The distinction is that a human can retry immediately; a scheduled lane can't, and a silent abort there costs a rehab slot and leaves no trace.
 
 ---
 

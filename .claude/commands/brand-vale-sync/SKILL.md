@@ -32,9 +32,13 @@ edit the brand guide side of anything (that's `pulumi/marketing-web`).
    and check the guide content it mirrors. You are looking for:
    - **Retired terms the mirror doesn't know** — a row in the terminology
      section's "Retired and disallowed names" table with no corresponding
-     entry in `Substitutions.yml` (single fixed replacement) or
-     `DeprecatedProductNames.yml` (context-dependent replacement). This is the
-     highest-value check: renamed products rot fastest.
+     entry in `Substitutions.yml` (replacement right in every context),
+     `RetiredNames.yml` (replacement usually right, message hedges), or
+     `DeprecatedProductNames.yml` (no single fixed replacement) — nor an entry
+     in the "Intentionally unmirrored" block at the top of `BRAND-SYNC.yaml`,
+     which records the rows that deliberately have no rule and why. Check all
+     four before reporting a gap. This is the highest-value check: renamed
+     products rot fastest.
    - **Renamed or re-cased canonical names** — a "Product names" row that
      `Nomenclature.yml` mis-canonicalizes or misses.
    - **Mirror entries the guide no longer supports** — a swap or token whose

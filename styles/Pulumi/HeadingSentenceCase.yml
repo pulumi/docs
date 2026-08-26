@@ -6,7 +6,7 @@ level: warning
 # heading, page title included ("Pulumi has no title-case convention":
 # brand.pulumi.com/voice/names-and-terminology/). In-body H1s are covered
 # directly by the heading.h1 scope below; the site's usual H1s — front-matter
-# `title:`/`h1:` fields, which Vale never sees — are fed through this same
+# `title:`/`h1:` fields -- are fed through this same
 # rule by scripts/lint/frontmatter-title-case.py (wired into `make
 # lint-prose`). Both surfaces are advisory and changed-files-scoped, so the
 # Title Case backlog (~1,600 titles at time of writing) migrates one touched
@@ -25,7 +25,7 @@ match: $sentence
 # content/docs (the high-frequency capitalized mid-heading tokens) plus the
 # Pulumi product/term vocabulary. Deliberately EXCLUDES lowercase-by-convention
 # Pulumi concepts (stack, project, resource, provider, output, secret, config)
-# so the rule still flags those — see data/STYLE-GUIDE Nomenclature.
+# so the rule still flags those — see the brand guide's terminology section.
 exceptions:
   # Pulumi products & terms
   - Pulumi
@@ -184,7 +184,6 @@ exceptions:
   - ID
   - IDs
   - UI
-  - CLI
   - MCP
   - DNS
   - TLS
@@ -211,8 +210,6 @@ exceptions:
   - Studio
   - Cosmos
   - Marketplace
-  - MongoDB
   - REPL
   - Emmet
-  - gRPC
   - I

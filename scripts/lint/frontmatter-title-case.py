@@ -2,7 +2,9 @@
 """Sentence-case check for front-matter titles, via Vale itself.
 
 The site's H1s come from front matter (`title:`, and `h1:` on overview
-pages), which Vale never sees — it skips YAML front matter entirely. But the
+pages). Vale DOES read front matter -- a substitution rule matches a
+`title_tag:` today -- but Pulumi.HeadingSentenceCase is scoped to headings,
+and front matter isn't parsed as one, so it can't reach those fields. The
 brand standard (Names & terminology: "Pulumi has no title-case convention")
 applies to page titles too, and Pulumi.HeadingSentenceCase already encodes
 the sentence-case check plus the curated proper-noun exceptions list.
@@ -35,6 +37,8 @@ from pathlib import Path
 # so title casing there follows upstream pulumi/pulumi, not this repo.
 # (Synthetic temp files can't inherit .vale.ini's [content/...] sections,
 # which match on the real paths, so the exemption is re-applied here.)
+SKIP_DIRS = {"node_modules", "themes", "public", "resources", "vendor"}
+
 EXEMPT_PREFIXES = ("content/docs/iac/cli/commands/",)
 
 TITLE_KEYS = ("title", "h1")
@@ -72,7 +76,18 @@ def main(argv):
     for a in argv:
         p = Path(a)
         if p.is_dir():
-            targets.extend(p.rglob("*.md"))
+            # Vale's own invocation is scoped by .vale.ini; this second pass is
+            # not, so a bare `make lint-prose ARGS=.` would otherwise walk
+            # node_modules (1,200+ .md files), themes/, and the agent
+            # instruction files AGENTS.md exempts from heading-case rules.
+            targets.extend(
+                f
+                for f in p.rglob("*.md")
+                if not any(
+                    part in SKIP_DIRS or part.startswith(".")
+                    for part in f.parts
+                )
+            )
         elif a.endswith(".md"):
             targets.append(p)
     targets = [
@@ -98,16 +113,26 @@ def main(argv):
         # findings are filtered to the one rule below rather than via
         # --filter, which in Vale 3.x takes a filter *file*, not an inline
         # expression.
-        result = subprocess.run(
-            [
-                "vale",
-                "--no-exit",
-                "--output=JSON",
-                *(str(tmpdir / n) for n in index),
-            ],
-            capture_output=True,
-            text=True,
-        )
+        try:
+            result = subprocess.run(
+                [
+                    "vale",
+                    "--no-exit",
+                    "--output=JSON",
+                    *(str(tmpdir / n) for n in index),
+                ],
+                capture_output=True,
+                text=True,
+            )
+        except (FileNotFoundError, OSError) as exc:
+            # lint-prose.sh already printed a clean "vale: command not found"
+            # before reaching this helper; a traceback on top of it is noise.
+            print(
+                f"frontmatter-title-case: could not run vale ({exc}); skipping.",
+                file=sys.stderr,
+            )
+            return 0
+
         try:
             findings = json.loads(result.stdout or "{}")
         except json.JSONDecodeError:
@@ -127,7 +152,10 @@ def main(argv):
 
         count = 0
         for synth, items in findings.items():
-            real, line_no, title = index[Path(synth).name]
+            entry = index.get(Path(synth).name)
+            if entry is None:
+                continue  # Vale echoed a path we didn't synthesize
+            real, line_no, title = entry
             for item in items:
                 if item.get("Check") != "Pulumi.HeadingSentenceCase":
                     continue

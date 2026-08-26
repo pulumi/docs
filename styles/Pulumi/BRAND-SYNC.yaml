@@ -45,8 +45,9 @@
 #     IS mirrored, since it's unambiguous.
 #   - "Policy as Code" -> "Pulumi Policies". Retired only as a PRODUCT name;
 #     "policy as code" the practice is fine, and case doesn't separate them.
-#     All 34 occurrences in content/ are title-cased labels for the practice,
-#     where the swap would be wrong. Their defect is the casing, not the name.
+#     169 occurrences across 94 files run both ways -- "Pulumi Policy as Code"
+#     names the product and should swap, "Policy as Code acts as a form of
+#     testing" describes the practice and must not.
 #   - "Pulumi Service provider (PSP)" -> "Pulumi Cloud provider". Excluded by a
 #     lookahead in DeprecatedProductNames; renaming the provider is a product/IA
 #     decision with URL-alias consequences, outside this lint rule's remit.
@@ -107,8 +108,9 @@ sections:
         mirrors: >-
           "Headings and titles" — sentence case at every level, H1 included.
           Front-matter titles are checked through this same rule by
-          scripts/lint/frontmatter-title-case.py, since Vale skips YAML front
-          matter.
+          scripts/lint/frontmatter-title-case.py. Vale does read front matter
+          -- substitution rules match a title_tag: today -- but this rule is
+          scoped to headings, and front matter isn't parsed as one.
       - rule: Pulumi.FutureTense
         mirrors: Present tense for product behavior.
       - rule: Pulumi.NarrativeWe

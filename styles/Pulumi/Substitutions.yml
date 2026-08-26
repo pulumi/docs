@@ -33,12 +33,15 @@ action:
 swap:
   '\bpublic beta\b': public preview
   '\bcross-language package\b': Pulumi package
+  '\bcross-language packages\b': Pulumi packages
   '\bsingle-language package\b': native language package
+  '\bsingle-language packages\b': native language packages
   # Lookahead, not a lookbehind (see DeprecatedProductNames.yml on why): every
   # occurrence of this phrase in content/ is "language-native package managers"
   # (npm, PyPI, NuGet, Maven, Go modules) — the package *managers* native to each
   # language, not the retired package-type term. Without the exclusion this row
   # was a 13-for-13 false positive at blocker tier.
   '\blanguage-native package\b(?!\s+managers?\b)': native language package
+  '\blanguage-native packages\b': native language packages
   '\bself-managed backend\b': DIY backend
   '\bself-managed backends\b': DIY backends

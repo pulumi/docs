@@ -5,8 +5,10 @@
 # Separate from Nomenclature.yml, which owns the Pulumi product-names table.
 # Blocker tier: each of these is wrong in every context, and the replacement is
 # right in every context -- the canonical form already dominates the corpus in
-# every pair below (GitHub 1786 vs Github 100, TypeScript 1305 vs Typescript
-# 53), so these are slips, not house style.
+# every pair below by more than an order of magnitude (measured 2026-08-26:
+# GitHub 1786 vs Github 101, TypeScript 1307 vs Typescript 53), so these are
+# slips, not house style. Exact counts drift with every rebase; the ratio is
+# the argument, not the figures.
 #
 # Case-sensitive on purpose: lowercase forms are legitimate in URLs, package
 # names, and paths (github.com, @pulumi/pulumi/nodejs, a typescript/ folder).

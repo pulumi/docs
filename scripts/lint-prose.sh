@@ -41,8 +41,9 @@ fi
 
 vale --no-exit "${TARGETS[@]}"
 
-# Front-matter titles are the site's H1s, but Vale skips YAML front matter,
-# so Pulumi.HeadingSentenceCase can't see them directly. This helper feeds
+# Front-matter titles are the site's H1s. Vale reads front matter (a
+# substitution rule matches a title_tag: today), but this rule is scoped to
+# headings and front matter isn't parsed as one. This helper feeds
 # each target's title/h1 fields through that same Vale rule (same
 # sentence-case check, same proper-noun exceptions) and maps findings back to
 # the source line. Advisory like everything else here; the changed-files
