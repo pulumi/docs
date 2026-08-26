@@ -49,7 +49,7 @@ items:
         items:
           - label: Get started
             href: /docs/get-started/
-            description: Follow a step-by-step guide to quickly learn Pulumi
+            description: Install Pulumi and deploy your first project in minutes
             icon: rocket-launch
             track: header-engineers-get-started
           - label: Documentation
@@ -62,7 +62,7 @@ items:
             description: Browse 170+ cloud providers and packages
             icon: package
             track: header-engineers-registry
-          - label: Learn
+          - label: Learn Pulumi
             href: /learn/
             description: Tutorials, templates, examples, and more
             icon: compass
