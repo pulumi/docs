@@ -145,7 +145,7 @@ Transformations, which are unique to Pulumi, allow you to programmatically set o
 
 ### Import Code from Other IaC Tools {#converting}
 
-Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi user guide.
+Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/iac/guides/migration/#conversion) in our Adopting Pulumi user guide.
 
 ## Get Started with Pulumi
 

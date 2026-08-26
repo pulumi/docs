@@ -260,7 +260,7 @@ The property defined in your `kubernetes.apps/v1.Deployment` resource is:
 |--------------|-------------|
 | **spec** | tells the Kubernetes provider the specification of the desired behavior of the deployment |
 
-**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/options/).
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/resources/options/).
 
 ## Deploy your resources
 
