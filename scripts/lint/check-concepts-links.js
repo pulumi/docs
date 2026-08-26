@@ -14,13 +14,15 @@
  * inside someone else's URL (kubernetes.io, HashiCorp's docs, Okta's docs all
  * have their own unrelated `/docs/concepts/` paths) or inside an unrelated
  * path like an image asset (`/images/docs/concepts/foo.png`). It also skips
- * webpack's own generated bundles under static/js/ and static/css/ -- a
- * stale link surviving in the compiled output was already caught in its
+ * webpack's own generated JS bundles under static/js/ -- a stale link
+ * surviving in the compiled output was already caught in its
  * theme/src/**\/*.ts source, which this guard scans directly -- but only
  * when git itself confirms the specific path is ignored build output, not
  * merely by filename pattern, since a few checked-in files under
  * static/js/ happen to match the same naming convention. See
- * `isGeneratedBundle` for the full rationale.
+ * `isGeneratedBundle` for the full rationale. (Generated CSS isn't in scope
+ * either way: `SCANNABLE_EXTENSIONS` below has no `.css` entry, so `walk()`
+ * never reaches a stylesheet, generated or hand-authored.)
  *
  * Usage:
  *   node scripts/lint/check-concepts-links.js              # scan the repo
@@ -54,27 +56,41 @@ const EXCLUDED_DIR_SEGMENTS = [
     "static-prebuilt",
     path.join("theme", "stencil", "www"),
     path.join("theme", "stencil", "dist"),
-    // This guard's own directory: its doc comments, usage examples, and
-    // --self-test fixtures all contain the literal string /docs/concepts/
-    // on purpose, and scanning them would be 100% self-referential noise,
-    // not a real link anyone will ever click. scripts/search/rank.js and
-    // any other genuine script under scripts/ are still scanned.
-    path.join("scripts", "lint"),
 ];
 
-// Webpack writes its build output into static/js/ and static/css/ under
-// content-hashed names (see .gitignore's own "webpack-generated JS entry
-// bundles" section for the canonical list of these patterns). Those files
-// are never authored by hand -- they are compiled from theme/src/ts/*.ts and
-// theme/src/scss/*.scss, which this guard already scans directly -- and CI
-// runs `make build` before `make lint`, so a stale-link string surviving
-// only in the *source* TypeScript would still be caught there. Scanning the
-// generated bundle too would flag the same defect twice under a filename
-// that changes on every build (the content hash), which a baseline entry
-// can never pin down. Skip them by filename pattern rather than by
-// excluding all of static/js and static/css outright, since those
-// directories also hold genuine hand-authored, git-tracked files (e.g.
+// This guard's own source file: its doc comments, usage examples, and
+// --self-test fixtures all contain the literal string /docs/concepts/ on
+// purpose, and scanning it would be 100% self-referential noise, not a
+// real link anyone will ever click. Scoped to this one file rather than
+// all of scripts/lint/, so lint-markdown.js and any future script in that
+// directory that emits a genuine doc URL are still scanned; and checked in
+// runScan() (both the repo-walk and the explicit-file entry points) rather
+// than shouldSkipDir()/walk(), so `node check-concepts-links.js
+// scripts/lint/check-concepts-links.js` agrees with a full-repo run instead
+// of reporting ~20 violations against the script's own fixtures.
+// relativePath() always joins with "/" regardless of platform, so this set
+// uses a literal posix-style path rather than path.join (which would emit
+// "\\" on Windows and never match).
+const EXCLUDED_FILES = new Set(["scripts/lint/check-concepts-links.js"]);
+
+// Webpack writes its build output into static/js/ under content-hashed
+// names (see .gitignore's own "webpack-generated JS entry bundles" section
+// for the canonical list of these patterns). Those files are never authored
+// by hand -- they are compiled from theme/src/ts/*.ts, which this guard
+// already scans directly -- and CI runs `make build` before `make lint`, so
+// a stale-link string surviving only in the *source* TypeScript would still
+// be caught there. Scanning the generated bundle too would flag the same
+// defect twice under a filename that changes on every build (the content
+// hash), which a baseline entry can never pin down. Skip them by filename
+// pattern rather than by excluding all of static/js outright, since that
+// directory also holds genuine hand-authored, git-tracked files (e.g.
 // static/js/pulumi-mermaid-theme.js) that should still be scanned.
+// (.gitignore also lists a `styles.*.css` bundle under static/css/, but
+// SCANNABLE_EXTENSIONS below has no `.css` entry -- walk() never reaches a
+// stylesheet at all, generated or not -- so that pattern and a static/css
+// directory entry would both be unreachable dead code here. Omitted
+// rather than carried along for symmetry; see SCANNABLE_EXTENSIONS if CSS
+// scanning is ever added.)
 //
 // A filename pattern alone is not proof a given file is actually generated:
 // static/js/consent-manager.cbf13435.js, static/js/consent-manager.e2d01ae6.js,
@@ -87,9 +103,9 @@ const EXCLUDED_DIR_SEGMENTS = [
 // to mirror -- .gitignore -- over the pattern alone: a name match only skips
 // the file when `git check-ignore` also treats the path as build output. The
 // directory restriction additionally keeps a loose pattern like
-// /^chunk-.*\.js$/ from reaching outside static/js and static/css into the
-// other seven scan roots.
-const GENERATED_BUNDLE_DIRS = new Set(["static/js", "static/css"]);
+// /^chunk-.*\.js$/ from reaching outside static/js into the other seven scan
+// roots.
+const GENERATED_BUNDLE_DIRS = new Set(["static/js"]);
 
 const GENERATED_BUNDLE_PATTERNS = [
     /^bundle\.(min\.)?[0-9a-f]+\.js$/,
@@ -99,7 +115,6 @@ const GENERATED_BUNDLE_PATTERNS = [
     /^chunk-.*\.js$/,
     /^consent-manager\.[0-9a-f]+\.js$/,
     /^header-nav\.[0-9a-f]+\.js$/,
-    /^styles\.[0-9a-f]+\.css$/,
 ];
 
 /**
@@ -132,8 +147,17 @@ function gitCheckIgnore(fullPath) {
         });
         return true;
     } catch (e) {
-        if (typeof e.status === "number" && e.status === 1) {
-            return false;
+        // Two distinct failures land here and are deliberately not told
+        // apart by return value: exit 1 ("git says this path is not
+        // ignored", the routine case for every hand-authored file) and any
+        // other outcome (git missing from PATH, not a work tree, spawn
+        // failure). Both fail closed to `false` -- scan the file rather
+        // than silently skip it -- but an atypical failure still deserves
+        // a one-line signal on stderr so a red build in an environment
+        // without git points at its actual cause instead of looking like
+        // ~30 ordinary stale-link violations in files nobody touched.
+        if (!(typeof e.status === "number" && e.status === 1)) {
+            console.warn(`check-concepts-links: \`git check-ignore\` failed unexpectedly for ${fullPath}: ${e.message}`);
         }
         return false;
     }
@@ -352,6 +376,8 @@ function runScan(files) {
     /** @type {Map<string, {line: number, text: string}[]>} */
     const byFile = new Map();
     for (const file of files) {
+        const rel = relativePath(file);
+        if (EXCLUDED_FILES.has(rel)) continue;
         let text;
         try {
             text = fs.readFileSync(file, "utf8");
@@ -360,7 +386,7 @@ function runScan(files) {
         }
         const violations = scanFileContent(text);
         if (violations.length > 0) {
-            byFile.set(relativePath(file), violations);
+            byFile.set(rel, violations);
         }
     }
     return byFile;
@@ -511,7 +537,7 @@ function runSelfTest() {
             expectGenerated: false,
         },
         {
-            desc: "pattern match outside static/js and static/css is never generated",
+            desc: "pattern match outside static/js is never generated",
             fullPath: path.join(REPO_ROOT, "content", "blog", "chunk-abc.js"),
             checkIgnore: () => true,
             expectGenerated: false,
