@@ -7,7 +7,7 @@ menu:
   administration:
         name: Audit Logs
         parent: administration-concepts
-        weight: 8
+        weight: 9
         identifier: administration-concepts-audit-logs
 aliases:
 - /docs/administration/security-compliance/audit-logs/

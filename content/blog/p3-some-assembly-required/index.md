@@ -65,7 +65,7 @@ Let’s go through each of those and briefly discuss what it looks like to set t
 
 ## Authentication and identity management
 
-We highly recommend using GitHub for code management. So much so that we have deeply integrated GitHub into Pulumi Cloud across a number of features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/administration/concepts/identity-providers/#gitlab), this will be the easiest and more feature-rich way to configure your platform.
+We highly recommend using GitHub for code management, so much so that we have deeply integrated GitHub into Pulumi Cloud across many features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/administration/concepts/identity-providers/#gitlab), this will be the easiest and more feature-rich way to configure your platform.
 
 In Pulumi Cloud, you have the ability to create organizations. A [Pulumi Cloud organization](https://www.pulumi.com/docs/pulumi-cloud/organizations/) can help you manage teams, roles, stacks, settings, and provide a dashboard across the entire organization. Pulumi Cloud also allows you to use a variety of identity providers to log in, including GitHub.
 
