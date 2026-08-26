@@ -56,7 +56,7 @@ An installation can be linked to one Pulumi organization this way. If it's alrea
 Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
 
 {{% notes type="info" %}}
-Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](https://www.pulumi.com/support/). This option is only available for Enterprise and Business Critical customers.
+Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](/support/new/). This option is only available for Enterprise and Business Critical customers.
 {{% /notes %}}
 
 ### GitHub Enterprise Server support

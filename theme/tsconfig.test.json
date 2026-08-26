@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "pretty": true,
+        "target": "es2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "es2020"
+        ],
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "rootDir": "src/ts",
+        "outDir": "bin-test",
+        "types": []
+    },
+    "files": [
+        "src/ts/node-test-shims.d.ts",
+        "src/ts/support-form.ts",
+        "src/ts/support-form.test.ts"
+    ]
+}

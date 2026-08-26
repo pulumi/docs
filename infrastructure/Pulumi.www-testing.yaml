@@ -3,6 +3,7 @@ config:
   www.pulumi.com:addSecurityHeaders: "true"
   www.pulumi.com:certificateArn: "arn:aws:acm:us-east-1:571684982431:certificate/dacf95ab-d4dd-4370-9c93-6ce0b9dda7c0"
   www.pulumi.com:doEdgeRedirects: "true"
+  www.pulumi.com:enableSupportForm: "true"
   www.pulumi.com:hostedZone: www.pulumi-test.io
   www.pulumi.com:makeFallbackBucket: "false"
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
@@ -13,3 +14,6 @@ config:
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
+  www.pulumi.com:intercomTicketTypeId: "4573798"
+  www.pulumi.com:intercomApiKey:
+    secure: AAABAJ2bHeR1rJ6zKuK1eW5I83ueGZ3bwh8ELILQeauY3Ca+cnmF+YyaS4GNAgPKN03geZ0mBxEli2g1kSBftGApsV3q3tvw4ImqXTtj7+dckCroD8xx97P+YVc=

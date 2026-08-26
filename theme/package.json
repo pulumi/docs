@@ -24,6 +24,7 @@
         "concurrently": "^6.2.1",
         "css-loader": "^7.1.4",
         "cssnano": "^5.0.8",
+        "jsdom": "^25.0.1",
         "mini-css-extract-plugin": "^2.10.2",
         "postcss": "^8.5.18",
         "postcss-loader": "^8.2.1",
@@ -43,6 +44,7 @@
         "build": "yarn build:color-theme && yarn run webpack --mode production",
         "start": "yarn run concurrently 'yarn --cwd stencil run start' 'yarn run webpack --watch' --raw --kill-others",
         "lint": "prettier --check .",
-        "lint-fix": "prettier --write ."
+        "lint-fix": "prettier --write .",
+        "test-support-form": "tsc -p tsconfig.test.json && node ../scripts/check-test-suites-compiled.js src/ts bin-test theme/tsconfig.test.json && node --test bin-test/*.test.js"
     }
 }

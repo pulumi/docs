@@ -1,4 +1,4 @@
 ---
-redirect_to: "https://support.pulumi.com/"
+redirect_to: "/support/new/"
 block_external_search_index: true
 ---

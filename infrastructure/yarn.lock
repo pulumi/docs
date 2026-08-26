@@ -476,6 +476,13 @@
     source-map-support "^0.5.6"
     upath "^1.1.0"
 
+"@pulumi/random@^4.16.0":
+  version "4.21.1"
+  resolved "https://registry.yarnpkg.com/@pulumi/random/-/random-4.21.1.tgz#5bfe67166f530a0bff2ba32fc4abb81ce805308d"
+  integrity sha512-2wD0UJTsoyj+MyBOa60E2FyrqyIaspTCz1qBG+mj34xQUk/u568s4925oWpGEeY3Z3wV7BbRpiEnnztnDb1xOA==
+  dependencies:
+    "@pulumi/pulumi" "^3.142.0"
+
 "@sigstore/bundle@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@sigstore/bundle/-/bundle-4.0.0.tgz#854eda43eb6a59352037e49000177c8904572f83"
