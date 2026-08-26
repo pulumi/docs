@@ -1,8 +1,11 @@
 name: Support form tests
 
-# Runs the unit suite for the /api/support Lambda (payload validation, the
-# handler's status paths, and the Intercom ticket-filing client) on any PR that
-# touches it.
+# Runs the unit suites for the support form -- both halves. The server suite
+# covers the /api/support Lambda (payload validation, the handler's status
+# paths, the Intercom client); the client suite drives theme/src/ts/
+# support-form.ts against jsdom (draft recovery, query-param prefill,
+# validation, submission). They are separate packages with separate
+# toolchains, so they run as separate steps.
 #
 # The suite existed before this workflow did, and nothing ran it: `make test`
 # covers only the example programs, and `make ci_pull_request` previews the
@@ -35,6 +38,11 @@ on:
     paths:
       - 'infrastructure/**'
       - '!infrastructure/versioned-docs/**'
+      - 'theme/src/ts/support-form.ts'
+      - 'theme/src/ts/support-form.test.ts'
+      - 'theme/tsconfig.test.json'
+      # The client suite asserts the layout still provides the ids it binds to.
+      - 'layouts/page/support-new.html'
       - '.github/workflows/support-form-tests.yml'
 
 permissions:
@@ -57,27 +65,41 @@ jobs:
         with:
           node-version: '24.x'
           cache: 'yarn'
-          cache-dependency-path: infrastructure/yarn.lock
+          cache-dependency-path: |
+            infrastructure/yarn.lock
+            theme/yarn.lock
       - name: Install deps
-        run: yarn --cwd infrastructure install --frozen-lockfile
+        run: |
+          yarn --cwd infrastructure install --frozen-lockfile
+          yarn --cwd theme install --frozen-lockfile
       # Tee'd rather than run bare so the count can be asserted afterwards.
       # check-suites-compiled.js proves every suite will be reached; this proves
       # the runner actually executed assertions once it got there. A suite whose
       # tests were all commented out would satisfy the first check and not this
       # one. `pipefail` keeps a genuine test failure failing the step, which a
       # bare pipe into tee would otherwise mask.
-      - name: Run suite
+      - name: Run server suite
         shell: bash
         run: |
           set -o pipefail
           yarn --cwd infrastructure test-support-form 2>&1 | tee /tmp/support-form-tests.log
 
-      - name: Assert the suite actually ran
+      - name: Run client suite
         shell: bash
         run: |
-          count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' /tmp/support-form-tests.log | tail -1)
-          if [ -z "$count" ] || [ "$count" -eq 0 ]; then
-            echo "::error::The support-form suite reported ${count:-no} tests. Something is not running."
-            exit 1
-          fi
-          echo "support-form suite ran $count tests."
+          set -o pipefail
+          yarn --cwd theme test-support-form 2>&1 | tee /tmp/support-form-client-tests.log
+
+      - name: Assert both suites actually ran
+        shell: bash
+        run: |
+          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log; do
+            name=${suite%%:*}
+            log=${suite#*:}
+            count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' "$log" | tail -1)
+            if [ -z "$count" ] || [ "$count" -eq 0 ]; then
+              echo "::error::The $name suite reported ${count:-no} tests. Something is not running."
+              exit 1
+            fi
+            echo "$name suite ran $count tests."
+          done

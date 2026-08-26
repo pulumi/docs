@@ -325,10 +325,17 @@ function init() {
     }
 
     let draftTimer: number | undefined;
-    form.addEventListener("input", () => {
+    function scheduleSave(): void {
         window.clearTimeout(draftTimer);
         draftTimer = window.setTimeout(saveDraft, 500);
-    });
+    }
+
+    // Both events, for the same reason markTouched listens to both: a <select>
+    // is not guaranteed to fire `input`, so debouncing on `input` alone means a
+    // visitor who changes only the priority — touching nothing else — never has
+    // that choice written to the draft, and loses it on a failed submit.
+    form.addEventListener("input", scheduleSave);
+    form.addEventListener("change", scheduleSave);
 
     const restoredFields = restoreDraft();
 
