@@ -59,7 +59,7 @@ export type ValidationResult =
     | { ok: true; value: SupportRequest }
     | { ok: false; fields: Record<string, string> };
 
-// Keys accepted at the top level of the JSON payload. "website" is the
+// Keys accepted at the top level of the JSON payload. "leave_blank" is the
 // honeypot field: the handler checks it before validation runs, but it is
 // tolerated here so a spam submission that slips through still validates
 // rather than erroring on an unknown key.
@@ -72,7 +72,7 @@ export const KNOWN_KEYS = [
     "priority",
     "subject",
     "description",
-    "website",
+    "leave_blank",
 ];
 
 // Strips a pasted console URL ("https://app.pulumi.com/my-org/...") or

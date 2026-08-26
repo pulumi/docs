@@ -50,8 +50,8 @@ function formHtml(extraPriorities: string[] = []): string {
           <p data-support-form-counter="support-description" hidden></p>
           <p id="support-description-error" hidden></p>
           <div class="sr-only" aria-hidden="true">
-            <label for="support-website">Leave this field empty</label>
-            <input id="support-website" name="website" type="text" tabindex="-1">
+            <label for="support-leave-blank">Leave this field empty</label>
+            <input id="support-leave-blank" name="leave_blank" type="text" tabindex="-1">
           </div>
           <div role="alert" data-support-form-banner hidden></div>
           <button type="submit" data-support-form-submit data-label="Submit" data-busy-label="Submitting…"></button>
@@ -427,7 +427,7 @@ test("omits the honeypot key entirely from a real submission", async () => {
     const h = mount();
     fillValid(h);
     await h.submit();
-    assert.ok(!("website" in h.fetchCalls[0].body), "an empty honeypot must not appear in the payload");
+    assert.ok(!("leave_blank" in h.fetchCalls[0].body), "an empty honeypot must not appear in the payload");
 });
 
 // --- The layout half of the DOM contract ---------------------------------
@@ -449,10 +449,10 @@ test("the rendered layout still provides every id the module depends on", () => 
         "support-priority",
         "support-subject",
         "support-description",
-        "support-website",
+        "support-leave-blank",
     ]) {
         assert.ok(layout.includes(`id="${id}"`), `layout is missing id="${id}"`);
-        assert.ok(layout.includes(`id="${id}-error"`) || id === "support-website", `layout is missing #${id}-error`);
+        assert.ok(layout.includes(`id="${id}-error"`) || id === "support-leave-blank", `layout is missing #${id}-error`);
     }
     for (const hook of [
         "data-support-form-root",
@@ -495,8 +495,8 @@ test("the rendered layout still provides every id the module depends on", () => 
     // The honeypot's name is the field the handler drops on, so it is part of
     // the contract even though no JS reads it.
     assert.ok(
-        /id="support-website"[^>]*name="website"|name="website"[^>]*id="support-website"/.test(layout),
-        "the honeypot must be named website");
+        /id="support-leave-blank"[^>]*name="leave_blank"/.test(layout),
+        "the honeypot must keep a name with no autofill semantics");
 });
 
 // --- The client half of the honeypot -------------------------------------
@@ -509,11 +509,11 @@ test("forwards a filled honeypot so the server can drop it", () => {
     return (async () => {
         const h = mount();
         fillValid(h);
-        const honeypot = h.control("website");
+        const honeypot = h.control("leave-blank");
         honeypot.value = "http://spam.example.com";
         honeypot.dispatchEvent(new h.win.Event("input", { bubbles: true }));
         await h.submit();
-        assert.strictEqual(h.fetchCalls[0].body.website, "http://spam.example.com");
+        assert.strictEqual(h.fetchCalls[0].body.leave_blank, "http://spam.example.com");
     })();
 });
 
@@ -672,4 +672,55 @@ test("refreshes the character counter after a draft restore", () => {
     const counter = h.doc.querySelector("[data-support-form-counter]") as any;
     assert.strictEqual(counter.hidden, false, "a near-limit restored value must show the counter");
     assert.strictEqual(counter.textContent, "1,000 characters left");
+});
+
+// --- The prefill parameters are consumed, not left in the URL --------------
+
+test("strips the prefill parameters from the address bar once applied", () => {
+    // They are a handoff mechanism, not state. Left in place they ride along in
+    // the referrer, re-apply on a Back navigation after the request was already
+    // filed, and lose a ?priority=urgent to the browser's own form restore.
+    const h = mount({ url: `${PAGE_URL}?priority=urgent&subject=CLI+crash&email=a%40b.co` });
+
+    assert.strictEqual(h.control("priority").value, "urgent", "the prefill must still be applied");
+    assert.strictEqual(h.control("subject").value, "CLI crash");
+    assert.strictEqual(h.win.location.search, "", "the parameters must not survive in the URL");
+    assert.strictEqual(h.win.location.pathname, "/support/new/", "the path must be unchanged");
+});
+
+test("leaves a parameterless URL alone", () => {
+    const h = mount();
+    assert.strictEqual(h.win.location.search, "");
+    assert.strictEqual(h.win.location.pathname, "/support/new/");
+});
+
+// --- What the confirmation shows is what was filed -------------------------
+
+test("sanitizes the payload, so the recap cannot show what the ticket will not contain", async () => {
+    const h = mount();
+    fillValid(h);
+    type(h, "subject", "harmless text\rMALICIOUS \u202Ekcatta\u202C");
+    await h.submit();
+
+    const sent = h.fetchCalls[0].body.subject;
+    assert.strictEqual(sent.indexOf("\r"), -1, "a bare CR must not reach the ticket");
+    assert.strictEqual(sent.indexOf("\u202E"), -1, "a bidi override must not reach the ticket");
+
+    const recap = h.doc.querySelector('[data-support-form-value="subject"]') as any;
+    assert.strictEqual(recap.textContent, sent, "the recap must show exactly what was filed");
+});
+
+// --- The honeypot's name is part of the defence ----------------------------
+
+test("keeps the honeypot on a name autofill will not recognise", () => {
+    // As "website" it was a prime autofill target -- password managers store
+    // website URLs and match on the field name -- and an autofilled trap
+    // destroys a real request: the user is shown the confirmation, their draft
+    // is deleted, and no ticket exists.
+    const h = mount();
+    const honeypot = h.control("leave-blank");
+    assert.ok(honeypot, "the honeypot must exist");
+    assert.strictEqual(honeypot.name, "leave_blank");
+    assert.strictEqual(honeypot.getAttribute("autocomplete"), null, "the fixture mirrors the layout's own attributes");
+    assert.strictEqual(h.doc.getElementById("support-website"), null, "the autofill-prone name must be gone");
 });

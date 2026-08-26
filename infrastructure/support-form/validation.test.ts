@@ -372,7 +372,7 @@ test("handler reports a ticket-creation failure as a 502", async () => {
 test("handler swallows honeypot submissions with a fake success", async () => {
     process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
     const before = intercomCalls.length;
-    const response = await supportFormHandler(postEvent({ ...validPayload(), website: "https://spam.example" }));
+    const response = await supportFormHandler(postEvent({ ...validPayload(), leave_blank: "https://spam.example" }));
     assert.strictEqual(response.statusCode, 200);
     const parsed = JSON.parse(response.body);
     assert.strictEqual(parsed.ok, true);
@@ -396,7 +396,7 @@ test("the honeypot does not announce itself through the validation order", async
     // must now be refused the same way.
     const invalid = { ...validPayload(), email: "not-an-email" };
 
-    const withTrap = await supportFormHandler(postEvent({ ...invalid, website: "https://spam.example" }));
+    const withTrap = await supportFormHandler(postEvent({ ...invalid, leave_blank: "https://spam.example" }));
     const withoutTrap = await supportFormHandler(postEvent(invalid));
 
     assert.strictEqual(withTrap.statusCode, 422);
@@ -483,12 +483,12 @@ test("handler does not forward the honeypot key to Intercom", async () => {
 
     // An empty honeypot is not spam, so this is accepted and filed -- but the
     // key is not part of the ticket.
-    const response = await supportFormHandler(postEvent({ ...validPayload(), website: "" }));
+    const response = await supportFormHandler(postEvent({ ...validPayload(), leave_blank: "" }));
     assert.strictEqual(response.statusCode, 200);
 
     const ticket = intercomRequests.slice(before).find(r => r.url.endsWith("/tickets"));
     assert.ok(ticket, "expected a ticket to be filed");
-    assert.ok(!JSON.stringify(ticket!.body).includes("website"));
+    assert.ok(!JSON.stringify(ticket!.body).includes("leave_blank"));
 });
 
 // --- The 403 gate --------------------------------------------------------
@@ -502,8 +502,8 @@ test("the origin-secret gate cannot be swayed by anything in the body", async ()
     // be proven independent of it rather than tested at one body shape.
     const bodies: unknown[] = [
         validPayload(),
-        { ...validPayload(), website: "spam" },
-        { website: "x" },
+        { ...validPayload(), leave_blank: "spam" },
+        { leave_blank: "x" },
         {},
         [],
         "",
@@ -578,7 +578,7 @@ test("pins the accepted top-level keys", () => {
         "priority",
         "subject",
         "description",
-        "website",
+        "leave_blank",
     ]);
 });
 

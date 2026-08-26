@@ -58,6 +58,18 @@ const FIELD_IDS: Record<string, string> = {
 
 type FormControl = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
+// Mirrors sanitizeText in infrastructure/support-form/validation.ts: control
+// characters and bidirectional overrides carry no meaning in a support request
+// but change how the text is read once it leaves the browser.
+//
+// Applied here as well as on the server so the confirmation panel shows the
+// user what was actually filed. Without it the recap can render a right-to-left
+// override the ticket will not contain, which is the wrong way round for a
+// screen whose whole job is to confirm what was sent.
+function sanitizeText(value: string): string {
+    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g, "");
+}
+
 // Strips a pasted console URL down to the bare organization name. Mirrors
 // normalizeOrganization in infrastructure/support-form/validation.ts.
 function normalizeOrganization(raw: string): string {
@@ -409,6 +421,19 @@ function init() {
     // to be told.
     counterUpdates.forEach(update => update());
 
+    // Drop the prefill parameters once they have been applied. They are a
+    // handoff mechanism, not state, and leaving them in the address bar has
+    // three costs: the values are the requester's own email, name, org and
+    // subject line, which then ride along in the referrer and anything reading
+    // location.search; a Back navigation re-applies them, so a visitor who
+    // already filed a request lands on a repopulated form; and the browser's
+    // own session-history restore runs after this code and would overwrite a
+    // prefilled <select> with its reset value -- turning ?priority=urgent into
+    // a normal ticket on the way back.
+    if (params.toString() && window.history && typeof window.history.replaceState === "function") {
+        window.history.replaceState(window.history.state, "", window.location.pathname + window.location.hash);
+    }
+
     // Errors clear as the user fixes the field.
     for (const field of Object.keys(validators)) {
         const input = control(field);
@@ -435,7 +460,7 @@ function init() {
     }
 
     function buildPayload(): Record<string, unknown> {
-        const value = (field: string) => (control(field)?.value || "").trim();
+        const value = (field: string) => sanitizeText(control(field)?.value || "").trim();
         const payload: Record<string, unknown> = {
             email: value("email"),
             name: value("name"),
@@ -445,9 +470,9 @@ function init() {
             description: value("description"),
         };
         // Honeypot travels with the payload so the server can drop bot fills.
-        const honeypot = form.querySelector<HTMLInputElement>("#support-website");
+        const honeypot = form.querySelector<HTMLInputElement>("#support-leave-blank");
         if (honeypot && honeypot.value) {
-            payload.website = honeypot.value;
+            payload.leave_blank = honeypot.value;
         }
         return payload;
     }

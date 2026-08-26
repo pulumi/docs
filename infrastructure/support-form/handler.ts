@@ -218,8 +218,15 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         return jsonResponse(422, { ok: false, error: "validation_failed", fields: result.fields });
     }
 
-    // Honeypot: the "website" field is visually hidden on the form, so any
+    // Honeypot: the "leave_blank" field is visually hidden on the form, so any
     // value in it marks a bot. Pretend success so the bot moves on.
+    //
+    // The name matters. As "website" the field was a prime autofill target --
+    // password managers store website URLs and match on the field name -- and an
+    // autofilled trap destroys a real person's request: they are shown the
+    // confirmation, their draft is deleted, and no ticket exists. A name with no
+    // autofill semantics costs nothing against the naive bots this catches,
+    // which fill every field regardless of what it is called.
     //
     // Deliberately AFTER validation, and returning the same response shape a
     // real success does. Checking it first gave a spammer a one-request oracle:
@@ -228,7 +235,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
     // success that omitted ticketId was distinguishable from a real one by any
     // caller that read the documented shape. Both are closed by validating
     // first and minting a plausible id.
-    if (typeof parsed === "object" && parsed !== null && (parsed as Record<string, unknown>).website) {
+    if (typeof parsed === "object" && parsed !== null && (parsed as Record<string, unknown>).leave_blank) {
         console.log(
             JSON.stringify({
                 type: "support_request_spam_dropped",
