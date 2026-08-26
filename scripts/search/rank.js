@@ -77,7 +77,7 @@ module.exports = {
         if (page.href.startsWith("/docs")) {
 
             // First concepts.
-            if (page.href.startsWith("/docs/concepts/")) {
+            if (page.href.startsWith("/docs/iac/concepts/")) {
                 return 890;
             }
 

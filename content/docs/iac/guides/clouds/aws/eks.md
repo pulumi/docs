@@ -304,7 +304,7 @@ it using Pulumi into our EKS cluster with the following code and by running `pul
 {{< example-program path="aws-eks-k8s-configgroup" >}}
 
 The `ConfigFile` and `ConfigGroup` classes support [`transforms`](
-/docs/concepts/options/transforms/) via `ResourceOptions`, which can be used to ['monkey patch'](
+/docs/iac/concepts/resources/options/transforms/) via `ResourceOptions`, which can be used to ['monkey patch'](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
 

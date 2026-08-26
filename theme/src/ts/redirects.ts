@@ -24,7 +24,7 @@ if (path === "/docs/intro/concepts/programming-model/" || path === "/docs/refere
         "#lifting": "/docs/iac/concepts/inputs-outputs/apply/#using-lifting-to-simplify-nested-access",
         "#names": "/docs/iac/concepts/resources/names/",
         "#outputs": "/docs/iac/concepts/inputs-outputs/",
-        "#outputs-and-strings": "/docs/iac/concepts/inputs-outputs/all/",
+        "#outputs-and-strings": "/docs/iac/concepts/inputs-outputs/all/#using-string-interpolation",
         "#program-structure": "/docs/iac/concepts/",
         "#programs": "/docs/iac/concepts/",
         "#providers": "/docs/iac/concepts/providers/",
