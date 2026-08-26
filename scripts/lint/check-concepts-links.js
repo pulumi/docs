@@ -54,6 +54,34 @@ const EXCLUDED_DIR_SEGMENTS = [
     path.join("scripts", "lint"),
 ];
 
+// Webpack writes its build output into static/js/ and static/css/ under
+// content-hashed names (see .gitignore's own "webpack-generated JS entry
+// bundles" section for the canonical list of these patterns). Those files
+// are never authored by hand -- they are compiled from theme/src/ts/*.ts and
+// theme/src/scss/*.scss, which this guard already scans directly -- and CI
+// runs `make build` before `make lint`, so a stale-link string surviving
+// only in the *source* TypeScript would still be caught there. Scanning the
+// generated bundle too would flag the same defect twice under a filename
+// that changes on every build (the content hash), which a baseline entry
+// can never pin down. Skip them by filename pattern rather than by
+// excluding all of static/js and static/css outright, since those
+// directories also hold genuine hand-authored, git-tracked files (e.g.
+// static/js/pulumi-mermaid-theme.js) that should still be scanned.
+const GENERATED_BUNDLE_PATTERNS = [
+    /^bundle\.(min\.)?[0-9a-f]+\.js$/,
+    /^algolia\.[0-9a-f]+\.js$/,
+    /^marketing(-homepage)?\.[0-9a-f]+\.js$/,
+    /^homepage\.[0-9a-f]+\.js$/,
+    /^chunk-.*\.js$/,
+    /^consent-manager\.[0-9a-f]+\.js$/,
+    /^header-nav\.[0-9a-f]+\.js$/,
+    /^styles\.[0-9a-f]+\.css$/,
+];
+
+function isGeneratedBundle(fileName) {
+    return GENERATED_BUNDLE_PATTERNS.some((re) => re.test(fileName));
+}
+
 const SCANNABLE_EXTENSIONS = new Set([
     ".md",
     ".mdx",
@@ -215,7 +243,7 @@ function walk(dir, out) {
         if (entry.isDirectory()) {
             walk(full, out);
         } else if (entry.isFile()) {
-            if (SCANNABLE_EXTENSIONS.has(path.extname(entry.name))) {
+            if (SCANNABLE_EXTENSIONS.has(path.extname(entry.name)) && !isGeneratedBundle(entry.name)) {
                 out.push(full);
             }
         }
