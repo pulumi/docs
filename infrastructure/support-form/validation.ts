@@ -57,7 +57,9 @@ export type ValidationResult =
 // honeypot field: the handler checks it before validation runs, but it is
 // tolerated here so a spam submission that slips through still validates
 // rather than erroring on an unknown key.
-const KNOWN_KEYS = [
+// Exported so the suite can pin the exact set: the way this rule erodes is a
+// new key being added, which no "rejects an unknown key" test can see.
+export const KNOWN_KEYS = [
     "email",
     "name",
     "organization",
@@ -71,8 +73,12 @@ const KNOWN_KEYS = [
 // stray slashes down to the bare organization name.
 export function normalizeOrganization(raw: string): string {
     let value = raw.trim();
-    value = value.replace(/^https?:\/\/(www\.)?app\.pulumi\.com\//i, "");
-    value = value.replace(/^app\.pulumi\.com\//i, "");
+    // One pattern rather than two, so every combination of scheme and www is
+    // handled. As two, the schemeless branch did not allow www., and a pasted
+    // "www.app.pulumi.com/my-org" survived as far as the host name and then
+    // failed validation on its dots -- a confusing character-set error for what
+    // is a perfectly ordinary paste.
+    value = value.replace(/^(https?:\/\/)?(www\.)?app\.pulumi\.com\//i, "");
     value = value.replace(/^\/+/, "");
     const slash = value.indexOf("/");
     if (slash !== -1) {

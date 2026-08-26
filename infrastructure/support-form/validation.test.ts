@@ -12,7 +12,7 @@ import * as assert from "assert";
 import { test } from "node:test";
 
 import { clientAddress, FunctionUrlEvent, supportFormHandler } from "./handler";
-import { LIMITS, normalizeOrganization, validateSubmission } from "./validation";
+import { KNOWN_KEYS, LIMITS, normalizeOrganization, validateSubmission } from "./validation";
 
 function validPayload(): Record<string, unknown> {
     return {
@@ -137,11 +137,19 @@ const TICKET_ID = "ticket-42";
 // file a ticket can assert on it. The request shape itself is covered in
 // intercom.test.ts.
 const intercomCalls: string[] = [];
+const intercomRequests: Array<{ url: string; body: any }> = [];
 let intercomUp = true;
 
-globalThis.fetch = async input => {
+globalThis.fetch = async (input, init) => {
     const url = String(input);
     intercomCalls.push(url);
+    let sent: any;
+    try {
+        sent = init && typeof init.body === "string" ? JSON.parse(init.body) : undefined;
+    } catch (e) {
+        sent = undefined;
+    }
+    intercomRequests.push({ url, body: sent });
     if (!intercomUp) {
         return new Response("service unavailable", { status: 503 });
     }
@@ -373,4 +381,195 @@ test("handler swallows honeypot submissions with a fake success", async () => {
     // acceptance.
     assert.strictEqual(intercomCalls.length, before);
     assert.strictEqual(parsed.ticketId, undefined);
+});
+
+// --- The validation -> side-effect boundary -------------------------------
+//
+// Every other handler test posts an already-normalized validPayload(), so the
+// normalization is a no-op in them and nothing notices which object crosses
+// into the Intercom client. Posting a value that normalization actually
+// changes is what makes the difference observable.
+
+test("handler files the validated value, not the caller's raw payload", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const before = intercomRequests.length;
+
+    const response = await supportFormHandler(postEvent({
+        ...validPayload(),
+        organization: "https://app.pulumi.com/example-corp/stacks/dev",
+    }));
+    assert.strictEqual(response.statusCode, 200);
+
+    const ticket = intercomRequests.slice(before).find(r => r.url.endsWith("/tickets"));
+    assert.ok(ticket, "expected a ticket to be filed");
+    assert.strictEqual(ticket!.body.ticket_attributes["pulumi-org"], "example-corp");
+});
+
+test("handler does not forward the honeypot key to Intercom", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const before = intercomRequests.length;
+
+    // An empty honeypot is not spam, so this is accepted and filed -- but the
+    // key is not part of the ticket.
+    const response = await supportFormHandler(postEvent({ ...validPayload(), website: "" }));
+    assert.strictEqual(response.statusCode, 200);
+
+    const ticket = intercomRequests.slice(before).find(r => r.url.endsWith("/tickets"));
+    assert.ok(ticket, "expected a ticket to be filed");
+    assert.ok(!JSON.stringify(ticket!.body).includes("website"));
+});
+
+// --- The 403 gate --------------------------------------------------------
+
+test("the origin-secret gate cannot be swayed by anything in the body", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+
+    // The realistic regression here is not "the check was deleted" -- that is
+    // already covered -- but "someone added an escape hatch for an internal
+    // caller". Any such hatch is derived from the payload, so the gate has to
+    // be proven independent of it rather than tested at one body shape.
+    const bodies: unknown[] = [
+        validPayload(),
+        { ...validPayload(), website: "spam" },
+        { website: "x" },
+        {},
+        [],
+        "",
+        "{not json",
+        "x".repeat(256 * 1024 + 1),
+    ];
+
+    for (const body of bodies) {
+        const event = postEvent(body);
+        delete event.headers!["x-origin-verify"];
+        const response = await supportFormHandler(event);
+        assert.strictEqual(
+            response.statusCode, 403,
+            `a request without the origin secret must be refused whatever the body holds (${JSON.stringify(body).slice(0, 40)})`);
+    }
+});
+
+// --- Length caps ---------------------------------------------------------
+
+test("enforces every length cap at its exact documented boundary", () => {
+    // Literal boundaries on purpose. Writing these as LIMITS.foo + 1 pins the
+    // shape of the rule but not its value, so the cap could be raised to
+    // anything and the test would follow it up.
+    const domain = "@example.com";
+    const atLimit: Record<string, string> = {
+        email: "a".repeat(254 - domain.length) + domain,
+        name: "a".repeat(200),
+        organization: "a".repeat(40),
+        subject: "a".repeat(200),
+        description: "a".repeat(20000),
+    };
+    const overLimit: Record<string, string> = {
+        email: "a".repeat(255 - domain.length) + domain,
+        name: "a".repeat(201),
+        organization: "a".repeat(41),
+        subject: "a".repeat(201),
+        description: "a".repeat(20001),
+    };
+
+    for (const field of Object.keys(atLimit)) {
+        const ok = validateSubmission({ ...validPayload(), [field]: atLimit[field] });
+        assert.ok(ok.ok, `${field} at its limit must be accepted`);
+
+        const tooLong = validateSubmission({ ...validPayload(), [field]: overLimit[field] });
+        assert.ok(!tooLong.ok, `${field} one character over its limit must be rejected`);
+        if (!tooLong.ok) {
+            assert.ok(tooLong.fields[field], `expected the error to be reported against ${field}`);
+        }
+    }
+});
+
+test("pins the published limits, which /llms.txt documents to agents", () => {
+    assert.deepStrictEqual(LIMITS, {
+        email: 254,
+        name: 200,
+        organization: 40,
+        subject: 200,
+        descriptionMin: 10,
+        description: 20000,
+    });
+});
+
+// --- The accepted-key set ------------------------------------------------
+
+test("pins the accepted top-level keys", () => {
+    // A "rejects an unknown key" test cannot see the way this actually erodes,
+    // which is a key being added to the allowlist.
+    assert.deepStrictEqual(KNOWN_KEYS, [
+        "email",
+        "name",
+        "organization",
+        "priority",
+        "subject",
+        "description",
+        "website",
+    ]);
+});
+
+test("rejects payloads that are not JSON objects", () => {
+    for (const input of [[], [validPayload()], null, "a string", 42, true]) {
+        const result = validateSubmission(input);
+        assert.ok(!result.ok, `expected ${JSON.stringify(input)} to be rejected`);
+        if (!result.ok) {
+            assert.ok(result.fields._form, "a payload-level problem is reported against _form");
+        }
+    }
+});
+
+// --- Header normalization ------------------------------------------------
+
+test("matches the method and content type case-insensitively", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+
+    const lowercaseMethod = postEvent(validPayload());
+    lowercaseMethod.requestContext!.http!.method = "post";
+    assert.strictEqual((await supportFormHandler(lowercaseMethod)).statusCode, 200);
+
+    const mixedContentType = postEvent(validPayload());
+    mixedContentType.headers!["content-type"] = "Application/JSON; charset=utf-8";
+    assert.strictEqual((await supportFormHandler(mixedContentType)).statusCode, 200);
+});
+
+// --- Normalization details -----------------------------------------------
+
+test("normalizes the remaining console-URL shapes", () => {
+    assert.strictEqual(normalizeOrganization("/example-corp"), "example-corp");
+    assert.strictEqual(normalizeOrganization("https://www.app.pulumi.com/example-corp"), "example-corp");
+    assert.strictEqual(normalizeOrganization("www.app.pulumi.com/example-corp"), "example-corp");
+});
+
+test("trims surrounding whitespace on every string field", () => {
+    const result = validateSubmission({
+        ...validPayload(),
+        email: "  jane@example.com  ",
+        subject: "  Stack update stuck in progress  ",
+    });
+    assert.ok(result.ok);
+    if (result.ok) {
+        assert.strictEqual(result.value.email, "jane@example.com");
+        assert.strictEqual(result.value.subject, "Stack update stuck in progress");
+    }
+});
+
+// --- Viewer-address shapes -----------------------------------------------
+
+test("reads bracketed and portless viewer addresses", () => {
+    // RFC 3986 bracketing, so an address is logged in one queryable form.
+    assert.deepStrictEqual(
+        clientAddress(ipEvent({ [VIEWER_HEADER]: "[2001:db8::1]:443" })),
+        { ip: "2001:db8::1", source: "viewer" });
+
+    // No port: the trailing group is not numeric, so it must not be mistaken
+    // for one and trimmed away.
+    assert.deepStrictEqual(
+        clientAddress(ipEvent({ [VIEWER_HEADER]: "2001:db8::abc" })),
+        { ip: "2001:db8::abc", source: "viewer" });
+
+    assert.deepStrictEqual(
+        clientAddress(ipEvent({ [VIEWER_HEADER]: "198.51.100.9" })),
+        { ip: "198.51.100.9", source: "viewer" });
 });

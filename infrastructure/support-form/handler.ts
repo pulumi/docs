@@ -54,6 +54,41 @@ export interface ClientAddress {
     source: IpSource;
 }
 
+// Recovers the address from CloudFront's "<ip>:<port>" viewer-address value.
+//
+// AWS documents the port as always present, so the address is everything before
+// the LAST colon -- which is what makes the IPv6 form work ("2001:db8::1:443" ->
+// "2001:db8::1") where splitting on the first colon would not.
+//
+// Two refinements on top of that. The trailing segment has to actually look like
+// a port: without that check a value that arrived with no port at all is
+// silently truncated to a shorter address that is still labelled as attributed,
+// which is worse than not parsing -- a log line that looks like it identifies
+// someone and does not. And RFC 3986 bracketing ("[2001:db8::1]:443") is
+// stripped, so an address is logged in one queryable form either way. AWS
+// documents only the IPv4 example, so the IPv6 rendering is inferred; both
+// shapes are handled rather than betting on one.
+//
+// One case stays ambiguous and is left as-is: a portless IPv6 whose final group
+// is all digits ("2001:db8::1") is indistinguishable from an address with a
+// port, and loses its last group. AWS documents the port as always present, so
+// this should not arise.
+function stripPort(value: string): string {
+    if (value.charAt(0) === "[") {
+        const closing = value.indexOf("]");
+        return closing === -1 ? value : value.slice(1, closing);
+    }
+    const lastColon = value.lastIndexOf(":");
+    if (lastColon === -1) {
+        return value;
+    }
+    const port = value.slice(lastColon + 1);
+    if (port.length === 0 || !/^[0-9]+$/.test(port)) {
+        return value;
+    }
+    return value.slice(0, lastColon);
+}
+
 // The submitter's IP address, for the abuse trail in the logs below.
 //
 // requestContext.http.sourceIp is NOT it: CloudFront invokes the Function URL,
@@ -74,15 +109,13 @@ export interface ClientAddress {
 // the request came through our distribution: supportFormHandler rejects anything
 // without the x-origin-verify shared secret before this is ever called.
 //
-// The value is "<ip>:<port>" and is IPv6-capable ("2001:db8::1:443"), so the
-// address is everything before the LAST colon.
+// The value is "<ip>:<port>"; see stripPort for how the address is recovered.
 export function clientAddress(event: FunctionUrlEvent): ClientAddress {
     const forwarded = event.headers?.["cloudfront-viewer-address"];
     if (typeof forwarded === "string") {
         const value = forwarded.trim();
         if (value.length > 0 && value.length <= MAX_ADDRESS_LENGTH) {
-            const lastColon = value.lastIndexOf(":");
-            const ip = lastColon === -1 ? value : value.slice(0, lastColon);
+            const ip = stripPort(value);
             if (ip.length > 0) {
                 return { ip, source: "viewer" };
             }

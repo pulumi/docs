@@ -305,9 +305,16 @@ function init() {
             for (const field of draftFields) {
                 const input = control(field);
                 if (input && typeof draft[field] === "string" && draft[field]) {
-                    setControlValue(input, draft[field]);
-                    restored.add(field);
-                    touched.add(field);
+                    // Only a value that was actually applied counts as restored.
+                    // A stale draft can name an option the page no longer
+                    // renders (priority: "high"); treating that as restored
+                    // would suppress the ?priority= prefill in favour of a value
+                    // the control never took, so a visitor following an urgent
+                    // link would file a normal ticket.
+                    if (setControlValue(input, draft[field])) {
+                        restored.add(field);
+                        touched.add(field);
+                    }
                 }
             }
         } catch (e) {
@@ -406,8 +413,20 @@ function init() {
         confirmation.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
+    // In-flight guard. setBusy disables the submit button, and a browser will
+    // not implicitly submit through a disabled default button, so this is
+    // belt-and-braces -- but the cost of being wrong is a duplicate support
+    // ticket, and the button is not the only thing that can raise a submit
+    // event. Kept separate from setBusy so the two cannot drift.
+    let submitting = false;
+
     form.addEventListener("submit", async event => {
         event.preventDefault();
+
+        if (submitting) {
+            return;
+        }
+
         banner.hidden = true;
 
         if (!validateAll()) {
@@ -416,6 +435,7 @@ function init() {
         }
 
         const payload = buildPayload();
+        submitting = true;
         setBusy(true);
         try {
             const response = await fetch(ENDPOINT, {
@@ -462,6 +482,7 @@ function init() {
             // Network failure — the draft is saved; the user can retry.
             banner.hidden = false;
         } finally {
+            submitting = false;
             setBusy(false);
         }
     });

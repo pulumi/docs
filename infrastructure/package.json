@@ -3,7 +3,7 @@
     "license": "Apache-2.0",
     "scripts": {
         "lint": "tslint --project tsconfig.json",
-        "test-support-form": "tsc -p tsconfig.json && node support-form/check-suites-compiled.js && node --test bin/support-form/*.test.js"
+        "test-support-form": "tsc -p tsconfig.json && node ../scripts/check-test-suites-compiled.js support-form bin/support-form infrastructure/tsconfig.json && node --test bin/support-form/*.test.js"
     },
     "devDependencies": {
         "@types/aws-lambda": "^8.10.162",

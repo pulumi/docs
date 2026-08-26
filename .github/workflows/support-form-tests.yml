@@ -38,9 +38,12 @@ on:
     paths:
       - 'infrastructure/**'
       - '!infrastructure/versioned-docs/**'
+      # The shared "did every suite actually run" guard, used by both halves.
+      - 'scripts/check-test-suites-compiled.js'
       - 'theme/src/ts/support-form.ts'
       - 'theme/src/ts/support-form.test.ts'
       - 'theme/tsconfig.test.json'
+      - 'theme/package.json'
       # The client suite asserts the layout still provides the ids it binds to.
       - 'layouts/page/support-new.html'
       - '.github/workflows/support-form-tests.yml'
@@ -73,7 +76,7 @@ jobs:
           yarn --cwd infrastructure install --frozen-lockfile
           yarn --cwd theme install --frozen-lockfile
       # Tee'd rather than run bare so the count can be asserted afterwards.
-      # check-suites-compiled.js proves every suite will be reached; this proves
+      # check-test-suites-compiled.js proves every suite will be reached; this proves
       # the runner actually executed assertions once it got there. A suite whose
       # tests were all commented out would satisfy the first check and not this
       # one. `pipefail` keeps a genuine test failure failing the step, which a

@@ -45,6 +45,6 @@
         "start": "yarn run concurrently 'yarn --cwd stencil run start' 'yarn run webpack --watch' --raw --kill-others",
         "lint": "prettier --check .",
         "lint-fix": "prettier --write .",
-        "test-support-form": "tsc -p tsconfig.test.json && node --test bin-test/*.test.js"
+        "test-support-form": "tsc -p tsconfig.test.json && node ../scripts/check-test-suites-compiled.js src/ts bin-test theme/tsconfig.test.json && node --test bin-test/*.test.js"
     }
 }

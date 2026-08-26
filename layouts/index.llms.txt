@@ -82,7 +82,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
           "description": "What you expected, what actually happened, and any relevant code or CLI output."
         }'
 
-  `priority` is `normal` or `urgent`. `organization` is the bare org name from `https://app.pulumi.com/<org>` — letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. `description` needs at least 10 characters. Success returns `{"ok": true, "id": "...", "ticketId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name, so each error maps back to its input without parsing prose; other failures use `400`, `405`, `413` and `502`. Replies come by email to the address you supply, so give one that a person reads.
+  `priority` is `normal` or `urgent`. `organization` is the bare org name from `https://app.pulumi.com/<org>` — starting with a letter or number, then letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. `description` needs at least 10 characters. Success returns `{"ok": true, "id": "...", "ticketId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name — or by `_form` when the problem is with the payload as a whole rather than one field, as with an unknown key — so each error maps back to its input without parsing prose. Other failures use `400`, `405`, `413` and `502`. A `403` means the request was blocked or rate limited: back off rather than retrying immediately. Replies come by email to the address you supply, so give one that a person reads.
 
 ## Site overview
 

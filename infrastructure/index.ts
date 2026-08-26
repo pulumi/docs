@@ -122,17 +122,46 @@ if (config.enableWaf) {
         description: `Rate limiting for ${config.websiteDomain}`,
         defaultAction: { allow: {} },
         rules: [{
+            // The link checker crawls hard enough to trip the rate limit, so it
+            // is exempt -- but the exemption is keyed on a User-Agent string,
+            // which any caller can send. That was harmless while everything
+            // behind this WAF was a static GET; /api/support is neither. It
+            // takes unauthenticated POSTs that create Intercom contacts and
+            // tickets, and the rate-based rule below is the only thing limiting
+            // them, so a one-line header would have lifted that limit entirely.
+            //
+            // The exemption is therefore scoped to what the link checker
+            // actually does: everything except /api/. The crawler only follows
+            // links on rendered pages and never posts, so nothing it does is
+            // affected.
             name: "allow-link-checker",
             priority: 0,
             action: { allow: {} },
             statement: {
-                byteMatchStatement: {
-                    searchString: "pulumi+blc/0.1",
-                    fieldToMatch: {
-                        singleHeader: { name: "user-agent" },
-                    },
-                    positionalConstraint: "EXACTLY",
-                    textTransformations: [{ priority: 0, type: "NONE" }],
+                andStatement: {
+                    statements: [{
+                        byteMatchStatement: {
+                            searchString: "pulumi+blc/0.1",
+                            fieldToMatch: {
+                                singleHeader: { name: "user-agent" },
+                            },
+                            positionalConstraint: "EXACTLY",
+                            textTransformations: [{ priority: 0, type: "NONE" }],
+                        },
+                    }, {
+                        notStatement: {
+                            statement: {
+                                byteMatchStatement: {
+                                    searchString: "/api/",
+                                    fieldToMatch: {
+                                        uriPath: {},
+                                    },
+                                    positionalConstraint: "STARTS_WITH",
+                                    textTransformations: [{ priority: 0, type: "NONE" }],
+                                },
+                            },
+                        },
+                    }],
                 },
             },
             visibilityConfig: {
@@ -953,38 +982,6 @@ if (config.versionedDocsStack) {
 // optional — dev stacks and PR previews without enableSupportForm get no origin
 // or behavior, and the form's frontend degrades gracefully when POSTs to
 // /api/support fail.
-// Origin request policy for /api/support*.
-//
-// An explicit whitelist rather than "every viewer header except Host", because
-// this is an API endpoint and the handler reads exactly one thing from the
-// viewer's own headers: content-type. Forwarding nothing else means a caller
-// cannot smuggle a header the origin might one day interpret. If the handler
-// ever needs another viewer header, it has to be added here — nothing else
-// reaches the Lambda.
-//
-// CloudFront-Viewer-Address is the second item and is not a viewer header at
-// all: CloudFront sets it from the TCP connection and overwrites anything the
-// client sent, so it cannot be forged. It is how the handler learns the
-// submitter's address, which is otherwise unknowable — requestContext's sourceIp
-// is the edge node, because CloudFront is what invokes the Function URL. A
-// managed header is preferred over a CloudFront Function that stamps the same
-// value: there is no edge code to typo, and no way for it to fail closed and
-// 502 the endpoint.
-//
-// Host is dropped by construction, which Lambda Function URL origins require.
-// The x-origin-verify shared secret is unaffected — it is an origin
-// customHeaders entry (see SupportFormApi.getOrigin), added by CloudFront
-// regardless of this policy.
-const supportFormOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("support-form-origin-request", {
-    comment: "POST /api/support: forwards the content type and the viewer's address, nothing else.",
-    cookiesConfig: { cookieBehavior: "none" },
-    queryStringsConfig: { queryStringBehavior: "none" },
-    headersConfig: {
-        headerBehavior: "whitelist",
-        headers: { items: ["content-type", "CloudFront-Viewer-Address"] },
-    },
-});
-
 const supportFormOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const supportFormBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 let supportForm: SupportFormApi | undefined;
@@ -996,6 +993,38 @@ if (config.enableSupportForm) {
     });
 
     supportFormOrigins.push(supportForm.getOrigin());
+
+    // Origin request policy for /api/support*.
+    //
+    // An explicit whitelist rather than "every viewer header except Host", because
+    // this is an API endpoint and the handler reads exactly one thing from the
+    // viewer's own headers: content-type. Forwarding nothing else means a caller
+    // cannot smuggle a header the origin might one day interpret. If the handler
+    // ever needs another viewer header, it has to be added here — nothing else
+    // reaches the Lambda.
+    //
+    // CloudFront-Viewer-Address is the second item and is not a viewer header at
+    // all: CloudFront sets it from the TCP connection and overwrites anything the
+    // client sent, so it cannot be forged. It is how the handler learns the
+    // submitter's address, which is otherwise unknowable — requestContext's sourceIp
+    // is the edge node, because CloudFront is what invokes the Function URL. A
+    // managed header is preferred over a CloudFront Function that stamps the same
+    // value: there is no edge code to typo, and no way for it to fail closed and
+    // 502 the endpoint.
+    //
+    // Host is dropped by construction, which Lambda Function URL origins require.
+    // The x-origin-verify shared secret is unaffected — it is an origin
+    // customHeaders entry (see SupportFormApi.getOrigin), added by CloudFront
+    // regardless of this policy.
+    const supportFormOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("support-form-origin-request", {
+        comment: "POST /api/support: forwards the content type and the viewer's address, nothing else.",
+        cookiesConfig: { cookieBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: { items: ["content-type", "CloudFront-Viewer-Address"] },
+        },
+    });
 
     supportFormBehaviors.push({
         ...baseCacheBehavior,

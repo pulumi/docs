@@ -190,10 +190,14 @@ test("prefills text inputs from the query string", () => {
 });
 
 test("ignores a query-string priority that is not a rendered option", () => {
-    const h = mount({ url: `${PAGE_URL}?priority=bogus` });
+    const h = mount({ url: `${PAGE_URL}?priority=bogus&subject=FromUrl` });
     // Left on the default rather than blanked — assigning an unmatched value to
     // a <select> would silently clear it and post an empty priority.
     assert.strictEqual(h.control("priority").value, "normal");
+    // Positive control: "priority is still normal" is also what you would see
+    // if the module never ran at all, since normal is the rendered default. The
+    // subject proves the prefill did run and declined this one value.
+    assert.strictEqual(h.control("subject").value, "FromUrl", "the prefill must have run at all");
 });
 
 // --- Draft vs. prefill ---------------------------------------------------
@@ -209,8 +213,23 @@ test("a deliberately chosen default is not reverted by the query string", () => 
     // it wasn't urgent, and picked "normal" must not have "urgent" restored on
     // their next visit. "Differs from the rendered default" is not the same
     // predicate as "the user chose it".
-    const h = mount({ url: `${PAGE_URL}?priority=urgent`, draft: { priority: "normal" } });
+    const h = mount({
+        url: `${PAGE_URL}?priority=urgent&subject=FromUrl`,
+        draft: { priority: "normal", subject: "FromDraft" },
+    });
     assert.strictEqual(h.control("priority").value, "normal");
+    // Same positive control as above: without this the assertion passes just as
+    // happily against a module that never initialised.
+    assert.strictEqual(h.control("subject").value, "FromDraft", "the draft must have been restored at all");
+});
+
+test("a stale draft option does not suppress the query-string prefill", () => {
+    // A draft can name an option the page no longer renders. Counting that as
+    // "restored" would make the draft outrank the URL for a value the control
+    // never actually took, so someone following an urgent link would file a
+    // normal ticket.
+    const h = mount({ url: `${PAGE_URL}?priority=urgent`, draft: { priority: "high" } });
+    assert.strictEqual(h.control("priority").value, "urgent");
 });
 
 test("an untouched field never enters the draft", () => {
@@ -419,11 +438,139 @@ test("the rendered layout still provides every id the module depends on", () => 
     for (const hook of [
         "data-support-form-root",
         "data-support-form-card",
-        "data-support-form",
         "data-support-form-banner",
         "data-support-form-submit",
         "data-support-form-confirmation",
+        "data-support-form-counter",
+        "data-support-form-value",
     ]) {
         assert.ok(layout.includes(hook), `layout is missing ${hook}`);
     }
+
+    // The bare hook needs its own assertion, anchored to the <form> tag.
+    // includes("data-support-form") can never fail -- it is a prefix of all
+    // seven hooks above -- and even a delimiter check passes on the layout's
+    // own comment, which mentions the "data-support-form*" attributes in prose.
+    // Meanwhile this is the most consequential attribute on the page: without
+    // it the module returns immediately and the entire form is inert.
+    assert.ok(
+        /<form[^>]*\sdata-support-form(?![\w-])/.test(layout),
+        "the <form> is missing the bare data-support-form hook — the module would not bind at all");
+
+    // Tag identity, not just the id. A <select> turned into an <input> keeps
+    // every id intact while silently killing the option-matching that both the
+    // prefill and the priority validator depend on.
+    assert.ok(
+        /<select[^>]*id="support-priority"/.test(layout),
+        "support-priority must be a <select> — the prefill and validator match against its options");
+    assert.ok(
+        /<textarea[^>]*id="support-description"/.test(layout),
+        "support-description must be a <textarea>");
+
+    // The options must carry explicit values; without them every priority
+    // becomes its label text and ?priority=urgent stops matching.
+    assert.ok(
+        /<option value="\{\{ \.value \}\}"/.test(layout),
+        "priority options must render an explicit value attribute");
+
+    // The honeypot's name is the field the handler drops on, so it is part of
+    // the contract even though no JS reads it.
+    assert.ok(
+        /id="support-website"[^>]*name="website"|name="website"[^>]*id="support-website"/.test(layout),
+        "the honeypot must be named website");
+});
+
+// --- The client half of the honeypot -------------------------------------
+
+test("forwards a filled honeypot so the server can drop it", () => {
+    // The absence check above only proves a clean submission stays clean. If
+    // this half were deleted the server's honeypot would still be well tested
+    // and would still never fire, because the browser would stop sending the
+    // signal at all.
+    return (async () => {
+        const h = mount();
+        fillValid(h);
+        const honeypot = h.control("website");
+        honeypot.value = "http://spam.example.com";
+        honeypot.dispatchEvent(new h.win.Event("input", { bubbles: true }));
+        await h.submit();
+        assert.strictEqual(h.fetchCalls[0].body.website, "http://spam.example.com");
+    })();
+});
+
+// --- Draft lifecycle ------------------------------------------------------
+
+// Saving is debounced by 500ms, so these seed sessionStorage directly rather
+// than typing and racing the timer — what is under test is what happens to an
+// existing draft at the end of a submission, not when it was written.
+test("clears the draft once the request is filed", async () => {
+    const h = mount({ draft: { subject: "FromDraft" } });
+    assert.ok(readDraft(h), "the draft should exist before submitting");
+    fillValid(h);
+    await h.submit();
+    assert.strictEqual(readDraft(h), undefined, "a filed request must not leave a draft behind");
+});
+
+test("keeps the draft when the request fails", async () => {
+    const h = mount({ draft: { subject: "FromDraft" } });
+    fillValid(h);
+    h.setFetch(async () => {
+        throw new Error("network down");
+    });
+    await h.submit();
+    assert.ok(readDraft(h), "a failed submission must keep the user's work");
+});
+
+// --- Failure reporting ----------------------------------------------------
+
+test("shows the banner on a non-422 failure", async () => {
+    const h = mount();
+    fillValid(h);
+    h.setFetch(async () => ({
+        ok: false,
+        status: 503,
+        json: async () => ({ ok: false, error: "unavailable" }),
+    }));
+    await h.submit();
+    const banner = h.doc.querySelector("[data-support-form-banner]") as any;
+    assert.strictEqual(banner.hidden, false, "a 503 must be reported, not swallowed");
+});
+
+test("shows the banner when a 422 names a field the page does not render", async () => {
+    // The server can reject the payload as a whole (_form), which maps to no
+    // input. Without the banner the form would appear to do nothing at all.
+    const h = mount();
+    fillValid(h);
+    h.setFetch(async () => ({
+        ok: false,
+        status: 422,
+        json: async () => ({ ok: false, fields: { _form: 'Unexpected field "nope".' } }),
+    }));
+    await h.submit();
+    const banner = h.doc.querySelector("[data-support-form-banner]") as any;
+    assert.strictEqual(banner.hidden, false, "a form-level 422 must surface somewhere");
+});
+
+// --- Double submission ----------------------------------------------------
+
+test("files one ticket even if submit fires twice while in flight", async () => {
+    const h = mount();
+    fillValid(h);
+
+    let release: () => void = () => undefined;
+    const gate = new Promise<void>(resolve => {
+        release = resolve;
+    });
+    h.setFetch(async () => {
+        await gate;
+        return { ok: true, status: 200, json: async () => ({ ok: true, id: "req-1", ticketId: "t-1" }) };
+    });
+
+    const form = h.doc.querySelector("[data-support-form]") as any;
+    form.dispatchEvent(new h.win.Event("submit", { bubbles: true, cancelable: true }));
+    form.dispatchEvent(new h.win.Event("submit", { bubbles: true, cancelable: true }));
+    release();
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    assert.strictEqual(h.fetchCalls.length, 1, "a second submit while one is in flight must not file a duplicate");
 });
