@@ -7,7 +7,7 @@ menu:
     administration:
         name: Agent Accounts
         parent: administration-concepts
-        weight: 4
+        weight: 5
 aliases:
   - /docs/administration/organizations-teams/agent-accounts/
 ---

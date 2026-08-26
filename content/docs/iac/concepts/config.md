@@ -18,28 +18,30 @@ aliases:
 - /docs/concepts/config
 ---
 
-In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster between your development and production stacks.
+Different stacks for a single project often need different values. You might want a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster, between your development and production stacks.
 
 Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/iac/cli/) and the programming model.
 
 The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/iac/concepts/projects/#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
 
-## Configuration Options {#config-stack}
+## Configuration options {#config-stack}
 
 You can use both the CLI and the programming model for your Pulumi configuration.
 
 * The CLI offers a `config` command with `set` and `get` subcommands for managing key-value pairs.
-* The programming model offers a `Config` object with various getters for retrieving values.
+* The programming model offers a `Config` object with getters for retrieving values.
 
-> All shell environment variables are passed to the running program and can be accessed using standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also be used for dynamic behavior. Configuration is preferable, however, because it is designed for multi-stack collaborative scenarios.
+{{% notes type="info" %}}
+All shell environment variables are passed to the running program and can be read with standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python, which can also drive dynamic behavior. Prefer configuration, however, because it's designed for multi-stack collaborative scenarios.
+{{% /notes %}}
 
-## Configuration Keys
+## Configuration keys
 
-Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name](/docs/iac/concepts/projects/#pulumi-yaml) from `Pulumi.yaml` as the namespace.
+Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. When a key name is used without a colon, Pulumi uses the current [project name](/docs/iac/concepts/projects/#pulumi-yaml) from `Pulumi.yaml` as the namespace.
 
-As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/iac/concepts/components/) to define their own key spaces without risk of conflicting with other components, packages, or projects.
+This namespacing allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/iac/concepts/components/) to define their own key spaces without risk of conflicting with other components, packages, or projects.
 
-## Setting and Getting Configuration Values
+## Setting and getting configuration values
 
 The `pulumi config` CLI command can get, set, or list configuration key-value pairs in your current project stack:
 
@@ -48,10 +50,10 @@ The `pulumi config` CLI command can get, set, or list configuration key-value pa
 * `pulumi config` gets all configuration key-value pairs in the current stack (as JSON if `--json` is passed).
 
 {{% notes type="info" %}}
-When using the `config set` command, any existing values for `<key>` will be overridden without warning.
+When using the `config set` command, any existing value for `<key>` is overwritten without warning.
 {{% /notes %}}
 
-For example, to set and then get the current AWS region in the `aws` package, you would run the following:
+For example, to set and then get the current AWS region in the `aws` package, run the following:
 
 ```bash
 $ pulumi config set aws:region us-west-2
@@ -59,7 +61,7 @@ $ pulumi config get aws:region
 us-west-2
 ```
 
-To set and get configuration in the current project (named `broome-proj` for example), we can use the simplified key name:
+To set and get configuration in the current project (named `broome-proj`, for example), use the key name on its own:
 
 ```bash
 $ pulumi config set name BroomeLLC
@@ -67,13 +69,13 @@ $ pulumi config get name
 BroomeLLC
 ```
 
-If `[value]` is not specified when setting a configuration key, the CLI will prompt for it interactively. Alternatively, the value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line:
+If you omit `[value]` when setting a configuration key, the CLI prompts for it interactively. You can also pipe the value in on standard input, which helps with multiline values or any value that would otherwise need escaping on the command line:
 
 ```bash
 $ cat my_key.pub | pulumi config set publicKey
 ```
 
-## Using the Config Flag with `pulumi new`
+## Using the config flag with `pulumi new`
 
 Configuration keys and values can be passed when using `pulumi new`.
 
@@ -95,15 +97,15 @@ And a complete example showing how to pass in the AWS region:
 $ pulumi new aws-typescript --config="aws:region=us-west-2"
 ```
 
-## Accessing Configuration from Code {#code}
+## Accessing configuration from code {#code}
 
-Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
+Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. {{< pulumi-config-get >}} returns {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} raises an exception with an explanatory error message, stopping the deployment until the value is set with the CLI.
 
 {{% notes type="info" %}}
 Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/concepts/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
 {{% /notes %}}
 
-For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/iac/concepts/secrets/) for more on managing secret values).
+For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which return the config value as an `Output` that carries both the value and its secret-ness, so the value is encrypted whenever it's serialized (see [secrets](/docs/iac/concepts/secrets/) for more on managing secret values).
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
@@ -258,7 +260,7 @@ variables:
 
 {{< /chooser >}}
 
-Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/iac/concepts/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
+Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/iac/concepts/components/), pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -362,9 +364,9 @@ class MyComponent extends ComponentResource {
 
 {{< /chooser >}}
 
-## Structured Configuration
+## Structured configuration
 
-Structured configuration is also supported and can be set using `pulumi config set` and the `--path` flag. When `--path` is used, it indicates the config key contains a path of where to store the value in an object.
+Pulumi also supports structured configuration, which you set with `pulumi config set` and the `--path` flag. `--path` tells the CLI to treat the config key as a path to a location within an object.
 
 For example:
 
@@ -377,7 +379,7 @@ $ pulumi config set --path 'data.nums[2]' 3
 
 The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:
 
-```
+```yaml
 config:
   proj:data:
     active: true
@@ -422,23 +424,25 @@ print("Active:", data.get("active"))
 package main
 
 import (
+    "fmt"
+
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 type Data struct {
-	Active bool
-	Nums   []int
+    Active bool
+    Nums   []int
 }
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		var d Data
-		cfg := config.New(ctx, "")
-		cfg.RequireObject("data", &d)
-		fmt.Printf("Active: %v\n", d.Active)
-		return nil
-	})
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        var d Data
+        cfg := config.New(ctx, "")
+        cfg.RequireObject("data", &d)
+        fmt.Printf("Active: %v\n", d.Active)
+        return nil
+    })
 }
 ```
 
@@ -493,9 +497,7 @@ resources:
 
 ### Accessing nested values
 
-When you retrieve structured configuration using `requireObject` or `getObject`, the returned value is a plain object (or dictionary/map in other languages), not a `Config` instance. This means you access nested properties using standard object property access, not by chaining `Config` methods.
-
-For example, if you have this configuration:
+`requireObject` and `getObject` return a plain object — a dictionary or map, depending on the language — and not a `Config` instance. So once you have the object, reach into it with ordinary property or key access rather than chaining more `Config` calls. Nesting can go deeper than one level, as in this `api` key:
 
 ```bash
 $ pulumi config set --path 'api.endpoint' "https://api.example.com"
@@ -504,19 +506,7 @@ $ pulumi config set --path 'api.headers.authorization' "Bearer token123"
 $ pulumi config set --path 'api.headers.content-type' "application/json"
 ```
 
-This creates the following structure in your `Pulumi.<stack-name>.yaml` (where `myproject` is your project name from `Pulumi.yaml`):
-
-```yaml
-config:
-  myproject:api:
-    endpoint: https://api.example.com
-    timeout: 30
-    headers:
-      authorization: Bearer token123
-      content-type: application/json
-```
-
-You can access these nested values in your program like this:
+Read the whole `api` object once, then walk it:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -640,30 +630,30 @@ outputs:
 
 {{< /chooser >}}
 
-## Project Level Configuration
+## Project-level configuration
 
-There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hierarchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
+Some configuration is the same for more than one stack in a project — `aws:region`, for example, is often shared across several stacks or all of them. Project-level configuration (also called hierarchical configuration) lets you set such values once at the project level instead of repeating them in every stack's configuration file.
 
-### Setting Project Level Configuration
+### Setting project-level configuration
 
-Project level configuration is defined inside the project folder's `Pulumi.yaml` file using one's favorite editor.
+You define project-level configuration in the project folder's `Pulumi.yaml` file, using any text editor.
 
 {{% notes type="info" %}}
-At this time, the `pulumi config set` command does not support project level configuration. Therefore the configuration values are entered directly in the `Pulumi.yaml` file. Also, project level configuration only supports clear text configuration. Support for [pulumi config](https://github.com/pulumi/pulumi/issues/12041) and [project-level secrets](https://github.com/pulumi/pulumi/issues/11549) and other features are planned.
+The `pulumi config set` command does not currently support project-level configuration. Enter the configuration values directly in the `Pulumi.yaml` file instead. Project-level configuration also supports plaintext values only. Support for [setting project-level config from the CLI](https://github.com/pulumi/pulumi/issues/12041), [project-level secrets](https://github.com/pulumi/pulumi/issues/11549), and other features is planned.
 {{% /notes %}}
 
-Project level configuration supports both simple and structured configuration as described in the sections above.
+Project-level configuration supports both flat and structured configuration, in the same forms described in [Structured configuration](/docs/iac/concepts/config/#structured-configuration).
 
 {{% notes type="warning" %}}
 **Important:** Stack-level and project-level YAML files use different syntax for structured configuration:
 
-* **Stack-level files** (`Pulumi.<stack-name>.yaml`): Use the format `projectname:key:` and nest structured values directly under the key
-* **Project-level file** (`Pulumi.yaml`): Use the format `key:` (no project name prefix) and nest structured values under a `value:` wrapper
+* **Stack-level files** (`Pulumi.<stack-name>.yaml`): use the format `projectname:key:`, and nest structured values directly under the key.
+* **Project-level file** (`Pulumi.yaml`): use the format `key:` with no project name prefix, and nest structured values under a `value:` wrapper.
 
-This distinction is easy to miss and can cause confusion when moving configuration between files.
+Watch for this difference when you move configuration between the two files.
 {{% /notes %}}
 
-The following example shows what the project level configuration (inside `Pulumi.yaml`) looks like based on the examples shown above:
+Using the keys from the earlier examples, project-level configuration inside `Pulumi.yaml` looks like this:
 
 ```yaml
 config:
@@ -692,13 +682,13 @@ config:
     - 30
 ```
 
-When project level configuration is set as such, the stacks will consume the project level configuration settings by default unless stack-specific configuration overrides the project-level settings.
+With project-level configuration in place, every stack in the project uses those values by default, unless a stack's own configuration overrides them.
 
-### Project and Stack Configuration Scope
+### Project and stack configuration scope
 
-Stack level configuration using the same key supersedes the project level configuration for that key. For example, if, given the above project level configuration example, one had a `Pulumi.dev.yaml` file containing:
+Stack-level configuration using the same key supersedes the project-level configuration for that key. For example, given the project-level configuration above and a `Pulumi.dev.yaml` file containing:
 
-```
+```yaml
 config:
   aws:region: us-east-2
   name: MopLLC
@@ -706,13 +696,13 @@ config:
 
 Then the `dev` stack would be deployed in `us-east-2` instead of `us-east-1` and the `name` configuration value would be `MopLLC` instead of `BroomeLLC` defined in the project configuration.
 
-### Strongly Typed Configuration
+### Strongly typed configuration
 
-The project level configuration can also be used to define type specifications for stack level configuration, including setting defaults. This enables commands like `pulumi preview` to throw an error if a stack level configuration value is not of the correct type.
+Project-level configuration can also define type specifications for stack-level configuration, including defaults. Commands like `pulumi preview` then fail with an error if a stack-level configuration value has the wrong type.
 
 For example, given this in the `Pulumi.yaml` file:
 
-```
+```yaml
 config:
     name:
         type: string
@@ -725,13 +715,13 @@ config:
             type: string
 ```
 
-The stacks will default to using `BroomeLLC` for the name configuration item. And the `pulumi` cli will throw an error if the stack configuration file contains a `name` property set to, say, an integer. Similarly, if the stack configuration file has a `subnets` property and it is not defined as an array of strings, the `pulumi` cli will throw an error.
+Stacks default to `BroomeLLC` for the `name` configuration item, and the Pulumi CLI reports an error if a stack configuration file sets `name` to, say, an integer. The CLI reports an error in the same way if a stack's `subnets` property is not an array of strings.
 
 {{% notes type="info" %}}
 At this time, configuration specifications are not supported for structured configuration.
 {{% /notes %}}
 
-## Provider Configuration Options
+## Provider configuration options
 
 There are three ways to configure providers:
 
@@ -739,12 +729,12 @@ There are three ways to configure providers:
 2. Set a provider-specific environment variable
 3. Pass arguments to the provider's SDK constructor, in your program
 
-Please note:
+Note the following:
 
-* Configuration file settings are only used by the default provider. If you instantiate a provider object, it will not read values from the stack configuration.
-* The precedence of configuration sources (configuration file, environment and args) can vary between providers. Please refer to the provider's documentation for specific configuration instructions.
+* Only the default provider reads configuration file settings. A provider object that you instantiate yourself does not read values from the stack configuration.
+* The precedence of configuration sources (configuration file, environment, and constructor arguments) can vary between providers. Refer to the provider's documentation for its specific rules.
 
-## Pulumi Configuration Options
+## Pulumi configuration options
 
 This is a list of configuration keys that the Pulumi CLI is aware of:
 
@@ -774,19 +764,19 @@ config:
     team: Ops
 ```
 
-Pulumi CLI only creates or updates tags which are listed in the config. If you remove a tag from the stack config, you have to remove it from the stack in Pulumi Cloud manually.
+The Pulumi CLI only creates or updates tags listed in the config. If you remove a tag from the stack config, remove it from the stack in Pulumi Cloud manually as well.
 
 Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overview tab:
 
 ![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
-## Using Pulumi ESC from Pulumi Stack Config
+## Using Pulumi ESC from Pulumi stack config
 
 {{< pulumi-cloud />}}
 
-Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
+Configuration and secrets that several stacks share don't have to be duplicated across their stack configuration files — Pulumi ESC can hold them centrally instead.
 
-Once you have an [environment](/docs/esc/concepts/) set up and you are [projecting pulumi configuration](/docs/esc/concepts/outputs/#pulumiconfig), you can [import that environment](/docs/esc/providers/iac/pulumi-stacks/) (or multiple environments) into your Pulumi stack.
+Once you have an [environment](/docs/esc/concepts/) set up and are [projecting Pulumi configuration](/docs/esc/concepts/outputs/#pulumiconfig) from it, you can [import that environment](/docs/esc/guides/pulumi-iac/) (or several environments) into your Pulumi stack.
 
 ```yaml
 # import the test environment and all of its configuration

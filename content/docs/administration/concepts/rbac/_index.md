@@ -11,7 +11,7 @@ aliases:
 menu:
   administration:
     parent: administration-concepts
-    weight: 7
+    weight: 8
     identifier: administration-concepts-rbac
 ---
 

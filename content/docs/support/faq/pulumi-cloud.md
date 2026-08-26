@@ -121,7 +121,7 @@ For **SAML/SSO**, authenticating through the identity provider is what establish
 
 If your account offers no way to connect an identity provider, see [If the identity options aren't there](/docs/administration/concepts/accounts/#identity-options-missing).
 
-For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization).
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization) and [Identity providers](/docs/administration/concepts/identity-providers/).
 
 ## Account
 
@@ -131,7 +131,7 @@ You can delete your personal account from your account settings in [Pulumi Cloud
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [Deleting your account](/docs/administration/concepts/organizations/#deleting-your-account).
+For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 ## Pricing
 

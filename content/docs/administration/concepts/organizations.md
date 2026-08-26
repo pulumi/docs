@@ -55,7 +55,7 @@ To create an organization:
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator or submit a request to the administrator for approval.
-In addition, you also need to be a member of the third-party organization or group backing the Pulumi organization.
+You also need to be a member of the third-party organization or group backing the Pulumi organization. See [Identity providers](/docs/administration/concepts/identity-providers/).
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
 you must associate a GitLab identity with your Pulumi account, and also
@@ -87,7 +87,7 @@ Pulumi organization administrators can monitor current organization members and 
 
 ## Switching between organizations
 
-The organization menu displays your individual account and all of the organizations you belong.
+The organization menu displays your individual organization and all of the organizations you belong to.
 
 To switch to a different organization:
 
@@ -120,11 +120,11 @@ To update your organization's display name:
 
 Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
-If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](https://support.pulumi.com/).
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/new/).
 
 ## Transferring stacks
 
-Stack admins can transfer individual stacks between personal accounts and organizations, or between organizations. Organization admins can transfer stacks in bulk.
+Stack admins can transfer stacks one at a time between their individual organization and a shared organization, or between shared organizations. Organization admins can transfer stacks in bulk.
 
 Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/concepts/rbac/) for details.
 
@@ -132,7 +132,7 @@ To transfer an individual stack:
 
 1. Navigate to the stack and then the stack's **Settings**.
 1. Select **Transfer stack**.
-1. Provide the destination personal account or organization name and select **Transfer**.
+1. Provide the destination organization name and select **Transfer**.
 
 To transfer stacks in bulk:
 
@@ -164,115 +164,12 @@ To delete an organization:
 1. Navigate to **Settings**.
 1. Select **Delete organization**.
 
-Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
+Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization.
 
 For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 
-## Deleting your account
-
-You can delete your personal Pulumi account from your account settings in [Pulumi Cloud](https://app.pulumi.com/signin).
-
-Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
-
-For more information, see [How can I delete my Pulumi account?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-my-pulumi-account)
-
 ## Organization identity providers
 
-A Pulumi organization can use the Pulumi identity provider or a third-party identity provider.
-If using a third-party identity provider all members need to belong to the third-party
-identity provider in order to join a Pulumi organization.
+Every Pulumi organization is backed by an identity provider that governs who can be a member: Pulumi itself, a GitHub organization, a GitLab group, a Bitbucket workspace, or a SAML 2.0 identity provider.
 
-For example, if a Pulumi organization, is backed by a GitHub organization, then only members
-of that GitHub organization may be added to the Pulumi organization. As soon as
-someone loses access to the GitHub organization, they will no longer have access to the
-Pulumi organization.
-
-A Pulumi organization can also be backed by a [SAML 2.0 identity provider](/docs/administration/guides/saml/).
-
-This setting goes by more than one name. The docs and the console call it the organization's **identity provider**, and you configure it under **Membership Requirements**; the console also refers to it as the organization backend, which is the name the REST API uses. They all mean the same thing.
-
-### Changing identity providers
-
-Every organization is backed by an identity that governs the membership to your organization.
-By default, when you create a new Pulumi organization, it uses the Pulumi identity provider.
-
-Only organization admins can change the organization identity provider.
-
-Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
-
-Switching an organization to SAML has one further prerequisite. {{< saml-conversion-prereq >}}
-
-To change an organization's identity provider:
-
-1. Navigate to **Settings** > **Access Management**.
-1. Select the **Other** tab.
-1. In the **Membership Requirements** section, select **Change requirements**.
-
-### Disconnecting identity providers
-
-In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, select a new identity provider.
-
-{{% notes type="warning" %}}
-Switching away from SAML discards the organization's SAML configuration and everything derived from it: its SAML identities, its SAML member roster, and its SCIM access token. If you switch back to SAML later, you have to reconfigure [SCIM](/docs/administration/guides/scim/) with a newly issued token and re-provision your users.
-{{% /notes %}}
-
-Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
-
-1. Navigate to **Settings** > **Access Management**.
-1. Select the **Other** tab.
-1. In the **Membership Requirements** section, select **Change requirements**.
-1. Select a new identity provider.
-
-### GitHub identity provider
-
-[Setting up a GitHub Organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-
-To add a GitHub organization to Pulumi, an admin of the GitHub organization
-must first grant the Pulumi OAuth app the [`read:org` scope](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f).
-This is required to verify memberships within the GitHub organization.
-Pulumi will not have access to any of the organization's source code, issues, or other data.
-
-### GitLab identity provider
-
-[GitLab Groups](https://docs.gitlab.com/user/group/)
-
-To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
-must add the group to Pulumi, and invite its members to join Pulumi.
-
-GitLab allows group admins to add members with a temporary membership, i.e., with an
-expiration value. In order to invite those members to Pulumi, their membership in the
-GitLab group must still be active. As soon as their GitLab group membership expires,
-those users will lose access to Pulumi organization.
-
-### Bitbucket identity provider
-
-[Bitbucket workspaces](https://support.atlassian.com/bitbucket-cloud/docs/what-is-a-workspace/)
-
-To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
-Bitbucket workspace
-must first grant the Pulumi OAuth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
-to their Bitbucket account and workspace membership information.
-
-Two further requirements apply, and neither is obvious from the console:
-
-* **You need admin or owner rights in the Bitbucket workspace.** Granting the OAuth app read access isn't enough by itself. The person making the change in Pulumi must be an admin or owner of the workspace; a contributor or plain member gets an error.
-* **A personal Bitbucket account with no workspace won't work.** Pulumi backs the organization with a workspace, so the account has to have one.
-
-Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
-members that they can add or invite to the Pulumi organization. Adding them is a separate step from their workspace membership. See [Backing membership doesn't grant Pulumi membership](#backing-membership).
-
-Bitbucket is an Atlassian product, and Pulumi labels the identity after Atlassian rather than Bitbucket. The control in your account settings is **Connect Atlassian**, and a connected Bitbucket identity is listed as **Atlassian**.
-
-### SAML Single Sign-on (SSO)
-
-{{< pulumi-cloud "saml-sso" />}}
-
-Pulumi Cloud supports any SAML 2.0-based identity provider.
-
-* [SAML-based configuration guide](/docs/administration/guides/saml/)
-* [Microsoft Entra ID](/docs/administration/guides/saml/entra/)
-* [Google Workspace](/docs/administration/guides/saml/gsuite/)
-* [Auth0](/docs/administration/guides/saml/auth0/)
-* [Okta](/docs/administration/guides/saml/okta/)
-
-Members of SSO organizations can login to Pulumi with the organization name auto-filled in the UI by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.
+See [Identity providers](/docs/administration/concepts/identity-providers/) for the full list of options, how to set each one up, and how to change your organization's provider.
