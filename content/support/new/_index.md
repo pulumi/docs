@@ -35,7 +35,11 @@ form:
             help: Enter the details of your request. It always helps to include code snippets, current behavior, and expected behavior when encountering issues. Markdown is welcome.
     submit: Submit
     submitting: Submitting…
-    error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or ask the community in Pulumi Slack at https://slack.pulumi.com/.
+    # Rendered through markdownify, so the Slack escape hatch is a real link.
+    # This banner is the one moment a visitor needs it, and a bare URL they
+    # have to copy out by hand is a poor thing to hand someone whose request
+    # just failed.
+    error_banner: "We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or [ask the community in Pulumi Slack](https://slack.pulumi.com/)."
 
 confirmation:
     title: Request received. We're on it.

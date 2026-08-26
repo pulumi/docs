@@ -10,6 +10,25 @@ import type { SupportRequest } from "./validation";
 const INTERCOM_API_BASE = "https://api.intercom.io";
 const INTERCOM_VERSION = "2.11";
 
+// Per-call ceiling. Three sequential calls run inside the Lambda's own timeout,
+// and a bare fetch has none of its own: if Intercom stops responding, the
+// function is killed by the runtime instead of returning. That matters because
+// the kill happens outside the handler's try/catch, so the caller gets the
+// runtime's 502 rather than the documented {ok:false,error:"ticket_creation_failed",id}
+// envelope, and support_request_ticket_failed is never logged -- a contact can
+// be created with no ticket and no trace of it. Bounding each call keeps the
+// failure inside the handler, where it is shaped and recorded.
+const INTERCOM_TIMEOUT_MS = 2500;
+
+function intercomFetch(url: string, body: object): Promise<Response> {
+    return fetch(url, {
+        method: "POST",
+        headers: intercomHeaders(),
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(INTERCOM_TIMEOUT_MS),
+    });
+}
+
 function intercomHeaders(): Record<string, string> {
     return {
         Authorization: `Bearer ${process.env.INTERCOM_API_KEY}`,
@@ -19,12 +38,8 @@ function intercomHeaders(): Record<string, string> {
 }
 
 async function findContactByEmail(email: string): Promise<string | undefined> {
-    const res = await fetch(`${INTERCOM_API_BASE}/contacts/search`, {
-        method: "POST",
-        headers: intercomHeaders(),
-        body: JSON.stringify({
-            query: { field: "email", operator: "=", value: email },
-        }),
+    const res = await intercomFetch(`${INTERCOM_API_BASE}/contacts/search`, {
+        query: { field: "email", operator: "=", value: email },
     });
     if (!res.ok) {
         throw new Error(`Intercom contact search failed: ${res.status} ${await res.text()}`);
@@ -34,11 +49,7 @@ async function findContactByEmail(email: string): Promise<string | undefined> {
 }
 
 async function createContact(email: string, name: string): Promise<string> {
-    const res = await fetch(`${INTERCOM_API_BASE}/contacts`, {
-        method: "POST",
-        headers: intercomHeaders(),
-        body: JSON.stringify({ role: "lead", email, name }),
-    });
+    const res = await intercomFetch(`${INTERCOM_API_BASE}/contacts`, { role: "lead", email, name });
     if (!res.ok) {
         throw new Error(`Intercom contact create failed: ${res.status} ${await res.text()}`);
     }
@@ -47,19 +58,15 @@ async function createContact(email: string, name: string): Promise<string> {
 }
 
 async function createTicket(contactId: string, request: SupportRequest): Promise<string> {
-    const res = await fetch(`${INTERCOM_API_BASE}/tickets`, {
-        method: "POST",
-        headers: intercomHeaders(),
-        body: JSON.stringify({
-            ticket_type_id: process.env.INTERCOM_TICKET_TYPE_ID,
-            contacts: [{ id: contactId }],
-            ticket_attributes: {
-                _default_title_: request.subject,
-                _default_description_: request.description,
-                "pulumi-org": request.organization,
-                priority: request.priority,
-            },
-        }),
+    const res = await intercomFetch(`${INTERCOM_API_BASE}/tickets`, {
+        ticket_type_id: process.env.INTERCOM_TICKET_TYPE_ID,
+        contacts: [{ id: contactId }],
+        ticket_attributes: {
+            _default_title_: request.subject,
+            _default_description_: request.description,
+            "pulumi-org": request.organization,
+            priority: request.priority,
+        },
     });
     if (!res.ok) {
         throw new Error(`Intercom ticket create failed: ${res.status} ${await res.text()}`);

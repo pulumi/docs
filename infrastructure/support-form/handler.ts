@@ -128,6 +128,19 @@ export function clientAddress(event: FunctionUrlEvent): ClientAddress {
     return { ip: peer, source: peer ? "edge" : "unknown" };
 }
 
+// A ticket id for the honeypot's fake success.
+//
+// Intercom's ids are numeric strings, so this has to look like one -- an
+// obviously synthetic value (a UUID, a fixed sentinel) would be as good an
+// oracle as omitting the field. Nothing consumes it: no ticket exists.
+function syntheticTicketId(): string {
+    let digits = "";
+    while (digits.length < 15) {
+        digits += Math.floor(Math.random() * 10).toString();
+    }
+    return digits;
+}
+
 function jsonResponse(statusCode: number, body: object, extraHeaders: Record<string, string> = {}): FunctionUrlResult {
     return {
         statusCode,
@@ -176,8 +189,12 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         return jsonResponse(405, { ok: false, error: "method_not_allowed" }, { allow: "POST" });
     }
 
-    const contentType = (headers["content-type"] || "").toLowerCase();
-    if (!contentType.startsWith("application/json")) {
+    // Compare the media type alone, not a prefix of the whole header. startsWith
+    // also accepted application/jsonlines and application/json-patch+json, which
+    // are different formats that happen to share a prefix; splitting on ";"
+    // keeps the charset parameter working without that.
+    const contentType = (headers["content-type"] || "").toLowerCase().split(";")[0].trim();
+    if (contentType !== "application/json") {
         return jsonResponse(400, { ok: false, error: "unsupported_content_type" });
     }
 
@@ -196,8 +213,21 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         return jsonResponse(400, { ok: false, error: "invalid_json" });
     }
 
+    const result = validateSubmission(parsed);
+    if (!result.ok) {
+        return jsonResponse(422, { ok: false, error: "validation_failed", fields: result.fields });
+    }
+
     // Honeypot: the "website" field is visually hidden on the form, so any
     // value in it marks a bot. Pretend success so the bot moves on.
+    //
+    // Deliberately AFTER validation, and returning the same response shape a
+    // real success does. Checking it first gave a spammer a one-request oracle:
+    // a knowingly invalid payload plus the honeypot returned 200 where the same
+    // payload without it returned 422, so the trap announced itself. And a fake
+    // success that omitted ticketId was distinguishable from a real one by any
+    // caller that read the documented shape. Both are closed by validating
+    // first and minting a plausible id.
     if (typeof parsed === "object" && parsed !== null && (parsed as Record<string, unknown>).website) {
         console.log(
             JSON.stringify({
@@ -207,12 +237,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
                 ipSource: address.source,
             }),
         );
-        return jsonResponse(200, { ok: true, id: crypto.randomUUID() });
-    }
-
-    const result = validateSubmission(parsed);
-    if (!result.ok) {
-        return jsonResponse(422, { ok: false, error: "validation_failed", fields: result.fields });
+        return jsonResponse(200, { ok: true, id: crypto.randomUUID(), ticketId: syntheticTicketId() });
     }
 
     const id = crypto.randomUUID();

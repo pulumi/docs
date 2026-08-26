@@ -36,9 +36,18 @@
         </header>
 
         <div class="card bg-white p-8 md:p-10" data-support-form-card>
+            {{/* Without JavaScript the submit button posts urlencoded data to
+                 /api/support, which only speaks JSON — the visitor would land on
+                 a raw error response with everything they typed gone. There is
+                 no way to intercept that without script, so the form is hidden
+                 instead and the alternative is offered directly. */}}
             <noscript>
-                <p class="body-base text-gray-600">
-                    This form requires JavaScript. 
+                <style>
+                    [data-support-form] { display: none; }
+                </style>
+                <p class="body-base text-gray-600 mb-0">
+                    This form needs JavaScript to send your request. Enable it and reload, or
+                    <a href="https://slack.pulumi.com/">ask the community in Pulumi Slack</a>.
                 </p>
             </noscript>
 
@@ -94,8 +103,9 @@
                     {{ end }}
                     <textarea class="form-textarea" id="support-description" name="description" rows="8"
                               required maxlength="20000"
-                              aria-describedby="support-description-help support-description-error"></textarea>
-                    <p class="form-help" data-support-form-counter="support-description" hidden></p>
+                              aria-describedby="support-description-help support-description-counter support-description-error"></textarea>
+                    <p class="form-help" id="support-description-counter" role="status" aria-live="polite"
+                       data-support-form-counter="support-description" hidden></p>
                     <p class="form-error" id="support-description-error" hidden></p>
                 </div>
 
@@ -118,8 +128,9 @@
                 </div>
 
                 <div role="alert" data-support-form-banner hidden
-                     class="border border-red-800 bg-red-50 text-red-800 rounded-md px-4 py-3 body-sm mb-6">
-                    {{ $form.error_banner }}
+                     class="border border-red-800 bg-red-50 text-red-800 rounded-md px-4 py-3 body-sm mb-6
+                            [&_a]:underline [&_p]:mb-0">
+                    {{ $form.error_banner | markdownify }}
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg" data-support-form-submit

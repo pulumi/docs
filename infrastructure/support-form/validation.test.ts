@@ -377,10 +377,82 @@ test("handler swallows honeypot submissions with a fake success", async () => {
     const parsed = JSON.parse(response.body);
     assert.strictEqual(parsed.ok, true);
     // The whole point of the honeypot: it looks like success to the bot but
-    // files nothing. The absent ticketId is what distinguishes it from a real
-    // acceptance.
+    // files nothing.
     assert.strictEqual(intercomCalls.length, before);
-    assert.strictEqual(parsed.ticketId, undefined);
+    // "Looks like" has to mean it. Omitting ticketId made the fake success
+    // trivially distinguishable from a real one by anyone reading the
+    // documented response shape, so the drop announced itself.
+    assert.ok(parsed.id, "a dropped submission still gets an id");
+    assert.ok(/^[0-9]{15}$/.test(parsed.ticketId), "a dropped submission gets a plausible ticket id");
+});
+
+test("the honeypot does not announce itself through the validation order", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const before = intercomCalls.length;
+
+    // Checking the honeypot before validation gave a spammer a one-request
+    // oracle: a knowingly invalid payload came back 200 with the trap set and
+    // 422 without it, so a single pair of requests revealed the field. Both
+    // must now be refused the same way.
+    const invalid = { ...validPayload(), email: "not-an-email" };
+
+    const withTrap = await supportFormHandler(postEvent({ ...invalid, website: "https://spam.example" }));
+    const withoutTrap = await supportFormHandler(postEvent(invalid));
+
+    assert.strictEqual(withTrap.statusCode, 422);
+    assert.strictEqual(withoutTrap.statusCode, 422);
+    assert.deepStrictEqual(JSON.parse(withTrap.body), JSON.parse(withoutTrap.body));
+    assert.strictEqual(intercomCalls.length, before, "neither may file a ticket");
+});
+
+// --- Text sanitization ---------------------------------------------------
+
+test("strips control characters and bidi overrides from every field", () => {
+    const result = validateSubmission({
+        ...validPayload(),
+        name: "Jane\u0000 Doe\u001b[31m",
+        subject: "harmless text\rMALICIOUS",
+        description: "Line one\nLine two\ttabbed \u202Egnirts desrever a\u202C ok",
+    });
+    assert.ok(result.ok);
+    if (result.ok) {
+        assert.strictEqual(result.value.name, "Jane Doe[31m");
+        assert.strictEqual(result.value.subject, "harmless textMALICIOUS");
+        // Tabs and newlines survive -- the description is Markdown.
+        assert.ok(result.value.description.indexOf("\n") !== -1);
+        assert.ok(result.value.description.indexOf("\t") !== -1);
+        assert.strictEqual(result.value.description.indexOf("\u202E"), -1);
+        assert.strictEqual(result.value.description.indexOf("\u202C"), -1);
+    }
+});
+
+test("rejects email addresses carrying separators that mean something downstream", () => {
+    for (const email of [
+        "<script>alert(1)</script>@evil.example",
+        "Support <a@b.co>",
+        "a,b@example.com",
+        "a;b@example.com",
+        "a\"b@example.com",
+    ]) {
+        const result = validateSubmission({ ...validPayload(), email });
+        assert.ok(!result.ok, `expected ${JSON.stringify(email)} to be rejected`);
+        if (!result.ok) {
+            assert.ok(result.fields.email);
+        }
+    }
+});
+
+test("still accepts ordinary addresses after the tightening", () => {
+    for (const email of [
+        "jane@example.com",
+        "jane.doe+support@example.co.uk",
+        "jane_doe@sub.example.io",
+        "jane-doe123@example.dev",
+        "'quoted@example.com",
+    ]) {
+        const result = validateSubmission({ ...validPayload(), email });
+        assert.ok(result.ok, `expected ${JSON.stringify(email)} to be accepted`);
+    }
 });
 
 // --- The validation -> side-effect boundary -------------------------------
@@ -572,4 +644,33 @@ test("reads bracketed and portless viewer addresses", () => {
     assert.deepStrictEqual(
         clientAddress(ipEvent({ [VIEWER_HEADER]: "198.51.100.9" })),
         { ip: "198.51.100.9", source: "viewer" });
+});
+
+test("accepts only the application/json media type, not a prefix of it", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+
+    for (const contentType of ["application/json", "application/json; charset=utf-8", "APPLICATION/JSON"]) {
+        const event = postEvent(validPayload());
+        event.headers!["content-type"] = contentType;
+        assert.strictEqual((await supportFormHandler(event)).statusCode, 200, `${contentType} must be accepted`);
+    }
+
+    // Different formats that merely share a prefix.
+    for (const contentType of ["application/jsonlines", "application/json-patch+json", "application/jsonwhatever"]) {
+        const event = postEvent(validPayload());
+        event.headers!["content-type"] = contentType;
+        assert.strictEqual((await supportFormHandler(event)).statusCode, 400, `${contentType} must be refused`);
+    }
+});
+
+test("does not echo an unbounded unknown key back to the caller", () => {
+    const key = "z".repeat(100000);
+    const result = validateSubmission({ ...validPayload(), [key]: 1 });
+    assert.ok(!result.ok);
+    if (!result.ok) {
+        // The key is attacker-controlled and lands verbatim in every
+        // consumer's logs, so the reflection has to be bounded.
+        assert.ok(result.fields._form.length < 200, "the reflected key must be truncated");
+        assert.ok(result.fields._form.indexOf("zzzz") !== -1, "and still name the offending key");
+    }
 });

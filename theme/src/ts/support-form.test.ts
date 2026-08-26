@@ -76,11 +76,24 @@ interface Harness {
 
 // Builds a page, installs the globals the module reaches for, requires it fresh,
 // and fires DOMContentLoaded so it wires itself up.
+// The window from the previous mount, so it can be torn down before the next
+// one. This matters more than it looks: the module reads a BARE global
+// sessionStorage, and mount() re-points that global at each new window. A
+// pending 500ms draft-save timer left behind by an earlier test therefore fires
+// during a later one and writes the OLD form's values into the NEW test's
+// storage -- every draft assertion downstream is then reading another test's
+// work. jsdom's window.close() drops the timers with the window.
+let previousWindow: any;
+
 function mount(options: { url?: string; draft?: any; extraPriorities?: string[]; breakStorage?: boolean } = {}): Harness {
+    if (previousWindow) {
+        previousWindow.close();
+    }
     const dom = new JSDOM(`<!doctype html><body>${formHtml(options.extraPriorities)}</body>`, {
         url: options.url || PAGE_URL,
     });
     const win = dom.window;
+    previousWindow = win;
 
     if (options.draft !== undefined) {
         win.sessionStorage.setItem("pulumi-support-form-draft", JSON.stringify(options.draft));
@@ -579,4 +592,84 @@ test("files one ticket even if submit fires twice while in flight", async () => 
     await new Promise(resolve => setTimeout(resolve, 0));
 
     assert.strictEqual(h.fetchCalls.length, 1, "a second submit while one is in flight must not file a duplicate");
+});
+
+// --- Duplicate-submission surfaces ---------------------------------------
+
+test("clears the controls on success, so a Back navigation cannot resubmit", async () => {
+    // sessionStorage is cleared, but browsers restore form state themselves on
+    // a Back navigation to this history entry. Without an explicit reset the
+    // visitor lands on a fully repopulated form with nothing saying the request
+    // was already filed -- one click from a duplicate ticket.
+    const h = mount();
+    fillValid(h);
+    await h.submit();
+
+    for (const field of ["email", "name", "organization", "subject", "description"]) {
+        assert.strictEqual(h.control(field).value, "", `${field} must be cleared after a successful submit`);
+    }
+});
+
+test("a pending draft save cannot resurrect the draft after success", async () => {
+    // saveDraft is debounced by 500ms. A submit inside that window used to have
+    // the timer fire after clearDraft() and write the draft straight back, so a
+    // filed request was waiting in the form on the next visit.
+    const h = mount();
+    fillValid(h);              // schedules a save 500ms out
+    await h.submit();          // resolves immediately; clearDraft runs first
+    await new Promise(resolve => setTimeout(resolve, 700));
+
+    assert.strictEqual(readDraft(h), undefined, "the debounced save must have been cancelled");
+});
+
+// --- Client/server parity ------------------------------------------------
+
+test("normalizes every console-URL shape the server does", () => {
+    const h = mount();
+    for (const pasted of [
+        "https://app.pulumi.com/my-org/stacks/dev",
+        "https://www.app.pulumi.com/my-org",
+        "app.pulumi.com/my-org",
+        "www.app.pulumi.com/my-org",
+        "/my-org",
+    ]) {
+        const org = h.control("organization");
+        org.value = pasted;
+        org.dispatchEvent(new h.win.Event("blur", { bubbles: true }));
+        assert.strictEqual(org.value, "my-org", `${pasted} must normalize to the bare org name`);
+        assert.strictEqual(h.errorText("organization"), "", `${pasted} must not be reported as invalid`);
+    }
+});
+
+test("mirrors the server's length caps rather than posting a doomed payload", async () => {
+    // Reachable by prefill and by programmatic fill, both of which bypass the
+    // layout's maxlength. Without the mirror these cost a round trip and come
+    // back as a 422 the client could have prevented.
+    const cases: Array<[string, string]> = [
+        ["subject", "a".repeat(201)],
+        ["name", "a".repeat(201)],
+        ["description", "a".repeat(20001)],
+    ];
+
+    for (const [field, value] of cases) {
+        const h = mount();
+        fillValid(h);
+        const input = h.control(field);
+        input.value = value;
+        input.dispatchEvent(new h.win.Event("input", { bubbles: true }));
+        await h.submit();
+
+        assert.strictEqual(h.fetchCalls.length, 0, `an over-long ${field} must not be posted`);
+        assert.ok(h.errorText(field), `an over-long ${field} must be reported`);
+    }
+});
+
+test("refreshes the character counter after a draft restore", () => {
+    // The counter runs once at init, before the draft is restored, so a
+    // restored long description left it hidden and reading the full limit
+    // until the next keystroke.
+    const h = mount({ draft: { description: "a".repeat(19000) } });
+    const counter = h.doc.querySelector("[data-support-form-counter]") as any;
+    assert.strictEqual(counter.hidden, false, "a near-limit restored value must show the counter");
+    assert.strictEqual(counter.textContent, "1,000 characters left");
 });

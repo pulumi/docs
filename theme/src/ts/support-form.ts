@@ -25,7 +25,9 @@
 const ENDPOINT = "/api/support";
 const DRAFT_KEY = "pulumi-support-form-draft";
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Mirrors EMAIL_PATTERN in infrastructure/support-form/validation.ts, including
+// the separator characters excluded there.
+const EMAIL_PATTERN = /^[^\s@<>",;]+@[^\s@<>",;]+\.[^\s@<>",;]+$/;
 const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
 // Mirrors LIMITS.organization in infrastructure/support-form/validation.ts.
 // Duplicated rather than shared because the two live in different build
@@ -33,6 +35,16 @@ const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
 // correctness — except if this one is ever the SMALLER of the two, which would
 // hard-block a value the API would have accepted.
 const ORGANIZATION_MAX = 40;
+
+// The rest of LIMITS, mirrored for the same reason and with the same caveat:
+// the server is authoritative, these only save a round trip. Without them a
+// value that arrived by prefill or by paste past the maxlength sailed through
+// to a 422.
+const EMAIL_MAX = 254;
+const NAME_MAX = 200;
+const SUBJECT_MAX = 200;
+const DESCRIPTION_MAX = 20000;
+const DESCRIPTION_MIN = 10;
 
 // Field keys are the API payload keys; ids are the DOM ids in the layout.
 const FIELD_IDS: Record<string, string> = {
@@ -50,8 +62,11 @@ type FormControl = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 // normalizeOrganization in infrastructure/support-form/validation.ts.
 function normalizeOrganization(raw: string): string {
     let value = raw.trim();
-    value = value.replace(/^https?:\/\/(www\.)?app\.pulumi\.com\//i, "");
-    value = value.replace(/^app\.pulumi\.com\//i, "");
+    // One pattern, matching the server's. As two, the schemeless branch did not
+    // allow www., so "www.app.pulumi.com/my-org" reduced to the host name and
+    // was then hard-blocked by ORGANIZATION_PATTERN -- exactly the
+    // client-stricter-than-the-API failure the note above warns about.
+    value = value.replace(/^(https?:\/\/)?(www\.)?app\.pulumi\.com\//i, "");
     value = value.replace(/^\/+/, "");
     const slash = value.indexOf("/");
     if (slash !== -1) {
@@ -145,12 +160,17 @@ function init() {
             if (!value) {
                 return "Enter your email address.";
             }
-            if (value.length > 254 || !EMAIL_PATTERN.test(value)) {
+            if (value.length > EMAIL_MAX || !EMAIL_PATTERN.test(value)) {
                 return "Enter a valid email address.";
             }
             return null;
         },
-        name: value => (value ? null : "Enter your full name."),
+        name: value => {
+            if (!value) {
+                return "Enter your full name.";
+            }
+            return value.length > NAME_MAX ? `Keep your name to ${NAME_MAX} characters or fewer.` : null;
+        },
         organization: value => {
             if (!value) {
                 return "Enter your Pulumi organization name.";
@@ -182,9 +202,20 @@ function init() {
             // string here would cost the user a round trip to find that out.
             return value ? null : "Choose a priority.";
         },
-        subject: value => (value ? null : "Enter a subject."),
-        description: value =>
-            value.length >= 10 ? null : "Describe the issue in at least a few words.",
+        subject: value => {
+            if (!value) {
+                return "Enter a subject.";
+            }
+            return value.length > SUBJECT_MAX ? `Keep the subject to ${SUBJECT_MAX} characters or fewer.` : null;
+        },
+        description: value => {
+            if (value.length < DESCRIPTION_MIN) {
+                return "Describe the issue in at least a few words.";
+            }
+            return value.length > DESCRIPTION_MAX
+                ? `Keep the description to ${DESCRIPTION_MAX.toLocaleString()} characters or fewer.`
+                : null;
+        },
     };
 
     function validateField(field: string): boolean {
@@ -221,6 +252,7 @@ function init() {
     }
 
     // Character counters for long fields, shown once the user nears the limit.
+    const counterUpdates: Array<() => void> = [];
     root.querySelectorAll<HTMLElement>("[data-support-form-counter]").forEach(counter => {
         const target = document.getElementById(counter.dataset.supportFormCounter || "") as FormControl | null;
         if (!target) {
@@ -233,10 +265,16 @@ function init() {
         const update = () => {
             const remaining = max - target.value.length;
             counter.hidden = remaining > max * 0.1;
-            counter.textContent = `${remaining.toLocaleString()} characters left`;
+            counter.textContent =
+                remaining === 1 ? "1 character left" : `${remaining.toLocaleString()} characters left`;
         };
         target.addEventListener("input", update);
         update();
+        // Re-run after the draft restore and the query-string prefill below,
+        // which set values without firing `input`. Without it a restored 19,000
+        // character description shows a hidden counter still reading the full
+        // limit until the next keystroke.
+        counterUpdates.push(update);
     });
 
     // Draft persistence: a failed submit (or an accidental navigation) never
@@ -323,7 +361,15 @@ function init() {
         return restored;
     }
 
+    let draftTimer: number | undefined;
+
     function clearDraft(): void {
+        // Cancel the pending save first. saveDraft is debounced by 500ms, so a
+        // submit that lands inside that window would otherwise have the timer
+        // fire after the key was removed and write the draft straight back --
+        // leaving a filed request sitting in the form on the next visit, ready
+        // to be submitted twice.
+        window.clearTimeout(draftTimer);
         try {
             sessionStorage.removeItem(DRAFT_KEY);
         } catch (e) {
@@ -331,7 +377,6 @@ function init() {
         }
     }
 
-    let draftTimer: number | undefined;
     function scheduleSave(): void {
         window.clearTimeout(draftTimer);
         draftTimer = window.setTimeout(saveDraft, 500);
@@ -349,13 +394,20 @@ function init() {
     // Query-param prefill, e.g. /support/new/?priority=urgent&subject=CLI+crash.
     // A recovered draft is the user's own work, so it wins over the URL.
     const params = new URLSearchParams(window.location.search);
-    for (const field of ["priority", "subject", "email", "organization"]) {
+    for (const field of ["priority", "subject", "email", "name", "organization"]) {
         const value = params.get(field);
         const input = control(field);
         if (value && input && !restoredFields.has(field)) {
-            setControlValue(input, value);
+            // Normalized on the way in for the same reason the blur handler
+            // does it: a prefilled console URL would otherwise sit in the field
+            // looking like it failed to work until the user touched it.
+            setControlValue(input, field === "organization" ? normalizeOrganization(value) : value);
         }
     }
+
+    // Both of the above set values without firing `input`, so the counters have
+    // to be told.
+    counterUpdates.forEach(update => update());
 
     // Errors clear as the user fixes the field.
     for (const field of Object.keys(validators)) {
@@ -407,6 +459,12 @@ function init() {
                 node.textContent = value;
             }
         });
+        // Clear the controls before hiding the card. The draft is already gone,
+        // but browsers restore form state themselves when the user comes Back
+        // to this history entry -- so without this they would land on a fully
+        // repopulated form, with nothing on screen saying the request was
+        // already filed, one click away from a duplicate ticket.
+        form.reset();
         formCard.hidden = true;
         confirmation.hidden = false;
         confirmation.focus();
@@ -483,7 +541,15 @@ function init() {
             banner.hidden = false;
         } finally {
             submitting = false;
+            const hadFocus = document.activeElement === submitButton || document.activeElement === document.body;
             setBusy(false);
+            // Disabling the button blurred it, which drops focus to <body> and
+            // makes a keyboard user tab from the top of the document to retry.
+            // Only reclaimed if focus had not moved somewhere deliberate --
+            // the 422 path focuses the first invalid control, and that wins.
+            if (hadFocus && document.activeElement === document.body) {
+                submitButton.focus();
+            }
         }
     });
 }

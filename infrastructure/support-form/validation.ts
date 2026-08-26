@@ -31,7 +31,13 @@ export const LIMITS = {
 // Pragmatic email shape check: something@something.tld. Full RFC 5322
 // validation rejects real addresses and accepts junk; the confirmation email
 // is the real verifier.
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Angle brackets, quotes, commas and semicolons are excluded on top of the
+// whitespace rule: they are legal in a quoted local part but never appear in an
+// address anyone types, and every one of them is a separator in some downstream
+// consumer -- a display-name form ("Support <a@b.co>"), a header list, a CSV
+// export. Control characters and bidi marks are already gone by this point;
+// sanitizeText strips them before any field is validated.
+const EMAIL_PATTERN = /^[^\s@<>",;]+@[^\s@<>",;]+\.[^\s@<>",;]+$/;
 
 // Pulumi organization names: alphanumeric start, then alphanumeric, hyphen, or
 // underscore (matches the Pulumi Cloud org-name rules). The length bound is
@@ -91,6 +97,31 @@ function isRecord(input: unknown): input is Record<string, unknown> {
     return typeof input === "object" && input !== null && !Array.isArray(input);
 }
 
+// Strips characters that carry no meaning in a support request but change how
+// the text is read once it leaves here.
+//
+// Nothing downstream escapes these. The values land in an Intercom ticket that a
+// support engineer reads, and from there commonly in a Slack relay or a
+// terminal, so the risk is not code execution -- it is a ticket whose displayed
+// text differs from its actual text.
+//
+//   - C0 controls except tab and newline (so CR goes, normalising CRLF to LF).
+//     NUL truncates a string in anything
+//     C-backed; CR alone lets "harmless text\rMALICIOUS" overwrite the visible
+//     line in a terminal; ESC opens ANSI colour and OSC-8 hyperlink sequences.
+//   - Bidi overrides and isolates (U+202A-202E, U+2066-2069), which reorder a
+//     rendered line without changing its bytes -- enough to make a URL or a file
+//     name read as something it is not.
+//
+// Tab and newline are kept: the description is Markdown and legitimately
+// multi-line. Everything else printable is left alone; over-filtering user
+// prose is its own bug, and callers are told what was rejected rather than
+// having their text silently rewritten beyond these two classes.
+function sanitizeText(value: string): string {
+    // eslint-disable-next-line no-control-regex
+    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g, "");
+}
+
 // Returns the trimmed string value of a field, or undefined (recording an
 // error) when the value is present but not a string.
 function stringField(
@@ -106,7 +137,7 @@ function stringField(
         fields[key] = "Expected a string.";
         return undefined;
     }
-    return value.trim();
+    return sanitizeText(value).trim();
 }
 
 export function validateSubmission(input: unknown): ValidationResult {
@@ -118,7 +149,11 @@ export function validateSubmission(input: unknown): ValidationResult {
 
     for (const key of Object.keys(input)) {
         if (!KNOWN_KEYS.includes(key)) {
-            return { ok: false, fields: { _form: `Unexpected field "${key}".` } };
+            // Truncated: the key is attacker-controlled and unbounded, and it
+            // is echoed verbatim into every consumer's logs. 64 characters is
+            // more than enough to recognise a mistyped field name.
+            const shown = key.length > 64 ? `${key.slice(0, 64)}...` : key;
+            return { ok: false, fields: { _form: `Unexpected field "${shown}".` } };
         }
     }
 
