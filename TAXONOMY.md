@@ -83,7 +83,7 @@ Teams:
 - **Contributes:** Community Eng, Eng/Product (technical validation)
 - **Consumes:** Evaluators and buyers scoping a solution
 
-> **Status: effectively end-of-life.** This content is being folded selectively into [Tutorials](#tutorials). Going forward, "Guides" refers only to the docs guides above — see [Naming decisions](#naming-decisions-and-open-items).
+> **Status: effectively end-of-life.** This content is being folded selectively into [Tutorials](#tutorials). The header and footer links were removed when Learn launched, so the pages are still served but unlinked. Going forward, "Guides" refers only to the docs guides above — see [Naming decisions](#naming-decisions-and-open-items).
 
 ### Topics 
 

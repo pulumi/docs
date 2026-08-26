@@ -62,15 +62,10 @@ items:
             description: Browse 170+ cloud providers and packages
             icon: package
             track: header-engineers-registry
-          - label: Templates
-            href: /learn/official-templates/
-            description: Deploy common architectures on any cloud
-            icon: grid-four
-            track: header-engineers-templates
           - label: Learn
             href: /learn/
-            description: Tutorials, templates, examples, and a glossary
-            icon: graduation-cap
+            description: Tutorials, templates, examples, and more
+            icon: compass
             track: header-engineers-learn
           - label: Events and workshops
             href: /events#upcoming
@@ -87,11 +82,6 @@ items:
             description: Hear from engineers why they love us
             icon: heart
             track: header-engineers-testimonials
-          - label: Pulumi guides
-            href: /guides/
-            description: Practical infrastructure patterns for cloud providers
-            icon: compass
-            track: header-engineers-guides
           - label: Releases
             href: /releases/
             description: Major platform updates from the team

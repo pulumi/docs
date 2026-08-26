@@ -101,7 +101,7 @@ What that means when you work here:
 
 - **Don't add tutorial or template content to this repo.** A new tutorial, a new official-template page, or a glossary term goes to pulumi/marketing-web. (The `glossary` shortcode and `data/glossary.toml` are a *different*, docs-only glossary rendered at `/docs/glossary/` — that one stays.)
 - **Link to `/learn/tutorials/<slug>/`, `/learn/official-templates/<group>/[<cloud>/]`, and `/learn/glossary/<term>/`.** Never `/tutorials/` or `/templates/`; those only redirect.
-- **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes Learn's chrome.
+- **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes Learn's chrome. Both carry one Learn entry pointing at `/learn/`; the Tutorials, Templates, and Pulumi guides entries collapsed into it.
 - **Search does not cover Learn.** Docs search indexes this repo and the Registry only; `/learn` has its own search at `/learn/browse`. `scripts/search/update-search-index.js` deliberately doesn't fetch `/learn/search-index.json`, and there is no Learn facet in the docs search UI.
 
 ---

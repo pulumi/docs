@@ -58,10 +58,10 @@ sections:
 - type: button-cards
   heading: Learning Resources
   cards:
-  - icon: graduation-cap
-    heading: Tutorials ↗
-    description: Step-by-step guides for building real-world infrastructure with Pulumi.
-    link: /learn/tutorials/
+  - icon: compass
+    heading: Learn ↗
+    description: Tutorials, templates, examples, and more for building real-world infrastructure with Pulumi.
+    link: /learn/
 - type: button-cards
   heading: More Documentation
   cards:
