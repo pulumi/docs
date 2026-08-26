@@ -120,7 +120,7 @@ To update your organization's display name:
 
 Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
-If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](https://support.pulumi.com/).
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/new/).
 
 ## Transferring stacks
 

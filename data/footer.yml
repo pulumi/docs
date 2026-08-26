@@ -120,7 +120,7 @@ columns:
         href: https://slack.pulumi.com/
         track: footer-help-slack
       - label: Customer support
-        href: https://support.pulumi.com/
+        href: /support/new/
         track: footer-support
       - label: Professional services
         href: /proserv/
