@@ -23,10 +23,11 @@
 # rewrite or a context-dependent choice is deliberately excluded (see below).
 deterministic_fix:
   - Pulumi.Substitutions        # Fixed terminology swaps: public beta->public preview, CrossGuard->Pulumi Policies, ...
+  - Pulumi.RetiredNames         # Renamed products (Pulumi Insights->Pulumi Discovery, ...); the brand table names the replacement, but the swap needs the meaning-preserving check before it's applied.
   - Pulumi.WordChoice           # Fixed word-preference swaps: click->select, go to->navigate to.
   - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
+  - Pulumi.ThirdPartyNames      # Canonical third-party casing: Github->GitHub, Typescript->TypeScript, ...
   - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
-  - Google.Spelling             # Single suggested spelling for an unambiguous misspelling.
 
 # Rules elevated to blocker in the pinned PR review: the composer renders these
 # under 🚨 Outstanding (counted, label-driving, auto-refresh-anchored) instead
@@ -42,9 +43,35 @@ deterministic_fix:
 blocker:
   - Pulumi.Substitutions        # Wrong term (dead brand name, misstated lifecycle stage) with a fixed correct replacement.
   - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
+  - Pulumi.ThirdPartyNames      # Miscased non-Pulumi project name (Github -> GitHub). Canonical form already dominates the corpus in every pair, so these are slips.
   - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
-  - Google.Spelling             # Unambiguous misspelling.
-  - Pulumi.DeprecatedProductNames  # "Pulumi Service" is always wrong; the replacement (Cloud/ESC/Deployments) is the author's call, but shipping the dead name is not.
+  - Pulumi.RetiredNames         # A renamed product (Pulumi Insights, Pulumi Copilot, ...). Shipping the dead name is a correctness error; that the proposed replacement still needs a meaning check is `deterministic_fix`'s job, not this list's.
+  - Pulumi.DeprecatedProductNames  # A retired name with no fixed replacement (Pulumi Service, IAS) is always wrong; choosing the current one is the author's call, but shipping the dead name is not.
+# Google.Spelling is deliberately on NEITHER list, and the name is why it's
+# tempting to add it. It is not a spell-checker -- it's four tokens for British
+# spellings (colour, labour, centre, and the open family `(?:\w+)nised?`).
+# Measured against current content it produces 6 findings, and 3 of them are
+# proper nouns it cannot distinguish: "RAI Convention Centre" (the Amsterdam
+# venue) twice, and "Organise imports" (a literal VS Code command label). A 50%
+# false-positive rate fails this list's own near-zero admission criterion, so it
+# does not block. It's off `deterministic_fix` for a separate reason: styles/
+# Google/Spelling.yml is `extends: existence` with no `action:` and no swap map,
+# so Vale emits no replacement to apply -- the fix has to be composed, and one
+# token is a wildcard. Real misspellings are Pulumi.Spelling's job (Hunspell,
+# advisory).
+#
+# Pulumi.RetiredNames blocks even though the replacement it proposes isn't
+# always the right one. Those are separate questions: `blocker` asks whether
+# shipping the finding is acceptable -- for a dead brand name, never --  while
+# `deterministic_fix` asks whether the reviewer has to author the correction.
+# The brand guide's two carve-outs ("historical usage is fine": content/
+# case-studies/unity.md's "Pulumi Neo ... replacing Pulumi Copilot"; and "some
+# replacements can't be automated": Insights is the Discovery product in most
+# sentences, the "Discovery & governance" category in others) are handled by
+# the meaning gate above and by 🚨's resolve-or-refute path -- not by demoting
+# the rule. Demoting it would also expose a dead brand name to the per-file
+# cap, which drops advisory findings silently; blockers bypass both caps.
+#
 # Pulumi.WordChoice (click->select, go to->navigate to) is deliberately absent
 # from `blocker:` despite having a deterministic fix — those swaps are house
 # word preferences, not correctness errors, so they fail this list's admission
@@ -56,7 +83,7 @@ blocker:
 # blocking: the two lists are independent, so DeprecatedProductNames appears
 # here *and* in `blocker` -- its fix needs authoring, but shipping the dead
 # name still blocks.
-#   Pulumi.DeprecatedProductNames - "Pulumi Service" -> Cloud/ESC/Deployments is context-dependent.
+#   Pulumi.DeprecatedProductNames - retired names with no fixed replacement (Pulumi Service, IAS) -> the current name is context-dependent; see the brand guide's retired-names table.
 #   Pulumi.BannedWords            - replacement needs judgment (whitelist->allowlist is safe; master/guys are not mechanical).
 #   Pulumi.Difficulty             - "easily"/"simply" needs a rewrite, not a swap.
 #   Pulumi.DirectionalReferences  - "see above" needs a real link/anchor, not a swap.
@@ -67,3 +94,9 @@ blocker:
 #   Pulumi.NarrativeWe            - imperative rewrite is editorial (let's create -> create), not a swap.
 #   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /
 #   Pulumi.EmDashDensity / Pulumi.Repetition - AI-prose heuristics; inherently judgment/rewrite.
+#   Pulumi.Spelling               - Hunspell flags the word but proposes nothing, and the right fix is
+#                                   often to ADD the term to styles/Pulumi/ignore/tech-vocabulary.txt
+#                                   rather than change the prose. Advisory while the vocabulary settles.
+#   Pulumi.Overcapitalization     - "Stack"->"stack" looks mechanical but the same word is a legitimate
+#                                   proper noun inside a console page name (the Stacks view), which the
+#                                   rule can't see.

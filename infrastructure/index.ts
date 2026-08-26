@@ -6,6 +6,7 @@ import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { SupportFormApi } from "./supportForm";
 
 const stackConfig = new pulumi.Config();
 
@@ -79,6 +80,12 @@ const config = {
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
     wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+
+    // enableSupportForm toggles the /api/support endpoint backing the support-request
+    // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
+    // tickets. Requires the intercomApiKey (secret) and intercomTicketTypeId stack
+    // config values — see SupportFormApiArgs in supportForm.ts.
+    enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 };
 
 // CloudFront Function to lowercase URIs for .NET SDK docs so that
@@ -117,17 +124,60 @@ if (config.enableWaf) {
         description: `Rate limiting for ${config.websiteDomain}`,
         defaultAction: { allow: {} },
         rules: [{
+            // The link checker crawls hard enough to trip the rate limit, so it
+            // is exempt -- but the exemption is keyed on a User-Agent string,
+            // which any caller can send. That was harmless while everything
+            // behind this WAF was a static GET; /api/support is neither. It
+            // takes unauthenticated POSTs that create Intercom contacts and
+            // tickets, and the rate-based rule below is the only thing limiting
+            // them, so a one-line header would have lifted that limit entirely.
+            //
+            // The exemption is therefore scoped to what the link checker
+            // actually does: everything except /api/. The crawler only follows
+            // links on rendered pages and never posts, so nothing it does is
+            // affected.
             name: "allow-link-checker",
             priority: 0,
             action: { allow: {} },
             statement: {
-                byteMatchStatement: {
-                    searchString: "pulumi+blc/0.1",
-                    fieldToMatch: {
-                        singleHeader: { name: "user-agent" },
-                    },
-                    positionalConstraint: "EXACTLY",
-                    textTransformations: [{ priority: 0, type: "NONE" }],
+                andStatement: {
+                    statements: [{
+                        byteMatchStatement: {
+                            searchString: "pulumi+blc/0.1",
+                            fieldToMatch: {
+                                singleHeader: { name: "user-agent" },
+                            },
+                            positionalConstraint: "EXACTLY",
+                            textTransformations: [{ priority: 0, type: "NONE" }],
+                        },
+                    }, {
+                        notStatement: {
+                            statement: {
+                                byteMatchStatement: {
+                                    searchString: "/api/",
+                                    fieldToMatch: {
+                                        uriPath: {},
+                                    },
+                                    positionalConstraint: "STARTS_WITH",
+                                    // Decode and lowercase before comparing, per
+                                    // AWS's guidance for URI-path matching. The
+                                    // rule this negates is a priority-0
+                                    // terminating allow, so a path shape the
+                                    // byte-match fails to recognise -- /%61pi/,
+                                    // /API/ -- would hand the rate-limit
+                                    // exemption back to anyone who sets the
+                                    // header. Whether either shape reaches the
+                                    // Lambda depends on CloudFront's own
+                                    // normalization, so this is defence in
+                                    // depth rather than a known bypass.
+                                    textTransformations: [
+                                        { priority: 0, type: "URL_DECODE" },
+                                        { priority: 1, type: "LOWERCASE" },
+                                    ],
+                                },
+                            },
+                        },
+                    }],
                 },
             },
             visibilityConfig: {
@@ -789,6 +839,20 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
     },
 });
 
+// API responses (currently just /api/support*) must never be cached by browsers
+// or intermediaries. DefaultCachePolicy would stamp max-age=60 on them, so this
+// policy overrides Cache-Control to no-store while keeping the security headers.
+const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [permissionsPolicyHeaderItem, {
+            header: "Cache-Control",
+            value: "no-store",
+            override: true,
+        }],
+    },
+});
+
 // baseCacheBehavior holds the fields shared by every behavior. TTLs and
 // cache-key config are NOT set here: each behavior (default or ordered) must
 // attach its own cachePolicyId, or set forwardedValues + minTtl/defaultTtl/maxTtl
@@ -960,6 +1024,75 @@ if (config.versionedDocsStack) {
     });
 }
 
+// The support-request form endpoint (see supportForm.ts). Additive and fully
+// optional — dev stacks and PR previews without enableSupportForm get no origin
+// or behavior, and the form's frontend degrades gracefully when POSTs to
+// /api/support fail.
+const supportFormOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const supportFormBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+let supportForm: SupportFormApi | undefined;
+
+if (config.enableSupportForm) {
+    supportForm = new SupportFormApi("support-form", {
+        intercomApiKey: stackConfig.requireSecret("intercomApiKey"),
+        intercomTicketTypeId: stackConfig.require("intercomTicketTypeId"),
+    });
+
+    supportFormOrigins.push(supportForm.getOrigin());
+
+    // Origin request policy for /api/support*.
+    //
+    // An explicit whitelist rather than "every viewer header except Host", because
+    // this is an API endpoint and the handler reads exactly one thing from the
+    // viewer's own headers: content-type. Forwarding nothing else means a caller
+    // cannot smuggle a header the origin might one day interpret. If the handler
+    // ever needs another viewer header, it has to be added here — nothing else
+    // reaches the Lambda.
+    //
+    // CloudFront-Viewer-Address is the second item and is not a viewer header at
+    // all: CloudFront sets it from the TCP connection and overwrites anything the
+    // client sent, so it cannot be forged. It is how the handler learns the
+    // submitter's address, which is otherwise unknowable — requestContext's sourceIp
+    // is the edge node, because CloudFront is what invokes the Function URL. A
+    // managed header is preferred over a CloudFront Function that stamps the same
+    // value: there is no edge code to typo, and no way for it to fail closed and
+    // 502 the endpoint.
+    //
+    // Host is dropped by construction, which Lambda Function URL origins require.
+    // The x-origin-verify shared secret is unaffected — it is an origin
+    // customHeaders entry (see SupportFormApi.getOrigin), added by CloudFront
+    // regardless of this policy.
+    const supportFormOriginRequestPolicy = new aws.cloudfront.OriginRequestPolicy("support-form-origin-request", {
+        comment: "POST /api/support: forwards the content type and the viewer's address, nothing else.",
+        cookiesConfig: { cookieBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+        headersConfig: {
+            headerBehavior: "whitelist",
+            headers: { items: ["content-type", "CloudFront-Viewer-Address"] },
+        },
+    });
+
+    supportFormBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: "support-form-api",
+        pathPattern: "/api/support*",
+        // CloudFront's only POST-capable allowedMethods set is all seven; the
+        // handler 405s everything but POST. Only GET/HEAD are cacheable, and
+        // the no-cache policy keeps even those uncached.
+        allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+        cachedMethods: ["GET", "HEAD"],
+        cachePolicyId: noCacheKeyPolicy.id,
+        originRequestPolicyId: supportFormOriginRequestPolicy.id,
+        responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
+        // API traffic gets no edge redirects, no markdown negotiation, and no
+        // edge functions at all. The submitter's address arrives as the
+        // CloudFront-managed CloudFront-Viewer-Address header instead — see the
+        // origin request policy above.
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -1027,6 +1160,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...learnOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
+        ...supportFormOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -1049,6 +1183,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
+        // The support-form API endpoint. /api/support* overlaps no other
+        // pattern; listed first because it's the only non-content behavior.
+        ...supportFormBehaviors,
+
         ...registryBehaviors,
         ...guidesBehaviors,
         ...learnBehaviors,
@@ -1403,4 +1541,5 @@ export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
+export const supportFormFunctionName = supportForm?.getFunctionName();
 export const readme = fs.readFileSync("./README.md").toString();

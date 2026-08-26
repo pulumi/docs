@@ -4008,7 +4008,7 @@ Complete reference of all build and deployment scripts.
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |
 | **ONLY_TEST** | Test single program | `aws-s3-typescript` | User |
-| **GOGC** | Go GC tuning | `3` | Workflow |
+| **GOMEMLIMIT** | Go soft memory ceiling for Hugo (CI only) | `12GiB` | build-site.sh |
 
 ### AWS Resource Naming Conventions
 

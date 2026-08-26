@@ -7,7 +7,7 @@ menu:
   administration:
     name: Access tokens
     parent: administration-concepts
-    weight: 5
+    weight: 7
 aliases:
 - /docs/administration/access-identity/access-tokens/
 - /docs/intro/pulumi-service/organization-access-tokens/
