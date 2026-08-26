@@ -121,7 +121,7 @@ For **SAML/SSO**, authenticating through the identity provider is what establish
 
 If your account offers no way to connect an identity provider, see [If the identity options aren't there](/docs/administration/concepts/accounts/#identity-options-missing).
 
-For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization).
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization) and [Identity providers](/docs/administration/concepts/identity-providers/).
 
 ## Account
 

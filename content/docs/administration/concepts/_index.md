@@ -18,6 +18,7 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 ## Organization and identity
 
 - [Organizations](/docs/administration/concepts/organizations/) — the top-level container that owns your stacks, environments, and settings.
+- [Identity providers](/docs/administration/concepts/identity-providers/) — the GitHub, GitLab, Bitbucket, or SAML 2.0 provider that governs who can be a member of your organization.
 - [Accounts](/docs/administration/concepts/accounts/) — individual user accounts, profiles, and identity providers.
 - [Organization-managed users](/docs/administration/concepts/org-managed-users/) — accounts an organization creates and controls through SAML or SCIM, and the restrictions that come with them.
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — accounts for AI agents and automation acting on your organization's behalf.

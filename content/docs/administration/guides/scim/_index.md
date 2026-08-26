@@ -117,7 +117,7 @@ This matters because an identity provider that reconciles group state may treat 
 
 ### Changing the identity provider revokes the SCIM token
 
-Your organization's SCIM access token is tied to its SAML configuration. If an admin switches the organization to a different [identity provider](/docs/administration/concepts/organizations/#changing-identity-providers), that configuration is discarded along with the SCIM token, the organization's SAML identities, and its SAML member roster.
+Your organization's SCIM access token is tied to its SAML configuration. If an admin switches the organization to a different [identity provider](/docs/administration/concepts/identity-providers/#changing-your-organizations-identity-provider), that configuration is discarded along with the SCIM token, the organization's SAML identities, and its SAML member roster.
 
 Switching back to SAML doesn't restore any of it. You have to issue a new SCIM token, point your identity provider at it, and re-provision your users.
 
