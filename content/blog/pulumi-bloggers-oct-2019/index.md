@@ -8,7 +8,7 @@ tags:
 category: community
 ---
 
-We are always excited when people join the infrastructure as code community and write about their experiences. Pulumi can be used for a range of common tasks such as standardizing VPC builds, building VSphere virtual machines, or deploying your infrastructure from a CI/CD pipeline. Whether it's `TypeScript`, `JavaScript`, or `Python` you can build your infrastructure with your language and tools of choice. Here are three new blog posts that show how to use Pulumi with code examples to perform these tasks.
+We are always excited when people join the infrastructure as code community and write about their experiences. Pulumi can be used for a range of common tasks such as standardizing VPC builds, building vSphere virtual machines, or deploying your infrastructure from a CI/CD pipeline. Whether it's `TypeScript`, `JavaScript`, or `Python` you can build your infrastructure with your language and tools of choice. Here are three new blog posts that show how to use Pulumi with code examples to perform these tasks.
 
 ## CircleCI on Google Kubernetes Engine (GKE)
 
@@ -24,11 +24,11 @@ We are always excited when people join the infrastructure as code community and 
 >
 >You’d never hire that way. So why, when choosing DevOps tools, do people find it acceptable to have different languages, DSLs that only key individuals understand?”
 
-## VMware VSphere and Pulumi
+## VMware vSphere and Pulumi
 
 ![peek definition](peek-definition.jpg)
 
-[Cody De Arkland](https://twitter.com/Codydearkland) demonstrates how to [create a VMware VSphere Virtual Machine](https://www.thehumblelab.com/iac-vsphere-pulumi/) by adding a ResourcePool, DataStore, NetworkStore and the virtual machine template with Pulumi. He also sets the configuration values such as DNS settings, default gateway, domain, and hostname all in code. All of this runs on the ESXi virtualization server and vCenter (which is why the Datacenter ID is needed for configuration). His example is available on [GitHub](https://github.com/codyde/pulumi-vsphere-ts). We like Cody’s caveat that his post is not an endorsement but call to explore new tools. In his conclusion, he nails home the point why infrastructure as code is the future of DevOps.
+[Cody De Arkland](https://twitter.com/Codydearkland) demonstrates how to [create a VMware vSphere Virtual Machine](https://www.thehumblelab.com/iac-vsphere-pulumi/) by adding a ResourcePool, DataStore, NetworkStore and the virtual machine template with Pulumi. He also sets the configuration values such as DNS settings, default gateway, domain, and hostname all in code. All of this runs on the ESXi virtualization server and vCenter (which is why the Datacenter ID is needed for configuration). His example is available on [GitHub](https://github.com/codyde/pulumi-vsphere-ts). We like Cody’s caveat that his post is not an endorsement but call to explore new tools. In his conclusion, he nails home the point why infrastructure as code is the future of DevOps.
 
 > “Infrastructure as Code tools like Pulumi (and others in the space, i.e. Terraform from HashiCorp) add a ton of value on top of traditional deployment methods. Being able to store your infrastructure deployments in source control (i.e. GitHub/GitLab) opens up the door to a number of collaboration concepts. When you partner this in with some form of a CI/CD tool (i.e. CircleCI) - things get really interesting. Being able to submit a PR to change an infrastructure deployment, and having something like CircleCI automatically deploy the resources when changes are merged creates a pretty powerful platform for delivering infrastructure to end-users.”
 
