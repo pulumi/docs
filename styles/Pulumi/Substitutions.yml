@@ -14,11 +14,15 @@
 # intersects findings with PR-added lines), so a blocker fires only on a line
 # an author is writing today, never on inherited prose elsewhere in the file. Two sibling files hold the rest:
 #
-#   - RetiredNames.yml (advisory) — renamed products, where "Neo replaced
-#     Copilot" is legitimate historical prose and the brand guide's own
-#     preamble warns that "some replacements can't be automated".
-#   - DeprecatedProductNames.yml (flag-only) — retired names with no fixed
-#     replacement at all, like "Pulumi Service".
+#   - RetiredNames.yml (also blocking, hedged message) — renamed products,
+#     where "Neo replaced Copilot" is legitimate historical prose and the
+#     brand guide's own preamble warns that "some replacements can't be
+#     automated", so the finding asks the reader to confirm the swap fits.
+#   - DeprecatedProductNames.yml (blocking, flag-only) — retired names with no
+#     fixed replacement at all, like "Pulumi Service".
+#
+# All three block. The file a row lives in decides how much its message hedges,
+# not whether the finding may ship.
 extends: substitution
 message: "Use '%s' instead of '%s' (brand guide: Names & terminology)."
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
