@@ -691,6 +691,19 @@ test("strips the prefill parameters from the address bar once applied", () => {
     assert.strictEqual(h.win.location.pathname, "/support/new/", "the path must be unchanged");
 });
 
+test("keeps every parameter that is not a prefill key", () => {
+    // Dropping the whole query string would take campaign attribution with it,
+    // and Segment stamps location.search onto every event at call time — so
+    // every event after page load on this page would lose it.
+    const h = mount({ url: `${PAGE_URL}?utm_source=newsletter&priority=urgent&gclid=abc123` });
+
+    assert.strictEqual(h.control("priority").value, "urgent", "the prefill must still be applied");
+    const remaining = new h.win.URLSearchParams(h.win.location.search);
+    assert.strictEqual(remaining.get("utm_source"), "newsletter", "campaign attribution must survive");
+    assert.strictEqual(remaining.get("gclid"), "abc123");
+    assert.strictEqual(remaining.has("priority"), false, "the prefill key must be consumed");
+});
+
 test("leaves a parameterless URL alone", () => {
     const h = mount();
     assert.strictEqual(h.win.location.search, "");
@@ -754,4 +767,37 @@ test("validates the same string it posts, not the raw control value", async () =
 
     assert.ok(h2.errorText("description"), "a description only long enough before sanitizing must be caught here");
     assert.strictEqual(h2.fetchCalls.length, 0, "and must not cost a round trip");
+});
+
+test("strips the bidi marks as well as the overrides", async () => {
+    // The weaker marks (U+200E/U+200F/U+061C) reorder only neutral characters,
+    // but flipping the punctuation in a URL is the same "displays something
+    // other than what it contains" failure the overrides are stripped for.
+    const h = mount();
+    fillValid(h);
+    type(h, "subject", "report\u200E-\u200F2026\u061C.pdf");
+    await h.submit();
+
+    const sent = h.fetchCalls[0].body.subject;
+    for (const mark of ["\u200E", "\u200F", "\u061C"]) {
+        assert.strictEqual(sent.indexOf(mark), -1, `${escape(mark)} must not reach the ticket`);
+    }
+    assert.strictEqual(sent, "report-2026.pdf");
+});
+
+test("keeps the client sanitizer character-for-character identical to the server's", () => {
+    // The two regexes being identical is the property that makes "the recap
+    // shows what was filed" meaningful. Reading both files is the only way to
+    // catch one moving without the other.
+    const fs = require("fs");
+    const path = require("path");
+    const read = (...parts: string[]) => fs.readFileSync(path.join(__dirname, "..", "..", ...parts), "utf8");
+
+    const CLASS = /value\.replace\(\/\[([^\]]+)\]\/g, ""\)/;
+    const client = CLASS.exec(read("theme", "src", "ts", "support-form.ts"));
+    const server = CLASS.exec(read("infrastructure", "support-form", "validation.ts"));
+
+    assert.ok(client, "the client sanitizer must be findable");
+    assert.ok(server, "the server sanitizer must be findable");
+    assert.strictEqual(client![1], server![1], "the two sanitizers must strip exactly the same characters");
 });

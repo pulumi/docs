@@ -67,7 +67,7 @@ type FormControl = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 // override the ticket will not contain, which is the wrong way round for a
 // screen whose whole job is to confirm what was sent.
 function sanitizeText(value: string): string {
-    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g, "");
+    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/g, "");
 }
 
 // Strips a pasted console URL down to the bare organization name. Mirrors
@@ -413,7 +413,8 @@ function init() {
     // Query-param prefill, e.g. /support/new/?priority=urgent&subject=CLI+crash.
     // A recovered draft is the user's own work, so it wins over the URL.
     const params = new URLSearchParams(window.location.search);
-    for (const field of ["priority", "subject", "email", "name", "organization"]) {
+    const PREFILL_FIELDS = ["priority", "subject", "email", "name", "organization"];
+    for (const field of PREFILL_FIELDS) {
         const value = params.get(field);
         const input = control(field);
         if (value && input && !restoredFields.has(field)) {
@@ -437,8 +438,19 @@ function init() {
     // own session-history restore runs after this code and would overwrite a
     // prefilled <select> with its reset value -- turning ?priority=urgent into
     // a normal ticket on the way back.
-    if (params.toString() && window.history && typeof window.history.replaceState === "function") {
-        window.history.replaceState(window.history.state, "", window.location.pathname + window.location.hash);
+    if (PREFILL_FIELDS.some(field => params.has(field)) && window.history &&
+        typeof window.history.replaceState === "function") {
+        // Only the prefill keys. Dropping the whole query string would take
+        // campaign attribution with it -- utm_*, gclid, anything else a link
+        // carries -- and Segment stamps location.search onto every event at
+        // call time, so every event after page load on this page would lose it.
+        // The privacy win is unaffected: the PII is all in these five keys.
+        PREFILL_FIELDS.forEach(field => params.delete(field));
+        const query = params.toString();
+        window.history.replaceState(
+            window.history.state,
+            "",
+            window.location.pathname + (query ? `?${query}` : "") + window.location.hash);
     }
 
     // Errors clear as the user fixes the field.

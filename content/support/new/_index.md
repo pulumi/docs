@@ -52,8 +52,14 @@ confirmation:
     steps:
         - title: Now.
           description: Your request has been logged with the Pulumi support team.
+        # No response-time number here. data/pulumi_pricing.yaml scopes contracted
+        # support to the Enterprise edition and above, and puts the normal-ticket
+        # SLA at "1 or 5 business days" even there — so "usually within one
+        # business day" overstates it for every reader of a form that any
+        # anonymous visitor can reach. If support wants a published figure, it
+        # belongs here with their sign-off and it has to match that file.
         - title: Next.
-          description: A support engineer reviews it and replies by email, usually within one business day.
+          description: A support engineer reviews it and replies by email. How soon depends on your Pulumi Cloud edition.
         - title: Then.
           description: You work the issue together over email. If we need files or more detail, we'll ask there.
 

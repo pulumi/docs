@@ -134,7 +134,12 @@ export function clientAddress(event: FunctionUrlEvent): ClientAddress {
 // obviously synthetic value (a UUID, a fixed sentinel) would be as good an
 // oracle as omitting the field. Nothing consumes it: no ticket exists.
 function syntheticTicketId(): string {
-    let digits = "";
+    // First digit is 1-9. Intercom renders integers, so a real id never has a
+    // leading zero, and building all 15 digits uniformly gave one in ten of
+    // these a leading zero -- a free tell for anyone comparing a drop against a
+    // real acceptance. Width checked against real ids returned by the testing
+    // workspace: 215475647261127, 215475647300185, 372996254723247.
+    let digits = String(Math.floor(Math.random() * 9) + 1);
     while (digits.length < 15) {
         digits += Math.floor(Math.random() * 10).toString();
     }
@@ -235,6 +240,13 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
     // success that omitted ticketId was distinguishable from a real one by any
     // caller that read the documented shape. Both are closed by validating
     // first and minting a plausible id.
+    //
+    // The response body is indistinguishable; the latency is not. A real
+    // acceptance awaits up to three sequential round trips to api.intercom.io,
+    // and this path does no I/O at all, so a determined spammer could tell them
+    // apart by timing. Left as-is deliberately: closing it means padding this
+    // path to a plausible duration, which holds a Lambda invocation open to
+    // serve a bot, and the trap only ever catches the naive ones anyway.
     if (typeof parsed === "object" && parsed !== null && (parsed as Record<string, unknown>).leave_blank) {
         console.log(
             JSON.stringify({

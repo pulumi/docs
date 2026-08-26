@@ -52,7 +52,7 @@ if (!fs.existsSync(srcDir)) {
     process.exit(1);
 }
 
-// Relative paths of every *.test.ts under support-form/, at any depth.
+// Relative paths of every *.test.ts under srcDir, at any depth.
 function findSuites(dir, prefix) {
     const found = [];
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

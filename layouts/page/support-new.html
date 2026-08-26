@@ -112,16 +112,22 @@
                 {{/* Honeypot: invisible to people, filled in by naive bots. The
                      handler drops any submission that sets it.
 
-                     The label reads as an instruction rather than a field name
-                     ("Website") because the trap is indiscriminate: anything
-                     reading the raw HTML sees it, including a legitimate agent
-                     filing a ticket on someone's behalf. That agent would fill
-                     in a plausible URL, get a 200 back, and report success for a
-                     ticket that was never created. Naive bots fill every field
-                     regardless of its label, so this costs nothing against them
-                     and rescues anything that reads before it writes. Agents
-                     should use the documented JSON API (see the "For agents"
-                     section of /llms.txt), which never mentions this field. */}}
+                     Both the name and the label are chosen, and for different
+                     reasons. The trap is indiscriminate -- anything reading the
+                     raw HTML sees it, including a legitimate agent filing a
+                     ticket on someone's behalf, which would fill in a plausible
+                     value, get a 200 back, and report success for a ticket that
+                     was never created -- so the label reads as an instruction
+                     rather than as a field to fill in. The name avoids anything
+                     with autofill semantics: as "website" this was a prime
+                     target for password managers, which store website URLs and
+                     match on the field name, and an autofilled trap destroys a
+                     real request silently. Naive bots fill every field whatever
+                     it is called, so neither choice costs anything against them.
+
+                     Agents should use the documented JSON API, which names this
+                     field in the "For agents" section of /llms.txt precisely so
+                     that a legitimate one knows never to send it. */}}
                 <div class="sr-only" aria-hidden="true">
                     <label for="support-leave-blank">Leave this field empty</label>
                     <input type="text" id="support-leave-blank" name="leave_blank" tabindex="-1" autocomplete="off">

@@ -383,7 +383,9 @@ test("handler swallows honeypot submissions with a fake success", async () => {
     // trivially distinguishable from a real one by anyone reading the
     // documented response shape, so the drop announced itself.
     assert.ok(parsed.id, "a dropped submission still gets an id");
-    assert.ok(/^[0-9]{15}$/.test(parsed.ticketId), "a dropped submission gets a plausible ticket id");
+    // Leading digit 1-9: Intercom renders integers, so a real id never starts
+    // with a zero and one that did would be a free tell.
+    assert.ok(/^[1-9][0-9]{14}$/.test(parsed.ticketId), "a dropped submission gets a plausible ticket id");
 });
 
 test("the honeypot does not announce itself through the validation order", async () => {

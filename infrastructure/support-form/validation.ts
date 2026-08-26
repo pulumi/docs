@@ -59,10 +59,14 @@ export type ValidationResult =
     | { ok: true; value: SupportRequest }
     | { ok: false; fields: Record<string, string> };
 
-// Keys accepted at the top level of the JSON payload. "leave_blank" is the
-// honeypot field: the handler checks it before validation runs, but it is
-// tolerated here so a spam submission that slips through still validates
-// rather than erroring on an unknown key.
+// Keys accepted at the top level of the JSON payload.
+//
+// "leave_blank" is the honeypot, and its membership here is load-bearing rather
+// than a tolerance. The handler checks it *after* validation (see the comment
+// at that check), so a trapped submission has to validate cleanly to reach the
+// drop. Remove it from this array and a trapped payload takes the unknown-key
+// path to a 422 instead -- restoring exactly the status-code oracle that
+// ordering was introduced to close, and which validation.test.ts pins.
 // Exported so the suite can pin the exact set: the way this rule erodes is a
 // new key being added, which no "rejects an unknown key" test can see.
 export const KNOWN_KEYS = [
@@ -109,9 +113,13 @@ function isRecord(input: unknown): input is Record<string, unknown> {
 //     NUL truncates a string in anything
 //     C-backed; CR alone lets "harmless text\rMALICIOUS" overwrite the visible
 //     line in a terminal; ESC opens ANSI colour and OSC-8 hyperlink sequences.
-//   - Bidi overrides and isolates (U+202A-202E, U+2066-2069), which reorder a
-//     rendered line without changing its bytes -- enough to make a URL or a file
-//     name read as something it is not.
+//   - Bidi overrides and isolates (U+202A-202E, U+2066-2069) -- the Trojan
+//     Source set -- which reorder a rendered line without changing its bytes,
+//     enough to make a URL or a file name read as something it is not. The
+//     weaker marks go too (U+061C ALM, U+200E LRM, U+200F RLM): they reorder
+//     only neutral characters rather than forcing a run, but flipping the
+//     punctuation in a URL is the same "displays something other than what it
+//     contains" failure, and none of them is a character anyone types.
 //
 // Tab and newline are kept: the description is Markdown and legitimately
 // multi-line. Everything else printable is left alone; over-filtering user
@@ -119,7 +127,7 @@ function isRecord(input: unknown): input is Record<string, unknown> {
 // having their text silently rewritten beyond these two classes.
 function sanitizeText(value: string): string {
     // eslint-disable-next-line no-control-regex
-    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g, "");
+    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/g, "");
 }
 
 // Returns the trimmed string value of a field, or undefined (recording an
