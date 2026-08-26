@@ -41,7 +41,17 @@ on:
       # The shared "did every suite actually run" guard, used by both halves.
       - 'scripts/check-test-suites-compiled.js'
       - 'theme/src/ts/support-form.ts'
-      - 'theme/src/ts/support-form.test.ts'
+      # Every *.test.ts under theme/src/ts, not just this one. The guard walks
+      # the whole tree at any depth and fails on a suite missing from
+      # tsconfig.test.json's `files` array, so watching only the named file
+      # would let the PR that adds theme/src/ts/lightbox.test.ts land green and
+      # turn this job red on the next unrelated support-form PR -- the same
+      # failure the server filter above was widened to avoid. Scoped to test
+      # files rather than all of theme/src/ts because, unlike the Pulumi
+      # program, tsconfig.test.json compiles a fixed three-file list: an
+      # unrelated theme module cannot break this suite, only an unregistered
+      # suite can.
+      - 'theme/src/ts/**/*.test.ts'
       - 'theme/tsconfig.test.json'
       - 'theme/package.json'
       # The client suite asserts the layout still provides the ids it binds to.

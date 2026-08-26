@@ -208,19 +208,25 @@ test("a recovered draft outranks the query string", () => {
     assert.strictEqual(h.control("priority").value, "normal");
 });
 
-test("a deliberately chosen default is not reverted by the query string", () => {
-    // The mirror of the prefill bug. A user who opened ?priority=urgent, decided
-    // it wasn't urgent, and picked "normal" must not have "urgent" restored on
-    // their next visit. "Differs from the rendered default" is not the same
-    // predicate as "the user chose it".
-    const h = mount({
-        url: `${PAGE_URL}?priority=urgent&subject=FromUrl`,
-        draft: { priority: "normal", subject: "FromDraft" },
-    });
-    assert.strictEqual(h.control("priority").value, "normal");
-    // Same positive control as above: without this the assertion passes just as
-    // happily against a module that never initialised.
-    assert.strictEqual(h.control("subject").value, "FromDraft", "the draft must have been restored at all");
+test("a priority the user chose themselves survives a return to the same link", async () => {
+    // The mirror of the prefill bug, driven the way it actually happens rather
+    // than from a hand-written draft — which would just re-test the precedence
+    // above. A visitor opens ?priority=urgent, decides it is not urgent, and
+    // picks "normal": that choice has to reach the draft (it is the default
+    // value, so only the touched set distinguishes it from an untouched
+    // control) and then outrank the same query string on the way back.
+    const first = mount({ url: `${PAGE_URL}?priority=urgent` });
+    assert.strictEqual(first.control("priority").value, "urgent", "the prefill must have applied");
+
+    choose(first, "priority", "normal");
+    await new Promise(resolve => setTimeout(resolve, 600)); // the 500ms save debounce
+
+    const draft = readDraft(first);
+    assert.ok(draft, "the choice must have been saved");
+    assert.strictEqual(draft.priority, "normal", "a chosen default still counts as touched");
+
+    const second = mount({ url: `${PAGE_URL}?priority=urgent`, draft });
+    assert.strictEqual(second.control("priority").value, "normal", "the URL must not reinstate urgent");
 });
 
 test("a stale draft option does not suppress the query-string prefill", () => {

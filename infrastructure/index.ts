@@ -157,7 +157,21 @@ if (config.enableWaf) {
                                         uriPath: {},
                                     },
                                     positionalConstraint: "STARTS_WITH",
-                                    textTransformations: [{ priority: 0, type: "NONE" }],
+                                    // Decode and lowercase before comparing, per
+                                    // AWS's guidance for URI-path matching. The
+                                    // rule this negates is a priority-0
+                                    // terminating allow, so a path shape the
+                                    // byte-match fails to recognise -- /%61pi/,
+                                    // /API/ -- would hand the rate-limit
+                                    // exemption back to anyone who sets the
+                                    // header. Whether either shape reaches the
+                                    // Lambda depends on CloudFront's own
+                                    // normalization, so this is defence in
+                                    // depth rather than a known bypass.
+                                    textTransformations: [
+                                        { priority: 0, type: "URL_DECODE" },
+                                        { priority: 1, type: "LOWERCASE" },
+                                    ],
                                 },
                             },
                         },
