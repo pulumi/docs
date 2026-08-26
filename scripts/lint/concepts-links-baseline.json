@@ -1,17 +1,4 @@
 {
-    "_note": "Ratchet baseline for scripts/lint/check-concepts-links.js. Every entry here is a KNOWN, already-fixed occurrence of an internal link to the retired /docs/concepts/* URL space, tracked while PR #21138 and PR #21145 (the fixes) are still open for review. Once both merge, every entry below drops to 0 real occurrences and this whole file plus its check() call in scripts/lint.sh should be pruned or reset to {}. Do not add new entries here to silence a real finding -- fix the link instead. A file's count going lower than what is recorded here only prints a warning, never fails; going higher fails the build. Note: this is a count-only ratchet, not a line-level one -- swapping one stale link for a different stale link in the same file keeps the count unchanged and passes.",
-    "files": {
-        "assets/openapi/tag-intros/stacks.md": 1,
-        "content/blog/disable-default-providers/index.md": 6,
-        "content/blog/pulumi-kubernetes-operator/index.md": 2,
-        "content/blog/why-choose-pulumi-over-terraform/index.md": 3,
-        "content/docs/iac/concepts/resources/_index.md": 5,
-        "content/docs/iac/guides/clouds/aws/eks.md": 1,
-        "content/docs/insights/discovery/search.md": 2,
-        "content/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/_index.md": 1,
-        "layouts/migrate/terraform.html": 1,
-        "scripts/search/rank.js": 1,
-        "theme/src/ts/redirects.ts": 33,
-        "theme/src/ts/toc.ts": 1
-    }
+    "_note": "Ratchet baseline for scripts/lint/check-concepts-links.js. PR #21138 and PR #21145 (the cleanup pass this guard exists to protect) both merged on 2026-08-26, so every internal /docs/concepts/* link this baseline used to track is fixed on master and the allowance list below is empty. Do not add an entry to silence a real finding -- fix the link instead. If the guard ever needs an exception again, that's a real, justified allowance for a specific file, not a place to park unrelated cleanup debt. A file's count going lower than what is recorded here only prints a warning, never fails; going higher fails the build.",
+    "files": {}
 }

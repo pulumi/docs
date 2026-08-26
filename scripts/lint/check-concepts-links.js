@@ -33,10 +33,10 @@
  *       every currently-scanned file with a violation
  *
  * Exceptions: the ratchet baseline lives in
- * scripts/lint/concepts-links-baseline.json. Once PR #21138 and PR #21145
- * both merge, every entry in that baseline file becomes stale and the whole
- * file (plus its check here) can be deleted -- see the baseline file's own
- * header comment.
+ * scripts/lint/concepts-links-baseline.json. PR #21138 and PR #21145 both
+ * merged, so it is empty today ({}) -- any new entry is a fresh, justified
+ * exception, not leftover cleanup debt. See the baseline file's own header
+ * comment.
  */
 
 const fs = require("fs");
