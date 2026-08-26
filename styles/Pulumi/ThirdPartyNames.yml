@@ -34,3 +34,5 @@ swap:
   '\bWordpress\b': WordPress
   '\bVMWare\b': VMware
   '\bNodejs\b': Node.js
+  '\bHashicorp\b': HashiCorp
+  '\bOauth\b': OAuth
