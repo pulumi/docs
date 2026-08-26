@@ -3,30 +3,23 @@
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 
-// SupportRedirect serves a permanent redirect from a retired hostname to the
-// support-request form at /support/new/. It exists for the Zendesk-to-Intercom
-// migration: support.pulumi.com is a CNAME to Zendesk's help center today, and
-// once the help center is retired the hostname needs to send visitors (and the
-// years of deep links into support.pulumi.com/hc/...) somewhere useful.
+// SupportRedirect issues a permanent redirect from a retired hostname to the support-request form at /support/new/.
+// It exists for the Zendesk-to-Intercom migration: support.pulumi.com is a CNAME to Zendesk's help center today, and
+// once the help center retires, the hostname and years of deep links (support.pulumi.com/hc/...) still need to land
+// somewhere useful.
 //
-// It's a dedicated CloudFront distribution rather than an extra alias on the
-// main website distribution so that no host-based branching has to thread
-// through the website's per-behavior function and Lambda@Edge associations —
-// every request here gets the same answer, issued by a CloudFront Function at
-// viewer-request time. The origin below is required by CloudFront but is never
-// contacted, because the function responds before any origin request is made.
+// It is a dedicated CloudFront distribution, rather than an extra alias on the website distribution, so no host-based
+// branching has to thread through the website's per-behavior function and Lambda@Edge associations. A CloudFront
+// Function answers every request at viewer-request time, so the origin (required by CloudFront) is never contacted.
 //
-// DNS is NOT managed here: the pulumi.com hosted zone belongs to the
-// pulumi-service infrastructure (infrastructure/service/dns.ts in that repo),
-// which points the `support` CNAME at this distribution's domain name — the
-// `supportRedirectDistributionDomain` stack output.
+// DNS is not managed here: the pulumi.com hosted zone belongs to the pulumi-service repo, which CNAMEs the hostname
+// to this distribution's domain name — the supportRedirectDistributionDomain stack output.
 export interface SupportRedirectArgs {
     // domain is the hostname to redirect from, e.g. support.pulumi.com.
     domain: pulumi.Input<string>;
     // targetUrl is the fully-qualified URL every request is redirected to.
     targetUrl: string;
-    // certificateArn is an ACM certificate (us-east-1) covering `domain` —
-    // the website's *.pulumi.com wildcard certificate in production.
+    // certificateArn is an ACM certificate (us-east-1) covering `domain` — the *.pulumi.com wildcard in production.
     certificateArn: pulumi.Input<string>;
 }
 
@@ -62,16 +55,13 @@ export class SupportRedirect extends pulumi.ComponentResource {
                 enabled: true,
                 comment: pulumi.interpolate`Redirects ${args.domain} to ${args.targetUrl}`,
                 aliases: [args.domain],
-                // The cheapest price class is plenty: the only content served
-                // is a redirect, so an extra round trip to a farther POP for
-                // viewers outside North America and Europe is immaterial.
+                // The cheapest price class is plenty: the only content served is a redirect.
                 priceClass: "PriceClass_100",
                 httpVersion: "http2",
                 isIpv6Enabled: true,
 
-                // CloudFront requires at least one origin, but the redirect
-                // function answers every request at viewer-request time, so
-                // this origin never receives traffic.
+                // CloudFront requires an origin, but the redirect function answers every request, so it never
+                // receives traffic.
                 origins: [
                     {
                         originId: "unused-placeholder",
@@ -87,13 +77,11 @@ export class SupportRedirect extends pulumi.ComponentResource {
 
                 defaultCacheBehavior: {
                     targetOriginId: "unused-placeholder",
-                    // allow-all so that plain-HTTP requests get one 301 straight
-                    // to the HTTPS target, rather than an https:// hop first.
+                    // allow-all so plain-HTTP requests get one 301 to the HTTPS target, not an https:// hop first.
                     viewerProtocolPolicy: "allow-all",
                     allowedMethods: ["GET", "HEAD", "OPTIONS"],
                     cachedMethods: ["GET", "HEAD"],
-                    // AWS-managed CachingDisabled policy — there is nothing to
-                    // cache, since the function generates every response.
+                    // AWS-managed CachingDisabled policy — the function generates every response.
                     cachePolicyId: "4135ea2d-6df8-44a3-b632-99711092ca9d",
                     functionAssociations: [
                         {

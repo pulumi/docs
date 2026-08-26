@@ -86,11 +86,9 @@ const config = {
     // config values — see SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 
-    // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) to
-    // permanently redirect to the support-request form at /support/new/, via a
-    // small dedicated CloudFront distribution — see supportRedirect.ts. Unset
-    // = no redirect infrastructure is created. DNS for the hostname is managed
-    // by the pulumi-service repo, not here.
+    // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
+    // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
+    // Unset means no redirect infrastructure. DNS for the hostname is managed by the pulumi-service repo, not here.
     supportRedirectDomain: stackConfig.get("supportRedirectDomain") || undefined,
 };
 
@@ -1505,11 +1503,9 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
-// Redirect distribution for a retired support hostname (see supportRedirect.ts).
-// Deliberately not added to domainAliases: that list belongs to the website
-// distribution and drives Route 53 records in the www hosted zone, while this
-// hostname lives in the pulumi.com zone owned by the pulumi-service repo, which
-// CNAMEs it at the supportRedirectDistributionDomain output below.
+// Redirect distribution for a retired support hostname (see supportRedirect.ts). Deliberately not in domainAliases:
+// that list drives Route 53 records for the website distribution, while this hostname lives in the pulumi.com zone
+// owned by the pulumi-service repo, which CNAMEs it to the supportRedirectDistributionDomain output below.
 let supportRedirect: SupportRedirect | undefined;
 if (config.supportRedirectDomain) {
     supportRedirect = new SupportRedirect("support-redirect", {
