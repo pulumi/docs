@@ -69,6 +69,21 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 
 - **Doing infrastructure work as an agent** — the Pulumi CLI is designed for agents: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) on first use — no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/skills/) provide proven Pulumi workflows, and the [Pulumi MCP server](https://www.pulumi.com/docs/ai/mcp-server/) exposes stacks, resource search, and the Registry as MCP tools.
 
+- **Filing a support request** — open a ticket with the Pulumi support team without driving the [web form](https://www.pulumi.com/support/new/). No authentication and no cookies. Post exactly the six fields below: any unknown top-level key is rejected, so send this shape rather than scraping the HTML form for its inputs.
+
+      curl -X POST https://www.pulumi.com/api/support \
+        -H "Content-Type: application/json" \
+        -d '{
+          "email": "you@example.com",
+          "name": "Your Name",
+          "organization": "your-pulumi-org",
+          "priority": "normal",
+          "subject": "Stack update stuck in progress",
+          "description": "What you expected, what actually happened, and any relevant code or CLI output."
+        }'
+
+  `priority` is `normal` or `urgent`. `organization` is the bare org name from `https://app.pulumi.com/<org>` — letters, numbers, hyphens and underscores, 40 characters or fewer; a pasted console URL is reduced to the org name for you. `description` needs at least 10 characters. Success returns `{"ok": true, "id": "...", "ticketId": "..."}`. A validation failure returns `422` with a `fields` object keyed by field name, so each error maps back to its input without parsing prose; other failures use `400`, `405`, `413` and `502`. Replies come by email to the address you supply, so give one that a person reads.
+
 ## Site overview
 
 This llms.txt covers www.pulumi.com, which includes:

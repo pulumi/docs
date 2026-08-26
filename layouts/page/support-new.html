@@ -100,9 +100,20 @@
                 </div>
 
                 {{/* Honeypot: invisible to people, filled in by naive bots. The
-                     handler drops any submission that sets it. */}}
+                     handler drops any submission that sets it.
+
+                     The label reads as an instruction rather than a field name
+                     ("Website") because the trap is indiscriminate: anything
+                     reading the raw HTML sees it, including a legitimate agent
+                     filing a ticket on someone's behalf. That agent would fill
+                     in a plausible URL, get a 200 back, and report success for a
+                     ticket that was never created. Naive bots fill every field
+                     regardless of its label, so this costs nothing against them
+                     and rescues anything that reads before it writes. Agents
+                     should use the documented JSON API (see the "For agents"
+                     section of /llms.txt), which never mentions this field. */}}
                 <div class="sr-only" aria-hidden="true">
-                    <label for="support-website">Website</label>
+                    <label for="support-website">Leave this field empty</label>
                     <input type="text" id="support-website" name="website" tabindex="-1" autocomplete="off">
                 </div>
 
