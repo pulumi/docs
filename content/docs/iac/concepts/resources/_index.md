@@ -36,7 +36,7 @@ aliases:
         "#transformations": "/docs/iac/concepts/resources/options/transformations",
         "#transforms": "/docs/iac/concepts/resources/options/transforms",
         "#version": "/docs/iac/concepts/resources/options/version",
-        "#components": "/docs/concepts/resources/components",
+        "#components": "/docs/iac/concepts/components/",
         "#authoring-a-new-component-resource": "/docs/iac/guides/building-extending/components/build-a-component/",
         "#creating-child-resources": "/docs/iac/guides/building-extending/components/build-a-component/#creating-child-resources",
         "#registering-component-outputs": "/docs/iac/guides/building-extending/components/build-a-component/#registering-component-outputs",
@@ -45,10 +45,10 @@ aliases:
         "#default-provider-configuration": "/docs/iac/concepts/providers/#default-provider-configuration",
         "#explicit-provider-configuration": "/docs/iac/concepts/providers/#explicit-provider-configuration",
         "#dynamicproviders": "/docs/iac/concepts/providers/dynamic-providers",
-        "#names": "/docs/concepts/resources/names",
-        "#autonaming": "/docs/concepts/resources/names/#autonaming",
-        "#urns": "/docs/concepts/resources/names/#urns",
-        "#resource-get": "/docs/concepts/resources/get",
+        "#names": "/docs/iac/concepts/resources/names/",
+        "#autonaming": "/docs/iac/concepts/resources/names/#autonaming",
+        "#urns": "/docs/iac/concepts/resources/names/#urns",
+        "#resource-get": "/docs/iac/concepts/functions/get-functions/",
     };
 
     var redirect = redirects[location.hash];
