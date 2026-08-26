@@ -77,13 +77,8 @@ module.exports = {
         if (page.href.startsWith("/docs")) {
 
             // First concepts.
-            if (page.href.startsWith("/docs/concepts/")) {
+            if (page.href.startsWith("/docs/iac/concepts/")) {
                 return 890;
-            }
-
-            // Then using.
-            if (page.href.startsWith("/docs/using-pulumi/")) {
-                return 880;
             }
 
             // Top-level pages again rank highest.

@@ -670,6 +670,6 @@ with users and the Pulumi team.
 [pulumi-k8s-nginx]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx/
 [pulumi-aws-eks]: https://github.com/metral/pulumi-aws-eks/
 [p-examples]: https://github.com/pulumi/examples/
-[stack]: /docs/concepts/stack/
-[pulumi-config]: /docs/concepts/config/
+[stack]: /docs/iac/concepts/stacks/
+[pulumi-config]: /docs/iac/concepts/config/
 [pulumi-providers]: /registry/

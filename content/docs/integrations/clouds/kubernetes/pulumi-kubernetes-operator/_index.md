@@ -34,7 +34,7 @@ The Pulumi Kubernetes Operator provides [custom resources][k8s-ext-pattern] to:
 Deploying Pulumi stacks using Kubernetes provides the capability to build out CI/CD and other automation systems, and to manage your infrastructure alongside your Kubernetes workloads or in dedicated control-plane clusters.
 
 [k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
-[stack]: /docs/concepts/stack/
+[stack]: /docs/iac/concepts/stacks/
 [Pulumi YAML]: /docs/iac/languages-sdks/yaml/
 
 ## In this section

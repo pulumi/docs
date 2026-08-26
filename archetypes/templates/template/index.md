@@ -51,7 +51,7 @@ and extend to suit your needs.
 To use this template to deploy your own $THING,
 make sure you've [installed Pulumi](/docs/install/)
 and [configured your $CLOUD credentials](/registry/packages/$CLOUD/installation-configuration/#credentials),
-then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+then create a new [project](/docs/iac/concepts/projects/) using the template in your language of choice:
 
 {{< templates/pulumi-new >}}
 
@@ -71,7 +71,7 @@ $ pulumi up
 ```
 
 When the deployment completes,
-Pulumi exports the following [stack output](/docs/concepts/stack/#outputs) values:
+Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 someOutput
 : The provider-assigned property of the widget resource.
@@ -91,7 +91,7 @@ $ open $(pulumi stack output cdnURL)
 ## Customizing the project
 
 Projects created with the $ARCHITECTURE template expose
-the following [configuration](/docs/concepts/config/) settings:
+the following [configuration](/docs/iac/concepts/config/) settings:
 
 someProp
 : The description of the property. Defaults to `someValue`.

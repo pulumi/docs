@@ -325,23 +325,7 @@ For example, set a Terraform `oauth_client_id` config field with the Pulumi key 
 pulumi config set tailscale:oauthClientId <value>
 ```
 
-Because a locally generated SDK has no published reference documentation, list the exact config keys with [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/):
-
-```bash
-pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
-```
-
-```json
-[
-  "apiKey",
-  "audience",
-  "baseUrl",
-  "oauthClientId",
-  "oauthClientSecret",
-  "tailnet",
-  ...
-]
-```
+Because a locally generated SDK has no published reference documentation, use `pulumi package get-schema` to list a provider's exact config keys — see [Discovering names with `pulumi package get-schema`](#discovering-names-with-pulumi-package-get-schema).
 
 {{% /notes %}}
 
@@ -438,7 +422,7 @@ While the Any Terraform Provider feature is powerful, there are some considerati
 - **Documentation**: Local SDKs include inline documentation, but you won't have dedicated web documentation in the Pulumi Registry (unless the provider has been added to the Registry).
 - **Support**: For issues with the provider's functionality (not the bridge itself), you'll need to work with the Terraform provider's maintainers.
 
-## Related resources
+## Learn more
 
 - [Pulumi Registry: Terraform Provider](/registry/packages/terraform-provider/) - Installation and configuration guide
 - [Pulumi Packages](/docs/iac/concepts/packages/) - Learn about Pulumi's package system

@@ -443,5 +443,5 @@ More specifically:
 - If an organization has a default permission of read or write, then all users can query all resources.
 - If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/concepts/rbac/permission-sets/#stack-permission-sets) or [Team](/docs/administration/concepts/rbac/teams/#team-access-types) permissions.
 
-[types]: /docs/concepts/resources/names/#types
-[urn]: /docs/concepts/resources/names/#urns
+[types]: /docs/iac/concepts/resources/names/#types
+[urn]: /docs/iac/concepts/resources/names/#urns

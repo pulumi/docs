@@ -15,11 +15,11 @@ programmatic and dynamic control of how a resource deploys into a cloud. A Pulum
 use an explicit provider by setting the [provider resource option][prov-res-opts] or by inheriting the provider from the
 resource's [parent resource][par-res].
 
-[prov-res]: /docs/concepts/resources/providers/
-[def-prov]: /docs/concepts/resources/providers/#default-provider-configuration
-[res]: /docs/concepts/resources/
-[prov-res-opts]: /docs/concepts/options/provider/
-[par-res]: /docs/concepts/options/parent/
+[prov-res]: /docs/iac/concepts/providers/
+[def-prov]: /docs/iac/concepts/providers/#default-provider-configuration
+[res]: /docs/iac/concepts/resources/
+[prov-res-opts]: /docs/iac/concepts/resources/options/provider/
+[par-res]: /docs/iac/concepts/resources/options/parent/
 
 <!-- more -->
 
@@ -299,7 +299,7 @@ Disabling a default provider involves adding the relevant package name to the co
 `pulumi:disable-default-providers`. For example, disabling the default provider for Kubernetes and AWS would look like
 this snippet in the [configuration file][config]:
 
-[config]: /docs/concepts/projects/#stack-settings-file
+[config]: /docs/iac/concepts/projects/stack-settings-file/
 
 ```yaml
 pulumi:disable-default-providers:
@@ -321,5 +321,5 @@ accidentally relying on your system configuration. We can’t wait to find out w
 an impact on our roadmap, you can go to our [public roadmap][roadmap] and vote on issues with the rest of the community.
 Let us know what you think!
 
-[dis-def-prov]:/docs/concepts/resources/providers/#disabling-default-providers
+[dis-def-prov]:/docs/iac/concepts/providers/#disabling-default-providers
 [roadmap]:<https://github.com/orgs/pulumi/projects/44>
