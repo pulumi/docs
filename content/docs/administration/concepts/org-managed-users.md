@@ -7,7 +7,7 @@ menu:
     administration:
         name: Organization-Managed Users
         parent: administration-concepts
-        weight: 3
+        weight: 4
 pulumi_cloud_feature: saml-sso
 ---
 

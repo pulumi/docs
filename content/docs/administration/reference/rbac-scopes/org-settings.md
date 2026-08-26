@@ -129,7 +129,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | Value | Description |
 |-------|-------------|
 | `organization:billing` | Manage billing settings and payment methods for the organization. This includes access to invoices and payment history.<br><br>**Granted by default roles**: `Admin`, `Billing Manager` |
-| `organization:change_backend` | Change the backend infrastructure for the organization. This is used for advanced configuration and migration.<br><br>**Granted by default roles**: `Admin` |
+| `organization:change_backend` | Change the organization's [identity provider](/docs/administration/concepts/identity-providers/) — the GitHub organization, GitLab group, Bitbucket workspace, or SAML identity provider that governs who can be a member.<br><br>**Granted by default roles**: `Admin` |
 | `organization:delete` | Delete the organization and all its resources. This is a permanent and irreversible action.<br><br>**Granted by default roles**: `Admin` |
 | `organization:read_usage` | View usage statistics and metrics for the organization. This includes resource consumption and cost data.<br><br>**Granted by default roles**: `Member`, `Admin`, `Billing Manager` |
 | `organization:rename` | Change the name of the organization. This updates the organization's display name across the platform.<br><br>**Granted by default roles**: `Admin` |

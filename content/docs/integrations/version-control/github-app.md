@@ -25,6 +25,8 @@ aliases:
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
+This page covers the GitHub app, which connects your repositories to Pulumi Deployments. Backing a Pulumi organization's *membership* with a GitHub organization is a separate feature. See [Identity providers](/docs/administration/concepts/identity-providers/#github).
+
 The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 {{% /notes %}}
 
@@ -230,3 +232,9 @@ If comments aren't appearing on your pull requests, verify that:
 1. If you copy your Pulumi code into a container, you also include the `.git` folder.
 1. The commit being built matches a commit in an open pull request.
 1. The GitHub app has access to the repository — navigate to **Management** > **Version control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
+
+## Learn more
+
+- [Identity providers](/docs/administration/concepts/identity-providers/#github) — backing your Pulumi organization's membership with a GitHub organization.
+- [Pulumi Deployments](/docs/deployments/concepts/) — the deployment engine the GitHub app triggers.
+- [Version control integrations](/docs/integrations/version-control/) — the same capabilities on GitLab, Bitbucket, and Azure DevOps.

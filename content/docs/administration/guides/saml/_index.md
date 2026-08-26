@@ -19,7 +19,7 @@ aliases:
 pulumi_cloud_feature: saml-sso
 ---
 
-The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider.
+The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider. SAML is one of the [identity providers](/docs/administration/concepts/identity-providers/) that can back a Pulumi organization's membership; these guides cover configuring it once you have selected it.
 
 {{% notes type="info" %}}
 Running self-hosted Pulumi Cloud? You'll first need to [configure your self-hosted infrastructure for SAML SSO](/docs/administration/self-hosting/saml-sso/) (API service keys and environment variables), then return here to complete IdP configuration.
@@ -55,7 +55,7 @@ If the connection fails, confirm with your organization administrator that your 
 {{< saml-conversion-prereq >}}
 {{% /notes %}}
 
-Switching an organization to SAML is reversible, but not cleanly. Selecting a different identity provider later discards the organization's SAML identities, its SAML member roster, and its SCIM access token. See [Disconnecting identity providers](/docs/administration/concepts/organizations/#disconnecting-identity-providers).
+Switching an organization to SAML is reversible, but not cleanly. Selecting a different identity provider later discards the organization's SAML identities, its SAML member roster, and its SCIM access token. See [Removing a third-party identity provider](/docs/administration/concepts/identity-providers/#removing-a-third-party-identity-provider).
 
 ## Integration Guides
 
