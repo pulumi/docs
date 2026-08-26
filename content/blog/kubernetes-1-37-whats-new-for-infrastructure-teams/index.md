@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes 1.37: What's New for Infrastructure Teams"
 date: 2026-08-26
-draft: true
+draft: false
 meta_desc: "Kubernetes 1.37 breaking changes, GA features, and deprecations infrastructure teams need to plan an upgrade around, from SELinuxMount to DRA."
 authors:
     - pulumi-content-team
@@ -27,7 +27,7 @@ social:
 
         We wrote up Kubernetes 1.37 the way an infrastructure team actually needs to read it: what can break your upgrade, what genuinely got better, the honest state of the DRA/accelerator work, and when any of this actually reaches a managed cluster on EKS, AKS, or GKE.
     bluesky: |
-        Kubernetes 1.37 shipped. The interesting part for infra teams isn't the feature list — it's what changes underneath you if you're not paying attention (SELinuxMount, static Pod references, cAdvisor flags). We broke down what to check before you upgrade.
+        Kubernetes 1.37 shipped. For infra teams, the feature list matters less than what changes underneath you if you're not paying attention (SELinuxMount, static Pod references, cAdvisor flags). We broke down what to check before you upgrade.
 ---
 
 Kubernetes 1.37 shipped on August 26, 2026. For infrastructure teams, the release matters less for any single headline feature than for a cluster of changes that can break an unprepared upgrade: SELinuxMount going GA and on by default, static Pods losing their ability to reference Secrets and ConfigMaps, and a slimmed-down cAdvisor that refuses to start on deprecated kubelet flags.
@@ -42,7 +42,7 @@ Start here before you touch a cluster, because these are the items that turn a r
 
 **cAdvisor's slimmed-down module rejects deprecated flags outright.** The kubelet's embedded cAdvisor has moved to a leaner implementation, and a list of long-deprecated flags — `--containerd`, `--event-storage-age-limit`, and others — are no longer merely ignored, they now prevent the kubelet from starting at all if they're set. Several `/metrics/cadvisor` series and the `userDefinedMetrics` field in `/stats/summary` are also gone. Audit your kubelet configuration and any custom metrics scraping before you roll this out.
 
-**Workload-Aware Scheduling requires a manual cleanup step.** The core `Workload` and `PodGroup` types move from `scheduling.k8s.io/v1alpha2` to `v1beta1` in this release. If you were running v1alpha2 objects under 1.36, the changelog is explicit: delete them from the API server before you upgrade, or the migration will not complete cleanly.
+**Workload-Aware Scheduling requires a manual cleanup step.** The core `Workload` and `PodGroup` types move from `scheduling.k8s.io/v1alpha2` to `v1alpha3` in this release. If you were running v1alpha2 objects under 1.36, the changelog is explicit: delete them from the API server before you upgrade, or the migration will not complete cleanly.
 
 **kubeadm's v1beta3 config API is gone.** It was deprecated since v1.31; if you're still generating v1beta3 config, run `kubeadm config migrate` first.
 
@@ -62,7 +62,7 @@ Once the upgrade risks are accounted for, this release does move several things 
 
 A handful of smaller but genuinely useful items also landed: `kubectl get -o kyaml` is stable for cleaner YAML output, `StorageVersionMigration` reaches GA, `ClusterTrustBundle` is stable for custom CA distribution, and Pod Certificates graduate to GA.
 
-One item is worth flagging rather than asserting cleanly: `PodLevelResourceManagers` was documented as beta and enabled by default in the release candidate cut on July 30, then a later fix in the same release-candidate cycle changed that default to disabled. Check your own cluster's behavior rather than assuming either state.
+`PodLevelResourceManagers` graduated to beta in this release, but a fix late in the release cycle disabled it by default after critical issues turned up in testing. It's worth knowing about if you're tracking pod-level resource management, but it won't affect your cluster's behavior unless you explicitly enable the feature gate.
 
 ## The accelerator story, without the hype
 
