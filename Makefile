@@ -148,7 +148,13 @@ meta-images:
 
 .PHONY: test
 test:
+	$(MAKE) test-unit
 	$(MAKE) test-programs
+
+# Unit tests: the scripts/*.test.js files. Fast; no network.
+.PHONY: test-unit
+test-unit:
+	./scripts/run-unit-tests.sh
 
 .PHONY: test-programs
 test-programs:
