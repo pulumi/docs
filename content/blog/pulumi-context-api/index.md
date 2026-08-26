@@ -50,7 +50,7 @@ Pulumi already holds a detailed picture of your infrastructure. It knows the res
 
 Each of these can be answered with a query against a graph that covers your resources (both Pulumi-managed and discovered), your stacks, and the relationships that connect them.
 
-A query is a JSON document with a handful of clauses. `anchor` names the starting nodes, `traverse` walks relationships from there, and `return` picks what comes back. To run one, POST it to the GraphQuery endpoint, or use the CLI: `pulumi api GraphQuery -F orgName=<your-org> --input query.json`. Here's a query that finds every resource that's managed by an AWS provider older than version 7.0.0:
+A query is a JSON document with a handful of clauses. `anchor` names the starting nodes, `traverse` walks relationships from there, and `return` picks what comes back. To run one, POST it to `https://api.pulumi.com/api/insights/<your-org>/graph/query`, or use the CLI: `pulumi api GraphQuery -F orgName=<your-org> --input query.json`. Here's a query that finds every resource that's managed by an AWS provider older than version 7.0.0:
 
 ```json
 {
@@ -114,7 +114,7 @@ And here's the response, trimmed to a few nodes and fields:
 }
 ```
 
-Each node shows the traversal step that reached it with the `frontier` field. In this example, the `anchor` is the outdated provider and the resources are `managed` by it. The `meta` fields tell you whether the answer is complete: `resultMode` flips to `truncated` if a size limit capped the results and `visibility` is `trimmed` if your RBAC permissions hid part of the graph. A continuation token appears in `pageInfo` if the answer was split into multiple pages.
+Each node shows the traversal step that reached it with the `frontier` field. In this example, the `anchor` is the outdated provider and the resources are `managed` by it. The `meta` fields tell you whether the answer is complete: `resultMode` flips to `truncated` if a size limit capped the results or the search backend answered partially, and `visibility` is `trimmed` if your RBAC permissions hid part of the graph. A continuation token appears in `pageInfo` if the answer was split into multiple pages.
 
 ## Ask Neo, or bring your own agent
 
@@ -134,7 +134,7 @@ curl -H "Accept: text/markdown" \
     https://api.pulumi.com/api/insights/my-org/graph/schema
 ```
 
-The primer is the complete reference for the query language. To onboard an agent, run the command to fetch current instructions. You can also put this command in your `AGENTS.md` or `CLAUDE.md` so the agent pulls a fresh copy whenever it needs one; the primer evolves with the API. From there, your agent composes queries from natural language questions and runs them with the same graph command. Most validation errors list the legal values inline, so an agent that re-reads the primer on rejection can correct its own queries.
+The primer is the complete reference for the query language. To onboard an agent, have it fetch the primer with `pulumi api GetGraphSchema -F orgName=<your-org>`. Putting that command in your `AGENTS.md` or `CLAUDE.md` means the agent pulls a fresh copy whenever it needs one; the primer evolves with the API. From there, your agent composes queries from natural language questions and runs them with `pulumi api GraphQuery`. Most validation errors list the legal values inline, so an agent that re-reads the primer on rejection can correct its own queries.
 
 ## Available in preview
 
