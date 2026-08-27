@@ -127,6 +127,8 @@ terminal_source: |
 
   › pulumi up
 
+  Loading policies...
+
   Previewing update (prod)
 
    +   pulumi:pulumi:Stack                     network        create

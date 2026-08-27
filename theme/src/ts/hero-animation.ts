@@ -114,7 +114,7 @@ const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 const CI_PR_REST_X = -10;
 
 const CUBE_H = 84.752;
-const TERM_SCROLL_END = -862;
+const TERM_SCROLL_END = -898;
 const TERM_FOLD_Y = 410;
 
 // The finished frame holds — cubes bobbing gently — then the scene fades and
