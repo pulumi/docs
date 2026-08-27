@@ -54,7 +54,15 @@
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
+      {{/* Render the joined markdown lines (bold, links, lists, tables) to HTML
+           and strip tags to plain text, so acceptedAnswer.text never leaks raw
+           markdown syntax ("**", "* ", "|---|", "[text](url)") into the
+           FAQPage schema. Joining with "\n" (not a space) preserves the line
+           structure GFM tables and lists need to parse correctly. htmlUnescape
+           decodes the named entities (&ldquo; etc.) goldmark's typographer
+           extension emits for smart quotes/dashes, which plainify alone
+           leaves as literal escaped text. */}}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -88,7 +96,8 @@
          mistaken for a markdown heading. */}}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-      {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
+      {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -125,7 +134,8 @@
 
 {{/* Save last Q&A if exists */}}
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
-  {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
+  {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
+  {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
   {{ if $answerText }}
     {{ $questionText := $currentQuestion }}
     {{/* Remove the heading prefix */}}
