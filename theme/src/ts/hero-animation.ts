@@ -565,7 +565,7 @@ function init(): void {
     }
 
     reset();
-    const tl = gsap.timeline({ repeat: -1, paused: true, repeatRefresh: true, onRepeat: reset });
+    const tl = gsap.timeline({ repeat: 0, paused: true, repeatRefresh: true, onRepeat: reset });
 
     const gridDelays = [0.12, 0, 0.18, 0.24, 0.06, 0.3];
     tiles.forEach((tile, i) => {
@@ -783,8 +783,6 @@ function init(): void {
     });
 
     const outAt = cubesAt + 1.1 + 2.0;
-    tl.to([diagram, aOuter, bOuter, ciRow, ciMerge, badgeTests, badgePolicy, policyRow, glyph], { autoAlpha: 0, duration: 0.5, ease: "power2.in" }, outAt);
-    tl.to(diagram, { scale: 0.96, svgOrigin: "372 240", duration: 0.5, ease: "power2.in" }, outAt);
     tl.to(root, { autoAlpha: 1, duration: 0.3 }, outAt + 0.5);
 
     root.classList.remove("hal-pending");

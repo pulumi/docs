@@ -116,9 +116,9 @@ editor_sources:
           availabilityZone: ${azs.names[0]}
 
 terminal_source: |
-  $ pulumi up
+  • Running Pulumi...
 
-  Loading policy packs...
+  › pulumi up
 
   Previewing update (prod)
 
@@ -169,7 +169,7 @@ terminal_source: |
   Resources:
       + 40 created
 
-  Policy Packs run:
+  Policies applied:
       Name                    Version
       cis-aws                 1.0.2
       nist-aws                1.0.2
