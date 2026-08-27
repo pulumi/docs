@@ -45,7 +45,7 @@ Whether you're modernizing infrastructure, unifying multi-account environments, 
 
 ## How It Works
 
-Visual Import is a guided three-step workflow within the Pulumi Cloud Console:
+Visual Import is a guided three-step workflow within the Pulumi Cloud console:
 
 1. Select Resources: Use powerful filters and grouping tools to find the resources you want to codify. Whether you're capturing a full service or just a few related components, Visual Import gives you visibility and precision.
 2. Review References: Automatically discover and select dependent resources—ensuring your code captures the right context and connectivity between infrastructure elements.
@@ -87,6 +87,6 @@ Once resources are in code, you can take full advantage of Pulumi Cloud's full s
 
 ## Try It Today
 
-Visual Import is now available in the Pulumi Cloud Console for Team, Enterprise and Business Critical users. If you're ready to modernize your infrastructure and empower your teams with a fast path to Infrastructure as Code, there's no better place to start.
+Visual Import is now available in the Pulumi Cloud console for Team, Enterprise and Business Critical users. If you're ready to modernize your infrastructure and empower your teams with a fast path to infrastructure as code, there's no better place to start.
 
 [Log in to Pulumi Cloud](https://app.pulumi.com/signin) and select **IaC / Import** to get started.

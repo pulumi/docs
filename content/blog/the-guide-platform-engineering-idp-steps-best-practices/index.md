@@ -209,7 +209,7 @@ A platform feature that allows development teams to provision, configure, and ma
 
 The process of managing and provisioning infrastructure through code, allowing infrastructure to be versioned, automated, and managed consistently across environments.
 
-For a more in-depth explanation, see the [What is Infrastructure as Code? page](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/).
+For a more in-depth explanation, see the [What is infrastructure as code? page](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/).
 
 ### What is Policy as Code (PaC)?
 

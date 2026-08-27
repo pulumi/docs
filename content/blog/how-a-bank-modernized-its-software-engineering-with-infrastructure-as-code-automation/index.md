@@ -48,9 +48,9 @@ This blog post summarizes a presentation by Dennis Sauvé at [PulumiUP 2023](/pu
 
 [Washington Trust Bank](https://www.watrust.com), the largest independently-owned full-service commercial bank in the Northwest, has served personal, private, commercial and wealth management clients throughout the region since 1902. It has assets exceeding $11 billion and currently has 42 branches and offices in Idaho, Oregon, and Washington.
 
-As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
+As an FDIC-governed financial institution, it is imperative for the bank to maintain secure, reliable, and compliant cloud resources to protect clients’ personal data. On the other hand, it also aimed to create more agile development teams as it modernized its software development and infrastructure. [Dennis Sauvé](https://github.com/dengsauve), the bank's first DevOps Engineer, recognized [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) as the solution to these challenges.
 
-Embracing an Infrastructure as Code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
+Embracing an infrastructure as code approach would allow them to automate building and deploying their cloud infrastructure, eliminate infrastructure provisioning as a bottleneck, and empower developers to self-service infrastructure and increase productivity.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q63ZaX340M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

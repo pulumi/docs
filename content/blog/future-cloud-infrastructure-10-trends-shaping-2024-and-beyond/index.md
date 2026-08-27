@@ -81,7 +81,7 @@ According to McKinsey & Company's "[In search of cloud value](https://www.mckins
 - **Asia leads in projected cloud value**, followed by the US and Europe.
 - High-ROI organizations excel by aligning cloud strategy with business priorities, building strong cloud foundations, and using modern operating models.
 
-Teams succeeding in this transition increasingly use Infrastructure as Code, automation, and unified governance frameworks like [Pulumi Insights + Policies](https://www.pulumi.com/product/insights-governance/) to operationalize this value.
+Teams succeeding in this transition increasingly use infrastructure as code, automation, and unified governance frameworks like [Pulumi Insights + Policies](https://www.pulumi.com/product/insights-governance/) to operationalize this value.
 
 ## 2. Hyperscalers Accelerate AI-Driven Cloud Expansion
 
@@ -130,7 +130,7 @@ To enable this transition, enterprises are investing in:
 - **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
 - **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
-As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as Infrastructure as Code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
+As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as infrastructure as code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
 
 To support this shift, Pulumi's perspective on [Superintelligence Infrastructure](https://www.pulumi.com/product/superintelligence-infrastructure/) explains why AI workloads, from pre-training to inference at massive scale, require dynamic infrastructure orchestration rather than static configuration.
 
