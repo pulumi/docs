@@ -326,7 +326,7 @@ function init(): void {
     // Typing state for the active language, rebuilt each pass: per-line
     // character counts plus pause segments between blank-line bursts, mapped
     // onto one 0..1 progress tween.
-    type TypeSegment = { line: number; startU: number; units: number; chunks: number[]; col: number };
+    type TypeSegment = { line: number; startU: number; units: number; chunks: number[]; col: number; shown: number };
     let typeSegments: TypeSegment[] = [];
     let typeTotal = 1;
     let activeEditor: SVGGElement | null = null;
@@ -356,7 +356,7 @@ function init(): void {
                 chunks.push(c);
             }
             const col = parseInt(activeLines[i].getAttribute("data-col") || "0", 10);
-            typeSegments.push({ line: i, startU: u, units: chars, chunks: chunks, col: col });
+            typeSegments.push({ line: i, startU: u, units: chars, chunks: chunks, col: col, shown: -1 });
             u += chars;
             prevRow = row;
         }
@@ -368,6 +368,12 @@ function init(): void {
     // the whole line rather than hiding it. Keep the line out of the render
     // until the reveal reaches its first character.
     function reveal(seg: TypeSegment, width: number): void {
+        // Every frame walks every line typed so far, but only one of them has
+        // moved; rewriting the rest re-invalidates their clips for nothing.
+        if (width === seg.shown) {
+            return;
+        }
+        seg.shown = width;
         activeClips[seg.line].setAttribute("width", String(width));
         activeLines[seg.line].style.visibility = width > seg.col * CW ? "visible" : "hidden";
     }
