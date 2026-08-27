@@ -29,7 +29,7 @@ Pulumi staff are active in both the community Slack and on GitHub, but response 
 In addition to the above, csustomers on a paid support plan have access to direct support channels with response-time commitments:
 
 - **Private chat channel** — A dedicated chat channel with Pulumi support staff for your organization.
-- **Direct email support** — Contact Pulumi support directly via the [Pulumi support portal](/support/new), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
+- **Direct email support** — Contact Pulumi support directly via the [Pulumi support portal](/support/new/), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
 
 If you are on a paid plan and aren't sure how to reach your support channel, contact your Pulumi account team.
 
