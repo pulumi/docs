@@ -116,7 +116,7 @@ editor_sources:
           availabilityZone: ${azs.names[0]}
 
 terminal_source: |
-  • Running Pulumi...
+  • Tests passed. Deploying.
 
   › pulumi up
 

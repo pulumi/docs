@@ -442,7 +442,7 @@ editors:
 
 terminal:
   - - [mem, 0, "•"]
-    - [tbl, 2, "Running Pulumi..."]
+    - [tbl, 2, "Tests passed. Deploying."]
   - []
   - - [mem, 0, "›"]
     - [tbl, 2, "pulumi up"]
