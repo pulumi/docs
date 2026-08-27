@@ -15,7 +15,7 @@ pulumi_cloud_feature: context-api
 
 The Context API is a read-only Pulumi Cloud API for querying the infrastructure graph. For an introduction to the product, use cases, and access requirements, see the [Context API overview](/docs/insights/context-api/).
 
-The graph connects nodes like resources (IaC or [Discovered]((/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
+The graph connects nodes like resources (IaC or [Discovered](/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
 Queries use a JSON selector that says where to start, which relationships to follow, and which parts of the result to return. The API returns the selected graph data as nodes, edges, and optional evidence paths. The selector is JSON, not GraphQL, GQL, or Cypher text.
 
@@ -680,7 +680,9 @@ Read it in English as: **Start at resources in every `payments` stack, group the
 
 Aggregation returns buckets instead of nodes and edges. This response contains two buckets: the `resources` metric reports 12 EC2 instances and 3 RDS instances. `pageInfo.resultCount` is `2` because it counts buckets, and `meta.visibility` is absent because aggregation does not traverse the graph.
 
-Follow every `pageInfo.continuationToken` and require `meta.resultMode: "exact"` on every page before treating the bucket list as complete. Run the query with access to all `payments` stacks when you need a project-wide view. Type bucket keys are lowercase even though resource type tokens use mixed case.
+Follow every `pageInfo.continuationToken` and require `meta.resultMode: "exact"` on every page before treating the bucket list as complete. A resource whose grouped field is missing, empty, or too long to be indexed as a grouping value is not included in any bucket. These omissions do not by themselves set `meta.resultMode` to `truncated`, so even a fully drained, exact bucket list does not establish the total number of matching resources.
+
+Run the query with access to all `payments` stacks when you need a project-wide view. Type bucket keys are lowercase even though resource type tokens use mixed case.
 
 ## Query reference
 
@@ -730,7 +732,8 @@ Use `accounts` with a `resource` anchor to select resources from Discovery cloud
 
 An account entry selects that account and its `/`-separated descendants. For example, `production-aws` also selects `production-aws/us-west-2`. To query stack nodes, use `scope.stacks` with a `stack` anchor.
 
-- `accounts` entries name cloud accounts visible to the caller.
+- `accounts` entries name cloud accounts visible to the caller. An account name that does not exist or is not visible to the caller is rejected rather than returning an empty result.
+- `scope.accounts` is not valid with a `stack` anchor.
 - Entries within each list are alternatives. When both lists are present on a resource query, an anchor must match a stack entry and an account entry.
 - `includeDiscovered` defaults to `true`. Set it to `false` to exclude resources found by Discovery. It has no effect on a `stack` anchor.
 - Scope restricts anchor selection only. Traversal can reach nodes outside it.
@@ -766,7 +769,7 @@ Omitting both `match` and `query` selects every visible node of the given type. 
 | `present` | `{ "op": "present" }` | The field has a non-empty value or list. |
 | `absent` | `{ "op": "absent" }` | The field has no value or has an empty value or list. |
 
-Ordered comparisons are lexicographic except for `provider_version`, which uses semantic-version ordering. Predicate values are strings, and using an invalid operand key is rejected with an error.
+Except for `provider_version`, resource anchors evaluate ordered comparisons using each field's index ordering, while resource traversal targets compare projected values lexicographically. Ordered `provider_version` comparisons use semantic-version ordering in both contexts. Predicate values are strings. An operator that requires `value` or `values` rejects a missing or empty operand.
 For a stack node's `name` field, only `eq` and `in` are accepted.
 
 ### Traversal steps
@@ -822,7 +825,7 @@ The following table is a snapshot. Directions describe what a walk reaches from 
 
 `reference` records a declared dependency. `inferred_reference` is produced heuristically by matching scanned property values to destination provider IDs; treat it as a lead, not a fact.
 
-A resource-level `reference` walk stops at a `pulumi:pulumi:StackReference` resource because that node has no direct edge to the producer stack it reads. For example, this selector starts at StackReference resources in `invoicing/prod` and reaches every producer stack whose outputs `invoicing/prod` consumes:
+A resource-level `reference` walk stops at a `pulumi:pulumi:StackReference` resource because that node has no direct edge to the producer stack it reads. The following selector answers a stack-level question: its StackReference anchor shows where the query starts, but the traversal returns every producer stack whose outputs `invoicing/prod` consumes:
 
 ```json
 {
@@ -861,7 +864,7 @@ A resource-level `reference` walk stops at a `pulumi:pulumi:StackReference` reso
 }
 ```
 
-The `in_stack` step moves from each StackReference resource to its containing consumer stack. Because `consumes_outputs_of` points from a consumer stack to a producer stack, the `out` step reaches the producer stacks. This second hop runs at stack level and can return multiple producer stacks. It does not associate a returned producer with a particular StackReference resource. To find stacks that consume a producer's outputs, use `direction: "in"` on the second step.
+The `in_stack` step moves from each StackReference resource to its containing consumer stack. Because `consumes_outputs_of` points from a consumer stack to a producer stack, the `out` step reaches the producer stacks. This second hop runs at stack level and can return multiple producer stacks. To find stacks that consume a producer's outputs, use `direction: "in"` on the second step.
 
 ### Return, aggregation, and paging
 

@@ -2,18 +2,17 @@
 title: Context API
 title_tag: "Context API overview"
 h1: Context API
-meta_desc: "Understand how the Context API queries the Pulumi Cloud resource graph to answer dependency, ownership, and impact questions."
+meta_desc: "Understand how the Context API queries the Pulumi Cloud infrastructure graph to answer dependency, ownership, and impact questions."
 menu:
   insights:
     name: Context API
     parent: insights-home
     identifier: insights-context-api
     weight: 30
-aliases: []
 pulumi_cloud_feature: context-api
 ---
 
-The Context API is a read-only Pulumi Cloud API for asking questions about how infrastructure is connected. It queries an organization's infrastructure graph, which connects nodes like resources (IaC or [Discovered]((/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
+The Context API is a read-only Pulumi Cloud API for asking questions about how infrastructure is connected. It queries an organization's infrastructure graph, which connects nodes like resources (IaC or [Discovered](/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
 The API is especially useful when the answer depends on those relationships rather than the properties of one resource. Users can execute queries through the Pulumi CLI or REST API.
 
@@ -24,7 +23,7 @@ The Context API can help platform engineers, infrastructure owners, and incident
 | Question | How the graph helps answer it |
 |---|---|
 | Which stacks consume outputs from this stack? | Follow stack output consumption relationships to downstream stacks. |
-| What depends on this resource? | Walk declared or inferred references to related resources. |
+| What depends on this resource? | Walk declared references and optionally include inferred references as leads to verify. |
 | What could a provider upgrade affect? | Find resources owned by matching provider instances, then follow their dependents and stack relationships. |
 | Which resources use an outdated provider version? | Match provider nodes by package and version, then follow provider ownership relationships. |
 | How many resources of each type are in a project? | Group matching resource nodes by type and count them. |
