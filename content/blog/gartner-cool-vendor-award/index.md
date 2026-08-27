@@ -9,7 +9,7 @@ tags:
 category: company
 ---
 
-Pulumi is honored to be named as one of only three vendors in the [2020 Gartner Cool Vendor for Agile and DevOps report, published on May 28th, 2020](https://info.pulumi.com/press-release/gartner-cool-vendor-5_28_2020). Being recognized in this way is a strong validation of Pulumi's impact thanks to our more modern approach to infrastructure as code and approaches to building cloud software. Vendors can only be selected once and in only one category making this an exclusive award.
+Pulumi is honored to be named as one of only three vendors in the [2020 Gartner Cool Vendor for Agile and DevOps report, published on May 28, 2020](https://info.pulumi.com/press-release/gartner-cool-vendor-5_28_2020). Being recognized in this way is a strong validation of Pulumi's impact thanks to our more modern approach to infrastructure as code and approaches to building cloud software. Vendors can only be selected once and in only one category making this an exclusive award.
 
 <!--more-->
 
