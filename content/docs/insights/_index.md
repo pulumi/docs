@@ -89,8 +89,8 @@ sections:
     link: /docs/insights/context-api/
     description: Learn how graph queries help people investigate infrastructure dependencies, ownership, consumers, and change impact.
   - icon: code-window
-    heading: Query reference
-    link: /docs/insights/context-api/query-reference/
+    heading: Query the Context API
+    link: /docs/insights/guides/context-api/
     description: Build selectors, follow relationships, interpret responses, and check whether an answer is complete.
 
 - type: button-cards

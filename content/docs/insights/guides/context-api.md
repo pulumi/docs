@@ -1,14 +1,15 @@
 ---
-title: Query reference
-title_tag: "Context API query reference"
-h1: Context API query reference
+title: Query the Context API
+title_tag: "Query the Context API"
+h1: Query the Context API
 meta_desc: "Learn how to build Context API graph queries, follow infrastructure relationships, interpret results, and use the JSON selector reference."
 menu:
   insights:
-    name: Query reference
+    name: Query the Context API
     parent: insights-context-api
     weight: 10
-aliases: []
+aliases:
+  - /docs/insights/context-api/query-reference/
 pulumi_cloud_feature: context-api
 ---
 
@@ -718,7 +719,7 @@ This section summarizes the current selector contract. The Context API is in pub
 
 | Node type | Selector identity | Returned identity |
 |---|---|---|
-| `resource` | Match resource fields or use a Resource Search query string. | `id` and `urn` contain the resource URN. |
+| `resource` | Match resource fields or use a Resource Search query string. | `id` and `urn` contain the resource URN; `type`, `stack`, and `project` appear at the top level when available. |
 | `stack` | Match `name` in `project/stack` form. | `id` uses `stack:<org>/<project>/<stack>`; `project` and `stack` contain the two name parts. |
 
 An anchor accepts these fields:

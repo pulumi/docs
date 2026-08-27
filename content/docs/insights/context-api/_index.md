@@ -45,7 +45,7 @@ The basic mental model is: **find nodes, walk edges, choose the answer**.
 1. One or more `traverse` steps walk named relationships to new sets of nodes.
 1. A `return` clause chooses which sets, fields, and evidence paths appear in the response.
 
-Queries can also narrow anchor selection with `scope`, group matching nodes with `aggregate`, and page through larger results. See the [Context API query reference](/docs/insights/context-api/query-reference/) for details and examples.
+Queries can also narrow anchor selection with `scope`, group matching nodes with `aggregate`, and page through larger results. See the [Context API query guide](/docs/insights/guides/context-api/) for details and examples.
 
 ## What the graph includes
 
@@ -54,7 +54,7 @@ The current graph has two node types:
 - Resource nodes can represent resources managed by Pulumi or resources found through Pulumi Discovery.
 - Stack nodes represent Pulumi stacks.
 
-Typed edges describe relationships such as a resource reference, an inferred reference, a parent-child relationship, provider ownership, stack membership, or one stack consuming another stack's outputs. The available fields, edge types, directions, and limits can change during public preview. [Get the deployed schema](/docs/insights/context-api/query-reference/#get-the-deployed-schema) for the current vocabulary and engine limits.
+Typed edges describe relationships such as a resource reference, an inferred reference, a parent-child relationship, provider ownership, stack membership, or one stack consuming another stack's outputs. The available fields, edge types, directions, and limits can change during public preview. [Get the deployed schema](/docs/insights/guides/context-api/#get-the-deployed-schema) for the current vocabulary and engine limits.
 
 ## Get access
 
@@ -64,7 +64,7 @@ The Context API is in public preview. To run a query, you need:
 - An organization with access to the Context API.
 - A role that grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
 
-Use `pulumi api GraphQuery` to call the API from the CLI, or send a request to the Graph Query endpoint through the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/). Start with [Run your first query](/docs/insights/context-api/query-reference/#run-your-first-query) for complete CLI and REST examples.
+Use `pulumi api GraphQuery` to call the API from the CLI, or send a request to the Graph Query endpoint through the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/). Start with [Run your first query](/docs/insights/guides/context-api/#run-your-first-query) for complete CLI and REST examples.
 
 ## Interpret answers with care
 
@@ -83,11 +83,11 @@ Read these signals before relying on an answer:
 Do not use a `truncated` result, a `trimmed` traversal, or an unread continuation page to prove absence, produce an exhaustive cleanup list, report a complete total, or declare a full blast radius. Even after every page reports `exact` and, for a traversal, `complete`, the answer remains bounded by the selector and caller's access. Indexing lag, relationships the graph does not model, inferred relationships, and graph changes between pages can also make the result differ from the true infrastructure state.
 {{% /notes %}}
 
-See [Check completeness before acting](/docs/insights/context-api/query-reference/#check-completeness-before-acting) for the full interpretation rules and recovery guidance.
+See [Check completeness before acting](/docs/insights/guides/context-api/#check-completeness-before-acting) for the full interpretation rules and recovery guidance.
 
 ## Next steps
 
-- [Run your first query](/docs/insights/context-api/query-reference/#run-your-first-query).
-- [Learn the query mental model and work through complete examples](/docs/insights/context-api/query-reference/).
-- [Review the formal selector and response reference](/docs/insights/context-api/query-reference/#query-reference).
-- [Fetch the deployed schema and agent primer](/docs/insights/context-api/query-reference/#get-the-deployed-schema).
+- [Run your first query](/docs/insights/guides/context-api/#run-your-first-query).
+- [Learn the query mental model and work through complete examples](/docs/insights/guides/context-api/).
+- [Review the formal selector and response reference](/docs/insights/guides/context-api/#query-reference).
+- [Fetch the deployed schema and agent primer](/docs/insights/guides/context-api/#get-the-deployed-schema).
