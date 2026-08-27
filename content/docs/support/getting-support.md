@@ -26,7 +26,7 @@ Pulumi staff are active in both the community Slack and on GitHub, but response 
 
 ## With a paid support plan
 
-In addition to the above, csustomers on a paid support plan have access to direct support channels with response-time commitments:
+In addition to the above, customers on a paid support plan have access to direct support channels with response-time commitments:
 
 - **Private chat channel** — A dedicated chat channel with Pulumi support staff for your organization.
 - **Direct email support** — Contact Pulumi support directly via the [Pulumi support portal](/support/new/), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
