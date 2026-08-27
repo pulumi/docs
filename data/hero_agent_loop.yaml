@@ -16,6 +16,13 @@
 # row and separates the typing animation's bursts. If you add or remove
 # terminal rows, shift TERM_SCROLL_END in theme/src/ts/hero-animation.ts by
 # 18px per row.
+#
+# dark_code picks the code panel's treatment: true is shiki's min-dark theme on
+# a violet-950 panel, false is min-light on the translucent lavender one. The
+# generator writes the flag through to the generated file so the hero partial
+# paints the panel to match the syntax colors; flipping it needs a regen.
+
+dark_code: true
 
 editor_sources:
   typescript: |

@@ -23,10 +23,20 @@
     _hero-animation.scss) so the finished frame never flashes.
 */}}
 {{ $text := site.Data.hero_agent_loop_generated }}
+{{/* The code panel's treatment, keyed off the dark_code flag the text generator
+     copies into the generated file alongside the syntax colors it picked, so
+     the panel and the code sitting on it can never disagree. Everything else in
+     the scene — the pale halos, the summary pills, the diagram — is the same
+     either way. Flip the flag in data/hero_agent_loop.yaml and re-run
+     "yarn --cwd theme gen:hero-text". */}}
+{{ $panelFill := cond $text.dark_code "#231F33" "#DEDBFF" }}
+{{ $panelFillOpacity := cond $text.dark_code "1" "0.25" }}
+{{ $panelInk := cond $text.dark_code "#DEDBFF" "#5A30C5" }}
 <div id="hero-agent-loop" class="hero-animation hal-pending" role="img" aria-label="An AI agent — Claude Code, Codex, Cursor, GitHub Copilot, Pulumi Neo, or opencode — takes the prompt “Give me a VPC with a subnet in every AZ.”, writes the Pulumi program in a randomly chosen language (TypeScript, Python, Go, C#, Java, HCL, or YAML), CI checks pass, and a platform agent runs pulumi up under policy checks to create the AWS VPC across three availability zones.">
     <svg viewBox="98 14 553 514" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <defs>
-                        <clipPath id="hal-clip-panel"><rect x="112" y="157" width="520" height="257" rx="16"/></clipPath>
+                        <clipPath id="hal-clip-editor"><rect data-panel-window x="112" y="157" width="520" height="257" rx="16"/></clipPath>
+            <clipPath id="hal-clip-term"><rect data-panel-window x="112" y="157" width="520" height="257" rx="16"/></clipPath>
             <clipPath id="hal-clip-above"><rect x="0" y="0" width="744" height="149.74"/></clipPath>
             <clipPath id="hal-clip-prompt"><rect data-prompt-clip x="213" y="112" width="0" height="26"/></clipPath>
             {{- range $lang, $lines := $text.editors }}
@@ -138,24 +148,24 @@
                 <rect data-a-outer x="104.5" y="479.5" width="535" height="42" rx="21" stroke="#DEDBFF"/>
             </g>
 
-                        <g clip-path="url(#hal-clip-panel)">
+                        <g data-editor-clip clip-path="url(#hal-clip-editor)">
                 {{ range $lang, $lines := $text.editors }}
                 <g data-editor-lang="{{ $lang }}" font-size="12" opacity="0">
                     {{ partial "template-partials/hero-animation/_code-lines.html" (dict "lines" $lines "colors" $text.colors "originX" 122 "originY" 167 "kind" "code" "clipPrefix" (printf "hal-lc-%s-" $lang)) }}
                 </g>
                 {{ end }}
-                <rect data-caret x="122" y="166" width="11" height="19" fill="#5A30C5" opacity="0"/>
+                <rect data-caret x="122" y="166" width="11" height="19" fill="{{ $panelInk }}" opacity="0"/>
             </g>
-            <g data-panel-lang opacity="0"></g>
+            <g data-panel-lang data-ink="{{ $panelInk }}" opacity="0"></g>
 
                         <g data-shell-b>
-                <rect data-b-fill x="112" y="157" width="520" height="257" rx="16" fill="#DEDBFF" fill-opacity="0.25" opacity="0"/>
+                <rect data-b-fill x="112" y="157" width="520" height="257" rx="16" fill="{{ $panelFill }}" fill-opacity="{{ $panelFillOpacity }}" opacity="0"/>
                 <rect data-b-stroke x="112.5" y="157.5" width="519" height="256" rx="15.5" stroke="#5A30C5" opacity="0"/>
                 <rect data-b-outer x="104.5" y="421.5" width="535" height="42" rx="21" stroke="#DEDBFF"/>
             </g>
 
                         <g data-terminal font-size="12">
-                <g data-term-clip clip-path="url(#hal-clip-panel)" opacity="0">
+                <g data-term-clip clip-path="url(#hal-clip-term)" opacity="0">
                     <g data-term-scroll>
                         {{ partial "template-partials/hero-animation/_code-lines.html" (dict "lines" $text.terminal "colors" $text.colors "originX" 123 "originY" 168 "kind" "term") }}
                     </g>
@@ -244,44 +254,44 @@
                     </g>
                 </g>
 
-                                <g data-cube data-order="1" data-o="370.4 199.1">
-                    <path d="M366.888 240.699L298.434 201.154C296.366 199.958 296.625 197.874 299.012 196.491L365.83 157.893C368.216 156.515 371.833 156.363 373.901 157.56L442.356 197.104C444.424 198.301 444.164 200.384 441.778 201.767L374.96 240.365C372.573 241.743 368.956 241.895 366.888 240.699Z" stroke="#5A30C5" stroke-miterlimit="10"/>
+                <g data-cube data-order="1" data-o="370.4 199.1">
+                    <path d="M297.06 199C296.929 199.862 297.378 200.705 298.434 201.316L366.888 240.86C368.956 242.057 372.573 241.905 374.96 240.527L441.778 201.929C443.222 201.092 443.887 199.998 443.729 199" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <path data-cube-edge d="M297.037 114.377V199.129" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <path data-cube-edge d="M443.752 114.377V199.129" stroke="#5A30C5" stroke-miterlimit="10"/>
-                    <path data-cube-edge d="M370.392 156.75V241.508" stroke="#5A30C5" stroke-miterlimit="10"/>
+                    <path data-cube-edge d="M370.392 156.751V241.508" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <g data-cube-top>
                         <path d="M366.888 155.946L298.433 116.402C296.365 115.205 296.625 113.122 299.011 111.739L365.829 73.1406C368.216 71.7628 371.833 71.6108 373.901 72.8072L442.355 112.352C444.423 113.548 444.164 115.632 441.777 117.015L374.959 155.613C372.573 156.991 368.956 157.143 366.888 155.946Z" fill="white"/>
                         <path d="M366.888 155.946L298.433 116.402C296.365 115.205 296.625 113.122 299.011 111.739L365.829 73.1406C368.216 71.7628 371.833 71.6108 373.901 72.8072L442.355 112.352C444.423 113.548 444.164 115.632 441.777 117.015L374.959 155.613C372.573 156.991 368.956 157.143 366.888 155.946Z" fill="#DEDBFF" fill-opacity="0.25"/>
                         <path d="M366.888 155.946L298.433 116.402C296.365 115.205 296.625 113.122 299.011 111.739L365.829 73.1406C368.216 71.7628 371.833 71.6108 373.901 72.8072L442.355 112.352C444.423 113.548 444.164 115.632 441.777 117.015L374.959 155.613C372.573 156.991 368.956 157.143 366.888 155.946Z" stroke="#5A30C5" stroke-miterlimit="10"/>
                     </g>
+                    <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 355.773 141.291)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2b</tspan></text>
                 </g>
-                <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 355.773 141.291)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2b</tspan></text>
 
-                                <g data-cube data-order="0" data-o="268.5 255.3">
-                    <path d="M264.862 296.86L196.407 257.316C194.339 256.119 194.599 254.036 196.985 252.653L263.803 214.055C266.19 212.677 269.806 212.525 271.874 213.721L340.329 253.266C342.397 254.462 342.137 256.546 339.751 257.929L272.933 296.527C270.546 297.905 266.93 298.057 264.862 296.86Z" stroke="#5A30C5" stroke-miterlimit="10"/>
-                    <path data-cube-edge d="M195.01 170.539V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
-                    <path data-cube-edge d="M341.725 170.539V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
-                    <path data-cube-edge d="M268.365 212.912V297.67" stroke="#5A30C5" stroke-miterlimit="10"/>
+                <g data-cube data-order="0" data-o="268.5 255.3">
+                    <path d="M195.033 255C194.902 255.862 195.351 256.705 196.407 257.316L264.862 296.86C266.93 298.057 270.546 297.905 272.933 296.527L339.751 257.929C341.195 257.092 341.86 255.998 341.702 255" stroke="#5A30C5" stroke-miterlimit="10"/>
+                    <path data-cube-edge d="M195.01 170.538V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
+                    <path data-cube-edge d="M341.725 170.538V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
+                    <path data-cube-edge d="M268.365 212.912V297.669" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <g data-cube-top>
-                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.775C270.546 213.152 266.929 213.304 264.861 212.108Z" fill="white"/>
-                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.775C270.546 213.152 266.929 213.304 264.861 212.108Z" fill="#DEDBFF" fill-opacity="0.25"/>
-                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.775C270.546 213.152 266.929 213.304 264.861 212.108Z" stroke="#5A30C5" stroke-miterlimit="10"/>
+                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.774C270.546 213.152 266.929 213.304 264.861 212.108Z" fill="white"/>
+                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.774C270.546 213.152 266.929 213.304 264.861 212.108Z" fill="#DEDBFF" fill-opacity="0.25"/>
+                        <path d="M264.861 212.108L196.406 172.563C194.338 171.367 194.598 169.283 196.985 167.9L263.803 129.302C266.189 127.924 269.806 127.772 271.874 128.969L340.329 168.513C342.397 169.71 342.137 171.794 339.75 173.176L272.932 211.774C270.546 213.152 266.929 213.304 264.861 212.108Z" stroke="#5A30C5" stroke-miterlimit="10"/>
                     </g>
+                    <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 252 196.985)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2a</tspan></text>
                 </g>
-                <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 252 196.985)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2a</tspan></text>
 
-                                <g data-cube data-order="2" data-o="472.4 255.3">
-                    <path d="M468.915 296.86L400.46 257.316C398.392 256.119 398.652 254.036 401.039 252.653L467.857 214.055C470.243 212.677 473.86 212.525 475.928 213.721L544.382 253.266C546.45 254.462 546.191 256.546 543.804 257.929L476.986 296.527C474.6 297.905 470.983 298.057 468.915 296.86Z" stroke="#5A30C5" stroke-miterlimit="10"/>
+                <g data-cube data-order="2" data-o="472.4 255.3">
+                    <path d="M399.086 255C398.955 255.862 399.404 256.705 400.46 257.316L468.915 296.86C470.983 298.057 474.6 297.905 476.986 296.527L543.804 257.929C545.249 257.092 545.914 255.998 545.756 255" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <path data-cube-edge d="M399.064 170.539V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <path data-cube-edge d="M545.78 170.539V255.291" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <path data-cube-edge d="M472.419 212.912V297.67" stroke="#5A30C5" stroke-miterlimit="10"/>
                     <g data-cube-top>
-                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.775C474.6 213.152 470.983 213.304 468.915 212.108Z" fill="white"/>
-                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.775C474.6 213.152 470.983 213.304 468.915 212.108Z" fill="#DEDBFF" fill-opacity="0.25"/>
-                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.775C474.6 213.152 470.983 213.304 468.915 212.108Z" stroke="#5A30C5" stroke-miterlimit="10"/>
+                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.774C474.6 213.152 470.983 213.304 468.915 212.108Z" fill="white"/>
+                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.774C474.6 213.152 470.983 213.304 468.915 212.108Z" fill="#DEDBFF" fill-opacity="0.25"/>
+                        <path d="M468.915 212.108L400.46 172.563C398.392 171.367 398.652 169.283 401.039 167.9L467.857 129.302C470.243 127.924 473.86 127.772 475.928 128.969L544.382 168.513C546.45 169.71 546.191 171.794 543.804 173.176L476.986 211.774C474.6 213.152 470.983 213.304 468.915 212.108Z" stroke="#5A30C5" stroke-miterlimit="10"/>
                     </g>
+                    <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 457.801 196.517)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2c</tspan></text>
                 </g>
-                <text data-cube-label transform="matrix(0.866041 -0.499972 0.866041 0.499972 457.801 196.517)" fill="#9077F3" xml:space="preserve" font-size="10" font-weight="500"><tspan x="0" y="11.6812">us-east-2c</tspan></text>
             </g>
 
                         <g data-glyph transform="translate(0 -70)">
