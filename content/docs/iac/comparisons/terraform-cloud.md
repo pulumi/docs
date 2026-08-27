@@ -1,7 +1,7 @@
 ---
 title_tag: "Best Terraform Cloud Alternative for Multi-Cloud Teams"
 faq_schema: true
-authors: ["content-team"]
+authors: ["pulumi-content-team"]
 meta_desc: "The best Terraform Cloud alternative for large multi-cloud teams: Pulumi pairs real languages with one platform for policy, secrets, and AI."
 title: Terraform Cloud
 h1: "Pulumi vs. Terraform Cloud: The Best Alternative for Large Multi-Cloud Teams"
@@ -13,7 +13,7 @@ menu:
         identifier: iac-comparisons-terraform-cloud
 ---
 
-Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams, and you can adopt it without rewriting anything. Pulumi Cloud is a drop-in backend for your existing Terraform and OpenTofu state, HCL runs as a first-class Pulumi language, and your existing Terraform modules import directly into programs written in any language. What you get in return is one unified platform where state, policy, secrets, estate visibility, and AI-assisted automation operate on the same resource graph under a single credit-based plan, rather than an HCL runner metered by resource count with a separate secrets manager, policy engine, and inventory assembled around it.
+Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams, and you can adopt it without rewriting anything. Pulumi Cloud is a drop-in backend for your existing Terraform and OpenTofu state, HCL runs as a first-class Pulumi language, and your existing Terraform modules import directly into programs written in any language. What you get in return is one unified platform where state, policy, secrets, estate visibility, and AI-assisted automation operate on the same resource graph under a single pool of Pulumi Credits, rather than an HCL runner metered by resource count with a separate secrets manager, policy engine, and inventory assembled around it.
 
 ## Why teams are re-evaluating HCP Terraform right now
 
@@ -37,7 +37,7 @@ Stacks created through the Terraform or OpenTofu CLI [run plans and applies remo
 
 Stacks holding Terraform state are first-class entities in Pulumi Cloud, not read-only imports:
 
-* Govern them with [tag-based access control and team and user role assignments](/docs/administration/access-identity/rbac/).
+* Govern them with [tag-based access control and team and user role assignments](/docs/administration/concepts/rbac/).
 * Keep backend configuration in [Pulumi ESC](/docs/esc/), inject OIDC credentials at apply time, and expose Terraform root module outputs as stack outputs for downstream stacks and services.
 * Run [preventative policies](/docs/insights/policy/) against a Terraform plan on remotely executed stacks, blocking an apply when a resource is non-compliant, and keep scanning with audit policies afterward.
 * Get [Neo code reviews](/docs/ai/neo/code-reviews/) on Terraform and OpenTofu pull requests, informed by what Pulumi Cloud knows about the infrastructure you actually have running.
@@ -89,8 +89,8 @@ Mercedes-Benz Research & Development adopted Pulumi specifically to unify applic
 | --- | --- | --- |
 | Language | {{< pulumi-languages "general-purpose" >}}, plus YAML — general-purpose languages with native testing, IDE support, and package management — and [HCL](/docs/iac/languages-sdks/hcl/) via `runtime: hcl`, which runs valid Terraform and OpenTofu configurations with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility) | HCL, a configuration-focused DSL; `terraform test` covers native unit testing, but reuse and abstraction are limited to the module system |
 | Terraform and OpenTofu state | [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/) as a drop-in target, with [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) and approval gates for VCS-triggered applies, alongside Pulumi's own state | Native, but state and runs are scoped to HCP Terraform workspaces |
-| Terraform module reuse | [`pulumi package add hcl module`](/docs/iac/get-started/terraform/terraform-modules/) pulls existing modules into a Pulumi program in any language, and [Pulumi Cloud's registry hosts them](/docs/idp/concepts/terraform-modules/) alongside Pulumi packages via an HCP-compatible publish API | Native to Terraform and OpenTofu only |
-| Pricing model | One Pulumi Cloud plan bundles IaC, secrets, estate visibility, and AI usage under a single credit allotment, with on-demand pricing for usage beyond it; the Individual tier is free with no resource cap | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
+| Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; native language package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages; plus existing Terraform modules pulled in directly with [`pulumi package add hcl module`](/docs/iac/get-started/terraform/terraform-modules/) and [hosted in Pulumi Cloud's registry](/docs/idp/concepts/terraform-modules/) via an HCP-compatible publish API | Modules published to the Terraform Registry or a private registry, resolvable only from Terraform and OpenTofu configurations |
+| Pricing model | Pulumi Credits are one currency across IaC, secrets, estate visibility, workflows, and AI usage, so a single credit pool covers the whole platform rather than a separate meter per product; the Team edition starts at $40/month with 40 included Credits and 500 included resources, and additional IaC resources are billed at $0.00025 per resource-hour ($0.1825/month) | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
 | Free tier | Individual tier is free with no resource cap for personal use | Enhanced Free tier caps out at 500 managed resources per organization |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/), written in Python, TypeScript, or OPA Rego, enforced on every `pulumi up` and — for [remotely executed](/docs/iac/get-started/terraform/terraform-remote-execution/) Terraform stacks — against Terraform plans, as part of the same platform | Sentinel or OPA policy checks, run as a distinct step in the HCP Terraform run pipeline |
 | Secrets and configuration | [Pulumi ESC](/docs/esc/) centralizes secrets and config across infrastructure and applications | Workspace variables plus a separate HashiCorp Vault integration for centralized secrets |

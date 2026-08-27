@@ -10,8 +10,10 @@ inputs.
 
 Selection algorithm (weighted fair queuing by staleness):
 
-1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
-   and `draft: true` pages.
+1. Enumerate `content/docs/**/*.md`; keep the paths this mode is allowed to
+   touch (`--mode fix`: editable pages; `--mode report`: reviewable pages a
+   generator owns — see MODES below), then drop `draft: true` pages and
+   `redirect_to:` stubs (tombstones, not content).
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
    whose `incomplete` review has already burned ATTEMPT_CAP retries (they
    back off and are surfaced for a human instead of looping forever).
@@ -24,7 +26,7 @@ Selection algorithm (weighted fair queuing by staleness):
 
        score = importance * staleness + stale_claim_boost
 
-   importance = tier_w * (0.5 + 0.5*traffic_n) * gsc_m * feedback_m
+   importance = tier_w * (0.25 + 0.75*traffic_n) * gsc_m * feedback_m
               = tier_w * gsc_m * feedback_m     tier-only when no traffic
    tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
    traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
@@ -58,16 +60,35 @@ Selection algorithm (weighted fair queuing by staleness):
                 ancient never-reviewed page to the front. A human (non-bot)
                 edit fully resets the clock.
 
-   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry has a
-                non-empty `stale_claims` list (written by the nightly
+   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry carries
+                a non-escalated stale-claim marker (written by the nightly
                 reverify-claims.py when a volatile claim the page asserts
-                re-verified contradicted); 0 otherwise. Marked pages jump the
-                queue; the marker clears when the review rewrites the entry.
+                re-verified contradicted; see active_markers); 0 otherwise.
+                Marked pages jump the queue; a marker retires when a review
+                resolves it (record-review.py `resolved_claims`), and one
+                unresolved through MARKER_ESCALATION_CAP reviews stops
+                boosting (escalated — a human's turn), so the boost is
+                bounded either way.
 
    Ties break on path ascending, so runs are reproducible.
 
+Two modes, over disjoint halves of the corpus (see `eligible`):
+
+* `--mode fix` (default) — pages a PR may edit. Unchanged: score, queue,
+  dispatch a worker that reviews the page and opens a PR for what it fixed.
+* `--mode report` — pages a PR may NOT edit but whose prose is still ours to
+  check: generated trees, chiefly the 248-page CLI command reference. Same
+  scoring, but the worker records the page's claim list and changes nothing.
+  This exists because "a generator owns this file" and "don't look at this
+  file" were the same flag (tier 0) until pulumi/docs#20996, and selection is
+  the only thing that ever writes a page's claim list — so 30% of
+  `content/docs/` had never been fact-checked once. Contradictions found on
+  these pages route upstream (reverify-claims.py's `fix_route`), never to a
+  marker no PR here could ever retire.
+
 Usage:
     select-articles.py --count 3 --out .content-review-queue.json
+        [--mode fix|report]
         [--traffic-file .traffic-snapshot] [--signals-file .reader-signals.json]
         [--tiers <yaml>] [--ledger-dir scripts/content-review/ledger]
         [--paths content/docs/a.md,content/docs/b/_index.md]
@@ -90,6 +111,7 @@ import subprocess
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
+from typing import NamedTuple
 
 import yaml
 
@@ -134,6 +156,13 @@ LANE = Lane(
 )
 
 BRANCH_PREFIX = "content-review/"
+
+# Worker modes this selector can queue for. `fix` is the original lane: pages a
+# PR may edit. `report` is the fact-check-only lane (pulumi/docs#20996) over the
+# pages a PR may NOT edit — generated trees whose prose is still ours to check.
+FIX_MODE = "fix"
+REPORT_MODE = "report"
+MODES = {FIX_MODE, REPORT_MODE}
 MAX_OPEN_PRS = 9
 # An `incomplete` review (worker exited before recording a verdict, or claimed
 # a fix with no PR) never advances the staleness clock, so the page stays due
@@ -149,9 +178,103 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # — see reverify-claims.py). Sized to outrank a top-importance page that has
 # gone unreviewed for a year (1.0 * 365), so a known-stale fact beats any
 # ordinary staleness — while an ancient never-reviewed page can still win, so
-# the sweep is never fully starved. The marker vanishes when the page's next
-# review rewrites its ledger entry, so the boost self-clears.
+# the sweep is never fully starved. A marker retires when the page's next
+# review resolves it (record-review.py), so the boost self-clears.
 STALE_CLAIM_BOOST = 400.0
+
+# A marker the last MARKER_ESCALATION_CAP reviews each saw and left unresolved
+# stops boosting. Carrying an unresolved marker forward is what keeps a missed
+# finding from evaporating (record-review.py), but an unboundedly boosted page
+# would be re-picked every sweep and starve the rest of the queue, which is the
+# same failure the marker was meant to cure. Past the cap the marker stays on
+# the ledger entry — visible, still reported, still blocking re-verification
+# churn — but it stops jumping the page to the front. That is the signal a
+# human needs to look at it.
+MARKER_ESCALATION_CAP = 2
+
+# A stale-claim marker does not boost while the page's last COMPLETED review is
+# newer than this. The claims index snapshots the PRE-fix page on purpose (the
+# model must not launder its own edits into the index), so the night after a
+# fix merges the marker is still there describing a value the merged PR already
+# corrected — and a +400 boost would drag the just-fixed page straight back to
+# the front of the queue. That echo bought one redundant full review per fix,
+# observed twice in the 2026-08-18 queue alone.
+#
+# reverify-claims.superseded_by_review() is the primary guard and stops the
+# re-check upstream of the marker; this is the second, independent one, on the
+# consumer side, for a marker that is already on the entry when a fix lands.
+# Both were specified in #20970; only the reverify half shipped.
+#
+# An INCOMPLETE review never suppresses — it did not fix anything, so the
+# marker is still live. A marker surviving past the cooldown is real drift and
+# boosts exactly as before.
+STALE_BOOST_COOLDOWN_DAYS = 5
+
+
+def all_markers(entry: dict | None) -> list[dict]:
+    """Every stale-claim marker on this ledger entry, escalated or not.
+
+    This is what rides in the queue item, and it is deliberately unfiltered.
+    record-review.py rebuilds the ledger entry from the queue and writes back
+    whatever markers survive the review, so a marker withheld here would be
+    dropped from the ledger the next time the page is reviewed for any reason
+    — and `already_marked()` in reverify-claims.py would then let the entity
+    back into the nightly pool, restarting the detect/boost/miss/clear cycle
+    this whole mechanism exists to break.
+    """
+    return [m for m in (entry or {}).get("stale_claims") or [] if isinstance(m, dict)]
+
+
+def _day(value) -> date | None:
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return None
+
+
+def boost_suppressed_by_recent_fix(entry: dict | None, today: date) -> bool:
+    """True when this page's markers are an ECHO of a fix that already landed.
+
+    See STALE_BOOST_COOLDOWN_DAYS. Three conditions, all required:
+
+    1. The last review COMPLETED (record-review.py's vocabulary: any status
+       but "incomplete"). An incomplete review fixed nothing.
+    2. It is inside the cooldown window.
+    3. EVERY marker on the entry was checked AFTER that review.
+
+    (3) is the one that makes this precise rather than a blunt mute. A marker
+    written after a completed review is the echo #20970 describes: the claims
+    index still holds the PRE-fix snapshot, so that night's re-check re-flags
+    a value the merged PR already corrected. A marker written BEFORE the
+    review is the opposite situation — the review saw it and left it — and
+    that is real, unresolved drift which must keep boosting (and escalates on
+    its own via MARKER_ESCALATION_CAP). Suppressing those would mute the
+    finding the whole mechanism exists to carry.
+    """
+    entry = entry or {}
+    if entry.get("status") == "incomplete":
+        return False
+    reviewed = _day(entry.get("reviewed_at"))
+    if reviewed is None or not (0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS):
+        return False
+    markers = all_markers(entry)
+    if not markers:
+        return False
+    # An undated marker is not provably an echo, so it keeps its boost.
+    checked = [_day(m.get("checked_at")) for m in markers]
+    return all(c is not None and c > reviewed for c in checked)
+
+
+def active_markers(entry: dict | None) -> list[dict]:
+    """The subset of markers that still earn the page a priority boost.
+
+    Escalated markers (see MARKER_ESCALATION_CAP) are excluded *from the
+    boost only*: repeated reviews have already failed to act on them, so
+    another jump to the front of the queue is not the remedy. They still
+    travel in the queue item and still persist on the ledger — see
+    all_markers().
+    """
+    return [m for m in all_markers(entry) if not m.get("escalated")]
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -218,14 +341,74 @@ def load_tiers(tiers_file: Path) -> list[dict]:
     return sorted(rules, key=lambda r: len(r.get("prefix", "")), reverse=True)
 
 
-def tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
-    """Longest-prefix match wins. Returns (tier, no_retire)."""
+class PagePolicy(NamedTuple):
+    """What the review pipeline may do with one page.
+
+    `tier`/`no_retire` are the scoring and retirement inputs they always were.
+    The two booleans are the split of what tier 0 used to conflate:
+
+      editable   — may a PR change this file? False for a tree a generator
+                   owns: the generator overwrites any edit, so a fix, a
+                   glow-up, or a snippet sweep there is spend thrown away.
+      reviewable — may the pipeline read this page and record what it claims?
+                   Independent of the above: "a generator owns this file" says
+                   nothing about whether its prose is true.
+
+    Conflating them meant tier 0 read as "never select", and selection is the
+    only thing that ever writes a page's claim list — so 254 pages (30% of
+    content/docs, 248 of them the CLI command reference) had never been
+    fact-checked once. See pulumi/docs#20996.
+    """
+
+    tier: int
+    no_retire: bool
+    editable: bool
+    reviewable: bool
+
+
+def policy_for(path: str, rules: list[dict]) -> PagePolicy:
+    """Longest-prefix match wins; unmatched paths are ordinary tier-3 content.
+
+    `tier: 0` stays valid as shorthand for "neither editable nor reviewable"
+    (the trees we genuinely never want to look at), and explicit `editable:` /
+    `reviewable:` keys override it in either direction.
+    """
     for rule in rules:
         if path.startswith(rule.get("prefix", "")):
             tier = int(rule.get("tier", 3))
-            no_retire = bool(rule.get("no_retire", False)) or tier == 1
-            return tier, no_retire
-    return 3, False
+            editable = bool(rule.get("editable", tier != 0))
+            # A page no PR may edit is a page no PR may retire, so the queue
+            # field agrees with check-retire-veto.py rather than reading
+            # `no_retire: false` on a page nothing could retire anyway.
+            no_retire = bool(rule.get("no_retire", False)) or tier == 1 or not editable
+            return PagePolicy(
+                tier,
+                no_retire,
+                editable,
+                bool(rule.get("reviewable", tier != 0)),
+            )
+    return PagePolicy(3, False, True, True)
+
+
+def tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
+    """(tier, no_retire) — the pre-#20996 shape, for callers that want only
+    the scoring facts. `policy_for` is the full answer."""
+    policy = policy_for(path, rules)
+    return policy.tier, policy.no_retire
+
+
+def eligible(policy: PagePolicy, mode: str) -> bool:
+    """Is this page a candidate for `mode`?
+
+    The two lanes partition the corpus rather than overlapping: a page the fix
+    lane can edit is never queued for report-only (the fix lane already records
+    its claims as a side effect of reviewing it), and a page it cannot edit is
+    never queued for a fix it could not keep. Pages that are neither editable
+    nor reviewable are out of both.
+    """
+    if mode == REPORT_MODE:
+        return policy.reviewable and not policy.editable
+    return policy.editable
 
 
 def load_reader_signals(
@@ -239,6 +422,12 @@ def load_reader_signals(
         {"version": 1, "generated": ..., "signals": {
             "gsc":      {"source", "period", "pages": {url: {impressions, clicks, position}}},
             "feedback": {"source", "period", "pages": {url: {yes, no}}}}}
+
+    A bare GSC section with no {"signals": ...} envelope is also accepted —
+    that is the shape of the export the data team ships today
+    (pulumi/data#865 phase 2, the Airflow stack's docsTrafficGscLatestS3Uri):
+
+        {"source", "period", "generated", "pages": {url: {clicks, impressions, position}}}
 
     Returns (gsc, feedback, meta). A missing/unreadable/malformed file — or a
     missing section — degrades that signal to unavailable, mirroring
@@ -262,7 +451,13 @@ def load_reader_signals(
         return gsc, feedback, meta
     sections = data.get("signals")
     if not isinstance(sections, dict):
-        return gsc, feedback, meta
+        # No envelope: accept the bare GSC-only export (pulumi/data#865
+        # phase 2) so the signal activates on what ships today. The full
+        # envelope (adding feedback) supersedes it whenever it lands.
+        if isinstance(data.get("pages"), dict):
+            sections = {"gsc": data}
+        else:
+            return gsc, feedback, meta
 
     def _int(v) -> int:
         try:
@@ -417,7 +612,13 @@ def importance(
     if have_traffic and max_visits > 0:
         v = visits if visits is not None else median_visits
         traffic_n = math.log1p(v) / math.log1p(max_visits)
-        return tier_w * (0.5 + 0.5 * traffic_n) * gsc_m * feedback_m
+        # Floor 0.25, not 0.5: with the old floor the log-normalized term
+        # compressed a 7,600x traffic gap into a <1% score difference, so
+        # staleness alone decided the queue across wildly different reader
+        # impact. The floor still guarantees a zero-traffic page a quarter of
+        # full weight (staleness must be able to win eventually), but traffic
+        # now separates same-tier peers by up to 4x instead of 2x.
+        return tier_w * (0.25 + 0.75 * traffic_n) * gsc_m * feedback_m
     return tier_w * gsc_m * feedback_m
 
 
@@ -448,7 +649,7 @@ def score_page(
 
 def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
     entries = load_ledger(ledger_dir, LANE)
-    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0,
+    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0, "reported": 0,
               "incomplete": 0, "capped": 0, "unknown": 0}
     by_lane: dict[str, int] = {}
     for path, entry in sorted(entries.items()):
@@ -463,6 +664,12 @@ def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
         # pre-standardization field still present on older ledger objects.
         if status == "clean" or entry.get("clean"):
             counts["clean"] += 1
+            continue
+        # The report-only lane never opens a PR, so a `pr_state` lookup on it
+        # would book every one of these as "unknown" — and there are 248 pages
+        # in that lane.
+        if status == "reported":
+            counts["reported"] += 1
             continue
         state = pr_state(entry.get("pr", ""), use_gh)
         if state is None:
@@ -491,6 +698,10 @@ def main() -> int:
     p.add_argument("--repo-root", default=str(REPO_ROOT), help=argparse.SUPPRESS)
     p.add_argument("--paths", help="Comma-separated content paths; bypasses scoring (testing)")
     p.add_argument("--lane", help="Override lane for --paths entries (default manual)")
+    p.add_argument("--mode", choices=sorted(MODES), default="fix",
+                   help="fix (default): editable pages, the lane that opens PRs. "
+                        "report: reviewable-but-not-editable pages (generated "
+                        "trees) — record the claim list, change nothing.")
     p.add_argument("--no-gh", action="store_true", help="Skip gh API calls (testing)")
     p.add_argument("--today", help="Override today's date YYYY-MM-DD (testing)")
     p.add_argument("--dry-run", action="store_true", help="Print queue, write nothing")
@@ -500,7 +711,11 @@ def main() -> int:
 
     repo = Path(args.repo_root)
     ledger_dir = Path(args.ledger_dir)
-    use_gh = not args.no_gh
+    mode = args.mode
+    # The report lane opens no branch and no PR, so every gh call the fix lane
+    # makes to dedup against its own open PRs is both pointless and a way for a
+    # gh outage to halt a lane that cannot collide with anything.
+    use_gh = not args.no_gh and mode != REPORT_MODE
 
     if args.stats:
         return cmd_stats(ledger_dir, use_gh)
@@ -533,9 +748,13 @@ def main() -> int:
     queue: dict = {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "count": 0,
+        "mode": mode,
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
         "reader_signals": {"available": signals_available, **signals_meta},
+        # Pages backed off at the attempt cap (needing a human). Filled by the
+        # scored path below; signal-health.py's capped-pages signal reads it.
+        "capped": [],
         "articles": [],
     }
 
@@ -567,20 +786,36 @@ def main() -> int:
         }
 
     def article(path: str, lane: str, score: float | None) -> dict:
-        tier, no_retire = tier_for(path, tier_rules)
+        policy = policy_for(path, tier_rules)
         entry = ledger.get(path, {})
         return {
             "path": path,
             "url": url_for(path),
             "slug": slugify(path),
             "lane": lane,
-            "tier": tier,
-            "no_retire": no_retire,
+            "mode": mode,
+            "tier": policy.tier,
+            "no_retire": policy.no_retire,
+            # Ride the queue so every downstream consumer reads the same
+            # answer this selection was made on, rather than re-deriving it
+            # from a tiers file it may not have (the worker's publish job
+            # reads the queue; only the retire veto re-reads the YAML).
+            "editable": policy.editable,
             "monthly_visits": traffic.get(path),
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
-            "stale_claims": len(entry.get("stale_claims") or []),
+            "stale_claims": len(all_markers(entry)),
+            # The markers themselves, not just how many there are. The nightly
+            # re-verification already did the expensive work — it identified the
+            # entity, reached an authoritative source, and wrote down the
+            # evidence — and the review skill is told to treat those as priority
+            # findings. Passing only the count meant the worker had to re-derive
+            # the finding from scratch and could silently miss it (pulumi/docs
+            # #20927: a page boosted for a contradicted version pin was reviewed,
+            # reported "0 contradicted" across 74 re-extracted claims, and merged
+            # a one-line unrelated repair while the flagged bug stayed on master).
+            "stale_claim_markers": all_markers(entry),
             "score": score,
         }
 
@@ -607,19 +842,24 @@ def main() -> int:
     if len(open_branches) >= MAX_OPEN_PRS:
         queue["halted"] = "max_open_prs"
         return finish(queue, args, LANE)
-    open_slugs = {b[len(BRANCH_PREFIX):].removeprefix("retire-") for b in open_branches}
+    open_slugs = {
+        b[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
+        for b in open_branches
+    }
 
     newest_non_bot, created = git_history_signals(repo, CONTENT_DIR)
 
     candidates: list[str] = []
     capped: list[str] = []
     for path in all_paths:
-        tier, _ = tier_for(path, tier_rules)
-        if tier == 0:
+        policy = policy_for(path, tier_rules)
+        if not eligible(policy, mode):
             continue
         if slugify(path) in open_slugs:
             continue
         if is_draft(repo / path):
+            continue
+        if is_redirect_stub(repo / path):
             continue
         entry = ledger.get(path)
         if entry and entry.get("status") == INCOMPLETE_STATUS \
@@ -628,6 +868,7 @@ def main() -> int:
             continue
         candidates.append(path)
 
+    queue["capped"] = sorted(capped)
     if capped:
         print(
             f"select-articles: {len(capped)} page(s) backed off at the "
@@ -647,7 +888,9 @@ def main() -> int:
                 effective_last_review(path, ledger.get(path), newest_non_bot, created),
                 today,
                 have_traffic,
-                stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
+                stale_claims=(bool(active_markers(ledger.get(path)))
+                              and not boost_suppressed_by_recent_fix(
+                                  ledger.get(path), today)),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
             ),
@@ -678,6 +921,29 @@ def is_draft(file_path: Path) -> bool:
     except yaml.YAMLError:
         return False
     return bool(isinstance(fm, dict) and fm.get("draft"))
+
+
+def is_redirect_stub(file_path: Path) -> bool:
+    """A page whose frontmatter is a `redirect_to:` — a tombstone, not content.
+
+    There is nothing on such a page to review, but with the traffic term
+    floored these stubs scored like real pages and burned queue slots
+    (organizing-stacks-projects.md: 1 visit/month, reviewed twice). The test
+    is the `redirect_to` key specifically — NOT "small file with aliases",
+    which misfires on legitimately tiny pages like reference/glossary.md.
+    """
+    try:
+        head = file_path.read_text(errors="replace")[:4096]
+    except OSError:
+        return False
+    m = FRONTMATTER_RE.match(head)
+    if not m:
+        return False
+    try:
+        fm = yaml.safe_load(m.group(1))
+    except yaml.YAMLError:
+        return False
+    return bool(isinstance(fm, dict) and fm.get("redirect_to"))
 
 
 if __name__ == "__main__":

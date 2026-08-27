@@ -20,6 +20,8 @@ Which path you take comes down to what you want out of the move:
 * **Run your HCL natively** when you want to keep writing HCL and are after Pulumi's engine, state management, secrets, and cloud platform.
 * **Convert** when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, JavaScript, Python, Go, .NET, or Java.
 
+If you haven't written much code in one of these languages, [Language Essentials](/docs/iac/guides/basics/language-essentials/) translates the HCL you already know into the small set of constructs a Pulumi program actually uses.
+
 The rest of this page covers converting.
 
 ## When to convert
@@ -1149,7 +1151,7 @@ resources:
       ami: ${amazonLinux.id}
       instanceType: ${instanceType}
       subnetId: ${public.id}
-      vpcSecurityGroupIds: [${web-sg.id}]
+      vpcSecurityGroupIds: ["${web-sg.id}"]
       userData: |
         #!/bin/bash
         yum update -y

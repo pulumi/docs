@@ -24,6 +24,11 @@ on:
       - 'scripts/blog-review/**'
       - 'scripts/test-review-pipeline.sh'
       - '.claude/commands/docs-review/scripts/**'
+      # The suites assert against the shipped strategic-tiers.yaml and
+      # upstream-claims.yaml (which lane each generated tree lands in, which
+      # pages are retirement-vetoed, that every upstream entry cites an issue),
+      # so a data-only edit to those files must run them too.
+      - '.claude/commands/review-existing-content/references/**'
       - '.github/workflows/review-pipeline-tests.yml'
 
 permissions:

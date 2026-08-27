@@ -1,19 +1,30 @@
 ---
 title: What is Pulumi?
 meta_desc: |
-    Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
+    Pulumi is open source infrastructure as code: define, deploy, and manage cloud infrastructure in TypeScript, Python, JavaScript, Go, .NET, Java, YAML, or HCL.
 type: what-is
 page_title: "What is Pulumi?"
-authors: ["asaf-ashirov"]
+authors: ["pulumi-content-team"]
+software_application_schema: true
 ---
 
-The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning a new tool-specific language. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
+Pulumi is an open source infrastructure as code platform that lets you define, deploy, and manage cloud infrastructure using general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL. It provisions resources across AWS, Azure, Google Cloud, Kubernetes, and 180+ providers, and pairs with Pulumi Cloud for state, secrets, policy, and AI-assisted operations.
 
-Pulumi is a cloud engineering platform that treats infrastructure as software, letting teams define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, JavaScript, Go, .NET, Java, and YAML, plus HCL as a first-class option. Whichever language a team chooses, Pulumi brings the full power of modern software development practices to infrastructure management.
+Pulumi treats infrastructure as software: instead of a templating language or a fixed schema, teams write real programs — with loops, functions, tests, and packages — that generate and manage cloud resources. Whichever language a team picks, Pulumi Cloud adds collaboration, governance, and AI-assisted workflows on top through one platform, not a set of disconnected add-ons.
+
+## Pulumi at a glance
+
+| Entity | Role | Notes |
+| --- | --- | --- |
+| **Pulumi** | Infrastructure as code platform | Defines, deploys, and manages cloud infrastructure as real code |
+| **Languages** | TypeScript, Python, JavaScript, Go, .NET, Java, YAML, HCL | General-purpose languages plus a declarative option, with full IDE, test, and package support |
+| **Cloud providers** | AWS, Azure, Google Cloud, Kubernetes, 180+ providers | One consistent programming model across every provider |
+| **Pulumi Cloud** | Managed platform layer | State backend, secrets and configuration via Pulumi ESC, policy as code, Pulumi Discovery, and Neo (Pulumi's AI infrastructure agent) |
+| **Competitors** | Terraform, OpenTofu, AWS CloudFormation, AWS CDK, Crossplane | Pulumi differs by using general-purpose languages instead of a DSL or fixed templates |
 
 ## The evolution of infrastructure management
 
-To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
+Managing cloud infrastructure has historically meant clicking through web consoles, writing brittle scripts, or learning a tool-specific templating language — approaches that get harder to maintain as environments grow. To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
 
 The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. These tools introduced domain-specific languages with their own learning curves. They favor a constrained, declarative model, while general-purpose languages trade that simplicity for richer abstraction and reuse.
 
@@ -183,6 +194,36 @@ That distinction matters most now, when AI can generate infrastructure faster th
 
 [Get started with Pulumi](/docs/get-started/) to see this in your own stack.
 
+## Frequently asked questions
+
+### What is Pulumi used for?
+
+Pulumi is used to define, deploy, and manage cloud infrastructure as code — provisioning resources like virtual machines, databases, Kubernetes clusters, and serverless functions across AWS, Azure, Google Cloud, and 180+ other providers. Teams use it to replace manual console clicks and brittle scripts with versioned, testable infrastructure programs written in a language they already know.
+
+### What languages does Pulumi support?
+
+Pulumi supports general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL for teams that prefer a declarative format. Because Pulumi programs are real code, they get full IDE support, static typing, automated testing, and package management: capabilities that templating languages and fixed-schema DSLs don't provide natively.
+
+### Is Pulumi open source?
+
+Yes. Pulumi's core SDK and providers are open source under the Apache 2.0 license, and the CLI and language SDKs are free to use. Pulumi Cloud, the optional managed backend for state, secrets, and policy, offers a free Individual edition plus paid Team, Enterprise, and Business Critical editions for organizations that need collaboration and governance at scale.
+
+### How is Pulumi different from Terraform?
+
+Terraform and OpenTofu use HashiCorp Configuration Language (HCL), a domain-specific language built around a fixed schema. Pulumi lets you use general-purpose languages instead — and, with native HCL support and a Terraform state backend, can also work directly with existing HCL configurations. The difference is optionality: Pulumi adds full programming-language capability without giving up compatibility.
+
+### Can Pulumi manage AWS, Azure, and Google Cloud at the same time?
+
+Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along with Kubernetes and 180+ other providers, so a single program can define resources across multiple clouds using one consistent language and one deployment engine — no separate tools or state stores per provider required.
+
+### Is Pulumi free?
+
+Pulumi's CLI, SDKs, and providers are free and open source. Pulumi Cloud, the managed platform for state, secrets, and team collaboration, includes a free Individual edition; the Team edition adds multi-user collaboration and organization-managed policy enforcement for growing teams, and the Enterprise and Business Critical editions add role-based access control, advanced policy controls, and premium support for organizations running infrastructure at scale.
+
+### What is Pulumi Cloud?
+
+Pulumi Cloud is the managed platform layer that sits on top of Pulumi's open-source engine. It provides state storage, Pulumi ESC for secrets and configuration, policy as code, Pulumi Discovery for cloud estate visibility, and Neo, an AI infrastructure agent — the collaboration and governance capabilities teams need once more than one person touches the same infrastructure.
+
 ## Learn more
 
 Ready to experience infrastructure as software? Explore Pulumi's comprehensive platform and discover how it can transform your approach to cloud infrastructure management.
@@ -191,6 +232,7 @@ Ready to experience infrastructure as software? Explore Pulumi's comprehensive p
 - [Explore the registry](/registry/)
 - [Read customer success stories](/case-studies/)
 - [Compare infrastructure as code tools](/blog/infrastructure-as-code-tools/)
+- [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 
 ### Related topics
 

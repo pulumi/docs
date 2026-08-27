@@ -47,7 +47,7 @@ Start new Azure projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on Azure with Pulumi.
+Hands-on infrastructure as code guides for building on Azure with Pulumi.
 
 - [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/) — compare Azure Native and Azure Classic.
 - [Convert ARM templates to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/) — migrate existing ARM templates.
@@ -77,7 +77,10 @@ For Azure:
 
 - [Pulumi best practices for Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/) — Pulumi-authored policies for common Azure misconfigurations.
 - [CIS Microsoft Azure Foundations Benchmark](/docs/reference/pre-built-policy-packs/cis/azure/)
+- [NIST 800-53 for Azure](/docs/reference/pre-built-policy-packs/nist/azure/)
+- [PCI DSS for Azure](/docs/reference/pre-built-policy-packs/pci-dss/azure/)
 - [HITRUST CSF for Azure](/docs/reference/pre-built-policy-packs/hitrust/azure/)
+- [ISO/IEC 27001 for Azure](/docs/reference/pre-built-policy-packs/iso-27001/azure/)
 - [CIS Kubernetes Benchmark on Azure](/docs/reference/pre-built-policy-packs/cis-kubernetes/azure/) — for AKS clusters.
 
 ## Migration

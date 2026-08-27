@@ -95,7 +95,7 @@ Despite the clear gaps, it is clear we've taken some major steps in the directio
 
 As we've seen, the future of cloud engineering is already here in a very real way. The cloud is being infused into application development, we are increasingly treating cloud infrastructure as software, and teams are embracing new ways of working together.
 
-We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://www.youtube.com/watch?v=w6Dj2zf-39M&list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y&index=2) or check out [one of the many amazing Cloud Engineering talks now](hhttps://www.youtube.com/playlist?list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y)!
+We hope you enjoyed learning more about cloud engineering architectures, workflows, and teams. [Watch the Cloud Engineering Summit Keynote here](https://www.youtube.com/watch?v=w6Dj2zf-39M&list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y&index=2) or check out [one of the many amazing Cloud Engineering talks now](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y)!
 
 This event would not have been possible without the participation and support of our top sponsors:
 

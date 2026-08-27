@@ -189,7 +189,7 @@ The [Pulumi Registry](/registry/) provides the documentation for all of the Pulu
 
 {{% /choosable %}}
 
-All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
+All resources have a required [`name`](https://www.pulumi.com/docs/iac/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
 
 In the above example, the logical name for our `ResourceGroup` resource is **"website-resource-group"**, and the physical name might typically look something like **"website-resource-group-d7c2fa0"**.
 
@@ -273,7 +273,7 @@ The properties inside your `StorageAccount` resource are:
 | **kind** | tells the provider the type of storage account to create, e.g. `StorageV2` |
 | **sku** | tells the provider the SKU to use when creating the resource, e.g. `Standard_LRS` |
 
-**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). We do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). We do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/iac/concepts/resources/options/).
 
 ## Deploy your storage account
 
@@ -507,5 +507,5 @@ In this tutorial, you made a resource group and a storage account, and you confi
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
 - Learn more about stack outputs and references in the [Reference AWS Resources Across Stacks tutorial](/tutorials/stack-outputs-refs-azure/) tutorial.
-- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
-- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.
+- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation.
+- Learn more about [resource names](/docs/iac/concepts/resources/names/), [options](/docs/iac/concepts/resources/options/), and [providers](/docs/iac/concepts/providers/) in the Pulumi documentation.

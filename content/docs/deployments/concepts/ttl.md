@@ -29,7 +29,7 @@ A stack's time to live is measured from the stack's **creation** date, not its m
 In order to set up Time-to-Live Stacks in the Pulumi Cloud console, follow these steps:
 
 1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
-2. Navigate to the Stack > Settings > Schedules
+2. Navigate to the stack > Settings > Schedules
 3. Select "Time-to-Live"
 4. (Optional) Turn on "Delete After Destroy" if applicable
 5. Set the schedule using a cron expression

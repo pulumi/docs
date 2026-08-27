@@ -86,7 +86,7 @@ The generated SDK will include a `.gitignore` so it can be safely committed to v
 #### About provider packages in the project configuration file
 
 {{% notes type="info" %}}
-When using `pulumi package add` with Pulumi version 3.157.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
+When using `pulumi package add` with Pulumi version 3.163.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
 {{% /notes %}}
 
 When you run `pulumi package add`, the package is automatically added to your Pulumi project configuration file under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the following entry would be added to your `Pulumi.yaml`:
@@ -381,8 +381,8 @@ var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
     Port = 443,
     Protocol = "HTTPS",
     SslPolicy = "ELBSecurityPolicy-2016-08",
-    CertificateArn = cert.arn,
-    DefaultAction: new Aws.Lb.ListenerDefaultAction
+    CertificateArn = cert.Arn,
+    DefaultAction = new Aws.Lb.ListenerDefaultAction
     {
         TargetGroupArn = targetGroupArn,
         Type = "forward",
@@ -636,6 +636,7 @@ pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 Each command adds one entry to the list, so disabling both the `aws` and `kubernetes` default providers means running both commands in sequence — the first sets index `[0]`, and the second sets index `[1]`:
 
 ```sh
+pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 pulumi config set --path 'pulumi:disable-default-providers[1]' kubernetes
 ```
 

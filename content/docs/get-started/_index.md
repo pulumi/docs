@@ -22,7 +22,7 @@ Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-c
 
 Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to make managing infrastructure secure, reliable, and hassle-free.
 
-Choose a cloud provider to get started:
+## Choose a cloud provider
 
 <section class="docs-home mt-4 mb-12">
     <div class="docs-home-section">

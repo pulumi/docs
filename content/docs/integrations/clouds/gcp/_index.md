@@ -45,7 +45,7 @@ Start new Google Cloud projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on Google Cloud with Pulumi.
+Hands-on infrastructure as code guides for building on Google Cloud with Pulumi.
 
 - [Google Cloud Build CI/CD](/docs/iac/operations/continuous-delivery/google-cloud-build/) — drive Pulumi stack updates from Cloud Build pipelines.
 
@@ -72,7 +72,10 @@ For Google Cloud:
 
 - [Pulumi best practices for Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) — Pulumi-authored policies for common Google Cloud misconfigurations.
 - [CIS Google Cloud Platform Foundations Benchmark](/docs/reference/pre-built-policy-packs/cis/google-cloud/)
+- [NIST 800-53 for Google Cloud](/docs/reference/pre-built-policy-packs/nist/google-cloud/)
+- [PCI DSS for Google Cloud](/docs/reference/pre-built-policy-packs/pci-dss/google-cloud/)
 - [HITRUST CSF for Google Cloud](/docs/reference/pre-built-policy-packs/hitrust/google-cloud/)
+- [ISO/IEC 27001 for Google Cloud](/docs/reference/pre-built-policy-packs/iso-27001/google-cloud/)
 - [CIS Kubernetes Benchmark on Google Cloud](/docs/reference/pre-built-policy-packs/cis-kubernetes/google-cloud/) — for GKE clusters.
 
 ## Migration

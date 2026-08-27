@@ -52,9 +52,9 @@ A CI/CD pipeline for infrastructure **must** run a preview on every pull request
 
 ## Authentication and configuration with Pulumi Cloud
 
-Your pipeline needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to authenticate with Pulumi Cloud.
+Your pipeline needs a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to authenticate with Pulumi Cloud.
 
-You can remove even that static secret with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): the pipeline exchanges the OIDC token issued by your CI/CD system for a short-lived Pulumi access token, so no long-lived credential is stored anywhere.
+You can remove even that static secret with [OpenID Connect (OIDC)](/docs/administration/guides/oidc-issuers/): the pipeline exchanges the OIDC token issued by your CI/CD system for a short-lived Pulumi access token, so no long-lived credential is stored anywhere.
 
 [Pulumi ESC](/docs/esc/) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a CI/CD pipeline or a developer's machine, a single environment definition works in both places.
 

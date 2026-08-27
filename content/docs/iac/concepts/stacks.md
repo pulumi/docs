@@ -735,11 +735,14 @@ func main() {
   pulumi.Run(func(ctx *pulumi.Context) error {
     slug := fmt.Sprintf("mycompany/infra/%v", ctx.Stack())
     stackRef, err := pulumi.NewStackReference(ctx, slug, nil)
+    if err != nil {
+      return err
+    }
 
     kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
     // ...
     return nil
-  }
+  })
 }
 ```
 

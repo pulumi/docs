@@ -63,13 +63,13 @@ Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Confi
 
 ### Eliminate static tokens with OIDC
 
-The recommended way to give the cluster its Pulumi Cloud identity is OpenID Connect (OIDC). Register the Kubernetes cluster as a Pulumi Cloud [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/), and the operator's workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. No long-lived `PULUMI_ACCESS_TOKEN` secret is stored in the cluster.
+The recommended way to give the cluster its Pulumi Cloud identity is OpenID Connect (OIDC). Register the Kubernetes cluster as a Pulumi Cloud [OIDC Issuer](/docs/administration/guides/oidc-issuers/), and the operator's workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. No long-lived `PULUMI_ACCESS_TOKEN` secret is stored in the cluster.
 
-See [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/) for setup steps. Once the issuer is configured, the `Stack` manifests in this guide need no `envRefs.PULUMI_ACCESS_TOKEN` block.
+See [Configuring OpenID Connect for Amazon EKS](/docs/administration/guides/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/guides/oidc-issuers/kubernetes-gke/) for setup steps. Once the issuer is configured, the `Stack` manifests in this guide need no `envRefs.PULUMI_ACCESS_TOKEN` block.
 
 ### Use a static access token (alternative)
 
-For clusters that are not registered as OIDC issuers, store a Pulumi [access token](/docs/administration/access-identity/access-tokens/) in a Kubernetes Secret and reference it from the `Stack`. Prefer an organization or team token over a personal token:
+For clusters that are not registered as OIDC issuers, store a Pulumi [access token](/docs/administration/concepts/access-tokens/) in a Kubernetes Secret and reference it from the `Stack`. Prefer an organization or team token over a personal token:
 
 ```bash
 kubectl create secret generic pulumi-access-token \
@@ -330,7 +330,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - The operator runs each deployment in a workspace pod. List the pods with `kubectl get pods -n pulumi` and inspect the logs of the one for the failing stack with `kubectl logs <pod-name> -n pulumi`.
 - Verify that the cluster can authenticate to Pulumi Cloud—confirm the OIDC issuer is configured, or that the access token secret exists and has the required permissions.
 
-**Argo CD shows the Stack as `Unknown` or `Progressing`**
+**Argo CD shows the `Stack` as `Unknown` or `Progressing`**
 
 - The operator provides custom health checks for `Stack` resources. A `Progressing` status means the deployment is still in flight; if it persists, check the workspace pod logs.
 - Check whether the `Stack` is waiting on a prerequisite to be satisfied.
@@ -346,7 +346,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 
 - [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — the operator that reconciles Pulumi stacks from inside your cluster.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to stacks and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a cluster's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a cluster's OIDC token for a short-lived Pulumi access token.
 - [Kubernetes provider](/registry/packages/kubernetes/) — manage Kubernetes resources with Pulumi.
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Argo CD documentation](https://argo-cd.readthedocs.io/) — official Argo CD project documentation.

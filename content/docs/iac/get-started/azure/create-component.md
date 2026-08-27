@@ -103,9 +103,9 @@ update the one component definition and have all uses of it benefit.
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-To define a new component, create a class called `AzureStaticWebsite` that derives from `ComponentResource`. It'll have a mostly-empty
-constructor to start with but you will add the Azure resources to it in the next step. You'll also define the inputs for the
-component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
+To define a new component, create a class called `AzureStaticWebsite` that derives from `ComponentResource`. Its constructor
+starts out empty except for the base call, and you will add the Azure resources to it in the next step. You'll also define the
+component's inputs -- the `files` to add to the website -- and its outputs -- a single property with the website `url`.
 
 {{% /choosable %}}
 
@@ -771,18 +771,18 @@ alphanumerics of at most 24 characters, which the module-prefixed name would vio
 
 ### Instantiate the component
 
-Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
-Ensure the file is empty and we will build it back up by simply importing and instantiating our new component.
+Now go back to your original file {{< langfile >}}. The resources have moved into the component, so start that file over from scratch:
+delete everything still in it, then build it back up by importing and instantiating the new component.
 
 Add this to your now-empty {{< langfile >}}:
 
 {{% choosable language typescript %}}
 
 ```typescript
-// Import from our new component module:
+// Import from the new component module:
 import { AzureStaticWebsite } from "./website";
 
-// Create an instance of our component with the same files as before:
+// Create an instance of the component with the same files as before:
 const website = new AzureStaticWebsite("my-website", {
     files: [ "index.html" ],
 });
@@ -798,10 +798,10 @@ export const url = website.url;
 ```python
 import pulumi
 
-# Import from our new component module:
+# Import from the new component module:
 from website import AzureStaticWebsite
 
-# Create an instance of our component with the same files as before:
+# Create an instance of the component with the same files as before:
 website = AzureStaticWebsite('my-website', files=['index.html'])
 
 # And export its autoassigned URL:
@@ -821,7 +821,7 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an instance of our component with the same files as before:
+        // Create an instance of the component with the same files as before:
         website, err := NewAzureStaticWebsite(ctx, "my-website", AzureStaticWebsiteArgs{
             Files: []string{"index.html"},
         })
@@ -849,7 +849,7 @@ using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-    // Create an instance of our component with the same files as before:
+    // Create an instance of the component with the same files as before:
     var website = new AzureStaticWebsite("my-website", new AzureStaticWebsiteArgs()
     {
         Files = new[] { "index.html" }
@@ -875,7 +875,7 @@ import com.pulumi.Pulumi;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // Create an instance of our component with the same files as before:
+            // Create an instance of the component with the same files as before:
             var website = new AzureStaticWebsite("my-website",
                 new AzureStaticWebsiteArgs(new String[] { "index.html" }));
 
@@ -901,7 +901,7 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 {{% choosable language hcl %}}
 
 ```hcl
-# Instantiate our new component with the same files as before; the source is the
+# Instantiate the new component with the same files as before; the source is the
 # directory the module lives in:
 module "my-website" {
   source = "./website"
@@ -922,7 +922,7 @@ Now deploy the resulting component instantiation. To do so, run `pulumi up` as u
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-```
+```output
 $ pulumi up
 Previewing update (dev)
 
@@ -953,7 +953,7 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
 
 {{% choosable language hcl %}}
 
-```
+```output
 $ pulumi up
 Previewing update (dev)
 
@@ -985,16 +985,16 @@ directory the module lives in; the `components:index:` prefix is fixed.
 
 {{% /choosable %}}
 
-This preview shows you a few things. First, you'll see our website component with all of its child
-resources neatly parented underneath it. This helps to see what resources relate to which components. Next,
-you'll see that your old resources are being destroyed.
+This preview shows you a few things. First, you'll see your new website component with all of its child
+resources neatly parented underneath it, which makes it easy to see which resources belong to which component.
+Next, you'll see that your old resources are being destroyed.
 
 {{% notes type="info" %}}
 
-If you're wondering why Pulumi didn't simply update the resources in place, it's because certain changes -- like
-refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
-properties or moving resources between files are not disruptive like this. In such cases, you can assign
-[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
+If you're wondering why Pulumi didn't update the resources in place, it's because certain changes -- like
+refactoring resources into a component -- fundamentally change a resource's identity. Most changes, such as updating
+properties or moving resources between files, aren't disruptive in this way. When a change does affect identity, you can assign
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent the deletions.
 
 {{% /notes %}}
 
@@ -1002,7 +1002,7 @@ Accept the changes by selecting `yes` and the deployment will occur:
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-```
+```output
 Updating (dev)
 
      Type                                                    Name            Status
@@ -1032,7 +1032,7 @@ Duration: 10s
 
 {{% choosable language hcl %}}
 
-```
+```output
 Updating (dev)
 
      Type                                                    Name            Status
@@ -1088,6 +1088,6 @@ $ curl $(pulumi stack output url)
 
 {{% /choosable %}}
 
-Once you are ready to move on, let's destroy everything we've spun up in this tutorial.
+Once you are ready to move on, destroy everything you've spun up in this tutorial.
 
 {{< get-started-stepper >}}

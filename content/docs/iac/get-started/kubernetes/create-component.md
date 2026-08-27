@@ -115,9 +115,9 @@ update the one component definition and have all uses of it benefit.
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-To define a new component, create a class called `KubernetesNginxService` that derives from `ComponentResource`. It'll have a mostly empty
-constructor to start with but you will add the Kubernetes resources to it in the next step. You'll also define the inputs for the
-component -- the `isMinikube` flag to determine service type -- and outputs -- a single property with the service `ip`.
+To define a new component, create a class called `KubernetesNginxService` that derives from `ComponentResource`. Its constructor
+starts out empty except for the base call, and you will add the Kubernetes resources to it in the next step. You'll also define the
+component's inputs -- the `isMinikube` flag that determines the service type -- and its outputs -- a single property with the service `ip`.
 
 {{% /choosable %}}
 
@@ -855,8 +855,8 @@ name would contain a dot.
 
 ### Instantiate the component
 
-Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
-Ensure the file is empty and we will build it back up by importing and instantiating our new component.
+Now go back to your original file {{< langfile >}}. The resources have moved into the component, so start that file over from scratch:
+delete everything still in it, then build it back up by importing and instantiating the new component.
 
 Add this to your now-empty {{< langfile >}}:
 
@@ -865,13 +865,13 @@ Add this to your now-empty {{< langfile >}}:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
-// Import from our new component module:
+// Import from the new component module:
 import { KubernetesNginxService } from "./website";
 
 // Read the configuration value:
 const config = new pulumi.Config();
 
-// Create an instance of our component:
+// Create an instance of the component:
 const nginx = new KubernetesNginxService("my-nginx", {
     isMinikube: config.requireBoolean("isMinikube")
 });
@@ -887,13 +887,13 @@ export const ip = nginx.ip;
 ```python
 import pulumi
 
-# Import from our new component module:
-from nginx import KubernetesNginxService
+# Import from the new component module:
+from website import KubernetesNginxService
 
 # Read the configuration value:
 config = pulumi.Config()
 
-# Create an instance of our component:
+# Create an instance of the component:
 nginx = KubernetesNginxService('my-nginx', is_minikube=config.require_bool("isMinikube"))
 
 # And export its autoassigned IP:
@@ -917,7 +917,7 @@ func main() {
         // Read the configuration value:
         isMinikube := config.GetBool(ctx, "isMinikube")
 
-        // Create an instance of our component:
+        // Create an instance of the component:
         nginx, err := NewKubernetesNginxService(ctx, "my-nginx", KubernetesNginxServiceArgs{
             IsMinikube: isMinikube,
         })
@@ -946,7 +946,7 @@ return await Pulumi.Deployment.RunAsync(() =>
     // Read the configuration value:
     var config = new Pulumi.Config();
 
-    // Create an instance of our component:
+    // Create an instance of the component:
     var nginx = new KubernetesNginxService("my-nginx", new KubernetesNginxServiceArgs()
     {
         IsMinikube = config.GetBoolean("isMinikube") ?? false
@@ -975,7 +975,7 @@ public class App {
             // Read the configuration value:
             var config = ctx.config();
 
-            // Create an instance of our component:
+            // Create an instance of the component:
             var nginx = new KubernetesNginxService("my-nginx",
                 new KubernetesNginxServiceArgs(config.requireBoolean("isMinikube")));
 
@@ -1006,7 +1006,7 @@ variable "isMinikube" {
   type = bool
 }
 
-# Instantiate our new component; the source is the directory the module lives in:
+# Instantiate the new component; the source is the directory the module lives in:
 module "my-nginx" {
   source     = "./website"
   isMinikube = var.isMinikube
@@ -1026,7 +1026,7 @@ Now deploy the resulting component instantiation. To do so, run `pulumi up` as u
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-```
+```output
 $ pulumi up
 Previewing update (dev)
 
@@ -1056,7 +1056,7 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
 
 {{% choosable language hcl %}}
 
-```
+```output
 $ pulumi up
 Previewing update (dev)
 
@@ -1087,14 +1087,14 @@ directory the module lives in; the `components:index:` prefix is fixed.
 
 {{% /choosable %}}
 
-This preview shows you a few things. First, you'll see our website component with all of its child resources neatly parented underneath it. This helps to see what resources relate to which components. Next, you'll see that your old resources are being destroyed.
+This preview shows you a few things. First, you'll see your new NGINX component with all of its child resources neatly parented underneath it, which makes it easy to see which resources belong to which component. Next, you'll see that your old resources are being destroyed.
 
 {{% notes type="info" %}}
 
 If you're wondering why Pulumi didn't update the resources in place, it's because certain changes -- like
-refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
-properties or moving resources between files are not disruptive like this. In such cases, you can assign
-[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
+refactoring resources into a component -- fundamentally change a resource's identity. Most changes, such as updating
+properties or moving resources between files, aren't disruptive in this way. When a change does affect identity, you can assign
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent the deletions.
 
 {{% /notes %}}
 
@@ -1102,7 +1102,7 @@ Accept the changes by selecting `yes` and the deployment will occur:
 
 {{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
-```
+```output
 Updating (dev)
 
      Type                                        Name                  Status
@@ -1128,7 +1128,7 @@ Duration: 13s
 
 {{% choosable language hcl %}}
 
-```
+```output
 Updating (dev)
 
      Type                                 Name                  Status

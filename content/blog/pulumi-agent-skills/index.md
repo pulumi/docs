@@ -101,10 +101,12 @@ You can install both plugin groups or choose only the ones you need.
 
 ### Universal installation
 
-For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI:
+For Cursor, GitHub Copilot, VS Code, Codex, Gemini, and other platforms, use the universal [Agent Skills](https://agentskills.io) CLI. The universal installer does not read plugin marketplace manifests, so install each end-user skill group:
 
 ```bash
-npx skills add pulumi/agent-skills --skill '*'
+npx skills add pulumi/agent-skills/pulumi --skill '*'
+npx skills add pulumi/agent-skills/migration --skill '*'
+npx skills add pulumi/agent-skills/delegation --skill '*'
 ```
 
 This works across all platforms that support the Agent Skills specification.

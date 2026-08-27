@@ -228,7 +228,7 @@ fmt.Println("encountered error creating new Pulumi GitHub team: ", team.Name)
 }
 ```
 
-Notice how the GitHub provider allows us to use team names to create teams. In contrast, team IDs are only needed for importing to the Stack, not for maintaining state.
+Notice how the GitHub provider allows us to use team names to create teams. In contrast, team IDs are only needed for importing to the stack, not for maintaining state.
 
 ## Relationships Are Hard
 
@@ -343,7 +343,7 @@ teams:
      - username: "owlcat"
 ```
 
-A [`TeamMembership` in GitHub](/registry/packages/github/api-docs/teammembership) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the Stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
+A [`TeamMembership` in GitHub](/registry/packages/github/api-docs/teammembership) is a cross reference between a `Team` and a `User`. Fortunately these do not need to be explicitly imported, as they are merely establishing relationships between GitHub Users and Teams. We can add `TeamMemberships` to the stack with a `Members` struct, a new `Members[]` field on the `Team` struct, and an extra function. Again, Pulumi lets us use the promised output of the team ID to set the `TeamId` field in the `TeamMembership`:
 
 ```go
 type Team struct {
@@ -479,7 +479,7 @@ jobs:
          stack-name: pulumi/prod
 ```
 
-Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/iac/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our Stack.
+Note that we are calling `refresh: true` in both Workflows, which uses [Pulumi Refresh](/docs/iac/cli/commands/pulumi_refresh/) to make sure that the existing GitHub resources are aligned with the resource state in our stack.
 
 Now, anyone with access to the GitHub management repo can:
 

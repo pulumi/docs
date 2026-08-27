@@ -338,7 +338,7 @@ Stack references allow you to access the outputs of one stack from another stack
 
 ### Reference resource group name
 
-Start by making a new Pulumi project in a new directory. In this new program, you will need to add the code that will reference an output value from your first program. This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). When defining a stack reference in code, you will need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), [project](/docs/iac/concepts/projects/), and [stack](/docs/iac/concepts/stacks/) names in the format of `<organization>/<project>/<stack>`
+Start by making a new Pulumi project in a new directory. In this new program, you will need to add the code that will reference an output value from your first program. This can be done using Pulumi's [Stack Reference functionality](/docs/iac/concepts/stacks/#stackreferences). When defining a stack reference in code, you will need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/organizations/), [project](/docs/iac/concepts/projects/), and [stack](/docs/iac/concepts/stacks/) names in the format of `<organization>/<project>/<stack>`
 
 For example, if the name of your organization is `acmecorp`, the name of your first program is `infra`, and the name of your stack is `dev`, then your fully qualified name will be `acmecorp/infra/dev`.
 
@@ -817,5 +817,5 @@ In this tutorial, you created a Google Cloud Storage Bucket and custom IAM role.
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
 - Learn more about creating resources in the [Creating Resources on Google Cloud tutorial](/tutorials/creating-resources-gcp/).
-- Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
-- Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
+- Learn more about [stack outputs and references](/docs/iac/concepts/stacks/#stackreferences) in the Pulumi documentation.
+- Learn more about [Pulumi inputs and outputs](/docs/iac/concepts/inputs-outputs/) in the Pulumi documentation.

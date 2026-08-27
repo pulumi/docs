@@ -35,7 +35,7 @@ If you're already familiar with Terraform, learning Pulumi terminology and comma
 | State | [State](/docs/iac/concepts/state-and-backends/) |
 | State Version | [Update Events](/docs/reference/service-rest-api/#list-update-events) |
 | Backend | [Backend](/docs/iac/concepts/state-and-backends/) |
-| Deposed | [Pending Operations](/docs/support/troubleshooting#interrupted-update-recovery) |
+| Deposed | [Pending Operations](/docs/iac/operations/troubleshooting/interrupted-updates/) |
 
 ## Commands
 

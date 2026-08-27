@@ -1,0 +1,118 @@
+name: Support form tests
+
+# Runs the unit suites for the support form -- both halves. The server suite
+# covers the /api/support Lambda (payload validation, the handler's status
+# paths, the Intercom client); the client suite drives theme/src/ts/
+# support-form.ts against jsdom (draft recovery, query-param prefill,
+# validation, submission). They are separate packages with separate
+# toolchains, so they run as separate steps.
+#
+# The suite existed before this workflow did, and nothing ran it: `make test`
+# covers only the example programs, and `make ci_pull_request` previews the
+# Pulumi stack without compiling or testing infrastructure/ on its own. That
+# gap was not theoretical -- when the Intercom client replaced the logging stub,
+# three handler tests started reaching api.intercom.io with no credentials and
+# failing, and CI stayed green because nothing was running them.
+#
+# Deliberately standalone rather than folded into the PR gate: ci_pull_request
+# needs AWS and Pulumi credentials and degrades to a plain build without them,
+# so it skips on fork PRs. A dependency-free unit suite should run for everyone.
+#
+# The filter is the whole of infrastructure/, not just support-form/, because
+# tsconfig.json's `files` array starts at index.ts: `tsc -p tsconfig.json`
+# type-checks the entire Pulumi program, so a type error in index.ts or
+# supportForm.ts fails this suite. Filtering to support-form/** would let that
+# PR go green and land the breakage on the next unrelated support-form PR, which
+# would then look like the culprit.
+#
+# versioned-docs is excluded because it is a separate Pulumi program with its
+# own Pulumi.yaml, package.json and tsconfig.json, and the main program only
+# reaches it by stack reference — `tsc -p tsconfig.json` never compiles a line
+# of it. Without the exclusion this job would run, pass, and report green on a
+# PR it had not examined at all, which is worse than not running: a check that
+# looks like coverage and isn't. Nothing in CI type-checks that program today —
+# see pulumi/docs#21136, which is what would make the directory genuinely
+# covered rather than merely matched by a filter.
+on:
+  pull_request:
+    paths:
+      - 'infrastructure/**'
+      - '!infrastructure/versioned-docs/**'
+      # The shared "did every suite actually run" guard, used by both halves.
+      - 'scripts/check-test-suites-compiled.js'
+      - 'theme/src/ts/support-form.ts'
+      # Every *.test.ts under theme/src/ts, not just this one. The guard walks
+      # the whole tree at any depth and fails on a suite missing from
+      # tsconfig.test.json's `files` array, so watching only the named file
+      # would let the PR that adds theme/src/ts/lightbox.test.ts land green and
+      # turn this job red on the next unrelated support-form PR -- the same
+      # failure the server filter above was widened to avoid. Scoped to test
+      # files rather than all of theme/src/ts because, unlike the Pulumi
+      # program, tsconfig.test.json compiles a fixed three-file list: an
+      # unrelated theme module cannot break this suite, only an unregistered
+      # suite can.
+      - 'theme/src/ts/**/*.test.ts'
+      - 'theme/tsconfig.test.json'
+      - 'theme/package.json'
+      # The client suite asserts the layout still provides the ids it binds to.
+      - 'layouts/page/support-new.html'
+      - '.github/workflows/support-form-tests.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: support-form-tests-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run support-form test suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            infrastructure/yarn.lock
+            theme/yarn.lock
+      - name: Install deps
+        run: |
+          yarn --cwd infrastructure install --frozen-lockfile
+          yarn --cwd theme install --frozen-lockfile
+      # Tee'd rather than run bare so the count can be asserted afterwards.
+      # check-test-suites-compiled.js proves every suite will be reached; this proves
+      # the runner actually executed assertions once it got there. A suite whose
+      # tests were all commented out would satisfy the first check and not this
+      # one. `pipefail` keeps a genuine test failure failing the step, which a
+      # bare pipe into tee would otherwise mask.
+      - name: Run server suite
+        shell: bash
+        run: |
+          set -o pipefail
+          yarn --cwd infrastructure test-support-form 2>&1 | tee /tmp/support-form-tests.log
+
+      - name: Run client suite
+        shell: bash
+        run: |
+          set -o pipefail
+          yarn --cwd theme test-support-form 2>&1 | tee /tmp/support-form-client-tests.log
+
+      - name: Assert both suites actually ran
+        shell: bash
+        run: |
+          for suite in server:/tmp/support-form-tests.log client:/tmp/support-form-client-tests.log; do
+            name=${suite%%:*}
+            log=${suite#*:}
+            count=$(grep -oP '^# tests \K\d+|^ℹ tests \K\d+' "$log" | tail -1)
+            if [ -z "$count" ] || [ "$count" -eq 0 ]; then
+              echo "::error::The $name suite reported ${count:-no} tests. Something is not running."
+              exit 1
+            fi
+            echo "$name suite ran $count tests."
+          done

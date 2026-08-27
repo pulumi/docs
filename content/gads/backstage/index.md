@@ -6,8 +6,8 @@ block_external_search_index: true
 
 heading: "Backstage Alternative"
 subheading: |
-    Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
-    make managing infrastructure secure, reliable, and hassle-free.
+    Give developers a self-service portal without assembling one from plugins. Pulumi Cloud ships
+    templates, a resource catalog, policy, and secrets management in one platform.
 
 overview:
     title: Infrastructure as Code<br/>in any Programming Language
@@ -19,28 +19,23 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL using your IDE and any language ecosystem tools.
                 icon: code
-                color: yellow
-              - title: Build on any cloud
+              - title: Ship infrastructure with AI
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
-                    a complete and consistent SDK interface.
-                icon: global
-                color: yellow
+                    Pulumi Neo plans and executes infrastructure changes across your stacks. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
+                icon: lightning
               - title: Preview and test changes
                 description: |
                     Test and validate infrastructure with standard unit test frameworks and
                     integration tests. Preview changes before deploying.
                 icon: eye
-                color: yellow
         
 key_features:
-    title: Key features
     items:
         - title: "Build infrastructure faster with reusable components"
           sub_title: "Pulumi Packages"
@@ -138,11 +133,7 @@ key_features:
               - title: Native cloud providers
                 icon: cloud
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
-                icon: abstract-shapes
-                description: |
-                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
+                    Azure Native covers 100% of the Azure Resource Manager API, and the Kubernetes provider reaches any resource in the Kubernetes API.
               - title: Cloud Native support
                 icon: clouds
                 description: |
@@ -192,7 +183,7 @@ key_features_below:
               - title: Pulumi IaC
                 icon: code
                 description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
+                    Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
                 icon: lock
                 description: |
@@ -212,7 +203,7 @@ key_features_below:
               - title: Developer portals
                 icon: buildings
                 description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
+                    Give developers self-service infrastructure templates through Pulumi Cloud — or through the Pulumi plugin for Backstage if you already run one.
               - title: Identity and access control
                 icon: security
                 description: |
@@ -242,7 +233,7 @@ case_studies:
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          link: /case-studies/starburst/
           logo: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 3x faster.

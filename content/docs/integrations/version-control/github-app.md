@@ -25,6 +25,8 @@ aliases:
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
+This page covers the GitHub app, which connects your repositories to Pulumi Deployments. Backing a Pulumi organization's *membership* with a GitHub organization is a separate feature. See [Identity providers](/docs/administration/concepts/identity-providers/#github).
+
 The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 {{% /notes %}}
 
@@ -54,7 +56,7 @@ An installation can be linked to one Pulumi organization this way. If it's alrea
 Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
 
 {{% notes type="info" %}}
-Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](https://www.pulumi.com/support/). This option is only available for Enterprise and Business Critical customers.
+Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](/support/new/). This option is only available for Enterprise and Business Critical customers.
 {{% /notes %}}
 
 ### GitHub Enterprise Server support
@@ -160,6 +162,10 @@ The Pulumi GitHub app automatically adds comments to pull requests with the resu
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
 {{% notes type="info" %}}
+Pull request comments don't require [Pulumi Deployments](/docs/deployments/). Any `pulumi preview` or `pulumi up` that can read the repository's `.git` directory posts them, whether it runs in GitHub Actions, CircleCI, Jenkins, or on your laptop. [Push-to-deploy](#push-to-deploy) and [review stacks](#review-stacks) do require Deployments.
+{{% /notes %}}
+
+{{% notes type="info" %}}
 When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
 {{% /notes %}}
 
@@ -226,3 +232,9 @@ If comments aren't appearing on your pull requests, verify that:
 1. If you copy your Pulumi code into a container, you also include the `.git` folder.
 1. The commit being built matches a commit in an open pull request.
 1. The GitHub app has access to the repository — navigate to **Management** > **Version control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
+
+## Learn more
+
+- [Identity providers](/docs/administration/concepts/identity-providers/#github) — backing your Pulumi organization's membership with a GitHub organization.
+- [Pulumi Deployments](/docs/deployments/concepts/) — the deployment engine the GitHub app triggers.
+- [Version control integrations](/docs/integrations/version-control/) — the same capabilities on GitLab, Bitbucket, and Azure DevOps.

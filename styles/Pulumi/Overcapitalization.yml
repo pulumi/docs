@@ -1,0 +1,94 @@
+# Flags "the Stack"-style generic references to a Pulumi stack capitalized as
+# if "Stack" were a proper noun, per the brand writing-style guide and
+# the brand guide's terminology section, general rules ("use capitalization only for proper
+# nouns... use 'stack' not 'Stack'").
+#
+# A second token below flags capitalized mid-sentence "Infrastructure as
+# Code" (spaced or hyphenated). An earlier draft of this rule also carried
+# that token but dropped it: hand-testing in isolation (not the tree-wide
+# count, which stayed clean because of a boundary bug -- see the lesson on
+# the `[a-z]` vs `[a-z]+` anchor below) showed the true violation surface is
+# ~300+ hits across 170+ files, overwhelmingly in content/blog and other
+# marketing surfaces (see issue #20958). That historical sweep is too large
+# to triage in one review pass -- most hits need a human call on branded
+# phrasing ("Universal Infrastructure as Code", conference/talk titles,
+# quoted customer testimonials) -- so it stays tracked on #20958 rather than
+# rushed through this PR. This PR ships the token and clears content/docs/**
+# only; scripts/lint-prose.sh and the PR-review Vale pass both lint
+# changed-files-only (never the whole tree), so shipping the token now does
+# not add noise to unrelated future PRs that happen to touch a blog post
+# with pre-existing violations -- it only nags on lines someone actually
+# edits.
+#
+# This is an existence rule (flag-only), NOT a substitution, and deliberately
+# stays at `warning` rather than joining the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml: the
+# correct call is context-dependent, the same reason DeprecatedProductNames
+# stays flag-only. "Stack" is a genuine proper noun in several places this
+# rule must not touch -- the Pulumi Kubernetes Operator's `Stack` custom
+# resource (a Kubernetes CRD Kind, like "Pod" or "Deployment"), the Pulumi
+# CDK bridge's `pulumicdk.Stack` class, "Stack Admin"/"Stack Tags" (RBAC and
+# policy feature names) -- and only a human reviewing the sentence can tell
+# the two apart.
+#
+# Tuned empirically against a hand-built repro fixture (front matter,
+# headings, body prose, list items, blockquotes, table cells, link text, and
+# a code fence, each with a positive and negative control) rather than
+# trusting a tree-wide count alone -- a tree-wide zero/clean result proves
+# nothing about whether a token actually fires (see the `[a-z]` vs `[a-z]+`
+# anchor lesson above). `scope: paragraph` turns out to be narrower than
+# "any prose": it reaches body paragraphs and link text inside them, but NOT
+# YAML front matter, headings, list items, blockquotes, or table cells.
+# `content/docs/**` violations sitting in those excluded contexts (several
+# RBAC table cells, for instance) were still hand-fixed in this PR even
+# though the shipped rule can't catch them there -- see #20958 for the
+# equivalent gap on the historical blog sweep.
+# `scope: paragraph` is deliberate, not an oversight -- do not widen it to
+# `text` or bare `heading` without re-tuning. Widening either way would flag
+# correct Title-Case H1s (see Google.Headings's exclusion in .vale.ini and
+# the header comment on HeadingSentenceCase.yml for the wall this repo
+# already hit). If headings ever need coverage, use the enumerated per-level
+# shape HeadingSentenceCase.yml and CrossReferenceHeadings.yml already use
+# (heading.h2 through h6), never scope: text.
+#
+# Confirmed empirically that paragraph scope excludes headings: a minimal
+# repro with the same violating text in both an H2 and a body paragraph only
+# flagged the paragraph. That means the argocd.md opt-out below, whose sole
+# match on that page is an H2, currently covers nothing -- left in place
+# rather than removed on the unconfirmed premise, but noted here so the next
+# person doesn't read it as evidence the opt-out is load-bearing.
+extends: existence
+message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (brand guide: Names & terminology, general terminology rules)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
+level: warning
+ignorecase: false
+nonword: false
+scope: paragraph
+tokens:
+  # Excludes a following capitalized word via negative lookahead, so compound
+  # proper nouns -- Stack Admin (an RBAC permission set), Stack API, Stack
+  # Tags, Stack Overflow -- aren't mistaken for the generic concept. Vale
+  # falls back to the regexp2 engine (.NET-compatible) for patterns RE2 can't
+  # compile, which is what makes lookahead usable here; see the precedent in
+  # Pulumi.NarrativeWe ('let us (?!know\b)\w+').
+  - '\b(the|a|an|this|that|your|our|each|every|which|existing|new|current|given|single|specific|same|dependent) Stack\b(?! [A-Z])'
+  # Mid-sentence "Infrastructure as Code" (spaced or hyphenated), the other
+  # half of the deferred sweep from #20958. Anchored on a full lowercase word
+  # class (`[a-z]+`), not a bare `[a-z]`: Vale auto-wraps every existence
+  # token in `\b...\b`, and a single-character class only sits at that
+  # boundary after punctuation (e.g. an apostrophe), not after an ordinary
+  # preceding word -- a bare `[a-z]` silently missed the common case in
+  # hand-testing (see the postmortem in git log / agent notes on this rule).
+  # The lowercase-word anchor also does most of the work a branded-phrase
+  # carve-out would otherwise need: "Universal Infrastructure as Code" is
+  # preceded by the capitalized brand word "Universal", not a lowercase one,
+  # so a capitalized brand word directly before the phrase never matches. A
+  # possessive does, though: in "Pulumi's Infrastructure as Code" the `s`
+  # after the apostrophe is its own lowercase word to `\b[a-z]+`, so the
+  # token still fires there. That's acceptable -- the phrase is still the
+  # generic concept in that construction -- but it means this is not a
+  # complete branded-phrase carve-out; a real one (`(?<!'s )`-style guard)
+  # is #20958 territory, not this PR's. Same negative-lookahead guard as
+  # the Stack token above, to skip a following proper noun such as a
+  # conference or product name built on the phrase.
+  - '\b[a-z]+[ -]Infrastructure[ -]as[ -]Code\b(?! [A-Z])'

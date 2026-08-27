@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: "Modern infrastructure as code in Python, TypeScript, Go, or C#. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
+meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
 layout: gads-template
 block_external_search_index: true
 
@@ -10,8 +10,6 @@ subheading: |
     Define, deploy, and manage cloud infrastructure using programming languages you already know.
     Pulumi is free, open source, and supports 170+ cloud and SaaS providers including AWS, Azure,
     Google Cloud, and Kubernetes.
-
-hide_platform_details: true
 
 customer_quote:
     text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
@@ -24,34 +22,30 @@ customer_quote:
 overview:
     title: Infrastructure as Code<br/>in Real Programming Languages
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, C#, Java, or YAML — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
 
 key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, C#, Java, and YAML. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
+            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
           features:
               - title: Code faster with real languages
                 description: |
                     Write infrastructure in TypeScript, Python, Go, .NET, Java, and YAML. Use loops, conditionals, functions, and classes — not DSL workarounds.
                 icon: code
-                color: yellow
               - title: Build on any cloud
                 description: |
                     Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
                     a complete and consistent SDK interface.
                 icon: global
-                color: yellow
               - title: Test and preview changes
                 description: |
                     Write unit tests with standard frameworks. Run integration tests against ephemeral infrastructure. Preview every change before deploying.
                 icon: eye
-                color: yellow
 
 key_features:
-    title: Key features
     items:
         - title: "Build infrastructure faster with reusable components"
           sub_title: "Pulumi Packages"
@@ -183,7 +177,7 @@ key_features:
               - title: 170+ cloud providers
                 icon: cloud
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, Kubernetes, and 170+ more providers. Same-day updates when new services launch.
+                    170+ cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.
               - title: Reusable components
                 icon: abstract-shapes
                 description: |
@@ -191,7 +185,7 @@ key_features:
               - title: AI-powered infrastructure
                 icon: lightning
                 description: |
-                    Generate Pulumi programs from natural language, or convert existing Terraform and CloudFormation with built-in migration tools.
+                    Pulumi Neo plans, writes, and executes infrastructure changes across your stacks. Claude Code, Cursor, and Codex work with Pulumi too, through the MCP server and Agent Skills.
 
         - title: "Deliver infrastructure through software delivery pipelines"
           sub_title: "CI/CD Integrations"
@@ -226,51 +220,6 @@ stats:
         number: "170+"
         description: "Cloud and service integrations"
 
-key_features_below:
-    items:
-        - title: "The fastest and easiest way to use Pulumi IaC at scale"
-          sub_title: "Pulumi Cloud"
-          description: |
-             A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
-          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          features:
-              - title: Pulumi IaC
-                icon: code
-                description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
-              - title: Pulumi ESC
-                icon: lock
-                description: |
-                    Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-              - title: Automate deployment workflows
-                icon: cycle
-                description: |
-                    Orchestrate secure deployment workflows through GitHub or an API.
-              - title: Search and analytics
-                icon: eye
-                description: |
-                    View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
-              - title: Pulumi Automation API
-                icon: gear
-                description: |
-                    Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
-              - title: Developer portals
-                icon: buildings
-                description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
-              - title: Identity and access control
-                icon: security
-                description: |
-                    Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
-              - title: Policy enforcement
-                icon: gavel
-                description: |
-                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
-              - title: Audit logs
-                icon: clipboard
-                description: |
-                    Track and store user actions and change history with option to export logs.
-
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
@@ -287,10 +236,10 @@ case_studies:
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          link: /case-studies/starburst/
           logo: starburst
           description: |
-            Deployments up to 3x faster with Pulumi infrastructure automation.
+            Cut multi-region blue/green deployments from two weeks to three hours.
 
         - name: BMW
           link: /case-studies/bmw/

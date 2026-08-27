@@ -1,3 +1,9 @@
+# NOTE: `make lint` and `make format` run prettier through
+# scripts/prettier.sh, which unions this file with .gitignore. A runtime
+# artifact only needs a .gitignore entry -- it does not have to be repeated
+# here. The entries below predate that and are kept as-is so `prettier` run
+# directly (or through lint-staged) behaves the same way.
+
 _vendor
 node_modules
 /resources
@@ -80,6 +86,7 @@ static/js
 /.vale-findings.json
 /.content-review-*.json
 /.fix-scope-report.json
+/.glowup-*.json
 /.review-snapshot/
 /.pr-body-draft.md
 /.lint.log
@@ -88,3 +95,8 @@ static/js
 /.review-changes.paths
 /.applied.paths
 /.review-admin-cache/
+
+# Real-corpus fixture for test_corpus_classifiers.py. Written one claim per
+# line on purpose: pretty-printing it is ~5,700 lines of pure noise in every
+# diff that regenerates it, which is how a review fixture stops getting read.
+scripts/content-review/testdata/

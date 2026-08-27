@@ -10,11 +10,21 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # strategic tier x traffic, nudged by bounded boost-only reader signals (Search
 # Console impressions/CTR, feedback-widget votes) when their export exists.
 # Each worker reviews
-# exactly one article and, if it finds a fix, opens a draft PR; the re-lint
-# gate promotes it to ready (firing the normal triage -> review chain) and
-# arms GitHub auto-merge. master requires an approving review + the build
-# check, so a human approval is still required to merge — auto-merge only
-# removes the manual merge click after approval.
+# exactly one article and, if it finds a fix, opens a ready PR (draft only on
+# lint failure), firing the normal triage -> review chain. The publish gate
+# classes each PR from its verdict's applied[] categories: deterministic-class
+# PRs (links, Vale-named fixes, frontmatter; small churn) arm GitHub
+# auto-merge — master requires an approving review + the build check, so a
+# human approval is still what merges them; judgment-class PRs (claim
+# corrections, readthrough repairs, retirements) open UN-armed and merge only
+# when the PR-review sweep arms them post-approval or a human merges.
+#
+# THREE LANES live in this dispatcher, all sharing the weekday cron, the
+# holiday gate, and the CONTENT_REVIEW_COUNT kill switch: the fix lane (below),
+# the glow-up lane, and the report-only lane (pulumi/docs#20996) that
+# fact-checks the generated trees the other two must never edit. Each has its
+# own count variable; see the step comments for the report lane's default-off
+# rationale.
 #
 # SINGLE SWITCH (default-on) — the CONTENT_REVIEW_COUNT repo variable is both
 # the on/off and the cadence knob:
@@ -148,8 +158,12 @@ jobs:
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           # Selection reads git history (staleness clock: creation date and
-          # newest non-bot edit per page), so a shallow clone won't do.
+          # newest non-bot edit per page), so a shallow clone won't do — but
+          # it only needs commits and trees (`git log`), never historical
+          # blobs, so a blobless partial clone keeps the full-history clone
+          # from eating most of this job's hour budget.
           fetch-depth: 0
+          filter: blob:none
       # Lane-2 health probe: the per-article worker's screenshot lane 2
       # verifies UI strings against the Pulumi Cloud Console source — the
       # cmd/console2 app in the private pulumi/pulumi-service repo — using
@@ -224,6 +238,13 @@ jobs:
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             # Degradation-health state lives in the same bucket, own prefix.
             echo "health_uri=s3://$BUCKET/health/" >> "$GITHUB_OUTPUT"
+            # Structured per-page findings (record-page-findings.py), synced so
+            # the glow-up selector can hand each article its own record.
+            echo "findings_uri=s3://$BUCKET/findings/" >> "$GITHUB_OUTPUT"
+            # Raw bucket name, handed to each worker via queue_json so a
+            # per-worker `pulumi stack output` flake can't silently drop the
+            # ledger write (the flake that caused duplicate re-reviews).
+            echo "bucket=$BUCKET" >> "$GITHUB_OUTPUT"
           else
             echo "ledger bucket output unavailable; selection proceeds on git staleness alone"
           fi
@@ -263,10 +284,13 @@ jobs:
       # The reader-signals export (Search Console impressions/CTR, docs
       # feedback-widget vote counts, real-404 hits per URL) follows the exact
       # same pattern as the traffic snapshot above: produced weekly by the data
-      # team, latest-object URI published on their Airflow stack. Until that
-      # export ships, this resolve logs the skip and selection scores exactly
-      # as before — the consumer side here is inert-but-ready by design
-      # (pulumi/docs#20078 item 4.5).
+      # team, latest-object URI published on their Airflow stack. The combined
+      # envelope (docsReaderSignalsLatestS3Uri) is not exported yet — until it
+      # is, fall back to the GSC-only export the data team already ships weekly
+      # (docsTrafficGscLatestS3Uri, pulumi/data#865 phase 2);
+      # load_reader_signals() accepts its bare shape directly. With neither
+      # output published, this resolve logs the skip and selection scores
+      # exactly as before (pulumi/docs#20078 item 4.5).
       - name: Resolve reader-signals URI
         id: signals-uri
         continue-on-error: true
@@ -275,6 +299,13 @@ jobs:
         run: |
           URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
             --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -z "$URI" ]; then
+            URI=$(pulumi stack output docsTrafficGscLatestS3Uri \
+              --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+            if [ -n "$URI" ]; then
+              echo "reader-signals envelope not published; falling back to the GSC-only export"
+            fi
+          fi
           if [ -n "$URI" ]; then
             echo "resolved reader-signals export URI: $URI"
             echo "uri=$URI" >> "$GITHUB_OUTPUT"
@@ -304,6 +335,12 @@ jobs:
           mkdir -p .ledger-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.uri }}" .ledger-cache/ --quiet \
             || echo "review ledger unavailable; selection proceeds on git staleness alone"
+          # Structured findings live in a sibling prefix; the glow-up selector
+          # hands each selected article its own record, because the worker that
+          # builds the backlog has no AWS credentials.
+          mkdir -p .findings-cache
+          aws s3 sync "${{ steps.ledger-bucket.outputs.findings_uri }}" .findings-cache/ --quiet \
+            || echo "findings records unavailable; glow-up falls back to the PR-body scrape"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
@@ -350,12 +387,19 @@ jobs:
           TRAFFIC=$(jq -c '.traffic' .content-review-queue.json)
           SIGNALS=$(jq -c '.reader_signals // null' .content-review-queue.json)
           GEN=$(jq -r '.generated' .content-review-queue.json)
+          # ledger_bucket rides the queue so the worker's publish job doesn't
+          # depend on its own (flaky) stack-output resolve. The publish job
+          # reads it from the PRE-MODEL guardrail snapshot copy of the queue,
+          # never the model-writable handoff copy. Keep this jq in sync with
+          # the glow-up dispatch block below, which builds the same shape.
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
           jq -c '.articles[]' .content-review-queue.json | while read -r a; do
             P=$(echo "$a" | jq -r '.path')
             L=$(echo "$a" | jq -r '.lane')
             Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
-              --argjson signals "$SIGNALS" --arg gen "$GEN" \
-              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals, articles: [$art]}')
+              --argjson signals "$SIGNALS" --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
             echo "dispatching worker for $P (lane=$L)"
             gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
@@ -364,6 +408,169 @@ jobs:
               -f queue_json="$Q" \
               || echo "::warning::worker dispatch failed for $P"
           done
+
+      # ---- Glow-up lane (one whole-page rehab per working day) ----
+      # Selection is deterministic like the fix lane's, but over the LEDGER:
+      # the page with the largest accumulated backlog of banked judgment
+      # findings (skipped_findings, clarity_flag, low-CTR flag) wins. The
+      # worker runs in mode=glowup and its PR never arms auto-merge — the
+      # PR-review sweep assigns Cam/Josh as reviewers. Backlog cap: at
+      # GLOWUP_MAX_OPEN_PRS (10) open glow-up PRs the selector halts
+      # (max_open_glowup_prs) and the day's slots are skipped.
+      #
+      # GLOWUP_COUNT repo variable: unset -> 1/working-day (the default; set
+      # to '2' in pulumi/docs on 2026-08-19),
+      # '0' -> off, 'N' -> N/day. Same format('{0}', ...) null-coercion trick
+      # as the job gate above — a bare `vars.X != '0'` makes unset mean OFF.
+      # Living inside this job, the lane inherits the weekday cron, the
+      # holiday gate, and the CONTENT_REVIEW_COUNT=0 kill switch (turning the
+      # fix lane off darkens glow-ups too — intended).
+      - name: Select and dispatch glow-up
+        if: >-
+          steps.select.outcome == 'success' &&
+          github.event.inputs.dry_run != 'true' &&
+          format('{0}', vars.GLOWUP_COUNT) != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=(--count "${{ vars.GLOWUP_COUNT || '1' }}" --out .glowup-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          # Each selected article carries its structured findings record into
+          # the worker: build-glowup-backlog.py runs unprivileged and cannot
+          # read S3 itself (see record-page-findings.py).
+          if [ -d .findings-cache ]; then
+            ARGS+=(--findings-dir .findings-cache)
+          fi
+          if [ -f .traffic-snapshot ]; then
+            ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          python3 scripts/content-review/select-glowup.py "${ARGS[@]}"
+          echo "--- glow-up queue ---"
+          cat .glowup-queue.json
+          HALTED=$(jq -r '.halted // empty' .glowup-queue.json)
+          if [ -n "$HALTED" ]; then
+            echo "::warning::glow-up selection halted: $HALTED (no glow-up dispatched)"
+            exit 0
+          fi
+          # Same single-article queue_json shape as the fix-lane dispatch
+          # above — keep the two jq fragments in sync, ledger_bucket included
+          # (see that step's comment for why it must ride the queue).
+          TRAFFIC=$(jq -c '.traffic' .glowup-queue.json)
+          GEN=$(jq -r '.generated' .glowup-queue.json)
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
+          jq -c '.articles[]' .glowup-queue.json | while read -r a; do
+            P=$(echo "$a" | jq -r '.path')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: null,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
+            echo "dispatching glow-up worker for $P"
+            gh workflow run content-review-article.yml \
+              --repo "${{ github.repository }}" \
+              -f path="$P" \
+              -f lane="glowup" \
+              -f mode="glowup" \
+              -f queue_json="$Q" \
+              || echo "::warning::glow-up worker dispatch failed for $P"
+          done
+
+      # ---- Report-only lane (fact-check the trees nobody may edit) ----
+      # Same selector, same scoring, the OTHER half of the corpus: pages a
+      # generator owns (`editable: false, reviewable: true` in
+      # strategic-tiers.yaml — today the 248-page CLI command reference). The
+      # worker runs in mode=report: it extracts and verifies the page's claims,
+      # writes them to the claims index, and changes nothing. No model turn, no
+      # branch, no PR. Contradictions are reported to #docs-ops with a
+      # prefilled upstream issue; they never become stale-claims markers,
+      # because no PR in this repo could ever retire one.
+      #
+      # Why this lane exists: tier 0 meant "never select", and selection is the
+      # only thing that ever writes a page's claim list — so 254 pages, 30% of
+      # content/docs/, had never been fact-checked once. Not "checked and
+      # fine". pulumi/docs#20996.
+      #
+      # REPORT_REVIEW_COUNT repo variable — DEFAULT-OFF, deliberately inverting
+      # the default-on convention the other lanes use:
+      #   unset -> OFF (no runner, no spend)
+      #   'N'   -> on, N pages/working day
+      # The first pass over 248 never-checked pages is a one-time cost nobody
+      # has measured yet, and #20996 asks for it to be sized before the lane is
+      # committed to. Each run reports its own per-page token usage (the `cost`
+      # block in the report-findings artifact), so turning this on at a small N
+      # for a week produces the real number, and the lap time follows from it:
+      # at N pages/working day the tree laps every ceil(248/N) working days.
+      - name: Select and dispatch report-only reviews
+        if: >-
+          steps.select.outcome == 'success' &&
+          github.event.inputs.dry_run != 'true' &&
+          format('{0}', vars.REPORT_REVIEW_COUNT) != '' &&
+          format('{0}', vars.REPORT_REVIEW_COUNT) != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=(--mode report --count "${{ vars.REPORT_REVIEW_COUNT }}" --out .report-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          if [ -f .traffic-snapshot ]; then
+            ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          if [ -f .reader-signals.json ]; then
+            ARGS+=(--signals-file .reader-signals.json)
+          fi
+          python3 scripts/content-review/select-articles.py "${ARGS[@]}"
+          echo "--- report-only queue ---"
+          cat .report-queue.json
+          # Same single-article queue_json shape as the two dispatch blocks
+          # above — keep all three jq fragments in sync, ledger_bucket included
+          # (the worker's publish job reads the bucket from the queue rather
+          # than from its own flaky stack-output resolve).
+          TRAFFIC=$(jq -c '.traffic' .report-queue.json)
+          SIGNALS=$(jq -c '.reader_signals // null' .report-queue.json)
+          GEN=$(jq -r '.generated' .report-queue.json)
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
+          jq -c '.articles[]' .report-queue.json | while read -r a; do
+            P=$(echo "$a" | jq -r '.path')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --argjson signals "$SIGNALS" --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, mode: "report", traffic: $traffic,
+                reader_signals: $signals,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
+            echo "dispatching report-only worker for $P"
+            gh workflow run content-review-article.yml \
+              --repo "${{ github.repository }}" \
+              -f path="$P" \
+              -f lane="report" \
+              -f mode="report" \
+              -f queue_json="$Q" \
+              || echo "::warning::report-only worker dispatch failed for $P"
+          done
+
+      # Breadcrumb for the ledger-write health signal: what was dispatched
+      # today. Next run's signal-health compares these slugs against the
+      # synced ledger cache — a dispatched page with no fresh ledger record
+      # means a worker's write path failed (the silent-duplicate bug).
+      # Schedule-only, like the health-state persist, so test dispatches
+      # don't pollute the observation.
+      - name: Record dispatch breadcrumb
+        if: >-
+          always() && github.event_name == 'schedule' &&
+          steps.select.outputs.has_articles == 'true' &&
+          steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          # Order matters: pull the PREVIOUS run's breadcrumb down first (the
+          # signal-health step below judges it against the ledger cache synced
+          # at the top of this run), then overwrite it with today's dispatch.
+          aws s3 cp "${{ steps.ledger-bucket.outputs.health_uri }}last-dispatch.json" \
+            .last-dispatch.json --quiet \
+            || echo "no prior dispatch breadcrumb (first run or S3 unavailable)"
+          jq -c '{date: (.generated | split("T")[0]), slugs: [.articles[].slug]}' \
+            .content-review-queue.json > .last-dispatch.next.json
+          aws s3 cp .last-dispatch.next.json \
+            "${{ steps.ledger-bucket.outputs.health_uri }}last-dispatch.json" --quiet
 
       # Surface a halted selection (max_open_prs / gh_unavailable) in the run
       # log — the select step already prints the queue JSON, this just makes the
@@ -403,6 +610,8 @@ jobs:
             --queue .content-review-queue.json \
             --console-status "${{ steps.console-probe.outputs.status }}" \
             --holiday-status "${{ needs.holiday-check.outputs.feed_status }}" \
+            --last-dispatch .last-dispatch.json \
+            --ledger-dir .ledger-cache \
             --alert-out .health-alert.txt \
             --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           echo "--- health state ---"

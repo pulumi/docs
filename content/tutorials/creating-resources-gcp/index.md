@@ -210,7 +210,7 @@ The first resource you will create will be virtual machine that will host the we
 
 {{% /choosable %}}
 
-All resources have a required [`name`](https://www.pulumi.com/docs/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
+All resources have a required [`name`](https://www.pulumi.com/docs/iac/concepts/resources/names/) argument. Each resource has both a [logical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#logicalname) and a [physical name](https://www.pulumi.com/docs/iac/concepts/resources/names/#autonaming). The **logical name** is how the resource is known inside Pulumi. This is the value provided to the required `name` argument. The **physical name** is the name used for the resource in the cloud provider that a Pulumi program is deploying to. It is a combination of the logical name plus a random suffix which helps to prevent resource naming collisions.
 
 In the above example, the logical name for our `instance` resource is **"website-server"**, and the physical name might typically look something like **"website-server-d7c2fa0"**.
 
@@ -357,5 +357,5 @@ In this tutorial, you create a virtual machine instance configured as a web serv
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
 - Learn more about stack outputs and references in the [Stack Outputs and References](/tutorials/stack-outputs-and-references/) tutorial.
-- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
-- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.
+- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation.
+- Learn more about [resource names](/docs/iac/concepts/resources/names/), [options](/docs/iac/concepts/resources/options/), and [providers](/docs/iac/concepts/providers/) in the Pulumi documentation.

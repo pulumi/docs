@@ -105,7 +105,7 @@ Running `pulumi login` without any argument will log into the default Pulumi Clo
 $ pulumi login
 ```
 
-This will display a prompt that asks for an [access token](/docs/administration/access-identity/access-tokens/):
+This will display a prompt that asks for an [access token](/docs/administration/concepts/access-tokens/):
 
 ```
 Manage your Pulumi stacks by logging in.
@@ -151,7 +151,7 @@ The command migrates the latest checkpoint and configuration. It re-encrypts sec
 
 Use `--target <org>/<project>/<stack>` to choose a different target stack name or location.
 
-`pulumi stack migrate` does not migrate stacks between accounts in the same backend. For copying stack state between Pulumi Cloud accounts, including GitLab-backed accounts, see [GitLab support](/docs/support/pulumi-cloud-faq/#gitlab-support).
+`pulumi stack migrate` does not migrate stacks between accounts in the same backend. For copying stack state between Pulumi Cloud accounts, including GitLab-backed accounts, see [GitLab support](/docs/support/faq/pulumi-cloud/#gitlab-support).
 
 ## Refreshing state
 

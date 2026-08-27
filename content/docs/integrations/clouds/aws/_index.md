@@ -47,7 +47,7 @@ Start new AWS projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
+Hands-on infrastructure as code guides for building on AWS with Pulumi.
 
 - [Pulumi CDK Adapter for AWS](/docs/iac/guides/clouds/aws/cdk/) — use AWS CDK constructs inside a Pulumi program.
 - [AWS Identity & Access Management (IAM)](/docs/iac/guides/clouds/aws/iam/) — model IAM roles, policies, and users in code.
@@ -89,6 +89,8 @@ For AWS:
 - [NIST 800-53 for AWS](/docs/reference/pre-built-policy-packs/nist/aws/)
 - [PCI DSS for AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/)
 - [HITRUST CSF for AWS](/docs/reference/pre-built-policy-packs/hitrust/aws/)
+- [ISO/IEC 27001 for AWS](/docs/reference/pre-built-policy-packs/iso-27001/aws/)
+- [CMMC 2.0 for AWS](/docs/reference/pre-built-policy-packs/cmmc/aws/)
 - [CIS Kubernetes Benchmark on AWS](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/) — for EKS clusters.
 - [AWS Organizations Tag Policies](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) — enforce Organizations tagging standards on Pulumi-managed resources.
 - [AWS Organizations Tag Policies in Insights](/docs/insights/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Insights.

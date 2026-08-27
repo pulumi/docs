@@ -147,14 +147,14 @@ async def async_operation(foo: str) -> str:
   """
   proc = await asyncio.create_subprocess_shell(
     f'my-cli {shlex.quote(foo)}',
-    stdout=asyncio.subprocess.PIPE
+    stdout=asyncio.subprocess.PIPE,
     stderr=asyncio.subprocess.PIPE)
 
   stdout, stderr = await proc.communicate()
 
-  if proc.returncode is not 0:
+  if proc.returncode != 0:
     raise Exception(f'my-cli returned {proc.returncode}: {stderr.decode()}')
-  return stdout.decode
+  return stdout.decode()
 
 # Calling an async function directly (without the await keyword) returns a
 # coroutine

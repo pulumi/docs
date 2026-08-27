@@ -65,7 +65,7 @@ Let’s go through each of those and briefly discuss what it looks like to set t
 
 ## Authentication and identity management
 
-We highly recommend using GitHub for code management. So much so that we have deeply integrated GitHub into Pulumi Cloud across a number of features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/pulumi-cloud/organizations/#gitlab-identity-provider), this will be the easiest and more feature-rich way to configure your platform.
+We highly recommend using GitHub for code management, so much so that we have deeply integrated GitHub into Pulumi Cloud across many features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/administration/concepts/identity-providers/#gitlab), this will be the easiest and more feature-rich way to configure your platform.
 
 In Pulumi Cloud, you have the ability to create organizations. A [Pulumi Cloud organization](https://www.pulumi.com/docs/pulumi-cloud/organizations/) can help you manage teams, roles, stacks, settings, and provide a dashboard across the entire organization. Pulumi Cloud also allows you to use a variety of identity providers to log in, including GitHub.
 
@@ -75,11 +75,11 @@ Next, in Pulumi Cloud, create an organization ***with exactly the same name*** a
 
 {{< figure src="teams-gh-pulumi.png" caption="Figure: Mapping GitHub orgs, teams, and roles to Pulumi">}}
 
-Finally, you can [map teams to stacks](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#granting-access-to-stacks-within-teams) to grant access at specific permission levels. If you’re not familiar with [Pulumi Stacks](https://www.pulumi.com/docs/concepts/stack/), a stack is a materialized instance of a specific set of cloud resources, as defined in a Pulumi program.
+Finally, you can [map teams to stacks](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#granting-access-to-stacks-within-teams) to grant access at specific permission levels. If you’re not familiar with [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), a stack is a materialized instance of a specific set of cloud resources, as defined in a Pulumi program.
 
 ## Pulumi ESC: Managing credentials, configuration, and other secrets
 
-In order to deploy a stack you will need secrets such as cloud credentials and other configuration values that are provided to the deployment engine. Pulumi ESC is a secure system for managing secrets. They are organized by *[environments](https://www.pulumi.com/docs/concepts/environments/)*.
+To deploy a stack you will need secrets such as cloud credentials and other configuration values that are provided to the deployment engine. Pulumi ESC is a secure system for managing secrets. They are organized by *[environments](https://www.pulumi.com/docs/esc/concepts/)*.
 
 An example set of environments might look something like this:
 
@@ -201,7 +201,7 @@ Some other great features of Crossguard are the ability to [version policies](ht
 
 ## Multi-Language Components (MLC)
 
-In Pulumi, a *[component resource](https://www.pulumi.com/docs/concepts/resources/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/concepts/resources/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/)*. There are many of these already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
+In Pulumi, a *[component resource](https://www.pulumi.com/docs/iac/concepts/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/iac/concepts/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/)*. Many of these are already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
 
 A *multi-language component (MLC)* is even more useful. You can author your component in your language of choice and then generate a SDK that surfaces that component into all of the languages that Pulumi supports. For example, your platform team might be comfortable writing in Python, but the developers that write your microservices might use Go, and the developers who write the front-end apps might use Node.js. Both teams might need to deploy apps and infrastructure into your Kubernetes cluster. With multi-language components you can write a component in Python that abstracts away all the details of your custom Kubernetes cluster, and make that available to both teams, in both Go, Node.js, and any other language that Pulumi supports.
 

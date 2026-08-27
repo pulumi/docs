@@ -129,7 +129,7 @@ Pulumi securely transmits and stores full state files at all times. In addition,
 
 ### Audit Capabilities {#auditing}
 
-Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available to organizations on the Enterprise and Business Critical editions. To learn more, see [Audit Logs](/docs/administration/security-compliance/audit-logs/).
+Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available to organizations on the Enterprise and Business Critical editions. To learn more, see [Audit Logs](/docs/administration/concepts/audit-logs/).
 
 ### Adopt Existing Resources {#adopting}
 
@@ -149,4 +149,4 @@ Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Az
 
 ## Get Started with Pulumi
 
-Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+Pulumi’s infrastructure as code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).

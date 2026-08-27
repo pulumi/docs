@@ -115,25 +115,25 @@ Once the marketplace is registered, run `codex`, open the plugin marketplace, an
 
 ### Universal Installation
 
-Install all skills for use with any AI coding assistant:
+The universal installer does not read plugin marketplace manifests. Install
+each end-user skill group for use with any AI coding assistant:
 
 ```bash
-npx skills add pulumi/agent-skills --skill '*'
+npx skills add pulumi/agent-skills/pulumi --skill '*'       # 8 Pulumi skills
+npx skills add pulumi/agent-skills/migration --skill '*'    # 5 migration skills
+npx skills add pulumi/agent-skills/delegation --skill '*'   # 1 Neo handoff skill
 ```
 
-Or install individual plugin groups:
+Provider authors can also install the separate package-maintenance group:
 
 ```bash
-npx skills add pulumi/agent-skills/migration --skill '*'             # 5 migration skills
-npx skills add pulumi/agent-skills/pulumi --skill '*'                # 8 pulumi skills (overview + specialized)
-npx skills add pulumi/agent-skills/delegation --skill '*'            # 1 delegation skill
-npx skills add pulumi/agent-skills/package-maintenance --skill '*'   # 2 package-maintenance skills
+npx skills add pulumi/agent-skills/package-maintenance --skill '*'
 ```
 
-This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools. To install for a specific agent, use the `--agent` flag:
+This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools. To install a group for a specific agent, use the `--agent` flag:
 
 ```bash
-npx skills add pulumi/agent-skills --skill '*' --agent junie
+npx skills add pulumi/agent-skills/pulumi --skill '*' --agent junie
 ```
 
 ## Usage Examples
@@ -219,5 +219,5 @@ See the [CONTRIBUTING.md](https://github.com/pulumi/agent-skills/blob/main/CONTR
 ## See also
 
 - [Pulumi MCP server](/docs/ai/mcp-server/) - give your agent live access to your Pulumi Cloud resources and the Registry
-- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
+- [Agent accounts](/docs/administration/concepts/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
 - [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/) - the broader picture of AI agents operating infrastructure
