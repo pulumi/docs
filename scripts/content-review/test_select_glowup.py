@@ -81,6 +81,17 @@ def write_ledger(ledger: Path, path: str, **kw) -> None:
     (ledger / f"{slug}.json").write_text(json.dumps(entry, indent=2) + "\n")
 
 
+def write_findings(findings: Path, path: str) -> None:
+    """A minimal structured findings record, keyed the way the selector looks
+    it up (slug.json under the synced findings/ prefix)."""
+    findings.mkdir(parents=True, exist_ok=True)
+    slug = path.removeprefix("content/").removesuffix(".md").replace("/", "-")
+    (findings / f"{slug}.json").write_text(json.dumps(
+        {"schema_version": 1, "slug": slug, "path": path,
+         "counts": {"total": 1, "applied": 0, "deferred": 1},
+         "findings": [{"id": "f1", "label": "x", "applied": False}]}) + "\n")
+
+
 def run_select(repo: Path, tiers: Path, ledger: Path, *extra: str) -> dict:
     out = repo / ".glowup-queue.json"
     env = {k: v for k, v in os.environ.items() if k != "GITHUB_OUTPUT"}
@@ -149,32 +160,25 @@ def main() -> int:
         paths = [a["path"] for a in q["articles"]]
         check(paths == [C], f"only the eligible page selected (got {paths})")
 
-        print("a degraded glow-up does not start the cooldown (#20984)")
+        print("a degraded glow-up routes to a fix-lane repair, not another glow-up")
         # The backlog never reached the model, so nothing was executed and
         # nothing declined; record-review carried the banked count forward and
-        # flagged it. The page is still owed its rehab.
+        # flagged it. The page is still owed its rehab — but re-running the
+        # glow-up fails the same way it failed the first time, so the lane
+        # sends it to the fix lane, whose review writes a findings record.
+        # (Replaces the old GLOWUP_DEGRADED_ATTEMPT_CAP retry loop.)
         led_deg = tmp / "ledger-glowup-degraded"
         write_ledger(led_deg, B, skipped_findings=17, clarity_flag=True,
                      status="glowup", reviewed_at="2026-08-10",
                      fixes=0, glowup_degraded=True)
         q = run_select(repo, tiers, led_deg, "--count", "10")
-        check([a["path"] for a in q["articles"]] == [B],
-              "degraded glow-up stays selectable inside the cooldown window")
-
-        print("the degraded exemption is bounded, not an unbounded re-select loop")
-        led_cap = tmp / "ledger-glowup-degraded-capped"
-        write_ledger(led_cap, B, skipped_findings=17, clarity_flag=True,
-                     status="glowup", reviewed_at="2026-08-10",
-                     fixes=0, glowup_degraded=True, glowup_degraded_runs=2)
-        check(run_select(repo, tiers, led_cap, "--count", "10")["articles"] == [],
-              "past the cap a degraded page serves the normal cooldown")
-        led_under = tmp / "ledger-glowup-degraded-under-cap"
-        write_ledger(led_under, B, skipped_findings=17, clarity_flag=True,
-                     status="glowup", reviewed_at="2026-08-10",
-                     fixes=0, glowup_degraded=True, glowup_degraded_runs=1)
-        check([a["path"] for a in
-               run_select(repo, tiers, led_under, "--count", "10")["articles"]] == [B],
-              "under the cap it is still exempt")
+        check(q["articles"] == [], "degraded page is not re-queued as a glow-up")
+        check([r["path"] for r in q["repairs"]] == [B],
+              f"degraded page routed to repairs (got {q['repairs']})")
+        check(q["repairs"][0]["lane"] == "fix" and q["repairs"][0]["mode"] == "fix",
+              "repair is stamped for the fix lane")
+        check("glowup_degraded" in q["repairs"][0]["reason"],
+              "the repair says why it is one")
 
         print("the durable PR pointer reaches the worker when pr_number is 0")
         led_ptr = tmp / "ledger-last-pr"
@@ -214,6 +218,59 @@ def main() -> int:
         q = run_select(repo, tiers, led5, "--count", "10")
         check([a["path"] for a in q["articles"]] == [A],
               "clarity-only page selected (taxonomy-run candidate)")
+
+        print("recoverability: a banked count with nothing behind it is not glow-up work")
+        # The selector queues on a COUNTER; the worker fetches the items from
+        # a different store. With neither a findings record nor a review PR
+        # the count is unbacked and the run would execute nothing — 43% of the
+        # eligible pool on 2026-08-25.
+        fdir = tmp / "findings"
+        led_rec = tmp / "ledger-recoverable"
+        # A: record only. B: PR pointer only. C: neither.
+        write_ledger(led_rec, A, skipped_findings=9, pr_number=0, last_pr_number=0)
+        write_ledger(led_rec, B, skipped_findings=8, pr_number=0, last_pr_number=555)
+        write_ledger(led_rec, C, skipped_findings=7, pr_number=0, last_pr_number=0)
+        write_findings(fdir, A)
+        q = run_select(repo, tiers, led_rec, "--count", "10", "--findings-dir", str(fdir))
+        paths = [a["path"] for a in q["articles"]]
+        check(paths == [A, B], f"only recoverable pages queued (got {paths})")
+        check(q["articles"][0]["findings_record"] is not None,
+              "the record rides the queue for the unprivileged worker")
+        check([r["path"] for r in q["repairs"]] == [C],
+              f"the unrecoverable page routes to repairs (got {q['repairs']})")
+        check("no findings record" in q["repairs"][0]["reason"],
+              "the repair names the reason")
+
+        print("no --findings-dir: the check is skipped rather than stranding the corpus")
+        # Every lookup returns None without the prefix, so applying the filter
+        # would declare the whole corpus unrecoverable and darken the lane.
+        q = run_select(repo, tiers, led_rec, "--count", "10")
+        check([a["path"] for a in q["articles"]] == [A, B, C],
+              "all three still selected when the findings prefix is unavailable")
+        check(q["repairs"] == [], "and nothing is routed to a repair")
+
+        print("repairs are capped at one per run, highest-scoring first")
+        led_many = tmp / "ledger-many-stranded"
+        write_ledger(led_many, A, skipped_findings=2, pr_number=0, last_pr_number=0)
+        write_ledger(led_many, B, skipped_findings=9, pr_number=0, last_pr_number=0)
+        write_ledger(led_many, C, skipped_findings=5, pr_number=0, last_pr_number=0)
+        q = run_select(repo, tiers, led_many, "--count", "10",
+                       "--findings-dir", str(fdir / "empty"))
+        check(len(q["repairs"]) == 1, f"one repair (got {len(q['repairs'])})")
+        check(q["repairs"][0]["path"] == B,
+              f"the most-banked stranded page wins (got {q['repairs'][0]['path']})")
+        check(q["articles"] == [], "no glow-up is queued when nothing is recoverable")
+
+        print("--exclude-paths keeps a repair off a page the fix lane already took")
+        q = run_select(repo, tiers, led_many, "--count", "10",
+                       "--findings-dir", str(fdir / "empty"),
+                       "--exclude-paths", B)
+        check([r["path"] for r in q["repairs"]] == [C],
+              f"the next-best stranded page is repaired instead (got {q['repairs']})")
+        q = run_select(repo, tiers, led_many, "--count", "10",
+                       "--findings-dir", str(fdir / "empty"),
+                       "--exclude-paths", f"{A},{B},{C}")
+        check(q["repairs"] == [], "all excluded means no repair, not a fallback pick")
 
         print("open-PR dedupe: any content-review branch on the page excludes it")
         led6 = tmp / "ledger-open"

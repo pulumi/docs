@@ -374,19 +374,63 @@ jobs:
       # review PRs' "Findings not applied" / flag sections plus the ledger
       # counters carried on the queue) BEFORE composing — the glow-up body
       # pre-stubs one row per banked item. Deterministic, no model.
+      #
+      # --strict (exit 2 when the ledger says findings were banked and none
+      # could be recovered): select-glowup.py now filters unrecoverable pages
+      # out at selection time, so a degraded backlog here is an anomaly rather
+      # than the expected 43% case it was before. Spending a model turn on a
+      # taxonomy-only sweep is the wrong answer to it.
+      #
+      # Handled as a SKIP, not a failure. The step is unprivileged and the true
+      # state is "the evidence is out of reach", not "the lane is broken" — a
+      # red X reads as the latter, which is exactly what build-glowup-backlog's
+      # fail-open default was chosen to avoid. Same shape as the precheck skip
+      # above: write the skipped verdict, let the ledger record it, spend
+      # nothing. A `skipped` status starts no cooldown, so the page stays
+      # selectable — either the next run recovers (a transient gh failure) or
+      # the selector's own recoverability check routes it to a fix-lane repair.
+      #
+      # CARRYING THE BANKED COUNT is not optional. record-review.py writes
+      # `skipped_findings` straight from the verdict, so a bare 0 here would
+      # report that the page has no debt — dropping it out of the glow-up pool
+      # entirely and deleting the very backlog this step failed to collect.
+      # That is #20984 by another route. The queue article carries the count
+      # the selector picked on; hand it back unchanged.
       - name: Build glow-up backlog
+        id: backlog
         if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode == 'glowup'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          SKIP=false
+          set +e
           python3 scripts/content-review/build-glowup-backlog.py \
-            --queue .content-review-queue.json --out .glowup-backlog.json
+            --queue .content-review-queue.json --out .glowup-backlog.json --strict
+          RC=$?
+          set -e
           echo "--- glow-up backlog ---"
-          cat .glowup-backlog.json
+          cat .glowup-backlog.json || echo "(no backlog file written)"
+          if [ "$RC" -eq 2 ]; then
+            REASON=$(jq -r '.recovery.state // "unknown"' .glowup-backlog.json)
+            BANKED=$(jq -r '.articles[0].skipped_findings // 0' .content-review-queue.json)
+            echo "::warning::glow-up backlog degraded ($REASON); skipping the review"
+            jq -n --arg reason "banked findings could not be recovered ($REASON)" \
+              --argjson banked "$BANKED" \
+              '{verdict: "skipped", reason: $reason, fixes: 0,
+                skipped_findings: $banked, retirement: false}' \
+              > .content-review-verdict.json
+            SKIP=true
+          elif [ "$RC" -ne 0 ]; then
+            exit "$RC"
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
 
       # No PR body in report-only mode: no PR.
       - name: Compose PR body draft
-        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
+        if: >-
+          steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true' &&
+          github.event.inputs.mode != 'report'
         run: |
           # Glow-up mode composes its own template and fails HARD on error:
           # the fix-lane fallback body would carry the wrong sections and the
@@ -492,7 +536,10 @@ jobs:
       # here could only add spend and the risk of an edit the gate rejects.
       - name: Run Claude Code
         id: claude
-        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
+        if: >-
+          steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true' &&
+          github.event.inputs.mode != 'report'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -673,7 +720,9 @@ jobs:
       # workflow or skill changes. .gitignore keeps build products
       # (node_modules, public/, generated assets) out of the staging.
       - name: Export review changes for the publish job
-        if: always() && steps.precheck.outputs.skip != 'true'
+        if: >-
+          always() && steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true'
         run: |
           git add -A -- ':!.*' ':!.*/**'
           git diff --cached --binary > .review-changes.patch

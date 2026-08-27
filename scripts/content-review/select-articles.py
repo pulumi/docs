@@ -72,6 +72,14 @@ Selection algorithm (weighted fair queuing by staleness):
 
    Ties break on path ascending, so runs are reproducible.
 
+RESERVED SLOT (fix lane, count >= 2). Score alone never reaches the cold half
+of the corpus: importance spans ~22x, so tier-3 pages sit behind the tier-1/2
+front however stale they get — measured 2026-08-25, tier 3 was 0/288 reviewed,
+a third of the corpus, never once. So the first slot of each fix-lane run goes
+to the OLDEST never-reviewed page (by git creation date) ahead of the scored
+queue, displacing that run's lowest-scoring article rather than its highest.
+See NEVER_REVIEWED_RESERVE. Those articles carry `"reserved": "never_reviewed"`.
+
 Two modes, over disjoint halves of the corpus (see `eligible`):
 
 * `--mode fix` (default) — pages a PR may edit. Unchanged: score, queue,
@@ -172,6 +180,26 @@ MAX_OPEN_PRS = 9
 ATTEMPT_CAP = 3
 
 TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
+
+# One slot per fix-lane run is reserved for the oldest page that has never been
+# reviewed, ahead of the scored queue.
+#
+# WHY: score = importance * staleness, and importance spans ~22x across the
+# corpus, so cold pages sit permanently behind the tier-1/2 front no matter how
+# stale they get. Measured 2026-08-25: tier 1 = 79.6% covered (86/108), tier 2 =
+# 8.5% (39/459), tier 3 = 0.0% (0/288). A third of the corpus had never been
+# reviewed once — not "reviewed and found fine". Simulating the real selector
+# forward from the live ledger put the first full pass at day 862 (~2.4 years)
+# with tier 3 flat at 12/288 for the whole first year.
+#
+# Reserving one slot: first pass 862 -> 556 days, tier 3 at one year 12/288 ->
+# 151/288. Same throughput, no new infrastructure — the reserved page displaces
+# the LOWEST-scoring article of the run, not the highest.
+#
+# Disabled at count 1 (see RESERVE_MIN_COUNT): the fix lane must never become
+# purely a cold-page sweep with the scored queue dark.
+NEVER_REVIEWED_RESERVE = 1
+RESERVE_MIN_COUNT = 2
 
 # Additive boost for a page whose ledger entry carries a non-empty
 # `stale_claims` marker (a volatile claim it asserts re-verified contradicted
@@ -622,6 +650,22 @@ def importance(
     return tier_w * gsc_m * feedback_m
 
 
+def never_reviewed(entry: dict | None) -> bool:
+    """True when no review has ever COMPLETED on this page.
+
+    Same test `effective_last_review` applies when it decides whether a ledger
+    entry can date the staleness clock: an `incomplete` review (worker died
+    before recording a verdict) did not look at the page, so it does not count
+    as a review here either. Deliberately one predicate rather than two
+    opinions about what "reviewed" means.
+    """
+    if not entry:
+        return True
+    if entry.get("status") == INCOMPLETE_STATUS:
+        return True
+    return not parse_day(entry.get("reviewed_at"))
+
+
 def score_page(
     tier: int,
     visits: int | None,
@@ -785,7 +829,8 @@ def main() -> int:
             } if fb_entry else None,
         }
 
-    def article(path: str, lane: str, score: float | None) -> dict:
+    def article(path: str, lane: str, score: float | None,
+                reserved: str | None = None) -> dict:
         policy = policy_for(path, tier_rules)
         entry = ledger.get(path, {})
         return {
@@ -817,6 +862,10 @@ def main() -> int:
             # a one-line unrelated repair while the flagged bug stayed on master).
             "stale_claim_markers": all_markers(entry),
             "score": score,
+            # Set only on a page that took the reserved slot rather than
+            # winning on score, so a reader of the queue (or the PR's "Why this
+            # page" block) can tell the two apart.
+            **({"reserved": reserved} if reserved else {}),
         }
 
     # --paths: explicit override, no scoring, no guardrails (testing path).
@@ -902,7 +951,40 @@ def main() -> int:
         key=lambda t: (-t[0], t[1]),
     )
 
-    for score, path in scored[: max(args.count, 0)]:
+    count = max(args.count, 0)
+    # Reserve the first slot for the oldest never-reviewed page (see
+    # NEVER_REVIEWED_RESERVE). Fix lane only — the report lane's whole job is a
+    # first pass over never-checked pages, so a reservation there is redundant.
+    reserved: set[str] = set()
+    if mode == FIX_MODE and count >= RESERVE_MIN_COUNT:
+        # Oldest by git creation date — the only clock a never-reviewed page
+        # has. Tie-break on path, matching the scored sort, so the choice is
+        # deterministic across runs.
+        cold = sorted((p_ for p_ in candidates if never_reviewed(ledger.get(p_))),
+                      key=lambda p_: (created.get(p_, 0), p_))
+        # Never more than the run has slots for, so the scored queue can't go
+        # dark if the reserve is ever widened past the count.
+        for path in cold[: min(NEVER_REVIEWED_RESERVE, count - 1)]:
+            reserved.add(path)
+            # Its REAL score, not None: the reserved page didn't out-rank the
+            # queue, but every downstream consumer (the PR's "Why this page"
+            # block, the ledger, signal-health) reads `.score`, and a null
+            # there would be a hole in the bookkeeping. `reserved` is what
+            # says it was picked despite the ranking.
+            queue["articles"].append(
+                article(path, "priority", scored_entry(path)[0],
+                        reserved="never_reviewed"))
+            print(
+                f"select-articles: reserved slot -> {path} "
+                f"(oldest of {len(cold)} never-reviewed page(s))",
+                file=sys.stderr,
+            )
+
+    for score, path in scored:
+        if len(queue["articles"]) >= count:
+            break
+        if path in reserved:
+            continue
         queue["articles"].append(article(path, "priority", score))
 
     return finish(queue, args, LANE)
