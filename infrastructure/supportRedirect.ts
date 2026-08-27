@@ -82,8 +82,11 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     // only POST-capable set — anything narrower 403s non-GET requests instead of redirecting them.
                     allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
                     cachedMethods: ["GET", "HEAD"],
-                    // AWS-managed CachingDisabled policy — the function generates every response.
-                    cachePolicyId: "4135ea2d-6df8-44a3-b632-99711092ca9d",
+                    // AWS-managed CachingDisabled policy, resolved by name rather than a hardcoded ID (a wrong
+                    // GUID here failed the first production deploy). Nothing caches: the function makes every response.
+                    cachePolicyId: aws.cloudfront
+                        .getCachePolicy({ name: "Managed-CachingDisabled" })
+                        .then((policy) => policy.id!),
                     functionAssociations: [
                         {
                             eventType: "viewer-request",
