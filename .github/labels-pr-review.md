@@ -8,13 +8,17 @@ This document lists the labels that the PR review pipeline (`claude-triage.yml`,
 
 Informational signal labels — surfaced for human filterability. Routing in CI is path-based (`docs-review:references:domain-routing`); these labels do not gate workflow logic.
 
+Every triaged PR carries exactly one of these, `domain:other` included, so **the absence of a `domain:` label means triage never ran** — the PR was opened as a draft and hasn't been marked ready, the author lacks write access, or the classifier errored. It never means "triage ran and had nothing to say."
+
 | Label | Color | Description |
 |---|---|---|
 | `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/tutorials/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
-| `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, or build/bundling config. |
+| `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, build/bundling config, or the site build pipeline (`layouts/`, `assets/`, `theme/`, `static/`). |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
+| `domain:website` | `c5def5` | PR touches marketing, pricing, legal, or competitive landing pages (any other `content/**.md`). |
 | `domain:mixed` | `bfd4f2` | PR touches more than one domain. Each file is reviewed under its domain. |
+| `domain:other` | `ededed` | PR touches no domain-specific path (`data/`, `styles/`, `archetypes/`, repo-root dotfiles). Reviewed under shared criteria only. Applied only when nothing else matched, so it never appears beside another `domain:` label. |
 
 ## Workflow-state labels
 
@@ -36,6 +40,8 @@ Load-bearing — these gate workflow execution.
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
+> **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently. As of this writing `domain:other` is the one label in this document that does not yet exist in `pulumi/docs`.
+
 ## Create them all (`gh` one-liner)
 
 Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write access:
@@ -43,9 +49,11 @@ Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write a
 ```bash
 gh label create "domain:docs"            --color 0e8a16 --description "PR touches technical docs"
 gh label create "domain:blog"            --color a2eeef --description "PR touches blog posts or customer stories"
-gh label create "domain:infra"           --color d4c5f9 --description "PR touches workflows, scripts, infra, Makefile, or build config"
+gh label create "domain:infra"           --color d4c5f9 --description "PR touches workflows, scripts, infra, Makefile, build config, or the site build pipeline"
 gh label create "domain:programs"        --color fbca04 --description "PR touches static/programs/"
+gh label create "domain:website"         --color c5def5 --description "PR touches marketing, pricing, legal, or competitive landing pages"
 gh label create "domain:mixed"           --color bfd4f2 --description "PR touches more than one domain"
+gh label create "domain:other"           --color ededed --description "PR touches no domain-specific path; reviewed under shared criteria only"
 gh label create "review:trivial"         --color c2e0c6 --description "Tiny prose-only change; skips Claude review"
 gh label create "review:frontmatter-only" --color e0f5d8 --description "Frontmatter-only Hugo content edit; skips Claude review"
 gh label create "review:oversized"       --color f9d0c4 --description "Diff too large for automated review (generated corpora); skips Claude review"
