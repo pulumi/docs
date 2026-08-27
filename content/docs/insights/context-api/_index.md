@@ -16,9 +16,9 @@ The Context API is a read-only Pulumi Cloud API for asking questions about how i
 
 The API is especially useful when the answer depends on those relationships rather than the properties of one resource. Users can execute queries through the Pulumi CLI or REST API.
 
-## How can the Context API help
+## How the Context API can help
 
-The Context API can help platform engineers, infrastructure owners, and incident responders investigate questions such as:
+The Context API can help you investigate questions such as:
 
 | Question | How the graph helps answer it |
 |---|---|
