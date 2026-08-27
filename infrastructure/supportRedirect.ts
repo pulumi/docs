@@ -21,8 +21,6 @@ export interface SupportRedirectArgs {
     targetUrl: string;
     // certificateArn is an ACM certificate (us-east-1) covering `domain` — the *.pulumi.com wildcard in production.
     certificateArn: pulumi.Input<string>;
-    // cachePolicyId is the CloudFront cache policy for the redirect behavior. Pass the project's no-cache policy —
-    // the viewer-request function generates every response, so nothing should be cached.
     cachePolicyId: pulumi.Input<string>;
 }
 
@@ -85,7 +83,6 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     // only POST-capable set — anything narrower 403s non-GET requests instead of redirecting them.
                     allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
                     cachedMethods: ["GET", "HEAD"],
-                    // Project no-cache policy — the function generates every response, so nothing is cached.
                     cachePolicyId: args.cachePolicyId,
                     functionAssociations: [
                         {
