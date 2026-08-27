@@ -18,7 +18,7 @@ Every triaged PR carries exactly one of these, `domain:other` included, so **the
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
 | `domain:website` | `c5def5` | PR touches marketing, pricing, legal, or competitive landing pages (any other `content/**.md`). |
 | `domain:mixed` | `bfd4f2` | PR touches more than one domain. Each file is reviewed under its domain. |
-| `domain:other` | `ededed` | PR touches no domain-specific path (`data/`, `styles/`, `archetypes/`, repo-root dotfiles). Reviewed under shared criteria only. Applied only when nothing else matched, so it never appears beside another `domain:` label. |
+| `domain:other` | `ededed` | PR touches no domain-specific path (`data/`, `styles/`, `archetypes/`, `.claude/`, non-workflow `.github/` files, repo-root dotfiles). Reviewed under shared criteria only. Applied only when nothing else matched, so it never appears beside another `domain:` label. |
 
 ## Workflow-state labels
 

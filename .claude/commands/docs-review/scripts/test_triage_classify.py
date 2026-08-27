@@ -21,8 +21,8 @@ _failures: list[str] = []
 _passes = 0
 
 
-def assert_clean(name: str) -> None:
-    """Fail the *test function* on any recorded check failure.
+def assert_clean(name: str, before: int) -> None:
+    """Fail the *test function* on the check failures it recorded itself.
 
     This file is run two ways: standalone (`python3 test_triage_classify.py`,
     where main() reads the _failures list) and under pytest via
@@ -30,9 +30,17 @@ def assert_clean(name: str) -> None:
     directly. pytest only sees a failure if the function raises, so without
     this call a broken routing rule would record FAILs and still report a
     green suite in CI.
+
+    `before` is `len(_failures)` captured on entry to the test function.
+    _failures is module-level and never reset, so without that baseline a
+    failure recorded by an earlier test would also fail every later one and
+    be counted in *its* message — pointing the reader at the wrong test.
+    It is required rather than defaulted so a future test can't silently
+    reintroduce that.
     """
-    if _failures:
-        raise AssertionError(f"{name}: {len(_failures)} check(s) failed (see FAIL lines above)")
+    new = _failures[before:]
+    if new:
+        raise AssertionError(f"{name}: {len(new)} check(s) failed (see FAIL lines above)")
 
 
 def check(cond: bool, msg: str) -> None:
@@ -66,6 +74,7 @@ def _pr(additions: int, deletions: int, paths: list[str]) -> dict:
 
 def test_oversized_threshold() -> None:
     print("test_oversized_threshold")
+    before = len(_failures)
     # A generated-corpus monster (the PR #20274 shape) is oversized.
     big = run_classify(_pr(99_664, 1_759, ["data/policy_pack_policies/cis.yaml",
                                            "content/docs/reference/x/_index.md",
@@ -91,11 +100,12 @@ def test_oversized_threshold() -> None:
     check(many["oversized"] is True, f"155-file PR classifies oversized; got {many['oversized']}")
     at_files = run_classify(_pr(2_000, 1_000, [f"content/docs/p{i}/_index.md" for i in range(150)]))
     check(at_files["oversized"] is False, f"exactly 150 files is NOT oversized (strict >); got {at_files['oversized']}")
-    assert_clean("test_oversized_threshold")
+    assert_clean("test_oversized_threshold", before)
 
 
 def test_domain_routing() -> None:
     print("test_domain_routing")
+    before = len(_failures)
 
     def domains(paths: list[str]) -> list[str]:
         return run_classify(_pr(10, 0, paths))["target_domains"]
@@ -155,7 +165,7 @@ def test_domain_routing() -> None:
     check(themed["trivial"] is False, "a one-line theme/ change is not trivial")
     other = run_classify(_pr(1, 0, ["data/a.yaml"]), "")
     check(other["trivial"] is False, "a one-line unmatched change is not trivial")
-    assert_clean("test_domain_routing")
+    assert_clean("test_domain_routing", before)
 
 
 def main() -> int:

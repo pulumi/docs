@@ -14,7 +14,7 @@ Each changed file routes to **exactly one** domain by path. Apply the rules in o
 | 3 | `docs-review:references:docs` | `content/docs/**`, `content/tutorials/**`, `content/what-is/**` |
 | 4 | `docs-review:references:website` | Any other `content/**.md` (pricing, legal, `vs/`, `why-pulumi/`, `about/`, `careers/`, etc.) |
 | 5 | `docs-review:references:infra` | Two groups, same criteria. **Tooling and CI:** `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js`. **Site build pipeline:** `layouts/**`, `assets/**`, `theme/**` (SCSS and TypeScript sources compiled into the site bundles), `static/**` except `static/programs/**` |
-| 6 | `docs-review:references:shared-criteria` only | Anything else (`data/`, `styles/`, `archetypes/`, repo-root dotfiles, etc.). Triage labels such a PR `domain:other` |
+| 6 | `docs-review:references:shared-criteria` only | Anything else (`data/`, `styles/`, `archetypes/`, `.claude/`, non-workflow `.github/` files, repo-root dotfiles, etc.). Triage labels such a PR `domain:other` |
 
 `docs-review:references:shared-criteria` applies to every file regardless of domain.
 
