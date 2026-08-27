@@ -13,9 +13,9 @@ aliases: []
 pulumi_cloud_feature: context-api
 ---
 
-The Context API is a read-only Pulumi Cloud API for asking questions about how infrastructure is connected. It queries an organization's resource graph, which connects Pulumi-managed resources, resources found by [Pulumi Discovery](/docs/insights/discovery/), and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
+The Context API is a read-only Pulumi Cloud API for asking questions about how infrastructure is connected. It queries an organization's infrastructure graph, which connects nodes like resources (IaC or [Discovered]((/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
-The API is useful when the answer depends on those relationships rather than the properties of one resource. People can write and run queries directly through the Pulumi CLI or REST API. AI agents and other tools can use the same API, but an agent is not required.
+The API is especially useful when the answer depends on those relationships rather than the properties of one resource. Users can execute queries through the Pulumi CLI or REST API.
 
 ## How can the Context API help
 
@@ -26,8 +26,8 @@ The Context API can help platform engineers, infrastructure owners, and incident
 | Which stacks consume outputs from this stack? | Follow stack output consumption relationships to downstream stacks. |
 | What depends on this resource? | Walk declared or inferred references to related resources. |
 | What could a provider upgrade affect? | Find resources owned by matching provider instances, then follow their dependents and stack relationships. |
-| Which resources still use an outdated provider version? | Match provider nodes by package and version, then follow provider ownership relationships. |
-| How many visible resources of each type are in a project? | Group matching resource nodes by type and count them. |
+| Which resources use an outdated provider version? | Match provider nodes by package and version, then follow provider ownership relationships. |
+| How many resources of each type are in a project? | Group matching resource nodes by type and count them. |
 
 These answers can support investigation and planning. For decisions such as deleting infrastructure or declaring a blast radius complete, also evaluate the response's completeness signals and confirm the result against the relevant source of record.
 
@@ -35,17 +35,17 @@ These answers can support investigation and planning. For decisions such as dele
 
 [Resource Search](/docs/insights/discovery/search/) filters and groups indexed resources by their properties. Start there when a set of resource records can answer the question.
 
-The Context API starts from matching resource or stack nodes and follows typed relationships between them. Use it when the question depends on connections, multiple hops, or evidence showing how one node is related to another. The two APIs are complementary, and both answer from data visible to the caller.
+The Context API starts from matching nodes (resources, stacks, etc.) and follows typed relationships between them. Use it when the question depends on connections, multiple hops, or evidence showing how one node is related to another. The two APIs are complementary, and both answer from data visible to the caller.
 
 ## How a query works
 
 The basic mental model is: **find nodes, walk edges, choose the answer**.
 
-1. An `anchor` finds the resource or stack nodes where the query starts.
+1. An `anchor` finds the nodes where the query starts.
 1. One or more `traverse` steps walk named relationships to new sets of nodes.
 1. A `return` clause chooses which sets, fields, and evidence paths appear in the response.
 
-Queries can also narrow anchor selection with `scope`, group matching nodes with `aggregate`, and page through larger results. See the [Context API query guide](/docs/insights/guides/context-api/) for details and examples.
+Queries may narrow anchor selection with `scope`, group matching nodes with `aggregate`, and page through larger results. See the [Context API query guide](/docs/insights/guides/context-api/) for details and examples.
 
 ## What the graph includes
 
@@ -80,7 +80,7 @@ Read these signals before relying on an answer:
 | `meta.schemaVersion` | Identifies the graph contract revision used for the query. |
 
 {{% notes type="warning" %}}
-Do not use a `truncated` result, a `trimmed` traversal, or an unread continuation page to prove absence, produce an exhaustive cleanup list, report a complete total, or declare a full blast radius. Even after every page reports `exact` and, for a traversal, `complete`, the answer remains bounded by the selector and caller's access. Indexing lag, relationships the graph does not model, inferred relationships, and graph changes between pages can also make the result differ from the true infrastructure state.
+Do not use a `truncated` result, a `trimmed` traversal, or an unread continuation page to prove absence, produce an exhaustive cleanup list, report a complete total, or declare a full blast radius. Even after every page reports `exact` and, for a traversal, `complete`, the answer depends on the selector and caller's access. Indexing lag, relationships the graph does not model, inferred relationships, and graph changes between pages can lead to misleading or outdated results.
 {{% /notes %}}
 
 See [Check completeness before acting](/docs/insights/guides/context-api/#check-completeness-before-acting) for the full interpretation rules and recovery guidance.
