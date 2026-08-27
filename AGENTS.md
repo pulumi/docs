@@ -259,6 +259,24 @@ When something needs dark-mode work, prefer the existing levers over hand-writte
 
 ---
 
+## Homepage hero animation
+
+The homepage hero is one GSAP timeline driving a single inline SVG. It spans four files, and a change to any one of them usually needs a look at the others:
+
+| File | Role |
+|------|------|
+| `layouts/partials/template-partials/hero-animation/agent-loop.html` | the scene, authored in its finished state |
+| `theme/src/ts/hero-animation.ts` | the timeline — **read its header comment before editing** |
+| `data/hero_agent_loop.yaml` + `theme/scripts/gen-hero-text.mjs` | the code samples and the `pulumi up` stream |
+| `theme/src/scss/marketing/_hero-animation.scss` | the CSS-driven spinner, and the pending/idle states |
+
+- **`data/hero_agent_loop_generated.yaml` is generated — never hand-edit it.** Change the plain-text sources in `data/hero_agent_loop.yaml` and run `yarn --cwd theme gen:hero-text`. That data file also carries `dark_code`, the flag that picks the code panel's treatment (shiki `min-dark` on a violet-950 panel, or `min-light` on the translucent lavender one); the generator copies it into the generated file and the partial paints the panel from it, so the syntax colors and their background can't disagree.
+- **Text layout is geometry, not space glyphs.** The production build minifies HTML, which collapses whitespace inside `<tspan>`s, so every segment is anchored by an explicit `x` computed from its column. A text change can look right on `make serve` and still break on deploy — verify against a `--minify` build, not the dev server.
+- **The timeline loops, so verify passes 2 and 3.** Every loop-state bug this animation has had rendered a flawless first pass. `hero-animation.ts`'s header documents the loop contract — what `reset()` owns, why `gsap.killTweensOf` is dangerous here — and how to step the timeline headlessly, which is the only reliable way to see a later pass.
+- **The static markup is the `prefers-reduced-motion` rendering**, so it has to stay a correct finished frame. Geometry comes verbatim from the design's storyboard exports; take new values from those rather than hand-editing paths.
+
+---
+
 ## Workflow Skills
 
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review/SKILL.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.

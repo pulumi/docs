@@ -1,3 +1,36 @@
+// The homepage hero's agent-loop animation: one GSAP timeline driving the
+// inline SVG authored in
+// layouts/partials/template-partials/hero-animation/agent-loop.html. That
+// markup is the finished frame — also the reduced-motion and no-JS rendering —
+// so this file's first job is reset(), which winds it back to the opening
+// state. From there one pass plays out (a weighted-random agent, a
+// weighted-random language) and the timeline repeats forever.
+//
+// The loop is what makes this file subtle. Every rule below exists because
+// breaking it still renders a flawless first pass:
+//
+//   - reset() owns every value that differs between passes, including
+//     everything the closing beats fade or move. Prefer it to a zero-duration
+//     tl.set() at time 0, which rewinds to the value it recorded before first
+//     running when the playhead wraps.
+//   - gsap.killTweensOf() kills timeline children too, and permanently. It is
+//     safe only on targets tweened exclusively by callback-spawned tweens.
+//   - Every proxy object a tween mutates has to be rewound by reset(); that is
+//     what trackProxy registers.
+//   - Per-target function values don't reliably re-evaluate under
+//     repeatRefresh on multi-target tweens. Tween a proxy 0 -> 1 and place the
+//     elements from current-pass data in onUpdate.
+//   - Timeline children need fixed targets, so anything chosen per pass is
+//     routed through reset(), a re-parenting callback, or a proxy.
+//
+// To verify, step loops 2 and 3 rather than watching loop 1. Chrome's
+// --virtual-time-budget can't scrub GSAP — lag smoothing clamps the jumps —
+// so expose tl behind a temporary debug hook and drive it with
+// `tl.pause(); for (t = 0; t <= T; t += 0.04) tl.totalTime(t, false)`, having
+// stubbed Math.random beforehand to pin the agent and the language. Spawned
+// tweens don't advance while stepping; force them complete before trusting a
+// still.
+
 import { gsap } from "gsap";
 
 const CW = 7.44141;
@@ -69,8 +102,15 @@ const TYPE_PAUSE_UNITS = 50;
 const TYPE_CHUNK_MIN = 5;
 const TYPE_CHUNK_MAX = 13;
 
+// The hidden state of a draw-on stroke. Parking it exactly on the pattern
+// boundary (dasharray "1", offset 1) lets antialiasing show slivers of the
+// rounded corners, so the pattern carries margin; once a draw completes its
+// beat sets stroke-dasharray to none so the resting stroke is plain.
 const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 
+// The PR icon's resting x. GSAP's x replaces the authored transform's
+// translate rather than adding to it, so tween endpoints have to land on the
+// markup's offset instead of on 0.
 const CI_PR_REST_X = -10;
 
 const CUBE_H = 84.752;
@@ -260,6 +300,11 @@ function init(): void {
         return { x: c.x - HALO_PAD, y: c.y - HALO_PAD, width: c.width + HALO_GROW, height: c.height + HALO_GROW, rx: HALO_RX };
     }
 
+    // Proxies stand in wherever the timeline can't tween the real thing — a
+    // per-pass layout, a shell's geometry. repeatRefresh re-captures a tween's
+    // start values from whatever the proxy currently holds, so each one has to
+    // be rewound by reset() or the next pass starts from the last pass's end
+    // state.
     const loopProxies: Array<{ obj: any; initial: any }> = [];
 
     function trackProxy<T>(obj: T): T {
@@ -510,6 +555,19 @@ function init(): void {
         applyIconT();
         prepareTyping();
 
+        // The outro fades the whole scene out, so reset owns bringing it back.
+        // A tl.set() at time 0 would look equivalent but rewinds to the value
+        // it recorded before first running when the playhead wraps.
+        gsap.set(root, { autoAlpha: 1 });
+
+        // The agent logos, the language labels and the language icons are all
+        // recolored by tweens that dimUnselected(), selectLanguage() and the
+        // icon's panel recolor spawn from callbacks, and a spawned tween
+        // outlives the pass that started it — hence kill, then repaint.
+        // killTweensOf is safe on these three only because nothing in the
+        // timeline targets them: it kills timeline children too, and
+        // permanently. Kill one of those from reset() and it is gone from
+        // every pass after the first, so the opening loop still looks perfect.
         const allAgentPaths: SVGPathElement[] = [];
         agentPaths.forEach(ps => {
             allAgentPaths.push.apply(allAgentPaths, ps);
@@ -626,6 +684,11 @@ function init(): void {
         gsap.set(cubeLabels, { autoAlpha: 0 });
     }
 
+    // Infinite ambient loops stay out of the master timeline: the glyph's
+    // float, the plate's pulse, the cubes' bob. updatePlayState is their only
+    // owner — give one of these a second owner and the two fight over
+    // play/pause. The caret blinks are kept separate for the same reason,
+    // owned by blink() alone.
     const ambient: any[] = [];
 
     ambient.push(gsap.to(glyphFloat, { y: -2, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: -1 }));
@@ -649,7 +712,6 @@ function init(): void {
 
     reset();
     const tl = gsap.timeline({ repeat: -1, paused: true, repeatRefresh: true, onRepeat: reset });
-    tl.set(root, { autoAlpha: 1 }, 0);
 
     const gridDelays = [0.12, 0, 0.18, 0.24, 0.06, 0.3];
     tiles.forEach((tile, i) => {
@@ -884,6 +946,10 @@ function init(): void {
 
     root.classList.remove("hal-pending");
 
+    // The master timeline and the ambient loops pause off-screen and in a
+    // hidden tab. Callback-spawned tweens don't — they run on the global
+    // timeline and keep going regardless, which is why they are kept short and
+    // killed in reset() rather than left to finish.
     let inView = true;
     function updatePlayState(): void {
         const running = inView && document.visibilityState !== "hidden";
