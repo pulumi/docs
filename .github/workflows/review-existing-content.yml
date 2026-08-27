@@ -340,7 +340,7 @@ jobs:
           # builds the backlog has no AWS credentials.
           mkdir -p .findings-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.findings_uri }}" .findings-cache/ --quiet \
-            || echo "findings records unavailable; glow-up falls back to the PR-body scrape"
+            || echo "::warning::findings records unavailable; the glow-up recoverability check is skipped this run and the worker falls back to the PR-body scrape"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.

@@ -196,6 +196,11 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # 151/288. Same throughput, no new infrastructure — the reserved page displaces
 # the LOWEST-scoring article of the run, not the highest.
 #
+# Those day-counts were simulated at 3 fix slots/day (the default below);
+# pulumi/docs currently runs CONTENT_REVIEW_COUNT=5, so treat them as
+# directional rather than as a forecast for this lane. The starvation they
+# describe is not sensitive to the count — tier 3 was 0/288 either way.
+#
 # Disabled at count 1 (see RESERVE_MIN_COUNT): the fix lane must never become
 # purely a cold-page sweep with the scored queue dark.
 NEVER_REVIEWED_RESERVE = 1

@@ -243,13 +243,21 @@ def main() -> int:
     # The recoverability filter reads the findings/ prefix. Without it every
     # lookup returns None, so applying the filter would declare the WHOLE
     # corpus unrecoverable and silently darken the lane — the one way this
-    # check can fail closed. When the prefix is absent (the S3 sync failed, or
-    # a local run) the filter is skipped entirely and selection behaves exactly
-    # as it did before the check existed.
-    check_recoverable = findings_dir is not None
+    # check can fail closed.
+    #
+    # EMPTY counts as absent, and the emptiness test is what makes the guard
+    # real. `findings_dir is not None` alone never fires in production: the
+    # dispatcher runs `mkdir -p .findings-cache` BEFORE the sync that fills it
+    # and swallows the sync failure (`|| echo`), so the directory always
+    # exists, `--findings-dir` is always passed, and a failed sync would strand
+    # every page with no PR pointer instead of skipping the check. Testing the
+    # contents keeps the invariant here, in the script that depends on it,
+    # rather than in a workflow that can be edited independently.
+    check_recoverable = findings_dir is not None and any(findings_dir.glob("*.json"))
     if not check_recoverable:
-        print("select-glowup: no --findings-dir; recoverability check skipped "
-              "(every banked entry stays eligible, as before)", file=sys.stderr)
+        print("select-glowup: no findings records available; recoverability "
+              "check skipped (every banked entry stays eligible, as before)",
+              file=sys.stderr)
     exclude_paths = {p_.strip() for p_ in (args.exclude_paths or "").split(",") if p_.strip()}
     ledger = load_ledger(Path(args.ledger_dir), LANE)
 

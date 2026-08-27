@@ -250,12 +250,17 @@ def main() -> int:
         check(q["repairs"] == [], "and nothing is routed to a repair")
 
         print("repairs are capped at one per run, highest-scoring first")
+        # A findings dir that is non-empty but carries no record for A/B/C: the
+        # check must RUN (so the three are judged unrecoverable) rather than be
+        # skipped for emptiness. A nonexistent or empty dir would skip it.
+        fdir_seeded = tmp / "findings-seeded"
+        write_findings(fdir_seeded, "content/docs/esc/unrelated.md")
         led_many = tmp / "ledger-many-stranded"
         write_ledger(led_many, A, skipped_findings=2, pr_number=0, last_pr_number=0)
         write_ledger(led_many, B, skipped_findings=9, pr_number=0, last_pr_number=0)
         write_ledger(led_many, C, skipped_findings=5, pr_number=0, last_pr_number=0)
         q = run_select(repo, tiers, led_many, "--count", "10",
-                       "--findings-dir", str(fdir / "empty"))
+                       "--findings-dir", str(fdir_seeded))
         check(len(q["repairs"]) == 1, f"one repair (got {len(q['repairs'])})")
         check(q["repairs"][0]["path"] == B,
               f"the most-banked stranded page wins (got {q['repairs'][0]['path']})")
@@ -263,14 +268,28 @@ def main() -> int:
 
         print("--exclude-paths keeps a repair off a page the fix lane already took")
         q = run_select(repo, tiers, led_many, "--count", "10",
-                       "--findings-dir", str(fdir / "empty"),
+                       "--findings-dir", str(fdir_seeded),
                        "--exclude-paths", B)
         check([r["path"] for r in q["repairs"]] == [C],
               f"the next-best stranded page is repaired instead (got {q['repairs']})")
         q = run_select(repo, tiers, led_many, "--count", "10",
-                       "--findings-dir", str(fdir / "empty"),
+                       "--findings-dir", str(fdir_seeded),
                        "--exclude-paths", f"{A},{B},{C}")
         check(q["repairs"] == [], "all excluded means no repair, not a fallback pick")
+
+        print("an existing-but-EMPTY findings dir skips the check, same as an absent one")
+        # The production shape, and the one the guard exists for: the
+        # dispatcher runs `mkdir -p .findings-cache` before the sync that fills
+        # it and swallows a sync failure, so the directory is always present
+        # and may be empty. Treating present-but-empty as "records available"
+        # would strand every page with no PR pointer, with no red X.
+        empty_dir = tmp / "findings-empty"
+        empty_dir.mkdir()
+        q = run_select(repo, tiers, led_rec, "--count", "10",
+                       "--findings-dir", str(empty_dir))
+        check([a["path"] for a in q["articles"]] == [A, B, C],
+              f"an empty findings dir filters nothing (got {[a['path'] for a in q['articles']]})")
+        check(q["repairs"] == [], "and routes nothing to a repair")
 
         print("open-PR dedupe: any content-review branch on the page excludes it")
         led6 = tmp / "ledger-open"
