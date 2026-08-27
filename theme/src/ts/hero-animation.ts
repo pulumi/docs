@@ -848,8 +848,6 @@ function init(): void {
     tl.to(badgeBodies[0], { autoAlpha: 1, duration: 0.3 }, testsBadgeAt + 0.15);
 
     const rollA = testsBadgeAt + 0.75;
-    // The wipe targets whichever language's lines are active this pass, so it
-    // spawns from a callback rather than a fixed-target timeline child.
     tl.to(panelLang, { autoAlpha: 0, duration: 0.3 }, rollA);
     const shellA = trackProxy({ top: PANEL_OUTER.y, h: 310, rx: 21.5 });
     tl.to(
