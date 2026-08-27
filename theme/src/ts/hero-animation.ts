@@ -1,3 +1,36 @@
+// The homepage hero's agent-loop animation: one GSAP timeline driving the
+// inline SVG authored in
+// layouts/partials/template-partials/hero-animation/agent-loop.html. That
+// markup is the finished frame — also the reduced-motion and no-JS rendering —
+// so this file's first job is reset(), which winds it back to the opening
+// state. From there one pass plays out (a weighted-random agent, a
+// weighted-random language) and the timeline repeats forever.
+//
+// The loop is what makes this file subtle. Every rule below exists because
+// breaking it still renders a flawless first pass:
+//
+//   - reset() owns every value that differs between passes, including
+//     everything the closing beats fade or move. Prefer it to a zero-duration
+//     tl.set() at time 0, which rewinds to the value it recorded before first
+//     running when the playhead wraps.
+//   - gsap.killTweensOf() kills timeline children too, and permanently. It is
+//     safe only on targets tweened exclusively by callback-spawned tweens.
+//   - Every proxy object a tween mutates has to be rewound by reset(); that is
+//     what trackProxy registers.
+//   - Per-target function values don't reliably re-evaluate under
+//     repeatRefresh on multi-target tweens. Tween a proxy 0 -> 1 and place the
+//     elements from current-pass data in onUpdate.
+//   - Timeline children need fixed targets, so anything chosen per pass is
+//     routed through reset(), a re-parenting callback, or a proxy.
+//
+// To verify, step loops 2 and 3 rather than watching loop 1. Chrome's
+// --virtual-time-budget can't scrub GSAP — lag smoothing clamps the jumps —
+// so expose tl behind a temporary debug hook and drive it with
+// `tl.pause(); for (t = 0; t <= T; t += 0.04) tl.totalTime(t, false)`, having
+// stubbed Math.random beforehand to pin the agent and the language. Spawned
+// tweens don't advance while stepping; force them complete before trusting a
+// still.
+
 import { gsap } from "gsap";
 
 const CW = 7.44141;
@@ -69,13 +102,60 @@ const TYPE_PAUSE_UNITS = 50;
 const TYPE_CHUNK_MIN = 5;
 const TYPE_CHUNK_MAX = 13;
 
+// The hidden state of a draw-on stroke. Parking it exactly on the pattern
+// boundary (dasharray "1", offset 1) lets antialiasing show slivers of the
+// rounded corners, so the pattern carries margin; once a draw completes its
+// beat sets stroke-dasharray to none so the resting stroke is plain.
 const DASH_HIDDEN = { "stroke-dasharray": "1 2", "stroke-dashoffset": "1.5" };
 
+// The PR icon's resting x. GSAP's x replaces the authored transform's
+// translate rather than adding to it, so tween endpoints have to land on the
+// markup's offset instead of on 0.
 const CI_PR_REST_X = -10;
 
 const CUBE_H = 84.752;
-const TERM_SCROLL_END = -862;
+const TERM_SCROLL_END = -898;
 const TERM_FOLD_Y = 410;
+
+// The finished frame holds — cubes bobbing gently — then the scene fades and
+// the next pass, a fresh agent and a fresh language, starts over.
+const REST_SECONDS = 10;
+const FADE_SECONDS = 0.6;
+
+// The cubes drift on the same ambient bob as the agent glyph, each on its own
+// amplitude, period, and starting phase (in DOM order: the back cube, then
+// front-left, then front-right) so the three never march in step. The label
+// rides along inside the cube's group. They run for the whole timeline; nobody
+// sees them until the diagram lands.
+const CUBE_BOB = [
+    { y: -4.5, duration: 2.4, offset: 0 },
+    { y: -3.5, duration: 2, offset: 0.9 },
+    { y: -4, duration: 2.8, offset: 1.7 },
+];
+
+// Closing a panel rolls it up rather than dissolving it: the fill, the hairline
+// and the window the text is clipped to all pin their bottom edge and ride the
+// shell's descending top edge, so the code (or the stream) is wiped away by the
+// panel closing over it. Once the window is shorter than ROLL_BLIND — a strip
+// at the panel's foot that no line of text ever reaches — the content is hidden
+// outright rather than left to a clip that covers no glyphs, the same WebKit
+// hazard the per-line typing clips avoid.
+const PANEL_TOP = PANEL_FILL.y;
+const PANEL_BOTTOM = PANEL_FILL.y + PANEL_FILL.height;
+const ROLL_BLIND = 24;
+
+type Roller = { el: SVGRectElement; top: number; bottom: number };
+
+function rollPanel(rects: Roller[], content: SVGGElement, shellTop: number): void {
+    const dy = shellTop - PANEL_OUTER.y;
+    for (let i = 0; i < rects.length; i++) {
+        const r = rects[i];
+        const y = Math.min(r.top + dy, r.bottom);
+        r.el.setAttribute("y", String(y));
+        r.el.setAttribute("height", String(r.bottom - y));
+    }
+    content.style.opacity = PANEL_BOTTOM - (PANEL_TOP + dy) > ROLL_BLIND ? "1" : "0";
+}
 
 function q<T extends Element>(root: Element, sel: string): T {
     return root.querySelector(sel) as T;
@@ -132,6 +212,9 @@ function init(): void {
     const langLogos = qa<SVGGElement>(root, "[data-lang-logo]");
     const panelLang = q<SVGGElement>(root, "[data-panel-lang]");
 
+    const editorClip = q<SVGGElement>(root, "[data-editor-clip]");
+    const editorWindow = q<SVGRectElement>(root, "#hal-clip-editor [data-panel-window]");
+    const termWindow = q<SVGRectElement>(root, "#hal-clip-term [data-panel-window]");
     const termClip = q<SVGGElement>(root, "[data-term-clip]");
     const termScroll = q<SVGGElement>(root, "[data-term-scroll]");
     const termLines = qa<SVGTextElement>(root, "[data-term-line]");
@@ -165,6 +248,23 @@ function init(): void {
     const plateDetail = q<SVGGElement>(root, "[data-plate-detail]");
     const cubes = qa<SVGGElement>(root, "[data-cube]");
     const cubeLabels = qa<SVGTextElement>(root, "[data-cube-label]");
+
+    // The code panel's two fills are authored for whichever treatment
+    // data/hero_agent_loop.yaml selected: shell B opens straight onto the
+    // panel, while shell A starts life as the chosen agent's tile and so
+    // carries the tile's lavender until it opens as the editor. Reading both
+    // off the markup keeps the colors in one place — the partial.
+    const CELL_FILL = { "fill": aFill.getAttribute("fill") as string, "fill-opacity": aFill.getAttribute("fill-opacity") as string };
+    const PANEL_FILL_PAINT = { "fill": bFill.getAttribute("fill") as string, "fill-opacity": bFill.getAttribute("fill-opacity") as string };
+
+    // Authored geometry is the open panel, so each rect's roll is read straight
+    // off the markup before anything moves.
+    const roller = (el: SVGRectElement): Roller => {
+        const top = parseFloat(el.getAttribute("y") as string);
+        return { el: el, top: top, bottom: top + parseFloat(el.getAttribute("height") as string) };
+    };
+    const editorRollers = [roller(aFill), roller(editorWindow)];
+    const termRollers = [roller(bFill), roller(bStroke), roller(termWindow)];
 
     let chosen = 0;
     const perch = { x: 0, y: 0 };
@@ -200,6 +300,11 @@ function init(): void {
         return { x: c.x - HALO_PAD, y: c.y - HALO_PAD, width: c.width + HALO_GROW, height: c.height + HALO_GROW, rx: HALO_RX };
     }
 
+    // Proxies stand in wherever the timeline can't tween the real thing — a
+    // per-pass layout, a shell's geometry. repeatRefresh re-captures a tween's
+    // start values from whatever the proxy currently holds, so each one has to
+    // be rewound by reset() or the next pass starts from the last pass's end
+    // state.
     const loopProxies: Array<{ obj: any; initial: any }> = [];
 
     function trackProxy<T>(obj: T): T {
@@ -229,6 +334,12 @@ function init(): void {
     });
 
     const agentPaths = tileLogos.map(g => qa<SVGPathElement>(g, "path"));
+    const langPaths = langLogos.map(g => qa<SVGPathElement>(g, "path"));
+
+    // The chosen language's icon rides from the pill to the code panel's
+    // corner, so it takes the panel's ink on the way rather than being
+    // authored for one background or the other.
+    const PANEL_INK = panelLang.getAttribute("data-ink") || LOGO_FILL;
 
     function dimUnselected(paths: SVGPathElement[][], keep: number): void {
         const targets: SVGPathElement[] = [];
@@ -444,6 +555,19 @@ function init(): void {
         applyIconT();
         prepareTyping();
 
+        // The outro fades the whole scene out, so reset owns bringing it back.
+        // A tl.set() at time 0 would look equivalent but rewinds to the value
+        // it recorded before first running when the playhead wraps.
+        gsap.set(root, { autoAlpha: 1 });
+
+        // The agent logos, the language labels and the language icons are all
+        // recolored by tweens that dimUnselected(), selectLanguage() and the
+        // icon's panel recolor spawn from callbacks, and a spawned tween
+        // outlives the pass that started it — hence kill, then repaint.
+        // killTweensOf is safe on these three only because nothing in the
+        // timeline targets them: it kills timeline children too, and
+        // permanently. Kill one of those from reset() and it is gone from
+        // every pass after the first, so the opening loop still looks perfect.
         const allAgentPaths: SVGPathElement[] = [];
         agentPaths.forEach(ps => {
             allAgentPaths.push.apply(allAgentPaths, ps);
@@ -476,8 +600,18 @@ function init(): void {
         gsap.set(promptText, { visibility: "hidden" });
         gsap.set(promptCaret, { opacity: 0, attr: { x: PROMPT_TEXT_X } });
 
+        const allLangPaths: SVGPathElement[] = [];
+        langPaths.forEach(ps => {
+            allLangPaths.push.apply(allLangPaths, ps);
+        });
+        gsap.killTweensOf(allLangPaths);
+        gsap.set(allLangPaths, { attr: { fill: LOGO_FILL } });
+
+        // Only the paint is restored here, never killed: the shell's tweens are
+        // timeline children, and killing them would strip them from the
+        // timeline for every pass after the first.
         const cf = cellFill();
-        gsap.set(aFill, { autoAlpha: 0, scale: 1, attr: cf });
+        gsap.set(aFill, { autoAlpha: 0, scale: 1, attr: Object.assign({}, cf, CELL_FILL) });
         gsap.set(aStroke, {
             autoAlpha: 0,
             attr: {
@@ -517,6 +651,8 @@ function init(): void {
             },
         });
         gsap.set(tab, { y: 34 });
+        gsap.set([editorWindow, termWindow], { attr: { y: PANEL_TOP, height: PANEL_FILL.height } });
+        gsap.set(editorClip, { opacity: 1 });
         gsap.set(termClip, { opacity: 0 });
         gsap.set(termScroll, { y: 0 });
         gsap.set(termLines, { opacity: 0 });
@@ -548,10 +684,19 @@ function init(): void {
         gsap.set(cubeLabels, { autoAlpha: 0 });
     }
 
+    // Infinite ambient loops stay out of the master timeline: the glyph's
+    // float, the plate's pulse, the cubes' bob. updatePlayState is their only
+    // owner — give one of these a second owner and the two fight over
+    // play/pause. The caret blinks are kept separate for the same reason,
+    // owned by blink() alone.
     const ambient: any[] = [];
 
     ambient.push(gsap.to(glyphFloat, { y: -2, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: -1 }));
     ambient.push(gsap.to(plateFill, { opacity: 0.55, duration: 2, ease: "sine.inOut", yoyo: true, repeat: -1 }));
+    cubes.forEach((cube, i) => {
+        const bob = CUBE_BOB[i % CUBE_BOB.length];
+        ambient.push(gsap.to(cube, { y: bob.y, duration: bob.duration, ease: "sine.inOut", yoyo: true, repeat: -1 }).seek(bob.offset));
+    });
 
     const caretBlink = gsap.to(caret, { opacity: 0, duration: 0.45, ease: "steps(1)", yoyo: true, repeat: -1, paused: true });
     const promptBlink = gsap.to(promptCaret, { opacity: 0, duration: 0.45, ease: "steps(1)", yoyo: true, repeat: -1, paused: true });
@@ -566,7 +711,7 @@ function init(): void {
     }
 
     reset();
-    const tl = gsap.timeline({ repeat: 0, paused: true, repeatRefresh: true, onRepeat: reset });
+    const tl = gsap.timeline({ repeat: -1, paused: true, repeatRefresh: true, onRepeat: reset });
 
     const gridDelays = [0.12, 0, 0.18, 0.24, 0.06, 0.3];
     tiles.forEach((tile, i) => {
@@ -655,7 +800,10 @@ function init(): void {
     tl.to([tiles[5], tiles[3], tiles[2], tiles[4], tiles[1], tiles[0], prompt], { autoAlpha: 0, scale: 0.85, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 3.5);
     tl.to(langRow, { autoAlpha: 0, duration: 0.25 }, 3.65);
     tl.to(iconT, { x: PANEL_LANG_CENTER.x, y: PANEL_LANG_CENTER.y, k: () => panelK, duration: 0.7, ease: "power2.inOut", onUpdate: applyIconT }, 3.65);
-    tl.to(aFill, { attr: PANEL_FILL, duration: 0.7, ease: "power2.inOut" }, 3.65);
+    tl.to(aFill, { attr: Object.assign({}, PANEL_FILL, PANEL_FILL_PAINT), duration: 0.7, ease: "power2.inOut" }, 3.65);
+    // The icon's paths belong to whichever language this pass drew, so the
+    // recolor spawns from a callback rather than a fixed-target child.
+    tl.call(() => gsap.to(langPaths[chosenLang], { attr: { fill: PANEL_INK }, duration: 0.5 }), undefined, 3.8);
     tl.to(aStroke, { attr: PANEL_STROKE, duration: 0.7, ease: "power2.inOut" }, 3.65);
     tl.to(aOuter, { attr: PANEL_OUTER, duration: 0.7, ease: "power2.inOut" }, 3.65);
     tl.to(glyph, { x: () => perch.x, duration: 0.7, ease: "power2.inOut" }, 3.65);
@@ -700,11 +848,7 @@ function init(): void {
     tl.to(badgeBodies[0], { autoAlpha: 1, duration: 0.3 }, testsBadgeAt + 0.15);
 
     const rollA = testsBadgeAt + 0.75;
-    // The wipe targets whichever language's lines are active this pass, so it
-    // spawns from a callback rather than a fixed-target timeline child.
-    tl.call(() => gsap.to(activeLines, { y: -22, opacity: 0, duration: 0.2, stagger: 0.02, ease: "power1.in" }), undefined, rollA - 0.15);
     tl.to(panelLang, { autoAlpha: 0, duration: 0.3 }, rollA);
-    tl.to(aFill, { autoAlpha: 0, duration: 0.35 }, rollA);
     const shellA = trackProxy({ top: PANEL_OUTER.y, h: 310, rx: 21.5 });
     tl.to(
         shellA,
@@ -718,6 +862,7 @@ function init(): void {
                 aOuter.setAttribute("y", String(shellA.top));
                 aOuter.setAttribute("height", String(shellA.h));
                 aOuter.setAttribute("rx", String(shellA.rx));
+                rollPanel(editorRollers, editorClip, shellA.top);
                 const dy = shellA.top + shellA.h - PILL_BOTTOM;
                 gsap.set([ciRow, badgeTests], { y: dy });
                 const k = -dy / CI_ROW_RIDE;
@@ -765,10 +910,17 @@ function init(): void {
     tl.to(badgeBodies[1], { autoAlpha: 1, duration: 0.3 }, packsAt + 0.15);
 
     const rollB = packsAt + 0.9;
-    tl.to(termClip, { opacity: 0, duration: 0.25 }, rollB - 0.1);
     tl.to(tab, { y: 34, duration: 0.3, ease: "power2.in" }, rollB - 0.1);
-    tl.to([bFill, bStroke], { autoAlpha: 0, duration: 0.3 }, rollB);
-    tl.to(bOuter, { attr: { y: 421.5, height: 42, rx: 21 }, duration: 0.8, ease: "power2.inOut" }, rollB);
+    tl.to(
+        bOuter,
+        {
+            attr: { y: 421.5, height: 42, rx: 21 },
+            duration: 0.8,
+            ease: "power2.inOut",
+            onUpdate: () => rollPanel(termRollers, termClip, parseFloat(bOuter.getAttribute("y") as string)),
+        },
+        rollB,
+    );
 
     const plateAt = rollB + 0.9;
     tl.to(plate, { autoAlpha: 1, scale: 1, duration: 0.6, ease: "power3.out" }, plateAt);
@@ -784,11 +936,18 @@ function init(): void {
         tl.to(cubeLabels[i], { autoAlpha: 1, duration: 0.25 }, at + 0.5);
     });
 
-    const outAt = cubesAt + 1.1 + 2.0;
-    tl.to(root, { autoAlpha: 1, duration: 0.3 }, outAt + 0.5);
+    // Everything has landed. The finished frame rests — the cubes still bobbing
+    // on their ambient tweens — then fades out, and onRepeat rebuilds the
+    // opening state for a new agent and a new language.
+    const restAt = cubesAt + 1.1;
+    tl.to(root, { autoAlpha: 0, duration: FADE_SECONDS, ease: "power2.in" }, restAt + REST_SECONDS);
 
     root.classList.remove("hal-pending");
 
+    // The master timeline and the ambient loops pause off-screen and in a
+    // hidden tab. Callback-spawned tweens don't — they run on the global
+    // timeline and keep going regardless, which is why they are kept short and
+    // killed in reset() rather than left to finish.
     let inView = true;
     function updatePlayState(): void {
         const running = inView && document.visibilityState !== "hidden";
