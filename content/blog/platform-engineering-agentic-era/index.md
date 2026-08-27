@@ -1,6 +1,6 @@
 ---
 title: "Platform Engineering in the Agentic Era: When Agents Provision"
-date: 2026-08-18
+date: 2026-08-27
 draft: false
 meta_desc: "How platform teams give AI agents identity, policy, and audit trails to provision infrastructure safely, without a human in every loop."
 authors:
@@ -35,11 +35,11 @@ Platform engineering in the agentic era means designing your internal developer 
 
 <!--more-->
 
-Platform engineering's founding problem was human self-service: give a developer a golden path so a new environment or datastore doesn't require filing a ticket and waiting on the platform team to hand-provision it. That problem is mostly solved at this point. The one arriving now is that the requester on the other end of that golden path is increasingly an agent, not a developer typing a request between meetings. App teams shipping with Claude Code, Codex, Cursor, and similar tools generate infrastructure requests at whatever pace the agent can propose changes, and that pace does not resemble the trickle of tickets a platform team used to plan around. The demand curve changed shape, and it's now the platform team's problem to absorb.
+Platform engineering's founding problem was human self-service: give a developer a golden path so a new environment or datastore doesn't require filing a ticket and waiting on the platform team to hand-provision it. That problem is solved for human requesters. The one arriving now is that the requester on the other end of that golden path is increasingly an agent, not a developer typing a request between meetings. App teams shipping with Claude Code, Codex, Cursor, and similar tools generate infrastructure requests at whatever pace the agent can propose changes, and that pace does not resemble the trickle of tickets a platform team used to plan around. The demand curve changed shape, and it's now the platform team's problem to absorb.
 
 Most of what's been written about AI agents and platform engineering stops at the observation that agents are becoming platform users too. That's true, and it's not new anymore. [What Is Platform Engineering?](/what-is/what-is-platform-engineering/) already treats agents as a platform consumer alongside human developers, [What Is an Internal Developer Platform?](/what-is/what-is-an-internal-developer-platform/) covers how IDPs expose themselves to agents via MCP, and [Red Hat made the same point](https://www.redhat.com/en/blog/why-developer-portals-matter-more-age-ai-agents) about developer portals. What none of that writing does is stay long enough to answer the harder question: what does a platform actually have to provide once the agent moves from reading the catalog for context to calling it to make a change? This post is about that gap, and it stays specific to the case where the caller writes.
 
-That question stopped being hypothetical for us a while back. In [The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/), we described the coding agents (Claude Code, Codex, Cursor, OpenCode, and others) already showing up as platform users in their own right, each of which can now sign up for its own [Pulumi agent account](/docs/administration/organizations-teams/agent-accounts/) and provision directly, no human signup step required. The identity, policy, and audit questions below aren't a thought exercise; they're what a platform team runs into the first time one of those agents makes a real API call.
+That question stopped being hypothetical for us a while back. In [The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/), we described the coding agents (Claude Code, Codex, Cursor, OpenCode, and others) already showing up as platform users in their own right, each of which can now sign up for its own [Pulumi agent account](/docs/administration/concepts/agent-accounts/) (currently in preview) and provision directly, no human signup step required. The identity, policy, and audit questions below aren't a thought exercise; they're what a platform team runs into the first time one of those agents makes a real API call.
 
 ## What changes when AI agents become your platform's primary users?
 
@@ -75,7 +75,7 @@ Galante's [2026 predictions for platformengineering.org](https://platformenginee
 
 ## How does policy as code protect agent-driven self-service?
 
-Policy as code matters more for agents than for human developers, because a human who's about to do something expensive usually pauses to think about it, and an agent doesn't pause unless the platform makes it. Policy that runs as a gate on every change, not a manual review step someone has to remember to run, is what makes agent-driven self-service safe to leave switched on.
+Policy as code matters more for agents than for human developers, because a human who's about to do something expensive has a moment to reconsider, and an agent doesn't pause unless the platform makes it. Policy that runs as a gate on every change, not a manual review step someone has to remember to run, is what makes agent-driven self-service safe to leave switched on.
 
 ### Where policy evaluates in an agent's loop
 
@@ -107,7 +107,7 @@ Both are legitimate, and the right choice depends on what the agent is actually 
 
 Real programming languages help here regardless of which shape you pick, because they carry loops, functions, types, and test frameworks, which means an agent's output can be tested the same way a human's pull request would be. That's the same argument [we made about running agent workloads on Kubernetes](/blog/ai-agents-on-kubernetes/): once you have a package, whether a Helm chart or a golden-path component, composing it into your specific environment, wiring its secrets, gating its rollout with policy, and testing the whole thing before it ships is software engineering, and a general-purpose language is built for that in a way a templating language isn't.
 
-The "agent calls an API" shape is also a real product now, not a hypothetical: [`pulumi do`](/blog/pulumi-do-direct-resource-operations/) turns a bounded, repeatable request into a single command with the guardrails already built in, so `pulumi do create eks:Cluster` spins up a cluster with best practices baked into the call rather than left for the agent to get right on its own. It's the narrow-interface half of this table, already shipping.
+The "agent calls an API" shape is available today, too: [`pulumi do`](/blog/pulumi-do-direct-resource-operations/), currently in research preview, turns a bounded, repeatable request into a single command with no project, code, or state file required, so `pulumi do aws:s3:Bucket create` provisions a bucket directly from the CLI. It's the narrow-interface half of this table, and governance layers on top of it through Pulumi Cloud rather than living in the command itself.
 
 ## What replaces code review when no human is watching?
 
@@ -123,7 +123,7 @@ Nothing single-handedly replaces code review, but the combination of a preview, 
 
 ## What breaks when fifty agents change the same environment at once?
 
-Concurrency is the failure mode that doesn't show up until an agent workflow scales past a demo: one agent provisioning one environment is easy to reason about, and fifty agents proposing changes to overlapping infrastructure at the same time is a distributed-systems problem a platform has to solve before it happens, not after.
+Concurrency is the failure mode that doesn't show up until an agent workflow scales past a demo: one agent provisioning one environment has no other agent to conflict with, and fifty agents proposing changes to overlapping infrastructure at the same time is a distributed-systems problem a platform has to solve before it happens, not after.
 
 ### Blast-radius controls worth having before you need them
 
