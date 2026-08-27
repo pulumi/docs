@@ -26,7 +26,7 @@ Python in particular has been one of the most popular languages used across the 
 
 ## Pulumi + Python
 
-Python was one of the first languages we ever supported in Pulumi, and has grown rapidly for defining and building Infrastructure as Code across any cloud. This growth has accelerated over the last year, driven by a few different trends:
+Python was one of the first languages we ever supported in Pulumi, and has grown rapidly for defining and building infrastructure as code across any cloud. This growth has accelerated over the last year, driven by a few different trends:
 
 1. DevOps practitioners with existing Python scripting experience who can naturally extend that experience into their IaC development
 2. AI and Data-focused organizations with deep Python focus broadly within their organization leaning on IaC development which leverages the same language and tools
@@ -76,7 +76,7 @@ We have updated the [NGINX on AWS ECS Fargate example](https://github.com/pulumi
 
 ### Pythonic input types
 
-Pulumi has always had a focus on making Infrastructure as Code feel like idiomatic code and the latest release of Pulumi makes it easier to work with input types in Python.
+Pulumi has always had a focus on making infrastructure as code feel like idiomatic code and the latest release of Pulumi makes it easier to work with input types in Python.
 
 Pulumi supports two ways of specifying inputs for resources in Python. You can use strongly typed, but verbose, argument classes, or you can use dictionaries, which are more idiomatic, but lack type hints. Leveraging improvements to Python's [TypedDict types](https://peps.python.org/pep-0589/), we can offer the best of both worlds -- dictionary inputs now have type hints, providing you with type safety and the flexibility and simplicity of dictionaries.
 

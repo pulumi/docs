@@ -83,7 +83,7 @@ One of the most striking things about modern AI-based applications is that they 
 * AI applications and the space overall is scaling rapidly, requiring elasticity and low operational overhead
 * New managed services, like vector datastores, managed model serving APIs, managed data and training pipelines
 
-This cloud-native quality of AI-based applications makes Infrastructure as Code even more important and valuable for AI applications than in other, more traditional applications.
+This cloud-native quality of AI-based applications makes infrastructure as code even more important and valuable for AI applications than in other, more traditional applications.
 
 The services to support building AI applications have all been built over the last two years around the assumption of the cloud. GPUs are dominantly accessed through cloud services. LLMs are invoked via managed services from OpenAI or via managed hosting of open-source models via SageMaker, Huggingface, or others. Retrieval Augmented Generation (RAG) is powered by dozens of managed database offerings, from dedicated vector databases like Pinecone, to vector extensions in Amazon Aurora PostgreSQL and more. Developers coming to AI assume they will stitch these services into rich application offerings.
 
@@ -111,4 +111,4 @@ And of course, the set of managed cloud services to support the AI ecosystem wil
 
 At Pulumi we often say that All Software is Cloud Software, and that All Developers are Cloud Developers. This has been truer than ever as AI has risen to the forefront of every organization’s software development priorities over the last 15 months. AI is transforming every aspect of software development, including cloud infrastructure development. Cloud infrastructure supports, enables, and accelerates how AI applications are built and scaled in production. We’ve already seen incredible impacts of both of these trends, yet there is so much more ahead on these arcs.
 
-We’re hard at work on all of these at Pulumi, and excited to see all of the innovation across the industry to build the future of AI-enabled cloud infrastructure management.  Check out [Pulumi AI](/ai/) and the [AI with Pulumi](/solutions/ai/) page to get started experiencing the future of AI for Infrastructure as Code today!
+We’re hard at work on all of these at Pulumi, and excited to see all of the innovation across the industry to build the future of AI-enabled cloud infrastructure management.  Check out [Pulumi AI](/ai/) and the [AI with Pulumi](/solutions/ai/) page to get started experiencing the future of AI for infrastructure as code today!

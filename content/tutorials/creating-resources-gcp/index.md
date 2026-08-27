@@ -226,7 +226,7 @@ Some of the properties inside of your `gcp.compute.Instance` resource include:
 | **boot disk** | tells the provider the configuration for the instance's boot disk |
 | **network interfaces** | tells the provider what networks to attach to the instance |
 
-**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/options/).
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about how it works in the [Resource options documentation](/docs/iac/concepts/resources/options/).
 
 ## Deploy your resources
 

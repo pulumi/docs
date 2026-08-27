@@ -26,7 +26,7 @@ social:
             🛠️ The Solution:
             Implement modular, intent-based infrastructure with a two-level abstraction model as a core pillar of your internal developer platform.
 ---
-[Previous articles](/blog/series/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
+[Previous articles](/blog/series/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how infrastructure as code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
 
 <!--more-->
 

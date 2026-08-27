@@ -636,7 +636,7 @@ set of feature flags [here](https://github.com/aws/aws-cdk/blob/main/packages/aw
 
 ## Setting Pulumi Options for CDK resources
 
-You can set Pulumi resource options for CDK resources by using [Transforms](https://www.pulumi.com/docs/iac/concepts/options/transforms/).
+You can set Pulumi resource options for CDK resources by using [Transforms](https://www.pulumi.com/docs/iac/concepts/resources/options/transforms/).
 For example, if you wanted to set `protect` on database resources you could use
 a transform like this.
 

@@ -15,7 +15,7 @@ category: product
 
 ## Hello, Pulumi Pinecone Provider!  👋
 
-The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly-announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/iac/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
+The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/iac/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
 
 ## What is Pinecone? 🧐
 

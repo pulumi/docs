@@ -9,7 +9,7 @@ tags:
 category: company
 ---
 
-Pulumi is honored to be named as one of only three vendors in the [2020 Gartner Cool Vendor for Agile and DevOps report, published on May 28th, 2020](https://info.pulumi.com/press-release/gartner-cool-vendor-5_28_2020). Being recognized in this way is a strong validation of Pulumi's impact thanks to our more modern approach to Infrastructure as Code and approaches to building cloud software. Vendors can only be selected once and in only one category making this an exclusive award.
+Pulumi is honored to be named as one of only three vendors in the [2020 Gartner Cool Vendor for Agile and DevOps report, published on May 28, 2020](https://info.pulumi.com/press-release/gartner-cool-vendor-5_28_2020). Being recognized in this way is a strong validation of Pulumi's impact thanks to our more modern approach to infrastructure as code and approaches to building cloud software. Vendors can only be selected once and in only one category making this an exclusive award.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ Pulumi is honored to be named as one of only three vendors in the [2020 Gartner 
 
 To be a Gartner Cool vendor, a product must be considered innovative, impactful, and intriguing. Vendors are scored on a scale of 1-10 across the following areas: technology, use of technology, business model, transformative nature, and newness. Vendor claims are rigorously verified by Gartner analysts who speak to customers to confirm that the technology works.
 
-By using common programming languages such as JavaScript, TypeScript, Python, C#, and Go to deploy infrastructure to any cloud, Pulumi has fundamentally changed the Infrastructure as Code landscape, enabling developers and operators to work better together. The impact on organizations is immediate. Instead of copying YAML or using a DSL, companies can write code to deploy infrastructure using industry best practices for development such as unit and integration testing, versioning, and error correction in IDEs. Moreover, infrastructure can be abstracted into reusable components to standardize on best practices while shipping faster with confidence.
+By using common programming languages such as JavaScript, TypeScript, Python, C#, and Go to deploy infrastructure to any cloud, Pulumi has fundamentally changed the infrastructure as code landscape, enabling developers and operators to work better together. The impact on organizations is immediate. Instead of copying YAML or using a DSL, companies can write code to deploy infrastructure using industry best practices for development such as unit and integration testing, versioning, and error correction in IDEs. Moreover, infrastructure can be abstracted into reusable components to standardize on best practices while shipping faster with confidence.
 
 ## Cool Features
 
@@ -34,4 +34,4 @@ And we like to think that our mascot, Pulumipus, is also pretty cool.
 
 Although Pulumi is cool, we have hundreds of organizations worldwide that have decided to run their production infrastructure using Pulumi. [Check out some select stories here](/case-studies/).
 
-Be one of the cool kids today by [giving Pulumi a try today](/docs/get-started/) -- it’s not just cool, but the future of Infrastructure as Code and, we think, the way all developers and operations teams will collaborate in the future.
+Be one of the cool kids today by [giving Pulumi a try today](/docs/get-started/) -- it’s not just cool, but the future of infrastructure as code and, we think, the way all developers and operations teams will collaborate in the future.

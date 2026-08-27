@@ -49,7 +49,7 @@ You can get started with Pulumi using Java today in the [Pulumi Getting Started 
 
 ## Pulumi YAML
 
-Pulumi has differentiated itself as an Infrastructure as Code tool that embraces popular programming languages and their rich software engineering ecosystems. However, our goal has always been to offer the broadest range of language support for the wide variety of use cases and users who need to interact with cloud infrastructure in modern cloud organizations.
+Pulumi has differentiated itself as an infrastructure as code tool that embraces popular programming languages and their rich software engineering ecosystems. However, our goal has always been to offer the broadest range of language support for the wide variety of use cases and users who need to interact with cloud infrastructure in modern cloud organizations.
 
 Pulumi YAML offers a new, simple interface to the full richness of the Pulumi Platform. Pulumi YAML allows infrastructure as code to be authored in a single simple YAML file with just a few lines of YAML, immediately familiar to any engineer, operator or developer.
 
@@ -437,4 +437,4 @@ To learn more about each of the new features - check out these blog posts with m
 * [AWS CDK on Pulumi](/blog/aws-cdk-on-pulumi/)
 * [Pulumi Provider for the Pulumi Service](/blog/announcing-pulumi-service-provider/)
 
-We’re incredibly excited about today’s launches, but also see an amazing opportunity ahead to continue to drive new innovation in Infrastructure as Code and the future of Cloud Engineering. Can’t wait to see what you build!
+We’re incredibly excited about today’s launches, but also see an amazing opportunity ahead to continue to drive new innovation in infrastructure as code and the future of Cloud Engineering. Can’t wait to see what you build!

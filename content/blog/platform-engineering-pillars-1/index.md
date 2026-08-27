@@ -39,7 +39,7 @@ Building a platform isn't about finding one perfect tool. It's about assembling 
 
 ### **Problem: Infrastructure chaos and bottlenecks**
 
-Developers face many pain points with manual provisioning, which is why [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) has become so essential:
+Developers face many pain points with manual provisioning, which is why [infrastructure as code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) has become so essential:
 
 * **Inconsistent environments**: Dev, staging, and production drift apart. "Works on my machine" becomes everyone's excuse.
 * **Slow processes**: Console clicking and waiting on ops creates bottlenecks. Developers wait days for basic infrastructure.

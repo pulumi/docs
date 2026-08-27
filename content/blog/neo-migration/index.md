@@ -34,7 +34,7 @@ The barrier to migrating to Pulumi has always been the infrastructure you alread
 
 ## Why IaC migrations are hard
 
-The promise of Infrastructure as Code is that your code perfectly describes your running infrastructure. But switching IaC tools breaks this promise in dangerous ways.
+The promise of infrastructure as code is that your code perfectly describes your running infrastructure. But switching IaC tools breaks this promise in dangerous ways.
 
 When you rewrite your infrastructure code in a new tool, you have two choices, both problematic. You can destroy and recreate all your resources to match the new code, accepting downtime and risk. Or you can try to import existing resources, which requires perfect knowledge of how every resource maps between the old and new systems. Many teams get stuck here, wanting Pulumi's modern platform but unable to safely make the switch.
 

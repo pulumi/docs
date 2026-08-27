@@ -116,7 +116,7 @@
 
 {{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
+    <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12">
         <div class="xl:w-1/2 flex flex-col items-start">
             {{ if or $badgeText $badgeHighlightText }}
             <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 no-underline hover:border-violet-500 transition-colors">
@@ -165,11 +165,11 @@
             {{ end }}
         </div>
         {{ if eq $heroVisual "animation" }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
             {{ partial (printf "template-partials/hero-animation/%s.html" $heroAnimation) . }}
         </div>
         {{ else if eq $heroVisual "code" }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
