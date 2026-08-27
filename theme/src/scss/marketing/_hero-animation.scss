@@ -7,7 +7,9 @@
         width: 100%;
         height: auto;
     }
-    :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect]) {
+    // The CI spinner arc is excluded because Gecko recomputes a non-scaling
+    // stroke in device space on every frame, so a rotating one wobbles.
+    :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect], [data-ci-arc]) {
         vector-effect: non-scaling-stroke;
     }
 }
