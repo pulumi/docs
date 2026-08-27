@@ -13,7 +13,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Self-service infrastructure*<br>at any scale."
+    title: "*Self-service infrastructure* <br>at any scale."
     description: Build golden paths with reusable components and templates. Enable self-service provisioning through code, YAML, or developer portals — with governance built in.
     image: /images/product/internal-developer-platforms/idp-hero-image.svg
     image_alt: Pulumi internal developer platform services dashboard
