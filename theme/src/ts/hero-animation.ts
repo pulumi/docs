@@ -102,6 +102,7 @@ function init(): void {
     const tileLogos = qa<SVGGElement>(root, "[data-tile-logo]");
     const prompt = q<SVGGElement>(root, "[data-prompt]");
     const promptClip = q<SVGRectElement>(root, "[data-prompt-clip]");
+    const promptText = q<SVGTextElement>(root, "[data-prompt-text]");
     const promptCaret = q<SVGRectElement>(root, "[data-prompt-caret]");
 
     const aFill = q<SVGRectElement>(root, "[data-a-fill]");
@@ -325,7 +326,7 @@ function init(): void {
     // Typing state for the active language, rebuilt each pass: per-line
     // character counts plus pause segments between blank-line bursts, mapped
     // onto one 0..1 progress tween.
-    type TypeSegment = { line: number; startU: number; units: number; chunks: number[] };
+    type TypeSegment = { line: number; startU: number; units: number; chunks: number[]; col: number };
     let typeSegments: TypeSegment[] = [];
     let typeTotal = 1;
     let activeEditor: SVGGElement | null = null;
@@ -354,11 +355,21 @@ function init(): void {
                 c = Math.min(chars, c + TYPE_CHUNK_MIN + Math.floor(Math.random() * (TYPE_CHUNK_MAX - TYPE_CHUNK_MIN + 1)));
                 chunks.push(c);
             }
-            typeSegments.push({ line: i, startU: u, units: chars, chunks: chunks });
+            const col = parseInt(activeLines[i].getAttribute("data-col") || "0", 10);
+            typeSegments.push({ line: i, startU: u, units: chars, chunks: chunks, col: col });
             u += chars;
             prevRow = row;
         }
         typeTotal = Math.max(1, u);
+    }
+
+    // A reveal that has only reached a line's leading indent covers no glyphs,
+    // and WebKit drops a clip whose rect intersects nothing at all — painting
+    // the whole line rather than hiding it. Keep the line out of the render
+    // until the reveal reaches its first character.
+    function reveal(seg: TypeSegment, width: number): void {
+        activeClips[seg.line].setAttribute("width", String(width));
+        activeLines[seg.line].style.visibility = width > seg.col * CW ? "visible" : "hidden";
     }
 
     function renderTyping(p: number): void {
@@ -369,7 +380,7 @@ function init(): void {
             const seg = typeSegments[i];
             const clip = activeClips[seg.line];
             if (u >= seg.startU + seg.units) {
-                clip.setAttribute("width", String(seg.units * CW + 2));
+                reveal(seg, seg.units * CW + 2);
                 caretClip = clip;
                 caretChars = seg.units;
             } else if (u > seg.startU) {
@@ -382,7 +393,7 @@ function init(): void {
                         break;
                     }
                 }
-                clip.setAttribute("width", String(c * CW + 2));
+                reveal(seg, c * CW + 2);
                 caretClip = clip;
                 caretChars = c;
             } else {
@@ -457,6 +468,7 @@ function init(): void {
         gsap.set(tiles, { autoAlpha: 0, scale: 0.9, transformOrigin: "50% 50%" });
         gsap.set(prompt, { autoAlpha: 0, scale: 0.96, transformOrigin: "50% 50%" });
         gsap.set(promptClip, { attr: { width: 0 } });
+        gsap.set(promptText, { visibility: "hidden" });
         gsap.set(promptCaret, { opacity: 0, attr: { x: PROMPT_TEXT_X } });
 
         const cf = cellFill();
@@ -482,7 +494,7 @@ function init(): void {
         }
 
         gsap.set(lineClips, { attr: { width: 0 } });
-        gsap.set(codeLines, { y: 0, opacity: 1 });
+        gsap.set(codeLines, { y: 0, opacity: 1, visibility: "hidden" });
         gsap.set(caret, { opacity: 0 });
 
         gsap.set(bOuter, { autoAlpha: 0, attr: { x: PANEL_OUTER.x, y: PANEL_OUTER.y, width: PANEL_OUTER.width, height: 0, rx: PANEL_OUTER.rx } });
@@ -586,6 +598,7 @@ function init(): void {
             onUpdate: () => {
                 const w = promptType.c * CW_PROMPT;
                 promptClip.setAttribute("width", String(w));
+                promptText.style.visibility = w > 0 ? "visible" : "hidden";
                 promptCaret.setAttribute("x", String(PROMPT_TEXT_X + w + 1));
             },
         },
