@@ -12,6 +12,33 @@
     :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect], [data-ci-arc]) {
         vector-effect: non-scaling-stroke;
     }
+
+    // The spinner runs on its own clock rather than from the timeline's
+    // onUpdate: a transform written per frame from script re-lays-out the arc
+    // in Gecko every time, where a transform animation can be handed to the
+    // compositor. Its path is authored around its own center, so fill-box and
+    // a 50% origin land on the same point the script rotated about.
+    [data-ci-arc] {
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        will-change: transform;
+        animation: hal-ci-spin 1s linear infinite;
+    }
+    &.hal-idle [data-ci-arc] {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes hal-ci-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-animation [data-ci-arc] {
+        animation: none;
+    }
 }
 .hero-animation.hal-pending .hal-scene {
     visibility: hidden;

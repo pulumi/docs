@@ -142,7 +142,6 @@ function init(): void {
     const ciMerge = q<SVGGElement>(root, "[data-ci-merge]");
     const ciSlots = qa<SVGGElement>(root, "[data-ci-slot]");
     const ciSpins = qa<SVGGElement>(root, "[data-ci-spin]");
-    const ciArcs = qa<SVGPathElement>(root, "[data-ci-arc]");
     const ciChecks = qa<SVGGElement>(root, "[data-ci-check]");
     const slotX = ciSlots.map(s => {
         const m = (s.getAttribute("transform") || "").match(/translate\(([-\d.]+)/);
@@ -554,22 +553,6 @@ function init(): void {
     ambient.push(gsap.to(glyphFloat, { y: -2, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: -1 }));
     ambient.push(gsap.to(plateFill, { opacity: 0.55, duration: 2, ease: "sine.inOut", yoyo: true, repeat: -1 }));
 
-    const SPIN_PHASE = [0, 137, 244, 71];
-    const spin = { a: 0 };
-    ambient.push(
-        gsap.to(spin, {
-            a: 360,
-            duration: 1,
-            ease: "none",
-            repeat: -1,
-            onUpdate: () => {
-                for (let i = 0; i < ciArcs.length; i++) {
-                    ciArcs[i].setAttribute("transform", "rotate(" + (spin.a + SPIN_PHASE[i % SPIN_PHASE.length]) + ")");
-                }
-            },
-        }),
-    );
-
     const caretBlink = gsap.to(caret, { opacity: 0, duration: 0.45, ease: "steps(1)", yoyo: true, repeat: -1, paused: true });
     const promptBlink = gsap.to(promptCaret, { opacity: 0, duration: 0.45, ease: "steps(1)", yoyo: true, repeat: -1, paused: true });
 
@@ -809,6 +792,7 @@ function init(): void {
     let inView = true;
     function updatePlayState(): void {
         const running = inView && document.visibilityState !== "hidden";
+        (root as HTMLElement).classList.toggle("hal-idle", !running);
         if (running) {
             tl.play();
             ambient.forEach(t => t.play());
