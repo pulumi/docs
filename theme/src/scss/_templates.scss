@@ -743,6 +743,14 @@
 .hero-code-visual {
     position: relative;
     width: 100%;
+
+    // Shift the composite so the code block, not the canvas, reads as centered:
+    // half the block's 23% left offset (code_offsets, page frontmatter). Only from
+    // lg — below that the visual fills its container and the shift would push the
+    // artwork past the edge.
+    @include screen-lg {
+        transform: translateX(-11.5%);
+    }
 }
 
 // The code-snippets block is absolutely positioned within the aspect-ratio canvas
