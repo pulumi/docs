@@ -7,8 +7,13 @@
         width: 100%;
         height: auto;
     }
-    // The CI spinner arc is excluded because Gecko recomputes a non-scaling
-    // stroke in device space on every frame, so a rotating one wobbles.
+    // Three elements opt out. The two draw-on strokes — the shell's selection
+    // ring and the badge outlines — animate a pathLength-normalized dash, and
+    // a non-scaling stroke makes Chrome measure those dash units in screen
+    // pixels instead: the draw goes invisible and the hidden state leaks
+    // slivers. The CI spinner arc opts out because Gecko recomputes a
+    // non-scaling stroke in device space on every frame, so a rotating one
+    // wobbles.
     :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect], [data-ci-arc]) {
         vector-effect: non-scaling-stroke;
     }
