@@ -565,6 +565,11 @@ categories:
         link: /docs/insights/discovery/search/#property-queries
         available_from: team
 
+      - id: context-api
+        name: Context API
+        available_from: enterprise
+        hidden: true
+
       - id: policy-enforcement
         name: Policy enforcement
         link: /docs/insights/policy/

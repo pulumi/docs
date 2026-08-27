@@ -12,6 +12,7 @@ tags:
     - pulumi-cloud
 category: product
 schema_type: auto
+pulumi_cloud_feature: context-api
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
@@ -36,7 +37,7 @@ social:
         Here's a brief tour.
 ---
 
-Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the Pulumi Context API, which connects what Pulumi knows about your infrastructure into a single graph you can query. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and the API itself teaches any agent what it needs to know to get started. It's available in preview for organizations on the Enterprise and Business Critical editions.
+Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the Pulumi Context API, which connects what Pulumi knows about your infrastructure into a single graph you can query. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and the API itself teaches any agent what it needs to know to get started. It's available in preview.
 
 <!--more-->
 
@@ -138,7 +139,7 @@ The primer is the complete reference for the query language. To onboard an agent
 
 ## Available in preview
 
-The Context API is available now for every organization on the Enterprise and Business Critical editions. The `pulumi api` commands shown here need [Pulumi CLI](/docs/install/) v3.243.0 or later. Access uses the same permission as [Resource Search](/docs/insights/discovery/search/), so if you can search resources in the console today, you can query the graph. Results are trimmed to the caller's permissions. While the API is in preview the contract may change; any breaking changes will be announced in the [changelog](/releases/).
+The `pulumi api` commands shown here need [Pulumi CLI](/docs/install/) v3.243.0 or later. Access uses the same permission as [Resource Search](/docs/insights/discovery/search/), so if you can search resources in the console today, you can query the graph. Results are trimmed to the caller's permissions. While the API is in preview the contract may change; any breaking changes will be announced in the [changelog](/releases/).
 
 ## The graph will grow
 

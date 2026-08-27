@@ -112,6 +112,16 @@ If you are posting a blog that originated somewhere else (for example, a syndica
 
 Additionally, if you're writing a blog post to announce a new product or feature that is also documented in our docs, you should set the `canonical_url` to point from the blog post to the relevant docs page. This helps consolidate optimization signals and ensures the docs page remains the primary source of truth in search engines.
 
+**Pulumi Cloud availability**
+
+If the post announces a feature that needs a paid Pulumi Cloud edition, set `pulumi_cloud_feature` to that feature's id from [`data/pulumi_pricing.yaml`](./data/pulumi_pricing.yaml):
+
+```yaml
+pulumi_cloud_feature: context-api
+```
+
+That renders the same violet availability callout the docs use ("This Pulumi Cloud feature is available in the Enterprise and Business Critical editions"), at the foot of the post. The edition it names is derived from the pricing data, so it can't drift from `/pricing/` the way a hand-written sentence does — **delete the sentence it replaces** rather than saying it twice. If the feature isn't in the data file yet, add it there first (with `hidden: true` if it isn't a marketed line item on `/pricing/`). An unknown id, an edition id, or a feature available on the Individual edition all fail `make lint`.
+
 **Schema type (structured data)**
 
 Blog posts automatically get BlogPosting schema for SEO. You can optionally override this with `schema_type` in frontmatter if needed (rare). See [SCHEMA.md](./SCHEMA.md) for details.

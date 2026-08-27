@@ -52,6 +52,10 @@
                     {{ .Content }}
                 </section>
 
+                {{ with .Params.pulumi_cloud_feature }}
+                    <div class="mt-8 max-w-3xl">{{ partial "cloud-availability.html" $ }}</div>
+                {{ end }}
+
                 {{ partial "blog/post-resources.html" . }}
 
                 {{ if and .Params.tags (not .Params.simple_layout) }}
