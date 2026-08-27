@@ -50,8 +50,8 @@
       "lastmod": "2026-08-25"
     },
     "AuditLogs": {
-      "hash": "e04e5636c69c47ca8e1207f590acc110c242b402c0d8fad2295d2824035a4534",
-      "lastmod": "2026-05-13"
+      "hash": "67c8250dc397ac22ec0412f0894218668bd9b9a60a6b4da093359d91d0f774e8",
+      "lastmod": "2026-08-27"
     },
     "CloudSetup": {
       "hash": "b3995e3cb7d3e3681cf4762e0e5e45caea0ac8a8f5b1e1d87dcdd03078461b4d",
@@ -813,6 +813,9 @@
     "AuditLogEvent": {
       "hash": "cb0f82886b433edfcbbf8747d0ea31e13a2758fd5ee94df9eb2c4121f6b7c7ce",
       "lastmod": "2026-08-25"
+    },
+    "AuditLogEventTypeCatalogEntry": {
+      "hash": "6335118a58897791ad4b66f90ec37a31c3bec13cdea24a636b80fe6f1eeb98c0"
     },
     "AuditLogExportResult": {
       "hash": "65395d7f207e1f845d6cf1417404fc88cee379b36c056f0d386d03799af32bc6"
@@ -1708,8 +1711,8 @@
       "lastmod": "2026-08-25"
     },
     "GraphEdge": {
-      "hash": "d3e4238e11c433eab4c85f04a9a9aa5db1d30f01a9cf7184ec07830934d5a16d",
-      "lastmod": "2026-08-15"
+      "hash": "1d24e031b1277763607e5bd556467717ddf5973fe03bdded11267263547bcede",
+      "lastmod": "2026-08-27"
     },
     "GraphFieldPredicate": {
       "hash": "66fe16332eecbec3eb6aa5f5ce544d66bcc55c977c010648534e4b297167c381",
@@ -1748,12 +1751,12 @@
       "lastmod": "2026-08-15"
     },
     "GraphNode": {
-      "hash": "35610d3f5d1a4c9a5a19239210068b62e80645b3cf8df19f9e49bb1d9802e63c",
-      "lastmod": "2026-08-25"
+      "hash": "d4228cc6e142d90dace196ad09096cedd9ac937b607e9e99981056afbfc36a32",
+      "lastmod": "2026-08-27"
     },
     "GraphNodeMatch": {
-      "hash": "c78fe2b445e29e2919070d99938c280ed22b10f046633f8f3e53e15ebdbf0045",
-      "lastmod": "2026-08-15"
+      "hash": "921ef5f4daf7e741f6f3874b36a61c3df67fbd6577dca06472e5e1e9d937d52e",
+      "lastmod": "2026-08-27"
     },
     "GraphPageInfo": {
       "hash": "aac49708924c0d41603e813f1d79e2c054ee6c73f69834595f6aa5331f9ee962",
@@ -1792,28 +1795,28 @@
       "lastmod": "2026-08-25"
     },
     "GraphQueryScope": {
-      "hash": "177a707a64c2292babc3a4c810bed22e41632d5a3ff8e58507a8b98fd24f72a2",
-      "lastmod": "2026-08-25"
+      "hash": "ba7ad3e87dfabe84c6ffcd5cd0ec89ca3cf781fbc30e0e71d8504cdf3db6aa53",
+      "lastmod": "2026-08-27"
     },
     "GraphSchemaEdgeType": {
-      "hash": "cf6d6fd010c761391b1448a3ae9469d16eb55df8b633b7cdfefc4af29b3179e4",
-      "lastmod": "2026-08-25"
+      "hash": "05b0177e991ff246263cba718b662279ef0b7e6b4d49aa61f967f791aff67431",
+      "lastmod": "2026-08-27"
     },
     "GraphSchemaLimits": {
       "hash": "15af273ac32535444c4f0b0d1bcfce47e5a70e392258178f90590b717e30564c",
       "lastmod": "2026-08-25"
     },
     "GraphSchemaNodeType": {
-      "hash": "5b8120cd33bffba9ecc7eaffcc520045bc7b905a815f10e7291c0491c1240543",
-      "lastmod": "2026-08-25"
+      "hash": "fedbfd9d34269aa345f6d590fb795a739e49001914f3c715108b3af50b12322c",
+      "lastmod": "2026-08-27"
     },
     "GraphSchemaResponse": {
       "hash": "f5b11b76208b0481bbd8d80c692abf66c0b0cef51b43e80ceae81706cebc9627",
       "lastmod": "2026-08-25"
     },
     "GraphTraverseStep": {
-      "hash": "876c0bd8a1550c5733414925ffaca389e5473abf270c8b456128846e53fc2408",
-      "lastmod": "2026-08-25"
+      "hash": "6cd9784f8ff8f347bba219a4717e77b237bf11afbd702308245e76fb0e40dd8b",
+      "lastmod": "2026-08-27"
     },
     "GraphTraverseTarget": {
       "hash": "0154138702d88c52b9b5c2f93c0e4a0b139b044817713de878a2cb1db2f9aad1",
@@ -1900,6 +1903,9 @@
     "ListAgentTasksResponse": {
       "hash": "1b2ec545ad898d99ee6646a7b6be930e087078420ccb27cb14effd338fc4c6c7",
       "lastmod": "2026-08-25"
+    },
+    "ListAuditLogEventTypesResponse": {
+      "hash": "7f2b54d265f998ca1cb6585218d5c0f0e5f6060cc2e7bb22f88479f797f0adae"
     },
     "ListAzureDevOpsIntegrationsResponse": {
       "hash": "be3d1f5c4dc8bdacdfdba9d689ff4c2f6d91d34cba61c424c2087b3d7db49e22",
@@ -2248,16 +2254,16 @@
       "lastmod": "2026-08-25"
     },
     "OrganizationFeatures": {
-      "hash": "7f5c4de82ab9233bdb38d738ba5cc089a493478782e92c38c07881ccc0a77eb7",
-      "lastmod": "2026-08-25"
+      "hash": "808b163c661ba386ca71b93eb1d960559dff2d9dcd34bd7a3e6c323e55299968",
+      "lastmod": "2026-08-27"
     },
     "OrganizationMember": {
       "hash": "ad627d8d9d9c91f2e3af2395cd588dfd5c1c85884cc304d002e19d3d4358d002",
       "lastmod": "2026-08-25"
     },
     "OrganizationMetadata": {
-      "hash": "8f945d0091da39c95bb86d671aa9c0d39be74ed5f36d95da8d1f4a633751398b",
-      "lastmod": "2026-08-25"
+      "hash": "aeb9c2aba8d8d760252f3ec394137c6b19fb71abef0a3f29c39e0b057bbe942a",
+      "lastmod": "2026-08-27"
     },
     "OrganizationSummary": {
       "hash": "dacc0ea67cee1cd0097679af47c66e0bffd8ee90e08a594ae5cf1a483a44fbaf",
