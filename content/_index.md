@@ -17,6 +17,12 @@ sections:
     description: |
       Ship infrastructure faster with tools that let agents do what they do best — without letting them go off the rails.
     anchor: hero
+
+    # The right slot: "animation" plays the agent-loop scene; switch to "code"
+    # to run the classic language-selector composite configured below.
+    hero_visual: animation
+    hero_animation: agent-loop
+
     code_overlay_image: /images/home/home-hero-code-overlay.svg
     code_aspect_ratio: "666/513"
     code_offsets:
@@ -287,7 +293,7 @@ sections:
     description: |
       Coding agents have reset the pace at which we build software. Pulumi brings that same agent-driven velocity to infrastructure.
 
-      Open source and powered by languages agents know well, Pulumi is **software-driven infrastructure** that gives humans and agents the tools they need to build and scale infrastructure — safely.
+      Open source and powered by languages agents know well, Pulumi is **infrastructure as software** that gives humans and agents the tools they need to build and scale infrastructure — safely.
     cta_text: Explore the platform
     cta_link: /product/
     cards:

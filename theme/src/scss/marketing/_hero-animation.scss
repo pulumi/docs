@@ -1,0 +1,16 @@
+.hero-animation {
+    width: 100%;
+    max-width: 620px;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    :is(rect, path, circle)[stroke]:not([data-a-stroke], [data-badge-rect]) {
+        vector-effect: non-scaling-stroke;
+    }
+}
+.hero-animation.hal-pending .hal-scene {
+    visibility: hidden;
+}

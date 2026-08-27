@@ -50,6 +50,7 @@ theme/stencil/src/components.d.ts
 /static/js/algolia.*.js
 /static/js/marketing.*.js
 /static/js/homepage.*.js
+/static/js/hero-animation.*.js
 /static/js/chunk-*.js
 
 # Ignore webpack-generated JS manifest for Hugo.
