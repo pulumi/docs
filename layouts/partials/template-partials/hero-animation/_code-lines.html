@@ -13,8 +13,9 @@
     - colors:  map of colorKey -> hex fill
     - originX: left edge of the text block (px, SVG user space)
     - originY: top edge of the text block; baselines land at originY + 13.47 + row*18
-    - kind:    "code" (editor: typing clips + data-chars) or "term" (terminal:
-               lines revealed whole by the script)
+    - kind:    "code" (editor: typing clips, data-chars, and data-col — the column
+               the line's first glyph starts at) or "term" (terminal: lines
+               revealed whole by the script)
     - clipPrefix: id prefix for the editor's per-line typing clips
 */}}
 {{- $CW := 7.44141 -}}
@@ -27,8 +28,9 @@
 {{- range $row, $line := .lines }}
     {{- if $line }}
         {{- $chars := 0 }}{{ range $line }}{{ $end := add (index . 1) (strings.RuneCount (index . 2)) }}{{ if gt $end $chars }}{{ $chars = $end }}{{ end }}{{ end }}
+        {{- $col := index (index $line 0) 1 }}
         {{- $y := printf "%.2f" (add $oy (add 13.47 (mul $row 18))) }}
-        <text {{ if eq $kind "code" }}data-code-line data-chars="{{ $chars }}" clip-path="url(#{{ $clipPrefix }}{{ $idx }})"{{ else }}data-term-line{{ end }} y="{{ $y }}">
+        <text {{ if eq $kind "code" }}data-code-line data-chars="{{ $chars }}" data-col="{{ $col }}" clip-path="url(#{{ $clipPrefix }}{{ $idx }})"{{ else }}data-term-line{{ end }} y="{{ $y }}">
             {{- range $line -}}
                 <tspan x="{{ printf "%.3f" (add $ox (mul (index . 1) $CW)) }}" fill="{{ index $colors (index . 0) }}">{{ index . 2 }}</tspan>
             {{- end -}}
