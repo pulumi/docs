@@ -47,7 +47,16 @@
     - cta_tertiary_text: Optional tertiary CTA button text.
     - cta_tertiary_link: Optional tertiary CTA button link.
 
-    Right-slot precedence: code_snippets > video_youtube_id > image.
+    Parameters — hero animation (split layout only):
+    - hero_animation: Name of a scene partial under template-partials/hero-animation/
+                      (e.g. "agent-loop").
+
+    Right-slot selection:
+    - hero_visual: Optional explicit pick — "animation", "code", "video", or
+                   "image" — so alternate visuals can stay fully configured in
+                   frontmatter while one is active.
+    - When hero_visual is unset, precedence is:
+      hero_animation > code_snippets > video_youtube_id > image.
 */}}
 
 {{ $title := .title }}
@@ -75,7 +84,16 @@
 {{ $dateAndLocation := .date_and_location }}
 {{ $booth := .booth }}
 
+{{ $heroAnimation := .hero_animation }}
 {{ $codeSnippets := .code_snippets }}
+{{ $heroVisual := .hero_visual }}
+{{ if not $heroVisual }}
+    {{ if $heroAnimation }}{{ $heroVisual = "animation" }}
+    {{ else if $codeSnippets }}{{ $heroVisual = "code" }}
+    {{ else if $videoYouTubeId }}{{ $heroVisual = "video" }}
+    {{ else if $image }}{{ $heroVisual = "image" }}
+    {{ end }}
+{{ end }}
 {{ $codeTitle := .code_title }}
 {{ $overlayImage := .code_overlay_image }}
 {{ $overlayAlt := .code_overlay_alt | default "" }}
@@ -146,7 +164,11 @@
             </div>
             {{ end }}
         </div>
-        {{ if $codeSnippets }}
+        {{ if eq $heroVisual "animation" }}
+        <div class="xl:w-1/2 w-full flex justify-end">
+            {{ partial (printf "template-partials/hero-animation/%s.html" $heroAnimation) . }}
+        </div>
+        {{ else if eq $heroVisual "code" }}
         <div class="xl:w-1/2 w-full flex justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -174,7 +196,7 @@
             </div>
             {{ end }}
         </div>
-        {{ else if $videoYouTubeId }}
+        {{ else if eq $heroVisual "video" }}
         <div class="xl:w-1/2 w-full">
             <div class="relative rounded-xl overflow-hidden aspect-video">
                 <iframe
@@ -184,7 +206,7 @@
                     title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
-        {{ else if $image }}
+        {{ else if eq $heroVisual "image" }}
         <div class="xl:w-1/2 w-full">
             {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto" "loading" "eager" "fetchpriority" "high" "style" ($imageStyle | safeCSS)) }}
         </div>
@@ -218,7 +240,7 @@
             </div>
             {{ end }}
         </div>
-        {{ if $codeSnippets }}
+        {{ if eq $heroVisual "code" }}
         <div class="product-hero-visual flex justify-center w-full">
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -240,7 +262,7 @@
                 {{ end }}
             </div>
         </div>
-        {{ else if $videoYouTubeId }}
+        {{ else if eq $heroVisual "video" }}
         <div class="product-hero-visual flex justify-center w-full">
             <div class="relative rounded-xl overflow-hidden w-full max-w-4xl aspect-video">
                 <iframe
@@ -250,7 +272,7 @@
                     title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
-        {{ else if $image }}
+        {{ else if eq $heroVisual "image" }}
         <div class="product-hero-visual flex justify-center">
             {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "fetchpriority" "high" "style" ($imageStyle | safeCSS) "maxWidth" 1500 "quality" 95) }}
         </div>

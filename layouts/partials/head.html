@@ -31,10 +31,8 @@
     <link rel="preconnect" href="https://bzrcdn.openai.com" crossorigin />
     {{- end }}
 
-    <!-- Preload critical fonts (skip monospace on the homepage — not used above the fold). -->
-    {{ if not .IsHome }}
+    <!-- Preload critical fonts (the homepage hero animation types in monospace above the fold). -->
     <link rel="preload" href="/fonts/monaspace-neon-regular.woff2" as="font" type="font/woff2" crossorigin />
-    {{ end }}
     <link rel="preload" href="/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-semibold.woff2" as="font" type="font/woff2" crossorigin />
 
