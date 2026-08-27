@@ -168,7 +168,7 @@ If you're importing many resources at once, or resources that are already descri
 
 ### Example: Import a component with all resources
 
-In this example, the Pulumi program defines a VPC component from the AWS Crosswalk for Pulumi library. The component is imported into the program using the `pulumi import` command.
+In this example, the Pulumi program defines a VPC component from the `awsx` package. The component is imported into the program using the `pulumi import` command.
 
 The following code creates a new VPC using all default settings:
 
