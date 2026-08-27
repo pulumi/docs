@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 50
         identifier: iac-concepts-resources
-    concepts:
-        identifier: resources
-        weight: 3
 aliases:
 - /docs/intro/concepts/resources/
 - /docs/concepts/resources/

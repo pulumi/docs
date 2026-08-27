@@ -8,9 +8,6 @@ menu:
         name: Get functions
         parent: iac-concepts-functions
         weight: 2
-    concepts:
-        parent: functions
-        weight: 2
 aliases:
 - /docs/iac/concepts/resources/get/
 - /docs/intro/concepts/resources/get/

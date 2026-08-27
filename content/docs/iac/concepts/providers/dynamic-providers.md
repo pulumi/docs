@@ -8,9 +8,6 @@ menu:
         name: Dynamic providers
         parent: iac-concepts-providers
         weight: 6
-    concepts:
-        parent: providers
-        weight: 6
 aliases:
 - /docs/intro/concepts/resources/dynamic-providers/
 - /docs/concepts/resources/dynamic-providers/

@@ -9,9 +9,6 @@ menu:
         name: Pulumi terminology
         parent: iac-comparisons-terraform
         weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 1
 aliases:
 - /docs/intro/vs/terraform/terminology/
 - /docs/concepts/vs/terraform/terminology/

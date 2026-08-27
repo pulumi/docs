@@ -10,9 +10,6 @@ menu:
         parent: iac-home
         weight: 100
         identifier: iac-comparisons
-    concepts:
-        identifier: vs
-        weight: 16
 aliases:
 - /docs/reference/vs/
 - /docs/intro/vs/

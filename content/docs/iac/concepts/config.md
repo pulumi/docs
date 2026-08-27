@@ -8,8 +8,6 @@ menu:
         name: Configuration
         parent: iac-concepts
         weight: 40
-    concepts:
-        weight: 6
 aliases:
 - /docs/reference/config/
 - /docs/tour/programs-configuration/

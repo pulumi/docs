@@ -9,9 +9,6 @@ menu:
         name: Custom solutions
         parent: iac-comparisons
         weight: 110
-    concepts:
-        parent: vs
-        weight: 110
 aliases:
 - /docs/reference/vs/custom/
 - /docs/intro/vs/custom/
