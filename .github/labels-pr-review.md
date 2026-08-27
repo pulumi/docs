@@ -40,7 +40,7 @@ Load-bearing — these gate workflow execution.
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
-> **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently. As of this writing `domain:other` is the one label in this document that does not yet exist in `pulumi/docs`.
+> **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently.
 
 ## Create them all (`gh` one-liner)
 
