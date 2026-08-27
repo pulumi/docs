@@ -631,6 +631,12 @@ categories:
         link: /docs/insights/self-hosted/
         available_from: business-critical
 
+      - id: context-api
+        name: Context API
+        link: /docs/insights/context-api/
+        available_from: enterprise
+        hidden: true
+
   - id: idp
     name: Internal Developer Platform
     group: product

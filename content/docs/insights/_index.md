@@ -24,9 +24,10 @@ sections:
   description_md: |
     Pulumi Cloud provides complete visibility and control over your cloud infrastructure, whether resources were provisioned by Pulumi, Terraform, CloudFormation, or created manually.
 
-    **Two ways to get started:**
+    **Ways to get started:**
     - **New to Pulumi?** Start with [Discovery](/docs/insights/discovery/) to scan existing infrastructure, then add Policy enforcement.
     - **Already using Pulumi IaC?** Add [Policy](/docs/insights/policy/) to enforce compliance before deployments reach production.
+    - **Investigating infrastructure relationships?** Use the [Context API](/docs/insights/context-api/) to query dependencies, ownership, stack consumers, and change impact.
 
 - type: button-cards
   heading: Discovery
@@ -79,6 +80,18 @@ sections:
     heading: Policy Findings
     link: /docs/insights/policy/policy-findings/
     description: View violations, track remediation progress, and monitor compliance trends across all infrastructure.
+
+- type: button-cards
+  heading: Context API
+  cards:
+  - icon: link
+    heading: Context API overview
+    link: /docs/insights/context-api/
+    description: Learn how graph queries help people investigate infrastructure dependencies, ownership, consumers, and change impact.
+  - icon: code-window
+    heading: Query reference
+    link: /docs/insights/context-api/query-reference/
+    description: Build selectors, follow relationships, interpret responses, and check whether an answer is complete.
 
 - type: button-cards
   heading: Self-hosted
