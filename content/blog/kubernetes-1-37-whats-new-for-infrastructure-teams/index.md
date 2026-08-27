@@ -17,7 +17,9 @@ faq_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Kubernetes 1.37 shipped. For an upgrade, the breaking changes matter more than the headline features: SELinuxMount on by default, static Pods losing Secrets/ConfigMap references, cAdvisor rejecting deprecated flags at startup. What to check first:
+        Kubernetes 1.37 shipped. For an upgrade, the breaking changes matter more than the headline features: SELinuxMount on by default, static Pods losing Secrets/ConfigMap references, cAdvisor rejecting deprecated flags at startup.
+
+        What to check first:
     linkedin: |
         Every Kubernetes release recap this week will lead with the graduations: metrics.k8s.io hitting GA after nine years in beta, HPAConfigurableTolerance, kubelet rootless mode reaching beta.
 
@@ -50,7 +52,7 @@ Start here before you touch a cluster, because these are the items that turn a r
 
 ## What actually got better
 
-Once the upgrade risks are accounted for, this release does move six things that infrastructure teams have been waiting on.
+Once the upgrade risks are accounted for, this release does move a set of things infrastructure teams have been waiting on.
 
 **`metrics.k8s.io` reaches GA after roughly nine years in beta.** This is the API underneath the Horizontal Pod Autoscaler and `kubectl top` — no new capability ships with the graduation, but it closes out one of the longest-running beta APIs in the project's history. Both `v1beta1` and `v1` remain usable during the transition.
 
