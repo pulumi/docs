@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as code in Any Language – Pulumi IaC"
-meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
+meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, YAML, or HCL. Deploy to any cloud with built-in previews and testing.
 meta_image: /images/product/infrastructure-as-code/iac-meta.png
 type: page
 layout: template-page
@@ -213,7 +213,7 @@ sections:
   - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
-      TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Get autocomplete, type checking, and all your favorite IDE features.
+      TypeScript/JavaScript, Python, Go, C#, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
 
       Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:
