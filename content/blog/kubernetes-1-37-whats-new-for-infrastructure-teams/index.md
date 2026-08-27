@@ -17,17 +17,17 @@ faq_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Kubernetes 1.37 is out. The features everyone will list are the least of it — the breaking changes are what actually determine whether your upgrade goes smoothly.
-
-        SELinuxMount, static Pod references, cAdvisor flags, kube-proxy IPVS. Here's what infra teams need to check first.
+        Kubernetes 1.37 shipped. For an upgrade, the breaking changes matter more than the headline features: SELinuxMount on by default, static Pods losing Secrets/ConfigMap references, cAdvisor rejecting deprecated flags at startup. What to check first:
     linkedin: |
         Every Kubernetes release recap this week will lead with the graduations: metrics.k8s.io hitting GA after nine years in beta, HPAConfigurableTolerance, kubelet rootless mode reaching beta.
 
         Those matter. But for a platform team running an upgrade, the more urgent list is the one buried in the changelog: SELinuxMount going GA and on by default, static Pods losing the ability to reference Secrets and ConfigMaps with no opt-out, cAdvisor's slimmed-down flag set rejecting anything deprecated outright at kubelet startup.
 
-        We wrote up Kubernetes 1.37 the way an infrastructure team actually needs to read it: what can break your upgrade, what genuinely got better, the honest state of the DRA/accelerator work, and when any of this actually reaches a managed cluster on EKS, AKS, or GKE.
+        We broke down what actually needs your attention before you upgrade — the full rundown is below.
     bluesky: |
-        Kubernetes 1.37 shipped. For infra teams, the feature list matters less than what changes underneath you if you're not paying attention (SELinuxMount, static Pod references, cAdvisor flags). We broke down what to check before you upgrade.
+        Kubernetes 1.37 shipped. The breaking changes matter more than the feature list if you're planning an upgrade.
+
+        SELinuxMount on by default, static Pods losing Secret/ConfigMap references, cAdvisor rejecting deprecated flags at kubelet startup. Here's what to check first.
 ---
 
 Kubernetes 1.37 shipped on August 26, 2026. For infrastructure teams, the release matters less for any single headline feature than for a cluster of changes that can break an unprepared upgrade: SELinuxMount going GA and on by default, static Pods losing their ability to reference Secrets and ConfigMaps, and a slimmed-down cAdvisor that refuses to start on deprecated kubelet flags.
@@ -40,17 +40,17 @@ Start here before you touch a cluster, because these are the items that turn a r
 
 **Static Pods can no longer reference Secrets or ConfigMaps.** This closes a long-standing correctness gap, and there is no escape hatch: the `PreventStaticPodAPIReferences` feature gate that used to let you opt back in has been removed entirely. If any static Pod manifests on your nodes reference a Secret or ConfigMap, they will fail after the upgrade, full stop.
 
-**cAdvisor's slimmed-down module rejects deprecated flags outright.** The kubelet's embedded cAdvisor has moved to a leaner implementation, and a list of long-deprecated flags — `--containerd`, `--event-storage-age-limit`, and others — are no longer merely ignored, they now prevent the kubelet from starting at all if they're set. Several `/metrics/cadvisor` series and the `userDefinedMetrics` field in `/stats/summary` are also gone. Audit your kubelet configuration and any custom metrics scraping before you roll this out.
+**cAdvisor's slimmed-down module rejects deprecated flags outright.** The kubelet's embedded cAdvisor now runs on the leaner `github.com/google/cadvisor/lib` module, and the kubelet will fail to start if any of 18 long-deprecated flags are still set — `--containerd`, `--event-storage-age-limit`, `--boot-id-file`, and others; only `--housekeeping-interval` is kept ([kubernetes/kubernetes#139870](https://github.com/kubernetes/kubernetes/pull/139870)). Three `/metrics/cadvisor` series (`container_cpu_load_average_10s`, `container_cpu_load_d_average_10s`, `container_tasks_state`) and the `userDefinedMetrics` field in `/stats/summary` are also gone. Audit your kubelet configuration and any custom metrics scraping before you roll this out.
 
 **Workload-Aware Scheduling requires a manual cleanup step.** The core `Workload` and `PodGroup` types move from `scheduling.k8s.io/v1alpha2` to `v1alpha3` in this release. If you were running v1alpha2 objects under 1.36, the changelog is explicit: delete them from the API server before you upgrade, or the migration will not complete cleanly.
 
-**kubeadm's v1beta3 config API is gone.** It was deprecated since v1.31; if you're still generating v1beta3 config, run `kubeadm config migrate` first.
+**kubeadm's v1beta3 config API is gone.** Deprecated since v1.31, it's now removed outright: if you're still generating v1beta3 config, run `kubeadm config migrate` first.
 
 **`eventRecordQPS: 0` finally means what it says.** A long-standing bug silently treated a value of `0` in kubelet config as "use the default" instead of "unlimited." That bug is fixed in 1.37. If you were relying on the old behavior, set the value explicitly (`50` restores the previous numeric default) rather than leaving it at `0`.
 
 ## What actually got better
 
-Once the upgrade risks are accounted for, this release does move several things that infrastructure teams have been waiting on.
+Once the upgrade risks are accounted for, this release does move six things that infrastructure teams have been waiting on.
 
 **`metrics.k8s.io` reaches GA after roughly nine years in beta.** This is the API underneath the Horizontal Pod Autoscaler and `kubectl top` — no new capability ships with the graduation, but it closes out one of the longest-running beta APIs in the project's history. Both `v1beta1` and `v1` remain usable during the transition.
 
@@ -58,11 +58,11 @@ Once the upgrade risks are accounted for, this release does move several things 
 
 **Kubelet-in-user-namespace ("rootless mode") reaches beta.** Node components can now run inside a Linux user namespace — unprivileged on the host, root only inside the namespace — meaningfully shrinking the blast radius of a kubelet or container runtime CVE.
 
-**Several storage and networking primitives move to beta enabled by default**, worth a look depending on your stack: `EtcdRangeStream`, which lets the API server's watch cache stream initial objects from etcd via a single RPC instead of paginated calls, a real scalability win for large clusters; `NFTablesNetlink`, where kube-proxy talks to the kernel directly over netlink instead of shelling out to the `nft` binary; and `PersistentVolumeClaimUnusedSinceTime`, which reports how long a PVC has gone unused so storage-cost cleanup can be automated instead of manual.
+**Three storage and networking primitives move to beta enabled by default**, worth a look depending on your stack: `EtcdRangeStream`, which lets the API server's watch cache stream initial objects from etcd via a single RPC instead of paginated calls, a real scalability win for large clusters; `NFTablesNetlink`, where kube-proxy talks to the kernel directly over netlink instead of shelling out to the `nft` binary; and `PersistentVolumeClaimUnusedSinceTime`, which reports how long a PVC has gone unused so storage-cost cleanup can be automated instead of manual.
 
 A handful of smaller but genuinely useful items also landed: `kubectl get -o kyaml` is stable for cleaner YAML output, `StorageVersionMigration` reaches GA, `ClusterTrustBundle` is stable for custom CA distribution, and Pod Certificates graduate to GA.
 
-`PodLevelResourceManagers` graduated to beta in this release, but a fix late in the release cycle disabled it by default after critical issues turned up in testing. It's worth knowing about if you're tracking pod-level resource management, but it won't affect your cluster's behavior unless you explicitly enable the feature gate.
+`PodLevelResourceManagers` (distinct from the longer-standing `PodLevelResources` API gate, unaffected here) was promoted to beta mid-cycle ([#140573](https://github.com/kubernetes/kubernetes/pull/140573)), then flipped back to disabled by default late in the cycle after critical issues turned up in testing ([#141209](https://github.com/kubernetes/kubernetes/pull/141209)). It ships in 1.37 as beta, disabled by default — worth knowing about if you're tracking pod-level resource management, but it won't affect your cluster's behavior unless you explicitly enable the feature gate.
 
 ## The accelerator story, without the hype
 
@@ -72,7 +72,7 @@ DRA device taints and tolerations reach GA, so operators can taint a misbehaving
 
 ## The deprecation clock keeps running
 
-Two long-running phase-outs continue in 1.37, neither urgent today but both worth putting on a calendar. kube-proxy's `ipvs` mode is now formally deprecated under KEP-5495: disabled by default is planned for v1.40, full removal for v1.43. Check which mode you're running with:
+Two long-running phase-outs continue in 1.37, neither urgent today but both worth putting on a calendar. kube-proxy's `ipvs` mode was formally deprecated back in v1.35 under [KEP-5495](https://github.com/kubernetes/enhancements/blob/master/keps/sig-network/5495-deprecate-ipvs-mode-in-kube-proxy/README.md); 1.37 is Stage 2 of that plan, adding a `KubeProxyIPVS` feature gate (default `true`) plus kubeadm warnings and updated docs ahead of a default-off flip planned for v1.40 and full removal planned for v1.43. Check which mode you're running with:
 
 ```
 kubectl -n kube-system get configmap kube-proxy -o jsonpath='{.data.config\.conf}' | grep 'mode:'
@@ -82,7 +82,7 @@ Separately, the cgroup v1 phase-out that began with `failCgroupV1` defaulting to
 
 ## When does this actually reach your cluster?
 
-Upstream GA is the start of the clock, not the end of it. If you run self-managed clusters with `kubeadm` or `kOps`, you can generally adopt 1.37 as soon as your node images and add-ons are validated against it. If you run a managed service, the timeline is entirely up to your provider: EKS, AKS, and GKE each pick up new minor versions on their own release cadence, historically weeks to a few months behind upstream GA, and each backports its own subset of fixes in the meantime. Our [guide to managed Kubernetes services](/tutorials/glossary/managed-kubernetes/) covers how EKS, AKS, and GKE differ in upgrade cadence, support windows, and what they manage for you versus what you're still responsible for — useful context before you assume 1.37 is available to you just because it shipped today.
+Upstream GA is the start of the clock, not the end of it. If you run self-managed clusters with `kubeadm` or `kOps`, you can generally adopt 1.37 as soon as your node images and add-ons are validated against it. If you run a managed service, the timeline is entirely up to your provider: EKS, AKS, and GKE each pick up new minor versions on their own release cadence, historically weeks to a few months behind upstream GA, and each backports its own subset of fixes in the meantime. Our [guide to managed Kubernetes services](/tutorials/glossary/managed-kubernetes/) covers how EKS, AKS, and GKE differ in upgrade cadence, support windows, and what they manage for you versus what you're still responsible for — useful context before you assume upstream's GA date is also your cluster's availability date.
 
 ## Managing the churn with infrastructure as code
 
@@ -92,7 +92,7 @@ For teams managing custom resources, [`crd2pulumi`](/docs/integrations/clouds/ku
 
 It's also worth being direct about where that model stops. Kubernetes reconciles the objects inside your cluster; it has no opinion about the cloud resources — the managed database, the load balancer, the IAM role — that the cluster and its workloads depend on. Our explainer on [whether Kubernetes itself counts as infrastructure as code](/what-is/is-kubernetes-infrastructure-as-code/) digs into that boundary, and our companion piece on [infrastructure as code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/) covers the practical tooling landscape for managing the cluster, its workloads, and everything around them in one codebase.
 
-One honest caveat: as of this release, the [`@pulumi/kubernetes` provider](https://www.pulumi.com/registry/packages/kubernetes/) has its schema generated against upstream Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow on the provider's usual cadence, typically within a few weeks of a new upstream minor version. Nothing above requires waiting for that update to start reviewing your cluster configuration against the changes in this post.
+One honest caveat: as of this release, the [`@pulumi/kubernetes` provider](https://www.pulumi.com/registry/packages/kubernetes/) has its schema generated against upstream Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a subsequent provider release; recent minor-version bumps have landed anywhere from days to months after their upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed lag. Nothing above requires waiting for that update to start reviewing your cluster configuration against the changes in this post.
 
 ## Frequently asked questions
 
@@ -106,15 +106,15 @@ The changes most likely to break an upgrade are SELinuxMount reaching GA and def
 
 ### Does Kubernetes 1.37 deprecate kube-proxy's IPVS mode?
 
-Yes. Kubernetes 1.37 formally deprecates kube-proxy's `ipvs` proxy mode under KEP-5495. The mode is not removed in this release: disabling it by default is planned for v1.40, with full removal planned for v1.43. Clusters currently running in `ipvs` mode should plan a migration to `iptables` or `nftables` mode well before then.
+No — that happened in v1.35. Kubernetes 1.37 is Stage 2 of the [KEP-5495](https://github.com/kubernetes/enhancements/blob/master/keps/sig-network/5495-deprecate-ipvs-mode-in-kube-proxy/README.md) phase-out: it adds a `KubeProxyIPVS` feature gate, defaulting to `true`, along with updated kubeadm warnings and documentation. The plan calls for disabling `ipvs` by default in v1.40 and removing it entirely in v1.43. Clusters currently running in `ipvs` mode should plan a migration to `iptables` or `nftables` mode well before then.
 
 ### When will Kubernetes 1.37 be available on EKS, AKS, and GKE?
 
-Each managed Kubernetes provider sets its own timeline for adopting a new minor version, and historically that has run from several weeks to a few months after upstream GA. Check your provider's release notes directly rather than assuming day-one availability; our [guide to managed Kubernetes services](/tutorials/glossary/managed-kubernetes/) covers how EKS, AKS, and GKE differ on upgrade cadence and support windows.
+Each managed Kubernetes provider sets its own timeline for adopting a new minor version, and historically that has run from weeks to a few months after upstream GA. Check your provider's release notes directly rather than assuming day-one availability; our [guide to managed Kubernetes services](/tutorials/glossary/managed-kubernetes/) covers how EKS, AKS, and GKE differ on upgrade cadence and support windows.
 
 ### Does Pulumi support Kubernetes 1.37?
 
-The `@pulumi/kubernetes` provider's schema is generated from a specific upstream Kubernetes version, and its most recent release tracks Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. The provider typically picks up a new upstream minor version within a few weeks of its GA. Most Pulumi programs are unaffected in the meantime, since the provider's generated types are additive across most Kubernetes minor versions.
+The `@pulumi/kubernetes` provider's schema is generated from a specific upstream Kubernetes version, and its most recent release tracks Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a subsequent release; recent minor-version bumps have landed anywhere from days to months after upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed timeline. Most Pulumi programs are unaffected in the meantime, since the provider's generated types are additive across most Kubernetes minor versions.
 
 ### How do I upgrade to Kubernetes 1.37 safely?
 
