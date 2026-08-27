@@ -20,7 +20,7 @@ Anyone using Pulumi — including users of Pulumi open source and the free tier 
 - **[Pulumi Community Slack](https://slack.pulumi.com/)** — Ask questions and discuss Pulumi with other users. The community Slack is used by other Pulumi users and is regularly monitored by Pulumi employees, including engineers and members of the developer relations team.
 - **[GitHub issues](/docs/support/filing-issues/)** — Report bugs and request features. The linked guide explains how to pick the right Pulumi repository for your issue, and how to attach the logs for a failed operation with `pulumi logs share`.
 - **[Documentation](/docs/)** — Browse the full Pulumi documentation for guidance on infrastructure, secrets, policies, and platform features.
-- **Direct chat support** - Chat with our AI agent, Fin, using the chatbox in the bottom-right corner of the website.
+- **Direct chat support** — Chat with our AI agent, Fin, using the chat box in the bottom-right corner of the website.
 
 Pulumi staff are active in both the community Slack and on GitHub, but response times depend on availability and are not covered by an SLA.
 
