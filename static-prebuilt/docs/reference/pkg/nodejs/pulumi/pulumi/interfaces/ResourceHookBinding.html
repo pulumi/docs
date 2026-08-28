@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ResourceHookBinding | @pulumi/pulumi - v3.259.0</title><meta name="description" content="Documentation for @pulumi/pulumi"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script defer src="../assets/custom.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@pulumi/pulumi - v3.259.0</a>
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ResourceHookBinding | @pulumi/pulumi - v3.260.0</title><meta name="description" content="Documentation for @pulumi/pulumi"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script defer src="../assets/custom.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@pulumi/pulumi - v3.260.0</a>
 <div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
 <ul role="listbox" id="tsd-search-results"></ul>
 <div id="tsd-search-status" aria-live="polite" aria-atomic="true">
@@ -13,16 +13,17 @@
 <section class="tsd-panel tsd-comment">
 <div class="tsd-comment tsd-typography"><p>Binds <a href="../classes/ResourceHook.html" class="tsd-kind-class">ResourceHook</a> instances to a resource. The resource hooks will
 be invoked during certain step of the lifecycle of the resource.</p>
-<p><code>before_${action}</code> hooks that raise an exception cause the action to fail.
-<code>after_${action}</code> hooks that raise an exception will log a warning, but do
-not cause the action or the deployment to fail.</p>
+<p>By default, an error from a <code>before_${action}</code> hook causes the action to fail.
+An error from an <code>after_${action}</code> hook fails the deployment. The resource
+operation itself has already succeeded, so its result is recorded in state.
+Set <code>ignoreErrors</code> on the hook to log a warning instead.</p>
 <p>When running <code>pulumi destroy</code>, <code>before_delete</code> and <code>after_delete</code> resource
 hooks require the operation to run with <code>--run-program</code>, to ensure that the
 program which defines the hooks is available.</p>
 </div></section>
 <div class="tsd-signature"><span class="tsd-signature-keyword">interface</span> <span class="tsd-kind-interface">ResourceHookBinding</span> <span class="tsd-signature-symbol">{</span><br/>    <a class="tsd-kind-property" href="#aftercreate">afterCreate</a><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#afterdelete">afterDelete</a><span class="tsd-signature-symbol">?:</span> <a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#afterupdate">afterUpdate</a><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#beforecreate">beforeCreate</a><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#beforedelete">beforeDelete</a><span class="tsd-signature-symbol">?:</span> <a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#beforeupdate">beforeUpdate</a><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#onerror">onError</a><span class="tsd-signature-symbol">?:</span> <a href="../classes/ErrorHook.html" class="tsd-signature-type tsd-kind-class">ErrorHook</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1290">pulumi/sdk/nodejs/resource.ts:1290</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1292">pulumi/sdk/nodejs/resource.ts:1292</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -47,7 +48,7 @@ program which defines the hooks is available.</p>
 <div class="tsd-comment tsd-typography"><p>Hooks to be invoked after the resource is created.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1298">pulumi/sdk/nodejs/resource.ts:1298</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1300">pulumi/sdk/nodejs/resource.ts:1300</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="afterdelete"><code class="tsd-tag">Optional</code><span>after<wbr/>Delete</span><a href="#afterdelete" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">afterDelete</span><span class="tsd-signature-symbol">?:</span> <a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a><span class="tsd-signature-symbol">[]</span></div>
@@ -58,21 +59,21 @@ this argument requires named <a href="../classes/ResourceHook.html" class="tsd-k
 deleted.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1324">pulumi/sdk/nodejs/resource.ts:1324</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1326">pulumi/sdk/nodejs/resource.ts:1326</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="afterupdate"><code class="tsd-tag">Optional</code><span>after<wbr/>Update</span><a href="#afterupdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">afterUpdate</span><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Hooks to be invoked after the resource is updated.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1306">pulumi/sdk/nodejs/resource.ts:1306</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1308">pulumi/sdk/nodejs/resource.ts:1308</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="beforecreate"><code class="tsd-tag">Optional</code><span>before<wbr/>Create</span><a href="#beforecreate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">beforeCreate</span><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Hooks to be invoked before the resource is created.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1294">pulumi/sdk/nodejs/resource.ts:1294</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1296">pulumi/sdk/nodejs/resource.ts:1296</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="beforedelete"><code class="tsd-tag">Optional</code><span>before<wbr/>Delete</span><a href="#beforedelete" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">beforeDelete</span><span class="tsd-signature-symbol">?:</span> <a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a><span class="tsd-signature-symbol">[]</span></div>
@@ -83,14 +84,14 @@ this argument requires named <a href="../classes/ResourceHook.html" class="tsd-k
 deleted.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1315">pulumi/sdk/nodejs/resource.ts:1315</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1317">pulumi/sdk/nodejs/resource.ts:1317</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="beforeupdate"><code class="tsd-tag">Optional</code><span>before<wbr/>Update</span><a href="#beforeupdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">beforeUpdate</span><span class="tsd-signature-symbol">?:</span> (<a href="../classes/ResourceHook.html" class="tsd-signature-type tsd-kind-class">ResourceHook</a> <span class="tsd-signature-symbol">|</span> <a href="../types/ResourceHookFunction.html" class="tsd-signature-type tsd-kind-type-alias">ResourceHookFunction</a>)<span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Hooks to be invoked before the resource is updated.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1302">pulumi/sdk/nodejs/resource.ts:1302</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1304">pulumi/sdk/nodejs/resource.ts:1304</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="onerror"><code class="tsd-tag">Optional</code><span>on<wbr/>Error</span><a href="#onerror" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">onError</span><span class="tsd-signature-symbol">?:</span> <a href="../classes/ErrorHook.html" class="tsd-signature-type tsd-kind-class">ErrorHook</a><span class="tsd-signature-symbol">[]</span></div>
@@ -99,7 +100,7 @@ deleted.</p>
 The callback can return true to retry the operation, or false to not retry.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/0ac56e876614aedf12771d73ef7e80959b8a6fd4/sdk/nodejs/resource.ts#L1331">pulumi/sdk/nodejs/resource.ts:1331</a></li></ul></aside></section></section></details></div>
+<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/fe974d4f306962ad3a4aa273be83b98d6b2ff1cc/sdk/nodejs/resource.ts#L1333">pulumi/sdk/nodejs/resource.ts:1333</a></li></ul></aside></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -117,7 +118,7 @@ The callback can return true to retry the operation, or false to not retry.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
 <div><a href="#aftercreate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>after<wbr/>Create</span></a><a href="#afterdelete"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>after<wbr/>Delete</span></a><a href="#afterupdate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>after<wbr/>Update</span></a><a href="#beforecreate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Create</span></a><a href="#beforedelete"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Delete</span></a><a href="#beforeupdate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Update</span></a><a href="#onerror"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>on<wbr/>Error</span></a></div></details></div></details></div>
 <div class="site-menu">
-<nav class="tsd-navigation"><a href="../modules.html">@pulumi/pulumi - v3.259.0</a>
+<nav class="tsd-navigation"><a href="../modules.html">@pulumi/pulumi - v3.260.0</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
 <li>Loading...</li></ul></nav></div></div></div><footer>
 <p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
