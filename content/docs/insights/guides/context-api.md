@@ -15,19 +15,36 @@ pulumi_cloud_feature: context-api
 
 The Context API is a read-only Pulumi Cloud API for querying the infrastructure graph. For an introduction to the product, use cases, and access requirements, see the [Context API overview](/docs/insights/context-api/).
 
+Most people use the Context API through an AI agent: ask a question in natural language, and the agent composes and runs a graph query. This guide is the human-readable technical reference for understanding and validating the selectors and responses behind that interaction or building a direct integration.
+
 The graph connects nodes like resources (IaC or [Discovered](/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
-Queries use a JSON selector that says where to start, which relationships to follow, and which parts of the result to return. The API returns the selected graph data as nodes, edges, and optional evidence paths. The selector is JSON, not GraphQL, GQL, or Cypher text.
+A graph query uses a JSON selector that says where to start, which relationships to follow, and which parts of the result to return. The API returns the selected graph data as nodes, edges, and optional evidence paths. Selectors are plain JSON, not queries written in GraphQL, GQL, or the Cypher query language.
 
-The Context API is in public preview. Before running a query, make sure that:
+The Context API is in public preview. The availability notice at the top of this page lists the Pulumi Cloud editions that can use it. Before running a query, make sure that:
 
 - You have [Pulumi CLI](/docs/install/) v3.243.0 or later and are logged in with `pulumi login`.
-- Your organization has access to the Context API.
 - Your role grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
 
-## Run your first query
+Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rbac/) filters each response to the resources, stacks, and cloud accounts that the user or token making the request is permitted to read.
 
-Start with one anchor, no traversal, and two projected fields. Save this selector as `query.json`:
+## Ask questions through an AI agent
+
+You can use [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
+
+```bash
+pulumi api GetGraphSchema -F orgName=my-org
+```
+
+Replace `my-org` with your organization name, then ask a natural-language question such as:
+
+> Which stacks consume outputs from the `payments/prod` and `payments/staging` stacks?
+
+The primer gives the agent the current graph vocabulary, selector grammar, engine limits, worked examples, and guidance for handling pagination and response completeness.
+
+## Walk through a representative query
+
+This teaching example uses one anchor, no traversal, and two projected fields to keep the selector and response focused. An agent may generate a more complex selector or make multiple requests to answer the same question. Read your agent's transcript to inspect the exact queries it ran. To run the example directly, save this selector as `query.json`:
 
 ```json
 {
@@ -329,7 +346,7 @@ A graph query returns part of a graph rather than a table of rows.
 ### Check completeness before acting
 
 {{% notes type="warning" %}}
-Do not treat a result as proving absence, an exhaustive cleanup-candidate list, a total across all groups, or a full blast radius until you have read every page, every page reports `meta.resultMode: "exact"`, and, for a traversal, every page reports `meta.visibility: "complete"`. These checks are necessary, but they certify the answer only relative to the selector, the caller's access, and the current search index.
+Do not use a result to prove absence, produce an exhaustive cleanup-candidate list, report a total across all groups, or claim to have identified the full impact of a change until you have read every page, every page reports `meta.resultMode: "exact"`, and, for a traversal, every page reports `meta.visibility: "complete"`. These checks are necessary, but they certify the answer only relative to the selector, the caller's RBAC permissions, and the current search index.
 {{% /notes %}}
 
 Read these response signals together:
@@ -337,7 +354,7 @@ Read these response signals together:
 | Signal | What it means | Implications and next steps |
 |---|---|---|
 | `meta.resultMode` | `exact` means no engine cap was reported and the search backend reported a complete answer. `truncated` means a cap was reached or the backend returned a partial answer, so matching data may exist that is unreachable by this query. The public response does not identify which cause applied. | A `truncated` result cannot support an empty-result conclusion, an exhaustive list, a total across groups, an absence claim, or a full impact analysis. Returned nodes and edges, and the existence of returned aggregation buckets, remain positive evidence, but a bucket's metric can be incomplete. |
-| `meta.visibility` | For a traversal, `complete` means the API did not detect a permission-trimmed walk. `trimmed` means permissions hid something the traversal encountered or the API could not verify visibility. Aggregations omit it. | A `trimmed` traversal cannot support an absence or full-impact claim. If access limited the walk, have a caller with broader access run the query before making a broader claim. |
+| `meta.visibility` | For a traversal, `complete` means the API did not detect RBAC filtering during the walk. `trimmed` means RBAC excluded data from the traversal or the API could not verify whether filtering occurred. Aggregations omit it. | A `trimmed` traversal cannot support an absence claim or a claim about the full impact of a change. If RBAC limited the walk, have a caller with broader read permissions run the query before making a broader claim. |
 | `pageInfo.continuationToken` | A present token means more of the result retained by the API remains. It is independent of `resultMode`. The key is absent on the final page of results. | A conclusion that depends on the full result remains incomplete while a token is present. Pass the opaque token back as `page.continuationToken` without modifying it. When `resultMode` is `exact`, each returned bucket's metric is complete for that key even if other bucket pages remain. |
 | `meta.schemaVersion` | The graph contract revision used to evaluate the selector. It is not a completeness signal by itself. | If your client or saved selector assumes another revision, re-fetch the deployed schema and validate those assumptions before interpreting the result. |
 
@@ -346,7 +363,7 @@ If `resultMode` is `truncated`, retry the same selector once in case the search 
 Even an exact, complete, fully drained response can fail to support the conclusion you intended:
 
 - Scope, predicates, edge types, and traversal depth define the question. For example, a three-hop query says nothing about a fourth-hop consumer and still reports `exact`.
-- Anchor selection and aggregation include only nodes the caller can access. `meta.visibility` reports permission trimming during traversal; it does not report matching anchors excluded by access controls. To make an organization-wide absence or total claim, run the query with read access to every stack and cloud account. Otherwise, limit the claim to nodes visible to the caller.
+- [Pulumi Cloud RBAC](/docs/administration/concepts/rbac/) limits anchor selection, aggregation, and traversal to nodes the caller can read. `meta.visibility` reports when the API detects RBAC filtering during traversal; it does not report matching anchors excluded by RBAC. To make an organization-wide absence or total claim, run the query with read access to every stack and cloud account. Otherwise, limit the claim to nodes the caller can read.
 - The API answers from the search index. Indexing lag, relationships the graph does not model, and `inferred_reference` edges can make the indexed graph differ from the source of record. An `inferred_reference` represents a possible dependency rather than a declared relationship.
 - Resources pending deletion are outside the graph, so a graph count can be lower than a [Resource Search](/docs/insights/discovery/search/) count over an otherwise similar selection.
 - Pages are evaluated as they are requested. If the graph changes while you drain a query, the combined pages may be inconsistent.
@@ -358,7 +375,7 @@ Confirm high-stakes absence answers against current stack state before deleting 
 
 ## Complete query examples
 
-The following examples apply the selector and response concepts above to common infrastructure questions. Substitute your own project, stack, resource type, and provider version.
+Each heading below is a natural-language question you can give an agent. The selectors and responses are representative; an agent may use a different valid selector or several requests to answer the same question. Substitute your own project, stack, resource type, and provider version when adapting an example for direct use.
 
 ### Which stacks consume these stack outputs
 
@@ -459,9 +476,9 @@ Read it in English as: **Start at the `payments/prod` and `payments/staging` sta
 
 The path lists node IDs in traversal order and the edge IDs that connect them. The edge's `from` and `to` fields still use the relationship's defined orientation.
 
-The three-hop depth is part of the question. Consumers farther away are not included, and that user-selected bound does not make `meta.resultMode` become `truncated`.
+This representative selector limits the traversal to three hops. Consumers farther away are not included, and that explicit bound does not set `meta.resultMode` to `truncated`.
 
-### What is the blast radius of a provider upgrade
+### Which stacks could a provider upgrade affect
 
 ```json
 {
@@ -515,11 +532,11 @@ The three-hop depth is part of the question. Consumers farther away are not incl
         "min": 0,
         "max": 3
       },
-      "alias": "blastRadius"
+      "alias": "affectedStacks"
     }
   ],
   "return": {
-    "select": ["blastRadius"],
+    "select": ["affectedStacks"],
     "paths": true
   },
   "page": {
@@ -538,7 +555,7 @@ Read it in English as: **Start at outdated AWS providers in `payments`, find wha
     {
       "id": "stack:my-org/payments/prod",
       "nodeType": "stack",
-      "frontier": ["blastRadius"],
+      "frontier": ["affectedStacks"],
       "stack": "prod",
       "project": "payments"
     },
@@ -610,7 +627,7 @@ Read it in English as: **Start at outdated AWS providers in `payments`, find wha
 
 {{% /details %}}
 
-Only `blastRadius` was selected for return. The provider and managed resource therefore have empty `frontier` arrays, but the API includes them to make the evidence path self-contained. `pageInfo.resultCount` includes these supporting nodes.
+Only `affectedStacks` was selected for return. The provider and managed resource therefore have empty `frontier` arrays, but the API includes them to make the evidence path self-contained. `pageInfo.resultCount` includes these supporting nodes.
 
 `page.pageSize` requests up to 500 nodes per response page. Follow any `pageInfo.continuationToken` before treating the result as complete.
 
@@ -747,12 +764,12 @@ Resources and stacks use different names when you select them and when you read 
 
 An anchor accepts these fields:
 
-| Field | Meaning |
-|---|---|
-| `nodeType` | Required. `resource` or `stack`. |
-| `match` | A structured match. All present predicates are combined with AND. |
-| `query` | A [Resource Search query](/docs/insights/discovery/search/) string. Valid only for a `resource` anchor and mutually exclusive with `match`. |
-| `limit` | Bounds resolved anchors. Under aggregation it limits returned buckets, not the resources counted in a returned bucket. |
+| Field | Required | Meaning |
+|---|---|---|
+| `nodeType` | Yes | The node type to select: `resource` or `stack`. |
+| `match` | No | A structured match. All present predicates are combined with AND. |
+| `query` | No | A [Resource Search query](/docs/insights/discovery/search/) string. Valid only for a `resource` anchor and mutually exclusive with `match`. |
+| `limit` | No | Bounds resolved anchors. Under aggregation it limits returned buckets, not the resources counted in a returned bucket. |
 
 Omitting both `match` and `query` selects every visible node of the given type. For resource anchors, `match.type` is an exact resource type token such as `aws:s3/bucket:Bucket`. For `match.fields`, use fields listed in the deployed schema under `nodeTypes[].selectableFields`.
 
@@ -793,14 +810,14 @@ This step starts from the current frontier, follows incoming declared `reference
 }
 ```
 
-| Field | Example value | Effect |
-|---|---|---|
-| `edgeTypes` | `["reference"]` | Required. Follows declared dependency relationships. `["reference", "inferred_reference"]` is the only current multi-edge combination. |
-| `direction` | `"in"` | Required. For `reference`, walks from a dependency to resources that depend on it. |
-| `depth` | `{"min": 1, "max": 3}` | Includes nodes reached in one, two, or three hops. Omit it for exactly one hop. Set `min` to `0` to also keep the step's source nodes. |
-| `target.match` | `{"type": "aws:ec2/instance:Instance"}` | Keeps only reached EC2 instance nodes. |
-| `target.absent` | `true` | If added to `target` above, returns source nodes from which no matching EC2 instance is reachable within the depth range. Use it only on the final traversal step. |
-| `alias` | `"dependents"` | Names this result so `return.select` can include it. Without an alias, the first step is `step0`, the second is `step1`, and so on. |
+| Field | Required | Example value | Effect |
+|---|---|---|---|
+| `edgeTypes` | Yes | `["reference"]` | Follows declared dependency relationships. `["reference", "inferred_reference"]` is the only current multi-edge combination. |
+| `direction` | Yes | `"in"` | For `reference`, walks from a dependency to resources that depend on it. |
+| `depth` | No | `{"min": 1, "max": 3}` | Includes nodes reached in one, two, or three hops. Omit it for exactly one hop. Set `min` to `0` to also keep the step's source nodes. |
+| `target.match` | No | `{"type": "aws:ec2/instance:Instance"}` | Keeps only reached EC2 instance nodes. |
+| `target.absent` | No | `true` | If added to `target` above, returns source nodes from which no matching EC2 instance is reachable within the depth range. Use it only on the final traversal step. |
+| `alias` | No | `"dependents"` | Names this result so `return.select` can include it. Without an alias, the first step is `step0`, the second is `step1`, and so on. |
 
 Before choosing an edge, direction, target field, or depth, fetch the [deployed schema](#get-the-deployed-schema). Each `edgeTypes[]` entry describes the edge's orientation and supported directions. The `singleHop` field identifies edges limited to one hop. For fields in `target.match`, use the target node type's `nodeTypes[].projectableFields`.
 
@@ -925,7 +942,9 @@ These values are a snapshot, not a compatibility promise. Check `GetGraphSchema`
 
 ## Get the deployed schema
 
-Fetch the latest schema before composing or validating selectors:
+Use `GetGraphSchema` to validate a selector against the deployed contract or equip an agent with the current graph vocabulary and selector guidance.
+
+For validation and integration tooling, fetch the JSON representation:
 
 ```bash
 pulumi api GetGraphSchema -F orgName=my-org --output=json
@@ -933,10 +952,12 @@ pulumi api GetGraphSchema -F orgName=my-org --output=json
 
 The JSON response is authoritative for the deployed schema version, node types, fields available for selection, projection, and grouping, fixed field values, edge types and directions, metric operations, and engine limits. This response is not a complete JSON Schema for the request body.
 
-Fetch the Markdown representation when you want the deployed agent primer, including selector guidance and worked examples:
+To equip an agent, fetch the Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema -F orgName=my-org --output=markdown
+pulumi api GetGraphSchema -F orgName=my-org
 ```
+
+The primer describes the current graph vocabulary, selector grammar, engine limits, worked examples, and guidance for handling pagination and response completeness. Give the agent this command so it can refresh the primer as the API evolves.
 
 The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) defines the accepted request and response shapes. While the Context API remains in public preview, re-fetch the deployed schema instead of relying on a saved copy.
