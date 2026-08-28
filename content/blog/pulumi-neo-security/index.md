@@ -41,7 +41,8 @@ analysis alone cannot find. These flaws are often as severe as the ones in code,
 worse, and they await discovery by malicious agents on offense. We realized recently we
 can uniquely help here. At Pulumi, we have complete visibility into your entire cloud estate:
 infrastructure resources, their semantics, connections and dependencies between them,
-runtime logs and information, and more -- and have built an entire context graph out of them that is accessible to agents.
+runtime logs and information, and more — and have built an entire context graph out of
+them that is accessible to agents.
 
 Thanks to large language models, the cost of analyzing that full context graph is no longer prohibitive.
 As a result, today we're opening a research preview of **Pulumi Neo Security**. Neo Security
@@ -61,23 +62,23 @@ run and address any findings. If you'd like to give it a try, [contact us](/cont
 ## How it finds attack paths
 
 Neo Security's aim is to provide a high-confidence, actionable security posture report.
-It does so as follows:
+It gets there in three passes.
 
-**It builds a threat model before it looks for anything.** It works out what
-your crown jewels are, which resources are accessible to outside actors, which accounts
-hold production data, where the trust boundaries sit between the internet, your workloads,
-and the identities those workloads carry, and which attackers are realistic for your
-organization. This is what gives it relative risk and blast radius. Without it, a
+The first builds a threat model, before it looks for anything. It works out what your
+crown jewels are, which resources are accessible to outside actors, which accounts hold
+production data, where the trust boundaries sit between the internet, your workloads, and
+the identities those workloads carry, and which attackers are realistic for your
+organization. That is what gives it relative risk and blast radius. Without it, a
 development sandbox would be treated the same as a production database.
 
-**Then it looks for attack vectors rather than resources.** Working from that threat
-model, it maps internet entry points, federation and trust relationships, workload
-identity, lateral movement between accounts, data and secret reachability, and the ways
-those combine. The goal is to find, for each misconfiguration, the worst outcome it
-enables.
+Working from that model, the second pass maps attack vectors: internet entry points,
+federation and trust relationships, workload identity, lateral movement between accounts,
+data and secret reachability, and the ways those combine. A resource matters only insofar
+as an attacker can use it. The goal is to find, for each misconfiguration, the worst
+outcome it enables.
 
-**It pulls together six planes of evidence at once.** Each plane lives in a
-different system, and Neo has visibility into all of them:
+The third pulls together six planes of evidence at once, each living in a different
+system:
 
 - **Resource inventory.** The discovered infrastructure inventory across all cloud accounts,
   regions, and resource types. For example: AWS S3 buckets and EC2 VMs, GKE clusters and
@@ -108,10 +109,10 @@ different system, and Neo has visibility into all of them:
   action. This is what resolves the permissions and firewall rules that survive once every
   overlapping rule, boundary, and service control policy has been applied.
 
-Neo uses this information to build a model of your estate and home in on validated paths,
-proving and refuting attack vectors, and prioritizing based on severity and confidence. The
-result is a short list, each entry carrying its evidence and, where source is available, a
-fix as specific lines of code. The analysis deeply understands each cloud's identity model, networking, and data services
+Neo uses this information to build a model of your estate and home in on validated paths.
+It proves or refutes each attack vector, then ranks what survives by severity and
+confidence. The result is a short list, each entry carrying its evidence and, where source
+is available, a fix as specific lines of code. The analysis deeply understands each cloud's identity model, networking, and data services
 well enough to resolve effective permissions and firewall rules and to ask the providers
 directly. The assessment phase is read-only throughout.
 
