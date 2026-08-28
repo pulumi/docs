@@ -4,7 +4,7 @@ date: 2026-08-26
 draft: false
 meta_desc: "Kubernetes 1.37 breaking changes, GA features, and deprecations infrastructure teams need to plan an upgrade around, from SELinuxMount to DRA."
 authors:
-    - levi-blackstone
+    - pulumi-content-team
 tags:
     - kubernetes
     - platform-engineering
