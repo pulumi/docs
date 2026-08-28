@@ -71,7 +71,7 @@ A query is a JSON document with a handful of clauses. `anchor` names the startin
 }
 ```
 
-With supplementary fields omitted, an abridged response for one matching provider and one managed resource looks like this:
+A response for one matching provider and one managed resource looks like this (abridged for clarity):
 
 ```json
 {
