@@ -107,11 +107,11 @@ Pulumi ships two forms so you can choose the operating model: a local server for
 
 ### HashiCorp Terraform MCP Server
 
-**Maintainer:** HashiCorp. **Transport:** stdio (default) or Streamable HTTP. **Auth:** token passthrough supported for centralized HTTP deployments; no built-in OAuth documented at the time of writing. **Read-only mode:** yes, the server is documentation- and registry-lookup focused by default; a plan-only mode is available for teams that want proposals without execution access. **Maturity:** GA, per HashiCorp's own announcement.
+**Maintainer:** HashiCorp. **Transport:** stdio (default) or Streamable HTTP. **Auth:** token passthrough supported for centralized HTTP deployments; no built-in OAuth documented at the time of writing. **Read-only mode:** yes, and it's the default: the registry and documentation toolsets are read-only, and the write toolset (creating or updating HCP Terraform workspaces, running apply/discard/cancel on a run) is gated behind the `ENABLE_TF_OPERATIONS` environment variable, which is unset unless you opt in. **Maturity:** GA, per HashiCorp's own announcement.
 
 The Terraform MCP server gives any MCP-compatible agent real-time access to Terraform Registry documentation, modules, and provider schemas, so generated HCL reflects the current registry state instead of a model's training-data snapshot.
 
-**Best for:** Terraform and OpenTofu shops that want agent-generated HCL to stay current with registry changes without giving the agent standing apply access.
+**Best for:** Terraform shops that want agent-generated HCL to stay current with Terraform Registry changes without giving the agent standing apply access. The registry-currency benefit doesn't carry over to OpenTofu, which maintains its own separate registry.
 
 ## Which MCP servers cover cloud provider control planes?
 
@@ -119,7 +119,7 @@ The Terraform MCP server gives any MCP-compatible agent real-time access to Terr
 
 **Maintainer:** AWS. **Transport:** Streamable HTTP. **Auth:** none required; it's a documentation retrieval tool, not an account-scoped one. **Read-only mode:** the entire server is read-only by design. **Maturity:** GA, announced October 1, 2025 following a July 2025 preview.
 
-This server answers questions against AWS documentation, the What's New feed, Well-Architected guidance, and regional service availability. It requires no AWS credentials because it never touches your account, which makes it a low-risk default for teams that want agent-accurate AWS answers without opening any account access. AWS's separate `aws-api-mcp-server`, which can run arbitrary AWS CLI-equivalent calls against your account, is explicitly flagged on AWS's own docs as being superseded by newer, narrower servers; check the current AWS Labs MCP catalog before standing up a broad-access server when a narrower one (this one, or the EKS/ECS/IaC-specific servers) will do.
+This server answers questions against AWS documentation, the What's New feed, Well-Architected guidance, and regional service availability. It requires no AWS credentials because it never touches your account, which makes it a low-risk default for teams that want agent-accurate AWS answers without opening any account access. AWS's separate `aws-api-mcp-server`, which can run arbitrary AWS CLI-equivalent calls against your account, is now flagged on AWS's own docs as entering end of development, with migration directed to the newer AWS MCP Server (GA May 2026), whose `call_aws` tool covers 15,000+ AWS API operations under your existing IAM credentials. If you need account-scoped access rather than documentation lookup, evaluate that server and scope its IAM credentials tightly before granting it to an agent.
 
 **Best for:** any team wanting agent answers grounded in current AWS documentation, with zero account-access risk.
 
@@ -153,7 +153,7 @@ Where `containers/kubernetes-mcp-server` is generic, the Flux Operator MCP serve
 
 ### GitHub MCP Server
 
-**Maintainer:** GitHub. **Transport:** local stdio server (the more mature option) or a remote hosted server, in public preview since June 2025. **Auth:** GitHub OAuth or a personal access token, depending on mode. **Read-only mode:** available as a launch flag; default is read/write. **Maturity:** local server well-established; remote server newer and still in preview.
+**Maintainer:** GitHub. **Transport:** local stdio server or a remote hosted server, generally available since September 2025. **Auth:** GitHub OAuth or a personal access token, depending on mode. **Read-only mode:** available as a launch flag; default is read/write. **Maturity:** GA in both forms.
 
 Dozens of tools cover repositories, issues, pull requests, Actions runs, and code search, with both read and write operations, including the ability to open PRs and merge them. That write capability is exactly why the read-only flag is worth enabling for any agent that only needs repository context rather than the ability to act on it.
 
@@ -204,13 +204,13 @@ This server pairs with HashiCorp's broader "agentic identity" push in Vault Ente
 | Server | Maintainer | Transport | Hosted or self-run | Read-only mode | Can mutate infra | Maturity |
 | --- | --- | --- | --- | --- | --- | --- |
 | Pulumi MCP Server | Pulumi | stdio + Streamable HTTP | Both | Registry/Cloud tools yes; CLI tools no | Yes (gated by preview) | Shipping |
-| HashiCorp Terraform MCP Server | HashiCorp | stdio + Streamable HTTP | Self-run | Yes (default) | Yes (plan-only mode available) | GA |
+| HashiCorp Terraform MCP Server | HashiCorp | stdio + Streamable HTTP | Self-run | Yes (default) | Only if `ENABLE_TF_OPERATIONS` set | GA |
 | HashiCorp Vault MCP Server | HashiCorp | stdio + Streamable HTTP | Self-run | No | Yes | Beta |
 | AWS Knowledge MCP Server | AWS | Streamable HTTP | Hosted | Yes (always) | No | GA |
 | Azure MCP Server | Microsoft | Local or remote | Both | Depends on RBAC | Yes | Actively maintained |
 | containers/kubernetes-mcp-server | containers org | stdio + Streamable HTTP | Self-run | Available, opt-in | Yes (default) | Actively released |
 | Flux Operator MCP Server | ControlPlane / Flux | stdio | Self-run | No | Yes | Actively developed |
-| GitHub MCP Server | GitHub | stdio or remote | Both | Available, opt-in | Yes (default) | Local: mature; remote: preview |
+| GitHub MCP Server | GitHub | stdio or remote | Both | Available, opt-in | Yes (default) | GA (local and remote) |
 | Docker MCP Gateway | Docker | Local plugin | Self-run | Depends on catalog | Depends on catalog | Shipping |
 | Grafana MCP Server | Grafana Labs | Local | Self-run | Yes (query-focused) | No | Actively released |
 | Datadog MCP Server | Datadog | Local or hosted | Both | Yes (query-focused) | No | Shipping |
@@ -221,7 +221,7 @@ This server pairs with HashiCorp's broader "agentic identity" push in Vault Ente
 1. **Scope credentials narrowly.** Give the server the smallest token, role, or ServiceAccount that does the job, not the identity you use for everyday admin work.
 2. **Prefer read-only where the task allows it.** Several servers on this list, `containers/kubernetes-mcp-server` and GitHub's server among them, ship a read-only mode as a launch flag. Default to it and only widen scope when a specific task needs it.
 3. **Put a gateway or proxy in front of anything network-reachable.** Docker's MCP Gateway pattern, or a comparable internal proxy, centralizes secrets handling and gives you one place to enforce header-based routing and rate limits instead of trusting every client's local configuration.
-4. **Require a preview or plan step before any mutating call executes.** Terraform's plan-only mode and Pulumi's preview-before-up discipline exist for exactly this reason: a human should see what will change before an agent, or anyone else, executes it.
+4. **Require a preview or plan step before any mutating call executes.** Terraform's `ENABLE_TF_OPERATIONS` gate, unset by default, and Pulumi's preview-before-up discipline exist for exactly this reason: a human should see what will change before an agent, or anyone else, executes it.
 5. **Pin server versions instead of always pulling latest.** Several servers are distributed via `npx`- or `uvx`-style runners that fetch the newest version at call time; pin a version so a supply-chain compromise upstream doesn't reach your agent automatically.
 6. **Control egress from wherever the server runs.** An MCP server with broad account access and unrestricted outbound network access is a bigger blast radius than the same server on a locked-down network path.
 7. **Log every tool call.** Treat MCP tool invocations the way you'd treat any privileged API call: with an audit trail you can review after the fact, not just in the moment.
@@ -242,7 +242,7 @@ MCP's threat model, including tool poisoning, prompt injection, and the specific
 
 ### Are MCP servers safe to point at production infrastructure?
 
-It depends entirely on which server, which mode, and what credentials you give it. A read-only server like the AWS Knowledge MCP Server carries little risk because it can't change anything. A server that can mutate infrastructure, like `containers/kubernetes-mcp-server` in its default mode or the Terraform MCP server without plan-only enabled, needs the same scoped-credential and approval-gate discipline you'd apply to any automated system with write access.
+It depends entirely on which server, which mode, and what credentials you give it. A read-only server like the AWS Knowledge MCP Server carries little risk because it can't change anything. A server that can mutate infrastructure, like `containers/kubernetes-mcp-server` in its default mode or the Terraform MCP server with `ENABLE_TF_OPERATIONS` set, needs the same scoped-credential and approval-gate discipline you'd apply to any automated system with write access.
 
 ### Do I need a separate MCP server for every tool in my stack?
 
