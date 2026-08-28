@@ -72,10 +72,10 @@ development sandbox would be treated the same as a production database.
 **Then it looks for attack vectors rather than resources.** Working from that threat
 model, it maps internet entry points, federation and trust relationships, workload
 identity, lateral movement between accounts, data and secret reachability, and the ways
-those combine. The objective is to find, for each misconfiguration, the worst outcome it
+those combine. The goal is to find, for each misconfiguration, the worst outcome it
 enables.
 
-**It pulls together several planes of evidence at once.** Each plane lives in a
+**It pulls together six planes of evidence at once.** Each plane lives in a
 different system, and Neo has visibility into all of them:
 
 - **Resource inventory.** The discovered infrastructure inventory across all cloud accounts,
@@ -164,4 +164,4 @@ multi-cloud and multi-account, a good mix of resource types, IaC and non-IaC res
 and those for which their infrastructure security is paramount.
 
 Attackers are going to point agents at cloud infrastructure next. We would rather you find
-these problems first and we want to help. If you want to try a scan, [just get in touch](/contact/).
+these problems first and we want to help. If you want to try a scan, [get in touch](/contact/).
