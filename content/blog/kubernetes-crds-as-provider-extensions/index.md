@@ -20,7 +20,7 @@ social:
     bluesky:
 ---
 
-We're really excited to bring you the newest pulumi-kubernetes provider. As with any release, we've shipped standard dependency updates and bugfixes. This provider release includes the newest resources for Kubernetes v1.37.0, which was just cut this week. So that in itself is very exciting!
+We're really excited to bring you the newest pulumi-kubernetes provider. As with any release, we've shipped standard dependency updates and bug fixes. This provider release includes the newest resources for Kubernetes v1.37.0, which was recently cut. So that in itself is very exciting!
 
 <!--more-->
 
@@ -101,15 +101,18 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
-	Metadata: &metav1.ObjectMetaArgs{
-		Name: pulumi.String("my-new-cron-object"),
-	},
-	Spec: &crontabsv1.CronTabSpecArgs{
-		CronSpec: pulumi.String("* * * * */5"),
-		Image:    pulumi.String("my-awesome-cron-image"),
-		Replicas: pulumi.Int(3),
-	},
+pulumi.Run(func(ctx *pulumi.Context) error {
+	_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
+		Metadata: &metav1.ObjectMetaArgs{
+			Name: pulumi.String("my-new-cron-object"),
+		},
+		Spec: &crontabsv1.CronTabSpecArgs{
+			CronSpec: pulumi.String("* * * * */5"),
+			Image:    pulumi.String("my-awesome-cron-image"),
+			Replicas: pulumi.Int(3),
+		},
+	})
+	return err
 })
 ```
 
@@ -212,15 +215,18 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
-	Metadata: &metav1.ObjectMetaArgs{
-		Name: pulumi.String("my-new-cron-object"),
-	},
-	Spec: &crontabsv1.CronTabSpecArgs{
-		CronSpec: pulumi.String("* * * * */5"),
-		Image:    pulumi.String("my-awesome-cron-image"),
-		Replicas: pulumi.Int(3),
-	},
+pulumi.Run(func(ctx *pulumi.Context) error {
+	_, err := crontabsv1.NewCronTab(ctx, "my-new-cron-object", &crontabsv1.CronTabArgs{
+		Metadata: &metav1.ObjectMetaArgs{
+			Name: pulumi.String("my-new-cron-object"),
+		},
+		Spec: &crontabsv1.CronTabSpecArgs{
+			CronSpec: pulumi.String("* * * * */5"),
+			Image:    pulumi.String("my-awesome-cron-image"),
+			Replicas: pulumi.Int(3),
+		},
+	})
+	return err
 })
 ```
 
@@ -291,4 +297,4 @@ resources:
 
 Read more in [Typed CustomResources with Provider Extensions](/registry/packages/kubernetes/how-to-guides/typed-customresources-with-provider-extensions/).
 
-Available from Pulumi v3.255.0 and Kubernetes v4.34.0.
+Available from Pulumi v3.255.0 and the Pulumi Kubernetes provider v4.34.0.
