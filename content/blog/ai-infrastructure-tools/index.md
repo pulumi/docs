@@ -81,7 +81,7 @@ CoreWeave is the GPU cloud that broke out of the AI hype cycle into a real publi
 
 ### Lambda Labs
 
-Lambda (the company now brands itself simply as "Lambda"; the legal entity remains Lambda Labs, Inc.) has been the approachable GPU cloud for a long time. Environments come pre-configured with PyTorch and TensorFlow, and you can be running on an H100 in about as long as it takes to copy your SSH key.
+Lambda (formerly Lambda Labs; the company is incorporated as Lambda, Inc.) has been the approachable GPU cloud for a long time. Environments come pre-configured with PyTorch and TensorFlow, and you can be running on an H100 in about as long as it takes to copy your SSH key.
 
 - **License**: Proprietary
 - **Best for**: Research teams, startups, and individual practitioners who want GPUs without a configuration tax
@@ -148,7 +148,7 @@ Before the tool list, one distinction matters more than any feature comparison: 
 
 Where you want to land on this spectrum is mostly a governance question, not a productivity one.
 
-Execution used to be the dividing line between these tools; it no longer is. By mid-2026, most of the vendors in this section can point an agent at your infrastructure and have it act, not just narrate. env zero's Agent CLI lets an existing coding agent make changes through the same roles and approvals a person would use. Spacelift Intent plans and applies infrastructure changes from a natural-language request. Microsoft's Azure SRE Agent can execute remediation rather than only recommend it. What differentiates these tools now is not whether they act, but how far their reach extends, how deep their guardrails go, and what happens when something goes wrong.
+Execution used to be the dividing line between these tools; it no longer is. By mid-2026, most of the dedicated IaC platforms in this section can point an agent at your infrastructure and have it act, not just narrate. env zero's Agent CLI lets an existing coding agent make changes through the same roles and approvals a person would use. Spacelift Intent plans and applies infrastructure changes from a natural-language request. Microsoft's Azure SRE Agent can execute remediation rather than only recommend it. What differentiates these tools now is not whether they act, but how far their reach extends, how deep their guardrails go, and what happens when something goes wrong.
 
 ### Pulumi Neo
 
@@ -212,13 +212,13 @@ Crossplane brings Kubernetes-style declarative management to cloud resources. It
 - **License**: Apache 2.0 (Crossplane); proprietary (Upbound)
 - **Best for**: Teams already deep in Kubernetes that want to manage cloud resources the same way, including letting agents operate against them with an audit trail
 
-Strengths: Kubernetes-native model; native GitOps fit; very active OSS community, now CNCF-graduated; agent-ready identity and fleet-wide visibility from Upbound v3. Caveat: the learning curve is real if you're not already living in Kubernetes, and v3's AI-native framing is about governing agent access, not an agent that makes infrastructure decisions on its own.
+Strengths: Kubernetes-native model; native GitOps fit; active OSS community, now CNCF-graduated; agent-ready identity and fleet-wide visibility from Upbound v3. Caveat: the learning curve is real if you're not already living in Kubernetes, and v3's AI-native framing is about governing agent access, not an agent that makes infrastructure decisions on its own.
 
 ### Hyperscaler infrastructure agents
 
 Each major cloud now ships its own AI agent for operating within that cloud. Microsoft's Azure SRE Agent, generally available since March 2026, runs automated root-cause analysis across app, platform, and infrastructure telemetry and, with configurable autonomy, can execute remediation rather than only recommend it. Google's Gemini Cloud Assist is broader but more advisory: it helps design architecture in natural language (generating gcloud, kubectl, and Terraform), runs guided incident investigations, and proposes cost-saving fixes through its FinOps tooling, but Google's own documentation cautions that proposed strategies need a human check before implementation.
 
-- **License**: Included with the respective cloud (some Gemini Cloud Assist capabilities require a Code Assist Enterprise or Premium Support tier)
+- **License**: Proprietary; Azure SRE Agent is billed per agent-hour plus token usage, and Gemini Cloud Assist is free during preview (some capabilities require a Code Assist Enterprise or Premium Support tier)
 - **Best for**: Teams fully committed to a single hyperscaler that want the AI layer bundled with everything else on that cloud
 
 Strengths: deep integration with the parent cloud's telemetry, IAM, and support; no separate platform to adopt. Caveat: single-cloud by design. If your infrastructure spans providers, or you expect to, a hyperscaler agent covers only part of the estate.
@@ -265,7 +265,7 @@ Strengths: visual development with bidirectional template sync; direct AWS integ
 | env zero | Multi-IaC platform + Agent CLI | Multi-tool support, agent-driven changes via your coding agent | Agent CLI is new (Aug 2026) | Proprietary | Multi-IaC environments |
 | Spacelift Intelligence | CI/CD platform | Conversational Q&A plus natural-language provisioning | Young; Intent reached early access late 2025 | Free (for now) | GitOps workflows |
 | Crossplane / Upbound | Kubernetes-native | K8s patterns for infra, agent-ready identity via Upbound v3 | Requires K8s expertise | Open source + commercial | Kubernetes-native teams |
-| Azure SRE Agent / Gemini Cloud Assist | Hyperscaler agent | Deep single-cloud integration, incident response | Single-cloud only | Included / consumption-based | Single-cloud shops |
+| Azure SRE Agent / Gemini Cloud Assist | Hyperscaler agent | Deep single-cloud integration, incident response | Single-cloud only | Metered per agent-hour (Azure) / free during preview (Google) | Single-cloud shops |
 | Code assistants | Code assistant | Broad language support, IDE | No infrastructure context | Subscription | General code assistance |
 | AWS Infrastructure Composer | Visual builder | Visual CloudFormation design, bidirectional sync | AWS- and CFN-only, design only | Included with AWS | AWS teams that want a visual designer |
 
@@ -347,6 +347,6 @@ Two categories, two problems. GPU clouds and MLOps platforms (CoreWeave, Lambda,
 
 For GPU workloads, the choice mostly comes down to scale and where you already are. For infrastructure management, the real question is how much you actually want AI to do. Code assistants help you write IaC faster, but you're still running it. Agentic platforms like Pulumi Neo execute changes and enforce policy on the way through, with the guardrails you control.
 
-Execution alone stopped being the differentiator in 2026, once most of the field could point an agent at infrastructure and have it act. The pattern from teams getting real value: treat AI as a force multiplier on routine work (provisioning, drift, compliance), pick tools by how far their reach extends and how deep their guardrails go, and keep human judgment in the loop for the architecture and the edge cases.
+The pattern from teams getting real value: treat AI as a force multiplier on routine work (provisioning, drift, compliance), pick tools by how far their reach extends and how deep their guardrails go, and keep human judgment in the loop for the architecture and the edge cases.
 
 If you want to see agentic infrastructure management running against real resources, [start with Pulumi Neo](/product/neo/).
