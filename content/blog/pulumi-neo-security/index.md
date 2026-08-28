@@ -37,9 +37,9 @@ decades of human review. The frontier labs have released useful tools to help un
 many of these flaws through agent-led static code analysis.
 
 This is a huge leap ahead, but cloud infrastructure has many exploitable flaws that code
-analysis alone cannot find. These flaws are often just as or even more severe, and they
-await the discovery from malicious agents on offense. We realized
-recently we can uniquely help here. At Pulumi, we have complete visibility into your entire cloud estate:
+analysis alone cannot find. These flaws are often as severe as the ones in code, or
+worse, and they await discovery by malicious agents on offense. We realized recently we
+can uniquely help here. At Pulumi, we have complete visibility into your entire cloud estate:
 infrastructure resources, their semantics, connections and dependencies between them,
 runtime logs and information, and more -- and have built an entire context graph out of them that is accessible to agents.
 
