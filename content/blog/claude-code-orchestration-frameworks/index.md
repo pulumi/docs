@@ -45,7 +45,7 @@ Pulumi uses general-purpose programming languages to define infrastructure. Type
 
 ## What is Claude Code orchestration?
 
-Claude Code orchestration is the practice of wrapping an AI coding agent in a repeatable process instead of letting it freelance: decomposing work into phases, enforcing tests or reviews at each gate, handing state between context windows, and dispatching subagents for isolated tasks. Superpowers, GSD, and GSTACK are the three most established frameworks that do this, each betting on a different failure mode as the one worth fixing first.
+Claude Code orchestration is the practice of wrapping an AI coding agent in a repeatable process instead of letting it freelance: decomposing work into phases, enforcing tests or reviews at each gate, handing state between context windows, and dispatching subagents for isolated tasks. Superpowers, GSD, and GSTACK are the three most widely adopted frameworks that do this, each betting on a different failure mode as the one worth fixing first.
 
 ## How do orchestration frameworks differ from single-agent workflows?
 
@@ -82,7 +82,7 @@ The workflow breaks down into skills that trigger automatically:
 | `requesting-code-review` | Review | Reviews against plan, blocks progress on critical issues |
 | `finishing-a-development-branch` | Finalize | Verifies tests pass, presents merge/PR/keep/discard options |
 
-The results are worth citing carefully. [chardet 7.0's own performance docs](https://chardet.readthedocs.io/en/7.0.0/performance.html) show it running 41x faster than chardet 6.0.0 (494 files/sec versus 12). Maintainer Dan Blanchard [wrote about rewriting chardet from scratch](https://dan-blanchard.github.io/blog/chardet-rewrite-controversy/) with Claude, delegating implementation work to subagents — but his post never names Superpowers, and it is mostly about whether the result counts as a derivative work. Take the 41x figure as verified; take "built with Superpowers specifically" as unconfirmed.
+The results are worth citing carefully. [chardet 7.0's own performance docs](https://chardet.readthedocs.io/en/7.0.0/performance.html) show it running 41x faster than chardet 6.0.0 (494 files/sec versus 12). Maintainer Dan Blanchard [wrote about rewriting chardet from scratch](https://dan-blanchard.github.io/blog/chardet-rewrite-controversy/) with Claude, delegating implementation work to subagents — but his post never names Superpowers, and it's mostly about whether the result counts as a derivative work. Take the 41x figure as verified; take "built with Superpowers specifically" as unconfirmed.
 
 Superpowers now reaches well beyond Claude Code: Antigravity, Codex App, Codex CLI, Cursor, Devin CLI, Factory Droid, Gemini CLI, GitHub Copilot CLI, Grok Build CLI, Kimi Code, OpenCode, Pi, and Hermes Agent are all in its current install list.
 
@@ -92,9 +92,9 @@ GSD prevents context rot by keeping the orchestrator out of the work: your main 
 
 The key architectural decision: the orchestrator never touches source files. Because it only spawns agents, collects their results, and updates shared state on disk, its own context window grows slowly and predictably, while each spawned agent starts with a clean window scoped to exactly one task. Phase state lands in `.planning/` as durable files, so the next step reads artifacts rather than conversation history.
 
-Think about why this matters. With a single orchestrator, your 200K token context window is a shared resource. Instructions from hour one compete with code from hour three. GSD sidesteps this entirely, because the orchestrator's job is dispatch and bookkeeping, not implementation. GSD also includes quality gates that detect schema drift and scope reduction. If the agent starts cutting corners or wandering from the plan, the gates catch it.
+Think about why this matters. When the orchestrator also writes the code, your 200K token context window is a shared resource. Instructions from hour one compete with code from hour three. GSD sidesteps this entirely, because the orchestrator's job is dispatch and bookkeeping, not implementation. GSD also includes quality gates that detect schema drift and scope reduction. If the agent starts cutting corners or wandering from the plan, the gates catch it.
 
-**What changed since this post first ran:** the original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues in the Open GSD organization as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`. If you have an old GSD install, point yourself at the new repository; the archived one is read-only and will not receive further updates.
+**What changed since this post first ran:** the original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues in the Open GSD organization as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`.
 
 The tradeoff: GSD has more ceremony than the other two frameworks. For a quick script or a single-file change, the phase-based workflow is overkill. GSD earns its keep on projects that span multiple files, multiple sessions, or multiple days.
 
@@ -114,7 +114,7 @@ GSD Core's installer supports Claude Code, OpenCode, Antigravity CLI, Kimi CLI, 
 
 ## GSTACK: what does role-based governance buy you?
 
-GSTACK buys you a division of labor: instead of one agent trying to hold product, engineering, QA, and security judgment simultaneously, it splits the work across 23 specialist roles that only see what their job requires. [GSTACK](https://github.com/garrytan/gstack) was created by [Garry Tan](https://www.linkedin.com/in/garrytan/) (President and CEO of Y Combinator) and has grown to roughly 130K stars.
+GSTACK buys you a division of labor: instead of one agent trying to hold product, engineering, QA, and security judgment simultaneously, it splits the work across 23 specialist roles, each with its own scope and constraints. [GSTACK](https://github.com/garrytan/gstack) was created by [Garry Tan](https://www.linkedin.com/in/garrytan/) (President and CEO of Y Combinator) and has grown to roughly 130K stars.
 
 The framework enforces five layers of constraint. Role focus keeps each specialist in their lane. Data flow controls what information passes between roles. Quality control gates ensure standards at handoff points. The "boil the lake" principle means each role finishes what it can do perfectly and skips what it cannot, rather than producing mediocre work across everything. And the simplicity layer pushes back against unnecessary complexity.
 
@@ -150,7 +150,7 @@ None of these is universally best. Knowing your failure mode is the real decisio
 | Where it shines | TDD, subagent delegation, disciplined plan execution | Marathon sessions, parallel workstreams, crash recovery | Product strategy, multi-perspective review, real browser QA |
 | Where it struggles | Anything beyond the build phase | Overkill for small tasks, no role separation | The actual writing-code part |
 | Best for | Solo devs who need test discipline | Complex projects that span days or weeks | Founder-engineers shipping a product |
-| GitHub stars (current) | ~279K | ~8.8K (GSD Core), 64.6K archived under the old repo | ~130K |
+| GitHub stars (current) | ~279K | ~8.8K on the new repo (plus 64.6K on the archived original) | ~130K |
 | Agent support | 13+ agents | 9+ agents via installer | 8+ agents |
 
 For infrastructure work, GSD's context management matters most. Long Pulumi sessions that provision dozens of resources across multiple stacks are exactly the scenario where context rot bites hardest. GSD's phase-based approach keeps each orchestrator fresh.
