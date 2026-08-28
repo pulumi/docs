@@ -3,7 +3,7 @@ title: "Custom Resource Definitions as provider extensions"
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: 2099-01-01
 draft: false
-meta_desc: "Extend the Pulumi Kubernetes provider with any CustomResourceDefinition using the new --extension flag: no crd2pulumi, no vendored SDK."
+meta_desc: "Extend the Pulumi Kubernetes provider with any CustomResourceDefinition using the new --extension flag."
 feature_image: feature.png
 authors:
     - guinevere-saenger
@@ -40,7 +40,7 @@ You will see the custom SDK generated in a new `sdks/` folder, as well as a new 
 
 Your new CRD schema exists as an extension to your existing provider and will be managed under the same provider instance, allowing you to use a single provider configuration and kubeconfig.
 
-## No more vendoring a generated SDK
+## SDKs as dependencies
 
 Additionally, your code no longer needs to ship SDK files as part of the project. The provider extension is referenced in your project file and its SDK, like all dependencies, can be regenerated via `pulumi install`.
 
@@ -48,9 +48,9 @@ Additionally, your code no longer needs to ship SDK files as part of the project
 
 Kubernetes CRDs can now be provisioned with Pulumi in all supported languages, not just the ones implemented in `crd2pulumi`.
 
-## No more separate CLI
+## Unified CLI experience
 
-You will no longer need to use `crd2pulumi` as a separate CLI. `pulumi package add --extension` will see your CRD schema extended into your pulumi-kubernetes provider.
+`pulumi package add --extension` extends your CRD schema into the Pulumi Kubernetes provider, the same command you use to add any other package.
 
 ## Migration from crd2pulumi
 
