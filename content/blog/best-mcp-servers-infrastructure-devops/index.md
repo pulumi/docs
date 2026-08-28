@@ -27,44 +27,36 @@ itemlist:
       url: "https://awslabs.github.io/mcp/"
     - name: "Azure MCP Server"
       url: "https://learn.microsoft.com/azure/developer/azure-mcp-server"
-    - name: "GKE MCP Server"
-      url: "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/use-gke-mcp"
-    - name: "Cloudflare MCP servers"
-      url: "https://github.com/cloudflare/mcp-server-cloudflare"
     - name: "containers/kubernetes-mcp-server"
       url: "https://github.com/containers/kubernetes-mcp-server"
     - name: "Flux Operator MCP Server"
       url: "https://fluxcd.control-plane.io/mcp/"
     - name: "GitHub MCP Server"
       url: "https://github.com/github/github-mcp-server"
-    - name: "Azure DevOps MCP Server"
-      url: "https://learn.microsoft.com/azure/devops/mcp-server"
     - name: "Docker MCP Gateway"
       url: "https://docs.docker.com/ai/mcp-catalog-and-toolkit/"
     - name: "Grafana MCP Server"
       url: "https://grafana.com/docs/grafana/latest/developer-resources/mcp/"
     - name: "Datadog MCP Server"
       url: "https://docs.datadoghq.com/mcp_server/"
-    - name: "Sentry MCP"
-      url: "https://mcp.sentry.dev"
     - name: "PagerDuty MCP Server"
       url: "https://github.com/pagerduty/pagerduty-mcp-server"
 
 social:
     twitter: |
-        Every cloud vendor and half of DevOps shipped an MCP server in the last year. We evaluated 15+ of them on the axis that actually matters for infrastructure: what can they mutate, and what gate stands in front of it.
+        Every cloud vendor and half of DevOps shipped an MCP server this year. We ranked 12 on what matters for infrastructure: what they can mutate, and what stands in front of it.
 
         IaC, Kubernetes, CI/CD, observability, secrets: one buyer's guide.
     linkedin: |
         MCP servers went from novelty to default in about a year. Every hyperscaler, most CI/CD and observability vendors, and the two biggest IaC ecosystems now ship one.
 
-        The question that matters for a platform team is what the agent on the other end can actually do to production, and what stands between a bad suggestion and a bad outcome. We evaluated MCP servers across infrastructure as code, cloud control planes, Kubernetes and GitOps, CI/CD, observability, and secrets on exactly that axis: transport, auth model, read-only mode, and maturity.
+        The question that matters for a platform team is what the agent on the other end can actually do to production, and what stands between a bad suggestion and a bad outcome. We evaluated MCP servers across infrastructure as code, cloud control planes, Kubernetes and GitOps, CI/CD, observability, and secrets on that axis, not on tool counts.
 
         The result is a comparison table and a role-based starting point, not another retelling of what MCP is.
     bluesky: |
-        We evaluated 15+ MCP servers for infrastructure and DevOps work on the axis that actually matters: what they can mutate, and what gate stands in front of it.
+        We ranked 12 MCP servers for infrastructure and DevOps work on the axis that actually matters: what they can mutate, and what gate stands in front of it.
 
-        IaC, cloud control planes, Kubernetes, CI/CD, observability, secrets. One comparison table, not another "what is MCP" explainer.
+        One comparison table, not another "what is MCP" explainer.
 ---
 
 The best MCP server for your infrastructure work depends on what you need an agent to touch: Pulumi's MCP server or HashiCorp's Terraform MCP server for IaC, the AWS Knowledge or Azure MCP servers for cloud control-plane lookups, `containers/kubernetes-mcp-server` for cluster operations, and Grafana, Datadog, or PagerDuty's servers for observability and on-call work. The harder question is which of those servers can change something in production and what gate stands between a bad suggestion and a bad outcome. That's the axis this guide ranks on.
@@ -78,7 +70,7 @@ The best MCP server for your infrastructure work depends on what you need an age
 | Provision or preview cloud infrastructure as code | [Pulumi MCP Server](#pulumi-mcp-server) or [HashiCorp Terraform MCP Server](#hashicorp-terraform-mcp-server) |
 | Query cloud provider docs and account state | [AWS Knowledge MCP Server](#aws-knowledge-mcp-server), [Azure MCP Server](#azure-mcp-server) |
 | Operate a Kubernetes cluster or GitOps pipeline | [containers/kubernetes-mcp-server](#containerskubernetes-mcp-server), [Flux Operator MCP Server](#flux-operator-mcp-server) |
-| Automate GitHub, Azure DevOps, or container workflows | [GitHub MCP Server](#github-mcp-server), [Docker MCP Gateway](#docker-mcp-gateway) |
+| Automate GitHub or container workflows | [GitHub MCP Server](#github-mcp-server), [Docker MCP Gateway](#docker-mcp-gateway) |
 | Query dashboards, traces, or incidents | [Grafana MCP Server](#grafana-mcp-server), [Datadog MCP Server](#datadog-mcp-server), [PagerDuty MCP Server](#pagerduty-mcp-server) |
 | Manage secrets and access policy | [HashiCorp Vault MCP Server](#hashicorp-vault-mcp-server) |
 
