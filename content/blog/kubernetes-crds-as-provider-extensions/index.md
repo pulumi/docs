@@ -24,7 +24,7 @@ We're really excited to bring you the newest pulumi-kubernetes provider. As with
 
 <!--more-->
 
-But the feature we're proudest of is that you can now extend the Kubernetes provider with any Kubernetes Custom Resource Definition (CRD) of your choice by passing its manifest file to Pulumi, using the new `--extension` flag. We believe making CRDs easy to use with Pulumi is becoming more important than ever. For example, since the retirement of the ingress-nginx controller earlier this year, the recommended path for cluster ingress is Gateway API, which is maintained and shipped as CRDs.
+But the feature we're proudest of is that you can now extend the Kubernetes provider with any Kubernetes Custom Resource Definition (CRD) of your choice by passing its manifest file to Pulumi, using the new `--extension` flag. We believe first-class CRD support in Pulumi is becoming more important than ever. For example, since the retirement of the ingress-nginx controller earlier this year, the recommended path for cluster ingress is Gateway API, which is maintained and shipped as CRDs.
 
 ## Use
 
