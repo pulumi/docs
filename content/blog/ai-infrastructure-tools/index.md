@@ -148,7 +148,7 @@ Before the tool list, one distinction matters more than any feature comparison: 
 
 Where you want to land on this spectrum is mostly a governance question, not a productivity one.
 
-Execution used to be the dividing line between these tools; it no longer is. By mid-2026, most of the dedicated IaC platforms in this section can point an agent at your infrastructure and have it act, not just narrate. env zero's Agent CLI lets an existing coding agent make changes through the same roles and approvals a person would use. Spacelift Intent plans and applies infrastructure changes from a natural-language request. Microsoft's Azure SRE Agent can execute remediation rather than only recommend it. What differentiates these tools now is not whether they act, but how far their reach extends, how deep their guardrails go, and what happens when something goes wrong.
+Execution used to be the dividing line between these tools; it no longer is. By mid-2026, most of the dedicated IaC platforms in this section can point an agent at your infrastructure and have it act, not only narrate. env zero's Agent CLI lets an existing coding agent make changes through the same roles and approvals a person would use. Spacelift Intent plans and applies infrastructure changes from a natural-language request. Microsoft's Azure SRE Agent can execute remediation rather than only recommend it. What differentiates these tools now is not whether they act, but how far their reach extends, how deep their guardrails go, and what happens when something goes wrong.
 
 ### Pulumi Neo
 
