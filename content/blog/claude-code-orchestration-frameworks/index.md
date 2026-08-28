@@ -26,11 +26,11 @@ social:
     linkedin: |
         We gave three open-source AI coding frameworks the same real infrastructure project and ran them for a few weeks.
 
-        One produced a 41x speedup on a library release along the way. One caught a category of bug the other two missed entirely. One we probably won't reach for again.
+        One caught a category of bug the other two missed entirely. One we probably won't reach for again.
 
         Between them they have accumulated hundreds of thousands of GitHub stars, and completely different theories about what goes wrong when agents work on longer projects. Turns out they're not all solving the same problem.
 
-        Update: we refreshed this with current Codex compatibility, a maintainer change at one of the three projects, and the newer frameworks worth knowing about.
+        Update: we refreshed this with current Codex compatibility, GSD's move to a new home, and the newer frameworks worth knowing about.
     bluesky: |
         We ran three AI coding frameworks on the same Pulumi infrastructure project for a few weeks. One caught scope drift the other two missed. One we probably won't use again.
 
