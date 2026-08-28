@@ -107,7 +107,7 @@ Pulumi ships two forms so you can choose the operating model: a local server for
 
 ### HashiCorp Terraform MCP Server
 
-**Maintainer:** HashiCorp. **Transport:** stdio (default) or Streamable HTTP. **Auth:** token passthrough supported for centralized HTTP deployments; no built-in OAuth documented at the time of writing. **Read-only mode:** yes, and it's the default: the registry and documentation toolsets are read-only, and the write toolset (creating or updating HCP Terraform workspaces, running apply/discard/cancel on a run) is gated behind the `ENABLE_TF_OPERATIONS` environment variable, which is unset unless you opt in. **Maturity:** GA, per HashiCorp's own announcement.
+**Maintainer:** HashiCorp. **Transport:** stdio (default) or Streamable HTTP. **Auth:** token passthrough supported for centralized HTTP deployments; no built-in OAuth documented at the time of writing. **Read-only mode:** yes, and it's the default: the registry and documentation toolsets are read-only, and the tools that can apply or destroy (running apply, discard, or cancel on a run, and the workspace, project, and team delete tools) are gated behind the `ENABLE_TF_OPERATIONS` environment variable, which is unset unless you opt in. Note that supplying HCP Terraform credentials still lets an agent create and reconfigure workspaces, projects, and variables without that flag. **Maturity:** GA, per HashiCorp's own announcement.
 
 The Terraform MCP server gives any MCP-compatible agent real-time access to Terraform Registry documentation, modules, and provider schemas, so generated HCL reflects the current registry state instead of a model's training-data snapshot.
 
