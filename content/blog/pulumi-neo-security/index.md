@@ -36,8 +36,8 @@ Recently, AI systems have started turning up exploitable flaws in code that surv
 decades of human review. The frontier labs have released useful tools to help uncover
 many of these flaws through agent-led static code analysis.
 
-Cloud infrastructure has many exploitable flaws too, that code analysis alone cannot
-find. These flaws still await the discovery from malicious agents on offense. We realized
+Cloud infrastructure has many exploitable flaws that code analysis alone cannot
+find. These flaws are often just as or even more severe and await the discovery from malicious agents on offense. We realized
 recently we can uniquely help here. At Pulumi, we have complete visibility into your entire cloud estate:
 infrastructure resources, their semantics, connections and dependencies between them,
 runtime logs and information, and more -- and have built an entire context graph out of them that is accessible to agents.
@@ -57,7 +57,7 @@ run and address any findings. If you'd like to give it a try, [contact us](/cont
 
 <!--more-->
 
-## How it works
+## How it finds attack paths
 
 Neo Security's aim is to provide a high-confidence, actionable security posture report.
 It does so as follows:
@@ -111,15 +111,19 @@ Neo uses this information to build a model of your estate and home in on validat
 proving and refuting attack vectors, and prioritizing based on severity and confidence. The
 result is a short list, each entry carrying its evidence and, where source is available, a
 fix as specific lines of code. The analysis deeply understands each cloud's identity model, networking, and data services
-well enough to resolve effective permissions and firewall rules and to ask the providers directly.
+well enough to resolve effective permissions and firewall rules and to ask the providers
+directly. The assessment phase is read-only throughout.
 
-The assessment phase is read-only, but Pulumi's IaC technology also lets us close the loop.
+## Findings become pull requests
+
 Most security tools stop at telling you something is wrong, which leaves the hardest part
-— remediation — as an exercise for the reader.
-Pulumi already declares and applies infrastructure change, so a proven finding becomes a
-proposed diff, a preview of what would change, and a pull request for a person to review.
+— remediation — as an exercise for the reader. Pulumi already declares and applies
+infrastructure change, so a proven finding becomes a proposed diff, a preview of what
+would change, and a pull request for a person to review. Remediation is the only part that
+writes anything, and only ever a proposed change in a repository, with deployment left to
+your existing reviewed workflow.
 
-## What it finds
+## What a report looks like
 
 We have worked with several teams to run Neo Security against real production estates of different shapes and
 maturity, and it repeatedly found critical vulnerabilities the owners did not know
@@ -152,7 +156,7 @@ leave the account open to risks should it leak, and many other unfortunate outco
 comes with a severity and risk so you can prioritize accordingly, and Neo works to exclude
 disproven findings and those without consequence.
 
-## Research preview
+## Getting a scan
 
 We have been impressed what the combination of the latest frontier models, the unique context
 Pulumi has across several dimensions of your infrastructure, and giving the agent deep security
