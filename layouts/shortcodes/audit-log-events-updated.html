@@ -1,0 +1,16 @@
+{{/*
+  Renders the "last updated" caption for the audit log events reference. The
+  date lives in data/audit_log_events_updated.json and is stamped by the
+  update-audit-log-events GitHub workflow ONLY on runs where
+  data/audit_log_events.json actually changed, so it advances when the event
+  catalog changes and never on a no-op nightly refresh (no churn). The API
+  exposes no version metadata, so this change-gated date is our "how current is
+  this list" signal.
+
+  Place once, directly under the page intro.
+*/}}
+{{ with (site.Data.audit_log_events_updated).updated }}
+<p style="font-size:0.875rem;color:var(--docs-fg-muted,#6b7280);margin-top:-0.5rem;">
+  Event list last updated on {{ . }}, synced automatically from the Pulumi Cloud API.
+</p>
+{{ end }}

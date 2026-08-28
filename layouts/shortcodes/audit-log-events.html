@@ -1,0 +1,70 @@
+{{- /*
+  Renders the full catalog of Pulumi Cloud audit log events, grouped into
+  sections. Usage: {{< audit-log-events >}}
+
+  Two data files drive this, and neither is edited by hand on the docs side:
+
+    data/audit_log_events.json            every event, fetched nightly from
+                                          /api/orgs/{org}/auditlogs/event-types
+                                          by scripts/fetch-audit-log-events.sh,
+                                          with a `category` stamped on each.
+    data/audit_log_event_categories.yaml  the sections, in render order, and
+                                          the rules that assign events to them.
+
+  Each category renders as a real <h2 id="...">, using the same `anchorize`
+  algorithm Goldmark uses for authored headings. That matters: the right-rail
+  "On this page" list is built client-side by generateOnThisPage() in
+  theme/src/ts/misc.ts, which collects every h2/h3 carrying an id inside #main,
+  so these headings land in the TOC exactly as authored ones would. Events
+  themselves are table rows rather than headings, which keeps the TOC to one
+  entry per section instead of ~150.
+
+  The table is built as a Markdown string and piped through `markdownify` (the
+  same technique as layouts/shortcodes/resource-options-table.html) so it still
+  goes through layouts/_default/_markup/render-table.html, which is what gives
+  it the .table-wrapper scroll container and the data-label attributes that
+  reflow it into stacked cards on narrow screens.
+
+  An event's permission and authentication-failure flags are appended to its
+  description as an italic note rather than given a column of their own: only
+  half the events set one, and at most one each, so a fourth column spent most
+  of its width empty. The note states the requirement in prose and does not
+  name the underlying export field -- what the reader needs is what the event
+  demands, and the fields themselves are documented on
+  /docs/administration/concepts/audit-logs/.
+*/ -}}
+{{- $categories := site.Data.audit_log_event_categories -}}
+{{- $events := (site.Data.audit_log_events).eventTypes -}}
+{{- if not $events -}}
+  {{- errorf "audit-log-events: data/audit_log_events.json has no eventTypes. Run scripts/fetch-audit-log-events.sh." -}}
+{{- end -}}
+{{- $known := slice -}}
+{{- range $categories -}}{{- $known = $known | append .id -}}{{- end -}}
+{{- range $events -}}
+  {{- if not (in $known .category) -}}
+    {{- errorf "audit-log-events: event %q is in category %q, which is not defined in data/audit_log_event_categories.yaml" .event .category -}}
+  {{- end -}}
+{{- end -}}
+{{- range $categories -}}
+  {{- $category := . -}}
+  {{- $matching := where $events "category" $category.id -}}
+  {{- if not $matching -}}
+    {{- warnf "audit-log-events: category %q matches no events; skipping its section" $category.id -}}
+  {{- else -}}
+    {{- $rows := slice -}}
+    {{- range sort $matching "displayName" -}}
+      {{- $notes := slice -}}
+      {{- if .requiresOrgAdmin -}}{{- $notes = $notes | append "Requires organization admin." -}}{{- end -}}
+      {{- if .requiresStackAdmin -}}{{- $notes = $notes | append "Requires stack admin." -}}{{- end -}}
+      {{- if .authenticationFailure -}}{{- $notes = $notes | append "Recorded as an authentication failure." -}}{{- end -}}
+      {{- $description := chomp .description -}}
+      {{- with $notes -}}
+        {{- $description = printf "%s _%s_" $description (delimit . " ") -}}
+      {{- end -}}
+      {{- $rows = $rows | append (printf "| %s | `%s` | %s |" .displayName .event $description) -}}
+    {{- end -}}
+<h2 id="{{ anchorize $category.name }}">{{ $category.name }}</h2>
+<p>{{ $category.description }}</p>
+{{ printf "| Event | Event ID | Description |\n|---|---|---|\n%s\n" (delimit $rows "\n") | markdownify }}
+  {{- end -}}
+{{- end -}}
