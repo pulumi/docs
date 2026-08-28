@@ -2,6 +2,7 @@
 title: "New: Use Terraform Modules in Pulumi Without Conversion"
 allow_long_title: true
 date: 2025-06-23
+updated: 2026-08-28
 draft: false
 meta_desc: "Pulumi can now execute Terraform modules directly, making migration from Terraform to Pulumi simpler than ever for complex infrastructure projects."
 authors:
@@ -28,6 +29,10 @@ social:
 
     This represents a significant step forward in making infrastructure migration accessible to teams of all sizes.
 ---
+
+{{% notes type="warning" %}}
+This post describes the deprecated [pulumi-terraform-module](https://github.com/pulumi/pulumi-terraform-module) provider and its `pulumi package add terraform-module` command. Terraform module support is now provided by [Pulumi HCL](https://github.com/pulumi/pulumi-hcl/) via `pulumi package add hcl module`. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for current instructions.
+{{% /notes %}}
 
 Today, we're excited to announce a major advancement in Pulumi's mission to make modern infrastructure as code accessible to every developer: **direct support for executing Terraform modules**. This new capability addresses one of the most significant challenges our users face when migrating from Terraform to Pulumi—complex projects with extensive module dependencies.
 

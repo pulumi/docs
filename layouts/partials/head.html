@@ -436,7 +436,9 @@
         })();
     </script>
 
-    <!-- Segment Consent Manager -->
+    <!-- Segment Consent Manager (production only - the banner and its analytics
+         gating are suppressed on local dev and PR preview builds). -->
+    {{- if eq hugo.Environment "production" }}
     <script>
         window.consentManagerConfig = {
             writeKey: segmentWriteKey,
@@ -459,6 +461,7 @@
             document.body.appendChild(s);
         });
     </script>
+    {{- end }}
 
     {{- if eq hugo.Environment "production" }}
         <!-- Facebook Domain Verification -->

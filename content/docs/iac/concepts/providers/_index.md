@@ -56,7 +56,7 @@ The most common method of installing a provider is to use your language's packag
 
 - TypeScript: `@pulumi/aws`
 - Python: `pulumi-aws`
-- Go: `github.com/pulumi/pulumi-aws/sdk/go/aws`
+- Go: `github.com/pulumi/pulumi-aws/sdk/v7/go/aws`
 - .NET: `Pulumi.Aws`
 - Java: `com.pulumi.aws`
 
@@ -640,7 +640,7 @@ pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 pulumi config set --path 'pulumi:disable-default-providers[1]' kubernetes
 ```
 
-This adds a new entry to the list `pulumi:disable-default-providers`. To disable all default providers, use `*` as the package name:
+To disable all default providers, use `*` as the package name:
 
 ```sh
 pulumi config set --path 'pulumi:disable-default-providers[0]' '*'

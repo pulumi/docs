@@ -75,7 +75,7 @@
             <li>
                 <a class="text-white opacity-70 hover:opacity-100 hover:underline cursor-pointer"
                    data-track="footer-legal-privacy-preferences"
-                   onclick="window.consentManager.openConsentManager();">Your Privacy Preferences</a>
+                   onclick="window.consentManager && window.consentManager.openConsentManager();">Your Privacy Preferences</a>
             </li>
             {{ range .Site.Menus.legal }}
                 <li>
