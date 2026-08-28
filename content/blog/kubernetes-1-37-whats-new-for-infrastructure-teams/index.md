@@ -4,7 +4,7 @@ date: 2026-08-26
 draft: false
 meta_desc: "Kubernetes 1.37 breaking changes, GA features, and deprecations infrastructure teams need to plan an upgrade around, from SELinuxMount to DRA."
 authors:
-    - pulumi-content-team
+    - levi-blackstone
 tags:
     - kubernetes
     - platform-engineering
@@ -94,7 +94,7 @@ For teams managing custom resources, [`crd2pulumi`](/docs/integrations/clouds/ku
 
 It's also worth being direct about where that model stops. Kubernetes reconciles the objects inside your cluster; it has no opinion about the cloud resources — the managed database, the load balancer, the IAM role — that the cluster and its workloads depend on. Our explainer on [whether Kubernetes itself counts as infrastructure as code](/what-is/is-kubernetes-infrastructure-as-code/) digs into that boundary, and our companion piece on [infrastructure as code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/) covers the practical tooling landscape for managing the cluster, its workloads, and everything around them in one codebase.
 
-One honest caveat: as of this release, the [`@pulumi/kubernetes` provider](https://www.pulumi.com/registry/packages/kubernetes/) has its schema generated against upstream Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a subsequent provider release; recent minor-version bumps have landed anywhere from days to months after their upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed lag. Nothing above requires waiting for that update to start reviewing your cluster configuration against the changes in this post.
+One honest caveat: as of this release, the [`@pulumi/kubernetes` provider](https://www.pulumi.com/registry/packages/kubernetes/) has its schema generated against upstream Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a later provider release; recent minor-version bumps have landed anywhere from days to months after their upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed lag. Nothing above requires waiting for that update to start reviewing your cluster configuration against the changes in this post.
 
 ## Frequently asked questions
 
@@ -116,7 +116,7 @@ Each managed Kubernetes provider sets its own timeline for adopting a new minor 
 
 ### Does Pulumi support Kubernetes 1.37?
 
-The `@pulumi/kubernetes` provider's schema is generated from a specific upstream Kubernetes version, and its most recent release tracks Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a subsequent release; recent minor-version bumps have landed anywhere from days to months after upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed timeline. Most Pulumi programs are unaffected in the meantime, since the provider's generated types are additive across most Kubernetes minor versions.
+The `@pulumi/kubernetes` provider's schema is generated from a specific upstream Kubernetes version, and its most recent release tracks Kubernetes 1.36.2, with 1.36.3 and 1.36.4 already queued for an upcoming release. A 1.37 schema update will follow in a later release; recent minor-version bumps have landed anywhere from days to months after upstream GA, so pin your provider version and watch the [provider's CHANGELOG](https://github.com/pulumi/pulumi-kubernetes/blob/master/CHANGELOG.md) rather than assuming a fixed timeline. Most Pulumi programs are unaffected in the meantime, since the provider's generated types are additive across most Kubernetes minor versions.
 
 ### How do I upgrade to Kubernetes 1.37 safely?
 
