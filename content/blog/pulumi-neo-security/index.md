@@ -49,10 +49,11 @@ systematically through every potential point of attack. The result is a security
 report that is immediately actionable thanks to Pulumi's infrastructure as code technology.
 
 Neo Security works on your existing infrastructure regardless of how it was provisioned, across
-any of our thousands of cloud providers including AWS, Azure, Google Cloud, and Kubernetes. Everybody
-who has run this has been shocked at what it found. That's why we're releasing
-it in research preview to begin: so we can work closely with customers to run and address
-any findings. If you'd like to give it a try, [contact us](/contact/).
+any of our thousands of cloud providers including AWS, Azure, Google Cloud, and
+Kubernetes.
+
+We're releasing it in research preview to begin, so we can work closely with customers to
+run and address any findings. If you'd like to give it a try, [contact us](/contact/).
 
 <!--more-->
 
@@ -91,7 +92,7 @@ different system, and Neo has visibility into all of them:
   know about: comments surrounding resources, the resource declarations and relationships,
   logic and naming, code commit and review history, and more.
 - **Runtime state.** Information that isn't statically known from code and
-  infrastructure metadata. This includes logs and metrics, uptime information and bootlogs
+  infrastructure metadata. This includes logs and metrics, uptime information and boot logs
   for servers, network traffic, and more. This is enabled by Neo having access to any tools
   a platform engineer would.
 - **Policy and compliance results.** Pulumi's [discovery and
@@ -106,15 +107,15 @@ different system, and Neo has visibility into all of them:
   action. This is what resolves the permissions and firewall rules that survive once every
   overlapping rule, boundary, and service control policy has been applied.
 
-Neo uses this information to build a model of your estate and hone in on validated paths,
+Neo uses this information to build a model of your estate and home in on validated paths,
 proving and refuting attack vectors, and prioritizing based on severity and confidence. The
 result is a short list, each entry carrying its evidence and, where source is available, a
 fix as specific lines of code. The analysis deeply understands each cloud's identity model, networking, and data services
 well enough to resolve effective permissions and firewall rules and to ask the providers directly.
 
 The assessment phase is read-only, but Pulumi's IaC technology also lets us close the loop.
-Most security tools stops at telling you
-something is wrong, which leaves the hardest part of remediation  as an exercise to the reader.
+Most security tools stop at telling you something is wrong, which leaves the hardest part
+— remediation — as an exercise for the reader.
 Pulumi already declares and applies infrastructure change, so a proven finding becomes a
 proposed diff, a preview of what would change, and a pull request for a person to review.
 
@@ -125,7 +126,7 @@ maturity, and it repeatedly found critical vulnerabilities the owners did not kn
 existed. A single run reconciles thousands of managed resources against the account's
 discovered inventory across every region in use.
 
-Here is an example of the finding, anonymized and generalized from real runs:
+Here are example findings, anonymized and generalized from real runs:
 
 | # | Finding | Severity | Confidence |
 |---|---------|----------|------------|
@@ -145,11 +146,11 @@ Here is an example of the finding, anonymized and generalized from real runs:
 | 14 | No WAF on the internet-facing load balancer or CDN | low | high |
 
 The implications of these example findings range from complete production account take-over, to
-poor encryption practices that puts sensitive data at risk, to improperly authenticated email services that could
-be abused for phising campaigns, to static unrotated keys that leave the account open
-to risks should it leak, and many other unfortunate outcomes. Each comes with a severity and risk
-so you can prioritize accordingly, and Neo also leaves out
-disproven findings or those without consequence so that every row is valuable.
+poor encryption practices that put sensitive data at risk, to improperly authenticated
+email services that could be abused for phishing campaigns, to static unrotated keys that
+leave the account open to risks should it leak, and many other unfortunate outcomes. Each
+comes with a severity and risk so you can prioritize accordingly, and Neo works to exclude
+disproven findings and those without consequence.
 
 ## Research preview
 
@@ -163,4 +164,4 @@ multi-cloud and multi-account, a good mix of resource types, IaC and non-IaC res
 and those for which their infrastructure security is paramount.
 
 Attackers are going to point agents at cloud infrastructure next. We would rather you find
-these problems first and we want to help. If you want to try a scan, [just get in touch](/contact).
+these problems first and we want to help. If you want to try a scan, [just get in touch](/contact/).
