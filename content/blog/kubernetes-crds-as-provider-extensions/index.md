@@ -1,7 +1,6 @@
 ---
 title: "Custom Resource Definitions as provider extensions"
-# TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
-date: 2099-01-01
+date: 2026-08-28
 draft: false
 meta_desc: "Extend the Pulumi Kubernetes provider with any CustomResourceDefinition using the new --extension flag."
 feature_image: feature.png
