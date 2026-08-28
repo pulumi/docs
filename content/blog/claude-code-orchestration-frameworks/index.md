@@ -20,7 +20,7 @@ tags:
 category: perspectives
 social:
     twitter: |
-        We gave three AI coding frameworks the same Pulumi project. One produced a 41x speedup. One caught scope drift the others missed entirely. One we probably won't use again.
+        We gave three AI coding frameworks the same Pulumi project. One caught scope drift the others missed entirely. One we probably won't use again.
 
         Here's how they compared on real infrastructure work, updated for Codex support and a few alternatives.
     linkedin: |
@@ -82,19 +82,19 @@ The workflow breaks down into skills that trigger automatically:
 | `requesting-code-review` | Review | Reviews against plan, blocks progress on critical issues |
 | `finishing-a-development-branch` | Finalize | Verifies tests pass, presents merge/PR/keep/discard options |
 
-The results are worth citing carefully. [chardet 7.0's own performance docs](https://chardet.readthedocs.io/en/7.0.0/performance.html) show it running 41x faster than chardet 6.0.0 (494 files/sec versus 12). Maintainer Dan Blanchard [wrote about rewriting chardet from scratch](http://dan-blanchard.github.io/blog/chardet-rewrite-controversy/) using Claude subagents in a workflow consistent with Superpowers' subagent-driven-development approach, though his own post does not name the plugin directly. Take the 41x figure as verified; take "built with Superpowers specifically" as the likely but unconfirmed detail behind it.
+The results are worth citing carefully. [chardet 7.0's own performance docs](https://chardet.readthedocs.io/en/7.0.0/performance.html) show it running 41x faster than chardet 6.0.0 (494 files/sec versus 12). Maintainer Dan Blanchard [wrote about rewriting chardet from scratch](https://dan-blanchard.github.io/blog/chardet-rewrite-controversy/) with Claude, delegating implementation work to subagents — but his post never names Superpowers, and it is mostly about whether the result counts as a derivative work. Take the 41x figure as verified; take "built with Superpowers specifically" as unconfirmed.
 
 Superpowers now reaches well beyond Claude Code: Antigravity, Codex App, Codex CLI, Cursor, Devin CLI, Factory Droid, Gemini CLI, GitHub Copilot CLI, Grok Build CLI, Kimi Code, OpenCode, Pi, and Hermes Agent are all in its current install list.
 
 ## GSD: how does it prevent context rot?
 
-GSD prevents context rot by refusing to let one orchestrator carry an entire project: it assigns a fresh orchestrator to each phase of work and hands state between them on disk instead of in a shared conversation. [GSD](https://github.com/open-gsd/gsd-core) (Get Shit Done) was created by Lex Christopherson, known online as TÂCHES.
+GSD prevents context rot by keeping the orchestrator out of the work: your main session spawns a fresh-context subagent for each research, planning, execution, and verification task, then collects results instead of accumulating them. [GSD](https://github.com/open-gsd/gsd-core) (Get Shit Done) was created by Lex Christopherson, known online as TÂCHES.
 
-The key architectural decision: GSD does not use a single mega-orchestrator. Each orchestrator stays under 50% of its context capacity. When a phase completes, it writes its state to disk as structured files, then a fresh orchestrator picks up where the last one left off.
+The key architectural decision: the orchestrator never touches source files. Because it only spawns agents, collects their results, and updates shared state on disk, its own context window grows slowly and predictably, while each spawned agent starts with a clean window scoped to exactly one task. Phase state lands in `.planning/` as durable files, so the next step reads artifacts rather than conversation history.
 
-Think about why this matters. With a single orchestrator, your 200K token context window is a shared resource. Instructions from hour one compete with code from hour three. GSD sidesteps this entirely. Every phase starts with a full context budget because the previous phase's orchestrator handed off cleanly and shut down. GSD also includes quality gates that detect schema drift and scope reduction. If the agent starts cutting corners or wandering from the plan, the gates catch it.
+Think about why this matters. With a single orchestrator, your 200K token context window is a shared resource. Instructions from hour one compete with code from hour three. GSD sidesteps this entirely, because the orchestrator's job is dispatch and bookkeeping, not implementation. GSD also includes quality gates that detect schema drift and scope reduction. If the agent starts cutting corners or wandering from the plan, the gates catch it.
 
-**What changed since this post first ran:** the original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues under new maintainers as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`. If you have an old GSD install, point yourself at the new repository; the archived one is read-only and will not receive further updates.
+**What changed since this post first ran:** the original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues in the Open GSD organization as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`. If you have an old GSD install, point yourself at the new repository; the archived one is read-only and will not receive further updates.
 
 The tradeoff: GSD has more ceremony than the other two frameworks. For a quick script or a single-file change, the phase-based workflow is overkill. GSD earns its keep on projects that span multiple files, multiple sessions, or multiple days.
 
@@ -180,17 +180,17 @@ Yes, all three now support OpenAI's Codex, though the depth of that support vari
 | GSD (GSD Core) | Native, generic | The `npx @opengsd/gsd-core@latest` installer lists Codex as a supported runtime alongside Claude Code, Cursor, and others |
 | GSTACK | Native, model-aware | `./setup --host codex` installs to `~/.codex/skills/gstack-*/` and reads your Codex model from `config.toml` to tune role behavior automatically |
 
-If you were burned by an earlier version of this post implying Codex support was thin, that gap has closed. All three frameworks now treat Codex as a first-class target, not an afterthought bolted on for a changelog line.
+Codex support has deepened noticeably since this post first ran. All three frameworks now treat it as a first-class target rather than one more name in an install matrix.
 
 ## What are the alternatives to Superpowers, GSD, and GSTACK?
 
-The most talked-about alternative right now is [Everything Claude Code](https://github.com/affaan-m/ecc) (ECC), built by Affaan Mustafa. Where Superpowers, GSD, and GSTACK each impose one opinionated methodology, ECC takes the opposite approach: a large pre-built bundle of subagents, skills, hooks, and commands (tens of dozens of each) plus a security layer called AgentShield, designed to be dropped in and used piecemeal across Claude Code, Cursor, OpenCode, and Codex. It has grown large enough that community threads now debate "ECC vs. Superpowers" the same way they debate the three frameworks above. Choose ECC if you want breadth and are willing to pick your own process; choose one of the three above if you want the process itself enforced.
+The most talked-about alternative right now is [Everything Claude Code](https://github.com/affaan-m/ecc) (ECC), built by Affaan Mustafa. Where Superpowers, GSD, and GSTACK each impose one opinionated methodology, ECC takes the opposite approach: a large pre-built bundle of subagents, skills, hooks, and commands — dozens of the first, hundreds of the second — plus a security layer called AgentShield. It works best with Claude Code today, has a supported Codex sync path, and offers capability-limited adapters for Cursor and OpenCode, so check its support-status matrix before assuming feature parity across agents. It has grown large enough that community threads now debate "ECC vs. Superpowers" the same way they debate the three frameworks above. Choose ECC if you want breadth and are willing to pick your own process; choose one of the three above if you want the process itself enforced.
 
-Also worth knowing: [`wshobson/agents`](https://github.com/wshobson) positions itself as a plugin marketplace rather than a single framework, aggregating dozens of agents, skills, and commands that install natively through Claude Code's plugin system. It is less a competitor to Superpowers, GSD, or GSTACK than a different shelf in the same store.
+Also worth knowing: [`wshobson/agents`](https://github.com/wshobson/agents) positions itself as a plugin marketplace rather than a single framework, aggregating dozens of agents, skills, and commands that install natively through Claude Code's plugin system. It is less a competitor to Superpowers, GSD, or GSTACK than a different shelf in the same store.
 
 You can also roll your own. Claude Code's native subagents, hooks, and skills now cover a meaningful slice of what these frameworks automate, including asynchronous subagent execution that used to require a third-party context-management layer. If your needs are narrow, a CLAUDE.md file plus a couple of custom skills may get you 80% of the value without adopting a whole framework.
 
-For infrastructure specifically, the alternative worth naming is a managed agent rather than a framework. [Pulumi Neo](/product/neo/) is [grounded in your actual infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/), not general coding patterns, so it does not need a bolt-on orchestration layer to stay accurate across a long session. It understands your stacks, your dependencies, and your deployment history natively.
+For infrastructure specifically, there is also the managed-agent route rather than the framework route — see the note on [Pulumi Neo](/product/neo/) at the end of this post.
 
 ## How do these frameworks work with Pulumi?
 
