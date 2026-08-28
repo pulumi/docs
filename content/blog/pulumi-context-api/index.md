@@ -20,7 +20,7 @@ social:
     twitter: |
         What breaks if we change this stack? What can we safely delete? The answers are scattered across state files and cloud consoles.
 
-        The Context API connects Pulumi-managed and discovered resources, stacks, and relationships in a graph your AI agent can query.
+        The Context API connects Pulumi-managed and discovered resources, stacks, and relationships in a graph your agent can query.
     linkedin: |
         Every platform team fields the same questions. What is running? What breaks if we change this? What can we safely delete?
 
