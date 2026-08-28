@@ -16,6 +16,7 @@
 #   featured: [auto, my-editors-pick]       # slot 1 = latest post, slot 2 = pinned
 #   featured: [auto, pick-a, auto, pick-b]  # slots 1 & 3 latest; slots 2 & 4 pinned
 featured:
+  - pulumi-neo-security
   - pulumi-context-api
 
 # Optional list of up to 4 series slugs (from data/blog_series.yml) for the
