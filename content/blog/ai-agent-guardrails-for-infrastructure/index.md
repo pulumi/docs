@@ -6,7 +6,7 @@ draft: false
 meta_desc: "What policy as code blocks when an AI agent proposes infrastructure changes, and the five kinds of failure it cannot see."
 feature_image: feature.png
 authors:
-    - joe-duffy
+    - pulumi-content-team
 tags:
     - ai
     - ai-agents
