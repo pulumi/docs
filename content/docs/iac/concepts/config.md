@@ -733,6 +733,7 @@ Note the following:
 
 * Only the default provider reads configuration file settings. A provider object that you instantiate yourself does not read values from the stack configuration.
 * The precedence of configuration sources (configuration file, environment, and constructor arguments) can vary between providers. Refer to the provider's documentation for its specific rules.
+* Default providers can be turned off for some or all packages with the [`pulumi:disable-default-providers`](/docs/iac/concepts/config/#pulumidisable-default-providers) key, described below.
 
 ## Pulumi configuration options
 

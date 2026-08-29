@@ -49,7 +49,7 @@ Before getting started, you will need to install some pre-requisites:
 These are not required but are recommended if you plan on interacting with your Kubernetes cluster:
 
 * [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/): the standard Kubernetes command line interface.
-* [`helm`](https://helm.sh/docs/using_helm/): if you plan on deploying Helm charts to your cluster.
+* [`helm`](https://helm.sh/docs/intro/using_helm/): if you plan on deploying Helm charts to your cluster.
 
 ## Provisioning a New EKS Cluster
 
@@ -99,7 +99,7 @@ Outputs:
                 name: "aws"
                 user: {
                     exec: {
-                        apiVersion: "client.authentication.k8s.io/v1alpha1"
+                        apiVersion: "client.authentication.k8s.io/v1beta1"
                         args      : [
                             [0]: "token"
                             [1]: "-i"
@@ -129,9 +129,9 @@ ip-172-31-40-32.us-west-2.compute.internal   Ready     <none>    2m       v1.12.
 ```
 
 By default, Pulumi targets clusters based on your local kubeconfig, just like `kubectl` does. So if your `kubectl`
-client is set up to talk to your EKS cluster, deployments will target it. We saw earlier in
-[Provisioning a New EKS Cluster](#provisioning-a-new-eks-cluster), however, that you can deploy into any
-Kubernetes cluster created in your Pulumi program. This is because each Kubernetes object specification accepts
+client is set up to talk to your EKS cluster, deployments will target it. You can also deploy into any
+Kubernetes cluster created in your Pulumi program, including the one created in
+[Provisioning a New EKS Cluster](#provisioning-a-new-eks-cluster). This is because each Kubernetes object specification accepts
 an optional "provider" that can programmatically specify a kubeconfig to use.
 
 This is done by instantiating a new `kubernetes.Provider` object, and providing one or many of these properties:
@@ -188,9 +188,9 @@ For a full list of options that you may set on your cluster, see the [API docume
 
 By default, your EKS cluster is put into your region's default VPC. This is a reasonable default, however this is
 configurable if you want specific network isolation or to place your cluster work nodes on private subnets. This works
-in conjunction with [the Pulumi VPC guide](/docs/clouds/aws/guides/vpc/), which makes configuring VPCs easier.
+in conjunction with [the Pulumi VPC guide](/docs/iac/guides/clouds/aws/vpc/), which makes configuring VPCs easier.
 
-This example creates a new VPC with private subnets only and creates our EKS cluster inside of it:
+This example creates a new VPC and creates our EKS cluster inside of it:
 
 {{< example-program path="aws-eks-cluster" >}}
 
@@ -351,7 +351,7 @@ by name from any Helm repository (over the Internet or on-premises), or from a t
 
 > For these examples to work, you will need to [install Helm](https://helm.sh/docs/intro/install/).
 
-This program installs the Wordpress chart into our EKS cluster, using the [Release resource type](/registry/packages/kubernetes/api-docs/helm/v3/release/):
+This program installs the WordPress chart into our EKS cluster, using the [Release resource type](/registry/packages/kubernetes/api-docs/helm/v3/release/):
 
 {{< example-program path="aws-eks-helm-wordpress" >}}
 
@@ -398,7 +398,7 @@ Alternatively, we can use a tarball fetched from a web URL:
 
 ## Using an ECR Container Image from an EKS Kubernetes Deployment
 
-[The Pulumi ECR component](/docs/clouds/aws/guides/ecr/) enables you to build, publish, and consume private Docker
+[The Pulumi ECR component](/docs/iac/guides/clouds/aws/ecr/) enables you to build, publish, and consume private Docker
 images easily using Amazon's Elastic Container Registry (ECR). In the following example, creating an `Image` resource will
 build an image from the "./app" directory (relative to the project and containing Dockerfile), and publish it to the
 provisioned ECR repository.
@@ -413,7 +413,7 @@ accomplishes this with a single `pulumi up` command:
 
 {{< example-program path="awsx-ecr-eks-deployment-service" >}}
 
-For more information about ECR, see [the Pulumi ECR documentation](/docs/clouds/aws/guides/ecr/).
+For more information about ECR, see [the Pulumi ECR documentation](/docs/iac/guides/clouds/aws/ecr/).
 
 ## Additional EKS Resources
 

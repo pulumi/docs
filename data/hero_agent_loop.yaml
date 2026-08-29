@@ -1,0 +1,188 @@
+# The text content of the homepage hero animation (the agent-loop scene):
+# the Pulumi program the agent types — one example per language, adapted from
+# the classic code-selector hero — and the pulumi up stream in the terminal.
+#
+# To change any of them, edit the plain-text sources below, then run
+#
+#   yarn --cwd theme gen:hero-text
+#
+# which re-highlights them with shiki (min-light theme; each language's own
+# grammar for the editor, bash for the terminal — the same highlighting the
+# storyboards used) and rewrites data/hero_agent_loop_generated.yaml, the file
+# the hero partial actually renders. Nothing runs at build or page-load time.
+#
+# Editor examples must fit the code panel: at most 13 rows, and lines longer
+# than ~68 characters clip at the panel's right edge. A blank line is a blank
+# row and separates the typing animation's bursts. If you add or remove
+# terminal rows, shift TERM_SCROLL_END in theme/src/ts/hero-animation.ts by
+# 18px per row.
+#
+# dark_code picks the code panel's treatment: true is shiki's min-dark theme on
+# a violet-950 panel, false is min-light on the translucent lavender one. The
+# generator writes the flag through to the generated file so the hero partial
+# paints the panel to match the syntax colors; flipping it needs a regen.
+
+dark_code: true
+
+editor_sources:
+  typescript: |
+    import * as aws from "@pulumi/aws";
+    import * as awsx from "@pulumi/awsx";
+
+    const vpc = new awsx.ec2.Vpc("vpc");
+    const azs = await aws.getAvailabilityZones({ state: "available" });
+
+    const subnets = azs.names.map((az, i) =>
+      new aws.ec2.Subnet(`subnet-${i}`, {
+        vpcId: vpc.vpcId,
+        cidrBlock: `10.0.${i}.0/24`,
+        availabilityZone: az,
+      })
+    );
+  python: |
+    import pulumi_aws as aws
+    import pulumi_awsx as awsx
+
+    azs = aws.get_availability_zones(state="available")
+    vpc = awsx.ec2.Vpc("vpc")
+
+    for i, az in enumerate(azs.names):
+        aws.ec2.Subnet(f"subnet-{i}",
+            vpc_id=vpc.vpc_id,
+            cidr_block=f"10.0.{i}.0/24",
+            availability_zone=az,
+        )
+  go: |
+    pulumi.Run(func(ctx *pulumi.Context) error {
+      vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
+      azs, _ := aws.GetAvailabilityZones(ctx, nil, nil)
+      for i, az := range azs.Names {
+        name := fmt.Sprintf("subnet-%d", i)
+        ec2.NewSubnet(ctx, name, &ec2.SubnetArgs{
+          VpcId:            vpc.VpcId,
+          CidrBlock:        pulumi.Sprintf("10.0.%d.0/24", i),
+          AvailabilityZone: pulumi.String(az),
+        })
+      }
+      return nil
+    })
+  csharp: |
+    var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
+    var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
+
+    var subnets = azs.Apply(zones =>
+        zones.Names.Select((az, i) =>
+            new Subnet($"subnet-{i}", new()
+            {
+                VpcId = vpc.VpcId,
+                CidrBlock = $"10.0.{i}.0/24",
+                AvailabilityZone = az,
+            })
+        ).ToList()
+    );
+  java: |
+    Pulumi.run(ctx -> {
+        var vpc = new Vpc("vpc");
+        var azs = AwsFunctions.getAvailabilityZonesPlain().join();
+
+        var names = azs.names();
+        for (int i = 0; i < names.size(); i++) {
+            new Subnet("subnet-" + i, SubnetArgs.builder()
+                .vpcId(vpc.id())
+                .cidrBlock("10.0." + i + ".0/24")
+                .availabilityZone(names.get(i))
+                .build());
+        }
+    });
+  hcl: |
+    resource "awsx_ec2_vpc" "vpc" {}
+
+    data "aws_availability_zones" "azs" {
+      state = "available"
+    }
+
+    resource "aws_subnet" "subnet" {
+      count             = length(data.aws_availability_zones.azs.names)
+      vpc_id            = awsx_ec2_vpc.vpc.vpc_id
+      cidr_block        = "10.0.${count.index}.0/24"
+      availability_zone = data.aws_availability_zones.azs.names[count.index]
+    }
+  yaml: |
+    variables:
+      azs:
+        fn::invoke:
+          function: aws:getAvailabilityZones
+    resources:
+      vpc:
+        type: awsx:ec2:Vpc
+      subnet-0:
+        type: aws:ec2:Subnet
+        properties:
+          vpcId: ${vpc.vpcId}
+          cidrBlock: "10.0.0.0/24"
+          availabilityZone: ${azs.names[0]}
+
+terminal_source: |
+  • Tests passed. Deploying.
+
+  › pulumi up
+
+  Loading policies...
+
+  Previewing update (prod)
+
+   +   pulumi:pulumi:Stack                     network        create
+   +   ├─ awsx:ec2:Vpc                         vpc            create
+   +   │  └─ aws:ec2:Vpc                       vpc            create
+   +   │     ├─ aws:ec2:InternetGateway        vpc            create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-2   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-2          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-2   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-2   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-2   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-2          create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-1   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-1          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-1   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-1   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-1   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-1          create
+   +   │     ├─ aws:ec2:Subnet                 vpc-private-1  create
+   +   │     │  └─ aws:ec2:RouteTable          vpc-private-1  create
+   +   │     │     ├─ aws:ec2:RouteTableAssoc  vpc-private-1  create
+   +   │     │     └─ aws:ec2:Route            vpc-private-1  create
+   +   │     ├─ aws:ec2:Subnet                 vpc-private-2  create
+   +   │     │  └─ aws:ec2:RouteTable          vpc-private-2  create
+   +   │     │     ├─ aws:ec2:RouteTableAssoc  vpc-private-2  create
+   +   │     │     └─ aws:ec2:Route            vpc-private-2  create
+   +   │     ├─ aws:ec2:Subnet                 vpc-public-3   create
+   +   │     │  ├─ aws:ec2:Eip                 vpc-3          create
+   +   │     │  ├─ aws:ec2:RouteTable          vpc-public-3   create
+   +   │     │  │  ├─ aws:ec2:Route            vpc-public-3   create
+   +   │     │  │  └─ aws:ec2:RouteTableAssoc  vpc-public-3   create
+   +   │     │  └─ aws:ec2:NatGateway          vpc-3          create
+   +   │     └─ aws:ec2:Subnet                 vpc-private-3  create
+   +   │        └─ aws:ec2:RouteTable          vpc-private-3  create
+   +   │           ├─ aws:ec2:RouteTableAssoc  vpc-private-3  create
+   +   │           └─ aws:ec2:Route            vpc-private-3  create
+   +   ├─ aws:ec2:Subnet                       subnet-1       create
+   +   ├─ aws:ec2:Subnet                       subnet-5       create
+   +   ├─ aws:ec2:Subnet                       subnet-3       create
+   +   ├─ aws:ec2:Subnet                       subnet-4       create
+   +   ├─ aws:ec2:Subnet                       subnet-0       create
+   +   └─ aws:ec2:Subnet                       subnet-2       create
+
+  Outputs:
+      vpcId: "vpc-0a1b2c3d4e5f67890"
+
+  Resources:
+      + 40 created
+
+  Policies applied:
+      Name                    Version
+      cis-aws                 1.0.2
+      nist-aws                1.0.2
+      pci-dss-aws             2.0.4
+      iso-27001-aws           1.0.0
+
+  Duration: 1m47s

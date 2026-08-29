@@ -11,7 +11,6 @@ menu:
 aliases:
     - /docs/iac/operations/debugging/debugging-providers/
     - /docs/support/debugging/debugging-providers/
-    - /docs/using-pulumi/pulumi-packages/
     - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/
     - /docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/
     - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/

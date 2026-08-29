@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as code in Any Language – Pulumi IaC"
-meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
+meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, YAML, or HCL. Deploy to any cloud with built-in previews and testing.
 meta_image: /images/product/infrastructure-as-code/iac-meta.png
 type: page
 layout: template-page
@@ -16,35 +16,50 @@ sections:
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
     anchor: hero
     code_overlay_image: /images/product/infrastructure-as-code/iac-hero-code-overlay.svg
-    code_aspect_ratio: "858/500"
-    code_visual_max_width: 860px
+    code_aspect_ratio: "666/513"
+    code_visual_max_width: 700px
     code_offsets:
       top: "0%"
-      right: "28.5%"
+      right: "0%"
+      left: "23%"
       bottom: "30%"
-      left: "0%"
     code_title: "index.ts"
     code_snippets:
       - language: typescript
         label: TypeScript
         title: "index.ts"
         code: |
-          import * as pulumi from "@pulumi/pulumi";
           import * as aws from "@pulumi/aws";
+          import * as awsx from "@pulumi/awsx";
 
-          const bucket = new aws.s3.Bucket("my-bucket");
+          const vpc = new awsx.ec2.Vpc("vpc");
+          const azs = await aws.getAvailabilityZones({ state: "available" });
 
-          export const bucketName = bucket.id;
+          const subnets = azs.names.map((az, i) =>
+            new aws.ec2.Subnet(`subnet-${i}`, {
+              vpcId: vpc.vpcId,
+              cidrBlock: `10.0.${i}.0/24`,
+              availabilityZone: az,
+            })
+          );
+
       - language: python
         label: Python
         title: "__main__.py"
         code: |
-          import pulumi
-          from pulumi_aws import s3
+          import pulumi_aws as aws
+          import pulumi_awsx as awsx
 
-          bucket = s3.Bucket("my-bucket")
+          azs = aws.get_availability_zones(state="available")
+          vpc = awsx.ec2.Vpc("vpc")
 
-          pulumi.export("bucketName", bucket.id)
+          for i, az in enumerate(azs.names):
+              aws.ec2.Subnet(f"subnet-{i}",
+                  vpc_id=vpc.vpc_id,
+                  cidr_block=f"10.0.{i}.0/24",
+                  availability_zone=az,
+              )
+
       - language: go
         label: Go
         title: "main.go"
@@ -52,76 +67,153 @@ sections:
           package main
 
           import (
-            "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-            "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+              "fmt"
+
+              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
+              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+              awsx "github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
+              "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
           func main() {
-            pulumi.Run(func(ctx *pulumi.Context) error {
-              bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
-              if err != nil {
-                return err
-              }
-              ctx.Export("bucketName", bucket.ID())
-              return nil
-            })
+              pulumi.Run(func(ctx *pulumi.Context) error {
+                  vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
+                  azs, _ := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{State: pulumi.StringRef("available")}, nil)
+
+                  for i, az := range azs.Names {
+                      ec2.NewSubnet(ctx, fmt.Sprintf("subnet-%d", i), &ec2.SubnetArgs{
+                          VpcId:            vpc.VpcId,
+                          CidrBlock:        pulumi.String(fmt.Sprintf("10.0.%d.0/24", i)),
+                          AvailabilityZone: pulumi.String(az),
+                      })
+                  }
+                  return nil
+              })
           }
+
       - language: csharp
         label: C#
         title: "MyStack.cs"
         code: |
+          using System.Linq;
           using Pulumi;
-          using Pulumi.Aws.S3;
+          using Pulumi.Aws;
+          using Pulumi.Aws.Ec2;
 
-          class MyStack : Stack
+          return await Deployment.RunAsync(() =>
           {
-              public MyStack()
-              {
-                  var bucket = new Bucket("my-bucket");
-                  this.BucketName = bucket.Id;
-              }
+              var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
+              var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
 
-              [Output]
-              public Output<string> BucketName { get; set; }
-          }
+              var subnets = azs.Apply(result =>
+                  result.Names.Select((az, i) =>
+                      new Subnet($"subnet-{i}", new()
+                      {
+                          VpcId = vpc.VpcId,
+                          CidrBlock = $"10.0.{i}.0/24",
+                          AvailabilityZone = az,
+                      })
+                  ).ToList()
+              );
+          });
+
       - language: java
         label: Java
         title: "App.java"
         code: |
-          package s3site;
+          package myproject;
 
-          import com.pulumi.Context;
           import com.pulumi.Pulumi;
-          import com.pulumi.core.Output;
-          import com.pulumi.aws.s3.Bucket;
+          import com.pulumi.aws.ec2.Vpc;
+          import com.pulumi.aws.ec2.Subnet;
+          import com.pulumi.aws.ec2.SubnetArgs;
+          import com.pulumi.aws.AwsFunctions;
+          import com.pulumi.aws.inputs.GetAvailabilityZonesPlainArgs;
 
-          public class Infra {
+          public class App {
               public static void main(String[] args) {
-                  Pulumi.run(Infra::stack);
-              }
+                  Pulumi.run(ctx -> {
+                      var vpc = new Vpc("vpc");
 
-              private static void stack(Context ctx) {
-                  final var myBucket = new Bucket("my-bucket");
-                  ctx.export("bucketName",
-                      myBucket.bucketDomainName());
+                      var azs = AwsFunctions.getAvailabilityZonesPlain(
+                          GetAvailabilityZonesPlainArgs.builder()
+                              .state("available")
+                              .build()
+                      ).join();
+
+                      var names = azs.names();
+                      for (int i = 0; i < names.size(); i++) {
+                          new Subnet("subnet-" + i, SubnetArgs.builder()
+                              .vpcId(vpc.id())
+                              .cidrBlock("10.0." + i + ".0/24")
+                              .availabilityZone(names.get(i))
+                              .build());
+                      }
+                  });
               }
           }
+
+      - language: hcl
+        label: HCL
+        title: "main.tf"
+        code: |
+          terraform {
+            required_providers {
+              aws = {
+                source  = "pulumi/aws"
+              }
+              awsx = {
+                source  = "pulumi/awsx"
+              }
+            }
+          }
+
+          resource "awsx_ec2_vpc" "vpc" {}
+
+          data "aws_availability_zones" "available" {
+            state = "available"
+          }
+
+          resource "aws_subnet" "subnet" {
+            count             = length(data.aws_availability_zones.available.names)
+            vpc_id            = awsx_ec2_vpc.vpc.vpc_id
+            cidr_block        = "10.0.${count.index}.0/24"
+            availability_zone = data.aws_availability_zones.available.names[count.index]
+          }
+
       - language: yaml
         label: YAML
         title: "Pulumi.yaml"
         code: |
-          name: my-stack
-          runtime: yaml
+          variables:
+            azs:
+              fn::invoke:
+                function: aws:getAvailabilityZones
+                arguments:
+                  state: available
+
           resources:
-              bucket:
-                  type: aws:s3:Bucket
-          outputs:
-              bucketName: ${bucket.id}
+            vpc:
+              type: awsx:ec2:Vpc
+
+            subnet-0:
+              type: aws:ec2:Subnet
+              properties:
+                vpcId: ${vpc.vpcId}
+                cidrBlock: "10.0.0.0/24"
+                availabilityZone: ${azs.names[0]}
+
+            subnet-1:
+              type: aws:ec2:Subnet
+              properties:
+                vpcId: ${vpc.vpcId}
+                cidrBlock: "10.0.1.0/24"
+                availabilityZone: ${azs.names[1]}
 
   - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
-      TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Get autocomplete, type checking, and all your favorite IDE features.
+      TypeScript/JavaScript, Python, Go, C#, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
 
       Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:

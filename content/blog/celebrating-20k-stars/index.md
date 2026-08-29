@@ -19,7 +19,7 @@ Since its inception, Pulumi's vision has been rooted in enabling teams to build 
 
 ## Fueled by Community Contributions
 
-Over the past 7 years, the Pulumi project has had 4,400+ contributors that made 75,000+ pull requests. Pulumi is depended upon by 6,600+ GitHub projects and supports over 160+ packages in the registry. It has been downloaded more than 100 million times by 170,000+ developers. In just the last month, Pulumi has been the most active Infrastructure as Code (IaC) open-source project compared to Terraform or OpenTofu. Pulumi has had 117 merged pull requests (67 TF, 83 OpenTofu), 82 closed issues (49 TF, 54 OpenTofu), and 53 new issues (27 TF, 29, OpenTofu).
+Over the past 7 years, the Pulumi project has had 4,400+ contributors that made 75,000+ pull requests. Pulumi is depended upon by 6,600+ GitHub projects and supports over 160+ packages in the registry. It has been downloaded more than 100 million times by 170,000+ developers. In just the last month, Pulumi has been the most active infrastructure as code (IaC) open-source project compared to Terraform or OpenTofu. Pulumi has had 117 merged pull requests (67 TF, 83 OpenTofu), 82 closed issues (49 TF, 54 OpenTofu), and 53 new issues (27 TF, 29, OpenTofu).
 
 ## Notable Features and Milestones
 

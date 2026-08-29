@@ -228,7 +228,7 @@ image = awsx.ecr.Image("app-server-image",
 
 ### 1. Pulumi
 
-While most tools in this list excel at quick solutions, infrastructure demands a more robust approach. This is where **Pulumi** stands apart. It's not just another scrappy tool—it's an enterprise-grade Infrastructure as Code platform that happens to harness Python's power and flexibility.
+While most tools in this list excel at quick solutions, infrastructure demands a more robust approach. This is where **Pulumi** stands apart. It's not just another scrappy tool—it's an enterprise-grade infrastructure as code platform that happens to harness Python's power and flexibility.
 
 With support for real Python code instead of configuration languages, you can define, deploy, and manage your cloud resources using familiar programming concepts and practices.
 

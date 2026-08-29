@@ -28,7 +28,7 @@ Taught by Pulumi and Codefresh engineers, you'll receive a thorough understandin
 
 ## Intro to Pulumi
 
-If you're new to infrastructure as code, this workshop is for you. You will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. The workshop covers setting up Pulumi, an infrastructure as code platform that uses programming languages to provision modern cloud infrastructure.
+If you're new to infrastructure as code, this workshop is for you. You will learn the fundamentals of infrastructure as code through a series of guided exercises using Pulumi’s Cloud Engineering platform. The workshop covers setting up Pulumi, an infrastructure as code platform that uses programming languages to provision modern cloud infrastructure.
 
 This workshop is designed to help users completely new to Pulumi become familiar with the core concepts needed to be effective with the Pulumi Infrastructure as Code platform. We will guide through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
 

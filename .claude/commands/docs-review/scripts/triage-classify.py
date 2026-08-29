@@ -21,6 +21,17 @@ from collections.abc import Iterable
 
 WEBPACK_RE = re.compile(r"^webpack\.[^/]+\.js$")
 
+# Applied at the PR level when no file matched a domain rule, so that every
+# triaged PR carries exactly one domain signal and "no domain label" always
+# means "triage didn't run" rather than "triage ran and had nothing to say".
+# Deliberately NOT domain:mixed: mixed is derived from len(domains) > 1 and
+# asserts "touches more than one domain, each file reviewed under its own" —
+# the opposite of what's true here — and overloading it would destroy its
+# filter value for the multi-domain PRs it exists to mark. domain:other is
+# an honest "no specific domain"; those files review under shared-criteria
+# only, per docs-review:references:domain-routing rule 6.
+FALLBACK_DOMAIN = "domain:other"
+
 # Above this many changed lines (additions + deletions), the PR is `oversized`:
 # too big for the review pipeline to finish inside its time budget, and at this
 # scale the bulk is invariably generated output that an LLM line-review adds no
@@ -62,7 +73,13 @@ def classify_path(path: str) -> str | None:
     # infrastructure that affects how content renders. static/programs/ is
     # already routed at the top of this function (programs check returns
     # first); the explicit exclusion below documents intent for readers.
-    if path.startswith("layouts/") or path.startswith("assets/"):
+    # theme/ is the same kind of thing one level down: the SCSS and TypeScript
+    # sources compiled into the site's CSS/JS bundles. Its omission is why
+    # PR #21164 (a consent-manager change under theme/src/ts/) carried no
+    # domain label and was reviewed under shared-criteria only.
+    if (path.startswith("layouts/")
+            or path.startswith("assets/")
+            or path.startswith("theme/")):
         return "domain:infra"
     if path.startswith("static/") and not path.startswith("static/programs/"):
         return "domain:infra"
@@ -264,6 +281,13 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         d = classify_path(f.get("path", ""))
         if d:
             domains.add(d)
+    # Fallback fires only for a PR where NOTHING classified — never
+    # alongside a real domain. A PR touching content/docs/ plus data/ is
+    # domain:docs, not docs+other+mixed: the unmatched file adds no review
+    # lane, so surfacing it as a second domain would flip `mixed` on
+    # PRs that aren't. Placed before the mixed computation for that reason.
+    if not domains and files:
+        domains.add(FALLBACK_DOMAIN)
 
     has_any_frontmatter = any(f["has_frontmatter_change"] for f in file_flags)
     has_any_body = any(f["has_body_change"] for f in file_flags)
