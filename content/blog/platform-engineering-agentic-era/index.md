@@ -4,7 +4,7 @@ date: 2026-08-27
 draft: false
 meta_desc: "How platform teams give AI agents identity, policy, and audit trails to provision infrastructure safely, without a human in every loop."
 authors:
-    - joe-duffy
+    - pulumi-content-team
 tags:
     - platform-engineering
     - ai-agents
