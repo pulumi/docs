@@ -61,8 +61,14 @@
            structure GFM tables and lists need to parse correctly. htmlUnescape
            decodes the named entities (&ldquo; etc.) goldmark's typographer
            extension emits for smart quotes/dashes, which plainify alone
-           leaves as literal escaped text. */}}
-      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
+           leaves as literal escaped text. Shortcode tags are stripped from the
+           joined lines first, since an answer's collected line range can split
+           a multi-line shortcode (e.g. a "notes" callout) from its closing tag,
+           and an unbalanced shortcode token would make markdownify abort the
+           whole site build rather than just this page. */}}
+      {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+      {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -97,7 +103,9 @@
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
-      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
+      {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+      {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+      {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
       {{ if $answerText }}
         {{ $questionText := $currentQuestion }}
         {{/* Remove the heading prefix */}}
@@ -135,7 +143,9 @@
 {{/* Save last Q&A if exists */}}
 {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
   {{/* See the markdown-to-plain-text rationale on the first occurrence above. */}}
-  {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify (delimit $currentAnswer "\n"))))) " \t\n\r" }}
+  {{ $joinedAnswer := delimit $currentAnswer "\n" }}
+  {{ $safeJoinedAnswer := replaceRE `\{\{[%<][^}]*[%>]\}\}` "" $joinedAnswer }}
+  {{ $answerText := trim (replaceRE "\\s+" " " (htmlUnescape (plainify (markdownify $safeJoinedAnswer)))) " \t\n\r" }}
   {{ if $answerText }}
     {{ $questionText := $currentQuestion }}
     {{/* Remove the heading prefix */}}
