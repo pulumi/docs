@@ -141,7 +141,7 @@ When managing the virtual environment on your own and [running the Policy Pack l
 
 Enforced Policy Packs that are published to Pulumi Cloud will automatically create a virtual environment, install dependencies in the virtual environment, and use the virtual environment when running against a Pulumi stack.
 
-### Adding a new dependency
+### How do I add a new dependency to a Python Policy Pack?
 
 To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your Policy Pack directory:
 
