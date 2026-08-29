@@ -819,7 +819,7 @@ categories:
 
       - id: audit-log-export
         name: Automated log export to S3
-        link: /docs/administration/guides/export-audit-logs/aws-s3/
+        link: /docs/administration/guides/audit-logs/aws-s3/
         available_from: business-critical
 
   - id: support

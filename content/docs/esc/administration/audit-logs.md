@@ -12,7 +12,7 @@ pulumi_cloud_feature: audit-logs
 ---
 
 {{% notes type="warning" %}}
-For comprehensive audit log documentation including how to view, filter, and export logs, see [Audit Logs](/docs/administration/concepts/audit-logs/) in the Administration section.
+For comprehensive audit log documentation including how to view and filter logs, see [Audit Logs](/docs/administration/concepts/audit-logs/) in the Administration section. To get events out of Pulumi Cloud, see the [audit log guides](/docs/administration/guides/audit-logs/).
 {{% /notes %}}
 
 Audit logs enable you to track the activity of users within your ESC environments. All ESC activities are recorded in the Pulumi Cloud audit log system, capturing the timestamp, user identity, specific action taken, and source IP address for each event.
@@ -67,4 +67,4 @@ For a full list of Pulumi Cloud audit log events see the [Pulumi Cloud audit log
 
 ## Automating and manually exporting logs
 
-Pulumi ESC leverages the same audit log infrastructure as the Pulumi Cloud platform. For detailed information on exporting, and managing audit logs, see the [Pulumi Cloud Audit Logs](/docs/administration/concepts/audit-logs/) documentation.
+Pulumi ESC leverages the same audit log infrastructure as the Pulumi Cloud platform. For detailed information on exporting audit logs, see the [audit log guides](/docs/administration/guides/audit-logs/).
