@@ -803,7 +803,7 @@ The terms describe the same idea from two engineering cultures: Spotify populari
 
 ### Do golden paths stop teams from going off-path?
 
-No, and a golden path that forbids deviation stops being a path and becomes a mandate, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out simply own the operational and security work the platform team would otherwise have handled for them.
+No, and a golden path that forbids deviation stops being a path and becomes a golden cage, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out simply own the operational and security work the platform team would otherwise have handled for them.
 
 ### How do you measure golden path adoption?
 
