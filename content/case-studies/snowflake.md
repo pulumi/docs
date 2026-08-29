@@ -52,7 +52,7 @@ However, to make life even more interesting, all deployments had to be completed
 
 The complexity of the project, along with the tight deadline, meant that the Snowflake cloud engineering team had to ask themselves if the tools they were currently using could do the job or was it time for a change?
 
-The team was using an HCL-based Infrastructure as Code tool to provision most of their infrastructure but they were running into limitations that threatened to derail the project. To succeed, the team decided they had to move away from a domain-specific language (DSL) and use a standard programming language. The benefits of that change would be far reaching. Not only would they gain the flexibility of a full-fledged language, but it meant they could use existing testing frameworks, SDKs, and other standard tools that would make it easy to adopt best practices for software development.
+The team was using an HCL-based infrastructure as code tool to provision most of their infrastructure but they were running into limitations that threatened to derail the project. To succeed, the team decided they had to move away from a domain-specific language (DSL) and use a standard programming language. The benefits of that change would be far reaching. Not only would they gain the flexibility of a full-fledged language, but it meant they could use existing testing frameworks, SDKs, and other standard tools that would make it easy to adopt best practices for software development.
 
 The Snowflake team knew they needed more than a tool. They needed a platform that allows developers to use the languages and libraries they already know. They decided they needed Pulumi.
 

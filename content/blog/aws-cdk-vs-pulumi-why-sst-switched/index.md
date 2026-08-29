@@ -82,7 +82,7 @@ TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infr
 
 ## The Beginnings of SST
 
-Application developers have witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to Infrastructure as Code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
+Application developers have witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to infrastructure as code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
 
 This was the driving force behind the creation of [SST (Serverless Stack)](https://sst.dev/), a framework that aims to bridge the gap between application developers and infrastructure management. In the early days, SST was built on top of AWS's Cloud Development Kit (CDK), which allowed developers to define their infrastructure using TypeScript or Python. While this was a step in the right direction, they soon realized that the limitations of CDK and the underlying AWS CloudFormation were holding them back from truly empowering application developers.
 

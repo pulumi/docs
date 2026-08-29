@@ -15,11 +15,11 @@ category: tutorials
 
 *This is the second of a three-part series originally published on The New Stack.*
 
-Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with Infrastructure as Code. Everything we show will be done with Pulumi’s [free and open source Infrastructure as Code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
+Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with infrastructure as code. Everything we show will be done with Pulumi’s [free and open source Infrastructure as Code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
 
 ## Migrating to Infrastructure as Code
 
-When you pick an Infrastructure as Code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use Infrastructure as Code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
+When you pick an infrastructure as code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use infrastructure as code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
 
 In some cases, it’s better to just toss that infrastructure and start over from scratch. Or perhaps you can focus on succeeding first with a “new” part of the system and integrate with the existing infrastructure until you’re convinced it’s time to migrate. In many cases, however, that’s infeasible: Maybe you actually have a mission-critical service already that you need to bring under the management of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/). The good news is that Pulumi offers [tools to migrate](/migrate/) from existing tools like Terraform, AWS CloudFormation/CDK, Azure Resource Manager (ARM), Kubernetes YAML and more, bringing existing infrastructure under the management of Pulumi without any disruption. The user guides in the [Migration Hub](/migrate/) walk through this process.
 
@@ -91,13 +91,13 @@ In the case of AWS’s Elastic Kubernetes Service (EKS), on the other hand, the 
 
 *See the template for AWS [here](/templates/kubernetes/aws/)*.
 
-You can see here even greater differences between the equivalent cloud services on different cloud providers and AWS’s more “building blocks” style of approach in action. This is also a great example of Infrastructure as Code’s ability to bundle best practices so that they can be reused. This uses the [Pulumi EKS Package](/registry/packages/eks/), which configures all of the above in the standard way so that you don’t need to figure out every little detail when you’re just getting started.
+You can see here even greater differences between the equivalent cloud services on different cloud providers and AWS’s more “building blocks” style of approach in action. This is also a great example of infrastructure as code’s ability to bundle best practices so that they can be reused. This uses the [Pulumi EKS Package](/registry/packages/eks/), which configures all of the above in the standard way so that you don’t need to figure out every little detail when you’re just getting started.
 
 In both cases, we end up with a fully managed Kubernetes cluster that is ready to use. The tool spits out a kubeconfig file so we can immediately deploy into or inspect it.
 
 ## Infrastructure Projects and Stacks
 
-All of these examples had one thing in common: The Infrastructure as Code program’s job is to declare individual resource objects, their properties and how they relate to each other. That was true no matter the scenario, the cloud or the language we have chosen. Once the program has done that, the Infrastructure as Code tool takes care of the rest.
+All of these examples had one thing in common: The infrastructure as code program’s job is to declare individual resource objects, their properties and how they relate to each other. That was true no matter the scenario, the cloud or the language we have chosen. Once the program has done that, the infrastructure as code tool takes care of the rest.
 
 Pulumi uses the term **project** to refer to the code that declares all of this, and each instance of said project that is configured and ready to deploy — each “environment,” if you will — is called a **stack**.
 
@@ -144,7 +144,7 @@ Each stack is a unit of security and deployment concurrency. By layering stacks 
 
 ## Doing a Deployment
 
-After we’ve got everything wired up — a project, its code containing the declaration of a desired cloud resource topology, and at least one stack — it’s time to actually get something up and running. Since our code is written in an ordinary language, it’s tempting to think we would just run it outright. (Indeed, we will see later on that with the Automation API, we can do just that.) Infrastructure as Code is special, though; because of its declarative nature, we will run it using the Pulumi CLI, which ensures a declarative Infrastructure as Code workflow.
+After we’ve got everything wired up — a project, its code containing the declaration of a desired cloud resource topology, and at least one stack — it’s time to actually get something up and running. Since our code is written in an ordinary language, it’s tempting to think we would just run it outright. (Indeed, we will see later on that with the Automation API, we can do just that.) Infrastructure as code is special, though; because of its declarative nature, we will run it using the Pulumi CLI, which ensures a declarative infrastructure as code workflow.
 
 The `pulumi up` command is the key behind that workflow in action:
 

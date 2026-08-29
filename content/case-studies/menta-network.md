@@ -128,7 +128,7 @@ snap.
 
 Adopting Pulumi for one project took an engineer just a couple of days, given that the
 codebase and architecture were already planned for AWS. In the process the team learned
-that it's safe to bet on Infrastructure as Code with Pulumi from a very early stage in the
+that it's safe to bet on infrastructure as code with Pulumi from a very early stage in the
 engineering process because its abstractions are clear and simple but do not omit
 important architectural aspects of the underlying cloud services such as AWS Lambda, EC2
 and Networking features.

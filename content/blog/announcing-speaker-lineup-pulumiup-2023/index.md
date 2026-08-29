@@ -62,7 +62,7 @@ In his spare time, Tim enjoys video games, building Lego, and mountain biking.
 
 ### Tyler Scheuble - Head of Platform, People Data Labs
 
-_Talk: Using Monorepos to Level-up your Infrastructure as Code and Software Delivery_  
+_Talk: Using Monorepos to Level-up your infrastructure as code and Software Delivery_  
 Tyler possesses a genuine enthusiasm for technology. At [People Data Labs](https://www.peopledatalabs.com/?utm_source=Pulumi.com&utm_medium=Website&utm_campaign=PulumiUP), he has designed petabyte-scale data pipelines and high-performance APIs with demanding availability requirements, which informed his approach to leading the development of the next generation of the startup's development pipelines and environments.
 
 Tyler is passionate about finding simple solutions to cross-cutting concerns such as security, observability, and development velocity.
