@@ -5,7 +5,7 @@ draft: false
 meta_desc: "Compare the best policy as code tools in 2026: OPA, HashiCorp Sentinel, Kyverno, Checkov, and Pulumi Policies, chosen honestly by fit."
 feature_image: feature.png
 authors:
-    - alex-leventer
+    - pulumi-content-team
 tags:
     - policy-as-code
     - security
