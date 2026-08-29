@@ -591,12 +591,12 @@ pulumi new https://github.com/myorg/go-microservice-boilerplate
 ```
 
 **No-Code Deployment:**
-Navigate to [Pulumi IDP](/docs/idp/concepts/no-code-stacks/) → `Templates` → `Deploy with Pulumi` → Configure and launch
+Navigate to the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) → `New Project` → choose your template → "Add a no-code stack to a template" → select `Deployments - no-code` → Configure and launch
 
 ![img_7.png](pulumi_idp_deployment_no_code_view.png)
 
 **Pulumi Deployment:**
-Navigate to [Pulumi IDP](/docs/idp/concepts/no-code-stacks/) → `Templates` → `Deploy with Pulumi` → Configure and launch
+Navigate to the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) → `New Project` → choose your template → "Create a new project from a template" → Configure and launch
 
 ![img_6.png](pulumi_idp_deployment_git_view.png)
 
@@ -608,7 +608,7 @@ Package your infrastructure patterns into reusable components and templates, pub
 
 A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because several popular ones solve catalog and discovery problems without ever provisioning anything themselves.
 
-Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow the same shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
+Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
 
 Pulumi collapses that hand-off. A golden path built with [Pulumi Components](/docs/iac/concepts/components/) and [Templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). There is no second system to keep in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
 
@@ -628,8 +628,8 @@ new PolicyPack("golden-path-guardrails", {
             name: "s3-bucket-must-not-be-public",
             description: "S3 buckets deployed through a golden path may not allow public read access.",
             enforcementLevel: "mandatory",
-            validateResource: validateResourceOfType(aws.s3.BucketV2, (bucket, args, reportViolation) => {
-                if (args.props.acl === "public-read" || args.props.acl === "public-read-write") {
+            validateResource: validateResourceOfType(aws.s3.BucketAcl, (bucketAcl, args, reportViolation) => {
+                if (bucketAcl.acl === "public-read" || bucketAcl.acl === "public-read-write") {
                     reportViolation("S3 buckets must not be publicly readable.");
                 }
             }),
@@ -803,7 +803,7 @@ The terms describe the same idea from two engineering cultures: Spotify populari
 
 ### Do golden paths stop teams from going off-path?
 
-No. A well-designed golden path is optional but recommended: teams can deviate when they have a real reason to, but they take on the extra support burden of maintaining that deviation themselves. Blocking deviation entirely turns a golden path into a golden cage, one of the pitfalls covered above.
+No, and a golden path that forbids deviation stops being a path and becomes a mandate, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out simply own the operational and security work the platform team would otherwise have handled for them.
 
 ### How do you measure golden path adoption?
 
