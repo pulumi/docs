@@ -7,6 +7,12 @@ on:
       - "Build and deploy testing"
     types:
       - completed
+  schedule:
+    # Catches availability regressions that appear well after a deploy finishes
+    # (e.g. a CDN/origin issue that only surfaces once caches roll over), which
+    # the workflow_run trigger above cannot see since it only fires once, right
+    # after a deploy completes.
+    - cron: '*/30 * * * *'
   workflow_dispatch:
     inputs:
       target_url:
@@ -40,7 +46,7 @@ jobs:
   health-check:
     name: Run post-deployment health checks
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
     outputs:
       url: ${{ steps.target.outputs.url }}
       environment: ${{ steps.target.outputs.environment }}
@@ -58,6 +64,10 @@ jobs:
             else
               echo "slack_channel=docs-ops-test" >> $GITHUB_OUTPUT
             fi
+          elif [[ "${{ github.event_name }}" == "schedule" ]]; then
+            echo "url=https://www.pulumi.com" >> $GITHUB_OUTPUT
+            echo "environment=production" >> $GITHUB_OUTPUT
+            echo "slack_channel=docs-ops" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.workflow_run.name }}" == "Build and deploy" ]]; then
             echo "url=https://www.pulumi.com" >> $GITHUB_OUTPUT
             echo "environment=production" >> $GITHUB_OUTPUT
@@ -80,19 +90,29 @@ jobs:
           echo "Target: $BASE_URL"
           echo ""
 
-          # Function to check endpoint returns 200
+          # Signature string rendered in the body of the site's 404 page. A page
+          # that returns HTTP 200 but serves this body is a soft 404: the status
+          # code alone is not enough to prove the page actually rendered.
+          SOFT_404_SIGNATURE="404 Page not found"
+
+          # Function to check endpoint returns 200 with a real (non-404) body
           check_endpoint() {
             local path="$1"
             local name="$2"
             local url="${BASE_URL}${path}"
 
-            status=$(curl -s -o /dev/null -w "%{http_code}" -L "$url")
-            if [[ "$status" == "200" ]]; then
-              echo "✅ $name: $status"
-            else
+            body_file=$(mktemp)
+            status=$(curl -s -o "$body_file" -w "%{http_code}" -L "$url")
+            if [[ "$status" != "200" ]]; then
               echo "❌ $name: Expected 200, got $status"
               FAILED=1
+            elif grep -qF "$SOFT_404_SIGNATURE" "$body_file"; then
+              echo "❌ $name: Got 200 but body is the 404 page (soft 404)"
+              FAILED=1
+            else
+              echo "✅ $name: $status"
             fi
+            rm -f "$body_file"
           }
 
           # Function to check redirect
@@ -125,6 +145,14 @@ jobs:
           check_endpoint "/docs/reference/pkg/java/" "Java SDK"
           check_endpoint "/docs/iac/get-started/" "Getting started"
           check_endpoint "/docs/cli/commands/" "CLI reference"
+          check_endpoint "/blog/" "Blog landing"
+          check_endpoint "/what-is/" "What-is landing"
+          check_endpoint "/case-studies/" "Case studies landing"
+          check_endpoint "/tutorials/" "Tutorials landing"
+          check_endpoint "/templates/" "Templates landing"
+          check_endpoint "/events/" "Events landing"
+          check_endpoint "/robots.txt" "robots.txt"
+          check_endpoint "/sitemap.xml" "sitemap.xml"
 
           echo ""
           echo "Testing Lambda@Edge redirects..."
@@ -158,11 +186,11 @@ jobs:
           SLACK_CHANNEL: ${{ needs.health-check.outputs.slack_channel || 'docs-ops' }}
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: |
-            🚨 Post-deployment health check failed for ${{ needs.health-check.outputs.environment || 'production' }}
+            🚨 Health check failed for ${{ needs.health-check.outputs.environment || 'production' }} (trigger: ${{ github.event_name }})
 
-            Workflow: ${{ github.event.workflow_run.html_url }}
-            Deployment: ${{ github.event.workflow_run.name }}
-            Commit: ${{ github.event.workflow_run.head_sha }}
+            ${{ github.event.workflow_run.html_url && format('Workflow: {0}', github.event.workflow_run.html_url) || 'Trigger: scheduled availability check (no deploy in progress)' }}
+            ${{ github.event.workflow_run.name && format('Deployment: {0}', github.event.workflow_run.name) || '' }}
+            ${{ github.event.workflow_run.head_sha && format('Commit: {0}', github.event.workflow_run.head_sha) || '' }}
 
             Check the workflow logs for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           SLACK_USERNAME: docsbot
