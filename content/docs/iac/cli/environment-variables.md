@@ -139,6 +139,20 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_CREDENTIAL_STORE
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Selects an opt-in store for CLI credentials, such as your Pulumi Cloud access token, that encrypts them at rest with a key
+            protected by your operating system's credential manager (Keychain on macOS, Credential Manager on Windows, or a Secret
+            Service provider such as GNOME Keyring on Linux) instead of writing them to disk in plaintext under
+            <code class="text-xs">PULUMI_HOME</code>. Set to <code class="text-xs">system</code> to use the OS-native store.
+        </p>
+        <pre><code class="text-xs">PULUMI_CREDENTIAL_STORE=system</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_DEBUG_COMMANDS
         </span>
     </dt>
@@ -171,6 +185,19 @@ aliases:
             get more verbose error messages when debugging promise leaks.
         </p>
         <pre><code class="text-xs">PULUMI_DEBUG_PROMISE_LEAKS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DEFAULT_ORGANIZATION
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Sets the default organization to use when creating a new stack or resolving an unqualified stack name, similar to
+            setting a default organization with
+            <a href="/docs/iac/cli/commands/pulumi_org_set-default/"><code class="text-xs">pulumi org set-default</code></a>.
+        </p>
+        <pre><code class="text-xs">PULUMI_DEFAULT_ORGANIZATION=your-org</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -261,6 +288,24 @@ aliases:
             Enables gzip compression when writing state files.
         </p>
         <pre><code class="text-xs">PULUMI_DIY_BACKEND_GZIP=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Using a self-managed (DIY) state backend, such as a local directory or an Amazon S3, Google Cloud Storage, or
+            Azure Blob Storage bucket, in the legacy non-project-scoped stack layout is deprecated and due to be removed in
+            a future release. The CLI now raises an error rather than a warning when it detects this layout. Set this to
+            <code class="text-xs">true</code> to bypass the error and continue using the legacy layout. We recommend running
+            <a href="/docs/iac/cli/commands/pulumi_state_upgrade/"><code class="text-xs">pulumi state upgrade</code></a>
+            to move to project-scoped stacks instead, and consider moving to the
+            <a href="/docs/iac/concepts/state-and-backends/#pulumi-cloud-backend">Pulumi Cloud backend</a> while you are at
+            it, since it manages this state layout, locking, and encryption for you.
+        </p>
+        <pre><code class="text-xs">PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
