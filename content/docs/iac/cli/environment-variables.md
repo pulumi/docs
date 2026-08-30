@@ -147,9 +147,9 @@ aliases:
             Selects an opt-in store for CLI credentials, such as your Pulumi Cloud access token, that encrypts them at rest with a key
             protected by your operating system's credential manager (Keychain on macOS, Credential Manager on Windows, or a Secret
             Service provider such as GNOME Keyring on Linux) instead of writing them to disk in plaintext under
-            <code class="text-xs">PULUMI_HOME</code>. Set to <code class="text-xs">system</code> to use the OS-native store.
+            <code class="text-xs">PULUMI_HOME</code>. Set to <code class="text-xs">os</code> to require the OS-native store, or <code class="text-xs">auto</code> to use it when available and fall back to plaintext. Set to <code class="text-xs">plaintext</code> to opt out.
         </p>
-        <pre><code class="text-xs">PULUMI_CREDENTIAL_STORE=system</code></pre>
+        <pre><code class="text-xs">PULUMI_CREDENTIAL_STORE=os</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
