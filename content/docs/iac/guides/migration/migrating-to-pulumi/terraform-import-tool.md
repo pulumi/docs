@@ -104,13 +104,15 @@ pulumi plugin run import -- resolve tf \
   --mapping-file mappings.yaml --out imports-ready.json
 ```
 
-The mappings file records which Pulumi component instance corresponds to which Terraform module path, and resolution is deterministic: the digest plus the mappings fully determine the output, so rerunning `resolve tf` after a rename produces a corrected file rather than a hand-edited one.
+The skeleton's entries carry URNs built from your hand-authored program's Pulumi-style logical names, so the mappings file bridges the two naming schemes — Terraform addresses on the left, your program's names on the right. Resolution is deterministic: the digest plus the mappings fully determine the output, so rerunning `resolve tf` after a rename produces a corrected file rather than requiring hand edits.
 
 ```yaml
 modules:
-  "module.core_rds": "core_rds"
+  # TF module path → Pulumi component instance name
+  "module.core_rds": "coreRds"
 resources:
-  "aws_s3_bucket.my_bucket": "my_bucket"
+  # TF resource address → Pulumi resource name (only where they differ)
+  "module.core_rds.aws_rds_cluster.aurora_cluster": "coreRds-cluster"
 ```
 
 Resources flagged `nonImportable` are held out of the import file — an entry for them is guaranteed to fail — and written to a sidecar (`imports-ready.non-importable.json`) for state injection in step 4.

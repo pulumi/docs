@@ -75,16 +75,18 @@ Two things happen during the digest:
 
 ### Resolve: reproducible import files
 
-`pulumi preview --import-file import.json` generates a skeleton with placeholder IDs. `resolve tf` fills it in by matching each entry to a digest resource — by type and name within each mapped module/component pair — and composing composite IDs from the digest's attributes.
+The whole point of this migration style is that you hand-author a Pulumi program that reproduces the Terraform code's intent using Pulumi idioms — including Pulumi-style logical resource names. So when `pulumi preview --import-file import.json` generates the import skeleton, its entries carry URNs built from *your program's* names, not Terraform's. `resolve tf` fills in each entry's import ID by matching it to a resource in the digest, by type and name within each mapped module/component pair, and composes composite IDs from the digest's attributes.
 
-The matching is driven by a mappings file that records which Pulumi component instance corresponds to which Terraform module path:
+The mappings file is the bridge between the two naming schemes: Terraform addresses on the left, your program's logical names on the right.
 
 ```yaml
 modules:
-  "module.core_rds": "core_rds"
-  "module.console_ui[\"mysvc\"]": "console_ui[\"mysvc\"]"
+  # TF module path → Pulumi component instance name
+  "module.core_rds": "coreRds"
+  "module.console_ui[\"mysvc\"]": "console-ui-mysvc"
 resources:
-  "aws_s3_bucket.my_bucket": "my_bucket"
+  # TF resource address → Pulumi resource name (only where they differ)
+  "module.core_rds.aws_rds_cluster.aurora_cluster": "coreRds-cluster"
 ```
 
 Because the digest and the mappings file fully determine the output, import file creation is reproducible: rerunning `resolve` after renaming a component or fixing a mapping produces a corrected import file rather than requiring hand edits. Resources flagged `nonImportable` are held out of the import file — where they would be guaranteed failures — and written to a sidecar for later state injection.
