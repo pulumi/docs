@@ -21,6 +21,6 @@ Procedures for setting up and running a Pulumi Cloud organization. Each guide is
 
 ## Security and compliance
 
-- [Export audit logs](/docs/administration/guides/export-audit-logs/) — stream your organization's audit log to AWS S3 or Microsoft Sentinel.
+- [Audit logs](/docs/administration/guides/audit-logs/) — download your organization's audit log on demand, or stream it to AWS S3 or Microsoft Sentinel.
 - [Customer managed keys](/docs/administration/guides/customer-managed-keys/) — bring your own encryption key from an external key management system.
 - [Least privilege](/docs/administration/guides/least-privilege/) — apply least-privilege access across IaC, ESC, and CI/CD.

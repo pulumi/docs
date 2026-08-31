@@ -6,11 +6,12 @@ h1: Export audit logs to AWS S3
 menu:
   administration:
         name: Export to AWS S3
-        parent: administration-guides-export-audit-logs
-        weight: 1
+        parent: administration-guides-audit-logs
+        weight: 2
 pulumi_cloud_feature: audit-log-export
 aliases:
   - /docs/administration/security-compliance/audit-logs/aws-s3/
+  - /docs/administration/guides/export-audit-logs/aws-s3/
 ---
 
 Pulumi Cloud can continuously export audit log events to an Amazon S3 bucket. Once configured, new events are delivered automatically — no manual downloads or API polling required.
