@@ -21,6 +21,7 @@ export interface SupportRedirectArgs {
     targetUrl: string;
     // certificateArn is an ACM certificate (us-east-1) covering `domain` — the *.pulumi.com wildcard in production.
     certificateArn: pulumi.Input<string>;
+    cachePolicyId: pulumi.Input<string>;
 }
 
 export class SupportRedirect extends pulumi.ComponentResource {
@@ -82,11 +83,7 @@ export class SupportRedirect extends pulumi.ComponentResource {
                     // only POST-capable set — anything narrower 403s non-GET requests instead of redirecting them.
                     allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
                     cachedMethods: ["GET", "HEAD"],
-                    // AWS-managed CachingDisabled policy, resolved by name rather than a hardcoded ID (a wrong
-                    // GUID here failed the first production deploy). Nothing caches: the function makes every response.
-                    cachePolicyId: aws.cloudfront
-                        .getCachePolicy({ name: "Managed-CachingDisabled" })
-                        .then((policy) => policy.id!),
+                    cachePolicyId: args.cachePolicyId,
                     functionAssociations: [
                         {
                             eventType: "viewer-request",
