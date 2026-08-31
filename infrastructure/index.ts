@@ -354,6 +354,60 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
     restrictPublicBuckets: true,
 });
 
+// Bucket for the pre-merge review evidence pages: one self-contained HTML
+// page per (PR, head SHA) plus a latest.html pointer, rendered by
+// scripts/review-v3/render-evidence-html.py and linked from the two pinned
+// review comments. Public by design — the content is the same verification
+// trail that used to live in a public PR comment, moved out to keep the
+// comments readable. One stable bucket (unlike the per-PR preview buckets):
+// evidence pages are part of the review's audit trail and must survive PR
+// close. Objects are world-readable but the bucket is not listable, matching
+// the origin-bucket posture below.
+const reviewEvidenceBucket = new aws.s3.Bucket("review-evidence", {});
+
+const reviewEvidenceWebsite = new aws.s3.BucketWebsiteConfiguration("review-evidence-website", {
+    bucket: reviewEvidenceBucket.id,
+    indexDocument: {
+        suffix: "index.html",
+    },
+});
+
+new aws.s3.BucketPublicAccessBlock("review-evidence-public-access-block", {
+    bucket: reviewEvidenceBucket.id,
+    blockPublicAcls: true,
+    blockPublicPolicy: false,
+    ignorePublicAcls: true,
+    restrictPublicBuckets: false,
+});
+
+new aws.s3.BucketPolicy("review-evidence-public-read-policy", {
+    bucket: reviewEvidenceBucket.bucket,
+    policy: reviewEvidenceBucket.arn.apply((arn) => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+            {
+                Sid: "PublicReadObjects",
+                Effect: "Allow",
+                Principal: "*",
+                Action: "s3:GetObject",
+                Resource: `${arn}/*`,
+            },
+            {
+                Sid: "RestrictToTLSRequestsOnly",
+                Effect: "Deny",
+                Principal: "*",
+                Action: "s3:*",
+                Resource: [arn, `${arn}/*`],
+                Condition: {
+                    Bool: {
+                        "aws:SecureTransport": "false",
+                    },
+                },
+            },
+        ],
+    })),
+});
+
 // Grant the data warehouse's Snowpipe reader role read access to the buckets it
 // ingests, so their contents can be synced into Snowflake (pulumi/data#873,
 // pulumi/data#921). Only when DWH access is enabled.
@@ -1519,6 +1573,8 @@ if (config.supportRedirectDomain) {
 export const uploadsBucketName = uploadsBucket.bucket;
 export const socialStateBucketName = socialStateBucket.bucket;
 export const contentReviewLedgerBucketName = contentReviewLedgerBucket.bucket;
+export const reviewEvidenceBucketName = reviewEvidenceBucket.bucket;
+export const reviewEvidenceWebsiteEndpoint = reviewEvidenceWebsite.websiteEndpoint;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
