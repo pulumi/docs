@@ -26,5 +26,5 @@ Viewing and exporting those entries works the same way for environments as for e
 
 - [Audit logs](/docs/administration/concepts/audit-logs/) — viewing logs in the console, exporting them, and the fields each entry carries.
 - [Environment events](/docs/administration/reference/audit-log-events/#environments) — every environment operation ESC records, within the complete event catalog.
-- [Export audit logs](/docs/administration/guides/export-audit-logs/) — continuous delivery to Amazon S3 or Microsoft Sentinel.
+- [Audit log guides](/docs/administration/guides/audit-logs/) — downloading a log on demand, or delivering it continuously to Amazon S3 or Microsoft Sentinel.
 - [`pulumi org audit-log`](/docs/iac/cli/commands/pulumi_org_audit-log/) — listing and exporting entries from the command line.
