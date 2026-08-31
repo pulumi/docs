@@ -26,7 +26,10 @@
      every page) so a dataset page doesn't have to redeclare organization
      identity, but a page can override it with an explicit
      `dataset.creator_name` when the data was produced by a named person or
-     third party. Returns an empty dict when `.Params.dataset` or
+     third party. Pair `creator_name` with `dataset.creator_type` ("Person" or
+     "Organization") to say which -- it defaults to "Organization" when
+     omitted, so naming an individual still requires setting creator_type:
+     Person explicitly. Returns an empty dict when `.Params.dataset` or
      `.Params.dataset.name` is absent, so this is a safe no-op on every page
      that hasn't opted in \u2014 the same low-false-positive pattern as
      itemlist-entity.html and faq-entity.html. */}}
@@ -82,7 +85,7 @@
        Pulumi Organization @id, since a survey dataset is still Pulumi's own
        work either way \u2014 this only changes who schema.org says produced it. */}}
   {{ if $d.creator_name }}
-    {{ $entity = merge $entity (dict "creator" (dict "@type" "Organization" "name" $d.creator_name)) }}
+    {{ $entity = merge $entity (dict "creator" (dict "@type" (default "Organization" $d.creator_type) "name" $d.creator_name)) }}
   {{ else }}
     {{ $entity = merge $entity (dict "creator" (dict "@id" "https://www.pulumi.com/#organization")) }}
   {{ end }}

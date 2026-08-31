@@ -2,6 +2,14 @@
 
 {{ $graph := slice }}
 
+{{/* Accumulates hasPart @id references from every collector block below
+     (comparison table, ItemList, Dataset, and any future collector) so that a
+     page opting into more than one of them gets a hasPart array on WebPage
+     instead of each collector's `merge` overwriting the single-valued key set
+     by the one before it. Written onto $webpage once, just before WebPage is
+     appended to $graph. */}}
+{{ $hasParts := slice }}
+
 {{/* Create WebPage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
@@ -37,7 +45,7 @@
 {{ if not .IsHome }}
   {{ $comparisonTable = partial "schema/collectors/comparison-table-entity.html" . }}
   {{ if and $comparisonTable (ne $comparisonTable (dict)) }}
-    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#comparison-table")) }}
+    {{ $hasParts = $hasParts | append (dict "@id" "#comparison-table") }}
   {{ end }}
 {{ end }}
 
@@ -53,7 +61,7 @@
   {{ $itemList = partial "schema/collectors/itemlist-entity.html" . }}
   {{ if and $itemList (ne $itemList (dict)) }}
     {{ $itemList = merge $itemList (dict "@id" "#itemlist") }}
-    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#itemlist")) }}
+    {{ $hasParts = $hasParts | append (dict "@id" "#itemlist") }}
   {{ end }}
 {{ end }}
 
@@ -69,7 +77,7 @@
   {{ $dataset = partial "schema/collectors/dataset-entity.html" . }}
   {{ if and $dataset (ne $dataset (dict)) }}
     {{ $dataset = merge $dataset (dict "@id" "#dataset") }}
-    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#dataset")) }}
+    {{ $hasParts = $hasParts | append (dict "@id" "#dataset") }}
   {{ end }}
 {{ end }}
 
@@ -151,6 +159,13 @@
   {{ if and $techEntities (gt (len $techEntities) 0) }}
     {{ $webpage = merge $webpage (dict "mentions" $techEntities) }}
   {{ end }}
+{{ end }}
+
+{{/* Wire the accumulated hasPart references onto WebPage as an array, so a
+     page opting into more than one of comparison table / ItemList / Dataset
+     keeps all of them instead of only the last collector's write surviving. */}}
+{{ if gt (len $hasParts) 0 }}
+  {{ $webpage = merge $webpage (dict "hasPart" $hasParts) }}
 {{ end }}
 
 {{/* Add WebPage to graph */}}
