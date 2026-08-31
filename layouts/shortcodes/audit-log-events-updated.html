@@ -10,7 +10,7 @@
   Place once, directly under the page intro.
 */}}
 {{ with (site.Data.audit_log_events_updated).updated }}
-<p style="font-size:0.875rem;color:var(--docs-fg-muted,#6b7280);margin-top:-0.5rem;">
+<p class="-mt-2 text-sm text-gray-500 dark:text-gray-400">
   Event list last updated on {{ . }}, synced automatically from the Pulumi Cloud API.
 </p>
 {{ end }}

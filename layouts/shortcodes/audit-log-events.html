@@ -57,11 +57,13 @@
       {{- if .requiresOrgAdmin -}}{{- $notes = $notes | append "Requires organization admin." -}}{{- end -}}
       {{- if .requiresStackAdmin -}}{{- $notes = $notes | append "Requires stack admin." -}}{{- end -}}
       {{- if .authenticationFailure -}}{{- $notes = $notes | append "Recorded as an authentication failure." -}}{{- end -}}
-      {{- $description := chomp .description -}}
+      {{- /* The rows are Markdown, so a literal pipe anywhere in an API-supplied
+             field would split the row into extra cells. Escape before assembling. */ -}}
+      {{- $description := replace (chomp .description) "|" "\\|" -}}
       {{- with $notes -}}
         {{- $description = printf "%s _%s_" $description (delimit . " ") -}}
       {{- end -}}
-      {{- $rows = $rows | append (printf "| %s | `%s` | %s |" .displayName .event $description) -}}
+      {{- $rows = $rows | append (printf "| %s | `%s` | %s |" (replace .displayName "|" "\\|") .event $description) -}}
     {{- end -}}
 <h2 id="{{ anchorize $category.name }}">{{ $category.name }}</h2>
 <p>{{ $category.description }}</p>

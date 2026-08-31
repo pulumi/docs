@@ -14,7 +14,7 @@
 {{- if .requiresOrgAdmin }}{{ $notes = $notes | append "Requires organization admin." }}{{ end -}}
 {{- if .requiresStackAdmin }}{{ $notes = $notes | append "Requires stack admin." }}{{ end -}}
 {{- if .authenticationFailure }}{{ $notes = $notes | append "Recorded as an authentication failure." }}{{ end -}}
-{{- $description := chomp .description -}}
+{{- $description := replace (chomp .description) "|" "\\|" -}}
 {{- with $notes }}{{ $description = printf "%s _%s_" $description (delimit . " ") }}{{ end -}}
-| {{ .displayName }} | `{{ .event }}` | {{ $description }} |
+| {{ replace .displayName "|" "\\|" }} | `{{ .event }}` | {{ $description }} |
 {{ end }}{{ end }}{{ end }}
