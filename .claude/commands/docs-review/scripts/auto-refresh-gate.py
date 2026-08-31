@@ -70,8 +70,23 @@ validate_pinned = importlib.util.module_from_spec(_spec)
 sys.modules["validate_pinned"] = validate_pinned
 _spec.loader.exec_module(validate_pinned)  # type: ignore[union-attr]
 
+# compose-review.py owns the v3 finding-line grammar (FINDING_LINE_RE /
+# parse_finding_line) and the AUTHOR_MARKER that distinguishes a v3 author
+# card from a v2 body. Import by path, same pattern as validate_pinned above.
+_cr_spec = importlib.util.spec_from_file_location(
+    "compose_review", HERE / "compose-review.py")
+compose_review = importlib.util.module_from_spec(_cr_spec)
+sys.modules["compose_review"] = compose_review
+_cr_spec.loader.exec_module(compose_review)  # type: ignore[union-attr]
+
 _HUNK_RE = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(?:\d+)(?:,\d+)? @@")
 _RANGE_RE = re.compile(r"^L(\d+)(?:-(\d+))?$")
+
+# v3 author card sections whose finding rows anchor a refresh. Both block
+# merge (the ❓ bucket, being author-answer, is just as fixable by a push as
+# 🚨 outstanding), so a push that resolves a ❓ item must fire the gate the
+# same as one that resolves a 🚨 item.
+V3_ANCHOR_HEADINGS = ("🚨 Must fix or refute", "❓ Only you can answer")
 
 
 def result(fire: bool, reason: str) -> int:
@@ -80,12 +95,20 @@ def result(fire: bool, reason: str) -> int:
 
 
 def parse_anchor_ranges(pinned_body: str) -> list[tuple[int, int]] | None:
-    """Extract the [L<a>-<b>] ranges of every 🚨 Outstanding bullet.
+    """Extract the [L<a>-<b>] ranges of every finding that can still block merge.
 
-    Returns None when any Outstanding bullet lacks a parseable line-range
-    prefix (legacy formats) — that finding can't be located, so the caller
-    must fail closed. Returns [] when the bucket is empty or absent.
+    v2: every 🚨 Outstanding bullet. v3 (detected by AUTHOR_MARKER): every
+    finding row in BOTH `### 🚨 Must fix or refute` and
+    `### ❓ Only you can answer` — the promoted ❓ bucket blocks merge exactly
+    like 🚨 does, so a push that fixes a ❓ item must fire the gate too.
+
+    Returns None when any qualifying finding lacks a parseable line-range
+    anchor (legacy formats, or a v3 finding with no `[L…]` ref) — that
+    finding can't be located, so the caller must fail closed. Returns [] when
+    the relevant bucket(s) are empty or absent.
     """
+    if compose_review.AUTHOR_MARKER in pinned_body:
+        return _parse_anchor_ranges_v3(pinned_body)
     ranges: list[tuple[int, int]] = []
     for page in pinned_body.split(PAGE_DELIMITER):
         for bullet in validate_pinned.extract_bucket_bullets(page, "🚨 Outstanding"):
@@ -98,6 +121,34 @@ def parse_anchor_ranges(pinned_body: str) -> list[tuple[int, int]] | None:
             start = int(m.group(1))
             end = int(m.group(2)) if m.group(2) else start
             ranges.append((min(start, end), max(start, end)))
+    return ranges
+
+
+def _parse_anchor_ranges_v3(pinned_body: str) -> list[tuple[int, int]] | None:
+    ranges: list[tuple[int, int]] = []
+    for page in pinned_body.split(PAGE_DELIMITER):
+        for heading in V3_ANCHOR_HEADINGS:
+            span = validate_pinned.find_section(page, heading)
+            if span is None:
+                continue
+            start, end = span
+            for line in page.splitlines()[start:end]:
+                parsed = compose_review.parse_finding_line(line)
+                if parsed is None:
+                    continue  # not a finding row (TODO prose, blank lines, …)
+                ref = parsed["ref"]
+                if not ref:
+                    return None
+                # A collapsed ref can carry several L-ranges, comma-separated
+                # (frontmatter-sweep entries) — every one of them anchors a
+                # legitimate refresh-eligible line.
+                for token in (t.strip() for t in ref.split(",")):
+                    m = _RANGE_RE.match(token)
+                    if m is None:
+                        return None
+                    start_l = int(m.group(1))
+                    end_l = int(m.group(2)) if m.group(2) else start_l
+                    ranges.append((min(start_l, end_l), max(start_l, end_l)))
     return ranges
 
 
