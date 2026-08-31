@@ -531,3 +531,39 @@ author header's blocking count and the brief's 💡 count, refreshes
 summary/confidence/history from the brief, and emits the final evidence object
 plus the cleaned publish bodies. Any parse failure or contract violation exits
 2 and the workflow treats the run like a validation failure.
+
+### Validation (schema v21)
+
+`validate-pinned.py check` auto-detects the surface (the
+`<!-- CLAUDE_REVIEW_AUTHOR -->` marker; `--surface` overrides) and, on v3,
+validates the model-edited drafts **before** `build-evidence.py` — so `F?`
+placeholder ids are legal at validation time and the header count may lag a
+model-added row (both are recomputed by build-evidence). Invocation:
+
+```
+validate-pinned.py check --body-file .review-draft-author.md \
+  --brief-file .review-draft-brief.md --evidence-base .review-evidence-base.json
+```
+
+v3-only rules: `v3-markers` (marker lines intact; author card is the sole
+`CLAUDE_REVIEW_HEAD` carrier; brief carries none), `v3-section-order`,
+`v3-review-state` (a corrupt REVIEW_STATE block hard-fails — it would
+silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
+the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/👀 row
+parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
+high-water mark), `v3-blocking-count`, and `bucket-split-faithful`
+(promote-only against the evidence base; a finding may never be demoted or
+deleted — rewrite it as `**Spurious:** …` instead).
+
+Shared rules that also run on v3 (some against both bodies):
+`no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,
+`outcome-annotation-shape`, `no-placeholder-empty-form`,
+`internal-link-existence`, `shortcode-existence`. The trail /
+investigation-log / external-claim faithfulness rules do **not** run on v3
+bodies: the verification trail is machine-owned in the evidence object and
+validated by `scripts/review-v3/validate-evidence.py`.
+
+`count-buckets` on a v3 body counts blocking as 🚨+❓ rows **without a
+REVIEW_STATE disposition** (a corrupt block conservatively counts every row),
+and reports the brief's 👀 rows as `low_confidence`; the `outstanding=` output
+drives `set-review-label.sh` exactly as on v2.

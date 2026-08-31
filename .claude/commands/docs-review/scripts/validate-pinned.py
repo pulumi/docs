@@ -124,16 +124,30 @@ Schema version: 19 (v18→v19 adds the `framing-drift` (🌀) fact-check verdict
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import re
 import statistics
 import subprocess
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
-SCHEMA_VERSION = 21
+# v21→v22: the v3 two-comment surface (author card + reviewer brief; see
+# references/output-format.md §"The v3 surface"). `check` auto-detects the
+# surface from the `<!-- CLAUDE_REVIEW_AUTHOR -->` marker (`--surface`
+# overrides) and validates the author card (`--body-file`) together with the
+# brief (`--brief-file`) under a v3 rule set: marker/HEAD-carrier structure,
+# section order, REVIEW_STATE integrity, finding-line grammar + id
+# uniqueness, header blocking count, evidence links, and
+# `bucket-split-faithful` against the composer's `.review-evidence-base.json`.
+# Trail/investigation-log/external-claim faithfulness rules do NOT run on v3
+# bodies — the verification trail is machine-owned in the evidence object
+# (scripts/review-v3/, validated by validate-evidence.py), so there is no
+# rendered trail left for a model to corrupt. `count-buckets` gains v3
+# counting: blocking = 🚨/❓ rows without a REVIEW_STATE disposition.
+SCHEMA_VERSION = 22
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -298,6 +312,71 @@ LEADING_STATE_RE = re.compile(
     r"(\d+)\s+of\s+(\d+)\s+claims\s+verified\b"
 )
 
+# ---- v3 surface (schema v21) ------------------------------------------------
+# The two-comment surface: the author card is the machine-read half (sole
+# CLAUDE_REVIEW_HEAD carrier, REVIEW_STATE block), the brief is the reviewer
+# half. Markers and the finding-line grammar are owned by compose-review.py
+# and imported by path — one grammar, never a private copy.
+
+V3_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
+V3_BRIEF_MARKER = "<!-- CLAUDE_REVIEW_BRIEF -->"
+V3_LEGACY_ALIAS_RE = re.compile(r"^<!-- CLAUDE_REVIEW 1/1 -->\s*$", re.MULTILINE)
+V3_HEAD_MARKER_RE = re.compile(r"^<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->\s*$", re.MULTILINE)
+FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
+V3_EVIDENCE_TOKEN = "%%EVIDENCE_URL%%"
+# Author header: `## Review — action needed (N blocking) — …` or the zero
+# form `## Review — no action needed — …` (compose_v3's header_verb).
+V3_AUTHOR_HEADER_RE = re.compile(
+    r"^## Review — (?:action needed \((\d+) blocking\)|no action needed)", re.MULTILINE
+)
+# H3 headings, in required order, per references/output-format.md §v3.
+V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Only you can answer these", "✅ Resolved since last review"]
+V3_BRIEF_SECTIONS = ["👀 Check these before approving", "✅ What you can rubber-stamp"]
+# The in-place rewrite labels build-evidence.py files off the cards — a bullet
+# whose body starts with one of these is dispositioned, not deleted.
+V3_REWRITE_LABELS = ("**Spurious:**", "**Mis-sourced:**", "**Pre-existing:**")
+V3_BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
+
+_v3_modules: dict[str, object] = {}
+
+
+def _v3_import(name: str, path: Path):
+    """Import a sibling module by path, cached. compose-review.py invokes this
+    validator only via subprocess, so the path import cannot recurse."""
+    if name not in _v3_modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules.setdefault(name, mod)
+        spec.loader.exec_module(mod)
+        _v3_modules[name] = mod
+    return _v3_modules[name]
+
+
+def _compose_mod():
+    return _v3_import("vp_compose_review", Path(__file__).resolve().parent / "compose-review.py")
+
+
+def _review_state_mod():
+    root = Path(__file__).resolve().parents[4]
+    return _v3_import("vp_review_state", root / "scripts" / "review-v3" / "review_state.py")
+
+
+def v3_finding_rows(body: str, heading_substring: str) -> list[tuple[int, str, dict | None]]:
+    """(1-indexed line, raw line, parse_finding_line result) for every
+    top-level `- ` bullet in the named section. None parse = grammar break."""
+    span = find_section(body, heading_substring)
+    if span is None:
+        return []
+    parse = _compose_mod().parse_finding_line
+    start, end = span
+    rows: list[tuple[int, str, dict | None]] = []
+    for i, line in enumerate(body.splitlines()[start:end], start=start + 1):
+        if line.startswith("#### "):
+            break  # the Style suggestions H4 ends the finding rows
+        if line.startswith("- "):
+            rows.append((i, line, parse(line)))
+    return rows
+
 
 @dataclass
 class Violation:
@@ -357,6 +436,14 @@ class Context:
     # `verdicts` list (possibly empty). Used by `verified-claims-trail-faithful`,
     # `pass-2-fetch-faithfulness` (strengthened), and `pass-3-evidence-faithful`.
     verified_claims: list[dict] | None = None
+    # Schema v21: which surface this body speaks. "v2" = the single pinned
+    # monolith; "v3" = the author card (in `body`) + reviewer brief (in
+    # `brief`). v3-only fields stay None on v2.
+    surface: str = "v2"
+    brief: str | None = None
+    # `.review-evidence-base.json` from compose_v3 — bucket-split-faithful
+    # compares the drafts against it. None = not provided (rule skips).
+    evidence_base: dict | None = None
     # Schema v20: `.vale-findings.json` from the `vale-findings-filter.py`
     # pre-step. None means the file wasn't present. Used by
     # `style-blocker-provenance` to prove every `[style-blocker]` bullet in 🚨
@@ -385,7 +472,10 @@ def find_section(body: str, heading_substring: str) -> tuple[int, int] | None:
         return None
     end = len(lines)
     for j in range(start + 1, len(lines)):
-        if lines[j].startswith("### "):
+        # The footer sentinel hard-terminates every section: footer prose is
+        # not section content (v3's footer mentions concessions, which
+        # otherwise trips outcome-annotation-shape on the last section).
+        if lines[j].startswith("### ") or lines[j].strip() == FOOTER_SENTINEL:
             end = j
             break
     return (start, end)
@@ -730,11 +820,21 @@ def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
         for f in ctx.vale_findings
         if f.get("blocker")
     }
+    # v2 renders the blocker in `🚨 Outstanding` as a `**[L…]**` bullet; v3
+    # renders it in the author card's `🚨 Must fix or refute` as a finding
+    # line (`- [ ] **Fn** **[L…]** …`). Same provenance requirement either way.
+    if ctx.surface == "v3":
+        candidates = [row_line for _, row_line, _ in v3_finding_rows(ctx.body, "🚨 Must fix or refute")]
+    else:
+        candidates = extract_bucket_bullets(ctx.body, "🚨 Outstanding")
     violations: list[Violation] = []
-    for bullet in extract_bucket_bullets(ctx.body, "🚨 Outstanding"):
+    for bullet in candidates:
         if "[style-blocker]" not in bullet:
             continue
         prefix = extract_bullet_prefix(bullet)  # "L797" / "L12-L20"
+        if prefix is None and ctx.surface == "v3":
+            parsed = _compose_mod().parse_finding_line(bullet)
+            prefix = (parsed or {}).get("ref") or None
         m = re.match(r"^L(\d+)", prefix or "")
         line_no = int(m.group(1)) if m else None
         fm = re.search(r"`([^`]+\.\w+)`", bullet)
@@ -2560,6 +2660,216 @@ def check_outcome_annotation_shapes(ctx: Context) -> list[Violation]:
 
 # ---- Rule registry ---------------------------------------------------------
 
+# ---- v3 rule checks (schema v21) --------------------------------------------
+
+
+def check_v3_markers(ctx: Context) -> list[Violation]:
+    """Marker structure: the author card is the machine-read half.
+
+    Each marker must sit on its own line — pinned-comment.sh strips markers
+    with EOL-anchored regexes, so a concatenated marker accumulates on every
+    re-upsert (v3 design review, finding 9). The author card is the SOLE
+    carrier of the machine-read CLAUDE_REVIEW_HEAD; the brief shows only a
+    display SHA, so a partial publish can't leave two disagreeing heads
+    (finding 10).
+    """
+    v: list[Violation] = []
+
+    def own_line(text: str, marker: str) -> bool:
+        return any(line.strip() == marker for line in text.splitlines())
+
+    if not own_line(ctx.body, V3_AUTHOR_MARKER):
+        v.append(Violation("v3-markers", "<author>", f"`{V3_AUTHOR_MARKER}` on its own line",
+                           "marker missing or sharing a line",
+                           "Keep the marker lines exactly as composed — never edit, merge, or remove them."))
+    if not V3_LEGACY_ALIAS_RE.search(ctx.body):
+        v.append(Violation("v3-markers", "<author>", "legacy `<!-- CLAUDE_REVIEW 1/1 -->` alias on its own line",
+                           "alias missing (transition-window consumers key on it)",
+                           "Keep the marker lines exactly as composed — never edit, merge, or remove them."))
+    if not V3_HEAD_MARKER_RE.search(ctx.body):
+        v.append(Violation("v3-markers", "<author>", "`<!-- CLAUDE_REVIEW_HEAD <sha> -->` on its own line",
+                           "head marker missing or malformed",
+                           "Keep the marker lines exactly as composed — never edit, merge, or remove them."))
+    if FOOTER_SENTINEL not in ctx.body:
+        v.append(Violation("v3-markers", "<author>", "footer sentinel present",
+                           f"`{FOOTER_SENTINEL}` missing",
+                           "Do not remove the footer — pinned-comment.sh re-stamps from it."))
+    if ctx.brief is not None:
+        if not own_line(ctx.brief, V3_BRIEF_MARKER):
+            v.append(Violation("v3-markers", "<brief>", f"`{V3_BRIEF_MARKER}` on its own line",
+                               "marker missing or sharing a line",
+                               "Keep the marker lines exactly as composed — never edit, merge, or remove them."))
+        if "<!-- CLAUDE_REVIEW_HEAD" in ctx.brief:
+            v.append(Violation("v3-markers", "<brief>", "brief carries NO machine-read head marker",
+                               "found `<!-- CLAUDE_REVIEW_HEAD` in the brief",
+                               "The author card is the sole head carrier; the brief renders a display-only sha in its heading."))
+        if FOOTER_SENTINEL not in ctx.brief:
+            v.append(Violation("v3-markers", "<brief>", "footer sentinel present",
+                               f"`{FOOTER_SENTINEL}` missing",
+                               "Do not remove the footer — pinned-comment.sh re-stamps from it."))
+    return v
+
+
+def check_v3_section_order(ctx: Context) -> list[Violation]:
+    """Both cards render their H3 sections in skeleton order."""
+    v: list[Violation] = []
+    for where, text, expected in (("author", ctx.body, V3_AUTHOR_SECTIONS),
+                                  ("brief", ctx.brief or "", V3_BRIEF_SECTIONS)):
+        h3s = [line for line in text.splitlines() if line.startswith("### ")]
+        positions = []
+        for name in expected:
+            idx = next((i for i, h in enumerate(h3s) if name in h), None)
+            if idx is None:
+                v.append(Violation("v3-section-order", f"<{where}>",
+                                   f"section `### {name}` present", "section missing",
+                                   "Render every mandatory section in skeleton order (references/output-format.md §The v3 surface), using its explicit-empty form when there is no content."))
+            else:
+                positions.append((idx, name))
+        if positions != sorted(positions):
+            v.append(Violation("v3-section-order", f"<{where}>",
+                               " → ".join(expected), " / ".join(n for _, n in positions),
+                               "Reorder the sections to skeleton order (references/output-format.md §The v3 surface)."))
+    return v
+
+
+def check_v3_review_state(ctx: Context) -> list[Violation]:
+    """The REVIEW_STATE block parses. Corrupt = hard failure: a truncated
+    block silently un-answers every finding, so it must never publish."""
+    rs = _review_state_mod()
+    try:
+        state = rs.parse_state(ctx.body)
+    except ValueError as e:
+        return [Violation("v3-review-state", "<author>", "REVIEW_STATE block parses",
+                          str(e),
+                          "Restore the `<!-- REVIEW_STATE {…} -->` line exactly as composed — the model must never edit it.")]
+    if state is None:
+        return [Violation("v3-review-state", "<author>", "REVIEW_STATE block present",
+                          "no block found",
+                          "Restore the `<!-- REVIEW_STATE {…} -->` line exactly as composed — the model must never edit it.")]
+    return []
+
+
+def check_v3_evidence_link(ctx: Context) -> list[Violation]:
+    """Both cards link the evidence page — the token pre-publish, or the
+    substituted https URL post-publish."""
+    v: list[Violation] = []
+    for where, text in (("author", ctx.body), ("brief", ctx.brief or "")):
+        evidence_lines = [line for line in text.splitlines() if "📎" in line]
+        if any(V3_EVIDENCE_TOKEN in line or "https://" in line for line in evidence_lines):
+            continue
+        v.append(Violation("v3-evidence-link", f"<{where}>",
+                           f"a 📎 line carrying the `{V3_EVIDENCE_TOKEN}` token or its substituted https URL",
+                           "no 📎 evidence line found" if not evidence_lines else "📎 line carries no link",
+                           "Keep the 📎 evidence line as composed; the publish step substitutes the URL."))
+    return v
+
+
+def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
+    """Every top-level bullet in a finding section parses via the shared
+    grammar; numbered ids are unique across both cards and never exceed the
+    REVIEW_STATE high-water mark (new findings use `F?` — build-evidence.py
+    assigns real ids after validation)."""
+    v: list[Violation] = []
+    seen: dict[str, str] = {}
+    high_water = None
+    try:
+        state = _review_state_mod().parse_state(ctx.body)
+        if state is not None:
+            high_water = state.get("high_water")
+    except ValueError:
+        pass  # v3-review-state already fires
+
+    sections = [("author", ctx.body, s) for s in ("🚨 Must fix or refute", "❓ Only you can answer these")]
+    sections.append(("brief", ctx.brief or "", "👀 Check these before approving"))
+    for where, text, heading in sections:
+        for lineno, line, parsed in v3_finding_rows(text, heading):
+            if parsed is None:
+                v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
+                                   "every finding row parses as `- [ ] **F<n>** **[L…]** `file` — <body>`",
+                                   line[:120],
+                                   "Edit finding text in place but keep the row shape — id, anchor, backticked file, em-dash, body. New findings use `**F?**`."))
+                continue
+            fid = parsed["id"]
+            if fid == "F?":
+                continue
+            if fid in seen:
+                v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
+                                   f"finding id {fid} appears once across both cards",
+                                   f"duplicate (also in {seen[fid]})",
+                                   "Ids are assigned by the composer/build-evidence — never copy one onto a new row; use `**F?**` for additions."))
+            seen[fid] = f"{where} §{heading}"
+            if isinstance(high_water, int) and int(fid[1:]) > high_water:
+                v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
+                                   f"numbered ids stay ≤ the REVIEW_STATE high-water mark ({high_water})",
+                                   f"{fid} exceeds it",
+                                   "Never invent an id — a finding you are adding is `**F?**`; build-evidence.py numbers it."))
+    return v
+
+
+def check_v3_blocking_count(ctx: Context) -> list[Violation]:
+    """The author header's `(N blocking)` is a sanity floor: it must equal the
+    🚨+❓ row count, either counting `F?` additions or not (the model adds
+    rows without touching the header; build-evidence.py recomputes it)."""
+    m = V3_AUTHOR_HEADER_RE.search(ctx.body)
+    if not m:
+        return [Violation("v3-blocking-count", "<author>",
+                          "header `## Review — action needed (N blocking) — …` or `## Review — no action needed — …`",
+                          (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
+                          "Keep the composed header shape; only build-evidence.py recomputes the count.")]
+    rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
+            + v3_finding_rows(ctx.body, "❓ Only you can answer these"))
+    total = len(rows)
+    numbered = sum(1 for _, _, p in rows if p and p["id"] != "F?")
+    stated = int(m.group(1)) if m.group(1) else 0
+    if stated not in (total, numbered):
+        return [Violation("v3-blocking-count", "<author header>",
+                          f"(N blocking) matches the 🚨+❓ row count ({numbered} composed, {total} with additions)",
+                          f"header says {stated}",
+                          "Don't hand-edit the count; if you removed a row, disposition it instead (Spurious/Mis-sourced/Pre-existing rewrite) — build-evidence.py recomputes the header.")]
+    return []
+
+
+def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
+    """Promote-only against the composer's evidence base: a base finding may
+    move up (reviewer-check → author-answer → outstanding), never down, and
+    may not vanish — it is either in a bucket, rewritten in place with a
+    disposition label, or referenced elsewhere (✅ Resolved). Mirrors
+    compose-review.split_v3_buckets: `unverifiable` → ❓, everything else
+    low-confidence → 👀."""
+    base = ctx.evidence_base
+    if base is None:
+        return []
+    where_of: dict[str, str] = {}
+    for text, heading, bucket in (
+        (ctx.body, "🚨 Must fix or refute", "outstanding"),
+        (ctx.body, "❓ Only you can answer these", "author-answer"),
+        (ctx.brief or "", "👀 Check these before approving", "reviewer-check"),
+    ):
+        for _, _, parsed in v3_finding_rows(text, heading):
+            if parsed and parsed["id"] != "F?":
+                where_of[parsed["id"]] = bucket
+    v: list[Violation] = []
+    both = ctx.body + "\n" + (ctx.brief or "")
+    for f in base.get("findings", []):
+        fid, base_bucket = f.get("id"), f.get("bucket")
+        if base_bucket not in V3_BUCKET_RANK:
+            continue  # preexisting lives on the evidence page only
+        now = where_of.get(fid)
+        if now is None:
+            if f"**{fid}**" in both:
+                continue  # rewritten in place or referenced in ✅ Resolved
+            v.append(Violation("bucket-split-faithful", f"<{fid}>",
+                               f"base finding {fid} ({base_bucket}) present, rewritten, or referenced",
+                               "finding vanished from both cards",
+                               "Never delete a finding — disposition it: fix, promote, or rewrite its body as `**Spurious:**` / `**Mis-sourced:**` / `**Pre-existing:**` with a reason."))
+        elif V3_BUCKET_RANK[now] < V3_BUCKET_RANK[base_bucket]:
+            v.append(Violation("bucket-split-faithful", f"<{fid}>",
+                               f"{fid} at or above its composed bucket `{base_bucket}`",
+                               f"demoted to `{now}`",
+                               "The split is promote-only (👀 → ❓ → 🚨). To argue a finding down, rewrite it as `**Spurious:** <reason>` — demotion by moving the row is not allowed."))
+    return v
+
+
 RULES = [
     {
         "id": "count-table",
@@ -2584,12 +2894,14 @@ RULES = [
         "desc": "Every [style-blocker] bullet in 🚨 traces to a blocker entry in .vale-findings.json (the marker exempts trail-matching, so it must not be forgeable).",
         "hint": "Do not author [style-blocker] bullets — that marker is composer-only. Render reviewer-found issues as normal **[L…]** bullets with a trail record.",
         "check": check_style_blocker_provenance,
+        "surfaces": ("v2", "v3"),
     },
     {
         "id": "style-render-mode",
         "desc": "Style suggestions render expanded, never hidden behind a <details> block.",
         "hint": "Render advisory style suggestions expanded — remove the <details> wrapper and group them under an `##### <path>` H5 heading per file.",
         "check": check_style_render_mode,
+        "surfaces": ("v2", "v3"),
     },
     {
         "id": "mandatory-h3-order",
@@ -2716,36 +3028,96 @@ RULES = [
         "desc": "Every internal /docs/... or /blog/... link resolves to a file or alias under content/.",
         "hint": "Fix the link target, add an alias on the destination page, or remove the link.",
         "check": check_internal_link_existence,
+        "surfaces": ("v2", "v3"),
+        "brief_too": True,
     },
     {
         "id": "shortcode-existence",
         "desc": "Every {{< shortcode >}} resolves to a layout under layouts/shortcodes/.",
         "hint": "Fix the shortcode name or add the corresponding layout file.",
         "check": check_shortcode_existence,
+        "surfaces": ("v2", "v3"),
+        "brief_too": True,
     },
     {
         "id": "no-todo-tokens",
         "desc": "Schema v10: no `<TODO: …>` (or bare `<TODO>`) placeholder from compose-review.py's draft survives to the published body.",
         "hint": "Replace every `<TODO: …>` (summary paragraph, confidence levels, fix prose, cross-sibling count, review-history summary, Tier-2 editorial balance) with actual content. The composer's self-check passes `--skip-rule no-todo-tokens`; the publish path does not.",
         "check": check_no_todo_tokens,
+        "surfaces": ("v2", "v3"),
+        "brief_too": True,
     },
     {
         "id": "outcome-annotation-shape",
         "desc": "Schema v18: re-entrant outcome annotations render in their canonical, machine-scraped shapes — `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` under a held finding; `concede: <reason>` on a conceded ✅ Resolved bullet. Fires only when a paragraph looks like it carries the annotation but the canonical form doesn't parse.",
         "hint": "Render dispute/concession annotations exactly per `docs-review:references:update` Case 2: `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` on its own line under the held finding, `concede: <reason>` on the conceded ✅ Resolved bullet. scrape-review-outcomes.py keys the weekly outcome telemetry on these shapes.",
         "check": check_outcome_annotation_shapes,
+        "surfaces": ("v2", "v3"),
     },
     {
         "id": "no-placeholder-empty-form",
         "desc": "Schema v11: an explicit-empty-form line (`_No …._`) must be reader-facing — no leftover composer instructions (`per ci.md §`, `surfaced by the composer`, `docs-review:references:`, `pre-stubbed`).",
         "hint": "Replace the placeholder line with the clean reader-facing empty form (e.g. `_No pre-existing issues in touched files._`, `_No items resolved since the last review._`); 'what to add here' guidance belongs in ci.md §3, not the published body.",
         "check": check_no_placeholder_empty_form,
+        "surfaces": ("v2", "v3"),
+        "brief_too": True,
     },
     {
         "id": "triaged-details-wrapper",
         "desc": "Schema v20: a 📋 Triaged verifier findings section with bullets keeps its collapsed <details> wrapper and the summary line explaining what the section is.",
         "hint": "Re-wrap the bullets in `<details>` + `<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>`; leave the bullets themselves alone.",
         "check": check_triaged_details_wrapper,
+    },
+    # ---- v3-only rules (schema v21). Rules without a "surfaces" key run on
+    # v2 only; "brief_too" reruns a body-scoped shared rule against the brief.
+    {
+        "id": "v3-markers",
+        "desc": "Schema v21: author card carries its three markers (legacy alias, AUTHOR, HEAD) each on its own line and is the sole HEAD carrier; brief carries BRIEF marker and no HEAD; both carry the footer sentinel.",
+        "hint": "Keep every `<!-- … -->` marker line exactly as composed.",
+        "check": check_v3_markers,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "v3-section-order",
+        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Only you can answer these → ✅ Resolved) and brief sections (👀 Check these → ✅ What you can rubber-stamp) present in skeleton order.",
+        "hint": "Render every mandatory section in order, using its explicit-empty form when there is no content.",
+        "check": check_v3_section_order,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "v3-review-state",
+        "desc": "Schema v21: the REVIEW_STATE block is present and parses — a corrupt block would silently un-answer every finding, so it hard-fails.",
+        "hint": "Restore the `<!-- REVIEW_STATE {…} -->` line exactly as composed; the model never edits it.",
+        "check": check_v3_review_state,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "v3-evidence-link",
+        "desc": "Schema v21: both cards carry the evidence link (%%EVIDENCE_URL%% token pre-publish, https URL post-publish).",
+        "hint": "Keep the 📎 evidence line as composed; the publish step substitutes the URL.",
+        "check": check_v3_evidence_link,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "v3-finding-grammar",
+        "desc": "Schema v21: every 🚨/❓/👀 row parses via the shared finding grammar; numbered ids unique across both cards and ≤ the REVIEW_STATE high-water mark; model additions use `F?` (numbered by build-evidence.py after validation).",
+        "hint": "Edit finding text in place, keep the row shape; new findings are `- [ ] **F?** …`.",
+        "check": check_v3_finding_grammar,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "v3-blocking-count",
+        "desc": "Schema v21: the author header's `(N blocking)` equals the 🚨+❓ row count (with or without `F?` additions — build-evidence.py recomputes the final number).",
+        "hint": "Don't hand-edit the header count; disposition rows instead of deleting them.",
+        "check": check_v3_blocking_count,
+        "surfaces": ("v3",),
+    },
+    {
+        "id": "bucket-split-faithful",
+        "desc": "Schema v21: promote-only against `.review-evidence-base.json` — a composed finding may move 👀→❓→🚨, never down, and may not vanish without an in-place disposition rewrite.",
+        "hint": "To argue a finding down, rewrite its body as `**Spurious:** <reason>` — never move it to a lower bucket or delete the row.",
+        "check": check_v3_bucket_split_faithful,
+        "surfaces": ("v3",),
     },
 ]
 
@@ -2972,13 +3344,25 @@ def run_checks(ctx: Context, skip_rules: set[str] | None = None,
     """
     skip_rules = skip_rules or set()
     out: list[Violation] = []
+    # v3 (schema v21): body-scoped shared rules marked `brief_too` rerun
+    # against the brief via a body-swapped context clone — the check functions
+    # stay single-body and the brief's violations are line_ref-prefixed.
+    brief_ctx = None
+    if ctx.surface == "v3" and ctx.brief is not None:
+        brief_ctx = replace(ctx, body=ctx.brief, body_lines=ctx.brief.splitlines(), brief=None)
     for rule in RULES:
+        if ctx.surface not in rule.get("surfaces", ("v2",)):
+            continue
         if rule["id"] in skip_rules:
             continue
         if only_rules is not None and rule["id"] not in only_rules:
             continue
         try:
             out.extend(rule["check"](ctx))
+            if brief_ctx is not None and rule.get("brief_too"):
+                for v in rule["check"](brief_ctx):
+                    v.line_ref = f"brief:{v.line_ref}"
+                    out.append(v)
         except Exception as e:  # don't let one rule's bug abort the validator
             out.append(Violation(
                 rule_id=f"{rule['id']}-internal-error",
@@ -3039,6 +3423,31 @@ def cmd_check(args: argparse.Namespace) -> int:
 
     body = body_path.read_text()
 
+    surface = getattr(args, "surface", "auto") or "auto"
+    if surface == "auto":
+        surface = "v3" if V3_AUTHOR_MARKER in body else "v2"
+    brief = None
+    if surface == "v3":
+        if not getattr(args, "brief_file", None):
+            print("validate-pinned.py: --brief-file is required for the v3 surface "
+                  "(the author card and reviewer brief validate together)", file=sys.stderr)
+            return 2
+        brief_path = Path(args.brief_file)
+        if not brief_path.is_file():
+            print(f"validate-pinned.py: brief file not found: {brief_path}", file=sys.stderr)
+            return 2
+        brief = brief_path.read_text()
+    evidence_base = None
+    if surface == "v3":
+        eb_path = Path(getattr(args, "evidence_base", None) or (Path.cwd() / ".review-evidence-base.json"))
+        if eb_path.is_file():
+            try:
+                loaded = json.loads(eb_path.read_text())
+                if isinstance(loaded, dict):
+                    evidence_base = loaded
+            except (OSError, json.JSONDecodeError):
+                evidence_base = None  # absent artifact isn't evidence; rule skips
+
     pr_int = int(args.pr) if args.pr else None
     diff_files = gh_pr_diff_name_only(args.repo, pr_int) if pr_int else []
     diff_files_added = gh_pr_diff_added_files(args.repo, pr_int) if pr_int else set()
@@ -3067,6 +3476,9 @@ def cmd_check(args: argparse.Namespace) -> int:
         candidate_stances=candidate_stances,
         verified_claims=verified_claims,
         vale_findings=vale_findings,
+        surface=surface,
+        brief=brief,
+        evidence_base=evidence_base,
     )
 
     known = {r["id"] for r in RULES}
@@ -3150,6 +3562,35 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
         print("::error::count-buckets: one of --body-file or --pr is required", file=sys.stderr)
         return 1
 
+    if V3_AUTHOR_MARKER in body:
+        # v3 (schema v21): blocking = 🚨/❓ rows without a REVIEW_STATE
+        # disposition — a fixed/refuted/accepted finding no longer holds the
+        # label even before the next re-render. `--pr` mode's marker regex
+        # (`<!-- CLAUDE_REVIEW`) already matches both cards' markers, so the
+        # joined body carries the brief's 👀 section too. A corrupt
+        # REVIEW_STATE counts every row as blocking (conservative, warned) —
+        # the label driver must never crash or fail open on a bad block.
+        dispositioned: set[str] = set()
+        try:
+            state = _review_state_mod().parse_state(body)
+            if state is not None:
+                dispositioned = set(state.get("findings", {}))
+        except ValueError as e:
+            print(f"::warning::count-buckets: REVIEW_STATE unreadable, counting all rows as blocking: {e}",
+                  file=sys.stderr)
+        blocking_rows = (v3_finding_rows(body, "🚨 Must fix or refute")
+                         + v3_finding_rows(body, "❓ Only you can answer these"))
+        outstanding = sum(
+            1 for _, _, p in blocking_rows
+            if p is None or p["id"] == "F?" or p["id"] not in dispositioned
+        )
+        print(f"outstanding={outstanding}")
+        print(f"low_confidence={len(v3_finding_rows(body, '👀 Check these before approving'))}")
+        print("triaged=0")
+        print("pre_existing=0")
+        print(f"resolved={len(extract_bucket_bullets(body, '✅ Resolved'))}")
+        return 0
+
     print(f"outstanding={len(extract_bucket_bullets(body, '🚨 Outstanding'))}")
     print(f"low_confidence={len(extract_bucket_bullets(body, '⚠️ Low-confidence'))}")
     print(f"triaged={len(extract_bucket_bullets(body, '📋 Triaged'))}")
@@ -3182,6 +3623,16 @@ def main() -> int:
                               "contract but want one specific guarantee — e.g. claude-update.yml "
                               "running `--only-rule style-blocker-provenance` as a warning. "
                               "An unknown id exits 2 rather than vacuously passing.")
+    p_check.add_argument("--surface", choices=["auto", "v2", "v3"], default="auto",
+                         help="Which comment surface the body speaks. auto (default) detects "
+                              "v3 via the <!-- CLAUDE_REVIEW_AUTHOR --> marker.")
+    p_check.add_argument("--brief-file",
+                         help="v3 only: path to the reviewer-brief body. Required when the "
+                              "surface is v3 — the two cards validate together.")
+    p_check.add_argument("--evidence-base",
+                         help="v3 only: path to `.review-evidence-base.json` from compose_v3. "
+                              "Defaults to ./.review-evidence-base.json; absent = "
+                              "bucket-split-faithful skips.")
     p_check.add_argument("--fetched-urls",
                          help="Path to `.fetched-urls.json` from the workflow pre-step. "
                               "Defaults to ./.fetched-urls.json. Pass-through to "
