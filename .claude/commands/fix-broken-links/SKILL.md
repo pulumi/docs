@@ -1,12 +1,12 @@
 ---
 name: fix-broken-links
-description: Fix broken links reported by the daily link checker. Reads .broken-links.json, triages each link to a fix strategy (alias, S3 redirect, source edit, exclusion, or out-of-scope issue), and opens an auditable PR. Invoked by the check-links workflow; not user-invocable.
+description: Fix broken links and stale redirect hops reported by the daily link checker. Reads .broken-links.json, triages each entry to a fix strategy (alias, S3 redirect, source edit, exclusion, or out-of-scope issue), and opens an auditable PR. Invoked by the check-links workflow; not user-invocable.
 user-invocable: false
 ---
 
 # Fix Broken Links
 
-You are fixing the broken links found by the daily link checker (`scripts/link-checker/check-links.js`, run against `https://www.pulumi.com`). Work through every reported link, pick the right strategy for each, open one auditable PR, and file issues for anything that can't be fixed in this repo.
+You are fixing the broken links and stale redirect hops found by the daily link checker (`scripts/link-checker/check-links.js`, run against `https://www.pulumi.com`). Work through every reported entry, pick the right strategy for each, open one auditable PR, and file issues for anything that can't be fixed in this repo.
 
 ## Input
 
@@ -19,21 +19,25 @@ Read `.broken-links.json` from the repo root. Shape:
     { "source": "...", "destination": "...", "reason": "HTTP_404", "hits": 210 },
     { "source": "(server logs)", "destination": "...", "reason": "REAL_404", "hits": 94 }
   ],
-  "external": [{ "source": "...", "destination": "...", "reason": "HTTP_404" }]
+  "external": [{ "source": "...", "destination": "...", "reason": "HTTP_404" }],
+  "redirectHops": [
+    { "source": "...", "destination": "/docs/concepts/stacks/", "redirectsTo": "https://www.pulumi.com/docs/iac/concepts/stacks/", "reason": "REDIRECT_HOP" }
+  ]
 }
 ```
 
-- `source` — the live page the broken link was found **on**.
-- `destination` — the URL that failed.
-- `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …), or
-  `REAL_404` for entries merged from server logs (below).
+- `source` — the live page the entry was found **on** (`(server logs)` for real-404 entries — see below).
+- `destination` — for `internal`/`external`, the URL that failed; for `redirectHops`, the original link as authored (still works, but only by way of a redirect).
+- `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …), `REAL_404` for entries merged from server logs, or `REDIRECT_HOP` for a working-but-stale internal link.
 - `internal` — `destination` is on `pulumi.com`; `external` — third-party.
-- `hits` — optional: real 404 requests on that destination from server logs
-  over the export window (merged in by
-  `scripts/link-checker/merge-404-signal.py`). The list is sorted by `hits`
-  descending — **work highest-hits first**; entries without `hits` follow.
+- `redirectHops` — internal links into the retired `/docs/concepts/*` path that resolve fine (nothing here is actually broken) but only by way of a redirect to `/docs/iac/concepts/*`. Each entry's `redirectsTo` is where it actually lands — that's the correct link to swap in. This list is scoped narrowly to that one known-bad hop class, not general internal redirects (most internal redirects are intentional and not worth flagging).
+- `hits` — optional, `internal` only: real 404 requests on that destination from server logs over the export window (merged in by `scripts/link-checker/merge-404-signal.py`). The list is sorted by `hits` descending — **work highest-hits first**; entries without `hits` follow.
 
-If both lists are empty, do nothing (the workflow won't invoke you in that case, but be defensive).
+If `internal`, `external`, and `redirectHops` are all empty, do nothing (the workflow won't invoke you in that case, but be defensive).
+
+### Redirect hops (`reason: "REDIRECT_HOP"`)
+
+These aren't broken — the crawler followed the redirect and the page loaded fine — so they skip the false-positive verification and deduplication-by-brokenness logic below in one respect: there's no "is it really 404" question to ask. But do still check for an in-flight duplicate fix (an open PR already swapping the same link) before touching it. Fix strategy is always the same: **edit at source**, swapping `destination` for `redirectsTo` (strip the `https://www.pulumi.com` origin to get the root-relative path). Skip the "confirm genuinely broken" step for these; go straight to the mapping-to-source-file step below.
 
 ### Real-404 signal (`reason: "REAL_404"`)
 
@@ -109,6 +113,7 @@ Apply the first row that matches.
 
 | Situation | Strategy | Mechanism |
 |---|---|---|
+| `redirectHops` entry (link works, but only via a redirect) | **Edit at source** | Swap `destination` for `redirectsTo`, root-relative |
 | Internal link points at a moved/renamed path, but the destination page still exists at a new path | **Hugo alias** | Add the old path to `aliases:` on the destination page's frontmatter |
 | Internal link to a page that was deleted/restructured, or a non-Hugo path (registry, generated docs) | **S3 redirect** | Add a redirect line to the topic-appropriate file in `scripts/redirects/` |
 | Broken link living in **editable** content (`content/docs`, `content/product`, `content/tutorials`) | **Edit at source** | Fix the link in place; use the full root-relative path (`/docs/...`), never `../` |
@@ -154,10 +159,10 @@ docs/old/path/index.html|/docs/iac/new/path/
 
 ## Output
 
-If **every** confirmed-broken link is a duplicate (see deduplication above), skip
-all of the below: open no branch, PR, or issue, write the "all already tracked"
-Slack summary to `.broken-links-pr.txt`, and stop. Otherwise, for the actionable
-(non-duplicate) links:
+If **every** confirmed-broken link and every `redirectHops` entry is a duplicate
+(see deduplication above), skip all of the below: open no branch, PR, or issue,
+write the "all already tracked" Slack summary to `.broken-links-pr.txt`, and
+stop. Otherwise, for the actionable (non-duplicate) entries:
 
 1. Create a branch `fix/broken-links-<date>` (date from the workflow, e.g. `fix/broken-links-2026-06-02`).
 2. Make the fixes, grouping related changes into clear commits.
@@ -171,7 +176,7 @@ Slack summary to `.broken-links-pr.txt`, and stop. Otherwise, for the actionable
 
 The reviewer must be able to audit every decision without re-deriving it. Model the description on PR #19469. Include:
 
-- **A table or list of every broken link** → the strategy applied → one line of non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
+- **A table or list of every broken link and redirect hop** → the strategy applied → one line of non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
 - A **Verification** section: confirm `make lint` and `make build` passed, and note that each link was re-checked before fixing.
 - A **False positives / not actioned** section listing every reported link you confirmed was actually fine, with its reason code and why (so the reviewer knows it was checked, not missed).
 - An **Already tracked** section, when any link was skipped as a duplicate: one succinct line per link linking the existing PR or issue that covers it.

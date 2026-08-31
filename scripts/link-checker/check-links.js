@@ -80,7 +80,7 @@ checkLinks();
 
 // Runs the checker.
 async function checkLinks() {
-    const checker = getChecker([]);
+    const checker = getChecker([], []);
 
     // Load all URLs.
     const urls = await getURLsToCheck(baseURL);
@@ -90,9 +90,16 @@ async function checkLinks() {
     urls.forEach(url => checker.enqueue(url));
 }
 
+// Path segment that identifies the retired /docs/concepts/* URL space (moved to
+// /docs/iac/concepts/* by PR #21072). A link that still points here but resolves
+// via a redirect isn't broken, so the checker's broken/not-broken split never
+// sees it -- it costs the reader and the crawler a hop for nothing, which is a
+// separate, quieter kind of problem than a dead link. See redirectHops below.
+const RETIRED_CONCEPTS_PATH = "/docs/concepts/";
+
 // Returns an instance of either HtmlUrlChecker.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-function getChecker(brokenLinks) {
+function getChecker(brokenLinks, redirectHops) {
 
     // Specify an alternative user agent, as BLC's default doesn't pass some services' validations.
     const userAgent = "pulumi+blc/0.1";
@@ -111,16 +118,16 @@ function getChecker(brokenLinks) {
         ]
     };
 
-    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks));
+    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks, redirectHops));
 }
 
 // Returns the set of event handlers for HTMLUrlCheckers.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-function getDefaultHandlers(brokenLinks) {
+function getDefaultHandlers(brokenLinks, redirectHops) {
     return {
         link: (result) => {
             try {
-                onLink(result, brokenLinks);
+                onLink(result, brokenLinks, redirectHops);
             }
             catch (error) {
                 fail(error);
@@ -139,7 +146,7 @@ function getDefaultHandlers(brokenLinks) {
         },
         end: async () => {
             try {
-                await onComplete(brokenLinks);
+                await onComplete(brokenLinks, redirectHops);
             }
             catch (error) {
                 fail(error);
@@ -149,7 +156,7 @@ function getDefaultHandlers(brokenLinks) {
 }
 
 // Handles BLC 'link' events, adding broken links to the running list.
-function onLink(result, brokenLinks) {
+function onLink(result, brokenLinks, redirectHops) {
     const source = result.base.resolved;
     const destination = result.url.resolved;
 
@@ -161,10 +168,30 @@ function onLink(result, brokenLinks) {
         // Always log broken links to the console.
         logLink(source, destination, reason);
 
-    } else if (process.env.DEBUG) {
+    } else {
+        // Not broken, but did it get here by way of a redirect? BLC follows
+        // redirects transparently before deciding broken/not-broken, so a
+        // working-but-stale link never surfaces any other way. Scope this
+        // narrowly to the one hop class we know keeps resurfacing (see
+        // RETIRED_CONCEPTS_PATH above) rather than flagging every internal
+        // redirect -- most of those are intentional (versioned URLs, S3
+        // redirects the exclusion list already tolerates) and would just be
+        // noise here.
+        const original = result.url.original;
+        const redirectedTo = result.url.redirected;
+        if (
+            redirectedTo != null &&
+            isInternalLink(destination) &&
+            typeof original === "string" &&
+            original.includes(RETIRED_CONCEPTS_PATH)
+        ) {
+            addRedirectHop(source, original, redirectedTo, redirectHops);
+            logLink(source, original, `REDIRECT_HOP -> ${redirectedTo}`);
+        } else if (process.env.DEBUG) {
 
-        // Log successes when DEBUG is truthy.
-        logLink(source, destination, result.http.response.statusCode);
+            // Log successes when DEBUG is truthy.
+            logLink(source, destination, result.http.response.statusCode);
+        }
     }
 }
 
@@ -180,7 +207,7 @@ function onPage(error, pageURL, brokenLinks) {
 }
 
 // Handles the BLC 'complete' event, which is raised at the end of a run.
-async function onComplete(brokenLinks) {
+async function onComplete(brokenLinks, redirectHops) {
     // Split broken links into internal and external
     const internalLinks = brokenLinks.filter(link => isInternalLink(link.destination));
     const externalLinks = brokenLinks.filter(link => !isInternalLink(link.destination));
@@ -189,7 +216,11 @@ async function onComplete(brokenLinks) {
     const filteredInternal = excludeAcceptable(internalLinks);
     const filteredExternal = excludeAcceptable(externalLinks);
 
-    const totalFiltered = filteredInternal.length + filteredExternal.length;
+    // Redirect hops are already scoped to one known-bad, always-internal class
+    // (see RETIRED_CONCEPTS_PATH in onLink), not general breakage, so they skip
+    // excludeAcceptable(): that filter's rules (HTTP status codes, bot
+    // protection, transient errors) don't apply to a link that resolved fine.
+    const totalFiltered = filteredInternal.length + filteredExternal.length + redirectHops.length;
 
     // If we failed and a retry count was provided, retry. Note that retry count !==
     // run count, so a retry count of 1 means run once, then retry once, which means a
@@ -207,19 +238,21 @@ async function onComplete(brokenLinks) {
     // broken. Slack posting now happens at the workflow level (the link-fix PR
     // link), not here. Broken links are already logged to the console as they're
     // found, in onLink.
-    writeResults(filteredInternal, filteredExternal);
+    writeResults(filteredInternal, filteredExternal, redirectHops);
 }
 
 // Writes the final broken-link results to RESULTS_FILE in the shape downstream
-// tooling expects: a generation timestamp plus separate internal/external lists.
-function writeResults(internal, external) {
+// tooling expects: a generation timestamp plus separate internal/external/
+// redirectHops lists.
+function writeResults(internal, external, redirectHops) {
     const results = {
         generated: new Date().toISOString(),
         internal,
         external,
+        redirectHops,
     };
     fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2) + "\n");
-    console.log(`Wrote ${internal.length + external.length} broken link(s) to ${RESULTS_FILE}.`);
+    console.log(`Wrote ${internal.length + external.length} broken link(s) and ${redirectHops.length} redirect hop(s) to ${RESULTS_FILE}.`);
 }
 
 /**
@@ -513,6 +546,18 @@ function addLink(source, destination, reason, links) {
         source,
         destination,
         reason,
+    });
+}
+
+// Adds a redirect-hop finding to the running list. Unlike addLink, this also
+// records where the link actually landed (redirectsTo), since the fix is to
+// rewrite the source link to that path, not to treat it as broken.
+function addRedirectHop(source, destination, redirectsTo, links) {
+    links.push({
+        source,
+        destination,
+        redirectsTo,
+        reason: "REDIRECT_HOP",
     });
 }
 
