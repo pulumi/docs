@@ -368,7 +368,7 @@ def test_glyph_flips_on_answered_rows():
     table can't disagree with the REVIEW_STATE block it carries."""
     gh = StubGh(pr_author="alice")
     body = (
-        "## Review: action needed — 2 items block merge — x\n"
+        "## Review: author action needed — 2 items block merge — x\n"
         + resolve_handler.AUTHOR_MARKER + "\n\n"
         "| | ID | Where | Finding |\n|---|---|---|---|\n"
         "| ⬜ | **F1** | `a.md` L1 | one |\n"

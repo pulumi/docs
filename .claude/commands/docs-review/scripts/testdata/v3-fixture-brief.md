@@ -3,6 +3,8 @@
 
 > [!TIP]
 > **This is the reviewer's guide.** Before you approve this PR, work through the 👀 checklist below. Everything else was machine-verified — the evidence page has the receipts.
+>
+> _PR author: your to-do list is the other review comment, "Review: author action needed" — nothing on this card is yours._
 
 > [!NOTE]
 > **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), (2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.
@@ -34,4 +36,4 @@
 
 ---
 
-**For the reviewer:** the 👀 items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment headed "Review: action needed"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the 👀 items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.
+**For the reviewer:** the 👀 items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment headed "Review: author action needed"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the 👀 items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.

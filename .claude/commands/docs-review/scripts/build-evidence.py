@@ -71,7 +71,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
-_HEADER_RE = re.compile(r"^## Review: (?:action needed — \d+ items? blocks? merge|no action needed)( — Last updated .*)$")
+_HEADER_RE = re.compile(r"^## Review: (?:author action needed — \d+ items? blocks? merge|no author action needed)( — Last updated .*)$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _CONF_ROW_RE = re.compile(r"^> \| (?P<dim>[^|]+) \| (?P<level>[^|]+) \|")
 
@@ -272,9 +272,9 @@ def _fix_header(body: str, n_blocking: int) -> str:
         if m:
             if n_blocking:
                 noun = "item blocks" if n_blocking == 1 else "items block"
-                verb = f"action needed — {n_blocking} {noun} merge"
+                verb = f"author action needed — {n_blocking} {noun} merge"
             else:
-                verb = "no action needed"
+                verb = "no author action needed"
             lines[i] = f"## Review: {verb}{m.group(1)}"
             break
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
@@ -296,7 +296,7 @@ def _self_test() -> int:
     state_block = review_state.serialize_block(dict(review_state.empty_state(), high_water=3))
     author = "\n".join([
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
-        "## Review: action needed — 2 items block merge — Last updated " + ts, "",
+        "## Review: author action needed — 2 items block merge — Last updated " + ts, "",
         "### 🚨 Must fix or refute (blocks merge)", "",
         "| | ID | Where | Finding |", "|---|---|---|---|",
         "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
@@ -329,7 +329,7 @@ def _self_test() -> int:
     assert ev["summary"] == "A tidy little PR about a.md."
     assert ev["confidence"]["facts"] == "HIGH"
     assert ev["history"][-1]["summary"] == "A tidy little PR about a.md."
-    assert "action needed — 3 items block merge" in author_out
+    assert "author action needed — 3 items block merge" in author_out
 
     # demotion: F1 rendered in the brief's 👀 → violation
     demoted_brief = brief.replace(

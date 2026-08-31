@@ -1965,18 +1965,19 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     # ---- author card ----
     if n_blocking:
         noun = "item blocks" if n_blocking == 1 else "items block"
-        header_verb = f"action needed — {n_blocking} {noun} merge"
+        header_verb = f"author action needed — {n_blocking} {noun} merge"
         orient = [
             "> [!IMPORTANT]",
-            "> This review needs answers from you before this PR can merge. "
-            "Fix each item in the table below, or tell the review why it's wrong — "
-            "**How to answer** at the bottom shows exactly what to type.",
+            "> **You = the PR author.** This review needs your answers before this "
+            "PR can merge. Fix each item in the table below, or tell the review "
+            "why it's wrong — **How to answer** at the bottom shows exactly what "
+            "to type.",
         ]
     else:
-        header_verb = "no action needed"
+        header_verb = "no author action needed"
         orient = [
             "> [!NOTE]",
-            "> Nothing here blocks merge — the review found no items needing an answer from you.",
+            "> Nothing here blocks merge — the review found no items needing an answer from the PR author.",
         ]
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
@@ -2046,6 +2047,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "> **This is the reviewer's guide.** Before you approve this PR, work "
         "through the 👀 checklist below. Everything else was machine-verified — "
         "the evidence page has the receipts.",
+        ">",
+        '> _PR author: your to-do list is the other review comment, "Review: '
+        'author action needed" — nothing on this card is yours._',
         "",
     ]
     if prep["outage_banner"]:

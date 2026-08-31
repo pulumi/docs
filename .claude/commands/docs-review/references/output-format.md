@@ -453,7 +453,7 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW 1/1 -->                ← legacy alias, own line (transition window)
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
-## Review: action needed — N item(s) block merge — Last updated <ISO 8601>
+## Review: author action needed — N item(s) block merge — Last updated <ISO 8601>
 > [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Must fix or refute (blocks merge)
@@ -471,7 +471,7 @@ _<one sentence: what the PR is and what the review checked>_
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
 ```
 
-The zero-blocking header is `## Review: no action needed — …` with a NOTE
+The zero-blocking header is `## Review: no author action needed — …` with a NOTE
 alert instead of the IMPORTANT one. The status glyph is display-only (⬜
 open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 

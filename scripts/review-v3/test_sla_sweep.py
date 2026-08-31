@@ -165,7 +165,7 @@ def author_card(findings=(), state=None, head=HEAD):
         "<!-- CLAUDE_REVIEW 1/1 -->",
         sentinel.AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head} -->",
-        "## Review: action needed — %d items block merge — Last updated x" % (len(must) + len(answer)),
+        "## Review: author action needed — %d items block merge — Last updated x" % (len(must) + len(answer)),
         "",
         "### 🚨 Must fix or refute (blocks merge)",
         "",

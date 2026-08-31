@@ -1,10 +1,10 @@
 <!-- CLAUDE_REVIEW 1/1 -->
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD aaaabbbbccccddddeeeeffff0000111122223333 -->
-## Review: action needed — 3 items block merge — Last updated 2026-08-31T18:00:00Z
+## Review: author action needed — 3 items block merge — Last updated 2026-08-31T18:00:00Z
 
 > [!IMPORTANT]
-> This review needs answers from you before this PR can merge. Fix each item in the table below, or tell the review why it's wrong — **How to answer** at the bottom shows exactly what to type.
+> **You = the PR author.** This review needs your answers before this PR can merge. Fix each item in the table below, or tell the review why it's wrong — **How to answer** at the bottom shows exactly what to type.
 
 _<TODO: one sentence — what this PR is and what the review checked>_
 

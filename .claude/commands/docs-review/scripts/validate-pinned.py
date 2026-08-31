@@ -324,11 +324,11 @@ V3_LEGACY_ALIAS_RE = re.compile(r"^<!-- CLAUDE_REVIEW 1/1 -->\s*$", re.MULTILINE
 V3_HEAD_MARKER_RE = re.compile(r"^<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->\s*$", re.MULTILINE)
 FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
 V3_EVIDENCE_TOKEN = "%%EVIDENCE_URL%%"
-# Author header: `## Review: action needed — N item(s) block(s) merge — …`
-# or the zero form `## Review: no action needed — …` (compose_v3's
+# Author header: `## Review: author action needed — N item(s) block(s) merge — …`
+# or the zero form `## Review: no author action needed — …` (compose_v3's
 # header_verb).
 V3_AUTHOR_HEADER_RE = re.compile(
-    r"^## Review: (?:action needed — (\d+) items? blocks? merge|no action needed)", re.MULTILINE
+    r"^## Review: (?:author action needed — (\d+) items? blocks? merge|no author action needed)", re.MULTILINE
 )
 # H3 headings, in required order, per references/output-format.md §v3.
 V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Only you can answer these", "✅ Resolved since last review"]

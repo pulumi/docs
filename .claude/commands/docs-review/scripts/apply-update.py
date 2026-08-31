@@ -97,7 +97,7 @@ AUTHOR_HEADINGS = {
 BRIEF_HEADING = "### 👀 Check these before approving"
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
 _HEAD_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->")
-_UPDATED_RE = re.compile(r"(## Review: (?:action needed — \d+ items? blocks? merge|no action needed) — Last updated )\S+")
+_UPDATED_RE = re.compile(r"(## Review: (?:author action needed — \d+ items? blocks? merge|no author action needed) — Last updated )\S+")
 _BRIEF_UPDATED_RE = re.compile(r"(## Reviewer\'s guide — Last updated )\S+( \(head )[0-9a-f]{7,40}(\))")
 
 
@@ -529,7 +529,7 @@ def _self_test() -> int:
     assert a_out.index("**F4**") < a_out.index("### ❓"), "F4 promoted into 🚨"
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
-    assert "action needed — 3 items block merge" in a_out, f"count refreshed: {report}"
+    assert "author action needed — 3 items block merge" in a_out, f"count refreshed: {report}"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 

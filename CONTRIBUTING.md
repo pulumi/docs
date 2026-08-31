@@ -22,7 +22,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 
 The review is moving from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable. Everything below this section describes the v2 monolith and stays accurate for PRs reviewed before the flip and for repos where the flag is off. What changes under v3:
 
-- **Two comments instead of one.** An **author card** ("Review: action needed") lists only what you must act on — a table of `🚨 Must fix or refute` and `❓ Only you can answer` items (both block merge), plus inline ✏️ style suggestions and a ✅ Resolved log. A separate **reviewer's guide** tells your reviewer what the PR contains, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
+- **Two comments instead of one.** An **author card** ("Review: author action needed") lists only what you must act on — a table of `🚨 Must fix or refute` and `❓ Only you can answer` items (both block merge), plus inline ✏️ style suggestions and a ✅ Resolved log. A separate **reviewer's guide** tells your reviewer what the PR contains, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
 - **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge. Fix it and push, or reply with your reasoning:
 
   ```
