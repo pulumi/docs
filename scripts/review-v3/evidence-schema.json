@@ -71,7 +71,7 @@
           "verdict": {"enum": ["verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "framing-drift", "flagged"]},
           "evidence": {"type": "string"},
           "source": {"type": "string"},
-          "route": {"enum": ["pass1", "pass2", "pass3", "preflight"]}
+          "route": {"enum": ["pass0", "pass1", "pass2", "pass3", "preflight"]}
         }
       }
     },

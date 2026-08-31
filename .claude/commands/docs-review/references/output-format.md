@@ -432,3 +432,102 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 | shared-criteria only | n/a (no fact-check) |
 
 Domain files may bump scrutiny internally for whole-file rewrites or new pages.
+
+## The v3 surface (`--surface v3`)
+
+> **Status:** ships behind the `REVIEW_V3_COMMENTS` flag. Everything above this
+> section describes the v2 single-comment surface, which remains the default
+> and stays valid through the transition. The v3 architecture reference is
+> `scripts/review-v3/README.md`.
+
+Under v3 the composer emits **two comments plus a machine-owned evidence
+object** instead of one monolith. Evidence (the 🔍 verification trail, the
+investigation log, 📋 triaged findings, 💡 pre-existing issues, 📊 editorial
+balance, 📜 history) lives in S3 and on a rendered evidence page; the comments
+carry only what their reader must act on, each linking the evidence page via
+the `%%EVIDENCE_URL%%` token (substituted at publish).
+
+### Author card — `.review-draft-author.md`
+
+```markdown
+<!-- CLAUDE_REVIEW 1/1 -->                ← legacy alias, own line (transition window)
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
+## Review — action needed (N blocking) — Last updated <ISO 8601>
+_<one sentence: what the PR is and what the review checked>_
+### 🚨 Must fix or refute (blocks merge)
+- [ ] **F1** **[L12-14]** `file.md` — <finding + fix prose>
+### ❓ Only you can answer these (blocks merge)
+- [ ] **F3** **[L61]** `file.md` — <the question>
+#### Style suggestions                    ← unchanged v2 block (annotator-compatible)
+### ✅ Resolved since last review
+📎 **Full evidence:** %%EVIDENCE_URL%% — …
+<!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
+```
+
+### Reviewer brief — `.review-draft-brief.md`
+
+```markdown
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer brief — Last updated <ISO 8601> (head <short sha>)   ← display-only sha
+> [!TIP] Summary + Review-confidence table   ← same shape as v2
+### 👀 Check these before approving
+- **F4** **[L95]** `file.md` — <what might be wrong and why>
+### ✅ What you can rubber-stamp            ← composer-owned count lines
+💡 **Pre-existing issues in touched files:** N — <link>
+📎 **Full evidence:** %%EVIDENCE_URL%%
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-reviewer.md
+```
+
+### Finding IDs and the finding-line grammar
+
+One line per finding, everywhere: `- [ ] **F<n>** **[L<a>-<b>]** \`file\` — body`
+(checkbox on the author card, none in the brief). IDs are assigned by the
+composer in render order, are unique for the life of the PR (`high_water` in
+the evidence object is the high-water mark), and are the join key across the
+cards, REVIEW_STATE, `/resolve`, the Sentinel, and the evidence object.
+`render_finding_line` / `parse_finding_line` in `compose-review.py` are the
+grammar's only implementation — `build-evidence.py` re-parses the model-edited
+cards with it, fail-closed.
+
+### The ❓/👀 split
+
+Deterministic, verdict-driven, applied by the composer (`split_v3_buckets`):
+`unverifiable` → ❓ Only you can answer (sourcing their own claim is the
+author's job — turn-cap unverifiables included); `framing-drift` and other
+low-confidence stubs → 👀 Check these (whether it is really an issue is the
+reviewer's judgment).
+
+### The model's edit contract (v3)
+
+The model edits **both drafts** the way it edits the v2 draft — triage the
+stub TODOs, write the fix prose, fill the summary/confidence TODOs — under
+these rules:
+
+1. **Promote, never demote.** 👀 → ❓ → 🚨 moves are allowed with a stated
+   reason (move the line between sections/drafts and keep its id). Moving a
+   finding down is a contract violation `build-evidence.py` rejects (exit 2).
+   Exception: a `route: preflight` detector stub whose TODO explicitly says
+   "bucket by reader impact" may land in 👀.
+1. **Never delete a finding.** Judged spurious → rewrite its body as
+   `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
+   `**Pre-existing:** <reason>`. The body must START with the label.
+   build-evidence files those on the evidence page and drops them from the
+   published card. A finding that simply vanishes is a violation.
+1. **New findings** are added as `- [ ] **F?** …` lines in the right section;
+   build-evidence assigns the real id.
+1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
+   the REVIEW_STATE block, `%%EVIDENCE_URL%%` tokens, the rubber-stamp count
+   lines in the brief, or the footers.
+1. Keep each finding on ONE line — the grammar is line-based.
+
+### After the model: `build-evidence.py`
+
+`build-evidence.py --author-body … --brief-body … --base .review-evidence-base.json
+--output .review-evidence.json --author-out … --brief-out …` re-parses the
+cards, honors promotions/rewrites, numbers `F?` additions, recomputes the
+author header's blocking count and the brief's 💡 count, refreshes
+summary/confidence/history from the brief, and emits the final evidence object
+plus the cleaned publish bodies. Any parse failure or contract violation exits
+2 and the workflow treats the run like a validation failure.

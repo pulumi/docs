@@ -62,7 +62,7 @@ VERDICTS = {
     "verified", "matches", "not-a-claim", "unverifiable",
     "contradicted", "mismatch", "framing-drift", "flagged",
 }
-ROUTES = {"pass1", "pass2", "pass3", "preflight"}
+ROUTES = {"pass0", "pass1", "pass2", "pass3", "preflight"}
 
 # ---- key sets, one per object shape the schema pins additionalProperties:false ----
 
