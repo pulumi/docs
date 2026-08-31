@@ -45,7 +45,7 @@ The provisioned account is a Pulumi Cloud individual account. Agents can:
 
 ## Claiming an account
 
-The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, or SAML SSO). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically.
+The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, SAML SSO, or a passkey). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically.
 Claiming never reduces capability. Everything available before the claim is still available after. Once the account is claimed and email is verified, you get access to various Pulumi Cloud features, including [Neo](/product/neo/), our AI infrastructure agent.
 
 ## Lifecycle
