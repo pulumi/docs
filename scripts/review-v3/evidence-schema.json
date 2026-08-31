@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "pr-review evidence object v1",
+  "description": "System of record for one pre-merge review at one head SHA. Written only by the credentialed record job; comments are renderings of this. See README.md in this directory.",
+  "type": "object",
+  "required": ["schema_version", "repo", "pr", "head_sha", "run_id", "generated_at", "findings", "trail", "investigation_log", "history", "high_water"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "repo": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+    "pr": {"type": "integer", "minimum": 1},
+    "head_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "run_id": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "high_water": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Highest finding index ever assigned on this PR; the composer's next ID is F<high_water+1>. Never decreases."
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "bucket", "file", "text", "origin", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^F[0-9]+$"},
+          "bucket": {"enum": ["outstanding", "author-answer", "reviewer-check", "preexisting"]},
+          "file": {"type": "string", "minLength": 1},
+          "lines": {
+            "type": "array",
+            "items": {"type": "integer", "minimum": 1},
+            "minItems": 1,
+            "maxItems": 2,
+            "description": "[start] or [start, end]; omitted for file-level findings"
+          },
+          "text": {"type": "string", "minLength": 1},
+          "origin": {
+            "type": "string",
+            "minLength": 1,
+            "description": "What produced it: verdict:<verdict>, model, preflight:<tool>, style-blocker, promoted:<from-bucket>:<reason>"
+          },
+          "status": {"enum": ["open", "resolved", "conceded", "disputed-held"]},
+          "disposition": {
+            "type": ["object", "null"],
+            "required": ["disposition", "actor", "updated_at"],
+            "additionalProperties": false,
+            "properties": {
+              "disposition": {"enum": ["fixed", "refuted", "deferred", "accepted", "not-applicable"]},
+              "note": {"type": "string"},
+              "actor": {"type": "string", "minLength": 1},
+              "sha": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+              "bulk": {"type": "boolean"},
+              "updated_at": {"type": "string", "format": "date-time"}
+            }
+          }
+        }
+      }
+    },
+    "trail": {
+      "type": "array",
+      "description": "Verification trail, verbatim from .verified-claims.json — the model never re-renders this.",
+      "items": {
+        "type": "object",
+        "required": ["file", "claim", "verdict"],
+        "additionalProperties": false,
+        "properties": {
+          "file": {"type": "string", "minLength": 1},
+          "line": {"type": "integer", "minimum": 1},
+          "claim": {"type": "string", "minLength": 1},
+          "verdict": {"enum": ["verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "framing-drift", "flagged"]},
+          "evidence": {"type": "string"},
+          "source": {"type": "string"},
+          "route": {"enum": ["pass1", "pass2", "pass3", "preflight"]}
+        }
+      }
+    },
+    "investigation_log": {
+      "type": "object",
+      "description": "The 8 mandatory investigation bullets, keyed; rendered on the evidence page and summarized as counts in the brief.",
+      "additionalProperties": {"type": "string"}
+    },
+    "editorial_balance": {"type": ["object", "null"]},
+    "triaged": {
+      "type": "array",
+      "items": {"type": "object"},
+      "description": "Triaged verifier findings (previously the collapsed 📋 section)"
+    },
+    "style_suggestions_count": {"type": "integer", "minimum": 0},
+    "confidence": {
+      "type": ["object", "null"],
+      "description": "The review-confidence table dimensions, rendered in the brief",
+      "additionalProperties": {"type": "string"}
+    },
+    "summary": {"type": ["string", "null"]},
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ts", "summary", "sha"],
+        "additionalProperties": false,
+        "properties": {
+          "ts": {"type": "string", "format": "date-time"},
+          "summary": {"type": "string", "minLength": 1},
+          "sha": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"}
+        }
+      }
+    }
+  }
+}
