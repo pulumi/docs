@@ -18,7 +18,7 @@ customer_quote:
     link: /case-studies/lemonade
 
 overview:
-    title: Enable self-service infrastructure<br/>without scaling your platform team
+    title: Enable self-service infrastructure <br/>without scaling your platform team
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a platform engineering solution</span>? Build internal developer platforms that let engineers provision infrastructure safely, with policies, guardrails, and full auditability built in.
 

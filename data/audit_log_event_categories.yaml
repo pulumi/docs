@@ -1,0 +1,189 @@
+# Categories for the Pulumi Cloud audit log events reference
+# (content/docs/administration/reference/audit-log-events/).
+#
+# The event list itself is NOT maintained here. It is fetched nightly from
+# GET /api/orgs/{org}/auditlogs/event-types by scripts/fetch-audit-log-events.sh
+# and written to data/audit_log_events.json. That API returns no category, so
+# this file is the single source of truth for how the ~150 events are grouped
+# into the H2 sections on that page.
+#
+# ORDER IS THE RENDER ORDER. There is no `weight` and no sorting: the sections
+# appear on the page, and in the page's "On this page" table of contents, in the
+# order they appear below. Events within a section are sorted by display name.
+#
+# ---------------------------------------------------------------------------
+# MATCHING
+# ---------------------------------------------------------------------------
+#
+# Every event is assigned to exactly one category by two rule kinds:
+#
+#   match.events    exact event ids. Always wins over any prefix.
+#   match.prefixes  event id prefixes. The LONGEST matching prefix wins, across
+#                   all categories -- which is why `organization-token-created`
+#                   lands in `access-tokens` (prefix `organization-token-`, 19
+#                   chars) rather than `organization` (prefix `organization-`,
+#                   13 chars), with no exact rule needed. Same for
+#                   `team-token-*` vs `team-`.
+#
+# Use a prefix when a whole product area shares one; reach for an exact id only
+# when a single event belongs somewhere its prefix would not put it (for
+# example `stack-deployments-paused`, which is a Deployments event wearing a
+# `stack-` prefix).
+#
+# ---------------------------------------------------------------------------
+# ADDING A NEW EVENT
+# ---------------------------------------------------------------------------
+#
+# You do not add events here -- the nightly job picks them up on its own. You
+# only have to touch this file when an event matches NO rule, and the job will
+# tell you: scripts/fetch-audit-log-events.sh exits non-zero and names the
+# unmapped ids, which fails the nightly workflow and posts to #docs-ops. The
+# fix is to extend the `match` block of the right category below (or add a new
+# category), then rerun the script. This is deliberately a hard failure rather
+# than an "Other" bucket: an event quietly filed under "Other" is a silent
+# documentation regression, and silent drift is exactly what this pipeline
+# exists to prevent.
+#
+# ---------------------------------------------------------------------------
+# ADDING A NEW CATEGORY
+# ---------------------------------------------------------------------------
+#
+#   1. Add an entry below, in the position you want it to render.
+#   2. Give it an `id` (kebab-case, unique), a sentence-case `name` (this
+#      becomes the H2 and its anchor), and a one-line `description` that says
+#      what the section covers.
+#   3. Give it a `match` block. Verify with a local run of the fetch script.
+#
+# `name` is rendered as a heading, so it follows the repo's sentence-case
+# heading rule, so product names stay capitalized and nothing else does.
+#
+# `description` is emitted as plain text, NOT run through Markdown, so write it
+# as literal prose. Markdown syntax will show up verbatim on the page -- as
+# this very line would, if it were a description.
+
+- id: authentication
+  name: Authentication and identity
+  description: Logins, identity changes, single sign-on configuration, OIDC issuer registration, and permission-denied events.
+  match:
+    prefixes:
+      - auth-failure-
+      - oidc-issuer-
+    events:
+      - authorization-policy-updated
+      - saml-configuration-updated
+      - user-added-new-identity-to-their-account
+      - user-login
+      - user-login-failed
+
+- id: access-tokens
+  name: Access tokens
+  description: Creation and revocation of organization, team, and personal access tokens, including tokens issued through OIDC token exchange.
+  match:
+    prefixes:
+      - organization-token-
+      - personal-token-
+      - team-token-
+    events:
+      # A runner token, but an access token first: it is created by the same
+      # OIDC exchange as the other `*-created-for-oidc-issuer` events.
+      - deployment-runner-token-created-for-oidc-issuer
+
+- id: organization
+  name: Organization and members
+  description: Organization settings, invitations, membership, custom roles, service accounts, and trials.
+  match:
+    prefixes:
+      - custom-role-
+      - member-
+      - organization-
+      - retrial-
+      - service-
+
+- id: teams
+  name: Teams
+  description: Creating, updating, and deleting teams.
+  match:
+    prefixes:
+      - team-
+
+- id: stacks
+  name: Stacks
+  description: Creating, updating, renaming, transferring, and deleting stacks, plus collaborator changes and stack secret decryption.
+  match:
+    prefixes:
+      - stack-
+    events:
+      - secret-decrypted
+      - secrets-batch-decrypted
+
+- id: deployments
+  name: Deployments
+  description: Pulumi Deployments configuration, including deployment settings, schedules, self-hosted runner pools, and pausing or resuming deployments.
+  match:
+    prefixes:
+      - deployment-runner-pool-
+      - scheduled-deployment-
+    events:
+      # These four wear a `stack-`/`organization-` prefix but are Deployments
+      # events, so they need exact rules to beat those prefixes.
+      - deployment-settings-role-updated
+      - organization-deployments-paused
+      - organization-deployments-resumed
+      - stack-deployments-paused
+      - stack-deployments-resumed
+
+- id: environments
+  name: Environments
+  description: Opening, reading, editing, tagging, cloning, scheduling, and rotating Pulumi ESC environments.
+  match:
+    prefixes:
+      - environment-
+
+- id: policy
+  name: Policy as code
+  description: Policy packs, policy groups, and the change gates that require approval before a change proceeds.
+  match:
+    prefixes:
+      # Change gates are an approval control rather than a deployment setting,
+      # so they sit with the other governance events.
+      - change-gate-
+      - policy-
+
+- id: discovery
+  name: Discovery
+  description: Cloud accounts connected for resource discovery, and the scans run against them.
+  match:
+    prefixes:
+      - insights-
+
+- id: neo
+  name: Neo and AI agents
+  description: Pulumi Neo tasks, model providers, CLI integrations, Slack identities, and usage caps.
+  match:
+    prefixes:
+      - agent-
+      - neo-
+
+- id: registry
+  name: Registry
+  description: Packages, templates, and Terraform modules published to or removed from the Pulumi Registry.
+  match:
+    prefixes:
+      - registry-
+
+- id: encryption
+  name: Encryption keys
+  description: Customer-managed keys used to encrypt organization secrets.
+  match:
+    prefixes:
+      - customer-managed-key-
+
+# Kept separate at a single event rather than folded into `organization`:
+# it is the start of a product area, and more source-control and third-party
+# integration events are expected to land here.
+- id: integrations
+  name: Integrations
+  description: Source control and other third-party integrations linked to the organization.
+  match:
+    prefixes:
+      - vcs-

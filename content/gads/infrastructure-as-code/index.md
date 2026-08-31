@@ -20,7 +20,7 @@ customer_quote:
     link: /case-studies/lemonade
 
 overview:
-    title: Infrastructure as Code<br/>in Real Programming Languages
+    title: Infrastructure as Code <br/>in Real Programming Languages
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
 

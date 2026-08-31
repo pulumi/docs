@@ -1,0 +1,1381 @@
+{
+  "eventTypes": [
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin connected a Neo CLI integration instance (an ESC environment supplying credentials for a catalog CLI such as AWS) to the organization.",
+      "displayName": "Agent CLI Integration Connected",
+      "event": "agent-cli-integration-connected",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin removed a connected Neo CLI integration instance from the organization.",
+      "displayName": "Agent CLI Integration Disconnected",
+      "event": "agent-cli-integration-disconnected",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin changed the ESC environment reference or the notes on a connected Neo CLI integration instance.",
+      "displayName": "Agent CLI Integration Updated",
+      "event": "agent-cli-integration-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin disabled a Neo integration for the organization.",
+      "displayName": "Agent Integration Disabled",
+      "event": "agent-integration-disabled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin enabled a Neo integration from the catalog for the organization.",
+      "displayName": "Agent Integration Enabled",
+      "event": "agent-integration-enabled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin registered a Neo bring-your-own-key model provider, storing an encrypted third-party API key and the endpoint Neo's LLM traffic egresses to.",
+      "displayName": "Agent Model Provider Created",
+      "event": "agent-model-provider-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin made a Neo bring-your-own-key model provider the organization's default, redirecting Neo's LLM traffic to that provider's endpoint.",
+      "displayName": "Agent Model Provider Default Changed",
+      "event": "agent-model-provider-default-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin removed a Neo bring-your-own-key model provider.",
+      "displayName": "Agent Model Provider Deleted",
+      "event": "agent-model-provider-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin changed a Neo bring-your-own-key model provider's base URL, model map, or auth headers. Re-sending the header set rotates the stored secret; secret values are never recorded.",
+      "displayName": "Agent Model Provider Updated",
+      "event": "agent-model-provider-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A Neo agent task was created.",
+      "displayName": "Agent Task Created",
+      "event": "agent-task-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A Pulumi site admin permanently deleted a Neo agent task.",
+      "displayName": "Agent Task Deleted",
+      "event": "agent-task-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A Neo agent task was shared with the organization.",
+      "displayName": "Agent Task Shared",
+      "event": "agent-task-shared",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A Neo agent task was unshared, making it visible only to its owner again.",
+      "displayName": "Agent Task Unshared",
+      "event": "agent-task-unshared",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A Neo agent task was updated, for example by changing its permission mode.",
+      "displayName": "Agent Task Updated",
+      "event": "agent-task-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A user attempted an operation on a change request without the permission it requires.",
+      "displayName": "Auth Failure Change Request",
+      "event": "auth-failure-change-request",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A user attempted an operation on an environment without the permission it requires.",
+      "displayName": "Auth Failure Environment",
+      "event": "auth-failure-environment",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A user attempted an operation on a Pulumi Insights cloud account without the permission it requires.",
+      "displayName": "Auth Failure Insights Account",
+      "event": "auth-failure-insights-account",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A user attempted an operation without the organization role it requires.",
+      "displayName": "Auth Failure Organization Role",
+      "event": "auth-failure-organization-role",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A request to an organization's SCIM endpoints presented an invalid access token.",
+      "displayName": "Auth Failure SCIM Access Token",
+      "event": "auth-failure-scim-access-token",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "A user attempted an operation without the stack permission it requires.",
+      "displayName": "Auth Failure Stack Permission",
+      "event": "auth-failure-stack-permission",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "The authorization policy governing which OIDC subjects may exchange tokens was updated.",
+      "displayName": "Authorization Policy Updated",
+      "event": "authorization-policy-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A change gate was created, requiring approval before changes to whatever it targets.",
+      "displayName": "Change Gate Created",
+      "event": "change-gate-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A change gate was deleted.",
+      "displayName": "Change Gate Deleted",
+      "event": "change-gate-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A change gate's rule, target, or enabled state was changed.",
+      "displayName": "Change Gate Updated",
+      "event": "change-gate-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A custom role was created in the organization.",
+      "displayName": "Custom Role Created",
+      "event": "custom-role-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A custom role was deleted from the organization.",
+      "displayName": "Custom Role Deleted",
+      "event": "custom-role-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A custom role's name, description, or permissions were changed.",
+      "displayName": "Custom Role Updated",
+      "event": "custom-role-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "encryption",
+      "description": "A customer-managed key was added to the organization.",
+      "displayName": "Customer Managed Key Added",
+      "event": "customer-managed-key-added",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "encryption",
+      "description": "A customer-managed key was disabled and the secrets it protected were re-encrypted with another key.",
+      "displayName": "Customer Managed Key Disabled",
+      "event": "customer-managed-key-disabled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "encryption",
+      "description": "Every customer-managed key in the organization was disabled.",
+      "displayName": "Customer Managed Key Disabled All",
+      "event": "customer-managed-key-disabled-all",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "encryption",
+      "description": "A customer-managed key was made the organization's default for encrypting secrets.",
+      "displayName": "Customer Managed Key Set Default",
+      "event": "customer-managed-key-set-default",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A self-hosted deployment runner pool was registered with the organization.",
+      "displayName": "Deployment Runner Pool Created",
+      "event": "deployment-runner-pool-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A self-hosted deployment runner pool was removed from the organization.",
+      "displayName": "Deployment Runner Pool Deleted",
+      "event": "deployment-runner-pool-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A registered OIDC issuer exchanged a token for a deployment runner access token.",
+      "displayName": "Deployment Runner Token Created for OIDC Issuer",
+      "event": "deployment-runner-token-created-for-oidc-issuer",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A stack's deployment settings were assigned the role its deployments run as.",
+      "displayName": "Deployment Settings Role Updated",
+      "event": "deployment-settings-role-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment was cloned into a new environment.",
+      "displayName": "Environment Cloned",
+      "event": "environment-cloned",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment was created.",
+      "displayName": "Environment Created",
+      "event": "environment-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment's definition was read with its secrets decrypted.",
+      "displayName": "Environment Decrypted",
+      "event": "environment-decrypted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment was deleted.",
+      "displayName": "Environment Deleted",
+      "event": "environment-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "Deletion protection was disabled on an ESC environment.",
+      "displayName": "Environment Deletion Protection Disabled",
+      "event": "environment-deletion-protection-disabled",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "Deletion protection was enabled on an ESC environment.",
+      "displayName": "Environment Deletion Protection Enabled",
+      "event": "environment-deletion-protection-enabled",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A draft revision of an ESC environment, proposed by a change request, was opened.",
+      "displayName": "Environment Draft Open",
+      "event": "environment-draft-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "The resolved values of an open ESC environment draft were read.",
+      "displayName": "Environment Draft Read Open",
+      "event": "environment-draft-read-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment was opened, evaluating its definition and resolving its providers.",
+      "displayName": "Environment Open",
+      "event": "environment-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment's definition was read.",
+      "displayName": "Environment Read",
+      "event": "environment-read",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "The resolved values of an open ESC environment session were read.",
+      "displayName": "Environment Read Open",
+      "event": "environment-read-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A deleted ESC environment was restored.",
+      "displayName": "Environment Restored",
+      "event": "environment-restored",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A revision of an ESC environment was retracted.",
+      "displayName": "Environment Revision Retracted",
+      "event": "environment-revision-retracted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A version tag was created on a revision of an ESC environment.",
+      "displayName": "Environment Revision Tag Created",
+      "event": "environment-revision-tag-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A version tag was deleted from an ESC environment.",
+      "displayName": "Environment Revision Tag Delete",
+      "event": "environment-revision-tag-delete",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment was opened at a specific version tag.",
+      "displayName": "Environment Revision Tag Open",
+      "event": "environment-revision-tag-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A version tag on an ESC environment was read.",
+      "displayName": "Environment Revision Tag Read",
+      "event": "environment-revision-tag-read",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A version tag on an ESC environment was moved to a different revision.",
+      "displayName": "Environment Revision Tag Update",
+      "event": "environment-revision-tag-update",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A secret rotation ran for an ESC environment. The event description records whether it succeeded or failed.",
+      "displayName": "Environment Rotated",
+      "event": "environment-rotated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A schedule was created on an ESC environment.",
+      "displayName": "Environment Schedule Created",
+      "event": "environment-schedule-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A schedule was deleted from an ESC environment.",
+      "displayName": "Environment Schedule Deleted",
+      "event": "environment-schedule-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A schedule on an ESC environment was changed.",
+      "displayName": "Environment Schedule Updated",
+      "event": "environment-schedule-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A tag was added to an ESC environment.",
+      "displayName": "Environment Tag Created",
+      "event": "environment-tag-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A tag was removed from an ESC environment.",
+      "displayName": "Environment Tag Deleted",
+      "event": "environment-tag-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A tag on an ESC environment was changed.",
+      "displayName": "Environment Tag Updated",
+      "event": "environment-tag-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "A user tried to open, clone, or import an ESC environment they do not have permission to read.",
+      "displayName": "Environment Unauthorized Open",
+      "event": "environment-unauthorized-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "description": "An ESC environment's definition was updated.",
+      "displayName": "Environment Updated",
+      "event": "environment-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "A cloud account was connected to Pulumi Insights.",
+      "displayName": "Insights Account Created",
+      "event": "insights-account-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "A cloud account was disconnected from Pulumi Insights.",
+      "displayName": "Insights Account Deleted",
+      "event": "insights-account-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "A running resource scan was canceled for a Pulumi Insights cloud account.",
+      "displayName": "Insights Account Scan Canceled",
+      "event": "insights-account-scan-canceled",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "A resource scan was started for a Pulumi Insights cloud account.",
+      "displayName": "Insights Account Scan Started",
+      "event": "insights-account-scan-started",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "Scheduled scans were paused for a Pulumi Insights cloud account.",
+      "displayName": "Insights Account Scheduled Scans Paused",
+      "event": "insights-account-scheduled-scans-paused",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "Scheduled scans were resumed for a Pulumi Insights cloud account.",
+      "displayName": "Insights Account Scheduled Scans Resumed",
+      "event": "insights-account-scheduled-scans-resumed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "The tags on a Pulumi Insights cloud account were updated.",
+      "displayName": "Insights Account Tags Updated",
+      "event": "insights-account-tags-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "A Pulumi Insights cloud account's configuration was updated.",
+      "displayName": "Insights Account Updated",
+      "event": "insights-account-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "An organization accepted billing to keep using Pulumi Insights after its trial.",
+      "displayName": "Insights Trial Billing Accepted",
+      "event": "insights-trial-billing-accepted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "discovery",
+      "description": "An organization declined to convert its Pulumi Insights trial into a paid subscription.",
+      "displayName": "Insights Trial Billing Denied",
+      "event": "insights-trial-billing-denied",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A member was added to an organization.",
+      "displayName": "Member Added",
+      "event": "member-added",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A member was removed from an organization.",
+      "displayName": "Member Removed",
+      "event": "member-removed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A member's role in an organization was changed.",
+      "displayName": "Member Role Changed",
+      "event": "member-role-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin removed a member's monthly Neo usage cap.",
+      "displayName": "Neo Member Usage Cap Cleared",
+      "event": "neo-member-usage-cap-cleared",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin set or changed a member's monthly Neo usage cap.",
+      "displayName": "Neo Member Usage Cap Updated",
+      "event": "neo-member-usage-cap-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A user linked their Slack identity to their Pulumi account for Neo in Slack.",
+      "displayName": "Neo Slack Identity Connected",
+      "event": "neo-slack-identity-connected",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "A user removed the link between their Slack identity and their Pulumi account.",
+      "displayName": "Neo Slack Identity Disconnected",
+      "event": "neo-slack-identity-disconnected",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin removed the organization's monthly Neo usage cap.",
+      "displayName": "Neo Usage Cap Cleared",
+      "event": "neo-usage-cap-cleared",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "neo",
+      "description": "An org admin set or changed the organization's monthly Neo usage cap.",
+      "displayName": "Neo Usage Cap Updated",
+      "event": "neo-usage-cap-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "A registered OIDC issuer was removed from the organization.",
+      "displayName": "OIDC Issuer Deleted",
+      "event": "oidc-issuer-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "An OIDC issuer was registered with the organization.",
+      "displayName": "OIDC Issuer Registered",
+      "event": "oidc-issuer-registered",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "A registered OIDC issuer was updated, or its thumbprints were regenerated.",
+      "displayName": "OIDC Issuer Updated",
+      "event": "oidc-issuer-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": true,
+      "category": "authentication",
+      "description": "Certificate validation failed for an OIDC issuer, either during CA verification or during thumbprint validation.",
+      "displayName": "OIDC Issuer Validation Failed",
+      "event": "oidc-issuer-validation-failed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "An organization's identity backend (GitHub, GitLab, SAML, or Pulumi) was changed.",
+      "displayName": "Organization Backend Changed",
+      "event": "organization-backend-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "The organization's default role for deployments was changed.",
+      "displayName": "Organization Deployment Default Role Updated",
+      "event": "organization-deployment-default-role-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "Deployments were paused for an entire organization.",
+      "displayName": "Organization Deployments Paused",
+      "event": "organization-deployments-paused",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "Deployments were resumed for an entire organization.",
+      "displayName": "Organization Deployments Resumed",
+      "event": "organization-deployments-resumed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A pending organization invite was accepted and the invitee joined the organization.",
+      "displayName": "Organization Invite Accepted",
+      "event": "organization-invite-accepted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A pending organization invite was canceled and is no longer valid.",
+      "displayName": "Organization Invite Canceled",
+      "event": "organization-invite-canceled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "An organization admin invited someone to join the organization.",
+      "displayName": "Organization Invite Sent",
+      "event": "organization-invite-sent",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "An organization's settings were changed.",
+      "displayName": "Organization Settings Changed",
+      "event": "organization-settings-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "An organization access token was created.",
+      "displayName": "Organization Token Created",
+      "event": "organization-token-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A registered OIDC issuer exchanged a token for an organization access token.",
+      "displayName": "Organization Token Created for OIDC Issuer",
+      "event": "organization-token-created-for-oidc-issuer",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "An organization access token was revoked.",
+      "displayName": "Organization Token Deleted",
+      "event": "organization-token-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A registered OIDC issuer exchanged a token for a personal access token.",
+      "displayName": "Personal Token Created for OIDC Issuer",
+      "event": "personal-token-created-for-oidc-issuer",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy group was created.",
+      "displayName": "Policy Group Created",
+      "event": "policy-group-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy group was deleted.",
+      "displayName": "Policy Group Deleted",
+      "event": "policy-group-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy group's stacks or policy packs were changed.",
+      "displayName": "Policy Group Updated",
+      "event": "policy-group-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy pack was published to an organization.",
+      "displayName": "Policy Pack Created",
+      "event": "policy-pack-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy pack was deleted from an organization.",
+      "displayName": "Policy Pack Deleted",
+      "event": "policy-pack-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy pack was disabled for a policy group.",
+      "displayName": "Policy Pack Disabled",
+      "event": "policy-pack-disabled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "policy",
+      "description": "A policy pack was enabled for a policy group.",
+      "displayName": "Policy Pack Enabled",
+      "event": "policy-pack-enabled",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A package version was deleted from the Pulumi Registry.",
+      "displayName": "Registry Package Version Deleted",
+      "event": "registry-package-version-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A package version was initialized in the Pulumi Registry, reserving it before its contents are uploaded.",
+      "displayName": "Registry Package Version Initialized",
+      "event": "registry-package-version-initialized",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A package version was published to the Pulumi Registry.",
+      "displayName": "Registry Package Version Published",
+      "event": "registry-package-version-published",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A template version was deleted from the Pulumi Registry.",
+      "displayName": "Registry Template Version Deleted",
+      "event": "registry-template-version-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A template version was initialized in the Pulumi Registry, reserving it before its contents are uploaded.",
+      "displayName": "Registry Template Version Initialized",
+      "event": "registry-template-version-initialized",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A template version was published to the Pulumi Registry.",
+      "displayName": "Registry Template Version Published",
+      "event": "registry-template-version-published",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A Terraform module was created in the Pulumi Registry.",
+      "displayName": "Registry Terraform Module Created",
+      "event": "registry-terraform-module-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A Terraform module was deleted from the Pulumi Registry.",
+      "displayName": "Registry Terraform Module Deleted",
+      "event": "registry-terraform-module-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A Terraform module version was deleted from the Pulumi Registry.",
+      "displayName": "Registry Terraform Module Version Deleted",
+      "event": "registry-terraform-module-version-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A Terraform module version was initialized in the Pulumi Registry, reserving it before its contents are uploaded.",
+      "displayName": "Registry Terraform Module Version Initialized",
+      "event": "registry-terraform-module-version-initialized",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "registry",
+      "description": "A Terraform module version was published to the Pulumi Registry.",
+      "displayName": "Registry Terraform Module Version Published",
+      "event": "registry-terraform-module-version-published",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A Pulumi site admin ended the organization's retrial.",
+      "displayName": "Retrial Ended",
+      "event": "retrial-ended",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A Pulumi site admin changed the expiration date of the organization's active retrial.",
+      "displayName": "Retrial Expiration Updated",
+      "event": "retrial-expiration-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A Pulumi site admin started a retrial for the organization.",
+      "displayName": "Retrial Started",
+      "event": "retrial-started",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "An organization's SAML single sign-on configuration was updated.",
+      "displayName": "SAML Configuration Updated",
+      "event": "saml-configuration-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A deployment was scheduled for a stack.",
+      "displayName": "Scheduled Deployment Created",
+      "event": "scheduled-deployment-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A stack's deployment schedule was deleted.",
+      "displayName": "Scheduled Deployment Deleted",
+      "event": "scheduled-deployment-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "A stack's deployment schedule was changed.",
+      "displayName": "Scheduled Deployment Updated",
+      "event": "scheduled-deployment-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A secret value belonging to a stack was decrypted.",
+      "displayName": "Secret Decrypted",
+      "event": "secret-decrypted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A batch of secret values belonging to a stack was decrypted in a single request.",
+      "displayName": "Secrets Batch Decrypted",
+      "event": "secrets-batch-decrypted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A service account was created in the organization.",
+      "displayName": "Service Created",
+      "event": "service-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A service account was deleted from the organization, revoking its access tokens and permissions.",
+      "displayName": "Service Deleted",
+      "event": "service-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "description": "A service account's details or membership were changed.",
+      "displayName": "Service Updated",
+      "event": "service-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A collaborator was added to a stack.",
+      "displayName": "Stack Collaborator Added",
+      "event": "stack-collaborator-added",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack collaborator's permissions were changed.",
+      "displayName": "Stack Collaborator Permissions Changed",
+      "event": "stack-collaborator-permissions-changed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A collaborator was removed from a stack.",
+      "displayName": "Stack Collaborator Removed",
+      "event": "stack-collaborator-removed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack was created.",
+      "displayName": "Stack Created",
+      "event": "stack-created",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack was created from a template.",
+      "displayName": "Stack Created from Template",
+      "event": "stack-created-from-template",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack was deleted.",
+      "displayName": "Stack Deleted",
+      "event": "stack-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": true
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "Deployments were paused for a single stack.",
+      "displayName": "Stack Deployments Paused",
+      "event": "stack-deployments-paused",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": true
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "description": "Deployments were resumed for a single stack.",
+      "displayName": "Stack Deployments Resumed",
+      "event": "stack-deployments-resumed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": true
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack's state was exported.",
+      "displayName": "Stack Exported",
+      "event": "stack-exported",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack's state was imported, replacing its checkpoint.",
+      "displayName": "Stack Imported",
+      "event": "stack-imported",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "An ESC environment read a stack's outputs through the pulumi-stacks provider.",
+      "displayName": "Stack Provider Open",
+      "event": "stack-provider-open",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack was renamed.",
+      "displayName": "Stack Renamed",
+      "event": "stack-renamed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack was transferred from one organization to another.",
+      "displayName": "Stack Transferred to Organization",
+      "event": "stack-transferred-to-organization",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack update was canceled before it finished.",
+      "displayName": "Stack Update Canceled",
+      "event": "stack-update-canceled",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack update finished.",
+      "displayName": "Stack Update Completed",
+      "event": "stack-update-completed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "stacks",
+      "description": "A stack update started.",
+      "displayName": "Stack Update Started",
+      "event": "stack-update-started",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "teams",
+      "description": "A team was created in an organization.",
+      "displayName": "Team Created",
+      "event": "team-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "teams",
+      "description": "A team was deleted from an organization.",
+      "displayName": "Team Deleted",
+      "event": "team-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A team access token was created.",
+      "displayName": "Team Token Created",
+      "event": "team-token-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A registered OIDC issuer exchanged a token for a team access token.",
+      "displayName": "Team Token Created for OIDC Issuer",
+      "event": "team-token-created-for-oidc-issuer",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "description": "A team access token was revoked.",
+      "displayName": "Team Token Deleted",
+      "event": "team-token-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "teams",
+      "description": "A team's name, description, or membership was changed.",
+      "displayName": "Team Updated",
+      "event": "team-updated",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "A user associated a new identity provider login with their Pulumi account.",
+      "displayName": "User Added New Identity to Their Account",
+      "event": "user-added-new-identity-to-their-account",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "A user successfully logged in to Pulumi Cloud.",
+      "displayName": "User Login",
+      "event": "user-login",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "authentication",
+      "description": "A user tried to log in to Pulumi Cloud and failed, for example by submitting an incorrect password.",
+      "displayName": "User Login Failed",
+      "event": "user-login-failed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "integrations",
+      "description": "An org admin linked an existing GitHub App installation to the organization.",
+      "displayName": "VCS GitHub Installation Linked",
+      "event": "vcs-github-installation-linked",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    }
+  ]
+}

@@ -44,7 +44,7 @@ sections:
   - icon: books
     heading: Reference
     link: /docs/administration/reference/
-    description: Lookup tables, including the complete catalog of RBAC scopes.
+    description: Lookup tables, including the complete catalogs of RBAC scopes and audit log events.
 
   - icon: cloud
     heading: Self-Hosting

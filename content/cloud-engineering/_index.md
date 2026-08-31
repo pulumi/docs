@@ -90,7 +90,7 @@ manage:
             have been made. This builds better collaboration for all.
 
 benefits:
-    title: Benefits of<br />Cloud Engineering
+    title: Benefits of <br />Cloud Engineering
     items:
         - title: Unlock the potential of the modern cloud
           icon: lock
