@@ -261,7 +261,7 @@ JWKS_URL = "https://api.pulumi.com/oidc/.well-known/jwks"
 PULUMI_ISSUER = "https://api.pulumi.com/oidc"
 ADAPTER_URL = "https://my-adapter.example.com/rotate-credentials"
 ALLOWED_ORG = "acme-corp"      # Your Pulumi organization name
-ALLOWED_PROJECT = "default"    # Your ESC project name
+ALLOWED_PROJECT = "my-project"  # Your ESC project name
 ALLOWED_ENV = "production"     # Your ESC environment name
 PORT = 8443
 
@@ -409,7 +409,7 @@ apiCredentials:
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
 | Your adapter rejects the request as unauthorized | The JWT token may have failed verification. Common causes include: incorrect `iss` value (must be `https://api.pulumi.com/oidc`, not `https://api.pulumi.com`) or wrong `audience`. | Verify your adapter fetches keys from `https://api.pulumi.com/oidc/.well-known/jwks`, validates `issuer` as `https://api.pulumi.com/oidc`, and validates `audience` against your adapter's URL. See [JWT Authentication](/docs/esc/providers/secrets/external/#jwt-authentication). |
-| Your adapter rejects the request as forbidden | The `sub` claim doesn't match your expected value. The `sub` format includes the ESC project: `pulumi:environments:org:<org>:env:<project>/<env>`. | Check that your expected `sub` includes the project segment. For example, an environment named `prod` in the `default` project of org `acme-corp` has `sub` value `pulumi:environments:org:acme-corp:env:default/prod`. |
+| Your adapter rejects the request as forbidden | The `sub` claim doesn't match your expected value. The `sub` format includes the ESC project: `pulumi:environments:org:<org>:env:<project>/<env>`. | Check that your expected `sub` includes the project segment. For example, an environment named `prod` in the `my-project` project of org `acme-corp` has `sub` value `pulumi:environments:org:acme-corp:env:my-project/prod`. |
 | Your adapter reports a body-hash mismatch | Your adapter may have modified or re-encoded the request body before hashing it. | Compute the SHA-256 hash over the raw request bytes and compare against the `body_hash` claim without altering the body. |
 | Applications fail after a rotation | The adapter may have rotated the in-use credential instead of an inactive one. | Implement the [dual-secret strategy](#recommended-dual-secret-strategy) so applications always read `current` while the inactive credential is rotated. |
 

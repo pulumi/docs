@@ -121,7 +121,7 @@ The JWT token includes the following claims, which you can use to make authoriza
 | Claim          | Description                                       | Example                                               |
 |----------------|---------------------------------------------------|-------------------------------------------------------|
 | `iss`          | Issuer (Pulumi Cloud URL)                         | `https://api.pulumi.com/oidc`                         |
-| `sub`          | Subject (environment identity)                    | `pulumi:environments:org:acme-corp:env:default/prod`  |
+| `sub`          | Subject (environment identity)                    | `pulumi:environments:org:acme-corp:env:my-project/prod`  |
 | `aud`          | Audience (your adapter URL)                       | `https://my-adapter.example.com/fetch-secrets`        |
 | `exp`          | Expiration time (Unix timestamp)                  | `1736937600`                                          |
 | `iat`          | Issued at (Unix timestamp)                        | `1736933600`                                          |
@@ -188,7 +188,7 @@ JWKS_URL = "https://api.pulumi.com/oidc/.well-known/jwks"
 PULUMI_ISSUER = "https://api.pulumi.com/oidc"
 ADAPTER_URL = "https://my-adapter.example.com/fetch-secrets"
 ALLOWED_ORG = "acme-corp"      # Your Pulumi organization name
-ALLOWED_PROJECT = "default"    # Your ESC project name
+ALLOWED_PROJECT = "my-project"  # Your ESC project name
 ALLOWED_ENV = "production"     # Your ESC environment name
 PORT = 8443
 
