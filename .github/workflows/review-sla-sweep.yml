@@ -65,8 +65,13 @@ jobs:
     # (same reason blog-review-index.yml's select/record jobs do this).
     environment: production
     steps:
+      # continue-on-error: the sweep's own degradation contract handles
+      # missing credentials (local state + ::warning::, Slack line skipped),
+      # and a dry-run needs none of them. Also lets the fork battery
+      # exercise the sweep without ESC.
       - name: Fetch secrets from ESC
         id: esc-secrets
+        continue-on-error: true
         uses: pulumi/esc-action@v3
 
       - name: Checkout (default branch)

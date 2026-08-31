@@ -1840,9 +1840,16 @@ jobs:
             echo "superseded=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # continue-on-error: every consumer below already degrades explicitly
+      # (empty PULUMI_ACCESS_TOKEN ⇒ bucket resolution warns and yields
+      # local/artifact-only evidence with a run-URL link). A hard failure
+      # here would trade a degraded-but-published review for review:error —
+      # and it is also what lets the fork battery run this job with no ESC
+      # trust policy at all.
       - name: Fetch ESC secrets
         if: steps.current.outputs.superseded == 'false'
         id: esc-secrets
+        continue-on-error: true
         uses: pulumi/esc-action@v3
 
       - name: Configure AWS Credentials

@@ -84,8 +84,13 @@ jobs:
           fi
 
       - name: Fetch secrets from ESC
+        # continue-on-error: sentinel.py treats a missing/failing team-read
+        # token as gate-3 ERROR ⇒ action_required — fail closed, never
+        # fail-open and never fail the whole evaluation (the other four
+        # gates still report). Also lets the fork battery run without ESC.
         if: steps.pr.outputs.pr != ''
         id: esc-secrets
+        continue-on-error: true
         uses: pulumi/esc-action@v3
 
       # Base repo default branch ONLY — see the SECURITY INVARIANT above.
