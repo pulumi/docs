@@ -1,0 +1,34 @@
+{{/*
+  Generated replacement for the formerly hand-maintained static/sitemap-index.xml.
+  Rendered once on the home page (output format "sitemapindex", see
+  config/_default/config.yml) to /sitemap-index.xml, the single entry point
+  listed in robots.txt.
+
+  <lastmod> is added only for /sitemap.xml, which this build actually produces
+  and can date honestly via enableGitInfo (site.Lastmod = the max .Lastmod
+  across all pages). /registry/sitemap.xml and /guides/sitemap.xml are built
+  and deployed by pulumi/registry and pulumi/guides respectively; this build
+  has no reliable signal for when their content last changed, and per
+  Google's sitemap guidance a missing lastmod is preferable to a fabricated
+  one ("if your page changed 7 years ago, but you're telling us in the
+  lastmod element that it changed yesterday, eventually we're not going to
+  believe you anymore"). <lastmod> on a sitemapindex <sitemap> entry is
+  optional per the sitemaps.org protocol, so omitting it here is valid.
+*/ -}}
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{{ .Site.Params.canonicalURL }}/sitemap.xml</loc>
+    <lastmod>{{ safeHTML ( site.Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+  </sitemap>
+  {{/* Built and deployed separately by pulumi/registry; lastmod intentionally
+       omitted, see comment above. */ -}}
+  <sitemap>
+    <loc>{{ .Site.Params.canonicalURL }}/registry/sitemap.xml</loc>
+  </sitemap>
+  {{/* Built and deployed separately by pulumi/guides; lastmod intentionally
+       omitted, see comment above. */ -}}
+  <sitemap>
+    <loc>{{ .Site.Params.canonicalURL }}/guides/sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>
