@@ -451,8 +451,9 @@ Binds <a class="xref" href="pulumi.resourcehook.html">ResourceHook</a>s to a res
 lifecycle of the resource.
 </p>
 <p>
-<code>Before*</code> hooks that raise an exception will cause the resource operation to fail. <code>After*</code> hooks that
-raise an exception will log a warning, but do not cause the action or the deployment to fail.
+By default, an exception from a <code>Before*</code> hook causes the resource operation to fail. An exception from an
+<code>After*</code> hook fails the deployment. The resource operation itself has already succeeded, so its result is
+recorded in state. Set <a class="xref" href="pulumi.resourcehookoptions.html#Pulumi_ResourceHookOptions_IgnoreErrors">IgnoreErrors</a> on the hook to log a warning instead.
 </p>
 <p>
 When running <code>pulumi destroy</code>, <code>BeforeDelete</code> and <code>AfterDelete</code> resource hooks require the
@@ -567,7 +568,7 @@ resource will not be transformed.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.113.0</p>
+    <p class="sdk-version">Version 3.113.1</p>
               <div class="contribution">
                 <ul class="nav">
                 </ul>

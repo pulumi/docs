@@ -174,6 +174,53 @@ or a dictionary bag. The returned ID may be null for component resources.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Testing/IMocks.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Testing_IMocks_RegisterInvokeTransform_" data-uid="Pulumi.Testing.IMocks.RegisterInvokeTransform*"></a>
+  <h4 id="Pulumi_Testing_IMocks_RegisterInvokeTransform_Pulumi_InvokeTransform_" data-uid="Pulumi.Testing.IMocks.RegisterInvokeTransform(Pulumi.InvokeTransform)">RegisterInvokeTransform(InvokeTransform)</h4>
+  <div class="markdown level1 summary"><p>Invoked when the program registers an invoke transform. The mock monitor does not run
+transforms; implementations that want to exercise them can record the transform here
+and call it from <a class="xref" href="pulumi.testing.imocks.html#Pulumi_Testing_IMocks_CallAsync_Pulumi_Testing_MockCallArgs_">CallAsync(MockCallArgs)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">Task RegisterInvokeTransform(InvokeTransform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.invoketransform.html">InvokeTransform</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The registered transform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Testing/IMocks.cs/#L33">View Source</a>
   </span>
   <a id="Pulumi_Testing_IMocks_RegisterResourceOutputs_" data-uid="Pulumi.Testing.IMocks.RegisterResourceOutputs*"></a>
@@ -218,12 +265,59 @@ or a dictionary bag. The returned ID may be null for component resources.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Testing/IMocks.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Testing_IMocks_RegisterTransform_" data-uid="Pulumi.Testing.IMocks.RegisterTransform*"></a>
+  <h4 id="Pulumi_Testing_IMocks_RegisterTransform_Pulumi_ResourceTransform_" data-uid="Pulumi.Testing.IMocks.RegisterTransform(Pulumi.ResourceTransform)">RegisterTransform(ResourceTransform)</h4>
+  <div class="markdown level1 summary"><p>Invoked when the program registers a stack transform. The mock monitor does not run
+transforms; implementations that want to exercise them can record the transform here
+and call it from <a class="xref" href="pulumi.testing.imocks.html#Pulumi_Testing_IMocks_NewResourceAsync_Pulumi_Testing_MockResourceArgs_">NewResourceAsync(MockResourceArgs)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">Task RegisterTransform(ResourceTransform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.resourcetransform.html">ResourceTransform</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td><p>The registered transform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.113.0</p>
+    <p class="sdk-version">Version 3.113.1</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
