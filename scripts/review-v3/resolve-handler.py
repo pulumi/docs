@@ -81,8 +81,8 @@ ALLOWED_PERMISSIONS = {"admin", "write", "maintain"}
 USAGE = "`/resolve F<n> fixed|refuted|deferred|accepted|not-applicable[: note]`"
 CORRUPT_STATE_MSG = (
     "The REVIEW_STATE block on the review comment is corrupt and can't be "
-    "updated safely — nothing was changed. Ask for `@claude #new-review` to "
-    "regenerate it."
+    "updated safely — nothing was changed. Ask a maintainer to regenerate "
+    "the review."
 )
 
 

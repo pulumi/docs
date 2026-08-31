@@ -270,7 +270,7 @@ def test_corrupt_review_state_action_required():
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G2").status == "error"
     assert v.conclusion == "action_required"
-    assert "#new-review" in _gate(v, "G2").message
+    assert "maintainer" in _gate(v, "G2").message
 
 
 def test_g3_wrong_team_red_names_team():

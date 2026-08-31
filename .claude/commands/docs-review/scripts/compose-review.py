@@ -621,8 +621,8 @@ def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
     when no outage. Author-facing wording (no internal tooling names)."""
     if n_outage <= 0:
         return ""
-    retry = ("Once the service is back, mention `@claude #new-review` to "
-             "regenerate a complete review from scratch.")
+    retry = ("Once the service is back, flip the PR to draft and back to "
+             "ready to regenerate a complete review.")
     if n_outage >= n_total:
         return (
             "> [!WARNING]\n"

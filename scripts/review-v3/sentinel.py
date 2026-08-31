@@ -347,14 +347,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     elif legacy and _body_matches_head(legacy.get("body") or "", head_sha):
         gates.append(Gate(
             "G1 review-ran", "ok",
-            "legacy (v2) review current at head — regenerate with `@claude #new-review` "
-            "for v3 tracking",
+            "legacy (v2) review current at head (grandfathered)",
         ))
     else:
         gates.append(Gate(
             "G1 review-ran", "red",
             f"No current review for `{head_sha[:9]}` — push to refresh, comment "
-            "`@claude #update-review`, or `@claude #new-review`.",
+            "`@claude #update-review`, or flip the PR to draft and back to ready.",
         ))
 
     # G2 findings-answered ------------------------------------------------
@@ -372,7 +371,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             gates.append(Gate(
                 "G2 findings-answered", "error",
                 "The REVIEW_STATE block on the review comment is corrupt — "
-                "`@claude #new-review` regenerates it.",
+                "ask a maintainer to regenerate the review.",
             ))
             state = None
         if state is not None:
@@ -405,8 +404,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 gates.append(Gate(
                     "G2 findings-answered", "red",
                     f"{outstanding} 🚨 Outstanding finding(s) on the legacy review — "
-                    "work them per CONTRIBUTING §Working the review to zero, or "
-                    "`@claude #new-review` for v3 tracking.",
+                    "work them per CONTRIBUTING §Working the review to zero.",
                 ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))

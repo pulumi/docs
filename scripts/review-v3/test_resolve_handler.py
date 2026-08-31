@@ -261,7 +261,7 @@ def test_corrupt_review_state_exits_1_and_does_not_patch():
     assert gh.comments[author_id]["body"] == original_body
     assert gh.reactions == []
     reply = gh.list_issue_comments()[-1]
-    assert "#new-review" in reply["body"]
+    assert "maintainer" in reply["body"]
 
 
 # ---- lost-update race ---------------------------------------------------------
