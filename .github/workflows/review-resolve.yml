@@ -45,6 +45,7 @@ permissions:
   issues: write
   pull-requests: write
   contents: read
+  actions: write # dispatch review-sentinel.yml after a disposition lands
 
 jobs:
   resolve:

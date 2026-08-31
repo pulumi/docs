@@ -329,3 +329,16 @@ def test_module_self_test_passes():
 
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-v"]))
+
+
+def test_gh_body_writes_use_capital_f_stdin_flag():
+    """`gh api -f body=@-` posts the LITERAL two-character string "@-" —
+    only capital `-F` applies the @-file/stdin syntax. The first live fork
+    battery shipped this bug: the /resolve PATCH replaced the author card
+    (REVIEW_STATE included) with "@-", and the prose pointer posted as
+    "@-". Stubbed-gh tests can't see gh's flag semantics, so this locks
+    the flag choice at the source level instead.
+    """
+    src = (HERE / "resolve-handler.py").read_text()
+    assert '"-f", "body=@-"' not in src
+    assert src.count('"-F", "body=@-"') == 2

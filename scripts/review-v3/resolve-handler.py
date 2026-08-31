@@ -126,12 +126,12 @@ class Gh:
             fake_id = f"dryrun-{len(self.actions)}"
             self.actions.append({"action": "create_comment", "body": body, "id": fake_id})
             return fake_id
-        # `-f body=@-` reads the value from stdin so the (untrusted) comment
+        # `-F body=@-` reads the value from stdin so the (untrusted) comment
         # text never has to survive shell interpolation.
         out = self._run(
             [
                 "api", "-X", "POST", f"repos/{self.repo}/issues/{self.pr}/comments",
-                "-f", "body=@-", "--jq", ".id",
+                "-F", "body=@-", "--jq", ".id",
             ],
             input_text=body,
         )
@@ -148,7 +148,7 @@ class Gh:
             self.actions.append({"action": "patch_comment", "id": comment_id, "body": body})
             return
         self._run(
-            ["api", "-X", "PATCH", f"repos/{self.repo}/issues/comments/{comment_id}", "-f", "body=@-"],
+            ["api", "-X", "PATCH", f"repos/{self.repo}/issues/comments/{comment_id}", "-F", "body=@-"],
             input_text=body,
         )
 
