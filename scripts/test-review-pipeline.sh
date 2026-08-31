@@ -50,6 +50,10 @@ echo "== pytest: review-v3 scripts"
 run "pytest scripts/review-v3/" \
     python3 -m pytest scripts/review-v3/ -q
 
+echo "== pytest: review-admin"
+run "pytest scripts/review-admin/" \
+    python3 -m pytest scripts/review-admin/ -q
+
 echo "== standalone harnesses"
 for f in scripts/content-review/test_*.py scripts/blog-review/test_*.py; do
     [ -e "$f" ] || continue
