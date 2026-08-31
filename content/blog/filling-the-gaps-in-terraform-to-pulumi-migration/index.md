@@ -127,6 +127,6 @@ pulumi plugin install tool import \
 pulumi plugin run import -- digest tf --help
 ```
 
-Then point your agent at the [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill and let it orchestrate the pipeline. The [README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) documents every command for manual use as well.
+Then point your agent at the [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill and let it orchestrate the pipeline. The step-by-step workflow is documented in the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/terraform-import-tool/), and the [README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) covers every command for manual use.
 
 A note on what this is: `pulumi-tool-import` is a Pulumi CLI tool plugin built and maintained by Pulumi Professional Services, not part of the core Pulumi product. It runs through the plugin runner and uses the [Automation API](/docs/iac/concepts/automation-api/) under the hood, so it requires the Pulumi CLI. It's pre-v1, so pin the version you install and read the changelog before upgrading. If you're planning a larger migration and want help, [Pulumi Professional Services](/proserv/) runs these migrations every day — this tool is how we do it.
