@@ -1,0 +1,138 @@
+name: Sentinel
+
+# The v3 merge gate. One check-run ("Sentinel") answers "is this PR
+# mergeable?": review ran at head, every finding answered, the matrix-named
+# human approved, infra changes carry staging evidence. scripts/review-v3/
+# sentinel.py is the evaluator (deterministic, no model, no AWS); this
+# workflow only gathers a PR number, runs it, and publishes the check-run.
+#
+# SECURITY INVARIANT: this runs on `pull_request_target`, which carries
+# write permissions and secrets on events a fork PR can trigger. It is safe
+# ONLY because it never checks out or executes PR code: the single checkout
+# below is pinned to the base repository's default branch, the evaluator
+# reads PR state through the GitHub API as data, and nothing here feeds
+# PR-controlled content to a shell. test_sentinel.py enforces this by
+# asserting the workflow never references a PR head ref. Keep it that way —
+# a later edit that checks out the head "just to classify the diff" turns
+# this into a credential-exfiltration vector.
+#
+# Re-evaluation triggers deliberately cover every event that can change a
+# gate's answer: pushes and label changes (pull_request_target), approvals
+# and dismissals (pull_request_review — required checks do NOT re-run on
+# review events by themselves, this wiring is why the sentinel notices), and
+# both review lanes finishing (workflow_run). /resolve dispatches are
+# covered by pull_request_target's `labeled`? No — the resolve workflow's
+# comment PATCH fires no PR event, so review-resolve.yml pokes this
+# workflow via workflow_dispatch when it applies dispositions.
+#
+# Report-only rollout: until the repo variable REVIEW_V3_SENTINEL is
+# explicitly '1', the check concludes `neutral` with the real verdict in
+# the summary ("REPORT-ONLY — would be: …"). The comparison is written
+# against '1' on purpose — an unset variable must mean report-only, and
+# `vars.X != '0'` is TRUE for unset (the blog-review lesson).
+
+on:
+  pull_request_target:
+    types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
+  pull_request_review:
+    types: [submitted, dismissed]
+  workflow_run:
+    workflows: ["Pre-merge Review (main)", "Pre-merge Review (update-review)"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: PR number to evaluate
+        required: true
+
+permissions:
+  checks: write
+  pull-requests: read
+  issues: write        # the ⛔ status strip PATCHes the author card
+  contents: read
+  id-token: write      # ESC OIDC for the org-scoped team-membership token
+
+concurrency:
+  group: sentinel-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr_number || github.run_id }}
+  cancel-in-progress: true
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Resolve PR number
+        id: pr
+        env:
+          EVENT_PR: ${{ github.event.pull_request.number }}
+          RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+          INPUT_PR: ${{ inputs.pr_number }}
+        run: |
+          PR="${EVENT_PR:-${RUN_PR:-${INPUT_PR:-}}}"
+          if [ -z "$PR" ]; then
+            echo "No PR number resolvable from this event; nothing to evaluate."
+            echo "pr=" >> "$GITHUB_OUTPUT"
+          else
+            echo "pr=$PR" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch secrets from ESC
+        if: steps.pr.outputs.pr != ''
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      # Base repo default branch ONLY — see the SECURITY INVARIANT above.
+      - name: Checkout base (default branch)
+        if: steps.pr.outputs.pr != ''
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        if: steps.pr.outputs.pr != ''
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install evaluator deps
+        if: steps.pr.outputs.pr != ''
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Evaluate
+        if: steps.pr.outputs.pr != ''
+        id: verdict
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Org-scoped token for the team-membership endpoint only — the
+          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
+          # treats lookup failures as action_required, never as "not a
+          # member", so a missing/expired token degrades loud, not wrong.
+          GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
+        run: |
+          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}")
+          if [ "$REPORT_ONLY" = "true" ]; then
+            ARGS+=(--report-only)
+          else
+            ARGS+=(--update-strip)
+          fi
+          python3 scripts/review-v3/sentinel.py "${ARGS[@]}" > verdict.json
+          cat verdict.json
+
+      - name: Publish check-run
+        if: steps.pr.outputs.pr != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq '{name: "Sentinel", head_sha: .head_sha, status: "completed",
+               conclusion: .conclusion,
+               output: {title: .title, summary: .summary}}' verdict.json \
+          | gh api --method POST "repos/${{ github.repository }}/check-runs" --input -

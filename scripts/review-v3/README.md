@@ -74,6 +74,39 @@ Lives as an HTML comment in the bot-owned author comment:
   --state-from-body`, the record job's mirror into `latest.json`.
 - Sentinel accepts the block only from the bot-authored comment.
 
+## The Sentinel
+
+`sentinel.py` + `.github/workflows/review-sentinel.yml` publish the one
+blocking check-run ("Sentinel"). Deterministic, no model, no AWS, and —
+because the workflow runs on `pull_request_target` — **never checks out or
+executes PR code** (test-enforced). Gates, each red message naming its fix:
+
+| Gate | Green when | Red says |
+|---|---|---|
+| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
+| G2 findings-answered | every 🚨/❓ row checked or carrying a REVIEW_STATE disposition | the undecided ids + the `/resolve` and `#update-review` commands |
+| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
+| G4 infra-evidence | commit status `staging/pulumi-test-io` green at the current head | "a tools-team member comments `/deploy-staging`" — **not waivable** |
+| G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
+
+Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
+REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
+— never `neutral`/`skipped`, which GitHub counts as passing for required
+checks. `review:waived` ⇒ success with a banner naming the actor, except a
+red G4, which stands. External contributors (no push permission) skip G1/G2
+per config — the approving reviewer's review is the review. Report-only
+rollout: until repo variable `REVIEW_V3_SENTINEL` is `'1'`, conclusions are
+`neutral` with "would be: …" in the summary. The check summary embeds the
+reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
+strip into the author card naming the exact commands.
+
+`staging-deploy-pr.yml` makes G4's evidence: `/deploy-staging` (tools-team
+members only, same-repo branches only) dispatches the existing testing
+deploy at the PR head branch and records the outcome as the
+`staging/pulumi-test-io` commit status at the deployed SHA. Deploys queue on
+the shared staging stack; a superseded request gets a comment saying to
+re-run.
+
 ## Lane routing
 
 `.github/review-routing.yml` (repo root config, schema-versioned) maps

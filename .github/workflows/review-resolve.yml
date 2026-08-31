@@ -88,3 +88,18 @@ jobs:
             --comment-id "${{ github.event.comment.id }}" \
             --comment-body-file comment-body.txt \
             --actor "${{ github.event.comment.user.login }}"
+
+      # A disposition changes the Sentinel's gate-2 answer, but nothing
+      # re-fires the check on a comment edit — poke it explicitly so the
+      # author sees the check flip without waiting for the next push or
+      # review event. Best-effort: the Sentinel enforces the same state on
+      # its next natural evaluation regardless.
+      - name: Re-evaluate Sentinel
+        if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml \
+            --repo "${{ github.repository }}" \
+            -f pr_number="${{ github.event.issue.number }}" || true

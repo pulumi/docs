@@ -48,7 +48,16 @@ def route(pr_data: dict, diff_text: str, config_path: Path, repo_root: Path) -> 
     file_flags = [tc.classify_file(path, file_diff)
                   for path, file_diff in tc.split_files(diff_text)]
     mechanical, mech_reasons = tc.classify_mechanical(pr_data, file_flags, diff_text, repo_root)
-    claims = bool(tc.claims_signal_reasons(pr_data.get("files") or [], diff_text))
+    # The claims OVERLAY (stack the marketing approver) is narrower than the
+    # claims signal in the mechanical bar: Layer-A prose hits are ubiquitous
+    # in substantive PRs, and routing marketing onto every docs PR would be
+    # over-routing — the subject's own approver reviews prose claims. Only
+    # pricing-sensitive paths stack the overlay, matching the Sentinel's
+    # resolution exactly (the two must never disagree about required roles).
+    claims = any(
+        r.startswith("pricing-sensitive")
+        for r in tc.claims_signal_reasons(pr_data.get("files") or [], diff_text)
+    )
 
     config = routing.load_config(config_path)
     paths = [f.get("path", "") for f in pr_data.get("files") or []]
