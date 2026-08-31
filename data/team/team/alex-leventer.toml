@@ -4,7 +4,7 @@ title = "Growth"
 company = "Pulumi"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "alexleventer"
