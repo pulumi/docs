@@ -110,6 +110,18 @@ def _walk(body: str, headings: dict[str, str], where: str):
                 continue
             parsed = cr.parse_finding_line(raw)
             if parsed is None:
+                # The 👀 section may carry plain advisory prose notes the
+                # model leaves for the reviewer — untracked by design (no
+                # id, no REVIEW_STATE entry, not a finding). They stay in
+                # the published brief verbatim. Only a bullet that tries to
+                # be a finding row must parse; blocking sections have no
+                # such latitude. Mirrors validate-pinned's
+                # v3-finding-grammar rule exactly.
+                looks_like_finding = bool(
+                    re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", raw)
+                )
+                if bucket == "reviewer-check" and not looks_like_finding:
+                    continue
                 raise ContractViolation(
                     f"{where}: unparseable finding line in {bucket} section: {raw!r}"
                 )

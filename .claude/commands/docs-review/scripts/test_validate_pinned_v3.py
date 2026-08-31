@@ -213,6 +213,24 @@ def test_count_buckets_v3_dispositions_unblock() -> None:
     assert counts["outstanding"] == 0
 
 
+def test_brief_advisory_prose_note_allowed() -> None:
+    # The exact shape from the first live fork battery (PR 243): a plain
+    # prose note in 👀 is advisory, not a tracked finding, and must not
+    # fail the grammar rule. A prose bullet in a BLOCKING section still does.
+    note = "- **One editorial call:** the new clause repeats the info note below; judgment call, not a defect."
+    brief = BRIEF.replace(
+        "### 👀 Check these before approving\n",
+        "### 👀 Check these before approving\n\n" + note + "\n",
+    )
+    assert not [v for v in check(brief=brief) if v.rule_id == "v3-finding-grammar"]
+
+    author = AUTHOR.replace(
+        "### 🚨 Must fix or refute (blocks merge)\n",
+        "### 🚨 Must fix or refute (blocks merge)\n\n- **A stray thought:** untracked prose in a blocking section.\n",
+    )
+    assert [v for v in check(author=author) if v.rule_id == "v3-finding-grammar"]
+
+
 def test_count_buckets_v3_corrupt_state_counts_all() -> None:
     corrupt = AUTHOR.replace('<!-- REVIEW_STATE {"findings"', '<!-- REVIEW_STATE {"findings')
     counts = _count_buckets(corrupt + "\n\n" + BRIEF)

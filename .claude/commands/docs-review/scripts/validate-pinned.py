@@ -2784,10 +2784,22 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
     for where, text, heading in sections:
         for lineno, line, parsed in v3_finding_rows(text, heading):
             if parsed is None:
+                # The 👀 section is advisory — the model may leave the
+                # reviewer a plain prose note there (a judgment call, an
+                # editorial observation) that is deliberately NOT a tracked
+                # finding. Only a bullet that *tries* to be a finding row
+                # (carries an F-id or a checkbox) must parse. Blocking
+                # sections have no such latitude: an untracked blocking row
+                # would be invisible to REVIEW_STATE, `/resolve`, and the
+                # Sentinel. (First live fork battery: a legitimate 👀 note
+                # `- **One editorial call:** …` killed the whole publish.)
+                looks_like_finding = bool(re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", line))
+                if where == "brief" and not looks_like_finding:
+                    continue
                 v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
                                    "every finding row parses as `- [ ] **F<n>** **[L…]** `file` — <body>`",
                                    line[:120],
-                                   "Edit finding text in place but keep the row shape — id, anchor, backticked file, em-dash, body. New findings use `**F?**`."))
+                                   "Edit finding text in place but keep the row shape — id, anchor, backticked file, em-dash, body. New findings use `**F?**`. (Plain advisory notes are allowed in 👀 only.)"))
                 continue
             fid = parsed["id"]
             if fid == "F?":
