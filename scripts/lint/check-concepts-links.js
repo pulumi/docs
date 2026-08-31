@@ -115,6 +115,7 @@ const GENERATED_BUNDLE_PATTERNS = [
     /^chunk-.*\.js$/,
     /^consent-manager\.[0-9a-f]+\.js$/,
     /^header-nav\.[0-9a-f]+\.js$/,
+    /^hero-animation\.[0-9a-f]+\.js$/,
 ];
 
 /**
