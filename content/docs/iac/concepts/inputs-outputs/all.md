@@ -8,9 +8,6 @@ menu:
         name: All
         parent: iac-concepts-inputs-outputs
         weight: 2
-    concepts:
-        weight: 2
-        parent: inputs-outputs
 aliases:
     - /docs/concepts/inputs-outputs/all/
     - /docs/concepts/inputs-outputs/outputs-and-strings/

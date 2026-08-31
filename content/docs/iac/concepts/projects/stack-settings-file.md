@@ -8,9 +8,6 @@ menu:
         name: Stack settings file reference
         parent: iac-concepts-projects
         weight: 2
-    concepts:
-        parent: projects
-        weight: 2
 
 aliases:
 - /docs/reference/stack-settings-file/

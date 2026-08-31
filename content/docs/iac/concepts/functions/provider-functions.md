@@ -8,9 +8,6 @@ menu:
         name: Provider functions
         parent: iac-concepts-functions
         weight: 1
-    concepts:
-        parent: functions
-        weight: 1
 aliases:
 - /docs/iac/concepts/resources/functions/
 - /docs/intro/concepts/resources/functions/

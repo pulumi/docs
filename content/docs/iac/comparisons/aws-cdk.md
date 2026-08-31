@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 25
         identifier: iac-comparisons-aws-cdk
-    concepts:
-        parent: vs
-        weight: 25
 aliases:
 - /docs/intro/vs/cloud-template-transpilers/aws-cdk/
 - /docs/concepts/vs/cloud-template-transpilers/aws-cdk/

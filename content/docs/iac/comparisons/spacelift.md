@@ -10,10 +10,6 @@ menu:
         name: Spacelift
         parent: iac-comparisons
         weight: 35
-    concepts:
-        identifier: vs-spacelift
-        parent: vs
-        weight: 75
 aliases:
 - /docs/reference/vs/spacelift/
 - /docs/intro/vs/spacelift/

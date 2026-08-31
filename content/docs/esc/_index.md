@@ -111,6 +111,10 @@ sections:
     heading: Languages & SDKs
     description: Manage ESC programmatically from .NET, Go, JavaScript, and Python.
     link: /docs/esc/languages-sdks/
+  - icon: question
+    heading: FAQ
+    description: Answers to common questions about Pulumi ESC, secrets management, and pricing.
+    link: /docs/support/faq/secrets-config/
 # - type: full-width-cards
 #   heading: Reference
 #   cards:

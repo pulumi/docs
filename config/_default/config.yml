@@ -71,6 +71,14 @@ outputFormats:
     baseName: "rows"
     isHTML: true
     notAlternative: true
+  # Generated replacement for the formerly hand-maintained static/sitemap-index.xml.
+  # Rendered once, on the home page, by layouts/index.sitemapindex.xml.
+  sitemapindex:
+    mediaType: "application/xml"
+    baseName: "sitemap-index"
+    isPlainText: true
+    notAlternative: true
+    noUgly: true
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -83,6 +91,7 @@ outputs:
     - JSON
     - llms
     - markdown
+    - sitemapindex
   section:
     - HTML
   page:

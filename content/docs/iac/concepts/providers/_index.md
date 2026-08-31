@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 55
         identifier: iac-concepts-providers
-    concepts:
-        identifier: providers
-        weight: 4
 aliases:
 - /docs/intro/concepts/resources/providers/
 - /docs/concepts/resources/providers/
@@ -254,7 +251,7 @@ It creates a single EC2 instance in the us-west-2 region, no matter what the `AW
 
 Explicit providers are Pulumi resources themselves and take Pulumi inputs as configuration values. This enables powerful scenarios that aren't possible with default providers. For example, you can create a Kubernetes cluster and then immediately deploy resources to that cluster in the same Pulumi program. This works because the kubeconfig of the newly created cluster (a Pulumi output) can be passed directly to the `kubeconfig` argument of an explicit Kubernetes provider (which accepts Pulumi inputs). The explicit provider can then be assigned to resources that should be deployed to the newly provisioned cluster. This scenario is _only_ possible by using explicit providers: We cannot use the default Kubernetes provider because we don't know what its kubeconfig should be until after the cluster is created.
 
-While the default provider configuration may be appropriate for the majority of Pulumi programs, some programs may have special requirements. One example is a program that needs to deploy to multiple AWS regions simultaneously. Another example is a program that needs to deploy to a Kubernetes cluster, created earlier in the program, which requires explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package’s `Provider` type and passing in the options for each `Resource` that needs to use it. For example, the following configuration and program creates an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
+Default provider configuration suits the majority of Pulumi programs, but some have requirements it can't meet, such as deploying to multiple AWS regions simultaneously. You declare an explicit provider by instantiating the relevant package’s `Provider` type and passing it as the `provider` option on each resource that needs to use it. For example, the following configuration and program creates an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
 {{% notes type="info" %}}
 **Note:** This example for AWS does not apply to Azure which provides access to all regions regardless of the default region defined in your Pulumi program. That means you don't need to explicitly create and configure providers for each region when working with Azure. You can simply specify the region in the resource definition itself.
@@ -458,6 +455,8 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+The `us-west-2` region for the load balancer listener comes from the default AWS provider's stack configuration:
 
 ```bash
 pulumi config set aws:region us-west-2

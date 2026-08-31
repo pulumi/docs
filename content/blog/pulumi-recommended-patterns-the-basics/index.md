@@ -93,7 +93,7 @@ Here are a few links to understand physical names and auto-naming a bit better:
 * [Resources and auto-naming](/docs/iac/concepts/resources/names/#autonaming)
 * [Auto-naming Configuration](/docs/iac/concepts/resources/names/#autonaming-configuration)
 * [Infrastructure as Code Resource Naming](/blog/infrastructure-as-code-resource-naming/)
-* [Why do resource names have random hex character suffixes?](/docs/support/faq/#why-do-resource-names-have-random-hex-character-suffixes)
+* [Why do resource names have random hex character suffixes?](/docs/support/faq/infrastructure/#why-do-resource-names-have-random-hex-character-suffixes)
 
 ### Handling secrets securely
 

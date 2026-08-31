@@ -14,8 +14,6 @@ menu:
         name: State & backends
         parent: iac-concepts
         weight: 70
-    concepts:
-        weight: 9
 
 aliases:
 - /docs/reference/state/

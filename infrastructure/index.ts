@@ -1512,6 +1512,7 @@ if (config.supportRedirectDomain) {
         domain: config.supportRedirectDomain,
         targetUrl: `https://${config.websiteDomain}/support/new/`,
         certificateArn: config.certificateArn,
+        cachePolicyId: noCacheKeyPolicy.id,
     });
 }
 

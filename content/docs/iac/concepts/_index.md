@@ -9,9 +9,6 @@ menu:
         weight: 15
         parent: iac-home
         identifier: iac-concepts
-    concepts:
-        name: Overview
-        weight: 4
 aliases:
 - /docs/reference/concepts/
 - /docs/intro/concepts/

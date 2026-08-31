@@ -10,9 +10,6 @@ menu:
         name: Serverless Framework
         parent: iac-comparisons
         weight: 80
-    concepts:
-        parent: vs
-        weight: 80
 aliases:
 - /docs/reference/vs/serverless/
 - /docs/intro/vs/serverless/

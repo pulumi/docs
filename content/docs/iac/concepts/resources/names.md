@@ -8,9 +8,6 @@ menu:
         name: Names
         parent: iac-concepts-resources
         weight: 1
-    concepts:
-        parent: resources
-        weight: 1
 aliases:
 - /docs/intro/concepts/resources/names/
 - /docs/concepts/resources/names/

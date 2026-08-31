@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 20
         identifier: iac-comparisons-cloudformation
-    concepts:
-        parent: vs
-        weight: 20
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
 - /docs/concepts/vs/cloud-templates/cloudformation/

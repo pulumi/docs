@@ -11,10 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 40
         identifier: iac-comparisons-arm-templates
-    concepts:
-        identifier: vs-arm-templates
-        parent: vs
-        weight: 40
 aliases:
 - /docs/reference/vs/arm/
 - /docs/intro/vs/arm/

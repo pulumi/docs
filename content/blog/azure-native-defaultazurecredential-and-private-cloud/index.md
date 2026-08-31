@@ -197,7 +197,7 @@ The operator allocates a dedicated pod for each Pulumi stack under its managemen
 Each stack may use the same or a different service account. With AKS, that service account has a _workload identity_ that providers
 may use to authenticate to Azure cloud and even to Pulumi cloud.
 
-[pko1]: https://www.pulumi.com/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
+[pko1]: /docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/
 
 #### Create an AKS Cluster
 

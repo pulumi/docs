@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 20
         identifier: iac-concepts-projects
-    concepts:
-        identifier: projects
-        weight: 1
 
 aliases:
 - /docs/reference/project/

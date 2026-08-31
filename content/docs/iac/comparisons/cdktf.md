@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 27
         identifier: iac-comparisons-cdktf
-    concepts:
-        parent: vs
-        weight: 27
 aliases:
 - /docs/iac/comparisons/cloud-template-transpilers/cdktf/
 ---

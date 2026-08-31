@@ -97,8 +97,7 @@ and can be used with any ECR registry your IAM principal has access to. The AWS 
 $ aws ecr get-login-password | docker login --username AWS --password-stdin $(echo $REPO_URL | cut -d/ -f1)
 ```
 
-For more information on authentication, see [Registry Authentication](
-https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth)
+For more information on authentication, see [Private registry authentication](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html).
 
 Finally, after building, tagging, and logging in, we are ready to push to our repository:
 
@@ -199,7 +198,7 @@ to control how an image is purged from the repository:
 1. Once a maximum number of images has been reached (`maximumNumberOfImages`).
 2. Once an image reaches a maximum allowed age (`maximumAgeLimit`).
 
-### Lifecycle Policy Rules
+### Further reading on lifecycle rules
 
 For details on the rule syntax, the available actions, and worked examples, refer to [Amazon ECR Lifecycle
 Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html).

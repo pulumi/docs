@@ -62,6 +62,16 @@ jobs:
       # claude-triage.yml). Pure JSON-in / prose-out; no agency, so no Claude
       # Code action. Returns {"pr_digest":...,"backlog_digest":...}; we strip
       # any ```json fences defensively before parsing.
+      #
+      # Thinking tokens count against max_tokens (see
+      # https://platform.claude.com/docs/en/build-with-claude/thinking-troubleshooting#the-response-stops-with-stop_reason-max_tokens),
+      # and the backlog this formats only grows week over week, so a fixed
+      # budget that was fine at launch can quietly stop leaving room for the
+      # response text. `output_config.effort: "low"` keeps thinking spend
+      # down for what is a formatting task, not a reasoning one — Anthropic's
+      # own guidance for "chat and non-coding use cases" — and a single
+      # bounded retry at a larger budget covers the case where the model
+      # still exhausts it on the first pass.
       - name: Synthesize digests
         id: synth
         env:
@@ -70,29 +80,73 @@ jobs:
           set -euo pipefail
           PROMPT=$(cat scripts/weekly-digest/synthesis-prompt.md)
           DIGEST=$(cat /tmp/digest.json)
-          REQUEST=$(jq -n \
-            --arg prompt "$PROMPT" \
-            --arg digest "$DIGEST" \
-            '{
-              model: "claude-sonnet-5",
-              max_tokens: 16000,
-              thinking: { type: "adaptive" },
-              messages: [{
-                role: "user",
-                content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
-              }]
-            }')
-          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
-            -H "x-api-key: $ANTHROPIC_API_KEY" \
-            -H "anthropic-version: 2023-06-01" \
-            -H "content-type: application/json" \
-            -d "$REQUEST" || echo '{"error":"curl_failed"}')
+
+          call_anthropic() {
+            local budget="$1"
+            jq -n \
+              --arg prompt "$PROMPT" \
+              --arg digest "$DIGEST" \
+              --argjson max_tokens "$budget" \
+              '{
+                model: "claude-sonnet-5",
+                max_tokens: $max_tokens,
+                thinking: { type: "adaptive" },
+                output_config: { effort: "low" },
+                messages: [{
+                  role: "user",
+                  content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
+                }]
+              }' \
+            | curl -sS https://api.anthropic.com/v1/messages \
+                -H "x-api-key: $ANTHROPIC_API_KEY" \
+                -H "anthropic-version: 2023-06-01" \
+                -H "content-type: application/json" \
+                -d @- \
+              || echo '{"error":"curl_failed"}'
+          }
+
+          # A diagnostic summary that survives what the plain response body
+          # doesn't: a thinking block's base64 `signature` field alone can
+          # run past a couple thousand characters, which previously pushed
+          # stop_reason and usage — the two fields that actually explain a
+          # failure — out of any head -c dump of the raw body.
+          summarize_response() {
+            echo "$1" | jq -c '{
+              stop_reason,
+              usage,
+              error,
+              content_block_types: [.content[]?.type],
+              text_preview: ([.content[]? | select(.type=="text") | .text] | join("") | .[0:500])
+            }' 2>/dev/null || echo "$1" | head -c 500
+          }
+
+          RESPONSE=$(call_anthropic 24000)
+          STOP_REASON=$(echo "$RESPONSE" | jq -r '.stop_reason // empty')
+
+          # Thinking that ate the whole budget stops with stop_reason
+          # "max_tokens" and no text block, or a text block truncated
+          # mid-JSON — both observed in the wild (2026-08-24 and 2026-08-17
+          # runs respectively). Retry once with more headroom before giving
+          # up, so one unlucky week doesn't silently skip the digest.
+          if [[ "$STOP_REASON" == "max_tokens" ]]; then
+            echo "::warning::Synthesis hit max_tokens on the first attempt; retrying with a larger budget."
+            summarize_response "$RESPONSE" >&2
+            RESPONSE=$(call_anthropic 32000)
+            STOP_REASON=$(echo "$RESPONSE" | jq -r '.stop_reason // empty')
+          fi
+
+          if [[ "$STOP_REASON" == "max_tokens" ]]; then
+            echo "::error::Anthropic response hit max_tokens even after retrying with a larger budget — thinking consumed the response before it produced digest text. Raise the max_tokens values in this step further."
+            summarize_response "$RESPONSE" >&2
+            exit 1
+          fi
+
           # Sonnet 5 runs adaptive thinking, so a thinking block precedes the text
           # block — select the text block(s) rather than content[0].
-          TEXT=$(echo "$RESPONSE" | jq -r '[.content[] | select(.type=="text") | .text] | join("")')
+          TEXT=$(echo "$RESPONSE" | jq -r '[.content[]? | select(.type=="text") | .text] | join("")')
           if [[ -z "$TEXT" ]]; then
             echo "::error::Anthropic API returned no text"
-            echo "$RESPONSE" | head -c 2000 >&2
+            summarize_response "$RESPONSE" >&2
             exit 1
           fi
           CLEAN=$(echo "$TEXT" \
