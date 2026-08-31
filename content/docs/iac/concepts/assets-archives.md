@@ -26,7 +26,7 @@ aliases:
 
 The Pulumi SDK provides two classes for working with files: `Asset`, which refers to a single file, and `Archive`, which refers to a collection of files. Some Pulumi resource inputs accept either one, and Pulumi takes the files they reference and packages them up for use by the resource.
 
-Each class has three concrete implementations, one for each way the files can be provided: from a string in memory, from disk, or from a remote URI. Resources then consume those files in whichever packaging format they expect.
+Each class has three concrete implementations. An `Asset`'s file comes from a string in memory, from disk, or from a remote URI. An `Archive`'s collection comes from disk, from a remote URI, or from a map of other assets and archives. Resources then consume those files in whichever packaging format they expect.
 
 ## Assets
 
