@@ -10,9 +10,6 @@ menu:
         name: OpenTofu vs. Terraform
         parent: iac-comparisons-terraform
         weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 2
 aliases:
     - /docs/intro/vs/terraform/opentofu/
     - /docs/concepts/vs/terraform/opentofu/

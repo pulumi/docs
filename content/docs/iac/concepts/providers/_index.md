@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 55
         identifier: iac-concepts-providers
-    concepts:
-        identifier: providers
-        weight: 4
 aliases:
 - /docs/intro/concepts/resources/providers/
 - /docs/concepts/resources/providers/

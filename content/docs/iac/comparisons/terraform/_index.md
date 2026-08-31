@@ -12,10 +12,6 @@ menu:
         parent: iac-comparisons
         weight: 10
         identifier: iac-comparisons-terraform
-    concepts:
-        identifier: vs-terraform
-        parent: vs
-        weight: 10
 aliases:
 - /docs/reference/vs/terraform/
 - /docs/intro/vs/terraform/

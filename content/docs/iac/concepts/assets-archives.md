@@ -8,8 +8,6 @@ menu:
         name: Assets & archives
         parent: iac-concepts
         weight: 110
-    concepts:
-        weight: 13
 search:
    keywords:
       - FileAsset

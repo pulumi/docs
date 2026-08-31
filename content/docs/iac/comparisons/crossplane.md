@@ -10,10 +10,6 @@ menu:
         name: Crossplane
         parent: iac-comparisons
         weight: 29
-    concepts:
-        identifier: vs-crossplane
-        parent: vs
-        weight: 70
 aliases:
 - /docs/reference/vs/crossplane/
 - /docs/intro/vs/crossplane/

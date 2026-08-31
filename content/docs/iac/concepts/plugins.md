@@ -8,8 +8,6 @@ menu:
         name: Plugins
         parent: iac-concepts
         weight: 140
-    concepts:
-        weight: 140
 ---
 
 {{% notes type="info" %}}
