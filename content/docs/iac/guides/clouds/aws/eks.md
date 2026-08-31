@@ -209,7 +209,7 @@ Worker machines in Kubernetes are called nodes. Amazon EKS worker nodes run in y
 cluster's control plane via the cluster API server endpoint. These are standard Amazon EC2 instances, and you are
 billed for them based on normal EC2 On-Demand prices. By default, an
 [EKS-optimized Amazon Linux AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) is used as
-the base image for EKS worker nodes. It is preconfigured with the container runtime, `kubelet`, and the other
+the base image for EKS worker nodes. It comes preconfigured with the container runtime, `kubelet`, and the other
 components a node needs to register with the cluster.
 
 Nodes exist in groups and you can create multiple groups for workloads that require it. By default, your EKS cluster
@@ -359,7 +359,7 @@ The `getResource` function on a chart can be used to get an internal resource pr
 Sometimes this is needed to discover attributes such as a provisioned load balancer's address. Be careful when
 depending on this, however, as it is an implementation detail of the chart and will change as the chart evolves.
 
-Alternatively, you can use a tarball fetched from a web URL:
+You can also use a tarball fetched from a web URL:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
