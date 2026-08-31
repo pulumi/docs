@@ -286,7 +286,22 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
             if high_water < 1:
                 id_errors.append("`/resolve all` — no findings exist yet on this PR")
                 continue
-            targets.extend((f"F{i}", cmd) for i in range(1, high_water + 1))
+            # "all" means everything still OPEN. An id the author already
+            # answered individually keeps that answer — the first live
+            # battery had a bulk `accepted` silently overwrite a careful
+            # individual `refuted` (newer-timestamp-wins is the RACE rule,
+            # not license for a blanket command to erase specific answers).
+            already = set(state.get("findings", {}))
+            bulk = [
+                (f"F{i}", cmd) for i in range(1, high_water + 1)
+                if f"F{i}" not in already
+            ]
+            if not bulk:
+                id_errors.append(
+                    "`/resolve all` — every finding already has an answer; "
+                    "re-resolve a specific id to change one"
+                )
+            targets.extend(bulk)
         else:
             n = int(cmd["target"][1:])
             if high_water < 1:

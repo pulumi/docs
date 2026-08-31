@@ -342,3 +342,22 @@ def test_gh_body_writes_use_capital_f_stdin_flag():
     src = (HERE / "resolve-handler.py").read_text()
     assert '"-f", "body=@-"' not in src
     assert src.count('"-F", "body=@-"') == 2
+
+
+def test_bulk_all_never_overwrites_individual_answers():
+    """`/resolve all` fills the gaps; it must not clobber a specific answer
+    (first live battery: a bulk `accepted` erased an individual `refuted`).
+    """
+    gh = StubGh(pr_author="alice")
+    pre = review_state.set_disposition(
+        review_state.empty_state() | {"high_water": 3}, "F2", "refuted",
+        actor="alice", note="the flag exists",
+    )
+    author_id = gh.seed_comment(review_state.replace_block(_author_body(3), pre))
+    r = handle(42, 9010, "alice", "/resolve all accepted: shipping as-is", gh)
+    assert r.exit_code == 0
+    new_state = review_state.parse_state(gh.comments[author_id]["body"])
+    assert new_state["findings"]["F2"]["disposition"] == "refuted"
+    assert new_state["findings"]["F2"]["note"] == "the flag exists"
+    assert new_state["findings"]["F1"]["disposition"] == "accepted"
+    assert new_state["findings"]["F3"]["disposition"] == "accepted"
