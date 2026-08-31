@@ -2835,7 +2835,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     m = V3_AUTHOR_HEADER_RE.search(ctx.body)
     if not m:
         return [Violation("v3-blocking-count", "<author>",
-                          "header `## Review: action needed — N item(s) block merge — …` or `## Review: no action needed — …`",
+                          "header `## Review: author action needed — N item(s) block merge — …` or `## Review: no author action needed — …`",
                           (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
     rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
