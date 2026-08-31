@@ -12,7 +12,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Centralized configuration,*<br>zero sprawl."
+    title: "*Centralized configuration,* <br>zero sprawl."
     description: Compose, manage, and share configuration and secrets across environments with Pulumi ESC.
     image: /images/product/secrets-management/esc-hero.svg
     image_alt: Pulumi ESC secrets management — connect any secrets store
