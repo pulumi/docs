@@ -1,12 +1,12 @@
 ---
 title: What Is Agentic Infrastructure?
-meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate through code. Learn what it is, how it works, and how to build it."
+meta_desc: "Agentic infrastructure is cloud infrastructure AI agents provision and operate through code. Learn how it works and how to build agent-ready infrastructure."
 type: what-is
 page_title: "What Is Agentic Infrastructure?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
-**Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate autonomously, writing code, running deployments, enforcing policy, and proposing changes through pull requests, with humans reviewing and approving rather than executing every step.**
+**Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate by reading and writing the same real programming languages engineers already use, rather than a format built just for them. An agent writes code, previews the change, checks it against policy, and opens a pull request, with a human reviewing and approving rather than executing every step.**
 
 This is one of the more significant shifts happening in how engineering teams work right now. The mental model most of us carry (an engineer at a terminal, running `pulumi up` or clicking through a cloud console) is giving way to something different: a goal stated in natural language, an agent that reasons over your actual infrastructure state, writes code, previews the impact, checks it against policy, and opens a PR for review.
 
@@ -24,13 +24,13 @@ Joe Duffy, Pulumi's CEO, described it this way in [The Agentic Infrastructure Er
 
 > "Agentic infrastructure is a super exciting one-way door for our industry."
 
-Pulumi is tracking LLMs doing over 20% of infrastructure deployments today, up from nearly zero a year ago, with that share expected to grow past 50% by the end of 2026.
+As of May 2026, Pulumi reported LLMs doing over 20% of infrastructure deployments, up from nearly zero a year earlier, with that share expected to grow past 50% before the end of the year.
 
 ## Why do AI agents and infrastructure as code go together?
 
 The connection between AI agents and infrastructure as code isn't obvious until you think about what agents are actually good at: code.
 
-Frontier models score 86% on SWE-bench Verified today, up from 33% in August 2024. That jump has happened because code is highly "in-distribution": there are billions of lines of production-grade Python, TypeScript, and Go for models to learn from. The public corpus of general-purpose code is deep, diverse, and production-quality in a way that infrastructure DSLs aren't.
+Frontier models now score in the 95-97% range on SWE-bench Verified, up from around 33% when the benchmark was introduced in August 2024, with seven of the models tracked at 95% or above as of late August 2026 ([Vals AI SWE-bench Verified leaderboard](https://www.vals.ai/benchmarks/swebench)). That jump has happened because code is highly "in-distribution": there are billions of lines of production-grade Python, TypeScript, and Go for models to learn from. The public corpus of general-purpose code is deep, diverse, and production-quality in a way that infrastructure DSLs aren't. The benchmark is close to saturated, and frontier labs are already citing newer ones in its place.
 
 This asymmetry is what makes infrastructure the "last mile," the part of shipping software that has historically resisted automation. Andrej Karpathy captured the gap: "The reality of building web apps in 2025 is that it's a bit like assembling IKEA furniture." The code came together fast. Getting it actually running in production (services, API keys, environments, deployments) remained stubbornly human. That gap exists because clickops and bespoke DSLs are out-of-distribution for models trained overwhelmingly on general-purpose code. Put the last mile in code too, and the gap closes.
 
@@ -56,7 +56,7 @@ Any capable coding agent. Because Pulumi expresses infrastructure in general-pur
 
 **Your coding agent, equipped.** [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows (migrations, component authoring, secrets management), and the [Pulumi MCP server](/docs/ai/mcp-server/) gives them live access to your stacks, deployed resources, and the Pulumi Registry. Same agent, meaningfully better results.
 
-**Pulumi Neo.** [Neo](/product/neo/) is Pulumi's purpose-built infrastructure agent. It ships with the Agent Skills catalog built in, and adds grounding in your organization's actual infrastructure state, policy guardrails, configurable human-in-the-loop approvals, and scheduled autonomous work.
+**Pulumi Neo.** [Neo](/product/neo/) is Pulumi's purpose-built infrastructure agent. It ships with the Agent Skills catalog built in, and adds grounding in your organization's actual infrastructure state, policy guardrails, configurable human-in-the-loop approvals, and scheduled autonomous work. Neo has been shipping quickly: it now [comments inline on pull requests](/blog/neo-code-reviews/) using live infrastructure state (June 2026), works [directly against Terraform and HCL](/blog/bring-your-terraform-estate-into-the-agentic-era/) with Pulumi Cloud as the state backend (August 2026), and [traces attack paths](/blog/pulumi-neo-security/) across a cloud estate for security review (August 2026). The [Context API](/docs/insights/context-api/), released to public preview in August 2026, is the structured interface Neo uses to query that live state.
 
 The options compose. Teams often use Neo for scheduled, longer-horizon infrastructure work and their everyday coding agent for interactive development, and work can [hand off from one agent to Neo](/docs/ai/skills/) mid-session.
 
@@ -98,7 +98,7 @@ Most organizations will need to think about both. Teams building AI products nee
 
 ## How do you govern and secure agentic infrastructure?
 
-The governance question comes up immediately, and it deserves a direct answer. Giving an AI agent write access to a production environment is only sensible if the controls are in place first.
+The governance question comes up immediately, and it deserves a direct answer, starting with [what policy as code actually prevents](/blog/ai-agent-guardrails-for-infrastructure/) when an agent is the one proposing the change. Giving an AI agent write access to a production environment is only sensible if the controls are in place first.
 
 Duffy frames it plainly:
 
@@ -176,7 +176,7 @@ No. Any coding agent can manage Pulumi infrastructure directly, and [Pulumi Agen
 
 ### What is the difference between infrastructure for AI agents and infrastructure managed by AI agents?
 
-Infrastructure *for* AI agents is the compute, networking, and data platform that AI workloads run on: GPU clusters, vector databases, and inference endpoints. Infrastructure *managed by* AI agents means AI is operating your cloud environment, handling provisioning and updates. Both are real needs, and the same IaC platform and governance model applies to both.
+Infrastructure *for* AI agents is the compute, networking, and data platform that AI workloads run on: GPU clusters, vector databases, and inference endpoints. Infrastructure *managed by* AI agents means AI is operating your cloud environment, handling provisioning and updates. Both are real needs, and the same IaC platform and governance model applies to both. See [the AI infrastructure stack](/what-is/what-is-ai-infrastructure/) for how the layers underneath AI workloads break down.
 
 ### Which cloud providers does agentic infrastructure work with?
 
@@ -194,10 +194,22 @@ No. It changes what infrastructure engineers spend time on: less mechanical exec
 
 Neo queries your Pulumi state graph, resource relationships, and deployment history. It does not generate code from generic internet patterns; it reasons from your actual environment. This is what [grounded AI](/blog/grounded-ai-why-neo-knows-your-infrastructure/) means in practice: the agent's plans are based on your real infrastructure, not hypothetical configurations.
 
+### Is agentic infrastructure just Terraform with an AI chatbot?
+
+No. The chatbot layer is incidental; what matters is the language underneath. Terraform's HashiCorp Configuration Language (HCL) is a declarative DSL that models have seen far less of during training than general-purpose code, and it has no native way to write a loop, a test, or a reusable function. Pulumi expresses infrastructure in Python, TypeScript, Go, C#, Java, or YAML, the same languages agents already write application code in, so the same preview-review-PR loop that makes an agent's code changes verifiable applies directly to its infrastructure changes. Teams moving from Terraform can bring their existing state across; see the [Terraform comparison and migration documentation](/docs/iac/comparisons/terraform/) for specifics.
+
+### What is the difference between agentic infrastructure and agentic AI infrastructure?
+
+The two phrases point at different things, and the second one is ambiguous on its own. "Agentic infrastructure," as this page uses it, means infrastructure that AI agents provision and operate. "Agentic AI infrastructure" usually means the compute and data platform that agentic AI applications run on, GPU clusters, vector databases, and orchestration frameworks, which is a form of infrastructure *for* AI agents rather than infrastructure *managed by* them. Reading the surrounding sentence is the fastest way to tell which sense a given piece of content means.
+
+### What does infrastructure for agentic coding tools need to provide?
+
+A coding agent needs three things from the infrastructure layer to work reliably: a way to read the actual deployed state rather than guess at it, a way to preview a change before anything in the cloud is touched, and a way to have that change checked against policy automatically. Infrastructure expressed as YAML or console clicks gives an agent none of these; infrastructure expressed as code gives it all three, because `pulumi preview` and policy packs already operate on code as their input. That is what makes infrastructure agent-ready rather than merely automatable.
+
 ## Learn more
 
 Joe Duffy's CascadiaJS 2026 keynote, "The Last Mile Is Code," covers the in-distribution argument and the CodeAct research in depth, with a live demo of Neo deploying a full application to AWS.
 
 {{< youtube "SOMEfFNPsew?rel=0" >}}
 
-[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/insights/policy/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.
+[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/insights/policy/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references, and [AI agent guardrails for infrastructure](/blog/ai-agent-guardrails-for-infrastructure/) covers the failure modes policy as code can't see. For the broader category this page sits inside, see [what AI infrastructure is](/what-is/what-is-ai-infrastructure/).
