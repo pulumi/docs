@@ -574,20 +574,34 @@ def classify_mechanical(
     if bad_key_files:
         reasons.append("frontmatter key(s) outside {updated, tags} changed: " + ", ".join(bad_key_files[:5]))
 
-    # 7. Claims signal: pricing-sensitive paths, or Layer-A claim extraction
-    #    hits an added line anywhere in the diff.
-    #
-    #    Layer A is reused verbatim, but its net is deliberately wider than
-    #    this condition's purpose (it feeds a downstream verifier, so it
-    #    catches every markdown link and reads `updated: YYYY-MM-DD` as a
-    #    numeric range). Unfiltered, it would shadow the two carve-outs that
-    #    make the mechanical lane exist at all — link fixes (condition 5
-    #    already forces added links to be internal AND resolve) and
-    #    updated/tags frontmatter bumps (condition 6 already forbids every
-    #    other key). So url-type claims and claims whose source line is one
-    #    of the two allowed frontmatter shapes are exempt here; a prose
-    #    claim (a price, an edition name, a version assertion in body text)
-    #    still disqualifies.
+    # 7. Claims signal — see claims_signal_reasons().
+    reasons.extend(claims_signal_reasons(files, diff_text))
+
+    return (len(reasons) == 0, reasons)
+
+
+def claims_signal_reasons(files: list[dict], diff_text: str) -> list[str]:
+    """Condition 7 of the mechanical bar, callable on its own.
+
+    The routing step also needs this signal in isolation: a claims hit
+    stacks the marketing lane onto a PR's required approvers regardless of
+    every other mechanical condition, so route-pr.py must be able to ask
+    "claims?" without asking "mechanical?".
+
+    Pricing-sensitive paths, or Layer-A claim extraction hitting an added
+    line anywhere in the diff. Layer A is reused verbatim, but its net is
+    deliberately wider than this condition's purpose (it feeds a downstream
+    verifier, so it catches every markdown link and reads
+    `updated: YYYY-MM-DD` as a numeric range). Unfiltered, it would shadow
+    the two carve-outs that make the mechanical lane exist at all — link
+    fixes (condition 5 already forces added links to be internal AND
+    resolve) and updated/tags frontmatter bumps (condition 6 already
+    forbids every other key). So url-type claims and claims whose source
+    line is one of the two allowed frontmatter shapes are exempt here; a
+    prose claim (a price, an edition name, a version assertion in body
+    text) still disqualifies.
+    """
+    reasons: list[str] = []
     pricing_hits = sorted({f.get("path", "") for f in files if _is_pricing_sensitive(f.get("path", ""))})
     if pricing_hits:
         reasons.append("pricing-sensitive file(s) changed: " + ", ".join(pricing_hits))
@@ -604,8 +618,7 @@ def classify_mechanical(
                 f"claim-extraction signal on an added line (e.g. {c0['file']} {c0['line_range']}, "
                 f"type={c0['type']}; {len(claims)} total)"
             )
-
-    return (len(reasons) == 0, reasons)
+    return reasons
 
 
 # ---- PR-level aggregation --------------------------------------------------
