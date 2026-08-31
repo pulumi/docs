@@ -118,20 +118,20 @@ Every request includes a JWT token in the `Authorization` header. The token is s
 
 The JWT token includes the following claims, which you can use to make authorization decisions:
 
-| Claim          | Description                                       | Example                                               |
-|----------------|---------------------------------------------------|-------------------------------------------------------|
-| `iss`          | Issuer (Pulumi Cloud URL)                         | `https://api.pulumi.com/oidc`                         |
+| Claim          | Description                                       | Example                                                  |
+|----------------|---------------------------------------------------|----------------------------------------------------------|
+| `iss`          | Issuer (Pulumi Cloud URL)                         | `https://api.pulumi.com/oidc`                            |
 | `sub`          | Subject (environment identity)                    | `pulumi:environments:org:acme-corp:env:my-project/prod`  |
-| `aud`          | Audience (your adapter URL)                       | `https://my-adapter.example.com/fetch-secrets`        |
-| `exp`          | Expiration time (Unix timestamp)                  | `1736937600`                                          |
-| `iat`          | Issued at (Unix timestamp)                        | `1736933600`                                          |
-| `jti`          | Unique id (to prevent replay)                     | `a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11`                |
-| `org`          | Pulumi organization name                          | `acme-corp`                                           |
-| `env`          | Environment name (legacy format)                  | `prod`                                                |
-| `current_env`  | Current environment (fully qualified)             | `acme-corp/prod`                                      |
-| `root_env`     | Root environment in import chain                  | `acme-corp/base`                                      |
-| `trigger_user` | User who opened the environment                   | `alice`                                               |
-| `body_hash`    | Hash of request body (for integrity)              | `sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=` |
+| `aud`          | Audience (your adapter URL)                       | `https://my-adapter.example.com/fetch-secrets`           |
+| `exp`          | Expiration time (Unix timestamp)                  | `1736937600`                                             |
+| `iat`          | Issued at (Unix timestamp)                        | `1736933600`                                             |
+| `jti`          | Unique id (to prevent replay)                     | `a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11`                   |
+| `org`          | Pulumi organization name                          | `acme-corp`                                              |
+| `env`          | Environment name (legacy format)                  | `prod`                                                   |
+| `current_env`  | Current environment (fully qualified)             | `acme-corp/prod`                                         |
+| `root_env`     | Root environment in import chain                  | `acme-corp/base`                                         |
+| `trigger_user` | User who opened the environment                   | `alice`                                                  |
+| `body_hash`    | Hash of request body (for integrity)              | `sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=`   |
 
 #### Validating Requests
 
@@ -143,7 +143,7 @@ Your adapter should:
    - `aud` matches your adapter URL
    - `exp` has not passed (token not expired)
    - `iss` is `https://api.pulumi.com/oidc`
-1. **Verify the `sub` claim** to scope authorization to your specific environment. JWT signature verification only proves the request came from Pulumi Cloud — not from *your* environment. Any ESC environment in any organization that knows your adapter URL could otherwise call it. The `sub` format is `pulumi:environments:org:<org>:env:<project>/<env>`:
+1. **Verify the `sub` claim** to scope authorization to your specific environment. JWT signature verification only proves the request came from Pulumi Cloud — not from *your* environment. Any ESC environment in any organization that knows your adapter URL could otherwise call it. The `sub` format is `pulumi:environments:org:<org>:env:<project>/<env>` — except for environments in the legacy `default` project, whose subject omits the project (`pulumi:environments:org:<org>:env:<env>`):
 
    ```javascript
    function verifySubClaim(sub, allowedOrg, allowedProject, allowedEnv) {
@@ -188,7 +188,7 @@ JWKS_URL = "https://api.pulumi.com/oidc/.well-known/jwks"
 PULUMI_ISSUER = "https://api.pulumi.com/oidc"
 ADAPTER_URL = "https://my-adapter.example.com/fetch-secrets"
 ALLOWED_ORG = "acme-corp"      # Your Pulumi organization name
-ALLOWED_PROJECT = "my-project"  # Your ESC project name
+ALLOWED_PROJECT = "my-project" # Your ESC project name
 ALLOWED_ENV = "production"     # Your ESC environment name
 PORT = 8443
 
