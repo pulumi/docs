@@ -114,7 +114,7 @@ faq:
       items:
         - question: What are Pulumi open source and Pulumi Cloud?
           answer: |
-            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/pulumi-cloud/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
+            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
 
             You're not required to use Pulumi Cloud. You can use any cloud or on-premises storage to build and run your own backend.
         - question: Can I use Pulumi for free?

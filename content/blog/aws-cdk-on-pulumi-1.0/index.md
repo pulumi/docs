@@ -199,7 +199,7 @@ Pulumi let's you read and create any resource type across thousands of different
 - Customize [resource options](https://www.pulumi.com/docs/iac/concepts/resources/options/) (eg. to protect a database against accidental deletion or deploy to multiple regions in the same program)
 - [Detect and manage drift](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/) with Pulumi deployments
 - Track and store user actions and change history with [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
-- And a host of other benefits from [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/)
+- And a host of other benefits from [Pulumi Cloud](https://www.pulumi.com/product/)
 
 ## Expanded Features in pulumi-cdk 1.0
 

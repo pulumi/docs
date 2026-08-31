@@ -79,7 +79,7 @@ This dramatically reduces the time from component discovery to successful deploy
 
 ## Getting Started
 
-Automatic API docs are available today for all [Pulumi Cloud](/product/pulumi-cloud/) customers with access to private registry. To start generating docs, simply [publish your component](/docs/idp/concepts/private-registry/#publishing-components). Documentation generation happens automatically with no configuration required, and docs will automatically appear for existing components.
+Automatic API docs are available today for all [Pulumi Cloud](/product/) customers with access to private registry. To start generating docs, simply [publish your component](/docs/idp/concepts/private-registry/#publishing-components). Documentation generation happens automatically with no configuration required, and docs will automatically appear for existing components.
 
 ## Looking Ahead
 

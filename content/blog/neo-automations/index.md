@@ -60,7 +60,7 @@ A scheduled task uses the same context as an interactive Neo task. [Custom Instr
 
 ## Try it out
 
-Open Neo in [Pulumi Cloud](/product/pulumi-cloud/), switch to the **Automations** tab, and pick a template or write your own prompt. The [automations docs](/docs/ai/neo/automations/) cover the form, scheduling options, and per-automation overrides.
+Open Neo in [Pulumi Cloud](/product/), switch to the **Automations** tab, and pick a template or write your own prompt. The [automations docs](/docs/ai/neo/automations/) cover the form, scheduling options, and per-automation overrides.
 
 ![Setting up a scheduled task for Pulumi Neo](/blog/neo-automations/neo-freshness.check.png)
 

@@ -13,7 +13,7 @@ summary: |
     The Pulumi Kubernetes Operator (PKO) manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.
 ---
 
-The [Pulumi Kubernetes Operator (PKO)](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/) enables you to manage Pulumi stacks as Kubernetes resources, but it doesn't provide much guidance on change management. [Kargo](https://kargo.io/) fills this gap by providing controlled, staged promotions with verification steps. Together, they let you keep your infrastructure defined in Pulumi while managing multi-environment rollouts in a systematic way.
+The [Pulumi Kubernetes Operator (PKO)](https://www.pulumi.com/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) enables you to manage Pulumi stacks as Kubernetes resources, but it doesn't provide much guidance on change management. [Kargo](https://kargo.io/) fills this gap by providing controlled, staged promotions with verification steps. Together, they let you keep your infrastructure defined in Pulumi while managing multi-environment rollouts in a systematic way.
 
 This pattern is especially useful for platform teams that need to balance delivery speed with governance as environments and expectations scale.
 <!--more-->
