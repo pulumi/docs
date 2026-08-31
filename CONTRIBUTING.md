@@ -18,6 +18,25 @@ If your change is genuinely trivial (a typo, a one-line fix), opening directly a
 
 The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
 
+### The v3 review surface (staged rollout)
+
+The review is moving from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable. Everything below this section describes the v2 monolith and stays accurate for PRs reviewed before the flip and for repos where the flag is off. What changes under v3:
+
+- **Two comments instead of one.** An **author card** ("Review — action needed") lists only what you must act on: `🚨 Must fix or refute` and `❓ Only you can answer` (both block merge), plus inline ✏️ style suggestions and a ✅ Resolved log. A separate **reviewer brief** tells your reviewer what the PR contains, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
+- **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge. The fastest answers are one-line comments, no AI invocation needed:
+
+  ```
+  /resolve F3 refuted: the flag does exist in 3.261
+  /resolve F7 fixed
+  /resolve all accepted: I own this PR and I'm shipping it as-is
+  ```
+
+  Dispositions: `fixed` · `refuted` · `deferred` · `accepted` · `not-applicable` (the last three need a reason after `:`). `@claude #update-review` with your reasoning still works and gets an adjudicated response — the model may concede, or hold with a 🛡️ note for your reviewer. Pushing a fix still refreshes automatically when the push lines up with the findings.
+- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, the right team approved (per `.github/review-routing.yml`), and infra changes carry a green staging deploy. Its red states name the exact fix, and any write-access human can apply `review:waived` as the logged break-glass (infra staging evidence excepted — that has no waiver). While `REVIEW_V3_SENTINEL` isn't enabled, the check is report-only.
+- **Truly mechanical changes need no human at all** — the tightened bar in `classify_mechanical` (`triage-classify.py`): ≤10 added / ≤30 deleted lines, ≤2 docs/blog files, no structural or code changes, only resolving internal-link additions, frontmatter keys limited to `updated`/`tags`, and no prose-claim signal. Everything else routes to the lane the matrix names.
+
+The disposition vocabulary, the outcome table, and "work the review to zero" below all apply unchanged — v3 just gives each finding an ID and a one-line way to answer it.
+
 ### What ready-for-review triggers
 
 Transitioning to **Ready for review** triggers:
