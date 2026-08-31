@@ -20,12 +20,12 @@ aliases:
 - /docs/clouds/aws/guides/eks/
 ---
 
-[Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
-manage, and scale containerized applications using Kubernetes on AWS. Amazon EKS runs the Kubernetes management
+[Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/eks/) is a managed Kubernetes service
+for deploying, managing, and scaling containerized applications on AWS. Amazon EKS runs the Kubernetes management
 infrastructure for you across multiple AWS availability zones to eliminate a single point of failure. Amazon EKS is
-certified Kubernetes conformant so you can use existing tooling and plugins from partners and the Kubernetes
-community. Applications running on any standard Kubernetes environment are fully compatible and can be easily migrated
-to Amazon EKS.
+certified Kubernetes conformant, so you can use existing tooling and plugins from partners and the Kubernetes
+community. Applications running on any standard Kubernetes environment are fully compatible with Amazon EKS and can
+be migrated to it.
 
 ## Overview
 
@@ -41,7 +41,7 @@ resulting system is ready for production using built-in best practices.
 
 ## Prerequisites
 
-Before getting started, you will need to install some pre-requisites:
+Before getting started, install these prerequisites:
 
 * [`aws-iam-authenticator`](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html):
   Amazon EKS uses IAM to provide secure authentication to your Kubernetes cluster.
@@ -51,16 +51,16 @@ These are not required but are recommended if you plan on interacting with your 
 * [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/): the standard Kubernetes command line interface.
 * [`helm`](https://helm.sh/docs/intro/using_helm/): if you plan on deploying Helm charts to your cluster.
 
-## Provisioning a New EKS Cluster
+## Provisioning a new EKS cluster
 
-To create a new EKS cluster, allocate an instance of an `eks.Cluster` class in your Pulumi program:
+To create a new EKS cluster, create an instance of the `eks.Cluster` class in your Pulumi program:
 
 {{< example-program path="aws-eks-cluster-default" >}}
 
 This cluster uses reasonable defaults, like placing the cluster into your default VPC with a CNI interface, using
 AWS IAM Authenticator to leverage IAM for secure access to your cluster, and using two `t2.medium` nodes.
 
-After running `pulumi up`, we will see the resulting cluster's `kubeconfig` file exported for easy access:
+After running `pulumi up`, the resulting cluster's `kubeconfig` file is exported for you to use:
 
 ```bash
 $ pulumi up
@@ -118,7 +118,7 @@ Resources:
 Duration: 11m26s
 ```
 
-It is easy to take this file and use it with the `kubectl` CLI:
+Take this file and use it with the `kubectl` CLI:
 
 ```bash
 $ pulumi stack output kubeconfig > kubeconfig.yml
@@ -128,28 +128,28 @@ ip-172-31-29-62.us-west-2.compute.internal   Ready     <none>    1m       v1.12.
 ip-172-31-40-32.us-west-2.compute.internal   Ready     <none>    2m       v1.12.7
 ```
 
-By default, Pulumi targets clusters based on your local kubeconfig, just like `kubectl` does. So if your `kubectl`
-client is set up to talk to your EKS cluster, deployments will target it. You can also deploy into any
+By default, Pulumi targets clusters based on your local kubeconfig, the same way `kubectl` does. If your `kubectl`
+client is set up to talk to your EKS cluster, deployments target it. You can also deploy into any
 Kubernetes cluster created in your Pulumi program, including the one created in
-[Provisioning a New EKS Cluster](#provisioning-a-new-eks-cluster). This is because each Kubernetes object specification accepts
+[Provisioning a new EKS cluster](#provisioning-a-new-eks-cluster). This is because each Kubernetes object specification accepts
 an optional "provider" that can programmatically specify a kubeconfig to use.
 
 This is done by instantiating a new `kubernetes.Provider` object, and providing one or many of these properties:
 
 * `cluster`: A cluster name to target, if there are many in your kubeconfig to choose from.
 * `context`: The name of the kubeconfig context to use, if there are many to choose from.
-* `kubeconfig`: A stringified JSON representing a full kubeconfig to use instead of your local machine's.
+* `kubeconfig`: The contents of a kubeconfig file, or the path to one, to use instead of your local machine's.
 
-From here, we have a fully functioning EKS cluster in Amazon, which we can deploy Kubernetes applications to.
-Any existing tools will work here, including `kubectl`, Helm, and other CI/CD products. Pulumi offers the ability
-to define Kubernetes application-level objects and configuration in code too. For instance, we can deploy a canary
-to our EKS cluster in the same program if we want to test that it is working as part of `pulumi up`:
+From here, you have a fully functioning EKS cluster in Amazon to deploy Kubernetes applications to.
+Any existing tools work here, including `kubectl`, Helm, and other CI/CD products. Pulumi also lets you
+define Kubernetes application-level objects and configuration in code. For instance, you can deploy a canary
+to your EKS cluster in the same program to verify the cluster works as part of `pulumi up`:
 
 {{< example-program path="aws-eks-cluster-k8s-canary" >}}
 
-If we deploy this on top of our existing EKS cluster, we will see the diff is just the creation of Kubernetes
-Deployment and Service objects, and the resulting URL for the load balanced service will be printed out. We
-can see that Pods have been spun up and we can use this URL to check the health of our cluster:
+Deploying this on top of an existing EKS cluster produces a diff containing only the new Kubernetes
+Deployment and Service objects, and prints the resulting URL for the load balanced service. Use that URL to
+confirm the Pods have started and to check the health of your cluster:
 
 ```bash
 $ pulumi stack output kubeconfig > kubeconfig.yml
@@ -168,15 +168,9 @@ $ curl http://$(pulumi stack output url)
 </html>
 ```
 
-For more detail on how to deploy Kubernetes applications using Pulumi, refer to one of these sections:
+## Changing the default settings on an EKS cluster
 
-* [Deploying Kubernetes Apps to Your EKS Cluster](#deploying-kubernetes-apps-to-your-eks-cluster)
-* [Deploying Existing Kubernetes YAML Config to Your EKS Cluster](#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster)
-* [Deploying Existing Helm Charts to Your EKS Cluster](#deploying-existing-helm-charts-to-your-eks-cluster)
-
-## Changing the Default Settings on an EKS Cluster
-
-The above example showed using the default settings for your EKS cluster. It is easy to override them by passing
+The above example showed using the default settings for your EKS cluster. Override them by passing
 arguments to the constructor. For instance, this example changes the desired capacity and enables certain cluster
 logging types:
 
@@ -184,13 +178,13 @@ logging types:
 
 For a full list of options that you may set on your cluster, see the [API documentation](/registry/packages/eks/api-docs/cluster/#inputs). Many common cases are described below.
 
-## Configuring Your EKS Cluster's Networking
+## Configuring your EKS cluster's networking
 
 By default, your EKS cluster is put into your region's default VPC. This is a reasonable default, however this is
 configurable if you want specific network isolation or to place your cluster work nodes on private subnets. This works
 in conjunction with [the Pulumi VPC guide](/docs/iac/guides/clouds/aws/vpc/), which makes configuring VPCs easier.
 
-This example creates a new VPC and creates our EKS cluster inside of it:
+This example creates a new VPC and creates the EKS cluster inside of it:
 
 {{< example-program path="aws-eks-cluster" >}}
 
@@ -199,22 +193,24 @@ in at least two Availability Zones. We recommend a network architecture that use
 worker nodes and public subnets for Kubernetes to create Internet-facing load balancers within. When you create your
 cluster, specify all of the subnets that will host resources for your cluster (including workers and load balancers).
 
-In the above example, we passed both the private and public subnets from our VPC. The EKS package
-figures out which ones are public and which ones are private -- and creates the worker nodes inside
-only the private subnets if any are specified. EKS will tag the provided subnets so that Kubernetes
-can discover them.   If additional control is needed over how load balancers are allocated to
-subnets, users can attach additional subnet tags themselves as outlined in
-[Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html).
+In the above example, both the private and public subnets from the VPC are passed to the cluster. The EKS
+package figures out which ones are public and which ones are private, and creates the worker nodes inside
+only the private subnets if any are specified. EKS tags the provided subnets so that Kubernetes
+can discover them. If you need additional control over how load balancers are allocated to
+subnets, you can attach additional subnet tags yourself, as outlined in
+[Amazon EKS networking requirements for VPC and subnets](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html).
 
-> Note that by default the `eks.Cluster` will do the same as what is described here, just inside of the default
-> VPC inside of your account, rather than a custom VPC as shown in this example.
+> Note that by default the `eks.Cluster` does the same as what is described here, but inside of the default
+> VPC in your account, rather than a custom VPC as shown in this example.
 
-## Configuring Your EKS Cluster's Worker Nodes and Node Groups
+## Configuring your EKS cluster's worker nodes and node groups
 
 Worker machines in Kubernetes are called nodes. Amazon EKS worker nodes run in your AWS account and connect to your
 cluster's control plane via the cluster API server endpoint. These are standard Amazon EC2 instances, and you are
-billed for them based on normal EC2 On-Demand prices. By default, an AMI using Amazon Linux 2 is used as the base
-image for EKS worker nodes, and includes Docker, kubelet, and the AWS IAM Authenticator.
+billed for them based on normal EC2 On-Demand prices. By default, an
+[EKS-optimized Amazon Linux AMI](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) is used as
+the base image for EKS worker nodes. It comes preconfigured with the container runtime, `kubelet`, and the other
+components a node needs to register with the cluster.
 
 Nodes exist in groups and you can create multiple groups for workloads that require it. By default, your EKS cluster
 is given a default node group, with the instance sizes and counts that you specify (or the defaults of two `t2.medium`
@@ -228,18 +224,18 @@ would likely want to configure IAM roles for your worker nodes explicitly, which
 using the [`instanceRole`](/registry/packages/eks/api-docs/cluster/#instancerole_nodejs) or
 [`instanceRoles`](/registry/packages/eks/api-docs/cluster/#instanceroles_nodejs) properties.
 
-For instance, let's say we want to have two node groups: one for our fixed, known workloads, and another that is
+For instance, suppose you want two node groups: one for fixed, known workloads, and another that is
 burstable and might use more expensive compute, but which can be scaled down when possible (possibly to zero).
-We would skip the default node group, and create our own node groups:
+Skip the default node group, and create your own node groups:
 
 {{< example-program path="aws-eks-cluster-node-groups" >}}
 
-After configuring such a cluster, we would then want to ensure our workload's pods are scheduled correctly on the
-right nodes. To do so, you will use a combination of node selectors, taints, and/or tolerances. For more information,
+After configuring such a cluster, ensure your workload's pods are scheduled correctly on the
+right nodes, using a combination of node selectors, taints, and tolerations. For more information,
 see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and
-[Taints and Tolerances](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
+[Taints and Tolerations](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
 
-## Managing EKS Cluster Authentication with IAM
+## Managing EKS cluster authentication with IAM
 
 When you create an Amazon EKS cluster, the IAM entity user or role (for example, for federated users) that creates the
 cluster is automatically granted `system:masters` permissions in the cluster's RBAC configuration. To grant additional
@@ -254,14 +250,14 @@ objects, so that can also then create the RBAC cluster role bindings in your clu
 For a complete example of this in action, see
 [Simplifying Kubernetes RBAC in Amazon EKS](/blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/).
 
-## Deploying Kubernetes Apps to Your EKS Cluster
+## Deploying Kubernetes apps to your EKS cluster
 
 Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes](/registry/packages/kubernetes/api-docs)
 package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
-With Pulumi, you describe your desired Kubernetes configuration, and `pulumi up` will diff between the current
-state and what is desired, and then drive the API server to bring your desired state into existence.
+With Pulumi, you describe your desired Kubernetes configuration, and `pulumi up` diffs the current
+state against what is desired, then drives the API server to bring your desired state into existence.
 
 For example, this program creates a simple load balanced NGINX service, exporting its URL:
 
@@ -286,7 +282,7 @@ Resources:
 Duration: 22s
 ```
 
-## Deploying Existing Kubernetes YAML Config to Your EKS Cluster
+## Deploying existing Kubernetes YAML config to your EKS cluster
 
 Specifying your Kubernetes object configurations in Pulumi lets you take advantage of programming language features,
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
@@ -297,9 +293,9 @@ used to deploy a single YAML file, whereas the [`ConfigGroup` class](
 /registry/packages/kubernetes/api-docs/yaml/v2/configgroup) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
-For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
-https://kubernetes.io/docs/tutorials/stateless-application/guestbook/), perhaps across multiple files. We can deploy
-it using Pulumi into our EKS cluster with the following code and by running `pulumi up`:
+For example, suppose you have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
+https://kubernetes.io/docs/tutorials/stateless-application/guestbook/), perhaps across multiple files. Deploy
+it into your EKS cluster with the following code and by running `pulumi up`:
 
 {{< example-program path="aws-eks-k8s-configgroup" >}}
 
@@ -341,34 +337,29 @@ Transforms are not yet supported for this resource in Pulumi YAML.
 {{% /notes %}}
 {{% /choosable %}}
 
-Of course, it is easy to create invalid transformations that break your applications, by changing settings the
-application or configuration did not expect, so this capability must be used with care.
+Note that transformations can break your applications by changing settings the application or configuration
+did not expect, so use this capability with care.
 
-## Deploying Existing Helm Charts to Your EKS Cluster
+## Deploying existing Helm charts to your EKS cluster
 
-Pulumi can deploy [Helm charts](https://helm.sh/) through a variety of means. This includes deploying a chart
+Pulumi can deploy [Helm charts](https://helm.sh/) through
+[a variety of means](/registry/packages/kubernetes/api-docs/helm/v3/release/). This includes deploying a chart
 by name from any Helm repository (over the Internet or on-premises), or from a tarball directly.
 
 > For these examples to work, you will need to [install Helm](https://helm.sh/docs/intro/install/).
 
-This program installs the WordPress chart into our EKS cluster, using the [Release resource type](/registry/packages/kubernetes/api-docs/helm/v3/release/):
+This program installs the WordPress chart into your EKS cluster, using the [Release resource type](/registry/packages/kubernetes/api-docs/helm/v3/release/):
 
 {{< example-program path="aws-eks-helm-wordpress" >}}
 
-The `values` array provides the configurable parameters for the chart. If we leave off the `version`, the latest
+The `values` array provides the configurable parameters for the chart. If you leave off the `version`, the latest
 available chart will be fetched from the repository (including on subsequent updates, which may trigger an upgrade).
 
 The `getResource` function on a chart can be used to get an internal resource provisioned by the chart.
 Sometimes this is needed to discover attributes such as a provisioned load balancer's address. Be careful when
 depending on this, however, as it is an implementation detail of the chart and will change as the chart evolves.
 
-> Note that Pulumi support for Helm does not use Tiller. There are known problems, particularly around security,
-> with Tiller, and so the Helm project is discouraging its use and
-> [deprecating it as part of Helm](https://helm.sh/docs/faq/#removal-of-tiller). As a result of this, certain
-> charts that depend on Tiller being present will not work with Pulumi. This is by design, affects only a
-> small number of charts, and given Helm's direction, this should be considered a bug in the chart itself.
-
-Alternatively, we can use a tarball fetched from a web URL:
+You can also use a tarball fetched from a web URL:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -396,26 +387,26 @@ Alternatively, we can use a tarball fetched from a web URL:
 {{< example-program-snippet path="aws-eks-helm-tarball" language="yaml" from="4" to="8" >}}
 {{% /choosable %}}
 
-## Using an ECR Container Image from an EKS Kubernetes Deployment
+## Using an ECR container image from an EKS Kubernetes deployment
 
 [The Pulumi ECR component](/docs/iac/guides/clouds/aws/ecr/) enables you to build, publish, and consume private Docker
-images easily using Amazon's Elastic Container Registry (ECR). In the following example, creating an `Image` resource will
-build an image from the "./app" directory (relative to the project and containing Dockerfile), and publish it to the
-provisioned ECR repository.
+images using Amazon's Elastic Container Registry (ECR). In the following example, creating an `Image` resource
+builds an image from the "./app" directory (relative to the project and containing a Dockerfile), and publishes it to
+the provisioned ECR repository.
 
 > *Note:* for more complete examples of building and publishing to _any_ private container registry, including AWS, Azure,
 > Google Cloud, and the Docker Hub, please refer to the article [Build and publish container images to any cloud with
 > Infrastructure as Code](/blog/build-publish-containers-iac/).
 
-For example, let's say we have an `app/` directory containing a fully Dockerized application (including a
-`Dockerfile`), and would like to deploy that as a Deployment and Service running in our EKS cluster. This program
+For example, suppose you have an `app/` directory containing a fully Dockerized application (including a
+`Dockerfile`), and would like to deploy that as a Deployment and Service running in your EKS cluster. This program
 accomplishes this with a single `pulumi up` command:
 
 {{< example-program path="awsx-ecr-eks-deployment-service" >}}
 
 For more information about ECR, see [the Pulumi ECR documentation](/docs/iac/guides/clouds/aws/ecr/).
 
-## Additional EKS Resources
+## Additional EKS resources
 
 For more information about Kubernetes and EKS, see the following:
 
