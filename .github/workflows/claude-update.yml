@@ -742,6 +742,7 @@ jobs:
           path: |
             .review-evidence.json
             .review-update.json
+          include-hidden-files: true
             .pr-review-evidence/
           include-hidden-files: true
           retention-days: 30

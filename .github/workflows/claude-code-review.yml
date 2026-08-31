@@ -1918,6 +1918,9 @@ jobs:
         with:
           name: review-v3-evidence-pr${{ needs.claude-review.outputs.pr_number }}-run${{ github.run_id }}
           path: .pr-review-evidence/
+          # Dot-prefixed dir: without this the action sees zero files
+          # and if-no-files-found: error fails the publish (fork battery 2026-08-31).
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
 
