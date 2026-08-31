@@ -74,7 +74,7 @@ And policy encodes the failures someone anticipated. A rule set built from a tea
 
 ## Do AI agents change how you should write policy?
 
-Yes, in a few concrete ways. The choice between advisory and mandatory enforcement stops being a matter of team culture once the author of a change might not read a warning the way a person does. For the small set of rules where a violation would be unrecoverable, treat mandatory as the default rather than something you graduate into after a warning period.
+Yes, in a few concrete ways, as [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) moves from experiment to default. The choice between advisory and mandatory enforcement stops being a matter of team culture once the author of a change might not read a warning the way a person does. For the small set of rules where a violation would be unrecoverable, treat mandatory as the default rather than something you graduate into after a warning period.
 
 It is also worth assuming an agent will read a rejection message and try again. A policy that blocks one specific property value, rather than the underlying condition it is protecting against, invites an agent to keep adjusting that one property until the check passes while the actual risk remains. Write policies against the property that matters, not the value that happened to trip the first attempt, and treat repeated near-miss violations from the same source as a signal worth a human looking at, not just a counter to log.
 
