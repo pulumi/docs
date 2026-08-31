@@ -453,27 +453,40 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW 1/1 -->                ← legacy alias, own line (transition window)
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
-## Review — action needed (N blocking) — Last updated <ISO 8601>
+## Review: action needed — N item(s) block merge — Last updated <ISO 8601>
+> [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Must fix or refute (blocks merge)
-- [ ] **F1** **[L12-14]** `file.md` — <finding + fix prose>
+| | ID | Where | Finding |
+|---|---|---|---|
+| ⬜ | **F1** | `file.md` L12-14 | <finding + fix, terse> |
 ### ❓ Only you can answer these (blocks merge)
-- [ ] **F3** **[L61]** `file.md` — <the question>
+| | ID | Where | Finding |
+|---|---|---|---|
+| ⬜ | **F3** | `file.md` L61 | <the question> |
 #### Style suggestions                    ← unchanged v2 block (annotator-compatible)
-### ✅ Resolved since last review
+### ✅ Resolved since last review         ← same table shape, ✅ glyphs
 📎 **Full evidence:** %%EVIDENCE_URL%% — …
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
 ```
 
+The zero-blocking header is `## Review: no action needed — …` with a NOTE
+alert instead of the IMPORTANT one. The status glyph is display-only (⬜
+open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
+
 ### Reviewer brief — `.review-draft-brief.md`
 
 ```markdown
 <!-- CLAUDE_REVIEW_BRIEF -->
-## Reviewer brief — Last updated <ISO 8601> (head <short sha>)   ← display-only sha
-> [!TIP] Summary + Review-confidence table   ← same shape as v2
+## Reviewer's guide — Last updated <ISO 8601> (head <short sha>)   ← display-only sha
+> [!TIP] orienting alert                  ← "work through the 👀 checklist below"
+> [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
 ### 👀 Check these before approving
-- **F4** **[L95]** `file.md` — <what might be wrong and why>
+| | ID | Where | Finding |
+|---|---|---|---|
+| ⬜ | **F4** | `file.md` L95 | <what might be wrong and why> |
+- <plain advisory bullets are allowed here — untracked reviewer notes>
 ### ✅ What you can rubber-stamp            ← composer-owned count lines
 💡 **Pre-existing issues in touched files:** N — <link>
 📎 **Full evidence:** %%EVIDENCE_URL%%
@@ -482,14 +495,20 @@ _<one sentence: what the PR is and what the review checked>_
 
 ### Finding IDs and the finding-line grammar
 
-One line per finding, everywhere: `- [ ] **F<n>** **[L<a>-<b>]** \`file\` — body`
-(checkbox on the author card, none in the brief). IDs are assigned by the
-composer in render order, are unique for the life of the PR (`high_water` in
-the evidence object is the high-water mark), and are the join key across the
-cards, REVIEW_STATE, `/resolve`, the Sentinel, and the evidence object.
-`render_finding_line` / `parse_finding_line` in `compose-review.py` are the
+One table row per finding, everywhere:
+`| ⬜ | **F<n>** | \`file\` L<a>-<b> | <finding cell> |` — the same four
+columns in 🚨, ❓, 👀, and ✅ Resolved. Literal pipes inside the Finding cell
+are escaped `\|`; the Where cell is `\`file\`` + a bare `L<a>-<b>` range,
+either optional (`—` when both are absent). IDs are assigned by the composer
+in render order, are unique for the life of the PR (`high_water` in the
+evidence object is the high-water mark), and are the join key across the
+cards, REVIEW_STATE, the Sentinel, and the evidence object.
+`render_finding_row` / `parse_finding_line` in `compose-review.py` are the
 grammar's only implementation — `build-evidence.py` re-parses the model-edited
-cards with it, fail-closed.
+cards with it, fail-closed. Keep Finding cells TERSE: the claim quote, the
+verdict tag, and a one-clause action — aim for ≤ 2 sentences (the evidence
+page carries the deep reasoning; a wall of prose in a cell recreates the
+overload the table exists to fix).
 
 ### The ❓/👀 split
 
@@ -510,17 +529,19 @@ these rules:
    finding down is a contract violation `build-evidence.py` rejects (exit 2).
    Exception: a `route: preflight` detector stub whose TODO explicitly says
    "bucket by reader impact" may land in 👀.
-1. **Never delete a finding.** Judged spurious → rewrite its body as
+1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
    `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
-   `**Pre-existing:** <reason>`. The body must START with the label.
+   `**Pre-existing:** <reason>`. The cell must START with the label.
    build-evidence files those on the evidence page and drops them from the
    published card. A finding that simply vanishes is a violation.
-1. **New findings** are added as `- [ ] **F?** …` lines in the right section;
-   build-evidence assigns the real id.
+1. **New findings** are added as `| ⬜ | **F?** | … | … |` rows in the right
+   section's table; build-evidence assigns the real id.
 1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
    the REVIEW_STATE block, `%%EVIDENCE_URL%%` tokens, the rubber-stamp count
    lines in the brief, or the footers.
-1. Keep each finding on ONE line — the grammar is line-based.
+1. Keep each finding on ONE row — the grammar is line-based. Escape literal
+   pipes in a cell as `\|`. Never edit the table header/separator rows, and
+   never touch a row's status glyph — it is rendered from REVIEW_STATE.
 
 ### After the model: `build-evidence.py`
 

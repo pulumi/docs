@@ -119,7 +119,7 @@ def test_evidence_link_required() -> None:
 
 
 def test_broken_finding_row() -> None:
-    broken = AUTHOR.replace("- [ ] **F2**", "- [ ] *F2*")
+    broken = AUTHOR.replace("| ⬜ | **F2** |", "| ⬜ | *F2* |")
     assert "v3-finding-grammar" in rule_ids(check(author=broken))
 
 
@@ -136,7 +136,8 @@ def test_invented_id_above_high_water() -> None:
 def test_model_added_placeholder_row_is_legal() -> None:
     added = AUTHOR.replace(
         "### ✅ Resolved since last review",
-        "- [ ] **F?** **[L200]** `content/docs/iac/x.md` — new issue the model found\n\n"
+        "| | ID | Where | Finding |\n|---|---|---|---|\n"
+        "| ⬜ | **F?** | `content/docs/iac/x.md` L200 | new issue the model found |\n\n"
         "### ✅ Resolved since last review",
     )
     ids = rule_ids(check(author=added))
@@ -146,38 +147,39 @@ def test_model_added_placeholder_row_is_legal() -> None:
 
 
 def test_blocking_count_mismatch() -> None:
-    wrong = AUTHOR.replace("action needed (3 blocking)", "action needed (7 blocking)")
+    wrong = AUTHOR.replace("action needed — 3 items block merge", "action needed — 7 items block merge")
     assert "v3-blocking-count" in rule_ids(check(author=wrong))
 
 
 def test_bucket_demotion_rejected() -> None:
     # F1 is `outstanding` in the base; render it in ❓ instead of 🚨.
     lines = AUTHOR.splitlines()
-    f1 = next(line for line in lines if line.startswith("- [ ] **F1**"))
+    f1 = next(line for line in lines if line.startswith("| ⬜ | **F1** |"))
     demoted = AUTHOR.replace(f1 + "\n", "").replace(
         "### ❓ Only you can answer these (blocks merge)\n",
-        "### ❓ Only you can answer these (blocks merge)\n\n" + f1 + "\n",
+        "### ❓ Only you can answer these (blocks merge)\n\n"
+        "| | ID | Where | Finding |\n|---|---|---|---|\n" + f1 + "\n",
     )
     assert "bucket-split-faithful" in rule_ids(check(author=demoted))
 
 
 def test_vanished_finding_rejected_and_rewrite_accepted() -> None:
-    f3 = next(line for line in AUTHOR.splitlines() if line.startswith("- [ ] **F3**"))
+    f3 = next(line for line in AUTHOR.splitlines() if line.startswith("| ⬜ | **F3** |"))
     vanished = AUTHOR.replace(f3 + "\n", "")
     assert "bucket-split-faithful" in rule_ids(check(author=vanished))
     rewritten = AUTHOR.replace(
-        f3, "- [ ] **F3** **[L61]** `content/docs/iac/x.md` — **Spurious:** verifier compared a paraphrase"
+        f3, "| ⬜ | **F3** | `content/docs/iac/x.md` L61 | **Spurious:** verifier compared a paraphrase |"
     )
     assert "bucket-split-faithful" not in rule_ids(check(author=rewritten))
 
 
 def test_promotion_is_legal() -> None:
     # F4 is `reviewer-check` in the base; promoting it into the author ❓ is fine.
-    f4 = next(line for line in BRIEF.splitlines() if line.startswith("- **F4**"))
+    f4 = next(line for line in BRIEF.splitlines() if line.startswith("| ⬜ | **F4** |"))
     brief_without = BRIEF.replace(f4 + "\n", "")
     author_with = AUTHOR.replace(
         "#### Style suggestions",
-        "- [ ] " + f4[2:] + "\n\n#### Style suggestions",
+        f4 + "\n\n#### Style suggestions",
     )
     ids = rule_ids(check(author=author_with, brief=brief_without))
     assert "bucket-split-faithful" not in ids

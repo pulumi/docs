@@ -475,7 +475,7 @@ def process_author_time(
         if idle_days > warn_days:
             body = (
                 f"This PR is waiting on you: {undecided_count} finding(s) need an answer — "
-                f"`/resolve <id> <disposition>: <why>` or `@claude #update-review`. It closes in "
+                f"reply `@claude <your reasoning> #update-review`, or push the fix. It closes in "
                 f"{close_days - warn_days} days if nothing changes; reopening later is one click."
             )
             if not dry_run:

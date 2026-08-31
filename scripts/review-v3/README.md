@@ -84,7 +84,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | Gate | Green when | Red says |
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
-| G2 findings-answered | every 🚨/❓ row checked or carrying a REVIEW_STATE disposition | the undecided ids + the `/resolve` and `#update-review` commands |
+| G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
 | G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
 | G4 infra-evidence | commit status `staging/pulumi-test-io` green at the current head | "a tools-team member comments `/deploy-staging`" — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |

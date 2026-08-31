@@ -93,9 +93,9 @@ def author_card(sha: str = "a" * 40, extra: str = "") -> str:
         "<!-- CLAUDE_REVIEW 1/1 -->\n"
         "<!-- CLAUDE_REVIEW_AUTHOR -->\n"
         f"<!-- CLAUDE_REVIEW_HEAD {sha} -->\n"
-        "## Review — action needed (1 blocking)\n\n"
+        "## Review: action needed — 1 item blocks merge\n\n"
         "### 🚨 Must fix or refute (blocks merge)\n\n"
-        "- [ ] **F1** **[L10]** `x.md` — bad claim\n\n"
+        "| | ID | Where | Finding |\n|---|---|---|---|\n| ⬜ | **F1** | `x.md` L10 | bad claim |\n\n"
         f"{extra}"
         '<!-- REVIEW_STATE {"findings":{},"high_water":1,"schema":1} -->\n\n'
         + FOOTER
@@ -105,7 +105,7 @@ def author_card(sha: str = "a" * 40, extra: str = "") -> str:
 def brief_card() -> str:
     return (
         "<!-- CLAUDE_REVIEW_BRIEF -->\n"
-        "## Reviewer brief — Last updated now (head aaaabbbb)\n\n"
+        "## Reviewer's guide — Last updated now (head aaaabbbb)\n\n"
         "### 👀 Check these before approving\n\n- **F2** thing\n\n" + FOOTER
     )
 

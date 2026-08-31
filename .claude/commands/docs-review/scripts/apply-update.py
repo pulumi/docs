@@ -97,8 +97,8 @@ AUTHOR_HEADINGS = {
 BRIEF_HEADING = "### 👀 Check these before approving"
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
 _HEAD_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->")
-_UPDATED_RE = re.compile(r"(## Review — (?:action needed \(\d+ blocking\)|no action needed) — Last updated )\S+")
-_BRIEF_UPDATED_RE = re.compile(r"(## Reviewer brief — Last updated )\S+( \(head )[0-9a-f]{7,40}(\))")
+_UPDATED_RE = re.compile(r"(## Review: (?:action needed — \d+ items? blocks? merge|no action needed) — Last updated )\S+")
+_BRIEF_UPDATED_RE = re.compile(r"(## Reviewer\'s guide — Last updated )\S+( \(head )[0-9a-f]{7,40}(\))")
 
 
 class UpdateError(Exception):
@@ -171,19 +171,13 @@ def _collect_resolved(author_body: str) -> list[str]:
             continue
         if in_section and (line.startswith("### ") or line.startswith("<!-- REVIEW_STATE") or line.startswith("📎 ")):
             break
-        if in_section and line.startswith("- "):
+        if in_section and line.startswith("|") and not cr.is_table_furniture(line):
             out.append(line)
     return out
 
 
-def _render_row(fid: str, ref: str, file: str, body: str, checkbox: bool) -> str:
-    parts = [f"**{fid}**"]
-    if ref:
-        parts.append(f"**[{ref}]**")
-    if file:
-        parts.append(f"`{file}` —")
-    box = "[ ] " if checkbox else ""
-    return f"- {box}{' '.join(parts)} {body}".rstrip()
+def _render_row(fid: str, ref: str, file: str, body: str, answered: bool) -> str:
+    return cr.render_finding_row(fid, ref=ref, file=file, body=body, answered=answered)
 
 
 def apply(
@@ -258,7 +252,7 @@ def apply(
             annotation = entry["annotation"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — {annotation}", checkbox=False))
+                f"{row['parsed']['body']} — {annotation}", answered=True))
             del rows[fid]
             disposition_state = review_state.set_disposition(
                 disposition_state, fid, "fixed",
@@ -267,7 +261,7 @@ def apply(
             reason = entry["reason"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — concede: {reason}", checkbox=False))
+                f"{row['parsed']['body']} — concede: {reason}", answered=True))
             del rows[fid]
         elif action == "hold":
             shield = f" 🛡️ **Disputed by {actor} on {today}, model held.**"
@@ -288,8 +282,11 @@ def apply(
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
 
-    author_out = _render_doc(author_body, rows, resolved_rows, doc="author")
-    brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief")
+    answered_ids = set(merged_state.get("findings", {}))
+    author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
+                             answered_ids=answered_ids)
+    brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
+                            answered_ids=answered_ids)
 
     author_out = review_state.replace_block(author_out, merged_state)
     n_blocking = sum(1 for r in rows.values() if r["bucket"] in ("outstanding", "author-answer"))
@@ -310,8 +307,15 @@ def apply(
     return author_out, brief_out, merged_state, report
 
 
-def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc: str) -> str:
-    """Re-render the finding sections of one card, everything else verbatim."""
+def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc: str,
+                answered_ids: set[str] | None = None) -> str:
+    """Re-render the finding sections of one card, everything else verbatim.
+
+    The status glyph is display-only, derived from the merged REVIEW_STATE
+    (`answered_ids`): a dispositioned row renders ✅ even while it stays in
+    its bucket, so the card can't disagree with the state block it carries.
+    """
+    answered_ids = answered_ids or set()
     lines = body.splitlines()
     headings = be.AUTHOR_SECTIONS if doc == "author" else be.BRIEF_SECTIONS
     spans = be._sections(body, headings)
@@ -323,16 +327,20 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
         row = rows[fid]
         if row["doc"] != doc:
             continue
-        checkbox = doc == "author"
         by_bucket.setdefault(row["bucket"], []).append(_render_row(
-            fid, row["parsed"]["ref"], row["parsed"]["file"], row["parsed"]["body"], checkbox))
+            fid, row["parsed"]["ref"], row["parsed"]["file"], row["parsed"]["body"],
+            answered=fid in answered_ids))
+
+    def _table(rows_out: list[str]) -> list[str]:
+        return [cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, *rows_out]
 
     replacements: list[tuple[int, int, list[str]]] = []
     for bucket, start, end in spans:
         if bucket == "resolved":
-            new_lines = resolved_rows or [RESOLVED_PLACEHOLDER]
+            new_lines = _table(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
         else:
-            new_lines = by_bucket.get(bucket) or [SECTION_EMPTY.get(bucket, "")]
+            bucket_rows = by_bucket.get(bucket)
+            new_lines = _table(bucket_rows) if bucket_rows else [SECTION_EMPTY.get(bucket, "")]
         replacements.append((start, end, [""] + new_lines + [""]))
 
     for start, end, new_lines in sorted(replacements, reverse=True):
@@ -521,7 +529,7 @@ def _self_test() -> int:
     assert a_out.index("**F4**") < a_out.index("### ❓"), "F4 promoted into 🚨"
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
-    assert "action needed (3 blocking)" in a_out, f"count refreshed: {report}"
+    assert "action needed — 3 items block merge" in a_out, f"count refreshed: {report}"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 

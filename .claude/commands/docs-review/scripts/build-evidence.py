@@ -4,8 +4,8 @@
 Runs after the model edits `.review-draft-author.md` / `.review-draft-brief.md`
 (surface v3) and before the credentialed publish job records anything. It is
 the fail-closed half of the round-trip contract: the composer renders finding
-bullets with `render_finding_line`, the model edits them in place, and this
-script parses them back with the same grammar (`parse_finding_line`) — a line
+table rows with `render_finding_line`, the model edits the cells in place, and
+this script parses them back with the same grammar (`parse_finding_line`) — a row
 that stopped parsing is a contract violation and exits 2, never a silent drop.
 
 What it emits:
@@ -71,7 +71,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
-_HEADER_RE = re.compile(r"^## Review — (?:action needed \(\d+ blocking\)|no action needed)( — Last updated .*)$")
+_HEADER_RE = re.compile(r"^## Review: (?:action needed — \d+ items? blocks? merge|no action needed)( — Last updated .*)$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _CONF_ROW_RE = re.compile(r"^> \| (?P<dim>[^|]+) \| (?P<level>[^|]+) \|")
 
@@ -106,17 +106,24 @@ def _walk(body: str, headings: dict[str, str], where: str):
     for bucket, start, end in _sections(body, headings):
         for i in range(start, end):
             raw = lines[i]
-            if not raw.startswith("- "):
-                continue
-            parsed = cr.parse_finding_line(raw)
-            if parsed is None:
-                # The 👀 section may carry plain advisory prose notes the
-                # model leaves for the reviewer — untracked by design (no
-                # id, no REVIEW_STATE entry, not a finding). They stay in
-                # the published brief verbatim. Only a bullet that tries to
-                # be a finding row must parse; blocking sections have no
-                # such latitude. Mirrors validate-pinned's
-                # v3-finding-grammar rule exactly.
+            if raw.startswith("|"):
+                if cr.is_table_furniture(raw):
+                    continue
+                parsed = cr.parse_finding_line(raw)
+                if parsed is None:
+                    raise ContractViolation(
+                        f"{where}: unparseable finding row in {bucket} section: {raw!r}"
+                    )
+                yield bucket, i, parsed, raw
+            elif raw.startswith("- "):
+                # Bullets can never be finding rows any more. The 👀 section
+                # may carry plain advisory prose bullets the model leaves
+                # for the reviewer — untracked by design (no id, no
+                # REVIEW_STATE entry, not a finding); they stay in the
+                # published brief verbatim. A bullet that LOOKS like a
+                # finding (F-id or checkbox) is a grammar break anywhere,
+                # and blocking sections tolerate no prose bullets at all.
+                # Mirrors validate-pinned's v3-finding-grammar rule exactly.
                 looks_like_finding = bool(
                     re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", raw)
                 )
@@ -125,7 +132,6 @@ def _walk(body: str, headings: dict[str, str], where: str):
                 raise ContractViolation(
                     f"{where}: unparseable finding line in {bucket} section: {raw!r}"
                 )
-            yield bucket, i, parsed, raw
 
 
 def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str]:
@@ -264,8 +270,12 @@ def _fix_header(body: str, n_blocking: int) -> str:
     for i, line in enumerate(lines):
         m = _HEADER_RE.match(line)
         if m:
-            verb = f"action needed ({n_blocking} blocking)" if n_blocking else "no action needed"
-            lines[i] = f"## Review — {verb}{m.group(1)}"
+            if n_blocking:
+                noun = "item blocks" if n_blocking == 1 else "items block"
+                verb = f"action needed — {n_blocking} {noun} merge"
+            else:
+                verb = "no action needed"
+            lines[i] = f"## Review: {verb}{m.group(1)}"
             break
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
@@ -286,21 +296,23 @@ def _self_test() -> int:
     state_block = review_state.serialize_block(dict(review_state.empty_state(), high_water=3))
     author = "\n".join([
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
-        "## Review — action needed (2 blocking) — Last updated " + ts, "",
+        "## Review: action needed — 2 items block merge — Last updated " + ts, "",
         "### 🚨 Must fix or refute (blocks merge)", "",
-        "- [ ] **F1** **[L8]** `a.md` — the model's edited fix prose", "",
-        "- [ ] **F2** **[L9]** `a.md` — promoted question now a blocker", "",
-        "- [ ] **F?** `a.md` — a brand new model finding", "",
+        "| | ID | Where | Finding |", "|---|---|---|---|",
+        "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
+        "| ⬜ | **F2** | `a.md` L9 | promoted question now a blocker |",
+        "| ⬜ | **F?** | `a.md` | a brand new model finding |", "",
         "### ❓ Only you can answer these (blocks merge)", "",
         "_No open questions for you._", "",
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "", state_block, "",
     ]) + "\n"
     brief = "\n".join([
-        "<!-- CLAUDE_REVIEW_BRIEF -->", "## Reviewer brief — Last updated " + ts + " (head aaaa)", "",
+        "<!-- CLAUDE_REVIEW_BRIEF -->", "## Reviewer's guide — Last updated " + ts + " (head aaaa)", "",
         "> **Summary:** A tidy little PR about a.md.", "",
         "> | Dimension | Level | Notes |", "> | :--- | :---: | :--- |", "> | facts | HIGH |  |", "",
         "### 👀 Check these before approving", "",
-        "- **F3** **[L12]** `a.md` — **Spurious:** the comparison was against stale data", "",
+        "| | ID | Where | Finding |", "|---|---|---|---|",
+        "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |", "",
         "💡 **Pre-existing issues in touched files:** 0 — x", "",
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "",
     ]) + "\n"
@@ -317,14 +329,14 @@ def _self_test() -> int:
     assert ev["summary"] == "A tidy little PR about a.md."
     assert ev["confidence"]["facts"] == "HIGH"
     assert ev["history"][-1]["summary"] == "A tidy little PR about a.md."
-    assert "action needed (3 blocking)" in author_out
+    assert "action needed — 3 items block merge" in author_out
 
     # demotion: F1 rendered in the brief's 👀 → violation
     demoted_brief = brief.replace(
-        "- **F3** **[L12]** `a.md` — **Spurious:** the comparison was against stale data",
-        "- **F1** **[L8]** `a.md` — softened down\n\n- **F3** **[L12]** `a.md` — **Spurious:** stale data",
+        "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |",
+        "| ⬜ | **F1** | `a.md` L8 | softened down |\n| ⬜ | **F3** | `a.md` L12 | **Spurious:** stale data |",
     )
-    demoted_author = author.replace("- [ ] **F1** **[L8]** `a.md` — the model's edited fix prose\n\n", "")
+    demoted_author = author.replace("| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |\n", "")
     try:
         build(demoted_author, demoted_brief, base)
     except ContractViolation as e:
@@ -333,7 +345,7 @@ def _self_test() -> int:
         raise AssertionError("demotion must be a contract violation")
 
     # vanish: F2 removed without a rewrite → violation
-    vanished_author = author.replace("- [ ] **F2** **[L9]** `a.md` — promoted question now a blocker\n\n", "")
+    vanished_author = author.replace("| ⬜ | **F2** | `a.md` L9 | promoted question now a blocker |\n", "")
     try:
         build(vanished_author, brief, base)
     except ContractViolation as e:
@@ -342,7 +354,7 @@ def _self_test() -> int:
         raise AssertionError("vanished finding must be a contract violation")
 
     # unparseable finding-shaped line → violation
-    broken = author.replace("- [ ] **F1** **[L8]**", "- [ ] *F1* [L8]")
+    broken = author.replace("| ⬜ | **F1** |", "| ⬜ | *F1* |")
     try:
         build(broken, brief, base)
     except ContractViolation as e:
@@ -352,8 +364,8 @@ def _self_test() -> int:
 
     # pre-existing rewrite moves bucket + updates the brief count
     pre_author = author.replace(
-        "- [ ] **F1** **[L8]** `a.md` — the model's edited fix prose",
-        "- [ ] **F1** **[L8]** `a.md` — **Pre-existing:** broken before this PR",
+        "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
+        "| ⬜ | **F1** | `a.md` L8 | **Pre-existing:** broken before this PR |",
     )
     ev2, author_out2, brief_out2 = build(pre_author, brief, base)
     assert {f["id"]: f["bucket"] for f in ev2["findings"]}["F1"] == "preexisting"

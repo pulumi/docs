@@ -269,7 +269,7 @@ def test_malformed_pr_files_exits_2():
 
 
 def test_v3_outstanding_fires():
-    body = v3_pinned_body(outstanding="- [ ] **F1** **[L40-50]** `content/docs/iac/x.md` — wrong default")
+    body = v3_pinned_body(outstanding="| ⬜ | **F1** | `content/docs/iac/x.md` L40-50 | wrong default |")
     rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
     assert rc == 0 and res["fire"] is True, res
 
@@ -278,7 +278,7 @@ def test_v3_author_answer_section_also_fires():
     # The promoted ❓ bucket must not break auto-refresh: a push fixing a ❓
     # item is just as refresh-eligible as one fixing a 🚨 item.
     body = v3_pinned_body(
-        author_answer="- [ ] **F3** **[L61]** `content/docs/iac/x.md` — unverifiable claim"
+        author_answer="| ⬜ | **F3** | `content/docs/iac/x.md` L61 | unverifiable claim |"
     )
     rc, res = run_gate(body, make_diff(FILE, 61, 1), [FILE])
     assert rc == 0 and res["fire"] is True, res
@@ -286,8 +286,8 @@ def test_v3_author_answer_section_also_fires():
 
 def test_v3_both_sections_union():
     body = v3_pinned_body(
-        outstanding="- [ ] **F1** **[L40-50]** `content/docs/iac/x.md` — wrong default",
-        author_answer="- [ ] **F3** **[L61]** `content/docs/iac/x.md` — unverifiable claim",
+        outstanding="| ⬜ | **F1** | `content/docs/iac/x.md` L40-50 | wrong default |",
+        author_answer="| ⬜ | **F3** | `content/docs/iac/x.md` L61 | unverifiable claim |",
     )
     rc, res = run_gate(body, make_diff(FILE, 61, 1), [FILE])
     assert rc == 0 and res["fire"] is True, res
@@ -296,7 +296,7 @@ def test_v3_both_sections_union():
 
 
 def test_v3_out_of_range_hunk_fails():
-    body = v3_pinned_body(outstanding="- [ ] **F1** **[L40-50]** `content/docs/iac/x.md` — wrong default")
+    body = v3_pinned_body(outstanding="| ⬜ | **F1** | `content/docs/iac/x.md` L40-50 | wrong default |")
     rc, res = run_gate(body, make_diff(FILE, 300, 2), [FILE])
     assert res["fire"] is False, res
     assert "outside outstanding finding lines" in res["reason"], res
@@ -305,7 +305,7 @@ def test_v3_out_of_range_hunk_fails():
 def test_v3_finding_without_anchor_fails_closed():
     # A v3 finding row with no `[L…]` ref (file-less detector finding) can't
     # be located, so the whole gate must fail closed.
-    body = v3_pinned_body(outstanding="- [ ] **F1** no line anchor on this one")
+    body = v3_pinned_body(outstanding="| ⬜ | **F1** | — | no line anchor on this one |")
     rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
     assert res["fire"] is False and "no parseable" in res["reason"], res
 
@@ -320,7 +320,7 @@ def test_v3_style_bullet_is_not_an_anchor():
     # A style-suggestion bullet (`- **line N:**`, no F-id) inside the same
     # section span must not be mistaken for a finding row.
     body = v3_pinned_body(
-        outstanding="- [ ] **F1** **[L40-50]** `content/docs/iac/x.md` — wrong default\n"
+        outstanding="| ⬜ | **F1** | `content/docs/iac/x.md` L40-50 | wrong default |\n"
                     "- **line 88:** not a real finding row"
     )
     rc, res = run_gate(body, make_diff(FILE, 42, 3), [FILE])
@@ -331,7 +331,7 @@ def test_v3_multi_ref_finding_unions_all_ranges():
     # A collapsed frontmatter-sweep ref carries several comma-separated
     # L-ranges; every one of them must anchor a refresh-eligible hunk.
     body = v3_pinned_body(
-        outstanding="- [ ] **F1** **[L12, L80-82]** `content/docs/iac/x.md` — collapsed entry"
+        outstanding="| ⬜ | **F1** | `content/docs/iac/x.md` L12, L80-82 | collapsed entry |"
     )
     rc, res = run_gate(body, make_diff(FILE, 81, 1), [FILE])
     assert rc == 0 and res["fire"] is True, res

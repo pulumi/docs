@@ -361,3 +361,24 @@ def test_bulk_all_never_overwrites_individual_answers():
     assert new_state["findings"]["F2"]["note"] == "the flag exists"
     assert new_state["findings"]["F1"]["disposition"] == "accepted"
     assert new_state["findings"]["F3"]["disposition"] == "accepted"
+
+
+def test_glyph_flips_on_answered_rows():
+    """The /resolve PATCH flips the display glyph for answered ids so the
+    table can't disagree with the REVIEW_STATE block it carries."""
+    gh = StubGh(pr_author="alice")
+    body = (
+        "## Review: action needed — 2 items block merge — x\n"
+        + resolve_handler.AUTHOR_MARKER + "\n\n"
+        "| | ID | Where | Finding |\n|---|---|---|---|\n"
+        "| ⬜ | **F1** | `a.md` L1 | one |\n"
+        "| ⬜ | **F2** | `a.md` L2 | two |\n\n"
+        + review_state.serialize_block(
+            review_state.empty_state() | {"high_water": 2}) + "\n"
+    )
+    author_id = gh.seed_comment(body)
+    r = handle(42, 9020, "alice", "/resolve F2 refuted: not a bug", gh)
+    assert r.exit_code == 0
+    patched = gh.comments[author_id]["body"]
+    assert "| ✅ | **F2** |" in patched
+    assert "| ⬜ | **F1** |" in patched

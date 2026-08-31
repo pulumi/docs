@@ -44,7 +44,7 @@ def test_retext_preserves_id_and_anchor():
     up = _update([{"id": "F3", "action": "retext", "text": "sharper question for the author"}])
     a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
     assert "sharper question for the author" in a_out
-    assert "**F3** **[L61]**" in a_out
+    assert "| **F3** | `content/docs/iac/x.md` L61 |" in a_out
     assert "F3" not in state["findings"], "retext writes no disposition"
 
 

@@ -2,13 +2,14 @@
 
 ---
 
-**How to answer a finding** — every 🚨 and ❓ item above needs one of these before merge:
+**How to answer** — every 🚨 and ❓ item above needs one of these before merge:
 
 1. **Fix it** — push the change; the review refreshes and marks it fixed.
-1. **Refute or accept it** — reply on this PR with one line per finding:
-   `/resolve F3 refuted: the flag does exist in 3.261`
-   Dispositions: `fixed` · `refuted` · `deferred` · `accepted` · `not-applicable` (the last three need a reason after `:`).
-1. **Accept everything at once** — `/resolve all accepted: <why>` — you own the PR; saying so is a valid answer.
-1. **Argue it out** — comment `@claude #update-review` with your reasoning and the review will re-adjudicate (it may concede, or hold with a 🛡️ note for your reviewer).
+1. **Disagree with it** — reply with your reasoning, e.g.
+   `@claude the 40% figure comes from the Q3 interview series #update-review`
+   — the review re-adjudicates: it either concedes cleanly or holds with a 🛡️ note for your reviewer.
+1. **Accept it and move on** — you own the PR; saying so is a valid answer:
+   `@claude I know what I'm doing, mark everything resolved #update-review`
+1. **Start over** — `@claude #new-review` regenerates the review from scratch.
 
-Pushing new commits refreshes this review automatically when the changes line up with the findings above; otherwise mention `@claude #update-review`. `@claude #new-review` starts over from scratch. Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: CONTRIBUTING.md §AI-assisted contributions.
+Pushing new commits refreshes this review automatically when the changes line up with the findings above; otherwise mention `@claude #update-review`. Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: CONTRIBUTING.md §AI-assisted contributions.

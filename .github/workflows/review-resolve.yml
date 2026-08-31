@@ -1,6 +1,9 @@
 name: Pre-merge Review (resolve)
 
-# Deterministic `/resolve` command lane — an author answers a review finding
+# Deterministic `/resolve` command lane — agent-facing plumbing, deliberately
+# absent from all user-facing copy (footers, Sentinel messages, CONTRIBUTING
+# teach `@claude … #update-review` instead; a second command shape would just
+# confuse humans). Agents and automation answer a review finding
 # with `/resolve F3 refuted: <why>` (or `/resolve all accepted: <reason>`)
 # and this workflow validates, applies, and acknowledges. No model call, no
 # AWS: everything lives in resolve-handler.py, which is pure gh-api I/O over

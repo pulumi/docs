@@ -324,10 +324,11 @@ V3_LEGACY_ALIAS_RE = re.compile(r"^<!-- CLAUDE_REVIEW 1/1 -->\s*$", re.MULTILINE
 V3_HEAD_MARKER_RE = re.compile(r"^<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->\s*$", re.MULTILINE)
 FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
 V3_EVIDENCE_TOKEN = "%%EVIDENCE_URL%%"
-# Author header: `## Review — action needed (N blocking) — …` or the zero
-# form `## Review — no action needed — …` (compose_v3's header_verb).
+# Author header: `## Review: action needed — N item(s) block(s) merge — …`
+# or the zero form `## Review: no action needed — …` (compose_v3's
+# header_verb).
 V3_AUTHOR_HEADER_RE = re.compile(
-    r"^## Review — (?:action needed \((\d+) blocking\)|no action needed)", re.MULTILINE
+    r"^## Review: (?:action needed — (\d+) items? blocks? merge|no action needed)", re.MULTILINE
 )
 # H3 headings, in required order, per references/output-format.md §v3.
 V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Only you can answer these", "✅ Resolved since last review"]
@@ -362,19 +363,27 @@ def _review_state_mod():
 
 
 def v3_finding_rows(body: str, heading_substring: str) -> list[tuple[int, str, dict | None]]:
-    """(1-indexed line, raw line, parse_finding_line result) for every
-    top-level `- ` bullet in the named section. None parse = grammar break."""
+    """(1-indexed line, raw line, parse_finding_line result) for every finding
+    candidate in the named section: `|` table rows (header/separator furniture
+    excluded), plus `- ` bullets — which can never parse as rows any more, so
+    they surface as None for the grammar rule to judge (a bullet that LOOKS
+    like a finding is a grammar break; a plain prose bullet is advisory and
+    tolerated in 👀 only)."""
     span = find_section(body, heading_substring)
     if span is None:
         return []
-    parse = _compose_mod().parse_finding_line
+    compose = _compose_mod()
     start, end = span
     rows: list[tuple[int, str, dict | None]] = []
     for i, line in enumerate(body.splitlines()[start:end], start=start + 1):
         if line.startswith("#### "):
             break  # the Style suggestions H4 ends the finding rows
-        if line.startswith("- "):
-            rows.append((i, line, parse(line)))
+        if line.startswith("|"):
+            if compose.is_table_furniture(line):
+                continue
+            rows.append((i, line, compose.parse_finding_line(line)))
+        elif line.startswith("- "):
+            rows.append((i, line, None))
     return rows
 
 
@@ -2785,21 +2794,22 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
         for lineno, line, parsed in v3_finding_rows(text, heading):
             if parsed is None:
                 # The 👀 section is advisory — the model may leave the
-                # reviewer a plain prose note there (a judgment call, an
+                # reviewer a plain prose bullet there (a judgment call, an
                 # editorial observation) that is deliberately NOT a tracked
-                # finding. Only a bullet that *tries* to be a finding row
-                # (carries an F-id or a checkbox) must parse. Blocking
-                # sections have no such latitude: an untracked blocking row
-                # would be invisible to REVIEW_STATE, `/resolve`, and the
+                # finding. Only a line that *tries* to be a finding (a `|`
+                # row, or a bullet carrying an F-id or checkbox) must parse.
+                # Blocking sections have no such latitude: an untracked
+                # blocking row would be invisible to REVIEW_STATE and the
                 # Sentinel. (First live fork battery: a legitimate 👀 note
                 # `- **One editorial call:** …` killed the whole publish.)
-                looks_like_finding = bool(re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", line))
+                looks_like_finding = line.lstrip().startswith("|") or bool(
+                    re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", line))
                 if where == "brief" and not looks_like_finding:
                     continue
                 v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
-                                   "every finding row parses as `- [ ] **F<n>** **[L…]** `file` — <body>`",
+                                   "every finding renders as a table row `| ⬜ | **F<n>** | `file` L<a>-<b> | <finding> |`",
                                    line[:120],
-                                   "Edit finding text in place but keep the row shape — id, anchor, backticked file, em-dash, body. New findings use `**F?**`. (Plain advisory notes are allowed in 👀 only.)"))
+                                   "Edit the Finding cell in place but keep the row shape — glyph, id, Where, Finding cells. New findings are new `| ⬜ | **F?** | … |` rows; escape literal pipes in the cell as `\\|`. (Plain advisory bullets are allowed in 👀 only.)"))
                 continue
             fid = parsed["id"]
             if fid == "F?":
@@ -2825,7 +2835,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     m = V3_AUTHOR_HEADER_RE.search(ctx.body)
     if not m:
         return [Violation("v3-blocking-count", "<author>",
-                          "header `## Review — action needed (N blocking) — …` or `## Review — no action needed — …`",
+                          "header `## Review: action needed — N item(s) block merge — …` or `## Review: no action needed — …`",
                           (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
     rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
@@ -3597,10 +3607,11 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
             if p is None or p["id"] == "F?" or p["id"] not in dispositioned
         )
         print(f"outstanding={outstanding}")
-        print(f"low_confidence={len(v3_finding_rows(body, '👀 Check these before approving'))}")
+        print(f"low_confidence={sum(1 for _, _, p in v3_finding_rows(body, '👀 Check these before approving') if p is not None)}")
         print("triaged=0")
         print("pre_existing=0")
-        print(f"resolved={len(extract_bucket_bullets(body, '✅ Resolved'))}")
+        resolved_rows = v3_finding_rows(body, "✅ Resolved since last review")
+        print(f"resolved={sum(1 for _, _, p in resolved_rows if p is not None)}")
         return 0
 
     print(f"outstanding={len(extract_bucket_bullets(body, '🚨 Outstanding'))}")

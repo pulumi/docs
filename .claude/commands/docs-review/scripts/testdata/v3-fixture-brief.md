@@ -1,7 +1,10 @@
 <!-- CLAUDE_REVIEW_BRIEF -->
-## Reviewer brief — Last updated 2026-08-31T18:00:00Z (head aaaabbbb)
+## Reviewer's guide — Last updated 2026-08-31T18:00:00Z (head aaaabbbb)
 
 > [!TIP]
+> **This is the reviewer's guide.** Before you approve this PR, work through the 👀 checklist below. Everything else was machine-verified — the evidence page has the receipts.
+
+> [!NOTE]
 > **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), (2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.
 >
 > **Review confidence:**
@@ -13,7 +16,9 @@
 
 ### 👀 Check these before approving
 
-- **F4** **[L95]** `content/docs/iac/x.md` — *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.>
+| | ID | Where | Finding |
+|---|---|---|---|
+| ⬜ | **F4** | `content/docs/iac/x.md` L95 | *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.> |
 
 ### ✅ What you can rubber-stamp
 
@@ -29,4 +34,4 @@
 
 ---
 
-**For the reviewer:** the 👀 items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment marked "Review"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the 👀 items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.
+**For the reviewer:** the 👀 items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment headed "Review: action needed"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the 👀 items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.

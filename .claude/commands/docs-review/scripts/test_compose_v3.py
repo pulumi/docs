@@ -210,3 +210,26 @@ def test_build_evidence_on_fixtures(v3_outputs, tmp_path):
     final = json.loads(out.read_text())
     assert {f["id"]: f["bucket"] for f in final["findings"]} == {f["id"]: f["bucket"] for f in ev["findings"]}
     assert (tmp_path / "a-clean.md").read_text().count("CLAUDE_REVIEW_HEAD") == 1
+
+
+def test_row_pipe_escaping_round_trips():
+    row = cr.render_finding_row("F7", ref="L4", file="a.md",
+                                body="use `a | b` in the shell, not a\\|b")
+    assert row.count("|") >= 5  # cell pipes escaped, structure intact
+    parsed = cr.parse_finding_line(row)
+    assert parsed is not None
+    assert parsed["body"] == "use `a | b` in the shell, not a\\|b"
+
+
+def test_row_answered_glyph():
+    open_row = cr.render_finding_row("F1", body="x")
+    done_row = cr.render_finding_row("F1", body="x", answered=True)
+    assert cr.parse_finding_line(open_row)["checked"] is False
+    assert cr.parse_finding_line(done_row)["checked"] is True
+
+
+def test_table_furniture_recognized():
+    assert cr.is_table_furniture(cr.FINDING_TABLE_HEADER)
+    assert cr.is_table_furniture(cr.FINDING_TABLE_SEPARATOR)
+    assert cr.is_table_furniture("| --- | --- | --- | --- |")
+    assert not cr.is_table_furniture(cr.render_finding_row("F1", body="x"))

@@ -171,16 +171,20 @@ def author_card(findings=(), state=None, head=HEAD):
         "<!-- CLAUDE_REVIEW 1/1 -->",
         sentinel.AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head} -->",
-        "## Review — action needed (%d blocking) — Last updated x" % (len(must) + len(answer)),
+        "## Review: action needed — %d items block merge — Last updated x" % (len(must) + len(answer)),
         "",
         "### 🚨 Must fix or refute (blocks merge)",
         "",
     ]
+    if must:
+        lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in must:
-        lines.append(f"- [ ] **{fid}** **[L10]** `content/docs/iac/x.md` — a problem")
+        lines.append(f"| ⬜ | **{fid}** | `content/docs/iac/x.md` L10 | a problem |")
     lines += ["", "### ❓ Only you can answer these (blocks merge)", ""]
+    if answer:
+        lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in answer:
-        lines.append(f"- [ ] **{fid}** **[L20]** `content/docs/iac/x.md` — a question")
+        lines.append(f"| ⬜ | **{fid}** | `content/docs/iac/x.md` L20 | a question |")
     lines += ["", "### ✅ Resolved since last review", "", "_none_", ""]
     body = "\n".join(lines)
     if state is None:
@@ -243,7 +247,7 @@ def test_findings_undecided_g2_red_lists_ids():
     v = sentinel.evaluate(gh, CONFIG)
     g2 = _gate(v, "G2")
     assert g2.status == "red" and "F1" in g2.message and "F2" in g2.message
-    assert "/resolve" in g2.message
+    assert "@claude" in g2.message and "/resolve" not in g2.message
     assert v.conclusion == "failure"
     assert v.blocking_ids == ["F1", "F2"]
 

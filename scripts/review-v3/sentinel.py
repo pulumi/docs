@@ -244,7 +244,7 @@ def _card_rows(body: str, heading_prefixes: tuple[str, ...]) -> list[dict]:
             continue
         if line.startswith(FOOTER_SENTINEL):
             break
-        if in_section and line.startswith("- "):
+        if in_section and line.startswith("|"):
             parsed = _compose.parse_finding_line(line)
             if parsed and parsed["id"] != "F?":
                 rows.append(parsed)
@@ -387,8 +387,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 gates.append(Gate(
                     "G2 findings-answered", "red",
                     f"{len(undecided)} finding(s) undecided ({ids}) — fix and push, "
-                    f"reply `/resolve <id> refuted|accepted|deferred: <why>`, or "
-                    f"`@claude #update-review` with your reasoning.",
+                    f"or reply with your reasoning, e.g. "
+                    f"`@claude F3 is wrong because <why> #update-review` or "
+                    f"`@claude I know what I'm doing, mark everything resolved #update-review`.",
                 ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "every finding answered"))
@@ -579,8 +580,8 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     if verdict.conclusion in ("failure", "action_required"):
         n = len(verdict.blocking_ids)
         what = f"{n} item(s) block merge" if n else "merge is blocked"
-        strip = (f"{STRIP_OPEN}\n⛔ **{what}** — answer with `/resolve <id> "
-                 f"refuted|accepted: <why>` or `@claude #update-review`. "
+        strip = (f"{STRIP_OPEN}\n⛔ **{what}** — fix and push, or reply "
+                 f"`@claude <your reasoning> #update-review`. "
                  f"Details: the Sentinel check below.\n{STRIP_CLOSE}")
     else:
         if STRIP_OPEN not in body:

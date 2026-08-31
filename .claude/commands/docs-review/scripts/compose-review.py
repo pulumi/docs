@@ -1602,38 +1602,98 @@ FOOTER_AUTHOR_PATH = Path(__file__).resolve().parent.parent / "footer-author.md"
 FOOTER_REVIEWER_PATH = Path(__file__).resolve().parent.parent / "footer-reviewer.md"
 _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 
-# One line per finding, everywhere a v3 finding renders:
-#   - [ ] **F3** **[L12-14]** `file.md` — <body>      (author card: 🚨 / ❓)
-#   - **F9** **[L95]** `file.md` — <body>             (brief: 👀)
-# `F?` is the model's placeholder for a finding it added; build-evidence.py
-# assigns the real id. The L-anchor and backticked file are optional so the
-# grammar also carries file-less detector findings.
+# One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / 👀,
+# and the ✅ Resolved log):
+#
+#   | | ID | Where | Finding |
+#   |---|---|---|---|
+#   | ⬜ | **F3** | `file.md` L12-14 | <finding cell> |
+#
+# The status glyph is DISPLAY ONLY — ⬜ open, ✅ answered — rendered from
+# REVIEW_STATE, which remains the actual state (the old `- [ ]` checkboxes
+# looked interactive and were wired to nothing; a glyph doesn't lie). `F?`
+# is the model's placeholder for a finding it added; build-evidence.py
+# assigns the real id. File and L-range are each optional (`—` when both
+# are absent) so the grammar also carries file-less detector findings; the
+# L-range keeps its bare `L\d+(-\d+)?` shape because auto-refresh-gate
+# anchors on it. Literal pipes in the Finding cell are escaped `\|`.
+FINDING_TABLE_HEADER = "| | ID | Where | Finding |"
+FINDING_TABLE_SEPARATOR = "|---|---|---|---|"
+_TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
 FINDING_LINE_RE = re.compile(
-    r"^-\s+(?:\[(?P<checked>[ xX])\]\s+)?\*\*(?P<id>F\d+|F\?)\*\*"
-    r"(?:\s+\*\*\[(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)\]\*\*)?"
-    r"(?:\s+`(?P<file>[^`]+)`\s+—)?"
-    r"\s*(?P<body>.*\S)\s*$"
+    r"^\|\s*(?P<status>[⬜✅])\s*"
+    r"\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
+    r"\|\s*(?:`(?P<file>[^`|]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?\s*(?:—\s*)?"
+    r"\|\s*(?P<body>(?:\\\||[^|\n])*?\S)\s*\|\s*$"
 )
 
 
-def render_finding_line(fid: str, v2_bullet: str, checkbox: bool) -> str:
-    """Prefix a v2-shaped stub bullet (`- **[L…]** …`) with its finding id."""
-    rest = v2_bullet[2:] if v2_bullet.startswith("- ") else v2_bullet
-    box = "[ ] " if checkbox else ""
-    return f"- {box}**{fid}** {rest}"
+def is_table_furniture(line: str) -> bool:
+    """True for the finding table's header/separator rows — the only `|`
+    lines in a finding section that are legitimately not finding rows."""
+    stripped = line.strip()
+    if _TABLE_SEPARATOR_RE.match(stripped):
+        return True
+    return stripped.replace(" ", "") == FINDING_TABLE_HEADER.replace(" ", "")
+
+
+def render_finding_row(fid: str, *, ref: str = "", file: str = "",
+                       body: str = "", answered: bool = False) -> str:
+    """The canonical row renderer; inverse of parse_finding_line."""
+    where_bits = []
+    if file:
+        where_bits.append(f"`{file}`")
+    if ref:
+        where_bits.append(ref)
+    where = " ".join(where_bits) or "—"
+    glyph = "✅" if answered else "⬜"
+    cell = body.replace("|", "\\|")
+    return f"| {glyph} | **{fid}** | {where} | {cell} |"
+
+
+# v2-shaped stub bullets (`- **[L…]** `file` — body`) are what build_stubs
+# emits; this splits one into row parts so compose_v3 can place it in cells.
+_V2_STUB_RE = re.compile(
+    r"^-\s+(?:\[[ xX]\]\s+)?(?:\*\*\[(?P<ref>L[^\]]+)\]\*\*\s+)?"
+    r"(?:`(?P<file>[^`]+)`\s+—\s+)?(?P<body>.*\S)\s*$"
+)
+
+
+def render_finding_line(fid: str, v2_bullet: str, checkbox: bool = False,
+                        answered: bool = False) -> str:
+    """Adapt a v2-shaped stub bullet into a v3 table row.
+
+    `checkbox` is accepted for caller compatibility and ignored — the status
+    glyph replaced the checkbox and is driven by `answered`.
+    """
+    del checkbox
+    m = _V2_STUB_RE.match(v2_bullet)
+    if not m:
+        return render_finding_row(fid, body=v2_bullet.strip(), answered=answered)
+    return render_finding_row(
+        fid,
+        ref=(m.group("ref") or "").strip(),
+        file=(m.group("file") or "").strip(),
+        body=m.group("body").strip(),
+        answered=answered,
+    )
 
 
 def parse_finding_line(line: str) -> dict | None:
-    """Inverse of render_finding_line; None when the line isn't a finding."""
+    """Inverse of render_finding_row; None when the line isn't a finding row.
+
+    `checked` reflects the ✅ glyph — display state only; REVIEW_STATE is
+    authoritative for whether a finding is actually answered.
+    """
     m = FINDING_LINE_RE.match(line)
     if not m:
         return None
     return {
         "id": m.group("id"),
-        "ref": m.group("ref") or "",
+        "ref": (m.group("ref") or "").strip(),
         "file": (m.group("file") or "").strip(),
-        "body": m.group("body").strip(),
-        "checked": (m.group("checked") or " ").lower() == "x",
+        "body": m.group("body").strip().replace("\\|", "|"),
+        "checked": m.group("status") == "✅",
     }
 
 
@@ -1689,20 +1749,20 @@ _V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
         "replace the body with `**Spurious:** <1-2 sentence reason>` "
         "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
         "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution)",
-        "rewrite the bullet body as `**Spurious:** <1-2 sentence reason>` — build-evidence files it "
+        "rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it "
         "on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution)",
     ),
     (
         "replace the body with `**Mis-sourced:** <reason>` AND move the bullet to `### 📋 Triaged verifier findings`",
-        "rewrite the bullet body as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card",
+        "rewrite the Finding cell as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card",
     ),
     (
         "replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`",
-        "rewrite the bullet body as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
     ),
     (
         "replace the body with `**Pre-existing:** <reason>` AND move the bullet to `### 💡 Pre-existing`",
-        "rewrite the bullet body as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
     ),
     (
         "move to 📋 Triaged with `**Spurious:**` only if the framing comparison itself is wrong",
@@ -1718,7 +1778,7 @@ _V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
     ),
     (
         "either way file the author-question buffer line",
-        "otherwise keep it here — this bullet IS the question the author must answer",
+        "otherwise keep it here — this row IS the question the author must answer",
     ),
     (
         "file the author-question line saying verification ran out of budget and the claim is retryable",
@@ -1802,9 +1862,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     outstanding_lines: list[str] = []
     for s in prep["outstanding_stubs"]:
         fid, _ = _assign(s, "outstanding", s["bullet"])
-        if outstanding_lines:
-            outstanding_lines.append("")
-        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), checkbox=True))
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
     for f in prep["vale_blockers"]:
         fname = str(f.get("file") or "").strip()
         cat = str(f.get("category") or "style")
@@ -1818,23 +1876,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "origin": "style-blocker",
         }
         fid, _ = _assign(stub, "outstanding", v2_bullet)
-        if outstanding_lines:
-            outstanding_lines.append("")
-        outstanding_lines.append(render_finding_line(fid, v2_bullet, checkbox=True))
+        outstanding_lines.append(render_finding_line(fid, v2_bullet))
 
     question_lines: list[str] = []
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
-        if question_lines:
-            question_lines.append("")
-        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), checkbox=True))
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
 
     check_lines: list[str] = []
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
-        if check_lines:
-            check_lines.append("")
-        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), checkbox=False))
+        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
 
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     high_water = next_id - 1
@@ -1911,12 +1963,34 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     }
 
     # ---- author card ----
-    header_verb = f"action needed ({n_blocking} blocking)" if n_blocking else "no action needed"
+    if n_blocking:
+        noun = "item blocks" if n_blocking == 1 else "items block"
+        header_verb = f"action needed — {n_blocking} {noun} merge"
+        orient = [
+            "> [!IMPORTANT]",
+            "> This review needs answers from you before this PR can merge. "
+            "Fix each item in the table below, or tell the review why it's wrong — "
+            "**How to answer** at the bottom shows exactly what to type.",
+        ]
+    else:
+        header_verb = "no action needed"
+        orient = [
+            "> [!NOTE]",
+            "> Nothing here blocks merge — the review found no items needing an answer from you.",
+        ]
+
+    def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
+        if not rows:
+            return [empty_sentinel]
+        return [FINDING_TABLE_HEADER, FINDING_TABLE_SEPARATOR, *rows]
+
     author: list[str] = [
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
-        f"## Review — {header_verb} — Last updated {timestamp}",
+        f"## Review: {header_verb} — Last updated {timestamp}",
+        "",
+        *orient,
         "",
     ]
     if prep["outage_banner"]:
@@ -1927,13 +2001,13 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "### 🚨 Must fix or refute (blocks merge)",
         "",
     ]
-    author += (outstanding_lines or [_V3_EMPTY_OUTSTANDING])
+    author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
     author += [
         "",
         "### ❓ Only you can answer these (blocks merge)",
         "",
     ]
-    author += (question_lines or [_V3_EMPTY_QUESTIONS])
+    author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
     author += [""]
     if prep["vale_nags"]:
         author += [_render_style_findings(prep["vale_nags"], prep["files_url"]), ""]
@@ -1966,18 +2040,26 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     brief: list[str] = [
         BRIEF_MARKER,
-        f"## Reviewer brief — Last updated {timestamp} (head {head_sha_short})",
+        f"## Reviewer's guide — Last updated {timestamp} (head {head_sha_short})",
+        "",
+        "> [!TIP]",
+        "> **This is the reviewer's guide.** Before you approve this PR, work "
+        "through the 👀 checklist below. Everything else was machine-verified — "
+        "the evidence page has the receipts.",
         "",
     ]
     if prep["outage_banner"]:
         brief += [prep["outage_banner"], ""]
     brief += [
-        render_summary_block(prep["confidence_dims"], prep["forced_levels"]),
+        # The orienting TIP above is the only TIP box — the summary block
+        # renders as a NOTE here so the two don't stack as twins.
+        render_summary_block(prep["confidence_dims"], prep["forced_levels"]).replace(
+            "> [!TIP]", "> [!NOTE]", 1),
         "",
         "### 👀 Check these before approving",
         "",
     ]
-    brief += (check_lines or [_V3_EMPTY_CHECKS])
+    brief += _finding_table(check_lines, _V3_EMPTY_CHECKS)
     brief += [
         "",
         "### ✅ What you can rubber-stamp",
