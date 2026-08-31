@@ -225,3 +225,77 @@ If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, hist
 ### Author deletes the 1/M pinned comment
 
 If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run's `pinned-comment.sh fetch` returns empty and the skill falls through to the Fallback path above.
+
+---
+
+## The v3 surface — adjudicate, don't render
+
+> Everything above this line is the **v2** contract (single pinned sequence,
+> model renders and self-publishes). On a PR whose review is v3 (an author
+> card marked `<!-- CLAUDE_REVIEW_AUTHOR -->` plus a reviewer brief), the
+> update lane inverts: **the model adjudicates and writes one structured
+> patch; deterministic tooling renders and publishes.** The model never
+> upserts, never edits the cards, and never touches the evidence.
+
+### The patch — `.review-update.json`
+
+```json
+{"schema": 1, "case": "fix-response|dispute|re-verify|mixed",
+ "history_summary": "one line for the evidence history (≤120 chars)",
+ "findings": [
+   {"id": "F3", "action": "resolve", "annotation": "fixed in a1b2c3"},
+   {"id": "F4", "action": "concede", "reason": "author is right about X"},
+   {"id": "F5", "action": "hold",    "reason": "evidence: the docs say otherwise"},
+   {"id": "F6", "action": "promote", "to": "outstanding", "reason": "also in social copy"},
+   {"id": "F7", "action": "retext",  "text": "sharper wording, same finding"},
+   {"action": "add", "bucket": "outstanding|author-answer|reviewer-check",
+    "file": "content/docs/x.md", "lines": [10, 12], "text": "…", "origin": "model"}
+ ]}
+```
+
+Closed action set — `apply-update.py` rejects anything else (exit 2):
+
+| Action | Meaning | Rendered as | REVIEW_STATE |
+|---|---|---|---|
+| `resolve` | the push fixed it (verify against the diff) | row → ✅ Resolved with the annotation | `fixed` (actor `update-lane`, sha) |
+| `concede` | the model concedes the finding was wrong | row → ✅ with `concede: <reason>` — the exact v2 machine-scraped shape | none — the annotation is the record |
+| `hold` | dispute adjudicated against the author | row keeps its bucket, gains `🛡️ **Disputed by <actor> on YYYY-MM-DD, model held.**` | none — still open |
+| `promote` | bucket moves **up only** (👀 → ❓ → 🚨) | row moves section/card | none |
+| `add` | new problem in the pushed lines only | new row, next F-id | none |
+| `retext` | wording sharpened | body replaced, id + anchor preserved | none |
+
+The three v2 cases map directly: **Case 1 fix-response** → `resolve` actions
+(and `add` for new problems in the pushed lines); **Case 2 dispute** →
+`concede` or `hold` (same concession-default for write-access authors'
+domain-knowledge disputes); **Case 3 re-verify** → `resolve` / `retext` /
+`hold`. A finding the model has nothing to say about gets **no entry** and
+carries forward unchanged — silence is not a disposition here, unlike the
+author's answer loop.
+
+### What the deterministic side does
+
+`claude-update.yml`'s publish step re-fetches the LIVE author card (merging
+any `/resolve` that landed while the model worked — newest `updated_at`
+wins), runs `apply-update.py` (validate patch → apply actions → merge
+REVIEW_STATE → refresh header count, `Last updated`, and the
+`CLAUDE_REVIEW_HEAD` marker), validates both cards against schema v21,
+records the evidence object (prior trail/investigation log carried forward
+from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
+fetched), re-renders the evidence page, and upserts brief-then-author. Any
+failure lands on `review:error` — a half-published pair must never read as
+current.
+
+### Auto-refresh runs
+
+`MENTION_AUTHOR == auto-refresh` is strictly Case 1: `apply-update.py`
+**drops** `concede`, `hold`, and `add` actions from auto runs with a logged
+warning. An unattended refresh may observe fixes; it may not adjudicate
+disputes or raise findings.
+
+### Known simplifications
+
+- The v3 refresh does not regenerate advisory style suggestions (the author
+  card keeps its style block from the last full compose, and existing
+  one-click buttons stand). A full re-style pass is `@claude #new-review`.
+- `history_summary` is the only history the lane writes; the card has no 📜
+  section — history lives on the evidence page.

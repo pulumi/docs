@@ -72,6 +72,10 @@ TOP_REQUIRED = {
 }
 TOP_OPTIONAL = {
     "editorial_balance", "triaged", "style_suggestions_count", "confidence", "summary",
+    # Present when the object was assembled without its full inputs (e.g.
+    # "prior-evidence-unavailable" on an update-lane run that couldn't fetch
+    # the prior object, so trail/investigation_log are empty, not carried).
+    "degraded",
 }
 
 FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
@@ -331,6 +335,9 @@ def validate_evidence(obj) -> list[str]:
 
     if "summary" in obj and obj["summary"] is not None and not isinstance(obj["summary"], str):
         errors.append("evidence.summary must be a string or null")
+
+    if "degraded" in obj and not _nonempty_str(obj["degraded"]):
+        errors.append("evidence.degraded must be a non-empty string when present")
 
     return errors
 

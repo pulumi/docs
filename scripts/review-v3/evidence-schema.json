@@ -93,6 +93,10 @@
       "additionalProperties": {"type": "string"}
     },
     "summary": {"type": ["string", "null"]},
+    "degraded": {
+      "type": "string",
+      "description": "Present when the object was assembled without its full inputs — e.g. 'prior-evidence-unavailable' when an update-lane run could not fetch the prior evidence object, so trail/investigation_log are empty rather than carried forward. Absent on a healthy object."
+    },
     "history": {
       "type": "array",
       "items": {
