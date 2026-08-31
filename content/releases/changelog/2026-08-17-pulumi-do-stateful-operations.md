@@ -6,21 +6,25 @@ authors:
     - christian-nunciato
 ---
 
-You can now use [`pulumi do`](/docs/iac/cli/direct-resource-operations/) to create, update, and delete real cloud resources directly from the command line — no program, project, or stack setup required. What started as a way to invoke a single function or resource operation is now **stateful**, supporting `create`, `upsert`, `delete`, and `patch`, and it works from **any directory**.
-
-If you run it outside of a Pulumi project, `pulumi do` transparently falls back to a global project and `default` stack under `$PULUMI_HOME` and manages the stack for you, so a one-off just works:
+You can now use [`pulumi do`](/docs/iac/cli/direct-resource-operations/) to create, read, update, and delete cloud resources directly from the command line — no program, project, or stack required — and pull them into new or existing Pulumi projects when you're ready. Resources created with `pulumi do` are tracked and managed transparently for you, so commands like these just work:
 
 ```bash
-# Create (or update) a resource — no pulumi new or pulumi stack init needed
-pulumi do aws:s3/bucket:Bucket upsert my-bucket
+# Create a new resource
+pulumi do aws:s3:Bucket create my-bucket
 
-# See what's in state so you can reference it
-pulumi do show-resources
+# Update the resource in place
+pulumi do aws:s3:Bucket patch my-bucket
 
-# Tear it down
-pulumi do aws:s3/bucket:Bucket delete my-bucket
+# Delete it
+pulumi do aws:s3:Bucket delete my-bucket
 ```
 
-Everything still runs through the Pulumi engine, so state, providers, and secrets behave exactly as they do in a full program. That also makes `pulumi do` a natural, verb-oriented surface for agents driving Pulumi from a shell, where auto-naming keeps snippets stable across runs. And when a one-off grows into something worth keeping, `pulumi state promote` (new in [v3.260.0](https://github.com/pulumi/pulumi/releases/tag/v3.260.0)) turns those stateful snippets into Pulumi program code.
+When the time comes to pull these resources into a proper Pulumi project of your own, you can promote them using the new [`pulumi state promote`](/docs/iac/cli/commands/pulumi_state_promote/) command:
 
-`pulumi do` is generally available as of [v3.258.0](https://github.com/pulumi/pulumi/releases/tag/v3.258.0). To learn more, read the [announcement post](/blog/pulumi-do-direct-resource-operations/) or the [Direct Resource Operations documentation](/docs/iac/cli/direct-resource-operations/).
+```bash
+pulumi state promote my-bucket
+```
+
+All of this makes `pulumi do` a unified, consistent API across the whole cloud that agents can use to manage resources easily and directly, without you having to give up the benefits of a solid IaC foundation.
+
+`pulumi do` is generally available as of [v3.258.0](https://github.com/pulumi/pulumi/releases/tag/v3.258.0). To learn more, read the [announcement post](/blog/pulumi-do-direct-resource-operations/) or the [`pulumi do` documentation](/docs/iac/cli/direct-resource-operations/).
