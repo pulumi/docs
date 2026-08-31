@@ -63,6 +63,8 @@ flowchart LR
 
 Each command writes an artifact the next one reads, which makes every step inspectable, repeatable, and resumable. That matters most when an AI agent is driving: the agent can validate its work at each stage rather than running one monolithic migration and checking the result at the end.
 
+The pipeline handles the state side of the migration. The code side — writing the Pulumi program the resources import into — is hand-authored, in practice by the agent following the conversion guidance in the skills (covered below).
+
 ### Digest: read state once, safely
 
 `digest tf` analyzes the Terraform configuration and state (from a local file or a TFC-compatible remote backend like Terraform Cloud or Scalr) into a single JSON sidecar: module instances, their input/output interfaces, and every resource with its attributes and import ID.
@@ -75,7 +77,7 @@ Two things happen during the digest:
 
 ### Resolve: reproducible import files
 
-The whole point of this migration style is that you hand-author a Pulumi program that reproduces the Terraform code's intent using Pulumi idioms — including Pulumi-style logical resource names. So when `pulumi preview --import-file import.json` generates the import skeleton, its entries carry URNs built from *your program's* names, not Terraform's. `resolve tf` fills in each entry's import ID by matching it to a resource in the digest, by type and name within each mapped module/component pair, and composes composite IDs from the digest's attributes.
+The whole point of this migration style is that you hand-author a Pulumi program that reproduces the Terraform code's intent using Pulumi idioms — including Pulumi-style logical resource names. That means when `pulumi preview --import-file import.json` generates the import skeleton, its entries carry URNs built from *your program's* names, not Terraform's. `resolve tf` fills in each entry's import ID by matching it to a resource in the digest, by type and name within each mapped module/component pair, and composes composite IDs from the digest's attributes.
 
 The mappings file is the bridge between the two naming schemes: Terraform addresses on the left, your program's logical names on the right.
 
@@ -112,7 +114,8 @@ The tool's commands run standalone, but they're designed to be driven by the age
 - **Node-by-node, zero-diff gated.** The migration proceeds through modules and resources in dependency order, and each node must reach a zero-diff targeted preview before the next one starts.
 - **Every value traces to its source.** The skill maps each Terraform construct to its Pulumi equivalent: `var.foo` to stack config, locals to in-program derivations, `terraform_remote_state` to [ESC](/docs/esc/) environment references. The digest makes violations visible — if the program hardcodes a value the Terraform code computes from variables, the diff surfaces it.
 - **When sources of truth disagree, deployed state wins.** Terraform code, Terraform state, and the live cloud drift apart over time. The skill treats the deployed state as the source of truth: manual drift that exists in the cloud but not in the HCL is included in the Pulumi program to preserve it, and each such decision is documented in the migration PR.
-- **Modules become components.** A companion skill, `pulumi-terraform-module-to-component`, covers translating each Terraform module into a Pulumi [component](/docs/iac/concepts/components/) that reproduces the module's interface of inputs and outputs rather than transliterating its HCL, including the logical-naming convention that import matching depends on.
+- **Modules become components.** A companion skill, `pulumi-terraform-module-to-component`, covers translating each Terraform module into a Pulumi [component](/docs/iac/concepts/components/) that reproduces the module's interface of inputs and outputs rather than transliterating its HCL — deriving the component's args from the digest's module interface and exposing only the inputs call sites actually use — including the logical-naming convention that import matching depends on.
+- **Terraform constructs get Pulumi equivalents.** The skills carry explicit conversion guidance for the agent: Terraform-to-TypeScript type mappings, equivalence tables for data sources (`aws_iam_policy_document` becomes `aws.iam.getPolicyDocumentOutput`; `terraform_remote_state` becomes an ESC environment read), rules for `null_resource` provisioners and for providers with no native Pulumi package, and direction to simplify Terraform idioms like `count`-based conditionals into real language constructs rather than mirror them.
 
 The result is a hand-authored, idiomatic Pulumi codebase the team keeps and grows, with the mechanical parts of getting there automated and verified.
 

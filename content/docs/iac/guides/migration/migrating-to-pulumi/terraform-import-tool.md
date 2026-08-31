@@ -51,9 +51,8 @@ pulumi plugin run import -- version
 The intended way to run the workflow is to load the [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill into your coding agent and let it orchestrate the pipeline below. The skill adds the judgment the commands don't encode:
 
 1. **Node-by-node, zero-diff gated.** The migration proceeds through modules and resources in dependency order, and each node must reach a zero-diff targeted preview before the next begins.
-1. **Value tracing.** Every value in the Pulumi program must trace to its Terraform source — `var.*` to stack config, locals to in-program derivations, `terraform_remote_state` to ESC environment references — never a hardcoded copy of an evaluated value.
+1. **Code conversion guidance.** The skill and its companions (`pulumi-terraform-module-to-component`, `pulumi-component-authoring`) carry the rules the agent follows when hand-authoring the program — module-to-component translation, value tracing, data-source equivalents — detailed in step 2 below.
 1. **Deployed state wins.** When the Terraform code, the state, and the live cloud disagree, the deployed state is the source of truth, and each drift decision is documented.
-1. **Modules become components.** The companion `pulumi-terraform-module-to-component` skill covers translating each Terraform module into a Pulumi component that reproduces the module's interface.
 
 Every command also runs standalone, so the pipeline below works equally well by hand.
 
@@ -92,9 +91,20 @@ Two important things happen during the digest:
 
 Treat the digest as sensitive anyway: values embedded inside non-sensitive string fields are not redacted.
 
-### 2. Generate and resolve the import file
+### 2. Write the Pulumi program
 
-Write the Pulumi program (or its first node), then generate an import skeleton and fill in the real import IDs:
+The code conversion step is not automated code generation: an agent (or you) hand-authors a Pulumi program that reproduces the Terraform code's intent using Pulumi idioms, working from the digest and the Terraform source. The skills encode the guidance this step follows:
+
+1. **Module interfaces come from the digest.** Each Terraform module becomes a Pulumi component whose args derive from the digest's `interface.inputs`, exposing only the inputs call sites actually use, with Terraform types mapped to idiomatic TypeScript types. Terraform idioms like `count`-based conditionals are simplified into real language constructs rather than mirrored.
+1. **Every value traces to its source.** `var.*` becomes stack config, locals become in-program derivations, and evaluated values are never hardcoded — if a value varies by workspace, it belongs in stack config.
+1. **Data sources get dynamic equivalents.** The skill carries equivalence tables: `aws_iam_policy_document` becomes `aws.iam.getPolicyDocumentOutput`, `data.terraform_remote_state` becomes an [ESC](/docs/esc/) environment read, `null_resource` provisioners are re-evaluated case by case, and a dynamic data source is never replaced with a hardcoded value.
+1. **Logical names must line up.** A component child's resource name must match the Terraform resource name, or be mapped in the mappings file, because that pairing is how `resolve tf` fills import IDs in the next step.
+
+Write and import one node at a time in dependency order rather than converting the whole workspace at once.
+
+### 3. Generate and resolve the import file
+
+With a node's program code written, generate an import skeleton and fill in the real import IDs:
 
 ```bash
 pulumi preview --import-file import.json
@@ -115,9 +125,9 @@ resources:
   "module.core_rds.aws_rds_cluster.aurora_cluster": "coreRds-cluster"
 ```
 
-Resources flagged `nonImportable` are held out of the import file — an entry for them is guaranteed to fail — and written to a sidecar (`imports-ready.non-importable.json`) for state injection in step 4.
+Resources flagged `nonImportable` are held out of the import file — an entry for them is guaranteed to fail — and written to a sidecar (`imports-ready.non-importable.json`) for state injection in step 5.
 
-### 3. Import in batches
+### 4. Import in batches
 
 ```bash
 pulumi plugin run import -- import \
@@ -126,9 +136,9 @@ pulumi plugin run import -- import \
 
 The command imports in batches (100 resources by default; tune with `--batch-size`). When a batch doesn't fully land, it re-imports the missing resources one at a time to identify exactly which IDs failed and carries on, so one run reports **every** bad import ID. Success is determined by reading stack state afterward, which makes reruns after fixing IDs skip everything already imported. Use `--dry-run` to inspect the plan first.
 
-### 4. Patch state and inject non-importable resources
+### 5. Patch state and inject non-importable resources
 
-Fields the cloud API doesn't return — write-only values like an RDS `masterPassword`, Lambda function code (the API returns an expiring presigned URL, not the package), provider-side defaults — show up after import as diffs the program didn't cause. `patch-state tf` fills them from the digest, guided by a curated per-resource-type fields file, and injects the non-importable resources from step 2's sidecar directly into state:
+Fields the cloud API doesn't return — write-only values like an RDS `masterPassword`, Lambda function code (the API returns an expiring presigned URL, not the package), provider-side defaults — show up after import as diffs the program didn't cause. `patch-state tf` fills them from the digest, guided by a curated per-resource-type fields file, and injects the non-importable resources from step 3's sidecar directly into state:
 
 ```bash
 pulumi plugin run import -- patch-state tf \
@@ -141,7 +151,7 @@ pulumi plugin run import -- patch-state tf \
 
 In this stack mode the command exports, backs up, patches, injects, imports, and verifies the state itself, restoring the backup automatically if any injected resource doesn't preview as unchanged. Never let a `pulumi up` create a non-importable resource that already exists — association resources typically fail against a pre-existing object partway through the deployment.
 
-### 5. Verify with a zero-diff preview
+### 6. Verify with a zero-diff preview
 
 ```bash
 pulumi preview
