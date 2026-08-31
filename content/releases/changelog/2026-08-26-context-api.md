@@ -1,5 +1,5 @@
 ---
-title: "Query Your Infrastructure with the Pulumi Context API"
+title: "Query your infrastructure with the Pulumi Context API"
 date: 2026-08-26
 meta_desc: "The Pulumi Context API is now in public preview: a queryable graph spanning IaC state, stack dependencies, and discovered cloud resources."
 authors:
