@@ -1,0 +1,90 @@
+name: Pre-merge Review (resolve)
+
+# Deterministic `/resolve` command lane — an author answers a review finding
+# with `/resolve F3 refuted: <why>` (or `/resolve all accepted: <reason>`)
+# and this workflow validates, applies, and acknowledges. No model call, no
+# AWS: everything lives in resolve-handler.py, which is pure gh-api I/O over
+# the PR's own comments and the REVIEW_STATE block embedded in the bot-owned
+# author comment (scripts/review-v3/review_state.py). A plain-English answer
+# that names a finding id gets one gentle pointer instead of being silently
+# ignored.
+#
+# SECURITY INVARIANT: this runs on `issue_comment`, which carries write
+# permissions on an event any commenter can trigger — including on a fork
+# PR. It therefore checks out the base repo's default branch ONLY, never
+# the PR head, so an attacker can't get their own code executed with this
+# token. This is the same rule the Sentinel merge gate design applies to
+# every uncredentialed/untrusted-input workflow in this pipeline: read the
+# untrusted comment body as data (see the "Save comment body" step below —
+# never interpolated into `run:` script text), never as code, and never
+# build against untrusted refs.
+#
+# Gate: as cheap as this trigger can be made without missing anything.
+# Every `/resolve`, and every plain-English "F3 is wrong" reply, has to
+# reach resolve-handler.py — text matching either shape in a workflow `if:`
+# is more surface area to get subtly wrong than it's worth. So the gate
+# here is coarse (any non-bot comment on a PR) and resolve-handler.py itself
+# is the real filter: it parses the body, and for a comment that's neither a
+# `/resolve` command nor a prose mention of a known finding id, it no-ops
+# and exits 0 having made zero API calls beyond the ones needed to decide
+# that. The cost is a few seconds of ubuntu-latest time on every ordinary PR
+# comment — cheap enough that the simplicity is worth it.
+
+on:
+  issue_comment:
+    types: [created]
+
+# State writes must serialize per PR — two /resolve comments landing close
+# together must merge, not race — so this does NOT set
+# cancel-in-progress: true. A cancelled run mid-PATCH could leave the
+# REVIEW_STATE block half-written.
+concurrency:
+  group: review-state-${{ github.event.issue.number }}
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  resolve:
+    if: github.event.issue.pull_request != null && github.event.comment.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    steps:
+      # Base repo default branch only — see the SECURITY INVARIANT note
+      # above. No `ref:` override is needed: `issue_comment` isn't a
+      # PR-scoped ref event, so checkout's default (github.sha, resolved
+      # against the branch this workflow file lives on) already lands on
+      # the default branch. Pinned explicitly anyway so the invariant is
+      # visible here, not just true by accident of how the event resolves.
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Never interpolate the comment body into `run:` script text — that's
+      # a shell-injection vector on attacker-controlled input. Route it
+      # through an env var and let the shell write it verbatim to a file
+      # instead; resolve-handler.py reads the file, never a shell-expanded
+      # argument.
+      - name: Save comment body
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: printf '%s' "$BODY" > comment-body.txt
+
+      - name: Run /resolve handler
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/review-v3/resolve-handler.py \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.issue.number }}" \
+            --comment-id "${{ github.event.comment.id }}" \
+            --comment-body-file comment-body.txt \
+            --actor "${{ github.event.comment.user.login }}"
