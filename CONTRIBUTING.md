@@ -127,6 +127,7 @@ Front matter is defined as a YAML block at the top of a Markdown document that d
 - `feature_image`: Blog posts only. Relative path to a high-resolution hero image (1884×1256) displayed at the top of the blog post page.
 - `meta_title`: If specified, the meta title (for OpenGraph) will use this value instead of the value in the `title` attribute.
 - `redirect_to`: The relative or absolute URL of a permanent redirect.
+- `sitemap_exclude`: Set to `true` to omit the page from the generated `sitemap.xml` without affecting crawling or indexing (unlike `block_external_search_index`, which also adds a `noindex` directive). Use this only for pages whose canonical URL is already declared, with an accurate `lastmod`, in a different sitemap that is submitted to Google (for example, a page that is a build-time placeholder for a URL actually served and indexed from a different origin).
 - `title`: Required (unless `redirect_to` is set), 60 characters or less. This controls the default value for the `<title>` tag as well at the top level `<h1>` in the document.
 - `title_tag`: If specified, the `<title>` tag on the rendered call will use this value instead of the `title` attribute.
 
