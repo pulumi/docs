@@ -98,7 +98,7 @@ Most organizations will need to think about both. Teams building AI products nee
 
 ## How do you govern and secure agentic infrastructure?
 
-The governance question comes up immediately, and it deserves a direct answer, starting with [what policy as code actually prevents](/blog/ai-agent-guardrails-for-infrastructure/) when an agent is the one proposing the change. Giving an AI agent write access to a production environment is only sensible if the controls are in place first.
+The governance question comes up immediately, and it deserves a direct answer, starting with [what your IaC platform already needs to supply to govern agents safely](/blog/agent-sprawl-iac-platform-is-the-answer/) when an agent is the one proposing the change. Giving an AI agent write access to a production environment is only sensible if the controls are in place first.
 
 Duffy frames it plainly:
 
@@ -204,7 +204,7 @@ The two phrases point at different things, and the second one is ambiguous on it
 
 ### What does infrastructure for agentic coding tools need to provide?
 
-A coding agent needs three things from the infrastructure layer to work reliably: a way to read the actual deployed state rather than guess at it, a way to preview a change before anything in the cloud is touched, and a way to have that change checked against policy automatically. Infrastructure expressed as YAML or console clicks gives an agent none of these; infrastructure expressed as code gives it all three, because `pulumi preview` and policy packs already operate on code as their input. That is what makes infrastructure agent-ready rather than merely automatable.
+A coding agent needs three things from the infrastructure layer to work reliably: a way to read the actual deployed state rather than guess at it, a way to preview a change before anything in the cloud is touched, and a way to have that change checked against policy automatically. Static configuration files or console clicks give an agent none of these; a real IaC engine gives it all three, because `pulumi preview` and policy packs operate on the underlying program regardless of which supported language wrote it. That is what makes infrastructure agent-ready rather than merely automatable.
 
 ## Learn more
 
@@ -212,4 +212,4 @@ Joe Duffy's CascadiaJS 2026 keynote, "The Last Mile Is Code," covers the in-dist
 
 {{< youtube "SOMEfFNPsew?rel=0" >}}
 
-[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/insights/policy/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references, and [AI agent guardrails for infrastructure](/blog/ai-agent-guardrails-for-infrastructure/) covers the failure modes policy as code can't see. For the broader category this page sits inside, see [what AI infrastructure is](/what-is/what-is-ai-infrastructure/).
+[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/insights/policy/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references, and [Agent Sprawl Is Here](/blog/agent-sprawl-iac-platform-is-the-answer/) covers the seven things an IaC platform needs to supply to keep agents governed at scale. For the broader category this page sits inside, see [what AI infrastructure is](/what-is/what-is-ai-infrastructure/).
