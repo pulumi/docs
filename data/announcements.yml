@@ -72,11 +72,20 @@ announcements:
       href: "/events/intro-to-pulumi-esc-managing-secrets/?utm_source=announcement-banner&utm_medium=website&utm_campaign=intro-to-esc-workshop"
     dismissible: true
   - id: release-terraform-state-modules-hcl-2026-08-Ts7hK4
-    active: true
+    active: false
     display: both
     icon: sparkle
     text: "**Latest release:** Full support for Terraform state, cross-language modules, and HCL as a first-class language."
     cta:
       label: See the release
       href: "/releases/terraform-state-backend-modules-hcl/"
+    dismissible: true
+  - id: event-beyond-hyperscalers-2026-09-Bh5nR7
+    active: true
+    display: both
+    badge: Event
+    text: "**Live webinar · Sept 3:** Beyond the Hyperscalers — building sovereign infrastructure."
+    cta:
+      label: Register
+      href: "/events/beyond-the-hyperscalers-sovereignty-panel/?ref=announcement-banner"
     dismissible: true
