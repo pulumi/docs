@@ -168,8 +168,67 @@ def test_domain_routing() -> None:
     assert_clean("test_domain_routing", before)
 
 
+def _md_diff(path: str, lines: list[str], old_start: int = 40) -> str:
+    """A one-hunk unified diff for `path` whose body is `lines` (each already
+    carrying its ` `/`+`/`-` marker)."""
+    olds = sum(1 for l in lines if not l.startswith("+"))
+    news = sum(1 for l in lines if not l.startswith("-"))
+    return (f"diff --git a/{path} b/{path}\n--- a/{path}\n+++ b/{path}\n"
+            f"@@ -{old_start},{olds} +{old_start},{news} @@\n" + "\n".join(lines) + "\n")
+
+
+def test_code_inside_existing_fence_is_not_trivial() -> None:
+    """`has_code_block_change` used to fire only when a changed line WAS a
+    fence marker, so a docs PR editing the Java/Go/TS inside existing fences
+    (+10 lines, one file) classified `review:trivial` and skipped review."""
+    print("test_code_inside_existing_fence_is_not_trivial")
+    before = len(_failures)
+    path = "content/docs/iac/concepts/x.md"
+
+    # Fence marker visible as context: the edit is inside the block.
+    with_marker = [
+        " ```java",
+        " class AwsS3Website extends ComponentResource {",
+        "-    public AwsS3Website(String name) {",
+        "+    AwsS3Website(String name) {",
+        "         super(\"pkg:index:AwsS3Website\", name);",
+        "     }",
+    ]
+    r = run_classify(_pr(1, 1, [path]), _md_diff(path, with_marker))
+    check(r["trivial"] is False, f"an edit under a visible fence marker is not trivial; got {r}")
+
+    # Hunk starts mid-fence: no marker in view, but the lines are code-shaped.
+    mid_fence = [
+        " import com.pulumi.resources.ComponentResourceOptions;",
+        " ",
+        "-public class AwsS3Website extends ComponentResource {",
+        "+class AwsS3Website extends ComponentResource {",
+        "     private final Output<String> url;",
+        "     public AwsS3Website(String name, AwsS3WebsiteArgs args) {",
+    ]
+    r = run_classify(_pr(1, 1, [path]), _md_diff(path, mid_fence))
+    check(r["trivial"] is False, f"a hunk that opens mid-fence with code-shaped lines is not trivial; got {r}")
+
+    # Prose with a parenthesis at a line end is still prose — still trivial.
+    prose = [
+        " Components group resources so a team can reuse them (see below).",
+        "-Each child inherits the parent's provider and options.",
+        "+Each child inherits the parent's provider options.",
+        " Read the next section for the registration step.",
+    ]
+    r = run_classify(_pr(1, 1, [path]), _md_diff(path, prose))
+    check(r["trivial"] is True, f"a prose-only edit stays trivial; got {r}")
+
+    # Deliberately NOT asserted: a hunk whose first context line is a CLOSING
+    # fence reads as if it opened one, so a prose edit right after a code
+    # block also classifies non-trivial. That is the direction the heuristic
+    # is built to fail in — a spurious review run — and it stays that way.
+    assert_clean("test_code_inside_existing_fence_is_not_trivial", before)
+
+
 def main() -> int:
-    tests = [test_oversized_threshold, test_domain_routing]
+    tests = [test_oversized_threshold, test_domain_routing,
+             test_code_inside_existing_fence_is_not_trivial]
     for t in tests:
         try:
             t()
