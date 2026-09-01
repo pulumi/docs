@@ -136,7 +136,7 @@ OUTCOME_KEYS = (
     "abandoned",
 )
 # v3-only additions. `ignored_low_confidence` doesn't carry over: the ⚠️
-# bucket it counted split into ❓ (author-answer, blocking) and 👀
+# bucket it counted split into ❓ (author-answer, blocking) and ⚠️
 # (reviewer-check, advisory) on the v3 surface, so lumping their still-open
 # counts back into one legacy key would erase that distinction — hence two
 # new keys rather than a rename. `author_accepted` covers the REVIEW_STATE
@@ -263,7 +263,7 @@ def fetch_brief_body(repo: str, pr: int) -> str:
     Unlike the author card, the brief carries no `CLAUDE_REVIEW N/M` marker,
     so it isn't among `fetch_pinned_bodies`'s results — this fetches it
     separately, filtering on BRIEF_MARKER the same way `fetch_pinned_bodies`
-    filters on MARKER_RE. Needed to count 👀 reviewer-check findings still
+    filters on MARKER_RE. Needed to count ⚠️ reviewer-check findings still
     open at merge (`reviewer_check_open`) — that bucket lives on the brief,
     not the author card.
     """
@@ -458,7 +458,7 @@ def scrape_body(body: str, merged: bool, head_sha: str | None) -> dict:
 # those live on the evidence page now (scripts/review-v3/README.md), linked
 # via %%EVIDENCE_URL%% rather than rendered into the comment. So this reader
 # classifies from the card's F-id finding rows + the REVIEW_STATE block
-# embedded in the same comment, plus the brief's 👀 rows — never from S3 (no
+# embedded in the same comment, plus the brief's ⚠️ rows — never from S3 (no
 # network dependency beyond the two `gh` comment fetches already in play).
 # "review current at merge" is read straight off the CLAUDE_REVIEW_HEAD
 # sentinel instead of 📜-history SHA archaeology.
@@ -468,7 +468,7 @@ V3_SECTION_HEADINGS = {
     "author-answer": "❓ Only you can answer",
     "resolved": "✅ Resolved since last review",
 }
-V3_BRIEF_HEADING = "👀 Check these before approving"
+V3_BRIEF_HEADING = "⚠️ Check these before approving"
 
 
 def _iter_v3_finding_lines(body: str, heading_substring: str):
@@ -775,7 +775,7 @@ def render_stats(agg: dict, since: str) -> str:
         # Legacy columns (Fixed .. Abandoned) count the same thing for v2 and
         # v3 records. The v3-only columns are additive: a v2-only window
         # renders them all zero rather than needing a second table shape.
-        "| Author | Fixed | Conceded | Ignored 🚨 | Ignored ⚠️ | Ignored ❓ | 👀 Open | Author-accepted | Bulk | Unconfirmed | Abandoned |",
+        "| Author | Fixed | Conceded | Ignored 🚨 | Ignored ⚠️ | Ignored ❓ | ⚠️ Open | Author-accepted | Bulk | Unconfirmed | Abandoned |",
         "| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for kind in ("human", "bot"):
@@ -926,7 +926,7 @@ def self_test() -> int:
     raw = extract_v3_findings(v3_author, v3_brief)
     ids = {f["id"] for f in raw}
     check("F1-F4 extracted", ids == {"F1", "F2", "F3", "F4"})
-    check("F4 comes from the brief's 👀 bucket",
+    check("F4 comes from the brief's ⚠️ bucket",
           next(f for f in raw if f["id"] == "F4")["bucket"] == "reviewer-check")
 
     # Undecided: every F-id is still structurally open, current review.

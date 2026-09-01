@@ -47,10 +47,10 @@ messages.
 
 - `outstanding` (🚨 must fix or refute — blocks)
 - `author-answer` (❓ only the author can answer — blocks)
-- `reviewer-check` (👀 reviewer should look before approving — advisory)
+- `reviewer-check` (⚠️ reviewer should look before approving — advisory)
 - `preexisting` (💡 not this PR's fault — optional)
 
-The ⚠️→❓/👀 split is verdict-driven in the composer: `unverifiable` →
+The ⚠️→❓/⚠️ split is verdict-driven in the composer: `unverifiable` →
 `author-answer`; `framing-drift`, low-confidence hunches, soft cross-sibling
 mismatches → `reviewer-check`. The model may promote
 (reviewer-check → author-answer → outstanding) with a stated reason, never

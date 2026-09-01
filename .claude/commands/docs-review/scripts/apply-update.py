@@ -94,11 +94,12 @@ AUTHOR_HEADINGS = {
     "outstanding": "### 🚨 Must fix or refute",
     "author-answer": "### ❓ Only you can answer these",
 }
-BRIEF_HEADING = "### 👀 Check these before approving"
+BRIEF_HEADING = "### ⚠️ Check these before approving"
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
 _HEAD_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->")
-_UPDATED_RE = re.compile(r"(## Review: (?:author action needed — \d+ items? blocks? merge|no author action needed) — Last updated )\S+")
-_BRIEF_UPDATED_RE = re.compile(r"(## Reviewer\'s guide — Last updated )\S+( \(head )[0-9a-f]{7,40}(\))")
+_AUTHOR_REV_RE = re.compile(r"^## Author action guide v(\d+) — ", re.M)
+_BRIEF_HEADER_RE = re.compile(r"^## Reviewer's guide v\d+ — not for the author", re.M)
+_SUB_RE = re.compile(r"<sub>v\d+ · updated \S+ · head [0-9a-f]{7,40}</sub>")
 
 
 class UpdateError(Exception):
@@ -176,8 +177,10 @@ def _collect_resolved(author_body: str) -> list[str]:
     return out
 
 
-def _render_row(fid: str, ref: str, file: str, body: str, answered: bool) -> str:
-    return cr.render_finding_row(fid, ref=ref, file=file, body=body, answered=answered)
+def _render_row(fid: str, ref: str, file: str, body: str, answered: bool,
+                blob_base: str = "") -> str:
+    return cr.render_finding_row(fid, ref=ref, file=file, body=body,
+                                 answered=answered, blob_base=blob_base)
 
 
 def apply(
@@ -188,12 +191,20 @@ def apply(
     head_sha: str,
     actor: str,
     auto: bool,
+    repo: str = "",
     now: datetime | None = None,
 ) -> tuple[str, str, dict, dict]:
     """Returns (author_out, brief_out, model_state, applied_report)."""
     now = now or datetime.now(timezone.utc)
     today = now.date().isoformat()
     timestamp = now.isoformat().replace("+00:00", "Z")
+    blob_base = (f"https://github.com/{repo}/blob/{head_sha}"
+                 if repo and head_sha else "")
+    # Display revision: the card's own vN + 1. Equals the evidence history
+    # length in the healthy path, and still counts correctly when the prior
+    # evidence object was unavailable (degraded update).
+    m_rev = _AUTHOR_REV_RE.search(author_body)
+    new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
@@ -252,7 +263,8 @@ def apply(
             annotation = entry["annotation"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — {annotation}", answered=True))
+                f"{row['parsed']['body']} — {annotation}", answered=True,
+                blob_base=blob_base))
             del rows[fid]
             disposition_state = review_state.set_disposition(
                 disposition_state, fid, "fixed",
@@ -261,7 +273,8 @@ def apply(
             reason = entry["reason"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — concede: {reason}", answered=True))
+                f"{row['parsed']['body']} — concede: {reason}", answered=True,
+                blob_base=blob_base))
             del rows[fid]
         elif action == "hold":
             shield = f" 🛡️ **Disputed by {actor} on {today}, model held.**"
@@ -284,18 +297,19 @@ def apply(
 
     answered_ids = set(merged_state.get("findings", {}))
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
-                             answered_ids=answered_ids)
+                             answered_ids=answered_ids, blob_base=blob_base)
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
-                            answered_ids=answered_ids)
+                            answered_ids=answered_ids, blob_base=blob_base)
 
     author_out = review_state.replace_block(author_out, merged_state)
     n_blocking = sum(1 for r in rows.values() if r["bucket"] in ("outstanding", "author-answer"))
-    author_out = be._fix_header(author_out, n_blocking)
+    author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
-    author_out = _UPDATED_RE.sub(lambda m: m.group(1) + timestamp, author_out, count=1)
-    brief_out = _BRIEF_UPDATED_RE.sub(
-        lambda m: m.group(1) + timestamp + m.group(2) + head_sha[:8] + m.group(3),
-        brief_out, count=1)
+    brief_out = _BRIEF_HEADER_RE.sub(
+        f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)
+    new_sub = f"<sub>v{new_rev} · updated {timestamp} · head {head_sha[:8]}</sub>"
+    author_out = _SUB_RE.sub(new_sub, author_out, count=1)
+    brief_out = _SUB_RE.sub(new_sub, brief_out, count=1)
 
     report = {
         "blocking": n_blocking,
@@ -308,7 +322,7 @@ def apply(
 
 
 def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc: str,
-                answered_ids: set[str] | None = None) -> str:
+                answered_ids: set[str] | None = None, blob_base: str = "") -> str:
     """Re-render the finding sections of one card, everything else verbatim.
 
     The status glyph is display-only, derived from the merged REVIEW_STATE
@@ -329,7 +343,7 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
             continue
         by_bucket.setdefault(row["bucket"], []).append(_render_row(
             fid, row["parsed"]["ref"], row["parsed"]["file"], row["parsed"]["body"],
-            answered=fid in answered_ids))
+            answered=fid in answered_ids, blob_base=blob_base))
 
     def _table(rows_out: list[str]) -> list[str]:
         return [cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, *rows_out]
@@ -484,7 +498,8 @@ def main() -> int:
     try:
         author_out, brief_out, merged_state, report = apply(
             author_body, brief_body, update,
-            head_sha=args.head_sha, actor=args.actor, auto=args.auto)
+            head_sha=args.head_sha, actor=args.actor, auto=args.auto,
+            repo=args.repo)
         evidence = assemble_evidence(
             prior, author_out, brief_out, merged_state, update,
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
@@ -529,7 +544,8 @@ def _self_test() -> int:
     assert a_out.index("**F4**") < a_out.index("### ❓"), "F4 promoted into 🚨"
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
-    assert "author action needed — 3 items block merge" in a_out, f"count refreshed: {report}"
+    assert "## Author action guide v2 — 3 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
+    assert "<sub>v2 · updated " in a_out and "<sub>v2 · updated " in b_out, "sub line rewritten on both cards"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 

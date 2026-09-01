@@ -360,3 +360,13 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+def test_v3_linked_where_cell_still_yields_anchors():
+    """The composer deep-links the Where cell to the blob at head; the
+    L-range text lives inside the link text, and anchor extraction must see
+    it identically to the bare form (Josh-round grammar change)."""
+    body = (HERE / "testdata" / "v3-fixture-author.md").read_text()
+    assert "](https://github.com/pulumi/docs/blob/" in body  # fixture is linked
+    ranges = gate.parse_anchor_ranges(body)
+    assert (80, 82) in ranges and (61, 61) in ranges

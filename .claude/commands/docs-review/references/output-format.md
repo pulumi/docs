@@ -453,13 +453,13 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW 1/1 -->                ← legacy alias, own line (transition window)
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
-## Review: author action needed — N item(s) block merge — Last updated <ISO 8601>
+## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
 > [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Must fix or refute (blocks merge)
 | | ID | Where | Finding |
 |---|---|---|---|
-| ⬜ | **F1** | `file.md` L12-14 | <finding + fix, terse> |
+| ⬜ | **F1** | [`file.md` L12-14](…/blob/<head sha>/file.md#L12-L14) | <finding + fix, terse> |
 ### ❓ Only you can answer these (blocks merge)
 | | ID | Where | Finding |
 |---|---|---|---|
@@ -467,11 +467,12 @@ _<one sentence: what the PR is and what the review checked>_
 #### Style suggestions                    ← unchanged v2 block (annotator-compatible)
 ### ✅ Resolved since last review         ← same table shape, ✅ glyphs
 📎 **Full evidence:** %%EVIDENCE_URL%% — …
+<sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
 ```
 
-The zero-blocking header is `## Review: no author action needed — …` with a NOTE
+The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
 alert instead of the IMPORTANT one. The status glyph is display-only (⬜
 open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 
@@ -479,10 +480,10 @@ open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 
 ```markdown
 <!-- CLAUDE_REVIEW_BRIEF -->
-## Reviewer's guide — Last updated <ISO 8601> (head <short sha>)   ← display-only sha
-> [!TIP] orienting alert                  ← "work through the 👀 checklist below"
+## Reviewer's guide vN — not for the author
+> [!TIP] orienting alert                  ← "work through the ⚠️ checklist below"
 > [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
-### 👀 Check these before approving
+### ⚠️ Check these before approving
 | | ID | Where | Finding |
 |---|---|---|---|
 | ⬜ | **F4** | `file.md` L95 | <what might be wrong and why> |
@@ -497,9 +498,12 @@ open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 
 One table row per finding, everywhere:
 `| ⬜ | **F<n>** | \`file\` L<a>-<b> | <finding cell> |` — the same four
-columns in 🚨, ❓, 👀, and ✅ Resolved. Literal pipes inside the Finding cell
-are escaped `\|`; the Where cell is `\`file\`` + a bare `L<a>-<b>` range,
-either optional (`—` when both are absent). IDs are assigned by the composer
+columns in 🚨, ❓, ⚠️, and ✅ Resolved. Literal pipes inside the Finding cell
+are escaped `\|`; the Where cell is `\`file\`` + a `L<a>-<b>` range, either
+optional (`—` when both are absent), and the composer deep-links it to the
+blob at the reviewed head — `[\`file\` L<a>-<b>](…/blob/<sha>/file#L<a>-L<b>)`.
+The grammar parses both the linked and the bare form, so a model-added row
+may use the bare form; the deterministic re-render links it. IDs are assigned by the composer
 in render order, are unique for the life of the PR (`high_water` in the
 evidence object is the high-water mark), and are the join key across the
 cards, REVIEW_STATE, the Sentinel, and the evidence object.
@@ -510,12 +514,12 @@ verdict tag, and a one-clause action — aim for ≤ 2 sentences (the evidence
 page carries the deep reasoning; a wall of prose in a cell recreates the
 overload the table exists to fix).
 
-### The ❓/👀 split
+### The ❓/⚠️ split
 
 Deterministic, verdict-driven, applied by the composer (`split_v3_buckets`):
 `unverifiable` → ❓ Only you can answer (sourcing their own claim is the
 author's job — turn-cap unverifiables included); `framing-drift` and other
-low-confidence stubs → 👀 Check these (whether it is really an issue is the
+low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
 reviewer's judgment).
 
 ### The model's edit contract (v3)
@@ -524,11 +528,11 @@ The model edits **both drafts** the way it edits the v2 draft — triage the
 stub TODOs, write the fix prose, fill the summary/confidence TODOs — under
 these rules:
 
-1. **Promote, never demote.** 👀 → ❓ → 🚨 moves are allowed with a stated
+1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
    reason (move the line between sections/drafts and keep its id). Moving a
    finding down is a contract violation `build-evidence.py` rejects (exit 2).
    Exception: a `route: preflight` detector stub whose TODO explicitly says
-   "bucket by reader impact" may land in 👀.
+   "bucket by reader impact" may land in ⚠️.
 1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
    `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
    `**Pre-existing:** <reason>`. The cell must START with the label.
@@ -570,7 +574,7 @@ v3-only rules: `v3-markers` (marker lines intact; author card is the sole
 `CLAUDE_REVIEW_HEAD` carrier; brief carries none), `v3-section-order`,
 `v3-review-state` (a corrupt REVIEW_STATE block hard-fails — it would
 silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
-the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/👀 row
+the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/⚠️ row
 parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
 high-water mark), `v3-blocking-count`, and `bucket-split-faithful`
 (promote-only against the evidence base; a finding may never be demoted or
@@ -586,5 +590,5 @@ validated by `scripts/review-v3/validate-evidence.py`.
 
 `count-buckets` on a v3 body counts blocking as 🚨+❓ rows **without a
 REVIEW_STATE disposition** (a corrupt block conservatively counts every row),
-and reports the brief's 👀 rows as `low_confidence`; the `outstanding=` output
+and reports the brief's ⚠️ rows as `low_confidence`; the `outstanding=` output
 drives `set-review-label.sh` exactly as on v2.

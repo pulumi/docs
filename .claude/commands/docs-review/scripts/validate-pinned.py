@@ -324,15 +324,15 @@ V3_LEGACY_ALIAS_RE = re.compile(r"^<!-- CLAUDE_REVIEW 1/1 -->\s*$", re.MULTILINE
 V3_HEAD_MARKER_RE = re.compile(r"^<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->\s*$", re.MULTILINE)
 FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
 V3_EVIDENCE_TOKEN = "%%EVIDENCE_URL%%"
-# Author header: `## Review: author action needed — N item(s) block(s) merge — …`
-# or the zero form `## Review: no author action needed — …` (compose_v3's
-# header_verb).
+# Author header: `## Author action guide vN — N item(s) block(s) merge` or
+# the zero form `## Author action guide vN — nothing blocks merge`. vN is the
+# display revision (history length); timestamps live in the <sub> footer line.
 V3_AUTHOR_HEADER_RE = re.compile(
-    r"^## Review: (?:author action needed — (\d+) items? blocks? merge|no author action needed)", re.MULTILINE
+    r"^## Author action guide v\d+ — (?:(\d+) items? blocks? merge|nothing blocks merge)", re.MULTILINE
 )
 # H3 headings, in required order, per references/output-format.md §v3.
 V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Only you can answer these", "✅ Resolved since last review"]
-V3_BRIEF_SECTIONS = ["👀 Check these before approving", "✅ What you can rubber-stamp"]
+V3_BRIEF_SECTIONS = ["⚠️ Check these before approving", "✅ What you can rubber-stamp"]
 # The in-place rewrite labels build-evidence.py files off the cards — a bullet
 # whose body starts with one of these is dispositioned, not deleted.
 V3_REWRITE_LABELS = ("**Spurious:**", "**Mis-sourced:**", "**Pre-existing:**")
@@ -368,7 +368,7 @@ def v3_finding_rows(body: str, heading_substring: str) -> list[tuple[int, str, d
     excluded), plus `- ` bullets — which can never parse as rows any more, so
     they surface as None for the grammar rule to judge (a bullet that LOOKS
     like a finding is a grammar break; a plain prose bullet is advisory and
-    tolerated in 👀 only)."""
+    tolerated in ⚠️ only)."""
     span = find_section(body, heading_substring)
     if span is None:
         return []
@@ -2789,18 +2789,18 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
         pass  # v3-review-state already fires
 
     sections = [("author", ctx.body, s) for s in ("🚨 Must fix or refute", "❓ Only you can answer these")]
-    sections.append(("brief", ctx.brief or "", "👀 Check these before approving"))
+    sections.append(("brief", ctx.brief or "", "⚠️ Check these before approving"))
     for where, text, heading in sections:
         for lineno, line, parsed in v3_finding_rows(text, heading):
             if parsed is None:
-                # The 👀 section is advisory — the model may leave the
+                # The ⚠️ section is advisory — the model may leave the
                 # reviewer a plain prose bullet there (a judgment call, an
                 # editorial observation) that is deliberately NOT a tracked
                 # finding. Only a line that *tries* to be a finding (a `|`
                 # row, or a bullet carrying an F-id or checkbox) must parse.
                 # Blocking sections have no such latitude: an untracked
                 # blocking row would be invisible to REVIEW_STATE and the
-                # Sentinel. (First live fork battery: a legitimate 👀 note
+                # Sentinel. (First live fork battery: a legitimate ⚠️ note
                 # `- **One editorial call:** …` killed the whole publish.)
                 looks_like_finding = line.lstrip().startswith("|") or bool(
                     re.match(r"^\s*-\s*(\[[ x]\]|\*\*F[\d?]+\*\*)", line))
@@ -2809,7 +2809,7 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
                 v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
                                    "every finding renders as a table row `| ⬜ | **F<n>** | `file` L<a>-<b> | <finding> |`",
                                    line[:120],
-                                   "Edit the Finding cell in place but keep the row shape — glyph, id, Where, Finding cells. New findings are new `| ⬜ | **F?** | … |` rows; escape literal pipes in the cell as `\\|`. (Plain advisory bullets are allowed in 👀 only.)"))
+                                   "Edit the Finding cell in place but keep the row shape — glyph, id, Where, Finding cells. New findings are new `| ⬜ | **F?** | … |` rows; escape literal pipes in the cell as `\\|`. (Plain advisory bullets are allowed in ⚠️ only.)"))
                 continue
             fid = parsed["id"]
             if fid == "F?":
@@ -2835,7 +2835,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     m = V3_AUTHOR_HEADER_RE.search(ctx.body)
     if not m:
         return [Violation("v3-blocking-count", "<author>",
-                          "header `## Review: author action needed — N item(s) block merge — …` or `## Review: no author action needed — …`",
+                          "header `## Author action guide vN — N item(s) block merge` or `## Author action guide vN — nothing blocks merge`",
                           (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
     rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
@@ -2857,7 +2857,7 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     may not vanish — it is either in a bucket, rewritten in place with a
     disposition label, or referenced elsewhere (✅ Resolved). Mirrors
     compose-review.split_v3_buckets: `unverifiable` → ❓, everything else
-    low-confidence → 👀."""
+    low-confidence → ⚠️."""
     base = ctx.evidence_base
     if base is None:
         return []
@@ -2865,7 +2865,7 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     for text, heading, bucket in (
         (ctx.body, "🚨 Must fix or refute", "outstanding"),
         (ctx.body, "❓ Only you can answer these", "author-answer"),
-        (ctx.brief or "", "👀 Check these before approving", "reviewer-check"),
+        (ctx.brief or "", "⚠️ Check these before approving", "reviewer-check"),
     ):
         for _, _, parsed in v3_finding_rows(text, heading):
             if parsed and parsed["id"] != "F?":
@@ -2888,7 +2888,7 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
             v.append(Violation("bucket-split-faithful", f"<{fid}>",
                                f"{fid} at or above its composed bucket `{base_bucket}`",
                                f"demoted to `{now}`",
-                               "The split is promote-only (👀 → ❓ → 🚨). To argue a finding down, rewrite it as `**Spurious:** <reason>` — demotion by moving the row is not allowed."))
+                               "The split is promote-only (⚠️ → ❓ → 🚨). To argue a finding down, rewrite it as `**Spurious:** <reason>` — demotion by moving the row is not allowed."))
     return v
 
 
@@ -3101,7 +3101,7 @@ RULES = [
     },
     {
         "id": "v3-section-order",
-        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Only you can answer these → ✅ Resolved) and brief sections (👀 Check these → ✅ What you can rubber-stamp) present in skeleton order.",
+        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Only you can answer these → ✅ Resolved) and brief sections (⚠️ Check these → ✅ What you can rubber-stamp) present in skeleton order.",
         "hint": "Render every mandatory section in order, using its explicit-empty form when there is no content.",
         "check": check_v3_section_order,
         "surfaces": ("v3",),
@@ -3122,7 +3122,7 @@ RULES = [
     },
     {
         "id": "v3-finding-grammar",
-        "desc": "Schema v21: every 🚨/❓/👀 row parses via the shared finding grammar; numbered ids unique across both cards and ≤ the REVIEW_STATE high-water mark; model additions use `F?` (numbered by build-evidence.py after validation).",
+        "desc": "Schema v21: every 🚨/❓/⚠️ row parses via the shared finding grammar; numbered ids unique across both cards and ≤ the REVIEW_STATE high-water mark; model additions use `F?` (numbered by build-evidence.py after validation).",
         "hint": "Edit finding text in place, keep the row shape; new findings are `- [ ] **F?** …`.",
         "check": check_v3_finding_grammar,
         "surfaces": ("v3",),
@@ -3136,7 +3136,7 @@ RULES = [
     },
     {
         "id": "bucket-split-faithful",
-        "desc": "Schema v21: promote-only against `.review-evidence-base.json` — a composed finding may move 👀→❓→🚨, never down, and may not vanish without an in-place disposition rewrite.",
+        "desc": "Schema v21: promote-only against `.review-evidence-base.json` — a composed finding may move ⚠️→❓→🚨, never down, and may not vanish without an in-place disposition rewrite.",
         "hint": "To argue a finding down, rewrite its body as `**Spurious:** <reason>` — never move it to a lower bucket or delete the row.",
         "check": check_v3_bucket_split_faithful,
         "surfaces": ("v3",),
@@ -3589,7 +3589,7 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
         # disposition — a fixed/refuted/accepted finding no longer holds the
         # label even before the next re-render. `--pr` mode's marker regex
         # (`<!-- CLAUDE_REVIEW`) already matches both cards' markers, so the
-        # joined body carries the brief's 👀 section too. A corrupt
+        # joined body carries the brief's ⚠️ section too. A corrupt
         # REVIEW_STATE counts every row as blocking (conservative, warned) —
         # the label driver must never crash or fail open on a bad block.
         dispositioned: set[str] = set()
@@ -3607,7 +3607,7 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
             if p is None or p["id"] == "F?" or p["id"] not in dispositioned
         )
         print(f"outstanding={outstanding}")
-        print(f"low_confidence={sum(1 for _, _, p in v3_finding_rows(body, '👀 Check these before approving') if p is not None)}")
+        print(f"low_confidence={sum(1 for _, _, p in v3_finding_rows(body, '⚠️ Check these before approving') if p is not None)}")
         print("triaged=0")
         print("pre_existing=0")
         resolved_rows = v3_finding_rows(body, "✅ Resolved since last review")

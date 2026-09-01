@@ -33,7 +33,7 @@ emitted TWO drafts instead of `.review-draft.md`:
 - **`.review-draft-author.md`** — the author card (🚨 Must fix or refute /
   ❓ Only you can answer / style suggestions / ✅ Resolved).
 - **`.review-draft-brief.md`** — the reviewer brief (summary + confidence
-  table / 👀 Check these / rubber-stampable counts).
+  table / ⚠️ Check these / rubber-stampable counts).
 
 Your editorial pass edits **both files** under the contract in
 `references/output-format.md` §The model's edit contract (v3), which overrides
@@ -45,8 +45,8 @@ on the evidence page. You triage the finding rows (promote-only; new findings
 as `| ⬜ | **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
 `**Pre-existing:**` rewrites instead of deletions), write the fix prose, the
 summary, and the confidence levels, and never touch the HTML markers, the
-REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, or the composer-owned count
-lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
+REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`
+version line, the Where-cell links, or the composer-owned count lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
 rules (§Style suggestions in the workflow prompt) — the sidecar and ✏️
 annotations target the author card. If either draft opens with a
 `> [!CAUTION]` banner, stop and exit without editing — v3 has **no**

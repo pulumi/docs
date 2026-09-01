@@ -1,10 +1,10 @@
 <!-- CLAUDE_REVIEW_BRIEF -->
-## Reviewer's guide — Last updated 2026-08-31T18:00:00Z (head aaaabbbb)
+## Reviewer's guide v1 — not for the author
 
 > [!TIP]
-> **This is the reviewer's guide.** Before you approve this PR, work through the 👀 checklist below. Everything else was machine-verified — the evidence page has the receipts.
+> **This is the reviewer's guide.** Before you approve this PR, work through the ⚠️ checklist below. Everything else was machine-verified — the evidence page has the receipts.
 >
-> _PR author: your to-do list is the other review comment, "Review: author action needed" — nothing on this card is yours._
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
 
 > [!NOTE]
 > **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), (2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.
@@ -16,11 +16,11 @@
 > | mechanics | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |
 > | facts | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |
 
-### 👀 Check these before approving
+### ⚠️ Check these before approving
 
 | | ID | Where | Finding |
 |---|---|---|---|
-| ⬜ | **F4** | `content/docs/iac/x.md` L95 | *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.> |
+| ⬜ | **F4** | [`content/docs/iac/x.md` L95](https://github.com/pulumi/docs/blob/aaaabbbbccccddddeeeeffff0000111122223333/content/docs/iac/x.md#L95) | *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.> |
 
 ### ✅ What you can rubber-stamp
 
@@ -32,8 +32,10 @@
 
 📎 **Full evidence:** %%EVIDENCE_URL%%
 
+<sub>v1 · updated 2026-08-31T18:00:00Z · head aaaabbbb</sub>
+
 <!-- CLAUDE_REVIEW_FOOTER -->
 
 ---
 
-**For the reviewer:** the 👀 items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment headed "Review: author action needed"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the 👀 items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the rest of this PR's review is machine-verified and linked from the evidence page. The author's open action items live on their own card (the comment headed "Author action guide"); merge is blocked until they answer those, so you don't need to police them. Approving this PR asserts the ⚠️ items looked right to you. If something here seems off, comment on the PR — `@claude #update-review` re-adjudicates with your input.

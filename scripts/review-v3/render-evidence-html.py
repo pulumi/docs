@@ -63,7 +63,7 @@ VERDICT_ORDER = {v: i for i, (v, _, _) in enumerate(VERDICT_VOCAB)}
 BUCKET_LABEL = {
     "outstanding": "🚨 Outstanding",
     "author-answer": "❓ Author answer",
-    "reviewer-check": "👀 Reviewer check",
+    "reviewer-check": "⚠️ Reviewer check",
     "preexisting": "💡 Preexisting",
 }
 

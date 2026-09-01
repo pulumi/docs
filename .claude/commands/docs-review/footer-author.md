@@ -12,4 +12,4 @@
    `@claude I know what I'm doing, mark everything resolved #update-review`
 1. **Start over** — flip the PR to draft and back to ready; the review regenerates from scratch.
 
-Pushing new commits refreshes this review automatically when the changes line up with the findings above; otherwise mention `@claude #update-review`. Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: CONTRIBUTING.md §AI-assisted contributions.
+Pushing new commits refreshes this review automatically when the changes line up with the findings above; otherwise mention `@claude #update-review`. Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](%%CONTRIBUTING_URL%%).

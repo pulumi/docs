@@ -517,7 +517,7 @@ def test_aggregate_mixed_window_keeps_legacy_columns_stable():
     assert agg["outcomes"]["human"]["reviewer_check_open"] == 1
     report = sro.render_stats(agg, "2026-04-01")
     assert "Ignored ❓" in report
-    assert "👀 Open" in report
+    assert "⚠️ Open" in report
 
 
 def main() -> int:

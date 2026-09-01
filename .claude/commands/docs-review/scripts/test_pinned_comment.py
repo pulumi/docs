@@ -106,7 +106,7 @@ def brief_card() -> str:
     return (
         "<!-- CLAUDE_REVIEW_BRIEF -->\n"
         "## Reviewer's guide — Last updated now (head aaaabbbb)\n\n"
-        "### 👀 Check these before approving\n\n- **F2** thing\n\n" + FOOTER
+        "### ⚠️ Check these before approving\n\n- **F2** thing\n\n" + FOOTER
     )
 
 

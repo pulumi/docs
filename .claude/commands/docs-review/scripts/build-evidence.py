@@ -59,7 +59,7 @@ AUTHOR_SECTIONS = {
     "### ❓ Only you can answer these": "author-answer",
 }
 BRIEF_SECTIONS = {
-    "### 👀 Check these before approving": "reviewer-check",
+    "### ⚠️ Check these before approving": "reviewer-check",
 }
 # Rank for the never-demote check.
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "preexisting": 0}
@@ -71,7 +71,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
-_HEADER_RE = re.compile(r"^## Review: (?:author action needed — \d+ items? blocks? merge|no author action needed)( — Last updated .*)$")
+_HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _CONF_ROW_RE = re.compile(r"^> \| (?P<dim>[^|]+) \| (?P<level>[^|]+) \|")
 
@@ -116,7 +116,7 @@ def _walk(body: str, headings: dict[str, str], where: str):
                     )
                 yield bucket, i, parsed, raw
             elif raw.startswith("- "):
-                # Bullets can never be finding rows any more. The 👀 section
+                # Bullets can never be finding rows any more. The ⚠️ section
                 # may carry plain advisory prose bullets the model leaves
                 # for the reviewer — untracked by design (no id, no
                 # REVIEW_STATE entry, not a finding); they stay in the
@@ -265,17 +265,20 @@ def _clean(body: str, drop: set[int], renumber: dict[int, str]) -> str:
     return "\n".join(out) + ("\n" if body.endswith("\n") else "")
 
 
-def _fix_header(body: str, n_blocking: int) -> str:
+def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
+    """Recompute the header's blocking count; `rev` bumps the display
+    revision (the update lane passes it — initial-lane fixes keep v1)."""
     lines = body.splitlines()
     for i, line in enumerate(lines):
         m = _HEADER_RE.match(line)
         if m:
             if n_blocking:
                 noun = "item blocks" if n_blocking == 1 else "items block"
-                verb = f"author action needed — {n_blocking} {noun} merge"
+                verb = f"{n_blocking} {noun} merge"
             else:
-                verb = "no author action needed"
-            lines[i] = f"## Review: {verb}{m.group(1)}"
+                verb = "nothing blocks merge"
+            out_rev = rev if rev is not None else int(m.group("rev"))
+            lines[i] = f"## Author action guide v{out_rev} — {verb}"
             break
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
@@ -296,7 +299,7 @@ def _self_test() -> int:
     state_block = review_state.serialize_block(dict(review_state.empty_state(), high_water=3))
     author = "\n".join([
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
-        "## Review: author action needed — 2 items block merge — Last updated " + ts, "",
+        "## Author action guide v1 — 2 items block merge", "",
         "### 🚨 Must fix or refute (blocks merge)", "",
         "| | ID | Where | Finding |", "|---|---|---|---|",
         "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
@@ -307,10 +310,10 @@ def _self_test() -> int:
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "", state_block, "",
     ]) + "\n"
     brief = "\n".join([
-        "<!-- CLAUDE_REVIEW_BRIEF -->", "## Reviewer's guide — Last updated " + ts + " (head aaaa)", "",
+        "<!-- CLAUDE_REVIEW_BRIEF -->", "## Reviewer's guide v1 — not for the author", "",
         "> **Summary:** A tidy little PR about a.md.", "",
         "> | Dimension | Level | Notes |", "> | :--- | :---: | :--- |", "> | facts | HIGH |  |", "",
-        "### 👀 Check these before approving", "",
+        "### ⚠️ Check these before approving", "",
         "| | ID | Where | Finding |", "|---|---|---|---|",
         "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |", "",
         "💡 **Pre-existing issues in touched files:** 0 — x", "",
@@ -325,13 +328,13 @@ def _self_test() -> int:
     assert ev["high_water"] == 4
     assert any(t["id"] == "F3" and t["kind"] == "spurious" for t in ev["triaged"])
     assert "**F4**" in author_out and "F?" not in author_out
-    assert "F3" not in brief_out.split("💡")[0].split("👀")[1], "spurious bullet dropped from brief"
+    assert "F3" not in brief_out.split("💡")[0].split("⚠️")[1], "spurious bullet dropped from brief"
     assert ev["summary"] == "A tidy little PR about a.md."
     assert ev["confidence"]["facts"] == "HIGH"
     assert ev["history"][-1]["summary"] == "A tidy little PR about a.md."
-    assert "author action needed — 3 items block merge" in author_out
+    assert "## Author action guide v1 — 3 items block merge" in author_out
 
-    # demotion: F1 rendered in the brief's 👀 → violation
+    # demotion: F1 rendered in the brief's ⚠️ → violation
     demoted_brief = brief.replace(
         "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |",
         "| ⬜ | **F1** | `a.md` L8 | softened down |\n| ⬜ | **F3** | `a.md` L12 | **Spurious:** stale data |",

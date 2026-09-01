@@ -1588,7 +1588,7 @@ def compose(args: argparse.Namespace) -> str:
 # `--surface v3` renders the same prepared inputs as TWO comments plus a
 # machine-owned evidence object (see scripts/review-v3/README.md):
 #   .review-draft-author.md — the author card: 🚨 / ❓ / style / ✅ + REVIEW_STATE
-#   .review-draft-brief.md  — the reviewer brief: summary, 👀, rubber-stamp counts
+#   .review-draft-brief.md  — the reviewer brief: summary, ⚠️, rubber-stamp counts
 #   .review-evidence-base.json — trail/log/etc. for S3; comments only link it
 # The model edits both drafts under the contract in output-format.md §v3; the
 # deterministic build-evidence.py step then parses the finding bullets back out
@@ -1602,7 +1602,7 @@ FOOTER_AUTHOR_PATH = Path(__file__).resolve().parent.parent / "footer-author.md"
 FOOTER_REVIEWER_PATH = Path(__file__).resolve().parent.parent / "footer-reviewer.md"
 _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 
-# One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / 👀,
+# One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / ⚠️,
 # and the ✅ Resolved log):
 #
 #   | | ID | Where | Finding |
@@ -1620,10 +1620,15 @@ _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 FINDING_TABLE_HEADER = "| | ID | Where | Finding |"
 FINDING_TABLE_SEPARATOR = "|---|---|---|---|"
 _TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
+# The Where cell parses BOTH forms — linked (composer output, deep link to
+# the blob at head) and bare (a model-added row; build-evidence/apply-update
+# re-render it linked). The visible text is identical either way, so
+# auto-refresh-gate's L-range extraction sees the same anchors.
 FINDING_LINE_RE = re.compile(
     r"^\|\s*(?P<status>[⬜✅])\s*"
     r"\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
-    r"\|\s*(?:`(?P<file>[^`|]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?\s*(?:—\s*)?"
+    r"\|\s*(?:\[)?(?:`(?P<file>[^`|\]]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?"
+    r"(?:\]\((?P<url>[^)|\s]+)\))?\s*(?:—\s*)?"
     r"\|\s*(?P<body>(?:\\\||[^|\n])*?\S)\s*\|\s*$"
 )
 
@@ -1637,15 +1642,34 @@ def is_table_furniture(line: str) -> bool:
     return stripped.replace(" ", "") == FINDING_TABLE_HEADER.replace(" ", "")
 
 
+def blob_anchor(ref: str) -> str:
+    """`L12-14` → `#L12-L14`; `L12` → `#L12`; multi-range uses the first."""
+    nums = _lines_from_ref(ref)
+    if not nums:
+        return ""
+    if len(nums) == 2:
+        return f"#L{nums[0]}-L{nums[1]}"
+    return f"#L{nums[0]}"
+
+
 def render_finding_row(fid: str, *, ref: str = "", file: str = "",
-                       body: str = "", answered: bool = False) -> str:
-    """The canonical row renderer; inverse of parse_finding_line."""
+                       body: str = "", answered: bool = False,
+                       blob_base: str = "") -> str:
+    """The canonical row renderer; inverse of parse_finding_line.
+
+    With `blob_base` (https://github.com/<repo>/blob/<head_sha>) and a file,
+    the Where cell deep-links to the exact line(s) at the reviewed head. The
+    link is re-derived on every render, so it always points at the head the
+    review currently describes.
+    """
     where_bits = []
     if file:
         where_bits.append(f"`{file}`")
     if ref:
         where_bits.append(ref)
     where = " ".join(where_bits) or "—"
+    if blob_base and file:
+        where = f"[{where}]({blob_base}/{file}{blob_anchor(ref)})"
     glyph = "✅" if answered else "⬜"
     cell = body.replace("|", "\\|")
     return f"| {glyph} | **{fid}** | {where} | {cell} |"
@@ -1660,7 +1684,7 @@ _V2_STUB_RE = re.compile(
 
 
 def render_finding_line(fid: str, v2_bullet: str, checkbox: bool = False,
-                        answered: bool = False) -> str:
+                        answered: bool = False, blob_base: str = "") -> str:
     """Adapt a v2-shaped stub bullet into a v3 table row.
 
     `checkbox` is accepted for caller compatibility and ignored — the status
@@ -1669,13 +1693,15 @@ def render_finding_line(fid: str, v2_bullet: str, checkbox: bool = False,
     del checkbox
     m = _V2_STUB_RE.match(v2_bullet)
     if not m:
-        return render_finding_row(fid, body=v2_bullet.strip(), answered=answered)
+        return render_finding_row(fid, body=v2_bullet.strip(), answered=answered,
+                                  blob_base=blob_base)
     return render_finding_row(
         fid,
         ref=(m.group("ref") or "").strip(),
         file=(m.group("file") or "").strip(),
         body=m.group("body").strip(),
         answered=answered,
+        blob_base=blob_base,
     )
 
 
@@ -1710,14 +1736,14 @@ def _lines_from_ref(ref: str) -> list[int] | None:
 
 
 def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]:
-    """Deterministic ❓/👀 split of the v2 ⚠️ bucket, keyed on verdict alone.
+    """Deterministic ❓/⚠️ split of the v2 ⚠️ bucket, keyed on verdict alone.
 
     `unverifiable` → ❓ (only the author can source or soften their own claim —
     a turn-cap unverifiable still ends the same way: the author supplies the
     source). Everything else the composer stubs at low confidence
-    (framing-drift, weakly-verified) → 👀: there might be an issue, and that
+    (framing-drift, weakly-verified) → ⚠️: there might be an issue, and that
     judgment belongs to the reviewer, not the author. The model may PROMOTE
-    (👀 → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
+    (⚠️ → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
     in the validator holds it to that.
     """
     author_answer: list[dict] = []
@@ -1730,11 +1756,23 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
     return author_answer, reviewer_check
 
 
-def _read_footer(path: Path) -> str:
+CONTRIBUTING_URL_TOKEN = "%%CONTRIBUTING_URL%%"
+
+
+def _read_footer(path: Path, contributing_url: str = "") -> str:
+    """Footer include, with the CONTRIBUTING deep link substituted at compose
+    time (the repo is known here, unlike the evidence URL, which only the
+    publish step knows). Without a repo the link degrades to plain text
+    rather than shipping a dead relative link."""
     try:
-        return path.read_text(encoding="utf-8").rstrip("\n")
+        text = path.read_text(encoding="utf-8").rstrip("\n")
     except OSError:
         return FOOTER_SENTINEL
+    if contributing_url:
+        text = text.replace(CONTRIBUTING_URL_TOKEN, contributing_url)
+    else:
+        text = re.sub(r"\[([^\]]+)\]\(" + re.escape(CONTRIBUTING_URL_TOKEN) + r"\)", r"\1", text)
+    return text
 
 
 # The stub TODOs in build_stubs() speak v2 — they tell the model to move
@@ -1770,7 +1808,7 @@ _V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
     ),
     (
         "otherwise move to ⚠️ Low-confidence",
-        "otherwise move it under `### 👀 Check these before approving` on the reviewer brief",
+        "otherwise move it under `### ⚠️ Check these before approving` on the reviewer brief",
     ),
     (
         "promote to 🚨 Outstanding",
@@ -1836,7 +1874,13 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     author_answer_stubs, reviewer_check_stubs = split_v3_buckets(prep["lowconf_stubs"])
 
-    # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, 👀.
+    blob_base = (f"https://github.com/{args.repo}/blob/{head_sha}"
+                 if args.repo and head_sha else "")
+    contributing_url = (
+        f"https://github.com/{args.repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
+        if args.repo else "")
+
+    # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, ⚠️.
     findings: list[dict] = []
     next_id = 1
 
@@ -1862,7 +1906,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     outstanding_lines: list[str] = []
     for s in prep["outstanding_stubs"]:
         fid, _ = _assign(s, "outstanding", s["bullet"])
-        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
     for f in prep["vale_blockers"]:
         fname = str(f.get("file") or "").strip()
         cat = str(f.get("category") or "style")
@@ -1876,17 +1920,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "origin": "style-blocker",
         }
         fid, _ = _assign(stub, "outstanding", v2_bullet)
-        outstanding_lines.append(render_finding_line(fid, v2_bullet))
+        outstanding_lines.append(render_finding_line(fid, v2_bullet, blob_base=blob_base))
 
     question_lines: list[str] = []
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
-        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
 
     check_lines: list[str] = []
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
-        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"])))
+        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
 
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     high_water = next_id - 1
@@ -1963,9 +2007,14 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     }
 
     # ---- author card ----
+    # The review revision: v1 on the initial compose; apply-update bumps it
+    # as it appends history entries. A from-scratch regen naturally restarts
+    # at v1. Display-only — the machine-read head lives in CLAUDE_REVIEW_HEAD.
+    rev = len(evidence_base["history"])
+    sub_line = f"<sub>v{rev} · updated {timestamp} · head {head_sha_short}</sub>"
     if n_blocking:
         noun = "item blocks" if n_blocking == 1 else "items block"
-        header_verb = f"author action needed — {n_blocking} {noun} merge"
+        header_verb = f"{n_blocking} {noun} merge"
         orient = [
             "> [!IMPORTANT]",
             "> **You = the PR author.** This review needs your answers before this "
@@ -1974,7 +2023,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "to type.",
         ]
     else:
-        header_verb = "no author action needed"
+        header_verb = "nothing blocks merge"
         orient = [
             "> [!NOTE]",
             "> Nothing here blocks merge — the review found no items needing an answer from the PR author.",
@@ -1989,7 +2038,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
-        f"## Review: {header_verb} — Last updated {timestamp}",
+        f"## Author action guide v{rev} — {header_verb}",
         "",
         *orient,
         "",
@@ -2019,7 +2068,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         _review_state_block(high_water),
         "",
-        _read_footer(FOOTER_AUTHOR_PATH),
+        sub_line,
+        "",
+        _read_footer(FOOTER_AUTHOR_PATH, contributing_url),
         "",
     ]
     author_draft = "\n".join(a for a in author if a is not None)
@@ -2041,15 +2092,15 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     brief: list[str] = [
         BRIEF_MARKER,
-        f"## Reviewer's guide — Last updated {timestamp} (head {head_sha_short})",
+        f"## Reviewer's guide v{rev} — not for the author",
         "",
         "> [!TIP]",
         "> **This is the reviewer's guide.** Before you approve this PR, work "
-        "through the 👀 checklist below. Everything else was machine-verified — "
+        "through the ⚠️ checklist below. Everything else was machine-verified — "
         "the evidence page has the receipts.",
         ">",
-        '> _PR author: your to-do list is the other review comment, "Review: '
-        'author action needed" — nothing on this card is yours._',
+        '> _PR author: your to-do list is the other review comment, "Author '
+        'action guide" — nothing on this card is yours._',
         "",
     ]
     if prep["outage_banner"]:
@@ -2060,7 +2111,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         render_summary_block(prep["confidence_dims"], prep["forced_levels"]).replace(
             "> [!TIP]", "> [!NOTE]", 1),
         "",
-        "### 👀 Check these before approving",
+        "### ⚠️ Check these before approving",
         "",
     ]
     brief += _finding_table(check_lines, _V3_EMPTY_CHECKS)
@@ -2078,7 +2129,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         f"📎 **Full evidence:** {EVIDENCE_URL_TOKEN}",
         "",
-        _read_footer(FOOTER_REVIEWER_PATH),
+        sub_line,
+        "",
+        _read_footer(FOOTER_REVIEWER_PATH, contributing_url),
         "",
     ]
     brief_draft = "\n".join(b for b in brief if b is not None)
@@ -2110,8 +2163,8 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     for line_needed in ("### 🚨 Must fix or refute", "### ❓ Only you can answer these"):
         if line_needed not in author_draft:
             problems.append(f"author draft missing section {line_needed}")
-    if "### 👀 Check these before approving" not in brief_draft:
-        problems.append("brief draft missing 👀 section")
+    if "### ⚠️ Check these before approving" not in brief_draft:
+        problems.append("brief draft missing ⚠️ section")
     if "<!-- REVIEW_STATE" not in author_draft:
         problems.append("author draft missing REVIEW_STATE block")
     for name, draft in (("author", author_draft), ("brief", brief_draft)):

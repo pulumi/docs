@@ -260,7 +260,7 @@ Closed action set — `apply-update.py` rejects anything else (exit 2):
 | `resolve` | the push fixed it (verify against the diff) | row → ✅ Resolved with the annotation | `fixed` (actor `update-lane`, sha) |
 | `concede` | the model concedes the finding was wrong | row → ✅ with `concede: <reason>` — the exact v2 machine-scraped shape | none — the annotation is the record |
 | `hold` | dispute adjudicated against the author | row keeps its bucket, gains `🛡️ **Disputed by <actor> on YYYY-MM-DD, model held.**` | none — still open |
-| `promote` | bucket moves **up only** (👀 → ❓ → 🚨) | row moves section/card | none |
+| `promote` | bucket moves **up only** (⚠️ → ❓ → 🚨) | row moves section/card | none |
 | `add` | new problem in the pushed lines only | new row, next F-id | none |
 | `retext` | wording sharpened | body replaced, id + anchor preserved | none |
 

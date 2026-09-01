@@ -471,7 +471,7 @@ def _extract_style_block(body: str) -> list[str]:
 def extract_items_v3(author_body: str, brief_body: str) -> list[dict]:
     """v3 item extraction: F-id findings from the author card + brief.
 
-    🚨/❓ live on the author card and block merge; 👀 lives on the brief and
+    🚨/❓ live on the author card and block merge; ⚠️ lives on the brief and
     is advisory (same non-blocking treatment as v2's ⚠️ bucket). Style
     suggestions are the unchanged v2 block. Finding ids are the card's own
     `F<n>` ids — stable across re-reviews — rather than the `bucket:L<n>`
@@ -517,7 +517,7 @@ def extract_items_v3(author_body: str, brief_body: str) -> list[dict]:
                 "trail": "",
             })
 
-    for parsed, line in finding_lines(brief_body, "👀 Check these before approving"):
+    for parsed, line in finding_lines(brief_body, "⚠️ Check these before approving"):
         add({
             "id": parsed["id"],
             "bucket": "reviewer-check",
@@ -654,7 +654,7 @@ BUCKET_LABEL = {
     "low": "⚠️ Low-confidence — each needs a decision, none block the PR",
     "author-answer": "❓ Only you can answer — blocks merge (v3)",
     "style": "✏️ Style suggestions — advisory; ✏️ marks a one-click apply",
-    "reviewer-check": "👀 Reviewer check — advisory, from the brief (v3)",
+    "reviewer-check": "⚠️ Reviewer check — advisory, from the brief (v3)",
     "pre-existing": "💡 Pre-existing — optional; not introduced by this PR",
 }
 # Rendering order. "low"/"pre-existing" (v2) and "author-answer"/
@@ -967,7 +967,7 @@ def self_test() -> int:
     style_item = next(it for it in v3_items if it["id"].startswith("style:"))
     check("🚨 blocks", f1["blocking"] is True)
     check("❓ blocks", f3["blocking"] is True)
-    check("👀 does not block", f4["blocking"] is False)
+    check("⚠️ does not block", f4["blocking"] is False)
     check("style does not block", style_item["blocking"] is False)
     check("F1 bucket", f1["bucket"] == "outstanding")
     check("F3 bucket", f3["bucket"] == "author-answer")
@@ -1074,7 +1074,7 @@ def main() -> int:
             brief_body = fetch_brief_body(args.repo, args.pr)
             if not brief_body.strip():
                 log("warning: v3 author card found but no reviewer brief comment fetched — "
-                    "👀 reviewer-check items will be missing from the worklist")
+                    "⚠️ reviewer-check items will be missing from the worklist")
 
     if args.suggestions_file:
         try:

@@ -147,7 +147,7 @@ def test_model_added_placeholder_row_is_legal() -> None:
 
 
 def test_blocking_count_mismatch() -> None:
-    wrong = AUTHOR.replace("action needed — 3 items block merge", "action needed — 7 items block merge")
+    wrong = AUTHOR.replace("guide v1 — 3 items block merge", "guide v1 — 7 items block merge")
     assert "v3-blocking-count" in rule_ids(check(author=wrong))
 
 
@@ -201,7 +201,7 @@ def test_count_buckets_v3() -> None:
     joined = AUTHOR + "\n\n" + BRIEF
     counts = _count_buckets(joined)
     assert counts["outstanding"] == 3  # F1, F2, F3 — none dispositioned
-    assert counts["low_confidence"] == 1  # F4 in 👀
+    assert counts["low_confidence"] == 1  # F4 in ⚠️
 
 
 def test_count_buckets_v3_dispositions_unblock() -> None:
@@ -217,12 +217,12 @@ def test_count_buckets_v3_dispositions_unblock() -> None:
 
 def test_brief_advisory_prose_note_allowed() -> None:
     # The exact shape from the first live fork battery (PR 243): a plain
-    # prose note in 👀 is advisory, not a tracked finding, and must not
+    # prose note in ⚠️ is advisory, not a tracked finding, and must not
     # fail the grammar rule. A prose bullet in a BLOCKING section still does.
     note = "- **One editorial call:** the new clause repeats the info note below; judgment call, not a defect."
     brief = BRIEF.replace(
-        "### 👀 Check these before approving\n",
-        "### 👀 Check these before approving\n\n" + note + "\n",
+        "### ⚠️ Check these before approving\n",
+        "### ⚠️ Check these before approving\n\n" + note + "\n",
     )
     assert not [v for v in check(brief=brief) if v.rule_id == "v3-finding-grammar"]
 
