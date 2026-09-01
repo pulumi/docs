@@ -79,7 +79,9 @@ TOP_OPTIONAL = {
 }
 
 FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
-FINDING_OPTIONAL = {"lines", "disposition"}
+# `detail` is the author card's `#### F<n> · Do this` block body, mirrored
+# verbatim for the evidence page (persona-pass round, 2026-09-01).
+FINDING_OPTIONAL = {"lines", "disposition", "detail"}
 
 DISPOSITION_REQUIRED = {"disposition", "actor", "updated_at"}
 DISPOSITION_OPTIONAL = {"note", "sha", "bulk"}
