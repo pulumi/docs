@@ -21,23 +21,23 @@ Read `.broken-links.json` from the repo root. Shape:
   ],
   "external": [{ "source": "...", "destination": "...", "reason": "HTTP_404" }],
   "redirectHops": [
-    { "source": "...", "destination": "/docs/concepts/stacks/", "redirectsTo": "https://www.pulumi.com/docs/iac/concepts/stacks/", "reason": "REDIRECT_HOP" }
+    { "source": "...", "destination": "https://www.pulumi.com/docs/concepts/stacks/", "redirectsTo": "https://www.pulumi.com/docs/iac/concepts/stacks/", "reason": "REDIRECT_HOP" }
   ]
 }
 ```
 
 - `source` — the live page the entry was found **on** (`(server logs)` for real-404 entries — see below).
-- `destination` — for `internal`/`external`, the URL that failed; for `redirectHops`, the original link as authored (still works, but only by way of a redirect).
+- `destination` — for `internal`/`external`, the URL that failed; for `redirectHops`, the resolved (absolute) URL the stale link points at — the link as authored in the source file may be relative or root-relative, so match on the path (e.g. `/docs/concepts/stacks/`), not the full string.
 - `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …), `REAL_404` for entries merged from server logs, or `REDIRECT_HOP` for a working-but-stale internal link.
 - `internal` — `destination` is on `pulumi.com`; `external` — third-party.
-- `redirectHops` — internal links into the retired `/docs/concepts/*` path that resolve fine (nothing here is actually broken) but only by way of a redirect to `/docs/iac/concepts/*`. Each entry's `redirectsTo` is where it actually lands — that's the correct link to swap in. This list is scoped narrowly to that one known-bad hop class, not general internal redirects (most internal redirects are intentional and not worth flagging).
+- `redirectHops` — internal links into the retired `/docs/concepts/*` path that resolve fine (nothing here is actually broken) but only by way of a redirect to `/docs/iac/concepts/*`. Each entry's `redirectsTo` is where it actually lands — that's the correct link to swap in. Both `destination` and `redirectsTo` carry any URL fragment (`#anchor`) the original link had, since the fix has to preserve it, so two links into the same page with different anchors show up as separate entries — that's intentional, not a dedupe gap. This list is scoped narrowly to that one known-bad hop class, not general internal redirects (most internal redirects are intentional and not worth flagging).
 - `hits` — optional, `internal` only: real 404 requests on that destination from server logs over the export window (merged in by `scripts/link-checker/merge-404-signal.py`). The list is sorted by `hits` descending — **work highest-hits first**; entries without `hits` follow.
 
 If `internal`, `external`, and `redirectHops` are all empty, do nothing (the workflow won't invoke you in that case, but be defensive).
 
 ### Redirect hops (`reason: "REDIRECT_HOP"`)
 
-These aren't broken — the crawler followed the redirect and the page loaded fine — so they skip the false-positive verification and deduplication-by-brokenness logic below in one respect: there's no "is it really 404" question to ask. But do still check for an in-flight duplicate fix (an open PR already swapping the same link) before touching it. Fix strategy is always the same: **edit at source**, swapping `destination` for `redirectsTo` (strip the `https://www.pulumi.com` origin to get the root-relative path). Skip the "confirm genuinely broken" step for these; go straight to the mapping-to-source-file step below.
+These aren't broken — the crawler followed the redirect and the page loaded fine — so they skip the false-positive verification and deduplication-by-brokenness logic below in one respect: there's no "is it really 404" question to ask. But do still check for an in-flight duplicate fix (an open PR already swapping the same link) before touching it. Fix strategy is always the same: **edit at source**, swapping the link for `redirectsTo` (strip the `https://www.pulumi.com` origin from both `destination` and `redirectsTo` to get root-relative paths — the source file's own link may already be relative rather than root-relative, so match on the path, not the full `destination` string, when locating it). Skip the "confirm genuinely broken" step for these; go straight to the mapping-to-source-file step below.
 
 ### Real-404 signal (`reason: "REAL_404"`)
 
