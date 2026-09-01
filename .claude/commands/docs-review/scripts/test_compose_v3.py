@@ -156,22 +156,17 @@ def test_evidence_url_token_present(v3_outputs):
     assert cr.EVIDENCE_URL_TOKEN in brief
 
 
-@pytest.mark.parametrize("fid,checkbox,bullet", [
-    ("F1", True, "- **[L12-14]** `content/docs/x.md` — *\"claim\"* — verdict: contradicted <TODO: fix>"),
-    ("F7", False, "- **[L95]** `a.md` — body text"),
-    ("F12", True, "- **[L1]** file-less detector finding body"),
-    ("F?", True, "- plain body, no anchor, no file"),
+@pytest.mark.parametrize("fid,bullet", [
+    ("F1", "- **[L12-14]** `content/docs/x.md` — *\"claim\"* — verdict: contradicted <TODO: fix>"),
+    ("F7", "- **[L95]** `a.md` — body text"),
+    ("F12", "- **[L1]** file-less detector finding body"),
+    ("F?", "- plain body, no anchor, no file"),
 ])
-def test_finding_line_round_trip(fid, checkbox, bullet):
-    rendered = cr.render_finding_line(fid, bullet, checkbox)
+def test_finding_line_round_trip(fid, bullet):
+    rendered = cr.render_finding_line(fid, bullet)
     parsed = cr.parse_finding_line(rendered)
     assert parsed is not None, rendered
     assert parsed["id"] == fid
-    assert parsed["checked"] is False
-    reparsed_body = bullet[2:]
-    for token in ("[L", "`"):
-        if token in reparsed_body:
-            break
     # the body survives: strip the structural prefix the parser consumed
     assert parsed["body"] in rendered
 
@@ -221,15 +216,21 @@ def test_row_pipe_escaping_round_trips():
     assert parsed["body"] == "use `a | b` in the shell, not a\\|b"
 
 
-def test_row_answered_glyph():
-    open_row = cr.render_finding_row("F1", body="x")
-    done_row = cr.render_finding_row("F1", body="x", answered=True)
-    assert cr.parse_finding_line(open_row)["checked"] is False
-    assert cr.parse_finding_line(done_row)["checked"] is True
+def test_row_diff_link():
+    row = cr.render_finding_row(
+        "F1", ref="L12-14", file="content/docs/x.md", body="x",
+        link_base="https://github.com/pulumi/docs/pull/999/files")
+    import hashlib
+    anchor = hashlib.sha256(b"content/docs/x.md").hexdigest()
+    assert f"/pull/999/files#diff-{anchor}R12)" in row
+    parsed = cr.parse_finding_line(row)
+    assert parsed is not None and parsed["ref"] == "L12-14" and parsed["file"] == "content/docs/x.md"
+    bare = cr.render_finding_row("F1", ref="L12-14", file="content/docs/x.md", body="x")
+    assert cr.parse_finding_line(bare)["ref"] == "L12-14"
 
 
 def test_table_furniture_recognized():
     assert cr.is_table_furniture(cr.FINDING_TABLE_HEADER)
     assert cr.is_table_furniture(cr.FINDING_TABLE_SEPARATOR)
-    assert cr.is_table_furniture("| --- | --- | --- | --- |")
+    assert cr.is_table_furniture("| --- | --- | --- |")
     assert not cr.is_table_furniture(cr.render_finding_row("F1", body="x"))

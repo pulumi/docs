@@ -179,12 +179,12 @@ def author_card(findings=(), state=None, head=HEAD):
     if must:
         lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in must:
-        lines.append(f"| ⬜ | **{fid}** | `content/docs/iac/x.md` L10 | a problem |")
+        lines.append(f"| **{fid}** | `content/docs/iac/x.md` L10 | a problem |")
     lines += ["", "### ❓ Only you can answer these (blocks merge)", ""]
     if answer:
         lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in answer:
-        lines.append(f"| ⬜ | **{fid}** | `content/docs/iac/x.md` L20 | a question |")
+        lines.append(f"| **{fid}** | `content/docs/iac/x.md` L20 | a question |")
     lines += ["", "### ✅ Resolved since last review", "", "_none_", ""]
     body = "\n".join(lines)
     if state is None:

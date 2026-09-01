@@ -457,15 +457,15 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 > [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Must fix or refute (blocks merge)
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F1** | [`file.md` L12-14](…/blob/<head sha>/file.md#L12-L14) | <finding + fix, terse> |
+| ID | Where | Finding |
+|---|---|---|
+| **F1** | [`file.md` L12-14](…/pull/<pr>/files#diff-<sha256(path)>R12) | <finding + fix, terse> |
 ### ❓ Only you can answer these (blocks merge)
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F3** | `file.md` L61 | <the question> |
+| ID | Where | Finding |
+|---|---|---|
+| **F3** | `file.md` L61 | <the question> |
 #### Style suggestions                    ← unchanged v2 block (annotator-compatible)
-### ✅ Resolved since last review         ← same table shape, ✅ glyphs
+### ✅ Resolved since last review         ← same table shape
 📎 **Full evidence:** %%EVIDENCE_URL%% — …
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
@@ -473,8 +473,8 @@ _<one sentence: what the PR is and what the review checked>_
 ```
 
 The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
-alert instead of the IMPORTANT one. The status glyph is display-only (⬜
-open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
+alert instead of the IMPORTANT one. Rows carry no status column —
+REVIEW_STATE is the state, and the section a row lives in is the display.
 
 ### Reviewer brief — `.review-draft-brief.md`
 
@@ -484,9 +484,9 @@ open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 > [!TIP] orienting alert                  ← "work through the ⚠️ checklist below"
 > [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
 ### ⚠️ Check these before approving
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F4** | `file.md` L95 | <what might be wrong and why> |
+| ID | Where | Finding |
+|---|---|---|
+| **F4** | `file.md` L95 | <what might be wrong and why> |
 - <plain advisory bullets are allowed here — untracked reviewer notes>
 ### ✅ What you can rubber-stamp            ← composer-owned count lines
 💡 **Pre-existing issues in touched files:** N — <link>
@@ -497,11 +497,14 @@ open, ✅ answered), rendered from REVIEW_STATE — never hand-flip it.
 ### Finding IDs and the finding-line grammar
 
 One table row per finding, everywhere:
-`| ⬜ | **F<n>** | \`file\` L<a>-<b> | <finding cell> |` — the same four
+`| **F<n>** | \`file\` L<a>-<b> | <finding cell> |` — the same three
 columns in 🚨, ❓, ⚠️, and ✅ Resolved. Literal pipes inside the Finding cell
 are escaped `\|`; the Where cell is `\`file\`` + a `L<a>-<b>` range, either
 optional (`—` when both are absent), and the composer deep-links it to the
-blob at the reviewed head — `[\`file\` L<a>-<b>](…/blob/<sha>/file#L<a>-L<b>)`.
+PR's Files-changed diff anchor —
+`[\`file\` L<a>-<b>](…/pull/<pr>/files#diff-<sha256 of the path>R<a>)` —
+so clicking a finding lands on the change itself. (A line outside the diff
+lands on the file's header in the Files tab — still the right neighborhood.)
 The grammar parses both the linked and the bare form, so a model-added row
 may use the bare form; the deterministic re-render links it. IDs are assigned by the composer
 in render order, are unique for the life of the PR (`high_water` in the
@@ -538,14 +541,14 @@ these rules:
    `**Pre-existing:** <reason>`. The cell must START with the label.
    build-evidence files those on the evidence page and drops them from the
    published card. A finding that simply vanishes is a violation.
-1. **New findings** are added as `| ⬜ | **F?** | … | … |` rows in the right
+1. **New findings** are added as `| **F?** | … | … |` rows in the right
    section's table; build-evidence assigns the real id.
 1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
    the REVIEW_STATE block, `%%EVIDENCE_URL%%` tokens, the rubber-stamp count
    lines in the brief, or the footers.
 1. Keep each finding on ONE row — the grammar is line-based. Escape literal
    pipes in a cell as `\|`. Never edit the table header/separator rows, and
-   never touch a row's status glyph — it is rendered from REVIEW_STATE.
+   never add a leading status cell — rows have exactly three columns.
 
 ### After the model: `build-evidence.py`
 

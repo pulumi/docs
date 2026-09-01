@@ -301,10 +301,10 @@ def _self_test() -> int:
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
         "## Author action guide v1 — 2 items block merge", "",
         "### 🚨 Must fix or refute (blocks merge)", "",
-        "| | ID | Where | Finding |", "|---|---|---|---|",
-        "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
-        "| ⬜ | **F2** | `a.md` L9 | promoted question now a blocker |",
-        "| ⬜ | **F?** | `a.md` | a brand new model finding |", "",
+        "| ID | Where | Finding |", "|---|---|---|",
+        "| **F1** | `a.md` L8 | the model's edited fix prose |",
+        "| **F2** | `a.md` L9 | promoted question now a blocker |",
+        "| **F?** | `a.md` | a brand new model finding |", "",
         "### ❓ Only you can answer these (blocks merge)", "",
         "_No open questions for you._", "",
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "", state_block, "",
@@ -314,8 +314,8 @@ def _self_test() -> int:
         "> **Summary:** A tidy little PR about a.md.", "",
         "> | Dimension | Level | Notes |", "> | :--- | :---: | :--- |", "> | facts | HIGH |  |", "",
         "### ⚠️ Check these before approving", "",
-        "| | ID | Where | Finding |", "|---|---|---|---|",
-        "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |", "",
+        "| ID | Where | Finding |", "|---|---|---|",
+        "| **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |", "",
         "💡 **Pre-existing issues in touched files:** 0 — x", "",
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "",
     ]) + "\n"
@@ -336,10 +336,10 @@ def _self_test() -> int:
 
     # demotion: F1 rendered in the brief's ⚠️ → violation
     demoted_brief = brief.replace(
-        "| ⬜ | **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |",
-        "| ⬜ | **F1** | `a.md` L8 | softened down |\n| ⬜ | **F3** | `a.md` L12 | **Spurious:** stale data |",
+        "| **F3** | `a.md` L12 | **Spurious:** the comparison was against stale data |",
+        "| **F1** | `a.md` L8 | softened down |\n| **F3** | `a.md` L12 | **Spurious:** stale data |",
     )
-    demoted_author = author.replace("| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |\n", "")
+    demoted_author = author.replace("| **F1** | `a.md` L8 | the model's edited fix prose |\n", "")
     try:
         build(demoted_author, demoted_brief, base)
     except ContractViolation as e:
@@ -348,7 +348,7 @@ def _self_test() -> int:
         raise AssertionError("demotion must be a contract violation")
 
     # vanish: F2 removed without a rewrite → violation
-    vanished_author = author.replace("| ⬜ | **F2** | `a.md` L9 | promoted question now a blocker |\n", "")
+    vanished_author = author.replace("| **F2** | `a.md` L9 | promoted question now a blocker |\n", "")
     try:
         build(vanished_author, brief, base)
     except ContractViolation as e:
@@ -357,7 +357,7 @@ def _self_test() -> int:
         raise AssertionError("vanished finding must be a contract violation")
 
     # unparseable finding-shaped line → violation
-    broken = author.replace("| ⬜ | **F1** |", "| ⬜ | *F1* |")
+    broken = author.replace("| **F1** |", "| *F1* |")
     try:
         build(broken, brief, base)
     except ContractViolation as e:
@@ -367,8 +367,8 @@ def _self_test() -> int:
 
     # pre-existing rewrite moves bucket + updates the brief count
     pre_author = author.replace(
-        "| ⬜ | **F1** | `a.md` L8 | the model's edited fix prose |",
-        "| ⬜ | **F1** | `a.md` L8 | **Pre-existing:** broken before this PR |",
+        "| **F1** | `a.md` L8 | the model's edited fix prose |",
+        "| **F1** | `a.md` L8 | **Pre-existing:** broken before this PR |",
     )
     ev2, author_out2, brief_out2 = build(pre_author, brief, base)
     assert {f["id"]: f["bucket"] for f in ev2["findings"]}["F1"] == "preexisting"

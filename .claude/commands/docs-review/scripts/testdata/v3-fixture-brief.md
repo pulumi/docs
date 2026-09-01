@@ -7,7 +7,11 @@
 > _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
 
 > [!NOTE]
-> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), (2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.
+> **What this PR changes:**
+>
+> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>
+>
+> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.
 >
 > **Review confidence:**
 >
@@ -18,9 +22,9 @@
 
 ### ⚠️ Check these before approving
 
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F4** | [`content/docs/iac/x.md` L95](https://github.com/pulumi/docs/blob/aaaabbbbccccddddeeeeffff0000111122223333/content/docs/iac/x.md#L95) | *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.> |
+| ID | Where | Finding |
+|---|---|---|
+| **F4** | [`content/docs/iac/x.md` L95](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R95) | *"Most users adopt ESC within a week"* — verdict: framing-drift; framing: widened denominator <TODO: this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong.> |
 
 ### ✅ What you can rubber-stamp
 

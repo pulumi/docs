@@ -42,7 +42,7 @@ investigation log, triaged findings, pre-existing issues, count table, and
 review history are **not in your drafts** — they live in the machine-owned
 evidence base (`.review-evidence-base.json`, which you never edit) and render
 on the evidence page. You triage the finding rows (promote-only; new findings
-as `| ⬜ | **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
+as `| **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
 `**Pre-existing:**` rewrites instead of deletions), write the fix prose, the
 summary, and the confidence levels, and never touch the HTML markers, the
 REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`

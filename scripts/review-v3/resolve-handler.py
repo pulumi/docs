@@ -61,21 +61,6 @@ ERRORS_MARKER = "<!-- RESOLVE_ERRORS -->"
 POINTER_MARKER_TMPL = "<!-- RESOLVE_POINTER {actor} -->"
 
 
-def flip_answered_glyphs(body: str, answered_ids: set[str]) -> str:
-    """Flip ⬜ → ✅ in the status cell of each answered finding's table row.
-
-    Display-only sugar: REVIEW_STATE is the state, and the next full
-    re-render (update lane) recomputes every glyph from it. A targeted
-    substitution keeps this handler free of the composer's grammar module —
-    the two glyph characters are the entire coupling.
-    """
-    for fid in answered_ids:
-        body = re.sub(
-            rf"^(\|\s*)⬜(\s*\|\s*\*\*{fid}\*\*\s*\|)",
-            lambda m: m.group(1) + "✅" + m.group(2),
-            body, flags=re.MULTILINE,
-        )
-    return body
 BOT_LOGIN = "github-actions[bot]"
 ALLOWED_PERMISSIONS = {"admin", "write", "maintain"}
 USAGE = "`/resolve F<n> fixed|refuted|deferred|accepted|not-applicable[: note]`"
@@ -353,7 +338,6 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
 
         merged = review_state.merge_states(fresh_state, new_state)
         new_body = review_state.replace_block(fresh_comment["body"], merged)
-        new_body = flip_answered_glyphs(new_body, set(merged.get("findings", {})))
         gh.patch_issue_comment(author_comment["id"], new_body)
         gh.add_reaction(comment_id, "+1")
         applied = True

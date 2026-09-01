@@ -275,7 +275,7 @@ def classify_waiting_state(
         except ValueError as exc:
             raise CorruptReviewState(str(exc)) from exc
         rows = sentinel._card_rows(body, ("🚨", "❓"))
-        undecided = [r for r in rows if not r["checked"] and r["id"] not in state.get("findings", {})]
+        undecided = [r for r in rows if r["id"] not in state.get("findings", {})]
         undecided_count = len(undecided)
         if undecided_count:
             author_time = True

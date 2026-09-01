@@ -10,16 +10,16 @@ _<TODO: one sentence — what this PR is and what the review checked>_
 
 ### 🚨 Must fix or refute (blocks merge)
 
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F1** | [`content/docs/iac/x.md` L80-82](https://github.com/pulumi/docs/blob/aaaabbbbccccddddeeeeffff0000111122223333/content/docs/iac/x.md#L80-L82) | *"The esc CLI defaults to JSON output"* — verdict: contradicted <TODO: write the fix / suggestion block for the author (quote-and-rewrite mandate). If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias / compared a paraphrased version of the claim), rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution). If pre-existing on a line this PR didn't touch, rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card.> |
-| ⬜ | **F2** | [`content/docs/iac/x.md` L30](https://github.com/pulumi/docs/blob/aaaabbbbccccddddeeeeffff0000111122223333/content/docs/iac/x.md#L30) | [style-blocker] _terminology_ — Use 'Pulumi Cloud', not 'Pulumi Service' |
+| ID | Where | Finding |
+|---|---|---|
+| **F1** | [`content/docs/iac/x.md` L80-82](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R80) | *"The esc CLI defaults to JSON output"* — verdict: contradicted <TODO: write the fix / suggestion block for the author (quote-and-rewrite mandate). If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias / compared a paraphrased version of the claim), rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution). If pre-existing on a line this PR didn't touch, rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card.> |
+| **F2** | [`content/docs/iac/x.md` L30](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R30) | [style-blocker] _terminology_ — Use 'Pulumi Cloud', not 'Pulumi Service' |
 
 ### ❓ Only you can answer these (blocks merge)
 
-| | ID | Where | Finding |
-|---|---|---|---|
-| ⬜ | **F3** | [`content/docs/iac/x.md` L61](https://github.com/pulumi/docs/blob/aaaabbbbccccddddeeeeffff0000111122223333/content/docs/iac/x.md#L61) | *"Many teams reduce costs by 40% using this pattern"* — verdict: unverifiable <TODO: if this is a factual blocker (a price/spec/capability with no citation a reader needs), promote to `### 🚨 Must fix or refute` on the author card; otherwise keep it here — this row IS the question the author must answer. REMOVE only if it's not actually a checkable claim (then it should already be `not-a-claim`). If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, the cited URL was unrelated to the claim subject, etc.), rewrite the Finding cell as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card.> |
+| ID | Where | Finding |
+|---|---|---|
+| **F3** | [`content/docs/iac/x.md` L61](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R61) | *"Many teams reduce costs by 40% using this pattern"* — verdict: unverifiable <TODO: if this is a factual blocker (a price/spec/capability with no citation a reader needs), promote to `### 🚨 Must fix or refute` on the author card; otherwise keep it here — this row IS the question the author must answer. REMOVE only if it's not actually a checkable claim (then it should already be `not-a-claim`). If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, the cited URL was unrelated to the claim subject, etc.), rewrite the Finding cell as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card.> |
 
 #### Style suggestions
 
@@ -51,6 +51,7 @@ _No items resolved since the last review._
    — the review re-adjudicates: it either concedes cleanly or holds with a 🛡️ note for your reviewer.
 1. **Accept it and move on** — you own the PR; saying so is a valid answer:
    `@claude I know what I'm doing, mark everything resolved #update-review`
-1. **Start over** — flip the PR to draft and back to ready; the review regenerates from scratch.
+
+The `#update-review` hashtag matters — it routes your reply to this review. A bare `@claude` gets you ad-hoc help and leaves this card untouched.
 
 Pushing new commits refreshes this review automatically when the changes line up with the findings above; otherwise mention `@claude #update-review`. Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions).

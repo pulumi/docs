@@ -177,10 +177,10 @@ def _collect_resolved(author_body: str) -> list[str]:
     return out
 
 
-def _render_row(fid: str, ref: str, file: str, body: str, answered: bool,
-                blob_base: str = "") -> str:
+def _render_row(fid: str, ref: str, file: str, body: str,
+                link_base: str = "") -> str:
     return cr.render_finding_row(fid, ref=ref, file=file, body=body,
-                                 answered=answered, blob_base=blob_base)
+                                 link_base=link_base)
 
 
 def apply(
@@ -192,14 +192,15 @@ def apply(
     actor: str,
     auto: bool,
     repo: str = "",
+    pr: int = 0,
     now: datetime | None = None,
 ) -> tuple[str, str, dict, dict]:
     """Returns (author_out, brief_out, model_state, applied_report)."""
     now = now or datetime.now(timezone.utc)
     today = now.date().isoformat()
     timestamp = now.isoformat().replace("+00:00", "Z")
-    blob_base = (f"https://github.com/{repo}/blob/{head_sha}"
-                 if repo and head_sha else "")
+    link_base = (f"https://github.com/{repo}/pull/{pr}/files"
+                 if repo and pr else "")
     # Display revision: the card's own vN + 1. Equals the evidence history
     # length in the healthy path, and still counts correctly when the prior
     # evidence object was unavailable (degraded update).
@@ -251,7 +252,7 @@ def apply(
                 "bucket": entry["bucket"],
                 "doc": "brief" if entry["bucket"] == "reviewer-check" else "author",
                 "parsed": {"id": fid, "ref": ref, "file": entry["file"],
-                           "body": entry["text"].strip(), "checked": False},
+                           "body": entry["text"].strip()},
                 "raw": "",
                 "added": True,
             }
@@ -263,8 +264,8 @@ def apply(
             annotation = entry["annotation"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — {annotation}", answered=True,
-                blob_base=blob_base))
+                f"{row['parsed']['body']} — {annotation}",
+                link_base=link_base))
             del rows[fid]
             disposition_state = review_state.set_disposition(
                 disposition_state, fid, "fixed",
@@ -273,8 +274,8 @@ def apply(
             reason = entry["reason"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — concede: {reason}", answered=True,
-                blob_base=blob_base))
+                f"{row['parsed']['body']} — concede: {reason}",
+                link_base=link_base))
             del rows[fid]
         elif action == "hold":
             shield = f" 🛡️ **Disputed by {actor} on {today}, model held.**"
@@ -295,11 +296,10 @@ def apply(
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
 
-    answered_ids = set(merged_state.get("findings", {}))
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
-                             answered_ids=answered_ids, blob_base=blob_base)
+                             link_base=link_base)
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
-                            answered_ids=answered_ids, blob_base=blob_base)
+                            link_base=link_base)
 
     author_out = review_state.replace_block(author_out, merged_state)
     n_blocking = sum(1 for r in rows.values() if r["bucket"] in ("outstanding", "author-answer"))
@@ -322,14 +322,12 @@ def apply(
 
 
 def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc: str,
-                answered_ids: set[str] | None = None, blob_base: str = "") -> str:
+                link_base: str = "") -> str:
     """Re-render the finding sections of one card, everything else verbatim.
 
-    The status glyph is display-only, derived from the merged REVIEW_STATE
-    (`answered_ids`): a dispositioned row renders ✅ even while it stays in
-    its bucket, so the card can't disagree with the state block it carries.
+    Rows carry no display state — REVIEW_STATE is the state, the section a
+    row lives in is the display.
     """
-    answered_ids = answered_ids or set()
     lines = body.splitlines()
     headings = be.AUTHOR_SECTIONS if doc == "author" else be.BRIEF_SECTIONS
     spans = be._sections(body, headings)
@@ -343,7 +341,7 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
             continue
         by_bucket.setdefault(row["bucket"], []).append(_render_row(
             fid, row["parsed"]["ref"], row["parsed"]["file"], row["parsed"]["body"],
-            answered=fid in answered_ids, blob_base=blob_base))
+            link_base=link_base))
 
     def _table(rows_out: list[str]) -> list[str]:
         return [cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, *rows_out]
@@ -499,7 +497,7 @@ def main() -> int:
         author_out, brief_out, merged_state, report = apply(
             author_body, brief_body, update,
             head_sha=args.head_sha, actor=args.actor, auto=args.auto,
-            repo=args.repo)
+            repo=args.repo, pr=args.pr)
         evidence = assemble_evidence(
             prior, author_out, brief_out, merged_state, update,
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,

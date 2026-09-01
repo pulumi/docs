@@ -63,6 +63,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -1605,28 +1606,29 @@ _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 # One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / ⚠️,
 # and the ✅ Resolved log):
 #
-#   | | ID | Where | Finding |
-#   |---|---|---|---|
-#   | ⬜ | **F3** | `file.md` L12-14 | <finding cell> |
+#   | ID | Where | Finding |
+#   |---|---|---|
+#   | **F3** | `file.md` L12-14 | <finding cell> |
 #
-# The status glyph is DISPLAY ONLY — ⬜ open, ✅ answered — rendered from
-# REVIEW_STATE, which remains the actual state (the old `- [ ]` checkboxes
-# looked interactive and were wired to nothing; a glyph doesn't lie). `F?`
+# There is deliberately no status column: REVIEW_STATE is the state, the
+# section a row lives in is the display (a ⬜/✅ glyph column was tried and
+# dropped — it duplicated both and spent a table column doing it). `F?`
 # is the model's placeholder for a finding it added; build-evidence.py
 # assigns the real id. File and L-range are each optional (`—` when both
 # are absent) so the grammar also carries file-less detector findings; the
 # L-range keeps its bare `L\d+(-\d+)?` shape because auto-refresh-gate
-# anchors on it. Literal pipes in the Finding cell are escaped `\|`.
-FINDING_TABLE_HEADER = "| | ID | Where | Finding |"
-FINDING_TABLE_SEPARATOR = "|---|---|---|---|"
+# anchors on it. Literal pipes in the Finding cell are escaped `\|`. The
+# Where cell links to the PR's Files-changed diff anchor (sha256 of the
+# path + `R<line>`), so clicking a finding lands on the change itself.
+FINDING_TABLE_HEADER = "| ID | Where | Finding |"
+FINDING_TABLE_SEPARATOR = "|---|---|---|"
 _TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
 # The Where cell parses BOTH forms — linked (composer output, deep link to
-# the blob at head) and bare (a model-added row; build-evidence/apply-update
-# re-render it linked). The visible text is identical either way, so
-# auto-refresh-gate's L-range extraction sees the same anchors.
+# the PR diff) and bare (a model-added row; the next full render re-links
+# it). The visible text is identical either way, so auto-refresh-gate's
+# L-range extraction sees the same anchors.
 FINDING_LINE_RE = re.compile(
-    r"^\|\s*(?P<status>[⬜✅])\s*"
-    r"\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
+    r"^\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
     r"\|\s*(?:\[)?(?:`(?P<file>[^`|\]]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?"
     r"(?:\]\((?P<url>[^)|\s]+)\))?\s*(?:—\s*)?"
     r"\|\s*(?P<body>(?:\\\||[^|\n])*?\S)\s*\|\s*$"
@@ -1642,24 +1644,28 @@ def is_table_furniture(line: str) -> bool:
     return stripped.replace(" ", "") == FINDING_TABLE_HEADER.replace(" ", "")
 
 
-def blob_anchor(ref: str) -> str:
-    """`L12-14` → `#L12-L14`; `L12` → `#L12`; multi-range uses the first."""
+def diff_anchor(file: str, ref: str) -> str:
+    """The Files-changed anchor for a file (+ first line of the ref).
+
+    GitHub anchors each file in the diff view at `#diff-<sha256(path)>`, with
+    `R<n>` addressing line n on the right (new) side. A line that isn't part
+    of the diff still lands on the file's header in the Files tab — the
+    useful place anyway.
+    """
+    anchor = "#diff-" + hashlib.sha256(file.encode()).hexdigest()
     nums = _lines_from_ref(ref)
-    if not nums:
-        return ""
-    if len(nums) == 2:
-        return f"#L{nums[0]}-L{nums[1]}"
-    return f"#L{nums[0]}"
+    if nums:
+        anchor += f"R{nums[0]}"
+    return anchor
 
 
 def render_finding_row(fid: str, *, ref: str = "", file: str = "",
-                       body: str = "", answered: bool = False,
-                       blob_base: str = "") -> str:
+                       body: str = "", link_base: str = "") -> str:
     """The canonical row renderer; inverse of parse_finding_line.
 
-    With `blob_base` (https://github.com/<repo>/blob/<head_sha>) and a file,
-    the Where cell deep-links to the exact line(s) at the reviewed head. The
-    link is re-derived on every render, so it always points at the head the
+    With `link_base` (https://github.com/<repo>/pull/<pr>/files) and a file,
+    the Where cell deep-links to the change itself on the Files-changed tab.
+    The link is re-derived on every render, so it always points where the
     review currently describes.
     """
     where_bits = []
@@ -1668,11 +1674,10 @@ def render_finding_row(fid: str, *, ref: str = "", file: str = "",
     if ref:
         where_bits.append(ref)
     where = " ".join(where_bits) or "—"
-    if blob_base and file:
-        where = f"[{where}]({blob_base}/{file}{blob_anchor(ref)})"
-    glyph = "✅" if answered else "⬜"
+    if link_base and file:
+        where = f"[{where}]({link_base}{diff_anchor(file, ref)})"
     cell = body.replace("|", "\\|")
-    return f"| {glyph} | **{fid}** | {where} | {cell} |"
+    return f"| **{fid}** | {where} | {cell} |"
 
 
 # v2-shaped stub bullets (`- **[L…]** `file` — body`) are what build_stubs
@@ -1683,33 +1688,25 @@ _V2_STUB_RE = re.compile(
 )
 
 
-def render_finding_line(fid: str, v2_bullet: str, checkbox: bool = False,
-                        answered: bool = False, blob_base: str = "") -> str:
-    """Adapt a v2-shaped stub bullet into a v3 table row.
-
-    `checkbox` is accepted for caller compatibility and ignored — the status
-    glyph replaced the checkbox and is driven by `answered`.
-    """
-    del checkbox
+def render_finding_line(fid: str, v2_bullet: str, link_base: str = "") -> str:
+    """Adapt a v2-shaped stub bullet into a v3 table row."""
     m = _V2_STUB_RE.match(v2_bullet)
     if not m:
-        return render_finding_row(fid, body=v2_bullet.strip(), answered=answered,
-                                  blob_base=blob_base)
+        return render_finding_row(fid, body=v2_bullet.strip(), link_base=link_base)
     return render_finding_row(
         fid,
         ref=(m.group("ref") or "").strip(),
         file=(m.group("file") or "").strip(),
         body=m.group("body").strip(),
-        answered=answered,
-        blob_base=blob_base,
+        link_base=link_base,
     )
 
 
 def parse_finding_line(line: str) -> dict | None:
     """Inverse of render_finding_row; None when the line isn't a finding row.
 
-    `checked` reflects the ✅ glyph — display state only; REVIEW_STATE is
-    authoritative for whether a finding is actually answered.
+    REVIEW_STATE is authoritative for whether a finding is answered; a row
+    carries no display state of its own.
     """
     m = FINDING_LINE_RE.match(line)
     if not m:
@@ -1719,7 +1716,6 @@ def parse_finding_line(line: str) -> dict | None:
         "ref": (m.group("ref") or "").strip(),
         "file": (m.group("file") or "").strip(),
         "body": m.group("body").strip().replace("\\|", "|"),
-        "checked": m.group("status") == "✅",
     }
 
 
@@ -1874,8 +1870,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     author_answer_stubs, reviewer_check_stubs = split_v3_buckets(prep["lowconf_stubs"])
 
-    blob_base = (f"https://github.com/{args.repo}/blob/{head_sha}"
-                 if args.repo and head_sha else "")
+    link_base = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
     contributing_url = (
         f"https://github.com/{args.repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
         if args.repo else "")
@@ -1906,7 +1902,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     outstanding_lines: list[str] = []
     for s in prep["outstanding_stubs"]:
         fid, _ = _assign(s, "outstanding", s["bullet"])
-        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
     for f in prep["vale_blockers"]:
         fname = str(f.get("file") or "").strip()
         cat = str(f.get("category") or "style")
@@ -1920,17 +1916,17 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "origin": "style-blocker",
         }
         fid, _ = _assign(stub, "outstanding", v2_bullet)
-        outstanding_lines.append(render_finding_line(fid, v2_bullet, blob_base=blob_base))
+        outstanding_lines.append(render_finding_line(fid, v2_bullet, link_base=link_base))
 
     question_lines: list[str] = []
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
-        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
 
     check_lines: list[str] = []
     for s in reviewer_check_stubs:
         fid, _ = _assign(s, "reviewer-check", s["bullet"])
-        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), blob_base=blob_base))
+        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
 
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     high_water = next_id - 1
@@ -2107,9 +2103,21 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         brief += [prep["outage_banner"], ""]
     brief += [
         # The orienting TIP above is the only TIP box — the summary block
-        # renders as a NOTE here so the two don't stack as twins.
+        # renders as a NOTE here so the two don't stack as twins. The v3
+        # summary is a bullet list, not a paragraph: reviewers scan changes,
+        # they don't read prose about them (Cam, 2026-09-01). The shared v2
+        # renderer keeps its paragraph scaffold (byte-identity golden); only
+        # the TODO scaffold differs here — the confidence table is reused.
         render_summary_block(prep["confidence_dims"], prep["forced_levels"]).replace(
-            "> [!TIP]", "> [!NOTE]", 1),
+            "> [!TIP]", "> [!NOTE]", 1).replace(
+            "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
+            "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.",
+            "> **What this PR changes:**\n"
+            ">\n"
+            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>\n"
+            ">\n"
+            "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
+            1),
         "",
         "### ⚠️ Check these before approving",
         "",

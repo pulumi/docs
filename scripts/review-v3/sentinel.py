@@ -378,7 +378,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             rows = _card_rows(body, ("🚨", "❓"))
             undecided = [
                 r["id"] for r in rows
-                if not r["checked"] and r["id"] not in state.get("findings", {})
+                if r["id"] not in state.get("findings", {})
             ]
             blocking_ids = undecided
             if undecided:
