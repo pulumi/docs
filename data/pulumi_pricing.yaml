@@ -197,7 +197,7 @@ editions:
         - Audit logs
         - Drift detection and remediation
         - Time-to-live stacks
-        - Customer-managed keys
+        - Customer managed keys
         - Priority feature requests
         - 12x5 Enterprise Support available
 
@@ -499,8 +499,8 @@ categories:
         available_from: enterprise
 
       - id: customer-managed-keys
-        name: Customer-managed keys
-        link: /docs/esc/concepts/customer-managed-keys/
+        name: Customer managed keys
+        link: /docs/administration/concepts/customer-managed-keys/
         available_from: enterprise
 
       - id: esc-integrations-sync
@@ -819,7 +819,7 @@ categories:
 
       - id: audit-log-export
         name: Automated log export to S3
-        link: /docs/administration/guides/export-audit-logs/aws-s3/
+        link: /docs/administration/guides/audit-logs/aws-s3/
         available_from: business-critical
 
   - id: support

@@ -11,7 +11,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Infrastructure as code*<br>in any language."
+    title: "*Infrastructure as code* <br>in any language."
     description: |
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
     anchor: hero
@@ -437,7 +437,7 @@ sections:
       - icon: gear-six
         title: Works with your CI/CD
         description: |
-          Integrates with [any CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI – your choice. Or use the [Kubernetes operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) for GitOps.
+          Integrates with [any CI/CD system](/docs/iac/operations/continuous-delivery/). GitHub Actions, GitLab, Jenkins, CircleCI – your choice. Or use the [Kubernetes operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps.
 
   - type: section_header
     title: Scale confidently with Pulumi Cloud

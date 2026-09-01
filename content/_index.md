@@ -13,7 +13,7 @@ sections:
     badge_highlight_text: "New:"
     badge_text: "Native support for Terraform and HCL"
     badge_link: /releases/terraform-state-backend-modules-hcl/
-    title: "*Unleash agents*<br>on your infrastructure."
+    title: "*Unleash agents* <br>on your infrastructure."
     description: |
       Ship infrastructure faster with tools that let agents do what they do best — without letting them go off the rails.
     anchor: hero

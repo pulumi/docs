@@ -8,9 +8,6 @@ menu:
         name: Project file reference
         parent: iac-concepts-projects
         weight: 1
-    concepts:
-        parent: projects
-        weight: 1
 
 aliases:
 - /docs/reference/pulumi-yaml/

@@ -8,8 +8,6 @@ menu:
         name: Stash
         parent: iac-concepts
         weight: 30
-    concepts:
-        weight: 2
 ---
 
 The `Stash` resource is a built-in Pulumi resource that allows you to save values to your stack's state for later retrieval. A stash takes a single input value and stores it in state, making it available as an output property. Stashes are commonly used to persist computed values, pass data between program executions, or save intermediate results that need to be accessed later.

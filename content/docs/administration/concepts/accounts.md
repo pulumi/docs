@@ -83,6 +83,7 @@ You can sign in to Pulumi Cloud with any of the following:
 - Atlassian
 - An email address and password
 - Single sign-on through a SAML 2.0 identity provider
+- A [passkey](#signing-in-with-a-passkey) registered on your device
 
 SAML single sign-on is configured by an organization admin, not by individual users. If your company uses it, your admin sets up the [SAML integration](/docs/administration/guides/saml/) and tells you which organization name to sign in with. Note that Pulumi supports only one Pulumi Cloud organization per SCIM application, so an admin managing several organizations configures each one separately.
 
@@ -164,6 +165,33 @@ Your recovery key works once. After you use it to sign in, Pulumi issues a new o
 {{% notes type="info" %}}
 To disable multi-factor authentication, select **Reset authentication method** in the MFA section of your account settings.
 {{% /notes %}}
+
+### Signing in with a passkey
+
+A passkey is a public-key credential that lets you sign in with Touch ID, Face ID, Windows Hello, or a hardware security key instead of typing a password. The private key stays on your device or in your password manager, and Pulumi Cloud stores only the public half. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, which current versions of every major browser and operating system support.
+
+Passkeys are available in every Pulumi Cloud edition at no additional cost.
+
+To register one:
+
+1. Select your account avatar in the top right corner.
+1. Navigate to **Account settings**.
+1. In the Passkeys section, select **Register a passkey**.
+1. Complete your device's prompt: Touch ID, Face ID, Windows Hello, or your hardware key.
+
+Pulumi Cloud names the passkey after the authenticator it recognizes, such as "Windows Hello" or "Chrome on Mac". Select **Rename** to give it a name of your own, or **Remove** to delete it. Removal takes effect immediately, and a deleted passkey can no longer sign you in. It does not end sessions that are already signed in, so sign out of those separately if you have lost the device.
+
+You can register as many passkeys as you want. One per device is common, as is one synced credential plus a hardware key as a backup.
+
+To use one, select the passkey option on the sign-in page. If your browser supports passkey autofill, the email field also offers your registered passkeys as suggestions.
+
+Registering a passkey does not disable any other way of signing in. Your password, if you have one, keeps working, so losing every registered passkey does not lock you out of your account.
+
+{{% notes type="info" %}}
+A passkey sign-in does not prompt for a one-time password, even when you have [MFA](#setting-up-mfa) enrolled. Pulumi Cloud requires user verification, a biometric or a PIN, on every passkey ceremony, so the passkey already proves both possession of the device and the factor that unlocks it. Signing in with your password still prompts for your second factor.
+{{% /notes %}}
+
+In [self-hosted Pulumi Cloud](/docs/administration/self-hosting/), the Passkeys section appears only if an administrator has set `PULUMI_PASSKEY_CEREMONY_KEY` on the API service to a base64-encoded 32-byte random value.
 
 ## Deleting your account
 

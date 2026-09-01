@@ -6,11 +6,12 @@ h1: Export audit logs to Microsoft Sentinel
 menu:
   administration:
         name: Export to Microsoft Sentinel
-        parent: administration-guides-export-audit-logs
-        weight: 2
+        parent: administration-guides-audit-logs
+        weight: 3
 pulumi_cloud_feature: audit-log-export
 aliases:
   - /docs/administration/security-compliance/audit-logs/azure-sentinel/
+  - /docs/administration/guides/export-audit-logs/azure-sentinel/
 ---
 
 Pulumi Cloud can continuously export audit log events into [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview) using a [Codeless Connector (CCF)](https://learn.microsoft.com/en-us/azure/sentinel/create-codeless-connector). The connector deploys as a Pulumi program and uses Sentinel's managed RestApiPoller to poll the Pulumi Cloud REST API every 5 minutes — no Azure Functions, Logic Apps, or other compute resources needed.

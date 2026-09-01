@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 26
         identifier: iac-comparisons-cdk-vs-terraform
-    concepts:
-        parent: vs
-        weight: 26
 ---
 
 AWS CDK, Terraform, and Pulumi all provision cloud infrastructure as code, but they differ in where they run and how an AI coding agent works with them. CDK compiles to CloudFormation and is AWS-only; Terraform uses its own HCL language across many clouds; Pulumi uses general-purpose languages (or HCL) across any cloud, with no synthesis or transpilation step between the code an agent writes and the errors it reads back.
