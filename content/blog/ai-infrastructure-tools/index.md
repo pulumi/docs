@@ -239,7 +239,7 @@ AWS renamed Application Composer to Infrastructure Composer in October 2024 to r
 - **License**: Proprietary (AWS, included)
 - **Best for**: Teams building on CloudFormation who prefer a visual, drag-and-drop design workflow
 
-Strengths: visual development with bidirectional template sync; direct AWS integration; covers any CloudFormation resource, not just serverless. Caveat: it's a design and authoring tool, not an agent. It doesn't provision anything itself, and it's AWS- and CloudFormation-only.
+Strengths: visual development with bidirectional template sync; direct AWS integration; covers any CloudFormation resource, not only serverless. Caveat: it's a design and authoring tool, not an agent. It doesn't provision anything itself, and it's AWS- and CloudFormation-only.
 
 ## Comparison tables
 
