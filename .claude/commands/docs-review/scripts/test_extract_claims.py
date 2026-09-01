@@ -313,6 +313,66 @@ def test_fixture_pr21291_hunk_opening_inside_a_fence() -> None:
     assert_clean("test_fixture_pr21291_hunk_opening_inside_a_fence", before)
 
 
+def test_fence_seeding_survives_nested_fences() -> None:
+    """Review of PR #21308: a parity count of fence markers inverts on a ```
+    line nested inside a ```` block (how docs write ABOUT fenced code) and
+    stays inverted for the rest of the file. Fence state now follows
+    CommonMark: a fence closes only on a same-char marker at least as long as
+    its opener, in both the seed and the diff walk."""
+    print("test_fence_seeding_survives_nested_fences")
+    before = len(_failures)
+    page = "\n".join([
+        "---", "title: Fences", "---", "",
+        "How to write a fenced block:", "",
+        "````markdown",                      # L7 opens a 4-backtick fence
+        "```python",                         # L8: content, not a toggle
+        "print('hi')",
+        "```",                               # L10: content, not a toggle
+        "````",                              # L11 closes it
+        "",
+        "Pulumi is the canonical choice for this.",   # L13: prose
+        "",
+        "~~~", "code ~~~ inside", "~~~",     # L15-17: tilde fence
+        "",
+        "Pulumi is the fastest path here, unlike Terraform.",  # L19: prose
+        "",
+    ]) + "\n"
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        target = root / "content/docs/x.md"
+        target.parent.mkdir(parents=True)
+        target.write_text(page)
+        patch = (
+            "diff --git a/content/docs/x.md b/content/docs/x.md\n"
+            "--- a/content/docs/x.md\n+++ b/content/docs/x.md\n"
+            "@@ -13,1 +13,1 @@\n-old\n+Pulumi is the canonical choice for this.\n"
+            "@@ -19,1 +19,1 @@\n-old\n+Pulumi is the fastest path here, unlike Terraform.\n"
+        )
+        d = run_extract(patch, repo_root=root)
+    types_13 = {c["type"] for c in d["claims"] if c["line_range"] == "L13"}
+    types_19 = {c["type"] for c in d["claims"] if c["line_range"] == "L19"}
+    check("positioning" in types_13,
+          f"a hunk after a ```` block containing ``` lines is seeded outside a fence (L13); got {types_13}")
+    check({"positioning", "comparison"} <= types_19,
+          f"a hunk after a ~~~ block whose body mentions ~~~ is seeded outside a fence (L19); got {types_19}")
+    # The diff walk itself honours the same rule: a ``` context line inside
+    # an open ```` fence does not close it.
+    walk = _mk_patch("content/docs/y.md", [
+        "````markdown",
+        "```python",
+        "# the canonical way, unlike the old approach",   # still inside the ```` fence
+        "```",
+        "````",
+        "Pulumi is the canonical choice.",                 # prose after the block
+    ])
+    d2 = run_extract(walk)
+    inside = [c for c in d2["claims"] if c["line_range"] == "L12" and c["type"] in ("positioning", "comparison")]
+    after = [c for c in d2["claims"] if c["line_range"] == "L15" and c["type"] == "positioning"]
+    check(not inside, f"a ``` line nested in a ```` fence does not close it (L12 stays in-code); got {inside}")
+    check(after, "the ```` closer really closes it: prose after the block yields a positioning claim")
+    assert_clean("test_fence_seeding_survives_nested_fences", before)
+
+
 def test_no_script_uses_per_commit_pr_patch() -> None:
     """`gh pr diff --patch` is a per-commit mailbox: a sentence one commit adds
     and a later commit removes is still extracted and verified (contradicted
@@ -621,6 +681,7 @@ def main() -> int:
         test_fixture_pr18743_price_and_model,
         test_fixture_pr18541_gcp_version_pin,
         test_fixture_pr21291_hunk_opening_inside_a_fence,
+        test_fence_seeding_survives_nested_fences,
         test_no_script_uses_per_commit_pr_patch,
         test_merge_dedup_and_provenance,
         test_merge_keeps_a_distinct_regex_stance,
