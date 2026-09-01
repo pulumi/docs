@@ -38,7 +38,7 @@ This guide covers both categories: the compute and MLOps stack in Part 1, and AI
 
 ### AI-powered infrastructure management tools
 
-1. [Pulumi Neo](#pulumi-neo): agentic AI with policy automation
+1. [Pulumi Neo](#pulumi-neo): infrastructure agent with policy automation
 1. [Firefly](#firefly): asset codification with an emerging agent layer
 1. [env zero](#env-zero): multi-IaC insights, now with an agent CLI
 1. [Spacelift Intelligence](#spacelift-intelligence): conversational Q&A and natural-language provisioning
@@ -152,7 +152,7 @@ Execution used to be the dividing line between these tools; it no longer is. By 
 
 ### Pulumi Neo
 
-[Pulumi Neo](/product/neo/) is Pulumi's agentic AI for infrastructure. The distinguishing claim is execution: Neo doesn't only suggest a Terraform snippet, it figures out the right resources, generates the code, and runs the deployment inside whatever guardrails you've set.
+[Pulumi Neo](/product/neo/) is Pulumi's AI agent for infrastructure. The distinguishing claim is execution: Neo doesn't only suggest a Terraform snippet, it figures out the right resources, generates the code, and runs the deployment inside whatever guardrails you've set.
 
 - **License**: Proprietary (Pulumi Cloud)
 - **Best for**: Platform engineering teams that want AI automation with real policy controls, especially in regulated industries
@@ -167,7 +167,7 @@ A few things that set it apart in practice:
 
 **One platform, every cloud.** AWS, Azure, GCP, Kubernetes, and 180+ other providers, from one agent and one policy model. The hyperscaler-native agents below stop at their own cloud's edge.
 
-**Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agentic AI in anger, versus letting it sit as a sandbox toy.
+**Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agents for infrastructure, versus keeping them sandboxed.
 
 **IDE and CI/CD integration.** The Pulumi MCP Server brings Neo into Cursor, Claude Code, Claude Desktop, Windsurf, and any other MCP-compatible client. The Pulumi Cloud UI is the home base for approvals, history, and remediation status. Neo also slots into CI/CD pipelines for pre-merge policy remediation.
 
@@ -260,7 +260,7 @@ Strengths: visual development with bidirectional template sync; direct AWS integ
 
 | Tool | Approach | Key strength | Limitation | Pricing | Best for |
 |------|----------|--------------|------------|---------|----------|
-| Pulumi Neo | Agentic AI | Execution + policy automation, across every cloud | Best within Pulumi ecosystem | Pulumi Cloud tiers | Enterprise platform teams |
+| Pulumi Neo | Agentic infrastructure | Execution + policy automation, across every cloud | Best within Pulumi ecosystem | Pulumi Cloud tiers | Enterprise platform teams |
 | Firefly | Asset management + agent layer | Asset codification, IaC generation | Thinkerbell AI agent layer still supplementary | Proprietary | Codifying existing infra |
 | env zero | Multi-IaC platform + Agent CLI | Multi-tool support, agent-driven changes via your coding agent | Agent CLI is new (Aug 2026) | Proprietary | Multi-IaC environments |
 | Spacelift Intelligence | CI/CD platform | Conversational Q&A plus natural-language provisioning | Young; Intent reached early access late 2025 | Free (for now) | GitOps workflows |
@@ -309,9 +309,9 @@ For enterprise governance plus true agentic capability, [Pulumi Neo](/product/ne
 
 Start with the repetitive, time-consuming work your team already does by hand: generating IaC from natural-language descriptions for a human to review, explaining unfamiliar configurations to speed up onboarding, analyzing logs and configs to suggest likely causes during troubleshooting, and scanning for security and compliance violations with a generated fix attached. Teams that want to go further hand the whole loop to an agentic platform: tools like Pulumi Neo execute provisioning workflows end-to-end with governance controls intact, rather than stopping at a suggestion.
 
-### What is agentic AI for infrastructure?
+### What is agentic infrastructure?
 
-Agentic AI for infrastructure means AI systems that autonomously execute infrastructure tasks, not just generate code suggestions. The difference from a code assistant is action: an agent understands your environment, respects your policies, and performs multi-step work (provisioning, configuration, security controls) within the boundaries you've defined.
+Agentic infrastructure is the practice of AI agents actively driving infrastructure tasks, not just generating code. The difference from a code assistant is action: an agent understands your environment, respects your policies, and performs multi-step work (provisioning, configuration, security controls) within the boundaries you've defined.
 
 ### How do AI agents improve DevOps workflows?
 
