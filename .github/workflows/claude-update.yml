@@ -75,7 +75,7 @@ jobs:
       pull-requests: write
       issues: read
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
+      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a v3 publish
     steps:
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
@@ -605,6 +605,7 @@ jobs:
             - `resolve` (id, annotation like "fixed in <short-sha>") — the push genuinely fixed it; verify against the diff, never take the author's word alone.
             - `concede` (id, reason) — the author's answer settles it (or the finding was wrong); row → ✅ Resolved.
             - `hold` (id, reason with evidence) — the author answered and you still disagree; the row moves to the reviewer's ⚠️ list for a human to weigh and STOPS blocking the author.
+            - `accept` (id, reason[, bulk: true]) — the mention ACCEPTS the finding as-is ("accepting as-is — <reason>", or "accepting all open items" → one entry per open 🚨/❓ id with `bulk: true`); no adjudication, the reason is the author's; the row moves to the reviewer's ⚠️ list with a ✋ marker.
             - `promote` (id, to: author-answer|outstanding, reason) — upward only.
             - `add` (bucket, file, lines, text) — a NEW problem in the pushed lines only.
             - `retext` (id, text[, detail: {why, fix[, keep]}]) — sharpen a finding that stays open on its own merits; the cell stays ONE line (claim quote + verdict), any new action goes in `detail.fix`.
@@ -753,7 +754,12 @@ jobs:
           if-no-files-found: ignore
 
       # A refresh changes the Sentinel's answers; poke it rather than waiting
-      # for the next natural event. Best-effort.
+      # for the next natural event. The workflow_run trigger can't do this on
+      # its own: a comment-triggered run carries no `pull_requests[]`, so the
+      # Sentinel resolves no PR from it (first fork smoke, 2026-09-01). Fails
+      # loudly-but-non-fatally: `continue-on-error` keeps the job green, but
+      # a 403 (missing `actions: write`) must show as a red step, not be
+      # swallowed — this exact poke sat silently 403ing behind `|| true`.
       - name: Re-evaluate Sentinel (v3)
         if: steps.publish-v3.outcome == 'success'
         continue-on-error: true
@@ -761,7 +767,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
-            -f pr_number="${{ steps.pr-context.outputs.pr_number }}" || true
+            -f pr_number="${{ steps.pr-context.outputs.pr_number }}"
 
       # Re-post the one-click style suggestions and reconcile the pinned
       # comment against what actually landed. Delete-and-repost, exactly like

@@ -79,16 +79,18 @@ be = _load("build_evidence", HERE / "build-evidence.py")
 review_state = _load("review_state", _REVIEW_V3_DIR / "review_state.py")
 validate_evidence_mod = _load("validate_evidence", _REVIEW_V3_DIR / "validate-evidence.py")
 
-ACTIONS = ("resolve", "concede", "hold", "promote", "add", "retext")
-AUTO_FORBIDDEN = ("concede", "hold", "add")
+ACTIONS = ("resolve", "concede", "hold", "accept", "promote", "add", "retext")
+AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
 RESOLVED_HEADING = "### ✅ Resolved since last review"
 RESOLVED_PLACEHOLDER = "_No items resolved since the last review._"
+# Same placeholder strings the composer uses, so an emptied section reads
+# identically whether the initial lane or a refresh emptied it.
 SECTION_EMPTY = {
-    "outstanding": "_Nothing to fix — this section is empty._",
-    "author-answer": "_No open questions for you._",
-    "reviewer-check": "_Nothing needs your judgment beyond the rubber-stamp list below._",
+    "outstanding": cr._V3_EMPTY_OUTSTANDING,
+    "author-answer": cr._V3_EMPTY_QUESTIONS,
+    "reviewer-check": cr._V3_EMPTY_CHECKS,
 }
 AUTHOR_HEADINGS = {
     "outstanding": "### 🚨 Fix or disagree",
@@ -139,7 +141,7 @@ def validate_update(update: dict, known_ids: set[str]) -> list[str]:
                 problems.append(f"{where}: {fid} is not an open finding on this review")
         if action == "promote" and entry.get("to") not in ("author-answer", "outstanding"):
             problems.append(f"{where}: promote target {entry.get('to')!r} invalid")
-        if action in ("concede", "hold", "promote") and not str(entry.get("reason", "")).strip():
+        if action in ("concede", "hold", "accept", "promote") and not str(entry.get("reason", "")).strip():
             problems.append(f"{where}: {action} requires a reason")
         if action == "retext" and not str(entry.get("text", "")).strip():
             problems.append(f"{where}: retext requires text")
@@ -213,6 +215,53 @@ def _strip_detail_blocks(body: str) -> tuple[str, dict[str, list[str]]]:
     return "\n".join(kept) + ("\n" if body.endswith("\n") else ""), blocks
 
 
+_FACTS_RE = re.compile(r"^- \*\*Facts:\*\* (?P<n>\d+) factual claims? checked(?: — (?P<rest>.*?))?\.$", re.M)
+
+
+def _is_claim_finding(f: dict) -> bool:
+    origin = str(f.get("origin") or "")
+    if origin.startswith("verdict:"):
+        return True
+    # Degraded refresh (no prior evidence): origin is unknown, but a verdict
+    # row always opens with the italic claim quote the composer renders.
+    return origin == "model" and str(f.get("text") or "").lstrip().startswith(("*\"", "*“", "*'"))
+
+
+def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
+    """Re-derive the brief's rubber-stamp **Facts** bullet from the refreshed
+    evidence findings. The totals (claims checked, verified clean) are fixed
+    at compose time and kept; what moves is how many claim findings are still
+    open on the author's card vs. parked in the ⚠️ list vs. settled — after
+    the first live refresh the line still said "2 open" with one left."""
+    m = _FACTS_RE.search(brief_body)
+    if not m:
+        return brief_body
+    checked = int(m.group("n"))
+    rest = m.group("rest") or ""
+    mx = re.search(r"(\d+) verified clean", rest)
+    x = int(mx.group(1)) if mx else 0
+    claims = [f for f in findings if _is_claim_finding(f)]
+    author_open = sum(1 for f in claims
+                      if f.get("bucket") in ("outstanding", "author-answer")
+                      and f.get("status") == "open" and not f.get("disposition"))
+    flagged = sum(1 for f in claims if f.get("bucket") == "reviewer-check")
+    settled = max(checked - x - author_open - flagged, 0)
+    parts: list[str] = []
+    if x:
+        parts.append(f"{x} verified clean")
+    if author_open:
+        parts.append(f'{author_open} open on the author\'s card ("Waiting on the author" above)')
+    if flagged:
+        parts.append(f"{flagged} flagged in the ⚠️ list")
+    if settled:
+        parts.append(f"{settled} settled since the last review")
+    noun = "factual claim" if checked == 1 else "factual claims"
+    line = f"- **Facts:** {checked} {noun} checked"
+    if parts:
+        line += " — " + ", ".join(parts)
+    return brief_body[:m.start()] + line + "." + brief_body[m.end():]
+
+
 def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
     """A retext with `detail` refreshes the finding's Do-this block: the
     verbatim line is kept (the flagged text didn't change), Why/Fix/keep are
@@ -246,7 +295,7 @@ def apply(
     """Returns (author_out, brief_out, model_state, applied_report)."""
     now = now or datetime.now(timezone.utc)
     today = now.date().isoformat()
-    timestamp = now.isoformat().replace("+00:00", "Z")
+    timestamp = now.replace(microsecond=0).isoformat().replace("+00:00", "Z")
     link_base = (f"https://github.com/{repo}/pull/{pr}/files"
                  if repo and pr else "")
     edit_base = (f"https://github.com/{head_repo}/edit/{head_branch}/"
@@ -345,6 +394,22 @@ def apply(
             disposition_state = review_state.set_disposition(
                 disposition_state, fid, "refuted",
                 actor=actor, note=reason, sha=head_sha[:12], now=now)
+        elif action == "accept":
+            # The author accepted the finding as-is (the footer's third verb).
+            # Their to-do is done — but a knowingly-shipped finding is exactly
+            # what the human reviewer should weigh, so the row moves to the
+            # brief's ⚠️ list with a ✋ marker, and REVIEW_STATE records
+            # `accepted` (bulk-flagged when the mention accepted everything).
+            reason = entry["reason"].strip()
+            marker = f"✋ **Accepted as-is by {actor} on {today}.** {reason}"
+            if "Accepted as-is by" not in row["parsed"]["body"]:
+                row["parsed"]["body"] = row["parsed"]["body"].rstrip() + " " + marker
+            row["bucket"] = "reviewer-check"
+            row["doc"] = "brief"
+            disposition_state = review_state.set_disposition(
+                disposition_state, fid, "accepted",
+                actor=actor, note=reason, sha=head_sha[:12],
+                bulk=bool(entry.get("bulk", False)), now=now)
         elif action == "promote":
             target = entry["to"]
             if _BUCKET_RANK[target] <= _BUCKET_RANK[row["bucket"]]:
@@ -382,15 +447,21 @@ def apply(
     brief_out = cr.replace_waiting_block(
         brief_out, open_findings, merged_state.get("findings", {}))
     author_out = review_state.replace_block(author_out, merged_state)
-    n_blocking = sum(1 for r in rows.values() if r["bucket"] in ("outstanding", "author-answer"))
+    # Blocking = author-card rows WITHOUT a disposition: a `/resolve F1
+    # accepted` that landed before this refresh must not be counted back in.
+    n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
     brief_out = _BRIEF_HEADER_RE.sub(
         f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)
-    new_sub = f"<sub>Review v{new_rev} · updated {timestamp} · head commit {head_sha[:8]}</sub>"
+    new_sub = f"<sub>Review v{new_rev} · updated {timestamp} · head commit {head_sha[:7]}</sub>"
     author_out = _SUB_RE.sub(new_sub, author_out, count=1)
     brief_out = _SUB_RE.sub(new_sub, brief_out, count=1)
 
+    # Section replacement pads with blank lines; without this a card grows a
+    # blank line per refresh (observed on the fork after one update).
+    author_out = author_out.rstrip("\n") + "\n"
+    brief_out = brief_out.rstrip("\n") + "\n"
     report = {
         "blocking": n_blocking,
         "resolved": len(resolved_rows),
@@ -478,7 +549,13 @@ def assemble_evidence(
     for fid in sorted(rows, key=lambda f: int(f[1:])):
         row = rows[fid]
         carried = prior_findings.get(fid, {})
-        status = "disputed-held" if "model held" in row["parsed"]["body"] else "open"
+        body_text = row["parsed"]["body"]
+        if "model held" in body_text:
+            status = "disputed-held"
+        elif "Accepted as-is by" in body_text:
+            status = "accepted-as-is"
+        else:
+            status = "open"
         record = {
             "id": fid,
             "bucket": row["bucket"],
@@ -594,6 +671,7 @@ def main() -> int:
             prior, author_out, brief_out, merged_state, update,
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
+        brief_out = refresh_facts_line(brief_out, evidence["findings"])
     except UpdateError as exc:
         print(f"apply-update: contract violation: {exc}", file=sys.stderr)
         return 2
@@ -642,6 +720,8 @@ def _self_test() -> int:
     assert a_out.count("📎 **Full evidence:**") == 1, "evidence line survives the re-render"
     assert a_out.count(cr.V3_BROWSER_HINT_PREFIX) == 1, "browser hint survives, exactly once"
     assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
+    assert f"· head commit {sha[:7]}</sub>" in a_out and "." not in a_out.split("· updated ")[1].split(" ·")[0], "sub: 7-char sha, no microseconds"
+    assert not a_out.endswith("\n\n") and not b_out.endswith("\n\n"), "no trailing blank growth"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 

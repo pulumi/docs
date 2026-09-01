@@ -100,7 +100,8 @@
               "open",
               "resolved",
               "conceded",
-              "disputed-held"
+              "disputed-held",
+              "accepted-as-is"
             ]
           },
           "disposition": {

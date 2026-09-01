@@ -354,6 +354,36 @@ def _clean(body: str, drop: set[int], renumber: dict[int, str]) -> str:
     return "\n".join(out) + ("\n" if body.endswith("\n") else "")
 
 
+def open_author_findings(author_body: str) -> list[dict]:
+    """The author card's 🚨/❓ rows as {id, bucket, text} — the shape
+    render_waiting_block() and count_blocking() take."""
+    return [{"id": parsed["id"], "bucket": bucket, "text": parsed["body"]}
+            for bucket, _i, parsed, _raw in _walk(author_body, AUTHOR_SECTIONS, "author")]
+
+
+def count_blocking(findings: list[dict], state_findings: dict) -> int:
+    """Rows that still hold the merge: on the author card AND without a
+    REVIEW_STATE disposition. Mirrors validate-pinned's v3 count-buckets, so
+    the header, the Waiting table, and the label can't disagree."""
+    return sum(1 for f in findings
+               if f.get("bucket") in ("outstanding", "author-answer")
+               and not isinstance(state_findings.get(f["id"]), dict))
+
+
+def refresh_counts(author_body: str, brief_body: str | None, state: dict | None) -> tuple[str, str | None]:
+    """Recompute everything that depends on dispositions after REVIEW_STATE
+    changes: the author header's blocking count and the brief's "Waiting on
+    the author" block. Shared by apply-update.py (update lane) and
+    resolve-handler.py (/resolve lane) — before this, a `/resolve F1
+    accepted` left both saying "1 item blocks merge" (2026-09-01 smoke)."""
+    findings = open_author_findings(author_body)
+    sf = (state or {}).get("findings", {}) or {}
+    author_body = _fix_header(author_body, count_blocking(findings, sf))
+    if brief_body is not None:
+        brief_body = cr.replace_waiting_block(brief_body, findings, sf)
+    return author_body, brief_body
+
+
 def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
     """Recompute the header's blocking count; `rev` bumps the display
     revision (the update lane passes it — initial-lane fixes keep v1)."""
@@ -368,6 +398,16 @@ def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
                 verb = "nothing blocks merge"
             out_rev = rev if rev is not None else int(m.group("rev"))
             lines[i] = f"## Author action guide v{out_rev} — {verb}"
+            # The orienting callout directly under the header follows the
+            # count: swap IMPORTANT ⇄ NOTE when it crosses zero.
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j < len(lines) and lines[j].startswith("> [!"):
+                k = j
+                while k < len(lines) and lines[k].startswith(">"):
+                    k += 1
+                lines[j:k] = cr.render_author_orient(n_blocking)
             break
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
@@ -463,6 +503,30 @@ def _self_test() -> int:
     assert {f["id"]: f["bucket"] for f in ev2["findings"]}["F1"] == "preexisting"
     assert "**Pre-existing issues in touched files:** 1" in brief_out2
     assert "F1" not in author_out2.split("### 🚨")[1].split("### ❓")[0]
+
+    # refresh_counts: a disposition takes a row out of the blocking count on
+    # both cards without moving it.
+    fx_author = (HERE / "testdata" / "v3-fixture-author.md").read_text()
+    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+    fx_state = review_state.parse_state(fx_author) or review_state.empty_state()
+    from datetime import datetime, timezone
+    fx_state = review_state.set_disposition(
+        fx_state, "F3", "accepted", actor="alice", note="ship it",
+        now=datetime(2026, 9, 1, 20, 0, tzinfo=timezone.utc))
+    ra, rb = refresh_counts(review_state.replace_block(fx_author, fx_state), fx_brief, fx_state)
+    assert "— 2 items block merge" in ra, "header excludes the accepted row"
+    fx_all = fx_state
+    for fid in ("F1", "F2"):
+        fx_all = review_state.set_disposition(
+            fx_all, fid, "accepted", actor="alice", note="ship it",
+            now=datetime(2026, 9, 1, 20, 1, tzinfo=timezone.utc))
+    ra_all, _ = refresh_counts(review_state.replace_block(fx_author, fx_all), None, fx_all)
+    assert "— nothing blocks merge" in ra_all and "> [!NOTE]" in ra_all and "needs your answers" not in ra_all, "callout swaps at zero"
+    ra_back, _ = refresh_counts(ra_all, None, None)
+    assert "> [!IMPORTANT]" in ra_back and "needs your answers" in ra_back, "and swaps back"
+    assert "✋ accepted as-is by the author" in rb and "(1 more is answered — see State)" in rb, rb
+    ra0, _ = refresh_counts(fx_author, None, None)
+    assert "— 3 items block merge" in ra0
 
     print("build-evidence self-test passed")
     return 0

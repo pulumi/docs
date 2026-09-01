@@ -149,3 +149,48 @@ def test_retext_detail_shape_is_validated():
         assert "detail.fix" in str(e)
     else:
         raise AssertionError("missing detail.fix accepted")
+
+
+def test_accept_moves_row_to_brief_and_records_accepted_bulk():
+    up = _update([{"id": "F3", "action": "accept", "reason": "shipping as-is", "bulk": True}],
+                 case="dispute")
+    a_out, b_out, state, report = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "F3" not in _open_author_ids(a_out)
+    assert "**F3**" in b_out and "✋ **Accepted as-is by cam on " in b_out and "shipping as-is" in b_out
+    d = state["findings"]["F3"]
+    assert d["disposition"] == "accepted" and d["bulk"] is True and d["note"] == "shipping as-is"
+    assert report["blocking"] == 2
+    ev = au.assemble_evidence(None, a_out, b_out, state, up, repo="pulumi/docs", pr=999,
+                              head_sha=SHA, run_id="t", timestamp=report["timestamp"])
+    f3 = next(f for f in ev["findings"] if f["id"] == "F3")
+    assert f3["status"] == "accepted-as-is" and f3["bucket"] == "reviewer-check"
+    assert au.validate_evidence_mod.validate_evidence(ev) == []
+
+
+def test_header_excludes_rows_dispositioned_by_resolve_lane():
+    from datetime import datetime, timezone
+    live = au.review_state.set_disposition(
+        au.review_state.parse_state(AUTHOR), "F2", "accepted", actor="alice", note="ok",
+        now=datetime(2026, 9, 1, 20, 0, tzinfo=timezone.utc))
+    author_live = au.review_state.replace_block(AUTHOR, live)
+    up = _update([{"id": "F1", "action": "retext", "text": "*\"q\"* — still open"}])
+    a_out, b_out, _, report = au.apply(author_live, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "— 2 items block merge" in a_out and report["blocking"] == 2
+    assert "✋ accepted as-is by the author" in b_out
+
+
+def test_refresh_facts_line_recounts_from_findings():
+    brief = ("x\n- **Facts:** 3 factual claims checked — 1 verified clean, "
+             "2 open on the author's card (\"Waiting on the author\" above).\ny\n")
+    findings = [
+        {"id": "F1", "bucket": "outstanding", "status": "open", "origin": "verdict:contradicted", "text": "*\"a\"* — bad"},
+        {"id": "F2", "bucket": "outstanding", "status": "conceded", "origin": "model", "text": "*\"b\"* — concede: fine"},
+    ]
+    out = au.refresh_facts_line(brief, findings)
+    assert ("- **Facts:** 3 factual claims checked — 1 verified clean, "
+            "1 open on the author's card (\"Waiting on the author\" above), "
+            "1 settled since the last review.") in out
+    findings[0]["bucket"] = "reviewer-check"
+    out = au.refresh_facts_line(brief, findings)
+    assert "1 flagged in the ⚠️ list, 1 settled since the last review." in out
+    assert au.refresh_facts_line("no facts line", findings) == "no facts line"

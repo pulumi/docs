@@ -57,7 +57,39 @@ import resolve_command  # noqa: E402
 import review_state  # noqa: E402
 
 AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
+BRIEF_MARKER = "<!-- CLAUDE_REVIEW_BRIEF -->"
 ERRORS_MARKER = "<!-- RESOLVE_ERRORS -->"
+
+# build-evidence.py owns the deterministic card renderers (header count,
+# "Waiting on the author" block). Loaded lazily and best-effort: the state
+# block is the record; the counts are display, and a missing renderer must
+# never block a disposition from landing.
+_BUILD_EVIDENCE = _HERE.parent.parent / ".claude" / "commands" / "docs-review" / "scripts" / "build-evidence.py"
+
+
+def _load_build_evidence():
+    import importlib.util
+    if not _BUILD_EVIDENCE.exists():
+        return None
+    spec = importlib.util.spec_from_file_location("build_evidence", _BUILD_EVIDENCE)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["build_evidence"] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def refresh_cards(author_body: str, brief_body: str | None, state: dict) -> tuple[str, str | None]:
+    """Recount the author header and the brief's Waiting block for the new
+    dispositions. Returns the inputs unchanged when the renderer is
+    unavailable or the card doesn't parse (legacy/minimal bodies)."""
+    try:
+        be = _load_build_evidence()
+        if be is None:
+            return author_body, brief_body
+        return be.refresh_counts(author_body, brief_body, state)
+    except Exception as exc:  # noqa: BLE001 — display refresh is best-effort
+        print(f"resolve-handler: card refresh skipped: {exc}", file=sys.stderr)
+        return author_body, brief_body
 POINTER_MARKER_TMPL = "<!-- RESOLVE_POINTER {actor} -->"
 
 
@@ -338,7 +370,12 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
 
         merged = review_state.merge_states(fresh_state, new_state)
         new_body = review_state.replace_block(fresh_comment["body"], merged)
+        brief_comment = find_marker_comment(comments, BRIEF_MARKER)
+        brief_body = gh.get_issue_comment(brief_comment["id"])["body"] if brief_comment else None
+        new_body, new_brief = refresh_cards(new_body, brief_body, merged)
         gh.patch_issue_comment(author_comment["id"], new_body)
+        if brief_comment and new_brief is not None and new_brief != brief_body:
+            gh.patch_issue_comment(brief_comment["id"], new_brief)
         gh.add_reaction(comment_id, "+1")
         applied = True
 
@@ -449,6 +486,21 @@ def _self_test() -> int:
     check("F2 recorded", state["findings"]["F2"]["disposition"] == "refuted")
     check("actor recorded", state["findings"]["F2"]["actor"] == "alice")
     check("reaction added", gh.reactions == [(9001, "+1")])
+
+    # -- counts follow dispositions: header + brief Waiting block ------------
+    fx = _HERE.parent.parent / ".claude" / "commands" / "docs-review" / "scripts" / "testdata"
+    if (fx / "v3-fixture-author.md").exists():
+        gh = StubGh(pr_author="alice")
+        fx_author = (fx / "v3-fixture-author.md").read_text()
+        fx_brief = (fx / "v3-fixture-brief.md").read_text()
+        author_id = gh.seed_comment(fx_author)
+        brief_id = gh.seed_comment(fx_brief)
+        r = handle(42, 9010, "alice", "/resolve F3 accepted: internal figure, shipping as-is", gh)
+        check("fixture resolve applies", r.exit_code == 0 and r.outcome == "applied")
+        check("author header recounted", "— 2 items block merge" in gh.comments[author_id]["body"])
+        check("brief Waiting block shows the answer",
+              "✋ accepted as-is by the author" in gh.comments[brief_id]["body"]
+              and "(1 more is answered — see State)" in gh.comments[brief_id]["body"])
 
     # -- bulk all with note applies to F1..high_water, bulk flags ------------
     gh = StubGh(pr_author="alice")

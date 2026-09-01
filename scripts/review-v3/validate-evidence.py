@@ -51,7 +51,7 @@ SCHEMA_VERSION = 1
 # ---- closed sets (must stay in sync with evidence-schema.json) -------------
 
 BUCKETS = {"outstanding", "author-answer", "reviewer-check", "preexisting"}
-STATUSES = {"open", "resolved", "conceded", "disputed-held"}
+STATUSES = {"open", "resolved", "conceded", "disputed-held", "accepted-as-is"}
 DISPOSITIONS = {"fixed", "refuted", "deferred", "accepted", "not-applicable"}
 # Same rule, same set, as review-worklist.py's NOTE_REQUIRED: these three
 # dispositions record a judgment call, not a fact the diff or a dispute

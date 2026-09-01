@@ -1788,13 +1788,23 @@ def render_waiting_block(findings: list[dict], state_findings: dict) -> list[str
     rows = [f for f in findings if f.get("bucket") in ("outstanding", "author-answer")]
     if not rows:
         return []
-    n = len(rows)
-    noun = "item blocks" if n == 1 else "items block"
+    answered = [f for f in rows if isinstance(state_findings.get(f["id"]), dict)]
+    n_open = len(rows) - len(answered)
+    if n_open:
+        noun = "item blocks" if n_open == 1 else "items block"
+        head = f"**Waiting on the author** — {n_open} {noun} merge from the author's own card"
+        if answered:
+            more = "more is" if len(answered) == 1 else "more are"
+            head += f" ({len(answered)} {more} answered — see State)"
+        head += ("; you don't need to police them, but check the final diff shows "
+                 "them answered before you approve:")
+    else:
+        head = ("**Answered by the author** — nothing blocks merge from the author's "
+                "card any more; their answers are listed so you can weigh them "
+                "before you approve:")
     lines = [
         AUTHOR_STATE_BEGIN,
-        f"**Waiting on the author** — {n} {noun} merge from the author's own "
-        "card; you don't need to police them, but check the final diff shows "
-        "them answered before you approve:",
+        head,
         "",
         "| ID | State | Claim |",
         "|---|---|---|",
@@ -1826,6 +1836,27 @@ def replace_waiting_block(brief_body: str, findings: list[dict],
     at = next((i for i, ln in enumerate(lines) if ln.startswith("### ")), len(lines))
     lines[at:at] = block + [""]
     return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
+
+
+def render_author_orient(n_blocking: int) -> list[str]:
+    """The callout under the author header. Owned here so the refresh lanes
+    (build-evidence._fix_header) can swap it when the count crosses zero —
+    a "nothing blocks merge" card must not open with "needs your answers
+    before this PR can merge" (2026-09-01 update-lane smoke)."""
+    if n_blocking:
+        return [
+            "> [!IMPORTANT]",
+            "> **You = the PR author.** This review needs your answers before this "
+            "PR can merge. Fix each item below, or tell the review why it's "
+            "wrong — **How to answer** at the bottom shows exactly what to "
+            "type. Answering unblocks the review; a human reviewer still "
+            "approves the merge.",
+        ]
+    return [
+        "> [!NOTE]",
+        "> Nothing here blocks merge — no open items need an answer from you. "
+        "A human reviewer still approves the merge.",
+    ]
 
 
 def render_detail_scaffold(fid: str) -> list[str]:
@@ -2122,20 +2153,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if n_blocking:
         noun = "item blocks" if n_blocking == 1 else "items block"
         header_verb = f"{n_blocking} {noun} merge"
-        orient = [
-            "> [!IMPORTANT]",
-            "> **You = the PR author.** This review needs your answers before this "
-            "PR can merge. Fix each item below, or tell the review why it's "
-            "wrong — **How to answer** at the bottom shows exactly what to "
-            "type. Answering unblocks the review; a human reviewer still "
-            "approves the merge.",
-        ]
     else:
         header_verb = "nothing blocks merge"
-        orient = [
-            "> [!NOTE]",
-            "> Nothing here blocks merge — the review found no items needing an answer from the PR author.",
-        ]
+    orient = render_author_orient(n_blocking)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
         if not rows:
