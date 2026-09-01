@@ -1,6 +1,7 @@
 ---
 title: "Best AI Infrastructure Tools in 2026"
 date: 2026-05-25
+updated: 2026-08-28
 draft: false
 meta_desc: "GPU clouds, MLOps platforms, and AI-powered infrastructure tools, compared. What each one is good at, where it falls short, and how to pick in 2026."
 feature_image: feature.png
@@ -33,17 +34,18 @@ This guide covers both categories: the compute and MLOps stack in Part 1, and AI
 1. [Modal](#modal): serverless GPU compute
 1. [Weights & Biases](#weights--biases): ML experiment tracking and model management
 1. [MLflow](#mlflow): open-source ML lifecycle platform
-1. [Hyperscaler AI platforms](#hyperscaler-ai-platforms): AWS SageMaker, Google Vertex AI, Azure ML
+1. [Hyperscaler AI platforms](#hyperscaler-ai-platforms): AWS SageMaker, Google's Gemini Enterprise Agent Platform, Azure ML
 
 ### AI-powered infrastructure management tools
 
-1. [Pulumi Neo](#pulumi-neo): agentic AI with policy automation
-1. [Firefly AIaC](#firefly-aiac): asset codification and IaC generation
-1. [env0 Cloud Compass](#env0-cloud-compass): multi-IaC insights and analysis
-1. [Spacelift AI](#spacelift-ai): run explanation and troubleshooting
+1. [Pulumi Neo](#pulumi-neo): infrastructure agent with policy automation
+1. [Firefly](#firefly): asset codification with an emerging agent layer
+1. [env zero](#env-zero): multi-IaC insights, now with an agent CLI
+1. [Spacelift Intelligence](#spacelift-intelligence): conversational Q&A and natural-language provisioning
 1. [Crossplane with Upbound](#crossplane-with-upbound): Kubernetes-native infrastructure
+1. [Hyperscaler infrastructure agents](#hyperscaler-infrastructure-agents): Azure SRE Agent, Gemini Cloud Assist
 1. [General-purpose code assistants](#general-purpose-code-assistants): Copilot, Claude Code, Cursor, Gemini
-1. [AWS Application Composer](#aws-application-composer): visual serverless builder
+1. [AWS Infrastructure Composer](#aws-infrastructure-composer): visual builder for CloudFormation templates
 
 ## Quick picks
 
@@ -79,7 +81,7 @@ CoreWeave is the GPU cloud that broke out of the AI hype cycle into a real publi
 
 ### Lambda Labs
 
-Lambda has been the approachable GPU cloud for a long time. Environments come pre-configured with PyTorch and TensorFlow, and you can be running on an H100 in about as long as it takes to copy your SSH key.
+Lambda (formerly Lambda Labs; the company is incorporated as Lambda, Inc.) has been the approachable GPU cloud for a long time. Environments come pre-configured with PyTorch and TensorFlow, and you can be running on an H100 in about as long as it takes to copy your SSH key.
 
 - **License**: Proprietary
 - **Best for**: Research teams, startups, and individual practitioners who want GPUs without a configuration tax
@@ -106,7 +108,7 @@ Weights & Biases is the de facto standard for ML experiment tracking and model m
 
 ### MLflow
 
-MLflow is the leading open-source MLOps platform: experiment tracking, packaging, registry, and serving, with no lock-in. Originally built at Databricks, it's now a broad open-source ecosystem with managed offerings from multiple vendors (including Databricks and the major clouds).
+MLflow is the leading open-source MLOps platform: experiment tracking, packaging, registry, and serving, with no lock-in. Originally built at Databricks, it's now on the 3.x line (3.15 as of mid-2026) and has been governed by the Linux Foundation's LF AI & Data since 2020, with managed offerings from multiple vendors (including Databricks and the major clouds).
 
 - **License**: Apache 2.0
 - **Best for**: Teams that want MLOps without a vendor; or want the option to start managed and self-host later
@@ -115,10 +117,10 @@ MLflow is the leading open-source MLOps platform: experiment tracking, packaging
 
 ### Hyperscaler AI platforms
 
-The major clouds all sell end-to-end ML platforms. Each leads on the dimensions that line up with its parent cloud (Vertex for Google's models and TPUs, SageMaker for AWS-native data pipelines, Azure ML for Microsoft-stack integration), but the wider integration with the rest of the cloud is the deciding factor.
+The major clouds all sell end-to-end ML platforms. Each leads on the dimensions that line up with its parent cloud (Google's Gemini Enterprise Agent Platform for its models and TPUs, SageMaker for AWS-native data pipelines, Azure ML for Microsoft-stack integration), but the wider integration with the rest of the cloud is the deciding factor.
 
 - **AWS SageMaker**: end-to-end ML on AWS, deeply integrated with S3 and Glue, with first-class connections to Lambda for serverless inference and to the rest of the AWS data stack. The default pick if your data already lives in AWS.
-- **Google Vertex AI**: Google's ML stack, including TPUs for workloads that need them, plus access to Google's foundation models. Strongest when paired with BigQuery.
+- **Gemini Enterprise Agent Platform** (formerly Vertex AI): Google's ML stack, including TPUs for workloads that need them, plus access to Google's foundation models. Strongest when paired with BigQuery.
 - **Azure Machine Learning**: the natural choice when the rest of your stack is Microsoft; first-party MLOps integrations across GitHub Actions, Azure DevOps, and Microsoft Fabric for downstream reporting. The right choice if you're already an Azure shop with Microsoft compliance requirements.
 
 The shared tradeoff: hyperscaler GPU compute typically runs 2–3x the per-hour price of specialized providers, and the platforms work best when you commit to them top to bottom. For organizations already inside one cloud, the unified billing and single support contract usually justifies the premium. For a new ML team starting from scratch, it rarely does.
@@ -146,9 +148,11 @@ Before the tool list, one distinction matters more than any feature comparison: 
 
 Where you want to land on this spectrum is mostly a governance question, not a productivity one.
 
+Execution used to be the dividing line between these tools; it no longer is. By mid-2026, most of the dedicated IaC platforms in this section can point an agent at your infrastructure and have it act, not only narrate. env zero's Agent CLI lets an existing coding agent make changes through the same roles and approvals a person would use. Spacelift Intent plans and applies infrastructure changes from a natural-language request. Microsoft's Azure SRE Agent can execute remediation rather than only recommend it. What differentiates these tools now is not whether they act, but how far their reach extends, how deep their guardrails go, and what happens when something goes wrong.
+
 ### Pulumi Neo
 
-[Pulumi Neo](/product/neo/) is Pulumi's agentic AI for infrastructure. The distinguishing claim is execution: Neo doesn't only suggest a Terraform snippet, it figures out the right resources, generates the code, and runs the deployment inside whatever guardrails you've set.
+[Pulumi Neo](/product/neo/) is Pulumi's AI agent for infrastructure. The distinguishing claim is execution: Neo doesn't only suggest a Terraform snippet, it figures out the right resources, generates the code, and runs the deployment inside whatever guardrails you've set.
 
 - **License**: Proprietary (Pulumi Cloud)
 - **Best for**: Platform engineering teams that want AI automation with real policy controls, especially in regulated industries
@@ -159,7 +163,11 @@ A few things that set it apart in practice:
 
 **Works with infrastructure you didn't create with Pulumi.** Neo's governance applies to Pulumi-managed resources, Terraform state, CloudFormation stacks, and resources someone clicked together in the AWS console. That matters because the realistic adoption path is to point Neo at what you have, audit it, and gradually bring it under management, not to migrate everything first.
 
-**Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agentic AI in anger, versus letting it sit as a sandbox toy.
+**Built on real programming languages.** Neo reasons about Python, TypeScript, Go, C#, and Java, not a proprietary DSL. That matters specifically for an AI agent: general-purpose code is what language models have the most training data on, and it comes with testing, refactoring, and IDE tooling that infrastructure-specific DSLs don't have.
+
+**One platform, every cloud.** AWS, Azure, GCP, Kubernetes, and 180+ other providers, from one agent and one policy model. The hyperscaler-native agents below stop at their own cloud's edge.
+
+**Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agents for infrastructure, versus keeping them sandboxed.
 
 **IDE and CI/CD integration.** The Pulumi MCP Server brings Neo into Cursor, Claude Code, Claude Desktop, Windsurf, and any other MCP-compatible client. The Pulumi Cloud UI is the home base for approvals, history, and remediation status. Neo also slots into CI/CD pipelines for pre-merge policy remediation.
 
@@ -170,41 +178,50 @@ A few things that set it apart in practice:
 
 **Tradeoff to be honest about**: Neo gets more valuable the deeper you are in the Pulumi ecosystem. If you're running IaC, ESC, and policy packs already, Neo has a lot of context to draw on. If you're kicking the tires, it's still useful, but the differentiating capability (context-aware, policy-respecting agentic execution) is harder to feel.
 
-### Firefly AIaC
+### Firefly
 
-Firefly is an asset management platform with AI features bolted on top of a strong core. The core capability is asset codification: it discovers cloud resources you already have and generates the IaC for them.
+Firefly is an asset management platform with AI features layered on top of a strong core. The core capability is asset codification: it discovers cloud resources you already have and generates the IaC for them. (Note: "AIaC" is the name of Firefly's older open-source CLI for generating IaC from natural language, not its current agentic product.)
 
 - **License**: Proprietary
 - **Best for**: Teams that need to codify existing cloud footprints or generate IaC from natural language
 
-Strengths: solid asset discovery, multi-cloud coverage, natural-language IaC generation, drift detection with remediation hooks. Caveat: AI features here are supplementary to the asset management product, not the main event, and Firefly is less focused on agentic execution than on inventory and policy.
+Strengths: solid asset discovery, multi-cloud coverage, natural-language IaC generation, drift detection with remediation hooks. Firefly's newer agentic layer, branded Thinkerbell AI, was recognized in Gartner's 2026 Market Guide for AI SRE Tooling. Caveat: that agent layer still sits on top of the core asset-management product rather than replacing it, so Firefly is best evaluated first on inventory and codification, with the agent as a growing extra.
 
-### env0 Cloud Compass
+### env zero
 
-env0's Cloud Compass adds AI to env0's IaC automation platform, focusing on analysis rather than autonomous execution.
-
-- **License**: Proprietary
-- **Best for**: Multi-IaC shops that want AI-generated PR summaries, drift explanations, and cost insights
-
-Strengths: multi-tool support across Terraform, OpenTofu, Pulumi, and Terragrunt; AI-generated PR summaries; drift cause analysis; cost estimation. Caveat: this is analysis and explanation, not action: Cloud Compass complements an agentic tool rather than replacing one.
-
-### Spacelift AI
-
-Spacelift's AI work is focused on the post-run experience: explaining what happened in a deployment and helping troubleshoot failures.
+env0 rebranded to env zero in 2026 (the technical surfaces, like its GitHub org and CLI, still say "env0"). Its IaC automation platform ships two distinct AI capabilities: Cloud Compass, an AI-assisted audit of IaC coverage and drift risk across your estate, and the newer Agent CLI (announced August 2026), which points an existing coding agent like Claude Code, Cursor, or Copilot at your env zero-managed infrastructure and lets it act, grounded in real environment state, through the same roles and approvals a person would use.
 
 - **License**: Proprietary
-- **Best for**: GitOps shops that want AI assistance reading complex runs and diagnosing failed deployments
+- **Best for**: Multi-IaC shops that want AI-generated coverage and drift analysis, plus a way to let their existing coding agent operate against real infrastructure state
 
-Strengths: AI-powered run explanation; troubleshooting guidance for failures; broad IaC tool support; mature CI/CD integration. Caveat: like Spacelift as a whole, this is observation and explanation, not generation or execution. Pair with something that writes the code.
+Strengths: multi-tool support across Terraform, OpenTofu, Terragrunt, and (per third-party reporting) Pulumi; AI-generated coverage and drift analysis via Cloud Compass; agent-initiated changes via the Agent CLI, authenticated as a real env zero identity so actions stay attributable. Caveat: the Agent CLI is new as of August 2026, and an agent holding a sufficiently privileged identity can initiate real deploys or destroys; approvals upstream reduce but don't eliminate that risk.
+
+### Spacelift Intelligence
+
+Spacelift Intelligence, launched March 2026, replaces what used to be a narrower run-explanation feature. It has two parts: Infra Assistant, conversational Q&A grounded in your real stacks, state, and runs (ask it to find every public S3 bucket, for instance), and Intent, which took natural-language provisioning further: describe the change you want, and it plans and executes it, with your existing policies and approvals applying and state tracked as usual.
+
+- **License**: Proprietary (Spacelift Intelligence is currently provided free of charge, though Spacelift reserves the right to introduce fees later)
+- **Best for**: GitOps shops that want conversational visibility into complex runs, plus natural-language provisioning inside their existing approval workflow
+
+Strengths: broad IaC tool support (Terraform, OpenTofu, Terragrunt, Pulumi, CloudFormation, Ansible, Kubernetes); conversational run explanation and troubleshooting; natural-language provisioning through Intent; mature CI/CD integration. Caveat: Intent only reached early access in October 2025 and Intelligence itself shipped in March 2026, so this is a young, first-generation capability. Spacelift's own team put it plainly at Intent's launch: "we're not sure where this goes, but we know the status quo isn't enough anymore."
 
 ### Crossplane with Upbound
 
-Crossplane brings Kubernetes-style declarative management to cloud resources. Upbound is the company that commercializes it, and is layering AI-native control-plane capabilities into the 2.0 generation.
+Crossplane brings Kubernetes-style declarative management to cloud resources. It graduated within the CNCF in late 2025 and is now on its 2.0 generation. Upbound is the company that commercializes it, and in August 2026 shipped Upbound v3, which it frames as an AI-native control plane for the agentic era. In practice, v3's AI-native piece is a governance and identity layer, not an autonomous executor: it gives AI agents (alongside humans and pipelines) scoped, time-boxed, auditable credentials and a unified view across your fleet of control planes. The actual reconciliation still comes from Crossplane itself.
 
 - **License**: Apache 2.0 (Crossplane); proprietary (Upbound)
-- **Best for**: Teams already deep in Kubernetes that want to manage cloud resources the same way
+- **Best for**: Teams already deep in Kubernetes that want to manage cloud resources the same way, including letting agents operate against them with an audit trail
 
-Strengths: Kubernetes-native model; native GitOps fit; very active OSS community; AI control-plane work emerging from Upbound. Caveat: the learning curve is real if you're not already living in Kubernetes; the commercial AI features are still maturing.
+Strengths: Kubernetes-native model; native GitOps fit; active OSS community, now CNCF-graduated; agent-ready identity and fleet-wide visibility from Upbound v3. Caveat: the learning curve is real if you're not already living in Kubernetes, and v3's AI-native framing is about governing agent access, not an agent that makes infrastructure decisions on its own.
+
+### Hyperscaler infrastructure agents
+
+Each major cloud now ships its own AI agent for operating within that cloud. Microsoft's Azure SRE Agent, generally available since March 2026, runs automated root-cause analysis across app, platform, and infrastructure telemetry and, with configurable autonomy, can execute remediation rather than only recommend it. Google's Gemini Cloud Assist is broader but more advisory: it helps design architecture in natural language (generating gcloud, kubectl, and Terraform), runs guided incident investigations, and proposes cost-saving fixes through its FinOps tooling, but Google's own documentation cautions that proposed strategies need a human check before implementation.
+
+- **License**: Proprietary; Azure SRE Agent is billed per agent-hour plus token usage, and Gemini Cloud Assist is free during preview (some capabilities require a Code Assist Enterprise or Premium Support tier)
+- **Best for**: Teams fully committed to a single hyperscaler that want their AI layer from the same vendor as everything else on that cloud
+
+Strengths: deep integration with the parent cloud's telemetry, IAM, and support; no separate platform to adopt. Caveat: single-cloud by design. If your infrastructure spans providers, or you expect to, a hyperscaler agent covers only part of the estate.
 
 ### General-purpose code assistants
 
@@ -215,14 +232,14 @@ General-purpose AI coding assistants are the tools your developers already have 
 
 Strengths: excellent line-by-line code completion; broad language support; first-class editor integration; trained on huge corpora. Caveat: no infrastructure context. They don't know what's in your account, what your policies are, or which subnet you should pick. Treat their IaC suggestions as first-pass scaffolding, not production output.
 
-### AWS Application Composer
+### AWS Infrastructure Composer
 
-Application Composer is AWS's visual builder for serverless applications. Drag services onto a canvas, get a CloudFormation template out, with AI suggestions for service configuration along the way.
+AWS renamed Application Composer to Infrastructure Composer in October 2024 to reflect that it now supports any CloudFormation resource, not only serverless ones. It's a visual builder: drag services onto a canvas in the console or the AWS Toolkit for VS Code, and get a CloudFormation (or SAM) template out, with bidirectional sync between the diagram and the template.
 
 - **License**: Proprietary (AWS, included)
-- **Best for**: Teams building AWS serverless apps who prefer a visual workflow
+- **Best for**: Teams building on CloudFormation who prefer a visual, drag-and-drop design workflow
 
-Strengths: visual development for serverless; direct AWS integration; AI suggestions for service configuration; emits CloudFormation. Caveat: AWS-only, CloudFormation-only, and best suited to serverless rather than general infrastructure.
+Strengths: visual development with bidirectional template sync; direct AWS integration; covers any CloudFormation resource, not only serverless. Caveat: it's a design and authoring tool, not an agent. It doesn't provision anything itself, and it's AWS- and CloudFormation-only.
 
 ## Comparison tables
 
@@ -236,20 +253,21 @@ Strengths: visual development for serverless; direct AWS integration; AI suggest
 | Weights & Biases | MLOps | Industry-standard experiment tracking | Costs scale quickly | Free tier + paid | ML team collaboration |
 | MLflow | MLOps | Open source, no lock-in | Self-hosting overhead | Free (self-hosted) | Flexible ML lifecycle |
 | AWS SageMaker | Hyperscaler | AWS ecosystem integration | Higher cost, lock-in | Per-use | AWS-native orgs |
-| Google Vertex AI | Hyperscaler | Google models, TPU access | Lock-in | Per-use | Google Cloud users |
+| Gemini Enterprise Agent Platform (formerly Vertex AI) | Hyperscaler | Google models, TPU access | Lock-in | Per-use | Google Cloud users |
 | Azure ML | Hyperscaler | Microsoft integration, enterprise features | Lock-in | Per-use | Microsoft ecosystem |
 
 ### AI-powered infrastructure management
 
 | Tool | Approach | Key strength | Limitation | Pricing | Best for |
 |------|----------|--------------|------------|---------|----------|
-| Pulumi Neo | Agentic AI | Execution + policy automation | Best within Pulumi ecosystem | Pulumi Cloud tiers | Enterprise platform teams |
-| Firefly AIaC | Asset management | Asset codification, IaC generation | AI is supplementary | Proprietary | Codifying existing infra |
-| env0 Cloud Compass | Multi-IaC platform | Multi-tool support, PR analysis | Analysis, not execution | Proprietary | Multi-IaC environments |
-| Spacelift AI | CI/CD platform | Run explanation, troubleshooting | Observation, not action | Proprietary | GitOps workflows |
-| Crossplane / Upbound | Kubernetes-native | K8s patterns for infra | Requires K8s expertise | Open source + commercial | Kubernetes-native teams |
+| Pulumi Neo | Agentic infrastructure | Execution + policy automation, across every cloud | Best within Pulumi ecosystem | Pulumi Cloud tiers | Enterprise platform teams |
+| Firefly | Asset management + agent layer | Asset codification, IaC generation | Thinkerbell AI agent layer still supplementary | Proprietary | Codifying existing infra |
+| env zero | Multi-IaC platform + Agent CLI | Multi-tool support, agent-driven changes via your coding agent | Agent CLI is new (Aug 2026) | Proprietary | Multi-IaC environments |
+| Spacelift Intelligence | CI/CD platform | Conversational Q&A plus natural-language provisioning | Young; Intent reached early access late 2025 | Free (for now) | GitOps workflows |
+| Crossplane / Upbound | Kubernetes-native | K8s patterns for infra, agent-ready identity via Upbound v3 | Requires K8s expertise | Open source + commercial | Kubernetes-native teams |
+| Azure SRE Agent / Gemini Cloud Assist | Hyperscaler agent | Deep single-cloud integration, incident response | Single-cloud only | Metered per agent-hour (Azure) / free during preview (Google) | Single-cloud shops |
 | Code assistants | Code assistant | Broad language support, IDE | No infrastructure context | Subscription | General code assistance |
-| AWS Composer | Visual builder | Visual serverless development | AWS- and CFN-only | Included with AWS | AWS serverless apps |
+| AWS Infrastructure Composer | Visual builder | Visual CloudFormation design, bidirectional sync | AWS- and CFN-only, design only | Included with AWS | AWS teams that want a visual designer |
 
 {{< blog/cta-card title="See agentic infrastructure in action" label="Explore Pulumi Neo" href="/product/neo/" >}}
 Pulumi Neo generates, deploys, and governs cloud infrastructure across the resources you already have, with the policy guardrails you define.
@@ -259,11 +277,11 @@ Pulumi Neo generates, deploys, and governs cloud infrastructure across the resou
 
 There's no universal best tool. Five questions sort the field quickly:
 
-- **Cloud strategy.** Multi-cloud means tools like Pulumi Neo, Firefly, env0, or Crossplane. Single-cloud commitment means hyperscaler-native tools may integrate more deeply (AWS Composer, SageMaker, and so on).
-- **Team expertise.** Programmers gravitate to tools that use real languages (Pulumi Neo, Pulumi IaC). Kubernetes teams find Crossplane natural; everyone else finds it steep. Teams that prefer visual workflows should look at AWS Composer or env0's UI.
+- **Cloud strategy.** Multi-cloud means tools like Pulumi Neo, Firefly, env zero, or Crossplane. Single-cloud commitment means hyperscaler-native tools may integrate more deeply (AWS Infrastructure Composer, SageMaker, Azure SRE Agent, Gemini Cloud Assist, and so on).
+- **Team expertise.** Programmers gravitate to tools that use real languages (Pulumi Neo, Pulumi IaC). Kubernetes teams find Crossplane natural; everyone else finds it steep. Teams that prefer visual workflows should look at AWS Infrastructure Composer or env zero's UI.
 - **Compliance.** Regulated industries (healthcare, finance, government) get the most value from tools with pre-built compliance packs and audit trails. Pulumi Neo's CIS/HITRUST/NIST/PCI packs are the most direct fit. If preventative policy enforcement matters, prefer tools that block non-compliant deployments rather than flag them after the fact.
-- **Existing footprint.** Greenfield projects can use anything. Brownfield is where it gets interesting: Pulumi Neo works against Terraform, CloudFormation, and manually-created resources, which lets you adopt incrementally instead of migrating first. Mixed-IaC shops should also look at env0.
-- **Budget.** Open source first: MLflow for MLOps, Crossplane for Kubernetes-native infra. Open source is not free, though: self-hosting carries a real total cost of ownership in hosting, maintenance, and the expertise to operate it. Commercial tools (Pulumi Cloud, env0, Spacelift) fold that operational cost into the price, on top of support, SLAs, and the enterprise-tier features open source can lack.
+- **Existing footprint.** Greenfield projects can use anything. Brownfield is where it gets interesting: Pulumi Neo works against Terraform, CloudFormation, and manually created resources, which lets you adopt incrementally instead of migrating first. Mixed-IaC shops should also look at env zero.
+- **Budget.** Open source first: MLflow for MLOps, Crossplane for Kubernetes-native infra. Open source is not free, though: self-hosting carries a real total cost of ownership in hosting, maintenance, and the expertise to operate it. Commercial tools (Pulumi Cloud, env zero, Spacelift) fold that operational cost into the price, on top of support, SLAs, and the enterprise-tier features open source can lack.
 
 Before adopting anything, get visibility into what you have today, pilot on staging where mistakes are cheap, and define success metrics up front: time to provision, policy violation rates, mean time to remediate. The best AI infrastructure tool is the one your team will actually use, which means meeting developers where they already work.
 
@@ -277,27 +295,23 @@ Before adopting anything, get visibility into what you have today, pilot on stag
 
 **MCP standardization.** The Model Context Protocol is becoming the integration standard between AI assistants and infrastructure tools. The practical upshot is that the IDE is increasingly a viable surface for managing infrastructure, with AI mediating between natural language and the underlying APIs.
 
-**Consolidation.** CoreWeave acquiring Weights & Biases and NVIDIA acquiring Run:ai both point toward integrated platforms across the AI infrastructure stack. For tool selection today, that's an argument for picking vendors with clear strategic direction over point solutions likely to be acquired or out-competed.
+**Consolidation.** CoreWeave completed its acquisition of Weights & Biases in 2025, and NVIDIA closed its acquisition of Run:ai in late 2024. Both moves point toward integrated platforms across the AI infrastructure stack rather than standalone point solutions. For tool selection today, that's an argument for picking vendors with clear strategic direction over point products likely to be acquired or out-competed.
+
+**Agent identity becomes its own layer.** As more tools let an AI agent act on real infrastructure, "who is this agent, and what is it allowed to touch" is turning into a category of its own, separate from the agents doing the acting. HashiCorp added agentic IAM support to Vault Enterprise (beta as of mid-2026) to issue scoped, short-lived credentials to AI agents, and Upbound's v3 platform does something similar for Crossplane control planes. Expect more infrastructure vendors to ship this kind of agent-identity layer as agentic execution spreads.
 
 ## Frequently asked questions
 
 ### What is the best AI agent for cloud infrastructure management?
 
-For enterprise governance plus true agentic capability, [Pulumi Neo](/product/neo/) is currently the most complete offering: it executes changes (not just suggests them), integrates with pre-built compliance frameworks, and works with infrastructure regardless of how it was provisioned. For Kubernetes-native shops, Crossplane with Upbound's emerging AI features is worth tracking.
+For enterprise governance plus true agentic capability, [Pulumi Neo](/product/neo/) is currently the most complete offering: it executes changes (not only suggests them), integrates with pre-built compliance frameworks, and works with infrastructure regardless of how it was provisioned, across every major cloud. For Kubernetes-native shops, Crossplane with Upbound's agent-identity work in v3 is worth tracking, though its AI-native layer today governs agent access rather than making infrastructure decisions on its own.
 
 ### How can I use generative AI to manage cloud infrastructure?
 
-Start by identifying the repetitive, time-consuming infrastructure work in your team. The highest-value early use cases tend to be:
+Start with the repetitive, time-consuming work your team already does by hand: generating IaC from natural-language descriptions for a human to review, explaining unfamiliar configurations to speed up onboarding, analyzing logs and configs to suggest likely causes during troubleshooting, and scanning for security and compliance violations with a generated fix attached. Teams that want to go further hand the whole loop to an agentic platform: tools like Pulumi Neo execute provisioning workflows end-to-end with governance controls intact, rather than stopping at a suggestion.
 
-- **Code generation**: write IaC from natural-language descriptions, then review.
-- **Documentation**: explain unfamiliar configurations and reduce onboarding time.
-- **Troubleshooting**: analyze logs, errors, and configs to suggest likely causes.
-- **Security and compliance**: scan for violations and generate fixes.
-- **Full automation**: for shops that want it, agentic platforms like Pulumi Neo execute provisioning workflows end-to-end with governance controls intact.
+### What is agentic infrastructure?
 
-### What is agentic AI for infrastructure?
-
-Agentic AI for infrastructure means AI systems that autonomously execute infrastructure tasks, not just generate code suggestions. The difference from a code assistant is action: an agent understands your environment, respects your policies, and performs multi-step work (provisioning, configuration, security controls) within the boundaries you've defined.
+Agentic infrastructure is the practice of AI agents actively driving infrastructure tasks, not just generating code. The difference from a code assistant is action: an agent understands your environment, respects your policies, and performs multi-step work (provisioning, configuration, security controls) within the boundaries you've defined.
 
 ### How do AI agents improve DevOps workflows?
 
@@ -329,10 +343,10 @@ For GPU compute, CoreWeave leads at scale, Modal wins for variable workloads and
 
 ## Conclusion
 
-Two categories, two problems. GPU clouds and MLOps platforms (CoreWeave, Lambda, Modal, hyperscaler trio, W&B, MLflow) solve the compute and lifecycle problem for running AI workloads. AI-powered infrastructure tools (Neo, Firefly, env0, Spacelift, Crossplane, code assistants, Composer) solve the management problem for everything else.
+Two categories, two problems. GPU clouds and MLOps platforms (CoreWeave, Lambda, Modal, hyperscaler trio, W&B, MLflow) solve the compute and lifecycle problem for running AI workloads. AI-powered infrastructure tools (Neo, Firefly, env zero, Spacelift Intelligence, Crossplane, hyperscaler agents, code assistants, Infrastructure Composer) solve the management problem for everything else.
 
 For GPU workloads, the choice mostly comes down to scale and where you already are. For infrastructure management, the real question is how much you actually want AI to do. Code assistants help you write IaC faster, but you're still running it. Agentic platforms like Pulumi Neo execute changes and enforce policy on the way through, with the guardrails you control.
 
-The pattern from teams getting real value: treat AI as a force multiplier on routine work (provisioning, drift, compliance) and keep human judgment in the loop for the architecture and the edge cases.
+The pattern from teams getting real value: treat AI as a force multiplier on routine work (provisioning, drift, compliance), pick tools by how far their reach extends and how deep their guardrails go, and keep human judgment in the loop for the architecture and the edge cases.
 
 If you want to see agentic infrastructure management running against real resources, [start with Pulumi Neo](/product/neo/).
