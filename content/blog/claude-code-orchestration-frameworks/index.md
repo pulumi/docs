@@ -2,6 +2,7 @@
 title: "Superpowers, GSD, and GSTACK: Picking the Right Framework for Your Coding Agent"
 allow_long_title: true
 date: 2026-04-13
+updated: 2026-08-22
 draft: false
 meta_desc: "Three frameworks for AI coding agents compared: Superpowers enforces TDD, GSD prevents context rot, and GSTACK adds role-based governance."
 feature_image: feature.png
@@ -34,7 +35,7 @@ social:
         Here's how they compared.
 ---
 
-Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
+Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code and have since added support for Cursor and Codex, though each has its own further list of supported agents beyond that shared core.
 
 Pulumi uses general-purpose programming languages to define infrastructure. TypeScript, JavaScript, Python, Go, .NET, Java. Every framework that makes AI agents write better TypeScript also makes your `pulumi up` better. After spending a few weeks with each one, I have opinions about when to use which.
 

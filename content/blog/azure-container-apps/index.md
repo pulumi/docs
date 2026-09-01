@@ -1,7 +1,7 @@
 ---
 title: "Deploy Azure Container Apps with Docker and Pulumi"
 date: 2021-11-02T09:00:00-07:00
-updated: 2025-03-24
+updated: 2026-08-22
 meta_desc: "Learn how to deploy Docker containers to Azure Container Apps using Pulumi. A step-by-step guide for building scalable serverless apps in any language."
 authors:
     - mikhail-shilkov
@@ -75,7 +75,7 @@ Comparing to other vendors: Azure Container Apps are in the same space as **Goog
 
 ## Example: Run an HTTP API with Azure Container Apps and Pulumi
 
-Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and C#.
+Let's walk through the steps to build an example application with Azure Container Apps using infrastructure as code in familiar languages. In this scenario, we create an HTTP application that is available via a public domain name. We'll use Pulumi to provision the necessary resources. In this example, we will use TypeScript however you could also use JavaScript, Python, Go, and .NET.
 
 You can check out the complete source code in the Pulumi Examples:
 
@@ -489,7 +489,7 @@ $ curl $(pulumi stack output url)
 
 Azure Container Apps enable you to build applications in your favorite language with any dependencies and tools, package them as a container image, and deploy them in seconds. Container Apps abstract away infrastructure management by automatically scaling up and down to zero and only charging for the exact resources you use.
 
-This post shows how to use Pulumi to build a container image and publish it as an Azure Container App. Pulumi makes it easy to create artifacts and provision and manage cloud infrastructure on any cloud using familiar programming languages, including C#, TypeScript, Python, and Go. Docker images, ACR registries, container environments, and Apps can be managed within the same infrastructure definition.
+This post shows how to use Pulumi to build a container image and publish it as an Azure Container App. Pulumi makes it easy to create artifacts and provision and manage cloud infrastructure on any cloud using familiar programming languages, including .NET, TypeScript, Python, and Go. Docker images, ACR registries, container environments, and Apps can be managed within the same infrastructure definition.
 
 ### Further steps
 
