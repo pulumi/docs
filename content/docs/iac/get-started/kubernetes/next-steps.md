@@ -21,7 +21,8 @@ Congrats! By completing this guide you have successfully:
 - Created a new Pulumi project.
 - Deployed an NGINX web server to Kubernetes.
 - Modified and redeployed the running program.
-- Destroyed all of the resources you've provisioned.
+- Refactored the deployment into a reusable component.
+- Destroyed the resources you've provisioned.
 
 Below are some recommended next steps, depending on your learning style. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
