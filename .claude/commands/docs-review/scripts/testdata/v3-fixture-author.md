@@ -8,14 +8,14 @@
 
 _<TODO: one sentence — what this PR is and what the review checked>_
 
-### 🚨 Must fix or refute (blocks merge)
+### 🚨 Must fix or refute
 
 | ID | Where | Finding |
 |---|---|---|
 | **F1** | [`content/docs/iac/x.md` L80-82](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R80) | *"The esc CLI defaults to JSON output"* — verdict: contradicted <TODO: write the fix / suggestion block for the author (quote-and-rewrite mandate). If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias / compared a paraphrased version of the claim), rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution). If pre-existing on a line this PR didn't touch, rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card.> |
 | **F2** | [`content/docs/iac/x.md` L30](https://github.com/pulumi/docs/pull/999/files#diff-cadd3dace25e9e98ed0e94a7abf3fcd307fa70d888eef7825198f038022a4dc8R30) | [style-blocker] _terminology_ — Use 'Pulumi Cloud', not 'Pulumi Service' |
 
-### ❓ Only you can answer these (blocks merge)
+### ❓ Questions for you
 
 | ID | Where | Finding |
 |---|---|---|

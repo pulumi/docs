@@ -31,7 +31,7 @@ When the workflow prompt says **the v3 review surface is active**, the composer
 emitted TWO drafts instead of `.review-draft.md`:
 
 - **`.review-draft-author.md`** — the author card (🚨 Must fix or refute /
-  ❓ Only you can answer / style suggestions / ✅ Resolved).
+  ❓ Questions for you / style suggestions / ✅ Resolved).
 - **`.review-draft-brief.md`** — the reviewer brief (summary + confidence
   table / ⚠️ Check these / rubber-stampable counts).
 

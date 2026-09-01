@@ -331,7 +331,7 @@ V3_AUTHOR_HEADER_RE = re.compile(
     r"^## Author action guide v\d+ — (?:(\d+) items? blocks? merge|nothing blocks merge)", re.MULTILINE
 )
 # H3 headings, in required order, per references/output-format.md §v3.
-V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Only you can answer these", "✅ Resolved since last review"]
+V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Questions for you", "✅ Resolved since last review"]
 V3_BRIEF_SECTIONS = ["⚠️ Check these before approving", "✅ What you can rubber-stamp"]
 # The in-place rewrite labels build-evidence.py files off the cards — a bullet
 # whose body starts with one of these is dispositioned, not deleted.
@@ -2788,7 +2788,7 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
     except ValueError:
         pass  # v3-review-state already fires
 
-    sections = [("author", ctx.body, s) for s in ("🚨 Must fix or refute", "❓ Only you can answer these")]
+    sections = [("author", ctx.body, s) for s in ("🚨 Must fix or refute", "❓ Questions for you")]
     sections.append(("brief", ctx.brief or "", "⚠️ Check these before approving"))
     for where, text, heading in sections:
         for lineno, line, parsed in v3_finding_rows(text, heading):
@@ -2839,7 +2839,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
                           (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
     rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
-            + v3_finding_rows(ctx.body, "❓ Only you can answer these"))
+            + v3_finding_rows(ctx.body, "❓ Questions for you"))
     total = len(rows)
     numbered = sum(1 for _, _, p in rows if p and p["id"] != "F?")
     stated = int(m.group(1)) if m.group(1) else 0
@@ -2864,7 +2864,7 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     where_of: dict[str, str] = {}
     for text, heading, bucket in (
         (ctx.body, "🚨 Must fix or refute", "outstanding"),
-        (ctx.body, "❓ Only you can answer these", "author-answer"),
+        (ctx.body, "❓ Questions for you", "author-answer"),
         (ctx.brief or "", "⚠️ Check these before approving", "reviewer-check"),
     ):
         for _, _, parsed in v3_finding_rows(text, heading):
@@ -3101,7 +3101,7 @@ RULES = [
     },
     {
         "id": "v3-section-order",
-        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Only you can answer these → ✅ Resolved) and brief sections (⚠️ Check these → ✅ What you can rubber-stamp) present in skeleton order.",
+        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Questions for you → ✅ Resolved) and brief sections (⚠️ Check these → ✅ What you can rubber-stamp) present in skeleton order.",
         "hint": "Render every mandatory section in order, using its explicit-empty form when there is no content.",
         "check": check_v3_section_order,
         "surfaces": ("v3",),
@@ -3601,7 +3601,7 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
             print(f"::warning::count-buckets: REVIEW_STATE unreadable, counting all rows as blocking: {e}",
                   file=sys.stderr)
         blocking_rows = (v3_finding_rows(body, "🚨 Must fix or refute")
-                         + v3_finding_rows(body, "❓ Only you can answer these"))
+                         + v3_finding_rows(body, "❓ Questions for you"))
         outstanding = sum(
             1 for _, _, p in blocking_rows
             if p is None or p["id"] == "F?" or p["id"] not in dispositioned

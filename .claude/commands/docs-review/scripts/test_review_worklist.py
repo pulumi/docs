@@ -180,7 +180,7 @@ def test_build_report_v2_path_unaffected_by_v3_wiring():
 def test_render_markdown_v3_report():
     report = rw.build_report(AUTHOR_FIXTURE, [], {}, 999, rw.DEFAULT_REPO, brief_body=BRIEF_FIXTURE)
     md = rw.render_markdown(report)
-    assert "❓ Only you can answer" in md
+    assert "❓ Questions for you" in md
     assert "⚠️ Reviewer check" in md
 
 

@@ -94,7 +94,7 @@ def test_brief_must_not_carry_head_marker() -> None:
 
 
 def test_missing_section_and_order() -> None:
-    no_q = AUTHOR.replace("### ❓ Only you can answer these (blocks merge)", "### something else")
+    no_q = AUTHOR.replace("### ❓ Questions for you", "### something else")
     assert "v3-section-order" in rule_ids(check(author=no_q))
 
 
@@ -156,8 +156,8 @@ def test_bucket_demotion_rejected() -> None:
     lines = AUTHOR.splitlines()
     f1 = next(line for line in lines if line.startswith("| **F1** |"))
     demoted = AUTHOR.replace(f1 + "\n", "").replace(
-        "### ❓ Only you can answer these (blocks merge)\n",
-        "### ❓ Only you can answer these (blocks merge)\n\n"
+        "### ❓ Questions for you\n",
+        "### ❓ Questions for you\n\n"
         "| | ID | Where | Finding |\n|---|---|---|---|\n" + f1 + "\n",
     )
     assert "bucket-split-faithful" in rule_ids(check(author=demoted))
@@ -227,8 +227,8 @@ def test_brief_advisory_prose_note_allowed() -> None:
     assert not [v for v in check(brief=brief) if v.rule_id == "v3-finding-grammar"]
 
     author = AUTHOR.replace(
-        "### 🚨 Must fix or refute (blocks merge)\n",
-        "### 🚨 Must fix or refute (blocks merge)\n\n- **A stray thought:** untracked prose in a blocking section.\n",
+        "### 🚨 Must fix or refute\n",
+        "### 🚨 Must fix or refute\n\n- **A stray thought:** untracked prose in a blocking section.\n",
     )
     assert [v for v in check(author=author) if v.rule_id == "v3-finding-grammar"]
 

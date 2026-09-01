@@ -173,14 +173,14 @@ def author_card(findings=(), state=None, head=HEAD):
         f"<!-- CLAUDE_REVIEW_HEAD {head} -->",
         "## Review: author action needed — %d items block merge — Last updated x" % (len(must) + len(answer)),
         "",
-        "### 🚨 Must fix or refute (blocks merge)",
+        "### 🚨 Must fix or refute",
         "",
     ]
     if must:
         lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in must:
         lines.append(f"| **{fid}** | `content/docs/iac/x.md` L10 | a problem |")
-    lines += ["", "### ❓ Only you can answer these (blocks merge)", ""]
+    lines += ["", "### ❓ Questions for you", ""]
     if answer:
         lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
     for fid in answer:

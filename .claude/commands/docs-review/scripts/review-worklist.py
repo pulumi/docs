@@ -501,7 +501,7 @@ def extract_items_v3(author_body: str, brief_body: str) -> list[dict]:
 
     v3_sections = (
         ("outstanding", "🚨 Must fix or refute", author_body, True),
-        ("author-answer", "❓ Only you can answer", author_body, True),
+        ("author-answer", "❓ Questions for you", author_body, True),
     )
     for bucket, heading, body, blocking in v3_sections:
         for parsed, line in finding_lines(body, heading):
@@ -652,7 +652,7 @@ def summarize(items: list[dict], parse_confidence: str, suggestions_ok: bool = T
 BUCKET_LABEL = {
     "outstanding": "🚨 Outstanding — must be fixed or refuted before merge",
     "low": "⚠️ Low-confidence — each needs a decision, none block the PR",
-    "author-answer": "❓ Only you can answer — blocks merge (v3)",
+    "author-answer": "❓ Questions for you — blocks merge (v3)",
     "style": "✏️ Style suggestions — advisory; ✏️ marks a one-click apply",
     "reviewer-check": "⚠️ Reviewer check — advisory, from the brief (v3)",
     "pre-existing": "💡 Pre-existing — optional; not introduced by this PR",

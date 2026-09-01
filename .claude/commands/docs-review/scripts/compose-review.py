@@ -2044,13 +2044,13 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     author += [
         "_<TODO: one sentence — what this PR is and what the review checked>_",
         "",
-        "### 🚨 Must fix or refute (blocks merge)",
+        "### 🚨 Must fix or refute",
         "",
     ]
     author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
     author += [
         "",
-        "### ❓ Only you can answer these (blocks merge)",
+        "### ❓ Questions for you",
         "",
     ]
     author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
@@ -2073,7 +2073,6 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     # ---- reviewer brief ----
     detector_count = sum(1 for v in prep["verdicts"] if v.get("route") == "preflight")
-    fact_total = n_claims
     mech_bits: list[str] = []
     if prep["frontmatter"]:
         mech_bits.append("frontmatter sweep ran")
@@ -2127,9 +2126,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         "### ✅ What you can rubber-stamp",
         "",
-        f"- **Facts:** {x_verified} of {fact_total} factual claims machine-verified"
-        f" ({y_unverifiable} unverifiable and {z_contradicted} contradicted are filed with the author above/on the author card)"
-        f" — [trail]({EVIDENCE_URL_TOKEN}#trail).",
+        _render_facts_line(prep["verdicts"], prep["trail_nxyz"]),
         f"- **Mechanics:** {'; '.join(mech_bits)} — [investigation log]({EVIDENCE_URL_TOKEN}#investigation-log).",
         f"- **Style:** {len(prep['vale_nags'])} advisory suggestion(s) left with the author; never blocking.",
         "",
@@ -2146,6 +2143,48 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     return author_draft, brief_draft, evidence_base
 
+
+
+def _render_facts_line(verdicts: list[dict], nxyz: tuple[int, int, int, int]) -> str:
+    """The brief's rubber-stamp **Facts** bullet.
+
+    Every extracted candidate is accounted for, by outcome, so the reviewer
+    never has to subtract: "1 of 6 verified" with only two of the other five
+    explained read as three claims vanishing (Cam, 2026-09-01 — the missing
+    three were `not-a-claim`). Zero-count outcomes are omitted; each outcome
+    that produced a finding names the card and bucket it landed in.
+    """
+    n, x, y, z = nxyz
+    if n == 0:
+        return f"- **Facts:** no factual claims found in the changed lines — [trail]({EVIDENCE_URL_TOKEN}#trail)."
+    n_not_claim = sum(1 for v in verdicts if v.get("verdict") == "not-a-claim")
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    checked = n - n_not_claim
+
+    def plural(count: int, noun: str) -> str:
+        return f"{count} {noun}" if count == 1 else f"{count} {noun}s"
+
+    outcomes: list[str] = []
+    if x:
+        outcomes.append(f"{x} verified")
+    if y:
+        outcomes.append(f"{y} unverifiable (❓ on the author card)")
+    if z:
+        outcomes.append(f"{z} contradicted (🚨 on the author card)")
+    if n_drift:
+        outcomes.append(f"{n_drift} framing-drift (⚠️ above)")
+    unaccounted = checked - (x + y + z + n_drift)
+    if unaccounted > 0:
+        outcomes.append(f"{unaccounted} other — see trail")
+    head = f"- **Facts:** {plural(checked, 'factual claim')} checked"
+    if outcomes:
+        head += " — " + ", ".join(outcomes)
+    if n_not_claim:
+        head += (
+            f"; {plural(n_not_claim, 'more candidate')} turned out not to be "
+            f"{'a factual claim' if n_not_claim == 1 else 'factual claims'}"
+        )
+    return head + f" — [trail]({EVIDENCE_URL_TOKEN}#trail)."
 
 def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> list[str]:
     """Structural invariants for the v3 drafts (validate-pinned speaks v2 only).
@@ -2168,7 +2207,7 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
                 problems.append(f"{name} draft repeats {marker}")
         if EVIDENCE_URL_TOKEN not in draft:
             problems.append(f"{name} draft missing {EVIDENCE_URL_TOKEN} link")
-    for line_needed in ("### 🚨 Must fix or refute", "### ❓ Only you can answer these"):
+    for line_needed in ("### 🚨 Must fix or refute", "### ❓ Questions for you"):
         if line_needed not in author_draft:
             problems.append(f"author draft missing section {line_needed}")
     if "### ⚠️ Check these before approving" not in brief_draft:

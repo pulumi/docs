@@ -86,7 +86,7 @@ _RANGE_RE = re.compile(r"^L(\d+)(?:-(\d+))?$")
 # merge (the ❓ bucket, being author-answer, is just as fixable by a push as
 # 🚨 outstanding), so a push that resolves a ❓ item must fire the gate the
 # same as one that resolves a 🚨 item.
-V3_ANCHOR_HEADINGS = ("🚨 Must fix or refute", "❓ Only you can answer")
+V3_ANCHOR_HEADINGS = ("🚨 Must fix or refute", "❓ Questions for you")
 
 
 def result(fire: bool, reason: str) -> int:
@@ -99,7 +99,7 @@ def parse_anchor_ranges(pinned_body: str) -> list[tuple[int, int]] | None:
 
     v2: every 🚨 Outstanding bullet. v3 (detected by AUTHOR_MARKER): every
     finding row in BOTH `### 🚨 Must fix or refute` and
-    `### ❓ Only you can answer` — the promoted ❓ bucket blocks merge exactly
+    `### ❓ Questions for you` — the promoted ❓ bucket blocks merge exactly
     like 🚨 does, so a push that fixes a ❓ item must fire the gate too.
 
     Returns None when any qualifying finding lacks a parseable line-range

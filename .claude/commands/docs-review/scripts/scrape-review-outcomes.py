@@ -465,7 +465,7 @@ def scrape_body(body: str, merged: bool, head_sha: str | None) -> dict:
 
 V3_SECTION_HEADINGS = {
     "outstanding": "🚨 Must fix or refute",
-    "author-answer": "❓ Only you can answer",
+    "author-answer": "❓ Questions for you",
     "resolved": "✅ Resolved since last review",
 }
 V3_BRIEF_HEADING = "⚠️ Check these before approving"

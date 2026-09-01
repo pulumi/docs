@@ -28,7 +28,7 @@
 
 ### ✅ What you can rubber-stamp
 
-- **Facts:** 2 of 5 factual claims machine-verified (1 unverifiable and 1 contradicted are filed with the author above/on the author card) — [trail](%%EVIDENCE_URL%%#trail).
+- **Facts:** 5 factual claims checked — 2 verified, 1 unverifiable (❓ on the author card), 1 contradicted (🚨 on the author card), 1 framing-drift (⚠️ above) — [trail](%%EVIDENCE_URL%%#trail).
 - **Mechanics:** frontmatter sweep ran — [investigation log](%%EVIDENCE_URL%%#investigation-log).
 - **Style:** 1 advisory suggestion(s) left with the author; never blocking.
 

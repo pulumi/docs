@@ -92,7 +92,7 @@ SECTION_EMPTY = {
 }
 AUTHOR_HEADINGS = {
     "outstanding": "### 🚨 Must fix or refute",
-    "author-answer": "### ❓ Only you can answer these",
+    "author-answer": "### ❓ Questions for you",
 }
 BRIEF_HEADING = "### ⚠️ Check these before approving"
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}

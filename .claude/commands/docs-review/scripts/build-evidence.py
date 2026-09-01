@@ -56,7 +56,7 @@ review_state = _load("review_state", _REVIEW_V3_DIR / "review_state.py")
 # brief's reviewer section are the only places finding bullets may live.
 AUTHOR_SECTIONS = {
     "### 🚨 Must fix or refute": "outstanding",
-    "### ❓ Only you can answer these": "author-answer",
+    "### ❓ Questions for you": "author-answer",
 }
 BRIEF_SECTIONS = {
     "### ⚠️ Check these before approving": "reviewer-check",
@@ -300,12 +300,12 @@ def _self_test() -> int:
     author = "\n".join([
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
         "## Author action guide v1 — 2 items block merge", "",
-        "### 🚨 Must fix or refute (blocks merge)", "",
+        "### 🚨 Must fix or refute", "",
         "| ID | Where | Finding |", "|---|---|---|",
         "| **F1** | `a.md` L8 | the model's edited fix prose |",
         "| **F2** | `a.md` L9 | promoted question now a blocker |",
         "| **F?** | `a.md` | a brand new model finding |", "",
-        "### ❓ Only you can answer these (blocks merge)", "",
+        "### ❓ Questions for you", "",
         "_No open questions for you._", "",
         "📎 **Full evidence:** %%EVIDENCE_URL%%", "", state_block, "",
     ]) + "\n"

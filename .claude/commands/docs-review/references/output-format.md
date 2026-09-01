@@ -456,11 +456,11 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 ## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
 > [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
-### 🚨 Must fix or refute (blocks merge)
+### 🚨 Must fix or refute
 | ID | Where | Finding |
 |---|---|---|
 | **F1** | [`file.md` L12-14](…/pull/<pr>/files#diff-<sha256(path)>R12) | <finding + fix, terse> |
-### ❓ Only you can answer these (blocks merge)
+### ❓ Questions for you
 | ID | Where | Finding |
 |---|---|---|
 | **F3** | `file.md` L61 | <the question> |
@@ -520,7 +520,7 @@ overload the table exists to fix).
 ### The ❓/⚠️ split
 
 Deterministic, verdict-driven, applied by the composer (`split_v3_buckets`):
-`unverifiable` → ❓ Only you can answer (sourcing their own claim is the
+`unverifiable` → ❓ Questions for you (sourcing their own claim is the
 author's job — turn-cap unverifiables included); `framing-drift` and other
 low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
 reviewer's judgment).
