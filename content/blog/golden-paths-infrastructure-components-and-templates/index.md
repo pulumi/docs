@@ -25,7 +25,7 @@ social:
     linkedin: "The fragmentation in modern cloud ecosystems is real. Between AWS's 200+ services, Azure's growing catalog, and the explosion of DevOps tools, developers face decision fatigue at every turn. Our latest post in the IDP Best Practices series shows you how to solve this with golden paths: pre-architected infrastructure patterns that provide the happy path to production. Learn how to build reusable Pulumi components that work across languages, create templates that embody your best practices, and enable true self-service infrastructure without sacrificing governance or security. #platformengineering #goldenpaths #infrastructureascode #developerexperience"
 ---
 
-A golden path is the opinionated, supported route a platform team builds for a common workflow, such as standing up a new service, so that following it is the easiest option available. Teams stay free to go off-path for a genuine edge case; they just take on the extra support burden of doing so themselves.
+A golden path is the opinionated, supported route a platform team builds for a common workflow, such as standing up a new service, so that following it is the easiest option available. Teams stay free to go off-path for a genuine edge case; they take on the extra support burden of doing so themselves.
 
 Welcome to the second post in our **IDP Best Practices** series. In this article, we explore how to build golden paths in practice: **pre-architected, reusable infrastructure patterns** that help standardize and accelerate cloud development.
 
@@ -610,7 +610,7 @@ A service catalog gives developers a menu; a golden path gives them a paved road
 
 Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
 
-Pulumi collapses that hand-off. A golden path built with [Pulumi Components](/docs/iac/concepts/components/) and [Templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). There is no second system to keep in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
+Pulumi collapses that hand-off. A golden path built with [Pulumi Components](/docs/iac/concepts/components/) and [Templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). No second system has to stay in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
 
 ## How does policy as code keep self-service safe?
 
@@ -673,7 +673,7 @@ interface ComponentArgs {
 }
 ```
 
-### 3. Use Semantic Versioning Everywhere
+### 3. Use semantic versioning everywhere
 
 Clear versioning for both components and templates indicate stability and reliability:
 
@@ -683,7 +683,7 @@ Clear versioning for both components and templates indicate stability and reliab
 
 This lets teams adopt updates with confidence and control.
 
-### 4. Test Your Abstractions
+### 4. Test your abstractions
 
 Don't ship black boxes. Create automated tests to validate key functionality and resource creation. Focus on:
 
@@ -791,7 +791,7 @@ Ready to get started? Here's your action plan:
 5. **Scale Gradually**: Expand your component library and template catalog based on demand
 6. **Measure and Iterate**: Track adoption and continuously improve based on metrics
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### What is a golden path in platform engineering?
 
@@ -803,7 +803,7 @@ The terms describe the same idea from two engineering cultures: Spotify populari
 
 ### Do golden paths stop teams from going off-path?
 
-No, and a golden path that forbids deviation stops being a path and becomes a golden cage, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out simply own the operational and security work the platform team would otherwise have handled for them.
+No, and a golden path that forbids deviation stops being a path and becomes a golden cage, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out own the operational and security work the platform team would otherwise have handled for them.
 
 ### How do you measure golden path adoption?
 
@@ -821,7 +821,7 @@ By building a library of components and templates, you transform your Internal D
 
 Start small. Solve one problem well. Expand from there. With the right foundation, your developer platform will evolve into a system of self-service, speed, and stability.
 
-### Ready to Build Your Golden Paths
+### Ready to build your golden paths
 
 - **Code examples**: [Explore golden path examples on GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates)
 - **Build with Components**: [Pulumi Components documentation](/docs/iac/concepts/components/)
