@@ -56,4 +56,4 @@ _Not your area? Any member of @pulumi/docs-guild can approve — hand it off rat
 
 ---
 
-**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); the **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

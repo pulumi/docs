@@ -1992,6 +1992,8 @@ _V3_EMPTY_CHECKS = "_Nothing needs a human eye beyond the rubber-stamp list belo
 # through the 📎 line behind it, cost the author card its evidence link on the
 # first live #update-review (2026-09-01).
 V3_BROWSER_HINT_PREFIX = "_Editing in the browser?"
+V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " The ✏️ links open the file in "
+                   "GitHub's editor — Ctrl+F for the quoted line._")
 
 
 def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
@@ -2192,8 +2194,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         author += ["", *render_detail_scaffold(fid)]
     author += [""]
     if edit_base and (outstanding_lines or question_lines):
-        author += [V3_BROWSER_HINT_PREFIX + " The ✏️ links open the file in "
-                   "GitHub's editor — Ctrl+F for the quoted line._", ""]
+        author += [V3_BROWSER_HINT, ""]
     if prep["vale_nags"]:
         author += [_render_style_findings(prep["vale_nags"], prep["files_url"]), ""]
     # ✅ Resolved is omitted while empty (a v1 card has no "last review" to

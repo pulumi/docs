@@ -695,6 +695,15 @@ jobs:
             echo "::warning::prior evidence unavailable; refresh publishes degraded"
           fi
 
+          # Where this refresh's evidence lives: the S3 page when the bucket
+          # is configured, else this run (its artifact) — same fallback the
+          # initial lane uses, so the 📎 link never points at a stale run.
+          if [ -n "${PAGES_ENDPOINT:-}" ]; then
+            EVIDENCE_URL="http://$PAGES_ENDPOINT/$PR/latest.html"
+          else
+            EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+
           # Fresh card fetch — the /resolve race window closes here.
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
             --jq .body > .review-card-author.md
@@ -713,7 +722,8 @@ jobs:
             --author-out .review-card-author.out.md \
             --brief-out .review-card-brief.out.md \
             --evidence-out .review-evidence.json \
-            --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH"
+            --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH" \
+            --evidence-url "$EVIDENCE_URL"
 
           python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
             --body-file .review-card-author.out.md \

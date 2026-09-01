@@ -102,6 +102,19 @@ _HEAD_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->")
 _AUTHOR_REV_RE = re.compile(r"^## Author action guide v(\d+) — ", re.M)
 _BRIEF_HEADER_RE = re.compile(r"^## Reviewer's guide v\d+ — not for the author", re.M)
 _SUB_RE = re.compile(r"<sub>(?:Review )?v\d+ · updated [^<]+</sub>")
+_HINT_RE = re.compile(r"^_Editing in the browser\?[^\n]*\n(?:\n)?", re.M)
+_EVIDENCE_LINK_RE = re.compile(r"(📎 \*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
+
+
+def set_evidence_url(body: str, url: str) -> str:
+    """Point the 📎 line at this refresh's evidence page. The composer's
+    token is long gone from a published card, so a refresh must rewrite the
+    live URL — on the fork's artifact-only path the link otherwise keeps
+    pointing at the FIRST run's artifact forever."""
+    if not url:
+        return body
+    body = body.replace(cr.V3_EVIDENCE_TOKEN if hasattr(cr, "V3_EVIDENCE_TOKEN") else "%%EVIDENCE_URL%%", url)
+    return _EVIDENCE_LINK_RE.sub(lambda m: m.group(1) + url + m.group(2), body, count=1)
 
 
 class UpdateError(Exception):
@@ -387,7 +400,9 @@ def apply(
             ref = ""
             lines_val = entry.get("lines")
             if isinstance(lines_val, list) and lines_val:
-                ref = f"L{lines_val[0]}" + (f"-{lines_val[1]}" if len(lines_val) > 1 else "")
+                ref = f"L{lines_val[0]}"
+                if len(lines_val) > 1 and lines_val[1] != lines_val[0]:
+                    ref += f"-{lines_val[1]}"
             rows[fid] = {
                 "bucket": entry["bucket"],
                 "doc": "brief" if entry["bucket"] == "reviewer-check" else "author",
@@ -520,11 +535,18 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
     Rows carry no display state — REVIEW_STATE is the state, the section a
     row lives in is the display.
     """
+    if doc == "author":
+        # The browser hint is re-derived below: present iff the card still
+        # has rows to edit (an emptied card kept an orphaned hint on the fork).
+        body = _HINT_RE.sub("", body)
     lines = body.splitlines()
     headings = be.AUTHOR_SECTIONS if doc == "author" else be.BRIEF_SECTIONS
     spans = be._sections(body, headings)
     if doc == "author":
         spans = spans + _resolved_span(lines)
+    author_rows_left = any(by_bucket_key in ("outstanding", "author-answer")
+                           for by_bucket_key in
+                           {r["bucket"] for r in rows.values() if r["doc"] == "author"})
 
     by_bucket: dict[str, list[str]] = {}
     for fid in sorted(rows, key=lambda f: int(f[1:])):
@@ -550,6 +572,8 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
                 for fid in by_bucket.get(bucket + ":ids", []):
                     if fid in detail_blocks:
                         new_lines = new_lines + [""] + detail_blocks[fid]
+            if doc == "author" and bucket == "author-answer" and edit_base and author_rows_left:
+                new_lines = new_lines + ["", cr.V3_BROWSER_HINT]
         replacements.append((start, end, [""] + new_lines + [""]))
 
     for start, end, new_lines in sorted(replacements, reverse=True):
@@ -678,6 +702,7 @@ def main() -> int:
     parser.add_argument("--evidence-out", default=".review-evidence.json")
     parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
     parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
+    parser.add_argument("--evidence-url", default="", help="URL for the 📎 evidence line on both cards")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -712,6 +737,8 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
+        author_out = set_evidence_url(author_out, args.evidence_url)
+        brief_out = set_evidence_url(brief_out, args.evidence_url)
     except UpdateError as exc:
         print(f"apply-update: contract violation: {exc}", file=sys.stderr)
         return 2
@@ -743,7 +770,8 @@ def _self_test() -> int:
              "lines": [200], "text": "new soft mismatch worth a look", "origin": "model"},
         ],
     }
-    a_out, b_out, state, report = apply(author, brief, update, head_sha=sha, actor="cam", auto=False)
+    a_out, b_out, state, report = apply(author, brief, update, head_sha=sha, actor="cam", auto=False,
+                                        head_repo="example/docs-fork", head_branch="fix/component-doc")
     assert "**F1**" in a_out and "fixed in b1b2b3" in a_out, "F1 resolved row rendered"
     assert a_out.index("fixed in b1b2b3") > a_out.index(RESOLVED_HEADING)
     assert state["findings"]["F1"]["disposition"] == "fixed"

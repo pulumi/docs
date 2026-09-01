@@ -106,7 +106,8 @@ def test_last_section_rerender_keeps_evidence_line_and_hint():
     # the 📎 line — the ❓ section's detail block swallowed the browser hint and
     # the section span ran through the 📎 line behind it.
     up = _update([{"id": "F3", "action": "retext", "text": "*\"x\"* — sharper, still open"}])
-    a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False,
+                                  head_repo="example/docs-fork", head_branch="fix/component-doc")
     assert a_out.count("📎 **Full evidence:**") == 1
     assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
     _spans, texts = au.be.collect_detail_blocks(a_out)
@@ -215,3 +216,28 @@ def test_envelope_slips_are_normalized():
         pass
     else:
         raise AssertionError("non-list findings accepted")
+
+
+def test_browser_hint_follows_author_rows():
+    up_all = _update([{"id": f, "action": "resolve", "annotation": "fixed in a1a1a1"} for f in ("F1", "F2", "F3")])
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up_all, head_sha=SHA, actor="cam", auto=False,
+                              head_repo="example/docs-fork", head_branch="fix/component-doc")
+    assert au.cr.V3_BROWSER_HINT_PREFIX not in a_out, "no rows left → no hint"
+    up_one = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in a1a1a1"}])
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up_one, head_sha=SHA, actor="cam", auto=False,
+                              head_repo="example/docs-fork", head_branch="fix/component-doc")
+    assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+
+
+def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
+    up = _update([{"action": "add", "bucket": "reviewer-check", "file": "content/docs/iac/x.md",
+                   "lines": [1158, 1158], "text": "same line twice", "origin": "model"}])
+    _, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False,
+                              repo="pulumi/docs", pr=999)
+    assert "` L1158](" in b_out and "L1158-1158" not in b_out
+    body = "x\n📎 **Full evidence:** [verification trail](https://old.example/1).\n"
+    assert "(https://new.example/2)" in au.set_evidence_url(body, "https://new.example/2")
+    assert au.set_evidence_url(body, "") == body
+    tok = "📎 **Full evidence:** %%EVIDENCE_URL%%\n"
+    assert au.set_evidence_url(tok, "https://n/3") == "📎 **Full evidence:** https://n/3\n"
