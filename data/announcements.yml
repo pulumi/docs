@@ -87,5 +87,5 @@ announcements:
     text: "**Live webinar · Sept 3:** Beyond the Hyperscalers — building sovereign infrastructure."
     cta:
       label: Register
-      href: "/events/beyond-the-hyperscalers-sovereignty-panel/?ref=announcement-banner"
+      href: "/events/beyond-the-hyperscalers-sovereignty-panel/"
     dismissible: true
