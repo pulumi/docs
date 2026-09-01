@@ -55,13 +55,16 @@ Most of these gaps originate outside Pulumi. Write-only fields are AWS API secur
 
 ```mermaid
 flowchart LR
-    A["digest"] --> B["resolve"]
-    B --> C["import"]
-    C --> D["patch-state"]
-    D --> E["zero-diff preview"]
+    A["digest"] --> S
+    subgraph S ["per node, in dependency order"]
+        direction LR
+        B["write program"] --> C["resolve"] --> D["import"] --> E["patch-state"] --> F["targeted preview"]
+        F -->|diffs remain| B
+    end
+    S --> G["full zero-diff preview"]
 ```
 
-Each command writes an artifact the next one reads, which makes every step inspectable, repeatable, and resumable. That matters most when an AI agent is driving: the agent can validate its work at each stage rather than running one monolithic migration and checking the result at the end.
+Each command writes an artifact the next one reads, which makes every step inspectable, repeatable, and resumable. And the process is iterative, not one linear pass: the digest runs once per workspace, and everything downstream repeats per node — a module or a group of bare resources — in dependency order. Each node is written, imported, and verified to a zero-diff targeted preview before the next one starts, so an agent driving the migration validates its work continuously rather than running one monolithic conversion and checking the result at the end.
 
 The pipeline handles the state side of the migration. The code side — writing the Pulumi program the resources import into — is hand-authored, in practice by the agent following the conversion guidance in the skills (covered below).
 
@@ -111,7 +114,7 @@ Those `nonImportable` resources from the digest still exist in the cloud, and le
 
 The tool's commands run standalone, but they're designed to be driven by the agent skills that ship in the repo. The [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill turns the pipeline into a full migration workflow with validation gates:
 
-- **Node-by-node, zero-diff gated.** The migration proceeds through modules and resources in dependency order, and each node must reach a zero-diff targeted preview before the next one starts.
+- **Node-by-node, zero-diff gated.** The skill enforces the outer loop: dependency order is derived from the Terraform source (the digest's module input expressions show which modules depend on which), and each node must reach a zero-diff targeted preview before the next one starts.
 - **Every value traces to its source.** The skill maps each Terraform construct to its Pulumi equivalent: `var.foo` to stack config, locals to in-program derivations, `terraform_remote_state` to [ESC](/docs/esc/) environment references. The digest makes violations visible — if the program hardcodes a value the Terraform code computes from variables, the diff surfaces it.
 - **When sources of truth disagree, deployed state wins.** Terraform code, Terraform state, and the live cloud drift apart over time. The skill treats the deployed state as the source of truth: manual drift that exists in the cloud but not in the HCL is included in the Pulumi program to preserve it, and each such decision is documented in the migration PR.
 - **Modules become components.** A companion skill, `pulumi-terraform-module-to-component`, covers translating each Terraform module into a Pulumi [component](/docs/iac/concepts/components/) that reproduces the module's interface of inputs and outputs rather than transliterating its HCL — deriving the component's args from the digest's module interface and exposing only the inputs call sites actually use — including the logical-naming convention that import matching depends on.

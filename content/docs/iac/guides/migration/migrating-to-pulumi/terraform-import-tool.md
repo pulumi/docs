@@ -58,14 +58,17 @@ Every command also runs standalone, so the pipeline below works equally well by 
 
 ## The migration pipeline
 
-The commands form a pipeline, and each one writes an artifact the next one reads:
+The commands form a pipeline, and each one writes an artifact the next one reads. The process is iterative, though, not a single linear pass: the digest runs once per workspace, and everything downstream repeats per node — a module or a group of bare resources — in dependency order. Each node is written, resolved, imported, patched, and verified to a zero-diff targeted preview before the next node starts, and a full preview closes the migration.
 
 ```mermaid
 flowchart LR
-    A["digest tf"] --> B["resolve tf"]
-    B --> C["import"]
-    C --> D["patch-state tf"]
-    D --> E["zero-diff preview"]
+    A["digest tf"] --> S
+    subgraph S ["per node, in dependency order"]
+        direction LR
+        B["write program"] --> C["resolve tf"] --> D["import"] --> E["patch-state tf"] --> F["targeted preview"]
+        F -->|diffs remain| B
+    end
+    S --> G["full zero-diff preview"]
 ```
 
 Keep every generated artifact in a gitignored directory inside the Pulumi project (for example `.import/`) — digests and state exports can contain sensitive values, and an ignored *directory*, unlike filename patterns, can't miss a new artifact type.
@@ -100,7 +103,7 @@ The code conversion step is not automated code generation: an agent (or you) han
 1. **Data sources get dynamic equivalents.** The skill carries equivalence tables: `aws_iam_policy_document` becomes `aws.iam.getPolicyDocumentOutput`, `data.terraform_remote_state` becomes an [ESC](/docs/esc/) environment read, `null_resource` provisioners are re-evaluated case by case, and a dynamic data source is never replaced with a hardcoded value.
 1. **Logical names must line up.** A component child's resource name must match the Terraform resource name, or be mapped in the mappings file, because that pairing is how `resolve tf` fills import IDs in the next step.
 
-Write and import one node at a time in dependency order rather than converting the whole workspace at once.
+Derive the dependency order from the Terraform source — the digest's module input expressions show which modules depend on which. A typical ordering runs networking → data stores → secrets → services → frontend → DNS.
 
 ### 3. Generate and resolve the import file
 
@@ -153,11 +156,13 @@ In this stack mode the command exports, backs up, patches, injects, imports, and
 
 ### 6. Verify with a zero-diff preview
 
+During the per-node loop, validate each node with a targeted preview (`pulumi preview --target <urn> --target-dependents`) and reach zero real diffs before moving on. Once every node is done, run a full preview with no `--target`:
+
 ```bash
 pulumi preview
 ```
 
-The migration is done when the preview shows no real diffs. Diffs that remain fall into known classes — provider defaults, computed cascades like a Lambda `qualifiedArn` — and anything outside them means a program bug or unpreserved drift to investigate. Investigate `replace` diffs first: they mean the program would destroy and recreate a live resource.
+The migration is done when the full preview shows no real diffs; anything real at this stage is a cross-node interaction the targeted previews missed. Diffs that remain fall into known classes — provider defaults, computed cascades like a Lambda `qualifiedArn` — and anything outside them means a program bug or unpreserved drift to investigate. Investigate `replace` diffs first: they mean the program would destroy and recreate a live resource.
 
 ## Next steps
 
