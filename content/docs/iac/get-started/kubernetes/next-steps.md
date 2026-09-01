@@ -44,9 +44,9 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/learn/official-templates/static-website/) to [serverless applications](/learn/official-templates/serverless-application/), [virtual machines](/learn/official-templates/virtual-machine/), [container services](/learn/official-templates/container-service/), and [Kubernetes clusters](/learn/official-templates/kubernetes/).
+Deploy the most common cloud architectures, from [static websites](/learn/templates/static-website/) to [serverless applications](/learn/templates/serverless-application/), [virtual machines](/learn/templates/virtual-machine/), [container services](/learn/templates/container-service/), and [Kubernetes clusters](/learn/templates/kubernetes/).
 
-{{< get-started-next-step path="/learn/official-templates/" label="Browse templates" ref="gs-k8s-templates" >}}
+{{< get-started-next-step path="/learn/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
 
 ## Dive into the docs
 

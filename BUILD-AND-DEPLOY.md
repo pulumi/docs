@@ -838,7 +838,7 @@ Hugo processes 46+ content directories:
 - `/content/product/` → Product pages
 - `/content/case-studies/` → Customer stories
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/learn` (tutorials, official templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/learn` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 

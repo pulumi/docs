@@ -142,7 +142,7 @@ Teams:
 
 **Definition:** Starter kits for generating new Pulumi projects with `pulumi new`.
 
-- **Lives at:** [pulumi.com/learn/official-templates](https://www.pulumi.com/learn/official-templates/) — **not in this repository**; published from pulumi/marketing-web, which syncs the starters from https://github.com/pulumi/templates and authors the architecture-template pages alongside them.
+- **Lives at:** [pulumi.com/learn/templates](https://www.pulumi.com/learn/templates/) — **not in this repository**; published from pulumi/marketing-web, which syncs the starters from https://github.com/pulumi/templates and authors the architecture-template pages alongside them.
 - **Owns:** Marketing
 - **Contributes:** Eng/Product, Community Eng
 - **Consumes:** Practitioners bootstrapping new projects
@@ -170,7 +170,7 @@ Teams:
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + Community Eng | — | Community, prospects |
 | Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
-| Templates | Runnable starting points | pulumi/marketing-web → `/learn/official-templates/` | Marketing | Eng/Product, Community Eng | Practitioners |
+| Templates | Runnable starting points | pulumi/marketing-web → `/learn/templates/` | Marketing | Eng/Product, Community Eng | Practitioners |
 | Example programs | Tested, embeddable code | `static/programs/` | Docs | Eng/Product, Community Eng | Practitioners |
 
 ## Naming decisions and open items
@@ -182,7 +182,7 @@ The "guides" collision described at the top of this document has been resolved a
    - The things we currently call "the Getting Started guides" (`content/docs/*/get-started/`). We'll try to call these the Getting Started *tutorials* going forward — that's what they are in the Diátaxis sense.
    - The things that live at [pulumi.com/learn/tutorials](https://www.pulumi.com/learn/tutorials/). The content at pulumi.com/guides is being folded selectively into these.
 1. **Tutorials are Marketing-owned** (specifically Technical Content Marketing), with contribution from everyone welcome.
-1. **The hub at `/learn` has shipped.** It pulls together tutorials, official templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/learn*` to it.
+1. **The hub at `/learn` has shipped.** It pulls together tutorials, templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/learn*` to it.
 
 Open items:
 

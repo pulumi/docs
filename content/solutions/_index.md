@@ -71,7 +71,7 @@ architectures:
     title: Common Architecture Types
     items:
         - name: Containers
-          cta_link: /learn/official-templates/container-service/
+          cta_link: /learn/templates/container-service/
           cta_text: Learn More
           description: |
             Manage clusters and deploy containers with ease for Kubernetes, Amazon ECS, Azure ACI,

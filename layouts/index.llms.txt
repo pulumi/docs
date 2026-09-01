@@ -93,7 +93,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
 - [Infrastructure AI](https://www.pulumi.com/docs/ai/): Using AI agents with Pulumi — bring your own agent via [Agent Skills](https://www.pulumi.com/docs/ai/skills/) and the [MCP server](https://www.pulumi.com/docs/ai/mcp-server/), or use [Pulumi Neo](https://www.pulumi.com/neo/), Pulumi's purpose-built infrastructure agent
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
-- [Learn](https://www.pulumi.com/learn/): Tutorials, official templates, community examples, and a glossary. Has an index of its own at [/learn/llms.txt](https://www.pulumi.com/learn/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
+- [Learn](https://www.pulumi.com/learn/): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/learn/llms.txt](https://www.pulumi.com/learn/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
 - [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
 - [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms

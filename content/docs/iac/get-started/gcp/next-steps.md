@@ -48,9 +48,9 @@ Let our Google Cloud tutorials guide you through key Pulumi concepts.
 
 ## Launch a new project with a template
 
-Easily deploy the most common cloud architectures, from [static websites](/learn/official-templates/static-website/gcp/) to [serverless applications](/learn/official-templates/serverless-application/gcp/), [virtual machines](/learn/official-templates/virtual-machine/gcp/), [container services](/learn/official-templates/container-service/gcp/), and [Kubernetes clusters](/learn/official-templates/kubernetes/gcp/).
+Easily deploy the most common cloud architectures, from [static websites](/learn/templates/static-website/gcp/) to [serverless applications](/learn/templates/serverless-application/gcp/), [virtual machines](/learn/templates/virtual-machine/gcp/), [container services](/learn/templates/container-service/gcp/), and [Kubernetes clusters](/learn/templates/kubernetes/gcp/).
 
-{{< get-started-next-step path="/learn/official-templates/" label="Browse templates" ref="gs-gcp-guides" >}}
+{{< get-started-next-step path="/learn/templates/" label="Browse templates" ref="gs-gcp-guides" >}}
 
 ## Dive into the docs
 
