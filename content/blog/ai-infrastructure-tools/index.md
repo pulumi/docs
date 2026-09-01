@@ -303,7 +303,7 @@ Before adopting anything, get visibility into what you have today, pilot on stag
 
 ### What is the best AI agent for cloud infrastructure management?
 
-For enterprise governance plus true agentic capability, [Pulumi Neo](/product/neo/) is currently the most complete offering: it executes changes (not just suggests them), integrates with pre-built compliance frameworks, and works with infrastructure regardless of how it was provisioned, across every major cloud. For Kubernetes-native shops, Crossplane with Upbound's agent-identity work in v3 is worth tracking, though its AI-native layer today governs agent access rather than making infrastructure decisions on its own.
+For enterprise governance plus true agentic capability, [Pulumi Neo](/product/neo/) is currently the most complete offering: it executes changes (not only suggests them), integrates with pre-built compliance frameworks, and works with infrastructure regardless of how it was provisioned, across every major cloud. For Kubernetes-native shops, Crossplane with Upbound's agent-identity work in v3 is worth tracking, though its AI-native layer today governs agent access rather than making infrastructure decisions on its own.
 
 ### How can I use generative AI to manage cloud infrastructure?
 
