@@ -3,11 +3,11 @@ title: "Golden Paths in IDPs: A Complete Guide to Reusable Infrastructure with P
 feature_image: feature.png
 allow_long_title: true
 date: 2025-08-20T10:00:00+02:00
-updated: 2026-08-29
+updated: 2026-09-01
 draft: false
 series: idp-best-practices
 faq_schema: true
-meta_desc: What is a golden path? Build one with Pulumi Components and Templates, add policy guardrails, and enable self-service infrastructure at scale.
+meta_desc: What is a golden path? Build one with Pulumi components and templates, add policy guardrails, and enable self-service infrastructure at scale.
 authors:
     - engin-diri
     - robert-smith
@@ -25,11 +25,9 @@ social:
     linkedin: "The fragmentation in modern cloud ecosystems is real. Between AWS's 200+ services, Azure's growing catalog, and the explosion of DevOps tools, developers face decision fatigue at every turn. Our latest post in the IDP Best Practices series shows you how to solve this with golden paths: pre-architected infrastructure patterns that provide the happy path to production. Learn how to build reusable Pulumi components that work across languages, create templates that embody your best practices, and enable true self-service infrastructure without sacrificing governance or security. #platformengineering #goldenpaths #infrastructureascode #developerexperience"
 ---
 
-A golden path is the opinionated, supported route a platform team builds for a common workflow, such as standing up a new service, so that following it is the easiest option available. Teams stay free to go off-path for a genuine edge case; they take on the extra support burden of doing so themselves.
-
 Welcome to the second post in our **IDP Best Practices** series. In this article, we explore how to build golden paths in practice: **pre-architected, reusable infrastructure patterns** that help standardize and accelerate cloud development.
 
-Modern cloud platforms offer endless options, over 200 AWS services, sprawling Azure catalogs, and countless DevOps tools. The result? Developers face decision fatigue and inconsistent implementations. Golden paths solve this by providing **ready-to-use, production-grade infrastructure** that encodes your organization’s best practices, security policies, and operational standards.
+Golden paths are opinionated routes for infrastructure provisioning that platform teams build for common workflows. Because modern cloud platforms offer so many options — over 200 AWS services, sprawling Azure catalogs, countless DevOps tools — developers can struggle with decision fatigue or produce inconsistent implementations. Golden paths solve this by providing **ready-to-use, production-grade infrastructure** that encodes your organization’s best practices, security policies, and operational standards.
 
 In this guide, you'll learn how to build golden paths for your Internal Developer Platform using two core Pulumi constructs: **Components**, reusable infrastructure building blocks, and **Templates**, predefined, deployable patterns. You'll see how to create infrastructure abstractions that are written once, shared across teams, and consumed in any language, turning weeks of setup into minutes of developer-ready infrastructure.
 
@@ -590,55 +588,17 @@ Now developers can deploy through multiple interfaces:
 pulumi new https://github.com/myorg/go-microservice-boilerplate
 ```
 
-**No-Code Deployment:**
-Navigate to the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) → `New Project` → choose your template → "Add a no-code stack to a template" → select `Deployments - no-code` → Configure and launch
+You reach the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) two ways: navigate to **Stacks** → **Create Project** → select a template from the card view → **Use this Template**, or navigate to **Platform** → **Templates** → select a template → **Deploy with Pulumi**. Both entry points open the same wizard and let you either fork the template into a new project or add a no-code stack that references it directly, without forking.
 
-![img_7.png](pulumi_idp_deployment_no_code_view.png)
+From there, the wizard offers a deployment method for the new stack:
 
-**Pulumi Deployment:**
-Navigate to the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) → `New Project` → choose your template → "Create a new project from a template" → Configure and launch
-
-![img_6.png](pulumi_idp_deployment_git_view.png)
+- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository (GitHub, Azure DevOps, GitLab, or Bitbucket). Your organization needs an integration for that provider, and you need to authorize your account with it.
+- **Pulumi Deployments (no-code)**: stores the stack's configuration in a [Pulumi ESC](/docs/esc/) environment instead of a repository. See [no-code stacks](/docs/idp/concepts/no-code-stacks/) for requirements; any configured VCS provider works.
+- **Local deployment**: deploy the stack from your machine with the Pulumi CLI, no VCS integration required.
 
 {{< blog/cta-card title="Build golden paths with Pulumi" >}}
 Package your infrastructure patterns into reusable components and templates, publish them to a private registry, and let teams deploy production-ready stacks in minutes.
 {{< /blog/cta-card >}}
-
-## What makes a golden path different from a service catalog?
-
-A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because several popular ones solve catalog and discovery problems without ever provisioning anything themselves.
-
-Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
-
-Pulumi collapses that hand-off. A golden path built with [Pulumi Components](/docs/iac/concepts/components/) and [Templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). No second system has to stay in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
-
-## How does policy as code keep self-service safe?
-
-Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/insights/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production.
-
-A policy pack is ordinary code, written in the same language as the golden path it governs:
-
-```typescript
-import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
-import * as aws from "@pulumi/aws";
-
-new PolicyPack("golden-path-guardrails", {
-    policies: [
-        {
-            name: "s3-bucket-must-not-be-public",
-            description: "S3 buckets deployed through a golden path may not allow public read access.",
-            enforcementLevel: "mandatory",
-            validateResource: validateResourceOfType(aws.s3.BucketAcl, (bucketAcl, args, reportViolation) => {
-                if (bucketAcl.acl === "public-read" || bucketAcl.acl === "public-read-write") {
-                    reportViolation("S3 buckets must not be publicly readable.");
-                }
-            }),
-        },
-    ],
-});
-```
-
-Run it locally against a stack with `pulumi preview --policy-pack ./golden-path-guardrails`, or publish it with `pulumi policy publish` and enable it organization-wide so every team consuming the golden path inherits the guardrail automatically, with no extra step on their part. That is the model covered in depth in the next post in this series, [How to Implement Robust Security Guardrails Using Policy as Code](/blog/deployment-guardrails-with-policy-as-code/): start there for policy groups, remediation policies, and enforcement levels across an entire organization.
 
 ## Best Practices for Reusable Infrastructure Components and Templates
 
@@ -709,6 +669,34 @@ describe("MicroserviceComponent", () => {
     });
 });
 ```
+
+### 5. Enforce guardrails with policy as code
+
+Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/insights/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production.
+
+A policy pack is ordinary code, written in the same language as the golden path it governs:
+
+```typescript
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+import * as aws from "@pulumi/aws";
+
+new PolicyPack("golden-path-guardrails", {
+    policies: [
+        {
+            name: "s3-bucket-must-not-be-public",
+            description: "S3 buckets deployed through a golden path may not allow public read access.",
+            enforcementLevel: "mandatory",
+            validateResource: validateResourceOfType(aws.s3.BucketAcl, (bucketAcl, args, reportViolation) => {
+                if (bucketAcl.acl === "public-read" || bucketAcl.acl === "public-read-write") {
+                    reportViolation("S3 buckets must not be publicly readable.");
+                }
+            }),
+        },
+    ],
+});
+```
+
+Run it locally against a stack with `pulumi preview --policy-pack ./golden-path-guardrails`, or publish it with `pulumi policy publish` and enable it organization-wide so every team consuming the golden path inherits the guardrail automatically, with no extra step on their part. That is the model covered in depth in the next post in this series, [How to Implement Robust Security Guardrails Using Policy as Code](/blog/deployment-guardrails-with-policy-as-code/): start there for policy groups, remediation policies, and enforcement levels across an entire organization.
 
 ## How to Measure Golden Path Success
 
@@ -801,9 +789,21 @@ A golden path is the opinionated, well-supported route a platform team builds fo
 
 The terms describe the same idea from two engineering cultures: Spotify popularized "golden path" and Netflix popularized "paved road." Both describe a supported, opinionated default that a platform team maintains, with the freedom for teams to leave the path for a genuine edge case.
 
+### What makes a golden path different from a service catalog?
+
+A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because several popular ones solve catalog and discovery problems without ever provisioning anything themselves.
+
+Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
+
+Pulumi collapses that hand-off. A golden path built with [Pulumi Components](/docs/iac/concepts/components/) and [Templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). No second system has to stay in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
+
 ### Do golden paths stop teams from going off-path?
 
 No, and a golden path that forbids deviation stops being a path and becomes a golden cage, one of the pitfalls covered above. The platform team's job is to make the paved road so much easier than the alternative that most teams choose it without being told to, not to remove the choice. Teams that opt out own the operational and security work the platform team would otherwise have handled for them.
+
+### How does policy as code keep self-service safe?
+
+Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/insights/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, written as ordinary code in the same language as the golden path itself, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production. See the Best Practices section above for a working policy pack example, and [How to Implement Robust Security Guardrails Using Policy as Code](/blog/deployment-guardrails-with-policy-as-code/) for the full model across an organization.
 
 ### How do you measure golden path adoption?
 
