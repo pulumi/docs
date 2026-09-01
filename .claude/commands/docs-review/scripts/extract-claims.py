@@ -77,7 +77,30 @@ TEXT_CAP = 300  # characters retained per claim's `text`
 
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
-FENCE_RE = re.compile(r"^\s*(```|~~~)")  # opens/closes a fenced code block
+FENCE_RE = re.compile(r"^\s*(`{3,}|~{3,})")  # opens/closes a fenced code block
+
+
+def fence_toggle(state: str | None, line: str) -> str | None:
+    """Advance fenced-code state over one line, CommonMark-style.
+
+    `state` is None outside a fence, or the opening marker string (its char
+    and length) inside one. A fence closes only on a marker of the SAME char
+    whose length is at least the opener's; anything else inside the fence —
+    including a ``` line nested inside a ```` block, which is how docs write
+    about fenced code — is content. Plain parity counting (every marker
+    toggles) inverts on that nesting and stays inverted for the rest of the
+    file, which is the whole-file error mode the review of PR #21308 called
+    out.
+    """
+    m = FENCE_RE.match(line)
+    if not m:
+        return state
+    marker = m.group(1)
+    if state is None:
+        return marker
+    if marker[0] == state[0] and len(marker) >= len(state):
+        return None
+    return state
 DIFF_GIT_RE = re.compile(r"^diff --git a/(.+?) b/(.+)$")
 SIMILARITY_RE = re.compile(r"^similarity index (\d+)%$")
 RENAME_FROM_RE = re.compile(r"^rename from (.+)$")
@@ -132,18 +155,26 @@ def _new_file_lines(repo_root: Path | None, file_path: str) -> list[str] | None:
         return None
 
 
-def fence_open_at(file_lines: list[str] | None, new_start: int) -> bool | None:
-    """Whether line `new_start` of the new file sits inside a fenced code block.
-
-    Counts fence markers in the lines ABOVE the hunk (lines 1..new_start-1):
-    an odd count means a fence is still open where the hunk begins. None when
-    the file isn't available, so the caller can fall back to the diff-only
-    guess.
+def fence_state_at(file_lines: list[str] | None, new_start: int) -> str | None:
+    """The fence state at line `new_start` of the new file: the open fence's
+    marker, or None when outside a fence. Walks the lines ABOVE the hunk
+    (1..new_start-1) with `fence_toggle`, so a nested shorter marker never
+    inverts the answer. Returns None too when the file isn't available —
+    callers that need to tell the two apart use `fence_open_at`.
     """
+    state: str | None = None
+    for ln in (file_lines or [])[: max(new_start - 1, 0)]:
+        state = fence_toggle(state, ln)
+    return state
+
+
+def fence_open_at(file_lines: list[str] | None, new_start: int) -> bool | None:
+    """Whether line `new_start` of the new file sits inside a fenced code
+    block; None when the file isn't available, so the caller can fall back to
+    the diff-only guess."""
     if file_lines is None:
         return None
-    above = file_lines[: max(new_start - 1, 0)]
-    return sum(1 for ln in above if FENCE_RE.match(ln)) % 2 == 1
+    return fence_state_at(file_lines, new_start) is not None
 
 
 def iter_added_lines(patch: str, repo_root: Path | None = None):
@@ -156,8 +187,10 @@ def iter_added_lines(patch: str, repo_root: Path | None = None):
 
     A hunk can open INSIDE a fence (the opener is above the hunk, out of the
     diff's view). The diff alone can't tell, so each hunk's starting state is
-    seeded from the checked-out file at `repo_root / <+++ b/ path>`: count the
-    fence markers above the hunk's first new line; odd means "inside a fence".
+    seeded from the checked-out file at `repo_root / <+++ b/ path>`: walk the
+    fence markers above the hunk's first new line (CommonMark rules — a fence
+    closes only on a same-char marker at least as long as its opener, so a
+    ``` nested inside a ```` block is content, not a toggle).
     Only when the file isn't available (a `--patch-file` test without a
     checkout) does this fall back to assuming not-in-fence at the hunk
     boundary. That fallback used to be the only behaviour and it is NOT
@@ -169,14 +202,14 @@ def iter_added_lines(patch: str, repo_root: Path | None = None):
     current_file: str | None = None
     is_markdown = False
     new_lineno = 0
-    in_fence = False
+    fence: str | None = None  # the open fence's marker, or None outside one
     file_lines: list[str] | None = None
     for raw in patch.splitlines():
         m = DIFF_FILE_RE.match(raw)
         if m:
             current_file = m.group(1)
             is_markdown = current_file.endswith(".md")
-            in_fence = False
+            fence = None
             file_lines = _new_file_lines(repo_root, current_file) if is_markdown else None
             continue
         if current_file is None:
@@ -188,8 +221,7 @@ def iter_added_lines(patch: str, repo_root: Path | None = None):
             new_lineno = int(hm.group(1))
             # Seed the fence state from the checked-out file; the diff-only
             # guess (not-in-fence) is the fallback when there is no file.
-            seeded = fence_open_at(file_lines, new_lineno) if is_markdown else None
-            in_fence = bool(seeded) if seeded is not None else False
+            fence = fence_state_at(file_lines, new_lineno) if (is_markdown and file_lines is not None) else None
             continue
         if not raw:
             # Bare empty line in the patch body — treat as a context blank line.
@@ -204,13 +236,16 @@ def iter_added_lines(patch: str, repo_root: Path | None = None):
             # "\ No newline at end of file" and other meta lines.
             continue
         # Context (" ") or added ("+") line — it's part of the new file.
-        # Toggle fence on a ``` / ~~~ delimiter (markdown only).
+        # Advance fence state on a ``` / ~~~ delimiter (markdown only); a
+        # marker that doesn't close the open fence is content inside it.
         if is_markdown and FENCE_RE.match(body):
-            in_fence = not in_fence
-            new_lineno += 1
-            continue
+            before = fence
+            fence = fence_toggle(fence, body)
+            if before is None or fence is None:
+                new_lineno += 1
+                continue  # a real opener/closer is never a claim line
         if tag == "+":
-            yield current_file, new_lineno, body, (not is_markdown) or in_fence
+            yield current_file, new_lineno, body, (not is_markdown) or fence is not None
         new_lineno += 1
 
 
