@@ -177,16 +177,19 @@ function onLink(result, brokenLinks, redirectHops) {
         // redirect -- most of those are intentional (versioned URLs, S3
         // redirects the exclusion list already tolerates) and would just be
         // noise here.
-        const original = result.url.original;
+        // Match on the resolved (absolutized) URL rather than the as-authored
+        // href: a relative link into the retired space (e.g. "../concepts/
+        // stacks/", which docs/ content can't write but blog/marketing pages
+        // can) wouldn't contain RETIRED_CONCEPTS_PATH in its raw form, but
+        // its resolved URL always will.
         const redirectedTo = result.url.redirected;
         if (
             redirectedTo != null &&
             isInternalLink(destination) &&
-            typeof original === "string" &&
-            original.includes(RETIRED_CONCEPTS_PATH)
+            destination.includes(RETIRED_CONCEPTS_PATH)
         ) {
-            addRedirectHop(source, original, redirectedTo, redirectHops);
-            logLink(source, original, `REDIRECT_HOP -> ${redirectedTo}`);
+            addRedirectHop(source, destination, redirectedTo, redirectHops);
+            logLink(source, destination, `REDIRECT_HOP -> ${redirectedTo}`);
         } else if (process.env.DEBUG) {
 
             // Log successes when DEBUG is truthy.
@@ -216,11 +219,14 @@ async function onComplete(brokenLinks, redirectHops) {
     const filteredInternal = excludeAcceptable(internalLinks);
     const filteredExternal = excludeAcceptable(externalLinks);
 
-    // Redirect hops are already scoped to one known-bad, always-internal class
-    // (see RETIRED_CONCEPTS_PATH in onLink), not general breakage, so they skip
-    // excludeAcceptable(): that filter's rules (HTTP status codes, bot
-    // protection, transient errors) don't apply to a link that resolved fine.
-    const totalFiltered = filteredInternal.length + filteredExternal.length + redirectHops.length;
+    // Only broken links justify a retry: a redirect hop is a permanent,
+    // deterministic finding (the link is stale until someone edits it -- it
+    // will never "pass" on a later attempt), not a transient failure that a
+    // re-crawl could clear. Folding it into the retry trigger would force up
+    // to maxRetries extra full-site crawls on every run that finds one, for
+    // no benefit. Redirect hops are still reported below via writeResults();
+    // they're just excluded from the decision to retry.
+    const totalFiltered = filteredInternal.length + filteredExternal.length;
 
     // If we failed and a retry count was provided, retry. Note that retry count !==
     // run count, so a retry count of 1 means run once, then retry once, which means a
@@ -552,7 +558,19 @@ function addLink(source, destination, reason, links) {
 // Adds a redirect-hop finding to the running list. Unlike addLink, this also
 // records where the link actually landed (redirectsTo), since the fix is to
 // rewrite the source link to that path, not to treat it as broken.
+//
+// Deduped on (destination, redirectsTo), dropping source: a stale link in
+// shared chrome (nav, footer, a partial) surfaces once per page that
+// includes it, and a broken links.json shouldn't carry thousands of
+// near-identical entries for what is, structurally, one stale link. The
+// first page it's found on is enough of a pointer for the fix to locate it.
 function addRedirectHop(source, destination, redirectsTo, links) {
+    const alreadyRecorded = links.some(
+        link => link.destination === destination && link.redirectsTo === redirectsTo
+    );
+    if (alreadyRecorded) {
+        return;
+    }
     links.push({
         source,
         destination,

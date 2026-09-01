@@ -147,10 +147,10 @@ jobs:
                checker has false positives) and each `redirectHops` entry still
                redirects as recorded, then skip any already covered by an open
                PR or existing issue (deduplication — see the skill).
-            3. If every confirmed-broken link is a duplicate, open no PR: just
-               write the "all already tracked" Slack summary to
-               `.broken-links-pr.txt` and stop. Otherwise, for the actionable
-               (non-duplicate) links:
+            3. If every confirmed-broken link and every redirect hop is a
+               duplicate, open no PR: just write the "all already tracked"
+               Slack summary to `.broken-links-pr.txt` and stop. Otherwise,
+               for the actionable (non-duplicate) links and hops:
             4. Create a branch `fix/broken-links-${{ steps.detect.outputs.date }}`.
             5. Triage and fix each broken link using the strategies in the skill
                (alias, S3 redirect, source edit, exclusion, or out-of-scope issue).
