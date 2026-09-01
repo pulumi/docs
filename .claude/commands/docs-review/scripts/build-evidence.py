@@ -325,8 +325,11 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
         history[-1] = dict(history[-1], summary=cr.trunc(summary, 160))
     evidence["history"] = history
 
-    author_out = _clean(author_body, drop_lines["author"], renumber["author"])
-    brief_out = _clean(brief_body, drop_lines["brief"], renumber["brief"])
+    author_out = _collapse_empty_tables(
+        _clean(author_body, drop_lines["author"], renumber["author"]), AUTHOR_SECTIONS)
+    brief_out = _collapse_empty_tables(
+        _clean(brief_body, drop_lines["brief"], renumber["brief"]), BRIEF_SECTIONS)
+    brief_out = refresh_facts_line(brief_out, findings)
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     author_out = _fix_header(author_out, n_blocking)
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
@@ -337,6 +340,78 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
     brief_out = cr.replace_waiting_block(
         brief_out, findings, state.get("findings", {}))
     return evidence, author_out, brief_out
+
+
+_FACTS_RE = re.compile(r"^- \*\*Facts:\*\* (?P<n>\d+) factual claims? checked(?: — (?P<rest>.*?))?\.$", re.M)
+
+
+def _is_claim_finding(f: dict) -> bool:
+    origin = str(f.get("origin") or "")
+    if origin.startswith("verdict:"):
+        return True
+    # Degraded refresh (no prior evidence): origin is unknown, but a verdict
+    # row always opens with the italic claim quote the composer renders.
+    return origin == "model" and str(f.get("text") or "").lstrip().startswith(("*\"", "*“", "*'"))
+
+
+def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
+    """Re-derive the brief's rubber-stamp **Facts** bullet from the refreshed
+    evidence findings. The totals (claims checked, verified clean) are fixed
+    at compose time and kept; what moves is how many claim findings are still
+    open on the author's card vs. parked in the ⚠️ list vs. settled (resolved,
+    conceded, or filed as spurious/pre-existing). Both lanes drift without
+    it: the first live refresh still said "2 open" with one left, and a fresh
+    v1 said "3 open" after the model filed two rows as spurious."""
+    m = _FACTS_RE.search(brief_body)
+    if not m:
+        return brief_body
+    checked = int(m.group("n"))
+    rest = m.group("rest") or ""
+    mx = re.search(r"(\d+) verified clean", rest)
+    x = int(mx.group(1)) if mx else 0
+    claims = [f for f in findings if _is_claim_finding(f)]
+    author_open = sum(1 for f in claims
+                      if f.get("bucket") in ("outstanding", "author-answer")
+                      and f.get("status") == "open" and not f.get("disposition"))
+    flagged = sum(1 for f in claims if f.get("bucket") == "reviewer-check")
+    settled = max(checked - x - author_open - flagged, 0)
+    parts: list[str] = []
+    if x:
+        parts.append(f"{x} verified clean")
+    if author_open:
+        parts.append(f'{author_open} open on the author\'s card ("Waiting on the author" above)')
+    if flagged:
+        parts.append(f"{flagged} flagged in the ⚠️ list")
+    if settled:
+        parts.append(f"{settled} settled — see the evidence page")
+    noun = "factual claim" if checked == 1 else "factual claims"
+    line = f"- **Facts:** {checked} {noun} checked"
+    if parts:
+        line += " — " + ", ".join(parts)
+    return brief_body[:m.start()] + line + "." + brief_body[m.end():]
+
+
+
+_EMPTY_SENTINEL = {
+    "outstanding": cr._V3_EMPTY_OUTSTANDING,
+    "author-answer": cr._V3_EMPTY_QUESTIONS,
+    "reviewer-check": cr._V3_EMPTY_CHECKS,
+}
+
+
+def _collapse_empty_tables(body: str, headings: dict[str, str]) -> str:
+    """A section whose every row was filed off the card keeps only its table
+    furniture after _clean(); render the composer's empty sentinel instead
+    (fresh v1 on fork PR 242 showed a header-only 🚨 table)."""
+    lines = body.splitlines()
+    edits: list[tuple[int, int, list[str]]] = []
+    for bucket, start, end in _sections(body, headings):
+        content = [ln for ln in lines[start:end] if ln.strip()]
+        if content and all(ln.startswith("|") and cr.is_table_furniture(ln) for ln in content):
+            edits.append((start, end, ["", _EMPTY_SENTINEL.get(bucket, ""), ""]))
+    for start, end, new in sorted(edits, reverse=True):
+        lines[start:end] = new
+    return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
 
 def _clean(body: str, drop: set[int], renumber: dict[int, str]) -> str:

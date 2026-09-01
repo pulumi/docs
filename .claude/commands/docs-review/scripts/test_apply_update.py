@@ -190,10 +190,10 @@ def test_refresh_facts_line_recounts_from_findings():
     out = au.refresh_facts_line(brief, findings)
     assert ("- **Facts:** 3 factual claims checked — 1 verified clean, "
             "1 open on the author's card (\"Waiting on the author\" above), "
-            "1 settled since the last review.") in out
+            "1 settled — see the evidence page.") in out
     findings[0]["bucket"] = "reviewer-check"
     out = au.refresh_facts_line(brief, findings)
-    assert "1 flagged in the ⚠️ list, 1 settled since the last review." in out
+    assert "1 flagged in the ⚠️ list, 1 settled — see the evidence page." in out
     assert au.refresh_facts_line("no facts line", findings) == "no facts line"
 
 
@@ -241,3 +241,24 @@ def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
     assert au.set_evidence_url(body, "") == body
     tok = "📎 **Full evidence:** %%EVIDENCE_URL%%\n"
     assert au.set_evidence_url(tok, "https://n/3") == "📎 **Full evidence:** https://n/3\n"
+
+
+def test_refresh_strips_the_auto_refresh_banner():
+    banner = "> 🔄 **Re-review in progress** for your push `abc1234` — this card is out of date until it refreshes.\n\n"
+    marker = "<!-- CLAUDE_REVIEW_HEAD "
+    at = AUTHOR.index(marker)
+    at = AUTHOR.index("\n", at) + 1
+    stamped = AUTHOR[:at] + banner + AUTHOR[at:]
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in a1a1a1"}])
+    a_out, _, _, _ = au.apply(stamped, BRIEF, up, head_sha=SHA, actor="auto-refresh", auto=True)
+    assert "Re-review in progress" not in a_out
+    assert "## Author action guide v2" in a_out
+
+
+def test_no_script_uses_per_commit_pr_patch():
+    # `gh pr diff --patch` is a per-commit mailbox: lines an early commit added
+    # and a later one removed still get extracted (stale F-rows on fork PR 242).
+    import re as _re
+    bad = _re.compile(r'\["gh",\s*"pr",\s*"diff",\s*[^\]]*"--patch"')
+    offenders = [p.name for p in HERE.glob("*.py") if p.name != Path(__file__).name and bad.search(p.read_text())]
+    assert offenders == [], offenders

@@ -292,6 +292,18 @@ def classify_file(path: str, file_diff: str) -> dict:
         # change).
         current_key: str | None = None
 
+        # Code-inside-fences detection. `has_code_block_change` used to fire
+        # only when a changed line WAS a fence marker, so a PR rewriting the
+        # Java/Go/TypeScript inside existing fences classified as trivial /
+        # mechanical (fork PR 242, 2026-09-01: +10 lines of snippet fixes →
+        # review skipped). Two signals, both fail toward "code": (1) fence
+        # state tracked across the hunk's context lines; (2) a hunk with no
+        # marker in view whose lines mostly look like code (the hunk started
+        # mid-fence). Mis-calling prose "code" only costs a review run.
+        in_fence = False
+        if is_md and _hunk_looks_like_code(body_lines):
+            flags["has_code_block_change"] = True
+
         for line in body_lines:
             if not line:
                 continue

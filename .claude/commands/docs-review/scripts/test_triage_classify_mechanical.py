@@ -434,3 +434,55 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+def _md_pr(lines: list[str]):
+    diff = make_file_diff("content/docs/iac/concepts/x.md", lines)
+    file_diffs = tc.split_files(diff)
+    flags = [tc.classify_file(p, d) for p, d in file_diffs]
+    adds = sum(1 for l in lines if l.startswith("+"))
+    dels = sum(1 for l in lines if l.startswith("-"))
+    pr_data = {"additions": adds, "deletions": dels,
+               "files": [{"path": p} for p, _ in file_diffs]}
+    return diff, flags, pr_data
+
+
+def test_code_inside_existing_fence_is_not_mechanical_or_trivial() -> None:
+    # Fork PR 242 (2026-09-01): +10 lines of Java/Go/TS snippet fixes inside
+    # existing fences classified trivial — only a changed fence MARKER used
+    # to count as a code change.
+    with_marker = [
+        " ```java",
+        " class AwsS3Website extends ComponentResource {",
+        "-    public AwsS3Website(String name) {",
+        "+    AwsS3Website(String name) {",
+        "         super(\"pkg:index:AwsS3Website\", name);",
+        "     }",
+    ]
+    diff, flags, pr_data = _md_pr(with_marker)
+    assert flags[0]["has_code_block_change"] is True
+    assert tc.classify_pr(pr_data, flags)["trivial"] is False
+    ok, reasons = run_mechanical(diff, files=pr_data["files"])
+    assert ok is False and any("code fence" in r for r in reasons), reasons
+
+    mid_fence = [  # hunk starts inside the fence: no marker in view
+        " import com.pulumi.resources.ComponentResourceOptions;",
+        " ",
+        "-public class AwsS3Website extends ComponentResource {",
+        "+class AwsS3Website extends ComponentResource {",
+        "     private final Output<String> url;",
+        "     public AwsS3Website(String name, AwsS3WebsiteArgs args) {",
+    ]
+    diff, flags, pr_data = _md_pr(mid_fence)
+    assert flags[0]["has_code_block_change"] is True
+    assert tc.classify_pr(pr_data, flags)["trivial"] is False
+
+    prose = [
+        " Components group resources so a team can reuse them (see below).",
+        "-Each child inherits the parent's provider and options.",
+        "+Each child inherits the parent's provider options.",
+        " Read the next section for the registration step.",
+    ]
+    diff, flags, pr_data = _md_pr(prose)
+    assert flags[0]["has_code_block_change"] is False
+    assert tc.classify_pr(pr_data, flags)["trivial"] is True

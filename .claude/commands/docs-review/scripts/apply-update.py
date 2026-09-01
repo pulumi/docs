@@ -103,6 +103,10 @@ _AUTHOR_REV_RE = re.compile(r"^## Author action guide v(\d+) — ", re.M)
 _BRIEF_HEADER_RE = re.compile(r"^## Reviewer's guide v\d+ — not for the author", re.M)
 _SUB_RE = re.compile(r"<sub>(?:Review )?v\d+ · updated [^<]+</sub>")
 _HINT_RE = re.compile(r"^_Editing in the browser\?[^\n]*\n(?:\n)?", re.M)
+# The 🔄 banner the auto-refresh gate stamps under the markers. This lane
+# re-renders from the LIVE body, so the banner must be stripped here — the
+# first live auto-refresh published a fresh card still promising a refresh.
+_BANNER_RE = re.compile(r"^> 🔄 \*\*Re-review in progress\*\*[^\n]*\n(?:\n)?", re.M)
 _EVIDENCE_LINK_RE = re.compile(r"(📎 \*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
 
 
@@ -264,51 +268,9 @@ def _strip_detail_blocks(body: str) -> tuple[str, dict[str, list[str]]]:
     return "\n".join(kept) + ("\n" if body.endswith("\n") else ""), blocks
 
 
-_FACTS_RE = re.compile(r"^- \*\*Facts:\*\* (?P<n>\d+) factual claims? checked(?: — (?P<rest>.*?))?\.$", re.M)
-
-
-def _is_claim_finding(f: dict) -> bool:
-    origin = str(f.get("origin") or "")
-    if origin.startswith("verdict:"):
-        return True
-    # Degraded refresh (no prior evidence): origin is unknown, but a verdict
-    # row always opens with the italic claim quote the composer renders.
-    return origin == "model" and str(f.get("text") or "").lstrip().startswith(("*\"", "*“", "*'"))
-
-
-def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
-    """Re-derive the brief's rubber-stamp **Facts** bullet from the refreshed
-    evidence findings. The totals (claims checked, verified clean) are fixed
-    at compose time and kept; what moves is how many claim findings are still
-    open on the author's card vs. parked in the ⚠️ list vs. settled — after
-    the first live refresh the line still said "2 open" with one left."""
-    m = _FACTS_RE.search(brief_body)
-    if not m:
-        return brief_body
-    checked = int(m.group("n"))
-    rest = m.group("rest") or ""
-    mx = re.search(r"(\d+) verified clean", rest)
-    x = int(mx.group(1)) if mx else 0
-    claims = [f for f in findings if _is_claim_finding(f)]
-    author_open = sum(1 for f in claims
-                      if f.get("bucket") in ("outstanding", "author-answer")
-                      and f.get("status") == "open" and not f.get("disposition"))
-    flagged = sum(1 for f in claims if f.get("bucket") == "reviewer-check")
-    settled = max(checked - x - author_open - flagged, 0)
-    parts: list[str] = []
-    if x:
-        parts.append(f"{x} verified clean")
-    if author_open:
-        parts.append(f'{author_open} open on the author\'s card ("Waiting on the author" above)')
-    if flagged:
-        parts.append(f"{flagged} flagged in the ⚠️ list")
-    if settled:
-        parts.append(f"{settled} settled since the last review")
-    noun = "factual claim" if checked == 1 else "factual claims"
-    line = f"- **Facts:** {checked} {noun} checked"
-    if parts:
-        line += " — " + ", ".join(parts)
-    return brief_body[:m.start()] + line + "." + brief_body[m.end():]
+# The rubber-stamp **Facts** bullet is re-derived by build-evidence.py
+# (shared with the initial lane, which has the same post-disposition drift).
+refresh_facts_line = be.refresh_facts_line
 
 
 def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
@@ -355,6 +317,7 @@ def apply(
     m_rev = _AUTHOR_REV_RE.search(author_body)
     new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
+    author_body = _BANNER_RE.sub("", author_body)
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
