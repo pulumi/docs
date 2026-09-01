@@ -108,6 +108,42 @@ class UpdateError(Exception):
     """A contract violation in the model's patch — exit 2, never guess."""
 
 
+# Envelope slips the model has actually made (fork PR 242, 2026-09-01: no
+# `schema`, no `case`, the list under `actions`) with an otherwise correct
+# adjudication inside. Normalizing them is cheaper than failing the publish
+# and stranding the PR on review:error; every repair is logged as a
+# ::warning:: so the prompt drift stays visible.
+_FINDINGS_ALIASES = ("actions", "entries", "updates", "patch")
+
+
+def normalize_update(update: dict) -> tuple[dict, list[str]]:
+    """Return (normalized copy, list of repairs). Never raises."""
+    notes: list[str] = []
+    if not isinstance(update, dict):
+        return update, notes
+    u = dict(update)
+    if "findings" not in u:
+        for alias in _FINDINGS_ALIASES:
+            if isinstance(u.get(alias), list):
+                u["findings"] = u.pop(alias)
+                notes.append(f"`{alias}` → `findings`")
+                break
+    if "schema" not in u:
+        u["schema"] = 1
+        notes.append("`schema` defaulted to 1")
+    if u.get("case") is None and isinstance(u.get("findings"), list):
+        acts = {e.get("action") for e in u["findings"] if isinstance(e, dict)}
+        if acts and acts <= {"resolve", "add"}:
+            case = "fix-response"
+        elif acts & {"concede", "hold", "accept"}:
+            case = "dispute"
+        else:
+            case = "mixed"
+        u["case"] = case
+        notes.append(f"`case` inferred as {case}")
+    return u, notes
+
+
 def validate_update(update: dict, known_ids: set[str]) -> list[str]:
     problems: list[str] = []
     if update.get("schema") != 1:
@@ -314,6 +350,10 @@ def apply(
         raise UpdateError("author card has no REVIEW_STATE block")
     high_water = int(state.get("high_water", 0))
 
+    update, repairs = normalize_update(update)
+    if repairs:
+        print("::warning::apply-update repaired the patch envelope: " + "; ".join(repairs),
+              file=sys.stderr)
     problems = validate_update(update, set(rows))
     if problems:
         raise UpdateError("; ".join(problems))

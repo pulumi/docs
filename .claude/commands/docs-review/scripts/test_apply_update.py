@@ -194,3 +194,24 @@ def test_refresh_facts_line_recounts_from_findings():
     out = au.refresh_facts_line(brief, findings)
     assert "1 flagged in the ⚠️ list, 1 settled since the last review." in out
     assert au.refresh_facts_line("no facts line", findings) == "no facts line"
+
+
+def test_envelope_slips_are_normalized():
+    # The exact shape the model wrote on fork PR 242 (2026-09-01): correct
+    # adjudication, wrong envelope.
+    slipped = {"history_summary": "F1 verified fixed.",
+               "actions": [{"action": "resolve", "id": "F1", "annotation": "fixed in b42ef052"}]}
+    a_out, _, state, report = au.apply(AUTHOR, BRIEF, slipped, head_sha=SHA, actor="cam", auto=False)
+    assert state["findings"]["F1"]["disposition"] == "fixed" and report["blocking"] == 2
+    norm, notes = au.normalize_update(slipped)
+    assert norm["schema"] == 1 and norm["case"] == "fix-response" and "findings" in norm
+    assert len(notes) == 3
+    norm2, _ = au.normalize_update({"findings": [{"action": "hold", "id": "F1", "reason": "r"}]})
+    assert norm2["case"] == "dispute"
+    # a genuinely broken patch still fails
+    try:
+        au.apply(AUTHOR, BRIEF, {"findings": "nope"}, head_sha=SHA, actor="cam", auto=False)
+    except au.UpdateError:
+        pass
+    else:
+        raise AssertionError("non-list findings accepted")
