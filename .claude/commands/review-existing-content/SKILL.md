@@ -454,12 +454,36 @@ review backlog** — not a high-confidence-fix sweep. Everything above applies
 except as amended here.
 
 **Input**: `.glowup-backlog.json` at the repo root (built by the workflow via
-`scripts/content-review/build-glowup-backlog.py`): the ledger's
-`skipped_findings` / `clarity_flag` counters plus every banked finding
-extracted from the page's prior review PRs' "Findings not applied",
-"Screenshot check", and "Rendered content" sections, each with a stable `id`
-and its `source_pr`. The pre-step artifacts (claims, Vale, readthrough,
-frontmatter) are also present and are your evidence base.
+`scripts/content-review/build-glowup-backlog.py`, then reconciled by
+`compose-pr-body.py`): the ledger's `skipped_findings` / `clarity_flag`
+counters plus every banked finding extracted from the page's prior review
+PRs' "Findings not applied", "Screenshot check", and "Rendered content"
+sections, each with a stable `id` and its `source_pr`. The pre-step
+artifacts (claims, Vale, readthrough, frontmatter) are also present and are
+your evidence base.
+
+Each banked item is split in two, and the split is the point:
+
+- **`finding`** is the work — what an earlier run found.
+- **`prior_disposition`** is one earlier reviewer's reason for leaving it.
+  It is **context, never direction**. It tells you why someone hesitated;
+  it does not tell you what the page should say, and an aside inside it
+  ("the page frames X as primary") is not a finding to execute. Two
+  September 2026 glow-ups went wrong exactly here: one promoted such an
+  aside into a new superlative claim, the other executed a readthrough
+  finding the earlier run had declined as editorial.
+- **`fresh_verdict`** is what *this run's* artifacts say about the same
+  sentence (matched by text, since claim ids and line numbers drift between
+  runs). A banked claim the fresh verifier now calls `not-a-claim` or
+  `verified`, and a banked readthrough finding the fresh readthrough pass
+  did not re-raise, are **pre-declined by the composer** as "superseded by
+  re-verification": their rows are already in the Backlog declined table.
+  Leave them as composed and list their ids in `declined_ids`.
+- Rows sourced **"this run"** (`fresh-<claim id>`) are fresh
+  `contradicted`/`mismatch` verdicts stubbed as work, exactly like the fix
+  lane's "Fixes applied" stubs. Fix each, or move it to Backlog declined
+  with a reason. The publish gate refuses a body that leaves any stubbed
+  row — banked or fresh — out of both tables.
 
 **Procedure**:
 
@@ -478,12 +502,18 @@ frontmatter) are also present and are your evidence base.
    never change frontmatter `title`, `aliases`, or `redirect_to`; retirement
    is never a glow-up outcome. Preserve the page's purpose and technical
    accuracy — a glow-up reads better, it does not say different things
-   without artifact-backed evidence.
+   without artifact-backed evidence. In particular, never add superlative or
+   ranking language ("fastest", "the recommended", "where to start", "the
+   only", "primary") the artifacts don't back.
 1. **Validate** with `make lint` as usual, and self-check with the glow-up
    gate instead of verify-fix-scope: stage/diff/unstage as in step 8's
    self-check, then run `verify-glowup-scope.py --diff-file
-   .self-check.u0.diff --article <path> --article-blob <pristine-copy> --out
-   .self-check-report.json` (copy the article aside before your first edit).
+   .self-check.u0.diff --article <path> --article-blob <pristine-copy>
+   --verified-claims .verified-claims.json --out .self-check-report.json`
+   (copy the article aside before your first edit). The gate's superlative
+   check is a `::warning::`, not a violation, but every warning must be
+   acknowledged in the PR body under "Secondary sweep → Content
+   enhancements": name the verdict that supports the wording, or remove it.
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
    "skipped_findings": <declined count>, "clarity_flag": <bool>,
    "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
