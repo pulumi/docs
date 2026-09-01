@@ -2951,12 +2951,26 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
     rows = (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
             + v3_finding_rows(ctx.body, "❓ Questions for you"))
-    total = len(rows)
-    numbered = sum(1 for _, _, p in rows if p and p["id"] != "F?")
+    # Blocking = rows without a REVIEW_STATE disposition and not rewritten
+    # in place (Spurious/…). A `/resolve F3 accepted` that lands between an
+    # update run's fetch and publish leaves F3's row in ❓ with a disposition;
+    # build-evidence/apply-update count it as answered, and this rule must
+    # agree (fork PR 242, 2026-09-01: a held dispute failed publish here).
+    try:
+        state = _review_state_mod().parse_state(ctx.body) or {}
+    except ValueError:
+        state = {}
+    answered = {fid for fid, e in (state.get("findings") or {}).items() if isinstance(e, dict)}
+
+    def _blocking(p: dict | None) -> bool:
+        return bool(p) and p["id"] not in answered and not _V3_REWRITTEN_RE.match(p["body"])
+
+    total = sum(1 for _, _, p in rows if _blocking(p) or p is None)
+    numbered = sum(1 for _, _, p in rows if _blocking(p) and p["id"] != "F?")
     stated = int(m.group(1)) if m.group(1) else 0
     if stated not in (total, numbered):
         return [Violation("v3-blocking-count", "<author header>",
-                          f"(N blocking) matches the 🚨+❓ row count ({numbered} composed, {total} with additions)",
+                          f"(N blocking) matches the open 🚨+❓ row count ({numbered} composed, {total} with additions; dispositioned and rewritten rows excluded)",
                           f"header says {stated}",
                           "Don't hand-edit the count; if you removed a row, disposition it instead (Spurious/Mis-sourced/Pre-existing rewrite) — build-evidence.py recomputes the header.")]
     return []

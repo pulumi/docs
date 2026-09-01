@@ -250,3 +250,26 @@ if __name__ == "__main__":
                 failures += 1
                 print(f"  FAIL: {name}: {e}", file=sys.stderr)
     sys.exit(1 if failures else 0)
+
+
+def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
+    """A `/resolve F3 accepted` racing an update run leaves F3's row in ❓ with
+    a disposition; the header counts it as answered and this rule must agree."""
+    import importlib.util, sys
+    from pathlib import Path
+    here = Path(__file__).resolve().parent
+    spec = importlib.util.spec_from_file_location("review_state_t", here.parent.parent.parent.parent / "scripts" / "review-v3" / "review_state.py")
+    rs = importlib.util.module_from_spec(spec); spec.loader.exec_module(rs)
+    author = (here / "testdata" / "v3-fixture-author.md").read_text()
+    brief = (here / "testdata" / "v3-fixture-brief.md").read_text()
+    from datetime import datetime, timezone
+    st = rs.set_disposition(rs.parse_state(author), "F3", "accepted", actor="a", note="n",
+                            now=datetime(2026, 9, 1, tzinfo=timezone.utc))
+    author = rs.replace_block(author, st).replace("— 3 items block merge", "— 2 items block merge")
+    a = tmp_path / "a.md"; b = tmp_path / "b.md"
+    a.write_text(author); b.write_text(brief)
+    import subprocess
+    r = subprocess.run([sys.executable, str(here / "validate-pinned.py"), "check", "--body-file", str(a),
+                        "--brief-file", str(b), "--pr", "999", "--repo", "pulumi/docs"],
+                       capture_output=True, text=True)
+    assert "v3-blocking-count" not in r.stdout + r.stderr, r.stdout + r.stderr

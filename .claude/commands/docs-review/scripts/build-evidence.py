@@ -456,6 +456,14 @@ def refresh_counts(author_body: str, brief_body: str | None, state: dict | None)
     author_body = _fix_header(author_body, count_blocking(findings, sf))
     if brief_body is not None:
         brief_body = cr.replace_waiting_block(brief_body, findings, sf)
+        # The Facts bullet moves too (an accepted ❓ is no longer "open").
+        # No evidence object here (the /resolve lane is uncredentialed), so
+        # rows stand in: origin "model" + the claim-quote heuristic.
+        rows = [dict(f, origin="model", status="open", disposition=sf.get(f["id"])) for f in findings]
+        rows += [{"id": p["id"], "bucket": b, "text": p["body"], "origin": "model", "status": "open",
+                  "disposition": sf.get(p["id"])}
+                 for b, _i, p, _r in _walk(brief_body, BRIEF_SECTIONS, "brief")]
+        brief_body = refresh_facts_line(brief_body, rows)
     return author_body, brief_body
 
 
@@ -600,6 +608,7 @@ def _self_test() -> int:
     ra_back, _ = refresh_counts(ra_all, None, None)
     assert "> [!IMPORTANT]" in ra_back and "needs your answers" in ra_back, "and swaps back"
     assert "✋ accepted as-is by the author" in rb and "(1 more is answered — see State)" in rb, rb
+    assert "1 settled — see the evidence page" in rb or "Facts:" not in fx_brief, rb
     ra0, _ = refresh_counts(fx_author, None, None)
     assert "— 3 items block merge" in ra0
 
