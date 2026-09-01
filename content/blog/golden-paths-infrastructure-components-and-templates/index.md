@@ -25,7 +25,7 @@ social:
     linkedin: "The fragmentation in modern cloud ecosystems is real. Between AWS's 200+ services, Azure's growing catalog, and the explosion of DevOps tools, developers face decision fatigue at every turn. Our latest post in the IDP Best Practices series shows you how to solve this with golden paths: pre-architected infrastructure patterns that provide the happy path to production. Learn how to build reusable Pulumi components that work across languages, create templates that embody your best practices, and enable true self-service infrastructure without sacrificing governance or security. #platformengineering #goldenpaths #infrastructureascode #developerexperience"
 ---
 
-Welcome to the second post in our **IDP Best Practices** series. In this article, we explore how to build golden paths in practice: **pre-architected, reusable infrastructure patterns** that help standardize and accelerate cloud development.
+Welcome to the second post in our **IDP Best Practices** series. In this article, we explore how to build golden paths in practice: **pre-architected, reusable infrastructure patterns** that help standardize and speed up cloud development.
 
 Golden paths are opinionated routes for infrastructure provisioning that platform teams build for common workflows. Because modern cloud platforms offer so many options — over 200 AWS services, sprawling Azure catalogs, countless DevOps tools — developers can struggle with decision fatigue or produce inconsistent implementations. Golden paths solve this by providing **ready-to-use, production-grade infrastructure** that encodes your organization’s best practices, security policies, and operational standards.
 
@@ -41,7 +41,7 @@ The complete code examples from this post are available on [GitHub](https://gith
 
 To understand where golden paths fit into an [Internal Developer Platform (IDP)](/what-is/what-is-an-internal-developer-platform/), think in layers. This three-tier model structures your platform to deliver increasing levels of abstraction, reuse, and developer value, and it maps onto the [four factors of a Pulumi IDP](/docs/idp/guides/best-practices/four-factors/): templates, components, environments, and policies.
 
-### Layer 1: Infrastructure Layer
+### Layer 1: Infrastructure layer
 
 This is the foundation: raw cloud resources include VMs, databases, networks, and storage, which are the fundamental building blocks from AWS, Azure, GCP, and other providers. Pulumi gives you programmatic access to these resources through [native providers](/registry/), but working at this level requires deep infrastructure knowledge.
 
@@ -592,7 +592,7 @@ You reach the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) two w
 
 From there, the wizard offers a deployment method for the new stack:
 
-- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository (GitHub, Azure DevOps, GitLab, or Bitbucket). Your organization needs an integration for that provider, and you need to authorize your account with it.
+- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository (GitHub, Azure DevOps, GitLab, or Bitbucket). Your organization needs an integration for that provider, and you need to connect your account with it.
 - **Pulumi Deployments (no-code)**: stores the stack's configuration in a [Pulumi ESC](/docs/esc/) environment instead of a repository. See [no-code stacks](/docs/idp/concepts/no-code-stacks/) for requirements; any configured VCS provider works.
 - **Local deployment**: deploy the stack from your machine with the Pulumi CLI, no VCS integration required.
 
@@ -635,7 +635,7 @@ interface ComponentArgs {
 
 ### 3. Use semantic versioning everywhere
 
-Clear versioning for both components and templates indicate stability and reliability:
+Clear versioning for both components and templates indicates stability and reliability:
 
 - **Major versions** (1.0.0 → 2.0.0): Breaking changes
 - **Minor versions** (1.0.0 → 1.1.0): New features, backward compatible
@@ -791,7 +791,7 @@ The terms describe the same idea from two engineering cultures: Spotify populari
 
 ### What makes a golden path different from a service catalog?
 
-A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because several popular ones solve catalog and discovery problems without ever provisioning anything themselves.
+A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because most popular ones solve catalog and discovery problems without ever provisioning anything themselves.
 
 Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
 
