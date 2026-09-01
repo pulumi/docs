@@ -225,8 +225,50 @@ def detect_starting_state(body_lines: list[str], old_start: int) -> str:
     return "frontmatter" if old_start <= 30 else "body"
 
 
-def classify_file(path: str, file_diff: str) -> dict:
-    """Walk a single file's diff and return its classification flags."""
+def _fence_parity_from_file(repo_root, path: str, header: str, body_lines: list[str]):
+    """Is this hunk's first line inside a fenced code block? Counted from the
+    checked-out file (fence markers above the hunk start), not from the hunk:
+    a hunk whose leading context is the CLOSING fence of a block that opened
+    above it reads as "opener" to any diff-only tracker, and that mis-tagged
+    two prose-only PRs as code changes in the 2026-09-01 replay (#21220,
+    #21089). Tries the new-side start (head checkout) then the old-side start
+    (base checkout), accepting whichever position's lines match the file.
+    None when the file is missing or neither side lines up — callers fall
+    back to the diff-only tracker."""
+    if repo_root is None:
+        return None
+    m = HUNK_HEADER_RE.match(header)
+    if not m:
+        return None
+    try:
+        lines = (Path(repo_root) / path).read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return None
+    old_start, new_start = int(m.group(1)), int(m.group(2))
+    for start, side in ((new_start, "+"), (old_start, "-")):
+        i, ok, checked = start - 1, True, 0
+        for ln in body_lines:
+            if not ln or ln[0] not in " +-":
+                continue
+            if ln[0] == " " or ln[0] == side:
+                if i >= len(lines) or lines[i] != ln[1:]:
+                    ok = False
+                    break
+                i += 1
+                checked += 1
+        if ok and checked:
+            n = sum(1 for l in lines[: start - 1] if l.lstrip().startswith(("```", "~~~")))
+            return n % 2 == 1
+    return None
+
+
+def classify_file(path: str, file_diff: str, repo_root=None) -> dict:
+    """Walk a single file's diff and return its classification flags.
+
+    `repo_root` (a checkout of the PR's base or head) lets the fence tracker
+    seed each hunk's inside-a-code-block state from the file; without it the
+    tracker starts every hunk outside a fence and leans on the code-shaped
+    hunk heuristic."""
     head300 = file_diff[:300]
     is_rename = "rename from" in head300 or "rename to" in head300
     is_delete = "+++ /dev/null" in head300
@@ -300,8 +342,9 @@ def classify_file(path: str, file_diff: str) -> dict:
         # state tracked across the hunk's context lines; (2) a hunk with no
         # marker in view whose lines mostly look like code (the hunk started
         # mid-fence). Mis-calling prose "code" only costs a review run.
-        in_fence = False
-        if is_md and _hunk_looks_like_code(body_lines):
+        seeded = _fence_parity_from_file(repo_root, path, header, body_lines) if is_md else None
+        in_fence = bool(seeded)
+        if is_md and seeded is None and _hunk_looks_like_code(body_lines):
             flags["has_code_block_change"] = True
 
         for line in body_lines:
@@ -727,7 +770,7 @@ def main() -> int:
         pr_data = json.load(fh)
     diff_text = sys.stdin.read()
     files = split_files(diff_text)
-    file_flags = [classify_file(p, d) for p, d in files]
+    file_flags = [classify_file(p, d, repo_root=Path.cwd()) for p, d in files]
     result = classify_pr(pr_data, file_flags)
     json.dump(result, sys.stdout, separators=(",", ":"))
     sys.stdout.write("\n")

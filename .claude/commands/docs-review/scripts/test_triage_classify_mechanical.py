@@ -486,3 +486,29 @@ def test_code_inside_existing_fence_is_not_mechanical_or_trivial() -> None:
     diff, flags, pr_data = _md_pr(prose)
     assert flags[0]["has_code_block_change"] is False
     assert tc.classify_pr(pr_data, flags)["trivial"] is True
+
+
+def test_fence_parity_seeded_from_file(tmp_path) -> None:
+    # Prose edit between two code blocks: the hunk's leading context is the
+    # CLOSING fence of the block above. Diff-only tracking calls it code;
+    # the file says otherwise (replay 2026-09-01: #21220, #21089).
+    # 40 filler lines first: hunks that start inside detect_starting_state's
+    # 30-line frontmatter window are classified as frontmatter, not body.
+    doc = ["filler"] * 40 + ["# Title", "", "Intro.", "", "```yaml", "config:", "  key: v", "```", "",
+           "Prose between blocks.", "", "```yaml", "other: 1", "```", ""]
+    path = "content/docs/iac/concepts/x.md"
+    (tmp_path / path).parent.mkdir(parents=True)
+    (tmp_path / path).write_text("\n".join(doc) + "\n")
+    lines = [" ```", " ", "-Prose between blocks.", "+Prose between the blocks.", " ", " ```yaml"]
+    diff = make_file_diff(path, lines, old_start=48, new_start=48)
+    (p, d), = tc.split_files(diff)
+    assert tc.classify_file(p, d)["has_code_block_change"] is True, "diff-only tracker mis-tags it"
+    assert tc.classify_file(p, d, repo_root=tmp_path)["has_code_block_change"] is False
+
+    # Mid-fence hunk (no marker in view): the file seeds inside-a-fence.
+    lines = [" config:", "-  key: v", "+  key: w"]
+    diff = make_file_diff(path, lines, old_start=46, new_start=46)
+    (p, d), = tc.split_files(diff)
+    assert tc.classify_file(p, d, repo_root=tmp_path)["has_code_block_change"] is True
+    # Wrong checkout (lines don't match) → None → diff-only fallback, unchanged.
+    assert tc.classify_file(p, d, repo_root=tmp_path / "nope")["has_code_block_change"] is False

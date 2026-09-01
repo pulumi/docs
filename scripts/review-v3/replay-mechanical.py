@@ -251,7 +251,7 @@ def classify_one(pr_detail: dict, files: list[dict], repo_root: Path) -> dict:
     diff_text = build_pr_diff(files)
     pr_data = build_pr_data(pr_detail, files)
     file_diffs = tc.split_files(diff_text)
-    file_flags = [tc.classify_file(p, d) for p, d in file_diffs]
+    file_flags = [tc.classify_file(p, d, repo_root=repo_root) for p, d in file_diffs]
     old = tc.classify_pr(pr_data, file_flags)
     new_ok, new_reasons = tc.classify_mechanical(pr_data, file_flags, diff_text, repo_root)
 
