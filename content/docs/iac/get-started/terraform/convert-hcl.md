@@ -26,10 +26,10 @@ The rest of this page covers converting.
 
 ## When to convert
 
-Converting HCL to Pulumi code makes sense in several scenarios:
+Converting HCL to Pulumi code makes sense when:
 
 * **Complex logic**: Operations that need rich runtime logic can be more natural in a general-purpose language
-* **Testing requirements**: You need unit testing capabilities for infrastructure code
+* **Testing requirements**: You want to test infrastructure with your language's own unit-testing framework and mocking libraries
 * **Integration needs**: Infrastructure code needs to integrate with application code
 * **Team preferences**: Your team prefers general-purpose programming languages
 * **Advanced features**: You want to use Pulumi-specific features like Pulumi Policies or Automation API
@@ -519,8 +519,8 @@ pulumi.export("website_url", pulumi.Output.format("http://{0}", web_instance.pub
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
@@ -1195,7 +1195,7 @@ $ pulumi destroy
 
 ## Verifying conversion accuracy
 
-After converting existing infrastructure, verify that your Pulumi program produces identical results by importing the Terraform state and running a preview:
+After converting existing infrastructure, verify that your Pulumi program produces identical results by importing the Terraform state and running a preview.
 
 The resource IDs below (`vpc-12345`, `subnet-67890`, `i-abcdef123`) are placeholders. Replace them with the actual IDs of your existing resources, which you can find in your Terraform state (for example, with `terraform state show <resource>`) or in your cloud provider's console. Run these commands from within your converted Pulumi project directory.
 
@@ -1217,41 +1217,35 @@ For anything beyond a handful of resources, import in bulk from the Terraform st
 $ pulumi import --from hcl terraform.tfstate
 ```
 
-This reads a Terraform or OpenTofu state file and imports every managed resource in its root module in one pass. Resources nested inside modules are skipped with a warning, so import those individually with the per-resource form above. The state file itself is only read — Pulumi does not adopt or reuse it, and subsequent updates use Pulumi's own state.
+This reads a Terraform or OpenTofu state file and imports every managed resource in its root module in one pass. Resources nested inside modules are skipped with a warning, so import those individually with the per-resource form above. The state file itself is only read — Pulumi does not adopt or reuse it, and later updates use Pulumi's own state.
 
-This verification step is crucial when converting production infrastructure, as it confirms your Pulumi program exactly matches the existing Terraform-managed resources.
+Don't skip this step when you're converting production infrastructure: a preview that reports no changes is your confirmation that the Pulumi program matches the resources Terraform is already managing.
 
 ## AI-assisted conversion with the Pulumi MCP server
 
-For complex Terraform configurations, you can use AI tools like [Claude](https://www.anthropic.com/claude-code) with the [Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/), which provides comprehensive Pulumi integration, including a specialized Terraform conversion prompt.
+`pulumi convert` is the fastest path for most configurations, and it's where to start. For configurations it struggles with — heavy `for_each` and `dynamic` blocks, or a lot of module indirection — a coding agent can pick up where the converter leaves off. The [Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/) gives the agent you already use access to the Pulumi Registry, your stacks, and a `convert-terraform-to-typescript` prompt.
 
-### Using the Pulumi MCP server (recommended)
+### Using the Pulumi MCP server
 
-The [Pulumi MCP server](/docs/ai/mcp-server/) enables AI assistants to interact with Pulumi programmatically. Beyond conversion, it provides full infrastructure management capabilities including stack operations, resource querying, and automated deployments.
+The [Pulumi MCP server](/docs/ai/mcp-server/) works with any agent that speaks MCP, including [Claude Code](https://www.anthropic.com/claude-code), Cursor, Windsurf, and Kiro. It ships a `convert-terraform-to-typescript` prompt that converts Terraform HCL to Pulumi TypeScript, so the agent has a Pulumi-authored starting point rather than whatever it would improvise.
 
-The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt that ensures:
+Beyond conversion, the server exposes tools for listing your stacks, searching your deployed resources, reading Registry schemas, checking policy findings, and handing longer jobs to [Pulumi Neo](/docs/ai/neo/). The [MCP server docs](/docs/ai/mcp-server/) list every tool and prompt.
 
-* **Type safety**: Proper use of `pulumi.Input<T>` and `pulumi.Output<T>` types
-* **Best practices**: Idiomatic TypeScript patterns and Pulumi conventions
-* **Configuration handling**: Safe access to config values with null checking
-* **Resource naming**: Consistent and descriptive resource naming
-* **Multi-provider support**: Proper handling of multiple provider configurations
+To set it up and use it:
 
-**Installation and setup:**
-
-1. **Install via Claude Code** (if using Claude):
+1. **Add the server to your agent.** In Claude Code, that's:
 
    ```bash
    $ claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
    ```
 
-   Follow the complete setup instructions in the [Pulumi MCP server docs](/docs/ai/mcp-server/).
+   Other agents configure it differently — see [Configuration](/docs/ai/mcp-server/#configuration) in the MCP server docs.
 
-2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
+1. **Gather your Terraform code.** Collect the configuration files you want converted (`.tf`, `terraform.tfvars`, and any module sources they reference).
 
-3. **Use the conversion prompt**: Once configured, you can attach the specific conversion prompt in Claude:
+1. **Invoke the conversion prompt.** Once the server is connected, attach the prompt and paste your configuration:
 
-   ```
+   ```text
    @convert-terraform-to-typescript
 
    Please convert this Terraform configuration to Pulumi TypeScript:
@@ -1259,47 +1253,36 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
    [Paste your Terraform HCL code here]
    ```
 
-The MCP server provides additional capabilities beyond conversion, including:
+Whatever the agent produces, review it the same way you'd review the converter's output — see [Review the output](#review-the-output).
 
-* Infrastructure previews with `pulumi preview`
-* Automated deployments with `pulumi up`
-* Stack output retrieval
-* Resource querying and management
+### If your agent doesn't support MCP prompts
 
-### Alternative: manual prompt usage
+Some agents connect to MCP servers for tools but can't attach a server's prompts. In that case, describe the job yourself and let the agent read the Pulumi docs and Registry through the server's tools:
 
-If you prefer not to use the MCP server, you can access the conversion prompt directly:
+```text
+Convert this Terraform configuration to a Pulumi TypeScript program. Look up each
+resource in the Pulumi Registry to get the property names and types right, use
+pulumi.Config for the variables, and export the Terraform outputs as stack outputs.
 
-1. **Access the prompt**: The "convert-terraform-to-typescript" prompt is available in the [Pulumi MCP server](/docs/ai/mcp-server/)
-
-2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
-
-3. **Use with Claude**: Copy the conversion prompt and your Terraform code, then ask Claude to perform the conversion:
-
-   ```
-   [Paste the complete conversion prompt]
-
-   Please convert this Terraform configuration to Pulumi TypeScript:
-
-   [Paste your Terraform HCL code here]
-   ```
+[Paste your Terraform HCL code here]
+```
 
 ## Review the output
 
-Any time you use an automated conversion tool, you will want to review and validate the output. Some things to check for:
+Any time you use an automated conversion tool, review and validate what it produced. Some things to check for:
 
-* Proper error handling and validation
-* Type-safe configuration access
-* Idiomatic resource definitions
-* Comprehensive resource labeling
+* Configuration values read through `pulumi.Config` with the defaults the HCL declared
+* Resource properties that carried over completely, including tags and labels
+* Idiomatic resource definitions for the language you converted to
+* Error handling around anything the converter couldn't translate directly
 
 ## Best practices for conversion
 
 1. **Start small**: Convert smaller configurations first to understand the process
-2. **Verify outputs**: Ensure converted code produces identical infrastructure
-3. **Test thoroughly**: Write tests for critical infrastructure components
-4. **Preserve structure**: Keep similar resource organization when possible
-5. **Document changes**: Note any differences between original and converted code
-6. **Version control**: Use Git to track conversion changes
+1. **Verify outputs**: Ensure converted code produces identical infrastructure
+1. **Test thoroughly**: Write tests for critical infrastructure components
+1. **Preserve structure**: Keep similar resource organization when possible
+1. **Document changes**: Note any differences between original and converted code
+1. **Version control**: Use Git to track conversion changes
 
 {{< get-started-stepper >}}
