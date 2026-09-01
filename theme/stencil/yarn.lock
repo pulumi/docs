@@ -780,10 +780,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stencil/core@^4.43.5":
-  version "4.43.5"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.43.5.tgz#a18542bc2d8fda1f8f6098f63d266f18e3f1eb11"
-  integrity sha512-cgWD+GeuvJpTe1WQn40p02+BJ2j0j1YJ17GdkF2qKIQ23s2e3Zivq5yISXS3dcuV6oUJFN93jprdk+nk/sq99Q==
+"@stencil/core@^4.44.2":
+  version "4.44.2"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.44.2.tgz#96109ba625879afd48b42c97d6f085e1c1335dec"
+  integrity sha512-TNaYdlyHfy8UF7glvZwaY6pM0AhgCOXuW5Kx3+AO+ITeaipCHWXi5tkZ6P/3HCL+hUySc60lPKSnZ4xdYIFb4g==
   optionalDependencies:
     "@rollup/rollup-darwin-arm64" "4.44.0"
     "@rollup/rollup-darwin-x64" "4.44.0"
@@ -799,10 +799,10 @@
   resolved "https://registry.yarnpkg.com/@stencil/redux/-/redux-0.2.0.tgz#5f9ae08b6a70fe52b990e5d597b511a7ef1bb7f7"
   integrity sha512-isikSfMNFBMYVPFzhvlwDkEdjKJQrcbZgPGN84UXIoCYwQee5OQ2k22hF40GCLkjP5oG/lR36jdQIf9JU3mG/g==
 
-"@stencil/sass@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@stencil/sass/-/sass-3.3.2.tgz#8f3df20acfaa7c2619cef6982c689b32a14829ea"
-  integrity sha512-Hv9T2r0RTbpcerawHn1jQJ72z3jVK5Ew5PEKDLo6gBK+pdz8+zxWSCtRfbXLJgeG4UVR54vs0awq9/DXBithIw==
+"@stencil/sass@^3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@stencil/sass/-/sass-3.3.3.tgz#7c765e901c32978d23d26f74be067f6030c978cc"
+  integrity sha512-NiaoOry3xvPcsRyQFHps/Ug8okgTVlPqHmJkx0QN0GSEcAB67ryF/4sGRejgpIMUidnyzl1OjGEHXFnq1L6phg==
   dependencies:
     sass-embedded "^1.93.2"
 
@@ -3183,10 +3183,10 @@ util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-uuid@^14.0.1:
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-14.0.1.tgz#8a5975b3e038902bfd169a10b5202f5ec0cf3faf"
-  integrity sha512-6ZxzVpzDXDa3bJWaHilVayA+BH/1zmxCJoVgvmqJnid/gPoKHxUrS/aC/T6LGQtNHT+XHG9fXPJB4d+IrU30Ew==
+uuid@^14.0.2:
+  version "14.0.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-14.0.2.tgz#d5ae03e4db0881c87271f8b0b9bd7312d02c799a"
+  integrity sha512-xZe/16rV4aa+HGSOCiY2YeLT1OybRLrrkL/Rqaq7p7GMVXjFh+6wN4oMYgjFmnSnhY8t6Xpdl2l9qmnHYuMHwQ==
 
 v8-to-istanbul@^9.0.1:
   version "9.3.0"
