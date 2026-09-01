@@ -42,8 +42,17 @@
         {{ $author = merge $author (dict "sameAs" $sameAs) }}
       {{ end }}
 
-      {{/* Add URL to author page */}}
-      {{ $author = merge $author (dict "url" (printf "https://www.pulumi.com/authors/%s/" .id)) }}
+      {{/* Add URL to author page. /authors/%s is a Hugo logical content path, not
+           the published permalink -- config/_default/config.yml routes the
+           `authors` taxonomy term to /blog/author/:slug/. Resolve the real page
+           and use its Permalink so this doesn't drift if that route ever
+           changes; omit `url` entirely if the author has no live term page
+           (e.g. data-file-only authors referenced from a what-is/comparison
+           page) rather than emit a dead link. */}}
+      {{ $authorPage := site.GetPage (printf "/authors/%s" (.id | urlize)) }}
+      {{ with $authorPage }}
+        {{ $author = merge $author (dict "url" .Permalink) }}
+      {{ end }}
 
       {{/* Add image. Team avatars live at /images/team/<id>.jpg by convention; an
            explicit .image in the team toml overrides it. Including a Person image
@@ -105,14 +114,21 @@
 
       {{ $authors = $authors | append $author }}
     {{ else }}
-      {{/* Author not in team data — build a minimal Person from the slug */}}
-      {{ $authors = $authors | append (dict
+      {{/* Author not in team data — build a minimal Person from the slug.
+           Same /authors/%s permalink caveat as above: resolve the real page
+           (published at /blog/author/:slug/ per config/_default/config.yml)
+           and omit `url` if there is no live term page for this slug. */}}
+      {{ $minimalAuthor := dict
         "@type" "Person"
         "@id" (printf "https://www.pulumi.com/authors/%s/#person" ($slug | urlize))
         "name" (replace $slug "-" " " | title)
-        "url" (printf "https://www.pulumi.com/authors/%s/" ($slug | urlize))
         "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
-      ) }}
+      }}
+      {{ $slugAuthorPage := site.GetPage (printf "/authors/%s" ($slug | urlize)) }}
+      {{ with $slugAuthorPage }}
+        {{ $minimalAuthor = merge $minimalAuthor (dict "url" .Permalink) }}
+      {{ end }}
+      {{ $authors = $authors | append $minimalAuthor }}
     {{ end }}
   {{ end }}
 {{ end }}
