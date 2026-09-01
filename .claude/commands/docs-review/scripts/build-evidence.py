@@ -330,6 +330,13 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
     brief_out = _collapse_empty_tables(
         _clean(brief_body, drop_lines["brief"], renumber["brief"]), BRIEF_SECTIONS)
     brief_out = refresh_facts_line(brief_out, findings)
+    # A model-added `F?` row got a real id above; the author card's
+    # REVIEW_STATE high-water mark must move with it, or every later reader
+    # (validate-pinned's grammar rule, /resolve's range check) rejects the id
+    # (fork PR 245, 2026-09-01: brief carried F1 against high_water 0).
+    if evidence["high_water"] != state.get("high_water", 0):
+        author_out = review_state.replace_block(
+            author_out, dict(state, high_water=evidence["high_water"]))
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     author_out = _fix_header(author_out, n_blocking)
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
@@ -586,6 +593,21 @@ def _self_test() -> int:
     assert {f["id"]: f["bucket"] for f in ev2["findings"]}["F1"] == "preexisting"
     assert "**Pre-existing issues in touched files:** 1" in brief_out2
     assert "F1" not in author_out2.split("### 🚨")[1].split("### ❓")[0]
+
+    # A model-added F? row on the brief: numbered, and the author card's
+    # REVIEW_STATE high-water mark follows.
+    fx_author = (HERE / "testdata" / "v3-fixture-author.md").read_text()
+    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+    fx_base = json.loads((HERE / "testdata" / "v3-fixture-evidence-base.json").read_text())
+    added = cr.render_finding_row("F?", ref="L9", file="content/docs/iac/x.md",
+                                  body="model-added reviewer check")
+    brief_plus = fx_brief.replace("### ⚠️ Check these before approving\n\n",
+                                  "### ⚠️ Check these before approving\n\n"
+                                  + cr.FINDING_TABLE_HEADER + "\n" + cr.FINDING_TABLE_SEPARATOR + "\n" + added + "\n\n", 1)
+    ev_plus, a_plus, b_plus = build(fx_author, brief_plus, fx_base)
+    new_id = f"F{ev_plus['high_water']}"
+    assert f"**{new_id}**" in b_plus and "**F?**" not in b_plus, "F? numbered"
+    assert review_state.parse_state(a_plus)["high_water"] == ev_plus["high_water"], "author high_water follows"
 
     # refresh_counts: a disposition takes a row out of the blocking count on
     # both cards without moving it.
