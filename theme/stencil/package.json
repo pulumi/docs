@@ -11,9 +11,9 @@
         "postinstall": "node scripts/patch-stencil-redux.js"
     },
     "dependencies": {
-        "@stencil/core": "^4.43.5",
+        "@stencil/core": "^4.44.2",
         "@stencil/redux": "^0.2.0",
-        "@stencil/sass": "^3.3.2",
+        "@stencil/sass": "^3.3.3",
         "@types/codemirror": "^0.0.109",
         "@types/file-saver": "^2.0.1",
         "@types/jest": "29",
@@ -28,7 +28,7 @@
         "redux": "^4.1.0",
         "redux-devtools-extension": "^2.13.9",
         "redux-thunk": "^2.3.0",
-        "uuid": "^14.0.1"
+        "uuid": "^14.0.2"
     },
     "devDependencies": {
         "workbox-build": "^4.3.1"

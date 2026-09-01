@@ -285,19 +285,13 @@
   {{ $schema = merge $schema (dict "tool" $tools) }}
 {{ end }}
 
-{{/* Add image */}}
+{{/* Add image. meta_image is normally site-root-relative ("/images/...");
+     absolutize it against site.BaseURL, not the page's own Permalink -- see
+     schema/utils/absolutize-image.html for why the previous hand-rolled join
+     produced dead URLs like https://www.pulumi.com/<page-path>/images/... */}}
 {{ $image := "" }}
 {{ if .Params.meta_image }}
-  {{/* Fix URL concatenation to avoid double slashes */}}
-  {{ $baseURL := .Permalink }}
-  {{ if not (strings.HasSuffix $baseURL "/") }}
-    {{ $baseURL = printf "%s/" $baseURL }}
-  {{ end }}
-  {{ $imagePath := .Params.meta_image }}
-  {{ if strings.HasPrefix $imagePath "/" }}
-    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
-  {{ end }}
-  {{ $image = printf "%s%s" $baseURL $imagePath }}
+  {{ $image = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" .Params.meta_image) }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
