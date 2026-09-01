@@ -1,8 +1,8 @@
 ---
-title_tag: "Pulumi ESC: Customer Managed Keys"
+title_tag: "Pulumi ESC: Customer managed keys"
 meta_desc: Bring your own encryption keys to protect data within Pulumi Cloud for enhanced security and compliance.
-title: Customer Managed Keys
-h1: Customer Managed Keys
+title: Customer managed keys
+h1: Customer managed keys
 menu:
   esc:
     parent: esc-concepts
@@ -14,7 +14,7 @@ pulumi_cloud_feature: customer-managed-keys
 
 ## Overview
 
-Pulumi ESC supports Customer Managed Keys (CMKs) to improve the security and compliance of your data. CMKs allow you
+Pulumi ESC supports customer managed keys (CMKs) to improve the security and compliance of your data. CMKs allow you
 to use your own encryption keys to protect secrets in Pulumi ESC through an external
 Key Management System (KMS).
 
@@ -25,14 +25,14 @@ encrypted secrets do not change.
 Only organization admins can manage CMKs.
 
 {{% notes type="info" %}}
-Currently, Customer Managed Keys support keys from AWS KMS and are only used to encrypt data stored in Pulumi ESC.
+Currently, customer managed keys support keys from AWS KMS and are only used to encrypt data stored in Pulumi ESC.
 We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
 have specific requirements, please [contact us](/contact/).
 {{% /notes %}}
 
-## Why use Customer Managed Keys?
+## Why use customer managed keys?
 
-Customer Managed Keys (CMKs) give you control over the encryption of your secrets in Pulumi ESC. By using your
+Customer managed keys (CMKs) give you control over the encryption of your secrets in Pulumi ESC. By using your
 own keys, you can:
 
 - Meet strict security and compliance requirements.
@@ -41,7 +41,8 @@ own keys, you can:
 
 This approach enhances data security and aligns with organizational or regulatory policies.
 
-## Customer Managed Keys documentation
+## Customer managed keys documentation
 
-See the [Customer Managed Keys](/docs/administration/concepts/customer-managed-keys/) documentation for complete usage
-instructions.
+For how customer managed keys work and how to view or disable them, see
+[Customer managed keys](/docs/administration/concepts/customer-managed-keys/). To set one up, follow the
+[AWS KMS](/docs/administration/guides/customer-managed-keys/aws-kms/) guide.
