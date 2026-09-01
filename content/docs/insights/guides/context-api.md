@@ -25,6 +25,7 @@ The Context API is in public preview. The availability notice at the top of this
 
 - You have [Pulumi CLI](/docs/install/) v3.243.0 or later and are logged in with `pulumi login`.
 - Your role grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
+- Your default organization is one with Context API access. Check it with `pulumi org get-default` and change it with `pulumi org set-default <your-org>`. The Context API is organization-scoped, and `pulumi api` fills the organization in for you from your currently selected stack, falling back to this default. A default that resolves to your personal organization fails with `402 Payment Required`.
 
 Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rbac/) filters each response to the resources, stacks, and cloud accounts that the user or token making the request is permitted to read.
 
@@ -33,10 +34,10 @@ Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rb
 You can use [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema -F orgName=my-org
+pulumi api GetGraphSchema
 ```
 
-Replace `my-org` with your organization name, then ask a natural-language question such as:
+Then ask a natural-language question such as:
 
 > Which stacks consume outputs from the `payments/prod` and `payments/staging` stacks?
 
@@ -66,15 +67,15 @@ Read it in English as: **Find visible S3 buckets, walk no relationships, and ret
 Run the query against your Pulumi organization:
 
 ```bash
-pulumi api GraphQuery -F orgName=my-org --input query.json
+pulumi api GraphQuery --input query.json
 ```
 
-Replace `my-org` with your organization name. The first response page includes selected bucket nodes and their standard identity fields. When available, the requested `name` and `modified` values appear in each node's `fields` object. Before treating the list as exhaustive, follow [Check completeness before acting](#check-completeness-before-acting).
+To target an organization other than the resolved default, add `-F orgName=<your-org>`. The first response page includes selected bucket nodes and their standard identity fields. When available, the requested `name` and `modified` values appear in each node's `fields` object. Before treating the list as exhaustive, follow [Check completeness before acting](#check-completeness-before-acting).
 
 You can also call the REST endpoint directly. This example requires a [Pulumi access token](/docs/administration/concepts/access-tokens/) in `PULUMI_ACCESS_TOKEN`:
 
 ```bash
-curl -X POST "https://api.pulumi.com/api/insights/my-org/graph/query" \
+curl -X POST "https://api.pulumi.com/api/insights/$(pulumi org get-default)/graph/query" \
     -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
     -H "Content-Type: application/json" \
     --data @query.json
@@ -947,7 +948,7 @@ Use `GetGraphSchema` to validate a selector against the deployed contract or equ
 For validation and integration tooling, fetch the JSON representation:
 
 ```bash
-pulumi api GetGraphSchema -F orgName=my-org --output=json
+pulumi api GetGraphSchema --output=json
 ```
 
 The JSON response is authoritative for the deployed schema version, node types, fields available for selection, projection, and grouping, fixed field values, edge types and directions, metric operations, and engine limits. This response is not a complete JSON Schema for the request body.
@@ -955,7 +956,7 @@ The JSON response is authoritative for the deployed schema version, node types, 
 To equip an agent, fetch the Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema -F orgName=my-org
+pulumi api GetGraphSchema
 ```
 
 The primer describes the current graph vocabulary, selector grammar, engine limits, worked examples, and guidance for handling pagination and response completeness. Give the agent this command so it can refresh the primer as the API evolves.
