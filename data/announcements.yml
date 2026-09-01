@@ -84,7 +84,7 @@ announcements:
     active: true
     display: both
     badge: Event
-    text: "**Live webinar · Sept 3:** Beyond the Hyperscalers — building sovereign infrastructure."
+    text: "**Live webinar September 3 ·** Beyond the Hyperscalers: Building sovereign infrastructure"
     cta:
       label: Register
       href: "/events/beyond-the-hyperscalers-sovereignty-panel/"
