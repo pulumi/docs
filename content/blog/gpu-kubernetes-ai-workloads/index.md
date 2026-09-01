@@ -1,6 +1,6 @@
 ---
 title: "GPU Kubernetes Infrastructure for AI Workloads with Pulumi"
-date: 2026-08-01
+date: 2026-09-01
 draft: false
 meta_desc: "How to provision, schedule, and govern GPU capacity on Kubernetes with Pulumi: node pools, Kueue quotas, time-slicing, and cost guardrails."
 authors:
