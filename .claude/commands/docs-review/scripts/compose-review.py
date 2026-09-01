@@ -229,6 +229,19 @@ def load_candidate_claims(path: str | None) -> list[dict] | None:
     return [c for c in claims if isinstance(c, dict)]
 
 
+def load_candidate_stances(path: str | None) -> list[dict] | None:
+    """The `stances` list from `.candidate-claims.json` (merge-claims schema
+    v2): positioning/comparison records the verifier never sees. None when
+    the artifact is absent or pre-dates the split."""
+    data = _load_json(path)
+    if not isinstance(data, dict):
+        return None
+    stances = data.get("stances")
+    if not isinstance(stances, list):
+        return None
+    return [c for c in stances if isinstance(c, dict)]
+
+
 def load_vale_findings(path: str | None) -> list[dict]:
     data = _load_json(path)
     if not isinstance(data, list):
@@ -792,6 +805,21 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
 # "findings" oversold it. validate-pinned.py still recognizes the old spelling
 # so an in-flight review that merges a pre-rename body keeps validating.
 STYLE_HEADING = "#### Style suggestions"
+# Editorial stances the diff introduces — "the fastest path", "the recommended
+# approach", "unlike Terraform". Listed under ⚠️ with NO verdict: a page's own
+# framing has no external ground truth (the verifier lands these `not-a-claim`
+# every time), but a human should see that an agent asserted a superlative.
+# PR #21291 shipped "`pulumi convert` is the fastest path … and it's where to
+# start" and nothing in the review surfaced the word. Uncounted in the ⚠️
+# cell (like style suggestions) and never a trail record — the bullets start
+# with `- L<n>` rather than `- **[L<n>]**` so extract_bucket_bullets skips
+# them, and `editorial-stances-coverage` in validate-pinned.py checks the list
+# against the extractor's records both ways.
+STANCES_HEADING = "#### Editorial stances introduced by this PR"
+STANCES_NOTE = ("*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own "
+                "framing isn't fact-checkable — but confirm each is a stance the docs should take, "
+                "and that no agent-written rewrite introduced it unasked.*")
+STANCES_EMPTY = "_None — the extractor found no positioning or comparison language in this PR's added lines._"
 
 # Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
 # (parallel to the pattern-based-linting caption under STYLE_HEADING) —
@@ -974,17 +1002,42 @@ def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "") -> str:
+def render_stances(stances: list[dict] | None) -> str:
+    """The no-verdict stance list. None (artifact absent / pre-v2) renders
+    nothing at all; an empty list renders the explicit-empty form so the
+    validator can tell "checked, none" from "didn't check"."""
+    if stances is None:
+        return ""
+    out = [STANCES_HEADING, "", STANCES_NOTE, ""]
+    if not stances:
+        out.append(STANCES_EMPTY)
+        return "\n".join(out)
+    for c in sorted(stances, key=lambda c: (c.get("file", ""), first_line_ref(c.get("line_range") or ""))):
+        ref = first_line_ref(c.get("line_range") or "")
+        text = quote(redact(trunc(c.get("text") or "", TEXT_TRUNC)))
+        fb = "+".join(c.get("found_by") or []) or "?"
+        file_part = f" `{c.get('file')}` —" if c.get("file") else ""
+        out.append(f"- {ref}{file_part} *{text}* — {c.get('type', 'positioning')} (found by {fb})")
+    return "\n".join(out)
+
+
+def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "",
+                         stances: list[dict] | None = None) -> str:
     has_style = bool(vale_findings)
-    if not stubs and not has_style:
+    stance_block = render_stances(stances)
+    if not stubs and not has_style and not stance_block:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
     lines = ["### ⚠️ Low-confidence", "", _LOWCONF_NOTE, ""]
     for i, s in enumerate(stubs):
         if i > 0:
             lines.append("")
         lines.append(s["bullet"])
-    if has_style:
+    if stance_block:
         if stubs:
+            lines.append("")
+        lines.append(stance_block)
+    if has_style:
+        if stubs or stance_block:
             lines.append("")
         lines.append(_render_style_findings(vale_findings, files_url))
     return "\n".join(lines)
@@ -1290,6 +1343,7 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
 def compose(args: argparse.Namespace) -> str:
     verdicts, vc_errors, _vc_meta = load_verified_claims(args.verified_claims)
     candidate_claims = load_candidate_claims(args.candidate_claims)
+    candidate_stances = load_candidate_stances(args.candidate_claims)
     vale_findings = load_vale_findings(args.vale_findings)
     editorial_balance = load_editorial_balance(args.editorial_balance)
     cross_sibling = load_cross_sibling(args.cross_sibling)
@@ -1439,7 +1493,7 @@ def compose(args: argparse.Namespace) -> str:
     sections += [
         render_outstanding(outstanding_stubs, vale_blockers),
         "",
-        render_lowconfidence(lowconf_stubs, vale_nags, files_url),
+        render_lowconfidence(lowconf_stubs, vale_nags, files_url, candidate_stances),
         "",
         render_triaged(),
         "",

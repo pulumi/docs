@@ -34,7 +34,7 @@ Usage:
 
 Output schema:
     {
-      "schema_version": 1,
+      "schema_version": 2,
       "claims": [
         {"file": "...", "line_range": "L42" | "L42-47" | "L12, L88",
          "text": "...", "type": "...", "source_hint": "...",  # source_hint optional
@@ -45,11 +45,20 @@ Output schema:
          "line_range_unverified": true},                        # present only when flagged
         ...
       ],
+      "stances": [ ...same record shape, type "positioning" | "comparison"... ],
       "errors": [ ... ],
-      "meta": {"regex_claims": N, "llm_claims": N, "merged_claims": N,
+      "meta": {"regex_claims": N, "llm_claims": N, "merged_claims": N, "stances": N,
                "llm_input_tokens": T, "llm_output_tokens": T,
                "llm_cache_read_input_tokens": T, "llm_cache_creation_input_tokens": T}
     }
+
+Schema v2 (2026-09-01): `positioning` / `comparison` records — editorial
+stances — are split out of `claims` into `stances`. `claims` is what
+`verify-claims.py` verifies and what `candidate-claims-coverage` holds the
+review to; `stances` is what the pre-merge review lists, without a verdict,
+under "Editorial stances introduced by this PR" (`editorial-stances-coverage`
+holds the review to that list). A v1 reader that only looks at `claims`
+keeps working; it just never sees a stance.
 """
 
 from __future__ import annotations
@@ -69,9 +78,29 @@ try:
 except ImportError:
     _entity_key = None
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 TOKEN_OVERLAP_THRESHOLD = 0.34
 RANGE_WINDOW = 1  # treat ranges within this many lines as overlapping
+
+# Editorial stances — "the fastest path", "the recommended approach", "unlike
+# Terraform" — are extracted like any claim but are NOT sent to the verifier
+# and never become fixable work. The verifier's hard rules land them
+# `not-a-claim` every time (a page's own framing has no external ground
+# truth), so a verdict on one is noise, and the fix/glow-up lanes banked
+# that noise as findings (PR #20004 -> #21291). Schema v2 writes them to a
+# separate `stances` list; the pre-merge review renders them as a no-verdict
+# list so a human sees that an agent asserted "fastest"/"recommended"/
+# "the only", and `validate-pinned.py` checks the list matches this file.
+# Regex-layer types that must never be absorbed into a cluster whose
+# representative is typed differently. The regex text is the WHOLE added line,
+# so a long line with two sentences overlaps almost totally with an LLM
+# restatement of either sentence; on PR #21291 (run 33519246857) the regex
+# `positioning` record for "`pulumi convert` is the fastest path …" clustered
+# (overlap 0.93) with an LLM `capability` claim about the OTHER sentence on
+# the line, the LLM text won as representative, and "fastest" never reached
+# the verifier. An editorial stance is a different claim from a capability
+# claim about the same line, so it is emitted on its own instead.
+STANCE_TYPES = {"positioning", "comparison"}
 
 _STOPWORDS = {
     "the", "a", "an", "of", "to", "in", "on", "is", "are", "be", "and", "or",
@@ -189,18 +218,6 @@ def anchor_llm_claim(claim: dict, repo_root: Path) -> None:
 
 def _is_llm(found_by: list[str]) -> bool:
     return any(fb.startswith("llm-") for fb in (found_by or []))
-
-
-# Regex-layer types that must never be absorbed into a cluster whose
-# representative is typed differently. The regex text is the WHOLE added line,
-# so a long line with two sentences overlaps almost totally with an LLM
-# restatement of either sentence; on PR #21291 (run 33519246857) the regex
-# `positioning` record for "`pulumi convert` is the fastest path …" clustered
-# (overlap 0.93) with an LLM `capability` claim about the OTHER sentence on
-# the line, the LLM text won as representative, and "fastest" never reached
-# the verifier. An editorial stance is a different claim from a capability
-# claim about the same line, so it is emitted on its own instead.
-STANCE_TYPES = {"positioning", "comparison"}
 
 
 def _representative(group: list[dict]) -> dict:
@@ -403,6 +420,10 @@ def main() -> int:
             llm_count += 1
 
     merged = merge_claims(all_records)
+    # Schema v2: editorial stances leave the verifier's input and get their
+    # own list (see STANCE_TYPES above).
+    stances = [c for c in merged if c.get("type") in STANCE_TYPES]
+    merged = [c for c in merged if c.get("type") not in STANCE_TYPES]
 
     if _entity_key is not None:
         for c in merged:
@@ -410,17 +431,19 @@ def main() -> int:
     else:
         errors.append("entity_key module unavailable; claims are unkeyed")
 
-    meta = {"regex_claims": regex_count, "llm_claims": llm_count, "merged_claims": len(merged), **token_meta}
+    meta = {"regex_claims": regex_count, "llm_claims": llm_count, "merged_claims": len(merged),
+            "stances": len(stances), **token_meta}
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps({
         "schema_version": SCHEMA_VERSION,
         "claims": merged,
+        "stances": stances,
         "errors": errors,
         "meta": meta,
     }, indent=2) + "\n")
     print(
         f"merge-claims: {regex_count} regex + {llm_count} llm → {len(merged)} merged claim(s) "
-        f"({len(errors)} error note(s)) → {out_path}",
+        f"+ {len(stances)} editorial stance(s) ({len(errors)} error note(s)) → {out_path}",
         file=sys.stderr,
     )
     return 0
@@ -445,6 +468,7 @@ def safe_main() -> int:
             out_path.write_text(json.dumps({
                 "schema_version": SCHEMA_VERSION,
                 "claims": [],
+                "stances": [],
                 "errors": [f"merge-claims uncaught exception: {type(e).__name__}: {e}"],
                 "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0,
                          "llm_input_tokens": 0, "llm_output_tokens": 0,

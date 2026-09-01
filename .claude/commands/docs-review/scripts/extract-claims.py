@@ -327,7 +327,10 @@ POSITIONING_RES = [
 ]
 
 COMPARISON_RES = [
-    re.compile(r"\bunlike\s+[A-Z][\w.-]+", ),
+    # Sentence-initial "Unlike Terraform, …" is the common form; the proper
+    # noun after it still has to be capitalized, so only the keyword is
+    # case-insensitive.
+    re.compile(r"\b[Uu]nlike\s+[A-Z][\w.-]+"),
     re.compile(r"\b(?:faster|slower|cheaper|simpler|easier|better|worse|more (?:performant|reliable|scalable)|less (?:performant|reliable))\s+than\b", re.IGNORECASE),
     re.compile(r"\b(?:outperforms?|beats?|surpasses?|compared (?:to|with))\b", re.IGNORECASE),
     re.compile(r"\bup to\s+\d+(?:\.\d+)?\s?(?:x|×|times|%)\b", re.IGNORECASE),

@@ -133,7 +133,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 20
+SCHEMA_VERSION = 21
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -345,6 +345,11 @@ class Context:
     # Used by `candidate-claims-coverage` and by the 0-claim relaxation in
     # `trail-bucket-consistency`.
     candidate_claims: list[dict] | None = None
+    # Schema v21: the `stances` list from `.candidate-claims.json` (merge-claims
+    # schema v2) — positioning/comparison records the verifier never sees.
+    # None when the artifact is absent or pre-dates the split; otherwise the
+    # parsed list (possibly empty). Used by `editorial-stances-coverage`.
+    candidate_stances: list[dict] | None = None
     # Schema v8: the verification artifact `.verified-claims.json` written by
     # the `verify-claims.py` pre-step (`{verdicts: [...], errors: [...],
     # meta: {...}}`). None means the file wasn't present (local mode or the
@@ -1605,6 +1610,102 @@ def _ranges_overlap(ra: list[tuple[int, int]], rb: list[tuple[int, int]], window
     return False
 
 
+STANCES_HEADING = "#### Editorial stances introduced by this PR"
+_STANCE_BULLET_RE = re.compile(r"^-\s+(L\d+(?:-L?\d+)?)\b")
+_STANCE_VERDICT_RE = re.compile(
+    r"(?:✅|🤝|➖|🤷|❌|⚔️|🚩|🌀|\bverdict:|→\s*(?:verified|matches|not-a-claim|unverifiable|"
+    r"contradicted|mismatch|flagged|framing-drift)\b)")
+
+
+def stance_block_lines(body: str) -> list[str] | None:
+    """The lines under `#### Editorial stances introduced by this PR` inside
+    ⚠️ Low-confidence, or None when the H4 is absent."""
+    span = find_section(body, "⚠️ Low-confidence")
+    if span is None:
+        return None
+    lines = body.splitlines()[span[0]:span[1]]
+    try:
+        start = next(i for i, ln in enumerate(lines) if ln.strip() == STANCES_HEADING)
+    except StopIteration:
+        return None
+    out = []
+    for ln in lines[start + 1:]:
+        if ln.startswith("#### ") or ln.startswith("##### "):
+            break
+        out.append(ln)
+    return out
+
+
+def check_editorial_stances_coverage(ctx: Context) -> list[Violation]:
+    """Schema v21: the "Editorial stances introduced by this PR" list under ⚠️
+    matches the extractor's positioning/comparison records for the diff, both
+    ways — every record has a `- L<n> …` bullet whose line ref overlaps it,
+    every bullet answers to a record, and no bullet carries a verdict. These
+    rows are deliberately verdict-free (a page's own framing has no external
+    ground truth), so this is the one place an agent-asserted "fastest" /
+    "the only" / "recommended" is guaranteed to reach a human. Mirrors
+    `candidate-claims-coverage`: non-surgical, the gap is surfaced loudly.
+    """
+    stances = ctx.candidate_stances
+    if stances is None:
+        return []  # artifact absent or pre-v2 — nothing to hold the review to
+    lines = stance_block_lines(ctx.body)
+    violations: list[Violation] = []
+    if lines is None:
+        if not stances:
+            return []  # nothing to list and nothing listed: fine on a pre-v2 body
+        violations.append(Violation(
+            rule_id="editorial-stances-coverage",
+            line_ref="⚠️ Low-confidence",
+            expected=f"the `{STANCES_HEADING}` block under ⚠️ Low-confidence",
+            actual=f"block absent; `.candidate-claims.json` carries {len(stances)} stance record(s)",
+            hint=(f"Render `{STANCES_HEADING}` under ⚠️ Low-confidence with one `- L<n> `<file>` — "
+                  "*\"<text>\"* — <positioning|comparison>` bullet per record in the artifact's "
+                  "`stances` list — no verdict emoji or word on these rows."),
+        ))
+        return violations
+    bullets = [(m.group(1), ln) for ln in lines for m in [_STANCE_BULLET_RE.match(ln.strip())] if m]
+    bullet_ranges = [(_parse_line_token(ref), ln) for ref, ln in bullets]
+    for pr_, ln in bullet_ranges:
+        if _STANCE_VERDICT_RE.search(ln):
+            violations.append(Violation(
+                rule_id="editorial-stances-coverage",
+                line_ref=ln.strip()[:40],
+                expected="a stance bullet with no verdict",
+                actual=f"stance bullet carries a verdict marker: {ln.strip()[:120]!r}",
+                hint="Stance rows are verdict-free by design; drop the emoji/verdict word. A stance that IS a checkable fact belongs in the trail as a claim instead.",
+            ))
+    for c in stances:
+        lr = c.get("line_range", "")
+        claim_ranges = _parse_line_ranges(lr)
+        if not claim_ranges:
+            continue
+        if any(pr_ and _ranges_overlap(claim_ranges, [pr_]) for pr_, _ in bullet_ranges):
+            continue
+        text = (c.get("text", "") or "").strip()
+        violations.append(Violation(
+            rule_id="editorial-stances-coverage",
+            line_ref=lr or "<stance>",
+            expected=f"a `- L…` bullet under `{STANCES_HEADING}` overlapping {lr}",
+            actual=f"no stance bullet covers [{c.get('type', 'positioning')}]: \"{text[:120]}\"",
+            hint=(f"Add `- {lr} `{c.get('file', '')}` — *\"…\"* — {c.get('type', 'positioning')}` under "
+                  f"`{STANCES_HEADING}`; you may not silently drop one."),
+        ))
+    for pr_, ln in bullet_ranges:
+        if pr_ and any(_ranges_overlap(_parse_line_ranges(c.get("line_range", "")), [pr_]) for c in stances):
+            continue
+        violations.append(Violation(
+            rule_id="editorial-stances-coverage",
+            line_ref=ln.strip()[:40],
+            expected="a stance bullet backed by an extractor record",
+            actual=f"stance bullet has no record in `.candidate-claims.json` `stances`: {ln.strip()[:120]!r}",
+            hint="The list mirrors the extractor; a stance you found yourself is a regular ⚠️ finding (with a trail record), not a stance row.",
+        ))
+    if not stances and bullets:
+        pass  # already reported above as unbacked bullets
+    return violations
+
+
 def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
     """Schema v7: every entry in `.candidate-claims.json` has a 🔍 Verification
     trail record whose line reference overlaps the claim's line range (± a
@@ -2575,6 +2676,12 @@ RULES = [
         "check": check_candidate_claims_coverage,
     },
     {
+        "id": "editorial-stances-coverage",
+        "desc": "Schema v21: the `#### Editorial stances introduced by this PR` list under ⚠️ matches `.candidate-claims.json`'s `stances` (positioning/comparison records the verifier never sees) both ways, and its rows carry no verdict.",
+        "hint": "One `- L<n> `<file>` — *\"<text>\"* — <positioning|comparison>` bullet per stance record, no verdict emoji or word; drop any bullet the artifact doesn't back.",
+        "check": check_editorial_stances_coverage,
+    },
+    {
         "id": "editorial-balance-counts",
         "desc": "Editorial balance section count + mean/median/std match values computed from the PR diff.",
         "hint": "Recompute the H2-section stats from the blog markdown; update the rendered values.",
@@ -2742,6 +2849,26 @@ def load_fetched_urls(explicit_path: str | None) -> list[dict] | None:
     if not isinstance(data, list):
         return None
     return data
+
+
+def load_candidate_stances(explicit_path: str | None) -> list[dict] | None:
+    """The `stances` list from `.candidate-claims.json` (merge-claims schema v2).
+
+    None when the file is absent or carries no `stances` key (pre-v2), so the
+    `editorial-stances-coverage` rule skips; `[]` when the pre-step ran and
+    found none, so the rule expects the explicit-empty form.
+    """
+    path = Path(explicit_path) if explicit_path else Path.cwd() / ".candidate-claims.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    stances = data.get("stances") if isinstance(data, dict) else None
+    if not isinstance(stances, list):
+        return None
+    return [c for c in stances if isinstance(c, dict)]
 
 
 def load_candidate_claims(explicit_path: str | None) -> list[dict] | None:
@@ -2914,6 +3041,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     fetched_urls = load_fetched_urls(args.fetched_urls)
     editorial_balance = load_editorial_balance(args.editorial_balance)
     candidate_claims = load_candidate_claims(args.candidate_claims)
+    candidate_stances = load_candidate_stances(args.candidate_claims)
     verified_claims = load_verified_claims(args.verified_claims)
     vale_findings = load_vale_findings(args.vale_findings)
 
@@ -2930,6 +3058,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         fetched_urls=fetched_urls,
         editorial_balance=editorial_balance,
         candidate_claims=candidate_claims,
+        candidate_stances=candidate_stances,
         verified_claims=verified_claims,
         vale_findings=vale_findings,
     )
