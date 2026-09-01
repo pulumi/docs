@@ -61,7 +61,7 @@ After installing the provider using your package manager, you reference the prov
 
 ### Installing a parameterized provider via `pulumi package add`
 
-Use the [Any Terraform Provider](/registry/packages/terraform-provider) when no pre-built Pulumi SDK exists for a given cloud provider, SaaS service, or on-prem device, but a provider for it does exist in [the OpenTofu registry](https://search.opentofu.org).
+The [Any Terraform Provider](/registry/packages/terraform-provider) is a parameterized provider: it generates a local provider SDK in the language of your Pulumi program. It's most commonly used when no pre-built Pulumi SDK exists for a given cloud provider, SaaS service, or on-prem device but a provider for it does exist in [the OpenTofu registry](https://search.opentofu.org) — though it's also useful for pinning a provider version that isn't published in the Pulumi Registry, or for evaluating a provider before committing to it.
 
 For example, to generate a local SDK for the [`hashicorp/random` provider](https://search.opentofu.org/provider/hashicorp/random/latest):
 
