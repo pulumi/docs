@@ -95,3 +95,57 @@ if __name__ == "__main__":
             fn()
             print(f"  ok: {name}")
     print("test_apply_update: all passed")
+
+
+def _open_author_ids(a_out: str) -> set[str]:
+    return {r["parsed"]["id"] for r in au._collect_rows(a_out, "").values()}
+
+
+def test_last_section_rerender_keeps_evidence_line_and_hint():
+    # Regression: the first live #update-review (fork PR 242, 2026-09-01) lost
+    # the 📎 line — the ❓ section's detail block swallowed the browser hint and
+    # the section span ran through the 📎 line behind it.
+    up = _update([{"id": "F3", "action": "retext", "text": "*\"x\"* — sharper, still open"}])
+    a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert a_out.count("📎 **Full evidence:**") == 1
+    assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
+    _spans, texts = au.be.collect_detail_blocks(a_out)
+    assert set(texts) == {"F1", "F2", "F3"}
+    assert not any("Editing in the browser" in t for t in texts.values()), "hint never inside a block"
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+
+
+def test_hold_moves_row_to_brief_and_records_refuted():
+    up = _update([{"id": "F3", "action": "hold", "reason": "no published source; reviewer's call"}],
+                 case="dispute")
+    a_out, b_out, state, report = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "F3" not in _open_author_ids(a_out)
+    assert "**F3**" in b_out and "model held.** no published source" in b_out
+    assert state["findings"]["F3"]["disposition"] == "refuted"
+    assert state["findings"]["F3"]["actor"] == "cam"
+    assert report["blocking"] == 2
+    assert "**F3**" not in b_out.split("<!-- AUTHOR_STATE_END -->")[0], "held row left the Waiting table"
+    assert au.SECTION_EMPTY["author-answer"] in a_out
+
+
+def test_retext_detail_rebuilds_block_keeping_verbatim_line():
+    up = _update([{"id": "F1", "action": "retext", "text": "*\"q\"* — narrowed",
+                   "detail": {"why": "new why", "fix": "Attribute it inline.",
+                              "keep": "cite the study"}}])
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    _spans, texts = au.be.collect_detail_blocks(a_out)
+    block = texts["F1"]
+    assert block.startswith("**Line (verbatim):**")
+    assert "**Why:** new why" in block and "**Fix:** Attribute it inline." in block
+    assert "**If you'd rather keep it:** cite the study" in block
+    assert block.count("**Fix:**") == 1
+
+
+def test_retext_detail_shape_is_validated():
+    bad = _update([{"id": "F1", "action": "retext", "text": "t", "detail": {"why": "w"}}])
+    try:
+        au.apply(AUTHOR, BRIEF, bad, head_sha=SHA, actor="cam", auto=False)
+    except au.UpdateError as e:
+        assert "detail.fix" in str(e)
+    else:
+        raise AssertionError("missing detail.fix accepted")

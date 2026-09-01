@@ -64,6 +64,21 @@ BRIEF_SECTIONS = {
 # Rank for the never-demote check.
 _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "preexisting": 0}
 
+# Lines that end a finding section or a `#### F<n> · Do this` block. Shared by
+# every walker here and in apply-update.py so nothing composer-owned that sits
+# between the last table and the REVIEW_STATE block (the browser hint, the 📎
+# evidence line, the <sub> stamp, the marker comments) can be swallowed into a
+# section span and dropped on re-render — which is exactly what took the 📎
+# line off the author card on the first live #update-review (2026-09-01).
+_SECTION_TERMINATORS = (
+    "### ", "#### ", "<!-- REVIEW_STATE", "<!-- AUTHOR_STATE", "<!-- CLAUDE_REVIEW",
+    "<sub>", "📎 ",
+)
+
+
+def is_section_terminator(line: str) -> bool:
+    return line.startswith(_SECTION_TERMINATORS) or line.startswith(cr.V3_BROWSER_HINT_PREFIX)
+
 # Anchored at the start of the parsed body: the contract is "REWRITE the
 # bullet body as `**Spurious:** …`", and the composer's own TODO instructions
 # quote these labels mid-string — a floating search would file every unedited
@@ -114,9 +129,7 @@ def collect_detail_blocks(body: str) -> tuple[dict[str, tuple[int, int]], dict[s
             cur = m.group("id")
             start = i
             continue
-        if cur is not None and (line.startswith("### ") or line.startswith("#### ")
-                                or line.startswith("<!-- REVIEW_STATE")
-                                or line.startswith("<sub>") or line.startswith("📎 ")):
+        if cur is not None and is_section_terminator(line):
             close(i)
     close(len(lines))
     return spans, texts
@@ -138,7 +151,7 @@ def _sections(body: str, headings: dict[str, str]) -> list[tuple[str, int, int]]
             if current:
                 spans.append((current[0], current[1], i))
             current = (matched, i + 1)
-        elif line.startswith("### ") or line.startswith("#### ") or line.startswith("<!-- REVIEW_STATE"):
+        elif is_section_terminator(line):
             if current:
                 spans.append((current[0], current[1], i))
                 current = None

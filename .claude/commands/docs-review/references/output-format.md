@@ -489,7 +489,7 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 **Approval needed from:** @org/team …     ← composed when routing is on; never hand-written
 <!-- AUTHOR_STATE_BEGIN --> … <!-- AUTHOR_STATE_END -->  ← "Waiting on the author" table; composer-OWNED, machine-refreshed
 > [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
-### ⚠️ Check these before approving
+### ⚠️ Check these before approving          ← reviewer-check rows; the update lane also parks 🛡️ held disputes here
 | ID | Where | Finding |
 |---|---|---|
 | **F4** | `file.md` L95 | <what might be wrong and why> |

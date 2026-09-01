@@ -143,6 +143,16 @@ def validate_update(update: dict, known_ids: set[str]) -> list[str]:
             problems.append(f"{where}: {action} requires a reason")
         if action == "retext" and not str(entry.get("text", "")).strip():
             problems.append(f"{where}: retext requires text")
+        if action == "retext" and "detail" in entry:
+            detail = entry.get("detail")
+            if not isinstance(detail, dict):
+                problems.append(f"{where}: retext.detail must be an object {{why, fix[, keep]}}")
+            else:
+                for key in ("why", "fix"):
+                    if not str(detail.get(key, "")).strip():
+                        problems.append(f"{where}: retext.detail.{key} is required")
+                if "keep" in detail and not str(detail.get("keep", "")).strip():
+                    problems.append(f"{where}: retext.detail.keep must be non-empty when present")
         if action == "resolve" and not str(entry.get("annotation", "")).strip():
             problems.append(f"{where}: resolve requires an annotation")
     return problems
@@ -170,7 +180,7 @@ def _collect_resolved(author_body: str) -> list[str]:
         if line.startswith(RESOLVED_HEADING):
             in_section = True
             continue
-        if in_section and (line.startswith("### ") or line.startswith("<!-- REVIEW_STATE") or line.startswith("📎 ")):
+        if in_section and be.is_section_terminator(line):
             break
         if in_section and line.startswith("|") and not cr.is_table_furniture(line):
             out.append(line)
@@ -201,6 +211,22 @@ def _strip_detail_blocks(body: str) -> tuple[str, dict[str, list[str]]]:
             drop.add(start - 1)
     kept = [ln for i, ln in enumerate(lines) if i not in drop]
     return "\n".join(kept) + ("\n" if body.endswith("\n") else ""), blocks
+
+
+def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
+    """A retext with `detail` refreshes the finding's Do-this block: the
+    verbatim line is kept (the flagged text didn't change), Why/Fix/keep are
+    replaced — same shape as the composer scaffold."""
+    verbatim = next((ln for ln in old if ln.startswith("**Line (verbatim):**")), None)
+    out = [f"#### {fid} · Do this", ""]
+    if verbatim:
+        out.append(verbatim)
+    out.append(f"**Why:** {str(detail['why']).strip()}")
+    out.append(f"**Fix:** {str(detail['fix']).strip()}")
+    keep = str(detail.get("keep", "")).strip()
+    if keep:
+        out += ["", f"**If you'd rather keep it:** {keep}"]
+    return out
 
 
 def apply(
@@ -303,9 +329,22 @@ def apply(
                 link_base=link_base))
             del rows[fid]
         elif action == "hold":
-            shield = f" 🛡️ **Disputed by {actor} on {today}, model held.**"
+            # The author answered and the model still disagrees: that is a
+            # judgment call for the human reviewer, not a lock on the author.
+            # The row moves to the brief's ⚠️ list carrying the canonical
+            # shield (scrape-review-outcomes keys on it) plus the hold reason,
+            # and the author's answer is recorded as `refuted` so the merge
+            # gate stops counting it — the promise footer-author.md makes
+            # ("it stops blocking merge in both cases").
+            reason = entry["reason"].strip()
+            shield = f"🛡️ **Disputed by {actor} on {today}, model held.** {reason}"
             if "model held" not in row["parsed"]["body"]:
-                row["parsed"]["body"] = row["parsed"]["body"].rstrip() + shield
+                row["parsed"]["body"] = row["parsed"]["body"].rstrip() + " " + shield
+            row["bucket"] = "reviewer-check"
+            row["doc"] = "brief"
+            disposition_state = review_state.set_disposition(
+                disposition_state, fid, "refuted",
+                actor=actor, note=reason, sha=head_sha[:12], now=now)
         elif action == "promote":
             target = entry["to"]
             if _BUCKET_RANK[target] <= _BUCKET_RANK[row["bucket"]]:
@@ -315,6 +354,8 @@ def apply(
             row["doc"] = "author"
         elif action == "retext":
             row["parsed"]["body"] = entry["text"].strip()
+            if isinstance(entry.get("detail"), dict) and fid in detail_blocks:
+                detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks[fid], entry["detail"])
 
     # Merge action-implied dispositions with the LIVE card's state — a
     # /resolve that landed while the model worked survives (newest wins).
@@ -410,8 +451,7 @@ def _resolved_span(lines: list[str]) -> list[tuple[str, int, int]]:
         if line.startswith(RESOLVED_HEADING):
             end = len(lines)
             for j in range(i + 1, len(lines)):
-                if (lines[j].startswith("### ") or lines[j].startswith("<!-- REVIEW_STATE")
-                        or lines[j].startswith("📎 ")):
+                if be.is_section_terminator(lines[j]):
                     end = j
                     break
             return [("resolved", i + 1, end)]
@@ -433,6 +473,7 @@ def assemble_evidence(
 ) -> dict:
     rows = _collect_rows(author_out, brief_out)
     prior_findings = {f["id"]: f for f in (prior or {}).get("findings", [])}
+    _spans, detail_texts = be.collect_detail_blocks(author_out)
     findings: list[dict] = []
     for fid in sorted(rows, key=lambda f: int(f[1:])):
         row = rows[fid]
@@ -452,6 +493,9 @@ def assemble_evidence(
             record["lines"] = lines_val
         elif carried.get("lines"):
             record["lines"] = carried["lines"]
+        detail = detail_texts.get(fid) or carried.get("detail")
+        if detail:
+            record["detail"] = detail
         findings.append(record)
     # ✅ rows and prior preexisting carry through with their terminal status.
     resolved_ids = set()
@@ -585,12 +629,18 @@ def _self_test() -> int:
     assert "**F1**" in a_out and "fixed in b1b2b3" in a_out, "F1 resolved row rendered"
     assert a_out.index("fixed in b1b2b3") > a_out.index(RESOLVED_HEADING)
     assert state["findings"]["F1"]["disposition"] == "fixed"
-    assert "model held" in a_out and "Disputed by cam on " in a_out
-    assert "F3" not in state["findings"], "hold writes no disposition"
+    assert "model held" in b_out and "Disputed by cam on " in b_out, "held row moved to the brief ⚠️ list"
+    assert "docs say otherwise" in b_out, "hold reason rendered beside the shield"
+    assert "**F3**" not in a_out.split("<!-- REVIEW_STATE")[0], "held row left the author card"
+    assert "#### F3 · Do this" not in a_out, "held row's Do-this block dropped with it"
+    assert state["findings"]["F3"]["disposition"] == "refuted", "hold records the author's answer"
+    assert state["findings"]["F3"]["note"] == "evidence: docs say otherwise"
     assert a_out.index("**F4**") < a_out.index("### ❓"), "F4 promoted into 🚨"
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
-    assert "## Author action guide v2 — 3 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
+    assert "## Author action guide v2 — 2 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
+    assert a_out.count("📎 **Full evidence:**") == 1, "evidence line survives the re-render"
+    assert a_out.count(cr.V3_BROWSER_HINT_PREFIX) == 1, "browser hint survives, exactly once"
     assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5

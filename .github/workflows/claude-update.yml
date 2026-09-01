@@ -596,19 +596,19 @@ jobs:
             The user invoked you with `#update-review` on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
 
             Inputs on disk:
-            - `.review-card-author.md` — the author card (finding rows `- [ ] **F<n>** …` in 🚨/❓, REVIEW_STATE block)
-            - `.review-card-brief.md` — the reviewer brief (👀 rows)
+            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block)
+            - `.review-card-brief.md` — the reviewer brief (⚠️ rows, "Waiting on the author" table)
             - `.claude-mention-body.txt` — the triggering mention from @${{ steps.check-access.outputs.author }}; read it FIRST
             - `.vale-findings.json` — current style findings (context only on this lane)
 
             Follow `.claude/commands/docs-review/references/update.md` §The v3 surface for the full contract. In short — inspect the mention and the PR's new diff (`gh pr diff ${{ steps.pr-context.outputs.pr_number }}`), address any embedded asks (file edits → `gh pr checkout`, edit, push), then adjudicate each open finding into actions:
             - `resolve` (id, annotation like "fixed in <short-sha>") — the push genuinely fixed it; verify against the diff, never take the author's word alone.
-            - `concede` (id, reason) — the author's dispute is right and the finding was wrong.
-            - `hold` (id, reason with evidence) — the dispute is wrong; the finding stands.
+            - `concede` (id, reason) — the author's answer settles it (or the finding was wrong); row → ✅ Resolved.
+            - `hold` (id, reason with evidence) — the author answered and you still disagree; the row moves to the reviewer's ⚠️ list for a human to weigh and STOPS blocking the author.
             - `promote` (id, to: author-answer|outstanding, reason) — upward only.
             - `add` (bucket, file, lines, text) — a NEW problem in the pushed lines only.
-            - `retext` (id, text) — sharpen a finding's wording; id preserved.
-            Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). Write the file and stop. Dispute adjudication defaults: domain-knowledge dispute from a write-access author → concede; verifiable claim → verify before holding, and hold only with evidence.
+            - `retext` (id, text[, detail: {why, fix[, keep]}]) — sharpen a finding that stays open on its own merits; the cell stays ONE line (claim quote + verdict), any new action goes in `detail.fix`.
+            Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). Write the file and stop. Dispute adjudication defaults: domain-knowledge dispute from a write-access author → concede; verifiable claim → verify before holding, and hold only with evidence. An item the mention ANSWERS (a ❓'s source named, a 🚨 disputed) must end as `concede` or `hold` — never `retext` with the reply folded in; the author card promised the author their answer unblocks them.
           claude_args: |
             --model claude-opus-5 --effort medium
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
