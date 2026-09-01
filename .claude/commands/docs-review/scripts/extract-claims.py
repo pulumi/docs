@@ -21,8 +21,13 @@ triage is a contractual responsibility"). Code-fence URLs, snake_case
 identifiers in code blocks, etc. will surface; the reviewer demotes them.
 
 Usage:
-    extract-claims.py --pr <PR_NUMBER> --out <out.json>
+    extract-claims.py --pr <PR_NUMBER> --out <out.json> [--repo-root <checkout>]
     extract-claims.py --patch-file <file> --out <out.json>   # for testing
+
+`--repo-root` (default: the working directory) is the checkout the diff was
+taken against. It is read only to seed each hunk's fence state — see
+`iter_added_lines` — so a hunk that opens inside a code block is not
+mis-tagged; without it the walker falls back to the diff-only guess.
 
 Scope:
     - Walks the FULL diff (all changed files, including static/programs/
@@ -81,7 +86,7 @@ RENAME_TO_RE = re.compile(r"^rename to (.+)$")
 
 def fetch_pr_patch(pr: str) -> str:
     proc = subprocess.run(
-        ["gh", "pr", "diff", pr, "--patch"],
+        ["gh", "pr", "diff", pr],
         check=True, capture_output=True, text=True,
     )
     return proc.stdout
@@ -117,26 +122,62 @@ def parse_renames(patch: str) -> list[dict]:
     return out
 
 
-def iter_added_lines(patch: str):
+def _new_file_lines(repo_root: Path | None, file_path: str) -> list[str] | None:
+    """The checked-out (post-change) file, or None when it isn't available."""
+    if repo_root is None:
+        return None
+    try:
+        return (repo_root / file_path).read_text(encoding="utf-8", errors="replace").splitlines()
+    except (OSError, ValueError):
+        return None
+
+
+def fence_open_at(file_lines: list[str] | None, new_start: int) -> bool | None:
+    """Whether line `new_start` of the new file sits inside a fenced code block.
+
+    Counts fence markers in the lines ABOVE the hunk (lines 1..new_start-1):
+    an odd count means a fence is still open where the hunk begins. None when
+    the file isn't available, so the caller can fall back to the diff-only
+    guess.
+    """
+    if file_lines is None:
+        return None
+    above = file_lines[: max(new_start - 1, 0)]
+    return sum(1 for ln in above if FENCE_RE.match(ln)) % 2 == 1
+
+
+def iter_added_lines(patch: str, repo_root: Path | None = None):
     """Yield (file_path, new_line_number, line_text, in_code_context) for every
     added line in the diff.
 
     `in_code_context` is True for non-markdown files and for lines inside a
     fenced code block in a markdown file. Fence state is tracked from context
     (` `) and added (`+`) lines only — removed lines describe the old file.
-    A hunk that starts mid-fence can't be detected from the diff alone
-    (the opener is above the hunk); that edge case is accepted (FP-tolerant).
+
+    A hunk can open INSIDE a fence (the opener is above the hunk, out of the
+    diff's view). The diff alone can't tell, so each hunk's starting state is
+    seeded from the checked-out file at `repo_root / <+++ b/ path>`: count the
+    fence markers above the hunk's first new line; odd means "inside a fence".
+    Only when the file isn't available (a `--patch-file` test without a
+    checkout) does this fall back to assuming not-in-fence at the hunk
+    boundary. That fallback used to be the only behaviour and it is NOT
+    merely FP-tolerant: on PR #21291 (run 33518039058) the `@@ -1217` hunk
+    opened inside a code block, the first fence it met was the block's
+    CLOSING marker, every prose line for the next 40 lines was tagged
+    in-code, and a new "fastest path" positioning claim was never extracted.
     """
     current_file: str | None = None
     is_markdown = False
     new_lineno = 0
     in_fence = False
+    file_lines: list[str] | None = None
     for raw in patch.splitlines():
         m = DIFF_FILE_RE.match(raw)
         if m:
             current_file = m.group(1)
             is_markdown = current_file.endswith(".md")
             in_fence = False
+            file_lines = _new_file_lines(repo_root, current_file) if is_markdown else None
             continue
         if current_file is None:
             continue
@@ -145,9 +186,10 @@ def iter_added_lines(patch: str):
         hm = HUNK_RE.match(raw)
         if hm:
             new_lineno = int(hm.group(1))
-            # A new hunk doesn't reset fence state reliably; assume not-in-fence
-            # at hunk boundaries (best effort).
-            in_fence = False
+            # Seed the fence state from the checked-out file; the diff-only
+            # guess (not-in-fence) is the fallback when there is no file.
+            seeded = fence_open_at(file_lines, new_lineno) if is_markdown else None
+            in_fence = bool(seeded) if seeded is not None else False
             continue
         if not raw:
             # Bare empty line in the patch body — treat as a context blank line.
@@ -336,11 +378,11 @@ def _source_hint(claim_type: str, match_text: str) -> str | None:
     return None
 
 
-def extract_claims_from_patch(patch: str) -> tuple[list[dict], dict]:
+def extract_claims_from_patch(patch: str, repo_root: Path | None = None) -> tuple[list[dict], dict]:
     claims: list[dict] = []
     seen: set[tuple] = set()  # (file, lineno, type, matched-token) — intra-file de-dup
     files_scanned: set[str] = set()
-    for file_path, lineno, body, in_code in iter_added_lines(patch):
+    for file_path, lineno, body, in_code in iter_added_lines(patch, repo_root):
         files_scanned.add(file_path)
         if SKIP_LINE_RE.match(body):
             continue
@@ -392,6 +434,9 @@ def main() -> int:
     p.add_argument("--pr", help="PR number (for `gh pr diff`)")
     p.add_argument("--patch-file", help="Read the unified diff from a file instead of `gh` (testing)")
     p.add_argument("--out", required=True, help="Output JSON path")
+    p.add_argument("--repo-root", default=str(Path.cwd()),
+                   help="Checkout the diff applies to; seeds each hunk's fence state "
+                        "from the post-change file (default: the working directory)")
     args = p.parse_args()
 
     out_path = Path(args.out)
@@ -416,7 +461,7 @@ def main() -> int:
         p.error("one of --pr or --patch-file is required")
         return 2  # unreachable
 
-    claims, stats = extract_claims_from_patch(patch)
+    claims, stats = extract_claims_from_patch(patch, Path(args.repo_root))
     renames = parse_renames(patch)
     payload = {
         "schema_version": SCHEMA_VERSION,

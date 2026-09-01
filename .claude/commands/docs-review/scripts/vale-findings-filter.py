@@ -194,7 +194,7 @@ def added_lines_per_file(patch: str) -> dict[str, set[int]]:
 def fetch_pr_patch(pr: str) -> str:
     """Fetch the unified diff for the PR via gh."""
     proc = subprocess.run(
-        ["gh", "pr", "diff", pr, "--patch"],
+        ["gh", "pr", "diff", pr],
         check=True,
         capture_output=True,
         text=True,
