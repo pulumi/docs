@@ -500,7 +500,7 @@ def extract_items_v3(author_body: str, brief_body: str) -> list[dict]:
                 yield parsed, line
 
     v3_sections = (
-        ("outstanding", "🚨 Must fix or refute", author_body, True),
+        ("outstanding", "🚨 Fix or disagree", author_body, True),
         ("author-answer", "❓ Questions for you", author_body, True),
     )
     for bucket, heading, body, blocking in v3_sections:

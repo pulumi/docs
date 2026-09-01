@@ -331,7 +331,12 @@ V3_AUTHOR_HEADER_RE = re.compile(
     r"^## Author action guide v\d+ — (?:(\d+) items? blocks? merge|nothing blocks merge)", re.MULTILINE
 )
 # H3 headings, in required order, per references/output-format.md §v3.
-V3_AUTHOR_SECTIONS = ["🚨 Must fix or refute", "❓ Questions for you", "✅ Resolved since last review"]
+V3_AUTHOR_SECTIONS = ["🚨 Fix or disagree", "❓ Questions for you", "✅ Resolved since last review"]
+# Sections that may be absent: the composer omits ✅ Resolved while it is
+# empty (persona pass 2026-09-01 — an empty "since last review" section on a
+# v1 card made readers hunt for a review that never existed); apply-update.py
+# inserts it on the first resolve.
+V3_OPTIONAL_SECTIONS = {"✅ Resolved since last review"}
 V3_BRIEF_SECTIONS = ["⚠️ Check these before approving", "✅ What you can rubber-stamp"]
 # The in-place rewrite labels build-evidence.py files off the cards — a bullet
 # whose body starts with one of these is dispositioned, not deleted.
@@ -445,7 +450,7 @@ class Context:
     # `verdicts` list (possibly empty). Used by `verified-claims-trail-faithful`,
     # `pass-2-fetch-faithfulness` (strengthened), and `pass-3-evidence-faithful`.
     verified_claims: list[dict] | None = None
-    # Schema v21: which surface this body speaks. "v2" = the single pinned
+    # Schema v22: which surface this body speaks. "v2" = the single pinned
     # monolith; "v3" = the author card (in `body`) + reviewer brief (in
     # `brief`). v3-only fields stay None on v2.
     surface: str = "v2"
@@ -830,10 +835,10 @@ def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
         if f.get("blocker")
     }
     # v2 renders the blocker in `🚨 Outstanding` as a `**[L…]**` bullet; v3
-    # renders it in the author card's `🚨 Must fix or refute` as a finding
+    # renders it in the author card's `🚨 Fix or disagree` as a finding
     # line (`- [ ] **Fn** **[L…]** …`). Same provenance requirement either way.
     if ctx.surface == "v3":
-        candidates = [row_line for _, row_line, _ in v3_finding_rows(ctx.body, "🚨 Must fix or refute")]
+        candidates = [row_line for _, row_line, _ in v3_finding_rows(ctx.body, "🚨 Fix or disagree")]
     else:
         candidates = extract_bucket_bullets(ctx.body, "🚨 Outstanding")
     violations: list[Violation] = []
@@ -2729,6 +2734,8 @@ def check_v3_section_order(ctx: Context) -> list[Violation]:
         for name in expected:
             idx = next((i for i, h in enumerate(h3s) if name in h), None)
             if idx is None:
+                if name in V3_OPTIONAL_SECTIONS:
+                    continue
                 v.append(Violation("v3-section-order", f"<{where}>",
                                    f"section `### {name}` present", "section missing",
                                    "Render every mandatory section in skeleton order (references/output-format.md §The v3 surface), using its explicit-empty form when there is no content."))
@@ -2788,7 +2795,7 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
     except ValueError:
         pass  # v3-review-state already fires
 
-    sections = [("author", ctx.body, s) for s in ("🚨 Must fix or refute", "❓ Questions for you")]
+    sections = [("author", ctx.body, s) for s in ("🚨 Fix or disagree", "❓ Questions for you")]
     sections.append(("brief", ctx.brief or "", "⚠️ Check these before approving"))
     for where, text, heading in sections:
         for lineno, line, parsed in v3_finding_rows(text, heading):
@@ -2828,6 +2835,95 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
     return v
 
 
+_V3_DETAIL_HEADING_RE = re.compile(r"^#### (F\d+|F\?) · Do this\s*$", re.MULTILINE)
+
+
+def _v3_detail_blocks(text: str) -> list[tuple[str, str]]:
+    """(id, block body) per `#### F<n> · Do this` block, fence-aware."""
+    blocks: list[tuple[str, str]] = []
+    cur = None
+    body: list[str] = []
+    fenced = False
+    for line in text.splitlines():
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            if cur is not None:
+                body.append(line)
+            continue
+        if fenced:
+            if cur is not None:
+                body.append(line)
+            continue
+        m = _V3_DETAIL_HEADING_RE.match(line)
+        if m:
+            if cur is not None:
+                blocks.append((cur, "\n".join(body)))
+            cur, body = m.group(1), []
+            continue
+        if cur is not None and (line.startswith("### ") or line.startswith("#### ")
+                                or line.startswith("<!-- REVIEW_STATE")
+                                or line.startswith("<sub>") or line.startswith("📎 ")):
+            blocks.append((cur, "\n".join(body)))
+            cur, body = None, []
+            continue
+        if cur is not None:
+            body.append(line)
+    if cur is not None:
+        blocks.append((cur, "\n".join(body)))
+    return blocks
+
+
+def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
+    """Author-card `#### F<n> · Do this` blocks pair 1:1 with open 🚨/❓ rows:
+    no orphan blocks, no `F?` blocks, exactly one `**Fix:**` line per block
+    (the one-required-action contract from the 2026-09-01 persona pass), and —
+    when the composer's evidence base is at hand — no blocking finding left
+    without its block. The brief carries no detail blocks."""
+    v: list[Violation] = []
+    open_ids = {p["id"] for _, _, p in
+                (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
+                 + v3_finding_rows(ctx.body, "❓ Questions for you"))
+                if p and p["id"] != "F?"}
+    seen: set[str] = set()
+    for bid, body in _v3_detail_blocks(ctx.body):
+        if bid == "F?":
+            v.append(Violation("v3-detail-blocks", "<author>",
+                               "detail blocks only for numbered ids",
+                               "`#### F? · Do this` block found",
+                               "A model-added F? row gets NO detail block — keep its Finding cell terse; ids are assigned by build-evidence.py."))
+            continue
+        if bid in seen:
+            v.append(Violation("v3-detail-blocks", f"<{bid}>",
+                               "one detail block per finding", "duplicate block",
+                               "Merge the two blocks into one."))
+        seen.add(bid)
+        if bid not in open_ids:
+            v.append(Violation("v3-detail-blocks", f"<{bid}>",
+                               "every detail block pairs with an open 🚨/❓ row",
+                               f"block for {bid} has no open row",
+                               "A block never outlives its finding — when a row resolves or is dispositioned, delete its block too."))
+        n_fix = sum(1 for line in body.splitlines() if line.startswith("**Fix:**"))
+        if n_fix != 1:
+            v.append(Violation("v3-detail-blocks", f"<{bid}>",
+                               "exactly one `**Fix:**` line per block (one required action)",
+                               f"{n_fix} found",
+                               "State ONE required action first; label an alternative \"**If you'd rather keep it:**\" instead of a second **Fix:**."))
+    if ctx.evidence_base is not None:
+        for f in ctx.evidence_base.get("findings", []):
+            if f.get("bucket") in ("outstanding", "author-answer") and \
+                    f.get("id") in open_ids and f.get("id") not in seen:
+                v.append(Violation("v3-detail-blocks", f"<{f['id']}>",
+                                   "every open blocking finding keeps its `#### F<n> · Do this` block",
+                                   "block missing",
+                                   "Fill the composed scaffold (Line (verbatim) / Why / Fix) — don't delete it."))
+    if ctx.brief and _v3_detail_blocks(ctx.brief):
+        v.append(Violation("v3-detail-blocks", "<brief>",
+                           "the reviewer brief carries no detail blocks",
+                           "`#### F<n> · Do this` block on the brief",
+                           "Detail blocks live under the author card's tables only; keep ⚠️ cells terse."))
+    return v
+
+
 def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     """The author header's `(N blocking)` is a sanity floor: it must equal the
     🚨+❓ row count, either counting `F?` additions or not (the model adds
@@ -2838,7 +2934,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
                           "header `## Author action guide vN — N item(s) block merge` or `## Author action guide vN — nothing blocks merge`",
                           (ctx.body_lines[3] if len(ctx.body_lines) > 3 else "<missing>")[:120],
                           "Keep the composed header shape; only build-evidence.py recomputes the count.")]
-    rows = (v3_finding_rows(ctx.body, "🚨 Must fix or refute")
+    rows = (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
             + v3_finding_rows(ctx.body, "❓ Questions for you"))
     total = len(rows)
     numbered = sum(1 for _, _, p in rows if p and p["id"] != "F?")
@@ -2863,7 +2959,7 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
         return []
     where_of: dict[str, str] = {}
     for text, heading, bucket in (
-        (ctx.body, "🚨 Must fix or refute", "outstanding"),
+        (ctx.body, "🚨 Fix or disagree", "outstanding"),
         (ctx.body, "❓ Questions for you", "author-answer"),
         (ctx.brief or "", "⚠️ Check these before approving", "reviewer-check"),
     ):
@@ -2871,7 +2967,14 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
             if parsed and parsed["id"] != "F?":
                 where_of[parsed["id"]] = bucket
     v: list[Violation] = []
-    both = ctx.body + "\n" + (ctx.brief or "")
+    # The brief's composer-owned "Waiting on the author" table mirrors every
+    # open blocking id (`**F<n>**` rows), so it must not count as a
+    # "reference" — otherwise a finding deleted from the author card still
+    # looks present and the vanished check goes blind.
+    brief_wo_waiting = re.sub(
+        r"<!-- AUTHOR_STATE_BEGIN -->.*?<!-- AUTHOR_STATE_END -->",
+        "", ctx.brief or "", flags=re.DOTALL)
+    both = ctx.body + "\n" + brief_wo_waiting
     for f in base.get("findings", []):
         fid, base_bucket = f.get("id"), f.get("bucket")
         if base_bucket not in V3_BUCKET_RANK:
@@ -3094,49 +3197,56 @@ RULES = [
     # v2 only; "brief_too" reruns a body-scoped shared rule against the brief.
     {
         "id": "v3-markers",
-        "desc": "Schema v21: author card carries its three markers (legacy alias, AUTHOR, HEAD) each on its own line and is the sole HEAD carrier; brief carries BRIEF marker and no HEAD; both carry the footer sentinel.",
+        "desc": "Schema v22: author card carries its three markers (legacy alias, AUTHOR, HEAD) each on its own line and is the sole HEAD carrier; brief carries BRIEF marker and no HEAD; both carry the footer sentinel.",
         "hint": "Keep every `<!-- … -->` marker line exactly as composed.",
         "check": check_v3_markers,
         "surfaces": ("v3",),
     },
     {
         "id": "v3-section-order",
-        "desc": "Schema v21: author sections (🚨 Must fix or refute → ❓ Questions for you → ✅ Resolved) and brief sections (⚠️ Check these → ✅ What you can rubber-stamp) present in skeleton order.",
+        "desc": "Schema v22: author sections (🚨 Fix or disagree → ❓ Questions for you → ✅ Resolved) and brief sections (⚠️ Check these → ✅ What you can rubber-stamp) present in skeleton order.",
         "hint": "Render every mandatory section in order, using its explicit-empty form when there is no content.",
         "check": check_v3_section_order,
         "surfaces": ("v3",),
     },
     {
         "id": "v3-review-state",
-        "desc": "Schema v21: the REVIEW_STATE block is present and parses — a corrupt block would silently un-answer every finding, so it hard-fails.",
+        "desc": "Schema v22: the REVIEW_STATE block is present and parses — a corrupt block would silently un-answer every finding, so it hard-fails.",
         "hint": "Restore the `<!-- REVIEW_STATE {…} -->` line exactly as composed; the model never edits it.",
         "check": check_v3_review_state,
         "surfaces": ("v3",),
     },
     {
+        "id": "v3-detail-blocks",
+        "desc": "Schema v22: author-card `#### F<n> · Do this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no F? blocks, exactly one **Fix:** per block; none on the brief.",
+        "hint": "One block per open blocking finding, one **Fix:** line each; delete a block when its row resolves; never add a block for an F? row.",
+        "check": check_v3_detail_blocks,
+        "surfaces": ("v3",),
+    },
+    {
         "id": "v3-evidence-link",
-        "desc": "Schema v21: both cards carry the evidence link (%%EVIDENCE_URL%% token pre-publish, https URL post-publish).",
+        "desc": "Schema v22: both cards carry the evidence link (%%EVIDENCE_URL%% token pre-publish, https URL post-publish).",
         "hint": "Keep the 📎 evidence line as composed; the publish step substitutes the URL.",
         "check": check_v3_evidence_link,
         "surfaces": ("v3",),
     },
     {
         "id": "v3-finding-grammar",
-        "desc": "Schema v21: every 🚨/❓/⚠️ row parses via the shared finding grammar; numbered ids unique across both cards and ≤ the REVIEW_STATE high-water mark; model additions use `F?` (numbered by build-evidence.py after validation).",
+        "desc": "Schema v22: every 🚨/❓/⚠️ row parses via the shared finding grammar; numbered ids unique across both cards and ≤ the REVIEW_STATE high-water mark; model additions use `F?` (numbered by build-evidence.py after validation).",
         "hint": "Edit finding text in place, keep the row shape; new findings are `- [ ] **F?** …`.",
         "check": check_v3_finding_grammar,
         "surfaces": ("v3",),
     },
     {
         "id": "v3-blocking-count",
-        "desc": "Schema v21: the author header's `(N blocking)` equals the 🚨+❓ row count (with or without `F?` additions — build-evidence.py recomputes the final number).",
+        "desc": "Schema v22: the author header's `(N blocking)` equals the 🚨+❓ row count (with or without `F?` additions — build-evidence.py recomputes the final number).",
         "hint": "Don't hand-edit the header count; disposition rows instead of deleting them.",
         "check": check_v3_blocking_count,
         "surfaces": ("v3",),
     },
     {
         "id": "bucket-split-faithful",
-        "desc": "Schema v21: promote-only against `.review-evidence-base.json` — a composed finding may move ⚠️→❓→🚨, never down, and may not vanish without an in-place disposition rewrite.",
+        "desc": "Schema v22: promote-only against `.review-evidence-base.json` — a composed finding may move ⚠️→❓→🚨, never down, and may not vanish without an in-place disposition rewrite.",
         "hint": "To argue a finding down, rewrite its body as `**Spurious:** <reason>` — never move it to a lower bucket or delete the row.",
         "check": check_v3_bucket_split_faithful,
         "surfaces": ("v3",),
@@ -3600,7 +3710,7 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
         except ValueError as e:
             print(f"::warning::count-buckets: REVIEW_STATE unreadable, counting all rows as blocking: {e}",
                   file=sys.stderr)
-        blocking_rows = (v3_finding_rows(body, "🚨 Must fix or refute")
+        blocking_rows = (v3_finding_rows(body, "🚨 Fix or disagree")
                          + v3_finding_rows(body, "❓ Questions for you"))
         outstanding = sum(
             1 for _, _, p in blocking_rows

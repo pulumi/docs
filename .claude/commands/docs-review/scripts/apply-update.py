@@ -91,7 +91,7 @@ SECTION_EMPTY = {
     "reviewer-check": "_Nothing needs your judgment beyond the rubber-stamp list below._",
 }
 AUTHOR_HEADINGS = {
-    "outstanding": "### 🚨 Must fix or refute",
+    "outstanding": "### 🚨 Fix or disagree",
     "author-answer": "### ❓ Questions for you",
 }
 BRIEF_HEADING = "### ⚠️ Check these before approving"
@@ -99,7 +99,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
 _HEAD_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->")
 _AUTHOR_REV_RE = re.compile(r"^## Author action guide v(\d+) — ", re.M)
 _BRIEF_HEADER_RE = re.compile(r"^## Reviewer's guide v\d+ — not for the author", re.M)
-_SUB_RE = re.compile(r"<sub>v\d+ · updated \S+ · head [0-9a-f]{7,40}</sub>")
+_SUB_RE = re.compile(r"<sub>(?:Review )?v\d+ · updated [^<]+</sub>")
 
 
 class UpdateError(Exception):
@@ -178,9 +178,29 @@ def _collect_resolved(author_body: str) -> list[str]:
 
 
 def _render_row(fid: str, ref: str, file: str, body: str,
-                link_base: str = "") -> str:
+                link_base: str = "", edit_base: str = "") -> str:
     return cr.render_finding_row(fid, ref=ref, file=file, body=body,
-                                 link_base=link_base)
+                                 link_base=link_base, edit_base=edit_base)
+
+
+def _strip_detail_blocks(body: str) -> tuple[str, dict[str, list[str]]]:
+    """Remove every `#### F<n> · Do this` block; return (body, id → block lines).
+
+    Blocks are re-inserted after their finding's table at render time, so a
+    resolved/conceded finding's block drops and a promoted finding's block
+    moves with its row."""
+    spans, _texts = be.collect_detail_blocks(body)
+    lines = body.splitlines()
+    blocks: dict[str, list[str]] = {}
+    drop: set[int] = set()
+    for fid, (start, end) in spans.items():
+        blocks[fid] = lines[start:end]
+        drop.update(range(start, end))
+        # swallow one leading blank line so stripping is symmetric with insertion
+        if start > 0 and start - 1 not in drop and not lines[start - 1].strip():
+            drop.add(start - 1)
+    kept = [ln for i, ln in enumerate(lines) if i not in drop]
+    return "\n".join(kept) + ("\n" if body.endswith("\n") else ""), blocks
 
 
 def apply(
@@ -194,6 +214,8 @@ def apply(
     repo: str = "",
     pr: int = 0,
     now: datetime | None = None,
+    head_repo: str = "",
+    head_branch: str = "",
 ) -> tuple[str, str, dict, dict]:
     """Returns (author_out, brief_out, model_state, applied_report)."""
     now = now or datetime.now(timezone.utc)
@@ -201,12 +223,15 @@ def apply(
     timestamp = now.isoformat().replace("+00:00", "Z")
     link_base = (f"https://github.com/{repo}/pull/{pr}/files"
                  if repo and pr else "")
+    edit_base = (f"https://github.com/{head_repo}/edit/{head_branch}/"
+                 if head_repo and head_branch else "")
     # Display revision: the card's own vN + 1. Equals the evidence history
     # length in the healthy path, and still counts correctly when the prior
     # evidence object was unavailable (degraded update).
     m_rev = _AUTHOR_REV_RE.search(author_body)
     new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
+    author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
     state = review_state.parse_state(author_body)
@@ -297,17 +322,31 @@ def apply(
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
 
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
-                             link_base=link_base)
+                             link_base=link_base, edit_base=edit_base,
+                             detail_blocks=detail_blocks)
+    if resolved_rows and RESOLVED_HEADING not in author_out:
+        # the composer omits ✅ Resolved while empty — insert it on first resolve
+        a_lines = author_out.splitlines()
+        at = next((i for i, ln in enumerate(a_lines) if ln.startswith("📎 ")), len(a_lines))
+        a_lines[at:at] = [RESOLVED_HEADING, "", cr.FINDING_TABLE_HEADER,
+                          cr.FINDING_TABLE_SEPARATOR, *resolved_rows, ""]
+        author_out = "\n".join(a_lines) + ("\n" if author_out.endswith("\n") else "")
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
                             link_base=link_base)
 
+    open_findings = [{"id": fid, "bucket": r["bucket"],
+                      "text": r["parsed"]["body"]}
+                     for fid, r in sorted(rows.items(), key=lambda kv: int(kv[0][1:]))
+                     if r["bucket"] in ("outstanding", "author-answer")]
+    brief_out = cr.replace_waiting_block(
+        brief_out, open_findings, merged_state.get("findings", {}))
     author_out = review_state.replace_block(author_out, merged_state)
     n_blocking = sum(1 for r in rows.values() if r["bucket"] in ("outstanding", "author-answer"))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
     brief_out = _BRIEF_HEADER_RE.sub(
         f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)
-    new_sub = f"<sub>v{new_rev} · updated {timestamp} · head {head_sha[:8]}</sub>"
+    new_sub = f"<sub>Review v{new_rev} · updated {timestamp} · head commit {head_sha[:8]}</sub>"
     author_out = _SUB_RE.sub(new_sub, author_out, count=1)
     brief_out = _SUB_RE.sub(new_sub, brief_out, count=1)
 
@@ -322,7 +361,8 @@ def apply(
 
 
 def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc: str,
-                link_base: str = "") -> str:
+                link_base: str = "", edit_base: str = "",
+                detail_blocks: dict[str, list[str]] | None = None) -> str:
     """Re-render the finding sections of one card, everything else verbatim.
 
     Rows carry no display state — REVIEW_STATE is the state, the section a
@@ -341,7 +381,8 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
             continue
         by_bucket.setdefault(row["bucket"], []).append(_render_row(
             fid, row["parsed"]["ref"], row["parsed"]["file"], row["parsed"]["body"],
-            link_base=link_base))
+            link_base=link_base, edit_base=edit_base))
+        by_bucket.setdefault(row["bucket"] + ":ids", []).append(fid)
 
     def _table(rows_out: list[str]) -> list[str]:
         return [cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, *rows_out]
@@ -353,6 +394,10 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
         else:
             bucket_rows = by_bucket.get(bucket)
             new_lines = _table(bucket_rows) if bucket_rows else [SECTION_EMPTY.get(bucket, "")]
+            if doc == "author" and detail_blocks:
+                for fid in by_bucket.get(bucket + ":ids", []):
+                    if fid in detail_blocks:
+                        new_lines = new_lines + [""] + detail_blocks[fid]
         replacements.append((start, end, [""] + new_lines + [""]))
 
     for start, end, new_lines in sorted(replacements, reverse=True):
@@ -470,6 +515,8 @@ def main() -> int:
     parser.add_argument("--author-out", default=".review-card-author.out.md")
     parser.add_argument("--brief-out", default=".review-card-brief.out.md")
     parser.add_argument("--evidence-out", default=".review-evidence.json")
+    parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
+    parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -497,7 +544,8 @@ def main() -> int:
         author_out, brief_out, merged_state, report = apply(
             author_body, brief_body, update,
             head_sha=args.head_sha, actor=args.actor, auto=args.auto,
-            repo=args.repo, pr=args.pr)
+            repo=args.repo, pr=args.pr,
+            head_repo=args.head_repo, head_branch=args.head_branch)
         evidence = assemble_evidence(
             prior, author_out, brief_out, merged_state, update,
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
@@ -543,7 +591,7 @@ def _self_test() -> int:
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
     assert "## Author action guide v2 — 3 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
-    assert "<sub>v2 · updated " in a_out and "<sub>v2 · updated " in b_out, "sub line rewritten on both cards"
+    assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 

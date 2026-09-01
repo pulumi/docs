@@ -97,7 +97,7 @@ def v3_pinned_body(outstanding: str = "", author_answer: str = "") -> str:
         "<!-- CLAUDE_REVIEW_AUTHOR -->\n"
         "<!-- CLAUDE_REVIEW_HEAD aaaabbbbccccddddeeeeffff0000111122223333 -->\n"
         "## Review — action needed\n\n"
-        "### 🚨 Must fix or refute\n\n"
+        "### 🚨 Fix or disagree\n\n"
         f"{outstanding}\n\n"
         "### ❓ Questions for you\n\n"
         f"{author_answer}\n\n"

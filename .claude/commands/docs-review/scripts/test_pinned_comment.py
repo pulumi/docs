@@ -94,7 +94,7 @@ def author_card(sha: str = "a" * 40, extra: str = "") -> str:
         "<!-- CLAUDE_REVIEW_AUTHOR -->\n"
         f"<!-- CLAUDE_REVIEW_HEAD {sha} -->\n"
         "## Review: author action needed — 1 item blocks merge\n\n"
-        "### 🚨 Must fix or refute\n\n"
+        "### 🚨 Fix or disagree\n\n"
         "| | ID | Where | Finding |\n|---|---|---|---|\n| ⬜ | **F1** | `x.md` L10 | bad claim |\n\n"
         f"{extra}"
         '<!-- REVIEW_STATE {"findings":{},"high_water":1,"schema":1} -->\n\n'

@@ -55,7 +55,7 @@ review_state = _load("review_state", _REVIEW_V3_DIR / "review_state.py")
 # Section heading → bucket. The author card's two blocking sections and the
 # brief's reviewer section are the only places finding bullets may live.
 AUTHOR_SECTIONS = {
-    "### 🚨 Must fix or refute": "outstanding",
+    "### 🚨 Fix or disagree": "outstanding",
     "### ❓ Questions for you": "author-answer",
 }
 BRIEF_SECTIONS = {
@@ -73,6 +73,53 @@ _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-e
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
 _HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
+_DETAIL_HEADING_RE = re.compile(r"^#### (?P<id>F\d+|F\?) · Do this\s*$")
+
+
+def collect_detail_blocks(body: str) -> tuple[dict[str, tuple[int, int]], dict[str, str]]:
+    """(id → (start_line, end_line)) spans and (id → text) for every
+    `#### F<n> · Do this` block. Fence-aware: a ``` fence suspends the
+    heading scan so replacement text inside a Fix block can't terminate or
+    start a span. An `F?` block is a ContractViolation (model-added rows get
+    no block — ids aren't assigned yet)."""
+    lines = body.splitlines()
+    spans: dict[str, tuple[int, int]] = {}
+    texts: dict[str, str] = {}
+    cur: str | None = None
+    start = 0
+    fenced = False
+
+    def close(end: int) -> None:
+        nonlocal cur
+        if cur is not None:
+            spans[cur] = (start, end)
+            texts[cur] = "\n".join(lines[start + 1:end]).strip()
+            cur = None
+
+    for i, line in enumerate(lines):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced:
+            continue
+        m = _DETAIL_HEADING_RE.match(line)
+        if m:
+            close(i)
+            if m.group("id") == "F?":
+                raise ContractViolation(
+                    "author: a `#### F? · Do this` block — model-added F? rows get no "
+                    "detail block; keep their cell terse (ids are assigned by build-evidence)")
+            if m.group("id") in spans:
+                raise ContractViolation(f"author: duplicate detail block for {m.group('id')}")
+            cur = m.group("id")
+            start = i
+            continue
+        if cur is not None and (line.startswith("### ") or line.startswith("#### ")
+                                or line.startswith("<!-- REVIEW_STATE")
+                                or line.startswith("<sub>") or line.startswith("📎 ")):
+            close(i)
+    close(len(lines))
+    return spans, texts
 _CONF_ROW_RE = re.compile(r"^> \| (?P<dim>[^|]+) \| (?P<level>[^|]+) \|")
 
 
@@ -206,6 +253,30 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
             "findings are dispositioned, never deleted"
         )
 
+    # Detail blocks: every block pairs with an open blocking row on the
+    # author card; blocks of dropped (Spurious/Pre-existing) rows are dropped
+    # with them; surviving blocks are mirrored onto the finding record for
+    # the evidence page.
+    block_spans, block_texts = collect_detail_blocks(author_body)
+    open_author_ids = {f["id"] for f in findings
+                       if f["bucket"] in ("outstanding", "author-answer")}
+    renumbered_ids = set(renumber["author"].values())
+    for bid, span in block_spans.items():
+        if bid in open_author_ids or bid in renumbered_ids:
+            continue
+        dropped_here = any(f.get("id") == bid for f in triaged) or any(
+            f["id"] == bid and f["bucket"] == "preexisting" for f in findings)
+        if dropped_here:
+            drop_lines["author"].update(range(span[0], span[1]))
+        else:
+            raise ContractViolation(
+                f"author: detail block for {bid} has no open 🚨/❓ row — a "
+                "block never outlives its finding (resolve/disposition the row "
+                "and delete its block together)")
+    for f in findings:
+        if f["id"] in block_texts and f["bucket"] in ("outstanding", "author-answer"):
+            f["detail"] = block_texts[f["id"]]
+
     # REVIEW_STATE must have survived the model edit intact; its dispositions
     # win over anything carried from the base.
     state = review_state.parse_state(author_body)
@@ -247,6 +318,11 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
     author_out = _fix_header(author_out, n_blocking)
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
     brief_out = _PREEXISTING_COUNT_RE.sub(lambda m: m.group(1) + str(n_pre), brief_out)
+    # The Waiting-on-the-author block is composer-owned: regenerate it from
+    # the FINAL findings + dispositions so model edits (promotions included)
+    # can never leave it stale.
+    brief_out = cr.replace_waiting_block(
+        brief_out, findings, state.get("findings", {}))
     return evidence, author_out, brief_out
 
 
@@ -300,7 +376,7 @@ def _self_test() -> int:
     author = "\n".join([
         "<!-- CLAUDE_REVIEW 1/1 -->", "<!-- CLAUDE_REVIEW_AUTHOR -->",
         "## Author action guide v1 — 2 items block merge", "",
-        "### 🚨 Must fix or refute", "",
+        "### 🚨 Fix or disagree", "",
         "| ID | Where | Finding |", "|---|---|---|",
         "| **F1** | `a.md` L8 | the model's edited fix prose |",
         "| **F2** | `a.md` L9 | promoted question now a blocker |",

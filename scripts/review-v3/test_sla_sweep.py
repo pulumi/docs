@@ -167,7 +167,7 @@ def author_card(findings=(), state=None, head=HEAD):
         f"<!-- CLAUDE_REVIEW_HEAD {head} -->",
         "## Review: author action needed — %d items block merge — Last updated x" % (len(must) + len(answer)),
         "",
-        "### 🚨 Must fix or refute",
+        "### 🚨 Fix or disagree",
         "",
     ]
     if must:

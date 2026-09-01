@@ -227,8 +227,8 @@ def test_brief_advisory_prose_note_allowed() -> None:
     assert not [v for v in check(brief=brief) if v.rule_id == "v3-finding-grammar"]
 
     author = AUTHOR.replace(
-        "### 🚨 Must fix or refute\n",
-        "### 🚨 Must fix or refute\n\n- **A stray thought:** untracked prose in a blocking section.\n",
+        "### 🚨 Fix or disagree\n",
+        "### 🚨 Fix or disagree\n\n- **A stray thought:** untracked prose in a blocking section.\n",
     )
     assert [v for v in check(author=author) if v.rule_id == "v3-finding-grammar"]
 

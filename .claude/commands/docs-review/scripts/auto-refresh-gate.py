@@ -86,7 +86,7 @@ _RANGE_RE = re.compile(r"^L(\d+)(?:-(\d+))?$")
 # merge (the ❓ bucket, being author-answer, is just as fixable by a push as
 # 🚨 outstanding), so a push that resolves a ❓ item must fire the gate the
 # same as one that resolves a 🚨 item.
-V3_ANCHOR_HEADINGS = ("🚨 Must fix or refute", "❓ Questions for you")
+V3_ANCHOR_HEADINGS = ("🚨 Fix or disagree", "❓ Questions for you")
 
 
 def result(fire: bool, reason: str) -> int:
@@ -98,7 +98,7 @@ def parse_anchor_ranges(pinned_body: str) -> list[tuple[int, int]] | None:
     """Extract the [L<a>-<b>] ranges of every finding that can still block merge.
 
     v2: every 🚨 Outstanding bullet. v3 (detected by AUTHOR_MARKER): every
-    finding row in BOTH `### 🚨 Must fix or refute` and
+    finding row in BOTH `### 🚨 Fix or disagree` and
     `### ❓ Questions for you` — the promoted ❓ bucket blocks merge exactly
     like 🚨 does, so a push that fixes a ❓ item must fire the gate too.
 

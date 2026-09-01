@@ -53,6 +53,8 @@ def regen_cmd(surface: str, out_args: list[str]) -> list[str]:
         "--frontmatter", str(ART / "frontmatter-validation.json"),
         "--hugo-build", str(ART / "hugo-build.json"),
         "--readthrough", "/dev/null",
+        "--head-repo", "example/docs-fork", "--head-branch", "fix/component-doc",
+        "--routed-team", "@pulumi/docs-guild",
     ]
 
 

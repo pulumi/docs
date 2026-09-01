@@ -456,7 +456,7 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 ## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
 > [!IMPORTANT] orienting alert            ← composed; explains what the card demands
 _<one sentence: what the PR is and what the review checked>_
-### 🚨 Must fix or refute
+### 🚨 Fix or disagree
 | ID | Where | Finding |
 |---|---|---|
 | **F1** | [`file.md` L12-14](…/pull/<pr>/files#diff-<sha256(path)>R12) | <finding + fix, terse> |
