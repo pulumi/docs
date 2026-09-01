@@ -140,7 +140,7 @@ These six challenges represent the core obstacles standing between your organiza
 
 The upcoming articles in this series will explore each area in depth, with practical strategies and real-world examples to help you build an effective internal developer platform.
 
-Ready to implement these principles in your organization? Check out "Platform Engineering: Recommended Practices for infrastructure as code". It provides detailed guidance on building scalable internal developer platforms.
+Ready to implement these principles in your organization? Check out "Platform Engineering: Recommended Practices for Infrastructure as Code". It provides detailed guidance on building scalable internal developer platforms.
 
 * How to structure infrastructure code for scalability
 * Managing development environments with developer stacks and Git branches
