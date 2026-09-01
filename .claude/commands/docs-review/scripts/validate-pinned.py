@@ -341,6 +341,10 @@ V3_BRIEF_SECTIONS = ["⚠️ Check these before approving", "✅ What you can ru
 # The in-place rewrite labels build-evidence.py files off the cards — a bullet
 # whose body starts with one of these is dispositioned, not deleted.
 V3_REWRITE_LABELS = ("**Spurious:**", "**Mis-sourced:**", "**Pre-existing:**")
+# Same shape build-evidence.py's _SPURIOUS_RE accepts: the label may follow the
+# italic claim quote the composer rendered ("*…* — **Spurious:** …").
+_V3_REWRITTEN_RE = re.compile(
+    r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced|Pre-existing):\*\*")
 V3_BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2}
 
 _v3_modules: dict[str, object] = {}
@@ -2880,10 +2884,21 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
     when the composer's evidence base is at hand — no blocking finding left
     without its block. The brief carries no detail blocks."""
     v: list[Violation] = []
-    open_ids = {p["id"] for _, _, p in
-                (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
-                 + v3_finding_rows(ctx.body, "❓ Questions for you"))
-                if p and p["id"] != "F?"}
+    open_ids: set[str] = set()
+    rewritten_ids: set[str] = set()
+    for _, _, p in (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
+                    + v3_finding_rows(ctx.body, "❓ Questions for you")):
+        if not p or p["id"] == "F?":
+            continue
+        # A row the model rewrote as **Spurious:** / **Mis-sourced:** /
+        # **Pre-existing:** is dispositioned: build-evidence files it off the
+        # card and drops its block, so it neither needs nor forbids one
+        # (first fresh v1 after a fix push demanded blocks for two
+        # dispositioned rows — fork PR 242, 2026-09-01).
+        if _V3_REWRITTEN_RE.match(p["body"]):
+            rewritten_ids.add(p["id"])
+        else:
+            open_ids.add(p["id"])
     seen: set[str] = set()
     for bid, body in _v3_detail_blocks(ctx.body):
         if bid == "F?":
@@ -2897,7 +2912,7 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
                                "one detail block per finding", "duplicate block",
                                "Merge the two blocks into one."))
         seen.add(bid)
-        if bid not in open_ids:
+        if bid not in open_ids and bid not in rewritten_ids:
             v.append(Violation("v3-detail-blocks", f"<{bid}>",
                                "every detail block pairs with an open 🚨/❓ row",
                                f"block for {bid} has no open row",
