@@ -72,11 +72,20 @@ announcements:
       href: "/events/intro-to-pulumi-esc-managing-secrets/?utm_source=announcement-banner&utm_medium=website&utm_campaign=intro-to-esc-workshop"
     dismissible: true
   - id: release-terraform-state-modules-hcl-2026-08-Ts7hK4
-    active: true
+    active: false
     display: both
     icon: sparkle
     text: "**Latest release:** Full support for Terraform state, cross-language modules, and HCL as a first-class language."
     cta:
       label: See the release
       href: "/releases/terraform-state-backend-modules-hcl/"
+    dismissible: true
+  - id: blog-pulumi-neo-security-2026-08-Nx9vQ7
+    active: true
+    display: both
+    icon: shield-check
+    text: "**Identify weaknesses before attackers do.** Neo Security finds and fixes exploitable flaws in your infrastructure. Now in research preview."
+    cta:
+      label: Read the blog
+      href: "/blog/pulumi-neo-security/"
     dismissible: true
