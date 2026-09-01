@@ -459,14 +459,18 @@ _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Fix or disagree
 | ID | Where | Finding |
 |---|---|---|
-| **F1** | [`file.md` L12-14](…/pull/<pr>/files#diff-<sha256(path)>R12) | <finding + fix, terse> |
+| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
+#### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
+**Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
+**Why:** <1-2 sentences>
+**Fix:** <exactly ONE required action; replacement text in a fenced block>
 ### ❓ Questions for you
-| ID | Where | Finding |
-|---|---|---|
-| **F3** | `file.md` L61 | <the question> |
+| ID | Where | Finding |                  ← same row + block shape
+#### F3 · Do this
+…
 #### Style suggestions                    ← unchanged v2 block (annotator-compatible)
-### ✅ Resolved since last review         ← same table shape
-📎 **Full evidence:** %%EVIDENCE_URL%% — …
+### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
+📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
@@ -481,7 +485,9 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 ```markdown
 <!-- CLAUDE_REVIEW_BRIEF -->
 ## Reviewer's guide vN — not for the author
-> [!TIP] orienting alert                  ← "work through the ⚠️ checklist below"
+> [!TIP] orienting alert                  ← carries the approval assertion ("approving asserts only the ⚠️ items")
+**Approval needed from:** @org/team …     ← composed when routing is on; never hand-written
+<!-- AUTHOR_STATE_BEGIN --> … <!-- AUTHOR_STATE_END -->  ← "Waiting on the author" table; composer-OWNED, machine-refreshed
 > [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
 ### ⚠️ Check these before approving
 | ID | Where | Finding |
@@ -512,10 +518,12 @@ evidence object is the high-water mark), and are the join key across the
 cards, REVIEW_STATE, the Sentinel, and the evidence object.
 `render_finding_row` / `parse_finding_line` in `compose-review.py` are the
 grammar's only implementation — `build-evidence.py` re-parses the model-edited
-cards with it, fail-closed. Keep Finding cells TERSE: the claim quote, the
-verdict tag, and a one-clause action — aim for ≤ 2 sentences (the evidence
-page carries the deep reasoning; a wall of prose in a cell recreates the
-overload the table exists to fix).
+cards with it, fail-closed. Keep Finding cells to ONE line: the claim quote and the verdict tag —
+nothing else. The action, the rationale, and any replacement text live in
+the finding's `#### F<n> · Do this` block below the table (a wall of prose
+in a cell recreates the overload the table exists to fix, and hides a
+second imperative where a serial reader can't see it — 2026-09-01 persona
+pass).
 
 ### The ❓/⚠️ split
 
@@ -541,11 +549,38 @@ these rules:
    `**Pre-existing:** <reason>`. The cell must START with the label.
    build-evidence files those on the evidence page and drops them from the
    published card. A finding that simply vanishes is a violation.
+1. **Fill every `#### F<n> · Do this` block** (they are scaffolded per
+   blocking finding): `**Line (verbatim):**` quotes the flagged file line
+   exactly ONCE on the whole card — a paraphrase never appears inside
+   quotation marks; `**Why:**` is 1-2 sentences; `**Fix:**` states exactly
+   ONE required action, first. Replacement text goes in a fenced block
+   (GitHub gives it a copy button). If deletion is the better fix, LEAD
+   with deletion — a reword is offered only under a
+   `**If you'd rather keep it:**` label, never as a competing imperative.
+   A structural observation shared by several findings ("both new sentences
+   render after the stepper") is stated once, in the first affected block;
+   later blocks reference it ("same placement issue as F1").
+1. **When you disposition a row** (rewrite as `**Spurious:**` /
+   `**Mis-sourced:**` / `**Pre-existing:**`), delete its `#### F<n> · Do
+   this` block too — a block never outlives its finding.
 1. **New findings** are added as `| **F?** | … | … |` rows in the right
-   section's table; build-evidence assigns the real id.
+   section's table; build-evidence assigns the real id. An `F?` row gets NO
+   detail block (ids aren't assigned yet) — put a terse action clause in
+   its Finding cell instead.
+1. **⚠️ rows and the confidence table speak to a non-docs reader.** Every
+   LOW/MEDIUM confidence row's Notes cell says whose problem it is — either
+   "Not yours to check — <why>" or "→ see F<n>" — and uses reader terms
+   ("consistency with the other get-started pages"), not pipeline names
+   ("cross-sibling"). Before a ⚠️ item asks the reviewer to look something
+   up in the PR's own files, do that lookup yourself and hand over only the
+   residual judgment ("step 3 says both classes go in App.java — confirm"),
+   with the file read cited in the evidence trail.
 1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
-   the REVIEW_STATE block, `%%EVIDENCE_URL%%` tokens, the rubber-stamp count
-   lines in the brief, or the footers.
+   the REVIEW_STATE block and its legend note, the `AUTHOR_STATE_BEGIN` …
+   `AUTHOR_STATE_END` span on the brief ("Waiting on the author" —
+   build-evidence regenerates it from your final findings, promotions
+   included), `%%EVIDENCE_URL%%` tokens, the rubber-stamp count lines in
+   the brief, or the footers.
 1. Keep each finding on ONE row — the grammar is line-based. Escape literal
    pipes in a cell as `\|`. Never edit the table header/separator rows, and
    never add a leading status cell — rows have exactly three columns.
@@ -560,7 +595,7 @@ summary/confidence/history from the brief, and emits the final evidence object
 plus the cleaned publish bodies. Any parse failure or contract violation exits
 2 and the workflow treats the run like a validation failure.
 
-### Validation (schema v21)
+### Validation (schema v22)
 
 `validate-pinned.py check` auto-detects the surface (the
 `<!-- CLAUDE_REVIEW_AUTHOR -->` marker; `--surface` overrides) and, on v3,
@@ -579,9 +614,11 @@ v3-only rules: `v3-markers` (marker lines intact; author card is the sole
 silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
 the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/⚠️ row
 parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
-high-water mark), `v3-blocking-count`, and `bucket-split-faithful`
-(promote-only against the evidence base; a finding may never be demoted or
-deleted — rewrite it as `**Spurious:** …` instead).
+high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n> · Do
+this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no `F?` blocks,
+exactly one `**Fix:**` line each, none on the brief), and
+`bucket-split-faithful` (promote-only against the evidence base; a finding
+may never be demoted or deleted — rewrite it as `**Spurious:** …` instead).
 
 Shared rules that also run on v3 (some against both bodies):
 `no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,

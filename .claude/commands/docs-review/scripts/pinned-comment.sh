@@ -10,6 +10,8 @@
 #   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
 #   clear            --pr <N>                           Delete ALL pinned comments (1/M, tail, and v3 role cards). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
 #   last-reviewed-sha --pr <N>                          Print the current reviewed SHA: the CLAUDE_REVIEW_HEAD marker when present (same precedence as review-label-reconcile.yml), else the last (sha) in the 1/M comment's review history.
+#   banner           --pr <N> (--set <sha7> | --clear)  Stamp (or remove) the 🔄 re-review banner on the v3 author card — the instant "your push triggered a refresh" signal. A full card upsert clears it implicitly.
+#   banner-body      (--set <sha7> | --clear)           The pure stdin→stdout body transform behind `banner`; exists for tests.
 #
 # Common flags:
 #   --repo <owner/repo>   Override repository (default: $GH_REPO, $GITHUB_REPOSITORY, or `gh repo view`).
@@ -654,6 +656,81 @@ cmd_last_reviewed_sha() {
         | tr -d '()'
 }
 
+# The 🔄 banner: one line stamped between the machine markers and the H2 the
+# moment the auto-refresh gate decides a push qualifies (persona pass
+# 2026-09-01 / Cam: the author should see "re-review happening" instantly,
+# not after the update workflow spins up). The publish paths rewrite the
+# whole card body, so a completed refresh clears it for free; the update
+# lane's error path calls --clear so a failed refresh doesn't leave a
+# promise standing.
+BANNER_PREFIX="> 🔄 **Re-review in progress**"
+
+banner_transform() {
+    # stdin: card body; $1: "set"|"clear"; $2: sha7 (set only). stdout: body.
+    # The body rides a temp file: `python3 -` takes its PROGRAM from stdin,
+    # so the heredoc and the piped body cannot share the stream.
+    local _tmp_in
+    _tmp_in=$(mktemp)
+    cat > "$_tmp_in"
+    python3 - "$1" "${2:-}" "$_tmp_in" <<'PYEOF'
+import sys
+
+mode, sha = sys.argv[1], sys.argv[2]
+prefix = "> \U0001F504 **Re-review in progress**"
+lines = open(sys.argv[3]).read().splitlines()
+out = []
+skip_blank = False
+for ln in lines:
+    if ln.startswith(prefix):
+        skip_blank = True
+        continue
+    if skip_blank and not ln.strip():
+        skip_blank = False
+        continue
+    skip_blank = False
+    out.append(ln)
+if mode == "set":
+    banner = (prefix + f" for your push `{sha}` — this card is out of date "
+              "until it refreshes.")
+    at = 0
+    for i, ln in enumerate(out[:6]):
+        if ln.startswith("<!-- CLAUDE_REVIEW"):
+            at = i + 1
+    out[at:at] = [banner, ""]
+sys.stdout.write("\n".join(out) + "\n")
+PYEOF
+    rm -f "$_tmp_in"
+}
+
+cmd_banner_body() {
+    local mode
+    if [[ -n "$BANNER_SET" ]]; then mode="set"; elif (( BANNER_CLEAR )); then mode="clear"; else die "banner-body requires --set <sha7> or --clear"; fi
+    banner_transform "$mode" "$BANNER_SET"
+}
+
+cmd_banner() {
+    local repo pr row id body tmp
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    [[ -n "$BANNER_SET" || $BANNER_CLEAR -eq 1 ]] || die "banner requires --set <sha7> or --clear"
+    row=$(find_role_comment "$repo" "$pr" "author")
+    [[ -n "$row" ]] || { echo "banner: no author card on PR #$pr — nothing to stamp" >&2; return 0; }
+    id=$(printf '%s' "$row" | cut -f1)
+    body=$(gh api "repos/$repo/issues/comments/$id" --jq '.body')
+    tmp=$(mktemp)
+    if [[ -n "$BANNER_SET" ]]; then
+        printf '%s\n' "$body" | banner_transform set "$BANNER_SET" > "$tmp"
+    else
+        printf '%s\n' "$body" | banner_transform clear "" > "$tmp"
+    fi
+    if (( DRY_RUN )); then
+        echo "DRY RUN: would PATCH comment $id with banner ${BANNER_SET:+set }${BANNER_SET:-cleared}" >&2
+    else
+        patch_comment "$repo" "$id" "$tmp"
+    fi
+    rm -f "$tmp"
+}
+
 # Argument parsing.
 [[ $# -ge 1 ]] || usage
 SUBCOMMAND="$1"; shift
@@ -666,6 +743,8 @@ MAX_BYTES=$DEFAULT_MAX_BYTES
 DRY_RUN=0
 SOFT_FLOOR=0
 ROLE=""
+BANNER_SET=""
+BANNER_CLEAR=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -677,6 +756,8 @@ while [[ $# -gt 0 ]]; do
         --dry-run)    DRY_RUN=1; shift ;;
         --soft-floor) SOFT_FLOOR=1; shift ;;
         --role)       ROLE="$2"; shift 2 ;;
+        --set)        BANNER_SET="$2"; shift 2 ;;
+        --clear)      BANNER_CLEAR=1; shift ;;
         -h|--help)    usage ;;
         *)            die "unknown flag: $1" ;;
     esac
@@ -690,8 +771,10 @@ if [[ -n "$ROLE" ]]; then
     esac
 fi
 
-require_cmd gh
-require_cmd jq
+if [[ "$SUBCOMMAND" != "banner-body" ]]; then
+    require_cmd gh
+    require_cmd jq
+fi
 require_cmd awk
 
 case "$SUBCOMMAND" in
@@ -701,5 +784,7 @@ case "$SUBCOMMAND" in
     prune)             cmd_prune ;;
     clear)             cmd_clear ;;
     last-reviewed-sha) cmd_last_reviewed_sha ;;
+    banner)            cmd_banner ;;
+    banner-body)       cmd_banner_body ;;
     *)                 usage ;;
 esac

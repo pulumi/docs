@@ -307,3 +307,26 @@ def test_v2_upsert_preserves_role_marker_and_review_state(env):
 if __name__ == "__main__":
     import sys
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+def test_banner_body_set_clear_roundtrip():
+    """banner-body: set inserts after the last leading marker, re-set is
+    idempotent, clear restores the original byte-for-byte."""
+    fixture = (HERE / "testdata" / "v3-fixture-author.md").read_text()
+
+    def run(args, body):
+        p = subprocess.run(["bash", str(SCRIPT), "banner-body", *args],
+                           input=body, capture_output=True, text=True)
+        assert p.returncode == 0, p.stderr
+        return p.stdout
+
+    stamped = run(["--set", "4c70141"], fixture)
+    lines = stamped.splitlines()
+    assert lines[3].startswith("> 🔄 **Re-review in progress** for your push `4c70141`")
+    assert lines[4] == "" and lines[5].startswith("## Author action guide")
+    assert stamped.count("Re-review in progress") == 1
+    restamped = run(["--set", "beefcaf"], stamped)
+    assert restamped.count("Re-review in progress") == 1
+    assert "beefcaf" in restamped and "4c70141" not in restamped.splitlines()[3]
+    assert run(["--clear"], restamped) == fixture
+    assert run(["--clear"], fixture) == fixture

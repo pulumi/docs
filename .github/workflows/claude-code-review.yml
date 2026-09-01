@@ -120,7 +120,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
+      pull-requests: write # instant review:in-progress label on gate fire
+      issues: write # instant 🔄 banner PATCH on the author card
       actions: write # gh workflow run claude-update.yml
     steps:
       # The gate scripts come from the BASE ref, never the PR head — the
@@ -179,6 +180,31 @@ jobs:
           REASON=$(echo "$RESULT" | jq -r '.reason')
           echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
           echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # The instant signal (persona-pass round, 2026-09-01 / Cam): the
+      # author learns "a re-review is happening" the moment the gate
+      # decides — not minutes later when the dispatched workflow starts.
+      # Label flips to review:in-progress AND the author card gets a 🔄
+      # banner stamped under its markers. The refresh's publish rewrites
+      # the whole card (clearing the banner); claude-update.yml's error
+      # path clears it explicitly so a failed refresh doesn't leave the
+      # promise standing.
+      - name: Signal re-review instantly (label + card banner)
+        if: steps.gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          "$SCRIPTS/set-review-label.sh" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
+          bash "$SCRIPTS/pinned-comment.sh" banner \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --set "${AFTER:0:7}"
 
       # Dispatch with GITHUB_TOKEN — same pattern as claude-new.yml's
       # dispatch of this workflow. The dispatched run's actor becomes
@@ -311,7 +337,7 @@ jobs:
           # real changes. Retry once after a pause to catch the race
           # before falling through to the empty-diff skip.
           fetch_pr() {
-            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,changedFiles,files,title
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,headRepository,headRepositoryOwner,additions,deletions,changedFiles,files,title
           }
           # Retry up to 3 times on transient server-side errors (5xx / 503).
           # The empty-diff retry below is a separate, orthogonal concern.
@@ -349,6 +375,10 @@ jobs:
           HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
           HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
           HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
+          # owner/name of the HEAD repo — differs from $REPO on fork PRs; the
+          # composer's ✏️ edit links must open the editor on the fork, where
+          # the author can actually commit.
+          HEAD_REPO=$(echo "$DATA" | jq -r 'if (.headRepositoryOwner.login? // "") != "" and (.headRepository.name? // "") != "" then .headRepositoryOwner.login + "/" + .headRepository.name else "" end')
           BASE_BRANCH=$(echo "$DATA" | jq -r '.baseRefName')
           ADDITIONS=$(echo "$DATA" | jq -r '.additions')
           DELETIONS=$(echo "$DATA" | jq -r '.deletions')
@@ -449,6 +479,7 @@ jobs:
             echo "head_sha=$HEAD_SHA"
             echo "head_sha_short=$HEAD_SHA_SHORT"
             echo "head_branch=$HEAD_BRANCH"
+            echo "head_repo=$HEAD_REPO"
             echo "base_branch=$BASE_BRANCH"
             echo "additions=$ADDITIONS"
             echo "deletions=$DELETIONS"
@@ -957,6 +988,32 @@ jobs:
       # out; <TODO> tokens mark the parts that are the reviewer's (summary,
       # confidence levels, fix prose, cross-sibling read count). The composer
       # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
+      # v3 brief header: which team's approval satisfies the merge gate.
+      # Same resolver the triage routing step uses (route-pr.py →
+      # routing.py + the tightened mechanical bar), so the brief and the
+      # Sentinel can never name different teams. Best-effort: on any
+      # failure the brief simply omits the line.
+      - name: Compute routed approval team (v3)
+        id: routing
+        if: vars.REVIEW_V3_ROUTING == '1' && vars.REVIEW_V3_COMMENTS == '1' && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          gh pr view "$PR" --repo "$REPO" \
+            --json files,author,labels,additions,deletions,changedFiles,title \
+            > /tmp/route-pr-data.json
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/$REPO/pulls/$PR" > /tmp/route-pr.diff
+          TEAMS=$(python3 scripts/review-v3/route-pr.py \
+            --pr-data /tmp/route-pr-data.json --diff /tmp/route-pr.diff \
+            --config .github/review-routing.yml --repo-root . \
+            | jq -r '[.teams[] | "@" + .] | join(", ")')
+          echo "team_display=$TEAMS" >> "$GITHUB_OUTPUT"
+          echo "routing: teams=${TEAMS:-<none>}"
+
       # and, on a self-check failure, writes a visible `> [!CAUTION]` banner
       # INTO .review-draft.md (never a silent-empty file) so the model falls
       # back to manual assembly per ci.md §Fallback. safe_main() guarantees a
@@ -997,6 +1054,9 @@ jobs:
               --hugo-build .hugo-build.json \
               --fetched-urls .fetched-urls.json \
               --readthrough .readthrough-findings.json \
+              --head-repo "${{ steps.pr-context.outputs.head_repo }}" \
+              --head-branch "${{ steps.pr-context.outputs.head_branch }}" \
+              --routed-team "${{ steps.routing.outputs.team_display }}" \
             || {
               printf '%s\n' \
                 '> [!CAUTION]' \

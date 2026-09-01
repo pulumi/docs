@@ -676,8 +676,12 @@ jobs:
           # SHA resolved at job start can be stale. Stamp the card with the
           # LIVE head — otherwise the Sentinel's gate 1 reds on a review that
           # is in fact current, and the stale-label cycle re-fires.
-          LIVE_SHA=$(gh pr view "$PR" --repo "$REPO" --json headRefOid --jq .headRefOid || true)
+          PR_META=$(gh pr view "$PR" --repo "$REPO" \
+            --json headRefOid,headRefName,headRepository,headRepositoryOwner || echo '{}')
+          LIVE_SHA=$(echo "$PR_META" | jq -r '.headRefOid // empty')
           [ -n "$LIVE_SHA" ] && HEAD_SHA="$LIVE_SHA"
+          HEAD_BRANCH=$(echo "$PR_META" | jq -r '.headRefName // empty')
+          HEAD_REPO=$(echo "$PR_META" | jq -r 'if (.headRepositoryOwner.login? // "") != "" and (.headRepository.name? // "") != "" then .headRepositoryOwner.login + "/" + .headRepository.name else "" end')
 
           # Prior evidence (trail/log live only in S3, not on the cards).
           PRIOR_ARGS=()
@@ -705,7 +709,8 @@ jobs:
             --repo "$REPO" --pr "$PR" --run-id "${{ github.run_id }}" \
             --author-out .review-card-author.out.md \
             --brief-out .review-card-brief.out.md \
-            --evidence-out .review-evidence.json
+            --evidence-out .review-evidence.json \
+            --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH"
 
           python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
             --body-file .review-card-author.out.md \
@@ -957,6 +962,11 @@ jobs:
               # nothing reads the half-published state as current.
               .claude/commands/docs-review/scripts/set-review-label.sh \
                 --pr "$PR" --repo "$REPO" --label review:error || true
+              # A 🔄 banner stamped by the auto-refresh gate is now a broken
+              # promise — clear it so the card doesn't claim a refresh that
+              # died. (A successful publish clears it by rewriting the card.)
+              bash .claude/commands/docs-review/scripts/pinned-comment.sh banner \
+                --pr "$PR" --repo "$REPO" --clear || true
             else
               # Workflow errored. Only set review:error if no pinned review
               # exists yet — otherwise the previous run's terminal label is

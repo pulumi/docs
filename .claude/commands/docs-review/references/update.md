@@ -278,7 +278,15 @@ author's answer loop.
 any `/resolve` that landed while the model worked — newest `updated_at`
 wins), runs `apply-update.py` (validate patch → apply actions → merge
 REVIEW_STATE → refresh header count, `Last updated`, and the
-`CLAUDE_REVIEW_HEAD` marker), validates both cards against schema v21,
+`CLAUDE_REVIEW_HEAD` marker). The `#### F<n> · Do this` detail blocks
+follow their rows automatically — apply-update strips them, re-inserts each
+under its finding's current section, and drops the block when its row
+resolves or concedes; the brief's "Waiting on the author" table is
+regenerated from the post-application findings + dispositions; the ✅
+Resolved section is inserted on the first resolve (the composer omits it
+while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
+cleared by the card rewrite (or, on the error path, explicitly). It then
+validates both cards against schema v22,
 records the evidence object (prior trail/investigation log carried forward
 from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
 fetched), re-renders the evidence page, and upserts brief-then-author. Any
