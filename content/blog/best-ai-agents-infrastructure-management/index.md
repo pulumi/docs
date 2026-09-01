@@ -47,7 +47,9 @@ social:
 
         We built a 6-criterion rubric, sorted the current field into three real categories, and gave every vendor a fair, sourced treatment, including where each one is a better fit than Pulumi.
     bluesky: |
-        Every infra vendor has an "AI agent" this year, but they're not doing the same job. We split the category into change agents, incident agents, and access layers, and built a rubric for evaluating any of them.
+        Every infra vendor has an "AI agent" this year, but they're not doing the same job.
+
+        We split the category into change agents, incident agents, and access layers, and built a rubric for evaluating any of them.
 ---
 
 An AI agent for infrastructure management is software that uses an LLM to read your live cloud or Kubernetes state, propose or make changes, and act inside guardrails a human defines, rather than a chat assistant that only answers questions or a code generator that only writes files. In 2026 that category splits into three distinct jobs: agents that plan and apply changes, agents that respond to incidents, and access layers that let any agent reach your infrastructure safely. Confusing the three is why most comparisons in this space read the same and help nobody decide.
@@ -60,7 +62,7 @@ An AI agent for infrastructure management is software that uses an LLM to read y
 |------|----------|-------------|----------|
 | [Pulumi Neo](#pulumi-neo) | Change agent | General-purpose code (Python, TypeScript, Go, C#, Java, YAML) | Teams already on Pulumi who want changes to land as reviewable pull requests |
 | [env zero Agent CLI](#env-zero-agent-cli) | Change agent | Terraform, OpenTofu, and other engines via one control plane | Governing multiple IaC engines under one policy and approval layer |
-| [Spacelift Intelligence](#spacelift-intelligence) | Change agent | Terraform and OpenTofu, via direct provider calls or generated code | Teams deep in Spacelift's existing run pipeline and Rego policies |
+| [Spacelift Intelligence](#spacelift-intelligence) | Change agent | Terraform and OpenTofu providers, called directly or via generated code | Teams deep in Spacelift's existing run pipeline and Rego policies |
 | [Upbound and Crossplane control planes](#upbound-and-crossplane-control-planes) | Change agent | Crossplane compositions on the Kubernetes API | Organizations standardized on Crossplane for fleet-scale control planes |
 | [Azure SRE Agent](#azure-sre-agent) | Incident agent | Azure resource telemetry and logs | Azure-native teams that want automated root-cause analysis |
 | [Traversal and Cleric](#traversal-and-cleric) | Incident agent | Alerts, logs, and traces across a heterogeneous stack | Cloud-agnostic on-call teams drowning in alert volume |
@@ -109,7 +111,7 @@ Most roundups treat "AI agent for infrastructure" as one category. It isn't, and
 
 Neo operates within the requesting user's own RBAC entitlements: "Neo never has more access than you do, only less," in Pulumi's words, which rules out the privilege-escalation risk that worries security teams about agentic tooling generally. It also [migrates existing Terraform, CDK, CloudFormation, and ARM resources](https://www.pulumi.com/blog/neo-migration/) into Pulumi incrementally, and runs scheduled work like provider-freshness checks and encryption or backup audits.
 
-Neo is included by default across Pulumi Cloud plans and metered by usage; see [Pulumi's pricing page](https://www.pulumi.com/pricing/) for current token rates and which capabilities (scheduled tasks, Slack integration) require which tier. Neo's [code review feature](https://www.pulumi.com/blog/neo-code-reviews/) is free during its public preview.
+Neo is included by default across Pulumi Cloud editions and metered by usage. Two capabilities are edition-gated: Slack integration requires the Team edition or higher, and scheduled tasks require the Enterprise edition or higher (see [Pulumi's pricing page](https://www.pulumi.com/pricing/) for current token rates and edition details). Neo's [code review feature](https://www.pulumi.com/blog/neo-code-reviews/) is free during its public preview.
 
 **Best for:** teams already writing infrastructure in Python, TypeScript, Go, C#, or Java who want proposed changes to land as ordinary, reviewable pull requests rather than disappear into a separate tool's state.
 
@@ -127,9 +129,9 @@ The genuine strength here is breadth of governance: env zero has long supported 
 
 ### Spacelift Intelligence
 
-Spacelift's agentic capability shipped in two stages. [Intent](https://spacelift.io/blog/announcing-spacelift-intent) launched in October 2025 and takes natural-language infrastructure requests, then calls OpenTofu and Terraform providers directly through their public registry APIs, without generating HCL as an intermediate step. Resources created through Intent can still be exported to standard Terraform or OpenTofu code afterward. In March 2026, Spacelift folded Intent into [Spacelift Intelligence](https://spacelift.io/blog/introducing-spacelift-intelligence), adding an in-UI Infra Assistant that answers questions, summarizes failed runs, and manages resources conversationally in what Spacelift calls Build mode.
+Spacelift's agentic capability shipped in two stages. [Intent](https://spacelift.io/blog/announcing-spacelift-intent) launched in October 2025 and takes natural-language infrastructure requests, then calls the underlying cloud provider APIs directly through Terraform and OpenTofu providers, without generating HCL as an intermediate step. Resources created through Intent can still be exported to standard Terraform or OpenTofu code afterward. In March 2026, Spacelift launched [Spacelift Intelligence](https://spacelift.io/blog/introducing-spacelift-intelligence), with Intent continuing on as one of its components alongside a new in-UI Infra Assistant that answers questions, summarizes failed runs, and manages resources conversationally in what Spacelift calls Build mode.
 
-Because Intelligence is delivered over MCP inside Spacelift's own infrastructure, it inherits whatever policies, state, and workers your existing Spacelift setup already has, meaning your Rego-based policy checks and approval flows still apply to anything the assistant proposes. Pricing follows a metered model: a free tier includes $10 of AI usage per 30-day period, and paid plans are unlimited (see [Spacelift's Intelligence docs](https://docs.spacelift.io/concepts/intelligence)).
+Because Intelligence is delivered over MCP inside Spacelift's own infrastructure, it inherits whatever policies, state, and workers your existing Spacelift setup already has, meaning your Rego-based policy checks and approval flows still apply to anything the assistant proposes. Pricing is metered: the free plan includes a $10 AI token budget per 30-day period, paid plans get unlimited usage, and Intent's own natural-language requests draw on your own AI client rather than this budget (see [Spacelift's Intelligence docs](https://docs.spacelift.io/concepts/intelligence)).
 
 **Best for:** teams already running GitOps-native Terraform or OpenTofu pipelines through Spacelift who want a conversational layer on top of a governance model they already trust.
 
@@ -137,9 +139,9 @@ Because Intelligence is delivered over MCP inside Spacelift's own infrastructure
 
 ### Upbound and Crossplane control planes
 
-Upbound, the company behind the open-source [Crossplane](https://www.crossplane.io/) project, brings AI into its control-plane model rather than into a chat interface. Its [Intelligent Control Planes guide](https://docs.upbound.io/guides/intelligent-control-planes) describes LLM-enabled composition functions, built on Claude, that provide AI-powered status transformers and contextual error analysis inside a Crossplane composition, with automated remediation suggestions when something fails. This sits on top of [Upbound Platform v3](https://upbound.io/blog/announcing-upbound-v3-one-view-api-and-governance-model-for-every-control-plane-you-run), Upbound's unified API and governance model for every control plane an organization runs. As of this writing, Upbound's own documentation describes hosted SaaS availability for these capabilities as forthcoming, so confirm current availability directly with Upbound before planning around it.
+Upbound, the company behind the open-source [Crossplane](https://www.crossplane.io/) project, brings AI into its control-plane model rather than into a chat interface. Its [Intelligent Control Planes guide](https://docs.upbound.io/guides/intelligent-control-planes) describes LLM-enabled composition functions, leveraging Claude, that provide AI-powered status transformers and contextual error analysis inside a Crossplane composition, with automated remediation suggestions when something fails. These functions run alongside [Upbound Platform v3](https://upbound.io/blog/announcing-upbound-v3-one-view-api-and-governance-model-for-every-control-plane-you-run), Upbound's single view, API, and governance model for every control plane an organization runs. As of this writing, Upbound's own documentation describes hosted SaaS availability for these capabilities as forthcoming, so confirm current availability directly with Upbound before planning around it.
 
-The strength worth taking seriously here is that Upbound invented the pattern everyone else is now approximating: Kubernetes-native, declarative, multi-control-plane governance at fleet scale, which is a different and in some ways more mature governance model than a conversational agent bolted onto an existing tool.
+The strength worth taking seriously here is that Upbound builds on [Crossplane](https://www.crossplane.io/), which pioneered Kubernetes-native, declarative, multi-control-plane governance at fleet scale years before AI entered the picture, and now runs in production at organizations including Apple, Nike, and JPMorgan Chase. That is a different and in some ways more mature governance model than a conversational agent bolted onto an existing tool.
 
 **Best for:** organizations already standardized on Crossplane and Kubernetes as their control-plane substrate.
 
@@ -151,7 +153,7 @@ Change agents plan and apply infrastructure. A separate, growing category respon
 
 ### Azure SRE Agent
 
-[Azure SRE Agent](https://azure.microsoft.com/en-us/products/sre-agent) reached general availability in 2026 after a preview period with Microsoft's own teams and early customers. It performs automated root-cause analysis and assists with incident response against Azure resources, reading telemetry and logs to narrow down what changed and why, rather than proposing infrastructure changes proactively the way a change agent does.
+[Azure SRE Agent](https://azure.microsoft.com/en-us/products/sre-agent) reached [general availability in March 2026](https://techcommunity.microsoft.com/blog/appsonazureblog/announcing-general-availability-for-the-azure-sre-agent/4500682) after a preview period with Microsoft's own teams and early customers. It performs automated root-cause analysis and assists with incident response against Azure resources, reading telemetry and logs to narrow down what changed and why, rather than proposing infrastructure changes proactively the way a change agent does.
 
 **Best for:** Azure-native teams that want automated triage without adopting a separate, multi-cloud incident tool.
 
@@ -175,7 +177,7 @@ Not every entry in this category is itself an agent. Some are the plumbing that 
 
 ### HashiCorp Terraform and Vault MCP servers
 
-HashiCorp's approach in 2026 has been to build governed access for other agents rather than ship its own autonomous change agent. The [Terraform MCP server](https://developer.hashicorp.com/terraform/mcp-server) gives any MCP-compatible agent real-time access to Terraform Registry documentation, modules, and policies, so generated HCL reflects current provider schemas instead of a model's training-data snapshot; it can also create and, with approval, apply a plan, and supports a plan-only mode for teams that want proposals without execution access.
+HashiCorp's approach in 2026 has been to build governed access for other agents rather than ship its own autonomous change agent. The [Terraform MCP server](https://developer.hashicorp.com/terraform/mcp-server) gives any MCP-compatible agent real-time access to Terraform Registry documentation, modules, and Sentinel policies, so generated HCL reflects current provider schemas instead of a model's training-data snapshot; it can also create and, with approval, apply a plan, and supports a plan-only mode for teams that want proposals without execution access.
 
 Alongside it, HashiCorp added [native AI agent support in Vault](https://www.hashicorp.com/en/blog/announcing-native-ai-agent-support-in-hashicorp-vault) in May 2026, framed as agentic identity and access management: trusted identities for agents, delegated authorization, and fine-grained access through an Agent Registry, available on Vault Enterprise. A companion [Vault MCP server](https://developer.hashicorp.com/vault/docs/ai/mcp-server/overview) exposes secrets and policy context the same way. This is a credible, enterprise-security-first answer to a question most agentic-infrastructure vendors haven't addressed yet: whose credentials is the agent actually using, and who is accountable for its actions in an audit?
 
@@ -224,7 +226,7 @@ Adoption is accelerating faster than trust is catching up, which is exactly why 
 - Gartner projects that [up to 40% of enterprise applications will feature task-specific AI agents by 2026](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025), up from less than 5% in 2025.
 - Gartner separately expects spending on [AI governance platforms to reach $492 million in 2026 and surpass $1 billion by 2030](https://www.gartner.com/en/newsroom/press-releases/2026-02-17-gartner-global-ai-regulations-fuel-billion-dollar-market-for-ai-governance-platforms), as regulation pushes organizations to formalize how they oversee AI systems, agents included.
 - In Stack Overflow's [2025 Developer Survey](https://survey.stackoverflow.co/2025/ai), more developers actively distrust the accuracy of AI tools (46%) than trust it (33%), which is the trust gap every guardrail in this article exists to close.
-- CNCF's [2025 Annual Cloud Native Survey](https://www.cncf.io/reports/the-cncf-annual-cloud-native-survey/) found 66% of container users already run generative AI workloads on Kubernetes, which is a large share of the infrastructure these agents will increasingly touch.
+- CNCF's [2025 Annual Cloud Native Survey](https://www.cncf.io/reports/the-cncf-annual-cloud-native-survey/) found 66% of organizations hosting generative AI models use Kubernetes to manage some or all of their inference workloads, which is a large share of the infrastructure these agents will increasingly touch.
 
 Read together, these numbers describe a category moving faster than most organizations' governance has caught up to, which is exactly the gap a preview step, a policy gate, and a scoped identity are built to close.
 
@@ -240,7 +242,7 @@ A change agent plans and applies infrastructure changes, such as Pulumi Neo, env
 
 ### Can an infrastructure agent make changes without human approval?
 
-It depends entirely on the tool's configuration, not just its capability. Every credible agent in this category supports a preview-and-approve workflow; whether an organization enables fully autonomous execution for narrow, low-risk changes is a policy decision each team makes deliberately, not a default any vendor should ship silently.
+It depends entirely on the tool's configuration, not just its capability. Every change agent in this article supports a preview-and-approve workflow; whether an organization enables fully autonomous execution for narrow, low-risk changes is a policy decision each team makes deliberately, not a default any vendor should ship silently.
 
 ### Does an infrastructure agent need its own credentials?
 
