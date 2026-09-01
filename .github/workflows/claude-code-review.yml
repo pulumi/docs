@@ -1845,7 +1845,7 @@ jobs:
       issues: write
       checks: write
       id-token: write
-      actions: read
+      actions: write # dispatch review-sentinel.yml after publishing (workflow_run carries no PR for dispatch/comment-triggered runs)
     env:
       ESC_ACTION_OIDC_AUTH: true
       ESC_ACTION_OIDC_ORGANIZATION: pulumi
@@ -2071,6 +2071,23 @@ jobs:
       # check, and an errored progress message. A CANCELLED publish is a
       # supersession (a newer run entered the concurrency group) and touches
       # nothing: the newer run owns all user-visible state.
+
+      # The Sentinel's workflow_run trigger resolves the PR from
+      # `workflow_run.pull_requests[]`, which is EMPTY when this workflow was
+      # started by workflow_dispatch (`#new-review`) or an issue comment — so
+      # after such a publish the check-run kept saying "no current review"
+      # (fork smoke, 2026-09-01). Poke it explicitly, like claude-update.yml.
+      # Loud on failure (a 403 from missing `actions: write` must show as a
+      # red step), non-fatal for the job.
+      - name: Re-evaluate Sentinel (v3)
+        if: steps.current.outputs.superseded == 'false'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ steps.current.outputs.pr }}"
+
       - name: Publish error trap
         if: failure() && steps.current.outputs.superseded == 'false'
         env:
