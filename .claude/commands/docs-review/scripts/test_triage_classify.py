@@ -185,8 +185,24 @@ def test_code_inside_existing_fence_is_not_trivial() -> None:
     before = len(_failures)
     path = "content/docs/iac/concepts/x.md"
 
-    # Fence marker visible as context: the edit is inside the block.
+    # Fence marker visible as context, PROSE-shaped body: only the marker can
+    # carry the signal, so this pins the fence-tracking half of the fix on
+    # its own (the review of PR #21309 noted a Java-bodied fixture here was
+    # also caught by the shape heuristic, leaving fence tracking untested).
+    # It inverts cleanly against the `prose` fixture below, which is the same
+    # shape with no marker and is asserted trivial.
     with_marker = [
+        " ```text",
+        " Set the region before you deploy.",
+        "-Use us-west-2 for the walkthrough.",
+        "+Use us-east-1 for the walkthrough.",
+        " Then run the deploy command.",
+    ]
+    r = run_classify(_pr(1, 1, [path]), _md_diff(path, with_marker))
+    check(r["trivial"] is False, f"a prose edit under a visible fence marker is not trivial; got {r}")
+
+    # Both signals at once: marker visible AND code-shaped body.
+    with_marker_code = [
         " ```java",
         " class AwsS3Website extends ComponentResource {",
         "-    public AwsS3Website(String name) {",
@@ -194,8 +210,8 @@ def test_code_inside_existing_fence_is_not_trivial() -> None:
         "         super(\"pkg:index:AwsS3Website\", name);",
         "     }",
     ]
-    r = run_classify(_pr(1, 1, [path]), _md_diff(path, with_marker))
-    check(r["trivial"] is False, f"an edit under a visible fence marker is not trivial; got {r}")
+    r = run_classify(_pr(1, 1, [path]), _md_diff(path, with_marker_code))
+    check(r["trivial"] is False, f"a code edit under a visible fence marker is not trivial; got {r}")
 
     # Hunk starts mid-fence: no marker in view, but the lines are code-shaped.
     mid_fence = [
