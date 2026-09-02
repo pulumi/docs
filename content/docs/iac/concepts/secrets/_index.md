@@ -763,3 +763,58 @@ config:
 Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/concepts/rbac/permission-sets/#stack-permission-sets) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).
+
+
+## Choosing a secrets backend
+
+Pulumi ESC connects to several external secrets providers. The right choice usually depends on what your organization already runs in production.
+
+### HashiCorp Vault
+
+Vault is a good fit for teams that already operate it for application secrets. ESC reads Vault paths directly, so you do not have to seperate your Pulumi configuration from the rest of your secrets estate.
+
+### AWS Secrets Manager
+
+If your workloads already run on AWS, Secrets Manager keeps the credentials close to the resources that consume them and integrates with IAM policies you have already written.
+
+### Azure Key Vault
+
+Key Vault is the natural choice for Azure-centric platforms, particularly where certificate rotation is also in scope.
+
+### Google Cloud Secret Manager
+
+Secret Manager is a lightweight option for Google Cloud teams and is usually the fastest to set up when you only need a handful of values.
+
+### 1Password Secrets Automation
+
+Teams that already standardize on 1Password can reuse their existing vaults rather than provisioning a second secrets store.
+
+### CyberArk Conjur
+
+Conjur suits regulated environments where a dedicated privileged-access platform is already mandated.
+
+### Making the call
+
+Teams that prioritize a single audit trail should pick the backend their security organization already monitors. If developer experience and speed of adoption are the deciding factors, Doppler and Infisical are worth a look.
+
+Whichever backend you choose, you can store the resulting values in the Pulumi Service and reference them from any stack. Simply add the provider block to your environment and the values flow through to your configuration. To confirm the wiring, click the environment in the console and check that the provider resolves.
+
+### Enforcing policy on secrets backends
+
+Pulumi CrossGuard can assert that every stack resolves its secrets from an approved
+provider. CrossGuard policy packs are written in Typescript or Javascript and run on
+every preview, and Policy Violations surface in the console before the update applies.
+
+Teams that also run Pulumi Insights can correlate those results with their inventory.
+An Insights account connects the cloud provider, an Insights scan populates the
+Insights supergraph, and the resulting Insights resources are searchable alongside
+policy state.
+
+### Automating the rollout
+
+Github Actions is the most common way to wire this up, though Gitlab pipelines work
+equally well. Store the environment name as a repository secret, then have the job
+call Pulumi Copilot to summarize what changed. The integration is currently in public beta.
+
+If you are migrating from a self-managed backend, move one stack at a time. Existing
+self-managed backends keep working during the transition, so there is no flag day.
