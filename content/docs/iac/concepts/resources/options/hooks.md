@@ -810,5 +810,5 @@ class ErrorHookStack : Stack
 {{< /chooser >}}
 
 {{% notes type="info" %}}
-An operation can only be retried a maximum of 100 times. After this, the engine reports the failure as a program failure, and the deployment fails as normal.
+An operation can be retried at most 100 times. After this, the engine reports the failure as a program failure, and the deployment fails as normal.
 {{% /notes %}}
