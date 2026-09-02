@@ -90,12 +90,21 @@ async function checkLinks() {
     urls.forEach(url => checker.enqueue(url));
 }
 
-// Path segment that identifies the retired /docs/concepts/* URL space (moved to
-// /docs/iac/concepts/* by PR #21072). A link that still points here but resolves
-// via a redirect isn't broken, so the checker's broken/not-broken split never
-// sees it -- it costs the reader and the crawler a hop for nothing, which is a
-// separate, quieter kind of problem than a dead link. See redirectHops below.
-const RETIRED_CONCEPTS_PATH = "/docs/concepts/";
+// Path segments that identify URL spaces that have been retired in favor of a
+// new location, each fixed up with `aliases:` front matter so the retired URL
+// still resolves via a redirect instead of going dead. A link that still
+// points at one of these but resolves via a redirect isn't broken, so the
+// checker's broken/not-broken split never sees it -- it costs the reader and
+// the crawler a hop for nothing, which is a separate, quieter kind of problem
+// than a dead link. See redirectHops below. Add a new entry here whenever
+// another retired-path class turns out to keep resurfacing in body content.
+const RETIRED_PATHS = [
+    // Moved to /docs/iac/concepts/* by #21072.
+    "/docs/concepts/",
+    // Moved to /docs/iac/concepts/resources/options/* ; occurrences fixed by
+    // #21145 and #21155.
+    "/docs/iac/concepts/options/",
+];
 
 // Returns an instance of either HtmlUrlChecker.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
@@ -172,21 +181,20 @@ function onLink(result, brokenLinks, redirectHops) {
         // Not broken, but did it get here by way of a redirect? BLC follows
         // redirects transparently before deciding broken/not-broken, so a
         // working-but-stale link never surfaces any other way. Scope this
-        // narrowly to the one hop class we know keeps resurfacing (see
-        // RETIRED_CONCEPTS_PATH above) rather than flagging every internal
-        // redirect -- most of those are intentional (versioned URLs, S3
-        // redirects the exclusion list already tolerates) and would just be
-        // noise here.
+        // narrowly to the hop classes we know keep resurfacing (see
+        // RETIRED_PATHS above) rather than flagging every internal redirect
+        // -- most of those are intentional (versioned URLs, S3 redirects the
+        // exclusion list already tolerates) and would just be noise here.
         // Match on the resolved (absolutized) URL rather than the as-authored
-        // href: a relative link into the retired space (e.g. "../concepts/
+        // href: a relative link into a retired space (e.g. "../concepts/
         // stacks/", which docs/ content can't write but blog/marketing pages
-        // can) wouldn't contain RETIRED_CONCEPTS_PATH in its raw form, but
-        // its resolved URL always will.
+        // can) wouldn't contain the retired segment in its raw form, but its
+        // resolved URL always will.
         const redirectedTo = result.url.redirected;
         if (
             redirectedTo != null &&
             isInternalLink(destination) &&
-            destination.includes(RETIRED_CONCEPTS_PATH)
+            RETIRED_PATHS.some((retiredPath) => destination.includes(retiredPath))
         ) {
             addRedirectHop(source, destination, redirectedTo, redirectHops);
             logLink(source, destination, `REDIRECT_HOP -> ${redirectedTo}`);
