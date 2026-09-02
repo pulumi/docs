@@ -680,6 +680,9 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
                     _try_label(gh, pr_number, gh.remove_label, AUTHOR_STALLED_LABEL)
                 state["warns"] = []
                 persisted = save_state(pr_number, state, evidence_uri, state_dir) if not dry_run else True
+                if not persisted:
+                    warn(f"PR #{pr_number}: state NOT persisted to {evidence_uri} — the stale-label "
+                         "clear will be retried next sweep")
                 run_actions.append({"pr": pr_number, "kind": None, "head_sha": head_sha,
                                     "changed": True,
                                     "actions": [{"type": "clear_stale_author_warn"}],
