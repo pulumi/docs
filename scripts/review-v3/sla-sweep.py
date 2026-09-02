@@ -718,6 +718,23 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
 # ---- CLI ----------------------------------------------------------------
 
 
+def resolve_mutation_mode(uri: str, dry_run: bool, allow_local_state: bool) -> tuple[bool, str | None]:
+    """Whether this run may mutate, given where its state can live.
+
+    State is what makes the sweep idempotent: a warn or an escalation that
+    isn't durably recorded is re-issued on the next sweep — every two
+    hours, on every stalled PR at once. On a CI runner "locally recorded"
+    state dies with the job, so no durable URI ⇒ the run is forced to
+    dry-run, loudly. `--allow-local-state` is the developer override for a
+    laptop whose --state-dir persists between runs.
+    """
+    if dry_run or uri or allow_local_state:
+        return dry_run, None
+    return True, (f"{EVIDENCE_URI_ENV} unset and --allow-local-state not given: mutations without "
+                  "durable state would be re-issued every sweep, so this run is DRY-RUN "
+                  "(nothing labeled, commented, closed, or escalated)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--repo")
@@ -725,6 +742,9 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--state-dir", default=DEFAULT_STATE_DIR,
                          help="local mirror of the pr-review/ state prefixes")
+    parser.add_argument("--allow-local-state", action="store_true",
+                         help="mutate even with no durable state URI (a persistent --state-dir "
+                              "on a developer machine); never on a CI runner")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
 
@@ -744,14 +764,19 @@ def main() -> int:
         return 1
 
     uri = os.environ.get(EVIDENCE_URI_ENV, "").strip()
-    if not uri:
-        warn(f"{EVIDENCE_URI_ENV} unset; state recorded locally only")
+    dry_run, forced = resolve_mutation_mode(uri, args.dry_run, args.allow_local_state)
+    if forced:
+        warn(forced)
+    elif not uri:
+        warn(f"{EVIDENCE_URI_ENV} unset; state recorded locally only (--allow-local-state)")
 
     gh = Gh(args.repo)
     record = sweep(
-        gh, config, now=datetime.now(timezone.utc), dry_run=args.dry_run,
+        gh, config, now=datetime.now(timezone.utc), dry_run=dry_run,
         state_dir=Path(args.state_dir), evidence_uri=uri,
     )
+    if forced:
+        record["forced_dry_run"] = forced
     print(json.dumps(record, indent=2))
     return 0
 

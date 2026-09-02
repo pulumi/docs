@@ -110,7 +110,7 @@ jobs:
           if [ -n "$BUCKET" ]; then
             echo "evidence_uri=s3://$BUCKET/pr-review" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::state bucket output unavailable; sla-sweep.py will degrade to local-only state"
+            echo "::warning::state bucket output unavailable; sla-sweep.py forces DRY-RUN this cycle (mutations without durable state would repeat every sweep)"
           fi
 
       # Comment-noise safety: a manual dispatch always honors its own
