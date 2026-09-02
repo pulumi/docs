@@ -24,10 +24,12 @@ name: Staging deploy (PR)
 #   queue (`staging-stack` group, no cancel-in-progress). GitHub holds at
 #   most one PENDING run per group and silently drops the one a newer
 #   request displaces — and a dropped run never starts, so nothing inside
-#   it can post a notice. The honest alternative is up front: when a deploy
-#   is already running, the job tells the requester it is queued behind it
-#   and that a third request would displace this one, so they know to
-#   re-run `/deploy-staging` if no status ever lands.
+#   this workflow can post a notice for it (every job here sits in the
+#   group; a pending run executes no steps). So a displaced request is
+#   SILENT by design, and the contract is stated where the requester will
+#   see it: the 🚀 comment the job posts when it does start says that a
+#   request which never gets that comment was displaced and should be
+#   re-run once the current deploy finishes.
 
 on:
   issue_comment:
@@ -112,21 +114,14 @@ jobs:
           HEAD_REF: ${{ steps.gate.outputs.head_ref }}
         run: |
           set -euo pipefail
-          # Queue transparency (see the concurrency note in the header): if a
-          # deploy is already running, say so before dispatching — a run this
-          # one displaces from the pending slot never starts, so this is the
-          # only moment a notice can be posted.
-          BUSY=$(gh run list --repo "$REPO" --workflow testing-build-and-deploy.yml \
-                   --status in_progress --limit 1 --json url --jq '.[0].url // empty')
-          if [ -n "$BUSY" ]; then
-            gh api --method POST "repos/$REPO/issues/$PR/comments" \
-              -f body="⏳ A staging deploy is already running ($BUSY); this request is queued behind it. GitHub keeps one queued deploy at a time, so a newer \`/deploy-staging\` before that one finishes would drop this request silently — if no \`staging/pulumi-test-io\` status lands on \`${HEAD_SHA:0:9}\`, re-run \`/deploy-staging\`." >/dev/null
-          fi
           # The dispatch API returns nothing. Stamp the time first and select
           # the first workflow_dispatch run on this branch created after it —
           # `--limit 1` on the branch would happily pick up an earlier push
           # or /deploy-staging run and post ITS outcome as this head's status.
-          SINCE=$(date -u +%FT%TZ)
+          # Backed off 2 s: both sides are whole seconds and the compare is
+          # strict, so a run created in the stamp's own second would
+          # otherwise be excluded by its own timestamp.
+          SINCE=$(date -u -d '2 seconds ago' +%FT%TZ)
           gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF"
           RUN_ID=""
           for i in $(seq 1 12); do
@@ -135,7 +130,10 @@ jobs:
                        --branch "$HEAD_REF" --event workflow_dispatch --limit 10 \
                        --json databaseId,createdAt \
                        --jq "[.[] | select(.createdAt > \"$SINCE\")] | sort_by(.createdAt) | first | .databaseId // empty")
-            [ -n "$RUN_ID" ] && break
+            # `if … break` rather than `[ … ] && break`: under set -e the
+            # falsy AND-list as the loop's last command would make the `for`
+            # exit non-zero and skip the diagnostic below.
+            if [ -n "$RUN_ID" ]; then break; fi
           done
           if [ -z "$RUN_ID" ]; then
             echo "::error::could not locate the dispatched testing deploy run (no workflow_dispatch run on $HEAD_REF created after $SINCE within 60 s)"
@@ -147,7 +145,7 @@ jobs:
             -f target_url="$RUN_URL" \
             -f description="staging deploy running" >/dev/null
           gh api --method POST "repos/$REPO/issues/$PR/comments" \
-            -f body="🚀 Staging deploy of \`$HEAD_REF\` @ \`${HEAD_SHA:0:9}\` started: $RUN_URL — the \`staging/pulumi-test-io\` status lands here when it finishes. (Next merge to master resets pulumi-test.io.)" >/dev/null
+            -f body="🚀 Staging deploy of \`$HEAD_REF\` @ \`${HEAD_SHA:0:9}\` started: $RUN_URL — the \`staging/pulumi-test-io\` status lands here when it finishes. (Next merge to master resets pulumi-test.io. Requests queue one deep on the shared stack: a \`/deploy-staging\` that never gets this comment was displaced by a newer one — re-run it once the current deploy finishes.)" >/dev/null
 
           if gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
             STATE=success; DESC="staging deploy green"

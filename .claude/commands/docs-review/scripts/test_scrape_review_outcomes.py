@@ -400,7 +400,8 @@ def test_v3_undecided_everything_still_open():
 
 def test_v3_review_state_answered_fixed_refuted_accepted_bulk():
     body = v3_answered_author({
-        "F1": ("fixed", "", False),
+        # F1 is a BULK fix (`/resolve all fixed`): bulk, but not an acceptance.
+        "F1": ("fixed", "", True),
         "F2": ("refuted", "style rule doesn't apply here", False),
         "F3": ("accepted", "shipping as-is", True),
     })
@@ -408,6 +409,8 @@ def test_v3_review_state_answered_fixed_refuted_accepted_bulk():
     o = rec["outcomes"]
     assert o["fixed"] == 1
     assert o["author_accepted"] == 1
+    # bulk_accepted ⊆ author_accepted: the bulk fix on F1 must not count, or
+    # the digest's bulk-accept rate (bulk / accepted) exceeds 100%.
     assert o["bulk_accepted"] == 1, o
     assert o["reviewer_check_open"] == 1  # F4 untouched by any disposition
     # F2 is disposition=refuted but structurally still sits in 🚨 Outstanding
