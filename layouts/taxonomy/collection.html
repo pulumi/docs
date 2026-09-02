@@ -32,7 +32,15 @@
                     <div class="mt-8 mb-12">
                         <ul class="flex flex-col lg:flex-row lg:flex-wrap list-none p-0 rounded-md">
                             {{ $perRow := 3 }}
-                            {{ range $index, $item := .Pages }}
+                            {{/* Iterate the taxonomy's weighted pages (ordered by `collections_weight`)
+                                 rather than `.Pages`. A term's `.Pages`/`.RegularPages` excludes
+                                 branch (`_index.md` section) members once anything evaluates
+                                 `.RegularPagesRecursive` on the term first (e.g. the sitemap rollup in
+                                 layouts/_default/sitemap.xml, added in #21036) — which drops every
+                                 tutorial from collections whose members are all sections (learn-pulumi).
+                                 The taxonomy object always retains section members. */}}
+                            {{ range $index, $weighted := (index site.Taxonomies.collections $id) }}
+                                {{ $item := $weighted.Page }}
                                 <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
                                     <div class="card bg-white shadow-lg p-6 w-full h-full">
                                         <div class="mb-2 pb-2 border-b border-gray-200">
@@ -47,16 +55,16 @@
                                         </p>
                                         <div class="inline-flex flex-wrap gap-2 text-sm">
                                             {{ $estimated_time := 0 }}
-                                            {{ if .Pages }}
-                                                {{ range $topic := .Pages }}
+                                            {{ if $item.Pages }}
+                                                {{ range $topic := $item.Pages }}
                                                     {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
                                                 {{ end }}
                                                 <div class="text-gray-700 px-2 py-1 border border-violet-400 rounded">
                                                     {{ partial "icon.html" (dict "name" "file-text" "class" "mr-0.5 text-violet-400") }}
-                                                    <span>{{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }}</span>
-                                                </div>    
+                                                    <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
+                                                </div>
                                             {{ else }}
-                                                {{ $estimated_time = .Params.estimated_time }}
+                                                {{ $estimated_time = $item.Params.estimated_time }}
                                             {{ end }}
                                             <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
                                                 {{ partial "icon.html" (dict "name" "clock" "class" "mr-0.5 text-gray-600") }}
