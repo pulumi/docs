@@ -457,18 +457,28 @@ def test_workflow_never_checks_out_pr_code():
 
 # ---- Standalone harness --------------------------------------------------
 
-ALL_TESTS = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
-
-
 def run_standalone() -> int:
+    """The --self-test harness. The test list is bound at call time, not at
+    module level: a module-level binding only sees the tests defined above
+    it, and silently drops any added below (the SLA sweep's harness ran 12
+    of 19 that way). Fixture-taking tests are pytest-only and are skipped
+    by name here; `pytest scripts/review-v3/` collects everything."""
+    import inspect  # noqa: PLC0415
+    all_tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failures = 0
-    for t in ALL_TESTS:
+    for t in all_tests:
+        if inspect.signature(t).parameters:
+            print(f"  skip: {t.__name__} (pytest fixtures; run via pytest)")
+            continue
         try:
             t()
             print(f"  ok: {t.__name__}")
         except AssertionError as exc:
             failures += 1
             print(f"  FAIL: {t.__name__}: {exc}", file=sys.stderr)
+        except Exception as exc:  # noqa: BLE001 — a crash is a failure, not a harness abort
+            failures += 1
+            print(f"  FAIL: {t.__name__}: {type(exc).__name__}: {exc}", file=sys.stderr)
     if failures:
         print(f"{failures} sentinel test(s) failed", file=sys.stderr)
         return 1
