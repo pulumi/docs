@@ -1950,13 +1950,13 @@ jobs:
           }
           LEDGER=$(resolve contentReviewLedgerBucketName)
           EVIDENCE=$(resolve reviewEvidenceBucketName)
-          ENDPOINT=$(resolve reviewEvidenceWebsiteEndpoint)
+          BASE_URL=$(resolve reviewEvidenceBaseUrl)
           [ -n "$LEDGER" ] || echo "::warning::ledger bucket unresolved; evidence records will be local/artifact only"
           [ -n "$EVIDENCE" ] || echo "::warning::evidence-page bucket unresolved (infra not deployed yet?); comments will link the workflow run"
           {
             echo "ledger=$LEDGER"
             echo "evidence=$EVIDENCE"
-            echo "endpoint=$ENDPOINT"
+            echo "base_url=$BASE_URL"
           } >> "$GITHUB_OUTPUT"
 
       - name: Record evidence
@@ -1989,19 +1989,22 @@ jobs:
         id: evidence-page
         env:
           EVIDENCE_BUCKET: ${{ steps.buckets.outputs.evidence }}
-          ENDPOINT: ${{ steps.buckets.outputs.endpoint }}
+          BASE_URL: ${{ steps.buckets.outputs.base_url }}
         run: |
           PR="${{ steps.current.outputs.pr }}"
           SHA="${{ steps.current.outputs.head_sha }}"
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           python3 scripts/review-v3/render-evidence-html.py \
             --evidence .review-evidence.json --output .review-evidence.html
-          if [ -n "$EVIDENCE_BUCKET" ] && [ -n "$ENDPOINT" ]; then
+          if [ -n "$EVIDENCE_BUCKET" ] && [ -n "$BASE_URL" ]; then
             aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/$SHA.html" \
               --content-type "text/html; charset=utf-8"
             aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/latest.html" \
               --content-type "text/html; charset=utf-8"
-            echo "url=http://$ENDPOINT/$PR/latest.html" >> "$GITHUB_OUTPUT"
+            # HTTPS REST URL of the object — the bucket is deliberately not a
+            # static website (its endpoint is HTTP-only and the bucket policy
+            # denies non-TLS requests).
+            echo "url=$BASE_URL/$PR/latest.html" >> "$GITHUB_OUTPUT"
           else
             echo "url=$RUN_URL" >> "$GITHUB_OUTPUT"
           fi
