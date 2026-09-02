@@ -596,7 +596,10 @@ def scrape_body_v3(author_body: str, brief_body: str, merged: bool, head_sha: st
     outcome_counts = {k: 0 for k in ALL_OUTCOME_KEYS}
     for f in findings:
         outcome_counts[f["outcome"]] += 1
-        if f.get("bulk"):
+        # `bulk_accepted` ⊆ `author_accepted` by definition (see the key
+        # docs above): a `/resolve all fixed` is bulk but not an acceptance,
+        # and counting it here let the digest's bulk-accept rate exceed 100%.
+        if f.get("bulk") and f["outcome"] == "author_accepted":
             outcome_counts["bulk_accepted"] += 1
     disputes = [
         {**f["disputed"], "finding": f["text"]} for f in findings if f.get("disputed")
