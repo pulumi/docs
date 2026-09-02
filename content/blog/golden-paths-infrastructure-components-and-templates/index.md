@@ -45,7 +45,7 @@ To understand where golden paths fit into an [Internal Developer Platform (IDP)]
 
 This is the foundation: raw cloud resources include VMs, databases, networks, and storage, which are the fundamental building blocks from AWS, Azure, GCP, and other providers. Pulumi gives you programmatic access to these resources through [native providers](/registry/), but working at this level requires deep infrastructure knowledge.
 
-### Layer 2: Platform Layer - Components
+### Layer 2: Platform layer - components
 
 This is where the magic happens. [Pulumi Components](/docs/iac/concepts/components/) take those raw resources and package them into higher-level abstractions. Instead of manually configuring 20+ AWS resources for a secure web application, you create a component that handles all that complexity and exposes just the configuration that matters:
 
@@ -250,7 +250,7 @@ Organizations typically progress through three stages of golden path maturity:
 - Metrics track adoption and success
 - Continuous improvement based on feedback
 
-### What Makes a Golden Path Golden?
+### The characteristics of a golden path
 
 Drawing from [Spotify's pioneering work](https://engineering.atspotify.com/2020/08/how-we-use-golden-paths-to-solve-fragmentation-in-our-software-ecosystem/), golden paths share these characteristics:
 
@@ -791,7 +791,7 @@ The terms describe the same idea from two engineering cultures: Spotify populari
 
 ### What makes a golden path different from a service catalog?
 
-A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because most popular ones solve catalog and discovery problems without ever provisioning anything themselves.
+A service catalog gives developers a menu; a golden path gives them a paved road. The distinction matters once you start comparing platform-engineering tools, because popular catalog and portal tools often solve discovery problems without ever provisioning anything themselves.
 
 Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
 
