@@ -22,7 +22,7 @@ The `hooks` resource option provides a set of resource hooks linked to a resourc
 Resource hooks are supported in TypeScript/JavaScript, Python, Go, and C#/.NET. Java and YAML do not support resource hooks.
 {{% /notes %}}
 
-Hooks can be attached to both custom resources and component resources. A hook attached to a component fires on the component's own create, update, and delete lifecycle events. Hooks are not automatically inherited by a component's child resources — attach hooks to each child individually if you want them to fire there as well.
+A hook attached to a component fires on the component's own create, update, and delete lifecycle events — not on those of its children. To run a hook for a child resource, attach it to that child directly.
 
 Each hook is a callback that gets invoked by the Pulumi engine. Hooks that execute before an action are called **before hooks** and have names beginning with `before` or `Before` depending on the language. Hooks that execute after an action are called **after hooks** and have names beginning with `after` or `After` depending on the language. Pulumi currently supports the following hook types:
 
@@ -32,7 +32,9 @@ Each hook is a callback that gets invoked by the Pulumi engine. Hooks that execu
 
 * *Delete hooks* are called before or after a resource is deleted. This may occur during the deletion of a resource due to a `destroy` or that resource's removal from the program, or as part of a resource replacement due to e.g. a change in an immutable property.
 
-When a hook is executed as part of a resource operation, it receives the resource's [URN](/docs/iac/concepts/resources/names/#urns) and ID, as well as any relevant input and output properties. Hooks may return errors. If a before hook returns an error, the action it precedes will *not* be executed and the Pulumi operation will fail with that error. If an after hook returns an error, the underlying resource operation has already completed and is recorded in the state, but the deployment is then failed. To opt out of this behavior and instead log a warning and continue, set the [`ignoreErrors`](#ignoring-hook-errors) option on the hook. The table below illustrates the combinations of inputs, outputs, and error behaviors for each hook type:
+In addition to these before/after hooks, [error hooks](#error-hooks) run when a resource operation fails and can ask the engine to retry it.
+
+When a hook is executed as part of a resource operation, it receives the resource's [URN](/docs/iac/concepts/resources/names/#urns) and ID, as well as any relevant input and output properties. Hooks may return errors. If a before hook returns an error, the action it precedes is *not* executed and the Pulumi operation fails with that error. If an after hook returns an error, the underlying resource operation has already completed and is recorded in the state, but the deployment then fails. To opt out of this behavior and instead log a warning and continue, set the [`ignoreErrors`](#ignoring-hook-errors) option on the hook. The table below illustrates the combinations of inputs, outputs, and error behaviors for each hook type:
 
 | Hook type     | Old inputs | New inputs | Old outputs | New outputs | Error behavior                                 |
 |---------------|------------|------------|-------------|-------------|------------------------------------------------|
@@ -361,15 +363,12 @@ nohup python3 -m http.server 80 &`
 
 ```csharp
 using System;
-
+using System.Net.Http;
 using System.Threading.Tasks;
-using Pulumi;
 
+using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
-using Pulumi.Command.Local;
-using System.Diagnostics;
-using System.Collections.Generic;
 
 class Program
 {
@@ -507,9 +506,9 @@ nohup python3 -m http.server 80 &";
 
 ## Ignoring hook errors
 
-By default, when any hook (before or after) returns an error, the Pulumi deployment fails. For after hooks, the underlying resource operation has already succeeded by the time the hook runs, so its result is recorded in the state before the deployment is failed.
+By default, when any hook (before or after) returns an error, the Pulumi deployment fails. For after hooks, the underlying resource operation has already succeeded by the time the hook runs, so its result is recorded in the state before the deployment fails.
 
-If a hook failure should not be treated as fatal — for example, a best-effort notification or audit step — set the `ignoreErrors` option when constructing the hook. Errors from that hook will then be logged as warnings and the deployment will continue.
+If a hook failure should not be treated as fatal — for example, a best-effort notification or audit step — set the `ignoreErrors` option when constructing the hook. Errors from that hook are logged as warnings and the deployment continues.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -621,15 +620,15 @@ To keep applying other resources after a hook failure on a single update, you ca
 
 ## Deletions and delete hooks
 
-In order for delete hooks to run successfully, Pulumi must have access to any necessary hooks at the time of the deletion. You should take the following actions to ensure that delete hooks run as expected:
+In order for delete hooks to run successfully, Pulumi must have access to any necessary hooks at the time of the deletion. The two bullets below are alternatives, not sequential steps — follow the one that matches how you are deleting the resources:
 
-* When removing resources from your program, first remove *only* the resources you wish to delete, *leaving any delete hooks in place*. Upon running e.g. `pulumi up`, Pulumi will delete the resources and run any relevant delete hooks. Once this operation is complete, you can then remove the delete hooks from your program.
+* **Deleting some resources with `pulumi up`.** When removing resources from your program, first remove *only* the resources you wish to delete, *leaving any delete hooks in place*. On the next `pulumi up`, Pulumi deletes the resources and runs any relevant delete hooks. Once this operation is complete, you can then remove the delete hooks from your program.
 
-* When running `pulumi destroy`, you must pass the `--run-program` flag to instruct Pulumi to run your program and register any hooks that are to be executed. If Pulumi detects that you are trying to `destroy` a stack that contains hooks _without_ the `--run-program` flag, it will fail with an error. See [Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/) for other situations where the flag is useful.
+* **Deleting a whole stack with `pulumi destroy`.** You must pass the `--run-program` flag to instruct Pulumi to run your program and register any hooks that are to be executed. If Pulumi detects that you are trying to `destroy` a stack that contains hooks _without_ the `--run-program` flag, it fails with an error. See [Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/) for other situations where the flag is useful.
 
 ## Error hooks
 
-Just as the other resource hooks can be executed before and after certain operations, you can also add hooks to run when operations fail. For example, to retry a failing resource registration, or to change the error-handling behavior based on the type of error encountered. The inputs and outputs received will depend on the operation that fails:
+Like the other resource hooks, which run before and after certain operations, you can also add hooks to run when operations fail. For example, to retry a failing resource registration, or to change the error-handling behavior based on the type of error encountered. The inputs and outputs received will depend on the operation that fails:
 
 | Failed operation | Old inputs | New inputs | Old outputs |
 |------------------|------------|------------|-------------|
@@ -637,7 +636,7 @@ Just as the other resource hooks can be executed before and after certain operat
 | `update`         | ✓          | ✓          | ✓           |
 | `delete`         | ✓          |            | ✓           |
 
-As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program.
+As well as the standard hook information and the name of the failing operation, error hooks also receive a list of errors encountered during previous runs (starting with the most recent). In other words, if a resource has failed three times, the hook receives three errors. The hook must then reply with a flag that determines whether to retry the operation, or whether to let the failure cascade and exit the program. Retries are capped: an operation can be retried at most 100 times, after which the deployment fails as normal.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -811,5 +810,5 @@ class ErrorHookStack : Stack
 {{< /chooser >}}
 
 {{% notes type="info" %}}
-An operation can only be retried a maximum of 100 times. After this, the engine will report the failure as a program failure, and the deployment will fail as normal.
+An operation can only be retried a maximum of 100 times. After this, the engine reports the failure as a program failure, and the deployment fails as normal.
 {{% /notes %}}
