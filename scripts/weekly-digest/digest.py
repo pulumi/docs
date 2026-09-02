@@ -290,8 +290,9 @@ def collect_v3_ops(since: str, review_outcomes: dict) -> dict:
     (by lane/role), author-staleness warns and closes, waives, and a
     bulk-accept rate.
 
-    Syncs `pr-review/state/`, `pr-review/runs/`, and `pr-review/waives/`
-    from the ledger bucket (see scripts/review-v3/README.md and
+    Syncs `pr-review/runs/` and `pr-review/waives/` from the ledger bucket
+    (`pr-review/state/` is the sweep's idempotency ledger and carries nothing
+    this summary reads, so it is neither synced nor load-bearing) (see scripts/review-v3/README.md and
     sla-sweep.py's module docstring for the run-record shape) and reduces
     the run records in-window. The bulk-accept rate is NOT a second scrape
     -- it's derived from the `review_outcomes` aggregate collect_review_outcomes()
@@ -310,7 +311,7 @@ def collect_v3_ops(since: str, review_outcomes: dict) -> dict:
     with tempfile.TemporaryDirectory() as tmp:
         cache = Path(tmp)
         load_bearing_ok = True
-        for prefix in ("state", "runs", "waives"):
+        for prefix in ("runs", "waives"):
             proc = subprocess.run(
                 ["aws", "s3", "sync", f"s3://{bucket}/pr-review/{prefix}/",
                  str(cache / prefix), "--no-progress"],
@@ -318,9 +319,8 @@ def collect_v3_ops(since: str, review_outcomes: dict) -> dict:
             )
             if proc.returncode != 0:
                 # waives/ may legitimately not exist yet (nobody has waived
-                # a v3 gate); only state/ and runs/ not syncing is fatal to
-                # this section.
-                if prefix in ("state", "runs"):
+                # a v3 gate); only runs/ not syncing is fatal to this section.
+                if prefix == "runs":
                     sys.stderr.write(
                         f"warning: aws s3 sync failed for pr-review/{prefix}/: {proc.stderr.strip()[:300]}\n"
                     )
