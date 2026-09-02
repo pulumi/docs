@@ -104,7 +104,9 @@ per config — the approving reviewer's review is the review. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The check summary embeds the
+summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The
+surface itself is `REVIEW_V3_COMMENTS` (repo default) or the `surface:v3`
+label (one PR in or out, regardless of the variable). The check summary embeds the
 reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
 strip into the author card naming the exact commands.
 

@@ -44,11 +44,18 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 
 > **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently.
 
+## Opt-in labels (set by humans)
+
+| Label | Color | Description |
+|---|---|---|
+| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the initial review lane and the `/resolve` listener; the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. |
+
 ## Create them all (`gh` one-liner)
 
 Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write access:
 
 ```bash
+gh label create "surface:v3"             --color 5319e7 --description "Opt this PR into the v3 review surface regardless of REVIEW_V3_COMMENTS"
 gh label create "domain:docs"            --color 0e8a16 --description "PR touches technical docs"
 gh label create "domain:blog"            --color a2eeef --description "PR touches blog posts or customer stories"
 gh label create "domain:infra"           --color d4c5f9 --description "PR touches workflows, scripts, infra, Makefile, build config, or the site build pipeline"
