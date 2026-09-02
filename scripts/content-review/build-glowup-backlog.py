@@ -13,8 +13,19 @@ backlog rather than a cold read:
      "clarity_flag": bool, "skipped_findings": int,
      "source_prs": [{"number": 123, "url": ...}, ...],
      "banked": [{"id": "pr123-findings-1", "section": "Findings not applied",
-                 "source_pr": 123, "text": "<the row/bullet>"}, ...],
+                 "source_pr": 123, "text": "<the row/bullet>",
+                 "finding": "<what was found>",
+                 "prior_disposition": "<why the earlier run left it>"}, ...],
      "notes": ["<degradation notes, if any>"]}
+
+`finding` and `prior_disposition` are the same row split in two, and the
+split is load-bearing: the finding is the work, the disposition is one
+earlier reviewer's reasoning about it — context, never direction. PR #21293
+(2026-09-01) executed a banked readthrough finding the July agent had
+declined as editorial, and PR #21291 promoted an aside inside a decline
+reason ("the page frames `pulumi convert` as primary") into a new claim.
+`split_finding` does the split for the legacy PR-body rows; the structured
+findings record carries the two fields directly from schema v2 on.
 
 Sources, in order of authority:
 
@@ -94,6 +105,102 @@ NOISE_PREFIX_RE = re.compile(
 # banked ..."), so match the invariant rather than either phrasing: it is the
 # line that points at the /glow-up command instead of describing a finding.
 TRAILER_RE = re.compile(r"`?/glow-up\s+content/", re.I)
+
+
+# ---- finding / disposition split ------------------------------------------
+
+DASH_RE = re.compile(r"\s+(?:\u2014|\u2013|--)\s+")
+ID_PREFIX_RE = re.compile(r"^`[^`]+`\s*(?:\u2014|\u2013|--)\s*")
+BOLD_RE = re.compile(r"^\*\*(.+?)\*\*\s*(.*)$", re.S)
+VERDICT_WORDS = (r"unverifiable|contradicted|mismatch|framing drift|framing-drift|"
+                 r"not-a-claim|verified|matches")
+# `<finding> — <verdict>[ (confidence)][.]` — the verdict tag is part of the
+# finding, not of the disposition, so a no-bold row splits after it.
+VERDICT_TAG_RE = re.compile(
+    r"\s+(?:\u2014|\u2013|--)\s+(?P<verdict>" + VERDICT_WORDS + r")\b"
+    r"(?:\s*\((?P<conf>high|medium|low)\))?(?:\s*\([^)]*\))?\.?\s*$", re.I)
+FINDING_HEAD_RE = re.compile(
+    r"^(?P<kind>Claim|Readthrough|Vale|Frontmatter)\b\s*(?P<qual>[^(:]*?)\s*"
+    r"(?:\((?P<paren>[^)]*)\))?\s*:\s*(?P<body>.*)$", re.S)
+
+
+def _strip_row_chrome(text: str) -> str:
+    t = str(text or "").strip()
+    t = re.sub(r"^[-*+]\s+", "", t)
+    return ID_PREFIX_RE.sub("", t).strip()
+
+
+def split_finding(text: str) -> tuple[str, str]:
+    """Split one banked row into (finding, prior_disposition).
+
+    Every shape the lane has produced is "<finding> — <why it was left>":
+    the composer's `- **<label>** — <reason>` bullet, the findings record's
+    `<label> — <detail>`, and a glow-up's `| \`id\` — **<label>** — … | #pr |
+    <why not executed> |` table row. The bold group is the finding when there
+    is one; otherwise the row splits after the verdict tag (`… — unverifiable`
+    belongs to the finding) or, failing that, at the first dash. A table
+    row's last cell is the disposition when it has three or more cells.
+    """
+    t = str(text or "").strip()
+    trailing = ""
+    if t.startswith("|"):
+        cells = [c.strip() for c in t.strip("|").split("|")]
+        if len(cells) >= 3:
+            trailing = cells[-1]
+        t = cells[0] if cells else ""
+    t = _strip_row_chrome(t)
+    m = BOLD_RE.match(t)
+    if m:
+        finding, rest = m.group(1).strip(), m.group(2).strip()
+        rest = re.sub(r"^(?:\u2014|\u2013|--)\s*", "", rest).strip()
+    else:
+        vt = VERDICT_TAG_RE.search(t)
+        if vt:
+            finding, rest = t, ""
+        else:
+            parts = DASH_RE.split(t, maxsplit=1)
+            finding = parts[0].strip()
+            rest = parts[1].strip() if len(parts) > 1 else ""
+            # `Claim (c7): text — unverifiable — detail`: the tag stays with
+            # the finding, the detail after it is the disposition.
+            head = DASH_RE.split(t)
+            for i in range(1, len(head)):
+                if re.match(r"^(?:" + VERDICT_WORDS + r")\b", head[i], re.I):
+                    finding = " \u2014 ".join(head[: i + 1]).strip()
+                    rest = " \u2014 ".join(head[i + 1:]).strip()
+                    break
+    if trailing and trailing.lower() not in NOISE_LINES:
+        rest = f"{rest}; {trailing}" if rest else trailing
+    return finding, rest
+
+
+def parse_finding(finding: str) -> dict:
+    """Structured view of a finding label: kind, claim id, anchor lines,
+    readthrough failure mode, the claim text without its verdict tag, and
+    the verdict the earlier run recorded (if the label carries one)."""
+    f = _strip_row_chrome(finding)
+    f = re.sub(r"^\*\*(.+?)\*\*.*$", r"\1", f, flags=re.S).strip()
+    out = {"kind": "other", "qualifier": "", "claim_id": None, "lines": [],
+           "text": f, "prior_verdict": None}
+    m = FINDING_HEAD_RE.match(f)
+    if not m:
+        return out
+    out["kind"] = m.group("kind").lower()
+    out["qualifier"] = (m.group("qual") or "").strip()
+    for tok in (m.group("paren") or "").split(","):
+        tok = tok.strip()
+        cm = re.fullmatch(r"c(\d+)", tok)
+        if cm:
+            out["claim_id"] = f"c{cm.group(1)}"
+            continue
+        out["lines"].extend(int(n) for n in re.findall(r"\d+", tok))
+    body = (m.group("body") or "").strip()
+    vt = VERDICT_TAG_RE.search(body)
+    if vt:
+        out["prior_verdict"] = vt.group("verdict").lower().replace(" ", "-")
+        body = body[: vt.start()].strip()
+    out["text"] = body.rstrip(".")
+    return out
 
 
 def log(msg: str) -> None:
@@ -287,16 +394,25 @@ def banked_from_findings(record: dict | None) -> list[dict]:
     for f in record.get("findings") or []:
         if not isinstance(f, dict) or f.get("applied"):
             continue
-        text = str(f.get("label") or "").strip()
+        disp = f.get("prior_disposition")
+        # Schema v2: a finding the composer pre-declined as superseded by a
+        # fresh re-verification is retired, not deferred — banking it again
+        # is the loop this split exists to close.
+        if isinstance(disp, dict) and disp.get("status") == "superseded":
+            continue
+        text = str(f.get("finding") or f.get("label") or "").strip()
         if not text:
             continue
         detail = str(f.get("detail") or "").strip()
+        reason = str((disp or {}).get("reason") or "").strip() if isinstance(disp, dict) else ""
         out.append({
             "id": f"findings-{f.get('id', len(out) + 1)}",
             "section": "Findings not applied",
             "source_pr": None,
             "source": "findings-record",
             "text": text + (f" — {detail}" if detail else ""),
+            "finding": text,
+            "prior_disposition": reason or detail,
         })
     return out
 
@@ -350,6 +466,7 @@ def build(article: dict, entry: dict, prs: list[dict],
         for section in wanted:
             declined = section == "Backlog declined"
             for i, text in enumerate(sections.get(section, []), start=1):
+                finding, disposition = split_finding(text)
                 item = {
                     "id": f"pr{number}-{section.lower().split()[0]}-{i}",
                     "section": section,
@@ -361,6 +478,8 @@ def build(article: dict, entry: dict, prs: list[dict],
                     # can see a decline loop forming.
                     "source": "glowup-declined" if declined else "pr-body",
                     "text": text,
+                    "finding": finding,
+                    "prior_disposition": disposition,
                 }
                 if declined:
                     item["declined_by_pr"] = number
@@ -602,6 +721,49 @@ def self_test() -> int:
     sections = extract_sections(body)
     check("findings section extracted",
           len(sections.get("Findings not applied", [])) == 2)
+
+    # --- finding vs. prior disposition ----------------------------------
+    # PR #21291 executed the aside inside a decline reason as if it were the
+    # finding; the split keeps the reason where the model can read it as
+    # context and never as the work.
+    f, d = split_finding(
+        "- **Claim (c23, L1115): Using the Pulumi MCP server is the recommended approach "
+        "for AI-assisted conversion \u2014 contradicted (medium).** \u2014 \"Recommended "
+        "approach\" is a positioning judgment; the page frames `pulumi convert` as primary "
+        "and MCP as an option for complex configs, and rebalancing that framing is editorial.")
+    check("composer bullet: bold group is the finding",
+          f.startswith("Claim (c23, L1115)") and f.endswith("contradicted (medium)."))
+    check("composer bullet: the reason after the bold is the disposition",
+          d.startswith("\"Recommended approach\" is a positioning judgment"))
+    pf = parse_finding(f)
+    check("parsed claim id, anchor line, verdict tag and bare text",
+          pf["kind"] == "claim" and pf["claim_id"] == "c23" and pf["lines"] == [1115]
+          and pf["prior_verdict"] == "contradicted"
+          and pf["text"] == "Using the Pulumi MCP server is the recommended approach for AI-assisted conversion")
+    f, d = split_finding(
+        "- **Readthrough self-redundancy (L36, 65-84): parameterized-provider rationale "
+        "restated across two sections.** \u2014 `local_repair`, but the proposed fix offers "
+        "two alternatives; deciding what to trim is editorial.")
+    pr_ = parse_finding(f)
+    check("readthrough label: failure mode and every anchor line",
+          pr_["kind"] == "readthrough" and pr_["qualifier"] == "self-redundancy"
+          and pr_["lines"] == [36, 65, 84] and d.startswith("`local_repair`"))
+    f, d = split_finding("Claim (c7): Native providers are not bridged \u2014 unverifiable "
+                         "\u2014 The cited URL is the bridge repo, which describes bridged providers.")
+    check("findings-record shape: the verdict tag stays with the finding",
+          f == "Claim (c7): Native providers are not bridged \u2014 unverifiable"
+          and d.startswith("The cited URL"))
+    f, d = split_finding("| `pr20984-backlog-1` \u2014 **Claim (c9)** \u2014 needs an SME "
+                         "| #20984 | Declined: no SME reachable this run. |")
+    check("glow-up declined row: id chrome dropped, last cell is the disposition",
+          f == "Claim (c9)" and "needs an SME" in d and "no SME reachable" in d)
+    f, d = split_finding("Consider restructuring the intro")
+    check("a bare line is all finding, no disposition", f == "Consider restructuring the intro" and d == "")
+    f, d = split_finding("- **Vale weasel word (L18): 'several' is a weasel word.** \u2014 generic nag.")
+    check("vale label parses its qualifier and line",
+          parse_finding(f)["qualifier"] == "weasel word" and parse_finding(f)["lines"] == [18])
+
+    # --- editorial stances are never banked ------------------------------
     check("an editorial stance is never banked",
           is_editorial_stance("- **Claim (c23, L1115): Using the Pulumi MCP server is the recommended "
                               "approach for AI-assisted conversion — contradicted (medium).** — editorial.")
