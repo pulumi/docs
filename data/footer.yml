@@ -23,8 +23,8 @@ columns:
       - label: Registry
         href: /registry/
         track: footer-apis
-      - label: Learn Pulumi
-        href: /learn/
+      - label: Dev Center
+        href: /dev/
         track: footer-learn
       - label: Events
         href: /events/

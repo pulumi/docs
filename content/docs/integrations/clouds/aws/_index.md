@@ -35,15 +35,15 @@ Pulumi provides several packages for working with AWS. Most projects combine mor
 
 ## Architecture templates
 
-[Pulumi templates](/learn/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new AWS projects from a pre-built template:
 
-- [Container service on AWS](/learn/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
-- [Serverless application on AWS](/learn/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
-- [Static website on AWS](/learn/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
-- [Virtual machine on AWS](/learn/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
-- [Kubernetes cluster on AWS](/learn/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
+- [Container service on AWS](/dev/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
+- [Serverless application on AWS](/dev/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
+- [Static website on AWS](/dev/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
+- [Virtual machine on AWS](/dev/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
+- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
 
 ## Guides
 

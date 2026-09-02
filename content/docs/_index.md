@@ -59,9 +59,9 @@ sections:
   heading: Learning Resources
   cards:
   - icon: compass
-    heading: Learn ↗
+    heading: Dev Center ↗
     description: Tutorials, templates, examples, and more for building real-world infrastructure with Pulumi.
-    link: /learn/
+    link: /dev/
 - type: button-cards
   heading: More Documentation
   cards:

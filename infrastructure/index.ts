@@ -55,7 +55,7 @@ const config = {
     // the guides stack to reference to route traffic to for `/guides` routes.
     guidesStack: stackConfig.get("guidesStack"),
 
-    learnStack: stackConfig.get("learnStack"),
+    devStack: stackConfig.get("devStack"),
 
     answersStack: stackConfig.get("answersStack"),
 
@@ -674,7 +674,7 @@ function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = [
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
 //
 // thirtyMinuteCachePolicy varies on the Accept header so /registry/*, /guides/*,
-// and /learn/* (which proxy to separate CDNs whose viewer-request functions do
+// and /dev/* (which proxy to separate CDNs whose viewer-request functions do
 // markdown content negotiation) cache HTML and markdown variants separately
 // at the apex layer. Without this, whichever variant populates the apex cache
 // first is served to every requester until TTL. Fragmentation is bounded to
@@ -957,17 +957,17 @@ if (config.guidesStack) {
     )
 }
 
-const learnOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
-const learnBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+const devOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-if (config.learnStack) {
-    const learnStack = new pulumi.StackReference(config.learnStack);
-    const learnCDN = learnStack.getOutput("cloudFrontDomain");
+if (config.devStack) {
+    const devStack = new pulumi.StackReference(config.devStack);
+    const devCDN = devStack.getOutput("cloudFrontDomain");
 
-    learnOrigins.push(
+    devOrigins.push(
         {
-            originId: learnCDN,
-            domainName: learnCDN,
+            originId: devCDN,
+            domainName: devCDN,
             customOriginConfig: {
                 originProtocolPolicy: "https-only",
                 httpPort: 80,
@@ -976,11 +976,11 @@ if (config.learnStack) {
             },
         }
     );
-    learnBehaviors.push(
+    devBehaviors.push(
         {
             ...baseCacheBehavior,
-            targetOriginId: learnCDN,
-            pathPattern: "/learn*",
+            targetOriginId: devCDN,
+            pathPattern: "/dev*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
@@ -1157,7 +1157,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         ...registryOrigins,
         ...guidesOrigins,
-        ...learnOrigins,
+        ...devOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
@@ -1189,7 +1189,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
         ...registryBehaviors,
         ...guidesBehaviors,
-        ...learnBehaviors,
+        ...devBehaviors,
         ...answersBehaviors,
 
         // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and

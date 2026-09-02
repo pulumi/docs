@@ -129,17 +129,17 @@ templates:
           description: Deploy serverless applications on AWS, Azure, or Google Cloud Platform.
           image: /images/kubecon/templates-serverless-application.png
           action: Try it
-          link: /learn/templates/serverless-application
+          link: /dev/templates/serverless-application
         - heading: Kubernetes Application Templates
           description: Build and deploy applications with programming languages and deploy them to your Kubernetes clusters.
           image: /images/kubecon/templates-kubernetes-application.png
           action: Try it
-          link: /learn/templates/kubernetes-application
+          link: /dev/templates/kubernetes-application
         - heading: Container Service Templates
           description: Pulumi program templates are the fastest way to deploy container services on AWS, Azure, or Google Cloud Platform.
           image: /images/kubecon/templates-container-service.png
           action: Try it
-          link: /learn/templates/container-service
+          link: /dev/templates/container-service
 
 workshops:
   - title: Designing Reusable Infrastructure as Code

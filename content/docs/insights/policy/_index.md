@@ -122,7 +122,7 @@ Choose your path based on your needs:
 - **Using the CLI?** See the [CLI reference](/docs/insights/policy/cli/) for `pulumi policy` commands to create, publish, and manage policy packs from the command line.
 - **Enforcing policies in CI/CD?** Learn how to [integrate policy enforcement](/docs/insights/policy/ci-cd/) into GitHub Actions, Google Cloud Build, and other CI/CD pipelines.
 - **Building custom tooling?** Explore the [API & SDK reference](/docs/insights/policy/api-reference/) for the Policy SDK and Pulumi Cloud REST API endpoints.
-- **Looking for tutorials?** Follow the [custom policy pack tutorial](/learn/tutorials/custom-policy-pack/) to create, validate, and publish a policy pack step by step. Or learn how to [evaluate Terraform compliance with Pulumi](/learn/tutorials/eval-compliance-terraform/).
+- **Looking for tutorials?** Follow the [custom policy pack tutorial](/dev/tutorials/custom-policy-pack/) to create, validate, and publish a policy pack step by step. Or learn how to [evaluate Terraform compliance with Pulumi](/dev/tutorials/eval-compliance-terraform/).
 - **Building an internal developer platform?** Explore advanced patterns including [policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests/), [validating component inputs using policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions/), and [cost control using components, policies, and constrained inputs](/docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/).
 
 For common questions and troubleshooting, see the [FAQ](/docs/support/faq/policies/).

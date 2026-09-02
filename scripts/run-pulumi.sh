@@ -34,7 +34,7 @@ case ${PULUMI_ACTION} in
             echo "Invalidating CloudFront cache for distribution ${DISTRIBUTION_ID}..."
             if aws cloudfront create-invalidation \
                 --distribution-id "${DISTRIBUTION_ID}" \
-                --paths "/docs/*" "/registry/*" "/blog/*" "/tutorials/*" "/learn/*" "/guides/*" "/product/*" "/pricing/*" "/contact/*" "/index.html" "/"; then
+                --paths "/docs/*" "/registry/*" "/blog/*" "/tutorials/*" "/dev/*" "/guides/*" "/product/*" "/pricing/*" "/contact/*" "/index.html" "/"; then
                 echo "CloudFront cache invalidation submitted successfully."
             else
                 echo "WARNING: CloudFront cache invalidation failed. Content will refresh within 30 minutes."

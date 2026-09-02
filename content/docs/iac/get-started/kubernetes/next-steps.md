@@ -40,13 +40,13 @@ With Pulumi ESC you can:
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-{{< get-started-next-step path="/learn/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
+{{< get-started-next-step path="/dev/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
 
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/learn/templates/static-website/) to [serverless applications](/learn/templates/serverless-application/), [virtual machines](/learn/templates/virtual-machine/), [container services](/learn/templates/container-service/), and [Kubernetes clusters](/learn/templates/kubernetes/).
+Deploy the most common cloud architectures, from [static websites](/dev/templates/static-website/) to [serverless applications](/dev/templates/serverless-application/), [virtual machines](/dev/templates/virtual-machine/), [container services](/dev/templates/container-service/), and [Kubernetes clusters](/dev/templates/kubernetes/).
 
-{{< get-started-next-step path="/learn/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
+{{< get-started-next-step path="/dev/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
 
 ## Dive into the docs
 

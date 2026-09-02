@@ -838,7 +838,7 @@ Hugo processes 46+ content directories:
 - `/content/product/` → Product pages
 - `/content/case-studies/` → Customer stories
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/learn` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1637,7 +1637,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| /learn* | Learn (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| /dev* | Dev Center (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |

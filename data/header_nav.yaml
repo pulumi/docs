@@ -69,8 +69,8 @@ items:
             description: Browse 170+ cloud providers and packages
             icon: package
             track: header-engineers-registry
-          - label: Learn Pulumi
-            href: /learn/
+          - label: Dev Center
+            href: /dev/
             description: Tutorials, templates, examples, and more
             icon: compass
             track: header-engineers-learn

@@ -93,16 +93,16 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
-## Learn lives in another repo
+## The Dev Center lives in another repo
 
-`/learn` — tutorials, templates, community examples, and the glossary — is **not** in this repo. It ships from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies `/learn*` to that distribution the same way it proxies `/registry` and `/guides`. Hugo's `content/tutorials/` and `content/templates/` trees were deleted when it launched; `scripts/redirects/learn-redirects.txt` 301s their URLs into `/learn`.
+`/dev` — tutorials, templates, community examples, and the glossary — is **not** in this repo. It ships from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies `/dev*` to that distribution the same way it proxies `/registry` and `/guides`. Hugo's `content/tutorials/` and `content/templates/` trees were deleted when it launched; `scripts/redirects/dev-redirects.txt` 301s their URLs into `/dev`.
 
 What that means when you work here:
 
 - **Don't add tutorial or template content to this repo.** A new tutorial, a new template page, or a glossary term goes to pulumi/marketing-web. (The `glossary` shortcode and `data/glossary.toml` are a *different*, docs-only glossary rendered at `/docs/glossary/` — that one stays.)
-- **Link to `/learn/tutorials/<slug>/`, `/learn/templates/<group>/[<cloud>/]`, and `/learn/glossary/<term>/`.** Never `/tutorials/` or `/templates/`; those only redirect.
-- **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes Learn's chrome. Both carry one Learn entry pointing at `/learn/`; the Tutorials, Templates, and Pulumi guides entries collapsed into it.
-- **Search does not cover Learn.** Docs search indexes this repo and the Registry only; `/learn` has its own search at `/learn/browse`. `scripts/search/update-search-index.js` deliberately doesn't fetch `/learn/search-index.json`, and there is no Learn facet in the docs search UI.
+- **Link to `/dev/tutorials/<slug>/`, `/dev/templates/<group>/[<cloud>/]`, and `/dev/glossary/<term>/`.** Never `/tutorials/` or `/templates/`; those only redirect.
+- **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes the Dev Center's chrome. Both carry one Dev Center entry pointing at `/dev/`; the Tutorials, Templates, and Pulumi guides entries collapsed into it.
+- **Search does not cover the Dev Center.** Docs search indexes this repo and the Registry only; `/dev` has its own search at `/dev/browse`. `scripts/search/update-search-index.js` deliberately doesn't fetch `/dev/search-index.json`, and there is no Dev Center facet in the docs search UI.
 
 ---
 

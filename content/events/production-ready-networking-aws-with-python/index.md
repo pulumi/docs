@@ -44,7 +44,7 @@ location: virtual
 description: |
     In this workshop you'll learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC. This pattern is incredibly useful for standing up separate environments for development, testing and production, providing workload isolation for multiple customers and standing up shared services.
 
-    This 200-level course will be taught in the Python language but the concepts apply to any modern programming language. The content builds upon Pulumi concepts from [learn.pulumi.com](/learn/tutorials/) and our Getting Started workshop series.
+    This 200-level course will be taught in the Python language but the concepts apply to any modern programming language. The content builds upon Pulumi concepts from [learn.pulumi.com](/dev/tutorials/) and our Getting Started workshop series.
 
 learn:
     - AWS networking concepts using Python
