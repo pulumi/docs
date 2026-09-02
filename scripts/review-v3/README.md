@@ -112,9 +112,19 @@ already wearing the label — free v3 test traffic that no human author
 sees, once the lane rewiring has merged (before that the label only reaches
 the `/resolve` listener). Order of operations: run the `gh label create`
 line for `surface:v3` first, then flip the variable — otherwise every bot
-PR takes the unlabeled fallback with a `::warning::`. The check summary embeds the
-reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
-strip into the author card naming the exact commands.
+PR takes the unlabeled fallback with a `::warning::`. The
+check summary embeds the reviewer brief (merge-box delivery), and on red the
+sentinel PATCHes a ⛔ strip into the author card naming the exact commands.
+
+**SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
+switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
+dispatch defaults to `dry_run`). Clocks are derived fresh from the GitHub
+timeline each sweep; only the actions taken are recorded, under
+`pr-review/state/<pr>.json` (per-PR idempotency: warns, closes, escalations
+keyed by clock epoch) and `pr-review/runs/<date>/<ts>.json` (immutable run
+records the weekly digest reduces). **Before flipping the switch, create the
+`review:author-stalled` label** (`.github/labels-pr-review.md` has the
+`gh label create` line) — the sweep applies it on the first author warn.
 
 `staging-deploy-pr.yml` makes G4's evidence: `/deploy-staging` (tools-team
 members only, same-repo branches only) dispatches the existing testing
