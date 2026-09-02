@@ -645,11 +645,11 @@ jobs:
             --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
           PAGES=$(pulumi -C infrastructure stack output reviewEvidenceBucketName \
             --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
-          ENDPOINT=$(pulumi -C infrastructure stack output reviewEvidenceWebsiteEndpoint \
+          BASE_URL=$(pulumi -C infrastructure stack output reviewEvidenceBaseUrl \
             --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
           [ -n "$LEDGER" ] && echo "evidence_uri=s3://$LEDGER/pr-review" >> "$GITHUB_OUTPUT"
           [ -n "$PAGES" ] && echo "pages_bucket=$PAGES" >> "$GITHUB_OUTPUT"
-          [ -n "$ENDPOINT" ] && echo "pages_endpoint=$ENDPOINT" >> "$GITHUB_OUTPUT"
+          [ -n "$BASE_URL" ] && echo "pages_base_url=$BASE_URL" >> "$GITHUB_OUTPUT"
           [ -z "$LEDGER" ] && echo "::warning::evidence bucket unresolved; publishing degraded (artifact only)"
           exit 0
 
@@ -668,7 +668,7 @@ jobs:
           HEAD_SHA: ${{ steps.head.outputs.sha }}
           PR_REVIEW_EVIDENCE_URI: ${{ steps.buckets.outputs.evidence_uri }}
           PAGES_BUCKET: ${{ steps.buckets.outputs.pages_bucket }}
-          PAGES_ENDPOINT: ${{ steps.buckets.outputs.pages_endpoint }}
+          PAGES_BASE_URL: ${{ steps.buckets.outputs.pages_base_url }}
           ACTOR: ${{ steps.check-access.outputs.author }}
           IS_AUTO: ${{ github.event.inputs.auto || 'false' }}
         run: |
@@ -698,8 +698,8 @@ jobs:
           # Where this refresh's evidence lives: the S3 page when the bucket
           # is configured, else this run (its artifact) — same fallback the
           # initial lane uses, so the 📎 link never points at a stale run.
-          if [ -n "${PAGES_ENDPOINT:-}" ]; then
-            EVIDENCE_URL="http://$PAGES_ENDPOINT/$PR/latest.html"
+          if [ -n "${PAGES_BASE_URL:-}" ]; then
+            EVIDENCE_URL="$PAGES_BASE_URL/$PR/latest.html"
           else
             EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           fi
@@ -740,8 +740,8 @@ jobs:
               --content-type text/html --no-progress
             aws s3 cp .review-evidence.html "s3://$PAGES_BUCKET/$PR/latest.html" \
               --content-type text/html --no-progress
-            if [ -n "${PAGES_ENDPOINT:-}" ]; then
-              sed -i "s|%%EVIDENCE_URL%%|http://$PAGES_ENDPOINT/$PR/latest.html|g" \
+            if [ -n "${PAGES_BASE_URL:-}" ]; then
+              sed -i "s|%%EVIDENCE_URL%%|$PAGES_BASE_URL/$PR/latest.html|g" \
                 .review-card-author.out.md .review-card-brief.out.md
             fi
           fi
