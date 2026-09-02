@@ -811,7 +811,7 @@ Track adoption, quality, and developer-experience metrics together: the percenta
 
 ### How long does it take to build a first golden path?
 
-Most teams can ship a first golden path, one component plus one template covering a single common workflow, in a few days to a couple of weeks, since the goal is a narrow, real use case rather than a fully general platform. The [Golden Path Maturity](#golden-path-maturity-from-zero-to-product-grade-platforms) stages above describe how it grows from there.
+Most teams can ship a first golden path, one component plus one template covering a single common workflow, in a few days to a couple of weeks, since the goal is a narrow, real use case rather than a fully general platform. The [golden path maturity](#golden-path-maturity-from-zero-to-product-grade-platforms) stages above describe how it grows from there.
 
 ## Conclusion: From Fragmentation to Flow
 
