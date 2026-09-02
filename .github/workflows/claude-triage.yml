@@ -4,15 +4,22 @@ name: Pre-merge Review (triage)
 # Drafts are the author's workbench — we don't apply labels until they
 # ask for feedback. `ready_for_review` only fires on draft → ready, so
 # `opened` is still needed for PRs that skip the draft phase.
-# It does NOT run on every push (synchronize) — that fires the
-# review-state mark-stale step in claude-code-review.yml instead, which
-# transitions terminal review-state labels (outstanding-issues / no-blockers)
-# to review:stale. It does NOT run on reopen — reopening is usually
-# administrative; the explicit `@claude #new-review` path is the way to
-# request a fresh review on an existing PR.
+#
+# It ALSO runs on synchronize, classification-only: later pushes can change
+# a PR's path set, and domain/skip labels frozen at open would lie to
+# anything that reads them (the v3 approval matrix routes on live paths
+# precisely because labels used to go stale — the labels should still stop
+# lying). The synchronize pass skips everything but the label delta: no
+# review:triaging churn, no Haiku/Vale prose check (an existing
+# review:prose-flagged is carried forward, not reconciled away), no prose
+# comment, no reviewer routing (assignments are sticky from open).
+# review-state staleness on push is still claude-code-review.yml's
+# mark-stale job, unchanged. It does NOT run on reopen — reopening is
+# usually administrative; the explicit `@claude #new-review` path is the
+# way to request a fresh review on an existing PR.
 on:
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, ready_for_review, synchronize]
 
 jobs:
   triage:
@@ -54,6 +61,9 @@ jobs:
       # STATE_LABELS list mirrors the script's; extend both if the set
       # ever grows.
       - name: Set review:triaging label
+        # Not on synchronize — the label-delta-only pass is silent; flashing
+        # the triaging state label on every push would be pure churn.
+        if: github.event.action != 'synchronize'
         uses: actions/github-script@v9
         continue-on-error: true
         with:
@@ -166,6 +176,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
+          EVENT_ACTION: ${{ github.event.action }}
         run: |
           set -euo pipefail
 
@@ -196,6 +207,9 @@ jobs:
           FRONTMATTER_ONLY=$(echo "$CLASS" | jq -r '.frontmatter_only // false')
           OVERSIZED=$(echo "$CLASS" | jq -r '.oversized // false')
           PROSE_CHECK_NEEDED=$(echo "$CLASS" | jq -r '.prose_check_needed // false')
+          # Synchronize = classification-only (see the trigger comment):
+          # no model call, no Vale, no prose comment on a push.
+          [[ "$EVENT_ACTION" == "synchronize" ]] && PROSE_CHECK_NEEDED=false
 
           # 3. Conditional prose check (model call only for trivial /
           #    frontmatter-only PRs).
@@ -276,6 +290,13 @@ jobs:
           if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" || -n "$VALE_BLOCKERS" ) ]]; then
             TARGET["review:prose-flagged"]=1
           fi
+          # On synchronize the prose check didn't run, so an existing flag
+          # is carried forward rather than reconciled away — only a real
+          # re-check (next ready-transition or open) may clear it.
+          if [[ "$EVENT_ACTION" == "synchronize" ]] \
+             && echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:prose-flagged")' >/dev/null; then
+            TARGET["review:prose-flagged"]=1
+          fi
 
           # 5. Current triage-managed labels (exclude state labels —
           # review:triaging is owned by the wrapping set/clear steps in
@@ -328,6 +349,14 @@ jobs:
           # cleans up (e.g., a re-classification that demotes the PR from
           # trivial to non-trivial must drop the stale prose comment).
           # Then post fresh when prose_check_needed AND concerns are non-empty.
+          # Skipped entirely on synchronize — the check didn't run, so an
+          # existing comment is neither stale nor replaceable.
+          if [[ "$EVENT_ACTION" == "synchronize" ]]; then
+            ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
+            REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
+            echo "triage: pr=$PR event=synchronize label-delta-only added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+            exit 0
+          fi
           gh api --paginate "repos/$REPO/issues/$PR/comments" \
               --jq '.[] | select(.body | startswith("<!-- TRIAGE_PROSE -->")) | .id' \
               | while read -r cid; do
@@ -400,6 +429,40 @@ jobs:
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
           VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
           echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY oversized=$OVERSIZED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+
+      # v3 reviewer routing (Phase 3, flag-gated): resolve the approval
+      # matrix from live paths and request the lane team(s) once, at open /
+      # ready — never on synchronize; assignments are sticky by design (a
+      # re-request on every push is the notification noise v3 removes).
+      # Requesting an already-requested team is a no-op, so the draft →
+      # ready → draft → ready dance stays quiet. continue-on-error: routing
+      # is an assist — the Sentinel enforces the matrix regardless of
+      # whether the request landed.
+      - name: Request lane reviewers (v3 routing)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && github.event.action != 'synchronize'
+          && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          PR_DATA_FILE=$(mktemp)
+          DIFF_FILE=$(mktemp)
+          trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
+          gh pr view "$PR" --repo "$REPO" \
+            --json files,additions,deletions > "$PR_DATA_FILE"
+          gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
+          ROUTE=$(python3 scripts/review-v3/route-pr.py \
+            --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")
+          echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
+          for team in $(echo "$ROUTE" | jq -r '.teams[]'); do
+            gh pr edit "$PR" --repo "$REPO" --add-reviewer "$team" \
+              || echo "::warning::routing: could not request $team (team missing or token lacks org scope)"
+          done
 
       # Clear the triaging label whether classification succeeded or not
       # — the early-set step ran unconditionally (no access gate), so the
