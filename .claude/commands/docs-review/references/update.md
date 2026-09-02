@@ -225,3 +225,109 @@ If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, hist
 ### Author deletes the 1/M pinned comment
 
 If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run's `pinned-comment.sh fetch` returns empty and the skill falls through to the Fallback path above.
+
+---
+
+## The v3 surface — adjudicate, don't render
+
+> Everything above this line is the **v2** contract (single pinned sequence,
+> model renders and self-publishes). On a PR whose review is v3 (an author
+> card marked `<!-- CLAUDE_REVIEW_AUTHOR -->` plus a reviewer brief), the
+> update lane inverts: **the model adjudicates and writes one structured
+> patch; deterministic tooling renders and publishes.** The model never
+> upserts, never edits the cards, and never touches the evidence.
+
+### The patch — `.review-update.json`
+
+```json
+{"schema": 1, "case": "fix-response|dispute|re-verify|mixed",
+ "history_summary": "one line for the evidence history (≤120 chars)",
+ "findings": [
+   {"id": "F3", "action": "resolve", "annotation": "fixed in a1b2c3"},
+   {"id": "F4", "action": "concede", "reason": "author is right about X"},
+   {"id": "F5", "action": "hold",    "reason": "evidence: the docs say otherwise"},
+   {"id": "F8", "action": "accept",  "reason": "author: internal figure, shipping as-is", "bulk": false},
+   {"id": "F6", "action": "promote", "to": "outstanding", "reason": "also in social copy"},
+   {"id": "F7", "action": "retext",  "text": "sharper wording, same finding",
+    "detail": {"why": "1-2 sentences", "fix": "exactly ONE action", "keep": "optional fallback"}},
+   {"action": "add", "bucket": "outstanding|author-answer|reviewer-check",
+    "file": "content/docs/x.md", "lines": [10, 12], "text": "…", "origin": "model"}
+ ]}
+```
+
+Closed action set — `apply-update.py` rejects anything else (exit 2):
+
+| Action | Meaning | Rendered as | REVIEW_STATE |
+|---|---|---|---|
+| `resolve` | the push fixed it (verify against the diff) | row → ✅ Resolved with the annotation | `fixed` (actor `update-lane`, sha) |
+| `concede` | the model concedes the finding was wrong | row → ✅ with `concede: <reason>` — the exact v2 machine-scraped shape | none — the annotation is the record |
+| `hold` | the author answered; the model still disagrees | row **moves to the brief's ⚠️ list** with `🛡️ **Disputed by <actor> on YYYY-MM-DD, model held.** <reason>` — a judgment call for the human reviewer; its Do-this block drops | `refuted` (actor = the disputing author, note = your reason) — **it stops blocking merge**, as the author card promises |
+| `accept` | the mention accepts the finding as-is (the author card's third verb; `bulk: true` when it accepted everything at once) | row **moves to the brief's ⚠️ list** with `✋ **Accepted as-is by <actor> on YYYY-MM-DD.** <reason>` — the reviewer weighs a knowingly-shipped finding | `accepted` (actor, note = the author's reason, `bulk`) — stops blocking |
+| `promote` | bucket moves **up only** (⚠️ → ❓ → 🚨) | row moves section/card | none |
+| `add` | new problem in the pushed lines only | new row, next F-id | none |
+| `retext` | wording sharpened on a finding that stays open **on its own merits** | Finding cell replaced (ONE line: claim quote + verdict), id + anchor preserved; optional `detail` `{why, fix[, keep]}` rebuilds the `#### F<n> · Do this` block (verbatim line kept) | none |
+
+The three v2 cases map directly: **Case 1 fix-response** → `resolve` actions
+(and `add` for new problems in the pushed lines); **Case 2 dispute** →
+`concede` or `hold` (same concession-default for write-access authors'
+domain-knowledge disputes); **Case 3 re-verify** → `resolve` / `retext` /
+`hold`. A finding the model has nothing to say about gets **no entry** and
+carries forward unchanged — silence is not a disposition here, unlike the
+author's answer loop.
+
+**An answered item never stays where it was.** When the mention answers what
+a ❓ asked (names the source, confirms the intent), disputes a 🚨, or accepts
+an item as-is, the author has done their part and the card promised them it
+counts: the only legal outcomes are `concede` (the answer settles it —
+including "the source is internal, and that's the author's call"), `hold`
+(you still disagree, and a human should weigh it), or `accept` (they took
+ownership; you don't adjudicate an acceptance). Never `retext` a finding to restate the ask
+with the author's reply folded in — that keeps them blocked on an item they
+already answered, and it was the first live failure of this lane (fork PR
+242, 2026-09-01). `retext` is for sharpening a finding that remains open on
+its own merits; its cell stays one line, and any changed action goes in
+`detail.fix`. Residual edits the author volunteered ("I'll attribute it
+inline") are theirs to make, not grounds to hold.
+
+### What the deterministic side does
+
+`claude-update.yml`'s publish step re-fetches the LIVE author card (merging
+any `/resolve` that landed while the model worked — newest `updated_at`
+wins), runs `apply-update.py` (validate patch → apply actions → merge
+REVIEW_STATE → refresh header count, `Last updated`, and the
+`CLAUDE_REVIEW_HEAD` marker). The `#### F<n> · Do this` detail blocks
+follow their rows automatically — apply-update strips them, re-inserts each
+under its finding's current section, and drops the block when its row
+resolves or concedes; the brief's "Waiting on the author" table is
+regenerated from the post-application findings + dispositions (a row a
+`/resolve` dispositioned stays put but leaves the blocking count on both
+cards — `build-evidence.refresh_counts`, which the /resolve lane calls too);
+the brief's **Facts** bullet is re-derived from the refreshed evidence
+(`refresh_facts_line`: totals fixed at compose time, open/⚠️/settled
+recounted); the ✅
+Resolved section is inserted on the first resolve (the composer omits it
+while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
+cleared by the card rewrite (or, on the error path, explicitly); the
+brief's `#### Editorial stances` sub-list sits below the ⚠️ table's section
+span and comes through verbatim. It then
+validates both cards against schema v23,
+records the evidence object (prior trail/investigation log/stances carried
+forward from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
+fetched), re-renders the evidence page, and upserts brief-then-author. Any
+failure lands on `review:error` — a half-published pair must never read as
+current.
+
+### Auto-refresh runs
+
+`MENTION_AUTHOR == auto-refresh` is strictly Case 1: `apply-update.py`
+**drops** `concede`, `hold`, and `add` actions from auto runs with a logged
+warning. An unattended refresh may observe fixes; it may not adjudicate
+disputes or raise findings.
+
+### Known simplifications
+
+- The v3 refresh does not regenerate advisory style suggestions (the author
+  card keeps its style block from the last full compose, and existing
+  one-click buttons stand). A full re-style pass is `@claude #new-review`.
+- `history_summary` is the only history the lane writes; the card has no 📜
+  section — history lives on the evidence page.
