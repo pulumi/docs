@@ -115,6 +115,32 @@ def split_files(diff_text: str) -> list[tuple[str, str]]:
     return out
 
 
+# Lines a compiler would recognise: statement/block terminators, declaration
+# keywords, comment openers, operators that don't occur in prose. Kept
+# deliberately narrow — a prose line ending in `)` or containing `=` is not
+# code; `{`, `;`, `=>`, `:=` and leading keywords are. The heuristic only ever
+# ADDS "this is code" signal, and a wrong call there costs one review run;
+# the wrong call in the other direction skipped the review entirely.
+_CODE_LINE_RE = re.compile(
+    r"^\s*(?:import |package |func |const |var |let |def |class |public |private |protected "
+    r"|return\b|export |from \S+ import |using |namespace |@\w+|#include|\}|\)|//|/\*|\*/)"
+    r"|[{};]\s*$|:=|=>|\(\)|\bnew \w+\("
+)
+
+
+def _looks_like_code(text: str) -> bool:
+    return bool(_CODE_LINE_RE.search(text))
+
+
+def _hunk_looks_like_code(body_lines: list[str], min_lines: int = 3, ratio: float = 0.6) -> bool:
+    """True when most of a hunk's non-blank lines (context + changes) read as
+    code — the shape of a hunk that starts inside a fenced block."""
+    texts = [ln[1:] for ln in body_lines if ln and ln[1:].strip()]
+    if len(texts) < min_lines:
+        return False
+    return sum(1 for t in texts if _looks_like_code(t)) / len(texts) >= ratio
+
+
 def iter_hunks(file_diff: str) -> Iterable[tuple[str, list[str]]]:
     """Yield (header_line, body_lines) per hunk."""
     header: str | None = None
@@ -221,12 +247,31 @@ def classify_file(path: str, file_diff: str) -> dict:
         else:
             state = "body"
 
+        # Code-inside-fences detection. `has_code_block_change` used to fire
+        # only when a changed line WAS a fence marker, so a PR rewriting the
+        # Java/Go/TypeScript inside existing fences classified as trivial
+        # (+10 lines of snippet fixes → `review:trivial` → review skipped).
+        # Two signals, both of which fail toward "code": (1) fence state
+        # tracked across the hunk's context lines; (2) a hunk with no marker
+        # in view whose lines mostly look like code (the hunk started
+        # mid-fence). Mis-calling prose "code" only costs a review run.
+        in_fence = False
+        if is_md and _hunk_looks_like_code(body_lines):
+            flags["has_code_block_change"] = True
+
         for line in body_lines:
             if not line:
                 continue
             marker = line[0]
             content = line[1:]
             stripped = content.strip()
+
+            if is_md and stripped.startswith(("```", "~~~")) and marker in " +-":
+                if marker == " ":
+                    in_fence = not in_fence
+                    continue
+                # a changed fence marker is itself a code-block change (below)
+                in_fence = not in_fence
 
             # Frontmatter boundary toggling — both context and changed
             # lines can be `---`. If a `---` line is added or removed,
@@ -252,7 +297,7 @@ def classify_file(path: str, file_diff: str) -> dict:
 
             # Body-side change
             flags["has_body_change"] = True
-            if stripped.startswith("```"):
+            if stripped.startswith(("```", "~~~")) or in_fence:
                 flags["has_code_block_change"] = True
             if "{{<" in stripped or "{{%" in stripped:
                 flags["has_shortcode_change"] = True

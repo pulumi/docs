@@ -342,7 +342,7 @@ def test_aggregate_and_stats_render():
 
 def test_real_pinned_review_pr20079():
     """Regression fixture captured from pulumi/docs#20079's actual pinned review."""
-    body = (HERE / "testdata" / "pr20079-pinned-review.md").read_text()
+    body = (HERE / "testdata" / "pr20079-pinned-review.md.txt").read_text()
     # #20079 merged at head d0c76f0…; the last 📜 history SHA matches it.
     rec = sro.scrape_body(body, merged=True, head_sha="d0c76f07aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     assert rec["parse_confidence"] == "high"

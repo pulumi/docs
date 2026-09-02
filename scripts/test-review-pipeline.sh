@@ -39,8 +39,12 @@ python3 -c 'import pytest' 2>/dev/null || {
 }
 
 echo "== pytest: docs-review scripts"
+# -p no:cacheprovider: without it pytest drops a .pytest_cache/ into the tests'
+# own directory, and agent skill discovery walks every *.md under
+# .claude/commands/ — so the cache's README.md registers as a bogus skill for
+# anyone who has run the tests locally. Nothing here uses --last-failed.
 run "pytest .claude/commands/docs-review/scripts/" \
-    python3 -m pytest .claude/commands/docs-review/scripts/ -q
+    python3 -m pytest .claude/commands/docs-review/scripts/ -q -p no:cacheprovider
 
 echo "== standalone harnesses"
 for f in scripts/content-review/test_*.py scripts/blog-review/test_*.py; do

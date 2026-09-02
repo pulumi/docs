@@ -35,12 +35,29 @@ the system of record.
 Output (uploaded to the ledger bucket's `findings/` prefix, beside `ledger/`
 and `claims/`):
 
-    {"schema_version": 1, "slug": ..., "path": ..., "reviewed_at": ...,
-     "commit": ..., "verdict": "fixed|clean|skipped",
-     "counts": {"total": N, "applied": N, "deferred": N},
+    {"schema_version": 2, "slug": ..., "path": ..., "reviewed_at": ...,
+     "commit": ..., "verdict": "fixed|clean|skipped|glowup",
+     "counts": {"total": N, "applied": N, "deferred": N, "superseded": N},
      "findings": [{"id": "f3", "label": ..., "source": ..., "detail": ...,
                    "category": ..., "line_range": ..., "fix_candidate": bool,
-                   "applied": bool}, ...]}
+                   "applied": bool,
+                   "finding": "<the label — what was found>",
+                   "prior_disposition": {"status": "applied|deferred|superseded",
+                                         "reason": "<the model's one-liner, if any>",
+                                         "lane": "fix|glowup"}}, ...]}
+
+Schema v2 (2026-09-01) splits FINDING from PRIOR DISPOSITION. v1 recorded
+the finding and an `applied` bit, and the glow-up lane recovered the
+reviewer's reason from the PR body and handed the two to the model fused in
+one string — which is how PR #21291 promoted an aside inside a decline
+reason into a new claim, and PR #21293 executed a finding the July run had
+declined as editorial. `finding` is the work; `prior_disposition.reason` is
+one earlier reviewer's opinion of it (context, never direction) and comes
+from the PR body draft when `--pr-body` is given. `superseded` marks a
+finding the glow-up composer pre-declined because this run's re-verification
+overruled it; `build-glowup-backlog.py` never banks those again. The v1 keys
+are all still written, so a v1 reader keeps working, and a v1 record (no
+`prior_disposition`) still reads.
 
 `applied` is decided by LINE OVERLAP against the verdict's `applied[].lines`,
 using verify-fix-scope.py's own parser and tolerances — the publish gate
@@ -87,7 +104,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 def log(msg: str) -> None:
@@ -117,6 +134,108 @@ def read_json(path: Path | None):
     except (OSError, json.JSONDecodeError) as e:
         warn(f"{path} unreadable ({e})")
         return None
+
+
+def _backlog_mod():
+    """build-glowup-backlog.py by path — owns the banked-row grammar
+    (`split_finding`), which is how a PR body's deferral bullets and a
+    glow-up's declined rows are read back into (finding, reason)."""
+    spec = importlib.util.spec_from_file_location(
+        "build_glowup_backlog", HERE / "build-glowup-backlog.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _section(body: str, name: str) -> str:
+    import re
+    m = re.search(rf"^##\s+{re.escape(name)}\s*$(.*?)(?=^##\s|\Z)", body or "", re.M | re.S)
+    return m.group(1) if m else ""
+
+
+def deferral_reasons(body: str | None) -> list[tuple[str, str]]:
+    """(finding, reason) pairs from a fix-lane body's "Findings not applied"
+    bullets, in order. The composer renders `- **<label>** — <reason>` and
+    the label is collect()'s own, so matching back is a prefix test."""
+    bgb = _backlog_mod()
+    out = []
+    for line in _section(body or "", "Findings not applied").splitlines():
+        line = line.strip()
+        if not line.startswith(("-", "*")) or bgb.TRAILER_RE.search(line):
+            continue
+        finding, reason = bgb.split_finding(line)
+        if finding:
+            out.append((finding, reason))
+    return out
+
+
+def declined_reasons(body: str | None) -> dict[str, str]:
+    """backlog id -> reason from a glow-up body's "Backlog declined" rows
+    (`| \`id\` — … | #pr | <why> |`)."""
+    import re
+    out: dict[str, str] = {}
+    for line in _section(body or "", "Backlog declined").splitlines():
+        line = line.strip()
+        if not line.startswith("|"):
+            continue
+        m = re.match(r"^\|\s*`([^`]+)`", line)
+        if not m:
+            continue
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        if len(cells) >= 3:
+            out[m.group(1)] = cells[-1]
+    return out
+
+
+def _reason_for(label: str, pairs: list[tuple[str, str]]) -> str:
+    lab = (label or "").strip()
+    for finding, reason in pairs:
+        f = finding.strip()
+        if f and lab and (f.startswith(lab) or lab.startswith(f)):
+            return reason
+    return ""
+
+
+def attach_dispositions(findings: list[dict], lane: str, body: str | None,
+                        backlog: dict | None = None) -> list[dict]:
+    """Stamp schema-v2 `finding` / `prior_disposition` on marked findings.
+
+    Fix lane: the reason is the "Findings not applied" bullet whose bold
+    label matches. Glow-up: an executed item is applied; a declined item's
+    reason is its "Backlog declined" row; an item the composer pre-declined
+    (`pre_declined` on the reconciled backlog item) is `superseded`, so the
+    next backlog build leaves it out. Everything unmatched is `deferred` with
+    an empty reason — v1 semantics, made explicit.
+    """
+    pairs = deferral_reasons(body) if lane == "fix" else []
+    declined = declined_reasons(body) if lane == "glowup" else {}
+    banked = {str(b.get("id")): b for b in ((backlog or {}).get("banked") or [])
+              if isinstance(b, dict)}
+    banked.update({str(s.get("id")): s for s in
+                   (((backlog or {}).get("reconciled") or {}).get("fresh_stubs") or [])
+                   if isinstance(s, dict)})
+    for f in findings:
+        label = str(f.get("label") or "")
+        f["finding"] = label
+        status, reason = ("applied" if f.get("applied") else "deferred"), ""
+        if lane == "fix" and not f.get("applied"):
+            reason = _reason_for(label, pairs)
+        elif lane == "glowup" and not f.get("applied"):
+            bid = f.get("_backlog_id")
+            item = banked.get(str(bid)) if bid else None
+            if item is None:
+                # Not resolved by id: find the banked item by label prefix.
+                item = next((b for b in banked.values()
+                             if str(b.get("text") or "").startswith(label)
+                             and b.get("source") in ("findings-record", "fresh-verdict")), None)
+            if item is not None:
+                if item.get("pre_declined"):
+                    status, reason = "superseded", str(item["pre_declined"])
+                else:
+                    reason = declined.get(str(item.get("id")), "")
+        f.pop("_backlog_id", None)
+        f["prior_disposition"] = {"status": status, "reason": reason, "lane": lane}
+    return findings
 
 
 def _fix_scope():
@@ -247,6 +366,7 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
 
     labels = [str(f.get("label") or "").strip() for f in findings]
     applied_idx: set[int] = set()
+    marked_by: dict[int, str] = {}
     # Executed ids that SHOULD have resolved to a finding on this record —
     # everything except the pr-body items, which are prose with no counterpart
     # here and are expected to resolve to nothing. Only these can tell a total
@@ -264,7 +384,10 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
         # A pr-body-sourced item is prose recovered from a PR description and
         # has no counterpart on this record, so it can never mark a finding.
         # That gap is exactly what the structured record exists to close.
-        if item.get("source") != "findings-record":
+        # A `fresh-verdict` stub is this run's own contradicted/mismatch
+        # verdict, composed with collect()'s label as its prefix, so it
+        # resolves the same way.
+        if item.get("source") not in ("findings-record", "fresh-verdict"):
             continue
         resolvable.add(bid)
         text = str(item.get("text") or "").strip()
@@ -276,6 +399,7 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
                  "by position")
             continue
         applied_idx.add(hit)
+        marked_by[hit] = bid
 
     # The sentinel named executed items and not one of them resolved — the
     # backlog snapshot is missing or unreadable, or every label has drifted.
@@ -292,9 +416,23 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
              "as still outstanding")
         return None
 
+    # Declined ids resolve the same way, so a declined finding can carry its
+    # row's reason (and a pre-declined one its `superseded` status).
+    declined_by: dict[int, str] = {}
+    for bid in sorted({str(i) for i in (v.get("declined_ids") or [])}):
+        item = banked.get(bid)
+        if item is None or item.get("source") not in ("findings-record", "fresh-verdict"):
+            continue
+        text = str(item.get("text") or "").strip()
+        hit = next((i for i, lab in enumerate(labels)
+                    if lab and i not in applied_idx and i not in declined_by
+                    and text.startswith(lab)), None)
+        if hit is not None:
+            declined_by[hit] = bid
+
     out = []
     for i, f in enumerate(findings):
-        out.append({
+        rec = {
             "id": f"f{i + 1}",
             "label": f.get("label", ""),
             "source": f.get("source", ""),
@@ -303,12 +441,17 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
             "line_range": f.get("line_range", ""),
             "fix_candidate": bool(f.get("fix")),
             "applied": i in applied_idx,
-        })
+        }
+        bid = marked_by.get(i) or declined_by.get(i)
+        if bid:
+            rec["_backlog_id"] = bid
+        out.append(rec)
     return out
 
 
 def build(queue: dict, verdict: dict | None, artifacts: dict,
-          repo_root: Path, backlog: dict | None = None) -> dict | None:
+          repo_root: Path, backlog: dict | None = None,
+          pr_body: str | None = None) -> dict | None:
     articles = queue.get("articles") or []
     if not articles:
         warn("queue has no article; nothing to record")
@@ -332,9 +475,13 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
             warn("glow-up disposition unknown (see above); skipping the findings "
                  "write rather than recording every finding as deferred")
             return None
+        lane = "glowup"
     else:
         marked = mark_applied(findings, verdict)
+        lane = "fix"
+    marked = attach_dispositions(marked, lane, pr_body, backlog)
     n_applied = sum(1 for f in marked if f["applied"])
+    n_super = sum(1 for f in marked if f["prior_disposition"]["status"] == "superseded")
     return {
         "schema_version": SCHEMA_VERSION,
         "slug": art.get("slug", ""),
@@ -343,7 +490,8 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
         "commit": head_commit(repo_root),
         "verdict": (verdict or {}).get("verdict"),
         "counts": {"total": len(marked), "applied": n_applied,
-                   "deferred": len(marked) - n_applied},
+                   "deferred": len(marked) - n_applied - n_super,
+                   "superseded": n_super},
         "findings": marked,
     }
 
@@ -558,6 +706,9 @@ def main() -> int:
     p.add_argument("--backlog", default="",
                    help="the glow-up work list (.glowup-backlog.json); supplies the "
                         "id -> finding mapping for a glow-up verdict's disposition")
+    p.add_argument("--pr-body", default="",
+                   help="the PR body draft; supplies each deferred finding's one-line "
+                        "reason (fix lane: Findings not applied; glow-up: Backlog declined)")
     p.add_argument("--repo-root", default=".")
     p.add_argument("--out", default=".page-findings.json")
     p.add_argument("--uri", default="", help="s3://bucket/findings/ (skipped when empty)")
@@ -577,13 +728,16 @@ def main() -> int:
          "readthrough": read_json(Path(args.readthrough)),
          "frontmatter": read_json(Path(args.frontmatter))},
         Path(args.repo_root),
-        backlog=read_json(Path(args.backlog)) if args.backlog else None)
+        backlog=read_json(Path(args.backlog)) if args.backlog else None,
+        pr_body=(Path(args.pr_body).read_text() if args.pr_body and Path(args.pr_body).is_file()
+                 else None))
     if record is None:
         return 0
     Path(args.out).write_text(json.dumps(record, indent=2) + "\n")
     c = record["counts"]
     log(f"slug={record['slug']} findings={c['total']} "
-        f"applied={c['applied']} deferred={c['deferred']} -> {args.out}")
+        f"applied={c['applied']} deferred={c['deferred']} "
+        f"superseded={c['superseded']} -> {args.out}")
     if args.uri:
         upload(record, args.uri)
     return 0

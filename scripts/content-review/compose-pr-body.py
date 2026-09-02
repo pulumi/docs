@@ -50,6 +50,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -68,7 +69,191 @@ _spec_g = importlib.util.spec_from_file_location("render_gates", HERE / "render-
 _rg = importlib.util.module_from_spec(_spec_g)
 _spec_g.loader.exec_module(_rg)
 
+# The finding/disposition splitter and the claim-text token scorer are reused
+# rather than re-implemented: build-glowup-backlog.py owns the banked-row
+# grammar, merge-claims.py owns "are these two texts the same claim?" (its
+# threshold is what clusters the extractor's own records).
+_spec_b = importlib.util.spec_from_file_location(
+    "build_glowup_backlog", HERE / "build-glowup-backlog.py")
+_bgb = importlib.util.module_from_spec(_spec_b)
+_spec_b.loader.exec_module(_bgb)
+
+_MERGE_CLAIMS = (HERE.parent.parent / ".claude" / "commands" / "docs-review"
+                 / "scripts" / "merge-claims.py")
+try:
+    _spec_m = importlib.util.spec_from_file_location("merge_claims", _MERGE_CLAIMS)
+    _mc = importlib.util.module_from_spec(_spec_m)
+    _spec_m.loader.exec_module(_mc)
+    token_overlap = _mc.token_overlap
+except Exception as _e:  # noqa: BLE001 — the composer must still draft a body
+    print(f"::warning::compose-pr-body: merge-claims.py unavailable ({_e}); "
+          "backlog reconciliation is off for this run", file=sys.stderr)
+    token_overlap = None
+
 LINT_PLACEHOLDER = "<!-- LINT-RESULT -->"
+
+# ---- glow-up backlog reconciliation -----------------------------------------
+#
+# A banked finding is one earlier run's reading of the page. The glow-up runs
+# the whole claim pipeline again before the model sees anything, so the
+# fresh artifacts can and do overrule the bank: on 2026-09-01 PR #21291
+# executed `pr20004-findings-4`, a July `contradicted (medium)` verdict on a
+# sentence the September run had re-verdicted `not-a-claim (high)` (claim id
+# drifted c23 -> c37, line L1115 -> L1226), and PR #21293 executed a July
+# readthrough finding the fresh readthrough pass had not re-raised. Nothing
+# compared the two. This does, by claim-text token similarity inside a line
+# window — never by id or exact line, since both drift between runs.
+RECONCILE_MIN_OVERLAP = 0.5      # merge-claims clusters at 0.34; same-claim is stricter here
+RECONCILE_LINE_WINDOW = 200      # L1115 -> L1228 was a 113-line drift on one glow-up
+SUPERSEDING_VERDICTS = {"not-a-claim", "verified", "matches"}
+SUPERSEDED_REASON = "superseded by re-verification"
+FRESH_STUB_VERDICTS = {"contradicted", "mismatch"}
+
+
+def _first_line(line_range) -> int | None:
+    nums = re.findall(r"\d+", str(line_range or ""))
+    return int(nums[0]) if nums else None
+
+
+def _line_ok(a: int | None, b: int | None) -> bool:
+    return a is None or b is None or abs(a - b) <= RECONCILE_LINE_WINDOW
+
+
+def _match_claim(meta: dict, verdicts: list[dict]) -> dict | None:
+    """The fresh verdict re-verdicting the same sentence, or None."""
+    if token_overlap is None or not meta.get("text"):
+        return None
+    anchor = meta["lines"][0] if meta.get("lines") else None
+    best, best_score = None, 0.0
+    for v in verdicts:
+        score = token_overlap(meta["text"], v.get("text", ""))
+        if score < RECONCILE_MIN_OVERLAP or score <= best_score:
+            continue
+        if not _line_ok(anchor, _first_line(v.get("line_range"))):
+            continue
+        best, best_score = v, score
+    if best is None:
+        return None
+    return {"kind": "claim", "claim_id": best.get("claim_id"),
+            "verdict": (best.get("verdict") or "").lower(),
+            "confidence": (best.get("confidence") or "").lower(),
+            "line_range": best.get("line_range") or "", "overlap": round(best_score, 2)}
+
+
+def _match_readthrough(meta: dict, findings: list[dict]) -> dict | None:
+    """The fresh readthrough finding re-raising the same defect, or None.
+    Same failure mode, and the banked text must overlap the fresh finding's
+    anchor/fix/rationale text — line proximity alone is not enough (the
+    September providers run raised a DIFFERENT self-redundancy seven lines
+    from the banked one)."""
+    if token_overlap is None:
+        return None
+    mode = (meta.get("qualifier") or "").lower()
+    anchor = meta["lines"][0] if meta.get("lines") else None
+    best, best_score = None, 0.0
+    for f in findings:
+        if mode and (f.get("failure_mode") or "").lower() != mode:
+            continue
+        blob = " ".join(str(f.get(k) or "") for k in
+                        ("failure_mode", "anchor_quote", "proposed_fix", "rationale"))
+        score = token_overlap(meta.get("text", ""), blob)
+        if score < RECONCILE_MIN_OVERLAP or score <= best_score:
+            continue
+        if not _line_ok(anchor, _first_line(f.get("line_range"))):
+            continue
+        best, best_score = f, score
+    if best is None:
+        return None
+    return {"kind": "readthrough", "failure_mode": best.get("failure_mode"),
+            "line_range": best.get("line_range") or "", "overlap": round(best_score, 2)}
+
+
+def reconcile_backlog(backlog: dict | None, verified, readthrough) -> tuple[list[dict], list[dict]]:
+    """Stamp every banked item with what THIS run's artifacts say about it,
+    and split the bank into (work, pre_declined).
+
+    A claim item whose fresh counterpart verdicts `not-a-claim`/`verified`,
+    and a readthrough item the fresh readthrough pass did not re-raise, are
+    pre-declined "superseded by re-verification" and leave the work list.
+    Everything else — Vale nags, unmatched claims, readthrough findings the
+    fresh pass re-raised — stays work. A missing or errored artifact never
+    pre-declines anything: no evidence is not fresh evidence.
+    """
+    banked = list((backlog or {}).get("banked") or [])
+    verdicts = [v for v in ((verified or {}).get("verdicts") or []) if isinstance(v, dict)] \
+        if isinstance(verified, dict) else []
+    rt_ok = isinstance(readthrough, dict) and bool(readthrough.get("ran")) \
+        and not readthrough.get("errors")
+    rt_findings = [f for f in ((readthrough or {}).get("findings") or []) if isinstance(f, dict)] \
+        if rt_ok else []
+    work, declined = [], []
+    for b in banked:
+        if not isinstance(b, dict):
+            continue
+        finding = b.get("finding") or _bgb.split_finding(b.get("text", ""))[0]
+        meta = _bgb.parse_finding(finding)
+        b["fresh_verdict"] = None
+        b.pop("pre_declined", None)
+        if meta["kind"] == "claim" and verdicts:
+            hit = _match_claim(meta, verdicts)
+            if hit:
+                b["fresh_verdict"] = hit
+                if hit["verdict"] in SUPERSEDING_VERDICTS:
+                    b["pre_declined"] = (
+                        f"{SUPERSEDED_REASON}: this run's `.verified-claims.json` "
+                        f"re-verdicted the same sentence `{hit['verdict']}`"
+                        f"{' (' + hit['confidence'] + ')' if hit['confidence'] else ''}"
+                        f" at {hit['line_range'] or '?'} ({hit['claim_id']}, text overlap "
+                        f"{hit['overlap']:.2f})")
+        elif meta["kind"] == "readthrough" and rt_ok:
+            hit = _match_readthrough(meta, rt_findings)
+            if hit:
+                b["fresh_verdict"] = {**hit, "status": "present"}
+            else:
+                b["fresh_verdict"] = {"kind": "readthrough", "status": "absent"}
+                b["pre_declined"] = (
+                    f"{SUPERSEDED_REASON}: this run's readthrough pass "
+                    f"({len(rt_findings)} finding(s)) did not re-raise it")
+        (declined if b.get("pre_declined") else work).append(b)
+    return work, declined
+
+
+def fresh_stubs(verified) -> list[dict]:
+    """One work row per fresh contradicted/mismatch verdict, shaped like the
+    fix lane's "Fixes applied" stubs. The text starts with collect()'s label
+    for the same verdict, so record-page-findings can resolve an executed
+    stub to its finding by the same prefix match it uses for banked items."""
+    if not isinstance(verified, dict):
+        return []
+    out = []
+    for v in verified.get("verdicts") or []:
+        if not isinstance(v, dict):
+            continue
+        verdict = (v.get("verdict") or "").lower()
+        if verdict not in FRESH_STUB_VERDICTS:
+            continue
+        cid = v.get("claim_id", "?")
+        loc = v.get("line_range") or ""
+        label = f"Claim ({cid}{', ' + loc if loc else ''}): {_truncate(v.get('text', ''))}"
+        conf = (v.get("confidence") or "").lower()
+        out.append({
+            "id": f"fresh-{cid}",
+            "section": "Fresh verdict",
+            "source_pr": None,
+            "source": "fresh-verdict",
+            "text": f"{label} — {verdict}{' (' + conf + ')' if conf else ''}",
+            "finding": f"{label} — {verdict}{' (' + conf + ')' if conf else ''}",
+            "prior_disposition": "",
+            "claim_id": cid, "line_range": loc, "verdict": verdict, "confidence": conf,
+            "evidence": _truncate(v.get("evidence", ""), 240),
+            "fresh_verdict": {"kind": "claim", "claim_id": cid, "verdict": verdict,
+                              "confidence": conf, "line_range": loc, "overlap": 1.0},
+        })
+    return out
+
+
+def _cell(text: str) -> str:
+    return " ".join(str(text or "").split()).replace("|", "\\|")
 
 # Rendered at the top of every fix PR so a reviewer can't miss that approving
 # the PR merges it. The re-lint gate arms GitHub auto-merge (squash) once the
@@ -484,8 +669,12 @@ def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -
 
 def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
                    readthrough, frontmatter, gates=None) -> str:
-    """The glow-up PR body draft: banked backlog pre-stubbed, taxonomy sweep
-    stubbed, same assemble-then-judge contract as the fix body."""
+    """The glow-up PR body draft: banked backlog reconciled against this run's
+    artifacts and pre-stubbed, fresh contradicted/mismatch verdicts stubbed as
+    work, taxonomy sweep stubbed — same assemble-then-judge contract as the
+    fix body. Mutates `backlog` (stamps `fresh_verdict` / `pre_declined` on
+    each banked item and appends the fresh stubs under `reconciled`), so the
+    caller can persist the reconciled bank for the publish side."""
     inv = artifact_inventory(verified, vale, readthrough, frontmatter)
     _, errors = collect(verified, vale, readthrough, frontmatter)
 
@@ -494,25 +683,65 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
     except Exception:  # noqa: BLE001 — a provenance hiccup must not block the draft
         provenance = "## Why this page\n\n_Selected by the glow-up backlog score._"
 
-    banked = (backlog or {}).get("banked") or []
     notes = (backlog or {}).get("notes") or []
+    work, pre_declined = reconcile_backlog(backlog, verified, readthrough)
+    stubs = fresh_stubs(verified)
+    if isinstance(backlog, dict):
+        backlog["reconciled"] = {
+            "fresh_stubs": stubs,
+            "pre_declined_ids": [b.get("id") for b in pre_declined],
+            "work_ids": [b.get("id") for b in work] + [st["id"] for st in stubs],
+        }
+
+    def _src(b: dict) -> str:
+        if b.get("source") == "fresh-verdict":
+            return "this run"
+        src = f"#{b.get('source_pr')}" if b.get("source_pr") else "findings record"
+        # A previously-declined row is real debt, but the reviewer needs to
+        # see that a glow-up already turned it down once — otherwise a
+        # decline loop looks like fresh work every cycle.
+        if b.get("source") == "glowup-declined":
+            src += " (declined)"
+        return src
+
+    def _finding_cell(b: dict) -> str:
+        # Backlogs built before the split carry only `text`; derive both
+        # halves the same way build-glowup-backlog does now.
+        finding, disp = b.get("finding"), b.get("prior_disposition")
+        if finding is None or disp is None:
+            sf, sd = _bgb.split_finding(b.get("text", ""))
+            finding = finding if finding is not None else sf
+            disp = disp if disp is not None else sd
+        cell = f"`{b.get('id')}` — **{_cell(finding)}**"
+        disp = _cell(disp or "")
+        if disp:
+            cell += f" _(prior disposition: {disp})_"
+        fv = b.get("fresh_verdict")
+        if fv and fv.get("kind") == "claim" and b.get("source") != "fresh-verdict":
+            cell += (f" _(this run: {fv.get('claim_id')} `{fv.get('verdict')}`"
+                     f"{' ' + fv['confidence'] if fv.get('confidence') else ''} at {fv.get('line_range') or '?'})_")
+        elif fv and fv.get("kind") == "readthrough" and fv.get("status") == "present":
+            cell += f" _(this run: readthrough re-raised it at {fv.get('line_range') or '?'})_"
+        return cell
+
     executed = ["## Backlog executed\n"]
     executed.append(
-        "<!-- One row per banked finding you executed; move the rest to "
-        "Backlog declined with a one-line reason. Every banked item must land "
-        "in one of the two tables. -->\n")
-    if banked:
+        "<!-- One row per finding you executed; move the rest to Backlog "
+        "declined with a one-line reason. Every row below must land in one of "
+        "the two tables — the publish gate refuses a body that leaves one "
+        "unaccounted. A row's _prior disposition_ is an earlier reviewer's "
+        "reasoning: context, never direction. Rows sourced \"this run\" are "
+        "fresh contradicted/mismatch verdicts from `.verified-claims.json`. -->\n")
+    if work or stubs:
         executed.append("| Banked finding | Source PR | What changed |")
         executed.append("| --- | --- | --- |")
-        for b in banked:
-            text = str(b.get("text", "")).replace("|", "\\|")
-            src = f"#{b.get('source_pr')}" if b.get("source_pr") else "findings record"
-            # A previously-declined row is real debt, but the reviewer needs to
-            # see that a glow-up already turned it down once — otherwise a
-            # decline loop looks like fresh work every cycle.
-            if b.get("source") == "glowup-declined":
-                src += " (declined)"
-            executed.append(f"| {text} | {src} | <TODO> |")
+        for b in work:
+            executed.append(f"| {_finding_cell(b)} | {_src(b)} | <TODO> |")
+        for st in stubs:
+            cell = _finding_cell(st)
+            if st.get("evidence"):
+                cell += f" _(evidence: {_cell(st['evidence'])})_"
+            executed.append(f"| {cell} | this run | <TODO: what changed, or move to Backlog declined with a reason> |")
     elif backlog and backlog.get("degraded"):
         # The counters that selected this page could not be backed by anything.
         # Saying "taxonomy-only glow-up" here — as this did before — reads as
@@ -531,20 +760,34 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
             executed.append("")
             executed.append("_Heads queried: "
                             + ", ".join(f"`{h}`" for h in heads) + "._")
+    elif pre_declined:
+        executed.append("_Every banked finding was superseded by this run's "
+                        "re-verification (see Backlog declined) — taxonomy-only glow-up._")
     else:
         executed.append("_No banked backlog for this page"
                         + (f" ({'; '.join(notes)})" if notes else "")
                         + " — taxonomy-only glow-up._")
 
-    declined = [
-        "## Backlog declined\n",
-        "<TODO: banked findings you decided against, one line of reasoning each — "
-        'or "None.">',
-    ]
+    declined = ["## Backlog declined\n"]
+    declined.append(
+        "<!-- One row per banked finding you decided against, one line of "
+        "reasoning each. Rows marked \"pre-declined by the composer\" were "
+        "superseded by this run's artifacts: leave them as they are and list "
+        "their ids in the sentinel's declined_ids. -->\n")
+    declined.append("| Banked finding | Source PR | Why not executed |")
+    declined.append("| --- | --- | --- |")
+    for b in pre_declined:
+        declined.append(f"| {_finding_cell(b)} | {_src(b)} | "
+                        f"{_cell(b['pre_declined'])}. _Pre-declined by the composer._ |")
+    declined.append("| <TODO: any further banked finding you decided against, one row "
+                    "each, or delete this row> | | |")
 
     sweep = ["## Secondary sweep\n"]
     sweep.append("<!-- The /glow-up taxonomy, applied after the backlog. Note what "
-                 'you changed per category, or "No changes." -->\n')
+                 'you changed per category, or "No changes." If the glow-up scope '
+                 "gate warned about superlative or ranking language you added, "
+                 "say under Content enhancements which artifact verdict supports "
+                 "it, or remove the language. -->\n")
     for cat in GLOWUP_TAXONOMY:
         sweep.append(f"- **{cat}**: <TODO>")
 
@@ -564,6 +807,38 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
         render_verification(inv, errors).rstrip(),
         "",
     ])
+
+
+def glowup_body_accounting(body: str, backlog: dict | None) -> list[str]:
+    """Every id the composer stubbed must appear in exactly one of the body's
+    Backlog executed / Backlog declined tables, and neither table may still
+    carry a `<TODO`. Returns the violations (empty = clean). The publish gate
+    calls this so a glow-up body that leaves a row unaccounted never ships —
+    the glow-up analogue of the fix lane's per-hunk scope gate."""
+    ids = [str(b.get("id")) for b in ((backlog or {}).get("banked") or []) if isinstance(b, dict)]
+    ids += [str(st.get("id")) for st in (((backlog or {}).get("reconciled") or {}).get("fresh_stubs") or [])]
+    text = body or ""
+
+    def section(name: str) -> str:
+        m = re.search(rf"^##\s+{re.escape(name)}\s*$(.*?)(?=^##\s|\Z)", text, re.M | re.S)
+        return m.group(1) if m else ""
+
+    exe, dec = section("Backlog executed"), section("Backlog declined")
+    out = []
+    if not exe.strip() or not dec.strip():
+        out.append("body is missing the Backlog executed and/or Backlog declined section")
+        return out
+    for bid in ids:
+        tok = f"`{bid}`"
+        in_exe, in_dec = tok in exe, tok in dec
+        if in_exe and in_dec:
+            out.append(f"{bid} appears in both Backlog executed and Backlog declined")
+        elif not (in_exe or in_dec):
+            out.append(f"{bid} appears in neither Backlog executed nor Backlog declined")
+    for name, sec in (("Backlog executed", exe), ("Backlog declined", dec)):
+        if "<TODO" in sec:
+            out.append(f"{name} still carries a <TODO> marker")
+    return out
 
 
 def replace_notice(body_file: Path, kind: str) -> int:
@@ -609,6 +884,10 @@ def main() -> int:
                    help="body template: the fix lane's (default) or the glow-up lane's")
     p.add_argument("--backlog", default=".glowup-backlog.json",
                    help="glow-up backlog JSON (build-glowup-backlog.py output; glowup mode)")
+    p.add_argument("--reconciled-backlog", default="",
+                   help="glowup mode: write the backlog back here with each item's "
+                        "fresh_verdict / pre_declined stamps and the fresh stubs "
+                        "(pass the --backlog path to update it in place)")
     args = p.parse_args()
 
     if args.replace_notice:
@@ -639,15 +918,22 @@ def main() -> int:
         gates = None
 
     if args.mode == "glowup":
+        backlog = read_json(root / args.backlog)
         body = compose_glowup(
             queue,
-            read_json(root / args.backlog),
+            backlog,
             read_json(root / args.verified_claims),
             read_json(root / args.vale_findings),
             read_json(root / args.readthrough),
             read_json(root / args.frontmatter),
             gates,
         )
+        if args.reconciled_backlog and isinstance(backlog, dict):
+            rec = backlog.get("reconciled") or {}
+            Path(args.reconciled_backlog).write_text(json.dumps(backlog, indent=2) + "\n")
+            print(f"compose-pr-body: reconciled backlog -> {args.reconciled_backlog} "
+                  f"({len(rec.get('pre_declined_ids') or [])} pre-declined, "
+                  f"{len(rec.get('fresh_stubs') or [])} fresh stub(s))", file=sys.stderr)
     else:
         body = compose(
             queue,

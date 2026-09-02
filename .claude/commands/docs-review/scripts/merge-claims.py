@@ -191,13 +191,51 @@ def _is_llm(found_by: list[str]) -> bool:
     return any(fb.startswith("llm-") for fb in (found_by or []))
 
 
+# Regex-layer types that must never be absorbed into a cluster whose
+# representative is typed differently. The regex text is the WHOLE added line,
+# so a long line with two sentences overlaps almost totally with an LLM
+# restatement of either sentence; on PR #21291 (run 33519246857) the regex
+# `positioning` record for "`pulumi convert` is the fastest path …" clustered
+# (overlap 0.93) with an LLM `capability` claim about the OTHER sentence on
+# the line, the LLM text won as representative, and "fastest" never reached
+# the verifier. An editorial stance is a different claim from a capability
+# claim about the same line, so it is emitted on its own instead.
+STANCE_TYPES = {"positioning", "comparison"}
+
+
+def _representative(group: list[dict]) -> dict:
+    """Prefer an LLM restatement; among those (or if none), the longest text."""
+    llm_records = [c for c in group if _is_llm(c.get("found_by", []))]
+    text_pool = llm_records or group
+    return max(text_pool, key=lambda c: len(c.get("text", "")))
+
+
+def split_distinct_stances(group: list[dict]) -> list[list[dict]]:
+    """Pull regex `positioning`/`comparison` records out of a cluster whose
+    representative carries a different type, so each survives as its own
+    claim. Returns the sub-groups to collapse (the remainder first)."""
+    rep_type = _representative(group).get("type")
+    stances = [c for c in group
+               if "regex" in c.get("found_by", [])
+               and c.get("type") in STANCE_TYPES
+               and c.get("type") != rep_type]
+    if not stances:
+        return [group]
+    rest = [c for c in group if c not in stances]
+    out = [rest] if rest else []
+    by_type: dict[str, list[dict]] = {}
+    for c in stances:
+        by_type.setdefault(c["type"], []).append(c)
+    out.extend(by_type.values())
+    return out
+
+
 def merge_into(group: list[dict]) -> dict:
     """Collapse a group of same-claim records into one."""
     # Pick the representative text: prefer an LLM restatement; among those (or
     # if none), prefer the longest text.
     llm_records = [c for c in group if _is_llm(c.get("found_by", []))]
-    text_pool = llm_records or group
-    rep = max(text_pool, key=lambda c: len(c.get("text", "")))
+    rep = _representative(group)
 
     found_by: list[str] = []
     for c in group:
@@ -285,7 +323,8 @@ def merge_claims(all_records: list[dict]) -> list[dict]:
                 clusters.append([r])
                 cluster_ranges.append(list(r_ranges))
         for cl in clusters:
-            merged.append(merge_into(cl))
+            for sub in split_distinct_stances(cl):
+                merged.append(merge_into(sub))
     # Sort for stable output: by file, then by first line.
     def sort_key(c: dict):
         rs = parse_ranges(c.get("line_range", ""))
