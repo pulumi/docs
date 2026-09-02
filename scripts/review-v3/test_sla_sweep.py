@@ -432,9 +432,6 @@ def test_degradation_local_state_no_uri():
 
 # ---- Standalone harness --------------------------------------------------
 
-ALL_TESTS = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
-
-
 def test_changes_requested_only_clocks_from_the_review_not_the_old_push():
     """A standing CHANGES_REQUESTED on a branch last pushed 20 days ago is
     author-time, but the idle clock starts at the review, and the nudge
@@ -570,15 +567,57 @@ def test_cli_without_uri_does_not_mutate(monkeypatch, capsys):
     assert gh.comments_posted == [] and gh.labels_added == []
 
 
+def test_failed_state_upload_is_recorded_not_dropped(monkeypatch):
+    """Live bucket, upload fails: the run record must say the state did
+    not persist (the digest/human signal), not claim the warn stuck."""
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        gh.add_pr(1, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+                  timeline=[committed(iso(NOW - timedelta(days=16)))])
+        monkeypatch.setattr(sla_sweep._record_evidence, "upload", lambda record, key: False)
+        monkeypatch.setattr(sla_sweep, "_s3_read_json", lambda key: None)
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir,
+                                 evidence_uri="s3://bucket/pr-review")
+        a = record["actions"][0]
+        assert a["action"]["type"] == "warn" and a["state_persisted"] is False
+
+
+def test_probe_write_gates_real_runs(monkeypatch):
+    """A URI that resolves but can't be written forces dry-run before any
+    mutation; a URI that round-trips a probe does not."""
+    assert sla_sweep.resolve_mutation_mode("s3://b/pr-review", False, False, durable_ok=False)[0] is True
+    assert sla_sweep.resolve_mutation_mode("s3://b/pr-review", False, False, durable_ok=True) == (False, None)
+    store = {}
+    monkeypatch.setattr(sla_sweep._record_evidence, "upload", lambda record, key: store.__setitem__(key, record) or True)
+    monkeypatch.setattr(sla_sweep, "_s3_read_json", lambda key: store.get(key))
+    assert sla_sweep.durable_state_writable("s3://b/pr-review", NOW) is True
+    monkeypatch.setattr(sla_sweep._record_evidence, "upload", lambda record, key: False)
+    assert sla_sweep.durable_state_writable("s3://b/pr-review", NOW) is False
+    assert sla_sweep.durable_state_writable("", NOW) is False
+
+
 def run_standalone() -> int:
+    """The --self-test harness. Bound at call time (a module-level binding
+    only saw the tests defined above it — 12 of 19 at one point). Tests that
+    take pytest fixtures are pytest-only and are skipped here by name; the
+    merge-gating path (`pytest scripts/review-v3/`) collects everything."""
+    import inspect  # noqa: PLC0415
+    all_tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failures = 0
-    for t in ALL_TESTS:
+    for t in all_tests:
+        if inspect.signature(t).parameters:
+            print(f"  skip: {t.__name__} (pytest fixtures; run via pytest)")
+            continue
         try:
             t()
             print(f"  ok: {t.__name__}")
         except AssertionError as exc:
             failures += 1
             print(f"  FAIL: {t.__name__}: {exc}", file=sys.stderr)
+        except Exception as exc:  # noqa: BLE001 — a crash is a failure, not a harness abort
+            failures += 1
+            print(f"  FAIL: {t.__name__}: {type(exc).__name__}: {exc}", file=sys.stderr)
     if failures:
         print(f"{failures} sla-sweep test(s) failed", file=sys.stderr)
         return 1
