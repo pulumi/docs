@@ -1,0 +1,2 @@
+[{"file": "content/docs/iac/x.md", "line": 30, "category": "terminology", "message": "Use 'Pulumi Cloud', not 'Pulumi Service'", "blocker": true},
+ {"file": "content/docs/iac/x.md", "line": 33, "category": "wordiness", "message": "Consider 'use' instead of 'utilize'", "blocker": false}]

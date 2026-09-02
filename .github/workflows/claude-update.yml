@@ -75,7 +75,7 @@ jobs:
       pull-requests: write
       issues: read
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
+      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a v3 publish
     steps:
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
@@ -276,10 +276,32 @@ jobs:
             fi
           fi
 
+          # Surface detection: a v3 review is two role-marked cards (author +
+          # brief). On v3 the model ADJUDICATES only (it writes
+          # .review-update.json) and deterministic code renders and publishes
+          # — the freehand self-publish path below is v2-only. Surface is a
+          # property of the published review, not a flag: a v3 review exists
+          # iff the initial lane published one.
+          SURFACE="v2"
+          AUTHOR_CID=""
+          BRIEF_CID=""
+          if [ "$HAS_PINNED" = "true" ]; then
+            AUTHOR_CID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh \
+              find --pr "$PR_NUMBER" --repo "${{ github.repository }}" --role author || true)
+            BRIEF_CID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh \
+              find --pr "$PR_NUMBER" --repo "${{ github.repository }}" --role brief || true)
+            if [ -n "$AUTHOR_CID" ] && [ -n "$BRIEF_CID" ]; then
+              SURFACE="v3"
+            fi
+          fi
+
           {
             echo "pr_number=$PR_NUMBER"
             echo "is_pr=$IS_PR"
             echo "has_pinned=$HAS_PINNED"
+            echo "surface=$SURFACE"
+            echo "author_cid=$AUTHOR_CID"
+            echo "brief_cid=$BRIEF_CID"
           } >> "$GITHUB_OUTPUT"
 
       # Flip the PR's state label to review:in-progress for the duration of
@@ -420,8 +442,27 @@ jobs:
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
+      # v3 model inputs: the two live cards on disk. Fetched here (not in the
+      # publish step) so the model reads the same cards the mention was about;
+      # the publish step re-fetches the author card fresh right before
+      # apply-update to merge any /resolve that lands while the model works.
+      - name: Fetch v3 review cards
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.surface == 'v3'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
+            --jq .body > .review-card-author.md
+          gh api "repos/${{ github.repository }}/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
+            --jq .body > .review-card-brief.md
+
+      # ---- v2 lane (freehand self-publish; untouched behavior) ----
       - name: Run Claude Code
-        if: steps.check-access.outputs.has_write_access == 'true'
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.surface != 'v3'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
@@ -525,11 +566,241 @@ jobs:
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"
 
+      # ---- v3 lane (model adjudicates; deterministic code publishes) ----
+      #
+      # The inversion that retires the freehand failure class: the model's
+      # only output is .review-update.json (closed action vocabulary over
+      # finding ids — see references/update.md §The v3 surface). It cannot
+      # publish: pinned-comment.sh is absent from its allowed tools. It CAN
+      # still push fix commits for embedded asks, same as v2.
+      #
+      # Model/effort matches the v2 lane (opus-5 / medium, from the
+      # 2026-08-10 campaign). The freehand trail-dropping failure that
+      # rationale guards against cannot occur here — the trail never passes
+      # through the model — so a lower effort may well be safe on this lane,
+      # but that is a measured decision: re-benchmark via
+      # work-ops:model-benchmark before changing it.
+      - name: Run Claude Code (v3 adjudication)
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.surface == 'v3'
+        id: claude-v3
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
+          additional_permissions: |
+            actions: read
+          prompt: |
+            The user invoked you with `#update-review` on `${{ github.repository }}` PR #${{ steps.pr-context.outputs.pr_number }}. This PR carries a v3 review (author card + reviewer brief). Your job is to ADJUDICATE, not to render: you write exactly one file, `.review-update.json`, and deterministic tooling re-renders and publishes the cards from it. Do not post comments, do not edit the cards, do not call pinned-comment.sh.
+
+            Inputs on disk:
+            - `.review-card-author.md` — the author card (table rows `| **F<n>** | … |` under 🚨/❓ with a `#### F<n> · Do this` block each, REVIEW_STATE block)
+            - `.review-card-brief.md` — the reviewer brief (⚠️ rows, "Waiting on the author" table)
+            - `.claude-mention-body.txt` — the triggering mention from @${{ steps.check-access.outputs.author }}; read it FIRST
+            - `.vale-findings.json` — current style findings (context only on this lane)
+
+            Follow `.claude/commands/docs-review/references/update.md` §The v3 surface for the full contract. In short — inspect the mention and the PR's new diff (`gh pr diff ${{ steps.pr-context.outputs.pr_number }}`), address any embedded asks (file edits → `gh pr checkout`, edit, push), then adjudicate each open finding into actions:
+            - `resolve` (id, annotation like "fixed in <short-sha>") — the push genuinely fixed it; verify against the diff, never take the author's word alone.
+            - `concede` (id, reason) — the author's answer settles it (or the finding was wrong); row → ✅ Resolved.
+            - `hold` (id, reason with evidence) — the author answered and you still disagree; the row moves to the reviewer's ⚠️ list for a human to weigh and STOPS blocking the author.
+            - `accept` (id, reason[, bulk: true]) — the mention ACCEPTS the finding as-is ("accepting as-is — <reason>", or "accepting all open items" → one entry per open 🚨/❓ id with `bulk: true`); no adjudication, the reason is the author's; the row moves to the reviewer's ⚠️ list with a ✋ marker.
+            - `promote` (id, to: author-answer|outstanding, reason) — upward only.
+            - `add` (bucket, file, lines, text) — a NEW problem in the pushed lines only.
+            - `retext` (id, text[, detail: {why, fix[, keep]}]) — sharpen a finding that stays open on its own merits; the cell stays ONE line (claim quote + verdict), any new action goes in `detail.fix`.
+            Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). The file's exact envelope — these four top-level keys, the list under `findings`, nothing else is accepted:
+            {"schema": 1, "case": "fix-response|dispute|re-verify|mixed", "history_summary": "<one line>", "findings": [{"id": "F1", "action": "resolve", "annotation": "fixed in <sha7>"}, {"id": "F2", "action": "concede", "reason": "…"}]}
+            Write the file and stop. Dispute adjudication defaults: domain-knowledge dispute from a write-access author → concede; verifiable claim → verify before holding, and hold only with evidence. An item the mention ANSWERS (a ❓'s source named, a 🚨 disputed) must end as `concede` or `hold` — never `retext` with the reply folded in; the author card promised the author their answer unblocks them.
+          claude_args: |
+            --model claude-opus-5 --effort medium
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh api:*),Bash(gh search:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(date:*),Bash(diff:*),Bash(curl:*)"
+
+      # Credentials for the v3 publish: obtained AFTER the model step, so the
+      # model never runs with AWS credentials in scope. continue-on-error —
+      # the publish degrades (no prior evidence, no S3 record, artifact only)
+      # rather than failing the refresh.
+      - name: Configure AWS credentials (v3 publish)
+        id: aws-creds
+        if: steps.claude-v3.outcome == 'success'
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: claude-update-v3
+          aws-region: us-west-2
+      - name: Install Pulumi CLI
+        if: steps.claude-v3.outcome == 'success'
+        continue-on-error: true
+        uses: pulumi/actions@v7
+      - name: Resolve evidence buckets
+        id: buckets
+        if: steps.claude-v3.outcome == 'success'
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          # Same 3× retry as the initial lane's resolver: a transient flake
+          # here doesn't just drop the evidence page, it drops
+          # PR_REVIEW_EVIDENCE_URI and the refresh publishes degraded.
+          resolve() {
+            local out=""
+            for i in 1 2 3; do
+              out=$(pulumi -C infrastructure stack output "$1" \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$out" ] && break
+              [ "$i" -lt 3 ] && sleep $((i * 5))
+            done
+            printf '%s' "$out"
+          }
+          LEDGER=$(resolve contentReviewLedgerBucketName)
+          PAGES=$(resolve reviewEvidenceBucketName)
+          BASE_URL=$(resolve reviewEvidenceBaseUrl)
+          [ -n "$LEDGER" ] && echo "evidence_uri=s3://$LEDGER/pr-review" >> "$GITHUB_OUTPUT"
+          [ -n "$PAGES" ] && echo "pages_bucket=$PAGES" >> "$GITHUB_OUTPUT"
+          [ -n "$BASE_URL" ] && echo "pages_base_url=$BASE_URL" >> "$GITHUB_OUTPUT"
+          [ -z "$LEDGER" ] && echo "::warning::evidence bucket unresolved; publishing degraded (artifact only)"
+          exit 0
+
+      # One step, one ordering, one failure surface: prior evidence → fresh
+      # card re-fetch (merges any /resolve that landed during the model's
+      # run) → apply-update → validate v21 → record evidence + page → upsert
+      # brief → upsert author (the label-driving card publishes LAST, so a
+      # partial publish can never show a green label against a stale card).
+      - name: Publish v3 refresh
+        id: publish-v3
+        if: steps.claude-v3.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ steps.head.outputs.sha }}
+          PR_REVIEW_EVIDENCE_URI: ${{ steps.buckets.outputs.evidence_uri }}
+          PAGES_BUCKET: ${{ steps.buckets.outputs.pages_bucket }}
+          PAGES_BASE_URL: ${{ steps.buckets.outputs.pages_base_url }}
+          ACTOR: ${{ steps.check-access.outputs.author }}
+          IS_AUTO: ${{ github.event.inputs.auto || 'false' }}
+        run: |
+          set -euo pipefail
+          test -s .review-update.json || { echo "model wrote no .review-update.json"; exit 1; }
+
+          # The model may have pushed fix commits for embedded asks, so the
+          # SHA resolved at job start can be stale. Stamp the card with the
+          # LIVE head — otherwise the Sentinel's gate 1 reds on a review that
+          # is in fact current, and the stale-label cycle re-fires.
+          PR_META=$(gh pr view "$PR" --repo "$REPO" \
+            --json headRefOid,headRefName,headRepository,headRepositoryOwner || echo '{}')
+          LIVE_SHA=$(echo "$PR_META" | jq -r '.headRefOid // empty')
+          [ -n "$LIVE_SHA" ] && HEAD_SHA="$LIVE_SHA"
+          HEAD_BRANCH=$(echo "$PR_META" | jq -r '.headRefName // empty')
+          HEAD_REPO=$(echo "$PR_META" | jq -r 'if (.headRepositoryOwner.login? // "") != "" and (.headRepository.name? // "") != "" then .headRepositoryOwner.login + "/" + .headRepository.name else "" end')
+
+          # Prior evidence (trail/log live only in S3, not on the cards).
+          PRIOR_ARGS=()
+          if [ -n "${PR_REVIEW_EVIDENCE_URI:-}" ] \
+             && aws s3 cp "$PR_REVIEW_EVIDENCE_URI/$PR/latest.json" .prior-evidence.json 2>/dev/null; then
+            PRIOR_ARGS=(--prior-evidence .prior-evidence.json)
+          else
+            echo "::warning::prior evidence unavailable; refresh publishes degraded"
+          fi
+
+          # Where this refresh's evidence lives: the S3 page when the bucket
+          # is configured, else this run (its artifact) — same fallback the
+          # initial lane uses, so the 📎 link never points at a stale run.
+          if [ -n "${PAGES_BASE_URL:-}" ]; then
+            EVIDENCE_URL="$PAGES_BASE_URL/$PR/latest.html"
+          else
+            EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+
+          # Fresh card fetch — the /resolve race window closes here.
+          gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
+            --jq .body > .review-card-author.md
+          gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
+            --jq .body > .review-card-brief.md
+
+          AUTO_FLAG=()
+          [ "$IS_AUTO" = "true" ] && AUTO_FLAG=(--auto)
+          python3 .claude/commands/docs-review/scripts/apply-update.py \
+            --author-card .review-card-author.md \
+            --brief-card .review-card-brief.md \
+            --update .review-update.json \
+            "${PRIOR_ARGS[@]}" "${AUTO_FLAG[@]}" \
+            --head-sha "$HEAD_SHA" --actor "$ACTOR" \
+            --repo "$REPO" --pr "$PR" --run-id "${{ github.run_id }}" \
+            --author-out .review-card-author.out.md \
+            --brief-out .review-card-brief.out.md \
+            --evidence-out .review-evidence.json \
+            --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH" \
+            --evidence-url "$EVIDENCE_URL"
+
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .review-card-author.out.md \
+            --brief-file .review-card-brief.out.md \
+            --pr "$PR" --repo "$REPO"
+
+          python3 scripts/review-v3/record-evidence.py \
+            --evidence .review-evidence.json --pr "$PR" --head-sha "$HEAD_SHA"
+
+          if [ -n "${PAGES_BUCKET:-}" ]; then
+            python3 scripts/review-v3/render-evidence-html.py \
+              --evidence .review-evidence.json --output .review-evidence.html
+            aws s3 cp .review-evidence.html "s3://$PAGES_BUCKET/$PR/$HEAD_SHA.html" \
+              --content-type text/html --no-progress
+            aws s3 cp .review-evidence.html "s3://$PAGES_BUCKET/$PR/latest.html" \
+              --content-type text/html --no-progress
+            if [ -n "${PAGES_BASE_URL:-}" ]; then
+              sed -i "s|%%EVIDENCE_URL%%|$PAGES_BASE_URL/$PR/latest.html|g" \
+                .review-card-author.out.md .review-card-brief.out.md
+            fi
+          fi
+
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --pr "$PR" --repo "$REPO" --role brief --body-file .review-card-brief.out.md
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --pr "$PR" --repo "$REPO" --role author --body-file .review-card-author.out.md
+
+      - name: Upload evidence artifact (v3)
+        if: steps.claude-v3.outcome == 'success' && always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-evidence-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            .review-evidence.json
+            .review-update.json
+            .pr-review-evidence/
+          include-hidden-files: true
+          retention-days: 30
+          if-no-files-found: ignore
+
+      # A refresh changes the Sentinel's answers; poke it rather than waiting
+      # for the next natural event. The workflow_run trigger can't do this on
+      # its own: a comment-triggered run carries no `pull_requests[]`, so the
+      # Sentinel resolves no PR from it (first fork smoke, 2026-09-01). Fails
+      # loudly-but-non-fatally: `continue-on-error` keeps the job green, but
+      # a 403 (missing `actions: write`) must show as a red step, not be
+      # swallowed — this exact poke sat silently 403ing behind `|| true`.
+      - name: Re-evaluate Sentinel (v3)
+        if: steps.publish-v3.outcome == 'success' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ steps.pr-context.outputs.pr_number }}"
+
       # Re-post the one-click style suggestions and reconcile the pinned
       # comment against what actually landed. Delete-and-repost, exactly like
       # the initial lane: the previous run's suggestion comments are cleared
       # first, so a finding the author fixed stops offering a button and a
       # newly-surfaced one gains one.
+      #
+      # v2-only: the v3 adjudication model doesn't regenerate style advice
+      # (the author card keeps its style block from the last full compose), so
+      # there is no fresh sidecar to post. A v3 refresh leaves existing
+      # one-click buttons standing — documented simplification in update.md.
       #
       # --annotate-pinned instead of --annotate-draft because this lane has no
       # draft to intercept: the model renders the body and upserts it inside
@@ -658,6 +929,20 @@ jobs:
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
           AUTHOR="${{ steps.check-access.outputs.author }}"
+          # On the v3 surface the model step is claude-v3 and success further
+          # requires the deterministic publish chain: an adjudication that
+          # never published is a failure, and a partial publish (brief
+          # updated, author not) must land on review:error, not silence.
+          if [ "${{ steps.pr-context.outputs.surface }}" = "v3" ]; then
+            if [ "${{ steps.claude-v3.outcome }}" = "success" ] \
+               && [ "${{ steps.publish-v3.outcome }}" = "success" ]; then
+              OUTCOME="success"
+            elif [ "${{ steps.claude-v3.outcome }}" = "cancelled" ]; then
+              OUTCOME="cancelled"
+            else
+              OUTCOME="failure"
+            fi
+          fi
           # Auto-gated runs have no human requester: "auto-refresh" is not a
           # GitHub user, so never render it as an @-mention (it would ping an
           # unrelated account of that name). Plain wording instead.
@@ -699,14 +984,27 @@ jobs:
               echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
             fi
           elif [ "$OUTCOME" != "cancelled" ] && [ "$OUTCOME" != "skipped" ]; then
-            # Workflow errored. Only set review:error if no pinned review
-            # exists yet — otherwise the previous run's terminal label is
-            # still meaningful and shouldn't be overwritten by this failure.
-            PUBLISHED=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
-              --jq '[.[] | select(.body | test("<!-- CLAUDE_REVIEW"))] | length' 2>/dev/null || echo "0")
-            if [ "${PUBLISHED:-0}" -eq 0 ]; then
+            if [ "${{ steps.pr-context.outputs.surface }}" = "v3" ]; then
+              # A failed v3 publish may have left the two cards inconsistent
+              # (brief updated, author not) — review:error unconditionally so
+              # nothing reads the half-published state as current.
               .claude/commands/docs-review/scripts/set-review-label.sh \
                 --pr "$PR" --repo "$REPO" --label review:error || true
+              # A 🔄 banner stamped by the auto-refresh gate is now a broken
+              # promise — clear it so the card doesn't claim a refresh that
+              # died. (A successful publish clears it by rewriting the card.)
+              bash .claude/commands/docs-review/scripts/pinned-comment.sh banner \
+                --pr "$PR" --repo "$REPO" --clear || true
+            else
+              # Workflow errored. Only set review:error if no pinned review
+              # exists yet — otherwise the previous run's terminal label is
+              # still meaningful and shouldn't be overwritten by this failure.
+              PUBLISHED=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+                --jq '[.[] | select(.body | test("<!-- CLAUDE_REVIEW"))] | length' 2>/dev/null || echo "0")
+              if [ "${PUBLISHED:-0}" -eq 0 ]; then
+                .claude/commands/docs-review/scripts/set-review-label.sh \
+                  --pr "$PR" --repo "$REPO" --label review:error || true
+              fi
             fi
           fi
 

@@ -232,3 +232,4 @@ assets/images/generated/
 
 # Playwright MCP session artifacts (browser snapshots written into the repo root).
 .playwright-mcp/
+.pytest_cache/

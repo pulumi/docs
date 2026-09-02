@@ -149,6 +149,42 @@ def source_pr_for(entry: dict) -> int | None:
     return int(entry.get("pr_number") or entry.get("last_pr_number") or 0) or None
 
 
+# The evidence object's per-finding shape is what build-glowup-backlog.py
+# reads; the trail, investigation log, and history are the bulk of a record
+# and none of it is backlog material, so the queue carries only this.
+_PR_REVIEW_KEEP = ("schema_version", "pr", "head_sha", "generated_at", "high_water", "findings")
+
+
+def pr_review_records_for(pr_review_dir: Path | None, entry: dict) -> list[dict]:
+    """The v3 pre-merge review records (`pr-review/<pr>/latest.json`) for the
+    ledger entry's PR pointers — both `pr_number` and `last_pr_number`, since
+    they name different PRs when the latest review opened one and an earlier
+    one banked the debt. Trimmed to the finding-level fields; never raises
+    (a missing record is the normal case for every v2-era PR)."""
+    if pr_review_dir is None:
+        return []
+    out: list[dict] = []
+    seen: set[int] = set()
+    for key in ("pr_number", "last_pr_number"):
+        try:
+            n = int(entry.get(key) or 0)
+        except (TypeError, ValueError):
+            n = 0
+        if not n or n in seen:
+            continue
+        seen.add(n)
+        f = pr_review_dir / str(n) / "latest.json"
+        if not f.is_file():
+            continue
+        try:
+            rec = json.loads(f.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(rec, dict) and isinstance(rec.get("findings"), list):
+            out.append({k: rec[k] for k in _PR_REVIEW_KEEP if k in rec})
+    return out
+
+
 def recoverable(entry: dict, record: dict | None) -> bool:
     """Can the worker actually fetch this page's banked findings?
 
@@ -217,6 +253,10 @@ def main() -> int:
     p.add_argument("--findings-dir", default="",
                    help="synced findings/ prefix; each selected article carries "
                         "its record into the unprivileged worker")
+    p.add_argument("--pr-review-dir", default="",
+                   help="synced pr-review/ prefix (v3 pre-merge review evidence); "
+                        "each selected article carries its PRs' latest.json records "
+                        "into the unprivileged worker")
     p.add_argument("--out", help="Queue JSON output path")
     p.add_argument("--traffic-file", help="S3-fetched traffic snapshot (CSV or JSON)")
     p.add_argument("--tiers", default=str(_select.DEFAULT_TIERS))
@@ -240,6 +280,7 @@ def main() -> int:
     today = parse_day(args.today) or datetime.now(timezone.utc).date()
     tier_rules = _select.load_tiers(Path(args.tiers))
     findings_dir = Path(args.findings_dir) if args.findings_dir else None
+    pr_review_dir = Path(args.pr_review_dir) if args.pr_review_dir else None
     # The recoverability filter reads the findings/ prefix. Without it every
     # lookup returns None, so applying the filter would declare the WHOLE
     # corpus unrecoverable and silently darken the lane — the one way this
@@ -404,6 +445,10 @@ def main() -> int:
             # it hands the record over rather than leaving the worker to scrape
             # the PR body (see record-page-findings.py).
             "findings_record": record,
+            # Same reason, other system of record: what the pre-merge REVIEWER
+            # found on this page's review PRs (v3 evidence, fork-safe and
+            # machine-written). Empty for v2-era PRs.
+            "pr_review_records": pr_review_records_for(pr_review_dir, entry),
             "score": score,
         })
 
