@@ -241,6 +241,29 @@ def main() -> int:
         check("no findings record" in q["repairs"][0]["reason"],
               "the repair names the reason")
 
+        # v3 pre-merge review records ride the queue the same way, trimmed to
+        # the finding-level fields (the trail is history, not backlog).
+        prdir = tmp / "pr-review"
+        (prdir / "555").mkdir(parents=True)
+        (prdir / "555" / "latest.json").write_text(json.dumps({
+            "schema_version": 1, "pr": 555, "head_sha": "c" * 40, "run_id": "1",
+            "generated_at": "2026-09-02T00:00:00Z", "high_water": 1,
+            "findings": [{"id": "F1", "bucket": "outstanding", "file": B, "text": "open thing",
+                          "origin": "model", "status": "open", "disposition": None}],
+            "trail": [{"file": B, "claim": "x", "verdict": "verified"}],
+            "investigation_log": {}, "history": [],
+        }))
+        q = run_select(repo, tiers, led_rec, "--count", "10", "--findings-dir", str(fdir),
+                       "--pr-review-dir", str(prdir))
+        by_path = {a["path"]: a for a in q["articles"]}
+        check(by_path[B]["pr_review_records"] and by_path[B]["pr_review_records"][0]["pr"] == 555,
+              "the PR-pointer page carries its pre-merge review record")
+        check("trail" not in by_path[B]["pr_review_records"][0]
+              and by_path[B]["pr_review_records"][0]["findings"][0]["id"] == "F1",
+              "the stamped record is trimmed to finding-level fields")
+        check(by_path[A]["pr_review_records"] == [],
+              "a page with no review PR carries an empty list, not a missing key")
+
         print("no --findings-dir: the check is skipped rather than stranding the corpus")
         # Every lookup returns None without the prefix, so applying the filter
         # would declare the whole corpus unrecoverable and darken the lane.

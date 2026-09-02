@@ -34,6 +34,12 @@ Schema: `evidence-schema.json` in this directory is the documented contract;
 counts consistency). Bump `schema_version` on any breaking change and teach
 readers both shapes for one transition window.
 
+Downstream readers of `latest.json` beyond this directory: the glow-up lane's
+`scripts/content-review/build-glowup-backlog.py` banks a content-review PR's
+still-open / accepted-as-is / held findings and every `preexisting` row as
+page debt (records reach its unprivileged worker via `select-glowup.py
+--pr-review-dir`, which stamps them on the queue article).
+
 ### Finding IDs
 
 `F<n>`, assigned by the composer in first-appearance order, monotonically
