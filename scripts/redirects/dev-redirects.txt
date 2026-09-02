@@ -1,3 +1,4 @@
+learn/index.html|/dev/tutorials/
 tutorials/index.html|/dev/tutorials/
 templates/index.html|/dev/templates/
 
