@@ -494,6 +494,8 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 |---|---|---|
 | **F4** | `file.md` L95 | <what might be wrong and why> |
 - <plain advisory bullets are allowed here — untracked reviewer notes>
+#### Editorial stances introduced by this PR  ← composer-owned; the v2 block (see §Editorial stances above) hosted here instead of ⚠️ Low-confidence
+- L12 `file.md` — *"the fastest path …"* — positioning (found by regex+llm)
 ### ✅ What you can rubber-stamp            ← composer-owned count lines
 💡 **Pre-existing issues in touched files:** N — <link>
 📎 **Full evidence:** %%EVIDENCE_URL%%
@@ -538,6 +540,8 @@ reviewer's judgment).
 The model edits **both drafts** the way it edits the v2 draft — triage the
 stub TODOs, write the fix prose, fill the summary/confidence TODOs — under
 these rules:
+
+**Editorial stances on v3.** The `#### Editorial stances introduced by this PR` block under the brief's ⚠️ section is the same verdict-free list the v2 monolith renders under ⚠️ Low-confidence, with the same contract: leave its rows as composed, add none, drop none, grade none. It lives on the brief because a stance is reviewer-check material (nothing for the author to answer) — it is not a finding, gets no `F` id, and never enters REVIEW_STATE or `findings[]`; the evidence object carries the records under `stances`. `editorial-stances-coverage` runs on v3 against the brief.
 
 1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
    reason (move the line between sections/drafts and keep its id). Moving a

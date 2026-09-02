@@ -637,7 +637,8 @@ def assemble_evidence(
         "investigation_log": (prior or {}).get("investigation_log", {}),
         "history": list((prior or {}).get("history", [])) + [entry],
     }
-    for key in ("editorial_balance", "triaged", "style_suggestions_count", "confidence", "summary"):
+    for key in ("editorial_balance", "triaged", "style_suggestions_count", "confidence", "summary",
+                "stances"):
         if prior and key in prior:
             evidence[key] = prior[key]
     if prior is None:

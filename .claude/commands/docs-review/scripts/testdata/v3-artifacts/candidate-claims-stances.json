@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "claims": [],
+  "stances": [
+    {
+      "file": "content/docs/iac/x.md",
+      "line_range": "L12",
+      "text": "`pulumi convert` is the fastest path for most configurations, and it's where to start.",
+      "type": "positioning",
+      "found_by": ["regex", "llm"]
+    }
+  ],
+  "meta": {"regex_claims": 1, "llm_claims": 1, "merged_claims": 0, "stances": 1}
+}

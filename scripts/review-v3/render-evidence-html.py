@@ -213,6 +213,38 @@ def render_editorial_balance(balance) -> str:
 """
 
 
+def render_stances(stances) -> str:
+    """Verdict-free by design: no chip, no verdict column — the point of the
+    section is that a human sees the superlative, not that a machine graded
+    it. Absent key → no section (artifact pre-dated the split); empty list →
+    the explicit "none found" line, so "checked, nothing" is distinguishable
+    from "didn't check"."""
+    if stances is None:
+        return ""
+    if not stances:
+        return ('<section id="stances"><h2>Editorial stances</h2>'
+                '<p class="empty">The extractor found no positioning or comparison language in this PR\'s added lines.</p></section>')
+    rows = []
+    for st in stances:
+        loc = esc(st.get("file") or "")
+        if st.get("line"):
+            loc += f" L{esc(st.get('line'))}"
+        fb = ", ".join(esc(x) for x in (st.get("found_by") or []))
+        meta = esc(st.get("type") or "positioning") + (f" · found by {fb}" if fb else "")
+        rows.append(
+            f'<li class="stance-row"><span class="trail-loc">{loc}</span> '
+            f'<span class="trail-claim">{esc(st.get("text") or "")}</span> '
+            f'<span class="trail-route">{meta}</span></li>'
+        )
+    return f"""
+<section id="stances">
+  <h2>Editorial stances</h2>
+  <p class="summary">Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — listed so a reviewer can confirm each is a stance the docs should take.</p>
+  <ul class="stance-list">{"".join(rows)}</ul>
+</section>
+"""
+
+
 def render_triaged(triaged: list) -> str:
     if not triaged:
         return ""
@@ -303,7 +335,8 @@ pre {
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
   padding: 10px; overflow-x: auto; font-size: 12px;
 }
-.triaged-list { list-style: none; margin: 0; padding: 0; }
+.triaged-list, .stance-list { list-style: none; margin: 0; padding: 0; }
+.stance-row { display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .triaged-list li { margin-bottom: 10px; }
 .history-timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border); }
 .history-timeline li { padding: 0 0 14px 16px; position: relative; }
@@ -361,6 +394,7 @@ def render_evidence_html(evidence: dict) -> str:
         '<main>',
         render_trail(evidence.get("trail") or []),
         render_findings(evidence.get("findings") or []),
+        render_stances(evidence.get("stances")),
         render_investigation_log(evidence.get("investigation_log") or {}),
         render_editorial_balance(evidence.get("editorial_balance")),
         render_triaged(evidence.get("triaged") or []),

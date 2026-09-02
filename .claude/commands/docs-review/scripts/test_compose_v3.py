@@ -236,3 +236,133 @@ def test_table_furniture_recognized():
     assert cr.is_table_furniture(cr.FINDING_TABLE_SEPARATOR)
     assert cr.is_table_furniture("| --- | --- | --- |")
     assert not cr.is_table_furniture(cr.render_finding_row("F1", body="x"))
+
+
+# ---- editorial stances on the v3 surface ------------------------------------
+#
+# Master's #21312 gave positioning/comparison language a verdict-free home
+# under ⚠️ on the v2 monolith. On v3 the same H4 rides the reviewer brief's
+# ⚠️ section, the evidence object carries the records, and the coverage rule
+# holds the brief to the artifact.
+
+vp = _load("validate_pinned_for_stances", HERE / "validate-pinned.py")
+au = _load("apply_update_for_stances", HERE / "apply-update.py")
+STANCE_ART = ART / "candidate-claims-stances.json"
+
+
+@pytest.fixture(scope="module")
+def v3_with_stances(tmp_path_factory):
+    tmp = tmp_path_factory.mktemp("v3s")
+    author, brief, evidence = tmp / "a.md", tmp / "b.md", tmp / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(evidence),
+    ])
+    cmd[cmd.index("--candidate-claims") + 1] = str(STANCE_ART)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(evidence.read_text())
+
+
+def _stance_ctx(author: str, brief: str, base: dict, stances):
+    return vp.Context(
+        body=author, body_lines=author.splitlines(), pr=None, repo=None,
+        diff_files=[], diff_files_added=set(), diff_text="", repo_root=REPO_ROOT,
+        is_blog=False, surface="v3", brief=brief, evidence_base=base,
+        candidate_stances=stances,
+    )
+
+
+def test_stances_render_on_the_brief_not_the_author_card(v3_with_stances):
+    author, brief, ev = v3_with_stances
+    assert cr.STANCES_HEADING not in author
+    assert cr.STANCES_HEADING in brief
+    check_at = brief.index("### ⚠️ Check these before approving")
+    stamp_at = brief.index("### ✅ What you can rubber-stamp")
+    h4_at = brief.index(cr.STANCES_HEADING)
+    assert check_at < h4_at < stamp_at
+    bullet = next(ln for ln in brief.splitlines() if ln.startswith("- L12"))
+    assert "fastest path" in bullet and "positioning (found by regex+llm)" in bullet
+    # verdict-free: no finding id, no emoji verdict
+    assert "**F" not in bullet and "✅" not in bullet
+
+
+def test_stances_recorded_in_evidence(v3_with_stances):
+    _, _, ev = v3_with_stances
+    assert ev["stances"] == [{
+        "file": "content/docs/iac/x.md", "line": 12,
+        "text": "`pulumi convert` is the fastest path for most configurations, and it's where to start.",
+        "type": "positioning", "found_by": ["regex", "llm"],
+    }]
+    ve = _load("validate_evidence_for_stances", REPO_ROOT / "scripts" / "review-v3" / "validate-evidence.py")
+    assert ve.validate_evidence(ev) == []
+
+
+def test_stances_absent_when_artifact_predates_split(v3_outputs):
+    _, brief, ev = v3_outputs
+    assert cr.STANCES_HEADING not in brief
+    assert "stances" not in ev
+
+
+def test_stances_are_not_findings(v3_with_stances):
+    """The sub-list sits under an H4, so every row walker stops before it:
+    no F-ids assigned, nothing in REVIEW_STATE, nothing in findings[]."""
+    author, brief, ev = v3_with_stances
+    assert all("fastest path" not in f["text"] for f in ev["findings"])
+    rows = au._collect_rows(author, brief)
+    assert all("fastest path" not in r["parsed"]["body"] for r in rows.values())
+
+
+def test_stances_coverage_rule_on_v3(v3_with_stances):
+    author, brief, ev = v3_with_stances
+    stances = json.loads(STANCE_ART.read_text())["stances"]
+    skip = {"no-todo-tokens"}
+    ids = lambda vs: {v.rule_id for v in vs}  # noqa: E731
+    assert "editorial-stances-coverage" not in ids(vp.run_checks(_stance_ctx(author, brief, ev, stances), skip_rules=skip))
+    # dropping the bullet is a violation …
+    dropped = "\n".join(ln for ln in brief.splitlines() if not ln.startswith("- L12"))
+    assert "editorial-stances-coverage" in ids(vp.run_checks(_stance_ctx(author, dropped, ev, stances), skip_rules=skip))
+    # … so is decorating it with a verdict …
+    graded = brief.replace("positioning (found by regex+llm)", "positioning (found by regex+llm) ✅ verified")
+    assert "editorial-stances-coverage" in ids(vp.run_checks(_stance_ctx(author, graded, ev, stances), skip_rules=skip))
+    # … and so is a block the artifact doesn't back.
+    assert "editorial-stances-coverage" in ids(vp.run_checks(_stance_ctx(author, brief, ev, []), skip_rules=skip))
+    # No artifact at all: nothing to hold the brief to.
+    assert "editorial-stances-coverage" not in ids(vp.run_checks(_stance_ctx(author, brief, ev, None), skip_rules=skip))
+
+
+def test_stances_survive_update_lane_rerender(v3_with_stances):
+    """apply-update re-renders the ⚠️ table from rows; the H4 below it is
+    outside the section span and comes through verbatim."""
+    author, brief, ev = v3_with_stances
+    rows = au._collect_rows(author, brief)
+    out = au._render_doc(brief, rows, [], doc="brief")
+    assert cr.STANCES_HEADING in out
+    assert any(ln.startswith("- L12") and "fastest path" in ln for ln in out.splitlines())
+    assert out.index("### ⚠️ Check these before approving") < out.index(cr.STANCES_HEADING) < out.index("### ✅ What you can rubber-stamp")
+
+
+def test_stances_survive_build_evidence(v3_with_stances, tmp_path):
+    author, brief, ev = v3_with_stances
+    a, b, base = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "base.json"
+    a.write_text(author); b.write_text(brief); base.write_text(json.dumps(ev))
+    out = tmp_path / "final.json"
+    proc = subprocess.run(
+        [sys.executable, str(HERE / "build-evidence.py"),
+         "--author-body", str(a), "--brief-body", str(b), "--base", str(base),
+         "--output", str(out),
+         "--author-out", str(tmp_path / "a-clean.md"), "--brief-out", str(tmp_path / "b-clean.md")],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+    final = json.loads(out.read_text())
+    assert final["stances"] == ev["stances"]
+    assert cr.STANCES_HEADING in (tmp_path / "b-clean.md").read_text()
+    html = subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "review-v3" / "render-evidence-html.py"),
+         "--evidence", str(out), "--output", str(tmp_path / "e.html")],
+        capture_output=True, text=True,
+    )
+    assert html.returncode == 0, html.stderr
+    page = (tmp_path / "e.html").read_text()
+    assert 'id="stances"' in page and "fastest path" in page

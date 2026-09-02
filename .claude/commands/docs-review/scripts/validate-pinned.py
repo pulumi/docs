@@ -1740,10 +1740,17 @@ _STANCE_VERDICT_RE = re.compile(
     r"contradicted|mismatch|flagged|framing-drift)\b)")
 
 
-def stance_block_lines(body: str) -> list[str] | None:
+# Where the stance H4 lives per surface: under ⚠️ Low-confidence on the v2
+# monolith, under the brief's ⚠️ Check-these section on v3 (the author card
+# never carries it — a stance is reviewer-check material with no verdict and
+# nothing for the author to answer).
+_STANCE_HOST_SECTION = {"v2": "⚠️ Low-confidence", "v3": "⚠️ Check these before approving"}
+
+
+def stance_block_lines(body: str, host_section: str = "⚠️ Low-confidence") -> list[str] | None:
     """The lines under `#### Editorial stances introduced by this PR` inside
-    ⚠️ Low-confidence, or None when the H4 is absent."""
-    span = find_section(body, "⚠️ Low-confidence")
+    `host_section`, or None when the H4 is absent."""
+    span = find_section(body, host_section)
     if span is None:
         return None
     lines = body.splitlines()[span[0]:span[1]]
@@ -1772,17 +1779,21 @@ def check_editorial_stances_coverage(ctx: Context) -> list[Violation]:
     stances = ctx.candidate_stances
     if stances is None:
         return []  # artifact absent or pre-v2 — nothing to hold the review to
-    lines = stance_block_lines(ctx.body)
+    host = _STANCE_HOST_SECTION.get(ctx.surface, "⚠️ Low-confidence")
+    # v3: the block is on the brief (`ctx.brief`); the rule is body-scoped
+    # otherwise, so it reads the card that hosts the section explicitly.
+    host_body = (ctx.brief or "") if ctx.surface == "v3" else ctx.body
+    lines = stance_block_lines(host_body, host)
     violations: list[Violation] = []
     if lines is None:
         if not stances:
             return []  # nothing to list and nothing listed: fine on a pre-v2 body
         violations.append(Violation(
             rule_id="editorial-stances-coverage",
-            line_ref="⚠️ Low-confidence",
-            expected=f"the `{STANCES_HEADING}` block under ⚠️ Low-confidence",
+            line_ref=host,
+            expected=f"the `{STANCES_HEADING}` block under {host}",
             actual=f"block absent; `.candidate-claims.json` carries {len(stances)} stance record(s)",
-            hint=(f"Render `{STANCES_HEADING}` under ⚠️ Low-confidence with one `- L<n> `<file>` — "
+            hint=(f"Render `{STANCES_HEADING}` under {host} with one `- L<n> `<file>` — "
                   "*\"<text>\"* — <positioning|comparison>` bullet per record in the artifact's "
                   "`stances` list — no verdict emoji or word on these rows."),
         ))
@@ -3157,6 +3168,8 @@ RULES = [
         "desc": "Schema v21: the `#### Editorial stances introduced by this PR` list under ⚠️ matches `.candidate-claims.json`'s `stances` (positioning/comparison records the verifier never sees) both ways, and its rows carry no verdict.",
         "hint": "One `- L<n> `<file>` — *\"<text>\"* — <positioning|comparison>` bullet per stance record, no verdict emoji or word; drop any bullet the artifact doesn't back.",
         "check": check_editorial_stances_coverage,
+        # v3 (schema v22): the block lives on the brief, under ⚠️ Check these.
+        "surfaces": ("v2", "v3"),
     },
     {
         "id": "editorial-balance-counts",

@@ -1022,6 +1022,29 @@ def render_stances(stances: list[dict] | None) -> str:
     return "\n".join(out)
 
 
+def stance_records(stances: list[dict]) -> list[dict]:
+    """The evidence-object shape of the stance list: one record per extractor
+    stance, same order and text as the rendered bullets (the evidence page is
+    the durable copy of what the brief showed). `line` is the first line of
+    the extractor's range when it has one."""
+    out: list[dict] = []
+    for c in sorted(stances, key=lambda c: (c.get("file", ""), first_line_ref(c.get("line_range") or ""))):
+        rec: dict = {
+            "file": (c.get("file") or "").strip() or "(unknown)",
+            "text": redact(trunc(c.get("text") or "", TEXT_TRUNC)) or "(empty)",
+            "type": "comparison" if c.get("type") == "comparison" else "positioning",
+        }
+        refs = line_refs(c.get("line_range") or "")
+        nums = _lines_from_ref(refs[0]) if refs else None
+        if nums:
+            rec["line"] = nums[0]
+        fb = [str(x) for x in (c.get("found_by") or []) if str(x).strip()]
+        if fb:
+            rec["found_by"] = fb
+        out.append(rec)
+    return out
+
+
 def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "",
                          stances: list[dict] | None = None) -> str:
     has_style = bool(vale_findings)
@@ -2143,6 +2166,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "style_suggestions_count": len(prep["vale_nags"]),
         "confidence": confidence,
         "summary": None,
+        **({"stances": stance_records(prep["candidate_stances"])}
+           if prep["candidate_stances"] is not None else {}),
         "history": [
             {"ts": timestamp, "summary": "initial review (pending publication)", "sha": head_sha_short}
         ],
@@ -2278,6 +2303,16 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         _team_txt = getattr(args, "routed_team", "") or "the routed reviewer team"
         brief += ["", f"_Not your area? Any member of {_team_txt} can approve "
                   "— hand it off rather than approving on faith._"]
+    # Editorial stances ride the brief, not the author card: they are
+    # reviewer-check material by nature (a page's own framing, no verdict,
+    # nothing for the author to answer) and the same verdict-free H4 the v2
+    # monolith renders under ⚠️. It sits below the finding table because
+    # `#### ` terminates every row walker (build-evidence, apply-update,
+    # validate-pinned), so the sub-list is invisible to finding parsing and
+    # survives an update-lane re-render of the table above it.
+    stance_block = render_stances(prep["candidate_stances"])
+    if stance_block:
+        brief += ["", stance_block]
     brief += [
         "",
         "### ✅ What you can rubber-stamp",

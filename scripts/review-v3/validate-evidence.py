@@ -76,7 +76,16 @@ TOP_OPTIONAL = {
     # "prior-evidence-unavailable" on an update-lane run that couldn't fetch
     # the prior object, so trail/investigation_log are empty, not carried).
     "degraded",
+    # Editorial stances the extractor recorded for the diff (positioning /
+    # comparison language, verdict-free by design). Present — possibly empty
+    # — whenever the candidate-claims artifact carried a `stances` list;
+    # absent when the artifact pre-dates the split.
+    "stances",
 }
+
+STANCE_REQUIRED = {"file", "text", "type"}
+STANCE_OPTIONAL = {"line", "found_by"}
+STANCE_TYPES = {"positioning", "comparison"}
 
 FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
 # `detail` is the author card's `#### F<n> · Do this` block body, mirrored
@@ -284,6 +293,33 @@ def validate_evidence(obj) -> list[str]:
         route = t.get("route")
         if route is not None and route not in ROUTES:
             errors.append(f"{where}.route {route!r} must be one of {', '.join(sorted(ROUTES))}")
+
+    # ---- stances (optional) ----
+    stances = obj.get("stances")
+    if "stances" in obj:
+        if not isinstance(stances, list):
+            errors.append("evidence.stances must be a list when present")
+            stances = []
+        for i, st in enumerate(stances):
+            where = f"evidence.stances[{i}]"
+            if not isinstance(st, dict):
+                errors.append(f"{where} must be an object")
+                continue
+            errors += _check_keys(st, STANCE_REQUIRED, STANCE_OPTIONAL, where)
+            if not _nonempty_str(st.get("file")):
+                errors.append(f"{where}.file must be a non-empty string")
+            if not _nonempty_str(st.get("text")):
+                errors.append(f"{where}.text must be a non-empty string")
+            if st.get("type") not in STANCE_TYPES:
+                errors.append(
+                    f"{where}.type {st.get('type')!r} must be one of {', '.join(sorted(STANCE_TYPES))}"
+                )
+            line = st.get("line")
+            if line is not None and not (isinstance(line, int) and not isinstance(line, bool) and line >= 1):
+                errors.append(f"{where}.line must be an integer >= 1")
+            fb = st.get("found_by")
+            if fb is not None and not (isinstance(fb, list) and all(_nonempty_str(x) for x in fb)):
+                errors.append(f"{where}.found_by must be a list of non-empty strings")
 
     # ---- investigation_log ----
     ilog = obj.get("investigation_log")
