@@ -104,7 +104,17 @@ per config — the approving reviewer's review is the review. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The check summary embeds the
+summary), `'1'` = enforcing. `/deploy-staging` follows the same switch.
+
+**SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
+switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
+dispatch defaults to `dry_run`). Clocks are derived fresh from the GitHub
+timeline each sweep; only the actions taken are recorded, under
+`pr-review/state/<pr>.json` (per-PR idempotency: warns, closes, escalations
+keyed by clock epoch) and `pr-review/runs/<date>/<ts>.json` (immutable run
+records the weekly digest reduces). **Before flipping the switch, create the
+`review:author-stalled` label** (`.github/labels-pr-review.md` has the
+`gh label create` line) — the sweep applies it on the first author warn. The check summary embeds the
 reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
 strip into the author card naming the exact commands.
 
