@@ -220,7 +220,7 @@ Now any team in your organization can discover and use your component, regardles
 
 While components are powerful, they're just the starting point. Golden path templates layer on opinionated scaffolding, workflows, and compliance best practices that guide developers to production.
 
-### Golden Path Maturity: From Zero to Product-Grade Platforms
+### Golden path maturity: from zero to product-grade platforms
 
 Teams evolve from ad hoc deployments to mature, productized templates with versioning, metrics, and governance. These maturity levels reflect how deeply your platform enables safe, consistent delivery.
 
@@ -260,7 +260,7 @@ Drawing from [Spotify's pioneering work](https://engineering.atspotify.com/2020/
 4. **Extensible**: Teams can add project-specific resources without breaking the pattern
 5. **Evolutionary**: Templates improve based on feedback and new requirements
 
-### Building a Go Microservice Golden Path
+### Building a Go microservice golden path
 
 Let's create a complete golden path for Go microservices that includes:
 
