@@ -106,7 +106,10 @@ check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
 summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The
 surface itself is `REVIEW_V3_COMMENTS` (repo default) or the `surface:v3`
-label (one PR in or out, regardless of the variable). The check summary embeds the
+label (one PR in or out, regardless of the variable). `REVIEW_V3_BOT_PRS`
+= `'1'` makes the content-review and glow-up lanes open their bot PRs
+already wearing the label — free v3 test traffic that no human author
+sees. The check summary embeds the
 reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
 strip into the author card naming the exact commands.
 
