@@ -356,23 +356,28 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
 
 // Bucket for the pre-merge review evidence pages: one self-contained HTML
 // page per (PR, head SHA) plus a latest.html pointer, rendered by
-// scripts/review-v3/render-evidence-html.py and linked from the two pinned
-// review comments. Public by design — the content is the same verification
-// trail that used to live in a public PR comment, moved out to keep the
-// comments readable. One stable bucket (unlike the per-PR preview buckets):
-// evidence pages are part of the review's audit trail and must survive PR
-// close. Objects are world-readable but the bucket is not listable, matching
-// the origin-bucket posture below.
+// scripts/review-v3/render-evidence-html.py (lands with the review-v3
+// machinery PR) and linked from the two pinned review comments. Public by
+// design — the content is the same verification trail that used to live in
+// a public PR comment, moved out to keep the comments readable. One stable
+// bucket (unlike the per-PR preview buckets): evidence pages are part of the
+// review's audit trail and must survive PR close, so the bucket is versioned
+// like the two state buckets above (latest.html is overwritten on every
+// re-review; versioning keeps the prior pointer). Objects are world-readable
+// but the bucket is not listable, matching the origin-bucket posture below.
+//
+// Deliberately NOT a static website: the S3 website endpoint is HTTP-only,
+// which the TLS-only policy statement below would deny outright. Pages are
+// linked by key at the bucket's HTTPS REST URL instead (`reviewEvidenceBaseUrl`
+// + `/<pr>/latest.html`), which the public-read statement already covers.
 const reviewEvidenceBucket = new aws.s3.Bucket("review-evidence", {});
 
-const reviewEvidenceWebsite = new aws.s3.BucketWebsiteConfiguration("review-evidence-website", {
+new aws.s3.BucketVersioning("review-evidence-versioning", {
     bucket: reviewEvidenceBucket.id,
-    indexDocument: {
-        suffix: "index.html",
-    },
+    versioningConfiguration: { status: "Enabled" },
 });
 
-new aws.s3.BucketPublicAccessBlock("review-evidence-public-access-block", {
+const reviewEvidencePublicAccessBlock = new aws.s3.BucketPublicAccessBlock("review-evidence-public-access-block", {
     bucket: reviewEvidenceBucket.id,
     blockPublicAcls: true,
     blockPublicPolicy: false,
@@ -380,6 +385,10 @@ new aws.s3.BucketPublicAccessBlock("review-evidence-public-access-block", {
     restrictPublicBuckets: false,
 });
 
+// New buckets start with all four Block Public Access settings on, so the
+// public-read policy must wait for the block above to flip
+// blockPublicPolicy off — otherwise the first `pulumi up` fails with
+// AccessDenied on PutBucketPolicy (same ordering as the uploads bucket).
 new aws.s3.BucketPolicy("review-evidence-public-read-policy", {
     bucket: reviewEvidenceBucket.bucket,
     policy: reviewEvidenceBucket.arn.apply((arn) => JSON.stringify({
@@ -406,6 +415,8 @@ new aws.s3.BucketPolicy("review-evidence-public-read-policy", {
             },
         ],
     })),
+}, {
+    dependsOn: [reviewEvidencePublicAccessBlock],
 });
 
 // Grant the data warehouse's Snowpipe reader role read access to the buckets it
@@ -1574,7 +1585,7 @@ export const uploadsBucketName = uploadsBucket.bucket;
 export const socialStateBucketName = socialStateBucket.bucket;
 export const contentReviewLedgerBucketName = contentReviewLedgerBucket.bucket;
 export const reviewEvidenceBucketName = reviewEvidenceBucket.bucket;
-export const reviewEvidenceWebsiteEndpoint = reviewEvidenceWebsite.websiteEndpoint;
+export const reviewEvidenceBaseUrl = pulumi.interpolate`https://${reviewEvidenceBucket.bucketRegionalDomainName}`;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
