@@ -159,22 +159,13 @@ def fence_state_at(file_lines: list[str] | None, new_start: int) -> str | None:
     """The fence state at line `new_start` of the new file: the open fence's
     marker, or None when outside a fence. Walks the lines ABOVE the hunk
     (1..new_start-1) with `fence_toggle`, so a nested shorter marker never
-    inverts the answer. Returns None too when the file isn't available —
-    callers that need to tell the two apart use `fence_open_at`.
+    inverts the answer. The caller passes lines only when the checked-out
+    file exists; without it the walker falls back to the diff-only guess.
     """
     state: str | None = None
     for ln in (file_lines or [])[: max(new_start - 1, 0)]:
         state = fence_toggle(state, ln)
     return state
-
-
-def fence_open_at(file_lines: list[str] | None, new_start: int) -> bool | None:
-    """Whether line `new_start` of the new file sits inside a fenced code
-    block; None when the file isn't available, so the caller can fall back to
-    the diff-only guess."""
-    if file_lines is None:
-        return None
-    return fence_state_at(file_lines, new_start) is not None
 
 
 def iter_added_lines(patch: str, repo_root: Path | None = None):
