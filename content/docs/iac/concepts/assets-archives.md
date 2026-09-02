@@ -31,7 +31,7 @@ aliases:
 
 Some resource inputs take a file or a folder instead of a string or a number. Pulumi has two built-in types for those inputs: an *asset*, which is a single file, and an *archive*, which is a collection of files. When you pass one to a resource, Pulumi reads the contents, packages them in the format the resource expects, and tracks them as part of your stack.
 
-Each type comes in three kinds, which differ only in where the contents come from: an in-memory string, a path on disk, or a remote URI. Most languages expose them as constructors. YAML and Pulumi HCL expose them as built-in functions instead, so the names look a little different there: `fn::fileAsset` in YAML, and all-lowercase `fileasset` in Pulumi HCL.
+Each type comes in three kinds that differ in where the contents come from. An asset's contents come from an in-memory string, a path on disk, or a remote URI. An archive's contents come from a path on disk, a remote URI, or a map of other assets and archives. Most languages expose them as constructors. YAML and Pulumi HCL expose them as built-in functions instead, so the names look a little different there: `fn::fileAsset` in YAML, and all-lowercase `fileasset` in Pulumi HCL.
 
 ## Assets {#assets}
 
@@ -559,7 +559,7 @@ In Pulumi HCL, the asset and archive functions resolve relative paths against th
 
 ## Learn more
 
-- [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) explains how resource properties, including assets and archives, flow through a Pulumi program.
+- [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) explains how resource properties flow through a Pulumi program.
 - [AWS Lambda](/docs/iac/guides/clouds/aws/lambda/) shows archives packaging serverless function code end to end.
 - The full API surface for each language: [TypeScript and JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/asset.html), [Python](/docs/reference/pkg/python/pulumi/#pulumi.Asset), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi#Asset), [.NET](/docs/reference/pkg/dotnet/pulumi/pulumi.asset.html), and [Java](/docs/reference/pkg/java/com/pulumi/asset/package-summary.html).
 - The built-in functions for [YAML](/docs/iac/languages-sdks/yaml/yaml-language-reference/) and [Pulumi HCL](/docs/iac/languages-sdks/hcl/hcl-language-reference/).
