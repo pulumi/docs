@@ -458,7 +458,10 @@ except as amended here.
 `compose-pr-body.py`): the ledger's `skipped_findings` / `clarity_flag`
 counters plus every banked finding extracted from the page's prior review
 PRs' "Findings not applied", "Screenshot check", and "Rendered content"
-sections, each with a stable `id` and its `source_pr`. The pre-step
+sections, each with a stable `id` and its `source_pr` — plus, for PRs
+reviewed on the v3 surface, what the pre-merge *reviewer* found and the page
+still carries (`source: pr-review`: findings left open, accepted as-is, or
+held over a dispute, and every pre-existing issue it filed). The pre-step
 artifacts (claims, Vale, readthrough, frontmatter) are also present and are
 your evidence base.
 

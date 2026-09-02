@@ -11,6 +11,10 @@ S3 buckets, none of it human-browsable without pulling objects one at a time:
     blog-review/runs/<date>/…     per-run blog review findings
     blog-review/index/_summary.json  aggregate summary
     health/state.json             selection-signal health
+    pr-review/<pr>/latest.json    v3 PR review evidence (findings + dispositions)
+    pr-review/state/<pr>.json     SLA-sweep state (warns/escalations/closes)
+    pr-review/runs/<date>/…       per-sweep SLA action records
+    pr-review/waives/…            v3 merge-gate waive log
   social-post-state-* posted-social.json / posted.json
                                   per-post social publish timestamps
 
@@ -56,7 +60,7 @@ SOCIAL_BUCKET_PREFIX = "social-post-state-"
 CACHE_ENV = "REVIEW_ADMIN_CACHE"
 CACHE_DIRNAME = ".review-admin-cache"
 
-DOMAINS = ("docs", "claims", "blog", "social")
+DOMAINS = ("docs", "claims", "blog", "social", "pr-review")
 
 # Preferred column order for exports; unknown fields are appended after these.
 DOCS_COLUMNS = [
@@ -80,6 +84,10 @@ BLOG_ISSUE_COLUMNS = [
     "issue_category", "issue_severity",
 ]
 SOCIAL_COLUMNS = ["url", "platform", "posted_at", "failures", "source_file"]
+PR_REVIEW_COLUMNS = [
+    "pr", "head_sha", "blocking", "dispositions", "warns", "escalations",
+    "closes", "last_sweep_action", "generated_at",
+]
 
 
 def log(msg: str) -> None:
@@ -314,6 +322,124 @@ def load_social(cache: Path) -> list[dict]:
     return rows
 
 
+def load_pr_review_latest(cache: Path) -> list[dict]:
+    """One row per PR: `pr-review/<pr>/latest.json` -- the mirrored evidence
+    object (findings + their REVIEW_STATE dispositions). See
+    scripts/review-v3/README.md "The evidence object"."""
+    base = cache / "content-review" / "pr-review"
+    rows: list[dict] = []
+    if not base.is_dir():
+        return rows
+    for pr_dir in sorted(base.iterdir()):
+        if not pr_dir.is_dir() or not pr_dir.name.isdigit():
+            continue  # skip state/, runs/, waives/ -- only numeric <pr> dirs
+        record = load_json_file(pr_dir / "latest.json")
+        if record is not None:
+            record = dict(record)
+            record["_file"] = str(pr_dir / "latest.json")
+            rows.append(record)
+    return rows
+
+
+def load_pr_review_state(cache: Path) -> list[dict]:
+    """One row per PR: `pr-review/state/<pr>.json` -- the SLA-sweep's own
+    state (warns/escalations/closes), see scripts/review-v3/sla-sweep.py.
+
+    The PR number only lives in the filename (the state object itself has
+    no `pr` key -- see sla-sweep.py's state schema), so it's tagged onto
+    each record here as an int `pr` field: both `record_matches()` (`show`
+    by PR number) and `_pr_review_state_by_pr()` (join key) need it.
+    """
+    records = load_json_dir(cache / "content-review" / "pr-review" / "state")
+    for r in records:
+        stem = Path(r["_file"]).stem
+        if stem.isdigit():
+            r["pr"] = int(stem)
+    return records
+
+
+def load_pr_review_runs(cache: Path) -> list[dict]:
+    """All SLA-sweep run records across dates, each tagged with _run_date."""
+    runs_dir = cache / "content-review" / "pr-review" / "runs"
+    records: list[dict] = []
+    if not runs_dir.is_dir():
+        return records
+    for day in sorted(runs_dir.iterdir()):
+        if not day.is_dir():
+            continue
+        for record in load_json_dir(day):
+            record["_run_date"] = day.name
+            records.append(record)
+    return records
+
+
+def load_pr_review_waives(cache: Path) -> list[dict]:
+    """The v3 merge-gate waive log (`pr-review/waives/`) -- may not exist
+    yet on a repo where nobody has applied `review:waived`."""
+    return load_json_dir(cache / "content-review" / "pr-review" / "waives")
+
+
+def _pr_review_state_by_pr(cache: Path) -> dict[str, dict]:
+    return {Path(r["_file"]).stem: r for r in load_pr_review_state(cache)}
+
+
+def _latest_sweep_action_by_pr(cache: Path) -> dict[str, dict]:
+    """The most recent per-PR action entry across every synced run record,
+    keyed by PR number as a string (matching latest.json's directory name)."""
+    best: dict[str, tuple[str, dict]] = {}
+    for record in load_pr_review_runs(cache):
+        run_at = record.get("run_at") or record.get("_run_date") or ""
+        for action in record.get("actions") or []:
+            pr = str(action.get("pr"))
+            if pr not in best or run_at >= best[pr][0]:
+                best[pr] = (run_at, action)
+    return {pr: action for pr, (_run_at, action) in best.items()}
+
+
+def _summarize_sweep_action(action: dict) -> str:
+    """One-word label for the review-admin `list pr-review` table: the last
+    thing the SLA sweep did for this PR (warn/close/clear for author-time,
+    escalate/none for reviewer-time)."""
+    if not action:
+        return ""
+    if action.get("kind") == "author":
+        return (action.get("action") or {}).get("type", "")
+    if action.get("kind") == "reviewer":
+        types = [a.get("type") for a in action.get("actions") or []]
+        return "escalate" if "escalate" in types else (types[0] if types else "")
+    return ""
+
+
+def pr_review_rows(cache: Path) -> list[dict]:
+    """One row per PR: evidence-derived blocking/dispositions counts, the
+    SLA-sweep's warn/escalation/close counts, and its most recent action --
+    the `list pr-review` / dashboard table."""
+    states = _pr_review_state_by_pr(cache)
+    last_actions = _latest_sweep_action_by_pr(cache)
+    rows: list[dict] = []
+    for record in load_pr_review_latest(cache):
+        pr = str(record.get("pr") or "")
+        findings = record.get("findings") or []
+        blocking = sum(
+            1 for f in findings
+            if f.get("bucket") in ("outstanding", "author-answer") and not f.get("disposition")
+        )
+        dispositions = sum(1 for f in findings if f.get("disposition"))
+        state = states.get(pr) or {}
+        rows.append({
+            "pr": record.get("pr"),
+            "head_sha": (record.get("head_sha") or "")[:9],
+            "blocking": blocking,
+            "dispositions": dispositions,
+            "warns": len(state.get("warns") or []),
+            "escalations": len(state.get("escalations") or []),
+            "closes": len(state.get("closes") or []),
+            "last_sweep_action": _summarize_sweep_action(last_actions.get(pr) or {}),
+            "generated_at": record.get("generated_at"),
+        })
+    return rows
+
+
 # ---- flatteners -------------------------------------------------------------
 
 
@@ -366,6 +492,7 @@ def build_summary(cache: Path) -> dict:
     blog = load_blog_ledger(cache)
     runs = load_blog_runs(cache)
     social = load_social(cache)
+    pr_review = pr_review_rows(cache)
     return {
         "docs": {
             "articles": len(docs),
@@ -397,6 +524,14 @@ def build_summary(cache: Path) -> dict:
             "with_failures": len({r["url"] for r in social if r.get("failures")}),
             "latest_post": max((r.get("posted_at") or "" for r in social), default="n/a"),
         },
+        "pr_review": {
+            "prs": len(pr_review),
+            "blocking_total": sum(r["blocking"] for r in pr_review),
+            "dispositions_total": sum(r["dispositions"] for r in pr_review),
+            "warns_total": sum(r["warns"] for r in pr_review),
+            "escalations_total": sum(r["escalations"] for r in pr_review),
+            "closes_total": sum(r["closes"] for r in pr_review),
+        },
     }
 
 
@@ -426,6 +561,12 @@ def cmd_summary(args) -> int:
     print(f"Social post state       {s['social']['posts']} posts, {s['social']['rows']} platform sends, latest {s['social']['latest_post'][:10] or 'n/a'}")
     print(f"  platform: {counter_line(s['social']['by_platform'])}")
     print(f"  posts with recorded failures: {s['social']['with_failures']}")
+    print()
+    pr = s["pr_review"]
+    print(f"v3 PR review (pr-review/) {pr['prs']} PRs tracked, {pr['blocking_total']} blocking, "
+          f"{pr['dispositions_total']} findings dispositioned")
+    print(f"  SLA sweep: {pr['warns_total']} warns, {pr['escalations_total']} escalations, "
+          f"{pr['closes_total']} closes")
     print()
     health = load_health(cache)
     if health:
@@ -478,6 +619,11 @@ def list_rows(cache: Path, domain: str) -> tuple[list[dict], list[tuple[str, int
         return (rows, [
             ("url", 64), ("platform", 8), ("posted_at", 20), ("failures", 8),
         ], "posted_at")
+    if domain == "pr-review":
+        return (pr_review_rows(cache), [
+            ("pr", 7), ("head_sha", 10), ("blocking", 9), ("dispositions", 13),
+            ("warns", 6), ("escalations", 11), ("closes", 7), ("last_sweep_action", 18),
+        ], "generated_at")
     die(f"unknown domain '{domain}' (expected one of: {', '.join(DOMAINS)})")
 
 
@@ -489,8 +635,9 @@ def cmd_list(args) -> int:
     if args.verdict:
         rows = [r for r in rows if r.get("verdict") == args.verdict]
     if args.since:
-        date_field = "posted_at" if args.domain == "social" else \
-            "article_reviewed_at" if args.domain == "claims" else "reviewed_at"
+        date_field = {
+            "social": "posted_at", "claims": "article_reviewed_at", "pr-review": "generated_at",
+        }.get(args.domain, "reviewed_at")
         rows = [r for r in rows if (r.get(date_field) or "") >= args.since]
     rows.sort(key=lambda r: r.get(sort_field) or "", reverse=True)
     if args.limit:
@@ -508,6 +655,9 @@ def record_matches(record: dict, needle: str) -> bool:
         value = record.get(field) or ""
         if needle == value or needle in value:
             return True
+    pr = record.get("pr")
+    if pr is not None and needle == str(pr):
+        return True
     return False
 
 
@@ -520,6 +670,10 @@ def cmd_show(args) -> int:
         ("blog-review ledger", load_blog_ledger(cache)),
         ("blog-review runs", load_blog_runs(cache)),
         ("social post state", load_social(cache)),
+        ("pr-review latest (evidence)", load_pr_review_latest(cache)),
+        ("pr-review state (SLA sweep)", load_pr_review_state(cache)),
+        ("pr-review runs (SLA sweep)", load_pr_review_runs(cache)),
+        ("pr-review waives", load_pr_review_waives(cache)),
     ]
     hits = 0
     for title, records in sections:
@@ -583,6 +737,7 @@ def cmd_export(args) -> int:
     write_exports(load_blog_ledger(cache), out_dir, "blog-review", BLOG_COLUMNS, formats)
     write_exports(flatten_blog_issues(runs), out_dir, "blog-review-issues", BLOG_ISSUE_COLUMNS, formats)
     write_exports(load_social(cache), out_dir, "social-posts", SOCIAL_COLUMNS, formats)
+    write_exports(pr_review_rows(cache), out_dir, "pr-review", PR_REVIEW_COLUMNS, formats)
     return 0
 
 
@@ -660,6 +815,8 @@ const TABS = [
    cols:['slug','status','issues','post_date','reviewed_at','note']},
   {id:'social', label:'Social', rows:DATA.social, chips:'platform',
    cols:['url','platform','posted_at','failures','source_file']},
+  {id:'pr_review', label:'PR review', rows:DATA.pr_review, chips:'last_sweep_action',
+   cols:['pr','head_sha','blocking','dispositions','warns','escalations','closes','last_sweep_action','generated_at']},
 ];
 let active = 'overview';
 const state = {};   // per-tab: {q, chip, sortCol, sortDir}
@@ -697,6 +854,9 @@ function renderOverview(main) {
   mk('Fact-check claims', s.claims.claims, `${s.claims.articles} articles · ${fmtCounter(s.claims.by_verdict)}`);
   mk('Blog posts indexed', s.blog.posts, `${s.blog.issues} open issues · ${fmtCounter(s.blog.by_status)}`);
   mk('Social sends', s.social.rows, `${s.social.posts} posts · ${fmtCounter(s.social.by_platform)}`);
+  mk('v3 PRs tracked', s.pr_review.prs,
+     `${s.pr_review.blocking_total} blocking · ${s.pr_review.warns_total} warns · ` +
+     `${s.pr_review.escalations_total} escalations · ${s.pr_review.closes_total} closes`);
   main.append(cards);
   if (DATA.health && DATA.health.signals) {
     main.append(el('h2', {}, `Signal health (updated ${DATA.health.updated || '?'})`));
@@ -803,6 +963,7 @@ def render_html(cache: Path) -> str:
         "blog": [{k: v for k, v in r.items() if k != "_file"} for r in load_blog_ledger(cache)],
         "blog_issues": flatten_blog_issues(runs),
         "social": load_social(cache),
+        "pr_review": pr_review_rows(cache),
         "health": load_health(cache),
         "blog_summary": load_blog_summary(cache),
     }
@@ -876,6 +1037,31 @@ FIXTURES = {
                                           "linkedin": "2026-04-01T09:01:00+00:00",
                                           "_failures": 1}},
     },
+    "content-review/pr-review/21300/latest.json": {
+        "schema_version": 1, "repo": "pulumi/docs", "pr": 21300, "head_sha": "a" * 40,
+        "run_id": "run-1", "generated_at": "2026-08-31T17:00:00Z", "high_water": 2,
+        "findings": [
+            {"id": "F1", "bucket": "outstanding", "file": "content/docs/x.md",
+             "text": "Broken link", "origin": "verdict:contradicted", "status": "open"},
+            {"id": "F2", "bucket": "author-answer", "file": "content/docs/x.md",
+             "text": "Source?", "origin": "verdict:unverifiable", "status": "resolved",
+             "disposition": {"disposition": "refuted", "actor": "cam", "note": "n",
+                             "updated_at": "2026-08-31T18:00:00Z"}},
+        ],
+        "trail": [], "investigation_log": {}, "history": [],
+    },
+    "content-review/pr-review/state/21300.json": {
+        "schema": 1,
+        "warns": [{"at": "2026-08-31T12:00:00Z", "head_sha": "a" * 40}],
+        "escalations": [], "closes": [],
+    },
+    "content-review/pr-review/runs/2026-08-31/sweep-120000Z.json": {
+        "schema": 1, "run_at": "2026-08-31T12:00:00Z", "dry_run": False,
+        "actions": [
+            {"pr": 21300, "kind": "author", "head_sha": "a" * 40, "changed": True,
+             "action": {"type": "warn", "idle_days": 16.0, "undecided_count": 1}},
+        ],
+    },
 }
 
 
@@ -900,10 +1086,24 @@ def self_test() -> int:
         social = load_social(cache)
         assert len(social) == 2 and social[0]["failures"] == 1, social
 
+        pr_rows = pr_review_rows(cache)
+        assert len(pr_rows) == 1, pr_rows
+        row = pr_rows[0]
+        assert row["pr"] == 21300
+        assert row["head_sha"] == ("a" * 40)[:9]
+        assert row["blocking"] == 1, row  # F1 outstanding, no disposition
+        assert row["dispositions"] == 1, row  # F2 has a disposition
+        assert row["warns"] == 1 and row["escalations"] == 0 and row["closes"] == 0
+        assert row["last_sweep_action"] == "warn", row
+        assert record_matches({"pr": 21300}, "21300")
+
         summary = build_summary(cache)
         assert summary["claims"]["by_verdict"]["contradicted"] == 1
         assert summary["blog"]["issues"] == 1
         assert summary["social"]["posts"] == 1
+        assert summary["pr_review"]["prs"] == 1
+        assert summary["pr_review"]["blocking_total"] == 1
+        assert summary["pr_review"]["warns_total"] == 1
 
         out_dir = cache / "exports"
         out_dir.mkdir()
@@ -914,11 +1114,17 @@ def self_test() -> int:
         jsonl = [json.loads(line) for line in (out_dir / "claims.jsonl").read_text().splitlines()]
         assert jsonl[1]["verdict"] == "contradicted"
 
+        write_exports(pr_rows, out_dir, "pr-review", PR_REVIEW_COLUMNS, {"csv", "jsonl"})
+        pr_csv_lines = (out_dir / "pr-review.csv").read_text().splitlines()
+        assert len(pr_csv_lines) == 2  # header + 1 PR
+        assert pr_csv_lines[0].startswith("pr,head_sha,blocking")
+
         html = render_html(cache)
         assert "Review ledgers" in html
         assert "</script> honest" not in html          # escaped in embedded JSON
         assert "<\\/script> honest" in html
         assert "docs-get-started" in html
+        assert "PR review" in html and "21300" in html
 
     print("self-test OK")
     return 0

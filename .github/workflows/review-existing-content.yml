@@ -241,6 +241,10 @@ jobs:
             # Structured per-page findings (record-page-findings.py), synced so
             # the glow-up selector can hand each article its own record.
             echo "findings_uri=s3://$BUCKET/findings/" >> "$GITHUB_OUTPUT"
+            # The v3 pre-merge review's evidence records (scripts/review-v3/),
+            # `pr-review/<pr>/latest.json`; the glow-up selector hands each
+            # article the records for its own review PRs.
+            echo "pr_review_uri=s3://$BUCKET/pr-review/" >> "$GITHUB_OUTPUT"
             # Raw bucket name, handed to each worker via queue_json so a
             # per-worker `pulumi stack output` flake can't silently drop the
             # ledger write (the flake that caused duplicate re-reviews).
@@ -341,6 +345,12 @@ jobs:
           mkdir -p .findings-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.findings_uri }}" .findings-cache/ --quiet \
             || echo "::warning::findings records unavailable; the glow-up recoverability check is skipped this run and the worker falls back to the PR-body scrape"
+          # Pre-merge review evidence (v3): only each PR's latest.json — the
+          # per-SHA objects are history, not backlog. Best effort like the rest.
+          mkdir -p .pr-review-cache
+          aws s3 sync "${{ steps.ledger-bucket.outputs.pr_review_uri }}" .pr-review-cache/ --quiet \
+            --exclude "*" --include "*/latest.json" \
+            || echo "::warning::pre-merge review records unavailable; glow-up backlogs skip that source this run"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
@@ -451,6 +461,9 @@ jobs:
           # read S3 itself (see record-page-findings.py).
           if [ -d .findings-cache ]; then
             ARGS+=(--findings-dir .findings-cache)
+          fi
+          if [ -d .pr-review-cache ]; then
+            ARGS+=(--pr-review-dir .pr-review-cache)
           fi
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)
