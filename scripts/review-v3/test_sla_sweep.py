@@ -539,6 +539,37 @@ def test_stale_author_warn_cleared_on_no_clock_branch():
         assert record["actions"][0]["kind"] is None
 
 
+def test_no_durable_state_forces_dry_run():
+    """A CI runner's local state dies with the job; mutating without a
+    durable URI re-issues every warn/escalation each sweep. So: no URI and
+    no explicit --allow-local-state ⇒ dry-run, loudly."""
+    dry, why = sla_sweep.resolve_mutation_mode("", False, False)
+    assert dry is True and "DRY-RUN" in why
+    assert sla_sweep.resolve_mutation_mode("s3://b/pr-review", False, False) == (False, None)
+    assert sla_sweep.resolve_mutation_mode("", False, True) == (False, None)
+    assert sla_sweep.resolve_mutation_mode("", True, False) == (True, None)
+
+
+def test_cli_without_uri_does_not_mutate(monkeypatch, capsys):
+    """End to end through main(): stalled PR, no URI, no override → the
+    sweep runs but posts nothing, and the record says why."""
+    gh = StubGh()
+    gh.add_pr(1, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+              timeline=[committed(iso(NOW - timedelta(days=16)))])
+    monkeypatch.setattr(sla_sweep, "Gh", lambda repo: gh)
+    monkeypatch.delenv(sla_sweep.EVIDENCE_URI_ENV, raising=False)
+    with tempfile.TemporaryDirectory() as d:
+        import yaml  # noqa: PLC0415
+        cfg = Path(d) / "review-routing.yml"
+        cfg.write_text(yaml.safe_dump(RAW_CONFIG))
+        monkeypatch.setattr(sys, "argv", ["sla-sweep.py", "--repo", "pulumi/docs",
+                                          "--config", str(cfg), "--state-dir", d])
+        assert sla_sweep.main() == 0
+    out = json.loads(capsys.readouterr().out)
+    assert out["dry_run"] is True and "DRY-RUN" in out["forced_dry_run"]
+    assert gh.comments_posted == [] and gh.labels_added == []
+
+
 def run_standalone() -> int:
     failures = 0
     for t in ALL_TESTS:
