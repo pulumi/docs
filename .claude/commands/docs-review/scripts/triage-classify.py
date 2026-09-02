@@ -234,7 +234,13 @@ def _fence_parity_from_file(repo_root, path: str, header: str, body_lines: list[
     #21089). Tries the new-side start (head checkout) then the old-side start
     (base checkout), accepting whichever position's lines match the file.
     None when the file is missing or neither side lines up — callers fall
-    back to the diff-only tracker."""
+    back to the diff-only tracker.
+
+    Pinned by test_triage_classify_mechanical.py::test_fence_parity_seeded_from_file,
+    which reproduces the #21220/#21089 shape (a hunk whose leading context
+    line is the CLOSING fence of a block opened above it) and asserts the
+    diff-only tracker calls it code while the file-seeded pass does not.
+    """
     if repo_root is None:
         return None
     m = HUNK_HEADER_RE.match(header)

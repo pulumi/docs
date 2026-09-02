@@ -22,10 +22,12 @@ name: Staging deploy (PR)
 #   automatically (fails closed).
 # - Concurrency: the staging stack is one shared environment, so deploys
 #   queue (`staging-stack` group, no cancel-in-progress). GitHub holds at
-#   most one pending run per group and silently cancels the one it
-#   displaces, so a cancelled run posts a "superseded" comment telling the
-#   requester to re-run — otherwise a tools reviewer waits forever for a
-#   status that will never arrive.
+#   most one PENDING run per group and silently drops the one a newer
+#   request displaces — and a dropped run never starts, so nothing inside
+#   it can post a notice. The honest alternative is up front: when a deploy
+#   is already running, the job tells the requester it is queued behind it
+#   and that a third request would displace this one, so they know to
+#   re-run `/deploy-staging` if no status ever lands.
 
 on:
   issue_comment:
@@ -110,13 +112,33 @@ jobs:
           HEAD_REF: ${{ steps.gate.outputs.head_ref }}
         run: |
           set -euo pipefail
+          # Queue transparency (see the concurrency note in the header): if a
+          # deploy is already running, say so before dispatching — a run this
+          # one displaces from the pending slot never starts, so this is the
+          # only moment a notice can be posted.
+          BUSY=$(gh run list --repo "$REPO" --workflow testing-build-and-deploy.yml \
+                   --status in_progress --limit 1 --json url --jq '.[0].url // empty')
+          if [ -n "$BUSY" ]; then
+            gh api --method POST "repos/$REPO/issues/$PR/comments" \
+              -f body="⏳ A staging deploy is already running ($BUSY); this request is queued behind it. GitHub keeps one queued deploy at a time, so a newer \`/deploy-staging\` before that one finishes would drop this request silently — if no \`staging/pulumi-test-io\` status lands on \`${HEAD_SHA:0:9}\`, re-run \`/deploy-staging\`." >/dev/null
+          fi
+          # The dispatch API returns nothing. Stamp the time first and select
+          # the first workflow_dispatch run on this branch created after it —
+          # `--limit 1` on the branch would happily pick up an earlier push
+          # or /deploy-staging run and post ITS outcome as this head's status.
+          SINCE=$(date -u +%FT%TZ)
           gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF"
-          # The dispatch API returns nothing; find the run it created.
-          sleep 10
-          RUN_ID=$(gh run list --repo "$REPO" --workflow testing-build-and-deploy.yml \
-                     --branch "$HEAD_REF" --limit 1 --json databaseId --jq '.[0].databaseId')
+          RUN_ID=""
+          for i in $(seq 1 12); do
+            sleep 5
+            RUN_ID=$(gh run list --repo "$REPO" --workflow testing-build-and-deploy.yml \
+                       --branch "$HEAD_REF" --event workflow_dispatch --limit 10 \
+                       --json databaseId,createdAt \
+                       --jq "[.[] | select(.createdAt > \"$SINCE\")] | sort_by(.createdAt) | first | .databaseId // empty")
+            [ -n "$RUN_ID" ] && break
+          done
           if [ -z "$RUN_ID" ]; then
-            echo "::error::could not locate the dispatched testing deploy run"
+            echo "::error::could not locate the dispatched testing deploy run (no workflow_dispatch run on $HEAD_REF created after $SINCE within 60 s)"
             exit 1
           fi
           RUN_URL="https://github.com/$REPO/actions/runs/$RUN_ID"
@@ -135,11 +157,3 @@ jobs:
           gh api --method POST "repos/$REPO/statuses/$HEAD_SHA" \
             -f state="$STATE" -f context="staging/pulumi-test-io" \
             -f target_url="$RUN_URL" -f description="$DESC" >/dev/null
-
-      - name: Superseded notice
-        if: cancelled()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh api --method POST "repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments" \
-            -f body="⏭️ This \`/deploy-staging\` was superseded by a newer request in the staging queue — re-run \`/deploy-staging\` when the current deploy finishes." >/dev/null
