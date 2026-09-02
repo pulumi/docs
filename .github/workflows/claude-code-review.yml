@@ -2080,7 +2080,7 @@ jobs:
       # Loud on failure (a 403 from missing `actions: write` must show as a
       # red step), non-fatal for the job.
       - name: Re-evaluate Sentinel (v3)
-        if: steps.current.outputs.superseded == 'false'
+        if: steps.current.outputs.superseded == 'false' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

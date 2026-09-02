@@ -52,7 +52,10 @@ permissions:
 
 jobs:
   resolve:
-    if: github.event.issue.pull_request != null && github.event.comment.user.type != 'Bot'
+    # Dark until the v3 surface is on: the block this lane writes lives on
+    # the v3 author card, and a per-comment job on every PR is not a cost
+    # to pay while the cards it edits don't exist.
+    if: github.event.issue.pull_request != null && github.event.comment.user.type != 'Bot' && vars.REVIEW_V3_COMMENTS == '1'
     runs-on: ubuntu-latest
     steps:
       # Base repo default branch only — see the SECURITY INVARIANT note

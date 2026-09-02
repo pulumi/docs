@@ -25,11 +25,18 @@ name: Sentinel
 # comment PATCH fires no PR event, so review-resolve.yml pokes this
 # workflow via workflow_dispatch when it applies dispositions.
 #
-# Report-only rollout: until the repo variable REVIEW_V3_SENTINEL is
-# explicitly '1', the check concludes `neutral` with the real verdict in
-# the summary ("REPORT-ONLY — would be: …"). The comparison is written
-# against '1' on purpose — an unset variable must mean report-only, and
-# `vars.X != '0'` is TRUE for unset (the blog-review lesson).
+# Rollout switch — the repo variable REVIEW_V3_SENTINEL is tri-state:
+#   unset    → DARK. The job never runs, no check-run is posted, and the
+#              review lanes' "Re-evaluate Sentinel" pokes are skipped. This
+#              is the state the workflow file merges in (Phase 0/1): merging
+#              must change nothing a contributor can see.
+#   'report' → report-only (Phase 2). The check concludes `neutral` with
+#              the real verdict in the summary ("REPORT-ONLY — would be: …").
+#   '1'      → enforcing (Phase 4): real conclusions, made required by the
+#              ruleset.
+# Every comparison is written against a literal on purpose — `vars.X != '0'`
+# is TRUE for unset (the blog-review lesson), so "unset" is never a truthy
+# branch anywhere below.
 
 on:
   pull_request_target:
@@ -65,6 +72,7 @@ env:
 
 jobs:
   sentinel:
+    if: (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

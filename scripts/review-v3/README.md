@@ -100,9 +100,11 @@ REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
 checks. `review:waived` ⇒ success with a banner naming the actor, except a
 red G4, which stands. External contributors (no push permission) skip G1/G2
-per config — the approving reviewer's review is the review. Report-only
-rollout: until repo variable `REVIEW_V3_SENTINEL` is `'1'`, conclusions are
-`neutral` with "would be: …" in the summary. The check summary embeds the
+per config — the approving reviewer's review is the review. Rollout switch:
+repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
+check-run, the review lanes skip their pokes; the state the file merges in),
+`'report'` = report-only (conclusions `neutral` with "would be: …" in the
+summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The check summary embeds the
 reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
 strip into the author card naming the exact commands.
 

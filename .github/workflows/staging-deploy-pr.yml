@@ -50,7 +50,9 @@ env:
 
 jobs:
   deploy:
-    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '/deploy-staging')
+    # The commit status this writes is Sentinel gate 4's evidence; without a
+    # Sentinel to read it the command is inert, so it follows the same switch.
+    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '/deploy-staging') && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

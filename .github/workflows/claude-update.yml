@@ -773,7 +773,7 @@ jobs:
       # a 403 (missing `actions: write`) must show as a red step, not be
       # swallowed — this exact poke sat silently 403ing behind `|| true`.
       - name: Re-evaluate Sentinel (v3)
-        if: steps.publish-v3.outcome == 'success'
+        if: steps.publish-v3.outcome == 'success' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
