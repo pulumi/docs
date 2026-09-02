@@ -321,7 +321,7 @@ Since this article came out, I've had a chance to talk to several Cosmos DB user
 
 ## Managing Database Infrastructure with Pulumi
 
-Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/docs/iac/clouds/aws/) helps you implement the right database solution for your specific needs. Getting started only takes a few minutes: [install the Pulumi CLI](/docs/install/) and point it at your existing Azure subscription.
+Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifies the process of provisioning and managing database infrastructure on Azure. With infrastructure as code in your favorite programming languages, you can define, deploy, and maintain your entire database infrastructure using familiar development practices. Pulumi's [Azure Native provider](/registry/packages/azure-native/) helps you implement the right database solution for your specific needs. Getting started only takes a few minutes: [install the Pulumi CLI](/docs/install/) and point it at your existing Azure subscription.
 
 With Pulumi, you get:
 
