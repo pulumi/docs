@@ -650,7 +650,7 @@ jobs:
               out=$(pulumi -C infrastructure stack output "$1" \
                 --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
               [ -n "$out" ] && break
-              sleep $((i * 5))
+              [ "$i" -lt 3 ] && sleep $((i * 5))
             done
             printf '%s' "$out"
           }
