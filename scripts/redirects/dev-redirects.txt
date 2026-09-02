@@ -103,3 +103,37 @@ tutorials/importing-infrastructure/index.html|/dev/tutorials/importing-aws-infra
 docs/reference/tutorials/index.html|/dev/tutorials/
 docs/using-pulumi/define-and-provision-resources/index.html|/dev/tutorials/creating-resources-aws/
 docs/using-pulumi/stack-outputs-and-references/index.html|/dev/tutorials/stack-outputs-refs-aws/
+
+# /learn/* aliases retired with the /tutorials cutover (these pages carried
+# /learn/... aliases on the old site); 301 them to their new /dev homes.
+learn/abstraction-encapsulation/abstraction/index.html|/dev/tutorials/abstraction-encapsulation/abstraction/
+learn/abstraction-encapsulation/component-resources/index.html|/dev/tutorials/abstraction-encapsulation/component-resources/
+learn/abstraction-encapsulation/encapsulation/index.html|/dev/tutorials/abstraction-encapsulation/encapsulation/
+learn/abstraction-encapsulation/index.html|/dev/tutorials/abstraction-encapsulation/
+learn/building-with-pulumi/index.html|/dev/tutorials/building-with-pulumi/
+learn/building-with-pulumi/secrets/index.html|/dev/tutorials/building-with-pulumi/secrets/
+learn/building-with-pulumi/stack-outputs/index.html|/dev/tutorials/building-with-pulumi/stack-outputs/
+learn/building-with-pulumi/stack-references/index.html|/dev/tutorials/building-with-pulumi/stack-references/
+learn/building-with-pulumi/understanding-stacks/index.html|/dev/tutorials/building-with-pulumi/understanding-stacks/
+learn/create-docker-images/index.html|/dev/tutorials/pulumi-fundamentals/create-docker-images/
+learn/embedding-pulumi/building-api/index.html|/dev/tutorials/embedding-pulumi/building-api/
+learn/embedding-pulumi/considerations/index.html|/dev/tutorials/embedding-pulumi/considerations/
+learn/embedding-pulumi/index.html|/dev/tutorials/embedding-pulumi/
+learn/embedding-pulumi/using-the-api/index.html|/dev/tutorials/embedding-pulumi/using-the-api/
+learn/glossary/aws-ecs/index.html|/dev/glossary/aws-ecs/
+learn/glossary/aws-eks/index.html|/dev/glossary/aws-eks/
+learn/glossary/aws-fargate/index.html|/dev/glossary/aws-fargate/
+learn/glossary/aws-lambda/index.html|/dev/glossary/aws-lambda/
+learn/glossary/cache-database/index.html|/dev/glossary/cache-database/
+learn/glossary/column-oriented/index.html|/dev/glossary/column-oriented/
+learn/glossary/document-oriented/index.html|/dev/glossary/document-oriented/
+learn/glossary/gcp-gke/index.html|/dev/glossary/gcp-gke/
+learn/glossary/graph-oriented/index.html|/dev/glossary/graph-oriented/
+learn/glossary/index.html|/dev/glossary/
+learn/glossary/key-value/index.html|/dev/glossary/key-value/
+learn/glossary/managed-kubernetes/index.html|/dev/glossary/managed-kubernetes/
+learn/glossary/msft-aks/index.html|/dev/glossary/msft-aks/
+learn/glossary/nosql/index.html|/dev/glossary/nosql/
+learn/pulumi-fundamentals/configure-and-provision/index.html|/dev/tutorials/pulumi-fundamentals/configure-and-provision/
+learn/pulumi-fundamentals/create-a-pulumi-project/index.html|/dev/tutorials/pulumi-fundamentals/create-a-pulumi-project/
+learn/pulumi-fundamentals/index.html|/dev/tutorials/pulumi-fundamentals/
