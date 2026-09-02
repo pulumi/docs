@@ -425,12 +425,33 @@ def load_state(pr: int, uri: str, state_dir: Path) -> dict:
     return empty_sweep_state()
 
 
-def save_state(pr: int, state: dict, uri: str, state_dir: Path) -> None:
+def save_state(pr: int, state: dict, uri: str, state_dir: Path) -> bool:
+    """Persist per-PR state. Returns whether the DURABLE copy landed: the
+    S3 upload's result when a URI is set, True for a local-only run (the
+    caller decided local state was acceptable — see resolve_mutation_mode).
+    A False here is the signal the run record must carry: the mutation
+    happened, its record didn't, and the next sweep will not know."""
     local = local_state_path(state_dir, pr)
     local.parent.mkdir(parents=True, exist_ok=True)
     local.write_text(json.dumps(state, indent=2) + "\n")
     if uri:
-        _record_evidence.upload(state, _record_evidence.s3_key(uri, "state", f"{pr}.json"))
+        return _record_evidence.upload(state, _record_evidence.s3_key(uri, "state", f"{pr}.json"))
+    return True
+
+
+def durable_state_writable(uri: str, now: datetime) -> bool:
+    """Pre-flight for a real run: write a probe to the state prefix and read
+    it back. Mutating before knowing the state write can land is how a warn
+    or an escalation gets re-issued every sweep; this turns "the bucket
+    resolved" into "the bucket accepted a write from this runner"."""
+    if not uri:
+        return False
+    key = _record_evidence.s3_key(uri, "state", "_probe.json")
+    stamp = {"probe": now.isoformat()}
+    if not _record_evidence.upload(stamp, key):
+        return False
+    back = _s3_read_json(key)
+    return bool(back) and back.get("probe") == stamp["probe"]
 
 
 def write_run_record(record: dict, uri: str, state_dir: Path, now: datetime) -> None:
@@ -658,11 +679,11 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
                 if not dry_run:
                     _try_label(gh, pr_number, gh.remove_label, AUTHOR_STALLED_LABEL)
                 state["warns"] = []
-                if not dry_run:
-                    save_state(pr_number, state, evidence_uri, state_dir)
+                persisted = save_state(pr_number, state, evidence_uri, state_dir) if not dry_run else True
                 run_actions.append({"pr": pr_number, "kind": None, "head_sha": head_sha,
                                     "changed": True,
-                                    "actions": [{"type": "clear_stale_author_warn"}]})
+                                    "actions": [{"type": "clear_stale_author_warn"}],
+                                    **({} if persisted else {"state_persisted": False})})
             continue
 
         try:
@@ -705,7 +726,12 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
             continue
 
         if result.get("changed") and not dry_run:
-            save_state(pr_number, state, evidence_uri, state_dir)
+            if not save_state(pr_number, state, evidence_uri, state_dir):
+                # The mutation is already out; the next sweep will not know.
+                # Say so where the digest and a human will read it.
+                warn(f"PR #{pr_number}: state NOT persisted to {evidence_uri} — the action(s) below "
+                     "may be re-issued next sweep")
+                result = {**result, "state_persisted": False}
 
         run_actions.append({"pr": pr_number, "kind": kind, "head_sha": head_sha, **result})
 
@@ -718,7 +744,8 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
 # ---- CLI ----------------------------------------------------------------
 
 
-def resolve_mutation_mode(uri: str, dry_run: bool, allow_local_state: bool) -> tuple[bool, str | None]:
+def resolve_mutation_mode(uri: str, dry_run: bool, allow_local_state: bool,
+                          durable_ok: bool = True) -> tuple[bool, str | None]:
     """Whether this run may mutate, given where its state can live.
 
     State is what makes the sweep idempotent: a warn or an escalation that
@@ -728,8 +755,14 @@ def resolve_mutation_mode(uri: str, dry_run: bool, allow_local_state: bool) -> t
     dry-run, loudly. `--allow-local-state` is the developer override for a
     laptop whose --state-dir persists between runs.
     """
-    if dry_run or uri or allow_local_state:
-        return dry_run, None
+    if dry_run:
+        return True, None
+    if uri and not durable_ok:
+        return True, (f"{EVIDENCE_URI_ENV} is set but a probe write to its state prefix did not land: "
+                      "mutations whose record can't be persisted would be re-issued every sweep, so "
+                      "this run is DRY-RUN (nothing labeled, commented, closed, or escalated)")
+    if uri or allow_local_state:
+        return False, None
     return True, (f"{EVIDENCE_URI_ENV} unset and --allow-local-state not given: mutations without "
                   "durable state would be re-issued every sweep, so this run is DRY-RUN "
                   "(nothing labeled, commented, closed, or escalated)")
@@ -764,7 +797,9 @@ def main() -> int:
         return 1
 
     uri = os.environ.get(EVIDENCE_URI_ENV, "").strip()
-    dry_run, forced = resolve_mutation_mode(uri, args.dry_run, args.allow_local_state)
+    now = datetime.now(timezone.utc)
+    durable_ok = durable_state_writable(uri, now) if (uri and not args.dry_run) else True
+    dry_run, forced = resolve_mutation_mode(uri, args.dry_run, args.allow_local_state, durable_ok)
     if forced:
         warn(forced)
     elif not uri:
@@ -772,7 +807,7 @@ def main() -> int:
 
     gh = Gh(args.repo)
     record = sweep(
-        gh, config, now=datetime.now(timezone.utc), dry_run=dry_run,
+        gh, config, now=now, dry_run=dry_run,
         state_dir=Path(args.state_dir), evidence_uri=uri,
     )
     if forced:
