@@ -31,6 +31,17 @@ Sources, in order of authority:
 
 1. The structured findings record (`record-page-findings.py`), when the page has
    one. Forward-only: pages last reviewed before 2026-08-19 have none.
+1b. The pre-merge review's own evidence record for each prior review PR
+   (`pr-review/<pr>/latest.json`, written by the v3 review surface —
+   scripts/review-v3/README.md). This is what the docs REVIEWER found on the
+   content-review PR, as opposed to what the content-review run found on the
+   page: a finding left `open` when the PR closed, one a human accepted as-is,
+   a dispute the model held, and every pre-existing issue it filed are all
+   debt the page still carries. Fork-safe and machine-written, so it is read
+   before the PR-body scrape. Records reach the unprivileged worker the same
+   way the findings record does — stamped on the queue article by
+   select-glowup.py (`pr_review_records`) — or from `--pr-review-dir` on a
+   dispatcher-side run. Forward-only: PRs reviewed on the v2 monolith have none.
 2. Every prior review PR for the page, found by HEAD REF. An earlier version of
    this file asserted that reused branch names made older PRs undiscoverable, and
    so read only the pointer the ledger happened to carry. That was wrong, and it
@@ -65,6 +76,7 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -417,9 +429,118 @@ def banked_from_findings(record: dict | None) -> list[dict]:
     return out
 
 
+# Which pre-merge-review findings are still debt when the PR is done. Keyed on
+# the evidence object's `status` (scripts/review-v3/evidence-schema.json):
+#   open           — never answered before the PR closed/merged
+#   accepted-as-is — a human accepted the finding with a reason (the reason is
+#                    the prior disposition; the finding is the work)
+#   disputed-held  — the author disputed, the model held with evidence; the
+#                    reviewer who approved decided, but the page still says it
+#   resolved / conceded — done, or withdrawn as spurious: never re-proposed
+_PR_REVIEW_BANKABLE = {"open", "accepted-as-is", "disputed-held"}
+
+
+def banked_from_pr_review(records: list[dict]) -> list[dict]:
+    """Banked findings from the v3 pre-merge review records of prior PRs.
+
+    One item per still-open / accepted / held finding, plus every
+    pre-existing issue the review filed against the touched file (those are
+    the glow-up lane's bread and butter and the pre-merge review is the only
+    place they are recorded). The disposition note travels as
+    `prior_disposition` — context, never direction, same as everywhere else.
+    """
+    out: list[dict] = []
+    for rec in records:
+        if not isinstance(rec, dict):
+            continue
+        try:
+            number = int(rec.get("pr") or 0)
+        except (TypeError, ValueError):
+            number = 0
+        if not number:
+            continue
+        for f in rec.get("findings") or []:
+            if not isinstance(f, dict):
+                continue
+            status = str(f.get("status") or "open")
+            bucket = str(f.get("bucket") or "")
+            if status not in _PR_REVIEW_BANKABLE and bucket != "preexisting":
+                continue
+            text = str(f.get("text") or "").strip()
+            if not text:
+                continue
+            fid = str(f.get("id") or "F?")
+            where = str(f.get("file") or "").strip()
+            lines = f.get("lines") or []
+            if isinstance(lines, list) and lines:
+                where += f" L{lines[0]}" + (f"-{lines[-1]}" if len(lines) > 1 and lines[-1] != lines[0] else "")
+            disp = f.get("disposition") if isinstance(f.get("disposition"), dict) else {}
+            note = str(disp.get("note") or "").strip()
+            actor = str(disp.get("actor") or "").strip()
+            if status == "accepted-as-is":
+                prior = f"accepted as-is{' by ' + actor if actor else ''} on the pre-merge review of #{number}"
+            elif status == "disputed-held":
+                prior = f"disputed{' by ' + actor if actor else ''} on #{number}; the reviewer held it"
+            elif bucket == "preexisting":
+                prior = f"pre-existing issue filed by the pre-merge review of #{number} (out of that PR's scope)"
+            else:
+                prior = f"left open when #{number} closed"
+            if note:
+                prior += f": {note}"
+            section = "Pre-existing issues" if bucket == "preexisting" else "Pre-merge review findings"
+            detail = str(f.get("detail") or "").strip()
+            out.append({
+                "id": f"pr{number}-review-{fid}",
+                "section": section,
+                "source_pr": number,
+                "source": "pr-review",
+                "text": f"{text} — {prior}",
+                "finding": text + (f" ({where})" if where else ""),
+                "prior_disposition": prior + (f" — {detail}" if detail else ""),
+            })
+    return out
+
+
+def _pr_review_summary(rec: dict) -> dict:
+    fs = [f for f in (rec.get("findings") or []) if isinstance(f, dict)]
+    return {
+        "pr": rec.get("pr"),
+        "head_sha": rec.get("head_sha"),
+        "generated_at": rec.get("generated_at"),
+        "findings": len(fs),
+        "banked": sum(1 for f in fs if str(f.get("status") or "open") in _PR_REVIEW_BANKABLE
+                      or f.get("bucket") == "preexisting"),
+    }
+
+
+def load_pr_review_records(pr_review_dir: Path | None, numbers: list[int]) -> list[dict]:
+    """`latest.json` for each PR number from a local mirror of the
+    `pr-review/` prefix — laid out either as the bucket has it
+    (`<dir>/<pr>/latest.json`) or as record-evidence.py writes it locally
+    (`<dir>/<pr>-latest.json`). Missing is the normal case (v2-era PRs);
+    unreadable is warned and skipped."""
+    if pr_review_dir is None:
+        return []
+    out: list[dict] = []
+    for n in numbers:
+        for cand in (pr_review_dir / str(n) / "latest.json", pr_review_dir / f"{n}-latest.json"):
+            if not cand.is_file():
+                continue
+            try:
+                rec = json.loads(cand.read_text())
+            except (OSError, json.JSONDecodeError) as e:
+                warn(f"{cand} unreadable ({e}); skipping that PR's review record")
+                break
+            if isinstance(rec, dict):
+                out.append(rec)
+            break
+    return out
+
+
 def build(article: dict, entry: dict, prs: list[dict],
           findings_record: dict | None = None,
-          recovery: dict | None = None) -> dict:
+          recovery: dict | None = None,
+          pr_review_records: list[dict] | None = None) -> dict:
     backlog = {
         "schema_version": SCHEMA_VERSION,
         "slug": article.get("slug"),
@@ -449,6 +570,16 @@ def build(article: dict, entry: dict, prs: list[dict],
             "reviewed_at": (findings_record or {}).get("reviewed_at"),
             "counts": (findings_record or {}).get("counts"),
         }
+
+    # The pre-merge review's own records next: machine-written like the
+    # findings record, and the only source that carries what the REVIEWER of
+    # the content-review PR found. Deduped against everything below by label
+    # through _bank, so a finding the fix lane also banked is listed once.
+    reviews = [r for r in (pr_review_records or []) if isinstance(r, dict)]
+    if reviews:
+        for item in banked_from_pr_review(reviews):
+            _bank(backlog["banked"], item)
+        backlog["pr_review_records"] = [_pr_review_summary(r) for r in reviews]
 
     recovery = dict(recovery or {"heads_queried": [], "prs_found": len(prs),
                                  "prs_unreachable": [], "prs_without_sections": [],
@@ -671,7 +802,18 @@ def run(args) -> int:
             log(f"no findings record at {fr}; PR-body scrape only "
                 f"(expected for pages last reviewed before the record existed)")
 
-    backlog = build(article, entry, prs, findings_record, recovery)
+    # v3 pre-merge review records: stamped on the article by select-glowup.py
+    # (dispatcher had S3), and/or read from a local mirror for every PR the
+    # head-ref discovery found (dispatcher-side or manual runs). De-duplicated
+    # by PR number, the stamped copy winning — it is the one the run was
+    # selected on.
+    stamped = [r for r in (article.get("pr_review_records") or []) if isinstance(r, dict)]
+    seen_prs = {int(r.get("pr") or 0) for r in stamped}
+    discovered = [int(p.get("number") or 0) for p in prs if int(p.get("number") or 0) not in seen_prs]
+    pr_review_records = stamped + load_pr_review_records(
+        Path(args.pr_review_dir) if args.pr_review_dir else None, discovered)
+
+    backlog = build(article, entry, prs, findings_record, recovery, pr_review_records)
     Path(args.out).write_text(json.dumps(backlog, indent=2) + "\n")
     log(f"{len(backlog['banked'])} banked finding(s) from "
         f"{len(backlog['source_prs'])} PR(s) "
@@ -1038,6 +1180,92 @@ def self_test() -> int:
         finally:
             fx.unlink(missing_ok=True)
 
+    # --- v3 pre-merge review records -----------------------------------
+    rec = {
+        "schema_version": 1, "pr": 321, "head_sha": "a" * 40, "generated_at": "2026-09-02T00:00:00Z",
+        "findings": [
+            {"id": "F1", "bucket": "outstanding", "file": "content/docs/x.md", "lines": [40, 42],
+             "text": "Says `pulumi up --json` landed in 3.150; the changelog puts it in 3.163", "origin": "verdict:contradicted",
+             "status": "open", "disposition": None},
+            {"id": "F2", "bucket": "author-answer", "file": "content/docs/x.md", "lines": [58],
+             "text": "40% faster than the previous release", "origin": "verdict:unverifiable",
+             "status": "accepted-as-is",
+             "disposition": {"disposition": "accepted", "actor": "CamSoper",
+                             "note": "marketing owns the number", "updated_at": "2026-09-01T00:00:00Z"}},
+            {"id": "F3", "bucket": "outstanding", "file": "content/docs/x.md",
+             "text": "fixed thing", "origin": "model", "status": "resolved",
+             "disposition": {"disposition": "fixed", "actor": "x", "updated_at": "2026-09-01T00:00:00Z"}},
+            {"id": "F4", "bucket": "author-answer", "file": "content/docs/x.md",
+             "text": "conceded thing", "origin": "model", "status": "conceded",
+             "disposition": {"disposition": "refuted", "actor": "x", "updated_at": "2026-09-01T00:00:00Z"}},
+            {"id": "F5", "bucket": "reviewer-check", "file": "content/docs/x.md", "lines": [70],
+             "text": "Changelog says the flag landed in 3.150", "origin": "model",
+             "status": "disputed-held",
+             "disposition": {"disposition": "refuted", "actor": "author1",
+                             "note": "the changelog is wrong", "updated_at": "2026-09-01T00:00:00Z"}},
+            {"id": "F6", "bucket": "preexisting", "file": "content/docs/x.md", "lines": [12],
+             "text": "Intro still names the retired product", "origin": "model", "status": "open",
+             "disposition": None},
+            {"id": "F7", "bucket": "reviewer-check", "file": "content/docs/x.md",
+             "text": "Claim (L90): `pulumi convert` is the fastest path for most configurations", "origin": "model",
+             "status": "open", "disposition": None},
+        ],
+    }
+    items = banked_from_pr_review([rec])
+    by_id = {i["id"]: i for i in items}
+    check("pr-review: open, accepted, held, and pre-existing bank; resolved and conceded do not",
+          set(by_id) == {"pr321-review-F1", "pr321-review-F2", "pr321-review-F5",
+                         "pr321-review-F6", "pr321-review-F7"})
+    check("pr-review: the finding text is the work, the line ref rides along",
+          by_id["pr321-review-F1"]["finding"] == "Says `pulumi up --json` landed in 3.150; the changelog puts it in 3.163 (content/docs/x.md L40-42)")
+    check("pr-review: an accepted finding carries actor + note as its prior disposition",
+          by_id["pr321-review-F2"]["prior_disposition"]
+          == "accepted as-is by CamSoper on the pre-merge review of #321: marketing owns the number")
+    check("pr-review: a held dispute names the disputer and keeps the note",
+          by_id["pr321-review-F5"]["prior_disposition"].startswith("disputed by author1 on #321; the reviewer held it: the changelog"))
+    check("pr-review: pre-existing rows land in their own section",
+          by_id["pr321-review-F6"]["section"] == "Pre-existing issues"
+          and by_id["pr321-review-F1"]["section"] == "Pre-merge review findings")
+    check("pr-review: source and source_pr set for dedupe/ordering",
+          all(i["source"] == "pr-review" and i["source_pr"] == 321 for i in items))
+
+    # Through build(): the editorial-stance filter and the label dedupe apply
+    # to this source like every other, and the summary block records the PR.
+    art = {"slug": "docs-x", "path": "content/docs/x.md"}
+    pr_body = "\n".join(["## Findings not applied",
+                         "- **Says `pulumi up --json` landed in 3.150; the changelog puts it in 3.163** — needs an SME"])
+    bl = build(art, {"skipped_findings": 1}, [{"number": 400, "url": "u", "body": pr_body,
+                                               "headRefName": "content-review/docs-x"}],
+               None, None, [rec])
+    texts = {b["id"]: b for b in bl["banked"]}
+    check("pr-review through build: a Claim-labelled stance row is filtered like any other source",
+          "pr321-review-F7" not in texts)
+    check("pr-review through build: same label from a later PR body wins the dedupe",
+          "pr321-review-F1" not in texts
+          and any(b["source_pr"] == 400 and "pulumi up --json" in b["text"] for b in bl["banked"]))
+    check("pr-review through build: the rest bank alongside the PR-body rows",
+          {"pr321-review-F2", "pr321-review-F5", "pr321-review-F6"} <= set(texts))
+    check("pr-review through build: summary block names the record",
+          bl.get("pr_review_records") == [{"pr": 321, "head_sha": "a" * 40,
+                                           "generated_at": "2026-09-02T00:00:00Z",
+                                           "findings": 7, "banked": 5}])
+    check("pr-review through build: recovery state is 'recovered' with only review records",
+          build(art, {}, [], None, None, [rec])["recovery"]["state"] == "recovered")
+    check("no records: key absent, nothing banked from this source",
+          "pr_review_records" not in build(art, {}, [], None, None, []))
+
+    with tempfile.TemporaryDirectory() as td:
+        d = Path(td)
+        (d / "321").mkdir()
+        (d / "321" / "latest.json").write_text(json.dumps(rec))
+        (d / "322-latest.json").write_text(json.dumps(dict(rec, pr=322)))
+        (d / "323").mkdir()
+        (d / "323" / "latest.json").write_text("{not json")
+        got = load_pr_review_records(d, [321, 322, 323, 324])
+        check("mirror: both bucket layout and local layout load; bad JSON and missing skip",
+              [r["pr"] for r in got] == [321, 322])
+        check("mirror: None dir loads nothing", load_pr_review_records(None, [321]) == [])
+
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
         return 1
@@ -1058,6 +1286,9 @@ def main() -> int:
     p.add_argument("--findings-dir", default="",
                    help="synced findings/ prefix; the structured spine, "
                         "preferred over scraping PR bodies")
+    p.add_argument("--pr-review-dir", default="",
+                   help="synced pr-review/ prefix (v3 pre-merge review evidence, "
+                        "`<pr>/latest.json`); read for every discovered prior PR")
     p.add_argument("--strict", action="store_true",
                    help="exit 2 when the ledger says findings were banked and none "
                         "could be recovered (default: warn and continue)")

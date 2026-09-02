@@ -13,9 +13,13 @@ Mirrors the query patterns in .claude/commands/dashboard/scripts/dashboard.sh
 but broadened: the issue query is the whole open backlog, not assignee-scoped.
 """
 
+import importlib.util
 import json
+import os
 import subprocess
 import sys
+import tempfile
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -27,6 +31,16 @@ OUTCOME_SCRAPER = (
     Path(__file__).resolve().parents[2]
     / ".claude/commands/docs-review/scripts/scrape-review-outcomes.py"
 )
+
+# v3 SLA-sweep state lives in the same content-review ledger bucket as
+# everything collect_review_outcomes/review-admin.py read, under pr-review/
+# (see scripts/review-v3/README.md). No stack-output wiring exists in this
+# script (unlike the credentialed record jobs) -- discover the bucket by
+# name prefix, review-admin.py's own technique, or accept it pre-resolved
+# via env (same variable name that tool uses, so one env setting works for
+# both).
+LEDGER_BUCKET_ENV = "CONTENT_REVIEW_LEDGER_BUCKET"
+LEDGER_BUCKET_PREFIX = "content-review-ledger-"
 
 
 def run_gh(args):
@@ -212,6 +226,156 @@ def collect_review_outcomes(since):
     return {"available": True, "since": since, **aggregate}
 
 
+def resolve_ledger_bucket() -> str | None:
+    """The content-review ledger bucket name, or None on any failure to
+    resolve it (no explicit env override, `aws` missing/unauthenticated, an
+    ambiguous or empty prefix match) -- collect_v3_ops() treats None as the
+    same "unavailable" degradation collect_review_outcomes() uses for a
+    scraper failure."""
+    explicit = os.environ.get(LEDGER_BUCKET_ENV, "").strip()
+    if explicit:
+        return explicit
+    try:
+        proc = subprocess.run(
+            ["aws", "s3api", "list-buckets", "--query",
+             f"Buckets[?starts_with(Name, '{LEDGER_BUCKET_PREFIX}')].Name", "--output", "json"],
+            capture_output=True, text=True,
+        )
+    except FileNotFoundError:
+        sys.stderr.write("warning: aws CLI not found; v3 ops summary unavailable\n")
+        return None
+    if proc.returncode != 0:
+        sys.stderr.write(f"warning: bucket discovery failed: {proc.stderr.strip()[:300]}\n")
+        return None
+    try:
+        names = json.loads(proc.stdout or "[]")
+    except json.JSONDecodeError:
+        return None
+    if len(names) == 1:
+        return names[0]
+    sys.stderr.write(f"warning: {len(names)} bucket(s) match '{LEDGER_BUCKET_PREFIX}*'; "
+                      f"set {LEDGER_BUCKET_ENV} explicitly\n")
+    return None
+
+
+def _bulk_accept_keys() -> tuple[str, str]:
+    """(bulk_key, accepted_key) -- the outcome-count field names for a
+    bulk `/resolve all ...` answer vs. any adjudicated accept/defer/n-a
+    answer, per scrape-review-outcomes.py's V3_ONLY_OUTCOME_KEYS.
+
+    Imported by path (loose coupling, not a hard dependency -- see
+    OUTCOME_SCRAPER) purely to validate the literal names below still exist
+    in that module's vocabulary; any import failure or a renamed key just
+    logs a warning and keeps the literals, since a missing key already
+    degrades cleanly to a 0 count downstream.
+    """
+    bulk_key, accepted_key = "bulk_accepted", "author_accepted"
+    try:
+        spec = importlib.util.spec_from_file_location("_scrape_outcomes_for_digest", OUTCOME_SCRAPER)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        keys = set(getattr(mod, "V3_ONLY_OUTCOME_KEYS", ()))
+        if bulk_key not in keys or accepted_key not in keys:
+            sys.stderr.write(
+                "warning: scrape-review-outcomes.py's V3_ONLY_OUTCOME_KEYS no longer names "
+                f"{bulk_key!r}/{accepted_key!r}; bulk-accept rate may be stale\n"
+            )
+    except Exception as exc:  # noqa: BLE001 -- never let a key-vocabulary check break the digest
+        sys.stderr.write(f"warning: could not import scrape-review-outcomes.py for key validation: {exc}\n")
+    return bulk_key, accepted_key
+
+
+def collect_v3_ops(since: str, review_outcomes: dict) -> dict:
+    """v3 SLA-sweep operational summary for the trailing window: escalations
+    (by lane/role), author-staleness warns and closes, waives, and a
+    bulk-accept rate.
+
+    Syncs `pr-review/state/`, `pr-review/runs/`, and `pr-review/waives/`
+    from the ledger bucket (see scripts/review-v3/README.md and
+    sla-sweep.py's module docstring for the run-record shape) and reduces
+    the run records in-window. The bulk-accept rate is NOT a second scrape
+    -- it's derived from the `review_outcomes` aggregate collect_review_outcomes()
+    already fetched this run, so a missing/unavailable outcomes block just
+    yields a 0/0 -> None rate rather than another `gh` round-trip.
+
+    Same degradation contract as collect_review_outcomes(): any failure to
+    resolve the bucket or sync its prefixes -> {"available": False}, a loud
+    signal for the synthesis prompt to render, never a silently dropped
+    section.
+    """
+    bucket = resolve_ledger_bucket()
+    if not bucket:
+        return {"available": False}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        cache = Path(tmp)
+        load_bearing_ok = True
+        for prefix in ("state", "runs", "waives"):
+            proc = subprocess.run(
+                ["aws", "s3", "sync", f"s3://{bucket}/pr-review/{prefix}/",
+                 str(cache / prefix), "--no-progress"],
+                capture_output=True, text=True,
+            )
+            if proc.returncode != 0:
+                # waives/ may legitimately not exist yet (nobody has waived
+                # a v3 gate); only state/ and runs/ not syncing is fatal to
+                # this section.
+                if prefix in ("state", "runs"):
+                    sys.stderr.write(
+                        f"warning: aws s3 sync failed for pr-review/{prefix}/: {proc.stderr.strip()[:300]}\n"
+                    )
+                    load_bearing_ok = False
+        if not load_bearing_ok:
+            return {"available": False}
+
+        escalations_by_role: Counter = Counter()
+        warns = 0
+        closes = 0
+        runs_dir = cache / "runs"
+        for run_file in sorted(runs_dir.rglob("*.json")) if runs_dir.is_dir() else []:
+            try:
+                record = json.loads(run_file.read_text())
+            except (OSError, json.JSONDecodeError):
+                continue
+            if (record.get("run_at") or "")[:10] < since:
+                continue
+            for pr_action in record.get("actions", []):
+                if pr_action.get("kind") == "author":
+                    a = pr_action.get("action") or {}
+                    if a.get("type") == "warn":
+                        warns += 1
+                    elif a.get("type") == "close":
+                        closes += 1
+                elif pr_action.get("kind") == "reviewer":
+                    for a in pr_action.get("actions") or []:
+                        if a.get("type") == "escalate":
+                            escalations_by_role[a.get("role") or "unknown"] += 1
+
+        waives_dir = cache / "waives"
+        waive_count = sum(1 for f in waives_dir.rglob("*.json")) if waives_dir.is_dir() else 0
+
+    bulk_key, accepted_key = _bulk_accept_keys()
+    human = {}
+    if review_outcomes.get("available"):
+        human = (review_outcomes.get("outcomes") or {}).get("human") or {}
+    bulk_accepted = human.get(bulk_key, 0)
+    author_accepted = human.get(accepted_key, 0)
+    bulk_accept_rate = round(100 * bulk_accepted / author_accepted) if author_accepted else None
+
+    return {
+        "available": True,
+        "since": since,
+        "escalations_total": sum(escalations_by_role.values()),
+        "escalations_by_role": dict(escalations_by_role),
+        "warns": warns,
+        "closes": closes,
+        "waives": waive_count,
+        "bulk_accepted": bulk_accepted,
+        "author_accepted": author_accepted,
+        "bulk_accept_rate": bulk_accept_rate,
+    }
+
+
 def search_count(qualifier):
     """Exact issue count via the search API's total_count (REST, not GraphQL)."""
     out = run_gh(
@@ -264,12 +428,14 @@ def main():
         )
     )
     review_outcomes = collect_review_outcomes(cutoff)
+    v3_ops = collect_v3_ops(cutoff, review_outcomes)
     digest = {
         "window_days": WINDOW_DAYS,
         "prs": prs,
         "issues": issues,
         "ci_health": ci_health,
         "review_outcomes": review_outcomes,
+        "v3_ops": v3_ops,
     }
     json.dump(digest, sys.stdout, indent=2)
     sys.stdout.write("\n")
