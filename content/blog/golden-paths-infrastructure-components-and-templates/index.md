@@ -592,7 +592,7 @@ You reach the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) two w
 
 From there, the wizard offers a deployment method for the new stack:
 
-- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository (GitHub, Azure DevOps, GitLab, or Bitbucket). Your organization needs an integration for that provider, and you need to connect your account with it.
+- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository (GitHub, Azure DevOps, GitLab, or Bitbucket). Your organization needs an integration for that provider, and you need to authorize your account with it.
 - **Pulumi Deployments (no-code)**: stores the stack's configuration in a [Pulumi ESC](/docs/esc/) environment instead of a repository. See [no-code stacks](/docs/idp/concepts/no-code-stacks/) for requirements; any configured VCS provider works.
 - **Local deployment**: deploy the stack from your machine with the Pulumi CLI, no VCS integration required.
 
