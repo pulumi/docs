@@ -1,6 +1,6 @@
 ---
-title_tag: "Assets & Archives"
-meta_desc: "The Pulumi SDK provides two classes for working with files: Asset and Archive. Learn about the different object types for each class and how to use them."
+title_tag: "Assets & archives | Pulumi Concepts"
+meta_desc: Assets and archives are built-in Pulumi types for passing files and folders to resources. Learn the six kinds and how Pulumi detects content changes.
 title: Assets & archives
 h1: Assets & archives
 menu:
@@ -16,70 +16,65 @@ search:
       - FileArchive
       - RemoteArchive
       - AssetArchive
+      - fileasset
+      - filearchive
+      - assetarchive
+      - fn::fileAsset
+      - fn::fileArchive
+      - asset hash
+      - archive formats
 aliases:
 - /docs/intro/concepts/assets-archives/
 - /docs/concepts/inputs-outputs/assets-archives/
 - /docs/concepts/assets-archives/
 ---
 
-The Pulumi SDK provides two classes for working with files: `Asset`, which refers to a single file, and `Archive`, which refers to a collection of files. Some Pulumi resource inputs accept either one, and Pulumi takes the files they reference and packages them up for use by the resource.
+Some resource inputs take a file or a folder instead of a string or a number. Pulumi has two built-in types for those inputs: an *asset*, which is a single file, and an *archive*, which is a collection of files. When you pass one to a resource, Pulumi reads the contents, packages them in the format the resource expects, and tracks them as part of your stack.
 
-Each class has three concrete implementations. An `Asset`'s file comes from a string in memory, from disk, or from a remote URI. An `Archive`'s collection comes from disk, from a remote URI, or from a map of other assets and archives. Resources then consume those files in whichever packaging format they expect.
+Each type comes in three kinds, which differ only in where the contents come from: an in-memory string, a path on disk, or a remote URI. Most languages expose them as constructors. YAML and Pulumi HCL expose them as built-in functions instead, so the names look a little different there: `fn::fileAsset` in YAML, and all-lowercase `fileasset` in Pulumi HCL.
 
-## Assets
+## Assets {#assets}
 
-`Asset` comes in three types:
+An asset is a single file. Pass one to any resource input that expects a file, such as the body of an object in a storage bucket.
 
-- `FileAsset`: The contents of the asset are read from a file on disk.
-- `StringAsset`: The contents of the asset are read from a string in memory.
-- `RemoteAsset`: The contents of the asset are read from an `http`, `https` or `file` URI.
+### `FileAsset`
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+Takes the contents from a file on disk. This is the most common kind: point it at a path in your project, and Pulumi uses whatever is in that file at deployment time.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-let fileAsset = new pulumi.asset.FileAsset("./file.txt");
-let stringAsset = new pulumi.asset.StringAsset("Hello, world!");
-let remoteAsset = new pulumi.asset.RemoteAsset("https://example.com/file.txt");
+const indexHtml = new pulumi.asset.FileAsset("./index.html");
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-file_asset = pulumi.FileAsset("./file.txt")
-string_asset = pulumi.StringAsset("Hello, world!")
-remote_asset = pulumi.RemoteAsset("https://example.com/file.txt")
+index_html = pulumi.FileAsset("./index.html")
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-fileAsset := pulumi.NewFileAsset("./file.txt")
-stringAsset := pulumi.NewStringAsset("Hello, world!")
-remoteAsset := pulumi.NewRemoteAsset("https://example.com/file.txt")
+indexHTML := pulumi.NewFileAsset("./index.html")
 ```
 
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi;
-
-var fileAsset = new FileAsset("./file.txt");
-var stringAsset = new StringAsset("Hello, world!");
-var remoteAsset = new RemoteAsset("https://example.com/file.txt");
+var indexHtml = new FileAsset("./index.html");
 ```
 
 {{% /choosable %}}
 {{% choosable language java %}}
 
 ```java
-final var fileAsset = new com.pulumi.asset.FileAsset("./file.txt");
-final var stringAsset = new com.pulumi.asset.StringAsset("Hello, world!");
-final var remoteAsset = new com.pulumi.asset.RemoteAsset("https://example.com/file.txt");
+var indexHtml = new FileAsset("./index.html");
 ```
 
 {{% /choosable %}}
@@ -87,29 +82,293 @@ final var remoteAsset = new com.pulumi.asset.RemoteAsset("https://example.com/fi
 
 ```yaml
 variables:
-  fileAsset:
-    fn::fileAsset: ./file.txt
-  stringAsset:
-    fn::stringAsset: Hello, world!
-  remoteAsset:
-    fn::remoteAsset: https://example.com/file.txt
+  indexHtml:
+    fn::fileAsset: ./index.html
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  index_html = fileasset("./index.html")
+}
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-Any of these assets can be passed to a resource accepting an `Asset` as input.
+### `StringAsset`
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+Takes the contents from a string in memory. Reach for this when your program computes the file contents rather than reading them from disk, such as rendering a configuration file from stack outputs.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
 ```typescript
-let object = new aws.s3.BucketObject("obj", {
-    bucket: bucket.id,
-    key: key,
-    source: fileAsset,
+const greeting = new pulumi.asset.StringAsset("Hello, world!");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+greeting = pulumi.StringAsset("Hello, world!")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+greeting := pulumi.NewStringAsset("Hello, world!")
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var greeting = new StringAsset("Hello, world!");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var greeting = new StringAsset("Hello, world!");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  greeting:
+    fn::stringAsset: Hello, world!
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  greeting = stringasset("Hello, world!")
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### `RemoteAsset`
+
+Takes the contents from a URI. Pulumi supports the `http`, `https`, and `file` schemes. A `file://` URI must have an empty host or `localhost`; it cannot point at another machine.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const license = new pulumi.asset.RemoteAsset("https://example.com/LICENSE.txt");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+license = pulumi.RemoteAsset("https://example.com/LICENSE.txt")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+license := pulumi.NewRemoteAsset("https://example.com/LICENSE.txt")
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var license = new RemoteAsset("https://example.com/LICENSE.txt");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var license = new RemoteAsset("https://example.com/LICENSE.txt");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  license:
+    fn::remoteAsset: https://example.com/LICENSE.txt
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  license = remoteasset("https://example.com/LICENSE.txt")
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+## Archives {#archives}
+
+An archive is a collection of files. A resource that takes an archive, such as a serverless function's code bundle, receives them all at once.
+
+Pulumi recognizes archive files by extension: `.tar`, `.tgz`, `.tar.gz`, `.zip`, and `.jar`. Detection is based on the extension alone, so a `.zip` file renamed to something else is not recognized as an archive.
+
+### `FileArchive`
+
+Takes the contents from a path on disk, which can be either a folder or an existing archive file in one of the supported formats. Pointing it at a folder is the usual choice for a serverless function's source, as in the [AWS Lambda guide](/docs/iac/guides/clouds/aws/lambda/).
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const app = new pulumi.asset.FileArchive("./app");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+app = pulumi.FileArchive("./app")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+app := pulumi.NewFileArchive("./app")
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var app = new FileArchive("./app");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var app = new FileArchive("./app");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  app:
+    fn::fileArchive: ./app
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  app = filearchive("./app")
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% notes type="info" %}}
+When `FileArchive` points at a folder, Pulumi packs everything under it, minus the `.pulumi` bookkeeping directory. Symbolic links to files are followed and stored as copies, and symbolic links to directories are skipped. Ignore files are not supported, so anything you leave in the folder, such as a `node_modules` or `.venv` directory, ships with the archive.
+{{% /notes %}}
+
+### `RemoteArchive`
+
+Takes an archive from an `http`, `https`, or `file` URI. The file it fetches must be in one of the supported archive formats.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const app = new pulumi.asset.RemoteArchive("https://example.com/app.zip");
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+app = pulumi.RemoteArchive("https://example.com/app.zip")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+app := pulumi.NewRemoteArchive("https://example.com/app.zip")
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var app = new RemoteArchive("https://example.com/app.zip");
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var app = new RemoteArchive("https://example.com/app.zip");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  app:
+    fn::remoteArchive: https://example.com/app.zip
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  app = remotearchive("https://example.com/app.zip")
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### `AssetArchive`
+
+Builds an archive from a map of other assets and archives, which lets you assemble a bundle in your program instead of staging a directory on disk. Each entry is either one file, from an asset, or one folder, from an archive, and archives can nest.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const bundle = new pulumi.asset.AssetArchive({
+    "config.json": new pulumi.asset.StringAsset(JSON.stringify({ debug: false })),
+    "src": new pulumi.asset.FileArchive("./src"),
 });
 ```
 
@@ -117,20 +376,19 @@ let object = new aws.s3.BucketObject("obj", {
 {{% choosable language python %}}
 
 ```python
-obj = aws.s3.BucketObject("obj",
-    bucket=bucket.id,
-    key=key,
-    source=file_asset)
+bundle = pulumi.AssetArchive({
+    "config.json": pulumi.StringAsset('{"debug": false}'),
+    "src": pulumi.FileArchive("./src"),
+})
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-obj, err := s3.NewBucketObject(ctx, "obj", &s3.BucketObjectArgs{
-    Bucket: bucket.ID(),
-    Key:    key,
-    Source: fileAsset,
+bundle := pulumi.NewAssetArchive(map[string]any{
+    "config.json": pulumi.NewStringAsset(`{"debug": false}`),
+    "src":         pulumi.NewFileArchive("./src"),
 })
 ```
 
@@ -138,11 +396,101 @@ obj, err := s3.NewBucketObject(ctx, "obj", &s3.BucketObjectArgs{
 {{% choosable language csharp %}}
 
 ```csharp
-var obj = new Aws.S3.BucketObject("obj", new Aws.S3.BucketObjectArgs
+var bundle = new AssetArchive(new Dictionary<string, AssetOrArchive>
+{
+    { "config.json", new StringAsset("{\"debug\": false}") },
+    { "src", new FileArchive("./src") },
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var bundle = new AssetArchive(Map.of(
+    "config.json", new StringAsset("{\"debug\": false}"),
+    "src", new FileArchive("./src")));
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  bundle:
+    fn::assetArchive:
+      config.json:
+        fn::stringAsset: '{"debug": false}'
+      src:
+        fn::fileArchive: ./src
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  bundle = assetarchive({
+    "config.json" = stringasset("{\"debug\": false}")
+    "src"         = filearchive("./src")
+  })
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+## Passing assets and archives to resources
+
+Any of these values can be passed to a resource input that accepts one. This example uploads a local file as the body of an object in an S3 bucket.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const indexHtml = new aws.s3.BucketObject("index.html", {
+    bucket: bucket.id,
+    key: "index.html",
+    source: new pulumi.asset.FileAsset("./index.html"),
+    contentType: "text/html",
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+index_html = aws.s3.BucketObject("index.html",
+    bucket=bucket.id,
+    key="index.html",
+    source=pulumi.FileAsset("./index.html"),
+    content_type="text/html")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+indexHTML, err := s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
+    Bucket:      bucket.ID(),
+    Key:         pulumi.String("index.html"),
+    Source:      pulumi.NewFileAsset("./index.html"),
+    ContentType: pulumi.String("text/html"),
+})
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var indexHtml = new BucketObject("index.html", new()
 {
     Bucket = bucket.Id,
-    Key = key,
-    Source = fileAsset,
+    Key = "index.html",
+    Source = new FileAsset("./index.html"),
+    ContentType = "text/html",
 });
 ```
 
@@ -150,12 +498,12 @@ var obj = new Aws.S3.BucketObject("obj", new Aws.S3.BucketObjectArgs
 {{% choosable language java %}}
 
 ```java
-var obj = new com.pulumi.aws.s3.BucketObject("obj",
-    com.pulumi.aws.s3.BucketObjectArgs.builder()
-        .bucket(bucket.getId())
-        .key(key)
-        .source(fileAsset)
-        .build());
+var indexHtml = new BucketObject("index.html", BucketObjectArgs.builder()
+    .bucket(bucket.id())
+    .key("index.html")
+    .source(new FileAsset("./index.html"))
+    .contentType("text/html")
+    .build());
 ```
 
 {{% /choosable %}}
@@ -163,192 +511,55 @@ var obj = new com.pulumi.aws.s3.BucketObject("obj",
 
 ```yaml
 resources:
-  obj:
+  index.html:
     type: aws:s3:BucketObject
     properties:
-      bucket: ${bucket}
-      key: ${key}
-      source: ${fileAsset}
+      bucket: ${bucket.id}
+      key: index.html
+      source:
+        fn::fileAsset: ./index.html
+      contentType: text/html
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket_object" "index-html" {
+  bucket       = aws_s3_bucket.bucket.id
+  key          = "index.html"
+  source       = fileasset("./index.html")
+  content_type = "text/html"
+}
 ```
 
 {{% /choosable %}}
 
 {{< /chooser >}}
 
-## Archives
+An archive is passed the same way, to an input that expects a collection of files. The most common example is a serverless function's code, such as the `code` property of an [AWS Lambda function](/docs/iac/guides/clouds/aws/lambda/).
 
-`Archive` comes in three types:
+## How Pulumi detects changes {#change-detection}
 
-- `FileArchive`: The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: `.tar`, `.tgz`, `.tar.gz`, `.zip` or `.jar`.
-- `RemoteArchive`: The contents of the archive are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
-- `AssetArchive`: The contents of the archive are read from a map of either [`Asset`](#assets) or [`Archive`](#archives) objects, one file or folder respectively per entry in the map.
+Pulumi identifies an asset or an archive by a SHA256 hash of its contents, not by the path or URI it came from. Two assets are the same when their hashes match, even if one was read from disk and the other from a URL, and they are different when their hashes differ, even if both point at the same path.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+That hash is computed from the live contents on every deployment. Edit a file that a `FileAsset` points at, run `pulumi up`, and the property shows a diff. Leave it alone and it does not. The same applies to a `RemoteAsset` or `RemoteArchive`, which Pulumi fetches over the network each deployment to compute the hash, so a change at the other end of the URL shows up as a change in your stack.
 
-{{% choosable language typescript %}}
+When a `FileArchive` points at a *folder*, Pulumi packs it deterministically: files are walked in a fixed order and stored with fixed metadata. The hash depends only on file names and contents, not on timestamps or permissions, so touching a file without editing it produces no diff.
 
-```typescript
-let fileArchive = new pulumi.asset.FileArchive("./file.zip");
-let remoteArchive = new pulumi.asset.RemoteArchive("https://example.com/file.zip");
-let assetArchive = new pulumi.asset.AssetArchive({
-    "file": new pulumi.asset.StringAsset("Hello, world!"),
-    "folder": new pulumi.asset.FileArchive("./folder"),
-});
-```
+{{% notes type="warning" %}}
+When a `FileArchive` points at an existing archive *file*, Pulumi hashes that file's bytes as they are. Most archiving tools record a timestamp for every entry, so re-creating the archive from unchanged sources produces different bytes, a different hash, and a redeployment. If a resource keeps updating when nothing has changed, point `FileArchive` at the source folder and let Pulumi do the packing, or make your packaging step reproducible.
+{{% /notes %}}
 
-{{% /choosable %}}
-{{% choosable language python %}}
+## Working with file paths
 
-```python
-file_archive = pulumi.FileArchive("./file.zip")
-remote_archive = pulumi.RemoteArchive("https://example.com/file.zip")
-asset_archive = pulumi.AssetArchive({
-    "file": pulumi.StringAsset("Hello, world!"),
-    "folder": pulumi.FileArchive("./folder")
-})
-```
+Relative paths are resolved against the directory Pulumi runs your program in, which is your project directory, not the directory you happened to run the CLI from. Running `pulumi up -C my-project` resolves `./index.html` inside `my-project`, regardless of your shell's location. Paths are also relative to the program as a whole, not to the individual source file that constructs the asset, which matters once you split a program across several files or directories.
 
-{{% /choosable %}}
-{{% choosable language go %}}
+In Pulumi HCL, the asset and archive functions resolve relative paths against the program's base directory in the same way.
 
-```go
-fileArchive := pulumi.NewFileArchive("./file.zip")
-remoteArchive := pulumi.NewRemoteArchive("https://example.com/file.zip")
-assetArchive := pulumi.NewAssetArchive(map[string]interface{}{
-    "file": pulumi.NewStringAsset("Hello, world!"),
-    "folder": pulumi.NewFileArchive("./folder"),
-})
-```
+## Learn more
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Collections.Generic;
-using Pulumi;
-
-var fileArchive = new FileArchive("./file.zip");
-var remoteArchive = new RemoteArchive("https://example.com/file.zip");
-var assetArchive = new AssetArchive(new Dictionary<string, AssetOrArchive>
-{
-    { "file", new StringAsset("Hello, world!") },
-    { "folder", new FileArchive("./folder") }
-});
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-var fileArchive = new com.pulumi.asset.FileArchive("./file.zip");
-var remoteArchive = new com.pulumi.asset.RemoteArchive("https://example.com/file.zip");
-var assetArchive = new com.pulumi.asset.AssetArchive(
-    Map.of(
-        "file", new com.pulumi.asset.StringAsset("Hello, world!"),
-        "folder", new com.pulumi.asset.FileArchive("./folder")));
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-variables:
-  fileArchive:
-    fn::fileArchive: ./file.zip
-  remoteArchive:
-    fn::remoteArchive: https://example.com/file.zip
-  assetArchive:
-    fn::assetArchive:
-      file:
-        fn::stringAsset: Hello, world!
-      folder:
-        fn::fileArchive: ./folder
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Note that a folder may be passed to `FileArchive` to construct an archive from the contents of that folder. Also, both assets (single files) and archives (folders containing files) can be combined as part of building up an `AssetArchive`.
-
-Any of these archives can be passed to a resource accepting an `Archive` as input.
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-let fn = new aws.lambda.Function(`fn`, {
-    role: role.arn,
-    runtime: "python3.12",
-    handler: "hello.handler",
-    code: fileArchive,
-});
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-fn = lambda_.Function("fn",
-    role=role.arn,
-    runtime="python3.12",
-    handler="hello.handler",
-    code=file_archive)
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
-    Role:    role.Arn,
-    Runtime: "python3.12",
-    Handler: "hello.handler",
-    Code:    fileArchive,
-})
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
-{
-    Role = role.Arn,
-    Runtime = "python3.12",
-    Handler = "hello.handler",
-    Code = fileArchive,
-});
-```
-
-{{% /choosable %}}
-{{% choosable language java %}}
-
-```java
-var fn = new com.pulumi.aws.lambda.Function("fn",
-    com.pulumi.aws.lambda.FunctionArgs.builder()
-        .role(role.arn())
-        .runtime("python3.12")
-        .handler("hello.handler")
-        .code(fileArchive)
-        .build());
-```
-
-{{% /choosable %}}
-{{% choosable language yaml %}}
-
-```yaml
-resources:
-  fn:
-    type: aws:lambda:Function
-    properties:
-      role: ${role.arn}
-      runtime: python3.12
-      handler: hello.handler
-      code: ${fileArchive}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+- [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) explains how resource properties, including assets and archives, flow through a Pulumi program.
+- [AWS Lambda](/docs/iac/guides/clouds/aws/lambda/) shows archives packaging serverless function code end to end.
+- The full API surface for each language: [TypeScript and JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/asset.html), [Python](/docs/reference/pkg/python/pulumi/#pulumi.Asset), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi#Asset), [.NET](/docs/reference/pkg/dotnet/pulumi/pulumi.asset.html), and [Java](/docs/reference/pkg/java/com/pulumi/asset/package-summary.html).
+- The built-in functions for [YAML](/docs/iac/languages-sdks/yaml/yaml-language-reference/) and [Pulumi HCL](/docs/iac/languages-sdks/hcl/hcl-language-reference/).

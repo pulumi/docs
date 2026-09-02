@@ -835,7 +835,7 @@ The `provider::terraform::` namespace provides `decode_tfvars`, `encode_expr`, a
 
 ### Pulumi-specific functions
 
-These functions have no Terraform equivalent:
+These functions have no Terraform equivalent. The asset and archive functions create the intrinsic Pulumi types described in [Assets and archives](/docs/iac/concepts/assets-archives/), which some resources take as inputs or return as outputs:
 
 | Function                       | Description |
 | - | - |
