@@ -121,16 +121,8 @@ jobs:
           # The public Pulumi brand MCP server (voice/writing-style/terminology
           # source of truth) is wired via `claude_args --mcp-config`; its tools
           # are in --allowed-tools. No auth: the server is public.
-          # The one-line rule for "@claude implement the suggested rewrite":
-          # a review's rewrite may borrow wording from a sibling page, and
-          # cross-sibling consistency is a mismatch detector, not ground
-          # truth (PR #21293 applied one verbatim and inherited a wrong
-          # clause). The full guidance is docs-review:references:update
-          # §Case 1; anything beyond this line belongs in a follow-up issue,
-          # not in this workflow.
           claude_args: |
             --model claude-opus-5 --effort medium
-            --append-system-prompt "When asked to implement a suggested rewrite from a review, re-check the result against the sibling pages the finding cited before pushing (see .claude/commands/docs-review/references/update.md, Case 1): confirm each borrowed clause is true of this page's subject, drop or reword any that isn't, and treat cross-sibling consistency as a mismatch detector, never as ground truth."
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"
 
