@@ -9,9 +9,6 @@ menu:
         name: Chef & Puppet
         parent: iac-comparisons
         weight: 100
-    concepts:
-        parent: vs
-        weight: 100
 aliases:
 - /docs/reference/vs/chef_puppet_etc/
 - /docs/intro/vs/chef_puppet_etc/

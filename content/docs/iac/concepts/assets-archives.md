@@ -8,8 +8,6 @@ menu:
         name: Assets & archives
         parent: iac-concepts
         weight: 110
-    concepts:
-        weight: 13
 search:
    keywords:
       - FileAsset
@@ -24,13 +22,15 @@ aliases:
 - /docs/concepts/assets-archives/
 ---
 
-The Pulumi SDK provides two classes for working with files: `Asset` and `Archive`. Some Pulumi resource inputs accept either an `Asset` or an `Archive` as input, and Pulumi understands how to take the files referenced by the `Asset` or `Archive` and package them up for use by the resource. There are several different concrete implementations of these two concepts, based on the three ways the files might be provided, whether in memory, on disk, or in an archive. Similarly, files can be consumed by resources that expect a variety of packaging formats.
+The Pulumi SDK provides two classes for working with files: `Asset`, which refers to a single file, and `Archive`, which refers to a collection of files. Some Pulumi resource inputs accept either one, and Pulumi takes the files they reference and packages them up for use by the resource.
+
+Each class has three concrete implementations. An `Asset`'s file comes from a string in memory, from disk, or from a remote URI. An `Archive`'s collection comes from disk, from a remote URI, or from a map of other assets and archives. Resources then consume those files in whichever packaging format they expect.
 
 ## Assets
 
-There are three types of `Asset` objects:
+`Asset` comes in three types:
 
-- `FileAsset`:  The contents of the asset are read from a file on disk.
+- `FileAsset`: The contents of the asset are read from a file on disk.
 - `StringAsset`: The contents of the asset are read from a string in memory.
 - `RemoteAsset`: The contents of the asset are read from an `http`, `https` or `file` URI.
 
@@ -41,7 +41,7 @@ There are three types of `Asset` objects:
 ```typescript
 let fileAsset = new pulumi.asset.FileAsset("./file.txt");
 let stringAsset = new pulumi.asset.StringAsset("Hello, world!");
-let remoteAsset = new pulumi.asset.RemoteAsset("http://worldclockapi.com/api/json/est/now");
+let remoteAsset = new pulumi.asset.RemoteAsset("https://example.com/file.txt");
 ```
 
 {{% /choosable %}}
@@ -50,7 +50,7 @@ let remoteAsset = new pulumi.asset.RemoteAsset("http://worldclockapi.com/api/jso
 ```python
 file_asset = pulumi.FileAsset("./file.txt")
 string_asset = pulumi.StringAsset("Hello, world!")
-remote_asset = pulumi.RemoteAsset("http://worldclockapi.com/api/json/est/now")
+remote_asset = pulumi.RemoteAsset("https://example.com/file.txt")
 ```
 
 {{% /choosable %}}
@@ -59,7 +59,7 @@ remote_asset = pulumi.RemoteAsset("http://worldclockapi.com/api/json/est/now")
 ```go
 fileAsset := pulumi.NewFileAsset("./file.txt")
 stringAsset := pulumi.NewStringAsset("Hello, world!")
-remoteAsset := pulumi.NewRemoteAsset("http://worldclockapi.com/api/json/est/now")
+remoteAsset := pulumi.NewRemoteAsset("https://example.com/file.txt")
 ```
 
 {{% /choosable %}}
@@ -70,7 +70,7 @@ using Pulumi;
 
 var fileAsset = new FileAsset("./file.txt");
 var stringAsset = new StringAsset("Hello, world!");
-var remoteAsset = new RemoteAsset("http://worldclockapi.com/api/json/est/now");
+var remoteAsset = new RemoteAsset("https://example.com/file.txt");
 ```
 
 {{% /choosable %}}
@@ -79,7 +79,7 @@ var remoteAsset = new RemoteAsset("http://worldclockapi.com/api/json/est/now");
 ```java
 final var fileAsset = new com.pulumi.asset.FileAsset("./file.txt");
 final var stringAsset = new com.pulumi.asset.StringAsset("Hello, world!");
-final var remoteAsset = new com.pulumi.asset.RemoteAsset("http://worldclockapi.com/api/json/est/now");
+final var remoteAsset = new com.pulumi.asset.RemoteAsset("https://example.com/file.txt");
 ```
 
 {{% /choosable %}}
@@ -92,7 +92,7 @@ variables:
   stringAsset:
     fn::stringAsset: Hello, world!
   remoteAsset:
-    fn::remoteAsset: http://worldclockapi.com/api/json/est/now
+    fn::remoteAsset: https://example.com/file.txt
 ```
 
 {{% /choosable %}}
@@ -177,11 +177,11 @@ resources:
 
 ## Archives
 
-There are three types of `Archive` objects:
+`Archive` comes in three types:
 
 - `FileArchive`: The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: `.tar`, `.tgz`, `.tar.gz`, `.zip` or `.jar`.
-- `RemoteArchive`: The contents of the asset are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
-- `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#assets) or [`Archive`](#archives) objects, one file or folder respectively per entry in the map.
+- `RemoteArchive`: The contents of the archive are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
+- `AssetArchive`: The contents of the archive are read from a map of either [`Asset`](#assets) or [`Archive`](#archives) objects, one file or folder respectively per entry in the map.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -189,7 +189,7 @@ There are three types of `Archive` objects:
 
 ```typescript
 let fileArchive = new pulumi.asset.FileArchive("./file.zip");
-let remoteArchive = new pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
+let remoteArchive = new pulumi.asset.RemoteArchive("https://example.com/file.zip");
 let assetArchive = new pulumi.asset.AssetArchive({
     "file": new pulumi.asset.StringAsset("Hello, world!"),
     "folder": new pulumi.asset.FileArchive("./folder"),
@@ -201,7 +201,7 @@ let assetArchive = new pulumi.asset.AssetArchive({
 
 ```python
 file_archive = pulumi.FileArchive("./file.zip")
-remote_archive = pulumi.RemoteArchive("http://contoso.com/file.zip")
+remote_archive = pulumi.RemoteArchive("https://example.com/file.zip")
 asset_archive = pulumi.AssetArchive({
     "file": pulumi.StringAsset("Hello, world!"),
     "folder": pulumi.FileArchive("./folder")
@@ -213,7 +213,7 @@ asset_archive = pulumi.AssetArchive({
 
 ```go
 fileArchive := pulumi.NewFileArchive("./file.zip")
-remoteArchive := pulumi.NewRemoteArchive("http://contoso.com/file.zip")
+remoteArchive := pulumi.NewRemoteArchive("https://example.com/file.zip")
 assetArchive := pulumi.NewAssetArchive(map[string]interface{}{
     "file": pulumi.NewStringAsset("Hello, world!"),
     "folder": pulumi.NewFileArchive("./folder"),
@@ -224,11 +224,12 @@ assetArchive := pulumi.NewAssetArchive(map[string]interface{}{
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 
 var fileArchive = new FileArchive("./file.zip");
-var remoteArchive = new RemoteArchive("http://contoso.com/file.zip");
-var assetArchive = new AssetArchive(new Dictionary<string, string>
+var remoteArchive = new RemoteArchive("https://example.com/file.zip");
+var assetArchive = new AssetArchive(new Dictionary<string, AssetOrArchive>
 {
     { "file", new StringAsset("Hello, world!") },
     { "folder", new FileArchive("./folder") }
@@ -240,7 +241,7 @@ var assetArchive = new AssetArchive(new Dictionary<string, string>
 
 ```java
 var fileArchive = new com.pulumi.asset.FileArchive("./file.zip");
-var remoteArchive = new com.pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
+var remoteArchive = new com.pulumi.asset.RemoteArchive("https://example.com/file.zip");
 var assetArchive = new com.pulumi.asset.AssetArchive(
     Map.of(
         "file", new com.pulumi.asset.StringAsset("Hello, world!"),
@@ -255,11 +256,11 @@ variables:
   fileArchive:
     fn::fileArchive: ./file.zip
   remoteArchive:
-    fn::remoteArchive: http://contoso.com/file.zip
+    fn::remoteArchive: https://example.com/file.zip
   assetArchive:
     fn::assetArchive:
       file:
-        fn::stringAsset: Hello, World!
+        fn::stringAsset: Hello, world!
       folder:
         fn::fileArchive: ./folder
 ```
@@ -279,7 +280,7 @@ Any of these archives can be passed to a resource accepting an `Archive` as inpu
 ```typescript
 let fn = new aws.lambda.Function(`fn`, {
     role: role.arn,
-    runtime: "python3.7",
+    runtime: "python3.12",
     handler: "hello.handler",
     code: fileArchive,
 });
@@ -291,7 +292,7 @@ let fn = new aws.lambda.Function(`fn`, {
 ```python
 fn = lambda_.Function("fn",
     role=role.arn,
-    runtime="python3.7",
+    runtime="python3.12",
     handler="hello.handler",
     code=file_archive)
 ```
@@ -302,7 +303,7 @@ fn = lambda_.Function("fn",
 ```go
 fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
     Role:    role.Arn,
-    Runtime: "python3.7",
+    Runtime: "python3.12",
     Handler: "hello.handler",
     Code:    fileArchive,
 })
@@ -314,8 +315,8 @@ fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
 ```csharp
 var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
 {
-    Role = role.arn,
-    Runtime = "python3.7",
+    Role = role.Arn,
+    Runtime = "python3.12",
     Handler = "hello.handler",
     Code = fileArchive,
 });
@@ -328,7 +329,7 @@ var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
 var fn = new com.pulumi.aws.lambda.Function("fn",
     com.pulumi.aws.lambda.FunctionArgs.builder()
         .role(role.arn())
-        .runtime("python3.7")
+        .runtime("python3.12")
         .handler("hello.handler")
         .code(fileArchive)
         .build());
@@ -343,7 +344,7 @@ resources:
     type: aws:lambda:Function
     properties:
       role: ${role.arn}
-      runtime: python3.7
+      runtime: python3.12
       handler: hello.handler
       code: ${fileArchive}
 ```

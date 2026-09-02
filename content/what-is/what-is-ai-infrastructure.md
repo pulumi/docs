@@ -3,7 +3,7 @@ title: "What Is AI Infrastructure?"
 meta_desc: "AI infrastructure is the compute, data, orchestration, and control-plane layers AI workloads run on. Learn what it includes and how teams build it."
 type: what-is
 page_title: "What Is AI Infrastructure?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 AI infrastructure is the compute, data, orchestration, and control-plane layers that training and inference workloads run on, plus the tooling teams use to provision, govern, and operate it. That includes accelerators and networking, data pipelines and storage, model-serving and orchestration frameworks, and the infrastructure-as-code and policy layer that defines, changes, and secures the rest. This page covers what belongs in each layer, how AI infrastructure differs from the cloud infrastructure teams already run, and how cloud engineering teams actually build and operate it, including with AI agents doing part of the work.

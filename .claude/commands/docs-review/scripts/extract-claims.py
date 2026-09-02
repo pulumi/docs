@@ -21,8 +21,13 @@ triage is a contractual responsibility"). Code-fence URLs, snake_case
 identifiers in code blocks, etc. will surface; the reviewer demotes them.
 
 Usage:
-    extract-claims.py --pr <PR_NUMBER> --out <out.json>
+    extract-claims.py --pr <PR_NUMBER> --out <out.json> [--repo-root <checkout>]
     extract-claims.py --patch-file <file> --out <out.json>   # for testing
+
+`--repo-root` (default: the working directory) is the checkout the diff was
+taken against. It is read only to seed each hunk's fence state — see
+`iter_added_lines` — so a hunk that opens inside a code block is not
+mis-tagged; without it the walker falls back to the diff-only guess.
 
 Scope:
     - Walks the FULL diff (all changed files, including static/programs/
@@ -72,7 +77,30 @@ TEXT_CAP = 300  # characters retained per claim's `text`
 
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
-FENCE_RE = re.compile(r"^\s*(```|~~~)")  # opens/closes a fenced code block
+FENCE_RE = re.compile(r"^\s*(`{3,}|~{3,})")  # opens/closes a fenced code block
+
+
+def fence_toggle(state: str | None, line: str) -> str | None:
+    """Advance fenced-code state over one line, CommonMark-style.
+
+    `state` is None outside a fence, or the opening marker string (its char
+    and length) inside one. A fence closes only on a marker of the SAME char
+    whose length is at least the opener's; anything else inside the fence —
+    including a ``` line nested inside a ```` block, which is how docs write
+    about fenced code — is content. Plain parity counting (every marker
+    toggles) inverts on that nesting and stays inverted for the rest of the
+    file, which is the whole-file error mode the review of PR #21308 called
+    out.
+    """
+    m = FENCE_RE.match(line)
+    if not m:
+        return state
+    marker = m.group(1)
+    if state is None:
+        return marker
+    if marker[0] == state[0] and len(marker) >= len(state):
+        return None
+    return state
 DIFF_GIT_RE = re.compile(r"^diff --git a/(.+?) b/(.+)$")
 SIMILARITY_RE = re.compile(r"^similarity index (\d+)%$")
 RENAME_FROM_RE = re.compile(r"^rename from (.+)$")
@@ -81,7 +109,7 @@ RENAME_TO_RE = re.compile(r"^rename to (.+)$")
 
 def fetch_pr_patch(pr: str) -> str:
     proc = subprocess.run(
-        ["gh", "pr", "diff", pr, "--patch"],
+        ["gh", "pr", "diff", pr],
         check=True, capture_output=True, text=True,
     )
     return proc.stdout
@@ -117,26 +145,63 @@ def parse_renames(patch: str) -> list[dict]:
     return out
 
 
-def iter_added_lines(patch: str):
+def _new_file_lines(repo_root: Path | None, file_path: str) -> list[str] | None:
+    """The checked-out (post-change) file, or None when it isn't available."""
+    if repo_root is None:
+        return None
+    try:
+        return (repo_root / file_path).read_text(encoding="utf-8", errors="replace").splitlines()
+    except (OSError, ValueError):
+        return None
+
+
+def fence_state_at(file_lines: list[str] | None, new_start: int) -> str | None:
+    """The fence state at line `new_start` of the new file: the open fence's
+    marker, or None when outside a fence. Walks the lines ABOVE the hunk
+    (1..new_start-1) with `fence_toggle`, so a nested shorter marker never
+    inverts the answer. The caller passes lines only when the checked-out
+    file exists; without it the walker falls back to the diff-only guess.
+    """
+    state: str | None = None
+    for ln in (file_lines or [])[: max(new_start - 1, 0)]:
+        state = fence_toggle(state, ln)
+    return state
+
+
+def iter_added_lines(patch: str, repo_root: Path | None = None):
     """Yield (file_path, new_line_number, line_text, in_code_context) for every
     added line in the diff.
 
     `in_code_context` is True for non-markdown files and for lines inside a
     fenced code block in a markdown file. Fence state is tracked from context
     (` `) and added (`+`) lines only — removed lines describe the old file.
-    A hunk that starts mid-fence can't be detected from the diff alone
-    (the opener is above the hunk); that edge case is accepted (FP-tolerant).
+
+    A hunk can open INSIDE a fence (the opener is above the hunk, out of the
+    diff's view). The diff alone can't tell, so each hunk's starting state is
+    seeded from the checked-out file at `repo_root / <+++ b/ path>`: walk the
+    fence markers above the hunk's first new line (CommonMark rules — a fence
+    closes only on a same-char marker at least as long as its opener, so a
+    ``` nested inside a ```` block is content, not a toggle).
+    Only when the file isn't available (a `--patch-file` test without a
+    checkout) does this fall back to assuming not-in-fence at the hunk
+    boundary. That fallback used to be the only behaviour and it is NOT
+    merely FP-tolerant: on PR #21291 (run 33518039058) the `@@ -1217` hunk
+    opened inside a code block, the first fence it met was the block's
+    CLOSING marker, every prose line for the next 40 lines was tagged
+    in-code, and a new "fastest path" positioning claim was never extracted.
     """
     current_file: str | None = None
     is_markdown = False
     new_lineno = 0
-    in_fence = False
+    fence: str | None = None  # the open fence's marker, or None outside one
+    file_lines: list[str] | None = None
     for raw in patch.splitlines():
         m = DIFF_FILE_RE.match(raw)
         if m:
             current_file = m.group(1)
             is_markdown = current_file.endswith(".md")
-            in_fence = False
+            fence = None
+            file_lines = _new_file_lines(repo_root, current_file) if is_markdown else None
             continue
         if current_file is None:
             continue
@@ -145,9 +210,9 @@ def iter_added_lines(patch: str):
         hm = HUNK_RE.match(raw)
         if hm:
             new_lineno = int(hm.group(1))
-            # A new hunk doesn't reset fence state reliably; assume not-in-fence
-            # at hunk boundaries (best effort).
-            in_fence = False
+            # Seed the fence state from the checked-out file; the diff-only
+            # guess (not-in-fence) is the fallback when there is no file.
+            fence = fence_state_at(file_lines, new_lineno) if (is_markdown and file_lines is not None) else None
             continue
         if not raw:
             # Bare empty line in the patch body — treat as a context blank line.
@@ -162,13 +227,16 @@ def iter_added_lines(patch: str):
             # "\ No newline at end of file" and other meta lines.
             continue
         # Context (" ") or added ("+") line — it's part of the new file.
-        # Toggle fence on a ``` / ~~~ delimiter (markdown only).
+        # Advance fence state on a ``` / ~~~ delimiter (markdown only); a
+        # marker that doesn't close the open fence is content inside it.
         if is_markdown and FENCE_RE.match(body):
-            in_fence = not in_fence
-            new_lineno += 1
-            continue
+            before = fence
+            fence = fence_toggle(fence, body)
+            if before is None or fence is None:
+                new_lineno += 1
+                continue  # a real opener/closer is never a claim line
         if tag == "+":
-            yield current_file, new_lineno, body, (not is_markdown) or in_fence
+            yield current_file, new_lineno, body, (not is_markdown) or fence is not None
         new_lineno += 1
 
 
@@ -285,7 +353,10 @@ POSITIONING_RES = [
 ]
 
 COMPARISON_RES = [
-    re.compile(r"\bunlike\s+[A-Z][\w.-]+", ),
+    # Sentence-initial "Unlike Terraform, …" is the common form; the proper
+    # noun after it still has to be capitalized, so only the keyword is
+    # case-insensitive.
+    re.compile(r"\b[Uu]nlike\s+[A-Z][\w.-]+"),
     re.compile(r"\b(?:faster|slower|cheaper|simpler|easier|better|worse|more (?:performant|reliable|scalable)|less (?:performant|reliable))\s+than\b", re.IGNORECASE),
     re.compile(r"\b(?:outperforms?|beats?|surpasses?|compared (?:to|with))\b", re.IGNORECASE),
     re.compile(r"\bup to\s+\d+(?:\.\d+)?\s?(?:x|×|times|%)\b", re.IGNORECASE),
@@ -336,11 +407,11 @@ def _source_hint(claim_type: str, match_text: str) -> str | None:
     return None
 
 
-def extract_claims_from_patch(patch: str) -> tuple[list[dict], dict]:
+def extract_claims_from_patch(patch: str, repo_root: Path | None = None) -> tuple[list[dict], dict]:
     claims: list[dict] = []
     seen: set[tuple] = set()  # (file, lineno, type, matched-token) — intra-file de-dup
     files_scanned: set[str] = set()
-    for file_path, lineno, body, in_code in iter_added_lines(patch):
+    for file_path, lineno, body, in_code in iter_added_lines(patch, repo_root):
         files_scanned.add(file_path)
         if SKIP_LINE_RE.match(body):
             continue
@@ -392,6 +463,9 @@ def main() -> int:
     p.add_argument("--pr", help="PR number (for `gh pr diff`)")
     p.add_argument("--patch-file", help="Read the unified diff from a file instead of `gh` (testing)")
     p.add_argument("--out", required=True, help="Output JSON path")
+    p.add_argument("--repo-root", default=str(Path.cwd()),
+                   help="Checkout the diff applies to; seeds each hunk's fence state "
+                        "from the post-change file (default: the working directory)")
     args = p.parse_args()
 
     out_path = Path(args.out)
@@ -416,7 +490,7 @@ def main() -> int:
         p.error("one of --pr or --patch-file is required")
         return 2  # unreachable
 
-    claims, stats = extract_claims_from_patch(patch)
+    claims, stats = extract_claims_from_patch(patch, Path(args.repo_root))
     renames = parse_renames(patch)
     payload = {
         "schema_version": SCHEMA_VERSION,

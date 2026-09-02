@@ -197,7 +197,7 @@ editions:
         - Audit logs
         - Drift detection and remediation
         - Time-to-live stacks
-        - Customer-managed keys
+        - Customer managed keys
         - Priority feature requests
         - 12x5 Enterprise Support available
 
@@ -361,15 +361,8 @@ categories:
       - id: cicd-integrations
         name: CI/CD integrations
         link: /docs/iac/operations/continuous-delivery/
-        availability:
-          individual:
-            content: Many
-            tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
-          team:
-            content: Many
-            tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
-          enterprise: Customized for you
-          business-critical: Customized for you
+        tooltip: AWS Code Services, Azure DevOps, Bitbucket, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+        available_from: individual
 
       - id: drift-detection
         name: Drift detection
@@ -506,8 +499,8 @@ categories:
         available_from: enterprise
 
       - id: customer-managed-keys
-        name: Customer-managed keys
-        link: /docs/esc/concepts/customer-managed-keys/
+        name: Customer managed keys
+        link: /docs/administration/concepts/customer-managed-keys/
         available_from: enterprise
 
       - id: esc-integrations-sync
@@ -637,6 +630,12 @@ categories:
         name: Discovery on self-hosted Pulumi Cloud
         link: /docs/insights/self-hosted/
         available_from: business-critical
+
+      - id: context-api
+        name: Context API
+        link: /docs/insights/context-api/
+        available_from: enterprise
+        hidden: true
 
   - id: idp
     name: Internal Developer Platform
@@ -820,7 +819,7 @@ categories:
 
       - id: audit-log-export
         name: Automated log export to S3
-        link: /docs/administration/guides/export-audit-logs/aws-s3/
+        link: /docs/administration/guides/audit-logs/aws-s3/
         available_from: business-critical
 
   - id: support

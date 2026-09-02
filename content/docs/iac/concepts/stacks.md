@@ -8,8 +8,6 @@ menu:
         name: Stacks
         parent: iac-concepts
         weight: 30
-    concepts:
-        weight: 2
 aliases:
 - /docs/iac/concepts/stacks/stackreference/
 - /docs/reference/stack/

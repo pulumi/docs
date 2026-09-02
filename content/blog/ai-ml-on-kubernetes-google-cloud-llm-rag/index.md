@@ -69,13 +69,13 @@ Running AI/ML workloads on Kubernetes presents unique challenges, including:
 - **Complex data pipelines** that integrate various cloud services
 - **Infrastructure automation** for seamless deployment
 
-Google Cloud Kubernetes (GKE) provides a robust foundation for AI/ML workloads, but managing infrastructure manually can be cumbersome. This is where Pulumi comes in—enabling Infrastructure as Code (IaC) to automate and simplify AI/ML infrastructure on Kubernetes.
+Google Cloud Kubernetes (GKE) provides a robust foundation for AI/ML workloads, but managing infrastructure manually can be cumbersome. This is where Pulumi comes in—enabling infrastructure as code (IaC) to automate and simplify AI/ML infrastructure on Kubernetes.
 
 <!--more-->
 
 ## Pulumi: Automating AI/ML Infrastructure on Google Cloud
 
-Pulumi is a modern Infrastructure as Code (IaC) tool that allows teams to define and manage cloud infrastructure using general-purpose programming languages like Python, TypeScript, and Go. This approach is particularly beneficial for AI/ML teams, as Python is already the dominant language in data science and machine learning.
+Pulumi is a modern infrastructure as code (IaC) tool that allows teams to define and manage cloud infrastructure using general-purpose programming languages like Python, TypeScript, and Go. This approach is particularly beneficial for AI/ML teams, as Python is already the dominant language in data science and machine learning.
 
 With Pulumi, you can:
 

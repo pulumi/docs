@@ -69,7 +69,7 @@ The [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) landscape o
 technologies that can be leveraged to build these platforms from scratch. However, the sheer number of options can be
 overwhelming, making it difficult for organizations to determine the best combination of tools for their specific needs.
 
-At Pulumi's Customer Experience Team, we've observed that adopting Infrastructure as Code often serves as a catalyst for
+At Pulumi's Customer Experience Team, we've observed that adopting infrastructure as code often serves as a catalyst for
 organizations to reassess their entire software delivery process. This reassessment frequently leads to the
 implementation of more streamlined, automated, and secure methodologies – the core principles of platform engineering
 mentioned above.

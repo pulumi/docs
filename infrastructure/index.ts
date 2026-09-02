@@ -7,6 +7,7 @@ import * as fs from "fs";
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 import { SupportFormApi } from "./supportForm";
+import { SupportRedirect } from "./supportRedirect";
 
 const stackConfig = new pulumi.Config();
 
@@ -86,6 +87,11 @@ const config = {
     // tickets. Requires the intercomApiKey (secret) and intercomTicketTypeId stack
     // config values — see SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
+
+    // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
+    // support-request form at /support/new/ via a dedicated CloudFront distribution — see supportRedirect.ts.
+    // Unset means no redirect infrastructure. DNS for the hostname is managed by the pulumi-service repo, not here.
+    supportRedirectDomain: stackConfig.get("supportRedirectDomain") || undefined,
 };
 
 // CloudFront Function to lowercase URIs for .NET SDK docs so that
@@ -1531,6 +1537,19 @@ async function createAliasRecord(
 
 [...new Set(domainAliases)].map(alias => createAliasRecord(alias, cdn));
 
+// Redirect distribution for a retired support hostname (see supportRedirect.ts). Deliberately not in domainAliases:
+// that list drives Route 53 records for the website distribution, while this hostname lives in the pulumi.com zone
+// owned by the pulumi-service repo, which CNAMEs it to the supportRedirectDistributionDomain output below.
+let supportRedirect: SupportRedirect | undefined;
+if (config.supportRedirectDomain) {
+    supportRedirect = new SupportRedirect("support-redirect", {
+        domain: config.supportRedirectDomain,
+        targetUrl: `https://${config.websiteDomain}/support/new/`,
+        certificateArn: config.certificateArn,
+        cachePolicyId: noCacheKeyPolicy.id,
+    });
+}
+
 export const uploadsBucketName = uploadsBucket.bucket;
 export const socialStateBucketName = socialStateBucket.bucket;
 export const contentReviewLedgerBucketName = contentReviewLedgerBucket.bucket;
@@ -1542,4 +1561,5 @@ export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
 export const supportFormFunctionName = supportForm?.getFunctionName();
+export const supportRedirectDistributionDomain = supportRedirect?.getDistributionDomainName();
 export const readme = fs.readFileSync("./README.md").toString();

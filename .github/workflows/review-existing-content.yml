@@ -340,7 +340,7 @@ jobs:
           # builds the backlog has no AWS credentials.
           mkdir -p .findings-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.findings_uri }}" .findings-cache/ --quiet \
-            || echo "findings records unavailable; glow-up falls back to the PR-body scrape"
+            || echo "::warning::findings records unavailable; the glow-up recoverability check is skipped this run and the worker falls back to the PR-body scrape"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
@@ -418,6 +418,15 @@ jobs:
       # GLOWUP_MAX_OPEN_PRS (10) open glow-up PRs the selector halts
       # (max_open_glowup_prs) and the day's slots are skipped.
       #
+      # REPAIRS: a page whose banked backlog cannot be recovered (no findings
+      # record, no review PR — 43% of the eligible pool when measured on
+      # 2026-08-25) is not glow-up work at all: the run would execute nothing.
+      # The selector routes the highest-scoring one to `.repairs[]` and this
+      # step dispatches it to the FIX lane instead, whose review needs no
+      # ledger and writes the findings record that makes a real glow-up
+      # possible next time. One per run, and never a page the fix lane already
+      # queued above (--exclude-paths).
+      #
       # GLOWUP_COUNT repo variable: unset -> 1/working-day (the default; set
       # to '2' in pulumi/docs on 2026-08-19),
       # '0' -> off, 'N' -> N/day. Same format('{0}', ...) null-coercion trick
@@ -445,6 +454,14 @@ jobs:
           fi
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          # A page the fix lane already queued this run must not also be
+          # picked for a repair — that would review one page twice in a day.
+          # (Pages with a review PR already in flight are covered separately,
+          # by the selector's open-branch filter.)
+          if [ -f .content-review-queue.json ]; then
+            ARGS+=(--exclude-paths "$(jq -r '[.articles[].path] | join(",")' \
+              .content-review-queue.json)")
           fi
           python3 scripts/content-review/select-glowup.py "${ARGS[@]}"
           echo "--- glow-up queue ---"
@@ -474,6 +491,46 @@ jobs:
               -f mode="glowup" \
               -f queue_json="$Q" \
               || echo "::warning::glow-up worker dispatch failed for $P"
+          done
+
+          # Repairs: dispatch each as an ordinary FIX-lane review. The queue is
+          # built by re-running the fix-lane selector in --paths mode with the
+          # snapshots this job already holds, so the repair PR's "Why this
+          # page" block renders from real traffic/tier/ledger facts rather
+          # than the traffic-blind rebuild the worker would do on its own.
+          jq -c '(.repairs // [])[]' .glowup-queue.json | while read -r r; do
+            P=$(echo "$r" | jq -r '.path')
+            WHY=$(echo "$r" | jq -r '.reason')
+            echo "dispatching FIX-lane repair for $P: $WHY"
+            SEL=(--paths "$P" --lane fix --out .repair-queue.json)
+            if [ -d .ledger-cache ]; then
+              SEL+=(--ledger-dir .ledger-cache)
+            fi
+            if [ -f .traffic-snapshot ]; then
+              SEL+=(--traffic-file .traffic-snapshot)
+            fi
+            if [ -f .reader-signals.json ]; then
+              SEL+=(--signals-file .reader-signals.json)
+            fi
+            if ! python3 scripts/content-review/select-articles.py "${SEL[@]}"; then
+              echo "::warning::repair queue build failed for $P"
+              continue
+            fi
+            # reader_signals comes from the FIX-lane queue, not the glow-up
+            # one: this is a fix-lane review, and that queue is the one built
+            # with --signals-file.
+            RS=$(jq -c '.reader_signals // null' .content-review-queue.json)
+            RQ=$(jq -c --argjson traffic "$TRAFFIC" --argjson signals "$RS" \
+              --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals,
+                ledger_bucket: (if $lb == "" then null else $lb end),
+                articles: .articles}' .repair-queue.json)
+            gh workflow run content-review-article.yml \
+              --repo "${{ github.repository }}" \
+              -f path="$P" \
+              -f lane="fix" \
+              -f queue_json="$RQ" \
+              || echo "::warning::repair dispatch failed for $P"
           done
 
       # ---- Report-only lane (fact-check the trees nobody may edit) ----

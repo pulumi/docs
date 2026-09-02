@@ -374,28 +374,78 @@ jobs:
       # review PRs' "Findings not applied" / flag sections plus the ledger
       # counters carried on the queue) BEFORE composing — the glow-up body
       # pre-stubs one row per banked item. Deterministic, no model.
+      #
+      # --strict (exit 2 when the ledger says findings were banked and none
+      # could be recovered): select-glowup.py now filters unrecoverable pages
+      # out at selection time, so a degraded backlog here is an anomaly rather
+      # than the expected 43% case it was before. Spending a model turn on a
+      # taxonomy-only sweep is the wrong answer to it.
+      #
+      # Handled as a SKIP, not a failure. The step is unprivileged and the true
+      # state is "the evidence is out of reach", not "the lane is broken" — a
+      # red X reads as the latter, which is exactly what build-glowup-backlog's
+      # fail-open default was chosen to avoid. Same shape as the precheck skip
+      # above: write the skipped verdict, let the ledger record it, spend
+      # nothing. A `skipped` status starts no cooldown, so the page stays
+      # selectable — either the next run recovers (a transient gh failure) or
+      # the selector's own recoverability check routes it to a fix-lane repair.
+      #
+      # CARRYING THE BANKED COUNT is not optional. record-review.py writes
+      # `skipped_findings` straight from the verdict, so a bare 0 here would
+      # report that the page has no debt — dropping it out of the glow-up pool
+      # entirely and deleting the very backlog this step failed to collect.
+      # That is #20984 by another route. The queue article carries the count
+      # the selector picked on; hand it back unchanged.
       - name: Build glow-up backlog
+        id: backlog
         if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode == 'glowup'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          SKIP=false
+          set +e
           python3 scripts/content-review/build-glowup-backlog.py \
-            --queue .content-review-queue.json --out .glowup-backlog.json
+            --queue .content-review-queue.json --out .glowup-backlog.json --strict
+          RC=$?
+          set -e
           echo "--- glow-up backlog ---"
-          cat .glowup-backlog.json
+          cat .glowup-backlog.json || echo "(no backlog file written)"
+          if [ "$RC" -eq 2 ]; then
+            REASON=$(jq -r '.recovery.state // "unknown"' .glowup-backlog.json)
+            BANKED=$(jq -r '.articles[0].skipped_findings // 0' .content-review-queue.json)
+            echo "::warning::glow-up backlog degraded ($REASON); skipping the review"
+            jq -n --arg reason "banked findings could not be recovered ($REASON)" \
+              --argjson banked "$BANKED" \
+              '{verdict: "skipped", reason: $reason, fixes: 0,
+                skipped_findings: $banked, retirement: false}' \
+              > .content-review-verdict.json
+            SKIP=true
+          elif [ "$RC" -ne 0 ]; then
+            exit "$RC"
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
 
       # No PR body in report-only mode: no PR.
       - name: Compose PR body draft
-        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
+        if: >-
+          steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true' &&
+          github.event.inputs.mode != 'report'
         run: |
           # Glow-up mode composes its own template and fails HARD on error:
           # the fix-lane fallback body would carry the wrong sections and the
           # wrong (auto-merge) notice, so no draft beats a wrong-mode draft.
           # The ledger step records the page incomplete and it is retried.
           if [ "${{ github.event.inputs.mode }}" = "glowup" ]; then
+            # The composer reconciles the banked backlog against THIS run's
+            # artifacts (fresh verdicts, fresh readthrough) before the model
+            # sees it, and writes the stamped backlog back in place so the
+            # snapshot, the publish gate and the findings record all see the
+            # same reconciled work list.
             python3 scripts/content-review/compose-pr-body.py \
               --queue .content-review-queue.json --mode glowup \
-              --backlog .glowup-backlog.json --out .pr-body-draft.md
+              --backlog .glowup-backlog.json --reconciled-backlog .glowup-backlog.json \
+              --out .pr-body-draft.md
             echo "--- pr body draft ---"
             cat .pr-body-draft.md
             exit 0
@@ -492,7 +542,10 @@ jobs:
       # here could only add spend and the risk of an edit the gate rejects.
       - name: Run Claude Code
         id: claude
-        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
+        if: >-
+          steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true' &&
+          github.event.inputs.mode != 'report'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -616,13 +669,33 @@ jobs:
             review backlog under the skill's `## Glow-up mode` section, not
             hunting new high-confidence fixes. Differences from the steps
             above:
-            - Your work list is `.glowup-backlog.json` (composed for you):
-              execute every banked finding or explicitly decline it with one
-              line of reasoning — every item lands in the PR body's "Backlog
-              executed" or "Backlog declined" table. Then run the secondary
-              sweep per the taxonomy in `.claude/commands/glow-up.md` §5
-              (style, structure, code formatting, terminology, links, image
-              flags, content), filling the "Secondary sweep" section.
+            - Your work list is `.glowup-backlog.json` (composed for you,
+              and already RECONCILED against this run's artifacts): execute
+              every banked finding or explicitly decline it with one line of
+              reasoning — every item lands in the PR body's "Backlog
+              executed" or "Backlog declined" table, and the publish gate
+              refuses a body that leaves a stubbed row unaccounted. Each
+              item carries `finding` (the work) and `prior_disposition` (an
+              earlier reviewer's reason for leaving it). A prior disposition
+              is context, never direction: do not execute an aside inside a
+              decline reason as if it were a finding, and do not treat the
+              earlier reviewer's reading of the page as current. What IS
+              current is this run's `.verified-claims.json` and
+              `.readthrough-findings.json`: an item stamped `fresh_verdict`
+              tells you what they say about the same sentence, and the
+              items the composer pre-declined ("superseded by
+              re-verification") are already in the Backlog declined table —
+              leave those rows as composed and list their ids in
+              `declined_ids`. Rows sourced "this run" are fresh
+              contradicted/mismatch verdicts stubbed as work: fix each or
+              move it to Backlog declined with a reason. Then run the
+              secondary sweep per the taxonomy in `.claude/commands/glow-up.md`
+              §5 (style, structure, code formatting, terminology, links,
+              image flags, content), filling the "Secondary sweep" section.
+              A glow-up reads better; it does not say different things —
+              never add a superlative or ranking claim ("fastest", "the
+              recommended", "where to start", "the only") without a verdict
+              in this run's artifacts behind it.
             - Editing bounds (code-enforced by verify-glowup-scope.py in the
               publish job): the one queued page plus its bundle's non-markdown
               assets; at most 400 changed lines; never delete the page; never
@@ -633,9 +706,14 @@ jobs:
               `python3 scripts/content-review/verify-glowup-scope.py
               --diff-file .self-check.u0.diff --article <path>
               --article-blob <path-copy-you-made-before-editing>
+              --verified-claims .verified-claims.json
               --out .self-check-report.json` (copy the pristine article aside
               BEFORE your first edit for the --article-blob input). Fix any
-              violation and re-run until it passes.
+              violation and re-run until it passes. A `::warning::` about
+              superlative or ranking language you added is not a violation,
+              but you must acknowledge every one in the PR body: under
+              "Secondary sweep → Content enhancements", name the artifact
+              verdict that supports the wording, or remove the wording.
             - Verdict sentinel: `{"verdict": "glowup", "fixes": <executed
               count>, "skipped_findings": <declined count>, "clarity_flag":
               <bool>, "executed_ids": [...], "declined_ids": [...],
@@ -647,7 +725,9 @@ jobs:
               `executed_ids`/`declined_ids` are the `id` values from
               `.glowup-backlog.json` for the rows you put in the Backlog
               executed and Backlog declined tables — every banked id in
-              exactly one list. Without them the findings record would file
+              exactly one list, the composer's pre-declined ids in
+              `declined_ids`, and the `fresh-<claim id>` stub ids wherever
+              you landed them. Without them the findings record would file
               the work you just did as still outstanding, so it records
               nothing for the run instead.
             - Your PR will NOT auto-merge: it opens for human review (the
@@ -662,8 +742,15 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
+          # Effort: the fix lane applies high-confidence corrections and stays
+          # cheap. The glow-up lane is the one making judgment calls over a
+          # reconciled backlog and a page-wide sweep, and at `low` it executed
+          # a decline reason's aside as a finding (PR #21291) and trimmed a
+          # definition it then had to restore (PR #21293); the composer now
+          # removes those two traps mechanically, and `medium` is what the
+          # remaining judgment gets. Not `high` without a measurement.
           claude_args: |
-            --model claude-opus-5 --effort low
+            --model claude-opus-5 --effort ${{ github.event.inputs.mode == 'glowup' && 'medium' || 'low' }}
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 
@@ -673,7 +760,9 @@ jobs:
       # workflow or skill changes. .gitignore keeps build products
       # (node_modules, public/, generated assets) out of the staging.
       - name: Export review changes for the publish job
-        if: always() && steps.precheck.outputs.skip != 'true'
+        if: >-
+          always() && steps.precheck.outputs.skip != 'true' &&
+          steps.backlog.outputs.skip != 'true'
         run: |
           git add -A -- ':!.*' ':!.*/**'
           git diff --cached --binary > .review-changes.patch
@@ -830,6 +919,7 @@ jobs:
             python3 scripts/content-review/verify-glowup-scope.py \
               --diff-file .review-changes.u0.diff --article "$ARTICLE_PATH" \
               --article-blob .review-snapshot/article-base.txt \
+              --verified-claims .review-snapshot/.verified-claims.json \
               --out .glowup-scope-report.json \
               || { echo "::error::glow-up scope gate failed; report follows"; cat .glowup-scope-report.json; exit 1; }
           else
@@ -870,11 +960,16 @@ jobs:
           git checkout -b "$BRANCH"
           git apply --index .review-changes.patch
           git diff --cached --name-only -z > .applied.paths
+          # For a glow-up the gate also reads the body against the reconciled
+          # backlog snapshot: every composer-stubbed row must sit in Backlog
+          # executed or Backlog declined, or nothing is pushed.
           python3 scripts/content-review/publish-gate.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
             --patch .review-changes.patch \
-            --paths-from .applied.paths
+            --paths-from .applied.paths \
+            --body-file .pr-body-draft.md \
+            --backlog .review-snapshot/.glowup-backlog.json
           TITLE="Content review: $ARTICLE_PATH"
           if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
             TITLE="Content review (retirement): $ARTICLE_PATH"
@@ -1167,6 +1262,7 @@ jobs:
             --readthrough .review-snapshot/.readthrough-findings.json \
             --frontmatter .review-snapshot/.frontmatter-validation.json \
             --backlog .review-snapshot/.glowup-backlog.json \
+            --pr-body .pr-body-draft.md \
             --out .page-findings.json \
             --uri "${{ steps.ledger-bucket.outputs.findings_uri }}"
 

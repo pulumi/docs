@@ -28,6 +28,14 @@ EXTRACT_LLM = HERE / "extract-claims-llm.py"
 MERGE = HERE / "merge-claims.py"
 TESTDATA = HERE / "testdata"
 
+# The PR #21291 head file is stored flat, with a `.md.txt` suffix, and is
+# materialized into a throwaway repo root by the test that needs it. Anything
+# named `*.md` under `.claude/commands/` is picked up by agent skill discovery,
+# so a 1288-line article fixture kept at its real content path would advertise
+# itself as a skill in every session in this repo.
+PR21291_HEAD_PAYLOAD = "pr21291-head-convert-hcl.md.txt"
+PR21291_HEAD_PATH = "content/docs/iac/get-started/terraform/convert-hcl.md"
+
 _failures: list[str] = []
 _passes = 0
 
@@ -41,21 +49,38 @@ def check(cond: bool, msg: str) -> None:
         print(f"  FAIL: {msg}", file=sys.stderr)
 
 
-def run_extract(patch_text: str) -> dict:
+def assert_clean(name: str, before: int) -> None:
+    """Fail the *test function* on the check failures it recorded itself.
+
+    Under pytest (`make test-review-pipeline`) a test only fails if it raises;
+    `check()` alone would record FAILs and still report green. `before` is
+    `len(_failures)` captured on entry, so an earlier test's failure is not
+    charged to this one.
+    """
+    new = _failures[before:]
+    if new:
+        raise AssertionError(f"{name}: {len(new)} check(s) failed (see FAIL lines above)")
+
+
+def run_extract(patch_text: str, repo_root: Path | None = None) -> dict:
+    """Run the extractor over a patch. `repo_root` defaults to the empty temp
+    dir, so a synthetic diff never picks up fence state from a real file."""
     with tempfile.TemporaryDirectory() as td:
         pf = Path(td) / "p.patch"
         pf.write_text(patch_text)
         out = Path(td) / "out.json"
-        r = subprocess.run([sys.executable, str(EXTRACT), "--patch-file", str(pf), "--out", str(out)],
+        r = subprocess.run([sys.executable, str(EXTRACT), "--patch-file", str(pf), "--out", str(out),
+                            "--repo-root", str(repo_root or td)],
                            capture_output=True, text=True)
         assert r.returncode == 0, f"extract-claims.py exited {r.returncode}: {r.stderr}"
         return json.loads(out.read_text())
 
 
-def run_extract_fixture(name: str) -> dict:
+def run_extract_fixture(name: str, repo_root: Path | None = None) -> dict:
     with tempfile.TemporaryDirectory() as td:
         out = Path(td) / "out.json"
-        r = subprocess.run([sys.executable, str(EXTRACT), "--patch-file", str(TESTDATA / name), "--out", str(out)],
+        r = subprocess.run([sys.executable, str(EXTRACT), "--patch-file", str(TESTDATA / name), "--out", str(out),
+                            "--repo-root", str(repo_root or td)],
                            capture_output=True, text=True)
         assert r.returncode == 0, f"extract-claims.py exited {r.returncode}: {r.stderr}"
         return json.loads(out.read_text())
@@ -249,6 +274,131 @@ def test_fixture_pr18541_gcp_version_pin() -> None:
           f"pr18541: the pulumi-gcp pin should be typed version; got {[c['type'] for c in pin]}")
 
 
+def test_fixture_pr21291_hunk_opening_inside_a_fence() -> None:
+    """PR #21291 (glow-up run 33518039058): the `@@ -1217` hunk opens inside a
+    code block. Read from the diff alone, the first fence the walker meets is
+    that block's CLOSING marker, so every prose line that follows is tagged
+    in-code and the new "`pulumi convert` is the fastest path …" sentence
+    never yields a positioning claim. Seeding the hunk's fence state from the
+    checked-out file (21 markers above line 1217 → inside a fence) fixes it;
+    the empty-root run documents the diff-only fallback."""
+    print("test_fixture_pr21291_hunk_opening_inside_a_fence")
+    before = len(_failures)
+    head_text = (TESTDATA / PR21291_HEAD_PAYLOAD).read_text()
+    lines = head_text.splitlines()
+    check(sum(1 for ln in lines[:1216] if ln.lstrip().startswith(("```", "~~~"))) % 2 == 1,
+          "fixture: an odd number of fence markers precedes line 1217 (the hunk opens in a fence)")
+
+    with tempfile.TemporaryDirectory() as td:
+        page = Path(td) / PR21291_HEAD_PATH
+        page.parent.mkdir(parents=True, exist_ok=True)
+        page.write_text(head_text)
+        seeded = run_extract_fixture("pr21291-fence-seed.diff", repo_root=Path(td))
+    fastest = [c for c in seeded["claims"] if "fastest path" in c["text"]]
+    check(any(c["type"] == "positioning" for c in fastest),
+          f"seeded: the 'fastest path' line yields a positioning claim; got {[(c['line_range'], c['type']) for c in fastest]}")
+    check(all(c["line_range"] == "L1226" for c in fastest),
+          f"seeded: the 'fastest path' claims anchor at L1226; got {[c['line_range'] for c in fastest]}")
+
+    # Lines that really are inside a fence in the new file (the `bash` and
+    # `text` blocks later in the hunk) must yield nothing prose-typed — and in
+    # this hunk nothing at all.
+    in_fence, fenced = False, set()
+    for i, ln in enumerate(lines, start=1):
+        if ln.lstrip().startswith(("```", "~~~")):
+            in_fence = not in_fence
+            continue
+        if in_fence and 1217 <= i <= 1252:
+            fenced.add(f"L{i}")
+    check(len(fenced) >= 4, f"fixture: the hunk contains fenced code lines; found {sorted(fenced)}")
+    leaked = [c for c in seeded["claims"] if c["line_range"] in fenced]
+    check(not leaked, f"seeded: no claim is extracted from the hunk's code blocks; got {[(c['line_range'], c['type']) for c in leaked]}")
+
+    with tempfile.TemporaryDirectory() as empty:
+        fallback = run_extract_fixture("pr21291-fence-seed.diff", repo_root=Path(empty))
+    fb_fastest = [c for c in fallback["claims"] if "fastest path" in c["text"]]
+    check(fb_fastest and all(c["type"] == "url" for c in fb_fastest),
+          f"fallback (no checkout): the old diff-only behaviour — only a url claim on the line; got {[c['type'] for c in fb_fastest]}")
+    check(len(seeded["claims"]) > len(fallback["claims"]),
+          f"seeding recovers claims the diff-only walk suppressed ({len(seeded['claims'])} vs {len(fallback['claims'])})")
+    assert_clean("test_fixture_pr21291_hunk_opening_inside_a_fence", before)
+
+
+def test_fence_seeding_survives_nested_fences() -> None:
+    """Review of PR #21308: a parity count of fence markers inverts on a ```
+    line nested inside a ```` block (how docs write ABOUT fenced code) and
+    stays inverted for the rest of the file. Fence state now follows
+    CommonMark: a fence closes only on a same-char marker at least as long as
+    its opener, in both the seed and the diff walk."""
+    print("test_fence_seeding_survives_nested_fences")
+    before = len(_failures)
+    page = "\n".join([
+        "---", "title: Fences", "---", "",
+        "How to write a fenced block:", "",
+        "````markdown",                      # L7 opens a 4-backtick fence
+        "```python",                         # L8: content, not a toggle
+        "print('hi')",
+        "```",                               # L10: content, not a toggle
+        "````",                              # L11 closes it
+        "",
+        "Pulumi is the canonical choice for this.",   # L13: prose
+        "",
+        "~~~", "code ~~~ inside", "~~~",     # L15-17: tilde fence
+        "",
+        "Pulumi is the fastest path here, unlike Terraform.",  # L19: prose
+        "",
+    ]) + "\n"
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        target = root / "content/docs/x.md"
+        target.parent.mkdir(parents=True)
+        target.write_text(page)
+        patch = (
+            "diff --git a/content/docs/x.md b/content/docs/x.md\n"
+            "--- a/content/docs/x.md\n+++ b/content/docs/x.md\n"
+            "@@ -13,1 +13,1 @@\n-old\n+Pulumi is the canonical choice for this.\n"
+            "@@ -19,1 +19,1 @@\n-old\n+Pulumi is the fastest path here, unlike Terraform.\n"
+        )
+        d = run_extract(patch, repo_root=root)
+    types_13 = {c["type"] for c in d["claims"] if c["line_range"] == "L13"}
+    types_19 = {c["type"] for c in d["claims"] if c["line_range"] == "L19"}
+    check("positioning" in types_13,
+          f"a hunk after a ```` block containing ``` lines is seeded outside a fence (L13); got {types_13}")
+    check({"positioning", "comparison"} <= types_19,
+          f"a hunk after a ~~~ block whose body mentions ~~~ is seeded outside a fence (L19); got {types_19}")
+    # The diff walk itself honours the same rule: a ``` context line inside
+    # an open ```` fence does not close it.
+    walk = _mk_patch("content/docs/y.md", [
+        "````markdown",
+        "```python",
+        "# the canonical way, unlike the old approach",   # still inside the ```` fence
+        "```",
+        "````",
+        "Pulumi is the canonical choice.",                 # prose after the block
+    ])
+    d2 = run_extract(walk)
+    inside = [c for c in d2["claims"] if c["line_range"] == "L12" and c["type"] in ("positioning", "comparison")]
+    after = [c for c in d2["claims"] if c["line_range"] == "L15" and c["type"] == "positioning"]
+    check(not inside, f"a ``` line nested in a ```` fence does not close it (L12 stays in-code); got {inside}")
+    check(after, "the ```` closer really closes it: prose after the block yields a positioning claim")
+    assert_clean("test_fence_seeding_survives_nested_fences", before)
+
+
+def test_no_script_uses_per_commit_pr_patch() -> None:
+    """`gh pr diff --patch` is a per-commit mailbox: a sentence one commit adds
+    and a later commit removes is still extracted and verified (contradicted
+    against a file that no longer contains it). Every pre-step must read the
+    NET diff, and this locks it at the source level."""
+    print("test_no_script_uses_per_commit_pr_patch")
+    before = len(_failures)
+    import re as _re
+    bad = _re.compile(r'\["gh",\s*"pr",\s*"diff",\s*[^\]]*"--patch"')
+    offenders = sorted(p.name for p in HERE.glob("*.py")
+                       if p.name != Path(__file__).name and bad.search(p.read_text()))
+    check(offenders == [], f"scripts still fetching the per-commit patch: {offenders}")
+    assert_clean("test_no_script_uses_per_commit_pr_patch", before)
+
+
 # ---- merge-claims.py ----------------------------------------------------------
 
 def _regex_doc(claims: list[dict]) -> dict:
@@ -314,6 +464,66 @@ def test_merge_dedup_and_provenance() -> None:
     # Token meta propagated from the two LLM passes.
     check(m["meta"]["llm_input_tokens"] == 20 and m["meta"]["regex_claims"] == 4 and m["meta"]["llm_claims"] == 5,
           f"merge: meta should sum LLM tokens / count inputs; got {m['meta']}")
+
+
+def test_merge_keeps_a_distinct_regex_stance() -> None:
+    """PR #21291 (pre-merge run 33519246857): the regex `positioning` record
+    for the whole added line clustered (token overlap 0.93 — far above the
+    0.34 threshold) with an LLM `capability` claim restating the OTHER
+    sentence on that line; the LLM text won as representative and "fastest"
+    never reached the verifier. A regex positioning/comparison record must
+    survive as its own claim when the representative is typed differently."""
+    print("test_merge_keeps_a_distinct_regex_stance")
+    before = len(_failures)
+    f = "content/docs/iac/get-started/terraform/convert-hcl.md"
+    line = ("`pulumi convert` is the fastest path for most configurations, and it's where to start. "
+            "For configurations it struggles with — heavy `for_each` and `dynamic` blocks, or a lot of "
+            "module indirection — a coding agent can pick up where the converter leaves off. The "
+            "[Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/) gives the agent you "
+            "already use access to the Pulumi Registry, your stacks, and a `convert-terraform-to-typescript` prompt.")
+    llm_text = ("The Pulumi MCP server gives the agent you already use access to the Pulumi Registry, "
+                "your stacks, and a convert-terraform-to-typescript prompt.")
+    regex = _regex_doc([
+        {"file": f, "line_range": "L1226", "text": line, "type": "url", "source_hint": "/docs/ai/mcp-server/"},
+        {"file": f, "line_range": "L1226", "text": line, "type": "positioning"},
+    ])
+    atomic = _llm_doc("atomic", [
+        {"file": f, "line_range": "L1226", "text": llm_text, "type": "capability", "confidence": "high"},
+    ])
+    # Sanity: the two texts overlap far above the cluster threshold, so the
+    # old merge absorbed the stance.
+    sys.path.insert(0, str(HERE))
+    spec = importlib.util.spec_from_file_location("merge_claims", MERGE)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    overlap = mod.token_overlap(line, llm_text)
+    check(overlap > 0.9, f"fixture: token overlap between the line and the LLM restatement is > 0.9; got {overlap:.2f}")
+
+    m = run_merge(regex, [atomic])
+    # Schema v2: stances are routed to their own list, out of the verifier's
+    # input — so the survivor shows up under `stances`, not `claims`.
+    all_records = m["claims"] + m["stances"]
+    types = sorted(c["type"] for c in all_records)
+    check("positioning" in types, f"merge: the regex positioning record survives as its own record; got {types}")
+    check("capability" in types, f"merge: the LLM capability claim survives too; got {types}")
+    check(len(all_records) == 2, f"merge: exactly two records (stance + capability); got {len(all_records)}: {types}")
+    stance = next(c for c in m["stances"] if c["type"] == "positioning")
+    check("fastest path" in stance["text"] and stance["found_by"] == ["regex"],
+          f"merge: the stance keeps the regex line text and provenance; got {stance}")
+    check(all(c["type"] not in ("positioning", "comparison") for c in m["claims"]),
+          f"merge: no stance in the verifier's `claims` list; got {[c['type'] for c in m['claims']]}")
+    cap = next(c for c in m["claims"] if c["type"] == "capability")
+    check("regex" in cap["found_by"] and cap["type"] == "capability",
+          f"merge: the url record still merges into the capability claim; got {cap}")
+
+    # Same types on both sides still collapse to one record.
+    same = run_merge(_regex_doc([{"file": f, "line_range": "L1226", "text": line, "type": "positioning"}]),
+                     [_llm_doc("atomic", [{"file": f, "line_range": "L1226",
+                                          "text": "pulumi convert is the fastest path for most configurations.",
+                                          "type": "positioning"}])])
+    check(len(same["stances"]) == 1 and same["stances"][0]["type"] == "positioning" and not same["claims"],
+          f"merge: a regex stance whose representative is ALSO a stance still merges; got {same}")
+    assert_clean("test_merge_keeps_a_distinct_regex_stance", before)
 
 
 def test_merge_line_anchor_clamps_out_of_bounds() -> None:
@@ -471,7 +681,8 @@ def main() -> int:
     if not TESTDATA.is_dir():
         print(f"FATAL: testdata dir not found at {TESTDATA}", file=sys.stderr)
         return 2
-    for fixture in ("pr18771-dark-factory.diff", "pr18743-ollama-ec2.diff", "pr18541-gcp-programs.diff"):
+    for fixture in ("pr18771-dark-factory.diff", "pr18743-ollama-ec2.diff", "pr18541-gcp-programs.diff",
+                    "pr21291-fence-seed.diff", PR21291_HEAD_PAYLOAD):
         if not (TESTDATA / fixture).is_file():
             print(f"FATAL: missing fixture {TESTDATA / fixture}", file=sys.stderr)
             return 2
@@ -485,7 +696,11 @@ def main() -> int:
         test_fixture_pr18771_strongdm_mechanics,
         test_fixture_pr18743_price_and_model,
         test_fixture_pr18541_gcp_version_pin,
+        test_fixture_pr21291_hunk_opening_inside_a_fence,
+        test_fence_seeding_survives_nested_fences,
+        test_no_script_uses_per_commit_pr_patch,
         test_merge_dedup_and_provenance,
+        test_merge_keeps_a_distinct_regex_stance,
         test_merge_line_anchor_clamps_out_of_bounds,
         test_merge_missing_and_error_inputs,
         test_llm_scrutiny_per_file,

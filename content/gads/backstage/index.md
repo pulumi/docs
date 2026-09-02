@@ -10,7 +10,7 @@ subheading: |
     templates, a resource catalog, policy, and secrets management in one platform.
 
 overview:
-    title: Infrastructure as Code<br/>in any Programming Language
+    title: Infrastructure as Code <br/>in any Programming Language
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a Backstage alternative</span>? Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 

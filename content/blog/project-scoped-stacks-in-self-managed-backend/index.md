@@ -12,9 +12,9 @@ tags:
 category: product
 ---
 
-At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.
+At Pulumi, our goal is to offer the best infrastructure as code experience for all cloud developers.
 From the very beginning, we've believed that the best IaC experience is made possible by combining a great open source SDK and CLI with a great backend management service.
-This is why we built [Pulumi Cloud](/product/pulumi-service/), a rich management platform for your Infrastructure as Code, which includes a forever free option for individuals, a generous free tier for teams, and critical tools for enterprises to manage IaC at scale.
+This is why we built [Pulumi Cloud](/product/pulumi-service/), a rich management platform for your infrastructure as code, which includes a forever free option for individuals, a generous free tier for teams, and critical tools for enterprises to manage IaC at scale.
 
 Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/administration/security-compliance/audit-logs/), [SAML SSO](/docs/administration/access-identity/saml/) and [SCIM](/docs/administration/access-identity/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/administration/access-identity/access-tokens/) and [Team Access Tokens](/docs/administration/access-identity/access-tokens/) and much more.
 

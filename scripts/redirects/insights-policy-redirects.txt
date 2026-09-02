@@ -17,3 +17,4 @@ docs/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulum
 docs/iac/packages-and-automation/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
 docs/iac/using-pulumi/crossguard/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
 docs/insights/policy/awsguard/index.html|https://github.com/pulumi/pulumi-policy-aws
+docs/reference/pre-built-policy-packs/hitrust/aws-native/index.html|/docs/reference/pre-built-policy-packs/hitrust/aws/

@@ -17,7 +17,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Continuous compliance,*<br>by construction."
+    title: "*Continuous compliance,* <br>by construction."
     description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
     image: /images/product/discovery-governance/ig-hero.svg
     image_alt: Discovery & governance dashboard showing cloud resource compliance

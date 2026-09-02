@@ -22,6 +22,10 @@
     // pricing, reinvent, releases). Ships in main.scss too; both bundles need it.
     @import "shared/badge";
 
+    // Homepage animated hero. Lives in the marketing bundle (the homepage loads
+    // it) so it stays out of bundle.css.
+    @import "marketing/hero-animation";
+
     body {
         @apply overflow-x-hidden;
 

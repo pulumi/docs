@@ -224,7 +224,7 @@ def claim_extraction_md(repo_root: Path) -> str:
 
 def fetch_pr_patch(pr: str) -> str:
     proc = subprocess.run(
-        ["gh", "pr", "diff", pr, "--patch"],
+        ["gh", "pr", "diff", pr],
         check=True, capture_output=True, text=True,
     )
     return proc.stdout

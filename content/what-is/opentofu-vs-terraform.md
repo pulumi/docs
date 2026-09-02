@@ -1,22 +1,15 @@
 ---
-title_tag: "OpenTofu vs. Terraform"
-authors: ["joe-duffy"]
+title: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
-title: OpenTofu vs. Terraform
-h1: OpenTofu vs. Terraform
+type: what-is
+page_title: "OpenTofu vs. Terraform"
+authors: ["pulumi-content-team"]
 include_floqer: true
-menu:
-    iac:
-        name: OpenTofu vs. Terraform
-        parent: iac-comparisons-terraform
-        weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 2
 aliases:
-    - /docs/intro/vs/terraform/opentofu/
-    - /docs/concepts/vs/terraform/opentofu/
-    - /docs/iac/concepts/vs/terraform/opentofu/
+- /docs/iac/comparisons/terraform/opentofu/
+- /docs/intro/vs/terraform/opentofu/
+- /docs/concepts/vs/terraform/opentofu/
+- /docs/iac/concepts/vs/terraform/opentofu/
 ---
 
 OpenTofu and Terraform are both infrastructure as code technologies that have similarities but fundamental differences. They both provide infrastructure as code software for cloud service management with a consistent CLI workflow. They allow you to write, plan, and apply changes to deliver infrastructure as code. In this comprehensive guide, we'll explore their key differences and similarities to help you choose the right infrastructure as code platform to meet your needs.
@@ -77,7 +70,7 @@ Pulumi lets you take advantage of decades of innovation in modern IDEs. These to
 
 ### State Management {#state}
 
-With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure. It uses the free [Pulumi Cloud](https://app.pulumi.com/signup) to eliminate concerns around concurrency management requirements and state manually by way of "state files". This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
+With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure. It uses the free [Pulumi Cloud](https://app.pulumi.com/signup) to eliminate concerns around concurrency management requirements and state manually by way of "state files". This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without Pulumi Cloud](/docs/support/faq/pulumi-cloud/#can-i-use-pulumi-without-depending-on-pulumi-cloud), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
 For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 
@@ -145,7 +138,7 @@ Transformations, which are unique to Pulumi, allow you to programmatically set o
 
 ### Import Code from Other IaC Tools {#converting}
 
-Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi user guide.
+Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves the existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/iac/guides/migration/#conversion) in our Adopting Pulumi user guide.
 
 ## Get Started with Pulumi
 

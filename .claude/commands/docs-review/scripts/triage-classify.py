@@ -21,6 +21,17 @@ from collections.abc import Iterable
 
 WEBPACK_RE = re.compile(r"^webpack\.[^/]+\.js$")
 
+# Applied at the PR level when no file matched a domain rule, so that every
+# triaged PR carries exactly one domain signal and "no domain label" always
+# means "triage didn't run" rather than "triage ran and had nothing to say".
+# Deliberately NOT domain:mixed: mixed is derived from len(domains) > 1 and
+# asserts "touches more than one domain, each file reviewed under its own" —
+# the opposite of what's true here — and overloading it would destroy its
+# filter value for the multi-domain PRs it exists to mark. domain:other is
+# an honest "no specific domain"; those files review under shared-criteria
+# only, per docs-review:references:domain-routing rule 6.
+FALLBACK_DOMAIN = "domain:other"
+
 # Above this many changed lines (additions + deletions), the PR is `oversized`:
 # too big for the review pipeline to finish inside its time budget, and at this
 # scale the bulk is invariably generated output that an LLM line-review adds no
@@ -62,7 +73,13 @@ def classify_path(path: str) -> str | None:
     # infrastructure that affects how content renders. static/programs/ is
     # already routed at the top of this function (programs check returns
     # first); the explicit exclusion below documents intent for readers.
-    if path.startswith("layouts/") or path.startswith("assets/"):
+    # theme/ is the same kind of thing one level down: the SCSS and TypeScript
+    # sources compiled into the site's CSS/JS bundles. Its omission is why
+    # PR #21164 (a consent-manager change under theme/src/ts/) carried no
+    # domain label and was reviewed under shared-criteria only.
+    if (path.startswith("layouts/")
+            or path.startswith("assets/")
+            or path.startswith("theme/")):
         return "domain:infra"
     if path.startswith("static/") and not path.startswith("static/programs/"):
         return "domain:infra"
@@ -96,6 +113,32 @@ def split_files(diff_text: str) -> list[tuple[str, str]]:
         path = m.group(2)  # 'b' path is the new path (handles renames)
         out.append((path, "diff --git " + chunk))
     return out
+
+
+# Lines a compiler would recognise: statement/block terminators, declaration
+# keywords, comment openers, operators that don't occur in prose. Kept
+# deliberately narrow — a prose line ending in `)` or containing `=` is not
+# code; `{`, `;`, `=>`, `:=` and leading keywords are. The heuristic only ever
+# ADDS "this is code" signal, and a wrong call there costs one review run;
+# the wrong call in the other direction skipped the review entirely.
+_CODE_LINE_RE = re.compile(
+    r"^\s*(?:import |package |func |const |var |let |def |class |public |private |protected "
+    r"|return\b|export |from \S+ import |using |namespace |@\w+|#include|\}|\)|//|/\*|\*/)"
+    r"|[{};]\s*$|:=|=>|\(\)|\bnew \w+\("
+)
+
+
+def _looks_like_code(text: str) -> bool:
+    return bool(_CODE_LINE_RE.search(text))
+
+
+def _hunk_looks_like_code(body_lines: list[str], min_lines: int = 3, ratio: float = 0.6) -> bool:
+    """True when most of a hunk's non-blank lines (context + changes) read as
+    code — the shape of a hunk that starts inside a fenced block."""
+    texts = [ln[1:] for ln in body_lines if ln and ln[1:].strip()]
+    if len(texts) < min_lines:
+        return False
+    return sum(1 for t in texts if _looks_like_code(t)) / len(texts) >= ratio
 
 
 def iter_hunks(file_diff: str) -> Iterable[tuple[str, list[str]]]:
@@ -204,12 +247,31 @@ def classify_file(path: str, file_diff: str) -> dict:
         else:
             state = "body"
 
+        # Code-inside-fences detection. `has_code_block_change` used to fire
+        # only when a changed line WAS a fence marker, so a PR rewriting the
+        # Java/Go/TypeScript inside existing fences classified as trivial
+        # (+10 lines of snippet fixes → `review:trivial` → review skipped).
+        # Two signals, both of which fail toward "code": (1) fence state
+        # tracked across the hunk's context lines; (2) a hunk with no marker
+        # in view whose lines mostly look like code (the hunk started
+        # mid-fence). Mis-calling prose "code" only costs a review run.
+        in_fence = False
+        if is_md and _hunk_looks_like_code(body_lines):
+            flags["has_code_block_change"] = True
+
         for line in body_lines:
             if not line:
                 continue
             marker = line[0]
             content = line[1:]
             stripped = content.strip()
+
+            if is_md and stripped.startswith(("```", "~~~")) and marker in " +-":
+                if marker == " ":
+                    in_fence = not in_fence
+                    continue
+                # a changed fence marker is itself a code-block change (below)
+                in_fence = not in_fence
 
             # Frontmatter boundary toggling — both context and changed
             # lines can be `---`. If a `---` line is added or removed,
@@ -235,7 +297,7 @@ def classify_file(path: str, file_diff: str) -> dict:
 
             # Body-side change
             flags["has_body_change"] = True
-            if stripped.startswith("```"):
+            if stripped.startswith(("```", "~~~")) or in_fence:
                 flags["has_code_block_change"] = True
             if "{{<" in stripped or "{{%" in stripped:
                 flags["has_shortcode_change"] = True
@@ -264,6 +326,13 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         d = classify_path(f.get("path", ""))
         if d:
             domains.add(d)
+    # Fallback fires only for a PR where NOTHING classified — never
+    # alongside a real domain. A PR touching content/docs/ plus data/ is
+    # domain:docs, not docs+other+mixed: the unmatched file adds no review
+    # lane, so surfacing it as a second domain would flip `mixed` on
+    # PRs that aren't. Placed before the mixed computation for that reason.
+    if not domains and files:
+        domains.add(FALLBACK_DOMAIN)
 
     has_any_frontmatter = any(f["has_frontmatter_change"] for f in file_flags)
     has_any_body = any(f["has_body_change"] for f in file_flags)
