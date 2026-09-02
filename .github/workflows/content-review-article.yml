@@ -997,15 +997,32 @@ jobs:
             python3 scripts/content-review/compose-pr-body.py \
               --replace-notice judgment --body-file .pr-body-draft.md
           fi
+          # Bot-authored review PRs are free test traffic for the v3 review
+          # surface: while REVIEW_V3_BOT_PRS is '1' they are born carrying
+          # `surface:v3`, which the initial review lane reads off the opened
+          # event — so the label has to be on `gh pr create` itself, not
+          # added a second later. Fail-open: a repo without the label (or a
+          # create that fails for any reason) falls back to an unlabeled
+          # create, and a human never sees a difference either way.
+          LABEL_ARGS=()
+          if [ "${{ vars.REVIEW_V3_BOT_PRS }}" = "1" ]; then
+            LABEL_ARGS=(--label surface:v3)
+          fi
+          create_pr() {
+            gh pr create "$@" "${LABEL_ARGS[@]}" \
+              || { [ "${#LABEL_ARGS[@]}" -gt 0 ] \
+                   && echo "::warning::gh pr create with ${LABEL_ARGS[*]} failed (label missing from repo?); retrying unlabeled" \
+                   && gh pr create "$@"; }
+          }
           if make lint > .lint.log 2>&1; then
             echo "lint passed on $BRANCH; opening PR ready for review (fires triage → review)"
             echo "lint_result=passed" >> "$GITHUB_OUTPUT"
-            gh pr create --title "$TITLE" --body-file .pr-body-draft.md \
+            create_pr --title "$TITLE" --body-file .pr-body-draft.md \
               --base master --head "$BRANCH"
           else
             echo "::warning::make lint failed on $BRANCH; opening PR as draft"
             echo "lint_result=failed" >> "$GITHUB_OUTPUT"
-            gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
+            create_pr --draft --title "$TITLE" --body-file .pr-body-draft.md \
               --base master --head "$BRANCH"
           fi
           # Class label, fail-open: the label routes Robo-Cam's handling but
