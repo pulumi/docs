@@ -48,7 +48,7 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 
 | Label | Color | Description |
 |---|---|---|
-| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the initial review lane and the `/resolve` listener; the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. |
+| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the `/resolve` listener (this PR) and by the initial review lane (wired in the lane-rewiring PR stacked on this one — until that merges, the label changes nothing on a fresh review); the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. |
 
 ## Create them all (`gh` one-liner)
 
