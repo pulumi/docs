@@ -112,6 +112,8 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 
 The bucket update is the communication. The reader sees fewer 🚨 items and more ✅ items; they do not need a prose recap.
 
+**When the "fix" is you implementing a suggested rewrite** (`@claude implement the suggested rewrite …`, or the author asking you to apply a finding's suggestion block): the rewrite was composed against the review's evidence, and that evidence includes the cross-sibling lane, which is a **mismatch detector, not ground truth**. Before pushing, re-check the result against the sibling pages the finding cited (the "per `<sibling>.md` L<a>–<b>" provenance in the suggestion) — read the cited lines, confirm each borrowed clause is true of *this* page's subject, and drop or reword any that isn't. PR #21293 applied a rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong. A rewrite that cites no source for borrowed wording is not ready to implement; ask for the source first.
+
 ### Case 2 — dispute
 
 The author or another reviewer pushed back on a previous finding *without* a fix push. Signals:

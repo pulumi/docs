@@ -155,6 +155,8 @@ CONFIDENCE_VALUES = {"high", "medium", "low"}
 FRAMING_VALUES = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
 FRAMING_DRIFT_SHAPES = {"overclaim-broader", "shifted"}
 EXTERNAL_SHAPE_TYPES = {"numerical", "entity-spec", "attribution", "positioning", "comparison"}
+# Never verified — see main(). Mirrors merge-claims.py's STANCE_TYPES.
+STANCE_TYPES = {"positioning", "comparison"}
 
 # Signals that route a claim to the pulumi-internal lane (Pass 1). Kept in the
 # spirit of `extract-claims.py`'s patterns; this list is the canonical routing
@@ -1010,6 +1012,18 @@ def main() -> int:
     try:
         floor = json.loads(Path(args.in_path).read_text(encoding="utf-8"))
         claims = [c for c in (floor.get("claims") or []) if isinstance(c, dict)]
+        # Editorial stances ("the fastest path", "unlike Terraform") have no
+        # external ground truth: the hard rules below land them `not-a-claim`
+        # every time, and that verdict then read as a finding downstream.
+        # merge-claims.py schema v2 keeps them out of `claims`; an older
+        # artifact that still carries them is filtered here so the verifier
+        # never emits a verdict on one. They surface in the review as a
+        # no-verdict list instead (compose-review.py).
+        n_before = len(claims)
+        claims = [c for c in claims if (c.get("type") or "") not in STANCE_TYPES]
+        if len(claims) != n_before:
+            print(f"verify-claims: skipped {n_before - len(claims)} editorial stance(s) "
+                  "(positioning/comparison) — surfaced by the review, not verified", file=sys.stderr)
     except (OSError, json.JSONDecodeError) as e:
         write_payload(out_path, args.model, [], [f"could not load {args.in_path}: {e}"], base_meta)
         print(f"verify-claims: could not load {args.in_path}: {e}", file=sys.stderr)
