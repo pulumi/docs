@@ -28,6 +28,14 @@ EXTRACT_LLM = HERE / "extract-claims-llm.py"
 MERGE = HERE / "merge-claims.py"
 TESTDATA = HERE / "testdata"
 
+# The PR #21291 head file is stored flat, with a `.md.txt` suffix, and is
+# materialized into a throwaway repo root by the test that needs it. Anything
+# named `*.md` under `.claude/commands/` is picked up by agent skill discovery,
+# so a 1288-line article fixture kept at its real content path would advertise
+# itself as a skill in every session in this repo.
+PR21291_HEAD_PAYLOAD = "pr21291-head-convert-hcl.md.txt"
+PR21291_HEAD_PATH = "content/docs/iac/get-started/terraform/convert-hcl.md"
+
 _failures: list[str] = []
 _passes = 0
 
@@ -276,13 +284,16 @@ def test_fixture_pr21291_hunk_opening_inside_a_fence() -> None:
     the empty-root run documents the diff-only fallback."""
     print("test_fixture_pr21291_hunk_opening_inside_a_fence")
     before = len(_failures)
-    head = TESTDATA / "pr21291-head"
-    page = head / "content/docs/iac/get-started/terraform/convert-hcl.md"
-    lines = page.read_text().splitlines()
+    head_text = (TESTDATA / PR21291_HEAD_PAYLOAD).read_text()
+    lines = head_text.splitlines()
     check(sum(1 for ln in lines[:1216] if ln.lstrip().startswith(("```", "~~~"))) % 2 == 1,
           "fixture: an odd number of fence markers precedes line 1217 (the hunk opens in a fence)")
 
-    seeded = run_extract_fixture("pr21291-fence-seed.diff", repo_root=head)
+    with tempfile.TemporaryDirectory() as td:
+        page = Path(td) / PR21291_HEAD_PATH
+        page.parent.mkdir(parents=True, exist_ok=True)
+        page.write_text(head_text)
+        seeded = run_extract_fixture("pr21291-fence-seed.diff", repo_root=Path(td))
     fastest = [c for c in seeded["claims"] if "fastest path" in c["text"]]
     check(any(c["type"] == "positioning" for c in fastest),
           f"seeded: the 'fastest path' line yields a positioning claim; got {[(c['line_range'], c['type']) for c in fastest]}")
@@ -671,7 +682,7 @@ def main() -> int:
         print(f"FATAL: testdata dir not found at {TESTDATA}", file=sys.stderr)
         return 2
     for fixture in ("pr18771-dark-factory.diff", "pr18743-ollama-ec2.diff", "pr18541-gcp-programs.diff",
-                    "pr21291-fence-seed.diff", "pr21291-head/content/docs/iac/get-started/terraform/convert-hcl.md"):
+                    "pr21291-fence-seed.diff", PR21291_HEAD_PAYLOAD):
         if not (TESTDATA / fixture).is_file():
             print(f"FATAL: missing fixture {TESTDATA / fixture}", file=sys.stderr)
             return 2
