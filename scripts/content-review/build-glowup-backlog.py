@@ -509,6 +509,50 @@ def build(article: dict, entry: dict, prs: list[dict],
     return backlog
 
 
+_EXTRACT_CLAIMS = (Path(__file__).resolve().parent.parent.parent / ".claude" / "commands"
+                   / "docs-review" / "scripts" / "extract-claims.py")
+
+
+def _stance_patterns() -> list:
+    """The extractor's positioning/comparison regexes, imported by path so the
+    vocabulary is the pre-merge review's own; unavailable → no filtering."""
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("extract_claims", _EXTRACT_CLAIMS)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return list(mod.POSITIONING_RES) + list(mod.COMPARISON_RES)
+    except Exception as e:  # noqa: BLE001
+        warn(f"extract-claims.py unavailable ({e}); editorial stances are not filtered from the backlog")
+        return []
+
+
+_STANCE_PATTERNS = None
+
+
+def is_editorial_stance(text: str) -> bool:
+    """True for a banked CLAIM row whose finding text is an editorial stance
+    ("the recommended approach", "unlike Terraform", "the fastest path").
+
+    Stances are never fixable work: a page's own framing has no external
+    ground truth, the verifier lands them `not-a-claim`, and executing one
+    as a finding is how PR #21291 rewrote a section's framing off a July
+    "recommended approach" verdict. Since merge-claims.py schema v2 they
+    never reach the verifier at all; this catches the ones already banked
+    from older PR bodies. Only the FINDING half of the row is tested — the
+    text before the first dash — never the reviewer's reason, which is free
+    to say "the page frames X as primary" without becoming a stance itself.
+    """
+    global _STANCE_PATTERNS
+    head = re.split(r"\s+(?:—|–|--)\s+", str(text or ""), maxsplit=1)[0]
+    head = re.sub(r"^[-*+\s|]*(?:`[^`]+`\s*(?:—|–|--)\s*)?\**", "", head)
+    if not head.startswith("Claim"):
+        return False
+    if _STANCE_PATTERNS is None:
+        _STANCE_PATTERNS = _stance_patterns()
+    return any(rx.search(head) for rx in _STANCE_PATTERNS)
+
+
 def _dedupe_key(text: str) -> str:
     """A banked line's finding identity, for cross-PR de-duplication.
 
@@ -524,7 +568,8 @@ def _dedupe_key(text: str) -> str:
 
 
 def _bank(banked: list[dict], item: dict) -> None:
-    """Append `item` unless the same finding is already banked.
+    """Append `item` unless the same finding is already banked, or it is an
+    editorial stance (never work — see `is_editorial_stance`).
 
     One unresolved finding is now discoverable from several PRs at once, which
     it never was while only the latest PR was readable. A page reviewed three
@@ -541,6 +586,9 @@ def _bank(banked: list[dict], item: dict) -> None:
     loop forming. Otherwise the later PR wins, so the reason shown is the most
     recent reviewer's judgment rather than the oldest.
     """
+    if is_editorial_stance(item.get("text")):
+        log(f"not banking editorial stance {item.get('id')}: {str(item.get('text'))[:80]!r}")
+        return
     key = _dedupe_key(item.get("text"))
     if not key:
         banked.append(item)
@@ -714,6 +762,24 @@ def self_test() -> int:
     f, d = split_finding("- **Vale weasel word (L18): 'several' is a weasel word.** \u2014 generic nag.")
     check("vale label parses its qualifier and line",
           parse_finding(f)["qualifier"] == "weasel word" and parse_finding(f)["lines"] == [18])
+
+    # --- editorial stances are never banked ------------------------------
+    check("an editorial stance is never banked",
+          is_editorial_stance("- **Claim (c23, L1115): Using the Pulumi MCP server is the recommended "
+                              "approach for AI-assisted conversion — contradicted (medium).** — editorial.")
+          and is_editorial_stance("Claim (c9): Unlike Terraform, Pulumi uses real languages — unverifiable"))
+    check("a stance word in the REASON does not make a finding a stance",
+          not is_editorial_stance("- **Claim (c3, L21): Terraform HCL lacks unit testing capabilities — "
+                                  "contradicted.** — the page frames `pulumi convert` as primary"))
+    check("a Vale or readthrough row is never a stance",
+          not is_editorial_stance("- **Vale weasel word (L18): 'the only' is a weasel word.** — nag")
+          and not is_editorial_stance("- **Readthrough self-redundancy (L36): the recommended path restated.** — x"))
+    _stance_bank: list = []
+    _bank(_stance_bank, {"id": "s1", "text": "- **Claim (c23): X is the recommended approach — contradicted.** — r",
+                         "source_pr": 1, "source": "pr-body"})
+    _bank(_stance_bank, {"id": "s2", "text": "- **Claim (c3): the price is $5 — contradicted.** — r",
+                         "source_pr": 1, "source": "pr-body"})
+    check("_bank drops the stance and keeps the fact", [b["id"] for b in _stance_bank] == ["s2"])
     check("table separator rows dropped",
           all("----" not in t for t in sections["Findings not applied"]))
     check("pre-filled noise sections empty",

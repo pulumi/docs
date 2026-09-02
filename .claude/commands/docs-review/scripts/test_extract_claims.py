@@ -500,24 +500,29 @@ def test_merge_keeps_a_distinct_regex_stance() -> None:
     check(overlap > 0.9, f"fixture: token overlap between the line and the LLM restatement is > 0.9; got {overlap:.2f}")
 
     m = run_merge(regex, [atomic])
-    types = sorted(c["type"] for c in m["claims"])
-    check("positioning" in types, f"merge: the regex positioning record survives as its own claim; got {types}")
+    # Schema v2: stances are routed to their own list, out of the verifier's
+    # input — so the survivor shows up under `stances`, not `claims`.
+    all_records = m["claims"] + m["stances"]
+    types = sorted(c["type"] for c in all_records)
+    check("positioning" in types, f"merge: the regex positioning record survives as its own record; got {types}")
     check("capability" in types, f"merge: the LLM capability claim survives too; got {types}")
-    check(len(m["claims"]) == 2, f"merge: exactly two claims (stance + capability); got {len(m['claims'])}: {types}")
-    stance = next(c for c in m["claims"] if c["type"] == "positioning")
+    check(len(all_records) == 2, f"merge: exactly two records (stance + capability); got {len(all_records)}: {types}")
+    stance = next(c for c in m["stances"] if c["type"] == "positioning")
     check("fastest path" in stance["text"] and stance["found_by"] == ["regex"],
           f"merge: the stance keeps the regex line text and provenance; got {stance}")
+    check(all(c["type"] not in ("positioning", "comparison") for c in m["claims"]),
+          f"merge: no stance in the verifier's `claims` list; got {[c['type'] for c in m['claims']]}")
     cap = next(c for c in m["claims"] if c["type"] == "capability")
     check("regex" in cap["found_by"] and cap["type"] == "capability",
           f"merge: the url record still merges into the capability claim; got {cap}")
 
-    # Same types on both sides still collapse to one claim.
+    # Same types on both sides still collapse to one record.
     same = run_merge(_regex_doc([{"file": f, "line_range": "L1226", "text": line, "type": "positioning"}]),
                      [_llm_doc("atomic", [{"file": f, "line_range": "L1226",
                                           "text": "pulumi convert is the fastest path for most configurations.",
                                           "type": "positioning"}])])
-    check(len(same["claims"]) == 1 and same["claims"][0]["type"] == "positioning",
-          f"merge: a regex stance whose representative is ALSO a stance still merges; got {same['claims']}")
+    check(len(same["stances"]) == 1 and same["stances"][0]["type"] == "positioning" and not same["claims"],
+          f"merge: a regex stance whose representative is ALSO a stance still merges; got {same}")
     assert_clean("test_merge_keeps_a_distinct_regex_stance", before)
 
 
