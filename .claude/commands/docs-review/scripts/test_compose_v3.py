@@ -76,15 +76,15 @@ def test_v2_golden_unchanged(tmp_path):
     cmd = regen_cmd("v2", ["--out", str(out)]) + ["--no-validate"]
     proc = subprocess.run(cmd, capture_output=True, text=True)
     assert proc.returncode == 0, proc.stderr
-    assert out.read_text() == (ART / "golden-v2.md").read_text(), (
+    assert out.read_text() == (ART / "golden-v2.md.txt").read_text(), (
         "v2 surface output changed — the default surface must stay byte-identical"
     )
 
 
 def test_v3_fixtures_current(v3_outputs):
     author, brief, evidence = v3_outputs
-    assert author == (TESTDATA / "v3-fixture-author.md").read_text()
-    assert brief == (TESTDATA / "v3-fixture-brief.md").read_text()
+    assert author == (TESTDATA / "v3-fixture-author.md.txt").read_text()
+    assert brief == (TESTDATA / "v3-fixture-brief.md.txt").read_text()
     assert evidence == json.loads((TESTDATA / "v3-fixture-evidence-base.json").read_text())
 
 

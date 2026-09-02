@@ -4,7 +4,7 @@
 Self-contained — run with `python3 test_review_worklist.py` (no pytest dep),
 also pytest-collectible. Imports the module directly and exercises the v3
 extraction/seeding/build_report paths against the checked-in fixtures
-(testdata/v3-fixture-author.md, testdata/v3-fixture-brief.md). The v2 path is
+(testdata/v3-fixture-author.md.txt, testdata/v3-fixture-brief.md.txt). The v2 path is
 covered by the module's own --self-test (review-worklist.py's self_test());
 this file focuses on the v3 surface per the migration task.
 """
@@ -24,8 +24,8 @@ rw = importlib.util.module_from_spec(_spec)
 sys.modules["review_worklist"] = rw
 _spec.loader.exec_module(rw)  # type: ignore[union-attr]
 
-AUTHOR_FIXTURE = (TESTDATA / "v3-fixture-author.md").read_text(encoding="utf-8")
-BRIEF_FIXTURE = (TESTDATA / "v3-fixture-brief.md").read_text(encoding="utf-8")
+AUTHOR_FIXTURE = (TESTDATA / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+BRIEF_FIXTURE = (TESTDATA / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
 
 
 def answered_author_body(dispositions: dict[str, tuple[str, str]]) -> str:

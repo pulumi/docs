@@ -715,7 +715,7 @@ def main() -> int:
 
 def _fixture_paths() -> tuple[Path, Path]:
     td = HERE / "testdata"
-    return td / "v3-fixture-author.md", td / "v3-fixture-brief.md"
+    return td / "v3-fixture-author.md.txt", td / "v3-fixture-brief.md.txt"
 
 
 def _self_test() -> int:

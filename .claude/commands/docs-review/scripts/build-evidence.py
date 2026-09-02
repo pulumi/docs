@@ -596,8 +596,8 @@ def _self_test() -> int:
 
     # A model-added F? row on the brief: numbered, and the author card's
     # REVIEW_STATE high-water mark follows.
-    fx_author = (HERE / "testdata" / "v3-fixture-author.md").read_text()
-    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+    fx_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
+    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text()
     fx_base = json.loads((HERE / "testdata" / "v3-fixture-evidence-base.json").read_text())
     added = cr.render_finding_row("F?", ref="L9", file="content/docs/iac/x.md",
                                   body="model-added reviewer check")
@@ -611,8 +611,8 @@ def _self_test() -> int:
 
     # refresh_counts: a disposition takes a row out of the blocking count on
     # both cards without moving it.
-    fx_author = (HERE / "testdata" / "v3-fixture-author.md").read_text()
-    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+    fx_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
+    fx_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text()
     fx_state = review_state.parse_state(fx_author) or review_state.empty_state()
     from datetime import datetime, timezone
     fx_state = review_state.set_disposition(

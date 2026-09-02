@@ -918,8 +918,8 @@ def self_test() -> int:
     check("stats renders", "Per verdict category" in render_stats(agg, "2026-01-01"))
 
     # ---- v3 surface -------------------------------------------------------
-    v3_author = (HERE / "testdata" / "v3-fixture-author.md").read_text(encoding="utf-8")
-    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text(encoding="utf-8")
+    v3_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
     v3_merged_head = "aaaabbbbccccddddeeeeffff0000111122223333"
 
     check("v3 marker detected", AUTHOR_MARKER in v3_author)

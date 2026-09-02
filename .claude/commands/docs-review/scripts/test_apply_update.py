@@ -27,8 +27,8 @@ def _load(name: str, path: Path):
 
 au = _load("apply_update", HERE / "apply-update.py")
 
-AUTHOR = (HERE / "testdata" / "v3-fixture-author.md").read_text()
-BRIEF = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+AUTHOR = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
+BRIEF = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text()
 SHA = "c" * 40
 
 

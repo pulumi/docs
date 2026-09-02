@@ -358,8 +358,8 @@ def test_real_pinned_review_pr20079():
 
 # ---- v3 surface -------------------------------------------------------------
 
-V3_AUTHOR_FIXTURE = (HERE / "testdata" / "v3-fixture-author.md").read_text(encoding="utf-8")
-V3_BRIEF_FIXTURE = (HERE / "testdata" / "v3-fixture-brief.md").read_text(encoding="utf-8")
+V3_AUTHOR_FIXTURE = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+V3_BRIEF_FIXTURE = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
 V3_MERGE_HEAD = "aaaabbbbccccddddeeeeffff0000111122223333"
 
 

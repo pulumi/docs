@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for validate-pinned.py's v3 surface (schema v21).
+"""Tests for validate-pinned.py's v3 surface (schema v22).
 
 The v3 rule set validates the author card + reviewer brief together, with
 the verification trail out of scope (machine-owned in the evidence object,
@@ -35,8 +35,8 @@ def _load(name: str, path: Path):
 
 vp = _load("validate_pinned_v3_under_test", HERE / "validate-pinned.py")
 
-AUTHOR = (HERE / "testdata" / "v3-fixture-author.md").read_text()
-BRIEF = (HERE / "testdata" / "v3-fixture-brief.md").read_text()
+AUTHOR = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
+BRIEF = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text()
 BASE = json.loads((HERE / "testdata" / "v3-fixture-evidence-base.json").read_text())
 
 SKIP = {"no-todo-tokens"}
@@ -70,7 +70,7 @@ def test_fixtures_validate_clean() -> None:
 
 def test_surface_autodetect() -> None:
     assert vp.V3_AUTHOR_MARKER in AUTHOR
-    golden = (HERE / "testdata" / "pr20079-pinned-review.md").read_text()
+    golden = (HERE / "testdata" / "pr20079-pinned-review.md.txt").read_text()
     assert vp.V3_AUTHOR_MARKER not in golden  # v2 bodies never trip v3 rules
 
 
@@ -260,8 +260,8 @@ def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
     here = Path(__file__).resolve().parent
     spec = importlib.util.spec_from_file_location("review_state_t", here.parent.parent.parent.parent / "scripts" / "review-v3" / "review_state.py")
     rs = importlib.util.module_from_spec(spec); spec.loader.exec_module(rs)
-    author = (here / "testdata" / "v3-fixture-author.md").read_text()
-    brief = (here / "testdata" / "v3-fixture-brief.md").read_text()
+    author = (here / "testdata" / "v3-fixture-author.md.txt").read_text()
+    brief = (here / "testdata" / "v3-fixture-brief.md.txt").read_text()
     from datetime import datetime, timezone
     st = rs.set_disposition(rs.parse_state(author), "F3", "accepted", actor="a", note="n",
                             now=datetime(2026, 9, 1, tzinfo=timezone.utc))

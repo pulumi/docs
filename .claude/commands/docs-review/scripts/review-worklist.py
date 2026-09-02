@@ -947,8 +947,8 @@ def self_test() -> int:
     check("markdown renders", "🚨 Outstanding" in render_markdown(r1))
 
     # ---- v3 surface -----------------------------------------------------
-    v3_author = (HERE / "testdata" / "v3-fixture-author.md").read_text(encoding="utf-8")
-    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md").read_text(encoding="utf-8")
+    v3_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
 
     check("v3 marker detected", _cr.AUTHOR_MARKER in v3_author)
     v3_items = extract_items_v3(v3_author, v3_brief)

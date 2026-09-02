@@ -1482,6 +1482,7 @@ def _prepare(args: argparse.Namespace) -> dict:
     return {
         "verdicts": verdicts,
         "candidate_claims": candidate_claims,
+        "candidate_stances": candidate_stances,
         "vale_blockers": vale_blockers,
         "vale_nags": vale_nags,
         "editorial_balance": editorial_balance,
@@ -1514,6 +1515,7 @@ def _prepare(args: argparse.Namespace) -> dict:
 def compose(args: argparse.Namespace) -> str:
     prep = _prepare(args)
     verdicts = prep["verdicts"]
+    candidate_stances = prep["candidate_stances"]
     vale_blockers = prep["vale_blockers"]
     vale_nags = prep["vale_nags"]
     editorial_balance = prep["editorial_balance"]

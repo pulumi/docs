@@ -147,7 +147,12 @@ from pathlib import Path
 # (scripts/review-v3/, validated by validate-evidence.py), so there is no
 # rendered trail left for a model to corrupt. `count-buckets` gains v3
 # counting: blocking = 🚨/❓ rows without a REVIEW_STATE disposition.
-SCHEMA_VERSION = 22
+# v22→v23: persona-pass round on the v3 cards — `#### F<n> · Do this` detail
+# blocks (`v3-detail-blocks`), the Waiting-on-the-author table on the brief,
+# and the three-verb answer footer; later v3 rule refinements (rewritten rows
+# need no detail block, `v3-blocking-count` follows REVIEW_STATE dispositions)
+# ride the same version.
+SCHEMA_VERSION = 23
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -312,7 +317,7 @@ LEADING_STATE_RE = re.compile(
     r"(\d+)\s+of\s+(\d+)\s+claims\s+verified\b"
 )
 
-# ---- v3 surface (schema v21) ------------------------------------------------
+# ---- v3 surface (schema v22) ------------------------------------------------
 # The two-comment surface: the author card is the machine-read half (sole
 # CLAUDE_REVIEW_HEAD carrier, REVIEW_STATE block), the brief is the reviewer
 # half. Markers and the finding-line grammar are owned by compose-review.py
@@ -2678,7 +2683,7 @@ def check_outcome_annotation_shapes(ctx: Context) -> list[Violation]:
 
 # ---- Rule registry ---------------------------------------------------------
 
-# ---- v3 rule checks (schema v21) --------------------------------------------
+# ---- v3 rule checks (schema v22) --------------------------------------------
 
 
 def check_v3_markers(ctx: Context) -> list[Violation]:
@@ -3222,7 +3227,7 @@ RULES = [
         "hint": "Re-wrap the bullets in `<details>` + `<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>`; leave the bullets themselves alone.",
         "check": check_triaged_details_wrapper,
     },
-    # ---- v3-only rules (schema v21). Rules without a "surfaces" key run on
+    # ---- v3-only rules (schema v22). Rules without a "surfaces" key run on
     # v2 only; "brief_too" reruns a body-scoped shared rule against the brief.
     {
         "id": "v3-markers",
@@ -3505,7 +3510,7 @@ def run_checks(ctx: Context, skip_rules: set[str] | None = None,
     """
     skip_rules = skip_rules or set()
     out: list[Violation] = []
-    # v3 (schema v21): body-scoped shared rules marked `brief_too` rerun
+    # v3 (schema v22): body-scoped shared rules marked `brief_too` rerun
     # against the brief via a body-swapped context clone — the check functions
     # stay single-body and the brief's violations are line_ref-prefixed.
     brief_ctx = None
@@ -3724,7 +3729,7 @@ def cmd_count_buckets(args: argparse.Namespace) -> int:
         return 1
 
     if V3_AUTHOR_MARKER in body:
-        # v3 (schema v21): blocking = 🚨/❓ rows without a REVIEW_STATE
+        # v3 (schema v22): blocking = 🚨/❓ rows without a REVIEW_STATE
         # disposition — a fixed/refuted/accepted finding no longer holds the
         # label even before the next re-render. `--pr` mode's marker regex
         # (`<!-- CLAUDE_REVIEW`) already matches both cards' markers, so the

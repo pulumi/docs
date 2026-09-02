@@ -308,7 +308,7 @@ recounted); the ✅
 Resolved section is inserted on the first resolve (the composer omits it
 while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
 cleared by the card rewrite (or, on the error path, explicitly). It then
-validates both cards against schema v22,
+validates both cards against schema v23,
 records the evidence object (prior trail/investigation log carried forward
 from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
 fetched), re-renders the evidence page, and upserts brief-then-author. Any

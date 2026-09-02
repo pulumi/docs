@@ -595,7 +595,7 @@ summary/confidence/history from the brief, and emits the final evidence object
 plus the cleaned publish bodies. Any parse failure or contract violation exits
 2 and the workflow treats the run like a validation failure.
 
-### Validation (schema v22)
+### Validation (schema v23)
 
 `validate-pinned.py check` auto-detects the surface (the
 `<!-- CLAUDE_REVIEW_AUTHOR -->` marker; `--surface` overrides) and, on v3,

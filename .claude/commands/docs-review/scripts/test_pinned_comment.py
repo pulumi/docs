@@ -312,7 +312,7 @@ if __name__ == "__main__":
 def test_banner_body_set_clear_roundtrip():
     """banner-body: set inserts after the last leading marker, re-set is
     idempotent, clear restores the original byte-for-byte."""
-    fixture = (HERE / "testdata" / "v3-fixture-author.md").read_text()
+    fixture = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text()
 
     def run(args, body):
         p = subprocess.run(["bash", str(SCRIPT), "banner-body", *args],

@@ -489,10 +489,10 @@ def _self_test() -> int:
 
     # -- counts follow dispositions: header + brief Waiting block ------------
     fx = _HERE.parent.parent / ".claude" / "commands" / "docs-review" / "scripts" / "testdata"
-    if (fx / "v3-fixture-author.md").exists():
+    if (fx / "v3-fixture-author.md.txt").exists():
         gh = StubGh(pr_author="alice")
-        fx_author = (fx / "v3-fixture-author.md").read_text()
-        fx_brief = (fx / "v3-fixture-brief.md").read_text()
+        fx_author = (fx / "v3-fixture-author.md.txt").read_text()
+        fx_brief = (fx / "v3-fixture-brief.md.txt").read_text()
         author_id = gh.seed_comment(fx_author)
         brief_id = gh.seed_comment(fx_brief)
         r = handle(42, 9010, "alice", "/resolve F3 accepted: internal figure, shipping as-is", gh)
