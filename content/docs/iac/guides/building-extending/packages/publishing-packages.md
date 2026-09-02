@@ -93,16 +93,15 @@ We recommend writing documentation to help others in the Pulumi community use yo
 
 ### Overview, installation, & configuration
 
-Specifically, you should author a few pages:
+The only page the Registry requires is `_index.md`, which is shown on the Overview tab for your package. The title of this page should match the package display name and is the heading shown on the package detail page. Use it to describe what your package does, list the SDKs it publishes to for each supported language, explain how to authenticate to the cloud provider or service it targets, cover the configuration options your package supports, and include an example. A package whose `_index.md` covers this ground on its own is complete and renders as a single page.
 
-1. `_index.md`, which will be shown on the Overview tab for your package. The title of this page should match the package display name and is the heading shown on the package detail page. The Overview is a great place to include a description of what your package does, a simple example, and any other details that you want prospective users of your package to know to be successful.
-1. `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. Use this page to describe how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package. The title of this page should be in the form `<Package display name> Installation & Configuration`.
+If your package has enough installation and configuration content to warrant its own tab, you can split that content into a second page, `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. The title of this page should be in the form `<Package display name> Installation & Configuration`. This split is optional; many well-documented packages keep everything on the Overview.
 
 {{% notes type="info" %}}
 We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
 {{% /notes %}}
 
-For reference, the [ImprovMX](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/improvmx) community provider is a well-authored example: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md) and [`installation-configuration.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/installation-configuration.md). The [Logfire provider](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/logfire) is another recent example.
+For reference, the [CloudAMQP provider](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/cloudamqp) is a well-authored, single-page example: its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/cloudamqp/_index.md) folds per-language SDK links and configuration guidance into the Overview alone. The [ImprovMX](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/improvmx) community provider shows the split approach: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md) and [`installation-configuration.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/installation-configuration.md).
 
 Although you author these files in your package repository's `docs/` folder, they are published through the [`pulumi/registry` GitHub repository](https://github.com/pulumi/registry), under `themes/default/content/registry/packages/<your-package>/`. The [Publish the documentation](#publish-the-documentation) section below explains how to submit them.
 
@@ -158,7 +157,7 @@ All package documentation in the Pulumi Registry is published via the [`pulumi/r
 1. Add your package to [the community package list](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json)
     1. Add your package's GitHub repo slug, e.g. `"checkly/pulumi-checkly"`
     1. Add the path to your package's `schema.json` file from the root of your provider repository, e.g. `"provider/cmd/pulumi-resource-checkly/schema.json"`
-1. Add your documentation files to `themes/default/content/registry/packages/<your-package>/`, including the `_index.md` and `installation-configuration.md` files you authored in your provider repository's `docs/` folder.
+1. Add your documentation files to `themes/default/content/registry/packages/<your-package>/`, including the `_index.md` file you authored in your provider repository's `docs/` folder, plus `installation-configuration.md` too if you chose to author that optional split.
 1. Open a pull request with the above changes and await review from a Pulumi team member. For a complete example of a community package submission, see [pulumi/registry#10358](https://github.com/pulumi/registry/pull/10358).
 
 {{% notes %}}
