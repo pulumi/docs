@@ -45,7 +45,7 @@ sessions:
       sortable_date: 2026-09-08T09:00:00.000-07:00
       duration: 60 minutes
       form:
-          hubspot_form_id: 13e8fea4-356f-42a2-8e6b-50300b49d666
+          riverside_event_id: 6a970364f31158d839105b35
           salesforce_campaign_id: 701PQ00000zDNF3YAO
       presenters:
           - name: Adam Gordon Bell
