@@ -104,7 +104,11 @@ per config — the approving reviewer's review is the review. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
-summary), `'1'` = enforcing. `/deploy-staging` follows the same switch.
+summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The
+surface itself is `REVIEW_V3_COMMENTS` (repo default) or the `surface:v3`
+label (one PR in or out, regardless of the variable). The
+check summary embeds the reviewer brief (merge-box delivery), and on red the
+sentinel PATCHes a ⛔ strip into the author card naming the exact commands.
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
 switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual
@@ -114,9 +118,7 @@ timeline each sweep; only the actions taken are recorded, under
 keyed by clock epoch) and `pr-review/runs/<date>/<ts>.json` (immutable run
 records the weekly digest reduces). **Before flipping the switch, create the
 `review:author-stalled` label** (`.github/labels-pr-review.md` has the
-`gh label create` line) — the sweep applies it on the first author warn. The check summary embeds the
-reviewer brief (merge-box delivery), and on red the sentinel PATCHes a ⛔
-strip into the author card naming the exact commands.
+`gh label create` line) — the sweep applies it on the first author warn.
 
 `staging-deploy-pr.yml` makes G4's evidence: `/deploy-staging` (tools-team
 members only, same-repo branches only) dispatches the existing testing

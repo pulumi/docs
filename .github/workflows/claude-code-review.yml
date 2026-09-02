@@ -245,6 +245,7 @@ jobs:
     # Consumed by the v3 publish job below; empty on v2 runs and on any v3
     # run that didn't reach a publishable handoff.
     outputs:
+      v3: ${{ steps.pr-context.outputs.v3 }}
       v3_ready: ${{ steps.v3-build.outputs.ready }}
       pr_number: ${{ steps.pr-context.outputs.pr_number }}
       head_sha: ${{ steps.pr-context.outputs.head_sha }}
@@ -367,6 +368,14 @@ jobs:
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          # Which review surface this run renders. The repo variable is the
+          # default for every PR; the `surface:v3` label opts one PR in (or,
+          # removed, back out) regardless of it — the per-PR dark-launch and
+          # rollback lever. Literal compare: an unset variable is never truthy.
+          V3=false
+          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [[ ",$LABELS_CSV," == *",surface:v3,"* ]]; then
+            V3=true
+          fi
           # Pre-compute PR metadata so the review model doesn't burn turns
           # re-deriving it via gh pr view / git remote / etc. The 2026-04-28
           # cost-optimization measurement showed ~85% denial reduction and
@@ -474,6 +483,7 @@ jobs:
             echo "author=$AUTHOR"
             echo "labels_csv=$LABELS_CSV"
             echo "labels_json=$LABELS_JSON"
+            echo "v3=$V3"
             echo "skip_reason=$SKIP"
             echo "repo_full=$REPO"
             echo "head_sha=$HEAD_SHA"
@@ -987,7 +997,7 @@ jobs:
       # failure the brief simply omits the line.
       - name: Compute routed approval team (v3)
         id: routing
-        if: vars.REVIEW_V3_ROUTING == '1' && vars.REVIEW_V3_COMMENTS == '1' && steps.check-access.outputs.has_write_access == 'true'
+        if: vars.REVIEW_V3_ROUTING == '1' && steps.pr-context.outputs.v3 == 'true' && steps.check-access.outputs.has_write_access == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1025,10 +1035,11 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # v3 surface flag (REVIEW_V3_COMMENTS repo variable). Compared
+          # v3 surface (REVIEW_V3_COMMENTS repo variable OR the surface:v3
+          # label — derived once in pr-context). The variable is compared
           # explicitly against '1' everywhere — vars.UNSET != '0' is TRUE,
           # so a negated compare on an unset variable silently flips a gate.
-          REVIEW_V3: ${{ vars.REVIEW_V3_COMMENTS == '1' && '1' || '' }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           # v3 surface: the composer emits the author card, the reviewer
           # brief, and the machine-owned evidence base instead of the v2
@@ -1153,7 +1164,7 @@ jobs:
           # diff-only by hard rule. Output goes through pinned-comment.sh so
           # the review survives across re-runs as a single logical comment.
           prompt: |
-            ${{ vars.REVIEW_V3_COMMENTS == '1' && 'IMPORTANT — the v3 review surface is active for this run. Read `.claude/commands/docs-review/ci.md` §The v3 surface FIRST: your drafts are `.review-draft-author.md` and `.review-draft-brief.md` (there is NO `.review-draft.md`), and the v3 edit contract in `references/output-format.md` §The model''s edit contract (v3) overrides the draft-structure description below wherever they conflict. Everything else in this prompt (pre-computed metadata, artifact discipline, style-suggestion sidecar rules, DO-NOT list) applies unchanged.' || '' }}
+            ${{ steps.pr-context.outputs.v3 == 'true' && 'IMPORTANT — the v3 review surface is active for this run. Read `.claude/commands/docs-review/ci.md` §The v3 surface FIRST: your drafts are `.review-draft-author.md` and `.review-draft-brief.md` (there is NO `.review-draft.md`), and the v3 edit contract in `references/output-format.md` §The model''s edit contract (v3) overrides the draft-structure description below wherever they conflict. Everything else in this prompt (pre-computed metadata, artifact discipline, style-suggestion sidecar rules, DO-NOT list) applies unchanged.' || '' }}
             You are running in a CI environment.
 
             Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the instructions in `.claude/commands/docs-review/ci.md`.
@@ -1289,7 +1300,7 @@ jobs:
         id: validate-body
         continue-on-error: true
         env:
-          REVIEW_V3: ${{ vars.REVIEW_V3_COMMENTS == '1' && '1' || '' }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           set +e
           rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md /tmp/splicer-fallback.json
@@ -1329,7 +1340,7 @@ jobs:
       # because those sections live in the evidence base the model never
       # touches.
       - name: Splice surgical fixes (Step C)
-        if: steps.validate-body.outputs.violations_present == 'true' && vars.REVIEW_V3_COMMENTS != '1'
+        if: steps.validate-body.outputs.violations_present == 'true' && steps.pr-context.outputs.v3 != 'true'
         id: splicer
         continue-on-error: true
         run: |
@@ -1373,7 +1384,7 @@ jobs:
           exit 0
 
       - name: Re-validate review body (Step D)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && vars.REVIEW_V3_COMMENTS != '1'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         id: revalidate
         continue-on-error: true
         run: |
@@ -1399,7 +1410,7 @@ jobs:
       # section is just visual noise and gets removed here. Validators
       # don't require 📋 to be present (it's not in MANDATORY_H3_SECTIONS).
       - name: Strip empty 📋 section (Step D2)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && vars.REVIEW_V3_COMMENTS != '1'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         run: |
           python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
@@ -1423,7 +1434,7 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REVIEW_V3: ${{ vars.REVIEW_V3_COMMENTS == '1' && '1' || '' }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           # v3: the style block and ✏️ banner live on the author card. This
           # runs BEFORE the v3 build step so the ✏️ annotations ride into the
@@ -1448,7 +1459,7 @@ jobs:
       # unverifiable content behind the evidence contract.
       - name: Build evidence + cleaned bodies (v3)
         if: >-
-          vars.REVIEW_V3_COMMENTS == '1'
+          steps.pr-context.outputs.v3 == 'true'
           && steps.check-access.outputs.has_write_access == 'true'
           && steps.claude-review.outcome == 'success'
         id: v3-build
@@ -1501,7 +1512,7 @@ jobs:
       # ---- end v3 build + handoff --------------------------------------------
 
       - name: Upsert pinned comment (Step E)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && vars.REVIEW_V3_COMMENTS != '1'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -1606,7 +1617,7 @@ jobs:
         if: always() && steps.progress.outputs.comment_id != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REVIEW_V3: ${{ vars.REVIEW_V3_COMMENTS == '1' && '1' || '' }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
           V3_READY: ${{ steps.v3-build.outputs.ready }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
@@ -1666,7 +1677,7 @@ jobs:
       - name: Finalize review-state label (success path)
         # v2-only: on v3 the publish job sets the terminal label after the
         # author card (the count source) is actually published.
-        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true' && vars.REVIEW_V3_COMMENTS != '1'
+        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1709,7 +1720,7 @@ jobs:
           always() && steps.check-access.outputs.has_write_access == 'true'
           && steps.pr-context.outputs.skip_reason == ''
           && (steps.claude-review.outcome != 'success'
-              || (vars.REVIEW_V3_COMMENTS == '1' && steps.v3-build.outputs.ready != 'true'))
+              || (steps.pr-context.outputs.v3 == 'true' && steps.v3-build.outputs.ready != 'true'))
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1757,7 +1768,7 @@ jobs:
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
           TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
           HAS_WRITE_ACCESS="${{ steps.check-access.outputs.has_write_access }}"
-          REVIEW_V3="${{ vars.REVIEW_V3_COMMENTS == '1' && '1' || '' }}"
+          REVIEW_V3="${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}"
           V3_READY="${{ steps.v3-build.outputs.ready }}"
           # v3 handoff succeeded: the check stays in_progress and the publish
           # job concludes it — success here would read "review done" while
@@ -1830,7 +1841,7 @@ jobs:
   publish:
     needs: claude-review
     if: >-
-      vars.REVIEW_V3_COMMENTS == '1'
+      needs.claude-review.outputs.v3 == 'true'
       && needs.claude-review.outputs.v3_ready == 'true'
     concurrency:
       group: claude-review-${{ needs.claude-review.outputs.pr_number }}
@@ -1944,7 +1955,7 @@ jobs:
               out=$(pulumi -C infrastructure stack output "$1" \
                 --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
               [ -n "$out" ] && break
-              sleep $((i * 5))
+              [ "$i" -lt 3 ] && sleep $((i * 5))
             done
             printf '%s' "$out"
           }

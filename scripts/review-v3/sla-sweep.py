@@ -486,7 +486,7 @@ def process_author_time(
             # Fresh author activity since the warn -> clear the label and
             # the warn record; a later idle period re-arms from scratch.
             if not dry_run:
-                gh.remove_label(pr_number, AUTHOR_STALLED_LABEL)
+                _try_label(gh, pr_number, gh.remove_label, AUTHOR_STALLED_LABEL)
             state["warns"] = []
             return {"changed": True, "action": {"type": "clear", "idle_days": round(idle_days, 2)}}
 
@@ -501,7 +501,7 @@ def process_author_time(
             )
             if not dry_run:
                 gh.create_issue_comment(pr_number, body)
-                gh.add_label(pr_number, AUTHOR_STALLED_LABEL)
+                _try_label(gh, pr_number, gh.add_label, AUTHOR_STALLED_LABEL)
             state["warns"] = warns + [{"at": now.isoformat(), "head_sha": head_sha}]
             return {"changed": True, "action": {
                 "type": "warn", "idle_days": round(idle_days, 2), "undecided_count": undecided_count,
@@ -527,6 +527,18 @@ def process_author_time(
     return {"changed": False, "action": {
         "type": "none", "idle_days": round(idle_days, 2), "warn_age_days": round(warn_age_days, 2),
     }}
+
+
+def _try_label(gh: Gh, pr_number: int, fn, label: str) -> None:
+    """Label mutations are best-effort. A missing label (review:author-stalled
+    is created by hand) is the expected failure, and nothing about the nudge
+    or the escalation depends on it — but a raise here, ordered before the
+    state write, would drop the record and re-post the comment every sweep.
+    Comments and closes stay fatal: those must not be retried blind."""
+    try:
+        fn(pr_number, label)
+    except Exception as exc:  # noqa: BLE001
+        log(f"PR #{pr_number}: label {label!r} {fn.__name__} failed ({exc}); continuing")
 
 
 # ---- REVIEWER-TIME processing (step 4) ---------------------------------------
@@ -584,7 +596,7 @@ def process_reviewer_time(
     # not linger — nothing in review-label-reconcile.yml covers this label.
     if state.get("warns"):
         if not dry_run:
-            gh.remove_label(pr_number, AUTHOR_STALLED_LABEL)
+            _try_label(gh, pr_number, gh.remove_label, AUTHOR_STALLED_LABEL)
         state["warns"] = []
         changed = True
         actions.append({"type": "clear_stale_author_warn"})
@@ -644,11 +656,7 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
             state = load_state(pr_number, evidence_uri, state_dir)
             if state.get("warns"):
                 if not dry_run:
-                    try:
-                        gh.remove_label(pr_number, AUTHOR_STALLED_LABEL)
-                    except Exception as exc:  # noqa: BLE001
-                        log(f"PR #{pr_number}: failed to clear {AUTHOR_STALLED_LABEL} ({exc})")
-                        continue
+                    _try_label(gh, pr_number, gh.remove_label, AUTHOR_STALLED_LABEL)
                 state["warns"] = []
                 if not dry_run:
                     save_state(pr_number, state, evidence_uri, state_dir)
