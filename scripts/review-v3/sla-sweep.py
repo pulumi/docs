@@ -290,12 +290,22 @@ def classify_waiting_state(
             reasons.append(f"{outstanding} outstanding finding(s) on the legacy review")
 
     latest_reviews = latest_review_per_user(reviews)
+    changes_requested_at: str | None = None
+    for r in latest_reviews.values():
+        if r.get("state") == "CHANGES_REQUESTED" and r.get("submitted_at"):
+            if changes_requested_at is None or r["submitted_at"] > changes_requested_at:
+                changes_requested_at = r["submitted_at"]
     if any(r.get("state") == "CHANGES_REQUESTED" for r in latest_reviews.values()):
         author_time = True
         reasons.append("latest review is CHANGES_REQUESTED")
 
     if author_time:
-        return "author", {"undecided_count": undecided_count}, reasons
+        # `changes_requested_at` lets process_author_time start the idle
+        # clock from when the author was actually asked for changes — a
+        # review landing on a branch last pushed 20 days ago must not read
+        # as 20 idle days on the next sweep.
+        return "author", {"undecided_count": undecided_count,
+                          "changes_requested_at": changes_requested_at}, reasons
 
     files_paths = [f["filename"] for f in files]
     mechanical, claims, mech_reasons = sentinel._mechanical_and_claims(pr_detail, files)
@@ -325,7 +335,10 @@ def last_author_activity(timeline: list[dict], author_login: str, pr_created_at:
     for e in timeline:
         event = e.get("event")
         if event == "committed":
-            ts = (e.get("author") or {}).get("date") or (e.get("committer") or {}).get("date")
+            # Committer date first: a rebase or cherry-pick keeps the author
+            # date, and "any push activity resets the clock" means when the
+            # commit landed, not when it was first written.
+            ts = (e.get("committer") or {}).get("date") or (e.get("author") or {}).get("date")
             if ts:
                 candidates.append(_parse_ts(ts))
         elif event == "commented":
@@ -454,9 +467,15 @@ def slack_notify(text: str) -> None:
 def process_author_time(
     gh: Gh, pr_number: int, head_sha: str, undecided_count: int, config: routing.Config,
     state: dict, now: datetime, dry_run: bool, last_activity: datetime,
+    changes_requested_at: str | None = None,
 ) -> dict:
     warn_days = config.author_staleness["warn_days"]
     close_days = config.author_staleness["close_days"]
+    # AUTHOR-TIME starts when the author was last active OR when they were
+    # last asked for changes, whichever is later — the same "when did this
+    # clock actually start" reasoning reviewer_clock_start applies.
+    if changes_requested_at:
+        last_activity = max(last_activity, _parse_ts(changes_requested_at))
     idle_days = (now - last_activity).total_seconds() / 86400.0
     warns = state.get("warns") or []
     last_warn = warns[-1] if warns else None
@@ -473,8 +492,10 @@ def process_author_time(
 
     if last_warn is None:
         if idle_days > warn_days:
+            why = (f"{undecided_count} finding(s) need an answer" if undecided_count
+                   else "a reviewer has requested changes")
             body = (
-                f"This PR is waiting on you: {undecided_count} finding(s) need an answer — "
+                f"This PR is waiting on you: {why} — "
                 f"reply `@claude <your reasoning> #update-review`, or push the fix. It closes in "
                 f"{close_days - warn_days} days if nothing changes; reopening later is one click."
             )
@@ -617,6 +638,23 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
 
         if kind is None:
             log(f"PR #{pr_number}: {reasons[-1] if reasons else 'no clock'}")
+            # A warned PR whose findings then got answered can land here
+            # (mechanical, no required role). Nothing else clears the label
+            # (review-label-reconcile.yml doesn't know it), so do it here.
+            state = load_state(pr_number, evidence_uri, state_dir)
+            if state.get("warns"):
+                if not dry_run:
+                    try:
+                        gh.remove_label(pr_number, AUTHOR_STALLED_LABEL)
+                    except Exception as exc:  # noqa: BLE001
+                        log(f"PR #{pr_number}: failed to clear {AUTHOR_STALLED_LABEL} ({exc})")
+                        continue
+                state["warns"] = []
+                if not dry_run:
+                    save_state(pr_number, state, evidence_uri, state_dir)
+                run_actions.append({"pr": pr_number, "kind": None, "head_sha": head_sha,
+                                    "changed": True,
+                                    "actions": [{"type": "clear_stale_author_warn"}]})
             continue
 
         try:
@@ -637,16 +675,26 @@ def sweep(gh: Gh, config: routing.Config, *, now: datetime, dry_run: bool,
 
         state = load_state(pr_number, evidence_uri, state_dir)
 
-        if kind == "author":
-            result = process_author_time(
-                gh, pr_number, head_sha, extra["undecided_count"], config, state, now, dry_run,
-                last_activity,
-            )
-        else:
-            result = process_reviewer_time(
-                gh, pr_number, config, state, now, dry_run, extra["roles"], timeline, pr_detail,
-                reviews, last_activity,
-            )
+        # The processors MUTATE (labels, comments, closes) and Gh._run raises
+        # on any failure — one `gh pr edit --add-label` error (the
+        # review:author-stalled label not created yet, say) must not abort
+        # the sweep for every PR after this one.
+        try:
+            if kind == "author":
+                result = process_author_time(
+                    gh, pr_number, head_sha, extra["undecided_count"], config, state, now, dry_run,
+                    last_activity, extra.get("changes_requested_at"),
+                )
+            else:
+                result = process_reviewer_time(
+                    gh, pr_number, config, state, now, dry_run, extra["roles"], timeline, pr_detail,
+                    reviews, last_activity,
+                )
+        except Exception as exc:  # noqa: BLE001 — never let one bad PR kill the sweep
+            log(f"PR #{pr_number}: {kind}-time processing failed ({exc}); state not saved, skipping")
+            run_actions.append({"pr": pr_number, "kind": kind, "head_sha": head_sha,
+                                "changed": False, "error": str(exc)[:300]})
+            continue
 
         if result.get("changed") and not dry_run:
             save_state(pr_number, state, evidence_uri, state_dir)

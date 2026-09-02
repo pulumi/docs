@@ -149,6 +149,16 @@ def docs_file_substantive():
     }
 
 
+def docs_file_mechanical():
+    """A one-word typo fix: inside the tightened mechanical bar, so a PR of
+    just this file resolves to no required role (kind None)."""
+    return {
+        "filename": "content/docs/iac/x.md",
+        "status": "modified",
+        "patch": "@@ -40,3 +40,3 @@\n context\n-Run teh command.\n+Run the command.\n context",
+    }
+
+
 def infra_file():
     return {
         "filename": "layouts/partials/foo.html",
@@ -423,6 +433,81 @@ def test_degradation_local_state_no_uri():
 # ---- Standalone harness --------------------------------------------------
 
 ALL_TESTS = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+
+
+def test_changes_requested_only_clocks_from_the_review_not_the_old_push():
+    """A standing CHANGES_REQUESTED on a branch last pushed 20 days ago is
+    author-time, but the idle clock starts at the review, and the nudge
+    must not say "0 finding(s)"."""
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        old_push = NOW - timedelta(days=20)
+        gh.add_pr(1, comments=[clean_author_card()], files=[docs_file_substantive()],
+                  timeline=[committed(iso(old_push))],
+                  reviews=[review("bob", "CHANGES_REQUESTED", iso(NOW - timedelta(days=2)))])
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
+        assert record["actions"][0]["kind"] == "author"
+        assert record["actions"][0]["action"]["type"] == "none"  # 2 idle days, not 20
+        assert gh.comments_posted == [] and gh.labels_added == []
+
+        # Now let the review itself age past warn_days: the nudge fires and
+        # names the reason rather than a zero count.
+        later = NOW + timedelta(days=13)
+        record = sla_sweep.sweep(gh, CONFIG, now=later, dry_run=False, state_dir=state_dir, evidence_uri="")
+        assert record["actions"][0]["action"]["type"] == "warn"
+        assert len(gh.comments_posted) == 1
+        body = gh.comments_posted[0][1]
+        assert "a reviewer has requested changes" in body and "0 finding(s)" not in body
+
+
+def test_committer_date_beats_author_date():
+    """A rebase keeps the author date; the push is what resets the clock."""
+    ev = {"event": "committed",
+          "author": {"date": iso(NOW - timedelta(days=40))},
+          "committer": {"date": iso(NOW - timedelta(days=1))}}
+    got = sla_sweep.last_author_activity([ev], "alice", iso(NOW - timedelta(days=60)))
+    assert got == sla_sweep._parse_ts(iso(NOW - timedelta(days=1)))
+
+
+def test_mutation_failure_does_not_abort_the_sweep():
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        idle_start = NOW - timedelta(days=16)
+        for n in (1, 2):
+            gh.add_pr(n, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+                      timeline=[committed(iso(idle_start))])
+        calls = []
+        real_add = gh.add_label
+        def flaky_add(pr, label):
+            calls.append(pr)
+            if pr == 1:
+                raise RuntimeError("label not found")
+            return real_add(pr, label)
+        gh.add_label = flaky_add
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
+        by_pr = {a["pr"]: a for a in record["actions"]}
+        assert "error" in by_pr[1] and by_pr[1]["changed"] is False
+        assert by_pr[2]["action"]["type"] == "warn"  # PR 2 still processed
+        assert not (state_dir / "state" / "1.json").exists()  # failed PR's state not saved
+
+
+def test_stale_author_warn_cleared_on_no_clock_branch():
+    """Warned PR whose findings got answered and which now resolves to
+    'mechanical, no required role': the label must not leak."""
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        gh.add_pr(1, comments=[clean_author_card()], files=[docs_file_mechanical()],
+                  timeline=[committed(iso(NOW - timedelta(days=1)))])
+        warned = sla_sweep.empty_sweep_state()
+        warned["warns"] = [{"at": iso(NOW - timedelta(days=3)), "head_sha": HEAD}]
+        sla_sweep.save_state(1, warned, "", state_dir)
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
+        assert gh.labels_removed == [(1, sla_sweep.AUTHOR_STALLED_LABEL)]
+        assert json.loads((state_dir / "state" / "1.json").read_text())["warns"] == []
+        assert record["actions"][0]["kind"] is None
 
 
 def run_standalone() -> int:
