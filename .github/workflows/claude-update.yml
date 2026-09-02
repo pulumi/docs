@@ -641,12 +641,22 @@ jobs:
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
         run: |
-          LEDGER=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
-          PAGES=$(pulumi -C infrastructure stack output reviewEvidenceBucketName \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
-          BASE_URL=$(pulumi -C infrastructure stack output reviewEvidenceBaseUrl \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          # Same 3× retry as the initial lane's resolver: a transient flake
+          # here doesn't just drop the evidence page, it drops
+          # PR_REVIEW_EVIDENCE_URI and the refresh publishes degraded.
+          resolve() {
+            local out=""
+            for i in 1 2 3; do
+              out=$(pulumi -C infrastructure stack output "$1" \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$out" ] && break
+              sleep $((i * 5))
+            done
+            printf '%s' "$out"
+          }
+          LEDGER=$(resolve contentReviewLedgerBucketName)
+          PAGES=$(resolve reviewEvidenceBucketName)
+          BASE_URL=$(resolve reviewEvidenceBaseUrl)
           [ -n "$LEDGER" ] && echo "evidence_uri=s3://$LEDGER/pr-review" >> "$GITHUB_OUTPUT"
           [ -n "$PAGES" ] && echo "pages_bucket=$PAGES" >> "$GITHUB_OUTPUT"
           [ -n "$BASE_URL" ] && echo "pages_base_url=$BASE_URL" >> "$GITHUB_OUTPUT"
@@ -754,7 +764,7 @@ jobs:
       - name: Upload evidence artifact (v3)
         if: steps.claude-v3.outcome == 'success' && always()
         continue-on-error: true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: review-evidence-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
           path: |

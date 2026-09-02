@@ -17,6 +17,11 @@ name: Pre-merge Review (triage)
 # mark-stale job, unchanged. It does NOT run on reopen — reopening is
 # usually administrative; the explicit `@claude #new-review` path is the
 # way to request a fresh review on an existing PR.
+#
+# The synchronize pass is Phase 3 of the v3 rollout and runs only while the
+# REVIEW_V3_ROUTING repo variable is '1' (job condition below). With it
+# unset — how this file ships — a push runs no triage pass at all, and the
+# labels stay exactly as they were set at open.
 on:
   pull_request:
     types: [opened, ready_for_review, synchronize]

@@ -980,14 +980,6 @@ jobs:
         id: now
         run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
-      # Compose an ~80%-assembled review draft (.review-draft.md) from the
-      # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
-      # trail (verbatim from .verified-claims.json), bucket-count table,
-      # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
-      # suggestions block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
-      # out; <TODO> tokens mark the parts that are the reviewer's (summary,
-      # confidence levels, fix prose, cross-sibling read count). The composer
-      # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
       # v3 brief header: which team's approval satisfies the merge gate.
       # Same resolver the triage routing step uses (route-pr.py →
       # routing.py + the tightened mechanical bar), so the brief and the
@@ -1014,6 +1006,14 @@ jobs:
           echo "team_display=$TEAMS" >> "$GITHUB_OUTPUT"
           echo "routing: teams=${TEAMS:-<none>}"
 
+      # Compose an ~80%-assembled review draft (.review-draft.md) from the
+      # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
+      # trail (verbatim from .verified-claims.json), bucket-count table,
+      # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
+      # suggestions block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
+      # out; <TODO> tokens mark the parts that are the reviewer's (summary,
+      # confidence levels, fix prose, cross-sibling read count). The composer
+      # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
       # and, on a self-check failure, writes a visible `> [!CAUTION]` banner
       # INTO .review-draft.md (never a silent-empty file) so the model falls
       # back to manual assembly per ci.md §Fallback. safe_main() guarantees a
@@ -2070,11 +2070,6 @@ jobs:
           fi
           exit 0
 
-      # Error trap: a failed publish must be visible — review:error, a red
-      # check, and an errored progress message. A CANCELLED publish is a
-      # supersession (a newer run entered the concurrency group) and touches
-      # nothing: the newer run owns all user-visible state.
-
       # The Sentinel's workflow_run trigger resolves the PR from
       # `workflow_run.pull_requests[]`, which is EMPTY when this workflow was
       # started by workflow_dispatch (`#new-review`) or an issue comment — so
@@ -2090,6 +2085,11 @@ jobs:
         run: |
           gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
             -f pr_number="${{ steps.current.outputs.pr }}"
+
+      # Error trap: a failed publish must be visible — review:error, a red
+      # check, and an errored progress message. A CANCELLED publish is a
+      # supersession (a newer run entered the concurrency group) and touches
+      # nothing: the newer run owns all user-visible state.
 
       - name: Publish error trap
         if: failure() && steps.current.outputs.superseded == 'false'
