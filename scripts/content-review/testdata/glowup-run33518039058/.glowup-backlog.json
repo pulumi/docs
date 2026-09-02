@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "slug": "docs-iac-get-started-terraform-convert-hcl",
+  "path": "content/docs/iac/get-started/terraform/convert-hcl.md",
+  "generated": "2026-09-01T14:15:55+00:00",
+  "clarity_flag": false,
+  "skipped_findings": 13,
+  "source_prs": [
+    {
+      "number": 20004,
+      "url": "https://github.com/pulumi/docs/pull/20004",
+      "head": "content-review/docs-iac-get-started-terraform-convert-hcl"
+    }
+  ],
+  "banked": [
+    {
+      "id": "pr20004-findings-1",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c3, L21): Terraform HCL lacks unit testing capabilities (implying Pulumi provides this) \u2014 contradicted.** \u2014 The source line is a soft \"you need unit testing capabilities\" bullet under *When to convert*, not a literal \"Terraform lacks unit testing\" assertion; correcting the implied comparison (Terraform has a native test framework, just less mature) needs editorial rewording, not a value swap."
+    },
+    {
+      "id": "pr20004-findings-2",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c22, L1113): The Pulumi MCP server provides comprehensive Pulumi integration, cited against `https://www.anthropic.com/claude-code` \u2014 contradicted.** \u2014 Verifier false positive: that URL is the link on the word \"Claude,\" not the citation for the MCP capability (which links to `/docs/iac/using-pulumi/mcp-server`); the link resolves (HTTP 200), so there is nothing to correct."
+    },
+    {
+      "id": "pr20004-findings-3",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c14, L473-476): Go example imports `pulumi-aws/sdk/v6` while the provider is now `sdk/v7` (v7.35.0) \u2014 mismatch (medium).** \u2014 The v6 path is still valid for existing users; a major-version bump in a *generated-code* sample risks diverging from what `pulumi convert` actually emits today, so this is a flag for a human rather than an auto-edit."
+    },
+    {
+      "id": "pr20004-findings-4",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c23, L1115): Using the Pulumi MCP server is the recommended approach for AI-assisted conversion \u2014 contradicted (medium).** \u2014 \"Recommended approach\" is a positioning judgment; the page frames `pulumi convert` as primary and MCP as an option for complex configs, and rebalancing that framing is editorial, not a factual correction."
+    },
+    {
+      "id": "pr20004-findings-5",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c24): MCP server enables programmatic Pulumi interaction with full infra-management capabilities \u2014 unverifiable.** \u2014 Verification did not converge; confirming the MCP server's capability surface needs an authoritative MCP source a reviewer can consult, not an auto-edit."
+    },
+    {
+      "id": "pr20004-findings-6",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c25): `convert-terraform-to-typescript` prompt ensures type safety via `pulumi.Input<T>`/`Output<T>` \u2014 unverifiable.** \u2014 Same reason: the prompt's internals weren't fetchable within the turn budget; flag for human confirmation against the MCP server repo."
+    },
+    {
+      "id": "pr20004-findings-7",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c26): the prompt ensures multi-provider configuration handling \u2014 unverifiable.** \u2014 Prompt behavior not confirmable from an authoritative source in-run; judgment-level."
+    },
+    {
+      "id": "pr20004-findings-8",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c28): the prompt ensures safe config access with null checking \u2014 unverifiable.** \u2014 Same MCP-prompt-internals gap; needs human verification, not an auto-edit."
+    },
+    {
+      "id": "pr20004-findings-9",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c29): install via `claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio` \u2014 unverifiable.** \u2014 The exact install invocation couldn't be confirmed against an authoritative MCP source in-run; flag rather than alter a command."
+    },
+    {
+      "id": "pr20004-findings-10",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c30): \"Follow the complete setup instructions in the Pulumi MCP server docs\" (`/docs/iac/using-pulumi/mcp-server`) \u2014 unverifiable.** \u2014 Link target's contents weren't verified in-run; the internal path exists in the repo, so no dead-link fix applies \u2014 left for human review."
+    },
+    {
+      "id": "pr20004-findings-11",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c31): MCP server provides previews/deploys/stack-output/resource-query beyond conversion \u2014 unverifiable.** \u2014 Capability list not confirmable from an authoritative source within the budget; judgment-level."
+    },
+    {
+      "id": "pr20004-findings-12",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Claim (c32): the `convert-terraform-to-typescript` prompt is available in the Pulumi MCP server \u2014 unverifiable.** \u2014 Same MCP-source gap; flag for human confirmation."
+    },
+    {
+      "id": "pr20004-findings-13",
+      "section": "Findings not applied",
+      "source_pr": 20004,
+      "source": "pr-body",
+      "text": "- **Vale weasel word (L18): 'several' is a weasel word.** \u2014 `write-good.Weasel` is a generic prose-style suggestion, not a repo terminology/error rule; below the high-confidence bar."
+    }
+  ],
+  "notes": [],
+  "degraded": false,
+  "recovery": {
+    "heads_queried": [
+      "content-review/docs-iac-get-started-terraform-convert-hcl",
+      "content-review/retire-docs-iac-get-started-terraform-convert-hcl",
+      "content-review/glowup-docs-iac-get-started-terraform-convert-hcl"
+    ],
+    "prs_found": 1,
+    "prs_unreachable": [],
+    "prs_without_sections": [],
+    "state": "recovered"
+  }
+}
