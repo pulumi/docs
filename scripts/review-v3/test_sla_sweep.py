@@ -488,9 +488,38 @@ def test_mutation_failure_does_not_abort_the_sweep():
         gh.add_label = flaky_add
         record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
         by_pr = {a["pr"]: a for a in record["actions"]}
+        # A label failure is best-effort: the warn still counts, its record
+        # is saved, PR 2 is processed as usual …
+        assert by_pr[1]["action"]["type"] == "warn" and by_pr[2]["action"]["type"] == "warn"
+        assert (state_dir / "state" / "1.json").exists()
+        assert [pr for pr, _ in gh.comments_posted] == [1, 2]
+        # … and — the review's second-order case — the nudge is NOT re-posted
+        # on the next sweep while add_label keeps failing.
+        sla_sweep.sweep(gh, CONFIG, now=NOW + timedelta(hours=2), dry_run=False, state_dir=state_dir, evidence_uri="")
+        assert [pr for pr, _ in gh.comments_posted] == [1, 2]
+        assert calls.count(1) == 1  # no retry storm either
+
+
+def test_comment_failure_is_fatal_for_that_pr_only():
+    """Comments stay fatal (never retried blind); the sweep continues."""
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        idle_start = NOW - timedelta(days=16)
+        for n in (1, 2):
+            gh.add_pr(n, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+                      timeline=[committed(iso(idle_start))])
+        real_comment = gh.create_issue_comment
+        def flaky_comment(pr, body):
+            if pr == 1:
+                raise RuntimeError("502")
+            return real_comment(pr, body)
+        gh.create_issue_comment = flaky_comment
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
+        by_pr = {a["pr"]: a for a in record["actions"]}
         assert "error" in by_pr[1] and by_pr[1]["changed"] is False
-        assert by_pr[2]["action"]["type"] == "warn"  # PR 2 still processed
-        assert not (state_dir / "state" / "1.json").exists()  # failed PR's state not saved
+        assert not (state_dir / "state" / "1.json").exists()
+        assert by_pr[2]["action"]["type"] == "warn"
 
 
 def test_stale_author_warn_cleared_on_no_clock_branch():
