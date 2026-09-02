@@ -20,7 +20,7 @@ Reach for it when:
 
 ## Language support
 
-The Any Terraform Provider feature works with every Pulumi language, and `pulumi package add` is how you add a provider in each one. What differs is whether you also get a generated SDK.
+The Any Terraform Provider feature works with every Pulumi language. In every language except Pulumi HCL, `pulumi package add` is how you add a provider; what then differs between them is whether you also get a generated SDK.
 
 In TypeScript, Python, Go, .NET, and Java, `pulumi package add` generates a typed SDK for the provider in your project, so you get autocompletion, type checking, and inline documentation in your editor, the same as with a provider published to the [Pulumi Registry](/registry/).
 
@@ -38,7 +38,7 @@ Use the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) comma
 pulumi package add terraform-provider [<registry>/]<author>/<name> [version]
 ```
 
-Pulumi resolves providers from the [OpenTofu registry](https://search.opentofu.org) by default. That registry is API-compatible with the Terraform registry and hosts the same providers, so a provider published to either one is available. You can also give a fully qualified reference to any server that implements the Terraform registry API.
+Pulumi resolves providers from the [OpenTofu registry](https://search.opentofu.org) by default. That registry is API-compatible with the Terraform registry and mirrors its providers, so in practice a provider published to either one is available. You can also give a fully qualified reference to any server that implements the Terraform registry API.
 
 ### Basic example
 
@@ -301,7 +301,7 @@ pulumi up
 
 ## Configuring the provider
 
-Terraform providers name their configuration fields in snake_case, such as `oauth_client_id`. Pulumi uses camelCase for those names instead, so the same field becomes `oauthClientId`.
+Terraform providers name their configuration fields in snake_case, such as `oauth_client_id`. Pulumi renders provider configuration keys in camelCase instead, so the same field becomes `oauthClientId`.
 
 Provider configuration keys always use the camelCase form, no matter which language your program is written in:
 
@@ -317,7 +317,7 @@ A snake_case configuration key such as `tailscale:oauth_client_id` isn't recogni
 
 Resource inputs and outputs are a separate matter. They're written the way your language writes names, exactly as they are for any other Pulumi provider: `clientId` in TypeScript, Go, .NET, and Java, and `client_id` in Python. See [Inputs & outputs](/docs/iac/concepts/inputs-outputs/) for more.
 
-To look up a name, read the provider's own documentation in the [OpenTofu](https://search.opentofu.org) or [Terraform](https://registry.terraform.io) registry. Its fields are listed in snake_case, and the Pulumi configuration key is the camelCase form of the same name.
+To look up a name, read the provider's own documentation in the [OpenTofu](https://search.opentofu.org) or [Terraform](https://registry.terraform.io) registry. Its fields are listed in snake_case, and the Pulumi configuration key is the camelCase form of the same name. To see a provider's exact configuration keys, run [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/) and inspect `config.variables`.
 
 ## Working with your team
 
