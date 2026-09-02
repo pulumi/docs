@@ -70,6 +70,7 @@ import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+REPO_ROOT = HERE.parents[3]
 
 # Single source of truth for pinned-body parsing. validate-pinned.py's name is
 # hyphenated, so import by path; its main() is __main__-guarded, so importing
@@ -80,6 +81,22 @@ _vp = importlib.util.module_from_spec(_spec)
 # dataclass machinery resolves the defining module through sys.modules.
 sys.modules["validate_pinned"] = _vp
 _spec.loader.exec_module(_vp)
+
+# The v3 surface's finding-line grammar (FINDING_LINE_RE / parse_finding_line)
+# and marker constants are owned by compose-review.py; the REVIEW_STATE
+# disposition store is owned by scripts/review-v3/review_state.py. Import both
+# by path rather than re-implementing — same pattern as validate_pinned above.
+_cr_spec = importlib.util.spec_from_file_location("compose_review", HERE / "compose-review.py")
+_cr = importlib.util.module_from_spec(_cr_spec)
+sys.modules["compose_review"] = _cr
+_cr_spec.loader.exec_module(_cr)
+
+_rs_spec = importlib.util.spec_from_file_location(
+    "review_state", REPO_ROOT / "scripts" / "review-v3" / "review_state.py"
+)
+_rs = importlib.util.module_from_spec(_rs_spec)
+sys.modules["review_state"] = _rs
+_rs_spec.loader.exec_module(_rs)
 
 DEFAULT_REPO = "pulumi/docs"
 PAGE_DELIMITER = "----- PINNED-COMMENT-DELIMITER -----"
@@ -136,6 +153,32 @@ def run(args: list[str]) -> str:
 
 def fetch_pinned_body(repo: str, pr: int) -> str:
     return run(["bash", str(HERE / "pinned-comment.sh"), "fetch", "--pr", str(pr), "--repo", repo])
+
+
+def fetch_brief_body(repo: str, pr: int) -> str:
+    """Fetch the v3 reviewer-brief comment (marked CLAUDE_REVIEW_BRIEF).
+
+    Unlike the author card, the brief carries no `CLAUDE_REVIEW N/M` marker —
+    `pinned-comment.sh` doesn't track it — so this fetches it directly. A v2
+    PR has no such comment; an empty string is the correct, unremarkable
+    result for it (build_report only reaches for the brief once the author
+    body has already tested positive for AUTHOR_MARKER).
+    """
+    out = run([
+        "gh", "api", f"repos/{repo}/issues/{pr}/comments",
+        "--paginate",
+        "--jq", f'[.[] | select(.body | startswith("{_cr.BRIEF_MARKER}")) | .body]',
+    ])
+    for chunk in out.splitlines():
+        if not chunk.strip():
+            continue
+        try:
+            parsed = json.loads(chunk)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, list) and parsed:
+            return str(parsed[0])
+    return ""
 
 
 def fetch_inline_suggestions(repo: str, pr: int) -> tuple[list[dict], bool]:
@@ -310,6 +353,24 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
     # walk tracks the heading rather than reusing _bullet_blocks wholesale;
     # continuation lines still fold into the bullet they belong to.
     _, style_blocking, style_optional = BUCKETS["style"]
+    _add_style_items(style_lines, add, blocking=style_blocking, optional=style_optional)
+
+    # Mark the style items that have a live one-click button, and surface any
+    # posted suggestion the pinned block doesn't carry (a stale ✏️ annotation
+    # would otherwise hide it).
+    merge_suggestions(items, suggestions)
+
+    return items
+
+
+def _add_style_items(style_lines: list[str], add, *, blocking: bool = False, optional: bool = False) -> None:
+    """Walk a `#### Style suggestions` block and add()  one item per bullet.
+
+    Shared by the v2 path (block lives inside the ⚠️ Low-confidence H3) and the
+    v3 path (block stands alone between the ❓ and ✅ sections) — the block's
+    own shape is unchanged between surfaces (`references/output-format.md`
+    §v3: "unchanged v2 block"), only how it's carved out of the body differs.
+    """
     current_file = ""
     last: dict | None = None
     for line in style_lines:
@@ -325,8 +386,8 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
                 "bucket": "style",
                 "anchor": f"L{m.group(1)}",
                 "file": current_file,
-                "blocking": style_blocking,
-                "optional": style_optional,
+                "blocking": blocking,
+                "optional": optional,
                 "one_click": False,
                 "summary": _first_sentence(line),
                 "text": line.strip(),
@@ -337,9 +398,16 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
         if last is not None and line.strip() and not line.startswith("#"):
             last["text"] += "\n" + line.rstrip()
 
-    # Mark the style items that have a live one-click button, and surface any
-    # posted suggestion the pinned block doesn't carry (a stale ✏️ annotation
-    # would otherwise hide it).
+
+def merge_suggestions(items: list[dict], suggestions: list[dict]) -> None:
+    """Mark style items with a live one-click button; append unlisted ones.
+
+    Mutates `items` in place. `suggestions` is the raw
+    `gh api .../pulls/N/comments` array (posted by post-style-suggestions.py);
+    a suggestion with no matching style item in the pinned body is itself
+    added — a stale ✏️ annotation would otherwise hide it from the worklist.
+    """
+    seen = {it["id"] for it in items}
     by_key = {it["id"]: it for it in items}
     for sug in suggestions:
         path = str(sug.get("path") or "")
@@ -352,8 +420,14 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
             target["one_click"] = True
             target["comment_id"] = sug.get("id")
             continue
-        add({
-            "id": key,
+        new_id = key
+        n = 2
+        while new_id in seen:
+            new_id = f"{key}#{n}"
+            n += 1
+        seen.add(new_id)
+        items.append({
+            "id": new_id,
             "bucket": "style",
             "anchor": f"L{line_no}",
             "file": path,
@@ -366,7 +440,119 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
             "trail": "",
         })
 
+
+# ---- v3 surface ----------------------------------------------------------
+
+
+def _extract_style_block(body: str) -> list[str]:
+    """Carve the `#### Style suggestions` block out of a v3 author card.
+
+    On the v3 surface the block sits at top level, between `### ❓ Only you
+    can answer` and `### ✅ Resolved` — not nested inside an H3 the way v2's
+    is — so this scans the whole body for the heading and stops at the next
+    H3 (or end of body), rather than confining the search to a known section.
+    """
+    lines = body.splitlines()
+    style_idx = None
+    for i, line in enumerate(lines):
+        if line.strip() in _vp.STYLE_HEADINGS:
+            style_idx = i
+            break
+    if style_idx is None:
+        return []
+    end = len(lines)
+    for j in range(style_idx + 1, len(lines)):
+        if lines[j].startswith("### "):
+            end = j
+            break
+    return lines[style_idx:end]
+
+
+def extract_items_v3(author_body: str, brief_body: str) -> list[dict]:
+    """v3 item extraction: F-id findings from the author card + brief.
+
+    🚨/❓ live on the author card and block merge; ⚠️ lives on the brief and
+    is advisory (same non-blocking treatment as v2's ⚠️ bucket). Style
+    suggestions are the unchanged v2 block. Finding ids are the card's own
+    `F<n>` ids — stable across re-reviews — rather than the `bucket:L<n>`
+    synthetic ids the v2 path has to invent.
+    """
+    items: list[dict] = []
+    seen: set[str] = set()
+
+    def add(item: dict) -> None:
+        base = item["id"]
+        n = 2
+        while item["id"] in seen:
+            item["id"] = f"{base}#{n}"
+            n += 1
+        seen.add(item["id"])
+        items.append(item)
+
+    def finding_lines(body: str, heading: str):
+        span = _vp.find_section(body, heading)
+        if span is None:
+            return
+        start, end = span
+        for line in body.splitlines()[start:end]:
+            parsed = _cr.parse_finding_line(line)
+            if parsed is not None and parsed["id"] != "F?":
+                yield parsed, line
+
+    v3_sections = (
+        ("outstanding", "🚨 Fix or disagree", author_body, True),
+        ("author-answer", "❓ Questions for you", author_body, True),
+    )
+    for bucket, heading, body, blocking in v3_sections:
+        for parsed, line in finding_lines(body, heading):
+            add({
+                "id": parsed["id"],
+                "bucket": bucket,
+                "anchor": parsed["ref"] or "L?",
+                "file": parsed["file"],
+                "blocking": blocking,
+                "optional": False,
+                "summary": _first_sentence(parsed["body"]),
+                "text": line.strip(),
+                "trail": "",
+            })
+
+    for parsed, line in finding_lines(brief_body, "⚠️ Check these before approving"):
+        add({
+            "id": parsed["id"],
+            "bucket": "reviewer-check",
+            "anchor": parsed["ref"] or "L?",
+            "file": parsed["file"],
+            "blocking": False,
+            "optional": False,
+            "summary": _first_sentence(parsed["body"]),
+            "text": line.strip(),
+            "trail": "",
+        })
+
+    style_lines = _extract_style_block(author_body)
+    _add_style_items(style_lines, add, blocking=False, optional=False)
+
     return items
+
+
+def seed_from_review_state(items: list[dict], state: dict) -> None:
+    """Pre-populate F-id items' disposition/note from the REVIEW_STATE block.
+
+    A finding with a recorded disposition counts as decided without needing a
+    matching `--state` entry — REVIEW_STATE (via `/resolve` or the update
+    lane) is now the primary disposition source for the v3 surface; `--state`
+    remains available to layer manual overrides on top (applied afterwards by
+    `apply_state`). Style items never match (they carry no `F<n>` id), so this
+    is safe to call unconditionally over the full item list.
+    """
+    findings = state.get("findings", {})
+    for item in items:
+        entry = findings.get(item["id"])
+        if entry is None:
+            continue
+        item["disposition"] = entry.get("disposition")
+        item["note"] = str(entry.get("note") or "")
 
 
 # ---- state -------------------------------------------------------------------
@@ -407,13 +593,28 @@ def load_state(path: Path) -> dict[str, dict]:
 
 
 def apply_state(items: list[dict], state: dict[str, dict]) -> list[dict]:
-    """Attach dispositions to items and flag the ones that don't hold up."""
+    """Attach dispositions to items and flag the ones that don't hold up.
+
+    A `--state` entry always wins when present (explicit CLI/skill override);
+    otherwise an item keeps whatever disposition it already carries — on the
+    v3 surface that's the REVIEW_STATE seed `seed_from_review_state` applied
+    before this call. The note-required check runs against the item's final
+    disposition either way, so a REVIEW_STATE-sourced disposition is held to
+    the same bar (in practice it always passes: REVIEW_STATE itself enforces
+    note-required at write time).
+    """
     for item in items:
         rec = state.get(item["id"])
-        item["disposition"] = rec["disposition"] if rec else None
-        item["note"] = rec["note"] if rec else ""
-        if rec and rec["disposition"] in NOTE_REQUIRED and not rec["note"]:
-            item["problem"] = f"disposition `{rec['disposition']}` requires a note"
+        if rec:
+            item["disposition"] = rec["disposition"]
+            item["note"] = rec["note"]
+        else:
+            item.setdefault("disposition", None)
+            item.setdefault("note", "")
+        disposition = item.get("disposition")
+        note = item.get("note") or ""
+        if disposition in NOTE_REQUIRED and not note:
+            item["problem"] = f"disposition `{disposition}` requires a note"
         else:
             item.pop("problem", None)
     known = {it["id"] for it in items}
@@ -451,9 +652,15 @@ def summarize(items: list[dict], parse_confidence: str, suggestions_ok: bool = T
 BUCKET_LABEL = {
     "outstanding": "🚨 Outstanding — must be fixed or refuted before merge",
     "low": "⚠️ Low-confidence — each needs a decision, none block the PR",
+    "author-answer": "❓ Questions for you — blocks merge (v3)",
     "style": "✏️ Style suggestions — advisory; ✏️ marks a one-click apply",
+    "reviewer-check": "⚠️ Reviewer check — advisory, from the brief (v3)",
     "pre-existing": "💡 Pre-existing — optional; not introduced by this PR",
 }
+# Rendering order. "low"/"pre-existing" (v2) and "author-answer"/
+# "reviewer-check" (v3) are mutually exclusive in practice — a report is
+# built from one surface or the other — so one combined order is safe.
+BUCKET_ORDER = ("outstanding", "author-answer", "low", "style", "reviewer-check", "pre-existing")
 
 
 def render_markdown(report: dict) -> str:
@@ -473,7 +680,7 @@ def render_markdown(report: dict) -> str:
     out.append(f"{s['resolved']} of {s['total']} items dispositioned · "
                f"{s['remaining']} still needing a decision")
     out.append("")
-    for bucket in ("outstanding", "low", "style", "pre-existing"):
+    for bucket in BUCKET_ORDER:
         rows = [it for it in report["items"] if it["bucket"] == bucket]
         if not rows:
             continue
@@ -514,19 +721,47 @@ def _remaining_label(summary: dict, items: list[dict]) -> str:
 
 
 def build_report(body: str, suggestions: list[dict], state: dict[str, dict], pr: int | None,
-                 repo: str, suggestions_ok: bool = True) -> dict:
-    parse_confidence = "high" if _vp.extract_count_table_row(body) else "low"
-    items = extract_items(body, suggestions)
+                 repo: str, suggestions_ok: bool = True, brief_body: str = "") -> dict:
+    """Build the worklist report from a fetched pinned body.
+
+    `body` carries the whole review on the v2 surface, or just the author
+    card on v3 (detected by `AUTHOR_MARKER`); `brief_body` is the v3 reviewer
+    brief (ignored on v2, where it's always "").
+    """
+    is_v3 = _cr.AUTHOR_MARKER in body
+    if is_v3:
+        try:
+            review_state = _rs.parse_state(body)
+            state_ok = True
+        except ValueError as exc:
+            log(f"warning: REVIEW_STATE block did not parse: {exc}")
+            review_state = _rs.empty_state()
+            state_ok = False
+        items = extract_items_v3(body, brief_body)
+        merge_suggestions(items, suggestions)
+        seed_from_review_state(items, review_state)
+        head = HEAD_SENTINEL_RE.search(body)
+        # High confidence needs the head sentinel (the only machine-read head
+        # carrier on the v3 card) AND a clean REVIEW_STATE block — either
+        # gap means the list can't be trusted the way a parsed v2 body can.
+        parse_confidence = "high" if (head and state_ok) else "low"
+        counts_table = None
+    else:
+        parse_confidence = "high" if _vp.extract_count_table_row(body) else "low"
+        items = extract_items(body, suggestions)
+        head = HEAD_SENTINEL_RE.search(body)
+        counts_table = _vp.extract_count_table_row(body)
+
     stale = apply_state(items, state)
     summary = summarize(items, parse_confidence, suggestions_ok)
-    head = HEAD_SENTINEL_RE.search(body)
     return {
         "pr": pr,
         "repo": repo,
+        "surface": "v3" if is_v3 else "v2",
         "reviewed_sha": head.group(1) if head else None,
         "parse_confidence": parse_confidence,
         "suggestions_ok": suggestions_ok,
-        "counts_table": _vp.extract_count_table_row(body),
+        "counts_table": counts_table,
         "items": items,
         "stale_state": stale,
         "summary": summary,
@@ -711,6 +946,87 @@ def self_test() -> int:
 
     check("markdown renders", "🚨 Outstanding" in render_markdown(r1))
 
+    # ---- v3 surface -----------------------------------------------------
+    v3_author = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+    v3_brief = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
+
+    check("v3 marker detected", _cr.AUTHOR_MARKER in v3_author)
+    v3_items = extract_items_v3(v3_author, v3_brief)
+    v3_ids = [it["id"] for it in v3_items]
+    check("F1 outstanding parsed", "F1" in v3_ids)
+    check("F2 outstanding parsed", "F2" in v3_ids)
+    check("F3 author-answer parsed", "F3" in v3_ids)
+    check("F4 reviewer-check parsed (from brief)", "F4" in v3_ids)
+    check("v3 style bullet parsed",
+          any(it["id"].startswith("style:content/docs/iac/x.md:L33") for it in v3_items))
+    check("five v3 items total", len(v3_items) == 5)
+
+    f1 = next(it for it in v3_items if it["id"] == "F1")
+    f3 = next(it for it in v3_items if it["id"] == "F3")
+    f4 = next(it for it in v3_items if it["id"] == "F4")
+    style_item = next(it for it in v3_items if it["id"].startswith("style:"))
+    check("🚨 blocks", f1["blocking"] is True)
+    check("❓ blocks", f3["blocking"] is True)
+    check("⚠️ does not block", f4["blocking"] is False)
+    check("style does not block", style_item["blocking"] is False)
+    check("F1 bucket", f1["bucket"] == "outstanding")
+    check("F3 bucket", f3["bucket"] == "author-answer")
+    check("F4 bucket", f4["bucket"] == "reviewer-check")
+
+    # Clean vs undecided vs REVIEW_STATE-answered, driven off the same fixture.
+    v0 = build_report(v3_author, [], {}, 999, DEFAULT_REPO, brief_body=v3_brief)
+    check("v3 surface detected in report", v0["surface"] == "v3")
+    check("v3 empty REVIEW_STATE -> nothing decided", v0["summary"]["resolved"] == 0)
+    check("v3 undecided is not clean", v0["summary"]["clean"] is False)
+    check("v3 head sentinel read",
+          v0["reviewed_sha"] == "aaaabbbbccccddddeeeeffff0000111122223333")
+    check("v3 high parse confidence with valid REVIEW_STATE + head sentinel",
+          v0["parse_confidence"] == "high")
+
+    # Answer every blocking + advisory F-id via REVIEW_STATE; style still needs
+    # a --state entry (REVIEW_STATE never seeds non-F-id items).
+    rs = _rs.empty_state()
+    for fid, disp, note in (
+        ("F1", "fixed", ""),
+        ("F2", "fixed", ""),
+        ("F3", "refuted", "verified against 3.261 changelog"),
+        ("F4", "accepted", "framing looks fine in context"),
+    ):
+        rs = _rs.set_disposition(rs, fid, disp, actor="cam", note=note)
+    v3_answered = _rs.replace_block(v3_author, rs)
+    v1 = build_report(v3_answered, [], {}, 999, DEFAULT_REPO, brief_body=v3_brief)
+    check("REVIEW_STATE seeds F-id dispositions",
+          {it["id"]: it["disposition"] for it in v1["items"] if it["id"].startswith("F")}
+          == {"F1": "fixed", "F2": "fixed", "F3": "refuted", "F4": "accepted"})
+    check("v3 still not clean until style is dispositioned", v1["summary"]["clean"] is False)
+    check("only the style item remains", v1["summary"]["remaining_ids"] == [style_item["id"]])
+
+    style_state = {style_item["id"]: {"disposition": "accepted", "note": "term of art"}}
+    v2r = build_report(v3_answered, [], style_state, 999, DEFAULT_REPO, brief_body=v3_brief)
+    check("v3 clean once every item is dispositioned", v2r["summary"]["clean"] is True)
+
+    # A --state entry overrides a REVIEW_STATE seed for the same F-id.
+    override_state = {"F1": {"disposition": "accepted", "note": "shipping as-is"}}
+    v3o = build_report(v3_answered, [], override_state, 999, DEFAULT_REPO, brief_body=v3_brief)
+    f1o = next(it for it in v3o["items"] if it["id"] == "F1")
+    check("--state overrides REVIEW_STATE seed", f1o["disposition"] == "accepted")
+
+    # A corrupt REVIEW_STATE block must degrade to low confidence, never "clean".
+    corrupt = v3_author.replace(
+        '<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->',
+        '<!-- REVIEW_STATE {broken -->',
+    )
+    vc = build_report(corrupt, [], {}, 999, DEFAULT_REPO, brief_body=v3_brief)
+    check("corrupt REVIEW_STATE -> low parse confidence", vc["parse_confidence"] == "low")
+    check("corrupt REVIEW_STATE is never clean", vc["summary"]["clean"] is False)
+
+    # A missing head sentinel is the other half of v3 "high confidence".
+    no_head = v3_author.replace(
+        "<!-- CLAUDE_REVIEW_HEAD aaaabbbbccccddddeeeeffff0000111122223333 -->", ""
+    )
+    vh = build_report(no_head, [], {}, 999, DEFAULT_REPO, brief_body=v3_brief)
+    check("missing head sentinel -> low parse confidence", vh["parse_confidence"] == "low")
+
     for f in failures:
         print(f"FAIL: {f}", file=sys.stderr)
     print(f"review-worklist self-test: {'FAILED' if failures else 'passed'}", file=sys.stderr)
@@ -725,6 +1041,8 @@ def main() -> int:
     ap.add_argument("--pr", type=int, help="PR number to fetch the pinned review from")
     ap.add_argument("--repo", default=DEFAULT_REPO)
     ap.add_argument("--body-file", help="parse this pinned body instead of fetching")
+    ap.add_argument("--brief-file",
+                    help="v3 only: parse this reviewer-brief body instead of fetching")
     ap.add_argument("--suggestions-file",
                     help="raw `gh api .../pulls/N/comments` JSON array (offline mode)")
     ap.add_argument("--state", help="JSON file of recorded dispositions")
@@ -748,6 +1066,16 @@ def main() -> int:
         return 1 if args.require_clean else 0
     body = join_pages(raw)
 
+    brief_body = ""
+    if _cr.AUTHOR_MARKER in body:
+        if args.brief_file:
+            brief_body = Path(args.brief_file).read_text(encoding="utf-8")
+        elif args.pr:
+            brief_body = fetch_brief_body(args.repo, args.pr)
+            if not brief_body.strip():
+                log("warning: v3 author card found but no reviewer brief comment fetched — "
+                    "⚠️ reviewer-check items will be missing from the worklist")
+
     if args.suggestions_file:
         try:
             loaded = json.loads(Path(args.suggestions_file).read_text(encoding="utf-8"))
@@ -765,7 +1093,7 @@ def main() -> int:
         suggestions, suggestions_ok = [], True
 
     state = load_state(Path(args.state)) if args.state else {}
-    report = build_report(body, suggestions, state, args.pr, args.repo, suggestions_ok)
+    report = build_report(body, suggestions, state, args.pr, args.repo, suggestions_ok, brief_body)
 
     if args.format == "json":
         print(json.dumps(report, indent=2, ensure_ascii=False))

@@ -63,6 +63,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -621,8 +622,8 @@ def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
     when no outage. Author-facing wording (no internal tooling names)."""
     if n_outage <= 0:
         return ""
-    retry = ("Once the service is back, mention `@claude #new-review` to "
-             "regenerate a complete review from scratch.")
+    retry = ("Once the service is back, flip the PR to draft and back to "
+             "ready to regenerate a complete review.")
     if n_outage >= n_total:
         return (
             "> [!WARNING]\n"
@@ -1021,6 +1022,29 @@ def render_stances(stances: list[dict] | None) -> str:
     return "\n".join(out)
 
 
+def stance_records(stances: list[dict]) -> list[dict]:
+    """The evidence-object shape of the stance list: one record per extractor
+    stance, same order and text as the rendered bullets (the evidence page is
+    the durable copy of what the brief showed). `line` is the first line of
+    the extractor's range when it has one."""
+    out: list[dict] = []
+    for c in sorted(stances, key=lambda c: (c.get("file", ""), first_line_ref(c.get("line_range") or ""))):
+        rec: dict = {
+            "file": (c.get("file") or "").strip() or "(unknown)",
+            "text": redact(trunc(c.get("text") or "", TEXT_TRUNC)) or "(empty)",
+            "type": "comparison" if c.get("type") == "comparison" else "positioning",
+        }
+        refs = line_refs(c.get("line_range") or "")
+        nums = _lines_from_ref(refs[0]) if refs else None
+        if nums:
+            rec["line"] = nums[0]
+        fb = [str(x) for x in (c.get("found_by") or []) if str(x).strip()]
+        if fb:
+            rec["found_by"] = fb
+        out.append(rec)
+    return out
+
+
 def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "",
                          stances: list[dict] | None = None) -> str:
     has_style = bool(vale_findings)
@@ -1183,7 +1207,17 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     italic_text = f"*{text}*" if text else text
     bullet = (f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}{framing_part} "
               f"<TODO: {todo}>")
-    return {"ref": ref, "bullet": bullet, "verdict": verdict}
+    # file/text/origin ride along for the v3 surface's evidence records; the
+    # v2 renderers read only ref/bullet/verdict.
+    origin = f"preflight:{v.get('type') or 'detector'}" if v.get("route") == "preflight" else f"verdict:{verdict}"
+    return {
+        "ref": ref,
+        "bullet": bullet,
+        "verdict": verdict,
+        "file": file_path,
+        "text": redact(trunc(v.get("text") or "", TEXT_TRUNC)),
+        "origin": origin,
+    }
 
 
 def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -1340,7 +1374,13 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
 # ---- compose ---------------------------------------------------------------
 
 
-def compose(args: argparse.Namespace) -> str:
+def _prepare(args: argparse.Namespace) -> dict:
+    """Load artifacts and compute everything both surfaces need.
+
+    Pure extraction of what used to be compose()'s top half, shared verbatim
+    with compose_v3() so the two surfaces can never disagree about what the
+    pre-steps found — only about how it renders.
+    """
     verdicts, vc_errors, _vc_meta = load_verified_claims(args.verified_claims)
     candidate_claims = load_candidate_claims(args.candidate_claims)
     candidate_stances = load_candidate_stances(args.candidate_claims)
@@ -1462,6 +1502,66 @@ def compose(args: argparse.Namespace) -> str:
     if outage_banner:
         forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
 
+    return {
+        "verdicts": verdicts,
+        "candidate_claims": candidate_claims,
+        "candidate_stances": candidate_stances,
+        "vale_blockers": vale_blockers,
+        "vale_nags": vale_nags,
+        "editorial_balance": editorial_balance,
+        "cross_sibling": cross_sibling,
+        "frontmatter": frontmatter,
+        "hugo_build": hugo_build,
+        "readthrough": readthrough,
+        "head_sha": head_sha,
+        "head_sha_short": head_sha_short,
+        "timestamp": timestamp,
+        "diff_files": diff_files,
+        "diff_unavailable": diff_unavailable,
+        "is_blog": is_blog,
+        "has_temporal_trigger": has_temporal_trigger,
+        "has_fenced_code_in_content": has_fenced_code_in_content,
+        "degraded_note": degraded_note,
+        "outage_banner": outage_banner,
+        "route_counts": route_counts,
+        "files_url": files_url,
+        "outstanding_stubs": outstanding_stubs,
+        "lowconf_stubs": lowconf_stubs,
+        "counts": (a, b, c_pre, d_resolved),
+        "confidence_dims": confidence_dims,
+        "trail_block": trail_block,
+        "trail_nxyz": (_n, _x, _y, _z),
+        "forced_levels": forced_levels,
+    }
+
+
+def compose(args: argparse.Namespace) -> str:
+    prep = _prepare(args)
+    verdicts = prep["verdicts"]
+    candidate_stances = prep["candidate_stances"]
+    vale_blockers = prep["vale_blockers"]
+    vale_nags = prep["vale_nags"]
+    editorial_balance = prep["editorial_balance"]
+    cross_sibling = prep["cross_sibling"]
+    frontmatter = prep["frontmatter"]
+    head_sha = prep["head_sha"]
+    head_sha_short = prep["head_sha_short"]
+    timestamp = prep["timestamp"]
+    diff_files = prep["diff_files"]
+    diff_unavailable = prep["diff_unavailable"]
+    is_blog = prep["is_blog"]
+    has_temporal_trigger = prep["has_temporal_trigger"]
+    has_fenced_code_in_content = prep["has_fenced_code_in_content"]
+    outage_banner = prep["outage_banner"]
+    route_counts = prep["route_counts"]
+    files_url = prep["files_url"]
+    outstanding_stubs = prep["outstanding_stubs"]
+    lowconf_stubs = prep["lowconf_stubs"]
+    a, b, c_pre, d_resolved = prep["counts"]
+    confidence_dims = prep["confidence_dims"]
+    trail_block = prep["trail_block"]
+    forced_levels = prep["forced_levels"]
+
     sections: list[str] = [render_header(timestamp, head_sha), ""]
     if outage_banner:
         sections += [outage_banner, ""]
@@ -1507,6 +1607,814 @@ def compose(args: argparse.Namespace) -> str:
         "",
     ]
     return "\n".join(sections)
+
+
+# ---- v3 surface ------------------------------------------------------------
+#
+# `--surface v3` renders the same prepared inputs as TWO comments plus a
+# machine-owned evidence object (see scripts/review-v3/README.md):
+#   .review-draft-author.md — the author card: 🚨 / ❓ / style / ✅ + REVIEW_STATE
+#   .review-draft-brief.md  — the reviewer brief: summary, ⚠️, rubber-stamp counts
+#   .review-evidence-base.json — trail/log/etc. for S3; comments only link it
+# The model edits both drafts under the contract in output-format.md §v3; the
+# deterministic build-evidence.py step then parses the finding bullets back out
+# and emits the final evidence object — so the bullet grammar below must
+# round-trip by construction (render_finding_line ↔ parse_finding_line).
+
+AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
+BRIEF_MARKER = "<!-- CLAUDE_REVIEW_BRIEF -->"
+EVIDENCE_URL_TOKEN = "%%EVIDENCE_URL%%"
+FOOTER_AUTHOR_PATH = Path(__file__).resolve().parent.parent / "footer-author.md"
+FOOTER_REVIEWER_PATH = Path(__file__).resolve().parent.parent / "footer-reviewer.md"
+_REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
+
+# One table row per finding, everywhere a v3 finding renders (🚨 / ❓ / ⚠️,
+# and the ✅ Resolved log):
+#
+#   | ID | Where | Finding |
+#   |---|---|---|
+#   | **F3** | `file.md` L12-14 | <finding cell> |
+#
+# There is deliberately no status column: REVIEW_STATE is the state, the
+# section a row lives in is the display (a ⬜/✅ glyph column was tried and
+# dropped — it duplicated both and spent a table column doing it). `F?`
+# is the model's placeholder for a finding it added; build-evidence.py
+# assigns the real id. File and L-range are each optional (`—` when both
+# are absent) so the grammar also carries file-less detector findings; the
+# L-range keeps its bare `L\d+(-\d+)?` shape because auto-refresh-gate
+# anchors on it. Literal pipes in the Finding cell are escaped `\|`. The
+# Where cell links to the PR's Files-changed diff anchor (sha256 of the
+# path + `R<line>`), so clicking a finding lands on the change itself.
+FINDING_TABLE_HEADER = "| ID | Where | Finding |"
+FINDING_TABLE_SEPARATOR = "|---|---|---|"
+_TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
+# The Where cell parses BOTH forms — linked (composer output, deep link to
+# the PR diff) and bare (a model-added row; the next full render re-links
+# it). The visible text is identical either way, so auto-refresh-gate's
+# L-range extraction sees the same anchors.
+FINDING_LINE_RE = re.compile(
+    r"^\|\s*\*\*(?P<id>F\d+|F\?)\*\*\s*"
+    r"\|\s*(?:\[)?(?:`(?P<file>[^`|\]]+)`)?\s*(?P<ref>L\d+(?:-\d+)?(?:,\s*L\d+(?:-\d+)?)*)?"
+    r"(?:\]\((?P<url>[^)|\s]+)\))?\s*(?:·\s*\[✏️(?:\s*edit)?\]\([^)|\s]+\)\s*)?(?:—\s*)?"
+    r"\|\s*(?P<body>(?:\\\||[^|\n])*?\S)\s*\|\s*$"
+)
+
+
+def is_table_furniture(line: str) -> bool:
+    """True for the finding table's header/separator rows — the only `|`
+    lines in a finding section that are legitimately not finding rows."""
+    stripped = line.strip()
+    if _TABLE_SEPARATOR_RE.match(stripped):
+        return True
+    return stripped.replace(" ", "") == FINDING_TABLE_HEADER.replace(" ", "")
+
+
+def diff_anchor(file: str, ref: str) -> str:
+    """The Files-changed anchor for a file (+ first line of the ref).
+
+    GitHub anchors each file in the diff view at `#diff-<sha256(path)>`, with
+    `R<n>` addressing line n on the right (new) side. A line that isn't part
+    of the diff still lands on the file's header in the Files tab — the
+    useful place anyway.
+    """
+    anchor = "#diff-" + hashlib.sha256(file.encode()).hexdigest()
+    nums = _lines_from_ref(ref)
+    if nums:
+        anchor += f"R{nums[0]}"
+    return anchor
+
+
+def render_finding_row(fid: str, *, ref: str = "", file: str = "",
+                       body: str = "", link_base: str = "",
+                       edit_base: str = "") -> str:
+    """The canonical row renderer; inverse of parse_finding_line.
+
+    With `link_base` (https://github.com/<repo>/pull/<pr>/files) and a file,
+    the Where cell deep-links to the change itself on the Files-changed tab.
+    The link is re-derived on every render, so it always points where the
+    review currently describes.
+    """
+    where_bits = []
+    if file:
+        where_bits.append(f"`{file}`")
+    if ref:
+        where_bits.append(ref)
+    where = " ".join(where_bits) or "—"
+    if link_base and file:
+        where = f"[{where}]({link_base}{diff_anchor(file, ref)})"
+    if edit_base and file:
+        where += f" · [✏️ edit]({edit_base}{file})"
+    cell = body.replace("|", "\\|")
+    return f"| **{fid}** | {where} | {cell} |"
+
+
+# v2-shaped stub bullets (`- **[L…]** `file` — body`) are what build_stubs
+# emits; this splits one into row parts so compose_v3 can place it in cells.
+_V2_STUB_RE = re.compile(
+    r"^-\s+(?:\[[ xX]\]\s+)?(?:\*\*\[(?P<ref>L[^\]]+)\]\*\*\s+)?"
+    r"(?:`(?P<file>[^`]+)`\s+—\s+)?(?P<body>.*\S)\s*$"
+)
+
+
+def render_finding_line(fid: str, v2_bullet: str, link_base: str = "",
+                        edit_base: str = "") -> str:
+    """Adapt a v2-shaped stub bullet into a v3 table row."""
+    m = _V2_STUB_RE.match(v2_bullet)
+    if not m:
+        return render_finding_row(fid, body=v2_bullet.strip(), link_base=link_base,
+                                  edit_base=edit_base)
+    return render_finding_row(
+        fid,
+        ref=(m.group("ref") or "").strip(),
+        file=(m.group("file") or "").strip(),
+        body=m.group("body").strip(),
+        link_base=link_base,
+        edit_base=edit_base,
+    )
+
+
+def parse_finding_line(line: str) -> dict | None:
+    """Inverse of render_finding_row; None when the line isn't a finding row.
+
+    REVIEW_STATE is authoritative for whether a finding is answered; a row
+    carries no display state of its own.
+    """
+    m = FINDING_LINE_RE.match(line)
+    if not m:
+        return None
+    return {
+        "id": m.group("id"),
+        "ref": (m.group("ref") or "").strip(),
+        "file": (m.group("file") or "").strip(),
+        "body": m.group("body").strip().replace("\\|", "|"),
+    }
+
+
+def _lines_from_ref(ref: str) -> list[int] | None:
+    m = re.match(r"L(\d+)(?:-(\d+))?", ref or "")
+    if not m:
+        return None
+    start = int(m.group(1))
+    if start <= 0:
+        return None
+    if m.group(2):
+        return [start, int(m.group(2))]
+    return [start]
+
+
+def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Deterministic ❓/⚠️ split of the v2 ⚠️ bucket, keyed on verdict alone.
+
+    `unverifiable` → ❓ (only the author can source or soften their own claim —
+    a turn-cap unverifiable still ends the same way: the author supplies the
+    source). Everything else the composer stubs at low confidence
+    (framing-drift, weakly-verified) → ⚠️: there might be an issue, and that
+    judgment belongs to the reviewer, not the author. The model may PROMOTE
+    (⚠️ → ❓ → 🚨) with a stated reason, never demote — bucket-split-faithful
+    in the validator holds it to that.
+    """
+    author_answer: list[dict] = []
+    reviewer_check: list[dict] = []
+    for s in lowconf_stubs:
+        if s.get("verdict") == "unverifiable":
+            author_answer.append(s)
+        else:
+            reviewer_check.append(s)
+    return author_answer, reviewer_check
+
+
+AUTHOR_STATE_BEGIN = "<!-- AUTHOR_STATE_BEGIN -->"
+AUTHOR_STATE_END = "<!-- AUTHOR_STATE_END -->"
+
+
+def waiting_state_cell(bucket: str, disposition: dict | None) -> str:
+    """The State cell of the brief's "Waiting on the author" table."""
+    if isinstance(disposition, dict):
+        d = disposition.get("disposition")
+        if d == "accepted":
+            return "✋ accepted as-is by the author"
+        if d == "refuted":
+            return "🛡️ disputed by the author"
+        if d in ("deferred", "not-applicable"):
+            return f"📌 {d} by the author"
+    return "🚨 open" if bucket == "outstanding" else "❓ open"
+
+
+def render_waiting_block(findings: list[dict], state_findings: dict) -> list[str]:
+    """The composer-owned "Waiting on the author" block on the brief.
+
+    Lists every blocking finding on the author card with its claim text and
+    live disposition, so the reviewer sees WHAT is open (2026-09-01 persona
+    pass: an unsourced statistic reduced to a count under "✅ rubber-stamp"
+    gets batch-approved). Wrapped in AUTHOR_STATE markers; build-evidence.py
+    and apply-update.py regenerate it from the final findings + REVIEW_STATE,
+    so the model never maintains it. Empty list when nothing blocks.
+    """
+    rows = [f for f in findings if f.get("bucket") in ("outstanding", "author-answer")]
+    if not rows:
+        return []
+    answered = [f for f in rows if isinstance(state_findings.get(f["id"]), dict)]
+    n_open = len(rows) - len(answered)
+    if n_open:
+        noun = "item blocks" if n_open == 1 else "items block"
+        head = f"**Waiting on the author** — {n_open} {noun} merge from the author's own card"
+        if answered:
+            more = "more is" if len(answered) == 1 else "more are"
+            head += f" ({len(answered)} {more} answered — see State)"
+        head += ("; you don't need to police them, but check the final diff shows "
+                 "them answered before you approve:")
+    else:
+        head = ("**Answered by the author** — nothing blocks merge from the author's "
+                "card any more; their answers are listed so you can weigh them "
+                "before you approve:")
+    lines = [
+        AUTHOR_STATE_BEGIN,
+        head,
+        "",
+        "| ID | State | Claim |",
+        "|---|---|---|",
+    ]
+    for f in rows:
+        cell = waiting_state_cell(f["bucket"], state_findings.get(f["id"]))
+        claim = trunc(str(f.get("text") or ""), 110).replace("|", "\\|")
+        lines.append(f"| **{f['id']}** | {cell} | {claim} |")
+    lines.append(AUTHOR_STATE_END)
+    return lines
+
+
+def replace_waiting_block(brief_body: str, findings: list[dict],
+                          state_findings: dict) -> str:
+    """Deterministically refresh the AUTHOR_STATE span in a brief body."""
+    block = render_waiting_block(findings, state_findings)
+    span_re = re.compile(
+        re.escape(AUTHOR_STATE_BEGIN) + r".*?" + re.escape(AUTHOR_STATE_END),
+        re.DOTALL)
+    if span_re.search(brief_body):
+        if block:
+            return span_re.sub(lambda _m: "\n".join(block), brief_body, count=1)
+        # nothing open any more — drop the span (and one trailing newline)
+        return span_re.sub("", brief_body, count=1).replace("\n\n\n", "\n\n")
+    if not block:
+        return brief_body
+    # markers lost (model edit) — re-insert before the first H3
+    lines = brief_body.splitlines()
+    at = next((i for i, ln in enumerate(lines) if ln.startswith("### ")), len(lines))
+    lines[at:at] = block + [""]
+    return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
+
+
+def render_author_orient(n_blocking: int) -> list[str]:
+    """The callout under the author header. Owned here so the refresh lanes
+    (build-evidence._fix_header) can swap it when the count crosses zero —
+    a "nothing blocks merge" card must not open with "needs your answers
+    before this PR can merge" (2026-09-01 update-lane smoke)."""
+    if n_blocking:
+        return [
+            "> [!IMPORTANT]",
+            "> **You = the PR author.** This review needs your answers before this "
+            "PR can merge. Fix each item below, or tell the review why it's "
+            "wrong — **How to answer** at the bottom shows exactly what to "
+            "type. Answering unblocks the review; a human reviewer still "
+            "approves the merge.",
+        ]
+    return [
+        "> [!NOTE]",
+        "> Nothing here blocks merge — no open items need an answer from you. "
+        "A human reviewer still approves the merge.",
+    ]
+
+
+def render_detail_scaffold(fid: str) -> list[str]:
+    """The per-finding "Do this" block scaffold under the author tables.
+
+    One block per blocking finding; the model fills the TODOs. The shape is
+    the 2026-09-01 persona-pass contract: exactly one required action per ID,
+    the flagged line quoted verbatim exactly once, replacement text in a
+    fenced block (GitHub gives it a copy button). Model-added `F?` rows get
+    NO block (ids are not assigned yet); their cell stays terse instead.
+    """
+    return [
+        f"#### {fid} · Do this",
+        "",
+        "**Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
+        "appears in the file — the only quote of it on this card; never a paraphrase>",
+        "**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "**Fix:** <TODO: exactly ONE required action, stated first; put any "
+        "replacement text in a fenced block; label an alternative "
+        "\"**If you'd rather keep it:**\" — never two competing imperatives>",
+    ]
+
+
+CONTRIBUTING_URL_TOKEN = "%%CONTRIBUTING_URL%%"
+
+
+def _read_footer(path: Path, contributing_url: str = "") -> str:
+    """Footer include, with the CONTRIBUTING deep link substituted at compose
+    time (the repo is known here, unlike the evidence URL, which only the
+    publish step knows). Without a repo the link degrades to plain text
+    rather than shipping a dead relative link."""
+    try:
+        text = path.read_text(encoding="utf-8").rstrip("\n")
+    except OSError:
+        return FOOTER_SENTINEL
+    if contributing_url:
+        text = text.replace(CONTRIBUTING_URL_TOKEN, contributing_url)
+    else:
+        text = re.sub(r"\[([^\]]+)\]\(" + re.escape(CONTRIBUTING_URL_TOKEN) + r"\)", r"\1", text)
+    return text
+
+
+# The stub TODOs in build_stubs() speak v2 — they tell the model to move
+# spurious/pre-existing bullets into the 📋/💡 sections, which the v3 cards do
+# not have. On the v3 surface those flows become in-place rewrites that
+# build-evidence.py files on the evidence page and drops from the published
+# card. Applied to every stub bullet at render time; v3_self_check asserts no
+# stale section reference survives, so drift between build_stubs' wording and
+# this table fails the compose instead of publishing v2 instructions.
+_V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
+    (
+        "replace the body with `**Spurious:** <1-2 sentence reason>` "
+        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution)",
+        "rewrite the Finding cell as `**Spurious:** <1-2 sentence reason>` — build-evidence files it "
+        "on the evidence page and drops it from this card (the `**Spurious:**` label IS the resolution)",
+    ),
+    (
+        "replace the body with `**Mis-sourced:** <reason>` AND move the bullet to `### 📋 Triaged verifier findings`",
+        "rewrite the Finding cell as `**Mis-sourced:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "replace the body with `**Pre-existing:** <reason>` AND move the bullet to `### 💡 Pre-existing`",
+        "rewrite the Finding cell as `**Pre-existing:** <reason>` — it is filed on the evidence page and dropped from this card",
+    ),
+    (
+        "move to 📋 Triaged with `**Spurious:**` only if the framing comparison itself is wrong",
+        "rewrite as `**Spurious:** <reason>` only if the framing comparison itself is wrong",
+    ),
+    (
+        "otherwise move to ⚠️ Low-confidence",
+        "otherwise move it under `### ⚠️ Check these before approving` on the reviewer brief",
+    ),
+    (
+        "promote to 🚨 Outstanding",
+        "promote to `### 🚨 Fix or disagree` on the author card",
+    ),
+    (
+        "either way file the author-question buffer line",
+        "otherwise keep it here — this row IS the question the author must answer",
+    ),
+    (
+        "file the author-question line saying verification ran out of budget and the claim is retryable",
+        "keep it here with a note that verification ran out of budget and the claim is retryable",
+    ),
+    (
+        " `trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.",
+        "",
+    ),
+)
+
+# Stale v2 vocabulary that must never reach a published v3 card; the
+# self-check greps for these (TODO text only — the style H4 is fine).
+_V3_STALE_TOKENS = ("📋 Triaged", "⚠️ Low-confidence", "### 💡 Pre-existing", "trail-verdict-bucket-promotion")
+
+
+def _v3_adapt_todo(bullet: str) -> str:
+    for old, new in _V3_TODO_REWRITES:
+        bullet = bullet.replace(old, new)
+    return bullet
+
+
+def _review_state_block(high_water: int) -> str:
+    """Empty REVIEW_STATE block via the shared scripts/review-v3 library.
+
+    Imported lazily and by path; a v3 compose on a checkout without the
+    library is a hard error — silently omitting the block would leave the
+    published comment with no disposition store and the Sentinel unable to
+    go green.
+    """
+    import importlib.util
+
+    lib = _REVIEW_V3_DIR / "review_state.py"
+    spec = importlib.util.spec_from_file_location("review_state", lib)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules.setdefault("review_state", mod)
+    spec.loader.exec_module(mod)
+    state = mod.empty_state()
+    state["high_water"] = high_water
+    return mod.serialize_block(state)
+
+
+_V3_EMPTY_OUTSTANDING = "_Nothing to fix — this section is empty._"
+_V3_EMPTY_QUESTIONS = "_No open questions for you._"
+_V3_EMPTY_CHECKS = "_Nothing needs a human eye beyond the rubber-stamp list below._"
+# The browser-editing hint under the author tables. Named because the section
+# and detail-block walkers in build-evidence.py / apply-update.py must treat it
+# as a boundary: a detail block that swallowed it, and a section span that ran
+# through the 📎 line behind it, cost the author card its evidence link on the
+# first live #update-review (2026-09-01).
+V3_BROWSER_HINT_PREFIX = "_Editing in the browser?"
+V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " The ✏️ links open the file in "
+                   "GitHub's editor — Ctrl+F for the quoted line._")
+
+
+def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
+    """Return (author_draft, brief_draft, evidence_base)."""
+    prep = _prepare(args)
+    timestamp = prep["timestamp"]
+    head_sha = prep["head_sha"]
+    head_sha_short = prep["head_sha_short"]
+    n_claims, x_verified, y_unverifiable, z_contradicted = prep["trail_nxyz"]
+
+    author_answer_stubs, reviewer_check_stubs = split_v3_buckets(prep["lowconf_stubs"])
+
+    link_base = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+    edit_base = (f"https://github.com/{args.head_repo}/edit/{args.head_branch}/"
+                 if getattr(args, "head_repo", "") and getattr(args, "head_branch", "")
+                 else "")
+    contributing_url = (
+        f"https://github.com/{args.repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
+        if args.repo else "")
+
+    # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, ⚠️.
+    findings: list[dict] = []
+    next_id = 1
+
+    def _assign(stub: dict, bucket: str, rendered: str) -> tuple[str, dict]:
+        nonlocal next_id
+        fid = f"F{next_id}"
+        next_id += 1
+        lines = _lines_from_ref(stub.get("ref") or "")
+        record = {
+            "id": fid,
+            "bucket": bucket,
+            "file": stub.get("file") or "(unknown)",
+            "text": stub.get("text") or rendered,
+            "origin": stub.get("origin") or "model",
+            "status": "open",
+            "disposition": None,
+        }
+        if lines:
+            record["lines"] = lines
+        findings.append(record)
+        return fid, record
+
+    outstanding_lines: list[str] = []
+    outstanding_ids: list[str] = []
+    for s in prep["outstanding_stubs"]:
+        fid, _ = _assign(s, "outstanding", s["bullet"])
+        outstanding_ids.append(fid)
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+    for f in prep["vale_blockers"]:
+        fname = str(f.get("file") or "").strip()
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        v2_bullet = f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}"
+        stub = {
+            "ref": f"L{f.get('line', '?')}",
+            "file": fname,
+            "text": f"[style-blocker] {cat}: {msg}",
+            "origin": "style-blocker",
+        }
+        fid, _ = _assign(stub, "outstanding", v2_bullet)
+        outstanding_ids.append(fid)
+        outstanding_lines.append(render_finding_line(fid, v2_bullet, link_base=link_base, edit_base=edit_base))
+
+    question_lines: list[str] = []
+    question_ids: list[str] = []
+    for s in author_answer_stubs:
+        fid, _ = _assign(s, "author-answer", s["bullet"])
+        question_ids.append(fid)
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+
+    check_lines: list[str] = []
+    for s in reviewer_check_stubs:
+        fid, _ = _assign(s, "reviewer-check", s["bullet"])
+        check_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base))
+
+    n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
+    high_water = next_id - 1
+
+    # ---- evidence base ----
+    trail_records: list[dict] = []
+    for v in prep["verdicts"]:
+        verdict = v.get("verdict")
+        if verdict not in TRAIL_VERDICT_WORDS:
+            verdict = "unverifiable"
+        rec: dict = {
+            "file": (v.get("file") or "").strip() or "(unknown)",
+            "claim": redact(trunc(v.get("text") or "", TEXT_TRUNC)) or "(empty)",
+            "verdict": verdict,
+        }
+        refs = line_refs(v.get("line_range") or "")
+        nums = _lines_from_ref(refs[0]) if refs else None
+        if nums:
+            rec["line"] = nums[0]
+        pointer = _evidence_pointer(v)
+        if pointer:
+            rec["evidence"] = pointer
+        src = _clean_source(str(v.get("source") or ""))
+        if src:
+            rec["source"] = src
+        route = v.get("route")
+        if route in ("pass0", "pass1", "pass2", "pass3", "preflight"):
+            rec["route"] = route
+        trail_records.append(rec)
+
+    log_block = render_investigation_log(
+        cross_sibling=prep["cross_sibling"],
+        verdicts=prep["verdicts"],
+        route_counts=prep["route_counts"],
+        frontmatter=prep["frontmatter"],
+        has_temporal_trigger=prep["has_temporal_trigger"],
+        diff_files=prep["diff_files"],
+        has_fenced_code_in_content=prep["has_fenced_code_in_content"],
+        editorial_balance=prep["editorial_balance"],
+        is_blog=prep["is_blog"],
+        diff_unavailable=prep["diff_unavailable"],
+    )
+    investigation_log: dict[str, str] = {}
+    for line in log_block.splitlines():
+        m = re.match(r"^- \*\*(?P<key>[^:*]+):\*\* (?P<val>.+)$", line)
+        if m:
+            key = m.group("key").strip().lower().replace(" ", "-")
+            investigation_log[key] = m.group("val").strip()
+
+    confidence = {
+        dim: prep["forced_levels"][dim][0] if dim in prep["forced_levels"] else "TODO"
+        for dim in prep["confidence_dims"]
+    }
+
+    evidence_base = {
+        "schema_version": 1,
+        "repo": args.repo or "unknown/unknown",
+        "pr": int(args.pr) if args.pr and str(args.pr).isdigit() else 0,
+        "head_sha": head_sha or ("0" * 40),
+        "run_id": str(getattr(args, "run_id", "") or "local"),
+        "generated_at": timestamp,
+        "high_water": high_water,
+        "findings": findings,
+        "trail": trail_records,
+        "investigation_log": investigation_log,
+        "editorial_balance": prep["editorial_balance"] if prep["is_blog"] else None,
+        "triaged": [],
+        "style_suggestions_count": len(prep["vale_nags"]),
+        "confidence": confidence,
+        "summary": None,
+        **({"stances": stance_records(prep["candidate_stances"])}
+           if prep["candidate_stances"] is not None else {}),
+        "history": [
+            {"ts": timestamp, "summary": "initial review (pending publication)", "sha": head_sha_short}
+        ],
+    }
+
+    # ---- author card ----
+    # The review revision: v1 on the initial compose; apply-update bumps it
+    # as it appends history entries. A from-scratch regen naturally restarts
+    # at v1. Display-only — the machine-read head lives in CLAUDE_REVIEW_HEAD.
+    rev = len(evidence_base["history"])
+    sub_line = f"<sub>Review v{rev} · updated {timestamp} · head commit {head_sha_short}</sub>"
+    if n_blocking:
+        noun = "item blocks" if n_blocking == 1 else "items block"
+        header_verb = f"{n_blocking} {noun} merge"
+    else:
+        header_verb = "nothing blocks merge"
+    orient = render_author_orient(n_blocking)
+
+    def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
+        if not rows:
+            return [empty_sentinel]
+        return [FINDING_TABLE_HEADER, FINDING_TABLE_SEPARATOR, *rows]
+
+    author: list[str] = [
+        "<!-- CLAUDE_REVIEW 1/1 -->",
+        AUTHOR_MARKER,
+        f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
+        f"## Author action guide v{rev} — {header_verb}",
+        "",
+        *orient,
+        "",
+    ]
+    if prep["outage_banner"]:
+        author += [prep["outage_banner"], ""]
+    author += [
+        "_<TODO: one sentence — what this PR is and what the review checked>_",
+        "",
+        "### 🚨 Fix or disagree",
+        "",
+    ]
+    author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
+    for fid in outstanding_ids:
+        author += ["", *render_detail_scaffold(fid)]
+    author += [
+        "",
+        "### ❓ Questions for you",
+        "",
+    ]
+    author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
+    for fid in question_ids:
+        author += ["", *render_detail_scaffold(fid)]
+    author += [""]
+    if edit_base and (outstanding_lines or question_lines):
+        author += [V3_BROWSER_HINT, ""]
+    if prep["vale_nags"]:
+        author += [_render_style_findings(prep["vale_nags"], prep["files_url"]), ""]
+    # ✅ Resolved is omitted while empty (a v1 card has no "last review" to
+    # refer to — persona pass 2026-09-01); apply-update.py inserts the
+    # section the first time something resolves.
+    author += [
+        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        "",
+        _review_state_block(high_water),
+        "<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->",
+        "",
+        sub_line,
+        "",
+        _read_footer(FOOTER_AUTHOR_PATH, contributing_url),
+        "",
+    ]
+    author_draft = "\n".join(a for a in author if a is not None)
+
+    # ---- reviewer brief ----
+    detector_count = sum(1 for v in prep["verdicts"] if v.get("route") == "preflight")
+    mech_bits: list[str] = []
+    if prep["frontmatter"]:
+        mech_bits.append("frontmatter sweep ran")
+    hugo = prep["hugo_build"]
+    if hugo and not hugo.get("skipped"):
+        n_hugo = len(hugo.get("errors") or []) + len(hugo.get("link_integrity") or [])
+        mech_bits.append("Hugo build green" if n_hugo == 0 else f"Hugo build: {n_hugo} error(s) — see 🚨")
+    if detector_count:
+        mech_bits.append(f"{detector_count} detector finding(s) filed above")
+    if not mech_bits:
+        mech_bits.append("no mechanical sweeps applicable to this diff")
+
+    brief: list[str] = [
+        BRIEF_MARKER,
+        f"## Reviewer's guide v{rev} — not for the author",
+        "",
+        "> [!TIP]",
+        "> **This is the reviewer's guide.** Work through the ⚠️ checklist "
+        "below, then approve — **approving asserts only that the ⚠️ items "
+        "looked right to you.** Machine-verified this run: links, shortcodes, "
+        "page metadata, and every claim marked verified (receipts on the "
+        "evidence page). Code samples are read, not compiled.",
+        ">",
+        '> _PR author: your to-do list is the other review comment, "Author '
+        'action guide" — nothing on this card is yours._',
+        "",
+    ]
+    if prep["outage_banner"]:
+        brief += [prep["outage_banner"], ""]
+    if getattr(args, "routed_team", ""):
+        brief += [f"**Approval needed from:** {args.routed_team} — any "
+                  "member's approval satisfies the merge gate.", ""]
+    waiting = render_waiting_block(findings, {})
+    if waiting:
+        brief += [*waiting, ""]
+    brief += [
+        # The orienting TIP above is the only TIP box — the summary block
+        # renders as a NOTE here so the two don't stack as twins. The v3
+        # summary is a bullet list, not a paragraph: reviewers scan changes,
+        # they don't read prose about them (Cam, 2026-09-01). The shared v2
+        # renderer keeps its paragraph scaffold (byte-identity golden); only
+        # the TODO scaffold differs here — the confidence table is reused.
+        render_summary_block(prep["confidence_dims"], prep["forced_levels"]).replace(
+            "> [!TIP]", "> [!NOTE]", 1).replace(
+            "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
+            "(2) what specific kind of wrongness would block a reader's success, (3) which investigative passes ran>.",
+            "> **What this PR changes:**\n"
+            ">\n"
+            "> - <TODO: one bullet per meaningful change — subject + what changed, one line each; a reviewer scans this list, so no compound bullets>\n"
+            ">\n"
+            "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
+            1),
+        "",
+        "### ⚠️ Check these before approving",
+        "",
+    ]
+    brief += _finding_table(check_lines, _V3_EMPTY_CHECKS)
+    if check_lines:
+        _team_txt = getattr(args, "routed_team", "") or "the routed reviewer team"
+        brief += ["", f"_Not your area? Any member of {_team_txt} can approve "
+                  "— hand it off rather than approving on faith._"]
+    # Editorial stances ride the brief, not the author card: they are
+    # reviewer-check material by nature (a page's own framing, no verdict,
+    # nothing for the author to answer) and the same verdict-free H4 the v2
+    # monolith renders under ⚠️. It sits below the finding table because
+    # `#### ` terminates every row walker (build-evidence, apply-update,
+    # validate-pinned), so the sub-list is invisible to finding parsing and
+    # survives an update-lane re-render of the table above it.
+    stance_block = render_stances(prep["candidate_stances"])
+    if stance_block:
+        brief += ["", stance_block]
+    brief += [
+        "",
+        "### ✅ What you can rubber-stamp",
+        "",
+        _render_facts_line(prep["verdicts"], prep["trail_nxyz"]),
+        f"- **Mechanics:** {'; '.join(mech_bits)}.",
+        f"- **Style:** {len(prep['vale_nags'])} advisory suggestion(s) left with the author; never blocking.",
+        "",
+        "💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.",
+        "",
+        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        "",
+        sub_line,
+        "",
+        _read_footer(FOOTER_REVIEWER_PATH, contributing_url),
+        "",
+    ]
+    brief_draft = "\n".join(b for b in brief if b is not None)
+
+    return author_draft, brief_draft, evidence_base
+
+
+
+def _render_facts_line(verdicts: list[dict], nxyz: tuple[int, int, int, int]) -> str:
+    """The brief's rubber-stamp **Facts** bullet.
+
+    Counts only what is SETTLED — open findings belong to "Waiting on the
+    author", never under a ✅ heading (2026-09-01 persona pass: all three
+    reviewer personas read "✅ rubber-stamp … 1 contradicted" as being asked
+    to bless a false claim). Extraction candidates the verifier ruled
+    non-claims live on the evidence page only.
+    """
+    n, x, y, z = nxyz
+    n_not_claim = sum(1 for v in verdicts if v.get("verdict") == "not-a-claim")
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
+    checked = n - n_not_claim
+    if checked <= 0:
+        return "- **Facts:** no factual claims found in the changed lines."
+    parts: list[str] = []
+    if x:
+        parts.append(f"{x} verified clean")
+    open_ct = y + z
+    if open_ct:
+        parts.append(f'{open_ct} open on the author\'s card ("Waiting on the author" above)')
+    if n_drift:
+        parts.append(f"{n_drift} flagged in the ⚠️ list")
+    unaccounted = checked - (x + y + z + n_drift)
+    if unaccounted > 0:
+        parts.append(f"{unaccounted} other — see the evidence page")
+    noun = "factual claim" if checked == 1 else "factual claims"
+    head = f"- **Facts:** {checked} {noun} checked"
+    if parts:
+        head += " — " + ", ".join(parts)
+    return head + "."
+
+
+def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> list[str]:
+    """Structural invariants for the v3 drafts (validate-pinned speaks v2 only).
+
+    Returns problem strings; empty = sound. Deliberately cheap and exact — the
+    deep validation lives in validate-evidence.py and (post-model) in
+    build-evidence.py's fail-closed parse.
+    """
+    problems: list[str] = []
+    for marker, where in ((AUTHOR_MARKER, "author"), ("<!-- CLAUDE_REVIEW 1/1 -->", "author")):
+        if marker not in author_draft:
+            problems.append(f"{where} draft missing {marker}")
+    if BRIEF_MARKER not in brief_draft:
+        problems.append(f"brief draft missing {BRIEF_MARKER}")
+    if "CLAUDE_REVIEW_HEAD" in brief_draft:
+        problems.append("brief draft must not carry the machine-read HEAD marker")
+    for name, draft in (("author", author_draft), ("brief", brief_draft)):
+        for marker in (AUTHOR_MARKER, BRIEF_MARKER, "<!-- CLAUDE_REVIEW 1/1 -->"):
+            if draft.count(marker) > 1:
+                problems.append(f"{name} draft repeats {marker}")
+        if EVIDENCE_URL_TOKEN not in draft:
+            problems.append(f"{name} draft missing {EVIDENCE_URL_TOKEN} link")
+    for line_needed in ("### 🚨 Fix or disagree", "### ❓ Questions for you"):
+        if line_needed not in author_draft:
+            problems.append(f"author draft missing section {line_needed}")
+    if "### ⚠️ Check these before approving" not in brief_draft:
+        problems.append("brief draft missing ⚠️ section")
+    if "<!-- REVIEW_STATE" not in author_draft:
+        problems.append("author draft missing REVIEW_STATE block")
+    blocking_ids = [f["id"] for f in evidence_base.get("findings", [])
+                    if f.get("bucket") in ("outstanding", "author-answer")]
+    for fid in blocking_ids:
+        if f"#### {fid} · Do this" not in author_draft:
+            problems.append(f"author draft missing the detail block for {fid}")
+    if blocking_ids and AUTHOR_STATE_BEGIN not in brief_draft:
+        problems.append("brief draft missing the Waiting-on-the-author block")
+    for name, draft in (("author", author_draft), ("brief", brief_draft)):
+        for tok in _V3_STALE_TOKENS:
+            if tok in draft:
+                problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
+    ids = [f["id"] for f in evidence_base.get("findings", [])]
+    if len(ids) != len(set(ids)):
+        problems.append("duplicate finding ids in evidence base")
+    for fid in ids:
+        if fid not in author_draft and fid not in brief_draft:
+            problems.append(f"finding {fid} in evidence base but rendered in neither draft")
+    return problems
 
 
 # ---- self-check ------------------------------------------------------------
@@ -1614,10 +2522,45 @@ def main() -> int:
     p.add_argument("--diff-files", help="Comma-separated changed-file list (overrides `gh pr diff --name-only`; for testing).")
     p.add_argument("--no-validate", action="store_true", help="Skip the self-check (local debugging).")
     p.add_argument("--dry-run", action="store_true", help="Don't call gh; emit the draft only.")
+    p.add_argument("--surface", choices=("v2", "v3"), default="v2",
+                   help="v2 = single pinned-review draft (default); v3 = author card + reviewer brief + evidence base")
+    p.add_argument("--run-id", default="", help="Workflow run id, recorded in the v3 evidence base")
+    p.add_argument("--out-author", default="", help="v3 author-card path (default: .review-draft-author.md beside --out)")
+    p.add_argument("--out-brief", default="", help="v3 reviewer-brief path (default: .review-draft-brief.md beside --out)")
+    p.add_argument("--out-evidence", default="", help="v3 evidence-base path (default: .review-evidence-base.json beside --out)")
+    p.add_argument("--head-repo", default="", help="v3: head repo full name (owner/name) for ✏️ edit links")
+    p.add_argument("--head-branch", default="", help="v3: head branch for ✏️ edit links")
+    p.add_argument("--routed-team", default="", help="v3: approval-team display string for the reviewer brief")
     args = p.parse_args()
 
     out_path = Path(args.out)
     timestamp = (args.timestamp or "").strip() or "unknown"
+
+    if args.surface == "v3":
+        out_dir = out_path.parent
+        author_path = Path(args.out_author) if args.out_author else out_dir / ".review-draft-author.md"
+        brief_path = Path(args.out_brief) if args.out_brief else out_dir / ".review-draft-brief.md"
+        evidence_path = Path(args.out_evidence) if args.out_evidence else out_dir / ".review-evidence-base.json"
+        author_draft, brief_draft, evidence_base = compose_v3(args)
+        problems = [] if args.no_validate else v3_self_check(author_draft, brief_draft, evidence_base)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        if problems:
+            # Same contract as the v2 CAUTION path: a visible in-band failure,
+            # never a silent-empty file.
+            banner = (
+                "> [!CAUTION]\n"
+                f"> compose-review.py --surface v3 self-check failed ({len(problems)} problem(s)): "
+                + "; ".join(problems[:8])
+                + ". Do not publish these drafts — assemble manually per ci.md §Fallback.\n\n"
+            )
+            author_draft = banner + author_draft
+            brief_draft = banner + brief_draft
+            print(f"::error::compose-review.py v3 self-check failed — {'; '.join(problems[:5])}", file=sys.stderr)
+        author_path.write_text(author_draft if author_draft.endswith("\n") else author_draft + "\n")
+        brief_path.write_text(brief_draft if brief_draft.endswith("\n") else brief_draft + "\n")
+        evidence_path.write_text(json.dumps(evidence_base, indent=2) + "\n")
+        print(f"compose-review: wrote {author_path}, {brief_path}, {evidence_path}")
+        return 0
 
     draft = compose(args)
     out_path.parent.mkdir(parents=True, exist_ok=True)

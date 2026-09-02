@@ -25,6 +25,35 @@ This is the **CI entry point** for the docs review pipeline.
 
 ---
 
+## The v3 surface
+
+When the workflow prompt says **the v3 review surface is active**, the composer
+emitted TWO drafts instead of `.review-draft.md`:
+
+- **`.review-draft-author.md`** — the author card (🚨 Fix or disagree /
+  ❓ Questions for you / style suggestions / ✅ Resolved).
+- **`.review-draft-brief.md`** — the reviewer brief (summary + confidence
+  table / ⚠️ Check these / rubber-stampable counts).
+
+Your editorial pass edits **both files** under the contract in
+`references/output-format.md` §The model's edit contract (v3), which overrides
+§2–3 below wherever they conflict. The short version: the verification trail,
+investigation log, triaged findings, pre-existing issues, count table, and
+review history are **not in your drafts** — they live in the machine-owned
+evidence base (`.review-evidence-base.json`, which you never edit) and render
+on the evidence page. You triage the finding rows (promote-only; new findings
+as `| **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
+`**Pre-existing:**` rewrites instead of deletions), write the fix prose, the
+summary, and the confidence levels, and never touch the HTML markers, the
+REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`
+version line, the Where-cell links, or the composer-owned count lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
+rules (§Style suggestions in the workflow prompt) — the sidecar and ✏️
+annotations target the author card. If either draft opens with a
+`> [!CAUTION]` banner, stop and exit without editing — v3 has **no**
+manual-assembly fallback; the run must land on the error path.
+
+---
+
 ## Inputs
 
 The workflow passes these as environment variables:

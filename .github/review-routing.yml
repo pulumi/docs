@@ -1,0 +1,159 @@
+# Lane-routing config for the v3 PR review workflow — who has to approve a
+# PR, whether staging evidence is required, and how long they have.
+#
+# Single source of truth for three consumers, all read-only against this
+# file:
+#
+#   - the Sentinel merge gate (`.github/workflows/review-sentinel.yml`),
+#     which turns `resolve_lanes()`'s required roles into required GitHub
+#     team approvals before it lets a PR merge;
+#   - triage routing, which uses the same resolution to decide who gets
+#     requested for review;
+#   - the SLA sweep, which reads `sla:` to know when a pending review has
+#     gone stale enough to escalate.
+#
+# The parser (`scripts/review-v3/routing.py`) fails closed: anything it
+# can't validate — an unknown key at any level, a matrix cell naming a role
+# that isn't in `teams:`, a missing subject, a missing `sla:` entry for a
+# role the matrix can hand out, a malformed team slug, a non-positive
+# `business_days`, or `warn_days >= close_days` — is a hard error, not a
+# warning. This file gates merges, so a typo here must fail loud in CI
+# rather than silently routing a PR to nobody. The one deliberate exception
+# is a `TODO-*` `escalate_to` value (see SLA below): that's valid-but-flagged,
+# because those names are genuinely pending an org decision and blocking the
+# whole workflow on them would be worse than shipping with a placeholder.
+#
+# -----------------------------------------------------------------------------
+# SCHEMA VERSIONING
+# -----------------------------------------------------------------------------
+# `schema: 1` is required and currently the only accepted value. Bump it on
+# any breaking shape change and teach `routing.py` both shapes for one
+# transition window, same convention as `evidence-schema.json`.
+#
+# -----------------------------------------------------------------------------
+# TEAMS
+# -----------------------------------------------------------------------------
+# `teams:` maps a routing **role** (an internal id used everywhere else in
+# this file) to the GitHub team slug whose members can satisfy that role's
+# approval, written as `org/slug` — the same form `CODEOWNERS` and branch
+# protection use. Roles are this file's vocabulary, not GitHub's; adding a
+# role means adding it here first, since every other section validates
+# against this map.
+#
+# -----------------------------------------------------------------------------
+# BOTS
+# -----------------------------------------------------------------------------
+# `bots:` lists machine **user** accounts (e.g. a service account that also
+# leaves reviews) whose approvals never count toward satisfying a required
+# role, even if that account happens to be a team member. This is a
+# belt-and-suspenders list for bot accounts that don't carry GitHub's own
+# `type: Bot` marker on their user object — a PR's own actor with
+# `type == Bot` is excluded automatically by the Sentinel and doesn't need
+# to be listed here.
+#
+# -----------------------------------------------------------------------------
+# MATRIX
+# -----------------------------------------------------------------------------
+# `matrix:` maps **subject** (the content domain a changed file belongs to,
+# from `classify_path()` in
+# `.claude/commands/docs-review/scripts/triage-classify.py` — shared with
+# triage so routing and triage labeling can never disagree about what a file
+# is) crossed with **change type** (`mechanical` — a change too small or
+# mechanical to need a human, e.g. a link fix or frontmatter tweak;
+# `substantive` — everything else) to a required role, or the literal string
+# `none` meaning no human gate for that combination.
+#
+# All six subjects are required keys, closed set: `docs`, `blog`, `website`,
+# `programs`, `infra`, `other`. `other` is the same fallback
+# `classify_path()` uses for a path it can't otherwise place — see
+# `domain:other` in triage-classify.py — so routing never leaves a changed
+# file unrouted just because it's an unrecognized path shape.
+#
+# A matrix cell may also carry `staging_evidence: required`, which the
+# Sentinel enforces independently of which role is required — currently only
+# `infra` sets it, because an infrastructure change (workflows, scripts,
+# Makefile, build config) needs a demonstrated staging run before it merges,
+# on top of whichever role approves it.
+#
+# -----------------------------------------------------------------------------
+# CLAIMS OVERLAY
+# -----------------------------------------------------------------------------
+# `claims_overlay: {add: <role>}` stacks one extra required role on top of
+# whatever the matrix already resolved, whenever the PR trips the claims
+# signal (a factual/marketing claim the fact-check lane flagged). It is
+# additive, never a replacement, and it always forces the change type to
+# `substantive` — a claims-flagged change is by definition not mechanical,
+# regardless of what the caller passed in.
+#
+# -----------------------------------------------------------------------------
+# EXTERNAL CONTRIBUTORS
+# -----------------------------------------------------------------------------
+# `external_contributors: {skip_gates: [...]}` lists the merge gates that
+# don't apply to a PR from outside the org (a fork PR) — e.g. a gate that
+# assumes the author can answer follow-up questions in-thread the way an
+# internal contributor can. Closed vocabulary, currently `review-ran` and
+# `findings-answered`; the routing role resolution itself is unaffected —
+# external contributors still need the same approvals, they just aren't held
+# to gates that assume things a fork author can't always do.
+#
+# -----------------------------------------------------------------------------
+# SLA
+# -----------------------------------------------------------------------------
+# `sla:` gives each role that can appear in the matrix a review-window
+# (`business_days`, a positive integer) and an `escalate_to` — who the SLA
+# sweep pings when that window elapses with no review. Every role the matrix
+# can hand out must have an `sla:` entry; a role in `teams:` that the matrix
+# never assigns doesn't need one.
+#
+# `escalate_to` values prefixed `TODO-` are placeholders for names still
+# pending an org decision (who leads `tools`, who's the docs-guild owning
+# manager, who's marketing's named fallback). The parser treats a `TODO-`
+# `escalate_to` as valid but flags it — a warning, not a validation error —
+# so this file can ship before every escalation contact is nailed down.
+# Replace each `TODO-*` with a real name/handle as the org confirms it.
+#
+# -----------------------------------------------------------------------------
+# AUTHOR STALENESS
+# -----------------------------------------------------------------------------
+# `author_staleness:` governs the opposite failure mode — an author who goes
+# quiet after being asked to respond to findings. `warn_days` is when the SLA
+# sweep nudges the author; `close_days` (strictly greater than `warn_days`)
+# is when it closes the PR as stale. Both are positive integers.
+#
+# -----------------------------------------------------------------------------
+# WAIVE
+# -----------------------------------------------------------------------------
+# `waive:` names the label a maintainer applies to bypass the merge gate
+# (`label`) and the S3 key prefix the waive gets logged under for audit
+# (`log_prefix`), matching the `pr-review/` layout documented in
+# `scripts/review-v3/README.md`.
+
+schema: 1
+
+teams: # role -> GitHub team slug (org/<team>)
+  docs-guild: pulumi/docs-guild
+  marketing: pulumi/docs-marketing-review
+  tools: pulumi/docs-tools
+
+bots: [pulumi-bot] # machine USER accounts whose approvals never count (type==Bot excluded automatically)
+
+matrix: # subject x change type -> role or 'none'
+  docs: { mechanical: none, substantive: docs-guild }
+  blog: { mechanical: none, substantive: marketing }
+  website: { mechanical: none, substantive: marketing }
+  programs: { mechanical: none, substantive: docs-guild }
+  infra: { mechanical: tools, substantive: tools, staging_evidence: required }
+  other: { mechanical: none, substantive: docs-guild }
+
+claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
+
+external_contributors: { skip_gates: [review-ran, findings-answered] }
+
+sla:
+  tools: { business_days: 1, escalate_to: "TODO-tools-lead" }
+  docs-guild: { business_days: 3, escalate_to: "TODO-owning-manager" }
+  marketing: { business_days: 3, escalate_to: "TODO-named-fallback" }
+
+author_staleness: { warn_days: 14, close_days: 21 }
+
+waive: { label: "review:waived", log_prefix: "pr-review/waives/" }
