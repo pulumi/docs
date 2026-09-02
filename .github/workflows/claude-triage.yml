@@ -35,11 +35,16 @@ jobs:
     # draft only on lint failure — so triage fires on the non-draft `opened`
     # event). They flow through the normal triage → review chain instead of
     # being force-dispatched.
+    #
+    # The synchronize (label-delta) pass is Phase 3 of the v3 rollout and is
+    # gated on REVIEW_V3_ROUTING: with the variable unset a push changes no
+    # labels, exactly as before. Literal compare — unset is never truthy.
     if: >-
       !github.event.pull_request.draft
       && github.event.pull_request.user.login != 'dependabot[bot]'
       && (github.event.pull_request.user.login != 'pulumi-bot'
           || startsWith(github.event.pull_request.head.ref, 'content-review/'))
+      && (github.event.action != 'synchronize' || vars.REVIEW_V3_ROUTING == '1')
 
     concurrency:
       group: claude-triage-${{ github.event.pull_request.number }}
