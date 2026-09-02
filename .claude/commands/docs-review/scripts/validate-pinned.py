@@ -1667,7 +1667,13 @@ def check_editorial_stances_coverage(ctx: Context) -> list[Violation]:
     bullets = [(m.group(1), ln) for ln in lines for m in [_STANCE_BULLET_RE.match(ln.strip())] if m]
     bullet_ranges = [(_parse_line_token(ref), ln) for ref, ln in bullets]
     for pr_, ln in bullet_ranges:
-        if _STANCE_VERDICT_RE.search(ln):
+        # Scan only the metadata tail after the quoted claim text (the part
+        # after the closing `*`): a stance extracted from a comparison table
+        # row like `| Unlike Terraform | ✅ | ❌ |` carries those glyphs inside
+        # its own quotation, and that is the composer rendering it correctly,
+        # not a verdict. A bullet with no italic span is scanned whole.
+        tail = ln.rsplit("*", 1)[-1] if "*" in ln else ln
+        if _STANCE_VERDICT_RE.search(tail):
             violations.append(Violation(
                 rule_id="editorial-stances-coverage",
                 line_ref=ln.strip()[:40],
@@ -1691,6 +1697,8 @@ def check_editorial_stances_coverage(ctx: Context) -> list[Violation]:
             hint=(f"Add `- {lr} `{c.get('file', '')}` — *\"…\"* — {c.get('type', 'positioning')}` under "
                   f"`{STANCES_HEADING}`; you may not silently drop one."),
         ))
+    # Every bullet needs a record; with no records at all, every bullet is
+    # reported here.
     for pr_, ln in bullet_ranges:
         if pr_ and any(_ranges_overlap(_parse_line_ranges(c.get("line_range", "")), [pr_]) for c in stances):
             continue
@@ -1701,8 +1709,6 @@ def check_editorial_stances_coverage(ctx: Context) -> list[Violation]:
             actual=f"stance bullet has no record in `.candidate-claims.json` `stances`: {ln.strip()[:120]!r}",
             hint="The list mirrors the extractor; a stance you found yourself is a regular ⚠️ finding (with a trail record), not a stance row.",
         ))
-    if not stances and bullets:
-        pass  # already reported above as unbacked bullets
     return violations
 
 

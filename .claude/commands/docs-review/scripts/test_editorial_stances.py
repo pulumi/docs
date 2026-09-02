@@ -151,6 +151,17 @@ def test_validator_holds_the_list_to_the_artifact() -> None:
     verdicted = good.replace("— positioning (found by regex)", "— positioning → ❌ contradicted")
     v = vp.check_editorial_stances_coverage(_ctx(verdicted, stances))
     check(any("carries a verdict marker" in x.actual for x in v), f"a verdict on a stance row is a violation; got {v}")
+    # A glyph INSIDE the quoted stance text (a comparison-table row) is the
+    # composer rendering the page faithfully, not a verdict.
+    table_stances = [{"file": FILE, "line_range": "L40", "text": "| Unlike Terraform | ✅ | ❌ |",
+                      "type": "comparison", "found_by": ["regex"]}]
+    table_body = ("### ⚠️ Low-confidence\n\n*note*\n\n" + cr.render_stances(table_stances)
+                  + "\n\n### 📋 Triaged verifier findings\n")
+    check("✅" in table_body and vp.check_editorial_stances_coverage(_ctx(table_body, table_stances)) == [],
+          "verdict glyphs inside the quoted stance text are not a verdict on the row")
+    # The crash-fallback artifact carries the same meta keys as the success path.
+    src = (HERE / "merge-claims.py").read_text()
+    check('"merged_claims": 0, "stances": 0,' in src, "merge-claims crash fallback meta carries the stances count")
     check(vp.check_editorial_stances_coverage(_ctx(missing, None)) == [],
           "a pre-v2 artifact (None) skips the rule")
     check(vp.check_editorial_stances_coverage(_ctx(missing, [])) == [],

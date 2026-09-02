@@ -470,7 +470,7 @@ def safe_main() -> int:
                 "claims": [],
                 "stances": [],
                 "errors": [f"merge-claims uncaught exception: {type(e).__name__}: {e}"],
-                "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0,
+                "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "stances": 0,
                          "llm_input_tokens": 0, "llm_output_tokens": 0,
                          "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0},
             }, indent=2) + "\n")
