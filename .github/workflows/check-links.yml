@@ -112,15 +112,15 @@ jobs:
             echo "No .broken-links.json produced; nothing to do."
             exit 0
           fi
-          COUNT=$(jq '(.internal | length) + (.external | length)' .broken-links.json)
+          COUNT=$(jq '(.internal | length) + (.external | length) + ((.redirectHops // []) | length)' .broken-links.json)
           echo "count=$COUNT" >> "$GITHUB_OUTPUT"
           echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
           if [ "$COUNT" -gt 0 ]; then
             echo "has_broken=true" >> "$GITHUB_OUTPUT"
-            echo "Found $COUNT broken link(s)."
+            echo "Found $COUNT broken link(s)/redirect hop(s)."
           else
             echo "has_broken=false" >> "$GITHUB_OUTPUT"
-            echo "No broken links."
+            echo "No broken links or redirect hops."
           fi
       # Hand the broken-link list to the Claude Code action, which follows the
       # fix-broken-links skill: triage each link, fix in-repo, file issues for
@@ -135,19 +135,22 @@ jobs:
           # Bot token so the PR/pushes trigger downstream workflows.
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           prompt: |
-            The daily link checker found broken links on https://www.pulumi.com.
-            The results are in `.broken-links.json` at the repo root.
+            The daily link checker found broken links and/or stale-but-working
+            redirect hops on https://www.pulumi.com. The results are in
+            `.broken-links.json` at the repo root, which may include a
+            `redirectHops` list alongside `internal`/`external`.
 
             Follow `.claude/commands/fix-broken-links/SKILL.md` exactly. In short:
 
             1. Read `.broken-links.json`.
-            2. Verify each link is genuinely broken (the checker has false
-               positives), then skip any already covered by an open PR or
-               existing issue (deduplication — see the skill).
-            3. If every confirmed-broken link is a duplicate, open no PR: just
-               write the "all already tracked" Slack summary to
-               `.broken-links-pr.txt` and stop. Otherwise, for the actionable
-               (non-duplicate) links:
+            2. Verify each `internal`/`external` link is genuinely broken (the
+               checker has false positives) and each `redirectHops` entry still
+               redirects as recorded, then skip any already covered by an open
+               PR or existing issue (deduplication — see the skill).
+            3. If every confirmed-broken link and every redirect hop is a
+               duplicate, open no PR: just write the "all already tracked"
+               Slack summary to `.broken-links-pr.txt` and stop. Otherwise,
+               for the actionable (non-duplicate) links and hops:
             4. Create a branch `fix/broken-links-${{ steps.detect.outputs.date }}`.
             5. Triage and fix each broken link using the strategies in the skill
                (alias, S3 redirect, source edit, exclusion, or out-of-scope issue).
