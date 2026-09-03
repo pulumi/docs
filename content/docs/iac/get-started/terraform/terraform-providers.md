@@ -20,13 +20,7 @@ Pulumi provides access to thousands of Terraform providers through the Terraform
 
 ## Add a Terraform provider
 
-Use the `pulumi package add` command to add Terraform providers to your project:
-
-```bash
-$ pulumi package add terraform-provider hashicorp/random
-```
-
-This command automatically:
+Use the `pulumi package add` command to add Terraform providers to your project. The command automatically:
 
 * Downloads the Terraform provider binary
 * Generates Pulumi bindings for the provider

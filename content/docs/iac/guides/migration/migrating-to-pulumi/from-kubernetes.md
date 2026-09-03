@@ -33,7 +33,7 @@ By defining these resources in code, you can deploy off-the-shelf Kubernetes YAM
 
 ### Deploying a Single Kubernetes YAML File
 
-The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigFile` resource type accepts a `file` parameter that indicates the path or URL to read the YAML configuration from. By default, the auto-generated resource names are prefixed with the name of the `ConfigFile`, however you can specify a `resourcePrefix` to use a different prefix. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a single YAML file, first download the "all-in-one" configuration:
 
@@ -206,7 +206,7 @@ Resources:
 
 ### Deploying Multiple Kubernetes YAML Files
 
-The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, names are used as-is, however you can specify a `resourcePrefix` to rewrite the names. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
+The `ConfigGroup` resource type is similar to `ConfigFile`. Instead of a single file, it accepts a `files` parameter that contains a list of file paths, file globs, and/or URLs from which to read the YAML configuration from. By default, the auto-generated resource names are prefixed with the name of the `ConfigGroup`, however you can specify a `resourcePrefix` to use a different prefix. One or more `transforms` callbacks can be supplied via `ResourceOptions` to arbitrarily rewrite resource configurations on-the-fly before deploying them.
 
 To deploy the Kubernetes Guestbook Application using a collection of YAML files, first create a `yaml` directory and download them into it:
 
