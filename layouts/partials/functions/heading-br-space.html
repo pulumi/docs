@@ -17,28 +17,55 @@
     two halves into a nonsense token, e.g. "Infrastructure as codein any
     language."
 
-    Fix: insert a Unicode non-breaking space (U+00A0, &nbsp;) immediately
-    before the break. NBSP is not ASCII whitespace, so tdewolff's minifier
-    leaves it alone; text extractors that treat it as a normal space (which
-    is universal behavior for get_text()-style extraction and for how
-    browsers/LLMs consume it) then see a clean separator. Visually it is
-    imperceptible, since it sits right at the line break.
+    Fix: insert a non-breaking space (U+00A0, &nbsp;), wrapped in a
+    visually-hidden span, immediately before the break. Both halves of this
+    matter and were each learned the hard way:
+
+    - The character must be NBSP, not a plain space. tdewolff's minifier
+      (keepWhitespace: false) collapses or removes whitespace-only text
+      nodes wherever it finds them, not just next to <br> -- a bare space as
+      the sole content of a <span> gets emptied out too. NBSP is not ASCII
+      whitespace, so it survives untouched.
+    - The NBSP must be wrapped in a visually-hidden span, not placed bare.
+      An earlier version of this fix placed a raw NBSP directly in the
+      heading text. NBSP is not a *removable* whitespace character under
+      CSS's end-of-line trimming rules, so on center-aligned headings its
+      width was still counted in the line box and visibly shifted the text
+      by roughly half a character. The span uses the standard "sr-only"
+      clip-rect pattern (position:absolute, 1x1px, overflow hidden), which
+      has zero footprint in every layout (left, center, or right aligned)
+      because it is taken out of flow entirely, while its text content is
+      still present in the DOM for any tag-stripping extractor to read as
+      an ordinary word-separating character.
 
     This is an AEO / text-extraction-pipeline fix, not a Google-ranking fix:
     Google's renderer executes CSS and already reads these headings
-    correctly.
+    correctly (and, being a real renderer, does not see the hidden span as
+    part of the visible text either way).
 
     Usage (call BEFORE markdownify, since markdownify itself performs the
     markdown-hard-break -> <br> conversion that this partial's second rule
     depends on running ahead of):
 
         {{ partial "functions/heading-br-space.html" $title | markdownify }}
+
+    Applied at: template-hero (both left- and center-aligned variants),
+    template-section-header-with-code, template-section-header-with-image,
+    gads-template overview, cloud-engineering benefits. Other heading
+    templates -- template-feature-split.html ($heading), template-section-
+    header.html ($title / $title_line_2), layouts/page/microsoft-build.html
+    (display_title) -- do not route through this partial yet. No content
+    file puts <br> or a markdown hard-break in those fields today, so
+    nothing is broken, but a future author who does will hit the exact bug
+    this partial exists to fix. Wire the new heading site into this partial
+    rather than hand-rolling the workaround.
 */}}
+{{ $sep := `<span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">&nbsp;</span>` }}
 {{ $s := . }}
 {{/* Rule 1: literal <br> / <br/> / <br /> tags, with or without preceding whitespace. */}}
-{{ $s = $s | replaceRE `\s*<br\s*/?>` "&nbsp;<br>" }}
+{{ $s = $s | replaceRE `\s*<br\s*/?>` (printf "%s<br>" $sep) }}
 {{/* Rule 2: markdown hard-line-break syntax (2+ trailing spaces before a newline).
-     Insert the nbsp right after the preceding non-space character and keep the
-     trailing spaces so goldmark's hard-break trigger still fires during markdownify. */}}
-{{ $s = $s | replaceRE `(\S)[ \t]{2,}\n` "$1&nbsp;  \n" }}
+     Insert the hidden span right after the preceding non-space character and keep
+     the trailing spaces so goldmark's hard-break trigger still fires during markdownify. */}}
+{{ $s = $s | replaceRE `(\S)[ \t]{2,}\n` (printf "$1%s  \n" $sep) }}
 {{ return $s }}
