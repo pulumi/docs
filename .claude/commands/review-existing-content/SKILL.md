@@ -58,6 +58,7 @@ Read `.content-review-queue.json` from the repo root (written by
       "stale_claims": 1,
       "stale_claim_markers": [
         { "entity_key": "version/pulumi-package",
+          "claim_text": "Package source is saved to `packages` in Pulumi.yaml as of Pulumi 3.157.0.",
           "verdict": "contradicted",
           "evidence": "CHANGELOG lists \"Save package source to `packages` in Pulumi.yaml on `package add`\" under 3.163.0, not 3.157.0.",
           "source": "gh api repos/pulumi/pulumi/releases",
@@ -78,7 +79,9 @@ Read `.content-review-queue.json` from the repo root (written by
   nightly re-verification found contradicted (see §Claims index below). A
   non-zero count is why the page jumped the queue.
 - `stale_claim_markers` (when present) — **those findings in full**, each with
-  the `entity_key`, the `verdict`, the `evidence` the nightly verifier
+  the `entity_key`, the `claim_text` (the exact sentence the nightly verifier
+  checked — search the page for it; a marker without one predates 2026-09 and
+  names only the entity), the `verdict`, the `evidence` the nightly verifier
   recorded, the `source` it reached, and `unresolved_reviews` (how many prior
   reviews saw this marker and left it unresolved). **These are the highest-
   priority findings in your queue and you must address every one of them.**
