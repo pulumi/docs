@@ -347,7 +347,18 @@ CAPABILITY_RES = [
 ]
 
 POSITIONING_RES = [
-    re.compile(r"\bthe\s+(?:only|first|canonical|primary|recommended|default|standard|de[- ]facto|leading|preferred)\b", re.IGNORECASE),
+    # "the first" is a stance only as "the first X to/that <verb>" ("the
+    # first IaC tool to support…"); bare ordinals ("for the first deployment",
+    # "the first-class citizen", "the first 30 days") are not positioning
+    # (pulumi/docs#21369 filed one). A positive lookahead says what we want
+    # instead of denylisting nouns that keep leaking.
+    re.compile(r"\bthe\s+(?:only|canonical|primary|recommended|default|standard|de[- ]facto|leading|preferred)\b", re.IGNORECASE),
+    # The frame alone re-admits ordinals followed by an infinitive ("the first
+    # step to take"), so the ordinal nouns are rejected INSIDE the frame.
+    re.compile(r"\bthe\s+first\s+"
+               r"(?!(?:time|step|deployment|run|pass|line|call|attempt|iteration|argument|parameter"
+               r"|element|item|entry|thing|example|section|part|page|half|version|release|commit|request)s?\b)"
+               r"[\w-]+(?:\s+[\w-]+)?\s+(?:to|that)\s+\w+", re.IGNORECASE),
     re.compile(r"\b(?:industry[- ]standard|best[- ]in[- ]class|widely adopted|the go[- ]to|the gold standard|battle[- ]tested|enterprise[- ]grade|world[- ]class|cutting[- ]edge|next[- ]generation|state[- ]of[- ]the[- ]art|revolutionary|seamlessly integrates?|blazing[- ]fast)\b", re.IGNORECASE),
     re.compile(r"\b(?:fastest|slowest|cheapest|easiest|simplest|most popular|most widely used|largest|smallest)\b", re.IGNORECASE),
 ]
