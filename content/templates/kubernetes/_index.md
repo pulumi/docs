@@ -27,6 +27,8 @@ Each major cloud offers a managed control plane so you don't have to operate Kub
 
 Use one of the Kubernetes Cluster templates above to scaffold a Pulumi project that provisions a managed cluster and the surrounding infrastructure (VPC, subnets, IAM, node pools). Each template deploys end to end with `pulumi new` followed by `pulumi up` and exports a `kubeconfig` you can use immediately with `kubectl`.
 
+New to Pulumi? Work through the [Kubernetes get started tutorial](/docs/iac/get-started/kubernetes/) first to deploy a simple app to an existing cluster before provisioning one of your own.
+
 ### How do I deploy applications onto an existing cluster?
 
 Once your cluster is running, the [Kubernetes Application templates](/templates/kubernetes-application/) give you a starting point for deploying workloads — either a [Helm chart](/templates/kubernetes-application/helm-chart/) or a [Kubernetes Deployment + Service](/templates/kubernetes-application/web-application/) — using the same language as your cluster's infrastructure code.

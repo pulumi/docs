@@ -16,13 +16,15 @@ aliases:
     - /docs/quickstart/kubernetes/next-steps/
 ---
 
-Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
+Congrats! By completing this guide you have successfully:
 
-## Video tutorial
+- Created a new Pulumi project.
+- Deployed an NGINX web server to Kubernetes.
+- Modified and redeployed the running program.
+- Refactored the deployment into a reusable component.
+- Destroyed the resources you've provisioned.
 
-Take a deeper look at Pulumi with Kubernetes with this video tutorial.
-
-{{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
+Below are some recommended next steps, depending on your learning style. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
@@ -44,9 +46,15 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/templates/static-website/) to [serverless applications](/templates/serverless-application/), [virtual machines](/templates/virtual-machine/), [container services](/templates/container-service/), and [Kubernetes clusters](/templates/kubernetes/).
+Provision a managed Kubernetes cluster on [AWS](/templates/kubernetes/aws/), [Azure](/templates/kubernetes/azure/), or [Google Cloud](/templates/kubernetes/gcp/), or browse the full [Kubernetes cluster template](/templates/kubernetes/) collection.
 
-{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
+{{< get-started-next-step path="/templates/kubernetes/" label="Browse Kubernetes templates" ref="gs-k8s-templates" >}}
+
+## Video tutorial
+
+Take a deeper look at Pulumi with Kubernetes with this video tutorial.
+
+{{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
 
 ## Dive into the docs
 
