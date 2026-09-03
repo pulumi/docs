@@ -1,0 +1,61 @@
+# TEMPORARY -- delete before this PR merges.
+#
+# Answers one question: does Pulumi ESC over OIDC work on a `pull_request`
+# event with no `environment:` set?
+#
+# label-dependabot.yml needs PULUMI_BOT_TOKEN to approve and arm auto-merge.
+# The only configuration in this repo known to work (pull-request.yml's
+# buildSite) sets `environment: testing`, which produces a different OIDC
+# subject claim:
+#
+#   pull_request, no environment  ->  repo:pulumi/docs:pull_request
+#   environment: testing          ->  repo:pulumi/docs:environment:testing
+#
+# The actor is NOT part of `sub`, so a Dependabot-opened PR and a
+# human-opened PR are indistinguishable to the trust policy. That means this
+# probe, running on an ordinary PR, proves the Dependabot case too -- no
+# waiting for a real Dependabot PR.
+#
+# Prints only whether a token came back and which identity it authenticates
+# as. It never echoes the token itself.
+name: ESC OIDC probe (temporary)
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Fetch ESC secrets (no environment)
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Report
+        continue-on-error: true
+        env:
+          PROBE_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          echo "event=${{ github.event_name }} actor=${{ github.actor }}"
+          if [ -n "${PROBE_TOKEN}" ]; then
+            echo "RESULT: ESC token acquired on a pull_request run with no environment."
+            echo "Authenticated as: $(gh api /user --jq .login 2>&1 || echo 'token cannot call the GitHub API')"
+          else
+            echo "RESULT: NO token."
+            echo "The ESC trust policy does not admit repo:pulumi/docs:pull_request."
+            echo "label-dependabot.yml will need 'environment: testing' on its job."
+          fi
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
