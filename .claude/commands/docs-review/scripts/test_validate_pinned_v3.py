@@ -146,6 +146,23 @@ def test_model_added_placeholder_row_is_legal() -> None:
     assert "v3-blocking-count" not in ids
 
 
+def test_blocking_count_accepts_composed_count_over_in_place_rewrite() -> None:
+    """The model rewrote F1 in place as Spurious and, as instructed, left the
+    composer's header alone. build-evidence.py recomputes the header after
+    validation, so the composed count (3) is legal here — and so is the
+    recomputed one (2), which the update/resolve lanes re-validate
+    (pulumi/docs#21372: refusing the composed count failed the review)."""
+    row = next(l for l in AUTHOR.splitlines() if l.startswith("| **F1** |"))
+    cells = row.split(" | ")
+    cells[-1] = "**Spurious:** the comparison was against stale data |"
+    rewritten = AUTHOR.replace(row, " | ".join(cells))
+    assert "v3-blocking-count" not in rule_ids(check(author=rewritten))
+    recomputed = rewritten.replace("guide v1 — 3 items block merge", "guide v1 — 2 items block merge")
+    assert "v3-blocking-count" not in rule_ids(check(author=recomputed))
+    still_wrong = rewritten.replace("guide v1 — 3 items block merge", "guide v1 — 1 item blocks merge")
+    assert "v3-blocking-count" in rule_ids(check(author=still_wrong))
+
+
 def test_blocking_count_mismatch() -> None:
     wrong = AUTHOR.replace("guide v1 — 3 items block merge", "guide v1 — 7 items block merge")
     assert "v3-blocking-count" in rule_ids(check(author=wrong))
