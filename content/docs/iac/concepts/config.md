@@ -100,7 +100,7 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. {{< pulumi-config-get >}} returns {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} raises an exception with an explanatory error message, stopping the deployment until the value is set with the CLI.
 
 {{% notes type="info" %}}
-Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/concepts/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
+Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use the [Automation API](/docs/iac/concepts/automation-api/). The Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
 {{% /notes %}}
 
 For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which return the config value as an `Output` that carries both the value and its secret-ness, so the value is encrypted whenever it's serialized (see [secrets](/docs/iac/concepts/secrets/) for more on managing secret values).
@@ -271,7 +271,7 @@ class MyComponent extends pulumi.ComponentResource {
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         const config = new pulumi.Config("mylib");
-        const name = config.require("name");
+        const configuredName = config.require("name");
     }
 }
 ```
@@ -287,10 +287,9 @@ class MyComponent(pulumi.ComponentResource):
 
         # Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         config = pulumi.Config("mylib")
-        name = config.require("name")
+        configured_name = config.require("name")
 
         # ...
-
 ```
 
 {{% /choosable %}}
@@ -311,7 +310,7 @@ func NewMyComponent(ctx *pulumi.Context, name string, opts ...pulumi.ResourceOpt
 
     // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
     conf := config.New(ctx, "mylib")
-    name := conf.Require("name")
+    configuredName := conf.Require("name")
 
     // ...
 }
@@ -330,7 +329,7 @@ class MyComponent : Pulumi.ComponentResource
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         var config = new Pulumi.Config("mylib");
-        var name = config.Require("name");
+        var configuredName = config.Require("name");
 
         // ...
     }
@@ -351,7 +350,7 @@ class MyComponent extends ComponentResource {
 
         // Read settings from the 'mylib' namespace (e.g., 'mylib:name').
         var config = ctx.config("mylib");
-        var name = config.require("name");
+        var configuredName = config.require("name");
 
         // ...
     }
@@ -375,7 +374,7 @@ $ pulumi config set --path 'data.nums[1]' 2
 $ pulumi config set --path 'data.nums[2]' 3
 ```
 
-The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:
+The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file. Note the types: `true` and `false` are persisted as boolean values, and values convertible to integers are persisted as integers.
 
 ```yaml
 config:
@@ -386,8 +385,6 @@ config:
     - 2
     - 3
 ```
-
-For structured config, `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
 
 The `data` config can be accessed in your Pulumi program using:
 
@@ -495,7 +492,7 @@ resources:
 
 ### Accessing nested values
 
-`requireObject` and `getObject` return a plain object — a dictionary or map, depending on the language — and not a `Config` instance. So once you have the object, reach into it with ordinary property or key access rather than chaining more `Config` calls. Nesting can go deeper than one level, as in this `api` key:
+`requireObject` and `getObject` return a plain object — a dictionary or map, depending on the language — and not a `Config` instance. Once you have the object, reach into it with ordinary property or key access rather than chaining more `Config` calls. Nesting can go deeper than one level, as in this `api` key:
 
 ```bash
 $ pulumi config set --path 'api.endpoint' "https://api.example.com"
@@ -630,7 +627,7 @@ outputs:
 
 ## Project-level configuration
 
-Some configuration is the same for more than one stack in a project — `aws:region`, for example, is often shared across several stacks or all of them. Project-level configuration (also called hierarchical configuration) lets you set such values once at the project level instead of repeating them in every stack's configuration file.
+Some configuration is the same for more than one stack in a project — `aws:region`, for example, is often shared by every stack in the project. Project-level configuration (also called hierarchical configuration) lets you set such values once at the project level instead of repeating them in every stack's configuration file.
 
 ### Setting project-level configuration
 
@@ -651,7 +648,7 @@ Project-level configuration supports both flat and structured configuration, in 
 Watch for this difference when you move configuration between the two files.
 {{% /notes %}}
 
-Using the keys from the earlier examples, project-level configuration inside `Pulumi.yaml` looks like this:
+Using the keys from the earlier examples, and applying the `value:` wrapper that project-level structured config requires, project-level configuration inside `Pulumi.yaml` looks like this:
 
 ```yaml
 config:
@@ -702,15 +699,15 @@ For example, given this in the `Pulumi.yaml` file:
 
 ```yaml
 config:
-    name:
-        type: string
-        description: Base name to use for resources.
-        default: BroomeLLC
-    subnets:
-        type: array
-        description: Array of subnets to create.
-        items:
-            type: string
+  name:
+    type: string
+    description: Base name to use for resources.
+    default: BroomeLLC
+  subnets:
+    type: array
+    description: Array of subnets to create.
+    items:
+      type: string
 ```
 
 Stacks default to `BroomeLLC` for the `name` configuration item, and the Pulumi CLI reports an error if a stack configuration file sets `name` to, say, an integer. The CLI reports an error in the same way if a stack's `subnets` property is not an array of strings.
@@ -721,7 +718,7 @@ At this time, configuration specifications are not supported for structured conf
 
 ## Provider configuration options
 
-There are three ways to configure providers:
+You can configure providers in three ways:
 
 1. Set configuration keys in the stack configuration file: `pulumi config set [PROVIDER]:[KEY] [VALUE]`
 2. Set a provider-specific environment variable
@@ -765,9 +762,9 @@ config:
 
 The Pulumi CLI only creates or updates tags listed in the config. If you remove a tag from the stack config, remove it from the stack in Pulumi Cloud manually as well.
 
-Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overview tab:
+Stack tags applied by the Pulumi CLI are listed in the **Tags** section of the Overview tab:
 
-![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
+![Tags applied by the Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
 ## Using Pulumi ESC from Pulumi stack config
 
@@ -782,7 +779,7 @@ Once you have an [environment](/docs/esc/concepts/) set up and are [projecting P
 environment:
   - test
 config:
-    # normal pulumi config
+  # normal pulumi config
 ```
 
 When a key is set both by an imported environment and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.
