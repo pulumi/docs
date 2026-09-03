@@ -325,7 +325,7 @@ tedious soon. Here is where we automate deploying our frontend as well.
 
 ## Part 2: Leverage the Automation API
 
-The [Pulumi Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) allows us to run Pulumi commands
+The [Pulumi Automation API](https://www.pulumi.com/docs/iac/concepts/automation-api/) allows us to run Pulumi commands
 without using the CLI manually.
 
 Let's review our basic project file structure first, for context.

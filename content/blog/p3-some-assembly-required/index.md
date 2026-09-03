@@ -190,18 +190,18 @@ Policies:
 
 This allows you to implement company-specific policies that can be as simple or complex as you need them to be.
 
-To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack), with the following commands:
+To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/insights/policy/get-started/), with the following commands:
 
 ```shell
 $ pulumi policy publish myorg
 $ pulumi policy enable myorg/my-policy-pack latest
 ```
 
-Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/using-pulumi/crossguard/faq/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/#policy-groups), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
+Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/insights/policy/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
 
 ## Multi-Language Components (MLC)
 
-In Pulumi, a *[component resource](https://www.pulumi.com/docs/iac/concepts/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/iac/concepts/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/)*. Many of these are already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
+In Pulumi, a *[component resource](https://www.pulumi.com/docs/iac/concepts/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/iac/concepts/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/iac/concepts/packages/)*. Many of these are already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
 
 A *multi-language component (MLC)* is even more useful. You can author your component in your language of choice and then generate a SDK that surfaces that component into all of the languages that Pulumi supports. For example, your platform team might be comfortable writing in Python, but the developers that write your microservices might use Go, and the developers who write the front-end apps might use Node.js. Both teams might need to deploy apps and infrastructure into your Kubernetes cluster. With multi-language components you can write a component in Python that abstracts away all the details of your custom Kubernetes cluster, and make that available to both teams, in both Go, Node.js, and any other language that Pulumi supports.
 

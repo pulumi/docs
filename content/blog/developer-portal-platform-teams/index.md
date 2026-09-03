@@ -104,7 +104,7 @@ Check out the [Pulumi Backstage Plugin](https://github.com/pulumi/pulumi-backsta
 
 ### Compliance Ready Policies
 
-We first released our [CrossGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/) policy-as-code framework nearly 4 years ago, and have seen many large organizations leverage its rich expressiveness, flexibility and early prevention features to enforce key compliance criteria for their organization.  Support in Pulumi Cloud for automatically enforcing these policies across all Pulumi updates within an organization allows platform teams to put compliance guardrails in place for users within their organization.
+We first released our [CrossGuard](https://www.pulumi.com/docs/insights/policy/) policy-as-code framework nearly 4 years ago, and have seen many large organizations leverage its rich expressiveness, flexibility and early prevention features to enforce key compliance criteria for their organization.  Support in Pulumi Cloud for automatically enforcing these policies across all Pulumi updates within an organization allows platform teams to put compliance guardrails in place for users within their organization.
 
 However, traditionally each organization has needed to build their own policies, resulting in some activation energy needed to start benefiting from CrossGuard.  As we’ve worked with many customers to build out their own internal compliance policies using CrossGuard, we've identified some common compliance standards and policies that we can offer directly as part of CrossGuard.
 
@@ -185,7 +185,7 @@ s3_no_public_read = ResourceValidationPolicy(
 
 {{< /chooser >}}
 
-Check out the [documentation](/docs/using-pulumi/crossguard/core-concepts/#resource-remediation) to get started adding remediation policies to your policy-as-code configuration today.
+Check out the [documentation](/docs/insights/policy/policy-packs/authoring/#remediating-policy-violations) to get started adding remediation policies to your policy-as-code configuration today.
 
 ### Deployments GA
 

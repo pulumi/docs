@@ -447,6 +447,6 @@ Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/iac
 
 Remediation policies take Pulumi’s very powerful policy engine, CrossGuard, to the next level. Using them you can not just detect incompliant resources but actually fix them automatically.
 
-Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/#resource-remediation) in the documentation.
+Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/insights/policy/get-started/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#remediating-policy-violations) in the documentation.
 
 Check it out and let us know what you think!
