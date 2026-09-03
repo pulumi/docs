@@ -295,7 +295,7 @@ Anything else useful goes after the sections above. What existing packages add, 
 
 ### When the page gets long
 
-If the installation and configuration material outgrows the overview page, with several authentication methods or a long configuration table, you can move it into a second file, `docs/installation-configuration.md`, which renders as a separate Installation & Configuration page. The large cloud providers do this: the [AWS installation page](/registry/packages/aws/installation-configuration/) runs to several thousand words covering shared credentials files, EC2 instance metadata, OIDC, and ESC.
+If the installation and configuration material outgrows the overview page, with more than one authentication method or a long configuration table, you can move it into a second file, `docs/installation-configuration.md`, which renders as a separate Installation & Configuration page. The large cloud providers do this: the [AWS installation page](/registry/packages/aws/installation-configuration/) runs to several thousand words covering shared credentials files, EC2 instance metadata, OIDC, and ESC.
 
 This is about volume, not an extra requirement. Most packages don't need it, and a single overview page is a complete submission.
 
