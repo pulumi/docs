@@ -56,6 +56,8 @@ const config = {
     // the guides stack to reference to route traffic to for `/guides` routes.
     guidesStack: stackConfig.get("guidesStack"),
 
+    devStack: stackConfig.get("devStack"),
+
     answersStack: stackConfig.get("answersStack"),
 
     // the versioned-docs storage stack (infrastructure/versioned-docs). When set, the
@@ -742,8 +744,8 @@ function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = [
 // "thirty-minute-cache" and "one-year-cache" names are preserved so Pulumi
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
 //
-// thirtyMinuteCachePolicy varies on the Accept header so /registry/* and
-// /guides/* (which proxy to separate CDNs whose viewer-request functions do
+// thirtyMinuteCachePolicy varies on the Accept header so /registry/*, /guides/*,
+// and /dev/* (which proxy to separate CDNs whose viewer-request functions do
 // markdown content negotiation) cache HTML and markdown variants separately
 // at the apex layer. Without this, whichever variant populates the apex cache
 // first is served to every requester until TTL. Fragmentation is bounded to
@@ -1026,6 +1028,47 @@ if (config.guidesStack) {
     )
 }
 
+const devOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const devBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.devStack) {
+    const devStack = new pulumi.StackReference(config.devStack);
+    const devCDN = devStack.getOutput("cloudFrontDomain");
+
+    devOrigins.push(
+        {
+            originId: devCDN,
+            domainName: devCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
+        }
+    );
+    devBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: devCDN,
+            pathPattern: "/dev*",
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: devCDN,
+            // The Dev Center (Astro) emits root-relative assets under /assets/*
+            // (CSS, JS, images), so those must reach the same origin as /dev or
+            // the pages render unstyled. pulumi/docs serves its own assets from
+            // /css and /js, so /assets is free to hand to marketing-web.
+            pathPattern: "/assets*",
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        },
+    )
+}
+
 // Versioned SDK & CLI docs: a permanent archive bucket (its own stack) reached as an
 // S3 website endpoint, served under /docs/versioned/*. Additive and fully optional —
 // when versionedDocsStack is unset, nothing here runs and the distribution is unchanged.
@@ -1196,6 +1239,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         ...registryOrigins,
         ...guidesOrigins,
+        ...devOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
         ...supportFormOrigins,
@@ -1227,6 +1271,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
         ...registryBehaviors,
         ...guidesBehaviors,
+        ...devBehaviors,
         ...answersBehaviors,
 
         // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and

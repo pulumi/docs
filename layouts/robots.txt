@@ -14,4 +14,9 @@ Disallow: /docs/search/$
 # Disallow azure-native-v2. See https://github.com/pulumi/pulumi-azure-native/issues/3420 for details.
 Disallow: /registry/packages/azure-native-v2
 
+# Keep the Dev Center (/dev) out of search until the cutover. Removed then, when
+# the redirects land and a Sitemap line for /dev/sitemap-index.xml is added.
+Disallow: /dev$
+Disallow: /dev/
+
 Sitemap: https://www.pulumi.com/sitemap-index.xml
