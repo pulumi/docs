@@ -132,7 +132,7 @@ The new Policy Pack wizard also makes it easier than ever to create a new policy
 
 ![Compliance Ready Policies in New Policy Project Wizard](/blog/developer-portal-platform-teams/compliance-ready-policies.png)
 
-Check out the [documentation](/docs/using-pulumi/crossguard/compliance-ready-policies) and [open source repository](https://github.com/pulumi/compliance-policies/) to get started with Compliance-Ready Policies today.
+Check out the [documentation](https://github.com/pulumi/compliance-policies) and [open source repository](https://github.com/pulumi/compliance-policies/) to get started with Compliance-Ready Policies today.
 
 ### Remediation Policies
 

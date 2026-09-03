@@ -18,7 +18,7 @@ Pulumi’s policy as code engine, [CrossGuard](/crossguard), is already very fle
 
 ## A Refresher on CrossGuard
 
-CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](/docs/using-pulumi/crossguard/awsguard) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
+CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
 
 To roll your own, you create a "policy pack" in one of the supported languages (currently JavaScript, Python, TypeScript, or Open Policy Agent (OPA) Rego). A policy pack is a collection of policies which are just objects and functions that are given an opportunity to inspect the resource graph and report whether any policy violations have been detected. They're packaged natively (such as NPM, PyPI, etc) and Pulumi runs the policies at the right time with the right data to enforce them.
 

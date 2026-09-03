@@ -146,7 +146,7 @@ Another strong benefit of this approach is that all secrets will be encrypted bo
 
 ## Pulumi Crossguard: Policy-as-Code
 
-Pulumi Crossguard allows you to check and enforce policies on your deployments. Policies are rules, written in code, that run during deployments to check that the resources are conforming to the necessary criteria. You can use off-the-shelf policies like [AWSGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/awsguard) and [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
+Pulumi Crossguard allows you to check and enforce policies on your deployments. Policies are rules, written in code, that run during deployments to check that the resources are conforming to the necessary criteria. You can use off-the-shelf policies like [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) and [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
 
 Either way you end up with a *policy pack* that you can apply to your entire Pulumi organization via Pulumi Cloud.
 
