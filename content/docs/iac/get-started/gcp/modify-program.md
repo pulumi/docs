@@ -354,7 +354,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```typescript
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 export const bucketName = bucket.url;
 
 // Export the bucket's public URL
@@ -381,7 +381,7 @@ bucket = storage.Bucket(
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```python
-# Export the DNS name of the bucket
+# Export the bucket's gs:// URL
 pulumi.export("bucket_name", bucket.url)
 
 # Export the bucket's public URL
@@ -415,7 +415,7 @@ if err != nil {
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```go
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 ctx.Export("bucketName", bucket.Url)
 
 // Export the bucket's public URL
@@ -469,7 +469,7 @@ var bucket = new Bucket("my-bucket", BucketArgs.builder()
 Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```java
-// Export the DNS name of the bucket
+// Export the bucket's gs:// URL
 ctx.export("bucketName", bucket.url());
 
 // Export the bucket's public URL
