@@ -20,6 +20,10 @@ Recently, Pulumi community member Josh Graham decided to bootstrap a simple appl
 <!--more-->
 ***
 
+{{% notes type="warning" %}}
+This post uses Pulumi's `@pulumi/cloud` framework (`cloud.API`, `cloud.Table`), which has since been [archived](https://github.com/pulumi/pulumi-cloud) and is no longer maintained. For higher-level AWS abstractions, see [Crosswalk for AWS](/docs/iac/guides/clouds/aws/).
+{{% /notes %}}
+
 ## Introduction
 
 I first encountered [Pulumi](https://www.pulumi.com/) a few years ago when I was getting a little frustrated at the lack of some expressibility in [Terraform](https://www.terraform.io/). I've been using Terraform from almost day 1 and it really does the job well --- providing you really grok its declarative nature, are very good at modularisation, and never need an escape hatch to non-declarative instructions. At the time, though, Pulumi wasn't ready for me to use, so I watched from a distance.
@@ -64,7 +68,7 @@ Despite the documentation, it can be quite confusing and becomes even more so wh
 
 The big thing to remember is that a Pulumi "output" value [is not known until after the infrastructure has been fully provisioned](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/). They are a promise of a future value. If you want to refer to the value in other infrastructure code, Pulumi creates a dependency graph to be able to resolve the value at the right time. If, however, you want to refer to the value at runtime and you want to define that runtime code in a modular way, you have to be clear about how that value is presented by Pulumi to that runtime code.
 
-Our infrastructure code provisions a DynamoDB table and an AWS Lambda. That Lambda needs to know the name of that table at runtime in order to query it. Because the *actual* name of the table isn't known until provisioning is underway (Pulumi creates many infrastructure resources based on the logical name but with suffixes to avoid naming collisions), we need a way to get the "output" table name from Pulumi's `aws.dynamodb.Table` [API](https://www.pulumi.com/registry/packages/aws/api-docs/dynamodb/table/#example-usage) to the Lambda we'll create with the "simpler" way to create a Lambda using Pulumi's `cloud.API` [API](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/cloud/#API).
+Our infrastructure code provisions a DynamoDB table and an AWS Lambda. That Lambda needs to know the name of that table at runtime in order to query it. Because the *actual* name of the table isn't known until provisioning is underway (Pulumi creates many infrastructure resources based on the logical name but with suffixes to avoid naming collisions), we need a way to get the "output" table name from Pulumi's `aws.dynamodb.Table` [API](https://www.pulumi.com/registry/packages/aws/api-docs/dynamodb/table/#example-usage) to the Lambda we'll create with the "simpler" way to create a Lambda using Pulumi's `cloud.API` (see the archived [pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repository).
 
 You'll see in the [ContactApi](https://bitbucket.org/delitescere/contact/src/main/infra/contact/api.ts) infrastructure resource an `Inputs` class with `static` members. This is the key to transferring, in the simplest way I've found, values from provision-time infrastructure code to runtime application code. This class is only available in that file, so for each resource that needs to pass provision-time values to runtime code, you can create one specifically for the values you want to pass.
 
@@ -76,7 +80,7 @@ I played with various ways to transfer Pulumi inputs to runtime code but this wa
 
 As mentioned above, we provision a DynamoDB table, an API Gateway, and a Lambda.
 
-We could (and indeed I originally did) provision the table with the "simpler" `cloud.Table` [API](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/cloud/#Table) but I wanted specific control over the attributes and secondary indexes for DynamoDB (so I could, for example, query for new records since a particular date). The `cloud.Table` abstraction works across cloud platform providers, and there may be mechanisms to offer finer-grained / platform-specific options (but I haven't found them yet).
+We could (and indeed I originally did) provision the table with the "simpler" `cloud.Table` (see the archived [pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repository) but I wanted specific control over the attributes and secondary indexes for DynamoDB (so I could, for example, query for new records since a particular date). The `cloud.Table` abstraction works across cloud platform providers, and there may be mechanisms to offer finer-grained / platform-specific options (but I haven't found them yet).
 
 We do provision a Lambda, *but with the actual simplicity of this application's needs, we could dispense with the Lambda and have the API Gateway do a non-proxy integration straight to DynamoDB's HTTP API*. Given many applications would include a Lambda somewhere along the way, I thought it was worth showing Pulumi provisioning a Lambda and integrating it to an API Gateway using it's `cloud.API` abstraction.
 
