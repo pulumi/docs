@@ -34,7 +34,7 @@ category: tutorials
 [IAM Roles]:/registry/packages/aws/api-docs/iam/role
 [Amazon SageMaker Model Endpoint]:/registry/packages/aws/api-docs/SageMaker/model
 [CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
-[Pulumi project and stack]:/docs/using-pulumi/organizing-projects-stacks/
+[Pulumi project and stack]:/docs/iac/guides/basics/organizing-projects-stacks/
 [Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
 [Pulumi state]:https://www.pulumi.com/docs/iac/concepts/state-and-backends
 [Python Virtual Environment]:/docs/languages-sdks/python/#virtual-environments

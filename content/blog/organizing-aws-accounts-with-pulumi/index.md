@@ -371,6 +371,6 @@ Use Pulumi component resources to provision AWS Organizations units, member acco
 There’s so much more you can do with AWS Organizations and Pulumi.
 
 * Learn about [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) and how you can centrally control the maximum available permissions in a member account, for example.
-* These Pulumi features could be combined to provide a powerful self-service mechanism for your organization: [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/), [Policy-as-Code](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/) (similar in its principle to AWS SCPs but operates at the Pulumi resource-level so you can validate every resource created using Pulumi)
+* These Pulumi features could be combined to provide a powerful self-service mechanism for your organization: [Automation API](https://www.pulumi.com/docs/iac/concepts/automation-api/), [Policy-as-Code](https://www.pulumi.com/docs/insights/policy/get-started/) (similar in its principle to AWS SCPs but operates at the Pulumi resource-level so you can validate every resource created using Pulumi)
 * [Best practices for your management account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_best-practices_mgmt-acct.html)
 * [Best practices for your member accounts](https://docs.aws.amazon.com/organizations/latest/userguide/best-practices_member-acct.html)

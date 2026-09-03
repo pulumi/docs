@@ -192,4 +192,4 @@ In this tutorial, you created raw and secret configuration values in your projec
 To learn more about managing and utilizing configuration and secrets in Pulumi, take a look at the following resources:
 
 - Learn more about more about how to centralize your configuration and secrets in the [Pulumi ESC](/docs/esc/) documentation.
-- Learn more about stack outputs and references in the [Stack Outputs and References](/docs/using-pulumi/stack-outputs-and-references/) tutorial.
+- Learn more about stack outputs and references in the [Reference AWS Resources Across Stacks](/tutorials/stack-outputs-refs-aws/) tutorial.

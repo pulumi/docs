@@ -82,7 +82,7 @@
         <section id="benefits" class="lg:my-32 relative">
 
             <div class="container mx-auto my-16 ">
-                <h2 class="mx-auto text-center mb-16">{{ .Params.benefits.title | markdownify }}</h2>
+                <h2 class="mx-auto text-center mb-16">{{ partial "functions/heading-br-space.html" .Params.benefits.title | markdownify }}</h2>
                 <div class="benefits-section">
                     {{ range $item := .Params.benefits.items }}
                         <div class="benefits-item-auto-h card bg-white">
