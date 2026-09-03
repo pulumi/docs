@@ -347,7 +347,13 @@ CAPABILITY_RES = [
 ]
 
 POSITIONING_RES = [
-    re.compile(r"\bthe\s+(?:only|first|canonical|primary|recommended|default|standard|de[- ]facto|leading|preferred)\b", re.IGNORECASE),
+    # "the first" is an ordinal far more often than a stance ("for the first
+    # deployment, create it" was filed as positioning on pulumi/docs#21369);
+    # keep "the first IaC tool" and drop the temporal/ordinal nouns.
+    re.compile(r"\bthe\s+(?:only|canonical|primary|recommended|default|standard|de[- ]facto|leading|preferred"
+               r"|first(?!\s+(?:time|step|deployment|run|pass|line|call|attempt|iteration|argument|parameter|element"
+               r"|item|entry|character|column|row|version|release|commit|request|example|section|part|half|page|one|few|two|three)\b))\b",
+               re.IGNORECASE),
     re.compile(r"\b(?:industry[- ]standard|best[- ]in[- ]class|widely adopted|the go[- ]to|the gold standard|battle[- ]tested|enterprise[- ]grade|world[- ]class|cutting[- ]edge|next[- ]generation|state[- ]of[- ]the[- ]art|revolutionary|seamlessly integrates?|blazing[- ]fast)\b", re.IGNORECASE),
     re.compile(r"\b(?:fastest|slowest|cheapest|easiest|simplest|most popular|most widely used|largest|smallest)\b", re.IGNORECASE),
 ]
