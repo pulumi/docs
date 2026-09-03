@@ -1,4 +1,5 @@
 name: Invalidate /dev cache
+run-name: Invalidate /dev cache
 
 # Invalidates the Dev Center cache, which lives at `/dev` behind the CloudFront CDN managed by pulumi/docs.
 # We do this with a workflow dispatch because the Dev Center deploys on its own schedule (so its cache needs
