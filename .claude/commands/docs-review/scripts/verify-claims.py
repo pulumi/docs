@@ -688,6 +688,19 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
         lines.append(f"- source_hint: {claim['source_hint']}")
     if claim.get("found_by"):
         lines.append(f"- found_by: {', '.join(str(x) for x in claim['found_by'])}")
+    # Set by callers that verify from the claims index (reverify-claims.py),
+    # where the claim arrives without the page: the extracted sentence may
+    # have lost the scope its heading establishes, and this puts it back.
+    if claim.get("context"):
+        lines += [
+            "",
+            "Where the page makes this claim — the heading it sits under and the "
+            "surrounding prose. The claim's scope is whatever this establishes; "
+            "judge the claim as the page states it there, not the sentence alone:",
+            "```",
+            str(claim["context"]),
+            "```",
+        ]
     if impl_refs and route in ("pass1", "pass3"):
         lines += [
             "",
