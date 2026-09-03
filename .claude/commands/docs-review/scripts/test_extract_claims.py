@@ -128,6 +128,27 @@ def _types(doc: dict) -> set[str]:
 
 # ---- extract-claims.py: synthetic per-category --------------------------------
 
+def test_ordinal_the_first_is_not_a_stance() -> None:
+    """"the first" is an ordinal far more often than positioning: pulumi/docs#21369
+    filed "for the first deployment, create it" as an editorial stance."""
+    print("test_ordinal_the_first_is_not_a_stance")
+    d = run_extract(_mk_patch("content/docs/x.md", [
+        "The workflow below assumes a live `blue` environment already exists: for the first deployment, create it.",
+        "Run it the first time with `--yes`.",
+        "Stacks are the first-class unit here; the first steps take the first 30 days.",
+        "The first step to take is a preview; the first thing to do afterwards is read the diff.",
+        "The first steps to take are previews; the first lines that match are printed.",
+        "Pulumi was the first IaC tool to support general-purpose languages.",
+    ]))
+    pos = [c for c in d["claims"] if c["type"] == "positioning"]
+    check(not any("deployment" in c["text"] for c in pos), f"ordinal: 'the first deployment' must not be positioning; got {[c['text'] for c in pos]}")
+    check(not any("first time" in c["text"] for c in pos), f"ordinal: 'the first time' must not be positioning; got {[c['text'] for c in pos]}")
+    check(not any(("first-class" in c["text"] or "first steps" in c["text"]) for c in pos), f"ordinal: hyphenated/plural/numeric 'the first' must not be positioning; got {[c['text'] for c in pos]}")
+    check(not any(("first steps to" in c["text"] or "first lines that" in c["text"]) for c in pos), f"ordinal: plural 'the first steps to take' must not be positioning; got {[c['text'] for c in pos]}")
+    check(not any(("first step to" in c["text"] or "first thing to" in c["text"]) for c in pos), f"ordinal: 'the first step to take' must not be positioning; got {[c['text'] for c in pos]}")
+    check(any("first IaC tool" in c["text"] for c in pos), f"stance: 'the first IaC tool' must stay positioning; got {[c['text'] for c in pos]}")
+
+
 def test_synthetic_categories() -> None:
     print("test_synthetic_categories")
     d = run_extract(_mk_patch("content/blog/x.md", [

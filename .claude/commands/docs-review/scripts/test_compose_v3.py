@@ -366,3 +366,30 @@ def test_stances_survive_build_evidence(v3_with_stances, tmp_path):
     assert html.returncode == 0, html.stderr
     page = (tmp_path / "e.html").read_text()
     assert 'id="stances"' in page and "fastest path" in page
+
+
+def test_empty_checks_sentinel_acknowledges_stances(v3_with_stances, tmp_path):
+    """An empty ⚠️ table above a stances H4 must not say nothing needs a human
+    eye (pulumi/docs#21369). All three emitters agree: apply-update's
+    re-render, build-evidence's collapse, and the composer's helper."""
+    author, brief, ev = v3_with_stances
+    assert cr.STANCES_HEADING in brief
+    # apply-update: every brief row dropped → the stance-aware sentinel.
+    rows = au._collect_rows(author, brief)
+    author_only = {fid: r for fid, r in rows.items() if r["doc"] == "author"}
+    out = au._render_doc(brief, author_only, [], doc="brief")
+    assert cr._V3_EMPTY_CHECKS_STANCES in out and cr._V3_EMPTY_CHECKS not in out
+    assert out.index(cr._V3_EMPTY_CHECKS_STANCES) < out.index(cr.STANCES_HEADING)
+    # build-evidence: a table left with only furniture collapses the same way.
+    be = _load("build_evidence_for_sentinel", HERE / "build-evidence.py")
+    lines = brief.splitlines()
+    span = next((s, e) for b, s, e in be._sections(brief, be.BRIEF_SECTIONS) if b == "reviewer-check")
+    furniture = lines[:span[0]] + ["", cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, ""] + lines[span[1]:]
+    collapsed = be._collapse_empty_tables("\n".join(furniture), be.BRIEF_SECTIONS)
+    assert cr._V3_EMPTY_CHECKS_STANCES in collapsed and cr._V3_EMPTY_CHECKS not in collapsed
+    # No stances below → the plain sentinel, unchanged.
+    assert cr.empty_checks_sentinel(False) == cr._V3_EMPTY_CHECKS
+    h4 = furniture.index(cr.STANCES_HEADING)
+    nxt = next(i for i in range(h4 + 1, len(furniture)) if furniture[i].startswith("### "))
+    without = "\n".join(furniture[:h4] + furniture[nxt:])
+    assert cr._V3_EMPTY_CHECKS in be._collapse_empty_tables(without, be.BRIEF_SECTIONS)
