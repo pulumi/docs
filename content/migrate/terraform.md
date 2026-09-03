@@ -104,7 +104,7 @@ sections:
     tag_line: HCL as a Pulumi language
     title: Write HCL, get the whole ecosystem
     description: |
-      Set `runtime: hcl` and your existing `.tf` files run on the Pulumi engine as they are. There are no syntactical differences to learn and nothing to convert.
+      Set `runtime: hcl` and your existing `.tf` files run on the Pulumi engine, with the same syntax and nothing to convert. Terraform's own state and versioning blocks are the exception: Pulumi manages state itself, so `backend` and `required_version` are ignored with a warning, and a `cloud` block has to be removed. The [language reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/#terraform-compatibility) lists every difference.
 
       HCL programs reach the full Pulumi ecosystem: thousands of providers, Pulumi Cloud, ESC, policies, and Neo. Teams that prefer HCL can also publish components that colleagues consume from any other Pulumi language.
     cta_text: Read the HCL docs
