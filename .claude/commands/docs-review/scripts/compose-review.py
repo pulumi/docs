@@ -2011,6 +2011,19 @@ def _review_state_block(high_water: int) -> str:
 _V3_EMPTY_OUTSTANDING = "_Nothing to fix — this section is empty._"
 _V3_EMPTY_QUESTIONS = "_No open questions for you._"
 _V3_EMPTY_CHECKS = "_Nothing needs a human eye beyond the rubber-stamp list below._"
+# The ⚠️ section can be empty of findings and still carry the verdict-free
+# editorial-stances H4 under it, which DOES need a human eye. The sentinel
+# has to know (pulumi/docs#21369, 2026-09-03: "Nothing needs a human eye"
+# printed directly above a stance the reviewer was asked to confirm).
+_V3_EMPTY_CHECKS_STANCES = "_No findings to check — but the editorial stances below still need a human eye._"
+V3_EMPTY_CHECKS_SENTINELS = (_V3_EMPTY_CHECKS, _V3_EMPTY_CHECKS_STANCES)
+
+
+def empty_checks_sentinel(stances_follow: bool) -> str:
+    """The ⚠️ section's empty-table sentinel; every emitter (composer,
+    build-evidence's collapse, apply-update's re-render) picks it here so the
+    wording can't contradict the stances block below it."""
+    return _V3_EMPTY_CHECKS_STANCES if stances_follow else _V3_EMPTY_CHECKS
 # The browser-editing hint under the author tables. Named because the section
 # and detail-block walkers in build-evidence.py / apply-update.py must treat it
 # as a boundary: a detail block that swallowed it, and a section span that ran
@@ -2298,7 +2311,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "### ⚠️ Check these before approving",
         "",
     ]
-    brief += _finding_table(check_lines, _V3_EMPTY_CHECKS)
+    stance_block = render_stances(prep["candidate_stances"])
+    brief += _finding_table(check_lines, empty_checks_sentinel(bool(stance_block)))
     if check_lines:
         _team_txt = getattr(args, "routed_team", "") or "the routed reviewer team"
         brief += ["", f"_Not your area? Any member of {_team_txt} can approve "
@@ -2310,7 +2324,6 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     # `#### ` terminates every row walker (build-evidence, apply-update,
     # validate-pinned), so the sub-list is invisible to finding parsing and
     # survives an update-lane re-render of the table above it.
-    stance_block = render_stances(prep["candidate_stances"])
     if stance_block:
         brief += ["", stance_block]
     brief += [

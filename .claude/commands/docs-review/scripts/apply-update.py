@@ -530,7 +530,12 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
             new_lines = _table(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
         else:
             bucket_rows = by_bucket.get(bucket)
-            new_lines = _table(bucket_rows) if bucket_rows else [SECTION_EMPTY.get(bucket, "")]
+            empty = SECTION_EMPTY.get(bucket, "")
+            if bucket == "reviewer-check":
+                # A stances H4 directly below the ⚠️ span still needs a human
+                # eye; the sentinel says so (same rule as the composer).
+                empty = cr.empty_checks_sentinel(end < len(lines) and lines[end].startswith(cr.STANCES_HEADING))
+            new_lines = _table(bucket_rows) if bucket_rows else [empty]
             if doc == "author" and detail_blocks:
                 for fid in by_bucket.get(bucket + ":ids", []):
                     if fid in detail_blocks:
