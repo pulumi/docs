@@ -93,18 +93,17 @@ We recommend writing documentation to help others in the Pulumi community use yo
 
 ### Overview, installation, & configuration
 
-Specifically, you should author a few pages:
-
-1. `_index.md`, which will be shown on the Overview tab for your package. The title of this page should match the package display name and is the heading shown on the package detail page. The Overview is a great place to include a description of what your package does, a simple example, and any other details that you want prospective users of your package to know to be successful.
-1. `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. Use this page to describe how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package. The title of this page should be in the form `<Package display name> Installation & Configuration`.
+`docs/_index.md` is the only documentation page the Pulumi Registry requires. It renders as your package's Overview tab, and it's where a reader decides whether your package does what they need and how to start using it. Give it a description of what your package does, a simple example, and whatever else a prospective user needs to succeed. Follow the [Overview page guidelines](https://github.com/pulumi/registry/blob/master/docs/overview-page.md) for the required front matter (`title`, `meta_desc`, `layout: package`) and expected section order.
 
 {{% notes type="info" %}}
-We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
+We recommend keeping the contents of `README.md` and `docs/_index.md` similar or the same, save for the YAML front matter that's in `_index.md`.
 {{% /notes %}}
 
-For reference, the [ImprovMX](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/improvmx) community provider is a well-authored example: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md) and [`installation-configuration.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/installation-configuration.md). The [Logfire provider](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/logfire) is another recent example.
+If your installation and configuration material outgrows the Overview page &mdash; several authentication methods, a long configuration table &mdash; move it into a second page, `docs/installation-configuration.md`, which renders as a separate Installation & Configuration tab. This is about volume, not an extra requirement: most packages don't need it, and a single Overview page is a complete submission. The large cloud providers use it; see the [AWS installation & configuration page](/registry/packages/aws/installation-configuration/) for an example.
 
-Although you author these files in your package repository's `docs/` folder, they are published through the [`pulumi/registry` GitHub repository](https://github.com/pulumi/registry), under `themes/default/content/registry/packages/<your-package>/`. The [Publish the documentation](#publish-the-documentation) section below explains how to submit them.
+For reference, the [ImprovMX](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/improvmx) community provider is a well-authored example: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md). The [Logfire provider](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/logfire) is another recent example.
+
+You author these files in your package repository's `docs/` folder, and never commit them to the [`pulumi/registry` GitHub repository](https://github.com/pulumi/registry) yourself &mdash; the [Submit your package to the Registry](#submit-your-package-to-the-registry) section below explains how the Registry picks them up.
 
 ### Package metadata
 
@@ -146,27 +145,40 @@ Once you've authored and tested your package locally, you can publish it to make
 
   If your package is hosted on GitHub, the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action publishes the npm, PyPI, NuGet, and Maven Central SDKs in a single step (select languages with its `sdk:` input); you push the Go module tag separately. See the [Publishing SDKs](/docs/iac/guides/building-extending/packages/executable-plugin/#publishing-sdks) section of the executable-plugin guide for the full workflow.
 - The plugin binary to a host of your choice (GitHub Releases, GitLab Releases, or a custom HTTP endpoint).
-- The [package documentation](#publish-the-documentation) — overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/).
+- The [package documentation](#write-documentation) — overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/).
 
 For how to cross-compile the plugin binary, the archive naming convention the CLI expects, and the supported `pluginDownloadURL` forms, see [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/). That guide also covers the canonical release pipeline used by Pulumi's own providers, including the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action for publishing SDKs.
 
-## Publish the documentation
+## Submit your package to the Registry
 
-All package documentation in the Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package to the Pulumi Registry:
+Registering your package with the Pulumi Registry is a pull request against the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry) that adds exactly one entry to [`community-packages/package-list.json`](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json), and changes nothing else:
 
-1. Fork and clone the [`pulumi/registry` repository](https://github.com/pulumi/registry).
-1. Add your package to [the community package list](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json)
-    1. Add your package's GitHub repo slug, e.g. `"checkly/pulumi-checkly"`
-    1. Add the path to your package's `schema.json` file from the root of your provider repository, e.g. `"provider/cmd/pulumi-resource-checkly/schema.json"`
-1. Add your documentation files to `themes/default/content/registry/packages/<your-package>/`, including the `_index.md` and `installation-configuration.md` files you authored in your provider repository's `docs/` folder.
-1. Open a pull request with the above changes and await review from a Pulumi team member. For a complete example of a community package submission, see [pulumi/registry#10358](https://github.com/pulumi/registry/pull/10358).
+```json
+{
+  "repoSlug": "<owner>/<repo>",
+  "schemaFile": "provider/cmd/pulumi-resource-<name>/schema.json"
+}
+```
+
+That one entry is the whole registration. Your `docs/_index.md`, API docs, and package metadata are all generated from your repository and published after merge, so don't commit generated files &mdash; a PR that touches anything besides `package-list.json` (and, for a brand-new publisher, [`publisher-names.json`](https://github.com/pulumi/registry/blob/master/tools/resourcedocsgen/pkg/publishers/publisher-names.json)) is automatically rejected. For a recent example of a complete submission, see [pulumi/registry#12279](https://github.com/pulumi/registry/pull/12279).
+
+Before you open the PR, confirm:
+
+- Your provider has a `v`-prefixed [Semver 2.0](https://semver.org) release, e.g. `v1.2.3`.
+- The `schemaFile` path resolves in your repository at that release.
+- Your repository has `docs/_index.md`, following the [Overview page guidelines](https://github.com/pulumi/registry/blob/master/docs/overview-page.md).
+- The SDKs you advertise are actually published.
+
+Not sure about one of these? Open the PR anyway; the automated check will tell you exactly what's missing.
 
 {{% notes %}}
-API docs for your package will be automatically generated at the time of building the registry site. You do not need to take any action to generate API docs other than making sure your package repository has the right `schema.json` (or `.yaml`).
+A **dynamically bridged** Terraform provider &mdash; one you consume with `pulumi package add terraform-provider <name>`, with no provider repository or committed `schema.json` &mdash; can't be added by pull request. Open a [New Package issue](https://github.com/pulumi/registry/issues/new?template=new-package.yml) to request one instead.
 {{% /notes %}}
 
-From there, a Pulumi employee will work with you to get your Pulumi Package published. To do so, they'll:
+### What happens after you open the PR
 
-1. Review your pull request and trigger the automation that builds the package listing and the API docs from your schema.
-1. Merge upon approval of your PR
-1. On merging, CI will automatically publish your package listing and API docs to pulumi.com/registry.
+Automated checks run on your PR and post a fact-sheet comment: they pin your latest release, install the SDKs you advertise, and validate your docs. They hold no secrets, so they run on a fork just as well as a branch in the repository.
+
+- If something is red, fix it in your provider repository &mdash; cut a release, publish an SDK, correct the schema path &mdash; then comment `/check` on the PR to re-run the check. It reads your live upstream repository, not this diff, so you never need to push a new commit here to re-validate.
+- A Pulumi maintainer reads the fact-sheet, may comment `/preview` to build a live preview of your package's pages, and approves. Nothing merges automatically.
+- After merge, your package listing and API docs are generated from your schema and published to pulumi.com/registry for you. You never commit generated files to `pulumi/registry`.
