@@ -167,7 +167,7 @@ You can author a Pulumi package in any language, create a hand-authored schema, 
 However, publishing SDKs—and, in some cases, compiling your component to a binary with the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)—might work better when:
 
 - If the component is intended for internal use and your organization has security policies that restrict the ability of developers to install software on their devices (specifically, a required runtime for your package), writing your component in Go and publishing it as a binary with published SDKs hosted in an internal package feed will make it easier for consumers to use your package.
-- If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, you should write your component in Go, and publish it as a binary with published SDKs hosted in the standard public package feeds (i.e., npm, PyPI, etc.). Note that the Pulumi Registry requires package contributors to generate SDKs in all languages Pulumi supports.
+- If you are intending to publish your component(s) in the Pulumi Registry for general public consumption, you should write your component in Go, and publish it as a binary with published SDKs hosted in the standard public package feeds (i.e., npm, PyPI, etc.). We recommend publishing SDKs for all the languages Pulumi supports, so your package is usable by the whole Pulumi community.
 - Your team is comfortable writing and maintaining code in Go.
 - Your organization already has the package feeds necessary to host SDKs in all languages that might consume the component.
 

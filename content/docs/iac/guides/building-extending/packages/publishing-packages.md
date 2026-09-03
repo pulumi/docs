@@ -23,150 +23,373 @@ aliases:
 This page covers publishing a [Pulumi package](/docs/iac/concepts/packages/) to the public [Pulumi Registry](/registry/) so it's discoverable by the Pulumi community.
 
 {{% notes type="info" %}}
-Publishing to your organization's **[Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/)**? Use the [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) command — see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/) for the full workflow. This page covers the public Pulumi Registry only.
+Publishing to your organization's [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/)? Use the [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) command, and see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/) for the full workflow. This page covers the public Pulumi Registry only.
 {{% /notes %}}
 
 You can publish the following types of packages to the public Pulumi Registry:
 
-- A [component](/docs/iac/concepts/components) or related group of components
+- A [component](/docs/iac/concepts/components/) or related group of components
 - A custom provider where you define the CRUD operations for each resource type
 - A bridged provider, which wraps an existing Terraform provider and leverages its code to perform the CRUD operations for each resource type
 
 {{% notes type="info" %}}
-If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, please [reach out to our partners team](/contact).
+If you are a cloud or SaaS provider interested in publishing a Pulumi provider or component, [submit a general inquiry](/contact/?form=general) and ask to be put in touch with our partners team.
 {{% /notes %}}
+
+## Which path applies
+
+Most packages are added to the Registry by pull request. That's the path for any package published with a committed `schema.json`: a component package, a native provider, or a Terraform provider you've bridged into a package of your own. You don't need to file an issue first, and the rest of this guide walks that path end to end.
+
+An [Any Terraform Provider](#consider-any-terraform-provider-first) package is different. These are the packages consumed with `pulumi package add terraform-provider <name>`, which the Registry calls *dynamically bridged*. They have no provider repository and no committed schema, so they can't be added by pull request; their listings come from a separate Pulumi pipeline. Open a [New Package issue](https://github.com/pulumi/registry/issues/new?template=new-package.yml) to request one instead. Use the same issue to request a package you don't maintain, or to discuss a submission before opening a pull request.
+
+For help with either path, reach out on the [Pulumi community Slack](https://slack.pulumi.com/) or [submit a general inquiry](/contact/?form=general).
+
+### Consider Any Terraform Provider first
+
+If a Terraform or OpenTofu provider already exists for your service, your users may not need a Pulumi package at all. With [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/), they run `pulumi package add terraform-provider <author>/<name>` and Pulumi generates a fully typed local SDK from the provider's schema. There's nothing to author, nothing to release, and nothing to keep in sync with upstream.
+
+Bridging it into a package of your own buys you control over the package name, the documentation, and the release cadence, at the cost of a package you have to keep current with every upstream release.
+
+Popular Terraform providers appear in the Registry as Any Terraform Provider listings, so readers can find and evaluate them there the same as any other package. [Honeycomb](/registry/packages/honeycombio/) and [Supabase](/registry/packages/supabase/) are examples.
+
+To have a Terraform provider listed this way, open a [New Package issue](https://github.com/pulumi/registry/issues/new?template=new-package.yml) with the provider's name and repository. These listings are generated automatically and carry no logo by default; to add one, contact [Pulumi support](/support/new/) with a link to a web-accessible SVG. Wordmarks are preferred, with all surrounding whitespace removed.
 
 ## Prerequisites
 
 {{% notes type="info" %}}
-This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package.
+This guide assumes you're using GitHub to host your package's source code and GitHub Actions to publish various parts of your package. Using GitHub isn't a requirement, but the Registry reads your package's schema and documentation from a GitHub release, so a package hosted elsewhere needs a different arrangement. Ask on the [Pulumi community Slack](https://slack.pulumi.com/) if that's you.
 {{% /notes %}}
 
-- You need to [install Pulumi](/docs/install/).
-- You should be familiar with the Pulumi [Resource and Component model](/docs/iac/concepts/resources/).
-- Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
-- To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
+- [Install Pulumi](/docs/install/).
+- Be familiar with the Pulumi [resource and component model](/docs/iac/concepts/resources/).
+- Have the toolchain for your authoring language installed. Most new packages are written in Go. If you publish per-language SDKs, you'll also need the toolchains for those languages: Node.js for TypeScript/JavaScript, Python, .NET, and a JDK for Java.
+- Host your package in a public GitHub repository, and publish a GitHub release tagged with a `v`-prefixed [Semver 2.0](https://semver.org/) version (`vX.Y.Z`). The Registry reads your package at its latest release, so a package with no release can't be listed.
 
-## Create a repository and author your package
+## Create and name your repository
 
-To get started, create a repository for your Pulumi Package. We recommend hosting your Pulumi Package in a public repository on GitHub. We also recommend following the naming conventions below to help the community find the source code for your packages.
+Host your package in a public GitHub repository named `pulumi-<name>`, where `<name>` is the name you'll publish under. It's normally the name of the cloud or service the package configures, and it has to be unique in the Registry.
 
-### Select a template
+- Bridging a Terraform provider: reuse the upstream provider's name, replacing `terraform-provider-` with `pulumi-`. `terraform-provider-auth0` becomes `pulumi-auth0`.
+- A native provider: name it after the service it manages, as in [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) and [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes).
+- A component package built on an existing provider: use the provider name followed by the component name, such as `pulumi-aws-apigateway` for an API Gateway component built on the AWS provider.
 
-We've created some template repositories for you to use as a starting point for your package. These templates are for **provider-based packages**. If you are building a cross-language component (recommended for most platform teams), see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/) for the recommended approach.
+## Build your package
 
-Click the link for the boilerplate repository template that you want to use, then click "Use this template" to make a copy of it.
+Three kinds of package can be listed in the Registry, and which one you're building determines where you start:
 
-- Author a custom Pulumi provider: [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate)
-- Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
+- A Terraform or OpenTofu provider already exists for your service: [bridge it](#bridge-an-existing-terraform-provider). The bridge reuses the upstream provider's schema and CRUD implementations, so this is far less work than writing a provider yourself. Weigh it against [Any Terraform Provider](#consider-any-terraform-provider-first) first, which is no work at all.
+- No Terraform provider exists, or you want a Pulumi API that differs from the one the Terraform provider exposes: [write a native provider](#write-a-native-provider) and implement each resource type's create, read, update, and delete operations.
+- You're packaging reusable abstractions assembled from resources that existing providers already manage: [write a component package](#write-a-component-package).
 
-{{% notes type="info" %}}
-Just want to use an existing Terraform provider, not author and maintain a full package? See [Alternative: use an existing Terraform provider](#alternative-use-an-existing-terraform-provider) below.
-{{% /notes %}}
+These aren't mutually exclusive. One package can expose components alongside custom resources, and a bridged provider can ship components built on the resources it bridges.
 
-### Name your provider and repository
+### Bridge an existing Terraform provider
 
-When you publish to the [Pulumi Package Registry](https://www.pulumi.com/registry/), you will need to pick a unique name. This is normally named after the cloud provider or service the provider configures.
+Bridging is how most packages in the Registry are built. You don't implement resources: the upstream Terraform provider supplies both the schema and the CRUD implementations, and the [Pulumi Terraform Bridge](https://github.com/pulumi/pulumi-terraform-bridge) translates them into a Pulumi package.
 
-Your repository name should start with `pulumi-` followed by the name of your provider e.g. [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) for AWS, or [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes) for the Kubernetes provider.
+Most of that translation is automatic. The boilerplate maps every upstream resource and data source into your package's namespace, keeps names stable across upstream versions, and derives auto-naming rules, without per-resource configuration. Your work is mostly package metadata: the name, publisher, description, logo, and the upstream provider to track. Per-resource overrides are available for the cases where the automatic mapping produces an awkward name, but you shouldn't need them to get started.
 
-- If you're bridging a Terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
-- If you're building a component on top of an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
+Start from [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate) and select "Use this template". Its `README.md` walks through the setup. For background on how bridged providers differ from native ones, see [Providers](/docs/iac/concepts/providers/).
 
-### Alternative: use an existing Terraform provider
+### Write a native provider
 
-If you don't need the full customization of a published package — you just want to make an existing Terraform provider usable from Pulumi — you don't have to author or maintain a package at all. With the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature, you run `pulumi package add terraform-provider <author>/<name>` and Pulumi generates a fully-typed local SDK from the provider's schema on the fly.
+In a native provider you define the resource schema and implement create, read, update, and delete for each resource type. Write one when there's no Terraform provider for the service, or when you want your package's API to differ from the one the Terraform provider exposes, for example to model a workflow that spans several upstream resources.
 
-Popular Terraform providers also surface in the public Pulumi Registry as **dynamically-bridged** listings (for example, [Honeycomb](/registry/packages/honeycombio/) and [Supabase](/registry/packages/supabase/)); consumers still generate the SDK locally with `pulumi package add`. The rest of this guide covers authoring and publishing a full package; if the Any Terraform Provider path fits your needs, follow that guide instead.
+A native provider isn't limited to custom resources. It can also expose components and [provider functions](/docs/iac/concepts/functions/) alongside them.
 
-{{% notes type="info" %}}
-Registry listings for dynamically-bridged Terraform providers are generated automatically and don't include a logo by default. To have a logo added to your provider's Registry page, reach out to [Pulumi support](/support/new/) with a link to a web-accessible SVG (wordmarks preferred, with all surrounding whitespace removed).
-{{% /notes %}}
+Start from [`pulumi/pulumi-provider-boilerplate`](https://github.com/pulumi/pulumi-provider-boilerplate) and select "Use this template". See [Building providers](/docs/iac/guides/building-extending/providers/) for the concepts, and the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) for the supported way to write one in Go.
 
-## Author your resources or components
+### Write a component package
 
-See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](/docs/iac/concepts/components/) and [providers](/docs/iac/concepts/providers/) without the template repos.
+A component package bundles [components](/docs/iac/concepts/components/): abstractions that compose resources other providers manage. See [Packaging components](/docs/iac/guides/building-extending/components/packaging-components/) for the recommended approach.
 
-## Write documentation
+A component package can also declare custom resources of its own, so you aren't limited to composing what other providers offer. If your components need a resource type no provider manages, you can implement it in the same package.
 
-We recommend writing documentation to help others in the Pulumi community use your package. In your repository, there should be a `docs/` folder containing markdown files (the templates include a few suggested pages). The files should correspond to the various tabs on a package page in Pulumi Registry (like the [Azure Native](/registry/packages/azure-native/) package). Use the guidance in the following sections to author content in these pages.
+Components are most often distributed as [source-based plugin packages](/docs/iac/guides/building-extending/packages/source-based-plugin/), which the public Registry doesn't support. To list a component package in the public Registry, build it as an [executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/).
 
-### Overview, installation, & configuration
+### Identify your provider to the vendor's API
 
-Specifically, you should author a few pages:
+Set a User-Agent header on your provider's API client that identifies the provider and its version, for example `pulumi-your-package/1.2.3`.
 
-1. `_index.md`, which will be shown on the Overview tab for your package. The title of this page should match the package display name and is the heading shown on the package detail page. The Overview is a great place to include a description of what your package does, a simple example, and any other details that you want prospective users of your package to know to be successful.
-1. `installation-configuration.md`, which will be shown on your package's Installation & Configuration tab. Use this page to describe how to set up your package, including authenticating to a cloud provider, and to list the configuration options that can be used with your package. The title of this page should be in the form `<Package display name> Installation & Configuration`.
+Vendors gauge how much to invest in an integration by the traffic they can attribute to it, and a provider that sends its SDK's default user agent isn't counted. A bridged provider that falls through to the vendored HTTP client identifies itself as OpenTofu or Terraform rather than Pulumi.
 
-{{% notes type="info" %}}
-We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
-{{% /notes %}}
+Where you set it depends on the SDK you wrap; look for the client constructor's user-agent or "application name" option. Pulumi has no canonical mechanism for this, and there's no `tfbridge.ProviderInfo` field that sets it, so if you're bridging a Terraform provider and can't find a hook, ask on the [Pulumi community Slack](https://slack.pulumi.com/).
 
-For reference, the [ImprovMX](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/improvmx) community provider is a well-authored example: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md) and [`installation-configuration.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/installation-configuration.md). The [Logfire provider](https://github.com/pulumi/registry/tree/master/themes/default/content/registry/packages/logfire) is another recent example.
+## Write the overview page
 
-Although you author these files in your package repository's `docs/` folder, they are published through the [`pulumi/registry` GitHub repository](https://github.com/pulumi/registry), under `themes/default/content/registry/packages/<your-package>/`. The [Publish the documentation](#publish-the-documentation) section below explains how to submit them.
+`docs/_index.md` is the only documentation page the Registry requires. It's the page a reader lands on from the Registry's package list, and where they decide whether your package does what they need.
 
-### Package metadata
+You author it in your provider's repository, at `docs/_index.md`. The Registry's documentation generator fetches it from your release tag and publishes it; you never commit it to [`pulumi/registry`](https://github.com/pulumi/registry) yourself.
 
-Metadata for your package is generated from the [`schema.json`](/docs/iac/guides/building-extending/packages/schema/) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
+The sections below are the standard we hold overview pages to, and the order in which they should appear. They apply to every package, whether you publish per-language SDKs or your users generate one locally. For worked examples, see the `docs/_index.md` files in the [ImprovMX](https://github.com/lokkju/pulumi-improvmx/blob/main/docs/_index.md) and [Logfire](https://github.com/pydantic/pulumi-logfire/blob/main/docs/_index.md) provider repositories.
 
-- `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
+### Front matter
+
+The file starts with a YAML front matter block. Documentation generation fails without it.
+
+```yaml
+---
+title: Logfire
+meta_desc: Use the Pulumi Logfire provider to manage projects, alerts, channels, dashboards, and API tokens.
+layout: package
+---
+```
+
+| Key | Notes |
+|---|---|
+| `title` | The package display name. Should match `displayName` in your `schema.json`. Rendered as the page's heading. |
+| `meta_desc` | One sentence, used as the page's meta description. Include the package name. |
+| `layout` | Use `package`. |
+
+The generator adds a `# WARNING:` comment and an `edit_url:` key of its own when it publishes; you don't write those.
+
+### Page structure
+
+Use `##` for every top-level section and `###` for anything nested beneath one. Don't use `#`: the page heading comes from the front matter `title`, and a second H1 in the body competes with it.
+
+Open with prose directly beneath the front matter, with no heading above it. The page already carries the package name as its title, so an `## Overview` heading underneath it is redundant. State what the package lets the reader do, and link the product or service:
+
+```markdown
+The Logfire provider for Pulumi lets you manage [Logfire](https://pydantic.dev/logfire) resources,
+including projects, alerts, channels, dashboards, and API tokens, as part of your Pulumi programs.
+```
+
+Keep it to a short paragraph. The detail goes in the sections below.
+
+Three markup patterns don't survive the Registry's rendering, and the automated check on your submission flags them:
+
+| Instead of | Use |
+|---|---|
+| A relative image: `![](./diagram.png)` or `<img src="./diagram.png">` | An absolute URL to the image |
+| A raw relative link: `<a href="./configuration">` | A Markdown link to an absolute URL |
+| A link to a file: `](configuration.md)` | The published URL of the target page |
+
+### Installation
+
+Your page's `## Installation` section gives the installation command for each language your package supports. A command is more useful than a link, because a reader can copy it and run it.
+
+Wrap the commands in the site's language chooser so a reader sees only the language they use. The chooser is a pair of Hugo shortcodes, `chooser` and `choosable`, and the language keys are `typescript`, `python`, `go`, `csharp`, `java`, `yaml`, and `hcl`. List in the `chooser` tag only the languages your package actually supports:
+
+````markdown
+## Installation
+
+{{</* chooser language "typescript,python,go,csharp,java,yaml,hcl" */>}}
+{{%/* choosable language typescript */%}}
+
+```bash
+npm install @your-org/your-package
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language python */%}}
+
+```bash
+pip install your_org_your_package
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language go */%}}
+
+```bash
+go get github.com/your-org/pulumi-your-package/sdk/go/yourpackage
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language csharp */%}}
+
+```bash
+dotnet add package YourOrg.YourPackage
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language java */%}}
+
+Maven:
+
+```xml
+<dependency>
+    <groupId>com.yourorg</groupId>
+    <artifactId>your-package</artifactId>
+    <version>1.2.3</version>
+</dependency>
+```
+
+Gradle:
+
+```groovy
+implementation 'com.yourorg:your-package:1.2.3'
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language yaml */%}}
+
+```bash
+pulumi package add your-package
+```
+
+{{%/* /choosable */%}}
+{{%/* choosable language hcl */%}}
+
+```hcl
+terraform {
+  required_providers {
+    your-package = {
+      source  = "pulumi/your-package"
+      version = "1.2.3"
+    }
+  }
+}
+```
+
+Then run `pulumi install`.
+
+{{%/* /choosable */%}}
+{{</* /chooser */>}}
+````
+
+A few things to watch:
+
+- The two shortcodes take different delimiters, and the difference is deliberate. `{{%/* choosable */%}}` renders the content it wraps as Markdown, which the code fences inside each block need. `{{</* chooser */>}}` passes its content through unrendered, which is right because that content is the already-rendered `choosable` blocks. Mixing them up silently breaks the page.
+- YAML consumes the package directly through its schema, so its installation command is `pulumi package add`.
+- [Pulumi HCL](/docs/iac/languages-sdks/hcl/) resolves packages from a `required_providers` block rather than a command. Give the block, and note that `pulumi install` applies it. A `pulumi/`-prefixed source names a Pulumi Registry package, and it takes an exact version rather than a constraint.
+- Java has no one-line install command, so give the Maven and Gradle dependency coordinates, as above.
+- If you publish no SDKs, `pulumi package add` is your whole installation section: one command, and no chooser needed. Many bridged providers title this section "Generate Provider", but `## Installation` is the preferred heading.
+- Links to package feeds (npm, PyPI, NuGet, pkg.go.dev, Maven Central) are accepted, and many existing packages use them instead. Prefer commands, and add links alongside them if you like.
+
+You don't need to tell readers to install the plugin binary. Both a published SDK and one generated by `pulumi package add` carry your package's `pluginDownloadURL`, and `pulumi install` fetches the binary from it.
+
+### Example usage
+
+Your page's `## Example Usage` section provides a complete, minimal Pulumi program that declares a single resource from your package, in every language you support. It needs the imports and enough surrounding code to actually run: a bare resource declaration on its own isn't enough.
+
+Alongside the program, give the full configuration needed to run it, as `pulumi config set` commands:
+
+```bash
+pulumi config set --secret your-package:apiToken <your-token>
+pulumi config set your-package:region us-east-1
+```
+
+Optionally, show the same configuration as a [Pulumi ESC](/docs/esc/) environment. If you do, link to the ESC documentation so a reader unfamiliar with it can follow along.
+
+### Configuration
+
+Your page's `## Configuration` section has one required part and one optional part.
+
+Document every configuration parameter your package accepts. For each one, give:
+
+- Name: the bare option name, such as `apiToken`. Don't prefix it with the package name. The whole table is about your package, so repeating `your-package:` on every row is noise; the prefix belongs only in `pulumi config set` commands, where it's needed to disambiguate.
+- Required?: whether the package works without it.
+- Secret?: whether it should be set with `pulumi config set --secret`.
+- Description: what it does and what a valid value looks like.
+
+Two things routinely get missed here, because they aren't derivable from your schema. Put them in the parameter descriptions:
+
+- Environment variables. A parameter's environment-variable fallback often isn't in the Pulumi schema at all (or, for a bridged provider, the Terraform schema): it's read by the vendor SDK at a layer beneath it. If a parameter can be supplied by an environment variable, say so and name the variable.
+- Mutually exclusive options. If setting one parameter forbids or overrides another, or if a group of parameters must be supplied together, say so in the descriptions of every parameter involved. Nothing else in the documentation surfaces that constraint.
+
+Optionally, follow the reference with worked examples as `pulumi config set` commands, with explanatory text and links where a reader needs background. Add these if there's more than one way to authenticate, such as CLI login, a service principal, or OIDC. Show each one as its own example instead of describing them in prose.
+
+### Optional sections
+
+Anything else useful goes after the sections above. What existing packages add, most common first: `## Authentication` (when there's enough of it to want its own section instead of living under Configuration), `## Environment Variables`, `## Resources`, `## Requirements` or `## Prerequisites`, `## Troubleshooting`, `## Migration` notes for a major version bump, and links to further reading.
+
+### When the page gets long
+
+If the installation and configuration material outgrows the overview page, with several authentication methods or a long configuration table, you can move it into a second file, `docs/installation-configuration.md`, which renders as a separate Installation & Configuration page. The large cloud providers do this: the [AWS installation page](/registry/packages/aws/installation-configuration/) runs to several thousand words covering shared credentials files, EC2 instance metadata, OIDC, and ESC.
+
+This is about volume, not an extra requirement. Most packages don't need it, and a single overview page is a complete submission.
+
+## Package metadata
+
+Metadata for your package is generated from the [`schema.json`](/docs/iac/guides/building-extending/packages/schema/) in your repository. To make sure your package looks great in the Registry, don't forget to add metadata like:
+
+- `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the `title` in your overview page's front matter
 - `description`: a short description of your package; it should include the package name
-- `logoUrl`: a web-accessible URL to a logo for your package (ideally an SVG); we recommend using the githubrawcontent.com URL for a logo stored in your package's repository; all surrounding whitespace should be removed from the logo, and wordmarks are preferred
-- `publisher`: your personal/company name, as you'd like it to be shown on Registry
+- `logoUrl`: a web-accessible URL to a logo for your package (ideally an SVG); we recommend using the githubusercontent.com raw URL for a logo stored in your package's repository; all surrounding whitespace should be removed from the logo, and wordmarks are preferred
+- `publisher`: your personal or company name, as you'd like it to be shown on the Registry
 - `keywords`:
   - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
   - `kind/KIND`: replace `KIND` with one of `native`, `component`
     - Note: don't set a kind if you're bridging a Terraform provider
 - `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
 
-### API docs
+## API docs
 
-API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi Package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) to see how it translates to the [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
+API docs for your package are automatically generated from the `schema.json` in your repository. Many Pulumi users learn to use a Pulumi package via the API docs, since they appear automatically in many IDEs' auto-complete and inline documentation features, like Visual Studio Code's IntelliSense feature. Investing in API docs for your package is one of the best ways to improve its usability. Check out the [`pulumi-eks` schema](https://github.com/pulumi/pulumi-eks/blob/master/provider/cmd/pulumi-resource-eks/schema.json) to see how it translates to the [Pulumi Registry](/registry/packages/eks/api-docs/) for an example of great API docs.
 
-### How-to guides
+## Examples
 
-You can also create how-to guides for your packages by contributing them to the [`pulumi/examples`](https://github.com/pulumi/examples) repository on GitHub.
+Runnable examples are one of the most effective ways to help people adopt your package. Contribute them to the [`pulumi/examples`](https://github.com/pulumi/examples) repository on GitHub, where Pulumi users already look for working programs.
 
 ## Publish your package
 
-Once you've authored and tested your package locally, you can publish it to make it available to the Pulumi community. You must publish several artifacts:
+Once you've authored and tested your package locally, you can publish it to make it available to the Pulumi community. You must publish:
 
-- **A per-language SDK for every language you want consumers to use.** Pulumi generates SDKs from your `schema.json` with [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/), then you publish each one to its language's package registry:
+- A GitHub release, tagged with a `v`-prefixed [Semver 2.0](https://semver.org/) version (`vX.Y.Z`). The Registry reads your schema and documentation straight from the release tag.
 
-  | Language | Published to |
-  |----------|--------------|
-  | TypeScript/JavaScript | [npm Registry](https://npmjs.com) |
-  | Python | [Python Package Index (PyPI)](https://pypi.org) |
-  | .NET (C#/F#/VB) | [NuGet Gallery](https://nuget.org) |
-  | Java | [Maven Central](https://central.sonatype.com) |
-  | Go | your Git repository, by pushing a module tag (no external registry) |
+  If your `schema.json` declares a `version`, it has to match the release tag. Either omit the `version` key entirely, which is what bridged providers do so the Registry takes the version from the publish request, or stamp the real version at release time. A mismatch is rejected.
+- The plugin binary, to a host of your choice: GitHub Releases, GitLab Releases, or a custom HTTP endpoint. Point `pluginDownloadURL` at it.
 
-  Publish an SDK for **all** of these languages so your package is usable by the whole Pulumi community; a complete Registry listing expects each of them. Publish a subset only if you intentionally support fewer languages. Pulumi YAML is the exception — YAML programs reference the package directly through its schema and need no per-language SDK.
+For how to cross-compile the plugin binary, the archive naming convention the CLI expects, and the supported `pluginDownloadURL` forms, see [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/). That guide also covers the canonical release pipeline used by Pulumi's own providers.
 
-  If your package is hosted on GitHub, the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action publishes the npm, PyPI, NuGet, and Maven Central SDKs in a single step (select languages with its `sdk:` input); you push the Go module tag separately. See the [Publishing SDKs](/docs/iac/guides/building-extending/packages/executable-plugin/#publishing-sdks) section of the executable-plugin guide for the full workflow.
-- The plugin binary to a host of your choice (GitHub Releases, GitLab Releases, or a custom HTTP endpoint).
-- The [package documentation](#publish-the-documentation) — overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/).
+### Publishing SDKs
 
-For how to cross-compile the plugin binary, the archive naming convention the CLI expects, and the supported `pluginDownloadURL` forms, see [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/). That guide also covers the canonical release pipeline used by Pulumi's own providers, including the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action for publishing SDKs.
+Per-language SDKs are recommended, not required. A consumer who runs [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) against your package generates a typed SDK locally from your schema, so your package is usable in every Pulumi language whether you publish anything to npm or PyPI.
 
-## Publish the documentation
+Publishing SDKs is still worth doing. It lets consumers install your package the way they install everything else in their language, it makes your package discoverable in the language's own package search, and it means no SDK generation step on a first build or in CI.
 
-All package documentation in the Pulumi Registry is published via the [`pulumi/registry` repository on GitHub](https://github.com/pulumi/registry). To publish your package to the Pulumi Registry:
+Pulumi generates SDKs from your `schema.json` with [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/), and you publish each one to its language's package registry:
 
-1. Fork and clone the [`pulumi/registry` repository](https://github.com/pulumi/registry).
-1. Add your package to [the community package list](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json)
-    1. Add your package's GitHub repo slug, e.g. `"checkly/pulumi-checkly"`
-    1. Add the path to your package's `schema.json` file from the root of your provider repository, e.g. `"provider/cmd/pulumi-resource-checkly/schema.json"`
-1. Add your documentation files to `themes/default/content/registry/packages/<your-package>/`, including the `_index.md` and `installation-configuration.md` files you authored in your provider repository's `docs/` folder.
-1. Open a pull request with the above changes and await review from a Pulumi team member. For a complete example of a community package submission, see [pulumi/registry#10358](https://github.com/pulumi/registry/pull/10358).
+| Language | Published to |
+|----------|--------------|
+| TypeScript/JavaScript | [npm Registry](https://npmjs.com) |
+| Python | [Python Package Index (PyPI)](https://pypi.org) |
+| .NET (C#/F#/VB) | [NuGet Gallery](https://nuget.org) |
+| Java | [Maven Central](https://central.sonatype.com) |
+| Go | your Git repository, by pushing a module tag (no external registry) |
 
-{{% notes %}}
-API docs for your package will be automatically generated at the time of building the registry site. You do not need to take any action to generate API docs other than making sure your package repository has the right `schema.json` (or `.yaml`).
-{{% /notes %}}
+We recommend publishing an SDK for every one of these languages, so consumers in any language get the same experience. Pulumi YAML and Pulumi HCL need no per-language SDK: they reference the package directly through its schema.
 
-From there, a Pulumi employee will work with you to get your Pulumi Package published. To do so, they'll:
+If your package is hosted on GitHub, the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action publishes the npm, PyPI, NuGet, and Maven Central SDKs in a single step (select languages with its `sdk:` input); you push the Go module tag separately. See the [Publishing SDKs](/docs/iac/guides/building-extending/packages/executable-plugin/#publishing-sdks) section of the executable-plugin guide for the full workflow.
 
-1. Review your pull request and trigger the automation that builds the package listing and the API docs from your schema.
-1. Merge upon approval of your PR
-1. On merging, CI will automatically publish your package listing and API docs to pulumi.com/registry.
+## Submit your package to the Registry
+
+Listing your package on the Registry is one pull request against [`pulumi/registry`](https://github.com/pulumi/registry) that adds exactly one entry to [`community-packages/package-list.json`](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json) and changes nothing else:
+
+```json
+{
+  "repoSlug": "<owner>/<repo>",
+  "schemaFile": "provider/cmd/pulumi-resource-<name>/schema.json"
+}
+```
+
+| Field | Description |
+|---|---|
+| `repoSlug` | Your package's GitHub repository in `owner/repo` form, for example `checkly/pulumi-checkly` |
+| `schemaFile` | The path to your `schema.json` from the root of your repository, for example `provider/cmd/pulumi-resource-checkly/schema.json` |
+
+That single entry is the whole registration. Your documentation, metadata, and API docs are generated from your repository and published for you after merge, so don't commit any generated files, documentation, or package YAML. A pull request that touches anything outside the package list (and the publisher list described below) is rejected automatically.
+
+For a complete example, see [pulumi/registry#12279](https://github.com/pulumi/registry/pull/12279).
+
+If your package is maintained by a company rather than an individual, please also complete the [Pulumi Registry onboarding form](https://docs.google.com/forms/d/e/1FAIpQLSe8ohRL1PP00KTXEGPYawjY-PgrbxCH6Z88wBqxEDMa4hw2qw/viewform). For an individually maintained package, your GitHub handle is enough.
+
+### What happens next
+
+Automated checks run on your pull request and post a fact sheet as a comment. They pin your package's latest release, generate its documentation, install the plugin, resolve any SDKs you advertise, and lint your overview page. Documentation generation and the plugin install are blocking; SDK resolution and the documentation lint are advisory.
+
+If something is flagged, fix it in your package's repository: cut a release, publish an SDK, correct the schema path. Then comment `/check` on the pull request to re-run. The checks read your live repository rather than the pull request's diff, so you don't push a new commit to `pulumi/registry` to re-validate.
+
+A Pulumi maintainer reviews the fact sheet and approves. Maintainers can also comment `/preview` to build a live preview of your package's Registry pages. Nothing merges automatically. After merge, your package listing and API docs are generated and published to the Registry.
+
+### Register a new publisher
+
+If you're publishing under a name that isn't already in the Registry, add it to [`publisher-names.json`](https://github.com/pulumi/registry/blob/master/tools/resourcedocsgen/pkg/publishers/publisher-names.json) in the same pull request. This is the one exception to the one-entry rule, and publishing fails without it.
+
+The file maps the `publisher` string in your schema (the key) to that publisher's slug in the Registry backend (the value, which goes into an API path). The key and the value are usually the same. If you already ship packages under an existing slug, use that one so the two don't split.
+
+## Keep your listing current
+
+To ship a new version, cut a new GitHub release. You don't open another pull request. A scheduled job in `pulumi/registry` runs twice a day, at 05:30 and 17:30 UTC, and checks every listed package for a release newer than the one the Registry has. When it finds one it regenerates that package's metadata and documentation from the new release and opens a pull request, which a Pulumi maintainer merges. Your updated listing, documentation, and API docs go live from there.
+
+Search works the same way. The filter box on the Registry index page matches a package by its title, its name, and its keywords, and those keywords come from the `keywords` field of your `schema.json`. To make your package findable by a new term, add the term to `keywords` and cut a release. Don't edit the generated package YAML in `pulumi/registry` by hand; the next metadata publish overwrites it.
