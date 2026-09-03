@@ -1017,6 +1017,17 @@ if (config.devStack) {
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: devCDN,
+            // The Dev Center (Astro) emits root-relative assets under /assets/*
+            // (CSS, JS, images), so those must reach the same origin as /dev or
+            // the pages render unstyled. pulumi/docs serves its own assets from
+            // /css and /js, so /assets is free to hand to marketing-web.
+            pathPattern: "/assets*",
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        },
     )
 }
 
