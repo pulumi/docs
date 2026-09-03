@@ -1,6 +1,6 @@
 ---
 title_tag: Get started with Pulumi and Kubernetes
-meta_desc: Deploy an NGINX web server to Kubernetes with Pulumi in TypeScript, Python, Go, C#, Java, YAML, or HCL. Step-by-step tutorial that works with any cluster, including a local one.
+meta_desc: Deploy an NGINX web server to Kubernetes with Pulumi in TypeScript, Python, Go, C#, Java, YAML, or HCL. Works with any cluster, including a local one.
 title: Kubernetes
 h1: Get Started with Pulumi and Kubernetes
 menu:
