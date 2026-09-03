@@ -2016,7 +2016,6 @@ _V3_EMPTY_CHECKS = "_Nothing needs a human eye beyond the rubber-stamp list belo
 # has to know (pulumi/docs#21369, 2026-09-03: "Nothing needs a human eye"
 # printed directly above a stance the reviewer was asked to confirm).
 _V3_EMPTY_CHECKS_STANCES = "_No findings to check — but the editorial stances below still need a human eye._"
-V3_EMPTY_CHECKS_SENTINELS = (_V3_EMPTY_CHECKS, _V3_EMPTY_CHECKS_STANCES)
 
 
 def empty_checks_sentinel(stances_follow: bool) -> str:
