@@ -36,7 +36,14 @@ unreliable in both directions.
 
 ## Handling
 
-Default path for every Dependabot PR:
+When the `DEPS_AUTO_MERGE` repository variable is `true`, the default path is
+**nothing to do**: `label-dependabot.yml` approves the PR as `pulumi-bot` and
+arms GitHub auto-merge, which waits for the required build check. A PR only
+reaches a human if it carries `deps-lambda-edge-risk` or `deps-bulk-update`, and
+its triage comment names the flag that held it. In that state those two labels
+are merge gates, not notes.
+
+With the variable unset, the default path for every Dependabot PR is:
 
 1. **Evaluate** - build and spot-check (the testing checklist lives in `pr-review:references:action-menus`).
 2. **Approve + merge** once CI is green.
@@ -46,6 +53,6 @@ Two flags adjust this:
 - `deps-security-patch` - prioritize over the regular cadence; evaluate and merge promptly.
 - `deps-lambda-edge-risk` - before merging, verify the Lambda@Edge function size against the 1 MB compressed limit and confirm the CloudFront deployment succeeds in the testing environment. See the Infrastructure Change Review section of `BUILD-AND-DEPLOY.md`.
 
-`deps-bulk-update` is informational: a PR of that size warrants a more careful
-build/test pass and a check for hidden major versions, but is handled the same
-way otherwise.
+`deps-bulk-update` blocks auto-merge when it is enabled. Either way, a PR of
+that size warrants a more careful build/test pass and a check for hidden major
+versions.
