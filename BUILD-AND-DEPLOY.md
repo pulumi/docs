@@ -3489,6 +3489,8 @@ Two details that are load-bearing rather than incidental:
 
 Because both risk flags were computed incorrectly before 2026-09 (see above), do not enable this switch against a build of the labelling workflow that predates that fix: PR #21285 bumped `webpack` and would have qualified.
 
+One detail worth recording, because it is easy to assume otherwise: the GitHub OIDC subject claim does **not** include the actor. A `pull_request` run presents `repo:pulumi/docs:pull_request` whether Dependabot or a person opened the PR, so the ESC token path was verifiable on an ordinary PR and needed no Dependabot event to test. It was confirmed on run `33815532057`: a token is issued with no `environment:` set, and it authenticates as `pulumi-bot`.
+
 ### Monthly triage workflow
 
 Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, most of these merge themselves and the list below applies only to PRs held by a risk flag. With it unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.

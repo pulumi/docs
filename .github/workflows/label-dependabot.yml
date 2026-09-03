@@ -287,15 +287,14 @@ jobs:
               // Don't fail the workflow if comment posting fails
             }
 
-      # Single ESC fetch, serving two purposes.
+      # Mints PULUMI_BOT_TOKEN for the approve/merge step below.
       #
-      # Until DEPS_AUTO_MERGE is set, nothing consumes the token and this step
-      # is a pure probe: the report below records whether ESC over OIDC works
-      # on a Dependabot-triggered run without an `environment:`. That is the one
-      # path nothing in this repo had exercised -- the only case known to work
-      # (pull-request.yml's buildSite) sets `environment: testing`, which
-      # changes the OIDC subject claim. Read the report on a real Dependabot PR
-      # before turning the switch on.
+      # Verified on run 33815532057: ESC over OIDC works on a `pull_request`
+      # event with no `environment:` set, and the token authenticates as
+      # pulumi-bot. The actor is not part of the OIDC subject claim --
+      # `repo:pulumi/docs:pull_request` either way -- so that run proves the
+      # Dependabot case too. (`environment: testing`, which pull-request.yml's
+      # buildSite sets, produces a different subject and is not needed here.)
       #
       # PULUMI_BOT_TOKEN rather than GITHUB_TOKEN is not a preference:
       # build-and-deploy.yml triggers on push to master, and events created
@@ -311,22 +310,6 @@ jobs:
         if: github.event_name == 'pull_request'
         continue-on-error: true
         uses: pulumi/esc-action@v3
-
-      - name: Report ESC token availability
-        if: github.event_name == 'pull_request'
-        continue-on-error: true
-        env:
-          PROBE_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-        run: |
-          if [ -n "${PROBE_TOKEN}" ]; then
-            echo "ESC token acquired: yes"
-            echo "Authenticated as: $(gh api /user --jq .login 2>&1 || echo 'token cannot call the API')"
-          else
-            echo "ESC token acquired: NO"
-            echo "ESC/OIDC does not work on a Dependabot run without an environment."
-            echo "Auto-merge would need 'environment: testing' on this job, or a fallback."
-          fi
 
       # Approve as pulumi-bot and hand the PR to GitHub's native auto-merge,
       # which waits for the required build check on its own -- there is nothing
