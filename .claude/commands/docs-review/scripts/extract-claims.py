@@ -357,7 +357,7 @@ POSITIONING_RES = [
     # step to take"), so the ordinal nouns are rejected INSIDE the frame.
     re.compile(r"\bthe\s+first\s+"
                r"(?!(?:time|step|deployment|run|pass|line|call|attempt|iteration|argument|parameter"
-               r"|element|item|entry|thing|example|section|part|page|half|version|release|commit|request)\b)"
+               r"|element|item|entry|thing|example|section|part|page|half|version|release|commit|request)s?\b)"
                r"[\w-]+(?:\s+[\w-]+)?\s+(?:to|that)\s+\w+", re.IGNORECASE),
     re.compile(r"\b(?:industry[- ]standard|best[- ]in[- ]class|widely adopted|the go[- ]to|the gold standard|battle[- ]tested|enterprise[- ]grade|world[- ]class|cutting[- ]edge|next[- ]generation|state[- ]of[- ]the[- ]art|revolutionary|seamlessly integrates?|blazing[- ]fast)\b", re.IGNORECASE),
     re.compile(r"\b(?:fastest|slowest|cheapest|easiest|simplest|most popular|most widely used|largest|smallest)\b", re.IGNORECASE),
