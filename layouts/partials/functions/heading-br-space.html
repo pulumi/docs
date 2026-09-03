@@ -1,0 +1,44 @@
+{{/*
+    heading-br-space.html
+
+    Text-extraction fix for headings that force a line break mid-sentence.
+
+    Problem: authors write headings like "*Infrastructure as code* <br>in any
+    language." or use markdown's hard-line-break syntax (two trailing spaces
+    before a newline in a YAML block/quoted scalar). Both render visually
+    fine, but the production build runs `hugo --minify`, and the tdewolff
+    HTML minifier strips ASCII whitespace immediately adjacent to <br> and
+    collapses the trailing-space hard-break trigger. The result on the live
+    site is a bare "<br/>" (or none at all) with no whitespace on either
+    side. Any consumer that strips tags without inserting a separator --
+    notably BeautifulSoup's default get_text(), and by extension most LLM
+    crawler ingestion pipelines (GPTBot, ClaudeBot, PerplexityBot,
+    Meta-ExternalAgent; none of which execute CSS layout) -- then fuses the
+    two halves into a nonsense token, e.g. "Infrastructure as codein any
+    language."
+
+    Fix: insert a Unicode non-breaking space (U+00A0, &nbsp;) immediately
+    before the break. NBSP is not ASCII whitespace, so tdewolff's minifier
+    leaves it alone; text extractors that treat it as a normal space (which
+    is universal behavior for get_text()-style extraction and for how
+    browsers/LLMs consume it) then see a clean separator. Visually it is
+    imperceptible, since it sits right at the line break.
+
+    This is an AEO / text-extraction-pipeline fix, not a Google-ranking fix:
+    Google's renderer executes CSS and already reads these headings
+    correctly.
+
+    Usage (call BEFORE markdownify, since markdownify itself performs the
+    markdown-hard-break -> <br> conversion that this partial's second rule
+    depends on running ahead of):
+
+        {{ partial "functions/heading-br-space.html" $title | markdownify }}
+*/}}
+{{ $s := . }}
+{{/* Rule 1: literal <br> / <br/> / <br /> tags, with or without preceding whitespace. */}}
+{{ $s = $s | replaceRE `\s*<br\s*/?>` "&nbsp;<br>" }}
+{{/* Rule 2: markdown hard-line-break syntax (2+ trailing spaces before a newline).
+     Insert the nbsp right after the preceding non-space character and keep the
+     trailing spaces so goldmark's hard-break trigger still fires during markdownify. */}}
+{{ $s = $s | replaceRE `(\S)[ \t]{2,}\n` "$1&nbsp;  \n" }}
+{{ return $s }}
