@@ -2978,15 +2978,30 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
         state = {}
     answered = {fid for fid, e in (state.get("findings") or {}).items() if isinstance(e, dict)}
 
-    def _blocking(p: dict | None) -> bool:
-        return bool(p) and p["id"] not in answered and not _V3_REWRITTEN_RE.match(p["body"])
+    def _open(p: dict | None) -> bool:
+        return bool(p) and p["id"] not in answered
 
+    def _blocking(p: dict | None) -> bool:
+        return _open(p) and not _V3_REWRITTEN_RE.match(p["body"])
+
+    # Two counts are legal, because the header is recomputed AFTER this
+    # rule runs. The model is told never to hand-edit it: a row it rewrites
+    # in place as Spurious/Mis-sourced/Pre-existing therefore still shows in
+    # the composer's count on the draft (build-evidence.py files the rewrite
+    # and recomputes the header before publish), while the published body
+    # the update/resolve lanes re-validate already carries the recomputed,
+    # rewrite-excluded count. Accepting only the latter refused every review
+    # that dismissed a finding in place (pulumi/docs#21372, 2026-09-03: one
+    # 🚨 row rewritten Spurious, header still "1 item", review:error).
     total = sum(1 for _, _, p in rows if _blocking(p) or p is None)
     numbered = sum(1 for _, _, p in rows if _blocking(p) and p["id"] != "F?")
+    composed_total = sum(1 for _, _, p in rows if _open(p) or p is None)
+    composed_numbered = sum(1 for _, _, p in rows if _open(p) and p["id"] != "F?")
     stated = int(m.group(1)) if m.group(1) else 0
-    if stated not in (total, numbered):
+    if stated not in (total, numbered, composed_total, composed_numbered):
         return [Violation("v3-blocking-count", "<author header>",
-                          f"(N blocking) matches the open 🚨+❓ row count ({numbered} composed, {total} with additions; dispositioned and rewritten rows excluded)",
+                          f"(N blocking) matches the open 🚨+❓ row count ({numbered} composed, {total} with additions; "
+                          f"dispositioned rows excluded; rewritten rows may count either way: {composed_numbered}/{composed_total})",
                           f"header says {stated}",
                           "Don't hand-edit the count; if you removed a row, disposition it instead (Spurious/Mis-sourced/Pre-existing rewrite) — build-evidence.py recomputes the header.")]
     return []
