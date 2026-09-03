@@ -212,7 +212,7 @@ echo "Deployment complete!"
 
 ### Blue-green deployment
 
-Implement blue-green deployments across both tools:
+Implement blue-green deployments across both tools. The workflow below assumes a live `blue` environment already exists: for the first deployment, create it by running the same steps against the `blue` names (`terraform workspace new blue` and `pulumi stack init blue`), so that later runs have an outgoing environment to switch away from and clean up:
 
 ```yaml
 # .github/workflows/blue-green.yml
@@ -356,7 +356,7 @@ Some best practice tips to keep your two systems orchestrated:
 4. **Testing**: Test the output of both tools using integration tests
 5. **Rollback strategy**: Have rollback procedures for both tools
 6. **Monitoring**: Use common logging and metrics endpoints to monitor both Terraform and Pulumi deployments
-7. **Security**: Use a single tool to manage secrets across both tools
+7. **Security**: Use a single tool to manage secrets across both tools — see [Shared configuration with Pulumi ESC](#shared-configuration-with-pulumi-esc)
 8. **Version control**: Tag releases that include both Terraform and Pulumi changes to create a unified release
 
 {{< get-started-stepper >}}
