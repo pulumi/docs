@@ -40,7 +40,7 @@ Parameters:
             <p class="section-header-split-tag mb-3">{{ $tagLine }}</p>
             {{ end }}
             {{ if $title }}
-            <h2 class="section-header-split-title mb-4 mt-0">{{ $title | markdownify }}</h2>
+            <h2 class="section-header-split-title mb-4 mt-0">{{ partial "functions/heading-br-space.html" $title | markdownify }}</h2>
             {{ end }}
             {{ if $description }}
             <div class="section-header-split-description mb-6">

@@ -9,7 +9,12 @@
     - title: Hero headline, authored as a single markdown string. *Emphasis* (or
              **strong**) renders the enclosed run in violet — same color, same
              weight, no italics — and <br> forces a line break, e.g.
-             "*Infrastructure as code*<br>in any language."
+             "*Infrastructure as code* <br>in any language." A leading space
+             before <br> is no longer required for text-extraction purposes:
+             this partial inserts a non-breaking space before the break itself
+             (see functions/heading-br-space.html), so the rendered text stays
+             separable even after the production `hugo --minify` build strips
+             ordinary whitespace next to <br>.
     - description: Hero description
     - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
     - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
@@ -130,7 +135,7 @@
             </div>
             {{ end }}
             {{ with $title }}
-            <h1 class="product-hero-heading text-left">{{ . | markdownify }}</h1>
+            <h1 class="product-hero-heading text-left">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
@@ -218,7 +223,7 @@
     <div class="flex flex-col items-center gap-12">
         <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
             {{ with $title }}
-            <h1 class="product-hero-heading">{{ . | markdownify }}</h1>
+            <h1 class="product-hero-heading">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>

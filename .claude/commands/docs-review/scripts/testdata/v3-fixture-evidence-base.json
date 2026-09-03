@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 999,
+  "head_sha": "aaaabbbbccccddddeeeeffff0000111122223333",
+  "run_id": "local",
+  "generated_at": "2026-08-31T18:00:00Z",
+  "high_water": 4,
+  "findings": [
+    {
+      "id": "F1",
+      "bucket": "outstanding",
+      "file": "content/docs/iac/x.md",
+      "text": "The esc CLI defaults to JSON output",
+      "origin": "verdict:contradicted",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        80,
+        82
+      ]
+    },
+    {
+      "id": "F2",
+      "bucket": "outstanding",
+      "file": "content/docs/iac/x.md",
+      "text": "[style-blocker] terminology: Use 'Pulumi Cloud', not 'Pulumi Service'",
+      "origin": "style-blocker",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        30
+      ]
+    },
+    {
+      "id": "F3",
+      "bucket": "author-answer",
+      "file": "content/docs/iac/x.md",
+      "text": "Many teams reduce costs by 40% using this pattern",
+      "origin": "verdict:unverifiable",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        61
+      ]
+    },
+    {
+      "id": "F4",
+      "bucket": "reviewer-check",
+      "file": "content/docs/iac/x.md",
+      "text": "Most users adopt ESC within a week",
+      "origin": "verdict:framing-drift",
+      "status": "open",
+      "disposition": null,
+      "lines": [
+        95
+      ]
+    }
+  ],
+  "trail": [
+    {
+      "file": "content/docs/iac/x.md",
+      "claim": "Pulumi supports Python 3.9 and later",
+      "verdict": "verified",
+      "line": 12,
+      "evidence": "evidence: setup.py requires >=3.9; source: github.com/pulumi/pulumi setup.py",
+      "source": "github.com/pulumi/pulumi setup.py",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/x.md",
+      "claim": "Many teams reduce costs by 40% using this pattern",
+      "verdict": "unverifiable",
+      "line": 61,
+      "evidence": "evidence: WebSearch ran; no source found for the 40% figure",
+      "route": "pass3"
+    },
+    {
+      "file": "content/docs/iac/x.md",
+      "claim": "The esc CLI defaults to JSON output",
+      "verdict": "contradicted",
+      "line": 80,
+      "evidence": "evidence: esc env get renders a table by default; --format json is opt-in; source: esc CLI docs",
+      "source": "esc CLI docs",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/x.md",
+      "claim": "Most users adopt ESC within a week",
+      "verdict": "framing-drift",
+      "line": 95,
+      "evidence": "framing: widened denominator; evidence: source says trial users, not most users; source: internal adoption dashboard",
+      "source": "internal adoption dashboard",
+      "route": "pass1"
+    },
+    {
+      "file": "content/docs/iac/x.md",
+      "claim": "State is stored encrypted at rest",
+      "verdict": "matches",
+      "line": 101,
+      "evidence": "evidence: security whitepaper section 4; source: pulumi.com/security",
+      "source": "pulumi.com/security",
+      "route": "pass2"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "not run (not in a templated section)",
+    "external-claim-verification": "2 of 5 claims verified (1 unverifiable, 1 contradicted, 1 framing-drift) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 3 Pass 1, 1 Pass 2 (verified 1, contradicted 0, unverifiable 0), 1 Pass 3 (verified 0, contradicted 0, unverifiable 1).",
+    "cited-claim-spot-checks": "1 of 1 cited claims fetched and compared",
+    "frontmatter-sweep": "ran on body + meta_desc",
+    "temporal-trigger-sweep": "not run (no trigger words)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 1,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO"
+  },
+  "summary": null,
+  "history": [
+    {
+      "ts": "2026-08-31T18:00:00Z",
+      "summary": "initial review (pending publication)",
+      "sha": "aaaabbbb"
+    }
+  ]
+}

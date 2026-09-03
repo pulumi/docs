@@ -91,13 +91,13 @@ To target an EC2 instance with your load balancer, you must do the following:
 4. Create the EC2 instance(s) in the same VPC and ensure the security group contains the egress rule (2).
 5. Attach your load balancer's target group to the desired EC2 instance(s).
 
-Aside from those three steps, the code and capabilities of the load balancer are the same as shown above.
+Aside from those five steps, the code and capabilities of the load balancer are the same as shown above.
 
 {{< notes >}}
 Note that ALBs automatically open ingress traffic to the ports listened on, whereas NLBs do not.
 {{< /notes >}}
 
-Here is an example that creates an EC2 instance per availability zone, running a simple Ubuntu web server:
+Here is an example that creates an EC2 instance per availability zone, running a simple Amazon Linux 2 web server:
 
 {{< example-program path="awsx-load-balanced-ec2-instances" >}}
 
@@ -114,7 +114,7 @@ Hello World, from Server 1!
 
 The load balancer creates a default target group that forwards traffic on the same port. If you need
 to configure the way that traffic is forwarded, health checks, and so on, see
-[Advanced NLB Target Group and Listener Configuration](#advanced-nlb-target-group-and-listener-configuration) below.
+[Advanced Load Balancer Listener and Target Group Configuration](#advanced-load-balancer-listener-and-target-group-configuration) below.
 
 For more advanced cases, you will most likely want to use [EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), rather than hard-coding
@@ -125,13 +125,13 @@ the number of and placement of VMs. Refer to the API docs for
 ## Load Balancing ECS Service Targets
 
 Your ECS service can use ELB to distribute traffic evenly across each of your service's tasks. To target an ECS service
-with your load balancer, pass the listener in your task definition's `portMappings`:
+with your load balancer, pass the load balancer's target group in your task definition's `portMappings`:
 
 {{< example-program path="awsx-load-balanced-fargate-nginx" >}}
 
-> [The AWSx ECS component](/docs/clouds/aws/guides/ecs/) -- those classes in the `awsx.ecs` package -- will automatically create the
+> [The AWSx ECS component](/docs/iac/guides/clouds/aws/ecs/) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
-> ingress and egress rules, much like the [EC2 Instance](#load-balancing-ec2-instances) example earlier.
+> ingress and egress rules, much like the [EC2 instance](#load-balancing-ec2-instance-targets) example earlier.
 
 After deploying this using `pulumi up`, we will have a fully functional endpoint:
 
@@ -146,7 +146,7 @@ $ curl http://$(pulumi stack output endpoint)
 ```
 
 This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these,
-see [Advanced NLB Target Group and Listener Configuration](#advanced-nlb-target-group-and-listener-configuration) below.
+see [Advanced Load Balancer Listener and Target Group Configuration](#advanced-load-balancer-listener-and-target-group-configuration) below.
 
 Although ECS supports both NLB and ALB, ALB offer several features that make them more attractive for ECS:
 
@@ -180,7 +180,7 @@ property of the load balancer to associate it with the VPC's public or private s
 
 {{< example-program path="awsx-elb-vpc" >}}
 
-For more information on creating and configuring VPCs, refer to [the AWSx VPC component guide](/docs/clouds/aws/guides/vpc/).
+For more information on creating and configuring VPCs, refer to [the AWSx VPC component guide](/docs/iac/guides/clouds/aws/vpc/).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 
@@ -238,7 +238,7 @@ of creating the listener against a load balancer or target group, but there are 
     * `redirect`: Redirect from one URL to another. For details, see
       [Redirect Actions](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#redirect-actions).
 
-As an example of a custom action, the following load balancer redirects HTTP traffic on port 80 to port 8080 by defining two listeners, one configured to redirect to the other:
+As an example of a custom action, the following load balancer redirects HTTP traffic on port 8080 to port 8081 by defining two listeners, one configured to redirect to the other:
 
 {{< example-program path="awsx-elb-multi-listener-redirect" >}}
 
@@ -271,7 +271,7 @@ You can also create a target group manually, either by defining a `defaultTarget
   targets, provided they remain active.
 
 * `targetType`: The type of target you will be using with this target group. The possible values are `instance`,
-  if targeting an EC2 instance ID directly, or `ip`, if targeting an IP address. The default is `ip`. Note also that
+  if targeting an EC2 instance ID directly, or `ip`, if targeting an IP address. The default is `instance`. Note also that
   IP addresses must be routable within your VPC and cannot be public IP addresses (within your VPC's private subnet
   range, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
 

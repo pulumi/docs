@@ -1,0 +1,36 @@
+{
+  "generated": "2026-09-01T14:12:05+00:00",
+  "count": 1,
+  "traffic": {
+    "source": "CLICKSTREAM.FCT_PAGEVIEWS",
+    "period": {
+      "end": "2026-08-31",
+      "start": "2026-02-28"
+    },
+    "pages_matched": 848,
+    "available": true
+  },
+  "reader_signals": null,
+  "ledger_bucket": "content-review-ledger-e8e6737",
+  "articles": [
+    {
+      "path": "content/docs/iac/get-started/terraform/convert-hcl.md",
+      "url": "/docs/iac/get-started/terraform/convert-hcl/",
+      "slug": "docs-iac-get-started-terraform-convert-hcl",
+      "lane": "glowup",
+      "mode": "glowup",
+      "tier": 1,
+      "no_retire": true,
+      "monthly_visits": 486,
+      "signals": null,
+      "last_reviewed": "2026-07-01",
+      "skipped_findings": 13,
+      "clarity_flag": false,
+      "stale_claims": 0,
+      "stale_claim_markers": [],
+      "source_pr_number": 20004,
+      "findings_record": null,
+      "score": 9.058
+    }
+  ]
+}

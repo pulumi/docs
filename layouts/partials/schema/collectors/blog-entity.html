@@ -114,13 +114,22 @@
       {{ if $authorData }}
         {{ $displayName = $authorData.name }}
       {{ end }}
-      {{ $authors = $authors | append (dict
+      {{/* /authors/%s is a Hugo logical content path, not the published
+           permalink -- config/_default/config.yml routes the `authors`
+           taxonomy term to /blog/author/:slug/. Resolve the real page and
+           omit `url` if there is no live term page for this slug, mirroring
+           schema/utils/author-entities.html. */}}
+      {{ $fallbackAuthor := dict
         "@type" "Person"
         "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
         "name" $displayName
-        "url" (printf "https://www.pulumi.com/authors/%s/" (. | urlize))
         "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
-      ) }}
+      }}
+      {{ $fallbackAuthorPage := site.GetPage (printf "/authors/%s" (. | urlize)) }}
+      {{ with $fallbackAuthorPage }}
+        {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink) }}
+      {{ end }}
+      {{ $authors = $authors | append $fallbackAuthor }}
     {{ end }}
   {{ end }}
 {{ end }}

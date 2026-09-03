@@ -33,7 +33,7 @@ Please note that this guide provides step-by-step instructions based on the offi
 5. In the **Add a provider to pool** dropdown, select **OpenID Connect (OIDC)**.
 6. Provide a name for the provider.
 7. In the **Issuer** field, enter `https://api.pulumi.com/oidc`.
-8. In the **Audiences** section, select the **Allowed audiences** radio button. The value for this field is different between pulumi deployments and ESC. For Deployments enter just the name of your Pulumi organization. For ESC enter the name of your Pulumi organization prefixed with `gcp:` (e.g. `gcp:{org}`). Then click **Continue**.
+8. In the **Audiences** section, select the **Allowed audiences** radio button. The value for this field is different between Pulumi Deployments and ESC. For Deployments enter just the name of your Pulumi organization. For ESC enter the name of your Pulumi organization prefixed with `gcp:` (e.g. `gcp:{org}`). Then click **Continue**.
   {{< notes type="info" >}}
   For environments in the `default` project the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
@@ -59,13 +59,13 @@ Once you have created your workload identity pool and provider, you will be dire
 2. In the **Select service account** dropdown, select the desired service account to associate with the pool.
 3. Under the **Select principals** section, click the **Only identities matching the filter** radio button.
 4. In the **Attribute name** dropdown, select **Subject**.
-5. In the **Attribute value** field, provide a valid subject claim (see examples at the end of this section). Then click **Save**.
+5. In the **Attribute value** field, provide a valid subject claim (see [Subject claim customization](#subject-claim-customization) below for how the subject is composed). Then click **Save**.
 
 Make a note of the project number, workload identity pool ID, provider ID, and service account email address from the previous steps. These will be necessary to enable OIDC for your service.
 
 ## Configure ESC for OIDC
 
-To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud console](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
 1. Click the **Environments** link.
 2. Click the **Create environment** button.
@@ -93,10 +93,9 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-project-number>`, `<your-pool-id>`, `<your-provider-id>`, and `<your-service-account>` with the values from the previous steps.
 7. Click **Save**.
 
-You can validate that your configuration is working by running either of the following:
+You can validate that your configuration is working by running the following:
 
-* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
-* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+* The [`pulumi env open`](/docs/iac/cli/commands/pulumi_env_open/) command of the Pulumi CLI: `pulumi env open <your-org>/<your-project>/<your-environment>`. If you don't have the CLI yet, see the [installation guide](/docs/install/).
 
 Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
@@ -149,7 +148,7 @@ values:
           region: global  # Explicitly set to global, or omit this line entirely
 ```
 
-For more details about the `region` field, see the [gcp-login provider documentation](/docs/esc/providers/login/gcp-login/#gcploginoidc).
+For more details about the `region` field, see the [gcp-login provider documentation](/docs/esc/providers/login/gcp-login/#inputs).
 
 ## Subject claim customization
 

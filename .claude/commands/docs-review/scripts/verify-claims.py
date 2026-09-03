@@ -155,6 +155,8 @@ CONFIDENCE_VALUES = {"high", "medium", "low"}
 FRAMING_VALUES = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
 FRAMING_DRIFT_SHAPES = {"overclaim-broader", "shifted"}
 EXTERNAL_SHAPE_TYPES = {"numerical", "entity-spec", "attribution", "positioning", "comparison"}
+# Never verified — see main(). Mirrors merge-claims.py's STANCE_TYPES.
+STANCE_TYPES = {"positioning", "comparison"}
 
 # Signals that route a claim to the pulumi-internal lane (Pass 1). Kept in the
 # spirit of `extract-claims.py`'s patterns; this list is the canonical routing
@@ -686,6 +688,19 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
         lines.append(f"- source_hint: {claim['source_hint']}")
     if claim.get("found_by"):
         lines.append(f"- found_by: {', '.join(str(x) for x in claim['found_by'])}")
+    # Set by callers that verify from the claims index (reverify-claims.py),
+    # where the claim arrives without the page: the extracted sentence may
+    # have lost the scope its heading establishes, and this puts it back.
+    if claim.get("context"):
+        lines += [
+            "",
+            "Where the page makes this claim — the heading it sits under and the "
+            "surrounding prose. The claim's scope is whatever this establishes; "
+            "judge the claim as the page states it there, not the sentence alone:",
+            "```",
+            str(claim["context"]),
+            "```",
+        ]
     if impl_refs and route in ("pass1", "pass3"):
         lines += [
             "",
@@ -1010,6 +1025,18 @@ def main() -> int:
     try:
         floor = json.loads(Path(args.in_path).read_text(encoding="utf-8"))
         claims = [c for c in (floor.get("claims") or []) if isinstance(c, dict)]
+        # Editorial stances ("the fastest path", "unlike Terraform") have no
+        # external ground truth: the hard rules below land them `not-a-claim`
+        # every time, and that verdict then read as a finding downstream.
+        # merge-claims.py schema v2 keeps them out of `claims`; an older
+        # artifact that still carries them is filtered here so the verifier
+        # never emits a verdict on one. They surface in the review as a
+        # no-verdict list instead (compose-review.py).
+        n_before = len(claims)
+        claims = [c for c in claims if (c.get("type") or "") not in STANCE_TYPES]
+        if len(claims) != n_before:
+            print(f"verify-claims: skipped {n_before - len(claims)} editorial stance(s) "
+                  "(positioning/comparison) — surfaced by the review, not verified", file=sys.stderr)
     except (OSError, json.JSONDecodeError) as e:
         write_payload(out_path, args.model, [], [f"could not load {args.in_path}: {e}"], base_meta)
         print(f"verify-claims: could not load {args.in_path}: {e}", file=sys.stderr)

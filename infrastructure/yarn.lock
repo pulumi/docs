@@ -437,18 +437,18 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.1.tgz#eaee5900122c110a3dbcb728c0597014a2621774"
   integrity sha512-oOAWABowe8EAbMyWKM0tYDKi8Yaox52D+HWZhAIJqQXbqe0xI/GV7FhLWqlEKreMkfDjshR5FKgi3mnle0h6Eg==
 
-"@pulumi/aws@^7.39.0":
-  version "7.39.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.39.0.tgz#4de4dbc4edd50cb14ae4305c24eb564d3a36090e"
-  integrity sha512-gJQIRipNmq7mqCQqiNNnTagTWLGwowjKekisChaqKwUTvJz2qTVMgHexYqoYExynvajJINwqTgc1UWC/InrIHw==
+"@pulumi/aws@^7.44.0":
+  version "7.44.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-7.44.0.tgz#4287bdb81c0a06434e8828515af54b247e627b6e"
+  integrity sha512-ijGL+aIW9NdnUxnRYEBhVpZ4MN9WPAVYLZhfMU7GJ5QqZj098/Gx7oAVmk6TxhqSsln839pa06cozH+l9U5+Rw==
   dependencies:
     "@pulumi/pulumi" "^3.142.0"
     mime "^2.0.0"
 
-"@pulumi/pulumi@^3.142.0", "@pulumi/pulumi@^3.255.0":
-  version "3.255.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.255.0.tgz#e5f5f2e12bbfad7a33be0e1557fe34a98224b74f"
-  integrity sha512-nvGpp6ebUpkSLn0UxqiTo5xlTYRqxp9OzMGgixIW2kFu0CQ3VgUtIOoKkEzU2ftVNY44utwDh+CKXQlK+bPmuw==
+"@pulumi/pulumi@^3.142.0", "@pulumi/pulumi@^3.260.0":
+  version "3.260.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-3.260.0.tgz#19a2651821d4efcab257e1b24d05ffb894023d01"
+  integrity sha512-lLDISSiEToYj1/bT3dmzju9gyLrP7EcVHKo3IZ6pQY2uMfApyAeabOapDFJlrWvQedtpqIKBR7y5nNm6M91gJg==
   dependencies:
     "@grpc/grpc-js" "^1.10.1"
     "@logdna/tail-file" "^2.0.6"
@@ -1395,9 +1395,9 @@ picomatch@^4.0.3:
   integrity sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==
 
 postcss-selector-parser@^7.0.0:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.1.1.tgz#e75d2e0d843f620e5df69076166f4e16f891cb9f"
-  integrity sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.1.6.tgz#45e970f2d93d4547d6754167ed1132f43012c4bf"
+  integrity sha512-7qASPzhKF2l2KLboRZux8CCTRMdGiV08vWmyKzPz22qZ7ZjQBOeY7rNzNoCLSUiftJ7HUq0GERHmxw/t0dCdMw==
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"

@@ -32,8 +32,8 @@ Every claim record carries a `type`. Use the most specific type that fits; a sen
 | `cross-reference` | "See the X guide / the Y page" — the target must exist — *and* sibling-consistency claims in templated directories (nav steps, headings, field labels, placeholder conventions checked against parallel pages). | For "see X": `text` names the link target. For sibling-consistency: this is handled by the cross-sibling sibling-read fan-out (`.cross-sibling-discovery.json` + `docs-review:references:fact-check` §Cross-sibling consistency), not by the prose-claim passes — don't duplicate it here. |
 | `quote` | A direct quotation or a paraphrase attributed to a named source ("Willison writes …", "the README says …"). | `text` = the quoted/paraphrased statement. `source_hint` = the named source. The verifier fetches the source and framing-compares the quote against it. |
 | `attribution` | An assertion of *fact about the world* that the PR attributes to a third party ("per the AWS Lambda docs, retries default to 3 attempts", "Anthropic announced Claude N in <month>", "the Kubernetes deprecation policy guarantees three minor releases"). The verifiable assertion is **the attribution itself** — does the named source actually say this, in this framing? | `text` = the attributed claim, *including the attribution* ("the AWS Lambda docs say retries default to 3 attempts"). `source_hint` = the named source. This is distinct from `quote` (a verbatim quotation) — an attribution restates/summarizes. **An attribution is always a claim, even when the underlying detail would not be a claim on its own** (see §Not a claim). |
-| `positioning` | A market-position / recommendation / canonicality statement — "the only X", "the canonical IaC tool", "the recommended approach", "industry standard", "battle-tested", "actively maintained". | `text` = the positioning statement. `source_hint` = a source if cited. The verifier checks whether it's defensible; superlatives/AI-boilerplate also warrant the intuition-check flag downstream. Marketing voice in docs is itself a finding (`docs-review:references:prose-patterns`). |
-| `comparison` | An explicit comparison — "faster than X", "unlike Terraform, …", "up to 40× …", "outperforms Y". | `text` = the comparison, *including both sides* ("Pulumi uses real programming languages; Terraform does not" — extract the implicit claim about Terraform too). `source_hint` = a benchmark/source if cited. |
+| `positioning` | A market-position / recommendation / canonicality statement — "the only X", "the canonical IaC tool", "the recommended approach", "the fastest path", "industry standard", "battle-tested", "actively maintained". | `text` = the positioning statement. `source_hint` = a source if cited. **Extracted, never verified.** `merge-claims.py` (schema v2) writes positioning and comparison records to a separate `stances` list; `verify-claims.py` never sees them (a page's own framing has no external ground truth — the verifier's hard rules landed every one `not-a-claim`, and that verdict was then banked as a finding: PR #20004 → #21291). The review lists them verdict-free under ⚠️ as **Editorial stances introduced by this PR** so a human sees that an agent asserted "fastest" / "recommended" / "the only"; `editorial-stances-coverage` holds the list to the artifact. Marketing voice in docs is itself a finding (`docs-review:references:prose-patterns`). |
+| `comparison` | An explicit comparison — "faster than X", "unlike Terraform, …", "up to 40× …", "outperforms Y". | `text` = the comparison, *including both sides* ("Pulumi uses real programming languages; Terraform does not" — extract the implicit claim about Terraform too). `source_hint` = a benchmark/source if cited. Routed with `positioning`: surfaced as a stance, not verified. A comparison that carries a **checkable number** ("up to 40× faster") is also a `numerical` claim — emit that record too; the number is verified even though the framing is not. |
 
 When in doubt between two types, pick the more specific, or emit the claim under both — duplicates are merged downstream by line range + near-text.
 
@@ -55,6 +55,9 @@ Each claim's `text` must stand alone — a verifier reading only the record (wit
 - "It's enabled by default." → "S3 bucket server-side encryption is enabled by default in this example."
 - "This is the recommended approach." → "Using a separate ESC environment per stack is the recommended approach for secret isolation."
 - "They retired it in March 2026." → "Pulumi retired the legacy `pulumi-base` Docker image in March 2026."
+- "As of Pulumi CLI v3.33.1, add `awssdk=v2` and `profile=` to the query string." — under the heading `#### AWS Key Management Service (KMS)` → "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL takes `awssdk=v2` and `profile=<name>` in its query string."
+
+**Carry the enclosing scope.** A sentence on the page inherits the subject of the heading and paragraph it sits under; a claim record does not. The nightly re-verification reads records straight from the claims index with no page in view, so a record that says "the query string" when the page meant "the awskms URL's query string" gets verified as a claim about every query string — and comes back contradicted or framing-drift for a page that is correct in context. On 2026-09-03 exactly that marked two pages and burned two review slots for no defect. Name the thing the heading scopes the sentence to, every time.
 
 Keep it faithful — restate, don't editorialize, don't strengthen. If the original is hedged ("ESC can integrate with Vault in some configurations"), keep the hedge.
 
@@ -130,6 +133,11 @@ Return a single JSON object via the `extract_claims` tool:
                                                           // page and manufactures a false contradiction. If the claim's own
                                                           // URL is already in `text`, the hint is redundant; never substitute
                                                           // a different page.
+                                                          // For `version` and `api-surface` claims it is the package or
+                                                          // product the pin/surface belongs to ("pulumi/pulumi-gcp",
+                                                          // "Node.js"), cited or not: entity_key.py keys the claim on it,
+                                                          // and without it a version claim is keyed on whatever words
+                                                          // happen to open the sentence ("version/later-exactly").
       "confidence": "high"                     // high | medium | low
     }
   ]
@@ -242,6 +250,14 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 - Record A (type `behavior`): `text` = "`pulumi preview` shows the planned changes without applying them."
 - Record B (type `behavior`): `text` = "`pulumi preview --expect-no-changes` exits non-zero when it detects a diff."
 - Reasoning: two independent, separately-verifiable behaviors joined by "and". Split them so a wrong half is isolated.
+
+**13 — Scope lives in the heading.**
+
+> Under `#### AWS Key Management Service (KMS)`, after three `awskms://...` examples:
+> "As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string."
+
+- Record (type `version`): `text` = "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL accepts `awssdk=v2` and `profile=<name>` in its query string as an alternative to the `AWS_PROFILE` environment variable." `source_hint` = "pulumi/pulumi" `confidence` = high.
+- Reasoning: on the page, "the query string" can only mean the awskms URL — the heading and the surrounding examples say so. Lifted out verbatim, the sentence reads as a claim about AWS query strings in general, and a verifier holding only the record will find the v3.33.1 release note scoped to `awskms` and call the record over-broad. It is the record that is over-broad, not the page. The `source_hint` names the product whose release notes decide the pin, so the claim keys as `version/pulumi` rather than on the sentence's opening words.
 
 ---
 
