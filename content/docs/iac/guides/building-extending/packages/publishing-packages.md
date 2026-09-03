@@ -93,7 +93,7 @@ Start from [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/p
 
 ### Write a native provider
 
-In a native provider you define the resource schema and implement create, read, update, and delete for each resource type. Write one when there's no Terraform provider for the service, or when you want your package's API to differ from the one the Terraform provider exposes, for example to model a workflow that spans several upstream resources.
+In a native provider you define the resource schema and implement create, read, update, and delete for each resource type. Write one when there's no Terraform provider for the service, or when you want your package's API to differ from the one the Terraform provider exposes, for example to model a workflow that spans more than one upstream resource.
 
 A native provider isn't limited to custom resources. It can also expose components and [provider functions](/docs/iac/concepts/functions/) alongside them.
 
@@ -121,11 +121,11 @@ Where you set it depends on the SDK you wrap; look for the client constructor's 
 
 You author it in your provider's repository, at `docs/_index.md`. The Registry's documentation generator fetches it from your release tag and publishes it; you never commit it to [`pulumi/registry`](https://github.com/pulumi/registry) yourself.
 
-The sections below are the standard we hold overview pages to, and the order in which they should appear. They apply to every package, whether you publish per-language SDKs or your users generate one locally. For worked examples, see the `docs/_index.md` files in the [ImprovMX](https://github.com/lokkju/pulumi-improvmx/blob/main/docs/_index.md) and [Logfire](https://github.com/pydantic/pulumi-logfire/blob/main/docs/_index.md) provider repositories.
+The sections below are the standard we hold overview pages to, and the order in which they should appear. They apply to every package, whether you publish per-language SDKs or your users generate one locally.
 
 ### Front matter
 
-The file starts with a YAML front matter block. Documentation generation fails without it.
+The file starts with a YAML front matter block. Documentation generation fails without it, with `expected file ... to start with YAML front-matter`. It's the most common reason a package's documentation fails to publish.
 
 ```yaml
 ---
@@ -372,7 +372,7 @@ That single entry is the whole registration. Your documentation, metadata, and A
 
 For a complete example, see [pulumi/registry#12279](https://github.com/pulumi/registry/pull/12279).
 
-If your package is maintained by a company rather than an individual, please also complete the [Pulumi Registry onboarding form](https://docs.google.com/forms/d/e/1FAIpQLSe8ohRL1PP00KTXEGPYawjY-PgrbxCH6Z88wBqxEDMa4hw2qw/viewform). For an individually maintained package, your GitHub handle is enough.
+For an individually maintained package, your GitHub handle is enough. If a company maintains it, Pulumi needs a contact person at that company before a maintainer merges.
 
 ### What happens next
 
