@@ -42,48 +42,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # INERT PROBE -- collects the single piece of evidence the auto-merge
-      # step needs before it can be written.
-      #
-      # Auto-merge must be armed with PULUMI_BOT_TOKEN, not GITHUB_TOKEN:
-      # build-and-deploy.yml triggers on push to master, and events created
-      # with GITHUB_TOKEN do not trigger workflows, so a GITHUB_TOKEN merge
-      # would land without ever deploying the site. The three daily scheduled
-      # rebuilds would mask that for hours, which makes it worse, not better.
-      #
-      # PULUMI_BOT_TOKEN is not an Actions secret -- it is minted from Pulumi
-      # ESC over OIDC, so Dependabot's inability to read Actions secrets does
-      # not apply. What is NOT yet proven is ESC over OIDC on a
-      # Dependabot-triggered run *without* an `environment:` -- the only case
-      # known to work (pull-request.yml's buildSite) sets
-      # `environment: testing`, which changes the OIDC subject claim.
-      #
-      # continue-on-error so a failure here can never affect labelling.
-      # workflow_dispatch cannot prove this: a human-triggered run has a
-      # different actor and a different OIDC subject. Read the log on a real
-      # Dependabot PR.
-      - name: Probe ESC token availability (inert)
-        id: esc-probe
-        if: github.event_name == 'pull_request'
-        continue-on-error: true
-        uses: pulumi/esc-action@v3
-
-      - name: Report probe result (inert)
-        if: github.event_name == 'pull_request'
-        continue-on-error: true
-        env:
-          PROBE_TOKEN: ${{ steps.esc-probe.outputs.PULUMI_BOT_TOKEN }}
-          GH_TOKEN: ${{ steps.esc-probe.outputs.PULUMI_BOT_TOKEN }}
-        run: |
-          if [ -n "${PROBE_TOKEN}" ]; then
-            echo "ESC token acquired: yes"
-            echo "Authenticated as: $(gh api /user --jq .login 2>&1 || echo 'token cannot call the API')"
-          else
-            echo "ESC token acquired: NO"
-            echo "ESC/OIDC does not work on a Dependabot run without an environment."
-            echo "Auto-merge will need 'environment: testing' on this job, or a fallback."
-          fi
-
       - name: Label and triage Dependabot PR
         id: triage
         uses: actions/github-script@v9
@@ -91,6 +49,7 @@ jobs:
           META_DEPENDENCY_NAMES: ${{ steps.meta.outputs.dependency-names }}
           META_GHSA_ID: ${{ steps.meta.outputs.ghsa-id }}
           META_ALERT_STATE: ${{ steps.meta.outputs.alert-state }}
+          AUTO_MERGE_ENABLED: ${{ vars.DEPS_AUTO_MERGE }}
         with:
           script: |
             // Get PR details - either from event payload or workflow input
@@ -277,10 +236,22 @@ jobs:
               triageComment += '🔒 **Security Update** - Prioritize: evaluate and merge promptly.\n\n';
             }
 
-            triageComment += '**Evaluate and merge:**\n';
-            triageComment += '- [ ] Run `make build` (or `make serve-all` for browser-facing changes) and verify the site builds and loads\n';
-            triageComment += '- [ ] Spot-check search, console errors, and markdown rendering\n';
-            triageComment += '- [ ] Merge once CI is green\n\n';
+            const autoMergeOn = (process.env.AUTO_MERGE_ENABLED || '') === 'true';
+
+            if (autoMergeOn && autoMergeEligible) {
+              triageComment += '🤖 **Auto-merge armed.** No risk flags, so this PR is approved and will merge itself once the required build check passes. No action needed.\n\n';
+            } else {
+              if (autoMergeOn) {
+                const why = hasLambdaEdgeRisk
+                  ? 'it carries `deps-lambda-edge-risk`'
+                  : `it bumps ${dependencies.length} dependencies (\`deps-bulk-update\`)`;
+                triageComment += `✋ **Held for review** because ${why}. Auto-merge is not armed for this PR.\n\n`;
+              }
+              triageComment += '**Evaluate and merge:**\n';
+              triageComment += '- [ ] Run `make build` (or `make serve-all` for browser-facing changes) and verify the site builds and loads\n';
+              triageComment += '- [ ] Spot-check search, console errors, and markdown rendering\n';
+              triageComment += '- [ ] Merge once CI is green\n\n';
+            }
 
             if (hasLambdaEdgeRisk) {
               triageComment += '🚨 **Lambda@Edge Risk** - This update affects webpack, bundlers, or AWS SDK. ';
@@ -315,6 +286,80 @@ jobs:
               console.error('Failed to post comment:', error.message);
               // Don't fail the workflow if comment posting fails
             }
+
+      # Single ESC fetch, serving two purposes.
+      #
+      # Until DEPS_AUTO_MERGE is set, nothing consumes the token and this step
+      # is a pure probe: the report below records whether ESC over OIDC works
+      # on a Dependabot-triggered run without an `environment:`. That is the one
+      # path nothing in this repo had exercised -- the only case known to work
+      # (pull-request.yml's buildSite) sets `environment: testing`, which
+      # changes the OIDC subject claim. Read the report on a real Dependabot PR
+      # before turning the switch on.
+      #
+      # PULUMI_BOT_TOKEN rather than GITHUB_TOKEN is not a preference:
+      # build-and-deploy.yml triggers on push to master, and events created
+      # with GITHUB_TOKEN do not trigger workflows, so a GITHUB_TOKEN merge
+      # would land without ever deploying the site. The three daily scheduled
+      # rebuilds would paper over that for hours, which makes it harder to
+      # notice, not safer. The 18 workflows that already call
+      # `gh pr merge --auto` all use PULUMI_BOT_TOKEN for this reason.
+      #
+      # continue-on-error so a failure here can never affect labelling.
+      - name: Fetch ESC secrets
+        id: esc-secrets
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Report ESC token availability
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          PROBE_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          if [ -n "${PROBE_TOKEN}" ]; then
+            echo "ESC token acquired: yes"
+            echo "Authenticated as: $(gh api /user --jq .login 2>&1 || echo 'token cannot call the API')"
+          else
+            echo "ESC token acquired: NO"
+            echo "ESC/OIDC does not work on a Dependabot run without an environment."
+            echo "Auto-merge would need 'environment: testing' on this job, or a fallback."
+          fi
+
+      # Approve as pulumi-bot and hand the PR to GitHub's native auto-merge,
+      # which waits for the required build check on its own -- there is nothing
+      # to poll here, and the ~10 minute build is GitHub's problem.
+      #
+      # Approving as pulumi-bot is deliberate. master requires an approving
+      # review, and a bot approving a bot-authored PR gated on CI states that
+      # policy plainly. The alternative it replaces -- a routine that stamped
+      # every Dependabot PR under a human's name -- manufactured a trail
+      # showing a person had reviewed dependency bumps nobody read.
+      #
+      # Gated on the DEPS_AUTO_MERGE repo variable (unset = off), so this
+      # workflow can land and collect probe evidence before anything merges
+      # unattended. Same switch pattern as BLOG_REVIEW_COUNT. To disable in a
+      # hurry, unset the variable; in-flight PRs can be released individually
+      # with `gh pr merge --disable-auto <n>`.
+      - name: Approve and enable auto-merge
+        if: >-
+          github.event_name == 'pull_request' &&
+          vars.DEPS_AUTO_MERGE == 'true' &&
+          steps.triage.outputs.auto_merge == 'true' &&
+          steps.esc-secrets.outputs.PULUMI_BOT_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          PR: ${{ steps.triage.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+          # Re-approving after a Dependabot rebase is a no-op update, not an
+          # error, so this is safe on `synchronize` as well as `opened`.
+          gh pr review "$PR" --approve \
+            --body "Auto-approved by label-dependabot.yml: no deps-lambda-edge-risk or deps-bulk-update flag. The merge itself is gated on the required build check."
+          gh pr merge "$PR" --auto --squash
+          echo "Auto-merge armed for #${PR}."
 
 env:
   ESC_ACTION_OIDC_AUTH: true

@@ -3476,9 +3476,22 @@ All three are computed from `dependabot/fetch-metadata` outputs rather than from
 
 The workflow does not classify PRs into risk tiers. The three flags surface the signals that change handling: `deps-lambda-edge-risk` PRs need the bundle-size check, and `deps-bulk-update` PRs warrant a closer read.
 
+### Auto-merge
+
+When the `DEPS_AUTO_MERGE` repository variable is set to `true`, `label-dependabot.yml` approves qualifying Dependabot PRs as `pulumi-bot` and hands them to GitHub's native auto-merge, which waits for the required build check on its own. **A PR qualifies unless it carries `deps-lambda-edge-risk` or `deps-bulk-update`** — those two stay in the human queue, and the triage comment says which flag held it.
+
+Unset the variable to turn the whole thing off; PRs already armed can be released individually with `gh pr merge --disable-auto <number>`. Same switch pattern as `BLOG_REVIEW_COUNT`.
+
+Two details that are load-bearing rather than incidental:
+
+- **The approval is posted as `pulumi-bot`, using a token minted from Pulumi ESC over OIDC.** `master` requires an approving review, and GitHub's auto-merge waits for *every* branch protection requirement, not just checks — so an unapproved PR with a green build sits armed indefinitely. A bot approving a bot-authored PR gated on CI states that policy honestly, which a routine stamping every PR under a human's name did not.
+- **The merge must be armed with `PULUMI_BOT_TOKEN`, never `GITHUB_TOKEN`.** `build-and-deploy.yml` triggers on push to `master`, and events created with `GITHUB_TOKEN` do not trigger workflows. A `GITHUB_TOKEN` merge would land and never deploy — and the three daily scheduled rebuilds would hide that for hours rather than surfacing it.
+
+Because both risk flags were computed incorrectly before 2026-09 (see above), do not enable this switch against a build of the labelling workflow that predates that fix: PR #21285 bumped `webpack` and would have qualified.
+
 ### Monthly triage workflow
 
-Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. The policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral. Grouping already keeps volume low, so batching buys nothing.
+Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, most of these merge themselves and the list below applies only to PRs held by a risk flag. With it unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
 
 For each PR:
 
