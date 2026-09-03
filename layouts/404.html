@@ -20,6 +20,10 @@
             </svg>
         </a>
         </div>
+        {{/* The rendered <title> for this page (via layouts/partials/head.html) is grepped
+             by .github/workflows/post-deployment-health-check.yml as the soft-404 signature.
+             If you retitle this page, update SOFT_404_SIGNATURE in that workflow too, or the
+             health check will silently stop detecting soft 404s. */}}
         <main class="flex flex-col items-center justify-center w-full max-w-full my-auto">
             <div class="flex items-center justify-center w-full h-[24em]">
                 <pre

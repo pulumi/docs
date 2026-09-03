@@ -2340,7 +2340,10 @@ After Pulumi updates complete, automated health checks validate the deployed sit
 - Core pages (homepage, docs, registry)
 - SDK documentation endpoints (Node.js, Python, .NET, Java)
 - High-traffic documentation pages
+- Section landing pages (blog, what-is, case studies, tutorials, templates, events)
+- Crawler endpoints (robots.txt, sitemap.xml)
 - Lambda@Edge redirect functionality
+- Soft 404s: a page that returns HTTP 200 but whose body is actually the site's 404 page is treated as a failure, not a pass
 
 **When it runs:**
 
@@ -2369,7 +2372,7 @@ curl -s -o /dev/null -w "%{http_code}|%{redirect_url}\n" https://www.pulumi.com/
 
 Edit `.github/workflows/post-deployment-health-check.yml` and add calls to:
 
-- `check_endpoint` function for page availability checks (expects 200 status)
+- `check_endpoint` function for page availability checks (expects 200 status and a body that is not the site's 404 page)
 - `check_redirect` function for Lambda@Edge redirect tests (expects 301 with location match)
 
 ### Example Program Testing

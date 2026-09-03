@@ -7,12 +7,6 @@ on:
       - "Build and deploy testing"
     types:
       - completed
-  schedule:
-    # Catches availability regressions that appear well after a deploy finishes
-    # (e.g. a CDN/origin issue that only surfaces once caches roll over), which
-    # the workflow_run trigger above cannot see since it only fires once, right
-    # after a deploy completes.
-    - cron: '*/30 * * * *'
   workflow_dispatch:
     inputs:
       target_url:
@@ -46,7 +40,7 @@ jobs:
   health-check:
     name: Run post-deployment health checks
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     outputs:
       url: ${{ steps.target.outputs.url }}
       environment: ${{ steps.target.outputs.environment }}
@@ -64,10 +58,6 @@ jobs:
             else
               echo "slack_channel=docs-ops-test" >> $GITHUB_OUTPUT
             fi
-          elif [[ "${{ github.event_name }}" == "schedule" ]]; then
-            echo "url=https://www.pulumi.com" >> $GITHUB_OUTPUT
-            echo "environment=production" >> $GITHUB_OUTPUT
-            echo "slack_channel=docs-ops" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event.workflow_run.name }}" == "Build and deploy" ]]; then
             echo "url=https://www.pulumi.com" >> $GITHUB_OUTPUT
             echo "environment=production" >> $GITHUB_OUTPUT
@@ -186,11 +176,11 @@ jobs:
           SLACK_CHANNEL: ${{ needs.health-check.outputs.slack_channel || 'docs-ops' }}
           SLACK_COLOR: "#F54242"
           SLACK_MESSAGE: |
-            🚨 Health check failed for ${{ needs.health-check.outputs.environment || 'production' }} (trigger: ${{ github.event_name }})
+            🚨 Post-deployment health check failed for ${{ needs.health-check.outputs.environment || 'production' }}
 
-            ${{ github.event.workflow_run.html_url && format('Workflow: {0}', github.event.workflow_run.html_url) || 'Trigger: scheduled availability check (no deploy in progress)' }}
-            ${{ github.event.workflow_run.name && format('Deployment: {0}', github.event.workflow_run.name) || '' }}
-            ${{ github.event.workflow_run.head_sha && format('Commit: {0}', github.event.workflow_run.head_sha) || '' }}
+            Workflow: ${{ github.event.workflow_run.html_url }}
+            Deployment: ${{ github.event.workflow_run.name }}
+            Commit: ${{ github.event.workflow_run.head_sha }}
 
             Check the workflow logs for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           SLACK_USERNAME: docsbot
