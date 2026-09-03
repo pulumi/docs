@@ -347,7 +347,7 @@ cluster_metadata = k8s.core.v1.ConfigMap(
 Your ArgoCD Applications or Helm values can then reference this ConfigMap, closing the loop between IaC and GitOps without hardcoding cloud-specific values.
 
 {{% notes type="info" %}}
-Pro Tip: If you're using Terraform today, the gitops-bridge pattern works there too. But if you're tired of wrangling HCL and want type-safe infrastructure code with real programming constructs, [give Pulumi a look](/docs/get-started/). The bridge from IaC to GitOps becomes much more natural when both sides speak a real programming language.
+Pro Tip: If you're using Terraform today, the gitops-bridge pattern works there too. But if you're tired of wrangling HCL and want type-safe infrastructure code with real programming constructs, [see how Pulumi compares to Terraform](/docs/iac/comparisons/terraform/). The bridge from IaC to GitOps becomes much more natural when both sides speak a real programming language.
 {{% /notes %}}
 
 ## 12. Be pragmatic, not dogmatic

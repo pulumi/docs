@@ -70,7 +70,7 @@ There are two ways to programmatically create secret values:
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-- Setting `configuration.${KEY}.Secret: true` when reading a value from the config.
+- Setting `configuration.${KEY}.secret: true` when reading a value from the config.
 - Calling `fn::secret` to construct a secret from an existing value.
 
 {{% /choosable %}}
@@ -323,7 +323,7 @@ $ pulumi config set --plaintext aws:region us-west-2
 
 ## Using configuration and secrets in code
 
-To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters and setters for retrieving configuration values of various types by their key.
+To access configuration or secret values for your package, project, or component, use the `pulumi.Config` type. This type offers a collection of getters for retrieving configuration values of various types by their key.
 
 For example, assume the following configuration values have been set:
 
