@@ -136,12 +136,14 @@ def test_ordinal_the_first_is_not_a_stance() -> None:
         "The workflow below assumes a live `blue` environment already exists: for the first deployment, create it.",
         "Run it the first time with `--yes`.",
         "Stacks are the first-class unit here; the first steps take the first 30 days.",
+        "The first step to take is a preview; the first thing to do afterwards is read the diff.",
         "Pulumi was the first IaC tool to support general-purpose languages.",
     ]))
     pos = [c for c in d["claims"] if c["type"] == "positioning"]
     check(not any("deployment" in c["text"] for c in pos), f"ordinal: 'the first deployment' must not be positioning; got {[c['text'] for c in pos]}")
     check(not any("first time" in c["text"] for c in pos), f"ordinal: 'the first time' must not be positioning; got {[c['text'] for c in pos]}")
     check(not any(("first-class" in c["text"] or "first steps" in c["text"]) for c in pos), f"ordinal: hyphenated/plural/numeric 'the first' must not be positioning; got {[c['text'] for c in pos]}")
+    check(not any(("first step to" in c["text"] or "first thing to" in c["text"]) for c in pos), f"ordinal: 'the first step to take' must not be positioning; got {[c['text'] for c in pos]}")
     check(any("first IaC tool" in c["text"] for c in pos), f"stance: 'the first IaC tool' must stay positioning; got {[c['text'] for c in pos]}")
 
 
