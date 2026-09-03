@@ -152,12 +152,12 @@ EXTRACT_CLAIMS_TOOL = {
                         },
                         "text": {
                             "type": "string",
-                            "description": "The claim as a self-contained sentence (resolve pronouns, name the subject). For attributions, include the attribution ('StrongDM reported X', not just 'X').",
+                            "description": "The claim as a self-contained sentence: resolve pronouns, name the subject, and carry the scope the enclosing heading or paragraph establishes ('the query string' under an 'AWS KMS' heading is 'the awskms secrets-provider URL's query string'). For attributions, include the attribution ('StrongDM reported X', not just 'X').",
                         },
                         "type": {"type": "string", "enum": CLAIM_TYPES},
                         "source_hint": {
                             "type": "string",
-                            "description": "Optional: a URL or named source the claim cites/attributes to.",
+                            "description": "Optional: a URL or named source the claim cites/attributes to. For version and api-surface claims, the package or product the pin/surface belongs to (e.g. 'pulumi/pulumi-gcp', 'Node.js') even when nothing is cited — downstream keys the claim on it.",
                         },
                         "confidence": {
                             "type": "string",

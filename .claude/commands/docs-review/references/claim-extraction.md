@@ -55,6 +55,9 @@ Each claim's `text` must stand alone — a verifier reading only the record (wit
 - "It's enabled by default." → "S3 bucket server-side encryption is enabled by default in this example."
 - "This is the recommended approach." → "Using a separate ESC environment per stack is the recommended approach for secret isolation."
 - "They retired it in March 2026." → "Pulumi retired the legacy `pulumi-base` Docker image in March 2026."
+- "As of Pulumi CLI v3.33.1, add `awssdk=v2` and `profile=` to the query string." — under the heading `#### AWS Key Management Service (KMS)` → "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL takes `awssdk=v2` and `profile=<name>` in its query string."
+
+**Carry the enclosing scope.** A sentence on the page inherits the subject of the heading and paragraph it sits under; a claim record does not. The nightly re-verification reads records straight from the claims index with no page in view, so a record that says "the query string" when the page meant "the awskms URL's query string" gets verified as a claim about every query string — and comes back contradicted or framing-drift for a page that is correct in context. On 2026-09-03 exactly that marked two pages and burned two review slots for no defect. Name the thing the heading scopes the sentence to, every time.
 
 Keep it faithful — restate, don't editorialize, don't strengthen. If the original is hedged ("ESC can integrate with Vault in some configurations"), keep the hedge.
 
@@ -130,6 +133,11 @@ Return a single JSON object via the `extract_claims` tool:
                                                           // page and manufactures a false contradiction. If the claim's own
                                                           // URL is already in `text`, the hint is redundant; never substitute
                                                           // a different page.
+                                                          // For `version` and `api-surface` claims it is the package or
+                                                          // product the pin/surface belongs to ("pulumi/pulumi-gcp",
+                                                          // "Node.js"), cited or not: entity_key.py keys the claim on it,
+                                                          // and without it a version claim is keyed on whatever words
+                                                          // happen to open the sentence ("version/later-exactly").
       "confidence": "high"                     // high | medium | low
     }
   ]
@@ -242,6 +250,14 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 - Record A (type `behavior`): `text` = "`pulumi preview` shows the planned changes without applying them."
 - Record B (type `behavior`): `text` = "`pulumi preview --expect-no-changes` exits non-zero when it detects a diff."
 - Reasoning: two independent, separately-verifiable behaviors joined by "and". Split them so a wrong half is isolated.
+
+**13 — Scope lives in the heading.**
+
+> Under `#### AWS Key Management Service (KMS)`, after three `awskms://...` examples:
+> "As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string."
+
+- Record (type `version`): `text` = "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL accepts `awssdk=v2` and `profile=<name>` in its query string as an alternative to the `AWS_PROFILE` environment variable." `source_hint` = "pulumi/pulumi" `confidence` = high.
+- Reasoning: on the page, "the query string" can only mean the awskms URL — the heading and the surrounding examples say so. Lifted out verbatim, the sentence reads as a claim about AWS query strings in general, and a verifier holding only the record will find the v3.33.1 release note scoped to `awskms` and call the record over-broad. It is the record that is over-broad, not the page. The `source_hint` names the product whose release notes decide the pin, so the claim keys as `version/pulumi` rather than on the sentence's opening words.
 
 ---
 
