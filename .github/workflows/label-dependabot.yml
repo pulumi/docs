@@ -12,10 +12,16 @@ on:
 
 jobs:
   label:
-    if: github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
+    # head.repo guard mirrors auto-approve-for-auto-merge.yml: github.actor
+    # alone is spoofable from a fork.
+    if: >-
+      (github.actor == 'dependabot[bot]' &&
+       github.event.pull_request.head.repo.full_name == github.repository) ||
+      github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write
       pull-requests: write
       issues: write
 
@@ -23,8 +29,68 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
+      # Dependabot signs its update metadata into the commit, which is the only
+      # reliable source for which dependencies a PR touches and whether it is a
+      # security update. Parsing the PR body cannot do either job correctly --
+      # see the comments in the script step below. Not available on
+      # workflow_dispatch (no Dependabot commit to read), so the script keeps a
+      # body-parsing fallback for that path only.
+      - name: Fetch Dependabot metadata
+        id: meta
+        if: github.event_name == 'pull_request'
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # INERT PROBE -- collects the single piece of evidence the auto-merge
+      # step needs before it can be written.
+      #
+      # Auto-merge must be armed with PULUMI_BOT_TOKEN, not GITHUB_TOKEN:
+      # build-and-deploy.yml triggers on push to master, and events created
+      # with GITHUB_TOKEN do not trigger workflows, so a GITHUB_TOKEN merge
+      # would land without ever deploying the site. The three daily scheduled
+      # rebuilds would mask that for hours, which makes it worse, not better.
+      #
+      # PULUMI_BOT_TOKEN is not an Actions secret -- it is minted from Pulumi
+      # ESC over OIDC, so Dependabot's inability to read Actions secrets does
+      # not apply. What is NOT yet proven is ESC over OIDC on a
+      # Dependabot-triggered run *without* an `environment:` -- the only case
+      # known to work (pull-request.yml's buildSite) sets
+      # `environment: testing`, which changes the OIDC subject claim.
+      #
+      # continue-on-error so a failure here can never affect labelling.
+      # workflow_dispatch cannot prove this: a human-triggered run has a
+      # different actor and a different OIDC subject. Read the log on a real
+      # Dependabot PR.
+      - name: Probe ESC token availability (inert)
+        id: esc-probe
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Report probe result (inert)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          PROBE_TOKEN: ${{ steps.esc-probe.outputs.PULUMI_BOT_TOKEN }}
+          GH_TOKEN: ${{ steps.esc-probe.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          if [ -n "${PROBE_TOKEN}" ]; then
+            echo "ESC token acquired: yes"
+            echo "Authenticated as: $(gh api /user --jq .login 2>&1 || echo 'token cannot call the API')"
+          else
+            echo "ESC token acquired: NO"
+            echo "ESC/OIDC does not work on a Dependabot run without an environment."
+            echo "Auto-merge will need 'environment: testing' on this job, or a fallback."
+          fi
+
       - name: Label and triage Dependabot PR
+        id: triage
         uses: actions/github-script@v9
+        env:
+          META_DEPENDENCY_NAMES: ${{ steps.meta.outputs.dependency-names }}
+          META_GHSA_ID: ${{ steps.meta.outputs.ghsa-id }}
+          META_ALERT_STATE: ${{ steps.meta.outputs.alert-state }}
         with:
           script: |
             // Get PR details - either from event payload or workflow input
@@ -47,24 +113,71 @@ jobs:
               prBody = context.payload.pull_request.body || '';
             }
 
-            // Bundler/AWS SDK updates can blow the 1MB Lambda@Edge bundle limit.
-            // This is the one piece of risk signal worth flagging automatically.
+            // Bundler/SDK updates can blow the 1MB Lambda@Edge bundle limit.
+            // Once auto-merge is armed this stops being advisory and becomes a
+            // merge gate, so it needs to cover what /infrastructure actually
+            // bumps: @pulumi/aws and @pulumi/pulumi are what get bundled into
+            // the Lambda@Edge function, and esbuild/rollup/terser can change
+            // output size on their own.
             const lambdaEdgeRiskDeps = [
-              'webpack', '-loader', '-webpack-plugin', '@aws-sdk/'
+              'webpack', '-loader', '-webpack-plugin', '@aws-sdk/',
+              '@pulumi/', 'esbuild', 'rollup', 'terser'
             ];
 
-            // Extract dependency names from PR body
-            const dependencyPattern = /(?:Bumps|Updates) \[([^\]]+)\]/g;
-            const dependencies = [];
-            let match;
-            while ((match = dependencyPattern.exec(prBody)) !== null) {
-              dependencies.push(match[1]);
-            }
+            // A grouped PR at or above this size is held for human review.
+            // Lowered from 10 to 5 because this is now a merge gate rather
+            // than a note: the 2026-09-01 batch contained groups of 2, 3, 7, 9
+            // and 10, so a threshold of 10 would auto-merge a 9-package bump
+            // unreviewed. Raise it if that proves too conservative.
+            const BULK_UPDATE_THRESHOLD = 5;
 
-            // Also check PR title for dependency names
-            const titleMatch = prTitle.match(/bump\s+(.+?)\s+from/i);
-            if (titleMatch) {
-              dependencies.push(titleMatch[1]);
+            // Prefer Dependabot's own signed metadata. It is the only source
+            // that is correct for GROUPED PRs, and grouped PRs are the only
+            // ones that can be bulk.
+            //
+            // The previous body regex was /(?:Bumps|Updates) \[([^\]]+)\]/g.
+            // A grouped body reads:
+            //
+            //   Bumps the all-dependencies group in /infrastructure with 2
+            //   updates: [@pulumi/aws](...) and [@pulumi/pulumi](...).
+            //   Updates `@pulumi/aws` from 7.39.0 to 7.44.0
+            //
+            // "Bumps the" has no bracket after it, and the per-dependency
+            // lines use backticks. The title fallback missed too: a grouped
+            // title has no " from ". So `dependencies` was [] on every grouped
+            // PR and neither deps-bulk-update nor deps-lambda-edge-risk could
+            // ever fire. Confirmed in the wild: #21282 ("with 10 updates") and
+            // #20711 ("with 12 updates") carry no deps-bulk-update label.
+            // Tracked separately from `dependencies` because the fallback
+            // below fills that array in, which would otherwise make it look
+            // like metadata had been available.
+            const metadataAvailable =
+              (process.env.META_DEPENDENCY_NAMES || '').trim() !== '';
+
+            let dependencies = (process.env.META_DEPENDENCY_NAMES || '')
+              .split(',')
+              .map(s => s.trim())
+              .filter(Boolean);
+
+            if (!metadataAvailable) {
+              // workflow_dispatch path only: fetch-metadata cannot run without
+              // a Dependabot commit. Handles both body shapes.
+              const found = new Set();
+              const patterns = [
+                /(?:Bumps|Updates) \[([^\]]+)\]/g,
+                /^Updates `([^`]+)` from /gm,
+              ];
+              for (const pattern of patterns) {
+                let match;
+                while ((match = pattern.exec(prBody)) !== null) {
+                  found.add(match[1]);
+                }
+              }
+              const titleMatch = prTitle.match(/bump\s+(.+?)\s+from/i);
+              if (titleMatch) {
+                found.add(titleMatch[1]);
+              }
+              dependencies = [...found];
             }
 
             // Flag Lambda@Edge bundling risk
@@ -79,16 +192,39 @@ jobs:
             // Prepare labels to add (`dependencies` is already applied via dependabot.yml)
             const labelsToAdd = ['dependencies'];
 
-            // Check for security updates
-            const isSecurity = prTitle.toLowerCase().includes('security') ||
-                               prBody.toLowerCase().includes('security');
+            // Never test for the word "security" in the title or body. Every
+            // single-dependency Dependabot PR carries boilerplate containing
+            // it -- a compatibility-score link to
+            // "about-dependabot-security-updates", and the footer "You can
+            // disable automated security fix PRs for this repo from the
+            // Security Alerts page". Measured on this repo: 207 Dependabot PRs
+            // match that boilerplate; only 52 reference an actual advisory.
+            // That is why routine version bumps were being tagged
+            // "Security update, merge immediately" and the label stopped
+            // meaning anything.
+            //
+            // fetch-metadata reads the advisory out of Dependabot's commit
+            // metadata, so it is exact for both single and grouped PRs.
+            const ghsaId = (process.env.META_GHSA_ID || '').trim();
+            const alertState = (process.env.META_ALERT_STATE || '').trim();
+            let isSecurity = ghsaId !== '' || alertState !== '';
+
+            if (!metadataAvailable) {
+              // workflow_dispatch path only. Match advisory identifiers, never
+              // the bare word. This under-reports -- PR #21335 is a genuine
+              // security update with no GHSA anywhere in its body -- which is
+              // acceptable for a manual test path but would not be on the
+              // real one.
+              isSecurity = /\b(?:GHSA-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}|CVE-\d{4}-\d{4,})\b/i.test(prBody);
+            }
 
             if (isSecurity) {
               labelsToAdd.push('deps-security-patch');
             }
 
-            // Check for bulk updates (10+ dependencies)
-            if (dependencies.length >= 10) {
+            // Check for bulk updates
+            const isBulk = dependencies.length >= BULK_UPDATE_THRESHOLD;
+            if (isBulk) {
               labelsToAdd.push('deps-bulk-update');
             }
 
@@ -97,10 +233,27 @@ jobs:
               labelsToAdd.push('deps-lambda-edge-risk');
             }
 
-            // Add ecosystem label based on PR labels
-            const existingLabels = context.payload.pull_request.labels.map(l => l.name);
+            // Add ecosystem label based on PR labels. context.payload
+            // .pull_request is undefined on the workflow_dispatch path, which
+            // used to throw before the labels were ever applied.
+            const existingLabels =
+              (context.payload.pull_request?.labels || []).map(l => l.name);
             if (existingLabels.includes('npm')) labelsToAdd.push('npm');
             if (existingLabels.includes('github-actions')) labelsToAdd.push('github-actions');
+
+            // Consumed by the auto-merge step (added separately, once the ESC
+            // probe below has confirmed a usable token on a real Dependabot
+            // run). Held categories mirror BUILD-AND-DEPLOY.md's Infrastructure
+            // Change Review: bundle-size risk and batches too large to eyeball.
+            const autoMergeEligible = !hasLambdaEdgeRisk && !isBulk;
+            core.setOutput('auto_merge', String(autoMergeEligible));
+            core.setOutput('pr_number', String(prNumber));
+            core.setOutput('held_reason', hasLambdaEdgeRisk
+              ? 'lambda-edge-risk'
+              : (isBulk ? 'bulk-update' : ''));
+            console.log(`Auto-merge eligible: ${autoMergeEligible} ` +
+              `(lambdaEdgeRisk=${hasLambdaEdgeRisk}, bulk=${isBulk}, ` +
+              `deps=${dependencies.length}, security=${isSecurity})`);
 
             // Apply labels
             try {
@@ -135,8 +288,8 @@ jobs:
               triageComment += 'section for deployment risks.\n\n';
             }
 
-            if (dependencies.length >= 10) {
-              triageComment += '📦 **Bulk Update** - 10+ dependencies. Review carefully for conflicts.\n\n';
+            if (isBulk) {
+              triageComment += `📦 **Bulk Update** - ${dependencies.length} dependencies. Review carefully for conflicts.\n\n`;
             }
 
             triageComment += '### Claude Code Review\n\n';
@@ -162,3 +315,10 @@ jobs:
               console.error('Failed to post comment:', error.message);
               // Don't fail the workflow if comment posting fails
             }
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

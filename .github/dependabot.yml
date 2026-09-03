@@ -1,5 +1,26 @@
+# Dependabot configuration for pulumi/docs.
+#
+# Two things about this file are easy to get wrong; both are called out again
+# at the point of use below.
+#
+# 1. Security updates ignore most of what you configure here. They are not
+#    subject to `schedule`, they are not subject to `open-pull-requests-limit`,
+#    and they are NOT covered by a `groups` entry unless that entry carries
+#    `applies-to: security-updates` (groups default to version updates). Every
+#    entry below therefore has a second, security-specific group. Without it,
+#    one advisory day produces one PR per affected package per manifest --
+#    which is how this repo saw 9 PRs on 2026-07-23 and 11 on 2026-09-01.
+#
+# 2. The /static/programs entries at the bottom exist ONLY to batch security
+#    PRs for 444 sample programs. They must keep `open-pull-requests-limit: 0`
+#    and `applies-to: security-updates`. See the header above that block.
+
 version: 2
 updates:
+  # ===========================================================================
+  # Site build
+  # ===========================================================================
+
   # Root package.json
   - package-ecosystem: "npm"
     directory: "/"
@@ -10,6 +31,9 @@ updates:
     open-pull-requests-limit: 1
     groups:
       all-dependencies:
+        patterns: ["*"]
+      security:
+        applies-to: security-updates
         patterns: ["*"]
     ignore:
       - dependency-name: "tailwindcss"
@@ -32,6 +56,9 @@ updates:
     groups:
       all-dependencies:
         patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
     ignore:
       - dependency-name: "tailwindcss"
       - dependency-name: "*"
@@ -40,7 +67,8 @@ updates:
     commit-message:
       prefix: "deps(theme)"
 
-  # Stencil package.json
+  # Stencil package.json. Built indirectly: scripts/ensure.sh installs it and
+  # theme/webpack.config.js shells out to its build.
   - package-ecosystem: "npm"
     directory: "/theme/stencil"
     schedule:
@@ -50,6 +78,9 @@ updates:
     open-pull-requests-limit: 1
     groups:
       all-dependencies:
+        patterns: ["*"]
+      security:
+        applies-to: security-updates
         patterns: ["*"]
     ignore:
       - dependency-name: "*"
@@ -69,6 +100,9 @@ updates:
     groups:
       all-dependencies:
         patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
@@ -76,7 +110,55 @@ updates:
     commit-message:
       prefix: "deps(infra)"
 
-  # GitHub Actions
+  # Versioned-docs generator: a sibling Pulumi program to /infrastructure with
+  # its own package.json and yarn.lock. Previously unconfigured, so its
+  # security PRs arrived with Dependabot's default naming and no prefix
+  # (e.g. #20772, "Bump js-yaml ... in the npm_and_yarn group").
+  - package-ecosystem: "npm"
+    directory: "/infrastructure/versioned-docs"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(versioned-docs)"
+
+  # snippet-sweep. The repo's only package-lock.json; everything else is yarn.
+  - package-ecosystem: "npm"
+    directory: "/scripts/snippet-sweep"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(snippet-sweep)"
+
+  # ===========================================================================
+  # CI and tooling
+  # ===========================================================================
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -87,15 +169,25 @@ updates:
     groups:
       all-actions:
         patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "pulumi/action-install-pulumi-cli"
     labels: ["dependencies"]
     commit-message:
       prefix: "ci"
-    ignore:
-      - dependency-name: "pulumi/action-install-pulumi-cli"
 
-  # Python dependencies
+  # Python. This entry previously pointed at /scripts, where there is no
+  # Python manifest of any kind -- it matched nothing and had never produced
+  # a PR. The real Pipfiles are the three below; only /tools/pydocgen has a
+  # Pipfile.lock. The root /Pipfile is deliberately omitted: it declares no
+  # packages and exists only to pin python_version.
   - package-ecosystem: "pip"
-    directory: "/scripts"
+    directories:
+      - "/scripts/python"
+      - "/scripts/image-borders"
+      - "/tools/pydocgen"
     schedule:
       interval: "monthly"
       day: "monday"
@@ -104,9 +196,128 @@ updates:
     groups:
       all-pip-dependencies:
         patterns: ["*"]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
     labels: ["dependencies"]
     commit-message:
       prefix: "deps(pip)"
+
+  # Dev container base image and features. No security-advisory feed exists
+  # for this ecosystem, so there is nothing to group under applies-to.
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 1
+    groups:
+      all-devcontainer-features:
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(devcontainer)"
+
+  # ===========================================================================
+  # Example programs -- SECURITY BATCHING ONLY
+  #
+  # /static/programs holds 444 sample directories that ship as documentation.
+  # We do not want monthly version bumps for them (scripts/programs/upgrade.sh
+  # and the scheduled-upgrade-programs workflow own that job). We only want the
+  # security PRs that GitHub already opens against them -- e.g. #21304, #20771,
+  # both raised with no config coverage at all -- collapsed into one PR per
+  # ecosystem instead of one per directory.
+  #
+  # Every entry below MUST keep both of:
+  #   open-pull-requests-limit: 0     <- turns version updates OFF for the entry
+  #   applies-to: security-updates    <- without it the group covers version
+  #                                      updates instead, and does nothing here
+  # Drop either one and you enable monthly version updates across 444
+  # directories. `schedule` is required by the schema but inert at limit 0.
+  #
+  # Manifests sit one level down (/static/programs/<program>/go.mod), so the
+  # glob is /static/programs/*. Dockerfiles sit two levels down
+  # (/static/programs/<program>/app/Dockerfile) and need the extra pattern.
+  # ===========================================================================
+
+  - package-ecosystem: "npm"
+    directories: ["/static/programs/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
+
+  - package-ecosystem: "gomod"
+    directories: ["/static/programs/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
+
+  - package-ecosystem: "pip"
+    directories: ["/static/programs/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
+
+  - package-ecosystem: "nuget"
+    directories: ["/static/programs/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
+
+  - package-ecosystem: "maven"
+    directories: ["/static/programs/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
+
+  - package-ecosystem: "docker"
+    directories: ["/static/programs/*/*"]
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    groups:
+      example-programs-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "deps(examples)"
