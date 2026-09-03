@@ -1,9 +1,10 @@
 name: Invalidate /dev cache
-# Triggered by pulumi/marketing-web at the end of a production Dev Center deploy.
-# The www.pulumi.com distribution proxies /dev* to marketing-web's own CDN and
-# caches it for 30 minutes (thirtyMinuteCachePolicy, see infrastructure/index.ts),
-# so a fresh Dev Center deploy is otherwise invisible here for up to half an hour.
-# This flushes just the /dev surface — nothing else on the site is touched.
+
+# Invalidates the Dev Center cache, which lives at `/dev` behind the CloudFront CDN managed by pulumi/docs. 
+# We do this with a workflow dispatch because the Dev Center deploys on its own schedule (so its cache needs
+# to be cleared independently of pulumi/docs deployments), and it makes more sense for the Dev Center to 
+# notify pulumi/docs of this event (so it can handle the event on its own), rather than for us to reach into its 
+# live, running infrastructure from the outside.
 on:
   repository_dispatch:
     types: [dev-deployed]
