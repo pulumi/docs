@@ -1,0 +1,1088 @@
+{
+  "generated": "2026-09-03",
+  "source": {
+    "path": "pkg/codegen/schema/pulumi.json",
+    "repo": "pulumi/pulumi",
+    "url": "https://github.com/pulumi/pulumi/blob/v3.261.0/pkg/codegen/schema/pulumi.json",
+    "version": "v3.261.0"
+  },
+  "types": [
+    {
+      "description": "The top-level object of a package schema. Everything else on this page describes something reachable from here.",
+      "id": "package",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The unqualified name of the package (e.g. \"aws\", \"azure\", \"gcp\", \"kubernetes\", \"random\")",
+          "name": "name",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The human-friendly name of the package.",
+          "name": "displayName",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The version of the package. The version must be valid semver.",
+          "name": "version",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The description of the package. Descriptions are interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The list of keywords that are associated with the package, if any.\n\nReserved keywords can be specified that help with categorizing the package in the [Pulumi Registry](/registry/). `category/<name>` and `kind/<type>` are the only reserved keywords at this time, where `<name>` is one of `cloud`, `database`, `infrastructure`, `network`, `utility`, or `vcs`, and `<type>` is either `native` or `component`. If the package is a bridged Terraform provider, don't include a `kind/` label.",
+          "name": "keywords",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "description": "The package's homepage.",
+          "name": "homepage",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The name of the license used for the package's contents.",
+          "name": "license",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Freeform text attribution of derived work, if required.",
+          "name": "attribution",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The URL at which the package's sources can be found.",
+          "name": "repository",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The URL of the package's logo, if any.",
+          "name": "logoUrl",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The URL to use when downloading the provider plugin binary.",
+          "name": "pluginDownloadURL",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The name of the person or organization that authored and published the package.",
+          "name": "publisher",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The namespace of the package. Used to disambiguate the package name. Defaults to 'pulumi' when not specified.",
+          "name": "namespace",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Format metadata about this package.",
+          "name": "meta",
+          "required": false,
+          "type": {
+            "href": "#metadata",
+            "text": "Metadata"
+          }
+        },
+        {
+          "description": "The package's configuration variables.",
+          "name": "config",
+          "required": false,
+          "type": {
+            "href": "#config",
+            "text": "Config"
+          }
+        },
+        {
+          "description": "A map from type token to complexTypeSpec that describes the set of complex types (i.e. object, enum) defined by this package.",
+          "name": "types",
+          "required": false,
+          "type": {
+            "href": "#complextype",
+            "text": "map[ComplexType]"
+          }
+        },
+        {
+          "description": "A list of package descriptors that describes the set of dependencies for this package.",
+          "name": "dependencies",
+          "required": false,
+          "type": {
+            "href": "#packagedescriptor",
+            "text": "array[PackageDescriptor]"
+          }
+        },
+        {
+          "description": "The provider type for this package.",
+          "name": "provider",
+          "required": false,
+          "type": {
+            "href": "#resource",
+            "text": "Resource"
+          }
+        },
+        {
+          "description": "A map from type token to resourceSpec that describes the set of resources and components defined by this package.",
+          "name": "resources",
+          "required": false,
+          "type": {
+            "href": "#resource",
+            "text": "map[Resource]"
+          }
+        },
+        {
+          "description": "A map from token to functionSpec that describes the set of functions defined by this package.",
+          "name": "functions",
+          "required": false,
+          "type": {
+            "href": "#function",
+            "text": "map[Function]"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the package.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#packagelanguage",
+            "text": "map[PackageLanguage]"
+          }
+        },
+        {
+          "description": "An optional object to define parameterization for the package.",
+          "name": "parameterization",
+          "required": false,
+          "type": {
+            "href": "#parameterizationspec",
+            "text": "ParameterizationSpec"
+          }
+        },
+        {
+          "description": "A list of allowed package names in addition to the name property.",
+          "name": "allowedPackageNames",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        }
+      ],
+      "title": "Package",
+      "variants": []
+    },
+    {
+      "description": "Format metadata about this package.",
+      "id": "metadata",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "A regex that is used by the importer to extract a module name from the module portion of a type token. Packages that use the module format \"namespace1/namespace2/.../namespaceN\" do not need to specify a format. The regex must define one capturing group that contains the module name, which must be formatted as \"namespace1/namespace2/...namespaceN\".",
+          "name": "moduleFormat",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Write the package to support the pack command.",
+          "name": "supportPack",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "Metadata",
+      "variants": []
+    },
+    {
+      "description": "The package's configuration variables.",
+      "id": "config",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "A map from variable name to propertySpec that describes a package's configuration variables.",
+          "name": "variables",
+          "required": false,
+          "type": {
+            "href": "#property",
+            "text": "map[Property]"
+          }
+        },
+        {
+          "description": "A list of the names of the package's non-required configuration variables.",
+          "name": "defaults",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        }
+      ],
+      "title": "Config",
+      "variants": []
+    },
+    {
+      "description": "Identifies another package this package depends on.",
+      "id": "packagedescriptor",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The unqualified name of the package (e.g. \"aws\", \"azure\", \"gcp\", \"kubernetes\", \"random\")",
+          "name": "name",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The version of the package. The version must be valid semver if present.",
+          "name": "version",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The optional URL to use when downloading the provider plugin binary.",
+          "name": "pluginDownloadURL",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "An optional object to define parameterization for the package.",
+          "name": "parameterization",
+          "required": false,
+          "type": {
+            "text": "object"
+          }
+        }
+      ],
+      "title": "PackageDescriptor",
+      "variants": []
+    },
+    {
+      "description": "Describes an object type.",
+      "id": "objecttype",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The description of the type, if any.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "A map from property name to propertySpec that describes the object's properties.",
+          "name": "properties",
+          "required": false,
+          "type": {
+            "href": "#property",
+            "text": "map[Property]"
+          }
+        },
+        {
+          "description": "The type of the object. Must be 'object' if this is an object type, or the underlying type for an enum.",
+          "name": "type",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "A list of the names of an object type's required properties. These properties must be set for inputs and will always be set for outputs.",
+          "name": "required",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the object type.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#objecttypelanguage",
+            "text": "map[ObjectTypeLanguage]"
+          }
+        },
+        {
+          "description": "indicates whether the type is an overlay provided by the package. Overlay code is generated by the package rather than using the core Pulumi codegen libraries.",
+          "name": "isOverlay",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "description": "A list of languages that the overlay supports. This only has an effect if the Resource is an Overlay (isOverlay == true). Supported values are 'nodejs', 'python', 'go', 'csharp', 'java', 'yaml'.",
+          "name": "overlaySupportedLanguages",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          },
+          "values": [
+            "nodejs",
+            "python",
+            "go",
+            "csharp",
+            "java",
+            "yaml"
+          ]
+        }
+      ],
+      "title": "ObjectType",
+      "variants": []
+    },
+    {
+      "description": "Describes an object or enum type.",
+      "id": "complextype",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The description of the type, if any. Interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the type.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#objecttypelanguage",
+            "text": "map[ObjectTypeLanguage]"
+          }
+        },
+        {
+          "description": "Indicates that the implementation of the type should not be generated from the schema, and is instead provided out-of-band by the package author.",
+          "name": "isOverlay",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "ComplexType",
+      "variants": [
+        {
+          "description": "",
+          "inherits": [
+            {
+              "href": "#objecttype",
+              "title": "ObjectType"
+            }
+          ],
+          "properties": [
+            {
+              "description": "",
+              "name": "type",
+              "required": false,
+              "type": {
+                "text": "\"object\""
+              }
+            }
+          ],
+          "title": "Object Type Definition"
+        },
+        {
+          "ref": {
+            "href": "#enumtype",
+            "text": "EnumType"
+          },
+          "title": "EnumType"
+        }
+      ]
+    },
+    {
+      "description": "Describes an enum type.",
+      "id": "enumtype",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The underlying primitive type of the enum.",
+          "name": "type",
+          "required": true,
+          "type": {
+            "text": "string"
+          },
+          "values": [
+            "boolean",
+            "integer",
+            "number",
+            "string"
+          ]
+        },
+        {
+          "description": "The list of possible values for the enum.",
+          "name": "enum",
+          "required": true,
+          "type": {
+            "href": "#enumvalue",
+            "text": "array[EnumValue]"
+          }
+        }
+      ],
+      "title": "EnumType",
+      "variants": []
+    },
+    {
+      "description": "Describes a resource or component.",
+      "id": "resource",
+      "inherits": [
+        {
+          "href": "#objecttype",
+          "title": "ObjectType"
+        }
+      ],
+      "properties": [
+        {
+          "description": "The description of the resource, if any. Interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "A map from property name to propertySpec that describes the resource's input properties.",
+          "name": "inputProperties",
+          "required": false,
+          "type": {
+            "href": "#property",
+            "text": "map[Property]"
+          }
+        },
+        {
+          "description": "A list of the names of the resource's required input properties.",
+          "name": "requiredInputs",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "description": "An optional objectTypeSpec that describes additional inputs that may be necessary to get an existing resource. If this is unset, only an ID is necessary.",
+          "name": "stateInputs",
+          "required": false,
+          "type": {
+            "href": "#objecttype",
+            "text": "ObjectType"
+          }
+        },
+        {
+          "description": "An optional objectTypeSpec that describes inputs that may be supplied when listing existing resources of this type. If this is unset, the resource does not declare list support in the schema.",
+          "name": "listInputs",
+          "required": false,
+          "type": {
+            "href": "#objecttype",
+            "text": "ObjectType"
+          }
+        },
+        {
+          "description": "The list of aliases for the resource.",
+          "name": "aliases",
+          "required": false,
+          "type": {
+            "href": "#alias",
+            "text": "array[Alias]"
+          }
+        },
+        {
+          "description": "Indicates whether the resource is deprecated.",
+          "name": "deprecationMessage",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Indicates whether the resource is a component.",
+          "name": "isComponent",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "description": "A map from method name to function token that describes the resource's method set.",
+          "name": "methods",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "description": "Indicates that the implementation of the resource should not be generated from the schema, and is instead provided out-of-band by the package author.",
+          "name": "isOverlay",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "Resource",
+      "variants": []
+    },
+    {
+      "description": "Describes a function.",
+      "id": "function",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The description of the function, if any. Interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The bag of input values for the function, if any.",
+          "name": "inputs",
+          "required": false,
+          "type": {
+            "href": "#objecttype",
+            "text": "ObjectType"
+          }
+        },
+        {
+          "description": "A list of parameter names that determines whether the input bag should be treated as a single argument or as multiple arguments. The list corresponds to the order in which the parameters should be passed to the function.",
+          "name": "multiArgumentInputs",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "description": "Specifies the return type of the function definition.",
+          "name": "outputs",
+          "required": false,
+          "type": {
+            "parts": [
+              {
+                "href": "#type",
+                "text": "Type"
+              },
+              {
+                "href": "#objecttype",
+                "text": "ObjectType"
+              }
+            ],
+            "text": "Type | ObjectType"
+          }
+        },
+        {
+          "description": "Specifies the return type of the function definition.",
+          "name": "returnType",
+          "required": false,
+          "type": {
+            "parts": [
+              {
+                "href": "#type",
+                "text": "Type"
+              },
+              {
+                "href": "#objecttype",
+                "text": "ObjectType"
+              }
+            ],
+            "text": "Type | ObjectType"
+          }
+        },
+        {
+          "description": "Indicates whether the function is deprecated.",
+          "name": "deprecationMessage",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the function.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#functionlanguage",
+            "text": "map[FunctionLanguage]"
+          }
+        },
+        {
+          "description": "Indicates that the implementation of the function should not be generated from the schema, and is instead provided out-of-band by the package author.",
+          "name": "isOverlay",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "description": "A list of languages that the overlay supports. This only has an effect if the Resource is an Overlay (isOverlay == true). Supported values are 'nodejs', 'python', 'go', 'csharp', 'java', 'yaml'.",
+          "name": "overlaySupportedLanguages",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          },
+          "values": [
+            "nodejs",
+            "python",
+            "go",
+            "csharp",
+            "java",
+            "yaml"
+          ]
+        },
+        {
+          "description": "A marker field to indicate that this function should only generate plain and output style methods. It defaults to true, that is to emit both plain and output style methods. Setting this to false will emit only output style methods.",
+          "name": "plain",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "Function",
+      "variants": []
+    },
+    {
+      "description": "A reference to a type. The particular kind of type referenced is determined based on the contents of the \"type\" property and the presence or absence of the \"additionalProperties\", \"items\", \"oneOf\", and \"$ref\" properties.",
+      "id": "type",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "Indicates that when used as an input, this type does not accept eventual values.",
+          "name": "plain",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "Type",
+      "variants": [
+        {
+          "description": "A reference to a primitive type. A primitive type must have only the \"type\" property set.",
+          "inherits": [],
+          "properties": [
+            {
+              "description": "The primitive type, if any.",
+              "name": "type",
+              "required": true,
+              "type": {
+                "text": "string"
+              },
+              "values": [
+                "boolean",
+                "integer",
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "title": "Primitive Type"
+        },
+        {
+          "description": "A reference to an array type. The \"type\" property must be set to \"array\" and the \"items\" property must be present. No other properties may be present.",
+          "inherits": [],
+          "properties": [
+            {
+              "description": "",
+              "name": "type",
+              "required": true,
+              "type": {
+                "text": "\"array\""
+              }
+            },
+            {
+              "description": "The element type of the array.",
+              "name": "items",
+              "required": true,
+              "type": {
+                "href": "#type",
+                "text": "Type"
+              }
+            }
+          ],
+          "title": "Array Type"
+        },
+        {
+          "description": "A reference to a map type. The \"type\" property must be set to \"object\" and the \"additionalProperties\" property may be present. No other properties may be present.",
+          "inherits": [],
+          "properties": [
+            {
+              "description": "",
+              "name": "type",
+              "required": true,
+              "type": {
+                "text": "\"object\""
+              }
+            },
+            {
+              "description": "The element type of the map. Defaults to \"string\" when omitted.",
+              "name": "additionalProperties",
+              "required": false,
+              "type": {
+                "href": "#type",
+                "text": "Type"
+              }
+            }
+          ],
+          "title": "Map Type"
+        },
+        {
+          "description": "A reference to a type in this or another document. The \"$ref\" property must be present. The \"type\" property is ignored if it is present. No other properties may be present.",
+          "inherits": [],
+          "properties": [
+            {
+              "description": "ignored; present for compatibility with existing schemas.",
+              "name": "type",
+              "required": false,
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "description": "The URI of the referenced type. For example, the built-in Archive, Asset, and Any types are referenced as \"pulumi.json#/Archive\", \"pulumi.json#/Asset\", and \"pulumi.json#/Any\", respectively. A type from this document is referenced as \"#/types/pulumi:type:token\". A type from another document is referenced as \"path#/types/pulumi:type:token\", where path is of the form: \"/provider/vX.Y.Z/schema.json\" or \"pulumi.json\" or \"http[s]://example.com/provider/vX.Y.Z/schema.json\" A resource from this document is referenced as \"#/resources/pulumi:type:token\". A resource from another document is referenced as \"path#/resources/pulumi:type:token\", where path is of the form: \"/provider/vX.Y.Z/schema.json\" or \"pulumi.json\" or \"http[s]://example.com/provider/vX.Y.Z/schema.json\".",
+              "name": "$ref",
+              "required": true,
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "title": "Named Type"
+        },
+        {
+          "description": "A reference to a union type. The \"oneOf\" property must be present. The union may additional specify an underlying primitive type via the \"type\" property and a discriminator via the \"discriminator\" property. No other properties may be present.",
+          "inherits": [],
+          "properties": [
+            {
+              "description": "The underlying primitive type of the union, if any.",
+              "name": "type",
+              "required": false,
+              "type": {
+                "text": "string"
+              },
+              "values": [
+                "boolean",
+                "integer",
+                "number",
+                "string"
+              ]
+            },
+            {
+              "description": "If present, indicates that values of the type may be one of any of the listed types.",
+              "name": "oneOf",
+              "required": true,
+              "type": {
+                "href": "#type",
+                "text": "array[Type]"
+              }
+            },
+            {
+              "description": "Informs the consumer of an alternative schema based on the value associated with it.",
+              "name": "discriminator",
+              "required": false,
+              "type": {
+                "href": "#discriminator",
+                "text": "Discriminator"
+              }
+            }
+          ],
+          "title": "Union Type"
+        }
+      ]
+    },
+    {
+      "description": "Describes an object or resource property.",
+      "id": "property",
+      "inherits": [
+        {
+          "href": "#type",
+          "title": "Type"
+        }
+      ],
+      "properties": [
+        {
+          "description": "The description of the property, if any. Interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The constant value for the property, if any. The type of the value must be assignable to the type of the property.",
+          "name": "const",
+          "required": false,
+          "type": {
+            "text": "boolean | number | string"
+          }
+        },
+        {
+          "description": "The default value for the property, if any. The type of the value must be assignable to the type of the property.",
+          "name": "default",
+          "required": false,
+          "type": {
+            "text": "boolean | number | string"
+          }
+        },
+        {
+          "description": "Additional information about the property's default value, if any.",
+          "name": "defaultInfo",
+          "required": false,
+          "type": {
+            "href": "#default",
+            "text": "Default"
+          }
+        },
+        {
+          "description": "Indicates whether the property is deprecated.",
+          "name": "deprecationMessage",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the property.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#propertylanguage",
+            "text": "map[PropertyLanguage]"
+          }
+        },
+        {
+          "description": "Specifies whether the property is secret (default false).",
+          "name": "secret",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "description": "Specifies whether a change to the property causes its containing resource to be replaced instead of updated (default false).",
+          "name": "replaceOnChanges",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "description": "Indicates that the provider will replace the resource when this property is changed.",
+          "name": "willReplaceOnChanges",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ],
+      "title": "Property",
+      "variants": []
+    },
+    {
+      "description": "One of the values an enum type may take, and the metadata attached to it.",
+      "id": "enumvalue",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "If present, overrides the name of the enum value that would usually be derived from the value.",
+          "name": "name",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The description of the enum value, if any. Interpreted as Markdown.",
+          "name": "description",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The enum value itself.",
+          "name": "value",
+          "required": true,
+          "type": {
+            "text": "boolean | integer | number | string"
+          }
+        },
+        {
+          "description": "Indicates whether the value is deprecated.",
+          "name": "deprecationMessage",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ],
+      "title": "EnumValue",
+      "variants": []
+    },
+    {
+      "description": "A previous identity of a resource. Aliases let a resource be renamed or moved without the engine treating it as a delete and a create. May be written as a string or as an object.",
+      "id": "alias",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The type portion of the alias, if any.",
+          "name": "type",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ],
+      "title": "Alias",
+      "variants": []
+    },
+    {
+      "description": "Additional information about the property's default value, if any.",
+      "id": "default",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "A set of environment variables to probe for a default value.",
+          "name": "environment",
+          "required": true,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "description": "Additional language-specific data about the default value.",
+          "name": "language",
+          "required": false,
+          "type": {
+            "href": "#defaultlanguage",
+            "text": "map[DefaultLanguage]"
+          }
+        }
+      ],
+      "title": "Default",
+      "variants": []
+    },
+    {
+      "description": "Informs the consumer of an alternative schema based on the value associated with it.",
+      "id": "discriminator",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The name of the property in the payload that will hold the discriminator value.",
+          "name": "propertyName",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "An optional object to hold mappings between payload values and schema names or references.",
+          "name": "mapping",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        }
+      ],
+      "title": "Discriminator",
+      "variants": []
+    },
+    {
+      "description": "Parameterized packages populate this with concrete parameter values. Pulumi code generators read it to emit SDKs that preserve those values and pass them back to the provider at runtime.",
+      "id": "parameterizationspec",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The provider being specialized, named by package name and version.",
+          "name": "baseProvider",
+          "required": false,
+          "type": {
+            "href": "#baseproviderspec",
+            "text": "BaseProviderSpec"
+          }
+        },
+        {
+          "description": "The parameter for the provider.",
+          "name": "parameter",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ],
+      "title": "ParameterizationSpec",
+      "variants": []
+    },
+    {
+      "description": "The provider that a parameterized package specializes.",
+      "id": "baseproviderspec",
+      "inherits": [],
+      "properties": [
+        {
+          "description": "The unqualified name of the package (e.g. \"aws\", \"azure\", \"gcp\", \"kubernetes\", \"random\")",
+          "name": "name",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "The version of the package. The version must be valid semver.",
+          "name": "version",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        }
+      ],
+      "title": "BaseProviderSpec",
+      "variants": []
+    }
+  ]
+}

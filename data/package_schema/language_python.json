@@ -1,0 +1,133 @@
+{
+  "choosable": "python",
+  "generated": "2026-09-03",
+  "label": "Python",
+  "language": "python",
+  "schemaKey": "python",
+  "sections": {
+    "packagelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "An override for the name of the generated python package.",
+          "name": "packageName",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines the Python versions that the generated provider supports.",
+          "name": "pythonRequires",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Python package requirements to add to the generated package's metadata, as a map from distribution name to version specifier.",
+          "name": "requires",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Contains the text for the package's README.md files.",
+          "name": "readme",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Optional overrides for Pulumi module names.",
+          "name": "moduleNameOverrides",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Toggle compatibility mode for a specified target.",
+          "name": "compatibility",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": true,
+          "description": "This bool is no longer needed since all providers now use input/output classes.",
+          "name": "usesIOClasses",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether to make single-return-value methods return an output object or the single value.",
+          "name": "liftSingleValueMethodReturns",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Respect the Pkg.Version field for emitted code.",
+          "name": "respectSchemaVersion",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "If enabled, a pyproject.toml file will be generated.",
+          "name": "pyproject",
+          "required": false,
+          "type": {
+            "text": "object"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Specifies what types are used for inputs. Allowed values are the following:\n\n- \"classes\": Args classes only\n- \"classes-and-dicts\" (default): TypedDicts side-by-side with Args classes.",
+          "name": "inputTypes",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    },
+    "propertylanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "Whether the property name is mapped between the schema's camelCase and Python's snake_case. Defaults to true.",
+          "name": "mapCase",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ]
+    }
+  },
+  "source": {
+    "paths": [
+      "pkg/codegen/python/importer.go"
+    ],
+    "repo": "pulumi/pulumi",
+    "url": "https://github.com/pulumi/pulumi/tree/v3.261.0",
+    "version": "v3.261.0"
+  }
+}

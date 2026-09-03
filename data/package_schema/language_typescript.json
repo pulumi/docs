@@ -1,0 +1,196 @@
+{
+  "choosable": "typescript",
+  "generated": "2026-09-03",
+  "label": "TypeScript",
+  "language": "typescript",
+  "schemaKey": "nodejs",
+  "sections": {
+    "objecttypelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "List of properties that are required on the input side of a type.",
+          "name": "requiredInputs",
+          "required": true,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "List of properties that are required on the output side of a type.",
+          "name": "requiredOutputs",
+          "required": true,
+          "type": {
+            "text": "array[string]"
+          }
+        }
+      ]
+    },
+    "packagelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "Custom name for the NPM package.",
+          "name": "packageName",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Description for the NPM package.",
+          "name": "packageDescription",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Contains the text for the package's README.md files.",
+          "name": "readme",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "NPM dependencies to add to package.json.",
+          "name": "dependencies",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "NPM dev-dependencies to add to package.json.",
+          "name": "devDependencies",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "NPM peer-dependencies to add to package.json.",
+          "name": "peerDependencies",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "NPM resolutions to add to package.json.",
+          "name": "resolutions",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "A specific version of TypeScript to include in package.json.",
+          "name": "typescriptVersion",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "A map containing overrides for module names to package names.",
+          "name": "moduleToPackage",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Toggle compatibility mode for a specified target.",
+          "name": "compatibility",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Disable support for unions in output types.",
+          "name": "disableUnionOutputTypes",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "An indicator for whether the package contains enums.",
+          "name": "containsEnums",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "A map allowing you to map the name of a provider to the name of the module encapsulating the provider.",
+          "name": "providerNameToModuleName",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Additional files to include in TypeScript compilation. These paths are added to the `files` section of the generated `tsconfig.json`. A typical use case for this is compiling hand-authored unit test files that check the generated code.",
+          "name": "extraTypeScriptFiles",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether to make single-return-value methods return an output object or the single value.",
+          "name": "liftSingleValueMethodReturns",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Respect the Pkg.Version field in the schema.",
+          "name": "respectSchemaVersion",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Experimental flag that permits `import type *` style code to be generated to optimize startup time of programs consuming the provider by minimizing the set of Node modules loaded at startup. Turning this on may currently generate non-compiling code for some providers; but if the code compiles it is safe to use. Also, turning this on requires TypeScript 3.8 or higher to compile the generated code.",
+          "name": "useTypeOnlyReferences",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ]
+    }
+  },
+  "source": {
+    "paths": [
+      "pkg/codegen/nodejs/importer.go"
+    ],
+    "repo": "pulumi/pulumi",
+    "url": "https://github.com/pulumi/pulumi/tree/v3.261.0",
+    "version": "v3.261.0"
+  }
+}
