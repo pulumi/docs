@@ -190,7 +190,7 @@ Policies:
 
 This allows you to implement company-specific policies that can be as simple or complex as you need them to be.
 
-To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/insights/policy/get-started/), with the following commands:
+To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#publishing-to-your-organization), with the following commands:
 
 ```shell
 $ pulumi policy publish myorg
