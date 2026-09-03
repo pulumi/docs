@@ -167,7 +167,7 @@ The point isn't the longest stack; it's a connected one where IaC sits at the ce
 
 Pulumi is IaC built for engineering teams that already use DevOps practices. Concrete patterns:
 
-* **Real languages.** Write IaC in TypeScript, Python, Go, C#, Java, or YAML. The same languages, test runners, and IDE tooling that work for application code work for the platform.
+* **Real languages.** Write IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL. The same languages, test runners, and IDE tooling that work for application code work for the platform.
 * **Same review process.** Pulumi programs live in the same repos as application code (or in their own platform repos). Every change is a pull request with a diff that reviewers can read.
 * **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/operations/continuous-delivery/github-actions/) and [CI/CD guide](/docs/iac/operations/continuous-delivery/) document common patterns.
 * **Policy as code.** Write policies in the same language as the IaC using [Pulumi Policies](/docs/insights/policy/). Run them on every preview and update.
