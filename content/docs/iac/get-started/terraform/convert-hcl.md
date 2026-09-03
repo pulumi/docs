@@ -36,6 +36,8 @@ Converting HCL to Pulumi code makes sense when:
 
 ## Conversion approaches
 
+You can convert HCL with a coding agent or with the deterministic `pulumi convert` command. For most configurations, use an agent. `pulumi convert` translates HCL construct by construct and emits a TODO wherever it meets something it can't translate, so its output mirrors the shape of the HCL rather than the idioms of the target language. An agent working through the [Pulumi MCP server](#ai-assisted-conversion-with-the-pulumi-mcp-server) writes idiomatic code, handles the constructs the converter can't, and can keep iterating until `pulumi preview` reports no changes. `pulumi convert` is still a fast, repeatable first pass, and the rest of this section shows what it produces.
+
 ### Automated conversion with `pulumi convert`
 
 The `pulumi convert` command can automatically translate Terraform configurations to Pulumi programs. Two converters read HCL, selected with `--from`:
@@ -1223,7 +1225,9 @@ Don't skip this step when you're converting production infrastructure: a preview
 
 ## AI-assisted conversion with the Pulumi MCP server
 
-`pulumi convert` is the fastest path for most configurations, and it's where to start. For configurations it struggles with — heavy `for_each` and `dynamic` blocks, or a lot of module indirection — a coding agent can pick up where the converter leaves off. The [Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/) gives the agent you already use access to the Pulumi Registry, your stacks, and a `convert-terraform-to-typescript` prompt.
+For most conversions, use a coding agent rather than `pulumi convert`. The converter is deterministic, so it handles what it recognizes and leaves a TODO for the rest, including heavy `for_each` and `dynamic` blocks and module indirection, and its output keeps the structure of the HCL rather than the idioms of the language you're moving to. An agent such as [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, or Codex converts those constructs, writes idiomatic code, and can run `pulumi preview` and iterate until it reports no changes. Neo already knows this workflow end to end, including migrating your Terraform state; see [Migrating from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for that path.
+
+Whichever agent you use, the [Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/) gives it access to the Pulumi Registry, your stacks, and a `convert-terraform-to-typescript` prompt.
 
 ### Using the Pulumi MCP server
 
