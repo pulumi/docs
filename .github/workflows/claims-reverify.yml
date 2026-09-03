@@ -16,8 +16,10 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #   '0'   -> off: the whole job is skipped (no runner, no spend)
 #   'N'   -> on, N entities/night
 # The sweep is a stateless day rotation over the ELIGIBLE entity set (volatile,
-# minus entities already carrying a stale marker or superseded by a newer
-# review), so all of it is covered every ceil(N_eligible/count) nights
+# minus entities already carrying a stale marker, superseded by a newer
+# review, or whose indexed evidence is only our own docs — `circular`, see
+# reverify-claims.py's `indexed_circular`), so all of it is covered every
+# ceil(N_eligible/count) nights
 # regardless of the knob. The rotation slices with a stride, not a contiguous
 # window: a contiguous last chunk is whatever the remainder happens to be, so a
 # 51-entity pool at count=25 split 25/25/1 and one night in three checked a

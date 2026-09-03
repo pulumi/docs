@@ -53,6 +53,20 @@ demoted to `unverifiable` before that mapping (see `source_is_own_corpus`).
 The site is this repo rendered, so such a check has confirmed the page
 against itself and cannot detect drift in either direction.
 
+The same rule runs BEFORE the call, on the evidence the claims index already
+holds: `record-claims.py` persists the `source` the page's full review cited
+for each claim, and a claim whose every indexed source is our own docs is
+held out of the rotation as `circular` until the page is re-reviewed and the
+snapshot rewritten (the same trigger that ends `superseded`). It is stateless
+like everything else here. Over the 16 nights to 2026-09-03 with report
+artifacts, 148 of 320 verifier calls (46%) were demoted — the same 42
+entities every rotation — and the indexed source would have predicted 110 of
+them, without hiding any of the 8 real stale findings from those nights. The
+price is 6 entities the night lane had verified from pulumi/* source while
+their page's review had only cited the docs; they wait for that page's next
+review. Under this rule the 2026-09-03 pool of 83 holds 38 out and rotates
+the other 45 in two nights at count=25, not four.
+
 Writes `.claims-reverify-report.json` (plus `n_checked`/`n_stale`/`has_stale`
 to $GITHUB_OUTPUT) and, when CONTENT_REVIEW_LEDGER_URI is set, uploads each
 marked ledger object. Degrades gracefully: no API key, no claims dir, or no
@@ -176,27 +190,50 @@ def _load_is_volatile():
 # verdict citing only those has checked the page against itself: it can never
 # go stale, and a `contradicted` from the same place is equally meaningless.
 # Demoted to `unverifiable` — reported, never counted fresh, never marked.
+#
+# Two things on pulumi.com are NOT this repo's prose and do count as evidence:
+# the Registry API docs (`/registry/`) and the SDK reference (`/docs/reference/
+# pkg/`) are generated from provider schemas, so a default value read there
+# comes from the provider, not from the page making the claim. Likewise a `gh`
+# citation against any pulumi/* repository other than docs (release notes, a
+# go.mod, a source constant) is the product speaking, even when it sits next
+# to a `content/` path in the same source string. Before this distinction, a
+# verdict that had read pulumi-aws's go.mod AND quoted the docs page was
+# demoted for the docs page, and a Registry default was demoted as circular.
 _URL_RE = re.compile(r"https?://[^\s,;)\]]+", re.IGNORECASE)
 _OWN_HOST_RE = re.compile(r"^https?://(?:[\w-]+\.)*pulumi\.com(?:[/:?#]|$)", re.IGNORECASE)
+_GENERATED_URL_RE = re.compile(
+    r"^https?://(?:[\w-]+\.)*pulumi\.com/(?:registry/|docs/reference/pkg/)", re.IGNORECASE)
 _PATH_RE = re.compile(
     r"(?<![\w/-])[\w][\w./-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml)\b"
 )
+# `pulumi/<repo>` as it appears in gh commands and repo: citations
+# (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/contents`, `repo:pulumi/docs`,
+# `pulumi/docs:content/...`). Not a path segment that merely ends in the word
+# (`migrating-to-pulumi/from-kubernetes.md`) and not an import path or URL
+# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`): those are the
+# claim's own content echoed back, not evidence consulted.
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
 
 
 def source_is_own_corpus(source: str) -> bool:
     """True when every source the verifier cited is our own published docs.
 
     Positive evidence only: a source naming nothing identifiable (no URL, no
-    file path) is left alone rather than demoted — unrecognized is not the
-    same as circular.
+    file path, no repository) is left alone rather than demoted —
+    unrecognized is not the same as circular.
     """
     src = source or ""
     urls = _URL_RE.findall(src)
-    if any(not _OWN_HOST_RE.match(u) for u in urls):
+    if any(not _OWN_HOST_RE.match(u) or _GENERATED_URL_RE.match(u) for u in urls):
         return False
-    paths = _PATH_RE.findall(_URL_RE.sub(" ", src))
+    rest = _URL_RE.sub(" ", src)
+    paths = _PATH_RE.findall(rest)
     own_paths = [p for p in paths if p.startswith("content/") or "/content/" in p]
     if len(paths) > len(own_paths):
+        return False
+    repos = {r.lower().rstrip(".") for r in _PULUMI_REPO_RE.findall(rest)}
+    if repos - {"docs"}:
         return False
     return bool(urls) or bool(own_paths)
 
@@ -353,6 +390,21 @@ def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> boo
         if not (completed and snap_day and reviewed > snap_day):
             return False
     return True
+
+
+def indexed_circular(assertions: list[dict]) -> bool:
+    """True when the claims index already shows this claim can only be checked
+    against ourselves: every asserting page's last full review cited a source
+    `source_is_own_corpus` recognizes as our own docs.
+
+    Held out of the rotation rather than re-checked and demoted — the outcome
+    is the same, minus the verifier call, and it ends the moment a page is
+    re-reviewed with better evidence (the snapshot is rewritten). An empty or
+    unrecognized indexed source keeps the claim live: a review that could not
+    verify says nothing about what the nightly lane could reach.
+    """
+    sources = [str(a["claim"].get("source") or "") for a in assertions]
+    return bool(sources) and all(sources) and all(source_is_own_corpus(s) for s in sources)
 
 
 def fix_route(assertions: list[dict], repo_root: Path | None,
@@ -764,7 +816,8 @@ def finish(report: dict, out_path: Path) -> int:
         f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
         f"own-corpus evidence) (volatile entities={m['n_entities']}, "
         f"eligible={m.get('n_eligible', 0)}, marked={m.get('n_marked', 0)}, "
-        f"superseded={m.get('n_superseded', 0)}) -> {out_path}")
+        f"superseded={m.get('n_superseded', 0)}, "
+        f"circular={m.get('n_circular', 0)}) -> {out_path}")
     for label in ("inconclusive_by_type", "inconclusive_by_reason"):
         if m.get(label):
             log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
@@ -826,13 +879,26 @@ def run(args) -> int:
     # is held out: "marked" when a marker is what holds it (waiting on a
     # review), otherwise "superseded" (fresher evidence is on its way).
     groups = {k: claim_groups(v) for k, v in entities.items()}
-    live = {k: [(text, asrt) for text, asrt in gs
-                if not already_marked(k, asrt, ledger)
-                and not superseded_by_review(asrt, ledger)]
+
+    def group_state(key: str, asrt: list[dict]) -> str:
+        if already_marked(key, asrt, ledger):
+            return "marked"
+        if superseded_by_review(asrt, ledger):
+            return "superseded"
+        if indexed_circular(asrt):
+            return "circular"
+        return "live"
+
+    states = {k: [group_state(k, asrt) for _, asrt in gs] for k, gs in groups.items()}
+    live = {k: [g for g, s in zip(gs, states[k]) if s == "live"]
             for k, gs in groups.items()}
-    marked = {k for k, gs in groups.items() if not live[k]
-              and any(already_marked(k, asrt, ledger) for _, asrt in gs)}
-    superseded = {k for k in entities if not live[k] and k not in marked}
+    # An entity with nothing live is held out under one reason, in the order
+    # the states are decided: a marker outranks fresher evidence outranks
+    # circular evidence.
+    held = {k: set(states[k]) for k in entities if not live[k]}
+    marked = {k for k, s in held.items() if "marked" in s}
+    superseded = {k for k, s in held.items() if k not in marked and "superseded" in s}
+    circular = {k for k in held if k not in marked and k not in superseded}
     unmarked = sorted(k for k in entities if live[k])
     # n_eligible is the pool the rotation actually divides, and n_marked is
     # the backlog held out of it. Without both, a small n_due is ambiguous
@@ -841,6 +907,7 @@ def run(args) -> int:
     # for 2026-08-19 (n_due=1) could not tell them apart.
     report["meta"]["n_marked"] = len(marked)
     report["meta"]["n_superseded"] = len(superseded)
+    report["meta"]["n_circular"] = len(circular)
     report["meta"]["n_eligible"] = len(unmarked)
     keys = tonight_chunk(unmarked, args.count, today)
     # n_due counts entities; n_checked (below) counts verifier calls, one per
@@ -1023,18 +1090,48 @@ def self_test() -> int:
     # an unrecognizable source is never treated as circular.
     own = ["https://www.pulumi.com/docs/iac/get-started/aws/modify-program/",
            "https://www.pulumi.com/docs/a/ and https://www.pulumi.com/docs/b/",
-           "repo:content/docs/iac/concepts/providers/_index.md"]
+           "repo:content/docs/iac/concepts/providers/_index.md",
+           "repo:pulumi/docs content/docs/iac/concepts/packages/_index.md L108-111",
+           "gh api repos/pulumi/docs/contents/content/docs/x.md",
+           # A path segment ending in "pulumi" and an import path are not
+           # repository citations.
+           "repo:pulumi/docs content/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes.md",
+           "content/docs/x.md imports github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"]
     independent = ["https://docs.aws.amazon.com/config/latest/developerguide/x.html",
                    "gh api repos/pulumi/pulumi/contents/pkg/resource/deploy/retries.go",
                    "repo:data/policy_pack_policies/cis-aws.json (line 2872)",
                    "https://github.com/pulumi/pulumi/blob/master/.goreleaser.yml",
                    "https://www.pulumi.com/docs/a/ and https://docs.aws.amazon.com/x.html",
                    "N/A - author's own estimate of their tutorial content",
-                   ""]
+                   "",
+                   # Schema-generated surfaces on our own host are the provider
+                   # speaking, not this repo's prose.
+                   "https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/vpc/",
+                   "https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/x.html",
+                   # A gh citation against a non-docs pulumi repo is evidence
+                   # even beside a content/ path in the same string.
+                   "repo:content/docs/iac/concepts/packages/_index.md; gh release list -R pulumi/pulumi",
+                   "pulumi/docs:content/docs/a.md and gh api repos/pulumi/pulumi-aws/releases"]
     for s in own:
         check(f"own-corpus source: {s[:44]}", source_is_own_corpus(s) is True)
     for s in independent:
         check(f"independent source: {s[:44] or '(empty)'}", source_is_own_corpus(s) is False)
+
+    # Indexed circularity: a claim whose every page's last review could only
+    # cite our own docs is held out before the call; an empty or external
+    # indexed source keeps it live.
+    def with_src(src):
+        return [{"claim": dict(ver, source=src), "path": "content/docs/a.md",
+                 "slug": "docs-a", "reviewed_at": "2026-07-01"}]
+    check("indexed own-corpus source is circular",
+          indexed_circular(with_src("https://www.pulumi.com/docs/x/")) is True)
+    check("indexed external source is not circular",
+          indexed_circular(with_src("https://docs.aws.amazon.com/x.html")) is False)
+    check("empty indexed source is not circular (review said nothing)",
+          indexed_circular(with_src("")) is False and indexed_circular([]) is False)
+    check("one external page among own-corpus ones keeps the claim live",
+          indexed_circular(with_src("https://www.pulumi.com/docs/x/")
+                           + with_src("gh release view v1 -R pulumi/pulumi")) is False)
 
     # Chunk rotation: deterministic, complete coverage across consecutive days.
     keys = [f"k{i}" for i in range(5)]
@@ -1345,6 +1442,16 @@ def self_test() -> int:
               sorted((e["claim_text"], [p["slug"] for p in e["pages"]])
                      for e in rep["entities"])
               == [("pulumi-gcp v8.2.0", ["docs-a"]), ("pulumi-gcp v8.3.0", ["docs-b"])])
+
+        # A claim the index already shows as circular costs no call and is
+        # counted as held out, not as due.
+        circ = dict(price, source="https://www.pulumi.com/pricing/")
+        (d / "claims" / "docs-c.json").write_text(json.dumps(snap("c", "2026-07-02", circ)))
+        rep = run_report(d, ["ANTHROPIC_API_KEY"], dry_run=True)
+        check("indexed-circular entity is held out of the rotation",
+              rep["meta"]["n_circular"] == 1 and rep["meta"]["n_due"] == 1
+              and rep["meta"]["n_eligible"] == 1
+              and all(e["entity_key"] != "numerical/team-plan-price" for e in rep["entities"]))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
