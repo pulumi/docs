@@ -83,7 +83,7 @@ Teams:
 - **Contributes:** Community Eng, Eng/Product (technical validation)
 - **Consumes:** Evaluators and buyers scoping a solution
 
-> **Status: effectively end-of-life.** This content is being folded selectively into [Tutorials](#tutorials). The header and footer links were removed when the Dev Center launched, so the pages are still served but unlinked. Going forward, "Guides" refers only to the docs guides above — see [Naming decisions](#naming-decisions-and-open-items).
+> **Status: retired.** The `pulumi/guides` origin has been removed. Four solutions were ported to [examples](https://github.com/pulumi/examples) (served at `/dev/examples/aws-ts-*`); every other `/guides/*` URL, including `/guides` itself, now 301s to `/dev/tutorials/` (see `scripts/redirects/dev-redirects.txt`). Going forward, "Guides" refers only to the docs guides above — see [Naming decisions](#naming-decisions-and-open-items).
 
 ### Topics 
 
