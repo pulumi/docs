@@ -9,6 +9,7 @@ config:
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/testing"
   www.pulumi.com:guidesStack: "pulumi/guides/testing"
+  www.pulumi.com:devStack: "pulumi/www-site/production"
   www.pulumi.com:answersStack: "pulumi/answers/testing"
   www.pulumi.com:versionedDocsStack: "pulumi/pulumi-docs-versioned/testing"
   www.pulumi.com:setRootRecord: "true"
