@@ -34,6 +34,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [OpenTofu vs. Terraform](/what-is/opentofu-vs-terraform/)
 * [Spacelift](/docs/iac/comparisons/spacelift/)
 * [Terraform Automation and Collaboration Software (TACOS)](/docs/iac/comparisons/tacos/)
 * [Helm](/docs/iac/comparisons/helm/)
