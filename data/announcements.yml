@@ -14,7 +14,7 @@
 #      without showing it (preserves the id for future re-enabling).
 #   3. `display` controls where the entry can appear:
 #        - `marketing` — non-docs pages (homepage, product, blog, etc.)
-#        - `docs`      — paths under /docs/ or /tutorials/
+#        - `docs`      — paths under /docs/
 #        - `both`      — everywhere (default if omitted)
 #   4. `icon` is optional. Use any name from the Phosphor icon set; see
 #      assets/icons/phosphor/regular/ for the available names (file basename
@@ -80,6 +80,15 @@ announcements:
       label: See the release
       href: "/releases/terraform-state-backend-modules-hcl/"
     dismissible: true
+  - id: event-beyond-hyperscalers-2026-09-Bh5nR7
+    active: false
+    display: both
+    badge: Event
+    text: "**Live webinar September 3 ·** Beyond the Hyperscalers: Building sovereign infrastructure"
+    cta:
+      label: Register
+      href: "/events/beyond-the-hyperscalers-sovereignty-panel/"
+    dismissible: true
   - id: blog-pulumi-neo-security-2026-08-Nx9vQ7
     active: true
     display: both
@@ -88,4 +97,3 @@ announcements:
     cta:
       label: Read the blog
       href: "/blog/pulumi-neo-security/"
-    dismissible: true

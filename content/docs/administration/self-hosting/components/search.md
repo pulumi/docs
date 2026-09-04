@@ -20,7 +20,7 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster and changes to the API container configuration to enable these features.
+Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster -- both v2.x and v3.x are supported -- and changes to the API container configuration to enable these features.
 
 When the service container is launched with a valid search configuration, it will connect to the OpenSearch cluster and automatically index any existing resources managed by the self-hosted Pulumi installation.
 If the OpenSearch cluster is not reachable, then the Pulumi Console will display an error message on the Resources page indicating that the search cluster is unavailable, but will otherwise operate normally.
@@ -33,9 +33,9 @@ It is important to note that the search cluster is not in the critical path of P
 
 ## Minimum System Requirements
 
-| Type       | Properties   | Notes                                                                                                                                                                                                                                                                 |
-|------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenSearch | v2.x cluster | Pulumi Cloud has been tested with OpenSearch v2.9 and v2.11                                                                                                                                                                                                           |
+| Type       | Properties           | Notes                                                                                                          |
+|------------|----------------------|----------------------------------------------------------------------------------------------------------------|
+| OpenSearch | v2.x or v3.x cluster | Pulumi Cloud runs OpenSearch v3.7. We recommend the latest patch release of either the v2.19.x or the v3.x line. |
 
 ## API Environment Variables
 

@@ -120,7 +120,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
+      pull-requests: write # instant review:in-progress label on gate fire
+      issues: write # instant 🔄 banner PATCH on the author card
       actions: write # gh workflow run claude-update.yml
     steps:
       # The gate scripts come from the BASE ref, never the PR head — the
@@ -180,6 +181,31 @@ jobs:
           echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
           echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
 
+      # The instant signal (persona-pass round, 2026-09-01 / Cam): the
+      # author learns "a re-review is happening" the moment the gate
+      # decides — not minutes later when the dispatched workflow starts.
+      # Label flips to review:in-progress AND the author card gets a 🔄
+      # banner stamped under its markers. The refresh's publish rewrites
+      # the whole card (clearing the banner); claude-update.yml's error
+      # path clears it explicitly so a failed refresh doesn't leave the
+      # promise standing.
+      - name: Signal re-review instantly (label + card banner)
+        if: steps.gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          "$SCRIPTS/set-review-label.sh" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
+          bash "$SCRIPTS/pinned-comment.sh" banner \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --set "${AFTER:0:7}"
+
       # Dispatch with GITHUB_TOKEN — same pattern as claude-new.yml's
       # dispatch of this workflow. The dispatched run's actor becomes
       # github-actions[bot]; claude-update.yml opts in via allowed_bots.
@@ -215,6 +241,14 @@ jobs:
     concurrency:
       group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
       cancel-in-progress: true
+
+    # Consumed by the v3 publish job below; empty on v2 runs and on any v3
+    # run that didn't reach a publishable handoff.
+    outputs:
+      v3: ${{ steps.pr-context.outputs.v3 }}
+      v3_ready: ${{ steps.v3-build.outputs.ready }}
+      pr_number: ${{ steps.pr-context.outputs.pr_number }}
+      head_sha: ${{ steps.pr-context.outputs.head_sha }}
 
     runs-on: ubuntu-latest
     # A review that genuinely hangs (one observed stall ran ~18 min with no
@@ -304,7 +338,7 @@ jobs:
           # real changes. Retry once after a pause to catch the race
           # before falling through to the empty-diff skip.
           fetch_pr() {
-            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,changedFiles,files,title
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,headRepository,headRepositoryOwner,additions,deletions,changedFiles,files,title
           }
           # Retry up to 3 times on transient server-side errors (5xx / 503).
           # The empty-diff retry below is a separate, orthogonal concern.
@@ -334,6 +368,14 @@ jobs:
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          # Which review surface this run renders. The repo variable is the
+          # default for every PR; the `surface:v3` label opts one PR in (or,
+          # removed, back out) regardless of it — the per-PR dark-launch and
+          # rollback lever. Literal compare: an unset variable is never truthy.
+          V3=false
+          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [[ ",$LABELS_CSV," == *",surface:v3,"* ]]; then
+            V3=true
+          fi
           # Pre-compute PR metadata so the review model doesn't burn turns
           # re-deriving it via gh pr view / git remote / etc. The 2026-04-28
           # cost-optimization measurement showed ~85% denial reduction and
@@ -342,6 +384,10 @@ jobs:
           HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
           HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
           HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
+          # owner/name of the HEAD repo — differs from $REPO on fork PRs; the
+          # composer's ✏️ edit links must open the editor on the fork, where
+          # the author can actually commit.
+          HEAD_REPO=$(echo "$DATA" | jq -r 'if (.headRepositoryOwner.login? // "") != "" and (.headRepository.name? // "") != "" then .headRepositoryOwner.login + "/" + .headRepository.name else "" end')
           BASE_BRANCH=$(echo "$DATA" | jq -r '.baseRefName')
           ADDITIONS=$(echo "$DATA" | jq -r '.additions')
           DELETIONS=$(echo "$DATA" | jq -r '.deletions')
@@ -437,11 +483,13 @@ jobs:
             echo "author=$AUTHOR"
             echo "labels_csv=$LABELS_CSV"
             echo "labels_json=$LABELS_JSON"
+            echo "v3=$V3"
             echo "skip_reason=$SKIP"
             echo "repo_full=$REPO"
             echo "head_sha=$HEAD_SHA"
             echo "head_sha_short=$HEAD_SHA_SHORT"
             echo "head_branch=$HEAD_BRANCH"
+            echo "head_repo=$HEAD_REPO"
             echo "base_branch=$BASE_BRANCH"
             echo "additions=$ADDITIONS"
             echo "deletions=$DELETIONS"
@@ -606,7 +654,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -653,7 +701,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '[]' > .fetched-urls.json
             echo "extract-urls: no in-scope prose files changed; skipping"
@@ -942,6 +990,32 @@ jobs:
         id: now
         run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
+      # v3 brief header: which team's approval satisfies the merge gate.
+      # Same resolver the triage routing step uses (route-pr.py →
+      # routing.py + the tightened mechanical bar), so the brief and the
+      # Sentinel can never name different teams. Best-effort: on any
+      # failure the brief simply omits the line.
+      - name: Compute routed approval team (v3)
+        id: routing
+        if: vars.REVIEW_V3_ROUTING == '1' && steps.pr-context.outputs.v3 == 'true' && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          gh pr view "$PR" --repo "$REPO" \
+            --json files,author,labels,additions,deletions,changedFiles,title \
+            > /tmp/route-pr-data.json
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/$REPO/pulls/$PR" > /tmp/route-pr.diff
+          TEAMS=$(python3 scripts/review-v3/route-pr.py \
+            --pr-data /tmp/route-pr-data.json --diff /tmp/route-pr.diff \
+            --config .github/review-routing.yml --repo-root . \
+            | jq -r '[.teams[] | "@" + .] | join(", ")')
+          echo "team_display=$TEAMS" >> "$GITHUB_OUTPUT"
+          echo "routing: teams=${TEAMS:-<none>}"
+
       # Compose an ~80%-assembled review draft (.review-draft.md) from the
       # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
       # trail (verbatim from .verified-claims.json), bucket-count table,
@@ -961,7 +1035,47 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # v3 surface (REVIEW_V3_COMMENTS repo variable OR the surface:v3
+          # label — derived once in pr-context). The variable is compared
+          # explicitly against '1' everywhere — vars.UNSET != '0' is TRUE,
+          # so a negated compare on an unset variable silently flips a gate.
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
+          # v3 surface: the composer emits the author card, the reviewer
+          # brief, and the machine-owned evidence base instead of the v2
+          # monolith. A can't-even-start failure writes the same CAUTION
+          # banner into both draft paths that compose's own v3 self-check
+          # uses — there is deliberately NO manual-assembly fallback on v3
+          # (the evidence base can't be hand-assembled), so the banner makes
+          # v21 validation fail and the run lands on the error path instead
+          # of publishing something unverifiable.
+          if [[ "$REVIEW_V3" == "1" ]]; then
+            python3 .claude/commands/docs-review/scripts/compose-review.py \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
+              --out .review-draft.md --surface v3 --run-id "${{ github.run_id }}" \
+              --timestamp "${{ steps.now.outputs.value }}" \
+              --head-sha "${{ steps.pr-context.outputs.head_sha }}" \
+              --head-sha-short "${{ steps.pr-context.outputs.head_sha_short }}" \
+              --verified-claims .verified-claims.json \
+              --candidate-claims .candidate-claims.json \
+              --vale-findings .vale-findings.json \
+              --editorial-balance .editorial-balance.json \
+              --cross-sibling .cross-sibling-discovery.json \
+              --frontmatter .frontmatter-validation.json \
+              --hugo-build .hugo-build.json \
+              --fetched-urls .fetched-urls.json \
+              --readthrough .readthrough-findings.json \
+              --head-repo "${{ steps.pr-context.outputs.head_repo }}" \
+              --head-branch "${{ steps.pr-context.outputs.head_branch }}" \
+              --routed-team "${{ steps.routing.outputs.team_display }}" \
+            || {
+              printf '%s\n' \
+                '> [!CAUTION]' \
+                '> compose-review.py --surface v3 failed to start. Do not edit or publish these drafts — the run must land on the error path (v3 has no manual-assembly fallback).' \
+                | tee .review-draft-author.md > .review-draft-brief.md
+            }
+            exit 0
+          fi
           python3 .claude/commands/docs-review/scripts/compose-review.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
             --out .review-draft.md \
@@ -1050,6 +1164,7 @@ jobs:
           # diff-only by hard rule. Output goes through pinned-comment.sh so
           # the review survives across re-runs as a single logical comment.
           prompt: |
+            ${{ steps.pr-context.outputs.v3 == 'true' && 'IMPORTANT — the v3 review surface is active for this run. Read `.claude/commands/docs-review/ci.md` §The v3 surface FIRST: your drafts are `.review-draft-author.md` and `.review-draft-brief.md` (there is NO `.review-draft.md`), and the v3 edit contract in `references/output-format.md` §The model''s edit contract (v3) overrides the draft-structure description below wherever they conflict. Everything else in this prompt (pre-computed metadata, artifact discipline, style-suggestion sidecar rules, DO-NOT list) applies unchanged.' || '' }}
             You are running in a CI environment.
 
             Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the instructions in `.claude/commands/docs-review/ci.md`.
@@ -1184,13 +1299,31 @@ jobs:
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         id: validate-body
         continue-on-error: true
+        env:
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           set +e
           rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md /tmp/splicer-fallback.json
-          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
-            --body-file .review-draft.md \
-            --pr "${{ steps.pr-context.outputs.pr_number }}" \
-            --repo "${{ steps.pr-context.outputs.repo_full }}"
+          # v3: validate the two model-edited cards against the v21 rule set
+          # (marker integrity, finding grammar, bucket-split faithfulness vs
+          # the composer's evidence base). There is no splicer and no
+          # soft-floor on v3 — a body that fails validation here fails the
+          # run (see the v3 build step below); publishing a card the
+          # validator rejected would put unverifiable content behind the
+          # evidence contract, which is the failure mode v3 exists to close.
+          if [[ "$REVIEW_V3" == "1" ]]; then
+            python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+              --body-file .review-draft-author.md \
+              --brief-file .review-draft-brief.md \
+              --evidence-base .review-evidence-base.json \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --repo "${{ steps.pr-context.outputs.repo_full }}"
+          else
+            python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+              --body-file .review-draft.md \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --repo "${{ steps.pr-context.outputs.repo_full }}"
+          fi
           rc=$?
           echo "validate_exit=$rc" >> "$GITHUB_OUTPUT"
           if [[ $rc -eq 1 ]]; then
@@ -1200,8 +1333,14 @@ jobs:
           fi
           exit 0
 
+      # Steps C/C2/D/D2 are v2-only: on v3 there is no splicer, no model
+      # fallback, and no soft-floor — validation is pass/fail and the v3
+      # build step below owns the verdict. The splicer's job (restoring
+      # machine-owned sections the model dropped) has no v3 equivalent
+      # because those sections live in the evidence base the model never
+      # touches.
       - name: Splice surgical fixes (Step C)
-        if: steps.validate-body.outputs.violations_present == 'true'
+        if: steps.validate-body.outputs.violations_present == 'true' && steps.pr-context.outputs.v3 != 'true'
         id: splicer
         continue-on-error: true
         run: |
@@ -1245,7 +1384,7 @@ jobs:
           exit 0
 
       - name: Re-validate review body (Step D)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         id: revalidate
         continue-on-error: true
         run: |
@@ -1271,7 +1410,7 @@ jobs:
       # section is just visual noise and gets removed here. Validators
       # don't require 📋 to be present (it's not in MANDATORY_H3_SECTIONS).
       - name: Strip empty 📋 section (Step D2)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         run: |
           python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
@@ -1295,15 +1434,85 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
+          # v3: the style block and ✏️ banner live on the author card. This
+          # runs BEFORE the v3 build step so the ✏️ annotations ride into the
+          # cleaned publish body and the handoff artifact.
+          DRAFT=.review-draft.md
+          [[ "$REVIEW_V3" == "1" ]] && DRAFT=.review-draft-author.md
           python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
             --vale-findings .vale-findings.json \
-            --annotate-draft .review-draft.md
+            --annotate-draft "$DRAFT"
+
+      # ---- v3 build + handoff ------------------------------------------------
+      # The v3 replacement for Steps C-E: the model job never publishes.
+      # build-evidence.py re-parses the two edited cards fail-closed (numbers
+      # model-added F? rows, files Spurious/Mis-sourced/Pre-existing rewrites,
+      # merges REVIEW_STATE), validate-evidence.py enforces the closed schema,
+      # and everything the credentialed publish job needs rides ONE artifact.
+      # Any failure here (including Step B validation) means no artifact, no
+      # publish, and the error-path finalize steps below own the terminal
+      # state — publishing a card that failed validation would put
+      # unverifiable content behind the evidence contract.
+      - name: Build evidence + cleaned bodies (v3)
+        if: >-
+          steps.pr-context.outputs.v3 == 'true'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.claude-review.outcome == 'success'
+        id: v3-build
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          if [[ "${{ steps.validate-body.outputs.violations_present }}" != "false" ]]; then
+            echo "::error::v3 validation failed (or did not run) — refusing to build/publish. See Step B output."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! python3 .claude/commands/docs-review/scripts/build-evidence.py \
+              --author-body .review-draft-author.md \
+              --brief-body .review-draft-brief.md \
+              --base .review-evidence-base.json \
+              --output .review-evidence.json \
+              --author-out .review-author.md \
+              --brief-out .review-brief.md; then
+            echo "::error::build-evidence.py failed — a card row didn't parse. See log above."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! python3 scripts/review-v3/validate-evidence.py .review-evidence.json; then
+            echo "::error::final evidence object failed schema validation."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          jq -n \
+            --arg pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --arg head_sha "${{ steps.pr-context.outputs.head_sha }}" \
+            --arg check_id "${{ steps.check-run.outputs.check_id }}" \
+            --arg progress_comment_id "${{ steps.progress.outputs.comment_id }}" \
+            '{pr: $pr, head_sha: $head_sha, check_id: $check_id, progress_comment_id: $progress_comment_id}' \
+            > .review-v3-handoff.json
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload v3 handoff artifact
+        if: steps.v3-build.outputs.ready == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-v3-handoff-pr${{ steps.pr-context.outputs.pr_number }}
+          path: |
+            .review-evidence.json
+            .review-author.md
+            .review-brief.md
+            .review-v3-handoff.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+      # ---- end v3 build + handoff --------------------------------------------
 
       - name: Upsert pinned comment (Step E)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -1359,6 +1568,9 @@ jobs:
             /tmp/validate-pinned.fix-me.md
             /tmp/splicer-fallback.json
             .review-draft.md
+            .review-draft-author.md
+            .review-draft-brief.md
+            .review-evidence-base.json
             .style-suggestions.json
           # .style-suggestions.json is a dotfile; upload-artifact skips hidden
           # files unless this is set, which silently emptied the sidecar from
@@ -1405,6 +1617,8 @@ jobs:
         if: always() && steps.progress.outputs.comment_id != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
+          V3_READY: ${{ steps.v3-build.outputs.ready }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
@@ -1412,6 +1626,22 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+
+          # v3 handoff succeeded: the credentialed publish job owns every
+          # terminal user-visible state — spinner, dispatcher cleanup, the
+          # "regenerated" terminal comment. Touching any of it here would
+          # declare success before anything published.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" = "true" ]; then
+            echo "v3: leaving progress signal for the publish job to finalize"
+            exit 0
+          fi
+          # v3 build/validation failed with the model step green: the
+          # success-delete branch below would silently eat the spinner, so
+          # reroute this case onto the errored-edit branch by lying about
+          # OUTCOME for the rest of this script only.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" != "true" ]; then
+            OUTCOME="failure"
+          fi
 
           if [ -n "$DISPATCHER_COMMENT_ID" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
@@ -1445,7 +1675,9 @@ jobs:
       # Skipped runs (trivial / draft / bot / empty-diff) deliberately leave
       # the label untouched: in-progress was never set for them.
       - name: Finalize review-state label (success path)
-        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true'
+        # v2-only: on v3 the publish job sets the terminal label after the
+        # author card (the count source) is actually published.
+        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.v3 != 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1482,7 +1714,13 @@ jobs:
       # success-path step above already set outstanding-issues / no-blockers
       # and this step short-circuits.
       - name: Finalize review-state label (error trap)
-        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome != 'success' && steps.pr-context.outputs.skip_reason == ''
+        # The v3 term: a green model step whose build/validation failed is an
+        # error this job owns (the publish job never runs — no artifact).
+        if: >-
+          always() && steps.check-access.outputs.has_write_access == 'true'
+          && steps.pr-context.outputs.skip_reason == ''
+          && (steps.claude-review.outcome != 'success'
+              || (steps.pr-context.outputs.v3 == 'true' && steps.v3-build.outputs.ready != 'true'))
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1530,7 +1768,19 @@ jobs:
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
           TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
           HAS_WRITE_ACCESS="${{ steps.check-access.outputs.has_write_access }}"
-          if [ "$OUTCOME" = "success" ]; then
+          REVIEW_V3="${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}"
+          V3_READY="${{ steps.v3-build.outputs.ready }}"
+          # v3 handoff succeeded: the check stays in_progress and the publish
+          # job concludes it — success here would read "review done" while
+          # nothing is on the PR yet.
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" = "true" ]; then
+            echo "v3: leaving check-run in_progress for the publish job"
+            exit 0
+          fi
+          if [ "$REVIEW_V3" = "1" ] && [ "$OUTCOME" = "success" ] && [ "$V3_READY" != "true" ]; then
+            CONCLUSION="failure"
+            SUMMARY="Review body failed v3 validation or evidence build — nothing was published. See workflow logs (Step B / v3 build)."
+          elif [ "$OUTCOME" = "success" ]; then
             CONCLUSION="success"
             SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
           elif [ -n "$SKIP_REASON" ]; then
@@ -1565,3 +1815,312 @@ jobs:
             --arg summary "$SUMMARY" \
             '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
             | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+
+  # ---- v3 publish (single credentialed deterministic job) --------------------
+  # The v3 counterpart to Step E and the finalize steps: everything that
+  # publishes or finalizes runs HERE, in one job, in one order —
+  # record evidence to S3 → render/upload the evidence page → upsert the
+  # reviewer brief → upsert the author card → set the terminal label →
+  # conclude the check-run. One ordering means one partial-publish contract:
+  # the author card is the machine-read head carrier and the label/count
+  # source, and it goes LAST, so any interruption leaves the old author card
+  # (and its label) intact — review-label-reconcile / the next run heal a
+  # newer-brief-older-card mismatch, and nothing ever lies about which SHA
+  # the blocking counts describe.
+  #
+  # SECURITY INVARIANT: this job holds AWS credentials (evidence writes) and
+  # therefore never checks out or executes PR code — scripts come from the
+  # default branch only. The model job upstream is uncredentialed; its output
+  # reaches this job only as a validated artifact (the blog-review two-job
+  # pattern).
+  #
+  # Concurrency: same group as claude-review, no cancel-in-progress of its
+  # own. A newer review run entering the group cancels an in-flight publish;
+  # with author-card-last ordering that cancellation is safe (see above), and
+  # the newer run republishes everything.
+  publish:
+    needs: claude-review
+    if: >-
+      needs.claude-review.outputs.v3 == 'true'
+      && needs.claude-review.outputs.v3_ready == 'true'
+    concurrency:
+      group: claude-review-${{ needs.claude-review.outputs.pr_number }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # `environment: production` for PULUMI_STACK_NAME (environment-scoped —
+    # omitting it silently resolves `--stack ""`) and the OIDC role trust.
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      checks: write
+      id-token: write
+      actions: write # dispatch review-sentinel.yml after publishing (workflow_run carries no PR for dispatch/comment-triggered runs)
+    env:
+      ESC_ACTION_OIDC_AUTH: true
+      ESC_ACTION_OIDC_ORGANIZATION: pulumi
+      ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+      ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+    steps:
+      # Default branch ONLY — see the security invariant above.
+      - name: Checkout repository (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Download v3 handoff artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: review-v3-handoff-pr${{ needs.claude-review.outputs.pr_number }}
+
+      # A push that landed while the model worked makes this handoff stale.
+      # Publishing it would stamp CLAUDE_REVIEW_HEAD with a SHA that is no
+      # longer head and flip labels for content nobody can see in the diff.
+      # The next run (triage on the new push, or auto-refresh) owns the PR.
+      - name: Verify handoff is still current
+        id: current
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR=$(jq -r .pr .review-v3-handoff.json)
+          HANDOFF_SHA=$(jq -r .head_sha .review-v3-handoff.json)
+          CHECK_ID=$(jq -r .check_id .review-v3-handoff.json)
+          PROGRESS_ID=$(jq -r .progress_comment_id .review-v3-handoff.json)
+          {
+            echo "pr=$PR"
+            echo "head_sha=$HANDOFF_SHA"
+            echo "check_id=$CHECK_ID"
+            echo "progress_id=$PROGRESS_ID"
+          } >> "$GITHUB_OUTPUT"
+          LIVE_SHA=$(gh pr view "$PR" --repo "${{ github.repository }}" \
+            --json headRefOid --jq .headRefOid)
+          if [ "$LIVE_SHA" != "$HANDOFF_SHA" ]; then
+            echo "superseded=true" >> "$GITHUB_OUTPUT"
+            echo "publish: superseded — handoff at $HANDOFF_SHA, live head $LIVE_SHA"
+            if [ -n "$CHECK_ID" ]; then
+              jq -n '{status: "completed", conclusion: "neutral", output: {title: "Pre-merge Review", summary: "Superseded — the PR head moved while the review ran. A newer run owns this PR."}}' \
+                | gh api --input - -X PATCH "repos/${{ github.repository }}/check-runs/$CHECK_ID" >/dev/null || true
+            fi
+            if [ -n "$PROGRESS_ID" ]; then
+              gh api -X DELETE "repos/${{ github.repository }}/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
+            fi
+          else
+            echo "superseded=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # continue-on-error: every consumer below already degrades explicitly
+      # (empty PULUMI_ACCESS_TOKEN ⇒ bucket resolution warns and yields
+      # local/artifact-only evidence with a run-URL link). A hard failure
+      # here would trade a degraded-but-published review for review:error —
+      # and it is also what lets the fork battery run this job with no ESC
+      # trust policy at all.
+      - name: Fetch ESC secrets
+        if: steps.current.outputs.superseded == 'false'
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Configure AWS Credentials
+        if: steps.current.outputs.superseded == 'false'
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: review-v3-publish
+          aws-region: us-west-2
+
+      - if: steps.current.outputs.superseded == 'false'
+        uses: pulumi/actions@v7
+
+      # Both buckets resolve from stack outputs, retried — a transient flake
+      # must not drop the evidence record (the content-review lesson). The
+      # evidence-page bucket is OPTIONAL until its infra deploys: missing
+      # outputs degrade to the workflow-run URL as the evidence link, never a
+      # failed publish. The ledger prefix is the system of record; its
+      # absence is record-evidence.py's own degradation contract (local +
+      # artifact + ::warning::).
+      - name: Resolve evidence buckets
+        if: steps.current.outputs.superseded == 'false'
+        id: buckets
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          resolve() {
+            local out=""
+            for i in 1 2 3; do
+              out=$(pulumi -C infrastructure stack output "$1" \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$out" ] && break
+              [ "$i" -lt 3 ] && sleep $((i * 5))
+            done
+            printf '%s' "$out"
+          }
+          LEDGER=$(resolve contentReviewLedgerBucketName)
+          EVIDENCE=$(resolve reviewEvidenceBucketName)
+          BASE_URL=$(resolve reviewEvidenceBaseUrl)
+          [ -n "$LEDGER" ] || echo "::warning::ledger bucket unresolved; evidence records will be local/artifact only"
+          [ -n "$EVIDENCE" ] || echo "::warning::evidence-page bucket unresolved (infra not deployed yet?); comments will link the workflow run"
+          {
+            echo "ledger=$LEDGER"
+            echo "evidence=$EVIDENCE"
+            echo "base_url=$BASE_URL"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Record evidence
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          LEDGER_BUCKET: ${{ steps.buckets.outputs.ledger }}
+        run: |
+          if [ -n "$LEDGER_BUCKET" ]; then
+            export PR_REVIEW_EVIDENCE_URI="s3://$LEDGER_BUCKET/pr-review"
+          fi
+          python3 scripts/review-v3/record-evidence.py \
+            --evidence .review-evidence.json \
+            --pr "${{ steps.current.outputs.pr }}" \
+            --head-sha "${{ steps.current.outputs.head_sha }}"
+
+      - name: Upload evidence record artifact
+        if: steps.current.outputs.superseded == 'false'
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-v3-evidence-pr${{ needs.claude-review.outputs.pr_number }}-run${{ github.run_id }}
+          path: .pr-review-evidence/
+          # Dot-prefixed dir: without this the action sees zero files
+          # and if-no-files-found: error fails the publish (fork battery 2026-08-31).
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Render and upload evidence page
+        if: steps.current.outputs.superseded == 'false'
+        id: evidence-page
+        env:
+          EVIDENCE_BUCKET: ${{ steps.buckets.outputs.evidence }}
+          BASE_URL: ${{ steps.buckets.outputs.base_url }}
+        run: |
+          PR="${{ steps.current.outputs.pr }}"
+          SHA="${{ steps.current.outputs.head_sha }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          python3 scripts/review-v3/render-evidence-html.py \
+            --evidence .review-evidence.json --output .review-evidence.html
+          if [ -n "$EVIDENCE_BUCKET" ] && [ -n "$BASE_URL" ]; then
+            aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/$SHA.html" \
+              --content-type "text/html; charset=utf-8"
+            aws s3 cp .review-evidence.html "s3://$EVIDENCE_BUCKET/$PR/latest.html" \
+              --content-type "text/html; charset=utf-8"
+            # HTTPS REST URL of the object — the bucket is deliberately not a
+            # static website (its endpoint is HTTP-only and the bucket policy
+            # denies non-TLS requests).
+            echo "url=$BASE_URL/$PR/latest.html" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=$RUN_URL" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Brief first, author LAST — the author card carries the machine-read
+      # HEAD marker and the counts the label reads; see the job comment.
+      - name: Publish the two cards
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVIDENCE_URL: ${{ steps.evidence-page.outputs.url }}
+        run: |
+          PR="${{ steps.current.outputs.pr }}"
+          sed -i "s|%%EVIDENCE_URL%%|$EVIDENCE_URL|g" .review-brief.md .review-author.md
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --role brief --pr "$PR" --body-file .review-brief.md
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+            --role author --pr "$PR" --body-file .review-author.md
+
+      - name: Finalize label, check-run, progress signal
+        if: steps.current.outputs.superseded == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          PR="${{ steps.current.outputs.pr }}"
+          REPO="${{ github.repository }}"
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py \
+            count-buckets --pr "$PR" --repo "$REPO" > /tmp/bucket-counts.txt
+          rc=$?
+          if [ $rc -eq 0 ]; then
+            OUTSTANDING=$(grep '^outstanding=' /tmp/bucket-counts.txt | cut -d= -f2)
+            if [ -n "$OUTSTANDING" ]; then
+              if [ "$OUTSTANDING" -gt 0 ]; then LABEL="review:outstanding-issues"; else LABEL="review:no-blockers"; fi
+              .claude/commands/docs-review/scripts/set-review-label.sh \
+                --pr "$PR" --repo "$REPO" --label "$LABEL"
+            else
+              echo "::warning::count-buckets returned no outstanding count; leaving label untouched"
+            fi
+          else
+            echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
+          fi
+          CHECK_ID="${{ steps.current.outputs.check_id }}"
+          if [ -n "$CHECK_ID" ]; then
+            jq -n '{status: "completed", conclusion: "success", output: {title: "Pre-merge Review", summary: "Review published: author card + reviewer brief on the PR, evidence page linked from both."}}' \
+              | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+          fi
+          PROGRESS_ID="${{ steps.current.outputs.progress_id }}"
+          if [ -n "$PROGRESS_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
+          fi
+          # Dispatcher cleanup + terminal comment (the #new-review path) —
+          # deferred from the model job so "regenerating" stays accurate
+          # until the cards actually landed.
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          if [ -n "$DISPATCHER_COMMENT_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
+          fi
+          if [ -n "$MENTION_AUTHOR" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+          fi
+          exit 0
+
+      # The Sentinel's workflow_run trigger resolves the PR from
+      # `workflow_run.pull_requests[]`, which is EMPTY when this workflow was
+      # started by workflow_dispatch (`#new-review`) or an issue comment — so
+      # after such a publish the check-run kept saying "no current review"
+      # (fork smoke, 2026-09-01). Poke it explicitly, like claude-update.yml.
+      # Loud on failure (a 403 from missing `actions: write` must show as a
+      # red step), non-fatal for the job.
+      - name: Re-evaluate Sentinel (v3)
+        if: steps.current.outputs.superseded == 'false' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ steps.current.outputs.pr }}"
+
+      # Error trap: a failed publish must be visible — review:error, a red
+      # check, and an errored progress message. A CANCELLED publish is a
+      # supersession (a newer run entered the concurrency group) and touches
+      # nothing: the newer run owns all user-visible state.
+
+      - name: Publish error trap
+        if: failure() && steps.current.outputs.superseded == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          PR="${{ steps.current.outputs.pr }}"
+          REPO="${{ github.repository }}"
+          [ -n "$PR" ] || exit 0
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label review:error
+          CHECK_ID="${{ steps.current.outputs.check_id }}"
+          if [ -n "$CHECK_ID" ]; then
+            jq -n '{status: "completed", conclusion: "failure", output: {title: "Pre-merge Review", summary: "Publishing the review failed after a successful model pass. See the publish job logs."}}' \
+              | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
+          fi
+          PROGRESS_ID="${{ steps.current.outputs.progress_id }}"
+          if [ -n "$PROGRESS_ID" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.')
+            gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
+          fi
+          exit 0

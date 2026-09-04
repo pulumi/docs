@@ -175,7 +175,7 @@ Automation tools can streamline credential management by automating repetitive t
 
 ### How can we securely share secrets within a team?
 
-Securely [sharing secrets](/tutorials/building-with-pulumi/secrets/) within a team is crucial for maintaining the integrity and security of sensitive information. Secrets, such as passwords, API keys, and encryption keys, need to be shared in a manner that minimizes the risk of exposure while ensuring that only authorized team members have access. Here are the best practices and methods for securely sharing secrets within a team:
+Securely [sharing secrets](/dev/tutorials/building-with-pulumi/secrets/) within a team is crucial for maintaining the integrity and security of sensitive information. Secrets, such as passwords, API keys, and encryption keys, need to be shared in a manner that minimizes the risk of exposure while ensuring that only authorized team members have access. Here are the best practices and methods for securely sharing secrets within a team:
 
 #### Using a Centralized Secrets Management System with Role-Based Access Control
 
@@ -370,7 +370,7 @@ Compliance standards often require robust key management practices to ensure the
 
 ## Development and CI/CD Considerations
 
-Handling [secrets securely in code](/docs/iac/concepts/secrets/#using-configuration-and-secrets-in-code) is critical to maintaining the security of applications and protecting sensitive information from unauthorized access. Developers must follow [best practices](/tutorials/building-with-pulumi/secrets/) to ensure that secrets such as API keys, passwords, and encryption keys are properly managed and not exposed inadvertently. Here’s how developers should handle secrets in their code:
+Handling [secrets securely in code](/docs/iac/concepts/secrets/#using-configuration-and-secrets-in-code) is critical to maintaining the security of applications and protecting sensitive information from unauthorized access. Developers must follow [best practices](/dev/tutorials/building-with-pulumi/secrets/) to ensure that secrets such as API keys, passwords, and encryption keys are properly managed and not exposed inadvertently. Here’s how developers should handle secrets in their code:
 
 ### Never Hardcode Secrets in Source Code
 

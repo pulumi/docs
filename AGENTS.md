@@ -37,7 +37,7 @@ For all content files, Pulumi's **voice, tone, prose, product naming, and gramma
 
 Meta files like this one, `BUILD-AND-DEPLOY.md`, and agent instruction/skill files (e.g., `.claude/commands/*.md`) are exempt from formatting rules (heading case, trailing newlines, etc.).
 
-For all content files (docs, blogs, tutorials, etc.):
+For all content files (docs, blogs, changelog entries, etc.):
 
 - **Markdown**: Must always end with a newline.
 - **Headings**: Sentence case at every level (H1 included), and sentence case for nav menu labels. See the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/) section. Hugo heading mechanics (one H1, FAQ `?` exception) live in `STYLE-GUIDE.md`.
@@ -62,7 +62,7 @@ For all content files (docs, blogs, tutorials, etc.):
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Diagrams**: Prefer Mermaid diagrams over ASCII art. The site renders Mermaid natively via a Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced code blocks. See [Mermaid docs](https://mermaid.js.org/) for syntax.
 - **Images on template-driven pages**: Place new images for template-driven pages (homepage, product pages, event pages, case studies — anything rendered through `layouts/partials/template-partials/*`) under `assets/fingerprinted/`, mirroring the path you'd use under `static/`. The template partials route every `<img>` through `layouts/partials/fingerprinted-img.html`, which content-hashes filenames, converts rasters to WebP, and generates responsive `srcset`s. Frontmatter paths still look like `/images/foo.svg`; the partial resolves them. Missing assets cause a build panic, so there is no silent fallback. `meta_image` and assets used by non-template layouts can stay in `static/`.
-- **Meta images**: `meta_image` is optional for `docs`, `tutorials`, `case-studies`, `what-is`, `migrate`, `partner`, `topics`, `events`, and `blog` pages. Leave it blank and `scripts/generate-meta-images.mjs` produces an on-brand social card at build time (resolved by `layouts/partials/meta-image-url.html`). A page-level `meta_image` always wins, but custom overrides are discouraged — the generated card covers virtually every case and stays on-brand automatically. For blog posts the card is built from the post title + `feature_image` (generate the feature image with `/blog-feature-image`, or label the PR `needs-design` for a designer-made one); a post's off-brand legacy meta image, if any, was renamed to `meta-legacy.png` and shows in a collapsed "Archived feature image" panel.
+- **Meta images**: `meta_image` is optional for `docs`, `case-studies`, `what-is`, `migrate`, `partner`, `topics`, `events`, and `blog` pages. Leave it blank and `scripts/generate-meta-images.mjs` produces an on-brand social card at build time (resolved by `layouts/partials/meta-image-url.html`). A page-level `meta_image` always wins, but custom overrides are discouraged — the generated card covers virtually every case and stays on-brand automatically. For blog posts the card is built from the post title + `feature_image` (generate the feature image with `/blog-feature-image`, or label the PR `needs-design` for a designer-made one); a post's off-brand legacy meta image, if any, was renamed to `meta-legacy.png` and shows in a collapsed "Archived feature image" panel.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
 
 ---
@@ -79,7 +79,7 @@ Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias 
 
 When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
-- **DO update** links in `/content/docs/`, `/content/product/`, and `/content/tutorials/`.
+- **DO update** links in `/content/docs/` and `/content/product/`.
 - **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement, and when the change is worth surfacing to readers stamp `updated: YYYY-MM-DD` (not `lastmod`); otherwise route around it with an alias/redirect. See "Dates: `updated` vs `lastmod`" below.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
@@ -93,11 +93,24 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
+## The Dev Center lives in another repo
+
+`/dev` — tutorials, templates, community examples, and the glossary — is **not** in this repo. It ships from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 + CloudFront), and `infrastructure/index.ts` proxies `/dev*` to that distribution the same way it proxies `/registry` and `/guides`. Hugo's `content/tutorials/` and `content/templates/` trees were deleted when it launched; `scripts/redirects/dev-redirects.txt` 301s their URLs into `/dev`.
+
+What that means when you work here:
+
+- **Don't add tutorial or template content to this repo.** A new tutorial, a new template page, or a glossary term goes to pulumi/marketing-web. (The `glossary` shortcode and `data/glossary.toml` are a *different*, docs-only glossary rendered at `/docs/glossary/` — that one stays.)
+- **Link to `/dev/tutorials/<slug>/`, `/dev/templates/<group>/[<cloud>/]`, and `/dev/glossary/<term>/`.** Never `/tutorials/` or `/templates/`; those only redirect.
+- **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes the Dev Center's chrome. Both carry one Dev Center entry pointing at `/dev/`; the Tutorials, Templates, and Pulumi guides entries collapsed into it.
+- **Search does not cover the Dev Center.** Docs search indexes this repo and the Registry only; `/dev` has its own search at `/dev/browse`. `scripts/search/update-search-index.js` deliberately doesn't fetch `/dev/search-index.json`, and there is no Dev Center facet in the docs search UI.
+
+---
+
 ## AI and agent positioning
 
 Pulumi supports the full spectrum of AI agents, and content must never present Neo as the only way to use AI with Pulumi or frame Neo as an either-or choice against other coding agents.
 
-- **Docs** (`content/docs/`, `content/what-is/`, `content/tutorials/`): community-centric and balanced. Third-party coding agents (Claude Code, Codex, Cursor, GitHub Copilot, etc.) working with Pulumi — through IaC, [Agent Skills](/docs/ai/skills/), and the [Pulumi MCP server](/docs/ai/mcp-server/) — are first-class. Neo is Pulumi's purpose-built infrastructure agent: the deepest integration and the fastest path to a great infrastructure agent out of the box, but one option on a spectrum, and most teams benefit from using both.
+- **Docs** (`content/docs/`, `content/what-is/`): community-centric and balanced. Third-party coding agents (Claude Code, Codex, Cursor, GitHub Copilot, etc.) working with Pulumi — through IaC, [Agent Skills](/docs/ai/skills/), and the [Pulumi MCP server](/docs/ai/mcp-server/) — are first-class. Neo is Pulumi's purpose-built infrastructure agent: the deepest integration and the fastest path to a great infrastructure agent out of the box, but one option on a spectrum, and most teams benefit from using both.
 - **Product/marketing pages** (`content/product/`, homepage): may lead with Neo and sell it hard, but should still acknowledge that Pulumi's code-first approach works with the agent a reader already uses. Avoid copy that disparages other agents (e.g. "unlike generic AI tools").
 - **When listing agent options** (e.g. in migration guides), follow the pattern in `content/docs/iac/guides/migration/migrating-to-pulumi/from-terraform.md`: list Neo alongside Claude Code, Cursor, and Codex as equally legitimate choices, with at most a light note on Neo's built-in advantage.
 
@@ -113,7 +126,7 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 Docs pages state which Pulumi Cloud edition a feature needs through a generated violet callout, not hand-written prose. A marker names a **feature**, never an edition — the edition the callout states is derived from that feature's availability in `data/pulumi_pricing.yaml` (see "Pricing data" below), so a feature that moves editions is a one-line edit that updates `/pricing/` and every marked page at once.
 
-- **Whole page**: add `pulumi_cloud_feature: <feature-id>` to the front matter (for example `pulumi_cloud_feature: rbac`). `layouts/docs/{single,list}.{html,md}` renders the callout above the content. We only mark what a reader has to buy, so an unknown id, an *edition* id, `true`, `false`, and a feature that's available on the Individual edition are all hard lint failures (`checkPulumiCloudFeature` in `scripts/lint/lint-markdown.js`). An ungated page carries no key. The key names the feature because the value does; it isn't `cloud_feature` because `content/templates/` already uses `cloud:` for the cloud *provider* a template targets.
+- **Whole page**: add `pulumi_cloud_feature: <feature-id>` to the front matter (for example `pulumi_cloud_feature: rbac`). `layouts/docs/{single,list}.{html,md}` renders the callout above the content. We only mark what a reader has to buy, so an unknown id, an *edition* id, `true`, `false`, and a feature that's available on the Individual edition are all hard lint failures (`checkPulumiCloudFeature` in `scripts/lint/lint-markdown.js`). An ungated page carries no key. The key names the feature because the value does, and to leave `cloud_feature` free for the cloud *provider* sense the word carries elsewhere.
 - **One section**: put `{{< pulumi-cloud "<feature-id>" />}}` on the line **directly after** the heading it applies to. `scripts/search/page.js` relies on that adjacency to skip the callout when it builds a heading's search snippet. The no-argument form `{{< pulumi-cloud />}}` means "Pulumi Cloud, all editions" and is only for mixed pages where the reader can't otherwise tell a section needs Cloud at all; a block form with inner content renders orientation prose in the same box. `checkPulumiCloudShortcode` validates the argument against the same vocabulary as the front matter key.
 - **If the feature isn't in the data file yet, add it there first.** Give it `hidden: true` when it isn't a marketed line item on `/pricing/` (gated deployments, ESC change requests, organization templates): hidden features stay out of the comparison table but remain resolvable by id.
 - **Don't say it twice.** When you add a marker, delete the hand-written "only available in the Enterprise and Business Critical editions" sentence or note it replaces. The callout already links to `/pricing/`. Keep only prose that says something the callout doesn't (for example, a per-edition limit like "Enterprise allows up to 25 custom roles").
@@ -292,5 +305,7 @@ Open as draft, mark ready when done. Each ready-transition fires one full review
 **Shipping a PR includes finishing its review.** A PR is done when every finding the pre-merge review raised — 🚨 blockers, ⚠️ low-confidence findings, and ✏️ style suggestions alike — has been fixed, refuted, deferred to a filed issue, or explicitly accepted with a stated reason. Clearing 🚨 and stopping is not a shortcut; it is the failure mode the pipeline's own outcome telemetry measures (`ignored_low_confidence` in `scrape-review-outcomes.py`).
 
 Agents: treat this as expected behavior on every PR you open here, asked for or not. Use the **`/address-review`** skill (`.claude/commands/address-review/SKILL.md`) — offer to watch for the review when the PR goes ready for review, walk **every** finding with the user when it lands, and say so plainly (once, then drop it) when a merge would leave items undecided. `python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> --state .review-worklist-<N>.json --require-clean` is the machine answer to "is anything still open?"
+
+**The v3 surface (staged rollout):** behind the `REVIEW_V3_COMMENTS` repo variable (or, per PR, the `surface:v3` label), the monolithic pinned review becomes an author card (`<!-- CLAUDE_REVIEW_AUTHOR -->`, blocking findings with stable `F<n>` ids + a machine-read `REVIEW_STATE` disposition block) plus a reviewer brief (`<!-- CLAUDE_REVIEW_BRIEF -->`), with the verification trail on a linked evidence page and S3 as the system of record. Findings are answered by pushing a fix or replying `@claude <reasoning> #update-review` (agents may also use the deterministic `/resolve F<n> <disposition>[: reason]` comment lane — zero model cost, not surfaced to human contributors); the **Sentinel** check-run is the single merge gate (findings answered · matrix-named team approved per `.github/review-routing.yml` · infra staging evidence), with `review:waived` as the logged break-glass. Deterministic machinery lives in `scripts/review-v3/` (see its README) and is covered by `make test-review-pipeline`.
 
 For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.

@@ -1,0 +1,199 @@
+{
+  "generated": "2026-09-01T14:12:05+00:00",
+  "count": 1,
+  "traffic": {
+    "source": "CLICKSTREAM.FCT_PAGEVIEWS",
+    "period": {
+      "end": "2026-08-31",
+      "start": "2026-02-28"
+    },
+    "pages_matched": 848,
+    "available": true
+  },
+  "reader_signals": null,
+  "ledger_bucket": "content-review-ledger-e8e6737",
+  "articles": [
+    {
+      "path": "content/docs/iac/concepts/providers/_index.md",
+      "url": "/docs/iac/concepts/providers/",
+      "slug": "docs-iac-concepts-providers",
+      "lane": "glowup",
+      "mode": "glowup",
+      "tier": 1,
+      "no_retire": true,
+      "monthly_visits": 3266,
+      "signals": {
+        "gsc": {
+          "impressions": 5947,
+          "ctr": 0.046746,
+          "opportunity": 0.0,
+          "multiplier": 1.0,
+          "low_ctr_flag": false
+        },
+        "feedback": null
+      },
+      "last_reviewed": "2026-08-31",
+      "skipped_findings": 13,
+      "clarity_flag": false,
+      "stale_claims": 0,
+      "stale_claim_markers": [],
+      "source_pr_number": 21266,
+      "findings_record": {
+        "schema_version": 1,
+        "slug": "docs-iac-concepts-providers",
+        "path": "content/docs/iac/concepts/providers/_index.md",
+        "reviewed_at": "2026-08-31",
+        "commit": "2e2a4485192818d309803bf20edf6dd2798f465b",
+        "verdict": "fixed",
+        "counts": {
+          "total": 14,
+          "applied": 2,
+          "deferred": 12
+        },
+        "findings": [
+          {
+            "id": "f1",
+            "label": "Claim (c7): Native providers are not bridged; they are generated from a cloud or service's API specification, which produces both the resource definitions and the CRUD cal\u2026 \u2014 unverifiable",
+            "source": "https://github.com/pulumi/pulumi-terraform-bridge",
+            "detail": "The cited URL is the pulumi-terraform-bridge repo, which describes the bridged provider mechanism, not native providers. The claim is about native (non-bridged\u2026",
+            "category": "claim",
+            "line_range": "L33-34",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f2",
+            "label": "Claim (c19, L67): The Any Terraform Provider is a parameterized provider that lets you generate a local provider SDK for a cloud provider, SaaS service, or on-prem device that e\u2026 \u2014 framing drift (value accurate, meaning drifted)",
+            "source": "https://search.opentofu.org",
+            "detail": "The cited URL (https://search.opentofu.org) resolves successfully and is titled \"OpenTofu Registry\", confirming it is the registry referenced by the claim as t\u2026",
+            "category": "claim",
+            "line_range": "L67",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f3",
+            "label": "Claim (c20): Running `pulumi package add terraform-provider hashicorp/random` generates a local SDK for the hashicorp/random OpenTofu provider. \u2014 unverifiable",
+            "source": "https://search.opentofu.org/provider/hashicorp/random/latest",
+            "detail": "The pre-fetched page body is truncated to just \"OpenTofu Registry\" with no content confirming provider details or the pulumi package add command behavior; cann\u2026",
+            "category": "claim",
+            "line_range": "L69, L72",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f4",
+            "label": "Claim (c70): In the Automation API .NET SDK, `stack.SetConfigAsync(\"pulumi:disable-default-providers[0]\", new ConfigValue(\"*\"), path: true)` sets the config with a named `p\u2026 \u2014 unverifiable",
+            "source": "N/A - requires pulumi/pulumi .NET SDK source inspection",
+            "detail": "(escalated from pass1 after exhausting its 12-turn cap) This claim describes the exact parameter signature of the .NET Automation API's `Stack.SetConfigAsync` \u2026",
+            "category": "claim",
+            "line_range": "L664",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f5",
+            "label": "Vale filler (L48): Don't start a sentence with 'There are'.",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Don't start a sentence with 'There are'.",
+            "category": "vale",
+            "line_range": "L48",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f6",
+            "label": "Vale future tense (L63): Future tense ('the Pulumi CLI will install') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (brand guide: writing style).",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Future tense ('the Pulumi CLI will install') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (brand guide: writing style).",
+            "category": "vale",
+            "line_range": "L63",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f7",
+            "label": "Vale wordiness (L84): 'all of' is too wordy.",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "'all of' is too wordy.",
+            "category": "vale",
+            "line_range": "L84",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f8",
+            "label": "Vale narrative voice (L173): Narrative walkthrough voice ('let's') -- prefer imperative second person: 'Create a bucket', not 'Let's create a bucket' (brand guide: writing style).",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Narrative walkthrough voice ('let's') -- prefer imperative second person: 'Create a bucket', not 'Let's create a bucket' (brand guide: writing style).",
+            "category": "vale",
+            "line_range": "L173",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f9",
+            "label": "Vale difficulty qualifier (L260): Avoid difficulty qualifier 'simply' -- it judges difficulty for the reader (brand guide: voice, words and phrases).",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Avoid difficulty qualifier 'simply' -- it judges difficulty for the reader (brand guide: voice, words and phrases).",
+            "category": "vale",
+            "line_range": "L260",
+            "fix_candidate": true,
+            "applied": false
+          },
+          {
+            "id": "f10",
+            "label": "Vale directional reference (L468): Directional reference ('In the example above') -- link directly to the target (an `#anchor` or relative path) rather than relying on 'above'/'below' (brand gui\u2026",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Directional reference ('In the example above') -- link directly to the target (an `#anchor` or relative path) rather than relying on 'above'/'below' (brand gui\u2026",
+            "category": "vale",
+            "line_range": "L468",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f11",
+            "label": "Vale weasel word (L472): 'several' is a weasel word!",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "'several' is a weasel word!",
+            "category": "vale",
+            "line_range": "L472",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f12",
+            "label": "Vale future tense (L625): Future tense ('the resource will use') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (brand guide: writing style).",
+            "source": "`STYLE-GUIDE.md` (Vale)",
+            "detail": "Future tense ('the resource will use') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (brand guide: writing style).",
+            "category": "vale",
+            "line_range": "L625",
+            "fix_candidate": false,
+            "applied": false
+          },
+          {
+            "id": "f13",
+            "label": "Readthrough self-redundancy (L255-262): \"This scenario is _only_ possible by using explicit providers: We cannot use the default Kubernetes \u2026\"",
+            "source": "readthrough coherence pass",
+            "detail": "Remove or tighten the second explanatory paragraph (L257) that re-explains why explicit providers are needed for multi-region/multi-cluster scenarios, since L2\u2026",
+            "category": "readthrough",
+            "line_range": "L255-262",
+            "fix_candidate": true,
+            "applied": true
+          },
+          {
+            "id": "f14",
+            "label": "Readthrough orphaned-structure (L462-464): \"```bash pulumi config set aws:region us-west-2 ```\"",
+            "source": "readthrough coherence pass",
+            "detail": "Remove this dangling command block, or add a sentence explaining its purpose in the explicit-provider example (e.g., clarifying it sets the default provider's \u2026",
+            "category": "readthrough",
+            "line_range": "L462-464",
+            "fix_candidate": true,
+            "applied": true
+          }
+        ]
+      },
+      "score": 10.8445
+    }
+  ]
+}

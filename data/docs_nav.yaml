@@ -1,4 +1,4 @@
-# Docs/tutorials top nav. Consumed by layouts/partials/docs-top-nav.html.
+# Docs top nav. Consumed by layouts/partials/docs-top-nav.html.
 # `showAt` (sm | md | lg) hides the item below that breakpoint.
 
 logoMenu:

@@ -6,9 +6,9 @@
 
   <lastmod> is added only for /sitemap.xml, which this build actually produces
   and can date honestly via enableGitInfo (site.Lastmod = the max .Lastmod
-  across all pages). /registry/sitemap.xml and /guides/sitemap.xml are built
-  and deployed by pulumi/registry and pulumi/guides respectively; this build
-  has no reliable signal for when their content last changed, and per
+  across all pages). /registry/sitemap.xml is built and deployed by
+  pulumi/registry; this build has no reliable signal for when its content
+  last changed, and per
   Google's sitemap guidance a missing lastmod is preferable to a fabricated
   one ("if your page changed 7 years ago, but you're telling us in the
   lastmod element that it changed yesterday, eventually we're not going to
@@ -25,10 +25,5 @@
        omitted, see comment above. */ -}}
   <sitemap>
     <loc>{{ .Site.Params.canonicalURL }}/registry/sitemap.xml</loc>
-  </sitemap>
-  {{/* Built and deployed separately by pulumi/guides; lastmod intentionally
-       omitted, see comment above. */ -}}
-  <sitemap>
-    <loc>{{ .Site.Params.canonicalURL }}/guides/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
