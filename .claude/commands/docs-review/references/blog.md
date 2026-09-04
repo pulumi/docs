@@ -114,7 +114,7 @@ Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-ve
 
 When a blog post announces a new feature, provider, or significant capability:
 
-- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`, `content/tutorials/`. If the only mention of the feature is the blog post itself, that's a finding.
+- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`. If the only mention of the feature is the blog post itself, that's a finding.
 - **Note specific gaps.** Don't just say "docs are missing" — name the page that should exist (e.g., "no `content/docs/esc/integrations/<feature>/` page found").
 - **Suggest a doc type.** Reference / tutorial / concept guide / how-to — pick the one that matches the feature's nature.
 

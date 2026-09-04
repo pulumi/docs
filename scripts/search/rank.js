@@ -153,10 +153,6 @@ module.exports = {
             }
         }
 
-        if (page.href.startsWith("/templates")) {
-            return 390;
-        }
-
         if (page.href.startsWith("/blog")) {
             return 290;
         }

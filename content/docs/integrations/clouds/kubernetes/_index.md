@@ -47,15 +47,15 @@ The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kub
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new Kubernetes projects from a pre-built template:
 
-- [Kubernetes cluster on AWS](/templates/kubernetes/aws/)
-- [Kubernetes cluster on Azure](/templates/kubernetes/azure/)
-- [Kubernetes cluster on Google Cloud](/templates/kubernetes/gcp/)
-- [Helm chart on Kubernetes](/templates/kubernetes-application/helm-chart/)
-- [Web application on Kubernetes](/templates/kubernetes-application/web-application/)
+- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/)
+- [Kubernetes cluster on Azure](/dev/templates/kubernetes/azure/)
+- [Kubernetes cluster on Google Cloud](/dev/templates/kubernetes/gcp/)
+- [Helm chart on Kubernetes](/dev/templates/kubernetes-application/helm-chart/)
+- [Web application on Kubernetes](/dev/templates/kubernetes-application/web-application/)
 
 ## Secrets & configuration (ESC)
 

@@ -53,9 +53,6 @@ const config = {
     // the registry stack to reference to route traffic to for `/registry` routes.
     registryStack: stackConfig.get("registryStack"),
 
-    // the guides stack to reference to route traffic to for `/guides` routes.
-    guidesStack: stackConfig.get("guidesStack"),
-
     devStack: stackConfig.get("devStack"),
 
     answersStack: stackConfig.get("answersStack"),
@@ -744,8 +741,8 @@ function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = [
 // "thirty-minute-cache" and "one-year-cache" names are preserved so Pulumi
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
 //
-// thirtyMinuteCachePolicy varies on the Accept header so /registry/*, /guides/*,
-// and /dev/* (which proxy to separate CDNs whose viewer-request functions do
+// thirtyMinuteCachePolicy varies on the Accept header so /registry/* and
+// /dev/* (which proxy to separate CDNs whose viewer-request functions do
 // markdown content negotiation) cache HTML and markdown variants separately
 // at the apex layer. Without this, whichever variant populates the apex cache
 // first is served to every requester until TTL. Fragmentation is bounded to
@@ -944,9 +941,6 @@ const baseCacheBehavior: aws.types.input.cloudfront.DistributionDefaultCacheBeha
 const registryOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const registryBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
-const guidesOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
-const guidesBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
-
 const answersOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
 const answersBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
 
@@ -992,38 +986,6 @@ if (config.registryStack) {
             cachePolicyId: oneYearCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-    )
-}
-
-if (config.guidesStack) {
-    const guidesStack = new pulumi.StackReference(config.guidesStack);
-    const guidesCDN = guidesStack.getOutput("cloudFrontDomain");
-
-    guidesOrigins.push(
-        {
-            originId: guidesCDN,
-            domainName: guidesCDN,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-            },
-            // Origin Shield for guides should be configured in pulumi/guides,
-            // not here, since guides has its own CloudFront distribution.
-        }
-    );
-    guidesBehaviors.push(
-        {
-            ...baseCacheBehavior,
-            targetOriginId: guidesCDN,
-            // "/guides*" (no slash) matches /guides, /guides.md, and
-            // /guides/... so the bare path reaches the guides origin and gets
-            // the native trailing-slash redirect, matching registry's behavior.
-            pathPattern: "/guides*",
-            cachePolicyId: thirtyMinuteCachePolicy.id,
-            originRequestPolicyId: allViewerExceptHostHeaderId,
         },
     )
 }
@@ -1238,7 +1200,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
             },
         },
         ...registryOrigins,
-        ...guidesOrigins,
         ...devOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
@@ -1270,7 +1231,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...supportFormBehaviors,
 
         ...registryBehaviors,
-        ...guidesBehaviors,
         ...devBehaviors,
         ...answersBehaviors,
 

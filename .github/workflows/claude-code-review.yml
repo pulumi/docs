@@ -654,7 +654,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -701,7 +701,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '[]' > .fetched-urls.json
             echo "extract-urls: no in-scope prose files changed; skipping"

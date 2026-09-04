@@ -14,7 +14,7 @@
 #      without showing it (preserves the id for future re-enabling).
 #   3. `display` controls where the entry can appear:
 #        - `marketing` — non-docs pages (homepage, product, blog, etc.)
-#        - `docs`      — paths under /docs/ or /tutorials/
+#        - `docs`      — paths under /docs/
 #        - `both`      — everywhere (default if omitted)
 #   4. `icon` is optional. Use any name from the Phosphor icon set; see
 #      assets/icons/phosphor/regular/ for the available names (file basename

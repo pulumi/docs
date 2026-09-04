@@ -19,10 +19,6 @@
       {{ if $howToEntity }}
         {{ $entity = $howToEntity }}
       {{ else }}
-        {{/* HowTo page with no extractable steps (numbered list or, for
-             layout=template pages, H2 sections) - fall back to article so
-             the page still gets a valid main entity instead of none at
-             all. */}}
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
       {{ end }}
     {{ else if eq $explicitSchema "product" }}
@@ -37,30 +33,6 @@
     {{ if and (eq .Type "blog") .IsPage }}
       {{/* Blog posts get BlogPosting schema */}}
       {{ $entity = partial "schema/collectors/blog-entity.html" . }}
-
-    {{ else if eq .Type "tutorials" }}
-      {{ if .Pages }}
-        {{/* Section/listing pages (tutorial hubs with child pages, e.g.
-             _index.md bundles that group several tutorial steps) get
-             CollectionPage schema instead of HowTo. .IsPage is false for
-             ALL _index.md branch nodes regardless of children, so it can't
-             be used to distinguish a hub from a single-page tutorial - the
-             presence of child .Pages is the real signal. Emitting HowTo
-             here produced an empty/invalid step array with no real steps
-             to describe. */}}
-        {{ $entity = partial "schema/collectors/collection-entity.html" . }}
-      {{ else }}
-        {{/* Leaf tutorial pages (including single-page _index.md bundles
-             with no children) get HowTo schema */}}
-        {{ $howToEntity := partial "schema/collectors/howto-entity.html" . }}
-        {{ if $howToEntity }}
-          {{ $entity = $howToEntity }}
-        {{ else }}
-          {{/* Leaf tutorial with no extractable numbered-list steps - fall
-               back to article rather than emit a stepless HowTo. */}}
-          {{ $entity = partial "schema/collectors/article-entity.html" . }}
-        {{ end }}
-      {{ end }}
 
     {{ else if and (eq .Type "events") .IsPage }}
       {{/* Individual event pages get Event schema (not the list page) */}}
