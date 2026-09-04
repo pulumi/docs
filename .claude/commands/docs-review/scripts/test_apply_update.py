@@ -262,3 +262,77 @@ def test_no_script_uses_per_commit_pr_patch():
     bad = _re.compile(r'\["gh",\s*"pr",\s*"diff",\s*[^\]]*"--patch"')
     offenders = [p.name for p in HERE.glob("*.py") if p.name != Path(__file__).name and bad.search(p.read_text())]
     assert offenders == [], offenders
+
+
+def _resolved_fixture():
+    """A card where the lane itself resolved F1 (`fixed`, actor update-lane) —
+    the state pulumi/docs#21395 was in when the fix commit was reverted."""
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 1cb28d8"}], case="fix-response")
+    a1, b1, state1, _ = au.apply(AUTHOR, BRIEF, up, head_sha="1" * 40, actor="update-lane", auto=False)
+    assert state1["findings"]["F1"]["disposition"] == "fixed" and state1["findings"]["F1"]["actor"] == "update-lane"
+    assert "F1" not in _open_author_ids(a1)
+    return a1, b1
+
+
+def test_accept_on_a_resolved_finding_reopens_it_first():
+    """pulumi/docs#21395: the fix for F2 was reverted and the author had
+    accepted the finding as-is; the model's `accept` was refused as "not an
+    open finding" and the lane errored twice. The ✅ row is reopened and the
+    accept applied on top."""
+    a1, b1 = _resolved_fixture()
+    up = _update([{"id": "F1", "action": "accept", "reason": "author's call; the fix was reverted"}], case="re-verify")
+    a2, b2, state2, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="alice", auto=False)
+    assert report["reopened"] == ["F1"]
+    assert "| **F1** |" not in "\n".join(au._collect_resolved(a2)), "row left the ✅ table"
+    assert "**F1**" in b2 and "✋ **Accepted as-is by alice on " in b2
+    assert state2["findings"]["F1"]["disposition"] == "accepted"
+    ev = au.assemble_evidence(None, a2, b2, state2, up, repo="pulumi/docs", pr=999,
+                              head_sha="2" * 40, run_id="t", timestamp=report["timestamp"])
+    f1 = next(f for f in ev["findings"] if f["id"] == "F1")
+    assert f1["status"] == "accepted-as-is" and f1["bucket"] == "reviewer-check"
+    assert au.validate_evidence_mod.validate_evidence(ev) == []
+
+
+def test_reopen_returns_row_to_its_bucket_and_clears_the_lane_fixed_state():
+    a1, b1 = _resolved_fixture()
+    prior = {"findings": [{"id": "F1", "bucket": "outstanding", "text": "original F1 text", "file": "content/docs/iac/x.md"}]}
+    up = _update([{"id": "F1", "action": "reopen", "reason": "c9551b1 reverted the fix"}], case="re-verify")
+    a2, b2, state2, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False, prior=prior)
+    assert report["reopened"] == ["F1"]
+    assert "F1" in _open_author_ids(a2)
+    assert "original F1 text — reopened: c9551b1 reverted the fix" in a2
+    assert "F1" not in state2["findings"], "the lane's own `fixed` record is gone"
+    assert report["blocking"] == 3 and "— 3 items block merge" in a2
+    # Without prior evidence the ✅ cell's annotation is stripped instead.
+    a3, _, _, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    assert "fixed in 1cb28d8" not in a3.split("### ✅")[0]
+
+
+def test_reopen_keeps_a_human_disposition_that_landed_meanwhile():
+    from datetime import datetime, timezone
+    a1, b1 = _resolved_fixture()
+    live = au.review_state.set_disposition(au.review_state.parse_state(a1), "F1", "accepted", actor="alice",
+                                           note="shipping", now=datetime(2030, 1, 1, tzinfo=timezone.utc))
+    a1 = au.review_state.replace_block(a1, live)
+    up = _update([{"id": "F1", "action": "reopen", "reason": "reverted"}], case="re-verify")
+    _, _, state2, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    assert state2["findings"]["F1"]["disposition"] == "accepted" and state2["findings"]["F1"]["actor"] == "alice"
+
+
+def test_resolve_and_concede_on_a_resolved_finding_are_rejected():
+    a1, b1 = _resolved_fixture()
+    for action, extra in (("resolve", {"annotation": "x"}), ("concede", {"reason": "x"})):
+        up = _update([{"id": "F1", "action": action, **extra}])
+        try:
+            au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
+        except au.UpdateError as exc:
+            assert "already resolved" in str(exc)
+        else:
+            raise AssertionError(f"{action} on a resolved finding must be rejected")
+    up = _update([{"id": "F1", "action": "reopen"}])
+    try:
+        au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
+    except au.UpdateError as exc:
+        assert "reason" in str(exc)
+    else:
+        raise AssertionError("reopen without a reason must be rejected")
