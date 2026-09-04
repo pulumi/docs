@@ -126,13 +126,11 @@ The graph response envelope includes `nodes`, `edges`, `aggregations`, `pageInfo
 
 The core mental model is: **find nodes, walk edges, choose the answer**. A frontier is the named set of nodes produced at one stage of the query.
 
-
 | Stage             | Selector clause | What it does                                                                          |
 | ----------------- | --------------- | ------------------------------------------------------------------------------------- |
 | Find nodes        | `anchor`        | Selects the nodes where the query starts.                                             |
 | Walk edges        | `traverse`      | Follows typed relationships from one frontier of nodes to the next.                   |
 | Choose the answer | `return`        | Selects which frontiers, projected fields, and evidence paths appear in the response. |
-
 
 Three optional clauses support that flow. `scope` narrows anchor selection, `aggregate` groups and counts anchors instead of walking the graph, and `page` controls response pagination.
 
@@ -336,7 +334,6 @@ The `frontier` values distinguish the starting provider from the `managed` resul
 
 A graph query returns part of a graph rather than a table of rows.
 
-
 | Response field         | Meaning                                                                                                                                                                |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `nodes`                | The nodes selected for this page. Every node includes `id`, `nodeType`, and `frontier`; resource and stack identity fields appear when available.                      |
@@ -348,7 +345,6 @@ A graph query returns part of a graph rather than a table of rows.
 | `pageInfo`             | The result count for this page and, when another page exists, an opaque continuation token.                                                                            |
 | `meta`                 | Result fidelity, the contract revision, and traversal visibility. These fields describe how the API evaluated the selector, not whether the indexed facts are current. |
 
-
 ### Check completeness before acting
 
 {{% notes type="warning" %}}
@@ -357,14 +353,12 @@ Do not use a result to prove absence, produce an exhaustive cleanup-candidate li
 
 Read these response signals together:
 
-
 | Signal                       | What it means                                                                                                                                                                                                                                                                                      | Implications and next steps                                                                                                                                                                                                                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `meta.resultMode`            | `exact` means no engine cap was reported and the search backend reported a complete answer. `truncated` means a cap was reached or the backend returned a partial answer, so matching data may exist that is unreachable by this query. The public response does not identify which cause applied. | A `truncated` result cannot support an empty-result conclusion, an exhaustive list, a total across groups, an absence claim, or a full impact analysis. Returned nodes and edges, and the existence of returned aggregation buckets, remain positive evidence, but a bucket's metric can be incomplete. |
 | `meta.visibility`            | For a traversal, `complete` means the API did not detect RBAC filtering during the walk. `trimmed` means RBAC excluded data from the traversal or the API could not verify whether filtering occurred. Aggregations omit it.                                                                       | A `trimmed` traversal cannot support an absence claim or a claim about the full impact of a change. If RBAC limited the walk, have a caller with broader read permissions run the query before making a broader claim.                                                                                  |
 | `pageInfo.continuationToken` | A present token means more of the result retained by the API remains. It is independent of `resultMode`. The key is absent on the final page of results.                                                                                                                                           | A conclusion that depends on the full result remains incomplete while a token is present. Pass the opaque token back as `page.continuationToken` without modifying it. When `resultMode` is `exact`, each returned bucket's metric is complete for that key even if other bucket pages remain.          |
 | `meta.schemaVersion`         | The graph contract revision used to evaluate the selector. It is not a completeness signal by itself.                                                                                                                                                                                              | If your client or saved selector assumes another revision, re-fetch the deployed schema and validate those assumptions before interpreting the result.                                                                                                                                                  |
-
 
 If `resultMode` is `truncated`, retry the same selector once in case the search backend returned a transient partial response. If truncation persists, partition the anchors or narrow the scope or traversal. Remember that narrowing the selector also narrows the question it can answer.
 
@@ -715,7 +709,6 @@ This section summarizes the current selector contract. The Context API is in pub
 
 ### Top-level clauses
 
-
 | Clause      | Required | Purpose                                                                                         |
 | ----------- | -------- | ----------------------------------------------------------------------------------------------- |
 | `scope`     | No       | Narrows anchor selection by stacks, Discovery cloud accounts, or discovered-resource inclusion. |
@@ -724,7 +717,6 @@ This section summarizes the current selector contract. The Context API is in pub
 | `aggregate` | No       | Groups and measures resource anchors instead of returning a graph walk.                         |
 | `return`    | No       | Chooses frontiers, projected fields, and evidence paths.                                        |
 | `page`      | No       | Sets a page size or continues from a previous response.                                         |
-
 
 ### Scope
 
@@ -774,7 +766,6 @@ Resources and stacks use different names when you select them and when you read 
 
 An anchor accepts these fields:
 
-
 | Field      | Required | Meaning                                                                                                                                     |
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `nodeType` | Yes      | The node type to select: `resource` or `stack`.                                                                                             |
@@ -782,11 +773,9 @@ An anchor accepts these fields:
 | `query`    | No       | A [Resource Search query](/docs/insights/discovery/search/) string. Valid only for a `resource` anchor and mutually exclusive with `match`. |
 | `limit`    | No       | Bounds resolved anchors. Under aggregation it limits returned buckets, not the resources counted in a returned bucket.                      |
 
-
 Omitting both `match` and `query` selects every visible node of the given type. For resource anchors, `match.type` is an exact resource type token such as `aws:s3/bucket:Bucket`. For `match.fields`, use fields listed in the deployed schema under `nodeTypes[].selectableFields`.
 
 ### Field predicates
-
 
 | Operator  | JSON shape                             | Meaning                                               |
 | --------- | -------------------------------------- | ----------------------------------------------------- |
@@ -798,7 +787,6 @@ Omitting both `match` and `query` selects every visible node of the given type. 
 | `gte`     | `{ "op": "gte", "value": "x" }`        | Greater than or equal to the value.                   |
 | `present` | `{ "op": "present" }`                  | The field has a non-empty value or list.              |
 | `absent`  | `{ "op": "absent" }`                   | The field has no value or has an empty value or list. |
-
 
 Except for `provider_version`, resource anchors evaluate ordered comparisons using each field's index ordering, while resource traversal targets compare projected values lexicographically. Ordered `provider_version` comparisons use semantic-version ordering in both contexts. Predicate values are strings. An operator that requires `value` or `values` rejects a missing or empty operand.
 For a stack node's `name` field, only `eq` and `in` are accepted.
@@ -824,7 +812,6 @@ This step starts from the current frontier, follows incoming declared `reference
 }
 ```
 
-
 | Field           | Required | Example value                           | Effect                                                                                                                                                             |
 | --------------- | -------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `edgeTypes`     | Yes      | `["reference"]`                         | Follows declared dependency relationships. `["reference", "inferred_reference"]` is the only current multi-edge combination.                                       |
@@ -833,7 +820,6 @@ This step starts from the current frontier, follows incoming declared `reference
 | `target.match`  | No       | `{"type": "aws:ec2/instance:Instance"}` | Keeps only reached EC2 instance nodes.                                                                                                                             |
 | `target.absent` | No       | `true`                                  | If added to `target` above, returns source nodes from which no matching EC2 instance is reachable within the depth range. Use it only on the final traversal step. |
 | `alias`         | No       | `"dependents"`                          | Names this result so `return.select` can include it. Without an alias, the first step is `step0`, the second is `step1`, and so on.                                |
-
 
 Before choosing an edge, direction, target field, or depth, fetch the [deployed schema](#get-the-deployed-schema). Each `edgeTypes[]` entry describes the edge's orientation and supported directions. The `singleHop` field identifies edges limited to one hop. For fields in `target.match`, use the target node type's `nodeTypes[].projectableFields`.
 
@@ -847,7 +833,6 @@ Aliases must be unique identifiers: a letter or underscore followed by letters, 
 
 The following table is a snapshot. Directions describe what a walk reaches from the current frontier.
 
-
 | Edge type             | Edge orientation                          | Supported directions | `out` reaches         | `in` reaches             | Hops     | Basis    |
 | --------------------- | ----------------------------------------- | -------------------- | --------------------- | ------------------------ | -------- | -------- |
 | `reference`           | dependent resource to dependency          | `in`, `out`, `both`  | Dependencies          | Declared dependents      | Multiple | Declared |
@@ -856,7 +841,6 @@ The following table is a snapshot. Directions describe what a walk reaches from 
 | `provided_by`         | managed resource to provider resource     | `in`, `out`, `both`  | Provider              | Managed resources        | One      | Declared |
 | `in_stack`            | resource to stack                         | `out`                | Stack                 | Not supported            | One      | Declared |
 | `consumes_outputs_of` | consumer stack to producer stack          | `in`, `out`          | Producers it consumes | Consumers of its outputs | Multiple | Declared |
-
 
 `reference` records a declared dependency. `inferred_reference` is produced heuristically by matching scanned property values to destination provider IDs; treat it as a lead, not a fact.
 
@@ -944,7 +928,6 @@ Use `aggregate` when you need grouped counts instead of individual nodes. This s
 
 These values are a snapshot, not a compatibility promise. Check `GetGraphQuerySchema` for current values.
 
-
 | Limit                                                 | Current cap | Behavior at the limit                                                                                                                                                                    |
 | ----------------------------------------------------- | -----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Traversal steps per query                             | 4           | A larger selector is rejected.                                                                                                                                                           |
@@ -958,7 +941,6 @@ These values are a snapshot, not a compatibility promise. Check `GetGraphQuerySc
 | Recorded edge crossings                               | 80,000      | The result is marked `truncated`.                                                                                                                                                        |
 | Evidence paths                                        | 500         | The result is marked `truncated`.                                                                                                                                                        |
 | `page.pageSize`                                       | 1,000       | A larger value is silently reduced to 1,000.                                                                                                                                             |
-
 
 ## Get the deployed schema
 
