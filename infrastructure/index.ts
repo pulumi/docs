@@ -819,6 +819,18 @@ const permissionsPolicyHeaderItem = {
     override: false,
 };
 
+// CloudFront's securityHeadersConfig schema has no native field for this header either, so
+// it rides alongside permissionsPolicyHeaderItem as a plain custom header. "none" matches the
+// value already sent by api.pulumi.com and app.pulumi.com; this site never serves cross-domain
+// policy files (crossdomain.xml, clientaccesspolicy.xml), so Flash/Acrobat clients should be
+// told not to trust any that might otherwise be found upstream. get.pulumi.com is out of scope:
+// it's served from Cloudflare, not this CloudFront distribution.
+const crossDomainPolicyHeaderItem = {
+    header: "X-Permitted-Cross-Domain-Policies",
+    value: "none",
+    override: false,
+};
+
 // Fingerprinted/hashed assets get immutable browser caching (1 year).
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
@@ -826,7 +838,7 @@ const permissionsPolicyHeaderItem = {
 const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=1800",
             override: true,
@@ -837,7 +849,7 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
@@ -855,7 +867,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
 const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=3600",
             override: true,
@@ -866,7 +878,7 @@ const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-ca
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=31536000, immutable",
             override: true,
@@ -884,7 +896,7 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Vary",
             value: "Accept",
             override: false,
@@ -903,7 +915,7 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
 const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem],
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem],
     },
 });
 
@@ -913,7 +925,7 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
 const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [permissionsPolicyHeaderItem, {
+        items: [permissionsPolicyHeaderItem, crossDomainPolicyHeaderItem, {
             header: "Cache-Control",
             value: "no-store",
             override: true,

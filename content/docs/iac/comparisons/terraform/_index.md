@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi vs. Terraform"
 authors: ["joe-duffy"]
-meta_desc: "Pulumi vs. Terraform: compare language support (Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL), state management, and migration paths."
+meta_desc: "Pulumi runs on Python, TypeScript, Go, .NET, and Java instead of Terraform's HCL. Compare state management and migration paths for Terraform alternatives."
 title: Terraform
 h1: Pulumi vs. Terraform
 faq_schema: true
