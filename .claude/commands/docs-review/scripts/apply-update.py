@@ -79,7 +79,12 @@ be = _load("build_evidence", HERE / "build-evidence.py")
 review_state = _load("review_state", _REVIEW_V3_DIR / "review_state.py")
 validate_evidence_mod = _load("validate_evidence", _REVIEW_V3_DIR / "validate-evidence.py")
 
-ACTIONS = ("resolve", "concede", "hold", "accept", "promote", "add", "retext")
+ACTIONS = ("resolve", "concede", "hold", "accept", "promote", "add", "retext", "reopen")
+# Actions that may target a ✅ Resolved finding: the row is reopened first
+# (its fix was reverted, or the model conceded too early). `resolve` and
+# `concede` on a resolved row are meaningless and stay rejected.
+REOPENING_ACTIONS = ("reopen", "accept", "hold", "retext", "promote")
+RESOLVED_SECTION = {"### ✅ Resolved since last review": "resolved"}
 AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
@@ -161,8 +166,10 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
     return u, notes
 
 
-def validate_update(update: dict, known_ids: set[str]) -> list[str]:
+def validate_update(update: dict, known_ids: set[str],
+                    resolved_ids: set[str] | None = None) -> list[str]:
     problems: list[str] = []
+    resolved_ids = resolved_ids or set()
     if update.get("schema") != 1:
         problems.append("update.schema must be 1")
     if update.get("case") not in ("fix-response", "dispute", "re-verify", "mixed"):
@@ -190,8 +197,16 @@ def validate_update(update: dict, known_ids: set[str]) -> list[str]:
             fid = entry.get("id")
             if not isinstance(fid, str) or not re.match(r"^F\d+$", fid):
                 problems.append(f"{where}: {action} requires an F<n> id")
-            elif fid not in known_ids:
+            elif fid in known_ids:
+                pass
+            elif fid in resolved_ids and action in REOPENING_ACTIONS:
+                pass  # a ✅ row the model is reopening (pulumi/docs#21395: fix reverted)
+            elif fid in resolved_ids:
+                problems.append(f"{where}: {fid} is already resolved; use reopen/accept/hold/retext on it")
+            else:
                 problems.append(f"{where}: {fid} is not an open finding on this review")
+            if action == "reopen" and not str(entry.get("reason", "")).strip():
+                problems.append(f"{where}: reopen requires a reason")
         if action == "promote" and entry.get("to") not in ("author-answer", "outstanding"):
             problems.append(f"{where}: promote target {entry.get('to')!r} invalid")
         if action in ("concede", "hold", "accept", "promote") and not str(entry.get("reason", "")).strip():
@@ -225,6 +240,32 @@ def _collect_rows(author_body: str, brief_body: str) -> dict[str, dict]:
                 raise UpdateError(f"{doc}: un-numbered F? row on a published card: {raw!r}")
             rows[parsed["id"]] = {"bucket": bucket, "doc": doc, "parsed": parsed, "raw": raw}
     return rows
+
+
+def _collect_resolved_rows(author_body: str) -> dict[str, dict]:
+    """id → {parsed, raw} for every ✅ Resolved row (the reopen source)."""
+    out: dict[str, dict] = {}
+    for _bucket, _idx, parsed, raw in be._walk(author_body, RESOLVED_SECTION, "author"):
+        if parsed and parsed["id"] != "F?":
+            out[parsed["id"]] = {"parsed": parsed, "raw": raw}
+    return out
+
+
+def _reopen_row(fid: str, resolved: dict, prior_findings: dict) -> dict:
+    """Rebuild an open row from a ✅ row. The prior evidence record carries
+    the finding's original bucket and text; without it the row falls back to
+    🚨 and to the ✅ cell with its trailing ` — <annotation>` stripped."""
+    parsed = dict(resolved["parsed"])
+    prior = prior_findings.get(fid) or {}
+    bucket = prior.get("bucket") if prior.get("bucket") in _BUCKET_RANK else "outstanding"
+    text = str(prior.get("text") or "").strip()
+    if not text:
+        text = parsed["body"].rsplit(" — ", 1)[0].strip() if " — " in parsed["body"] else parsed["body"]
+    parsed["body"] = text
+    if not parsed.get("file") and prior.get("file"):
+        parsed["file"] = prior["file"]
+    return {"bucket": bucket, "doc": "brief" if bucket == "reviewer-check" else "author",
+            "parsed": parsed, "raw": resolved["raw"], "reopened": True}
 
 
 def _collect_resolved(author_body: str) -> list[str]:
@@ -302,8 +343,10 @@ def apply(
     now: datetime | None = None,
     head_repo: str = "",
     head_branch: str = "",
+    prior: dict | None = None,
 ) -> tuple[str, str, dict, dict]:
     """Returns (author_out, brief_out, model_state, applied_report)."""
+    prior_findings = {f["id"]: f for f in (prior or {}).get("findings", []) if isinstance(f, dict) and f.get("id")}
     now = now or datetime.now(timezone.utc)
     today = now.date().isoformat()
     timestamp = now.replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -321,6 +364,8 @@ def apply(
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
+    resolved_by_id = _collect_resolved_rows(author_body)
+    reopened: list[str] = []
     state = review_state.parse_state(author_body)
     if state is None:
         raise UpdateError("author card has no REVIEW_STATE block")
@@ -330,7 +375,7 @@ def apply(
     if repairs:
         print("::warning::apply-update repaired the patch envelope: " + "; ".join(repairs),
               file=sys.stderr)
-    problems = validate_update(update, set(rows))
+    problems = validate_update(update, set(rows), set(resolved_by_id))
     if problems:
         raise UpdateError("; ".join(problems))
 
@@ -377,8 +422,24 @@ def apply(
             continue
 
         fid = entry["id"]
+        if fid not in rows and fid in resolved_by_id:
+            # A ✅ row coming back: its fix was reverted, or it was resolved
+            # too early. Rebuild the open row, drop it from the ✅ table, and
+            # remember to clear the lane's own `fixed` record below.
+            rows[fid] = _reopen_row(fid, resolved_by_id[fid], prior_findings)
+            resolved_rows = [ln for ln in resolved_rows if not ln.startswith(f"| **{fid}** |")]
+            reopened.append(fid)
         row = rows[fid]
-        if action == "resolve":
+        if action == "reopen":
+            reason = entry["reason"].strip()
+            text = str(entry.get("text", "")).strip()
+            if text:
+                row["parsed"]["body"] = text
+            elif reason and reason not in row["parsed"]["body"]:
+                row["parsed"]["body"] = row["parsed"]["body"].rstrip() + f" — reopened: {reason}"
+            if isinstance(entry.get("detail"), dict):
+                detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks.get(fid, []), entry["detail"])
+        elif action == "resolve":
             annotation = entry["annotation"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
@@ -444,6 +505,14 @@ def apply(
     # /resolve that landed while the model worked survives (newest wins).
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
+    # A reopened finding sheds the lane's own machine-recorded `fixed` entry,
+    # or it would still count as answered. A human's disposition (a /resolve
+    # that landed meanwhile, or an accept/hold applied above) is kept — newer
+    # wins in the merge, and an answered finding stays answered.
+    for fid in reopened:
+        live = merged_state["findings"].get(fid)
+        if isinstance(live, dict) and live.get("actor") == "update-lane" and fid not in disposition_state["findings"]:
+            del merged_state["findings"][fid]
 
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
                              link_base=link_base, edit_base=edit_base,
@@ -484,6 +553,7 @@ def apply(
         "blocking": n_blocking,
         "resolved": len(resolved_rows),
         "dropped_in_auto": dropped,
+        "reopened": reopened,
         "high_water": merged_state["high_water"],
         "timestamp": timestamp,
     }
@@ -700,7 +770,7 @@ def main() -> int:
             author_body, brief_body, update,
             head_sha=args.head_sha, actor=args.actor, auto=args.auto,
             repo=args.repo, pr=args.pr,
-            head_repo=args.head_repo, head_branch=args.head_branch)
+            head_repo=args.head_repo, head_branch=args.head_branch, prior=prior)
         evidence = assemble_evidence(
             prior, author_out, brief_out, merged_state, update,
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
