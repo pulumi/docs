@@ -54,7 +54,7 @@ Infrastructure reliability is paramount given Materialize's responsibility for m
 
 ## Automated infrastructure management with Pulumi {#automated-infratructure-management}
 
-Materialize implemented Pulumi as its infrastructure management solution from day one, driven by previous challenges with traditional Infrastructure as Code tools. The team had found that tools like Terraform required developers to learn proprietary configuration languages and unfamiliar concepts, creating unnecessary friction, delays and complexity in their development process.
+Materialize implemented Pulumi as its infrastructure management solution from day one, driven by previous challenges with traditional infrastructure as code tools. The team had found that tools like Terraform required developers to learn proprietary configuration languages and unfamiliar concepts, creating unnecessary friction, delays and complexity in their development process.
 
 The organization now runs its infrastructure management through a GitHub Actions workflow, utilizing a centralized monorepo overseen by the cloud team. This pipeline automates the provisioning and management of Amazon EKS clusters through Pulumi, ensuring the Materialize database service deploys into properly configured environments. To support developer productivity, the cloud team maintains a custom CLI tool that enables developers to launch staging deployments of their code changes. This CLI integrates with the standard Pulumi workflow to deploy releases into isolated Kubernetes clusters, replicating production-like configurations in development environments.
 

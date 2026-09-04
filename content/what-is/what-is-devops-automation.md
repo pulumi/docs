@@ -30,7 +30,7 @@ customer_logos:
 authors: ["james-denyer"]
 ---
 
-Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern Infrastructure as Code solutions.
+Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern infrastructure as code solutions.
 
 ## A Guide to DevOps Automation: Benefits and Best Practices
 
@@ -113,7 +113,7 @@ In each of these examples, devops teams improved scalability and reliability of 
 
 ## Best practices for DevOps automation
 
-DevOps automation, especially when dealing with Infrastructure as Code (IaC), requires a strategic approach to ensure consistency, maintainability, and security. Here are some best practices for DevOps automation:
+DevOps automation, especially when dealing with infrastructure as code (IaC), requires a strategic approach to ensure consistency, maintainability, and security. Here are some best practices for DevOps automation:
 
 * **Version Control Everything:** Just like application code, your infrastructure code should be stored in a version control system. This provides a history of changes, allows for rollbacks, and enables collaboration among teams.
 * **Automate Testing:** Test your infrastructure code to ensure it does what's expected. Tools like Test Kitchen, inspec, and ServerSpec can help test infrastructure changes before they're applied.
@@ -121,11 +121,11 @@ DevOps automation, especially when dealing with Infrastructure as Code (IaC), re
 * **Use a Consistent Naming Convention:** A consistent naming schema for resources, modules, and variables improves clarity and eases maintenance.
 * **Manage Secrets Securely:** Tools like Pulumi Cloud keep secrets secure by default. Never embed secrets directly in your code.
 
-By adhering to these best practices, teams can maximize the benefits of [DevOps automation and Infrastructure as Code](/what-is/infrastructure-as-code-for-devops/), resulting in faster, more consistent, and more reliable infrastructure provisioning and management.
+By adhering to these best practices, teams can maximize the benefits of [DevOps automation and infrastructure as code](/what-is/infrastructure-as-code-for-devops/), resulting in faster, more consistent, and more reliable infrastructure provisioning and management.
 
 ## How to get started with DevOps automation
 
-Embarking on the journey of DevOps automation can seem daunting given its expansive nature, but it's pivotal to start with a clear understanding of your organization's needs and pain points. Begin by identifying repetitive tasks, bottlenecks, and areas prone to human error, then prioritize them for automation. As you work through this, consider embracing tools like [Pulumi](https://www.pulumi.com/), which stands out for its unique approach to Infrastructure as Code. Pulumi allows you to define and manage infrastructure using popular programming languages you're already familiar with, thereby seamlessly integrating into existing development workflows. By leveraging such tools, and fostering a culture of collaboration and continuous improvement, organizations can unlock the full potential of DevOps automation, driving efficiency, reliability, and innovation in their software delivery processes.
+Embarking on the journey of DevOps automation can seem daunting given its expansive nature, but it's pivotal to start with a clear understanding of your organization's needs and pain points. Begin by identifying repetitive tasks, bottlenecks, and areas prone to human error, then prioritize them for automation. As you work through this, consider embracing tools like [Pulumi](https://www.pulumi.com/), which stands out for its unique approach to infrastructure as code. Pulumi allows you to define and manage infrastructure using popular programming languages you're already familiar with, thereby seamlessly integrating into existing development workflows. By leveraging such tools, and fostering a culture of collaboration and continuous improvement, organizations can unlock the full potential of DevOps automation, driving efficiency, reliability, and innovation in their software delivery processes.
 
 ## Frequently asked questions
 

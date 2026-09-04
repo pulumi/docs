@@ -188,7 +188,7 @@ Past a small footprint, not really. Manual provisioning makes the DORA metrics (
 
 ### What's the difference between declarative and imperative IaC?
 
-Declarative IaC describes the desired state; an engine reconciles real infrastructure against it. Imperative IaC describes the steps; the tool runs them in order. Declarative is more common for cloud infrastructure because it handles partial failure, drift, and rollback. See [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) for the deeper comparison.
+Declarative IaC describes the desired state; an engine reconciles real infrastructure against it. Imperative IaC describes the steps; the tool runs them in order. Declarative is more common for cloud infrastructure because it handles partial failure, drift, and rollback. See [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/) for the deeper comparison.
 
 ### How does IaC affect deployment frequency?
 
