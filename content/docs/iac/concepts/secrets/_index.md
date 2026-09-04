@@ -640,7 +640,7 @@ To specify an alternative encryption provider, specify it at stack initializatio
 $ pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
 ```
 
-After doing so, all encryption operations for your stack use the custom provider settings. The `<provider>` and `<provider-settings>` are specific to your chosen encryption provider. See below for the available providers and their options.
+After doing so, all encryption operations for your stack use the custom provider settings. The `<provider>` and `<provider-settings>` are specific to your chosen encryption provider. See [Available encryption providers](#available-encryption-providers) for the supported providers and their options.
 
 Pulumi uses the Go Cloud Development Kit to implement pluggable secrets providers. In the event configuration or authentication options below do not work, the [Go CDK documentation](https://gocloud.dev/howto/secrets/) can be consulted for debugging information.
 
@@ -761,4 +761,4 @@ config:
 
 Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/concepts/rbac/permission-sets/#stack-permission-sets) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
-It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can rebuild them from the most recently deployed configuration with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).
+This makes it safe, and good practice, to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can rebuild them from the most recently deployed configuration with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).
