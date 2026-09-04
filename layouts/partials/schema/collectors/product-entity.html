@@ -91,13 +91,13 @@
           {{ $offerURL = .href }}
         {{ end }}
       {{ end }}
-      {{/* Build a description that explicitly states this is a base price with additional usage
-           billed on demand, so the machine-readable claim itself discloses the pricing model
-           rather than implying a flat, all-inclusive price. Lead with the billing-period label
-           (e.g. "$40/month base") so the qualifier survives even for a priceSpecification-ignoring
-           parser (per review: Google reads offers.price + offers.description, not
-           offers.priceSpecification, so the description is the only field such a parser sees).
-           Trim any trailing "." from each part before joining so they don't double-punctuate. */}}
+      {{/* Build a description that discloses the pricing model - a monthly price with additional
+           usage billed on demand - rather than implying a flat, all-inclusive price. Lead with the
+           billing-period label (e.g. "$40/month"); the card's note carries the usage qualifier, so
+           both reach a priceSpecification-ignoring parser (per review: Google reads offers.price +
+           offers.description, not offers.priceSpecification, so the description is the only field
+           such a parser sees). Trim any trailing "." from each part before joining so they don't
+           double-punctuate. */}}
       {{ $descParts := slice }}
       {{ if and $card.price_label (strings.Contains $card.price_label "month") }}
         {{ $descParts = $descParts | append (printf "$%s%s" $cleanPrice $card.price_label) }}
