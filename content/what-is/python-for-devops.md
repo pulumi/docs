@@ -83,7 +83,7 @@ Python is one of the primary languages for IaC tools that support real programmi
 
 Compared to writing infrastructure in HCL or YAML, Python gives you loops, conditionals, classes, type hints, and the ability to share modules through PyPI. Compared to writing infrastructure in TypeScript, the team trades off some compile-time type rigor for the language they're already using. Both options are first-class in Pulumi; the right one depends on what your team writes most of its other code in.
 
-For a deeper look at IaC concepts, see [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) and [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/).
+For a deeper look at IaC concepts, see [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/) and [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/).
 
 ## How is Python used for MLOps?
 
@@ -198,5 +198,5 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
-* [JavaScript and Infrastructure as Code](/what-is/javascript-and-infrastructure-as-code/)
+* [JavaScript and infrastructure as code](/what-is/javascript-and-infrastructure-as-code/)
 * [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
