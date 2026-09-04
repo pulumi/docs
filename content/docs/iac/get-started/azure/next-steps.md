@@ -43,13 +43,13 @@ With Pulumi ESC you can:
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-azure-learn" >}}
+{{< get-started-next-step path="/dev/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-azure-learn" >}}
 
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/templates/static-website/azure/) to [serverless applications](/templates/serverless-application/azure/), [virtual machines](/templates/virtual-machine/azure/), [container services](/templates/container-service/azure/), and [Kubernetes clusters](/templates/kubernetes/azure/).
+Deploy the most common cloud architectures, from [static websites](/dev/templates/static-website/azure/) to [serverless applications](/dev/templates/serverless-application/azure/), [virtual machines](/dev/templates/virtual-machine/azure/), [container services](/dev/templates/container-service/azure/), and [Kubernetes clusters](/dev/templates/kubernetes/azure/).
 
-{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-azure-guides" >}}
+{{< get-started-next-step path="/dev/templates/" label="Browse templates" ref="gs-azure-guides" >}}
 
 ## Dive into the docs
 

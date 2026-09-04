@@ -12,7 +12,7 @@ Every triaged PR carries exactly one of these, `domain:other` included, so **the
 
 | Label | Color | Description |
 |---|---|---|
-| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/tutorials/`, `content/what-is/`). |
+| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
 | `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, build/bundling config, or the site build pipeline (`layouts/`, `assets/`, `theme/`, `static/`). |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |

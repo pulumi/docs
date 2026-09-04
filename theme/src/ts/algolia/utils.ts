@@ -165,8 +165,6 @@ export function iconForTag(label: string) {
             return "/icons/docs.svg";
         case "Registry":
             return "/icons/registry.svg";
-        case "Tutorials":
-            return "/icons/graduation-cap.svg";
     }
     return "/icons/list.svg";
 }
