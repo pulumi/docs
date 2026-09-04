@@ -13,8 +13,13 @@ The model's patch is a closed action vocabulary over finding ids:
   resolve   the push fixed it → row moves to ✅ Resolved with the annotation
   concede   the model concedes the finding was wrong → ✅ Resolved with a
             `concede: <reason>` annotation (the exact v2 machine-scraped shape)
-  hold      dispute adjudicated against the author → row stays, gains
-            `🛡️ **Disputed by <actor> on YYYY-MM-DD, model held.**`
+  hold      dispute adjudicated against the author → row moves to the
+            brief's ⚠️ list with `🛡️ **Disputed by <actor> on YYYY-MM-DD,
+            model held.**`; stops blocking
+  accept    the author accepts the finding as-is → row moves to the brief's
+            ⚠️ list with a ✋ marker; stops blocking merge
+  reopen    a ✅ Resolved finding comes back (its fix was reverted) → row
+            returns to its bucket and the lane's own `fixed` record is shed
   promote   bucket moves up only (reviewer-check → author-answer →
             outstanding); demotion is rejected
   add       a new finding from the push delta; gets the next F-id
@@ -85,6 +90,23 @@ ACTIONS = ("resolve", "concede", "hold", "accept", "promote", "add", "retext", "
 # `concede` on a resolved row are meaningless and stay rejected.
 REOPENING_ACTIONS = ("reopen", "accept", "hold", "retext", "promote")
 RESOLVED_SECTION = {"### ✅ Resolved since last review": "resolved"}
+# A `resolve` renders `<finding> — ✅ <annotation>`; a `concede` renders
+# `<finding> — concede: <reason>` (the scraper keys on `concede:`). Both
+# separators are unambiguous, so a reopen can recover the finding text
+# without guessing which ` — ` was the model's (finding bodies and
+# annotations both contain em dashes).
+RESOLVE_SEP = " — ✅ "
+CONCEDE_SEP = " — concede: "
+
+
+def strip_resolution(cell: str) -> str:
+    """The finding text of a ✅ cell, with its resolve/concede annotation
+    removed. Legacy cells (` — <annotation>` with no marker) fall back to
+    the last separator."""
+    for sep in (RESOLVE_SEP, CONCEDE_SEP):
+        if sep in cell:
+            return cell.split(sep, 1)[0].strip()
+    return cell.rsplit(" — ", 1)[0].strip() if " — " in cell else cell.strip()
 AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
@@ -252,16 +274,16 @@ def _collect_resolved_rows(author_body: str) -> dict[str, dict]:
 
 
 def _reopen_row(fid: str, resolved: dict, prior_findings: dict) -> dict:
-    """Rebuild an open row from a ✅ row. The prior evidence record carries
-    the finding's original bucket and text; without it the row falls back to
-    🚨 and to the ✅ cell with its trailing ` — <annotation>` stripped."""
+    """Rebuild an open row from a ✅ row: the cell minus its resolve/concede
+    annotation, in the bucket the prior evidence record names (🚨 when there
+    is no record — the documented degraded path)."""
     parsed = dict(resolved["parsed"])
     prior = prior_findings.get(fid) or {}
     bucket = prior.get("bucket") if prior.get("bucket") in _BUCKET_RANK else "outstanding"
-    text = str(prior.get("text") or "").strip()
-    if not text:
-        text = parsed["body"].rsplit(" — ", 1)[0].strip() if " — " in parsed["body"] else parsed["body"]
-    parsed["body"] = text
+    # The text comes from the ✅ cell itself (the evidence record's text for
+    # a resolved finding carries the annotation too); prior evidence supplies
+    # the bucket and file.
+    parsed["body"] = strip_resolution(parsed["body"])
     if not parsed.get("file") and prior.get("file"):
         parsed["file"] = prior["file"]
     return {"bucket": bucket, "doc": "brief" if bucket == "reviewer-check" else "author",
@@ -443,7 +465,7 @@ def apply(
             annotation = entry["annotation"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — {annotation}",
+                f"{row['parsed']['body']}{RESOLVE_SEP}{annotation}",
                 link_base=link_base))
             del rows[fid]
             disposition_state = review_state.set_disposition(
@@ -453,7 +475,7 @@ def apply(
             reason = entry["reason"].strip()
             resolved_rows.append(_render_row(
                 fid, row["parsed"]["ref"], row["parsed"]["file"],
-                f"{row['parsed']['body']} — concede: {reason}",
+                f"{row['parsed']['body']}{CONCEDE_SEP}{reason}",
                 link_base=link_base))
             del rows[fid]
         elif action == "hold":
@@ -491,15 +513,19 @@ def apply(
                 bulk=bool(entry.get("bulk", False)), now=now)
         elif action == "promote":
             target = entry["to"]
-            if _BUCKET_RANK[target] <= _BUCKET_RANK[row["bucket"]]:
+            if _BUCKET_RANK[target] < _BUCKET_RANK[row["bucket"]]:
                 raise UpdateError(
                     f"promote {fid}: {row['bucket']} → {target} is not upward — promote-only")
+            # Equal is a no-op: a reopened row already sits at 🚨 when the
+            # evidence record is missing, and a promote to 🚨 must not error.
             row["bucket"] = target
-            row["doc"] = "author"
+            row["doc"] = "brief" if target == "reviewer-check" else "author"
         elif action == "retext":
             row["parsed"]["body"] = entry["text"].strip()
-            if isinstance(entry.get("detail"), dict) and fid in detail_blocks:
-                detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks[fid], entry["detail"])
+            if isinstance(entry.get("detail"), dict):
+                # A reopened row has no block (resolving it dropped one);
+                # _rebuild_detail_block tolerates an empty `old`.
+                detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks.get(fid, []), entry["detail"])
 
     # Merge action-implied dispositions with the LIVE card's state — a
     # /resolve that landed while the model worked survives (newest wins).

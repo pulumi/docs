@@ -300,12 +300,40 @@ def test_reopen_returns_row_to_its_bucket_and_clears_the_lane_fixed_state():
     a2, b2, state2, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False, prior=prior)
     assert report["reopened"] == ["F1"]
     assert "F1" in _open_author_ids(a2)
-    assert "original F1 text — reopened: c9551b1 reverted the fix" in a2
+    assert "— reopened: c9551b1 reverted the fix" in a2
+    assert "fixed in 1cb28d8" not in a2.split("### ✅")[0], "the resolve annotation is stripped, not the finding"
     assert "F1" not in state2["findings"], "the lane's own `fixed` record is gone"
     assert report["blocking"] == 3 and "— 3 items block merge" in a2
-    # Without prior evidence the ✅ cell's annotation is stripped instead.
+    # Without prior evidence the row falls back to 🚨 with the same text.
     a3, _, _, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
-    assert "fixed in 1cb28d8" not in a3.split("### ✅")[0]
+    assert "fixed in 1cb28d8" not in a3.split("### ✅")[0] and "F1" in _open_author_ids(a3)
+
+
+def test_reopen_strips_only_the_resolution_even_with_em_dashes_inside():
+    """Finding bodies and annotations both contain ` — `; the resolve/concede
+    separators are unambiguous so the reopen never guesses."""
+    body = '*"claim"* — verdict: contradicted — see the docs'
+    assert au.strip_resolution(f"{body}{au.RESOLVE_SEP}fixed in abc — see the thread") == body
+    assert au.strip_resolution(f"{body}{au.CONCEDE_SEP}author is right — moving on") == body
+    assert au.strip_resolution("legacy cell — old annotation") == "legacy cell"
+
+
+def test_retext_on_a_resolved_finding_reopens_with_a_fresh_detail_block():
+    a1, b1 = _resolved_fixture()
+    up = _update([{"id": "F1", "action": "retext", "text": "still wrong after the revert",
+                   "detail": {"why": "the revert restored it", "fix": "apply the earlier fix"}}], case="re-verify")
+    a2, _, state2, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    assert report["reopened"] == ["F1"] and "F1" in _open_author_ids(a2)
+    assert "#### F1 · Do this" in a2 and "**Fix:** apply the earlier fix" in a2
+    assert "F1" not in state2["findings"]
+
+
+def test_promote_to_the_same_bucket_is_a_no_op():
+    a1, b1 = _resolved_fixture()
+    # No prior evidence → the reopened row already sits at 🚨; promoting it there must not error.
+    up = _update([{"id": "F1", "action": "promote", "to": "outstanding", "reason": "back"}], case="re-verify")
+    a2, _, _, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    assert report["reopened"] == ["F1"] and "F1" in _open_author_ids(a2)
 
 
 def test_reopen_keeps_a_human_disposition_that_landed_meanwhile():
