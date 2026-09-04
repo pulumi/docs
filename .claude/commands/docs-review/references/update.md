@@ -248,6 +248,7 @@ If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run
    {"id": "F5", "action": "hold",    "reason": "evidence: the docs say otherwise"},
    {"id": "F8", "action": "accept",  "reason": "author: internal figure, shipping as-is", "bulk": false},
    {"id": "F6", "action": "promote", "to": "outstanding", "reason": "also in social copy"},
+   {"id": "F2", "action": "reopen",  "reason": "c9551b1 reverted the fix from 1cb28d8"},
    {"id": "F7", "action": "retext",  "text": "sharper wording, same finding",
     "detail": {"why": "1-2 sentences", "fix": "exactly ONE action", "keep": "optional fallback"}},
    {"action": "add", "bucket": "outstanding|author-answer|reviewer-check",
@@ -265,7 +266,10 @@ Closed action set — `apply-update.py` rejects anything else (exit 2):
 | `accept` | the mention accepts the finding as-is (the author card's third verb; `bulk: true` when it accepted everything at once) | row **moves to the brief's ⚠️ list** with `✋ **Accepted as-is by <actor> on YYYY-MM-DD.** <reason>` — the reviewer weighs a knowingly-shipped finding | `accepted` (actor, note = the author's reason, `bulk`) — stops blocking |
 | `promote` | bucket moves **up only** (⚠️ → ❓ → 🚨) | row moves section/card | none |
 | `add` | new problem in the pushed lines only | new row, next F-id | none |
+| `reopen` | a ✅ Resolved finding is back — the push that fixed it was reverted, or it was resolved too early. `reason` required; optional `text` (replaces the cell) and `detail` | row returns to its original bucket (from the evidence record; 🚨 when unknown) with ` — reopened: <reason>` unless `text` is given | the lane's own `fixed` record is **removed** — it blocks again. A human's disposition on it is kept |
 | `retext` | wording sharpened on a finding that stays open **on its own merits** | Finding cell replaced (ONE line: claim quote + verdict), id + anchor preserved; optional `detail` `{why, fix[, keep]}` rebuilds the `#### F<n> · Do this` block (verbatim line kept) | none |
+
+**A ✅ Resolved finding is addressable.** `reopen`, `accept`, `hold`, `retext`, and `promote` may name a finding that sits in ✅ Resolved: the row is reopened first, then the action applies (an `accept` on a reverted fix lands the row on the brief's ⚠️ list as accepted, in one step). `resolve` and `concede` on a resolved finding are rejected. This is how a reverted fix comes back — the first live update-lane error (pulumi/docs#21395, 2026-09-04) was an `accept` on a finding the lane had marked `fixed` two commits earlier.
 
 The three v2 cases map directly: **Case 1 fix-response** → `resolve` actions
 (and `add` for new problems in the pushed lines); **Case 2 dispute** →
