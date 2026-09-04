@@ -43,13 +43,9 @@ Pulumi uses general-purpose programming languages to define infrastructure. Type
 
 <!--more-->
 
-## What is Claude Code orchestration?
+## The problem these orchestration frameworks solve
 
-Claude Code orchestration is the practice of wrapping an AI coding agent in a repeatable process instead of letting it freelance: decomposing work into phases, enforcing tests or reviews at each gate, handing state between context windows, and dispatching subagents for isolated tasks. Superpowers, GSD, and GSTACK are the three most widely adopted frameworks that do this, each betting on a different failure mode as the one worth fixing first.
-
-## How do orchestration frameworks differ from single-agent workflows?
-
-A single-agent workflow trusts one continuous conversation to hold the whole project in its head; an orchestration framework assumes that trust breaks down and builds structure around the breakage. AI coding agents are impressive for the first 30 minutes. Then things go sideways. The patterns are predictable enough that three separate teams independently built frameworks to fix them.
+AI coding agents are impressive for the first 30 minutes. Then things go sideways. The patterns are predictable enough that three separate teams independently built agent orchestration frameworks to fix them:
 
 **Context rot.** Every LLM has a context window. As that window fills up, earlier instructions fade. You start a session asking for an [S3 bucket](/docs/iac/clouds/aws/guides/) with AES-256 encryption, proper ACLs, and access logging. Two hours and 200K tokens later, the agent creates a new bucket with none of those requirements. The context window got crowded and your original instructions lost weight.
 
@@ -57,9 +53,11 @@ A single-agent workflow trusts one continuous conversation to hold the whole pro
 
 **Scope drift.** You ask for a [VPC with three subnets](/docs/iac/guides/clouds/aws/vpc/). The agent decides you also need a NAT gateway, a transit gateway, a VPN endpoint, and a custom DNS resolver. Helpful in theory. In practice, you now have infrastructure you never requested and barely understand. You will also pay for it monthly.
 
-These problems are not specific to Claude Code or any particular agent. They happen with Cursor, Codex, Windsurf, and every other LLM-powered coding tool. The context window does not care which brand name is on the wrapper.
+These problems aren't specific to Claude Code or any particular agent; they happen with Cursor, Codex, Windsurf, and every other LLM-powered coding tool. The context window doesn't care which name is on the wrapper.
 
-## Superpowers: what does it do and who is it for?
+That's where agent-orchestration frameworks come in. In a single-agent workflow, the agent uses one continuous conversation to hold the whole project in its head. With an orchestration framework, the agent decomposes work into phases, enforcing tests or reviews along the way, handing state between context windows, and dispatching subagents for isolated tasks. Superpowers, GSD, and GSTACK are the three most widely adopted frameworks that do this.
+
+## Superpowers: What does it do, and who is it for?
 
 Superpowers enforces a strict rule: no production code gets written without a failing test first. [Superpowers](https://github.com/obra/superpowers) was created by [Jesse Vincent](https://www.linkedin.com/in/jessevincent/) and has grown to roughly 279K GitHub stars.
 
@@ -86,7 +84,7 @@ The results are worth citing carefully. [chardet 7.0's own performance docs](htt
 
 Superpowers now reaches well beyond Claude Code: Antigravity, Codex App, Codex CLI, Cursor, Devin CLI, Factory Droid, Gemini CLI, GitHub Copilot CLI, Grok Build CLI, Kimi Code, OpenCode, Pi, and Hermes Agent are all in its current install list.
 
-## GSD: how does it prevent context rot?
+## GSD: How does it prevent context rot?
 
 GSD prevents context rot by keeping the orchestrator out of the work: your main session spawns a fresh-context subagent for each research, planning, execution, and verification task, then collects results instead of accumulating them. [GSD](https://github.com/open-gsd/gsd-core) (Get Shit Done) was created by Lex Christopherson, known online as TÂCHES.
 
@@ -94,7 +92,9 @@ The key architectural decision: the orchestrator never touches source files. Bec
 
 Think about why this matters. When the orchestrator also writes the code, your 200K token context window is a shared resource. Instructions from hour one compete with code from hour three. GSD sidesteps this entirely, because the orchestrator's job is dispatch and bookkeeping, not implementation. GSD also includes quality gates that detect schema drift and scope reduction. If the agent starts cutting corners or wandering from the plan, the gates catch it.
 
-**What changed since this post first ran:** the original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues in the Open GSD organization as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`.
+{{% notes %}}
+**Editor's note:** Since this post was first published, GSD's original repository, `gsd-build/get-shit-done`, was [archived by its owner on June 26, 2026](https://github.com/gsd-build/get-shit-done) with 64.6K stars frozen in place. Development continues in the Open GSD organization as [GSD Core](https://github.com/open-gsd/gsd-core), currently at roughly 8.8K stars and installed via `npx @opengsd/gsd-core@latest`.
+{{% /notes %}}
 
 The tradeoff: GSD has more ceremony than the other two frameworks. For a quick script or a single-file change, the phase-based workflow is overkill. GSD earns its keep on projects that span multiple files, multiple sessions, or multiple days.
 
@@ -112,7 +112,7 @@ The core commands map to a phase-based workflow:
 
 GSD Core's installer supports Claude Code, OpenCode, Antigravity CLI, Kimi CLI, Kilo, Codex, Copilot, Cursor, and Windsurf, and prompts you for which one at install time.
 
-## GSTACK: what does role-based governance buy you?
+## GSTACK: What does role-based governance buy you?
 
 GSTACK buys you a division of labor: instead of one agent trying to hold product, engineering, QA, and security judgment simultaneously, it splits the work across 23 specialist roles, each with its own scope and constraints. [GSTACK](https://github.com/garrytan/gstack) was created by [Garry Tan](https://www.linkedin.com/in/garrytan/) (President and CEO of Y Combinator) and has grown to roughly 130K stars.
 
@@ -138,7 +138,7 @@ Each slash command activates a different specialist:
 
 GSTACK's Codex support is the most deliberate of the three: setup reads the `model` field from your `~/.codex/config.toml` and generates a matching behavioral profile automatically, so the role constraints adapt to the specific Codex model you are running. It also supports Claude Code, OpenCode, Cursor, Factory Droid, Slate, Kiro, and Hermes.
 
-## Superpowers, GSD, or GSTACK: which one should you use?
+## Superpowers, GSD, or GSTACK: Which one's the best fit for you?
 
 None of these is universally best. Knowing your failure mode is the real decision.
 
