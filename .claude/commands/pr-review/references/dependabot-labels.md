@@ -14,7 +14,7 @@ cases that change handling.
 
 - `dependencies` - Standard label (applied by Dependabot itself)
 - `deps-security-patch` - Genuine security fix; prioritize
-- `deps-lambda-edge-risk` - Affects Lambda@Edge bundling/runtime (bundlers, Pulumi SDK, AWS SDK; ESM/CommonJS and 1 MB bundle-size concerns)
+- `deps-lambda-edge-risk` - Affects Lambda@Edge bundling/runtime (bundlers, `@pulumi/aws`, `@pulumi/pulumi`, AWS SDK; ESM/CommonJS and 1 MB bundle-size concerns)
 - `deps-bulk-update` - 5 or more dependencies in a single PR
 
 All three are computed from `dependabot/fetch-metadata` outputs, not from the PR
@@ -52,6 +52,13 @@ Two flags adjust this:
 
 - `deps-security-patch` - prioritize over the regular cadence; evaluate and merge promptly.
 - `deps-lambda-edge-risk` - before merging, verify the Lambda@Edge function size against the 1 MB compressed limit and confirm the CloudFront deployment succeeds in the testing environment. See the Infrastructure Change Review section of `BUILD-AND-DEPLOY.md`.
+
+  The match is on dependency name with no directory scoping, so it over-captures
+  in one known case: `/infrastructure/versioned-docs` is a sibling Pulumi
+  program that is never bundled into Lambda@Edge, but carries the same
+  `@pulumi/aws` and `@pulumi/pulumi` packages and so gets flagged too. That is
+  deliberate — failing closed is the right default for a merge gate — but it
+  means a flagged `deps(versioned-docs)` PR usually needs no bundle check.
 
 `deps-bulk-update` blocks auto-merge when it is enabled. Either way, a PR of
 that size warrants a more careful build/test pass and a check for hidden major

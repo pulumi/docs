@@ -74,13 +74,26 @@ jobs:
 
             // Bundler/SDK updates can blow the 1MB Lambda@Edge bundle limit.
             // Once auto-merge is armed this stops being advisory and becomes a
-            // merge gate, so it needs to cover what /infrastructure actually
-            // bumps: @pulumi/aws and @pulumi/pulumi are what get bundled into
-            // the Lambda@Edge function, and esbuild/rollup/terser can change
-            // output size on their own.
+            // merge gate, so it covers what /infrastructure actually bumps --
+            // @pulumi/aws and @pulumi/pulumi are what get bundled into the
+            // Lambda@Edge function -- alongside the bundlers themselves.
+            //
+            // Matching is by dependency NAME, with no directory scoping, so
+            // this deliberately over-captures in one known case:
+            // /infrastructure/versioned-docs is a sibling Pulumi program that
+            // is never bundled into Lambda@Edge, yet carries the same two
+            // @pulumi packages and will therefore be held. Failing closed is
+            // the right default for a merge gate, and a name-only match cannot
+            // tell the two apart, so that PR gets a human look. Accepted.
+            //
+            // The patterns are the two exact package names rather than a
+            // '@pulumi/' prefix, which would also match @pulumi/design-tokens
+            // in theme/package.json -- a design-token package with no
+            // Lambda@Edge relevance whose monthly bump would be held for no
+            // reason.
             const lambdaEdgeRiskDeps = [
               'webpack', '-loader', '-webpack-plugin', '@aws-sdk/',
-              '@pulumi/', 'esbuild', 'rollup', 'terser'
+              '@pulumi/aws', '@pulumi/pulumi', 'esbuild', 'rollup', 'terser'
             ];
 
             // A grouped PR at or above this size is held for human review.
@@ -289,12 +302,27 @@ jobs:
 
       # Mints PULUMI_BOT_TOKEN for the approve/merge step below.
       #
-      # Verified on run 33815532057: ESC over OIDC works on a `pull_request`
-      # event with no `environment:` set, and the token authenticates as
-      # pulumi-bot. The actor is not part of the OIDC subject claim --
-      # `repo:pulumi/docs:pull_request` either way -- so that run proves the
-      # Dependabot case too. (`environment: testing`, which pull-request.yml's
-      # buildSite sets, produces a different subject and is not needed here.)
+      # Run 33815532057 established that ESC over OIDC works on a
+      # `pull_request` event with no `environment:` set, and that the token
+      # authenticates as pulumi-bot. Because the actor is not part of the OIDC
+      # subject claim -- `repo:pulumi/docs:pull_request` either way -- that run
+      # also shows ESC's trust policy will match on a Dependabot-opened PR.
+      # (`environment: testing`, which pull-request.yml's buildSite sets,
+      # produces a different subject and is not needed here.)
+      #
+      # It does NOT establish the step before that. GitHub applies its own
+      # event-level policy to Dependabot-triggered runs -- the reason they get
+      # a read-only GITHUB_TOKEN and Dependabot secrets rather than Actions
+      # secrets -- so an identical subject does not by itself prove an OIDC
+      # token is minted on that path. This job already carries
+      # `pull-requests: write` and succeeds on real Dependabot PRs, which is
+      # suggestive but not proof for `id-token: write`.
+      #
+      # Nothing breaks if it doesn't work: the step is continue-on-error and
+      # the merge step below requires a non-empty token, so the failure mode is
+      # "never arms", not "merges wrongly". The report step logs the outcome so
+      # the first real Dependabot run settles it -- check that before setting
+      # DEPS_AUTO_MERGE.
       #
       # PULUMI_BOT_TOKEN rather than GITHUB_TOKEN is not a preference:
       # build-and-deploy.yml triggers on push to master, and events created
@@ -310,6 +338,19 @@ jobs:
         if: github.event_name == 'pull_request'
         continue-on-error: true
         uses: pulumi/esc-action@v3
+
+      - name: Report ESC token availability
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          PROBE_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          if [ -n "${PROBE_TOKEN}" ]; then
+            echo "ESC token acquired on a ${{ github.actor }}-triggered run."
+          else
+            echo "NO ESC token on a ${{ github.actor }}-triggered run."
+            echo "Auto-merge cannot arm. Do not set DEPS_AUTO_MERGE until this reads yes."
+          fi
 
       # Approve as pulumi-bot and hand the PR to GitHub's native auto-merge,
       # which waits for the required build check on its own -- there is nothing

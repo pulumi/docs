@@ -3439,7 +3439,7 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 - npm — root, `/theme`, `/theme/stencil`, `/infrastructure`, `/infrastructure/versioned-docs`, `/scripts/snippet-sweep`
 - GitHub Actions
-- pip — `/scripts/python`, `/scripts/image-borders`, `/tools/pydocgen`. (The root `Pipfile` declares no packages; it only pins `python_version`.)
+- pip — `/scripts/python`, `/scripts/image-borders`, `/tools/pydocgen`. (The root `Pipfile` declares no packages; it only pins `python_version`.) **Only `/tools/pydocgen` is expected to produce updates today**: it is the sole directory with real version constraints (`sphinx >=7.1,<7.2`) and a `Pipfile.lock`. The other two pin every package as `"*"` and ship no lock, so there is no resolved version for Dependabot to bump or to match against an advisory range — the same "matches nothing" failure as the old `/scripts` entry, one level subtler. Committing a `Pipfile.lock` for those two directories is what would make them live.
 - devcontainers — `.devcontainer/devcontainer.json`
 - `/static/programs` — **security batching only**, across npm, gomod, pip, nuget, maven, and docker. These entries carry `open-pull-requests-limit: 0`, so they never produce version updates; they exist purely to collapse the security PRs GitHub opens against the 444 sample programs. `scripts/programs/upgrade.sh` owns version upgrades for those.
 
@@ -3453,7 +3453,7 @@ The second one matters more than the first. A `groups` entry without `applies-to
 
 **Major version updates:** Blocked for non-security updates via wildcard ignore rules. Note that `ignore` conditions apply to security updates too, so an advisory whose only fix is a major bump can be suppressed by these rules — see the caveat under Security patch handling.
 
-**Security updates:** Arrive immediately regardless of schedule, and are the dominant source of PR volume. Of the 59 Dependabot PRs opened between 2026-07-02 and 2026-09-02, only 10 came from the monthly schedule; the other 49 were security updates.
+**Security updates:** Arrive immediately regardless of schedule, and are the dominant source of PR volume. In the two months to 2026-09-02, 59 Dependabot PRs were opened: only 10 came from the monthly schedule and the other 49 were security updates. Treat that 5:1 ratio as a snapshot of one advisory-heavy window rather than a constant — the monthly figure is fixed by the config, but the security figure tracks whatever advisories land.
 
 ### Automated labeling
 
@@ -3493,7 +3493,7 @@ One detail worth recording, because it is easy to assume otherwise: the GitHub O
 
 ### Monthly triage workflow
 
-Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, most of these merge themselves and the list below applies only to PRs held by a risk flag. With it unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
+Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, the small ones merge themselves; the larger grouped PRs — anything at five or more packages, and anything touching `@pulumi/aws`, `@pulumi/pulumi`, or a bundler — are held by a risk flag, and the list below applies to those. Since every entry uses a catch-all `patterns: ["*"]` group, expect a good share of the *monthly* PRs to be held; it is the off-schedule security PRs, which are usually one or two packages, that mostly merge unattended. With the variable unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
 
 For each PR:
 
