@@ -25,7 +25,7 @@ The Context API is in public preview. The availability notice at the top of this
 
 - You have [Pulumi CLI](/docs/install/) v3.243.0 or later and are logged in with `pulumi login`.
 - Your role grants the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission.
-- Your default organization is one with Context API access. Check it with `pulumi org get-default` and change it with `pulumi org set-default <your-org>`. The Context API is organization-scoped, and `pulumi api` fills the organization in for you from your currently selected stack, falling back to this default. A default that resolves to your personal organization fails with `402 Payment Required`.
+- Your default organization is one with Context API access. Check it with `pulumi org get-default` and change it with `pulumi org set-default <your-org>`. The Context API is organization-scoped, and `pulumi api` fills the organization in for you from your currently selected stack, falling back to this default. A default that resolves to your personal organization fails with `402 Payment Required`, which names the organization it evaluated and lists your other organizations with access.
 
 Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rbac/) filters each response to the resources, stacks, and cloud accounts that the user or token making the request is permitted to read.
 
@@ -34,8 +34,10 @@ Pulumi Cloud [role-based access control (RBAC)](/docs/administration/concepts/rb
 You can use [Pulumi Neo](/docs/ai/neo/), Claude Code, Cursor, Codex, or another agent that can run authenticated Pulumi CLI commands. Neo uses the Context API out of the box. To equip another agent, give it this command to fetch the current Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema
+pulumi api GetGraphQuerySchema
 ```
+
+The schema is the same for every organization, so this command does not take one.
 
 Then ask a natural-language question such as:
 
@@ -925,7 +927,7 @@ Use `aggregate` when you need grouped counts instead of individual nodes. This s
 
 ### Current limits
 
-These values are a snapshot, not a compatibility promise. Check `GetGraphSchema` for current values.
+These values are a snapshot, not a compatibility promise. Check `GetGraphQuerySchema` for current values.
 
 | Limit | Current cap | Behavior at the limit |
 |---|---:|---|
@@ -943,12 +945,12 @@ These values are a snapshot, not a compatibility promise. Check `GetGraphSchema`
 
 ## Get the deployed schema
 
-Use `GetGraphSchema` to validate a selector against the deployed contract or equip an agent with the current graph vocabulary and selector guidance.
+Use `GetGraphQuerySchema` to validate a selector against the deployed contract or equip an agent with the current graph vocabulary and selector guidance. It needs credentials but no organization. The organization-scoped `GetGraphSchema` is deprecated in its favor and returns the same content.
 
 For validation and integration tooling, fetch the JSON representation:
 
 ```bash
-pulumi api GetGraphSchema --output=json
+pulumi api GetGraphQuerySchema --output=json
 ```
 
 The JSON response is authoritative for the deployed schema version, node types, fields available for selection, projection, and grouping, fixed field values, edge types and directions, metric operations, and engine limits. This response is not a complete JSON Schema for the request body.
@@ -956,9 +958,11 @@ The JSON response is authoritative for the deployed schema version, node types, 
 To equip an agent, fetch the Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema
+pulumi api GetGraphQuerySchema
 ```
 
 The primer describes the current graph vocabulary, selector grammar, engine limits, worked examples, and guidance for handling pagination and response completeness. Give the agent this command so it can refresh the primer as the API evolves.
+
+`pulumi api` caches the API spec for 24 hours. If it does not recognize an operation, add `--refresh-spec` to re-fetch the spec.
 
 The [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/) defines the accepted request and response shapes. While the Context API remains in public preview, re-fetch the deployed schema instead of relying on a saved copy.
