@@ -81,7 +81,7 @@ announcements:
       href: "/releases/terraform-state-backend-modules-hcl/"
     dismissible: true
   - id: event-beyond-hyperscalers-2026-09-Bh5nR7
-    active: true
+    active: false
     display: both
     badge: Event
     text: "**Live webinar September 3 ·** Beyond the Hyperscalers: Building sovereign infrastructure"
@@ -89,3 +89,11 @@ announcements:
       label: Register
       href: "/events/beyond-the-hyperscalers-sovereignty-panel/"
     dismissible: true
+  - id: blog-pulumi-neo-security-2026-08-Nx9vQ7
+    active: true
+    display: both
+    icon: shield-check
+    text: "**Identify weaknesses before attackers do.** Neo Security finds and fixes exploitable flaws in your infrastructure. Now in research preview."
+    cta:
+      label: Read the blog
+      href: "/blog/pulumi-neo-security/"
