@@ -11,8 +11,12 @@ night instead of waiting for the page's next staleness-driven sweep.
 
 How a stale finding flows (no new human burden, no prose generation):
   1. An entity re-verifies `contradicted`/`mismatch`.
-  2. Every page asserting that entity gets a `stale_claims` marker written
-     into its LEDGER object (`ledger/<slug>.json`) — evidence attached. A page
+  2. Every page stating that claim gets a `stale_claims` marker written into
+     its LEDGER object (`ledger/<slug>.json`) — evidence and the claim text
+     attached, so the reviewing worker looks for that sentence rather than
+     re-deriving the finding. A page that words a different fact under the
+     same entity key is not marked (see `claim_groups`); neither is a page a
+     PR here cannot edit (`editable: false` in strategic-tiers.yaml). A page
      with no ledger object yet is skipped rather than stubbed: the marker
      write is a whole-object overwrite of a key `record-review.py` owns.
   3. `select-articles.py` adds a large additive boost for marked pages, so
@@ -20,17 +24,26 @@ How a stale finding flows (no new human burden, no prose generation):
      re-reviews the page, fixes it through the existing PR machinery, and
      its ledger/claims rewrites clear the marker automatically.
 
-Selection (deterministic, stateless): volatile keyed entities are deduped
-across pages (one verification per entity per night, fanned back out to all
-pages asserting it), entities already marked stale are skipped (they're
-waiting on a review, not on another check), the rest are sorted by entity
-key and swept in day-rotated chunks of `--count` — days-since-epoch modulo
-the chunk count picks tonight's chunk, so the whole volatile set is covered
-every ceil(N/count) nights with no persisted cursor.
+Selection (deterministic, stateless): volatile keyed entities are grouped
+across pages, entities with nothing live to check are held out (every claim
+already marked stale — waiting on a review, not on another check — or
+superseded by a newer review), the rest are sorted by entity key and swept in
+day-rotated chunks of `--count` — days-since-epoch modulo the chunk count
+picks tonight's chunk, so the whole volatile set is covered every
+ceil(N/count) nights with no persisted cursor.
+
+Inside a due entity, the unit of verification is each DISTINCT CLAIM TEXT
+(`claim_groups`): the entity key names the subject and drops the value, so
+`version/pulumi-cli` legitimately holds several different facts, and a
+verdict on one must reach only the pages that state it. Identical wording on
+several pages is still one call, fanned back out to all of them.
 
 Verification reuses `verify-claims.py`'s per-claim machinery (routing +
-agent-loop verifier) by module import; each entity's freshest claim record is
-the input. `contradicted`/`mismatch` → stale; `verified`/`matches` → fresh;
+agent-loop verifier) by module import; each group's freshest claim record is
+the input, with the page path and the heading + surrounding prose the claim
+sits under (`page_context`), so the verifier judges the claim as the page
+scopes it. `contradicted`/`mismatch` → stale; `framing-drift` → soft
+(reported, never marked — see SOFT_VERDICTS); `verified`/`matches` → fresh;
 anything else (`unverifiable`, errors) → inconclusive, reported but never
 marked — a flaky check must not burn review-queue slots.
 
@@ -39,6 +52,20 @@ published docs — a www.pulumi.com URL, or a `content/` source file — is
 demoted to `unverifiable` before that mapping (see `source_is_own_corpus`).
 The site is this repo rendered, so such a check has confirmed the page
 against itself and cannot detect drift in either direction.
+
+The same rule runs BEFORE the call, on the evidence the claims index already
+holds: `record-claims.py` persists the `source` the page's full review cited
+for each claim, and a claim whose every indexed source is our own docs is
+held out of the rotation as `circular` until the page is re-reviewed and the
+snapshot rewritten (the same trigger that ends `superseded`). It is stateless
+like everything else here. Over the 16 nights to 2026-09-03 with report
+artifacts, 148 of 320 verifier calls (46%) were demoted — the same 42
+entities every rotation — and the indexed source would have predicted 110 of
+them, without hiding any of the 8 real stale findings from those nights. The
+price is 6 entities the night lane had verified from pulumi/* source while
+their page's review had only cited the docs; they wait for that page's next
+review. Under this rule the 2026-09-03 pool of 83 holds 38 out and rotates
+the other 45 in two nights at count=25, not four.
 
 Writes `.claims-reverify-report.json` (plus `n_checked`/`n_stale`/`has_stale`
 to $GITHUB_OUTPUT) and, when CONTENT_REVIEW_LEDGER_URI is set, uploads each
@@ -72,11 +99,23 @@ ENTITY_KEY = HERE / ".claude/commands/docs-review/scripts/entity_key.py"
 SCHEMA_VERSION = 1
 DEFAULT_COUNT = 25
 MAX_CONCURRENCY = 8
-STALE_VERDICTS = {"contradicted", "mismatch", "framing-drift"}
+STALE_VERDICTS = {"contradicted", "mismatch"}
+# `framing-drift` says the claim is true but drawn too broadly. Reported, never
+# marked. This lane hands the verifier one extracted sentence, and extraction
+# routinely drops the scope the enclosing heading establishes: "add awssdk=v2
+# to the query string" under an "AWS KMS" heading came out of the index as a
+# claim about every AWS query string, and on 2026-09-03 its framing verdict
+# marked two pages — one of which never made the claim — and both burned a
+# review slot. A framing verdict here is a verdict on the extraction as often
+# as on the page. The PR-review pipeline keeps it because it reads the diff.
+SOFT_VERDICTS = {"framing-drift"}
 FRESH_VERDICTS = {"verified", "matches"}
 # Verdicts that assert something either way, and so have to rest on evidence
 # from outside the docs corpus to mean anything.
-DECIDED_VERDICTS = STALE_VERDICTS | FRESH_VERDICTS
+DECIDED_VERDICTS = STALE_VERDICTS | SOFT_VERDICTS | FRESH_VERDICTS
+# Lines of page read around a claim for the verifier's context: the enclosing
+# heading plus this many lines either side of the claim's own line range.
+CONTEXT_LINES = 6
 
 # Lazily-imported select-articles module (tier semantics live there).
 _SELECT = None
@@ -151,27 +190,50 @@ def _load_is_volatile():
 # verdict citing only those has checked the page against itself: it can never
 # go stale, and a `contradicted` from the same place is equally meaningless.
 # Demoted to `unverifiable` — reported, never counted fresh, never marked.
+#
+# Two things on pulumi.com are NOT this repo's prose and do count as evidence:
+# the Registry API docs (`/registry/`) and the SDK reference (`/docs/reference/
+# pkg/`) are generated from provider schemas, so a default value read there
+# comes from the provider, not from the page making the claim. Likewise a `gh`
+# citation against any pulumi/* repository other than docs (release notes, a
+# go.mod, a source constant) is the product speaking, even when it sits next
+# to a `content/` path in the same source string. Before this distinction, a
+# verdict that had read pulumi-aws's go.mod AND quoted the docs page was
+# demoted for the docs page, and a Registry default was demoted as circular.
 _URL_RE = re.compile(r"https?://[^\s,;)\]]+", re.IGNORECASE)
 _OWN_HOST_RE = re.compile(r"^https?://(?:[\w-]+\.)*pulumi\.com(?:[/:?#]|$)", re.IGNORECASE)
+_GENERATED_URL_RE = re.compile(
+    r"^https?://(?:[\w-]+\.)*pulumi\.com/(?:registry/|docs/reference/pkg/)", re.IGNORECASE)
 _PATH_RE = re.compile(
     r"(?<![\w/-])[\w][\w./-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml)\b"
 )
+# `pulumi/<repo>` as it appears in gh commands and repo: citations
+# (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/contents`, `repo:pulumi/docs`,
+# `pulumi/docs:content/...`). Not a path segment that merely ends in the word
+# (`migrating-to-pulumi/from-kubernetes.md`) and not an import path or URL
+# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`): those are the
+# claim's own content echoed back, not evidence consulted.
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
 
 
 def source_is_own_corpus(source: str) -> bool:
     """True when every source the verifier cited is our own published docs.
 
     Positive evidence only: a source naming nothing identifiable (no URL, no
-    file path) is left alone rather than demoted — unrecognized is not the
-    same as circular.
+    file path, no repository) is left alone rather than demoted —
+    unrecognized is not the same as circular.
     """
     src = source or ""
     urls = _URL_RE.findall(src)
-    if any(not _OWN_HOST_RE.match(u) for u in urls):
+    if any(not _OWN_HOST_RE.match(u) or _GENERATED_URL_RE.match(u) for u in urls):
         return False
-    paths = _PATH_RE.findall(_URL_RE.sub(" ", src))
+    rest = _URL_RE.sub(" ", src)
+    paths = _PATH_RE.findall(rest)
     own_paths = [p for p in paths if p.startswith("content/") or "/content/" in p]
     if len(paths) > len(own_paths):
+        return False
+    repos = {r.lower().rstrip(".") for r in _PULUMI_REPO_RE.findall(rest)}
+    if repos - {"docs"}:
         return False
     return bool(urls) or bool(own_paths)
 
@@ -219,15 +281,92 @@ def volatile_entities(snapshots: list[dict], is_volatile=None) -> dict[str, list
     return entities
 
 
+def _norm_text(text) -> str:
+    """Whitespace-collapsed, case-folded claim text — the grouping key."""
+    return " ".join(str(text or "").split()).lower()
+
+
+def claim_groups(assertions: list[dict]) -> list[tuple[str, list[dict]]]:
+    """One entity's assertions split by what they actually say.
+
+    The entity key names the SUBJECT ("version/pulumi-cli"), and by design
+    drops the value, so it joins claims across pages and across time — that is
+    what lets a price change be caught on every page that quotes it. But the
+    same key also collects DIFFERENT facts about one subject: on 2026-09-03
+    `version/pulumi-cli` held "as of v3.33.1 the awskms URL takes
+    awssdk=v2&profile=" on one page and "since v3.35.3 pluginDownloadURL
+    understands github://" on another. Verifying one and fanning the verdict
+    out to both marked a page for a claim it never made.
+
+    So the unit of verification is the claim text, not the entity: each group
+    is verified on its own and only its own pages can be marked. Identical
+    wording on several pages still costs one call. Returns [(text, assertions)]
+    in first-seen order; `text` is the freshest assertion's original wording.
+    """
+    by_key: dict[str, list[dict]] = {}
+    for a in assertions:
+        by_key.setdefault(_norm_text(a["claim"].get("text")), []).append(a)
+    return [(representative(group).get("text") or "", group) for group in by_key.values()]
+
+
 def already_marked(key: str, assertions: list[dict], ledger: dict[str, dict]) -> bool:
-    """True when some page asserting this entity already carries its stale
-    marker — the entity is waiting on a review, not on another check."""
+    """True when some page asserting this claim already carries its stale
+    marker — the claim is waiting on a review, not on another check.
+
+    `assertions` is one entity's assertions of ONE claim text (see
+    `claim_groups`). A marker written since 2026-09 carries `claim_text`, and
+    only a marker for the same text counts: a marker for one claim under
+    `version/pulumi-cli` must not hold a different claim under the same key on
+    another page out of the rotation. A legacy marker with no `claim_text`
+    matches on the key alone, as it always did.
+    """
+    texts = {_norm_text(a["claim"].get("text")) for a in assertions}
     for a in assertions:
         entry = ledger.get(a["path"]) or {}
         for m in entry.get("stale_claims") or []:
-            if isinstance(m, dict) and m.get("entity_key") == key:
+            if not isinstance(m, dict) or m.get("entity_key") != key:
+                continue
+            if not m.get("claim_text") or _norm_text(m["claim_text"]) in texts:
                 return True
     return False
+
+
+_HEADING_RE = re.compile(r"^#{1,6}\s")
+_LINE_RANGE_RE = re.compile(r"L(\d+)(?:-(\d+))?")
+
+
+def page_context(repo_root: Path | None, path: str, line_range: str) -> str:
+    """The heading a claim sits under plus the prose around it, for the verifier.
+
+    The claims index persists each claim's `line_range` ("L676-680", or
+    several ranges "L90, L93-94"), and the runner has the checkout, so the
+    scope extraction dropped is recoverable at verification time: the nearest
+    heading above the first cited line, then CONTEXT_LINES either side of the
+    cited span. Empty when anything is missing — the verifier then sees the
+    claim exactly as it did before this existed, never a wrong excerpt.
+    """
+    if repo_root is None or not path:
+        return ""
+    spans = [(int(a), int(b or a)) for a, b in _LINE_RANGE_RE.findall(line_range or "")]
+    if not spans:
+        return ""
+    try:
+        lines = (repo_root / path).read_text(encoding="utf-8").splitlines()
+    except (OSError, UnicodeDecodeError):
+        return ""
+    first = min(s[0] for s in spans)
+    last = max(s[1] for s in spans)
+    if first < 1 or first > len(lines):
+        return ""
+    heading = ""
+    for i in range(first - 1, -1, -1):
+        if _HEADING_RE.match(lines[i]):
+            heading = lines[i].strip()
+            break
+    lo = max(first - 1 - CONTEXT_LINES, 0)
+    hi = min(last + CONTEXT_LINES, len(lines))
+    body = "\n".join(lines[lo:hi]).strip()
+    return f"{heading}\n\n{body}".strip() if heading else body
 
 
 def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> bool:
@@ -251,6 +390,21 @@ def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> boo
         if not (completed and snap_day and reviewed > snap_day):
             return False
     return True
+
+
+def indexed_circular(assertions: list[dict]) -> bool:
+    """True when the claims index already shows this claim can only be checked
+    against ourselves: every asserting page's last full review cited a source
+    `source_is_own_corpus` recognizes as our own docs.
+
+    Held out of the rotation rather than re-checked and demoted — the outcome
+    is the same, minus the verifier call, and it ends the moment a page is
+    re-reviewed with better evidence (the snapshot is rewritten). An empty or
+    unrecognized indexed source keeps the claim live: a review that could not
+    verify says nothing about what the nightly lane could reach.
+    """
+    sources = [str(a["claim"].get("source") or "") for a in assertions]
+    return bool(sources) and all(sources) and all(source_is_own_corpus(s) for s in sources)
 
 
 def fix_route(assertions: list[dict], repo_root: Path | None,
@@ -434,8 +588,9 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
 
 
 def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date,
-                  repo_root: Path | None = None) -> dict[str, dict]:
-    """Fold stale entity verdicts into the affected pages' ledger entries.
+                  repo_root: Path | None = None,
+                  tier_rules: list[dict] | None = None) -> dict[str, dict]:
+    """Fold stale claim verdicts into the affected pages' ledger entries.
 
     Returns {slug: updated entry (without bookkeeping keys)} for every entry
     that changed. Idempotent: a marker for an already-marked entity_key is
@@ -456,11 +611,27 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date,
     guard existed. Such a contradiction is real and worth acting on, but the
     action is upstream of this repo (fix the `data/` source or the product
     metadata behind it), so the verdict is reported and left in the pool rather
-    than converted into a marker nothing can retire."""
+    than converted into a marker nothing can retire.
+
+    The same guard has to cover a page that IS on disk but that no PR may
+    edit — `editable: false` in strategic-tiers.yaml, the 254-file CLI command
+    reference being the big one. `fix_route()` already routes a claim whose
+    every page is such a tree upstream, but a claim that spans one editable
+    page and one generated page routes `local`, and the file check alone would
+    then mark the generated page too. The fix lane selects only editable pages,
+    so that marker could never be resolved there, and `already_marked()`
+    would hold the claim out of the rotation until the report lane happened
+    to rewrite the page's ledger entry. `tier_rules` is the same list
+    `fix_route()` reads; None (the pure-logic callers) checks files only."""
     changed: dict[str, dict] = {}
     for s in stale:
         marker = {
             "entity_key": s["entity_key"],
+            # The sentence the verdict is about. record-review.py carries every
+            # marker field forward, and the worker skill reads markers in
+            # full, so this reaches the reviewer as "find THIS sentence"
+            # rather than "find something about this entity".
+            "claim_text": s.get("claim_text") or "",
             "verdict": s["verdict"],
             "evidence": s.get("evidence") or "",
             "source": s.get("source") or "",
@@ -471,6 +642,12 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date,
                 warn(
                     f"{page['path']} has no source file (generated page); reporting "
                     f"{s['entity_key']} without a marker no review could ever clear"
+                )
+                continue
+            if tier_rules and not _policy_for(page["path"], tier_rules).editable:
+                warn(
+                    f"{page['path']} is generated (editable: false); reporting "
+                    f"{s['entity_key']} without a marker no fix-lane review could clear"
                 )
                 continue
             entry = ledger.get(page["path"])
@@ -555,14 +732,92 @@ def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
     return (dict(sorted(by_type.items())), dict(sorted(by_reason.items())))
 
 
+def tally(results: list[dict], known_upstream: dict[str, dict],
+          upstream_repos: list[dict], repo_root: Path | None,
+          tier_rules: list[dict] | None) -> tuple[dict, list[dict]]:
+    """The report's verdict counts and the markable `stale` list, from the
+    verified results. Pure, so the accounting — which verdicts mark, which
+    only report, what counts as inconclusive — is pinned by the self-test
+    without a verifier in the loop. Annotates each result with `fix_route` /
+    `upstream` (and the upstream issue pointer or filing link) in place.
+    """
+    # Split contradicted results by whether anything in this repo could act on
+    # them. `upstream` findings are real and stay in the rotation forever: no
+    # marker (nothing could ever retire it), no queue boost (no page to boost),
+    # but reported every run so they never go quiet the way the three
+    # policy-pack findings did in August.
+    contradicted = [r for r in results if r["verdict"] in STALE_VERDICTS]
+    soft = [r for r in results if r["verdict"] in SOFT_VERDICTS]
+    for r in results:
+        r["fix_route"] = fix_route(
+            [{"path": p["path"]} for p in r["pages"]], repo_root, tier_rules)
+        r["upstream"] = r["fix_route"] != "local"
+    stale = [r for r in contradicted if not r["upstream"]]
+    upstream = [r for r in contradicted if r["upstream"]]
+    # New = we have not told anyone yet. Resolved = a finding we had filed
+    # upstream now verifies clean, i.e. the upstream fix landed. The second is
+    # the event the marker scheme structurally could not report, because a
+    # marked entity was never re-checked.
+    upstream_new = [r for r in upstream if r["entity_key"] not in known_upstream]
+    upstream_resolved = [r for r in results
+                         if r["entity_key"] in known_upstream
+                         and r["verdict"] in FRESH_VERDICTS]
+    for r in upstream:
+        entry = known_upstream.get(r["entity_key"])
+        if entry:
+            r["upstream_issue"] = entry.get("issue")
+        else:
+            r["file_issue_url"] = file_issue_url(
+                r, r.get("claim_text") or "", upstream_repos)
+
+    fresh = [r for r in results if r["verdict"] in FRESH_VERDICTS]
+    by_type, by_reason = inconclusive_breakdowns(results)
+    return {
+        "n_checked": len(results),
+        "n_stale": len(stale),
+        # Framing verdicts: decided, evidence-bearing, reported — never marked.
+        "n_soft": len(soft),
+        "soft_entities": [
+            {"entity_key": r["entity_key"], "pages": [p["path"] for p in r["pages"]]}
+            for r in sorted(soft, key=lambda x: x["entity_key"])],
+        "n_upstream": len(upstream),
+        "n_upstream_new": len(upstream_new),
+        "n_upstream_resolved": len(upstream_resolved),
+        "upstream_entities": [
+            {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
+             "file_issue_url": r.get("file_issue_url"),
+             # Explicit, so the Slack step filters on the SAME property the
+             # count is computed from. Deriving "new" a second time from
+             # `issue == null` made the workflow depend on --self-test (in
+             # another file) rejecting a registry entry with no issue, to keep
+             # its own two numbers agreeing. One field, one definition.
+             "new": r["entity_key"] not in known_upstream,
+             "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
+            for r in sorted(upstream, key=lambda x: x["entity_key"])],
+        "upstream_resolved_entities": sorted(r["entity_key"] for r in upstream_resolved),
+        "n_fresh": len(fresh),
+        # Against `contradicted`, not `stale`: an upstream finding is a decided
+        # verdict that simply routes elsewhere. Subtracting only the markable
+        # ones would book every upstream contradiction as inconclusive,
+        # inflating the rate the health signal watches and eventually
+        # degrading the lane for doing its job. Soft verdicts are decided too.
+        "n_inconclusive": len(results) - len(contradicted) - len(soft) - len(fresh),
+        "n_demoted": sum(1 for r in results if r.get("demoted_from")),
+        "inconclusive_by_type": by_type,
+        "inconclusive_by_reason": by_reason,
+    }, stale
+
+
 def finish(report: dict, out_path: Path) -> int:
     out_path.write_text(json.dumps(report, indent=2) + "\n")
     m = report["meta"]
-    log(f"checked={m['n_checked']} stale={m['n_stale']} fresh={m['n_fresh']} "
+    log(f"checked={m['n_checked']} stale={m['n_stale']} soft={m.get('n_soft', 0)} "
+        f"fresh={m['n_fresh']} "
         f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
         f"own-corpus evidence) (volatile entities={m['n_entities']}, "
         f"eligible={m.get('n_eligible', 0)}, marked={m.get('n_marked', 0)}, "
-        f"superseded={m.get('n_superseded', 0)}) -> {out_path}")
+        f"superseded={m.get('n_superseded', 0)}, "
+        f"circular={m.get('n_circular', 0)}) -> {out_path}")
     for label in ("inconclusive_by_type", "inconclusive_by_reason"):
         if m.get(label):
             log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
@@ -574,6 +829,9 @@ def finish(report: dict, out_path: Path) -> int:
                 f"-> {e.get('issue') or 'NOT YET FILED'}")
     for k in m.get("upstream_resolved_entities") or []:
         log(f"upstream RESOLVED (now verifies clean, retire its upstream-claims.yaml entry): {k}")
+    for e in m.get("soft_entities") or []:
+        log(f"soft (framing-drift, reported not marked): {e['entity_key']} "
+            f"-> {', '.join(e.get('pages') or [])}")
     write_outputs(report)
     return 0
 
@@ -592,8 +850,8 @@ def run(args) -> int:
         "checked_at": today.isoformat(),
         "entities": [],
         "meta": {"n_snapshots": 0, "n_entities": 0, "n_marked": 0, "n_eligible": 0,
-                 "n_due": 0, "n_checked": 0, "n_stale": 0, "n_fresh": 0,
-                 "n_inconclusive": 0, "n_demoted": 0},
+                 "n_due": 0, "n_checked": 0, "n_stale": 0, "n_soft": 0, "n_fresh": 0,
+                 "n_inconclusive": 0, "n_demoted": 0, "marked_pages": []},
     }
     out_path = Path(args.out)
 
@@ -615,10 +873,33 @@ def run(args) -> int:
     entities = volatile_entities(snapshots, _load_is_volatile())
     report["meta"]["n_entities"] = len(entities)
 
-    marked = {k for k, v in entities.items() if already_marked(k, v, ledger)}
-    superseded = {k for k, v in entities.items()
-                  if k not in marked and superseded_by_review(v, ledger)}
-    unmarked = sorted(k for k in entities if k not in marked and k not in superseded)
+    # The rotation is over entity keys; inside a due entity the unit of
+    # verification is each distinct claim text (`claim_groups`). A group is
+    # live unless already marked or superseded. An entity with no live group
+    # is held out: "marked" when a marker is what holds it (waiting on a
+    # review), otherwise "superseded" (fresher evidence is on its way).
+    groups = {k: claim_groups(v) for k, v in entities.items()}
+
+    def group_state(key: str, asrt: list[dict]) -> str:
+        if already_marked(key, asrt, ledger):
+            return "marked"
+        if superseded_by_review(asrt, ledger):
+            return "superseded"
+        if indexed_circular(asrt):
+            return "circular"
+        return "live"
+
+    states = {k: [group_state(k, asrt) for _, asrt in gs] for k, gs in groups.items()}
+    live = {k: [g for g, s in zip(gs, states[k]) if s == "live"]
+            for k, gs in groups.items()}
+    # An entity with nothing live is held out under one reason, in the order
+    # the states are decided: a marker outranks fresher evidence outranks
+    # circular evidence.
+    held = {k: set(states[k]) for k in entities if not live[k]}
+    marked = {k for k, s in held.items() if "marked" in s}
+    superseded = {k for k, s in held.items() if k not in marked and "superseded" in s}
+    circular = {k for k in held if k not in marked and k not in superseded}
+    unmarked = sorted(k for k in entities if live[k])
     # n_eligible is the pool the rotation actually divides, and n_marked is
     # the backlog held out of it. Without both, a small n_due is ambiguous
     # between "the pool is nearly empty" and "the rotation handed tonight a
@@ -626,10 +907,15 @@ def run(args) -> int:
     # for 2026-08-19 (n_due=1) could not tell them apart.
     report["meta"]["n_marked"] = len(marked)
     report["meta"]["n_superseded"] = len(superseded)
+    report["meta"]["n_circular"] = len(circular)
     report["meta"]["n_eligible"] = len(unmarked)
     keys = tonight_chunk(unmarked, args.count, today)
+    # n_due counts entities; n_checked (below) counts verifier calls, one per
+    # live claim text, so n_checked >= n_due whenever a due entity is worded
+    # more than one way across the pages that assert it.
+    work = [(k, text, asrt) for k in keys for text, asrt in live[k]]
     report["meta"]["n_due"] = len(keys)
-    if not keys:
+    if not work:
         log("no volatile entities due tonight")
         return finish(report, out_path)
 
@@ -654,9 +940,16 @@ def run(args) -> int:
         warn(f"upstream-claims.yaml lists {key}, which matches no volatile entity "
              f"in the claims index; stale entry or a re-keyed claim")
 
-    def check_entity(key: str) -> dict:
-        claim = dict(representative(entities[key]))
+    def check_claim(item: tuple[str, str, list[dict]]) -> dict:
+        key, _, assertions = item
+        freshest = max(assertions, key=lambda a: a["reviewed_at"])
+        claim = dict(freshest["claim"])
         claim["__id"] = key
+        # The verifier's pass1 lane reads files, and without `file` it was
+        # told `file: ?` and could not open the page the claim came from.
+        claim["file"] = freshest["path"]
+        claim["context"] = page_context(repo_root, freshest["path"],
+                                        str(claim.get("line_range") or ""))
         claim["__route"] = vc.route_claim(claim, {})
         rec, err = vc.process_claim(api_key, claim, {}, args.model, repo_root, args.dry_run)
         verdict = rec.get("verdict")
@@ -673,73 +966,22 @@ def run(args) -> int:
             "source": rec.get("source"),
             "route": rec.get("route"),
             "error": err,
-            "pages": [{"path": a["path"], "slug": a["slug"]} for a in entities[key]],
+            "pages": [{"path": a["path"], "slug": a["slug"]} for a in assertions],
         }
 
-    with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(keys))) as pool:
-        results = list(pool.map(check_entity, keys))
+    with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(work))) as pool:
+        results = list(pool.map(check_claim, work))
 
-    # Split contradicted results by whether anything in this repo could act on
-    # them. `upstream` findings are real and stay in the rotation forever: no
-    # marker (nothing could ever retire it), no queue boost (no page to boost),
-    # but reported every run so they never go quiet the way the three
-    # policy-pack findings did in August.
-    contradicted = [r for r in results if r["verdict"] in STALE_VERDICTS]
-    for r in results:
-        r["fix_route"] = fix_route(
-            [{"path": p["path"]} for p in r["pages"]], repo_root, tier_rules)
-        r["upstream"] = r["fix_route"] != "local"
-    stale = [r for r in contradicted if not r["upstream"]]
-    upstream = [r for r in contradicted if r["upstream"]]
-    # New = we have not told anyone yet. Resolved = a finding we had filed
-    # upstream now verifies clean, i.e. the upstream fix landed. The second is
-    # the event the marker scheme structurally could not report, because a
-    # marked entity was never re-checked.
-    upstream_new = [r for r in upstream if r["entity_key"] not in known_upstream]
-    upstream_resolved = [r for r in results
-                         if r["entity_key"] in known_upstream
-                         and r["verdict"] in FRESH_VERDICTS]
-    for r in upstream:
-        entry = known_upstream.get(r["entity_key"])
-        if entry:
-            r["upstream_issue"] = entry.get("issue")
-        else:
-            r["file_issue_url"] = file_issue_url(
-                r, r.get("claim_text") or "", upstream_repos)
-
-    fresh = [r for r in results if r["verdict"] in FRESH_VERDICTS]
     report["entities"] = results
-    report["meta"]["n_checked"] = len(results)
-    report["meta"]["n_stale"] = len(stale)
-    report["meta"]["n_upstream"] = len(upstream)
-    report["meta"]["n_upstream_new"] = len(upstream_new)
-    report["meta"]["n_upstream_resolved"] = len(upstream_resolved)
-    report["meta"]["upstream_entities"] = [
-        {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
-         "file_issue_url": r.get("file_issue_url"),
-         # Explicit, so the Slack step filters on the SAME property the count
-         # is computed from. Deriving "new" a second time from `issue == null`
-         # made the workflow depend on --self-test (in another file) rejecting
-         # a registry entry with no issue, to keep its own two numbers
-         # agreeing. One field, one definition.
-         "new": r["entity_key"] not in known_upstream,
-         "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
-        for r in sorted(upstream, key=lambda x: x["entity_key"])]
-    report["meta"]["upstream_resolved_entities"] = sorted(
-        r["entity_key"] for r in upstream_resolved)
-    report["meta"]["n_fresh"] = len(fresh)
-    # Against `contradicted`, not `stale`: an upstream finding is a decided
-    # verdict that simply routes elsewhere. Subtracting only the markable ones
-    # would book every upstream contradiction as inconclusive, inflating the
-    # rate the health signal watches and eventually degrading the lane for
-    # doing its job.
-    report["meta"]["n_inconclusive"] = len(results) - len(contradicted) - len(fresh)
-    report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
-    report["meta"]["inconclusive_by_type"], report["meta"]["inconclusive_by_reason"] = \
-        inconclusive_breakdowns(results)
+    counts, stale = tally(results, known_upstream, upstream_repos, repo_root, tier_rules)
+    report["meta"].update(counts)
 
     if stale:
-        changed = apply_markers(ledger, stale, today, repo_root)
+        changed = apply_markers(ledger, stale, today, repo_root, tier_rules)
+        # What was actually marked, after the ledger-gap and editability
+        # guards — the Slack summary lists these so a wrong page is visible
+        # at a glance rather than three review slots later.
+        report["meta"]["marked_pages"] = sorted(e["path"] for e in changed.values())
         uri = os.environ.get("CONTENT_REVIEW_LEDGER_URI", "").strip()
         for slug, entry in sorted(changed.items()):
             local = Path(args.ledger_dir) / f"{slug}.json"
@@ -848,18 +1090,48 @@ def self_test() -> int:
     # an unrecognizable source is never treated as circular.
     own = ["https://www.pulumi.com/docs/iac/get-started/aws/modify-program/",
            "https://www.pulumi.com/docs/a/ and https://www.pulumi.com/docs/b/",
-           "repo:content/docs/iac/concepts/providers/_index.md"]
+           "repo:content/docs/iac/concepts/providers/_index.md",
+           "repo:pulumi/docs content/docs/iac/concepts/packages/_index.md L108-111",
+           "gh api repos/pulumi/docs/contents/content/docs/x.md",
+           # A path segment ending in "pulumi" and an import path are not
+           # repository citations.
+           "repo:pulumi/docs content/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes.md",
+           "content/docs/x.md imports github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes"]
     independent = ["https://docs.aws.amazon.com/config/latest/developerguide/x.html",
                    "gh api repos/pulumi/pulumi/contents/pkg/resource/deploy/retries.go",
                    "repo:data/policy_pack_policies/cis-aws.json (line 2872)",
                    "https://github.com/pulumi/pulumi/blob/master/.goreleaser.yml",
                    "https://www.pulumi.com/docs/a/ and https://docs.aws.amazon.com/x.html",
                    "N/A - author's own estimate of their tutorial content",
-                   ""]
+                   "",
+                   # Schema-generated surfaces on our own host are the provider
+                   # speaking, not this repo's prose.
+                   "https://www.pulumi.com/registry/packages/awsx/api-docs/ec2/vpc/",
+                   "https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/awsx/x.html",
+                   # A gh citation against a non-docs pulumi repo is evidence
+                   # even beside a content/ path in the same string.
+                   "repo:content/docs/iac/concepts/packages/_index.md; gh release list -R pulumi/pulumi",
+                   "pulumi/docs:content/docs/a.md and gh api repos/pulumi/pulumi-aws/releases"]
     for s in own:
         check(f"own-corpus source: {s[:44]}", source_is_own_corpus(s) is True)
     for s in independent:
         check(f"independent source: {s[:44] or '(empty)'}", source_is_own_corpus(s) is False)
+
+    # Indexed circularity: a claim whose every page's last review could only
+    # cite our own docs is held out before the call; an empty or external
+    # indexed source keeps it live.
+    def with_src(src):
+        return [{"claim": dict(ver, source=src), "path": "content/docs/a.md",
+                 "slug": "docs-a", "reviewed_at": "2026-07-01"}]
+    check("indexed own-corpus source is circular",
+          indexed_circular(with_src("https://www.pulumi.com/docs/x/")) is True)
+    check("indexed external source is not circular",
+          indexed_circular(with_src("https://docs.aws.amazon.com/x.html")) is False)
+    check("empty indexed source is not circular (review said nothing)",
+          indexed_circular(with_src("")) is False and indexed_circular([]) is False)
+    check("one external page among own-corpus ones keeps the claim live",
+          indexed_circular(with_src("https://www.pulumi.com/docs/x/")
+                           + with_src("gh release view v1 -R pulumi/pulumi")) is False)
 
     # Chunk rotation: deterministic, complete coverage across consecutive days.
     keys = [f"k{i}" for i in range(5)]
@@ -994,6 +1266,7 @@ def self_test() -> int:
     ledger = {"content/docs/a.md": {"path": "content/docs/a.md", "slug": "docs-a",
                                     "status": "clean", "_file": "x"}}
     stale = [{"entity_key": "version/pulumi-gcp", "verdict": "contradicted",
+              "claim_text": "pulumi-gcp v8.3.0",
               "evidence": "v9.0 released", "source": "gh release view",
               "pages": [{"path": "content/docs/a.md", "slug": "docs-a"},
                         {"path": "content/docs/b.md", "slug": "docs-b"}]}]
@@ -1003,7 +1276,8 @@ def self_test() -> int:
     check("existing entry keeps its fields",
           changed["docs-a"]["status"] == "clean" and "_file" not in changed["docs-a"])
     check("marker shape", changed["docs-a"]["stale_claims"][0] == {
-        "entity_key": "version/pulumi-gcp", "verdict": "contradicted",
+        "entity_key": "version/pulumi-gcp", "claim_text": "pulumi-gcp v8.3.0",
+        "verdict": "contradicted",
         "evidence": "v9.0 released", "source": "gh release view",
         "checked_at": "2026-07-09"})
     check("ledger gap is skipped, not stubbed over",
@@ -1037,6 +1311,28 @@ def self_test() -> int:
                                          "slug": "docs-a"}]}]
         check("page with a source file is still marked",
               set(apply_markers(led2, on_disk, today, root)) == {"docs-a"})
+        # A generated page that IS on disk (the CLI command reference) is
+        # `editable: false`: the fix lane can never select it, so a marker
+        # there could never be resolved. The tier rules, not the file check,
+        # are what catch it — and only when a claim spans an editable page too,
+        # since fix_route() already routes an all-generated claim upstream.
+        (root / "content/docs/iac/cli/commands").mkdir(parents=True)
+        (root / "content/docs/iac/cli/commands/pulumi-up.md").write_text("# gen\n")
+        gen_rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 0}]
+        led3 = {"content/docs/a.md": {"path": "content/docs/a.md",
+                                      "slug": "docs-a", "status": "clean"},
+                "content/docs/iac/cli/commands/pulumi-up.md": {
+                    "path": "content/docs/iac/cli/commands/pulumi-up.md",
+                    "slug": "docs-iac-cli-commands-pulumi-up", "status": "clean"}}
+        spanning = [{**gen[0], "pages": [
+            {"path": "content/docs/a.md", "slug": "docs-a"},
+            {"path": "content/docs/iac/cli/commands/pulumi-up.md",
+             "slug": "docs-iac-cli-commands-pulumi-up"}]}]
+        check("a non-editable page on disk gets no marker under the tier rules",
+              set(apply_markers(led3, spanning, today, root, gen_rules)) == {"docs-a"})
+        check("without tier rules the file check alone still marks it",
+              set(apply_markers(led3, spanning, today, root))
+              == {"docs-a", "docs-iac-cli-commands-pulumi-up"})
 
     check("already_marked sees the marker",
           already_marked("version/pulumi-gcp", ents["version/pulumi-gcp"], ledger))
@@ -1044,14 +1340,76 @@ def self_test() -> int:
           not already_marked("numerical/team-plan-price",
                              ents["numerical/team-plan-price"], ledger))
 
+    # Per-text grouping: the two pages word the pin differently, so they are
+    # two claims under one key — each verified on its own, each marking only
+    # its own pages. Identical wording on several pages stays one call.
+    gcp_groups = claim_groups(ents["version/pulumi-gcp"])
+    check("claim_groups splits distinct wordings", len(gcp_groups) == 2)
+    check("claim_groups keeps identical wording together",
+          len(claim_groups(ents["version/pulumi-gcp"] * 2)) == 2
+          and all(len(g) == 2 for _, g in claim_groups(ents["version/pulumi-gcp"] * 2)))
+    check("group text is the freshest wording of that group",
+          [t for t, _ in gcp_groups] == ["pulumi-gcp v8.2.0", "pulumi-gcp v8.3.0"])
+    g82 = [a for a in ents["version/pulumi-gcp"] if a["claim"]["text"] == "pulumi-gcp v8.2.0"]
+    g83 = [a for a in ents["version/pulumi-gcp"] if a["claim"]["text"] == "pulumi-gcp v8.3.0"]
+    text_marked = {"content/docs/b.md": {"path": "content/docs/b.md", "stale_claims": [
+        {"entity_key": "version/pulumi-gcp", "claim_text": "Pulumi-GCP  v8.2.0"}]}}
+    check("a text-bearing marker does not hold out a different wording",
+          not already_marked("version/pulumi-gcp", g83, text_marked))
+    check("a text-bearing marker holds out its own wording (case/space-insensitive)",
+          already_marked("version/pulumi-gcp", g82 + g83, text_marked))
+    legacy = {"content/docs/b.md": {"path": "content/docs/b.md", "stale_claims": [
+        {"entity_key": "version/pulumi-gcp"}]}}
+    check("a legacy marker with no claim_text holds out every wording",
+          already_marked("version/pulumi-gcp", g83, legacy))
+
+    # Page context: the heading the claim sits under plus the prose around it.
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/ctx.md").write_text(
+            "# Secrets\n\nintro\n\n#### AWS KMS\n\nThe awskms provider.\n\n"
+            "As of v3.33.1, add awssdk=v2 to the query string.\n\n1. By ID\n")
+        ctx = page_context(root, "content/docs/ctx.md", "L9")
+        check("page_context leads with the enclosing heading", ctx.startswith("#### AWS KMS"))
+        check("page_context carries the claim's own line", "awssdk=v2" in ctx)
+        check("page_context reads a multi-range line_range",
+              "awssdk=v2" in page_context(root, "content/docs/ctx.md", "L3, L9-9"))
+        check("page_context is empty, never wrong, when it cannot read",
+              page_context(root, "content/docs/ctx.md", "") == ""
+              and page_context(root, "content/docs/missing.md", "L1") == ""
+              and page_context(root, "content/docs/ctx.md", "L400") == ""
+              and page_context(None, "content/docs/ctx.md", "L9") == "")
+
+    # Accounting: which verdicts mark, which only report, what is inconclusive.
+    page_a = [{"path": "content/docs/a.md", "slug": "docs-a"}]
+    rows = [
+        {"entity_key": "numerical/x", "verdict": "contradicted", "pages": page_a},
+        {"entity_key": "version/y", "verdict": "framing-drift", "pages": page_a},
+        {"entity_key": "version/z", "verdict": "verified", "pages": page_a},
+        {"entity_key": "numerical/w", "verdict": "unverifiable",
+         "demoted_from": "verified", "pages": page_a},
+    ]
+    counts, markable = tally(rows, {}, [], None, None)
+    check("framing-drift is soft: reported, never markable",
+          counts["n_soft"] == 1 and [r["entity_key"] for r in markable] == ["numerical/x"])
+    check("soft verdicts are decided, not inconclusive",
+          (counts["n_stale"], counts["n_fresh"], counts["n_inconclusive"],
+           counts["n_demoted"]) == (1, 1, 1, 1))
+    check("soft entities name their pages",
+          counts["soft_entities"] == [{"entity_key": "version/y",
+                                       "pages": ["content/docs/a.md"]}])
+
     # Health-observation meta: the early-exit paths must say why they stopped
     # (signal-health.py's reverify signal reads these fields).
 
-    def run_report(d: Path, extra_env_unset: list[str]) -> dict:
+    def run_report(d: Path, extra_env_unset: list[str], dry_run: bool = False) -> dict:
         saved = {k: os.environ.pop(k) for k in extra_env_unset if k in os.environ}
         try:
             argv = ["--claims-dir", str(d / "claims"), "--ledger-dir", str(d / "ledger"),
                     "--out", str(d / "report.json"), "--today", "2026-07-06"]
+            if dry_run:
+                argv.append("--dry-run")
             args = build_parser().parse_args(argv)
             run(args)
             return json.loads((d / "report.json").read_text())
@@ -1070,6 +1428,30 @@ def self_test() -> int:
         rep = run_report(d, ["ANTHROPIC_API_KEY"])
         check("due entities without API key -> skipped=no_api_key",
               rep["meta"]["skipped"] == "no_api_key" and rep["meta"]["n_due"] == 1)
+
+        # End to end (dry run, placeholder verdicts): one due entity worded two
+        # ways across two pages is one rotation slot and two verifier calls,
+        # and each result carries only the pages that share its wording.
+        (d / "claims" / "docs-b.json").write_text(
+            json.dumps(snap("b", "2026-07-05", dict(ver, text="pulumi-gcp v8.3.0"))))
+        rep = run_report(d, ["ANTHROPIC_API_KEY"], dry_run=True)
+        check("dry run verifies every distinct wording of a due entity",
+              (rep["meta"]["n_due"], rep["meta"]["n_checked"]) == (1, 2)
+              and "skipped" not in rep["meta"])
+        check("each result carries only the pages sharing its wording",
+              sorted((e["claim_text"], [p["slug"] for p in e["pages"]])
+                     for e in rep["entities"])
+              == [("pulumi-gcp v8.2.0", ["docs-a"]), ("pulumi-gcp v8.3.0", ["docs-b"])])
+
+        # A claim the index already shows as circular costs no call and is
+        # counted as held out, not as due.
+        circ = dict(price, source="https://www.pulumi.com/pricing/")
+        (d / "claims" / "docs-c.json").write_text(json.dumps(snap("c", "2026-07-02", circ)))
+        rep = run_report(d, ["ANTHROPIC_API_KEY"], dry_run=True)
+        check("indexed-circular entity is held out of the rotation",
+              rep["meta"]["n_circular"] == 1 and rep["meta"]["n_due"] == 1
+              and rep["meta"]["n_eligible"] == 1
+              and all(e["entity_key"] != "numerical/team-plan-price" for e in rep["entities"]))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

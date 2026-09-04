@@ -232,7 +232,7 @@ Bridged providers, which take a Terraform provider as an underlying dependency, 
 
 Provider functions are exposed in each language as regular functions, in two variations.
 
-In most languages, the two variations take the form of **two separately named functions** rather than overloads of a single function. For example, the AWS function `aws.ec2.getAmi` has a corresponding output form named `aws.ec2.getAmiOutput`. Java's naming convention is inverted: `Ec2Functions.getAmi()` is the _output_ form, while `Ec2Functions.getAmiPlain()` is the direct form. In YAML, both forms are invoked using `fn::invoke`, and the runtime handles the distinction transparently.
+In most languages, the two variations take the form of **two separately named functions** rather than overloads of a single function. For example, the AWS function `aws.ec2.getAmi` has a corresponding output form named `aws.ec2.getAmiOutput`. Java's naming convention is inverted: `Ec2Functions.getAmi()` is the _output_ form, while `Ec2Functions.getAmiPlain()` is the direct form. YAML has no direct/output distinction at all: every provider function is invoked using `fn::invoke`.
 
 ### Direct form
 
@@ -272,7 +272,7 @@ The direct form returns a `CompletableFuture<T>`. These functions are typically 
 
 {{% choosable language yaml %}}
 
-The direct form is invoked using `fn::invoke`. The result is resolved synchronously.
+YAML does not distinguish between direct and output forms; both are invoked using `fn::invoke`.
 
 {{% /choosable %}}
 
@@ -326,9 +326,9 @@ The [Pulumi Registry](/registry) contains authoritative documentation for all pr
 
 ## Invoke options
 
-In addition to function arguments, provider functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/iac/concepts/resources/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The available options are:
+Besides function arguments, provider functions accept "invoke options", in the same way that Pulumi resources accept [resource options](/docs/iac/concepts/resources/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The available options are:
 
-* `dependsOn`: An array of resources that this function depends on. This option is only available in the output form of a provider function, because only the output form participates in the dependency graph and can wait on other resources before it executes. See [Choosing between direct form and output form](#choosing-between-direct-form-and-output-form) for a full explanation.
+* `dependsOn`: An array of resources that this function depends on. This option is only available in the output form of a provider function, which can wait on other resources before it executes. [When your function will execute](#when-your-function-will-execute) explains the difference between the two forms.
 * `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/iac/concepts/resources/options/parent/), the parent will be consulted when determining the provider to use.
 * `provider`: Pass an [explicitly configured provider](/docs/iac/concepts/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 
@@ -342,15 +342,15 @@ The following options are also available, but are deprecated and should not be u
 
 While the direct and output forms of a provider function will both return the same data when they are invoked, the two forms differ in when they are executed when running your Pulumi program:
 
-* Direct form functions execute just like any other function call in your Pulumi program's language. Since direct form functions do not accept Pulumi Inputs and Outputs, they are not tracked by the Pulumi engine the way resources are, and do not participate in the dependency graph.
-* Output form functions are tracked by the Pulumi engine because they take Inputs as arguments and return Outputs as return values and therefore participate in the dependency graph. This means that Pulumi will ensure that all input values to the function are resolved before the function is invoked. (This is why `dependsOn` is only an option for the output form of a function.)
+* Direct form functions execute like any other function call in your Pulumi program's language. Since direct form functions do not accept Pulumi Inputs and Outputs, they are not tracked by the Pulumi engine the way resources are, and do not participate in the dependency graph.
+* Output form functions take Inputs as arguments and return Outputs as return values, so the Pulumi engine tracks them and they participate in the dependency graph. Pulumi resolves all input values to the function before invoking it. (This is why `dependsOn` is only an option for the output form of a function.)
 
 ## Choosing between direct form and output form
 
-There are several common scenarios where either direct form or output form must or should be used:
+Two common scenarios call for one form over the other:
 
-* **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
-* **If you need resources to be created or updated before the function is invoked, you should use the output form.** (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
+* **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so the decision about whether a resource belongs in the graph at all has to always be calculated up front.
+* **If you need resources to be created or updated before the function is invoked, you should use the output form.** (You _can_ use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
 The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required to pass the secret into the filter.
 

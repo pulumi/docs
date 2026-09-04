@@ -415,7 +415,12 @@ def _collapse_empty_tables(body: str, headings: dict[str, str]) -> str:
     for bucket, start, end in _sections(body, headings):
         content = [ln for ln in lines[start:end] if ln.strip()]
         if content and all(ln.startswith("|") and cr.is_table_furniture(ln) for ln in content):
-            edits.append((start, end, ["", _EMPTY_SENTINEL.get(bucket, ""), ""]))
+            sentinel = _EMPTY_SENTINEL.get(bucket, "")
+            if bucket == "reviewer-check":
+                # The span ends AT the stances H4 when one follows; the
+                # sentinel must not claim nothing needs a human eye then.
+                sentinel = cr.empty_checks_sentinel(end < len(lines) and lines[end].startswith(cr.STANCES_HEADING))
+            edits.append((start, end, ["", sentinel, ""]))
     for start, end, new in sorted(edits, reverse=True):
         lines[start:end] = new
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")

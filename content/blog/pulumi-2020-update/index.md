@@ -30,7 +30,7 @@ We've also added support for core Pulumi features, including [aliases](/docs/iac
 
 ## Policy as Code
 
-[CrossGuard, our Policy as Code framework](/docs/insights/policy/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](/docs/using-pulumi/crossguard/awsguard/) package.
+[CrossGuard, our Policy as Code framework](/docs/insights/policy/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) package.
 
 CrossGuard is open source and the functionality is behind [the new `pulumi policy` command](/docs/iac/cli/commands/pulumi_policy/), as well as [the new `--policy-pack` flag](/docs/iac/cli/commands/pulumi_up/#options) for the `preview` and `up` commands. You can use these features with any edition of Pulumi, without restriction, including the offline backends.
 
