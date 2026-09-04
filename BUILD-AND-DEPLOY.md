@@ -1521,7 +1521,6 @@ The docs infrastructure integrates with other Pulumi projects via stack referenc
 ```typescript
 const registryStack = new pulumi.StackReference('pulumi/registry/production');
 const answersStack = new pulumi.StackReference('pulumi/answers/production');
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const guidesStack = new pulumi.StackReference('pulumi/guides/production');
 ```
 
