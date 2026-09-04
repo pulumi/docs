@@ -94,7 +94,7 @@ If we are thinking about removing some infrastructure we may want to know what o
 
 ![Stack references check in Pulumi Copilot window](/blog/pulumi-copilot/stack-references.png)
 
-If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
+If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](https://github.com/pulumi/compliance-policies).
 
 <p align="center"><img src="./fedramp.png" alt="Pulumi Copilot question about getting FedRAMP compliant" width="600" /></p>
 
