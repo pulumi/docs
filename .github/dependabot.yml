@@ -180,9 +180,16 @@ updates:
 
   # Python. This entry previously pointed at /scripts, where there is no
   # Python manifest of any kind -- it matched nothing and had never produced
-  # a PR. The real Pipfiles are the three below; only /tools/pydocgen has a
-  # Pipfile.lock. The root /Pipfile is deliberately omitted: it declares no
-  # packages and exists only to pin python_version.
+  # a PR. The real Pipfiles are the three below. The root /Pipfile is
+  # deliberately omitted: it declares no packages and exists only to pin
+  # python_version.
+  #
+  # Only /tools/pydocgen is expected to produce updates today. It is the one
+  # directory with real constraints (sphinx >=7.1,<7.2) and a Pipfile.lock.
+  # /scripts/python and /scripts/image-borders pin every package as "*" and
+  # ship no lock, so there is no resolved version to bump or to match against
+  # an advisory -- they are listed here so that committing a Pipfile.lock is
+  # the only step needed to make them live, but until then they are inert.
   - package-ecosystem: "pip"
     directories:
       - "/scripts/python"
