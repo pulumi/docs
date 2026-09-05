@@ -67,18 +67,24 @@
   )
 ) }}
 
-{{/* Add image — use meta_image if set, otherwise fall back to default OG image
-     (required by Google for Event rich results). meta_image is normally
-     site-root-relative ("/images/..."); the previous "not http-prefixed ->
-     join with page Permalink" check treated that case as page-relative too,
-     producing dead URLs like https://www.pulumi.com/events/foo//images/....
-     See schema/utils/absolutize-image.html. */}}
+{{/* Add image (required by Google for Event rich results). Resolve the
+     effective meta image (custom meta_image, else the build-time generated
+     card) via the shared partial -- the same source head.html uses for
+     OpenGraph -- rather than reading .Params.meta_image directly, so an
+     event page with no explicit meta_image gets its own generated card
+     instead of falling straight to the generic default. meta_image is
+     normally site-root-relative ("/images/..."); the previous "not
+     http-prefixed -> join with page Permalink" check treated that case as
+     page-relative too, producing dead URLs like
+     https://www.pulumi.com/events/foo//images/.... See
+     schema/utils/absolutize-image.html. */}}
 {{ $imageURL := "" }}
-{{ with .Params.meta_image }}
-  {{ if hasPrefix . "http" }}
-    {{ $imageURL = . }}
+{{ $metaImage := partial "meta-image-url.html" . }}
+{{ if $metaImage }}
+  {{ if hasPrefix $metaImage "http" }}
+    {{ $imageURL = $metaImage }}
   {{ else }}
-    {{ $imageURL = partial "schema/utils/absolutize-image.html" (dict "page" $ "imagePath" .) }}
+    {{ $imageURL = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" $metaImage) }}
   {{ end }}
 {{ else }}
   {{ $imageURL = printf "%s%s" "https://www.pulumi.com" "/logos/brand/og-default.png" }}
