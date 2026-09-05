@@ -1,0 +1,172 @@
+---
+title_tag: "Migrating a Terraform Workspace with pulumi-tool-import"
+meta_desc: Migrate a Terraform workspace to Pulumi with pulumi-tool-import - digest state safely, resolve import IDs, run batched imports, and reach a zero-diff preview.
+title: Terraform import tool
+h1: "Migrating a Terraform Workspace with pulumi-tool-import"
+menu:
+    iac:
+        name: Terraform import tool
+        parent: iac-guides-migration-from
+        weight: 2
+---
+
+[`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) is a Pulumi CLI tool plugin that automates the import step of a Terraform-to-Pulumi migration: it analyzes Terraform state, resolves the import IDs `pulumi import` needs, runs the import in failure-isolating batches, and patches the imported state so `pulumi preview` comes back clean. It ships with agent skills that let an AI agent — Pulumi Neo, Claude Code, Cursor, Codex, or any agent that supports [Agent Skills](/docs/ai/skills/) — drive the full migration workflow and validate its own work at each stage.
+
+The tool is built and maintained by [Pulumi Professional Services](/proserv/) and is not part of the core Pulumi product. It is pre-v1: pin the version you install and read the [changelog](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/CHANGELOG.md) before upgrading. For an overview of all Terraform migration options, see [Migrating from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+
+## When to use this workflow
+
+This workflow targets migrations where the goal is a **hand-authored, idiomatic Pulumi program** — typically TypeScript with [components](/docs/iac/concepts/components/) mirroring your Terraform modules — that imports the live infrastructure and reaches a **zero-diff preview** before the first `pulumi up`. It fills the gaps that make large imports slow by hand:
+
+1. Import IDs, including composite ones (a Lambda permission imports as `FunctionName/StatementId`), must be discovered and formatted per resource.
+1. Terraform state contains plaintext secrets that shouldn't pass through whoever (or whatever) orchestrates the migration.
+1. A single bad import ID fails an entire `pulumi import` run.
+1. Some fields are never returned by the cloud API or the provider's Read implementation, so freshly imported state shows diffs the program didn't cause.
+1. Some resource types (`aws_iam_policy_attachment`, `aws_vpn_gateway_route_propagation`, and other association resources) declare no importer and cannot be imported at all.
+
+For a small number of resources, [`pulumi import`](/docs/iac/guides/migration/import/) on its own is simpler. For automated code conversion instead of hand-authoring, see the [Terraform migration overview](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+
+## Prerequisites
+
+1. The [Pulumi CLI](/docs/install/) — the plugin runs through the plugin runner and uses the Automation API, so the CLI is required.
+1. Terraform state: a local `.tfstate` file **or** credentials for a TFC-compatible remote backend (Terraform Cloud/Enterprise or Scalr).
+1. The Terraform configuration directory containing the `.tf` files, with `terraform init` (or `tofu init`) run so the provider in `.terraform.lock.hcl` is resolvable.
+1. Cloud credentials in the environment for the commands that call AWS. If your organization sources credentials from [ESC](/docs/esc/), wrap commands with `pulumi env run <esc-env> -- <cmd>`.
+
+Install the plugin from the repository's GitHub releases:
+
+```bash
+pulumi plugin install tool import \
+  --server github://api.github.com/pulumi-proserv/pulumi-tool-import
+```
+
+The `github://api.github.com/<owner>/<repo>` server form is required; a plain `https://github.com/...` URL fails because release assets live under `/releases/download/<tag>/`. Verify the install:
+
+```bash
+pulumi plugin run import -- version
+```
+
+## Running with an agent (recommended)
+
+The intended way to run the workflow is to load the [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill into your coding agent and let it orchestrate the pipeline below. The skill adds the judgment the commands don't encode:
+
+1. **Node-by-node, zero-diff gated.** The migration proceeds through modules and resources in dependency order, and each node must reach a zero-diff targeted preview before the next begins.
+1. **Code conversion guidance.** The skill and its companions (`pulumi-terraform-module-to-component`, `pulumi-component-authoring`) carry the rules the agent follows when hand-authoring the program — module-to-component translation, value tracing, data-source equivalents — detailed in step 2 below.
+1. **Deployed state wins.** When the Terraform code, the state, and the live cloud disagree, the deployed state is the source of truth, and each drift decision is documented.
+
+Every command also runs standalone, so the pipeline below works equally well by hand.
+
+## The migration pipeline
+
+The commands form a pipeline, and each one writes an artifact the next one reads. The process is iterative, though, not a single linear pass: the digest runs once per workspace, and everything downstream repeats per node — a module or a group of bare resources — in dependency order. Each node is written, resolved, imported, patched, and verified to a zero-diff targeted preview before the next node starts, and a full preview closes the migration.
+
+```mermaid
+flowchart LR
+    A["digest tf"] --> S
+    subgraph S ["per node, in dependency order"]
+        direction LR
+        B["write program"] --> C["resolve tf"] --> D["import"] --> E["patch-state tf"] --> F["targeted preview"]
+        F -->|diffs remain| B
+    end
+    S --> G["full zero-diff preview"]
+```
+
+Keep every generated artifact in a gitignored directory inside the Pulumi project (for example `.import/`) — digests and state exports can contain sensitive values, and an ignored *directory*, unlike filename patterns, can't miss a new artifact type.
+
+### 1. Digest the Terraform state
+
+`digest tf` analyzes the Terraform configuration and state into a single JSON sidecar describing every module instance, its inputs and outputs, and every resource with its attributes and import ID:
+
+```bash
+pulumi plugin run import -- digest tf \
+  --from ./terraform --state-file terraform.tfstate \
+  --pulumi-project myproject --pulumi-stack dev \
+  --project-dir ./pulumi \
+  --out .import/tf-digest.json
+```
+
+For a remote backend, replace `--state-file` with `--hostname`, `--organization`, `--workspace`, and `--token-env`; the state is read into memory only.
+
+Two important things happen during the digest:
+
+1. **Secrets are extracted safely.** Every attribute the provider schema marks sensitive is redacted from the digest and set as an encrypted stack config secret via `pulumi config set --secret`. An agent working from the digest never sees a secret value. (The standalone `set-secrets` command sets individual secrets by explicit mapping without re-running the digest.)
+1. **Non-importable resource types are detected.** The digest loads the Terraform provider and probes each resource type's import support directly — no credentials or API calls involved — and flags types with no importer as `nonImportable` so later stages route around them.
+
+Treat the digest as sensitive anyway: values embedded inside non-sensitive string fields are not redacted.
+
+### 2. Write the Pulumi program
+
+The code conversion step is not automated code generation: an agent (or you) hand-authors a Pulumi program that reproduces the Terraform code's intent using Pulumi idioms, working from the digest and the Terraform source. The skills encode the guidance this step follows:
+
+1. **Module interfaces come from the digest.** Each Terraform module becomes a Pulumi component whose args derive from the digest's `interface.inputs`, exposing only the inputs call sites actually use, with Terraform types mapped to idiomatic TypeScript types. Terraform idioms like `count`-based conditionals are simplified into real language constructs rather than mirrored.
+1. **Every value traces to its source.** `var.*` becomes stack config, locals become in-program derivations, and evaluated values are never hardcoded — if a value varies by workspace, it belongs in stack config.
+1. **Data sources get dynamic equivalents.** The skill carries equivalence tables: `aws_iam_policy_document` becomes `aws.iam.getPolicyDocumentOutput`, `data.terraform_remote_state` becomes an [ESC](/docs/esc/) environment read, `null_resource` provisioners are re-evaluated case by case, and a dynamic data source is never replaced with a hardcoded value.
+1. **Logical names must line up.** A component child's resource name must match the Terraform resource name, or be mapped in the mappings file, because that pairing is how `resolve tf` fills import IDs in the next step.
+
+Derive the dependency order from the Terraform source — the digest's module input expressions show which modules depend on which. A typical ordering runs networking → data stores → secrets → services → frontend → DNS.
+
+### 3. Generate and resolve the import file
+
+With a node's program code written, generate an import skeleton and fill in the real import IDs:
+
+```bash
+pulumi preview --import-file import.json
+
+pulumi plugin run import -- resolve tf \
+  --digest .import/tf-digest.json --import-file import.json \
+  --mapping-file mappings.yaml --out imports-ready.json
+```
+
+The skeleton's entries carry URNs built from your hand-authored program's Pulumi-style logical names, so the mappings file bridges the two naming schemes — Terraform addresses on the left, your program's names on the right. Resolution is deterministic: the digest plus the mappings fully determine the output, so rerunning `resolve tf` after a rename produces a corrected file rather than requiring hand edits.
+
+```yaml
+modules:
+  # TF module path → Pulumi component instance name
+  "module.core_rds": "coreRds"
+resources:
+  # TF resource address → Pulumi resource name (only where they differ)
+  "module.core_rds.aws_rds_cluster.aurora_cluster": "coreRds-cluster"
+```
+
+Resources flagged `nonImportable` are held out of the import file — an entry for them is guaranteed to fail — and written to a sidecar (`imports-ready.non-importable.json`) for state injection in step 5.
+
+### 4. Import in batches
+
+```bash
+pulumi plugin run import -- import \
+  --file imports-ready.json --project-dir ./pulumi --stack dev
+```
+
+The command imports in batches (100 resources by default; tune with `--batch-size`). When a batch doesn't fully land, it re-imports the missing resources one at a time to identify exactly which IDs failed and carries on, so one run reports **every** bad import ID. Success is determined by reading stack state afterward, which makes reruns after fixing IDs skip everything already imported. Use `--dry-run` to inspect the plan first.
+
+### 5. Patch state and inject non-importable resources
+
+Fields the cloud API doesn't return — write-only values like an RDS `masterPassword`, Lambda function code (the API returns an expiring presigned URL, not the package), provider-side defaults — show up after import as diffs the program didn't cause. `patch-state tf` fills them from the digest, guided by a curated per-resource-type fields file, and injects the non-importable resources from step 3's sidecar directly into state:
+
+```bash
+pulumi plugin run import -- patch-state tf \
+  --digest .import/tf-digest.json \
+  --fields data/aws-import-diff-fields.json \
+  --mapping-file mappings.yaml --config-dir ./terraform \
+  --non-importable imports-ready.non-importable.json \
+  --project-dir ./pulumi --stack dev
+```
+
+In this stack mode the command exports, backs up, patches, injects, imports, and verifies the state itself, restoring the backup automatically if any injected resource doesn't preview as unchanged. Never let a `pulumi up` create a non-importable resource that already exists — association resources typically fail against a pre-existing object partway through the deployment.
+
+### 6. Verify with a zero-diff preview
+
+During the per-node loop, validate each node with a targeted preview (`pulumi preview --target <urn> --target-dependents`) and reach zero real diffs before moving on. Once every node is done, run a full preview with no `--target`:
+
+```bash
+pulumi preview
+```
+
+The migration is done when the full preview shows no real diffs; anything real at this stage is a cross-node interaction the targeted previews missed. Diffs that remain fall into known classes — provider defaults, computed cascades like a Lambda `qualifiedArn` — and anything outside them means a program bug or unpreserved drift to investigate. Investigate `replace` diffs first: they mean the program would destroy and recreate a live resource.
+
+## Next steps
+
+1. Read the [tool README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) for the full flag reference of every command.
+1. See [Migrating from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for the other migration paths, including automated conversion.
+1. Learn how [importing resources](/docs/iac/guides/migration/import/) works in Pulumi generally.
+1. For help with a larger migration, [Pulumi Professional Services](/proserv/) runs these migrations using this exact workflow.
