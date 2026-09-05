@@ -47,8 +47,10 @@ bucket_prefix="$1"
 # this invocation didn't ask for individually.
 if [ "$bucket_prefix" == "deploy" ]; then
     query_prefix=""
+    listing_description="every deploy-path bucket (all events except PR previews)"
 else
     query_prefix="$bucket_prefix"
+    listing_description="the prefix $(origin_bucket_prefix)-${bucket_prefix}"
 fi
 
 buckets=$(get_recent_buckets $query_prefix)
@@ -75,7 +77,7 @@ maybe_echo() {
 }
 
 if [ "$bucket_count" == "0" ]; then
-    maybe_echo "No recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix} were found."
+    maybe_echo "No recent buckets matching ${listing_description} were found."
     exit
 fi
 
@@ -88,7 +90,7 @@ fi
 # Query for the bucket currently serving pulumi.com.
 currently_deployed_bucket="$(curl -s ${WEBSITE_URL}/metadata.json | jq -r '.bucket' || echo '')"
 
-maybe_echo "Found ${bucket_count} recent buckets matching the prefix $(origin_bucket_prefix)-${bucket_prefix}:"
+maybe_echo "Found ${bucket_count} recent buckets matching ${listing_description}:"
 
 # Variables used for determining whether a push-built bucket is safe to delete.
 
