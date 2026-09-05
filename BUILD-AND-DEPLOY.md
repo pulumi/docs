@@ -569,6 +569,17 @@ Creates S3 bucket, syncs content, and validates deployment.
    www-{environment}-pulumi-docs-origin-{build-id}
    ```
 
+   For deploy-path builds (`update`; i.e. pushes to `master` and the scheduled/manual
+   rebuilds in `build-and-deploy.yml`), `{build-id}` also carries a short per-run token, so
+   two runs at the same commit -- most commonly a scheduled rebuild with no intervening
+   push -- never compute the same bucket name. Without that, a name collision hits the
+   swallowed `BucketAlreadyOwnedByYou` error a few lines down and the script proceeds to
+   sync in place against a bucket that may already be serving the live site. PR preview
+   builds (`preview`) intentionally keep the deterministic, non-uniquified name, since
+   `build-site.sh` bakes it into the preview site's absolute `HUGO_BASEURL` at build time
+   and the same PR needs to keep reusing that bucket across pushes. See `deploy_bucket_name()`
+   and `build_identifier()` in `scripts/common.sh` for the exact logic.
+
 2. **Configures bucket**:
    - Website hosting (index.html, 404.html)
    - Public access (ACL enabled)
@@ -1557,8 +1568,10 @@ www-{environment}-pulumi-docs-origin-{identifier}
 
 Examples:
 
-- Production: `www-production-pulumi-docs-origin-a1b2c3d4`
-- Testing: `www-testing-pulumi-docs-origin-pr-123-abc1234`
+- Production push/schedule/manual (deploy path, includes a per-run uniquifier so same-commit
+  reruns never collide): `www-production-pulumi-docs-origin-push-a1b2c3d4-k3f9j2`
+- Testing PR preview (deterministic, no uniquifier -- see `sync-and-test-bucket.sh`):
+  `www-testing-pulumi-docs-origin-pr-123-abc1234`
 
 **Configuration:**
 

@@ -122,6 +122,103 @@ build_identifier() {
     echo "$identifier"
 }
 
+# to_base36 converts a non-negative integer to a lowercase base-36 string. Used to keep
+# the deploy-run uniquifier (see deploy_run_uniquifier below) as compact as possible, since
+# it has to fit inside S3's 63-character bucket-name limit alongside the bucket prefix, the
+# event name, and the commit SHA.
+to_base36() {
+    local n=$1
+    local chars="0123456789abcdefghijklmnopqrstuvwxyz"
+    local result=""
+
+    if [ "$n" -eq 0 ]; then
+        echo "0"
+        return
+    fi
+
+    while [ "$n" -gt 0 ]; do
+        result="${chars:$((n % 36)):1}${result}"
+        n=$((n / 36))
+    done
+
+    echo "$result"
+}
+
+# deploy_run_uniquifier returns a short token that's different across separate script
+# invocations that would otherwise compute the same build_identifier -- most importantly,
+# two scheduled rebuilds of the same commit (no new push in between). In CI, this is the
+# GitHub Actions run ID (plus the run attempt, if this is a re-run), base36-encoded to stay
+# compact. Outside CI, it falls back to the current epoch second, also base36-encoded.
+deploy_run_uniquifier() {
+    if [[ ! -z "$GITHUB_RUN_ID" ]]; then
+        local run_attempt="${GITHUB_RUN_ATTEMPT:-1}"
+        local encoded="$(to_base36 "$GITHUB_RUN_ID")"
+
+        if [ "$run_attempt" != "1" ]; then
+            encoded="${encoded}${run_attempt}"
+        fi
+
+        echo "$encoded"
+    else
+        to_base36 "$(date +%s)"
+    fi
+}
+
+# deploy_bucket_name returns the name of the S3 bucket to use for a deploy-path (i.e.,
+# non-preview) build: pushes to master and the scheduled/manual rebuilds in
+# build-and-deploy.yml. Unlike build_identifier(), which is also used to fingerprint asset
+# bundle paths and therefore MUST stay identical for a given commit, this appends a short
+# per-run token (deploy_run_uniquifier) so that two deploy runs at the same commit never
+# collide on the same bucket name.
+#
+# Why this matters: sync-and-test-bucket.sh treats "bucket already exists" as an expected,
+# swallowed condition (aws s3 mb ... || true) covering the case where a previous run of
+# *this same build* failed partway through. Without a uniquifier, an unrelated later run
+# that happens to share a commit -- e.g. a scheduled rebuild with no intervening push --
+# hits that same swallowed condition and then runs a destructive `s5cmd sync --delete` in
+# place against the pre-existing bucket, which may be the one CloudFront is actively
+# serving. Preview (PR) builds are intentionally excluded: they're named directly by the
+# caller from build_identifier() so a PR keeps reusing the same bucket across pushes, and
+# they're never a CloudFront origin, so they carry none of this risk.
+#
+# The result is clamped to S3's 63-character bucket-name limit by trimming the event-name
+# segment of build_identifier() only -- never the commit SHA (needed for traceability) and
+# never the uniquifier (needed for collision-freedom). If build_identifier() has no
+# trimmable event segment (e.g. a caller-supplied $BUILD_IDENTIFIER with no embedded event)
+# and the name still doesn't fit, this fails loudly rather than silently truncating the SHA
+# or the uniquifier.
+deploy_bucket_name() {
+    local prefix identifier uniq name max_len overflow event_part rest_part
+
+    prefix="$(origin_bucket_prefix)"
+    identifier="$(build_identifier)"
+    uniq="$(deploy_run_uniquifier)"
+    name="${prefix}-${identifier}-${uniq}"
+    max_len=63
+
+    if [ "${#name}" -gt "$max_len" ]; then
+        overflow=$(( ${#name} - max_len ))
+
+        if [[ "$identifier" != *-* ]]; then
+            echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}) and build_identifier ('${identifier}') has no event segment to trim; refusing to silently truncate the SHA or the uniquifier." >&2
+            return 1
+        fi
+
+        event_part="${identifier%-*}"
+        rest_part="${identifier##*-}"
+
+        if [ "$overflow" -ge "${#event_part}" ]; then
+            echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}) and trimming the event segment ('${event_part}') isn't enough to fit; refusing to silently truncate the SHA or the uniquifier." >&2
+            return 1
+        fi
+
+        event_part="${event_part:0:$(( ${#event_part} - overflow ))}"
+        name="${prefix}-${event_part}-${rest_part}-${uniq}"
+    fi
+
+    echo "$name"
+}
+
 # List the 100 most recent bucket in the current account, sorted descendingly by
 # CreationDate, matching the prefix we use to name website buckets. Supports an optional
 # suffix to filter by (e.g., "pr" or "push").
