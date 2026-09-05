@@ -154,6 +154,13 @@
   description: Cloud accounts connected for resource discovery, and the scans run against them.
   match:
     prefixes:
+      - cloud-account-
+      - discovery-
+      # `insights-` was this product area's original prefix before its events
+      # were renamed to `cloud-account-*` and `discovery-*`. Kept in case
+      # Pulumi Cloud still emits the old ids during the transition; a stale
+      # prefix here is harmless, but dropping it too early would re-break the
+      # nightly job the moment an old id is seen again.
       - insights-
 
 - id: neo
