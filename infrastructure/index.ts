@@ -104,9 +104,6 @@ const dotnetLowercaseFunction = new aws.cloudfront.Function("dotnet-lowercase-ur
     publish: true,
 });
 
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
-const cloudAiAppDomain = aiAppStack.requireOutput('cloudAiAppDistributionDomain');
-
 // Reference to the OSS Airflow on EKS stack for data warehouse access (only if enabled)
 let airflowIrsaRoleArn: pulumi.Output<any> | undefined;
 if (config.enableDataWarehouseAccess) {
@@ -1197,18 +1194,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
                 httpPort: 80,
                 httpsPort: 443,
                 originSslProtocols: ["TLSv1.2"],
-            },
-        },
-        {
-            originId: cloudAiAppDomain,
-            domainName: cloudAiAppDomain,
-            customOriginConfig: {
-                originProtocolPolicy: "https-only",
-                httpPort: 80,
-                httpsPort: 443,
-                originSslProtocols: ["TLSv1.2"],
-                originReadTimeout: 60,
-                originKeepaliveTimeout: 60,
             },
         },
         ...registryOrigins,
