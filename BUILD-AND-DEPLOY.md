@@ -3433,29 +3433,27 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 ### Dependabot configuration
 
-**Schedule:** Monthly updates (first Monday at 09:00 UTC)
+**Schedule:** Monthly version updates (09:00 UTC). Security updates ignore the schedule entirely — see below.
 
 **Ecosystems:**
 
-- npm (root, theme, stencil, infrastructure)
+- npm — root, `/theme`, `/theme/stencil`, `/infrastructure`, `/infrastructure/versioned-docs`, `/scripts/snippet-sweep`
 - GitHub Actions
-- pip (Python dependencies)
+- pip — `/scripts/python`, `/scripts/image-borders`, `/tools/pydocgen`. (The root `Pipfile` declares no packages; it only pins `python_version`.) **Only `/tools/pydocgen` is expected to produce updates today**: it is the sole directory with real version constraints (`sphinx >=7.1,<7.2`) and a `Pipfile.lock`. The other two pin every package as `"*"` and ship no lock, so there is no resolved version for Dependabot to bump or to match against an advisory range — the same "matches nothing" failure as the old `/scripts` entry, one level subtler. Committing a `Pipfile.lock` for those two directories is what would make them live.
+- devcontainers — `.devcontainer/devcontainer.json`
+- `/static/programs` — **security batching only**, across npm, gomod, pip, nuget, maven, and docker. These entries carry `open-pull-requests-limit: 0`, so they never produce version updates; they exist purely to collapse the security PRs GitHub opens against the 444 sample programs. `scripts/programs/upgrade.sh` owns version upgrades for those.
 
-**Grouping Strategy:** Ultra-aggressive single catch-all group per ecosystem
+**Grouping strategy:** every entry carries two groups — a catch-all for version updates, and a second catch-all with `applies-to: security-updates`.
 
-- Root: `all-dependencies` group captures all npm packages
-- Theme: `all-dependencies` group captures all theme packages
-- Stencil: `all-dependencies` group captures all stencil packages
-- Infrastructure: `all-dependencies` group captures all infrastructure packages
-- GitHub Actions: `all-actions` group captures all action updates
+The second one matters more than the first. A `groups` entry without `applies-to` covers version updates *only*, so before it was added, security updates were completely ungrouped: one PR per affected package per manifest. That is how the repo saw 9 Dependabot PRs on 2026-07-23, 8 on 2026-08-03, and 11 on 2026-09-01, and why `js-yaml` alone produced 9 PRs between July and September.
 
-**Expected Volume:** 5 grouped PRs per month + security patches as needed
+**Expected volume:** roughly 9 grouped version-update PRs per month (one per configured ecosystem/directory), plus one security PR per ecosystem per advisory day.
 
-**PR Limits:** 1 PR per ecosystem (prevents flooding)
+**PR limits:** 1 PR per ecosystem for version updates. **This limit does not apply to security updates** — GitHub's documentation is explicit that security PRs "are not subject to this limit and do not count toward it." Neither `schedule` nor `open-pull-requests-limit` constrains them; only grouping does.
 
-**Major Version Updates:** Blocked for non-security updates via wildcard ignore rules
+**Major version updates:** Blocked for non-security updates via wildcard ignore rules. Note that `ignore` conditions apply to security updates too, so an advisory whose only fix is a major bump can be suppressed by these rules — see the caveat under Security patch handling.
 
-**Security Updates:** Arrive immediately regardless of schedule (Dependabot auto-override)
+**Security updates:** Arrive immediately regardless of schedule, and are the dominant source of PR volume. In the two months to 2026-09-02, 59 Dependabot PRs were opened: only 10 came from the monthly schedule and the other 49 were security updates. Treat that 5:1 ratio as a snapshot of one advisory-heavy window rather than a constant — the monthly figure is fixed by the config, but the security figure tracks whatever advisories land.
 
 ### Automated labeling
 
@@ -3467,19 +3465,35 @@ All Dependabot PRs automatically receive:
 
 **Auto-applied labels (via label-dependabot.yml workflow):**
 
-- `deps-security-patch` - Security update; evaluate and merge promptly
-- `deps-lambda-edge-risk` - Webpack/bundler/AWS SDK updates (see Infrastructure Change Review)
-- `deps-bulk-update` - 10+ dependencies in single PR
+- `deps-security-patch` - Genuine security update (derived from Dependabot's signed advisory metadata)
+- `deps-lambda-edge-risk` - Bundler, Pulumi SDK, or AWS SDK updates (see Infrastructure Change Review)
+- `deps-bulk-update` - 5 or more dependencies in a single PR
 
-The workflow does not classify PRs into risk tiers. Dependency updates are
-grouped per ecosystem and arrive at a low, predictable volume, so the policy is
-simply to evaluate each PR and merge it once CI is green (see below). The two
-flags above surface the only signals that change handling: security patches get
-priority, and `deps-lambda-edge-risk` PRs need the bundle-size check.
+All three are computed from `dependabot/fetch-metadata` outputs rather than from the PR body. That distinction is load-bearing, because body parsing got both of the interesting labels wrong:
+
+- **`deps-security-patch` fired on nearly everything.** The old test was a `security` substring match on the title and body, and every single-dependency Dependabot PR carries boilerplate containing that word (a compatibility-score link to `about-dependabot-security-updates`, plus the footer "You can disable automated security fix PRs…"). Measured on this repo: 207 Dependabot PRs match that boilerplate; only 52 reference an actual advisory. A label reading "merge immediately" that appears on routine bumps carries no signal.
+- **`deps-bulk-update` and `deps-lambda-edge-risk` never fired on grouped PRs at all.** The old extractor matched `Bumps [name]`, but a grouped body reads `Bumps the all-dependencies group … with 7 updates:` followed by a markdown table and ``Updates `name` from x to y`` lines — no bracket in either. So the dependency list was empty for every grouped PR, which is the only kind that can be bulk. PR #21285 bumped 7 packages including `webpack` and `css-loader` and received neither label.
+
+The workflow does not classify PRs into risk tiers. The three flags surface the signals that change handling: `deps-lambda-edge-risk` PRs need the bundle-size check, and `deps-bulk-update` PRs warrant a closer read.
+
+### Auto-merge
+
+When the `DEPS_AUTO_MERGE` repository variable is set to `true`, `label-dependabot.yml` approves qualifying Dependabot PRs as `pulumi-bot` and hands them to GitHub's native auto-merge, which waits for the required build check on its own. **A PR qualifies unless it carries `deps-lambda-edge-risk` or `deps-bulk-update`** — those two stay in the human queue, and the triage comment says which flag held it.
+
+Unset the variable to turn the whole thing off; PRs already armed can be released individually with `gh pr merge --disable-auto <number>`. Same switch pattern as `BLOG_REVIEW_COUNT`.
+
+Two details that are load-bearing rather than incidental:
+
+- **The approval is posted as `pulumi-bot`, using a token minted from Pulumi ESC over OIDC.** `master` requires an approving review, and GitHub's auto-merge waits for *every* branch protection requirement, not just checks — so an unapproved PR with a green build sits armed indefinitely. A bot approving a bot-authored PR gated on CI states that policy honestly, which a routine stamping every PR under a human's name did not.
+- **The merge must be armed with `PULUMI_BOT_TOKEN`, never `GITHUB_TOKEN`.** `build-and-deploy.yml` triggers on push to `master`, and events created with `GITHUB_TOKEN` do not trigger workflows. A `GITHUB_TOKEN` merge would land and never deploy — and the three daily scheduled rebuilds would hide that for hours rather than surfacing it.
+
+Because both risk flags were computed incorrectly before 2026-09 (see above), do not enable this switch against a build of the labelling workflow that predates that fix: PR #21285 bumped `webpack` and would have qualified.
+
+One detail worth recording, because it is easy to assume otherwise: the GitHub OIDC subject claim does **not** include the actor. A `pull_request` run presents `repo:pulumi/docs:pull_request` whether Dependabot or a person opened the PR, so the ESC token path was verifiable on an ordinary PR and needed no Dependabot event to test. It was confirmed on run `33815532057`: a token is issued with no `environment:` set, and it authenticates as `pulumi-bot`.
 
 ### Monthly triage workflow
 
-On the first Monday of each month, Dependabot generates roughly 5 grouped PRs (one per ecosystem), plus security patches as they arise. The policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral. Grouping already keeps volume low, so batching buys nothing.
+Each month Dependabot generates one grouped version-update PR per configured ecosystem/directory, plus security patches as advisories land. With `DEPS_AUTO_MERGE` enabled, the small ones merge themselves; the larger grouped PRs — anything at five or more packages, and anything touching `@pulumi/aws`, `@pulumi/pulumi`, or a bundler — are held by a risk flag, and the list below applies to those. Since every entry uses a catch-all `patterns: ["*"]` group, expect a good share of the *monthly* PRs to be held; it is the off-schedule security PRs, which are usually one or two packages, that mostly merge unattended. With the variable unset, the policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral.
 
 For each PR:
 
@@ -3843,29 +3857,9 @@ Static assets (images, icons) used on the homepage and product pages can be fing
 
 #### Dependabot Configuration
 
-**File:** `.github/dependabot.yml`
+See [Dependency management](#dependency-management) for the schedule, grouping strategy, labels, and triage workflow. The configuration itself lives in `.github/dependabot.yml` and is documented by comments in that file.
 
-```yaml
-version: 2
-updates:
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
-
-  - package-ecosystem: github-actions
-    directory: "/"
-    schedule:
-      interval: weekly
-```
-
-**Process:**
-
-1. Dependabot creates PR with dependency update
-2. CI runs tests automatically
-3. Review changes
-4. Merge if tests pass
+This section previously inlined a copy of the config. It had drifted badly — it still described a two-entry, weekly, `open-pull-requests-limit: 10` setup that had not existed for a long time, and its process steps contradicted the triage workflow documented above. An inline copy of a config file will always drift, so it is deliberately not reproduced here.
 
 #### Secret Rotation
 
