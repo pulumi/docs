@@ -24,21 +24,44 @@ set -o errexit -o pipefail
 #   ./scripts/list-recent-buckets.sh schedule
 #   ./scripts/list-recent-buckets.sh workflow-dispatch
 #
+#   # List every deploy-path bucket (push, schedule, workflow-dispatch, ... -- everything
+#   # except PR previews) as one combined, correctly-ranked retention window. Prefer this
+#   # over the individual event filters above when checking what's safe to delete: push,
+#   # schedule, and workflow-dispatch buckets all draw from the same 10-bucket retention
+#   # window, and filtering to a single event first can hide the live bucket from that
+#   # window when the live bucket happened to come from a different event.
+#   ./scripts/list-recent-buckets.sh deploy
+#
 #   # List only the buckets that can be safely deleted
-#   ./scripts/list-recent-buckets.sh [push | schedule | workflow-dispatch | pr] --only-deletables
+#   ./scripts/list-recent-buckets.sh [push | schedule | workflow-dispatch | deploy | pr] --only-deletables
 
 source ./scripts/common.sh
 
 bucket_prefix="$1"
-buckets=$(get_recent_buckets $bucket_prefix)
+
+# "deploy" is a virtual filter, not a real bucket-name prefix: it means "every deploy-path
+# bucket, regardless of which event produced it". We pass no prefix to get_recent_buckets so
+# the query returns push, schedule, workflow-dispatch, *and* pr buckets together (AWS has no
+# server-side "not pr" filter), then skip the pr ones below when doing the retention count,
+# so the live bucket is never missing from the window just because it came from an event
+# this invocation didn't ask for individually.
+if [ "$bucket_prefix" == "deploy" ]; then
+    query_prefix=""
+else
+    query_prefix="$bucket_prefix"
+fi
+
+buckets=$(get_recent_buckets $query_prefix)
 buckets_as_array=($buckets)
 bucket_count=${#buckets_as_array[@]}
 only_deletables=false
 
 # Any bucket-prefix filter can be flagged as deletable -- "pr" gets the closed-PR check
-# below, and every other deploy-path prefix (push, schedule, workflow-dispatch, etc.) gets
-# the beyond-the-currently-served-bucket check. Listing with no filter at all isn't
-# deletable, since "all buckets" isn't a coherent retention policy.
+# below, and every deploy-path filter (push, schedule, workflow-dispatch, deploy) gets the
+# beyond-the-currently-served-bucket check. Listing with no filter at all isn't deletable,
+# since "all buckets" isn't a coherent retention policy -- guard on $1 being non-empty, not
+# just non-"pr", or an unfiltered listing would apply the deploy-path retention rule to PR
+# preview buckets too.
 if [[ -n "$1" && "$2" == "--only-deletables" ]]; then
     only_deletables=true
 fi
@@ -111,12 +134,24 @@ for bucket in $buckets; do
             website_bucket_identified=true
         fi
 
+        # A PR-preview bucket in the "deploy" listing's combined result set (see the
+        # query_prefix note above) has its own closed-PR retention rule below and must not
+        # be counted toward, or offered up under, the deploy-path beyond-current-website
+        # check: mixing the two would let stale PR previews eat into the 10-bucket deploy
+        # retention window, and vice versa.
+        is_pr_bucket=false
+        if [[ "$bucket_name" == "$(origin_bucket_prefix)-pr-"* ]]; then
+            is_pr_bucket=true
+        fi
+
         # For deploy-path buckets (anything other than PR previews), indicate whether they
         # can be safely deleted based on how far behind the live website bucket they are.
         # This covers push, schedule, and workflow-dispatch builds alike -- they all share
         # the same origin_bucket_prefix()-<event>-<sha>[-<uniquifier>] shape and the same
-        # single currently-deployed-bucket check above.
-        if [ "$1" != "pr" ]; then
+        # single currently-deployed-bucket check above. Requiring a non-empty $1 keeps an
+        # unfiltered listing (all buckets, PR previews included) from applying this rule to
+        # buckets whose real retention rule is the closed-PR check below.
+        if [ -n "$1" ] && [ "$1" != "pr" ] && [ "$is_pr_bucket" == false ]; then
             if [ "$buckets_beyond_current" -gt "$buckets_to_retain" ]; then
                 maybe_echo
                 maybe_echo "❌ This bucket is ${buckets_beyond_current} buckets behind the current website, so it can safely be deleted."
@@ -148,8 +183,12 @@ for bucket in $buckets; do
         fi
 
         # If the current website bucket exists in this batch, note it, and increment the
-        # counter that'll determine whether an older bucket can be safely deleted.
-        if [ "$website_bucket_identified" == true ]; then
+        # counter that'll determine whether an older bucket can be safely deleted. A PR
+        # bucket encountered here (only possible in "deploy" mode's combined listing) is
+        # skipped: it draws from the closed-PR retention rule, not this 10-bucket window,
+        # and counting it here would shrink that window for the deploy-path buckets it's
+        # actually meant to protect.
+        if [ "$website_bucket_identified" == true ] && [ "$is_pr_bucket" == false ]; then
             buckets_beyond_current=$((buckets_beyond_current+1))
         fi
     else
