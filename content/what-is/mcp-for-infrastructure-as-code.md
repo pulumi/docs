@@ -2,6 +2,7 @@
 title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 meta_desc: MCP connects AI agents to your cloud infrastructure. Learn what MCP for IaC means, how vendors are building it, and how Pulumi's MCP server works.
 type: what-is
+date: 2026-07-21T12:18:32-07:00
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 schema_type: auto
 authors: ["alex-leventer"]

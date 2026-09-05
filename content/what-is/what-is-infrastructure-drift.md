@@ -2,6 +2,7 @@
 title: What Is Infrastructure Drift?
 meta_desc: "Infrastructure drift is when live cloud resources diverge from your IaC code. Learn what causes it, how to detect it, and how to reconcile it safely."
 type: what-is
+date: 2026-07-07T15:30:27-07:00
 page_title: "What Is Infrastructure Drift?"
 authors: ["alex-leventer"]
 ---

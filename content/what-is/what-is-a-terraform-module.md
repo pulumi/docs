@@ -2,6 +2,7 @@
 title: What Is a Terraform Module?
 meta_desc: "A Terraform module is a reusable container for a group of related resources, defined once and called with different inputs. Learn how modules work."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is a Terraform Module?"
 authors: ["alex-leventer"]
 ---

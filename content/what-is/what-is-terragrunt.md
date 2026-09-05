@@ -2,6 +2,7 @@
 title: What Is Terragrunt?
 meta_desc: "Terragrunt wraps Terraform and OpenTofu to add DRY configuration, remote state management, and multi-module orchestration. Learn how it works."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Terragrunt?"
 authors: ["alex-leventer"]
 ---

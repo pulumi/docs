@@ -2,6 +2,7 @@
 title: What Is Cloud Misconfiguration?
 meta_desc: "A cloud misconfiguration is an insecure setting on a cloud resource that exposes data or systems. Learn the common types and how to prevent them."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Cloud Misconfiguration?"
 authors: ["alex-leventer"]
 ---
