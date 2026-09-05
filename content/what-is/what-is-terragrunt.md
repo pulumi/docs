@@ -3,7 +3,7 @@ title: What Is Terragrunt?
 meta_desc: "Terragrunt wraps Terraform and OpenTofu to add DRY configuration, remote state management, and multi-module orchestration. Learn how it works."
 type: what-is
 page_title: "What Is Terragrunt?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 **Terragrunt is an open-source, thin wrapper for Terraform and OpenTofu that adds DRY configuration, automated remote state management, and multi-module orchestration on top of the underlying tool.** Originally created by [Gruntwork](https://gruntwork.io/), it exists to solve the repetition and scaling problems teams hit when they manage large infrastructure estates with plain Terraform or OpenTofu across many environments and modules.

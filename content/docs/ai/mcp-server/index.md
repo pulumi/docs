@@ -22,7 +22,7 @@ The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assista
 
 ## What is the Pulumi MCP server?
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specification that allows language models to interact with external tools and data sources in a structured way. Pulumi's MCP server implementation provides AI assistants with the ability to:
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specification that allows language models to interact with external tools and data sources in a structured way. For more on how that standard applies specifically to provisioning and managing cloud infrastructure, see [MCP for infrastructure as code](/what-is/mcp-for-infrastructure-as-code/). Pulumi's MCP server implementation provides AI assistants with the ability to:
 
 - **Query your Pulumi Cloud stacks** and their resources
 - **Search across all cloud resources** in your organization using advanced queries

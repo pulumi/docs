@@ -3,7 +3,7 @@ title: What Is a Terraform Module?
 meta_desc: "A Terraform module is a reusable container for a group of related resources, defined once and called with different inputs. Learn how modules work."
 type: what-is
 page_title: "What Is a Terraform Module?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 **A Terraform module is a container for multiple resources that are used together: a reusable, self-contained group of `.tf` configuration files that expose input variables, provision a set of resources, and return output values. Instead of copying the same block of HCL into every project that needs a virtual private cloud, a database, or a Kubernetes cluster, you package that configuration once as a module and call it wherever you need it, passing different inputs each time.** A module is the primary unit of reuse and encapsulation in Terraform.

@@ -3,7 +3,7 @@ title: What Is Infrastructure Drift?
 meta_desc: "Infrastructure drift is when live cloud resources diverge from your IaC code. Learn what causes it, how to detect it, and how to reconcile it safely."
 type: what-is
 page_title: "What Is Infrastructure Drift?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 **Infrastructure drift is the gap that opens when the cloud resources running in your account no longer match the desired state described in your infrastructure as code. It happens when someone changes a resource out-of-band—through the console, a CLI, or an automated process—so what's actually deployed diverges from what your code says should exist.** Left undetected, drift erodes the core promise of IaC: that your code is a reliable description of your infrastructure.

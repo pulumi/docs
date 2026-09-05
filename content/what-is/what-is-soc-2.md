@@ -3,7 +3,7 @@ title: What is SOC 2?
 meta_desc: "SOC 2 is an AICPA attestation that proves a service provider's controls meet the Trust Services Criteria. Learn Type I vs Type II, scope, and the audit process."
 type: what-is
 page_title: "What is SOC 2?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 **SOC 2 (System and Organization Controls 2) is an attestation report produced by an independent CPA firm that evaluates a service provider's controls against the AICPA's Trust Services Criteria (security, availability, processing integrity, confidentiality, and privacy).** A SOC 2 report is the document that most US enterprise buyers ask SaaS vendors to produce before signing a contract.

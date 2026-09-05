@@ -3,7 +3,7 @@ title: What Is GitOps?
 meta_desc: "GitOps manages infrastructure and apps with Git as the single source of truth and agents that reconcile live state to match. Learn how it works."
 type: what-is
 page_title: "What Is GitOps?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 **GitOps is an operational model that manages infrastructure and applications by treating a Git repository as the single source of truth for the desired state of a system, with automated agents that continuously reconcile the live environment to match what is declared in Git.** Every change happens through a Git commit and a pull request, and software running inside the environment pulls those changes and applies them, so the repository, not a person running commands, is the authority on what should be deployed.

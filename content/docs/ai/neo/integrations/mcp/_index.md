@@ -13,7 +13,7 @@ menu:
         identifier: ai-integrations-mcp
 ---
 
-MCP integrations connect Neo to external services that expose a [Model Context Protocol](https://modelcontextprotocol.io/) server. Once connected, Neo can use those services as tools during a [task](/docs/ai/neo/tasks/), with credentials managed centrally in Pulumi Cloud.
+MCP integrations connect Neo to external services that expose a [Model Context Protocol](https://modelcontextprotocol.io/) server — the same open standard covered in [MCP for infrastructure as code](/what-is/mcp-for-infrastructure-as-code/). Once connected, Neo can use those services as tools during a [task](/docs/ai/neo/tasks/), with credentials managed centrally in Pulumi Cloud.
 
 > [!INFO]
 > This page is about connecting Neo to other services' MCP servers. To connect your own AI agent (Claude Code, Cursor, and others) to Pulumi, see the [Pulumi MCP server](/docs/ai/mcp-server/).
