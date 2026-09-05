@@ -132,9 +132,17 @@
         "@id" (printf "https://www.pulumi.com/authors/%s/#%s" (. | urlize) (cond $isOrg "organization" "person"))
         "name" $displayName
       }}
-      {{ if $isOrg }}
+      {{/* parentOrganization only for a Pulumi house team (mirrors
+           author-entities.html) -- a third-party guest organization
+           (entity_type "organization" but no `company = "Pulumi"`) isn't
+           wrongly claimed as a Pulumi sub-entity. */}}
+      {{ $isPulumiOrg := false }}
+      {{ if $authorData }}
+        {{ $isPulumiOrg = and $isOrg (eq $authorData.company "Pulumi") }}
+      {{ end }}
+      {{ if $isPulumiOrg }}
         {{ $fallbackAuthor = merge $fallbackAuthor (dict "parentOrganization" (dict "@id" "https://www.pulumi.com/#organization")) }}
-      {{ else }}
+      {{ else if not $isOrg }}
         {{ $fallbackAuthor = merge $fallbackAuthor (dict "worksFor" (dict "@id" "https://www.pulumi.com/#organization")) }}
       {{ end }}
       {{ $fallbackAuthorPage := site.GetPage (printf "/authors/%s" (. | urlize)) }}

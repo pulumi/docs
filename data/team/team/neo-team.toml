@@ -1,6 +1,7 @@
 id = "neo-team"
 name = "Pulumi Neo Team"
 title = "Product Team"
+company = "Pulumi"
 status = "active"
 
 # This byline is a group, not a natural person -- schema.org Person denotes an

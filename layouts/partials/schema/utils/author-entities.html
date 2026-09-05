@@ -128,11 +128,14 @@
           "@id" "https://www.pulumi.com/#organization"
           "name" "Pulumi"
         )) }}
-      {{ else }}
-        {{/* A group byline belongs to Pulumi as a sub-entity, not an
+      {{ else if eq .company "Pulumi" }}
+        {{/* A Pulumi house team belongs to Pulumi as a sub-entity, not an
              affiliate -- parentOrganization keeps the author @id distinct
              from https://www.pulumi.com/#organization (the publisher) while
-             still tying it to the org node. */}}
+             still tying it to the org node. Gated on .company so a
+             third-party guest organization (entity_type "organization" but
+             no `company = "Pulumi"`, e.g. linio-engineering) isn't wrongly
+             claimed as a Pulumi sub-entity. */}}
         {{ $author = merge $author (dict "parentOrganization" (dict
           "@type" "Organization"
           "@id" "https://www.pulumi.com/#organization"
