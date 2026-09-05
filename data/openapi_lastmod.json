@@ -70,8 +70,8 @@
       "lastmod": "2026-08-25"
     },
     "Environments": {
-      "hash": "37cfbcf64e462b35c8a66653a5aa8b097917f73e44c892c178a5283ae9593001",
-      "lastmod": "2026-08-25"
+      "hash": "8c9623eb43f38f53c542ae2eec4542abb32e3d4375cdc8de2064bd1e8ec5c115",
+      "lastmod": "2026-09-05"
     },
     "InsightsAccounts": {
       "hash": "8d2a240a4a21efa9f523fd27105ab259fc3a49666f66b74d5d5c36edb9f3e985",
@@ -122,8 +122,8 @@
       "lastmod": "2026-08-25"
     },
     "ResourceSearch": {
-      "hash": "7ba0b5ec37ea396eaaea48bbeafdabcbc29329420f2d1bb1e64f7b56dcfb2d3a",
-      "lastmod": "2026-08-25"
+      "hash": "588f2a12ba9ee72aab10a167eec39d2b72d1d4e3d2a3423f8a5d2fa8e959f348",
+      "lastmod": "2026-09-05"
     },
     "ResourcesUnderManagement": {
       "hash": "3284a3978d7453eda462222bca28130b163ed66f6bacc129fbf1cef111b8cde4",
@@ -154,8 +154,8 @@
       "lastmod": "2026-08-25"
     },
     "Stacks": {
-      "hash": "988baf216384fb808f6f8e016803502c071aabf5e97101407307a67200a052f6",
-      "lastmod": "2026-08-25"
+      "hash": "0955825db62bc730353dc4f0efe819a2e97c1c97b9bb26555365cb825e6c3d3b",
+      "lastmod": "2026-09-05"
     },
     "Users": {
       "hash": "ac42f0ee5468d9f0d628cf8366d8c530f6bfc594c04fda34980a126288304378",
@@ -2739,6 +2739,9 @@
     },
     "StackNotificationSettings": {
       "hash": "fa17bbc5c9c8a57938db80ad29e98c28a1a381ae4668d161ad45ee1511e73d11"
+    },
+    "StackOutputsResponse": {
+      "hash": "edb93d33ff362f944f9e09f648d21638682e66b6c53c6ae9a8768f1ffa79cdda"
     },
     "StackOverviewResponse": {
       "hash": "fdffd90f6eafd93af4aee5869f43370e4f760894b80e057363fb6832c300e48c"
