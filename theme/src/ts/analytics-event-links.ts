@@ -6,6 +6,10 @@
 //
 // Does not call preventDefault: navigation (including a cross-domain link)
 // proceeds exactly as it would without the attribute.
+//
+// Anchors are bound once at DOMContentLoaded, so this covers server-rendered
+// markup only -- links painted later by a Stencil component (for example, a
+// pulumi-multi-select-form CTA) won't be tracked.
 
 document.addEventListener("DOMContentLoaded", () => {
     const analytics = (window as any).analytics;
