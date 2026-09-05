@@ -1,0 +1,221 @@
+# The editorial layer over the auto-generated Pulumi package schema reference at
+# /docs/iac/guides/building-extending/packages/schema/.
+#
+# The schema data itself is NOT here. scripts/fetch-package-schema.js pulls it from
+# the upstream repos that own it -- the metaschema pulumi/pulumi validates against
+# in `pulumi schema check`, plus each language's *PackageInfo Go struct -- and writes
+# data/package_schema/*.json, which layouts/shortcodes/package-schema.html renders.
+# This file says which parts of those sources become documented types, what they are
+# called, what anchor each one gets, and where our prose beats upstream's.
+#
+# THE RULE: everything here is editorial. If a fact about the schema can be read from
+# upstream, it must come from upstream -- that is the entire point of the pipeline.
+# Reach for `descriptions:` only where upstream has no description to give.
+#
+# Anchors are a contract. Every `id:` below is a live URL fragment: the type list
+# reproduces the anchors the hand-written page had, and #default in particular is
+# deep-linked from content/docs/iac/guides/building-extending/providers/
+# provider-configuration.md. Renaming a `title:` is safe; changing an `id:` is a
+# breaking change that needs an alias somewhere. data/package_schema/anchors.yaml
+# holds the contract, and the shortcode fails the build if an id in it stops being
+# emitted.
+#
+# The generator fails on an override that no longer matches anything upstream -- an
+# unresolvable `pointer:`, a `descriptions:` key for a property that no longer exists,
+# an `exclude:` for a field that is already gone. That is deliberate: this file should
+# shrink as upstream fills its own gaps, not quietly rot.
+
+# ---------------------------------------------------------------------------
+# Core reference: types read out of pulumi/pulumi's pkg/codegen/schema/pulumi.json.
+#
+# `pointer:` is a JSON pointer into that document. A segment written `title:<value>`
+# selects the member of an array whose `title` equals <value>, so hoisting a type out
+# of a `oneOf` does not depend on the branch's position in the list.
+# ---------------------------------------------------------------------------
+core:
+  types:
+    - pointer: "#"
+      id: package
+      title: Package
+      description: >-
+        The top-level object of a package schema. Everything else on this page describes
+        something reachable from here.
+
+    - pointer: "#/properties/meta"
+      id: metadata
+      title: Metadata
+
+    - pointer: "#/properties/config"
+      id: config
+      title: Config
+
+    - pointer: "#/properties/dependencies/items"
+      id: packagedescriptor
+      title: PackageDescriptor
+      description: Identifies another package this package depends on.
+
+    - pointer: "#/$defs/objectTypeSpec"
+      id: objecttype
+      title: ObjectType
+
+    - pointer: "#/$defs/complexTypeSpec"
+      id: complextype
+      title: ComplexType
+
+    - pointer: "#/$defs/enumTypeSpec"
+      id: enumtype
+      title: EnumType
+
+    - pointer: "#/$defs/resourceSpec"
+      id: resource
+      title: Resource
+
+    - pointer: "#/$defs/functionSpec"
+      id: function
+      title: Function
+
+    - pointer: "#/$defs/typeSpec"
+      id: type
+      title: Type
+
+    - pointer: "#/$defs/propertySpec"
+      id: property
+      title: Property
+
+    - pointer: "#/$defs/enumTypeSpec/properties/enum/items"
+      id: enumvalue
+      title: EnumValue
+      description: One of the values an enum type may take, and the metadata attached to it.
+
+    - pointer: "#/$defs/resourceSpec/properties/aliases/items"
+      id: alias
+      title: Alias
+      description: >-
+        A previous identity of a resource. Aliases let a resource be renamed or moved
+        without the engine treating it as a delete and a create. May be written as a
+        string or as an object.
+
+    - pointer: "#/$defs/propertySpec/properties/defaultInfo"
+      id: default
+      title: Default
+
+    - pointer: "#/$defs/typeSpec/oneOf/title:Union Type/properties/discriminator"
+      id: discriminator
+      title: Discriminator
+
+    - pointer: "#/$defs/parameterization"
+      id: parameterizationspec
+      title: ParameterizationSpec
+      description: >-
+        Parameterized packages populate this with concrete parameter values. Pulumi code
+        generators read it to emit SDKs that preserve those values and pass them back to
+        the provider at runtime.
+
+    - pointer: "#/$defs/parameterization/properties/baseProvider"
+      id: baseproviderspec
+      title: BaseProviderSpec
+      description: The provider that a parameterized package specializes.
+
+  # Cross-references the metaschema cannot express. Every `language` field is typed
+  # `{"type": "object"}` upstream, because JSON Schema has no way to say "a map whose
+  # values are whatever the target language's importer accepts". Naming the type here
+  # is what links the core reference to the language sections below.
+  # Keyed by "<type id>.<property name>".
+  types_display:
+    # Resource and ComplexType have no row of their own here: both inherit `language`
+    # from ObjectType, so the link they show is ObjectType's.
+    package.language: { text: "map[PackageLanguage]", href: "#packagelanguage" }
+    objecttype.language: { text: "map[ObjectTypeLanguage]", href: "#objecttypelanguage" }
+    complextype.language: { text: "map[ObjectTypeLanguage]", href: "#objecttypelanguage" }
+    function.language: { text: "map[FunctionLanguage]", href: "#functionlanguage" }
+    property.language: { text: "map[PropertyLanguage]", href: "#propertylanguage" }
+    default.language: { text: "map[DefaultLanguage]", href: "#defaultlanguage" }
+
+  # Prose for properties upstream leaves undescribed, or where the docs have something
+  # to add that the metaschema has no room for. Keyed by "<type id>.<property name>".
+  descriptions:
+    parameterizationspec.baseProvider: The provider being specialized, named by package name and version.
+    package.keywords: >-
+      The list of keywords that are associated with the package, if any.
+
+
+      Reserved keywords can be specified that help with categorizing the package in the
+      [Pulumi Registry](/registry/). `category/<name>` and `kind/<type>` are the only
+      reserved keywords at this time, where `<name>` is one of `cloud`, `database`,
+      `infrastructure`, `network`, `utility`, or `vcs`, and `<type>` is either `native`
+      or `component`. If the package is a bridged Terraform provider, don't include a
+      `kind/` label.
+
+# ---------------------------------------------------------------------------
+# Language-specific extensions. Each entry is a section on the page; the per-language
+# rows come from that language's own repo, so a section renders whichever languages
+# have been generated. `languages:` fixes the tab order.
+# ---------------------------------------------------------------------------
+language:
+  languages: [typescript, python, go, csharp, java]
+
+  types:
+    - id: packagelanguage
+      title: PackageLanguage
+      description: Language-specific information for a package.
+
+    - id: propertylanguage
+      title: PropertyLanguage
+      description: Language-specific information for a property.
+
+    - id: resourcelanguage
+      title: ResourceLanguage
+      description: Language-specific information for a resource.
+
+    - id: objecttypelanguage
+      title: ObjectTypeLanguage
+      description: Language-specific information for an object type.
+
+    - id: functionlanguage
+      title: FunctionLanguage
+      description: Language-specific information for a function.
+      # No target language defines one yet: there is no *FunctionInfo struct in any of
+      # the language repos to generate from. Delete this note once one appears.
+      note: Not yet supported in any target language.
+
+    - id: defaultlanguage
+      title: DefaultLanguage
+      description: Language-specific information for a property's default value.
+      # Same as FunctionLanguage: nothing upstream to generate from yet.
+      note: Not yet supported in any target language.
+
+  # Keyed by "<type id>.<language>.<property name>". These five C# fields carry no Go
+  # doc comment upstream, so without this they render with an empty description -- which
+  # is exactly what the hand-written page did. Drop an entry here once pulumi-dotnet
+  # documents the field itself.
+  descriptions:
+    packagelanguage.python.requires: >-
+      Python package requirements to add to the generated package's metadata, as a map
+      from distribution name to version specifier.
+    propertylanguage.python.mapCase: >-
+      Whether the property name is mapped between the schema's camelCase and Python's
+      snake_case. Defaults to true.
+    propertylanguage.csharp.name: An override for the generated C# property name.
+    propertylanguage.java.name: An override for the generated Java property name.
+    resourcelanguage.csharp.name: An override for the generated C# class name for the resource.
+    packagelanguage.csharp.packageReferences: >-
+      NuGet package references to add to the generated `.csproj`, as a map from package
+      name to version.
+    packagelanguage.csharp.namespaces: >-
+      Overrides for module names to C# namespaces, as a map from module name to namespace.
+    packagelanguage.csharp.compatibility: >-
+      Toggles compatibility mode for a specified target.
+    packagelanguage.csharp.dictionaryConstructors: >-
+      Generates constructors that take a dictionary of properties in addition to the
+      typed args class.
+    packagelanguage.csharp.projectReferences: >-
+      Paths to local `.csproj` files to reference from the generated project, instead of
+      resolving those dependencies from NuGet.
+
+  # Internal codegen feature flags. They are real schema fields, but they exist to let
+  # the Pulumi codegen team shrink generated SDKs, not for package authors to set.
+  # Keyed by "<type id>.<language>.<property name>".
+  exclude:
+    - packagelanguage.go.disableFunctionOutputVersions
+    - packagelanguage.go.disableInputTypeRegistrations
+    - packagelanguage.go.disableObjectDefaults

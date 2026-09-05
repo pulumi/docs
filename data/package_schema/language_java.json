@@ -1,0 +1,98 @@
+{
+  "choosable": "java",
+  "generated": "2026-09-03",
+  "label": "Java",
+  "language": "java",
+  "schemaKey": "java",
+  "sections": {
+    "packagelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "Overrides how Schema packages names translate to Java package names.",
+          "name": "packages",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "The prefix of the Java package to generate.",
+          "name": "basePackage",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "If set to \"gradle\" enables a generation of a basic set of Gradle build files.",
+          "name": "buildFiles",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "If non-empty, specifies a list of Maven repositories that should be referenced by the generated package. This can be useful for specifying the locations of e.g. local or private dependencies.",
+          "name": "repositories",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Specifies Maven-style dependencies for the generated code.",
+          "name": "dependencies",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "If non-empty and BuildFiles=\"gradle\", enables the use of a given version of io.github.gradle-nexus.publish-plugin in the generated Gradle build files.",
+          "name": "gradleNexusPublishPluginVersion",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "If non-empty and BuildFiles=\"gradle\", generates a test section to enable `gradle test` command to run unit tests over the generated code. Supported values: \"JUnitPlatform\".",
+          "name": "gradleTest",
+          "required": true,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    },
+    "propertylanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "An override for the generated Java property name.",
+          "name": "name",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    }
+  },
+  "source": {
+    "paths": [
+      "pkg/codegen/java/importer.go",
+      "pkg/codegen/java/package_info.go"
+    ],
+    "repo": "pulumi/pulumi-java",
+    "url": "https://github.com/pulumi/pulumi-java/tree/v1.36.3",
+    "version": "v1.36.3"
+  }
+}

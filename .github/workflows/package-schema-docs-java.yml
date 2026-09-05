@@ -1,0 +1,147 @@
+# Regenerates the parts of the Pulumi package schema reference at
+# /docs/iac/guides/building-extending/packages/schema/ that pulumi-java owns:
+# the Java language extensions, read out of the PackageInfo and PropertyInfo
+# structs in pkg/codegen/java/.
+#
+# There is one of these workflows per source repo, because the three repos that
+# define the schema release on their own cadences and each one should only touch
+# its own slice. The generator is passed an explicit file list on `git add` for the
+# same reason: a pulumi-java release must never open a PR that also rewrites another
+# language's section, or the three bot PRs would conflict.
+#
+# Git pushes, PR creation, and auto-merge all use PULUMI_BOT_TOKEN (a PAT from
+# ESC), so the built-in GITHUB_TOKEN only needs id-token: write for esc-action's
+# OIDC auth and contents: read for the default checkout in the pull-request job.
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+name: Package schema docs - Java
+
+# Serialize runs so two releases in quick succession cannot open PRs that conflict
+# on the same generated files.
+concurrency:
+  group: package-schema-docs-java
+  cancel-in-progress: false
+
+on:
+  repository_dispatch:
+    # The type pulumi-java already sends on release, which
+    # .github/workflows/pulumi-sdk-java-docs.yml also listens for. A dispatch
+    # fires every workflow subscribed to its type, so this needs no change
+    # upstream.
+    types:
+      - pulumi-java-sdk
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "pulumi-java version (e.g. 1.36.3, with or without leading 'v')"
+        required: true
+      skip_auto_merge:
+        description: "Skip enabling auto-merge on the generated PR (for testing)"
+        type: boolean
+        default: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.commit.outputs.has_changes }}
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Set the pulumi-java version
+        env:
+          RAW_VERSION: ${{ github.event.inputs.version || github.event.client_payload.ref }}
+        run: echo "SOURCE_VERSION=${RAW_VERSION#v}" >> $GITHUB_ENV
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Generate the schema reference data
+        run: node scripts/fetch-package-schema.js --repo pulumi-java --version "$SOURCE_VERSION"
+      - name: git status
+        run: git status && git diff --stat
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b package-schema-docs-java/${{ github.run_id }}-${{ github.run_number }}
+          git add data/package_schema/language_java.json
+          if git diff --cached --quiet; then
+            echo "No package schema changes in pulumi-java v$SOURCE_VERSION"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update package schema reference from pulumi-java v$SOURCE_VERSION"
+            git push origin package-schema-docs-java/${{ github.run_id }}-${{ github.run_number }}
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: generate
+    if: needs.generate.outputs.has_changes == 'true'
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+      - name: Set the pulumi-java version
+        env:
+          RAW_VERSION: ${{ github.event.inputs.version || github.event.client_payload.ref }}
+        run: echo "SOURCE_VERSION=${RAW_VERSION#v}" >> $GITHUB_ENV
+      - name: Open pull request
+        id: create-pr
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "package-schema-docs-java/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Update package schema reference from pulumi-java v${{ env.SOURCE_VERSION }}"
+          pr_body: |
+            Automated regeneration of the [Pulumi package schema reference](https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/) from pulumi-java `v${{ env.SOURCE_VERSION }}`, by the [Package schema docs - Java](https://github.com/${{ github.repository }}/blob/master/.github/workflows/package-schema-docs-java.yml) workflow.
+
+            Covers the Java language extensions.
+
+            Review the diff the way you would review the upstream change: a property appearing or disappearing here means it appeared or disappeared in the product.
+          pr_label: "automation/merge"
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [generate, pull-request]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "Package schema docs failure (pulumi-java) in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
