@@ -2344,6 +2344,7 @@ After Pulumi updates complete, automated health checks validate the deployed sit
 - Crawler endpoints (robots.txt, sitemap.xml)
 - Lambda@Edge redirect functionality
 - Soft 404s: a page that returns HTTP 200 but whose body is actually the site's 404 page is treated as a failure, not a pass
+- Multi-POP vantage points: a small set of canary paths (`/`, `/docs/`, `/registry/`) is also checked directly against several distinct CloudFront edge locations (resolved via DNS-over-HTTPS with EDNS Client Subnet hints), not just the single edge the GitHub Actions runner happens to hit. Each result logs its `x-amz-cf-pop` so a partial, edge-scoped failure is visible and attributable to a specific POP, not just a single pass/fail signal. A failing vantage point is retried once before it is counted as a failure. If fewer than two distinct edge IPs can be resolved, this pass is skipped with a warning rather than failing the build on a third-party DNS dependency it does not control
 
 **When it runs:**
 
@@ -2374,6 +2375,7 @@ Edit `.github/workflows/post-deployment-health-check.yml` and add calls to:
 
 - `check_endpoint` function for page availability checks (expects 200 status and a body that is not the site's 404 page)
 - `check_redirect` function for Lambda@Edge redirect tests (expects 301 with location match)
+- `CANARY_PATHS` array in the multi-POP pass for additional paths to check across CloudFront edge locations (in addition to the single-vantage `check_endpoint` calls)
 
 ### Example Program Testing
 
