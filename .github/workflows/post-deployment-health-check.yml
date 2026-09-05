@@ -80,19 +80,29 @@ jobs:
           echo "Target: $BASE_URL"
           echo ""
 
-          # Function to check endpoint returns 200
+          # Signature string rendered in the body of the site's 404 page. A page
+          # that returns HTTP 200 but serves this body is a soft 404: the status
+          # code alone is not enough to prove the page actually rendered.
+          SOFT_404_SIGNATURE="404 Page not found"
+
+          # Function to check endpoint returns 200 with a real (non-404) body
           check_endpoint() {
             local path="$1"
             local name="$2"
             local url="${BASE_URL}${path}"
 
-            status=$(curl -s -o /dev/null -w "%{http_code}" -L "$url")
-            if [[ "$status" == "200" ]]; then
-              echo "✅ $name: $status"
-            else
+            body_file=$(mktemp)
+            status=$(curl -s -o "$body_file" -w "%{http_code}" -L "$url")
+            if [[ "$status" != "200" ]]; then
               echo "❌ $name: Expected 200, got $status"
               FAILED=1
+            elif grep -qF "$SOFT_404_SIGNATURE" "$body_file"; then
+              echo "❌ $name: Got 200 but body is the 404 page (soft 404)"
+              FAILED=1
+            else
+              echo "✅ $name: $status"
             fi
+            rm -f "$body_file"
           }
 
           # Function to check redirect
@@ -125,6 +135,136 @@ jobs:
           check_endpoint "/docs/reference/pkg/java/" "Java SDK"
           check_endpoint "/docs/iac/get-started/" "Getting started"
           check_endpoint "/docs/cli/commands/" "CLI reference"
+          check_endpoint "/blog/" "Blog landing"
+          check_endpoint "/what-is/" "What-is landing"
+          check_endpoint "/case-studies/" "Case studies landing"
+          check_endpoint "/tutorials/" "Tutorials landing"
+          check_endpoint "/templates/" "Templates landing"
+          check_endpoint "/events/" "Events landing"
+          check_endpoint "/robots.txt" "robots.txt"
+          check_endpoint "/sitemap.xml" "sitemap.xml"
+
+          echo ""
+          echo "Testing multi-POP vantage points..."
+
+          # Every check_endpoint call above issues exactly one request from
+          # one GitHub Actions runner through whichever single CloudFront
+          # edge location that runner happens to be routed to. That design
+          # can only detect a total, POP-independent outage; it is
+          # structurally blind to a partial, edge-location-scoped failure,
+          # where most POPs are healthy and one or two are not. To close
+          # that gap, resolve a handful of geographically distinct
+          # CloudFront edge IPs (via Google's DNS-over-HTTPS API with EDNS
+          # Client Subnet hints, so the same resolver hands back different
+          # edges for different regions) and hit a small set of
+          # high-signal canary paths directly against each one.
+          #
+          # This pass fails open: if fewer than two distinct edge IPs can
+          # be resolved (third-party DNS hiccup, a host with no CloudFront
+          # in front of it, a transient network blip), it is skipped with a
+          # warning instead of failing the deploy gate on an external
+          # dependency this workflow does not control.
+
+          HOST="${BASE_URL#https://}"
+          HOST="${HOST#http://}"
+          HOST="${HOST%%/*}"
+
+          # These are DNS EDNS-Client-Subnet *hints* handed to the resolver
+          # below to steer its answer towards a given region -- Amsterdam,
+          # Tokyo, Sao Paulo, Australia, US-East, respectively. No packet is
+          # ever sent to any of these netblocks; they don't need to be
+          # reachable, routable, or owned by anyone in particular. Do not
+          # "fix" a subnet by swapping in an address you can ping -- that
+          # silently narrows the geographic spread this pass depends on.
+          ECS_SUBNETS=(
+            "91.198.174.0/24"
+            "133.11.0.0/24"
+            "200.160.0.0/24"
+            "1.128.0.0/24"
+            "152.3.0.0/24"
+          )
+
+          POP_IPS=()
+          for subnet in "${ECS_SUBNETS[@]}"; do
+            resolved_ip=$(curl -s --max-time 8 "https://dns.google/resolve?name=${HOST}&type=A&edns_client_subnet=${subnet}" 2>/dev/null \
+              | grep -oE '"data":"[0-9]{1,3}(\.[0-9]{1,3}){3}"' | grep -oE '[0-9]+(\.[0-9]+){3}' | head -1 || true)
+            if [[ -n "$resolved_ip" ]]; then
+              already_have=0
+              for existing in "${POP_IPS[@]:-}"; do
+                [[ "$existing" == "$resolved_ip" ]] && already_have=1
+              done
+              [[ "$already_have" -eq 0 ]] && POP_IPS+=("$resolved_ip")
+            fi
+          done
+
+          if [[ "${#POP_IPS[@]}" -lt 2 ]]; then
+            echo "⚠️  Skipping multi-POP pass: only resolved ${#POP_IPS[@]} distinct edge IP(s) via DNS-over-HTTPS (expected several). Not failing the build on this external dependency."
+          else
+            echo "Resolved ${#POP_IPS[@]} distinct edge IPs to check: ${POP_IPS[*]}"
+
+            CANARY_PATHS=("/" "/docs/" "/registry/")
+
+            check_pop_once() {
+              local ip="$1"
+              local path="$2"
+              local hdr body status pop cache
+
+              hdr=$(mktemp)
+              body=$(mktemp)
+              # --connect-timeout keeps a dead/unroutable edge IP from
+              # burning the full --max-time on every attempt; curl already
+              # writes "000" via -w on a hard failure, so the fallback only
+              # fires when status comes back empty (avoids concatenating
+              # two "000"s into one unparsed string).
+              status=$(curl -s -o "$body" -D "$hdr" -w "%{http_code}" --connect-timeout 5 --max-time 10 --resolve "${HOST}:443:${ip}" "https://${HOST}${path}" 2>/dev/null || true)
+              [[ -z "$status" ]] && status="000"
+              # This distribution is fronted by a regional edge cache /
+              # origin shield, which emits *two* x-amz-cf-pop header lines
+              # on many responses -- not only on a cache miss, we saw it on
+              # cache hits too. Verified empirically against production
+              # (Via header hop ordering, cross-checked against the single
+              # POP header the same pinned edge IP returns on a request
+              # that produces only one line): each hop appends its own
+              # identifier to the end of the response as it relays back
+              # towards the client, so the *last* x-amz-cf-pop line is the
+              # viewer-facing edge our --resolve-pinned IP actually is, and
+              # the first is the upstream shield/regional-cache hop. Take
+              # the last line so the label names the edge a real user
+              # actually hit, not the shield.
+              pop=$(grep -i '^x-amz-cf-pop:' "$hdr" 2>/dev/null | tail -1 | tr -d '\r' | awk '{print $2}' || true)
+              cache=$(grep -i '^x-cache:' "$hdr" 2>/dev/null | tail -1 | tr -d '\r' | cut -d' ' -f2- || true)
+              [[ -z "$pop" ]] && pop="unknown"
+
+              if [[ "$status" != "200" ]]; then
+                echo "  [$ip / pop=$pop] $path -> HTTP $status"
+                rm -f "$hdr" "$body"
+                return 1
+              elif grep -qF "$SOFT_404_SIGNATURE" "$body"; then
+                echo "  [$ip / pop=$pop] $path -> 200 but soft 404"
+                rm -f "$hdr" "$body"
+                return 1
+              else
+                echo "  [$ip / pop=$pop / cache=${cache:-n/a}] $path -> $status"
+                rm -f "$hdr" "$body"
+                return 0
+              fi
+            }
+
+            for ip in "${POP_IPS[@]}"; do
+              for path in "${CANARY_PATHS[@]}"; do
+                if ! check_pop_once "$ip" "$path"; then
+                  echo "  ⚠️  first attempt failed for $ip$path, retrying once after 5s..."
+                  sleep 5
+                  if ! check_pop_once "$ip" "$path"; then
+                    echo "❌ Multi-POP check: $ip$path failed twice"
+                    FAILED=1
+                  else
+                    echo "⚠️  Multi-POP check: $ip$path failed once, passed on retry (transient)"
+                  fi
+                fi
+              done
+            done
+          fi
 
           echo ""
           echo "Testing Lambda@Edge redirects..."
