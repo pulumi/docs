@@ -30,13 +30,19 @@
   {{ $schema = merge $schema (dict "applicationSubCategory" $applicationSubCategory) }}
 {{ end }}
 
-{{/* Add image. meta_image is normally site-root-relative ("/images/...");
+{{/* Add image. Resolve the effective meta image (custom meta_image, else the
+     build-time generated card) via the shared partial -- the same source
+     head.html uses for OpenGraph -- rather than reading .Params.meta_image
+     directly, so this page's JSON-LD image matches its own social card
+     instead of falling through to the generic default whenever meta_image is
+     unset. The resolved path is normally site-root-relative ("/images/...");
      absolutize it against site.BaseURL, not the page's own Permalink -- see
      schema/utils/absolutize-image.html for why the previous hand-rolled join
      produced dead URLs like https://www.pulumi.com/product/images/... */}}
 {{ $image := "" }}
-{{ if .Params.meta_image }}
-  {{ $image = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" .Params.meta_image) }}
+{{ $metaImage := partial "meta-image-url.html" . }}
+{{ if $metaImage }}
+  {{ $image = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" $metaImage) }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}

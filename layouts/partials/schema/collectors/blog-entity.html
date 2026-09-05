@@ -76,21 +76,13 @@
 {{/* Add image. The effective meta image (custom meta_image, else the build-time
      generated card) comes from the shared partial, keeping JSON-LD in sync with
      the OpenGraph tags. It can be site-absolute ("/images/...") or page-relative
-     ("meta.png", typical for blog post bundles); resolve each case from the right
-     base. Uses a blog-specific fallback, not the docs one. */}}
+     ("meta.png", typical for blog post bundles); schema/utils/absolutize-image.html
+     resolves each case from the right base, so this stays the single copy of that
+     rule instead of a fourth hand-rolled one. */}}
 {{ $image := "" }}
 {{ $metaImage := partial "meta-image-url.html" . }}
 {{ if $metaImage }}
-  {{ $imagePath := $metaImage }}
-  {{ if strings.HasPrefix $imagePath "/" }}
-    {{ $image = printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) $imagePath }}
-  {{ else }}
-    {{ $baseURL := .Permalink }}
-    {{ if not (strings.HasSuffix $baseURL "/") }}
-      {{ $baseURL = printf "%s/" $baseURL }}
-    {{ end }}
-    {{ $image = printf "%s%s" $baseURL $imagePath }}
-  {{ end }}
+  {{ $image = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" $metaImage) }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
