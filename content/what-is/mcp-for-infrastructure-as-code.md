@@ -4,7 +4,7 @@ meta_desc: MCP connects AI agents to your cloud infrastructure. Learn what MCP f
 type: what-is
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 schema_type: auto
-authors: ["pulumi-content-team"]
+authors: ["alex-leventer"]
 ---
 
 MCP for infrastructure as code is the use of the Model Context Protocol, an open standard for connecting AI applications to external tools, to let AI agents read, generate, and act on cloud infrastructure defined in code. An MCP server exposes IaC operations, like previewing and deploying resources, through one consistent interface any MCP-compatible agent can call.

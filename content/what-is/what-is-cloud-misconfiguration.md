@@ -3,7 +3,7 @@ title: What Is Cloud Misconfiguration?
 meta_desc: "A cloud misconfiguration is an insecure setting on a cloud resource that exposes data or systems. Learn the common types and how to prevent them."
 type: what-is
 page_title: "What Is Cloud Misconfiguration?"
-authors: ["pulumi-content-team"]
+authors: ["alex-leventer"]
 ---
 
 **A cloud misconfiguration is any setting on a cloud resource that leaves it less secure than it should be: a storage bucket left open to the public internet, an identity granted more permissions than it needs, a database reachable from anywhere, or logging switched off so no one can see what happened. It is a mistake in how a resource is configured, not a flaw in the cloud provider's software, and it is the single most common way that cloud data gets exposed.** Because cloud platforms expose thousands of tunable settings and default to convenience over lockdown, a single wrong toggle can turn a private resource into a public one.

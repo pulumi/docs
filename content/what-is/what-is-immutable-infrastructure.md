@@ -3,7 +3,7 @@ title: What Is Immutable Infrastructure?
 meta_desc: "Immutable infrastructure means never modifying a running server—you replace it with a new versioned image. Learn how it works and why it stops drift."
 type: what-is
 page_title: "What Is Immutable Infrastructure?"
-authors: ["pulumi-content-team"]
+authors: ["alex-leventer"]
 ---
 
 **Immutable infrastructure is a model in which a server, container, or resource is never modified after it's deployed. When you need a change—a patch, a config edit, a new application version—you build a new, version-controlled image and replace the running instance instead of altering it in place.** The running fleet becomes a disposable artifact of a build pipeline rather than a hand-tuned, long-lived machine, which is what makes it reproducible.

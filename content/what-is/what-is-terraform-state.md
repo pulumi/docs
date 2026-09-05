@@ -3,7 +3,7 @@ title: What Is Terraform State?
 meta_desc: "Terraform state maps your configuration to real cloud resources so Terraform knows what it manages. Learn how the state file, backends, and locking work."
 type: what-is
 page_title: "What Is Terraform State?"
-authors: ["pulumi-content-team"]
+authors: ["alex-leventer"]
 ---
 
 **Terraform state is the record Terraform keeps of the real-world infrastructure it manages: a mapping between the resources declared in your configuration and the actual objects that exist in your cloud provider, along with their metadata and dependency relationships.** Terraform stores this record in a state file (by default `terraform.tfstate`), and it consults that file on every operation to decide what to create, update, or destroy.

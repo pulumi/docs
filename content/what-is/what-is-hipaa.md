@@ -3,7 +3,7 @@ title: What is HIPAA?
 meta_desc: "HIPAA is the US law that sets national standards for protecting health information. Learn its rules, who it covers, penalties, and how to comply."
 type: what-is
 page_title: "What is HIPAA?"
-authors: ["pulumi-content-team"]
+authors: ["alex-leventer"]
 ---
 
 **HIPAA (the Health Insurance Portability and Accountability Act of 1996) is the US federal law that sets national standards for the privacy, security, and breach notification of protected health information (PHI).** It governs how healthcare providers, insurers, clearinghouses, and any vendor handling health data on their behalf may use, disclose, transmit, and store that data, and it carries civil and criminal penalties for organizations that fall short.

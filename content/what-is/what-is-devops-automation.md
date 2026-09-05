@@ -27,7 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["pulumi-content-team"]
+authors: ["james-denyer"]
 ---
 
 Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern infrastructure as code solutions.
