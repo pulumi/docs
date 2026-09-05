@@ -4,6 +4,7 @@ meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws sts get-caller-identity' in a more secure and efficient manner.
 
 type: what-is
+date: 2023-12-15T13:29:12-06:00
 page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 authors: ["diana-esteves"]
 ---

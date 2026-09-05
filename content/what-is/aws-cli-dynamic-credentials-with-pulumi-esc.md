@@ -4,6 +4,7 @@ meta_desc: |
      Learn how Pulumi ESC's dynamic AWS credentials fix errors like ExpiredToken
      and let you run any AWS CLI command without local credential setup.
 type: what-is
+date: 2026-08-14T15:06:36-07:00
 page_title: Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC
 authors: ["diana-esteves", "torian-crane"]
 aliases:

@@ -21,9 +21,45 @@
   "name" (or .Params.title_tag .Title)
 }}
 
+{{/* headline mirrors WebPage.name — the same title_tag-then-.Title
+     precedence used above and in article-entity.html — so a page's headline
+     is never a different string than its own name. */}}
+{{ $webpage = merge $webpage (dict "headline" (or .Params.title_tag .Title)) }}
+
 {{/* Add description if available */}}
 {{ with (or .Params.meta_desc .Summary) }}
   {{ $webpage = merge $webpage (dict "description" .) }}
+{{ end }}
+
+{{/* datePublished/dateModified: same source-of-truth rules as
+     article-entity.html's TechArticle dates (see that file's comment for the
+     full rationale) — datePublished only from an explicit front-matter
+     date/publishDate, never fabricated from git info; dateModified may fall
+     back to .Lastmod then .GitInfo.AuthorDate; never falls back to `now`.
+     Duplicated here rather than shared via a return-value partial because
+     Hugo partials that return a scalar can't easily hand back two related
+     values without an intermediate dict, and this block is short enough that
+     keeping it inline avoids a wider refactor touching the already-audited
+     article-entity.html. */}}
+{{ $webpagePublishDate := "" }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
+  {{ $webpagePublishDate = .PublishDate }}
+{{ end }}
+
+{{ $webpageModifiedDate := "" }}
+{{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+  {{ $webpageModifiedDate = .Lastmod }}
+{{ else if and .GitInfo .GitInfo.AuthorDate }}
+  {{ $webpageModifiedDate = .GitInfo.AuthorDate }}
+{{ else }}
+  {{ $webpageModifiedDate = $webpagePublishDate }}
+{{ end }}
+
+{{ with $webpagePublishDate }}
+  {{ $webpage = merge $webpage (dict "datePublished" (.Format "2006-01-02T15:04:05Z07:00")) }}
+{{ end }}
+{{ with $webpageModifiedDate }}
+  {{ $webpage = merge $webpage (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) }}
 {{ end }}
 
 {{/* Collect breadcrumb for non-home pages */}}

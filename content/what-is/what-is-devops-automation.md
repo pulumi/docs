@@ -4,6 +4,7 @@ meta_desc: |
     DevOps automation can be key to consistent and scalable workflows. Learn how engineering teams can ship faster and more reliably with DevOps automation.
 
 type: what-is
+date: 2023-09-14T16:21:22-07:00
 page_title: What Is DevOps Automation?
 
 customer_logos:
