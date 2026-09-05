@@ -169,6 +169,13 @@ jobs:
           HOST="${HOST#http://}"
           HOST="${HOST%%/*}"
 
+          # These are DNS EDNS-Client-Subnet *hints* handed to the resolver
+          # below to steer its answer towards a given region -- Amsterdam,
+          # Tokyo, Sao Paulo, Australia, US-East, respectively. No packet is
+          # ever sent to any of these netblocks; they don't need to be
+          # reachable, routable, or owned by anyone in particular. Do not
+          # "fix" a subnet by swapping in an address you can ping -- that
+          # silently narrows the geographic spread this pass depends on.
           ECS_SUBNETS=(
             "91.198.174.0/24"
             "133.11.0.0/24"
@@ -211,14 +218,21 @@ jobs:
               # two "000"s into one unparsed string).
               status=$(curl -s -o "$body" -D "$hdr" -w "%{http_code}" --connect-timeout 5 --max-time 10 --resolve "${HOST}:443:${ip}" "https://${HOST}${path}" 2>/dev/null || true)
               [[ -z "$status" ]] && status="000"
-              # On a cache miss, CloudFront distributions fronted by a
-              # regional edge cache / origin shield emit *two*
-              # x-amz-cf-pop header lines (the viewer-facing edge, then the
-              # shield). Take only the first (the viewer-facing edge, which
-              # is what a real user actually hit) so the label stays a
-              # single POP code instead of two concatenated by a newline.
-              pop=$(grep -i '^x-amz-cf-pop:' "$hdr" 2>/dev/null | head -1 | tr -d '\r' | awk '{print $2}' || true)
-              cache=$(grep -i '^x-cache:' "$hdr" 2>/dev/null | head -1 | tr -d '\r' | cut -d' ' -f2- || true)
+              # This distribution is fronted by a regional edge cache /
+              # origin shield, which emits *two* x-amz-cf-pop header lines
+              # on many responses -- not only on a cache miss, we saw it on
+              # cache hits too. Verified empirically against production
+              # (Via header hop ordering, cross-checked against the single
+              # POP header the same pinned edge IP returns on a request
+              # that produces only one line): each hop appends its own
+              # identifier to the end of the response as it relays back
+              # towards the client, so the *last* x-amz-cf-pop line is the
+              # viewer-facing edge our --resolve-pinned IP actually is, and
+              # the first is the upstream shield/regional-cache hop. Take
+              # the last line so the label names the edge a real user
+              # actually hit, not the shield.
+              pop=$(grep -i '^x-amz-cf-pop:' "$hdr" 2>/dev/null | tail -1 | tr -d '\r' | awk '{print $2}' || true)
+              cache=$(grep -i '^x-cache:' "$hdr" 2>/dev/null | tail -1 | tr -d '\r' | cut -d' ' -f2- || true)
               [[ -z "$pop" ]] && pop="unknown"
 
               if [[ "$status" != "200" ]]; then
