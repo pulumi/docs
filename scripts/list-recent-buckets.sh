@@ -20,8 +20,12 @@ set -o errexit -o pipefail
 #   # List all buckets prefixed with "-push-" (to filter push builds)
 #   ./scripts/list-recent-buckets.sh push
 #
+#   # List all buckets prefixed with "-schedule-" or "-workflow-dispatch-", etc.
+#   ./scripts/list-recent-buckets.sh schedule
+#   ./scripts/list-recent-buckets.sh workflow-dispatch
+#
 #   # List only the buckets that can be safely deleted
-#   ./scripts/list-recent-buckets.sh [push | pr] --only-deletables
+#   ./scripts/list-recent-buckets.sh [push | schedule | workflow-dispatch | pr] --only-deletables
 
 source ./scripts/common.sh
 
@@ -31,8 +35,11 @@ buckets_as_array=($buckets)
 bucket_count=${#buckets_as_array[@]}
 only_deletables=false
 
-# Only pr and push buckets can be flagged as deletable.
-if [[ ( "$1" == "pr" || "$1" == "push" )  && "$2" == "--only-deletables" ]]; then
+# Any bucket-prefix filter can be flagged as deletable -- "pr" gets the closed-PR check
+# below, and every other deploy-path prefix (push, schedule, workflow-dispatch, etc.) gets
+# the beyond-the-currently-served-bucket check. Listing with no filter at all isn't
+# deletable, since "all buckets" isn't a coherent retention policy.
+if [[ -n "$1" && "$2" == "--only-deletables" ]]; then
     only_deletables=true
 fi
 
@@ -104,8 +111,12 @@ for bucket in $buckets; do
             website_bucket_identified=true
         fi
 
-        # For push or pull_request buckets, indicate whether they can be safely deleted.
-        if [ "$1" == "push" ]; then
+        # For deploy-path buckets (anything other than PR previews), indicate whether they
+        # can be safely deleted based on how far behind the live website bucket they are.
+        # This covers push, schedule, and workflow-dispatch builds alike -- they all share
+        # the same origin_bucket_prefix()-<event>-<sha>[-<uniquifier>] shape and the same
+        # single currently-deployed-bucket check above.
+        if [ "$1" != "pr" ]; then
             if [ "$buckets_beyond_current" -gt "$buckets_to_retain" ]; then
                 maybe_echo
                 maybe_echo "❌ This bucket is ${buckets_beyond_current} buckets behind the current website, so it can safely be deleted."
