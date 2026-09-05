@@ -7,7 +7,7 @@ quick_links:
     title: Quick links
     items:
         - label: Ready to try it?
-          description: No sales call needed. Create an org and ship infrastructure in minutes.
+          description: No sales call needed. Create an org and ship infrastructure.
           cta_label: Start a trial
           url: https://app.pulumi.com/signup?create-organization=1
 
