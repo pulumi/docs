@@ -10,6 +10,7 @@ quick_links:
           description: No sales call needed. Create an org and ship infrastructure in minutes.
           cta_label: Start a trial
           url: https://app.pulumi.com/signup?create-organization=1
+          track_event: contact-page-trial-click
 
         - label: Want to see it first?
           description: Get a guided walkthrough from our team before you commit to anything.

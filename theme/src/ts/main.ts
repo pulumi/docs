@@ -8,6 +8,7 @@ import "./carousel";
 import "./chooser";
 import "./noselect";
 import "./tracking";
+import "./analytics-event-links";
 import "./docs-feedback";
 import "./blog-list";
 import "./blog-post";
