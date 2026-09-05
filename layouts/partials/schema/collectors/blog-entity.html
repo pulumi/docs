@@ -114,17 +114,29 @@
       {{ if $authorData }}
         {{ $displayName = $authorData.name }}
       {{ end }}
+      {{/* entity_type = "organization" marks a group byline -- schema.org
+           Person means an individual, so mirror author-entities.html's
+           Organization handling here too rather than let this fallback path
+           re-introduce a mis-typed Person. */}}
+      {{ $isOrg := false }}
+      {{ if $authorData }}
+        {{ $isOrg = eq (lower (or $authorData.entity_type "")) "organization" }}
+      {{ end }}
       {{/* /authors/%s is a Hugo logical content path, not the published
            permalink -- config/_default/config.yml routes the `authors`
            taxonomy term to /blog/author/:slug/. Resolve the real page and
            omit `url` if there is no live term page for this slug, mirroring
            schema/utils/author-entities.html. */}}
       {{ $fallbackAuthor := dict
-        "@type" "Person"
-        "@id" (printf "https://www.pulumi.com/authors/%s/#person" (. | urlize))
+        "@type" (cond $isOrg "Organization" "Person")
+        "@id" (printf "https://www.pulumi.com/authors/%s/#%s" (. | urlize) (cond $isOrg "organization" "person"))
         "name" $displayName
-        "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
       }}
+      {{ if $isOrg }}
+        {{ $fallbackAuthor = merge $fallbackAuthor (dict "parentOrganization" (dict "@id" "https://www.pulumi.com/#organization")) }}
+      {{ else }}
+        {{ $fallbackAuthor = merge $fallbackAuthor (dict "worksFor" (dict "@id" "https://www.pulumi.com/#organization")) }}
+      {{ end }}
       {{ $fallbackAuthorPage := site.GetPage (printf "/authors/%s" (. | urlize)) }}
       {{ with $fallbackAuthorPage }}
         {{ $fallbackAuthor = merge $fallbackAuthor (dict "url" .Permalink) }}

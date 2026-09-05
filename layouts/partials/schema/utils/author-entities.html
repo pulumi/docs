@@ -5,21 +5,31 @@
   {{ range . }}
     {{ $slug := . }}
     {{ with index site.Data.team.team $slug }}
+      {{/* entity_type = "organization" marks a group byline (e.g. a house
+           content team) rather than a natural person -- schema.org Person
+           means an individual, so gate Person-only properties on this and
+           emit Organization instead. */}}
+      {{ $isOrg := eq (lower (or .entity_type "")) "organization" }}
+
       {{/* Build author entity with comprehensive knowledge graph properties */}}
-      {{ $author := dict "@type" "Person" }}
-      {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#person" .id)) }}
+      {{ $author := dict "@type" (cond $isOrg "Organization" "Person") }}
+      {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#%s" .id (cond $isOrg "organization" "person"))) }}
       {{ $author = merge $author (dict "name" .name) }}
 
-      {{/* Add job title and organization */}}
-      {{ with .title }}
-        {{ $author = merge $author (dict "jobTitle" .) }}
-      {{ end }}
+      {{/* Job title and worksFor are Person-only -- a group byline doesn't
+           hold a job title or "work for" itself; it gets parentOrganization
+           further down instead. */}}
+      {{ if not $isOrg }}
+        {{ with .title }}
+          {{ $author = merge $author (dict "jobTitle" .) }}
+        {{ end }}
 
-      {{ $author = merge $author (dict "worksFor" (dict
-        "@type" "Organization"
-        "@id" "https://www.pulumi.com/#organization"
-        "name" "Pulumi"
-      )) }}
+        {{ $author = merge $author (dict "worksFor" (dict
+          "@type" "Organization"
+          "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
+        )) }}
+      {{ end }}
 
       {{/* Add social profiles for entity disambiguation */}}
       {{ $sameAs := slice }}
@@ -56,9 +66,15 @@
 
       {{/* Add image. Team avatars live at /images/team/<id>.jpg by convention; an
            explicit .image in the team toml overrides it. Including a Person image
-           is what unlocks the author byline in Google's rich results. */}}
+           is what unlocks the author byline in Google's rich results; for an
+           Organization, logo is the equivalent property, so emit both pointing
+           at the same asset. */}}
       {{ $imagePath := or .image (printf "/images/team/%s.jpg" .id) }}
-      {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" $imagePath)) }}
+      {{ $imageURL := printf "https://www.pulumi.com%s" $imagePath }}
+      {{ $author = merge $author (dict "image" $imageURL) }}
+      {{ if $isOrg }}
+        {{ $author = merge $author (dict "logo" $imageURL) }}
+      {{ end }}
 
       {{/* Add expertise based on title */}}
       {{ $knowsAbout := slice "Infrastructure as Code" "Cloud Computing" "DevOps" }}
@@ -97,20 +113,32 @@
 
       {{ $author = merge $author (dict "knowsAbout" $knowsAbout) }}
 
-      {{/* Mark as founder if applicable */}}
-      {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
-        {{ $author = merge $author (dict "founder" (dict
+      {{ if not $isOrg }}
+        {{/* Mark as founder if applicable */}}
+        {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
+          {{ $author = merge $author (dict "founder" (dict
+            "@type" "Organization"
+            "@id" "https://www.pulumi.com/#organization"
+          )) }}
+        {{ end }}
+
+        {{/* Add affiliation */}}
+        {{ $author = merge $author (dict "affiliation" (dict
           "@type" "Organization"
           "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
+        )) }}
+      {{ else }}
+        {{/* A group byline belongs to Pulumi as a sub-entity, not an
+             affiliate -- parentOrganization keeps the author @id distinct
+             from https://www.pulumi.com/#organization (the publisher) while
+             still tying it to the org node. */}}
+        {{ $author = merge $author (dict "parentOrganization" (dict
+          "@type" "Organization"
+          "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
         )) }}
       {{ end }}
-
-      {{/* Add affiliation */}}
-      {{ $author = merge $author (dict "affiliation" (dict
-        "@type" "Organization"
-        "@id" "https://www.pulumi.com/#organization"
-        "name" "Pulumi"
-      )) }}
 
       {{ $authors = $authors | append $author }}
     {{ else }}

@@ -15,3 +15,9 @@ company = "Pulumi"
 weight = 1
 
 status = "active"
+
+# This byline is a group, not a natural person -- schema.org Person denotes an
+# individual, so layouts/partials/schema/utils/author-entities.html reads this
+# flag and emits JSON-LD "@type": "Organization" instead. Any future
+# non-person byline in this directory should set the same flag.
+entity_type = "organization"
