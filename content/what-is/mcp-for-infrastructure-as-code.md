@@ -167,6 +167,7 @@ Yes, through the local server's `pulumi-cli-up` tool. The hosted server doesn't 
 
 ## Learn more
 
+- [Best MCP Servers for Infrastructure and DevOps in 2026](/blog/best-mcp-servers-infrastructure-devops/)
 - [Pulumi MCP Server documentation](/docs/ai/mcp-server/)
 - [AI-Assisted IaC with Pulumi's MCP Server](/blog/mcp-server-ai-assistants/)
 - [Announcing Pulumi Remote MCP Server](/blog/remote-mcp-server/)
