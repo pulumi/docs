@@ -32,7 +32,7 @@ social:
         Here's what counts, how the meter reads a replacement, and how to count your own RUM before renewal.
 ---
 
-HCP Terraform's Resources Under Management (RUM) is a metered count of every resource with `mode = "managed"` in your state files, and HashiCorp bills it on the peak count observed in each clock hour, not a monthly average. That single design choice, peak-per-hour rather than average, is why two teams with the same resource count can see very different bills, and it's the part most pricing write-ups skip.
+HCP Terraform's Resources Under Management (RUM) is a metered count of every resource with `mode = "managed"` in your state files, and HashiCorp bills it on the peak count observed in each clock hour, not a monthly average. That single design choice, peak-per-hour rather than average, is why two teams with the same resource count can see markedly different bills, and it's the part most pricing write-ups skip.
 
 HashiCorp [moved HCP Terraform off per-seat pricing and onto RUM in 2023](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/), and retired the legacy free plan on March 31, 2026. Pulumi's own [HCP Terraform comparison page](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/) covers why teams are re-evaluating HCP Terraform as a result. This post covers what that comparison page doesn't: what actually counts as a billable resource, how the hourly meter reads your infrastructure, what the current tiers cost, and how to count your own number before a renewal conversation.
 
