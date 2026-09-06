@@ -835,10 +835,10 @@ Hugo processes 46+ content directories:
 
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
-- `/content/templates/` → Templates
 - `/content/product/` → Product pages
+- `/content/case-studies/` → Customer stories
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1224,7 +1224,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Tests:** Runs `make test` on ~425 example programs across:
 
-- Languages: TypeScript, Python, Go, C#, Java, YAML
+- Languages: TypeScript, Python, Go, .NET, Java, YAML
 - Clouds: AWS, GCP, Azure, Kubernetes
 - Scenarios: Simple deployments, complex architectures
 
@@ -1449,7 +1449,7 @@ The repository includes 10 additional utility workflows for automation and proje
 - **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
-- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely).
+- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed — with its **first slot reserved** for the oldest page no review has ever completed on (`NEVER_REVIEWED_RESERVE`, fix lane only, disabled at count 1), because `importance x staleness` alone never reaches the cold end of the corpus; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog — and, because a page can carry a banked *count* with nothing behind it (no findings record and no review PR to scrape), it also dispatches up to one **fix-lane repair** per run (`GLOWUP_REPAIRS_PER_RUN`) for such a page, since a fix review needs no ledger and writes the findings record a later glow-up needs; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely).
 - **blog-review-index.yml**: Daily blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 
 The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
@@ -1521,7 +1521,6 @@ The docs infrastructure integrates with other Pulumi projects via stack referenc
 ```typescript
 const registryStack = new pulumi.StackReference('pulumi/registry/production');
 const answersStack = new pulumi.StackReference('pulumi/answers/production');
-const aiAppStack = new pulumi.StackReference('pulumi/pulumi-ai-app-infra/prod');
 const guidesStack = new pulumi.StackReference('pulumi/guides/production');
 ```
 
@@ -1637,6 +1636,7 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
+| /dev* | Dev Center (pulumi/marketing-web) | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
 | /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
@@ -4007,7 +4007,7 @@ Complete reference of all build and deployment scripts.
 | **GITHUB_TOKEN** | GitHub API | (auto) | GitHub Actions |
 | **NOBUILD** | Skip rebuilds | `1` | User |
 | **ONLY_TEST** | Test single program | `aws-s3-typescript` | User |
-| **GOGC** | Go GC tuning | `3` | Workflow |
+| **GOMEMLIMIT** | Go soft memory ceiling for Hugo (CI only) | `12GiB` | build-site.sh |
 
 ### AWS Resource Naming Conventions
 

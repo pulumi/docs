@@ -148,7 +148,7 @@ Or to rephrase it: Friends don't let friends manage Kubernetes resources with YA
 
 ## Terraform Kubernetes Provider
 
-[Terraform](https://www.terraform.io/) is an Infrastructure as Code tool. It lets you define and manage your infrastructure in a declarative way. It uses a high-level configuration language called HashiCorp Configuration Language (HCL). To manage Kubernetes objects with Terraform, use the Kubernetes provider. It allows you to define Kubernetes objects in Terraform HCL.
+[Terraform](https://www.terraform.io/) is an infrastructure as code tool. It lets you define and manage your infrastructure in a declarative way. It uses a high-level configuration language called HashiCorp Configuration Language (HCL). To manage Kubernetes objects with Terraform, use the Kubernetes provider. It allows you to define Kubernetes objects in Terraform HCL.
 
 The [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest) allows you to define Kubernetes objects like `kubernetes_deployment`, `kubernetes_service`, `kubernetes_config_map`, `kubernetes_secret`, and more in code, leveraging the language features of Terraform. You can use, to a certain extent, loops, conditions, and variables in a way that is not possible with plain YAML files.
 
@@ -283,7 +283,7 @@ But is there a better way to manage your Kubernetes resources? Let's have a look
 
 ## Pulumi and the Power of General Purpose Languages
 
-Last but not least, let's have a look at Pulumi. Pulumi is an Infrastructure as Code tool. It lets you define and manage your Kubernetes objects using general-purpose programming languages. Pulumi [supports multiple languages](/docs/iac/languages-sdks/) like Python, Go, TypeScript, JavaScript, .NET, and JVM-based languages. This gives you all the benefits of a full programming language. It includes native IDE support, code completion, and debugging.
+Last but not least, let's have a look at Pulumi. Pulumi is an infrastructure as code tool. It lets you define and manage your Kubernetes objects using general-purpose programming languages. Pulumi [supports multiple languages](/docs/iac/languages-sdks/) like Python, Go, TypeScript, JavaScript, .NET, and JVM-based languages. This gives you all the benefits of a full programming language. It includes native IDE support, code completion, and debugging.
 
 You need to install the [Pulumi CLI](/docs/iac/cli/). Then, create a [new Pulumi project](/docs/iac/cli/commands/pulumi_new/). Finally, add the [Kubernetes library](/registry/packages/kubernetes/) to it. It depends on the language you choose. You could use a package manager, like `npm` or `pip`.
 

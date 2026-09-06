@@ -22,7 +22,7 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi is built to be driven by AI agents, including the coding agents your team already uses. Because Pulumi infrastructure is real code with a verifiable plan for every change, agents like Claude Code, Codex, Cursor, and GitHub Copilot can write, preview, and deploy it directly. The [Pulumi CLI](/docs/ai/cli-for-agents/) is designed for them: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), and parse structured `--json` output. [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows, the [Pulumi MCP server](/docs/ai/mcp-server/) offers the same reach over MCP, and [agent accounts](/docs/administration/organizations-teams/agent-accounts/) remove signup friction entirely.
+    Pulumi is built to be driven by AI agents, including the coding agents your team already uses. Because Pulumi infrastructure is real code with a verifiable plan for every change, agents like Claude Code, Codex, Cursor, and GitHub Copilot can write, preview, and deploy it directly. The [Pulumi CLI](/docs/ai/cli-for-agents/) is designed for them: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), and parse structured `--json` output. [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows, the [Pulumi MCP server](/docs/ai/mcp-server/) offers the same reach over MCP, and [agent accounts](/docs/administration/concepts/agent-accounts/) remove signup friction entirely.
 
     [Pulumi Neo](/docs/ai/neo/) is Pulumi's own infrastructure agent, built on the same foundations and adding organizational context, policy guardrails, human-in-the-loop approvals, and scheduled autonomous work. Use your favorite agent, use Neo, or use both together: Neo for long-running, governed infrastructure tasks, and your coding agent for interactive development.
 
@@ -43,7 +43,7 @@ sections:
     description: Give any MCP-capable agent access to your Pulumi Cloud resources and the Registry.
   - icon: rocket-launch
     heading: Agent Accounts
-    link: /docs/administration/organizations-teams/agent-accounts/
+    link: /docs/administration/concepts/agent-accounts/
     description: Ephemeral Pulumi Cloud accounts provisioned automatically for AI agents.
 
 - type: button-cards

@@ -263,6 +263,20 @@ in an `if` statement; see
 [working with outputs](/docs/iac/concepts/inputs-outputs/apply/) for how that
 works.
 
+## Frequently asked questions
+
+### How do I make a resource conditional in Pulumi?
+
+Wrap the resource declaration in a plain `if` statement in your programming language. There's no special conditional-resource construct to learn: the same branching you already use for any other decision in your code decides whether Pulumi sees the resource declaration at all, using ordinary values like [stack configuration](/docs/iac/concepts/config/).
+
+### What replaces `count = 0` in Pulumi?
+
+Nothing special is needed; an ordinary `if` statement takes its place. Because you're working with a real language rather than a declarative block, references to a conditionally created resource stay single values instead of becoming zero-or-one-element lists the way Terraform's `count` produces, which keeps the rest of your program simpler.
+
+### Can I branch on a resource output?
+
+No, not directly. A resource [output](/docs/iac/concepts/inputs-outputs/) isn't known while your program runs, so an `if` can only branch on values known at that time, such as the stack name, configuration, or plain inputs. If a decision genuinely depends on a value produced by another resource, make it inside an [`apply`](/docs/iac/concepts/inputs-outputs/apply/) callback instead of at the top level of your program.
+
 ## Next steps
 
 Continue to [loops and iteration](/docs/iac/guides/basics/language-essentials/loops/)

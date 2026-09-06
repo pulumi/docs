@@ -114,20 +114,19 @@
     }
 
     // Product page widgets
+    //
+    // The headline is a single markdown string in frontmatter: *emphasis* (or
+    // **strong**) marks the run that renders in violet. Color is the only
+    // change — the run keeps the heading's own weight and stays upright.
     .product-hero-heading {
         @include product-hero-heading();
-    }
 
-    .product-hero-title-primary {
-        @apply block text-violet-primary;
-    }
-
-    .product-hero-title-secondary {
-        @apply block text-black;
-    }
-
-    .product-hero-title {
-        @include product-hero-heading();
+        em,
+        strong {
+            @apply text-violet-primary;
+            font-style: inherit;
+            font-weight: inherit;
+        }
     }
 
     .product-hero-description {
@@ -744,6 +743,14 @@
 .hero-code-visual {
     position: relative;
     width: 100%;
+
+    // Shift the composite so the code block, not the canvas, reads as centered:
+    // half the block's 23% left offset (code_offsets, page frontmatter). Only from
+    // lg — below that the visual fills its container and the shift would push the
+    // artwork past the edge.
+    @include screen-lg {
+        transform: translateX(-11.5%);
+    }
 }
 
 // The code-snippets block is absolutely positioned within the aspect-ratio canvas

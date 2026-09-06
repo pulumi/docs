@@ -11,10 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 60
         identifier: iac-comparisons-k8s-yaml
-    concepts:
-        identifier: vs-k8s-yaml
-        parent: vs
-        weight: 60
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/
 - /docs/intro/vs/k8s_yaml_dsls/

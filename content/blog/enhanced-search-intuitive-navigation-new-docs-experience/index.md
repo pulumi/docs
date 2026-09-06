@@ -48,7 +48,7 @@ The [Pulumi cloud get started tutorials](/docs/integrations/clouds/) are for peo
 
 ### Concept docs
 
-The [Pulumi concept docs](/docs/concepts/) are where you can dive into Pulumi concepts. Learn how they work together and how to effectively use them to ship infrastructure.
+The [Pulumi concept docs](/docs/iac/concepts/) are where you can dive into Pulumi concepts. Learn how they work together and how to effectively use them to ship infrastructure.
 
 ![Pulumi concept docs](imgs/concepts.png)
 

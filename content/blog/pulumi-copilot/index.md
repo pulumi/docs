@@ -21,7 +21,7 @@ series: pulumi-copilot
 Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
 {{< /notes >}}
 
-AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using Infrastructure-as-Code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
+AI is transforming how users interact with every category of technology today, and cloud infrastructure is no exception.  Last year we launched [Pulumi AI](/ai/) to combine generative AI with Pulumi’s knowledge of cloud infrastructure, helping users solve complex cloud development problems using infrastructure-as-code.  Pulumi AI has seen rapid adoption and engagement, with tens of thousands of users leveraging Pulumi AI over the last year.
 
 Today, we’re excited to introduce [__Pulumi Copilot__](/product/copilot/), a huge leap forward in applying AI to cloud infrastructure management.  Pulumi Copilot is a new conversational chat interface integrated throughout Pulumi Cloud, enabling Pulumi Cloud users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud.
 
@@ -94,7 +94,7 @@ If we are thinking about removing some infrastructure we may want to know what o
 
 ![Stack references check in Pulumi Copilot window](/blog/pulumi-copilot/stack-references.png)
 
-If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
+If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](https://github.com/pulumi/compliance-policies).
 
 <p align="center"><img src="./fedramp.png" alt="Pulumi Copilot question about getting FedRAMP compliant" width="600" /></p>
 

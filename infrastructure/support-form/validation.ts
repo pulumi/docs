@@ -1,0 +1,241 @@
+// Copyright 2016-2026, Pulumi Corporation.  All rights reserved.
+
+// Validation for support-request submissions POSTed to /api/support.
+//
+// This module is deliberately pure and dependency-free (types only) so it can
+// be unit-tested with the Node test runner without standing up any AWS
+// machinery, and so the Lambda closure it ships in stays small. The rules here
+// are the single source of truth for the payload contract; the client-side
+// validation in theme/src/ts/support-form.ts mirrors them for UX, but only
+// this module is authoritative.
+
+// Priority ids for the "Priority" select. The display labels live in the
+// form's front matter (content/support/new/_index.md); ids and labels must
+// stay in sync with it.
+export const PRIORITIES = ["normal", "urgent"] as const;
+export type Priority = (typeof PRIORITIES)[number];
+
+// Maximum accepted request body, enforced before JSON.parse. The field limits
+// below keep legitimate payloads far under this.
+export const MAX_BODY_BYTES = 256 * 1024;
+
+export const LIMITS = {
+    email: 254,
+    name: 200,
+    organization: 40,
+    subject: 200,
+    descriptionMin: 10,
+    description: 20000,
+};
+
+// Pragmatic email shape check: something@something.tld. Full RFC 5322
+// validation rejects real addresses and accepts junk; the confirmation email
+// is the real verifier.
+// Angle brackets, quotes, commas and semicolons are excluded on top of the
+// whitespace rule: they are legal in a quoted local part but never appear in an
+// address anyone types, and every one of them is a separator in some downstream
+// consumer -- a display-name form ("Support <a@b.co>"), a header list, a CSV
+// export. Control characters and bidi marks are already gone by this point;
+// sanitizeText strips them before any field is validated.
+const EMAIL_PATTERN = /^[^\s@<>",;]+@[^\s@<>",;]+\.[^\s@<>",;]+$/;
+
+// Pulumi organization names: alphanumeric start, then alphanumeric, hyphen, or
+// underscore (matches the Pulumi Cloud org-name rules). The length bound is
+// LIMITS.organization rather than a repeat count here, so the two rules have
+// one source of truth apiece — and an over-long name gets told it's too long
+// instead of being blamed on its characters.
+const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
+
+export interface SupportRequest {
+    email: string;
+    name: string;
+    organization: string;
+    priority: Priority;
+    subject: string;
+    description: string;
+}
+
+export type ValidationResult =
+    | { ok: true; value: SupportRequest }
+    | { ok: false; fields: Record<string, string> };
+
+// Keys accepted at the top level of the JSON payload.
+//
+// "leave_blank" is the honeypot, and its membership here is load-bearing rather
+// than a tolerance. The handler checks it *after* validation (see the comment
+// at that check), so a trapped submission has to validate cleanly to reach the
+// drop. Remove it from this array and a trapped payload takes the unknown-key
+// path to a 422 instead -- restoring exactly the status-code oracle that
+// ordering was introduced to close, and which validation.test.ts pins.
+// Exported so the suite can pin the exact set: the way this rule erodes is a
+// new key being added, which no "rejects an unknown key" test can see.
+export const KNOWN_KEYS = [
+    "email",
+    "name",
+    "organization",
+    "priority",
+    "subject",
+    "description",
+    "leave_blank",
+];
+
+// Strips a pasted console URL ("https://app.pulumi.com/my-org/...") or
+// stray slashes down to the bare organization name.
+export function normalizeOrganization(raw: string): string {
+    let value = raw.trim();
+    // One pattern rather than two, so every combination of scheme and www is
+    // handled. As two, the schemeless branch did not allow www., and a pasted
+    // "www.app.pulumi.com/my-org" survived as far as the host name and then
+    // failed validation on its dots -- a confusing character-set error for what
+    // is a perfectly ordinary paste.
+    value = value.replace(/^(https?:\/\/)?(www\.)?app\.pulumi\.com\//i, "");
+    value = value.replace(/^\/+/, "");
+    const slash = value.indexOf("/");
+    if (slash !== -1) {
+        value = value.slice(0, slash);
+    }
+    return value.trim();
+}
+
+function isRecord(input: unknown): input is Record<string, unknown> {
+    return typeof input === "object" && input !== null && !Array.isArray(input);
+}
+
+// Strips characters that carry no meaning in a support request but change how
+// the text is read once it leaves here.
+//
+// Nothing downstream escapes these. The values land in an Intercom ticket that a
+// support engineer reads, and from there commonly in a Slack relay or a
+// terminal, so the risk is not code execution -- it is a ticket whose displayed
+// text differs from its actual text.
+//
+//   - C0 controls except tab and newline (so CR goes, normalising CRLF to LF).
+//     NUL truncates a string in anything
+//     C-backed; CR alone lets "harmless text\rMALICIOUS" overwrite the visible
+//     line in a terminal; ESC opens ANSI colour and OSC-8 hyperlink sequences.
+//   - Bidi overrides and isolates (U+202A-202E, U+2066-2069) -- the Trojan
+//     Source set -- which reorder a rendered line without changing its bytes,
+//     enough to make a URL or a file name read as something it is not. The
+//     weaker marks go too (U+061C ALM, U+200E LRM, U+200F RLM): they reorder
+//     only neutral characters rather than forcing a run, but flipping the
+//     punctuation in a URL is the same "displays something other than what it
+//     contains" failure, and none of them is a character anyone types.
+//
+// Tab and newline are kept: the description is Markdown and legitimately
+// multi-line. Everything else printable is left alone; over-filtering user
+// prose is its own bug, and callers are told what was rejected rather than
+// having their text silently rewritten beyond these two classes.
+function sanitizeText(value: string): string {
+    // eslint-disable-next-line no-control-regex
+    return value.replace(/[\u0000-\u0008\u000B-\u001F\u007F\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/g, "");
+}
+
+// Returns the trimmed string value of a field, or undefined (recording an
+// error) when the value is present but not a string.
+function stringField(
+    record: Record<string, unknown>,
+    key: string,
+    fields: Record<string, string>,
+): string | undefined {
+    const value = record[key];
+    if (value === undefined || value === null) {
+        return undefined;
+    }
+    if (typeof value !== "string") {
+        fields[key] = "Expected a string.";
+        return undefined;
+    }
+    return sanitizeText(value).trim();
+}
+
+export function validateSubmission(input: unknown): ValidationResult {
+    const fields: Record<string, string> = {};
+
+    if (!isRecord(input)) {
+        return { ok: false, fields: { _form: "Expected a JSON object." } };
+    }
+
+    for (const key of Object.keys(input)) {
+        if (!KNOWN_KEYS.includes(key)) {
+            // Truncated: the key is attacker-controlled and unbounded, and it
+            // is echoed verbatim into every consumer's logs. 64 characters is
+            // more than enough to recognise a mistyped field name.
+            const shown = key.length > 64 ? `${key.slice(0, 64)}...` : key;
+            return { ok: false, fields: { _form: `Unexpected field "${shown}".` } };
+        }
+    }
+
+    const email = stringField(input, "email", fields);
+    if (fields.email === undefined) {
+        if (!email) {
+            fields.email = "Enter your email address.";
+        } else if (email.length > LIMITS.email || !EMAIL_PATTERN.test(email)) {
+            fields.email = "Enter a valid email address.";
+        }
+    }
+
+    const name = stringField(input, "name", fields);
+    if (fields.name === undefined) {
+        if (!name) {
+            fields.name = "Enter your full name.";
+        } else if (name.length > LIMITS.name) {
+            fields.name = `Keep your name to ${LIMITS.name} characters or fewer.`;
+        }
+    }
+
+    const organizationRaw = stringField(input, "organization", fields);
+    let organization: string | undefined;
+    if (fields.organization === undefined) {
+        organization = organizationRaw ? normalizeOrganization(organizationRaw) : undefined;
+        if (!organization) {
+            fields.organization = "Enter your Pulumi organization name.";
+        } else if (organization.length > LIMITS.organization) {
+            fields.organization = `Keep the organization name to ${LIMITS.organization} characters or fewer.`;
+        } else if (!ORGANIZATION_PATTERN.test(organization)) {
+            fields.organization =
+                "Enter just the organization name from https://app.pulumi.com/PULUMI_ORG_NAME " +
+                "(letters, numbers, hyphens, and underscores).";
+        }
+    }
+
+    const priority = stringField(input, "priority", fields);
+    if (fields.priority === undefined) {
+        if (!priority) {
+            fields.priority = "Choose a priority.";
+        } else if ((PRIORITIES as readonly string[]).indexOf(priority) === -1) {
+            fields.priority = "Choose one of the listed priorities.";
+        }
+    }
+
+    const subject = stringField(input, "subject", fields);
+    if (fields.subject === undefined) {
+        if (!subject) {
+            fields.subject = "Enter a subject.";
+        } else if (subject.length > LIMITS.subject) {
+            fields.subject = `Keep the subject to ${LIMITS.subject} characters or fewer.`;
+        }
+    }
+
+    const description = stringField(input, "description", fields);
+    if (fields.description === undefined) {
+        if (!description || description.length < LIMITS.descriptionMin) {
+            fields.description = "Describe the issue in at least a few words.";
+        } else if (description.length > LIMITS.description) {
+            fields.description = `Keep the description to ${LIMITS.description} characters or fewer.`;
+        }
+    }
+
+    if (Object.keys(fields).length > 0) {
+        return { ok: false, fields };
+    }
+
+    const value: SupportRequest = {
+        email: email as string,
+        name: name as string,
+        organization: organization as string,
+        priority: priority as Priority,
+        subject: subject as string,
+        description: description as string,
+    };
+    return { ok: true, value };
+}

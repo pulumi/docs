@@ -1,0 +1,28 @@
+{{- /*
+    Returns an absolute URL for a JSON-LD `image` field, given a raw image
+    path that may be site-root-relative ("/images/foo.png", the normal form
+    for meta_image) or page-relative ("foo.png", used by page-bundled
+    resources such as blog post assets). Call with dict "page" "imagePath".
+
+    A site-root-relative path must be joined against site.BaseURL, never
+    against the page's own Permalink -- joining "/product/" (a page
+    permalink) with "/images/foo.png" (a site-root path) produces the
+    nonsensical "/product/images/foo.png", which is exactly the bug this
+    partial exists to prevent. Mirrors the working logic already in
+    schema/collectors/blog-entity.html and schema/collectors/article-entity.html.
+*/ -}}
+{{- $page := .page -}}
+{{- $imagePath := .imagePath -}}
+{{- $image := "" -}}
+{{- if $imagePath -}}
+    {{- if strings.HasPrefix $imagePath "/" -}}
+        {{- $image = printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) $imagePath -}}
+    {{- else -}}
+        {{- $baseURL := $page.Permalink -}}
+        {{- if not (strings.HasSuffix $baseURL "/") -}}
+            {{- $baseURL = printf "%s/" $baseURL -}}
+        {{- end -}}
+        {{- $image = printf "%s%s" $baseURL $imagePath -}}
+    {{- end -}}
+{{- end -}}
+{{- return $image -}}

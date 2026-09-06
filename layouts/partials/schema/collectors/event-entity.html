@@ -67,12 +67,18 @@
   )
 ) }}
 
-{{/* Add image — use meta_image if set, otherwise fall back to default OG image (required by Google for Event rich results) */}}
+{{/* Add image — use meta_image if set, otherwise fall back to default OG image
+     (required by Google for Event rich results). meta_image is normally
+     site-root-relative ("/images/..."); the previous "not http-prefixed ->
+     join with page Permalink" check treated that case as page-relative too,
+     producing dead URLs like https://www.pulumi.com/events/foo//images/....
+     See schema/utils/absolutize-image.html. */}}
 {{ $imageURL := "" }}
 {{ with .Params.meta_image }}
-  {{ $imageURL = . }}
-  {{ if not (hasPrefix . "http") }}
-    {{ $imageURL = printf "%s%s" $.Permalink . }}
+  {{ if hasPrefix . "http" }}
+    {{ $imageURL = . }}
+  {{ else }}
+    {{ $imageURL = partial "schema/utils/absolutize-image.html" (dict "page" $ "imagePath" .) }}
   {{ end }}
 {{ else }}
   {{ $imageURL = printf "%s%s" "https://www.pulumi.com" "/logos/brand/og-default.png" }}

@@ -119,7 +119,7 @@ $ curl $(pulumi stack output url)
 {"message":"Hello from API Gateway!"}%
 ```
 
-For more complete information about creating Lambda functions, see the [AWS Lambda guide](/docs/clouds/aws/guides/lambda/).
+For more complete information about creating Lambda functions, see the [AWS Lambda guide](/docs/iac/guides/clouds/aws/lambda/).
 
 ### Serving static files from S3 {#s3}
 
@@ -188,7 +188,7 @@ Details on each are below. For those not directly supported, all of these capabi
 
 ### Cognito Authorizers
 
-[Cognito Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html) allow you to use [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) as an authorizer for API Gateway. With a user pool, your users can sign into your web or mobile app through Amazon Cognito directly, social identity providers like Facebook, or SAML identity providers like Google. This enables your API Gateway to offload the difficult work of security to Cognito entirely.
+[Cognito Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html) allow you to use [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) as an authorizer for API Gateway. With a user pool, your users can sign into your web or mobile app through Amazon Cognito directly, social identity providers like Google and Facebook, or SAML and OIDC identity providers. This enables your API Gateway to offload the difficult work of security to Cognito entirely.
 
 To require users to sign in through Cognito, you must specify the source of the authorization token (normally the `Authorization` header) and the ARN of the Cognito User Pool:
 
@@ -206,7 +206,7 @@ You can define a Lambda Authorizer for an event-handler route or a static route.
 
 - Token authorizers use an authorization token (i.e., a header of the form `Authorization: token <token>`)
 
-To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [AWS Lambda](/docs/clouds/aws/guides/lambda/) for other ways you can define your Lambda for the authorizer.
+To define an Authorizer, you provide a Lambda that receives an [authorizer event](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-input.html) and responds with a valid [authorizer response](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html). See [AWS Lambda](/docs/iac/guides/clouds/aws/lambda/) for other ways you can define your Lambda for the authorizer.
 
 Below is an example of a custom `request` authorizer. Because the authorizer has access to the content of the HTTP request, it can use any of the request's properties to determine whether to grant access to the resource requested. For demonstration, this authorizer validates the request using a single, hard-coded token. (In practice, you'd more likely have the authorizer query a database or contact another service for this purpose.)
 
@@ -260,7 +260,7 @@ The following example enables parameter validation on all routes, and both param
 
 ### Request Parameter Validation
 
-To validate that a particular parameter is present in each request, use the `requiredParams` route property. This property is an array that defines each required parameter and where the parameter is expected to be found (`header`, `path`, `query`), using the `name` and `in` properties, respectively.
+To validate that a particular parameter is present in each request, use the `requiredParameters` route property. This property is an array that defines each required parameter and where the parameter is expected to be found (`header`, `path`, `query`), using the `name` and `in` properties, respectively.
 
 The following program uses request validation to ensure that the `q` parameter is present and non-empty on all `/search` requests:
 

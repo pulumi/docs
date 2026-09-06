@@ -20,7 +20,7 @@ aliases:
 ---
 
 A [project](/docs/iac/concepts/projects/) is a collection of code, and a [stack](/docs/iac/concepts/stacks/) is a
-unit of deployment with its own configuration, secrets, [role-based access controls (RBAC)](/docs/administration/access-identity/), policies, and concurrent deployments. Pulumi deliberately leaves the
+unit of deployment with its own configuration, secrets, [role-based access controls (RBAC)](/docs/administration/concepts/rbac/), policies, and concurrent deployments. Pulumi deliberately leaves the
 relationship between the two flexible so that it can accommodate everything from a single developer's side project to
 a large organization with many teams.
 
@@ -38,7 +38,7 @@ Every decision about how to split (or not split) your infrastructure is a balanc
 
 * **Ownership and permissions.** Stacks are the boundary at which you grant access. If your networking and your
   application live in the same stack, anyone who can deploy the application can also change the network. Splitting along
-  team boundaries lets you use [stack permissions](/docs/administration/access-identity/rbac/permission-sets/) to give each team exactly the
+  team boundaries lets you use [stack permissions](/docs/administration/concepts/rbac/permission-sets/) to give each team exactly the
   access it needs and no more.
 
 * **Repository alignment.** Pulumi works naturally with GitOps-style continuous delivery, so most teams align their
@@ -721,7 +721,7 @@ keep these tradeoffs in mind:
 
 * **Team ownership.** Each repository has its own access controls, pipeline, and release process, so the platform team
   can evolve shared infrastructure without touching service code.
-* **Security.** [Stack permissions](/docs/administration/access-identity/rbac/permission-sets/) let you grant service teams read-only access
+* **Security.** [Stack permissions](/docs/administration/concepts/rbac/permission-sets/) let you grant service teams read-only access
   to platform stack outputs without write access to the underlying infrastructure.
 * **Stack reference coupling.** Stack references return the *current* outputs of the referenced stack, so a renamed or
   removed output breaks dependents until they are updated. Coordinate breaking changes to exported outputs carefully.
@@ -906,7 +906,7 @@ production stack, `staging` to each staging stack, and so on. Then in Pulumi Clo
 `Tag: environment`.
 
 Tags aren't only for grouping. On the [Pulumi Enterprise or Business Critical editions](/pricing/), they also drive
-[tag-based (ABAC) rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
+[tag-based (ABAC) rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
 you can grant permissions by tag — for example, giving a team access to every stack tagged `team: payments` — instead of
 enumerating each stack individually. As new stacks pick up the tag, they inherit the access automatically.
 

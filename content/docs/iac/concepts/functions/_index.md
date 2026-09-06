@@ -9,10 +9,6 @@ menu:
         parent: iac-concepts
         weight: 90
         identifier: iac-concepts-functions
-    concepts:
-        name: Functions
-        parent: Overview
-        weight: 6
 ---
 
 Pulumi provides three types of functions that you can use in your programs to interact with cloud resources and retrieve data from cloud providers. Understanding these different function types and when to use them is essential for writing effective Pulumi programs.

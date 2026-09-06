@@ -16,7 +16,7 @@ Pulumi Cloud is the default [state backend](/docs/iac/concepts/state-and-backend
 
 On top of state, Pulumi Cloud adds:
 
-- **[Role-based access control](/docs/administration/organizations-teams/teams/)** with SAML/SSO integration and fine-grained [access tokens](/docs/administration/access-identity/access-tokens/) for automation.
+- **[Role-based access control](/docs/administration/concepts/rbac/teams/)** with SAML/SSO integration and fine-grained [access tokens](/docs/administration/concepts/access-tokens/) for automation.
 - **Reusable configuration and secrets** via [Pulumi ESC](/docs/esc/), so environments can be defined once and consumed across stacks.
 - **[Policy as code](/docs/insights/policy/)** enforcement applied centrally to every update, with pre-built policy packs for common security, compliance, and cost rules.
 - **[Cloud resource inventory](/docs/insights/)** that discovers resources across your cloud accounts, including resources not managed by Pulumi.
@@ -31,9 +31,9 @@ For a detailed, capability-by-capability comparison of Pulumi Cloud and open sou
 
 ## Organizations
 
-An organization is the top-level account in Pulumi Cloud that groups related projects, stacks, and people. It is the primary unit of collaboration: [teams](/docs/administration/organizations-teams/teams/) and [role-based access control](/docs/administration/organizations-teams/), billing, and shared [Pulumi ESC](/docs/esc/) environments all belong to an organization. The organization name is also the first segment of a stack's fully qualified name, in the form `<organization>/<project>/<stack>`.
+An organization is the top-level account in Pulumi Cloud that groups related projects, stacks, and people. It is the primary unit of collaboration: [teams](/docs/administration/concepts/rbac/teams/) and [role-based access control](/docs/administration/concepts/rbac/), billing, and shared [Pulumi ESC](/docs/esc/) environments all belong to an organization. The organization name is also the first segment of a stack's fully qualified name, in the form `<organization>/<project>/<stack>`.
 
-When you sign up for Pulumi Cloud, you automatically get a personal organization named after your username. You can also create organizations for your teams or be invited to existing ones. You can be a member of multiple organizations at once, and you switch between them in the Pulumi Cloud console or with the [`pulumi org`](/docs/iac/cli/commands/pulumi_org/) CLI commands.
+When you sign up for Pulumi Cloud, you automatically get an individual organization named after your username. You can also create organizations for your teams or be invited to existing ones. You can be a member of multiple organizations at once, and you switch between them in the Pulumi Cloud console or with the [`pulumi org`](/docs/iac/cli/commands/pulumi_org/) CLI commands.
 
 ### Getting the current organization programmatically
 

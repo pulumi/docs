@@ -8,8 +8,6 @@ menu:
         name: Update plans
         parent: iac-operations-stack-management
         weight: 20
-    concepts:
-        weight: 11
 aliases:
 - /docs/iac/guides/update-plans/
 - /docs/iac/guides/basics/update-plans/

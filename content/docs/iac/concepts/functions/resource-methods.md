@@ -8,9 +8,6 @@ menu:
         name: Resource methods
         parent: iac-concepts-functions
         weight: 3
-    concepts:
-        parent: functions
-        weight: 3
 ---
 
 Provider SDKs may also include _methods_ attached to a resource type. These methods return computed values from resources you are managing with Pulumi. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) method:
@@ -50,7 +47,8 @@ func (r *Cluster) GetKubeconfig(ctx *Context, args *ClusterGetKubeconfigArgs) (p
 ```python
 def get_kubeconfig(self,
                    profile_name: Optional[pulumi.Input[str]] = None,
-                   role_arn: Optional[pulumi.Input[str]] = None) -> Output[str]
+                   role_arn: Optional[pulumi.Input[str]] = None) -> Output[str]:
+    ...
 ```
 
 </pulumi-choosable>

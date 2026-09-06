@@ -80,14 +80,14 @@ Several mature tools now handle policy as code across different parts of the sta
 
 **Kyverno** is a Kubernetes-native policy engine that uses YAML and Common Expression Language (CEL) rather than a custom query language, which makes it approachable for teams already fluent in Kubernetes manifest syntax. Kyverno validates, mutates, and generates Kubernetes resources, and can also clean up resources on a schedule. It graduated from the CNCF in March 2026. Kyverno's scope is expanding beyond Kubernetes, but its primary strength remains admission control for Kubernetes clusters.
 
-**Pulumi Policies** adds policy as code to the Pulumi [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. Policies are written in TypeScript, JavaScript, Python, or Rego (via OPA integration), making them accessible to the same engineers who write the infrastructure code. Policies apply during `pulumi preview` and `pulumi up`, blocking violations before resources are created or modified. Pulumi Policies also powers audit-mode evaluation of resources discovered through Pulumi Insights, including infrastructure that was provisioned with Terraform, CloudFormation, or directly through cloud consoles.
+**Pulumi Policies** adds policy as code to the Pulumi [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. Policies are written in TypeScript, JavaScript, Python, or Rego (via OPA integration), making them accessible to the same engineers who write the infrastructure code. Policies apply during `pulumi preview` and `pulumi up`, blocking violations before resources are created or modified. Pulumi Policies also powers audit-mode evaluation of resources discovered through Pulumi Discovery, including infrastructure that was provisioned with Terraform, CloudFormation, or directly through cloud consoles.
 
 | Tool | Policy language | Primary scope | Open source / governance | Origin |
 |---|---|---|---|---|
 | Open Policy Agent (OPA) | Rego | General-purpose: Kubernetes, APIs, CI/CD, Terraform | Open source (Apache 2.0); CNCF graduated Feb 2021 | Created by Styra; donated to CNCF; community maintained |
 | HashiCorp Sentinel | Sentinel (proprietary DSL) | HashiCorp suite (HCP Terraform, HCP Vault Dedicated, HCP Consul, Nomad Enterprise) | Proprietary; requires paid HCP Terraform Standard+ | HashiCorp (now IBM) |
 | Kyverno | YAML + CEL | Kubernetes-native (validate, mutate, generate, cleanup) | Open source; CNCF graduated Mar 2026 | Created by Nirmata; donated to CNCF |
-| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (200+ providers) during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
+| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (200+ providers) during `pulumi preview` and `pulumi up`; also audit of discovered resources via Discovery | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
 
 ## How does Pulumi implement policy as code?
 
@@ -106,7 +106,7 @@ Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platfo
 
 **Automatic remediation.** The `remediate` enforcement level uses a `remediateResource` function that Pulumi calls when a policy is violated. Instead of failing the deployment, Pulumi corrects the configuration in place (enabling encryption on a storage bucket that the developer left unencrypted, for example) and proceeds. This is particularly valuable for rules where the fix is deterministic and the goal is adoption rather than blockage.
 
-**Audit mode for existing resources.** Pulumi Policies integrates with Pulumi Insights to evaluate resources that are already running, including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
+**Audit mode for existing resources.** Pulumi Policies integrates with Pulumi Discovery to evaluate resources that are already running, including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
 
 **Pre-built compliance packs.** Pulumi publishes pre-built policy packs for CIS 8.1 (covering AWS, Azure, and Google Cloud), CIS Kubernetes, HITRUST CSF 11.5, NIST SP 800-53 (AWS), PCI DSS v4.0.1 (AWS), and Pulumi Best Practices. These packs can be used as-is or extended with organization-specific rules.
 
@@ -154,7 +154,7 @@ As Zachary Cook, Senior Manager of DevOps at Modivcare, put it:
 
 > "By integrating Pulumi Policy as Code with Insights Account Scanning and our developer portal, we're achieving the holy grail for Platform Engineering: instant visibility and governance over legacy infrastructure that isn't yet defined in IaC, while also accelerating our path to production for new cloud-native projects."
 
-The combination of [policy as code enforcement](/docs/insights/policy/) with [Insights-based governance](/product/insights-governance/) let Modivcare start enforcing cost controls on resources they didn't even write with Pulumi, reducing infrastructure costs by up to 25%.
+The combination of [policy as code enforcement](/docs/insights/policy/) with [Discovery-based governance](/product/discovery-governance/) let Modivcare start enforcing cost controls on resources they didn't even write with Pulumi, reducing infrastructure costs by up to 25%.
 
 ## Frequently asked questions about policy as code
 
@@ -184,7 +184,7 @@ Yes, some systems support automatic remediation. Pulumi Policies' `remediate` en
 
 ### Does policy as code work with Terraform or existing cloud resources?
 
-Yes. Pulumi Policies integrates with Pulumi Insights to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles, and not only those managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
+Yes. Pulumi Policies integrates with Pulumi Discovery to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles, and not only those managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
 
 ### What is the difference between OPA, Sentinel, and Kyverno?
 
@@ -206,7 +206,7 @@ Related reading:
 
 * [Pulumi Policies documentation](/docs/insights/policy/)
 * [Policy packs guide](/docs/insights/policy/policy-packs/)
-* [Discovery and governance](/product/insights-governance/)
+* [Discovery & governance](/product/discovery-governance/)
 * [Benefits of policy as code](/blog/benefits-of-policy-as-code/)
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)

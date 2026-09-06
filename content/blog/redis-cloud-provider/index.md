@@ -185,7 +185,7 @@ vpc.privateSubnetIds.apply(ids => {
 ```
 
 {{% notes type="info" %}}
-If you are unfamiliar with the call to `apply()`, you can learn more about why this is necessary in [Inputs and Outputs](https://www.pulumi.com/docs/concepts/inputs-outputs/#apply). Creating resources within `apply` is usually not necessary, but this is one of the few cases where it is.
+If you are unfamiliar with the call to `apply()`, you can learn more about why this is necessary in [Inputs and Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#apply). Creating resources within `apply` is usually not necessary, but this is one of the few cases where it is.
 {{% /notes %}}
 
 Now, deploy the infrastructure using the `pulumi up` command:

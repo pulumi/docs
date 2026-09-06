@@ -63,7 +63,7 @@ At scale, Pulumi customers report concrete outcomes. BMW's Software Factory mana
 
 ## OpenTofu
 
-[OpenTofu](/docs/iac/comparisons/terraform/opentofu/) is an open-source fork of Terraform, governed by the Linux Foundation rather than a single vendor. It emerged directly from HashiCorp's August 2023 license change: a group of Terraform users and vendors forked the last MPL-licensed Terraform release and committed to keeping the fork under a permissive open-source license going forward.
+[OpenTofu](/what-is/opentofu-vs-terraform/) is an open-source fork of Terraform, governed by the Linux Foundation rather than a single vendor. It emerged directly from HashiCorp's August 2023 license change: a group of Terraform users and vendors forked the last MPL-licensed Terraform release and committed to keeping the fork under a permissive open-source license going forward.
 
 The practical pitch is continuity: OpenTofu aims to stay a close drop-in replacement for Terraform, using the same HCL syntax, the same provider ecosystem (most Terraform providers work unmodified), and largely the same workflow, so teams can migrate with minimal rewriting. Since forking, OpenTofu's maintainers have also started adding features HashiCorp hadn't shipped, including state encryption at rest, giving it a case for teams who want to stay in HCL but prioritize community governance over vendor governance.
 

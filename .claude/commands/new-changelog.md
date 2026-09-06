@@ -54,7 +54,7 @@ If Hugo isn't available or errors, write the file directly with this frontmatter
 
 ```markdown
 ---
-title: "Title in Title Case"
+title: "Title in sentence case"
 date: YYYY-MM-DD
 meta_desc: "One- or two-sentence summary (<= 160 chars)"
 authors:
@@ -70,7 +70,7 @@ authors:
 1. Remove the archetype's instructional comments from the frontmatter.
 2. Set `title`, `date`, and `meta_desc` to the gathered values (the archetype pre-fills `title`/`date` from the filename — verify and tidy the title).
 3. Keep the pre-filled `authors:` field, changing the id if a different person wrote the entry (drop it only in the rare no-byline case). Add `editions:` only if the user specified edition gating; otherwise omit it.
-4. Replace the placeholder body with the announcement: a short paragraph or two that lead with the reader benefit, then link out to the blog post (`/blog/...`) and/or docs (`/docs/...`). Follow `STYLE-GUIDE.md` (H1 = Title Case, H2+ = Sentence case; sentence-case running prose; lowercase common nouns like "stack").
+4. Replace the placeholder body with the announcement: a short paragraph or two that lead with the reader benefit, then link out to the blog post (`/blog/...`) and/or docs (`/docs/...`). Follow `STYLE-GUIDE.md` (sentence case at every heading level, the title included; sentence-case running prose; lowercase common nouns like "stack").
 5. If the entry needs an image or video, place it in `content/releases/changelog/images/` or `.../videos/` **with a date-prefixed, lowercase-hyphenated filename** (`YYYY-MM-DD-slug.ext`, using this entry's date — e.g. `2026-07-11-command-palette.mp4`), and reference it by absolute path (e.g. `/releases/changelog/images/2026-07-11-foo.png`). `make lint` enforces the asset naming too. Markdown must end with a trailing newline.
 
 ### 5. Validate and provide next steps

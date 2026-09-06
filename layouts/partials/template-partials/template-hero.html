@@ -6,10 +6,15 @@
     or a static image in the right/below slot.
 
     Parameters — hero:
-    - title: Hero title (used when title_primary/title_secondary not set)
-    - title_primary: First part of heading, purple/larger
-    - title_secondary: Second part of heading, black/smaller
-    - title_reversed: Optional bool. When true, renders secondary above primary.
+    - title: Hero headline, authored as a single markdown string. *Emphasis* (or
+             **strong**) renders the enclosed run in violet — same color, same
+             weight, no italics — and <br> forces a line break, e.g.
+             "*Infrastructure as code* <br>in any language." A leading space
+             before <br> is no longer required for text-extraction purposes:
+             this partial inserts a non-breaking space before the break itself
+             (see functions/heading-br-space.html), so the rendered text stays
+             separable even after the production `hugo --minify` build strips
+             ordinary whitespace next to <br>.
     - description: Hero description
     - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
     - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
@@ -19,7 +24,6 @@
     - image_alt: Alt text for image (optional)
     - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
     - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
-    - title_reversed: Optional boolean. When true, renders title_secondary (black) above title_primary (purple).
     - layout: Optional string. "split" renders text left / visual right; default is centered.
     - badge_highlight_text: Optional badge text highlighted in purple (split layout only).
     - badge_text: Optional pill badge text displayed above the heading (split layout only).
@@ -48,13 +52,20 @@
     - cta_tertiary_text: Optional tertiary CTA button text.
     - cta_tertiary_link: Optional tertiary CTA button link.
 
-    Right-slot precedence: code_snippets > video_youtube_id > image.
+    Parameters — hero animation (split layout only):
+    - hero_animation: Name of a scene partial under template-partials/hero-animation/
+                      (e.g. "agent-loop").
+
+    Right-slot selection:
+    - hero_visual: Optional explicit pick — "animation", "code", "video", or
+                   "image" — so alternate visuals can stay fully configured in
+                   frontmatter while one is active.
+    - When hero_visual is unset, precedence is:
+      hero_animation > code_snippets > video_youtube_id > image.
 */}}
 
 {{ $title := .title }}
-{{ $titlePrimary := .title_primary }}
-{{ $titleSecondary := .title_secondary }}
-{{ $titleReversed := .title_reversed | default false }}
+{{ $titlePlain := $title | replaceRE `<br\s*/?>` " " | markdownify | plainify | htmlUnescape }}
 {{ $description := .description }}
 {{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
 {{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
@@ -65,7 +76,7 @@
 {{ $videoYouTubeId := .video_youtube_id }}
 {{ $videoTitle := .video_title | default "Watch video" }}
 {{ $image := .image }}
-{{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
+{{ $imageAlt := .image_alt | default $titlePlain }}
 {{ $imageMaxWidth := .image_max_width }}
 {{ $imageMinWidth := .image_min_width }}
 {{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "%smax-width: %s;" $imageStyle $imageMaxWidth }}{{ end }}{{ if $imageMinWidth }}{{ $imageStyle = printf "%smin-width: %s;" $imageStyle $imageMinWidth }}{{ end }}
@@ -78,7 +89,16 @@
 {{ $dateAndLocation := .date_and_location }}
 {{ $booth := .booth }}
 
+{{ $heroAnimation := .hero_animation }}
 {{ $codeSnippets := .code_snippets }}
+{{ $heroVisual := .hero_visual }}
+{{ if not $heroVisual }}
+    {{ if $heroAnimation }}{{ $heroVisual = "animation" }}
+    {{ else if $codeSnippets }}{{ $heroVisual = "code" }}
+    {{ else if $videoYouTubeId }}{{ $heroVisual = "video" }}
+    {{ else if $image }}{{ $heroVisual = "image" }}
+    {{ end }}
+{{ end }}
 {{ $codeTitle := .code_title }}
 {{ $overlayImage := .code_overlay_image }}
 {{ $overlayAlt := .code_overlay_alt | default "" }}
@@ -101,7 +121,7 @@
 
 {{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
+    <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12">
         <div class="xl:w-1/2 flex flex-col items-start">
             {{ if or $badgeText $badgeHighlightText }}
             <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 no-underline hover:border-violet-500 transition-colors">
@@ -114,22 +134,8 @@
                 <span class="hero-tag-line">{{ $tagLine }}</span>
             </div>
             {{ end }}
-            {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading text-left">
-                {{ if and $titlePrimary $titleSecondary }}
-                {{ if $titleReversed }}
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                {{ end }}
-                {{ else if $titlePrimary }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title">{{ $title }}</span>
-                {{ end }}
-            </h1>
+            {{ with $title }}
+            <h1 class="product-hero-heading text-left">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
@@ -163,8 +169,12 @@
             </div>
             {{ end }}
         </div>
-        {{ if $codeSnippets }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        {{ if eq $heroVisual "animation" }}
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
+            {{ partial (printf "template-partials/hero-animation/%s.html" $heroAnimation) . }}
+        </div>
+        {{ else if eq $heroVisual "code" }}
+        <div class="xl:w-1/2 w-full flex xl:justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -191,7 +201,7 @@
             </div>
             {{ end }}
         </div>
-        {{ else if $videoYouTubeId }}
+        {{ else if eq $heroVisual "video" }}
         <div class="xl:w-1/2 w-full">
             <div class="relative rounded-xl overflow-hidden aspect-video">
                 <iframe
@@ -201,7 +211,7 @@
                     title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
-        {{ else if $image }}
+        {{ else if eq $heroVisual "image" }}
         <div class="xl:w-1/2 w-full">
             {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto" "loading" "eager" "fetchpriority" "high" "style" ($imageStyle | safeCSS)) }}
         </div>
@@ -212,22 +222,8 @@
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col items-center gap-12">
         <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-            {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading">
-                {{ if and $titlePrimary $titleSecondary }}
-                {{ if $titleReversed }}
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                {{ end }}
-                {{ else if $titlePrimary }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title">{{ $title }}</span>
-                {{ end }}
-            </h1>
+            {{ with $title }}
+            <h1 class="product-hero-heading">{{ partial "functions/heading-br-space.html" . | markdownify }}</h1>
             {{ end }}
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
@@ -249,7 +245,7 @@
             </div>
             {{ end }}
         </div>
-        {{ if $codeSnippets }}
+        {{ if eq $heroVisual "code" }}
         <div class="product-hero-visual flex justify-center w-full">
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -271,7 +267,7 @@
                 {{ end }}
             </div>
         </div>
-        {{ else if $videoYouTubeId }}
+        {{ else if eq $heroVisual "video" }}
         <div class="product-hero-visual flex justify-center w-full">
             <div class="relative rounded-xl overflow-hidden w-full max-w-4xl aspect-video">
                 <iframe
@@ -281,7 +277,7 @@
                     title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
-        {{ else if $image }}
+        {{ else if eq $heroVisual "image" }}
         <div class="product-hero-visual flex justify-center">
             {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "fetchpriority" "high" "style" ($imageStyle | safeCSS) "maxWidth" 1500 "quality" 95) }}
         </div>

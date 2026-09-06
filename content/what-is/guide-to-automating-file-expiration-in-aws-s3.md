@@ -83,7 +83,7 @@ The filter property with the prefix sub-property ensures that this rule only app
 
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
-## Verify the configuration of your S3 file expiration
+## How do you verify the configuration of your S3 file expiration?
 
 After deployment, you can verify the lifecycle configuration in the AWS Management Console:
 

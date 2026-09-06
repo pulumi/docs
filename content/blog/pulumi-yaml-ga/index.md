@@ -215,7 +215,7 @@ spec:
 
 ## Conclusion
 
-The GA of Pulumi YAML marks a stable foundation for the simple, declarative YAML interface to the Pulumi ecosystem.  We’re excited to see YAML support expand the audiences who can jump in and use the best of the Pulumi ecosystem, ensuring that Pulumi offers a great experience for every Infrastructure as Code use case and user.
+The GA of Pulumi YAML marks a stable foundation for the simple, declarative YAML interface to the Pulumi ecosystem.  We’re excited to see YAML support expand the audiences who can jump in and use the best of the Pulumi ecosystem, ensuring that Pulumi offers a great experience for every infrastructure as code use case and user.
 
 Check out these resources to get started with Pulumi YAML today:
 

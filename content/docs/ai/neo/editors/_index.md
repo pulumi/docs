@@ -79,4 +79,4 @@ Tool call approvals surface in the editor's agent panel, so you review Neo's act
 
 ## How permissions work
 
-An editor session uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.
+An editor session uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/concepts/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.

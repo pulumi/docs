@@ -132,7 +132,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::aws-login:\n  oidc:\n    duration: 1h\n    roleArn: arn:aws:iam::012345678912:role/role-abcd123\n    sessionName: pulumi-esc"
+            "snippet": "fn::open::aws-login:\n  oidc:\n    duration: 1h\n    roleArn: arn:aws:iam::012345678912:role/role-abcd123\n    sessionName: pulumi-esc\n    subjectAttributes:\n      - currentEnvironment.name"
           }
         ],
         "properties": {
@@ -404,7 +404,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::azure-login:\n  clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000\n  oidc: true"
+            "snippet": "fn::open::azure-login:\n  clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000\n  oidc: true\n  subjectAttributes:\n    - currentEnvironment.name"
           }
         ],
         "properties": {
@@ -759,7 +759,7 @@
       "inputs": {
         "examples": [
           {
-            "snippet": "fn::open::gcp-login:\n  project: 123456789\n  oidc:\n    workloadPoolId: pulumi-esc\n    providerId: pulumi-esc\n    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com"
+            "snippet": "fn::open::gcp-login:\n  project: 123456789\n  oidc:\n    workloadPoolId: pulumi-esc\n    providerId: pulumi-esc\n    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com\n    subjectAttributes:\n      - currentEnvironment.name"
           }
         ],
         "properties": {

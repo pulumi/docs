@@ -6,7 +6,7 @@ block_external_search_index: true
 
 heading: "Crossplane Alternative"
 subheading: |
-    Manage cloud and Kubernetes infrastructure in TypeScript, Python, Go, or C# — with no control
+    Manage cloud and Kubernetes infrastructure in TypeScript, JavaScript, Python, Go, or .NET — with no control
     plane to install and no compositions or XRDs to author in YAML.
 
 customer_quote:
@@ -26,11 +26,11 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL using your IDE and any language ecosystem tools.
                 icon: code
               - title: Build on any cloud
                 description: |

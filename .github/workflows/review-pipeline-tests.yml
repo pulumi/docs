@@ -22,6 +22,7 @@ on:
     paths:
       - 'scripts/content-review/**'
       - 'scripts/blog-review/**'
+      - 'scripts/review-v3/**'
       - 'scripts/test-review-pipeline.sh'
       - '.claude/commands/docs-review/scripts/**'
       # The suites assert against the shipped strategic-tiers.yaml and
@@ -29,6 +30,10 @@ on:
       # pages are retirement-vetoed, that every upstream entry cites an issue),
       # so a data-only edit to those files must run them too.
       - '.claude/commands/review-existing-content/references/**'
+      # The routing suite asserts against the shipped lane config (team slugs
+      # resolvable, matrix complete, SLA entries present), so a config-only
+      # edit must run it too.
+      - '.github/review-routing.yml'
       - '.github/workflows/review-pipeline-tests.yml'
 
 permissions:

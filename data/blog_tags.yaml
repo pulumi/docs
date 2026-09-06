@@ -79,6 +79,7 @@ ai:
   - mlops
   - claude
   - claude-code
+  - codex
   - mcp
   - chatbot
 

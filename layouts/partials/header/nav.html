@@ -1,8 +1,8 @@
 {{- $nav := site.Data.header_nav -}}
-{{- /* Docs/tutorials keep a header that scrolls away (their sticky sidebar +
-       TOC are sized from the header's visible bottom); everywhere else the nav
-       is pinned. Same URL test the header used to branch the docs nav on. */ -}}
-{{- $docsChrome := or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/tutorials/") -}}
+{{- /* Docs keeps a header that scrolls away (its sticky sidebar + TOC are
+       sized from the header's visible bottom); everywhere else the nav is
+       pinned. Same URL test the header used to branch the docs nav on. */ -}}
+{{- $docsChrome := hasPrefix .RelPermalink "/docs/" -}}
 
 <header
   class="{{ if $docsChrome }}relative{{ else }}sticky top-0{{ end }} z-40 w-full border-b border-gray-200 bg-white"

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "ran": true,
+  "model": "claude-sonnet-5",
+  "findings": [
+    {
+      "line_range": "L33",
+      "anchor_quote": "See [Installing a Parameterized Provider](#installing-a-parameterized-provider-via-pulumi-package-add) for details.",
+      "failure_mode": "prerequisite-inversion",
+      "fix_class": "local_repair",
+      "proposed_fix": "Either remove the forward link at L33 (since the concept is introduced again fully at L62-64) or add a brief inline note that parameterization is covered in the 'Installing providers' section below, rather than relying on the reader to jump via anchor before the term has been explained.",
+      "rationale": "The term 'parameterized providers' is used and partially explained at L33, then the reader is sent forward to a section that hasn't been read yet; this forward-jump pattern makes the reader hold an incomplete definition until they detour out of sequence.>=optional though since it's a link not a blocking gap.>",
+      "file": "content/docs/iac/concepts/providers/_index.md"
+    },
+    {
+      "line_range": "L43-49",
+      "anchor_quote": "1. **Adding a reference to a provider's SDK using a package manager** in the language of your Pulumi program (e.g., npm in Node.js). This method is more common and is used for nearly all packages in the [Pulumi Registry](/registry).\n1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**.",
+      "failure_mode": "self-redundancy",
+      "fix_class": "local_repair",
+      "proposed_fix": "Trim the overview list at L47-48 to one short sentence per method (pointing to the subsections below for detail), since the two subsections at L50 and L62 repeat the same explanations almost verbatim.",
+      "rationale": "The two installation methods are described in the intro list (L47-48) and then described again in near-identical terms in the '### Installing a provider via a package manager' (L50-60) and '### Installing a parameterized provider' (L62-81) sections, padding the reader's path without adding new information beyond what the subsections already cover.'",
+      "file": "content/docs/iac/concepts/providers/_index.md"
+    },
+    {
+      "line_range": "L477",
+      "anchor_quote": "the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context",
+      "failure_mode": "orphaned-structure",
+      "fix_class": "local_repair",
+      "proposed_fix": "Update the prose at L477 to also state that the EC2 instance is created 'in us-east-1' consistently, or clarify that both facts are illustrated by the providers map below; currently fine but flag if wording drifts from code -- omit unless verified against code.",
+      "rationale": "minor/optional - the prose describes what the code demonstrates but readers must cross-reference multiple language tabs to verify; not a strong structural defect.",
+      "file": "content/docs/iac/concepts/providers/_index.md"
+    }
+  ],
+  "errors": [],
+  "meta": {
+    "files": 1
+  }
+}

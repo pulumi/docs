@@ -4,6 +4,17 @@ on:
     branches:
       - master
       - 'release/**'
+
+# Only the newest commit on a PR is worth building. Without this, pushing three
+# commits in quick succession runs three full builds to completion, and the two
+# superseded ones just burn a runner and hold up the queue. Each run publishes to
+# a bucket keyed by PR number *and* head sha, so a cancelled run can only orphan
+# its own preview bucket -- pr-closed.yml deletes every *-pr-<num>-* bucket when
+# the PR closes, and bucket-cleanup-testing.yml sweeps daily.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
@@ -78,6 +89,22 @@ jobs:
           restore-keys: |
             meta-images-
 
+      # Derive the cache key from the Hugo installed above rather than a literal,
+      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # unparseable version rather than silently collapsing every build into a
+      # single unversioned namespace, which is the bug this exists to prevent.
+      - name: Resolve Hugo version for the cache key
+        id: hugo-version
+        run: |
+          hv="$(hugo version)"
+          # -n/p so a non-match yields empty rather than echoing the input back,
+          # and check before appending -extended so the guard can't see a value
+          # that is only the suffix.
+          ver="$(printf '%s' "$hv" | sed -nE 's/^hugo v([0-9]+\.[0-9]+\.[0-9]+).*/\1/p')"
+          [ -n "$ver" ] || { echo "could not parse hugo version from: $hv" >&2; exit 1; }
+          case "$hv" in *+extended*) ver="$ver-extended" ;; esac
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
       # Persist Hugo's processed-image cache (resources/_gen). Blog templates
       # process feature images to WebP at several sizes via .Process; without
       # this cache every CI run re-encodes ~2,400 images from scratch (~4-5
@@ -86,9 +113,28 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          key: hugo-resources-${{ github.sha }}
+          # Keyed on the Hugo resolved above, not a literal, so the four
+          # workflows that share this cache (pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml,
+          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
+          # remembering to bump them. Hugo does not put its version in its own
+          # cache entries, so without this an upgrade keeps serving images
+          # encoded by the previous version indefinitely.
+          key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-${{ steps.hugo-version.outputs.version }}-
+
+      # PR runs don't wait on await-in-progress.js the way master deploys do, so
+      # the elapsed time here is build time with no queue wait to subtract.
+      - name: Record build start time
+        run: echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
+      # Node's built-in runner over scripts/*.test.js. Runs before the build because it
+      # needs nothing installed -- `make ensure` begins with `clean`, so anything
+      # installed ahead of it is thrown away. `make test` is gated on static/programs
+      # changes in scheduled-test.yml, which would leave this coverage off content PRs.
+      - name: Run unit tests
+        run: make test-unit
 
       - name: Build and deploy
         run: make ci_pull_request
@@ -103,6 +149,17 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+
+      # The same guardrail build-and-deploy.yml has. PR builds had none, which is
+      # how they drifted to ~17 minutes without anyone being told. 15 minutes
+      # sits a few minutes above the post-fix baseline, so it should stay quiet
+      # unless the build genuinely regresses; tighten it once that baseline settles.
+      - name: Alert on slow build
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          BUILD_DURATION_THRESHOLD_MINUTES: '15'
+        run: ./scripts/ci-build-duration-alert.sh
 
       - name: Archive test results
         uses: actions/upload-artifact@v7

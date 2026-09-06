@@ -9,9 +9,6 @@ menu:
         parent: iac-concepts
         weight: 60
         identifier: iac-concepts-inputs-outputs
-    concepts:
-        identifier: inputs-outputs
-        weight: 5
 aliases:
     - /docs/reference/inputs-outputs/
     - /docs/intro/concepts/inputs-outputs/
@@ -183,7 +180,7 @@ var key = new PrivateKey("my-private-key", new PrivateKeyArgs{
 var key = new PrivateKey("my-private-key", PrivateKeyArgs.builder()
     .algorithm("ECDSA") // ECDSA is a plain value
     .build()
-)
+);
 ```
 
 {{% /choosable %}}

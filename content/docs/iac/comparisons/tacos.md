@@ -10,10 +10,6 @@ menu:
         name: TACOS
         parent: iac-comparisons
         weight: 35
-    concepts:
-        identifier: vs-tacos
-        parent: vs
-        weight: 75
 aliases:
 - /docs/reference/vs/tacos/
 - /docs/intro/vs/tacos/

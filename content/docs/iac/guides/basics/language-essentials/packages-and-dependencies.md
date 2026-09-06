@@ -64,6 +64,20 @@ your organization and shouldn't be public, Pulumi Cloud supports private
 packages, so you get the same install-and-import experience internally
 without publishing anything externally.
 
+## Frequently asked questions
+
+### Do I still need to run `pulumi plugin install`?
+
+Usually not. The Pulumi CLI installs any missing provider plugins automatically the first time you run `pulumi preview` or `pulumi up` in a project. Manual installation is for cases like pre-fetching plugins in CI, working offline, or pinning a specific plugin version ahead of time; it isn't a step you need in ordinary day-to-day development.
+
+### How do I add a Pulumi provider to my project?
+
+Through your language's own package manager: `npm install @pulumi/aws` in TypeScript, `pip install pulumi-aws` in Python, a Go module dependency, `Pulumi.Aws` through NuGet, or `com.pulumi.aws` through Maven. You can also run `pulumi package add` to generate a local SDK directly from a plugin or schema, which is the same mechanism source-based component packages use.
+
+### How do I share a component privately with my organization?
+
+Publish it to the Pulumi Private Registry with `pulumi package publish` against a tagged Git repository. Teammates can then discover the package in the registry and generate an SDK for it in whichever language they're using, the same way they would consume any first-party provider.
+
 ## Next steps
 
 Revisit the [series overview](/docs/iac/guides/basics/language-essentials/) or apply

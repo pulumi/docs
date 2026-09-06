@@ -326,7 +326,7 @@ let getValue(output: Output<'a>): 'a =
 
 {{% /choosable %}}
 
-To learn more about outputs, read [this article](/docs/concepts/stack#outputs).
+To learn more about outputs, read [this article](/docs/iac/concepts/stacks/#outputs).
 
 ## First Test
 

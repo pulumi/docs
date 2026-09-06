@@ -3,8 +3,6 @@ title: Documentation
 linktitle: Docs
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 meta_image: /images/docs/opengraph-docs.png
-aliases:
-- /docs/reference/
 layout: main-home
 notitle: true
 docs_home: true
@@ -58,10 +56,10 @@ sections:
 - type: button-cards
   heading: Learning Resources
   cards:
-  - icon: graduation-cap
-    heading: Tutorials ↗
-    description: Step-by-step guides for building real-world infrastructure with Pulumi.
-    link: /tutorials/
+  - icon: compass
+    heading: Dev Center ↗
+    description: Tutorials, templates, examples, and more for building real-world infrastructure with Pulumi.
+    link: /dev/
 - type: button-cards
   heading: More Documentation
   cards:

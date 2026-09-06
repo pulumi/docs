@@ -1,0 +1,296 @@
+// Copyright 2016-2026, Pulumi Corporation.  All rights reserved.
+
+// Lambda handler for POST /api/support — the support-request form endpoint.
+//
+// The function sits behind a Lambda Function URL that is only reachable (in
+// practice) through the www.pulumi.com CloudFront distribution, which injects
+// a shared-secret x-origin-verify header at the origin (see supportForm.ts).
+// Requests without the secret are rejected, so the public Function URL can't
+// be used to bypass the CDN's WAF and rate limiting.
+//
+// Accepted submissions are filed as Intercom tickets (see ./intercom.ts) and,
+// either way, written to CloudWatch Logs as single-line JSON documents (type
+// "support_request_accepted" or "support_request_ticket_failed") for
+// observability.
+
+import * as crypto from "crypto";
+import { createSupportTicket } from "./intercom";
+import { MAX_BODY_BYTES, validateSubmission } from "./validation";
+
+// Function URLs invoke with the API Gateway v2 payload shape. Only the pieces
+// used here are typed, so the closure doesn't drag in @types/aws-lambda at
+// runtime.
+export interface FunctionUrlEvent {
+    body?: string;
+    isBase64Encoded?: boolean;
+    headers?: Record<string, string | undefined>;
+    requestContext?: {
+        http?: {
+            method?: string;
+            path?: string;
+            sourceIp?: string;
+        };
+    };
+}
+
+export interface FunctionUrlResult {
+    statusCode: number;
+    headers: Record<string, string>;
+    body: string;
+}
+
+// Longest value accepted from CloudFront-Viewer-Address. An IPv6 address plus a
+// port fits comfortably; anything longer is not an address CloudFront set.
+const MAX_ADDRESS_LENGTH = 64;
+
+// Where a logged address came from. Recorded alongside the address itself
+// because the two sources mean very different things, and a record that
+// silently mixed them would be worse than no record: "edge" is not the
+// submitter, and must never be read as though it were.
+export type IpSource = "viewer" | "edge" | "unknown";
+
+export interface ClientAddress {
+    ip: string | undefined;
+    source: IpSource;
+}
+
+// Recovers the address from CloudFront's "<ip>:<port>" viewer-address value.
+//
+// AWS documents the port as always present, so the address is everything before
+// the LAST colon -- which is what makes the IPv6 form work ("2001:db8::1:443" ->
+// "2001:db8::1") where splitting on the first colon would not.
+//
+// Two refinements on top of that. The trailing segment has to actually look like
+// a port: without that check a value that arrived with no port at all is
+// silently truncated to a shorter address that is still labelled as attributed,
+// which is worse than not parsing -- a log line that looks like it identifies
+// someone and does not. And RFC 3986 bracketing ("[2001:db8::1]:443") is
+// stripped, so an address is logged in one queryable form either way. AWS
+// documents only the IPv4 example, so the IPv6 rendering is inferred; both
+// shapes are handled rather than betting on one.
+//
+// One case stays ambiguous and is left as-is: a portless IPv6 whose final group
+// is all digits ("2001:db8::1") is indistinguishable from an address with a
+// port, and loses its last group. AWS documents the port as always present, so
+// this should not arise.
+function stripPort(value: string): string {
+    if (value.charAt(0) === "[") {
+        const closing = value.indexOf("]");
+        return closing === -1 ? value : value.slice(1, closing);
+    }
+    const lastColon = value.lastIndexOf(":");
+    if (lastColon === -1) {
+        return value;
+    }
+    const port = value.slice(lastColon + 1);
+    if (port.length === 0 || !/^[0-9]+$/.test(port)) {
+        return value;
+    }
+    return value.slice(0, lastColon);
+}
+
+// The submitter's IP address, for the abuse trail in the logs below.
+//
+// requestContext.http.sourceIp is NOT it: CloudFront invokes the Function URL,
+// so that field is the edge node's address (a 3.x CLOUDFRONT_ORIGIN_FACING IP),
+// identical in shape for every submission and useless for tracing anyone.
+//
+// X-Forwarded-For is not the answer either. CloudFront appends the viewer to
+// whatever X-Forwarded-For the caller already sent, so the header is partly
+// caller-authored by the time it leaves the edge, and reading the wrong end of
+// it logs a forged address that looks authentic. (A Function URL may also
+// collapse the chain before the handler sees it; we could not find that
+// documented either way, which is reason enough not to depend on the shape.)
+//
+// CloudFront-Viewer-Address avoids all of it. CloudFront sets it from the TCP
+// connection and overwrites anything the client sent, so it cannot be forged,
+// and it is forwarded by the origin request policy rather than produced by edge
+// code that could fail. Trusting it is sound because the caller already proved
+// the request came through our distribution: supportFormHandler rejects anything
+// without the x-origin-verify shared secret before this is ever called.
+//
+// The value is "<ip>:<port>"; see stripPort for how the address is recovered.
+export function clientAddress(event: FunctionUrlEvent): ClientAddress {
+    const forwarded = event.headers?.["cloudfront-viewer-address"];
+    if (typeof forwarded === "string") {
+        const value = forwarded.trim();
+        if (value.length > 0 && value.length <= MAX_ADDRESS_LENGTH) {
+            const ip = stripPort(value);
+            if (ip.length > 0) {
+                return { ip, source: "viewer" };
+            }
+        }
+    }
+    // No viewer address: either the origin request policy is not forwarding it
+    // (a misconfiguration, or mid-deploy propagation) or this is a direct
+    // Function URL invocation, where sourceIp really is the caller's own peer.
+    const peer = event.requestContext?.http?.sourceIp;
+    return { ip: peer, source: peer ? "edge" : "unknown" };
+}
+
+// A ticket id for the honeypot's fake success.
+//
+// Intercom's ids are numeric strings, so this has to look like one -- an
+// obviously synthetic value (a UUID, a fixed sentinel) would be as good an
+// oracle as omitting the field. Nothing consumes it: no ticket exists.
+function syntheticTicketId(): string {
+    // First digit is 1-9. Intercom renders integers, so a real id never has a
+    // leading zero, and building all 15 digits uniformly gave one in ten of
+    // these a leading zero -- a free tell for anyone comparing a drop against a
+    // real acceptance. Width checked against real ids returned by the testing
+    // workspace: 215475647261127, 215475647300185, 372996254723247.
+    let digits = String(Math.floor(Math.random() * 9) + 1);
+    while (digits.length < 15) {
+        digits += Math.floor(Math.random() * 10).toString();
+    }
+    return digits;
+}
+
+function jsonResponse(statusCode: number, body: object, extraHeaders: Record<string, string> = {}): FunctionUrlResult {
+    return {
+        statusCode,
+        headers: {
+            "content-type": "application/json",
+            "cache-control": "no-store",
+            ...extraHeaders,
+        },
+        body: JSON.stringify(body),
+    };
+}
+
+// The env var holds a comma-separated list so a rotation can accept both the
+// old and new secret while the CloudFront origin-header change propagates.
+function originSecretOk(header: string | undefined): boolean {
+    const configured = process.env.SUPPORT_FORM_ORIGIN_SECRET;
+    if (!configured) {
+        // Fail closed if the function is somehow deployed without its secret.
+        return false;
+    }
+    if (!header) {
+        return false;
+    }
+    return configured
+        .split(",")
+        .map(s => s.trim())
+        .filter(s => s.length > 0)
+        .some(secret => secret === header);
+}
+
+export async function supportFormHandler(event: FunctionUrlEvent): Promise<FunctionUrlResult> {
+    const headers = event.headers || {};
+
+    if (!originSecretOk(headers["x-origin-verify"])) {
+        return jsonResponse(403, { ok: false, error: "forbidden" });
+    }
+
+    // Resolved once, and deliberately only after the secret check: the viewer
+    // address is trustworthy precisely because CloudFront vouched for this
+    // request. Computed here rather than at each log site so the success path,
+    // which runs after the Intercom ticket already exists, cannot fail on it.
+    const address = clientAddress(event);
+
+    const method = (event.requestContext?.http?.method || "").toUpperCase();
+    if (method !== "POST") {
+        return jsonResponse(405, { ok: false, error: "method_not_allowed" }, { allow: "POST" });
+    }
+
+    // Compare the media type alone, not a prefix of the whole header. startsWith
+    // also accepted application/jsonlines and application/json-patch+json, which
+    // are different formats that happen to share a prefix; splitting on ";"
+    // keeps the charset parameter working without that.
+    const contentType = (headers["content-type"] || "").toLowerCase().split(";")[0].trim();
+    if (contentType !== "application/json") {
+        return jsonResponse(400, { ok: false, error: "unsupported_content_type" });
+    }
+
+    if (!event.body) {
+        return jsonResponse(400, { ok: false, error: "empty_body" });
+    }
+    const rawBody = event.isBase64Encoded ? Buffer.from(event.body, "base64").toString("utf8") : event.body;
+    if (Buffer.byteLength(rawBody, "utf8") > MAX_BODY_BYTES) {
+        return jsonResponse(413, { ok: false, error: "payload_too_large" });
+    }
+
+    let parsed: unknown;
+    try {
+        parsed = JSON.parse(rawBody);
+    } catch (err) {
+        return jsonResponse(400, { ok: false, error: "invalid_json" });
+    }
+
+    const result = validateSubmission(parsed);
+    if (!result.ok) {
+        return jsonResponse(422, { ok: false, error: "validation_failed", fields: result.fields });
+    }
+
+    // Honeypot: the "leave_blank" field is visually hidden on the form, so any
+    // value in it marks a bot. Pretend success so the bot moves on.
+    //
+    // The name matters. As "website" the field was a prime autofill target --
+    // password managers store website URLs and match on the field name -- and an
+    // autofilled trap destroys a real person's request: they are shown the
+    // confirmation, their draft is deleted, and no ticket exists. A name with no
+    // autofill semantics costs nothing against the naive bots this catches,
+    // which fill every field regardless of what it is called.
+    //
+    // Deliberately AFTER validation, and returning the same response shape a
+    // real success does. Checking it first gave a spammer a one-request oracle:
+    // a knowingly invalid payload plus the honeypot returned 200 where the same
+    // payload without it returned 422, so the trap announced itself. And a fake
+    // success that omitted ticketId was distinguishable from a real one by any
+    // caller that read the documented shape. Both are closed by validating
+    // first and minting a plausible id.
+    //
+    // The response body is indistinguishable; the latency is not. A real
+    // acceptance awaits up to three sequential round trips to api.intercom.io,
+    // and this path does no I/O at all, so a determined spammer could tell them
+    // apart by timing. Left as-is deliberately: closing it means padding this
+    // path to a plausible duration, which holds a Lambda invocation open to
+    // serve a bot, and the trap only ever catches the naive ones anyway.
+    if (typeof parsed === "object" && parsed !== null && (parsed as Record<string, unknown>).leave_blank) {
+        console.log(
+            JSON.stringify({
+                type: "support_request_spam_dropped",
+                receivedAt: new Date().toISOString(),
+                sourceIp: address.ip,
+                ipSource: address.source,
+            }),
+        );
+        return jsonResponse(200, { ok: true, id: crypto.randomUUID(), ticketId: syntheticTicketId() });
+    }
+
+    const id = crypto.randomUUID();
+
+    let ticketId: string;
+    try {
+        ticketId = await createSupportTicket(result.value);
+    } catch (err) {
+        console.error(
+            JSON.stringify({
+                type: "support_request_ticket_failed",
+                id,
+                error: err instanceof Error ? err.message : String(err),
+                sourceIp: address.ip,
+                ipSource: address.source,
+                request: result.value,
+            }),
+        );
+        return jsonResponse(502, { ok: false, error: "ticket_creation_failed", id });
+    }
+
+    // One JSON document per accepted submission, queryable in CloudWatch Logs
+    // Insights via { $.type = "support_request_accepted" }.
+    console.log(
+        JSON.stringify({
+            type: "support_request_accepted",
+            id,
+            ticketId,
+            receivedAt: new Date().toISOString(),
+            sourceIp: address.ip,
+            ipSource: address.source,
+            request: result.value,
+        }),
+    );
+
+    return jsonResponse(200, { ok: true, id, ticketId });
+}

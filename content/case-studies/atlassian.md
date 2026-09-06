@@ -61,7 +61,7 @@ Mike was the founding member of the DevSpeed team. His first task was to add cro
 
 ### Evaluating the existing tools
 
-Mike first examined the existing toolset to see if it would solve his problem. He found that the team used an Infrastructure-as-Code tool, Terraform, that required users to learn its domain-specific language (DSL), which was not intuitive to Mike and most developers. A developer would go to the repo containing a YAML template written in the DSL, run the Bitbucket CI/CD pipeline, and the tool would spin up a self-contained version of Bitbucket in AWS.
+Mike first examined the existing toolset to see if it would solve his problem. He found that the team used an infrastructure-as-code tool, Terraform, that required users to learn its domain-specific language (DSL), which was not intuitive to Mike and most developers. A developer would go to the repo containing a YAML template written in the DSL, run the Bitbucket CI/CD pipeline, and the tool would spin up a self-contained version of Bitbucket in AWS.
 
 Because of the DSL’s limitations, it would not be straightforward to codify infrastructure deployments for the Sydney team. Mike would need to learn the complicated DSL to complete his task, which would be unproductive and time-consuming. On top of that, he was relatively new to using AWS and the cloud.
 

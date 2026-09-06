@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 50
         identifier: iac-comparisons-helm
-    concepts:
-        parent: vs
-        weight: 50
 ---
 
 Pulumi and [Helm](https://helm.sh/) solve different problems that often appear in the same workflow. Pulumi is an infrastructure as code platform that provisions resources across any cloud or SaaS platform from general-purpose languages. Helm is a package manager for Kubernetes that installs applications onto a cluster from templated YAML charts. Many teams use them together: Pulumi provisions clusters and cloud resources, then installs Helm charts inside the same program.

@@ -213,6 +213,16 @@ def scores(q: dict) -> dict[str, float]:
     return {a["path"]: a["score"] for a in q["articles"]}
 
 
+def scored_paths(q: dict) -> list[str]:
+    """Queue paths in order, minus the reserved never-reviewed slot.
+
+    The fix lane hands its first slot to the oldest never-reviewed page ahead
+    of the ranking (NEVER_REVIEWED_RESERVE), so a test about SCORE ORDER has to
+    look at the scored remainder rather than at index 0.
+    """
+    return [a["path"] for a in q["articles"] if not a.get("reserved")]
+
+
 def write_ledger(ledger: Path, path: str, reviewed_at: str, **kw) -> None:
     ledger.mkdir(parents=True, exist_ok=True)
     slug = path.removeprefix("content/").removesuffix("/_index.md").removesuffix(".md").replace("/", "-")
@@ -484,7 +494,7 @@ def main() -> int:
         led_done = tmp / "ledger-done"
         write_ledger(led_done, C, "2026-06-05", status="reviewed")
         qd = run_select(repo, tiers, led_done, "--count", "3")
-        dpaths = [a["path"] for a in qd["articles"]]
+        dpaths = scored_paths(qd)
         check(dpaths[0] == OVERVIEW, "after a fresh completed review the tier-1 page drops below the stale tier-2")
         check(C not in dpaths, "just-reviewed tier-1 leaves the top picks")
 
@@ -592,6 +602,70 @@ def main() -> int:
         check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
               == ["version/pulumi-package"],
               "escalated marker reaches a --paths review instead of being dropped")
+
+        # The block above swapped `tiers` for the repo's real strategic-tiers
+        # file; these cases need the fixture's own tree rules back (clidocs
+        # non-editable, generated tier 0), so they use their own copy.
+        tiers_r = tmp / "tiers-reserve.yaml"
+        tiers_r.write_text(TIERS)
+
+        print("reserved slot: the oldest never-reviewed page goes first")
+        # Score alone never reaches the cold half of the corpus (importance
+        # spans ~22x), so tier 3 sat at 0/288 reviewed. One slot per fix-lane
+        # run is handed to the oldest page no review has ever completed on.
+        led_res = tmp / "ledger-reserve"
+        # Everything in the 2024-01-01 seed commit except TWO has been
+        # reviewed, so TWO is the only never-reviewed page of that vintage.
+        # NEWPAGE was created 2026-06-01 and is younger, so it must lose.
+        for path in (C, STACKS, OVERVIEW, ONE, KEEP):
+            write_ledger(led_res, path, "2026-06-05", status="reviewed")
+        qr = run_select(repo, tiers_r, led_res, "--count", "3")
+        arts = qr["articles"]
+        check(len(arts) == 3, f"count still honored (got {len(arts)})")
+        check(arts[0]["path"] == TWO,
+              f"oldest never-reviewed page takes slot 0 (got {arts[0]['path']})")
+        check(arts[0]["reserved"] == "never_reviewed", "the reason is on the article")
+        check(arts[0]["score"] is not None,
+              "the reserved page still carries its real score for the ledger")
+        check(all("reserved" not in a for a in arts[1:]),
+              "only the first slot is reserved")
+        check(TWO not in scored_paths(qr),
+              "the reserved page is not also taken by the scored queue")
+
+        print("reserved slot: NEWPAGE is never-reviewed too, but younger, so it loses")
+        check(NEWPAGE != arts[0]["path"], "oldest wins, not merely any never-reviewed page")
+
+        print("reserved slot: disabled at count 1, so the scored queue is never dark")
+        q1 = run_select(repo, tiers_r, led_res, "--count", "1")
+        check(len(q1["articles"]) == 1, "one article")
+        check("reserved" not in q1["articles"][0],
+              f"no reservation at count 1 (got {q1['articles'][0]})")
+
+        print("reserved slot: nothing to reserve falls through to pure score order")
+        led_all = tmp / "ledger-all-reviewed"
+        for path in (C, STACKS, OVERVIEW, ONE, TWO, KEEP, NEWPAGE):
+            write_ledger(led_all, path, "2026-06-05", status="reviewed")
+        qa = run_select(repo, tiers_r, led_all, "--count", "3")
+        check(all("reserved" not in a for a in qa["articles"]),
+              "no never-reviewed candidate, no reservation")
+        check([a["path"] for a in qa["articles"]] == scored_paths(qa),
+              "the queue is exactly the scored order")
+
+        print("reserved slot: an incomplete review does not count as a review")
+        led_inc_res = tmp / "ledger-reserve-incomplete"
+        for path in (C, STACKS, OVERVIEW, ONE, KEEP, NEWPAGE):
+            write_ledger(led_inc_res, path, "2026-06-05", status="reviewed")
+        # TWO has a reviewed_at, but the run died before recording a verdict —
+        # it never looked at the page, so the page is still never-reviewed.
+        write_ledger(led_inc_res, TWO, "2026-06-11", status="incomplete", attempts=1)
+        check(run_select(repo, tiers_r, led_inc_res, "--count", "3")
+              ["articles"][0]["path"] == TWO,
+              "an incomplete entry still counts as never reviewed")
+
+        print("reserved slot: report mode is unaffected")
+        qrep = run_select(repo, tiers_r, led_res, "--count", "3", "--mode", "report")
+        check(all("reserved" not in a for a in qrep["articles"]),
+              "the report lane reserves nothing — its whole job is the cold half")
 
         print("stale-claim boost cooldown (#20970's missing half)")
         import importlib.util

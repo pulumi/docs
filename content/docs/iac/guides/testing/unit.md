@@ -334,7 +334,7 @@ The definition of the mocks interface is available at the [runtime API reference
 
 ## Mocking stack references
 
-If your program uses [StackReference](/docs/concepts/stacks/#stackreferences) to read outputs from another stack, you need to handle them in your mocks. When a `StackReference` resource is created, the mock's `newResource` function receives it with type `pulumi:pulumi:StackReference`. You can return mock outputs that simulate the referenced stack's outputs.
+If your program uses [StackReference](/docs/iac/concepts/stacks/#stackreferences) to read outputs from another stack, you need to handle them in your mocks. When a `StackReference` resource is created, the mock's `newResource` function receives it with type `pulumi:pulumi:StackReference`. You can return mock outputs that simulate the referenced stack's outputs.
 
 {{% choosable language "typescript" %}}
 
@@ -807,7 +807,7 @@ void instanceMustHaveNameTag() {
 This looks like a normal test, with a few noteworthy pieces:
 
 - Since we're querying resource state without doing a deployment, there are many properties whose values will be undefined. This includes any output properties computed by your cloud provider that you did not explicitly return from the mocks. That's fine for these tests&mdash;we're checking for valid inputs anyway.
-- Because all Pulumi resource properties are [outputs](/docs/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values (see the `GetValueAsync` function in the `Testing.cs` file).
+- Because all Pulumi resource properties are [outputs](/docs/iac/concepts/inputs-outputs/)&mdash;since many of them are computed asynchronously&mdash;we need to use the `apply` method to get access to the values (see the `GetValueAsync` function in the `Testing.cs` file).
 - Finally, since these outputs are resolved asynchronously, we need to use the framework's built-in asynchronous test capability.
 
 After we've gotten through that setup, we get access to the raw inputs as plain values. The tags property is a map, so we make sure it is (1) defined, and (2) not missing an entry for the `Name` key. This is very basic, but we can check anything!

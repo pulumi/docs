@@ -46,7 +46,7 @@ Stay tuned as we will announce the full agenda and speakers soon on our website 
 
 **Inaugural Community Summit**: Connect and engage with Pulumi practitioners from around the world---from the comfort of your home. We are hosting a Community Summit on May 5 featuring lightning talks and discussions.
 
-**Workshops**: Get hands-on with Pulumi and cloud engineering in 1-hour workshops that will cover the fundamentals of Infrastructure as Code as well as more advanced subjects for experienced Pulumi users.
+**Workshops**: Get hands-on with Pulumi and cloud engineering in 1-hour workshops that will cover the fundamentals of infrastructure as code as well as more advanced subjects for experienced Pulumi users.
 
 ## Join us on May 4 and 5
 

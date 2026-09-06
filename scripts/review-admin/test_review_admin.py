@@ -129,6 +129,76 @@ def test_record_matches_slug_path_and_url():
     assert ra.record_matches({"url": "/blog/example-post/"}, "/blog/example-post/")
 
 
+def test_pr_review_rows_joins_evidence_state_and_last_action(cache: Path):
+    rows = ra.pr_review_rows(cache)
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["pr"] == 21300
+    assert row["head_sha"] == "a" * 9
+    assert row["blocking"] == 1     # F1: outstanding, no disposition
+    assert row["dispositions"] == 1  # F2: has a disposition
+    assert row["warns"] == 1
+    assert row["escalations"] == 0
+    assert row["closes"] == 0
+    assert row["last_sweep_action"] == "warn"
+
+
+def test_pr_review_rows_empty_when_prefix_absent(tmp_path: Path):
+    assert ra.pr_review_rows(tmp_path) == []
+
+
+def test_load_pr_review_state_tags_pr_from_filename(cache: Path):
+    states = ra.load_pr_review_state(cache)
+    assert len(states) == 1
+    assert states[0]["pr"] == 21300
+    assert len(states[0]["warns"]) == 1
+
+
+def test_load_pr_review_runs_tags_run_date(cache: Path):
+    runs = ra.load_pr_review_runs(cache)
+    assert len(runs) == 1
+    assert runs[0]["_run_date"] == "2026-08-31"
+    assert runs[0]["actions"][0]["pr"] == 21300
+
+
+def test_record_matches_by_pr_number():
+    assert ra.record_matches({"pr": 21300}, "21300")
+    assert not ra.record_matches({"pr": 21300}, "99999")
+
+
+def test_build_summary_includes_pr_review(cache: Path):
+    s = ra.build_summary(cache)
+    assert s["pr_review"]["prs"] == 1
+    assert s["pr_review"]["blocking_total"] == 1
+    assert s["pr_review"]["warns_total"] == 1
+    assert s["pr_review"]["escalations_total"] == 0
+
+
+def test_list_pr_review(cache: Path, capsys):
+    class Args:
+        cache_dir = str(cache)
+        domain = "pr-review"
+        status = None
+        verdict = None
+        since = None
+        limit = None
+
+    assert ra.cmd_list(Args()) == 0
+    out = capsys.readouterr().out
+    assert "(1 rows)" in out
+    assert "21300" in out and "warn" in out
+
+
+def test_export_includes_pr_review(cache: Path, tmp_path: Path):
+    out = tmp_path / "out"
+    out.mkdir()
+    ra.write_exports(ra.pr_review_rows(cache), out, "pr-review", ra.PR_REVIEW_COLUMNS, {"csv"})
+    with (out / "pr-review.csv").open() as fh:
+        parsed = list(csv.DictReader(fh))
+    assert len(parsed) == 1
+    assert parsed[0]["pr"] == "21300"
+
+
 def test_list_filters(cache: Path, capsys):
     class Args:
         cache_dir = str(cache)

@@ -82,4 +82,4 @@ Now that we have a brand new integration with [Oracle Cloud Infrastructure (OCI)
 Thursday, July 28th at 8:00 AM PDT
 [Register](https://www.pulumi.com/resources/getting-started-with-infrastructure-as-code-on-digital-ocean)
 
-In this hands-on workshop, Matty Stratton (Pulumi) and Chris Sevilleaja (DigitalOcean) will show you how to stand up basic services using Infrastructure as Code with hands-on labs using JavaScript/TypeScript.
+In this hands-on workshop, Matty Stratton (Pulumi) and Chris Sevilleaja (DigitalOcean) will show you how to stand up basic services using infrastructure as code with hands-on labs using JavaScript/TypeScript.

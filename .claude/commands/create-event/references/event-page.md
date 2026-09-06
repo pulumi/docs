@@ -8,7 +8,7 @@ The single source of truth for the schema is `archetypes/event/index.md` (its co
 
 | Field | Rule |
 |---|---|
-| `title` | ≤ 60 characters, Title Case. Hard limit from the marketing template; trim with the user rather than truncating silently. |
+| `title` | ≤ 60 characters, sentence case. Hard limit from the marketing template; trim with the user rather than truncating silently. |
 | `meta_desc` | 50–160 characters, one sentence — it's the card text on /events/ and the search snippet. |
 | `meta_image` / `meta_image_square` | Leave **blank** by default: the build auto-generates an on-brand card (landscape + square) from frontmatter. Set only when event-meta-image renders an enriched card into the bundle (`/events/<slug>/meta.png`, `/events/<slug>/meta-square.png`). |
 | `gated` | `true` renders the registration form (needs `form.hubspot_form_id`). Pulumi-hosted workshops/webinars default gated. |

@@ -21,7 +21,7 @@ aliases:
 ---
 
 This section contains guides for working with AWS services using Pulumi. If you are unsure which AWS package to
-use for your project, see [Choosing a Pulumi AWS provider](providers/) for a comparison of the available packages
+use for your project, see [Choosing a Pulumi AWS provider](/docs/iac/guides/clouds/aws/providers/) for a comparison of the available packages
 and when to use each one.
 
 The guides use the following packages:
@@ -34,22 +34,22 @@ The guides use the following packages:
 
 ## Getting started
 
-- [Choosing a provider](providers/)
-- [Pulumi CDK Adapter](cdk/)
+- [Choosing a provider](/docs/iac/guides/clouds/aws/providers/)
+- [Pulumi CDK Adapter](/docs/iac/guides/clouds/aws/cdk/)
 
 ## Containers
 
-- [Elastic Container Service (ECS)](ecs)
-- [Elastic Kubernetes Service (EKS)](eks)
-- [Elastic Container Registry (ECR)](ecr)
+- [Elastic Container Service (ECS)](/docs/iac/guides/clouds/aws/ecs/)
+- [Elastic Kubernetes Service (EKS)](/docs/iac/guides/clouds/aws/eks/)
+- [Elastic Container Registry (ECR)](/docs/iac/guides/clouds/aws/ecr/)
 
 ## Serverless
 
-- [Lambda](lambda/)
-- [API Gateway](api-gateway/)
+- [Lambda](/docs/iac/guides/clouds/aws/lambda/)
+- [API Gateway](/docs/iac/guides/clouds/aws/api-gateway/)
 
 ## Core infrastructure
 
-- [Elastic Load Balancing (ELB)](elb)
-- [Identity and Access Management (IAM)](iam)
-- [Virtual Private Cloud (VPC)](vpc)
+- [Elastic Load Balancing (ELB)](/docs/iac/guides/clouds/aws/elb/)
+- [Identity and Access Management (IAM)](/docs/iac/guides/clouds/aws/iam/)
+- [Virtual Private Cloud (VPC)](/docs/iac/guides/clouds/aws/vpc/)

@@ -33,15 +33,15 @@ To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new Google Cloud projects from a pre-built template:
 
-- [Container service on Google Cloud](/templates/container-service/gcp/) — containerized service on Cloud Run.
-- [Serverless application on Google Cloud](/templates/serverless-application/gcp/) — Cloud Functions with supporting resources.
-- [Static website on Google Cloud](/templates/static-website/gcp/) — Cloud Storage static site.
-- [Virtual machine on Google Cloud](/templates/virtual-machine/gcp/) — Compute Engine VM with configurable networking.
-- [Kubernetes cluster on Google Cloud](/templates/kubernetes/gcp/) — Google Kubernetes Engine (GKE) cluster ready for workloads.
+- [Container service on Google Cloud](/dev/templates/container-service/gcp/) — containerized service on Cloud Run.
+- [Serverless application on Google Cloud](/dev/templates/serverless-application/gcp/) — Cloud Functions with supporting resources.
+- [Static website on Google Cloud](/dev/templates/static-website/gcp/) — Cloud Storage static site.
+- [Virtual machine on Google Cloud](/dev/templates/virtual-machine/gcp/) — Compute Engine VM with configurable networking.
+- [Kubernetes cluster on Google Cloud](/dev/templates/kubernetes/gcp/) — Google Kubernetes Engine (GKE) cluster ready for workloads.
 
 ## Guides
 
@@ -72,7 +72,10 @@ For Google Cloud:
 
 - [Pulumi best practices for Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) — Pulumi-authored policies for common Google Cloud misconfigurations.
 - [CIS Google Cloud Platform Foundations Benchmark](/docs/reference/pre-built-policy-packs/cis/google-cloud/)
+- [NIST 800-53 for Google Cloud](/docs/reference/pre-built-policy-packs/nist/google-cloud/)
+- [PCI DSS for Google Cloud](/docs/reference/pre-built-policy-packs/pci-dss/google-cloud/)
 - [HITRUST CSF for Google Cloud](/docs/reference/pre-built-policy-packs/hitrust/google-cloud/)
+- [ISO/IEC 27001 for Google Cloud](/docs/reference/pre-built-policy-packs/iso-27001/google-cloud/)
 - [CIS Kubernetes Benchmark on Google Cloud](/docs/reference/pre-built-policy-packs/cis-kubernetes/google-cloud/) — for GKE clusters.
 
 ## Migration

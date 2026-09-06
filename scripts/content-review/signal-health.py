@@ -16,11 +16,11 @@ workflow; all share one state object:
   holiday-feed    the BambooHR ICS holiday gate fails open by design, so a feed
                   that has been 404ing (or serving garbage) for weeks is invisible
   reverify        the nightly volatile-claims re-verification only Slacks when
-                  it finds STALE entities, so a dead lane (claims index gone,
-                  API key missing, every check inconclusive because the
-                  verifier's gh/API plumbing broke — or because every verdict
-                  was demoted for citing only our own docs) looks identical to
-                  a healthy quiet one
+                  it finds STALE entities, so a dead or decaying lane (claims
+                  index gone, API key missing, most checks inconclusive because
+                  the verifier's gh/API plumbing broke — or because most
+                  verdicts were demoted for citing only our own docs) looks
+                  identical to a healthy quiet one
 
 Graceful degradation is the right behavior; this script adds the missing
 observability. The dispatcher runs it once per scheduled run with that run's
@@ -101,6 +101,17 @@ SIGNAL_THRESHOLDS = {"capped-pages": 0}
 # same treatment a missing report already gets.
 MIN_INCONCLUSIVE_SAMPLE = 5
 
+# Share of a night's checks that may come back inconclusive before the lane
+# is degraded. Until 2026-09 this signal only fired at 100%: 19 inconclusive
+# of 20 read as "ok", and the night of 2026-09-03 — 10 of 20, nine of them
+# demoted for citing our own docs — logged `status: ok`. The signal could see
+# a dead lane and nothing short of one. With indexed-circular claims held out
+# of the rotation (reverify-claims.py) the expected inconclusive share is
+# about a quarter; three in four is a lane producing almost nothing and is
+# the level at which someone should look, whether the cause is plumbing
+# (errors, unverifiable) or routing (demotions — the detail says which).
+REVERIFY_INCONCLUSIVE_RATE = 0.75
+
 # How long a signal may go unobserved before silence itself is the finding.
 #
 # Every signal is reported BY a job. Nothing reports on a job that never ran,
@@ -151,7 +162,7 @@ CONSEQUENCES = {
         "Regenerate the BAMBOOHR_HOLIDAY_ICS_URL feed."
     ),
     "reverify": (
-        "nightly claims re-verify: no conclusive results for {days} day(s) "
+        "nightly claims re-verify: mostly inconclusive checks for {days} day(s) "
         "({detail}) — volatile-claim drift (version pins, prices, limits) is "
         "going undetected. A demotion count above means the verifier is only "
         "citing our own docs: that's its source routing, not the plumbing. "
@@ -262,14 +273,16 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     from a dead lane. A missing/unreadable report is NOT evidence of
     degradation (the job may not have run at all) — return None.
 
-    An all-inconclusive night still degrades when the cause is demotion (the
+    A night degrades when at least REVERIFY_INCONCLUSIVE_RATE of its checks
+    are inconclusive — all of them being the limiting case. Demotion (the
     verifier only cited our own docs, so nothing it returned could be trusted
-    either way): no drift was detected, which is the thing this signal exists
-    to notice. But the count is carried into the detail so the alert points at
-    the verifier's source routing rather than at S3 and API keys — the
-    remediation for a demoted night is nothing like the one for a dead lane.
+    either way) counts: no drift was detected, which is the thing this signal
+    exists to notice. But the count is carried into the detail so the alert
+    points at the verifier's source routing rather than at S3 and API keys —
+    the remediation for a demoted night is nothing like the one for a dead
+    lane.
 
-    That inference needs a sample to stand on, so an all-inconclusive night
+    That inference needs a sample to stand on, so a mostly-inconclusive night
     under MIN_INCONCLUSIVE_SAMPLE checks yields no observation rather than a
     degraded one. `skipped` and `no_snapshots` are unaffected: a lane that
     could not run says so directly and never depends on the sample size.
@@ -290,13 +303,17 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
         return "degraded", "claims index empty or unfetchable"
     if skipped:
         return "degraded", f"{n_due} entities due but run skipped ({skipped})"
-    if n_checked and n_inconclusive == n_checked:
+    if n_checked and n_inconclusive / n_checked >= REVERIFY_INCONCLUSIVE_RATE:
         if n_checked < MIN_INCONCLUSIVE_SAMPLE:
-            log(f"all {n_checked} check(s) inconclusive, but that is below the "
-                f"{MIN_INCONCLUSIVE_SAMPLE}-check floor for a lane-wide verdict; "
-                f"no reverify observation")
+            log(f"{n_inconclusive} of {n_checked} check(s) inconclusive, but that is "
+                f"below the {MIN_INCONCLUSIVE_SAMPLE}-check floor for a lane-wide "
+                f"verdict; no reverify observation")
             return None
-        detail = f"all {n_checked} checks inconclusive"
+        if n_inconclusive == n_checked:
+            detail = f"all {n_checked} checks inconclusive"
+        else:
+            detail = (f"{n_inconclusive} of {n_checked} checks inconclusive "
+                      f"({n_inconclusive * 100 // n_checked}%)")
         if n_demoted:
             detail += f", {n_demoted} demoted for citing only our own docs"
         return "degraded", detail
@@ -736,6 +753,14 @@ def self_test() -> int:
     rv_thin = {"meta": {"n_snapshots": 100, "n_entities": 54, "n_due": 1,
                         "n_checked": 1, "n_stale": 0, "n_fresh": 0,
                         "n_inconclusive": 1, "n_demoted": 1}}
+    # 19 of 25 (76%): a lane producing almost nothing. 12 of 25 (48%) is
+    # noisy but working — and is roughly what 2026-09-03 looked like.
+    rv_mostly = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
+                          "n_checked": 25, "n_stale": 0, "n_fresh": 6,
+                          "n_inconclusive": 19, "n_demoted": 4}}
+    rv_half = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 20,
+                        "n_checked": 20, "n_stale": 2, "n_fresh": 8,
+                        "n_inconclusive": 10, "n_demoted": 9}}
 
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
@@ -747,6 +772,19 @@ def self_test() -> int:
         st, alert = run_once(d, "2026-09-02", reverify=rv_quiet)
         check("reverify quiet night (nothing due) is ok",
               st["signals"]["reverify"]["status"] == "ok")
+
+        # A mostly-inconclusive night degrades on the rate, not only at 100%,
+        # and the detail carries the fraction; a noisy-but-working night is ok
+        # and clears it.
+        st, alert = run_once(d, "2026-09-02", reverify=rv_mostly)
+        check("mostly-inconclusive night degrades on the rate",
+              st["signals"]["reverify"]["status"] == "degraded"
+              and "19 of 25" in st["signals"]["reverify"]["detail"]
+              and "4 demoted" in st["signals"]["reverify"]["detail"])
+        st, alert = run_once(d, "2026-09-02", reverify=rv_half)
+        check("half-inconclusive night is ok and clears the degradation",
+              st["signals"]["reverify"]["status"] == "ok"
+              and st["signals"]["reverify"]["degraded_since"] is None)
 
         # 13. All-inconclusive and couldn't-run reports degrade; alert names
         # the consequence once due.

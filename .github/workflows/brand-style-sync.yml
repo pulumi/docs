@@ -1,0 +1,134 @@
+name: "Scheduled jobs: Brand style sync"
+
+# Weekly drift check of the offline Vale mirror (styles/Pulumi/) against the
+# Pulumi brand guide, with retired/deprecated product names as the priority.
+# Vale can't call the brand MCP at lint time, so this job is what keeps the
+# mirror honest: it re-reads the brand sections each mirrored rule tracks
+# (per styles/Pulumi/BRAND-SYNC.yaml) and opens a draft PR when they've
+# drifted. See .claude/commands/brand-vale-sync/SKILL.md for the process.
+on:
+  schedule:
+    # Mondays at 14:20 UTC. Offset from weekly-digest.yml, which runs at 14:00.
+    - cron: '20 14 * * 1'
+  workflow_dispatch: null
+
+# One sync at a time: a workflow_dispatch during the scheduled run would
+# otherwise race for the same date-stamped branch and open two PRs.
+concurrency:
+  group: brand-style-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write # Required for ESC OIDC auth
+  actions: read
+
+jobs:
+  sync:
+    name: Check Vale mirror against brand guide
+    runs-on: ubuntu-latest
+    # Upstream only: the fork has no ESC trust policy, so this would fail at the
+    # first step and show a weekly red X there. BRAND_SYNC_ENABLED='0' is the
+    # kill switch (unset = on), matching the BLOG_REVIEW_COUNT pattern.
+    if: github.repository == 'pulumi/docs' && vars.BRAND_SYNC_ENABLED != '0'
+    timeout-minutes: 20
+    steps:
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — the PR opened by claude-code-action then goes out as
+      # pulumi-bot, letting downstream workflows (docs review, etc.) fire.
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      # mise owns the Vale pin (mise.toml) so this job and the docs-review
+      # lane always lint with the same binary. A hand-pinned download here
+      # silently drifted from that pin once already.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v4
+        with:
+          cache: true
+      # `make lint` runs node scripts/lint/lint-markdown.js and prettier, so the
+      # skill's validation step needs node_modules. Without this it fails with
+      # MODULE_NOT_FOUND and the agent has no way to self-remedy.
+      - name: Install dependencies
+        run: make ensure
+
+      # The whole design of this job is "never sync from memory" -- a sync
+      # against a hallucinated source is worse than no sync. The model cannot
+      # set this job's exit code, and claude-code-action reports success for any
+      # completed session, so that guarantee has to be mechanical and has to run
+      # BEFORE Claude starts. If brand.pulumi.com is down, fail here.
+      - name: Verify the brand MCP is reachable
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o /tmp/mcp-probe.txt -w '%{http_code}' \
+            --max-time 20 --retry 2 --retry-delay 5 \
+            -X POST https://brand.pulumi.com/mcp \
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json, text/event-stream' \
+            -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"brand-style-sync","version":"1"}}}' \
+            || echo 000)
+          if [ "$code" != "200" ]; then
+            echo "::error::brand MCP unreachable (HTTP $code). Refusing to sync the Vale mirror from memory."
+            head -c 400 /tmp/mcp-probe.txt || true
+            exit 1
+          fi
+          echo "brand MCP reachable (HTTP 200)."
+
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bot token so the PR triggers downstream workflows.
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          prompt: |
+            You are running in CI on a schedule.
+
+            Follow `.claude/commands/brand-vale-sync/SKILL.md` exactly: check
+            the offline Vale mirror under `styles/Pulumi/` against the Pulumi
+            brand guide via the `pulumi-brand` MCP server, prioritizing the
+            terminology section's "Retired and disallowed names" table.
+
+            - A previous step already proved the brand MCP is reachable. If
+              `get_guidelines` nonetheless fails, stop and exit non-zero --
+              never reconstruct the guide from memory or from the repo's own
+              mirror, which is the thing under test.
+            - **NEVER run `vale sync`.** `styles/Google/` and
+              `styles/write-good/` are checked in and pinned; `vale sync`
+              re-downloads and overwrites them, and `git` is on your allowlist,
+              so the damage would land in your PR.
+            - Before opening anything, run
+              `gh pr list --state open --search "head:vale/brand-sync"` . If a
+              sync PR is already open, push your changes onto **that** branch
+              and update its body instead of opening a second one. Two open
+              sync PRs edit the same rule files and are guaranteed to conflict.
+            - If the mirror has drifted, fix it and open a **draft** PR on a
+              branch named `vale/brand-sync-<YYYY-MM-DD>` with the auditable
+              body the skill describes.
+            - If nothing drifted, bump `last_synced` in
+              `styles/Pulumi/BRAND-SYNC.yaml` and open the same draft PR with
+              just that change.
+            - Validate with `make lint` and by running `vale` against a scratch
+              fixture that exercises each rule you touched, positive and
+              negative cases. Do NOT rely on `make lint-prose` here: this job
+              checks out at depth 1, so its `git diff master...HEAD` finds no
+              changed files and it exits 0 without linting anything.
+          # The public pulumi-brand MCP server is wired via --mcp-config
+          # (claude-code-action@v1 has no mcp_config input); its tools are in
+          # --allowed-tools. No auth: the server is public.
+          claude_args: |
+            --model claude-opus-5 --effort low
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make lint:*),Bash(make lint-prose:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(sed:*),Bash(awk:*),Bash(jq:*),Bash(diff:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(python3 -c:*)"
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

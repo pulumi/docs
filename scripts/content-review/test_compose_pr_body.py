@@ -298,6 +298,169 @@ check("glowup sections match record-review's MODE_PR_SECTIONS",
 check("every glowup section heading renders in the body",
       all(f"## {s}" in gout for s in c.GLOWUP_SECTIONS))
 
+# ---- backlog reconciliation against the fresh run -----------------------------
+#
+# The two 2026-09-01 glow-ups a human reviewer rejected, replayed offline over
+# trimmed copies of their own `review-snapshot` artifacts (testdata/). The
+# composer takes exactly these inputs, so this is the acceptance test.
+
+import json as _json
+
+TD = Path(__file__).resolve().parent / "testdata"
+
+
+def _load(run: str, name: str):
+    return _json.loads((TD / run / name).read_text())
+
+
+def _section(text: str, name: str) -> str:
+    return text.split(f"## {name}", 1)[1].split("\n## ", 1)[0]
+
+
+# Case 1 — PR #21291 (run 33518039058, convert-hcl.md): `pr20004-findings-4`
+# is a July `contradicted (medium)` verdict on "Using the Pulumi MCP server is
+# the recommended approach …" that the September run re-verdicted
+# `not-a-claim (high)` as c37 at L1228 (id drifted from c23, line from L1115).
+# The glow-up executed it anyway. Same run: c7 and c32 were contradicted and
+# never surfaced — the body carried only a verdict count.
+RUN_A = "glowup-run33518039058"
+backlog_a = _load(RUN_A, ".glowup-backlog.json")
+body_a = c.compose_glowup(_load(RUN_A, ".content-review-queue.json"), backlog_a,
+                          _load(RUN_A, ".verified-claims.json"), None,
+                          _load(RUN_A, ".readthrough-findings.json"), None)
+exe_a, dec_a = _section(body_a, "Backlog executed"), _section(body_a, "Backlog declined")
+check("#21291: pr20004-findings-4 is pre-declined as superseded by re-verification",
+      "`pr20004-findings-4`" in dec_a and "superseded by re-verification" in dec_a)
+check("#21291: the pre-declined row names the fresh verdict, id and line",
+      "`not-a-claim`" in dec_a and "c37" in dec_a and "L1228" in dec_a)
+check("#21291: pr20004-findings-4 is absent from the work list",
+      "`pr20004-findings-4`" not in exe_a)
+item4 = next(b for b in backlog_a["banked"] if b["id"] == "pr20004-findings-4")
+check("#21291: the banked item is stamped with its fresh verdict",
+      item4["fresh_verdict"]["claim_id"] == "c37" and item4["fresh_verdict"]["verdict"] == "not-a-claim"
+      and item4["pre_declined"].startswith("superseded by re-verification"))
+check("#21291: c7 (contradicted high) is stubbed as a work row",
+      "`fresh-c7`" in exe_a and "contradicted (high)" in exe_a)
+check("#21291: c32 (contradicted medium) is stubbed as a work row",
+      "`fresh-c32`" in exe_a and "contradicted (medium)" in exe_a)
+check("#21291: fresh stubs are sourced 'this run' and carry a TODO",
+      "| this run | <TODO" in exe_a)
+# Items the fresh run left `unverifiable` (c25/c26/c28 -> c39, c29 -> c43,
+# c32 -> c39) are stamped but stay work; so does a Vale nag (never matched)
+# and a banked claim the fresh run now CONTRADICTS (c22 -> c36).
+check("#21291: banked items whose fresh verdict is unverifiable stay work, stamped",
+      all(f"`pr20004-findings-{n}`" in exe_a for n in (6, 7, 8, 9, 12))
+      and next(b for b in backlog_a["banked"] if b["id"] == "pr20004-findings-7")["fresh_verdict"]["verdict"] == "unverifiable")
+check("#21291: a Vale nag and a banked claim the fresh run contradicts stay work",
+      "`pr20004-findings-13`" in exe_a and "`pr20004-findings-2`" in exe_a
+      and "c36 `contradicted`" in exe_a)
+# Banked `unverifiable` claims the fresh run VERIFIED are superseded too —
+# c24 -> c38 verified, c30 -> c44 verified, c31 -> c45 verified.
+check("#21291: banked unverifiable claims the fresh run verified are pre-declined",
+      all(f"`pr20004-findings-{n}`" in dec_a for n in (5, 10, 11)))
+check("#21291: the reconciled backlog records the split",
+      set(backlog_a["reconciled"]["pre_declined_ids"]) == {"pr20004-findings-3", "pr20004-findings-4",
+                                                          "pr20004-findings-5", "pr20004-findings-10",
+                                                          "pr20004-findings-11"}
+      and {"fresh-c7", "fresh-c32"} <= {s["id"] for s in backlog_a["reconciled"]["fresh_stubs"]})
+check("#21291: the row shows the prior disposition as context, labelled",
+      "_(prior disposition:" in exe_a)
+# The fresh stub's text starts with collect()'s label so record-page-findings
+# resolves an executed stub to its finding by the same prefix match.
+labels = {f["label"] for f in c.collect(_load(RUN_A, ".verified-claims.json"), None, None, None)[0]}
+check("#21291: fresh stub text starts with collect()'s label for the same verdict",
+      all(any(st["text"].startswith(lab) for lab in labels) for st in backlog_a["reconciled"]["fresh_stubs"]))
+check("#21291: every stubbed id is accounted for by the accounting check on the draft",
+      c.glowup_body_accounting(body_a, backlog_a) == ["Backlog executed still carries a <TODO> marker",
+                                                     "Backlog declined still carries a <TODO> marker"])
+
+# Case 2 — PR #21293 (run 33518035360, providers/_index.md): `pr20503-findings-5`
+# is a July readthrough "self-redundancy" finding the July agent declined as
+# editorial; the fresh readthrough pass raised three findings, none of them
+# this one (its self-redundancy is a different one, seven lines away). The
+# glow-up executed it and collapsed a definition.
+RUN_C = "glowup-run33518035360"
+backlog_c = _load(RUN_C, ".glowup-backlog.json")
+body_c = c.compose_glowup(_load(RUN_C, ".content-review-queue.json"), backlog_c,
+                          _load(RUN_C, ".verified-claims.json"), None,
+                          _load(RUN_C, ".readthrough-findings.json"), None)
+exe_c, dec_c = _section(body_c, "Backlog executed"), _section(body_c, "Backlog declined")
+check("#21293: pr20503-findings-5 is pre-declined (no fresh readthrough counterpart)",
+      "`pr20503-findings-5`" in dec_c and "did not re-raise it" in dec_c
+      and "`pr20503-findings-5`" not in exe_c)
+item5 = next(b for b in backlog_c["banked"] if b["id"] == "pr20503-findings-5")
+check("#21293: the readthrough item is stamped absent",
+      item5["fresh_verdict"] == {"kind": "readthrough", "status": "absent"})
+check("#21293: a different fresh self-redundancy seven lines away is not mistaken for it",
+      item5.get("pre_declined") and "superseded" in item5["pre_declined"])
+check("#21293: a claim the fresh run still finds unverifiable stays work; a Vale nag too",
+      "`findings-f2`" in exe_c and "`pr20503-findings-4`" in exe_c)
+check("#21293: the July unverifiable c6 the fresh run verified (c6, L31) is pre-declined",
+      "`pr20503-findings-1`" in dec_c and "`findings-f1`" in dec_c)
+check("#21293: 0 contradicted verdicts -> no fresh stubs", "`fresh-" not in body_c)
+
+# Synthetic: banked contradicted positioning claim at N vs. fresh not-a-claim
+# at N+111 -> pre-declined (text match inside the line window, never by id or
+# exact line); fresh contradicted with no banked counterpart -> stubbed.
+SYN_BACKLOG = {"banked": [
+    {"id": "pr1-findings-1", "section": "Findings not applied", "source_pr": 1, "source": "pr-body",
+     "text": "- **Claim (c23, L1115): Using the Pulumi MCP server is the recommended approach for "
+             "AI-assisted conversion — contradicted (medium).** — positioning judgment; editorial."},
+    {"id": "pr1-findings-2", "section": "Findings not applied", "source_pr": 1, "source": "pr-body",
+     "text": "- **Claim (c9, L40): There are two converters in `pulumi convert` that read HCL — "
+             "unverifiable.** — could not confirm."},
+    {"id": "pr1-findings-3", "section": "Findings not applied", "source_pr": 1, "source": "pr-body",
+     "text": "- **Vale weasel word (L18): 'several' is a weasel word.** — style nag."},
+], "notes": []}
+SYN_VERIFIED = {"verdicts": [
+    {"claim_id": "c37", "line_range": "L1226", "verdict": "not-a-claim", "confidence": "high",
+     "text": "Using the Pulumi MCP server is the recommended approach for AI-assisted conversion.",
+     "type": "positioning"},
+    {"claim_id": "c7", "line_range": "L41", "verdict": "contradicted", "confidence": "high",
+     "text": "There are two converters in `pulumi convert` that read HCL, selected with the `--from` flag.",
+     "type": "api-surface", "evidence": "convert.go has no hcl case"},
+    {"claim_id": "c50", "line_range": "L900", "verdict": "contradicted", "confidence": "medium",
+     "text": "The listener lands in us-west-2.", "type": "behavior"},
+]}
+syn = c.compose_glowup(QUEUE, SYN_BACKLOG, SYN_VERIFIED, None, {"ran": True, "findings": []}, None)
+syn_exe, syn_dec = _section(syn, "Backlog executed"), _section(syn, "Backlog declined")
+check("synthetic: banked contradicted at L1115 vs fresh not-a-claim at L1226 -> pre-declined",
+      "`pr1-findings-1`" in syn_dec and "`pr1-findings-1`" not in syn_exe)
+check("synthetic: a banked claim the fresh run now contradicts stays work, stamped",
+      "`pr1-findings-2`" in syn_exe and "c7 `contradicted`" in syn_exe)
+check("synthetic: fresh contradicted with no banked counterpart is stubbed",
+      "`fresh-c50`" in syn_exe)
+check("synthetic: a Vale nag is neither matched nor declined", "`pr1-findings-3`" in syn_exe)
+far = {"verdicts": [{**SYN_VERIFIED["verdicts"][0], "line_range": "L1400"}]}
+far_body = c.compose_glowup(QUEUE, _json.loads(_json.dumps(SYN_BACKLOG)), far, None, None, None)
+check("synthetic: the same text outside the line window is not matched",
+      "`pr1-findings-1`" in _section(far_body, "Backlog executed"))
+noart = c.compose_glowup(QUEUE, _json.loads(_json.dumps(SYN_BACKLOG)), None, None, None, None)
+check("synthetic: no artifacts -> nothing is pre-declined",
+      "Pre-declined" not in _section(noart, "Backlog declined"))
+rt_off = c.compose_glowup(QUEUE, {"banked": [{"id": "pr2-findings-1", "source_pr": 2, "source": "pr-body",
+    "text": "- **Readthrough self-redundancy (L36, 65-84): rationale restated across two sections.** — editorial."}],
+    "notes": []}, None, None, {"ran": False, "findings": []}, None)
+check("synthetic: a readthrough pass that did not run supersedes nothing",
+      "`pr2-findings-1`" in _section(rt_off, "Backlog executed"))
+
+# Body accounting: the publish gate's refusal rule.
+acct_backlog = {"banked": [{"id": "pr1-findings-1", "text": "x"}, {"id": "pr1-findings-2", "text": "y"}],
+                "reconciled": {"fresh_stubs": [{"id": "fresh-c7"}]}}
+good = ("## Backlog executed\n| `pr1-findings-1` | #1 | done |\n| `fresh-c7` | this run | fixed |\n\n"
+        "## Backlog declined\n| `pr1-findings-2` | #1 | no |\n\n## Secondary sweep\n")
+check("accounting: every id in exactly one table -> clean", c.glowup_body_accounting(good, acct_backlog) == [])
+dropped = good.replace("| `fresh-c7` | this run | fixed |\n", "")
+check("accounting: a dropped fresh stub is a violation",
+      c.glowup_body_accounting(dropped, acct_backlog) == ["fresh-c7 appears in neither Backlog executed nor Backlog declined"])
+both = good.replace("## Secondary sweep", "| `pr1-findings-1` | #1 | also no |\n\n## Secondary sweep")
+check("accounting: an id in both tables is a violation",
+      any("both" in v for v in c.glowup_body_accounting(both, acct_backlog)))
+check("accounting: a leftover <TODO> in either table is a violation",
+      any("<TODO>" in v for v in c.glowup_body_accounting(good.replace("| done |", "| <TODO> |"), acct_backlog)))
+check("accounting: a body without the two sections is a violation",
+      c.glowup_body_accounting("## Why this page\n", acct_backlog))
+
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
     sys.exit(1)

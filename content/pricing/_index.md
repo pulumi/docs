@@ -94,10 +94,10 @@ faq:
           answer: |
             You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/reference/cloud-rest-api/environments/) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
 
-            API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/reference/cloud-rest-api/environments/) call that hits the ReadOpen API endpoint
+            API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/languages-sdks/), [Pulumi Cloud provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/reference/cloud-rest-api/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
           answer: |
-            Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
+            Workflow minutes represent the total time used across both Discovery and Deployments. All usage draws from a single, shared pool of minutes. For Discovery, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
         - question: Can I prepay for resources, secrets, and secrets API calls?
           answer: Yes, you can! Please contact us to discuss the Enterprise and Business Critical editions, which include volume pricing for paying in advance.
 
@@ -134,7 +134,7 @@ faq:
         - question: How do I get started?
           answer: Follow the [Getting Started guide](/docs/get-started/), which walks you through creating and deploying your first Pulumi project.
         - question: How do I move from Starter or Pro to the new Team Edition?
-          answer: We recommend moving from the old SKUs to get access to our latest capabilities like Pulumi Deployments, Insights and Neo. [Contact us](/contact/?form=sales) to move to the new Team Edition.
+          answer: We recommend moving from the old SKUs to get access to our latest capabilities like Pulumi Deployments, Discovery, and Neo. [Contact us](/contact/?form=sales) to move to the new Team Edition.
         - question: Is Pulumi SOC 2 compliant?
           answer: Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence for our customers.
         - question: Can I host Pulumi Cloud in my cloud or datacenter?

@@ -755,7 +755,7 @@ When writing policies for dynamic providers:
 
 ## Inspecting resource options
 
-Resource validation callbacks receive an `args.opts` object of type `PolicyResourceOptions`. It mirrors the [resource options](/docs/iac/concepts/options/) set on the resource under validation, letting policies make decisions based on how a resource is configured rather than only its properties. The available fields are:
+Resource validation callbacks receive an `args.opts` object of type `PolicyResourceOptions`. It mirrors the [resource options](/docs/iac/concepts/resources/options/) set on the resource under validation, letting policies make decisions based on how a resource is configured rather than only its properties. The available fields are:
 
 - `protect` — whether the resource is protected from deletion.
 - `ignoreChanges` (`ignore_changes` in Python) — properties whose changes the engine ignores.
@@ -763,7 +763,7 @@ Resource validation callbacks receive an `args.opts` object of type `PolicyResou
 - `aliases` — additional URNs aliased to the resource.
 - `customTimeouts` (`custom_timeouts`) — custom create, update, and delete timeouts.
 - `additionalSecretOutputs` (`additional_secret_outputs`) — outputs always treated as secrets.
-- `parent` — the [URN](/docs/iac/concepts/resources/names/#urns) of the resource's [parent](/docs/iac/concepts/options/parent/). For a resource created directly at the stack root rather than as a child of another resource or component, this is the URN of the root stack resource (type `pulumi:pulumi:Stack`).
+- `parent` — the [URN](/docs/iac/concepts/resources/names/#urns) of the resource's [parent](/docs/iac/concepts/resources/options/parent/). For a resource created directly at the stack root rather than as a child of another resource or component, this is the URN of the root stack resource (type `pulumi:pulumi:Stack`).
 
 ### Example: Enforcing a resource's parent
 
@@ -840,7 +840,7 @@ PolicyPack(
 {{< /chooser >}}
 
 {{% notes type="info" %}}
-`args.opts` is available on `ResourceValidationArgs` (resource validation policies), not on `StackValidationArgs`. To reason about parent-child relationships across the full resource graph, use a [stack validation policy](#stack-validation-policies) and inspect `args.resources`. See [resource options](/docs/iac/concepts/options/) for what each option means on the resource side.
+`args.opts` is available on `ResourceValidationArgs` (resource validation policies), not on `StackValidationArgs`. To reason about parent-child relationships across the full resource graph, use a [stack validation policy](#stack-validation-policies) and inspect `args.resources`. See [resource options](/docs/iac/concepts/resources/options/) for what each option means on the resource side.
 {{% /notes %}}
 
 ## Running policies locally
