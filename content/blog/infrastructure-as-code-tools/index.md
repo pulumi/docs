@@ -129,7 +129,7 @@ This guide covers the following infrastructure as code tools and platforms:
 
 Here's how the core IaC tools compare at a glance before we go deep on each one:
 
-| Tool | Language / approach | Clouds supported | License | Latest stable release (Aug 2026) | Best for |
+| Tool | Language / approach | Clouds supported | License | Latest stable release (Sep 2026) | Best for |
 |---|---|---|---|---|---|
 | [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers | Apache-2.0 | v3.261.0 (2026-09-02) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
 | [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.16.1 (2026-09-02) | Teams with existing Terraform expertise and established workflows |
