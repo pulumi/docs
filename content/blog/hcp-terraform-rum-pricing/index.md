@@ -153,7 +153,7 @@ RUM is one of several models control-plane vendors use to price infrastructure a
 | Vendor | Pricing model | What scales the bill |
 |---|---|---|
 | HCP Terraform | Per managed resource, billed on hourly peak | Estate size and churn |
-| Pulumi Cloud | Per resource, billed hourly and prorated, drawn from a shared credit pool | Estate size, prorated to actual existence time |
+| Pulumi Cloud | Per resource, billed hourly (partial hours round up), drawn from a shared credit pool | Estate size and churn |
 | Spacelift | Worker concurrency tiers | Parallel run capacity, not resource count |
 | Scalr | Per run, with a free monthly run allowance | Deployment frequency, not resource count |
 | env0 | Usage-based, per successful apply or per environment after a free run allowance | Deployment frequency and environment count |
