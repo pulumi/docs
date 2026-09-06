@@ -24,6 +24,20 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 {{< /notes >}}
 
+## Automated setup with the Pulumi CLI
+
+{{< experimental-feature />}}
+
+If you would rather not walk through the AWS console by hand, the [`pulumi env setup aws`](/docs/iac/cli/commands/pulumi_env_setup_aws/) command (Pulumi CLI v3.261.0 and later) creates the identity provider, an IAM role scoped to your Pulumi organization, and its trust policy, then creates the ESC environment that uses it. Log in to Pulumi Cloud first with `pulumi login`, then run:
+
+```bash
+pulumi env setup aws --policy AdministratorAccess
+```
+
+Pass `--account` to target one or more specific AWS accounts, or `--sso` to sign in through AWS SSO and configure several accounts in one run. Use `--policy ReadOnlyAccess` instead of `AdministratorAccess` if the environment is only needed for [Insights](/docs/insights/); `AdministratorAccess` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+
+Reach for the manual steps below instead when you already have an OIDC identity provider you want to reuse, when your organization provisions IAM roles through its own infrastructure as code, or when you need trust-policy conditions the command does not yet expose, such as restricting `subjectAttributes` to a specific environment.
+
 ## Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.

@@ -24,6 +24,20 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official Azure documentation](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
 {{< /notes >}}
 
+## Automated setup with the Pulumi CLI
+
+{{< experimental-feature />}}
+
+If you would rather not walk through the Azure portal by hand, the [`pulumi env setup azure`](/docs/iac/cli/commands/pulumi_env_setup_azure/) command (Pulumi CLI v3.261.0 and later) creates the app registration, its federated identity credential, and a service principal, assigns a role on each subscription you select, and then creates the ESC environment that uses it. Log in to Pulumi Cloud first with `pulumi login`, then run:
+
+```bash
+pulumi env setup azure --policy Contributor
+```
+
+Pass `--subscription` to target one or more specific subscriptions, or `--browser` to sign in through your browser instead of using the Azure credentials already on your machine (from `az login` or environment variables). Use `--policy Reader` instead of `Contributor` if the environment is only needed for [Insights](/docs/insights/); `Contributor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+
+Reach for the manual steps below instead when you already have an app registration you want to reuse, when your tenant provisions role assignments through its own infrastructure as code, or when you need federated-credential subject conditions the command does not yet expose.
+
 ## Create a Microsoft Entra application
 
 In the navigation pane of the [Microsoft Entra console](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview):
