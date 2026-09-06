@@ -34,7 +34,7 @@ If you would rather not walk through the Azure portal by hand, the [`pulumi env 
 pulumi env setup azure --policy Contributor
 ```
 
-Pass `--subscription` to target one or more specific subscriptions, or `--browser` to sign in through your browser instead of using the Azure credentials already on your machine (from `az login` or environment variables). Use `--policy Reader` instead of `Contributor` if the environment is only needed for [Insights](/docs/insights/); `Contributor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+Pass `--subscription` to target one or more specific subscriptions, or `--browser` to sign in through your browser instead of using the Azure credentials already on your machine (from `az login` or environment variables). Use `--policy Reader` instead of `Contributor` if the environment is only needed for [Discovery](/docs/insights/); `Contributor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
 
 Reach for the manual steps below instead when you already have an app registration you want to reuse, when your tenant provisions role assignments through its own infrastructure as code, or when you need federated-credential subject conditions the command does not yet expose.
 
