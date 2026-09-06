@@ -54,7 +54,7 @@ Deployment guardrails are automated policies that act as your infrastructure's s
 
 A helpful analogy is to think of guardrails like type checking in programming languages. Just as TypeScript doesn't restrict your ability to write JavaScript but rather catches type errors before runtime, deployment guardrails don't limit your infrastructure creativity. They simply ensure you're following secure patterns and catch potentially dangerous configurations before they cause problems in production.
 
-## Introducing Pulumi Policies: policy as code
+## Introducing Pulumi Policies: Policy as Code
 
 [Pulumi Policies](/docs/insights/policy/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in [familiar programming languages](/docs/insights/policy/#languages) like Python, TypeScript, or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
 
@@ -291,7 +291,7 @@ After implementing policies at dozens of organizations, we've learned that succe
 
 ### Start Small and Iterate
 
-Begin with just two or three critical policies that address your most pressing risks. Use [advisory enforcement](/docs/insights/policy/#enforcement-modes) initially, which warns developers about violations but doesn't block deployments. This gives your team time to understand and adapt to the policies. Only after gathering feedback and refining the policies should you graduate to mandatory enforcement.
+Begin with two or three critical policies that address your most pressing risks. Use [advisory enforcement](/docs/insights/policy/#enforcement-modes) initially, which warns developers about violations but doesn't block deployments. This gives your team time to understand and adapt to the policies. Only after gathering feedback and refining the policies should you graduate to mandatory enforcement.
 
 ### Provide Clear, Actionable Error Messages
 
