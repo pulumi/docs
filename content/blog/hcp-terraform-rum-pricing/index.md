@@ -40,7 +40,7 @@ HashiCorp [moved HCP Terraform off per-seat pricing and onto RUM in 2023](https:
 
 A managed resource, per [HashiCorp's own definition](https://developer.hashicorp.com/terraform/cloud-docs/overview), is any resource in an HCP Terraform-managed state file where `mode = "managed"`, counted from the first `terraform plan` or `terraform apply` that touches it. Both workspace and Stacks resources count toward the same total.
 
-Three sources at least, all attributable to a `count` or `for_each` block, a module, or a plain resource, roll up into the same number:
+Three kinds of resource roll up into the same number, whether they come from a `count` or `for_each` block, a module, or a plain `resource` block:
 
 - Resources provisioned directly by a Terraform provider, such as an AWS VPC or an Azure resource group.
 - Resources created through `count` and `for_each` meta-arguments — each instance counts separately.
@@ -52,7 +52,7 @@ Three categories do not count, and one of them is easy to get backwards:
 - Data sources, anything with `mode = "data"`, are excluded.
 - Local values and variables never count; they aren't resources at all.
 
-The one nuance worth sitting with: a "local only" resource with no remote object behind it, `random_id` or `random_password` for example, still counts toward RUM, because it's a managed resource in state. It's only `null_resource` and `terraform_data` that get the specific carve-out. If your estate leans on `null_resource` blocks for provisioning glue, as many older Terraform Enterprise migrations do, your actual billable count is lower than a naive `terraform state list` count would suggest.
+The one nuance worth sitting with: a "local only" resource with no remote object behind it, `random_id` or `random_password` for example, still counts toward RUM, because it's a managed resource in state. If your estate leans on `null_resource` blocks for provisioning glue, as many older Terraform Enterprise migrations do, your actual billable count is lower than a naive `terraform state list` count would suggest.
 
 ## How the meter reads your infrastructure: peak per hour, not average per month
 
@@ -79,7 +79,7 @@ HashiCorp's own docs point to [HashiCorp's IBM-hosted price list](https://www.ib
 | Standard | $0.00064 | $0.461 |
 | Premium | $0.00135 | $0.972 |
 
-The monthly column is our own arithmetic, at HashiCorp's own 720-hour (30-day) convention from its worked example, applied to a resource that exists continuously all month. Real bills track actual hourly peaks, so treat the monthly figures as a planning estimate, not a quote.
+Rates as read from IBM's published HashiCorp price list on 2026-09-06; HashiCorp's own worked example (which yields $97.85/month for 1,000 resources at the Essentials rate) corroborates the Essentials figure directly. The monthly column is our own arithmetic, at HashiCorp's own 720-hour (30-day) convention from its worked example, applied to a resource that exists continuously all month. You may see a $0.99/month figure elsewhere for Premium; that comes from a 730-hour average-month convention, not HashiCorp's own 720-hour worked example, which is what we use throughout. Real bills track actual hourly peaks, so treat the monthly figures as a planning estimate, not a quote.
 
 At scale, the arithmetic compounds the way any per-unit metric does:
 
@@ -89,7 +89,7 @@ At scale, the arithmetic compounds the way any per-unit metric does:
 | 5,000 | $489 | $2,304 | $4,860 |
 | 20,000 | $1,957 | $9,216 | $19,440 |
 
-Standard and Premium also carry concurrency add-ons: Remote Concurrency runs $0.329 per concurrent run-hour and Agent Concurrency runs $0.164 per concurrent run-hour, per the same price list, on top of the per-resource charge.
+Standard and Premium also carry concurrency add-ons, Remote Concurrency and Agent Concurrency, priced per concurrent run-hour on top of the per-resource charge; see IBM's price list for current rates, since HashiCorp's own docs route this pricing to sales.
 
 ## How to count your own RUM before a renewal conversation
 
@@ -101,7 +101,7 @@ For a single workspace, from a local state file:
 terraform state list | grep -vE '(^|\.)data\.' | grep -v 'null_resource\.' | wc -l
 ```
 
-That excludes data sources and `null_resource` addresses, but it won't catch `terraform_data` resources by name alone, and it treats every `count`/`for_each` instance as one line, which matches how RUM counts them. For a precise count that also excludes `terraform_data` by its actual attributes rather than a naming guess, pull the JSON plan and filter on `mode` and `type` directly:
+That excludes data sources and `null_resource` addresses, but it won't catch `terraform_data` resources by name alone, and it treats every `count`/`for_each` instance as one line, which matches how RUM counts them. For a precise count that also excludes `terraform_data` by its actual attributes rather than a naming guess, pull the JSON state and filter on `mode` and `type` directly:
 
 ```bash
 terraform show -json > /tmp/state.json
@@ -133,7 +133,7 @@ The gap between "resources I think I have" and "resources HashiCorp bills for" t
 
 ## What happens when you cross the free tier
 
-The Free plan's 500-resource cap is a hard line, not a soft nudge: once billable managed resources exceed 500 (or the org already sits on Essentials, Standard, or Premium), pay-as-you-go billing kicks in on every resource, not just the ones past 500. Since HashiCorp retired the legacy user-based Free plan on March 31, 2026, organizations still on it were migrated automatically to the enhanced Free tier, which is the 500-resource cap described above. If your organization was on the older plan, that's a change worth confirming before you assume your current usage still fits inside it.
+The Free plan covers up to 500 managed resources at no charge. Above that, an organization moves onto Essentials, Standard, or Premium, and paid plans carry no free allowance of their own, so the full managed-resource count bills rather than only the resources past 500. Since HashiCorp retired the legacy user-based Free plan on March 31, 2026, organizations still on it were migrated automatically to the enhanced Free tier, which is the 500-resource cap described above. If your organization was on the older plan, that's a change worth confirming before you assume your current usage still fits inside it.
 
 ## Modeling growth before a renewal
 
@@ -159,7 +159,7 @@ RUM is one of several models control-plane vendors use to price infrastructure a
 | env0 | Usage-based, per successful apply or per environment after a free run allowance | Deployment frequency and environment count |
 | Terrateam | Flat annual plan above a free run allowance | A fixed fee, not usage |
 
-Worth saying plainly: Pulumi Cloud also meters IaC resources per resource-hour, so this isn't a case where one model is priced and the other isn't. The difference is proration (a resource that exists for three days of a month costs three days, not a full billing hour of that partial month rounded up) and how usage draws down a shared credit pool that also covers configuration and secrets management rather than billing infrastructure resources in isolation.
+Worth saying plainly: Pulumi Cloud also meters IaC resources per resource-hour, and also bills a partial resource-hour as a full hour, so this isn't a case where one model rounds and the other doesn't. The difference is granularity of the billing unit (resource-hours toward a shared credit pool, rather than a flat monthly per-resource price) and that the same pool also covers configuration and secrets management rather than billing infrastructure resources in isolation.
 
 If a resource-based bill that scales unpredictably with estate size and churn, rather than with the people managing it, is the part of this pricing shift you're trying to get ahead of, the fuller picture, tier-by-tier feature comparison and migration path included, is in Pulumi's [HCP Terraform comparison](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/).
 
