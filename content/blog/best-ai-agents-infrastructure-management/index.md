@@ -1,6 +1,6 @@
 ---
 title: "Best AI Agents for Infrastructure Management in 2026"
-date: 2026-08-21
+date: 2026-09-08
 draft: false
 meta_desc: "A fair comparison of AI agents that plan, apply, and govern cloud infrastructure: Pulumi Neo, env zero, Spacelift, HashiCorp, Upbound, and more."
 feature_image: feature.png
