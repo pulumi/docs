@@ -206,7 +206,7 @@ This documentation will help developers understand how to use your component eff
 
 ### Publishing Your Component via Private Registry
 
-Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/concepts/private-registry/):
+Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/concepts/private-registry/). This assumes your component's source already lives in a Git repository — the example below publishes from `github.com/myorg/microservice-component`, so swap in your own repository's path:
 
 ```bash
 # Tag your component version
