@@ -32,7 +32,7 @@ social:
         Here's what counts, how the meter reads a replacement, and how to count your own RUM before renewal.
 ---
 
-HCP Terraform's Resources Under Management (RUM) is a metered count of every resource with `mode = "managed"` in your state files, and HashiCorp bills it on the peak count observed in each clock hour, not a monthly average. That single design choice, peak-per-hour rather than average, is why two teams with the same resource count can see very different bills, and it's the part most pricing writeups skip.
+HCP Terraform's Resources Under Management (RUM) is a metered count of every resource with `mode = "managed"` in your state files, and HashiCorp bills it on the peak count observed in each clock hour, not a monthly average. That single design choice, peak-per-hour rather than average, is why two teams with the same resource count can see very different bills, and it's the part most pricing write-ups skip.
 
 HashiCorp [moved HCP Terraform off per-seat pricing and onto RUM in 2023](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/), and retired the legacy free plan on March 31, 2026. Pulumi's own [HCP Terraform comparison page](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/) covers why teams are re-evaluating HCP Terraform as a result. This post covers what that comparison page doesn't: what actually counts as a billable resource, how the hourly meter reads your infrastructure, what the current tiers cost, and how to count your own number before a renewal conversation.
 
@@ -46,7 +46,7 @@ Three kinds of resource roll up into the same number, whether they come from a `
 - Resources created through `count` and `for_each` meta-arguments — each instance counts separately.
 - Resources provisioned by modules and no-code-ready modules — the resources they create count, not the module call itself.
 
-Three categories do not count, and one of them is easy to get backwards:
+Three categories do not count, and one of them is often assumed backwards:
 
 - `null_resource` and `terraform_data` resources are explicitly excluded, even though they carry `mode = "managed"` in state.
 - Data sources, anything with `mode = "data"`, are excluded.
@@ -167,4 +167,4 @@ One more disambiguation worth a sentence: Pulumi's own Cloud REST API separately
 
 ## Next steps
 
-Start by counting your own RUM with the commands above, separating steady-state resources from ephemeral ones, and running that number through a renewal-term growth model rather than a snapshot. If the outcome looks like your bill is set to track your estate's growth curve more than your team's, and you want a model that ties cost to actual resource lifetime instead, read the full [Pulumi vs. HCP Terraform comparison](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/) for the feature-by-feature breakdown and a path to adopt Pulumi Cloud without leaving Terraform behind.
+Start by counting your own RUM with the commands above, separating steady-state resources from ephemeral ones, and running that number through a renewal-term growth model rather than a snapshot. If the outcome looks like your bill is set to track your estate's growth curve more than your team's, and you want to see how a resource-hour model drawing on a shared credit pool compares, read the full [Pulumi vs. HCP Terraform comparison](https://www.pulumi.com/docs/iac/comparisons/terraform-cloud/) for the feature-by-feature breakdown and a path to adopt Pulumi Cloud without leaving Terraform behind.
