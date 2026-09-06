@@ -54,9 +54,9 @@ Deployment guardrails are automated policies that act as your infrastructure's s
 
 A helpful analogy is to think of guardrails like type checking in programming languages. Just as TypeScript doesn't restrict your ability to write JavaScript but rather catches type errors before runtime, deployment guardrails don't limit your infrastructure creativity. They simply ensure you're following secure patterns and catch potentially dangerous configurations before they cause problems in production.
 
-## Introducing Pulumi Policies: Policy as Code
+## Introducing Pulumi Policies: policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in familiar programming languages like [Python](/docs/insights/policy/get-started/#writing-policies-in-python), [TypeScript](/docs/insights/policy/get-started/#writing-policies-in-typescript), or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
+[Pulumi Policies](/docs/insights/policy/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in [familiar programming languages](/docs/insights/policy/#languages) like Python, TypeScript, or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
 
 ### Key Policy Types
 
@@ -196,7 +196,7 @@ microservice_s3_encryption = policy.StackValidationPolicy(
 
 ## Policy Enforcement Models
 
-Pulumi Policies supports multiple [enforcement models](/docs/insights/policy/#enforcement-levels) to fit different workflows, and understanding when to use each model is crucial for effective policy implementation.
+Pulumi Policies supports multiple [enforcement models](/docs/insights/policy/#enforcement-modes) to fit different workflows, and understanding when to use each model is crucial for effective policy implementation.
 
 ### The Preventative Model
 
@@ -256,7 +256,7 @@ auto_tag_policy = policy.ResourceValidationPolicy(
 
 ## Server-Side Policy Enforcement
 
-For enterprise deployments, Pulumi provides [server-side policy enforcement](/docs/insights/policy/get-started/#enforcing-a-policy-pack) that ensures policies can't be bypassed. The process starts by publishing your policies to your Pulumi organization with `pulumi policy publish ./my-policies`. Once published, you can [create policy groups](/docs/insights/policy/policy-packs/#using-pulumi-cloud) that combine multiple policies with specific enforcement levels, targeting particular stacks or environments while configuring exceptions for special cases. The beauty of this approach is that policies run automatically without requiring CLI flags, providing consistent governance across your entire organization without relying on developers to remember to include policy packs in their commands.
+For enterprise deployments, Pulumi provides [server-side policy enforcement](/docs/insights/policy/get-started/#policy-groups) that ensures policies can't be bypassed. The process starts by publishing your policies to your Pulumi organization with `pulumi policy publish ./my-policies`. Once published, you can [create policy groups](/docs/insights/policy/get-started/#policy-groups) that combine multiple policies with specific enforcement levels, targeting particular stacks or environments while configuring exceptions for special cases. The beauty of this approach is that policies run automatically without requiring CLI flags, providing consistent governance across your entire organization without relying on developers to remember to include policy packs in their commands.
 
 ## Compliance-Ready Policies
 
@@ -279,7 +279,7 @@ new PolicyPack("aws-compliance-ready-policies-typescript", {
 });
 ```
 
-This automatically includes policies for major compliance frameworks like [PCI DSS](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for payment card industry standards, [SOC 2](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for security and compliance controls, [ISO 27001](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for information security management, and [CIS Benchmarks](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for security configuration standards.
+This automatically includes policies for major compliance frameworks like [PCI DSS](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for payment card industry standards, [NIST SP 800-53](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for federal security controls, [ISO 27001](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for information security management, and [CIS Benchmarks](/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs) for security configuration standards.
 
 {{< blog/cta-card title="Add guardrails with policy as code" href="/docs/insights/policy/" >}}
 Write policies in Python or TypeScript, enforce them across every deployment, and give teams self-service infrastructure that stays secure and compliant.
@@ -291,7 +291,7 @@ After implementing policies at dozens of organizations, we've learned that succe
 
 ### Start Small and Iterate
 
-Begin with just two or three critical policies that address your most pressing risks. Use [advisory enforcement](/docs/insights/policy/#enforcement-levels) initially, which warns developers about violations but doesn't block deployments. This gives your team time to understand and adapt to the policies. Only after gathering feedback and refining the policies should you graduate to mandatory enforcement.
+Begin with just two or three critical policies that address your most pressing risks. Use [advisory enforcement](/docs/insights/policy/#enforcement-modes) initially, which warns developers about violations but doesn't block deployments. This gives your team time to understand and adapt to the policies. Only after gathering feedback and refining the policies should you graduate to mandatory enforcement.
 
 ### Provide Clear, Actionable Error Messages
 
@@ -345,7 +345,7 @@ Implementing deployment guardrails isn't a big-bang transformation; it's a journ
 
 In weeks three and four, build your foundation by implementing three to five core policies that address your most critical risks. Set up [CI/CD integration](/docs/iac/operations/continuous-delivery/) so policies run automatically on every pull request, starting with advisory enforcement to gather feedback without blocking deployments. Create clear documentation and runbooks that explain not just what the policies do, but why they exist and how to work with them.
 
-By the second month, you're ready to expand. Add [compliance-specific policies](/docs/insights/policy/policy-packs/pre-built-packs/) for regulatory requirements and implement [server-side enforcement](/docs/insights/policy/get-started/#enforcing-a-policy-pack) to ensure policies can't be bypassed. Create formal processes for policy exemptions and exceptions, and begin measuring policy effectiveness through metrics like violation rates and remediation times.
+By the second month, you're ready to expand. Add [compliance-specific policies](/docs/insights/policy/policy-packs/pre-built-packs/) for regulatory requirements and implement [server-side enforcement](/docs/insights/policy/get-started/#policy-groups) to ensure policies can't be bypassed. Create formal processes for policy exemptions and exceptions, and begin measuring policy effectiveness through metrics like violation rates and remediation times.
 
 Remember that policy implementation is never "done." Continuously monitor violation patterns to identify areas where policies might be too strict or too lenient. Refine policies based on developer feedback and incident data, add [automated remediation](/docs/insights/policy/#remediation-policies) for common violations to reduce manual fixes, and gradually expand coverage to new services and teams using lessons learned from early adopters.
 
@@ -387,11 +387,11 @@ We started this post with a fundamental tension in platform engineering: the nee
 
 The key insight from successful platform teams like Statsig is that guardrails don't restrict freedom; they enable it. When developers know that automated policies will catch dangerous configurations, they gain the confidence to move fast and experiment. When platform teams know that policies automatically enforce security and compliance standards, they can focus on building better platforms instead of reviewing every change. This is the magic of policy as code: it transforms infrastructure governance from a bottleneck into an accelerator.
 
-But perhaps the most important lesson is what policy as code is really for. It's about intelligent automation that makes the secure path the path of least resistance. It's about catching mistakes before they become incidents. It's about encoding your organization's hard-won knowledge into systems that help every developer benefit from that experience.
+But perhaps the most important lesson is what policy as code is really for. It's about intelligent automation that makes the secure path the path of least resistance. It's about catching mistakes before they become incidents. It's about encoding your organization's hard-won knowledge into systems that give every developer the benefit of that experience.
 
 As you embark on your own journey to implement deployment guardrails, remember that perfection isn't the goal; progress is. Start small, iterate based on feedback, and gradually expand your coverage. Your developers will thank you for the clarity and confidence that comes with well-designed guardrails, and your security team will sleep better knowing that policies are enforced automatically and consistently.
 
-The path from manual reviews to automated guardrails is well-traveled and well-documented. Our [complete policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) provide real-world implementations you can adapt to your needs, while the [Pulumi Policies documentation](/docs/insights/policy/) offers deep technical details for advanced use cases. If you're on AWS, the [CIS benchmark policies for AWS](/docs/reference/pre-built-policy-packs/cis/aws/) offer immediate value, and our [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) address specific regulatory requirements.
+The path from manual reviews to automated guardrails is well-traveled and well-documented. Our [complete policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) provide real-world implementations you can adapt to your needs, while the [Pulumi Policies documentation](/docs/insights/policy/) offers deep technical details for advanced use cases, and our [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) — including CIS benchmarks for AWS — address specific regulatory requirements.
 
 The future of infrastructure management uses policy as code to deliver both developer autonomy and operational control, creating platforms that are simultaneously powerful and safe, flexible and compliant, fast and secure.
 
