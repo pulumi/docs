@@ -142,7 +142,7 @@ Organizations across various industries have adopted Pulumi to address diverse i
 
 Snowflake, a leading cloud data platform, used Pulumi to reduce its deployment time from 1.5 weeks to a single day while improving reliability and maintainability. The ability to use familiar programming languages enabled their development teams to contribute directly to infrastructure management, reducing silos between development and operations.
 
-BMW manages infrastructure for over 11,000 developers using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
+BMW manages more than 20,000 cloud resources using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
 
 Starburst achieved a 112x improvement in deployment speed, reducing deployment times from two weeks to just three hours. This dramatic improvement was enabled by Pulumi's testing capabilities and the ability to create sophisticated deployment pipelines using familiar programming languages.
 
