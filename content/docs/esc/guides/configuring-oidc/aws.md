@@ -34,7 +34,7 @@ If you would rather not walk through the AWS console by hand, the [`pulumi env s
 pulumi env setup aws --policy AdministratorAccess
 ```
 
-Pass `--account` to target one or more specific AWS accounts, or `--sso` to sign in through AWS SSO and configure several accounts in one run. Use `--policy ReadOnlyAccess` instead of `AdministratorAccess` if the environment is only needed for [Insights](/docs/insights/); `AdministratorAccess` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+Pass `--account` to target one or more specific AWS accounts, or `--sso` to sign in through AWS SSO and configure multiple accounts in one run. Use `--policy ReadOnlyAccess` instead of `AdministratorAccess` if the environment is only needed for [Insights](/docs/insights/); `AdministratorAccess` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
 
 Reach for the manual steps below instead when you already have an OIDC identity provider you want to reuse, when your organization provisions IAM roles through its own infrastructure as code, or when you need trust-policy conditions the command does not yet expose, such as restricting `subjectAttributes` to a specific environment.
 
