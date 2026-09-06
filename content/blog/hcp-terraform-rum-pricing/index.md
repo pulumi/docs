@@ -17,7 +17,9 @@ related_posts:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        HCP Terraform bills on Resources Under Management now: a peak-per-hour meter across every managed resource in your state. Here's what actually counts, how the meter reads a replacement, and how to count your own RUM before renewal.
+        HCP Terraform bills on Resources Under Management now: a peak-per-hour meter across every managed resource in your state.
+
+        Here's what actually counts, how the meter reads a replacement, and how to count your own RUM before renewal.
     linkedin: |
         HCP Terraform's pricing model changed from per-seat to Resources Under Management (RUM), and the vendor's own docs are thin on the mechanics that determine your bill.
 
@@ -25,7 +27,9 @@ social:
 
         We wrote up the definition, the metering mechanics, the current tier rates, and two jq/API one-liners to count your own RUM before you're staring at a renewal number you didn't expect.
     bluesky: |
-        HCP Terraform bills on Resources Under Management now: a peak-per-hour meter across every managed resource in state. Here's what counts, how the meter reads a replacement, and how to count your own RUM before renewal.
+        HCP Terraform bills on Resources Under Management now: a peak-per-hour meter across every managed resource in state.
+
+        Here's what counts, how the meter reads a replacement, and how to count your own RUM before renewal.
 ---
 
 HCP Terraform's Resources Under Management (RUM) is a metered count of every resource with `mode = "managed"` in your state files, and HashiCorp bills it on the peak count observed in each clock hour, not a monthly average. That single design choice, peak-per-hour rather than average, is why two teams with the same resource count can see very different bills, and it's the part most pricing writeups skip.
