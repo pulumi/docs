@@ -40,7 +40,7 @@ infrastructure-as-code advice that may not apply to Pulumi.
   reach for this when defining who rotates a credential, how often, and how a rotation
   propagates to every environment that consumes it.
 - [ESC environment composition patterns](/docs/esc/guides/environment-composition-patterns/) —
-  reach for this when several environments need to share common configuration without
+  reach for this when multiple environments need to share common configuration without
   duplicating it.
 
 ## Testing and delivery
@@ -54,10 +54,10 @@ infrastructure-as-code advice that may not apply to Pulumi.
 
 ## Governance and policy
 
-- [Discovery & Governance: policy get started](/docs/insights/policy/get-started/) —
+- [Discovery & governance: policy get started](/docs/insights/policy/get-started/) —
   reach for this when you are ready to enforce organizational guardrails on
   infrastructure as code with Policy as Code.
-- [Discovery & Governance: policy CI/CD integration](/docs/insights/policy/ci-cd/) —
+- [Discovery & governance: policy CI/CD integration](/docs/insights/policy/ci-cd/) —
   reach for this when policy checks need to run automatically in a pull request or a
   deployment pipeline, before infrastructure changes are applied.
 
