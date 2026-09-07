@@ -145,7 +145,7 @@ The [Pulumi SDK (`Pulumi`)](/docs/reference/pkg/dotnet/pulumi/pulumi.html) is di
 
 ### Provider SDKs
 
-For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses 100+ .NET packages.
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses hundreds of .NET packages.
 
 ### Policy SDK
 

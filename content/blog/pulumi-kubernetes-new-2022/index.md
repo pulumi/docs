@@ -8,7 +8,7 @@ meta_desc: "Pulumi Kubernetes Operator v1.10, New Pulumi Provider for Flux, Pulu
 
 ---
 
-Pulumi’s Universal Infrastructure as Code platform works with all major clouds and over 100 cloud and SaaS providers, but among all its uses one of the most important is the ability to bring rich infrastructure as code tools and practices to Kubernetes projects and teams.
+Pulumi’s Universal Infrastructure as Code platform works with all major clouds and hundreds of cloud and SaaS providers, but among all its uses one of the most important is the ability to bring rich infrastructure as code tools and practices to Kubernetes projects and teams.
 
 Kubernetes is one of the most used platforms in Pulumi, second only to AWS, with thousands of organizations using Pulumi to manage clusters at scale.  Pulumi supports a wide variety of use cases around Kubernetes - from cluster creation and management, to rich and expressive workload definition, to continuous delivery and infrastructure GitOps.
 

@@ -101,4 +101,4 @@ For the full list of differences and unsupported features, see the [Terraform co
 
 By default, providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged into Pulumi automatically, just as they are in OpenTofu. Pin a source and version with a `terraform` `required_providers` block when you need to.
 
-The [Pulumi Registry](/registry/) also houses 100+ native Pulumi packages. Consume one instead of the bridged Terraform provider by declaring its source with the `pulumi/` namespace (for example, `pulumi/kubernetes`) in a `required_providers` block. Pulumi-sourced packages take an exact version such as `6.0.0` rather than a version constraint.
+The [Pulumi Registry](/registry/) also houses hundreds of native Pulumi packages. Consume one instead of the bridged Terraform provider by declaring its source with the `pulumi/` namespace (for example, `pulumi/kubernetes`) in a `required_providers` block. Pulumi-sourced packages take an exact version such as `6.0.0` rather than a version constraint.

@@ -13,7 +13,7 @@ Pulumi native providers are a new type of [Pulumi Package](/blog/pulumiup-pulumi
 
 <!--more-->
 
-![Photo showing the more than 50 cloud providers supported by Pulumi](providers.png)
+![Photo showing the hundreds of cloud providers supported by Pulumi](providers.png)
 
 ## 100% API coverage, same-day access
 

@@ -114,7 +114,7 @@ sections:
   cards:
   - icon: package
     heading: Package Registry
-    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and 200+ providers.
+    description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and hundreds of providers.
     link: /registry/
 
 - type: flat

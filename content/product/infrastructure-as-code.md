@@ -248,7 +248,7 @@ sections:
         label: engineers building with Pulumi
       - number: "4,000+"
         label: companies in production
-      - number: "300+"
+      - number: "200+"
         label: cloud and service providers
 
   - type: testimonial

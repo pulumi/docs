@@ -19,7 +19,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-                Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 200+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+                Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to hundreds of providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
@@ -183,7 +183,7 @@ key_features_below:
               - title: Pulumi IaC
                 icon: code
                 description: |
-                        Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for 200+ cloud & SaaS providers.
+                        Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for hundreds of cloud & SaaS providers.
               - title: Pulumi ESC
                 icon: lock
                 description: |

@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. 200+ cloud providers, policy as code, secrets management. Open source. Free tier."
+meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. Hundreds of cloud providers, policy as code, secrets management. Open source. Free tier."
 layout: gads-template
 block_external_search_index: true
 
@@ -8,7 +8,7 @@ overline: "Pulumi IaC"
 heading: "Infrastructure as Code"
 subheading: |
     Define, deploy, and manage cloud infrastructure using programming languages you already know.
-    Pulumi is free, open source, and supports 170+ cloud and SaaS providers including AWS, Azure,
+    Pulumi is free, open source, and supports hundreds of cloud and SaaS providers including AWS, Azure,
     Google Cloud, and Kubernetes.
 
 customer_quote:
@@ -22,14 +22,14 @@ customer_quote:
 overview:
     title: Infrastructure as Code <br/>in Real Programming Languages
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 200+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to hundreds of providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
 
 key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 200+ providers.
+            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to hundreds of providers.
           features:
               - title: Code faster with real languages
                 description: |
@@ -37,7 +37,7 @@ key_features_above:
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 200+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and hundreds of providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: Test and preview changes
@@ -174,10 +174,10 @@ key_features:
                 outputs:
                   url: ${my-site.websiteEndpoint}
           features:
-              - title: 200+ cloud providers
+              - title: Hundreds of cloud providers
                 icon: cloud
                 description: |
-                    170+ cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.
+                    hundreds of cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.
               - title: Reusable components
                 icon: abstract-shapes
                 description: |
@@ -217,7 +217,7 @@ stats:
         number: "4,000+"
         description: "Companies in production"
     integration:
-        number: "170+"
+        number: "200+"
         description: "Cloud and service integrations"
 
 case_studies:

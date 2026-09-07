@@ -15,7 +15,7 @@ details:
     providers:
         title: Providers give you direct access to cloud resources
         description: |
-            Use 200+ providers to build your infrastructure from scratch with cloud and SaaS integrations. Pulumi Native Providers give you the most comprehensive resource coverage of AWS, Azure, Google Cloud, and Kubernetes with same-day access to new features.
+            Use hundreds of providers to build your infrastructure from scratch with cloud and SaaS integrations. Pulumi Native Providers give you the most comprehensive resource coverage of AWS, Azure, Google Cloud, and Kubernetes with same-day access to new features.
         ide:
             - title: index.ts
               language: typescript
