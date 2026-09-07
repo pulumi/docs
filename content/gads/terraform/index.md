@@ -27,7 +27,7 @@ key_features_above:
         - title: "Author infrastructure in the language you prefer"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code using programming languages you already know, including Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to 170+ providers.
+            Author infrastructure as code using programming languages you already know, including Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to 200+ providers.
           features:
               - title: Code faster
                 description: |
@@ -35,7 +35,7 @@ key_features_above:
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and 200+ providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: AI-powered infrastructure

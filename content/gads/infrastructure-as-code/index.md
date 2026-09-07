@@ -22,14 +22,14 @@ customer_quote:
 overview:
     title: Infrastructure as Code <br/>in Real Programming Languages
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 170+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">an infrastructure as code tool</span>? Pulumi lets you define cloud infrastructure in Python, TypeScript, Go, .NET, Java, YAML, or HCL — with full IDE support, testing, and package management. Deploy to 200+ providers including AWS, Azure, Google Cloud, and Kubernetes. Free and open source.
 
 key_features_above:
     items:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
+            Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, .NET, Java, YAML, and HCL. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 200+ providers.
           features:
               - title: Code faster with real languages
                 description: |
@@ -37,7 +37,7 @@ key_features_above:
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and 200+ providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: Test and preview changes
