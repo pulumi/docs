@@ -241,7 +241,7 @@ editions:
         - Automatic group & user sync (SCIM)
         - Unlimited custom policy packs
         - Policy remediation
-        - Standard support and a named customer success manager
+        - Standard support
         - Contract pricing and invoicing
 
 calculator:
@@ -863,10 +863,6 @@ categories:
         availability:
           pro: Available monthly
           enterprise: Included
-
-      - id: named-customer-success-manager
-        name: Named customer success manager
-        available_from: enterprise
 
       - id: support-private-slack
         name: Private Slack channel

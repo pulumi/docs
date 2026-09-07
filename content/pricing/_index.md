@@ -183,7 +183,7 @@ faq:
         - question: What if I am not satisfied with my Pulumi purchase?
           answer: If you're not satisfied with Pulumi, we offer a 14-day money-back guarantee, no questions asked. [Contact us](/contact/).
         - question: How do I get support for Pulumi?
-          answer: Every paid edition includes service-level objectives, an uptime commitment, and support ticket submission. Pro customers can buy Standard support monthly. Enterprise includes Standard support and a named customer success manager. Private Slack and 24x7 support are separate paid benefits. [Contact us](/contact/?form=sales) if you need help or have questions.
+          answer: Every paid edition includes service-level objectives, an uptime commitment, and support ticket submission. Pro customers can buy Standard support monthly, and Enterprise includes Standard support. Private Slack, a named customer success manager, and 24x7 support are separate paid benefits. [Contact us](/contact/?form=sales) if you need help or have questions.
         - question: Does Pulumi charge sales tax?
           answer: You may be charged a sales tax in addition to your usage fees in certain jurisdictions. It will be a separate line item on your bill.
 ---
