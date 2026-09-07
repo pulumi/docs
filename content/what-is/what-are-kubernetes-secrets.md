@@ -284,4 +284,4 @@ A Kubernetes Secret is for sensitive data, like passwords, tokens, and certifica
 
 ### How do you manage secrets in Kubernetes with infrastructure as code?
 
-With Pulumi, you manage Kubernetes Secrets as native resources in a real language, TypeScript, Python, Go, C#, or Java, using the Kubernetes provider's `Secret` resource alongside encrypted Pulumi config or ESC for the underlying values. This keeps sensitive data out of source control, lets you test and preview changes before applying them, and ties secret creation into the same CI/CD workflow as the rest of your infrastructure.
+With Pulumi, you manage Kubernetes Secrets as native resources in a real language, TypeScript, Python, Go, .NET, or Java, using the Kubernetes provider's `Secret` resource alongside encrypted Pulumi config or ESC for the underlying values. This keeps sensitive data out of source control, lets you test and preview changes before applying them, and ties secret creation into the same CI/CD workflow as the rest of your infrastructure.

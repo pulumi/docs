@@ -58,7 +58,7 @@ Both describe the desired state of cloud resources. The difference is what's aro
 
 | Dimension | DSL-based IaC (HCL, YAML, ARM) | Infrastructure as Software |
 |---|---|---|
-| Language | Domain-specific | TypeScript, Python, Go, C#, Java, etc. |
+| Language | Domain-specific | TypeScript, Python, Go, .NET, Java, etc. |
 | Types | Limited or none | Full static types over cloud APIs |
 | Abstractions | Modules, limited generics | Classes, functions, packages, generics |
 | Sharing | Per-tool registry (Terraform Registry, etc.) | Standard package managers (npm, PyPI, etc.) |

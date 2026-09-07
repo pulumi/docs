@@ -213,8 +213,7 @@ sections:
   - type: feature_split
     heading: Write infrastructure code in your favorite language
     description: |
-      TypeScript/JavaScript, Python, Go, C#, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
-
+      TypeScript/JavaScript, Python, Go, .NET, Java, YAML, and HCL. Get autocomplete, type checking, and all your favorite IDE features.
       Build on AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers. Our open source engine is Apache 2.0 licensed and will always be free.
     cards:
       - icon: code
