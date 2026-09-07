@@ -35,6 +35,8 @@ async function inlineCriticalCSS() {
         pruneSource: false,
     });
 
+    const skipped = [];
+
     for (const page of pages) {
         if (!fs.existsSync(page)) {
             // The homepage is a build invariant, so its absence is a real failure.
@@ -44,6 +46,7 @@ async function inlineCriticalCSS() {
             if (page === "public/index.html") {
                 throw new Error(`Expected ${page} to exist after Hugo build`);
             }
+            skipped.push(page);
             console.warn(`Skipping critical CSS for ${page}: not found in this build (moved or removed?)`);
             continue;
         }
@@ -52,6 +55,17 @@ async function inlineCriticalCSS() {
         const inlined = await beasties.process(html);
         fs.writeFileSync(page, inlined);
         console.log(`Inlined critical CSS: ${page}`);
+    }
+
+    // A handful of stale entries is expected as content gets renamed. A large
+    // fraction going stale at once is a signal this allowlist needs a refresh,
+    // so surface it loudly in build logs rather than letting it go unnoticed.
+    if (skipped.length > 0) {
+        console.warn(
+            `\n${skipped.length} of ${pages.length} allowlisted pages in scripts/inline-critical-css.js were ` +
+                "not found in this build. If this list is going stale, update it to match current top " +
+                "organic landing pages.",
+        );
     }
 }
 

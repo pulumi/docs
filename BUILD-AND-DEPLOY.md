@@ -699,7 +699,7 @@ public/css/marketing.{CSS_BUNDLE_ID}.css
 5. **Critical CSS inlining**
    - Uses [beasties](https://github.com/danielroe/beasties) to extract above-the-fold CSS and inline it into the HTML
    - Runs after minification so it operates on final stylesheets
-   - Currently applied to the homepage only (`public/index.html`)
+   - Applied to a curated allowlist of the homepage plus top organic landing pages (see the `pages` array in the script); a listed page that is missing from a build is skipped with a warning, except the homepage, which is a hard failure
    - Original CSS files are preserved (`pruneSource: false`); the full stylesheet is still loaded async
 
 **Script:** `scripts/inline-critical-css.js`
