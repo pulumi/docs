@@ -42,7 +42,7 @@ key_features_above:
                 description: |
                     Convert existing Terraform with `pulumi convert`, or hand the migration to Pulumi Neo. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-        
+
 key_features:
     items:
         - title: "Migrate from Terraform in minutes"
@@ -191,13 +191,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
         number: "200+"
-        description: "Cloud and service integrations"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud

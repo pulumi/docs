@@ -43,7 +43,7 @@ key_features_above:
                     Test and validate infrastructure with standard unit test frameworks and
                     integration tests. Preview changes before deploying.
                 icon: eye
-        
+
 key_features:
     items:
         - title: "Build infrastructure faster with reusable components"
@@ -173,13 +173,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
         number: "200+"
-        description: "Cloud and service integrations"
+        description: "cloud and service integrations"
 
 key_features_below:
     items:

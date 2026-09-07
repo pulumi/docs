@@ -99,7 +99,7 @@ New to Pulumi Deployments are [Review Stacks](/blog/review-stacks/), ephemeral c
 
 ### Property Search
 
-Resource Search for Pulumi Cloud capabilities have been enhanced by allowing users to search over resource properties in addition to metadata, across hundreds of cloud providers. The [Property Search](/blog/property-search/) feature provides deeper insights into cloud infrastructure, enabling users to search based on specific property names and values, such as instance type, region, or database version. This new feature is available in the Enterprise and Business Critical editions of Pulumi Cloud and aims to streamline resource management, compliance, and diagnostics, ultimately enhancing efficiency and collaboration in cloud environments.
+Resource Search for Pulumi Cloud capabilities have been enhanced by allowing users to search over resource properties in addition to metadata, across over 100 cloud providers. The [Property Search](/blog/property-search/) feature provides deeper insights into cloud infrastructure, enabling users to search based on specific property names and values, such as instance type, region, or database version. This new feature is available in the Enterprise and Business Critical editions of Pulumi Cloud and aims to streamline resource management, compliance, and diagnostics, ultimately enhancing efficiency and collaboration in cloud environments.
 
 | Natural language                              | Query result                                                                                               |
 |-----------------------------------------------|------------------------------------------------------------------------------------------------------------|

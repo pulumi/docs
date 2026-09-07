@@ -35,7 +35,7 @@ itemlist:
     - name: "OpenTofu"
 ---
 
-The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. As of August 2026, [Pulumi's own package registry](https://www.pulumi.com/registry/) lists more than 300 packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
+The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. [Pulumi's own package registry](https://www.pulumi.com/registry/) lists hundreds of packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
 
 <!--more-->
 

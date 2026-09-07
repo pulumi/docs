@@ -174,10 +174,10 @@ key_features:
                 outputs:
                   url: ${my-site.websiteEndpoint}
           features:
-              - title: Hundreds of cloud providers
+              - title: Hundreds providers
                 icon: cloud
                 description: |
-                    hundreds of cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.
+                    Deploy to hundreds of cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.
               - title: Reusable components
                 icon: abstract-shapes
                 description: |
@@ -212,13 +212,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
         number: "200+"
-        description: "Cloud and service integrations"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud

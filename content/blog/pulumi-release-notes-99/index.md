@@ -49,7 +49,7 @@ Pulumi AI's new feature enables [deploying cloud infrastructure using AI prompts
 
 ### Pulumi AI coverage and performance
 
-Pulumi AI can now write Pulumi programs for hundreds of cloud providers in the [Pulumi registry](/registry/) - up from 20 cloud providers. Pulumi AI has also been updated to OpenAI's GPT-4 Turbo for enhanced performance along with fine tuning our prompts to improve our AI's ability to write code.
+Pulumi AI can now write Pulumi programs for all 150 cloud providers in the [Pulumi registry](/registry/) - up from 20 cloud providers. Pulumi AI has also been updated to OpenAI's GPT-4 Turbo for enhanced performance along with fine tuning our prompts to improve our AI's ability to write code.
 
 ### Pulumi AI Answers
 

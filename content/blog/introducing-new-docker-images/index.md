@@ -13,7 +13,7 @@ category: product
 ---
 
 One of the most exciting aspects of using Pulumi can also present some interesting engineering challenges.
-Pulumi supports three operating systems, multiple programming languages, and hundreds of different providers. This means creating tooling that works effortlessly across all possible user scenarios can often throw unexpected challenges our way.
+Pulumi supports three operating systems, multiple programming languages, and almost 40 different providers. This means creating tooling that works effortlessly across all possible user scenarios can often throw unexpected challenges our way.
 
 Nowhere are these challenges more prevalent than in the Pulumi Docker containers.
 

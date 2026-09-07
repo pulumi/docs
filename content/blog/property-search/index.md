@@ -46,7 +46,7 @@ Two months ago we launched [Resource Search for Pulumi Cloud](/blog/pulumi-insig
 
 Including property names and values in your resource searches enables you to search on an even richer variety of dimensions, everything from instance type, to database version, to region and availability zone, to whether resources are open to the internet.  By searching on property data, in addition to overall resource metadata, you can craft expressive queries that serve key compliance, operational and diagnostic use cases.
 
-Pulumi Resource Search, including the ability to search on property data, is applicable across all cloud resources, whether they reside in AWS, Google Cloud, Azure, or any of Pulumi's hundreds of cloud providers. Support for querying on property data is available in the [Enterprise and Business Critical editions](/pricing) of Pulumi Cloud.
+Pulumi Resource Search, including the ability to search on property data, is applicable across all cloud resources, whether they reside in AWS, Google Cloud, Azure, or any of Pulumi's 100+ cloud providers. Support for querying on property data is available in the [Enterprise and Business Critical editions](/pricing) of Pulumi Cloud.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pMEIX7LmXYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
