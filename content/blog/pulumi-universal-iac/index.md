@@ -427,7 +427,7 @@ Pulumi's Universal Infrastructure as Code platform supports the widest range of 
 
 With support for a broad range of languages - from the enterprise software engineering features of Java, to the simple declarative interface of Pulumi YAML - Pulumi scales from the simplest cloud use cases up into the most complex cloud infrastructure being managed today, and bridges the gap between cloud platform teams, operations teams, and application development teams.
 
-With support for hundreds of cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider.  And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
+With support for hundreds of cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider. And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
 
 To learn more about each of the new features - check out these blog posts with more details:
 
