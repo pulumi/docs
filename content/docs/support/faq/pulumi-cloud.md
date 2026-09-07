@@ -193,8 +193,9 @@ To discuss that, [contact us](/contact/).
   include Pulumi Neo, Resource Search, or Property Search.
 
 - **Essentials** adds organizations with unlimited users, secure collaboration
-  and CI/CD, Resource Search and Property Search, webhooks, automatic secrets
-  rotation, audit logs, and policy results in advisory mode.
+  and CI/CD, Pulumi Neo, Resource Search and Property Search, webhooks, automatic
+  secrets rotation, audit logs, audit policies, the Pulumi Best Practices policy
+  pack, and policy results in advisory mode.
 
 - **Pro** adds SAML/SSO and advanced role-based access control,
   organization-managed policy enforcement, preventative policies, custom policy
@@ -204,7 +205,8 @@ To discuss that, [contact us](/contact/).
 - **Enterprise** adds [self-hosting](/docs/administration/self-hosting/),
   conformance packs for NIST, PCI DSS, HITRUST, SOC 2, and CIS,
   [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
-  custom policy packs, and policy remediation.
+  custom policy packs, policy remediation, GitHub Enterprise Server support,
+  and unlimited custom roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
