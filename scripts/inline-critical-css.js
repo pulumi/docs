@@ -1,7 +1,29 @@
 const fs = require("fs");
 const Beasties = require("beasties");
 
-const pages = ["public/index.html"];
+// Curated allowlist, not a blanket public/**/*.html glob: critical-CSS extraction
+// costs real build time per page (docs pages with large nav trees run noticeably
+// slower than short marketing pages), so this list is bounded to pages that
+// actually carry organic sessions today, prioritized by search-console click
+// volume and capped to keep the added build step well under a couple of minutes.
+// Revisit the ranking periodically as traffic shifts; add a page here only after
+// confirming it clears the same bar.
+const pages = [
+    "public/index.html",
+    "public/docs/iac/comparisons/terraform/index.html",
+    "public/docs/install/index.html",
+    "public/blog/top-8-claude-skills-devops-2026/index.html",
+    "public/pricing/index.html",
+    "public/blog/claude-code-orchestration-frameworks/index.html",
+    "public/careers/index.html",
+    "public/docs/iac/concepts/state-and-backends/index.html",
+    "public/docs/iac/concepts/secrets/index.html",
+    "public/docs/index.html",
+    "public/product/neo/index.html",
+    "public/what-is/opentofu-vs-terraform/index.html",
+    "public/docs/iac/cli/index.html",
+    "public/docs/iac/concepts/stacks/index.html",
+];
 
 async function inlineCriticalCSS() {
     const beasties = new Beasties({
@@ -15,7 +37,15 @@ async function inlineCriticalCSS() {
 
     for (const page of pages) {
         if (!fs.existsSync(page)) {
-            throw new Error(`Expected ${page} to exist after Hugo build`);
+            // The homepage is a build invariant, so its absence is a real failure.
+            // Everything else in this list is a specific URL (a blog post, a doc
+            // page) that can be renamed or retired independent of this script; skip
+            // it rather than breaking every build over stale critical-CSS scoping.
+            if (page === "public/index.html") {
+                throw new Error(`Expected ${page} to exist after Hugo build`);
+            }
+            console.warn(`Skipping critical CSS for ${page}: not found in this build (moved or removed?)`);
+            continue;
         }
 
         const html = fs.readFileSync(page, "utf-8");
