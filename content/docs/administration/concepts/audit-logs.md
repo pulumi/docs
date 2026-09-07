@@ -53,6 +53,8 @@ also filter logs by a particular user by selecting their profile picture.
 
 ## Export audit logs
 
+{{< pulumi-cloud "audit-log-export" >}}
+
 Pulumi Cloud can download audit log events on demand from the console, the CLI, or the REST API, and can continuously deliver them to Amazon S3 or Microsoft Sentinel. See the [audit log guides](/docs/administration/guides/audit-logs/) for every procedure, and [Audit log formats](/docs/administration/reference/audit-log-formats/) for the fields each export format carries.
 
 <a id="list-of-audit-log-events"></a>
