@@ -177,8 +177,8 @@ stats:
         number: "4,000+"
         description: organizations
     integration:
-        number: "170+"
-        description: Cloud and service integrations
+        number: "200+"
+        description: cloud and service integrations
 
 case_studies:
     title: Customers innovating with Pulumi Cloud

@@ -108,7 +108,7 @@ sections:
     cards:
       - icon: terminal-window
         title: Tame cloud complexity
-        description: Deliver infrastructure from 50+ cloud and SaaS providers. Pulumi's SDKs provide a complete and consistent interface that offers full access to clouds and abstracts complexity.
+        description: Deliver infrastructure from hundreds of cloud and SaaS providers. Pulumi's SDKs provide a complete and consistent interface that offers full access to clouds and abstracts complexity.
       - icon: cloud-arrow-down
         title: Bring the cloud closer to application development
         description: Build reusable cloud infrastructure and infrastructure platforms that empower developers to build modern cloud applications faster and with less overhead.

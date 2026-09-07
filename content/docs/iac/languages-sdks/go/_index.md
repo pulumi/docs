@@ -123,7 +123,7 @@ The [Pulumi SDK (`pulumi`)](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/g
 
 ### Provider SDKs
 
-For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses 100+ Go packages.
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses hundreds of Go packages.
 
 ### Dev versions
 
