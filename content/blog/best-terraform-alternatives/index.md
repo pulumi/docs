@@ -51,7 +51,7 @@ None of this is an argument that Terraform is going away. It remains a capable, 
 
 ## Pulumi
 
-Pulumi is an infrastructure-as-code platform that lets you define cloud infrastructure in general-purpose languages, including Python, TypeScript, JavaScript, Go, .NET, and Java, plus YAML and HCL for teams that prefer a declarative format. Rather than compiling down to another tool's templates, Pulumi programs run directly against a deployment engine that supports more than 180 providers in total, covering AWS, Azure, Google Cloud, Kubernetes, and a long tail of SaaS and on-prem targets.
+Pulumi is an infrastructure-as-code platform that lets you define cloud infrastructure in general-purpose languages, including Python, TypeScript, JavaScript, Go, .NET, and Java, plus YAML and HCL for teams that prefer a declarative format. Rather than compiling down to another tool's templates, Pulumi programs run directly against a deployment engine that supports hundreds of providers in total, covering AWS, Azure, Google Cloud, Kubernetes, and a long tail of SaaS and on-prem targets.
 
 Pulumi also supports HCL as a first-class language, and Pulumi Cloud can serve as a drop-in [state backend for existing Terraform code](/docs/iac/get-started/terraform/terraform-state-backend/). That means teams with a large, working Terraform estate aren't required to rewrite anything to get Pulumi Cloud's state management, access controls, and policy enforcement — they can point existing HCL at Pulumi with minimal changes, then migrate configuration into a general-purpose language on their own timeline rather than all at once.
 
@@ -111,7 +111,7 @@ It's worth being precise about what Terragrunt is not: it doesn't introduce a ne
 
 | Tool | Language | Cloud coverage | AI-agent readiness | Governance & policy | Best for |
 |---|---|---|---|---|---|
-| Pulumi | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, HCL | 180+ providers, any cloud | High — real languages agents are trained on; Neo agent built in | Policy as code, ESC secrets, human-in-the-loop approvals | Teams standardizing on AI-native, multi-cloud engineering workflows |
+| Pulumi | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, HCL | hundreds of providers, any cloud | High — real languages agents are trained on; Neo agent built in | Policy as code, ESC secrets, human-in-the-loop approvals | Teams standardizing on AI-native, multi-cloud engineering workflows |
 | OpenTofu | HCL | Same provider ecosystem as Terraform | Same as Terraform — DSL limits agent reasoning | Community-governed; adding features like state encryption | Terraform users prioritizing open governance with minimal migration |
 | AWS CloudFormation | YAML/JSON | AWS only | Low — templated config, no native testing | AWS-managed state and rollback | Teams fully committed to AWS wanting a fully managed native service |
 | AWS CDK | TypeScript, Python, Java, C#, Go | AWS only (compiles to CloudFormation) | Medium — real languages, but a compile step slows feedback | Inherits CloudFormation governance | AWS-only teams wanting general-purpose languages |

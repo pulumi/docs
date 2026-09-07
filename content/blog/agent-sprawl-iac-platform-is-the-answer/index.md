@@ -84,7 +84,7 @@ Agents are only as good as the context they can reason over. Drop a generic LLM 
 
 An agent that needs to touch five systems shouldn't need five separate credential dances. That's where credential sprawl starts. Every agent gets a long-lived key, every key ends up in somebody's `.env`, and every rotation turns into an incident.
 
-The Pulumi surface here is the [200+ providers](https://www.pulumi.com/registry/) plus [Pulumi ESC](/product/secrets-management/) handling dynamic credentials through OIDC. An agent doesn't ask for an AWS access key. It asks ESC for a short-lived, scoped token bound to the environment it's allowed to operate in, and the token expires when the task ends. No static keys, no rotation pain, no awkward postmortem about how something got committed to GitHub. [The ESC patterns I walked through in the Claude skills post](/blog/top-8-claude-skills-devops-2026/) work just as well for an autonomous agent as they do for a human developer, which is really the whole point.
+The Pulumi surface here is the [hundreds of providers](https://www.pulumi.com/registry/) plus [Pulumi ESC](/product/secrets-management/) handling dynamic credentials through OIDC. An agent doesn't ask for an AWS access key. It asks ESC for a short-lived, scoped token bound to the environment it's allowed to operate in, and the token expires when the task ends. No static keys, no rotation pain, no awkward postmortem about how something got committed to GitHub. [The ESC patterns I walked through in the Claude skills post](/blog/top-8-claude-skills-devops-2026/) work just as well for an autonomous agent as they do for a human developer, which is really the whole point.
 
 ### 3. Governed actions
 

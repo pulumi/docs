@@ -165,7 +165,7 @@ A few things that set it apart in practice:
 
 **Built on real programming languages.** Neo reasons about Python, TypeScript, Go, C#, and Java, not a proprietary DSL. That matters specifically for an AI agent: general-purpose code is what language models have the most training data on, and it comes with testing, refactoring, and IDE tooling that infrastructure-specific DSLs don't have.
 
-**One platform, every cloud.** AWS, Azure, GCP, Kubernetes, and 180+ other providers, from one agent and one policy model. The hyperscaler-native agents below stop at their own cloud's edge.
+**One platform, every cloud.** AWS, Azure, GCP, Kubernetes, and hundreds of other providers, from one agent and one policy model. The hyperscaler-native agents below stop at their own cloud's edge.
 
 **Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agents for infrastructure, versus keeping them sandboxed.
 

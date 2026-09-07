@@ -200,7 +200,7 @@ Local enforcement via the `--policy-pack` flag (including advisory, mandatory, a
 
 ## Learn more
 
-Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (200+ providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
+Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (hundreds of providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
 
 Related reading:
 
