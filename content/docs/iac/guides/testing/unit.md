@@ -25,7 +25,7 @@ Because mocks don't do any real work, unit tests run fast. They're also determin
 
 This guide builds a sample test suite against AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a Pulumi program in the language of your choice.
 
-Unit tests are supported in every [Pulumi language runtime](/docs/iac/languages-sdks/).
+Unit tests are supported in every general-purpose [Pulumi language runtime](/docs/iac/languages-sdks/).
 
 ## Sample program
 
