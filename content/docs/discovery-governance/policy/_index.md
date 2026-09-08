@@ -1,12 +1,12 @@
 ---
 title: Policies
-title_tag: "Pulumi Policies | Discovery & Governance"
+title_tag: "Pulumi Policies | Discovery & governance"
 meta_desc: Enforce compliance and security across all cloud infrastructure using policy as code with Pulumi Policies, for both IaC stacks and discovered resources.
 h1: Policies
 menu:
   discovery-governance:
     name: Policies
-    parent: insights-home
+    parent: discovery-governance-home
     weight: 20
     identifier: insights-policy
 aliases:

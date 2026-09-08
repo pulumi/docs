@@ -1,6 +1,6 @@
 ---
 title: Cloud Accounts
-title_tag: Create and Manage Cloud Accounts | Discovery & Governance
+title_tag: Create and Manage Cloud Accounts | Discovery & governance
 h1: Create and Manage Cloud Accounts
 meta_desc: This page describes how to create cloud accounts used by Discovery to scan provider resources for use within Pulumi Cloud.
 menu:
@@ -102,7 +102,7 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
 
 #### AWS partitions
 
-Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning on the **Discovery** step when you create the cloud account:
+Pulumi Discovery supports every AWS partition. Select the partition that matches the account you are scanning on the **Discovery** step when you create the cloud account:
 
 * AWS Standard (commercial)
 * AWS GovCloud (US)
@@ -276,7 +276,7 @@ metadata:
   name: my-service-account  # Replace with your service account name
   namespace: default  # Replace with your namespace
 ---
-# Create a long-lived token for authentication by Pulumi Insights
+# Create a long-lived token for authentication by Pulumi Discovery
 apiVersion: v1
 kind: Secret
 metadata:

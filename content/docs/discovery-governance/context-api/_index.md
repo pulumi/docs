@@ -6,7 +6,7 @@ meta_desc: "Understand how the Context API queries the Pulumi Cloud infrastructu
 menu:
   discovery-governance:
     name: Context API
-    parent: insights-home
+    parent: discovery-governance-home
     identifier: insights-context-api
     weight: 30
 aliases:

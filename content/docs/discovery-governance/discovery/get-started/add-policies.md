@@ -1,6 +1,6 @@
 ---
 title: Using Policies
-title_tag: "Policies | Discovery & Governance"
+title_tag: "Policies | Discovery & governance"
 h1: Using Policies and Policy Remediation
 meta_desc: Learn how to use policies to evaluate cloud resources found by Discovery.
 weight: 6
@@ -15,7 +15,7 @@ aliases:
   - /docs/insights/discovery/get-started/add-policies/
 ---
 
-Now that you have scanned your cloud accounts and discovered resources, you can use Pulumi Policy policies to evaluate those resources for compliance, security, and adherence to best practices. Insights runs policy evaluations automatically whenever it discovers new or changed resources, providing continuous visibility into your infrastructure's compliance status. The wizard already applied a default policy pack when you connected your account; in this step you'll write and apply a custom policy pack of your own.
+Now that you have scanned your cloud accounts and discovered resources, you can use Pulumi Policies to evaluate those resources for compliance, security, and adherence to best practices. Discovery runs policy evaluations automatically whenever it discovers new or changed resources, providing continuous visibility into your infrastructure's compliance status. The wizard already applied a default policy pack when you connected your account; in this step you'll write and apply a custom policy pack of your own.
 
 ## Creating a policy pack
 
@@ -73,7 +73,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
 1. In the Pulumi Cloud console, navigate to **Management** > **Policies**.
 
-    ![Insights Policies - New Policy Pack](/docs/discovery-governance/assets/policy-groups.png)
+    ![Pulumi Policies - New Policy Pack](/docs/discovery-governance/assets/policy-groups.png)
 
 1. Select **Create policy group** and provide a descriptive name, such as "s3-security-policy-group". Then select **Add policy group**
 
@@ -85,7 +85,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
     We'll start with an enforcement level of **advisory** then select **Enable** to confirm your settings.
 
-    ![Insights Policies - New Policy Pack](/docs/discovery-governance/assets/enable-policy-pack.png)
+    ![Pulumi Policies - New Policy Pack](/docs/discovery-governance/assets/enable-policy-pack.png)
 
 1. Now add your cloud account to the policy group. Select **Add accounts** and type the name of the account you want to include for policy evaluation. (e.g. production/us-west-2) Finally, select **Add account to policy group**
 
@@ -93,7 +93,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 Cloud accounts are automatically added to `default-accounts-policy-group`, and stacks to `default-policy-group`, as they are created. See [default policy groups](/docs/discovery-governance/policy/policy-groups/#default-policy-groups).
 {{% /notes %}}
 
-![Insights Policies - New Policy Pack](/docs/discovery-governance/assets/new-policy-pack.png)
+![Pulumi Policies - New Policy Pack](/docs/discovery-governance/assets/new-policy-pack.png)
 
 {{< notes type="info" >}}
 When adding accounts to a policy group, make sure to include both the parent account name and the region if you want to evaluate region-specific resources. For example: `production/us-west-2`
@@ -112,7 +112,7 @@ With policies configured, you can now evaluate your discovered resources against
 
 As the scan progresses, you can monitor policy compliance in real-time through the **Policy Findings** page in the Pulumi Cloud console. This view provides several ways to analyze your compliance status:
 
-![Insights Policies - Policy Findings](/docs/discovery-governance/assets/policy-findings.png)
+![Pulumi Policies - Policy Findings](/docs/discovery-governance/assets/policy-findings.png)
 
 The Policy Findings page includes three tabs:
 

@@ -1,6 +1,6 @@
 ---
 title: Connect Cloud Accounts
-title_tag: Connect Cloud Accounts | Discovery & Governance
+title_tag: Connect Cloud Accounts | Discovery & governance
 h1: Connect Cloud Accounts
 meta_desc: Use the Connect cloud accounts wizard to onboard AWS, Azure, and Google Cloud accounts to Pulumi in bulk with OIDC authentication.
 menu:

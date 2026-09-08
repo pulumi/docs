@@ -1,6 +1,6 @@
 ---
 title: Get Started
-title_tag: Get Started with Discovery | Discovery & Governance
+title_tag: Get Started with Discovery | Discovery & governance
 h1: Get Started with Discovery
 meta_desc: Learn how to set up and manage cloud accounts to gain visibility into your cloud infrastructure.
 weight: 1
@@ -16,7 +16,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Discovery is the resource-scanning feature of Pulumi Insights, an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. It improves security, compliance, and efficiency through AI-powered asset and compliance management.
+Discovery is the resource-scanning product in Pulumi Cloud that helps you discover, understand, manage, and improve your cloud infrastructure. It improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
 Discovery and Resource Explorer give you the tools to:
 
@@ -35,7 +35,7 @@ For an overview of how Discovery works, check out the following 5-min video:
         src="//www.youtube.com/embed/fa7s5_oYnaM?rel=0"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
         allowfullscreen=""
-        title="Pulumi Insights: Scanning and managing cloud accounts">
+        title="Pulumi Discovery: Scanning and managing cloud accounts">
     </iframe>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 title: Discovered Stacks
-title_tag: "Discovered Stacks | Discovery & Governance"
+title_tag: "Discovered Stacks | Discovery & governance"
 h1: Discovered Stacks
 meta_desc: Discovered Stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi IaC stacks, with a seamless migration path.
 menu:

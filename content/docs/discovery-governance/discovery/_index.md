@@ -1,11 +1,11 @@
 ---
 title: Discovery
-title_tag: "Discovery Overview | Discovery & Governance"
+title_tag: "Discovery Overview | Discovery & governance"
 meta_desc: Discover and manage all your cloud infrastructure with Pulumi's Discovery feature—scan cloud accounts, explore resources, and gain complete visibility.
 h1: Discovery
 menu:
   discovery-governance:
-    parent: insights-home
+    parent: discovery-governance-home
     identifier: insights-discovery
     weight: 5
 aliases:
@@ -25,7 +25,7 @@ Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)
 
 1. **Account management**: Create and configure cloud accounts on the [**Accounts** page](/docs/discovery-governance/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
-2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
+2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the resource graph with the latest state.
 
 3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/discovery-governance/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Neo](/docs/ai/).
 

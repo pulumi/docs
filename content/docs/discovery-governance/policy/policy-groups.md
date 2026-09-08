@@ -44,7 +44,7 @@ Every organization has two policy groups that Pulumi creates and maintains for y
 | Policy group | Type | Joins automatically |
 |:--------------------------------|:----------------|:-------------------------------------------|
 | `default-policy-group` | Preventative | Every stack in the organization |
-| `default-accounts-policy-group` | Audit | Every cloud account connected to Insights |
+| `default-accounts-policy-group` | Audit | Every cloud account connected to Discovery |
 
 New stacks and newly connected cloud accounts join the matching default group as they are created. You can remove a stack or account from its default group at any time, the same way you would with any other policy group. Because `default-accounts-policy-group` is an audit group, you can also add stacks to it, though none are added automatically.
 

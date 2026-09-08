@@ -1,5 +1,5 @@
 ---
-title_tag: Using Resource Explorer | Discovery & Governance
+title_tag: Using Resource Explorer | Discovery & governance
 title: Using Resource Explorer
 h1: Using Resource Explorer
 meta_desc: This page provides an overview on how to explore discovered resources with Resource Explorer.
@@ -56,7 +56,7 @@ To quickly find the right keywords and search syntax, you can ask natural langua
 
 `type:"aws:s3/bucket:Bucket" OR type:"gcp:storage/bucket:Bucket" OR type:"azure:storage/bucket:Bucket"`
 
-![Insights Explorer Ai assist vm](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-cloud-buckets.png)
+![Resource explorer AI assist vm](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-cloud-buckets.png)
 
 Let's say you are working with your security team as part of an audit, you could quickly find (or confirm compliance) on risks such as public facing S3 buckets.
 
@@ -64,7 +64,7 @@ Let's say you are working with your security team as part of an audit, you could
 
 `type:"aws:s3/bucket:Bucket" .acl:public-read`
 
-![Insights Explorer Ai assist public s3](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
+![Resource explorer AI assist public s3](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
 
 With Pulumi Neo and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed
 

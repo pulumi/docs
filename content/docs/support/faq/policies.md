@@ -53,7 +53,7 @@ The next preview or update of the stack with fail due to the policy violation. T
 
 For accounts:
 
-A policy violation will be added to any account resources that are out of compliance. Policy violations for Insights resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
+A policy violation will be added to any account resources that are out of compliance. Policy violations for discovered resources are informational rather than preventative since the resource state is discovered, but not managed, by Pulumi.
 
 ## How do I version a Policy Pack?
 

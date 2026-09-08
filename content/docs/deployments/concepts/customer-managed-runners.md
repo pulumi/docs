@@ -75,7 +75,7 @@ This mode fits environments that already run Kubernetes and want the cluster to 
 
 ### One job per runner
 
-Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Insights scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency) in the setup guide.
+Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Discovery scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency) in the setup guide.
 
 ### Choosing between Docker and Kubernetes
 

@@ -1,5 +1,5 @@
 ---
-title_tag: Create a Cloud Account | Discovery & Governance
+title_tag: Create a Cloud Account | Discovery & governance
 title: Create a Cloud Account
 h1: Create a Cloud Account
 meta_desc: This page provides an overview on how to create a cloud account in Pulumi.

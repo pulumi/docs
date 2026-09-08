@@ -1,6 +1,6 @@
 ---
 title: Resource Search
-title_tag: "Resource Search | Discovery & Governance"
+title_tag: "Resource Search | Discovery & governance"
 h1: Resource Search
 meta_desc: Documentation and query syntax for the Resource Search feature in Pulumi Cloud.
 menu:

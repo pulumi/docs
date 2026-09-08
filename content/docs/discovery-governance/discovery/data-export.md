@@ -1,6 +1,6 @@
 ---
 title: Data Export
-title_tag: Data Export | Discovery & Governance
+title_tag: Data Export | Discovery & governance
 h1: Data Export
 meta_desc: Documentation and schema for the CSV Data Export feature in Pulumi Cloud.
 menu:

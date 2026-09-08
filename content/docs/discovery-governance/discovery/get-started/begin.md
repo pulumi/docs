@@ -1,5 +1,5 @@
 ---
-title_tag: Before You Begin | Discovery & Governance
+title_tag: Before You Begin | Discovery & governance
 title: Before You Begin
 h1: Before You Begin
 meta_desc: This page provides an overview on how to get started with cloud accounts in Pulumi.

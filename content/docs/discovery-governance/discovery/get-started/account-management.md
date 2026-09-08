@@ -1,5 +1,5 @@
 ---
-title_tag: Manage Accounts and Scans | Discovery & Governance
+title_tag: Manage Accounts and Scans | Discovery & governance
 title: Manage Accounts and Scans
 h1: Manage Accounts and Scans
 meta_desc: This page provides an overview on how to manage cloud accounts in Pulumi.
