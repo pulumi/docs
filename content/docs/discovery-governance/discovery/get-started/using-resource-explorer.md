@@ -16,7 +16,7 @@ aliases:
 pulumi_cloud_feature: resource-search
 ---
 
-[Pulumi Resource Explorer](/docs/discovery-governance/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
+[Pulumi Resource Explorer](/docs/discovery-governance/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all your AWS VPCs, or all your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
 ![Resource Explorer showing discovered resources](/docs/discovery-governance/assets/insights-resource-explorer.png)
 
