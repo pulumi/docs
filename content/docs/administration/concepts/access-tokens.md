@@ -107,7 +107,7 @@ Deleting a token immediately revokes its access. The token name is permanently r
 
 ## Access token expiry policy
 
-Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and the time remaining until that expiration must be within the policy's cap, for requests against the organization to succeed.
+Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and their total lifetime (the time from creation to expiration) must be within the policy's cap, for requests against the organization to succeed.
 
 ### Setting a policy
 
@@ -128,10 +128,10 @@ To remove the policy, set the value to 0 (or clear the field) and save. Policy c
 
 ### How compliance is evaluated
 
-A token complies with the policy if it has an expiration date and its remaining lifetime — the time between now and its expiration — is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
+A token complies with the policy if it has an expiration date and its total lifetime (the time between its creation and its expiration) is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
 
 * A token that never expires violates any policy.
-* A token created with a long expiry becomes compliant once its remaining lifetime falls within the cap. For example, under a 30-day policy, a token that expires 20 days from now is compliant even if it was originally created with a one-year expiry.
+* A token created with a lifetime longer than the cap never becomes compliant, even as its expiration approaches. For example, under a 30-day policy, a token created with a one-year expiry is rejected even when it has only 20 days left; it must be recreated with a compliant expiry.
 
 ### What the policy affects
 

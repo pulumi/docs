@@ -103,7 +103,7 @@ function mount(options: { url?: string; draft?: any; extraPriorities?: string[];
     let fetchImpl = async (_url: string, _init: any) => ({
         ok: true,
         status: 200,
-        json: async () => ({ ok: true, id: "req-1", ticketId: "ticket-1" }),
+        json: async () => ({ ok: true, id: "req-1", conversationId: "conversation-1" }),
     });
 
     const g: any = globalThis;
@@ -585,7 +585,7 @@ test("files one ticket even if submit fires twice while in flight", async () => 
     });
     h.setFetch(async () => {
         await gate;
-        return { ok: true, status: 200, json: async () => ({ ok: true, id: "req-1", ticketId: "t-1" }) };
+        return { ok: true, status: 200, json: async () => ({ ok: true, id: "req-1", conversationId: "c-1" }) };
     });
 
     const form = h.doc.querySelector("[data-support-form]") as any;

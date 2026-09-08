@@ -81,8 +81,8 @@ const config = {
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
     // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
-    // tickets. Requires the intercomApiKey (secret) and intercomTicketTypeId stack
-    // config values — see SupportFormApiArgs in supportForm.ts.
+    // conversations. Requires the intercomApiKey stack config value — see
+    // SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 
     // supportRedirectDomain is a retired hostname (e.g. support.pulumi.com) permanently redirected to the
@@ -1088,7 +1088,6 @@ let supportForm: SupportFormApi | undefined;
 if (config.enableSupportForm) {
     supportForm = new SupportFormApi("support-form", {
         intercomApiKey: stackConfig.requireSecret("intercomApiKey"),
-        intercomTicketTypeId: stackConfig.require("intercomTicketTypeId"),
     });
 
     supportFormOrigins.push(supportForm.getOrigin());
