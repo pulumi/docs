@@ -26,6 +26,8 @@ jobs:
       issues: write
 
     steps:
+      # Required: the `gh pr review` / `gh pr merge` calls below infer the
+      # repository from this checkout's git remote. Don't remove it as "unused".
       - name: Checkout repository
         uses: actions/checkout@v7
 
@@ -35,9 +37,16 @@ jobs:
       # see the comments in the script step below. Not available on
       # workflow_dispatch (no Dependabot commit to read), so the script keeps a
       # body-parsing fallback for that path only.
+      #
+      # continue-on-error because this step is new: before it, the labelling
+      # job could not fail this way, and a transient failure here would put a
+      # red check on every Dependabot PR. On failure the outputs are empty,
+      # `metadataAvailable` is false, and the script falls through to the body
+      # parser -- degraded (isSecurity under-reports) but not broken.
       - name: Fetch Dependabot metadata
         id: meta
         if: github.event_name == 'pull_request'
+        continue-on-error: true
         uses: dependabot/fetch-metadata@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
