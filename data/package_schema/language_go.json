@@ -1,0 +1,156 @@
+{
+  "choosable": "go",
+  "generated": "2026-09-03",
+  "label": "Go",
+  "language": "go",
+  "schemaKey": "go",
+  "sections": {
+    "packagelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "Base path for package imports.",
+          "name": "importBasePath",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Module path for go.mod.",
+          "name": "modulePath",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Explicit package name, which may be different to the import path.",
+          "name": "rootPackageName",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Map from module -> package name.",
+          "name": "moduleToPackage",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Map from package name -> package alias.",
+          "name": "packageImportAliases",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Defines the pattern for how import paths should be constructed from the base import path and used module By default, the pattern is \"{baseImportPath}/{module}\" but can be overridden to support other patterns. for example you can use \"{baseImportPath}/{module}/v2\" which will replace {module} with the module name and {baseImportPath} with the base import path to compute the full path.",
+          "name": "importPathPattern",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Generate container types (arrays, maps, pointer output types etc.) for each resource. These are typically used to support external references.",
+          "name": "generateResourceContainerTypes",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "The version of the Pulumi SDK used with this provider, e.g. 3. Used to generate doc links for pulumi builtin types. If omitted, the latest SDK version is used.",
+          "name": "pulumiSDKVersion",
+          "required": false,
+          "type": {
+            "text": "integer"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether to make single-return-value methods return an output struct or the value.",
+          "name": "liftSingleValueMethodReturns",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "When set, the code generator will use this name for the generated internal module instead of \"internal\" so that functionality within the module can be used by end users.",
+          "name": "internalModuleName",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether or not the code generator generates input (and output) types for all plain types, instead of for only types that are used as input/output types.",
+          "name": "generateExtraInputTypes",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether the code generator generates input (and output) types for all plain types, instead of for only types that are used as input/output types.",
+          "name": "omitExtraInputTypes",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Respect the Pkg.Version field for emitted code.",
+          "name": "respectSchemaVersion",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Blank imports that are emitted in the SDK so that `go mod tidy` does not remove the associated module dependencies from the SDK's go.mod.",
+          "name": "internalDependencies",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Specifies how to handle generating a variant of the SDK that uses generics. Allowed values are the following:\n\n- \"none\" (default): do not generate a generics variant of the SDK\n- \"side-by-side\": generate a side-by-side generics variant of the SDK under the x subdirectory\n- \"only-generics\": generate a generics variant of the SDK only",
+          "name": "generics",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    }
+  },
+  "source": {
+    "paths": [
+      "pkg/codegen/go/importer.go"
+    ],
+    "repo": "pulumi/pulumi",
+    "url": "https://github.com/pulumi/pulumi/tree/v3.261.0",
+    "version": "v3.261.0"
+  }
+}
