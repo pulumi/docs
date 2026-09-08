@@ -113,10 +113,10 @@ Start by asking an agent a question in natural language. [Pulumi Neo](/product/n
 Claude Code, Cursor, Codex, and other agents that can run authenticated Pulumi CLI commands can fetch the schema endpoint's Markdown primer:
 
 ```bash
-pulumi api GetGraphSchema -F orgName=my-org
+pulumi api GetGraphQuerySchema
 ```
 
-Replace `my-org` with your organization name. The primer explains the current graph vocabulary, query grammar, engine limits, examples, pagination, and completeness checks. Put the command in your `AGENTS.md` or `CLAUDE.md` so the agent can refresh the primer as the API evolves. The [human-readable query guide](/docs/insights/guides/context-api/) explains the same concepts and includes direct CLI and REST examples.
+The primer explains the current graph vocabulary, query grammar, engine limits, examples, pagination, and completeness checks. Put the command in your `AGENTS.md` or `CLAUDE.md` so the agent can refresh the primer as the API evolves. The [human-readable query guide](/docs/insights/guides/context-api/) explains the same concepts and includes direct CLI and REST examples.
 
 ## Available in public preview
 

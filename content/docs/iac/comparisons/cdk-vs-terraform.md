@@ -2,7 +2,7 @@
 title_tag: "CDK vs. Terraform vs. Pulumi"
 faq_schema: true
 authors: ["pulumi-content-team"]
-meta_desc: "Compare AWS CDK, Terraform, and Pulumi: which is easiest for an AI agent to write, test, and modify, plus multi-cloud reach, state, and testing."
+meta_desc: "Compare AWS CDK, Terraform, and Pulumi on architecture, language support, multi-cloud reach, state management, and testing, and see where each one fits."
 title: CDK vs. Terraform
 h1: CDK vs. Terraform vs. Pulumi
 menu:
@@ -13,23 +13,11 @@ menu:
         identifier: iac-comparisons-cdk-vs-terraform
 ---
 
-AWS CDK, Terraform, and Pulumi all provision cloud infrastructure as code, but they differ in where they run and how an AI coding agent works with them. CDK compiles to CloudFormation and is AWS-only; Terraform uses its own HCL language across many clouds; Pulumi uses general-purpose languages (or HCL) across any cloud, with no synthesis or transpilation step between the code an agent writes and the errors it reads back.
+AWS CDK, Terraform, and Pulumi all provision cloud infrastructure as code, but they differ in the language you write, how that code reaches the cloud, and how far each one reaches beyond a single provider. CDK compiles to CloudFormation and is AWS-only; Terraform uses its own HCL language across many clouds; Pulumi runs general-purpose languages (TypeScript, Python, Go, C#, Java) or HCL across any cloud, provisioning directly through its own engine with no template-synthesis step.
 
-## Which of CDK, Terraform, and Pulumi can an AI agent write most reliably?
+## How do CDK, Terraform, and Pulumi differ architecturally?
 
-Recent research on LLM-generated infrastructure as code finds that raw syntax is mostly a solved problem: a 2025 study of LLM-generated CloudFormation, Terraform, and AWS CDK found [more than 95% syntactic validity across all three formats](https://arxiv.org/abs/2509.05303), with the real gap in "semantic alignment and handling complex infrastructure patterns." Syntax isn't the differentiator; the verification loop is.
-
-A separate 2026 study, [IaC-Eval v2](https://arxiv.org/abs/2607.20478), measured how much a tight feedback loop matters in practice: a 7B model's pass rate on Terraform/AWS tasks rose from a **14.0% pass@1** baseline to **45.7%** with active retrieval, and to **62.9%** (7B model) and **84.4%** (GPT-4o) once agents could iteratively refine against verifier feedback. The tighter and more direct that feedback loop, the better an agent performs.
-
-This is where the three tools diverge structurally. AWS CDK code passes through [JSII](https://docs.aws.amazon.com/cdk/v2/guide/languages.html) and [`cdk synth`](https://docs.aws.amazon.com/cdk/v2/guide/deploy.html) into a CloudFormation template before anything is validated against real infrastructure; an agent's errors surface against synthesized logical IDs one translation step removed from the code it wrote. Terraform's `terraform plan` computes a resource-level diff without an intervening synthesis step, but HCL is a domain-specific language with limited abstraction, and tests live in a separate harness ([`terraform test`](https://developer.hashicorp.com/terraform/language/tests)) using dedicated `.tftest.hcl` files rather than alongside the resource code. Pulumi programs are written in the same general-purpose language (TypeScript, Python, Go, C#, Java, or HCL) the agent already uses elsewhere in the codebase, so a type checker, linter, and unit tests can catch errors before any cloud call, and `pulumi preview` returns a direct resource-level diff with no template-synthesis step.
-
-Pulumi's own benchmark of Claude Opus 4.6 and GPT-5.2-Codex against equivalent Terraform and Pulumi generation tasks found that with Opus, the [total cost of an agent completing a generation-plus-refactor pipeline was 41% lower with Pulumi than Terraform ($0.146 vs. $0.249)](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), and that "the difference comes entirely from repair cycles: Pulumi needed zero repairs across both scenarios, while Terraform refactoring triggered self-repair on every run." Fewer translation steps and more verifiers close to the code an agent wrote means fewer repair cycles, which is where the real cost and reliability gap shows up.
-
-## How does each tool's agent feedback loop actually work?
-
-* **AWS CDK**: code (TypeScript, Python, Java, C#, or Go via JSII) → `cdk synth` produces a CloudFormation template → `cdk deploy` hands the template to the CloudFormation service. An agent's edits are validated by `cdk diff` and CloudFormation's own drift detection, but failures surface against the synthesized template and roll back at the stack level, one step removed from the source the agent edited.
-* **Terraform**: HCL → `terraform plan` computes a resource-level diff → `terraform apply`. The plan step is fast and high-fidelity, but HCL has no native type system or general-purpose control flow, so an agent working across modules is reasoning in a DSL distinct from the rest of the codebase, and correctness checks beyond syntax require a separate test harness.
-* **Pulumi**: code in a general-purpose language → compiler/type-checker and unit tests run locally, before any cloud call → `pulumi preview` gives a resource-level diff in the same run. Every verifier available to that language's toolchain (IDE, linter, type checker, test framework) applies directly to the infrastructure code, with no synthesis or transpilation step between what the agent wrote and what gets deployed.
+The three tools diverge structurally in how code becomes a deployed resource. AWS CDK code passes through [JSII](https://docs.aws.amazon.com/cdk/v2/guide/languages.html) and [`cdk synth`](https://docs.aws.amazon.com/cdk/v2/guide/deploy.html) into a CloudFormation template before anything is validated against real infrastructure, so errors surface against synthesized logical IDs one translation step removed from the code that produced them. Terraform's `terraform plan` computes a resource-level diff without an intervening synthesis step, but HCL is a domain-specific language with limited abstraction, and tests live in a separate harness ([`terraform test`](https://developer.hashicorp.com/terraform/language/tests)) using dedicated `.tftest.hcl` files rather than alongside the resource code. Pulumi programs are written in a general-purpose language (TypeScript, Python, Go, C#, or Java), or in HCL, which Pulumi runs as a first-class runtime rather than compiling elsewhere, so a type checker, linter, and unit tests apply directly to the infrastructure code, and `pulumi preview` returns a direct resource-level diff with no template-synthesis step.
 
 ## CDK vs. Terraform vs. Pulumi: feature comparison
 
@@ -68,6 +56,22 @@ CDK ships a unit testing library (`aws-cdk-lib/assertions`) that asserts against
 ## How do the ecosystems and communities compare?
 
 Terraform has the largest and oldest provider ecosystem by raw count (7,000+ providers in the Terraform Registry, measured 2026-08-07), reflecting nearly a decade as the default IaC tool. OpenTofu, forked from Terraform in 2023 after HashiCorp's license change to BUSL, inherited that same provider compatibility and has grown its own module registry (23,600+ modules, per [search.opentofu.org](https://search.opentofu.org/), measured 2026-08-07) under Linux Foundation governance. AWS CDK's ecosystem is the Construct Hub, which indexes reusable constructs for CDK (and for CDK8s and CDKTF); the AWS-only constraint comes from CloudFormation, the deployment target, rather than from the construct ecosystem itself. Pulumi's registry spans 200+ pre-built providers, mixing native providers (built directly against cloud provider APIs, including Kubernetes and Azure Native) with providers bridged from Terraform's schemas — and [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider on demand, so the registry count isn't the ceiling on what's reachable from Pulumi.
+
+## How well does each tool work with AI coding agents?
+
+Beyond architecture and ecosystem, one more axis worth measuring separately is how each tool holds up when an AI coding agent, rather than a person, is writing the code.
+
+Recent research on LLM-generated infrastructure as code finds that raw syntax is mostly a solved problem: a 2025 study of LLM-generated CloudFormation, Terraform, and AWS CDK found [more than 95% syntactic validity across all three formats](https://arxiv.org/abs/2509.05303), with the real gap in "semantic alignment and handling complex infrastructure patterns." Across all three formats, the differentiator is the verification loop available to the agent rather than the syntax it produces.
+
+A separate 2026 study, [IaC-Eval v2](https://arxiv.org/abs/2607.20478), measured how much a tight feedback loop matters in practice: a 7B model's pass rate on Terraform/AWS tasks rose from a **14.0% pass@1** baseline to **45.7%** with active retrieval, and to **62.9%** (7B model) and **84.4%** (GPT-4o) once agents could iteratively refine against verifier feedback. The tighter and more direct that feedback loop, the better an agent performs.
+
+Pulumi's own benchmark of Claude Opus 4.6 and GPT-5.2-Codex against equivalent Terraform and Pulumi generation tasks found that with Opus, the [total cost of an agent completing a generation-plus-refactor pipeline was 41% lower with Pulumi than Terraform ($0.146 vs. $0.249)](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/), and that "the difference comes entirely from repair cycles: Pulumi needed zero repairs across both scenarios, while Terraform refactoring triggered self-repair on every run." Fewer translation steps and more verifiers close to the code an agent wrote means fewer repair cycles, which is where the real cost and reliability gap shows up.
+
+## How does each tool's agent feedback loop actually work?
+
+* **AWS CDK**: code (TypeScript, Python, Java, C#, or Go via JSII) → `cdk synth` produces a CloudFormation template → `cdk deploy` hands the template to the CloudFormation service. An agent's edits are validated by `cdk diff` and CloudFormation's own drift detection, but failures surface against the synthesized template and roll back at the stack level, one step removed from the source the agent edited.
+* **Terraform**: HCL → `terraform plan` computes a resource-level diff → `terraform apply`. The plan step is fast and high-fidelity, but HCL has no native type system or general-purpose control flow, so an agent working across modules is reasoning in a DSL distinct from the rest of the codebase, and correctness checks beyond syntax require a separate test harness.
+* **Pulumi**: code in a general-purpose language → compiler/type-checker and unit tests run locally, before any cloud call → `pulumi preview` gives a resource-level diff in the same run. Every verifier available to that language's toolchain (IDE, linter, type checker, test framework) applies directly to the infrastructure code, with no synthesis or transpilation step between what the agent wrote and what gets deployed.
 
 ## When should you choose each one?
 

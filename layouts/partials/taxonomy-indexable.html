@@ -9,7 +9,6 @@
     tag and author terms stay noindexed — with carve-outs for curated landing
     pages whose titles don't compete with core pages:
 
-      - tutorial collections (/tutorials/*)          — since pulumi/docs#18483
       - blog category TERM pages (/blog/category/*)  — curated kinds with
         hand-written descriptions
       - case-study industry TERM pages (/case-studies/industry/*) — curated
@@ -26,7 +25,7 @@
 {{- $indexable := true -}}
 {{- if .Data.Singular -}}
     {{- $indexable = false -}}
-    {{- if or (eq .Data.Singular "collection") (eq .Data.Singular "series") -}}
+    {{- if eq .Data.Singular "series" -}}
         {{- $indexable = true -}}
     {{- else if and (eq .Kind "term") (or (eq .Data.Singular "category") (eq .Data.Singular "industry")) -}}
         {{- $indexable = true -}}

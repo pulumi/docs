@@ -65,7 +65,7 @@ Create an environment, then store both plaintext configuration and an encrypted 
 
     You'll be prompted to log in via your browser or with an access token. Follow the instructions to authenticate.
 
-1. Open [Pulumi Cloud](https://app.pulumi.com/signin) and log in
+1. Open [Pulumi Cloud](https://app.pulumi.com/signin) in your browser
 1. Select **Environments** in the left navigation
 1. Select **+ Create Environment**
 1. Choose **New Environment**
@@ -126,10 +126,10 @@ You've created an environment, stored configuration and secrets, and retrieved t
 
 ## Add ESC to your Pulumi stack
 
-The most common way to use an ESC environment is to consume it from a Pulumi IaC stack, which centralizes configuration and secrets across all your stacks.
+The most common way to use an ESC environment is to consume it from a Pulumi IaC stack, which centralizes configuration and secrets across all your stacks. This section assumes you already have a Pulumi IaC project with a stack, so that you have a `Pulumi.<stack-name>.yaml` stack configuration file to edit. If you don't, create one first by following a [Pulumi IaC get-started guide](/docs/get-started/).
 
 {{< notes type="info" >}}
-**ESC requires the Pulumi Cloud backend.** Importing an ESC environment into a stack works only for Pulumi stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in self-managed backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
+**ESC requires the Pulumi Cloud backend.** Importing an ESC environment into a stack works only for Pulumi stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in DIY backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
 {{< /notes >}}
 
 ### Step 1: Reference your ESC environment

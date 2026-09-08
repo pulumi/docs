@@ -46,15 +46,6 @@
     "item" "https://www.pulumi.com/blog/"
   ) }}
 
-{{ else if eq .Type "tutorials" }}
-  {{ $position = add $position 1 }}
-  {{ $breadcrumbs = $breadcrumbs | append (dict
-    "@type" "ListItem"
-    "position" $position
-    "name" "Pulumi Tutorials"
-    "item" "https://www.pulumi.com/tutorials/"
-  ) }}
-
 {{ else if eq .Type "docs" }}
   {{/* Build docs hierarchy */}}
   {{ $position = add $position 1 }}
@@ -294,22 +285,6 @@
           "item" (printf "https://www.pulumi.com/case-studies/industry/%s/" $industry)
         ) }}
       {{ end }}
-    {{ end }}
-  {{ end }}
-
-{{/* Templates: mirror layouts/partials/templates/breadcrumb.html, which walks
-     the page's ancestors (excluding Home) to build the full nested trail,
-     e.g. Templates > Kubernetes > AWS. */}}
-{{ else if eq .Section "templates" }}
-  {{ range .Ancestors.Reverse }}
-    {{ if not .IsHome }}
-      {{ $position = add $position 1 }}
-      {{ $breadcrumbs = $breadcrumbs | append (dict
-        "@type" "ListItem"
-        "position" $position
-        "name" .LinkTitle
-        "item" .Permalink
-      ) }}
     {{ end }}
   {{ end }}
 
