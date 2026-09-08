@@ -32,7 +32,7 @@ Pulumi Resource Explorer is composed of:
 
 The Resources Explorer and Resources Search enables you to ask questions that significantly improves the process for managing your infrastructure and getting answers to key questions needed for your projects.
 
-Let's look at some common use cases and questions you might have about your infrastructure using [keywords, query syntax](/docs/discovery-governance/discovery/search/) as well as Pulumi AI assist, where you can type what you’re looking for Pulumi will suggest the search syntax.
+The following examples cover common use cases and questions you might have about your infrastructure, using [keywords, query syntax](/docs/discovery-governance/discovery/search/) as well as Pulumi AI assist, where you type what you’re looking for and Pulumi suggests the search syntax.
 
 ### Search with keywords or query syntax
 
