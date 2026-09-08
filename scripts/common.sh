@@ -164,6 +164,25 @@ deploy_run_uniquifier() {
     fi
 }
 
+# deploy_event_alias returns the short, fixed-width-ish event segment used in deploy-path
+# bucket names. build_identifier() uses the raw GitHub event name (e.g. "workflow-dispatch",
+# 17 characters), which together with the bucket prefix, the commit SHA, and the per-run
+# uniquifier leaves no room under S3's 63-character bucket-name limit. Rather than trim the
+# event name to fit -- which would make the segment vary by environment and by run attempt
+# ("workflow-dispat" in testing, "workflow-di" in production) and break any prefix filter
+# that looks for it -- deploy-path names use a short alias per event. Add an alias here
+# whenever a new event becomes a deploy-path trigger; deploy_bucket_name() fails loudly if
+# the name still doesn't fit.
+deploy_event_alias() {
+    case "$1" in
+        push) echo "push" ;;
+        schedule) echo "schedule" ;;
+        workflow_dispatch) echo "dispatch" ;;
+        repository_dispatch) echo "repo" ;;
+        *) echo "${1//_/-}" ;;
+    esac
+}
+
 # deploy_bucket_name returns the name of the S3 bucket to use for a deploy-path (i.e.,
 # non-preview) build: pushes to master and the scheduled/manual rebuilds in
 # build-and-deploy.yml. Unlike build_identifier(), which is also used to fingerprint asset
@@ -181,39 +200,40 @@ deploy_run_uniquifier() {
 # caller from build_identifier() so a PR keeps reusing the same bucket across pushes, and
 # they're never a CloudFront origin, so they carry none of this risk.
 #
-# The result is clamped to S3's 63-character bucket-name limit by trimming the event-name
-# segment of build_identifier() only -- never the commit SHA (needed for traceability) and
-# never the uniquifier (needed for collision-freedom). If build_identifier() has no
-# trimmable event segment (e.g. a caller-supplied $BUILD_IDENTIFIER with no embedded event)
-# and the name still doesn't fit, this fails loudly rather than silently truncating the SHA
-# or the uniquifier.
+# The event segment of build_identifier() is swapped for its deploy_event_alias() so the
+# result is the same shape in every environment and on every run attempt:
+#
+#   <origin_bucket_prefix>-<event-alias>-<sha8>-<uniquifier>
+#   www-production-pulumi-docs-origin-dispatch-564e8a30-fqwwnrm2
+#
+# The commit SHA (needed for traceability) and the uniquifier (needed for collision-freedom)
+# are never shortened. If the name still exceeds S3's 63-character limit -- an unaliased
+# long event name, or a caller-supplied $BUILD_IDENTIFIER -- this fails loudly rather than
+# silently truncating.
 deploy_bucket_name() {
-    local prefix identifier uniq name max_len overflow event_part rest_part
+    local prefix identifier uniq name max_len event_sanitized alias
 
     prefix="$(origin_bucket_prefix)"
     identifier="$(build_identifier)"
     uniq="$(deploy_run_uniquifier)"
-    name="${prefix}-${identifier}-${uniq}"
     max_len=63
 
+    # In CI, build_identifier() is "<event-sanitized>-<sha8>" (or "pr-<n>-<sha8>" for pull
+    # requests, which never take this path but are handled consistently if they do).
+    # Replace the leading event segment with its alias; anything else passes through.
+    if [ -n "$GITHUB_EVENT_NAME" ]; then
+        event_sanitized="${GITHUB_EVENT_NAME//_/-}"
+        alias="$(deploy_event_alias "$GITHUB_EVENT_NAME")"
+        if [[ "$identifier" == "${event_sanitized}-"* ]]; then
+            identifier="${alias}-${identifier#"${event_sanitized}-"}"
+        fi
+    fi
+
+    name="${prefix}-${identifier}-${uniq}"
+
     if [ "${#name}" -gt "$max_len" ]; then
-        overflow=$(( ${#name} - max_len ))
-
-        if [[ "$identifier" != *-* ]]; then
-            echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}) and build_identifier ('${identifier}') has no event segment to trim; refusing to silently truncate the SHA or the uniquifier." >&2
-            return 1
-        fi
-
-        event_part="${identifier%-*}"
-        rest_part="${identifier##*-}"
-
-        if [ "$overflow" -ge "${#event_part}" ]; then
-            echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}) and trimming the event segment ('${event_part}') isn't enough to fit; refusing to silently truncate the SHA or the uniquifier." >&2
-            return 1
-        fi
-
-        event_part="${event_part:0:$(( ${#event_part} - overflow ))}"
-        name="${prefix}-${event_part}-${rest_part}-${uniq}"
+        echo "ERROR: deploy bucket name '${name}' is ${#name} chars (max ${max_len}); refusing to silently truncate the SHA or the uniquifier. If a new deploy-path event was added, give it a short alias in deploy_event_alias()." >&2
+        return 1
     fi
 
     echo "$name"

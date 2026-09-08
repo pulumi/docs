@@ -1569,7 +1569,11 @@ www-{environment}-pulumi-docs-origin-{identifier}
 Examples:
 
 - Production push/schedule/manual (deploy path, includes a per-run uniquifier so same-commit
-  reruns never collide): `www-production-pulumi-docs-origin-push-a1b2c3d4-k3f9j2`
+  reruns never collide): `www-production-pulumi-docs-origin-push-a1b2c3d4-k3f9j2`,
+  `www-production-pulumi-docs-origin-schedule-a1b2c3d4-k3f9j2`,
+  `www-production-pulumi-docs-origin-dispatch-a1b2c3d4-k3f9j2`. The event segment is a short
+  alias from `deploy_event_alias()` in `scripts/common.sh` (`workflow_dispatch` → `dispatch`),
+  so the name always fits S3's 63-character limit without trimming anything.
 - Testing PR preview (deterministic, no uniquifier -- see `sync-and-test-bucket.sh`):
   `www-testing-pulumi-docs-origin-pr-123-abc1234`
 

@@ -20,9 +20,11 @@ set -o errexit -o pipefail
 #   # List all buckets prefixed with "-push-" (to filter push builds)
 #   ./scripts/list-recent-buckets.sh push
 #
-#   # List all buckets prefixed with "-schedule-" or "-workflow-dispatch-", etc.
+#   # List all buckets prefixed with "-schedule-" or "-dispatch-" (manual workflow_dispatch
+#   # rebuilds). The event segment is the deploy_event_alias() from common.sh, not the raw
+#   # GitHub event name; "workflow-dispatch" only matches buckets from before aliasing.
 #   ./scripts/list-recent-buckets.sh schedule
-#   ./scripts/list-recent-buckets.sh workflow-dispatch
+#   ./scripts/list-recent-buckets.sh dispatch
 #
 #   # List every deploy-path bucket (push, schedule, workflow-dispatch, ... -- everything
 #   # except PR previews) as one combined, correctly-ranked retention window. Prefer this
@@ -33,7 +35,7 @@ set -o errexit -o pipefail
 #   ./scripts/list-recent-buckets.sh deploy
 #
 #   # List only the buckets that can be safely deleted
-#   ./scripts/list-recent-buckets.sh [push | schedule | workflow-dispatch | deploy | pr] --only-deletables
+#   ./scripts/list-recent-buckets.sh [push | schedule | dispatch | deploy | pr] --only-deletables
 
 source ./scripts/common.sh
 
@@ -59,7 +61,7 @@ bucket_count=${#buckets_as_array[@]}
 only_deletables=false
 
 # Any bucket-prefix filter can be flagged as deletable -- "pr" gets the closed-PR check
-# below, and every deploy-path filter (push, schedule, workflow-dispatch, deploy) gets the
+# below, and every deploy-path filter (push, schedule, dispatch, deploy) gets the
 # beyond-the-currently-served-bucket check. Listing with no filter at all isn't deletable,
 # since "all buckets" isn't a coherent retention policy -- guard on $1 being non-empty, not
 # just non-"pr", or an unfiltered listing would apply the deploy-path retention rule to PR
@@ -90,7 +92,15 @@ fi
 # Query for the bucket currently serving pulumi.com.
 currently_deployed_bucket="$(curl -s ${WEBSITE_URL}/metadata.json | jq -r '.bucket' || echo '')"
 
-maybe_echo "Found ${bucket_count} recent buckets matching ${listing_description}:"
+# In "deploy" mode the query returned PR previews too (see query_prefix above); they are
+# walked and listed but never counted toward, or offered up under, the deploy-path
+# retention window, so report the deploy-path count separately from the raw result size.
+if [ "$bucket_prefix" == "deploy" ]; then
+    deploy_bucket_count=$(printf '%s\n' "${buckets_as_array[@]}" | grep -vc "^$(origin_bucket_prefix)-pr-" || true)
+    maybe_echo "Found ${deploy_bucket_count} deploy-path buckets among the ${bucket_count} most recent origin buckets (PR previews are listed below but excluded from the retention count):"
+else
+    maybe_echo "Found ${bucket_count} recent buckets matching ${listing_description}:"
+fi
 
 # Variables used for determining whether a push-built bucket is safe to delete.
 

@@ -95,15 +95,23 @@ const DEPLOYMENT_ENVIRONMENTS = ["production", "testing"];
 
 const S3_BUCKET_NAME_RE = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/;
 
+// build_identifier() only emits the "<event>-" segment when BOTH GITHUB_EVENT_NAME and
+// GITHUB_EVENT_PATH are set (that is how it tells a CI build from a local one), so every
+// event gets a real, if minimal, payload file here. Without it the identifier collapses to
+// the bare SHA and the length checks below would pass for any event name whatsoever.
 function deployBucketNameFor(env, eventName, { runId, runAttempt, eventPath } = {}) {
-    const bashEnv = {
-        DEPLOYMENT_ENVIRONMENT: env,
-        GITHUB_EVENT_NAME: eventName,
-        GITHUB_EVENT_PATH: eventPath || "",
-        GITHUB_RUN_ID: runId ?? "1234567890",
-        GITHUB_RUN_ATTEMPT: runAttempt ?? "1",
-    };
-    return runBash(bashEnv, "deploy_bucket_name");
+    const run = (path) =>
+        runBash(
+            {
+                DEPLOYMENT_ENVIRONMENT: env,
+                GITHUB_EVENT_NAME: eventName,
+                GITHUB_EVENT_PATH: path,
+                GITHUB_RUN_ID: runId ?? "1234567890",
+                GITHUB_RUN_ATTEMPT: runAttempt ?? "1",
+            },
+            "deploy_bucket_name",
+        );
+    return eventPath ? run(eventPath) : withEventPath(eventName, {}, run);
 }
 
 test("deploy_bucket_name: every event/environment combination fits the S3 63-char limit and is a valid bucket name", () => {
@@ -150,9 +158,10 @@ test("deploy_bucket_name: a re-run (same run ID, different run attempt) also pro
     assert.notEqual(nameA, nameB, "a workflow re-run must not collide with the original run");
 });
 
-test("deploy_bucket_name: fails loudly instead of silently truncating when there's no room even after trimming", () => {
-    // A caller-supplied BUILD_IDENTIFIER with no event segment to trim, deliberately
-    // sized so that prefix + identifier + uniquifier can't possibly fit in 63 chars.
+test("deploy_bucket_name: fails loudly instead of silently truncating when the name doesn't fit", () => {
+    // A caller-supplied BUILD_IDENTIFIER deliberately sized so that prefix + identifier +
+    // uniquifier can't possibly fit in 63 chars. There is no trimming fallback: the SHA and
+    // the uniquifier are never shortened, and the event segment is aliased, not trimmed.
     assert.throws(() => {
         runBash(
             {
@@ -186,6 +195,50 @@ test("preview builds keep the original, non-uniquified bucket name (regression g
     } finally {
         fs.rmSync(eventPath, { recursive: true, force: true });
     }
+});
+
+// The deploy-path events and the fixed event segment each maps to. Names must come out
+// as exactly <prefix>-<alias>-<sha8>-<uniquifier>, with nothing trimmed, in BOTH
+// environments -- so the segment is stable and a per-event prefix filter
+// (`list-recent-buckets.sh dispatch`) can match it.
+const EVENT_ALIASES = {
+    push: "push",
+    schedule: "schedule",
+    workflow_dispatch: "dispatch",
+    repository_dispatch: "repo",
+};
+
+test("deploy_bucket_name: every deploy-path event uses its fixed alias, untrimmed, in every environment", () => {
+    for (const env of DEPLOYMENT_ENVIRONMENTS) {
+        for (const [eventName, alias] of Object.entries(EVENT_ALIASES)) {
+            const name = deployBucketNameFor(env, eventName, { runId: "34279127122", runAttempt: "2" });
+            const prefix = `www-${env}-pulumi-docs-origin`;
+            // sha8 of the stubbed git HEAD; uniquifier is base36(34279127122) + attempt "2".
+            assert.equal(
+                name,
+                `${prefix}-${alias}-deadbeef-fqwwnrm2`,
+                `${env}/${eventName}: expected the aliased, untrimmed shape`,
+            );
+        }
+    }
+});
+
+test("deploy_bucket_name: the per-event prefix filter get_recent_buckets() uses matches the aliased name", () => {
+    // list-recent-buckets.sh <event> filters with starts_with("<prefix>-<event>"). With
+    // the old trim-to-fit scheme, a workflow_dispatch bucket in testing came out as
+    // "...-workflow-dispat-<sha>-<uniq>" and the documented "workflow-dispatch" filter
+    // could never match it. The alias is what the filter must be given.
+    const name = deployBucketNameFor("testing", "workflow_dispatch");
+    assert.ok(
+        name.startsWith("www-testing-pulumi-docs-origin-dispatch-"),
+        `expected a "dispatch" event segment, got "${name}"`,
+    );
+});
+
+test("deploy_bucket_name: an unaliased event with no room fails loudly rather than trimming", () => {
+    assert.throws(() => {
+        deployBucketNameFor("production", "some_very_long_hypothetical_event_name_nobody_aliased");
+    });
 });
 
 test("deploy_bucket_name: result always starts with origin_bucket_prefix()-, so cleanup prefix matching keeps working", () => {
