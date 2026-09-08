@@ -2,6 +2,7 @@
 title: What Is GitOps?
 meta_desc: "GitOps manages infrastructure and apps with Git as the single source of truth and agents that reconcile live state to match. Learn how it works."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is GitOps?"
 authors: ["alex-leventer"]
 ---
@@ -132,7 +133,7 @@ GitOps means using a Git repository as the single source of truth for your syste
 
 ### Is GitOps only for Kubernetes?
 
-No. GitOps originated in the Kubernetes community and the best-known tools (Argo CD and Flux) are Kubernetes-focused, but the principles apply to any declarative system. Infrastructure as code tools like Pulumi extend GitOps to cloud resources across 200+ providers, so the same model can manage databases, networks, and serverless functions, not just cluster workloads.
+No. GitOps originated in the Kubernetes community and the best-known tools (Argo CD and Flux) are Kubernetes-focused, but the principles apply to any declarative system. Infrastructure as code tools like Pulumi extend GitOps to cloud resources across hundreds of providers, so the same model can manage databases, networks, and serverless functions, not just cluster workloads.
 
 ### What is the difference between GitOps and DevOps?
 
@@ -156,7 +157,7 @@ Yes, and it's a natural fit. Infrastructure as code provides the declarative sou
 
 ## Learn more
 
-Pulumi brings GitOps to your entire cloud footprint: the Pulumi Kubernetes Operator reconciles infrastructure from Git in a pull-based model, and Pulumi Deployments adds Git Push to Deploy, pull-request previews, and drift detection across 200+ providers. [Get started with the Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to run your first GitOps reconciliation loop.
+Pulumi brings GitOps to your entire cloud footprint: the Pulumi Kubernetes Operator reconciles infrastructure from Git in a pull-based model, and Pulumi Deployments adds Git Push to Deploy, pull-request previews, and drift detection across hundreds of providers. [Get started with the Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to run your first GitOps reconciliation loop.
 
 Related reading:
 

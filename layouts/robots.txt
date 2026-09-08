@@ -15,3 +15,9 @@ Disallow: /docs/search/$
 Disallow: /registry/packages/azure-native-v2
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
+
+Sitemap: https://www.pulumi.com/dev/sitemap-index.xml
+
+# Dev Center, for agents:
+#   llms.txt index:    https://www.pulumi.com/dev/llms.txt
+#   Per-page markdown: append `.md` to any /dev detail URL

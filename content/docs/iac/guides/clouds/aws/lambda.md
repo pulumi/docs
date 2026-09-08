@@ -243,8 +243,9 @@ const docsHandlerFunc = new aws.lambda.Function("docsHandlerFunc", {
 // ...
 ```
 
-Using [Pulumi's Asset and Archive classes](/docs/iac/concepts/assets-archives/), you can
-fetch code from anywhere --- in-memory, on disk, or even over the network. Pulumi automatically detects changes in the contents
+Using [Pulumi assets and archives](/docs/iac/concepts/assets-archives/), you can
+fetch code from anywhere: in memory, on disk, or even over the network. Pulumi
+[detects changes in the contents](/docs/iac/concepts/assets-archives/#change-detection)
 of these assets and archives so that when you run `pulumi up`, diffs are detected and resources updated accordingly.
 
 ### Using existing Lambda functions

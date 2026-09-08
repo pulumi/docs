@@ -43,7 +43,7 @@ While this trend continues to accelerate, a large skill gap remains. [4IR Soluti
 
 ## Selecting Pulumi and its business impact
 
-Before developing FactoryStack™, 4IR examined the existing landscape of Infrastructure as Code (IaC) tools. “We considered Terraform, but as a team of programmers, we were not excited to learn a new configuration language that relies on quirky workarounds for common constructs like loops,” said Joseph Dolivo, CTO of 4IR. “We also evaluated Ansible, which seemed better suited for configuration management, and CloudFormation, which only worked for AWS,” shared Dolivo.
+Before developing FactoryStack™, 4IR examined the existing landscape of infrastructure as code (IaC) tools. “We considered Terraform, but as a team of programmers, we were not excited to learn a new configuration language that relies on quirky workarounds for common constructs like loops,” said Joseph Dolivo, CTO of 4IR. “We also evaluated Ansible, which seemed better suited for configuration management, and CloudFormation, which only worked for AWS,” shared Dolivo.
 
 4IR eventually discovered Pulumi via Hacker News. Since Pulumi supports TypeScript and its vast ecosystem, it enabled 4IR’s experienced programmers to hit the ground running on Day One. The 4IR engineering team wasn’t worried about getting locked into a proprietary platform with expensive monthly bills, since Pulumi embraces Open Source and offers support for self-hosted backends.
 
@@ -93,4 +93,4 @@ With their current environment well in hand, the next frontier for 4IR is tackli
 
 Pulumi has worked with 4IR from prototype to production, with multiple enhancements along the way. “Pulumi has emerged as a key element in our strategy, creating tangible value for us by reducing infrastructure deployment time, up-skilling our team, and accelerating our time to market,” said Dolivo.
 
-While the Infrastructure as Code landscape continues to evolve, Pulumi's recent [re-commitment to Open Source](/blog/pulumi-hearts-opensource/) gives Dolivo and his team confidence that they have selected the right technology partner to carry them through to their next big milestone and beyond.
+While the infrastructure as code landscape continues to evolve, Pulumi's recent [re-commitment to Open Source](/blog/pulumi-hearts-opensource/) gives Dolivo and his team confidence that they have selected the right technology partner to carry them through to their next big milestone and beyond.

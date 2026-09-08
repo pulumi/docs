@@ -126,19 +126,22 @@ test("rejects too-short descriptions", () => {
 // --- Handler-level tests ---
 
 const SECRET = "test-secret";
-const TICKET_ID = "ticket-42";
+const CONVERSATION_ID = "conversation-42";
 
-// handler.ts files an Intercom ticket on the accept path, so every test below
-// that expects a 200 would otherwise reach api.intercom.io with no credentials
-// — hanging or 401-ing depending on the network. Replacing the global fetch for
-// the whole file (node --test gives each test file its own process, and runs
-// tests non-concurrently) makes that impossible by construction rather than
-// test by test. intercomCalls records the traffic so the paths that must *not*
-// file a ticket can assert on it. The request shape itself is covered in
-// intercom.test.ts.
+// handler.ts files an Intercom conversation on the accept path, so every test
+// below that expects a 200 would otherwise reach api.intercom.io with no
+// credentials — hanging or 401-ing depending on the network. Replacing the
+// global fetch for the whole file (node --test gives each test file its own
+// process, and runs tests non-concurrently) makes that impossible by
+// construction rather than test by test. intercomCalls records the traffic so
+// the paths that must *not* file a conversation can assert on it. The request
+// shape itself is covered in intercom.test.ts.
 const intercomCalls: string[] = [];
 const intercomRequests: Array<{ url: string; body: any }> = [];
 let intercomUp = true;
+// Fails only the trailing attributes PUT, leaving the create legs healthy --
+// the split the best-effort accept path turns on.
+let intercomAttributesUp = true;
 
 globalThis.fetch = async (input, init) => {
     const url = String(input);
@@ -153,8 +156,19 @@ globalThis.fetch = async (input, init) => {
     if (!intercomUp) {
         return new Response("service unavailable", { status: 503 });
     }
-    const body = url.endsWith("/contacts/search") ? { data: [{ id: "contact-1" }] } : { id: TICKET_ID };
-    return new Response(JSON.stringify(body), { status: 200 });
+    if (url.endsWith("/contacts/search")) {
+        return new Response(JSON.stringify({ data: [{ id: "contact-1" }] }), { status: 200 });
+    }
+    if (url.endsWith("/conversations")) {
+        return new Response(
+            JSON.stringify({ type: "user_message", id: "message-1", conversation_id: CONVERSATION_ID }),
+            { status: 200 },
+        );
+    }
+    if (!intercomAttributesUp && /\/conversations\/[^/]+$/.test(url)) {
+        return new Response("unprocessable", { status: 422 });
+    }
+    return new Response(JSON.stringify({ id: CONVERSATION_ID }), { status: 200 });
 };
 
 function postEvent(body: unknown, overrides: Partial<FunctionUrlEvent> = {}): FunctionUrlEvent {
@@ -177,9 +191,9 @@ test("handler accepts a valid submission", async () => {
     const parsed = JSON.parse(response.body);
     assert.strictEqual(parsed.ok, true);
     assert.ok(parsed.id);
-    // id is minted locally; ticketId has to come back from Intercom, so
+    // id is minted locally; conversationId has to come back from Intercom, so
     // asserting it is what catches the result being dropped on the floor.
-    assert.strictEqual(parsed.ticketId, TICKET_ID);
+    assert.strictEqual(parsed.conversationId, CONVERSATION_ID);
     assert.strictEqual(response.headers["cache-control"], "no-store");
 });
 
@@ -302,9 +316,9 @@ test("marks a fallback as edge, so it can't be mistaken for the submitter", () =
 });
 
 test("never throws, whatever the headers hold", () => {
-    // This feeds the success-path log, which runs after the Intercom ticket
-    // already exists. A throw there would 502 a request that had filed, and the
-    // user would resubmit into a duplicate.
+    // This feeds the success-path log, which runs after the Intercom
+    // conversation already exists. A throw there would 502 a request that had
+    // filed, and the user would resubmit into a duplicate.
     for (const headers of [{}, { [VIEWER_HEADER]: null }, { [VIEWER_HEADER]: {} }]) {
         assert.doesNotThrow(() => clientAddress(ipEvent(headers as any)));
     }
@@ -352,7 +366,7 @@ test("handler returns field errors as a 422", async () => {
     assert.strictEqual(intercomCalls.length, before);
 });
 
-test("handler reports a ticket-creation failure as a 502", async () => {
+test("handler reports a conversation-creation failure as a 502", async () => {
     process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
     intercomUp = false;
     try {
@@ -360,13 +374,43 @@ test("handler reports a ticket-creation failure as a 502", async () => {
         assert.strictEqual(response.statusCode, 502);
         const parsed = JSON.parse(response.body);
         assert.strictEqual(parsed.ok, false);
-        assert.strictEqual(parsed.error, "ticket_creation_failed");
+        assert.strictEqual(parsed.error, "conversation_creation_failed");
         // The id still comes back so a failed submission can be traced to its
-        // support_request_ticket_failed log entry.
+        // support_request_conversation_failed log entry.
         assert.ok(parsed.id);
     } finally {
         intercomUp = true;
     }
+});
+
+// The counterpart to the test above: the same 4xx, one call later, must NOT be
+// a 502. By the time the attributes PUT can fail the conversation is already in
+// support's inbox, so telling the submitter it failed only buys a duplicate.
+test("handler still accepts when only the attributes update fails", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const logged: string[] = [];
+    const realError = console.error;
+    console.error = (msg?: any) => {
+        logged.push(String(msg));
+    };
+    intercomAttributesUp = false;
+    try {
+        const response = await supportFormHandler(postEvent(validPayload()));
+        assert.strictEqual(response.statusCode, 200);
+        const parsed = JSON.parse(response.body);
+        assert.strictEqual(parsed.ok, true);
+        assert.strictEqual(parsed.conversationId, CONVERSATION_ID);
+    } finally {
+        intercomAttributesUp = true;
+        console.error = realError;
+    }
+
+    // Not silent: the missing triage metadata gets its own queryable log type,
+    // and never the failure type that means nothing was filed.
+    const entry = logged.map(l => JSON.parse(l)).find(e => e.type === "support_request_attributes_failed");
+    assert.ok(entry, "expected a support_request_attributes_failed log entry");
+    assert.strictEqual(entry.conversationId, CONVERSATION_ID);
+    assert.ok(!logged.some(l => l.includes("support_request_conversation_failed")));
 });
 
 test("handler swallows honeypot submissions with a fake success", async () => {
@@ -379,13 +423,16 @@ test("handler swallows honeypot submissions with a fake success", async () => {
     // The whole point of the honeypot: it looks like success to the bot but
     // files nothing.
     assert.strictEqual(intercomCalls.length, before);
-    // "Looks like" has to mean it. Omitting ticketId made the fake success
-    // trivially distinguishable from a real one by anyone reading the
+    // "Looks like" has to mean it. Omitting conversationId made the fake
+    // success trivially distinguishable from a real one by anyone reading the
     // documented response shape, so the drop announced itself.
     assert.ok(parsed.id, "a dropped submission still gets an id");
     // Leading digit 1-9: Intercom renders integers, so a real id never starts
     // with a zero and one that did would be a free tell.
-    assert.ok(/^[1-9][0-9]{14}$/.test(parsed.ticketId), "a dropped submission gets a plausible ticket id");
+    assert.ok(
+        /^[1-9][0-9]{14}$/.test(parsed.conversationId),
+        "a dropped submission gets a plausible conversation id",
+    );
 });
 
 test("the honeypot does not announce itself through the validation order", async () => {
@@ -404,7 +451,7 @@ test("the honeypot does not announce itself through the validation order", async
     assert.strictEqual(withTrap.statusCode, 422);
     assert.strictEqual(withoutTrap.statusCode, 422);
     assert.deepStrictEqual(JSON.parse(withTrap.body), JSON.parse(withoutTrap.body));
-    assert.strictEqual(intercomCalls.length, before, "neither may file a ticket");
+    assert.strictEqual(intercomCalls.length, before, "neither may file a conversation");
 });
 
 // --- Text sanitization ---------------------------------------------------
@@ -474,9 +521,9 @@ test("handler files the validated value, not the caller's raw payload", async ()
     }));
     assert.strictEqual(response.statusCode, 200);
 
-    const ticket = intercomRequests.slice(before).find(r => r.url.endsWith("/tickets"));
-    assert.ok(ticket, "expected a ticket to be filed");
-    assert.strictEqual(ticket!.body.ticket_attributes["pulumi-org"], "example-corp");
+    const update = intercomRequests.slice(before).find(r => r.url.endsWith(`/conversations/${CONVERSATION_ID}`));
+    assert.ok(update, "expected the conversation's attributes to be updated");
+    assert.strictEqual(update!.body.custom_attributes["pulumi-org"], "example-corp");
 });
 
 test("handler does not forward the honeypot key to Intercom", async () => {
@@ -484,13 +531,13 @@ test("handler does not forward the honeypot key to Intercom", async () => {
     const before = intercomRequests.length;
 
     // An empty honeypot is not spam, so this is accepted and filed -- but the
-    // key is not part of the ticket.
+    // key is not part of the conversation.
     const response = await supportFormHandler(postEvent({ ...validPayload(), leave_blank: "" }));
     assert.strictEqual(response.statusCode, 200);
 
-    const ticket = intercomRequests.slice(before).find(r => r.url.endsWith("/tickets"));
-    assert.ok(ticket, "expected a ticket to be filed");
-    assert.ok(!JSON.stringify(ticket!.body).includes("leave_blank"));
+    const requests = intercomRequests.slice(before);
+    assert.ok(requests.some(r => r.url.endsWith("/conversations")), "expected a conversation to be filed");
+    assert.ok(!requests.some(r => JSON.stringify(r.body).includes("leave_blank")));
 });
 
 // --- The 403 gate --------------------------------------------------------

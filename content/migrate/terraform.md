@@ -1,184 +1,198 @@
 ---
-title: Pulumi for Terraform Users
-layout: terraform
+title: Pulumi for Terraform users
+meta_desc: Run your existing Terraform on Pulumi. Manage Terraform state in Pulumi Cloud, share modules across languages, and write HCL as a first-class Pulumi language.
+type: page
+layout: template-page
 url: /terraform
 
-benefits:
-  title: The benefits of using Pulumi
-  items:
-    - title: Committed to open source
-      icon: exchange
-      icon_color: yellow
-      description: |
-        Pulumi is fully open source and is Apache 2.0 licensed. It does not and never will depend on Business Source License software in any way.
+sections:
+  - type: hero
+    layout: split
+    title: "*Keep your Terraform.*<br>Gain the platform around it."
+    description: |
+      Pulumi Cloud manages your Terraform state, turns your modules into components any language can consume, and runs HCL as a first-class Pulumi language. Bring the infrastructure you already have.
+    badge_text: "New in the August 2026 release"
+    badge_link: /releases/terraform-state-backend-modules-hcl/
+    cta_primary_text: Get started
+    cta_primary_link: /docs/iac/get-started/terraform/terraform-state-backend/
+    cta_secondary_text: Compare Pulumi and Terraform
+    cta_secondary_link: /docs/iac/comparisons/terraform/
+    image: /images/releases/august-2026/release-hero-right-light.svg
+    image_alt: HCL, Terraform state, and Terraform modules converging on the Pulumi mark
+    image_max_width: 640px
+    anchor: hero
 
-    - title: Tame cloud complexity
-      icon: code-window
-      icon_color: violet
-      description: |
-        Deliver infrastructure from 100+ cloud and SaaS providers. Pulumi’s SDKs provide a complete and consistent interface that offers full access to
-        clouds and abstracts complexity.
+  - type: feature_split
+    heading: Your Terraform estate, on Pulumi's engine
+    description: |
+      Adopting Pulumi no longer starts with a rewrite. Your existing state, modules, and HCL are things Pulumi runs, so you can put them on a managed platform first and decide about languages later.
+    cta_text: Read the August 2026 release
+    cta_link: /releases/terraform-state-backend-modules-hcl/
+    cards:
+      - icon: database
+        title: Terraform state
+        description: |
+          Point the Terraform CLI at Pulumi Cloud with a standard backend block. Your workflow stays the same.
+      - icon: puzzle-piece
+        title: Terraform modules
+        description: |
+          Publish once to the Pulumi Cloud private registry, then consume from Terraform, OpenTofu, or any Pulumi language.
+      - icon: file-code
+        title: HCL
+        description: |
+          HCL is a fully supported Pulumi language, with no syntactical differences from the code your team writes today.
+    anchor: overview
 
-    - title: Bring the cloud closer to application development
-      icon: download-from-cloud
-      icon_color: violet
-      description: |
-        Build reusable cloud infrastructure and infrastructure platforms that empower
-        developers to build modern cloud applications faster and with less overhead.
+  - type: section_header_with_image
+    tag_line: Terraform state and remote execution
+    title: Bring your Terraform state to Pulumi Cloud
+    description: |
+      Pulumi Cloud implements Terraform's remote backend API, so a standard `backend "remote"` block is the whole migration. Your HCL, your CLI, and your day-to-day workflow are unchanged, and both Terraform and OpenTofu work.
 
-    - title: Use engineering practices with infrastructure
-      icon: lightning
-      icon_color: blue
-      description: |
-        Use engineering practices with infrastructure to replace inefficient, manual infrastructure processes with automation.
-        Test and deliver infrastructure through CI/CD workflows or automate deployments with code at runtime.
+      In return you get encrypted state, automatic locking, update history, role-based access control, and audit policies, plus a single view of Terraform-managed and Pulumi-managed resources together in [resource search](/docs/insights/discovery/search/).
+    cta_text: Set up the backend
+    cta_link: /docs/iac/get-started/terraform/terraform-state-backend/
+    image: /images/releases/august-2026/release-terraform-backend.svg
+    image_alt: Three infrastructure stacks feeding into the Pulumi mark
+    cards:
+      - icon: terminal-window
+        title: Remote execution
+        description: |
+          Plans and applies run in Pulumi-managed containers instead of on laptops, with logs streamed to your terminal.
+      - icon: key
+        title: Config and secrets in ESC
+        description: |
+          Pulumi ESC injects OIDC credentials at apply time and exposes outputs to downstream stacks and services.
+      - icon: shield-check
+        title: Preventative policies
+        description: |
+          Pulumi Policies evaluates a Terraform plan and blocks non-compliant resources before they reach production.
+      - icon: robot
+        title: Neo code reviews
+        description: |
+          Pulumi Neo reviews infrastructure pull requests and tells you whether a change is safe to merge.
+    anchor: terraform-state
 
-meta_desc: How to migrate to Pulumi from Terraform for huge productivity gains, and a unified programming model for Devs and DevOps.
-hero_form:
-    hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
-    headline: Need help converting?
-contact_us_form:
-    section_id: contact-us
-    hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
-    headline: Need assistance?
-    quote:
-        title: See how top engineering teams enable developers and operators to work better together with Pulumi.
-        name: Kim Hamilton
-        name_title: CTO, Learning Machine
-        content: |
-            Pulumi has given our team the tools and framework to achieve a unified development and DevOps model,
-            boosting productivity and taking our business to any cloud environment that our customers need. We
-            retired 25,000 lines of complex code that few team members understood and replaced it with 100s of
-            lines in a familiar programming language.
-examples:
-    one:
-        ts: |
-            import * as pulumi from "@pulumi/pulumi";
-            import * as aws from "@pulumi/aws";
-            import { readdirSync } from "fs";
-            import { join as pathjoin } from "path";
+  - type: section_header_with_image
+    flip: true
+    tag_line: Terraform modules
+    title: One module, every language
+    description: |
+      The Pulumi Cloud private registry has native support for Terraform modules. Publishing is wire-compatible with HCP Terraform's API, so existing pipelines migrate by repointing the host.
 
-            const bucket = new aws.s3.Bucket("mybucket");
-            const folder = "./files";
-            let files = readdirSync(folder);
+      Once a module is published, Pulumi converts it into a typed component that any team can consume, whether they write Terraform, OpenTofu, TypeScript, Python, Go, .NET, Java, or YAML. One module, maintained once, serves every team.
+    cta_text: Explore Terraform modules
+    cta_link: /docs/idp/concepts/terraform-modules/
+    image: /images/releases/august-2026/release-modules.svg
+    image_alt: A Terraform module imported into a Pulumi program
+    cards:
+      - icon: stack
+        title: A private registry
+        description: |
+          Host your team's modules in Pulumi Cloud with versioning and access control built in.
+      - icon: translate
+        title: Typed in every language
+        description: |
+          Pulumi generates a typed SDK per language, so consumers get autocomplete and type checking.
+      - icon: package
+        title: The community ecosystem
+        description: |
+          Use any public Terraform module through a generated SDK or a dynamic module loader.
+    anchor: terraform-modules
 
-            for (let file of files) {
-                const object = new aws.s3.BucketObject(file, {
-                    bucket: bucket,
-                    source: new pulumi.asset.FileAsset(pathjoin(folder, file))
-                });
-            }
+  - type: section_header_with_image
+    tag_line: HCL as a Pulumi language
+    title: Write HCL, get the whole ecosystem
+    description: |
+      Set `runtime: hcl` and your existing `.tf` files run on the Pulumi engine as they are. There are no syntactical differences to learn and nothing to convert.
 
-            export const bucketname = bucket.id;
-        tf: |
-            resource "aws_s3_bucket" "mybucket" {
-                bucket_prefix = "mybucket"
-            }
+      HCL programs reach the full Pulumi ecosystem: thousands of providers, Pulumi Cloud, ESC, policies, and Neo. Teams that prefer HCL can also publish components that colleagues consume from any other Pulumi language.
+    cta_text: Read the HCL docs
+    cta_link: /docs/iac/languages-sdks/hcl/
+    image: /images/releases/august-2026/release-hcl.svg
+    image_alt: An HCL program running on the Pulumi engine
+    cards:
+      - icon: rocket-launch
+        title: Start from a template
+        description: |
+          HCL starter and architecture templates stand up a new project in seconds.
+      - icon: cube
+        title: Components in HCL
+        description: |
+          Build typed, multi-language components without leaving HCL.
+      - icon: cloud-check
+        title: Every provider
+        description: |
+          The full Pulumi Registry, including any provider bridged from Terraform.
+    anchor: hcl
 
-            resource "aws_s3_bucket_object" "data_txt" {
-                key        = "data.txt"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/data.txt"
-            }
+  - type: case_study_grid
+    title: Proven at scale
+    description: |
+      Some of the largest infrastructure estates in the world run on Pulumi.
+    cards:
+      - slug: wiz
+      - slug: bmw
+      - slug: mercedes-benz
+    anchor: scale
 
-            resource "aws_s3_bucket_object" "index_html" {
-                key        = "index.html"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/index.html"
-            }
+  - type: three_column
+    tag_line: Adoption
+    title: Adopt at the pace that suits you
+    subtitle: |
+      These paths combine, and none of them require finishing another first. Most teams start with one and add others over time.
+    icon_layout: above
+    columns:
+      - icon: database
+        title: Keep running Terraform
+        description: |
+          Move state to Pulumi Cloud for governance and visibility while your team keeps using the Terraform or OpenTofu CLI.
+        cta_text: Host your state
+        cta_link: /docs/iac/get-started/terraform/terraform-state-backend/
+      - icon: file-code
+        title: Keep your HCL
+        description: |
+          Run your existing `.tf` files on the Pulumi engine before anyone decides whether to adopt another language.
+        cta_text: Read the HCL docs
+        cta_link: /docs/iac/languages-sdks/hcl/
+      - icon: package
+        title: Keep your modules and providers
+        description: |
+          Use existing Terraform modules and any Terraform provider directly from a Pulumi program.
+        cta_text: Use a Terraform module
+        cta_link: /docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/
+      - icon: arrows-clockwise
+        title: Convert when you're ready
+        description: |
+          `pulumi convert --from terraform` translates HCL into the language of your choice, preserving names and structure.
+        cta_text: See the migration guide
+        cta_link: /docs/iac/guides/migration/migrating-to-pulumi/from-terraform/
+      - icon: git-branch
+        title: Run both side by side
+        description: |
+          Pulumi programs can read outputs from an existing Terraform state file while you adopt Pulumi for new work.
+        cta_text: Reference Terraform state
+        cta_link: /docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state
+      - icon: magnifying-glass
+        title: Compare the two in detail
+        description: |
+          A feature-by-feature comparison of Pulumi and Terraform, including where Terraform is the better fit.
+        cta_text: Read the comparison
+        cta_link: /docs/iac/comparisons/terraform/
+    anchor: adoption
 
-            resource "aws_s3_bucket_object" "index_js" {
-                key        = "index.js"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/index.js"
-            }
-
-            resource "aws_s3_bucket_object" "main.css" {
-                key        = "main.css"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/main.css"
-            }
-
-            resource "aws_s3_bucket_object" "favicon.ico" {
-                key        = "favicon.ico"
-                bucket     = "${aws_s3_bucket.mybucket.id}"
-                source     = "./files/favicon.ico"
-            }
-    two:
-        ts: |
-            import * as aws from "@pulumi/aws";
-
-            // Create an S3 Bucket.
-            const bucket = new aws.s3.Bucket("mybucket");
-
-            // Register a Lambda to handle the Bucket notification.
-            bucket.onObjectCreated("newObj", async (ev, ctx) => {
-                // Write code inline, or use a Zip
-                console.log(JSON.stringify(ev));
-            });
-
-            // Export the bucket name for easy scripting.
-            export const bucketName = bucket.id;
-        tf: |
-            resource "aws_s3_bucket" "mybucket" {
-                bucket_prefix = "mybucket"
-            }
-
-            data "archive_file" "lambda_zip" {
-                type        = "zip"
-                output_path = "lambda.zip"
-
-                source {
-                    filename = "index.js"
-                    content = < {
-                        console.log(JSON.stringify(ev))
-                    }
-                    EOF
-                }
-            }
-
-            data "aws_iam_policy_document" "lambda-assume-role-policy" {
-                statement {
-                    actions = ["sts:AssumeRole"]
-
-                    principals {
-                        type        = "Service"
-                        identifiers = ["lambda.amazonaws.com"]
-                    }
-                }
-            }
-
-            resource "aws_iam_role" "lambda" {
-                assume_role_policy = "${data.aws_iam_policy_document.lambda-assume-role-policy.json}"
-            }
-
-            resource "aws_lambda_function" "my_lambda" {
-                filename = "${data.archive_file.lambda_zip.output_path}"
-                source_code_hash = "${data.archive_file.lambda_zip.output_base64sha256}"
-                function_name = "my_lambda"
-                role = "${aws_iam_role.lambda.arn}"
-                handler = "index.handler"
-                runtime = "nodejs8.10"
-            }
-
-            resource "aws_lambda_permission" "allow_bucket" {
-                statement_id  = "AllowExecutionFromS3Bucket"
-                action        = "lambda:InvokeFunction"
-                function_name = "${aws_lambda_function.my_lambda.arn}"
-                principal     = "s3.amazonaws.com"
-                source_arn    = "${aws_s3_bucket.mybucket.arn}"
-            }
-
-            resource "aws_s3_bucket_notification" "bucket_notification" {
-                bucket = "${aws_s3_bucket.mybucket.id}"
-
-                lambda_function {
-                    lambda_function_arn = "${aws_lambda_function.my_lambda.arn}"
-                    events              = ["s3:ObjectCreated:*"]
-                }
-            }
-
-            output "bucket_name" {
-                value = "${aws_s3_bucket.mybucket.id}"
-            }
+  - type: two_column
+    highlight_first_card: true
+    columns:
+      - title: Put your state in Pulumi Cloud
+        description: |
+          Add a backend block, run `terraform init`, and keep going. Encrypted state, locking, history, and RBAC come with it.
+        cta_text: Get started
+        cta_link: /docs/iac/get-started/terraform/terraform-state-backend/
+      - title: Talk to us about your estate
+        description: |
+          Our team helps plan larger moves, from hosting state to converting workspaces and training the engineers who own them.
+        cta_text: Contact us
+        cta_link: /contact/?form=tf-migration
+    anchor: get-started
 ---

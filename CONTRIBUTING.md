@@ -18,6 +18,25 @@ If your change is genuinely trivial (a typo, a one-line fix), opening directly a
 
 The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
 
+### The v3 review surface (staged rollout)
+
+The review is moving from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable, or per-PR by the `surface:v3` label (add it to a draft, mark ready — or add it and comment `@claude #new-review`; remove it and `#new-review` again to go back to the monolith). Everything below this section describes the v2 monolith and stays accurate for PRs reviewed before the flip and for repos where the flag is off. What changes under v3:
+
+- **Two comments instead of one.** An **author card** ("Author action guide") lists only what you must act on — one-line `🚨 Fix or disagree` and `❓ Questions for you` rows (both block merge), each with a `#### F<n> · Do this` block underneath (the flagged line verbatim, why, and exactly one required fix — replacement text in a copyable fenced block), plus inline ✏️ style suggestions. A separate **reviewer's guide** tells your reviewer what the PR contains, what's still waiting on you, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
+- **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge — fix, disagree, or accept. Fix it and push (the card shows a 🔄 banner within a minute when your push triggers the automatic re-review), or reply naming the ID:
+
+  ```
+  @claude F2: the 40% figure comes from the Q3 interview series #update-review
+  @claude F2: accepting as-is — shipping for the launch, follow-up filed #update-review
+  @claude accepting all open items — <reason> #update-review
+  ```
+
+  Either way your answer counts: the review marks the item resolved, or holds it with a 🛡️ note for your reviewer — it stops blocking merge in both cases. The `#update-review` hashtag is what routes the reply; a bare `@claude` is ad-hoc help and unblocks nothing.
+- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, the right team approved (per `.github/review-routing.yml`), and infra changes carry a green staging deploy. Its red states name the exact fix, and any write-access human can apply `review:waived` as the logged break-glass (infra staging evidence excepted — that has no waiver). While `REVIEW_V3_SENTINEL` is `report` the check is report-only; unset, it does not run at all.
+- **Truly mechanical changes need no human at all** — the tightened bar in `classify_mechanical` (`triage-classify.py`): ≤10 added / ≤30 deleted lines, ≤2 docs/blog files, no structural or code changes, only resolving internal-link additions, frontmatter keys limited to `updated`/`tags`, and no prose-claim signal. Everything else routes to the lane the matrix names.
+
+The disposition vocabulary, the outcome table, and "work the review to zero" below all apply unchanged — v3 just gives each finding an ID and a one-line way to answer it.
+
 ### What ready-for-review triggers
 
 Transitioning to **Ready for review** triggers:

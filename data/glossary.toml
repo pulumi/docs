@@ -7,6 +7,16 @@ description = "A resource option that lets a resource keep its identity in [stat
 link = "/docs/iac/concepts/resources/options/aliases/"
 
 [[entries]]
+term = "Archive"
+description = "A built-in Pulumi type representing a collection of files passed to a [resource](#resources) input, such as a serverless function's code bundle. An archive's contents come from a folder or archive file on disk, a remote URI, or a map of other [assets](#asset) and archives."
+link = "/docs/iac/concepts/assets-archives/#archives"
+
+[[entries]]
+term = "Asset"
+description = "A built-in Pulumi type representing a single file passed to a [resource](#resources) input. An asset's contents come from a string in memory, a file on disk, or a remote URI. See also [archive](#archive)."
+link = "/docs/iac/concepts/assets-archives/#assets"
+
+[[entries]]
 term = "Audit Log"
 description = "An immutable record of user and service activity in a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Audit logs are available to organization admins and can be exported via the CLI or REST API."
 link = "/docs/administration/concepts/audit-logs/"

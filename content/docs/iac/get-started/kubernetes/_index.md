@@ -30,7 +30,7 @@ Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/)
 
 You need access to a Kubernetes cluster (local or cloud-based) and kubectl installed and configured.
 
-Don't have a cluster yet? Spin one up locally with [kind](https://kind.sigs.k8s.io/), [minikube](https://minikube.sigs.k8s.io/docs/start/), or Docker Desktop's built-in Kubernetes, or provision a managed cluster on AWS, Azure, or Google Cloud with one of Pulumi's [Kubernetes cluster templates](/templates/kubernetes/).
+Don't have a cluster yet? Spin one up locally with [kind](https://kind.sigs.k8s.io/), [minikube](https://minikube.sigs.k8s.io/docs/start/), or Docker Desktop's built-in Kubernetes, or provision a managed cluster on AWS, Azure, or Google Cloud with one of Pulumi's [Kubernetes cluster templates](/dev/templates/kubernetes/).
 
 Choose your language and ensure you've performed any prerequisites:
 

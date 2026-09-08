@@ -80,6 +80,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 - [Resources](/docs/iac/concepts/resources/) — Learn more about how to use and manage resources in your programs.
 - [Resource options](/docs/iac/concepts/resources/options/) — Learn more about how to use and manage resource options in your program.
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) — Learn how to use resource properties to handle dependencies between resources.
+- [Assets and archives](/docs/iac/concepts/assets-archives/) — Learn how to pass files and folders from your program to resources that accept them.
 
 ### Configuration and state
 

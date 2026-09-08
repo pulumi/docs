@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "ran": true,
+  "model": "claude-sonnet-5",
+  "findings": [],
+  "errors": [],
+  "meta": {
+    "files": 1
+  }
+}

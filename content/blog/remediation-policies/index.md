@@ -18,7 +18,7 @@ Pulumi’s policy as code engine, [CrossGuard](/crossguard), is already very fle
 
 ## A Refresher on CrossGuard
 
-CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](/docs/using-pulumi/crossguard/awsguard) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
+CrossGuard policies are rules that run during `pulumi preview` and `up` to check that resource state conforms to some set of criteria. You can use off-the-shelf policies like [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) and the new [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
 
 To roll your own, you create a "policy pack" in one of the supported languages (currently JavaScript, Python, TypeScript, or Open Policy Agent (OPA) Rego). A policy pack is a collection of policies which are just objects and functions that are given an opportunity to inspect the resource graph and report whether any policy violations have been detected. They're packaged natively (such as NPM, PyPI, etc) and Pulumi runs the policies at the right time with the right data to enforce them.
 
@@ -447,6 +447,6 @@ Finally, Pulumi has always had [transformations](https://www.pulumi.com/docs/iac
 
 Remediation policies take Pulumi’s very powerful policy engine, CrossGuard, to the next level. Using them you can not just detect incompliant resources but actually fix them automatically.
 
-Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/#resource-remediation) in the documentation.
+Everything described in this post, except for organizational enforcement, is available in the free Pulumi open source SDK. To get started, just run `pulumi policy new` in a directory to begin creating your new policy pack. Also, [check out the CrossGuard get started guide](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/), which walks through the entire process of creating a new policy pack from scratch and running it. You can [read more details about policies and remediations](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#remediating-policy-violations) in the documentation.
 
 Check it out and let us know what you think!

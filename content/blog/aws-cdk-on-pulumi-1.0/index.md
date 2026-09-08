@@ -23,7 +23,7 @@ The pulumi-cdk library provides access to the many high-level libraries ('constr
 
 With the new 1.0 release, pulumi-cdk has greatly expanded compatibility with all CDK features. Users can now confidently use Pulumi to deploy constructs they have written themselves or any of the 1600+ constructs in AWS's [construct hub](https://constructs.dev/search?cdk=aws-cdk&sort=downloadsDesc&offset=0). We're excited to bring Pulumi users access to all the high level interfaces curated by AWS and the CDK community.
 
-Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](https://www.pulumi.com/docs/using-pulumi/crossguard/), [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/), [Drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/), [Secrets](https://www.pulumi.com/docs/esc/get-started/), and much more).
+Additionally, existing AWS CDK users now have an easier path to transition from CloudFormation to Pulumi, unlocking faster deployments, integration with Pulumi's vast provider ecosystem and all of the features of Pulumi's Cloud Engineering Platform (like [Policy as Code](https://www.pulumi.com/docs/insights/policy/), [Audit Logs](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/), [Drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/), [Secrets](https://www.pulumi.com/docs/esc/get-started/), and much more).
 
 ## Deploying CDK Constructs with Pulumi
 

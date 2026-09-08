@@ -12,7 +12,7 @@ Every triaged PR carries exactly one of these, `domain:other` included, so **the
 
 | Label | Color | Description |
 |---|---|---|
-| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/tutorials/`, `content/what-is/`). |
+| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
 | `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, build/bundling config, or the site build pipeline (`layouts/`, `assets/`, `theme/`, `static/`). |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
@@ -37,16 +37,25 @@ Load-bearing — these gate workflow execution.
 | `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by `pr-review`. |
+| `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
+| `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
 > **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently.
+
+## Opt-in labels (set by humans)
+
+| Label | Color | Description |
+|---|---|---|
+| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the `/resolve` listener (this PR) and by the initial review lane (wired in the lane-rewiring PR stacked on this one — until that merges, the label changes nothing on a fresh review); the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. |
 
 ## Create them all (`gh` one-liner)
 
 Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write access:
 
 ```bash
+gh label create "surface:v3"             --color 5319e7 --description "Opt this PR into the v3 review surface regardless of REVIEW_V3_COMMENTS"
 gh label create "domain:docs"            --color 0e8a16 --description "PR touches technical docs"
 gh label create "domain:blog"            --color a2eeef --description "PR touches blog posts or customer stories"
 gh label create "domain:infra"           --color d4c5f9 --description "PR touches workflows, scripts, infra, Makefile, build config, or the site build pipeline"
@@ -65,6 +74,8 @@ gh label create "review:no-blockers"     --color 0e8a16 --description "Claude re
 gh label create "review:stale"           --color ededed --description "New commits since last Claude review; refresh on next ready-transition or @claude mention"
 gh label create "review:error"           --color e11d21 --description "Workflow failed before publishing a review; see Actions logs"
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
+gh label create "review:waived"          --color d93f0b --description "Break-glass: a human waived the v3 merge gates; actor and reason are logged"
+gh label create "review:author-stalled"  --color fad8c7 --description "Waiting on the author 14+ days; closes at 21 days, one-click reopen (SLA sweep)"
 ```
 
 ## Migrate from the old two-label scheme

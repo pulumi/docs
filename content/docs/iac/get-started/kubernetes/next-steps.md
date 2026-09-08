@@ -42,13 +42,13 @@ With Pulumi ESC you can:
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
+{{< get-started-next-step path="/dev/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-k8s-learn" >}}
 
 ## Launch a new project with a template
 
-Provision a managed Kubernetes cluster on [AWS](/templates/kubernetes/aws/), [Azure](/templates/kubernetes/azure/), or [Google Cloud](/templates/kubernetes/gcp/), or browse the full [Kubernetes cluster template](/templates/kubernetes/) collection.
+Provision a managed Kubernetes cluster on [AWS](/dev/templates/kubernetes/aws/), [Azure](/dev/templates/kubernetes/azure/), or [Google Cloud](/dev/templates/kubernetes/gcp/), or browse the full [Kubernetes cluster template](/dev/templates/kubernetes/) collection.
 
-{{< get-started-next-step path="/templates/kubernetes/" label="Browse Kubernetes templates" ref="gs-k8s-templates" >}}
+{{< get-started-next-step path="/dev/templates/kubernetes/" label="Browse Kubernetes templates" ref="gs-k8s-templates" >}}
 
 ## Video tutorial
 

@@ -1,6 +1,6 @@
 ---
 title_tag: "AWS KMS"
-meta_desc: "Learn how to configure AWS KMS for Pulumi Cloud Customer Managed Keys to enhance security and compliance."
+meta_desc: "Configure AWS KMS and add the key in Pulumi Cloud to encrypt your organization's data with a customer managed key."
 title: "AWS KMS"
 h1: "AWS KMS"
 menu:
@@ -16,10 +16,9 @@ aliases:
 pulumi_cloud_feature: customer-managed-keys
 ---
 
-This guide provides step-by-step instructions for configuring AWS Key Management Service (KMS) to use [Customer Managed
-Keys (CMKs) with Pulumi Cloud](/docs/administration/concepts/customer-managed-keys/). It covers setting up the necessary AWS
-IAM roles, trust policies, and KMS key permissions
-to enhance the security and compliance of your Pulumi Cloud environment.
+This guide walks through configuring AWS Key Management Service (KMS) so that Pulumi Cloud encrypts your organization's
+data with a [customer managed key](/docs/administration/concepts/customer-managed-keys/) you own. You set up an identity
+provider, IAM role, and trust policy in AWS, create the KMS key, and then add the key in Pulumi Cloud.
 
 ## Prerequisites
 
@@ -81,7 +80,7 @@ and subject are configured as shown below:
 ```
 
 Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it to set up
-the AWS KMS key as well as the Customer Managed Key in Pulumi Cloud.
+the AWS KMS key as well as the customer managed key in Pulumi Cloud.
 
 ## Create the AWS KMS key
 
@@ -114,9 +113,23 @@ the AWS KMS key as well as the Customer Managed Key in Pulumi Cloud.
 ```
 
 Before you log out of the AWS console, make sure to make a note of your key’s ARN value and or alias ARN value as you
-will need it to set up the Customer Managed Key in Pulumi Cloud.
+will need it to set up the customer managed key in Pulumi Cloud.
 
-## Add the Customer Managed Key in Pulumi Cloud
+## Add the customer managed key in Pulumi Cloud
 
-Now you can add the Customer Managed Key in Pulumi Cloud as described in
-the [Customer Managed Keys documentation](/docs/administration/concepts/customer-managed-keys/).
+With the role ARN and key ARN from the previous steps, you can now register the key with Pulumi Cloud.
+
+{{< notes type="info" >}}
+When you add your first customer managed key, all data keys encrypted with the Pulumi-managed key are automatically
+re-encrypted with the new key. The encrypted data itself does not change.
+{{< /notes >}}
+
+1. In Pulumi Cloud, navigate to the **Customer Managed Keys** settings page (**Settings** → **Organization** →
+   **Customer Managed Keys**).
+1. Select **Add Customer Managed Key**.
+1. Enter a unique name for the key.
+1. Provide the **Role ARN** of the IAM role you created.
+1. Provide the **Key ARN** of the AWS KMS key. Alias ARNs are also supported.
+
+To set the key as your organization's default, or to disable a key later, see
+[Customer managed keys](/docs/administration/concepts/customer-managed-keys/).

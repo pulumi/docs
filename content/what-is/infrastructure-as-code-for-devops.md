@@ -3,6 +3,7 @@ title: Infrastructure as Code for DevOps
 meta_desc: "Infrastructure as code is what makes DevOps work past the app boundary: CI/CD, shift-left testing, policy as code, and AI agents for the platform itself."
 
 type: what-is
+date: 2021-09-27T08:46:43-07:00
 page_title: "Infrastructure as Code for DevOps"
 
 customer_logos:
@@ -188,7 +189,7 @@ Past a small footprint, not really. Manual provisioning makes the DORA metrics (
 
 ### What's the difference between declarative and imperative IaC?
 
-Declarative IaC describes the desired state; an engine reconciles real infrastructure against it. Imperative IaC describes the steps; the tool runs them in order. Declarative is more common for cloud infrastructure because it handles partial failure, drift, and rollback. See [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) for the deeper comparison.
+Declarative IaC describes the desired state; an engine reconciles real infrastructure against it. Imperative IaC describes the steps; the tool runs them in order. Declarative is more common for cloud infrastructure because it handles partial failure, drift, and rollback. See [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/) for the deeper comparison.
 
 ### How does IaC affect deployment frequency?
 

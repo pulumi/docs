@@ -143,7 +143,7 @@ if err != nil {
 fmt.Printf("Successfully created/selected %s stack\n", env.BaseProject.Nickname)
 ```
 
-In this particular program, Zephyr decided to start with a _local workspace._ (You can read more about workspaces in the [Pulumi Automation API docs](/docs/using-pulumi/automation-api/getting-started-automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
+In this particular program, Zephyr decided to start with a _local workspace._ (You can read more about workspaces in the [Pulumi Automation API docs](/docs/iac/guides/building-extending/automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
 
 Users can also use `UpsertStackInlineSource`, which embeds the Pulumi program into the Automation API program as a function. There are trade-offs to each approach:
 

@@ -44,13 +44,13 @@ With Pulumi ESC you can:
 
 Let our Google Cloud tutorials guide you through key Pulumi concepts.
 
-{{< get-started-next-step path="/tutorials/" label="Browse tutorials" ref="gs-gcp-tutorials" >}}
+{{< get-started-next-step path="/dev/tutorials/" label="Browse tutorials" ref="gs-gcp-tutorials" >}}
 
 ## Launch a new project with a template
 
-Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/gcp/) to [serverless applications](/templates/serverless-application/gcp/), [virtual machines](/templates/virtual-machine/gcp/), [container services](/templates/container-service/gcp/), and [Kubernetes clusters](/templates/kubernetes/gcp/).
+Easily deploy the most common cloud architectures, from [static websites](/dev/templates/static-website/gcp/) to [serverless applications](/dev/templates/serverless-application/gcp/), [virtual machines](/dev/templates/virtual-machine/gcp/), [container services](/dev/templates/container-service/gcp/), and [Kubernetes clusters](/dev/templates/kubernetes/gcp/).
 
-{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-gcp-guides" >}}
+{{< get-started-next-step path="/dev/templates/" label="Browse templates" ref="gs-gcp-guides" >}}
 
 ## Dive into the docs
 

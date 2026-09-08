@@ -42,6 +42,20 @@ jobs:
 
       - uses: astral-sh/setup-uv@v7
 
+      # collect_v3_ops() reads the pr-review/ prefixes of the content-review
+      # ledger bucket (discovered by name prefix, no Pulumi needed). Without
+      # credentials it degrades to {"available": false} on every scheduled
+      # run — the exact silent-dark failure the section is meant to surface.
+      # Best-effort like the other ledger readers: a credential failure
+      # leaves the rest of the digest intact.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: weekly-digest
+          aws-region: us-west-2
+
       # 1. COLLECT — deterministic, no model. Dumps the full digest JSON;
       # under dry_run it also echoes the raw JSON so queries are inspectable
       # before any model or Slack step runs.
