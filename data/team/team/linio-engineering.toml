@@ -5,3 +5,10 @@ title = "The biggest ecommerce platform in Latin America"
 # Guest posted to the Pulumi blog
 status = "guest"
 
+# This byline is a company, not a natural person -- schema.org Person means
+# an individual, so layouts/partials/schema/utils/author-entities.html reads
+# this flag and emits JSON-LD "@type": "Organization" instead. No `company =
+# "Pulumi"` field here (Linio is a guest author, not a Pulumi house team), so
+# the Organization branch correctly omits parentOrganization for this entry.
+entity_type = "organization"
+
