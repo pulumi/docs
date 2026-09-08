@@ -130,7 +130,7 @@ With Pulumi:
 * **GCP Managed Instance Groups and autoscalers** are defined through [`@pulumi/gcp`](https://www.pulumi.com/registry/packages/gcp/) with the same dependency model as the underlying VMs.
 * **Azure VM Scale Sets** are defined through [`@pulumi/azure-native`](https://www.pulumi.com/registry/packages/azure-native/).
 * **Kubernetes HPAs, VPAs, KEDA scaled objects, and Cluster Autoscaler / Karpenter configurations** are defined through [`@pulumi/kubernetes`](https://www.pulumi.com/registry/packages/kubernetes/) alongside the workloads they scale. See [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/).
-* **Policy as code for scaling guardrails.** [Pulumi Policies](/docs/insights/policy/) can enforce "every production ASG must have a non-zero max," "no ASG without scale-in protection in stateful tiers," "production database autoscaling must have an upper bound."
+* **Policy as code for scaling guardrails.** [Pulumi Policies](/docs/discovery-governance/policy/) can enforce "every production ASG must have a non-zero max," "no ASG without scale-in protection in stateful tiers," "production database autoscaling must have an upper bound."
 
 [Get started with Pulumi](/docs/get-started/) to define autoscaling policies alongside the rest of your cloud infrastructure in TypeScript, Python, Go, C#, Java, or YAML.
 
@@ -170,7 +170,7 @@ Kubernetes Event-Driven Autoscaler. It extends HPA to scale on external metrics 
 
 ### How does autoscaling interact with cost management?
 
-Autoscaling generally reduces cost compared to fixed peak provisioning, but it can also surprise teams when an upper bound is missing. Pair autoscaling with budget alerts in your cloud account and [Pulumi Policies](/docs/insights/policy/) in your IaC that enforce a maximum on every ASG / MIG / scale set / HPA.
+Autoscaling generally reduces cost compared to fixed peak provisioning, but it can also surprise teams when an upper bound is missing. Pair autoscaling with budget alerts in your cloud account and [Pulumi Policies](/docs/discovery-governance/policy/) in your IaC that enforce a maximum on every ASG / MIG / scale set / HPA.
 
 ### How does autoscaling affect SLOs?
 

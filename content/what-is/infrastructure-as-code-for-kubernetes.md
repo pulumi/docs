@@ -155,7 +155,7 @@ The Kubernetes IaC tooling landscape is unusually wide because the community has
 | Cluster provisioning (focused) | eksctl, gcloud, az aks, ClusterAPI |
 | Workload templating | Helm, Kustomize, jsonnet |
 | GitOps controllers | ArgoCD, Flux |
-| Policy as code | [Pulumi policy as code](/docs/insights/policy/), Kyverno, OPA Gatekeeper |
+| Policy as code | [Pulumi policy as code](/docs/discovery-governance/policy/), Kyverno, OPA Gatekeeper |
 | Secrets | [Pulumi ESC](/product/secrets-management/), External Secrets Operator, Sealed Secrets, Vault |
 | Cluster security scanning | Trivy, kube-bench, Falco |
 | Service mesh | Istio, Linkerd, Cilium |
@@ -167,7 +167,7 @@ Most teams use a combination: a general IaC tool for the cloud-and-cluster layer
 Misconfiguration, not exotic exploits, drives most Kubernetes security incidents, and misconfiguration is exactly what IaC makes checkable before it reaches a cluster. The controls stack up in layers:
 
 * **Scan before merge.** Static scanners like Trivy and Checkov run against rendered manifests in CI and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
-* **Enforce policy in two places.** In CI, [policy as code](/docs/insights/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
+* **Enforce policy in two places.** In CI, [policy as code](/docs/discovery-governance/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
 * **Keep secret material out of code and Git.** The IaC program defines *which* secrets a workload references; the values live in [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, or a cloud secrets manager and are pulled at deploy time.
 * **Use per-workload cloud identity.** IRSA on EKS, Workload Identity on GKE, and Microsoft Entra Workload ID on AKS replace long-lived static credentials with scoped, rotatable, auditable identities, all declared in the same IaC program as the workloads that use them.
 * **Declare RBAC as code.** ClusterRoles and RoleBindings written in IaC get the same least-privilege review as IAM policies. Hand-granted `cluster-admin` stops being invisible.
@@ -184,7 +184,7 @@ A few patterns that hold up across providers and team sizes:
 * **Use IRSA / Workload Identity / Entra Workload ID.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
 * **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time, either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
-* **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
+* **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/discovery-governance/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
 * **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
 * **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
 
@@ -246,7 +246,7 @@ Start with the simplest thing that gives you a baseline: a Pulumi program that i
 
 ## Learn more
 
-Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/secrets-management/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/get-started/kubernetes/).
+Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/discovery-governance/policy/) and [ESC](/product/secrets-management/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/get-started/kubernetes/).
 
 Related reading:
 

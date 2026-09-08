@@ -44,7 +44,7 @@ sections:
   - icon: pulumi-insights
     heading: Discovery & Governance
     description: Search, compliance, and policy enforcement across your cloud infrastructure.
-    link: /docs/insights/
+    link: /docs/discovery-governance/
   - icon: link
     heading: Version Control
     description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained version control integrations.

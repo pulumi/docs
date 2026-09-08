@@ -119,11 +119,11 @@ Pulumi addresses cloud misconfiguration on two fronts: making configuration revi
 
 **Infrastructure as code across every provider.** Pulumi lets you define cloud resources in TypeScript, Python, Go, C#, Java, or YAML across hundreds of providers. Every setting is explicit in code, reviewed through pull requests, and applied consistently across environments, which removes the manual, console-driven changes that produce so many misconfigurations.
 
-**Preventative policy enforcement during preview.** [Pulumi's policy as code](/docs/insights/policy/) evaluates resources during `pulumi preview` and `pulumi up`, before any change reaches the cloud. Rules such as "no S3 bucket may allow public access," "no security group may permit ingress from 0.0.0.0/0," or "all storage must be encrypted" run automatically on every deployment. A violation can warn (advisory mode), block the deployment (mandatory mode), or be corrected automatically (remediate mode), so a misconfiguration is stopped at the moment it is introduced rather than discovered after a breach.
+**Preventative policy enforcement during preview.** [Pulumi's policy as code](/docs/discovery-governance/policy/) evaluates resources during `pulumi preview` and `pulumi up`, before any change reaches the cloud. Rules such as "no S3 bucket may allow public access," "no security group may permit ingress from 0.0.0.0/0," or "all storage must be encrypted" run automatically on every deployment. A violation can warn (advisory mode), block the deployment (mandatory mode), or be corrected automatically (remediate mode), so a misconfiguration is stopped at the moment it is introduced rather than discovered after a breach.
 
-**Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/insights/policy/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
+**Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/discovery-governance/policy/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
 
-**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/insights/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the resources managed with Pulumi.
+**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/discovery-governance/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the resources managed with Pulumi.
 
 **Drift detection.** Pulumi can run scheduled drift detection, comparing live infrastructure against its declared configuration and alerting when they diverge, so an out-of-band change that reintroduces a misconfiguration is surfaced instead of silently persisting.
 
@@ -161,14 +161,14 @@ Yes, in some cases. Policy-as-code systems can support automatic remediation for
 
 ## Learn more
 
-Pulumi helps you prevent cloud misconfigurations at the source: define infrastructure as code so every setting is explicit and reviewable, then enforce security rules with policy as code that blocks insecure configurations during `pulumi preview` and audits existing resources through Insights. [Get started with Pulumi policy as code](/docs/insights/policy/get-started/) to catch your first misconfiguration before it reaches the cloud.
+Pulumi helps you prevent cloud misconfigurations at the source: define infrastructure as code so every setting is explicit and reviewable, then enforce security rules with policy as code that blocks insecure configurations during `pulumi preview` and audits existing resources through Insights. [Get started with Pulumi policy as code](/docs/discovery-governance/policy/get-started/) to catch your first misconfiguration before it reaches the cloud.
 
 Related reading:
 
-* [Pulumi policy as code documentation](/docs/insights/policy/)
-* [Policy packs guide](/docs/insights/policy/policy-packs/)
+* [Pulumi policy as code documentation](/docs/discovery-governance/policy/)
+* [Policy packs guide](/docs/discovery-governance/policy/policy-packs/)
 * [Discovery & governance](/product/discovery-governance/)
-* [Pulumi Discovery](/docs/insights/discovery/)
+* [Pulumi Discovery](/docs/discovery-governance/discovery/)
 * [What is policy as code?](/what-is/what-is-policy-as-code/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)

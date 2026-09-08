@@ -89,7 +89,7 @@ The same CI/CD machinery that ships application code can ship infrastructure onc
 1. An engineer opens a pull request that changes IaC.
 1. CI runs static analysis, security scanners (Checkov, tfsec, Trivy), and unit tests against the IaC program.
 1. CI runs `pulumi preview` (or equivalent) against the target environment and posts the diff to the PR.
-1. [Policy as code](/docs/insights/policy/) checks the planned changes against organizational rules.
+1. [Policy as code](/docs/discovery-governance/policy/) checks the planned changes against organizational rules.
 1. A human reviewer approves the diff. The PR merges.
 1. CI runs `pulumi up` to apply the change to staging, then to production after smoke tests pass.
 1. Drift detection runs on a schedule against the deployed state.
@@ -103,7 +103,7 @@ The principle is the same as application CI: fast feedback for in-progress chang
 * **Unit tests** verify the logic of IaC programs in memory, with mocked cloud responses. Examples: every resource is tagged, no security group opens SSH to the internet, encryption is enabled on every bucket.
 * **Property tests** assert specific properties on the planned resource graph (every database has backups enabled with a 7-day retention; every Kubernetes cluster uses the LTS provider version).
 * **Integration tests** spin up ephemeral stacks in a sandbox account, run end-to-end assertions, and tear down.
-* **Policy as code** enforces organizational rules across every change. [Pulumi Policies](/docs/insights/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
+* **Policy as code** enforces organizational rules across every change. [Pulumi Policies](/docs/discovery-governance/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
 * **Security scans** (Checkov, tfsec, Snyk IaC) run on every commit and surface known-bad configurations.
 
 For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
@@ -154,7 +154,7 @@ A DevOps toolchain built around IaC typically combines tools from several catego
 | Source control | GitHub, GitLab, Bitbucket |
 | CI/CD | GitHub Actions, GitLab CI, CircleCI, Jenkins, Buildkite, Argo CD |
 | Infrastructure as code | [Pulumi](/), Terraform, OpenTofu, AWS CloudFormation, Bicep |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Static IaC scanning | Checkov, tfsec, Terrascan, Snyk IaC |
 | Containers and orchestration | Docker, Podman, Kubernetes, ECS |
 | Secrets and config | [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
@@ -170,7 +170,7 @@ Pulumi is IaC built for engineering teams that already use DevOps practices. Con
 * **Real languages.** Write IaC in TypeScript, Python, Go, C#, Java, or YAML. The same languages, test runners, and IDE tooling that work for application code work for the platform.
 * **Same review process.** Pulumi programs live in the same repos as application code (or in their own platform repos). Every change is a pull request with a diff that reviewers can read.
 * **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/operations/continuous-delivery/github-actions/) and [CI/CD guide](/docs/iac/operations/continuous-delivery/) document common patterns.
-* **Policy as code.** Write policies in the same language as the IaC using [Pulumi Policies](/docs/insights/policy/). Run them on every preview and update.
+* **Policy as code.** Write policies in the same language as the IaC using [Pulumi Policies](/docs/discovery-governance/policy/). Run them on every preview and update.
 * **Secrets through Pulumi ESC.** Centralized, encrypted, audited. [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Pulumi programs, CI jobs, and applications without leaving plaintext copies in code or state.
 * **Self-service through automation API.** The [automation API](/docs/iac/concepts/automation-api/) turns Pulumi programs into libraries that other software can call, which is how platform teams expose self-service over their components.
 
@@ -196,7 +196,7 @@ It dramatically increases it. Manual environment setup measured in days becomes 
 
 ### Where does policy as code fit in?
 
-Policy as code is the enforcement layer for organizational rules: no public buckets, no wildcard IAM, every resource must have an owner tag, every database must have backups. Policies run on every IaC change in CI, so non-compliant changes never reach production. In Pulumi, [Pulumi Policies](/docs/insights/policy/) is the policy-as-code engine.
+Policy as code is the enforcement layer for organizational rules: no public buckets, no wildcard IAM, every resource must have an owner tag, every database must have backups. Policies run on every IaC change in CI, so non-compliant changes never reach production. In Pulumi, [Pulumi Policies](/docs/discovery-governance/policy/) is the policy-as-code engine.
 
 ### How does IaC support compliance frameworks like SOC 2 or HIPAA?
 

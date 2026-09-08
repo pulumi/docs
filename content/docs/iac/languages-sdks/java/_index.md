@@ -164,7 +164,7 @@ For managing resources in a Pulumi program, you can find the relevant SDK refere
 
 ### Policy SDK
 
-Pulumi Policy as Code policies cannot be authored in Java. Policies are written in [TypeScript/JavaScript, Python, or OPA (Rego)](/docs/insights/policy/#languages) and can be applied to Pulumi programs written in any language, including Java.
+Pulumi Policy as Code policies cannot be authored in Java. Policies are written in [TypeScript/JavaScript, Python, or OPA (Rego)](/docs/discovery-governance/policy/#languages) and can be applied to Pulumi programs written in any language, including Java.
 
 ### Dev versions
 

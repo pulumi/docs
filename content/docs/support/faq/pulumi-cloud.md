@@ -160,7 +160,7 @@ priced per organization, so [contact us](/contact/?form=sales) for that one.
 ### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
 Those editions are retired and don't include newer capabilities such as
-[Pulumi Deployments](/docs/deployments/), [Pulumi Insights](/docs/insights/), and
+[Pulumi Deployments](/docs/deployments/), [Pulumi Insights](/docs/discovery-governance/), and
 [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.

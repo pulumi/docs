@@ -91,7 +91,7 @@ Several mature tools now handle policy as code across different parts of the sta
 
 ## How does Pulumi implement policy as code?
 
-Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platform](/docs/insights/policy/). It runs during every `pulumi preview` and `pulumi up`, evaluating resources against a set of policies before any change reaches the cloud.
+Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platform](/docs/discovery-governance/policy/). It runs during every `pulumi preview` and `pulumi up`, evaluating resources against a set of policies before any change reaches the cloud.
 
 **Languages you already know.** Policies are written in TypeScript, JavaScript, Python, or Rego. There is no new language to learn. Engineers write policy functions the same way they write the infrastructure code itself, using the same loops, conditionals, helper functions, unit tests, and package management.
 
@@ -132,7 +132,7 @@ Getting started with Pulumi Policies takes a few minutes if you already have Pul
 
 6. **Graduate to mandatory enforcement.** Start in `advisory` mode to understand the scope of violations, then promote critical rules to `mandatory` as teams address them. Use the `remediate` level for rules where automatic correction is appropriate.
 
-The [Pulumi Policies documentation](/docs/insights/policy/) and [policy packs guide](/docs/insights/policy/policy-packs/) walk through the full lifecycle in detail.
+The [Pulumi Policies documentation](/docs/discovery-governance/policy/) and [policy packs guide](/docs/discovery-governance/policy/policy-packs/) walk through the full lifecycle in detail.
 
 ## What does policy as code look like in production?
 
@@ -154,7 +154,7 @@ As Zachary Cook, Senior Manager of DevOps at Modivcare, put it:
 
 > "By integrating Pulumi Policy as Code with Insights Account Scanning and our developer portal, we're achieving the holy grail for Platform Engineering: instant visibility and governance over legacy infrastructure that isn't yet defined in IaC, while also accelerating our path to production for new cloud-native projects."
 
-The combination of [policy as code enforcement](/docs/insights/policy/) with [Discovery-based governance](/product/discovery-governance/) let Modivcare start enforcing cost controls on resources they didn't even write with Pulumi, reducing infrastructure costs by up to 25%.
+The combination of [policy as code enforcement](/docs/discovery-governance/policy/) with [Discovery-based governance](/product/discovery-governance/) let Modivcare start enforcing cost controls on resources they didn't even write with Pulumi, reducing infrastructure costs by up to 25%.
 
 ## Frequently asked questions about policy as code
 
@@ -200,12 +200,12 @@ Local enforcement via the `--policy-pack` flag (including advisory, mandatory, a
 
 ## Learn more
 
-Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (hundreds of providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
+Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (hundreds of providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/discovery-governance/policy/get-started/) to write your first policy pack in minutes.
 
 Related reading:
 
-* [Pulumi Policies documentation](/docs/insights/policy/)
-* [Policy packs guide](/docs/insights/policy/policy-packs/)
+* [Pulumi Policies documentation](/docs/discovery-governance/policy/)
+* [Policy packs guide](/docs/discovery-governance/policy/policy-packs/)
 * [Discovery & governance](/product/discovery-governance/)
 * [Benefits of policy as code](/blog/benefits-of-policy-as-code/)
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)

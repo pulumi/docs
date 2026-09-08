@@ -11,7 +11,7 @@ menu:
 pulumi_cloud_feature: pre-built-policy-packs
 ---
 
-The **AWS Organizations Tag Policies** pack validates that your infrastructure as code resources comply with tag policies configured in AWS Organizations. Built in partnership with AWS, this pack proactively blocks non-compliant deployments when resources are missing required tags. For complete documentation including prerequisites, setup instructions, and supported resources, see the [AWS Organizations Tag Policies integration guide](/docs/insights/policy/integrations/aws-organizations-tag-policies/).
+The **AWS Organizations Tag Policies** pack validates that your infrastructure as code resources comply with tag policies configured in AWS Organizations. Built in partnership with AWS, this pack proactively blocks non-compliant deployments when resources are missing required tags. For complete documentation including prerequisites, setup instructions, and supported resources, see the [AWS Organizations Tag Policies integration guide](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/).
 
 ## Policy
 

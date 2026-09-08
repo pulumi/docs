@@ -48,4 +48,4 @@ Property paths are used in the following Pulumi features (this list is not exhau
 - [`hideDiffs`](/docs/iac/concepts/resources/options/hidediffs/) resource option
 - [`pulumi config set --path`](/docs/iac/cli/commands/pulumi_config_set/) flag
 - [ESC interpolations and references](/docs/esc/concepts/interpolations-and-references/)
-- [Insights resource search](/docs/insights/discovery/search/)
+- [Insights resource search](/docs/discovery-governance/discovery/search/)

@@ -149,7 +149,7 @@ For managing resources in a Pulumi program, you can find the relevant SDK refere
 
 ### Policy SDK
 
-Pulumi Policy as Code packs cannot be authored in .NET. Policy packs are authored in [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/) or [Python](/docs/reference/pkg/python/pulumi_policy/). A .NET program can still be validated by policy packs written in those languages. For more information, see [Pulumi Policy as Code](/docs/insights/policy/).
+Pulumi Policy as Code packs cannot be authored in .NET. Policy packs are authored in [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/) or [Python](/docs/reference/pkg/python/pulumi_policy/). A .NET program can still be validated by policy packs written in those languages. For more information, see [Pulumi Policy as Code](/docs/discovery-governance/policy/).
 
 ### Dev versions
 
