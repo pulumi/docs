@@ -163,10 +163,10 @@ available for $2,000 per month with up to 4,750 managed resources. You can also
 
 ### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
-These are the grandfathered SKUs from before Pulumi Cloud moved to editions, not
-the current Pro edition. They are retired and don't include newer capabilities
+These legacy plans are separate from the current Pro edition.
+They are retired and don't include newer capabilities
 such as [Pulumi Deployments](/docs/deployments/),
-[Pulumi Insights](/docs/insights/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+[Pulumi Discovery](/docs/insights/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.
 
@@ -202,7 +202,8 @@ To discuss that, [contact us](/contact/).
   remediation, time-to-live stacks, and customer-managed keys.
 
 - **Enterprise** adds [self-hosting](/docs/administration/self-hosting/),
-  conformance packs for NIST, PCI DSS, HITRUST, SOC 2, and CIS,
+  conformance packs for CIS, CIS Kubernetes, CMMC, HITRUST, ISO 27001, NIST,
+  and PCI DSS,
   [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
   custom policy packs, and policy remediation.
 
