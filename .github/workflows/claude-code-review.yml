@@ -53,12 +53,27 @@ jobs:
   # synchronize → mark the existing pinned review stale, and record whether
   # the prior state was outstanding-issues so the auto-refresh job below can
   # decide whether the push is a candidate for a scoped automatic update.
+  #
+  # The bot-author exclusion below skips the high-volume bot PRs nobody
+  # reviews (SDK doc regens, dependabot) — but it must carve out
+  # `content-review/*`, matching the same carve-out the review job's own
+  # skip logic makes ("Bot-authored PRs are slop-skipped — EXCEPT
+  # content-review/*"). Those PRs are authored by pulumi-bot and DO get a
+  # full review, and being bot-authored is exactly why a human pushes to
+  # them (applying suggestions, answering findings). Without the carve-out
+  # the transition never fires: on #21456 a human push at 16:41Z produced a
+  # synchronize run where every job skipped, and the PR wore
+  # review:no-blockers against a two-commit-old review until the
+  # review-label-reconcile cron happened to catch it up to two hours later.
   mark-stale:
     if: |
       github.event_name == 'pull_request' &&
       github.event.action == 'synchronize' &&
-      github.event.pull_request.user.login != 'pulumi-bot' &&
-      github.event.pull_request.user.login != 'dependabot[bot]'
+      (
+        ( github.event.pull_request.user.login != 'pulumi-bot' &&
+          github.event.pull_request.user.login != 'dependabot[bot]' ) ||
+        startsWith(github.event.pull_request.head.ref, 'content-review/')
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: read

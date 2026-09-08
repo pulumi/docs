@@ -166,6 +166,12 @@ _vendor/
 /.verified-claims.json
 /.vale-raw.json
 /.vale-findings.json
+# Per-round scratch from the glow-up lane's Vale fixpoint loop (SKILL.md
+# step 3). Dot-prefixed, so the content-review export's `git add -A --
+# ':!.*'` already excludes them from the handoff patch; ignored here so a
+# local run of the skill doesn't leave committable cruft behind.
+/.vale-round*.json
+/.vale-findings-round*.json
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
 /.readthrough-findings.json

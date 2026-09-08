@@ -135,3 +135,91 @@ def test_blockers_bypass_the_caps():
     ]
     out = mod.cap(findings)
     assert len(out) == 25, "a blocker was silently dropped by a cap"
+
+
+def test_fix_mode_returns_every_finding_uncapped():
+    """The fix consumer clears a backlog; the caps are a comment budget.
+
+    Regression guard for the churn loop: a single-file run capped at
+    PER_FILE_CAP fixes 10 findings and leaves the rest to resurface on the
+    next review as fresh PR churn (observed on #21456).
+    """
+    mod = _filter_module()
+    findings = [
+        {
+            "file": "content/docs/a.md",
+            "line": n,
+            "category": "wordiness",
+            "message": f"'phrase {n}' is too wordy",
+            "blocker": False,
+        }
+        for n in range(1, 31)
+    ]
+    out = mod.cap(findings, fix_mode=True)
+    assert len(out) == 30, (
+        f"fix mode dropped {30 - len(out)} findings -- the per-file cap is a "
+        "readability budget for the pinned comment and must not truncate the "
+        "backlog a fixing consumer is here to clear"
+    )
+    assert mod.cap(findings) != out, "review mode should still cap"
+
+
+def test_fix_mode_keeps_every_occurrence_of_a_repeated_message():
+    """Dedup is sound for a reader, wrong for a fixer.
+
+    A rule whose message names a *shape* rather than a term emits the same
+    message for every occurrence (Pulumi.NarrativeWe: one message per
+    "we will"). Deduped, a fixer sees one line and silently leaves the rest.
+    """
+    mod = _filter_module()
+    findings = [
+        {
+            "file": "content/docs/a.md",
+            "line": n,
+            "category": "narrative voice",
+            "message": "Narrative walkthrough voice ('we will')",
+            "blocker": False,
+        }
+        for n in (10, 40, 90)
+    ]
+    out = mod.cap(findings, fix_mode=True)
+    assert [f["line"] for f in out] == [10, 40, 90], (
+        "fix mode de-duplicated distinct occurrences; each needs its own "
+        "editorial rewrite, so hiding two of three leaves the page half-fixed"
+    )
+    assert len(mod.cap(findings)) == 1, "review mode should still dedup"
+
+
+def test_fix_mode_sorts_by_file_then_line():
+    mod = _filter_module()
+    findings = [
+        {"file": "content/docs/b.md", "line": 5, "category": "x",
+         "message": "m", "blocker": False},
+        {"file": "content/docs/a.md", "line": 9, "category": "x",
+         "message": "m", "blocker": False},
+        {"file": "content/docs/a.md", "line": 2, "category": "x",
+         "message": "m", "blocker": False},
+    ]
+    out = mod.cap(findings, fix_mode=True)
+    assert [(f["file"], f["line"]) for f in out] == [
+        ("content/docs/a.md", 2),
+        ("content/docs/a.md", 9),
+        ("content/docs/b.md", 5),
+    ]
+
+
+def test_review_mode_is_the_default():
+    """--fix-mode must be opt-in: a review surface that forgets it should
+    still get the readable, capped list rather than 200 nags."""
+    mod = _filter_module()
+    findings = [
+        {
+            "file": "content/docs/a.md",
+            "line": n,
+            "category": "wordiness",
+            "message": f"'phrase {n}' is too wordy",
+            "blocker": False,
+        }
+        for n in range(1, 31)
+    ]
+    assert len(mod.cap(findings)) == mod.PER_FILE_CAP
