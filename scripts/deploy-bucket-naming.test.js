@@ -253,14 +253,36 @@ test("sanity check: this harness actually exercises the fix -- the OLD (pre-fix)
     // This reconstructs the *old* destination_bucket formula
     // (origin_bucket_prefix()-build_identifier(), no uniquifier) to prove the harness
     // would have failed against the pre-change code, i.e. that test two above is not
-    // vacuously true.
-    const oldNameA = runBash(
-        { DEPLOYMENT_ENVIRONMENT: "production", GITHUB_EVENT_NAME: "schedule", GITHUB_RUN_ID: "1111111111" },
-        'echo "$(origin_bucket_prefix)-$(build_identifier)"',
+    // vacuously true. Both calls go through withEventPath so build_identifier() takes
+    // its CI arm (it silently drops the event segment without GITHUB_EVENT_PATH, per
+    // the withEventPath comment above) and the names come back in the exact
+    // "schedule-<sha8>" shape production built pre-fix, not a bare-SHA fallback.
+    const oldNameA = withEventPath("schedule", {}, (eventPath) =>
+        runBash(
+            {
+                DEPLOYMENT_ENVIRONMENT: "production",
+                GITHUB_EVENT_NAME: "schedule",
+                GITHUB_EVENT_PATH: eventPath,
+                GITHUB_RUN_ID: "1111111111",
+            },
+            'echo "$(origin_bucket_prefix)-$(build_identifier)"',
+        ),
     );
-    const oldNameB = runBash(
-        { DEPLOYMENT_ENVIRONMENT: "production", GITHUB_EVENT_NAME: "schedule", GITHUB_RUN_ID: "2222222222" },
-        'echo "$(origin_bucket_prefix)-$(build_identifier)"',
+    const oldNameB = withEventPath("schedule", {}, (eventPath) =>
+        runBash(
+            {
+                DEPLOYMENT_ENVIRONMENT: "production",
+                GITHUB_EVENT_NAME: "schedule",
+                GITHUB_EVENT_PATH: eventPath,
+                GITHUB_RUN_ID: "2222222222",
+            },
+            'echo "$(origin_bucket_prefix)-$(build_identifier)"',
+        ),
+    );
+    assert.match(
+        oldNameA,
+        /-schedule-/,
+        "expected the pre-fix formula to include the event segment -- if it doesn't, this test silently fell back to build_identifier()'s eventless arm instead of exercising the shape production actually built",
     );
     assert.equal(
         oldNameA,
