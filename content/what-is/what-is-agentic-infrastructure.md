@@ -2,6 +2,7 @@
 title: What Is Agentic Infrastructure?
 meta_desc: "Agentic infrastructure is cloud infrastructure AI agents provision and operate through code. Learn how it works and how to build agent-ready infrastructure."
 type: what-is
+date: 2026-06-24T18:39:14-07:00
 page_title: "What Is Agentic Infrastructure?"
 authors: ["pulumi-content-team"]
 ---

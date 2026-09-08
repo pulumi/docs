@@ -3,6 +3,7 @@ title: What Is Infrastructure as Software?
 meta_desc: "Infrastructure as Software is IaC written in general-purpose programming languages. Learn how it differs from DSL-based IaC and where it fits in practice."
 
 type: what-is
+date: 2021-07-22T15:11:35-07:00
 page_title: "Infrastructure as Software: The Next Step in Cloud Management"
 
 customer_logos:
