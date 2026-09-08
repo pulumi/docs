@@ -141,8 +141,9 @@ jobs:
               .filter(Boolean);
 
             if (!metadataAvailable) {
-              // workflow_dispatch path only: fetch-metadata cannot run without
-              // a Dependabot commit. Handles both body shapes.
+              // Degraded path: workflow_dispatch (no Dependabot commit to read)
+              // OR a failed fetch-metadata step. Handles both body shapes.
+              // Never trusted to clear the merge gate -- see autoMergeEligible.
               const found = new Set();
               const patterns = [
                 /(?:Bumps|Updates) \[([^\]]+)\]/g,
@@ -191,11 +192,12 @@ jobs:
             let isSecurity = ghsaId !== '' || alertState !== '';
 
             if (!metadataAvailable) {
-              // workflow_dispatch path only. Match advisory identifiers, never
-              // the bare word. This under-reports -- PR #21335 is a genuine
-              // security update with no GHSA anywhere in its body -- which is
-              // acceptable for a manual test path but would not be on the
-              // real one.
+              // Degraded path. Match advisory identifiers, never the bare
+              // word. This under-reports -- PR #21335 is a genuine security
+              // update with no GHSA anywhere in its body. Tolerable because
+              // deps-security-patch is informational: it prioritises a human's
+              // attention and gates nothing. The dependency count is the one
+              // that gates, which is why autoMergeEligible refuses this path.
               isSecurity = /\b(?:GHSA-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}|CVE-\d{4}-\d{4,})\b/i.test(prBody);
             }
 
@@ -226,15 +228,33 @@ jobs:
             // probe below has confirmed a usable token on a real Dependabot
             // run). Held categories mirror BUILD-AND-DEPLOY.md's Infrastructure
             // Change Review: bundle-size risk and batches too large to eyeball.
-            const autoMergeEligible = !hasLambdaEdgeRisk && !isBulk;
+            // metadataAvailable is a gate input, not just a provenance note.
+            // The body parser can silently UNDER-count: a PR body is capped at
+            // 65,536 characters and the package table is alphabetical, so the
+            // trailing `Updates `x` from` lines are truncated away on a big
+            // group. #20711 is titled "with 12 updates", its body is exactly
+            // 65,535 characters, and the fallback recovers only 10 -- the two
+            // it loses are the alphabetically last. rollup, terser and webpack
+            // sort late and are three of the nine risk patterns above, so a
+            // truncated body can drop the very packages the gate keys on while
+            // also pushing the count under BULK_UPDATE_THRESHOLD. Both inputs
+            // fail in the same direction, toward merging.
+            //
+            // So the fallback may label, but may never clear the gate.
+            // On workflow_dispatch this costs nothing: the arming step is
+            // already restricted to pull_request events.
+            const autoMergeEligible =
+              metadataAvailable && !hasLambdaEdgeRisk && !isBulk;
             core.setOutput('auto_merge', String(autoMergeEligible));
             core.setOutput('pr_number', String(prNumber));
-            core.setOutput('held_reason', hasLambdaEdgeRisk
-              ? 'lambda-edge-risk'
-              : (isBulk ? 'bulk-update' : ''));
+            core.setOutput('held_reason', !metadataAvailable
+              ? 'metadata-unavailable'
+              : (hasLambdaEdgeRisk
+                ? 'lambda-edge-risk'
+                : (isBulk ? 'bulk-update' : '')));
             console.log(`Auto-merge eligible: ${autoMergeEligible} ` +
-              `(lambdaEdgeRisk=${hasLambdaEdgeRisk}, bulk=${isBulk}, ` +
-              `deps=${dependencies.length}, security=${isSecurity})`);
+              `(metadata=${metadataAvailable}, lambdaEdgeRisk=${hasLambdaEdgeRisk}, ` +
+              `bulk=${isBulk}, deps=${dependencies.length}, security=${isSecurity})`);
 
             // Apply labels
             try {
@@ -259,6 +279,17 @@ jobs:
             }
 
             const autoMergeOn = (process.env.AUTO_MERGE_ENABLED || '') === 'true';
+
+            if (!metadataAvailable && context.eventName === 'pull_request') {
+              triageComment += '⚙️ **Dependabot metadata unavailable** - the ' +
+                '`fetch-metadata` step did not return outputs, so labels below ' +
+                'come from parsing the PR body, which truncates at 65,536 ' +
+                'characters and can under-count a large group. Auto-merge is ' +
+                'withheld on this PR regardless of flags. If you are seeing ' +
+                'this on every Dependabot PR, that step is broken rather than ' +
+                'flaky -- `continue-on-error` keeps the job green either way.' +
+                '\n\n';
+            }
 
             if (autoMergeOn && autoMergeEligible) {
               triageComment += '🤖 **Auto-merge armed.** No risk flags, so this PR is approved and will merge itself once the required build check passes. No action needed.\n\n';
@@ -353,11 +384,12 @@ jobs:
         continue-on-error: true
         env:
           PROBE_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          ACTOR: ${{ github.actor }}
         run: |
           if [ -n "${PROBE_TOKEN}" ]; then
-            echo "ESC token acquired on a ${{ github.actor }}-triggered run."
+            echo "ESC token acquired on a ${ACTOR}-triggered run."
           else
-            echo "NO ESC token on a ${{ github.actor }}-triggered run."
+            echo "NO ESC token on a ${ACTOR}-triggered run."
             echo "Auto-merge cannot arm. Do not set DEPS_AUTO_MERGE until this reads yes."
           fi
 

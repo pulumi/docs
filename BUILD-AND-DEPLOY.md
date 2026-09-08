@@ -3466,7 +3466,7 @@ All Dependabot PRs automatically receive:
 **Auto-applied labels (via label-dependabot.yml workflow):**
 
 - `deps-security-patch` - Genuine security update (derived from Dependabot's signed advisory metadata)
-- `deps-lambda-edge-risk` - Bundler, Pulumi SDK, or AWS SDK updates (see Infrastructure Change Review)
+- `deps-lambda-edge-risk` - Bundler, `@pulumi/aws` / `@pulumi/pulumi`, or AWS SDK updates (see Infrastructure Change Review)
 - `deps-bulk-update` - 5 or more dependencies in a single PR
 
 All three are computed from `dependabot/fetch-metadata` outputs rather than from the PR body. That distinction is load-bearing, because body parsing got both of the interesting labels wrong:
