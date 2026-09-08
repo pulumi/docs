@@ -214,8 +214,8 @@ This includes creating target groups automatically that leverage the same inboun
 During the creation of a listener, the `listener` property will attempt to choose smart defaults based on the scenario
 of creating the listener against a load balancer or target group, but there are several configuration options available. These include:
 
-* `protocol`: NLBs support `TCP`, `TLS`, `HTTP`, and `HTTPS`, while ALBs support `HTTP` and `HTTPS`. If not specified,
-  NLBs default to `TCP` and ALBs will select `HTTP` or `HTTPS` based on the port supplied.
+* `protocol`: NLBs support `TCP`, `TLS`, `UDP`, `TCP_UDP`, `QUIC`, and `TCP_QUIC`, while ALBs support `HTTP` and
+  `HTTPS`. If not specified, NLBs default to `TCP` and ALBs will select `HTTP` or `HTTPS` based on the port supplied.
 
 * `certificateArn` and `sslPolicy`: Enables SSL using the given certificate and policy. This policy controls how
   SSL connections are terminated, among other things. Refer to
