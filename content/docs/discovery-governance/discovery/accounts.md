@@ -4,20 +4,21 @@ title_tag: Create and Manage Cloud Accounts | Discovery & Governance
 h1: Create and Manage Cloud Accounts
 meta_desc: This page describes how to create cloud accounts used by Discovery to scan provider resources for use within Pulumi Cloud.
 menu:
-  insights:
+  discovery-governance:
     parent: insights-discovery
     weight: 20
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
   - /docs/insights/accounts/
+  - /docs/insights/discovery/accounts/
 pulumi_cloud_feature: insights-discovery
 ---
 
 This document outlines the steps required to create and manage a cloud account used by Discovery to scan provider resources.
 
 {{% notes type="info" %}}
-To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/insights/discovery/connect-cloud-accounts/). This page covers connecting a single account using a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configure yourself.
+To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/discovery-governance/discovery/connect-cloud-accounts/). This page covers connecting a single account using a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configure yourself.
 {{% /notes %}}
 
 ## Prerequisites
@@ -74,7 +75,7 @@ Key benefits of child accounts include:
 
 All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
 
-If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
+If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
 
 ### Viewing resources in the grid
 
@@ -84,14 +85,14 @@ If a scanned account contains resources managed by an external IaC provider, suc
     * **Project**: `my-aws-account`  
     * **Stack/Account**: `us-east-1/my-cluster`
 
-![Resources page](/docs/insights/assets/insights-resource-explorer.png)
+![Resources page](/docs/discovery-governance/assets/insights-resource-explorer.png)
 
 * **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
   * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
   * **Properties**: View detailed properties for each resource version.  
   * **References**: See edges (relationships) to other resources in the same account.
 
-![Resource details page](/docs/insights/assets/insights-resources.png)
+![Resource details page](/docs/discovery-governance/assets/insights-resources.png)
 
 ## Configure ESC credentials
 

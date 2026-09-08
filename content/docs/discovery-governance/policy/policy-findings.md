@@ -5,7 +5,7 @@ title: Policy Findings
 h1: Policy Findings
 weight: 2
 menu:
-    insights:
+    discovery-governance:
         name: Policy Findings
         parent: insights-policy
         weight: 40
@@ -17,6 +17,7 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/policy-violations/
   - /docs/insights/policy/policy-violations/
   - /docs/insights/policy/policy-packs/policy-violations/
+  - /docs/insights/policy/policy-findings/
 pulumi_cloud_feature: policy-enforcement
 ---
 
@@ -39,7 +40,7 @@ To access Policy Findings in Pulumi Cloud:
 
 The Overview tab provides an overview of your organization's security and compliance posture.
 
-![Policy Findings Overview](/docs/insights/assets/policy-findings.png)
+![Policy Findings Overview](/docs/discovery-governance/assets/policy-findings.png)
 
 ### Key metrics
 
@@ -66,7 +67,7 @@ You can filter the columns to show specific policy packs and group the data by s
 
 The Compliance tab provides a policy-centric view of your findings, grouping results by individual policies. This view allows you to review compliance on a per-policy basis and is useful during audits when reviewing controls from frameworks like CIS, NIST, or PCI DSS.
 
-![Policy Findings Compliance](/docs/insights/assets/policy-compliance.png)
+![Policy Findings Compliance](/docs/discovery-governance/assets/policy-compliance.png)
 
 The table displays the total number of failing resources per policy, organized by policy group. You can filter and sort by severity, policy group, or policy pack to analyze compliance across your organization.
 
@@ -74,7 +75,7 @@ The table displays the total number of failing resources per policy, organized b
 
 The Issues tab allows you to manage policy findings as work items. You can triage, assign, prioritize, and track the remediation of policy issues.
 
-![Policy Findings Issues](/docs/insights/assets/policy-issues.png)
+![Policy Findings Issues](/docs/discovery-governance/assets/policy-issues.png)
 
 The Issues tab displays all policy issues across your organization in a table showing the policy name, severity, priority, assigned team member, status, and resource type. You can filter issues by any of these attributes, sort by any column, and toggle between **All Issues** and **Active Issues** views. The drag-and-drop grouping interface allows you to group issues by various criteria.
 
@@ -104,7 +105,7 @@ Selecting an issue from the table opens the issue detail view, which provides co
 
 From this view, you can also assign the issue, update its status and priority, or trigger AI-powered remediation using the **Create Neo Task** button.
 
-![Policy Issue Details](/docs/insights/assets/policy-issue-detail.png)
+![Policy Issue Details](/docs/discovery-governance/assets/policy-issue-detail.png)
 
 ### Viewing the stack page
 

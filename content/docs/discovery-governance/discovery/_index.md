@@ -4,7 +4,7 @@ title_tag: "Discovery Overview | Discovery & Governance"
 meta_desc: Discover and manage all your cloud infrastructure with Pulumi's Discovery feature—scan cloud accounts, explore resources, and gain complete visibility.
 h1: Discovery
 menu:
-  insights:
+  discovery-governance:
     parent: insights-home
     identifier: insights-discovery
     weight: 5
@@ -13,6 +13,7 @@ aliases:
 - /docs/pulumi-cloud/insights/
 - /docs/insights/concepts/
 - /docs/insights/concepts/how-insights-works/
+- /docs/insights/discovery/
 pulumi_cloud_feature: insights-discovery
 ---
 
@@ -22,15 +23,15 @@ Pulumi's Discovery feature enables organizations to gain complete visibility int
 
 Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
 
-1. **Account management**: Create and configure cloud accounts on the [**Accounts** page](/docs/insights/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
+1. **Account management**: Create and configure cloud accounts on the [**Accounts** page](/docs/discovery-governance/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
 2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
 
-3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/insights/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Neo](/docs/ai/).
+3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/discovery-governance/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Neo](/docs/ai/).
 
-4. **Import**: Use [Visual Import](/docs/insights/discovery/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
+4. **Import**: Use [Visual Import](/docs/discovery-governance/discovery/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
 
-5. **Migration**: [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/insights/discovery/discovered-stacks/migrate/).
+5. **Migration**: [Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/discovery-governance/discovery/discovered-stacks/migrate/).
 
 ### Account hierarchies
 
@@ -48,7 +49,7 @@ The Resource Search interface provides:
 - **Favorites**: Save and share custom views with your team
 - **AI assist**: Use natural language queries to find resources (e.g., "How many VPCs do I have?")
 
-Resources are displayed in a paginated table showing up to 10,000 results. For larger datasets, use the [Data Export](/docs/insights/discovery/data-export/) feature or the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/).
+Resources are displayed in a paginated table showing up to 10,000 results. For larger datasets, use the [Data Export](/docs/discovery-governance/discovery/data-export/) feature or the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/).
 
 ### Resource relationships
 
@@ -77,13 +78,13 @@ Resource search is available to all organization members, but users can only see
 
 ## Next steps
 
-- [Get started with Discovery](/docs/insights/discovery/get-started/)
+- [Get started with Discovery](/docs/discovery-governance/discovery/get-started/)
 
 ## Learn more
 
-- [Connect cloud accounts in bulk](/docs/insights/discovery/connect-cloud-accounts/)
-- [Create and manage cloud accounts](/docs/insights/discovery/accounts/)
-- [Learn Resource Search syntax](/docs/insights/discovery/search/)
-- [Explore Discovered Stacks](/docs/insights/discovery/discovered-stacks/)
-- [Import resources into Pulumi IaC](/docs/insights/discovery/visual-import/)
-- [Export resource data](/docs/insights/discovery/data-export/)
+- [Connect cloud accounts in bulk](/docs/discovery-governance/discovery/connect-cloud-accounts/)
+- [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/)
+- [Learn Resource Search syntax](/docs/discovery-governance/discovery/search/)
+- [Explore Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/)
+- [Import resources into Pulumi IaC](/docs/discovery-governance/discovery/visual-import/)
+- [Export resource data](/docs/discovery-governance/discovery/data-export/)

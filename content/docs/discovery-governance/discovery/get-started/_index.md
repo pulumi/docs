@@ -5,13 +5,14 @@ h1: Get Started with Discovery
 meta_desc: Learn how to set up and manage cloud accounts to gain visibility into your cloud infrastructure.
 weight: 1
 menu:
-  insights:
+  discovery-governance:
     name: Get Started
     parent: insights-discovery
     identifier: insights-discovery-get-started
     weight: 10
 aliases:
   - /docs/insights/get-started/
+  - /docs/insights/discovery/get-started/
 pulumi_cloud_feature: insights-discovery
 ---
 

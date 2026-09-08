@@ -4,7 +4,7 @@ title_tag: "Resource Search | Discovery & Governance"
 h1: Resource Search
 meta_desc: Documentation and query syntax for the Resource Search feature in Pulumi Cloud.
 menu:
-  insights:
+  discovery-governance:
     name: Resource Search
     parent: insights-discovery
     weight: 30
@@ -14,6 +14,7 @@ aliases:
   - /docs/pulumi-cloud/insights/search/
   - /docs/insights/search/
   - /docs/insights/visibility/search/
+  - /docs/insights/discovery/search/
 pulumi_cloud_feature: resource-search
 ---
 
@@ -345,7 +346,7 @@ For example, if you want to see resources categorized by **stack** and **last mo
 1. Drag the **Stack** column into the Row Groups Header.
 2. Drag the **Modified** column next to it.
 
-![Resource Search Grouping](/docs/insights/assets/resource-search-grouping.png)
+![Resource Search Grouping](/docs/discovery-governance/assets/resource-search-grouping.png)
 
 This will create a hierarchical breakdown where:
 
@@ -366,7 +367,7 @@ Selecting the **"X"** in the filter bar will remove all previously selected filt
 
 ## Unified resources
 
-When a resource exists in multiple sources (such as both IaC stacks and Discovery scans), Pulumi Cloud consolidates these in the search results. Resources from multiple sources are indicated with a <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: sub;"> icon in the results table. This behavior helps reduce duplicate entries while ensuring all sources that match your query are considered.
+When a resource exists in multiple sources (such as both IaC stacks and Discovery scans), Pulumi Cloud consolidates these in the search results. Resources from multiple sources are indicated with a <img src="/docs/discovery-governance/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: sub;"> icon in the results table. This behavior helps reduce duplicate entries while ensuring all sources that match your query are considered.
 
 When using the "group by" functionality, a consolidated resource can appear in multiple groups if it has sources present in each group. For example, when grouping by project, a resource that exists in both an IaC stack and a Discovery scan from different projects will appear under both project groups.
 
@@ -386,7 +387,7 @@ The managed by column classifies resources into two categories:
 Expanding the "Column Filter" menu shows you the set of values found for that column along with a count for each value.
 You can then select a specific value or collection of values to filter your result set.
 
-![Resource Search Column Filter](/docs/insights/assets/column-filter.png)
+![Resource Search Column Filter](/docs/discovery-governance/assets/column-filter.png)
 
 In the example above, the query has been restricted to the "dev" stack.
 
@@ -398,7 +399,7 @@ Clicking the "X" within the search bar will remove all previously selected filte
 
 You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
 
-For a complete description of the CSV format returned, see the [Data Export](/docs/insights/discovery/data-export/) documentation.
+For a complete description of the CSV format returned, see the [Data Export](/docs/discovery-governance/discovery/data-export/) documentation.
 
 ## API access
 
@@ -430,7 +431,7 @@ You may want to expand the "Advanced filtering" menu if you are interested in sp
 
 You do not need to query AI Assist with English:
 
-![AI Assist](/docs/insights/assets/search-ai.png)
+![AI Assist](/docs/discovery-governance/assets/search-ai.png)
 
 > (type:aws:ec2/instance:Instance OR type:azure:compute:VirtualMachine OR type:gcp:compute:Instance)
 

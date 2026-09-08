@@ -5,13 +5,14 @@ h1: Create a Cloud Account
 meta_desc: This page provides an overview on how to create a cloud account in Pulumi.
 weight: 3
 menu:
-  insights:
+  discovery-governance:
     name: Create Accounts
     parent: insights-discovery-get-started
     identifier: insights-get-started-accounts
     weight: 3
 aliases:
   - /docs/insights/get-started/create-accounts/
+  - /docs/insights/discovery/get-started/create-accounts/
 pulumi_cloud_feature: insights-discovery
 ---
 
@@ -27,7 +28,7 @@ Currently while in public preview, Discovery supports AWS, Azure, Oracle Cloud, 
 
 1. Select **Connect cloud accounts** and choose your cloud provider. For this example, choose **AWS**.
 
-1. On the **Authentication** step, keep the recommended **Connect using IAM Identity Center (SSO)** option. Enter your organization's **SSO start URL** and **Region**, then select **Next** and approve the authorization request that AWS opens in a new window. The wizard then lists the AWS accounts you can access. If your organization doesn't use IAM Identity Center, choose **Connect using static credentials**, or **Connect using existing ESC credentials** with [an environment you configure yourself](/docs/insights/discovery/accounts/#configure-esc-credentials).
+1. On the **Authentication** step, keep the recommended **Connect using IAM Identity Center (SSO)** option. Enter your organization's **SSO start URL** and **Region**, then select **Next** and approve the authorization request that AWS opens in a new window. The wizard then lists the AWS accounts you can access. If your organization doesn't use IAM Identity Center, choose **Connect using static credentials**, or **Connect using existing ESC credentials** with [an environment you configure yourself](/docs/discovery-governance/discovery/accounts/#configure-esc-credentials).
 
 1. On the **Accounts** step, the wizard pre-selects every discovered account that isn't already connected. For this tutorial, select **Edit selected accounts** and narrow the selection to a single account. Keep the default **Build & Manage** access level, or switch to the read-only **Discovery & Policy** level if your security review requires it.
 
@@ -39,7 +40,7 @@ Scheduled scans run every 24 hours by default; you can switch to a 12-hour sched
 
 To finish, select **Next**. The wizard creates the IAM role and an ESC environment for the account, connects it, and shows a summary with next steps. The account in Pulumi is named after the AWS account it connects: for example, an AWS account named `production` becomes the `production` account in Pulumi. The rest of this guide uses `production` as the example name; substitute the name of the account you connected.
 
-For the full reference on the wizard, including the other authentication options and what gets created in your cloud accounts, see [Connect cloud accounts](/docs/insights/discovery/connect-cloud-accounts/).
+For the full reference on the wizard, including the other authentication options and what gets created in your cloud accounts, see [Connect cloud accounts](/docs/discovery-governance/discovery/connect-cloud-accounts/).
 
 Next, you will learn how to manage your accounts, and manually launch a scan.
 

@@ -4,10 +4,12 @@ title_tag: "CI/CD Integration | Pulumi Policies"
 h1: Policy Enforcement in CI/CD
 meta_desc: Enforce Pulumi policies in CI/CD pipelines to automatically block non-compliant infrastructure changes before deployment.
 menu:
-  insights:
+  discovery-governance:
     name: CI/CD Integration
     parent: insights-policy
     weight: 56
+aliases:
+- /docs/insights/policy/ci-cd/
 ---
 
 Pulumi policies integrate with CI/CD pipelines to automatically enforce compliance and security rules on every deployment. When policy packs are enabled for your organization, they run during `pulumi preview` and `pulumi up`, including when these commands execute in CI/CD workflows. Non-compliant changes are blocked before they reach production.
@@ -19,13 +21,13 @@ Pulumi policies integrate with CI/CD pipelines to automatically enforce complian
 When your CI/CD pipeline runs Pulumi commands, policy enforcement happens automatically:
 
 1. The pipeline runs `pulumi preview` or `pulumi up`.
-1. Pulumi Cloud downloads the policy packs assigned to the stack via [policy groups](/docs/insights/policy/policy-groups/).
+1. Pulumi Cloud downloads the policy packs assigned to the stack via [policy groups](/docs/discovery-governance/policy/policy-groups/).
 1. Each policy pack evaluates the proposed infrastructure changes.
 1. If any policy in **advisory** mode detects a violation, a warning is logged but the operation continues.
 1. If any policy in **mandatory** mode detects a violation, the operation fails and the pipeline stops.
 
 {{% notes type="warning" %}}
-Your CI image needs the policy pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) installed, which is not necessarily the runtime your Pulumi program uses. All of Pulumi's pre-built policy packs run on Node.js, so a Python or Go pipeline that enforces one needs Node.js in the image as well.
+Your CI image needs the policy pack's [runtime](/docs/discovery-governance/policy/policy-packs/#runtime-requirements) installed, which is not necessarily the runtime your Pulumi program uses. All of Pulumi's pre-built policy packs run on Node.js, so a Python or Go pipeline that enforces one needs Node.js in the image as well.
 {{% /notes %}}
 
 You can also run policy packs locally in CI by passing the `--policy-pack` flag:
@@ -77,7 +79,7 @@ For the full list of CI/CD integrations, see the [continuous delivery guides](/d
 
 ## Best practices
 
-- **Use policy groups to vary enforcement by environment.** Apply stricter (mandatory) policies to production stacks and advisory policies to development stacks. See [policy groups](/docs/insights/policy/policy-groups/) for details.
+- **Use policy groups to vary enforcement by environment.** Apply stricter (mandatory) policies to production stacks and advisory policies to development stacks. See [policy groups](/docs/discovery-governance/policy/policy-groups/) for details.
 - **Cache policy packs in CI.** Caching the `~/.pulumi/policies` directory reduces download time on repeated runs.
 - **Test policy changes before enforcing.** Publish policy pack updates and test them in advisory mode before switching to mandatory enforcement.
 - **Run `pulumi preview` in pull request checks.** This catches policy violations early, before changes are merged.

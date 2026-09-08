@@ -5,7 +5,7 @@ title: Snyk Container Scanning
 h1: Snyk Container Scanning
 weight: 4
 menu:
-    insights:
+    discovery-governance:
         name: Snyk Container Scanning
         parent: integrations
         weight: 1
@@ -18,6 +18,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/snyk-policy/
   - /docs/iac/using-pulumi/crossguard/snyk-policy/
   - /docs/insights/policy/snyk-policy/
+  - /docs/insights/policy/integrations/snyk-policy/
 ---
 <!-- markdownlint-disable ul code -->
 
@@ -29,7 +30,7 @@ aliases:
 
 [Snyk container scanning](https://github.com/pulumi/templates-policy/tree/master/snyk-typescript) is a Pulumi policy as code template that allows you to uses the [Snyk CLI](https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-container/scan-container-images) to scan [`docker.Image`](/registry/packages/docker/api-docs/image/) resources for vulnerabilities.
 
-For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/insights/policy/get-started/).
+For more information on Pulumi's Policy as Code solution, see [Get started with Pulumi policy as code](/docs/discovery-governance/policy/get-started/).
 
 ## Using Snyk container scanning
 
@@ -263,8 +264,8 @@ To set the configuration, you can do one of the following:
     ```
 
     (Relative paths in the above command will also work.)
-1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/insights/policy/policy-packs/#pulumi-cloud-configuration).
+1. If using Pulumi Cloud's server-side enforcement, policy pack configuration can be centrally managed in the Pulumi Cloud UI. For details, see [Configuring policy packs](/docs/discovery-governance/policy/policy-packs/#pulumi-cloud-configuration).
 
 ## Next steps
 
-Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/insights/policy/get-started#enforcing-a-policy-pack).
+Once you've tested the Policy Pack, an organization administrator can publish the Policy Pack to Pulumi Cloud to be enforced across your organization. To learn more,see [Enforcing a Policy Pack Across an Organization](/docs/discovery-governance/policy/get-started#enforcing-a-policy-pack).

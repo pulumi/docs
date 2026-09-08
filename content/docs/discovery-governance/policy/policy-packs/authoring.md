@@ -4,7 +4,7 @@ title_tag: "Write your own policy packs"
 h1: Write your own policy packs
 meta_desc: Learn how to write custom policy packs to enforce organization-specific compliance and security controls.
 menu:
-  insights:
+  discovery-governance:
     name: Write your own
     parent: policy-packs
     weight: 20
@@ -20,7 +20,7 @@ aliases:
 
 If Pulumi's pre-built policy packs don't meet your requirements, you can write custom policy packs. Custom policies let you enforce any compliance, security, or operational rule.
 
-Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/insights/policy/#languages).
+Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language. Learn more about [language support for policies](/docs/discovery-governance/policy/#languages).
 
 ### Creating a Policy Pack with Neo
 
@@ -43,9 +43,9 @@ Before authoring your first policy pack, ensure you have:
 - For Python policies: [Python installed](https://python.org/downloads/).
 - For OPA policies: Pulumi CLI v3.227.0+ automatically installs the OPA analyzer plugin on first use. No manual installation is needed.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
-- An understanding of [Policy as Code core concepts](/docs/insights/policy/).
+- An understanding of [Policy as Code core concepts](/docs/discovery-governance/policy/).
 
-The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/insights/policy/policy-packs/#runtime-requirements).
+The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/discovery-governance/policy/policy-packs/#runtime-requirements).
 
 ## Creating a policy pack
 
@@ -74,7 +74,7 @@ Create your first policy pack:
     - A validation function (this example uses `validateResourceOfType` to run only for AWS RDS instance resources)
     - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
-    > For more information on all available fields, see [policy metadata](/docs/insights/policy/policy-as-code/policy-metadata/).
+    > For more information on all available fields, see [policy metadata](/docs/discovery-governance/policy/policy-as-code/policy-metadata/).
 
     ```typescript
     import * as aws from "@pulumi/aws";
@@ -128,7 +128,7 @@ Create your first policy pack:
     $ pulumi policy new aws-python
     ```
 
-    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`. See the [project file reference](/docs/insights/policy/policy-packs/project-file/) for all available settings.
+    > **Virtual environment configuration**: Python policy packs use a virtual environment specified in `PulumiPolicy.yaml`. The default name is `venv`. If you use a different name (like `.venv`), update `PulumiPolicy.yaml`. See the [project file reference](/docs/discovery-governance/policy/policy-packs/project-file/) for all available settings.
     >
     > ```yaml
     > runtime:
@@ -533,7 +533,7 @@ PolicyPack(
 {{% notes type="info" %}}
 Stack tags are available on both `StackValidationArgs` and `ResourceValidationArgs`, so resource-level policies can also make decisions based on stack metadata.
 
-You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`pulumi:tags` config](/docs/iac/concepts/config/#pulumitags) in your `Pulumi.yaml` or `Pulumi.<stack>.yaml` file, the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/insights/policy/policy-groups/).
+You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`pulumi:tags` config](/docs/iac/concepts/config/#pulumitags) in your `Pulumi.yaml` or `Pulumi.<stack>.yaml` file, the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/discovery-governance/policy/policy-groups/).
 {{% /notes %}}
 
 {{% notes type="info" %}}
@@ -634,7 +634,7 @@ A few behaviors are specific to remediation:
 - If a resource still triggers a violation after remediation runs, the reported level is downgraded from `remediate` to `mandatory`, and the deployment is blocked rather than silently allowed through with an unresolved problem.
 - When more than one policy pack applies to a resource, their remediations run sequentially in the order the packs were loaded, and each remediation sees the resource state as modified by the ones that ran before it, so a later remediation can build on an earlier one.
 - A policy whose enforcement level is `remediate` but which does not implement a remediation function is reported as not implementing remediation, so a resource going through it is neither fixed nor blocked.
-- The `remediationSteps` metadata field (see [policy metadata](/docs/insights/policy/policy-packs/metadata/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
+- The `remediationSteps` metadata field (see [policy metadata](/docs/discovery-governance/policy/policy-packs/metadata/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
 
 ## Writing policies for dynamic providers
 
@@ -1331,7 +1331,7 @@ Policy pack versions are managed differently by language:
 - **Python**: Set the `version` field in `PulumiPolicy.yaml`
 - **OPA**: Set the `version` field in `PulumiPolicy.yaml`
 
-For a complete list of `PulumiPolicy.yaml` fields, see the [project file reference](/docs/insights/policy/policy-packs/project-file/).
+For a complete list of `PulumiPolicy.yaml` fields, see the [project file reference](/docs/discovery-governance/policy/policy-packs/project-file/).
 
 Each version can only be published once.
 
@@ -1361,7 +1361,7 @@ We recommend [semantic versioning](https://semver.org/):
 - **Minor** (1.0.0 → 1.1.0): New policies added
 - **Patch** (1.0.0 → 1.0.1): Bug fixes
 
-After publishing, your policy pack appears in Pulumi Cloud's policy pack list. Apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policies](/docs/insights/policy/get-started/) for details.
+After publishing, your policy pack appears in Pulumi Cloud's policy pack list. Apply it to stacks or cloud accounts using policy groups. See [Get Started with Pulumi Policies](/docs/discovery-governance/policy/get-started/) for details.
 
 ## Considerations for authoring policies
 
@@ -1386,12 +1386,12 @@ This format helps users understand which resource failed and why.
 ## Examples and resources
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
-- [Policy as Code overview](/docs/insights/policy/)
-- [Policy Metadata fields](/docs/insights/policy/metadata/)
+- [Policy as Code overview](/docs/discovery-governance/policy/)
+- [Policy Metadata fields](/docs/discovery-governance/policy/metadata/)
 
 ## Next steps
 
-- [Apply policies to stacks and accounts using policy groups](/docs/insights/policy/get-started/)
-- [View and manage policy findings](/docs/insights/policy/policy-findings/)
-- [Learn about policy groups and enforcement modes](/docs/insights/policy/policy-groups/#types-of-policy-groups)
-- [Learn about policy pack configuration](/docs/insights/policy/policy-packs/)
+- [Apply policies to stacks and accounts using policy groups](/docs/discovery-governance/policy/get-started/)
+- [View and manage policy findings](/docs/discovery-governance/policy/policy-findings/)
+- [Learn about policy groups and enforcement modes](/docs/discovery-governance/policy/policy-groups/#types-of-policy-groups)
+- [Learn about policy pack configuration](/docs/discovery-governance/policy/policy-packs/)

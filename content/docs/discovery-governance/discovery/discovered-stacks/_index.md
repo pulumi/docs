@@ -4,18 +4,19 @@ title_tag: "Discovered Stacks | Discovery & Governance"
 h1: Discovered Stacks
 meta_desc: Discovered Stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi IaC stacks, with a seamless migration path.
 menu:
-  insights:
+  discovery-governance:
     name: Discovered Stacks
     parent: insights-discovery
     identifier: insights-discovery-discovered-stacks
     weight: 45
-aliases: []
+aliases:
+- /docs/insights/discovery/discovered-stacks/
 pulumi_cloud_feature: insights-discovery
 ---
 
-Discovered Stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Discovery](/docs/insights/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments, and represents them as discovered stacks in Pulumi Cloud — one per CloudFormation stack, and one per Azure resource group, combining every deployment made to it.
+Discovered Stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Discovery](/docs/discovery-governance/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments, and represents them as discovered stacks in Pulumi Cloud — one per CloudFormation stack, and one per Azure resource group, combining every deployment made to it.
 
-A discovered stack looks and navigates like any other Pulumi stack: it appears on the Stacks page, lists its resources, and shows per-resource detail. Every resource also carries a [migration status](#migration-statuses), so a discovered stack doubles as a live, auditable record of how far along you are in [migrating it to Pulumi IaC](/docs/insights/discovery/discovered-stacks/migrate/).
+A discovered stack looks and navigates like any other Pulumi stack: it appears on the Stacks page, lists its resources, and shows per-resource detail. Every resource also carries a [migration status](#migration-statuses), so a discovered stack doubles as a live, auditable record of how far along you are in [migrating it to Pulumi IaC](/docs/discovery-governance/discovery/discovered-stacks/migrate/).
 
 ## Sources
 
@@ -24,7 +25,7 @@ Discovered stacks are created automatically. Whenever a scanned account contains
 - **AWS CloudFormation**: each CloudFormation stack becomes a discovered stack. For CDK applications, the synthesized CloudFormation stacks are discovered.
 - **Azure Resource Manager**: Discovery reads every ARM and Bicep deployment made to a resource group and combines their resources into one discovered stack per resource group — including resources whose deployment history has aged out of Azure's retention window.
 
-To set up scanning, see [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
+To set up scanning, see [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/).
 
 ## Naming
 
@@ -66,12 +67,12 @@ To fully keep track of a migration, you can record how you handled resources tha
 Resolve a resource when it has nothing left to import on its own — deleted, an inline definition covered by its parent's migration, or with no Pulumi equivalent you need — or when you have migrated it in a way the console can't detect automatically. When you mark a resource resolved, you can:
 
 - **Add a comment** explaining the decision, so the reasoning is there for whoever looks next — for example, "deleted; nothing to migrate" or "covered by its parent role."
-- **Link the target-stack resource** you migrated it into. For non-direct migrations — a resource imported under a corrected type, or one whose Pulumi form doesn't line up one-to-one with the source — the console can't pair the two automatically; linking them records the migration explicitly and keeps source and target connected. See [Link an imported resource to its origin](/docs/insights/discovery/discovered-stacks/migrate/#link-an-imported-resource-to-its-origin) for a worked example.
+- **Link the target-stack resource** you migrated it into. For non-direct migrations — a resource imported under a corrected type, or one whose Pulumi form doesn't line up one-to-one with the source — the console can't pair the two automatically; linking them records the migration explicitly and keeps source and target connected. See [Link an imported resource to its origin](/docs/discovery-governance/discovery/discovered-stacks/migrate/#link-an-imported-resource-to-its-origin) for a worked example.
 
 Together with the computed statuses, this keeps the record complete: every resource is either migrated or deliberately resolved — never quietly forgotten.
 
 ## Next steps
 
-- [Migrate from a Discovered Stack](/docs/insights/discovery/discovered-stacks/migrate/)
-- [Create and manage cloud accounts](/docs/insights/discovery/accounts/)
+- [Migrate from a Discovered Stack](/docs/discovery-governance/discovery/discovered-stacks/migrate/)
+- [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/)
 - [Migrating from AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)

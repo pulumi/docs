@@ -4,16 +4,18 @@ title_tag: Connect Cloud Accounts | Discovery & Governance
 h1: Connect Cloud Accounts
 meta_desc: Use the Connect cloud accounts wizard to onboard AWS, Azure, and Google Cloud accounts to Pulumi in bulk with OIDC authentication.
 menu:
-  insights:
+  discovery-governance:
     name: Connect Cloud Accounts
     parent: insights-discovery
     weight: 15
+aliases:
+- /docs/insights/discovery/connect-cloud-accounts/
 pulumi_cloud_feature: insights-discovery
 ---
 
 The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.
 
-The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
+The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/).
 
 ## Prerequisites
 
@@ -37,7 +39,7 @@ The wizard opens as a panel and walks you through the onboarding steps.
 
 Select the provider you want to connect: AWS, Microsoft Azure, or Google Cloud. Kubernetes and Oracle Cloud are also listed, but they connect through an existing ESC environment rather than the bulk discovery flow.
 
-![The Connect cloud accounts wizard showing the cloud provider selection step with AWS, Azure, Google Cloud, Kubernetes, and Oracle Cloud options](/docs/insights/assets/connect-cloud-accounts-provider.png)
+![The Connect cloud accounts wizard showing the cloud provider selection step with AWS, Azure, Google Cloud, Kubernetes, and Oracle Cloud options](/docs/discovery-governance/assets/connect-cloud-accounts-provider.png)
 
 ## Step 2: Authenticate
 
@@ -49,7 +51,7 @@ Each provider offers a recommended browser-based sign-in that uses OIDC, plus al
 
 **Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account you can access in your organization. Authentication doesn't create anything in your accounts; the wizard creates the IAM role in each account later, after you select accounts and choose an access level.
 
-![The authentication step for AWS showing the IAM Identity Center option selected with SSO start URL and region fields](/docs/insights/assets/connect-cloud-accounts-authentication.png)
+![The authentication step for AWS showing the IAM Identity Center option selected with SSO start URL and region fields](/docs/discovery-governance/assets/connect-cloud-accounts-authentication.png)
 
 Alternatively, you can connect using:
 
@@ -102,7 +104,7 @@ Alternatively, you can connect using:
 
 The wizard shows how many accounts, subscriptions, or projects it discovered and pre-selects everything that isn't already connected. Select **Edit selected accounts** (the label matches the provider: accounts, subscriptions, or projects) to open the picker, where you can search, select all, or toggle individual accounts. Accounts that are already connected appear with an **Already onboarded** badge and can't be selected again. You must select at least one account to continue.
 
-![The account picker showing discovered AWS accounts with checkboxes, a search box, and a select all option](/docs/insights/assets/connect-cloud-accounts-picker.png)
+![The account picker showing discovered AWS accounts with checkboxes, a search box, and a select all option](/docs/discovery-governance/assets/connect-cloud-accounts-picker.png)
 
 ### Choose an access level
 
@@ -113,13 +115,13 @@ The access level determines which permissions Pulumi receives in each account:
 
 Select **Change access level** to switch the default, or set a different level for individual accounts under **Per account access**. If your security review requires it, start with read-only access; you can raise access for specific accounts later.
 
-![The accounts step showing the selected accounts summary, the Build and Manage access level card, and per account access controls](/docs/insights/assets/connect-cloud-accounts-access-level.png)
+![The accounts step showing the selected accounts summary, the Build and Manage access level card, and per account access controls](/docs/discovery-governance/assets/connect-cloud-accounts-access-level.png)
 
 ## Step 4: Configure discovery and policy
 
 These settings apply to every account you're connecting. You can adjust each account's scanning and policy settings after setup from its **Manage** tab.
 
-![The discovery step showing the scanning toggle, scan frequency dropdown, AWS partition selector, scan regions selector, and policy pack settings](/docs/insights/assets/connect-cloud-accounts-discovery.png)
+![The discovery step showing the scanning toggle, scan frequency dropdown, AWS partition selector, scan regions selector, and policy pack settings](/docs/discovery-governance/assets/connect-cloud-accounts-discovery.png)
 
 ### Scan schedule
 
@@ -135,7 +137,7 @@ For AWS, choose the regions to scan. The defaults are `us-east-1`, `us-east-2`, 
 
 ### Policy pack
 
-Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and for AWS or Google Cloud, you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
+Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and for AWS or Google Cloud, you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
 
 When you're done, select **Next**. The wizard then creates the resources described in [What the wizard creates](#what-the-wizard-creates) and connects each selected account.
 
@@ -150,7 +152,7 @@ After setup completes, the summary shows:
 
 If some accounts couldn't be connected, the summary lists each failed account with the error it hit so you can fix the cause and retry. See [Troubleshooting](#troubleshooting).
 
-![The summary step showing setup complete with discovery running, the policy pack applied, and the list of created ESC environments](/docs/insights/assets/connect-cloud-accounts-summary.png)
+![The summary step showing setup complete with discovery running, the policy pack applied, and the list of created ESC environments](/docs/discovery-governance/assets/connect-cloud-accounts-summary.png)
 
 ## What the wizard creates
 
@@ -182,7 +184,7 @@ The wizard doesn't detect access that the service principal already inherits fro
 
 ### Grant the role yourself at management-group scope
 
-If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage cloud accounts](/docs/insights/discovery/accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
+If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
 
 Because the environment carries the subscription ID, this path takes one ESC environment and one wizard run per subscription. Reuse a single app registration across those environments rather than creating one per subscription. Each environment needs its own federated identity credential, because the subject identifier includes the environment path, and Azure limits an app registration to 20 federated identity credentials. If you are onboarding more subscriptions than that, use the wizard's OIDC flow, which shares a single environment and credential across the tenant.
 
@@ -190,7 +192,7 @@ Because the environment carries the subscription ID, this path takes one ESC env
 
 ### Some accounts failed to connect
 
-When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
+When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/).
 
 ### AWS IAM role creation is denied
 
@@ -202,11 +204,11 @@ Connecting a cloud account creates an ESC environment and a trust role in your c
 
 ## Next steps
 
-- [Search your discovered resources](/docs/insights/discovery/search/)
-- [Review policy findings](/docs/insights/policy/policy-findings/)
-- [Import discovered resources into Pulumi IaC](/docs/insights/discovery/visual-import/)
+- [Search your discovered resources](/docs/discovery-governance/discovery/search/)
+- [Review policy findings](/docs/discovery-governance/policy/policy-findings/)
+- [Import discovered resources into Pulumi IaC](/docs/discovery-governance/discovery/visual-import/)
 
 ## Learn more
 
-- [Get started with Discovery](/docs/insights/discovery/get-started/)
+- [Get started with Discovery](/docs/discovery-governance/discovery/get-started/)
 - [Pulumi ESC](/docs/esc/)

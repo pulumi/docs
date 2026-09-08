@@ -5,19 +5,20 @@ h1: Using Resource Explorer
 meta_desc: This page provides an overview on how to explore discovered resources with Resource Explorer.
 weight: 5
 menu:
-  insights:
+  discovery-governance:
     name: Using Resource Explorer
     parent: insights-discovery-get-started
     identifier: insights-get-started-resource-explorer
     weight: 5
 aliases:
   - /docs/insights/get-started/using-resource-explorer/
+  - /docs/insights/discovery/get-started/using-resource-explorer/
 pulumi_cloud_feature: resource-search
 ---
 
-[Pulumi Resource Explorer](/docs/insights/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
+[Pulumi Resource Explorer](/docs/discovery-governance/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
-![Resource Explorer showing discovered resources](/docs/insights/assets/insights-resource-explorer.png)
+![Resource Explorer showing discovered resources](/docs/discovery-governance/assets/insights-resource-explorer.png)
 
 Pulumi Resource Explorer is composed of:
 
@@ -31,7 +32,7 @@ Pulumi Resource Explorer is composed of:
 
 The Resources Explorer and Resources Search enables you to ask questions that significantly improves the process for managing your infrastructure and getting answers to key questions needed for your projects.
 
-Let's look at some common use cases and questions you might have about your infrastructure using [keywords, query syntax](/docs/insights/discovery/search/) as well as Pulumi AI assist, where you can type what you’re looking for Pulumi will suggest the search syntax.
+Let's look at some common use cases and questions you might have about your infrastructure using [keywords, query syntax](/docs/discovery-governance/discovery/search/) as well as Pulumi AI assist, where you can type what you’re looking for Pulumi will suggest the search syntax.
 
 ### Search with keywords or query syntax
 
@@ -39,7 +40,7 @@ Let's look at some common use cases and questions you might have about your infr
 
 `modified:<now-30d`
 
-![Resource Explorer filtered to resources modified in the last 30 days](/docs/insights/assets/resource-explorer-filter-30days.png)
+![Resource Explorer filtered to resources modified in the last 30 days](/docs/discovery-governance/assets/resource-explorer-filter-30days.png)
 
 You can also filter your search using the most common keywords, such as **Type**, **Project**, **Stack** and more.
 
@@ -55,7 +56,7 @@ To quickly find the right keywords and search syntax, you can ask natural langua
 
 `type:"aws:s3/bucket:Bucket" OR type:"gcp:storage/bucket:Bucket" OR type:"azure:storage/bucket:Bucket"`
 
-![Insights Explorer Ai assist vm](/docs/insights/assets/resource-explorer-pulumi-ai-assist-cloud-buckets.png)
+![Insights Explorer Ai assist vm](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-cloud-buckets.png)
 
 Let's say you are working with your security team as part of an audit, you could quickly find (or confirm compliance) on risks such as public facing S3 buckets.
 
@@ -63,7 +64,7 @@ Let's say you are working with your security team as part of an audit, you could
 
 `type:"aws:s3/bucket:Bucket" .acl:public-read`
 
-![Insights Explorer Ai assist public s3](/docs/insights/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
+![Insights Explorer Ai assist public s3](/docs/discovery-governance/assets/resource-explorer-pulumi-ai-assist-public-s3.png)
 
 With Pulumi Neo and Resource Search, you are able to gain insights and ask questions about your infrastructure that would otherwise be challenging to answer, saving time and providing the critical information needed
 

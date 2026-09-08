@@ -4,7 +4,7 @@ title_tag: "Pre-built policy packs"
 h1: Pre-Built Packs
 meta_desc: Use pre-built policy packs to apply industry-standard compliance and security controls to your cloud infrastructure as code.
 menu:
-  insights:
+  discovery-governance:
     parent: policy-packs
     weight: 10
 aliases:
@@ -16,6 +16,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-aws
   - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-azure
   - /docs/iac/packages-and-automation/crossguard/compliance-ready-policies-gcp
+  - /docs/insights/policy/policy-packs/pre-built-packs/
 ---
 
 Pulumi Cloud comes with pre-built policy packs that codify best practices for common security and compliance frameworks. These packs allow you to quickly evaluate your organization's compliance posture and "shift left," embedding continuous compliance directly into your IaC workflow. Proactively enforce controls, reduce misconfiguration risks before deployment, and help your organization meet its regulatory obligations with confidence.
@@ -45,13 +46,13 @@ The following pre-built policy packs are available out of the box in Pulumi Clou
 | **NIST SP 800-53** | [AWS](/docs/reference/pre-built-policy-packs/nist/aws/), [Azure](/docs/reference/pre-built-policy-packs/nist/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/nist/google-cloud/) | Business Critical | Enforces NIST SP 800-53 rev. 5 security and privacy controls across multiple cloud providers, helping federal agencies and organizations meet rigorous compliance requirements. |
 | **PCI DSS v4.0.1** | [AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/), [Azure](/docs/reference/pre-built-policy-packs/pci-dss/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pci-dss/google-cloud/) | Business Critical | Enforces PCI DSS v4.0.1 compliance controls across multiple cloud providers, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Team and above | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
-| **AWS Organizations Tag Policies** | [AWS and AWS-Native](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) | Team and above | Integrates with AWS Organizations Tag Policies to validate that infrastructure as code resources have required tags before deployment. [Learn more](/docs/insights/policy/integrations/aws-organizations-tag-policies/). |
+| **AWS Organizations Tag Policies** | [AWS and AWS-Native](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) | Team and above | Integrates with AWS Organizations Tag Policies to validate that infrastructure as code resources have required tags before deployment. [Learn more](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/). |
 
 ### A foundation for your governance strategy
 
 Our pre-built packs provide a strong foundation for cloud governance by covering common controls for major frameworks. However, every organization has unique requirements.
 
-We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/insights/policy/get-started/#creating-a-policy-pack) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
+We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/discovery-governance/policy/get-started/#creating-a-policy-pack) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
 
 ### Frequently asked questions (FAQ)
 
@@ -63,4 +64,4 @@ Policy Packs in the Pulumi Registry follow semantic versioning. We release new v
 
 They are designed to work together. You can add both a pre-built pack (like Pulumi Best Practices) and your own custom-authored policy pack to the same Policy Group. This allows you to enforce both general best practices and your organization-specific rules on the same set of stacks.
 
-For more information on authoring custom policy packs, see our [Policy as Code get started guide](/docs/insights/policy/get-started/).
+For more information on authoring custom policy packs, see our [Policy as Code get started guide](/docs/discovery-governance/policy/get-started/).

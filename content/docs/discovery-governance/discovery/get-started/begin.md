@@ -5,13 +5,14 @@ h1: Before You Begin
 meta_desc: This page provides an overview on how to get started with cloud accounts in Pulumi.
 weight: 2
 menu:
-  insights:
+  discovery-governance:
     name: Before You Begin
     parent: insights-discovery-get-started
     identifier: insights-get-started-begin
     weight: 2
 aliases:
   - /docs/insights/get-started/begin/
+  - /docs/insights/discovery/get-started/begin/
 pulumi_cloud_feature: insights-discovery
 ---
 
@@ -32,7 +33,7 @@ You don't need to create credentials or ESC environments ahead of time. The **Co
 Discovery uses Pulumi ESC to securely manage the credentials required to scan your infrastructure. The wizard generates these environments for you, following the same best practices as the manual OIDC guides for [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), and [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/).
 {{% /notes %}}
 
-Oracle Cloud and Kubernetes accounts connect through an ESC environment that you configure yourself. If you're connecting one of those providers, set up the environment first by following [Create and manage cloud accounts](/docs/insights/discovery/accounts/#configure-esc-credentials).
+Oracle Cloud and Kubernetes accounts connect through an ESC environment that you configure yourself. If you're connecting one of those providers, set up the environment first by following [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/#configure-esc-credentials).
 
 Next, you'll connect a cloud account and kick off your first discovery scan.
 

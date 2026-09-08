@@ -4,19 +4,20 @@ title_tag: "Query the Context API"
 h1: Query the Context API
 meta_desc: "Learn how to build Context API graph queries, follow infrastructure relationships, interpret results, and use the JSON selector reference."
 menu:
-  insights:
+  discovery-governance:
     name: Query the Context API
     parent: insights-context-api
     weight: 10
 aliases:
   - /docs/insights/context-api/query-reference/
+  - /docs/insights/guides/context-api/
 pulumi_cloud_feature: context-api
 ---
-The Context API is a read-only Pulumi Cloud API for querying the infrastructure graph. For an introduction to the product, use cases, and access requirements, see the [Context API overview](/docs/insights/context-api/).
+The Context API is a read-only Pulumi Cloud API for querying the infrastructure graph. For an introduction to the product, use cases, and access requirements, see the [Context API overview](/docs/discovery-governance/context-api/).
 
 Most people use the Context API through an AI agent: ask a question in natural language, and the agent composes and runs a graph query. This guide is the human-readable technical reference for understanding and validating the selectors and responses behind that interaction or building a direct integration.
 
-The graph connects nodes like resources (IaC or [Discovered](/docs/insights/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
+The graph connects nodes like resources (IaC or [Discovered](/docs/discovery-governance/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
 A graph query uses a JSON selector that says where to start, which relationships to follow, and which parts of the result to return. The API returns the selected graph data as nodes, edges, and optional evidence paths. Selectors are plain JSON, not queries written in GraphQL, GQL, or the Cypher query language.
 
@@ -367,7 +368,7 @@ Even an exact, complete, fully drained response can fail to support the conclusi
 - Scope, predicates, edge types, and traversal depth define the question. For example, a three-hop query says nothing about a fourth-hop consumer and still reports `exact`.
 - [Pulumi Cloud RBAC](/docs/administration/concepts/rbac/) limits anchor selection, aggregation, and traversal to nodes the caller can read. `meta.visibility` reports when the API detects RBAC filtering during traversal; it does not report matching anchors excluded by RBAC. To make an organization-wide absence or total claim, run the query with read access to every stack and cloud account. Otherwise, limit the claim to nodes the caller can read.
 - The API answers from the search index. Indexing lag, relationships the graph does not model, and `inferred_reference` edges can make the indexed graph differ from the source of record. An `inferred_reference` represents a possible dependency rather than a declared relationship.
-- Resources pending deletion are outside the graph, so a graph count can be lower than a [Resource Search](/docs/insights/discovery/search/) count over an otherwise similar selection.
+- Resources pending deletion are outside the graph, so a graph count can be lower than a [Resource Search](/docs/discovery-governance/discovery/search/) count over an otherwise similar selection.
 - Pages are evaluated as they are requested. If the graph changes while you drain a query, the combined pages may be inconsistent.
 - `fieldsUnavailable: true` means projected fields could not be evaluated for that node. Do not base a field-dependent conclusion on that node's missing keys.
 
@@ -770,7 +771,7 @@ An anchor accepts these fields:
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `nodeType` | Yes      | The node type to select: `resource` or `stack`.                                                                                             |
 | `match`    | No       | A structured match. All present predicates are combined with AND.                                                                           |
-| `query`    | No       | A [Resource Search query](/docs/insights/discovery/search/) string. Valid only for a `resource` anchor and mutually exclusive with `match`. |
+| `query`    | No       | A [Resource Search query](/docs/discovery-governance/discovery/search/) string. Valid only for a `resource` anchor and mutually exclusive with `match`. |
 | `limit`    | No       | Bounds resolved anchors. Under aggregation it limits returned buckets, not the resources counted in a returned bucket.                      |
 
 Omitting both `match` and `query` selects every visible node of the given type. For resource anchors, `match.type` is an exact resource type token such as `aws:s3/bucket:Bucket`. For `match.fields`, use fields listed in the deployed schema under `nodeTypes[].selectableFields`.

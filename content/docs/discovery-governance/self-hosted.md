@@ -4,13 +4,15 @@ title_tag: Self-hosted Insights | Discovery & Governance
 h1: Self-hosted Insights
 meta_desc: Run Discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
 menu:
-  insights:
+  discovery-governance:
     parent: insights-home
     weight: 50
+aliases:
+- /docs/insights/self-hosted/
 pulumi_cloud_feature: insights-self-hosted
 ---
 
-Pulumi Insights supports self-hosted operation through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [Discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
+Pulumi Insights supports self-hosted operation through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [Discovery scans](/docs/discovery-governance/discovery/) and [policy evaluations](/docs/discovery-governance/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
 
 ## Benefits
 

@@ -5,7 +5,7 @@ meta_desc: Pulumi Policies is a product that provides gated deployments via Poli
 title: Get Started
 h1: Get Started with Pulumi Policies
 menu:
-    insights:
+    discovery-governance:
         name: Get Started
         parent: insights-policy
         weight: 10
@@ -21,6 +21,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
   - /docs/iac/using-pulumi/crossguard/get-started/
   - /docs/iac/packages-and-automation/crossguard/get-started/
+  - /docs/insights/policy/get-started/
 pulumi_cloud_feature: policy-enforcement
 ---
 
@@ -29,7 +30,7 @@ Pulumi Policies enforces compliance, security, and best practices across your cl
 Policy enforcement is applied in two ways:
 
 - **Preventative**: Blocking non-compliant resources before deployment during Pulumi stack updates
-- **Audit**: Continuously scan existing resources discovered through [Discovery](/docs/insights/discovery/) to identify violations
+- **Audit**: Continuously scan existing resources discovered through [Discovery](/docs/discovery-governance/discovery/) to identify violations
 
 This guide walks you through getting started with Pulumi Policies using both preventative and audit policies.
 
@@ -39,7 +40,7 @@ To follow this guide, ensure you have:
 
 - Access to Pulumi Cloud with Policy enabled for your organization.
 - **For preventative policies**: One or more Pulumi stacks.
-- **For audit policies**: Cloud accounts connected via [Discovery](/docs/insights/discovery/).
+- **For audit policies**: Cloud accounts connected via [Discovery](/docs/discovery-governance/discovery/).
 - Organization admin permissions to configure policies.
 
 ## Understanding the Policies page
@@ -50,7 +51,7 @@ The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
 ### Policy Packs
 
-![The Policies page with the Policy Packs tab selected](/docs/insights/assets/policy-packs.png)
+![The Policies page with the Policy Packs tab selected](/docs/discovery-governance/assets/policy-packs.png)
 
 The Policy Packs tab has two switchable views:
 
@@ -71,7 +72,7 @@ You may not see any packs in the Organization view until you add some from the A
 
 ### Policy Groups
 
-![The Policies page with the Policy Groups tab selected](/docs/insights/assets/policy-groups.png)
+![The Policies page with the Policy Groups tab selected](/docs/discovery-governance/assets/policy-groups.png)
 
 Policy groups enforce policy packs across stacks or accounts within your organization. The Policy Groups tab displays two types:
 
@@ -85,7 +86,7 @@ The policy groups table shows:
 - **Entities Applied**: Number of stacks or accounts governed by this group
 - **Policy Packs**: Number of policy packs included in this group
 
-Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).
+Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/discovery-governance/policy/policy-groups/#default-policy-groups).
 
 #### Creating a preventative policy group
 
@@ -126,15 +127,15 @@ Each policy violation creates an issue that you can act on:
 
 This workflow of setting up policies, monitoring findings, and taking action forms the core compliance management cycle in Pulumi Policies.
 
-For detailed information on managing findings, see [Policy Findings](/docs/insights/policy/policy-findings/).
+For detailed information on managing findings, see [Policy Findings](/docs/discovery-governance/policy/policy-findings/).
 
 ## Learn more
 
 To deepen your understanding of Pulumi Policies:
 
-- **Write custom policies**: [Authoring Guide](/docs/insights/policy/policy-packs/authoring/)
-- **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)
-- **View and manage policy findings**: [Policy Findings](/docs/insights/policy/policy-findings/)
-- **Learn about enforcement modes**: [Policy Groups](/docs/insights/policy/policy-groups/)
-- **Configure policy pack settings**: [Policy Packs](/docs/insights/policy/policy-packs/)
-- **Understand policy fundamentals**: [Policy Overview](/docs/insights/policy/)
+- **Write custom policies**: [Authoring Guide](/docs/discovery-governance/policy/policy-packs/authoring/)
+- **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/)
+- **View and manage policy findings**: [Policy Findings](/docs/discovery-governance/policy/policy-findings/)
+- **Learn about enforcement modes**: [Policy Groups](/docs/discovery-governance/policy/policy-groups/)
+- **Configure policy pack settings**: [Policy Packs](/docs/discovery-governance/policy/policy-packs/)
+- **Understand policy fundamentals**: [Policy Overview](/docs/discovery-governance/policy/)

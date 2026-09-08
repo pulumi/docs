@@ -5,10 +5,12 @@ title: AWS Organizations Tag Policies
 h1: AWS Organizations Tag Policies
 weight: 2
 menu:
-    insights:
+    discovery-governance:
         name: AWS Organizations Tag Policies
         parent: integrations
         weight: 2
+aliases:
+- /docs/insights/policy/integrations/aws-organizations-tag-policies/
 pulumi_cloud_feature: pre-built-policy-packs
 ---
 
@@ -21,7 +23,7 @@ The [AWS Organizations Tag Policies policy pack](/docs/reference/pre-built-polic
 1. **Configure tag policies in AWS Organizations**: Define your required tags using tag policies, specifying which tags are mandatory for which resource types. The pack reads all tag requirements specified by the `report_required_tag_for` field in your tag policy configuration.
 1. **Enable the pack in Pulumi Cloud**: Add the AWS Organizations Tag Policies pack to your Pulumi organization, and configure a policy group. The pack supports two enforcement levels: advisory mode (warns about missing tags without blocking deployments) and mandatory mode (blocks non-compliant deployments).
 1. **Validation during deployment**: When you run `pulumi up`, the policy pack retrieves your tag policy requirements from AWS and validates that resources have the specified tags.
-1. **Enforcement levels**: Start in advisory mode to surface violations without blocking deployments. All policy violations are displayed in the Pulumi Cloud [Policy Findings](/docs/insights/policy/policy-findings/) page for monitoring and tracking, enabling a controlled migration to compliance. Once your Pulumi programs are compliant, switch to mandatory mode to block any future non-compliant deployments.
+1. **Enforcement levels**: Start in advisory mode to surface violations without blocking deployments. All policy violations are displayed in the Pulumi Cloud [Policy Findings](/docs/discovery-governance/policy/policy-findings/) page for monitoring and tracking, enabling a controlled migration to compliance. Once your Pulumi programs are compliant, switch to mandatory mode to block any future non-compliant deployments.
 
 The pack uses AWS Organizations tag policies as the source of truth. Tag requirements are managed in AWS, not in Pulumi configuration.
 
@@ -61,7 +63,7 @@ To enable this policy pack for your organization:
 1. Select **AWS Organizations Tag Policies** and select **Add to organization**
 1. From the Organizations tab, apply the policy to a Policy Group to enforce tag validation
 
-For more information about enabling policy packs, see [Pre-Built Packs](/docs/insights/policy/policy-packs/pre-built-packs/).
+For more information about enabling policy packs, see [Pre-Built Packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/).
 
 ## Policy reference
 
@@ -533,5 +535,5 @@ The AWS Provider (`pulumi/aws`) uses different resource type naming conventions 
 
 ## Related documentation
 
-- [Policy as Code get started guide](/docs/insights/policy/get-started/)
-- [Pre-Built Policy Packs](/docs/insights/policy/policy-packs/pre-built-packs/)
+- [Policy as Code get started guide](/docs/discovery-governance/policy/get-started/)
+- [Pre-Built Policy Packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/)

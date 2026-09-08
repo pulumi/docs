@@ -4,13 +4,14 @@ meta_desc: Policies include metadata that describes their purpose, behavior, and
 title: Policy Metadata
 h1: Policy Metadata
 menu:
-  insights:
+  discovery-governance:
     name: Policy Metadata
     parent: policy-packs
     weight: 30
 aliases:
   - /docs/insights/policy/policy-as-code/policy-metadata/
   - /docs/insights/policy/metadata.md
+  - /docs/insights/policy/policy-packs/metadata/
 ---
 
 Each policy includes metadata that defines its identity, purpose, and behavior. Metadata provides important context for how a policy is displayed, enforced, and remediated. This information helps both authors and users understand what the policy does, how severe its violations are, and how to resolve them.
@@ -32,7 +33,7 @@ The table below describes all supported metadata fields and their usage:
 | `framework.version` | Yes* | Framework version (e.g., `"3.2.1"`, `"2022"`). |
 | `framework.reference` | Yes* | Specific control or requirement reference within the framework. |
 | `framework.specification` | Yes* | Detailed description of the related compliance requirement. |
-| `configSchema` | No | Schema defining user-configurable parameters for the policy. For more information on configSchema, see [authoring](/docs/insights/policy/policy-packs/authoring/)|
+| `configSchema` | No | Schema defining user-configurable parameters for the policy. For more information on configSchema, see [authoring](/docs/discovery-governance/policy/policy-packs/authoring/)|
 | `configSchema.properties` | Yes* | Object describing available configuration options and their types. |
 | `configSchema.required` | No | Array of property names that must be supplied when configuring the policy. |
 

@@ -5,13 +5,14 @@ h1: Manage Accounts and Scans
 meta_desc: This page provides an overview on how to manage cloud accounts in Pulumi.
 weight: 4
 menu:
-  insights:
+  discovery-governance:
     name: Manage Accounts and Scans
     parent: insights-discovery-get-started
     identifier: insights-get-started-manage-accounts
     weight: 4
 aliases:
   - /docs/insights/get-started/account-management/
+  - /docs/insights/discovery/get-started/account-management/
 pulumi_cloud_feature: insights-discovery
 ---
 
@@ -31,7 +32,7 @@ For example, AWS enables you to divide your infrastructure into regions and Disc
 
 It's important to note that if you **Scan** or **Delete** the `production` account, Pulumi applies this action to all child accounts.
 
-For a detailed explanation and more examples of how child accounts and hierarchies work see the [cloud accounts documentation](/docs/insights/discovery/accounts/#account-hierarchies)
+For a detailed explanation and more examples of how child accounts and hierarchies work see the [cloud accounts documentation](/docs/discovery-governance/discovery/accounts/#account-hierarchies)
 
 ## Manage accounts
 

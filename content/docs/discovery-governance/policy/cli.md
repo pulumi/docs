@@ -4,10 +4,12 @@ title_tag: "CLI Reference | Pulumi Policies"
 h1: Policy CLI Reference
 meta_desc: Use the pulumi policy CLI commands to create, publish, install, enable, and manage policy packs and policy groups from the command line.
 menu:
-  insights:
+  discovery-governance:
     name: CLI Reference
     parent: insights-policy
     weight: 55
+aliases:
+- /docs/insights/policy/cli/
 ---
 
 The `pulumi policy` command group provides CLI commands for creating, managing, and enforcing policy packs. You can use these commands to author new policy packs, publish them to Pulumi Cloud, and manage policy groups across your organization.
@@ -53,7 +55,7 @@ pulumi up --policy-pack /path/to/pack-1 --policy-pack /path/to/pack-2
 ```
 
 {{% notes type="info" %}}
-When using `--policy-pack`, the policy pack must be present on disk. Pulumi Cloud users can skip this flag entirely because policy packs enabled through [policy groups](/docs/insights/policy/policy-groups/) are downloaded and applied automatically. Downloaded packs still run locally, so the machine needs the pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) installed.
+When using `--policy-pack`, the policy pack must be present on disk. Pulumi Cloud users can skip this flag entirely because policy packs enabled through [policy groups](/docs/discovery-governance/policy/policy-groups/) are downloaded and applied automatically. Downloaded packs still run locally, so the machine needs the pack's [runtime](/docs/discovery-governance/policy/policy-packs/#runtime-requirements) installed.
 {{% /notes %}}
 
 ## Common workflows

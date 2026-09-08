@@ -4,12 +4,13 @@ meta_desc: Documentation of the settings available in the PulumiPolicy.yaml poli
 title: Policy Pack Project File
 h1: Policy Pack Project File Reference
 menu:
-  insights:
+  discovery-governance:
     name: Project File Reference
     parent: policy-packs
     weight: 25
 aliases:
   - /docs/insights/policy/policy-packs/pulumi-policy-yaml/
+  - /docs/insights/policy/policy-packs/project-file/
 ---
 
 Every Pulumi policy pack has a project file, `PulumiPolicy.yaml`, that specifies metadata about the policy pack such as its runtime and version. This file is analogous to the [`Pulumi.yaml`](/docs/iac/concepts/projects/project-file/) project file used by Pulumi IaC programs. The file must be named `PulumiPolicy.yaml` (case-sensitive) and placed in the root of your policy pack directory.
@@ -153,7 +154,7 @@ For more details, see the [Pulumi OPA Policy Bridge documentation](https://githu
 
 The version is read from `package.json` by default. If a `version` field is set in `PulumiPolicy.yaml`, it takes precedence over `package.json`.
 
-Each version can only be published once. When you publish a new version, update the version number before running `pulumi policy publish`. See [managing policy pack versions](/docs/insights/policy/policy-packs/authoring/#managing-policy-pack-versions) for details.
+Each version can only be published once. When you publish a new version, update the version number before running `pulumi policy publish`. See [managing policy pack versions](/docs/discovery-governance/policy/policy-packs/authoring/#managing-policy-pack-versions) for details.
 
 {{% /choosable %}}
 
@@ -161,7 +162,7 @@ Each version can only be published once. When you publish a new version, update 
 
 The version is read from the `version` field in `PulumiPolicy.yaml`. There is no fallback file.
 
-Each version can only be published once. When you publish a new version, update the version number before running `pulumi policy publish`. See [managing policy pack versions](/docs/insights/policy/policy-packs/authoring/#managing-policy-pack-versions) for details.
+Each version can only be published once. When you publish a new version, update the version number before running `pulumi policy publish`. See [managing policy pack versions](/docs/discovery-governance/policy/policy-packs/authoring/#managing-policy-pack-versions) for details.
 
 {{% /choosable %}}
 

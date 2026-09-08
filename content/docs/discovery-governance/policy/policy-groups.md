@@ -4,7 +4,7 @@ title_tag: "Policy Groups | Pulumi Policies"
 h1: Policy Groups
 meta_desc: Learn how to organize and apply policy packs using policy groups to enforce compliance across stacks and cloud accounts.
 menu:
-  insights:
+  discovery-governance:
     parent: insights-policy
     weight: 30
 aliases:
@@ -12,6 +12,7 @@ aliases:
   - /docs/insights/preventative-vs-audit-policies/
   - /docs/insights/policy/policy-packs/preventative-vs-audit-policies/
   - /docs/using-pulumi/crossguard/core-concepts/
+  - /docs/insights/policy/policy-groups/
 pulumi_cloud_feature: preventative-policies
 ---
 
@@ -23,7 +24,7 @@ Pulumi Policies provides two types of policy groups, each designed for a differe
 
 - <a id="preventative-policy-groups"></a>**Preventative policy groups** apply to Pulumi stacks and run before any resource is deployed. They act as guardrails during `pulumi preview` and `pulumi up`, evaluating the resources your program declares and reporting violations in the same command the developer was already running. Because they run ahead of the deployment, a policy set to `mandatory` enforcement stops a non-compliant change before it reaches your cloud provider. They see only the resources Pulumi manages.
 
-- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/insights/discovery/accounts/). For stacks, they evaluate the latest state each time the stack updates. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
+- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/discovery-governance/discovery/accounts/). For stacks, they evaluate the latest state each time the stack updates. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
 
 At a glance:
 
@@ -57,7 +58,7 @@ Be careful when changing the default policy group. `default-policy-group` is a p
 
 To roll out a new policy pack safely, add it to a purpose-built audit policy group first, review the findings, then move it to `default-policy-group` once you understand its impact. See [Best practices](#best-practices).
 
-Adding a policy pack to `default-policy-group` also makes that pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) a prerequisite for everyone who runs Pulumi against any stack in your organization. Pulumi's pre-built policy packs all run on Node.js, so enabling one for every stack means every developer machine and CI runner needs Node.js installed, whatever language the Pulumi programs themselves are written in.
+Adding a policy pack to `default-policy-group` also makes that pack's [runtime](/docs/discovery-governance/policy/policy-packs/#runtime-requirements) a prerequisite for everyone who runs Pulumi against any stack in your organization. Pulumi's pre-built policy packs all run on Node.js, so enabling one for every stack means every developer machine and CI runner needs Node.js installed, whatever language the Pulumi programs themselves are written in.
 
 ### Managing the default policy groups programmatically
 
@@ -133,7 +134,7 @@ Rolling policy out in stages gives teams time to absorb each change and gives yo
 
 ## Next steps
 
-- [Create and configure policy groups](/docs/insights/policy/get-started/)
-- [View and manage policy findings](/docs/insights/policy/policy-findings/)
-- [Check policy pack runtime requirements](/docs/insights/policy/policy-packs/#runtime-requirements)
-- [Write custom policy packs](/docs/insights/policy/policy-packs/authoring/)
+- [Create and configure policy groups](/docs/discovery-governance/policy/get-started/)
+- [View and manage policy findings](/docs/discovery-governance/policy/policy-findings/)
+- [Check policy pack runtime requirements](/docs/discovery-governance/policy/policy-packs/#runtime-requirements)
+- [Write custom policy packs](/docs/discovery-governance/policy/policy-packs/authoring/)
