@@ -404,7 +404,7 @@ We discuss and provide examples for each approach in this section.
 
 With the [Helm V3](/registry/packages/kubernetes/api-docs/helm/v3/chart/) chart resources, Pulumi renders the templates and applies them directly, much like with `ConfigFile` and `ConfigGroup` shown earlier, which means all provisioning happens client-side using your Kubernetes authentication setup without needing a server-side component.
 
-The `Chart` resource type provides several options to control where to fetch the chart's contents from. This includes:
+The `Chart` resource type provides options to control where to fetch the chart's contents from. This includes:
 
 * `chart`: The required chart name (for instance, `"wordpress"`).
 * `repo`: (Optional) The helm repository to pull the chart from (e.g., `"stable"`).
@@ -417,7 +417,7 @@ Beyond those core options, you can specify `transformations` (like the [configur
 
 #### Provisioning a Helm chart
 
-To illustrate provisioning a Helm chart using Pulumi, we will deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This will stand up a fully functional WordPress instance that uses MariaDB:
+To provision a Helm chart with Pulumi, deploy the `wordpress` chart from `https://charts.bitnami.com/bitnami`. This stands up a fully functional WordPress instance that uses MariaDB:
 
 {{< chooser language "typescript,python,go,csharp" >}}
 
@@ -1206,4 +1206,4 @@ Although this example shows the YAML `ConfigFile` resource, the same transform b
 
 ## Provisioning mixed configurations
 
-It is possible to provision a combination of native Kubernetes objects, YAML files, Helm charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm chart that consumes this secret and connects to the CosmosDB database.
+You can provision a combination of native Kubernetes objects, YAML files, Helm charts, and other cloud resources all together, with dependencies between them. For an example of doing so, see [this blog post](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/) which demonstrates provisioning an Azure Kubernetes cluster, MongoDB-flavored CosmosDB instance, a Kubernetes secret to store the connection information, and a Helm chart that consumes this secret and connects to the CosmosDB database.
