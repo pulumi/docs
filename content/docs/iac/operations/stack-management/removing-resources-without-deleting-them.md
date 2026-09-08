@@ -27,11 +27,11 @@ $ pulumi stack --show-urns
 $ pulumi state delete 'urn:pulumi:prod::my-project::aws:s3/bucket:Bucket::my-bucket'
 ```
 
-`pulumi state delete` only edits the state file. It does not call the resource provider, so the bucket keeps existing in AWS; Pulumi simply forgets about it. Once the delete completes, remove the corresponding resource declaration from your program as well, so a later `pulumi up` doesn't try to recreate it.
+`pulumi state delete` only edits the state file. It does not call the resource provider, so the bucket keeps existing in AWS; Pulumi forgets about it. Once the delete completes, remove the corresponding resource declaration from your program as well, so a later `pulumi up` doesn't try to recreate it.
 
 Two safeguards apply by default:
 
-* **Dependent resources.** Pulumi refuses to delete a resource that other resources depend on or are parented to, since doing so would leave those dependents referencing a resource state no longer tracks:
+* **Dependent resources.** Pulumi refuses to delete a resource that other resources depend on or are parented to, since doing so would leave those dependents referencing a resource that state no longer tracks:
 
   ```
   error: urn:...::demo-pet can't be safely deleted because the following resources depend on it:
@@ -48,7 +48,7 @@ Two safeguards apply by default:
   error: urn:...::demo-protected can't be safely deleted because it is protected. Re-run this command with --force to force deletion
   ```
 
-  Either pass `--force`, or run [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) first and then delete normally. Unprotecting is usually the better choice when you also want to remove the `protect: true` line from your program, since it leaves an explicit trail of the change.
+  Either pass `--force`, or run [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/) first and then delete normally. Running `pulumi state unprotect` is the better choice when you also want to remove the `protect: true` line from your program, since it leaves an explicit trail of the change.
 
 `pulumi state delete` also accepts multiple URNs in a single invocation and an `--all` flag to clear every resource in the stack, which is useful when retiring a whole stack whose resources should live on outside Pulumi's management.
 
@@ -120,7 +120,9 @@ With `retainOnDelete` set, remove the resource's declaration from your program a
 
 Because the whole change lives in your program, it goes through the same review, preview, and CI process as any other update, which makes it the safer choice whenever more than one person might touch the resource or the removal needs to happen unattended.
 
-If you later decide a retained resource really should be deleted from the cloud provider, set `retainOnDelete` back to `false` and run `pulumi up` again; only then does Pulumi call through to the provider to delete it.
+Once a retained resource has been dropped from state this way, there's nothing left in your program or state to toggle `retainOnDelete` back on: the resource declaration is gone and Pulumi no longer tracks it. If you later decide the resource really should be deleted from the cloud provider, either delete it directly through the provider's own console or CLI, or [import it back into Pulumi](/docs/iac/guides/migration/import/) to bring it under management again, then set `retainOnDelete` to `false` and run `pulumi up` to delete it through Pulumi.
+
+If instead you want to keep the resource under Pulumi's management but stop retaining it on a future delete, set `retainOnDelete: false` while the resource is still declared in your program and run `pulumi up`; this clears the retained flag without deleting anything, so a later removal of the resource's declaration deletes it from the cloud provider as usual.
 
 ## Choosing between the two
 
@@ -128,7 +130,7 @@ Use `pulumi state delete` for a one-off, interactive cleanup where you're at the
 
 ## For Terraform users
 
-Pulumi's equivalent of `terraform state rm` is `pulumi state delete`: both remove a resource from the tool's state while leaving the underlying infrastructure alone. The main difference is that Pulumi also offers `retainOnDelete` as a declarative alternative that doesn't require a separate imperative command at all.
+Pulumi's equivalent of `terraform state rm` is `pulumi state delete`: both remove a resource from the tool's state while leaving the underlying infrastructure alone. Pulumi additionally lets you express the same intent as a resource option, `retainOnDelete`, so the removal travels through your program's normal review and deployment path.
 
 ## Related pages
 

@@ -82,7 +82,7 @@ The `pulumi state` command can help with the following scenarios:
 
 - Inspecting a single resource's tracked state, including its inputs and outputs, with [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/)
 - Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/)
-- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) --- see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/) for a complete walkthrough, including dependent and protected resources
+- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) — see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/) for a complete walkthrough, including dependent and protected resources
 - [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
 - Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/)
 - Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/)
