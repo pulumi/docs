@@ -65,7 +65,7 @@ ESC integrates directly with Azure for short-lived credentials and secret retrie
 
 ## Insights
 
-[Pulumi Insights](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
+[Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
 For Azure, Insights connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 

@@ -74,7 +74,7 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 
 ## Insights
 
-[Pulumi Insights](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
+[Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
 For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
@@ -93,7 +93,7 @@ For AWS:
 - [CMMC 2.0 for AWS](/docs/reference/pre-built-policy-packs/cmmc/aws/)
 - [CIS Kubernetes Benchmark on AWS](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/) — for EKS clusters.
 - [AWS Organizations Tag Policies](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) — enforce Organizations tagging standards on Pulumi-managed resources.
-- [AWS Organizations Tag Policies in Insights](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Insights.
+- [AWS Organizations tag policies in Discovery](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Discovery.
 
 ## Migration
 

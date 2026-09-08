@@ -74,7 +74,7 @@ Create your first policy pack:
     - A validation function (this example uses `validateResourceOfType` to run only for AWS RDS instance resources)
     - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
-    > For more information on all available fields, see [policy metadata](/docs/discovery-governance/policy/policy-as-code/policy-metadata/).
+    > For more information on all available fields, see [policy metadata](/docs/discovery-governance/policy/policy-packs/metadata/).
 
     ```typescript
     import * as aws from "@pulumi/aws";
@@ -1387,7 +1387,7 @@ This format helps users understand which resource failed and why.
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns
 - [Policy as Code overview](/docs/discovery-governance/policy/)
-- [Policy Metadata fields](/docs/discovery-governance/policy/metadata/)
+- [Policy Metadata fields](/docs/discovery-governance/policy/policy-packs/metadata/)
 
 ## Next steps
 

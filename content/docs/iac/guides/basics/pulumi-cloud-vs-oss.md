@@ -75,7 +75,7 @@ Pulumi Cloud supports the same per-stack config files and adds Pulumi ESC (Envir
 
 With open source Pulumi, you can inspect the resources Pulumi manages by reading state—for example, with `pulumi stack` and `pulumi stack export`—but only one stack's state at a time, and only for resources Pulumi created. There is no built-in view of resources across stacks or of resources outside Pulumi's state.
 
-Pulumi Cloud adds [Pulumi Insights](/docs/discovery-governance/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
+Pulumi Cloud adds [Pulumi Discovery](/docs/discovery-governance/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
 
 ## Policy enforcement
 

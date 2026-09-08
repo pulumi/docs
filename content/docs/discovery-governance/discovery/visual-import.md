@@ -16,7 +16,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Pulumi Visual Import allows platform and development teams to leverage [Pulumi Insights](/docs/discovery-governance/) to generate [Pulumi Infrastructure as Code (IaC)](/docs/iac/) from [discovered resources](/docs/discovery-governance/discovery/#how-discovery-works) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
+Pulumi Visual Import allows platform and development teams to leverage [Pulumi Discovery](/docs/discovery-governance/) to generate [Pulumi Infrastructure as Code (IaC)](/docs/iac/) from [discovered resources](/docs/discovery-governance/discovery/#how-discovery-works) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
 
 1. Discover and select existing cloud resources across accounts
 2. Identify and review resources with a reference/dependent relationship to the previously selected resources

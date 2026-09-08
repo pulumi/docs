@@ -274,7 +274,7 @@ Exempt: the generated `SEE ALSO` blocks on CLI command pages (`content/docs/iac/
 
 ## FAQs
 
-Dedicated FAQ pages have one canonical home: the FAQ hub at [`/docs/support/faq/`](https://www.pulumi.com/docs/support/faq/), under the **Support & Troubleshooting** nav section. This placement is intentional. Readers reach for an FAQ when they're in help-seeking mode, and Support & Troubleshooting is the site-wide help destination; keeping the pages together also avoids re-scattering Q&A across product sections. (The per-product FAQs that once lived at `/docs/esc/faq/`, `/docs/discovery-governance/policy/faq/`, `/docs/iac/faq/`, and similar paths were deliberately consolidated here — the aliases on the consolidated pages preserve those URLs.)
+Dedicated FAQ pages have one canonical home: the FAQ hub at [`/docs/support/faq/`](https://www.pulumi.com/docs/support/faq/), under the **Support & Troubleshooting** nav section. This placement is intentional. Readers reach for an FAQ when they're in help-seeking mode, and Support & Troubleshooting is the site-wide help destination; keeping the pages together also avoids re-scattering Q&A across product sections. (The per-product FAQs that once lived at `/docs/esc/faq/`, `/docs/insights/policy/faq/`, `/docs/iac/faq/`, and similar paths were deliberately consolidated here — the aliases on the consolidated pages preserve those URLs.)
 
 Rules:
 
