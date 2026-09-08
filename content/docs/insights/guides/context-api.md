@@ -944,7 +944,7 @@ These values are a snapshot, not a compatibility promise. Check `GetGraphQuerySc
 
 ## Get the deployed schema
 
-Use `GetGraphQuerySchema` to validate a selector against the deployed contract or equip an agent with the current graph vocabulary and selector guidance. It needs credentials but no organization. The organization-scoped `GetGraphSchema` is deprecated in its favor and returns the same content.
+Use `GetGraphQuerySchema` to validate a selector against the deployed contract or equip an agent with the current graph vocabulary and selector guidance. It needs credentials but no organization. The organization-scoped `GetGraphSchema` operation has been removed and returns `404 Not Found`. Switch any caller to `GetGraphQuerySchema`, which returns the same content.
 
 For validation and integration tooling, fetch the JSON representation:
 
