@@ -327,6 +327,19 @@
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}
+
+        {{- /* /blog/page/N/ (N>1) canonicalizes to /blog/ above, but a canonical
+             is only a hint Google can choose to ignore -- and Search Console
+             confirms it does for this specific series: pages 2, 3, 5, and 8
+             were independently indexed anyway. noindex,follow removes the
+             ambiguity while still letting crawlers follow links to the real
+             posts linked from the page. Category/tag/series term pagination
+             (the $blogTerm branch above) is deliberately left untouched --
+             Google honors the canonical there today, confirmed via GSC's
+             "Alternate page with proper canonical tag" coverage state. */ -}}
+        {{ if and (eq .Type "blog") .IsSection (gt $pageNum 1) }}
+            <meta name="robots" content="noindex,follow" />
+        {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
             TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
