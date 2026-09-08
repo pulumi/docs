@@ -265,12 +265,13 @@ python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
     || echo '[]' > .vale-findings-round<N>.json
 ```
 
-A fix can *create* a finding, because Vale's rules are independent and some
-are mutually adversarial on the same phrase. Real case, #21456: round 1
-flagged `a number of` (`write-good.TooWordy`), the fix chose "several", and
-the next run flagged "several" (`write-good.Weasel`). Neither rule knows the
-other exists, so a single pass ships a page that the next review immediately
-re-flags.
+A fix can *create* a finding: Vale's rules are independent, so a phrase one
+rule steers you toward can be a phrase another rule flags. The case that
+motivated this loop was #21456 — `write-good.TooWordy` flagged "a number of",
+the fix chose "several", and `write-good.Weasel` flagged "several". That
+specific pair is fixed at the source (`Weasel`'s quantifier tokens were
+removed; see #21470), but nothing prevents the next one, and a page that
+oscillates should stop here rather than at the reader.
 
 Rules for the loop:
 
