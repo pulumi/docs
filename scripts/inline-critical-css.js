@@ -7,12 +7,13 @@ const Beasties = require("beasties");
 // actually carry organic sessions today, prioritized by search-console click
 // volume and capped to keep the added build step well under a couple of minutes.
 //
-// This list is not maintained on any automatic schedule. It changes only via a
-// human-reviewed pull request, same as any other code in this file: someone
-// proposes an addition or removal with the traffic evidence for it, and a
-// reviewer signs off before it merges. The warning below (when most of this
-// list goes missing from a build) is the trigger for a human to open that PR;
-// nothing here revises the list on its own.
+// This list is kept current by a scheduled automated check (monthly), not by
+// informal habit: it pulls Search Console click data, compares it against this
+// array, and opens a pull request proposing additions/removals when the top-
+// traffic set has drifted. That PR is reviewed and merged by a human like any
+// other change here; the automation proposes, it never merges its own diff.
+// The warning below (when most of this list goes missing from a build) is a
+// second, independent signal of drift between scheduled runs.
 const pages = [
     "public/index.html",
     "public/docs/iac/comparisons/terraform/index.html",
