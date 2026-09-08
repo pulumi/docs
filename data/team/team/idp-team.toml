@@ -1,4 +1,10 @@
 id = "idp-team"
 name = "Pulumi IDP Team"
 title = "Product Team"
+company = "Pulumi"
 status = "active"
+
+# This byline is a group, not a natural person -- schema.org Person denotes an
+# individual, so layouts/partials/schema/utils/author-entities.html reads this
+# flag and emits JSON-LD "@type": "Organization" instead.
+entity_type = "organization"
