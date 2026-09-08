@@ -7,13 +7,15 @@ const Beasties = require("beasties");
 // actually carry organic sessions today, prioritized by search-console click
 // volume and capped to keep the added build step well under a couple of minutes.
 //
-// This list is kept current by a scheduled automated check (monthly), not by
-// informal habit: it pulls Search Console click data, compares it against this
-// array, and opens a pull request proposing additions/removals when the top-
-// traffic set has drifted. That PR is reviewed and merged by a human like any
-// other change here; the automation proposes, it never merges its own diff.
-// The warning below (when most of this list goes missing from a build) is a
-// second, independent signal of drift between scheduled runs.
+// This list is kept current by a scheduled workflow in this repo, not by
+// informal habit: .github/workflows/update-critical-css-allowlist.yml runs
+// monthly, feeds scripts/update-critical-css-allowlist.js the same Search
+// Console/reader-signals export the content-review pipeline already
+// consumes, and opens a pull request proposing additions/removals when the
+// top-traffic set has drifted. That PR never auto-merges -- a human reviews
+// the diff against current traffic and merges it, same as any other change
+// to this file. The warning below (when most of this list goes missing from
+// a build) is a second, independent signal of drift between scheduled runs.
 const pages = [
     "public/index.html",
     "public/docs/iac/comparisons/terraform/index.html",
