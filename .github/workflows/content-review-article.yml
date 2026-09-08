@@ -264,10 +264,20 @@ jobs:
             --out .readthrough-findings.json \
             || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
+          # --fix-mode: this lane APPLIES Vale findings; it does not post them.
+          # The filter's default caps (10/file, 50 total) and its advisory
+          # dedup are a budget for the pinned review COMMENT, and truncating
+          # the backlog here just defers it: a single-file run hits the
+          # per-file cap exactly, the worker fixes those 10, and the next
+          # pre-merge review surfaces the next 10 as fresh PR churn (observed
+          # on #21456 — 10 findings recorded, 4 more raised on the result).
+          # The dedup is separately wrong for a fixer: NarrativeWe emits one
+          # message for every "we will" in the file, so a deduped list hides
+          # every occurrence but the first.
           vale --no-exit --output=JSON "$ARTICLE_PATH" > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
           python3 $S/vale-findings-filter.py \
-            --in .vale-raw.json --out .vale-findings.json \
+            --fix-mode --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
           echo "--- pre-compute artifacts ---"
