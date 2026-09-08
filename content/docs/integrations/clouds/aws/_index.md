@@ -72,11 +72,11 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 - [AWS IAM credential rotation](/docs/esc/providers/rotators/aws-iam/) — rotate IAM access keys on a schedule.
 - [AWS Lambda rotator](/docs/esc/operations/rotation/aws-lambda/) — rotate arbitrary secrets via an AWS Lambda function.
 
-## Insights
+## Discovery
 
 [Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
+For AWS, Discovery connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
 ## Policy packs
 

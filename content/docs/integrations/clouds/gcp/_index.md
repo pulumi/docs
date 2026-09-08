@@ -58,11 +58,11 @@ ESC integrates directly with Google Cloud for short-lived credentials and secret
 - [Google Cloud OIDC login](/docs/esc/providers/login/gcp-login/) — generate short-lived Google Cloud credentials for Pulumi programs and workflows.
 - [Google Cloud Secret Manager](/docs/esc/providers/secrets/gcp-secrets/) — pull secrets from Secret Manager into ESC environments.
 
-## Insights
+## Discovery
 
 [Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Google Cloud, Insights connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
+For Google Cloud, Discovery connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
 ## Policy packs
 

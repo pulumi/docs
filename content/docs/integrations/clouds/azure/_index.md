@@ -1,6 +1,6 @@
 ---
 title_tag: "Azure | Pulumi Integrations"
-meta_desc: Azure integration with Pulumi — providers, packages, templates, ARM conversion, ESC integrations, Insights, and policy packs.
+meta_desc: Azure integration with Pulumi — providers, packages, templates, ARM conversion, ESC integrations, Discovery, and policy packs.
 title: Azure
 linktitle: Azure
 h1: Azure
@@ -63,11 +63,11 @@ ESC integrates directly with Azure for short-lived credentials and secret retrie
 - [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
 - [Azure application secret rotation](/docs/esc/providers/rotators/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
 
-## Insights
+## Discovery
 
 [Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Azure, Insights connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
+For Azure, Discovery connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
 ## Policy packs
 
