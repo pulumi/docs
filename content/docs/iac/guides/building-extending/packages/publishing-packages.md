@@ -70,7 +70,7 @@ This guide assumes you're using GitHub to host your package's source code and Gi
 Host your package in a public GitHub repository named `pulumi-<name>`, where `<name>` is the name you'll publish under. It's normally the name of the cloud or service the package configures, and it has to be unique in the Registry.
 
 - Bridging a Terraform provider: reuse the upstream provider's name, replacing `terraform-provider-` with `pulumi-`. `terraform-provider-auth0` becomes `pulumi-auth0`.
-- A native provider: name it after the service it manages, as in [`pulumi-aws`](https://github.com/pulumi/pulumi-aws) and [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes).
+- A native provider: name it after the service it manages, as in [`pulumi-kubernetes`](https://github.com/pulumi/pulumi-kubernetes) and [`pulumi-pinecone`](https://github.com/pinecone-io/pulumi-pinecone).
 - A component package built on an existing provider: use the provider name followed by the component name, such as `pulumi-aws-apigateway` for an API Gateway component built on the AWS provider.
 
 ## Build your package
