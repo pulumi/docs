@@ -6,8 +6,13 @@ const Beasties = require("beasties");
 // slower than short marketing pages), so this list is bounded to pages that
 // actually carry organic sessions today, prioritized by search-console click
 // volume and capped to keep the added build step well under a couple of minutes.
-// Revisit the ranking periodically as traffic shifts; add a page here only after
-// confirming it clears the same bar.
+//
+// This list is not maintained on any automatic schedule. It changes only via a
+// human-reviewed pull request, same as any other code in this file: someone
+// proposes an addition or removal with the traffic evidence for it, and a
+// reviewer signs off before it merges. The warning below (when most of this
+// list goes missing from a build) is the trigger for a human to open that PR;
+// nothing here revises the list on its own.
 const pages = [
     "public/index.html",
     "public/docs/iac/comparisons/terraform/index.html",
