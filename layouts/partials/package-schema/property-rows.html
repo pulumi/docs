@@ -1,0 +1,56 @@
+{{/*
+  Renders the property rows of one Pulumi package schema type, as
+  <li class="api-param"> elements inside a <ul class="api-params">.
+
+  Unlike layouts/partials/esc/property-rows.html, this partial does no schema
+  resolution and never recurses: scripts/fetch-package-schema.js pre-flattens
+  everything into data/package_schema/*.json, so a row's display type — including
+  whether it links to another section on this page — is already decided. Keep it
+  that way; resolving $ref/allOf/oneOf in Go templates is what this pipeline
+  exists to avoid.
+
+  Reuses the REST API schema styling (assets/fingerprinted/css/openapi.css,
+  .api-param* classes) for visual consistency with /docs/reference/cloud-rest-api,
+  and because that stacked layout gives a description the full content width —
+  which matters here, where the longest description ($ref on Type) runs to a
+  paragraph that a four-column table crushes into a sliver.
+
+  Input: dict with
+    properties  the type's "properties" array, in render order
+    prefix      id prefix for per-property deep links, namespaced by type id so
+                that e.g. the "type" property of Property cannot collide with the
+                <h3 id="type"> heading of the Type section
+*/}}
+{{ $prefix := .prefix }}
+<ul class="api-params">
+  {{ range $prop := .properties }}
+    <li class="api-param" id="{{ $prefix }}-{{ $prop.name }}">
+      <div class="api-param-header">
+        <code class="api-param-name">{{ $prop.name }}</code>
+        <span class="api-param-badge api-param-type">
+          {{- if $prop.type.parts -}}
+            {{- range $i, $part := $prop.type.parts -}}
+              {{- if $i }} | {{ end -}}
+              {{- if $part.href }}<a href="{{ $part.href }}">{{ $part.text }}</a>{{ else }}{{ $part.text }}{{ end -}}
+            {{- end -}}
+          {{- else if $prop.type.href -}}
+            <a href="{{ $prop.type.href }}">{{ $prop.type.text }}</a>
+          {{- else -}}
+            {{ $prop.type.text }}
+          {{- end -}}
+        </span>
+        <span class="api-param-badge api-param-required{{ if $prop.required }} is-required{{ end }}">{{ if $prop.required }}required{{ else }}optional{{ end }}</span>
+        {{ if $prop.deprecated }}<span class="api-param-badge api-param-deprecated">deprecated</span>{{ end }}
+      </div>
+      {{ with $prop.description }}
+        <div class="api-param-description">{{ . | markdownify }}</div>
+      {{ end }}
+      {{ with $prop.values }}
+        <div class="api-param-enum">
+          <strong>Values:</strong>
+          {{ range $i, $v := . }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+        </div>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

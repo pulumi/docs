@@ -152,7 +152,7 @@ editions:
     card:
       subtitle: Everything you need to get started.
       price: $40
-      price_label: /month base
+      price_label: /month
       unit: "**Includes 40 Credits**"
       # The (i) tooltip on this note lists what a Credit buys per meter; the
       # rates come from `calculator:` below, keyed by this edition's id.
@@ -178,7 +178,7 @@ editions:
       subtitle: Security and collaboration for large teams.
       badge: Popular
       price: $400
-      price_label: /month base
+      price_label: /month
       unit: "**Includes 400 Credits**"
       note: Up to 2,000 resources, additional usage billed on demand
       cta:

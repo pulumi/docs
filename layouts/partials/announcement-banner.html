@@ -1,6 +1,6 @@
 {{- $data := site.Data.announcements -}}
 {{- with $data -}}
-{{- $isDocs := or (hasPrefix $.RelPermalink "/docs/") (hasPrefix $.RelPermalink "/tutorials/") -}}
+{{- $isDocs := hasPrefix $.RelPermalink "/docs/" -}}
 {{- $eligible := slice -}}
 {{- range .announcements -}}
   {{- if .active -}}

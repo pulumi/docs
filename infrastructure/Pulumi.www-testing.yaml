@@ -8,13 +8,11 @@ config:
   www.pulumi.com:makeFallbackBucket: "false"
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/testing"
-  www.pulumi.com:guidesStack: "pulumi/guides/testing"
   www.pulumi.com:devStack: "pulumi/www-site/production"
   www.pulumi.com:answersStack: "pulumi/answers/testing"
   www.pulumi.com:versionedDocsStack: "pulumi/pulumi-docs-versioned/testing"
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
-  www.pulumi.com:intercomTicketTypeId: "4573798"
   www.pulumi.com:intercomApiKey:
     secure: AAABAJ2bHeR1rJ6zKuK1eW5I83ueGZ3bwh8ELILQeauY3Ca+cnmF+YyaS4GNAgPKN03geZ0mBxEli2g1kSBftGApsV3q3tvw4ImqXTtj7+dckCroD8xx97P+YVc=

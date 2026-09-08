@@ -1,5 +1,3 @@
-{{/* Returns HowTo entity for tutorials in @graph */}}
-
 {{/* Get content for analysis */}}
 {{ $content := .Content | plainify }}
 {{ $wordCount := $content | countwords }}
@@ -105,114 +103,6 @@
   {{ end }}
 {{ end }}
 
-{{/* Template pages (the product template gallery under /templates/) follow a
-     uniform, hand-verified H2 section structure ("Using this template",
-     "Deploying the project", "Customizing the project", "Cleaning up", plus a
-     handful of page-specific sections such as "Verifying cluster access" or
-     "Next steps") but contain no numbered lists, so the pass above finds no
-     steps for them. When that happens and this is a template page, derive
-     HowToStep entries from H2 sections instead: each section becomes one
-     step, named after its heading, with a short prose excerpt as the text.
-     This is scoped to layout=template on purpose — applying the same
-     heading-derived heuristic to blog posts or tutorials would invent steps
-     out of narrative headings ("Why this matters", "Conclusion") that are
-     not actions for the reader. Template pages are structurally uniform
-     enough that their headings really are the how-to steps. */}}
-{{ if and (not $steps) (eq .Layout "template") }}
-  {{ $pagePermalink := .Permalink }}
-  {{ $navHeadings := slice "learn more" "related" "see also" "further reading" }}
-  {{ $sectionName := "" }}
-  {{ $sectionLines := slice }}
-  {{ $sectionNumber := 0 }}
-  {{ $inFence := false }}
-
-  {{ range $index, $line := $lines }}
-    {{ if findRE `^##\s+` $line }}
-      {{/* Flush the previous section as a step before starting the new one */}}
-      {{ if and $sectionName (gt (len $sectionLines) 0) }}
-        {{ if not (in $navHeadings (lower $sectionName)) }}
-          {{ $text := delimit $sectionLines " " | replaceRE "\\s+" " " }}
-          {{ $text = trim $text " \t\n\r" }}
-          {{ if gt (len $text) 300 }}
-            {{ $text = printf "%s…" (substr $text 0 300) }}
-          {{ end }}
-          {{ if $text }}
-            {{ $sectionNumber = add $sectionNumber 1 }}
-            {{ $step := dict
-              "@type" "HowToStep"
-              "position" $sectionNumber
-              "name" $sectionName
-              "text" $text
-              "url" (printf "%s#%s" $pagePermalink (anchorize $sectionName))
-            }}
-            {{ $steps = $steps | append $step }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ $sectionName = trim (replaceRE `^##\s+` "" $line) " \t\n\r" }}
-      {{ $sectionLines = slice }}
-      {{ $inFence = false }}
-
-    {{ else if $sectionName }}
-      {{ $trimForFence := trim $line " \t" }}
-      {{ if strings.HasPrefix $trimForFence "```" }}
-        {{ $inFence = not $inFence }}
-      {{ else if not $inFence }}
-        {{ $trimmedLine := trim $line " \t\n\r" }}
-        {{ $skip := false }}
-        {{ if eq $trimmedLine "" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "#" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "{{" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "![" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "|" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine ">" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "-" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine "*" }}
-          {{ $skip = true }}
-        {{ else if strings.HasPrefix $trimmedLine ":" }}
-          {{ $skip = true }}
-        {{ end }}
-        {{ if not $skip }}
-          {{ $clean := replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $trimmedLine }}
-          {{ $clean = replaceRE "`" "" $clean }}
-          {{ if $clean }}
-            {{ $sectionLines = $sectionLines | append $clean }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{/* Flush the final section */}}
-  {{ if and $sectionName (gt (len $sectionLines) 0) }}
-    {{ if not (in $navHeadings (lower $sectionName)) }}
-      {{ $text := delimit $sectionLines " " | replaceRE "\\s+" " " }}
-      {{ $text = trim $text " \t\n\r" }}
-      {{ if gt (len $text) 300 }}
-        {{ $text = printf "%s…" (substr $text 0 300) }}
-      {{ end }}
-      {{ if $text }}
-        {{ $sectionNumber = add $sectionNumber 1 }}
-        {{ $step := dict
-          "@type" "HowToStep"
-          "position" $sectionNumber
-          "name" $sectionName
-          "text" $text
-          "url" (printf "%s#%s" $pagePermalink (anchorize $sectionName))
-        }}
-        {{ $steps = $steps | append $step }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
 {{/* Add steps to schema if we found any */}}
 {{ if $steps }}
   {{ $schema = merge $schema (dict "step" $steps) }}
@@ -297,16 +187,6 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
-{{/* Note: Dates omitted for tutorial pages - they're evergreen content without meaningful publication dates */}}
-
-{{/* Add keywords. As in schema/collectors/article-entity.html, every
-     tutorial page previously got the same literal "infrastructure as
-     code, cloud, devops, tutorial, pulumi" string regardless of what the
-     tutorial actually walks through, since no tutorial page carries
-     front-matter tags today. Fall back to the tutorial's own headline
-     plus its section ancestors (e.g. "Building with Pulumi", "AWS") so
-     the value names this specific tutorial instead of repeating one
-     generic phrase on every page. */}}
 {{ $keywordTerms := slice }}
 {{ with .Params.tags }}
   {{ $keywordTerms = . }}
@@ -324,7 +204,6 @@
   {{ $schema = merge $schema (dict "keywords" (delimit (uniq $keywordTerms) ", ")) }}
 {{ end }}
 
-{{/* Add supply/yield (what the tutorial produces) */}}
 {{ $titleLower := lower .Title }}
 {{ if in $titleLower "creating resources" }}
   {{ $schema = merge $schema (dict "yield" "Cloud infrastructure resources deployed and managed through code") }}

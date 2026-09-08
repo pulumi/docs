@@ -35,15 +35,15 @@ Pulumi provides several packages for Azure. For core infrastructure, Azure Nativ
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new Azure projects from a pre-built template:
 
-- [Container service on Azure](/templates/container-service/azure/) — containerized service on Azure Container Apps or App Service.
-- [Serverless application on Azure](/templates/serverless-application/azure/) — Azure Functions with supporting resources.
-- [Static website on Azure](/templates/static-website/azure/) — storage-account static site with CDN.
-- [Virtual machine on Azure](/templates/virtual-machine/azure/) — Azure VM with configurable networking.
-- [Kubernetes cluster on Azure](/templates/kubernetes/azure/) — Azure Kubernetes Service (AKS) cluster ready for workloads.
+- [Container service on Azure](/dev/templates/container-service/azure/) — containerized service on Azure Container Apps or App Service.
+- [Serverless application on Azure](/dev/templates/serverless-application/azure/) — Azure Functions with supporting resources.
+- [Static website on Azure](/dev/templates/static-website/azure/) — storage-account static site with CDN.
+- [Virtual machine on Azure](/dev/templates/virtual-machine/azure/) — Azure VM with configurable networking.
+- [Kubernetes cluster on Azure](/dev/templates/kubernetes/azure/) — Azure Kubernetes Service (AKS) cluster ready for workloads.
 
 ## Guides
 

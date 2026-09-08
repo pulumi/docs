@@ -362,7 +362,7 @@ Use resource validation policies when you need to:
 
 ### Stack validation policies
 
-Stack validation policies run after resource registration completes. These policies execute **after** resources have been created or updated, and only run during `pulumi up` (not during `pulumi preview`). They examine relationships between resources and enforce stack-wide rules.
+Stack validation policies run once, at the end of the pass, against the finished resource graph, on both `pulumi preview` and `pulumi up`. Unlike resource validation, which checks each resource as it is registered, stack validation waits until every resource in the update has been processed so it can examine relationships between them and enforce stack-wide rules. A property that stays unknown until the change is actually applied is still unknown when a stack policy inspects it during preview.
 
 Use stack validation policies when you need to:
 
