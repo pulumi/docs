@@ -246,11 +246,10 @@ jobs:
             // dependencies alphabetically, then indirect ones appended after
             // them. #20711 is titled "with 12
             // updates", its body is exactly 65,535 characters, and the
-            // fallback recovers 10: the two it loses are `beasties` and
-            // `simple-icons`, which sit at alphabetical positions 3 and 10 of
-            // 11 but are rows 11 and 12 of the table -- the appended block is
-            // why early-sorting names end up last, and last is what gets cut.
-            // So the
+            // fallback recovers 10. The two it loses are `beasties` and
+            // `simple-icons` -- rows 11 and 12, the appended indirect block.
+            // They sort mid-alphabet, which is the point: position in the
+            // table is what decides, not the name. So the
             // rule is "anything after the cut", not "anything late in the
             // alphabet" -- a bundler can survive a truncation that eats six
             // other packages, or not. Since dependencies.length feeds both
