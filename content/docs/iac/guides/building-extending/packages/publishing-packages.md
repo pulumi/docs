@@ -52,7 +52,7 @@ Bridging it into a package of your own buys you control over the package name, t
 
 Popular Terraform providers appear in the Registry as Any Terraform Provider listings, so readers can find and evaluate them there the same as any other package. [Honeycomb](/registry/packages/honeycombio/) and [Supabase](/registry/packages/supabase/) are examples.
 
-To have a Terraform provider listed this way, open a [New Package issue](https://github.com/pulumi/registry/issues/new?template=new-package.yml) with the provider's name and repository. These listings are generated automatically and carry no logo by default; to add one, contact [Pulumi support](/support/new/) with a link to a web-accessible SVG. Wordmarks are preferred, with all surrounding whitespace removed.
+To have a Terraform provider listed this way, open a [New Package issue](https://github.com/pulumi/registry/issues/new?template=new-package.yml) with the provider's name and repository. Include a link to a web-accessible SVG logo in the issue, since these listings are generated automatically and carry no logo otherwise. Wordmarks are preferred, with all surrounding whitespace removed. For a listing that's already live, send the same link to [Pulumi support](/support/new/).
 
 ## Prerequisites
 
@@ -105,7 +105,7 @@ A component package bundles [components](/docs/iac/concepts/components/): abstra
 
 A component package can also declare custom resources of its own, so you aren't limited to composing what other providers offer. If your components need a resource type no provider manages, you can implement it in the same package.
 
-Components are most often distributed as [source-based plugin packages](/docs/iac/guides/building-extending/packages/source-based-plugin/), which the public Registry doesn't support. To list a component package in the public Registry, build it as an [executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/).
+Components are most often distributed as [source-based plugin packages](/docs/iac/guides/building-extending/packages/source-based-plugin/). The Registry accepts either kind, but a source-based package requires every consumer to have your package's language runtime installed on the machine that runs Pulumi. Building it as an [executable plugin package](/docs/iac/guides/building-extending/packages/executable-plugin/) drops that requirement, so it's the better choice for the widest possible audience.
 
 ### Identify your provider to the vendor's API
 
@@ -140,8 +140,6 @@ layout: package
 | `title` | The package display name. Should match `displayName` in your `schema.json`. Rendered as the page's heading. |
 | `meta_desc` | One sentence, used as the page's meta description. Include the package name. |
 | `layout` | Use `package`. |
-
-The generator adds a `# WARNING:` comment and an `edit_url:` key of its own when it publishes; you don't write those.
 
 ### Page structure
 
