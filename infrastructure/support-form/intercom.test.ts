@@ -84,7 +84,7 @@ test("files a conversation against an existing contact", async t => {
     const fake = fakeIntercom({ existingContactId: "contact-1" });
     t.after(fake.restore);
 
-    assert.strictEqual(await createSupportConversation(request), "conversation-99");
+    assert.deepStrictEqual(await createSupportConversation(request), { conversationId: "conversation-99" });
     assert.deepStrictEqual(fake.calls.map(c => c.url), [
         "https://api.intercom.io/contacts/search",
         "https://api.intercom.io/conversations",
@@ -138,15 +138,29 @@ test("sets organization and priority as custom attributes after creation", async
     });
 });
 
-// handler.ts turns any throw from here into a 502, so each leg has to throw
-// rather than resolve with a partial result. "/contacts/search" does not end
-// with "/contacts", so the second case really does exercise the create leg,
-// and the fixed "conversation-99" id from the fake create response is what
-// makes the final PUT's path predictable.
-for (const failingPath of ["/contacts/search", "/contacts", "/conversations", "/conversations/conversation-99"]) {
+// handler.ts turns any throw from here into a 502, so every leg that runs
+// before the conversation exists has to throw rather than resolve with a
+// partial result. "/contacts/search" does not end with "/contacts", so the
+// second case really does exercise the create leg.
+for (const failingPath of ["/contacts/search", "/contacts", "/conversations"]) {
     test(`throws when Intercom rejects ${failingPath}`, async t => {
         const fake = fakeIntercom({ failingPath });
         t.after(fake.restore);
         await assert.rejects(createSupportConversation(request), /Intercom/);
     });
 }
+
+// The attributes PUT is the exception: it runs after the conversation exists,
+// so a failure there must resolve with the id (the conversation is filed and a
+// human will see it) and report the error rather than throw. The fixed
+// "conversation-99" id from the fake create response is what makes the PUT's
+// path predictable enough to fail on demand.
+test("returns the conversation id when only the attributes update fails", async t => {
+    const fake = fakeIntercom({ existingContactId: "contact-1", failingPath: "/conversations/conversation-99" });
+    t.after(fake.restore);
+
+    const result = await createSupportConversation(request);
+
+    assert.strictEqual(result.conversationId, "conversation-99");
+    assert.match(result.attributesError || "", /Intercom conversation attributes update failed/);
+});

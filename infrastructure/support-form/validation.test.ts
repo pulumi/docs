@@ -139,6 +139,9 @@ const CONVERSATION_ID = "conversation-42";
 const intercomCalls: string[] = [];
 const intercomRequests: Array<{ url: string; body: any }> = [];
 let intercomUp = true;
+// Fails only the trailing attributes PUT, leaving the create legs healthy --
+// the split the best-effort accept path turns on.
+let intercomAttributesUp = true;
 
 globalThis.fetch = async (input, init) => {
     const url = String(input);
@@ -161,6 +164,9 @@ globalThis.fetch = async (input, init) => {
             JSON.stringify({ type: "user_message", id: "message-1", conversation_id: CONVERSATION_ID }),
             { status: 200 },
         );
+    }
+    if (!intercomAttributesUp && /\/conversations\/[^/]+$/.test(url)) {
+        return new Response("unprocessable", { status: 422 });
     }
     return new Response(JSON.stringify({ id: CONVERSATION_ID }), { status: 200 });
 };
@@ -375,6 +381,36 @@ test("handler reports a conversation-creation failure as a 502", async () => {
     } finally {
         intercomUp = true;
     }
+});
+
+// The counterpart to the test above: the same 4xx, one call later, must NOT be
+// a 502. By the time the attributes PUT can fail the conversation is already in
+// support's inbox, so telling the submitter it failed only buys a duplicate.
+test("handler still accepts when only the attributes update fails", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const logged: string[] = [];
+    const realError = console.error;
+    console.error = (msg?: any) => {
+        logged.push(String(msg));
+    };
+    intercomAttributesUp = false;
+    try {
+        const response = await supportFormHandler(postEvent(validPayload()));
+        assert.strictEqual(response.statusCode, 200);
+        const parsed = JSON.parse(response.body);
+        assert.strictEqual(parsed.ok, true);
+        assert.strictEqual(parsed.conversationId, CONVERSATION_ID);
+    } finally {
+        intercomAttributesUp = true;
+        console.error = realError;
+    }
+
+    // Not silent: the missing triage metadata gets its own queryable log type,
+    // and never the failure type that means nothing was filed.
+    const entry = logged.map(l => JSON.parse(l)).find(e => e.type === "support_request_attributes_failed");
+    assert.ok(entry, "expected a support_request_attributes_failed log entry");
+    assert.strictEqual(entry.conversationId, CONVERSATION_ID);
+    assert.ok(!logged.some(l => l.includes("support_request_conversation_failed")));
 });
 
 test("handler swallows honeypot submissions with a fake success", async () => {

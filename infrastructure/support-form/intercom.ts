@@ -2,8 +2,8 @@
 
 // Intercom API client for filing support conversations from accepted
 // submissions. Split out from handler.ts so the network-calling code stays
-// separate from request/response plumbing; createSupportConversation is the
-// only export handler.ts needs.
+// separate from request/response plumbing; createSupportConversation and its
+// result type are the only exports handler.ts needs.
 
 import type { SupportRequest } from "./validation";
 
@@ -96,16 +96,37 @@ async function setConversationAttributes(conversationId: string, request: Suppor
     }
 }
 
+export interface SupportConversation {
+    conversationId: string;
+    // Set when the conversation was filed but its custom attributes could not
+    // be written. The conversation still reached support; only the triage
+    // metadata is missing.
+    attributesError?: string;
+}
+
 // createSupportConversation finds or creates the submitter's Intercom
-// contact, then files a conversation against it. Throws on any Intercom API
-// failure; the caller (handler.ts) is responsible for turning that into a
+// contact, then files a conversation against it. Throws when no conversation
+// was filed; the caller (handler.ts) is responsible for turning that into a
 // response.
-export async function createSupportConversation(request: SupportRequest): Promise<string> {
+//
+// The attributes PUT is deliberately best-effort rather than part of that
+// contract. It is the last of up to four calls, so by the time it can fail the
+// conversation already exists and is sitting in the inbox: throwing here would
+// tell the submitter their request was not filed, they would resubmit, and
+// support would see two conversations for one problem -- strictly worse than
+// one conversation missing pulumi-org and priority, both of which are also in
+// the message body. The failure is returned rather than swallowed so the
+// handler can log it under its own type and keep it queryable.
+export async function createSupportConversation(request: SupportRequest): Promise<SupportConversation> {
     let contactId = await findContactByEmail(request.email);
     if (!contactId) {
         contactId = await createContact(request.email, request.name);
     }
     const conversationId = await createConversation(contactId, request);
-    await setConversationAttributes(conversationId, request);
-    return conversationId;
+    try {
+        await setConversationAttributes(conversationId, request);
+    } catch (err) {
+        return { conversationId, attributesError: err instanceof Error ? err.message : String(err) };
+    }
+    return { conversationId };
 }

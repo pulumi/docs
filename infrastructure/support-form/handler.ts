@@ -10,10 +10,16 @@
 //
 // Accepted submissions are filed as Intercom conversations (see ./intercom.ts) and,
 // either way, written to CloudWatch Logs as single-line JSON documents (type
-// "support_request_accepted" or "support_request_conversation_failed") for
-// observability.
+// "support_request_accepted", "support_request_attributes_failed" or
+// "support_request_conversation_failed") for observability.
+//
+// This endpoint's request and response shapes are published to agents in
+// layouts/index.llms.txt (rendered at /llms.txt). Change one here and change
+// it there in the same PR, or /llms.txt documents an API that no longer
+// exists.
 
 import * as crypto from "crypto";
+import type { SupportConversation } from "./intercom";
 import { createSupportConversation } from "./intercom";
 import { MAX_BODY_BYTES, validateSubmission } from "./validation";
 
@@ -186,7 +192,8 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
     // Resolved once, and deliberately only after the secret check: the viewer
     // address is trustworthy precisely because CloudFront vouched for this
     // request. Computed here rather than at each log site so the success path,
-    // which runs after the Intercom ticket already exists, cannot fail on it.
+    // which runs after the Intercom conversation already exists, cannot fail on
+    // it.
     const address = clientAddress(event);
 
     const method = (event.requestContext?.http?.method || "").toUpperCase();
@@ -261,9 +268,9 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
 
     const id = crypto.randomUUID();
 
-    let conversationId: string;
+    let conversation: SupportConversation;
     try {
-        conversationId = await createSupportConversation(result.value);
+        conversation = await createSupportConversation(result.value);
     } catch (err) {
         console.error(
             JSON.stringify({
@@ -278,6 +285,28 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         return jsonResponse(502, { ok: false, error: "conversation_creation_failed", id });
     }
 
+    const { conversationId, attributesError } = conversation;
+
+    // The conversation exists; only its pulumi-org/priority attributes are
+    // missing. That is not a failed submission, so it gets its own log type
+    // rather than a 502 -- queryable via
+    // { $.type = "support_request_attributes_failed" } to spot a systemic
+    // problem with the attribute model without ever telling a submitter their
+    // request was lost when it wasn't.
+    if (attributesError) {
+        console.error(
+            JSON.stringify({
+                type: "support_request_attributes_failed",
+                id,
+                conversationId,
+                error: attributesError,
+                sourceIp: address.ip,
+                ipSource: address.source,
+                request: result.value,
+            }),
+        );
+    }
+
     // One JSON document per accepted submission, queryable in CloudWatch Logs
     // Insights via { $.type = "support_request_accepted" }.
     console.log(
@@ -285,6 +314,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
             type: "support_request_accepted",
             id,
             conversationId,
+            attributesSet: !attributesError,
             receivedAt: new Date().toISOString(),
             sourceIp: address.ip,
             ipSource: address.source,
