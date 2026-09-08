@@ -3,6 +3,7 @@ title: Python for DevOps
 meta_desc: "Python is the lingua franca of DevOps and MLOps automation. Learn where Python fits in IaC, CI/CD, observability, and machine-learning operations."
 
 type: what-is
+date: 2021-09-27T08:46:43-07:00
 page_title: "Python for DevOps"
 
 customer_logos:

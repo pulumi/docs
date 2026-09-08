@@ -2,6 +2,7 @@
 title: What Is GitOps?
 meta_desc: "GitOps manages infrastructure and apps with Git as the single source of truth and agents that reconcile live state to match. Learn how it works."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is GitOps?"
 authors: ["alex-leventer"]
 ---

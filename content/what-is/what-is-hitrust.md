@@ -2,6 +2,7 @@
 title: What is HITRUST?
 meta_desc: "HITRUST CSF is a certifiable security framework that harmonizes HIPAA, NIST, ISO 27001, and more into one assessment. Learn the levels, scope, and process."
 type: what-is
+date: 2025-05-22T12:46:23-04:00
 page_title: "What is HITRUST?"
 authors: ["asaf-ashirov"]
 ---

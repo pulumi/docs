@@ -2,6 +2,7 @@
 title: What Is Immutable Infrastructure?
 meta_desc: "Immutable infrastructure means never modifying a running server—you replace it with a new versioned image. Learn how it works and why it stops drift."
 type: what-is
+date: 2026-07-10T14:11:42-07:00
 page_title: "What Is Immutable Infrastructure?"
 authors: ["alex-leventer"]
 ---

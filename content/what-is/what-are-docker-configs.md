@@ -4,6 +4,7 @@ meta_desc: |
     Docker Configs store non-sensitive data, like config files, and mount it into Swarm containers at runtime. Learn to create and mount Configs via the CLI.
 
 type: what-is
+date: 2023-11-15T12:27:24+01:00
 page_title: "What are Docker Configs?"
 authors: ["torian-crane"]
 ---

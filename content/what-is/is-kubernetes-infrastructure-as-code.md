@@ -3,6 +3,7 @@ title: "Is Kubernetes Infrastructure as Code?"
 meta_desc: "Partly. Kubernetes reconciles YAML like IaC, but the loop stops at the cluster boundary. Pulumi extends that model to the infrastructure underneath."
 
 type: what-is
+date: 2026-07-08T10:45:17-07:00
 page_title: "Is Kubernetes Infrastructure as Code?"
 
 authors:

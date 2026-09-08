@@ -4,6 +4,7 @@ meta_desc: |
      Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 
 customer_logos:

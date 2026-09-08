@@ -4,6 +4,7 @@ meta_desc: |
     Kubernetes Secrets store sensitive data apart from pod specs so it isn't hard-coded into manifests. Learn to create, read, update, and delete Secrets safely.
 
 type: what-is
+date: 2023-11-15T09:28:19-06:00
 page_title: "What are Kubernetes Secrets?"
 
 authors: ["diana-esteves"]

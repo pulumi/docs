@@ -2,6 +2,7 @@
 title: What is DevOps?
 meta_desc: DevOps combines software development and IT operations to ship faster and more reliably. Learn lifecycle, CI/CD, automation, testing, and security.
 type: what-is
+date: 2023-12-06T09:35:53-08:00
 page_title: "What is DevOps?"
 authors: ["james-denyer"]
 ---

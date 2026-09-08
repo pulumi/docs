@@ -3,6 +3,7 @@ title: "What is Infrastructure as Code (IaC)?"
 meta_desc: |
     Infrastructure as code (IaC) provisions cloud infrastructure through versioned, reviewable code. How IaC works, compares to manual setup, and how to start.
 type: what-is
+date: 2021-07-22T15:11:35-07:00
 page_title: "What is Infrastructure as Code (IaC)? Definition & Comparison"
 aliases:
   - /blog/five-years-of-infrastructure-as-code-part-one/
