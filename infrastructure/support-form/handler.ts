@@ -8,13 +8,13 @@
 // Requests without the secret are rejected, so the public Function URL can't
 // be used to bypass the CDN's WAF and rate limiting.
 //
-// Accepted submissions are filed as Intercom tickets (see ./intercom.ts) and,
+// Accepted submissions are filed as Intercom conversations (see ./intercom.ts) and,
 // either way, written to CloudWatch Logs as single-line JSON documents (type
-// "support_request_accepted" or "support_request_ticket_failed") for
+// "support_request_accepted" or "support_request_conversation_failed") for
 // observability.
 
 import * as crypto from "crypto";
-import { createSupportTicket } from "./intercom";
+import { createSupportConversation } from "./intercom";
 import { MAX_BODY_BYTES, validateSubmission } from "./validation";
 
 // Function URLs invoke with the API Gateway v2 payload shape. Only the pieces
@@ -128,17 +128,17 @@ export function clientAddress(event: FunctionUrlEvent): ClientAddress {
     return { ip: peer, source: peer ? "edge" : "unknown" };
 }
 
-// A ticket id for the honeypot's fake success.
+// A conversation id for the honeypot's fake success.
 //
 // Intercom's ids are numeric strings, so this has to look like one -- an
 // obviously synthetic value (a UUID, a fixed sentinel) would be as good an
-// oracle as omitting the field. Nothing consumes it: no ticket exists.
-function syntheticTicketId(): string {
+// oracle as omitting the field. Nothing consumes it: no conversation exists.
+function syntheticConversationId(): string {
     // First digit is 1-9. Intercom renders integers, so a real id never has a
     // leading zero, and building all 15 digits uniformly gave one in ten of
     // these a leading zero -- a free tell for anyone comparing a drop against a
-    // real acceptance. Width checked against real ids returned by the testing
-    // workspace: 215475647261127, 215475647300185, 372996254723247.
+    // real acceptance. Width checked against a real conversation id returned
+    // by the testing workspace: 215475836771541.
     let digits = String(Math.floor(Math.random() * 9) + 1);
     while (digits.length < 15) {
         digits += Math.floor(Math.random() * 10).toString();
@@ -229,20 +229,20 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
     // The name matters. As "website" the field was a prime autofill target --
     // password managers store website URLs and match on the field name -- and an
     // autofilled trap destroys a real person's request: they are shown the
-    // confirmation, their draft is deleted, and no ticket exists. A name with no
-    // autofill semantics costs nothing against the naive bots this catches,
-    // which fill every field regardless of what it is called.
+    // confirmation, their draft is deleted, and no conversation exists. A name
+    // with no autofill semantics costs nothing against the naive bots this
+    // catches, which fill every field regardless of what it is called.
     //
     // Deliberately AFTER validation, and returning the same response shape a
     // real success does. Checking it first gave a spammer a one-request oracle:
     // a knowingly invalid payload plus the honeypot returned 200 where the same
     // payload without it returned 422, so the trap announced itself. And a fake
-    // success that omitted ticketId was distinguishable from a real one by any
-    // caller that read the documented shape. Both are closed by validating
-    // first and minting a plausible id.
+    // success that omitted conversationId was distinguishable from a real one
+    // by any caller that read the documented shape. Both are closed by
+    // validating first and minting a plausible id.
     //
     // The response body is indistinguishable; the latency is not. A real
-    // acceptance awaits up to three sequential round trips to api.intercom.io,
+    // acceptance awaits up to four sequential round trips to api.intercom.io,
     // and this path does no I/O at all, so a determined spammer could tell them
     // apart by timing. Left as-is deliberately: closing it means padding this
     // path to a plausible duration, which holds a Lambda invocation open to
@@ -256,18 +256,18 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
                 ipSource: address.source,
             }),
         );
-        return jsonResponse(200, { ok: true, id: crypto.randomUUID(), ticketId: syntheticTicketId() });
+        return jsonResponse(200, { ok: true, id: crypto.randomUUID(), conversationId: syntheticConversationId() });
     }
 
     const id = crypto.randomUUID();
 
-    let ticketId: string;
+    let conversationId: string;
     try {
-        ticketId = await createSupportTicket(result.value);
+        conversationId = await createSupportConversation(result.value);
     } catch (err) {
         console.error(
             JSON.stringify({
-                type: "support_request_ticket_failed",
+                type: "support_request_conversation_failed",
                 id,
                 error: err instanceof Error ? err.message : String(err),
                 sourceIp: address.ip,
@@ -275,7 +275,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
                 request: result.value,
             }),
         );
-        return jsonResponse(502, { ok: false, error: "ticket_creation_failed", id });
+        return jsonResponse(502, { ok: false, error: "conversation_creation_failed", id });
     }
 
     // One JSON document per accepted submission, queryable in CloudWatch Logs
@@ -284,7 +284,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         JSON.stringify({
             type: "support_request_accepted",
             id,
-            ticketId,
+            conversationId,
             receivedAt: new Date().toISOString(),
             sourceIp: address.ip,
             ipSource: address.source,
@@ -292,5 +292,5 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
         }),
     );
 
-    return jsonResponse(200, { ok: true, id, ticketId });
+    return jsonResponse(200, { ok: true, id, conversationId });
 }
