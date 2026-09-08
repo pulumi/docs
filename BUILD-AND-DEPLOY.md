@@ -3478,7 +3478,7 @@ The workflow does not classify PRs into risk tiers. The three flags surface the 
 
 ### Auto-merge
 
-When the `DEPS_AUTO_MERGE` repository variable is set to `true`, `label-dependabot.yml` approves qualifying Dependabot PRs as `pulumi-bot` and hands them to GitHub's native auto-merge, which waits for the required build check on its own. **A PR qualifies unless it carries `deps-lambda-edge-risk` or `deps-bulk-update`** — those two stay in the human queue, and the triage comment says which flag held it.
+When the `DEPS_AUTO_MERGE` repository variable is set to `true`, `label-dependabot.yml` approves qualifying Dependabot PRs as `pulumi-bot` and hands them to GitHub's native auto-merge, which waits for the required build check on its own. **A PR qualifies unless it carries `deps-lambda-edge-risk` or `deps-bulk-update`** — those two stay in the human queue, and the triage comment says which flag held it. A PR is also withheld, with no flag set, whenever Dependabot's metadata was unavailable and the labels had to come from body parsing; the triage comment says so explicitly, because that is the one held state no label explains.
 
 Unset the variable to turn the whole thing off; PRs already armed can be released individually with `gh pr merge --disable-auto <number>`. Same switch pattern as `BLOG_REVIEW_COUNT`.
 

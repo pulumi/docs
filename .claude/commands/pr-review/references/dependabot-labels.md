@@ -43,6 +43,11 @@ reaches a human if it carries `deps-lambda-edge-risk` or `deps-bulk-update`, and
 its triage comment names the flag that held it. In that state those two labels
 are merge gates, not notes.
 
+A third case holds a PR with **no** flag on it: if the `fetch-metadata` step
+fails, the labels fall back to body parsing, which can under-count a large
+group, so auto-merge is withheld regardless of flags. The triage comment marks
+this explicitly — it is the only held state the labels don't explain.
+
 With the variable unset, the default path for every Dependabot PR is:
 
 1. **Evaluate** - build and spot-check (the testing checklist lives in `pr-review:references:action-menus`).
