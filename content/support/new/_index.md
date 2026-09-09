@@ -24,6 +24,7 @@ form:
         priority:
             label: Priority
             options:
+                # values must match list options for "Priority" in Intercom
                 - label: Normal
                   value: Normal
                 - label: Urgent
