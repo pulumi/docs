@@ -54,7 +54,7 @@ options:
         - icon: code-window
           icon_color: blue
           title: REST API
-          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/platform/deployments/reference/#rest-api) code.
+          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/deployments/concepts/) code.
         - icon: eye
           icon_color: violet
           title: Review Stacks
