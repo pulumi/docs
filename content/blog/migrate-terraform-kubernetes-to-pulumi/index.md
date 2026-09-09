@@ -18,11 +18,19 @@ related_posts:
 
 social:
     twitter: |
-        Already decided to move a Terraform-managed Kubernetes stack to Pulumi? Here's the path: convert the HCL, hand-write the kubernetes_manifest and CRD resources the converter can't reach, then import what's already running.
+        Already decided to move a Terraform-managed Kubernetes stack to Pulumi?
+
+        Here's the path: convert the HCL, hand-write the kubernetes_manifest and CRD resources the converter can't reach, then import what's already running.
     linkedin: |
-        Teams that adopt Pulumi for Kubernetes usually arrive with an existing Terraform stack, not a green field. This guide covers the actual migration mechanics: running `pulumi convert` against the HCL, rewriting `kubernetes_manifest` blocks and CRDs by hand (the converter's biggest gap), importing objects Terraform already created with `pulumi import`, and running both tools against one cluster during the cutover without fighting over the same resources.
+        Teams that adopt Pulumi for Kubernetes usually arrive with an existing Terraform stack, not a green field.
+
+        This guide covers the actual migration mechanics: running pulumi convert against the HCL, rewriting kubernetes_manifest blocks and CRDs by hand (the converter's biggest gap).
+
+        It also covers importing objects Terraform already created with pulumi import, and running both tools against one cluster during the cutover without fighting over the same resources.
     bluesky: |
-        A step-by-step guide to migrating a Terraform Kubernetes setup to Pulumi: convert the HCL, hand-write what doesn't convert, import the live objects, and cut over safely.
+        A step-by-step guide to migrating a Terraform Kubernetes setup to Pulumi.
+
+        Convert the HCL, hand-write what doesn't convert, import the live objects, and cut over safely.
 ---
 
 This guide walks through migrating a Kubernetes stack from Terraform's `hashicorp/kubernetes` provider to Pulumi: converting the HCL, rewriting the pieces the converter can't reach, importing objects Terraform already created, and running both tools against one cluster during the cutover.
@@ -183,7 +191,7 @@ Converting the code gives you a Pulumi program, but the resources it describes a
 pulumi import kubernetes:core/v1:ConfigMap app-config default/app-config
 ```
 
-For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. This isn't spelled out on a single reference page the way an AWS resource's ARN format is; it's the convention the Kubernetes provider expects, and the worked example above reflects how teams doing this migration have applied it in practice. Treat it as a starting point rather than a guarantee: if `pulumi import` rejects an id, run it again with `--out preview.ts` (or your target language) against a single resource first, using the id shape shown above, before batching the rest through `--file`.
+For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. This isn't spelled out on a single reference page the way an AWS resource's ARN format is; it's the convention the Kubernetes provider expects, and the worked example above reflects how teams doing this migration have applied it in practice. Treat it as a starting point rather than a guarantee: if `pulumi import` rejects an id, run `kubectl api-resources -o wide | grep <kind>` to confirm whether that resource type is namespaced or cluster-scoped, and `kubectl get <type> <name> -n <namespace>` to confirm the object actually exists under the id you're passing, before trying again.
 
 Importing one resource at a time works for a small stack. For anything larger, `pulumi import --file` takes a JSON file listing every resource at once:
 
