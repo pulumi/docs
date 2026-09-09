@@ -12,7 +12,7 @@ menu:
 
 Deleting a resource from a Pulumi program normally deletes the underlying cloud infrastructure too: that is the whole point of the desired-state model. But sometimes you want the opposite outcome: stop Pulumi from managing something while leaving the real resource untouched. Common reasons include handing a resource off to another team's stack, undoing a [`pulumi import`](/docs/iac/guides/migration/import/) that turned out to be premature, or decommissioning a project while a database or DNS zone it created keeps serving traffic elsewhere.
 
-Pulumi supports this with two complementary tools: [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) for a one-time, interactive removal, and the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainOnDelete/) resource option for a change you want to make part of your program and repeat safely in CI. Both leave the cloud resource exactly as it is; they only change what Pulumi tracks.
+Pulumi supports this with two complementary tools: [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) for a one-time, interactive removal, and the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) resource option for a change you want to make part of your program and repeat safely in CI. Both leave the cloud resource exactly as it is; they only change what Pulumi tracks.
 
 {{% notes type="info" %}}
 This is the reverse of [importing a resource](/docs/iac/guides/migration/import/), which brings existing infrastructure under Pulumi's management. It is also different from an out-of-band deletion, where a resource was removed outside of Pulumi and you need to reconcile state with reality; for that case see [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) and `pulumi refresh`.
@@ -54,7 +54,7 @@ Two safeguards apply by default:
 
 ## Remove a resource declaratively with `retainOnDelete`
 
-`pulumi state delete` is well suited to a one-time cleanup you run by hand, but it isn't something you want a CI pipeline invoking on your behalf: a mistyped URN or a stale pipeline run could remove the wrong resource from state with nobody watching. When the removal should happen as a normal part of `pulumi up`, set the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainOnDelete/) resource option instead:
+`pulumi state delete` is well suited to a one-time cleanup you run by hand, but it isn't something you want a CI pipeline invoking on your behalf: a mistyped URN or a stale pipeline run could remove the wrong resource from state with nobody watching. When the removal should happen as a normal part of `pulumi up`, set the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) resource option instead:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
