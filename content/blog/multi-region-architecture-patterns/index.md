@@ -88,7 +88,6 @@ In practice, that usually means: keep your compute and data plane on your primar
 The pattern in the table above and the seam inventory above it both need to become code, not a runbook, or the design only exists on the day you wrote it down. Pulumi's [provider](https://www.pulumi.com/docs/iac/concepts/providers/) model gives you a direct way to do that: one explicit [provider resource](https://www.pulumi.com/docs/iac/concepts/resources/options/provider/) per region, built in a loop so adding a region is a one-line change, not a new file. A resource that is genuinely per-region — an application stack, a load balancer — takes one of those providers as its [`provider` option](https://www.pulumi.com/docs/iac/concepts/resources/options/provider/) and gets its own copy in each region. A resource that instead spans every region at once, like the replicated table below, is created a single time and told which regions to replicate into.
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const regions = ["us-east-1", "us-west-2"];
