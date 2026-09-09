@@ -97,8 +97,8 @@ The panel discussed key strategies, challenges, and pillars of successful platfo
 
 - **[Developer Experience (DevEx)](https://www.pulumi.com/blog/software-developer-experience-devex-devx-devops-culture/)**: Provide developers with the tools, frameworks, and abstractions they need to be productive and proactive without getting stuck in infrastructure or operational concerns.
 - **[Reliability and Scalability](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#an-effective-internal-developer-platform)**: Ensure that the platform and infrastructure can support the organization's needs, with the ability to scale up or down as required.
-- **[Security and Compliance](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/)**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
-- **[Automation and Tooling](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Leverage [Infrastructure as Code (IaC)](https://www.pulumi.com/product/infrastructure-as-code/) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
+- **[Security and Compliance](/docs/insights/policy/)**: Embed robust, accessible security and compliance frameworks into the development lifecycle while making it easy for developers to adhere to these policies.
+- **[Automation and Tooling](/docs/iac/concepts/automation-api/)**: Leverage [Infrastructure as Code (IaC)](https://www.pulumi.com/product/infrastructure-as-code/) and automation to enforce standardized processes and consistency and reduce cognitive load and manual effort.
 - **[Observability and Monitoring](https://www.pulumi.com/product/pulumi-insights/)**: Provide visibility into the platform's health and performance, delivering actionable insights that allow teams to identify and resolve issues quickly.
 
 These pillars work together to create a platform that empowers developers to innovate and deliver value to the organization and customers while maintaining the necessary controls and safeguards.
