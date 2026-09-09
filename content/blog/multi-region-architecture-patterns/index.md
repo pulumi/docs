@@ -39,7 +39,7 @@ That is the argument of this post: the topology decision (active-active, warm st
 
 You need multi-region only if your recovery targets require surviving the loss of an entire AWS Region (or GCP region, or Azure region) — not a single availability zone or data center. Most production outages are narrower than that, and multi-AZ deployment already covers them.
 
-A useful gate: in May 2026, a cooling failure inside a single AWS data center in one availability zone of US-EAST-1 caused rack-level power loss and degraded EC2 and EBS in that AZ. A well-architected multi-AZ deployment is designed to absorb exactly this: traffic and state shift to the surviving AZs in the same region automatically, with no application-level failover logic and no cross-region data replication to reason about. Multi-region solves a different, more expensive problem — losing the region itself, or losing your primary cloud provider's control plane in that region — and it is worth the added cost and operational burden only when your recovery time and recovery point objectives (RTO and RPO) genuinely require surviving that.
+A useful gate: a cooling failure inside a single data center can take out power to the racks in one availability zone, degrading compute and storage in that AZ without touching any other AZ in the region. A well-architected multi-AZ deployment is designed to absorb exactly this: load balancing and Auto Scaling shift traffic to the surviving AZs in the same region automatically, and managed stores like Amazon S3 and DynamoDB ride it out with no application-level failover logic and no cross-region data replication to reason about. (Stateful services such as RDS Multi-AZ still fail over via a DNS change your clients have to be configured to follow — which is itself a seam worth checking, and exactly the kind of thing the next section is about.) Multi-region solves a different, more expensive problem — losing the region itself, or losing your primary cloud provider's control plane in that region — and it is worth the added cost and operational burden only when your recovery time and recovery point objectives (RTO and RPO) genuinely require surviving that.
 
 If a single-AZ failure would violate your RTO or RPO, fix your AZ distribution first. It is far cheaper than building multi-region, and most teams that think they need multi-region actually need this.
 
@@ -77,7 +77,7 @@ You don't need to run every workload on every cloud to reduce concentration risk
 
 In practice, that usually means: keep your compute and data plane on your primary cloud provider, where the majority of your platform investment already lives, but put DNS and edge routing on a second provider so a single provider's outage can't simultaneously break your application and the routing decision that would work around it. It means running your CI/CD control plane and secrets manager somewhere that stays reachable even if your primary cloud region is degraded. And it means being honest that every seam you diversify adds real complexity and real cost — this is a targeted mitigation for specific dependency seams, not a mandate to duplicate your entire stack across providers.
 
-[Gartner's guidance on multi-cloud strategy](https://www.gartner.com/en/information-technology/glossary/multicloud-strategy) frames this as a risk-and-cost tradeoff rather than a default, which matches what shows up in practice: most teams get more resilience per dollar from fixing their dependency seams within one provider than from a full second-provider rewrite.
+[Gartner's guidance on multi-cloud strategy](https://www.gartner.com/en/information-technology/glossary/multicloud-strategy) frames multi-cloud as a risk-and-cost tradeoff rather than a default. That matches what we see in practice: most teams get more resilience per dollar from fixing their dependency seams within one provider than from a full second-provider rewrite.
 
 ## How do you express these patterns in infrastructure as code?
 
@@ -88,23 +88,25 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const regions = ["us-east-1", "us-west-2"];
+const providers = regions.map((region) => new aws.Provider(region, { region }));
 
-for (const region of regions) {
-    const provider = new aws.Provider(region, { region: region as aws.Region });
-
-    new aws.dynamodb.GlobalTable("orders", {
-        attributeDefinitions: [{ name: "id", type: "S" }],
-        keySchema: [{ attributeName: "id", keyType: "HASH" }],
-        replicas: regions.map((r) => ({ regionName: r })),
-    }, { provider });
-}
+// A global table is one resource spanning every region, not one per region,
+// so it's created once, against the primary region's provider.
+new aws.dynamodb.Table("orders", {
+    attributes: [{ name: "id", type: "S" }],
+    hashKey: "id",
+    billingMode: "PAY_PER_REQUEST",
+    streamEnabled: true,
+    streamViewType: "NEW_AND_OLD_IMAGES",
+    replicas: regions.slice(1).map((region) => ({ regionName: region })),
+}, { provider: providers[0] });
 ```
 
 That component is what makes the failure mode from the seams section testable: if the same component didn't get instantiated identically in every region, a unit test asserting resource parity catches it before a deploy does. [Stack references](https://www.pulumi.com/docs/iac/concepts/stacks/#stackreferences) let a per-region stack read outputs from its peers when regions need to know about each other — a DNS failover record needs the health-check ID from every region it might route to, for instance. And [Pulumi ESC](https://www.pulumi.com/docs/esc/) is the right place for per-region configuration and secrets that need to be consistent across regions rather than drifting between them one `pulumi config set` at a time.
 
 For the data layer specifically, the primitives differ by store, and it's worth using the current form rather than an older, deprecated one:
 
-- DynamoDB: [`aws.dynamodb.GlobalTable`](https://www.pulumi.com/registry/packages/aws/api-docs/dynamodb/globaltable/), with a `replicas` list naming every region.
+- DynamoDB: [`aws.dynamodb.Table`](https://www.pulumi.com/registry/packages/aws/api-docs/dynamodb/table/) with a `replicas` list naming every region — this is Global Tables V2, the current form. The older `aws.dynamodb.GlobalTable` resource manages Global Tables V1 against tables that already exist in each region.
 - Aurora: a [`aws.rds.GlobalCluster`](https://www.pulumi.com/registry/packages/aws/api-docs/rds/globalcluster/) with regional `aws.rds.Cluster` resources attached to it.
 - S3: [`aws.s3.BucketReplicationConfig`](https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucketreplicationconfig/) for cross-region replication.
 - DNS failover: [`aws.route53.Record`](https://www.pulumi.com/registry/packages/aws/api-docs/route53/record/) with a failover routing policy and an [`aws.route53.HealthCheck`](https://www.pulumi.com/registry/packages/aws/api-docs/route53/healthcheck/), or a [`cloudflare.DnsRecord`](https://www.pulumi.com/registry/packages/cloudflare/) if you've put edge routing on a second provider, as above.
@@ -118,20 +120,20 @@ This is the part most multi-region write-ups skip, and it's the part that decide
 A few concrete ways to close that gap, in order of effort:
 
 1. **Unit-test resource parity.** If your regions are instantiated from one component, as above, a unit test can assert that every region got the same set of resources with the same configuration — catching drift before it ships.
-2. **Enforce replication posture with a policy pack.** Pulumi's [policy as code](https://www.pulumi.com/docs/insights/policy/policy-packs/) lets you write a `ResourceValidationPolicy` that inspects a resource's declared properties and fails a preview if, say, a DynamoDB table is missing a required replica region, or an S3 bucket has no replication configuration attached. Set the enforcement level to `mandatory` and this becomes a real gate, not a suggestion.
-3. **Review stacks on every pull request.** [Review stacks](https://www.pulumi.com/docs/deployments/concepts/review-stacks/) preview the multi-region diff on every PR touching this code, so a regression in one region's configuration shows up in code review, not in an incident.
-4. **Run scheduled failover drills with Automation API.** The [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) lets you script an actual failover — promoting the standby, redirecting DNS, validating the application responds — on a schedule, rather than only when a real outage forces the first attempt.
-5. **Treat drift on the standby as a signal, not noise.** Running [`pulumi preview --diff`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_preview/) against your standby or pilot-light stack on a schedule tells you when it has quietly diverged from primary — the exact condition that turns a documented pattern into a failover that doesn't actually work when you need it.
+1. **Enforce replication posture with a policy pack.** Pulumi's [policy as code](https://www.pulumi.com/docs/insights/policy/policy-packs/) lets you write a `ResourceValidationPolicy` that inspects a resource's declared properties and fails a preview if, say, a DynamoDB table is missing a required replica region, or an S3 bucket has no replication configuration attached. Set the enforcement level to `mandatory` and this becomes a real gate, not a suggestion.
+1. **Review stacks on every pull request.** [Review stacks](https://www.pulumi.com/docs/deployments/concepts/review-stacks/) preview the multi-region diff on every PR touching this code, so a regression in one region's configuration shows up in code review, not in an incident.
+1. **Run scheduled failover drills with Automation API.** The [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) lets you script an actual failover — promoting the standby, redirecting DNS, validating the application responds — on a schedule, rather than only when a real outage forces the first attempt.
+1. **Treat drift on the standby as a signal, not noise.** Running [`pulumi preview --diff`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_preview/) against your standby or pilot-light stack on a schedule tells you when it has quietly diverged from primary — the exact condition that turns a documented pattern into a failover that doesn't actually work when you need it.
 
 None of this requires exotic tooling. It requires treating the standby the way you already treat production: tested, monitored, and reviewed on every change, rather than provisioned once and left alone until the day it has to work.
 
 ## Where to start
 
 1. Write down your actual RTO and RPO before picking a pattern — most teams pick a pattern and then discover, mid-incident, what recovery time it actually gave them.
-2. Inventory the seams (DNS, identity, secrets, CI/CD, observability, state backend, control plane) and note which ones are still single-region or single-provider.
-3. Express the pattern as a parameterized component with one explicit provider per region, so every region is provably identical.
-4. Add a policy pack that enforces your replication and failover requirements as a preview-time gate, not a wiki page.
-5. Schedule a real failover drill. If you haven't run one, you don't know whether your design holds — you know what it looks like on a diagram.
+1. Inventory the seams (DNS, identity, secrets, CI/CD, observability, state backend, control plane) and note which ones are still single-region or single-provider.
+1. Express the pattern as a parameterized component with one explicit provider per region, so every region is provably identical.
+1. Add a policy pack that enforces your replication and failover requirements as a preview-time gate, not a wiki page.
+1. Schedule a real failover drill. If you haven't run one, you don't know whether your design holds — you know what it looks like on a diagram.
 
 Multi-region architecture is a legitimate, often necessary investment. It just isn't primarily a topology problem, and treating it as one is how a design that reads well in a review turns out to have a shared DNS provider, a single-region secrets manager, or a standby stack nobody has run a preview against in months. Fix the seams, then prove the pattern holds — in a policy check and a drill, not just in a document.
 
