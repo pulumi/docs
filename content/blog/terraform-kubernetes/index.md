@@ -65,8 +65,8 @@ At a glance, here's how Terraform's Kubernetes provider and Pulumi differ on the
 | --- | --- | --- |
 | Cluster and workloads in one run | Requires a two-stage apply or separate modules | Single program, single `pulumi up` |
 | Custom resources / CRDs | `kubernetes_manifest` needs live API access at plan time | Typed CRD support generated from cluster schema, no plan-time cluster requirement |
-| Provider-credential ordering | Documented footgun; HashiCorp recommends separate applies | Ordinary language-level dependency, resolved by the runtime |
-| Testing | Limited to `terraform plan` output and third-party policy tools | Standard test frameworks (pytest, Jest, Go testing, etc.) plus `pulumi preview` |
+| Provider-credential ordering | Documented pitfall; HashiCorp recommends separate applies | Ordinary language-level dependency, resolved by the runtime |
+| Testing | Native `.tftest.hcl` tests with `mock_provider` (GA since Terraform 1.7), in a separate test language | Standard test frameworks (pytest, Jest, Go testing, etc.) in the same suite as application code, plus `pulumi preview` |
 | Language | HCL only (community `kubectl` provider as a workaround for free-form YAML) | Python, TypeScript, Go, C#, Java, or YAML/HCL |
 
 ## What changes when Kubernetes infrastructure is written in a general-purpose language?
