@@ -226,9 +226,11 @@ importing its deployment state directly, the programmatic equivalents of the
 [`pulumi stack rename`](/docs/iac/cli/commands/pulumi_stack_rename/),
 [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/), and
 [`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/) CLI
-commands. Export and import are typically paired together to edit a stack's
-state directly, such as recovering from a failed deployment or removing a
-resource from state without destroying it in the cloud.
+commands. Renaming has the same consequences here as it does from the CLI —
+see [Rename a stack](/docs/iac/concepts/stacks/#rename-a-stack). Export and
+import are typically paired together to edit a stack's state directly, such
+as recovering from a failed deployment or removing a resource from state
+without destroying it in the cloud.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
