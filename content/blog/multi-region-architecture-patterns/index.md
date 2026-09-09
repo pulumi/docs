@@ -81,7 +81,7 @@ You don't need to run every workload on every cloud to reduce concentration risk
 
 In practice, that usually means: keep your compute and data plane on your primary cloud provider, where the majority of your platform investment already lives, but put DNS and edge routing on a second provider so a single provider's outage can't simultaneously break your application and the routing decision that would work around it. It means running your CI/CD control plane and secrets manager somewhere that stays reachable even if your primary cloud region is degraded. And it means being honest that every seam you diversify adds real complexity and real cost — this is a targeted mitigation for specific dependency seams, not a mandate to duplicate your entire stack across providers.
 
-Multi-cloud is a real decision with added complexity and cost, not a default posture. That matches what we see in practice: most teams get more resilience per dollar from fixing their dependency seams within one provider than from a full second-provider rewrite.
+Multi-cloud is a real decision with added complexity and cost, not a default posture. Most teams get more resilience per dollar from fixing their dependency seams within one provider than from a full second-provider rewrite.
 
 ## How do you express these patterns in infrastructure as code?
 
