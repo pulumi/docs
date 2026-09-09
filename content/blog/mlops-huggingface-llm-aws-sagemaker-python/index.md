@@ -28,7 +28,7 @@ category: tutorials
 [Pulumi Account]:https://app.pulumi.com/signup
 [Pulumi Template]:/blog/how-to-create-and-share-a-pulumi-template
 [Pulumi Templates]:/blog/how-to-create-and-share-a-pulumi-template
-[Pulumi Python]:https://www.pulumi.com/docs/reference/pkg/python/pulumi
+[Pulumi Python]:/docs/reference/pkg/python/pulumi/
 [Infrastructure as Code]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IaC]:https://www.pulumi.com/what-is/what-is-infrastructure-as-code
 [IAM Roles]:/registry/packages/aws/api-docs/iam/role
@@ -36,7 +36,7 @@ category: tutorials
 [CloudWatch alarms]:/registry/packages/aws/api-docs/cloudwatch/metricalarm
 [Pulumi project and stack]:/docs/iac/guides/basics/organizing-projects-stacks/
 [Pulumi Cloud]:https://www.pulumi.com/product/pulumi-cloud
-[Pulumi state]:https://www.pulumi.com/docs/iac/concepts/state-and-backends
+[Pulumi state]:/docs/iac/concepts/state-and-backends/
 [Python Virtual Environment]:/docs/languages-sdks/python/#virtual-environments
 [venv]:/docs/languages-sdks/python/#virtual-environments
 
