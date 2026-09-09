@@ -172,7 +172,7 @@ editions:
       unit: "**Includes 40 Credits**"
       # The (i) tooltip on this note lists what a Credit buys per meter; the
       # rates come from `calculator:` below, keyed by this edition's id.
-      note: Includes 500 managed resources; additional usage is billed on demand
+      note: These credits cover up to 500 managed resources or a mix of Pulumi services. Additional usage is billed on demand.
       cta:
         label: Start with Essentials
         href: https://app.pulumi.com/signup?create-organization=1
@@ -197,7 +197,7 @@ editions:
       price: $400
       price_label: /month
       unit: "**Includes 400 Credits**"
-      note: Includes 2,000 managed resources; additional usage is billed on demand
+      note: These credits cover up to 2,000 managed resources or a mix of Pulumi services. Additional usage is billed on demand.
       cta:
         label: Start with Pro
         href: https://app.pulumi.com/signup?create-organization=1

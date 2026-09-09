@@ -38,7 +38,8 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 ## Creating an organization
 
 Creating an organization will start a free trial that has access to all features.
-At the end of the trial, you can choose the Essentials, Pro, or Enterprise edition.
+At the end of the trial, choose the edition that fits your needs. Free supports
+one user. Essentials, Pro, and Enterprise support multiple users.
 Learn more about what each one includes on the [pricing page](/pricing/).
 
 {{% notes type="info" %}}

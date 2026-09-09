@@ -145,13 +145,10 @@ stacks, and environments, and unlimited updates and history. It does not limit
 the number of managed resources. It does not include Pulumi Neo, Resource
 Search, or Property Search.
 
-### Are organizations available on the Free edition?
+### Can multiple people share an organization on Free?
 
-No. The Free edition covers a single user, which suits private projects but
-not a team. Organizations — the shared workspace where several engineers work on
-the same projects — start with the Essentials edition. Pro and Enterprise
-add [role-based access control](/docs/administration/concepts/rbac/) and
-[SAML/SSO](/docs/administration/guides/saml/) on top of that.
+No. Free supports one user. Choose Essentials or a higher edition to collaborate
+with other users.
 
 ### Can I start small and upgrade later?
 

@@ -79,7 +79,7 @@ faq:
 
       - header: Is there a free tier for Pulumi Deployments?
         content: |
-          The Free edition includes 500 deployment minutes per month. Essentials, Pro, and Enterprise do not have a separate fixed deployment-minute allowance. Deployment minutes draw from each edition's shared Pulumi Credits.
+          The Free edition includes 500 deployment minutes per month. Essentials, Pro, and Enterprise do not have a separate fixed deployment-minute allowance. Deployment minutes draw from each edition's Pulumi Credits.
 
       - header: How does drift detection work?
         content: |

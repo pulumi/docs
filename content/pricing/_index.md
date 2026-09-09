@@ -46,9 +46,11 @@ faq:
             Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
-            IaC resources are billed hourly at the rate of $0.00025 for Essentials ($0.1825 per resource per month) and starting at $0.0005 for Pro ($0.365 per resource per month). Enterprise costs $2,000 per month and includes up to 4,750 managed resources. These prices cover managing a resource for a full hour.
+            IaC resources are billed hourly at the rate of $0.00025 for Essentials ($0.1825 per resource per month) and starting at $0.0005 for Pro ($0.365 per resource per month). These hourly rates cover managing a resource for a full hour.
 
-            Pro receives volume discounts, so the incremental rate decreases as resource use increases. Contact sales for Enterprise contracts and pricing above 4,750 managed resources.
+            Pro receives volume discounts, so the incremental rate decreases as resource use increases.
+
+            Enterprise costs $2,000 per month and includes 4,750 managed resources. Additional resources cost $0.5475 each per month. [Contact sales](/contact/?form=sales) for contract pricing.
 
             For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/iac/concepts/resources/) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
@@ -92,7 +94,7 @@ faq:
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
         - question: How are ESC secrets API calls metered?
           answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/reference/cloud-rest-api/environments/) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/reference/cloud-rest-api/environments/) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. For example, 15,000 API calls in a month include 10,000 free calls and 5,000 billable calls, costing $0.05.
 
             API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/languages-sdks/), [Pulumi Cloud provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/reference/cloud-rest-api/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
@@ -134,7 +136,7 @@ faq:
         - question: How do I get started?
           answer: Follow the [Getting Started guide](/docs/get-started/), which walks you through creating and deploying your first Pulumi project.
         - question: How do I move off the legacy Starter and Pro SKUs?
-          answer: These are the grandfathered SKUs from before Pulumi Cloud moved to editions, not the current Pro edition. We recommend moving off them to get access to our latest capabilities like Pulumi Deployments, Discovery, and Neo. [Contact us](/contact/?form=sales) to move to a current edition.
+          answer: These legacy plans are separate from the current Pro edition. We recommend moving off them to get access to our latest capabilities like Pulumi Deployments, Discovery, and Neo. [Contact us](/contact/?form=sales) to move to a current edition.
         - question: Is Pulumi SOC 2 compliant?
           answer: Yes, Pulumi has completed the SOC 2 Type 2 compliance process. Pulumi is committed to operational excellence for our customers.
         - question: Can I host Pulumi Cloud in my cloud or datacenter?
