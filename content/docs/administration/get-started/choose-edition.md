@@ -18,28 +18,23 @@ Setting up your Pulumi Cloud account will lay the foundation for onboarding your
 
 ## Choose your edition
 
-Your edition determines the level of support, training, and features available to your team.
+Choose an edition based on the collaboration, automation, and governance capabilities you need.
 
-{{% notes type="info" %}}
-Pulumi’s community has grown to hundreds of thousands of practitioners worldwide. Check out the [Pulumi Community](/community/) to connect!
-{{%/notes%}}
+### Free
 
-### Individual and Team editions
+Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search.
 
-Perfect for smaller teams or getting started. Access community support through GitHub [Discussions](https://github.com/pulumi/pulumi/discussions) and [Issues](https://github.com/pulumi/pulumi/issues), [Community Slack](https://slack.pulumi.com), and free workshops.
+### Essentials
 
-You can also make use of the [Pulumi Neo](/product/neo/), detailed documentation in the [Pulumi Registry](/registry/), and the [examples repo](https://github.com/pulumi/examples) to help you get started.
+Choose Essentials when a team needs a shared organization with multiple users. Essentials adds Pulumi Neo, Resource Search, Property Search, audit logs, and policy results in advisory mode.
 
-### Enterprise and Business Critical editions
+### Pro
 
-Designed for larger organizations with mission-critical workloads. These editions include:
+Choose Pro when your organization needs stronger access controls, automation, and policy enforcement. Pro adds SAML SSO, advanced role-based access control, automated audit-log export, organization-managed policy enforcement, preventative policies, custom policy packs, drift remediation, scheduled Deployments, and scheduled Neo tasks.
 
-- **Premium support**: 12x5 or 24x7 support is available with ticketing, guaranteed SLAs, and private Slack channels
-- **Dedicated resources**: Personal account managers and architects to help solve complex problems
-- **Priority access**: Prioritized bugs and feature requests, plus product roadmap reviews
-- **Custom training**: Tailored onboarding and ongoing training for your team
+### Enterprise
 
-Access your support through the [support portal](https://support.pulumi.com/hc/en-us) if you're on the Enterprise or Business Critical edition.
+Choose Enterprise when your organization needs advanced compliance, identity management, or deployment controls. Enterprise adds conformance packs, unlimited custom policy packs, policy remediation, SCIM, self-hosting, GitHub Enterprise Server support, and unlimited custom roles.
 
 {{% notes type="info" %}}
 Learn more about the differences between [the editions](/pricing/).

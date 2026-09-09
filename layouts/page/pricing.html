@@ -42,6 +42,10 @@
     <div class="{{ $cardGrid }}">
         {{ range $edition := $editions }}
         {{ $card := $edition.card }}
+        {{ $priceStyle := $card.price_style | default "figure" }}
+        {{ if not (in (slice "figure" "phrase") $priceStyle) }}
+        {{ errorf "data/pulumi_pricing.yaml: edition %q has price_style: %q. It is either 'figure' (the default) or 'phrase'." $edition.id $priceStyle }}
+        {{ end }}
         {{ $borderClass := "" }}
         {{ if $card.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
         <div>
@@ -60,13 +64,18 @@
                 </div>
 
                 <div>
-                    {{ if $card.price_label }}
+                    {{/* A figure gets the display size with its unit beside it;
+                         a phrase ("Contact sales") gets the smaller one, because
+                         a sentence set at text-5xl wraps and throws the card's
+                         height out. The label can't be the signal for which is
+                         which — the Free card is a bare figure, "$0". */}}
+                    {{ if eq $priceStyle "phrase" }}
+                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
+                    {{ else }}
                     <div class="flex items-baseline gap-2">
                         <span class="text-5xl font-semibold tracking-tight">{{ $card.price }}</span>
-                        <span class="text-xl text-gray-500">{{ $card.price_label }}</span>
+                        {{ with $card.price_label }}<span class="text-xl text-gray-500">{{ . }}</span>{{ end }}
                     </div>
-                    {{ else }}
-                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
                     {{ end }}
                     <div class="mt-4 md:min-h-[4rem] text-sm">
                         {{ partial "pricing/card-usage.html" $edition }}
@@ -112,8 +121,8 @@
                      (layouts/partials/pricing/card-usage.html) — so it can't appear
                      on a card the calculator has no toggle for. Its href carries
                      the edition, and theme/src/ts/pricing-calculator.ts presses the
-                     matching toggle on the way down: from the Enterprise card you
-                     should not land on a Team estimate. */}}
+                     matching toggle on the way down: from the Pro card you
+                     should not land on an Essentials estimate. */}}
                 {{ $priced := index (site.Data.pulumi_pricing.calculator.editions | default dict) $edition.id }}
                 {{/* Side by side, wrapping to a second line in the narrow cards — the
                      four-column grid at xl leaves barely enough width for both, and

@@ -108,7 +108,7 @@ The wizard shows how many accounts, subscriptions, or projects it discovered and
 
 The access level determines which permissions Pulumi receives in each account:
 
-- **Build & Manage (read and write)**: the default. Enables [Pulumi Neo](/docs/ai/), infrastructure as code, deployments, and policies that remediate issues automatically (Business Critical edition). Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
+- **Build & Manage (read and write)**: the default. Enables [Pulumi Neo](/docs/ai/), infrastructure as code, and Pulumi Deployments. Enterprise organizations can also use policy remediation. Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
 - **Discovery & Policy (read-only)**: limited to discovery scanning and inventory. Pulumi can't modify your infrastructure. Grants `ReadOnlyAccess` in AWS, **Reader** in Azure, or **Viewer** in Google Cloud.
 
 Select **Change access level** to switch the default, or set a different level for individual accounts under **Per account access**. If your security review requires it, start with read-only access; you can raise access for specific accounts later.
@@ -135,7 +135,7 @@ For AWS, choose the regions to scan. The defaults are `us-east-1`, `us-east-2`, 
 
 ### Policy pack
 
-Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and for AWS or Google Cloud, you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
+Available policy capabilities depend on your organization's edition. Essentials includes audit policies, policy results in advisory mode, and the Pulumi Best Practices pack. Pro adds organization-managed policy enforcement, preventative policies, and custom policy packs. Enterprise adds conformance packs, unlimited custom policy packs, and policy remediation. You can turn policy evaluation off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for available packs, and [Pricing](/pricing/) for a full edition comparison.
 
 When you're done, select **Next**. The wizard then creates the resources described in [What the wizard creates](#what-the-wizard-creates) and connects each selected account.
 
