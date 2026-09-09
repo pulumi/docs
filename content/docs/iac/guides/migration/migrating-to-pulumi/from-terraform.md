@@ -27,6 +27,7 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
 
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your Terraform code and import existing resources with zero downtime
 * **State-first migration**: Use [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) to translate your Terraform state to Pulumi state, then use an LLM agent to convert your code.
+* **Agent-driven import**: Use [`pulumi-tool-import`](/docs/iac/guides/migration/migrating-to-pulumi/terraform-import-tool/) and its agent skills to hand-author a Pulumi program and import an entire workspace to a zero-diff preview.
 * **Import** existing resources into Pulumi [in the usual way](/docs/iac/guides/migration/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 

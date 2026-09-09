@@ -1,0 +1,10 @@
+id = "jonathan-davenport"
+name = "Jonathan Davenport"
+title = "Cloud Architect"
+weight = 1
+
+status = "active"
+
+[social]
+github = "jdavredbeard"
+linkedin = "jonathan-davenport-a17b427"
