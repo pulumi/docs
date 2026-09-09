@@ -74,15 +74,15 @@ This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive produ
 
 - **[Pulumi IaC](https://www.pulumi.com/docs/iac/)**: Open source infrastructure as code in any programming language. With over 100M downloads, 167% growth in contributions, and industry-leading innovations, Pulumi IaC continues to redefine cloud automation.
 - **[Pulumi ESC](https://www.pulumi.com/docs/esc/)**: Centralized secrets management and orchestration that scales. General availability this year brought features like SDKs, versioning, tagging, and integrations with 1Password and Kubernetes secrets operators.
-- **[Pulumi Insights](https://www.pulumi.com/docs/pulumi-cloud/insights/)**: Visibility, intelligence, and control over all infrastructure resources. Insights 2.0 expanded support for resources created outside Pulumi IaC, delivering advanced graph visualizations and policy enforcement powered by Pulumi CrossGuard.
+- **[Pulumi Insights](/docs/insights/discovery/)**: Visibility, intelligence, and control over all infrastructure resources. Insights 2.0 expanded support for resources created outside Pulumi IaC, delivering advanced graph visualizations and policy enforcement powered by Pulumi CrossGuard.
 
 {{< youtube "AepHQaXeNX0?rel=0" >}}
 
 Three core capabilities unite these products:
 
-- **[Pulumi Copilot](https://www.pulumi.com/docs/pulumi-cloud/copilot/)**: Generative AI is used to manage cloud resources.
-- **[Pulumi CrossGuard](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)**: A policy-as-code engine for compliance and best practices.
-- **[Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)**: Infrastructure task orchestration.
+- **[Pulumi Copilot](/product/neo/)**: Generative AI is used to manage cloud resources.
+- **[Pulumi CrossGuard](/docs/insights/policy/)**: A policy-as-code engine for compliance and best practices.
+- **[Pulumi Deployments](/docs/deployments/concepts/)**: Infrastructure task orchestration.
 
 Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
 

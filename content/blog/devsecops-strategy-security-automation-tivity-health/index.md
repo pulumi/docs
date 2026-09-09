@@ -85,7 +85,7 @@ Tivity Health, a leading health and fitness solutions provider, has embraced thi
 
 {{< youtube "35vAiKdDux4?rel=0" >}}
 
-The need to [automate infrastructure deployment](https://www.pulumi.com/docs/pulumi-cloud/deployments/) and management was fundamental. Giambruno explained, "*If you can't automate it, we don't need it.*" This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
+The need to [automate infrastructure deployment](/docs/deployments/concepts/) and management was fundamental. Giambruno explained, "*If you can't automate it, we don't need it.*" This philosophy drove the team to seek out a solution that would not only streamline their operations but also empower their developers to focus on building innovative products for their customers.
 
 ## Embracing Pulumi: The Power of Automation, Productivity, and Security
 
@@ -93,7 +93,7 @@ Tivity Health's search for the right tool led them to Pulumi, a unified platform
 
 - **Automation**: [Pulumi's infrastructure as code (IaC)](https://www.pulumi.com/docs/iac/) approach enabled Tivity Health to automate the deployment and management of its cloud environments, reducing the time and effort required for these tasks.
 - **Productivity**: using Pulumi's general-purpose programming languages allowed developers to define, deploy, and manage infrastructure within their existing tools.
-- **Security**: Pulumi's security features allowed Tivity Health to integrate [security practices](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
+- **Security**: Pulumi's security features allowed Tivity Health to integrate [security practices](/docs/insights/policy/) into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
 - **Cost Optimization**: Pulumi's ability to automate the spin-up and teardown of cloud environments on demand has led to significant cost reductions for Tivity Health.
 
 Giambruno describes Pulumi as a "three-dimensional" tool, offering a versatile set of capabilities that have been instrumental in transforming Tivity Health's operations. "*The ability to use those dimensions in lots of different ways to do the automation is what really makes a difference to the teams*," he says.
@@ -104,7 +104,7 @@ By adopting Pulumi and DevSecOps automation, Tivity Health realized significant 
 
 - **Speed and Agility**: By automating its infrastructure deployment and management processes, Tivity Health has dramatically [reduced the time](https://www.pulumi.com/case-studies/unity/) required to spin up new environments or change existing ones. "*We run it through automation and boom, it's out, it's done*," Giambruno says. This newfound speed and agility have empowered Tivity Health's developers to focus on building products and features rather than getting bogged down in infrastructure-related tasks.
 - **Cost Optimization**: Tivity Health's cloud-native approach and Pulumi's automation capabilities have resulted in [significant cost savings](https://www.pulumi.com/case-studies/lemonade/). The company estimates that its annual cloud spend has decreased from $9.5 million in its data center days to just $2 million—a staggering 79% reduction. These cost savings have allowed Tivity Health to redirect resources towards more strategic initiatives that drive business growth.
-- **Improved Security and Compliance**: Tivity Health's DevSecOps strategy, anchored by Pulumi, has strengthened its security posture and [compliance efforts](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies/). By integrating security directly into its infrastructure workflows, Tivity Health has improved its security posture. Automation ensures that security measures are enforced consistently across their cloud environments, reducing risks and improving compliance.
+- **Improved Security and Compliance**: Tivity Health's DevSecOps strategy, anchored by Pulumi, has strengthened its security posture and [compliance efforts](https://github.com/pulumi/compliance-policies). By integrating security directly into its infrastructure workflows, Tivity Health has improved its security posture. Automation ensures that security measures are enforced consistently across their cloud environments, reducing risks and improving compliance.
 
 ## Fostering DevOps Culture Through Cross-Functional Collaboration
 
