@@ -1,0 +1,270 @@
+{{/*
+  Agentic Infrastructure Days — bespoke event landing page.
+
+  All copy lives in the page front matter (content/agentic-infrastructure-days/_index.md);
+  this template is presentation only and iterates over `.Params`. Layout, spacing,
+  type, and color are inline Tailwind; the animated hero wordmark and the speaker
+  avatar chip live in theme/src/scss/marketing/_agentic-infrastructure-days.scss.
+
+  Pre/post-event switch: the single `youtube_url` field is the control. Empty =
+  pre-event (HubSpot form, CTAs read "Register now"). Set = post-event
+  (embedded recording, CTAs read "Watch now").
+*/}}
+
+{{ define "hero" }}
+<section class="aid-hero relative" data-aid-hero>
+    <div class="mx-auto w-full max-w-5xl px-6 pt-8 md:pt-12">
+        {{/* Animated "AInfra" wordmark — fixed background; styles in the SCSS,
+             behavior in the script below. Decorative; the heading is the <h1>. */}}
+        <div class="aid-art" data-aid-art aria-hidden="true">
+            <div class="aid-stack" data-aid-stack><span class="aid-word aid-word--ai"><span class="aid-copy aid-copy--front">AI</span></span><span class="aid-word aid-word--infra"><span class="aid-copy aid-copy--front">Infra</span></span></div>
+        </div>
+        {{/* Reserves the fixed wordmark's height so the title sits below it. */}}
+        <div class="aid-art-spacer" aria-hidden="true"></div>
+
+        {{/* Title + "hosted by" lockup, bottom-right of the hero */}}
+        <div class="-mt-2 flex flex-col md:items-end gap-4 text-left md:text-right md:-mt-4">
+            <h1 class="m-0 font-mono text-2xl font-normal uppercase tracking-[0.06em] text-service-black md:text-3xl">{{ .Title }}</h1>
+            <div class="flex items-center gap-3">
+                <span class="font-mono text-base uppercase tracking-[0.05em] text-service-black md:text-xl">hosted by</span>
+                <img src="/logos/brand/logo-horizontal-monotone.svg" alt="Pulumi" class="h-6 w-auto md:h-[29px]" width="116" height="29" loading="eager" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var hero = document.querySelector("[data-aid-hero]");
+            var art = hero && hero.querySelector("[data-aid-art]");
+            var stack = art && art.querySelector("[data-aid-stack]");
+            if (!hero || !art || !stack) return;
+
+            // Clone each front copy into 11 echo layers, farthest-first so nearer
+            // layers paint over (and occlude) the ones behind.
+            var CLONES = 11;
+            Array.prototype.forEach.call(stack.querySelectorAll(".aid-word"), function (word) {
+                var front = word.querySelector(".aid-copy--front");
+                if (!front) return;
+                for (var i = CLONES; i >= 1; i--) {
+                    var clone = front.cloneNode(true);
+                    clone.classList.remove("aid-copy--front");
+                    clone.classList.add("aid-copy--echo");
+                    clone.setAttribute("aria-hidden", "true");
+                    clone.style.setProperty("--i", i);
+                    word.insertBefore(clone, front); // keep the solid front copy on top
+                }
+            });
+
+            // Resting spacing is --aid-spread (SCSS); scroll adds spread and fades
+            // the stroke toward #dedbff, mouse widens it near center.
+            var BASE = parseFloat(getComputedStyle(hero).getPropertyValue("--aid-spread")) || 0.6;
+            var SCROLL_EXTRA = 0.9;  // extra spread over one screen of scroll
+            var MOUSE_EXTRA = 0.3;   // extra spread with the cursor centered
+            var FADE_VH = 0.2;      // stroke hits STROKE_TO within this fraction of a screen (smaller = faster)
+            var STROKE_FROM = [90, 48, 197];  // violet-primary
+            var STROKE_TO = [222, 219, 255];  // violet-muted
+            var reveal = 1;
+            var scrollP = 0;
+            var fadeP = 0;
+            var mouseP = 0;
+            function lerp(a, b, t) { return Math.round(a + (b - a) * t); }
+            function apply() {
+                stack.style.setProperty("--aid-spread", (reveal * (BASE + scrollP * SCROLL_EXTRA + mouseP * MOUSE_EXTRA)).toFixed(3));
+                art.style.setProperty("--aid-stroke", "rgb(" + lerp(STROKE_FROM[0], STROKE_TO[0], fadeP) + "," + lerp(STROKE_FROM[1], STROKE_TO[1], fadeP) + "," + lerp(STROKE_FROM[2], STROKE_TO[2], fadeP) + ")");
+            }
+
+            var mq = function (q) { return window.matchMedia && window.matchMedia(q).matches; };
+
+            // Reduced motion → hold the resting state; no reveal, scroll, or mouse.
+            if (mq("(prefers-reduced-motion: reduce)")) {
+                apply();
+                return;
+            }
+
+            // Start collapsed for the load reveal.
+            reveal = 0;
+            apply();
+
+            // Scroll drives the fan and the stroke fade (page scroll, since the art
+            // is fixed).
+            var scrollQueued = false;
+            function onScroll() {
+                if (scrollQueued) return;
+                scrollQueued = true;
+                requestAnimationFrame(function () {
+                    var y = window.scrollY || window.pageYOffset || 0;
+                    var vh = window.innerHeight || 800;
+                    scrollP = Math.min(1, y / (vh * 0.9));
+                    fadeP = Math.min(1, y / (vh * FADE_VH));
+                    apply();
+                    scrollQueued = false;
+                });
+            }
+            window.addEventListener("scroll", onScroll, { passive: true });
+
+            // Mouse drives the spacing — widest with the cursor centered. Skip on
+            // touch and narrow screens (no pointer there).
+            if (!mq("(pointer: coarse)") && !mq("(max-width: 796px)")) {
+                var mouseQueued = false;
+                window.addEventListener("mousemove", function (e) {
+                    if (mouseQueued) return;
+                    mouseQueued = true;
+                    requestAnimationFrame(function () {
+                        var nx = e.clientX / (window.innerWidth || 1) - 0.5;
+                        var ny = e.clientY / (window.innerHeight || 1) - 0.25;
+                        mouseP = 1 - Math.min(1, Math.sqrt(nx * nx + ny * ny) / 0.5);
+                        apply();
+                        mouseQueued = false;
+                    });
+                });
+            }
+
+            // Load reveal.
+            var DURATION = 900;
+            var startTime = null;
+            function frame(t) {
+                if (startTime === null) startTime = t;
+                var p = Math.min(1, (t - startTime) / DURATION);
+                reveal = 1 - Math.pow(1 - p, 3); // easeOutCubic
+                apply();
+                if (p < 1) requestAnimationFrame(frame);
+                else { reveal = 1; onScroll(); }
+            }
+            requestAnimationFrame(frame);
+        })();
+    </script>
+</section>
+{{ end }}
+
+{{ define "main" }}
+{{ $isComplete := ne .Params.youtube_url "" }}
+{{ $ctaLabel := cond $isComplete "Watch now" "Register now" }}
+
+{{/* Derive a bare YouTube video id from whatever URL form the editor pasted. */}}
+{{ $videoID := "" }}
+{{ if $isComplete }}
+    {{ $u := .Params.youtube_url }}
+    {{ if strings.Contains $u "watch?v=" }}
+        {{ $videoID = index (split (index (split $u "watch?v=") 1) "&") 0 }}
+    {{ else if strings.Contains $u "youtu.be/" }}
+        {{ $videoID = index (split (index (split $u "youtu.be/") 1) "?") 0 }}
+    {{ else if strings.Contains $u "embed/" }}
+        {{ $videoID = index (split (index (split $u "embed/") 1) "?") 0 }}
+    {{ else }}
+        {{ $videoID = $u }}
+    {{ end }}
+{{ end }}
+
+{{ $overline := "font-mono text-sm uppercase tracking-[0.12em] text-violet-primary m-0" }}
+{{ $divider := "my-12 w-full border-0 border-t border-gray-200 md:my-16" }}
+
+<div class="font-body">
+    <div class="mx-auto w-full max-w-5xl px-6 pb-20 md:pb-28">
+
+        <hr class="mt-10 mb-0 w-full border-0 border-t border-gray-200 md:mt-14" />
+
+        {{/* 1. Event meta + CTA, then headline + intro */}}
+        <section class="pt-12 md:pt-16">
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <p class="{{ $overline }}">{{ .Params.event_meta }}</p>
+                <a href="#register" class="btn btn-primary btn-xl shrink-0">{{ $ctaLabel }}</a>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 md:items-end md:gap-12">
+                <h2 class="heading-xl m-0">{{ .Params.headline }}</h2>
+                <p class="body-lg m-0">{{ .Params.intro }}</p>
+            </div>
+        </section>
+
+        <hr class="{{ $divider }}" />
+
+        {{/* 2. About the event */}}
+        {{ with .Params.about }}
+        <section>
+            <p class="{{ $overline }}">About the event</p>
+            <div class="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14">
+                <p class="m-0 text-2xl font-semibold leading-[1.2] tracking-tight md:text-3xl">{{ .lead }}</p>
+                <div class="flex flex-col gap-10">
+                    <div>
+                        <h3 class="heading-4">{{ .benefits_title }}</h3>
+                        <ul class="m-0 flex list-none flex-col gap-2 p-0">
+                            {{ range .benefits }}
+                            <li class="flex items-start gap-4">
+                                <span class="mt-0.5 shrink-0 text-violet-primary">
+                                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-6") }}
+                                </span>
+                                <span>{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="heading-4">{{ .audience_title }}</h3>
+                        <p class="m-0">{{ .audience }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="{{ $divider }}" />
+        {{ end }}
+
+        {{/* 3. Agenda */}}
+        {{ with .Params.agenda }}
+        <section>
+            <p class="{{ $overline }}">Agenda</p>
+            <ul class="m-0 flex list-none flex-col p-0">
+                {{ range . }}
+                <li class="flex flex-col gap-5 border-b border-gray-200 py-7">
+                    <h3 class="heading-3 m-0">{{ .title }}</h3>
+                    <div class="flex flex-wrap gap-x-10 gap-y-5">
+                        {{ range .speakers }}
+                        {{ $speaker := . }}
+                        <div class="flex items-center gap-3">
+                            <span class="aid-avatar">{{ with $speaker.image }}<img src="{{ . }}" alt="" class="h-full w-full object-cover" loading="lazy" />{{ end }}</span>
+                            <div>
+                                <p class="m-0 font-semibold leading-tight">{{ $speaker.name }}</p>
+                                <p class="m-0 font-mono text-xs uppercase tracking-[0.08em]">{{ $speaker.role }}</p>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+            {{ with $.Params.agenda_footnote }}
+            <p class="m-0 mt-6 text-sm">{{ . }}</p>
+            {{ end }}
+        </section>
+
+        <div class="h-12 md:h-16"></div>
+        {{ end }}
+
+        {{/* 4. Post-event: just the recording (max-w-5xl). Pre-event: the
+             registration card with the HubSpot form. */}}
+        <section id="register" class="scroll-mt-24">
+            {{ if $isComplete }}
+            <div class="responsive-video-container video-16-9 relative mx-auto h-0 w-full max-w-5xl overflow-hidden rounded-lg">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/{{ $videoID }}?rel=0"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    title="{{ .Title }} recording"></iframe>
+            </div>
+            {{ else }}
+            {{ with .Params.register }}
+            <div class="card mx-auto w-full max-w-3xl bg-white p-8 text-center md:p-10">
+                <h2 class="heading-2 mx-auto mt-0 mb-4 max-w-md">{{ .title }}</h2>
+                {{ with .lead }}<p class="body-lg mx-auto mb-1 max-w-lg font-semibold">{{ . }}</p>{{ end }}
+                {{ with .body }}<p class="body-lg mx-auto mb-8 max-w-lg">{{ . }}</p>{{ end }}
+                <div class="text-left">
+                    <pulumi-hubspot-form form-id="{{ $.Params.hubspot_form_id }}"></pulumi-hubspot-form>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </section>
+
+    </div>
+</div>
+{{ end }}

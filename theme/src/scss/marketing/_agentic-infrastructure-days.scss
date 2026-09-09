@@ -1,0 +1,105 @@
+// Agentic Infrastructure Days (/agentic-infrastructure-days)
+//
+// The animated "AInfra" hero wordmark and the speaker-avatar chip — the parts
+// inline Tailwind can't express. "AI" (fanning up-left) and "Infra" (down-right)
+// overlap to share the middle "I". The rest of the page is inline Tailwind in
+// layouts/page/agentic-infrastructure-days.html, which also holds the script.
+
+.aid-hero {
+    // Tuning knobs; the script drives --aid-spread (mouse + scroll feed it).
+    --aid-art-h: clamp(260px, 44vw, 460px); // fixed stage + spacer height
+    --aid-top: 4.75rem;    // offset below the sticky nav
+    --aid-step-x: 0.058em; // per-echo x offset (scales with the wordmark)
+    --aid-step-y: 0.058em; // per-echo y offset
+    --aid-spread: 0.6;     // resting spacing between the dupes (overall size = font-size)
+    --aid-fade: 00;        // per-echo opacity falloff
+    --aid-overlap: 0.24em; // how far "Infra" tucks left to share the "I"
+}
+
+// Fixed, full-column background layer pinned below the sticky nav and behind the
+// content (z-index: -1). .aid-art-spacer reserves its height in the hero flow.
+.aid-art {
+    position: fixed;
+    top: var(--aid-top);
+    left: 50%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(976px, 100vw - 3rem);
+    height: var(--aid-art-h);
+    transform: translateX(-50%);
+    overflow: visible;
+    pointer-events: none;
+}
+
+.aid-art-spacer {
+    height: var(--aid-art-h);
+}
+
+.aid-stack {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    // Overall wordmark size — scales the letterforms and echo spacing together.
+    // Bump the max to fill ~976px at desktop.
+    font-size: clamp(3.5rem, 24vw, 17rem);
+}
+
+.aid-word {
+    position: relative;
+    display: inline-block;
+
+    &--ai {
+        --aid-dir: -1; // fan up-left
+    }
+
+    &--infra {
+        --aid-dir: 1; // fan down-right
+        margin-left: calc(-1 * var(--aid-overlap));
+    }
+}
+
+.aid-copy {
+    display: block;
+    margin: 0;
+    font-size: 1em; // inherit the stack size
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--color-violet-primary); // fallback when text-stroke is unsupported
+    user-select: none;
+}
+
+// White fill + stroke so nearer layers occlude the ones behind. --aid-stroke is
+// script-driven (fades toward #dedbff on scroll); falls back to violet with no JS.
+@supports ((-webkit-text-stroke: 1px black)) {
+    .aid-copy {
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke: 1px var(--aid-stroke, var(--color-violet-primary));
+    }
+}
+
+.aid-copy--front {
+    position: relative;
+    z-index: 2;
+}
+
+.aid-copy--echo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(
+        calc(var(--i) * var(--aid-step-x) * var(--aid-spread) * var(--aid-dir)),
+        calc(var(--i) * var(--aid-step-y) * var(--aid-spread) * var(--aid-dir))
+    );
+    opacity: calc(1 - (var(--i) * var(--aid-fade)));
+}
+
+// Speaker avatar: a photo, or an empty muted circle for TBA speakers.
+.aid-avatar {
+    @apply flex size-[42px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-200;
+}
