@@ -91,7 +91,8 @@ To target an EC2 instance with your load balancer, you must do the following:
 4. Create the EC2 instance(s) in the same VPC and ensure the security group contains the egress rule (2).
 5. Attach your load balancer's target group to the desired EC2 instance(s).
 
-Aside from those five steps, the code and capabilities of the load balancer are the same as shown above.
+Aside from those five steps, the code and capabilities of the load balancer are the same as shown above. The
+example below shows all five steps in code, including the security group ingress and egress rules.
 
 {{< notes >}}
 Note that ALBs automatically open ingress traffic to the ports listened on, whereas NLBs do not.
@@ -282,7 +283,7 @@ You can also create a target group manually, either by defining a `defaultTarget
        target. The range is between 5-300 seconds, and defaults to 30 seconds.
 
     * `healthyThreshold`: The number of consecutive health checks successes required before considering an
-      unhealthy target healthy. The default is 3.
+      unhealthy target healthy. The default is 5.
 
     * `unhealthyThreshold`: The number of consecutive health check failures required before considering the target
        unhealthy. For NLBs, this value must be the same as `healthyThreshold`. The default is 3.
