@@ -549,15 +549,21 @@ def main() -> int:
 
         marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
                   "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
-                  # Before TODAY's review: the review saw this marker and left it
-                  # unresolved, so it is real drift and must keep boosting. (A
-                  # marker dated AFTER the last completed review is the #20970
-                  # echo instead — see boost_suppressed_by_recent_fix.)
-                  "checked_at": "2026-06-10"}
+                  # Before the page's last review: that review saw this marker
+                  # and left it unresolved. Once the boost cooldown after that
+                  # review lapses (REVIEWED_OLD is past it) this is real drift
+                  # and boosts until it escalates. (A marker dated AFTER the
+                  # last completed review is the #20970 echo instead — see
+                  # boost_suppressed_by_recent_review; inside the cooldown
+                  # neither kind boosts.)
+                  "checked_at": "2026-06-01"}
+        # Past STALE_BOOST_COOLDOWN_DAYS before TODAY (2026-06-12), and recent
+        # enough that on staleness alone the page never reaches the queue.
+        REVIEWED_OLD = "2026-06-05"
 
         led = tmp / "ledger-markers"
-        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
-        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        # STACKS is recently reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, REVIEWED_OLD, stale_claims=[marker])
         q = run_select(repo, tiers, led)
         entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
         check(entry is not None, "marked page is boosted into the queue")
@@ -573,7 +579,7 @@ def main() -> int:
         # so a marker withheld here is a marker deleted from the ledger the
         # next time this page is reviewed for any reason.
         led_mixed = tmp / "ledger-mixed"
-        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+        write_ledger(led_mixed, STACKS, REVIEWED_OLD, stale_claims=[
             marker,
             {**marker, "entity_key": "version/old-miss",
              "unresolved_reviews": 2, "escalated": True},
@@ -589,7 +595,7 @@ def main() -> int:
                   "stale_claims count matches the marker list it describes")
 
         led_esc = tmp / "ledger-escalated"
-        write_ledger(led_esc, STACKS, TODAY,
+        write_ledger(led_esc, STACKS, REVIEWED_OLD,
                      stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
         q_esc = run_select(repo, tiers, led_esc)
         esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
@@ -667,7 +673,7 @@ def main() -> int:
         check(all("reserved" not in a for a in qrep["articles"]),
               "the report lane reserves nothing — its whole job is the cold half")
 
-        print("stale-claim boost cooldown (#20970's missing half)")
+        print("stale-claim boost cooldown (#20970's missing half, widened 2026-09-09)")
         import importlib.util
         from datetime import date as _date
         _spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
@@ -679,29 +685,51 @@ def main() -> int:
             if checked is not None:
                 e["stale_claims"] = [{"entity_key": "version/x", "checked_at": checked}]
             return e
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-19"), _t) is True,
+        check(sa.boost_suppressed_by_recent_review(_e("2026-08-18", "2026-08-19"), _t) is True,
               "marker written AFTER a just-completed review is an echo: suppressed")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-17"), _t) is False,
-              "marker the review SAW and left unresolved is real drift: still boosts")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-01", "2026-08-02"), _t) is False,
-              "past the cooldown, an echo has had time to be real: still boosts")
-        check(sa.boost_suppressed_by_recent_fix(
+        # The 2026-09-09 change. This case used to keep boosting as "real,
+        # unresolved drift", and what that bought was an identical review the
+        # next working day (elb.md #21457 -> #21495, providers #21220 -> #21266).
+        check(sa.boost_suppressed_by_recent_review(_e("2026-08-18", "2026-08-17"), _t) is True,
+              "marker the review SAW and left unresolved sits out the cooldown too")
+        check(sa.boost_suppressed_by_recent_review(_e("2026-08-01", "2026-08-02"), _t) is False,
+              "past the cooldown, an echo has had time to be real: boosts")
+        check(sa.boost_suppressed_by_recent_review(_e("2026-08-01", "2026-07-31"), _t) is False,
+              "past the cooldown, a seen-and-left marker boosts again (then escalates)")
+        check(sa.boost_suppressed_by_recent_review(
                   _e("2026-08-18", "2026-08-19", status="incomplete"), _t) is False,
-              "an incomplete review fixed nothing, so it never suppresses")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", None), _t) is False,
-              "no markers, nothing to suppress")
-        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "garbage"), _t) is False,
-              "an undated marker is not provably an echo, so it keeps its boost")
-        check(sa.boost_suppressed_by_recent_fix(_e("garbage", "2026-08-19"), _t) is False,
+              "an incomplete review looked at nothing, so it never suppresses")
+        check(sa.boost_suppressed_by_recent_review(_e("2026-08-18", "garbage"), _t) is True,
+              "marker dating is irrelevant: the review date alone decides")
+        check(sa.boost_suppressed_by_recent_review(_e("garbage", "2026-08-19"), _t) is False,
               "an unparseable review date fails open (boosts), never suppresses silently")
+        check(sa.boost_suppressed_by_recent_review({}, _t) is False,
+              "a never-reviewed page has no cooldown")
         _edge = str(_date.fromordinal(_t.toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS))
-        check(sa.boost_suppressed_by_recent_fix(_e(_edge, "2026-08-19"), _t) is False,
+        check(sa.boost_suppressed_by_recent_review(_e(_edge, "2026-08-19"), _t) is False,
               "exactly COOLDOWN days old is outside the window")
-        check(sa.boost_suppressed_by_recent_fix(
-                  {"status": "reviewed", "reviewed_at": "2026-08-18",
-                   "stale_claims": [{"entity_key": "a", "checked_at": "2026-08-19"},
-                                    {"entity_key": "b", "checked_at": "2026-08-17"}]}, _t) is False,
-              "one pre-review marker is enough to keep the boost")
+
+        # End to end: the elb.md shape. Reviewed yesterday with a marker from
+        # before that review left unresolved (unresolved_reviews 1, not yet
+        # escalated) -> no boost; the same marker on a page reviewed before
+        # the cooldown -> boosted.
+        _yday = str(_date.fromordinal(_date.fromisoformat(TODAY).toordinal() - 1))
+        _old = str(_date.fromordinal(
+            _date.fromisoformat(TODAY).toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS - 1))
+        _seen = {"entity_key": "numerical/timeout", "verdict": "contradicted",
+                 "checked_at": "2026-06-01", "unresolved_reviews": 1, "escalated": False}
+        led_cd = tmp / "ledger-cooldown"
+        write_ledger(led_cd, STACKS, _yday, stale_claims=[_seen])
+        write_ledger(led_cd, ONE, _old, stale_claims=[_seen])
+        q_cd = run_select(repo, tiers, led_cd, "--count", "10")
+        s_cd = scores(q_cd)
+        check(STACKS in s_cd and s_cd[STACKS] < sa.STALE_CLAIM_BOOST,
+              f"reviewed yesterday, marker left: no boost (got {s_cd.get(STACKS)})")
+        check(s_cd.get(ONE, 0) >= sa.STALE_CLAIM_BOOST,
+              f"same marker past the cooldown: boosted (got {s_cd.get(ONE)})")
+        cd_item = next(a for a in q_cd["articles"] if a["path"] == STACKS)
+        check(cd_item["stale_claims"] == 1 and cd_item["stale_claim_markers"] == [_seen],
+              "the suppressed marker still rides the queue item, unchanged")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
