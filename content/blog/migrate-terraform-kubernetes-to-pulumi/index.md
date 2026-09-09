@@ -39,7 +39,7 @@ Have these ready before touching any resources:
 - Access to the same cluster your Terraform stack manages: a working `kubeconfig` and the credentials `kubectl` already uses.
 - Your Terraform state and `.tf` source available locally, since `pulumi convert` reads the HCL directly and doesn't need the state file for the conversion step itself.
 - A scratch Pulumi stack pointed at a non-production namespace or a disposable cluster, so you can run the first `pulumi up` somewhere a mistake costs nothing.
-- A decision on target language. Every example below is shown in TypeScript, Python, and Go; pick the one your team already writes application code in, since that's the whole point of moving off a Terraform-specific DSL. For a fuller look at how the two platforms differ beyond Kubernetes specifically, see our [Terraform comparison](/docs/iac/comparisons/terraform/).
+- A decision on target language. Where an example is language-specific, it's shown in TypeScript, Python, and Go; pick the one your team already writes application code in, since that's the whole point of moving off a Terraform-specific DSL. For a fuller look at how the two platforms differ beyond Kubernetes specifically, see our [Terraform comparison](/docs/iac/comparisons/terraform/).
 
 ## Convert the Terraform config with `pulumi convert`
 
@@ -71,11 +71,11 @@ The converter handles typed Kubernetes resources well, because they map cleanly 
 | `kubernetes_config_map` | `kubernetes.core.v1.ConfigMap` | Direct field mapping |
 | `kubernetes_secret` | `kubernetes.core.v1.Secret` | Direct field mapping; re-check how secret values are sourced during review |
 | `kubernetes_ingress_v1` | `kubernetes.networking.v1.Ingress` | Direct field mapping |
-| `kubernetes_manifest` | No 1:1 converter output | Rewrite by hand; see below |
+| `kubernetes_manifest` | No 1:1 converter output | Rewrite by hand; see [below](#rewriting-kubernetes_manifest-and-crds-by-hand) |
 | `helm_release` | Partial | Review generated Helm resource options against the Terraform release config |
-| CRDs and CRD instances | No 1:1 converter output | Rewrite by hand; see below |
+| CRDs and CRD instances | No 1:1 converter output | Rewrite by hand; see [below](#rewriting-kubernetes_manifest-and-crds-by-hand) |
 
-Treat `kubernetes_manifest` as the resource type most worth reviewing line by line. Terraform's `kubernetes_manifest` accepts arbitrary Kubernetes API objects as a generic escape hatch, which is exactly why there's no single typed Pulumi resource it maps to.
+Treat `kubernetes_manifest` as the resource type most worth reviewing line by line. Terraform's `kubernetes_manifest` accepts arbitrary Kubernetes API objects as a generic escape hatch, which is exactly why there's no single typed Pulumi resource it maps to; this follows from the resource's schemaless shape rather than from a documented converter behavior, so treat the table row above as the expected outcome to verify against your own `pulumi convert` output rather than a guaranteed one.
 
 ## Rewriting `kubernetes_manifest` and CRDs by hand
 
@@ -183,7 +183,7 @@ Converting the code gives you a Pulumi program, but the resources it describes a
 pulumi import kubernetes:core/v1:ConfigMap app-config default/app-config
 ```
 
-For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. This isn't spelled out on a single reference page the way an AWS resource's ARN format is; it's the convention the Kubernetes provider expects, and the worked example above reflects how teams doing this migration have applied it in practice. Confirm the exact id shape for a given resource type against that resource's page in the [Pulumi Registry](https://www.pulumi.com/registry/packages/kubernetes/) before running the command against anything you can't easily recreate.
+For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. This isn't spelled out on a single reference page the way an AWS resource's ARN format is; it's the convention the Kubernetes provider expects, and the worked example above reflects how teams doing this migration have applied it in practice. Treat it as a starting point rather than a guarantee: if `pulumi import` rejects an id, run it again with `--out preview.ts` (or your target language) against a single resource first, using the id shape shown above, before batching the rest through `--file`.
 
 Importing one resource at a time works for a small stack. For anything larger, `pulumi import --file` takes a JSON file listing every resource at once:
 
@@ -203,17 +203,17 @@ pulumi import --file import.json
 
 Import protects every resource from deletion by default; pass `--protect=false` if you don't want that. Use `--parent` and `--provider` when a resource needs to be attached under a specific parent or provider in the resulting program. Full reference: [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and [Import resources](/docs/iac/guides/migration/import/).
 
-A CRD-installing Helm chart plus resources that depend on those CRDs is a common ordering trap during import: the custom resource's type has to exist in the cluster (and in your Pulumi program's dependency graph) before Pulumi tries to import or create instances of it. Import the CRDs first, or split them into their own stack that the resource stack depends on.
+A CRD-installing Helm chart plus resources that depend on those CRDs is a common ordering trap during import: the custom resource's type has to exist in the cluster (and in your Pulumi program's dependency graph) before Pulumi tries to import or create instances of it. Import the CRDs first, using a bare `<name>` id since a `CustomResourceDefinition` is cluster-scoped rather than namespaced, or split them into their own stack and read its outputs from the resource stack with a [stack reference](/docs/iac/concepts/stacks/).
 
 ## Run Terraform and Pulumi against one cluster during the cutover
 
 Most teams don't cut over a whole cluster in one step. A namespace-by-namespace or resource-type-by-resource-type cutover, where Terraform keeps managing some objects while Pulumi takes ownership of others, is more common and lower-risk. Two things make that safe:
 
-**Draw the ownership line clearly.** Decide which namespaces or resource types move to Pulumi first, and don't let both tools manage the same object at the same time; that produces drift and confusing plan/preview output on both sides.
+**Draw the ownership line before you start.** Decide which namespaces or resource types move to Pulumi first, and don't let both tools manage the same object at the same time; that produces drift and confusing plan/preview output on both sides.
 
 **Read values out of the Terraform state you haven't migrated yet.** If your new Pulumi program needs an output from a Terraform-managed resource, such as a cluster endpoint or a generated secret name, the `@pulumi/terraform` package's `state.getLocalReferenceOutput` reads a local state file directly, and `RemoteStateReference` reads a remote backend (S3, Terraform Cloud, and others). That lets you migrate consumers before you migrate the resources they depend on. Details: [Reference Terraform state](/docs/iac/get-started/terraform/reference-state/).
 
-**Use `retainOnDelete` when handing a resource's ownership across, not `protect`.** When you finish migrating a resource and remove its Terraform block, a plain `terraform destroy` (or a `terraform apply` that drops the resource from config) would delete the live object unless you've already told Terraform to forget it (`terraform state rm`, or the equivalent lifecycle handling). On the Pulumi side, if you ever need to remove a resource from a Pulumi stack without touching the underlying object, `retainOnDelete: true` removes it from state without calling the provider's delete: `pulumi.CustomResourceOptions({ retainOnDelete: true })` in TypeScript, `ResourceOptions(retain_on_delete=True)` in Python, `pulumi.RetainOnDelete(true)` in Go. `protect` is a different guarantee: it blocks deletion outright rather than letting you detach state, so use it once a resource is fully owned by Pulumi and you want to prevent an accidental `pulumi destroy` from touching it.
+**Detach, don't destroy, on either side of the handoff.** When you finish migrating a resource and remove its Terraform block, a plain `terraform destroy` (or a `terraform apply` that drops the resource from config) would delete the live object unless you've already told Terraform to forget it (`terraform state rm`, or the equivalent lifecycle handling). On the Pulumi side, if you ever need to remove a resource from a Pulumi stack without touching the underlying object, `retainOnDelete: true` removes it from state without calling the provider's delete: `pulumi.CustomResourceOptions({ retainOnDelete: true })` in TypeScript, `ResourceOptions(retain_on_delete=True)` in Python, `pulumi.RetainOnDelete(true)` in Go. `protect` is a different guarantee: it blocks deletion outright rather than letting you detach state, so use it once a resource is fully owned by Pulumi and you want to prevent an accidental `pulumi destroy` from touching it.
 
 ## Verify before you cut over
 
