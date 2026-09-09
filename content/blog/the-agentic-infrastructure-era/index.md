@@ -2,7 +2,7 @@
 title: "The Agentic Infrastructure Era"
 date: 2026-05-19T03:00:00-07:00
 draft: false
-meta_desc: "Why infrastructure as code is the natural substrate for AI agents, and what we're shipping today to make agentic infrastructure even better."
+meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate through code. See what Pulumi is building to make it real."
 feature_image: feature.png
 authors:
     - joe-duffy
@@ -27,6 +27,8 @@ The first frontier agents excelled at was coding. The reason is evident: we have
 But as the AI tsunami whips up reams of code, what happens to it becomes just as critical. As an industry, we've moved beyond just coding to engineering, which includes documentation, tests, automation, and, yes, managing the very infrastructure our applications need to run. The deeper into production you go, however, the less good agents naturally are at helping. At Pulumi, we live and breathe infrastructure, and have seen this firsthand. But we've also been hard at work building the platform this new era runs on. In this post, I'll share our point of view, what we've built, what we're launching today, and why all infrastructure is about to be agentic.
 
 <!--more-->
+
+New to the term? Start with [what agentic infrastructure is](/what-is/what-is-agentic-infrastructure/) and how it works.
 
 [See Pulumi Neo in action →](/product/neo/) Neo is the agent at the center of everything below: it previews changes, checks them against policy, and opens PRs for your review.
 
