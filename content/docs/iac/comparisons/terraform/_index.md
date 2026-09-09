@@ -35,7 +35,7 @@ Pulumi's provider ecosystem covers the major hyperscalers and SaaS platforms. Se
 
 ## What is Terraform?
 
-Terraform is an infrastructure as code tool created by HashiCorp (acquired by IBM in February 2025). Programs are written in [HashiCorp Configuration Language (HCL)](https://developer.hashicorp.com/terraform/language), a domain-specific language. Terraform supports many cloud and SaaS providers through its [provider ecosystem](https://registry.terraform.io/browse/providers). The Terraform CLI is distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE), and HashiCorp also offers [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs) (formerly Terraform Cloud) and Terraform Enterprise as commercial products for managed state, remote runs, policy, and team workflows.
+Terraform is an infrastructure as code tool created by HashiCorp (acquired by IBM in February 2025). Programs are written in [HashiCorp Configuration Language (HCL)](https://developer.hashicorp.com/terraform/language), a domain-specific language. Terraform supports many cloud and SaaS providers through its [provider ecosystem](https://registry.terraform.io/browse/providers). The Terraform CLI is distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE), and HashiCorp also offers [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs) (formerly Terraform Cloud) and Terraform Enterprise as commercial products for managed state, remote runs, policy, and team workflows. For how Terraform's own Kubernetes provider holds up in practice, see our [practical guide to Terraform and Kubernetes](/blog/terraform-kubernetes/).
 
 ## Detailed comparison
 
