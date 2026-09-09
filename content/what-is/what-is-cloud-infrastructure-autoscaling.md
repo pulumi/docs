@@ -171,7 +171,7 @@ Kubernetes Event-Driven Autoscaler. It extends HPA to scale on external metrics 
 
 ### How does autoscaling interact with cost management?
 
-Autoscaling generally reduces cost compared to fixed peak provisioning, but it can also surprise teams when an upper bound is missing. Pair autoscaling with budget alerts in your cloud account and [Pulumi Policies](/docs/discovery-governance/policy/) in your IaC that enforce a maximum on every ASG / MIG / scale set / HPA.
+Autoscaling generally reduces cost compared to fixed peak provisioning, but it can also surprise teams when an upper bound is missing. Pair autoscaling with budget alerts in your cloud account and [Pulumi Policies](/docs/discovery-governance/policy/) in your IaC that enforce an upper bound on every ASG / MIG / scale set / HPA.
 
 ### How does autoscaling affect SLOs?
 

@@ -31,7 +31,7 @@ Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)
 
 4. **Import**: Use [Visual Import](/docs/discovery-governance/discovery/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
 
-5. **Migration**: [Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/discovery-governance/discovery/discovered-stacks/migrate/).
+5. **Migration**: [Discovered stacks](/docs/discovery-governance/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/discovery-governance/discovery/discovered-stacks/migrate/).
 
 ### Account hierarchies
 
@@ -85,6 +85,6 @@ Resource search is available to all organization members, but users can only see
 - [Connect cloud accounts in bulk](/docs/discovery-governance/discovery/connect-cloud-accounts/)
 - [Create and manage cloud accounts](/docs/discovery-governance/discovery/accounts/)
 - [Learn Resource Search syntax](/docs/discovery-governance/discovery/search/)
-- [Explore Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/)
+- [Explore discovered stacks](/docs/discovery-governance/discovery/discovered-stacks/)
 - [Import resources into Pulumi IaC](/docs/discovery-governance/discovery/visual-import/)
 - [Export resource data](/docs/discovery-governance/discovery/data-export/)

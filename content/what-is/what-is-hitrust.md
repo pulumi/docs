@@ -184,7 +184,7 @@ A way to reuse controls operated by another party (a cloud provider, a SaaS vend
 
 ## Learn more
 
-Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [Pulumi policies](/docs/discovery-governance/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to accelerate the technical work. [Get started today](/docs/get-started/).
+Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [Pulumi policies](/docs/discovery-governance/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to speed up the technical work. [Get started today](/docs/get-started/).
 
 Related reading:
 

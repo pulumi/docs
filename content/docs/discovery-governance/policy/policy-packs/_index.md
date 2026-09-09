@@ -35,7 +35,7 @@ The two are meant to be combined. A policy group can hold a pre-built pack and y
 
 Every pack has a [`PulumiPolicy.yaml`](/docs/discovery-governance/policy/policy-packs/project-file/) project file, the policy equivalent of `Pulumi.yaml`. It declares the pack's runtime and, optionally, its version, description, and entry point.
 
-Each policy in the pack has a name, a description, and a validation function. A policy can examine a single resource as it is declared, or the whole stack at once when a rule depends on more than one resource. Policies also carry [metadata](/docs/discovery-governance/policy/policy-packs/metadata/) that Pulumi surfaces alongside findings: a severity, remediation steps, links to external documentation, and references to the compliance framework control a policy implements.
+Each policy in the pack has a name, a description, and a validation function. A policy can examine a single resource as declared, or the whole stack at once when a rule depends on more than one resource. Policies also carry [metadata](/docs/discovery-governance/policy/policy-packs/metadata/) that Pulumi surfaces alongside findings: a severity, remediation steps, links to external documentation, and references to the compliance framework control a policy implements.
 
 Enforcement is set per policy. A policy can warn (`advisory`), block the deployment (`mandatory`), fix the violation automatically (`remediate`), or be turned off (`disabled`). A policy group can override these levels for the packs it applies, so the same pack can warn in one group and block in another.
 

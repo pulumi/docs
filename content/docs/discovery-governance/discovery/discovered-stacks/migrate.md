@@ -162,6 +162,6 @@ PUT /api/preview/insights/{org}/discovered-stacks/{project}/{stack}/migration
 
 ## Next steps
 
-- [Discovered Stacks](/docs/discovery-governance/discovery/discovered-stacks/)
+- [Discovered stacks](/docs/discovery-governance/discovery/discovered-stacks/)
 - [Migrating from AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)
 - [The `pulumi import` guide](/docs/iac/guides/migration/import/)

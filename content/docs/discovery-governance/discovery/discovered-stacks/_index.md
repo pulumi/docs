@@ -1,11 +1,11 @@
 ---
-title: Discovered Stacks
-title_tag: "Discovered Stacks | Discovery & governance"
-h1: Discovered Stacks
-meta_desc: Discovered Stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi IaC stacks, with a seamless migration path.
+title: Discovered stacks
+title_tag: "Discovered stacks | Discovery & governance"
+h1: Discovered stacks
+meta_desc: Discovered stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi IaC stacks, with a seamless migration path.
 menu:
   discovery-governance:
-    name: Discovered Stacks
+    name: Discovered stacks
     parent: insights-discovery
     identifier: insights-discovery-discovered-stacks
     weight: 45
@@ -14,7 +14,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Discovered Stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Discovery](/docs/discovery-governance/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments, and represents them as discovered stacks in Pulumi Cloud — one per CloudFormation stack, and one per Azure resource group, combining every deployment made to it.
+Discovered stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Discovery](/docs/discovery-governance/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments, and represents them as discovered stacks in Pulumi Cloud — one per CloudFormation stack, and one per Azure resource group, combining every deployment made to it.
 
 A discovered stack looks and navigates like any other Pulumi stack: it appears on the Stacks page, lists its resources, and shows per-resource detail. Every resource also carries a [migration status](#migration-statuses), so a discovered stack doubles as a live, auditable record of how far along you are in [migrating it to Pulumi IaC](/docs/discovery-governance/discovery/discovered-stacks/migrate/).
 
