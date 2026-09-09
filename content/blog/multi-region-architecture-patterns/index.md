@@ -25,6 +25,10 @@ social:
         Teams that adopt multi-region architecture usually get the topology question right: active-active, warm standby, pilot light, backup and restore. What breaks is everything underneath the topology diagram: DNS and edge routing, identity, secrets, CI/CD, and the provider's own control plane.
 
         We wrote a practical guide to choosing a pattern from honest recovery targets, inventorying the dependency seams that decide whether failover actually fires, and making the whole arrangement expressible and testable in infrastructure as code.
+    bluesky: |
+        AWS traced hours of an outage to one DNS naming record. Cloudflare traced a separate outage to one feature file. Neither lost a region — both lost something every region depended on.
+
+        We wrote up which shared seams actually break failover, and how to test yours.
 ---
 
 Most multi-region outages are not topology failures. They are seam failures: DNS, identity, secrets, or a control plane that both regions still depend on. Pick a pattern from honest recovery targets, then inventory what still ties your regions together, then make the whole arrangement testable in code.
