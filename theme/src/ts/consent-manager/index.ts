@@ -1,5 +1,4 @@
 import { ConsentManagerConfig, Destination } from "./types";
-import { inEU } from "./eu-detection";
 import { getPreferences, savePreferences } from "./cookies";
 import { fetchDestinations, conditionallyLoadAnalytics } from "./analytics";
 import { renderBanner, renderPreferencesDialog } from "./banner";
@@ -86,7 +85,7 @@ async function init() {
 
     window.consentManager = { openConsentManager };
 
-    isConsentRequired = inEU();
+    isConsentRequired = true;
 
     let fetchedDestinations: Destination[] = [];
     try {

@@ -8,7 +8,7 @@ meta_desc: "Pulumi Kubernetes Operator v1.10, New Pulumi Provider for Flux, Pulu
 
 ---
 
-Pulumi’s Universal Infrastructure as Code platform works with all major clouds and over 100 cloud and SaaS providers, but among all its uses one of the most important is the ability to bring rich Infrastructure as Code tools and practices to Kubernetes projects and teams.
+Pulumi’s Universal Infrastructure as Code platform works with all major clouds and over 100 cloud and SaaS providers, but among all its uses one of the most important is the ability to bring rich infrastructure as code tools and practices to Kubernetes projects and teams.
 
 Kubernetes is one of the most used platforms in Pulumi, second only to AWS, with thousands of organizations using Pulumi to manage clusters at scale.  Pulumi supports a wide variety of use cases around Kubernetes - from cluster creation and management, to rich and expressive workload definition, to continuous delivery and infrastructure GitOps.
 
@@ -234,7 +234,7 @@ Updating the `Program` resource will immediately drive an update to the associat
 
 In addition to Flux integration with the Pulumi Kubernetes Operator, we've also added a new [Flux Provider](https://www.pulumi.com/registry/packages/flux/) to the Pulumi Registry.  This provider, built by Pulumi community member [@oun](https://github.com/oun),  enables managing Flux directly via Pulumi Infrastructure as Code.
 
-The Flux provider can be used along with the Kubernetes provider and GitHub provider to stand up and manage a complete E2E GitOps solution from within a single deployment - no need for manual bash, Helm, or runbooks - just simple reliable Infrastructure as Code.
+The Flux provider can be used along with the Kubernetes provider and GitHub provider to stand up and manage a complete E2E GitOps solution from within a single deployment - no need for manual bash, Helm, or runbooks - just simple reliable infrastructure as code.
 
 ```typescript
 import * as kubernetes from "@pulumi/kubernetes";
@@ -273,13 +273,13 @@ This makes several important new features available across the breadth of the Ku
 * “Upsert” support; create a resource if it does not exist, or update the existing resource with specified changes.
 * Diffs no longer depend on the last-applied-configuration annotation, which fixes a number of subtle issues that users of the provider previously could run into.
 
-These features bring Pulumi and Kubernetes even closer together, enabling Pulumi’s rich Infrastructure as Code to fit even more naturally into the Kubernetes desired state and shared ownership model.
+These features bring Pulumi and Kubernetes even closer together, enabling Pulumi’s rich infrastructure as code to fit even more naturally into the Kubernetes desired state and shared ownership model.
 
 Check out the [Managing Resources with Server Side Apply](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) article for more details on these new features.
 
 ## Conclusion
 
-At Pulumi, we are passionate about pushing the state of the art of Infrastructure as Code forward, and applying modern Infrastructure as Code to support Kubernetes projects and teams is a critical component of that vision.  All of these new features around Pulumi and Kubernetes help to further empower teams to build scalable and robust solutions around Kubernetes and Pulumi IaC.
+At Pulumi, we are passionate about pushing the state of the art of infrastructure as code forward, and applying modern infrastructure as code to support Kubernetes projects and teams is a critical component of that vision.  All of these new features around Pulumi and Kubernetes help to further empower teams to build scalable and robust solutions around Kubernetes and Pulumi IaC.
 
 We’re so happy to be able to work with the Flux project to bring all of the benefits of its composable GitOps toolkit to Pulumi users. We’re excited about the new use cases that Inline Infrastructure support in the Pulumi Kubernetes Operator enables. And we’re thrilled to bring Server Side Apply and Patch support to the Pulumi Kubernetes Provider.
 

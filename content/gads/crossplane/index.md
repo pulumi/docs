@@ -1,12 +1,12 @@
 ---
 title: "Crossplane Alternative | Pulumi"
-meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. 170+ providers."
+meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. Hundreds of providers."
 layout: gads-template
 block_external_search_index: true
 
 heading: "Crossplane Alternative"
 subheading: |
-    Manage cloud and Kubernetes infrastructure in TypeScript, Python, Go, or C# — with no control
+    Manage cloud and Kubernetes infrastructure in TypeScript, JavaScript, Python, Go, or .NET — with no control
     plane to install and no compositions or XRDs to author in YAML.
 
 customer_quote:
@@ -26,22 +26,22 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+                Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to hundreds of providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL using your IDE and any language ecosystem tools.
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and hundreds of providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: AI-powered infrastructure
                 description: |
                     Convert existing Terraform with `pulumi convert`, or hand the migration to Pulumi Neo. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-        
+
 key_features:
     items:
         - title: "Build infrastructure faster with reusable components"
@@ -171,13 +171,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
-        number: "170+"
-        description: "Cloud and service integrations"
+        number: "200+"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud

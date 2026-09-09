@@ -33,7 +33,7 @@ To set up a VCS integration, see the [version control docs](/docs/integrations/v
 
 ## Neo's permission model
 
-Neo operates within the conversing user's [RBAC entitlements](/docs/administration/access-identity/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and tasks are private to the user who created them unless they [share one](/docs/ai/neo/tasks/#ownership-and-sharing). For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/neo/permissions/).
+Neo operates within the conversing user's [RBAC entitlements](/docs/administration/concepts/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and tasks are private to the user who created them unless they [share one](/docs/ai/neo/tasks/#ownership-and-sharing). For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/neo/permissions/).
 
 ### Read-only mode
 

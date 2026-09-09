@@ -28,7 +28,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/iac/guides/testing/unit)    | [**Property Tests**](/docs/insights/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration)  |
+|                                | [**Unit Tests**](/docs/iac/guides/testing/unit/)    | [**Property Tests**](/docs/insights/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration/)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |

@@ -17,7 +17,7 @@ It's no surprise that Pulumi is often the tool being debated. What if I tell you
 
 <!--more-->
 
-When we look at our [Frequently Asked Questions](/docs/support/faq/#is-pulumi-imperative-or-declarative), we read the following on the declarative versus imperative topic:
+When we look at our [Frequently Asked Questions](/docs/support/faq/infrastructure/#is-pulumi-imperative-or-declarative), we read the following on the declarative versus imperative topic:
 
 > Pulumi is a declarative tool that uses imperative languages to define your end state. The language is used for authoring your program.
 > It’s not used for talking to the cloud provider API.

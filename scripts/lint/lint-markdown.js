@@ -498,10 +498,15 @@ function readPngSoftware(buf) {
  * checkFeatureImageSoftware enforces that a blog post's `feature_image` was
  * produced by the approved pipeline, using an allowlist on the PNG Software tag
  * rather than a denylist (so a new bad generator fails by default). Allowed:
- * "Figma" (designer exports), our renderer's stamp, or no tag at all (legacy
- * skill output — Pillow wrote no Software tag before the stamp was added). Any
- * other stamp (Matplotlib, PIL, DALL·E, Midjourney, etc.) fails. Scope matches
- * the other feature-image checks: blog posts, post-local PNG paths only.
+ * "Figma" (designer exports) and our renderer's stamp. Everything else fails,
+ * including an *absent* tag: a missing Software tag is the default output of
+ * every ad-hoc image writer (Pillow, canvas, sips, ImageMagick, a headless
+ * browser screenshot), so allowing it left the widest hole in this check — an
+ * agent that hand-rolls a 1884x1256 image on a #231F33 backdrop would sail
+ * through the dimension, background, and C2PA checks too. Every pre-stamp
+ * render in the repo has been back-stamped, so untagged now means "not from an
+ * approved source". Scope matches the other feature-image checks: blog posts,
+ * post-local PNG paths only.
  *
  * @param {string} featureImage The `feature_image` front-matter value.
  * @param {string} fullPath Absolute path to the markdown file being linted.
@@ -530,13 +535,14 @@ function checkFeatureImageSoftware(featureImage, fullPath) {
         return null; // Not a PNG; leave format/sizing to the other checks.
     }
 
-    // Allowlist: Figma exports, our renderer's stamp, or no tag (legacy renders).
+    // Allowlist: our renderer's stamp, or Figma (designer exports). Nothing else.
     const software = readPngSoftware(buf);
-    if (software === null || software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
+    if (software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
         return null;
     }
 
-    return `Feature image '${featureImage}' was produced by '${software}', which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+    const source = software === null ? "carries no PNG Software tag" : `was produced by '${software}'`;
+    return `Feature image '${featureImage}' ${source}, which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
 }
 
 /**
@@ -1111,9 +1117,6 @@ function pulumiCloudValueError(value, label) {
  *
  * The key names the feature because the value does: `pulumi_cloud: rbac` reads
  * as an assertion about Pulumi Cloud, when what it says is which feature the
- * page documents. It is not `cloud_feature` either — content/templates/ uses a
- * `cloud:` mapping for the cloud PROVIDER a template targets, and on a site that
- * documents AWS, Azure, and GCP "cloud feature" reads as a provider feature.
  *
  * @param {*} feature The front matter `pulumi_cloud_feature` value.
  * @param {*} legacy The front matter `pulumi_cloud` value (renamed; rejected).

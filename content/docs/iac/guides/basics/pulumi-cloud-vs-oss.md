@@ -63,7 +63,7 @@ The Pulumi Cloud backend exposes a transactional REST API rather than a blob sto
 
 Open source Pulumi leaves access control to you. With a DIY backend, your options are the access controls of the underlying storage: your cloud provider's IAM for an object store, or ordinary file permissions for a local or shared filesystem. That access is expressed in terms of storage operations—reads and writes to files. At that level you cannot distinguish one Pulumi operation from another: a routine `pulumi up` and a `pulumi destroy` both look like writes to the same state file, so you cannot grant someone permission to update infrastructure without also allowing them to delete it.
 
-Pulumi Cloud provides a [role-based access control model](/docs/administration/organizations-teams/teams/) expressed in terms of Pulumi concepts and operations—stacks, projects, and the actions performed on them. It integrates with identity providers such as Microsoft Entra ID, Google Workspace, Okta, and any SAML/SSO provider, and supports [access tokens](/docs/administration/access-identity/access-tokens/) with fine-grained permissions for automation, including auditing and revocation.
+Pulumi Cloud provides a [role-based access control model](/docs/administration/concepts/rbac/teams/) expressed in terms of Pulumi concepts and operations—stacks, projects, and the actions performed on them. It integrates with identity providers such as Microsoft Entra ID, Google Workspace, Okta, and any SAML/SSO provider, and supports [access tokens](/docs/administration/concepts/access-tokens/) with fine-grained permissions for automation, including auditing and revocation.
 
 ## Secrets and configuration management
 

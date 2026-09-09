@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "/docs/get-started/": "get-started-with-pulumi-toc-header",
         "/docs/": "intro-toc-header",
         "/docs/using-pulumi/": "user-guides-toc-header",
-        "/docs/concepts/": "reference-toc-header",
+        "/docs/iac/concepts/": "reference-toc-header",
         "/docs/support/": "support-toc-header",
         "/docs/iac/adopting-pulumi/converters/": "converters-toc-header",
     };

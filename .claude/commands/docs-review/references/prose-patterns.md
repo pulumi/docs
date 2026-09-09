@@ -5,6 +5,8 @@ description: Concrete prose patterns to flag in user-facing content. Quote-and-r
 
 # Prose Patterns
 
+> **Source of truth.** The prose patterns to avoid (nested clause stacks, contrastive frames, uniform rhythm, AI-drafting tells) are defined in the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/) "Natural voice" section (also exposed through the brand MCP server). This file is the *operational* layer the review runs: the detection thresholds, the per-file cap, and the quote-and-rewrite mandate. Keep the pattern list here in sync with the brand section; it's the authority on what counts as a pattern.
+
 Applied to prose-bearing content (docs and blogs). Concrete patterns only — every finding must quote the offending text and propose a rewrite. If you can't quote the construction or propose a fix, drop the finding. Abstract "this could be clearer" / "consider reorganizing" feedback isn't a review concern.
 
 **Cap structural-pattern findings at 10 per file.** Spelling and grammar render uncapped (see below). If a file has more than 10 structural findings, surface only the most impactful; don't render every instance.

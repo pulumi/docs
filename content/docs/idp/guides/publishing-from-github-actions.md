@@ -22,7 +22,7 @@ This guide walks through setting up automated testing and publishing workflows t
 - A Pulumi component authored and working locally (see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/))
 - A [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/concepts/private-registry)
-- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-issuers/github/), [GitHub App](/docs/integrations/version-control/github-app/), etc.
+- Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/guides/oidc-issuers/github/), [GitHub App](/docs/integrations/version-control/github-app/), etc.
 - Component [documentation](https://github.com/pulumi-labs/pulumi-component-lifecycle-example#static-page-component) written and committed to your repository
 
 ## Development Workflow Overview
@@ -131,7 +131,7 @@ import (
 func TestConstruct(t * testing.T) {
 
     // Configure Mocks: The provider is roughly the same as in our main.go
-    myProvider, err: = infer.NewProviderBuilder().
+    myProvider, err := infer.NewProviderBuilder().
     WithNamespace("example").
     WithComponents(
         infer.ComponentF(NewStaticPage),
@@ -143,7 +143,7 @@ func TestConstruct(t * testing.T) {
     require.NoError(t, err)
 
     // Configure Mocks: The Server catches calls to create resources, and returns mock resources instead.
-    server, err: = integration.NewServer(
+    server, err := integration.NewServer(
         t.Context(),
         "example",
         semver.MustParse("0.1.0"),
@@ -167,7 +167,7 @@ func TestConstruct(t * testing.T) {
     // test the "static-page-component:index:StaticPage" component
     // We try to construct a StaticPage component named "test-static-page"
     // The mock will set the endpoint value
-    resp, err: = server.Construct(p.ConstructRequest {
+    resp, err := server.Construct(p.ConstructRequest {
         Urn: "urn:pulumi:stack::project::static-page-component:index:StaticPage::test-static-page",
         Inputs: property.NewMap(map[string] property.Value {
             "indexContent": property.New("test content"),
@@ -300,7 +300,7 @@ In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/operati
 For the integration tests:
 
 - [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the Github runner
-- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/administration/access-identity/oidc-issuers/github/))
+- [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/administration/guides/oidc-issuers/github/))
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
 

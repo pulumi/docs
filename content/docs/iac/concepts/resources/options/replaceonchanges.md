@@ -60,7 +60,7 @@ widget, err = apiextensions.NewCustomResource(ctx, "widget", &apiextensions.Cust
             "input": "something",
         },
     },
-}, pulumi.ReplaceOnChanges([]string{"spec.input"})
+}, pulumi.ReplaceOnChanges([]string{"spec.input"}))
 ```
 
 {{% /choosable %}}

@@ -64,7 +64,7 @@ As an alternative to the plugin, you can run your step inside one of Pulumi's of
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate.
 
 Store the token as a [Buildkite secret](https://buildkite.com/docs/pipelines/security/secrets/buildkite-secrets) so it isn't committed to source control, and use the [`secrets` plugin](https://buildkite.com/resources/plugins/buildkite-plugins/secrets-buildkite-plugin/) to map it to the `PULUMI_ACCESS_TOKEN` environment variable:
 
@@ -78,7 +78,7 @@ Store the token as a [Buildkite secret](https://buildkite.com/docs/pipelines/sec
 
 Prefer an organization or team token over a personal token.
 
-You can remove even that static secret with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/). Register Buildkite as an OIDC issuer in Pulumi Cloud, then enable OIDC on the plugin — it exchanges the [OIDC token Buildkite issues for the job](https://buildkite.com/docs/pipelines/security/oidc) for a short-lived Pulumi access token, so no long-lived credential is stored:
+You can remove even that static secret with [OpenID Connect (OIDC)](/docs/administration/guides/oidc-issuers/). Register Buildkite as an OIDC issuer in Pulumi Cloud, then enable OIDC on the plugin — it exchanges the [OIDC token Buildkite issues for the job](https://buildkite.com/docs/pipelines/security/oidc) for a short-lived Pulumi access token, so no long-lived credential is stored:
 
 ```yaml
     plugins:
@@ -168,5 +168,5 @@ You can also manage Buildkite itself — pipelines, teams, and agent tokens — 
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.

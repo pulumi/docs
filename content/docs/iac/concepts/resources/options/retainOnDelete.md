@@ -29,6 +29,8 @@ Once the resource is no longer marked retained, it can be fully deleted as part 
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
+For a complete walkthrough of using this option to remove a resource from a stack without deleting the underlying infrastructure, including how it compares to `pulumi state delete`, see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/).
+
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}

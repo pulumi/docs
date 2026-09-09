@@ -337,6 +337,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
     **Always group advisory style suggestions under a `#### Style suggestions` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets. Omit it only when there are no advisory suggestions at all. These bullets are **not counted** in the ⚠️ cell of the bucket table.
 
+  - **Editorial stances (no verdict).** `compose-review.py` renders a second H4 inside ⚠️ Low-confidence, **before** `#### Style suggestions`: `#### Editorial stances introduced by this PR`, one bullet per record in `.candidate-claims.json`'s `stances` list (the extractor's `positioning` / `comparison` records — "the fastest path", "the recommended approach", "unlike Terraform"; `merge-claims.py` schema v2 keeps them out of the verifier's input). Bullet shape: `- L<n> `<file>` — *"<text>"* — <positioning|comparison> (found by <layers>)`. **No verdict emoji, no verdict word, no trail record** — a page's own framing has no external ground truth, so the verifier is deliberately never asked; the list exists so a human sees that an agent asserted a superlative (PR #21291 shipped "`pulumi convert` is the fastest path … and it's where to start" with nothing in the review surfacing the word). The bullets start with `- L`, not `- **[L`, so they are **not counted** in the ⚠️ cell and are exempt from the trail-prefix mandate. When the artifact carries no stance, the block renders its explicit-empty form `_None — the extractor found no positioning or comparison language in this PR's added lines._`; when the artifact pre-dates the split it is omitted entirely. `editorial-stances-coverage` holds the block to the artifact both ways — you may not drop a stance row, and you may not add one the extractor didn't record (a stance you found yourself is a regular ⚠️ finding with a trail record). Leave the rows as composed; if one *is* a checkable fact, add the trail record and bucket bullet for it as a claim rather than editing the stance row.
+
     **Render expanded — never behind a `<details>`.** They were collapsed while they still counted toward ⚠️; now that the count excludes them they cost no review burden, so a disclosure only adds a click and hides the ✏️ marks. Group them under an `##### <path>` H5 heading per file, in line order. On a multi-file review the heading also carries the per-file total and kind breakdown (`##### content/docs/foo.md — 8 (4 wordiness, 2 punctuation, 1 weasel word, 1 filler)`); on a single-file review the path alone is enough. The per-file heading is **mandatory either way**, and must be an H5 rather than a bold line: `post-style-suggestions.py --annotate-draft` walks those headings to bind a `- **line N:**` bullet to a file, and a column-0 `**bold**` line would be miscounted as a bucket finding by `extract_bucket_bullets` (inflating the ⚠️ count and tripping the L-prefix rule).
 
     **✏️ marks a one-click suggestion.** A bullet whose finding was posted as an applyable `suggestion` comment gets ` ✏️` appended, and the caption deep-links to the PR's Files-changed tab (where the suggestion renders and where **Add suggestion to batch** stages several for a single commit). **Both review lanes re-post suggestions on every run and both write the mark themselves, from the set the GitHub API accepted — never the reviewer.** The initial lane (`claude-code-review.yml`) runs `post-style-suggestions.py --annotate-draft` against the composed draft before it publishes; the re-entrant lane (`claude-update.yml`) has no draft to intercept — the model renders and upserts inside its own step — so it runs `--annotate-pinned`, which PATCHes each published `<!-- CLAUDE_REVIEW N/M -->` part in place. Either way the marks and the ✏️ banner are stripped and recomputed on every run, so a mark carried over from the previous pinned body is discarded. Do not add or remove one by hand, and do not carry one across a refresh. The mark is keyed to the **line**, not the individual finding — a suggestion is a whole-line replacement, so when one line carries two findings both bullets are marked by the single suggestion that rewrites it. Mark count can therefore exceed the banner's suggestion count; the banner counts buttons, the marks point at the lines they sit on.
@@ -358,6 +360,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
 
 Per-finding rendering (suggestion blocks, quote-and-rewrite mandate, fix prose) is governed by `docs-review:references:shared-criteria`.
+
+**Provenance on suggested rewrites.** When the wording in a suggestion block or a proposed rewrite is drawn from another page — a sibling in a templated section, the page the cross-sibling lane compared against, a canonical guide — cite it inline in the finding, file and lines ("per `any-terraform-provider.md` L23–24"), so the author can check the source and the implementer can re-check it. Cross-sibling consistency is a **mismatch detector, not ground truth**: two pages agreeing proves nothing about either, and a rewrite that copies a sibling's clause copies the sibling's drift with it (PR #21293's `@claude implement` applied a review rewrite verbatim and inherited two clauses from `any-terraform-provider.md`, one of them wrong — "pinning a version that isn't published"). Quote the sibling; don't launder it into the PR's own voice without saying where it came from.
 
 **🚨 vs ⚠️ for infra findings.** Infra and build-config findings default to ⚠️ -- they are risks for human review, not assertions that the PR is wrong. The two exceptions that promote to 🚨:
 
@@ -428,3 +432,207 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 | shared-criteria only | n/a (no fact-check) |
 
 Domain files may bump scrutiny internally for whole-file rewrites or new pages.
+
+## The v3 surface (`--surface v3`)
+
+> **Status:** ships behind the `REVIEW_V3_COMMENTS` flag. Everything above this
+> section describes the v2 single-comment surface, which remains the default
+> and stays valid through the transition. The v3 architecture reference is
+> `scripts/review-v3/README.md`.
+
+Under v3 the composer emits **two comments plus a machine-owned evidence
+object** instead of one monolith. Evidence (the 🔍 verification trail, the
+investigation log, 📋 triaged findings, 💡 pre-existing issues, 📊 editorial
+balance, 📜 history) lives in S3 and on a rendered evidence page; the comments
+carry only what their reader must act on, each linking the evidence page via
+the `%%EVIDENCE_URL%%` token (substituted at publish).
+
+### Author card — `.review-draft-author.md`
+
+```markdown
+<!-- CLAUDE_REVIEW 1/1 -->                ← legacy alias, own line (transition window)
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
+## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
+> [!IMPORTANT] orienting alert            ← composed; explains what the card demands
+_<one sentence: what the PR is and what the review checked>_
+### 🚨 Fix or disagree
+| ID | Where | Finding |
+|---|---|---|
+| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
+#### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
+**Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
+**Why:** <1-2 sentences>
+**Fix:** <exactly ONE required action; replacement text in a fenced block>
+### ❓ Questions for you
+| ID | Where | Finding |                  ← same row + block shape
+#### F3 · Do this
+…
+#### Style suggestions                    ← unchanged v2 block (annotator-compatible)
+### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
+📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
+<sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
+<!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
+```
+
+The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
+alert instead of the IMPORTANT one. Rows carry no status column —
+REVIEW_STATE is the state, and the section a row lives in is the display.
+
+### Reviewer brief — `.review-draft-brief.md`
+
+```markdown
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide vN — not for the author
+> [!TIP] orienting alert                  ← carries the approval assertion ("approving asserts only the ⚠️ items")
+**Approval needed from:** @org/team …     ← composed when routing is on; never hand-written
+<!-- AUTHOR_STATE_BEGIN --> … <!-- AUTHOR_STATE_END -->  ← "Waiting on the author" table; composer-OWNED, machine-refreshed
+> [!NOTE] Summary + Review-confidence table   ← same content as the v2 TIP block
+### ⚠️ Check these before approving          ← reviewer-check rows; the update lane also parks 🛡️ held disputes here
+| ID | Where | Finding |
+|---|---|---|
+| **F4** | `file.md` L95 | <what might be wrong and why> |
+- <plain advisory bullets are allowed here — untracked reviewer notes>
+#### Editorial stances introduced by this PR  ← composer-owned; the v2 block (see §Editorial stances above) hosted here instead of ⚠️ Low-confidence
+- L12 `file.md` — *"the fastest path …"* — positioning (found by regex+llm)
+### ✅ What you can rubber-stamp            ← composer-owned count lines
+💡 **Pre-existing issues in touched files:** N — <link>
+📎 **Full evidence:** %%EVIDENCE_URL%%
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-reviewer.md
+```
+
+### Finding IDs and the finding-line grammar
+
+One table row per finding, everywhere:
+`| **F<n>** | \`file\` L<a>-<b> | <finding cell> |` — the same three
+columns in 🚨, ❓, ⚠️, and ✅ Resolved. Literal pipes inside the Finding cell
+are escaped `\|`; the Where cell is `\`file\`` + a `L<a>-<b>` range, either
+optional (`—` when both are absent), and the composer deep-links it to the
+PR's Files-changed diff anchor —
+`[\`file\` L<a>-<b>](…/pull/<pr>/files#diff-<sha256 of the path>R<a>)` —
+so clicking a finding lands on the change itself. (A line outside the diff
+lands on the file's header in the Files tab — still the right neighborhood.)
+The grammar parses both the linked and the bare form, so a model-added row
+may use the bare form; the deterministic re-render links it. IDs are assigned by the composer
+in render order, are unique for the life of the PR (`high_water` in the
+evidence object is the high-water mark), and are the join key across the
+cards, REVIEW_STATE, the Sentinel, and the evidence object.
+`render_finding_row` / `parse_finding_line` in `compose-review.py` are the
+grammar's only implementation — `build-evidence.py` re-parses the model-edited
+cards with it, fail-closed. Keep Finding cells to ONE line: the claim quote and the verdict tag —
+nothing else. The action, the rationale, and any replacement text live in
+the finding's `#### F<n> · Do this` block below the table (a wall of prose
+in a cell recreates the overload the table exists to fix, and hides a
+second imperative where a serial reader can't see it — 2026-09-01 persona
+pass).
+
+### The ❓/⚠️ split
+
+Deterministic, verdict-driven, applied by the composer (`split_v3_buckets`):
+`unverifiable` → ❓ Questions for you (sourcing their own claim is the
+author's job — turn-cap unverifiables included); `framing-drift` and other
+low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
+reviewer's judgment).
+
+### The model's edit contract (v3)
+
+The model edits **both drafts** the way it edits the v2 draft — triage the
+stub TODOs, write the fix prose, fill the summary/confidence TODOs — under
+these rules:
+
+**Editorial stances on v3.** The `#### Editorial stances introduced by this PR` block under the brief's ⚠️ section is the same verdict-free list the v2 monolith renders under ⚠️ Low-confidence, with the same contract: leave its rows as composed, add none, drop none, grade none. It lives on the brief because a stance is reviewer-check material (nothing for the author to answer) — it is not a finding, gets no `F` id, and never enters REVIEW_STATE or `findings[]`; the evidence object carries the records under `stances`. `editorial-stances-coverage` runs on v3 against the brief.
+
+1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
+   reason (move the line between sections/drafts and keep its id). Moving a
+   finding down is a contract violation `build-evidence.py` rejects (exit 2).
+   Exception: a `route: preflight` detector stub whose TODO explicitly says
+   "bucket by reader impact" may land in ⚠️.
+1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
+   `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
+   `**Pre-existing:** <reason>`. The cell must START with the label.
+   build-evidence files those on the evidence page and drops them from the
+   published card. A finding that simply vanishes is a violation.
+1. **Fill every `#### F<n> · Do this` block** (they are scaffolded per
+   blocking finding): `**Line (verbatim):**` quotes the flagged file line
+   exactly ONCE on the whole card — a paraphrase never appears inside
+   quotation marks; `**Why:**` is 1-2 sentences; `**Fix:**` states exactly
+   ONE required action, first. Replacement text goes in a fenced block
+   (GitHub gives it a copy button). If deletion is the better fix, LEAD
+   with deletion — a reword is offered only under a
+   `**If you'd rather keep it:**` label, never as a competing imperative.
+   A structural observation shared by several findings ("both new sentences
+   render after the stepper") is stated once, in the first affected block;
+   later blocks reference it ("same placement issue as F1").
+1. **When you disposition a row** (rewrite as `**Spurious:**` /
+   `**Mis-sourced:**` / `**Pre-existing:**`), delete its `#### F<n> · Do
+   this` block too — a block never outlives its finding.
+1. **New findings** are added as `| **F?** | … | … |` rows in the right
+   section's table; build-evidence assigns the real id. An `F?` row gets NO
+   detail block (ids aren't assigned yet) — put a terse action clause in
+   its Finding cell instead.
+1. **⚠️ rows and the confidence table speak to a non-docs reader.** Every
+   LOW/MEDIUM confidence row's Notes cell says whose problem it is — either
+   "Not yours to check — <why>" or "→ see F<n>" — and uses reader terms
+   ("consistency with the other get-started pages"), not pipeline names
+   ("cross-sibling"). Before a ⚠️ item asks the reviewer to look something
+   up in the PR's own files, do that lookup yourself and hand over only the
+   residual judgment ("step 3 says both classes go in App.java — confirm"),
+   with the file read cited in the evidence trail.
+1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
+   the REVIEW_STATE block and its legend note, the `AUTHOR_STATE_BEGIN` …
+   `AUTHOR_STATE_END` span on the brief ("Waiting on the author" —
+   build-evidence regenerates it from your final findings, promotions
+   included), `%%EVIDENCE_URL%%` tokens, the rubber-stamp count lines in
+   the brief, or the footers.
+1. Keep each finding on ONE row — the grammar is line-based. Escape literal
+   pipes in a cell as `\|`. Never edit the table header/separator rows, and
+   never add a leading status cell — rows have exactly three columns.
+
+### After the model: `build-evidence.py`
+
+`build-evidence.py --author-body … --brief-body … --base .review-evidence-base.json
+--output .review-evidence.json --author-out … --brief-out …` re-parses the
+cards, honors promotions/rewrites, numbers `F?` additions, recomputes the
+author header's blocking count and the brief's 💡 count, refreshes
+summary/confidence/history from the brief, and emits the final evidence object
+plus the cleaned publish bodies. Any parse failure or contract violation exits
+2 and the workflow treats the run like a validation failure.
+
+### Validation (schema v23)
+
+`validate-pinned.py check` auto-detects the surface (the
+`<!-- CLAUDE_REVIEW_AUTHOR -->` marker; `--surface` overrides) and, on v3,
+validates the model-edited drafts **before** `build-evidence.py` — so `F?`
+placeholder ids are legal at validation time and the header count may lag a
+model-added row (both are recomputed by build-evidence). Invocation:
+
+```
+validate-pinned.py check --body-file .review-draft-author.md \
+  --brief-file .review-draft-brief.md --evidence-base .review-evidence-base.json
+```
+
+v3-only rules: `v3-markers` (marker lines intact; author card is the sole
+`CLAUDE_REVIEW_HEAD` carrier; brief carries none), `v3-section-order`,
+`v3-review-state` (a corrupt REVIEW_STATE block hard-fails — it would
+silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
+the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/⚠️ row
+parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
+high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n> · Do
+this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no `F?` blocks,
+exactly one `**Fix:**` line each, none on the brief), and
+`bucket-split-faithful` (promote-only against the evidence base; a finding
+may never be demoted or deleted — rewrite it as `**Spurious:** …` instead).
+
+Shared rules that also run on v3 (some against both bodies):
+`no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,
+`outcome-annotation-shape`, `no-placeholder-empty-form`,
+`internal-link-existence`, `shortcode-existence`. The trail /
+investigation-log / external-claim faithfulness rules do **not** run on v3
+bodies: the verification trail is machine-owned in the evidence object and
+validated by `scripts/review-v3/validate-evidence.py`.
+
+`count-buckets` on a v3 body counts blocking as 🚨+❓ rows **without a
+REVIEW_STATE disposition** (a corrupt block conservatively counts every row),
+and reports the brief's ⚠️ rows as `low_confidence`; the `outstanding=` output
+drives `set-review-label.sh` exactly as on v2.

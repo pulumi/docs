@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 20
         identifier: iac-comparisons-cloudformation
-    concepts:
-        parent: vs
-        weight: 20
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
 - /docs/concepts/vs/cloud-templates/cloudformation/
@@ -153,4 +150,5 @@ Yes — and this is one of the more common adoption patterns. Teams keep AWS inf
 - [Pulumi for AWS](/docs/integrations/clouds/aws/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
+- [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/)
 - [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)

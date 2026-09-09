@@ -59,7 +59,7 @@ The [`localProgram-tsnode-mochatests` example](https://github.com/pulumi/automat
 - Perform runtime validation checks
 - Tear down the stack as part of a test
 
-## Additional resources
+## Learn more
 
 Integration tests written with Automation API in the Pulumi SDK repositories:
 
@@ -67,4 +67,4 @@ Integration tests written with Automation API in the Pulumi SDK repositories:
 - [Go tests](https://github.com/pulumi/pulumi/blob/master/sdk/go/auto/local_workspace_test.go)
 - [Python tests](https://github.com/pulumi/pulumi/blob/master/sdk/python/lib/test/automation/test_local_workspace.py)
 - [C# tests](https://github.com/pulumi/pulumi-dotnet/blob/main/sdk/Pulumi.Automation.Tests/LocalWorkspaceTests.cs)
-- [Java example](https://github.com/pulumi/automation-api-examples/blob/main/java/localProgram/)
+- [Java example](https://github.com/pulumi/automation-api-examples/tree/main/java/localProgram)

@@ -97,11 +97,11 @@ sections:
   cards:
   - icon: lightbulb
     heading: Concepts
-    description: Understand core ESC concepts including environments, sources, targets, and composition.
+    description: Understand core ESC concepts including environments, providers, built-in properties, and SDKs.
     link: /docs/esc/concepts/
   - icon: folder
     heading: Environments
-    description: Reference for the ESC YAML syntax, imports, versioning, and webhooks.
+    description: Reference for the ESC YAML syntax, imports, and versioning.
     link: /docs/esc/concepts/environments/
   - icon: link
     heading: Guides
@@ -111,6 +111,10 @@ sections:
     heading: Languages & SDKs
     description: Manage ESC programmatically from .NET, Go, JavaScript, and Python.
     link: /docs/esc/languages-sdks/
+  - icon: question
+    heading: FAQ
+    description: Answers to common questions about Pulumi ESC, secrets management, and pricing.
+    link: /docs/support/faq/secrets-config/
 # - type: full-width-cards
 #   heading: Reference
 #   cards:

@@ -10,177 +10,14 @@ sections:
     layout: split
     cta_secondary_text: Download open source
     cta_secondary_link: /docs/install/
-    badge_highlight_text: "Latest release:"
-    badge_text: "Full support for Terraform and HCL"
+    badge_highlight_text: "New:"
+    badge_text: "Native support for Terraform and HCL"
     badge_link: /releases/terraform-state-backend-modules-hcl/
-    title_primary: "Next-level"
-    title_secondary: "infrastructure as code \n for humans and agents."
+    title: "*Unleash agents* <br>on your infrastructure."
     description: |
-      Ship cloud infrastructure at the speed of AI with languages and tools that stay out of your way.
+      Ship infrastructure faster with tools that let agents do what they do best — without letting them go off the rails.
     anchor: hero
-    code_overlay_image: /images/home/home-hero-code-overlay.svg
-    code_aspect_ratio: "666/513"
-    code_offsets:
-      top: "0%"
-      right: "0%"
-      left: "23%"
-      bottom: "30%"
-    code_title: "index.ts"
-    code_snippets:
-      - language: typescript
-        label: TypeScript
-        title: "index.ts"
-        code: |
-          import * as aws from "@pulumi/aws";
-          import * as awsx from "@pulumi/awsx";
-
-          const vpc = new awsx.ec2.Vpc("vpc");
-          const azs = await aws.getAvailabilityZones({ state: "available" });
-
-          const subnets = azs.names.map((az, i) =>
-            new aws.ec2.Subnet(`subnet-${i}`, {
-              vpcId: vpc.vpcId,
-              cidrBlock: `10.0.${i}.0/24`,
-              availabilityZone: az,
-            })
-          );
-
-      - language: python
-        label: Python
-        title: "__main__.py"
-        code: |
-          import pulumi_aws as aws
-          import pulumi_awsx as awsx
-
-          azs = aws.get_availability_zones(state="available")
-          vpc = awsx.ec2.Vpc("vpc")
-
-          for i, az in enumerate(azs.names):
-              aws.ec2.Subnet(f"subnet-{i}",
-                  vpc_id=vpc.vpc_id,
-                  cidr_block=f"10.0.{i}.0/24",
-                  availability_zone=az,
-              )
-
-      - language: go
-        label: Go
-        title: "main.go"
-        code: |
-          package main
-
-          import (
-              "fmt"
-
-              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
-              "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-              awsx "github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2"
-              "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-          )
-
-          func main() {
-              pulumi.Run(func(ctx *pulumi.Context) error {
-                  vpc, _ := awsx.NewVpc(ctx, "vpc", nil)
-                  azs, _ := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{State: pulumi.StringRef("available")}, nil)
-
-                  for i, az := range azs.Names {
-                      ec2.NewSubnet(ctx, fmt.Sprintf("subnet-%d", i), &ec2.SubnetArgs{
-                          VpcId:            vpc.VpcId,
-                          CidrBlock:        pulumi.String(fmt.Sprintf("10.0.%d.0/24", i)),
-                          AvailabilityZone: pulumi.String(az),
-                      })
-                  }
-                  return nil
-              })
-          }
-
-      - language: csharp
-        label: C#
-        title: "MyStack.cs"
-        code: |
-          using System.Linq;
-          using Pulumi;
-          using Pulumi.Aws;
-          using Pulumi.Aws.Ec2;
-
-          return await Deployment.RunAsync(() =>
-          {
-              var vpc = new Pulumi.Awsx.Ec2.Vpc("vpc");
-              var azs = GetAvailabilityZones.Invoke(new() { State = "available" });
-
-              var subnets = azs.Apply(result =>
-                  result.Names.Select((az, i) =>
-                      new Subnet($"subnet-{i}", new()
-                      {
-                          VpcId = vpc.VpcId,
-                          CidrBlock = $"10.0.{i}.0/24",
-                          AvailabilityZone = az,
-                      })
-                  ).ToList()
-              );
-          });
-      - language: java
-        label: Java
-        title: "App.java"
-        code: |
-          package myproject;
-
-          import com.pulumi.Pulumi;
-          import com.pulumi.aws.ec2.Vpc;
-          import com.pulumi.aws.ec2.Subnet;
-          import com.pulumi.aws.ec2.SubnetArgs;
-          import com.pulumi.aws.AwsFunctions;
-          import com.pulumi.aws.inputs.GetAvailabilityZonesPlainArgs;
-
-          public class App {
-              public static void main(String[] args) {
-                  Pulumi.run(ctx -> {
-                      var vpc = new Vpc("vpc");
-
-                      var azs = AwsFunctions.getAvailabilityZonesPlain(
-                          GetAvailabilityZonesPlainArgs.builder()
-                              .state("available")
-                              .build()
-                      ).join();
-
-                      var names = azs.names();
-                      for (int i = 0; i < names.size(); i++) {
-                          new Subnet("subnet-" + i, SubnetArgs.builder()
-                              .vpcId(vpc.id())
-                              .cidrBlock("10.0." + i + ".0/24")
-                              .availabilityZone(names.get(i))
-                              .build());
-                      }
-                  });
-              }
-          }
-      - language: yaml
-        label: YAML
-        title: "Pulumi.yaml"
-        code: |
-          variables:
-            azs:
-              fn::invoke:
-                function: aws:getAvailabilityZones
-                arguments:
-                  state: available
-
-          resources:
-            vpc:
-              type: awsx:ec2:Vpc
-
-            subnet-0:
-              type: aws:ec2:Subnet
-              properties:
-                vpcId: ${vpc.vpcId}
-                cidrBlock: "10.0.0.0/24"
-                availabilityZone: ${azs.names[0]}
-
-            subnet-1:
-              type: aws:ec2:Subnet
-              properties:
-                vpcId: ${vpc.vpcId}
-                cidrBlock: "10.0.1.0/24"
-                availabilityZone: ${azs.names[1]}
+    hero_animation: agent-loop
 
   - type: logo_carousel
     title: Trusted by over 4,000 innovative companies
@@ -254,26 +91,26 @@ sections:
     anchor: logos
 
   - type: feature_split
-    heading: The **complete platform** for infrastructure teams
+    heading: The **infrastructure platform** for humans and agents
     description: |
-      **From open source IaC to AI-driven workflows, Pulumi gives platform teams all they need to build and scale cloud infrastructure.**
+      Coding agents have reset the pace at which we build software. Pulumi brings that same agent-driven velocity to infrastructure.
 
-      A unified platform built on real programming languages that covers the full infrastructure stack, so your team can focus on shipping.
+      Open source and powered by languages agents know well, Pulumi is **infrastructure as software** that gives humans and agents the tools they need to build and scale infrastructure — safely.
     cta_text: Explore the platform
     cta_link: /product/
     cards:
       - image: /images/home/languages-card-image.svg
         image_alt: Programming language logos
-        title: Real languages
-        description: Write infrastructure code in TypeScript, Python, Go, C#, or Java — the same languages your team already uses to build software.
+        title: Use your language of choice
+        description: Build infrastructure with modern languages like TypeScript, Python, Go, C#, and more — or config languages like YAML and HCL.
       - image: /images/home/secure-card-image.svg
         image_alt: Security shield illustration
-        title: Secure by default
-        description: Meet compliance requirements with encrypted secrets, dynamic credentials, and full audit trails. Pulumi is SOC 2 Type II certified.
+        title: Keep it secure at every step
+        description: Meet compliance requirements with encrypted secrets, dynamic credentials, policy as code, and full audit trails. Pulumi is SOC 2 Type II certified.
       - image: /images/home/ai-card-image.svg
         image_alt: AI for infrastructure illustration
-        title: AI for infrastructure
-        description: Bring your own coding agent — or use Pulumi Neo — to generate, debug, and refactor infrastructure code with built-in best practices and full organizational context.
+        title: Bring full context to agents
+        description: Use our open-source skills with any coding agent — or use Pulumi Neo — to automate workflows with best practices and full organizational context.
     anchor: platform
 
   - type: testimonial
@@ -288,7 +125,7 @@ sections:
     large_cards:
       - title: Don't just write IaC — compose it
         description: |
-          Take advantage of your language of choice to build reusable components and share them with package managers like npm, PyPI, and NuGet. Get all of the benefits of your IDE, including type checking, code navigation, inline docs, testing, and more.
+          Take full advantage of your preferred language to build reusable components and share them with package managers like npm, PyPI, and NuGet. Get all of the benefits of your IDE, including type checking, code navigation, inline docs, testing, and more.
 
         image: /images/home/iac-card-image.svg
         image_alt: Pulumi infrastructure as code editor
@@ -296,7 +133,7 @@ sections:
         cta_link: /product/infrastructure-as-code/
       - title: Meet Neo, your AI platform engineer
         description: |
-          The first AI agent built for infrastructure. Pulumi Neo understands your code and organizational context, respects your policies, and executes complex tasks end-to-end — with or without a human in the loop. It works alongside the coding agents you already use.
+          The first AI agent built for infrastructure, Pulumi Neo understands your code and organizational context, respects your policies, and executes complex tasks end-to-end — with or without a human in the loop. And it works alongside the coding agents you already use.
         image: /images/home/neo-card-image.svg
         image_alt: Pulumi Neo AI platform engineer
         cta_text: Learn more about Neo
@@ -313,9 +150,9 @@ sections:
         description: |
           Use natural language queries to find managed and unmanaged resources — even across clouds. Enforce policies, track compliance in real-time, and find vulnerabilities before they become incidents.
         image: /images/home/ig-card-image.svg
-        image_alt: Pulumi Discovery & Governance dashboard
-        cta_text: Learn more about discovery & governance
-        cta_link: /product/insights-governance/
+        image_alt: Discovery & governance dashboard
+        cta_text: Learn more about Discovery & governance
+        cta_link: /product/discovery-governance/
       - title: Self-service infrastructure
         description: |
           Define golden paths for approved infrastructure with configurable components and customizable templates that enable developers while keeping platform teams in control.

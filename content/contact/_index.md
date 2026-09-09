@@ -10,6 +10,7 @@ quick_links:
           description: No sales call needed. Create an org and ship infrastructure in minutes.
           cta_label: Start a trial
           url: https://app.pulumi.com/signup?create-organization=1
+          track_event: contact-page-trial-click
 
         - label: Want to see it first?
           description: Get a guided walkthrough from our team before you commit to anything.
@@ -19,7 +20,7 @@ quick_links:
         - label: Already a customer?
           description: File a support ticket for a fast response from our team.
           cta_label: Get support
-          url: https://support.pulumi.com/hc/en-us/requests/new
+          url: /support/new/
 
 form:
     - key: general
@@ -39,6 +40,6 @@ form:
       hubspot_form_id: cta1
       cta:
         label: Submit a Request
-        url: https://support.pulumi.com/hc/en-us/requests/new
+        url: /support/new/
 
 ---

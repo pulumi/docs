@@ -80,8 +80,9 @@ The [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) command allows you to
 
 The `pulumi state` command can help with the following scenarios:
 
+- Inspecting a single resource's tracked state, including its inputs and outputs, with [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/)
 - Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/)
-- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/)
+- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/) — see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/) for a complete walkthrough, including dependent and protected resources
 - [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
 - Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/)
 - Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/)
@@ -90,7 +91,13 @@ Refer to [the `pulumi state` reference docs](/docs/iac/cli/commands/pulumi_state
 
 ### 3. If necessary, export your state file and edit
 
-If the `pulumi state` command does not resolve the issue for you, you will need to edit your Pulumi state file in an editor to resolve the issue. First, export the state file again:
+If the `pulumi state` command does not resolve the issue for you, you will need to edit your Pulumi state file in an editor to resolve the issue.
+
+{{% notes type="info" %}}
+If you only need to see what Pulumi has tracked for a single resource, rather than a full understanding of your entire state file, run [`pulumi state get`](/docs/iac/cli/commands/pulumi_state_get/) with the resource's URN or auto-assigned identifier instead of exporting the whole file.
+{{% /notes %}}
+
+First, export the state file again:
 
 ```bash
 pulumi stack export --file state.json

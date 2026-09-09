@@ -13,6 +13,8 @@ aliases:
 - /docs/iac/clouds/kubernetes/crd2pulumi/
 ---
 
+> **Deprecated.** `crd2pulumi` is superseded by provider extensions as of pulumi-kubernetes v4.34.0. See [Typed CustomResources with Provider Extensions](/registry/packages/kubernetes/how-to-guides/typed-customresources-with-provider-extensions/).
+
 `crd2pulumi` is a CLI tool that generates typed Pulumi SDK classes from Kubernetes [CustomResourceDefinition (CRD)](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) YAML schemas. While Pulumi lets you manage Kubernetes [`CustomResources`](/registry/packages/kubernetes/api-docs/apiextensions/customresource/) directly, those resources are untyped by default because every CRD schema is different. `crd2pulumi` solves this by reading a CRD's OpenAPI schema and generating strongly typed classes for your language of choice, enabling IDE autocompletion and compile-time type checking.
 
 This is particularly useful for complex CRDs with large schemas, such as [cert-manager](https://cert-manager.io/) or [Istio](https://istio.io/), where manually constructing resource arguments is error-prone.

@@ -2,6 +2,7 @@
 title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 meta_desc: MCP connects AI agents to your cloud infrastructure. Learn what MCP for IaC means, how vendors are building it, and how Pulumi's MCP server works.
 type: what-is
+date: 2026-07-21T12:18:32-07:00
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 schema_type: auto
 authors: ["alex-leventer"]
@@ -45,7 +46,7 @@ MCP for infrastructure is a genuinely multi-vendor category, and it's moving fas
 | **Red Hat** | MCP servers for OpenShift and Ansible Automation Platform | Available for cluster operations and playbook-driven automation |
 | **Community / CNCF ecosystem** | Independent `k8s-mcp-server` projects exposing `kubectl`-equivalent operations | Multiple community implementations, varying in scope and maintenance |
 
-A few patterns hold across most of them. Well-designed servers distinguish read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and the ones built around a plan-and-apply workflow treat the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's 180+ providers rather than one cloud.
+A few patterns hold across most of them. Well-designed servers distinguish read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and the ones built around a plan-and-apply workflow treat the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's hundreds of providers rather than one cloud.
 
 The category is young enough that survey data captures both the appetite and the friction. Zuplo's "State of MCP" research counted over 17,000 publicly listed MCP servers, and a [companion survey of technical professionals](https://zuplo.com/blog/mcp-survey) conducted November-December 2025 found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, [Stacklok's "State of Model Context Protocol in Software 2026" report](https://stacklok.com/wp-content/uploads/2026/01/State-of-MCP-in-Software-2026_FINAL.pdf), published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
 

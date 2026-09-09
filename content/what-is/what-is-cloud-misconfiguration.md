@@ -2,6 +2,7 @@
 title: What Is Cloud Misconfiguration?
 meta_desc: "A cloud misconfiguration is an insecure setting on a cloud resource that exposes data or systems. Learn the common types and how to prevent them."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Cloud Misconfiguration?"
 authors: ["alex-leventer"]
 ---
@@ -117,17 +118,17 @@ Infrastructure as code does not, by itself, guarantee secure settings (you can s
 
 Pulumi addresses cloud misconfiguration on two fronts: making configuration reviewable and repeatable through infrastructure as code, and blocking or flagging insecure settings through policy as code. Pulumi is one part of a defense-in-depth strategy (dedicated CSPM platforms and cloud-native controls have their place too), but it closes the highest-leverage gap: catching misconfigurations before a resource is ever created.
 
-**Infrastructure as code across every provider.** Pulumi lets you define cloud resources in TypeScript, Python, Go, C#, Java, or YAML across 200+ providers. Every setting is explicit in code, reviewed through pull requests, and applied consistently across environments, which removes the manual, console-driven changes that produce so many misconfigurations.
+**Infrastructure as code across every provider.** Pulumi lets you define cloud resources in TypeScript, Python, Go, C#, Java, or YAML across hundreds of providers. Every setting is explicit in code, reviewed through pull requests, and applied consistently across environments, which removes the manual, console-driven changes that produce so many misconfigurations.
 
 **Preventative policy enforcement during preview.** [Pulumi's policy as code](/docs/insights/policy/) evaluates resources during `pulumi preview` and `pulumi up`, before any change reaches the cloud. Rules such as "no S3 bucket may allow public access," "no security group may permit ingress from 0.0.0.0/0," or "all storage must be encrypted" run automatically on every deployment. A violation can warn (advisory mode), block the deployment (mandatory mode), or be corrected automatically (remediate mode), so a misconfiguration is stopped at the moment it is introduced rather than discovered after a breach.
 
 **Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/insights/policy/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
 
-**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Insights](/docs/insights/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the portion managed with Pulumi.
+**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/insights/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the resources managed with Pulumi.
 
 **Drift detection.** Pulumi can run scheduled drift detection, comparing live infrastructure against its declared configuration and alerting when they diverge, so an out-of-band change that reintroduces a misconfiguration is surfaced instead of silently persisting.
 
-Together, [Pulumi Discovery and governance](/product/insights-governance/) let a team prevent new misconfigurations at deploy time and continuously audit for existing ones, which is the preventative-plus-detective combination that a durable posture requires.
+[Discovery & governance](/product/discovery-governance/) lets a team prevent new misconfigurations at deploy time and continuously audit for existing ones, which is the preventative-plus-detective combination that a durable posture requires.
 
 ## Frequently asked questions about cloud misconfiguration
 
@@ -167,7 +168,7 @@ Related reading:
 
 * [Pulumi policy as code documentation](/docs/insights/policy/)
 * [Policy packs guide](/docs/insights/policy/policy-packs/)
-* [Discovery and governance](/product/insights-governance/)
+* [Discovery & governance](/product/discovery-governance/)
 * [Pulumi Discovery](/docs/insights/discovery/)
 * [What is policy as code?](/what-is/what-is-policy-as-code/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)

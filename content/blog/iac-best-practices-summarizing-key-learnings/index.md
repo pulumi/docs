@@ -15,7 +15,7 @@ aliases:
     - /blog/iac-recommended-practices-wrapping-up/
 ---
 
-Welcome to the final post in our series of articles focused on Infrastructure as Code best practices. In this post, we'll wrap up our recommendations for [IaC with Pulumi](/product/infrastructure-as-code/), summarizing the best practices from previous posts as well as highlighting some areas of potential future growth for the team at Zephyr Archaeotech Emporium---the fictional company at the center of the story throughout this series.<!--more-->
+Welcome to the final post in our series of articles focused on infrastructure as code best practices. In this post, we'll wrap up our recommendations for [IaC with Pulumi](/product/infrastructure-as-code/), summarizing the best practices from previous posts as well as highlighting some areas of potential future growth for the team at Zephyr Archaeotech Emporium---the fictional company at the center of the story throughout this series.<!--more-->
 
 ## Recapping IaC Best Practices
 

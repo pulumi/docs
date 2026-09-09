@@ -4,6 +4,7 @@ allow_long_title: true
 meta_desc: |
     Learn about what configuration management is and why configuration management is instrumental in maintaining the health and consistency of software systems.
 type: what-is
+date: 2023-11-16T11:09:26-07:00
 page_title: What is Configuration Management?
 authors: ["scott-lowe"]
 ---

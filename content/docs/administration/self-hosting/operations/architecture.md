@@ -30,7 +30,7 @@ This page describes the high-level architecture of a self-hosted Pulumi Cloud de
 | Component | Description |
 | :-- | :-- |
 | Object storage | Blob storage for checkpoint (state) files and policy packs. Supported: S3 and compatible implementations, Azure Blob Storage, Google Cloud Storage |
-| Search | OpenSearch 2.x or Elasticsearch 7.x for resource search and AI features |
+| Search | OpenSearch 2.x or 3.x, or Elasticsearch 7.x, for resource search and AI features |
 
 ## Data flow
 

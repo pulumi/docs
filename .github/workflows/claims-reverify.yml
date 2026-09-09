@@ -16,8 +16,10 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #   '0'   -> off: the whole job is skipped (no runner, no spend)
 #   'N'   -> on, N entities/night
 # The sweep is a stateless day rotation over the ELIGIBLE entity set (volatile,
-# minus entities already carrying a stale marker or superseded by a newer
-# review), so all of it is covered every ceil(N_eligible/count) nights
+# minus entities already carrying a stale marker, superseded by a newer
+# review, or whose indexed evidence is only our own docs — `circular`, see
+# reverify-claims.py's `indexed_circular`), so all of it is covered every
+# ceil(N_eligible/count) nights
 # regardless of the knob. The rotation slices with a stride, not a contiguous
 # window: a contiguous last chunk is whatever the remainder happens to be, so a
 # 51-entity pool at count=25 split 25/25/1 and one night in three checked a
@@ -52,6 +54,21 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #     are demoted to `unverifiable` now: the site is this repo rendered, so
 #     such a check can never detect drift. Expect `fresh` to read far lower
 #     than it did on those two nights; the difference was never real.
+#
+# 2026-09-03: the lane marked two pages for a claim only one of them made.
+# `version/pulumi-cli` keys every version claim about the CLI; the freshest
+# was verified and the verdict fanned out to both pages. The verdict itself
+# was `framing-drift` on an extracted sentence that had lost its "AWS KMS"
+# heading. Both pages burned a review slot that afternoon (#21370, #21374).
+# Since then the unit of verification is the distinct claim text — one call
+# per wording, a marker only on the pages that share it, `claim_text` in the
+# marker — the verifier gets the page path and the heading + prose around
+# the claim, and `framing-drift` is reported but never marked (see
+# SOFT_VERDICTS and claim_groups in reverify-claims.py). A retro over the 16
+# nights with report artifacts (320 checks): 5 stale, of which that one was
+# false; 135 fresh; 174 inconclusive — 148 of them, 46% of every call the
+# lane has made, demoted for citing only our own docs, the same 42 entities
+# every rotation. That waste is the next fix, not this one.
 #
 # DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
 # dead lane (claims index gone, API key missing, every check inconclusive)
@@ -252,16 +269,29 @@ jobs:
             --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
               '{channel: $ch, text: $txt, unfurl_links: false}')"
 
-      # Counts only + a run link — the evidence lives in the report artifact
-      # and the ledger markers; the fix arrives as a normal content-review PR.
+      # Counts, the pages that were marked, and a run link — the evidence
+      # lives in the report artifact and the ledger markers; the fix arrives
+      # as a normal content-review PR. The counts are the honest split, not
+      # "N of M stale": on 2026-09-03 "2 of 20" read as eighteen clean when
+      # eight had verified and ten could not be checked at all. The marked
+      # pages are listed because a wrong one (same day: a page marked for a
+      # claim it never made) is obvious in a list and invisible in a count.
       - name: Post stale summary to Slack
         if: steps.reverify.outputs.has_stale == 'true'
         env:
           SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
         run: |
           TEXT=$(jq -r --arg run "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" '
-            "Nightly claims re-verify: \(.meta.n_stale) of \(.meta.n_checked) checked volatile entities are stale. " +
-            "Affected pages are boosted into the next content-review sweep. <\($run)|Run log>"
+            "Nightly claims re-verify: \(.meta.n_stale) stale · \(.meta.n_fresh) fresh · "
+            + "\(.meta.n_inconclusive) could not be verified"
+            + (if (.meta.n_demoted // 0) > 0 then " (\(.meta.n_demoted) cited only our own docs)" else "" end)
+            + (if (.meta.n_soft // 0) > 0 then " · \(.meta.n_soft) framing note(s), reported not marked" else "" end)
+            + " — \(.meta.n_checked) claims across \(.meta.n_due) entities.\n"
+            + "Marked for the next content-review sweep:"
+            + (if ((.meta.marked_pages // []) | length) > 0
+               then "\n" + ([.meta.marked_pages[] | "  • \(.)"] | join("\n"))
+               else " none (every stale page is generated or has no ledger entry)" end)
+            + "\n<\($run)|Run log>"
           ' .claims-reverify-report.json)
           curl -s -X POST https://slack.com/api/chat.postMessage \
             -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \

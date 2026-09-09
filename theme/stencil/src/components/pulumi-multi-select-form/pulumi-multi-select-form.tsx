@@ -145,7 +145,7 @@ export class PulumiMultiSelectForm {
                 {!this.selectedItem ? null : this.selectedItem.cta ? (
                     <div class="mt-8"><a class="btn btn-primary btn-lg" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
-                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId} carryOverValues={this.carriedValues}></pulumi-hubspot-form>
+                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId} form-name={String(this.selectedItem.key)} carryOverValues={this.carriedValues}></pulumi-hubspot-form>
                 )}
             </div>
         );

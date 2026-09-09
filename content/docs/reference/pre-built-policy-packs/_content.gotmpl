@@ -143,9 +143,13 @@
          mistaken for a real datePublished by the JSON-LD/OpenGraph
          partials -- see layouts/partials/schema/collectors/article-entity.html.
          ---------------------------------------------------------------- */}}
+    {{ if not $section.feature }}
+        {{ errorf "policy packs: section %q in data/policy_packs.yaml has no `feature:` — the generated pages need it to state which edition includes the pack." $section.id }}
+    {{ end }}
     {{ $pageParams := dict
         "h1" $entry.h1
         "meta_desc" $entry.metaDesc
+        "pulumi_cloud_feature" $section.feature
     }}
     {{ $dates := dict }}
     {{ with $lastmodData }}

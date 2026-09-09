@@ -18,6 +18,25 @@ If your change is genuinely trivial (a typo, a one-line fix), opening directly a
 
 The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
 
+### The v3 review surface (staged rollout)
+
+The review is moving from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable, or per-PR by the `surface:v3` label (add it to a draft, mark ready — or add it and comment `@claude #new-review`; remove it and `#new-review` again to go back to the monolith). Everything below this section describes the v2 monolith and stays accurate for PRs reviewed before the flip and for repos where the flag is off. What changes under v3:
+
+- **Two comments instead of one.** An **author card** ("Author action guide") lists only what you must act on — one-line `🚨 Fix or disagree` and `❓ Questions for you` rows (both block merge), each with a `#### F<n> · Do this` block underneath (the flagged line verbatim, why, and exactly one required fix — replacement text in a copyable fenced block), plus inline ✏️ style suggestions. A separate **reviewer's guide** tells your reviewer what the PR contains, what's still waiting on you, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
+- **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge — fix, disagree, or accept. Fix it and push (the card shows a 🔄 banner within a minute when your push triggers the automatic re-review), or reply naming the ID:
+
+  ```
+  @claude F2: the 40% figure comes from the Q3 interview series #update-review
+  @claude F2: accepting as-is — shipping for the launch, follow-up filed #update-review
+  @claude accepting all open items — <reason> #update-review
+  ```
+
+  Either way your answer counts: the review marks the item resolved, or holds it with a 🛡️ note for your reviewer — it stops blocking merge in both cases. The `#update-review` hashtag is what routes the reply; a bare `@claude` is ad-hoc help and unblocks nothing.
+- **The Sentinel check** is the one merge gate: review ran at your head SHA, every blocking finding answered, the right team approved (per `.github/review-routing.yml`), and infra changes carry a green staging deploy. Its red states name the exact fix, and any write-access human can apply `review:waived` as the logged break-glass (infra staging evidence excepted — that has no waiver). While `REVIEW_V3_SENTINEL` is `report` the check is report-only; unset, it does not run at all.
+- **Truly mechanical changes need no human at all** — the tightened bar in `classify_mechanical` (`triage-classify.py`): ≤10 added / ≤30 deleted lines, ≤2 docs/blog files, no structural or code changes, only resolving internal-link additions, frontmatter keys limited to `updated`/`tags`, and no prose-claim signal. Everything else routes to the lane the matrix names.
+
+The disposition vocabulary, the outcome table, and "work the review to zero" below all apply unchanged — v3 just gives each finding an ID and a one-line way to answer it.
+
 ### What ready-for-review triggers
 
 Transitioning to **Ready for review** triggers:
@@ -47,6 +66,29 @@ A pinned review goes **stale** when you push new commits after it ran. One case 
 #### Power-user escape hatch: `@claude #new-review`
 
 Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing `<!-- CLAUDE_REVIEW N/M -->` comment and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
+
+### Working the review to zero
+
+A review is finished when every finding it raised has an outcome — not when the 🚨 count hits zero. The pinned comment carries three actionable buckets and they are all yours: **🚨 Outstanding** (must be resolved or refuted before merge), **⚠️ Low-confidence** (doesn't block, still needs a decision), and the **✏️ style suggestions** posted inline on the Files-changed tab. 💡 Pre-existing is the one optional bucket — that's not debt this PR created.
+
+Five outcomes count as done, and no others:
+
+| Outcome | When | What it takes |
+|---|---|---|
+| **Fixed** | The finding is right | Push the change. A small push that lands only on flagged lines refreshes the review by itself |
+| **Refuted** | The finding is wrong | Dispute it in a `@claude #update-review` mention, with evidence. The model concedes cleanly or explains why it's holding |
+| **Deferred** | Real, but out of scope here | File an issue and link it in the PR thread |
+| **Accepted** | Shipping as-is on purpose | Say why, in the PR. An accepted blocker that nobody explained reads as an oversight |
+| **Not applicable** | The finding mis-anchored | Say what it actually points at. Several of these in one review usually means the review went stale — refresh it |
+
+This matters past your own PR. After a PR closes, `scrape-review-outcomes.py` derives what happened to each finding and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned. A finding you fixed but never refreshed scrapes as ignored; a finding you disagreed with but never disputed scrapes as ignored too. Both push the pipeline toward flagging *more*, not less.
+
+Working the list by hand is fine. If you'd rather not, **`/address-review`** does it with you: it watches for the review to land, enumerates every item — inline style suggestions included — into one checklist, walks them a finding at a time with a proposed fix for each, batches the fixes into a single push, and writes the `#update-review` mention. It won't call the PR done while anything is undecided. The same check standalone:
+
+```bash
+python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> \
+  --state .review-worklist-<N>.json --require-clean
+```
 
 ### Don't fight the pinned comment
 
@@ -104,6 +146,7 @@ Front matter is defined as a YAML block at the top of a Markdown document that d
 - `feature_image`: Blog posts only. Relative path to a high-resolution hero image (1884×1256) displayed at the top of the blog post page.
 - `meta_title`: If specified, the meta title (for OpenGraph) will use this value instead of the value in the `title` attribute.
 - `redirect_to`: The relative or absolute URL of a permanent redirect.
+- `sitemap_exclude`: Set to `true` to omit the page from the generated `sitemap.xml` without affecting crawling or indexing (unlike `block_external_search_index`, which also adds a `noindex` directive). Use this only for pages whose canonical URL is already declared, with an accurate `lastmod`, in a different sitemap that is submitted to Google (for example, a page that is a build-time placeholder for a URL actually served and indexed from a different origin).
 - `title`: Required (unless `redirect_to` is set), 60 characters or less. This controls the default value for the `<title>` tag as well at the top level `<h1>` in the document.
 - `title_tag`: If specified, the `<title>` tag on the rendered call will use this value instead of the `title` attribute.
 

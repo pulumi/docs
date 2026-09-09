@@ -8,7 +8,7 @@ config:
   www.pulumi.com:originBucketNameOverride: ""
   www.pulumi.com:pathToOriginBucketMetadata: ../origin-bucket-metadata.json
   www.pulumi.com:registryStack: "pulumi/registry/production"
-  www.pulumi.com:guidesStack: "pulumi/guides/production"
+  www.pulumi.com:devStack: "pulumi/www-site/production"
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi.com
   www.pulumi.com:websiteLogsBucketName: www-prod.pulumi.com-website-logs
@@ -18,3 +18,7 @@ config:
   www.pulumi.com:enableWaf: "true"
   www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
+  www.pulumi.com:enableSupportForm: "true"
+  www.pulumi.com:supportRedirectDomain: support.pulumi.com
+  www.pulumi.com:intercomApiKey:
+    secure: AAABABqrMKEtK06xtI+MNA7niGyBS1pe7ns9Se96vKEXESNWcRn9RNX7E06uraYBygHF1PUifKZZemQCgnWUtwufpHxBn+wb4j0qKC/lCuB7fhn65DkgVaYaswY=

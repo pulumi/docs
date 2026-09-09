@@ -35,15 +35,15 @@ Pulumi provides several packages for working with AWS. Most projects combine mor
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new AWS projects from a pre-built template:
 
-- [Container service on AWS](/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
-- [Serverless application on AWS](/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
-- [Static website on AWS](/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
-- [Virtual machine on AWS](/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
-- [Kubernetes cluster on AWS](/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
+- [Container service on AWS](/dev/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
+- [Serverless application on AWS](/dev/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
+- [Static website on AWS](/dev/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
+- [Virtual machine on AWS](/dev/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
+- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
 
 ## Guides
 
@@ -89,6 +89,8 @@ For AWS:
 - [NIST 800-53 for AWS](/docs/reference/pre-built-policy-packs/nist/aws/)
 - [PCI DSS for AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/)
 - [HITRUST CSF for AWS](/docs/reference/pre-built-policy-packs/hitrust/aws/)
+- [ISO/IEC 27001 for AWS](/docs/reference/pre-built-policy-packs/iso-27001/aws/)
+- [CMMC 2.0 for AWS](/docs/reference/pre-built-policy-packs/cmmc/aws/)
 - [CIS Kubernetes Benchmark on AWS](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/) — for EKS clusters.
 - [AWS Organizations Tag Policies](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) — enforce Organizations tagging standards on Pulumi-managed resources.
 - [AWS Organizations Tag Policies in Insights](/docs/insights/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Insights.

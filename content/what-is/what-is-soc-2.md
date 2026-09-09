@@ -2,6 +2,7 @@
 title: What is SOC 2?
 meta_desc: "SOC 2 is an AICPA attestation that proves a service provider's controls meet the Trust Services Criteria. Learn Type I vs Type II, scope, and the audit process."
 type: what-is
+date: 2025-05-16T14:00:31-04:00
 page_title: "What is SOC 2?"
 authors: ["alex-leventer"]
 ---

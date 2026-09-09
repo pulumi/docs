@@ -117,7 +117,7 @@ There you will find several instructions on installing and getting started with 
 
 - [Getting started with Pulumi](https://www.pulumi.com/docs/get-started/)
 
-- [General Pulumi overview (concepts and architecture)](https://www.pulumi.com/docs/concepts/)
+- [General Pulumi overview (concepts and architecture)](https://www.pulumi.com/docs/iac/concepts/)
 
 Although Pulumi for Java is listed in "preview" status, it supports all of the most essential Pulumi programming model features (and the rest is on its way). Our goal is to gather feedback over the next few weeks, and we will be working hard to improve the Java experience across the board, including more examples and better documentation.
 

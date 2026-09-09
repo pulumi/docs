@@ -24,19 +24,10 @@
 > — {{ delimit . ", " }}
 {{- end }}
 {{ else -}}
-{{- /* Heroes split the heading across title_primary/title_secondary;
-       title_reversed renders secondary before primary. */ -}}
 {{- $heading := or .heading .title "" -}}
 {{- with .title_line_2 }}{{ $heading = printf "%s %s" $heading . }}{{ end -}}
-{{- $primary := trim (or .title_primary "") " \n" -}}
-{{- $secondary := trim (or .title_secondary "") " \n" -}}
-{{- if or $primary $secondary -}}
-{{- if .title_reversed -}}
-{{- $heading = trim (printf "%s %s" $secondary $primary) " " -}}
-{{- else -}}
-{{- $heading = trim (printf "%s %s" $primary $secondary) " " -}}
-{{- end -}}
-{{- end -}}
+{{- /* Hero headlines carry <br> to force a line break; markdown wraps on its own. */ -}}
+{{- $heading = replaceRE `<br\s*/?>` " " $heading -}}
 {{- with replaceRE `\s+` " " $heading }}
 
 ## {{ . }}

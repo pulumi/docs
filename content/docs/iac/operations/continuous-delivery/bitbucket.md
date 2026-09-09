@@ -45,7 +45,7 @@ Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Confi
 
 ### Authenticate with a stored access token
 
-Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
+Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
 
 Add the token as a [repository variable](https://support.atlassian.com/bitbucket-cloud/docs/variables-and-secrets/) under **Repository settings > Repository variables**. Name it `PULUMI_ACCESS_TOKEN` and select the **Secured** checkbox so the value is encrypted and masked in build logs. Secured variables are exposed to every step of the pipeline as environment variables.
 
@@ -57,7 +57,7 @@ Always mark sensitive values — access tokens, cloud provider keys — as **Sec
 
 You can remove the static token entirely. Bitbucket Pipelines can issue a short-lived [OpenID Connect (OIDC)](https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/) token for any step that sets `oidc: true`, exposing it as the `BITBUCKET_STEP_OIDC_TOKEN` environment variable.
 
-Register Bitbucket Pipelines as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/) in Pulumi Cloud, and your pipeline can exchange that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository variable.
+Register Bitbucket Pipelines as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/) in Pulumi Cloud, and your pipeline can exchange that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository variable.
 
 ## The trunk-based development workflow
 
@@ -137,7 +137,7 @@ The integration can also replace a hand-written pipeline entirely: with [push-to
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/) — pull request comments and commit statuses from Pulumi Cloud.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

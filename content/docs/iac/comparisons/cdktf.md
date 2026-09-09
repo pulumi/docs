@@ -11,9 +11,6 @@ menu:
         parent: iac-comparisons
         weight: 27
         identifier: iac-comparisons-cdktf
-    concepts:
-        parent: vs
-        weight: 27
 aliases:
 - /docs/iac/comparisons/cloud-template-transpilers/cdktf/
 ---
@@ -145,4 +142,5 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 - [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
+- [CDK vs. Terraform vs. Pulumi](/docs/iac/comparisons/cdk-vs-terraform/)
 - [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)

@@ -12,7 +12,7 @@
 
 # A short, descriptive headline for the entry. Derived from the slug — edit it
 # to read well (the slug-to-title conversion is only a starting point).
-title: "{{ $slug := replaceRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}-` `` .Name }}{{ replace $slug `-` ` ` | title }}"
+title: "{{ $slug := replaceRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}-` `` .Name }}{{ replace $slug `-` ` ` | humanize }}"
 
 # The publish date, used for display and for grouping entries by month on
 # /releases/. Pulled from the filename's date prefix; keep the two in sync.

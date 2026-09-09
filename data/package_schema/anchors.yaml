@@ -1,0 +1,44 @@
+# The anchor contract for the Pulumi package schema reference.
+#
+# Every id listed here is a live URL fragment on
+# /docs/iac/guides/building-extending/packages/schema/. The list is the set the
+# hand-written page published before the reference was generated, so dropping one
+# breaks inbound links -- from elsewhere in these docs, from the wider internet, and
+# from anyone who bookmarked a type. #default in particular is deep-linked from
+# content/docs/iac/guides/building-extending/providers/provider-configuration.md.
+#
+# layouts/shortcodes/package-schema.html fails the build if a render stops emitting
+# one of these. That check exists because nothing else catches it:
+# scripts/link-checker/check-links.js does not validate URL fragments, so a broken
+# anchor would ship silently.
+#
+# Renaming a type's `title:` in data/package_schema_overrides.yaml is free. Changing
+# its `id:` is a breaking change: keep the old id, or add an alias, before removing
+# an entry here.
+
+- group: core
+  ids:
+    - package
+    - metadata
+    - config
+    - objecttype
+    - complextype
+    - resource
+    - function
+    - type
+    - property
+    - enumvalue
+    - alias
+    - default
+    - discriminator
+    - parameterizationspec
+    - baseproviderspec
+
+- group: language
+  ids:
+    - packagelanguage
+    - propertylanguage
+    - resourcelanguage
+    - objecttypelanguage
+    - functionlanguage
+    - defaultlanguage

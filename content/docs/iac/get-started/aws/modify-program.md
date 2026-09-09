@@ -192,7 +192,7 @@ var website = new BucketWebsiteConfiguration("website", BucketWebsiteConfigurati
     .build());
 
 // Permit access control configuration:
-var ownershipControls = new BucketOwnershipControls("ownershipControls", BucketOwnershipControlsArgs.builder()
+var ownershipControls = new BucketOwnershipControls("ownership-controls", BucketOwnershipControlsArgs.builder()
     .bucket(bucket.id())
     .rule(BucketOwnershipControlsRuleArgs.builder()
         .objectOwnership("ObjectWriter")
@@ -200,7 +200,7 @@ var ownershipControls = new BucketOwnershipControls("ownershipControls", BucketO
     .build());
 
 // Enable public access to the website:
-var publicAccessBlock = new BucketPublicAccessBlock("publicAccessBlock", BucketPublicAccessBlockArgs.builder()
+var publicAccessBlock = new BucketPublicAccessBlock("public-access-block", BucketPublicAccessBlockArgs.builder()
     .bucket(bucket.id())
     .blockPublicAcls(false)
     .build());

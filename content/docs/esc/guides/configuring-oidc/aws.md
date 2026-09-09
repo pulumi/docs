@@ -24,12 +24,26 @@ This document outlines the steps required to configure Pulumi to use OpenID Conn
 Please note that this guide provides step-by-step instructions based on the official provider documentation which is subject to change. For the most current and precise information, always refer to the [official AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html).
 {{< /notes >}}
 
+## Automated setup with the Pulumi CLI
+
+{{< experimental-feature />}}
+
+If you would rather not walk through the AWS console by hand, the [`pulumi env setup aws`](/docs/iac/cli/commands/pulumi_env_setup_aws/) command (Pulumi CLI v3.261.0 and later) creates the identity provider, an IAM role scoped to your Pulumi organization, and its trust policy, then creates the ESC environment that uses it. Log in to Pulumi Cloud first with `pulumi login`, then run:
+
+```bash
+pulumi env setup aws --policy AdministratorAccess
+```
+
+Pass `--account` to target one or more specific AWS accounts, or `--sso` to sign in through AWS SSO and configure multiple accounts in one run. Use `--policy ReadOnlyAccess` instead of `AdministratorAccess` if the environment is only needed for [Discovery](/docs/insights/); `AdministratorAccess` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+
+Reach for the manual steps below instead when you already have an OIDC identity provider you want to reuse, when your organization provisions IAM roles through its own infrastructure as code, or when you need trust-policy conditions the command does not yet expose, such as restricting `subjectAttributes` to a specific environment.
+
 ## Create the identity provider
 
 1. In the navigation pane of the [IAM console](https://console.aws.amazon.com/iam/), choose **Identity providers**, and then choose **Add provider**.
-2. In the **Provider type** section, click the radio button next to **OpenID Connect**.
+2. In the **Provider type** section, select the radio button next to **OpenID Connect**.
 3. For the **Provider URL**, provide the following URL: `https://api.pulumi.com/oidc`
-4. For the **Audience** field, the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then click **Add provider**.
+4. For the **Audience** field, the value is the name of your Pulumi organization prefixed with `aws:` (e.g. `aws:{org}`). Then select **Add provider**.
   {{< notes type="info" >}}
   For the `default` project, the audience will use just the Pulumi organization name. This is to prevent regressions for legacy environments.
   {{< /notes >}}
@@ -38,14 +52,14 @@ Please note that this guide provides step-by-step instructions based on the offi
 
 Once you have created the identity provider, you will see a notification at the top of your screen prompting you to assign an IAM role.
 
-1. Click the **Assign role** button.
-2. Select the **Create a new role** option, then click **Next**.
+1. Select the **Assign role** button.
+2. Select the **Create a new role** option, then select **Next**.
 3. On the IAM **Create role** page, ensure the **Web identity** radio button is selected.
 4. In the **Web identity** section:
     * Select `api.pulumi.com/oidc` under **Identity provider**.
-    * Select the name of your Pulumi organization under **Audience**. Then click **Next**.
-5. On the **Add permissions** page, select the permissions that you want to grant to Pulumi Cloud. Then click **Next**.
-6. Provide a name and optional description for the IAM role. Then click **Create role**.
+    * Select the name of your Pulumi organization under **Audience**. Then select **Next**.
+5. On the **Add permissions** page, select the permissions that you want to grant to Pulumi Cloud. Then select **Next**.
+6. Provide a name and optional description for the IAM role. Then select **Create role**.
 
 ## Review trust policy
 
@@ -80,12 +94,12 @@ Before you log out of the AWS console, make sure to make a note of your role’s
 
 ## Configure ESC for OIDC
 
-To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Console](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
+To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud console](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. Then:
 
-1. Click the **Environments** link.
-2. Click the **Create environment** button.
+1. Select the **Environments** link.
+2. Select the **Create environment** button.
 3. Provide a project to create your new environment in and a name for your environment.
-4. Click the **Create environment** button.
+4. Select the **Create environment** button.
 5. You will be presented with a split-pane editor. Delete the default placeholder content in the editor and replace it with the following code:
 
     ```yaml
@@ -106,10 +120,11 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 6. Replace `<your-oidc-iam-role-arn>` with the value from the previous steps.
 7. Click **Save**.
 
-You can validate that your configuration is working by running either of the following:
+You can validate that your configuration is working by running the [`pulumi env open`](/docs/iac/cli/commands/pulumi_env_open/) command of the [Pulumi CLI](/docs/install/):
 
-* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
-* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
+```bash
+pulumi env open <your-org>/<your-project>/<your-environment>
+```
 
 Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 

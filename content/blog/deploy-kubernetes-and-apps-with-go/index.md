@@ -14,7 +14,7 @@ category: tutorials
 We're excited that Go is now a first-class language in Pulumi and that you can build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask, "Can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the release of Pulumi 2.0., the answer is "Yes!"
 <!--more-->
 
-Building your Kubernetes infrastructure with Infrastructure as Code offers several benefits:
+Building your Kubernetes infrastructure with infrastructure as code offers several benefits:
 
 - Strongly-typed inputs and outputs for resources and invokes
 - First-class language support in editors/IDEs like vim, VS Code, GoLand, and atom

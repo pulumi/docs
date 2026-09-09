@@ -4,6 +4,7 @@ meta_desc: |
     Google Cloud Secret Manager stores API keys and passwords as encrypted, versioned secrets. Learn to create secrets via the CLI and apply best practices.
 
 type: what-is
+date: 2023-11-30T14:25:38+00:00
 page_title: "What is Google Cloud Secret Manager?"
 authors: ["torian-crane"]
 ---
