@@ -123,7 +123,7 @@ This is the part most multi-region write-ups skip, and it's the part that decide
 
 A few concrete ways to close that gap, in order of effort:
 
-1. **Unit-test resource parity.** If your regions are instantiated from one component, as above, a unit test can assert that every region got the same set of resources with the same configuration — catching drift before it ships.
+1. **Unit-test resource parity.** If your per-region resources come from the same provider list, as above, a unit test can assert that every region got the same set of resources with the same configuration — catching drift before it ships.
 1. **Enforce replication posture with a policy pack.** Pulumi's [policy as code](https://www.pulumi.com/docs/insights/policy/policy-packs/) lets you write a `ResourceValidationPolicy` that inspects a resource's declared properties and fails a preview if, say, a DynamoDB table is missing a required replica region, or an S3 bucket has no replication configuration attached. Set the enforcement level to `mandatory` and this becomes a real gate, not a suggestion.
 1. **Review stacks on every pull request.** [Review stacks](https://www.pulumi.com/docs/deployments/concepts/review-stacks/) preview the multi-region diff on every PR touching this code, so a regression in one region's configuration shows up in code review, not in an incident.
 1. **Run scheduled failover drills with Automation API.** The [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/) lets you script an actual failover — promoting the standby, redirecting DNS, validating the application responds — on a schedule, rather than only when a real outage forces the first attempt.
