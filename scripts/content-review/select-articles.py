@@ -68,7 +68,9 @@ Selection algorithm (weighted fair queuing by staleness):
                 resolves it (record-review.py `resolved_claims`), and one
                 unresolved through MARKER_ESCALATION_CAP reviews stops
                 boosting (escalated — a human's turn), so the boost is
-                bounded either way.
+                bounded either way. No marker boosts inside
+                STALE_BOOST_COOLDOWN_DAYS of the page's last completed
+                review, whichever side of that review it was written on.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -226,21 +228,34 @@ STALE_CLAIM_BOOST = 400.0
 MARKER_ESCALATION_CAP = 2
 
 # A stale-claim marker does not boost while the page's last COMPLETED review is
-# newer than this. The claims index snapshots the PRE-fix page on purpose (the
-# model must not launder its own edits into the index), so the night after a
-# fix merges the marker is still there describing a value the merged PR already
-# corrected — and a +400 boost would drag the just-fixed page straight back to
-# the front of the queue. That echo bought one redundant full review per fix,
-# observed twice in the 2026-08-18 queue alone.
+# newer than this, whichever side of that review the marker was written on.
 #
+# Marker written AFTER the review (an echo): the claims index snapshots the
+# PRE-fix page on purpose (the model must not launder its own edits into the
+# index), so the night after a fix merges the marker is still there describing
+# a value the merged PR already corrected — and a +400 boost would drag the
+# just-fixed page straight back to the front of the queue. That echo bought one
+# redundant full review per fix, observed twice in the 2026-08-18 queue alone.
 # reverify-claims.superseded_by_review() is the primary guard and stops the
 # re-check upstream of the marker; this is the second, independent one, on the
-# consumer side, for a marker that is already on the entry when a fix lands.
-# Both were specified in #20970; only the reverify half shipped.
+# consumer side, for a marker already on the entry when a fix lands.
 #
-# An INCOMPLETE review never suppresses — it did not fix anything, so the
-# marker is still live. A marker surviving past the cooldown is real drift and
-# boosts exactly as before.
+# Marker written BEFORE the review (seen and left): the review was handed the
+# marker in full (`stale_claim_markers`) and did not name it in
+# `resolved_claims`. Until 2026-09-09 that case kept boosting, on the argument
+# that unresolved drift must not be muted — and what it bought was an
+# identical pass the next working day, same marker, same page, before anything
+# about either had changed. elb.md was reviewed on 2026-09-08 (#21457, one of
+# three markers left unresolved), scored 400.4 the next morning, and was
+# reviewed again (#21495); providers/_index.md went from 2026-08-28 (#21220)
+# to 2026-08-31 (#21266) the same way. MARKER_ESCALATION_CAP already says a
+# repeat pass is not the remedy for a marker a review declined; the cooldown
+# says it is not the remedy the next morning either. Nothing is muted: the
+# marker stays on the entry, still rides the queue item, and boosts again once
+# the cooldown lapses — where a second miss escalates it exactly as before.
+#
+# An INCOMPLETE review never suppresses — it did not look at the page, so the
+# marker is still live.
 STALE_BOOST_COOLDOWN_DAYS = 5
 
 
@@ -265,37 +280,24 @@ def _day(value) -> date | None:
         return None
 
 
-def boost_suppressed_by_recent_fix(entry: dict | None, today: date) -> bool:
-    """True when this page's markers are an ECHO of a fix that already landed.
+def boost_suppressed_by_recent_review(entry: dict | None, today: date) -> bool:
+    """True when this page's last COMPLETED review is inside the cooldown.
 
-    See STALE_BOOST_COOLDOWN_DAYS. Three conditions, all required:
-
-    1. The last review COMPLETED (record-review.py's vocabulary: any status
-       but "incomplete"). An incomplete review fixed nothing.
-    2. It is inside the cooldown window.
-    3. EVERY marker on the entry was checked AFTER that review.
-
-    (3) is the one that makes this precise rather than a blunt mute. A marker
-    written after a completed review is the echo #20970 describes: the claims
-    index still holds the PRE-fix snapshot, so that night's re-check re-flags
-    a value the merged PR already corrected. A marker written BEFORE the
-    review is the opposite situation — the review saw it and left it — and
-    that is real, unresolved drift which must keep boosting (and escalates on
-    its own via MARKER_ESCALATION_CAP). Suppressing those would mute the
-    finding the whole mechanism exists to carry.
+    See STALE_BOOST_COOLDOWN_DAYS. "Completed" is record-review.py's
+    vocabulary: any status but "incomplete" — an incomplete review looked at
+    nothing, so it never suppresses. Marker timing is deliberately not
+    consulted: a marker written after the review is an echo of its fix, and a
+    marker written before it was handed to that review and left, and neither
+    earns the page another full pass tomorrow. An unparseable review date
+    fails open (keeps the boost) rather than suppressing silently.
     """
     entry = entry or {}
-    if entry.get("status") == "incomplete":
+    if entry.get("status") == INCOMPLETE_STATUS:
         return False
     reviewed = _day(entry.get("reviewed_at"))
-    if reviewed is None or not (0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS):
+    if reviewed is None:
         return False
-    markers = all_markers(entry)
-    if not markers:
-        return False
-    # An undated marker is not provably an echo, so it keeps its boost.
-    checked = [_day(m.get("checked_at")) for m in markers]
-    return all(c is not None and c > reviewed for c in checked)
+    return 0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS
 
 
 def active_markers(entry: dict | None) -> list[dict]:
@@ -943,7 +945,7 @@ def main() -> int:
                 today,
                 have_traffic,
                 stale_claims=(bool(active_markers(ledger.get(path)))
-                              and not boost_suppressed_by_recent_fix(
+                              and not boost_suppressed_by_recent_review(
                                   ledger.get(path), today)),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,

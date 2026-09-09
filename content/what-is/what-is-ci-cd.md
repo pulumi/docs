@@ -3,6 +3,7 @@ title: What is Continuous Integration/Continuous Delivery (CI/CD)?
 meta_desc: |
     Learn about CI/CD practices that improve dev process with automation for effective, rapid software delivery.
 type: what-is
+date: 2023-12-08T11:24:23-08:00
 page_title: "What is Continuous Integration/Continuous Delivery (CI/CD)?"
 authors: ["james-denyer"]
 ---

@@ -2,6 +2,7 @@
 title: "What Is AI Infrastructure?"
 meta_desc: "AI infrastructure is the compute, data, orchestration, and control-plane layers AI workloads run on. Learn what it includes and how teams build it."
 type: what-is
+date: 2026-08-25T02:08:47+00:00
 page_title: "What Is AI Infrastructure?"
 authors: ["pulumi-content-team"]
 ---

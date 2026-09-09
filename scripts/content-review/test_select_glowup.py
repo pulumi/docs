@@ -300,6 +300,16 @@ def main() -> int:
                        "--exclude-paths", f"{A},{B},{C}")
         check(q["repairs"] == [], "all excluded means no repair, not a fallback pick")
 
+        print("--exclude-paths keeps the glow-up pick itself off a fix-lane page")
+        # Until 2026-09-09 only the repair path honored the list: on 2026-09-08
+        # the fix lane and this lane both dispatched elb.md, and the glow-up
+        # worker's open-PR skip overwrote the fix review's ledger and findings
+        # records.
+        q = run_select(repo, tiers, led_rec, "--count", "10", "--exclude-paths", B)
+        check([a["path"] for a in q["articles"]] == [A, C],
+              f"the fix lane's page is skipped, not glowed up (got {[a['path'] for a in q['articles']]})")
+        check(q["repairs"] == [], "and is not routed to a repair either")
+
         print("an existing-but-EMPTY findings dir skips the check, same as an absent one")
         # The production shape, and the one the guard exists for: the
         # dispatcher runs `mkdir -p .findings-cache` before the sync that fills

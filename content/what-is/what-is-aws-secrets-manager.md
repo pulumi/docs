@@ -4,6 +4,7 @@ meta_desc: |
     AWS Secrets Manager stores, rotates, and retrieves credentials without hard-coding them. Learn to create secrets via the CLI and use Pulumi ESC.
 
 type: what-is
+date: 2023-11-28T22:04:30+00:00
 page_title: "What is AWS Secrets Manager?"
 authors: ["torian-crane"]
 ---

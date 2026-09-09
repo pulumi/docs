@@ -103,7 +103,8 @@ Read `.content-review-queue.json` from the repo root (written by
   `resolved_claims`. A marker you do not resolve is carried onto the next
   review with `unresolved_reviews` incremented, and after two such rounds it
   is escalated for a human — so silently skipping one does not make it go
-  away, it just delays it.
+  away, it just delays it. (That next review is not tomorrow's: the boost
+  sits out a five-day cooldown after any completed review of the page.)
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -715,7 +716,9 @@ The nightly `claims-reverify.yml` workflow re-checks volatile entities
 contradicted, every page asserting it gets a `stale_claims` marker in its
 ledger entry, and `select-articles.py` boosts those pages to the front of the
 next sweep — that is how a page can arrive in your queue the day after a
-release changed a fact it states.
+release changed a fact it states. The boost never fires within five days of
+the page's last completed review, so a marker one review leaves unresolved
+comes back after the cooldown rather than the next morning.
 
 None of this is yours to write: this worker's whole-page runs are the index's
 **only** writer, and the workflow runs `record-claims.py` itself after your
