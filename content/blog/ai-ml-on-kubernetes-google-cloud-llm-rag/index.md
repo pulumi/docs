@@ -79,7 +79,7 @@ Pulumi is a modern infrastructure as code (IaC) tool that allows teams to define
 
 With Pulumi, you can:
 
-- **Provision and scale Kubernetes clusters** on [Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/) automatically.
+- **Provision and scale Kubernetes clusters** on [Google Cloud](/docs/integrations/clouds/gcp/) automatically.
 - **Define AI/ML environments as code**, making deployments repeatable and version-controlled.
 - **Integrate infrastructure with machine learning pipelines**, reducing operational overhead.
 
@@ -148,7 +148,7 @@ By defining these resources in Pulumi, deployments become **fully automated, rep
 
 ### Use Case 2: Training and Serving Custom Machine Learning Models
 
-Beyond pre-trained LLMs, [Kubernetes](https://www.pulumi.com/docs/iac/clouds/kubernetes/) is ideal for **training and serving custom AI/ML models**. Pulumi can help automate every stage of the ML lifecycle.
+Beyond pre-trained LLMs, [Kubernetes](/docs/integrations/clouds/kubernetes/) is ideal for **training and serving custom AI/ML models**. Pulumi can help automate every stage of the ML lifecycle.
 
 #### Step 1: Set Up the Model Training Environment
 
@@ -192,7 +192,7 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 ### 4. Increase Security and Compliance
 
 - Manage credentials and secrets securely with **[Pulumi ESC (Secrets Management)](https://www.pulumi.com/docs/esc/)**.
-- Apply **[policy-as-code](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)** to enforce security best practices.
+- Apply **[policy-as-code](/docs/insights/policy/)** to enforce security best practices.
 
 ## Get Started with AI/ML on Kubernetes with Pulumi
 
@@ -200,7 +200,7 @@ Pulumi makes it easy to deploy, scale, and manage AI/ML workloads on Kubernetes,
 
 - [Explore AI/ML Projects using Pulumi](https://www.pulumi.com/blog/tag/ml/)
 - [Discover Essential Kubernetes Best Practices](https://www.pulumi.com/blog/kubernetes-best-practices-i-wish-i-had-known-before/)
-- [Get Started with Pulumi on Google Cloud](https://www.pulumi.com/docs/iac/clouds/gcp/)
+- [Get Started with Pulumi on Google Cloud](/docs/integrations/clouds/gcp/)
 - [Sign up for Pulumi ➡️](https://app.pulumi.com/signup)
 
 By combining Kubernetes, Google Cloud, and Pulumi, you can accelerate AI/ML innovation while reducing infrastructure complexity.
