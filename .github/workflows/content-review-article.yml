@@ -881,10 +881,16 @@ jobs:
       - name: Publish gate
         id: gate
         run: |
+          # Same capture-and-replay as the publish step's gate call, so a
+          # refusal here quotes its ::error:: lines in the Slack alert too.
+          rc=0
           python3 scripts/content-review/publish-gate.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
-            --patch .review-changes.patch
+            --patch .review-changes.patch \
+            > .publish-gate.err 2>&1 || rc=$?
+          cat .publish-gate.err
+          [ "$rc" -eq 0 ] || exit "$rc"
 
       # Always downloaded (not just when publishing): the guardrail gates
       # below need it for a publishable verdict, and later ledger-side steps
