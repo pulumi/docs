@@ -48,7 +48,7 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 });
 ```
 
-Libraries that use JavaScript callbacks as inputs that are provided as source text to resource construction, such as in the previous example, are built on top of the [`pulumi.runtime.serializeFunction`](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/runtime.html#serializeFunction) API. This API takes a JavaScript `Function` object as input and returns a `Promise` that contains the serialized form of that function.
+Libraries that use JavaScript callbacks as inputs that are provided as source text to resource construction, such as in the previous example, are built on top of the [`pulumi.runtime.serializeFunction`](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/runtime.html#serializefunction) API. This API takes a JavaScript `Function` object as input and returns a `Promise` that contains the serialized form of that function.
 
 At a high level, the following occurs when a function is serialized to text:
 
