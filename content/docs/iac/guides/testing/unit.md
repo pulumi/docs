@@ -342,7 +342,7 @@ class MyMocks implements Mocks {
 
 {{% /choosable %}}
 
-The full mocks interface is defined on the [Node.js runtime API reference page](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
+The full mocks interface is defined on the [Node.js runtime API reference page](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/runtime.html#Mocks).
 
 ### Mocking resources
 

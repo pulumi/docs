@@ -160,7 +160,7 @@ Keys that include an explicit namespace other than the project name (such as `aw
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
 {{% notes type="info" %}}
-Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun).
+Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/runtime.html#isDryRun).
 {{% /notes %}}
 
 ## Update a stack

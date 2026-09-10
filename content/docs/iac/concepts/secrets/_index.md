@@ -40,8 +40,8 @@ You can create secret values programmatically in two ways:
 
 {{% choosable language typescript %}}
 
-- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret) when reading a value from config.
-- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi#secret) to construct a secret from an existing value.
+- Using [`getSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#getSecret) or [`requireSecret(key)`](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/Config.html#requireSecret) when reading a value from config.
+- Calling [`pulumi.secret(value)`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/secret.html) to construct a secret from an existing value.
 
 {{% /choosable %}}
 {{% choosable language python %}}
