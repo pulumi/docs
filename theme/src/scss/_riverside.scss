@@ -1,0 +1,145 @@
+// Riverside webinar registration form (layouts/partials/events/riverside-form.html).
+//
+// The widget renders plain light-DOM markup (BEM classes prefixed `rver`) and
+// injects its own <style id="rver-styles"> into <head> at runtime. That sheet
+// is UNLAYERED, and unlayered author styles beat anything in @layer on every
+// property both declare — specificity never enters into it. So this partial is
+// imported OUTSIDE @layer components (see main.scss), where nesting under
+// `.riverside-form` (the embed container) out-specifies the widget's
+// single-class rules regardless of injection order.
+//
+// Two rules follow from that:
+//   - Never move the import back inside @layer components: every contested
+//     declaration (background, border, padding, radius) silently loses there.
+//   - Everything is mirrored BY HAND from the shared system, via @apply and
+//     literal values. @extend is off the table because it grafts this file's
+//     selectors into the extended rule's own — layered — location, which
+//     re-loses the fight; and the shared/_forms.scss mixins and $-variables
+//     are invisible here because that partial is imported inside the @layer
+//     components block, which scopes them to it. The button block mirrors
+//     .btn/.btn-lg/.btn-primary/.btn-ghost (shared/_button.scss); the control
+//     chrome mirrors form-control-base/-lg and the textarea/select/check
+//     mixins (shared/_forms.scss). Keep them in sync if those change.
+//
+
+.riverside-form {
+    @apply text-sm relative;
+    .rver__hdr,
+    .rver__title,
+    .rver__sub {
+        @apply hidden;
+    }
+    .rver__label {
+        @apply block mb-1 font-normal text-gray-950;
+    }
+    .rver__row {
+        @apply block mb-6;
+    }
+
+    // first + last name share the top row, email gets its own,
+    // the two custom text fields (company, job title) share the third, and the
+    // language dropdown closes full-width. Built-in fields carry stable input
+    // names (name/lastName/email); custom short-text fields are matched by
+    // element — Riverside renders them as textareas (and any custom text input
+    // that isn't a name field is caught too), so the event's per-field ids
+    // never appear here. Anything else (selects, checkboxes, actions) spans
+    // the full row, and below sm the form stacks single-column as before.
+    form {
+        @apply sm:grid sm:grid-cols-2 sm:gap-x-4;
+
+        > * {
+            @apply sm:col-span-2;
+        }
+
+        .rver__row:has(input[name="name"]),
+        .rver__row:has(input[name="lastName"]),
+        .rver__row:has(textarea),
+        .rver__row:has(input[type="text"]:not([name="name"]):not([name="lastName"])) {
+            @apply sm:col-span-1;
+        }
+    }
+
+    .rver__input,
+    .rver__select,
+    .rver__textarea {
+        @apply block w-full min-w-0 appearance-none border border-gray-300 bg-white text-gray-950
+               transition-all outline-none placeholder:text-gray-500
+               disabled:pointer-events-none disabled:opacity-50 disabled:bg-gray-100
+               text-base md:text-sm h-10 px-3 py-2;
+
+        border-radius: var(--radius-md);
+        --form-resting-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.12);
+        box-shadow: var(--form-resting-shadow, none);
+
+        &:focus,
+        &:focus-visible {
+            @apply border-violet-800;
+            box-shadow: inset 0 0 0 2px var(--color-violet-800), var(--form-resting-shadow, none);
+        }
+    }
+
+    // Deliberately NOT form-textarea-chrome: Riverside renders custom short-text fields (company, job title) as textareas
+    .rver__textarea {
+        @apply resize-none placeholder:text-transparent;
+    }
+
+    // form-select-chrome.
+    .rver__select {
+        @apply cursor-pointer pr-8;
+
+        --form-resting-shadow: inset 0 -2px 4px 0 rgb(0 0 0 / 0.08);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%239997a0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.625rem center;
+        background-size: 1rem;
+    }
+
+    // form-check-base, plus the checked glyph.
+    input[type="checkbox"] {
+        @apply appearance-none size-4 shrink-0 p-0 box-border border border-gray-300 bg-white align-middle
+               cursor-pointer transition-all outline-none bg-center bg-no-repeat
+               checked:bg-violet-primary checked:border-violet-primary
+               focus-visible:border-violet-primary focus-visible:ring-3 focus-visible:ring-violet-primary/50
+               disabled:pointer-events-none disabled:opacity-50;
+
+        background-size: 0.75rem;
+        box-shadow: none;
+        border-radius: 4px;
+
+        &:checked {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m3.5 8 3 3 6-6.5'/%3E%3C/svg%3E");
+        }
+    }
+
+    .rver__btn {
+        @apply inline-flex items-center justify-center gap-1.5 shrink-0 max-w-full
+               overflow-hidden text-ellipsis text-sm font-normal border border-transparent
+               bg-clip-padding rounded-md transition-all outline-none cursor-pointer select-none
+               focus-visible:border-violet-primary focus-visible:ring-3 focus-visible:ring-violet-primary/50
+               active:translate-y-px
+               disabled:pointer-events-none disabled:opacity-50
+               h-10 py-2.25 px-4;
+
+        &:not(.rver__btn--ghost) {
+            @apply bg-violet-primary text-white hover:bg-violet-800;
+        }
+
+        &--ghost {
+            @apply text-gray-950 hover:bg-gray-100;
+        }
+    }
+
+    .rver__error {
+        @apply text-red-600 text-xs min-h-0 mt-1 empty:mt-0;
+    }
+
+    .rver__hint {
+        @apply opacity-50 text-xs font-normal;
+    }
+
+    .rver__sub a,
+    .rver__rich a {
+        @apply underline;
+        color: inherit;
+    }
+}

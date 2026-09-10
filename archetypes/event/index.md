@@ -21,7 +21,8 @@ featured: false
 # Hide from the event list.
 unlisted: false
 
-# Show a registration form. Requires form.hubspot_form_id.
+# Show a registration form. Requires form.hubspot_form_id or
+# form.riverside_event_id.
 gated: false
 
 # Link to an external page instead of rendering the event page.
@@ -69,7 +70,8 @@ tags:
     languages: []
     clouds: []
 
-# Registration form (only rendered when gated: true).
+# Registration form (only rendered when gated: true). 
+# can  riverside_event_id instead, once migrated will update this to be riverside_event_id
 form:
     hubspot_form_id: ""
     salesforce_campaign_id: ""

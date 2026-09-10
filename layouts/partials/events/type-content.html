@@ -131,11 +131,17 @@
                 {{ if and $.Params.gated (not .passed) }}
                     <div class="card p-8">
                         <h3 class="heading-3 mb-4">Register today</h3>
-                        <pulumi-hubspot-form
-                            form-id="{{ .form.hubspot_form_id }}"
-                            salesforce-campaign-id="{{ .form.salesforce_campaign_id }}"
-                            linkedin-conversion-id="24927140"
-                        ></pulumi-hubspot-form>
+                        {{ if .form.riverside_event_id }}
+                            {{ partial "events/riverside-form.html" (dict
+                                "eventId" .form.riverside_event_id
+                                "targetId" (printf "riverside-form-%s" .key)) }}
+                        {{ else }}
+                            <pulumi-hubspot-form
+                                form-id="{{ .form.hubspot_form_id }}"
+                                salesforce-campaign-id="{{ .form.salesforce_campaign_id }}"
+                                linkedin-conversion-id="24927140"
+                            ></pulumi-hubspot-form>
+                        {{ end }}
                     </div>
                 {{ else if .passed }}
                     {{ if $timePassed }}

@@ -810,7 +810,8 @@ function parseDateTime(value) {
  *   - with more than one session, each needs a `label`, and no two may anchorize
  *     to the same key — the label is the tab, the badge, and the deep-link anchor,
  *     so a collision makes two sessions share one panel
- *   - a gated event needs a `form.hubspot_form_id` per session, since the
+ *   - a gated event needs a registration form id per session — either
+ *     `form.hubspot_form_id` or `form.riverside_event_id` — since the
  *     top-level form no longer applies
  *   - the top-level `form:` must be gone when sessions are present, so there's no
  *     ambiguity about which form a session renders
@@ -888,9 +889,10 @@ function checkEventSessions(obj, fullPath) {
         }
 
         const hubspotFormId = session.form && session.form.hubspot_form_id;
-        if (obj.gated === true && !hubspotFormId) {
+        const riversideEventId = session.form && session.form.riverside_event_id;
+        if (obj.gated === true && !hubspotFormId && !riversideEventId) {
             errors.push(
-                `${at} is missing 'form.hubspot_form_id'. A gated event needs a registration form per session.`,
+                `${at} is missing 'form.hubspot_form_id' or 'form.riverside_event_id'. A gated event needs a registration form per session.`,
             );
         } else if (hubspotFormId) {
             if (formIds.has(hubspotFormId)) {

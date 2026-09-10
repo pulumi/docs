@@ -388,6 +388,13 @@ $sitenav-offset: calc($sitenav-height + 16px);
 
 @import "consent-banner";
 
+// Riverside registration form overrides. Imported UNLAYERED because the widget
+// injects its own unlayered <style> at runtime, and unlayered author styles beat
+// anything in @layer on every contested property regardless of specificity —
+// inside @layer components these rules silently lose. Scoped to .riverside-form,
+// so it cannot affect anything outside the embed container.
+@import "riverside";
+
 // Docs dark mode. Imported UNLAYERED (not inside @layer components) so its dark
 // overrides win against the Tailwind utilities used by the docs header/buttons —
 // utilities beat the components layer regardless of specificity. Everything in
