@@ -110,14 +110,14 @@ BMW used Pydantic, a data validation library, to define schema-based configurati
 
 ### Transformation Features: Protecting Legacy Services
 
-- As part of their software factory, BMW also faced the challenge of integrating legacy services that did not natively support modern authentication and authorization mechanisms, such as [OpenID Connect (OIDC)](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/provider/).
-- To address this, BMW leveraged Pulumi's transformation features to seamlessly inject an [OAuth2](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/#exchanging-oidc-tokens) proxy into their deployments, providing a secure and consistent way to protect these services without requiring extensive modifications to the underlying applications.
+- As part of their software factory, BMW also faced the challenge of integrating legacy services that did not natively support modern authentication and authorization mechanisms, such as [OpenID Connect (OIDC)](/docs/deployments/guides/oidc/).
+- To address this, BMW leveraged Pulumi's transformation features to seamlessly inject an [OAuth2](/docs/administration/guides/oidc-issuers/#exchanging-oidc-tokens) proxy into their deployments, providing a secure and consistent way to protect these services without requiring extensive modifications to the underlying applications.
 - By encapsulating this functionality within a shared module, BMW was able to apply the OAuth2 proxy to multiple services, ensuring a consistent and secure access control layer across their software ecosystem.
 
 ### Policy Enforcement: Ensuring Compliance and Security
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
-BMW has leveraged [Pulumi's policy-as-code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+BMW has leveraged [Pulumi's policy-as-code](/docs/insights/policy/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
 
 - By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 
@@ -139,7 +139,7 @@ BMW's decision to leverage Pulumi's Python bindings has been a strategic advanta
 
 ### Streamlined Cloud Migration
 
-As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the [migration process](https://www.pulumi.com/migrate/). By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with [multi-cloud deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/).
+As BMW continues to expand its use of public cloud services, Pulumi has played a crucial role in simplifying the [migration process](https://www.pulumi.com/migrate/). By providing a consistent IaC approach across on-premises and cloud environments, Pulumi has enabled BMW to manage its infrastructure in a unified manner, reducing the complexity and overhead associated with [multi-cloud deployments](/docs/deployments/concepts/).
 
 ## The Future of BMW's Software Factory: Embracing the Cloud
 
