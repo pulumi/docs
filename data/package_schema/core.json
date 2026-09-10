@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-03",
+  "generated": "2026-09-10",
   "source": {
     "path": "pkg/codegen/schema/pulumi.json",
     "repo": "pulumi/pulumi",
-    "url": "https://github.com/pulumi/pulumi/blob/v3.261.0/pkg/codegen/schema/pulumi.json",
-    "version": "v3.261.0"
+    "url": "https://github.com/pulumi/pulumi/blob/v3.262.0/pkg/codegen/schema/pulumi.json",
+    "version": "v3.262.0"
   },
   "types": [
     {
@@ -98,6 +98,22 @@
           "required": false,
           "type": {
             "text": "string"
+          }
+        },
+        {
+          "description": "The URL of the provider's installation and configuration documentation, if any.",
+          "name": "configurationDocsUrl",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "description": "Indicates that `pulumi new` may configure the provider after creating a project in order to validate the user's credentials.",
+          "name": "validateCredentialsOnNew",
+          "required": false,
+          "type": {
+            "text": "boolean"
           }
         },
         {
