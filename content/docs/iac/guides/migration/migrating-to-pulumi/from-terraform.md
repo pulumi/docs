@@ -115,7 +115,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
 1. **Install the tool**:
 
-   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed.
+   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed, along with the [OpenTofu CLI](https://opentofu.org/docs/intro/install/) (`tofu`) on your `PATH`: the tool shells out to `tofu init` and `tofu refresh` to extract Terraform state read-only. It never runs a mutating command like `tofu apply`.
 
 1. **Set up your Pulumi project**:
 
