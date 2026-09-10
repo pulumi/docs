@@ -27,7 +27,7 @@ const request: SupportRequest = {
     email: "jane@example.com",
     name: "Jane Doe",
     organization: "example-corp",
-    priority: "normal",
+    priority: "Normal",
     subject: "Stack update stuck in progress",
     description: "Running `pulumi up` hangs after the preview completes.",
 };
