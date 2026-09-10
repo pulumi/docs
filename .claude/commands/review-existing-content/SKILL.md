@@ -560,7 +560,9 @@ Each banked item is split in two, and the split is the point:
 1. **Work the backlog first.** Execute every banked finding, or explicitly
    decline it with one line of reasoning. Every item lands in exactly one of
    the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
-   item; fill "What changed") or **Backlog declined**. No silent drops.
+   item; fill "What changed") or **Backlog declined** (move the whole row,
+   keeping its id cell, and fill "Why not executed"). No silent drops, and
+   no row in both tables.
 1. **Then the secondary sweep**: apply the improvement taxonomy from
    `.claude/commands/glow-up.md` §5 — style, structural fixes, code
    formatting, terminology, links, image/diagram flags (flag-only, as ever),
@@ -584,6 +586,19 @@ Each banked item is split in two, and the split is the point:
    check is a `::warning::`, not a violation, but every warning must be
    acknowledged in the PR body under "Secondary sweep → Content
    enhancements": name the verdict that supports the wording, or remove it.
+   Then self-check the PR body the way the publish gate will:
+
+   ```bash
+   python3 scripts/content-review/compose-pr-body.py --check-accounting \
+       --body-file .pr-body-draft.md --backlog .glowup-backlog.json
+   ```
+
+   Exit 0 is required. It lists every stubbed id that is not a row in
+   exactly one of the two Backlog tables and any `<TODO` either table still
+   carries; fix the body and re-run until it is clean. Membership is by
+   row (the backticked id that opens a row's first cell), so a reason cell
+   may cross-reference another row ("see `findings-f17`") freely — that is
+   not a second row.
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
    "skipped_findings": <declined count>, "clarity_flag": <bool>,
    "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
