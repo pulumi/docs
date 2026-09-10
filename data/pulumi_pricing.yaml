@@ -596,7 +596,7 @@ categories:
         requires: essentials
         availability:
           free: Manual
-          essentials: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration), advisory only"
+          essentials: Advisory only
           pro: "[Organization-managed](/docs/insights/policy/get-started/)"
           enterprise: "[Organization-managed](/docs/insights/policy/get-started/)"
 
@@ -636,8 +636,8 @@ categories:
         link: /docs/insights/policy/policy-packs/authoring/#creating-a-policy-pack
         availability:
           pro:
-            content: Up to 100 policies
-            subtext: 3 pack limit
+            content: Up to 10 packs
+            subtext: No policy-count limit
           enterprise: Unlimited
 
       - id: policy-enforcement-modes
