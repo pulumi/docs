@@ -172,7 +172,7 @@ editions:
       unit: "**Includes 40 Credits**"
       # The (i) tooltip on this note lists what a Credit buys per meter; the
       # rates come from `calculator:` below, keyed by this edition's id.
-      note: These credits cover up to 500 managed resources or a mix of Pulumi services. Additional usage is billed on demand.
+      note: Up to 500 managed resources.
       cta:
         label: Start with Essentials
         href: https://app.pulumi.com/signup?create-organization=1
@@ -197,7 +197,7 @@ editions:
       price: $400
       price_label: /month
       unit: "**Includes 400 Credits**"
-      note: These credits cover up to 2,000 managed resources or a mix of Pulumi services. Additional usage is billed on demand.
+      note: Up to 2,000 managed resources.
       cta:
         label: Start with Pro
         href: https://app.pulumi.com/signup?create-organization=1
@@ -287,7 +287,7 @@ calculator:
   # `from` lists the editions where the rate is a floor rather than the price,
   # mirroring the "Starting at" in those editions' comparison cells.
   card_tooltip:
-    intro: "Additional usage, in Credits (1 Credit = $1)"
+    intro: "Credits cover usage across Pulumi services. Additional usage is billed on demand (1 Credit = $1)."
     rates:
       - label: 1 IaC resource
         key: iac_resource_month
@@ -331,7 +331,7 @@ categories:
 
       - id: iac-commitment-pricing
         name: Commitment pricing
-        available_from: essentials
+        available_from: pro
 
       - id: self-hosting
         name: Self-hosting

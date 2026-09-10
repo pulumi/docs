@@ -74,7 +74,7 @@ Pay monthly with a credit card. This option provides flexibility and is ideal fo
 
 ### Annual commitment pricing
 
-Pay upfront with invoicing to access significant cost savings through commitment pricing. This option works well for organizations with predictable usage and established procurement processes. [Contact us](/contact/) to explore commitment pricing options.
+Annual commitment pricing is available on Pro and Enterprise only. Pay upfront with invoicing for a committed amount of usage. [Contact us](/contact/) to discuss commitment pricing.
 
 {{% notes type="info" %}}
 Both billing options include detailed usage insights through the Billing & usage page in your organization settings. Track IaC resources, deployment minutes, ESC secrets, and download usage history. You can also set [Neo usage limits](/docs/ai/neo/usage-limits/) to cap spend on Pulumi Neo. Only organization administrators and designated [billing administrators](/docs/administration/concepts/billing-managers/) can access these pages. You'll also receive monthly usage reports via email.

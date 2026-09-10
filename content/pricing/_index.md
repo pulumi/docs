@@ -40,10 +40,10 @@ faq:
           answer: |
             If you self-serve by entering a credit card, you will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
 
-            If you prefer to pay annually, you can [contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
+            Annual commitment pricing is available on Pro and Enterprise only. [Contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
         - question: What are Pulumi Credits?
           answer: |
-            Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
+            Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage through a monthly up-front fee or, on Pro and Enterprise, an annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
             IaC resources are billed hourly at the rate of $0.00025 for Essentials ($0.1825 per resource per month) and starting at $0.0005 for Pro ($0.365 per resource per month). These hourly rates cover managing a resource for a full hour.
@@ -102,7 +102,7 @@ faq:
             Workflow minutes represent the total time used across both Discovery and Deployments. All usage draws from a single, shared pool of minutes. For Discovery, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
         - question: Can I buy more Pulumi Credits?
           answer: |
-            Customers on the self-service Essentials and Pro editions can buy discounted credit top-ups in Pulumi Cloud. Self-service top-ups are not yet available for contracted credit pools. [Contact sales](/contact/?form=sales) to discuss annual commitments and volume pricing.
+            Customers on the self-service Essentials and Pro editions can buy discounted credit top-ups in Pulumi Cloud. Self-service top-ups are not yet available for contracted credit pools. Annual commitments are available on Pro and Enterprise only; [contact sales](/contact/?form=sales) to discuss commitment pricing.
 
         - question: What are Neo tokens?
           answer: |
@@ -179,7 +179,7 @@ faq:
         - question: When will I be billed for a self-service paid edition?
           answer: In addition to your monthly up-front fee, you will be billed for the previous month’s on-demand usage on the first day of each month.
         - question: What payment options do you accept?
-          answer: Self-service Essentials, Pro, and Enterprise subscriptions use a credit card. [Contact sales](/contact/?form=sales) for annual contracts and other payment options.
+          answer: Self-service Essentials, Pro, and Enterprise subscriptions use a credit card. Annual contracts are available on Pro and Enterprise only. [Contact sales](/contact/?form=sales) for contract payment options.
         - question: What if I have billing or account issues?
           answer: For any billing or related issues, please [contact us](/contact/).
         - question: What if I am not satisfied with my Pulumi purchase?

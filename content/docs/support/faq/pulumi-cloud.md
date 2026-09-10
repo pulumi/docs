@@ -179,7 +179,8 @@ in touch.
 You can pay by credit card (we use Stripe for processing). Start your trial
 first, then add a card from your organization's **Billing & usage** settings.
 
-For annual billing we also offer invoicing, payable by bank transfer or check.
+Annual contracts are available on Pro and Enterprise only, with invoicing
+payable by bank transfer or check.
 To discuss that, [contact us](/contact/).
 
 ### What editions are available?
