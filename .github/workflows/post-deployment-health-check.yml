@@ -148,7 +148,7 @@ jobs:
           # widened blast radius -- a marketing-web outage or a Dev Center
           # path rename now fails this gate too, for a cause this repo did
           # not introduce and cannot fix on its own. If that page-level
-          # coverage becomes noisy, the check_redirect assertions above
+          # coverage becomes noisy, the check_redirect assertions below
           # (which only exercise the proxy hop itself) are the fallback.
           check_endpoint "/dev/tutorials/" "Tutorials landing"
           check_endpoint "/dev/templates/" "Templates landing"
