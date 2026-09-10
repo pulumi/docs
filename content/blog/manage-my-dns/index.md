@@ -5,7 +5,7 @@ updated: 2025-03-05
 draft: false
 meta_desc: In this article, Rawkode shows how he uses Pulumi to manage the DNS records for his many domains.
 authors: ["david-flanagan"]
-tags: [domains, dns]
+tags: [domains, dns, cloudflare]
 category: tutorials
 aliases:
   - /blog/2022-03-22-my-pulumi-managing-my-dns
