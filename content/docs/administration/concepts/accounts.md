@@ -187,6 +187,8 @@ To use one, select the passkey option on the sign-in page. If your browser suppo
 
 Registering a passkey does not disable any other way of signing in. Your password, if you have one, keeps working, so losing every registered passkey does not lock you out of your account.
 
+An [organization-managed account](/docs/administration/concepts/org-managed-users/) can't register a passkey, because single sign-on through its managing organization is its only login method. Migrating an account to organization-managed revokes every passkey registered on it, and a passkey registered before the migration can no longer sign you in.
+
 {{% notes type="info" %}}
 A passkey sign-in does not prompt for a one-time password, even when you have [MFA](#setting-up-mfa) enrolled. Pulumi Cloud requires user verification, a biometric or a PIN, on every passkey ceremony, so the passkey already proves both possession of the device and the factor that unlocks it. Signing in with your password still prompts for your second factor.
 {{% /notes %}}
