@@ -217,8 +217,8 @@ including target groups that are created automatically from the same inbound por
 
 ### Manually configuring listeners
 
-When you create a listener, the `listener` property chooses smart defaults based on whether the listener is created
-against a load balancer or a target group. These configuration options are also available:
+When you create a listener against a load balancer, the `listener` property chooses smart defaults for you.
+These configuration options are also available:
 
 * `protocol`: NLBs support `TCP`, `TLS`, `UDP`, `TCP_UDP`, `QUIC`, and `TCP_QUIC`, while ALBs support `HTTP` and
   `HTTPS`. If not specified, NLBs default to `TCP` and ALBs will select `HTTP` or `HTTPS` based on the port supplied.
@@ -259,8 +259,9 @@ For more information on listener rules, refer to the [AWS documentation about li
 
 ### Manually configuring target groups
 
-A target group is automatically created for each listener that doesn't override the default action. This group
-can then be used to load balance any number of targets, including EC2 instances, ECS services, or arbitrary IPs.
+The load balancer creates a single default target group, and every listener that doesn't override the default
+action forwards to it. This group can then be used to load balance any number of targets, including EC2
+instances, ECS services, or arbitrary IPs.
 
 You can also create a target group manually, either by defining a `defaultTargetGroup` on the load balancer directly or by creating a
 `TargetGroupAttachment` resource. When doing so, the following additional options are available:
@@ -289,11 +290,10 @@ You can also create a target group manually, either by defining a `defaultTarget
        target. The range is 5–300 seconds, and the default is 30 seconds.
 
     * `healthyThreshold`: The number of consecutive successful health checks required before considering an
-      unhealthy target healthy. The range is 2–10, and the default is 3.
+      unhealthy target healthy. The range is 2–10, and the default is 5.
 
     * `unhealthyThreshold`: The number of consecutive failed health checks required before considering the target
-       unhealthy. For NLBs, this value must be the same as `healthyThreshold`. The range is 2–10, and the default
-       is 3.
+       unhealthy. The range is 2–10, and the default is 2.
 
     * `path`: For ALB only, the required destination for health check requests. This allows for application level
       health checking, versus NLBs which only support health checking the availability of the target.
