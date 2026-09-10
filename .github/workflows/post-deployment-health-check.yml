@@ -138,6 +138,18 @@ jobs:
           check_endpoint "/blog/" "Blog landing"
           check_endpoint "/what-is/" "What-is landing"
           check_endpoint "/case-studies/" "Case studies landing"
+
+          # /dev/tutorials/ and /dev/templates/ are proxied here from
+          # pulumi/marketing-web (see infrastructure/index.ts); they are not
+          # built by this repo. Asserting them end-to-end is deliberate: the
+          # proxy configuration these two paths exercise does live in this
+          # repo, and a broken proxy hop is exactly what a post-deployment
+          # gate on a pulumi/docs deploy should catch. The tradeoff is a
+          # widened blast radius -- a marketing-web outage or a Dev Center
+          # path rename now fails this gate too, for a cause this repo did
+          # not introduce and cannot fix on its own. If that page-level
+          # coverage becomes noisy, the check_redirect assertions above
+          # (which only exercise the proxy hop itself) are the fallback.
           check_endpoint "/dev/tutorials/" "Tutorials landing"
           check_endpoint "/dev/templates/" "Templates landing"
           check_endpoint "/events/" "Events landing"
@@ -270,6 +282,9 @@ jobs:
           echo "Testing Lambda@Edge redirects..."
           check_redirect "/docs/intro/cloud-providers/aws/" "/registry/packages/aws/" "Cloud provider redirect"
           check_redirect "/docs/reference/pkg/nodejs/pulumi/aws/" "/docs/reference/pkg/aws/\\?language=nodejs" "Node.js SDK redirect"
+
+          echo ""
+          echo "Testing legacy-path redirects (S3 routing rules + Hugo aliases)..."
           check_redirect "/docs/cli/commands/" "/docs/iac/cli/commands/" "CLI docs redirect"
           check_redirect "/docs/iac/get-started/" "/docs/get-started/" "Getting started redirect"
           check_redirect "/tutorials/" "/dev/tutorials/" "Tutorials redirect"
