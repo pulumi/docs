@@ -247,7 +247,12 @@
     {{ end }}
 
     {{ if .IsHome }}
-        <title>{{ .Site.Title }}</title>
+        {{- /* Home page: honour the front-matter title (title_tag, then .Title)
+             the same way every other page in this file does, falling back to
+             the site title only if the home page has neither. This keeps the
+             rendered <title> consistent with og:title and the WebPage schema
+             name, both of which already read from .Params.title_tag / .Title. */ -}}
+        <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
         {{- /* Blog taxonomy pages: use the display name (category name / series
