@@ -36,3 +36,7 @@ The exact non-zero value of a failing exit code gives us some information about 
 | Canceled run                      | 8         | The operation is canceled before completion, for example due to `pulumi cancel`, a user interrupt (such as Ctrl+C), or cancellation initiated through the Automation API. |
 | Timeout                           | 9         | The operation fails because it does not complete within an expected time window. |
 | Internal CLI error                | 255       | An unexpected internal condition occurs inside the Pulumi CLI itself that does not fit another category. |
+
+## Running the CLI with no subcommand
+
+Running `pulumi` with no subcommand prints the CLI help and exits with code 1, the generic error code. This behavior changed in Pulumi CLI v3.254.0; earlier versions exited with code 0. If your automation runs a bare `pulumi` command to check that the binary is installed and working, use [`pulumi version`](/docs/iac/cli/commands/pulumi_version/) or `pulumi --help` instead, both of which exit with code 0.
