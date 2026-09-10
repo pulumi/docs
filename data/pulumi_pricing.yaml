@@ -540,12 +540,12 @@ categories:
 
       - id: resource-search
         name: Resource search
-        link: /docs/insights/discovery/search/
+        link: /docs/discovery-governance/discovery/search/
         available_from: team
 
       - id: insights-discovery
         name: Cloud account discovery
-        link: /docs/insights/discovery/
+        link: /docs/discovery-governance/discovery/
         available_from: team
 
       - id: insights-primary-accounts
@@ -557,27 +557,27 @@ categories:
 
       - id: insights-data-export
         name: Data export
-        link: /docs/insights/discovery/data-export/
+        link: /docs/discovery-governance/discovery/data-export/
         available_from: enterprise
 
       - id: property-search
         name: Property search
-        link: /docs/insights/discovery/search/#property-queries
+        link: /docs/discovery-governance/discovery/search/#property-queries
         available_from: team
 
       - id: policy-enforcement
         name: Policy enforcement
-        link: /docs/insights/policy/
+        link: /docs/discovery-governance/policy/
         requires: team
         availability:
           individual: Manual
-          team: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
-          enterprise: "[Organization-managed](/docs/insights/policy/get-started/)"
-          business-critical: "[Organization-managed](/docs/insights/policy/get-started/)"
+          team: "[Organization-managed](/docs/discovery-governance/policy/#pulumi-cloud-integration)"
+          enterprise: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
+          business-critical: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
 
       - id: preventative-policies
         name: Preventative policies
-        link: /docs/insights/policy/policy-groups/
+        link: /docs/discovery-governance/policy/policy-groups/
         requires: team
         available_from: team
         availability:
@@ -585,12 +585,12 @@ categories:
 
       - id: audit-policies
         name: Audit policies
-        link: /docs/insights/policy/policy-groups/
+        link: /docs/discovery-governance/policy/policy-groups/
         available_from: team
 
       - id: pre-built-policy-packs
         name: Pre-built policy packs
-        link: /docs/insights/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
         availability:
           team: Pulumi Best Practices, AWS Organizations Tag Policies
           enterprise: Pulumi Best Practices, AWS Organizations Tag Policies
@@ -602,13 +602,13 @@ categories:
       # resolves to Team.
       - id: compliance-policy-packs
         name: Compliance policy packs
-        link: /docs/insights/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
         available_from: business-critical
         hidden: true
 
       - id: custom-policy-packs
         name: Custom policy packs
-        link: /docs/insights/policy/policy-packs/authoring/#creating-a-policy-pack
+        link: /docs/discovery-governance/policy/policy-packs/authoring/#creating-a-policy-pack
         availability:
           team:
             content: Up to 25 policies
@@ -620,7 +620,7 @@ categories:
 
       - id: policy-enforcement-modes
         name: Enforcement Modes
-        link: /docs/insights/policy/#local-policy-execution
+        link: /docs/discovery-governance/policy/#local-policy-execution
         availability:
           team: Advisory & Mandatory
           enterprise: Advisory & Mandatory
@@ -628,12 +628,12 @@ categories:
 
       - id: insights-self-hosted
         name: Discovery on self-hosted Pulumi Cloud
-        link: /docs/insights/self-hosted/
+        link: /docs/discovery-governance/self-hosted/
         available_from: business-critical
 
       - id: context-api
         name: Context API
-        link: /docs/insights/context-api/
+        link: /docs/discovery-governance/context-api/
         available_from: enterprise
         hidden: true
 

@@ -30,7 +30,7 @@ The [`pulumi` CLI](/docs/install/) and other ESC consumers conventionally assign
 
 The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
 
-This property is also used by [Pulumi policy packs](/docs/insights/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, `environmentVariables` are injected into the policy runtime as environment variables.
+This property is also used by [Pulumi policy packs](/docs/discovery-governance/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, `environmentVariables` are injected into the policy runtime as environment variables.
 
 ### Properties
 
@@ -190,7 +190,7 @@ This precedence is separate from the rule that applies _among_ multiple imported
 
 ## policyConfig
 
-The `policyConfig` reserved property contains values that should be exported as configuration for [Pulumi policy packs](/docs/insights/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, the values under `policyConfig` are made available to the policy pack at runtime.
+The `policyConfig` reserved property contains values that should be exported as configuration for [Pulumi policy packs](/docs/discovery-governance/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, the values under `policyConfig` are made available to the policy pack at runtime.
 
 ### Properties
 

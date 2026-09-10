@@ -119,7 +119,7 @@ Pulumi treats drift as a first-class part of the stack lifecycle rather than an 
 
 * **Detection** via [`pulumi refresh --preview-only`](/docs/iac/cli/commands/pulumi_refresh/) from the CLI, or scheduled, managed detection through [Pulumi Deployments](/docs/deployments/concepts/drift/) with a Drift tab and event webhooks.
 * **Reconciliation** in either direction: remediate with [`pulumi up --refresh`](/docs/iac/cli/commands/pulumi_up/), or adopt by refreshing state and updating the program.
-* **Guardrails** through resource options ([`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/), [`protect`](/docs/iac/concepts/resources/options/protect/)) and [Pulumi Policy](/docs/insights/policy/) enforcement that spans both preview-time prevention and audit of live resources.
+* **Guardrails** through resource options ([`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/), [`protect`](/docs/iac/concepts/resources/options/protect/)) and [Pulumi Policy](/docs/discovery-governance/policy/) enforcement that spans both preview-time prevention and audit of live resources.
 
 The code-edit step of adoption—translating a provider-property diff back into your program—is the slowest and most-abandoned part of the whole workflow. [Pulumi Neo](/product/neo/), the AI infrastructure agent built into Pulumi Cloud, is designed for exactly this: hand it a drifted stack and it runs the refresh, reads the diff, edits the program to match, runs a clean preview, and opens a pull request for your review. It doesn't change the mechanics—the program still has to be updated and the PR still has to be approved—but it absorbs the tedium that makes adoption the slower reconciliation path.
 

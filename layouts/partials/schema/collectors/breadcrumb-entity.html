@@ -66,14 +66,14 @@
       "item" "https://www.pulumi.com/docs/iac/"
     ) }}
 
-  {{/* Add Pulumi Discovery if in the docs/insights section */}}
-  {{ else if in .RelPermalink "/docs/insights/" }}
+  {{/* Add Discovery & governance if in the docs/discovery-governance section */}}
+  {{ else if in .RelPermalink "/docs/discovery-governance/" }}
     {{ $position = add $position 1 }}
     {{ $breadcrumbs = $breadcrumbs | append (dict
       "@type" "ListItem"
       "position" $position
       "name" "Pulumi Discovery"
-      "item" "https://www.pulumi.com/docs/insights/"
+      "item" "https://www.pulumi.com/docs/discovery-governance/"
     ) }}
 
   {{/* Add Pulumi ESC if in the docs/esc section */}}

@@ -31,7 +31,7 @@ The three tools diverge structurally in how code becomes a deployed resource. AW
 | State management | Pulumi Cloud (default), self-managed backends, or use Pulumi as a [Terraform/OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/) | HCP Terraform, S3/other remote backends, or local state | CloudFormation stack state (AWS-managed) |
 | Testing | Native unit/property tests in-language, run before any cloud call | Separate harness (`terraform test`, Terratest) | Native unit tests in-language (CDK assertions library), against synthesized template |
 | Reusable abstractions | Components, packages published to language package managers | Modules | Constructs, published as libraries via JSII |
-| Policy as code | Built-in ([Pulumi Policies](/docs/insights/policy/)) | Sentinel/OPA (HCP Terraform or separate tooling) | CloudFormation Guard, cdk-nag (separate tooling) |
+| Policy as code | Built-in ([Pulumi Policies](/docs/discovery-governance/policy/)) | Sentinel/OPA (HCP Terraform or separate tooling) | CloudFormation Guard, cdk-nag (separate tooling) |
 | Secrets management | Built-in ([Pulumi ESC](/docs/esc/)) | Vault or external integration | AWS Secrets Manager / SSM (external, AWS-only) |
 | Agent feedback loop | Shortest: same-language type checks, tests, and preview, no translation step | Fast plan/apply, but a separate DSL and test harness | Longest: JSII binding layer, synthesis to CloudFormation, stack-level rollback |
 | License | Apache 2.0 (open source) | Business Source License (BUSL), IBM-owned since Feb. 2025 | Apache 2.0 (open source) |

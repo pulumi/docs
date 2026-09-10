@@ -81,7 +81,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 |-------|-------------|
 | `insights_account:create` | Create a new cloud account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
 
-## Insights Policy
+## Pulumi Policies
 
 | Value | Description |
 |-------|-------------|

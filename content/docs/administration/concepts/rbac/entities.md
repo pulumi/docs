@@ -28,7 +28,7 @@ Pulumi Cloud has three entity types:
 
 * **[Stacks](/docs/iac/concepts/stacks/)**: All operations that affect stacks — updates, configuration, deployment settings, tags and annotations, webhooks, and schedules. See [stack scopes](/docs/administration/reference/rbac-scopes/stacks) for the full list.
 * **[Environments](/docs/esc/concepts/environments/)** (Pulumi ESC): All operations that affect environments — configuration, secrets, schedules, webhooks, and versions. See [environment scopes](/docs/administration/reference/rbac-scopes/environments) for the full list.
-* **[Cloud accounts](/docs/insights/)**: All operations that affect cloud accounts — accounts, policy evaluations, scan configurations, and results and reports. See [cloud account scopes](/docs/administration/reference/rbac-scopes/insights-accounts) for the full list.
+* **[Cloud accounts](/docs/discovery-governance/)**: All operations that affect cloud accounts — accounts, policy evaluations, scan configurations, and results and reports. See [cloud account scopes](/docs/administration/reference/rbac-scopes/insights-accounts) for the full list.
 
 ## Organization-level access
 

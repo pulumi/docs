@@ -1,9 +1,9 @@
-docs/insights/policy/policy-as-code/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
-docs/iac/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
-docs/guides/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
-docs/using-pulumi/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
-docs/iac/packages-and-automation/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
-docs/iac/using-pulumi/crossguard/best-practices/index.html|/docs/insights/policy/policy-packs/authoring/
+docs/insights/policy/policy-as-code/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
+docs/iac/crossguard/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
+docs/guides/crossguard/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
+docs/using-pulumi/crossguard/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
+docs/iac/packages-and-automation/crossguard/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
+docs/iac/using-pulumi/crossguard/best-practices/index.html|/docs/discovery-governance/policy/policy-packs/authoring/
 docs/insights/policy/policy-as-code/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies
 docs/iac/crossguard/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies
 docs/using-pulumi/crossguard/api-policy-manager/index.html|https://github.com/pulumi/compliance-policies

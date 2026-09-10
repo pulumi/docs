@@ -711,6 +711,7 @@ superset
 swappable
 syntaxes
 syscalls
+systemd
 taggable
 tailnet
 Tailscale

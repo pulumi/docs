@@ -226,7 +226,7 @@ IaC shows up across a lot of cloud workflows, but a few patterns account for mos
 1. **Kubernetes and container platforms.** Define a cluster alongside the workloads, ingress, IAM, and managed databases the app depends on, so the platform and the application ship as a single unit. See [infrastructure as code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/) for how this works in practice.
 1. **CI/CD pipelines.** Infrastructure changes go through the same pull-request workflow as application code, with a preview step so reviewers can see what's about to change before it lands.
 1. **Disaster recovery.** Re-provision a complete environment in a different region or account from versioned code, rather than rebuilding individual resources by hand.
-1. **Policy and compliance.** Encode security, cost, and architectural rules as [policy as code](/docs/insights/policy/) and have every deployment checked against them automatically.
+1. **Policy and compliance.** Encode security, cost, and architectural rules as [policy as code](/docs/discovery-governance/policy/) and have every deployment checked against them automatically.
 1. **Platform engineering.** Platform teams package vetted infrastructure patterns as reusable [components](/docs/iac/concepts/components/) that product teams consume through a standard interface.
 1. **Ephemeral environments.** Spin up short-lived environments for pull request previews, load tests, or customer demos, then tear them down when you're done.
 

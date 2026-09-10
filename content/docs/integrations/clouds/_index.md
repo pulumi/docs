@@ -16,7 +16,7 @@ menu:
 aliases:
 - /docs/iac/clouds/
 - /docs/clouds/
-description: <p>Pulumi integrates with every major cloud. Each page below links to the IaC providers, packages, templates, guides, ESC integrations, Insights support, and policy packs available for that cloud.</p>
+description: <p>Pulumi integrates with every major cloud. Each page below links to the IaC providers, packages, templates, guides, ESC integrations, Discovery support, and policy packs available for that cloud.</p>
 
 sections:
 - type: button-cards
@@ -24,15 +24,15 @@ sections:
   cards:
   - image: /logos/tech/aws.svg
     heading: AWS
-    description: Providers, packages (AWSx, API Gateway, EKS), architecture templates, guides (including the CDK adapter), ESC integrations, Insights, and policy packs.
+    description: Providers, packages (AWSx, API Gateway, EKS), architecture templates, guides (including the CDK adapter), ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/aws/
   - image: /logos/tech/azure.svg
     heading: Azure
-    description: Azure Native and Classic providers, architecture templates, guides, ARM template conversion, ESC integrations, Insights, and policy packs.
+    description: Azure Native and Classic providers, architecture templates, guides, ARM template conversion, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/azure/
   - image: /logos/tech/gcp.svg
     heading: Google Cloud
-    description: Google Cloud provider, architecture templates, guides, ESC integrations, Insights, and policy packs.
+    description: Google Cloud provider, architecture templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/gcp/
   - image: /logos/tech/kubernetes.svg
     heading: Kubernetes

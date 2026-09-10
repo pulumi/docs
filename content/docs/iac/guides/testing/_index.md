@@ -28,7 +28,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/iac/guides/testing/unit/)    | [**Property Tests**](/docs/insights/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration/)  |
+|                                | [**Unit Tests**](/docs/iac/guides/testing/unit/)    | [**Property Tests**](/docs/discovery-governance/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration/)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |
@@ -50,13 +50,13 @@ Because cloud resources are not created, you can't write a test that would evalu
 
 ## Property Testing
 
-Property tests are based on [Policy as Code](/docs/insights/policy/), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, Pulumi Policies enable another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
+Property tests are based on [Pulumi Policies](/docs/discovery-governance/policy/), Pulumi's offering to set guardrails and enforce compliance for cloud resources. Beyond authoring company-wide policies, Pulumi Policies enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
 
 Property tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, property tests can evaluate real values returned from the cloud provider instead of the mocked ones.
 
 Property tests can run against any cloud environment: it can be a persistent "acceptance" stack, an ephemeral cloud environment created for each pull request, or a combination of those.
 
-[**Learn more and get started with Property Testing**](/docs/insights/policy/policy-packs/authoring/).
+[**Learn more and get started with Property Testing**](/docs/discovery-governance/policy/policy-packs/authoring/).
 
 ## Integration Testing
 

@@ -49,7 +49,7 @@ sections:
     description: |
       Pulumi Cloud implements Terraform's remote backend API, so a standard `backend "remote"` block is the whole migration. Your HCL, your CLI, and your day-to-day workflow are unchanged, and both Terraform and OpenTofu work.
 
-      In return you get encrypted state, automatic locking, update history, role-based access control, and audit policies, plus a single view of Terraform-managed and Pulumi-managed resources together in [resource search](/docs/insights/discovery/search/).
+      In return you get encrypted state, automatic locking, update history, role-based access control, and audit policies, plus a single view of Terraform-managed and Pulumi-managed resources together in [resource search](/docs/discovery-governance/discovery/search/).
     cta_text: Set up the backend
     cta_link: /docs/iac/get-started/terraform/terraform-state-backend/
     image: /images/releases/august-2026/release-terraform-backend.svg

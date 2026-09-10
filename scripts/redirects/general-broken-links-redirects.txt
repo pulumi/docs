@@ -11,13 +11,13 @@ docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/iac/operatio
 docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/iac/operations/debugging/images/stack-selection-1.png
 docs/support/troubleshooting/debugging/images/debugging.png|/docs/iac/operations/debugging/images/debugging.png
 docs/support/troubleshooting/debugging/images/debug-console.png|/docs/iac/operations/debugging/images/debug-console.png
-docs/insights/assets/create-policy-group.png|/docs/insights/discovery/get-started/add-policies/
+docs/insights/assets/create-policy-group.png|/docs/discovery-governance/discovery/get-started/add-policies/
 docs/pulumi-cloud/access-management/saml/aad/index.html|/docs/administration/guides/saml/entra/
 docs/pulumi-cloud/deployments/faq/index.html|/docs/deployments/operations/
 docs/pulumi-cloud/developer-portals/new-project-wizard/index.html|/docs/idp/concepts/new-project-wizard/
 docs/pulumi-cloud/developer-portals/backstage/index.html|/docs/idp/integrations/backstage-plugin/
 docs/pulumi-cloud/access-management/scim/azuread/index.html|/docs/administration/guides/scim/entra/
-docs/iac/packages-and-automation/crossguard/core-concepts/index.html|/docs/insights/policy/
+docs/iac/packages-and-automation/crossguard/core-concepts/index.html|/docs/discovery-governance/policy/
 docs/pulumi-cloud/access-management/oidc/index.html|/docs/administration/guides/oidc-issuers/
 docs/pulumi-cloud/access-management/oidc/client/index.html|/docs/administration/guides/oidc-issuers/
 docs/administration/self-hosting/pulumi-cloud/index.html|/docs/administration/self-hosting/
@@ -28,8 +28,8 @@ topics/containers/index.html|/docs/integrations/clouds/kubernetes/
 docs/concepts/options/hidediffs/index.html|/docs/iac/concepts/resources/options/hidediffs/
 docs/iac/using-pulumi/pulumi-packages/terraform-provider/index.html|/docs/iac/get-started/terraform/terraform-providers/
 docs/concepts/stacks/index.html|/docs/iac/concepts/stacks/
-docs/insights/policy/metadata/index.html|/docs/insights/policy/policy-packs/metadata/
-docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/insights/policy/
+docs/insights/policy/metadata/index.html|/docs/discovery-governance/policy/policy-packs/metadata/
+docs/iac/using-pulumi/crossguard/core-concepts/index.html|/docs/discovery-governance/policy/
 blog/pulumi-kubernetes-operator-2-0-ga/index.html|/blog/pko-2-0-ga/
 registry/packages/pinecone/api-docs/pineconeindex/index.html|/registry/packages/pinecone/
 docs/iac/clouds/aws/guides/more/index.html|/docs/iac/guides/clouds/aws/

@@ -24,8 +24,9 @@
 #      same page carries a heading anchor `{#copilot}` a rename would break.
 #   2. "Some replacements can't be automated." "Insights" resolves to the
 #      Discovery *product* in most sentences but to the "Discovery &
-#      governance" *category* in others (its own row in the brand table), and
-#      the docs IA still lives under /docs/insights/.
+#      governance" *category* in others (its own row in the brand table), so
+#      the swap still needs a human to pick which one the sentence means. The
+#      docs IA moved to /docs/discovery-governance/ in #21461.
 #
 # Neither case needs the rule demoted. A 🚨 finding is "resolve or refute", so
 # the historical-prose author refutes it in one line; and review-existing-

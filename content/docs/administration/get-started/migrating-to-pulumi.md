@@ -22,7 +22,7 @@ If you have existing cloud infrastructure to bring into Pulumi IaC, you have mul
 
 **Start fresh:** Throw away existing infrastructure and begin anew. This ensures you can adopt all best practices from the outset without technical debt. This option isn't always practical for business-critical services.
 
-**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure — including resources created manually through cloud consoles. The [Visual Import](/docs/insights/discovery/visual-import/) feature is the recommended approach for importing resources. However, Pulumi also offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
+**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure — including resources created manually through cloud consoles. The [Visual Import](/docs/discovery-governance/discovery/visual-import/) feature is the recommended approach for importing resources. However, Pulumi also offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
 
 **Coexist and migrate incrementally:** Pulumi supports coexisting with existing ecosystems. You can deploy Helm charts as-is or consume Terraform workspace outputs. This enables incremental migration over time when the value is right.
 
