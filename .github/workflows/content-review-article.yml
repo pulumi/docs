@@ -983,8 +983,12 @@ jobs:
           # For a glow-up the gate also reads the body against the reconciled
           # backlog snapshot: every composer-stubbed row must sit in Backlog
           # executed or Backlog declined, or nothing is pushed.
-          # stderr is teed to a file so the failure alert below can quote
-          # the gate's ::error:: lines instead of just pointing at the run.
+          # Both streams go to a file first (fail() prints its ::error::
+          # lines on stdout) and are replayed into the log, so the failure
+          # alert below can quote the gate's own lines and the file is
+          # complete before a non-zero status ends the step — a tee'd
+          # process substitution can lose its tail on exactly that path.
+          rc=0
           python3 scripts/content-review/publish-gate.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
@@ -992,7 +996,9 @@ jobs:
             --paths-from .applied.paths \
             --body-file .pr-body-draft.md \
             --backlog .review-snapshot/.glowup-backlog.json \
-            2> >(tee .publish-gate.err >&2)
+            > .publish-gate.err 2>&1 || rc=$?
+          cat .publish-gate.err
+          [ "$rc" -eq 0 ] || exit "$rc"
           TITLE="Content review: $ARTICLE_PATH"
           if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
             TITLE="Content review (retirement): $ARTICLE_PATH"
