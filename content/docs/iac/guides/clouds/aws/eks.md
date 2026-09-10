@@ -31,6 +31,8 @@ be migrated to it.
 
 Pulumi's EKS component simplifies the creation, configuration, and management of EKS clusters. When used in combination with the [Pulumi Kubernetes Provider](/registry/packages/kubernetes/), [AWS Provider](/registry/packages/aws/), and [AWSx component package](/registry/packages/awsx/), you can use a single tool to manage your Kubernetes application configuration as well as your cluster and associated infrastructure.
 
+If you're new to deploying applications onto Kubernetes with Pulumi, the [Kubernetes get started tutorial](/docs/iac/get-started/kubernetes/) is a good place to start before provisioning an EKS cluster of your own.
+
 Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
 tooling from the Kubernetes community, including Pulumi's support for deploying Helm charts. Applications running on
 Amazon EKS are fully compatible with applications running on any standard Kubernetes environment, whether running in
