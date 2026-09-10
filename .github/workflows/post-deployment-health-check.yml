@@ -270,6 +270,10 @@ jobs:
           echo "Testing Lambda@Edge redirects..."
           check_redirect "/docs/intro/cloud-providers/aws/" "/registry/packages/aws/" "Cloud provider redirect"
           check_redirect "/docs/reference/pkg/nodejs/pulumi/aws/" "/docs/reference/pkg/aws/\\?language=nodejs" "Node.js SDK redirect"
+          check_redirect "/docs/cli/commands/" "/docs/iac/cli/commands/" "CLI docs redirect"
+          check_redirect "/docs/iac/get-started/" "/docs/get-started/" "Getting started redirect"
+          check_redirect "/tutorials/" "/dev/tutorials/" "Tutorials redirect"
+          check_redirect "/templates/" "/dev/templates/" "Templates redirect"
 
           echo ""
           echo "=================================================="
