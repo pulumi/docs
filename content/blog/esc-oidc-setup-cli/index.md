@@ -2,7 +2,7 @@
 title: "Set Up Cloud OIDC From the Pulumi CLI"
 date: 2026-09-10
 draft: false
-meta_desc: "The new `pulumi env setup` command configures AWS, Azure, and Google Cloud OIDC trust and creates ESC Environments with the appropriate login provider configured."
+meta_desc: "The new `pulumi env setup` command configures OIDC trust for AWS, Azure, and Google Cloud, and creates ESC Environments with the login provider."
 feature_image: feature.png
 authors:
     - sean-yeh
@@ -33,8 +33,8 @@ For AWS, it asks:
 1. Which accounts to configure.
 1. Which policy to attach to the OIDC role. Choose `AdministratorAccess` for Pulumi Deployments, `ReadOnlyAccess` for Pulumi Insights, or any other policy ARN.
 
-
 Then, it will print out the plan:
+
 ```
 About to configure OIDC for organization my-org:
   account 111111111111:
@@ -52,6 +52,7 @@ After you confirm, the command creates the identity provider, the IAM role, and 
 You can also run the command without interactive prompts by passing in the necessary flags. Each cloud has its own flags, so be sure to check `pulumi env setup <cloud> --help`. Running non-interactively is great for automated use cases or agents!
 
 Example:
+
 ```bash
 pulumi env setup aws \
   --account 111111111111 \
