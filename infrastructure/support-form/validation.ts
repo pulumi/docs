@@ -11,9 +11,20 @@
 
 // Priority ids for the "Priority" select. The display labels live in the
 // form's front matter (content/support/new/_index.md); ids and labels must
-// stay in sync with it.
-export const PRIORITIES = ["normal", "urgent"] as const;
+// stay in sync with it. They are capitalized because the id is passed through
+// verbatim as the Intercom conversation's "Priority" custom attribute
+// (intercom.ts), and Intercom's list for that attribute accepts exactly
+// "Normal" and "Urgent".
+export const PRIORITIES = ["Normal", "Urgent"] as const;
 export type Priority = (typeof PRIORITIES)[number];
+
+// Priorities are matched case-insensitively and canonicalized to the ids above.
+// The ids were lowercase until this casing change, and `?priority=urgent`
+// prefill links handed out under the old casing are still in the wild -- those
+// posts have to keep working rather than 422ing on a difference no one can see.
+export function canonicalPriority(value: string): Priority | undefined {
+    return PRIORITIES.find(priority => priority.toLowerCase() === value.toLowerCase());
+}
 
 // Maximum accepted request body, enforced before JSON.parse. The field limits
 // below keep legitimate payloads far under this.
@@ -199,11 +210,15 @@ export function validateSubmission(input: unknown): ValidationResult {
     }
 
     const priority = stringField(input, "priority", fields);
+    let priorityId: Priority | undefined;
     if (fields.priority === undefined) {
         if (!priority) {
             fields.priority = "Choose a priority.";
-        } else if ((PRIORITIES as readonly string[]).indexOf(priority) === -1) {
-            fields.priority = "Choose one of the listed priorities.";
+        } else {
+            priorityId = canonicalPriority(priority);
+            if (priorityId === undefined) {
+                fields.priority = "Choose one of the listed priorities.";
+            }
         }
     }
 
@@ -233,7 +248,7 @@ export function validateSubmission(input: unknown): ValidationResult {
         email: email as string,
         name: name as string,
         organization: organization as string,
-        priority: priority as Priority,
+        priority: priorityId as Priority,
         subject: subject as string,
         description: description as string,
     };
