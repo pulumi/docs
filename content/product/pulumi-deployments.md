@@ -106,7 +106,7 @@ learn:
         - title: Documentation
           description: Review our documentation to learn more about Pulumi Deployments.
           buttons:
-            - link: /docs/pulumi-cloud/deployments
+            - link: /docs/deployments/concepts/
               type: secondary
               action: Pulumi Deployments Docs
             - link: /docs/reference/deployments-rest-api

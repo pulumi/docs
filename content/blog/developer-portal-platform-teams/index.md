@@ -49,9 +49,9 @@ Together with [Pulumi ESC](/blog/environments-secrets-configurations-management/
 
 We’ve introduced a new wizard experience to create Pulumi projects into Pulumi Cloud, making it easier than ever to get started deploying new infrastructure with Pulumi.
 
-The new project wizard allows anyone in your organization to pick a template they want to install, and walk through configuring the deployment of that template.  We’ve added support for configuring [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started/#new-project-wizard) automatically, so that the template can be deployed without needing the Pulumi CLI locally, or any other CI/CD configuration.  Just a few clicks and you have deployed your infrastructure.
+The new project wizard allows anyone in your organization to pick a template they want to install, and walk through configuring the deployment of that template.  We’ve added support for configuring [Pulumi Deployments](/docs/deployments/get-started/#new-project-wizard) automatically, so that the template can be deployed without needing the Pulumi CLI locally, or any other CI/CD configuration.  Just a few clicks and you have deployed your infrastructure.
 
-We’ve also added integration with the newly released [Pulumi ESC](/docs/pulumi-cloud/deployments/get-started/#environments) so that you can set up environments (and the configuration and credentials needed to deploy to them) that users within your organization can deploy into, determine who can use which environments using RBAC, and then allow those users to deploy templates directly into the environments they can access -- no need to copy secrets, credentials or configuration around!
+We’ve also added integration with the newly released [Pulumi ESC](/docs/deployments/get-started/#environments) so that you can set up environments (and the configuration and credentials needed to deploy to them) that users within your organization can deploy into, determine who can use which environments using RBAC, and then allow those users to deploy templates directly into the environments they can access -- no need to copy secrets, credentials or configuration around!
 
 ![New Project Wizard](/blog/developer-portal-platform-teams/new-project-wizard.png)
 
