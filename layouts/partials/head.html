@@ -250,8 +250,9 @@
         {{- /* Home page: honour the front-matter title (title_tag, then .Title)
              the same way every other page in this file does, falling back to
              the site title only if the home page has neither. This keeps the
-             rendered <title> consistent with og:title and the WebPage schema
-             name, both of which already read from .Params.title_tag / .Title. */ -}}
+             rendered <title> consistent with the WebPage schema name, which
+             already reads title_tag-then-.Title, and with og:title, which on
+             the home page resolves to the same front-matter title. */ -}}
         <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
