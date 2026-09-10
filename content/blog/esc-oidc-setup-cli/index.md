@@ -14,11 +14,15 @@ category: product
 schema_type: auto
 ---
 
-[Pulumi ESC can act as an OpenID Connect (OIDC) provider](/docs/esc/environments/configuring-oidc/) for AWS, Azure, and Google Cloud. Last year, we introduced an onboarding flow in the Pulumi Cloud console that simplified the setup process, making it super easy to set up OIDC with your favorite cloud provider in a guided flow. Today, we're announcing the new `pulumi env setup` command, which brings this capability to the Pulumi CLI.
+[Pulumi ESC can act as an OpenID Connect (OIDC) provider](/docs/esc/guides/configuring-oidc/) for AWS, Azure, and Google Cloud, issuing short-lived, signed tokens that these clouds exchange for temporary credentials. This eliminates hard-coded credentials and improves your security posture.
+
+Last year, we introduced an onboarding flow in the Pulumi Cloud console that makes it super easy to configure OIDC for your cloud provider in a few guided steps.
+
+We're [bringing Pulumi Cloud into the CLI](/blog/the-agentic-infrastructure-era/#meeting-agents-where-they-work-the-cli) so agents can use its capabilities directly from the terminal, without requiring a human to complete steps in the console. The new `pulumi env setup` command brings OIDC onboarding to that workflow, with interactive prompts for guided setup and non-interactive flags for scripts and agents.
 
 <!--more-->
 
-## `pulumi env setup` - How it works
+## `pulumi env setup` - how it works
 
 Run the command with your desired cloud provider (`aws`, `azure`, `gcp`). For example:
 
