@@ -90,7 +90,7 @@
 
 - id: organization
   name: Organization and members
-  description: Organization settings, invitations, membership, custom roles, service accounts, trials, and plan changes.
+  description: Organization settings, invitations, membership, custom roles, service accounts, trials, and edition changes.
   match:
     prefixes:
       - custom-role-
