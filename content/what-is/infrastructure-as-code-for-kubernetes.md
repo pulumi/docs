@@ -161,7 +161,7 @@ The Kubernetes IaC tooling landscape is unusually wide because the community has
 | Cluster security scanning | Trivy, kube-bench, Falco |
 | Service mesh | Istio, Linkerd, Cilium |
 
-Most teams use a combination: a general IaC tool for the cloud-and-cluster layer, Helm or Kustomize for some workload templating, ArgoCD or Flux for continuous reconciliation, and policy as code for guardrails.
+Most teams use a combination: a general IaC tool for the cloud-and-cluster layer, Helm or Kustomize for some workload templating, ArgoCD or Flux for continuous reconciliation, and policy as code for guardrails. If Terraform is already that general IaC tool, our [practical guide to Terraform and Kubernetes](/blog/terraform-kubernetes/) covers what its Kubernetes provider does well and where teams hit friction.
 
 ## How do you secure Kubernetes infrastructure as code?
 
