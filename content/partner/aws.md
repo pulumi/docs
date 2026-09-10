@@ -107,7 +107,7 @@ sections:
         description: Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
       - slug: bmw
         title: Unified solution for all services
-        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+        description: BMW used Pulumi to build a scalable and resilient hybrid cloud implementation that manages more than 20,000 cloud resources with Python-based infrastructure code.
     anchor: customers
 
   - type: two_column
