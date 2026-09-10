@@ -39,4 +39,4 @@ The exact non-zero value of a failing exit code gives us some information about 
 
 ## Running the CLI with no subcommand
 
-Running `pulumi` with no subcommand prints the CLI help and then exits with a non-zero exit code. This behavior changed in Pulumi CLI v3.254.0; earlier versions exited with code 0. If your automation runs a bare `pulumi` command to check that the binary is installed and working, use `pulumi version` or `pulumi --help` instead, both of which exit with code 0.
+Running `pulumi` with no subcommand prints the CLI help and exits with code 1, the generic error code. This behavior changed in Pulumi CLI v3.254.0; earlier versions exited with code 0. If your automation runs a bare `pulumi` command to check that the binary is installed and working, use [`pulumi version`](/docs/iac/cli/commands/pulumi_version/) or `pulumi --help` instead, both of which exit with code 0.
