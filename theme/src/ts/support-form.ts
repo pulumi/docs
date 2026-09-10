@@ -95,11 +95,20 @@ function normalizeOrganization(raw: string): string {
 // silently do nothing. Selects are matched against their own options instead,
 // which doubles as validation: a bogus value is ignored rather than blanking
 // the control. Returns whether the value was applied.
+//
+// The option match is case-insensitive, and the option's own value is what gets
+// applied: the priority ids were lowercase until they were capitalized to match
+// Intercom's list, and both ?priority=urgent links already in the wild and
+// drafts saved under the old casing have to keep selecting Urgent rather than
+// being dropped as unrecognized.
 function setControlValue(input: FormControl, value: string): boolean {
     if (input instanceof HTMLSelectElement) {
-        if (!Array.from(input.options).some(option => option.value === value)) {
+        const option = Array.from(input.options).find(o => o.value.toLowerCase() === value.toLowerCase());
+        if (!option) {
             return false;
         }
+        input.value = option.value;
+        return true;
     } else if (input.value) {
         return false;
     }

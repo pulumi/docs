@@ -24,10 +24,11 @@ form:
         priority:
             label: Priority
             options:
+                # values must match list options for "Priority" in Intercom
                 - label: Normal
-                  value: normal
+                  value: Normal
                 - label: Urgent
-                  value: urgent
+                  value: Urgent
         subject:
             label: Subject
         description:
@@ -59,7 +60,7 @@ confirmation:
         # anonymous visitor can reach. If support wants a published figure, it
         # belongs here with their sign-off and it has to match that file.
         - title: Next.
-          description: A support engineer reviews it and replies by email. How soon depends on your Pulumi Cloud edition.
+          description: A support engineer reviews it and replies by email. How soon depends on your Pulumi support plan.
         - title: Then.
           description: You work the issue together over email. If we need files or more detail, we'll ask there.
 
