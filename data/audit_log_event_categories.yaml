@@ -90,7 +90,7 @@
 
 - id: organization
   name: Organization and members
-  description: Organization settings, invitations, membership, custom roles, service accounts, and trials.
+  description: Organization settings, invitations, membership, custom roles, service accounts, trials, and plan changes.
   match:
     prefixes:
       - custom-role-
@@ -98,6 +98,14 @@
       - organization-
       - retrial-
       - service-
+    events:
+      # Abbreviated `org-` rather than the usual `organization-` prefix used
+      # elsewhere in this category. An exact rule here, not a new `org-`
+      # prefix: one abbreviated id is not yet a product area, and a broad
+      # `org-` prefix would quietly absorb any future `org-*` event that
+      # belongs elsewhere, which is exactly the silent drift this file exists
+      # to prevent.
+      - org-downgraded-to-free
 
 - id: teams
   name: Teams
