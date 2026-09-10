@@ -724,6 +724,15 @@ jobs:
               but you must acknowledge every one in the PR body: under
               "Secondary sweep → Content enhancements", name the artifact
               verdict that supports the wording, or remove the wording.
+              Then self-check the PR body with the publish gate's own
+              accounting check: `python3
+              scripts/content-review/compose-pr-body.py --check-accounting
+              --body-file .pr-body-draft.md --backlog .glowup-backlog.json`.
+              Exit 0 is required: every stubbed id must be a ROW in exactly
+              one of the Backlog executed / Backlog declined tables (move
+              the whole row, keeping its id cell) and neither table may
+              still carry a `<TODO`. A reason cell may cross-reference
+              another row by id; that is not a second row.
             - Verdict sentinel: `{"verdict": "glowup", "fixes": <executed
               count>, "skipped_findings": <declined count>, "clarity_flag":
               <bool>, "executed_ids": [...], "declined_ids": [...],
@@ -872,10 +881,16 @@ jobs:
       - name: Publish gate
         id: gate
         run: |
+          # Same capture-and-replay as the publish step's gate call, so a
+          # refusal here quotes its ::error:: lines in the Slack alert too.
+          rc=0
           python3 scripts/content-review/publish-gate.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
-            --patch .review-changes.patch
+            --patch .review-changes.patch \
+            > .publish-gate.err 2>&1 || rc=$?
+          cat .publish-gate.err
+          [ "$rc" -eq 0 ] || exit "$rc"
 
       # Always downloaded (not just when publishing): the guardrail gates
       # below need it for a publishable verdict, and later ledger-side steps
@@ -908,6 +923,7 @@ jobs:
       # pushed, and the ledger step still records the page incomplete
       # (if: always()) so it is retried under the attempt cap.
       - name: Enforce guardrail gates
+        id: guardrails
         if: steps.gate.outputs.publish == 'true'
         env:
           ARTICLE_PATH: ${{ github.event.inputs.path }}
@@ -973,13 +989,22 @@ jobs:
           # For a glow-up the gate also reads the body against the reconciled
           # backlog snapshot: every composer-stubbed row must sit in Backlog
           # executed or Backlog declined, or nothing is pushed.
+          # Both streams go to a file first (fail() prints its ::error::
+          # lines on stdout) and are replayed into the log, so the failure
+          # alert below can quote the gate's own lines and the file is
+          # complete before a non-zero status ends the step — a tee'd
+          # process substitution can lose its tail on exactly that path.
+          rc=0
           python3 scripts/content-review/publish-gate.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
             --patch .review-changes.patch \
             --paths-from .applied.paths \
             --body-file .pr-body-draft.md \
-            --backlog .review-snapshot/.glowup-backlog.json
+            --backlog .review-snapshot/.glowup-backlog.json \
+            > .publish-gate.err 2>&1 || rc=$?
+          cat .publish-gate.err
+          [ "$rc" -eq 0 ] || exit "$rc"
           TITLE="Content review: $ARTICLE_PATH"
           if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
             TITLE="Content review (retirement): $ARTICLE_PATH"
@@ -1100,6 +1125,44 @@ jobs:
             } > .lint-comment.md
             gh pr comment "$BRANCH" --body-file .lint-comment.md || true
           fi
+
+      # A worker that refuses its own output is a silent failure otherwise:
+      # the run goes red in the Actions tab, the ledger records the page
+      # incomplete, and nobody is told. Three glow-ups failed the publish
+      # gate on 2026-09-09/10 and were found by hand a day later. One line
+      # to #docs-ops per refusal, quoting the gate's own ::error:: lines.
+      # Fail-open: a Slack outage never fails the job.
+      - name: Post publish failure to Slack
+        if: >-
+          always() && github.event.inputs.mode != 'report' &&
+          (steps.gate.outcome == 'failure' || steps.guardrails.outcome == 'failure' ||
+           steps.publish.outcome == 'failure')
+        continue-on-error: true
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+          MODE: ${{ github.event.inputs.mode || 'fix' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GATE_OUTCOME: ${{ steps.gate.outcome }}
+          GUARDRAILS_OUTCOME: ${{ steps.guardrails.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+        run: |
+          STEP="publish"
+          [ "$GUARDRAILS_OUTCOME" = "failure" ] && STEP="guardrail gates"
+          [ "$GATE_OUTCOME" = "failure" ] && STEP="publish gate"
+          DETAIL=$(grep -h '::error::' .publish-gate.err 2>/dev/null | sed 's/^::error:://' | head -5 || true)
+          {
+            echo ":no_entry: content-review worker refused to publish \`${ARTICLE_PATH}\` (mode: ${MODE}) at the ${STEP} step — no PR opened; the page stays due."
+            [ -n "$DETAIL" ] && printf '%s\n' "$DETAIL" | sed 's/^/> /'
+            echo "<${RUN_URL}|Run log>"
+          } > .publish-failure-slack.txt
+          cat .publish-failure-slack.txt
+          [ -n "$SLACK_ACCESS_TOKEN" ] || { echo "::warning::SLACK_ACCESS_TOKEN unavailable; not posting"; exit 0; }
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .publish-failure-slack.txt \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
 
       # AWS creds so the ledger-write step below can push this article's
       # review record to S3. Degrades gracefully (continue-on-error): if the

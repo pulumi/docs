@@ -371,8 +371,9 @@ labels = {f["label"] for f in c.collect(_load(RUN_A, ".verified-claims.json"), N
 check("#21291: fresh stub text starts with collect()'s label for the same verdict",
       all(any(st["text"].startswith(lab) for lab in labels) for st in backlog_a["reconciled"]["fresh_stubs"]))
 check("#21291: every stubbed id is accounted for by the accounting check on the draft",
-      c.glowup_body_accounting(body_a, backlog_a) == ["Backlog executed still carries a <TODO> marker",
-                                                     "Backlog declined still carries a <TODO> marker"])
+      c.glowup_body_accounting(body_a, backlog_a) == ["Backlog executed still carries a <TODO> marker"])
+check("composed Backlog declined carries no placeholder row for the model to forget",
+      "<TODO" not in _section(body_a, "Backlog declined"))
 
 # Case 2 — PR #21293 (run 33518035360, providers/_index.md): `pr20503-findings-5`
 # is a July readthrough "self-redundancy" finding the July agent declined as
@@ -460,6 +461,21 @@ check("accounting: a leftover <TODO> in either table is a violation",
       any("<TODO>" in v for v in c.glowup_body_accounting(good.replace("| done |", "| <TODO> |"), acct_backlog)))
 check("accounting: a body without the two sections is a violation",
       c.glowup_body_accounting("## Why this page\n", acct_backlog))
+# Membership is by row, not substring: a reason cell that cross-references
+# another row is not that row appearing twice (2026-09-09/10 false positives).
+xref = good.replace("| `pr1-findings-2` | #1 | no |",
+                    "| `pr1-findings-2` | #1 | same sentence as `pr1-findings-1`, executed there; see also `fresh-c7` |")
+check("accounting: a cross-reference in a reason cell is not a second row",
+      c.glowup_body_accounting(xref, acct_backlog) == [])
+xref2 = good.replace("| `pr1-findings-1` | #1 | done |",
+                     "| `pr1-findings-1` | #1 | done — the `pr1-findings-2` decline below explains the rest |")
+check("accounting: a cross-reference from executed to declined is not a duplicate either",
+      c.glowup_body_accounting(xref2, acct_backlog) == [])
+prose = good.replace("## Secondary sweep", "Also relevant: `fresh-c7` was the trigger.\n\n## Secondary sweep")
+check("accounting: an id mentioned in prose under a table is not a row",
+      c.glowup_body_accounting(prose, acct_backlog) == [])
+check("accounting: _table_row_ids reads the first cell only",
+      c._table_row_ids("| `a-1` — x, see `b-2` | #1 | y `c-3` |\n| --- |\ntext `d-4`\n| `e-5` | | |") == ["a-1", "e-5"])
 
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
