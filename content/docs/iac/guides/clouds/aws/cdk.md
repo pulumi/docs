@@ -423,13 +423,13 @@ Pulumi commands without errors.
 
 ## Using Pulumi Policy Packs
 
-You can use [Policy Packs](/docs/insights/policy/policy-packs/)
+You can use [Policy Packs](/docs/discovery-governance/policy/policy-packs/)
 with your Pulumi CDK Application. It is also possible to use CDK specific policy
 validation tools (a couple are discussed below), but it is recommended to use
 Pulumi specific tools, especially if you are creating Pulumi resources outside
 of CDK.
 
-For more information, see [Policy Packs](/docs/insights/policy/policy-packs/).
+For more information, see [Policy Packs](/docs/discovery-governance/policy/policy-packs/).
 
 ## CDK Aspects
 

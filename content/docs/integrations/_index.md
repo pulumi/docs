@@ -18,15 +18,15 @@ sections:
   cards:
   - image: /logos/tech/aws.svg
     heading: AWS
-    description: Build and manage AWS infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage AWS infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/aws/
   - image: /logos/tech/azure.svg
     heading: Azure
-    description: Build and manage Azure infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage Azure infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/azure/
   - image: /logos/tech/gcp.svg
     heading: Google Cloud
-    description: Build and manage Google Cloud infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Insights, and policy packs.
+    description: Build and manage Google Cloud infrastructure with Pulumi providers, packages, templates, guides, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/gcp/
   - image: /logos/tech/kubernetes.svg
     heading: Kubernetes

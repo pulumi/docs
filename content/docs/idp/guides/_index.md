@@ -28,4 +28,4 @@ The [best practices section](/docs/idp/guides/best-practices/) introduces the Fo
 - [Private Registry](/docs/idp/concepts/private-registry/)
 - [Components](/docs/iac/concepts/components/)
 - [Environments](/docs/esc/concepts/environments/)
-- [Policies](/docs/insights/policy/)
+- [Policies](/docs/discovery-governance/policy/)

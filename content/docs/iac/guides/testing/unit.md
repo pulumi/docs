@@ -1621,4 +1621,4 @@ A Java unit testing example is not yet available in the examples repository. Con
 
 - [Integration testing](/docs/iac/guides/testing/integration/) deploys real resources and checks them end to end, which is where lifecycle hooks, transforms, and anything else the mock server doesn't implement belong.
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs/) explains why resource properties resolve asynchronously, and how `apply` reaches their values.
-- [Pulumi Policies](/docs/insights/policy/) enforces rules like the three in this guide across every stack in your organization, rather than one program at a time.
+- [Pulumi Policies](/docs/discovery-governance/policy/) enforces rules like the three in this guide across every stack in your organization, rather than one program at a time.

@@ -34,7 +34,7 @@ If you would rather not walk through the Google Cloud console by hand, the [`pul
 pulumi env setup gcp --policy roles/editor
 ```
 
-Pass `--project-id` to target one or more specific GCP projects. Use `--policy roles/viewer` instead of `roles/editor` if the environment is only needed for [Discovery](/docs/insights/); `roles/editor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
+Pass `--project-id` to target one or more specific GCP projects. Use `--policy roles/viewer` instead of `roles/editor` if the environment is only needed for [Discovery](/docs/discovery-governance/); `roles/editor` is required for [Deployments](/docs/deployments/). Add `--yes` to skip confirmation prompts once you are comfortable with what the command creates.
 
 Reach for the manual steps below instead when you already have a workload identity pool you want to reuse, when your project provisions IAM bindings through its own infrastructure as code, or when you need attribute conditions the command does not yet expose.
 

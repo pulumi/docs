@@ -15,7 +15,7 @@ aliases:
 
 Infrastructure as Code guides for building on specific clouds with Pulumi. Each guide focuses on a service, pattern, or architectural concern for its cloud.
 
-For a full inventory of Pulumi capabilities per cloud (providers, packages, templates, ESC, Insights, and policy packs), see [Integrations → Clouds](/docs/integrations/clouds/).
+For a full inventory of Pulumi capabilities per cloud (providers, packages, templates, ESC, Discovery, and policy packs), see [Integrations → Clouds](/docs/integrations/clouds/).
 
 ## AWS
 
