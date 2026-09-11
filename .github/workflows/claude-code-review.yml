@@ -1038,6 +1038,25 @@ jobs:
             --out .hugo-build.json \
             || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
+      # Deterministic dead-internal-link check over the diff. Hugo doesn't
+      # validate plain markdown links (only ref/relref) and the Hugo pre-step
+      # above is skipped for content-only PRs, so without this a `/docs/...`
+      # link to a page that doesn't exist reached the reviewer only if the
+      # model happened to notice (#21560). Results are appended to
+      # `.hugo-build.json.link_integrity` — the composer pre-stubs them as 🚨
+      # rows — and `link_check` records whether the check ran at all.
+      - name: Check added internal links
+        if: steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/link-check-diff.py \
+            --pr "$PR" --repo "$GITHUB_REPOSITORY" --repo-root . \
+            --merge-into .hugo-build.json \
+            || python3 -c "import json,pathlib; p=pathlib.Path('.hugo-build.json'); d=json.loads(p.read_text()) if p.is_file() else {'schema_version': 1, 'link_integrity': []}; d['link_check']={'ran': False, 'checked': 0, 'dead': 0, 'error': 'link-check-diff.py failed to start'}; p.write_text(json.dumps(d, indent=2)+'\\n'); print('::warning::link-check-diff.py failed to start; dead internal links were NOT checked')"
+
       # Wall-clock timestamp for the `## Pre-merge Review — Last updated <ts>`
       # line. Computed in the workflow (not by the model) so the timestamp is
       # always a real UTC instant — left to the model, it sometimes renders a
