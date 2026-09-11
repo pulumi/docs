@@ -2,6 +2,7 @@
 title: What Is Terraform State?
 meta_desc: "Terraform state maps your configuration to real cloud resources so Terraform knows what it manages. Learn how the state file, backends, and locking work."
 type: what-is
+date: 2026-07-21T12:18:00-07:00
 page_title: "What Is Terraform State?"
 authors: ["alex-leventer"]
 ---

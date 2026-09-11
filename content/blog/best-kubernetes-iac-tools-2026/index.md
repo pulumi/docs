@@ -29,6 +29,10 @@ itemlist:
     - name: "cdk8s"
     - name: "kro"
 
+related_posts:
+    - terraform-kubernetes
+    - ai-agents-on-kubernetes
+
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
@@ -80,7 +84,7 @@ The honest tradeoff: Pulumi is a commercial platform with an open-source core, a
 
 ## Terraform and OpenTofu remain the default for the cluster layer, with real friction at the workload layer
 
-Terraform (and its community-governed fork, OpenTofu, since HashiCorp's Business Source License change) is still the most widely deployed way to provision the cluster itself: the AWS, Google, and Azure providers are mature, and the Kubernetes and Helm providers (currently at 3.2.1 and 3.2.0 respectively) let the same HCL codebase reach into the cluster afterward. That reach is also where the friction shows up. Terraform plans at plan time, before it has ever talked to a live cluster, so it frequently cannot know what a CRD's schema actually looks like until it's already been applied; this is a well-documented source of "plan differs from apply" surprises when CRDs and their consumers live in the same configuration. The common workaround is a two-stage apply, provisioning the cluster in one Terraform run and the workloads that depend on its CRDs in a second, which works but adds operational ceremony that a single-language, single-run tool doesn't need.
+Terraform (and its community-governed fork, OpenTofu, since HashiCorp's Business Source License change) is still the most widely deployed way to provision the cluster itself: the AWS, Google, and Azure providers are mature, and the Kubernetes and Helm providers (currently at 3.2.1 and 3.2.0 respectively) let the same HCL codebase reach into the cluster afterward. That reach is also where the friction shows up. Terraform plans at plan time, before it has ever talked to a live cluster, so it frequently cannot know what a CRD's schema actually looks like until it's already been applied; this is a well-documented source of "plan differs from apply" surprises when CRDs and their consumers live in the same configuration. The common workaround is a two-stage apply, provisioning the cluster in one Terraform run and the workloads that depend on its CRDs in a second, which works but adds operational ceremony that a single-language, single-run tool doesn't need. Our [practical guide to Terraform and Kubernetes](/blog/terraform-kubernetes/) walks through where that friction shows up day to day and how a general-purpose language changes the testing and CRD story.
 
 HCL itself is also a genuine limit at the workload layer: templating a Deployment's environment variables across ten similar services means either heavy use of `for_each` and dynamic blocks, or accepting a lot of copy-pasted HCL, because HCL was designed as a configuration language rather than a general-purpose one with functions and reusable abstractions. None of this makes Terraform a poor choice for the cluster layer, where it remains a defensible default with a huge ecosystem of examples and modules. It's a reason many Terraform shops hand workload templating off to Helm rather than fighting the Kubernetes provider for it.
 

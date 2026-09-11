@@ -1,0 +1,24 @@
+{{/*
+  Renders the "generated from" caption for the core package schema reference.
+
+  Unlike the ESC schemas, which the Cloud API exposes with no version metadata at
+  all (hence the change-gated date in layouts/shortcodes/esc-schema-updated.html),
+  the package metaschema ships inside the pulumi binary and is versioned with the
+  CLI. So the honest freshness signal here is the release it came from, and it
+  matches what /docs/iac/cli/ says at the top of every command page.
+
+  The per-language sections carry their own version inline, because each comes from
+  a repo that releases on its own cadence.
+
+  Place once, directly under the "## Pulumi package schema" heading.
+*/}}
+{{ with site.Data.package_schema.core }}
+  {{ with .source }}
+    <p style="font-size:0.875rem;color:var(--docs-fg-muted,#6b7280);margin-top:-0.5rem;">
+      Generated from <a href="{{ .url }}"><code>{{ .path }}</code></a> in {{ .repo }}
+      <code>{{ .version }}</code> &mdash; the metaschema
+      <a href="/docs/iac/cli/commands/pulumi_schema_check/"><code>pulumi schema check</code></a>
+      validates against.
+    </p>
+  {{ end }}
+{{ end }}

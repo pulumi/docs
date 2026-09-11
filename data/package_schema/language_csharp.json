@@ -1,0 +1,119 @@
+{
+  "choosable": "csharp",
+  "generated": "2026-09-03",
+  "label": "C#",
+  "language": "csharp",
+  "schemaKey": "csharp",
+  "sections": {
+    "packagelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "NuGet package references to add to the generated `.csproj`, as a map from package name to version.",
+          "name": "packageReferences",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Overrides for module names to C# namespaces, as a map from module name to namespace.",
+          "name": "namespaces",
+          "required": false,
+          "type": {
+            "text": "map[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Toggles compatibility mode for a specified target.",
+          "name": "compatibility",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Generates constructors that take a dictionary of properties in addition to the typed args class.",
+          "name": "dictionaryConstructors",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Paths to local `.csproj` files to reference from the generated project, instead of resolving those dependencies from NuGet.",
+          "name": "projectReferences",
+          "required": false,
+          "type": {
+            "text": "array[string]"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Determines whether to make single-return-value methods return an output object or the single value.",
+          "name": "liftSingleValueMethodReturns",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "The root namespace used for the package. This defaults to `Pulumi`.",
+          "name": "rootNamespace",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        },
+        {
+          "deprecated": false,
+          "description": "Allow the Pkg.Version field to filter down to emitted code.",
+          "name": "respectSchemaVersion",
+          "required": false,
+          "type": {
+            "text": "boolean"
+          }
+        }
+      ]
+    },
+    "propertylanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "An override for the generated C# property name.",
+          "name": "name",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    },
+    "resourcelanguage": {
+      "properties": [
+        {
+          "deprecated": false,
+          "description": "An override for the generated C# class name for the resource.",
+          "name": "name",
+          "required": false,
+          "type": {
+            "text": "string"
+          }
+        }
+      ]
+    }
+  },
+  "source": {
+    "paths": [
+      "pulumi-language-dotnet/codegen/importer.go"
+    ],
+    "repo": "pulumi/pulumi-dotnet",
+    "url": "https://github.com/pulumi/pulumi-dotnet/tree/v3.113.1",
+    "version": "v3.113.1"
+  }
+}

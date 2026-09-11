@@ -163,7 +163,7 @@ available for $2,000 per month with up to 4,750 managed resources. You can also
 These legacy plans are separate from the current Pro edition.
 They are retired and don't include newer capabilities
 such as [Pulumi Deployments](/docs/deployments/),
-[Pulumi Discovery](/docs/insights/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+[Pulumi Discovery](/docs/discovery-governance/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.
 

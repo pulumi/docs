@@ -14,7 +14,7 @@ menu:
 aliases:
 ---
 
-Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/insights/discovery/).
+Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Discovery](/docs/discovery-governance/discovery/).
 
 ## Why store Terraform state in Pulumi Cloud
 
@@ -24,7 +24,7 @@ If you are managing Terraform state in S3, Azure Blob Storage, or another DIY ba
 - **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [Pulumi Cloud](https://app.pulumi.com/signin) stack Activity tab
 - **Automatic state locking** — prevents concurrent operations from corrupting state
 - **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/concepts/rbac/)
-- **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/insights/discovery/search/)
+- **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/discovery-governance/discovery/search/)
 - **Platform integration** — root module outputs become Pulumi stack outputs, accessible via [stack references](/docs/iac/concepts/stacks/#stackreferences) from other Pulumi stacks or via the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/) with no extra tokens or credentials required
 
 ## How it works
@@ -418,8 +418,8 @@ steps:
 
 Once your Terraform state is in Pulumi Cloud, you can:
 
-- **View resources** in [Resource Search](/docs/insights/discovery/search/) alongside your Pulumi-managed resources
-- **Run audit policies** by adding the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights
+- **View resources** in [Resource Search](/docs/discovery-governance/discovery/search/) alongside your Pulumi-managed resources
+- **Run audit policies** by adding the stack to an [audit policy group](/docs/discovery-governance/policy/policy-groups/) in Discovery
 - **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
 
 ### Resource mapping
@@ -434,9 +434,9 @@ Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/con
 
 {{< pulumi-cloud "audit-policies" />}}
 
-You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
+You can run [audit (detective) policy packs](/docs/discovery-governance/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
 
-To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
+To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/discovery-governance/policy/policy-groups/) in Discovery. Policy packs are then evaluated continuously against the stack's resources.
 
 {{% notes type="info" %}}
 Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.

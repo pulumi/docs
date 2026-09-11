@@ -37,7 +37,7 @@ The following table summarizes how open source Pulumi and Pulumi Cloud compare a
 | Secrets encryption | Passphrase or self-managed KMS keys | Managed encryption by default; can also use a separate encryption service |
 | Secrets and configuration management | Per-stack config files only | Per-stack config files, plus centrally managed, reusable Pulumi ESC environments |
 | Policy as code | Policy packs kept on disk and passed as CLI arguments | Centrally managed enforcement, plus custom and pre-built policy packs |
-| Cloud resource inventory | Not included | Pulumi Insights discovers resources not managed by Pulumi |
+| Cloud resource inventory | Not included | Pulumi Discovery finds resources not managed by Pulumi |
 | Drift detection | Run `pulumi refresh` manually | Scheduled drift detection and remediation |
 | AI assistance | Pulumi CLI and editor integrations | Pulumi Neo AI agent integrated across the platform |
 | Ephemeral environments | Not included | Review Stacks and TTL Stacks |
@@ -75,13 +75,13 @@ Pulumi Cloud supports the same per-stack config files and adds Pulumi ESC (Envir
 
 With open source Pulumi, you can inspect the resources Pulumi manages by reading state—for example, with `pulumi stack` and `pulumi stack export`—but only one stack's state at a time, and only for resources Pulumi created. There is no built-in view of resources across stacks or of resources outside Pulumi's state.
 
-Pulumi Cloud adds [Pulumi Insights](/docs/insights/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
+Pulumi Cloud adds [Pulumi Discovery](/docs/discovery-governance/), which scans your connected cloud accounts to build a searchable inventory of resources—including resources that were not created or managed by Pulumi. This helps you find unmanaged or orphaned resources and understand what exists across your cloud accounts. This capability is available only with Pulumi Cloud.
 
 ## Policy enforcement
 
 Both open source Pulumi and Pulumi Cloud support policy as code. With open source Pulumi, you write your own policy packs and run them locally or in CI: the policy packs must be present on disk, and you supply them as command-line arguments on each run. Open source policy evaluation is limited to the resources defined in the Pulumi program being run.
 
-Pulumi Cloud manages policy enforcement centrally. Policies are configured once for the organization and applied automatically to every update, so individual users do not need the policy packs locally. In addition to custom policy packs, Pulumi Cloud offers pre-built policy packs for common security, compliance, and cost rules. Policies apply both to infrastructure as code—blocking violations before they are deployed—and to existing cloud resources, including resources that were not created or managed by Pulumi. Pulumi Cloud evaluates policies against the resources discovered by [cloud resource inventory](#cloud-resource-inventory) with Pulumi Insights, so you can find and remediate violations across your cloud accounts regardless of how the resources were provisioned. Pulumi Cloud can also detect [drift](/docs/deployments/concepts/drift/) on a schedule, alerting you—or remediating automatically—when deployed infrastructure diverges from its declared state.
+Pulumi Cloud manages policy enforcement centrally. Policies are configured once for the organization and applied automatically to every update, so individual users do not need the policy packs locally. Beyond custom policy packs, Pulumi Cloud offers pre-built policy packs for common security, compliance, and cost rules. Policies apply to infrastructure as code, blocking violations before they are deployed, and to existing cloud resources, including resources that were not created or managed by Pulumi. Pulumi Cloud evaluates policies against the resources discovered by [cloud resource inventory](#cloud-resource-inventory) with Pulumi Discovery, so you can find and remediate violations across your cloud accounts regardless of how the resources were provisioned. Pulumi Cloud can also detect [drift](/docs/deployments/concepts/drift/) on a schedule, alerting you (or remediating automatically) when deployed infrastructure diverges from its declared state.
 
 ## AI assistance
 

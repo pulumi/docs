@@ -103,7 +103,8 @@ Read `.content-review-queue.json` from the repo root (written by
   `resolved_claims`. A marker you do not resolve is carried onto the next
   review with `unresolved_reviews` incremented, and after two such rounds it
   is escalated for a human — so silently skipping one does not make it go
-  away, it just delays it.
+  away, it just delays it. (That next review is not tomorrow's: the boost
+  sits out a five-day cooldown after any completed review of the page.)
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -171,13 +172,22 @@ python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
     --changed-files <path> --out .cross-sibling-discovery.json
 ```
 
-Run Vale the way the review workflow does, in whole-file mode (no `--pr`):
+Run Vale in whole-file mode (no `--pr`) and in **fix mode**:
 
 ```bash
 vale --no-exit --output=JSON <path> > .vale-raw.json 2>/dev/null || echo '{}' > .vale-raw.json
 python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-    --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
+    --fix-mode --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
 ```
+
+`--fix-mode` is required here and is the one place it is used. Without it the
+filter applies the pinned review's comment budget — 10 findings per file, 50
+total, advisory findings de-duplicated per (category, message) — which
+truncates the backlog you are here to clear. A single-file run hits the
+per-file cap exactly, you fix those 10, and the next review run surfaces the
+next 10 as fresh PR churn. The dedup is worse for a fixer than for a reader:
+`Pulumi.NarrativeWe` emits the same message for every "we will" in the file,
+so a deduped list shows one line and hides the rest.
 
 If any artifact is missing or carries an `errors` field, continue with the
 artifacts you have and say so in the PR description; never fabricate artifact
@@ -242,6 +252,60 @@ that every hunk in your exported changes falls within the line range of a
 recorded finding (`scripts/content-review/verify-fix-scope.py`); an edit
 outside the recorded findings fails that gate and nothing is pushed — so if a
 change doesn't trace to a finding above, don't make it.
+
+#### Re-run Vale to a fixpoint — glow-up lane only
+
+**Only when `mode` is `glowup`.** After applying your Vale fixes, re-run the
+filter over the modified file and triage what comes back, up to **3 rounds
+total** or until a round yields nothing you would apply:
+
+```bash
+vale --no-exit --output=JSON <path> > .vale-round<N>.json 2>/dev/null || echo '{}' > .vale-round<N>.json
+python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+    --fix-mode --in .vale-round<N>.json --out .vale-findings-round<N>.json \
+    || echo '[]' > .vale-findings-round<N>.json
+```
+
+A fix can *create* a finding: Vale's rules are independent, so a phrase one
+rule steers you toward can be a phrase another rule flags. The case that
+motivated this loop was #21456 — `write-good.TooWordy` flagged "a number of",
+the fix chose "several", and `write-good.Weasel` flagged "several". That
+specific pair is fixed at the source (`Weasel`'s quantifier tokens were
+removed; see #21470), but nothing prevents the next one, and a page that
+oscillates should stop here rather than at the reader.
+
+Rules for the loop:
+
+- **Stop at 3 rounds** and record any still-open findings under **Findings not
+  applied**, with the round count. Non-convergence is a style-config bug worth
+  a human's attention — do not keep grinding, and do not oscillate a phrase
+  back to a form an earlier round already rejected.
+- **If two rules disagree on the same span, change neither.** Record it under
+  Findings not applied naming both rules. Picking a third phrasing to dodge
+  both is how prose gets worse one round at a time ("provides a number of
+  options" → "provides several options" → "provides options" lost the reader
+  the fact that there are several).
+- **Respect the churn budget.** `verify-glowup-scope.py` fails the review over
+  `MAX_CHANGED_LINES` (400) total added+deleted. If a later round would push
+  you near it, stop and flag the remainder.
+- **Keep the round files dot-prefixed and never overwrite
+  `.vale-findings.json`.** The export step stages with
+  `git add -A -- ':!.*' ':!.*/**'`, so a dot-path can't ride along in the
+  handoff patch; a round file named without the dot would land in the diff and
+  fail the scope gate on paths. The step-2 artifact stays the immutable record
+  of what the pre-step found.
+
+**Do not do this on the fix lane** (`mode` other than `glowup`), where it would
+fail the publish gate rather than help. `verify-fix-scope.py` reads its allowed
+ranges from the `review-snapshot` artifact, which is uploaded *before* the model
+step and is immutable from then on, and matches hunks against **pre-fix**
+line numbers. A round-2 finding exists in neither: it is absent from the
+snapshot, and its line numbers index the already-modified file. Fixes traceable
+only to a later round therefore read as out-of-scope edits, and the publish job
+fails before anything is pushed. The glow-up lane is exempt because
+`verify-glowup-scope.py` bounds a rehab by path, size, and protected
+frontmatter instead of per-finding ranges — page-wide editing is that lane's
+whole job.
 
 Editing guardrails:
 
@@ -496,7 +560,9 @@ Each banked item is split in two, and the split is the point:
 1. **Work the backlog first.** Execute every banked finding, or explicitly
    decline it with one line of reasoning. Every item lands in exactly one of
    the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
-   item; fill "What changed") or **Backlog declined**. No silent drops.
+   item; fill "What changed") or **Backlog declined** (move the whole row,
+   keeping its id cell, and fill "Why not executed"). No silent drops, and
+   no row in both tables.
 1. **Then the secondary sweep**: apply the improvement taxonomy from
    `.claude/commands/glow-up.md` §5 — style, structural fixes, code
    formatting, terminology, links, image/diagram flags (flag-only, as ever),
@@ -520,6 +586,19 @@ Each banked item is split in two, and the split is the point:
    check is a `::warning::`, not a violation, but every warning must be
    acknowledged in the PR body under "Secondary sweep → Content
    enhancements": name the verdict that supports the wording, or remove it.
+   Then self-check the PR body the way the publish gate will:
+
+   ```bash
+   python3 scripts/content-review/compose-pr-body.py --check-accounting \
+       --body-file .pr-body-draft.md --backlog .glowup-backlog.json
+   ```
+
+   Exit 0 is required. It lists every stubbed id that is not a row in
+   exactly one of the two Backlog tables and any `<TODO` either table still
+   carries; fix the body and re-run until it is clean. Membership is by
+   row (the backticked id that opens a row's first cell), so a reason cell
+   may cross-reference another row ("see `findings-f17`") freely — that is
+   not a second row.
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
    "skipped_findings": <declined count>, "clarity_flag": <bool>,
    "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
@@ -652,7 +731,9 @@ The nightly `claims-reverify.yml` workflow re-checks volatile entities
 contradicted, every page asserting it gets a `stale_claims` marker in its
 ledger entry, and `select-articles.py` boosts those pages to the front of the
 next sweep — that is how a page can arrive in your queue the day after a
-release changed a fact it states.
+release changed a fact it states. The boost never fires within five days of
+the page's last completed review, so a marker one review leaves unresolved
+comes back after the cooldown rather than the next morning.
 
 None of this is yours to write: this worker's whole-page runs are the index's
 **only** writer, and the workflow runs `record-claims.py` itself after your

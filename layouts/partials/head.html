@@ -247,7 +247,13 @@
     {{ end }}
 
     {{ if .IsHome }}
-        <title>{{ .Site.Title }}</title>
+        {{- /* Home page: honour the front-matter title (title_tag, then .Title)
+             the same way every other page in this file does, falling back to
+             the site title only if the home page has neither. This keeps the
+             rendered <title> consistent with the WebPage schema name, which
+             already reads title_tag-then-.Title, and with og:title, which on
+             the home page resolves to the same front-matter title. */ -}}
+        <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
         {{- /* Blog taxonomy pages: use the display name (category name / series
@@ -326,6 +332,27 @@
             <title>{{ $title }} | Case Studies | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
+        {{ end }}
+
+        {{- /* /blog/page/N/ (N>1) gets a canonical further below in this file
+             pointing at /blog/ -- Hugo resolves .RelPermalink for a paginated
+             section to the section's base URL regardless of which /page/N/
+             is being rendered, so this isn't self-referential, but a canonical
+             is still only a hint Google can choose to ignore. Search Console
+             confirms it does for this specific series: pages 2, 3, 5, and 8
+             were independently indexed anyway despite the same canonical.
+             noindex,follow removes the ambiguity while still letting crawlers
+             follow links to the real posts linked from the page. Category
+             term pagination (the $blogTerm branch above) gets the identical
+             canonical-to-base-URL treatment and is deliberately left
+             untouched -- confirmed via GSC's "Alternate page with proper
+             canonical tag" coverage state, Google does honor it there, even
+             though nothing in the template treats the two series
+             differently. Tag/author term pagination is a separate case,
+             already blanket-noindexed outright by taxonomy-indexable.html,
+             which this branch does not touch. */ -}}
+        {{ if and (eq .Type "blog") .IsSection (gt $pageNum 1) }}
+            <meta name="robots" content="noindex,follow" />
         {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--

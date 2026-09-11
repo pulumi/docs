@@ -56,7 +56,7 @@ pulumi stack output --json
 
 ## Verifiable by design: preview every change
 
-Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that shows exactly what will be created, updated, or deleted before anything happens. That plan-then-apply model matters for agents: a change can be inspected (by the agent, by a human, or by a [policy](/docs/insights/policy/)) and confirmed before it lands, rather than discovered after the fact. An agent can run `pulumi preview --json`, reason about the diff, and only then run `pulumi up`.
+Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that shows exactly what will be created, updated, or deleted before anything happens. That plan-then-apply model matters for agents: a change can be inspected (by the agent, by a human, or by a [policy](/docs/discovery-governance/policy/)) and confirmed before it lands, rather than discovered after the fact. An agent can run `pulumi preview --json`, reason about the diff, and only then run `pulumi up`.
 
 ## Zero-friction accounts
 
@@ -65,6 +65,6 @@ An agent that runs the CLI still needs somewhere to store state. [Agent accounts
 ## Next steps
 
 - [Agent Skills](/docs/ai/skills/) — teach your agent proven Pulumi workflows it can apply on top of the CLI.
-- [Pulumi MCP server](/docs/ai/mcp-server/) — give an MCP-capable agent the same reach over the Model Context Protocol.
+- [Pulumi MCP server](/docs/ai/mcp-server/) — give an MCP-capable agent the same reach over the [Model Context Protocol](/what-is/mcp-for-infrastructure-as-code/).
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — ephemeral Pulumi Cloud accounts provisioned automatically for agents.
 - [Pulumi CLI reference](/docs/iac/cli/) — the full command set behind everything above.

@@ -54,7 +54,7 @@ Environments eliminate the need for developers to manage complex credential and 
 
 ## Policies
 
-[Policies](/docs/insights/policy/) ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
+[Policies](/docs/discovery-governance/policy/) ensure continued compliance with company requirements through automated validation. They provide guardrails that prevent misconfigurations and enforce organizational standards across all infrastructure deployments.
 
 Key characteristics:
 

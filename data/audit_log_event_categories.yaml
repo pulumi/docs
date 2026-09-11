@@ -98,6 +98,12 @@
       - organization-
       - retrial-
       - service-
+    events:
+      # A subscription change, which sits with the other organization-level
+      # settings. Listed exactly rather than by prefix because it is the only
+      # event using the abbreviated `org-` spelling; every other organization
+      # event spells it out. Add an `org-` prefix here if more of them appear.
+      - org-downgraded-to-free
 
 - id: teams
   name: Teams
@@ -154,6 +160,13 @@
   description: Cloud accounts connected for resource discovery, and the scans run against them.
   match:
     prefixes:
+      # The Insights -> Discovery rename landed in the API as new event ids:
+      # `insights-account-*` became `cloud-account-*` and
+      # `insights-trial-billing-*` became `discovery-trial-billing-*`. The
+      # `insights-` prefix is kept so a catalog that still carries the old ids
+      # does not fail the nightly job; drop it once the API stops emitting them.
+      - cloud-account-
+      - discovery-
       - insights-
 
 - id: neo

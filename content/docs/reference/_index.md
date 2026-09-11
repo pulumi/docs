@@ -106,7 +106,7 @@ sections:
 
   - icon: link
     heading: Property Paths
-    description: Reference for property path syntax used in resource options, ESC, and Insights.
+    description: Reference for property path syntax used in resource options, ESC, and Discovery.
     link: /docs/reference/property-paths/
 
 - type: button-cards

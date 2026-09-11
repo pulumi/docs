@@ -66,6 +66,7 @@ Artifactory
 Astral's
 Async
 async
+asyncio
 Atlassian
 Audichron
 Audichrons
@@ -314,6 +315,7 @@ Gloo
 goated
 goldrush
 goto
+Gradle
 Grafana
 grandboss
 greenfielders
@@ -437,6 +439,7 @@ livestream
 livestreams
 lockdown
 lockfile
+Logfire
 lookup's
 lookups
 loopback
@@ -654,6 +657,7 @@ serverlessly
 shareability
 Sharma
 Shilkov
+shortcodes
 Shoutouts
 signup
 Signup
@@ -707,6 +711,7 @@ superset
 swappable
 syntaxes
 syscalls
+systemd
 taggable
 tailnet
 Tailscale
@@ -823,6 +828,7 @@ Wiggum
 winget
 Winget
 Wireshark
+wordmarks
 Wordpress
 worktree
 Worktrees

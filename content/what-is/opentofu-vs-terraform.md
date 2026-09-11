@@ -2,6 +2,7 @@
 title: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
 type: what-is
+date: 2024-03-06T10:18:35-08:00
 page_title: "OpenTofu vs. Terraform"
 authors: ["pulumi-content-team"]
 include_floqer: true
@@ -114,7 +115,7 @@ Pulumi integrates with existing CI/CD providers, including AWS Code Services, Az
 
 ### Policy as Code {#policy}
 
-Pulumi provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/insights/policy/).
+Pulumi provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/discovery-governance/policy/).
 
 ### Secrets Management {#secrets}
 

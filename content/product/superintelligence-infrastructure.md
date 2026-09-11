@@ -89,7 +89,7 @@ casestudy:
       cta: Read the story
       link: /case-studies/snowflake/
     - body: |
-        **BMW** enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
+        **BMW** manages more than 20,000 cloud resources through self-service infrastructure while maintaining enterprise governance.
       cta: Read the story
       logo: /logos/customers/bmw.svg
       link: /case-studies/bmw/

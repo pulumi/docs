@@ -11,7 +11,7 @@ menu:
 pulumi_cloud_feature: customer-managed-runners
 ---
 
-Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Discovery](/docs/insights/discovery/) scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
+Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Discovery](/docs/discovery-governance/discovery/) scans, and [policy evaluations](/docs/discovery-governance/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
 
 ## Using customer-managed workflow runners
 
@@ -33,24 +33,24 @@ Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [
 
 Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
 
-Workflow runners support multiple workflow types beyond deployments, including Pulumi Insights scans and policy evaluations. By default, all workflow types are enabled. You can restrict which workflow types a workflow runner handles using the `enabled_workflow_types` configuration option.
+Workflow runners support multiple workflow types beyond deployments, including Discovery scans and policy evaluations. By default, all workflow types are enabled. You can restrict which workflow types a workflow runner handles using the `enabled_workflow_types` configuration option.
 
 ### Scaling and concurrency
 
-Each workflow runner process runs **one deployment at a time**, plus optionally **one Insights scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Insights scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/deployments/concepts/customer-managed-runners/#execution-model).
+Each workflow runner process runs **one deployment at a time**, plus optionally **one Discovery scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Discovery scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/deployments/concepts/customer-managed-runners/#execution-model).
 
 Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
 
-- **Insights scans and policy evaluations** are lease-based: if a runner crashes or loses connectivity mid-job, the lease eventually expires and another runner in the pool picks up the job.
+- **Discovery scans and policy evaluations** are lease-based: if a runner crashes or loses connectivity mid-job, the lease eventually expires and another runner in the pool picks up the job.
 - **Deployments** are not redelivered. If a runner stops heartbeating for 10 minutes mid-deployment, the deployment is marked failed rather than handed to another runner.
 
-Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency limit. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
+Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency limit. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Discovery scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
 
 Patterns for scaling:
 
-- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one deployment slot, plus an Insights/policy slot if those workflow types are enabled on the pool.
+- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one deployment slot, plus a Discovery/policy slot if those workflow types are enabled on the pool.
 - **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
-- **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
+- **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Discovery scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
 
 {{% notes type="info" %}}
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.

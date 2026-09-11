@@ -85,7 +85,7 @@ The **Environment permissions** dropdown sets the access level that members on t
 
 #### Account permissions
 
-The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/insights/):
+The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/discovery-governance/):
 
 - **None** — Members have no default access to accounts.
 - **Read** — Members can view accounts, their scan configurations, and scan results.

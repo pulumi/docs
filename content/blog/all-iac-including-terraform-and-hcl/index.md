@@ -81,7 +81,7 @@ For example:
 
 * [Lemonade](https://www.pulumi.com/case-studies/lemonade/) switched from Terraform to Pulumi so they could embed business logic into infrastructure, share and reuse logic, and scale their lean ops team to support a much larger group of developers. "We're not limited to one-size-fits-all configurations, but can actually implement environment-specific customizations for our infrastructure."
 
-* [BMW](https://www.pulumi.com/case-studies/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and scaling to support 10,000+ developers.
+* [BMW](https://www.pulumi.com/case-studies/bmw/) was able to establish a center of infrastructure excellence that they call CodeCraft, standardizing all infrastructure delivery, and managing more than 20,000 cloud resources with Python-based infrastructure code.
 
 * [Supabase](https://www.pulumi.com/case-studies/supabase/) was able to scale to meet the heightened demands and pace of AI, saying that “the infrastructure team acts as groundkeepers of our Pulumi practices, not gatekeepers, but promoters for the entire org."
 
