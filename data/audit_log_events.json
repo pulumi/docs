@@ -975,6 +975,16 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
+      "description": "An expired-trial organization was downgraded to the Free plan. The downgrading admin became the owner and all other members were suspended.",
+      "displayName": "Organization Downgraded To Free",
+      "event": "org-downgraded-to-free",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
       "description": "An organization's identity backend (GitHub, GitLab, SAML, or Pulumi) was changed.",
       "displayName": "Organization Backend Changed",
       "event": "organization-backend-changed",
