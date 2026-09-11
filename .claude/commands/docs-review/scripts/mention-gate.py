@@ -41,9 +41,15 @@ MENTION = "@claude"
 # spans — a run of N backticks closed by the same run, per CommonMark — then
 # whole blockquoted lines. Order matters: an inline-span regex run over a
 # fence would pair the wrong backticks.
+#
+# The inline pattern deliberately stays on one line (no re.S): a code span
+# can't cross a paragraph break, so a stray unpaired backtick must not pair
+# with one paragraphs later and swallow a live request in between. Erring
+# this way costs at most a run on a quoted protocol split across lines;
+# erring the other way silently drops a real request.
 _FENCE_RE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})[^\n]*\n.*?^[ \t]{0,3}\1[ \t]*$", re.S | re.M)
 _UNCLOSED_FENCE_RE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})[^\n]*\n.*\Z", re.S | re.M)
-_INLINE_RE = re.compile(r"(`+)(?!`)(.+?)(?<!`)\1(?!`)", re.S)
+_INLINE_RE = re.compile(r"(`+)(?!`)([^\n]+?)(?<!`)\1(?!`)")
 _QUOTE_LINE_RE = re.compile(r"^[ \t]{0,3}>.*$", re.M)
 
 
@@ -204,6 +210,11 @@ def _self_test() -> int:
           not decide("``@claude #update-review``", "update-review", "new-review")[0])
     check("unclosed fence swallows the rest",
           not decide("```\n@claude #update-review", "update-review", "new-review")[0])
+    check("a stray backtick before a live request does not swallow it",
+          decide("One stray ` here.\n\n@claude F1: default is 5 per the AWS reference #update-review\n\nSee `verify.py`.",
+                 "update-review", "new-review")[0])
+    check("a span still can't hide a request on the same line",
+          not decide("try `@claude #update-review` first", "update-review", "new-review")[0])
     check("live #new-review beats #update-review",
           not decide("@claude #update-review #new-review", "update-review", "new-review")[0])
     check("quoted #new-review does not suppress",

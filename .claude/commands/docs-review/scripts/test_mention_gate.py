@@ -39,6 +39,13 @@ def test_live_request_fires_even_next_to_a_quoted_one():
     assert mg.decide(body, "update-review", "new-review")[0] is True
 
 
+def test_stray_backtick_before_a_live_request_does_not_swallow_it():
+    # F1 on #21557: with re.S a lone backtick paired with one paragraphs later
+    # and blanked out a real request. Code spans never cross a paragraph break.
+    body = "One stray ` here.\n\n@claude F1: default is 5 per the AWS reference #update-review\n\nSee `verify.py`."
+    assert mg.decide(body, "update-review", "new-review")[0] is True
+
+
 def test_blockquoted_reply_does_not_fire():
     body = "> @claude F2: accepting as-is #update-review\n\nDid this, thanks!"
     assert mg.decide(body, "update-review", "new-review")[0] is False
