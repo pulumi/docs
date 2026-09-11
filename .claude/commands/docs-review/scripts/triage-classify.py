@@ -64,6 +64,48 @@ OVERSIZED_TOTAL_LINES = 15_000
 OVERSIZED_TOTAL_FILES = 150
 
 
+# Content-serving data files. `data/` is otherwise `domain:other` (repo
+# plumbing, routed to the tools lane by the v3 matrix), but a handful of
+# files under it ARE content: the docs nav, the blog taxonomies, author bios,
+# the pricing matrix. Classifying them with the content they serve keeps a
+# doc move (which always edits the nav yaml) from dragging a tools approver
+# in, and keeps the `domain:` label honest about what a PR is. Generated
+# data (versions.json, package_schema/, audit-log JSON, ...) stays `other`:
+# those PRs are regen lanes, and a human edit to one is a tooling change.
+CONTENT_DATA_EXACT = {
+    # docs: navigation and reference tables rendered into /docs pages
+    "data/docs_menu_sections.yml": "domain:docs",
+    "data/docs_nav.yaml": "domain:docs",
+    "data/resource_options.yaml": "domain:docs",
+    "data/what_is_sections.yml": "domain:docs",
+    "data/glossary.toml": "domain:docs",
+    # blog: taxonomies, homepage curation, author bios, case-study industries
+    "data/blog_categories.yaml": "domain:blog",
+    "data/blog_tags.yaml": "domain:blog",
+    "data/blog_series.yml": "domain:blog",
+    "data/blog_home.yaml": "domain:blog",
+    "data/blog_link_types.yaml": "domain:blog",
+    "data/case_study_industries.yaml": "domain:blog",
+    # website: the pricing matrix (also PRICING_SENSITIVE) and site chrome /
+    # marketing data rendered on landing pages
+    "data/pulumi_pricing.yaml": "domain:website",
+    "data/announcements.yml": "domain:website",
+    "data/header_nav.yaml": "domain:website",
+    "data/footer.yml": "domain:website",
+    "data/awards.toml": "domain:website",
+    "data/newsroom.toml": "domain:website",
+    # frontend: data consumed only by templates (homepage hero animation
+    # sources, icon color tokens)
+    "data/hero_agent_loop.yaml": "domain:frontend",
+    "data/hero_agent_loop_generated.yaml": "domain:frontend",
+}
+CONTENT_DATA_PREFIXES = (
+    ("data/team/", "domain:blog"),
+    ("data/partners/", "domain:website"),
+    ("data/colors/", "domain:frontend"),
+)
+
+
 def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
     # programs territory (the latter would otherwise fall to infra).
@@ -74,6 +116,11 @@ def classify_path(path: str) -> str | None:
     for prefix in ("content/docs/", "content/what-is/"):
         if path.startswith(prefix):
             return "domain:docs"
+    if path in CONTENT_DATA_EXACT:
+        return CONTENT_DATA_EXACT[path]
+    for prefix, domain in CONTENT_DATA_PREFIXES:
+        if path.startswith(prefix):
+            return domain
     if path.startswith(".github/workflows/"):
         return "domain:infra"
     if path.startswith("scripts/") or path.startswith("infrastructure/"):
@@ -82,20 +129,25 @@ def classify_path(path: str) -> str | None:
         return "domain:infra"
     if WEBPACK_RE.match(path):
         return "domain:infra"
-    # Hugo templates + asset-pipeline source + static-served files — build-time
-    # infrastructure that affects how content renders. static/programs/ is
-    # already routed at the top of this function (programs check returns
-    # first); the explicit exclusion below documents intent for readers.
-    # theme/ is the same kind of thing one level down: the SCSS and TypeScript
-    # sources compiled into the site's CSS/JS bundles. Its omission is why
-    # PR #21164 (a consent-manager change under theme/src/ts/) carried no
-    # domain label and was reviewed under shared-criteria only.
+    # Hugo templates + asset-pipeline source + static-served files: the
+    # site's rendering layer. Reviewed under the infra criteria (Hugo
+    # correctness, dark-mode pass — see docs-review:references:domain-routing)
+    # but a domain of its own, because the v3 approval matrix routes it to
+    # marketing (who own how the site looks) rather than tools (who own how
+    # it builds and deploys), and a template change never needs a staging
+    # run. static/programs/ is already routed at the top of this function
+    # (programs check returns first); the explicit exclusion below documents
+    # intent for readers. theme/ is the same kind of thing one level down:
+    # the SCSS and TypeScript sources compiled into the site's CSS/JS
+    # bundles. Its omission is why PR #21164 (a consent-manager change under
+    # theme/src/ts/) carried no domain label and was reviewed under
+    # shared-criteria only.
     if (path.startswith("layouts/")
             or path.startswith("assets/")
             or path.startswith("theme/")):
-        return "domain:infra"
+        return "domain:frontend"
     if path.startswith("static/") and not path.startswith("static/programs/"):
-        return "domain:infra"
+        return "domain:frontend"
     # Marketing / landing pages under content/ that aren't blog or docs
     # (about/, pricing/, vs/, why-pulumi/, legal/, careers/, etc.). These
     # carry pricing, legal, and competitive claims with real consequences
@@ -458,15 +510,66 @@ MECHANICAL_CLAIMS_EXEMPT_LINE_RE = re.compile(r"^(?:(?:updated|tags):(?:\s|$)|- 
 
 # Files whose content is a live pricing/edition claim. A change here is
 # never mechanical regardless of size — see AGENTS.md "Pulumi Cloud
-# availability markers" / "Pricing data".
-PRICING_SENSITIVE_EXACT = {"data/pulumi_pricing.yaml"}
+# availability markers" / "Pricing data" — AND stacks the marketing
+# approver via the routing claims overlay (route-pr.py / sentinel.py key
+# the overlay on the "pricing-sensitive" reason prefix).
+PRICING_SENSITIVE_EXACT = {
+    "data/pulumi_pricing.yaml",
+    "content/docs/administration/get-started/choose-edition.md",
+}
 PRICING_SENSITIVE_PREFIXES = ("content/pricing/",)
+
+# Pages that routinely state what each Pulumi Cloud edition includes, where a
+# two-line rewrite of a feature list reads as "mechanical" by shape (2026-09-11
+# replay: #21446/#21447 rewrote the edition feature lists on the FAQ and
+# what-is pages inside the size caps, with 0 Layer-A claims extracted). A
+# change here is never mechanical, but it does NOT stack the marketing
+# overlay — the subject's own approver reads it. The reason string
+# deliberately does not start with "pricing-sensitive".
+EDITION_SENSITIVE_PREFIXES = ("content/docs/support/faq/", "content/what-is/")
+
+# An added line that asserts what an edition is or does. Two shapes: an
+# edition name qualifying the word "edition" ("the Enterprise edition"), or
+# "edition(s)" in the same line as a feature verb ("available in ... editions",
+# "the Enterprise edition adds ..."). Layer A's claim regexes don't cover
+# these (they key on numbers, versions, and links), and they are exactly the
+# sentences data/pulumi_pricing.yaml exists to be the single source of truth
+# for.
+EDITION_NAME_RE = re.compile(
+    r"\b(?:Individual|Team|Enterprise|Business Critical)\s+editions?\b"
+)
+_EDITION_VERBS = (
+    r"(?:includes?|included|adds?|available|only|requires?|unlocks?|allows?|"
+    r"limits?|supports?|offers?)"
+)
+EDITION_FEATURE_RE = re.compile(
+    rf"\beditions?\b.*\b{_EDITION_VERBS}\b|\b{_EDITION_VERBS}\b.*\beditions?\b",
+    re.IGNORECASE,
+)
 
 
 def _is_pricing_sensitive(path: str) -> bool:
     return path in PRICING_SENSITIVE_EXACT or any(
         path.startswith(p) for p in PRICING_SENSITIVE_PREFIXES
     )
+
+
+def _is_edition_sensitive(path: str) -> bool:
+    return any(path.startswith(p) for p in EDITION_SENSITIVE_PREFIXES)
+
+
+def edition_claim_lines(diff_text: str) -> list[tuple[str, str]]:
+    """(path, text) for every added line that asserts an edition's contents."""
+    hits: list[tuple[str, str]] = []
+    for path, file_diff in split_files(diff_text):
+        for _header, body in iter_hunks(file_diff):
+            for line in body:
+                if not line.startswith("+") or line.startswith("+++"):
+                    continue
+                text = line[1:]
+                if EDITION_NAME_RE.search(text) or EDITION_FEATURE_RE.search(text):
+                    hits.append((path, text.strip()))
+    return hits
 
 
 def _is_internal_absolute_link(url: str) -> bool:
@@ -661,12 +764,29 @@ def claims_signal_reasons(files: list[dict], diff_text: str) -> list[str]:
     line is one of the two allowed frontmatter shapes are exempt here; a
     prose claim (a price, an edition name, a version assertion in body
     text) still disqualifies.
+
+    Edition claims are the one shape Layer A misses (its regexes key on
+    numbers, versions, and links; "the Enterprise edition adds conformance
+    packs" has none), so the edition-sensitive paths and the edition-line
+    regexes add their own reasons here. Only the "pricing-sensitive" reason
+    stacks the marketing overlay downstream; the edition reasons just demote
+    mechanical.
     """
     reasons: list[str] = []
     pricing_hits = sorted({f.get("path", "") for f in files if _is_pricing_sensitive(f.get("path", ""))})
     if pricing_hits:
         reasons.append("pricing-sensitive file(s) changed: " + ", ".join(pricing_hits))
+    edition_hits = sorted({f.get("path", "") for f in files if _is_edition_sensitive(f.get("path", ""))})
+    if edition_hits:
+        reasons.append("edition-sensitive file(s) changed: " + ", ".join(edition_hits))
     if diff_text.strip():
+        edition_lines = edition_claim_lines(diff_text)
+        if edition_lines:
+            path0, text0 = edition_lines[0]
+            reasons.append(
+                f"edition claim on an added line (e.g. {path0}: {text0[:80]!r}; "
+                f"{len(edition_lines)} total)"
+            )
         claims, _stats = _extract_claims_from_patch(diff_text)
         claims = [
             c for c in claims

@@ -139,3 +139,40 @@ re-run.
 subject × change type → required approver team. Subjects come from
 `classify_path()` (shared with triage) applied to **live file lists**, never
 labels. `routing.py` fails closed on any config it cannot validate.
+
+Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
+`website`, `programs` (docs-guild or marketing per the matrix), `infra` —
+exactly the build and deploy pipeline (`infrastructure/`, `.github/workflows/`,
+`scripts/`, Makefile, bundler config): tools approves and a staging run is
+required — `frontend` — the rendering layer (`layouts/`, `theme/`, `assets/`,
+`static/`): reviewed under the infra criteria, approved by marketing, never a
+staging run — and `other`, the classifier's fallback (repo plumbing such as
+`.claude/`, `styles/`, generated `data/` files): tools approves, so an infra PR
+that also touches plumbing dedupes to one team. Content-serving `data/` files
+(docs nav, blog taxonomies, author bios, the pricing matrix) classify with the
+content they serve; the map is `CONTENT_DATA_EXACT` in `triage-classify.py`.
+
+Two optional config blocks shape what the Sentinel governs:
+
+- `not_governed:` — automation lanes the Sentinel does not gate (`authors:`
+  matches the PR author alone, e.g. Dependabot; `author_label_pairs:` needs
+  both, e.g. pulumi-bot + `automation/merge` for the generated-docs regens).
+  The check concludes `success` titled "Not governed" with no gates evaluated
+  and `governed: false` in the verdict JSON. pulumi-bot's content-review and
+  glow-up PRs carry no such label and are governed like everyone else's.
+- `auto_approve:` — the clean-brief rule. For a listed bot author, G3 is
+  satisfied without a human when the author card's header says nothing
+  blocks merge AND the brief's `### ⚠️ Check these before approving` table
+  has no finding rows (either empty-table sentinel counts; the verdict-free
+  editorial-stances H4 is outside the rule) AND the PR is not
+  `review:prose-flagged`. Any ⚠️ row sends the PR to the matrix team. The
+  verdict JSON carries `auto_approved: true` for the auto-merge job.
+
+`review:prose-flagged` (triage's Haiku + Vale pass on a short-circuited PR)
+demotes a mechanical PR to substantive inside the Sentinel — the bar is pure
+diff shape and cannot see labels — and disqualifies the clean-brief rule.
+The bar itself also refuses edition-feature rewrites Layer A cannot see:
+any change under `content/docs/support/faq/` or `content/what-is/`, and any
+added line naming an edition ("the Enterprise edition") or pairing
+"edition(s)" with a feature verb. Those reasons demote only; the marketing
+claims overlay still keys on the `pricing-sensitive` paths alone.
