@@ -97,6 +97,11 @@ def _parse_ts(value: str | None) -> datetime | None:
 
 EXPLICIT_EVENTS = {"issue_comment", "pull_request_review_comment", "pull_request_review"}
 IN_FLIGHT = {"queued", "in_progress", "waiting", "requested", "pending"}
+# The same exclusion the workflows' own `if:` applies — exact logins, never
+# a prefix or a `[bot]` heuristic. `claude[bot]` is the review itself (its
+# footer quotes the protocol); any other commenter, human or bot, who writes
+# a live request gets a run and so must count as a request in flight.
+EXCLUDED_LOGINS = {"claude[bot]"}
 
 
 def pending_explicit(
@@ -120,8 +125,8 @@ def pending_explicit(
     newest_by = ""
     for item in items:
         login = ((item.get("user") or {}).get("login") or "")
-        if login.endswith("[bot]") and not login.startswith("workprentice"):
-            continue  # the pipeline's own progress notes quote the protocol too
+        if login in EXCLUDED_LOGINS:
+            continue  # the workflow trigger excludes this login; it never starts a run
         ts = _parse_ts(item.get("created_at") or item.get("submitted_at"))
         if ts is None or ts < since:
             continue
@@ -232,7 +237,10 @@ def _self_test() -> int:
             "created_at": "2026-09-10T20:35:02Z"}
     quoted = {"user": {"login": "someone"}, "body": "the pattern is `@claude … #update-review`",
               "created_at": "2026-09-10T20:36:00Z"}
-    bot_note = {"user": {"login": "github-actions[bot]"}, "body": "@claude #update-review", "created_at": "2026-09-10T20:37:00Z"}
+    bot_note = {"user": {"login": "claude[bot]"}, "body": "@claude #update-review", "created_at": "2026-09-10T20:37:00Z"}
+    other_bot = {"user": {"login": "eon-pulumi-agent[bot]"}, "body": "@claude F1: sourced #update-review",
+                 "created_at": "2026-09-10T20:36:30Z"}
+    human = {"user": {"login": "alice"}, "body": "@claude F2: fixed #update-review", "created_at": "2026-09-10T20:36:40Z"}
     old = {"user": {"login": "alice"}, "body": "@claude F3 #update-review", "created_at": "2026-09-10T19:00:00Z"}
     inflight = {"event": "issue_comment", "status": "in_progress", "created_at": "2026-09-10T20:35:06Z"}
     finished = {"event": "issue_comment", "status": "completed", "created_at": "2026-09-10T20:35:06Z"}
@@ -243,8 +251,16 @@ def _self_test() -> int:
           pending_explicit([live], [inflight], "update-review", since, "new-review")[0])
     check("quoted request does not yield",
           not pending_explicit([quoted], [inflight], "update-review", since, "new-review")[0])
-    check("pipeline progress note does not count",
+    check("claude[bot]'s own comment does not count",
           not pending_explicit([bot_note], [inflight], "update-review", since, "new-review")[0])
+    check("workprentice[bot] counts",
+          pending_explicit([live], [inflight], "update-review", since, "new-review")[0])
+    check("any other bot login counts",
+          pending_explicit([other_bot], [{"event": "issue_comment", "status": "queued", "created_at": "2026-09-10T20:36:33Z"}],
+                           "update-review", since, "new-review")[0])
+    check("a human counts",
+          pending_explicit([human], [{"event": "issue_comment", "status": "queued", "created_at": "2026-09-10T20:36:44Z"}],
+                           "update-review", since, "new-review")[0])
     check("request older than window does not yield",
           not pending_explicit([old], [inflight], "update-review", since, "new-review")[0])
     check("finished run does not yield",

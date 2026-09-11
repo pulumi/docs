@@ -88,6 +88,16 @@ def test_pending_yields_only_for_a_live_request_with_a_run_in_flight():
     assert mg.pending_explicit([live], [finished], "update-review", _since(), "new-review")[0] is False
 
 
+def test_pending_excludes_only_the_logins_the_trigger_excludes():
+    run_after = lambda ts: [{"event": "issue_comment", "status": "queued", "created_at": ts}]
+    mk = lambda login: {"user": {"login": login}, "body": "@claude F1: fixed #update-review", "created_at": "2026-09-10T20:35:02Z"}
+    # claude[bot] is excluded by the workflow if:, so it never has a run
+    assert mg.pending_explicit([mk("claude[bot]")], run_after("2026-09-10T20:35:05Z"), "update-review", _since(), "new-review")[0] is False
+    # every other login that writes a live request does get a run
+    assert mg.pending_explicit([mk("workprentice[bot]")], run_after("2026-09-10T20:35:05Z"), "update-review", _since(), "new-review")[0] is True
+    assert mg.pending_explicit([mk("alice")], run_after("2026-09-10T20:35:05Z"), "update-review", _since(), "new-review")[0] is True
+
+
 def test_pending_ignores_the_auto_dispatch_run_itself():
     live = {"user": {"login": "alice"}, "body": "@claude F2 #update-review", "created_at": "2026-09-10T20:35:02Z"}
     auto = {"event": "workflow_dispatch", "status": "in_progress", "created_at": "2026-09-10T20:35:14Z"}
