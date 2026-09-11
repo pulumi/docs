@@ -43,7 +43,7 @@ An organization-managed user is subject to four restrictions that an ordinary Pu
 - **Organization membership.** The account can belong only to the organization that manages it. Invitations to any other organization are rejected. A user who needs access to an unrelated Pulumi organization has to create a separate Pulumi account that isn't organization-managed.
 - **Additional identities.** The account can't connect the identity providers described in [Adding new identities](/docs/administration/concepts/accounts/#adding-new-identities). GitHub, GitLab, Atlassian, and Google identities are unavailable.
 - **Creating organizations.** The account can't [create an organization](/docs/administration/concepts/organizations/#creating-an-organization).
-- **Passkeys.** The account can't register a [passkey](/docs/administration/concepts/accounts/#signing-in-with-a-passkey), and any passkey it had is revoked when it becomes organization-managed. Signing in with a passkey that predates that change is refused. The [SAML admin](/docs/administration/guides/saml/saml-admin/) is the exception here, as they are for [every other login method](#migrating-an-existing-account).
+- **Passkeys.** The account can't register a [passkey](/docs/administration/concepts/accounts/#signing-in-with-a-passkey), and any passkey it had is revoked when it becomes organization-managed. Signing in with a passkey that predates that change is refused. The [SAML admin](/docs/administration/guides/saml/saml-admin/) is the exception here, as they are for [every other authentication method](#migrating-an-existing-account).
 
 ## Migrating an existing account
 
