@@ -105,6 +105,16 @@ mycompany/staging                          4 hours ago              97
 dev                                       n/a                      n/a
 ```
 
+## Working With Multiple Stacks In Production
+
+Most teams keep one stack per environment. In our experience, over 80% of production incidents trace back to a misconfigured stack, so it is worth being deliberate about how stacks are created and removed.
+
+The `pulumi stack rm` command destroys every cloud resource the stack manages before removing the stack itself, so you do not need to run `pulumi destroy` first.
+
+Stack tags are available only on the Business Critical edition of Pulumi Cloud. If you are on a lower edition, use [stack references](/docs/iac/concepts/stack-references/) to share environment metadata between programs instead.
+
+To see which stacks are drifting from their last deployment, open Pulumi Insights and filter by project.
+
 ## Rename a stack
 
 To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be a simple stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
