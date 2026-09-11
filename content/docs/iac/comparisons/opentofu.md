@@ -145,7 +145,7 @@ Yes. A Pulumi program can read outputs from an OpenTofu state file via [`terrafo
 
 ### Is Pulumi free like OpenTofu?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in its Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. OpenTofu itself is free under MPL 2.0; commercial managed-state and collaboration tooling is sold separately by third parties such as Spacelift, env0, and Scalr.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. OpenTofu itself is free under MPL 2.0; commercial managed-state and collaboration tooling is sold separately by third parties such as Spacelift, env0, and Scalr.
 
 ### Can Pulumi and OpenTofu run side by side during migration?
 

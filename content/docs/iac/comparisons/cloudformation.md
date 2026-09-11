@@ -129,7 +129,7 @@ Yes. The [AWS Cloud Control](/registry/packages/aws-native/) provider is generat
 
 ### Is Pulumi free like AWS CloudFormation?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in its Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. CloudFormation itself has no usage cost beyond the resources it manages.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. CloudFormation itself has no usage cost beyond the resources it manages.
 
 ### How does Pulumi handle rollback if there is no automatic stack rollback?
 

@@ -135,7 +135,7 @@ Yes. Pulumi programs can [reference local or remote Terraform state](/docs/iac/g
 
 ### Is Pulumi free like CDKTF was?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) includes managed state in its Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. CDKTF itself was free and open source under MPL 2.0; the Terraform CLI that deployed its output moved to the Business Source License 1.1 in 2023.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. CDKTF itself was free and open source under MPL 2.0; the Terraform CLI that deployed its output moved to the Business Source License 1.1 in 2023.
 
 ## Next steps
 
