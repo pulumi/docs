@@ -97,7 +97,7 @@ jobs:
           sparse-checkout-cone-mode: false
 
       - name: Mention gate (a quoted protocol is not a request)
-        id: mention
+        id: mention-gate
         env:
           BODY: ${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}
           TITLE: ${{ github.event_name == 'issues' && github.event.issue.title || '' }}
@@ -119,7 +119,7 @@ jobs:
       # gated on is_pr=true anyway, so it skips on issues).
       - name: Resolve PR head SHA
         id: head
-        if: steps.mention.outputs.fire == 'true'
+        if: steps.mention-gate.outputs.fire == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -170,11 +170,11 @@ jobs:
       # gates on check-access outputs, which stay empty when it skips.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -184,14 +184,14 @@ jobs:
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: jdx/mise-action@v4
         with:
           cache: true
 
       - name: Check repository write access
         id: check-access
-        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         run: |
           # workflow_dispatch runs skip the collaborator-permission lookup:
           # triggering a dispatch already requires write access (humans via

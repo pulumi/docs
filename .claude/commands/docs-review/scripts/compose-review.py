@@ -1896,16 +1896,21 @@ def render_detail_scaffold(fid: str) -> list[str]:
     the flagged line quoted verbatim exactly once, replacement text in a
     fenced block (GitHub gives it a copy button). Model-added `F?` rows get
     NO block (ids are not assigned yet); their cell stays terse instead.
+
+    The three labelled lines are a bulleted list (2026-09-11: the paragraph
+    form read as a wall of text). Readers that key on the labels accept
+    both the bulleted and the older unbulleted form, because cards
+    rendered before this change stay live until their PR closes.
     """
     return [
         f"#### {fid} · Do this",
         "",
-        "**Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
+        "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
         "appears in the file — the only quote of it on this card; never a paraphrase>",
-        "**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
-        "**Fix:** <TODO: exactly ONE required action, stated first; put any "
-        "replacement text in a fenced block; label an alternative "
-        "\"**If you'd rather keep it:**\" — never two competing imperatives>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
+        "replacement text in a fenced block at column 0 after this list; label an alternative "
+        "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
     ]
 
 

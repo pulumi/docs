@@ -445,3 +445,10 @@ def test_unrun_link_check_is_named_on_the_brief(tmp_path):
         "link_check": {"ran": False, "checked": 0, "dead": 0, "error": "boom"},
     })
     assert "internal-link check did not run" in brief
+
+
+def test_detail_scaffold_is_a_bulleted_list():
+    lines = cr.render_detail_scaffold("F7")
+    assert lines[0] == "#### F7 · Do this" and lines[1] == ""
+    assert [ln[:6] for ln in lines[2:5]] == ["- **Li", "- **Wh", "- **Fi"]
+    assert sum(ln.startswith("- **Fix:**") for ln in lines) == 1
