@@ -42,7 +42,7 @@ When you store Terraform state in Pulumi Cloud, your Terraform-managed resources
 
 **Automatic state locking.** Pulumi Cloud prevents concurrent Terraform operations from corrupting state, without requiring you to configure DynamoDB tables or other external locking mechanisms.
 
-**Role-based access control.** Control who can read or modify each stack using [teams and RBAC](/docs/administration/access-identity/rbac/), applying the same access policies you use for Pulumi stacks.
+**Role-based access control.** Control who can read or modify each stack using [teams and RBAC](/docs/administration/concepts/rbac/), applying the same access policies you use for Pulumi stacks.
 
 **Unified resource visibility.** View Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/insights/discovery/search/). Each Terraform resource appears in the console using a `pulumi:terraform:<tf-type>` naming convention, so you can search and filter using the attribute names you already know.
 
