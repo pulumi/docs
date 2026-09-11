@@ -1357,6 +1357,14 @@ jobs:
         id: validate-body
         continue-on-error: true
         env:
+          # The validator fetches the PR diff itself (`gh pr diff`) for the
+          # rules that exempt content the review merely echoes -- e.g.
+          # `internal-link-existence` skips a dead link that appears in the
+          # diff, because reporting it IS the finding. Without a token that
+          # fetch fails silently and the exemption is dead: on v2 the splicer
+          # and model fallback papered over it; on v3 (no soft floor) the
+          # first review that quoted a broken link errored (#21560).
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           set +e
