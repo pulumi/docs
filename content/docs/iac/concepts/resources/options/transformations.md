@@ -21,7 +21,7 @@ Each transformation is a callback that gets invoked by the Pulumi runtime. It re
 {{< resource-option-scope "transformations" >}}
 
 {{% notes type="warning" %}}
-Note that Transformations will be deprecated in the future in favor of [Transforms](/docs/iac/concepts/resources/options/transforms/).
+Transformations will be deprecated in the future in favor of [Transforms](/docs/iac/concepts/resources/options/transforms/).
 
 Transforms support modifying child resources of packaged components (such as those in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks)) whereas Transformations do not.
 
@@ -279,7 +279,6 @@ var vpc = new MyVpcComponent("vpc",
             }
             return Optional.of(new ResourceTransformation.Result(args, options));
         }).build());
-
 ```
 
 {{% /choosable %}}
@@ -293,9 +292,9 @@ var vpc = new MyVpcComponent("vpc",
 
 {{< /chooser >}}
 
-## Stack Transformations
+## Stack transformations
 
-Transformations can also be applied in bulk to many or all resources in a stack by using Stack Transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack.  Note that this applies only to resources that are registered after the stack transformation is registered.  Resources in the stack that have already been registered will not get the Stack Transformation applied to them.  For full coverage, register the stack transformation at the start of your program, before declaring any resources.
+Transformations can also be applied in bulk to many or all resources in a stack by using stack transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack. This applies only to resources that are registered after the stack transformation is registered. Resources in the stack that have already been registered will not get the stack transformation applied to them. For full coverage, register the stack transformation at the start of your program, before declaring any resources.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -334,7 +333,7 @@ ctx.RegisterStackTransformation(
 
 {{% choosable language csharp %}}
 
-There are two ways of defining stack transformations in C#, depending on which style you're using for your Pulumi program.
+You can define stack transformations in C# in two ways, depending on which style your Pulumi program uses.
 
 The original way, inheriting from the `Stack` class:
 
@@ -421,7 +420,7 @@ Pulumi.withOptions(stackOptions).run(ctx -> {
 
 ## Migrating from Transformations to Transforms
 
-Transformations will be deprecated in the future in favor of the more capable [Transforms](/docs/iac/concepts/resources/options/transforms/) APIs. While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior to be aware of. When moving from Transformations to Transforms you will need to update your transform code to handle the differences.
+Transformations will be deprecated in the future in favor of the more capable [Transforms](/docs/iac/concepts/resources/options/transforms/) APIs. While the Transforms APIs resemble Transformations, they differ in both API signatures and runtime behavior. When moving from Transformations to Transforms you will need to update your transform code to handle the differences.
 
 Summary of key differences:
 
@@ -429,13 +428,13 @@ Summary of key differences:
 
 - [**No typed args classes**](#no-typed-args-classes): transforms work over the wire protocol, so properties arrive as dictionaries/maps with camelCase keys rather than typed args classes.
 
-- [**Natively Async**](#natively-async): the transform API supports async transform functions in all applicable languages.
+- [**Natively async**](#natively-async): the transform API supports async transform functions in all applicable languages.
 
-### No Resource Object
+### No resource object
 
-There is no `Resource` object passed to transform functions. Most of the information you could have retrieved from that object is presented on the transform arguments directly.
+Transform functions don't receive a `Resource` object. Most of the information you could have retrieved from that object is presented on the transform arguments directly.
 
-This mostly impacts C# transforms. With transformations, you would have to call `args.Resource.GetResourceType()` to get the type of the resource:
+This mostly impacts C# transforms. With transformations, you would have to call `args.Resource.GetResourceType()` to get the resource type:
 
 ```csharp
 args =>
@@ -465,7 +464,7 @@ async (args, _) =>
 }
 ```
 
-### No Typed Args Classes
+### No typed args classes
 
 In the old transform system the transform function was called with the same values passed to the resource constructor. This meant that in languages like Go, C#, and Python you could typecast to the typed arguments struct/class.
 
@@ -533,7 +532,7 @@ func(_ context.Context, args *pulumi.ResourceTransformationArgs) *pulumi.Resourc
 }
 ```
 
-The new system is just a map where we have to know the key is `"length"` and the value is a `Float64Input`:
+The new system is a map where you have to know that the key is `"length"` and the value is a `Float64Input`:
 
 ```go
 func(_ context.Context, args *pulumi.ResourceTransformArgs) *pulumi.ResourceTransformResult {
@@ -580,7 +579,7 @@ args =>
 }
 ```
 
-The new system is just a dictionary where we have to know the key is `"length"` and the value is a `Input<double>`:
+The new system is a dictionary where you have to know that the key is `"length"` and the value is an `Input<double>`:
 
 ```csharp
 (args, _) =>
@@ -602,7 +601,7 @@ The new system is just a dictionary where we have to know the key is `"length"` 
 
 {{< /chooser >}}
 
-### Natively Async
+### Natively async
 
 The new transform API has been designed from the start with async support in mind.
 
