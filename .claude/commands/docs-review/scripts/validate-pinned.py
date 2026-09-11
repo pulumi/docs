@@ -3367,13 +3367,31 @@ def gh_pr_diff_added_files(repo: str | None, pr: int) -> set[str]:
 
 
 def gh_pr_diff_text(repo: str | None, pr: int) -> str:
+    """The PR diff, or "" when `gh pr diff` fails.
+
+    Several rules (`internal-link-existence`, the temporal-trigger sweep,
+    pass-3 evidence) use the diff to tell "the review echoes the PR's
+    content" from "the review invented something". An empty diff silently
+    disables those exemptions, so a failed fetch is reported as a workflow
+    warning rather than swallowed -- an unrun check must not look like a
+    clean one.
+    """
     cmd = ["gh", "pr", "diff", str(pr)]
     if repo:
         cmd += ["--repo", repo]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True, timeout=60)
         return result.stdout
-    except (subprocess.SubprocessError, OSError):
+    except (subprocess.SubprocessError, OSError) as exc:
+        detail = ""
+        if isinstance(exc, subprocess.CalledProcessError):
+            detail = (exc.stderr or "").strip().splitlines()[-1:] or [""]
+            detail = detail[0]
+        print(
+            f"::warning::validate-pinned: `gh pr diff {pr}` failed ({exc.__class__.__name__}"
+            f"{': ' + detail if detail else ''}); diff-dependent exemptions are disabled for this run",
+            file=sys.stderr,
+        )
         return ""
 
 
