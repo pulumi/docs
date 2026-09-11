@@ -17,15 +17,15 @@ _<TODO: one sentence — what this PR is and what the review checked>_
 
 #### F1 · Do this
 
-**Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
-**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
-**Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block; label an alternative "**If you'd rather keep it:**" — never two competing imperatives>
+- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
+- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
+- **Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block at column 0 after this list; label an alternative "- **If you'd rather keep it:**" as a fourth bullet — never two competing imperatives>
 
 #### F2 · Do this
 
-**Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
-**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
-**Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block; label an alternative "**If you'd rather keep it:**" — never two competing imperatives>
+- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
+- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
+- **Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block at column 0 after this list; label an alternative "- **If you'd rather keep it:**" as a fourth bullet — never two competing imperatives>
 
 ### ❓ Questions for you
 
@@ -35,9 +35,9 @@ _<TODO: one sentence — what this PR is and what the review checked>_
 
 #### F3 · Do this
 
-**Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
-**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
-**Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block; label an alternative "**If you'd rather keep it:**" — never two competing imperatives>
+- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it appears in the file — the only quote of it on this card; never a paraphrase>
+- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
+- **Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block at column 0 after this list; label an alternative "- **If you'd rather keep it:**" as a fourth bullet — never two competing imperatives>
 
 _Editing in the browser? The ✏️ links open the file in GitHub's editor — Ctrl+F for the quoted line._
 

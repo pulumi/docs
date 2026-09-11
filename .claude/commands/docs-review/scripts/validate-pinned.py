@@ -2933,7 +2933,10 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
                                "every detail block pairs with an open 🚨/❓ row",
                                f"block for {bid} has no open row",
                                "A block never outlives its finding — when a row resolves or is dispositioned, delete its block too."))
-        n_fix = sum(1 for line in body.splitlines() if line.startswith("**Fix:**"))
+        # The label lines are bullets since 2026-09-11 (`- **Fix:** …`); the
+        # unbulleted form is still accepted for cards rendered before that.
+        n_fix = sum(1 for line in body.splitlines()
+                    if line.startswith("**Fix:**") or line.startswith("- **Fix:**"))
         if n_fix != 1:
             v.append(Violation("v3-detail-blocks", f"<{bid}>",
                                "exactly one `**Fix:**` line per block (one required action)",
@@ -2946,7 +2949,7 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
                 v.append(Violation("v3-detail-blocks", f"<{f['id']}>",
                                    "every open blocking finding keeps its `#### F<n> · Do this` block",
                                    "block missing",
-                                   "Fill the composed scaffold (Line (verbatim) / Why / Fix) — don't delete it."))
+                                   "Fill the composed scaffold (the Line (verbatim) / Why / Fix bullets) — don't delete it."))
     if ctx.brief and _v3_detail_blocks(ctx.brief):
         v.append(Violation("v3-detail-blocks", "<brief>",
                            "the reviewer brief carries no detail blocks",

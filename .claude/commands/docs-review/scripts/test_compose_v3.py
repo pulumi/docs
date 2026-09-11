@@ -393,3 +393,10 @@ def test_empty_checks_sentinel_acknowledges_stances(v3_with_stances, tmp_path):
     nxt = next(i for i in range(h4 + 1, len(furniture)) if furniture[i].startswith("### "))
     without = "\n".join(furniture[:h4] + furniture[nxt:])
     assert cr._V3_EMPTY_CHECKS in be._collapse_empty_tables(without, be.BRIEF_SECTIONS)
+
+
+def test_detail_scaffold_is_a_bulleted_list():
+    lines = cr.render_detail_scaffold("F7")
+    assert lines[0] == "#### F7 · Do this" and lines[1] == ""
+    assert [ln[:6] for ln in lines[2:5]] == ["- **Li", "- **Wh", "- **Fi"]
+    assert sum(ln.startswith("- **Fix:**") for ln in lines) == 1
