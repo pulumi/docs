@@ -121,12 +121,12 @@ across the respective cloud provider packages.
 
 * [pulumi/eks](https://github.com/pulumi/pulumi-eks)
     * More [examples](https://github.com/pulumi/pulumi-eks/tree/master/examples) are provided to cover various EKS-specific scenarios.
-    * Support for [additional security groups](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#NodeGroup-extraNodeSecurityGroups) for node groups to attach to user-specified rules
-    * Support for [envelope encrypted secrets](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-encryptionConfigKeyArn) so that Kubernetes Secrets are encrypted in etcd
-    * Support for [alternative authentication](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-providerCredentialOpts) approaches on the cluster and infrastructure created, such as using AWS named profiles
-    * Create [kubeconfig files](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#Cluster-getKubeconfig) that are scoped to IAM users or roles -- this is used to limit access to the cluster.
-    * Use the EKS package on clients operating in [HTTP proxy](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-proxy) environments, such as corporate proxies.
-    * [Default to the latest AMIs](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterNodeGroupOptions-amiId) for node groups, using the latest release from the AWS SSM parameter store.
+    * Support for [additional security groups](/registry/packages/eks/api-docs/nodegroup/#extranodesecuritygroups_nodejs) for node groups to attach to user-specified rules
+    * Support for [envelope encrypted secrets](/registry/packages/eks/api-docs/cluster/#encryptionconfigkeyarn_nodejs) so that Kubernetes Secrets are encrypted in etcd
+    * Support for [alternative authentication](/registry/packages/eks/api-docs/cluster/#providercredentialopts_nodejs) approaches on the cluster and infrastructure created, such as using AWS named profiles
+    * Create [kubeconfig files](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) that are scoped to IAM users or roles -- this is used to limit access to the cluster.
+    * Use the EKS package on clients operating in [HTTP proxy](/registry/packages/eks/api-docs/cluster/#proxy_nodejs) environments, such as corporate proxies.
+    * [Default to the latest AMIs](/registry/packages/eks/api-docs/cluster/#amiid_nodejs) for node groups, using the latest release from the AWS SSM parameter store.
 
 ## Wrap-Up
 
@@ -138,5 +138,5 @@ Learn more about how [Pulumi works with Kubernetes](https://www.pulumi.com/regis
 new.
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv), work through
-Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
+Kubernetes [tutorials](/registry/packages/kubernetes/how-to-guides/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
