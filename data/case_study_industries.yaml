@@ -29,45 +29,60 @@
 industries:
   - id: financial-services
     name: "Financial Services & Insurance"
+    description: "Case studies on how banks, insurers, and fintech teams use Pulumi to manage regulated cloud infrastructure as code."
 
   - id: security
     name: "Security"
+    description: "Case studies on how security teams use Pulumi to codify cloud infrastructure and enforce policy at scale."
 
   - id: data-analytics
     name: "Data & Analytics"
+    description: "Case studies on how data and analytics teams use Pulumi to provision and manage cloud data infrastructure."
 
   - id: developer-tools
     name: "Developer Tools"
+    description: "Case studies on how developer tools companies use Pulumi to build and operate their own cloud platforms."
 
   - id: ai-ml
     name: "AI & Machine Learning"
+    description: "Case studies on how AI and machine learning teams use Pulumi to manage GPU clusters and model infrastructure as code."
 
   - id: automotive
     name: "Automotive"
+    description: "Case studies on how automotive companies use Pulumi to manage cloud infrastructure across their engineering teams."
 
   - id: education
     name: "Education & EdTech"
+    description: "Case studies on how education and edtech organizations use Pulumi to manage cloud infrastructure as code."
 
   - id: gaming-entertainment
     name: "Gaming & Entertainment"
+    description: "Case studies on how gaming and entertainment companies use Pulumi to scale cloud infrastructure for global audiences."
 
   - id: retail
     name: "Retail"
+    description: "Case studies on how retail companies use Pulumi to manage cloud infrastructure across storefronts and supply chains."
 
   - id: healthcare
     name: "Healthcare"
+    description: "Case studies on how healthcare organizations use Pulumi to manage compliant cloud infrastructure as code."
 
   - id: blockchain
     name: "Technology"
+    description: "Case studies on how technology companies use Pulumi to manage cloud infrastructure as code."
 
   - id: iot-transportation
     name: "Transportation & Logistics"
+    description: "Case studies on how transportation and logistics companies use Pulumi to manage cloud infrastructure as code."
 
   - id: manufacturing
     name: "Manufacturing & Industrial"
+    description: "Case studies on how manufacturing and industrial companies use Pulumi to manage cloud infrastructure as code."
 
   - id: public-sector
     name: "Public Sector"
+    description: "Case studies on how public sector organizations use Pulumi to manage cloud infrastructure as code."
 
   - id: marketing-adtech
     name: "Marketing & AdTech"
+    description: "Case studies on how marketing and adtech companies use Pulumi to manage cloud infrastructure as code."

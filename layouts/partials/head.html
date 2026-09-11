@@ -207,7 +207,19 @@
         {{ end }}
     {{ end }}
 
-    {{ if .Params.meta_title }}
+    {{/* Taxonomy term pages (blog category/tag/author/series, case-study
+        industry) carry no front-matter title/meta_title, so without this
+        branch they fall through to the site-wide default below. Source the
+        same human display name the <title> tag uses further down instead. */}}
+    {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+        <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
+    {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+        {{ $ogIndustryTitle := .Title }}
+        {{ range site.Data.case_study_industries.industries }}
+            {{ if eq .id $.Data.Term }}{{ $ogIndustryTitle = .name }}{{ end }}
+        {{ end }}
+        <meta property="og:title" content="{{ $ogIndustryTitle }}" />
+    {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
         <meta property="og:title" content="{{ .Params.title }}" />
@@ -221,10 +233,11 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series) have no .Summary;
-            source their description from the data files so they don't fall
-            through to an empty meta description. */}}
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series) and the case-study
+            industry taxonomy have no .Summary; source their description from
+            the data files so they don't fall through to an empty meta
+            description. */}}
         {{ $desc := "" }}
         {{ if eq .Data.Singular "category" }}
             {{ range site.Data.blog_categories.categories }}
@@ -236,6 +249,10 @@
             {{ end }}{{ end }}
         {{ else if eq .Data.Singular "tag" }}
             {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
+        {{ else if eq .Data.Singular "industry" }}
+            {{ range site.Data.case_study_industries.industries }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
         {{ end }}
         {{ with $desc | chomp }}
             <meta name="description" content="{{ . }}" />
