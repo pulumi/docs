@@ -26,8 +26,8 @@ stats:
           logo: /logos/pkg/snowflake.svg
           link: /case-studies/snowflake/
       bmw:
-          number: "15,000"
-          description: developers with self-service access to production-grade infrastructure
+          number: "20,000+"
+          description: cloud resources managed with Python-based infrastructure code
           logo: /logos/customers/bmw.svg
           link: /case-studies/bmw/
 
