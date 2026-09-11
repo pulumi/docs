@@ -325,10 +325,14 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
     """
     if not isinstance(hugo_artifact, dict):
         return []
-    if hugo_artifact.get("skipped"):
-        return []
     out: list[dict] = []
-    for entry in hugo_artifact.get("errors", []) or []:
+    # `skipped` means the Hugo render didn't run (content-only PR), so there
+    # are no build errors to stub. `link_integrity` is still read: since
+    # link-check-diff.py the workflow appends deterministic dead-internal-link
+    # entries to it on every PR, skipped or not (#21560 quoted a dead link
+    # inside another finding and never flagged it).
+    hugo_errors = [] if hugo_artifact.get("skipped") else (hugo_artifact.get("errors", []) or [])
+    for entry in hugo_errors:
         if not isinstance(entry, str) or not entry.strip():
             continue
         file, anchor = _hugo_extract_file_line(entry)
@@ -2269,6 +2273,21 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if hugo and not hugo.get("skipped"):
         n_hugo = len(hugo.get("errors") or []) + len(hugo.get("link_integrity") or [])
         mech_bits.append("Hugo build green" if n_hugo == 0 else f"Hugo build: {n_hugo} error(s) — see 🚨")
+    link_check = hugo.get("link_check") if isinstance(hugo, dict) else None
+    if isinstance(link_check, dict):
+        # The deterministic dead-internal-link check (link-check-diff.py).
+        # An unrun check is named as such rather than left to look clean.
+        if not link_check.get("ran"):
+            mech_bits.append("internal-link check did not run — dead links NOT verified")
+        else:
+            n_checked = int(link_check.get("checked") or 0)
+            n_dead = int(link_check.get("dead") or 0)
+            if n_checked == 0:
+                mech_bits.append("no internal links added")
+            elif n_dead == 0:
+                mech_bits.append(f"{n_checked} added internal link(s) resolve")
+            else:
+                mech_bits.append(f"{n_dead} of {n_checked} added internal link(s) dead — see 🚨")
     if detector_count:
         mech_bits.append(f"{detector_count} detector finding(s) filed above")
     if not mech_bits:

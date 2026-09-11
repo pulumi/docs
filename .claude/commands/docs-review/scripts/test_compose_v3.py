@@ -393,3 +393,55 @@ def test_empty_checks_sentinel_acknowledges_stances(v3_with_stances, tmp_path):
     nxt = next(i for i in range(h4 + 1, len(furniture)) if furniture[i].startswith("### "))
     without = "\n".join(furniture[:h4] + furniture[nxt:])
     assert cr._V3_EMPTY_CHECKS in be._collapse_empty_tables(without, be.BRIEF_SECTIONS)
+
+
+def test_dead_link_entries_are_stubbed_even_when_hugo_was_skipped():
+    """link-check-diff.py appends to `link_integrity` on the skip-stub artifact
+    (content-only PRs); the composer must still pre-stub them as 🚨 rows."""
+    art = {
+        "skipped": True,
+        "errors": ["ERROR this would be a build error but Hugo did not run"],
+        "link_integrity": [
+            "content/docs/iac/x.md:114: dead internal link /docs/iac/concepts/stack-references/ — no page, alias, or PR-added file under content/",
+        ],
+        "link_check": {"ran": True, "checked": 3, "dead": 1},
+    }
+    verdicts = cr._hugo_synthetic_verdicts(art)
+    assert [v["type"] for v in verdicts] == ["hugo-link-integrity"], verdicts
+    assert verdicts[0]["file"] == "content/docs/iac/x.md"
+    assert verdicts[0]["line_range"] == "L114"
+    assert verdicts[0]["route"] == "preflight" and verdicts[0]["verdict"] == "flagged"
+
+
+def _compose_v3_with_hugo(tmp_path, hugo_obj):
+    hugo = tmp_path / "hugo-build.json"
+    hugo.write_text(json.dumps(hugo_obj))
+    author, brief = tmp_path / "a.md", tmp_path / "b.md"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(tmp_path / "e.json"),
+    ])
+    cmd[cmd.index("--hugo-build") + 1] = str(hugo)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text()
+
+
+def test_dead_link_stub_reaches_the_v3_author_card(tmp_path):
+    author, brief = _compose_v3_with_hugo(tmp_path, {
+        "skipped": True, "errors": [],
+        "link_integrity": [
+            "content/docs/iac/x.md:12: dead internal link /docs/iac/nowhere/ — no page, alias, or PR-added file under content/",
+        ],
+        "link_check": {"ran": True, "checked": 1, "dead": 1},
+    })
+    assert "/docs/iac/nowhere/" in author
+    assert "1 of 1 added internal link(s) dead" in brief
+
+
+def test_unrun_link_check_is_named_on_the_brief(tmp_path):
+    _author, brief = _compose_v3_with_hugo(tmp_path, {
+        "skipped": True, "errors": [], "link_integrity": [],
+        "link_check": {"ran": False, "checked": 0, "dead": 0, "error": "boom"},
+    })
+    assert "internal-link check did not run" in brief
