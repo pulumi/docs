@@ -76,8 +76,8 @@ Lives as an HTML comment in the bot-owned author comment:
 - Writers: the update lane (`apply-update.py`) and the `/resolve` workflow —
   both merge per finding-id, latest `updated_at` wins, never whole-block
   overwrite. `bulk: true` marks `/resolve all …` answers (telemetry).
-- Readers: Sentinel gate 2 (uncredentialed, fork-safe), `review-worklist.py
-  --state-from-body`, the record job's mirror into `latest.json`.
+- Readers: Sentinel gate 2 (uncredentialed, fork-safe), `review-worklist.py`
+  (`--body-file` / `--brief-file`), the record job's mirror into `latest.json`.
 - Sentinel accepts the block only from the bot-authored comment.
 
 ## The Sentinel
