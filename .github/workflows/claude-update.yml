@@ -77,6 +77,40 @@ jobs:
       id-token: write
       actions: write # read CI results on PRs; dispatch review-sentinel.yml after a v3 publish
     steps:
+      # The job-level `if:` above is a substring match, which is all a
+      # GitHub expression can do — it fires on a comment that merely
+      # *quotes* the reply pattern in backticks or a blockquote (#21535:
+      # two of four card versions were unrequested; each was a full Opus
+      # run). This pair of steps is the precise check: strip code and
+      # quotes, then require a live `@claude` + `#update-review`. The
+      # script comes from the default branch, never the PR head, and reads
+      # the body from an env var, never argv. Dispatched runs skip it —
+      # there is no comment to judge.
+      - name: Checkout mention gate (default branch, sparse)
+        if: github.event_name != 'workflow_dispatch'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .mention-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/mention-gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Mention gate (a quoted protocol is not a request)
+        id: mention
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body || github.event.issue.body }}
+          TITLE: ${{ github.event_name == 'issues' && github.event.issue.title || '' }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "fire=true" >> "$GITHUB_OUTPUT"
+            echo "reason=workflow_dispatch" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python3 .mention-gate/.claude/commands/docs-review/scripts/mention-gate.py check \
+            --hashtag update-review --exclude new-review \
+            --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
+
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
       # below runs against base prose and produces empty findings.
@@ -85,6 +119,7 @@ jobs:
       # gated on is_pr=true anyway, so it skips on issues).
       - name: Resolve PR head SHA
         id: head
+        if: steps.mention.outputs.fire == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -127,17 +162,19 @@ jobs:
       # then go out as pulumi-bot rather than github-actions[bot],
       # which is what lets downstream workflows (build-and-deploy, social
       # review, etc.) fire on those commits.
-      # The three setup steps below skip on superseded dispatched runs
+      # The setup steps below skip when the mention gate declined (a
+      # quoted protocol, nothing to do) and on superseded dispatched runs
       # (steps.head sets superseded=true when the PR head moved past the
-      # dispatcher's pinned SHA) — the run is a no-op, so don't pay for
-      # secrets, checkout, or toolchain install.
+      # dispatcher's pinned SHA) — either way the run is a no-op, so don't
+      # pay for secrets, checkout, or toolchain install. Every later step
+      # gates on check-access outputs, which stay empty when it skips.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        if: steps.head.outputs.superseded != 'true'
+        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        if: steps.head.outputs.superseded != 'true'
+        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -147,14 +184,14 @@ jobs:
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        if: steps.head.outputs.superseded != 'true'
+        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         uses: jdx/mise-action@v4
         with:
           cache: true
 
       - name: Check repository write access
         id: check-access
-        if: steps.head.outputs.superseded != 'true'
+        if: steps.mention.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
         run: |
           # workflow_dispatch runs skip the collaborator-permission lookup:
           # triggering a dispatch already requires write access (humans via
