@@ -292,7 +292,7 @@ To use [ESM](https://nodejs.org/api/esm.html) natively instead, set the `type` f
 }
 ```
 
-Also update your `tsconfig.json` file so that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. That `module` setting is also what makes [top-level await](#top-level-await) available, as long as [`target`](https://www.typescriptlang.org/tsconfig/#target) is `ES2017` or later:
+Also update your `tsconfig.json` file so that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. That `module` setting is also what makes [top-level await](#top-level-await) available, as long as [`target`](https://www.typescriptlang.org/tsconfig/#target) is `ES2022` or later:
 
 ```json
 {
@@ -332,7 +332,7 @@ If you provide any of the `--loader`, `--import`, or `--require` arguments in `n
 
 One of the benefits of using native ESM is that you can use [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) in your Pulumi program. Unlike the [export function pattern](#enabling-async-support) used in CommonJS programs, top-level `await` lets you `await` any Promise directly at the module level, before or between resource declarations, without wrapping your code in a function.
 
-For TypeScript, ensure your `tsconfig.json` sets `module` to `nodenext` and `target` to `ES2017` or later, as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
+For TypeScript, ensure your `tsconfig.json` sets `module` to `nodenext` and `target` to `ES2022` or later, as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
 
 The following example uses top-level await to resolve a data source before declaring resources. Stack outputs use named `export const` statements:
 
