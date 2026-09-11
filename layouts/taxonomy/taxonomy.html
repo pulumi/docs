@@ -1,8 +1,19 @@
 {{ define "main" }}
-    {{- /* Generic fallback taxonomy term template. Every blog taxonomy (tag,
-        author, category) has its own template, so this is rarely hit; it renders
-        the shared blog header + list rows for any other term. */ -}}
-    {{ partial "blog/header.html" (dict "title" (printf "%s: %s" (.Data.Singular | title) (.Data.Term | humanize)) "url" .RelPermalink "context" .) }}
+    {{- /* Generic fallback taxonomy template. It serves two different kinds of
+        page: individual term pages (Kind == "term", e.g. /blog/author/joe-duffy/)
+        for taxonomies that lack their own <singular>.html, and the terms-LIST
+        page (Kind == "taxonomy", e.g. /authors/, /tags/) for taxonomies that
+        lack both a dedicated <singular>.terms.html and a shared
+        _default/terms.html. "author" and "tag" fall through to this file for
+        both kinds, which is why the crumb below has to branch: on a term page
+        .Data.Term names the term, but on the list page it is empty, so using
+        the term-page format unconditionally rendered a broken "Author: " /
+        "Tag: " crumb on /authors/ and /tags/. */ -}}
+    {{ $crumb := .Title }}
+    {{ if eq .Kind "term" }}
+        {{ $crumb = printf "%s: %s" (.Data.Singular | title) (.Data.Term | humanize) }}
+    {{ end }}
+    {{ partial "blog/header.html" (dict "title" $crumb "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-8 lg:py-12">
         {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
