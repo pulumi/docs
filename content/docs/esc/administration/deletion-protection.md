@@ -46,7 +46,7 @@ Attempting to delete a protected environment returns an error:
 
 ```bash
 $ pulumi env rm myorg/myproject/prod --yes
-error: deletion protection is enabled for this environment
+error: cannot delete environment: deletion protection is enabled. Disable deletion protection with 'esc env settings set myorg/myproject/prod deletion-protected false' before deleting
 ```
 
 To delete a protected environment, first disable protection:
