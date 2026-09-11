@@ -174,41 +174,29 @@ The following code creates a new VPC using all default settings:
 
 {{< example-program path="awsx-vpc" >}}
 
-Here is how you can import your existing infrastructure to start managing it with Pulumi:
+Running step 2 of the workflow above --- `pulumi preview --import-file import.json` --- against this program produces an `import.json` file like the following:
 
-1. `pulumi preview --import-file import.json` to generate a placeholder import file for every resource that would be created. The resulting `import.json` file will look like this:
+```json
+{
+    "resources": [
+        {
+            "type": "awsx:ec2:Vpc",
+            "name": "vpc",
+            "component": true
+        },
+        {
+            "type": "aws:ec2/vpc:Vpc",
+            "name": "vpcVpc",
+            "id": "<PLACEHOLDER>",
+            "parent": "vpc",
+            "logicalName": "vpc"
+        },
+        //... more resources
+    ]
+}
+```
 
-    ```json
-    {
-        "resources": [
-            {
-                "type": "awsx:ec2:Vpc",
-                "name": "vpc",
-                "component": true
-            },
-            {
-                "type": "aws:ec2/vpc:Vpc",
-                "name": "vpcVpc",
-                "id": "<PLACEHOLDER>",
-                "parent": "vpc",
-                "logicalName": "vpc"
-            },
-            //... more resources
-        ]
-    }
-    ```
-
-    Note that the component is defined as a separate resource, and all `parent` values are set according to the preview.
-
-2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
-
-3. Import all the resources in one operation with:
-
-    ```
-    pulumi import --file import.json
-    ```
-
-The same approach can be used to import any component resource and its sub-resources.
+Note that the component is defined as a separate resource, and all `parent` values are set according to the preview. Fill in the `<PLACEHOLDER>` values with the resource IDs from your AWS account, then run `pulumi import --file import.json` to import the component and its sub-resources in a single operation. The same approach can be used to import any component resource and its sub-resources.
 
 ### Authoring an import file by hand
 
@@ -499,8 +487,6 @@ A `Resource` has the following schema:
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
 | `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
 | `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/iac/concepts/packages/). `component` must be `true` if this is `true`.      |
-
-To make it easier to import resources into complex programs, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
 
 ## The `import` resource option
 
