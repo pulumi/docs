@@ -12,6 +12,7 @@ aliases:
 - /docs/guides/adopting/from_terraform/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
+- /solutions/terraform-migration/
 ---
 
 If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi. Not all of them involve converting code: you can put your Terraform state under Pulumi Cloud's management, or run your existing HCL on the Pulumi engine, without rewriting anything.

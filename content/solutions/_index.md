@@ -38,7 +38,7 @@ use_cases:
           description: |
             Modernize how your teams provision and manage infrastructure in order to adapt to the changes in technologies (containers, serverless), architectures (distributed), and software release automation associated with the cloud.
 
-            [Learn more about Terraform migration](/solutions/terraform-migration/)
+            [Learn more about Terraform migration](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 
         - name: Greenfield modern applications
           case_studies:
