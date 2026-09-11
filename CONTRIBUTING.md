@@ -20,7 +20,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 
 ### The v3 review surface (staged rollout)
 
-The review is moving from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable, or per-PR by the `surface:v3` label (add it to a draft, mark ready — or add it and comment `@claude #new-review`; remove it and `#new-review` again to go back to the monolith). Everything below this section describes the v2 monolith and stays accurate for PRs reviewed before the flip and for repos where the flag is off. What changes under v3:
+The review has moved from one monolithic pinned comment to the **v3 surface**, enabled per-repo by the `REVIEW_V3_COMMENTS` variable (on for pulumi/docs), or per-PR by the `surface:v3` label. Every fresh review now renders the v3 cards; a PR reviewed before the flip keeps its legacy monolith until someone comments `@claude #new-review`, which regenerates it as cards. Where the sections below say "the pinned comment", read "the author card" on a v3 PR. What v3 changed:
 
 - **Two comments instead of one.** An **author card** ("Author action guide") lists only what you must act on — one-line `🚨 Fix or disagree` and `❓ Questions for you` rows (both block merge), each with a `#### F<n> · Do this` block underneath (the flagged line verbatim, why, and exactly one required fix — replacement text in a copyable fenced block), plus inline ✏️ style suggestions. A separate **reviewer's guide** tells your reviewer what the PR contains, what's still waiting on you, what to check, and what's machine-verified. The bulk — the verification trail, investigation log, review history — lives on a linked **evidence page**, not in the comments.
 - **Every finding has a stable ID** (`F1`, `F2`, …) and every blocking finding needs an answer before merge — fix, disagree, or accept. Fix it and push (the card shows a 🔄 banner within a minute when your push triggers the automatic re-review), or reply naming the ID:
@@ -42,7 +42,7 @@ The disposition vocabulary, the outcome table, and "work the review to zero" bel
 Transitioning to **Ready for review** triggers:
 
 1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
-1. The full Claude review (currently `claude-opus-5`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+1. The full Claude review (currently `claude-opus-5`), composed per touched domain. Findings post as the two v3 cards — the author card (`<!-- CLAUDE_REVIEW_AUTHOR -->`) and the reviewer's guide (`<!-- CLAUDE_REVIEW_BRIEF -->`) — with the verification trail on the linked evidence page. A PR reviewed before the v3 flip still carries the legacy single pinned comment (overflow tagged `<!-- CLAUDE_REVIEW N/M -->`).
 
 Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
 
@@ -61,15 +61,15 @@ A pinned review goes **stale** when you push new commits after it ran. One case 
         - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
     - **`@claude` alone, no hashtag** — ad-hoc questions, code fixes, or one-off requests. Tag mode: the action handles it directly with its own animated tracking comment. Doesn't touch the pinned review. Use this when you want help, not a re-review.
 1. **Transition through draft and back to ready** — re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
-1. **Wait for the human reviewer** — Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
+1. **Wait for the human reviewer** — the reviewer's guide is their source of truth, and the Sentinel check tells them (and you) whether anything still blocks. A reviewer who wants a fresh look asks for one with `@claude #update-review`, same as you.
 
 #### Power-user escape hatch: `@claude #new-review`
 
-Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing `<!-- CLAUDE_REVIEW N/M -->` comment and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
+Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing review comment (the v3 cards, or a legacy `<!-- CLAUDE_REVIEW N/M -->` sequence) and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
 
 ### Working the review to zero
 
-A review is finished when every finding it raised has an outcome — not when the 🚨 count hits zero. The pinned comment carries three actionable buckets and they are all yours: **🚨 Outstanding** (must be resolved or refuted before merge), **⚠️ Low-confidence** (doesn't block, still needs a decision), and the **✏️ style suggestions** posted inline on the Files-changed tab. 💡 Pre-existing is the one optional bucket — that's not debt this PR created.
+A review is finished when every finding it raised has an outcome — not when the 🚨 count hits zero. On a v3 PR the author card carries **🚨 Fix or disagree** and **❓ Questions for you** (both block merge) plus the **✏️ style suggestions** posted inline on the Files-changed tab; the reviewer's guide carries **⚠️ Check these before approving** for your reviewer. On a legacy monolith the buckets are **🚨 Outstanding** (must be resolved or refuted before merge), **⚠️ Low-confidence** (doesn't block, still needs a decision), and the same ✏️ suggestions. 💡 Pre-existing is the one optional bucket — that's not debt this PR created.
 
 Five outcomes count as done, and no others:
 
@@ -90,13 +90,13 @@ python3 .claude/commands/docs-review/scripts/review-worklist.py --pr <N> \
   --state .review-worklist-<N>.json --require-clean
 ```
 
-### Don't fight the pinned comment
+### Don't fight the review comments
 
-The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
+The review comments are managed by the pipeline: on a v3 PR the author card and the reviewer's guide (`<!-- CLAUDE_REVIEW_AUTHOR -->` / `<!-- CLAUDE_REVIEW_BRIEF -->`), on an older PR the `<!-- CLAUDE_REVIEW N/M -->` sequence. Don't delete them — the re-entrant lanes expect to find and edit them in place, and the author card's `REVIEW_STATE` block is where your answers are recorded. If one goes missing, `@claude #new-review` regenerates from scratch; recoverable but ugly.
 
-**Don't hide them either.** Marking the pinned comment resolved (**Hide** → *Resolved*) collapses it but leaves it in place, so a later `#update-review` edits a comment nobody can see: the job runs green, posts its "🤖 Review updated" progress note, and the refreshed review never appears. The publish path now unhides the comment before patching, but the mutation can be refused by the token's scopes — if a refresh looks like a no-op, check whether the pinned comment is collapsed and unhide it. Use the ✅ Resolved section inside the review to track what you've addressed; that's what it's for.
+**Don't hide them either.** Marking a card resolved (**Hide** → *Resolved*) collapses it but leaves it in place, so a later `#update-review` edits a comment nobody can see: the job runs green, posts its "🤖 Review updated" progress note, and the refreshed review never appears. The publish path now unhides the comment before patching, but the mutation can be refused by the token's scopes — if a refresh looks like a no-op, check whether the card is collapsed and unhide it. Use the ✅ Resolved section inside the card to track what you've addressed; that's what it's for.
 
-The pinned comment is also the pipeline's outcome ledger: after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
+The author card is also the pipeline's outcome ledger (the S3 evidence record mirrors it): after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
 
 ### Trivial, frontmatter-only, and oversized short-circuits
 

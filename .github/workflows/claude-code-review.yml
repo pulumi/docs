@@ -127,6 +127,9 @@ jobs:
   # - Once per push comes free: one synchronize event per push, and
   #   claude-update.yml's per-PR concurrency group (cancel-in-progress)
   #   collapses stacked pushes onto the newest head.
+  # - An explicit `#update-review` already in flight wins: the yield step
+  #   skips the dispatch so the concurrency group can't cancel the
+  #   human's request (see that step's comment).
   auto-refresh:
     needs: mark-stale
     if: |
@@ -196,6 +199,45 @@ jobs:
           echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
           echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
 
+      # Push-then-comment is the documented happy path, and it used to
+      # lose: the author pushes, then within seconds replies `@claude …
+      # #update-review` with their reasoning; the explicit run starts, the
+      # dispatch below lands a few seconds later and cancels it through
+      # claude-update.yml's per-PR concurrency group (#21535, 20:35 —
+      # runs 34527254288 → 34527268414). The scoped auto pass then marked
+      # the findings fixed on diff evidence alone and the reasoning was
+      # never adjudicated. So before dispatching, look for a live explicit
+      # request in the last 15 minutes that still has a run in flight; an
+      # explicit run reads the PR live, so it covers this head too. Yield
+      # to it. (A request whose run already finished may have evaluated
+      # an older head; mention-gate.py's `pending` only yields when the
+      # run is still in flight.) Fail open: if the lookup errors, dispatch.
+      - name: Yield to an explicit refresh already in flight
+        id: yield
+        if: steps.gate.outputs.fire == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          SINCE=$(date -u -d '15 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/$REPO/issues/$PR/comments?since=$SINCE&per_page=100" > /tmp/recent-issue-comments.json || echo '[]' > /tmp/recent-issue-comments.json
+          gh api "repos/$REPO/pulls/$PR/comments?since=$SINCE&per_page=100" > /tmp/recent-review-comments.json || echo '[]' > /tmp/recent-review-comments.json
+          gh api "repos/$REPO/pulls/$PR/reviews?per_page=100" > /tmp/recent-reviews.json || echo '[]' > /tmp/recent-reviews.json
+          gh run list --repo "$REPO" --workflow claude-update.yml --limit 30 \
+            --json event,status,createdAt > /tmp/update-runs.json || echo '[]' > /tmp/update-runs.json
+          python3 "$SCRIPTS/mention-gate.py" pending \
+            --hashtag update-review --exclude new-review --since "$SINCE" \
+            --comments /tmp/recent-issue-comments.json \
+            --comments /tmp/recent-review-comments.json \
+            --comments /tmp/recent-reviews.json \
+            --runs /tmp/update-runs.json | tee -a "$GITHUB_OUTPUT"
+          if grep -q '^yield=true' "$GITHUB_OUTPUT"; then
+            echo "auto-refresh: yielding to the explicit #update-review already in flight" | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
       # The instant signal (persona-pass round, 2026-09-01 / Cam): the
       # author learns "a re-review is happening" the moment the gate
       # decides — not minutes later when the dispatched workflow starts.
@@ -205,7 +247,7 @@ jobs:
       # path clears it explicitly so a failed refresh doesn't leave the
       # promise standing.
       - name: Signal re-review instantly (label + card banner)
-        if: steps.gate.outputs.fire == 'true'
+        if: steps.gate.outputs.fire == 'true' && steps.yield.outputs.yield != 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -225,7 +267,7 @@ jobs:
       # dispatch of this workflow. The dispatched run's actor becomes
       # github-actions[bot]; claude-update.yml opts in via allowed_bots.
       - name: Dispatch scoped update review
-        if: steps.gate.outputs.fire == 'true'
+        if: steps.gate.outputs.fire == 'true' && steps.yield.outputs.yield != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -1315,6 +1357,14 @@ jobs:
         id: validate-body
         continue-on-error: true
         env:
+          # The validator fetches the PR diff itself (`gh pr diff`) for the
+          # rules that exempt content the review merely echoes -- e.g.
+          # `internal-link-existence` skips a dead link that appears in the
+          # diff, because reporting it IS the finding. Without a token that
+          # fetch fails silently and the exemption is dead: on v2 the splicer
+          # and model fallback papered over it; on v3 (no soft floor) the
+          # first review that quoted a broken link errored (#21560).
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
         run: |
           set +e
@@ -1402,6 +1452,8 @@ jobs:
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success' && steps.pr-context.outputs.v3 != 'true'
         id: revalidate
         continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
           rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md

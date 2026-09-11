@@ -1892,16 +1892,21 @@ def render_detail_scaffold(fid: str) -> list[str]:
     the flagged line quoted verbatim exactly once, replacement text in a
     fenced block (GitHub gives it a copy button). Model-added `F?` rows get
     NO block (ids are not assigned yet); their cell stays terse instead.
+
+    The three labelled lines are a bulleted list (2026-09-11: the paragraph
+    form read as a wall of text). Readers that key on the labels accept
+    both the bulleted and the older unbulleted form, because cards
+    rendered before this change stay live until their PR closes.
     """
     return [
         f"#### {fid} · Do this",
         "",
-        "**Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
+        "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
         "appears in the file — the only quote of it on this card; never a paraphrase>",
-        "**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
-        "**Fix:** <TODO: exactly ONE required action, stated first; put any "
-        "replacement text in a fenced block; label an alternative "
-        "\"**If you'd rather keep it:**\" — never two competing imperatives>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
+        "replacement text in a fenced block at column 0 after this list; label an alternative "
+        "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
     ]
 
 
@@ -2007,6 +2012,14 @@ def _review_state_block(high_water: int) -> str:
     state["high_water"] = high_water
     return mod.serialize_block(state)
 
+
+# The brief's reviewer-check section heading and the author card's
+# "nothing blocks" header verb are read back by the Sentinel's clean-brief
+# rule (scripts/review-v3/sentinel.py) — named here so the writer and the
+# reader can't drift apart.
+CHECKS_HEADING = "### ⚠️ Check these before approving"
+AUTHOR_HEADER_PREFIX = "## Author action guide v"
+AUTHOR_HEADER_NOTHING_BLOCKS = "nothing blocks merge"
 
 _V3_EMPTY_OUTSTANDING = "_Nothing to fix — this section is empty._"
 _V3_EMPTY_QUESTIONS = "_No open questions for you._"
@@ -2195,7 +2208,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         noun = "item blocks" if n_blocking == 1 else "items block"
         header_verb = f"{n_blocking} {noun} merge"
     else:
-        header_verb = "nothing blocks merge"
+        header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
     orient = render_author_orient(n_blocking)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
@@ -2207,7 +2220,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
-        f"## Author action guide v{rev} — {header_verb}",
+        f"{AUTHOR_HEADER_PREFIX}{rev} — {header_verb}",
         "",
         *orient,
         "",
@@ -2307,7 +2320,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
             1),
         "",
-        "### ⚠️ Check these before approving",
+        CHECKS_HEADING,
         "",
     ]
     stance_block = render_stances(prep["candidate_stances"])
@@ -2405,7 +2418,7 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     for line_needed in ("### 🚨 Fix or disagree", "### ❓ Questions for you"):
         if line_needed not in author_draft:
             problems.append(f"author draft missing section {line_needed}")
-    if "### ⚠️ Check these before approving" not in brief_draft:
+    if CHECKS_HEADING not in brief_draft:
         problems.append("brief draft missing ⚠️ section")
     if "<!-- REVIEW_STATE" not in author_draft:
         problems.append("author draft missing REVIEW_STATE block")
