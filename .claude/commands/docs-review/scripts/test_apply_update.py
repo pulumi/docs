@@ -136,8 +136,8 @@ def test_retext_detail_rebuilds_block_keeping_verbatim_line():
     a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
     _spans, texts = au.be.collect_detail_blocks(a_out)
     block = texts["F1"]
-    assert block.startswith("**Line (verbatim):**")
-    assert "**Why:** new why" in block and "**Fix:** Attribute it inline." in block
+    assert block.startswith("- **Line (verbatim):**")
+    assert "- **Why:** new why" in block and "- **Fix:** Attribute it inline." in block
     assert "**If you'd rather keep it:** cite the study" in block
     assert block.count("**Fix:**") == 1
 
@@ -324,7 +324,7 @@ def test_retext_on_a_resolved_finding_reopens_with_a_fresh_detail_block():
                    "detail": {"why": "the revert restored it", "fix": "apply the earlier fix"}}], case="re-verify")
     a2, _, state2, report = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
     assert report["reopened"] == ["F1"] and "F1" in _open_author_ids(a2)
-    assert "#### F1 · Do this" in a2 and "**Fix:** apply the earlier fix" in a2
+    assert "#### F1 · Do this" in a2 and "- **Fix:** apply the earlier fix" in a2
     assert "F1" not in state2["findings"]
 
 
@@ -364,3 +364,22 @@ def test_resolve_and_concede_on_a_resolved_finding_are_rejected():
         assert "reason" in str(exc)
     else:
         raise AssertionError("reopen without a reason must be rejected")
+
+
+def test_rebuild_detail_block_accepts_the_legacy_paragraph_form_and_emits_bullets():
+    legacy = [
+        "#### F2 · Do this", "",
+        '**Line (verbatim):** "old line"',
+        "**Why:** old why",
+        "**Fix:** old fix",
+    ]
+    out = au._rebuild_detail_block("F2", legacy, {"why": "new why", "fix": "new fix", "keep": "keep it"})
+    assert out == [
+        "#### F2 · Do this", "",
+        '- **Line (verbatim):** "old line"',
+        "- **Why:** new why",
+        "- **Fix:** new fix",
+        "- **If you'd rather keep it:** keep it",
+    ]
+    bulleted = ["#### F2 · Do this", "", '- **Line (verbatim):** "b"', "- **Why:** w", "- **Fix:** f"]
+    assert au._rebuild_detail_block("F2", bulleted, {"why": "w2", "fix": "f2"})[2] == '- **Line (verbatim):** "b"'
