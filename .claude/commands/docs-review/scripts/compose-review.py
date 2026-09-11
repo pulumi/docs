@@ -2282,12 +2282,15 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         else:
             n_checked = int(link_check.get("checked") or 0)
             n_dead = int(link_check.get("dead") or 0)
+            n_unknown = int(link_check.get("unknown") or 0)
             if n_checked == 0:
                 mech_bits.append("no internal links added")
             elif n_dead == 0:
                 mech_bits.append(f"{n_checked} added internal link(s) resolve")
             else:
                 mech_bits.append(f"{n_dead} of {n_checked} added internal link(s) dead — see 🚨")
+            if n_unknown:
+                mech_bits.append(f"{n_unknown} added internal link(s) could not be verified against production")
     if detector_count:
         mech_bits.append(f"{detector_count} detector finding(s) filed above")
     if not mech_bits:

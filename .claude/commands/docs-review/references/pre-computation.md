@@ -26,7 +26,7 @@ Pre-steps cluster by **what they read**. Bundle by reading pattern, not by topic
 | Cross-sibling discovery | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
 | Frontmatter validation | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter + redirect tables |
 | Hugo build | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
-| Dead internal links | `link-check-diff.py` (appends to the same artifact: `link_integrity[]` + `link_check`) | `.hugo-build.json` | `/docs/…` and `/blog/…` links on added lines of `content/**/*.md`, resolved against `content/`, PR-added files, and `aliases:` |
+| Dead internal links | `link-check-diff.py` (appends to the same artifact: `link_integrity[]` + `link_check`) | `.hugo-build.json` | `/docs/…` and `/blog/…` page links on added lines of `content/**/*.md`, resolved against `content/`, PR-added files, `aliases:`, then a production HEAD probe (dead only on 404/410; probe failure = unknown, never reported) |
 | Claim extraction | `extract-claims.py` (Layer A, regex) + `extract-claims-llm.py` ×2 (Layer B, Sonnet) → `merge-claims.py` | `.candidate-claims.json` | PR diff (Layer A: all changed files; Layer B: changed `content/**/*.md`) |
 | Claim verification | `verify-claims.py` (route + per-claim Sonnet verifier) | `.verified-claims.json` | `.candidate-claims.json` + `.fetched-urls.json` + `gh` / local repo reads / web search |
 | Readthrough coherence | `readthrough.py` (per-file Sonnet reader) | `.readthrough-findings.json` | Changed `content/**/*.md` — added pages, plus any `content/blog/**` or `content/case-studies/**` file |
