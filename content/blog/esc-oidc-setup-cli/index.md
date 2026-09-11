@@ -1,6 +1,6 @@
 ---
 title: "Set Up Cloud OIDC From the Pulumi CLI"
-date: 2026-09-10
+date: 2026-09-11
 draft: false
 meta_desc: "The new `pulumi env setup` command configures OIDC trust for AWS, Azure, and Google Cloud, and creates ESC Environments with the login provider."
 feature_image: feature.png
