@@ -25,9 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pills = Array.from(filterBar.querySelectorAll<HTMLAnchorElement>("a[data-industry]"));
     const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-case-study-card]"));
-    const originalTitle = document.title;
     const heading = document.getElementById("case-studies-heading");
-    const originalHeading = heading ? heading.textContent ?? "" : "";
+    // Not the rendered <title>/heading: on a term page both are already the
+    // industry's, so clearing the filter has to fall back to the index's,
+    // carried explicitly via data-default-* rather than inferred from
+    // whatever the server happened to render for this particular page.
+    const originalTitle = heading?.dataset.defaultTitle ?? document.title;
+    const originalHeading = heading?.dataset.defaultHeading ?? "";
 
     function industryUrl(industry: string): string {
         return industry ? `/case-studies/industry/${industry}/` : "/case-studies/";
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = pill ? pill.textContent!.trim().split("\n")[0].trim() : "";
         document.title = name ? `${name} | Case Studies | Pulumi` : originalTitle;
         if (heading) {
-            heading.textContent = name ? `${name} Case Studies` : originalHeading;
+            heading.textContent = name ? `${name} case studies` : originalHeading;
         }
     }
 

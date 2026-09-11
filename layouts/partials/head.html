@@ -214,11 +214,7 @@
     {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
         <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
     {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
-        {{ $ogIndustryTitle := .Title }}
-        {{ range site.Data.case_study_industries.industries }}
-            {{ if eq .id $.Data.Term }}{{ $ogIndustryTitle = .name }}{{ end }}
-        {{ end }}
-        <meta property="og:title" content="{{ $ogIndustryTitle }}" />
+        <meta property="og:title" content="{{ partial "case-studies/industry-name.html" .Data.Term }}" />
     {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
@@ -290,9 +286,7 @@
                  data-file source of truth instead of Hugo's slug-derived .Title
                  ("Developer-Tools"), and suffix "| Case Studies" below. */ -}}
             {{ $industryTerm = true }}
-            {{ range site.Data.case_study_industries.industries }}
-                {{ if eq .id $.Data.Term }}{{ $title = .name }}{{ end }}
-            {{ end }}
+            {{ $title = partial "case-studies/industry-name.html" .Data.Term }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}

@@ -22,9 +22,10 @@
 # FIELDS
 #   id          Stable slug used in front matter, by the linter, and in the URL.
 #   name        Human-readable display name (term-page heading, nav label).
-#   description Optional reader-facing blurb. The templates render it under the
-#               term-page heading and in the directory when present; omit it and
-#               the heading stands alone.
+#   description Metadata-only blurb: sourced into the term page's
+#               <meta name="description"> / og:description (layouts/partials/
+#               head.html). No template renders it in the page body; omit it
+#               and the term page falls back to no description at all.
 #
 industries:
   - id: financial-services
@@ -53,7 +54,7 @@ industries:
 
   - id: education
     name: "Education & EdTech"
-    description: "Case studies on how education and edtech organizations use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how schools, universities, and edtech companies use Pulumi to run online learning platforms and campus systems as code."
 
   - id: gaming-entertainment
     name: "Gaming & Entertainment"
@@ -69,20 +70,20 @@ industries:
 
   - id: blockchain
     name: "Technology"
-    description: "Case studies on how technology companies use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how software and platform companies use Pulumi to run their own products and internal developer platforms on cloud infrastructure as code."
 
   - id: iot-transportation
     name: "Transportation & Logistics"
-    description: "Case studies on how transportation and logistics companies use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how transportation and logistics companies use Pulumi to manage cloud infrastructure as code for fleet tracking and IoT device networks."
 
   - id: manufacturing
     name: "Manufacturing & Industrial"
-    description: "Case studies on how manufacturing and industrial companies use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how manufacturing and industrial companies use Pulumi to manage cloud infrastructure as code across factory-floor and industrial IoT systems."
 
   - id: public-sector
     name: "Public Sector"
-    description: "Case studies on how public sector organizations use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how public sector organizations use Pulumi to manage cloud infrastructure as code while meeting compliance and procurement requirements."
 
   - id: marketing-adtech
     name: "Marketing & AdTech"
-    description: "Case studies on how marketing and adtech companies use Pulumi to manage cloud infrastructure as code."
+    description: "Case studies on how marketing and adtech companies use Pulumi to manage cloud infrastructure as code for high-volume ad-serving and campaign platforms."
