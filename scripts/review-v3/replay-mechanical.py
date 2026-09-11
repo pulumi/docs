@@ -293,6 +293,8 @@ REASON_CATEGORIES: list[tuple[str, str]] = [
     ("does not resolve", "link_unresolved"),
     ("frontmatter key(s) outside", "frontmatter_key"),
     ("pricing-sensitive", "pricing_sensitive"),
+    ("edition-sensitive", "edition_sensitive"),
+    ("edition claim on an added line", "edition_claim"),
     ("claim-extraction signal", "claims_signal"),
 ]
 

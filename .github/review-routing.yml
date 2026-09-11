@@ -63,11 +63,17 @@
 # `substantive` — everything else) to a required role, or the literal string
 # `none` meaning no human gate for that combination.
 #
-# All six subjects are required keys, closed set: `docs`, `blog`, `website`,
-# `programs`, `infra`, `other`. `other` is the same fallback
+# All seven subjects are required keys, closed set: `docs`, `blog`,
+# `website`, `programs`, `infra`, `frontend`, `other`. `frontend` is the
+# site's rendering layer (`layouts/`, `theme/`, `assets/`, `static/`): it is
+# reviewed under the infra criteria but approved by marketing, who own how
+# the site looks, and never needs a staging run. `infra` is exactly the
+# build and deploy pipeline (`infrastructure/`, `.github/workflows/`,
+# `scripts/`, `Makefile`, bundler config). `other` is the same fallback
 # `classify_path()` uses for a path it can't otherwise place — see
-# `domain:other` in triage-classify.py — so routing never leaves a changed
-# file unrouted just because it's an unrecognized path shape.
+# `domain:other` in triage-classify.py — repo plumbing such as `.claude/`,
+# `styles/`, generated `data/` files; it routes to tools so an infra PR that
+# also touches those dedupes to one approver instead of stacking a second.
 #
 # A matrix cell may also carry `staging_evidence: required`, which the
 # Sentinel enforces independently of which role is required — currently only
@@ -105,12 +111,11 @@
 # can hand out must have an `sla:` entry; a role in `teams:` that the matrix
 # never assigns doesn't need one.
 #
-# `escalate_to` values prefixed `TODO-` are placeholders for names still
-# pending an org decision (who leads `tools`, who's the docs-guild owning
-# manager, who's marketing's named fallback). The parser treats a `TODO-`
-# `escalate_to` as valid but flags it — a warning, not a validation error —
-# so this file can ship before every escalation contact is nailed down.
-# Replace each `TODO-*` with a real name/handle as the org confirms it.
+# `escalate_to` is a GitHub handle (no `@`; the sweep adds it when it
+# mentions them). A value prefixed `TODO-` is a placeholder for a name still
+# pending an org decision: the parser treats it as valid but flags it — a
+# warning, not a validation error — so the file can ship before every
+# escalation contact is nailed down. All three were filled in 2026-09-11.
 #
 # -----------------------------------------------------------------------------
 # AUTHOR STALENESS
@@ -127,6 +132,30 @@
 # (`label`) and the S3 key prefix the waive gets logged under for audit
 # (`log_prefix`), matching the `pr-review/` layout documented in
 # `scripts/review-v3/README.md`.
+#
+# -----------------------------------------------------------------------------
+# NOT GOVERNED
+# -----------------------------------------------------------------------------
+# `not_governed:` (optional) lists the automation lanes the Sentinel does not
+# gate at all: the check concludes `success` with a "Not governed: <reason>"
+# title and no gates evaluated, logged the same way a waive is. Two shapes:
+# `authors` matches on the PR author alone (Dependabot); `author_label_pairs`
+# needs both the author and a label on the PR (pulumi-bot's generated-docs
+# regens all carry `automation/merge`; its content-review and glow-up PRs do
+# not, and those ARE governed). Without this, every regen and dependency
+# bump goes red under enforcement — no review ran, and the approval comes
+# from a Bot — and merges only by admin bypass.
+#
+# -----------------------------------------------------------------------------
+# AUTO APPROVE
+# -----------------------------------------------------------------------------
+# `auto_approve:` (optional) lists bot authors whose PRs satisfy the
+# right-approver gate without a human when the review itself found nothing
+# for a human to weigh: the author card says nothing blocks merge AND the
+# reviewer brief's "⚠️ Check these before approving" table is empty AND the
+# PR is not `review:prose-flagged`. Any ⚠️ row routes the PR to the matrix
+# team like everyone else's. This is the deterministic replacement for the
+# scheduled maintainer sweep that used to rubber-stamp the bot lane.
 
 schema: 1
 
@@ -143,17 +172,25 @@ matrix: # subject x change type -> role or 'none'
   website: { mechanical: none, substantive: marketing }
   programs: { mechanical: none, substantive: docs-guild }
   infra: { mechanical: tools, substantive: tools, staging_evidence: required }
-  other: { mechanical: none, substantive: docs-guild }
+  frontend: { mechanical: none, substantive: marketing }
+  other: { mechanical: none, substantive: tools }
 
 claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
 
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 
 sla:
-  tools: { business_days: 1, escalate_to: "TODO-tools-lead" }
-  docs-guild: { business_days: 3, escalate_to: "TODO-owning-manager" }
-  marketing: { business_days: 3, escalate_to: "TODO-named-fallback" }
+  tools: { business_days: 1, escalate_to: "CamSoper" }
+  docs-guild: { business_days: 3, escalate_to: "tatcoo-pulumi" }
+  marketing: { business_days: 3, escalate_to: "cnunciato" }
 
 author_staleness: { warn_days: 14, close_days: 21 }
 
 waive: { label: "review:waived", log_prefix: "pr-review/waives/" }
+
+not_governed:
+  authors: ["dependabot[bot]"]
+  author_label_pairs:
+    - { author: pulumi-bot, label: automation/merge }
+
+auto_approve: { authors: [pulumi-bot] }

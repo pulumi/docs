@@ -70,6 +70,8 @@ gh pr diff "$PR_NUMBER"
 bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
 ```
 
+> **v3 surface guard (read before anything else in this step).** If the fetch output contains `<!-- CLAUDE_REVIEW_AUTHOR -->`, the PR is on the v3 surface and the rest of this skill's refresh machinery does not apply to it. The findings are the author card's blocking rows (🚨 / ❓, each with an `F<n>` id; dispositions live in its `REVIEW_STATE` block) plus the reviewer's guide's `### ⚠️ Check these before approving` rows — fetch the guide with `BRIEF_ID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh find --pr "$PR_NUMBER" --role brief)` and `gh api "repos/$REPO/issues/comments/$BRIEF_ID" --jq .body`. **Never run the local `docs-review:references:update` refresh or `pinned-comment.sh upsert` on a v3 PR** — they write a legacy monolith beside the cards. When a v3 review is `STALE`, comment `@claude #update-review` and wait for the card to re-render (the label returns to `review:outstanding-issues` / `review:no-blockers`), then continue from Step 4 with the card's rows as the findings. The Sentinel check on the PR is the merge gate; approve only when it is green or would be.
+
 Determine the pinned-review state from labels and fetch output. **Labels alone are not a sufficient freshness signal**: pushes made by the Copilot coding agent or with `GITHUB_TOKEN` never fire the `pull_request: synchronize` event, so the `mark-stale` job never runs for them and a PR can sit at `review:no-blockers` while the pinned review describes content a later commit replaced (PR #20556). Before accepting `CURRENT`, run the SHA freshness check:
 
 ```bash
@@ -86,7 +88,7 @@ If `REVIEWED_SHA` is non-empty and is not a prefix-match of `HEAD_SHA`, treat th
 | State | Detection | What Step 3 does |
 |---|---|---|
 | `CURRENT` | `review:outstanding-issues` or `review:no-blockers` set; `review:stale` / `review:in-progress` / `review:error` absent; fetch returns body; **SHA freshness check passes** | Nothing — proceed to Step 4 |
-| `STALE` | `review:stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
+| `STALE` | `review:stale` set | Legacy monolith only: refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`). v3 PR: comment `@claude #update-review` (see the guard above) |
 | `IN_PROGRESS` | `review:in-progress` set | Wait briefly for the workflow to finish; re-check labels. If it stays >15 min, treat as `ERROR`. |
 | `ERROR` | `review:error` set (or `review:in-progress` stuck) | Investigate the Actions logs before proceeding |
 | `ABSENT` | Fetch returns no `<!-- CLAUDE_REVIEW -->` markers | Fall back: run a local review (see Step 3 §Absent path) |
@@ -103,7 +105,9 @@ Continue to Step 4.
 
 #### STALE
 
-Refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure re-reads the diff since the last reviewed SHA, classifies as Case 1/2/3, and writes the refreshed body via `pinned-comment.sh upsert`. When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
+**v3 PR (author card present): do not refresh locally.** Comment `@claude #update-review`, wait for the card to re-render, then re-fetch and continue.
+
+Legacy monolith: refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure re-reads the diff since the last reviewed SHA, classifies as Case 1/2/3, and writes the refreshed body via `pinned-comment.sh upsert`. When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
 
 #### ABSENT
 

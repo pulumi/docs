@@ -14,11 +14,12 @@ Every triaged PR carries exactly one of these, `domain:other` included, so **the
 |---|---|---|
 | `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
-| `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, build/bundling config, or the site build pipeline (`layouts/`, `assets/`, `theme/`, `static/`). |
+| `domain:infra` | `d4c5f9` | PR touches the build and deploy pipeline: workflows, scripts, infrastructure code, Makefile, build/bundling config. The v3 matrix routes it to the tools team and requires a staging run. |
+| `domain:frontend` | `7057ff` | PR touches the site's rendering layer: `layouts/`, `theme/`, `assets/`, `static/` (except programs), plus the hero-animation and color-token data files. Reviewed under the infra criteria (Hugo correctness, dark-mode pass) but the v3 matrix routes it to marketing, with no staging run. |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
-| `domain:website` | `c5def5` | PR touches marketing, pricing, legal, or competitive landing pages (any other `content/**.md`). |
+| `domain:website` | `c5def5` | PR touches marketing, pricing, legal, or competitive landing pages (any other `content/**.md`), or the site-chrome / pricing data files that render on them. |
 | `domain:mixed` | `bfd4f2` | PR touches more than one domain. Each file is reviewed under its domain. |
-| `domain:other` | `ededed` | PR touches no domain-specific path (`data/`, `styles/`, `archetypes/`, `.claude/`, non-workflow `.github/` files, repo-root dotfiles). Reviewed under shared criteria only. Applied only when nothing else matched, so it never appears beside another `domain:` label. |
+| `domain:other` | `ededed` | PR touches no domain-specific path (generated `data/` files, `styles/`, `archetypes/`, `.claude/`, non-workflow `.github/` files, repo-root dotfiles). Reviewed under shared criteria only; the v3 matrix routes it to the tools team. Applied only when nothing else matched, so it never appears beside another `domain:` label. Content-serving `data/` files (docs nav, blog taxonomies, author bios, pricing matrix) classify with their content instead — see `docs-review:references:domain-routing`. |
 
 ## Workflow-state labels
 
@@ -48,7 +49,17 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 
 | Label | Color | Description |
 |---|---|---|
-| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the `/resolve` listener (this PR) and by the initial review lane (wired in the lane-rewiring PR stacked on this one — until that merges, the label changes nothing on a fresh review); the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. |
+| `surface:v3` | `5319e7` | Opt this PR into the v3 review surface (author card + reviewer brief + evidence page) regardless of the `REVIEW_V3_COMMENTS` repo variable — the per-PR dark-launch and rollback lever. Add it to a draft and mark ready, or add it and comment `@claude #new-review`; remove it and `#new-review` again to return to the monolith. Read by the initial review lane and the `/resolve` listener; the update lane follows whichever cards are on the PR. Not a `review:*` state label — triage and the reconcile job never touch it. Redundant once `REVIEW_V3_COMMENTS` is `'1'`; retire it (and `REVIEW_V3_BOT_PRS`) after that flip has soaked. |
+
+## Content-review class labels (set by the content-review workflow)
+
+`content-review-article.yml` applies one of these to every bot content-review PR it opens, from `scripts/content-review/publish-gate.py`'s class verdict. Informational, and the record the v3 auto-merge job reads alongside the Sentinel verdict. The workflow's `gh pr edit --add-label` is fail-open, so the labels have to exist or the class is silently invisible (it was, until 2026-09-11).
+
+| Label | Color | Description |
+|---|---|---|
+| `content-review/deterministic` | `c5def5` | Every applied fix is deterministic-class (link, Vale, frontmatter); the workflow arms GitHub auto-merge at publish. |
+| `content-review/judgment` | `bfd4f2` | At least one judgment-class fix; opens un-armed and needs a human eye. |
+| `content-review/glow-up` | `d4c5f9` | A whole-article glow-up from the glow-up lane. |
 
 ## Create them all (`gh` one-liner)
 
@@ -58,7 +69,8 @@ Run from a clone of `pulumi/docs` with `gh` authenticated as a user with write a
 gh label create "surface:v3"             --color 5319e7 --description "Opt this PR into the v3 review surface regardless of REVIEW_V3_COMMENTS"
 gh label create "domain:docs"            --color 0e8a16 --description "PR touches technical docs"
 gh label create "domain:blog"            --color a2eeef --description "PR touches blog posts or customer stories"
-gh label create "domain:infra"           --color d4c5f9 --description "PR touches workflows, scripts, infra, Makefile, build config, or the site build pipeline"
+gh label create "domain:infra"           --color d4c5f9 --description "PR touches the build/deploy pipeline: workflows, scripts, infrastructure, Makefile, build config"
+gh label create "domain:frontend"        --color 7057ff --description "PR touches Hugo templates, theme sources, or site assets (layouts/, theme/, assets/, static/)"
 gh label create "domain:programs"        --color fbca04 --description "PR touches static/programs/"
 gh label create "domain:website"         --color c5def5 --description "PR touches marketing, pricing, legal, or competitive landing pages"
 gh label create "domain:mixed"           --color bfd4f2 --description "PR touches more than one domain"
@@ -76,6 +88,9 @@ gh label create "review:error"           --color e11d21 --description "Workflow 
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
 gh label create "review:waived"          --color d93f0b --description "Break-glass: a human waived the v3 merge gates; actor and reason are logged"
 gh label create "review:author-stalled"  --color fad8c7 --description "Waiting on the author 14+ days; closes at 21 days, one-click reopen (SLA sweep)"
+gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
+gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
+gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"
 ```
 
 ## Migrate from the old two-label scheme

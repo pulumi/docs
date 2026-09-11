@@ -53,7 +53,8 @@ RAW_CONFIG = {
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
-        "other": {"mechanical": "none", "substantive": "docs-guild"},
+        "frontend": {"mechanical": "none", "substantive": "marketing"},
+        "other": {"mechanical": "none", "substantive": "tools"},
     },
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
@@ -160,10 +161,12 @@ def docs_file_mechanical():
 
 
 def infra_file():
+    # Build/deploy pipeline (tools lane). Templates are `frontend` →
+    # marketing since 2026-09-11, so a layouts/ path no longer says "tools".
     return {
-        "filename": "layouts/partials/foo.html",
+        "filename": "scripts/build-site.sh",
         "status": "modified",
-        "patch": "@@ -1,1 +1,1 @@\n-<b>a</b>\n+<b>b</b>",
+        "patch": "@@ -1,1 +1,1 @@\n-echo a\n+echo b",
     }
 
 

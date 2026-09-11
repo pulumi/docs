@@ -42,6 +42,27 @@ jobs:
       id-token: write
       actions: write # Required to dispatch claude-code-review.yml.
     steps:
+      # The job-level `if:` is a substring match; a comment that quotes
+      # `@claude … #new-review` in backticks or a blockquote must not wipe
+      # the review and regenerate it. Same gate as claude-update.yml: the
+      # script comes from the default branch, the body from an env var.
+      - name: Checkout mention gate (default branch, sparse)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .mention-gate
+          sparse-checkout: .claude/commands/docs-review/scripts/mention-gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Mention gate (a quoted protocol is not a request)
+        id: mention
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.body }}
+        run: |
+          python3 .mention-gate/.claude/commands/docs-review/scripts/mention-gate.py check \
+            --hashtag new-review --body-env BODY | tee -a "$GITHUB_OUTPUT"
+
       # ESC runs before checkout so the bot token can authenticate the
       # checkout. claude-new.yml doesn't push today (it just clears the
       # pinned comment and dispatches claude-code-review.yml), but kept
@@ -49,9 +70,11 @@ jobs:
       # change adds a push path here.
       - name: Fetch secrets from ESC
         id: esc-secrets
+        if: steps.mention.outputs.fire == 'true'
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
+        if: steps.mention.outputs.fire == 'true'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -59,6 +82,7 @@ jobs:
 
       - name: Check repository write access
         id: check-access
+        if: steps.mention.outputs.fire == 'true'
         run: |
           REPO_FULL="${{ github.repository }}"
 

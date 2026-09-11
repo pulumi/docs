@@ -405,6 +405,64 @@ def test_condition_claims_signal() -> None:
     assert_clean("test_condition_claims_signal", before)
 
 
+def test_condition_edition_claims() -> None:
+    """Edition-feature rewrites are the shape Layer A misses (2026-09-11
+    replay: #21446/#21447 rewrote edition feature lists on the FAQ and
+    what-is pages inside every size cap with 0 claims extracted). Two
+    signals close it: edition-sensitive paths, and an edition-claim regex on
+    added lines. Neither stacks the marketing overlay — their reasons must
+    not start with "pricing-sensitive"."""
+    print("test_condition_edition_claims")
+    before = len(_failures)
+
+    # Path signal: any change under the FAQ or what-is trees.
+    d_faq = body_diff("content/docs/support/faq/pulumi-cloud.md", added=["+Clarified wording."])
+    ok, reasons = run_mechanical(d_faq, files=[{"path": "content/docs/support/faq/pulumi-cloud.md"}])
+    check(ok is False, "a FAQ edit is never mechanical")
+    check(any(r.startswith("edition-sensitive") for r in reasons), f"got {reasons}")
+    check(not any(r.startswith("pricing-sensitive") for r in reasons),
+          "edition-sensitive paths do not masquerade as pricing-sensitive")
+
+    # choose-edition IS pricing-sensitive (it is the edition/pricing page).
+    d_choose = body_diff("content/docs/administration/get-started/choose-edition.md", added=["+Clarified."])
+    ok_c, reasons_c = run_mechanical(
+        d_choose, files=[{"path": "content/docs/administration/get-started/choose-edition.md"}])
+    check(ok_c is False and any(r.startswith("pricing-sensitive") for r in reasons_c),
+          f"choose-edition is pricing-sensitive; got {reasons_c}")
+
+    # Line signal: an edition name + "edition", anywhere in docs.
+    d_name = body_diff("content/docs/foo.md",
+                       added=["+Conformance packs ship in the Enterprise edition."])
+    ok2, reasons2 = run_mechanical(d_name)
+    check(ok2 is False and any("edition claim on an added line" in r for r in reasons2),
+          f"'the Enterprise edition' on an added line is never mechanical; got {reasons2}")
+
+    # Line signal: "editions" with a feature verb, no edition name.
+    d_verb = body_diff("content/docs/foo.md",
+                       added=["+Audit logs are available in the paid editions."])
+    ok3, reasons3 = run_mechanical(d_verb)
+    check(ok3 is False and any("edition claim on an added line" in r for r in reasons3),
+          f"'available in ... editions' is never mechanical; got {reasons3}")
+
+    # Not an edition claim: "edition" without a name or feature verb. (Layer
+    # A may still flag the sentence for its own reasons; assert only that the
+    # edition signal stays quiet.)
+    d_plain = body_diff("content/docs/foo.md", added=["+See this edition of the changelog."])
+    _ok4, reasons4 = run_mechanical(d_plain)
+    check(not any("edition" in r for r in reasons4),
+          f"the word 'edition' alone is not an edition claim; reasons={reasons4}")
+
+    # The removed side never counts — only added lines can assert.
+    d_removed = make_file_diff("content/docs/foo.md", [
+        " context line",
+        "-The Enterprise edition adds audit logs.",
+        "+Audit logs are documented separately.",
+    ])
+    ok5, reasons5 = run_mechanical(d_removed)
+    check(ok5 is True, f"an edition claim on a removed line only is not a signal; reasons={reasons5}")
+    assert_clean("test_condition_edition_claims", before)
+
+
 def main() -> int:
     tests = [
         test_all_pass_is_mechanical,
@@ -417,6 +475,7 @@ def main() -> int:
         test_condition_links,
         test_condition_frontmatter_keys,
         test_condition_claims_signal,
+        test_condition_edition_claims,
     ]
     for t in tests:
         try:
