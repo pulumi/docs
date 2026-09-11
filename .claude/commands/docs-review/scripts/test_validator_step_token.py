@@ -16,7 +16,8 @@ import pytest
 import yaml
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[4]
-WORKFLOWS = sorted((REPO_ROOT / ".github" / "workflows").glob("*.yml"))
+_WF_DIR = REPO_ROOT / ".github" / "workflows"
+WORKFLOWS = sorted([*_WF_DIR.glob("*.yml"), *_WF_DIR.glob("*.yaml")])
 
 
 def _validator_steps():
