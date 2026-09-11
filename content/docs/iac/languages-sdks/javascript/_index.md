@@ -25,15 +25,15 @@ aliases:
 Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js or Bun runtimes. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same languages and patterns you already know
-- **Rich ecosystem**: Leverage the vast npm package ecosystem in your infrastructure code
+- **Rich ecosystem**: Use packages from the npm registry directly in your infrastructure code
 - **Native tooling**: Use your existing IDE, linters, test frameworks, and other development tools without requiring plugins or extensions
 - **Type safety**: When using TypeScript, catch errors at development time with strong typing and IntelliSense
 
 ## Installation requirements
 
-### Node.js Runtime
+### Node.js runtime
 
-Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
+Pulumi supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). Use the latest LTS version for the best experience.
 
 To use the Node.js runtime, set `runtime: nodejs` in your `Pulumi.yaml`:
 
@@ -68,7 +68,7 @@ Pulumi supports the following package managers:
 Dynamic providers may not work correctly with all package managers. If you encounter issues with dynamic providers, try using npm or Yarn 1.
 {{< /notes >}}
 
-Pulumi defaults to using npm. However, if Pulumi detects a `yarn.lock` file in the project root, or the environment variable `PULUMI_PREFER_YARN=true`, Pulumi will use Yarn instead if available. For pnpm, ensure `pnpm-lock.yaml` is present, and for Bun, ensure `bun.lock` (Bun >= 1.2) or `bun.lockb` (older versions) is present.
+Pulumi defaults to using npm. However, if Pulumi detects a `yarn.lock` file in the project root, or the environment variable `PULUMI_PREFER_YARN=true`, Pulumi uses Yarn instead if available. For pnpm, ensure `pnpm-lock.yaml` is present, and for Bun, ensure `bun.lock` (Bun >= 1.2) or `bun.lockb` (older versions) is present.
 
 Pulumi does not support Yarn Plug'n'Play.
 
@@ -83,7 +83,7 @@ Pulumi fully supports both TypeScript and JavaScript. You can use either languag
 While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples are maintained exclusively in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
 {{< /notes >}}
 
-Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 up to and including the TypeScript 6 releases (for TypeScript 7, see [Using TypeScript 7](#using-typescript-7)).
+Pulumi compiles TypeScript for you, and works with a range of compiler versions. See [TypeScript versions](#typescript-versions) for the supported range and how Pulumi chooses a compiler, and [Using TypeScript 7](#using-typescript-7) if you want to type check with TypeScript 7.
 
 The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi/).
 
@@ -105,7 +105,7 @@ See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for ful
 
 ### Program entrypoint
 
-Pulumi executes your program by internally loading the entrypoint file as a Node module: `require("index.ts")`. By default, Pulumi will load `index.ts` or `index.js`. Alternatively, if you specify `main` within your `package.json`, Pulumi will load that module instead:
+Pulumi executes your program by internally loading the entrypoint file as a Node module: `require("index.ts")`. By default, Pulumi loads `index.ts` or `index.js`. If you specify `main` within your `package.json`, Pulumi loads that module instead:
 
 ```json
 {
@@ -144,7 +144,7 @@ export const out = myResource.output;
 
 ### Enabling async support
 
-If you want to enable use of the `async` keyword, your entrypoint can export a top level `async` function that returns an object with members for each stack output. Pulumi will automatically call this function and await the result:
+If you want to enable use of the `async` keyword, your entrypoint can export a top level `async` function that returns an object with members for each stack output. Pulumi calls this function automatically and awaits the result:
 
 {{< chooser language "typescript,javascript" >}}
 
@@ -173,7 +173,7 @@ export = async () => {
 {{< /chooser >}}
 
 {{< notes type="info" >}}
-ESM projects can use [top-level `await`](#top-level-await) instead of the export function pattern above. See [Native ESM Support](#native-esm-support) for configuration details.
+[Native ESM support](#native-esm-support), later on this page, describes an alternative to the export function pattern shown here: [top-level `await`](#top-level-await).
 {{< /notes >}}
 
 ## Defining resources
@@ -204,15 +204,15 @@ With Automation API, your Node.js code controls Pulumi, rather than Pulumi contr
 
 ## TypeScript
 
-Pulumi supports TypeScript natively, so you don't need to explicitly run `tsc` on your program before running `pulumi`. When using Pulumi's built-in TypeScript support, a `tsconfig.json` file is optional, but defining one allows you to set additional TypeScript compiler options and enables better IDE integration. Any options set in your `tsconfig.json` file will be picked up by Pulumi.
+Pulumi supports TypeScript natively, so you don't need to explicitly run `tsc` on your program before running `pulumi`. When using Pulumi's built-in TypeScript support, a `tsconfig.json` file is optional, but defining one allows you to set additional TypeScript compiler options and enables better IDE integration. Pulumi picks up any options set in your `tsconfig.json` file.
 
-If you would like full control of the TypeScript build process, you can compile ahead of time and point your `package.json` main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
+If you want full control of the TypeScript build process, you can compile ahead of time and point your `package.json` main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
 
 For information on configuring TypeScript, see the [TypeScript documentation for `tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ### TypeScript versions
 
-Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, when Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local `node_modules` directory, and then fall back to the bundled version. This means that if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), that version will be used instead.
+Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, when Pulumi runs a TypeScript program, it first attempts to load the compiler from the local `node_modules` directory, and falls back to the bundled version. So if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), Pulumi uses that version instead.
 
 Pulumi's built-in TypeScript support works with all TypeScript versions from 3.8 up to and including the TypeScript 6 releases.
 
@@ -230,7 +230,7 @@ Pulumi's built-in TypeScript support works with all TypeScript versions from 3.8
 
 ### Using TypeScript 7
 
-[TypeScript 7](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) is a native port of the TypeScript compiler and does not expose the JavaScript compiler API that Pulumi's built-in TypeScript support uses to compile your program at runtime, so it cannot be used to run Pulumi programs. The TypeScript team expects TypeScript 7.1 to ship with a new API and recommends [running TypeScript 6.0 side-by-side with TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0) until then, using the `@typescript/typescript6` backwards compatibility package. This setup works with Pulumi today: alias the compatibility package as `typescript` so that Pulumi's built-in TypeScript support keeps running your program with TypeScript 6, and use the TypeScript 7 compiler for type checking:
+[TypeScript 7](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) is a native port of the TypeScript compiler and does not expose the JavaScript compiler API that Pulumi's built-in TypeScript support uses to compile your program at runtime, so it cannot be used to run Pulumi programs. The TypeScript team expects TypeScript 7.1 to ship with a new API and recommends [running TypeScript 6.0 side-by-side with TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0) until then, using the `@typescript/typescript6` backward compatibility package. This setup works with Pulumi today: alias the compatibility package as `typescript` so that Pulumi's built-in TypeScript support keeps running your program with TypeScript 6, and use the TypeScript 7 compiler for type checking:
 
 ```json
 {
@@ -268,7 +268,7 @@ Both compilers read the same `tsconfig.json`, so it must only use options that b
 
 ### Disabling built-in TypeScript support
 
-You can disable the built in TypeScript support by changing the `runtime` setting in `Pulumi.yaml` to look like the following:
+You can disable the built-in TypeScript support by changing the `runtime` setting in `Pulumi.yaml` to the following:
 
 ```yaml
 runtime:
@@ -277,11 +277,11 @@ runtime:
     typescript: false
 ```
 
-## Native ESM Support
+## Native ESM support
 
-The default Pulumi templates compile TypeScript code to [CommonJS](https://nodejs.org/api/modules.html) modules. You can use ESM syntax like `import` or `export` in your code, but it will be compiled to CommonJS behind the scenes.
+The default Pulumi templates compile TypeScript code to [CommonJS](https://nodejs.org/api/modules.html) modules. You can use ESM syntax like `import` or `export` in your code, but the compiler emits CommonJS behind the scenes.
 
-If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you can set the `type` field in your `package.json` to `module`. This will tell Node.js to treat your package as an ESM package.
+To use [ESM](https://nodejs.org/api/esm.html) natively instead, set the `type` field in your `package.json` to `module`. This tells Node.js to treat your package as an ESM package.
 
 ```json
 {
@@ -292,7 +292,7 @@ If you wish to instead use [ESM](https://nodejs.org/api/esm.html) natively, you 
 }
 ```
 
-Your `tsconfig.json` file should also be updated to ensure that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. To also enable [top-level await](#top-level-await), set [`target`](https://www.typescriptlang.org/tsconfig/#target) to `ES2022` or later:
+Also update your `tsconfig.json` file so that TypeScript outputs ESM. Set the [`module`](https://www.typescriptlang.org/tsconfig/#module) and [`moduleResolution`](https://www.typescriptlang.org/tsconfig/#moduleResolution) fields to `nodenext`. That `module` setting is also what makes [top-level await](#top-level-await) available, as long as [`target`](https://www.typescriptlang.org/tsconfig/#target) is `ES2017` or later:
 
 ```json
 {
@@ -314,7 +314,7 @@ npm install ts-node@^10
 ```
 
 {{< notes >}}
-When using a version of `@pulumi/pulumi` older than 3.183.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
+When using a version of `@pulumi/pulumi` older than 3.183.0, you need to instruct Pulumi to use the `ts-node/esm` loader by setting the `nodeargs` option in the [`runtime`](/docs/iac/concepts/projects/project-file/#runtime-options) options in `Pulumi.yaml`. More recent versions automatically configure this.
 
 ```yaml
 name: project-using-native-esm
@@ -324,7 +324,7 @@ runtime:
     nodeargs: "--loader ts-node/esm --no-warnings"
 ```
 
-Note that if you provide any of the `--loader`, `--import` or `--require` arguments in `nodeargs`, Pulumi will not automatically configure an ESM loader, and you have to specify one yourself, for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://github.com/privatenumber/tsx).
+If you provide any of the `--loader`, `--import`, or `--require` arguments in `nodeargs`, Pulumi does not configure an ESM loader automatically, and you have to specify one yourself — for example `--loader ts-node/esm` as above, or `--import tsx` when using [tsx](https://github.com/privatenumber/tsx).
 
 {{< /notes >}}
 
@@ -332,7 +332,7 @@ Note that if you provide any of the `--loader`, `--import` or `--require` argume
 
 One of the benefits of using native ESM is that you can use [top-level `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) in your Pulumi program. Unlike the [export function pattern](#enabling-async-support) used in CommonJS programs, top-level `await` lets you `await` any Promise directly at the module level, before or between resource declarations, without wrapping your code in a function.
 
-For TypeScript, ensure your `tsconfig.json` includes `"target": "ES2022"` or later as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
+For TypeScript, ensure your `tsconfig.json` sets `module` to `nodenext` and `target` to `ES2017` or later, as shown above, so that TypeScript emits native `await` in the compiled output. In JavaScript ESM projects, top-level `await` works without any additional configuration beyond `"type": "module"` in `package.json`.
 
 The following example uses top-level await to resolve a data source before declaring resources. Stack outputs use named `export const` statements:
 
@@ -374,7 +374,7 @@ export const bucketNames = buckets.map(b => b.id);
 
 {{< /chooser >}}
 
-## Using ESM only modules with CommonJS Pulumi templates
+## Using ESM-only modules with CommonJS Pulumi templates
 
 Older versions of Node.js do not support loading ESM modules using the `require` function (`require` is part of CommonJS, the default runtime targeted by TypeScript in the Pulumi templates). You may encounter an error like the following:
 
@@ -386,7 +386,7 @@ To resolve this issue, you can either follow the instructions above to convert y
 
 ### Pulumi SDK
 
-The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi/) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
+The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi/) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. Most Pulumi programs reference it.
 
 ### Provider SDKs
 
@@ -400,7 +400,7 @@ The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/pol
 
 ### Dev versions
 
-Pulumi also publishes pre-release versions of SDKs that include all the latest changes from the main development branch. If you would like to install them, you can use the `dev` tag. For example:
+Pulumi also publishes pre-release versions of SDKs that include all the latest changes from the main development branch. To install them, use the `dev` tag. For example:
 
 ```bash
 npm add @pulumi/pulumi@dev
