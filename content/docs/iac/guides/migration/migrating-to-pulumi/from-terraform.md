@@ -451,3 +451,13 @@ pulumi package add hcl module ./path/to/module
 ```
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.
+
+## Getting help with your migration
+
+Most teams work through the options above on their own, but a few situations benefit from extra support:
+
+* **Large estates**, where thousands of resources or hundreds of stacks need a phased plan rather than a single conversion pass.
+* **Phased coexistence**, where Terraform and Pulumi manage the same infrastructure side by side for an extended period and the cutover needs sequencing.
+* **Module conversion at scale**, where a shared library of Terraform modules needs to become reusable Pulumi components across many teams.
+
+For any of these, [contact us](/contact/?form=sales) to talk through a migration plan, or ask in the [Pulumi community Slack](https://slack.pulumi.com/) if you'd rather start with other users who have made the same move.
