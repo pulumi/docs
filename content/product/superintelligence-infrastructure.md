@@ -144,7 +144,7 @@ building_blocks:
         - "Software engineering practices apply directly to infrastructure"
 
 learn:
-    title: Build superintelligence infrastructure in minutes
+    title: Build superintelligence infrastructure
     items:
         - title: Get started with Pulumi Cloud
           description: |
