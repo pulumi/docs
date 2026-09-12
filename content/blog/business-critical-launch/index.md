@@ -11,7 +11,7 @@ date: 2022-03-02
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
-meta_desc: Launching Business Critical Edition, 30-day Self-Hosted trial, and AWS Marketplace availability for Pulumi Enterprise and Business Critical.
+meta_desc: Launching Business Critical Edition, a Self-Hosted Proof of Concept (PoC) program, and AWS Marketplace availability for Pulumi Enterprise and Business Critical.
 
 
 # The meta_image appears in social-media previews and on the blog home page.
@@ -32,7 +32,7 @@ category: product
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---
-In the last 12 months, we have experienced 350% year-over-year growth of our enterprise customers, including Mercedes-Benz, Snowflake, Atlassian and SANS Institute. Given the growth in our enterprise customer base, we are excited to launch today a new Business Critical Edition for the Pulumi Service, a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
+In the last 12 months, we have experienced 350% year-over-year growth of our enterprise customers, including Mercedes-Benz, Snowflake, Atlassian and SANS Institute. Given the growth in our enterprise customer base, we are excited to launch today a new Business Critical Edition for the Pulumi Service, a Self-Hosted Pulumi Service Proof of Concept (PoC) program, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
 
 <!--more-->
 
@@ -62,18 +62,18 @@ Policy as Code (CrossGuard), a Business Critical feature:
 
 ## Self-Hosted Pulumi Service
 
-We are also announcing today a 30 day trial for self-hosting the [Pulumi Service](/product/pulumi-service/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we have launched a 30 day trial, instead of 14 day like the Pulumi Service. Sign up today for the 30 day trial on our [Self-Hosted Pulumi Service page](/product/self-hosted/).
+We are also announcing today a Proof of Concept (PoC) program for self-hosting the [Pulumi Service](/product/pulumi-service/). Self-Hosted Pulumi Service allows you to deploy and manage the Pulumi Service on your own infrastructure, either in the cloud or on-premises.  Self-hosting is an option for organizations that need to maintain complete control over hosting, network isolation, identity, and data ownership in order to satisfy segment-specific compliance requirements. It can take time to install and configure a self-hosted product in your desired deployment option, and we want to make sure there is enough time to assess the product. This is why we offer a guided PoC rather than a fixed trial window. [Request a PoC](/product/self-hosted/#self-hosted-trial) on our Self-Hosted Pulumi Service page.
 
 ![Self-Hosted Screenshot](self-hosted.png)
 
-The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
+The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the Self-Hosted PoC program, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
 
 ## Pulumi in the Amazon Web Services (AWS) Marketplace
 
-In concert with the new Pulumi Business Critical Edition and Self-Hosted Pulumi Service trial we are excited to be [listing on the AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg). Pulumi Enterprise and Business Critical Editions are now available for purchase through AWS Marketplace, and support for additional cloud provider marketplaces is imminent. The AWS Marketplace listing can streamline the purchasing and internal approval processes for our customers managing cloud resources on AWS.
+In concert with the new Pulumi Business Critical Edition and Self-Hosted Pulumi Service PoC program we are excited to be [listing on the AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg). Pulumi Enterprise and Business Critical Editions are now available for purchase through AWS Marketplace, and support for additional cloud provider marketplaces is imminent. The AWS Marketplace listing can streamline the purchasing and internal approval processes for our customers managing cloud resources on AWS.
 
 ![AWS Marketplace listing](aws-marketplace-pulumi.png)
 
-We hope the new Pulumi Business Critical Edition, Self-Hosted Pulumi Service trial, and AWS Marketplace listing make it easier for your organization to adopt and scale your Cloud Engineering practices using the Pulumi Service.
+We hope the new Pulumi Business Critical Edition, Self-Hosted Pulumi Service PoC program, and AWS Marketplace listing make it easier for your organization to adopt and scale your Cloud Engineering practices using the Pulumi Service.
 
 All editions of the Pulumi Service, including Business Critical and Self-Hosted, are immediately available. Enterprises can [contact us](/contact/) to discuss which product experiences might be best suited to their needs. Enterprises can choose to deploy Pulumi on their own or take advantage of Pulumi’s Business Critical Edition onboarding program.
