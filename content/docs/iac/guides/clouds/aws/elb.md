@@ -134,7 +134,7 @@ target group to populate the ECS service's load balancer configuration for you:
 
 {{< notes >}}
 [The AWSx ECS component](/docs/iac/guides/clouds/aws/ecs/) — the classes in the `awsx.ecs` package — creates the
-right ingress and egress rules automatically. If you are using raw `aws.ecs`, you need to manage the security group
+right ingress and egress rules automatically. If you are using the `aws.ecs` resources, you need to manage the security group
 ingress and egress rules yourself, much like the [EC2 instance](#load-balancing-ec2-instance-targets) example earlier.
 {{< /notes >}}
 
