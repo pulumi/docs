@@ -102,7 +102,7 @@ What that means when you work here:
 - **Don't add tutorial or template content to this repo.** A new tutorial, a new template page, or a glossary term goes to pulumi/marketing-web. (The `glossary` shortcode and `data/glossary.toml` are a *different*, docs-only glossary rendered at `/docs/glossary/` — that one stays.)
 - **Link to `/dev/tutorials/<slug>/`, `/dev/templates/<group>/[<cloud>/]`, and `/dev/glossary/<term>/`.** Never `/tutorials/` or `/templates/`; those only redirect.
 - **`data/footer.yml` and `data/header_nav.yaml` are synced downstream.** marketing-web's `scripts/sync-content.mjs` reads both, so a nav or footer edit here also changes the Dev Center's chrome. Both carry one Dev Center entry pointing at `/dev/`; the Tutorials, Templates, and Pulumi guides entries collapsed into it.
-- **Search does not cover the Dev Center.** Docs search indexes this repo and the Registry only; `/dev` has its own search at `/dev/browse`. `scripts/search/update-search-index.js` deliberately doesn't fetch `/dev/search-index.json`, and there is no Dev Center facet in the docs search UI.
+- **Docs search includes the Dev Center as a facet.** Docs search indexes this repo, the Registry, and the Dev Center; `/dev` also keeps its own search at `/dev/browse`. `scripts/search/update-search-index.js` fetches `/dev/search-index.json` (published by pulumi/marketing-web), normalizes each record onto our schema with `section: "Dev Center"` (dropping its non-searchable `content` field), and merges it into the Algolia index. The "Dev Center" tab is wired via `data-facets` on the `#search` element in `layouts/partials/docs/menu.html`. A Dev Center fetch failure is non-fatal — the publish continues without those records.
 
 ---
 
