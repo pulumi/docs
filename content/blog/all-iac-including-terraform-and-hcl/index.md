@@ -17,7 +17,7 @@ We work with thousands of customers who prefer Pulumi due to our modern approach
 
 ## The TL;DR
 
-Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic AI included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
+Pulumi Cloud now manages Terraform/OpenTofu with full visibility, governance, and agentic infrastructure included. Pulumi IaC now speaks HCL alongside general purpose languages and YAML. And we'll cover your costs until your HashiCorp contract ends.
 
 ## Terraform/OpenTofu in Pulumi Cloud
 
