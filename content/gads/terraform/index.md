@@ -45,7 +45,7 @@ key_features_above:
 
 key_features:
     items:
-        - title: "Migrate from Terraform in minutes"
+        - title: "Start migrating from Terraform in minutes"
           sub_title: "Free Migration Tools"
           description: |
             Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or .NET. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
