@@ -454,7 +454,7 @@ For more information about using Terraform modules directly in Pulumi, see the [
 
 ## Getting help with your migration
 
-Most teams work through the options above on their own, but a few situations benefit from extra support:
+Most teams work through the options above on their own, but a few situations call for extra support:
 
 * **Large estates**, where thousands of resources or hundreds of stacks need a phased plan rather than a single conversion pass.
 * **Phased coexistence**, where Terraform and Pulumi manage the same infrastructure side by side for an extended period and the cutover needs sequencing.
