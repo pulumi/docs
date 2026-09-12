@@ -27,13 +27,20 @@ function normalizeDevRecords(devIndex) {
             title: o.title,
             h1: o.title,
             description: o.blurb || "",
-            href: o.href,
+            // Some Dev Center records carry absolute www.pulumi.com URLs (e.g. blog
+            // series). Strip the origin so same-site links are relative like the rest
+            // of the index and stay on-domain in every environment; genuinely off-site
+            // links (e.g. academy.pulumi.com) are left absolute.
+            href: o.href.replace(/^https:\/\/www\.pulumi\.com/, ""),
             rank: o.featured ? 150 : 100,
             boosted: false,
             keywords: [].concat(o.tagLabels || [], o.languageLabels || []),
             tags: [].concat(o.tags || [], o.languages || [], o.clouds || []),
             ancestors: ["Dev Center", o.typeLabel].filter(Boolean),
-        }));
+        }))
+        // Drop Dev Center blog posts and series: those live in /blog/ and are
+        // already surfaced in the Blog tab, so keeping them here would duplicate.
+        .filter(o => !o.href.startsWith("/blog/"));
 }
 
 // Configuration values required for updating the Algolia index.

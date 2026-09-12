@@ -72,6 +72,7 @@
                 data-search-key="{{ getenv "ALGOLIA_APP_SEARCH_KEY" }}"
                 data-facets="Docs,Registry,Dev Center,Blog"
                 data-index="production"
+                data-sprite-url="{{ (partialCached "icon-context.html" "icon-context").spriteUrl }}"
             ></div>
         {{ else }}
             <!-- Visual placeholder styled like real search input -->
