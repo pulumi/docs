@@ -214,7 +214,7 @@ Sometimes you need to validate the actual cloud state, including auto-generated 
 
 ### CI/CD Integration
 
-The third model integrates policies directly into your deployment pipeline. This ensures consistent enforcement across all teams and creates natural deployment gates. For example, you might configure [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) to run policy validation on every pull request, blocking merges if violations are found. This approach combines the best of both worlds: early feedback during development and guaranteed enforcement before production.
+The third model integrates policies directly into your deployment pipeline. This ensures consistent enforcement across all teams and creates natural deployment gates. For example, you might configure [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) to run policy validation on every pull request, blocking merges if violations are found.
 
 ```yaml
 # GitHub Actions example
