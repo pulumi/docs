@@ -93,7 +93,7 @@ Tivity Health's search for the right tool led them to Pulumi, a unified platform
 
 - **Automation**: [Pulumi's infrastructure as code (IaC)](https://www.pulumi.com/docs/iac/) approach enabled Tivity Health to automate the deployment and management of its cloud environments, reducing the time and effort required for these tasks.
 - **Productivity**: using Pulumi's general-purpose programming languages allowed developers to define, deploy, and manage infrastructure within their existing tools.
-- **Security**: Pulumi's security features allowed Tivity Health to integrate [security practices](/docs/insights/policy/) into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
+- **Security**: Pulumi's security features allowed Tivity Health to integrate [security practices](/docs/discovery-governance/policy/) into its infrastructure deployment processes, reducing the risk of security breaches and ensuring compliance.
 - **Cost Optimization**: Pulumi's ability to automate the spin-up and teardown of cloud environments on demand has led to significant cost reductions for Tivity Health.
 
 Giambruno describes Pulumi as a "three-dimensional" tool, offering a versatile set of capabilities that have been instrumental in transforming Tivity Health's operations. "*The ability to use those dimensions in lots of different ways to do the automation is what really makes a difference to the teams*," he says.

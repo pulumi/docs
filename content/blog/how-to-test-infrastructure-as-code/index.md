@@ -1008,7 +1008,7 @@ pulumi policy publish
 
 > As Joe Duffy, Pulumi CEO, [puts it](https://www.pulumi.com/blog/the-agentic-infrastructure-era/): "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale."
 
-Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/insights/policy/) and assign them via policy groups to enforce them across the stacks or accounts you choose—including organization-wide.
+Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/discovery-governance/policy/) and assign them via policy groups to enforce them across the stacks or accounts you choose—including organization-wide.
 
 ## How is testing IaC in Pulumi different from Terraform?
 
@@ -1205,7 +1205,7 @@ When you're ready to go deeper:
 - **[Testing overview](/docs/iac/guides/testing/)** — Pulumi's full testing documentation
 - **[Unit testing guide](/docs/iac/guides/testing/unit/)** — detailed mock API reference with Go and C# examples
 - **[Automation API integration testing](/docs/iac/guides/testing/integration/automation-api/)** — advanced patterns (multi-stack tests, config injection, parallel test execution)
-- **[Policy as code authoring](/docs/insights/policy/policy-packs/authoring/)** — writing and publishing Pulumi Policies
+- **[Policy as code authoring](/docs/discovery-governance/policy/policy-packs/authoring/)** — writing and publishing Pulumi Policies
 - **[Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)** — a full comparison of the two platforms
 
 If you're migrating from Terraform, the [Pulumi conversion tool](/tf2pulumi/) translates your existing HCL to Python, TypeScript, Go, .NET, and more, including your test infrastructure. Your Terratest or `terraform test` suites can be ported to Pulumi's native test runner—using your existing language—as part of the migration.

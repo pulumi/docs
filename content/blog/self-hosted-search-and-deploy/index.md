@@ -35,7 +35,7 @@ Pulumi Resource Search offers multi-cloud search and analytics across every reso
 - **Search from the CLI:** Issue resource search queries from within the terminal without needing to change contexts.
 - **Data Export:** Export resource data for further analysis in your data warehouse.
 
-Get more details on these features in our [Resource Search documentation](/docs/insights/discovery/#pulumi-insights). For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/administration/self-hosting/components/search/).
+Get more details on these features in our [Resource Search documentation](/docs/discovery-governance/discovery/#pulumi-insights). For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/administration/self-hosting/components/search/).
 
 ## Pulumi Deployments: Automate and Manage Your Infrastructure with Ease
 
