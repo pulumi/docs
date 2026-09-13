@@ -6,7 +6,7 @@
 {{ $spec := index site.Data "openapi-spec" }}
 {{ $lastmodData := site.Data.openapi_lastmod }}
 {{ if not $lastmodData }}
-    {{ warnf "openapi: data/openapi_lastmod.json not found — sitemap <lastmod> will be omitted for cloud-rest-api schema pages. Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
+    {{ warnf "openapi: data/openapi_lastmod.json not found — dateModified will be omitted for cloud-rest-api schema pages (these pages are sitemap_exclude'd, so there is no sitemap <lastmod> at stake). Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
 {{ end }}
 {{ if not $spec }}
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping schema page generation." }}
@@ -140,9 +140,10 @@
                  scripts/update-openapi-lastmod.js and this template have
                  drifted apart on which schema keys exist. Warn once per
                  name so either case shows up in build output instead of
-                 silently dropping <lastmod>/dateModified for the affected
-                 pages. */}}
-            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without <lastmod>/dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
+                 silently dropping dateModified for the affected pages
+                 (these pages are sitemap_exclude'd, so <lastmod> is not
+                 at stake here). */}}
+            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
         {{ end }}
         {{ with index .schemas $name }}
             {{ with .lastmod }}
