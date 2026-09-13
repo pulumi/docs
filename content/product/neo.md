@@ -83,10 +83,10 @@ sections:
         description: Every action is previewed, logged, and reversible, giving you complete visibility into what changed and when.
       - icon: chart-line
         title: Cost optimization
-        description: Instantly surface your least-used, most expensive resources and get actionable recommendations to reduce cloud spend.
+        description: Surface your least-used, most expensive resources and get actionable recommendations to reduce cloud spend.
       - icon: bug
         title: Debug & diagnose
-        description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains in seconds.
+        description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains what went wrong.
       - icon: check-circle
         title: Compliance checks
         description: Neo can scan for misconfigurations and policy violations across your infrastructure with a single question.
