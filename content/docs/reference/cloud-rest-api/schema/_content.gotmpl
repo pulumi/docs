@@ -100,8 +100,12 @@
          URL count and mostly consists of internal API sub-structures (request
          bodies, nested response fragments, polymorphic variant types) rather
          than pages with independent search intent. sitemap_exclude removes
-         them from sitemap.xml only — it does not set block_external_search_index,
-         so these pages remain crawlable and indexable exactly as before. This
+         them from sitemap.xml — it does not set block_external_search_index,
+         so these pages remain crawlable and indexable exactly as before. Note
+         sitemap.xml is also what scripts/link-checker/check-links.js and
+         scripts/detect-new-404s.js crawl from, so these pages' own outbound
+         links stop being checked too; a canary page is kept in check-links.js's
+         additionalRoutes to still catch a template-wide breakage. This
          is deliberately NOT a noindex: a per-schema reachability/thinness
          analysis of the OpenAPI graph showed almost every schema component is
          transitively reachable from some API path (through $ref/allOf/oneOf
