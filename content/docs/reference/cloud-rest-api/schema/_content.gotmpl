@@ -95,6 +95,21 @@
         {{ end }}
     {{ end }}
 
+    {{/* sitemap_exclude: this adapter generates one page per OpenAPI schema
+         component (~800 pages), which is a large share of the site's total
+         URL count and mostly consists of internal API sub-structures (request
+         bodies, nested response fragments, polymorphic variant types) rather
+         than pages with independent search intent. sitemap_exclude removes
+         them from sitemap.xml only — it does not set block_external_search_index,
+         so these pages remain crawlable and indexable exactly as before. This
+         is deliberately NOT a noindex: a per-schema reachability/thinness
+         analysis of the OpenAPI graph showed almost every schema component is
+         transitively reachable from some API path (through $ref/allOf/oneOf
+         and discriminator-mapping composition), so there is no reliable
+         intrinsic signal for picking a "real" subset to noindex without risking
+         pages that already earn organic search traffic. Trimming the sitemap
+         (a crawl-prioritization signal) is the safe, high-confidence fix; changing
+         indexability is not, absent much stronger per-page evidence. */}}
     {{ $params := dict
         "h1" $name
         "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
@@ -102,6 +117,7 @@
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
+        "sitemap_exclude" true
     }}
 
     {{/* lastmod: see the pre-built-policy-packs adapter for why
