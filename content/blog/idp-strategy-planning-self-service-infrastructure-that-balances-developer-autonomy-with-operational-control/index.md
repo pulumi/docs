@@ -185,7 +185,7 @@ The sweet spot is creating [component resources](https://www.pulumi.com/docs/iac
 ### 2. Blueprints
 
 Blueprints are your templatized, well-architected patterns that developers can use to bootstrap their infrastructure.
-But here's what I want you to understand about blueprints: they're carefully designed patterns that embody your organizational best practices and architectural decisions, not just starting points you throw over the wall to developers.
+But here's what I want you to understand about blueprints: they're carefully designed patterns that embody your organizational best practices and architectural decisions, not starting points you throw over the wall to developers.
 
 When we see successful platform teams, their templates serve as both accelerators and guardrails.
 They give developers a fast path to production-ready infrastructure while ensuring that everything they deploy follows your organization's standards.
