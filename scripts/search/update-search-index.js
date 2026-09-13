@@ -77,13 +77,15 @@ async function publishIndex() {
 
         try {
             console.log(` ↳ Replacing all records in the '${ config.indexName }' index...`);
-            const result = await client.replaceAllObjects({
+            // `replaceAllObjects` already waits internally for the copy, batch, and move
+            // operations to complete before resolving, and its response has no top-level
+            // `taskID` to pass to `waitForTask` (see `ReplaceAllObjectsResponse` in the
+            // Algolia client types). Calling `waitForTask` here throws synchronously on
+            // the missing `taskID`, which used to abort the rest of `updateIndex` before
+            // settings, synonyms, or rules were ever applied.
+            await client.replaceAllObjects({
                 indexName: config.indexName,
                 objects: objects,
-            });
-            await client.waitForTask({
-                indexName: config.indexName,
-                taskID: result.taskID
             });
             console.log(`   ↳ ${objects.length} records updated.`);
 
@@ -100,7 +102,7 @@ async function publishIndex() {
             console.log(" ↳ Updating synonyms...")
             const synonymsResult = await client.saveSynonyms({
                 indexName: config.indexName,
-                synonymHits: indexSynonyms,
+                synonymHit: indexSynonyms,
                 forwardToReplicas: false,
                 replaceExistingSynonyms: true
             });
@@ -124,7 +126,11 @@ async function publishIndex() {
             console.log(" ↳ Done. ✨\n");
         }
         catch (error) {
+            // Surface the failure loudly: swallowing it here let the hourly cron
+            // report success (exit code 0) even when the index was left partially
+            // or entirely unconfigured.
             console.error(error);
+            process.exit(1);
         }
     }
 
