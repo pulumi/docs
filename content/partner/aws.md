@@ -68,7 +68,7 @@ sections:
 
   - type: feature_callout
     background: 2
-    title: Agentic AI with built-in governance
+    title: Agentic infrastructure with built-in governance
     description: Neo automates AWS operations while respecting your policies, compliance requirements, and approval workflows. From Lambda runtime updates to security remediation, Neo generates infrastructure changes as pull requests — giving your team full visibility and control before any changes reach production.
     cta_primary_text: Contact us to learn more
     cta_primary_link: /contact/
