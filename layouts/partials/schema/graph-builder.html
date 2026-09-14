@@ -10,21 +10,36 @@
      appended to $graph. */}}
 {{ $hasParts := slice }}
 
-{{/* Create WebPage entity as the main container.
+{{/* Author archive term pages (/blog/author/{slug}/) get ProfilePage instead
+     of WebPage per Google's profile-page structured-data guidance
+     (https://developers.google.com/search/docs/appearance/structured-data/profile-page),
+     and their name/headline needs to be the person's real name rather than
+     .Title: Hugo's default taxonomy-term title is generated from the term
+     slug itself (e.g. "joe-duffy" renders as the mangled "Joe-Duffy"), and
+     these pages carry no title_tag front matter to override it. */}}
+{{ $isAuthorTerm := and (eq .Kind "term") (eq .Data.Singular "author") }}
+
+{{/* Create WebPage/ProfilePage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
-     nav label. */}}
+     nav label — except on an author term page, where it's the real name. */}}
+{{ $pageName := or .Params.title_tag .Title }}
+{{ if $isAuthorTerm }}
+  {{ with index site.Data.team.team .Data.Term }}
+    {{ $pageName = .name }}
+  {{ end }}
+{{ end }}
 {{ $webpage := dict
-  "@type" "WebPage"
+  "@type" (cond $isAuthorTerm "ProfilePage" "WebPage")
   "@id" (printf "%s#webpage" .Permalink)
   "url" .Permalink
-  "name" (or .Params.title_tag .Title)
+  "name" $pageName
 }}
 
 {{/* headline mirrors WebPage.name — the same title_tag-then-.Title
      precedence used above and in article-entity.html — so a page's headline
      is never a different string than its own name. */}}
-{{ $webpage = merge $webpage (dict "headline" (or .Params.title_tag .Title)) }}
+{{ $webpage = merge $webpage (dict "headline" $pageName) }}
 
 {{/* Add description if available */}}
 {{ with (or .Params.meta_desc .Summary) }}
