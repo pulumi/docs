@@ -409,4 +409,4 @@ The [`automation-api-examples` repository](https://github.com/pulumi/automation-
 
 ## Giving feedback
 
-We encourage you to [file an issue](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) if you have feedback on using Automation API.
+We encourage you to [file an issue](https://github.com/pulumi/pulumi/issues/new?labels=needs-triage) if you have feedback on using Automation API.
