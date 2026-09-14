@@ -192,7 +192,7 @@ Pulumi provides several advantages for AI/ML teams running workloads on Kubernet
 ### 4. Increase Security and Compliance
 
 - Manage credentials and secrets securely with **[Pulumi ESC (Secrets Management)](https://www.pulumi.com/docs/esc/)**.
-- Apply **[policy-as-code](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)** to enforce security best practices.
+- Apply **[policy-as-code](/docs/discovery-governance/policy/)** to enforce security best practices.
 
 ## Get Started with AI/ML on Kubernetes with Pulumi
 

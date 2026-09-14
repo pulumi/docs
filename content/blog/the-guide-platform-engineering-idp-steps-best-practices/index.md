@@ -138,7 +138,7 @@ Key areas where IaC can be applied within the platform include:
 - **Foundational infrastructure**: Provision and manage the underlying cloud resources, such as virtual networks, storage, and compute, that form the platform's foundation.
 - **Runtime platforms**: Deploy and configure the runtime environments where application workloads will be executed, such as Kubernetes clusters or serverless functions.
 - **Observability and monitoring**: Set up the logging, metrics, and alerting systems that provide visibility into the platform's health and performance.
-- **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/get-started/), to ensure the platform meets regulatory and organizational requirements.
+- **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](/docs/discovery-governance/policy/get-started/), to ensure the platform meets regulatory and organizational requirements.
 - **Pipelines and [automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
 
 With [infrastructure as code](https://www.pulumi.com/docs/pulumi-cloud/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization.
@@ -152,7 +152,7 @@ Policy as code can be applied in two key ways:
 - **Preventative controls**: Implement policies that proactively validate and reject non-compliant infrastructure changes before they are provisioned, providing fast feedback to application teams.
 - **Detective controls**: Establish policies that continuously monitor the deployed infrastructure, triggering alerts or remediation actions when deviations from the desired state are detected.
 
-By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
+By combining [IaC and policy as code](/docs/discovery-governance/policy/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
 
 {{< blog/cta-card title="Build your internal developer platform" label="Explore Pulumi IDP" href="/product/internal-developer-platforms/" >}}
 Give developers self-service infrastructure with reusable components, golden paths, and governance built in using Pulumi IDP.
@@ -213,7 +213,7 @@ For a more in-depth explanation, see the [What is infrastructure as code? page](
 
 ### What is Policy as Code (PaC)?
 
-Policy as Code (PaC) defines security, compliance, and [operational policies](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/core-concepts/) in code to automate their enforcement across infrastructure and application deployments.
+Policy as Code (PaC) defines security, compliance, and [operational policies](/docs/discovery-governance/policy/) in code to automate their enforcement across infrastructure and application deployments.
 
 ### What is Developer Experience (DevEx)?
 
