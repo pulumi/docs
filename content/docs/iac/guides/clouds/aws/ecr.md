@@ -19,8 +19,8 @@ aliases:
 - /docs/clouds/aws/guides/ecr/
 ---
 
-[Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that
-makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with
+[Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry for
+storing, managing, and deploying Docker container images. ECR supports private Docker registries with
 resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies
 going from development to production, and eliminates the need to operate your own container repositories or worry
 about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.
@@ -29,30 +29,30 @@ about scaling the underlying infrastructure, while hosting your images in a high
 
 The [AWSx](https://www.pulumi.com/registry/packages/awsx/) ECR components simplify the provisioning of new ECR repositories,
 integrate with the AWSx [ECS](/docs/iac/guides/clouds/aws/ecs/) and [EKS](/docs/iac/guides/clouds/aws/eks/) components to ease
-deployment of new application containers to your ECS, "Fargate", and/or Kubernetes clusters, and even support
+deployment of new application containers to your ECS, Fargate, or Kubernetes clusters, and even support
 building and deploying Docker images from your developer desktop or CI/CD workflows.
 
-## Provisioning an ECR Repository
+## Provisioning an ECR repository
 
 Each AWS account automatically has an ECR [_registry_](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html),
-and within each registry, you can create any number of [_repositories_](
-https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) to actually contain your Docker images.
+and within each registry, you can create [_repositories_](
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) to hold your Docker images.
 
-To create a new ECR repository, allocate an instance of the `awsx.ecr.Repository` class:
+To create a new ECR repository, declare an instance of the `awsx.ecr.Repository` class:
 
 {{< example-program path="awsx-ecr-repository" >}}
 
-The exported `url` is what we will use to push and pull images to and from the newly created repository, either
-using the Docker CLI or through infrastructure as code in our Pulumi program.
+Use the exported `url` to push and pull images to and from the newly created repository, either
+using the Docker CLI or through infrastructure as code in your Pulumi program.
 
-## Building and Publishing Container Images
+## Building and publishing container images
 
 Amazon ECR stores [_images_](https://docs.aws.amazon.com/AmazonECR/latest/userguide/images.html) inside of the
 repositories you create. You can use the Docker CLI to push and pull images explicitly, using the `build`, `push`,
-and `pull` commands, targeting the repository's URL. Alternatively, you can use your Pulumi program to build and
-publish container images as part of your Pulumi deployment, and consume them from ECS or EKS directly.
+and `pull` commands, targeting the repository's URL. You can also use your Pulumi program to build and
+publish container images as part of your deployment, and consume them from ECS or EKS directly.
 
-### Building and Publishing Images Manually Using the Docker CLI
+### Building and publishing images manually using the Docker CLI
 
 All repositories in your account's ECR registry will have a URL of the form
 `<aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo>`, where `<aws_account_id>` is your AWS account ID,
@@ -63,34 +63,34 @@ To build and publish a new Docker image to such a repository, first retrieve you
 e.g. either using [`docker build`](https://docs.docker.com/engine/reference/commandline/build/) or
 [`docker pull`](https://docs.docker.com/engine/reference/commandline/pull/).
 
-Store the repository URL from your Pulumi stack output in a variable for use in subsequent commands:
+Store the repository URL from your Pulumi stack output in a variable for use in the commands that follow:
 
 ```bash
 $ REPO_URL=$(pulumi stack output url)
 ```
 
-The image then needs to be tagged with the URL of the repository you're publishing to. This can be done using
+Tag the image with the URL of the repository you're publishing to. You can do this with
 `docker build`'s `-t` argument while building the image:
 
 ```bash
 $ docker build -t $REPO_URL .
 ```
 
-Alternatively, this can be done by tagging the image with [`docker tag`](
+You can also tag the image with [`docker tag`](
 https://docs.docker.com/engine/reference/commandline/tag/) after building or pulling it. For example, if the image
-ID to tag is `e9ae3c220b23`, then we would run the following:
+ID to tag is `e9ae3c220b23`, run the following:
 
 ```bash
 $ docker tag e9ae3c220b23 $REPO_URL
 ```
 
-By default, this tag will be tagged as `latest`; if you'd like to tag it using something else, do so as usual:
+By default, the image is tagged `latest`; to use a different tag, specify it as usual:
 
 ```bash
 $ docker tag e9ae3c220b23 $REPO_URL:v2.0
 ```
 
-After building and tagging, we then need to authenticate with the ECR registry. Each authentication token lasts 12 hours
+After building and tagging, authenticate with the ECR registry. Each authentication token lasts 12 hours
 and can be used with any ECR registry your IAM principal has access to. The AWS CLI can do this for you:
 
 ```bash
@@ -99,20 +99,20 @@ $ aws ecr get-login-password | docker login --username AWS --password-stdin $(ec
 
 For more information on authentication, see [Private registry authentication](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html).
 
-Finally, after building, tagging, and logging in, we are ready to push to our repository:
+Finally, after building, tagging, and logging in, push to your repository:
 
 ```bash
 $ docker push $REPO_URL
 ```
 
-Afterwards, we can then pull the image from the registry by authenticating and pulling from the repository URL.
+You can then pull the image from the registry by authenticating and pulling from the repository URL.
 
-### Building and Publishing Images Automatically in Code
+### Building and publishing images automatically in code
 
 Instead of using the Docker CLI directly, Pulumi supports building, publishing, and consuming Docker images
-entirely from code. This lets you version and deploy container changes easily alongside the supporting infrastructure.
+entirely from code. This lets you version and deploy container changes alongside the supporting infrastructure.
 
-In the following example, creating an `Image` resource will build an image from the "./app" directory (relative to our project and containing Dockerfile), and publish it to our ECR repository provisioned above.
+In the following example, creating an `Image` resource builds an image from the `./app` directory (relative to your project and containing a Dockerfile), and publishes it to the ECR repository provisioned above.
 
 {{< example-program path="awsx-ecr-image" >}}
 
@@ -122,22 +122,24 @@ The exported image URL can then be used anywhere you'd normally use a Docker ima
 $ docker run -p 80:80 $(pulumi stack output url):latest
 ```
 
-As we will see below, this can also be consumed from your container orchestrator, to run the container as a service.
+You can also consume this image from your [container orchestrator](#using-a-private-repository-from-your-container-orchestrator)
+to run the container as a service.
 
-### Deleting Images
+### Deleting images
 
 If you are done using an image, you can delete it from your repository. This can be done by [defining a lifecycle
 policy](#managing-container-image-lifecycles-using-policies) or manually using the AWS CLI. For more information on
 how to manually delete an image, see the ECR documentation on [Deleting an Image](
 https://docs.aws.amazon.com/AmazonECR/latest/userguide/delete_image.html).
 
-## Using a Private Repository from Your Container Orchestrator
+## Using a private repository from your container orchestrator
 
-To use your ECR images with Amazon ECS and EKS, use the full repository name as the image name. As seen above,
-this is of the form `<aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo>[:<tag>]`, where the `<tag>` is optional (it
-defaults to `latest`). The container instances require IAM permissions which are typically enabled by default.
+To use your ECR images with Amazon ECS and EKS, use the full repository name as the image name. This is of the
+form `<aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo>[:<tag>]`, where the `<tag>` is optional (it
+defaults to `latest`). The container instances that pull the image also need IAM permissions to read from the
+registry, which you grant explicitly — see [IAM permissions required to use ECR](#iam-permissions-required-to-use-ecr).
 
-### Consuming a Private Repository from ECS
+### Consuming a private repository from ECS
 
 To use your private repository from an ECS task definition, reference it like so:
 
@@ -147,7 +149,7 @@ For information about ECS, refer to the [ECS guide](/docs/iac/guides/clouds/aws/
 information about consuming ECR images from ECS services specifically, see
 [Using Amazon ECR Images with Amazon ECS](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
 
-### Consuming a Private Repository from EKS
+### Consuming a private repository from EKS
 
 To use your private repository from a Kubernetes service, such as one using EKS, reference it like so:
 
@@ -157,7 +159,7 @@ This example uses the [EKS package](https://www.pulumi.com/registry/packages/eks
 
 For information about EKS, refer to the [EKS guide](/docs/iac/guides/clouds/aws/eks/).
 
-### IAM Permissions Required to use ECR
+### IAM permissions required to use ECR
 
 For the above examples to work, the container instances powering your ECS or EKS cluster need proper IAM
 policy permissions to access your Amazon ECR registry. The following example defines such an IAM policy:
@@ -183,7 +185,7 @@ policy permissions to access your Amazon ECR registry. The following example def
 See the [AWS IAM guide](/docs/iac/guides/clouds/aws/iam/) for instructions on how to manage
 such policies.
 
-## Managing Container Image Lifecycles using Policies
+## Managing container image lifecycles using policies
 
 [ECR lifecycle policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) allow
 you to specify the lifecycle management of images in a repository. A lifecycle policy is a set of one or more rules,
@@ -191,19 +193,18 @@ where each rule defines an action for Amazon ECR. The actions apply to images th
 given strings. This allows the automation of cleaning up unused images, for example expiring images based on age or
 count. You should expect that after creating a lifecycle policy the affected images are expired within 24 hours.
 
-The AWSx ECR components make it easy to configure a repository's lifecycle policy, using the
-`lifecyclePolicy` property on the `Repository` class's constructor. Using this property, there are two main ways
-to control how an image is purged from the repository:
+Configure a repository's lifecycle policy with the `lifecyclePolicy` property on the AWSx `Repository` class's
+constructor. This property offers two main ways to control how an image is purged from the repository:
 
-1. Once a maximum number of images has been reached (`maximumNumberOfImages`).
-2. Once an image reaches a maximum allowed age (`maximumAgeLimit`).
+1. When the repository reaches a set number of images (`maximumNumberOfImages`).
+1. When an image reaches a set age (`maximumAgeLimit`).
 
 ### Further reading on lifecycle rules
 
 For details on the rule syntax, the available actions, and worked examples, refer to [Amazon ECR Lifecycle
 Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html).
 
-## Additional ECR Resources
+## Additional ECR resources
 
 For more information about Amazon ECR, see the following:
 
