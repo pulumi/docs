@@ -84,7 +84,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
       <tr>
         <td>Declarative Provider</td>
         <td>Yes, support via the Pulumi Service Provider, which allows management (create, update, delete) of collections of secrets and configuration as a resource through infrastructure as code.</td>
-        <td>No</td>
+        <td>Yes, individual secrets can be managed as resources with the Vault provider for Pulumi or Terraform</td>
     </tr>
     <tr>
         <td>Composability</td>
@@ -123,7 +123,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     </tr>
     <tr>
         <td>Compare Secrets across Environment</td>
-        <td>No</td>
+        <td>Yes, <code>esc env diff</code> shows the changes between two environments or two versions of a single environment</td>
         <td>No</td>
     </tr>
     <tr>
