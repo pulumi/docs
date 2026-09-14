@@ -224,7 +224,7 @@ editions:
       subtitle: Compliance, control, and governance for at-scale operations.
       price: $2,000
       price_label: /month
-      unit: "**Includes 4,750 managed resources**"
+      unit: "**Includes 2,000 credits**"
       note: Contract pricing and invoicing are also available
       cta:
         label: Start with Enterprise
