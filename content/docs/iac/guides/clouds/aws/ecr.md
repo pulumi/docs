@@ -136,8 +136,8 @@ https://docs.aws.amazon.com/AmazonECR/latest/userguide/delete_image.html).
 
 To use your ECR images with Amazon ECS and EKS, use the full repository name as the image name. This is of the
 form `<aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo>[:<tag>]`, where the `<tag>` is optional (it
-defaults to `latest`). The container instances that pull the image also need IAM permissions to read from the
-registry, which you grant explicitly — see [IAM permissions required to use ECR](#iam-permissions-required-to-use-ecr).
+defaults to `latest`). The container instances that pull the image require IAM permissions to read from the
+registry, which are typically enabled by default — see [IAM permissions required to use ECR](#iam-permissions-required-to-use-ecr).
 
 ### Consuming a private repository from ECS
 
