@@ -1,7 +1,17 @@
 {{/* Main Schema Loader - Uses @graph structure for all pages */}}
 
-{{/* Skip schemas for external content */}}
-{{ if not .Params.external }}
+{{/* Skip schemas only for pages that are actually kept out of the index
+     (block_external_search_index sets <meta name="robots" content="noindex">
+     in head.html) -- structured data on a noindexed page is never surfaced,
+     so it would be dead weight. An externally-linking event page that is NOT
+     noindexed is still a real, canonical, indexable Pulumi URL describing a
+     real event, so it should carry the same Event schema as any other event
+     page. Previously this checked .Params.external directly, which skipped
+     schema for every external:true event regardless of indexability -- see
+     event-entity.html's own external/block_external_search_index handling,
+     which anticipates exactly this combination reaching it and was dead code
+     under the old gate. */}}
+{{ if ne .Params.block_external_search_index true }}
   {{/* Use @graph structure for all pages */}}
   {{ partial "schema/graph-builder.html" . }}
 {{ end }}
