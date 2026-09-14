@@ -52,13 +52,13 @@ _spec.loader.exec_module(_triage_classify)
 classify_path = _triage_classify.classify_path
 
 # The closed set of subjects the matrix must cover. Matches the domains
-# classify_path() can emit (docs, blog, website, programs, infra) plus
-# `other`, the fallback for a path classify_path() can't place — NOTE:
+# classify_path() can emit (docs, blog, website, programs, infra, frontend)
+# plus `other`, the fallback for a path classify_path() can't place — NOTE:
 # classify_path() itself returns None for an unmatched path (the
 # "domain:other" fallback string lives one layer up, in triage-classify.py's
 # PR-level classify_pr(), not in classify_path()); resolve_lanes() below
 # does that None -> "other" mapping itself.
-SUBJECTS = frozenset({"docs", "blog", "website", "programs", "infra", "other"})
+SUBJECTS = frozenset({"docs", "blog", "website", "programs", "infra", "frontend", "other"})
 
 CHANGE_TYPES = ("mechanical", "substantive")
 MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive", "staging_evidence"})
@@ -67,12 +67,16 @@ STAGING_EVIDENCE_VALUES = frozenset({"required"})
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "claims_overlay",
     "external_contributors", "sla", "author_staleness", "waive",
+    "not_governed", "auto_approve",
 })
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
 AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
+NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
+AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
+AUTO_APPROVE_KEYS = frozenset({"authors"})
 
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
@@ -105,6 +109,11 @@ class Config:
     sla: dict[str, dict]
     author_staleness: dict
     waive: dict
+    # Both optional in the file (absent == empty): PRs the Sentinel does not
+    # govern at all, and bot authors whose clean brief satisfies the approver
+    # gate. See the yaml header for the semantics.
+    not_governed: dict = field(default_factory=dict)
+    auto_approve: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -306,6 +315,44 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
             if not _is_nonempty_str(waive.get(key)):
                 errors.append(f"waive.{key} must be a non-empty string")
 
+    # ---- not_governed (optional) ------------------------------------------
+    not_governed = raw.get("not_governed", {})
+    if not_governed is None:
+        not_governed = {}
+    if not isinstance(not_governed, dict):
+        errors.append("not_governed must be a mapping with optional 'authors' and 'author_label_pairs'")
+        not_governed = {}
+    else:
+        _check_unknown_keys(not_governed, NOT_GOVERNED_KEYS, "not_governed", errors)
+        ng_authors = not_governed.get("authors", [])
+        if not isinstance(ng_authors, list) or not all(_is_nonempty_str(a) for a in ng_authors):
+            errors.append("not_governed.authors must be a list of non-empty strings")
+        pairs = not_governed.get("author_label_pairs", [])
+        if not isinstance(pairs, list):
+            errors.append("not_governed.author_label_pairs must be a list of {author, label} mappings")
+        else:
+            for i, pair in enumerate(pairs):
+                if not isinstance(pair, dict):
+                    errors.append(f"not_governed.author_label_pairs[{i}] must be a mapping")
+                    continue
+                _check_unknown_keys(pair, AUTHOR_LABEL_PAIR_KEYS, f"not_governed.author_label_pairs[{i}]", errors)
+                for key in AUTHOR_LABEL_PAIR_KEYS:
+                    if not _is_nonempty_str(pair.get(key)):
+                        errors.append(f"not_governed.author_label_pairs[{i}].{key} must be a non-empty string")
+
+    # ---- auto_approve (optional) ------------------------------------------
+    auto_approve = raw.get("auto_approve", {})
+    if auto_approve is None:
+        auto_approve = {}
+    if not isinstance(auto_approve, dict):
+        errors.append("auto_approve must be a mapping with an 'authors' list")
+        auto_approve = {}
+    else:
+        _check_unknown_keys(auto_approve, AUTO_APPROVE_KEYS, "auto_approve", errors)
+        aa_authors = auto_approve.get("authors", [])
+        if not isinstance(aa_authors, list) or not all(_is_nonempty_str(a) for a in aa_authors):
+            errors.append("auto_approve.authors must be a list of non-empty strings")
+
     if errors:
         return None, errors, warnings
 
@@ -319,6 +366,8 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         sla=sla,
         author_staleness=author_staleness,
         waive=waive,
+        not_governed=not_governed,
+        auto_approve=auto_approve,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -401,6 +450,28 @@ def resolve_lanes(
     )
 
 
+def not_governed_reason(config: Config, author: str, labels: set[str] | frozenset[str]) -> str | None:
+    """Why the Sentinel does not govern this PR, or None if it does.
+
+    `not_governed.authors` matches on the PR author alone (Dependabot);
+    `author_label_pairs` needs both the author and the label (pulumi-bot's
+    generated-docs regens carry `automation/merge`; its content-review PRs
+    don't, and those ARE governed).
+    """
+    ng = config.not_governed or {}
+    if author in (ng.get("authors") or []):
+        return f"author `{author}` is listed in not_governed.authors"
+    for pair in ng.get("author_label_pairs") or []:
+        if pair.get("author") == author and pair.get("label") in labels:
+            return f"author `{author}` with label `{pair['label']}` is listed in not_governed.author_label_pairs"
+    return None
+
+
+def auto_approve_author(config: Config, author: str) -> bool:
+    """Is this author eligible for the clean-brief rule (G3 without a human)?"""
+    return author in ((config.auto_approve or {}).get("authors") or [])
+
+
 # ---- self-test --------------------------------------------------------
 
 _CANNED_CONFIG = {
@@ -417,7 +488,8 @@ _CANNED_CONFIG = {
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
-        "other": {"mechanical": "none", "substantive": "docs-guild"},
+        "frontend": {"mechanical": "none", "substantive": "marketing"},
+        "other": {"mechanical": "none", "substantive": "tools"},
     },
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
@@ -428,6 +500,11 @@ _CANNED_CONFIG = {
     },
     "author_staleness": {"warn_days": 14, "close_days": 21},
     "waive": {"label": "review:waived", "log_prefix": "pr-review/waives/"},
+    "not_governed": {
+        "authors": ["dependabot[bot]"],
+        "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
+    },
+    "auto_approve": {"authors": ["pulumi-bot"]},
 }
 
 
@@ -451,7 +528,14 @@ def self_test() -> int:
     try:
         real = load_config(DEFAULT_CONFIG_PATH)
         check("real .github/review-routing.yml loads", True)
-        check("real config carries TODO warnings", len(real.warnings) > 0)
+        check("real config names every escalation contact (no TODO warnings)", real.warnings == [])
+        check("real config governs pulumi-bot content-review PRs",
+              not_governed_reason(real, "pulumi-bot", {"surface:v3"}) is None)
+        check("real config does not govern automation/merge regens",
+              not_governed_reason(real, "pulumi-bot", {"automation/merge"}) is not None)
+        check("real config does not govern Dependabot",
+              not_governed_reason(real, "dependabot[bot]", set()) is not None)
+        check("real config auto-approves pulumi-bot", auto_approve_author(real, "pulumi-bot"))
     except RoutingConfigError as e:
         check(f"real .github/review-routing.yml loads ({e.errors})", False)
 
@@ -481,6 +565,40 @@ def self_test() -> int:
 
     r = resolve_lanes(["some/unknown/path.txt"], mechanical=False, claims=False, config=config)
     check("unclassifiable path routed as subject:other", r.subjects["some/unknown/path.txt"] == "other")
+    check("subject:other substantive -> tools, no staging evidence",
+          r.roles == {"tools"} and r.staging_evidence_required is False)
+
+    r = resolve_lanes(["layouts/partials/foo.html"], mechanical=False, claims=False, config=config)
+    check("template -> subject:frontend -> marketing", r.roles == {"marketing"})
+    check("frontend never requires staging evidence", r.staging_evidence_required is False)
+
+    r = resolve_lanes([".github/workflows/ci.yml", ".claude/commands/x/SKILL.md"],
+                      mechanical=False, claims=False, config=config)
+    check("infra + other dedupes to tools alone", r.roles == {"tools"})
+
+    check("not_governed: dependabot by author",
+          not_governed_reason(config, "dependabot[bot]", set()) is not None)
+    check("not_governed: pulumi-bot needs the label",
+          not_governed_reason(config, "pulumi-bot", set()) is None
+          and not_governed_reason(config, "pulumi-bot", {"automation/merge"}) is not None)
+    check("auto_approve: pulumi-bot yes, humans no",
+          auto_approve_author(config, "pulumi-bot") and not auto_approve_author(config, "someone"))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["not_governed"] = {"authors": "dependabot[bot]"}
+    _, errs, _ = validate_raw(bad)
+    check("not_governed.authors must be a list", any("not_governed.authors" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["auto_approve"] = {"authors": ["pulumi-bot"], "extra": 1}
+    _, errs, _ = validate_raw(bad)
+    check("auto_approve rejects unknown keys", any("auto_approve: unknown key" in e for e in errs))
+
+    ok_cfg = copy.deepcopy(_CANNED_CONFIG)
+    del ok_cfg["not_governed"]
+    del ok_cfg["auto_approve"]
+    cfg2, errs, _ = validate_raw(ok_cfg)
+    check("not_governed / auto_approve are optional", errs == [] and cfg2.not_governed == {} and cfg2.auto_approve == {})
 
     # ---- validation failure modes ---------------------------------------
     bad = copy.deepcopy(_CANNED_CONFIG)

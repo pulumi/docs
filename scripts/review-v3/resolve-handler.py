@@ -272,6 +272,13 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
         if not prose_hits:
             return HandleResult(0, "no-op")
 
+        # Only the PR author owes an answer, so only the author gets the
+        # nudge. A maintainer's status note ("F2 is recorded as accepted —
+        # please proceed") mentions ids too; on #21395 it earned the
+        # maintainer a pointer telling them how to answer their own PR.
+        if actor != gh.get_pr_author():
+            return HandleResult(0, "prose-not-author")
+
         pointer_marker = POINTER_MARKER_TMPL.format(actor=actor)
         if find_marker_comment(comments, pointer_marker) is not None:
             return HandleResult(0, "pointer-already-sent")
@@ -533,25 +540,24 @@ def _self_test() -> int:
     check("state untouched by out-of-range id", gh.comments[author_id]["body"] == original_body)
     check("no reaction on full rejection", gh.reactions == [])
 
-    # -- prose answer -> pointer once; second prose by same actor -> no repeat
+    # -- prose answer by the author -> pointer once; second -> no repeat -----
     gh = StubGh(pr_author="alice")
     gh.seed_comment(_author_body(3))
-    r1 = handle(42, 9005, "bob", "I think F2 is wrong because the docs say otherwise", gh)
-    check("first prose hit posts a pointer", r1.outcome == "pointer-sent")
-    pointer_marker = POINTER_MARKER_TMPL.format(actor="bob")
+    r1 = handle(42, 9005, "alice", "I think F2 is wrong because the docs say otherwise", gh)
+    check("first prose hit by the author posts a pointer", r1.outcome == "pointer-sent")
+    pointer_marker = POINTER_MARKER_TMPL.format(actor="alice")
     first_count = sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"])
     check("exactly one pointer posted", first_count == 1)
-    r2 = handle(42, 9006, "bob", "actually F2 is still wrong, see above", gh)
-    check("second prose by same actor is a no-op", r2.outcome == "pointer-already-sent")
+    r2 = handle(42, 9006, "alice", "actually F2 is still wrong, see above", gh)
+    check("second prose by the author is a no-op", r2.outcome == "pointer-already-sent")
     second_count = sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"])
-    check("still exactly one pointer for bob", second_count == 1)
+    check("still exactly one pointer for alice", second_count == 1)
 
-    # -- different actor gets their own pointer -------------------------------
-    r3 = handle(42, 9007, "carol", "F2 looks wrong to me too", gh)
-    check("a different actor gets their own pointer", r3.outcome == "pointer-sent")
+    # -- anyone else mentioning an id gets nothing -----------------------------
+    r3 = handle(42, 9007, "carol", "F2 is recorded as accepted — please proceed", gh)
+    check("a non-author's prose gets no pointer", r3.outcome == "prose-not-author")
     carol_marker = POINTER_MARKER_TMPL.format(actor="carol")
-    check("carol's pointer exists", find_marker_comment(gh.list_issue_comments(), carol_marker) is not None)
-    check("bob's pointer count unaffected", sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"]) == 1)
+    check("no pointer posted for carol", find_marker_comment(gh.list_issue_comments(), carol_marker) is None)
 
     # -- non-author without write -> refused, state untouched -----------------
     gh = StubGh(pr_author="alice", permissions={"mallory": "read"})

@@ -48,7 +48,8 @@ RAW_CONFIG = {
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
-        "other": {"mechanical": "none", "substantive": "docs-guild"},
+        "frontend": {"mechanical": "none", "substantive": "marketing"},
+        "other": {"mechanical": "none", "substantive": "tools"},
     },
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
@@ -59,6 +60,11 @@ RAW_CONFIG = {
     },
     "author_staleness": {"warn_days": 14, "close_days": 21},
     "waive": {"label": "review:waived", "log_prefix": "pr-review/waives/"},
+    "not_governed": {
+        "authors": ["dependabot[bot]"],
+        "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
+    },
+    "auto_approve": {"authors": ["pulumi-bot"]},
 }
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
 assert CONFIG is not None, _errors
@@ -156,11 +162,67 @@ def docs_file_mechanical():
 
 
 def infra_file():
+    """Build/deploy pipeline: tools approves AND a staging run is required."""
+    return {
+        "filename": "scripts/build-site.sh",
+        "status": "modified",
+        "patch": "@@ -1,1 +1,1 @@\n-echo a\n+echo b",
+    }
+
+
+def frontend_file():
+    """A Hugo template: marketing approves, no staging run (2026-09-11)."""
     return {
         "filename": "layouts/partials/foo.html",
         "status": "modified",
         "patch": "@@ -1,1 +1,1 @@\n-<b>a</b>\n+<b>b</b>",
     }
+
+
+def v3_author_card(n_blocking=0, head=HEAD):
+    """An author card shaped exactly like compose-review.py writes it: the
+    `## Author action guide vN — …` header carries the blocking verb the
+    clean-brief rule reads."""
+    verb = sentinel._compose.AUTHOR_HEADER_NOTHING_BLOCKS if n_blocking == 0 else f"{n_blocking} item blocks merge"
+    lines = [
+        "<!-- CLAUDE_REVIEW 1/1 -->",
+        sentinel.AUTHOR_MARKER,
+        f"<!-- CLAUDE_REVIEW_HEAD {head} -->",
+        f"{sentinel._compose.AUTHOR_HEADER_PREFIX}1 — {verb}",
+        "",
+        "### 🚨 Must fix or refute",
+        "",
+    ]
+    if n_blocking:
+        lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
+        for i in range(1, n_blocking + 1):
+            lines.append(f"| **F{i}** | `content/docs/iac/x.md` L10 | a problem |")
+    else:
+        lines.append("_Nothing to fix — this section is empty._")
+    lines += ["", "### ❓ Only you can answer these", "", "_No open questions for you._", ""]
+    state = review_state.empty_state()
+    state["high_water"] = n_blocking
+    body = "\n".join(lines) + "\n" + review_state.serialize_block(state) + "\n"
+    body += "\n<!-- CLAUDE_REVIEW_FOOTER -->\nfooter text\n"
+    return {"id": 111, "body": body, "user": {"login": "github-actions[bot]"}}
+
+
+def v3_brief(check_rows=0, stances=False):
+    """A reviewer brief with N ⚠️ finding rows (0 ⇒ the composer's empty
+    sentinel), optionally followed by the editorial-stances H4."""
+    lines = [sentinel.BRIEF_MARKER, "## Reviewer brief — head aaaa", "", "Summary text.", "",
+             sentinel._compose.CHECKS_HEADING, ""]
+    if check_rows:
+        lines += ["| | ID | Where | Finding |", "|---|---|---|---|"]
+        for i in range(1, check_rows + 1):
+            lines.append(f"| **F{i + 10}** | `content/docs/iac/x.md` L30 | worth a look |")
+    else:
+        lines.append(sentinel._compose.empty_checks_sentinel(stances))
+    if stances:
+        lines += ["", sentinel._compose.STANCES_HEADING, "", "- The page frames X as Y."]
+    lines += ["", "### ✅ What you can rubber-stamp", "", "- 3/3 claims verified", "",
+              "<!-- CLAUDE_REVIEW_FOOTER -->", "reviewer footer", ""]
+    return {"id": 222, "body": "\n".join(lines), "user": {"login": "github-actions[bot]"}}
 
 
 def author_card(findings=(), state=None, head=HEAD):
@@ -443,6 +505,103 @@ def test_update_strip_insert_replace_clear():
 
     fresh_no_strip = author_card([], state=_state_with([]))
     assert sentinel.update_strip(gh, ok, comments=[fresh_no_strip]) is False
+
+
+def test_frontend_routes_to_marketing_without_staging():
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=pr_meta(), files=[frontend_file()], comments=[card])
+    v_red = sentinel.evaluate(StubGh(**base), CONFIG)
+    assert _gate(v_red, "G3").status == "red"
+    assert "docs-marketing-review" in _gate(v_red, "G3").message
+    assert _gate(v_red, "G4").status == "skip"
+    v_ok = sentinel.evaluate(
+        StubGh(**base, reviews=[approval("mkt")],
+               memberships={("docs-marketing-review", "mkt"): "active"}),
+        CONFIG)
+    assert v_ok.conclusion == "success", v_ok.to_json()
+
+
+def test_not_governed_dependabot_success_no_gates():
+    gh = StubGh(pr=pr_meta(author="dependabot[bot]"))
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion == "success" and v.title == "Not governed"
+    assert v.gates == [] and v.governed is False
+    assert "not_governed.authors" in v.summary
+    assert v.to_json()["governed"] is False
+
+
+def test_not_governed_regen_needs_author_and_label():
+    # pulumi-bot + automation/merge is a regen lane: not governed.
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", labels=["automation/merge"])), CONFIG)
+    assert v.conclusion == "success" and v.governed is False
+    # pulumi-bot WITHOUT the label is a content-review PR: governed, and with
+    # no review at head G1 goes red.
+    v2 = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()]), CONFIG)
+    assert v2.governed is True and _gate(v2, "G1").status == "red"
+    # A human wearing the label is still governed.
+    v3 = sentinel.evaluate(StubGh(pr=pr_meta(author="someone", labels=["automation/merge"]),
+                                  files=[docs_file_substantive()]), CONFIG)
+    assert v3.governed is True
+
+
+def test_not_governed_report_only_wraps_neutral():
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
+    assert v.conclusion == "neutral" and v.would_be == "success"
+    assert v.title.startswith("Report-only")
+
+
+def test_clean_brief_auto_approves_bot_author():
+    base = dict(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                comments=[v3_author_card(0), v3_brief(0)])
+    v = sentinel.evaluate(StubGh(**base), CONFIG)
+    assert _gate(v, "G3").status == "ok"
+    assert "No human gate" in _gate(v, "G3").message
+    assert v.conclusion == "success", v.to_json()
+    assert v.auto_approved is True and v.to_json()["auto_approved"] is True
+    assert "Auto-approved" in v.summary
+    # The stances-variant empty sentinel is still an empty table.
+    v_st = sentinel.evaluate(StubGh(**dict(base, comments=[v3_author_card(0), v3_brief(0, stances=True)])), CONFIG)
+    assert _gate(v_st, "G3").status == "ok" and v_st.auto_approved is True
+
+
+def test_clean_brief_rule_needs_an_empty_checks_table():
+    base = dict(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                comments=[v3_author_card(0), v3_brief(1)])
+    v = sentinel.evaluate(StubGh(**base), CONFIG)
+    assert _gate(v, "G3").status == "red" and v.auto_approved is False
+    assert "docs-guild" in _gate(v, "G3").message
+
+
+def test_clean_brief_rule_needs_nothing_blocking_and_a_listed_author():
+    # A blocking finding on the card: no auto-approval even with a clean brief.
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                                 comments=[v3_author_card(1), v3_brief(0)]), CONFIG)
+    assert _gate(v, "G3").status == "red" and v.auto_approved is False
+    # A human author with the same clean cards still needs the matrix team.
+    v2 = sentinel.evaluate(StubGh(pr=pr_meta(author="someone"), files=[docs_file_substantive()],
+                                  comments=[v3_author_card(0), v3_brief(0)]), CONFIG)
+    assert _gate(v2, "G3").status == "red" and v2.auto_approved is False
+    # No brief at all: never clean.
+    v3 = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                                  comments=[v3_author_card(0)]), CONFIG)
+    assert _gate(v3, "G3").status == "red" and v3.auto_approved is False
+
+
+def test_prose_flagged_disqualifies_clean_brief_and_demotes_mechanical():
+    # Clean cards, but triage flagged prose: a human must look.
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", labels=["review:prose-flagged"]),
+                                 files=[docs_file_substantive()],
+                                 comments=[v3_author_card(0), v3_brief(0)]), CONFIG)
+    assert _gate(v, "G3").status == "red" and v.auto_approved is False
+    # A mechanical diff wearing the flag is substantive: review required.
+    v2 = sentinel.evaluate(StubGh(pr=pr_meta(labels=["review:prose-flagged"]),
+                                  files=[docs_file_mechanical()]), CONFIG)
+    assert v2.mechanical is False
+    assert _gate(v2, "G1").status == "red"
+    assert _gate(v2, "G3").status == "red"
+    # Without the flag the same diff is mechanical.
+    v3 = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_mechanical()]), CONFIG)
+    assert v3.mechanical is True and v3.to_json()["mechanical"] is True
 
 
 def test_workflow_never_checks_out_pr_code():

@@ -186,8 +186,93 @@ def test_load_config_real_file_is_valid():
     cfg = routing.load_config(routing.DEFAULT_CONFIG_PATH)
     assert cfg.schema == 1
     assert "tools" in cfg.teams
-    # The real file ships TODO placeholders deliberately.
-    assert any("TODO placeholder" in w for w in cfg.warnings)
+    # Every escalation contact is a real handle now (2026-09-11); a TODO
+    # creeping back in should be a visible test change, not a silent warning.
+    assert cfg.warnings == []
+    assert cfg.matrix["frontend"]["substantive"] == "marketing"
+    assert cfg.matrix["other"]["substantive"] == "tools"
+    assert routing.not_governed_reason(cfg, "dependabot[bot]", set())
+    assert routing.not_governed_reason(cfg, "pulumi-bot", {"automation/merge"})
+    assert routing.not_governed_reason(cfg, "pulumi-bot", {"surface:v3"}) is None
+    assert routing.auto_approve_author(cfg, "pulumi-bot")
+    assert not routing.auto_approve_author(cfg, "CamSoper")
+
+
+# ---- not_governed / auto_approve ------------------------------------------
+
+
+def test_not_governed_and_auto_approve_are_optional(base_config):
+    del base_config["not_governed"]
+    del base_config["auto_approve"]
+    cfg, errors, _ = routing.validate_raw(base_config)
+    assert errors == []
+    assert cfg.not_governed == {} and cfg.auto_approve == {}
+    assert routing.not_governed_reason(cfg, "dependabot[bot]", set()) is None
+    assert routing.auto_approve_author(cfg, "pulumi-bot") is False
+
+
+def test_not_governed_unknown_key_is_error(base_config):
+    base_config["not_governed"]["labels"] = ["x"]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("not_governed: unknown key 'labels'" in e for e in errors)
+
+
+def test_not_governed_pair_missing_label_is_error(base_config):
+    base_config["not_governed"]["author_label_pairs"] = [{"author": "pulumi-bot"}]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("author_label_pairs[0].label" in e for e in errors)
+
+
+def test_not_governed_authors_must_be_list(base_config):
+    base_config["not_governed"]["authors"] = "dependabot[bot]"
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("not_governed.authors must be a list" in e for e in errors)
+
+
+def test_auto_approve_authors_must_be_list_of_strings(base_config):
+    base_config["auto_approve"]["authors"] = [""]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("auto_approve.authors" in e for e in errors)
+
+
+def test_not_governed_pair_needs_both_author_and_label(config):
+    assert routing.not_governed_reason(config, "pulumi-bot", set()) is None
+    assert routing.not_governed_reason(config, "someone", {"automation/merge"}) is None
+    reason = routing.not_governed_reason(config, "pulumi-bot", {"automation/merge", "domain:docs"})
+    assert reason and "automation/merge" in reason
+
+
+# ---- frontend / other subjects -----------------------------------------------
+
+
+def test_frontend_routes_to_marketing_without_staging_evidence(config):
+    for path in ("layouts/partials/foo.html", "theme/src/scss/_x.scss",
+                 "assets/fingerprinted/images/x.svg", "static/images/logo.png"):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=config)
+        assert r.roles == {"marketing"}, path
+        assert r.staging_evidence_required is False, path
+        assert r.subjects[path] == "frontend"
+
+
+def test_other_routes_to_tools_and_dedupes_with_infra(config):
+    r = routing.resolve_lanes([".claude/commands/x/SKILL.md"], mechanical=False, claims=False, config=config)
+    assert r.roles == {"tools"}
+    assert r.staging_evidence_required is False
+    r2 = routing.resolve_lanes(
+        [".github/workflows/ci.yml", ".claude/commands/x/SKILL.md", "data/versions.json"],
+        mechanical=False, claims=False, config=config,
+    )
+    assert r2.roles == {"tools"}
+    assert r2.staging_evidence_required is True
+
+
+def test_content_data_files_route_with_their_content(config):
+    r = routing.resolve_lanes(
+        ["content/docs/foo.md", "data/docs_menu_sections.yml"],
+        mechanical=False, claims=False, config=config,
+    )
+    assert r.roles == {"docs-guild"}
+    assert r.subjects["data/docs_menu_sections.yml"] == "docs"
 
 
 # ---- resolve_lanes cases ----------------------------------------------------
@@ -261,7 +346,9 @@ def test_claims_overlay_on_already_substantive_change(config):
 def test_unclassifiable_path_is_subject_other(config):
     r = routing.resolve_lanes(["random-file-at-root.txt"], mechanical=False, claims=False, config=config)
     assert r.subjects["random-file-at-root.txt"] == "other"
-    assert r.roles == {"docs-guild"}
+    # Repo plumbing is the tools team's, and never needs a staging run.
+    assert r.roles == {"tools"}
+    assert r.staging_evidence_required is False
 
 
 def test_no_changed_paths_resolves_to_no_roles(config):

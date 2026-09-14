@@ -111,44 +111,52 @@ def test_errors_reply_is_updated_in_place_not_duplicated():
 # ---- prose detection --------------------------------------------------------
 
 
-def test_prose_answer_gets_one_pointer_reply():
+def test_prose_answer_by_the_author_gets_one_pointer_reply():
     gh = StubGh(pr_author="alice")
     gh.seed_comment(_author_body(3))
 
-    r = handle(42, 9005, "bob", "I think F2 is wrong because the docs say otherwise", gh)
+    r = handle(42, 9005, "alice", "I think F2 is wrong because the docs say otherwise", gh)
 
     assert r.outcome == "pointer-sent"
-    marker = POINTER_MARKER_TMPL.format(actor="bob")
+    marker = POINTER_MARKER_TMPL.format(actor="alice")
     matches = [c for c in gh.list_issue_comments() if marker in c["body"]]
     assert len(matches) == 1
     assert "F2" in matches[0]["body"]
 
 
-def test_second_prose_comment_by_same_actor_gets_no_second_pointer():
+def test_second_prose_comment_by_the_author_gets_no_second_pointer():
     gh = StubGh(pr_author="alice")
     gh.seed_comment(_author_body(3))
 
-    handle(42, 9005, "bob", "I think F2 is wrong", gh)
-    r2 = handle(42, 9006, "bob", "still think F2 is wrong, see above", gh)
+    handle(42, 9005, "alice", "I think F2 is wrong", gh)
+    r2 = handle(42, 9006, "alice", "still think F2 is wrong, see above", gh)
 
     assert r2.outcome == "pointer-already-sent"
-    marker = POINTER_MARKER_TMPL.format(actor="bob")
+    marker = POINTER_MARKER_TMPL.format(actor="alice")
     matches = [c for c in gh.list_issue_comments() if marker in c["body"]]
     assert len(matches) == 1
 
 
-def test_different_actor_gets_their_own_pointer():
+def test_a_maintainers_status_note_gets_no_pointer():
+    # #21395: "F2 is recorded as accepted as-is … please proceed" earned the
+    # maintainer a pointer explaining how to answer the author's own PR.
+    gh = StubGh(pr_author="alice", permissions={"cam": "admin"})
+    gh.seed_comment(_author_body(3))
+
+    r = handle(42, 9007, "cam", "F2 is recorded as accepted as-is on the brief — please proceed", gh)
+
+    assert r.outcome == "prose-not-author"
+    assert not [c for c in gh.list_issue_comments() if "RESOLVE_POINTER" in c["body"]]
+
+
+def test_a_bystander_gets_no_pointer_either():
     gh = StubGh(pr_author="alice")
     gh.seed_comment(_author_body(3))
 
-    handle(42, 9005, "bob", "I think F2 is wrong", gh)
-    r2 = handle(42, 9007, "carol", "F2 looks wrong to me too", gh)
+    r = handle(42, 9008, "carol", "F2 looks wrong to me too", gh)
 
-    assert r2.outcome == "pointer-sent"
-    bob_marker = POINTER_MARKER_TMPL.format(actor="bob")
-    carol_marker = POINTER_MARKER_TMPL.format(actor="carol")
-    assert len([c for c in gh.list_issue_comments() if bob_marker in c["body"]]) == 1
-    assert len([c for c in gh.list_issue_comments() if carol_marker in c["body"]]) == 1
+    assert r.outcome == "prose-not-author"
+    assert not [c for c in gh.list_issue_comments() if "RESOLVE_POINTER" in c["body"]]
 
 
 def test_prose_with_no_known_id_and_no_command_is_a_silent_no_op():

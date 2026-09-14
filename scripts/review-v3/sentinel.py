@@ -13,6 +13,14 @@ One blocking check-run answers "is this PR mergeable?" from four gates:
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `sentinel:oversized-ack` in the approving review body
 
+Two config-driven shortcuts sit around the gates (both in
+`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
+generated-docs regens) conclude success with no gates evaluated, and the
+`auto_approve` clean-brief rule lets a listed bot author pass G3 without a
+human when the author card says nothing blocks and the brief's ⚠️ table is
+empty. `review:prose-flagged` demotes a mechanical PR to substantive and
+disqualifies the clean-brief rule.
+
 Everything here is a pure function of GitHub API state plus the base-ref
 routing config: NO model, NO AWS, and — because the workflow runs on
 `pull_request_target` with write permissions — NO checkout or execution of
@@ -189,6 +197,13 @@ class Verdict:
     gates: list[Gate] = field(default_factory=list)
     would_be: str | None = None
     blocking_ids: list[str] = field(default_factory=list)
+    # Facts a downstream auto-merge job keys on, so it never has to re-derive
+    # them from the summary text: did the tightened bar call this PR
+    # mechanical; is the PR governed at all (False = a not_governed lane, no
+    # gates evaluated); did the clean-brief rule satisfy G3 without a human.
+    mechanical: bool = False
+    governed: bool = True
+    auto_approved: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -199,6 +214,9 @@ class Verdict:
             "would_be": self.would_be,
             "gates": [{"gate": g.name, "status": g.status, "message": g.message} for g in self.gates],
             "blocking_ids": self.blocking_ids,
+            "mechanical": self.mechanical,
+            "governed": self.governed,
+            "auto_approved": self.auto_approved,
         }
 
 
@@ -262,12 +280,22 @@ def _strip_brief_for_summary(body: str) -> str:
     return "\n".join(lines).strip()
 
 
-def _mechanical_and_claims(pr_detail: dict, files: list[dict]) -> tuple[bool, bool, list[str]]:
+PROSE_FLAGGED_LABEL = "review:prose-flagged"
+
+
+def _mechanical_and_claims(
+    pr_detail: dict, files: list[dict], labels: set[str] | frozenset[str] = frozenset()
+) -> tuple[bool, bool, list[str]]:
     """Run the tightened bar over the reconstructed diff. Fail-closed.
 
     The claims-overlay signal for routing is derived from the bar's own
     reason strings (pricing-sensitive path or a Layer-A prose hit) rather
     than a second classification pass — one classifier, one vocabulary.
+
+    `review:prose-flagged` demotes: triage's prose check (Haiku + Vale) ran
+    on a short-circuited PR and found something, so the diff's shape alone
+    no longer vouches for it. The bar is pure diff shape and cannot see the
+    label, so the demotion lives here, where the labels are in hand.
     """
     try:
         diff_text = _replay.build_pr_diff(files)
@@ -280,9 +308,38 @@ def _mechanical_and_claims(pr_detail: dict, files: list[dict]) -> tuple[bool, bo
         # changes; an ordinary Layer-A prose hit already makes the PR
         # substantive via the bar and routes to the subject's own approver.
         claims = any("pricing-sensitive" in r for r in reasons)
+        if ok and PROSE_FLAGGED_LABEL in labels:
+            ok = False
+            reasons = [f"`{PROSE_FLAGGED_LABEL}`: triage's prose check flagged this PR (demoted to substantive)"]
         return ok, claims, reasons
     except Exception as exc:  # noqa: BLE001 — fail closed, never crash the gate
         return False, False, [f"classifier error (treated as substantive): {exc}"]
+
+
+def _author_card_nothing_blocks(body: str) -> bool:
+    """Does the author card's header say nothing blocks merge?
+
+    Reads the composer's own header line (`## Author action guide vN — …`)
+    rather than re-counting rows, so the card and the gate agree by
+    construction. Legacy/foreign headers (no such line) are never clean.
+    """
+    for line in body.splitlines():
+        if line.startswith(_compose.AUTHOR_HEADER_PREFIX):
+            return _compose.AUTHOR_HEADER_NOTHING_BLOCKS in line
+    return False
+
+
+def _brief_has_no_checks(body: str) -> bool:
+    """Is the brief's ⚠️ reviewer-check table empty of finding rows?
+
+    Both empty-table sentinels the composer can emit (plain, and the
+    "editorial stances below still need a human eye" variant) count as
+    empty: neither is a finding row. The verdict-free stances H4 under the
+    table is deliberately outside this rule — see review-routing.yml
+    AUTO APPROVE.
+    """
+    heading_prefix = _compose.CHECKS_HEADING[len("### "):]
+    return not _card_rows(body, (heading_prefix,))
 
 
 def _team_org_slug(team_ref: str) -> tuple[str, str]:
@@ -306,11 +363,30 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             head_sha=head_sha,
         )
 
+    # Automation lanes the Sentinel does not govern (Dependabot, the
+    # generated-docs regens): success with the reason on record, no gates
+    # evaluated. Logged like a waive so the digest can count them.
+    ng_reason = routing.not_governed_reason(config, author, labels)
+    if ng_reason:
+        verdict = Verdict(
+            conclusion="success", title="Not governed",
+            summary=(f"**Not governed** — {ng_reason} (`.github/review-routing.yml` "
+                     "`not_governed`). This automation lane merges on its own checks; "
+                     "the Sentinel evaluates no gates for it."),
+            head_sha=head_sha, governed=False,
+        )
+        if report_only:
+            verdict.would_be = verdict.conclusion
+            verdict.summary = f"**REPORT-ONLY — would be: `{verdict.conclusion}`**\n\n" + verdict.summary
+            verdict.title = f"Report-only (would be: {verdict.conclusion})"
+            verdict.conclusion = "neutral"
+        return verdict
+
     files = gh.list_files()
     comments = gh.list_issue_comments()
     reviews = gh.list_reviews()
 
-    mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files)
+    mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files, labels)
     paths = [f["filename"] for f in files]
     resolution = routing.resolve_lanes(paths, mechanical, claims, config)
 
@@ -426,8 +502,29 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         and (r.get("user") or {}).get("type") != "Bot"
         and (r.get("user") or {}).get("login") not in set(config.bots or [])
     ]
+    # The clean-brief rule: a listed bot author whose review found nothing
+    # for a human to weigh needs no human. "Nothing to weigh" is read off
+    # the two cards the composer wrote — the author card's header and the
+    # brief's ⚠️ table — never re-derived here. A prose flag from triage
+    # disqualifies (that IS something for a human to weigh).
+    auto_approved = False
+    if (
+        resolution.roles
+        and routing.auto_approve_author(config, author)
+        and author_card is not None and brief is not None
+        and _author_card_nothing_blocks(author_card.get("body") or "")
+        and _brief_has_no_checks(brief.get("body") or "")
+        and PROSE_FLAGGED_LABEL not in labels
+    ):
+        auto_approved = True
+
     if not resolution.roles:
         gates.append(Gate("G3 right-approver", "ok", "no human approval required (mechanical)"))
+    elif auto_approved:
+        gates.append(Gate(
+            "G3 right-approver", "ok",
+            "No human gate: bot author, nothing blocks, brief has no reviewer checks",
+        ))
     else:
         missing: list[str] = []
         errors: list[str] = []
@@ -532,6 +629,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         )
     if mechanical:
         parts.append("_Classified mechanical under the tightened bar — no human review required._")
+    if auto_approved:
+        parts.append(
+            "_Auto-approved: bot author, nothing blocks merge, and the brief has no "
+            "reviewer checks — no human gate (`auto_approve` in review-routing.yml)._"
+        )
     table = ["| Gate | Status | Detail |", "|---|---|---|"]
     icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
     for g in gates:
@@ -543,6 +645,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     verdict = Verdict(
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
+        mechanical=mechanical, auto_approved=auto_approved,
     )
 
     if report_only:
