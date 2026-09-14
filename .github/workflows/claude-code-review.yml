@@ -426,12 +426,10 @@ jobs:
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
-          # Which review surface this run renders. The repo variable is the
-          # default for every PR; the `surface:v3` label opts one PR in (or,
-          # removed, back out) regardless of it — the per-PR dark-launch and
-          # rollback lever. Literal compare: an unset variable is never truthy.
+          # Which review surface this run renders: the REVIEW_V3_COMMENTS
+          # repo variable, literal compare (an unset variable is never truthy).
           V3=false
-          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [[ ",$LABELS_CSV," == *",surface:v3,"* ]]; then
+          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
             V3=true
           fi
           # Pre-compute PR metadata so the review model doesn't burn turns
@@ -1114,8 +1112,8 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # v3 surface (REVIEW_V3_COMMENTS repo variable OR the surface:v3
-          # label — derived once in pr-context). The variable is compared
+          # v3 surface (REVIEW_V3_COMMENTS repo variable — derived once in
+          # pr-context). The variable is compared
           # explicitly against '1' everywhere — vars.UNSET != '0' is TRUE,
           # so a negated compare on an unset variable silently flips a gate.
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
