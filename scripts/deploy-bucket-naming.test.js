@@ -58,7 +58,10 @@ function runBash(env, snippet) {
     const result = execFileSync(
         "bash",
         ["-c", `source "${COMMON_SH}" && ${snippet}`],
-        { env: fullEnv, encoding: "utf8" },
+        // Pipe stderr rather than inheriting it: on a failure it rides along on the thrown
+        // error's `.stderr` (so the fails-loudly tests can assert on the message) instead of
+        // spilling an "ERROR:" line into a passing test run's output.
+        { env: fullEnv, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
     );
 
     fs.rmSync(fakeBinDir, { recursive: true, force: true });
@@ -94,6 +97,11 @@ const EVENTS = [
 const DEPLOYMENT_ENVIRONMENTS = ["production", "testing"];
 
 const S3_BUCKET_NAME_RE = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/;
+
+// What deploy_bucket_name() must say when it refuses an over-long name. Asserting on this
+// (not just on a non-zero exit) proves the failure came from the length guard rather than
+// from, say, a sourcing error or an unbound variable earlier in the script.
+const REFUSES_TO_TRUNCATE_RE = /is \d+ chars \(max 63\); refusing to silently truncate/;
 
 // build_identifier() only emits the "<event>-" segment when BOTH GITHUB_EVENT_NAME and
 // GITHUB_EVENT_PATH are set (that is how it tells a CI build from a local one), so every
@@ -162,17 +170,20 @@ test("deploy_bucket_name: fails loudly instead of silently truncating when the n
     // A caller-supplied BUILD_IDENTIFIER deliberately sized so that prefix + identifier +
     // uniquifier can't possibly fit in 63 chars. There is no trimming fallback: the SHA and
     // the uniquifier are never shortened, and the event segment is aliased, not trimmed.
-    assert.throws(() => {
-        runBash(
-            {
-                DEPLOYMENT_ENVIRONMENT: "production",
-                BUILD_IDENTIFIER: "x".repeat(40),
-                GITHUB_RUN_ID: "",
-                GITHUB_RUN_ATTEMPT: "",
-            },
-            "deploy_bucket_name",
-        );
-    });
+    assert.throws(
+        () => {
+            runBash(
+                {
+                    DEPLOYMENT_ENVIRONMENT: "production",
+                    BUILD_IDENTIFIER: "x".repeat(40),
+                    GITHUB_RUN_ID: "",
+                    GITHUB_RUN_ATTEMPT: "",
+                },
+                "deploy_bucket_name",
+            );
+        },
+        (err) => err.status === 1 && REFUSES_TO_TRUNCATE_RE.test(err.stderr),
+    );
 });
 
 test("preview builds keep the original, non-uniquified bucket name (regression guard for the HUGO_BASEURL coupling in build-site.sh)", () => {
@@ -236,9 +247,12 @@ test("deploy_bucket_name: the per-event prefix filter get_recent_buckets() uses 
 });
 
 test("deploy_bucket_name: an unaliased event with no room fails loudly rather than trimming", () => {
-    assert.throws(() => {
-        deployBucketNameFor("production", "some_very_long_hypothetical_event_name_nobody_aliased");
-    });
+    assert.throws(
+        () => {
+            deployBucketNameFor("production", "some_very_long_hypothetical_event_name_nobody_aliased");
+        },
+        (err) => err.status === 1 && REFUSES_TO_TRUNCATE_RE.test(err.stderr),
+    );
 });
 
 test("deploy_bucket_name: result always starts with origin_bucket_prefix()-, so cleanup prefix matching keeps working", () => {
