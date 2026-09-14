@@ -361,9 +361,7 @@ jobs:
           # v2 refresh path — grandfathered until it is regenerated.
           RETRY_INITIAL="false"
           if [ "$IS_PR" = "true" ] && [ -n "$PR_NUMBER" ] && [ "$HAS_PINNED" = "false" ]; then
-            V3_LABEL=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" \
-              --json labels --jq '[.labels[].name] | index("surface:v3") != null' 2>/dev/null || echo "false")
-            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [ "$V3_LABEL" = "true" ]; then
+            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
               RETRY_INITIAL="true"
               echo "No review on PR #$PR_NUMBER and the v3 surface is active — dispatching the initial lane instead of the v2 fallback"
             fi

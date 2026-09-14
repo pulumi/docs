@@ -530,7 +530,7 @@ def self_test() -> int:
         check("real .github/review-routing.yml loads", True)
         check("real config names every escalation contact (no TODO warnings)", real.warnings == [])
         check("real config governs pulumi-bot content-review PRs",
-              not_governed_reason(real, "pulumi-bot", {"surface:v3"}) is None)
+              not_governed_reason(real, "pulumi-bot", {"domain:docs"}) is None)
         check("real config does not govern automation/merge regens",
               not_governed_reason(real, "pulumi-bot", {"automation/merge"}) is not None)
         check("real config does not govern Dependabot",
