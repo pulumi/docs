@@ -324,8 +324,8 @@ categories:
             content: Starting at $0.0005/hour
             subtext: $0.365/month
           enterprise:
-            content: $0.5475 per additional resource/month
-            subtext: 4,750 resources included for $2,000/month. Contract pricing available.
+            content: $0.00075/hour
+            subtext: $0.5475/month
 
       - id: iac-commitment-pricing
         name: Commitment pricing
