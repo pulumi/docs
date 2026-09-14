@@ -56,9 +56,9 @@ jobs:
   #
   # The bot-author exclusion below skips the high-volume bot PRs nobody
   # reviews (SDK doc regens, dependabot) — but it must carve out
-  # `content-review/*`, matching the same carve-out the review job's own
-  # skip logic makes ("Bot-authored PRs are slop-skipped — EXCEPT
-  # content-review/*"). Those PRs are authored by pulumi-bot and DO get a
+  # `content-review/*` and `fix/broken-links-*`, matching the same carve-out
+  # the review job's own skip logic makes ("Bot-authored PRs are slop-skipped
+  # — EXCEPT content-review/*"). Those PRs are authored by pulumi-bot and DO get a
   # full review, and being bot-authored is exactly why a human pushes to
   # them (applying suggestions, answering findings). Without the carve-out
   # the transition never fires: on #21456 a human push at 16:41Z produced a
@@ -72,7 +72,8 @@ jobs:
       (
         ( github.event.pull_request.user.login != 'pulumi-bot' &&
           github.event.pull_request.user.login != 'dependabot[bot]' ) ||
-        startsWith(github.event.pull_request.head.ref, 'content-review/')
+        startsWith(github.event.pull_request.head.ref, 'content-review/') ||
+        startsWith(github.event.pull_request.head.ref, 'fix/broken-links-')
       )
     runs-on: ubuntu-latest
     permissions:
@@ -425,12 +426,10 @@ jobs:
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
           LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
-          # Which review surface this run renders. The repo variable is the
-          # default for every PR; the `surface:v3` label opts one PR in (or,
-          # removed, back out) regardless of it — the per-PR dark-launch and
-          # rollback lever. Literal compare: an unset variable is never truthy.
+          # Which review surface this run renders: the REVIEW_V3_COMMENTS
+          # repo variable, literal compare (an unset variable is never truthy).
           V3=false
-          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [[ ",$LABELS_CSV," == *",surface:v3,"* ]]; then
+          if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
             V3=true
           fi
           # Pre-compute PR metadata so the review model doesn't burn turns
@@ -487,15 +486,17 @@ jobs:
             # the alternatives.
             elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
               SKIP="oversized"
-            # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
-            # are first-class automated docs fixes we want reviewed. Those fall
+            # Bot-authored PRs are slop-skipped — EXCEPT content-review/* and
+            # fix/broken-links-* (the broken-link fixer), which are first-class
+            # automated docs fixes we want reviewed. Those fall
             # through to the already-reviewed guard below (so they still can't
             # re-review loop) and otherwise get a normal review. Triage already
             # ran on them and applied any trivial / frontmatter-only short-circuit
             # above — the point of this change: a trivial content-review PR skips
             # there instead of being force-reviewed.
             elif [[ ( "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ) \
-                    && "$HEAD_BRANCH" != content-review/* ]]; then
+                    && "$HEAD_BRANCH" != content-review/* \
+                    && "$HEAD_BRANCH" != fix/broken-links-* ]]; then
               SKIP="bot-author"
             # Auto-fire path (workflow_run from triage) on a PR that the
             # review pipeline has already touched: don't burn API on a
@@ -1111,8 +1112,8 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # v3 surface (REVIEW_V3_COMMENTS repo variable OR the surface:v3
-          # label — derived once in pr-context). The variable is compared
+          # v3 surface (REVIEW_V3_COMMENTS repo variable — derived once in
+          # pr-context). The variable is compared
           # explicitly against '1' everywhere — vars.UNSET != '0' is TRUE,
           # so a negated compare on an unset variable silently flips a gate.
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
@@ -1396,6 +1397,19 @@ jobs:
           # validator rejected would put unverifiable content behind the
           # evidence contract, which is the failure mode v3 exists to close.
           if [[ "$REVIEW_V3" == "1" ]]; then
+            # Deterministic repair of the two card-grammar slips the model
+            # makes (a hand-built four-column finding table; a deleted
+            # `#### F<n> · Do this` block) — 2 of 25 reviews on the first
+            # repo-wide weekend errored on exactly these. Idempotent, no
+            # model, always exits 0; each repair is a ::warning:: and lands
+            # in the summary that rides the post-edit-debug artifact.
+            rm -f /tmp/normalize-v3-draft.json
+            python3 .claude/commands/docs-review/scripts/normalize-v3-draft.py \
+              --author-file .review-draft-author.md \
+              --brief-file .review-draft-brief.md \
+              --evidence-base .review-evidence-base.json \
+              --summary /tmp/normalize-v3-draft.json \
+              || echo "::warning::normalize-v3-draft.py failed to start; validating the drafts as the model left them"
             python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
               --body-file .review-draft-author.md \
               --brief-file .review-draft-brief.md \
@@ -1653,6 +1667,7 @@ jobs:
             /tmp/validate-pinned.fix-me.json
             /tmp/validate-pinned.fix-me.md
             /tmp/splicer-fallback.json
+            /tmp/normalize-v3-draft.json
             .review-draft.md
             .review-draft-author.md
             .review-draft-brief.md

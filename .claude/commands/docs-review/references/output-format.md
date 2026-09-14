@@ -572,7 +572,21 @@ these rules:
 1. **New findings** are added as `| **F?** | … | … |` rows in the right
    section's table; build-evidence assigns the real id. An `F?` row gets NO
    detail block (ids aren't assigned yet) — put a terse action clause in
-   its Finding cell instead.
+   its Finding cell instead. When the section is empty (its body is the
+   italic `_Nothing …_` / `_No …_` sentinel), replace the sentinel with the
+   composer's table — exactly this header and separator, then your row:
+
+   ```text
+   | ID | Where | Finding |
+   |---|---|---|
+   | **F?** | `path/to/file.md` L12 | <finding> |
+   ```
+
+   Three columns, no leading status cell. (A deterministic pass,
+   `normalize-v3-draft.py`, repairs a four-column header or a stray
+   leading cell before validation and regenerates a deleted `#### F<n> ·
+   Do this` block from its row — but only those shapes; anything else the
+   validator refuses.)
 1. **⚠️ rows and the confidence table speak to a non-docs reader.** Every
    LOW/MEDIUM confidence row's Notes cell says whose problem it is — either
    "Not yours to check — <why>" or "→ see F<n>" — and uses reader terms

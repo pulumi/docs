@@ -37,6 +37,18 @@ name: Sentinel
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
 # is TRUE for unset (the blog-review lesson), so "unset" is never a truthy
 # branch anywhere below.
+#
+# NO CONCURRENCY GROUP, on purpose. A cancelled job renders as a failing
+# check on the PR ("Sentinel / sentinel — Cancelled"), and a group cancels
+# the older pending job even with cancel-in-progress off, so any burst of
+# triggers put a red ✗ in the merge box (65 of 200 runs, 2026-09-12 → 14).
+# Overlapping runs are cheap (no model, ~50 s) and are made safe by two
+# things instead: the job-level `if` below ignores label events for labels
+# the evaluator never reads (triage's `domain:*` batch on open was most of
+# the burst), and scripts/review-v3/publish_guard.py refuses to publish a
+# verdict when the PR head has moved or a newer run already published at
+# this head (every check-run carries `external_id = run id`). A guarded-out
+# run concludes success with a ::notice::, never cancelled.
 
 on:
   pull_request_target:
@@ -59,10 +71,6 @@ permissions:
   contents: read
   id-token: write      # ESC OIDC for the org-scoped team-membership token
 
-concurrency:
-  group: sentinel-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr_number || github.run_id }}
-  cancel-in-progress: true
-
 env:
   ESC_ACTION_OIDC_AUTH: true
   ESC_ACTION_OIDC_ORGANIZATION: pulumi
@@ -72,7 +80,17 @@ env:
 
 jobs:
   sentinel:
-    if: (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    # Label events re-evaluate only for the labels the evaluator reads
+    # (waive, oversized, trivial, prose-flagged); every other label change
+    # cannot move a gate. Keep this list in step with sentinel.py.
+    if: |
+      (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
+      (github.event_name != 'pull_request_target' ||
+       (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+       github.event.label.name == 'review:waived' ||
+       github.event.label.name == 'review:oversized' ||
+       github.event.label.name == 'review:trivial' ||
+       github.event.label.name == 'review:prose-flagged')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -140,12 +158,26 @@ jobs:
           python3 scripts/review-v3/sentinel.py "${ARGS[@]}" > verdict.json
           cat verdict.json
 
-      - name: Publish check-run
+      # Overlapping runs are expected (no concurrency group — see the header).
+      # Publish only when this run still holds the newest verdict for the
+      # PR's current head; otherwise conclude success with a notice.
+      - name: Publish guard
         if: steps.pr.outputs.pr != ''
+        id: guard
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq '{name: "Sentinel", head_sha: .head_sha, status: "completed",
-               conclusion: .conclusion,
+          python3 scripts/review-v3/publish_guard.py \
+            --repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}" \
+            --run-id "${{ github.run_id }}" --verdict verdict.json
+
+      - name: Publish check-run
+        if: steps.pr.outputs.pr != '' && steps.guard.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq --arg run_id "${{ github.run_id }}" \
+             '{name: "Sentinel", head_sha: .head_sha, status: "completed",
+               conclusion: .conclusion, external_id: $run_id,
                output: {title: .title, summary: .summary}}' verdict.json \
           | gh api --method POST "repos/${{ github.repository }}/check-runs" --input -

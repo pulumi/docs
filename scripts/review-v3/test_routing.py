@@ -193,7 +193,7 @@ def test_load_config_real_file_is_valid():
     assert cfg.matrix["other"]["substantive"] == "tools"
     assert routing.not_governed_reason(cfg, "dependabot[bot]", set())
     assert routing.not_governed_reason(cfg, "pulumi-bot", {"automation/merge"})
-    assert routing.not_governed_reason(cfg, "pulumi-bot", {"surface:v3"}) is None
+    assert routing.not_governed_reason(cfg, "pulumi-bot", {"domain:docs"}) is None
     assert routing.auto_approve_author(cfg, "pulumi-bot")
     assert not routing.auto_approve_author(cfg, "CamSoper")
 

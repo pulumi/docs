@@ -99,20 +99,19 @@ Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
 REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
 checks. `review:waived` ⇒ success with a banner naming the actor, except a
-red G4, which stands. External contributors (no push permission) skip G1/G2
-per config — the approving reviewer's review is the review. Rollout switch:
+red G4, which stands. External contributors (fork head repo — never the
+author's permission level, which is `none` for GitHub Apps like workprentice)
+skip G1/G2 per config — the approving reviewer's review is the review. A
+`review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
+triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
+the human approver the demotion asked for. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
 summary), `'1'` = enforcing. `/deploy-staging` follows the same switch. The
-surface itself is `REVIEW_V3_COMMENTS` (repo default) or the `surface:v3`
-label (one PR in or out, regardless of the variable). `REVIEW_V3_BOT_PRS`
-= `'1'` makes the content-review and glow-up lanes open their bot PRs
-already wearing the label — free v3 test traffic that no human author
-sees, once the lane rewiring has merged (before that the label only reaches
-the `/resolve` listener). Order of operations: run the `gh label create`
-line for `surface:v3` first, then flip the variable — otherwise every bot
-PR takes the unlabeled fallback with a `::warning::`. The
+surface itself is `REVIEW_V3_COMMENTS` (repo-wide; the per-PR `surface:v3`
+opt-in label and `REVIEW_V3_BOT_PRS` were retired 2026-09-14 once the
+variable had soaked). The
 check summary embeds the reviewer brief (merge-box delivery), and on red the
 sentinel PATCHes a ⛔ strip into the author card naming the exact commands.
 
