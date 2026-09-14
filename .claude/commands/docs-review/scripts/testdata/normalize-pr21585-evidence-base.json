@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21585,
+  "head_sha": "ccb986aedc69b6806d19c977577443ed719ba90c",
+  "run_id": "34757668626",
+  "generated_at": "2026-09-13T12:39:51Z",
+  "high_water": 0,
+  "findings": [],
+  "trail": [],
+  "investigation_log": {
+    "cross-sibling-reads": "not run (not in a templated section)",
+    "external-claim-verification": "not run (no claims in this diff)",
+    "cited-claim-spot-checks": "not run (no cited claims)",
+    "frontmatter-sweep": "not run (no frontmatter in diff)",
+    "temporal-trigger-sweep": "not run (no trigger words)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 0,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO"
+  },
+  "summary": null,
+  "stances": [],
+  "history": [
+    {
+      "ts": "2026-09-13T12:39:51Z",
+      "summary": "initial review (pending publication)",
+      "sha": "ccb986a"
+    }
+  ]
+}

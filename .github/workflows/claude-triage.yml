@@ -48,7 +48,8 @@ jobs:
       !github.event.pull_request.draft
       && github.event.pull_request.user.login != 'dependabot[bot]'
       && (github.event.pull_request.user.login != 'pulumi-bot'
-          || startsWith(github.event.pull_request.head.ref, 'content-review/'))
+          || startsWith(github.event.pull_request.head.ref, 'content-review/')
+          || startsWith(github.event.pull_request.head.ref, 'fix/broken-links-'))
       && (github.event.action != 'synchronize' || vars.REVIEW_V3_ROUTING == '1')
 
     concurrency:
