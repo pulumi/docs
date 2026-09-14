@@ -129,8 +129,14 @@ async function publishIndex() {
             // Surface the failure loudly: swallowing it here let the hourly cron
             // report success (exit code 0) even when the index was left partially
             // or entirely unconfigured.
+            //
+            // Set exitCode rather than calling process.exit(): process.exit()
+            // tears the process down immediately, and Node does not flush a
+            // piped stderr before exiting, so the error logged above can be
+            // lost in CI -- exactly the failure this block exists to prevent.
+            // Nothing runs after this catch, so the process still exits 1.
             console.error(error);
-            process.exit(1);
+            process.exitCode = 1;
         }
     }
 
