@@ -462,17 +462,20 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "G1 review-ran", "ok",
             "legacy (v2) review current at head (grandfathered)",
         ))
-    elif trivial and triage_prose is not None:
+    elif trivial and triage_prose is not None and author_card is None and legacy is None:
         # The review lane skipped this PR as trivial; prose-flagged (or a
         # classifier disagreement) keeps it out of the mechanical lane. Triage
-        # posted the prose nits it found — that comment is the review.
+        # posted the prose nits it found — that comment is the review. Only
+        # for a PR that never got a review: a card or legacy comment at any
+        # head keeps the PR on the review track (a stale card with open
+        # findings must not pass on the trivial label).
         trivial_standin = True
         gates.append(Gate(
             "G1 review-ran", "ok",
             "trivial change — triage's prose check stands in for the review "
             "(advisory nits in the triage comment)",
         ))
-    elif trivial:
+    elif trivial and author_card is None and legacy is None:
         gates.append(Gate(
             "G1 review-ran", "red",
             f"No current review for `{head_sha[:9]}` — the review lane skipped this "
@@ -494,8 +497,6 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate("G2 findings-answered", "skip", "external contribution"))
     elif mechanical:
         gates.append(Gate("G2 findings-answered", "ok", "no review, no findings"))
-    elif trivial_standin:
-        gates.append(Gate("G2 findings-answered", "ok", "trivial — no findings to answer"))
     elif author_card:
         body = author_card.get("body") or ""
         try:
@@ -541,6 +542,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
+    elif trivial_standin:
+        gates.append(Gate("G2 findings-answered", "ok", "trivial — no findings to answer"))
     else:
         gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
 

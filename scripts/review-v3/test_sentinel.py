@@ -479,6 +479,20 @@ def test_current_author_card_beats_trivial_standin():
     assert _gate(v, "G2").status == "red"
 
 
+def test_stale_author_card_is_not_rescued_by_trivial_standin():
+    # A PR that was reviewed once stays on the review track: a stale card
+    # with an open finding plus a later trivial label and a prose comment
+    # must not pass G1/G2 on the stand-in (PR #21607 review, F1).
+    card = author_card([("F1", "must")], state=_state_with([]), head="0" * 40)
+    gh = StubGh(pr=pr_meta(labels=["review:trivial", "review:prose-flagged"]),
+                files=[docs_file_mechanical()], comments=[card, triage_prose_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red"
+    assert "stands in" not in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "red"
+    assert v.conclusion == "failure"
+
+
 def test_infra_needs_staging_status_g4():
     card = author_card([], state=_state_with([]))
     base = dict(pr=pr_meta(), files=[infra_file()], comments=[card],
