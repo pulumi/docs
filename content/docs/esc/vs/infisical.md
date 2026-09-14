@@ -113,7 +113,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Compare Secrets across Environments</td>
-        <td>No</td>
+        <td>Yes, the <code>pulumi env diff</code> command shows the changes between two environments or between two versions of a single environment</td>
         <td>Yes</td>
     </tr>
     <tr>

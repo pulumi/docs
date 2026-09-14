@@ -95,7 +95,7 @@ pulumi refresh \
 ```
 
 {{% notes type="warning" %}}
-Each `--import-pending-creates` invocation accepts exactly one value. Do not combine a URN and ID in a single invocation — for example, `--import-pending-creates "urn:... my-id"` will fail with `each URN must be followed by an ID: found an odd number of entries`. Similarly, do not pass both values as arguments to a single flag — for example, `--import-pending-creates "urn:..." "my-id"` will fail with `unknown command "my-id" for "pulumi refresh"`.
+Combining a URN and ID in a single invocation — `--import-pending-creates "urn:... my-id"` — fails with `each URN must be followed by an ID: found an odd number of entries`. Passing both values as arguments to a single flag — `--import-pending-creates "urn:..." "my-id"` — fails with `unknown command "my-id" for "pulumi refresh"`.
 {{% /notes %}}
 
 ### Finding the physical ID

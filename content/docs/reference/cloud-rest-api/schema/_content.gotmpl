@@ -6,7 +6,7 @@
 {{ $spec := index site.Data "openapi-spec" }}
 {{ $lastmodData := site.Data.openapi_lastmod }}
 {{ if not $lastmodData }}
-    {{ warnf "openapi: data/openapi_lastmod.json not found — sitemap <lastmod> will be omitted for cloud-rest-api schema pages. Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
+    {{ warnf "openapi: data/openapi_lastmod.json not found — dateModified will be omitted for cloud-rest-api schema pages (these pages are sitemap_exclude'd, so there is no sitemap <lastmod> at stake). Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
 {{ end }}
 {{ if not $spec }}
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping schema page generation." }}
@@ -95,6 +95,25 @@
         {{ end }}
     {{ end }}
 
+    {{/* sitemap_exclude: this adapter generates one page per OpenAPI schema
+         component (~800 pages), which is a large share of the site's total
+         URL count and mostly consists of internal API sub-structures (request
+         bodies, nested response fragments, polymorphic variant types) rather
+         than pages with independent search intent. sitemap_exclude removes
+         them from sitemap.xml — it does not set block_external_search_index,
+         so these pages remain crawlable and indexable exactly as before. Note
+         sitemap.xml is also what scripts/link-checker/check-links.js and
+         scripts/detect-new-404s.js crawl from, so these pages' own outbound
+         links stop being checked too; a canary page is kept in check-links.js's
+         additionalRoutes to still catch a template-wide breakage. This
+         is deliberately NOT a noindex: a per-schema reachability/thinness
+         analysis of the OpenAPI graph showed almost every schema component is
+         transitively reachable from some API path (through $ref/allOf/oneOf
+         and discriminator-mapping composition), so there is no reliable
+         intrinsic signal for picking a "real" subset to noindex without risking
+         pages that already earn organic search traffic. Trimming the sitemap
+         (a crawl-prioritization signal) is the safe, high-confidence fix; changing
+         indexability is not, absent much stronger per-page evidence. */}}
     {{ $params := dict
         "h1" $name
         "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
@@ -102,6 +121,7 @@
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
+        "sitemap_exclude" true
     }}
 
     {{/* lastmod: see the pre-built-policy-packs adapter for why
@@ -120,9 +140,10 @@
                  scripts/update-openapi-lastmod.js and this template have
                  drifted apart on which schema keys exist. Warn once per
                  name so either case shows up in build output instead of
-                 silently dropping <lastmod>/dateModified for the affected
-                 pages. */}}
-            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without <lastmod>/dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
+                 silently dropping dateModified for the affected pages
+                 (these pages are sitemap_exclude'd, so <lastmod> is not
+                 at stake here). */}}
+            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
         {{ end }}
         {{ with index .schemas $name }}
             {{ with .lastmod }}

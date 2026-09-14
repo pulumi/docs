@@ -1,7 +1,14 @@
 {{ define "main" }}
     {{ $authorData := index site.Data.team.team .Data.Term }}
 
-    {{ partial "blog/header.html" (dict "title" "Author" "url" .RelPermalink "context" .) }}
+    {{/* Breadcrumb tail / on-page H1: the person's real name (rendered as
+         "Blog / {name}" by blog/header.html), not the hardcoded literal
+         "Author" this used to pass. Falls back to "Author" only for the
+         defensive case where a term page renders with no matching team
+         record at all. */}}
+    {{ $headerTitle := "Author" }}
+    {{ with $authorData }}{{ $headerTitle = .name }}{{ end }}
+    {{ partial "blog/header.html" (dict "title" $headerTitle "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-6 lg:py-12">
         {{ with $authorData }}
@@ -14,6 +21,14 @@
                         {{ with .title }}<span class="font-overline-sm">{{ . }}</span>{{ end }}
                     </div>
                     {{ with .social }}{{ partial "widgets/social-icons.html" (dict "social" .) }}{{ end }}
+                    {{/* A handful of Community Engineering authors also have a
+                         richer, prose-bio profile at /community/team/{slug}/
+                         (a small, separate roster, not a company-wide team
+                         directory). Where one exists, point to it as the
+                         canonical bio instead of duplicating that prose here. */}}
+                    {{ with site.GetPage (printf "/community/team/%s" .id) }}
+                        <a class="link" href="{{ .RelPermalink }}">Read {{ $authorData.name }}'s full bio &rarr;</a>
+                    {{ end }}
                 </div>
             </div>
         {{ end }}

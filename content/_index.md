@@ -102,7 +102,7 @@ sections:
       - image: /images/home/languages-card-image.svg
         image_alt: Programming language logos
         title: Use your language of choice
-        description: Build infrastructure with modern languages like TypeScript, Python, Go, C#, and more — or config languages like YAML and HCL.
+        description: Build infrastructure with modern languages like TypeScript, Python, Go, .NET, and more — or config languages like YAML and HCL.
       - image: /images/home/secure-card-image.svg
         image_alt: Security shield illustration
         title: Keep it secure at every step
