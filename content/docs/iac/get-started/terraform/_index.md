@@ -14,9 +14,7 @@ aliases:
 ---
 
 **Use Pulumi alongside your existing Terraform infrastructure** rather than replacing it entirely.
-This guide is for existing Terraform users to understand how Pulumi works and how it can integrate into your existing Terraform workflows.
-
-This step-by-step tutorial focuses on coexistence patterns that let you leverage Pulumi's powerful features while maintaining your existing investments into Terraform.
+This step-by-step tutorial is for existing Terraform users and focuses on coexistence patterns that let you leverage Pulumi's powerful features while maintaining your existing investments in Terraform.
 
 ## What you'll learn
 

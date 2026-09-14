@@ -146,7 +146,7 @@ The Pulumi Registry contains a listing of popular Pulumi packages, and each pack
 
 ## Authoring packages
 
-There are two common cases for authoring packages:
+There are two common cases for authoring packages, each covered in its own section below:
 
 1. You are authoring a Pulumi component to be shared within your team, organization, or by anyone in the Pulumi community.
 1. You are authoring a Pulumi provider that allows your package's consumers to manage resources for a cloud or SaaS provider. (You might optionally publish this provider in the Pulumi Registry if you intend it for public consumption.)
@@ -155,7 +155,7 @@ There are two common cases for authoring packages:
 
 If you are authoring a Pulumi component to be shared within your team or organization, you will need to decide whether to use local SDKs or publish SDKs. **Most component authors will want consumers to use local SDKs** for the following reasons:
 
-- Most component authors will want to use local SDKs because publishing SDKs requires significant overhead: your CI/CD process will need to generate SDKs for all Pulumi languages (or at least all the languages your package consumers will use) and you will need package feeds to host those published SDKs.
+- Publishing SDKs requires significant overhead: your CI/CD process will need to generate SDKs for all Pulumi languages (or at least all the languages your package consumers will use) and you will need package feeds to host those published SDKs.
 - If you are authoring **components only** (not custom resources), you can write them in any Pulumi language and distribute them as a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/). Pulumi introspects the package to generate a consumer-side SDK in any language, inferring the schema from your types automatically—you do **not** need the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) to do this. By default consumers generate a local SDK at `pulumi package add` time, but you can also [pre-publish SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks) to language registries (npm, PyPI, etc.) from any authoring language. Pre-publishing adds CI/CD and package-feed overhead, so for components it's usually not worth the effort compared to using local SDKs.
 
 For an example of building and publishing a component with local SDKs, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
