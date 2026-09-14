@@ -1,7 +1,6 @@
 ---
 title: "Beyond the Hyperscalers: What Actually Protects You"
 date: 2026-09-16T06:00:00-07:00
-draft: true
 meta_desc: "Three people who have priced leaving AWS spent an hour arguing about cloud sovereignty. Here is the recording, and the advice each of them gave."
 feature_image: feature.png
 authors:
