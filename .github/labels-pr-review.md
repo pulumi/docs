@@ -45,11 +45,6 @@ The six `review:*` state labels are **mutually exclusive**. Setting one removes 
 
 > **Before merging a change that introduces a new label:** create it first. Triage applies its whole ADD set in a single `gh pr edit --add-label a,b,c` call, and `gh` rejects the entire call if any one name doesn't exist in the repo — the workflow's `|| true` then swallows it, so the other labels in that batch go missing too, silently.
 
-## Opt-in labels (set by humans)
-
-| Label | Color | Description |
-|---|---|---|
-
 ## Content-review class labels (set by the content-review workflow)
 
 `content-review-article.yml` applies one of these to every bot content-review PR it opens, from `scripts/content-review/publish-gate.py`'s class verdict. Informational, and the record the v3 auto-merge job reads alongside the Sentinel verdict. The workflow's `gh pr edit --add-label` is fail-open, so the labels have to exist or the class is silently invisible (it was, until 2026-09-11).
