@@ -115,8 +115,8 @@
 # derivation between them.
 #
 # `calculator.editions` is keyed by edition id and only covers the editions the
-# estimator offers. Free has no bill, and Enterprise has a fixed self-service
-# price or a sales-led contract. The calculator therefore covers Essentials
+# estimator offers. Free has no bill, and Enterprise requires a sales-led
+# contract. The calculator therefore covers Essentials
 # and Pro only.
 #
 # The metered rates here are the MONTHLY ones — the figure each comparison cell
@@ -222,17 +222,12 @@ editions:
     name: Enterprise
     card:
       subtitle: Compliance, control, and governance for at-scale operations.
-      price: $2,000
-      price_label: /month
-      unit: "**Includes 2,000 credits**"
-      note: Contract pricing and invoicing are also available
+      price: Custom
+      note: Contract pricing and invoicing
       cta:
-        label: Start with Enterprise
-        href: https://app.pulumi.com/signup?create-organization=1
-        style: primary
-      cta_secondary:
         label: Contact sales
         href: /contact/?form=sales
+        style: primary
       features_intro: "Everything in **Pro**, plus:"
       features:
         - Self-hosting available
@@ -323,9 +318,7 @@ categories:
           pro:
             content: Starting at $0.0005/hour
             subtext: $0.365/month
-          enterprise:
-            content: $0.00075/hour
-            subtext: $0.5475/month
+          enterprise: Custom
 
       - id: iac-commitment-pricing
         name: Commitment pricing

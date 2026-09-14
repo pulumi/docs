@@ -50,7 +50,7 @@ faq:
 
             Pro receives volume discounts, so the incremental rate decreases as resource use increases.
 
-            Enterprise costs $2,000 per month and includes 4,750 managed resources. Additional resources cost $0.5475 each per month. [Contact sales](/contact/?form=sales) for contract pricing.
+            Enterprise is available through a sales-led contract. [Contact sales](/contact/?form=sales) for pricing.
 
             For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/iac/concepts/resources/) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
@@ -185,7 +185,7 @@ faq:
         - question: What if I am not satisfied with my Pulumi purchase?
           answer: If you're not satisfied with Pulumi, we offer a 14-day money-back guarantee, no questions asked. [Contact us](/contact/).
         - question: How do I get support for Pulumi?
-          answer: Every edition includes access to the support agent and ticket submission. Essentials, Pro, and Enterprise customers can purchase Standard or Bronze support. Standard is included with Enterprise contracts of at least one year, but not with monthly Enterprise subscriptions. Self-hosted customers require Platinum support. [Compare support plans](#support-plans) for prices, coverage, and response objectives.
+          answer: Every edition includes access to the support agent and ticket submission. Essentials, Pro, and Enterprise customers can purchase Standard or Bronze support. Standard is included with Enterprise contracts of at least one year. Self-hosted customers require Platinum support. [Compare support plans](#support-plans) for prices, coverage, and response objectives.
         - question: Does Pulumi charge sales tax?
           answer: You may be charged a sales tax in addition to your usage fees in certain jurisdictions. It will be a separate line item on your bill.
 ---

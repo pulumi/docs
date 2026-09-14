@@ -152,11 +152,10 @@ with other users.
 
 ### Can I start small and upgrade later?
 
-Yes. You can move up an edition at any time from your organization's
+Yes. You can upgrade to Essentials or Pro from your organization's
 **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin).
-Your stacks, environments, and history carry over untouched. Enterprise is
-available for $2,000 per month with up to 4,750 managed resources. You can also
-[contact us](/contact/?form=sales) for a contract.
+Your stacks, environments, and history carry over untouched. To upgrade to
+Enterprise, [contact sales](/contact/?form=sales) for a contract.
 
 ### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
