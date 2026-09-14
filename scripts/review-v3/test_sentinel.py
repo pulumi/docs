@@ -708,6 +708,20 @@ def test_prose_flagged_disqualifies_clean_brief_and_demotes_mechanical():
     assert v3.mechanical is True and v3.to_json()["mechanical"] is True
 
 
+def test_workflow_has_no_concurrency_group_and_narrows_label_events():
+    # A cancelled job renders as a failing check; the workflow must not own
+    # a concurrency group (publish_guard.py handles overlap instead), and
+    # label events must be limited to the labels the evaluator reads.
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    assert "cancel-in-progress:" not in wf
+    assert "\nconcurrency:" not in wf
+    for label in ("review:waived", "review:oversized", "review:trivial", "review:prose-flagged"):
+        assert f"github.event.label.name == '{label}'" in wf, label
+    assert "publish_guard.py" in wf
+    assert "external_id: $run_id" in wf
+    assert "steps.guard.outputs.publish == 'true'" in wf
+
+
 def test_workflow_never_checks_out_pr_code():
     wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
     assert "pull_request_target" in wf
