@@ -17,15 +17,6 @@ tags:
     - platform-engineering
     - migration
 category: customers
-social:
-    twitter: |
-        Sovereign cloud regions, encrypted buckets, a European subsidiary. Which of these actually protects you from a US subpoena? A panel of three who have priced the switch, and don't agree on when it's worth it.
-    linkedin: |
-        Most teams outside the US run on a US hyperscaler and have never had to think about it. The signals are changing: new regulation at home, a bill that keeps climbing, and a few well-publicised account shutoffs.
-
-        Waldemar Kindler, Jim Dowling and Sarbjeet Johal joined me to argue it out. They agreed on more than I expected, and the places they didn't are the useful part.
-    bluesky: |
-        Which cloud "sovereignty" measures actually protect you? Three people who have priced leaving AWS, arguing it out.
 ---
 
 *Recorded September 3, 2026. Quotes are lightly edited for clarity.*
