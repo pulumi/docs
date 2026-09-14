@@ -18,11 +18,28 @@
 {{- $active := .active -}}
 {{- $section := site.GetPage "/case-studies" -}}
 {{- $items := where (where site.Pages "Type" "case-studies") "Kind" "eq" "page" -}}
+{{- /* On a direct/no-JS load of an industry term page, render a heading that
+    names the industry so crawlers see term-specific content instead of the
+    generic "Case Studies" heading every URL under this partial would
+    otherwise share. case-studies-list.ts mirrors this client-side (see
+    #case-studies-heading) so a JS-driven pill click keeps the heading in
+    sync with the address bar instead of drifting from it. Sentence case, to
+    match the sibling /case-studies/industry/ directory H1 ("Case studies by
+    industry") rather than the index page's title-case front matter. The
+    data-default-heading attribute carries the index heading through
+    unconditionally, so clearing the filter client-side can restore it
+    without having to infer it from whatever the server happened to render
+    (a term page's initial DOM already shows the industry heading, not the
+    index one). */ -}}
+{{- $heading := $section.Title -}}
+{{- if $active -}}
+    {{- $heading = printf "%s case studies" (partial "case-studies/industry-name.html" $active) -}}
+{{- end -}}
 <div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-8 md:gap-20 lg:gap-10 overflow-hidden">
 
     {{/* Hero */}}
     <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-        <h1 class="heading-1">{{ $section.Title }}</h1>
+        <h1 id="case-studies-heading" data-default-heading="{{ $section.Title }}" data-default-title="{{ $section.Title }} | Pulumi" class="heading-1">{{ $heading }}</h1>
         {{ with $section.Params.description }}
         <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>
         {{ end }}

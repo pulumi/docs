@@ -1,0 +1,20 @@
+{{- /*
+    Display name for a case-study industry term id, looked up from
+    data/case_study_industries.yaml (the single source of truth). Call with
+    the industry id (the taxonomy term / data-file `id`, e.g. "healthcare"),
+    not the term page context — unlike blog/term-name.html this is a pure
+    id-to-name lookup so it can be called from board.html (which only has the
+    id, via the "active" param) as well as from a term-page context via
+    .Data.Term.
+
+    Falls back to the humanized id itself if the id has no entry (should not
+    happen for a real term — case_study_industries.yaml is the closed set
+    every case study's `industry:` front matter is linted against — but a
+    stale/renamed id should render *something* rather than an empty string).
+*/ -}}
+{{- $id := . -}}
+{{- $name := $id | humanize -}}
+{{- range site.Data.case_study_industries.industries -}}
+    {{- if eq .id $id }}{{ $name = .name }}{{ end -}}
+{{- end -}}
+{{- return $name -}}
