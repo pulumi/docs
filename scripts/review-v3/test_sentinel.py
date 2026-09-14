@@ -82,8 +82,6 @@ class StubGh:
         comments=None,
         reviews=None,
         statuses=None,
-        permission="write",
-        permission_error=False,
         memberships=None,
         membership_error_users=(),
         label_events=None,
@@ -93,8 +91,6 @@ class StubGh:
         self.comments = comments or []
         self.reviews = reviews or []
         self.statuses = statuses or []
-        self.permission = permission
-        self.permission_error = permission_error
         self.memberships = memberships or {}  # (slug, user) -> state
         self.membership_error_users = set(membership_error_users)
         self.label_events = label_events or []
@@ -115,11 +111,6 @@ class StubGh:
     def get_commit_statuses(self, sha):
         return self.statuses
 
-    def get_permission(self, actor):
-        if self.permission_error:
-            raise sentinel.SentinelDataError("boom")
-        return self.permission
-
     def get_team_membership(self, org, team_slug, user):
         if user in self.membership_error_users:
             raise sentinel.SentinelDataError(f"lookup failed for {user}")
@@ -135,13 +126,32 @@ class StubGh:
 # ---- Fixture builders ----------------------------------------------------
 
 
-def pr_meta(labels=(), draft=False, author="someone"):
+BASE_REPO = "pulumi/docs"
+
+
+def pr_meta(labels=(), draft=False, author="someone", head_repo=BASE_REPO):
+    """`head_repo` is the fork test: same as base = internal; another name
+    or None (deleted fork) = external. Pass `head_repo=...` omitted from
+    the dict via `_no_head_repo()` to model a payload without the fact."""
     return {
-        "head": {"sha": HEAD},
+        "head": {"sha": HEAD, "repo": None if head_repo is None else {"full_name": head_repo}},
+        "base": {"repo": {"full_name": BASE_REPO}},
         "draft": draft,
         "user": {"login": author},
         "labels": [{"name": n} for n in labels],
     }
+
+
+def _no_head_repo(meta):
+    meta["head"].pop("repo", None)
+    return meta
+
+
+def triage_prose_comment(login="github-actions[bot]"):
+    return {"id": 77, "user": {"login": login}, "body": (
+        "<!-- TRIAGE_PROSE -->\n🔍 **Triage prose check** — possible issues in the diff. "
+        "Full review is skipped (`review:trivial`); please double-check before merging.\n"
+        "- [spelling] content/docs/x.md:12 — missing Oxford comma")}
 
 
 def docs_file_substantive():
@@ -377,9 +387,11 @@ def test_commented_review_does_not_void_approval():
     assert _gate(v, "G3").status == "ok"
 
 
-def test_external_contributor_g1_g2_skipped_g3_governs():
-    gh = StubGh(pr=pr_meta(author="drive-by"), files=[docs_file_substantive()],
-                permission="read", reviews=[approval("guild-member")],
+def test_external_contributor_is_a_fork_head_repo():
+    # A fork PR — even from a write-access user — is external: G1/G2 skip,
+    # the matrix approver's review is the review.
+    gh = StubGh(pr=pr_meta(author="staff-on-a-fork", head_repo="staff-on-a-fork/docs"),
+                files=[docs_file_substantive()], reviews=[approval("guild-member")],
                 memberships={("docs-guild", "guild-member"): "active"})
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G1").status == "skip"
@@ -387,6 +399,98 @@ def test_external_contributor_g1_g2_skipped_g3_governs():
     assert _gate(v, "G3").status == "ok"
     assert v.conclusion == "success"
     assert "external contribution" in v.summary.lower()
+    # A deleted fork (GitHub nulls head.repo) is external too.
+    v = sentinel.evaluate(StubGh(pr=pr_meta(head_repo=None), files=[docs_file_substantive()]), CONFIG)
+    assert _gate(v, "G1").status == "skip"
+
+
+def test_same_repo_bot_author_is_never_external():
+    # workprentice[bot] answers `none` on the collaborator-permission API but
+    # pushes same-repo branches that get the full review (2026-09-14: every
+    # workprentice PR had G1/G2 skipped). Permission is not the test.
+    card = author_card([("F1", "must")], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(author="workprentice[bot]"), files=[docs_file_substantive()],
+                comments=[card])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "ok"
+    assert _gate(v, "G2").status == "red" and v.blocking_ids == ["F1"]
+    assert "external" not in v.summary.lower()
+
+
+def test_missing_head_repo_fact_is_internal():
+    # Fail closed: no head.repo key at all ⇒ the stricter (internal) gates.
+    gh = StubGh(pr=_no_head_repo(pr_meta(author="drive-by")), files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red"
+    assert _gate(v, "G2").status == "skip"  # "no review present — see G1", not the external skip
+    assert "external" not in v.summary.lower()
+
+
+def test_trivial_prose_flagged_stands_on_triage_prose_comment():
+    # The review lane skipped this PR as trivial; the prose flag demotes it
+    # from mechanical; triage's prose comment is the review. G3 still wants
+    # the human approver the demotion asked for.
+    labels = ["review:trivial", "review:prose-flagged"]
+    gh = StubGh(pr=pr_meta(labels=labels), files=[docs_file_mechanical()],
+                comments=[triage_prose_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.mechanical is False
+    assert _gate(v, "G1").status == "ok" and "prose check stands in" in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "ok" and "no findings to answer" in _gate(v, "G2").message
+    assert _gate(v, "G3").status == "red"
+    assert v.conclusion == "failure"
+    assert "stands in for the review" in v.summary
+    # With the approver in place the PR is mergeable.
+    v = sentinel.evaluate(StubGh(pr=pr_meta(labels=labels), files=[docs_file_mechanical()],
+                                 comments=[triage_prose_comment()], reviews=[approval("guild-member")],
+                                 memberships={("docs-guild", "guild-member"): "active"}), CONFIG)
+    assert v.conclusion == "success"
+
+
+def test_trivial_prose_flagged_without_triage_comment_names_the_fix():
+    labels = ["review:trivial", "review:prose-flagged"]
+    gh = StubGh(pr=pr_meta(labels=labels), files=[docs_file_mechanical()])
+    v = sentinel.evaluate(gh, CONFIG)
+    g1 = _gate(v, "G1")
+    assert g1.status == "red"
+    assert "#new-review" in g1.message and "review:trivial" in g1.message
+    assert _gate(v, "G2").status == "skip"
+    # A comment from someone other than the triage bot is not the stand-in.
+    gh = StubGh(pr=pr_meta(labels=labels), files=[docs_file_mechanical()],
+                comments=[triage_prose_comment(login="someone")])
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G1").status == "red"
+
+
+def test_trivial_without_prose_flag_is_still_mechanical():
+    gh = StubGh(pr=pr_meta(labels=["review:trivial"]), files=[docs_file_mechanical()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.mechanical is True
+    assert _gate(v, "G1").message.startswith("mechanical change")
+    assert v.conclusion == "success"
+
+
+def test_current_author_card_beats_trivial_standin():
+    # A card current at head is the review even when the label says trivial.
+    card = author_card([("F1", "must")], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(labels=["review:trivial", "review:prose-flagged"]),
+                files=[docs_file_mechanical()], comments=[card, triage_prose_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").message.startswith("review current")
+    assert _gate(v, "G2").status == "red"
+
+
+def test_stale_author_card_is_not_rescued_by_trivial_standin():
+    # A PR that was reviewed once stays on the review track: a stale card
+    # with an open finding plus a later trivial label and a prose comment
+    # must not pass G1/G2 on the stand-in (PR #21607 review, F1).
+    card = author_card([("F1", "must")], state=_state_with([]), head="0" * 40)
+    gh = StubGh(pr=pr_meta(labels=["review:trivial", "review:prose-flagged"]),
+                files=[docs_file_mechanical()], comments=[card, triage_prose_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red"
+    assert "stands in" not in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "red"
+    assert v.conclusion == "failure"
 
 
 def test_infra_needs_staging_status_g4():

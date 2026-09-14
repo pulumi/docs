@@ -4,7 +4,8 @@
 One blocking check-run answers "is this PR mergeable?" from four gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
-                        required: mechanical PRs, external contributions)
+                        required: mechanical PRs, fork PRs; a trivial PR
+                        may stand on triage's prose-check comment)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
   G3 right-approver     a human member of every matrix-required team approved
@@ -37,6 +38,20 @@ report-only mode, where the real verdict rides inside the summary.
 banner naming the waiving actor — except gate G4, which has no waiver (the
 proposal's "no waiver, no shortcut" for infra; the incident path when
 staging itself is broken is an admin-bypass merge, which rulesets log).
+
+"External contribution" means the head repo is a fork (or a deleted
+fork) — never the author's permission level: a GitHub App such as
+workprentice answers `none` on the collaborator endpoint yet pushes
+same-repo branches that get the full review, and treating those as
+external skipped G1/G2 on every one of them (2026-09-12 → 09-14). A PR
+whose head-repo fact can't be read is internal (the stricter gates).
+
+`review:trivial` short-circuits the review lane, and `review:prose-flagged`
+(triage's Haiku/Vale pass) demotes the PR from mechanical — so without a
+stand-in G1 would stay red forever on a PR nothing will ever review. The
+stand-in is triage's own `<!-- TRIAGE_PROSE -->` comment: with it present
+G1/G2 pass (advisory nits only, nothing to answer) and G3 still wants the
+human approver the demotion asked for.
 
 I/O lives behind the `Gh` wrapper (subprocess `gh api`, the
 resolve-handler.py pattern) so tests substitute a stub. Team-membership
@@ -133,16 +148,6 @@ class Gh:
     def get_commit_statuses(self, sha: str) -> list[dict]:
         out = self._run(["api", "--paginate", f"repos/{self.repo}/commits/{sha}/statuses"])
         return json.loads(out)
-
-    def get_permission(self, actor: str) -> str:
-        """Collaborator permission. Failure raises SentinelDataError."""
-        try:
-            out = self._run(
-                ["api", f"repos/{self.repo}/collaborators/{actor}/permission", "--jq", ".permission"]
-            )
-        except subprocess.CalledProcessError as exc:
-            raise SentinelDataError(f"permission lookup failed for {actor}: {exc.stderr.strip()[:200]}") from exc
-        return out.strip()
 
     def get_team_membership(self, org: str, team_slug: str, user: str) -> str:
         """Returns 'active', 'pending', or 'none'.
@@ -281,6 +286,39 @@ def _strip_brief_for_summary(body: str) -> str:
 
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
+TRIVIAL_LABEL = "review:trivial"
+TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
+TRIAGE_BOT_LOGIN = "github-actions[bot]"
+
+
+def _is_external(pr_detail: dict) -> bool:
+    """A fork PR (head repo ≠ base repo, or a deleted fork) is external.
+
+    Fail closed: if the payload doesn't carry the head-repo fact at all, the
+    PR is internal and the stricter gates apply. Permission is deliberately
+    not consulted — see the module docstring.
+    """
+    head = pr_detail.get("head") or {}
+    if "repo" not in head:
+        return False
+    head_repo = head.get("repo")
+    if head_repo is None:
+        return True  # deleted fork: GitHub nulls head.repo
+    head_name = (head_repo.get("full_name") or "").lower()
+    base_name = (((pr_detail.get("base") or {}).get("repo") or {}).get("full_name") or "").lower()
+    if not head_name or not base_name:
+        return False
+    return head_name != base_name
+
+
+def _find_triage_prose_comment(comments: list[dict]) -> dict | None:
+    """Triage's `<!-- TRIAGE_PROSE -->` comment (github-actions[bot]), if any."""
+    for c in comments:
+        body = (c.get("body") or "").lstrip()
+        login = (c.get("user") or {}).get("login") or ""
+        if body.startswith(TRIAGE_PROSE_MARKER) and login == TRIAGE_BOT_LOGIN:
+            return c
+    return None
 
 
 def _mechanical_and_claims(
@@ -390,19 +428,18 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     paths = [f["filename"] for f in files]
     resolution = routing.resolve_lanes(paths, mechanical, claims, config)
 
-    # External-contributor lane: fail closed — an API failure means the
-    # stricter (internal) gates apply.
-    external = False
-    try:
-        external = gh.get_permission(author) not in ("admin", "write", "maintain")
-    except SentinelDataError:
-        external = False
+    # External-contributor lane = fork head repo. Fail closed: no head-repo
+    # fact in the payload means the stricter (internal) gates apply.
+    external = _is_external(pr)
     skip_gates = set((config.external_contributors or {}).get("skip_gates") or []) if external else set()
 
     author_card = _find_comment(comments, AUTHOR_MARKER)
     brief = _find_comment(comments, BRIEF_MARKER)
     legacy = _find_legacy_comment(comments) if author_card is None else None
     oversized = "review:oversized" in labels
+    trivial = TRIVIAL_LABEL in labels
+    triage_prose = _find_triage_prose_comment(comments) if trivial else None
+    trivial_standin = False  # set when triage's prose comment satisfies G1
 
     gates: list[Gate] = []
     blocking_ids: list[str] = []
@@ -424,6 +461,27 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate(
             "G1 review-ran", "ok",
             "legacy (v2) review current at head (grandfathered)",
+        ))
+    elif trivial and triage_prose is not None and author_card is None and legacy is None:
+        # The review lane skipped this PR as trivial; prose-flagged (or a
+        # classifier disagreement) keeps it out of the mechanical lane. Triage
+        # posted the prose nits it found — that comment is the review. Only
+        # for a PR that never got a review: a card or legacy comment at any
+        # head keeps the PR on the review track (a stale card with open
+        # findings must not pass on the trivial label).
+        trivial_standin = True
+        gates.append(Gate(
+            "G1 review-ran", "ok",
+            "trivial change — triage's prose check stands in for the review "
+            "(advisory nits in the triage comment)",
+        ))
+    elif trivial and author_card is None and legacy is None:
+        gates.append(Gate(
+            "G1 review-ran", "red",
+            f"No current review for `{head_sha[:9]}` — the review lane skipped this "
+            "PR as `review:trivial`, and triage's prose-check comment is missing. "
+            "Comment `@claude #new-review` to run a full review, or a maintainer "
+            "removes `review:trivial` and pushes.",
         ))
     else:
         gates.append(Gate(
@@ -484,6 +542,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
+    elif trivial_standin:
+        gates.append(Gate("G2 findings-answered", "ok", "trivial — no findings to answer"))
     else:
         gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
 
@@ -629,6 +689,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         )
     if mechanical:
         parts.append("_Classified mechanical under the tightened bar — no human review required._")
+    if trivial_standin:
+        parts.append(
+            "_Trivial change: triage's prose-check comment stands in for the review; "
+            "a human approver is still required._"
+        )
     if auto_approved:
         parts.append(
             "_Auto-approved: bot author, nothing blocks merge, and the brief has no "

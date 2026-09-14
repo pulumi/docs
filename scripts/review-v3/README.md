@@ -99,8 +99,12 @@ Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
 REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
 checks. `review:waived` ⇒ success with a banner naming the actor, except a
-red G4, which stands. External contributors (no push permission) skip G1/G2
-per config — the approving reviewer's review is the review. Rollout switch:
+red G4, which stands. External contributors (fork head repo — never the
+author's permission level, which is `none` for GitHub Apps like workprentice)
+skip G1/G2 per config — the approving reviewer's review is the review. A
+`review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
+triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
+the human approver the demotion asked for. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the

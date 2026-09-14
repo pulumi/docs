@@ -14,6 +14,10 @@ name: Pre-merge Review (update-review)
 # range carried by a 🚨 Outstanding finding and the push is small. The run
 # then follows update.md Case 1 (fix-response) with a synthesized mention
 # body; there is no human mention author.
+#
+# Two jobs: `gate` decides whether the event is a real request (outside
+# the per-PR concurrency group, so a declined mention can't cancel a live
+# refresh), and `claude-update` does the work.
 
 on:
   issue_comment:
@@ -45,7 +49,19 @@ on:
         default: false
 
 jobs:
-  claude-update:
+  # The mention gate runs as its own job, OUTSIDE the per-PR concurrency
+  # group. The job-level `if:` below is a substring match, which is all a
+  # GitHub expression can do — it fires on a comment that merely *quotes*
+  # the reply pattern in backticks or a blockquote (#21535), including the
+  # review's own progress and card comments. When the gate lived inside
+  # the worker job, every such no-op run still entered the concurrency
+  # group and cancelled a real in-flight refresh (#21585: the review's
+  # own comment cancelled workprentice's update mid-Claude). Here a
+  # declined mention ends in this cheap job and never touches the worker.
+  # The script comes from the default branch, never the PR head, and reads
+  # the body from an env var, never argv. Dispatched runs skip it — there
+  # is no comment to judge — and fire unconditionally.
+  gate:
     # Trigger requires:
     #   1. `@claude` mention.
     #   2. `#update-review` hashtag.
@@ -61,31 +77,13 @@ jobs:
        (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
        (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
        (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
-    # One update per PR at a time; a newer trigger (another push through the
-    # auto-refresh gate, or a fresh #update-review mention) cancels the
-    # in-flight run — the newest head wins. Also the once-per-push dedup for
-    # the auto path: stacked synchronize events collapse here.
-    concurrency:
-      group: claude-update-${{ github.event.inputs.pr_number || github.event.pull_request.number || github.event.issue.number }}
-      cancel-in-progress: true
     runs-on: ubuntu-latest
-    environment: production
     permissions:
-      contents: write
-      pull-requests: write
-      issues: read
-      id-token: write
-      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a v3 publish
+      contents: read
+    outputs:
+      fire: ${{ steps.mention-gate.outputs.fire }}
+      reason: ${{ steps.mention-gate.outputs.reason }}
     steps:
-      # The job-level `if:` above is a substring match, which is all a
-      # GitHub expression can do — it fires on a comment that merely
-      # *quotes* the reply pattern in backticks or a blockquote (#21535:
-      # two of four card versions were unrequested; each was a full Opus
-      # run). This pair of steps is the precise check: strip code and
-      # quotes, then require a live `@claude` + `#update-review`. The
-      # script comes from the default branch, never the PR head, and reads
-      # the body from an env var, never argv. Dispatched runs skip it —
-      # there is no comment to judge.
       - name: Checkout mention gate (default branch, sparse)
         if: github.event_name != 'workflow_dispatch'
         uses: actions/checkout@v7
@@ -111,6 +109,26 @@ jobs:
             --hashtag update-review --exclude new-review \
             --body-env BODY --title-env TITLE | tee -a "$GITHUB_OUTPUT"
 
+  claude-update:
+    needs: gate
+    if: needs.gate.outputs.fire == 'true'
+    # One update per PR at a time; a newer trigger (another push through the
+    # auto-refresh gate, or a fresh #update-review mention) cancels the
+    # in-flight run — the newest head wins. Also the once-per-push dedup for
+    # the auto path: stacked synchronize events collapse here. Only runs
+    # that passed the gate job enter this group.
+    concurrency:
+      group: claude-update-${{ github.event.inputs.pr_number || github.event.pull_request.number || github.event.issue.number }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: write # read CI results on PRs; dispatch review-sentinel.yml after a publish, claude-code-review.yml for a fresh v3 review
+    steps:
       # Resolve the PR head SHA before checkout so the working tree
       # reflects PR content, not the base branch. Without this, Vale
       # below runs against base prose and produces empty findings.
@@ -119,7 +137,6 @@ jobs:
       # gated on is_pr=true anyway, so it skips on issues).
       - name: Resolve PR head SHA
         id: head
-        if: steps.mention-gate.outputs.fire == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -162,19 +179,20 @@ jobs:
       # then go out as pulumi-bot rather than github-actions[bot],
       # which is what lets downstream workflows (build-and-deploy, social
       # review, etc.) fire on those commits.
-      # The setup steps below skip when the mention gate declined (a
-      # quoted protocol, nothing to do) and on superseded dispatched runs
+      # The setup steps below skip on superseded dispatched runs
       # (steps.head sets superseded=true when the PR head moved past the
-      # dispatcher's pinned SHA) — either way the run is a no-op, so don't
-      # pay for secrets, checkout, or toolchain install. Every later step
-      # gates on check-access outputs, which stay empty when it skips.
+      # dispatcher's pinned SHA) — the run is a no-op, so don't pay for
+      # secrets, checkout, or toolchain install. (A declined mention never
+      # reaches this job: the gate job above returns fire=false.) Every
+      # later step gates on check-access outputs, which stay empty when it
+      # skips.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.head.outputs.superseded != 'true'
         uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.head.outputs.superseded != 'true'
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -184,14 +202,14 @@ jobs:
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.head.outputs.superseded != 'true'
         uses: jdx/mise-action@v4
         with:
           cache: true
 
       - name: Check repository write access
         id: check-access
-        if: steps.mention-gate.outputs.fire == 'true' && steps.head.outputs.superseded != 'true'
+        if: steps.head.outputs.superseded != 'true'
         run: |
           # workflow_dispatch runs skip the collaborator-permission lookup:
           # triggering a dispatch already requires write access (humans via
@@ -332,6 +350,25 @@ jobs:
             fi
           fi
 
+          # No review at all on a PR the v3 surface governs (repo variable
+          # or the per-PR label): the initial lane errored or never ran.
+          # The v2 freehand prompt's "produce an initial review" fallback
+          # would post a v2 monolith here — that is what happened on #21585
+          # when the author followed the review:error comment's advice to
+          # mention `#update-review`. Instead this run dispatches the
+          # initial lane (force=true) and stops. A PR that already carries
+          # a legacy v2 review (HAS_PINNED without the two cards) keeps the
+          # v2 refresh path — grandfathered until it is regenerated.
+          RETRY_INITIAL="false"
+          if [ "$IS_PR" = "true" ] && [ -n "$PR_NUMBER" ] && [ "$HAS_PINNED" = "false" ]; then
+            V3_LABEL=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" \
+              --json labels --jq '[.labels[].name] | index("surface:v3") != null' 2>/dev/null || echo "false")
+            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [ "$V3_LABEL" = "true" ]; then
+              RETRY_INITIAL="true"
+              echo "No review on PR #$PR_NUMBER and the v3 surface is active — dispatching the initial lane instead of the v2 fallback"
+            fi
+          fi
+
           {
             echo "pr_number=$PR_NUMBER"
             echo "is_pr=$IS_PR"
@@ -339,6 +376,7 @@ jobs:
             echo "surface=$SURFACE"
             echo "author_cid=$AUTHOR_CID"
             echo "brief_cid=$BRIEF_CID"
+            echo "retry_initial=$RETRY_INITIAL"
           } >> "$GITHUB_OUTPUT"
 
       # Flip the PR's state label to review:in-progress for the duration of
@@ -407,7 +445,8 @@ jobs:
       - name: Run Vale on PR-changed prose
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
+          steps.pr-context.outputs.is_pr == 'true' &&
+          steps.pr-context.outputs.retry_initial != 'true'
         id: vale
         continue-on-error: true
         env:
@@ -479,6 +518,45 @@ jobs:
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
+      # No review on a v3-governed PR: hand the whole job to the initial
+      # lane. Same dispatch shape as claude-new.yml — force=true bypasses the
+      # skip heuristics (an explicit request overrides them), the progress
+      # comment id travels as dispatcher_comment_id so the initial lane's
+      # finalize step deletes it, and mention_author gets the "regenerated
+      # on @x's request" terminal comment (empty for the auto-refresh path,
+      # which has no human to mention). Everything after this step is
+      # gated off the retry path; the finalize step leaves the progress
+      # comment standing for the dispatched run to own.
+      - name: Retry the initial review (no v3 review on this PR yet)
+        id: retry-initial
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.retry_initial == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
+          AUTHOR="${{ steps.check-access.outputs.author }}"
+          MENTION_AUTHOR="$AUTHOR"
+          if [ "$AUTHOR" = "auto-refresh" ]; then
+            MENTION_AUTHOR=""
+          fi
+          if [ -n "$COMMENT_ID" ]; then
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 No v3 review on this PR yet — starting a fresh review. This can take several minutes.")
+            gh api -X PATCH "repos/$REPO/issues/comments/$COMMENT_ID" -f body="$BODY" >/dev/null || true
+          fi
+          gh workflow run claude-code-review.yml \
+            --repo "$REPO" \
+            -f pr_number="$PR" \
+            -f head_sha="${{ steps.head.outputs.sha }}" \
+            -f force=true \
+            -f dispatcher_comment_id="$COMMENT_ID" \
+            -f mention_author="$MENTION_AUTHOR"
+          echo "dispatched claude-code-review.yml for PR #$PR at ${{ steps.head.outputs.sha }}"
+
       # v3 model inputs: the two live cards on disk. Fetched here (not in the
       # publish step) so the model reads the same cards the mention was about;
       # the publish step re-fetches the author card fresh right before
@@ -499,7 +577,8 @@ jobs:
       - name: Run Claude Code
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.surface != 'v3'
+          steps.pr-context.outputs.surface != 'v3' &&
+          steps.pr-context.outputs.retry_initial != 'true'
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
@@ -819,8 +898,15 @@ jobs:
       # loudly-but-non-fatally: `continue-on-error` keeps the job green, but
       # a 403 (missing `actions: write`) must show as a red step, not be
       # swallowed — this exact poke sat silently 403ing behind `|| true`.
-      - name: Re-evaluate Sentinel (v3)
-        if: steps.publish-v3.outcome == 'success' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+      # Either publish path moves the review head, and the Sentinel reads
+      # that head: re-evaluate after the v3 publish AND after a v2 (legacy)
+      # self-publish, or a grandfathered PR keeps a stale G1 verdict until
+      # some unrelated event fires (#21536 wore Friday's red for a weekend).
+      - name: Re-evaluate Sentinel
+        if: |
+          (steps.publish-v3.outcome == 'success' ||
+           (steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true')) &&
+          (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -966,6 +1052,23 @@ jobs:
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
           AUTHOR="${{ steps.check-access.outputs.author }}"
+          # Retry path: the initial lane was dispatched and owns the progress
+          # comment (it deletes it as dispatcher_comment_id) and the labels.
+          # Only a failed dispatch is ours to report.
+          if [ "${{ steps.pr-context.outputs.retry_initial }}" = "true" ]; then
+            if [ "${{ steps.retry-initial.outcome }}" = "success" ]; then
+              echo "retry dispatched; the initial lane owns the progress signal"
+              exit 0
+            fi
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            if [ "$AUTHOR" = "auto-refresh" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Couldn't start a fresh review (dispatch failed). Mention @claude #new-review to retry.")
+            else
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — couldn't start a fresh review (dispatch failed). Mention @claude #new-review to retry.")
+            fi
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            exit 0
+          fi
           # On the v3 surface the model step is claude-v3 and success further
           # requires the deterministic publish chain: an adjudication that
           # never published is a failure, and a partial publish (brief
