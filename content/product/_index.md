@@ -21,7 +21,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*The unified platform*<br>for infrastructure teams."
+    title: "*The unified platform* <br>for infrastructure teams."
     description: |
       Infrastructure as code with modern languages, centralized secrets and governance, and AI built for infrastructure — all in one platform. Everything teams need to move fast and scale with confidence.
     image: /images/product/overview/overview-diagram.svg

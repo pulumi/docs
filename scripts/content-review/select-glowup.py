@@ -35,8 +35,11 @@ glow-up executes nothing — 43% of the eligible pool when measured against the
 live ledger on 2026-08-25. Those pages are excluded from `articles` and the
 highest-scoring one rides the queue's `repairs` array instead: the dispatcher
 sends it to the FIX lane, whose review needs no ledger and writes the findings
-record that makes a real glow-up possible next time. `--exclude-paths` keeps a
-repair off a page the fix lane already queued this run.
+record that makes a real glow-up possible next time. `--exclude-paths` keeps
+both the glow-up pick and the repair off a page the fix lane already queued
+this run: two workers on one page the same day race for its branch, the
+loser's open-PR pre-check throws its dispatch away, and until 2026-09-09 its
+`skipped` outcome also overwrote the winner's ledger and findings records.
 
 Backlog cap: when >= GLOWUP_MAX_OPEN_PRS open `content-review/glowup-*`
 branches exist, emit an empty queue with `"halted": "max_open_glowup_prs"` —
@@ -149,6 +152,42 @@ def source_pr_for(entry: dict) -> int | None:
     return int(entry.get("pr_number") or entry.get("last_pr_number") or 0) or None
 
 
+# The evidence object's per-finding shape is what build-glowup-backlog.py
+# reads; the trail, investigation log, and history are the bulk of a record
+# and none of it is backlog material, so the queue carries only this.
+_PR_REVIEW_KEEP = ("schema_version", "pr", "head_sha", "generated_at", "high_water", "findings")
+
+
+def pr_review_records_for(pr_review_dir: Path | None, entry: dict) -> list[dict]:
+    """The v3 pre-merge review records (`pr-review/<pr>/latest.json`) for the
+    ledger entry's PR pointers — both `pr_number` and `last_pr_number`, since
+    they name different PRs when the latest review opened one and an earlier
+    one banked the debt. Trimmed to the finding-level fields; never raises
+    (a missing record is the normal case for every v2-era PR)."""
+    if pr_review_dir is None:
+        return []
+    out: list[dict] = []
+    seen: set[int] = set()
+    for key in ("pr_number", "last_pr_number"):
+        try:
+            n = int(entry.get(key) or 0)
+        except (TypeError, ValueError):
+            n = 0
+        if not n or n in seen:
+            continue
+        seen.add(n)
+        f = pr_review_dir / str(n) / "latest.json"
+        if not f.is_file():
+            continue
+        try:
+            rec = json.loads(f.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(rec, dict) and isinstance(rec.get("findings"), list):
+            out.append({k: rec[k] for k in _PR_REVIEW_KEEP if k in rec})
+    return out
+
+
 def recoverable(entry: dict, record: dict | None) -> bool:
     """Can the worker actually fetch this page's banked findings?
 
@@ -217,6 +256,10 @@ def main() -> int:
     p.add_argument("--findings-dir", default="",
                    help="synced findings/ prefix; each selected article carries "
                         "its record into the unprivileged worker")
+    p.add_argument("--pr-review-dir", default="",
+                   help="synced pr-review/ prefix (v3 pre-merge review evidence); "
+                        "each selected article carries its PRs' latest.json records "
+                        "into the unprivileged worker")
     p.add_argument("--out", help="Queue JSON output path")
     p.add_argument("--traffic-file", help="S3-fetched traffic snapshot (CSV or JSON)")
     p.add_argument("--tiers", default=str(_select.DEFAULT_TIERS))
@@ -228,8 +271,8 @@ def main() -> int:
                    help="Comma-separated open content-review branch names (testing)")
     p.add_argument("--exclude-paths", default="",
                    help="Comma-separated content paths the fix lane already "
-                        "queued this run; they are never chosen for a repair, "
-                        "so one page is not reviewed twice in a day")
+                        "queued this run; they are never chosen for a glow-up "
+                        "or a repair, so one page is not reviewed twice in a day")
     p.add_argument("--dry-run", action="store_true", help="Print queue, write nothing")
     args = p.parse_args()
 
@@ -240,6 +283,7 @@ def main() -> int:
     today = parse_day(args.today) or datetime.now(timezone.utc).date()
     tier_rules = _select.load_tiers(Path(args.tiers))
     findings_dir = Path(args.findings_dir) if args.findings_dir else None
+    pr_review_dir = Path(args.pr_review_dir) if args.pr_review_dir else None
     # The recoverability filter reads the findings/ prefix. Without it every
     # lookup returns None, so applying the filter would declare the WHOLE
     # corpus unrecoverable and silently darken the lane — the one way this
@@ -314,6 +358,15 @@ def main() -> int:
             continue
         if _select.slugify(path) in open_slugs:
             continue
+        # The fix lane queued this page this run (--exclude-paths). Until
+        # 2026-09-09 only the repair path honored the list; the glow-up pick
+        # did not, so on 2026-09-08 both lanes dispatched elb.md within a
+        # minute of each other. The glow-up worker lost the race to the fix
+        # PR, hit the open-PR pre-check, and its `skipped` record overwrote
+        # the fix review's ledger entry (putting back two stale-claim markers
+        # that review had just resolved) and its findings record.
+        if path in exclude_paths:
+            continue
         if _select.is_draft(repo / path):
             continue
         if _select.is_redirect_stub(repo / path):
@@ -349,8 +402,6 @@ def main() -> int:
     for score, path, entry, reason in stranded:
         if len(queue["repairs"]) >= GLOWUP_REPAIRS_PER_RUN:
             break
-        if path in exclude_paths:
-            continue
         queue["repairs"].append({
             "path": path,
             "url": _select.url_for(path),
@@ -404,6 +455,10 @@ def main() -> int:
             # it hands the record over rather than leaving the worker to scrape
             # the PR body (see record-page-findings.py).
             "findings_record": record,
+            # Same reason, other system of record: what the pre-merge REVIEWER
+            # found on this page's review PRs (v3 evidence, fork-safe and
+            # machine-written). Empty for v2-era PRs.
+            "pr_review_records": pr_review_records_for(pr_review_dir, entry),
             "score": score,
         })
 

@@ -30,19 +30,19 @@
   {{ $schema = merge $schema (dict "applicationSubCategory" $applicationSubCategory) }}
 {{ end }}
 
-{{/* Add image */}}
+{{/* Add image. Resolve the effective meta image (custom meta_image, else the
+     build-time generated card) via the shared partial -- the same source
+     head.html uses for OpenGraph -- rather than reading .Params.meta_image
+     directly, so this page's JSON-LD image matches its own social card
+     instead of falling through to the generic default whenever meta_image is
+     unset. The resolved path is normally site-root-relative ("/images/...");
+     absolutize it against site.BaseURL, not the page's own Permalink -- see
+     schema/utils/absolutize-image.html for why the previous hand-rolled join
+     produced dead URLs like https://www.pulumi.com/product/images/... */}}
 {{ $image := "" }}
-{{ if .Params.meta_image }}
-  {{/* Fix URL concatenation to avoid double slashes */}}
-  {{ $baseURL := .Permalink }}
-  {{ if not (strings.HasSuffix $baseURL "/") }}
-    {{ $baseURL = printf "%s/" $baseURL }}
-  {{ end }}
-  {{ $imagePath := .Params.meta_image }}
-  {{ if strings.HasPrefix $imagePath "/" }}
-    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
-  {{ end }}
-  {{ $image = printf "%s%s" $baseURL $imagePath }}
+{{ $metaImage := partial "meta-image-url.html" . }}
+{{ if $metaImage }}
+  {{ $image = partial "schema/utils/absolutize-image.html" (dict "page" . "imagePath" $metaImage) }}
 {{ else }}
   {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
@@ -97,13 +97,13 @@
           {{ $offerURL = .href }}
         {{ end }}
       {{ end }}
-      {{/* Build a description that explicitly states this is a base price with additional usage
-           billed on demand, so the machine-readable claim itself discloses the pricing model
-           rather than implying a flat, all-inclusive price. Lead with the billing-period label
-           (e.g. "$40/month base") so the qualifier survives even for a priceSpecification-ignoring
-           parser (per review: Google reads offers.price + offers.description, not
-           offers.priceSpecification, so the description is the only field such a parser sees).
-           Trim any trailing "." from each part before joining so they don't double-punctuate. */}}
+      {{/* Build a description that discloses the pricing model - a monthly price with additional
+           usage billed on demand - rather than implying a flat, all-inclusive price. Lead with the
+           billing-period label (e.g. "$40/month"); the card's note carries the usage qualifier, so
+           both reach a priceSpecification-ignoring parser (per review: Google reads offers.price +
+           offers.description, not offers.priceSpecification, so the description is the only field
+           such a parser sees). Trim any trailing "." from each part before joining so they don't
+           double-punctuate. */}}
       {{ $descParts := slice }}
       {{ if and $card.price_label (strings.Contains $card.price_label "month") }}
         {{ $descParts = $descParts | append (printf "$%s%s" $cleanPrice $card.price_label) }}

@@ -5,21 +5,31 @@
   {{ range . }}
     {{ $slug := . }}
     {{ with index site.Data.team.team $slug }}
+      {{/* entity_type = "organization" marks a group byline (e.g. a house
+           content team) rather than a natural person -- schema.org Person
+           means an individual, so gate Person-only properties on this and
+           emit Organization instead. */}}
+      {{ $isOrg := eq (lower (or .entity_type "")) "organization" }}
+
       {{/* Build author entity with comprehensive knowledge graph properties */}}
-      {{ $author := dict "@type" "Person" }}
-      {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#person" .id)) }}
+      {{ $author := dict "@type" (cond $isOrg "Organization" "Person") }}
+      {{ $author = merge $author (dict "@id" (printf "https://www.pulumi.com/authors/%s/#%s" .id (cond $isOrg "organization" "person"))) }}
       {{ $author = merge $author (dict "name" .name) }}
 
-      {{/* Add job title and organization */}}
-      {{ with .title }}
-        {{ $author = merge $author (dict "jobTitle" .) }}
-      {{ end }}
+      {{/* Job title and worksFor are Person-only -- a group byline doesn't
+           hold a job title or "work for" itself; it gets parentOrganization
+           further down instead. */}}
+      {{ if not $isOrg }}
+        {{ with .title }}
+          {{ $author = merge $author (dict "jobTitle" .) }}
+        {{ end }}
 
-      {{ $author = merge $author (dict "worksFor" (dict
-        "@type" "Organization"
-        "@id" "https://www.pulumi.com/#organization"
-        "name" "Pulumi"
-      )) }}
+        {{ $author = merge $author (dict "worksFor" (dict
+          "@type" "Organization"
+          "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
+        )) }}
+      {{ end }}
 
       {{/* Add social profiles for entity disambiguation */}}
       {{ $sameAs := slice }}
@@ -42,14 +52,29 @@
         {{ $author = merge $author (dict "sameAs" $sameAs) }}
       {{ end }}
 
-      {{/* Add URL to author page */}}
-      {{ $author = merge $author (dict "url" (printf "https://www.pulumi.com/authors/%s/" .id)) }}
+      {{/* Add URL to author page. /authors/%s is a Hugo logical content path, not
+           the published permalink -- config/_default/config.yml routes the
+           `authors` taxonomy term to /blog/author/:slug/. Resolve the real page
+           and use its Permalink so this doesn't drift if that route ever
+           changes; omit `url` entirely if the author has no live term page
+           (e.g. data-file-only authors referenced from a what-is/comparison
+           page) rather than emit a dead link. */}}
+      {{ $authorPage := site.GetPage (printf "/authors/%s" (.id | urlize)) }}
+      {{ with $authorPage }}
+        {{ $author = merge $author (dict "url" .Permalink) }}
+      {{ end }}
 
       {{/* Add image. Team avatars live at /images/team/<id>.jpg by convention; an
            explicit .image in the team toml overrides it. Including a Person image
-           is what unlocks the author byline in Google's rich results. */}}
+           is what unlocks the author byline in Google's rich results; for an
+           Organization, logo is the equivalent property, so emit both pointing
+           at the same asset. */}}
       {{ $imagePath := or .image (printf "/images/team/%s.jpg" .id) }}
-      {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" $imagePath)) }}
+      {{ $imageURL := printf "https://www.pulumi.com%s" $imagePath }}
+      {{ $author = merge $author (dict "image" $imageURL) }}
+      {{ if $isOrg }}
+        {{ $author = merge $author (dict "logo" $imageURL) }}
+      {{ end }}
 
       {{/* Add expertise based on title */}}
       {{ $knowsAbout := slice "Infrastructure as Code" "Cloud Computing" "DevOps" }}
@@ -88,31 +113,53 @@
 
       {{ $author = merge $author (dict "knowsAbout" $knowsAbout) }}
 
-      {{/* Mark as founder if applicable */}}
-      {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
-        {{ $author = merge $author (dict "founder" (dict
+      {{ if not $isOrg }}
+        {{/* Mark as founder if applicable */}}
+        {{ if or (eq .id "joe-duffy") (eq .id "eric-rudder") (eq .id "luke-hoban") }}
+          {{ $author = merge $author (dict "founder" (dict
+            "@type" "Organization"
+            "@id" "https://www.pulumi.com/#organization"
+          )) }}
+        {{ end }}
+
+        {{/* Add affiliation */}}
+        {{ $author = merge $author (dict "affiliation" (dict
           "@type" "Organization"
           "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
+        )) }}
+      {{ else if eq .company "Pulumi" }}
+        {{/* A Pulumi house team belongs to Pulumi as a sub-entity, not an
+             affiliate -- parentOrganization keeps the author @id distinct
+             from https://www.pulumi.com/#organization (the publisher) while
+             still tying it to the org node. Gated on .company so a
+             third-party guest organization (entity_type "organization" but
+             no `company = "Pulumi"`, e.g. linio-engineering) isn't wrongly
+             claimed as a Pulumi sub-entity. */}}
+        {{ $author = merge $author (dict "parentOrganization" (dict
+          "@type" "Organization"
+          "@id" "https://www.pulumi.com/#organization"
+          "name" "Pulumi"
         )) }}
       {{ end }}
 
-      {{/* Add affiliation */}}
-      {{ $author = merge $author (dict "affiliation" (dict
-        "@type" "Organization"
-        "@id" "https://www.pulumi.com/#organization"
-        "name" "Pulumi"
-      )) }}
-
       {{ $authors = $authors | append $author }}
     {{ else }}
-      {{/* Author not in team data — build a minimal Person from the slug */}}
-      {{ $authors = $authors | append (dict
+      {{/* Author not in team data — build a minimal Person from the slug.
+           Same /authors/%s permalink caveat as above: resolve the real page
+           (published at /blog/author/:slug/ per config/_default/config.yml)
+           and omit `url` if there is no live term page for this slug. */}}
+      {{ $minimalAuthor := dict
         "@type" "Person"
         "@id" (printf "https://www.pulumi.com/authors/%s/#person" ($slug | urlize))
         "name" (replace $slug "-" " " | title)
-        "url" (printf "https://www.pulumi.com/authors/%s/" ($slug | urlize))
         "worksFor" (dict "@id" "https://www.pulumi.com/#organization")
-      ) }}
+      }}
+      {{ $slugAuthorPage := site.GetPage (printf "/authors/%s" ($slug | urlize)) }}
+      {{ with $slugAuthorPage }}
+        {{ $minimalAuthor = merge $minimalAuthor (dict "url" .Permalink) }}
+      {{ end }}
+      {{ $authors = $authors | append $minimalAuthor }}
     {{ end }}
   {{ end }}
 {{ end }}

@@ -4,6 +4,7 @@ meta_desc: |
      Compare Cosmos DB and MongoDB strengths and limitations to determine the best database option.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "Cosmos DB vs MongoDB, Know The Differences"
 
 customer_logos:
@@ -33,7 +34,7 @@ authors: ["kat-cosgrove"]
 **This document has been updated and expanded into [Cosmos DB vs Mongo DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#cosmos-db-vs-mongodb) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**
 {{% /notes %}}
 
-Both Cosmos DB and MongoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
+Both Cosmos DB and MongoDB are [NoSQL](/dev/glossary/nosql/), or non-relational, databases. This concept means their data is stored in some format other than two-dimensional tables. Some commonly-used formats for NoSQL databases in general are documents, key-value pairs, graphs, and columns, each with different strengths and tradeoffs. Cosmos DB and MongoDB are both highly-available, scalable, globally distributed and fully-managed NoSQL databases.
 
 ### What are the benefits and downfalls of Cosmos DB?
 

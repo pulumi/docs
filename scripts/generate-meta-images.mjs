@@ -14,9 +14,8 @@
 //     partner, topics, and the case-studies index). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
 //     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
-//   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT): "Tutorial" /
-//     "Glossary" badge, the parent collection's name in the corner for
-//     sub-pages, title + description.
+//   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT). Used for the
+//     case-study industry cards (meta-images/industries.mjs).
 //   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
 //     right-aligned "CASE STUDY" badge and a large title (case-studies).
 //   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
@@ -83,28 +82,6 @@ const menuLabels = once(() => {
   return out
 })
 
-// Title of the tutorial collection a sub-page belongs to (e.g. for
-// "tutorials/pulumi-fundamentals/create-a-pulumi-project" → "Pulumi
-// Fundamentals", read from tutorials/pulumi-fundamentals/_index.md). Returns ""
-// for root/standalone tutorials (< 3 path segments), which get no corner label.
-const _collTitle = new Map()
-function collectionTitle(id) {
-  // Use the LOGICAL path: leaf bundles store a trailing "/index" in their id
-  // (tutorials/foo/index), which must not count as a sub-page level — otherwise
-  // a standalone tutorial reads its own index.md and labels itself.
-  const parts = id.replace(/\/index$/, "").split("/") // tutorials/<collection>/<sub...>
-  if (parts.length < 3) return ""
-  const key = `${parts[0]}/${parts[1]}`
-  if (_collTitle.has(key)) return _collTitle.get(key)
-  let title = ""
-  for (const f of ["_index.md", "index.md"]) {
-    const p = join(CONTENT_DIR, parts[0], parts[1], f)
-    if (existsSync(p)) { const d = matter(readFileSync(p, "utf-8")).data; title = clean(d.linktitle || d.title); break }
-  }
-  _collTitle.set(key, title)
-  return title
-}
-
 // Shared shape for the plain centered-title sections (what-is + the small
 // marketing sections). They differ only in name and recursion.
 const titleSection = (name, recursive) => ({
@@ -120,22 +97,6 @@ const titleSection = (name, recursive) => ({
 // "what-is/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
   titleSection("what-is", false),
-  {
-    name: "tutorials",
-    template: "tutorial", // light docs-style card
-    recursive: true,
-    sampleGroupBy: (id) => id.split("/")[1] || "(root)",
-    // Tutorial badge + the parent collection's name in the corner for sub-pages
-    // (root/standalone tutorials get no corner label). Glossary entries live
-    // under tutorials/ but are definitions, so they get a "Glossary" badge.
-    fields: (fm, id) => {
-      const glossary = /(^|\/)glossary(\/|$)/.test(id)
-      const title = clean(fm.title)
-      const sub = glossary ? "" : dropIfEchoesTitle(collectionTitle(id), title)
-      return { sectionLabel: glossary ? "Glossary" : "Tutorial", subSectionLabel: sub, title, description: clean(fm.meta_desc) }
-    },
-    valid: (f) => !!f.title,
-  },
   {
     name: "case-studies",
     // Section index → plain "Case Studies" title card; individual studies → the

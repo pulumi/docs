@@ -116,8 +116,8 @@
     <!--
         Taxonomy pages (tags, authors, and the bare taxonomy lists) are
         noindexed because they cannibalise core pages that rank for the same
-        terms; curated landing pages (tutorial collections, blog categories,
-        blog series) are carved out. The full policy and its history live in
+        terms; curated landing pages (blog categories, blog series,
+        case-study industries) are carved out. The full policy and its history live in
         partials/taxonomy-indexable.html, which the sitemap shares.
     -->
     {{ if not (partial "taxonomy-indexable.html" .) }}
@@ -207,7 +207,15 @@
         {{ end }}
     {{ end }}
 
-    {{ if .Params.meta_title }}
+    {{/* Taxonomy term pages (blog category/tag/author/series, case-study
+        industry) carry no front-matter title/meta_title, so without this
+        branch they fall through to the site-wide default below. Source the
+        same human display name the <title> tag uses further down instead. */}}
+    {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+        <meta property="og:title" content="{{ partial "blog/term-name.html" . }}" />
+    {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+        <meta property="og:title" content="{{ partial "case-studies/industry-name.html" .Data.Term }}" />
+    {{ else if .Params.meta_title }}
         <meta property="og:title" content="{{ .Params.meta_title }}" />
     {{ else if .Params.title }}
         <meta property="og:title" content="{{ .Params.title }}" />
@@ -221,10 +229,11 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series) have no .Summary;
-            source their description from the data files so they don't fall
-            through to an empty meta description. */}}
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series) and the case-study
+            industry taxonomy have no .Summary; source their description from
+            the data files so they don't fall through to an empty meta
+            description. */}}
         {{ $desc := "" }}
         {{ if eq .Data.Singular "category" }}
             {{ range site.Data.blog_categories.categories }}
@@ -236,6 +245,10 @@
             {{ end }}{{ end }}
         {{ else if eq .Data.Singular "tag" }}
             {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
+        {{ else if eq .Data.Singular "industry" }}
+            {{ range site.Data.case_study_industries.industries }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
         {{ end }}
         {{ with $desc | chomp }}
             <meta name="description" content="{{ . }}" />
@@ -247,7 +260,13 @@
     {{ end }}
 
     {{ if .IsHome }}
-        <title>{{ .Site.Title }}</title>
+        {{- /* Home page: honour the front-matter title (title_tag, then .Title)
+             the same way every other page in this file does, falling back to
+             the site title only if the home page has neither. This keeps the
+             rendered <title> consistent with the WebPage schema name, which
+             already reads title_tag-then-.Title, and with og:title, which on
+             the home page resolves to the same front-matter title. */ -}}
+        <title>{{ or .Params.title_tag .Title .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
         {{- /* Blog taxonomy pages: use the display name (category name / series
@@ -267,9 +286,7 @@
                  data-file source of truth instead of Hugo's slug-derived .Title
                  ("Developer-Tools"), and suffix "| Case Studies" below. */ -}}
             {{ $industryTerm = true }}
-            {{ range site.Data.case_study_industries.industries }}
-                {{ if eq .id $.Data.Term }}{{ $title = .name }}{{ end }}
-            {{ end }}
+            {{ $title = partial "case-studies/industry-name.html" .Data.Term }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
@@ -326,6 +343,27 @@
             <title>{{ $title }} | Case Studies | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
+        {{ end }}
+
+        {{- /* /blog/page/N/ (N>1) gets a canonical further below in this file
+             pointing at /blog/ -- Hugo resolves .RelPermalink for a paginated
+             section to the section's base URL regardless of which /page/N/
+             is being rendered, so this isn't self-referential, but a canonical
+             is still only a hint Google can choose to ignore. Search Console
+             confirms it does for this specific series: pages 2, 3, 5, and 8
+             were independently indexed anyway despite the same canonical.
+             noindex,follow removes the ambiguity while still letting crawlers
+             follow links to the real posts linked from the page. Category
+             term pagination (the $blogTerm branch above) gets the identical
+             canonical-to-base-URL treatment and is deliberately left
+             untouched -- confirmed via GSC's "Alternate page with proper
+             canonical tag" coverage state, Google does honor it there, even
+             though nothing in the template treats the two series
+             differently. Tag/author term pagination is a separate case,
+             already blanket-noindexed outright by taxonomy-indexable.html,
+             which this branch does not touch. */ -}}
+        {{ if and (eq .Type "blog") .IsSection (gt $pageNum 1) }}
+            <meta name="robots" content="noindex,follow" />
         {{ end }}
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
@@ -514,12 +552,12 @@
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.
          Self-hosted (static/js/anchor-js.min.js, vendored from anchor-js v4.1.0's anchor.min.js)
          rather than loaded from cdnjs: this removes a third-party render-relevant dependency and
-         its DNS/TLS/connection setup cost from every docs/tutorials/blog/authors/tags/registry
+         its DNS/TLS/connection setup cost from every docs/blog/authors/tags/registry
          page, and eliminates the single point of failure where a cdnjs slowdown or outage delayed
          anchors sitewide. The vendored file's SHA-512 matches cdnjs's own published SRI hash for
          anchor-js@4.1.0/anchor.min.js (sha512-8IXYpHF8LXD5JYo9bhj3ja2uLOJ7QJ/o+F1DSitgu0HmT5W0Vv3vTi+p5nn9jbi/cPnskPO9qT0RY5VAdofRJQ==,
          per https://api.cdnjs.com/libraries/anchor-js/4.1.0), confirming it is unmodified. -->
-    {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
         <script async defer src="{{ "js/anchor-js.min.js" | relURL }}"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.

@@ -102,7 +102,7 @@ When you’re scaling your organization, you’ll need an IaC backend that makes
 In contrast, Pulumi Cloud offers standardized, well-documented capabilities and integrates seamlessly with identity systems, leading to efficient onboarding and increased productivity for new employees. Pulumi Cloud provides [12x5 or 24x7 support](/pricing/), ensuring your organization receives immediate assistance with any architectural, cloud-related, or Pulumi best-practices issues. Furthermore, Pulumi Cloud includes configurable RBAC (Enterprise edition and above), simplifying the onboarding and scaling of new users.
 
 {{% notes type="tip" %}}
-**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that could handle more than eleven thousand developers.
+**BMW Group** used Pulumi to build a scalable and resilient hybrid cloud implementation that [manages more than 20,000 cloud resources](/case-studies/bmw/) with Python-based infrastructure code.
 
 *“When we started to use Terraform to deploy our first cloud services with AWS, it didn’t scale quickly enough for our needs. With Pulumi we’re really speeding up development. We can use any language instead of some special language like HCL and by automating policies, we have compliant and secure systems from the beginning.”*
 

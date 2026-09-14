@@ -2,8 +2,9 @@
 title: "What Is AI Infrastructure?"
 meta_desc: "AI infrastructure is the compute, data, orchestration, and control-plane layers AI workloads run on. Learn what it includes and how teams build it."
 type: what-is
+date: 2026-08-25T02:08:47+00:00
 page_title: "What Is AI Infrastructure?"
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 AI infrastructure is the compute, data, orchestration, and control-plane layers that training and inference workloads run on, plus the tooling teams use to provision, govern, and operate it. That includes accelerators and networking, data pipelines and storage, model-serving and orchestration frameworks, and the infrastructure-as-code and policy layer that defines, changes, and secures the rest. This page covers what belongs in each layer, how AI infrastructure differs from the cloud infrastructure teams already run, and how cloud engineering teams actually build and operate it, including with AI agents doing part of the work.
@@ -103,7 +104,7 @@ Teams govern AI infrastructure the same way they govern any production infrastru
 
 ### Guardrails that hold up in production
 
-- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and [Pulumi Policies](/docs/insights/policy/), Pulumi's implementation.
+- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and [Pulumi Policies](/docs/discovery-governance/policy/), Pulumi's implementation.
 - **Secrets and configuration management** keeps credentials out of code and out of an agent's prompt context. See Pulumi's [secrets management](/product/secrets-management/).
 - **Drift detection and inventory** catch infrastructure that diverged from what is declared, whether a person clicked around in a console or an agent applied a change outside the normal path. See Pulumi's [insights and governance](/product/insights-governance/) capabilities.
 - **Human-in-the-loop approval** keeps a person in the decision path for changes above a defined risk threshold, even when an agent generated the change.

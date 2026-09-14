@@ -15,3 +15,13 @@ company = "Pulumi"
 weight = 1
 
 status = "active"
+
+# This byline is a group, not a natural person -- schema.org Person denotes an
+# individual, so layouts/partials/schema/utils/author-entities.html reads this
+# flag and emits JSON-LD "@type": "Organization" instead. Any future
+# non-person byline in this directory should set the same flag; if it's a
+# Pulumi house team (like this one, via `company = "Pulumi"` above), the
+# Organization branch also attaches parentOrganization -- a third-party guest
+# organization (e.g. linio-engineering.toml) should set entity_type without a
+# `company = "Pulumi"` field, so it isn't wrongly claimed as a Pulumi sub-entity.
+entity_type = "organization"

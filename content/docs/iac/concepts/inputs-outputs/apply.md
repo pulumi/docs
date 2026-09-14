@@ -8,9 +8,6 @@ menu:
         name: Apply
         parent: iac-concepts-inputs-outputs
         weight: 1
-    concepts:
-        weight: 2
-        parent: inputs-outputs
 aliases:
     - /docs/concepts/inputs-outputs/apply/
 ---

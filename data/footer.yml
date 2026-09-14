@@ -23,15 +23,9 @@ columns:
       - label: Registry
         href: /registry/
         track: footer-apis
-      - label: Templates
-        href: /templates/
-        track: footer-templates
-      - label: Tutorials
-        href: /tutorials/
-        track: footer-tutorials
-      - label: Guides
-        href: /guides/
-        track: footer-guides
+      - label: Dev Center
+        href: /dev/
+        track: footer-learn
       - label: Events
         href: /events/
         track: footer-events

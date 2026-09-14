@@ -10,9 +10,6 @@ menu:
         parent: iac-home
         weight: 100
         identifier: iac-comparisons
-    concepts:
-        identifier: vs
-        weight: 16
 aliases:
 - /docs/reference/vs/
 - /docs/intro/vs/
@@ -37,6 +34,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [OpenTofu vs. Terraform](/what-is/opentofu-vs-terraform/) — how the two compare to each other, for readers weighing them before they get to Pulumi
 * [Spacelift](/docs/iac/comparisons/spacelift/)
 * [Terraform Automation and Collaboration Software (TACOS)](/docs/iac/comparisons/tacos/)
 * [Helm](/docs/iac/comparisons/helm/)

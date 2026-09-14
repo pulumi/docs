@@ -12,7 +12,7 @@ This is the **CI entry point** for the docs review pipeline.
 ## Hard rules for CI
 
 1. **Never read working-tree *source* state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo content files. The CI runner's working tree is a shallow checkout that may not reflect what's in the PR. Use `gh pr view` and `gh pr diff` for **everything** about the PR. *(The workflow-generated pre-step artifacts in the workspace root — `.review-draft.md`, `.verified-claims.json`, etc. per Hard rule 7 — are not "working-tree source state"; Read them freely.)*
-2. **Do not post the pinned comment yourself.** Edit `.review-draft.md` in place and exit when the editorial pass is done. The workflow runs validate / splice / re-validate / upsert as separate steps after your session ends — you do not call `pinned-comment.sh`, `validate-pinned.py`, or any post-processing script from inside your turn. **Every `<TODO:` placeholder must be replaced** before you exit — the validator's `no-todo-tokens` rule fails the body otherwise.
+2. **Do not post the pinned comment yourself.** Edit `.review-draft.md` in place and exit when the editorial pass is done. The workflow runs validate / splice / re-validate / upsert as separate steps after your session ends (on v3: a deterministic `normalize-v3-draft.py` pass that repairs a mis-shaped finding table or a deleted `#### F<n> · Do this` block, then validate / build-evidence / publish) — you do not call `pinned-comment.sh`, `validate-pinned.py`, or any post-processing script from inside your turn. **Every `<TODO:` placeholder must be replaced** before you exit — the validator's `no-todo-tokens` rule fails the body otherwise.
 3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
@@ -22,6 +22,35 @@ This is the **CI entry point** for the docs review pipeline.
    - **Shell control flow in Bash (`for`, `while`, `case`, `if`).** The multi-op decomposer rejects loops and conditionals even when each constituent command is allow-listed. For iteration over a list, use a single-line `python3 -c "..."` (allow-listed) or sequential single-op `gh` invocations.
    - **Brace expansion (`{a,b,c}`) and subshell grouping (`(cmd1; cmd2)`).** Both decompose unfavorably; expand the list manually or move the logic to a single-line `python3 -c "..."`.
    - **Multi-line `python3 -c "..."` strings and heredocs.** The `-c` argument must be a *single line* of `;`-separated statements — no embedded newlines, no `python3 <<'EOF' … EOF` heredocs (both are rejected by the multi-op decomposer even though `Bash(python3 -c:*)` is allow-listed). If the logic won't fit on one line, decompose it into separate single-op `python3 -c` / `jq` / `gh` invocations — do **not** write a helper script in the workspace root (`.dump-verdicts.py`, `.build-trail.py`, …): the allow-list only permits `python3 .claude/commands/docs-review/scripts/validate-pinned.py:*`, so an arbitrary `python3 .foo.py` is rejected. Everything you need to parse is already in `.review-draft.md`.
+
+---
+
+## The v3 surface
+
+When the workflow prompt says **the v3 review surface is active**, the composer
+emitted TWO drafts instead of `.review-draft.md`:
+
+- **`.review-draft-author.md`** — the author card (🚨 Fix or disagree /
+  ❓ Questions for you / style suggestions / ✅ Resolved).
+- **`.review-draft-brief.md`** — the reviewer brief (summary + confidence
+  table / ⚠️ Check these / rubber-stampable counts).
+
+Your editorial pass edits **both files** under the contract in
+`references/output-format.md` §The model's edit contract (v3), which overrides
+§2–3 below wherever they conflict. The short version: the verification trail,
+investigation log, triaged findings, pre-existing issues, count table, and
+review history are **not in your drafts** — they live in the machine-owned
+evidence base (`.review-evidence-base.json`, which you never edit) and render
+on the evidence page. You triage the finding rows (promote-only; new findings
+as `| **F?** | … | … |` table rows; `**Spurious:**` / `**Mis-sourced:**` /
+`**Pre-existing:**` rewrites instead of deletions), write the fix prose, the
+summary, and the confidence levels, and never touch the HTML markers, the
+REVIEW_STATE block, the `%%EVIDENCE_URL%%` lines, the `<sub>vN …</sub>`
+version line, the Where-cell links, or the composer-owned count lines. Hard rules 1–7 apply unchanged, as do the style-suggestion sidecar
+rules (§Style suggestions in the workflow prompt) — the sidecar and ✏️
+annotations target the author card. If either draft opens with a
+`> [!CAUTION]` banner, stop and exit without editing — v3 has **no**
+manual-assembly fallback; the run must land on the error path.
 
 ---
 
@@ -86,7 +115,7 @@ For each `- **[L…]**` `<TODO>`-marked bullet under 🚨 / ⚠️, apply the bu
 </step>
 
 <step number="2" name="Add findings the composer couldn't pre-stub">
-Hugo-build errors / link-integrity breaks and frontmatter alias/URL/menu-parent collisions are now pre-stubbed by the composer (route: `preflight`); their bullets carry a `<TODO: confirm or REMOVE …>` marker — confirm the fix or REMOVE per the bucket-transition vocabulary. **Add** the rest: internal-link / shortcode breaks in content, cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (3-specialist checks), editorial-balance threshold flags (Tier 2 + Tier 1 outliers from §📊), intuition-flag promotions, two-question-test findings from the domain rules.
+Hugo-build errors / link-integrity breaks and frontmatter alias/URL/menu-parent collisions are now pre-stubbed by the composer (route: `preflight`); their bullets carry a `<TODO: confirm or REMOVE …>` marker — confirm the fix or REMOVE per the bucket-transition vocabulary. Dead `/docs/…` and `/blog/…` links on added lines are pre-stubbed the same way (`link-check-diff.py` → `.hugo-build.json.link_integrity`, on every PR, Hugo run or not; a link with no content file is probed on production and counts as dead only on a 404/410, so taxonomy, content-adapter, registry-proxied, and redirect-backed paths don't false-positive). **Add** the rest: shortcode breaks in content, internal links the checker can't see (relative paths, links inside shortcode arguments), cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (3-specialist checks), editorial-balance threshold flags (Tier 2 + Tier 1 outliers from §📊), intuition-flag promotions, two-question-test findings from the domain rules.
 
 Every `**[L<line>]**` bucket bullet you ADD MUST be backed by a matching 🔍 trail line (`bucket-bullet-trail-match` / `bucket-bullet-line-range-prefix` enforce this — a missing anchor soft-floors the review). Render the file path as a backticked literal after the L-prefix: `- **[L45]** ` `content/docs/foo/_index.md` ` "claim text" — …`; the trail line uses `- L45 in ` `content/docs/foo/_index.md` ` "…"`. If the finding has no fact-check claim behind it, add its trail line first (`- L<line> in ` `path` ` "<short description>" → <emoji> <verdict>` — `⚔️ mismatch` for cross-sibling, `🤷 unverifiable` for an editorial-balance flag, etc.). Findings with no line anchor at all go in prose elsewhere — not in a `**[L…]**` bullet.
 </step>

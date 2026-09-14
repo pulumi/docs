@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "slug": "docs-iac-concepts-providers",
+  "path": "content/docs/iac/concepts/providers/_index.md",
+  "generated": "2026-09-01T14:16:39+00:00",
+  "clarity_flag": false,
+  "skipped_findings": 13,
+  "source_prs": [
+    {
+      "number": 20503,
+      "url": "https://github.com/pulumi/docs/pull/20503",
+      "head": "content-review/docs-iac-concepts-providers"
+    },
+    {
+      "number": 20927,
+      "url": "https://github.com/pulumi/docs/pull/20927",
+      "head": "content-review/docs-iac-concepts-providers"
+    },
+    {
+      "number": 20953,
+      "url": "https://github.com/pulumi/docs/pull/20953",
+      "head": "content-review/docs-iac-concepts-providers"
+    },
+    {
+      "number": 21220,
+      "url": "https://github.com/pulumi/docs/pull/21220",
+      "head": "content-review/docs-iac-concepts-providers"
+    },
+    {
+      "number": 21266,
+      "url": "https://github.com/pulumi/docs/pull/21266",
+      "head": "content-review/docs-iac-concepts-providers"
+    }
+  ],
+  "banked": [
+    {
+      "id": "findings-f1",
+      "section": "Findings not applied",
+      "source_pr": null,
+      "source": "findings-record",
+      "text": "Claim (c7): Native providers are not bridged; they are generated from a cloud or service's API specification, which produces both the resource definitions and the CRUD cal\u2026 \u2014 unverifiable \u2014 The cited URL is the pulumi-terraform-bridge repo, which describes the bridged provider mechanism, not native providers. The claim is about native (non-bridged\u2026"
+    },
+    {
+      "id": "findings-f2",
+      "section": "Findings not applied",
+      "source_pr": null,
+      "source": "findings-record",
+      "text": "Claim (c19, L67): The Any Terraform Provider is a parameterized provider that lets you generate a local provider SDK for a cloud provider, SaaS service, or on-prem device that e\u2026 \u2014 framing drift (value accurate, meaning drifted) \u2014 The cited URL (https://search.opentofu.org) resolves successfully and is titled \"OpenTofu Registry\", confirming it is the registry referenced by the claim as t\u2026"
+    },
+    {
+      "id": "pr20503-findings-1",
+      "section": "Findings not applied",
+      "source_pr": 20503,
+      "source": "pr-body",
+      "text": "- **Claim (c6): Native providers are not bridged; they are generated from a cloud or service's API specification\u2026 \u2014 unverifiable** \u2014 The cited source is the pulumi-terraform-bridge repo, which describes bridged (Terraform-derived) providers, not native/API-spec-generated ones, so it neither confirms nor contradicts the claim; correcting the reference is judgment-level, not a fact fix."
+    },
+    {
+      "id": "pr20503-findings-4",
+      "section": "Findings not applied",
+      "source_pr": 20503,
+      "source": "pr-body",
+      "text": "- **Vale difficulty qualifier (L253): Avoid difficulty qualifier 'simply' (STYLE-GUIDE.md \u00a7Inclusive Language).** \u2014 Not stamped `deterministic_fix`, so this is a style nag with no Vale-authored replacement; removing \"simply\" is a prose edit for a human, not a mechanical fix."
+    },
+    {
+      "id": "pr20503-findings-5",
+      "section": "Findings not applied",
+      "source_pr": 20503,
+      "source": "pr-body",
+      "text": "- **Readthrough self-redundancy (L36, 65-84): parameterized-provider rationale restated across two sections.** \u2014 `local_repair`, but the proposed fix offers two alternatives and L36 uniquely carries the Azure Native parameterized example (absent from the later section); deciding what to trim without losing that content is editorial."
+    },
+    {
+      "id": "pr20503-findings-6",
+      "section": "Findings not applied",
+      "source_pr": 20503,
+      "source": "pr-body",
+      "text": "- **Readthrough orphaned-structure (L455-457): stray `pulumi config set aws:region us-west-2` block.** \u2014 `local_repair`, but claim c46 treats this command as the config that lands the example's listener in `us-west-2`; it's meaningful context, so the real repair is adding explanatory prose (authoring), not the deletion alternative."
+    },
+    {
+      "id": "pr20953-findings-12",
+      "section": "Findings not applied",
+      "source_pr": 20953,
+      "source": "pr-body",
+      "text": "- **Readthrough orphaned-structure (L465-476): stray `pulumi config set aws:region us-west-2` block between the example and the inheritance note** \u2014 Left for a human because it is the same issue as c50 above: the block is not merely stray, it is the \"configuration\" the L257 prose promises, so relocating rather than deleting it is likely correct \u2014 and that placement decision interacts with how c50 is resolved."
+    },
+    {
+      "id": "pr21220-findings-10",
+      "section": "Findings not applied",
+      "source_pr": 21220,
+      "source": "pr-body",
+      "text": "- **Readthrough orphaned-structure (L460-464): the bare `pulumi config set aws:region us-west-2` block after the explicit-provider chooser.** \u2014 the finding's proposed fix (delete the block) would be wrong: the lead-in at L257 promises \"the following **configuration** and program,\" and this command is that configuration \u2014 it sets the default region to `us-west-2` so the load balancer listener in the example lands there while the `useast1` explicit provider handles the certificate. The real defect is placement (the config step follows the program it configures instead of preceding it), and moving it above the chooser is a restructuring edit outside the finding's line range. Flagged for the glow-up lane rather than applied."
+    }
+  ],
+  "notes": [],
+  "degraded": false,
+  "findings_record": {
+    "slug": "docs-iac-concepts-providers",
+    "reviewed_at": "2026-08-31",
+    "counts": {
+      "total": 14,
+      "applied": 2,
+      "deferred": 12
+    }
+  },
+  "recovery": {
+    "heads_queried": [
+      "content-review/docs-iac-concepts-providers",
+      "content-review/retire-docs-iac-concepts-providers",
+      "content-review/glowup-docs-iac-concepts-providers"
+    ],
+    "prs_found": 5,
+    "prs_unreachable": [],
+    "prs_without_sections": [],
+    "state": "recovered"
+  },
+  "_fixture_note": "trimmed from 60 banked items to 8: every readthrough item plus a sample of claim/vale rows"
+}
