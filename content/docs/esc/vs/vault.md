@@ -72,7 +72,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     </tr>
     <tr>
         <td>CLI</td>
-        <td>Yes, available as <code>pulumi esc</code> in the Pulumi CLI. Supports injecting application secrets as environment variables and modifying secrets.</td>
+        <td>Yes, available as <code>pulumi env</code> in the Pulumi CLI. Supports injecting application secrets as environment variables and modifying secrets.</td>
         <td>Limited, has a CLI but lacks the capabilities of injecting secrets as environment variables. The CLI is for modifying secrets only. </td>
     </tr>
     <tr>
@@ -123,7 +123,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     </tr>
     <tr>
         <td>Compare Secrets across Environment</td>
-        <td>Yes, <code>pulumi esc env diff</code> shows the changes between two environments or two versions of a single environment</td>
+        <td>Yes, <code>pulumi env diff</code> shows the changes between two environments or two versions of a single environment</td>
         <td>No</td>
     </tr>
     <tr>
