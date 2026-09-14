@@ -6,6 +6,43 @@ const { algoliasearch } = require("algoliasearch");
 const registrySearchIndexUrl = "https://www.pulumi.com/registry/search-index.json";
 const docsSearchIndexUrl = "https://www.pulumi.com/search-index.json";
 
+// The Dev Center (tutorials, templates, community examples, glossary) ships from
+// pulumi/marketing-web and publishes its own search index. Its records use a
+// different shape than ours, so we normalize them before merging (see
+// normalizeDevRecords). A fetch failure here is non-fatal: we log and continue
+// with an empty set so a Dev Center outage never blocks the docs/registry index.
+const devSearchIndexUrl = "https://www.pulumi.com/dev/search-index.json";
+
+// Maps a Dev Center search record onto the docs/registry record shape. The Dev
+// Center index carries a large `content` field, but `content` isn't a searchable
+// attribute in our index (see settings.js), so we drop it here — that also keeps
+// each record under Algolia's per-record size limit. Dev Center results match on
+// title, blurb, and tags, like our blog and heading-level records.
+function normalizeDevRecords(devIndex) {
+    return devIndex
+        .filter(o => o.objectID && o.href && o.title)
+        .map(o => ({
+            objectID: o.objectID,
+            section: "Dev Center",
+            title: o.title,
+            h1: o.title,
+            description: o.blurb || "",
+            // Some Dev Center records carry absolute www.pulumi.com URLs (e.g. blog
+            // series). Strip the origin so same-site links are relative like the rest
+            // of the index and stay on-domain in every environment; genuinely off-site
+            // links (e.g. academy.pulumi.com) are left absolute.
+            href: o.href.replace(/^https:\/\/www\.pulumi\.com/, ""),
+            rank: o.featured ? 150 : 100,
+            boosted: false,
+            keywords: [].concat(o.tagLabels || [], o.languageLabels || []),
+            tags: [].concat(o.tags || [], o.languages || [], o.clouds || []),
+            ancestors: ["Dev Center", o.typeLabel].filter(Boolean),
+        }))
+        // Drop Dev Center blog posts and series: those live in /blog/ and are
+        // already surfaced in the Blog tab, so keeping them here would duplicate.
+        .filter(o => !o.href.startsWith("/blog/"));
+}
+
 // Configuration values required for updating the Algolia index.
 const config = {
     appID: process.env.ALGOLIA_APP_ID,
@@ -25,13 +62,14 @@ async function publishIndex() {
 
     let registryIndex = [];
     let docsIndex = [];
+    let devIndex = [];
 
     async function fetchIndexFiles() {
         return Promise.all([
             axios.get(registrySearchIndexUrl)
                 .then((response) => {
                     registryIndex = response.data;
-                }),    
+                }),
             axios.get(docsSearchIndexUrl)
                 .then((response) => {
                     docsIndex = response.data;
@@ -44,13 +82,25 @@ async function publishIndex() {
         process.exit(1);
     });
 
+    // Fetch the Dev Center index separately so a failure degrades gracefully
+    // (empty results) rather than failing the whole publish.
+    await axios.get(devSearchIndexUrl)
+        .then((response) => {
+            devIndex = normalizeDevRecords(response.data);
+            console.log(`Fetched ${devIndex.length} Dev Center records.`);
+        })
+        .catch((error) => {
+            console.error("error retrieving Dev Center index file (continuing without it):", error.message);
+        });
+
     // De-dupe any registry objects that also may exist in the docs index.
     const filteredDocsObjects = docsIndex.filter(o => registryIndex.find(ro => ro.href === o.href) === undefined);
 
-    // Combine search index objects from both docs and registry.
+    // Combine search index objects from docs, registry, and the Dev Center.
     let allObjects = [
         ...filteredDocsObjects,
         ...registryIndex,
+        ...devIndex,
     ];
 
     // Temporary hack: Remove any references to `azure-native-v1`. This line can be
