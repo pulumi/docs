@@ -267,6 +267,12 @@
             </div>
             {{ end }}
             {{ end }}
+            {{ if eq .id "support" }}
+            <p class="text-sm text-gray-700 md:ml-12 py-4">
+                This comparison shows included support. For paid support options,
+                <a href="#support-plans" class="text-violet-primary underline">compare support plans</a>.
+            </p>
+            {{ end }}
         </details>
         {{ end }}
     </div>
@@ -314,6 +320,8 @@
      and worked out which edition they'd be on. Entry points above link down to
      #calculator. */}}
 {{ partial "pricing/calculator.html" . }}
+
+{{ partial "pricing/support.html" . }}
 
 {{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">

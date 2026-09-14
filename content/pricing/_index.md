@@ -185,7 +185,7 @@ faq:
         - question: What if I am not satisfied with my Pulumi purchase?
           answer: If you're not satisfied with Pulumi, we offer a 14-day money-back guarantee, no questions asked. [Contact us](/contact/).
         - question: How do I get support for Pulumi?
-          answer: Every paid edition includes service-level objectives, an uptime commitment, and support ticket submission. Standard support costs $625/month and is included at no additional charge with a contract of at least one year. Bronze support costs $1,250/month and includes a private Slack channel. Gold and Platinum provide 24x7 coverage. Self-hosted customers require Platinum support. [Contact us](/contact/?form=sales) to discuss support options.
+          answer: Every edition includes access to the support agent and ticket submission. Essentials, Pro, and Enterprise customers can purchase Standard or Bronze support. Standard is included with Enterprise contracts of at least one year, but not with monthly Enterprise subscriptions. Self-hosted customers require Platinum support. [Compare support plans](#support-plans) for prices, coverage, and response objectives.
         - question: Does Pulumi charge sales tax?
           answer: You may be charged a sales tax in addition to your usage fees in certain jurisdictions. It will be a separate line item on your bill.
 ---

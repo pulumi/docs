@@ -853,66 +853,91 @@ categories:
         available_from: essentials
 
       - id: support-tickets
-        name: Support ticket submission
-        available_from: essentials
+        name: Support agent & ticket submission
+        available_from: free
 
       - id: standard-support
         name: Standard support
-        tooltip: "12x5 coverage through chat and the support portal. Response objectives: 1 day for urgent issues and 2 days for normal issues. $7,500/year or $625/month; included with a contract of at least one year."
+        link: "#support-plans"
         availability:
-          essentials: $625/month
-          pro:
-            content: $625/month
-            subtext: Included with a 1-year+ contract
-          enterprise:
-            content: $625/month
-            subtext: Included with a 1-year+ contract
-
-      - id: bronze-support
-        name: Bronze support
-        tooltip: "12x5 coverage through chat, the support portal, email, and Slack. Response objectives: 4 hours for urgent issues and 1 day for normal issues. Includes 2 workshops, up to 2 named contacts, and private Slack. $15,000/year or $1,250/month."
-        availability:
-          essentials: $1,250/month
-          pro: $1,250/month
-          enterprise: $1,250/month
-
-      - id: support-private-slack
-        name: Private Slack channel
-        available_from: essentials
-        availability:
-          essentials: With Bronze support
-          pro: With Bronze support or higher
-          enterprise: With Bronze support or higher
-
-      - id: support-24x7
-        name: 24x7 support
-        available_from: pro
-        availability:
-          pro: With Gold or Platinum support
-          enterprise: With Gold or Platinum support
+          enterprise: Included with a contract of at least one year
 
       - id: community-slack
         name: Community Slack
         link: https://slack.pulumi.com/
         available_from: free
 
-      - id: professional-services
-        name: Professional services
-        available_from: pro
-        availability:
-          pro: Available separately
-          enterprise: Available separately
+support_plans:
+  - id: standard
+    name: Standard
+    eligibility_note: Available for Essentials, Pro, and Enterprise
+    price: $625/month or $7,500/year
+    price_note: Included with Enterprise contracts of at least one year.
+    term: Monthly or annual
+    channels: Chat and support portal
+    coverage: 12 hours/day, 5 days/week
+    urgent_response: 1 day
+    normal_response: 2 days
+    private_slack: Not included
+    workshops: Not included
+    health_checks: Not included
+    named_contacts: Not included
+    named_csa: Not included
 
-      - id: onboarding-training
-        name: Onboarding and training
-        available_from: pro
-        availability:
-          pro: Available separately
-          enterprise: Available separately
+  - id: bronze
+    name: Bronze
+    eligibility_note: Available for Essentials, Pro, and Enterprise
+    price: $1,250/month or $15,000/year
+    term: Monthly or annual
+    channels: Chat, support portal, email, and Slack
+    coverage: 12 hours/day, 5 days/week
+    urgent_response: 4 hours
+    normal_response: 1 day
+    private_slack: Included
+    workshops: "2"
+    health_checks: Not included
+    named_contacts: Up to 2
+    named_csa: Not included
 
-      - id: terraform-migration
-        name: Terraform Migration
-        available_from: pro
-        availability:
-          pro: Available separately
-          enterprise: Available separately
+  - id: silver
+    name: Silver
+    price: $35,000/year
+    term: Minimum one-year contract
+    channels: Chat, support portal, email, and Slack
+    coverage: 12 hours/day, 7 days/week
+    urgent_response: 2 hours
+    normal_response: 8 hours
+    private_slack: Included
+    workshops: "4"
+    health_checks: Annual
+    named_contacts: Up to 10
+    named_csa: Not included
+
+  - id: gold
+    name: Gold
+    price: $50,000/year
+    term: Minimum one-year contract
+    channels: Chat, support portal, email, and Slack
+    coverage: 24 hours/day, 7 days/week
+    urgent_response: 1 hour
+    normal_response: 4 hours
+    private_slack: Included
+    workshops: Unlimited
+    health_checks: Quarterly
+    named_contacts: Up to 25
+    named_csa: Included
+
+  - id: platinum
+    name: Platinum
+    eligibility_note: Required for self-hosted customers
+    price: Custom quote
+    term: Contact sales
+    channels: Chat, support portal, email, and Slack
+    coverage: 24 hours/day, 7 days/week
+    urgent_response: Custom SLA
+    normal_response: Custom SLA
+    private_slack: Included
+    workshops: Custom engagement
+    health_checks: Custom engagement
+    named_contacts: Up to 50
+    named_csa: Included
