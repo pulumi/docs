@@ -64,6 +64,9 @@ Entry-point and specialized skills for writing and operating Pulumi infrastructu
 | pulumi-debug-failed-operation | Debug a failed `pulumi up` or `pulumi preview` from the failure Pulumi already recorded |
 | package-usage | Audit which stacks across an organization use a package and at what versions |
 | provider-upgrade | Safely upgrade a Pulumi provider and reconcile the resulting diff |
+| pulumi-context-api | Answer relationship questions over the organization's infrastructure graph with the Context API: blast radius, dependencies, provider ownership, orphaned resources |
+
+pulumi-context-api needs an organization on the Enterprise edition.
 
 ### Package Maintenance Plugin
 
@@ -119,7 +122,7 @@ The universal installer does not read plugin marketplace manifests. Install
 each end-user skill group for use with any AI coding assistant:
 
 ```bash
-npx skills add pulumi/agent-skills/pulumi --skill '*'       # 8 Pulumi skills
+npx skills add pulumi/agent-skills/pulumi --skill '*'       # 9 Pulumi skills
 npx skills add pulumi/agent-skills/migration --skill '*'    # 5 migration skills
 npx skills add pulumi/agent-skills/delegation --skill '*'   # 1 Neo handoff skill
 ```
@@ -195,6 +198,16 @@ Help me upgrade the Pulumi AWS provider safely without changing real infrastruct
 ```
 
 The assistant will use the `provider-upgrade` skill to guide you through a low-risk upgrade workflow.
+
+### Querying the Context API
+
+Ask your AI assistant:
+
+```text
+What breaks if I change this security group?
+```
+
+The assistant will use the `pulumi-context-api` skill to trace the resources and stacks that depend on it through the infrastructure graph.
 
 ### Handing Off Work to Pulumi Neo
 
