@@ -18,7 +18,9 @@
     @apply flex items-center justify-center bg-violet-50 p-6 md:p-8;
 
     img {
-        @apply h-full w-auto max-w-full rounded-sm object-contain;
+        // Sized to a fraction of the field rather than filling it, so the tint
+        // reads as a mat around the document instead of a backing plate.
+        @apply h-3/4 w-auto max-h-full max-w-full rounded-sm object-contain;
         // Enough lift to read as a document sitting on the field, and no more.
         // Tinted with violet-primary rather than black so it doesn't go gray
         // against the violet-50 fill.

@@ -37,7 +37,7 @@
              cover field can run flush to the card's edges. `overflow-hidden` is
              what clips the field's square corners to the card's radius. */}}
         <div class="card card-hover group relative flex flex-col overflow-hidden md:flex-row">
-            <div class="flex flex-1 flex-col p-8 md:p-10">
+            <div class="flex flex-1 flex-col justify-center p-8 md:p-10">
                 {{ with .Params.card_label }}
                 <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
                 {{ end }}
@@ -48,7 +48,7 @@
                     {{ . | markdownify }}
                 </div>
                 {{ end }}
-                <div class="mt-auto">
+                <div>
                     <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
                         Read the whitepaper
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
@@ -60,7 +60,7 @@
                  edge reads against the card. Height is what sizes the art, so at
                  md the field stretches to the card and takes a floor to stand on
                  rather than following an aspect ratio. */}}
-            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-auto md:min-h-80 md:w-2/5">
+            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-auto md:min-h-80 md:w-1/2">
                 {{ partial "fingerprinted-img.html" (dict
                     "src" .
                     "alt" (printf "%s cover" $title)
