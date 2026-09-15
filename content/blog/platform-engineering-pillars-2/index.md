@@ -219,8 +219,8 @@ As you build out your platform engineering plan, consider how Pulumi might fit i
 
 * [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) in the language of your choice.
 * [Component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) for creating reusable infrastructure modules that encapsulate best practices.
-* [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) for a fully managed infrastructure deployment solution.
-* And a [Platform in the box](https://www.pulumi.com/docs/pulumi-cloud/deployments/) experience.
+* [Pulumi Deployments](/docs/deployments/concepts/) for a fully managed infrastructure deployment solution.
+* And a [Platform in the box](/docs/deployments/concepts/) experience.
 
 Reliable infrastructure provisioning is the cornerstone that supports your entire platform engineering initiative. By implementing the practices outlined in this article – version-controlled IaC, automated CI/CD workflows, environment separation, and golden-path templates – you establish a foundation that enables consistency, speed, and trust.
 

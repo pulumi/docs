@@ -25,7 +25,7 @@ In this post, we'll explore an approach for automating static secret rotation us
 
 ## A pattern for extending ESC
 
-We can take advantage of ESC’s integration with [Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/) to create an ergonomic way of managing rotation schedules ourselves.
+We can take advantage of ESC’s integration with [Pulumi Deployments](/docs/deployments/concepts/) to create an ergonomic way of managing rotation schedules ourselves.
 
 We’ll start by defining a custom declarative configuration format for managing a rotation schedule:
 
