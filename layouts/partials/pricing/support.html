@@ -1,0 +1,51 @@
+{{ $plans := site.Data.pulumi_pricing.support_plans }}
+{{ $benefits := slice
+    (dict "key" "price" "name" "Price")
+    (dict "key" "term" "name" "Billing term")
+    (dict "key" "channels" "name" "Support channels")
+    (dict "key" "coverage" "name" "Coverage" "id" "support-24x7")
+    (dict "key" "urgent_response" "name" "Urgent response objective")
+    (dict "key" "normal_response" "name" "Normal response objective")
+    (dict "key" "private_slack" "name" "Private Slack channel" "id" "support-private-slack")
+    (dict "key" "workshops" "name" "Workshops")
+    (dict "key" "health_checks" "name" "Health checks")
+    (dict "key" "named_contacts" "name" "Named contacts")
+    (dict "key" "named_csa" "name" "Named customer success architect")
+}}
+<section id="support-plans" aria-labelledby="support-plans-heading" class="container mx-auto px-6 my-16 scroll-mt-24">
+    <h2 id="support-plans-heading" class="text-3xl md:text-4xl font-semibold tracking-tight">Compare support plans</h2>
+    <p class="body-sm text-gray-700">Every edition includes access to the support agent and ticket submission.</p>
+    <p id="support-scroll-hint" class="text-sm text-gray-600 lg:hidden">Scroll horizontally to compare all five support plans.</p>
+    <div class="overflow-x-auto rounded-lg border border-gray-200" role="region" aria-label="Support plan comparison" aria-describedby="support-scroll-hint" tabindex="0">
+        <table class="w-full min-w-[1040px] table-fixed text-sm text-left border-collapse">
+            <caption class="sr-only">Support plan prices, coverage, response objectives, and included benefits</caption>
+            <thead>
+                <tr class="bg-violet-background">
+                    <th scope="col" class="p-4 font-semibold">Support plan</th>
+                    {{ range $plans }}
+                    <th scope="col" id="support-plan-{{ .id }}" class="p-4 font-semibold align-top scroll-mt-24">
+                        {{ .name }}
+                        {{ with .eligibility_note }}<span class="block mt-2 font-normal text-gray-700">{{ . }}</span>{{ end }}
+                    </th>
+                    {{ end }}
+                </tr>
+            </thead>
+            <tbody>
+                {{ range $benefit := $benefits }}
+                <tr{{ with .id }} id="{{ . }}"{{ end }} class="border-t border-gray-200 align-top scroll-mt-24">
+                    <th scope="row" class="p-4 font-medium">{{ .name }}</th>
+                    {{ range $plans }}
+                    <td class="p-4 text-gray-700">
+                        {{ index . $benefit.key }}
+                        {{ if eq $benefit.key "price" }}
+                            {{ with .price_note }}<span class="block mt-2">{{ . }}</span>{{ end }}
+                        {{ end }}
+                    </td>
+                    {{ end }}
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+    <p class="mt-6"><a href="/contact/?form=sales" class="btn btn-secondary">Contact us about support</a></p>
+</section>

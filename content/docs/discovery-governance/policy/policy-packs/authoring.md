@@ -1073,9 +1073,11 @@ As shorthand, specify enforcement levels directly:
 <a id="remediate"></a>
 **Enforcement levels:**
 
+In Pulumi Cloud, Essentials reports organization-managed policies in advisory mode. Pro adds mandatory enforcement, and Enterprise adds automatic remediation.
+
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
-- **remediate** - Automatically fixes violations in place, available in the [Business Critical edition](/pricing/#policy-enforcement-modes); see [Remediating policy violations](#remediating-policy-violations)
+- **remediate** - Automatically fixes violations in place, available in the [Enterprise edition](/pricing/#policy-enforcement-modes); see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration

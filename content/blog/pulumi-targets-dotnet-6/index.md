@@ -96,7 +96,7 @@ It is worth mentioning that although the new templates and the accompanying gett
 
 Pulumi provides tools to translate from several IaC languages. These tools will generate Pulumi programs in any of our supported languages. This includes:
 
-- Translating [Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/) with the Pulumi CLI using `pulumi convert`
+- Translating [Pulumi YAML](/docs/iac/languages-sdks/yaml/) with the Pulumi CLI using `pulumi convert`
 - Translating [Azure Resource Manager (ARM)](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) templates using [arm2pulumi](https://www.pulumi.com/arm2pulumi/)
 - Translating [Terraform code](https://www.pulumi.com/tf2pulumi/) with the Pulumi CLI using `pulumi convert --from terraform`
 - Translating Kubernetes YAML using [kube2pulumi](https://www.pulumi.com/kube2pulumi/)
