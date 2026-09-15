@@ -244,6 +244,9 @@ To set up VCS-triggered runs:
 1. Connect a [version control integration](/docs/integrations/version-control/) (GitHub, GitLab, Bitbucket, or Azure DevOps) to your Pulumi organization.
 1. Configure [deployment settings](/docs/deployments/concepts/settings/) on your stack, specifying the source repository and branch.
 1. Optionally, configure a [working directory](/docs/deployments/concepts/settings/source/) if your Terraform files are in a subdirectory.
+1. Optionally, if your organization has custom roles enabled, choose the [Pulumi Cloud role](/docs/deployments/concepts/settings/runner-pools/#pulumi-cloud-role) that runs use. The role is saved together with the source. To set only a role, leave the source set to **None**.
+
+Deployment settings for Terraform remote-execution stacks cover only the source and the role. Dependency caching, custom executor images, runner pools, and environment variables don't apply to these stacks.
 
 ### Manual approval for VCS-triggered applies
 

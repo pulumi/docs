@@ -43,3 +43,5 @@ The **No code** source lets you base a stack's deployment on a [Pulumi template]
 ## None
 
 Select **None** when the deployment has no source to fetch — typically because the Pulumi program is already present in a [custom executor image](/docs/deployments/concepts/settings/custom-executor-images/).
+
+For [Terraform remote-execution stacks](/docs/iac/get-started/terraform/terraform-remote-execution/), a source is optional. Select **None** to configure only the [Pulumi Cloud role](/docs/deployments/concepts/settings/runner-pools/#pulumi-cloud-role) that runs use.
