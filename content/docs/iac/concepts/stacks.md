@@ -107,7 +107,7 @@ dev                                       n/a                      n/a
 
 ## Rename a stack
 
-To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be a simple stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
+To rename an existing stack, run `pulumi stack rename <new-name>`. The new name may be an unqualified stack name or a fully qualified name in the form `<org>/<project>/<stack>`:
 
 ```bash
 $ pulumi stack rename production
@@ -149,7 +149,7 @@ config:
   aws:region: us-west-2
 ```
 
-Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. Alternatively, you can recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
+Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. You can instead recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
 
 ## Generate an update plan
 
@@ -379,7 +379,7 @@ $ pulumi stack output --json
 ```
 
 {{% notes type="info" %}}
-Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. For example, if you only want to export the resource’s ID or name, just export those properties directly.
+If you export an actual resource, it too is JSON serialized. This usually isn’t what you want, especially because some resources are large. If you only want to export the resource’s ID or name, export those properties directly.
 {{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
@@ -547,7 +547,7 @@ variables:
 
 ## Stack references {#stackreferences}
 
-Stack references allow you to access the outputs of one stack from another stack. Inter-stack dependencies allow one stack to reference the outputs of another stack.
+Stack references allow you to access the outputs of one stack from another stack, creating an inter-stack dependency between them.
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
@@ -618,10 +618,10 @@ variables:
 
 Stack names must be fully qualified, including the organization, project, and stack name components, in the format `<organization>/<project>/<stack>`. For individual accounts, use your account name for the organization component.
 
-To expand on this further, imagine you need to define a cluster's infrastructure in one project and consume it from another.
-Perhaps one project, `infra`, defines a Kubernetes cluster and another, `services`, deploys
-services into it. Let's further imagine you are doing this across three distinct environments: production, staging,
-and testing. In that case, you will have six distinct stacks that pair up in the following ways:
+For example, suppose you need to define a cluster's infrastructure in one project and consume it from another.
+One project, `infra`, defines a Kubernetes cluster and another, `services`, deploys
+services into it. If you do this across three distinct environments — production, staging,
+and testing — you have six distinct stacks that pair up in the following ways:
 
 * `mycompany/infra/production` provides the cluster used by `mycompany/services/production`
 * `mycompany/infra/staging` provides the cluster used by `mycompany/services/staging`
@@ -834,7 +834,7 @@ you access the outputs of that stack.
 In the above example, you construct a stack reference to a specific stack in this project which has the same name
 as your current stack (i.e. when deploying the "staging" stack of the above program, you reference the "staging" stack)
 from the infra project. Once you have that resource, you can read output variables from it.
-From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+From that point on, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
 ### Reading outputs from stack references
 
@@ -852,9 +852,7 @@ Stack references support the following methods for reading outputs from the refe
   use in your program's logic, or when you need to distinguish between a non-secret output
   (available as `.value`) and a secret output (available as `.secretValue`).
 
-The following example uses `requireOutput`, the recommended method for reading stack reference
-outputs. It reads a `vpcId` export and fails immediately at deployment time if that output is
-absent from the referenced stack:
+The following example uses `requireOutput` to read a `vpcId` export:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -929,10 +927,8 @@ variables:
 
 {{< /chooser >}}
 
-Use `getOutput` when the absence of an output is an expected, handled condition in your program.
-The following example reads a `privateIp` output and transforms it with `Output.apply` to build
-a derived value. If the output is missing, the undefined value propagates silently rather than
-surfacing as an error:
+The following example uses `getOutput` to read a `privateIp` output, then transforms it with
+`Output.apply` to build a derived value:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -1030,10 +1026,8 @@ exist in the referenced stack.
 
 {{< /chooser >}}
 
-The `getOutputDetails` method, described above, bypasses the `Output` wrapper so you can use
-the value directly in your program logic without calling `Output.apply()`.
-
-As an example, suppose your referenced stack exports a database hostname as a plain string:
+The following example uses `getOutputDetails`, where the referenced stack exports a database
+hostname as a plain string:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -1063,19 +1057,31 @@ for more information.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-{{% notes type="info" %}}
-This functionality is not currently supported in Python.
-Progress is tracked on [pulumi/pulumi#12172](https://github.com/pulumi/pulumi/issues/12172)
-if you need this functionality.
-{{% /notes %}}
+```python
+infra = StackReference("acmecorp/infra/prod")
+db_host_details = await infra.get_output_details("dbHost")
 
-<!-- ```python -->
-<!-- infra = StackReference("acmecorp/infra/prod") -->
-<!-- db_host_details = await infra.get_output_details("dbHost") -->
-<!-- # For non-secret outputs, the value is in .value. -->
-<!-- # For outputs marked as secret, use .secret_value instead. -->
-<!-- db_host = db_host_details.value -->
-<!-- ``` -->
+# For non-secret outputs, the value is in .value.
+# For outputs marked as secret in the referenced stack, use .secret_value instead.
+db_host = db_host_details.value
+```
+
+Note that your Pulumi program must register an async entrypoint with `pulumi.run`
+to be able to use the `await` operator. This requires version 3.254.0 or later of
+the Pulumi Python SDK.
+
+```python
+import pulumi
+
+async def main():
+    db_host_details = await infra.get_output_details("dbHost")
+    # ...
+
+pulumi.run(main)
+```
+
+See [async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint)
+for more information.
 
 {{% /choosable %}}
 {{% choosable language go %}}
@@ -1168,7 +1174,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 
 ## Delete a stack
 
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack removes all stack history from Pulumi Cloud and deletes the stack configuration file `Pulumi.<stack-name>.yaml`.
 
 To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
 
