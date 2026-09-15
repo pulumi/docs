@@ -70,7 +70,7 @@ These early experiences showed the value of Copilot. But they also revealed the 
 
 ## Skillful Slicing: Modular Mastery
 
-As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a Typescript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](/docs/iac/operations/stack-management/update-plans/)?").
+As Copilot grew, we broke it into smaller pieces we call skills. Each skill does one specific job. The Insights skill handles queries about resource usage and configuration ("How many S3 buckets do I have?"), the Cloud Skill interacts with the Pulumi Service API to manage infrastructure ("Show me my stacks."), the Code Skill generates Pulumi code snippets ("Write a TypeScript program..."), and the Docs Skill retrieves information from Pulumi documentation ("How do I use [update plans](/docs/iac/operations/stack-management/update-plans/)?").
 
 When you ask Copilot something, it figures out what you need and picks the right skill for the job – like a manager deciding which expert to send your question to. This [function-calling](https://platform.openai.com/docs/guides/function-calling) approach, orchestrated by a component we call the "outer loop," allows Copilot to access and process information beyond its internal knowledge base.
 
