@@ -2,11 +2,23 @@
     Larger pull-quote for breaking up long-form posts.
     Renders as a styled blockquote with bigger text and italic body.
     Optional `attribution` param appears below the quote.
+
+    Optional `variant` param:
+      (unset)    the default quote. Output is byte-identical to before this
+                 param existed, so existing consumers don't move.
+      statement  an emphasis statement in the author's own voice — set large and
+                 bold, no quotation styling, no attribution. Rendered as a <p>
+                 rather than a <blockquote>, because it isn't quoting anyone.
 */}}
 {{ $attribution := .Get "attribution" }}
-<blockquote class="pullquote">
+{{ $variant := .Get "variant" }}
+{{ if eq $variant "statement" }}
+<p class="pullquote pullquote-statement">{{- .Inner | markdownify -}}</p>
+{{ else }}
+<blockquote class="pullquote{{ with $variant }} pullquote-{{ . }}{{ end }}">
     <p>{{- .Inner | markdownify -}}</p>
     {{ with $attribution }}
         <cite>— {{ . }}</cite>
     {{ end }}
 </blockquote>
+{{ end }}
