@@ -66,7 +66,7 @@ Entry-point and specialized skills for writing and operating Pulumi infrastructu
 | provider-upgrade | Safely upgrade a Pulumi provider and reconcile the resulting diff |
 | pulumi-context-api | Answer relationship questions over the organization's infrastructure graph with the Context API: blast radius, dependencies, provider ownership, orphaned resources |
 
-pulumi-context-api needs an organization on the Enterprise edition.
+pulumi-context-api needs an organization on the Pro edition or above.
 
 ### Package Maintenance Plugin
 
