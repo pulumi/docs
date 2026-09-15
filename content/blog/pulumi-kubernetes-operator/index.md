@@ -35,7 +35,7 @@ success.
 Check out [how to deploy the operator][deploy-op] to a Kubernetes cluster using any of Pulumi's supported
 languages, or through YAML manifests and `kubectl`.
 
-You can also [get started][get-started] with Pulumi and create a new [managed Kubernetes cluster](https://www.pulumi.com/docs/tutorials/kubernetes/#clusters) on [Amazon EKS][aws-eks], [Google GKE][gcp-gke], or [Azure AKS][azure-aks] if you don't have an existing cluster.
+You can also [get started][get-started] with Pulumi and create a new [managed Kubernetes cluster](/registry/packages/kubernetes/how-to-guides/#clusters) on [Amazon EKS][aws-eks], [Google GKE][gcp-gke], or [Azure AKS][azure-aks] if you don't have an existing cluster.
 
 [aws-eks]: https://aws.amazon.com/eks/
 [gcp-gke]: https://cloud.google.com/kubernetes-engine/
@@ -663,7 +663,7 @@ You can help to shape this experience directly by
 providing feedback on [GitHub](https://github.com/pulumi/pulumi-kubernetes-operator/). We love to hear from our users!
 
 You can explore more content by checking out [PulumiTV on YouTube](https://www.youtube.com/pulumitv/), work through
-Kubernetes [tutorials](https://www.pulumi.com/docs/tutorials/kubernetes/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
+Kubernetes [tutorials](/registry/packages/kubernetes/how-to-guides/) to dive deeper, and join the [Community Slack](https://slack.pulumi.com/) to engage
 with users and the Pulumi team.
 
 [pulumi-k8s-op]: https://github.com/pulumi/pulumi-kubernetes-operator/
