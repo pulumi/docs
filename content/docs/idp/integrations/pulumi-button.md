@@ -32,7 +32,7 @@ Rather than right-clicking the button to recover its image URL, copy the Markdow
 [![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 ```
 
-Swap the `template` query parameter for the URL of your own project template to point the button at your repository instead. See [Creating a Pulumi Button](#creating-a-pulumi-button) below for the full Markdown and HTML forms, plus the SVG and PNG image URLs.
+Swap the `template` query parameter for the URL of your own project template to point the button at your repository instead. See [Creating a Pulumi Button](#creating-a-pulumi-button) for the full Markdown and HTML forms, plus the SVG and PNG image URLs.
 
 To create a _Deploy with Pulumi_ button:
 
@@ -89,14 +89,14 @@ Use the fully qualified image URL rather than a relative path — a relative pat
 
 ### Button Image
 
-The button reads correctly on both light and dark backgrounds, so there is a single design and no theme variant to choose. Pulumi provides it as SVG and PNG:
+The button works on light and dark backgrounds, so there's no theme variant to pick. Use either the SVG or the PNG:
 
 - `https://pulumi.com/images/deploy-with-pulumi/button.svg`
 - `https://pulumi.com/images/deploy-with-pulumi/button.png`
 
-Prefer the SVG — it stays sharp on high-density displays.
+The SVG is the better choice in most cases, since it stays sharp on high-density displays.
 
-The button was previously published under `light.svg`, `light.png`, `dark.svg`, and `dark.png`. Those four URLs still work and now serve this same image, so an existing snippet keeps rendering the current button; use `button.svg` for anything new.
+Older snippets may point at `light.svg`, `light.png`, `dark.svg`, or `dark.png`. Those URLs still work, and they now serve this same button, so there's nothing you need to change.
 
 ## Custom Git Branches
 
