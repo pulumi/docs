@@ -36,7 +36,7 @@ sections:
     cards:
       - icon: code
         title: Faster provisioning
-        description: Automate complex multi-cloud deployments in minutes. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
+        description: Automate complex multi-cloud deployments. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
       - icon: shield-check
         title: Fewer policy violations
         description: Neo enforces your governance policies automatically. RBAC, compliance rules, and security standards built into every action.
