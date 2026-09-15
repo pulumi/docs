@@ -48,6 +48,11 @@ BUCKET_LABEL = {
     "low": "⚠️ Low-confidence", "style": "✏️ Style", "pre-existing": "💡 Pre-existing", "preexisting": "💡 Pre-existing",
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
+# Chips that change what you'd click stay visible; the rest fold behind "why".
+PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
+                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over")
+ACTION_CLASS = {"stamp": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "close": "stop",
+                "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 
 
@@ -76,15 +81,25 @@ def deep_link(queue: dict, pr: dict, item: dict) -> str | None:
     return files_url(queue, pr["number"]) + _compose.diff_anchor(file, item.get("anchor") or item.get("ref") or "")
 
 
+def _chip(r: str) -> str:
+    code = r.split(":", 1)[0]
+    cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
+    return f'<span class="{cls}" title="{esc(r)}">{esc(r if len(r) <= 48 else r[:45] + "…")}</span>'
+
+
 def chips(reasons: list[str]) -> str:
-    out = []
+    """Two tiers: actionable chips inline, informational ones behind a
+    "why" fold so a row reads as a decision, not a wall of tags."""
+    primary, info = [], []
     for r in reasons:
         if r.startswith(HIDDEN_REASON_PREFIXES):
             continue
         code = r.split(":", 1)[0]
-        cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
-        out.append(f'<span class="{cls}" title="{esc(r)}">{esc(r if len(r) <= 48 else r[:45] + "…")}</span>')
-    return "".join(out)
+        (primary if code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r) else info).append(r)
+    out = "".join(_chip(r) for r in primary)
+    if info:
+        out += f'<details class="why"><summary>why · {len(info)}</summary>' + "".join(_chip(r) for r in info) + "</details>"
+    return out
 
 
 def owner_label(pr: dict) -> str:
@@ -126,7 +141,7 @@ def meta_line(pr: dict) -> str:
     return "".join(f"<span>{esc(p)}</span>" for p in parts)
 
 
-def diffq(j: dict) -> str:
+def diffq(j: dict, *, open_: bool = False) -> str:
     minus = j.get("quote_minus") or []
     plus = j.get("quote_plus") or []
     if isinstance(minus, str):
@@ -136,7 +151,12 @@ def diffq(j: dict) -> str:
     if not minus and not plus:
         return ""
     lines = [f'<span class="del">- {esc(l)}</span>' for l in minus] + [f'<span class="add">+ {esc(l)}</span>' for l in plus]
-    return '<div class="diffq">' + "\n".join(lines) + "</div>"
+    return (f'<details class="quote"{" open" if open_ else ""}><summary>the lines</summary><div class="diffq">'
+            + "\n".join(lines) + "</div></details>")
+
+
+DISPOSITION_BADGE = {"fixed": ("go", "already fixed"), "refuted": ("go", "refute"), "accepted": ("go", "accept"),
+                     "not-applicable": ("go", "n/a"), "deferred": ("hold", "send back")}
 
 
 def disposition_label(d: str | None) -> str:
@@ -152,16 +172,18 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
     if not js:
         return pending_judgment(queue, pr)
     out = []
+    single = len(js) == 1
     for j in js:
         link = j.get("deep_link")
         where = f'<a href="{esc(link)}">{esc(j.get("file") or "")} L{esc(j.get("line") or "?")} ↗</a>' if link else '<a href="' + esc(pr_url(queue, pr["number"])) + '">open the PR ↗</a>'
+        cls, label = DISPOSITION_BADGE.get(j.get("disposition") or "", ("dim", j.get("disposition") or "?"))
         out.append(
             '<div class="jbox">'
-            f'<div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
-            + diffq(j)
-            + f'<div class="jmeta">{where} · {disposition_label(j.get("disposition"))}'
-            + (f' — {esc(j["note"])}' if j.get("note") else "")
-            + "</div></div>"
+            f'<div class="qrow"><div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
+            f'<span class="v v-{cls}">{esc(label)}</span></div>'
+            + (f'<div class="jnote">{esc(j["note"])}</div>' if j.get("note") else "")
+            + diffq(j, open_=single)
+            + f'<div class="jmeta">{where}</div></div>'
         )
     return "".join(out)
 
@@ -189,14 +211,23 @@ def pending_judgment(queue: dict, pr: dict) -> str:
 
 
 def action_bar(pr: dict, queue: dict) -> str:
-    btns = []
-    for a in pr.get("actions") or []:
-        primary = " p" if a is (pr.get("actions") or [None])[0] else ""
+    actions = list(pr.get("actions") or [])
+    # The primary is what the judge recommended when it recommended an
+    # action, else the row's first action. It renders last, right-aligned,
+    # colored by what it does; everything else stays grey on the left.
+    rec = pr.get("recommended")
+    primary = next((a for a in actions if a["id"] == rec), None) or (actions[0] if actions else None)
+    btns = [f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}">open PR</a>']
+    for a in actions:
+        if a is primary:
+            continue
+        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" aria-pressed="false">{esc(a["label"])}</button>')
+    if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges the whole stamp set unless the approver deselects one.
-        selected = " sel" if (a["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
-        btns.append(f'<button class="btn{primary}{selected}" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" aria-pressed="{"true" if selected else "false"}">{esc(a["label"])}</button>')
-    btns.append(f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}">open PR</a>')
+        selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
+        btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
+                    f'data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
 
 
@@ -331,9 +362,25 @@ def clusters_html(queue: dict) -> str:
     for d in du:
         cards.append(f'<div class="card mid"><h4>Duplicate? #{d["newer"]} vs #{d["older"]}</h4>'
                      f'<p>Titles {int(d["title_ratio"] * 100)}% alike, opened {esc(d["minutes_apart"])} min apart, sharing {esc(", ".join(d["shared_files"][:3]))}.</p></div>')
-    head, rest = cards[:6], cards[6:] + demoted
-    more = f'<details><summary>{len(rest)} more (incl. clusters that are mostly waiting on others)</summary><div class="two">{"".join(rest)}</div></details>' if rest else ""
-    return '<section class="clusters"><h2>Collisions first</h2><div class="two">' + "".join(head) + "</div>" + more + "</section>"
+    all_cards = cards + demoted
+    return (f'<section class="clusters"><details><summary><h2>Collisions · {len(cl)} cluster{"s" if len(cl) != 1 else ""}'
+            f'{" · " + str(len(by_path)) + " directional" if by_path else ""}</h2><span class="note">the files, the pairs, the merge orders</span></summary>'
+            '<div class="two">' + "".join(all_cards) + "</div></details></section>")
+
+
+def do_next_html(queue: dict) -> str:
+    """The opening: one sentence and one button per move, most leverage
+    first. Nothing else on the page competes with it for the first look."""
+    cards = queue.get("do_next") or []
+    if not cards:
+        return ""
+    out = []
+    for i, d in enumerate(cards, 1):
+        cls = ACTION_CLASS.get(d["kind"], "") or ("hold" if d["kind"] == "consolidate" else "route" if d["kind"] == "chain" else "")
+        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}" aria-pressed="false">{esc(d["label"])}</button>'
+               if d.get("cmd") else "")
+        out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span><span class="say">{esc(d["say"])}</span>{btn}</li>')
+    return f'<section class="donext"><div class="sec-head"><h2>Do next</h2><span class="count">{len(cards)}</span></div><ol>' + "".join(out) + "</ol></section>"
 
 
 def filter_bar(queue: dict) -> str:
@@ -347,11 +394,12 @@ def filter_bar(queue: dict) -> str:
         return f'<button class="fchip{" on" if on else ""}" data-filter="{esc(kind)}" data-value="{esc(val)}">{esc(label or val)}</button>'
 
     parts = ['<div class="mock-bar">']
+    parts += [chip("view", "judge", "needs a decision", on=True), chip("view", "route", "route", on=True),
+              chip("view", "stamp", "stamp set", on=False), chip("view", "blocked", "blocked", on=False)]
+    parts.append('<span class="sep"></span>')
     parts += [chip("owner", o, f"owner: {o}") for o in owners]
     parts.append('<span class="sep"></span>')
     parts += [chip("domain", d) for d in domains]
-    parts.append('<span class="sep"></span>')
-    parts += [chip("verdict", v, f"{v} {counts.get(v, 0)}") for v in VERDICT_ORDER]
     parts.append('<span class="sep"></span>')
     parts += [chip("author", a, f"author: {a}") for a in authors]
     parts.append('<span class="sep"></span>')
@@ -434,10 +482,10 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
         h1="PR review queue",
         dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub."),
-        tally=f'<div class="tally">{tally}</div>',
+        tally=f'<div class="tally">{tally}</div><div class="progress" id="progress"></div>' + do_next_html(queue),
         filters=filter_bar({**queue, "prs": prs}),
-        clusters=clusters_html(queue),
-        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + ("" if include_handed_off else waiting_html(all_prs)),
+        clusters="",
+        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue) + ("" if include_handed_off else waiting_html(all_prs)),
         cmd=cmd_footer(),
         payload=payload,
         script=SCRIPT,
@@ -560,6 +608,24 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
 .chip.theirs{opacity:.55;border-style:dashed}
+.chip.r-cluster{border-color:var(--route);color:var(--route)}
+details.why{display:inline-block;margin-left:4px}details.why>summary{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);cursor:pointer;list-style:none;border:1px dashed var(--line-2);border-radius:2px;padding:1px 6px}
+details.why[open]>summary{margin-bottom:4px}details.why .chip{opacity:.8}
+.qrow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.jnote{font-size:12.5px;color:var(--ink-2);margin:2px 0 4px}
+details.quote>summary{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);cursor:pointer}
+.acts{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
+.btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
+.progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
+.donext{margin:6px 0 18px;background:var(--surface);border:1px solid var(--line-2);border-radius:4px;padding:12px 16px;box-shadow:var(--shadow)}
+.donext ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.donext .next{display:flex;gap:12px;align-items:center;padding:8px 10px;border-left:3px solid var(--line-2);background:var(--surface-2);border-radius:3px}
+.donext .next.hold{border-left-color:var(--hold)}.donext .next.route{border-left-color:var(--route)}.donext .next.go{border-left-color:var(--go)}
+.donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
+.donext .say{flex:1;font-size:14px;color:var(--ink)}
+.donext .btn.p{margin-left:auto;white-space:nowrap}
+.clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
 .chip.r-handed-off{border-color:var(--ink-3);color:var(--ink-3)}
 .t-dim b{color:var(--ink-3)}
 .waiting{margin-top:30px;border-top:1px solid var(--line-2);padding-top:14px}
@@ -580,7 +646,6 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .jmeta{margin-top:5px;color:var(--ink-2)}
 .diffq{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 9px;margin:6px 0;overflow-x:auto;white-space:pre}
 .diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}
-.acts{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}
 .btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
@@ -634,7 +699,7 @@ SCRIPT = r"""
     var t = cmdEl.textContent.replace(/^\$ /, '');
     if (navigator.clipboard) navigator.clipboard.writeText(t);
   });
-  var filters = { owner: {}, domain: {}, verdict: {}, author: {}, since: {} };
+  var filters = { owner: {}, domain: {}, verdict: {}, author: {}, since: {}, view: {} };
   document.querySelectorAll('.fchip').forEach(function(f){
     filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on');
     f.addEventListener('click', function(){ f.classList.toggle('on'); filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on'); apply(); });
@@ -651,13 +716,22 @@ SCRIPT = r"""
       if (anyOn('owner') && !filters.owner[r.dataset.owner]) ok = false;
       if (anyOn('domain')) { var ds = r.dataset.domains.split(' '); if (!ds.some(function(d){ return filters.domain[d]; })) ok = false; }
       if (anyOn('verdict') && !filters.verdict[r.dataset.verdict]) ok = false;
+      if (anyOn('view') && !filters.view[r.dataset.verdict]) ok = false;
       if (anyOn('author') && !filters.author[r.dataset.author]) ok = false;
       if (cut && r.dataset.created < cut) ok = false;
       r.hidden = !ok;
     });
     document.querySelectorAll('.grp').forEach(function(g){ g.hidden = !g.querySelector('.mrow:not([hidden])'); });
   }
-  compose();
+  function progress(){
+    var el = document.getElementById('progress'); if (!el) return;
+    var rows = document.querySelectorAll('.mrow[data-verdict="judge"], .mrow[data-verdict="route"]');
+    var done = 0; rows.forEach(function(r){ if (r.querySelector('button.btn.sel')) done++; });
+    el.textContent = rows.length ? done + ' of ' + rows.length + ' decisions made' : '';
+  }
+  document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){ b.addEventListener('click', progress); });
+  document.getElementById('clear').addEventListener('click', progress);
+  apply(); progress(); compose();
 })();
 """
 

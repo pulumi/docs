@@ -21,6 +21,11 @@ comment templates and attribution footer):
                      judgments (one line-anchored item each, no filler) and
                      apply `needs-author-response`. The author-facing verb the
                      old menus had; the approver's way to say "your turn".
+  --chain C1         start a collision cluster's chain: stamp the first PR in
+                     its merge order (--force when it is a judge row), then
+                     merge base into the next one so the following run finds
+                     it green instead of dirty. One link per run; each link
+                     waits on CI.
   --unblock N        merge the base branch into the head as a merge commit
                      (never rebase, never force-push). Only conflict-free
                      merges are pushed; anything else is aborted and reported.
@@ -199,6 +204,24 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         if not (pr.get("judgments") or open_items(pr)):
             raise ActError(f"--request-changes {n}: nothing to send back — no judgments and no open findings on the row")
         steps.append(step("request-changes", n, note=args.reason or ""))
+    for cid in args.chain or []:
+        c = next((c for c in queue.get("clusters") or [] if c["id"] == cid), None)
+        if not c:
+            raise ActError(f"--chain {cid}: no such cluster in the queue")
+        r = c.get("recommendation") or {}
+        if r.get("kind") != "chain":
+            raise ActError(f"--chain {cid}: the cluster's recommendation is {r.get('kind') or 'none'}, not chain ({r.get('say', '')})")
+        first, nxt = r["first"], r.get("next")
+        pr = pr_of(first)
+        merge = not args.no_merge and (pr.get("author", {}).get("type") == "bot" or args.merge_humans)
+        st = step("stamp", first, merge=merge, note=args.approve_note or "", chain=cid)
+        st.note = "" if merge else "approve only (human author; --merge-humans to merge)"
+        steps.append(st)
+        if nxt and merge:
+            ok, why = push_allowed(pr_of(nxt))
+            if not ok:
+                raise ActError(f"--chain {cid}: next link #{nxt} can't be pushed to: {why}")
+            steps.append(step("unblock", nxt, chain=cid))
     for n in args.unblock or []:
         pr = pr_of(n)
         ok, why = push_allowed(pr)
@@ -254,7 +277,8 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
             for ln in request_changes_body(by.get(s.pr) or {}, s.args.get("note", "")).splitlines():
                 lines.append(f"       {ln}")
         elif s.kind == "unblock":
-            lines.append(f"     git: fetch, checkout {s.branch}, merge origin/master --no-ff, push (abort on conflict)")
+            lines.append(f"     git: fetch, checkout {s.branch}, merge origin/master --no-ff, push (abort on conflict)"
+                         + (f"  [chain {s.args['chain']}: next link]" if s.args.get("chain") else ""))
         elif s.kind == "fix":
             lines.append("     " + ", ".join(k for k in ("description", "suggestions") if s.args.get(k)) + " → commit + push")
         elif s.kind == "close":
@@ -588,6 +612,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--stamp", help="comma list of PR numbers")
     ap.add_argument("--route", action="append", help="N:@user or N:@org/team (repeatable; N alone uses the row's route action)")
     ap.add_argument("--request-changes", type=int, action="append", help="send the row's judgments back to the author as a changes-requested review")
+    ap.add_argument("--chain", action="append", metavar="C1", help="stamp a cluster's first PR, then unblock the next")
     ap.add_argument("--unblock", type=int, action="append")
     ap.add_argument("--fix", type=int, action="append")
     ap.add_argument("--close", type=int)

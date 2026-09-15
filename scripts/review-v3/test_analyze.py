@@ -287,9 +287,12 @@ def test_collision_overlap_vs_same_file_and_merge_order():
     assert cl["prs"] == [1, 2, 3] and cl["kind"] == "overlap"
     kinds = {(p["a"], p["b"]): p["kind"] for p in cl["pairs"]}
     assert kinds[(1, 2)] == "overlap" and kinds[(1, 3)] == "same-file" and kinds[(2, 3)] == "same-file"
-    assert row(q, 1)["verdict"] == "judge" and "collision:#2" in row(q, 1)["reasons"]
-    assert row(q, 3)["verdict"] == "stamp" and "collision:#1:same-file" in row(q, 3)["reasons"]
+    assert row(q, 1)["verdict"] == "judge" and "cluster:C1:overlap:1/3" in row(q, 1)["reasons"]
+    assert row(q, 2)["verdict"] == "judge" and "cluster:C1:overlap:2/3" in row(q, 2)["reasons"]
+    assert row(q, 3)["verdict"] == "stamp" and "cluster:C1:same-file" in row(q, 3)["reasons"]
     assert row(q, 4)["verdict"] == "stamp" and cl["merge_order"] == [1, 2, 3]
+    assert cl["recommendation"]["kind"] == "chain" and cl["recommendation"]["first"] == 1 and cl["recommendation"]["next"] == 2
+    assert any(d["kind"] == "chain" and d["cmd"] == "--chain C1" for d in q["do_next"])
 
 
 def test_directional_conflict_against_aliases_block():
@@ -332,11 +335,16 @@ def test_desc_findings():
     assert "desc:empty" in row(run([stampable(body="### Proposed changes\n\n<!-- template -->\n")]), 100)["reasons"]
 
 
-def test_cross_codes_are_capped():
-    specs = [stampable(i, files=[_file("content/docs/a.md", [f"x{i}"], ["o"], old_start=10)]) for i in range(1, 10)]
-    p = row(run(specs), 1)
-    codes = [r for r in p["reasons"] if r.startswith("collision:")]
-    assert len(codes) == analyze.CROSS_CODE_CAP + 1 and codes[-1] == f"collision:+{8 - analyze.CROSS_CODE_CAP}-more"
+def test_one_cluster_chip_per_row_and_consolidate_for_bot_sweeps():
+    specs = [stampable(i, title=f"Sweep {i}", files=[_file("content/docs/a.md", [f"x{i}"], ["o"], old_start=10)]) for i in range(1, 10)]
+    q = run(specs)
+    p = row(q, 1)
+    codes = [r for r in p["reasons"] if r.startswith(("cluster:", "collision:"))]
+    assert codes == ["cluster:C1:overlap:1/9"]
+    c = q["clusters"][0]
+    assert c["recommendation"]["kind"] == "consolidate" and c["recommendation"]["on"] == 9
+    assert c["recommendation"]["cmd"].startswith("--request-changes 9 --reason ")
+    assert q["do_next"][0]["kind"] == "consolidate" and q["do_next"][0]["label"] == "send back"
 
 
 # ---- judgments / filters -------------------------------------------------------
@@ -439,12 +447,13 @@ def test_collision_with_a_handed_off_pr_is_advisory():
     theirs = stampable(2, title="Chris has it", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
     q = run([mine, theirs])
     p = row(q, 1)
-    assert p["verdict"] == "stamp" and "collision:#2:theirs" in p["reasons"]
+    assert p["verdict"] == "stamp" and "cluster:C1:theirs" in p["reasons"]
     c = q["clusters"][0]
     assert c["handed_off"] == [2] and c["mine"] == [1] and c["merge_order"] == [1]
+    assert c["recommendation"]["kind"] == "theirs"
     # the same pair with nobody requested still gates
     q = run([mine, stampable(2, title="Nobody", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])])
-    assert row(q, 1)["verdict"] == "judge" and "collision:#2" in row(q, 1)["reasons"]
+    assert row(q, 1)["verdict"] == "judge" and "cluster:C1:overlap:1/2" in row(q, 1)["reasons"]
 
 
 def test_directional_conflict_with_a_handed_off_pr_is_theirs():
@@ -459,3 +468,15 @@ def test_directional_conflict_with_a_handed_off_pr_is_theirs():
         q = run([adds, removes], aliases=None, repo_root=root)
     assert q["directional"][0]["theirs"] is True
     assert row(q, 1)["verdict"] == "stamp" and "directional:#2:/docs/old/:theirs" in row(q, 1)["reasons"]
+
+
+def test_do_next_lists_send_back_route_and_stamp():
+    q = run([stampable(1), stampable(2, title="Blog", labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["x"])]),
+             stampable(3, title="Judge me", comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)], files=[_file("content/docs/c.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    analyze.merge_judgments(q, {3: {"recommended": "request-changes"}})
+    q["do_next"] = analyze.do_next(q["prs"], q["clusters"], q["directional"])
+    kinds = [d["kind"] for d in q["do_next"]]
+    assert kinds == ["request-changes", "route", "stamp"]
+    assert q["do_next"][0]["cmd"] == "--request-changes 3" and q["do_next"][2]["cmd"] == "--stamp 1"
+    assert q["do_next"][1]["cmd"].startswith("--route 2:@")
