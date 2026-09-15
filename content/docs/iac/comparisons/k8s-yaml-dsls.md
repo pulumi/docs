@@ -130,7 +130,7 @@ Yes. Unlike raw manifests, which describe Kubernetes objects only, a single Pulu
 
 ### Is Pulumi free like Kubernetes manifests?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use, as are Kubernetes and `kubectl`. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use, as are Kubernetes and `kubectl`. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management.
 
 ### Can Pulumi and raw YAML or GitOps coexist during migration?
 

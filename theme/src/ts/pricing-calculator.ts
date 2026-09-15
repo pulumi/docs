@@ -86,7 +86,8 @@ function posFor(value: number, max: number): number {
 const usd = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    maximumFractionDigits: 0,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
 });
 
 const usdRate = new Intl.NumberFormat("en-US", {
