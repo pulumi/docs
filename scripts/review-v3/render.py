@@ -490,6 +490,8 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .mrow{display:grid;grid-template-columns:22px 74px 1fr;gap:12px;padding:12px 0 12px 10px;border-bottom:1px solid var(--line);border-left:3px solid transparent}
 .mrow.go{border-left-color:var(--go)}.mrow.hold{border-left-color:var(--hold)}.mrow.stop{border-left-color:var(--stop)}.mrow.route{border-left-color:var(--route)}
 .mrow[hidden]{display:none}
+.mrow>div{min-width:0}
+.jmeta,.sum,.card p,.jbox li,.detail td{overflow-wrap:anywhere}
 .cb{width:16px;height:16px;margin-top:4px;accent-color:var(--go)}
 .pr{font-size:12px;font-weight:600;background:var(--surface-2);border:1px solid var(--line-2);border-radius:3px;padding:2px 7px;color:var(--ink);text-decoration:none;white-space:nowrap;align-self:start;justify-self:start}
 .mrow h4{font-size:14.5px;font-weight:600;margin:0 0 3px;line-height:1.35}
