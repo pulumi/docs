@@ -1057,25 +1057,21 @@ for more information.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-```python
-infra = StackReference("acmecorp/infra/prod")
-db_host_details = await infra.get_output_details("dbHost")
-
-# For non-secret outputs, the value is in .value.
-# For outputs marked as secret in the referenced stack, use .secret_value instead.
-db_host = db_host_details.value
-```
-
-Note that your Pulumi program must register an async entrypoint with `pulumi.run`
-to be able to use the `await` operator. This requires version 3.254.0 or later of
-the Pulumi Python SDK.
+Because `get_output_details` is awaited, your Pulumi program must register an async
+entrypoint with `pulumi.run`. This requires version 3.254.0 or later of the Pulumi
+Python SDK.
 
 ```python
 import pulumi
+from pulumi import StackReference
 
 async def main():
+    infra = StackReference("acmecorp/infra/prod")
     db_host_details = await infra.get_output_details("dbHost")
-    # ...
+
+    # For non-secret outputs, the value is in .value.
+    # For outputs marked as secret in the referenced stack, use .secret_value instead.
+    db_host = db_host_details.value
 
 pulumi.run(main)
 ```
