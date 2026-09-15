@@ -11,7 +11,7 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 
 | Verdict | Primary | Also offered |
 |---|---|---|
-| `stamp` | `--stamp N` (approve + squash-merge; checkbox pre-checked) | `open PR` |
+| `stamp` | `--stamp N` (approve + squash-merge; the button starts selected) | `open PR` |
 | `judge` | `--stamp N --force` (approve as-is) | `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
 | `route` | `--route N:@owner` (request review + post the defects) | `open PR` |
 | `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--close N --superseded-by M` (duplicate) | `open PR` |

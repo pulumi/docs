@@ -79,7 +79,7 @@ Per PR: `domains` (`classify_path` via `routing.resolve_lanes`), the owning role
 
 | Verdict | Meaning | Board |
 |---|---|---|
-| `stamp` | Every gate passes; approving asserts nothing beyond what's machine-verified. | Checkbox on. One command approves and squash-merges the set. |
+| `stamp` | Every gate passes; approving asserts nothing beyond what's machine-verified. | "Approve & merge" starts selected. One command approves and squash-merges the set. |
 | `judge` | Decidable from the board; something needs a human's call. | Judgment box: the lines, the question, a deep link, a recommended disposition. |
 | `route` | Not this approver's lane per the routing matrix. | Batch "request review from owner"; any defect found rides along. |
 | `blocked` | Can't merge regardless: conflict, red CI, stale review, changes requested. | Names the blocker and offers the mechanical unblock. |
@@ -124,7 +124,7 @@ python3 scripts/review-v3/render.py --in .pr-review-queue.json --detail N --out 
 python3 scripts/review-v3/render.py --in .pr-review-queue.json --terminal [--pr N]
 ```
 
-Publish with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). Pass `--artifact` when rendering for it: that form omits the document skeleton the Artifact tool adds itself. The default form is a standalone file for a browser or `screenshot.mjs`. The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every checkbox and button composes the `/pr-review --act …` command shown at the bottom. The page never calls GitHub; the person copies the command, or asks you to run it.
+Publish with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). Pass `--artifact` when rendering for it: that form omits the document skeleton the Artifact tool adds itself. The default form is a standalone file for a browser or `screenshot.mjs`. The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every action button is a toggle that composes the `/pr-review --act …` command shown at the bottom (a stamp row's "approve & merge" starts selected, so the default command merges the whole stamp set; the composer never repeats a fragment). The page never calls GitHub; the person copies the command, or asks you to run it.
 
 Both renderings hide handed-off rows behind the "Waiting on others" list unless `--include-handed-off`. `--terminal` prints the table and, in this mode only, walk each judge row with AskUserQuestion (options: approve as-is / route / refresh / skip), then compose the same act command.
 

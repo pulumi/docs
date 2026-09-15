@@ -7,9 +7,10 @@ terminal table — three views of the same rows.
     render.py --in .pr-review-queue.json --terminal [--pr 21598]
 
 The board groups rows owner → domain, pins collision clusters at the top,
-carries filter chips (owner / domain / verdict / author / since), and lets
-checkboxes and action buttons compose one `/pr-review --act …` command at
-the bottom. The page never calls GitHub: everything it shows is inlined
+carries filter chips (owner / domain / verdict / author / since), and its
+action buttons are toggles that compose one `/pr-review --act …` command
+at the bottom (a stamp row's "approve & merge" starts selected; no
+fragment is ever repeated). The page never calls GitHub: everything it shows is inlined
 from queue.json (a `<script type="application/json">` block, the
 render-evidence-html.py pattern), and the only thing it produces is a
 command for the person to run.
@@ -191,7 +192,10 @@ def action_bar(pr: dict, queue: dict) -> str:
     btns = []
     for a in pr.get("actions") or []:
         primary = " p" if a is (pr.get("actions") or [None])[0] else ""
-        btns.append(f'<button class="btn{primary}" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}">{esc(a["label"])}</button>')
+        # A stamp row starts with its stamp selected: the composed command
+        # merges the whole stamp set unless the approver deselects one.
+        selected = " sel" if (a["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
+        btns.append(f'<button class="btn{primary}{selected}" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" aria-pressed="{"true" if selected else "false"}">{esc(a["label"])}</button>')
     btns.append(f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}">open PR</a>')
     return '<div class="acts">' + "".join(btns) + "</div>"
 
@@ -199,16 +203,12 @@ def action_bar(pr: dict, queue: dict) -> str:
 def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
     n = pr["number"]
     v = pr.get("verdict") or "judge"
-    checked = " checked" if v == "stamp" else ""
-    disabled = "" if any(a["id"] == "stamp" for a in pr.get("actions") or []) else " disabled"
-    stamp_cmd = next((a["cmd"] for a in pr.get("actions") or [] if a["id"] == "stamp"), f"--stamp {n}")
     author = (pr.get("author") or {}).get("norm") or ""
     created = (pr.get("created_at") or "")[:10]
     body = [
         f'<div class="mrow {VERDICT_CLASS.get(v, "hold")}" data-pr="{n}" data-verdict="{esc(v)}" data-owner="{esc(owner_label(pr))}" '
         f'data-domains="{esc(" ".join(pr.get("domains") or []))}" data-author="{esc(author)}" data-created="{esc(created)}" '
         f'data-mine="{"1" if pr.get("is_mine", True) else "0"}">',
-        f'<input type="checkbox" class="cb" data-cmd="{esc(stamp_cmd)}" data-pr="{n}"{checked}{disabled} aria-label="select #{n}">',
         f'<a class="pr" href="{esc(pr_url(queue, n))}">#{n}</a>',
         "<div>",
         f'<h4>{esc(pr.get("title"))} {verdict_chip(pr)}</h4>',
@@ -433,7 +433,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         style=STYLE,
         eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows are pre-checked; every button below only adds to the command at the bottom — the page never talks to GitHub."),
+        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub."),
         tally=f'<div class="tally">{tally}</div>',
         filters=filter_bar({**queue, "prs": prs}),
         clusters=clusters_html(queue),
@@ -546,12 +546,11 @@ h1{font-size:clamp(26px,4.6vw,40px);font-weight:800;letter-spacing:-.022em;line-
 h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .dlabel{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:2px 9px;border-radius:3px}
 .count{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);border:1px solid var(--line-2);border-radius:99px;padding:1px 9px}
-.mrow{display:grid;grid-template-columns:22px 74px 1fr;gap:12px;padding:12px 0 12px 10px;border-bottom:1px solid var(--line);border-left:3px solid transparent}
+.mrow{display:grid;grid-template-columns:74px 1fr;gap:12px;padding:12px 0 12px 10px;border-bottom:1px solid var(--line);border-left:3px solid transparent}
 .mrow.go{border-left-color:var(--go)}.mrow.hold{border-left-color:var(--hold)}.mrow.stop{border-left-color:var(--stop)}.mrow.route{border-left-color:var(--route)}
 .mrow[hidden]{display:none}
 .mrow>div{min-width:0}
 .jmeta,.sum,.card p,.jbox li,.detail td{overflow-wrap:anywhere}
-.cb{width:16px;height:16px;margin-top:4px;accent-color:var(--go)}
 .pr{font-size:12px;font-weight:600;background:var(--surface-2);border:1px solid var(--line-2);border-radius:3px;padding:2px 7px;color:var(--ink);text-decoration:none;white-space:nowrap;align-self:start;justify-self:start}
 .mrow h4{font-size:14.5px;font-weight:600;margin:0 0 3px;line-height:1.35}
 .meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}
@@ -583,7 +582,7 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}
 .acts{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}
-.btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go)}
+.btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:12px 14px}
 .card h4{margin:0 0 6px;font-size:14px}.card p{font-size:13.5px;color:var(--ink-2);margin:0 0 6px}.card ul{margin:0;padding-left:18px;font-size:13px;color:var(--ink-2)}
@@ -601,37 +600,35 @@ td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:
 .wrap{padding-inline:16px}
 .cmd{flex:1;background:var(--ink);color:var(--ground);border-radius:3px;padding:8px 12px;font-size:12.5px;overflow-x:auto;white-space:nowrap}
 .empty{color:var(--ink-3)}
-@media (max-width:600px){.mrow{grid-template-columns:22px 1fr}.mrow .pr{grid-column:2}.mrow>div:last-child{grid-column:1/-1}}
+@media (max-width:600px){.mrow{grid-template-columns:1fr}.mrow>div:last-child{grid-column:1/-1}}
 """
 
 SCRIPT = r"""
 (function(){
-  var sel = {};   // key -> cmd (checkbox: 'cb:'+pr, button: 'btn:'+cmd)
+  var sel = {};   // 'pr:cmd' -> cmd; one entry per selected button
   var cmdEl = document.getElementById('cmd');
   function compose(){
-    var parts = [];
-    Object.keys(sel).sort().forEach(function(k){ if (sel[k]) parts.push(sel[k]); });
-    var stamps = [], others = [];
-    parts.forEach(function(p){ var m = p.match(/^--stamp (\d+)$/); if (m) stamps.push(m[1]); else others.push(p); });
+    var seen = {}, stamps = [], others = [];
+    Object.keys(sel).sort().forEach(function(k){
+      var c = sel[k]; if (!c || seen[c]) return; seen[c] = true;   // never the same fragment twice
+      var m = c.match(/^--stamp (\d+)$/); if (m) stamps.push(m[1]); else others.push(c);
+    });
     var out = '$ /pr-review --act';
     if (stamps.length) out += ' --stamp ' + stamps.join(',');
     if (others.length) out += ' ' + others.join(' ');
     cmdEl.textContent = out;
   }
-  document.querySelectorAll('input.cb').forEach(function(cb){
-    if (cb.checked) sel['cb:' + cb.dataset.pr] = cb.dataset.cmd;
-    cb.addEventListener('change', function(){ sel['cb:' + cb.dataset.pr] = cb.checked ? cb.dataset.cmd : ''; compose(); });
-  });
+  function setSel(b, on){
+    var k = b.dataset.pr + ':' + b.dataset.cmd;
+    if (on) { sel[k] = b.dataset.cmd; b.classList.add('sel'); } else { delete sel[k]; b.classList.remove('sel'); }
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
-    b.addEventListener('click', function(){
-      var k = 'btn:' + b.dataset.pr + ':' + b.dataset.cmd;
-      if (sel[k]) { delete sel[k]; b.classList.remove('sel'); } else { sel[k] = b.dataset.cmd; b.classList.add('sel'); }
-      compose();
-    });
+    if (b.classList.contains('sel')) setSel(b, true);
+    b.addEventListener('click', function(){ setSel(b, !b.classList.contains('sel')); compose(); });
   });
   document.getElementById('clear').addEventListener('click', function(){
-    sel = {}; document.querySelectorAll('input.cb').forEach(function(cb){ cb.checked = false; });
-    document.querySelectorAll('button.btn.sel').forEach(function(b){ b.classList.remove('sel'); }); compose();
+    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose();
   });
   document.getElementById('copy').addEventListener('click', function(){
     var t = cmdEl.textContent.replace(/^\$ /, '');

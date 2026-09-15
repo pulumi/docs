@@ -55,17 +55,19 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
     assert 'data-verdict="judge"' in html and 'data-verdict="route"' in html and 'data-verdict="blocked"' in html
     assert 'class="chip r-collision"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@TODO-named-fallback"' in html
-    assert 'data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is
+    assert 'class="btn p" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html
 
 
-def test_stamp_rows_are_prechecked_and_command_footer_exists():
+def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)
-    assert 'data-cmd="--stamp 7" data-pr="7" checked' in html
+    assert 'class="btn p sel" data-cmd="--stamp 7" data-pr="7" aria-pressed="true"' in html
+    assert 'type="checkbox"' not in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
+    assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments
 
 
 def test_fixed_disposition_reads_as_already_done():
