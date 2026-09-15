@@ -14,7 +14,7 @@ tags:
 category: product
 ---
 
-[Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.
+[Pulumi Insights](/docs/discovery-governance/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.
 
 <!--more-->
 
@@ -22,9 +22,9 @@ category: product
 
 Insights provides two complementary capabilities that together form a governance lifecycle for your cloud infrastructure.
 
-**Discovery** scans cloud accounts across [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), [GCP](https://cloud.google.com/), and more to catalog every resource regardless of how it was provisioned: Pulumi, [Terraform](https://www.terraform.io/), [CloudFormation](https://aws.amazon.com/cloudformation/), or manual creation. Once cataloged, you can search, filter, group, and [export](/docs/insights/discovery/data-export/) your resource data. You can also [import](/docs/insights/discovery/visual-import/) unmanaged resources into Pulumi to bring them under IaC management.
+**Discovery** scans cloud accounts across [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), [GCP](https://cloud.google.com/), and more to catalog every resource regardless of how it was provisioned: Pulumi, [Terraform](https://www.terraform.io/), [CloudFormation](https://aws.amazon.com/cloudformation/), or manual creation. Once cataloged, you can search, filter, group, and [export](/docs/discovery-governance/discovery/data-export/) your resource data. You can also [import](/docs/discovery-governance/discovery/visual-import/) unmanaged resources into Pulumi to bring them under IaC management.
 
-**Policy** enforces compliance with policy-as-code written in [TypeScript](https://www.typescriptlang.org/) or [Python](https://www.python.org/). Pulumi ships [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, NIST, PCI DSS, HITRUST, and other frameworks so you can start evaluating without writing any code. [Audit policy groups](/docs/insights/policy/policy-groups/#audit-policy-groups) continuously evaluate all discovered resources and IaC stacks, while preventative policies block non-compliant deployments before they reach production.
+**Policy** enforces compliance with policy-as-code written in [TypeScript](https://www.typescriptlang.org/) or [Python](https://www.python.org/). Pulumi ships [pre-built compliance packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for CIS, NIST, PCI DSS, HITRUST, and other frameworks so you can start evaluating without writing any code. [Audit policy groups](/docs/discovery-governance/policy/policy-groups/#audit-policy-groups) continuously evaluate all discovered resources and IaC stacks, while preventative policies block non-compliant deployments before they reach production.
 
 This enables you to map out your cloud estate, evaluate compliance, and then remediate any issues uncovered by policy.
 
@@ -51,7 +51,7 @@ If your team already uses customer-managed workflow runners for [Pulumi Deployme
 
 Self-hosted Insights is available on the Business Critical edition of Pulumi Cloud. To learn more or get set up:
 
-- [Self-hosted Insights documentation](/docs/insights/self-hosted/) — configuration and setup for discovery scans and audit policy evaluations on your own infrastructure
+- [Self-hosted Insights documentation](/docs/discovery-governance/self-hosted/) — configuration and setup for discovery scans and audit policy evaluations on your own infrastructure
 - [Customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) — runner installation, configuration reference, and pool management
-- [Insights & Governance overview](/docs/insights/) — full documentation for discovery and policy capabilities
+- [Insights & Governance overview](/docs/discovery-governance/) — full documentation for discovery and policy capabilities
 - [Contact sales](/contact/?form=sales) to enable self-hosted Insights for your organization
