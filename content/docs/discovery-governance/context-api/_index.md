@@ -16,7 +16,7 @@ pulumi_cloud_feature: context-api
 
 The Context API is a read-only Pulumi Cloud API for asking questions about how infrastructure is connected. It queries an organization's infrastructure graph, which connects nodes like resources (IaC or [Discovered](/docs/discovery-governance/discovery/)) and stacks through relationships such as dependencies, parent-child links, provider ownership, and stack output consumption.
 
-The API is especially useful when the answer depends on those relationships rather than the properties of one resource. Most people ask these questions in natural language through an AI agent, which composes and runs a graph query on their behalf. Use the Pulumi CLI or REST API directly when you need to inspect or validate a query or build an integration.
+The API is especially useful when the answer depends on those relationships rather than the properties of one resource. Most people ask these questions in natural language through an AI agent, which composes and runs a graph query on their behalf. The [Pulumi MCP server](/docs/ai/mcp-server/) and Pulumi Neo both expose the API as a `graph_query` tool that third-party and Pulumi-built agents can call directly. Use the Pulumi CLI or REST API directly when you need to inspect or validate a query or build an integration.
 
 ## How the Context API can help
 

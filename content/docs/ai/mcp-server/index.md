@@ -174,10 +174,18 @@ These tools query your Pulumi Cloud organization:
 
 - **`get-stacks`** - List all Pulumi stacks in your organization. Returns stack names, descriptions, last update times, and resource counts.
 
-- **`resource-search`** - Search and analyze Pulumi-managed cloud resources across all stacks using Lucene query syntax. Query by resource type, name, tags, properties, or any combination. Examples:
+- **`resource-search`** - Search and analyze Pulumi-managed cloud resources across all stacks using Lucene query syntax. Query by resource type, name, tags, properties, or any combination. For relationship questions - what depends on this, blast radius, dependency traversal - use `graph_query` instead; `resource-search` can't follow edges. Examples:
   - Find all S3 buckets: `type:aws:s3/bucket:Bucket`
   - Search by name: `name:*production*`
   - Find untagged resources: `NOT _exists_:tags`
+
+- **`graph_query`** - Query the organization's [infrastructure graph](/docs/discovery-governance/context-api/) for relationship and aggregation questions: blast radius, dependency or reference traversal across stacks and accounts, and inventory grouped by relationship. Covers both Pulumi-managed resources and resources found through [Discovery](/docs/discovery-governance/discovery/). Examples:
+  - "What breaks if I change this security group?"
+  - "Which stacks use AWS provider versions older than v7?"
+
+- **`get_graph_schema`** - Return the live schema behind `graph_query`: node types, selectable and groupable fields, edge types, and engine limits, plus a full grammar guide on request. Examples:
+  - "What fields can I filter or group resources by?"
+  - "Show me the full grammar guide for building a graph query."
 
 - **`get-policy-violations`** - Get policy violations for your stacks. Returns violations detected by Pulumi's policy-as-code engine.
 
@@ -304,6 +312,16 @@ Delegate to Neo for tasks that require:
 1. Uses `resource-search` with query: `type:aws:s3/bucket:Bucket AND acl:public-read`
 2. Lists the buckets found with their stack names
 3. Provides details about their configuration
+
+### Finding what depends on a resource
+
+**You:** "What depends on this DynamoDB table, and would deleting it break anything downstream?"
+
+**AI Assistant response:**
+
+1. Uses `graph_query` to anchor on the table and walk `reference` edges inward across stacks
+2. Reports the dependent resources and stacks it found
+3. Checks the result's completeness signals before treating the answer as exhaustive, and warns if the result was truncated or RBAC-trimmed
 
 ### Generating infrastructure with Registry lookup
 
