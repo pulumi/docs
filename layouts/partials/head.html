@@ -229,11 +229,14 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, series) and the case-study
-            industry taxonomy have no .Summary; source their description from
-            the data files so they don't fall through to an empty meta
-            description. */}}
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry" "author") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series, author) and the
+            case-study industry taxonomy have no .Summary; source their
+            description from the data files so they don't fall through to an
+            empty meta description. Author term pages below the post-count
+            floor in taxonomy-indexable.html are noindexed anyway, so a
+            generic description here is harmless for them and correct for the
+            indexable ones. */}}
         {{ $desc := "" }}
         {{ if eq .Data.Singular "category" }}
             {{ range site.Data.blog_categories.categories }}
@@ -249,6 +252,10 @@
             {{ range site.Data.case_study_industries.industries }}
                 {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
             {{ end }}
+        {{ else if eq .Data.Singular "author" }}
+            {{ $authorName := .Data.Term | humanize }}
+            {{ with index site.Data.team.team .Data.Term }}{{ $authorName = .name }}{{ end }}
+            {{ $desc = printf "Pulumi blog posts by %s." $authorName }}
         {{ end }}
         {{ with $desc | chomp }}
             <meta name="description" content="{{ . }}" />
