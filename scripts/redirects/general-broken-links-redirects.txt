@@ -37,8 +37,8 @@ docs/aws/athena/index.html|/docs/iac/guides/clouds/aws/
 docs/aws/cloudwatch/index.html|/docs/iac/guides/clouds/aws/
 docs/aws/dynamodb/index.html|/docs/iac/guides/clouds/aws/
 docs/aws/ec2/index.html|/docs/iac/guides/clouds/aws/
-docs/aws/ecr/index.html|/docs/iac/guides/clouds/aws/ecr/
-docs/aws/iam/index.html|/docs/iac/guides/clouds/aws/iam/
+docs/aws/ecr/index.html|/dev/tutorials/aws-ecr/
+docs/aws/iam/index.html|/dev/tutorials/aws-iam/
 docs/aws/kinesis/index.html|/docs/iac/guides/clouds/aws/
 docs/aws/s3/index.html|/docs/iac/guides/clouds/aws/
 docs/aws/sns/index.html|/docs/iac/guides/clouds/aws/
@@ -48,7 +48,7 @@ docs/clouds/aws/aws-guides/athena/index.html|/docs/iac/guides/clouds/aws/
 docs/clouds/aws/aws-guides/cloudwatch/index.html|/docs/iac/guides/clouds/aws/
 docs/clouds/aws/aws-guides/dynamodb/index.html|/docs/iac/guides/clouds/aws/
 docs/clouds/aws/aws-guides/ec2/index.html|/docs/iac/guides/clouds/aws/
-docs/clouds/aws/aws-guides/ecr/index.html|/docs/iac/guides/clouds/aws/ecr/
+docs/clouds/aws/aws-guides/ecr/index.html|/dev/tutorials/aws-ecr/
 docs/clouds/aws/aws-guides/kinesis/index.html|/docs/iac/guides/clouds/aws/
 docs/clouds/aws/aws-guides/s3/index.html|/docs/iac/guides/clouds/aws/
 docs/clouds/aws/aws-guides/sns/index.html|/docs/iac/guides/clouds/aws/
