@@ -11,8 +11,11 @@
 // Cover thumbnail on the index page's lead card. The document is portrait and
 // the box is landscape, so height is what sizes it — the image takes the
 // container's height and finds its own width.
+// Square-cornered and flush to the card's edges — the card's own `rounded-lg`
+// plus `overflow-hidden` is what rounds the outer corners, the same way the
+// logo tile works on a case-study card.
 .whitepaper-cover {
-    @apply flex items-center justify-center rounded-lg bg-violet-50 p-6 md:p-8;
+    @apply flex items-center justify-center bg-violet-50 p-6 md:p-8;
 
     img {
         @apply h-full w-auto max-w-full rounded-sm object-contain;

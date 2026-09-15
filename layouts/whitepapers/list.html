@@ -33,8 +33,11 @@
          not this paper. */}}
     {{ $title := .Title }}
     <section>
-        <div class="card card-hover group relative flex flex-col gap-8 p-8 md:flex-row md:items-center md:gap-10 md:p-10">
-            <div class="flex flex-1 flex-col">
+        {{/* No padding on the card itself: the text column carries its own so the
+             cover field can run flush to the card's edges. `overflow-hidden` is
+             what clips the field's square corners to the card's radius. */}}
+        <div class="card card-hover group relative flex flex-col overflow-hidden md:flex-row">
+            <div class="flex flex-1 flex-col p-8 md:p-10">
                 {{ with .Params.card_label }}
                 <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
                 {{ end }}
@@ -54,9 +57,10 @@
             </div>
             {{ with .Params.cover }}
             {{/* The cover page sits on its own tinted field so a white document
-                 edge reads against the card. Portrait art in a landscape box, so
-                 the container's height is what sizes it. */}}
-            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-[5/4] md:w-2/5">
+                 edge reads against the card. Height is what sizes the art, so at
+                 md the field stretches to the card and takes a floor to stand on
+                 rather than following an aspect ratio. */}}
+            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-auto md:min-h-80 md:w-2/5">
                 {{ partial "fingerprinted-img.html" (dict
                     "src" .
                     "alt" (printf "%s cover" $title)
