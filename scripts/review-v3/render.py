@@ -51,13 +51,21 @@ HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes")
-ACTION_CLASS = {"stamp": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "close": "stop",
+ACTION_CLASS = {"stamp": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "close": "stop",
                 "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
 # actions (things done on the way). The board's toggles enforce that: lighting
 # a second decision on a row puts out the first.
 SIDE_ACTIONS = {"fix", "render", "deploy"}
+
+
+def action_kind(pr: dict, action: dict) -> str:
+    """`rerun` is the unblock on an errored review (a decision) and an extra
+    on a row where no review ran (a side action beside approve/route)."""
+    if action["id"] == "rerun":
+        return "decision" if "review:error" in (pr.get("blockers") or []) else "side"
+    return "side" if action["id"] in SIDE_ACTIONS else "decision"
 
 
 def esc(v) -> str:
@@ -225,13 +233,13 @@ def action_bar(pr: dict, queue: dict) -> str:
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{"side" if a["id"] in SIDE_ACTIONS else "decision"}" aria-pressed="false">{esc(a["label"])}</button>')
+        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges the whole stamp set unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
-                    f'data-kind="{"side" if primary["id"] in SIDE_ACTIONS else "decision"}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
+                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
 
 

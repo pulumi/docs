@@ -80,6 +80,13 @@ def test_filter_chips_are_literal_and_an_empty_board_says_so():
     assert "has('view', r.dataset.verdict)" in html
 
 
+def test_rerun_is_the_unblock_on_an_errored_row_and_a_side_action_elsewhere():
+    q = run([stampable(8, labels=["review:error", "domain:docs"]), stampable(9, labels=["review:trivial", "domain:docs"], comments=[])])
+    html = render.render_board(q)
+    assert 'class="btn p p-stop" data-cmd="--rerun 8" data-pr="8" data-kind="decision"' in html
+    assert 'data-cmd="--rerun 9" data-pr="9" data-kind="side"' in html and "run a full review" in html
+
+
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)

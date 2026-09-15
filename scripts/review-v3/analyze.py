@@ -558,8 +558,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if status == "STALE":
         blocked.append("review:stale")
         actions.append({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
-    elif status in ("IN_PROGRESS", "ERROR"):
-        blocked.append(f"review:{status.lower().replace('_', '-')}")
+    elif status == "ERROR":
+        # The pipeline's own escape hatch: `#new-review` clears the cards
+        # and dispatches a fresh initial review, bypassing the skips.
+        blocked.append("review:error")
+        actions.append({"id": "rerun", "label": "re-run the review", "cmd": f"--rerun {n}"})
+    elif status == "IN_PROGRESS":
+        blocked.append("review:in-progress")
+    elif status in ("ABSENT", "TRIAGE_PROSE"):
+        # No review ran (trivial / frontmatter-only / draft / bot skip);
+        # a full one is a side action the approver can ask for.
+        actions.append({"id": "rerun", "label": "run a full review", "cmd": f"--rerun {n}"})
     if "review:no-blockers" not in labels:
         stamp_ok = False
     blockers = open_blockers(pr)

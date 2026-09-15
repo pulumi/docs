@@ -151,6 +151,17 @@ def test_gate_self_accepted_disposition():
     assert row(q, 100)["self_accepted_ids"] == []
 
 
+def test_errored_review_is_blocked_with_rerun_and_an_absent_one_offers_it():
+    p = row(run([stampable(labels=["review:error", "domain:docs"])]), 100)
+    assert p["verdict"] == "blocked" and "review:error" in p["blockers"]
+    assert [a["cmd"] for a in p["actions"] if a["id"] == "rerun"] == ["--rerun 100"]
+    p = row(run([stampable(labels=["review:trivial", "domain:docs"], comments=[])]), 100)
+    assert p["verdict"] == "judge" and "review:absent" in p["reasons"]
+    assert [a["label"] for a in p["actions"] if a["id"] == "rerun"] == ["run a full review"]
+    p = row(run([stampable(labels=["review:in-progress", "domain:docs"])]), 100)
+    assert p["verdict"] == "blocked" and not any(a["id"] == "rerun" for a in p["actions"])  # wait for it
+
+
 def test_gate_stale_review_is_blocked_with_refresh():
     q = run([stampable(head_sha="f" * 40)])
     p = row(q, 100)

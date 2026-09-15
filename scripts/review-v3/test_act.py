@@ -279,6 +279,21 @@ def test_request_changes_body_voice_by_author_type():
     assert act.request_changes_body(internal) == "- `a.md` L3: Wrong count."
 
 
+def test_rerun_posts_a_new_review_mention_with_a_status_reason():
+    env = Env([stampable(1, labels=["review:error", "domain:docs"]), stampable(2)])
+    try:
+        p = act.plan(env.queue, args(rerun=[1, 2]))
+        assert "#new-review" in act.preview(p)
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert all(r.ok for r in res)
+        w = env.writes()
+        assert w[0]["body"]["body"].startswith("@claude the last review run failed #new-review") and w[0]["path"].endswith("/issues/1/comments")
+        assert w[0]["body"]["body"].endswith("(https://claude.ai/code)_")
+        assert w[1]["body"]["body"].startswith("@claude the review is current #new-review")
+    finally:
+        env.close()
+
+
 def test_close_cross_links_and_refresh_mention():
     env = Env([stampable(1), stampable(2)])
     try:

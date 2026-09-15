@@ -33,6 +33,7 @@ comment templates and attribution footer):
                      one-click ✏️ suggestions, commit, push.
   --close N --superseded-by M   close N with a cross-link comment on both.
   --refresh N        post `@claude <reason> #update-review`.
+  --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
   --render N         screenshot the preview pages (screenshot.mjs + Playwright).
   --deploy N         dispatch testing-build-and-deploy.yml at the head branch.
 
@@ -247,12 +248,18 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         pr = pr_of(n)
         reason = args.reason or next((r for r in pr.get("reasons") or [] if r.startswith("review:")), "the review is stale")
         steps.append(step("refresh", n, reason=reason))
+    for n in args.rerun or []:
+        pr = pr_of(n)
+        status = ((pr.get("review") or {}).get("status") or "ABSENT").lower().replace("_", "-")
+        reason = args.reason or {"error": "the last review run failed", "absent": "no review ran on this PR",
+                                 "triage-prose": "only the triage prose check ran"}.get(status, f"the review is {status}")
+        steps.append(step("rerun", n, reason=reason))
     for n in args.render or []:
         steps.append(step("render", n, pages=(pr_of(n).get("preview") or {}).get("pages") or []))
     for n in args.deploy or []:
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --rerun / --render / --deploy")
     return Plan(PLAN_SCHEMA, queue.get("repo") or gh_client.DEFAULT_REPO, datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 {"merge_humans": bool(args.merge_humans), "no_merge": bool(args.no_merge), "force": bool(args.force)}, steps)
 
@@ -285,6 +292,8 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
             lines.append(f"     comment on #{s.pr} and #{s.args['superseded_by']} (footer), then close #{s.pr}")
         elif s.kind == "refresh":
             lines.append(f"     comment: @claude {s.args['reason']} #update-review (footer)")
+        elif s.kind == "rerun":
+            lines.append(f"     comment: @claude {s.args['reason']} #new-review (footer) — clears the cards, fresh review from scratch")
         elif s.kind == "render":
             lines.append(f"     screenshot {len(s.args.get('pages') or [])} preview page(s) → {SHOTS_DIR}/{s.pr}/")
         elif s.kind == "deploy":
@@ -447,7 +456,7 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
     for s in plan_.steps:
         before = len(gh.writes)
         try:
-            if dry_run and s.kind in ("stamp", "route", "request-changes", "fix", "close", "refresh", "deploy"):
+            if dry_run and s.kind in ("stamp", "route", "request-changes", "fix", "close", "refresh", "rerun", "deploy"):
                 ok, msg = True, f"dry-run: would {s.kind} #{s.pr}"
                 if s.kind == "stamp":
                     pf_ok, pf_msg, _ = preflight(gh, s)
@@ -471,6 +480,9 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
             elif s.kind == "refresh":
                 gh.comment(s.pr, with_footer(f"@claude {s.args['reason']} #update-review"))
                 ok, msg = True, "refresh requested"
+            elif s.kind == "rerun":
+                gh.comment(s.pr, with_footer(f"@claude {s.args['reason']} #new-review"))
+                ok, msg = True, "fresh review requested"
             elif s.kind == "render":
                 ok, msg = _render(s, node=node)
             elif s.kind == "deploy":
@@ -618,7 +630,8 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--close", type=int)
     ap.add_argument("--superseded-by", type=int)
     ap.add_argument("--refresh", type=int, action="append")
-    ap.add_argument("--reason", help="for --refresh: what changed; for --request-changes: an opening line")
+    ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
+    ap.add_argument("--reason", help="for --refresh / --rerun: what changed; for --request-changes: an opening line")
     ap.add_argument("--render", type=int, action="append")
     ap.add_argument("--deploy", type=int, action="append")
     ap.add_argument("--merge-humans", action="store_true", help="squash-merge human-authored stamps too")
