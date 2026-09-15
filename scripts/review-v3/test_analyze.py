@@ -203,6 +203,7 @@ def test_gate_owner_not_mine_routes():
     assert p["verdict"] == "route" and "route:docs-guild" in p["reasons"]
     assert row(run([stampable()], cfg=cfg(me=["docs"])), 100)["verdict"] == "stamp"
     assert p["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager"  # canned config's escalate_to
+    assert [a["cmd"] for a in p["actions"] if a["id"] == "stamp"] == ["--stamp 100 --force"]  # the lane is a default, not a lock
 
 
 def test_gate_new_blog_post():
@@ -499,6 +500,7 @@ def test_link_only_diff_masks_links_and_nothing_else():
     assert analyze.link_only_diff([_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
     assert analyze.link_only_diff([_file("content/docs/a.md", ['<a href="/docs/new/">x</a>'], ['<a href="/docs/old/">x</a>'])])
     assert analyze.link_only_diff([_file("content/docs/a.md", ["Read /docs/iac/new/ first."], ["Read /docs/old/ first."])])
+    assert analyze.link_only_diff([_file("content/blog/p/index.md", ["Write a TypeScript program. " + LINK_PLUS], ["Write a Typescript program. " + LINK_MINUS])])  # casing rides along
     # prose changed alongside the link, an unpaired line, an unchanged line, a missing patch, an empty diff
     assert not analyze.link_only_diff([_file("content/docs/a.md", ["Read [x](/b/) now."], ["Read [x](/a/) later."])])
     assert not analyze.link_only_diff([_file("content/docs/a.md", ["a", "[x](/b/)"], ["[x](/a/)"])])

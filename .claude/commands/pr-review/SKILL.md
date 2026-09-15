@@ -48,7 +48,7 @@ stale_date_days: 3                   # a blog `date:` older than this is stale
 link_fixes: mine                     # mine (default) | route: a link-only diff is yours whatever its lane
 ```
 
-`link_fixes: mine` is for the redirect sweeps: a diff where every changed line is the same sentence with only a link rewritten (text or target) gets `shape:link-only` and skips the lane check, since the lane owner's review buys nothing there. It's the queue's own bar, narrower than the Sentinel's mechanical bar, which counts any link edit as substantive. The row still has to clear the stamp bar; a sweep with open ⚠️ rows is a judge row with "approve as-is" as its primary.
+`link_fixes: mine` is for the redirect sweeps: a diff where every changed line is the same sentence with only a link rewritten (text or target; a word's casing may change too) gets `shape:link-only` and skips the lane check, since the lane owner's review buys nothing there. It's the queue's own bar, narrower than the Sentinel's mechanical bar, which counts any link edit as substantive. The row still has to clear the stamp bar; a sweep with open ⚠️ rows is a judge row with "approve as-is" as its primary.
 
 Missing file: every lane counts as mine and the analyzer says so. `python3 scripts/review-v3/pr_review_config.py` prints the effective config. The AI-suspect allowlist stays at `~/.claude/pr-review/ai-suspect-authors.txt` (see `pr-review:references:trust-and-scrutiny`).
 
