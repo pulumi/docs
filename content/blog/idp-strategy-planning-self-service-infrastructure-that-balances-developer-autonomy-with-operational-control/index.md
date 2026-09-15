@@ -167,13 +167,12 @@ While DevOps brought us incredible advances in how we ship and maintain software
 
 That's why platform teams have emerged.
 You exist to solve these challenges by building tools and workflows that enable your internal customers (the developers) to provision infrastructure and deploy software without getting blocked.
-But here's the thing I've learned from working with hundreds of platform teams: success isn't just about the tools you choose.
-It's about the strategy behind how you implement them.
+But here's the thing I've learned from working with hundreds of platform teams: success depends on the strategy behind how you implement your tools, more than on which tools you choose.
 
 ## 5 Core Components of a Successful Internal Developer Platform
 
 Through years of working with platform teams and analyzing what separates successful IDPs from those that struggle to gain adoption, we've identified five essential components that every platform strategy needs.
-These aren't theoretical concepts. They're battle-tested patterns that work across organizations of all sizes and industries.
+These are battle-tested patterns that work across organizations of all sizes and industries.
 
 ### 1. Abstractions
 
@@ -186,8 +185,7 @@ The sweet spot is creating [component resources](https://www.pulumi.com/docs/iac
 ### 2. Blueprints
 
 Blueprints are your templatized, well-architected patterns that developers can use to bootstrap their infrastructure.
-But here's what I want you to understand about blueprints: they're not just starting points that you throw over the wall to developers.
-They're carefully designed patterns that embody your organizational best practices and architectural decisions.
+But here's what I want you to understand about blueprints: they're carefully designed patterns that embody your organizational best practices and architectural decisions, not starting points you throw over the wall to developers.
 
 When we see successful platform teams, their templates serve as both accelerators and guardrails.
 They give developers a fast path to production-ready infrastructure while ensuring that everything they deploy follows your organization's standards.
@@ -203,8 +201,7 @@ You need:
 - **Low-code workflows** using tools like [Pulumi YAML](https://www.pulumi.com/docs/iac/languages-sdks/yaml/) for configuration-driven infrastructure (perfect for developers who understand infrastructure but don't want to write Go or TypeScript)
 - **Full-code workflows** for developers who need maximum flexibility and want to leverage the full power of general-purpose programming languages
 
-The key insight? These aren't three different platforms.
-They're three different interfaces to the same underlying components and templates.
+The key insight? These are three different interfaces to the same underlying components and templates.
 
 ### 4. Security guardrails
 
@@ -220,7 +217,7 @@ The developer gets immediate feedback, and you get the assurance that nothing go
 ### 5. Self-service
 
 Everything we've talked about so far builds toward this moment: enabling developers to provision and manage infrastructure independently.
-But self-service isn't just about providing a UI. It's about carefully orchestrating all the other components to create experiences that are both powerful and intuitive.
+But self-service goes well beyond providing a UI. It requires carefully orchestrating all the other components to create experiences that are both powerful and intuitive.
 
 When we walked through the demo in our workshop, what you saw was the culmination of thoughtful platform design.
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
@@ -249,7 +246,7 @@ You don't need to build three different platforms—you need to build one platfo
 ### Why a Private Registry Is Key to IDP Adoption
 
 Here's something we always tell platform teams: if you don't solve the discoverability problem, your beautiful components and templates will sit unused in Git repositories where no one can find them.
-That's why the private registry isn't just a nice-to-have. It's the foundation that makes everything else work.
+That's why the private registry is the foundation that makes everything else work.
 
 When you establish a private registry as your source of truth for components, templates, providers, and policies, you're solving two critical problems at once.
 First, discoverability: developers can actually find and explore what's available.
@@ -279,7 +276,7 @@ They measure success by the business outcomes they're driving:
 The numbers speak for themselves.
 We've worked with customers like Snowflake who reduced deployment times from one and a half weeks to less than a day.
 Starburst Data cut their infrastructure deployments from two weeks to just three hours.
-These aren't vanity metrics. They're business transformations.
+Those are business transformations, not vanity metrics.
 
 ## IDP Strategy: 5 Key Steps to Build a Strong Foundation
 
@@ -303,9 +300,9 @@ If you're just starting your IDP journey, here's the roadmap we give to every pl
 ## The Future of IDPs and Platform Engineering
 
 Trends come and go, but platform engineering is here to stay.
-It's not just another tool or methodology. This is how modern organizations scale infrastructure to match the speed of innovation. The companies that win are the ones that treat their **Internal Developer Platform (IDP)** as a strategic foundation, not just a tool.
+This is how modern organizations scale infrastructure to match the speed of innovation. The companies that win are the ones that treat their **Internal Developer Platform (IDP)** as a strategic foundation.
 
-Your job isn’t just to manage infrastructure and choose the right tools - it's to enable developers to move faster while keeping governance, security, and costs under control. Get that balance right, and your platform becomes a force multiplier across your entire engineering department.
+Your job goes beyond managing infrastructure and choosing the right tools: it's to enable developers to move faster while keeping governance, security, and costs under control. Get that balance right, and your platform becomes a force multiplier across your entire engineering department.
 
 The fastest way to get there? Focus on these five essential components:
 
