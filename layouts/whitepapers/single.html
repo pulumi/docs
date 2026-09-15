@@ -23,7 +23,7 @@
     {{ $pdf := "" }}
     {{ with .Params.pdf }}
     {{ $icon := partial "icon.html" (dict "name" "file-arrow-down" "weight" "bold" "class" "size-4") }}
-    {{ $pdf = printf `<a class="btn btn-primary w-full" href="%s" download data-track="whitepaper-pdf-%s">%s Download the PDF</a>` . ($.Title | urlize) $icon | safeHTML }}
+    {{ $pdf = printf `<a class="btn btn-primary w-full" href="%s" download data-track="whitepaper-pdf-%s">%s Download PDF</a>` . ($.Title | urlize) $icon | safeHTML }}
     {{ end }}
 
     {{/* Mobile: TOC + download (visible below lg). Rendered when there is
