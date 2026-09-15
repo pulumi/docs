@@ -84,7 +84,7 @@ We try to work with teams that ask for our help instead of being pushed onto tea
 
 This success creates natural curiosity, leading other teams to either request similar help or study and adopt the successful team's practices. Either way, I'm happy that things are improving.
 
-## 5. Align Dev and Ops with infrastructure as code
+## 5. Align dev and ops with infrastructure as code
 
 When it comes to infrastructure as code specifically, I've noticed it's becoming table stakes for many organizations, though implementation quality varies widely.
 
