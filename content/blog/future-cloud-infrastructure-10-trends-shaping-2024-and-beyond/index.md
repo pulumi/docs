@@ -75,10 +75,10 @@ Teams succeeding in this transition increasingly use infrastructure as code, aut
 
 Hyperscalers are making the largest infrastructure investments in cloud history, nearly all centered on AI workloads, inference, and high-performance compute.
 
-- **AWS** posted its fastest revenue growth since 2021: [$42.2 billion in Q2 2026, up about 37% year-over-year](https://www.cnbc.com/2026/07/30/aws-earnings-q2-2026.html), accelerating from 28% growth the prior quarter. AWS's AI business and its custom Trainium and Graviton chips each crossed a $25 billion annualized revenue run rate, more than doubling year-over-year.
-- **Microsoft Azure** crossed a threshold of its own: [Azure's trailing-twelve-month revenue surpassed $100 billion for the first time](https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast) in Microsoft's fiscal Q4 2026 (ended June 30, 2026), with Azure revenue growing 43% year-over-year, up from 40% the prior quarter. "Azure revenue surpassed $100 billion for the first time," said Satya Nadella, Microsoft's chairman and CEO.
+- **AWS** posted its fastest revenue growth since 2021: [$42.2 billion in Q2 2026, up 37% year-over-year](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/), accelerating from 28% growth the prior quarter. AWS's AI business and its chips business, which includes its custom Trainium and Graviton silicon, each exceeded a $25 billion annualized revenue run rate, growing triple-digit percentages year-over-year.
+- **Microsoft Azure** crossed a threshold of its own: [Azure's full fiscal-year 2026 revenue surpassed $100 billion for the first time](https://news.microsoft.com/source/2026/07/29/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results-4/) in Microsoft's fiscal Q4 2026 (ended June 30, 2026), with Azure revenue growing 43% year-over-year, up from 40% the prior quarter. "This year, Azure revenue surpassed $100 billion for the first time," said Satya Nadella, Microsoft's chairman and CEO.
 - **Google Cloud** revenue rose 82% year-over-year to $24.8 billion in Q2 2026, and its backlog reached $514 billion, up from $106 billion a year earlier. Alphabet [raised its full-year 2026 capital expenditure guidance to $195–205 billion](https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx), up from an earlier $180–190 billion estimate that had itself already been raised twice this year.
-- **Oracle** reported FY2026 cloud revenue of $34.0 billion, up 39% year-over-year, with [remaining performance obligations reaching $638 billion](https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx), up 363% year-over-year on the strength of its Stargate-linked infrastructure commitments.
+- **Oracle** reported FY2026 cloud revenue of $34.0 billion, up 39% year-over-year, with [remaining performance obligations reaching $638 billion](https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx), up 363% year-over-year on the strength of large-scale AI infrastructure contracts, including prepaid and customer-supplied GPU deals now totaling $75 billion.
 
 As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.
 See how organizations [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video) and [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/).
@@ -108,7 +108,7 @@ Pulumi enables all three through its [multi-cloud IaC model](https://www.pulumi.
 
 While hyperscalers are transforming the global cloud platform, enterprises face a different challenge: adapting their own cloud foundations to support AI at scale. Organizations are moving beyond prototypes and integrating AI into core products, internal workflows, and customer-facing systems, requiring new levels of automation, governance, and AI infrastructure orchestration.
 
-According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026), worldwide AI spending is forecast to total **$2.59 trillion in 2026**, a 47% increase year-over-year. [IDC predicts that by 2027](https://www.idc.com/resource-center/blog/futurescape-2026-moving-into-the-agentic-future/), half of enterprises will be using AI agents to redefine how humans and machines collaborate, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
+According to [Gartner](https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026), total worldwide AI spending, spanning software, hardware, and services, is forecast to reach **$2.59 trillion in 2026**, a 47% increase year-over-year. [IDC predicts that by 2027](https://www.idc.com/resource-center/blog/futurescape-2026-moving-into-the-agentic-future/), half of enterprises will be using AI agents to redefine how humans and machines collaborate, which requires scalable, secure, and automated cloud architectures to support model execution and orchestration.
 
 To enable this transition, enterprises are investing in:
 
@@ -147,7 +147,7 @@ As organizations scale both traditional cloud workloads and AI-driven systems, I
 
 ## 6. DevSecOps Evolves Into AI-Integrated Security
 
-As AI becomes embedded across cloud-native systems, DevSecOps is entering a new era. [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2026-03-17-gartner-predicts-ai-applications-will-drive-50-percent-of-cybersecurity-incident-response-efforts-by-2028) that by **2028, over 50% of enterprises will use AI security platforms** to secure third-party AI service usage and protect custom-built AI applications, with the AI application security market alone reaching roughly $4.8 billion in 2027. Below are the 3 key predictions for the future of DevSecOps:
+As AI becomes embedded across cloud-native systems, DevSecOps is entering a new era. [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2026-03-17-gartner-predicts-ai-applications-will-drive-50-percent-of-cybersecurity-incident-response-efforts-by-2028) that by **2028, over 50% of enterprises will use AI security platforms** to secure third-party AI service usage and protect custom-built AI applications, with total spending on securing AI reaching roughly $4.8 billion in 2027. Below are the 3 key predictions for the future of DevSecOps:
 
 1. **AI-driven security automation**: Teams will increasingly rely on AI to detect threats, enforce policies, and generate secure infrastructure patches. See Pulumi’s capabilities in [AI-powered remediation](https://www.pulumi.com/product/insights-governance/#video).
 
@@ -179,15 +179,15 @@ IDPs are reshaping how developers interact with cloud infrastructure, bringing t
 
 ## 8. AIOps Becomes Agentic: From Suggestions to Supervised Execution
 
-AIOps in 2027 turns on one question: how much of a change does an agent execute, and how closely does a human still review it? Gartner's Predicts 2026 research on IT infrastructure and operations, [cited via Itential's and PagerDuty's syndication of the report](https://www.itential.com/resource/analyst-report/gartner-predicts-2026-ai-agents-will-reshape-infrastructure-operations/), forecasts that agentic AI deployment in IT operations grows from under 5% in 2025 to 70% by 2029, while human-in-the-loop requirements in IT operations workflows fall from 95% in 2025 to 40% by 2028.
+AIOps in 2027 turns on one question: how much of a change does an agent execute, and how closely does a human still review it? [Gartner predicts](https://www.gartner.com/en/articles/ai-for-infrastructure-operations) that agentic AI deployment in IT operations grows from under 5% in 2025 to 70% by 2029, while human-in-the-loop requirements in IT operations workflows fall from 95% in 2025 to 40% by 2028.
 
 Pulumi's own [2026 survey of 510 platform, DevOps, and product engineers](https://www.pulumi.com/state-of-agentic-infrastructure/) shows the same shift starting inside real teams, and a gap between sentiment and practice that's worth naming honestly:
 
 - **82% agree** that AI and agents will meaningfully change how they write infrastructure within 12 months.
-- **63% say they trust agents to make production changes**, yet manual approval remains close to universal today, which the survey's authors read as stated trust running ahead of actual guardrails.
+- **63% say they trust agents to make production changes**, yet manual approval remains close to universal today. Pulumi's report describes this as stated trust outrunning real guardrails.
 - Teams expecting agents to generate half or more of their infrastructure code rise from **45% today to 52%** within six months.
 
-That gap between trust and guardrails is exactly what a supervised, agentic operating model has to close: an agent that proposes a change, runs a preview, and waits for approval, rather than one that only writes YAML for someone else to apply by hand. [Pulumi Neo](https://www.pulumi.com/product/neo/) is built around that loop, proposing infrastructure changes, running previews, and executing approved updates with policy guardrails in place, so the human stays the one accountable for what ships. Pulumi's [The Agentic Infrastructure Era](https://www.pulumi.com/blog/the-agentic-infrastructure-era/) makes the fuller case for why this operating model, not just faster dashboards and alerting, is where AIOps is headed.
+That gap between trust and guardrails is exactly what a supervised, agentic operating model has to close: an agent that proposes a change, runs a preview, and waits for approval, rather than one that only writes YAML for someone else to apply by hand. [Pulumi Neo](https://www.pulumi.com/product/neo/) is built around that loop, proposing infrastructure changes, running previews, and executing approved updates with policy guardrails in place, so the human stays the one accountable for what ships. Pulumi's [The Agentic Infrastructure Era](https://www.pulumi.com/blog/the-agentic-infrastructure-era/) makes the fuller case for why AIOps is headed toward this operating model rather than toward faster dashboards and alerting alone.
 
 AIOps still includes observability, automation, and real-time analytics bridging DevOps, SRE, and IT operations. What's changed for 2027 is that those signals increasingly feed an agent empowered to act on them, with a person still reviewing the result.
 
@@ -195,7 +195,7 @@ AIOps still includes observability, automation, and real-time analytics bridging
 
 Kubernetes will continue its ascent in 2027. According to [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/kubernetes-market), the global Kubernetes market is valued at USD 3.13 billion in 2026 and is projected to reach USD 8.41 billion by 2031, a 21.85% CAGR.
 
-The [CNCF's Q3 2025 State of Cloud Native Development report](https://www.cncf.io/wp-content/uploads/2025/11/cncf_report_stateofcloud_111025a.pdf) puts cloud-native adoption among professional ML/AI developers at 41%, with 30% of backend developers now using Kubernetes directly, a share the report describes as slowly declining as more workloads move behind managed platforms and internal developer platforms instead. This shift is accelerating as teams need flexible GPU scheduling, distributed pipelines, and portable execution environments.
+The [CNCF's Q3 2025 State of Cloud Native Development report](https://www.cncf.io/wp-content/uploads/2025/11/cncf_report_stateofcloud_111025a.pdf) puts cloud-native adoption among professional ML/AI developers at 41%, with 30% of backend developers now using Kubernetes directly, down from a peak of 36% in Q3 2023, a slow decline the report attributes to the technology's growing maturity. Even so, teams still need flexible GPU scheduling, distributed pipelines, and portable execution environments as AI workloads scale.
 
 [Kubernetes is also evolving in response to AI demands](https://www.pulumi.com/blog/beyond-yaml-kubernetes-2026-automation-era/#the-2026-convergence-of-ai-platforms-and-policy-in-kubernetes), a shift Pulumi covers in more depth in its [comparison of Kubernetes IaC tools](https://www.pulumi.com/blog/best-kubernetes-iac-tools-2026/). Inference workloads, powered by LLMs and GPUs, now require low-latency execution closer to the user, pushing organizations to build intelligent orchestration layers that schedule AI pipelines across edge and core clusters, often leveraging Kubernetes as the common control plane for AI cluster orchestration.
 
@@ -205,11 +205,11 @@ As we move into 2027, three patterns are becoming clear:
 - **Governance and consistency matter more than ever**, as teams struggle to secure and manage multi-cluster, multi-cloud environments.
 - **Platform engineering is essential**, providing curated patterns and automation rather than raw YAML to reduce cognitive load.
 
-Kubernetes will remain a strategic foundation — but operating it effectively now depends on robust automation, strong security controls, and standardized delivery models that scale across clouds, clusters, and AI pipelines.
+Kubernetes will remain a strategic foundation, but operating it effectively now depends on robust automation, strong security controls, and standardized delivery models that scale across clouds, clusters, and AI pipelines.
 
 ## 10. AI Code Assistants in the Enterprise
 
-AI-powered coding assistants like GitHub Copilot, Claude Code, Cursor, and others have moved from novelty to default tooling across enterprise software development, and the same shift is now reaching infrastructure code.
+AI-powered coding assistants like GitHub Copilot, Claude Code, Cursor, and others have moved from novelty to everyday tooling for a large share of enterprise software teams, and the same shift is now reaching infrastructure code.
 
 {{< figure alt="The value of AI code assistants. Credit: Gartner" src="/blog/future-cloud-infrastructure-10-trends-shaping-2024-and-beyond/ai_code_assistants_value.png" caption="The value of AI code assistants. Credit: Gartner" width=100% >}}
 
