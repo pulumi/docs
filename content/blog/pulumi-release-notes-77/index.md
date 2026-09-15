@@ -173,7 +173,7 @@ Learn more in the [`pulumi destroy -s <stack>` GitHub issue](https://github.com/
 
 We launched Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a Pulumi Team. Pulumi Service customers on the Enterprise and Business Critical editions can use [Pulumi Teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) to set role-based access controls (RBAC) for stacks by enabling Organization administrators to assign a set of stack permissions to a group of users. Once you have Teams created you can use Team Access Tokens to generate a token scoped to that Team.
 
-Learn more in the [Team Access Tokens blog post](/blog/team-access-tokens/) and the [Team Access Tokens documentation](/docs/administration/access-identity/access-tokens/).
+Learn more in the [Team Access Tokens blog post](/blog/team-access-tokens/) and the [Team Access Tokens documentation](/docs/administration/concepts/access-tokens/).
 
 ### Billing Managers
 

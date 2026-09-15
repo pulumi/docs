@@ -68,7 +68,7 @@ The investigation moved from Slack to GitHub, and both threads keep the record.
 
 ## Permissions and governance
 
-Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi Cloud user. Stack-level controls, organization-level guardrails, and audit logging apply the same way they do for a task started from the console. Starting a conversation in a new place doesn't grant Neo new permissions; it just changes where the conversation happens.
+Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC permissions](/docs/administration/concepts/rbac/) of your Pulumi Cloud user. Stack-level controls, organization-level guardrails, and audit logging apply the same way they do for a task started from the console. Starting a conversation in a new place doesn't grant Neo new permissions; it just changes where the conversation happens.
 
 ## Try it out
 
