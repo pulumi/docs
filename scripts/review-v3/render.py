@@ -54,6 +54,10 @@ PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directi
 ACTION_CLASS = {"stamp": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "close": "stop",
                 "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
+# A row takes one decision (what happens to the PR) and any number of side
+# actions (things done on the way). The board's toggles enforce that: lighting
+# a second decision on a row puts out the first.
+SIDE_ACTIONS = {"fix", "render", "deploy"}
 
 
 def esc(v) -> str:
@@ -221,13 +225,13 @@ def action_bar(pr: dict, queue: dict) -> str:
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" aria-pressed="false">{esc(a["label"])}</button>')
+        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{"side" if a["id"] in SIDE_ACTIONS else "decision"}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges the whole stamp set unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
-                    f'data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
+                    f'data-kind="{"side" if primary["id"] in SIDE_ACTIONS else "decision"}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
 
 
@@ -690,7 +694,13 @@ SCRIPT = r"""
   }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
     if (b.classList.contains('sel')) setSel(b, true);
-    b.addEventListener('click', function(){ setSel(b, !b.classList.contains('sel')); compose(); });
+    b.addEventListener('click', function(){
+      var on = !b.classList.contains('sel');
+      if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
+        document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + b.dataset.pr + '"]').forEach(function(o){ if (o !== b) setSel(o, false); });
+      }
+      setSel(b, on); compose();
+    });
   });
   document.getElementById('clear').addEventListener('click', function(){
     document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose();
@@ -726,7 +736,7 @@ SCRIPT = r"""
   function progress(){
     var el = document.getElementById('progress'); if (!el) return;
     var rows = document.querySelectorAll('.mrow[data-verdict="judge"], .mrow[data-verdict="route"]');
-    var done = 0; rows.forEach(function(r){ if (r.querySelector('button.btn.sel')) done++; });
+    var done = 0; rows.forEach(function(r){ if (r.querySelector('button.btn.sel[data-kind="decision"]')) done++; });
     el.textContent = rows.length ? done + ' of ' + rows.length + ' decisions made' : '';
   }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){ b.addEventListener('click', progress); });

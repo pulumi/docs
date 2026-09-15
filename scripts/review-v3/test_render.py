@@ -68,8 +68,15 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)
-    assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-decision="0" aria-pressed="true"' in html
+    assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-kind="decision" data-decision="0" aria-pressed="true"' in html
     assert 'type="checkbox"' not in html
+    # One decision per row, side actions ride along: the script puts out the
+    # other lit decision on the same PR, and only decisions count as made.
+    jhtml = render.render_board(_queue())
+    assert 'data-cmd="--render 1" data-pr="1" data-kind="side"' in jhtml
+    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    assert 'button.btn.sel[data-kind="decision"][data-pr="\' + b.dataset.pr + \'"]' in html
+    assert 'button.btn.sel[data-kind="decision"]\')) done++' in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
     assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments
 
