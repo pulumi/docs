@@ -56,13 +56,13 @@ You can test your template via the [Pulumi CLI](/docs/install/) or a web browser
 #### CLI
 
 ```bash
-$ pulumi new https://github.com/pulumi/examples/aws-js-s3-folder
+$ pulumi new https://github.com/pulumi/examples/aws-ts-s3-folder
 ```
 
 #### Browser
 
 ```
-https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder
+https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-ts-s3-folder
 ```
 
 ![New Project](/images/docs/reference/service/new-project.png)
@@ -74,13 +74,13 @@ After you've verified your project template works as expected, you can add a but
 Here's an example in Markdown:
 
 ```markdown
-[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
+[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-ts-s3-folder)
 ```
 
 Or, the equivalent HTML:
 
 ```html
-<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder">
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-ts-s3-folder">
   <img src="https://www.pulumi.com/images/deploy-with-pulumi/button.svg" alt="Deploy">
 </a>
 ```
@@ -103,5 +103,5 @@ Older snippets may point at `light.svg`, `light.png`, `dark.svg`, or `dark.png`.
 You can use a fully qualified GitHub URL with the `template` parameter to reference the template at a specific Git branch, tag, or commit:
 
 ```
-https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
+https://github.com/pulumi/examples/tree/master/aws-ts-s3-folder
 ```
