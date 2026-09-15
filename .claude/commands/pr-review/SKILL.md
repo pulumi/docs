@@ -112,7 +112,7 @@ Also draft, when the row carries `desc:stale:*` or `desc:empty`, a corrected PR 
 
 then merge it: `python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --judgments .pr-review-judgments.json`. A recommendation never lowers the computed verdict.
 
-For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
+A `fixed` disposition means the diff already addresses the finding; the board shows it as "already fixed in the diff", not as a recommendation, and it is never a `--fix` action (that button appears only when the row carries a drafted description or one-click suggestions). For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
 
 ### 4. Render and publish
 
@@ -122,7 +122,7 @@ python3 scripts/review-v3/render.py --in .pr-review-queue.json --detail N --out 
 python3 scripts/review-v3/render.py --in .pr-review-queue.json --terminal [--pr N]
 ```
 
-Publish the HTML with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every checkbox and button composes the `/pr-review --act …` command shown at the bottom. The page never calls GitHub; the person copies the command, or asks you to run it.
+Publish with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). Pass `--artifact` when rendering for it: that form omits the document skeleton the Artifact tool adds itself. The default form is a standalone file for a browser or `screenshot.mjs`. The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every checkbox and button composes the `/pr-review --act …` command shown at the bottom. The page never calls GitHub; the person copies the command, or asks you to run it.
 
 `--terminal` prints the table and, in this mode only, walk each judge row with AskUserQuestion (options: approve as-is / route / refresh / skip), then compose the same act command.
 
