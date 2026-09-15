@@ -12,21 +12,62 @@
         {{ end }}
     </section>
 
-    {{/* Whitepaper cards */}}
-    <section>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {{- /* Deliberately the same card as layouts/partials/case-studies/card.html,
-                   minus the two things a whitepaper doesn't have (a logo tile and an
-                   industry badge): shared .card + .card-hover, a link stretched over the
-                   whole card, and a "Read the…" cue that only appears on hover/focus.
+    {{- /* The cards share one shell, deliberately the same as
+           layouts/partials/case-studies/card.html minus the two things a whitepaper
+           doesn't have (a logo tile and an industry badge): shared .card +
+           .card-hover, a link stretched over the whole card, and a "Read the…" cue
+           that only appears on hover/focus.
 
-                   Two differences follow from dropping the logo tile. The title is
-                   visible here rather than sr-only — the tile is what carries the name
-                   on a case-study card — and it is plain text, not a link, so the
-                   stretched anchor below is the card's only link. And the padding is
-                   symmetric (py-8 rather than pt-5), since there's no tile above to
-                   carry the top of the card. */ -}}
-            {{ range .Pages }}
+           Two differences follow from dropping the logo tile. The title is visible
+           here rather than sr-only — the tile is what carries the name on a
+           case-study card — and it is plain text, not a link, so the stretched
+           anchor is the card's only link.
+
+           `.Pages` is weight-ordered (the newest paper carries `weight: 1`), so the
+           first one leads full width and the rest fall into the grid below. */ -}}
+    {{ $featured := index .Pages 0 }}
+    {{ $rest := after 1 .Pages }}
+
+    {{ with $featured }}
+    {{/* Held here because `$` inside the nested `with` below is the list page,
+         not this paper. */}}
+    {{ $title := .Title }}
+    <section>
+        <div class="card card-hover group relative flex flex-col gap-8 p-8 md:flex-row md:items-center md:gap-10 md:p-10">
+            <div class="flex flex-1 flex-col">
+                <h2 class="heading-2 m-0 mb-5">{{ .Title }}</h2>
+                <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
+                {{ with .Description }}
+                <div class="body-lg mb-6">
+                    {{ . | markdownify }}
+                </div>
+                {{ end }}
+                <div class="mt-auto">
+                    <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
+                        Read the whitepaper
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </span>
+                </div>
+            </div>
+            {{ with .Params.cover }}
+            {{/* The cover page sits on its own tinted field so a white document
+                 edge reads against the card. Portrait art in a landscape box, so
+                 the container's height is what sizes it. */}}
+            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-[5/4] md:w-2/5">
+                {{ partial "fingerprinted-img.html" (dict
+                    "src" .
+                    "alt" (printf "%s cover" $title)
+                    "maxWidth" 600) }}
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+    {{ with $rest }}
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {{ range . }}
             <div class="card card-hover group relative flex flex-1 flex-col overflow-hidden">
                 <div class="flex flex-1 flex-col px-8 py-8">
                     <h3 class="heading-3 m-0 mb-5">{{ .Title }}</h3>
@@ -49,6 +90,7 @@
             {{ end }}
         </div>
     </section>
+    {{ end }}
 
 </div>
 {{ end }}

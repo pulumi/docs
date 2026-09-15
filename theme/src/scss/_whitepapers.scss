@@ -8,6 +8,23 @@
 // the shared primitives (.card, heading-1, body-lg, font-overline-sm) inline,
 // matching the case-study pages.
 
+// Cover thumbnail on the index page's lead card. The document is portrait and
+// the box is landscape, so height is what sizes it — the image takes the
+// container's height and finds its own width.
+.whitepaper-cover {
+    @apply flex items-center justify-center rounded-lg bg-violet-50 p-6 md:p-8;
+
+    img {
+        @apply h-full w-auto max-w-full rounded-sm object-contain;
+        // Enough lift to read as a document sitting on the field, and no more.
+        // Tinted with violet-primary rather than black so it doesn't go gray
+        // against the violet-50 fill.
+        box-shadow:
+            0 6px 20px -6px rgb(90 48 197 / 0.18),
+            0 2px 6px -2px rgb(90 48 197 / 0.10);
+    }
+}
+
 // Whitepaper body. Type comes from the default heading / link / paragraph
 // styles (main.scss + shared/_base.scss) — the same scale /what-is/ uses. What
 // lives here is only what a long-form document adds on top.
