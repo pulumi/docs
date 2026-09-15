@@ -24,12 +24,12 @@ The "Deploy with Pulumi" button lets you easily create new Pulumi projects from 
 
 For example, select the `Deploy` button to configure and create a new empty JavaScript project:
 
-[![Deploy](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
+[![Deploy](/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
 Rather than right-clicking the button to recover its image URL, copy the Markdown snippet below and drop it straight into a README, gist, or blog post:
 
 ```markdown
-[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
+[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 ```
 
 Swap the `template` query parameter for the URL of your own project template to point the button at your repository instead. See [Creating a Pulumi Button](#creating-a-pulumi-button) below for the full Markdown and HTML forms, plus the SVG and PNG image URLs.
@@ -74,14 +74,14 @@ After you've verified your project template works as expected, you can add a but
 Here's an example in Markdown:
 
 ```markdown
-[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
+[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
 ```
 
 Or, the equivalent HTML:
 
 ```html
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder">
-  <img src="https://www.pulumi.com/images/deploy-with-pulumi/dark.svg" alt="Deploy">
+  <img src="https://www.pulumi.com/images/deploy-with-pulumi/button.svg" alt="Deploy">
 </a>
 ```
 
@@ -91,10 +91,12 @@ Use the fully qualified image URL rather than a relative path — a relative pat
 
 The button reads correctly on both light and dark backgrounds, so there is a single design and no theme variant to choose. Pulumi provides it as SVG and PNG:
 
-- `https://pulumi.com/images/deploy-with-pulumi/dark.svg`
-- `https://pulumi.com/images/deploy-with-pulumi/dark.png`
+- `https://pulumi.com/images/deploy-with-pulumi/button.svg`
+- `https://pulumi.com/images/deploy-with-pulumi/button.png`
 
-Prefer the SVG — it stays sharp on high-density displays. The `light.svg` and `light.png` URLs still work and serve the same image, so snippets that already point at them keep rendering the current button.
+Prefer the SVG — it stays sharp on high-density displays.
+
+The button was previously published under `light.svg`, `light.png`, `dark.svg`, and `dark.png`. Those four URLs still work and now serve this same image, so an existing snippet keeps rendering the current button; use `button.svg` for anything new.
 
 ## Custom Git Branches
 
