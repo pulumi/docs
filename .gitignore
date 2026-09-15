@@ -150,6 +150,17 @@ _vendor/
 # working state for the walkthrough, never a commit.
 /.review-worklist-*.json
 
+# Maintainer-side queue state for `/pr-review` — the collected queue, the
+# model's judge output, the act plan, the rendered board, per-PR preview
+# screenshots, and the per-(PR, head SHA) response cache. All local working
+# state; `make lint` runs `prettier --check .` so these must never be seen.
+/.pr-review-queue.json
+/.pr-review-judgments.json
+/.pr-review-plan.json
+/.pr-review-board.html
+/.pr-review-shots/
+/.pr-review-cache/
+
 # Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
 # and `.glowup-scope-report.json`, the scope gate's report). Both are written
 # to the repo root before the `make lint` re-gate, so an unignored one makes
