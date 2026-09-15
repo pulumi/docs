@@ -65,6 +65,21 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
     assert 'class="chip r-risk"' in html.split('<details class="why">')[1]  # and risk is one of them
 
 
+def test_route_chip_keeps_its_model_span_as_markup():
+    q = _queue()
+    row(q, 3)["recommended"] = "stamp"  # what a judgments file carried before a re-analyze turned the row into a route
+    html = render.render_board(q)
+    assert '>route → @TODO-named-fallback <span class="v v-dim">model: stamp</span></span>' in html
+    assert "&lt;span" not in html.split('data-pr="3"')[1].split("</h4>")[0]
+
+
+def test_filter_chips_are_literal_and_an_empty_board_says_so():
+    html = render.render_board(_queue())
+    assert 'id="empty" hidden>' in html and 'id="reset-filters"' in html
+    assert "function has(kind, val)" in html and "anyOn(" not in html
+    assert "has('view', r.dataset.verdict)" in html
+
+
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)

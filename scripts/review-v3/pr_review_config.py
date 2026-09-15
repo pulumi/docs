@@ -4,6 +4,7 @@
     me: [docs, infra, frontend, other]   # routing lanes that are "mine"
     stamp_max_lines: 40                  # a diff at or above this is never a stamp
     stale_date_days: 3                   # blog `date:` older than this is stale
+    link_fixes: mine                     # mine | route — a link-only diff is yours whatever its lane
 
 Routing itself (subject → owning team) comes from `.github/review-routing.yml`
 via routing.py; this file only says which of those lanes the person running
@@ -28,6 +29,8 @@ import routing  # noqa: E402
 DEFAULT_PATH = Path.home() / ".pr-review.yml"
 DEFAULT_STAMP_MAX_LINES = 40
 DEFAULT_STALE_DATE_DAYS = 3
+DEFAULT_LINK_FIXES = "mine"
+LINK_FIXES_VALUES = frozenset({"mine", "route"})
 
 
 @dataclass
@@ -35,6 +38,7 @@ class UserConfig:
     me: list[str]
     stamp_max_lines: int = DEFAULT_STAMP_MAX_LINES
     stale_date_days: int = DEFAULT_STALE_DATE_DAYS
+    link_fixes: str = DEFAULT_LINK_FIXES  # "mine": a link-only diff bypasses the lane check; "route": it doesn't
     source: str = "defaults"
     warnings: list[str] = field(default_factory=list)
 
@@ -43,6 +47,7 @@ class UserConfig:
             "me": list(self.me),
             "stamp_max_lines": self.stamp_max_lines,
             "stale_date_days": self.stale_date_days,
+            "link_fixes": self.link_fixes,
             "source": self.source,
             "warnings": list(self.warnings),
         }
@@ -55,7 +60,7 @@ def parse_config(raw: object, source: str = "<raw>") -> UserConfig:
         raw = {}
     if not isinstance(raw, dict):
         raise ValueError(f"{source}: top level must be a mapping")
-    unknown = set(raw) - {"me", "stamp_max_lines", "stale_date_days"}
+    unknown = set(raw) - {"me", "stamp_max_lines", "stale_date_days", "link_fixes"}
     if unknown:
         raise ValueError(f"{source}: unknown key(s) {sorted(unknown)}")
     me = raw.get("me")
@@ -77,10 +82,15 @@ def parse_config(raw: object, source: str = "<raw>") -> UserConfig:
             raise ValueError(f"{source}: `{key}` must be a non-negative integer")
         return v
 
+    link_fixes = raw.get("link_fixes", DEFAULT_LINK_FIXES)
+    if link_fixes not in LINK_FIXES_VALUES:
+        raise ValueError(f"{source}: `link_fixes` must be one of {sorted(LINK_FIXES_VALUES)}")
+
     return UserConfig(
         me=list(dict.fromkeys(me)),
         stamp_max_lines=_int("stamp_max_lines", DEFAULT_STAMP_MAX_LINES),
         stale_date_days=_int("stale_date_days", DEFAULT_STALE_DATE_DAYS),
+        link_fixes=link_fixes,
         source=source,
         warnings=warnings,
     )
@@ -101,10 +111,11 @@ def load_user_config(path: str | Path | None = None) -> UserConfig:
 
 def self_test() -> int:
     cfg = parse_config({"me": ["docs", "infra"], "stamp_max_lines": 10})
-    assert cfg.me == ["docs", "infra"] and cfg.stamp_max_lines == 10 and cfg.stale_date_days == 3
+    assert cfg.me == ["docs", "infra"] and cfg.stamp_max_lines == 10 and cfg.stale_date_days == 3 and cfg.link_fixes == "mine"
+    assert parse_config({"link_fixes": "route"}).link_fixes == "route"
     cfg = parse_config(None)
     assert set(cfg.me) == set(routing.SUBJECTS) and cfg.warnings
-    for bad in ({"me": ["nope"]}, {"stamp_max_lines": "x"}, {"extra": 1}, ["a"]):
+    for bad in ({"me": ["nope"]}, {"stamp_max_lines": "x"}, {"extra": 1}, ["a"], {"link_fixes": "always"}):
         try:
             parse_config(bad)
             raise AssertionError(f"accepted {bad!r}")

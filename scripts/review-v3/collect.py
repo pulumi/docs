@@ -660,6 +660,23 @@ def select_prs(listed: list[dict], *, numbers: list[int] | None, authors: list[s
     return out
 
 
+def routing_teams(gh: GhClient, repo_root: Path | None) -> dict[str, bool | None]:
+    """`{"org/slug": exists}` for every team review-routing.yml names, so the
+    analyzer can route to the team when it is real and to the SLA person when
+    it isn't yet. An unreadable config yields {} (route to people)."""
+    path = (repo_root or _REPO_ROOT) / ".github" / "review-routing.yml"
+    try:
+        import routing  # noqa: PLC0415  (sibling module; loaded here so a broken config can't break collect)
+        teams = routing.load_config(path).teams
+    except Exception:  # noqa: BLE001
+        return {}
+    out: dict[str, bool | None] = {}
+    for full in sorted(set(teams.values())):
+        org, _, slug = full.partition("/")
+        out[full] = gh.team_exists(org, slug) if org and slug else None
+    return out
+
+
 def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str] | None = None,
             since: str | None = None, cache_dir: Path | None = DEFAULT_CACHE_DIR,
             repo_root: Path = _REPO_ROOT, ai_override: str | None = None, workers: int = 6,
@@ -690,6 +707,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
         "repo": gh.repo,
         "backend": gh.backend,
         "approver": approver,
+        "teams": routing_teams(gh, repo_root),
         "filters": {"pr": numbers or [], "author": authors or [], "since": since},
         "open_count": len(listed),
         "prs": prs,

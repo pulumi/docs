@@ -337,6 +337,29 @@ def test_collect_over_snapshot_end_to_end():
     assert q["approver"] == "CamSoper"  # GET /user, no --approver needed
 
 
+def test_routing_teams_asks_github_for_every_configured_team():
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        make_snapshot(root, [pr_spec(1)])
+        (root / ".github").mkdir()
+        (root / ".github" / "review-routing.yml").write_text(
+            "schema: 1\nteams: {docs-guild: pulumi/docs-guild, marketing: pulumi/docs-marketing-review, tools: pulumi/docs-tools}\n"
+            "bots: []\nmatrix:\n  docs: {mechanical: none, substantive: docs-guild}\n  blog: {mechanical: none, substantive: marketing}\n"
+            "  website: {mechanical: none, substantive: marketing}\n  programs: {mechanical: none, substantive: docs-guild}\n"
+            "  infra: {mechanical: tools, substantive: tools, staging_evidence: required}\n  frontend: {mechanical: none, substantive: marketing}\n"
+            "  other: {mechanical: none, substantive: tools}\nclaims_overlay: {add: marketing}\nexternal_contributors: {skip_gates: []}\n"
+            "sla:\n  tools: {business_days: 1, escalate_to: a}\n  docs-guild: {business_days: 3, escalate_to: b}\n  marketing: {business_days: 3, escalate_to: c}\n"
+            "author_staleness: {warn_days: 14, close_days: 21}\nwaive: {label: review:waived, log_prefix: x/}\nnot_governed: {authors: [], author_label_pairs: []}\n")
+        _write(root, "GET", "orgs/pulumi/teams/docs-guild", None, {"slug": "docs-guild"})
+        gh = GhClient("pulumi/docs", "snapshot", snapshot_dir=root)
+        teams = collect.routing_teams(gh, root)
+        assert teams == {"pulumi/docs-guild": True, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": False}
+        q = collect.collect(gh, cache_dir=None, repo_root=root, workers=1, numbers=[1])
+        assert q["teams"] == teams
+    # no routing config in the tree: no teams, route to people
+    assert collect_specs([pr_spec(2)])["teams"] == {}
+
+
 def test_requested_reviewers_drop_bots():
     q = collect_specs([pr_spec(46, requested_users=["cnunciato", {"login": "copilot-pull-request-reviewer[bot]", "type": "Bot"}],
                                requested_teams=["docs-guild"])])

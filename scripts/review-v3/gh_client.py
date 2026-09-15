@@ -347,6 +347,22 @@ class GhClient:
                 return None
             raise
 
+    def team_exists(self, org: str, slug: str) -> bool | None:
+        """Whether `org/slug` is a GitHub team the token can see: True/False
+        on a definitive answer, None when the token can't read teams (403).
+        The route target prefers the team and falls back to a person only on
+        False or None, so a team that lands later is picked up on the next
+        collect without any config change."""
+        try:
+            self.get(f"orgs/{org}/teams/{slug}")
+            return True
+        except GhNotFound:
+            return False
+        except GhError as exc:
+            if exc.status in (302, 403):
+                return None
+            raise
+
     def me(self) -> str | None:
         """The token's login (`GET /user`), or None when the backend can't say."""
         try:
