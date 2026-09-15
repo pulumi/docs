@@ -1,43 +1,15 @@
-// Whitepapers section (/whitepapers/) styles. Split out of _templates.scss for
-// the same reason _case-studies.scss was: a whitepaper is a long-form document,
-// not a template page, so it shouldn't be wired into the template-page component
-// system. Imported after "templates" in main.scss so the shared mixins defined
-// there are in scope here.
-//
-// The hero and the index cards carry no section classes at all — they compose
-// the shared primitives (.card, heading-1, body-lg, font-overline-sm) inline,
-// matching the case-study pages.
-
-// Cover thumbnail on the index page's lead card. The document is portrait and
-// the box is landscape, so height is what sizes it — the image takes the
-// container's height and finds its own width.
-// Square-cornered and flush to the card's edges — the card's own `rounded-lg`
-// plus `overflow-hidden` is what rounds the outer corners, the same way the
-// logo tile works on a case-study card.
 .whitepaper-cover {
     @apply flex items-center justify-center bg-violet-50 p-6 md:p-8;
 
     img {
-        // An absolute cap, never a percentage. The field's height comes from
-        // stretching to the flex line, and the flex line is sized by this image
-        // — so a percentage height has nothing definite to resolve against,
-        // falls back to the image's natural height, and drags the card to ~780px.
         @apply h-auto w-auto max-h-56 max-w-full rounded-sm object-contain md:max-h-72;
-        // Enough lift to read as a document sitting on the field, and no more.
-        // Tinted with violet-primary rather than black so it doesn't go gray
-        // against the violet-50 fill.
         box-shadow:
             0 6px 20px -6px rgb(90 48 197 / 0.18),
             0 2px 6px -2px rgb(90 48 197 / 0.10);
     }
 }
 
-// Whitepaper body. Type comes from the default heading / link / paragraph
-// styles (main.scss + shared/_base.scss) — the same scale /what-is/ uses. What
-// lives here is only what a long-form document adds on top.
 .whitepaper-content {
-    // Anchor offset for the fixed nav: every h2 is an "On this page" target.
-    // (Mirrors .case-study-content in _case-studies.scss.)
     :is(h2, h3, h4, h5, h6) {
         @apply scroll-mt-22;
 
@@ -46,9 +18,6 @@
         }
     }
 
-    // Section rules, authored as real <hr>s in the markdown. Keeping them in the
-    // content (rather than as a border on every h2) means a document opts in,
-    // and the first section doesn't get a stray rule above it.
     hr {
         @apply border-0 border-t border-gray-200 my-16;
     }
@@ -61,13 +30,6 @@
         }
     }
 
-    // Editorial tables. A whitepaper's tables are read as prose, not scanned as
-    // reference grids, so they drop the shared gray fill and gridlines
-    // (_tables.scss) for hairline row rules and an overline header.
-    //
-    // Scoped to min-width md, the exact complement of the max-width 767.98px
-    // stacked-card reflow in _tables.scss, so that reflow is left alone rather
-    // than half-overridden into doubled borders.
     @include screen-md {
         table {
             @apply border-collapse bg-transparent rounded-none;
@@ -99,8 +61,6 @@
         }
     }
 
-    // Sources & notes: reference apparatus, not body copy. Set down a size and
-    // unbulleted so it reads as a footnote block.
     .sources-notes {
         @apply list-none pl-0 body-sm text-gray-primary;
 
