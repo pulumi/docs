@@ -11,7 +11,7 @@ menu:
     weight: 100
 ---
 
-By default, there are a set of environment variables set by the process automatically:
+Pulumi Deployments sets the following environment variables automatically:
 
 - `GITHUB_TOKEN`: A GitHub access token, set automatically when the deployment's source is a GitHub repository. When the source is connected through the [Pulumi GitHub App](/docs/integrations/version-control/github-app/#github-token-in-deployments), this is a short-lived app installation token scoped to your whole GitHub App installation, not just the source repository; when you configure the source with your own personal access token, that token is used instead. Not set if you provide your own `GITHUB_TOKEN` through custom environment variables. See [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments) for scope and security details.
 - `PULUMI_ACCESS_TOKEN`: A temporary token with read-write access only to the stack being deployed.
@@ -26,6 +26,14 @@ By default, there are a set of environment variables set by the process automati
 - `PULUMI_CI_OPERATION`: Current Pulumi operation (`update`, `preview`, `destroy`, `refresh`, `detect-drift`, or `remediate-drift`)
 
 These can be overridden or extended by configuring custom environment variables.
+
+## Defining custom environment variables
+
+You can add your own variables on the stack's **Settings** → **Deploy** page. Mark a variable as secret if its value is sensitive. Secret values are encrypted in transit and at rest, and are never shown again after you save them, so editing or renaming a secret variable requires re-entering its value.
+
+{{% notes type="tip" %}}
+Environment variables are passed to the deployment runner. For configuration and secrets that your Pulumi program itself reads, use [Pulumi ESC](/docs/esc/guides/pulumi-iac/) instead.
+{{% /notes %}}
 
 ## PULUMI_ENV
 

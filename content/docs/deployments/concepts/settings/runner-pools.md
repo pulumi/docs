@@ -13,18 +13,26 @@ menu:
 
 When using Pulumi Deployments, you have options for where your workflows run:
 
-- **Pulumi Hosted Pool**: Managed by Pulumi and available to all Pulumi Cloud customers
-- **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/discovery-governance/discovery/) scans, and [policy evaluations](/docs/discovery-governance/policy/)
+- **[Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/)**: runners in the Pulumi hosted pool, managed by Pulumi.
+- **[Customer-managed deployment runners](/docs/deployments/concepts/customer-managed-runners/)**: self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/discovery-governance/discovery/) scans, and [policy evaluations](/docs/discovery-governance/policy/).
 
-If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
+To choose where a stack's deployments run, open the stack's **Settings** → **Deploy** page and pick a pool from the **Deployment runner pool** select. Choose **Pulumi hosted pool** to use Pulumi-managed runners.
 
-For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/concepts/customer-managed-runners/).
+If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi hosted pool.
 
-## Role assignment
+## Customer-managed deployment runner pools
 
-When configuring deployment settings, you can assign organization roles to the stack token used for deployments. This setting appears as a dropdown menu under "Role assignment" that displays available organization roles.
+{{< pulumi-cloud "customer-managed-runners" "named" />}}
 
-If no role is selected, the deployment will only have access to the specific stack being deployed. However, this limited access can cause failures when the deployment needs to:
+To run a stack's deployments on customer-managed deployment runners, select one of your organization's runner pools from the **Deployment runner pool** select. To create and scale pools, see the [customer-managed deployment runners setup guide](/docs/deployments/guides/customer-managed-workflow-runners/).
+
+Self-hosted Pulumi Cloud installations have no Pulumi hosted pool, so every stack must use a customer-managed deployment runner pool. If the organization has no pools yet, the settings page links to create one, or tells you to ask an organization admin if you can't manage pools yourself.
+
+## Pulumi Cloud role
+
+When configuring deployment settings, you can choose the organization role that a stack's deployments run as. On the stack's **Settings** → **Deploy** page, pick a role from the **Pulumi Cloud role** select. Custom roles are marked with a **Custom** badge.
+
+If you leave the select on **Default access**, the deployment will only have access to the specific stack being deployed. However, this limited access can cause failures when the deployment needs to:
 
 - Access stack references from other stacks
 - Access environments
