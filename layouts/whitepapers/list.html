@@ -57,10 +57,10 @@
             </div>
             {{ with .Params.cover }}
             {{/* The cover page sits on its own tinted field so a white document
-                 edge reads against the card. Height is what sizes the art, so at
-                 md the field stretches to the card and takes a floor to stand on
-                 rather than following an aspect ratio. */}}
-            <div class="whitepaper-cover aspect-[4/3] w-full shrink-0 md:aspect-auto md:min-h-80 md:w-1/2">
+                 edge reads against the card. At md the field stretches to
+                 whatever height the text column needs and the art sizes off
+                 that, so the card stays as short as its content allows. */}}
+            <div class="whitepaper-cover aspect-[16/10] w-full shrink-0 md:aspect-auto md:w-1/2">
                 {{ partial "fingerprinted-img.html" (dict
                     "src" .
                     "alt" (printf "%s cover" $title)
