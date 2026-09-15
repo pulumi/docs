@@ -61,7 +61,7 @@ Now that we have an initial project, we will also add the `Pulumi.Random` packag
 
 Lastly, we call `dotnet restore` to also download the `Pulumi.Azure` package that was included in the project when it was created.
 
-## Writing the Stack
+## Writing the stack
 
 We will start by defining a few constants, the constructor, an empty method called `Stack()`, which will be called by the constructor to start creating the resources and a property named `Cookie`, which will hold the cluster’s secret, decorated with the `Output` attribute to let Pulumi know that the value needs to be printed out once the deployment is complete:
 
@@ -214,7 +214,7 @@ Note that we are using two loops to create the required resources. The first one
 
 This workaround is required because (at the writing of the article) Azure Container Instances do not allow manual allocation of private IP address, and because RabibtMQ’s discovery record requires those IPs which are available only after the containers are created, we end up in a chicken-and-the-egg situation. To overcome that, we need to allow the containers to start, but delay the execution of RabbitMQ’s startup script without blocking the container and use to our advantage the fact that RabbitMQ doesn’t start when it can‘t resolve its own hostname (that is why we create those DNS records last).
 
-## Deploying the Stack
+## Deploying the stack
 
 Once the script is complete, we can call `pulumi up --yes` to deploy it, where the `--yes` argument just skips the question whether to deploy or not once Pulumi has built the deployment app and discovered all the resources.
 

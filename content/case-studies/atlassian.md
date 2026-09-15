@@ -124,5 +124,5 @@ Here is a summary of how Pulumi helped Bitbucket and the DevSpeed team.
 - Allowed developers to use general purpose programming languages like Python and familiar software tools to build and manage infrastructure as code
 - Enabled Bitbucket developers to easily provision approved cloud infrastructure using a self-service dashboard built with Pulumi
 - Reduced the time Bitbucket developers spent maintaining their instances from 8 hours per week to fewer than four.
-- Boosted productivity of developers in Sydney by extending cloud deployments into another AWS region using Infrastructure as Code in Python
+- Boosted productivity of developers in Sydney by extending cloud deployments into another AWS region using infrastructure as code in Python
 - Reduced the size and complexity of codebase for managing infrastructure while increasing its clarity

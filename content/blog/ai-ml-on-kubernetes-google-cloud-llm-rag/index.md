@@ -174,7 +174,7 @@ Try Jay’s demo code on [Creating an AI Training Platform on GKE with Pulumi](h
 
 Pulumi provides several advantages for AI/ML teams running workloads on Kubernetes:
 
-### 1. Use General-Purpose Languages for Infrastructure as Code
+### 1. Use General-Purpose Languages for infrastructure as code
 
 - Most AI/ML engineers already work with **Python** or **Go**, and Pulumi lets them manage infrastructure using the same language.
 - No need to learn YAML or Kubernetes manifests—define everything programmatically.
