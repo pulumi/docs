@@ -54,7 +54,8 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
             statuses: list[dict] | None = None, created_at: str = "2026-09-10T10:00:00Z",
             updated_at: str = "2026-09-14T10:00:00Z", commits: list[str] | None = None,
             review_comments: list[dict] | None = None, head_ref: str | None = None,
-            head_repo: str = "pulumi/docs") -> dict:
+            head_repo: str = "pulumi/docs", requested_users: list | None = None,
+            requested_teams: list[str] | None = None) -> dict:
     """A compact description of one PR that make_snapshot() expands into
     every endpoint collect.py reads."""
     files = files if files is not None else [
@@ -70,6 +71,7 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
         "statuses": statuses or [], "created_at": created_at, "updated_at": updated_at,
         "commits": commits or ["Do the thing"], "review_comments": review_comments or [],
         "head_ref": head_ref or f"branch-{number}", "head_repo": head_repo,
+        "requested_users": requested_users or [], "requested_teams": requested_teams or [],
     }
 
 
@@ -83,7 +85,8 @@ def _write(root: Path, method: str, path: str, params: dict | None, data) -> Non
     f.write_text(json.dumps(data))
 
 
-def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", members: list[str] = ()) -> None:
+def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", members: list[str] = (),
+                  me: str = "CamSoper") -> None:
     listed = []
     for s in specs:
         user = {"login": s["author"], "type": s["author_type"]}
@@ -111,11 +114,15 @@ def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", memb
         _write(root, "GET", f"repos/{repo}/pulls/{n}/commits", None,
                [{"sha": f"{i:040x}", "commit": {"message": m}} for i, m in enumerate(s["commits"], 1)])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/comments", None, s["review_comments"])
-        _write(root, "GET", f"repos/{repo}/pulls/{n}/requested_reviewers", None, {"users": [], "teams": []})
+        _write(root, "GET", f"repos/{repo}/pulls/{n}/requested_reviewers", None, {
+            "users": [({"login": u, "type": "User"} if isinstance(u, str) else u) for u in s["requested_users"]],
+            "teams": [{"slug": t} for t in s["requested_teams"]],
+        })
         _write(root, "GET", f"repos/{repo}/commits/{s['head_sha']}/check-runs", {"per_page": 100},
                {"total_count": len(s["check_runs"]), "check_runs": s["check_runs"]})
         _write(root, "GET", f"repos/{repo}/commits/{s['head_sha']}/statuses", None, s["statuses"])
     _write(root, "GET", f"repos/{repo}/pulls", {"state": "open"}, listed)
+    _write(root, "GET", "user", None, {"login": me, "type": "User"})
     for m in members:
         _write(root, "GET", f"orgs/pulumi/members/{m}", None, None)
 
@@ -327,6 +334,14 @@ def test_collect_over_snapshot_end_to_end():
     assert p["preview"]["status"] == "ready" and p["files"][0]["path"] == "content/docs/iac/x.md"
     assert p["risk_tier"] == "typo" and p["scrutiny"] == "standard"
     assert q["schema_version"] == 1 and q["errors"] == []
+    assert q["approver"] == "CamSoper"  # GET /user, no --approver needed
+
+
+def test_requested_reviewers_drop_bots():
+    q = collect_specs([pr_spec(46, requested_users=["cnunciato", {"login": "copilot-pull-request-reviewer[bot]", "type": "Bot"}],
+                               requested_teams=["docs-guild"])])
+    rr = q["prs"][0]["requested_reviewers"]
+    assert rr == {"users": ["cnunciato"], "teams": ["docs-guild"]}
 
 
 def test_collect_cache_serves_files_until_head_or_updated_moves():

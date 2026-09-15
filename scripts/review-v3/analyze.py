@@ -92,6 +92,7 @@ REASON_CODES = {
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to",
+    "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
     "author": "author type when human",
@@ -415,6 +416,35 @@ def domains_and_owner(pr: dict, config: routing.Config) -> dict:
             "staging_required": res.staging_evidence_required}
 
 
+def team_lanes(slug: str, config: routing.Config) -> set[str]:
+    """Lanes a requested team owns, via review-routing.yml (`teams:` maps a
+    role to `org/slug`; the matrix maps subjects to roles)."""
+    role = next((r for r, full in config.teams.items() if full.split("/", 1)[-1] == slug or full == slug), None)
+    if role is None:
+        return set()
+    return {d for d, cell in config.matrix.items() if role in (cell.get("mechanical"), cell.get("substantive"))}
+
+
+def handed_off_to(pr: dict, approver: str | None, config: routing.Config, me: list[str]) -> list[str]:
+    """Who this PR is waiting on, when it is not me: the requested human
+    reviewers and teams that aren't the approver or one of the approver's
+    lanes. Empty when the approver is among the requested reviewers, or when
+    nobody is requested. Bots were already dropped by collect.py.
+
+    The review request is the hand-off record: it lives on the PR, every
+    session and machine sees it, and GitHub clears it when the reviewer
+    acts, which is exactly when the row should come back."""
+    rr = pr.get("requested_reviewers") or {}
+    users = [u for u in rr.get("users") or [] if u]
+    teams = [t for t in rr.get("teams") or [] if t]
+    mine = norm_login(approver) if approver else ""
+    if mine and any(norm_login(u) == mine for u in users):
+        return []
+    others = [f"@{u}" for u in users]
+    others += [f"@{t}" for t in teams if not (set(me) & team_lanes(t, config))]
+    return others
+
+
 def lanes_for_owner(spec: str | None, config: routing.Config, me: list[str]) -> set[str] | None:
     """Which domains count as "mine" for `--owner`: me (default), any, a
     role name, or @login (the role whose sla.escalate_to is that person)."""
@@ -440,6 +470,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     reasons: list[str] = []
     review = pr.get("review") or {}
     labels = set(pr.get("labels") or [])
+    pr["handed_off_to"] = handed_off_to(pr, ctx.get("approver"), config, cfg.me)
+    pr["handed_off"] = bool(pr["handed_off_to"])
     lanes = domains_and_owner(pr, config)
     pr.update(lanes)
     is_mine = mine is None or bool(set(lanes["domains"]) & mine)
@@ -470,6 +502,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if pr.get("draft"):
         reasons.append("draft")
         blocked.append("draft")
+    if pr["handed_off"]:
+        reasons.append("handed-off:" + ",".join(pr["handed_off_to"]))
 
     # -- review surface
     status = review.get("status") or "ABSENT"
@@ -549,17 +583,20 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
 
     # -- cross-PR (filled by analyze(); read here). Capped: a link-sweep PR
     # can collide with twenty others, and the cluster card carries the rest.
-    cross_codes = ctx["cross"].get(n, [])
+    # A collision with a PR that is handed off to someone else is advisory
+    # (`:theirs`): if mine merges first, the conflict is theirs to resolve;
+    # it neither gates my stamp nor pins the cluster for me.
+    cross_codes = [c + ":theirs" if _other_pr(c) in ctx["handed_off"] else c for c in ctx["cross"].get(n, [])]
     shown = cross_codes[:CROSS_CODE_CAP]
     for code in cross_codes:
         if code not in shown:
-            if code.startswith(("collision:", "directional:", "duplicate:")) and ":same-file" not in code:
+            if code.startswith(("collision:", "directional:", "duplicate:")) and not code.endswith((":same-file", ":theirs")):
                 stamp_ok = False
             continue
         reasons.append(code)
-        if code.startswith(("collision:", "directional:", "duplicate:")) and ":same-file" not in code:
+        if code.startswith(("collision:", "directional:", "duplicate:")) and not code.endswith((":same-file", ":theirs")):
             stamp_ok = False
-        if code.startswith("duplicate:"):
+        if code.startswith("duplicate:") and not code.endswith(":theirs"):
             other = code.split(":")[1].lstrip("#")
             actions.append({"id": "close", "label": f"close as duplicate of #{other}", "cmd": f"--close {n} --superseded-by {other}"})
     if len(cross_codes) > CROSS_CODE_CAP:
@@ -601,6 +638,11 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr.setdefault("judgments", [])
     pr.setdefault("fix_draft", None)
     pr["summary"] = one_line_summary(pr)
+
+
+def _other_pr(code: str) -> int | None:
+    m = re.match(r"^(?:collision|directional|duplicate):#(\d+)", code)
+    return int(m.group(1)) if m else None
 
 
 def _day(s: str) -> date | None:
@@ -650,18 +692,27 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
         cross.setdefault(d["adds_links_pr"], []).append(f"directional:#{d['removes_links_pr']}:{d['path']}")
     for d in duplicates:
         cross.setdefault(d["newer"], []).append(f"duplicate:#{d['older']}")
+    approver = queue.get("approver")
+    handed = {p["number"] for p in prs if handed_off_to(p, approver, config, cfg.me)}
     ctx = {
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": cross,
-        "today": today or datetime.now(timezone.utc).date(),
+        "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": handed,
     }
     for pr in prs:
         analyze_pr(pr, ctx)
+    for c in clusters:
+        c["handed_off"] = [n for n in c["prs"] if n in handed]
+        c["mine"] = [n for n in c["prs"] if n not in handed]
+        c["merge_order"] = [n for n in c["merge_order"] if n not in handed]
+    for d in directional:
+        d["theirs"] = d["adds_links_pr"] in handed or d["removes_links_pr"] in handed
     queue["clusters"] = clusters
     queue["directional"] = directional
     queue["duplicates"] = duplicates
     queue["config"] = {**cfg.to_json(), "include_infra": include_infra, "strict_stances": strict_stances, "owner": owner or "me"}
-    queue["counts"] = {v: sum(1 for p in prs if p.get("verdict") == v) for v in VERDICTS}
+    queue["counts"] = {v: sum(1 for p in prs if p.get("verdict") == v and not p.get("handed_off")) for v in VERDICTS}
+    queue["counts"]["handed-off"] = sum(1 for p in prs if p.get("handed_off"))
     queue["analyzed_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     queue["reason_codes"] = REASON_CODES
     return queue

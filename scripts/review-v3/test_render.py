@@ -47,7 +47,7 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
     assert html.index("Collisions first") < html.index('class="grp"')
     heads = re.findall(r'<div class="sec-head"><h2>([^<]+)</h2><span class="dlabel">([^<]+)</span>', html)
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
-    assert "C1 · 2 PRs · overlap" in html and "Merge order:" in html
+    assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
 
 
 def test_board_rows_carry_verdict_chips_reasons_and_actions():
@@ -114,6 +114,31 @@ def test_terminal_table_and_stamp_command():
     assert text.rstrip().endswith("$ /pr-review --act --stamp 7")
     one = render.render_terminal(q, 8)
     assert "1 rows" in one and "     7  stamp" not in one
+
+
+def test_handed_off_rows_collapse_into_the_waiting_list():
+    from test_analyze import _file  # noqa: PLC0415
+    q = run([stampable(7), stampable(8, title="Chris has this one", requested_users=["cnunciato"],
+                                     files=[_file("content/docs/b.md", ["x"])])])
+    html = render.render_board(q)
+    assert 'data-pr="8"' not in html  # no full row
+    assert "Waiting on others" in html and "Chris has this one" in html and "@cnunciato" in html
+    assert "<b>1</b><span>waiting on others</span>" in html
+    full = render.render_board(q, include_handed_off=True)
+    assert 'data-pr="8"' in full and "Waiting on others" not in full
+    text = render.render_terminal(q)
+    assert "waiting on others (1):" in text and "     8  " not in text.split("waiting on others")[0]
+    assert "     8  " in render.render_terminal(q, include_handed_off=True)
+
+
+def test_mostly_theirs_cluster_is_demoted_from_the_pinned_slots():
+    from test_analyze import _file  # noqa: PLC0415
+    mine = stampable(1, title="Mine", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    theirs = stampable(2, title="Theirs", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    html = render.render_board(run([mine, theirs]))
+    assert "1 of 2 PRs mine" in html and "+1 waiting on others" in html
+    assert html.index("<details><summary>1 more") < html.index("C1 · 1 of 2 PRs mine")  # inside the collapsed section
+    assert 'class="chip r-collision theirs"' in html
 
 
 def run_standalone() -> int:
