@@ -35,6 +35,9 @@
     <section>
         <div class="card card-hover group relative flex flex-col gap-8 p-8 md:flex-row md:items-center md:gap-10 md:p-10">
             <div class="flex flex-1 flex-col">
+                {{ with .Params.card_label }}
+                <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
+                {{ end }}
                 <h2 class="heading-2 m-0 mb-5">{{ .Title }}</h2>
                 <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
                 {{ with .Description }}
@@ -70,6 +73,9 @@
             {{ range . }}
             <div class="card card-hover group relative flex flex-1 flex-col overflow-hidden">
                 <div class="flex flex-1 flex-col px-8 py-8">
+                    {{ with .Params.card_label }}
+                    <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
+                    {{ end }}
                     <h3 class="heading-3 m-0 mb-5">{{ .Title }}</h3>
                     <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
                     {{ with .Description }}

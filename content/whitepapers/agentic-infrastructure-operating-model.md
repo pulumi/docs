@@ -6,6 +6,7 @@ meta_desc: |
     Agents write most of the code and almost none of the infrastructure. This whitepaper explains why, and the operating model teams use to close the gap.
 pdf: /documents/whitepapers/pulumi-whitepaper-agentic-infrastructure-operating-model.pdf
 cover: /images/whitepapers/agentic-infrastructure-operating-model-cover.png
+card_label: Summer 2026
 weight: 1
 
 sections:
