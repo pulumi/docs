@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - master
+      - denny-hill
       - 'release/**'
 
 # Only the newest commit on a PR is worth building. Without this, pushing three
