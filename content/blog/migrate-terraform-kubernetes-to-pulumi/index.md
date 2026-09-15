@@ -37,6 +37,8 @@ This guide walks through migrating a Kubernetes stack from Terraform's `hashicor
 
 It assumes you've already decided to migrate. If you're still weighing whether Terraform can manage Kubernetes well in the first place, [our practical guide to Terraform and Kubernetes](/blog/terraform-kubernetes/) covers that question directly.
 
+[Neo](/product/neo/) can drive most of this conversion and import work for you, including zero-downtime resource adoption. This guide covers the same ground by hand: useful when you want to review and adjust each step yourself, or when part of your config (`kubernetes_manifest`, CRDs) needs the kind of judgment calls that are worth understanding regardless of which path you take. The [Terraform migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) covers the general, non-Kubernetes-specific version of this same migration, including `pulumi-terraform-migrate` as a third, state-first option.
+
 <!--more-->
 
 ## What you need before you start
@@ -83,7 +85,7 @@ The converter handles typed Kubernetes resources well, because they map cleanly 
 | `helm_release` | Partial | Review generated Helm resource options against the Terraform release config |
 | CRDs and CRD instances | No 1:1 converter output | Rewrite by hand; see [below](#rewriting-kubernetes_manifest-and-crds-by-hand) |
 
-Treat `kubernetes_manifest` as the resource type most worth reviewing line by line. Terraform's `kubernetes_manifest` accepts arbitrary Kubernetes API objects as a generic escape hatch, which is exactly why there's no single typed Pulumi resource it maps to; this follows from the resource's schemaless shape rather than from a documented converter behavior, so treat the table row above as the expected outcome to verify against your own `pulumi convert` output rather than a guaranteed one.
+Treat `kubernetes_manifest` as the resource type most worth reviewing line by line. Terraform's `kubernetes_manifest` accepts arbitrary Kubernetes API objects as a generic escape hatch, and that schemaless shape is exactly why there's no single typed Pulumi resource it maps to: the converter has no fixed set of fields to translate, so it can't emit one.
 
 ## Rewriting `kubernetes_manifest` and CRDs by hand
 
@@ -191,7 +193,9 @@ Converting the code gives you a Pulumi program, but the resources it describes a
 pulumi import kubernetes:core/v1:ConfigMap app-config default/app-config
 ```
 
-For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. This isn't spelled out on a single reference page the way an AWS resource's ARN format is; it's the convention the Kubernetes provider expects, and the worked example above reflects how teams doing this migration have applied it in practice. Treat it as a starting point rather than a guarantee: if `pulumi import` rejects an id, run `kubectl api-resources -o wide | grep <kind>` to confirm whether that resource type is namespaced or cluster-scoped, and `kubectl get <type> <name> -n <namespace>` to confirm the object actually exists under the id you're passing, before trying again.
+For a Kubernetes provider, the id you pass is the object's identity in the cluster: namespaced objects use `<namespace>/<name>`, and cluster-scoped objects (a `ClusterRole`, for example) use just `<name>`. If `pulumi import` rejects an id, run `kubectl api-resources -o wide | grep <kind>` to confirm whether that resource type is namespaced or cluster-scoped, and `kubectl get <type> <name> -n <namespace>` to confirm the object exists under the id you're passing.
+
+If your Terraform state has more resources than you want to import one at a time, `pulumi import --from terraform ./terraform.tfstate` reads a `.tfstate` file directly and imports every resource in its root module in one pass, marking each protected in the process. It's the fastest route for a config made up mostly of the typed resources from the table above. Reach for the per-resource form instead when you're importing selectively (bringing one namespace across at a time during a staged cutover, for example) or adopting a `kubernetes_manifest` or CRD instance you've already hand-rewritten as a `CustomResource`, since the bulk import expects your Pulumi program's resource declarations to already exist and match what `pulumi convert` would have generated for a typed resource.
 
 Importing one resource at a time works for a small stack. For anything larger, `pulumi import --file` takes a JSON file listing every resource at once:
 
@@ -219,7 +223,7 @@ Most teams don't cut over a whole cluster in one step. A namespace-by-namespace 
 
 **Draw the ownership line before you start.** Decide which namespaces or resource types move to Pulumi first, and don't let both tools manage the same object at the same time; that produces drift and confusing plan/preview output on both sides.
 
-**Read values out of the Terraform state you haven't migrated yet.** If your new Pulumi program needs an output from a Terraform-managed resource, such as a cluster endpoint or a generated secret name, the `@pulumi/terraform` package's `state.getLocalReferenceOutput` reads a local state file directly, and `RemoteStateReference` reads a remote backend (S3, Terraform Cloud, and others). That lets you migrate consumers before you migrate the resources they depend on. Details: [Reference Terraform state](/docs/iac/get-started/terraform/reference-state/).
+**Read values out of the Terraform state you haven't migrated yet.** If your new Pulumi program needs an output from a Terraform-managed resource, such as a cluster endpoint or a generated secret name, the `@pulumi/terraform` package's `state.getLocalReferenceOutput` reads a local state file directly, and `state.getRemoteReferenceOutput` reads a remote backend (S3, HCP Terraform, Terraform Enterprise, and others; S3 also has its own `getS3ReferenceOutput`). That lets you migrate consumers before you migrate the resources they depend on. Details: [Reference Terraform state](/docs/iac/get-started/terraform/reference-state/).
 
 **Detach, don't destroy, on either side of the handoff.** When you finish migrating a resource and remove its Terraform block, a plain `terraform destroy` (or a `terraform apply` that drops the resource from config) would delete the live object unless you've already told Terraform to forget it (`terraform state rm`, or the equivalent lifecycle handling). On the Pulumi side, if you ever need to remove a resource from a Pulumi stack without touching the underlying object, `retainOnDelete: true` removes it from state without calling the provider's delete: `pulumi.CustomResourceOptions({ retainOnDelete: true })` in TypeScript, `ResourceOptions(retain_on_delete=True)` in Python, `pulumi.RetainOnDelete(true)` in Go. `protect` is a different guarantee: it blocks deletion outright rather than letting you detach state, so use it once a resource is fully owned by Pulumi and you want to prevent an accidental `pulumi destroy` from touching it.
 
