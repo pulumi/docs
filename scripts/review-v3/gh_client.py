@@ -374,6 +374,9 @@ class GhClient:
     def update_pr(self, number: int, **fields) -> dict:
         return self.patch(f"repos/{self.repo}/pulls/{number}", fields) or {}
 
+    def add_labels(self, number: int, labels: list[str]) -> dict:
+        return self.post(f"repos/{self.repo}/issues/{number}/labels", {"labels": labels}) or {}
+
     def close_pr(self, number: int) -> dict:
         return self.update_pr(number, state="closed")
 

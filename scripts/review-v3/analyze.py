@@ -621,6 +621,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         actions.insert(0, {"id": "stamp", "label": "approve & merge", "cmd": f"--stamp {n}"})
     elif verdict == "judge":
         actions.insert(0, {"id": "stamp", "label": "approve as-is", "cmd": f"--stamp {n} --force"})
+        actions.insert(1, {"id": "request-changes", "label": "send back to author", "cmd": f"--request-changes {n}"})
         if pr.get("risk_tier") == "infra":
             actions.append({"id": "deploy", "label": "deploy to pulumi-test.io", "cmd": f"--deploy {n}"})
         if pr.get("one_click_suggestions") or any(r.startswith("desc:") for r in reasons):
@@ -758,7 +759,7 @@ def merge_judgments(queue: dict, judgments: dict) -> dict:
             if not any(a["id"] == "fix" for a in pr.get("actions") or []):
                 pr["actions"].append({"id": "fix", "label": "apply fixes", "cmd": f"--fix {n}"})
         rec = val.get("recommended")
-        if rec in VERDICTS and pr.get("verdict") == "judge":
+        if rec in VERDICTS + ("request-changes", "close") and pr.get("verdict") == "judge":
             pr["recommended"] = rec
     return queue
 

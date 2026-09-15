@@ -17,6 +17,10 @@ comment templates and attribution footer):
                      --merge-humans (authors merge their own PRs).
   --route N:@user|team   request review and post the row's defects (reason
                      codes + judgments) as one comment.
+  --request-changes N    post a CHANGES_REQUESTED review built from the row's
+                     judgments (one line-anchored item each, no filler) and
+                     apply `needs-author-response`. The author-facing verb the
+                     old menus had; the approver's way to say "your turn".
   --unblock N        merge the base branch into the head as a merge commit
                      (never rebase, never force-push). Only conflict-free
                      merges are pushed; anything else is aborted and reported.
@@ -190,6 +194,11 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         if not target:
             raise ActError(f"--route {spec}: no target and the row has no route action")
         steps.append(step("route", int(n), target=target))
+    for n in args.request_changes or []:
+        pr = pr_of(n)
+        if not (pr.get("judgments") or open_items(pr)):
+            raise ActError(f"--request-changes {n}: nothing to send back — no judgments and no open findings on the row")
+        steps.append(step("request-changes", n, note=args.reason or ""))
     for n in args.unblock or []:
         pr = pr_of(n)
         ok, why = push_allowed(pr)
@@ -240,6 +249,10 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
             pr = by.get(s.pr) or {}
             for r in (pr.get("reasons") or [])[:6]:
                 lines.append(f"       · {r}")
+        elif s.kind == "request-changes":
+            lines.append("     POST review CHANGES_REQUESTED + label needs-author-response; body:")
+            for ln in request_changes_body(by.get(s.pr) or {}, s.args.get("note", "")).splitlines():
+                lines.append(f"       {ln}")
         elif s.kind == "unblock":
             lines.append(f"     git: fetch, checkout {s.branch}, merge origin/master --no-ff, push (abort on conflict)")
         elif s.kind == "fix":
@@ -348,6 +361,42 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     return True, "ok", detail
 
 
+def open_items(pr: dict) -> list[dict]:
+    return [i for i in (pr.get("review") or {}).get("items") or []
+            if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
+
+
+def request_changes_body(pr: dict, note: str = "") -> str:
+    """references/message-templates.md, Request changes row: line-anchored
+    issues, no filler; the bot variant names the issue and what to change.
+    A judgment's `ask` is the author-facing sentence; `decision` (the
+    question the approver answered) stands in when there is no `ask`. The
+    `note` is the approver's rationale and never leaves the board. Open
+    findings fill in when the judge step didn't run on the row."""
+    lines = []
+    if note.strip():
+        lines.append(note.strip())
+    items = pr.get("judgments") or []
+    if items:
+        for j in items:
+            where = f"`{j['file']}` L{j['line']}: " if j.get("file") and j.get("line") else ""
+            ask = (j.get("ask") or j.get("decision") or "").strip()
+            if not ask:
+                continue
+            lines.append(f"- {where}{ask}")
+    else:
+        for i in open_items(pr):
+            where = f"`{i['file']}` {i.get('anchor') or ''}: " if i.get("file") else f"{i.get('anchor') or ''}: "
+            lines.append(f"- {where}{(i.get('summary') or i.get('text') or '').strip()}")
+    atype = (pr.get("author") or {}).get("type")
+    if atype == "external":
+        lines = ["Thanks for this. A few things before it can merge:", ""] + lines + ["", "Mention @claude if you need help."]
+    elif atype == "bot":
+        lines.append("")
+        lines.append("Answer each with `@claude F<n>: <reason> #update-review`, or push the fix.")
+    return "\n".join(lines).strip()
+
+
 def _defect_comment(pr: dict, target: str) -> str:
     lines = [f"Routing to {target} — this is a {'/'.join(pr.get('domains') or ['?'])} change and not mine to approve."]
     defects = [r for r in pr.get("reasons") or [] if r.split(":")[0] in
@@ -374,7 +423,7 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
     for s in plan_.steps:
         before = len(gh.writes)
         try:
-            if dry_run and s.kind in ("stamp", "route", "fix", "close", "refresh", "deploy"):
+            if dry_run and s.kind in ("stamp", "route", "request-changes", "fix", "close", "refresh", "deploy"):
                 ok, msg = True, f"dry-run: would {s.kind} #{s.pr}"
                 if s.kind == "stamp":
                     pf_ok, pf_msg, _ = preflight(gh, s)
@@ -384,6 +433,11 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
             elif s.kind == "route":
                 pr = by.get(s.pr) or {}
                 ok, msg = _route(gh, s, pr)
+            elif s.kind == "request-changes":
+                pr = by.get(s.pr) or {}
+                gh.create_review(s.pr, "REQUEST_CHANGES", request_changes_body(pr, s.args.get("note", "")))
+                gh.add_labels(s.pr, ["needs-author-response"])
+                ok, msg = True, "changes requested; needs-author-response applied"
             elif s.kind == "unblock":
                 ok, msg = _unblock(git or Git(repo_root), s, dry_run=dry_run)
             elif s.kind == "fix":
@@ -533,12 +587,13 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--in", dest="inp", default=str(_REPO_ROOT / ".pr-review-queue.json"))
     ap.add_argument("--stamp", help="comma list of PR numbers")
     ap.add_argument("--route", action="append", help="N:@user or N:@org/team (repeatable; N alone uses the row's route action)")
+    ap.add_argument("--request-changes", type=int, action="append", help="send the row's judgments back to the author as a changes-requested review")
     ap.add_argument("--unblock", type=int, action="append")
     ap.add_argument("--fix", type=int, action="append")
     ap.add_argument("--close", type=int)
     ap.add_argument("--superseded-by", type=int)
     ap.add_argument("--refresh", type=int, action="append")
-    ap.add_argument("--reason", help="for --refresh: what changed")
+    ap.add_argument("--reason", help="for --refresh: what changed; for --request-changes: an opening line")
     ap.add_argument("--render", type=int, action="append")
     ap.add_argument("--deploy", type=int, action="append")
     ap.add_argument("--merge-humans", action="store_true", help="squash-merge human-authored stamps too")
