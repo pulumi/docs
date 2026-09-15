@@ -200,7 +200,8 @@ URL_TOKEN_RE = re.compile(r"\[[^\]\n]*\]\([^)\s]*\)|href=\"[^\"]*\"|https?://[^\
 def link_only_diff(files: list[dict]) -> bool:
     """True when every hunk in every file swaps lines that are identical
     once links are masked (a markdown link's text and target, an href, a
-    bare URL or site path): the same sentence, only the link changed. A
+    bare URL or site path) and case is folded: the same sentence, only the
+    link (or a word's casing) changed. A
     hunk with unpaired additions or deletions, a file without a patch, or
     a diff with no change at all is not link-only. This is the queue's own
     bar, narrower than the Sentinel's mechanical bar (which counts a link
@@ -218,7 +219,9 @@ def link_only_diff(files: list[dict]) -> bool:
             for (_, plus), (_, minus) in zip(h["added"], h["removed"]):
                 if plus == minus:
                     return False
-                if URL_TOKEN_RE.sub("<url>", plus) != URL_TOKEN_RE.sub("<url>", minus):
+                # Case-insensitive: a sweep that fixes "Typescript" on the
+                # way past is still a link sweep, not a rewrite.
+                if URL_TOKEN_RE.sub("<url>", plus).lower() != URL_TOKEN_RE.sub("<url>", minus).lower():
                     return False
                 seen = True
     return seen
@@ -676,6 +679,9 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
                     reasons.append("route:no-team")
             reasons.append(f"route:{route['role']}")
             actions.append({"id": "route", "label": f"request review from {target}", "cmd": f"--route {n}:{target}"})
+            # The lane is a default, not a lock: the approver can still take
+            # the row. act.py accepts --force on any non-blocked verdict.
+            actions.append({"id": "stamp", "label": "approve anyway", "cmd": f"--stamp {n} --force"})
     if blocked:
         verdict = "blocked"
     elif not is_mine:
