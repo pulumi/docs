@@ -1,112 +1,48 @@
 ---
 user-invocable: false
-description: Action menu options for bot and non-bot PRs
+description: The row action bar per verdict, the terminal-mode menus, and which bot branches may be pushed to
 ---
 
-# Action Menus
+# Row actions
 
-Select the appropriate section based on contributor type and review findings. Auto-merge is a toggle on the Step 8 preview, not a Step 7 menu choice.
+Every row on the board carries an action bar; every button only adds an `act.py` fragment to the command at the bottom of the page. The bar is derived from the row's verdict and reason codes by `analyze.py`, so the board and `--terminal` offer the same choices.
 
-## Dependabot PRs
+## Action bar by verdict
 
-Parse Dependabot special-handling labels per `pr-review:references:dependabot-labels`. There is no risk tier — evaluate and merge.
+| Verdict | Primary | Also offered |
+|---|---|---|
+| `stamp` | `--stamp N` (approve + squash-merge; the button starts selected) | `open PR` |
+| `judge` | `--stamp N --force` (approve as-is) | `--request-changes N` (send back to author: a changes-requested review built from the judgments, plus `needs-author-response`); `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
+| `route` | `--route N:@owner` (request review + post the defects) | `open PR`, `--stamp N --force` ("approve anyway": the lane is a default, not a lock) |
+| `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--rerun N` (errored review), `--close N --superseded-by M` (duplicate) | `open PR` |
 
-### Display Header
+A blocked row is never stampable, with or without `--force`. Red checks, an in-progress review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits. An errored review's unblock is `--rerun N` (`@claude #new-review`), and a row where no review ran at all (`review:trivial`, a draft, a bot skip) offers the same command as a side action, "run a full review".
 
-Use AskUserQuestion with header:
+## Do next
 
-```text
-🤖 Dependabot PR
-[If security] 🔒 Security Update
-[If lambda-edge] 🚨 Lambda@Edge Risk - Review deployment
-[If bulk] 📦 Bulk Update (10+ deps)
-```
+The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--route` per owner, `--stamp` for the stamp set). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
 
-### Options (Max 4)
+## Terminal mode
 
-1. **Approve** (Recommended after evaluating)
-2. **Request changes** - Technical feedback needed
-3. **Close PR** - Reject the dep update
-4. **Do nothing yet** - Need to test/investigate
+`--terminal` prints the table and then, for judge rows only, one AskUserQuestion per row:
 
-### Testing Checklist
+1. **Approve as-is** (`--stamp N --force`) — recommended when the judgment box's disposition is `accepted` / `not-applicable` / `refuted` and nothing else is open.
+2. **Send back to author** (`--request-changes N`) — when a finding is the author's to fix: the judgments become the review body, line-anchored, in the voice `message-templates.md` sets for that author type.
+3. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
+4. **Skip** — leave the row for later (`--refresh N` when the finding reads as stale is offered from the row itself).
 
-Default evaluate-and-merge pass:
+AskUserQuestion is not used anywhere else in this skill; the board composes the command itself.
 
-- Run `make build` (or `make serve-all` for browser-facing packages), then spot-check search, console errors, and markdown rendering
-- Merge once CI is green
+## Bot PRs: what may be pushed
 
-When `deps-lambda-edge-risk` is present, add: check the Lambda@Edge bundle size against the 1 MB limit and confirm the PR deployment URL loads (Lambda@Edge errors via F12, search, navigation) before merging.
+The old rule was "no changes on bot PRs". It applies only where a push would be thrown away:
 
-## Other Bot PRs
+- **Dependabot** — never push. The PR is regenerated on the next run; edits break the update.
+- **Generated-docs regens** (`pulumi-bot` with the `automation/merge` label) — never push. Regenerated from source; fix the generator.
+- **`workprentice[bot]`** and **`content-review/*`** branches (pulumi-bot's content-review and glow-up PRs) — pushes are allowed: `--fix`, `--unblock`, and a hand fix all land as ordinary commits or **merge commits**. Never rebase, never force-push: the pipelines and other checkouts track these branches.
 
-For non-Dependabot bots (pulumi-bot, renovate, etc.)
+`act.py::push_allowed` enforces this and refuses `--unblock` / `--fix` on a branch it must not touch. A fork head is never pushed to.
 
-### Display Header
+## Voice
 
-```text
-🤖 Bot: @username
-[If automation/merge] ✓ automation/merge label
-```
-
-### Options (Max 4)
-
-1. **Approve** (Recommended)
-2. **Request changes** - Issues need addressing
-3. **Close PR** - Reject
-4. **Do nothing yet** - Need investigation
-
-### Important Notes
-
-- "Make changes and approve" excluded for bots (editing breaks automation; bot PRs regenerated, not manually edited)
-
-## Standard Action Menu (Non-Bot Contributors)
-
-**IMPORTANT**: AskUserQuestion only supports max 4 options. Use adaptive menus based on review findings.
-
-### Adaptive Menu Selection
-
-Choose the appropriate menu based on review findings:
-
-- **Scenario A**: Issues found, contradictions have suggested fixes → Make changes menu
-- **Scenario B**: Issues found, contradictions need author input → Request changes menu
-- **Scenario C**: Clean review → Approve menu
-- **Scenario D**: Should close → Close menu
-
-### Scenario A: Issues with Suggested Fixes — Make Changes Recommended
-
-Use this when Step 2's parsed pinned-review findings include 🚨 Outstanding contradictions and **every** contradiction has a high-confidence `suggested_fix`. Applying the fixes yourself is faster than round-tripping with the author.
-
-**Options**:
-1. **Make changes and approve** (Recommended) — apply trivial fixes + suggested fixes, then approve
-2. **Request changes** - Send feedback to author instead
-3. **Approve as-is** - Approve despite issues (non-blocking)
-4. **Do nothing yet** - Need more time/discussion
-
-### Scenario B: Issues Without Reliable Fixes — Request Changes Recommended
-
-Use this when contradictions are unverifiable, lack suggested fixes, or are stylistic-judgment calls. The author-question buffer auto-populates the comment body with line-anchored questions per claim.
-
-**Options**:
-1. **Request changes** (Recommended) — author-question buffer pre-fills the comment
-2. **Make changes and approve** - Fix issues yourself + approve
-3. **Approve as-is** - Approve despite issues (non-blocking feedback)
-4. **Do nothing yet** - Need more time/discussion
-
-### Scenario C: Clean Review — Approve Recommended
-
-**Options**:
-1. **Approve** (Recommended)
-2. **Make changes and approve** - Minor edits (typos, formatting) + approve
-3. **Request changes** - Hold for author input
-4. **Do nothing yet** - Need more time/discussion
-
-### Scenario D: Should Close — Close PR Recommended
-
-**Options**:
-1. **Close PR** (Recommended) - Close with explanation
-2. **Request changes** - Give author chance to address issues
-3. **Approve** - Override concerns and approve anyway
-4. **Do nothing yet** - Need discussion before closing
-
-Tone adjusts based on `etiquette_trust` (low → warm/welcoming; standard → friendly; high → professional/terse). For merge-toggle defaults, see `pr-review:references:action-preview-templates`.
+The approval body and every posted comment follow `pr-review:references:message-templates`. Tone still adjusts to `etiquette_trust` (low → warm; standard → friendly; high → terse), and no comment ever discloses scrutiny level, AI-suspect signals or what was checked.
