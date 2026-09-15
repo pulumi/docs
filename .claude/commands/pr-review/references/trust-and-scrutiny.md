@@ -9,7 +9,7 @@ This reference defines how `/pr-review` reasons about contributors and PR risk. 
 
 ## Two-axis trust model
 
-`contributor-detection.sh` emits two independent fields.
+`scripts/review-v3/collect.py` computes two independent fields per PR (`author.type`, `author.etiquette_trust`, `scrutiny`); the shell scripts that used to do this are gone.
 
 ### Etiquette trust
 
@@ -34,7 +34,7 @@ There is deliberately no "relaxed" content-scrutiny tier. Every PR gets at least
 
 ## Risk tier
 
-`contributor-detection.sh` also computes a risk tier from the diff shape. Risk tier scopes review depth — there is no point running full claim extraction on a 3-line typo PR.
+`collect.py::risk_tier` also computes a risk tier from the diff shape. Risk tier scopes review depth — there is no point running full claim extraction on a 3-line typo PR.
 
 | Tier | Heuristic | Effect |
 |---|---|---|
@@ -52,7 +52,7 @@ A PR is flagged AI-suspect when **any** of the following signals fire. The flag 
 
 ### Signal 1: Local allowlist (reason: `allowlist`)
 
-`detect-ai-suspect.sh` reads a newline-delimited list of GitHub usernames from:
+`collect.py` reads a newline-delimited list of GitHub usernames from:
 
 ```
 ~/.claude/pr-review/ai-suspect-authors.txt
@@ -74,7 +74,7 @@ some-user
 
 ### Signal 2: AI authoring trailer (reason: `trailer:<which>`)
 
-`detect-ai-suspect.sh` searches the PR body and every commit message in the PR for known AI-authoring markers:
+`collect.py::ai_suspect` searches the PR body and every commit message in the PR for known AI-authoring markers:
 
 - `Co-Authored-By: Claude` (any model variant — Sonnet, Opus, Haiku)
 - `Co-Authored-By: Claude Code`
@@ -101,8 +101,8 @@ If any density exceeds threshold AND the PR has more than 10 added prose lines (
 
 The user can pass:
 
-- `/pr-review 123 --ai` — force AI_SUSPECT=true with reason `manual`
-- `/pr-review 123 --no-ai` — force AI_SUSPECT=false (clears any other signals for this run only)
+- `/pr-review --ai` (or `collect.py --ai`) — force AI-suspect on for the run, reason `manual`
+- `/pr-review --no-ai` — force it off (clears any other signals for this run only)
 
 Manual override always wins over the other three signals.
 
@@ -111,6 +111,6 @@ Manual override always wins over the other three signals.
 When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`):
 
 - **Fact-check** — see `docs-review:references:fact-check` §Heightened-scrutiny overrides.
-- **Trivial-fix auto-apply** (preview and execution) — suppressed; see `pr-review:references:action-preview-templates` §AI-suspect override.
-- **Merge toggle** — defaults OFF; see `pr-review:references:action-preview-templates` §Auto-merge toggle defaults.
-- **Confidence gauge** — caps at MEDIUM and surfaces the AI-suspect reasons; see `pr-review` Step 6.
+- **Verdict** — capped at `judge`; the row carries `scrutiny:heightened` plus one `ai-suspect:<reason>` chip per signal, and `--fix` is not offered on it.
+- **Merge** — a human-authored stamp is approve-only unless `--merge-humans`; heightened scrutiny never reaches stamp at all.
+- **Bot authors** — the trailer and prose signals do not apply to a bot author (the content pipelines and workprentice are AI by construction); only the allowlist and the manual override can flag one.

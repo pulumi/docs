@@ -1,259 +1,161 @@
 ---
 name: pr-review
-description: Adjudicate a pull request as a maintainer. Reads the CI-posted pinned review as the source of truth, refreshes it if stale, and provides an interactive workflow to approve / request changes / make changes / close — with optional auto-merge.
+description: Adjudicate open pull requests as a maintainer. `/pr-review` renders a queue of every open PR you can act on, sorted into stamp / judge / route / blocked with collision clusters first; `/pr-review N` renders one PR as that row expanded. Batch-approves and squash-merges the stamp set with a per-PR preflight, routes what isn't yours with the defect attached, unblocks conflicts, and refreshes stale reviews — one data model, one act layer, two renderings.
+argument-hint: "[N] [--owner me|any|<role>|@login] [--domain docs,blog,…] [--verdict stamp,judge,route,blocked] [--author app/workprentice,pulumi-bot] [--since 7d] [--include-infra] [--strict-stances] [--board|--terminal] [--ai|--no-ai] [--act …]"
+user-invocable: true
 ---
 
-# Pull Request Review Command
+# Pull request review queue
 
-This is the maintainer adjudication layer on top of the CI review pipeline (`claude-code-review.yml` posts a pinned `<!-- CLAUDE_REVIEW N/M -->` comment with all findings; this skill reads it as the source of truth).
+The maintainer side of the review pipeline. CI posts the pinned review (the v3 author card + reviewer brief, or a legacy `<!-- CLAUDE_REVIEW N/M -->` monolith); this skill reads it as the source of truth for every open PR at once, computes one verdict per PR, and turns the approver's decisions into a batch of GitHub actions.
+
+Deterministic scripts do the collecting, judging-by-rule and rendering; the model writes only the judgment calls on rows that earned one; a shared act primitive executes. Everything lives in `scripts/review-v3/` (covered by `make test-review-pipeline`):
+
+| Step | Script | Model? |
+|---|---|---|
+| collect | `collect.py` → `.pr-review-queue.json` | no |
+| analyze | `analyze.py` (verdict, reason codes, cross-PR) | no |
+| judge | this skill, judge rows only → `.pr-review-judgments.json` | **yes** |
+| render | `render.py` (board Artifact / detail / `--terminal`) | no |
+| act | `act.py` (plan → preview → confirm → execute) | no |
 
 ## Usage
 
-`/pr-review [<PR_NUMBER>] [--ai|--no-ai]`
+```text
+/pr-review                                  # the queue: my lanes, board if anything needs judging
+/pr-review 21598                            # one row, expanded (findings, preview links, actions)
+/pr-review --verdict stamp --terminal       # just the stampable set, with the act command
+/pr-review --owner any --domain blog        # what marketing has to decide
+/pr-review --act --stamp 21550,21577 --route 21431:@cnunciato --unblock 21525
 
-- **PR number**: Optional. If omitted, the workflow infers from the current branch via `gh pr view --json number`. Errors out if no PR is open for the branch.
-- `--ai` / `--no-ai`: force AI-suspect ON or OFF for this run.
-
-Works with all PRs (internal, external, bots).
-
----
-
-## Process
-
-Complete all 10 steps in sequence. Display **[Step X/10]** before each step heading.
-
-Steps 1, 2, 3, 5 are **silent** — no user-facing output. Step 4 is interactive only when the PR has infra changes. Step 6 is the first comprehensive output.
-
----
-
-### Step 1: Detect contributor, trust axes, risk tier, and AI-suspect
-
-If `{{arg}}` is empty, infer the PR from the current branch:
-
-```bash
-gh pr view --json number --jq '.number'
+flags: --owner me|any|<role>|@login   --domain docs,blog,website,programs,infra,frontend,other
+       --verdict stamp,judge,route,blocked   --author app/workprentice,pulumi-bot,any
+       --since 7d   --include-infra   --strict-stances   --board|--terminal   --ai|--no-ai
+       --act --stamp N,N --route N:@target --unblock N --fix N --close N --superseded-by M
+             --refresh N --render N --deploy N [--merge-humans] [--no-merge] [--force] [--dry-run]
 ```
 
-If that fails, abort with a clear error asking for an explicit PR number. Otherwise use the inferred number as `PR_NUMBER` for every `{{arg}}` reference below.
+`--board` (the default when any row needs judging) publishes the page as an Artifact; `--terminal` prints the table and uses AskUserQuestion per judge row. Both are renderings of the same `queue.json`; there is no separate code path.
 
-Run contributor detection:
+## Config: `~/.pr-review.yml`
 
-```bash
-bash .claude/commands/pr-review/scripts/contributor-detection.sh $PR_NUMBER [--ai|--no-ai]
+Local, never committed. It says which routing lanes are *yours*; routing itself (lane → owning team) comes from `.github/review-routing.yml`.
+
+```yaml
+me: [docs, infra, frontend, other]   # lanes I approve for; blog/website route to marketing
+stamp_max_lines: 40                  # a diff at or over this is never a stamp
+stale_date_days: 3                   # a blog `date:` older than this is stale
 ```
 
-The script outputs:
+Missing file: every lane counts as mine and the analyzer says so. `python3 scripts/review-v3/pr_review_config.py` prints the effective config. The AI-suspect allowlist stays at `~/.claude/pr-review/ai-suspect-authors.txt` (see `pr-review:references:trust-and-scrutiny`).
 
-- `AUTHOR` — GitHub username
-- `CONTRIBUTOR_TYPE` — bot/internal/external
-- `ETIQUETTE_TRUST` — low/standard/high (controls tone, welcome language, merge defaults)
-- `CONTENT_SCRUTINY` — standard/heightened
-- `AI_SUSPECT` — true/false
-- `AI_SUSPECT_REASONS` — comma-separated triggers
-- `RISK_TIER` — typo/minor/standard/major/infra
-- `PR_METADATA` — JSON with number, title, url
-- `FILES_CHANGED` — list of changed file paths
-- `LABELS` — comma-separated current labels (drives Step 2's pinned-review state machine)
-- `PR_DATA_JSON` — complete PR data
+## The flow
 
-Store all of these. **No user output yet.** Step 6 surfaces them in the unified package.
+Run the scripts from the repo root. Each is idempotent; re-running after acting updates the board rather than rewriting it.
 
-See `pr-review:references:trust-and-scrutiny`.
-
-### Step 2: Fetch the pinned CI review and classify state
-
-Fetch the diff and the pinned review:
+### 1. Collect
 
 ```bash
-gh pr diff "$PR_NUMBER"
-
-bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
+python3 scripts/review-v3/collect.py --out .pr-review-queue.json [--pr N] [--author A] [--since 7d] [--ai|--no-ai]
 ```
 
-> **v3 surface guard (read before anything else in this step).** If the fetch output contains `<!-- CLAUDE_REVIEW_AUTHOR -->`, the PR is on the v3 surface and the rest of this skill's refresh machinery does not apply to it. The findings are the author card's blocking rows (🚨 / ❓, each with an `F<n>` id; dispositions live in its `REVIEW_STATE` block) plus the reviewer's guide's `### ⚠️ Check these before approving` rows — fetch the guide with `BRIEF_ID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh find --pr "$PR_NUMBER" --role brief)` and `gh api "repos/$REPO/issues/comments/$BRIEF_ID" --jq .body`. **Never run the local `docs-review:references:update` refresh or `pinned-comment.sh upsert` on a v3 PR** — they write a legacy monolith beside the cards. When a v3 review is `STALE`, comment `@claude #update-review` and wait for the card to re-render (the label returns to `review:outstanding-issues` / `review:no-blockers`), then continue from Step 4 with the card's rows as the findings. The Sentinel check on the PR is the merge gate; approve only when it is green or would be.
+Every open, non-draft PR (an explicit `--pr N` also collects a draft): title, author with the trust axes and risk tier, labels, files with patches, head/base SHAs, `mergeable_state` (re-asked while GitHub still says `unknown`), the check rollup, reviews, requested reviewers, the parsed pinned review (`review-worklist.py`, both surfaces), its `REVIEW_STATE`, triage's `<!-- TRIAGE_PROSE -->` comment, the reviewed-head SHA from `<!-- CLAUDE_REVIEW_HEAD … -->`, and the preview URL plus per-page links. Responses that only change when the PR does are cached under `/.pr-review-cache/<pr>/` per (head SHA, updated_at).
 
-Determine the pinned-review state from labels and fetch output. **Labels alone are not a sufficient freshness signal**: pushes made by the Copilot coding agent or with `GITHUB_TOKEN` never fire the `pull_request: synchronize` event, so the `mark-stale` job never runs for them and a PR can sit at `review:no-blockers` while the pinned review describes content a later commit replaced (PR #20556). Before accepting `CURRENT`, run the SHA freshness check:
+GitHub access: `gh` when installed, otherwise the REST API with `GITHUB_TOKEN` / `GH_TOKEN` (a Claude Code web session has the token but not `gh`). `--snapshot-dir DIR` reads endpoint JSON from files instead — the test backend, and the way to hand the scripts data fetched by the GitHub MCP tools: write each response to `DIR/GET/<endpoint path>.json` (`gh_client.py` documents the layout). GitHub App authors search as `author:app/<slug>` (`author:WorkPrentice` returns nothing); `--author` accepts any spelling.
+
+Review status per PR, label-independent: `CURRENT` needs the card's `CLAUDE_REVIEW_HEAD` to prefix-match the live head — pushes made with `GITHUB_TOKEN` never fire `synchronize`, so a PR can sit at `review:no-blockers` with a review describing content a later commit replaced. `STALE` / `IN_PROGRESS` / `ERROR` / `ABSENT` / `TRIAGE_PROSE` otherwise.
+
+> **v3 surface guard.** If a PR's review comments contain `<!-- CLAUDE_REVIEW_AUTHOR -->`, the PR is on the v3 surface and no local refresh machinery applies to it. The findings are the author card's blocking rows (🚨 / ❓, each with an `F<n>` id; dispositions live in its `REVIEW_STATE` block) plus the reviewer's guide's `### ⚠️ Check these before approving` rows — `collect.py` reads both. **Never run the local `docs-review:references:update` refresh or `pinned-comment.sh upsert` on a v3 PR** — they write a legacy monolith beside the cards. When a v3 review is `STALE`, the row is *blocked* with a `--refresh N` action that comments `@claude <reason> #update-review`; wait for the card to re-render (the label returns to `review:outstanding-issues` / `review:no-blockers`), then re-collect. The Sentinel check on the PR is the merge gate; stamp only when it is green or would be.
+
+A legacy (v2) PR that is `STALE` gets the same `--refresh` action; the CI update lane rewrites the monolith. This skill never refreshes a review locally.
+
+### 2. Analyze
 
 ```bash
-HEAD_SHA=$(gh pr view "$PR_NUMBER" --json headRefOid --jq .headRefOid)
-# Preferred: the machine-readable sentinel compose-review.py stamps under the header.
-REVIEWED_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER" \
-  | grep -oE '<!-- CLAUDE_REVIEW_HEAD [0-9a-f]+ -->' | tail -1 | grep -oE '[0-9a-f]{7,40}')
-# Fallback for reviews composed before the sentinel existed:
-[ -z "$REVIEWED_SHA" ] && REVIEWED_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
+python3 scripts/review-v3/analyze.py --in .pr-review-queue.json [--owner me] [--include-infra] [--strict-stances] [--domain …] [--verdict …] [--author …]
 ```
 
-If `REVIEWED_SHA` is non-empty and is not a prefix-match of `HEAD_SHA`, treat the state as `STALE` regardless of labels (and mention in your output that the label missed a push — likely a suppressed `synchronize` event). If no reviewed SHA is recoverable at all, fall back to comparing the header's `Last updated` timestamp against the head commit's committer date; when the head commit is newer, treat as `STALE`.
+Per PR: `domains` (`classify_path` via `routing.resolve_lanes`), the owning role and team per domain, exactly one `verdict`, a `reasons` list of machine-readable codes, and `actions` (the `--act` fragments that apply). Cross-PR, computed over the full set before any filter: **collision clusters** (union-find over shared paths; a pair is `overlap` when the hunks intersect on the base side, else `same-file`, with a suggested merge order), **directional conflicts** (a PR adds links to a URL that exists only as a Hugo `aliases:` entry while another open PR removes links from it), **duplicate candidates** (shared file, similar title, opened within 10 minutes), **stale blog dates**, **self-accepted findings** (a `REVIEW_STATE` actor who is the PR author), **stale reviews**, and **stale brief summaries** (a "What this PR changes" bullet naming a value the diff no longer contains).
 
-| State | Detection | What Step 3 does |
+| Verdict | Meaning | Board |
 |---|---|---|
-| `CURRENT` | `review:outstanding-issues` or `review:no-blockers` set; `review:stale` / `review:in-progress` / `review:error` absent; fetch returns body; **SHA freshness check passes** | Nothing — proceed to Step 4 |
-| `STALE` | `review:stale` set | Legacy monolith only: refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`). v3 PR: comment `@claude #update-review` (see the guard above) |
-| `IN_PROGRESS` | `review:in-progress` set | Wait briefly for the workflow to finish; re-check labels. If it stays >15 min, treat as `ERROR`. |
-| `ERROR` | `review:error` set (or `review:in-progress` stuck) | Investigate the Actions logs before proceeding |
-| `ABSENT` | Fetch returns no `<!-- CLAUDE_REVIEW -->` markers | Fall back: run a local review (see Step 3 §Absent path) |
+| `stamp` | Every gate passes; approving asserts nothing beyond what's machine-verified. | Checkbox on. One command approves and squash-merges the set. |
+| `judge` | Decidable from the board; something needs a human's call. | Judgment box: the lines, the question, a deep link, a recommended disposition. |
+| `route` | Not this approver's lane per the routing matrix. | Batch "request review from owner"; any defect found rides along. |
+| `blocked` | Can't merge regardless: conflict, red CI, stale review, changes requested. | Names the blocker and offers the mechanical unblock. |
 
-Store the parsed pinned-comment findings (🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, ✅ Resolved, 📜 Review history) for Step 6.
+The stamp bar, **all required**: label `review:no-blockers` (`review:trivial` is not enough — no review ran); zero ⚠️ rows on the brief (zero low-confidence items on a legacy review); no self-accepted disposition; review `CURRENT`; `mergeable_state` in {clean, blocked} with checks green; no overlap collision, directional conflict or duplicate; one of the PR's domains is in `me`; no new file under `content/blog/`; no `layouts/` or `.github/` change unless `--include-infra`; changed lines under `stamp_max_lines`; scrutiny not heightened. Editorial stances on the brief block only with `--strict-stances`. Heightened scrutiny (AI-suspect on a human author) caps a row at `judge`. Precedence: blocked > route > stamp/judge.
 
-### Step 3: Resolve pinned-review state
+Reason codes are `code[:detail]` from a closed vocabulary (`analyze.REASON_CODES`, echoed into `queue.json`): `risk:`, `scrutiny:`, `ai-suspect:`, `review:`, `label:`, `warnings:`, `outstanding:`, `self-accepted:`, `stances:`, `mergeable:`, `checks:`, `collision:`, `directional:`, `duplicate:`, `blog:`, `brief:`, `desc:`, `shape:`, `size:`, `owner:`, `route:`, `merging-over:`, `not-governed`, `author:`, `trust:`, `draft`.
 
-Branch on the state from Step 2.
+### 3. Judge — the only model step
 
-#### CURRENT
+Only for rows whose verdict is `judge`. For each open finding on the row (`review.items` without a disposition, the brief's ⚠️ rows, or triage's prose bullets when `review:triage-prose`):
 
-Continue to Step 4.
+1. Quote the exact `-`/`+` lines at the finding's `file` and line from `files[].patch` in `queue.json`. Never paraphrase and never invent a quote; if the lines aren't in the patch, quote nothing and say so.
+2. State in one sentence what the approver is deciding.
+3. Recommend a disposition from `/address-review`'s vocabulary: `fixed | refuted | deferred | accepted | not-applicable`.
+4. Emit the deep link `https://github.com/pulumi/docs/pull/N/files#diff-<sha256(path)>R<line>` (`compose-review.py::diff_anchor` is the helper; `render.py` computes it from `file` + `anchor` when you don't). No file or line → the link is "open the PR".
 
-#### STALE
+Also draft, when the row carries `desc:stale:*` or `desc:empty`, a corrected PR description (`fix_draft`), and optionally a `recommended` verdict (`stamp` to approve as-is, `route`, or `close`). Write it all to `.pr-review-judgments.json`:
 
-**v3 PR (author card present): do not refresh locally.** Comment `@claude #update-review`, wait for the card to re-render, then re-fetch and continue.
+```json
+{ "21598": { "judgments": [ { "finding_id": "F1", "file": "content/docs/iac/automation-api.md", "line": 412,
+              "quote_minus": ["- [file an issue](…&template=bug_report.md&title=)"],
+              "quote_plus": ["+ [file an issue](…?labels=needs-triage)"],
+              "decision": "Did you mean to drop the bug-report template, or only the empty params?",
+              "disposition": "accepted",
+              "deep_link": "https://github.com/pulumi/docs/pull/21598/files#diff-…R412" } ],
+            "fix_draft": { "kind": "description", "body": "### Proposed changes\n\n…" },
+            "recommended": "stamp" } }
+```
 
-Legacy monolith: refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure re-reads the diff since the last reviewed SHA, classifies as Case 1/2/3, and writes the refreshed body via `pinned-comment.sh upsert`. When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
+then merge it: `python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --judgments .pr-review-judgments.json`. A recommendation never lowers the computed verdict.
 
-#### ABSENT
+For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
 
-No pinned comment exists. This typically means: the PR is a draft (CI doesn't review drafts), CI failed, or the `review:trivial` short-circuit fired. Ask the user how to proceed via AskUserQuestion:
-
-1. **Run a local review now** — perform a full local style + code review (apply `/docs-review`). Use the findings as the pinned-review findings for Step 6.
-2. **Adjudicate without findings** — proceed to Step 6 with no findings; rely on your own diff read and the contributor's PR description.
-3. **Cancel** — exit; consider transitioning the PR to ready-for-review to trigger CI, or mention `@claude` to invoke a fresh review.
-
-Only the local-review path produces findings; otherwise Step 6 renders an empty findings block.
-
-### Step 4: Offer infrastructure deployment (only fires for infra changes)
-
-If `RISK_TIER=infra` (PR contains dependency or infrastructure changes), follow `pr-review:references:infrastructure-deployment` to optionally trigger a pulumi-test.io deployment. This is the only step before Step 6 that produces user-facing output. For other risk tiers, skip silently.
-
-### Step 5: PR description accuracy check (silent)
-
-CI doesn't check this; pr-review does. Compare the PR description against the actual diff. Inaccuracies — files mentioned that weren't changed, changes described that aren't in the diff, significant changes omitted, incorrect characterization — are **trivial-fix candidates** that can be applied via `gh pr edit --body` in Step 9 if the user picks Make-changes-and-approve and doesn't veto them.
-
-For each inaccuracy, draft a corrected description that accurately reflects the diff. Store for Step 6 + Step 9.
-
-### Step 6: Present unified review package
-
-This is the **first big user-facing output**. Render in this order, top to bottom:
-
-1. **Confidence gauge** — single line:
-
-   ```text
-   Confidence: HIGH · 0 outstanding · 2 low-confidence · contributor: @user (internal) · risk: minor · CI: green · pinned: current
-   ```
-
-   Or, when AI-suspect:
-
-   ```text
-   Confidence: MEDIUM · 🤖 AI-suspect (allowlist + trailer:claude) · scrutiny: heightened · 2 outstanding · 1 low-confidence · CI: green · pinned: refreshed
-   ```
-
-   Computation:
-
-   | Gauge | When |
-   |---|---|
-   | `HIGH` | No 🚨 Outstanding findings, CI green, scrutiny `standard`, pinned current/refreshed |
-   | `MEDIUM` | Any ⚠️ Low-confidence findings, OR scrutiny `heightened` (always caps at MEDIUM), OR CI yellow, OR pinned absent |
-   | `LOW` | Any 🚨 Outstanding finding, OR CI red |
-
-2. **Header** — PR title, contributor with etiquette icon (🤖 / 📝 / 🌍), risk tier badge, pinned-review state, deployment URL (or "pending"). Run `test-deployment-guidance.sh` here to fetch the deployment URL and per-page links:
-
-   ```bash
-   bash .claude/commands/pr-review/scripts/test-deployment-guidance.sh {{arg}}
-   ```
-
-3. **Per-page review links** — direct links + change-aware specific review items from `test-deployment-guidance.sh` output.
-
-4. **Pinned review findings** — render the parsed 🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, and ✅ Resolved findings from Step 2 verbatim (they're already in the format from `docs-review:references:output-format`). If a refresh ran in Step 3, note "*Pinned comment refreshed at HH:MM*" above the findings block. If absent and the user picked local review in Step 3, render those findings here in the same format.
-
-5. **PR description inaccuracies** (only if Step 5 found any) — itemized so the user can see exactly what would change before Step 8 confirmation:
-
-   ```text
-   PR description corrections (2):
-     [1] Says "updates content/blog/foo.md" but foo.md was not changed
-     [2] Omits significant change: content/docs/bar.md was renamed
-   ```
-
-   Each item gets a numeric index for veto in Step 8.
-
-6. **Trivial-fix candidates** (only if any) — applied via Make-changes-and-approve per `pr-review:references:action-preview-templates`. Suppressed when AI-suspect; see action-preview-templates §AI-suspect override.
-
-7. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from the pinned 🚨 Outstanding count and any code-correctness findings. Pre-existing alone does not gate approval.
-
-8. **Recommendations** — short, action-oriented. Map directly to a Step 7 menu (e.g., "→ Approve" or "→ Make changes and approve").
-
-Render the whole package in one message.
-
-#### Unresolved-findings check (part of Step 6's output)
-
-Approving is the moment the review's findings stop being actionable, so say what is about to be merged over. Run the enumerator against the pinned comment:
+### 4. Render and publish
 
 ```bash
-python3 .claude/commands/docs-review/scripts/review-worklist.py --pr "$PR_NUMBER" --format json
+python3 scripts/review-v3/render.py --in .pr-review-queue.json --board .pr-review-board.html   # the queue
+python3 scripts/review-v3/render.py --in .pr-review-queue.json --detail N --out .pr-review-board.html   # /pr-review N
+python3 scripts/review-v3/render.py --in .pr-review-queue.json --terminal [--pr N]
 ```
 
-Anything it lists that the PR thread shows no outcome for — no fix in the diff, no dispute, no filed issue, no stated reason — is being merged over silently. Report it as one line in the Step 6 package (`Merging over: 2 ⚠️ low-confidence, 4 ✏️ style suggestions`) and carry it into the Step 7 recommendation. Two rules:
+Publish the HTML with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every checkbox and button composes the `/pr-review --act …` command shown at the bottom. The page never calls GitHub; the person copies the command, or asks you to run it.
 
-- **The maintainer decides.** This is disclosure, not a gate. Merging over advisory findings is a legitimate call and 💡 Pre-existing never counts against a PR.
-- **On your own PR, work them first.** When the PR is the maintainer's own (or one you authored in this session), `/address-review $PR_NUMBER` is the right move before adjudication — dispositioning the findings there produces the outcome record the post-merge scrape reads.
+`--terminal` prints the table and, in this mode only, walk each judge row with AskUserQuestion (options: approve as-is / route / refresh / skip), then compose the same act command.
 
-### Step 7: Present action menu
+### 5. Act
 
-Use AskUserQuestion. Adaptive-scenario selection (which menu fires for which finding shape) and per-scenario options live in `pr-review:references:action-menus`. The Step 7 menu chooses *what* to do; auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
-
-### Step 8: Preview action and confirm (with merge toggle)
-
-See `pr-review:references:action-preview-templates`.
-
-The preview shows:
-
-- Chosen action
-- Auto-merge toggle with computed default (per the toggle defaults in `pr-review:references:action-preview-templates`)
-- For Make-changes-and-approve: file-by-file changes (PR description corrections + trivial fixes + suggested fixes from CI's pinned findings)
-- The exact comment text that will be posted (using `pr-review:references:message-templates`)
-- The full list of `gh` commands that will run
-
-The posted comment must obey the voice/length rules in `pr-review:references:message-templates`. Step 6's local package is for the maintainer's eyes; the public maintainer comment is its own thing.
-
-Confirmation-menu adaptation (slot 2 changes per pending action; dispute-path opt-in is described below) lives in `pr-review:references:action-preview-templates` §Confirmation Question.
-
-#### Dispute path (opt-in)
-
-When the user picks "Dispute finding(s)", AskUserQuestion prompts for the finding number(s) and the dispute reasoning. pr-review composes a mention body in this shape:
-
-```text
-[Maintainer dispute from @{{user}}]
-
-Finding {{N}} (in {{file:line}}, {{summary}}): {{reasoning}}
-
-Adjudicate per Case 2 dispute rules.
+```bash
+python3 scripts/review-v3/act.py --in .pr-review-queue.json --stamp 21550,21577 --route 21431:@cnunciato --unblock 21525
+python3 scripts/review-v3/act.py --execute .pr-review-plan.json [--dry-run]
 ```
 
-The body is fed to `docs-review:references:update` locally with `MENTION_BODY` populated. Update.md Case 2 takes over: classifies the dispute (domain-knowledge / verifiable / reframing), concedes or holds with citation, and re-renders the pinned comment via `pinned-comment.sh upsert`. Re-fetch the pinned comment afterwards so the Step 6 view reflects the resolution before the action proceeds.
+The first command validates against the queue and writes `.pr-review-plan.json` plus a preview: for each step the PR, head SHA, the preflight it will run, the exact approval text, and every write. **Show the preview and get a yes before `--execute`** (an explicit `--act` in the user's own invocation counts as the yes for exactly that plan; a re-plan needs a new confirmation). Then execute, and report the per-step results.
 
-Maintainer write-access is sufficient evidence for domain-knowledge disputes (per `docs-review:references:update` Case 2).
+- `--stamp N,N` — per PR, immediately before merging, re-fetch the PR: head unchanged since the plan, `mergeable_state` in {clean, blocked}, checks green, no changes-requested review. Then approve (one line per `pr-review:references:message-templates`, no footer) and squash-merge. A bot PR merges; a human-authored PR is approved only unless `--merge-humans` (authors merge their own PRs). A failed preflight skips that PR and the batch continues. `--force` stamps a judge row (approve as-is); a blocked row is never stampable.
+- `--route N:@user|@org/team` — request review and post one comment with the row's defects (reason codes + judgments). `N` alone uses the row's own route target.
+- `--unblock N` — merge the base branch into the head as a merge commit and push; a conflicted merge is aborted and reported, never resolved by hand here and never rebased or force-pushed.
+- `--fix N` — apply the drafted description and any one-click ✏️ suggestions, commit, push.
+- `--close N --superseded-by M` — cross-link both, close N.
+- `--refresh N` — comment `@claude <reason> #update-review`.
+- `--render N` — screenshot the preview pages into `/.pr-review-shots/N/` (`screenshot.mjs`, Playwright); the detail view embeds them.
+- `--deploy N` — dispatch `testing-build-and-deploy.yml` at the head branch (the `risk:infra` row action; see `pr-review:references:infrastructure-deployment`).
 
-### Step 9: Execute confirmed action
+Which bot branches may be pushed to, and the action bar per row, are in `pr-review:references:action-menus`. Every comment `act.py` posts carries the Claude Code attribution footer except the approval body.
 
-Execute per the commands and workflow in `pr-review:references:action-preview-templates`, using the merge-toggle state confirmed in Step 8. For Make-changes-and-approve failures: always return to original branch before reporting error.
+### 6. Re-collect, re-render
 
-### Step 10: Report execution results
+After acting, run collect (`--pr` for the touched PRs is enough) → analyze (`--judgments` again) → render, and update the same Artifact. Merged and closed PRs drop out; the board is the report.
 
-See `pr-review:references:execution-results`.
+## Hand-offs
 
-Workflow complete.
+- Author work (an open 🚨/❓ item, a fix the author should make): tell them to run `/address-review N`; that is where dispositions get recorded with the outcome the post-merge scrape reads.
+- Your own PR: run `/address-review` first, then adjudicate.
+- `/dashboard` shows only the open-PR count and points here.
 
----
+## Errors
 
-## Error Recovery
-
-If any command fails during execution:
-
-```text
-❌ Failed to [action] PR #{{arg}}
-
-Error: [error message]
-
-Recovery options:
-- /pr-review {{arg}} (re-run full workflow)
-- Or use gh CLI directly: [relevant commands based on failure]
-```
-
-For Make-changes-and-approve failures: always return to original branch before reporting error.
+A failed step is reported in place (`✗ stamp #N: preflight refused: head-moved …`) and never stops the batch. Recover by re-collecting and re-planning; a `head-moved` refusal means someone pushed — judge the new diff. If `collect.py` can't reach GitHub it says which backend it tried; a `GhNotFound` from the snapshot backend names the endpoint file it wanted.

@@ -590,7 +590,7 @@ def render_header(timestamp: str, head_sha: str = "") -> str:
     `pull_request: synchronize` event, so the `review:stale` label can miss a
     push entirely (PR #20556 closed wearing `review:no-blockers` while the
     pinned review described content a later conflict-resolution commit had
-    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    replaced). Label-independent consumers (`/pr-review`'s collect.py, the
     review-label-reconcile workflow) compare this SHA against the PR head —
     an exact check, immune to suppressed webhooks. The re-entrant update path
     must refresh it alongside the `Last updated` timestamp (see
