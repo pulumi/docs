@@ -44,28 +44,31 @@ def test_board_escapes_everything_and_never_calls_github():
 
 def test_board_groups_owner_then_domain_and_pins_clusters_first():
     html = render.render_board(_queue())
-    assert html.index("Collisions first") < html.index('class="grp"')
+    assert html.index("Do next") < html.index('class="grp"') < html.index("Collisions · 1 cluster")  # clusters fold at the bottom
     heads = re.findall(r'<div class="sec-head"><h2>([^<]+)</h2><span class="dlabel">([^<]+)</span>', html)
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
     assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
+    assert "C1: merge #1 first, then unblock #2" in html and 'data-cmd="--chain C1"' in html
 
 
 def test_board_rows_carry_verdict_chips_reasons_and_actions():
     html = render.render_board(_queue())
     assert 'data-verdict="judge"' in html and 'data-verdict="route"' in html and 'data-verdict="blocked"' in html
-    assert 'class="chip r-collision"' in html and 'class="chip r-mergeable"' in html
+    assert 'class="chip r-cluster"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@TODO-named-fallback"' in html
-    assert 'class="btn p" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected
+    assert 'class="btn p p-go" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected, primary
     assert 'data-cmd="--request-changes 1"' in html and "send back to author" in html
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html
+    assert '<details class="why"><summary>why · ' in html  # informational chips fold
+    assert 'class="chip r-risk"' in html.split('<details class="why">')[1]  # and risk is one of them
 
 
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)
-    assert 'class="btn p sel" data-cmd="--stamp 7" data-pr="7" aria-pressed="true"' in html
+    assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-decision="0" aria-pressed="true"' in html
     assert 'type="checkbox"' not in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
     assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments
@@ -76,8 +79,8 @@ def test_fixed_disposition_reads_as_already_done():
     row(q, 3)["judgments"].append({"finding_id": "F9", "file": "content/docs/iac/x.md", "line": 3,
                                   "decision": "Anchor right?", "disposition": "fixed", "deep_link": "https://x/y#z"})
     html = render.render_board(q)
-    assert "already fixed in the diff" in html and "recommend <b>fixed</b>" not in html
-    assert "recommend <b>refuted</b>" in html
+    assert '<span class="v v-go">already fixed</span>' in html and "recommend <b>fixed</b>" not in html
+    assert '<span class="v v-go">refute</span>' in html
 
 
 def test_theme_selectors_present_in_both_forms():
@@ -134,14 +137,15 @@ def test_handed_off_rows_collapse_into_the_waiting_list():
     assert "     8  " in render.render_terminal(q, include_handed_off=True)
 
 
-def test_mostly_theirs_cluster_is_demoted_from_the_pinned_slots():
+def test_mostly_theirs_cluster_has_no_do_next_card():
     from test_analyze import _file  # noqa: PLC0415
     mine = stampable(1, title="Mine", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
     theirs = stampable(2, title="Theirs", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
-    html = render.render_board(run([mine, theirs]))
+    q = run([mine, theirs])
+    html = render.render_board(q)
     assert "1 of 2 PRs mine" in html and "+1 waiting on others" in html
-    assert html.index("<details><summary>1 more") < html.index("C1 · 1 of 2 PRs mine")  # inside the collapsed section
-    assert 'class="chip r-collision theirs"' in html
+    assert not any(d["cluster"] == "C1" for d in q["do_next"] if "cluster" in d)  # theirs: nothing to do next
+    assert 'class="chip r-cluster theirs"' in html
 
 
 def run_standalone() -> int:

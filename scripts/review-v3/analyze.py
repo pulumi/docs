@@ -82,7 +82,7 @@ REASON_CODES = {
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
     "checks": "check rollup when not green",
-    "collision": "another open PR touches the same path (overlap = hunks intersect)",
+    "cluster": "member of a collision cluster: overlap (hunks intersect; position in the merge order), same-file (any order), or theirs",
     "directional": "adds links to an alias-only URL another open PR removes links from",
     "duplicate": "looks like a duplicate of another open PR",
     "blog": "new post, or a stale publish date",
@@ -583,24 +583,25 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
 
     # -- cross-PR (filled by analyze(); read here). Capped: a link-sweep PR
     # can collide with twenty others, and the cluster card carries the rest.
-    # A collision with a PR that is handed off to someone else is advisory
-    # (`:theirs`): if mine merges first, the conflict is theirs to resolve;
-    # it neither gates my stamp nor pins the cluster for me.
-    cross_codes = [c + ":theirs" if _other_pr(c) in ctx["handed_off"] else c for c in ctx["cross"].get(n, [])]
-    shown = cross_codes[:CROSS_CODE_CAP]
+    # Cross-PR codes. A directional/duplicate pair with a PR that is handed
+    # off to someone else is advisory (`:theirs`): if mine merges first, the
+    # conflict is theirs to resolve. Cluster codes already carry their kind.
+    cross_codes = [c + ":theirs" if (c.startswith(("directional:", "duplicate:")) and _other_pr(c) in ctx["handed_off"]) else c
+                   for c in ctx["cross"].get(n, [])]
+    directional_codes = [c for c in cross_codes if c.startswith("directional:")]
+    other_codes = [c for c in cross_codes if not c.startswith("directional:")]
+    shown = other_codes + directional_codes[:1]
+    if len(directional_codes) > 1:
+        shown.append(f"directional:+{len(directional_codes) - 1}-more")
     for code in cross_codes:
-        if code not in shown:
-            if code.startswith(("collision:", "directional:", "duplicate:")) and not code.endswith((":same-file", ":theirs")):
-                stamp_ok = False
-            continue
-        reasons.append(code)
-        if code.startswith(("collision:", "directional:", "duplicate:")) and not code.endswith((":same-file", ":theirs")):
+        gating = (code.startswith("cluster:") and ":overlap:" in code) or \
+                 (code.startswith(("directional:", "duplicate:")) and not code.endswith(":theirs"))
+        if gating:
             stamp_ok = False
         if code.startswith("duplicate:") and not code.endswith(":theirs"):
             other = code.split(":")[1].lstrip("#")
             actions.append({"id": "close", "label": f"close as duplicate of #{other}", "cmd": f"--close {n} --superseded-by {other}"})
-    if len(cross_codes) > CROSS_CODE_CAP:
-        reasons.append(f"collision:+{len(cross_codes) - CROSS_CODE_CAP}-more")
+    reasons.extend(shown)
 
     # -- ownership / verdict
     if not is_mine:
@@ -641,6 +642,71 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr["summary"] = one_line_summary(pr)
 
 
+CONSOLIDATE_SHARE = 0.6  # a cluster this dominated by one bot author's sweeps should be one PR
+
+
+def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
+    """The one move a cluster asks of the approver, in words, with the
+    action that does it: `ignore` (same-file only: any order works),
+    `consolidate` (mostly one bot's overlapping sweeps: one request-changes
+    beats N serial merges), or `chain` (merge the first, unblock the next)."""
+    mine = c.get("mine") or []
+    order = c.get("merge_order") or []
+    if len(mine) <= 1:
+        return {"kind": "theirs", "say": f"{c['id']}: waiting on others; nothing of yours to sequence.", "cmd": None}
+    if c.get("kind") != "overlap":
+        return {"kind": "ignore", "say": f"{c['id']}: {len(mine)} PRs share files but no hunks overlap; merge in any order.", "cmd": None}
+    # Only members whose hunks actually overlap count toward a consolidation:
+    # a same-file neighbour merges in any order and has nothing to fold in.
+    overlapping = sorted({n for p in c.get("pairs") or [] if p.get("kind") == "overlap" for n in (p["a"], p["b"]) if n in mine})
+    authors = [(by.get(n) or {}).get("author", {}).get("norm") for n in overlapping]
+    top = max(set(authors), key=authors.count) if authors else None
+    bots = sum(1 for n in overlapping if (by.get(n) or {}).get("author", {}).get("type") == "bot" and (by.get(n) or {}).get("author", {}).get("norm") == top)
+    if top and len(overlapping) >= 3 and bots / len(overlapping) >= CONSOLIDATE_SHARE:
+        newest = max(overlapping)
+        members = ", ".join(f"#{n}" for n in overlapping)
+        reason = f"These {len(overlapping)} PRs edit overlapping lines in the same files ({members}); please consolidate them into one PR so they can merge without a chain of conflicts."
+        return {"kind": "consolidate", "target": top, "on": newest,
+                "say": f"{c['id']}: {len(overlapping)} overlapping sweeps by {top}. Ask for one consolidated PR instead of {len(overlapping)} serial merges.",
+                "cmd": f"--request-changes {newest} --reason \"{reason}\""}
+    first = next((n for n in order if (by.get(n) or {}).get("verdict") in ("stamp", "judge")), None)
+    nxt = next((n for n in order if n != first), None)
+    if first is None:
+        return {"kind": "blocked", "say": f"{c['id']}: every member is blocked; unblock one to start.", "cmd": None}
+    say = f"{c['id']}: merge #{first} first" + (f", then unblock #{nxt}" if nxt else "") + f" ({len(order)} in the chain; each link waits on CI, about ten minutes)."
+    return {"kind": "chain", "first": first, "next": nxt, "say": say, "cmd": f"--chain {c['id']}"}
+
+
+def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> list[dict]:
+    """The board's opening: at most a handful of sentences, each with one
+    action. Ordered by leverage: consolidations, chains, then the batch
+    counts (send back / route / stamp)."""
+    cards: list[dict] = []
+    for c in clusters:
+        r = c.get("recommendation") or {}
+        if r.get("kind") in ("consolidate", "chain"):
+            cards.append({"kind": r["kind"], "cluster": c["id"], "say": r["say"], "cmd": r["cmd"], "label": "send back" if r["kind"] == "consolidate" else "start the chain"})
+    visible = [p for p in prs if not p.get("handed_off")]
+    back = [p["number"] for p in visible if p.get("recommended") == "request-changes"]
+    if back:
+        cards.append({"kind": "request-changes", "say": f"{len(back)} row{'s' if len(back) != 1 else ''} need the author, not you: send them back.",
+                      "cmd": " ".join(f"--request-changes {n}" for n in back), "label": "send all back"})
+    routes: dict[str, list[int]] = {}
+    for p in visible:
+        if p.get("verdict") == "route":
+            act = next((a for a in p.get("actions") or [] if a["id"] == "route"), None)
+            if act:
+                routes.setdefault(act["cmd"].split(":", 1)[1], []).append(p["number"])
+    for target, nums in routes.items():
+        cards.append({"kind": "route", "say": f"{len(nums)} row{'s' if len(nums) != 1 else ''} aren't your lane: route to {target}.",
+                      "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}"})
+    stamps = [p["number"] for p in visible if p.get("verdict") == "stamp"]
+    if stamps:
+        cards.append({"kind": "stamp", "say": f"{len(stamps)} row{'s' if len(stamps) != 1 else ''} pass every gate: merge the set.",
+                      "cmd": "--stamp " + ",".join(str(n) for n in stamps), "label": "merge the stamp set"})
+    return cards
+
+
 def _other_pr(code: str) -> int | None:
     m = re.match(r"^(?:collision|directional|duplicate):#(\d+)", code)
     return int(m.group(1)) if m else None
@@ -666,7 +732,7 @@ def one_line_summary(pr: dict) -> str:
             return s.strip("_")
     for line in (pr.get("body") or "").splitlines():
         s = line.strip()
-        if s and not s.startswith(("#", "<!--", "-", "|", "🤖", "http")):
+        if s and not s.startswith(("#", "<!--", "-", "|", ">", "🤖", "http", "[!")):
             return s[:200]
     return pr.get("title") or ""
 
@@ -683,18 +749,31 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
     clusters = collision_clusters(prs)
     directional = directional_conflicts(prs, aliases)
     duplicates = duplicate_candidates(prs)
+    approver = queue.get("approver")
+    handed = {p["number"] for p in prs if handed_off_to(p, approver, config, cfg.me)}
     cross: dict[int, list[str]] = {}
     for c in clusters:
+        c["handed_off"] = [n for n in c["prs"] if n in handed]
+        c["mine"] = [n for n in c["prs"] if n not in handed]
+        c["merge_order"] = [n for n in c["merge_order"] if n not in handed]
+        # One chip per cluster per row: `cluster:C1:overlap:2/19` (this PR's
+        # place in the merge order), `cluster:C1:same-file` (no hunk overlap,
+        # merges in any order) or `cluster:C1:theirs` (at most one of mine).
+        overlap_with: dict[int, bool] = {}
         for p in c["pairs"]:
-            suffix = "" if p["kind"] == "overlap" else ":same-file"
-            cross.setdefault(p["a"], []).append(f"collision:#{p['b']}{suffix}")
-            cross.setdefault(p["b"], []).append(f"collision:#{p['a']}{suffix}")
+            if p["kind"] == "overlap":
+                overlap_with[p["a"]] = overlap_with[p["b"]] = True
+        for n in c["prs"]:
+            if len(c["mine"]) <= 1:
+                cross.setdefault(n, []).append(f"cluster:{c['id']}:theirs")
+            elif overlap_with.get(n) and n in c["merge_order"]:
+                cross.setdefault(n, []).append(f"cluster:{c['id']}:overlap:{c['merge_order'].index(n) + 1}/{len(c['merge_order'])}")
+            else:
+                cross.setdefault(n, []).append(f"cluster:{c['id']}:same-file")
     for d in directional:
         cross.setdefault(d["adds_links_pr"], []).append(f"directional:#{d['removes_links_pr']}:{d['path']}")
     for d in duplicates:
         cross.setdefault(d["newer"], []).append(f"duplicate:#{d['older']}")
-    approver = queue.get("approver")
-    handed = {p["number"] for p in prs if handed_off_to(p, approver, config, cfg.me)}
     ctx = {
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": cross,
@@ -702,12 +781,12 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
     }
     for pr in prs:
         analyze_pr(pr, ctx)
-    for c in clusters:
-        c["handed_off"] = [n for n in c["prs"] if n in handed]
-        c["mine"] = [n for n in c["prs"] if n not in handed]
-        c["merge_order"] = [n for n in c["merge_order"] if n not in handed]
     for d in directional:
         d["theirs"] = d["adds_links_pr"] in handed or d["removes_links_pr"] in handed
+    by_number = {p["number"]: p for p in prs}
+    for c in clusters:
+        c["recommendation"] = cluster_recommendation(c, by_number)
+    queue["do_next"] = do_next(prs, clusters, directional)
     queue["clusters"] = clusters
     queue["directional"] = directional
     queue["duplicates"] = duplicates

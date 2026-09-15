@@ -18,6 +18,10 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 
 A blocked row is never stampable, with or without `--force`. Red checks, an in-progress or errored review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits.
 
+## Do next
+
+The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--route` per owner, `--stamp` for the stamp set). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
+
 ## Terminal mode
 
 `--terminal` prints the table and then, for judge rows only, one AskUserQuestion per row:
