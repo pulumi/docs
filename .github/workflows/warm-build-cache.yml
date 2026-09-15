@@ -1,0 +1,131 @@
+name: "Scheduled jobs: Warm build cache"
+
+# Downstream mirrors (pulumi/docs-private) have build-and-deploy.yml and
+# testing-build-and-deploy.yml disabled -- nothing there should deploy. That
+# leaves those repos with no job that ever runs on master, and GitHub scopes
+# actions/cache so a branch can restore only entries written by its own branch
+# or by the default branch. Every PR on a mirror is a fresh branch, so every PR
+# build there started cold: no meta-images-* or hugo-resources-* entry matched
+# even on the prefix restore key, Hugo re-encoded ~2,700 images (9 minutes),
+# generate-meta-images.mjs re-rendered every card (4 minutes), and the run took
+# 19-24 minutes against ~7 warm on pulumi/docs. The #21060 fixes were present
+# on the mirror the whole time; they just had no cache to keep.
+#
+# This job is the missing master-branch writer. It restores whatever is there,
+# runs the same `make ensure` + `make build` path pulumi-cli-docs.yml uses,
+# and lets actions/cache save the result under master's scope, where every PR
+# branch can restore it. It deploys nothing and needs no cloud credentials.
+#
+# pulumi/docs itself is excluded: its master deploys already write this cache
+# on every push, so a run here would only add compute. The gate mirrors the
+# one in scheduled-upstream-sync.yaml.
+on:
+  schedule:
+    # Every six hours, offset from the quarter-hour upstream sync. Hugo's
+    # resources cache is content-addressed and the meta-image generator skips
+    # unchanged pages, so a run on a warm cache only encodes what the last six
+    # hours of synced commits changed.
+    - cron: '23 */6 * * *'
+  workflow_dispatch: null
+
+# A second scheduled run overlapping the first would save a competing cache
+# entry for the same sha; queue it instead.
+concurrency:
+  group: warm-build-cache
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  warm:
+    # Only run this job on downstream mirrors. See the header comment.
+    if: github.repository != 'pulumi/docs'
+    name: Build site on master to populate the shared caches
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: master
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+
+      - name: Install Vale (required by scripts/ensure.sh)
+        run: |
+          VALE_VERSION="3.14.1"
+          VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
+          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
+          sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
+          rm /tmp/vale.tar.gz
+
+      # Restore previously generated OpenGraph cards so the build-time generator
+      # only re-renders pages that changed (manifest content-hash skip). The
+      # cards are gitignored; this cache is their only persistence across runs.
+      - name: Cache generated meta images
+        uses: actions/cache@v6
+        with:
+          path: assets/images/generated
+          key: meta-images-${{ github.sha }}
+          restore-keys: |
+            meta-images-
+
+      # Derive the cache key from the Hugo installed above rather than a literal,
+      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # unparseable version rather than silently collapsing every build into a
+      # single unversioned namespace, which is the bug this exists to prevent.
+      - name: Resolve Hugo version for the cache key
+        id: hugo-version
+        run: |
+          hv="$(hugo version)"
+          # -n/p so a non-match yields empty rather than echoing the input back,
+          # and check before appending -extended so the guard can't see a value
+          # that is only the suffix.
+          ver="$(printf '%s' "$hv" | sed -nE 's/^hugo v([0-9]+\.[0-9]+\.[0-9]+).*/\1/p')"
+          [ -n "$ver" ] || { echo "could not parse hugo version from: $hv" >&2; exit 1; }
+          case "$hv" in *+extended*) ver="$ver-extended" ;; esac
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
+      # Persist Hugo's processed-image cache (resources/_gen). This is the entry
+      # the mirror's PR builds restore from, so it has to be written from the
+      # default branch -- which is the whole reason this workflow exists.
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          # Keyed on the Hugo resolved above, not a literal, so the five
+          # workflows that share this cache (pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml,
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
+          key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-${{ steps.hugo-version.outputs.version }}-
+
+      - run: make ensure
+        env:
+          # fetch-github-stars.js runs unauthenticated without this and can hit
+          # the anonymous rate limit on a busy runner pool.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # A full non-preview build under CI, so build-site.sh runs Hugo with --gc
+      # and prunes cache entries the site no longer references -- the same
+      # bounded-growth behaviour the deploy workflows give pulumi/docs.
+      - run: make build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"

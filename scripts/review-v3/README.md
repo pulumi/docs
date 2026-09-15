@@ -140,16 +140,17 @@ subject × change type → required approver team. Subjects come from
 labels. `routing.py` fails closed on any config it cannot validate.
 
 Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
-`website`, `programs` (docs-guild or marketing per the matrix), `infra` —
-exactly the build and deploy pipeline (`infrastructure/`, `.github/workflows/`,
-`scripts/`, Makefile, bundler config): tools approves and a staging run is
-required — `frontend` — the rendering layer (`layouts/`, `theme/`, `assets/`,
-`static/`): reviewed under the infra criteria, approved by marketing, never a
-staging run — and `other`, the classifier's fallback (repo plumbing such as
-`.claude/`, `styles/`, generated `data/` files): tools approves, so an infra PR
-that also touches plumbing dedupes to one team. Content-serving `data/` files
-(docs nav, blog taxonomies, author bios, the pricing matrix) classify with the
-content they serve; the map is `CONTENT_DATA_EXACT` in `triage-classify.py`.
+`website`, `programs` (docs-guild, the blog team, or marketing per the
+matrix), `infra` — exactly the build and deploy pipeline (`infrastructure/`,
+`.github/workflows/`, `scripts/`, Makefile, bundler config): tools approves
+and a staging run is required — `frontend` — the rendering layer (`layouts/`,
+`theme/`, `assets/`, `static/`): reviewed under the infra criteria, approved
+by marketing, never a staging run — and `other`, the classifier's fallback
+(repo plumbing such as `.claude/`, `styles/`, generated `data/` files): tools
+approves, so an infra PR that also touches plumbing dedupes to one team.
+Content-serving `data/` files (docs nav, blog taxonomies, author bios, the
+pricing matrix) classify with the content they serve; the map is
+`CONTENT_DATA_EXACT` in `triage-classify.py`.
 
 Two optional config blocks shape what the Sentinel governs:
 

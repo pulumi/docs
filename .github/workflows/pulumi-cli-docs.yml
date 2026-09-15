@@ -164,13 +164,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # Keyed on the Hugo resolved above, not a literal, so the four
+          # Keyed on the Hugo resolved above, not a literal, so the five
           # workflows that share this cache (pull-request.yml,
           # build-and-deploy.yml, testing-build-and-deploy.yml,
-          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
-          # remembering to bump them. Hugo does not put its version in its own
-          # cache entries, so without this an upgrade keeps serving images
-          # encoded by the previous version indefinitely.
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
           key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
             hugo-resources-${{ steps.hugo-version.outputs.version }}-

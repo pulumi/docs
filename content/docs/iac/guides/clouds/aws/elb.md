@@ -58,8 +58,9 @@ to an NLB is usually just a matter of swapping out this class. Any differences a
 
 ## Creating a load balancer
 
-To create a new load balancer, instantiate its class. You also need a _listener_ so that traffic can reach the
-load balancer:
+To create a new load balancer, instantiate its class. You also need a _listener_ — the component that checks for
+connection requests from clients on a protocol and port you configure, and forwards them to a target group — so that
+traffic can reach the load balancer:
 
 {{< example-program path="awsx-elb-web-listener">}}
 
