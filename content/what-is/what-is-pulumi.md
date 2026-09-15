@@ -207,7 +207,7 @@ Pulumi supports general-purpose programming languages — TypeScript, Python, Ja
 
 ### Is Pulumi open source?
 
-Yes. Pulumi's core SDK and providers are open source under the Apache 2.0 license, and the CLI and language SDKs are free to use. Pulumi Cloud, the optional managed backend for state, secrets, and policy, offers a free Individual edition plus paid Team, Enterprise, and Business Critical editions for organizations that need collaboration and governance at scale.
+Yes. Pulumi's core SDK and providers are open source under the Apache 2.0 license, and the CLI and language SDKs are free to use. Pulumi Cloud, the optional managed backend for state, secrets, and policy, offers a Free edition plus the paid Essentials, Pro, and Enterprise editions for organizations that need collaboration and governance at scale.
 
 ### How is Pulumi different from Terraform?
 
@@ -219,7 +219,7 @@ Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along wi
 
 ### Is Pulumi free?
 
-Pulumi's CLI, SDKs, and providers are free and open source. Pulumi Cloud, the managed platform for state, secrets, and team collaboration, includes a free Individual edition; the Team edition adds multi-user collaboration and organization-managed policy enforcement for growing teams, and the Enterprise and Business Critical editions add role-based access control, advanced policy controls, and premium support for organizations running infrastructure at scale.
+The Pulumi CLI, SDKs, and providers are free and open source. Pulumi Cloud adds managed state, secrets, and collaboration. Free supports one user. Essentials adds organizations, multiple users, Pulumi Neo, Resource Search, Property Search, and policy results in advisory mode. Pro adds organization-managed policy enforcement, preventative policies, and custom policy packs. Enterprise adds conformance packs, unlimited custom policy packs, and policy remediation.
 
 ### What is Pulumi Cloud?
 

@@ -93,7 +93,7 @@ Do you know which resources this will create? Is it safe to call `deployWebStack
 
 Here are some rules that we recommend:
 
-* DO use [Pulumi Component Resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) in libraries that create resources.
+* DO use [Pulumi Component Resources](/docs/iac/concepts/components/) in libraries that create resources.
 
     * This encourages a more declarative object-based approach to resources, which fits better with Pulumi's model and also causes these objects to show up in the Pulumi output.
 
@@ -145,6 +145,6 @@ In the early days of Oso, people were often surprised by how much we were able t
 
 If you're interested in exploring Pulumi further, here are several ways to get involved:
 
-* Discover how Pulumi Crosswalk for AWS simplifies "day one" tasks in our [AWS guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/)
+* Discover how Pulumi Crosswalk for AWS simplifies "day one" tasks in our [AWS guide](/docs/iac/guides/clouds/aws/)
 * Register for one of our upcoming [workshops](https://www.pulumi.com/resources/#upcoming)
 * But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!

@@ -218,7 +218,7 @@ With reusable modules and service templates in place, and a deployment workflow 
 As you build out your platform engineering plan, consider how Pulumi might fit in. With Pulumi, you get:
 
 * [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastructure-as-code/) in the language of your choice.
-* [Component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) for creating reusable infrastructure modules that encapsulate best practices.
+* [Component resources](/docs/iac/concepts/components/) for creating reusable infrastructure modules that encapsulate best practices.
 * [Pulumi Deployments](/docs/deployments/concepts/) for a fully managed infrastructure deployment solution.
 * And a [Platform in the box](/docs/deployments/concepts/) experience.
 

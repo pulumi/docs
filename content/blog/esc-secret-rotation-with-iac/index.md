@@ -74,7 +74,7 @@ export const current = creds.current.result;
 
 ### The Scheduler: Orchestrating Rotations
 
-The [scheduler component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/schedules/) for the referenced rotator stacks automatically.
+The [scheduler component](https://github.com/pulumi/esc-examples/blob/f8a0c47da556aebb74d3ac2d6491f897271bfa27/rotate/example/scheduler/index.ts) acts as an orchestrator, watching an ESC environment for updates and managing deployment schedules of the rotator stacks. Whenever a change to the environment is saved, a webhook invokes the scheduler, which parses the environment definition to find `xfn::pulumi-scheduled-update` configuration blocks. Based on these schedule configurations, it creates [scheduled deployments](/docs/deployments/concepts/schedules/) for the referenced rotator stacks automatically.
 
 ### Bringing It Together: Environment Configuration
 

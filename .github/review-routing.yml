@@ -115,7 +115,7 @@
 # mentions them). A value prefixed `TODO-` is a placeholder for a name still
 # pending an org decision: the parser treats it as valid but flags it — a
 # warning, not a validation error — so the file can ship before every
-# escalation contact is nailed down. All three were filled in 2026-09-11.
+# escalation contact is nailed down. None are outstanding.
 #
 # -----------------------------------------------------------------------------
 # AUTHOR STALENESS
@@ -161,6 +161,7 @@ schema: 1
 
 teams: # role -> GitHub team slug (org/<team>)
   docs-guild: pulumi/docs-guild
+  blog: pulumi/docs-blog-review
   marketing: pulumi/docs-marketing-review
   tools: pulumi/docs-tools
 
@@ -168,7 +169,7 @@ bots: [pulumi-bot] # machine USER accounts whose approvals never count (type==Bo
 
 matrix: # subject x change type -> role or 'none'
   docs: { mechanical: none, substantive: docs-guild }
-  blog: { mechanical: none, substantive: marketing }
+  blog: { mechanical: none, substantive: blog }
   website: { mechanical: none, substantive: marketing }
   programs: { mechanical: none, substantive: docs-guild }
   infra: { mechanical: tools, substantive: tools, staging_evidence: required }
@@ -182,6 +183,7 @@ external_contributors: { skip_gates: [review-ran, findings-answered] }
 sla:
   tools: { business_days: 1, escalate_to: "CamSoper" }
   docs-guild: { business_days: 3, escalate_to: "tatcoo-pulumi" }
+  blog: { business_days: 3, escalate_to: "cnunciato" }
   marketing: { business_days: 3, escalate_to: "cnunciato" }
 
 author_staleness: { warn_days: 14, close_days: 21 }
