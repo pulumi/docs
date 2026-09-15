@@ -1,0 +1,155 @@
+# Proposes updates to scripts/inline-critical-css.js's page allowlist against
+# real Search Console click data, monthly, so the list a human curated at
+# pulumi/docs#21439 doesn't quietly go stale (review discussion on that PR:
+# an informal "revisit periodically" note is not a maintenance plan).
+#
+# Reuses the exact reader-signals/GSC export the review-existing-content.yml
+# content-review pipeline already consumes -- same stack-output resolution,
+# same S3 fetch, same graceful degradation to no-op when the export or the
+# AWS role is unavailable. See that workflow's own comments for the full
+# rationale on why stack outputs are resolved rather than hardcoded.
+#
+# This workflow only ever opens a pull request; it never merges one. The
+# choice of which pages are worth the added build cost is a judgment call,
+# so the PR is unarmed (no auto-merge label) and needs a human review and
+# merge like any other change to this file.
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+name: Critical CSS - Update Allowlist from Search Console
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Monthly, 2nd at 08:00 UTC -- offset from the nightly lastmod-ledger
+    # (06:45 UTC) and the weekday content-review dispatcher (14:00 UTC) so
+    # none of the bot-PR producers contend for the same runner queue.
+    - cron: "0 8 2 * *"
+
+jobs:
+  update-allowlist:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.commit.outputs.has_changes }}
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # Same resolution pattern as review-existing-content.yml: the export is
+      # a foreign stack's output, not a hardcoded bucket/path, and every step
+      # degrades to a no-op script run rather than a failed workflow.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: critical-css-allowlist
+          aws-region: us-west-2
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+      - name: Resolve reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -z "$URI" ]; then
+            URI=$(pulumi stack output docsTrafficGscLatestS3Uri \
+              --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+            if [ -n "$URI" ]; then
+              echo "reader-signals envelope not published; falling back to the GSC-only export"
+            fi
+          fi
+          if [ -n "$URI" ]; then
+            echo "resolved reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "reader-signals export not yet published; allowlist update proceeds as a no-op"
+          fi
+      - name: Fetch reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .reader-signals.json --quiet; then
+            echo "fetched reader-signals snapshot: $(wc -c < .reader-signals.json) bytes"
+          else
+            echo "reader-signals snapshot unavailable; allowlist update proceeds as a no-op"
+          fi
+
+      - name: Update critical-CSS allowlist
+        run: node scripts/update-critical-css-allowlist.js .reader-signals.json
+      - name: git status
+        run: git status && git diff --stat
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b critical-css-allowlist/${{ github.run_id }}-${{ github.run_number }}
+          git add scripts/inline-critical-css.js
+          if git diff --cached --quiet; then
+            echo "No allowlist changes to commit"
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update critical-CSS allowlist from Search Console traffic"
+            git push origin critical-css-allowlist/${{ github.run_id }}-${{ github.run_number }}
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: update-allowlist
+    if: needs.update-allowlist.outputs.has_changes == 'true'
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+      - name: Open pull request
+        id: create-pr
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "critical-css-allowlist/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Update critical-CSS allowlist from Search Console traffic"
+          pr_body: "Automated proposal from the monthly critical-CSS allowlist check (pulumi/docs#21439): ranks pages by trailing Search Console clicks and proposes additions/removals to `scripts/inline-critical-css.js`'s `pages` array where the top-traffic set has drifted. This does not auto-merge -- review the diff against current traffic before merging, same as any other change to this file."
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [update-allowlist, pull-request]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "Critical-CSS allowlist update failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

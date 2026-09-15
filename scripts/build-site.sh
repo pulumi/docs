@@ -90,7 +90,7 @@ else
     echo "WARNING: docs CSS bundle public/css/bundle.${CSS_BUNDLE_ID}.css not found; archive theme bundle not refreshed" >&2
 fi
 
-# Inline critical CSS for the homepage.
+# Inline critical CSS for the homepage and the allowlisted top landing pages.
 node scripts/inline-critical-css.js
 
 printf "Done!\n\n"
