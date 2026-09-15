@@ -271,6 +271,20 @@ def review_status(labels: set[str], surface: str, review_body: str, head_sha: st
     return "CURRENT"
 
 
+def only_merges_since(commits: list[dict], review_body: str) -> bool:
+    """True when the reviewed head (the card's CLAUDE_REVIEW_HEAD) is in the
+    PR's commit list and every later commit has two parents."""
+    m = sentinel.HEAD_MARKER_RE.search(review_body or "")
+    if not m:
+        return False
+    reviewed = m.group(1)
+    shas = [c.get("sha") or "" for c in commits]
+    idx = next((i for i, sha in enumerate(shas) if sha.startswith(reviewed) or reviewed.startswith(sha)), None)
+    if idx is None or idx == len(shas) - 1:
+        return False
+    return all(len(c.get("parents") or []) >= 2 for c in commits[idx + 1:])
+
+
 def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
     """review-worklist.py's report, plus the raw REVIEW_STATE and the ⚠️ rows."""
     wl = worklist()
@@ -537,12 +551,22 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     brief_body = (brief_c or {}).get("body") or ""
     triage_c = sentinel._find_triage_prose_comment(comments)
     status = review_status(labels, surface, author_body, head_sha, triage_c is not None)
+    base_merged = False
+    if status == "STALE" and surface != "none":
+        # --unblock (and any hand merge of the base) moves the head without
+        # changing the diff the review read. When every commit after the
+        # reviewed head is a merge commit, the review still describes the
+        # PR; a real push would need the pipeline's refresh.
+        base_merged = only_merges_since(raw["commits"], author_body)
+        if base_merged:
+            status = "CURRENT"
     review = parse_review(author_body, brief_body, number, gh.repo) if author_body else {
         "surface": "none", "reviewed_sha": None, "parse_confidence": "low", "items": [],
         "summary": None, "review_state": None, "warning_rows": [], "stances": False,
         "nothing_blocks": False, "brief_summary_bullets": [],
     }
     review["status"] = status
+    review["base_merged"] = base_merged
     review["author_comment_id"] = (author_c or {}).get("id")
     review["brief_comment_id"] = (brief_c or {}).get("id")
     review["author_body"] = author_body

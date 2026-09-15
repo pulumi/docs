@@ -431,9 +431,11 @@ def request_changes_body(pr: dict, note: str = "") -> str:
 
 
 def _defect_comment(pr: dict, target: str) -> str:
-    lines = [f"Routing to {target} — this is a {'/'.join(pr.get('domains') or ['?'])} change and not mine to approve."]
+    lines = [f"Routing to {target}: this is a {'/'.join(pr.get('domains') or ['?'])} change, not mine to approve."]
+    # Only what a reviewer acts on. The queue's own proxies (desc:, brief:,
+    # blog:, cluster:, review:) are noise to anyone who isn't running it.
     defects = [r for r in pr.get("reasons") or [] if r.split(":")[0] in
-               ("warnings", "outstanding", "self-accepted", "collision", "directional", "duplicate", "blog", "desc", "brief", "merging-over", "review")]
+               ("warnings", "outstanding", "self-accepted", "directional", "duplicate", "merging-over")]
     if defects:
         lines.append("")
         lines.append("What the queue flagged:")
