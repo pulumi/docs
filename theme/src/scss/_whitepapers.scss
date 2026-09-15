@@ -1,0 +1,87 @@
+// Whitepapers section (/whitepapers/) styles. Split out of _templates.scss for
+// the same reason _case-studies.scss was: a whitepaper is a long-form document,
+// not a template page, so it shouldn't be wired into the template-page component
+// system. Imported after "templates" in main.scss so the shared mixins defined
+// there are in scope here.
+//
+// The hero and the index cards carry no section classes at all — they compose
+// the shared primitives (.card, heading-1, body-lg, font-overline-sm) inline,
+// matching the case-study pages.
+
+// Whitepaper body. Type comes from the default heading / link / paragraph
+// styles (main.scss + shared/_base.scss) — the same scale /what-is/ uses. What
+// lives here is only what a long-form document adds on top.
+.whitepaper-content {
+    // Anchor offset for the fixed nav: every h2 is an "On this page" target.
+    // (Mirrors .case-study-content in _case-studies.scss.)
+    :is(h2, h3, h4, h5, h6) {
+        @apply scroll-mt-22;
+
+        @include screen-lg {
+            @apply scroll-mt-28;
+        }
+    }
+
+    // Section rules, authored as real <hr>s in the markdown. Keeping them in the
+    // content (rather than as a border on every h2) means a document opts in,
+    // and the first section doesn't get a stray rule above it.
+    hr {
+        @apply border-0 border-t border-gray-200 my-16;
+    }
+
+    p a, li a {
+        @apply text-violet-primary;
+
+        &:hover {
+            @apply text-violet-600;
+        }
+    }
+
+    // Editorial tables. A whitepaper's tables are read as prose, not scanned as
+    // reference grids, so they drop the shared gray fill and gridlines
+    // (_tables.scss) for hairline row rules and an overline header.
+    //
+    // Scoped to min-width md, the exact complement of the max-width 767.98px
+    // stacked-card reflow in _tables.scss, so that reflow is left alone rather
+    // than half-overridden into doubled borders.
+    @include screen-md {
+        table {
+            @apply border-collapse bg-transparent rounded-none;
+            border-spacing: 0;
+
+            th {
+                @apply font-overline-sm text-gray-primary bg-transparent align-bottom py-3 border-b border-gray-300;
+            }
+
+            td {
+                @apply bg-transparent align-top py-4 border-b border-gray-200;
+            }
+
+            th, td {
+                @apply px-4;
+
+                &:first-child {
+                    @apply pl-0;
+                }
+
+                &:last-child {
+                    @apply pr-0;
+                }
+            }
+
+            tbody tr:last-child td {
+                @apply border-b-0;
+            }
+        }
+    }
+
+    // Sources & notes: reference apparatus, not body copy. Set down a size and
+    // unbulleted so it reads as a footnote block.
+    .sources-notes {
+        @apply list-none pl-0 body-sm text-gray-primary;
+
+        li {
+            @apply mb-3;
+        }
+    }
+}

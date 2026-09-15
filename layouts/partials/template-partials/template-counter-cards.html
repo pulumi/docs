@@ -8,15 +8,19 @@
     - cards: Array of card objects
       Example: [{"number": "350,000+", "label": "Engineers building with Pulumi"}, ...]
     - anchor: Optional anchor for section id
+    - align: "left" to left-align the cards. Omit for the default centered row.
+    - accent: "violet" to tint the numbers. Omit for the default black.
 */}}
 
 {{ $cards := .cards }}
 {{ $anchor := .anchor }}
+{{ $align := .align }}
+{{ $accent := .accent }}
 
-<section class="template-counter-cards"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<section class="template-counter-cards{{ if $accent }} template-counter-cards--{{ $accent }}{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
         {{ range $cards }}
-        <div class="counter-card text-center">
+        <div class="counter-card {{ if eq $align "left" }}text-left{{ else }}text-center{{ end }}">
             {{ if .number }}
             <div class="counter-card-number">{{ .number }}</div>
             {{ end }}
