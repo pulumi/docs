@@ -14,9 +14,9 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 | `stamp` | `--stamp N` (approve + squash-merge; the button starts selected) | `open PR` |
 | `judge` | `--stamp N --force` (approve as-is) | `--request-changes N` (send back to author: a changes-requested review built from the judgments, plus `needs-author-response`); `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
 | `route` | `--route N:@owner` (request review + post the defects) | `open PR` |
-| `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--close N --superseded-by M` (duplicate) | `open PR` |
+| `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--rerun N` (errored review), `--close N --superseded-by M` (duplicate) | `open PR` |
 
-A blocked row is never stampable, with or without `--force`. Red checks, an in-progress or errored review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits.
+A blocked row is never stampable, with or without `--force`. Red checks, an in-progress review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits. An errored review's unblock is `--rerun N` (`@claude #new-review`), and a row where no review ran at all (`review:trivial`, a draft, a bot skip) offers the same command as a side action, "run a full review".
 
 ## Do next
 
