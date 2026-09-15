@@ -12,7 +12,7 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 | Verdict | Primary | Also offered |
 |---|---|---|
 | `stamp` | `--stamp N` (approve + squash-merge; the button starts selected) | `open PR` |
-| `judge` | `--stamp N --force` (approve as-is) | `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
+| `judge` | `--stamp N --force` (approve as-is) | `--request-changes N` (send back to author: a changes-requested review built from the judgments, plus `needs-author-response`); `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
 | `route` | `--route N:@owner` (request review + post the defects) | `open PR` |
 | `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--close N --superseded-by M` (duplicate) | `open PR` |
 
@@ -23,9 +23,9 @@ A blocked row is never stampable, with or without `--force`. Red checks, an in-p
 `--terminal` prints the table and then, for judge rows only, one AskUserQuestion per row:
 
 1. **Approve as-is** (`--stamp N --force`) — recommended when the judgment box's disposition is `accepted` / `not-applicable` / `refuted` and nothing else is open.
-2. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
-3. **Refresh the review** (`--refresh N`) — when the finding reads as stale against the current diff.
-4. **Skip** — leave the row for later.
+2. **Send back to author** (`--request-changes N`) — when a finding is the author's to fix: the judgments become the review body, line-anchored, in the voice `message-templates.md` sets for that author type.
+3. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
+4. **Skip** — leave the row for later (`--refresh N` when the finding reads as stale is offered from the row itself).
 
 AskUserQuestion is not used anywhere else in this skill; the board composes the command itself.
 

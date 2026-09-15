@@ -99,20 +99,22 @@ Only for rows whose verdict is `judge`. For each open finding on the row (`revie
 3. Recommend a disposition from `/address-review`'s vocabulary: `fixed | refuted | deferred | accepted | not-applicable`.
 4. Emit the deep link `https://github.com/pulumi/docs/pull/N/files#diff-<sha256(path)>R<line>` (`compose-review.py::diff_anchor` is the helper; `render.py` computes it from `file` + `anchor` when you don't). No file or line → the link is "open the PR".
 
-Also draft, when the row carries `desc:stale:*` or `desc:empty`, a corrected PR description (`fix_draft`), and optionally a `recommended` verdict (`stamp` to approve as-is, `route`, or `close`). Write it all to `.pr-review-judgments.json`:
+Also draft, when the row carries `desc:stale:*` or `desc:empty`, a corrected PR description (`fix_draft`), and optionally a `recommended` action: `stamp` to approve as-is, `request-changes` when the findings are the author's to fix (the judgments become the review body), `route`, or `close`. Write it all to `.pr-review-judgments.json`:
 
 ```json
 { "21598": { "judgments": [ { "finding_id": "F1", "file": "content/docs/iac/automation-api.md", "line": 412,
               "quote_minus": ["- [file an issue](…&template=bug_report.md&title=)"],
               "quote_plus": ["+ [file an issue](…?labels=needs-triage)"],
               "decision": "Did you mean to drop the bug-report template, or only the empty params?",
+              "ask": "Restore template=bug_report.md so the link lands on the bug form.",
               "disposition": "accepted",
+              "note": "The chooser page is a worse landing than the form; approver-only rationale.",
               "deep_link": "https://github.com/pulumi/docs/pull/21598/files#diff-…R412" } ],
             "fix_draft": { "kind": "description", "body": "### Proposed changes\n\n…" },
             "recommended": "stamp" } }
 ```
 
-then merge it: `python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --judgments .pr-review-judgments.json`. A recommendation never lowers the computed verdict.
+`decision` is the question you answered; `ask` is the sentence the author reads if the row goes back with `--request-changes`; `note` is your rationale and stays on the board. Then merge it: `python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --judgments .pr-review-judgments.json`. A recommendation never lowers the computed verdict.
 
 A `fixed` disposition means the diff already addresses the finding; the board shows it as "already fixed in the diff", not as a recommendation, and it is never a `--fix` action (that button appears only when the row carries a drafted description or one-click suggestions). For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
 
@@ -139,6 +141,7 @@ The first command validates against the queue and writes `.pr-review-plan.json` 
 
 - `--stamp N,N` — per PR, immediately before merging, re-fetch the PR: head unchanged since the plan, `mergeable_state` in {clean, blocked}, checks green, no changes-requested review. Then approve (one line per `pr-review:references:message-templates`, no footer) and squash-merge. A bot PR merges; a human-authored PR is approved only unless `--merge-humans` (authors merge their own PRs). A failed preflight skips that PR and the batch continues. `--force` stamps a judge row (approve as-is); a blocked row is never stampable.
 - `--route N:@user|@org/team` — request review and post one comment with the row's defects (reason codes + judgments). `N` alone uses the row's own route target.
+- `--request-changes N` — post a changes-requested review built from the row's judgments (one line-anchored item each, `--reason` as the opening line, voice per author type from `pr-review:references:message-templates`) and apply `needs-author-response`. The author's turn; nothing merges until they answer.
 - `--unblock N` — merge the base branch into the head as a merge commit and push; a conflicted merge is aborted and reported, never resolved by hand here and never rebased or force-pushed.
 - `--fix N` — apply the drafted description and any one-click ✏️ suggestions, commit, push.
 - `--close N --superseded-by M` — cross-link both, close N.

@@ -56,6 +56,7 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
     assert 'class="chip r-collision"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@TODO-named-fallback"' in html
     assert 'class="btn p" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected
+    assert 'data-cmd="--request-changes 1"' in html and "send back to author" in html
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html

@@ -130,6 +130,7 @@ def test_gate_label_trivial_is_not_enough():
 def test_gate_open_warning_rows():
     p = _judge_because("warnings:1:F4", comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)])
     assert p["open_warning_ids"] == ["F4"]
+    assert [a["id"] for a in p["actions"][:2]] == ["stamp", "request-changes"]  # every judge row can go back to the author
 
 
 def test_gate_open_blockers_on_author_card():
@@ -350,6 +351,8 @@ def test_merge_judgments_never_lowers_verdict():
     assert "recommended" not in row(q, 100)
     p = row(q, 101)
     assert p["verdict"] == "judge" and p["recommended"] == "stamp" and p["fix_draft"]["body"] == "new body"
+    analyze.merge_judgments(q, {101: {"recommended": "request-changes"}})
+    assert p["recommended"] == "request-changes"
     assert any(a["cmd"] == "--fix 101" for a in p["actions"])
 
 
