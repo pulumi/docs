@@ -179,7 +179,7 @@ These tools query your Pulumi Cloud organization:
   - Search by name: `name:*production*`
   - Find untagged resources: `NOT _exists_:tags`
 
-- **`graph_query`** - Query the organization's [infrastructure graph](/docs/discovery-governance/context-api/) for relationship and aggregation questions: blast radius, dependency or reference traversal across stacks and accounts, and inventory grouped by relationship. Covers both Pulumi-managed resources and resources found through [Discovery](/docs/discovery-governance/discovery/). Examples:
+- **`graph_query`** - Query the organization's [infrastructure graph](/docs/discovery-governance/context-api/) for relationship and aggregation questions: blast radius, dependency or reference traversal across stacks and accounts, and inventory grouped by relationship. Covers both Pulumi-managed resources and resources found through [Discovery](/docs/discovery-governance/discovery/). Requires an organization on the Pro edition or above; other organizations receive an error that says so. Examples:
   - "What breaks if I change this security group?"
   - "Which stacks use AWS provider versions older than v7?"
 
