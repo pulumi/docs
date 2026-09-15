@@ -68,6 +68,15 @@ def test_stamp_rows_are_prechecked_and_command_footer_exists():
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
 
 
+def test_fixed_disposition_reads_as_already_done():
+    q = _queue()
+    row(q, 3)["judgments"].append({"finding_id": "F9", "file": "content/docs/iac/x.md", "line": 3,
+                                  "decision": "Anchor right?", "disposition": "fixed", "deep_link": "https://x/y#z"})
+    html = render.render_board(q)
+    assert "already fixed in the diff" in html and "recommend <b>fixed</b>" not in html
+    assert "recommend <b>refuted</b>" in html
+
+
 def test_theme_selectors_present_in_both_forms():
     html = render.render_board(_queue())
     assert '@media (prefers-color-scheme:dark){:root:not([data-theme="light"])' in html

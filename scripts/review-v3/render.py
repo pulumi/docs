@@ -135,6 +135,14 @@ def diffq(j: dict) -> str:
     return '<div class="diffq">' + "\n".join(lines) + "</div>"
 
 
+def disposition_label(d: str | None) -> str:
+    """`fixed` is not a call to make: the diff already did it. The other four
+    are the approver's decision, so they read as a recommendation."""
+    if d == "fixed":
+        return "<b>already fixed in the diff</b>"
+    return f"recommend <b>{esc(d or '?')}</b>"
+
+
 def judgment_boxes(queue: dict, pr: dict) -> str:
     js = pr.get("judgments") or []
     if not js:
@@ -147,7 +155,7 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
             '<div class="jbox">'
             f'<div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
             + diffq(j)
-            + f'<div class="jmeta">{where} · recommend <b>{esc(j.get("disposition") or "?")}</b>'
+            + f'<div class="jmeta">{where} · {disposition_label(j.get("disposition"))}'
             + (f' — {esc(j["note"])}' if j.get("note") else "")
             + "</div></div>"
         )
