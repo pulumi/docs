@@ -67,14 +67,17 @@ def stampable(number: int = 100, **over) -> dict:
 NO_ALIASES: frozenset = frozenset()
 
 
-def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, **kw) -> dict:
+def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, **kw) -> dict:
     """Collect + analyze the specs over a snapshot. `aliases=None` computes
-    the alias map from `repo_root`; the default is an empty set."""
+    the alias map from `repo_root`; the default is an empty set. `teams`
+    stands in for collect's GitHub team lookup (none exist by default)."""
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
         make_snapshot(root, specs)
         gh = GhClient("pulumi/docs", "snapshot", snapshot_dir=root)
         q = collect.collect(gh, cache_dir=None, repo_root=repo_root or root, workers=1, numbers=[s["number"] for s in specs])
+        if teams is not None:
+            q["teams"] = teams
         return analyze.analyze(q, kw.pop("cfg", cfg()), config=config, repo_root=repo_root or root,
                                aliases=(None if aliases is None else set(aliases)), today=TODAY, **kw)
 
@@ -470,13 +473,53 @@ def test_directional_conflict_with_a_handed_off_pr_is_theirs():
     assert row(q, 1)["verdict"] == "stamp" and "directional:#2:/docs/old/:theirs" in row(q, 1)["reasons"]
 
 
+LINK_MINUS = "See the [Typescript voting app](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) for details."
+LINK_PLUS = "See the [TypeScript voting app](/dev/examples/aws-ts-voting-app/) for details."
+
+
+def test_link_only_diff_masks_links_and_nothing_else():
+    assert analyze.link_only_diff([_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
+    assert analyze.link_only_diff([_file("content/docs/a.md", ['<a href="/docs/new/">x</a>'], ['<a href="/docs/old/">x</a>'])])
+    assert analyze.link_only_diff([_file("content/docs/a.md", ["Read /docs/iac/new/ first."], ["Read /docs/old/ first."])])
+    # prose changed alongside the link, an unpaired line, an unchanged line, a missing patch, an empty diff
+    assert not analyze.link_only_diff([_file("content/docs/a.md", ["Read [x](/b/) now."], ["Read [x](/a/) later."])])
+    assert not analyze.link_only_diff([_file("content/docs/a.md", ["a", "[x](/b/)"], ["[x](/a/)"])])
+    assert not analyze.link_only_diff([_file("content/docs/a.md", ["same"], ["same"])])
+    assert not analyze.link_only_diff([{"filename": "a.png", "status": "modified", "additions": 0, "deletions": 0, "patch": None}])
+    assert not analyze.link_only_diff([])
+
+
+def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
+    blog = dict(title="Fix stale links", labels=["review:no-blockers", "domain:blog"],
+                files=[_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
+    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"])), 5)
+    assert p["verdict"] == "stamp" and p["is_mine"] is True
+    assert "shape:link-only" in p["reasons"] and "link-fixes:mine" in p["reasons"] and not any(r.startswith("route:") for r in p["reasons"])
+    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"], link_fixes="route")), 5)
+    assert p["verdict"] == "route" and "shape:link-only" in p["reasons"] and "link-fixes:mine" not in p["reasons"]
+    # a prose edit in the same sweep keeps the lane owner
+    p = row(run([stampable(6, **{**blog, "files": [_file("content/blog/p/index.md", [LINK_PLUS, "new sentence"], [LINK_MINUS, "old sentence"])]})], cfg=cfg(me=["docs"])), 6)
+    assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
+
+
+def test_route_targets_the_team_when_github_has_it_else_the_sla_person():
+    q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": True})
+    p = row(q, 100)
+    assert p["actions"][0]["cmd"] == "--route 100:@pulumi/docs-guild" and "route:no-team" not in p["reasons"]
+    q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": False})
+    p = row(q, 100)
+    assert p["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager" and "route:no-team" in p["reasons"]
+    q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": None})  # token can't read teams
+    assert row(q, 100)["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager"
+
+
 def test_do_next_lists_send_back_route_and_stamp():
     q = run([stampable(1), stampable(2, title="Blog", labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["x"])]),
              stampable(3, title="Judge me", comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)], files=[_file("content/docs/c.md", ["x"])])],
             cfg=cfg(me=["docs"]))
-    analyze.merge_judgments(q, {3: {"recommended": "request-changes"}})
-    q["do_next"] = analyze.do_next(q["prs"], q["clusters"], q["directional"])
+    assert [d["kind"] for d in q["do_next"]] == ["route", "stamp"]
+    analyze.merge_judgments(q, {3: {"recommended": "request-changes"}})  # rebuilds do_next itself
     kinds = [d["kind"] for d in q["do_next"]]
     assert kinds == ["request-changes", "route", "stamp"]
-    assert q["do_next"][0]["cmd"] == "--request-changes 3" and q["do_next"][2]["cmd"] == "--stamp 1"
+    assert q["do_next"][0]["cmd"] == "--request-changes 3" and q["do_next"][2]["cmd"] == "--stamp 1" and "1 row passes" in q["do_next"][2]["say"]
     assert q["do_next"][1]["cmd"].startswith("--route 2:@")

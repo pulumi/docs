@@ -88,10 +88,11 @@ REASON_CODES = {
     "blog": "new post, or a stale publish date",
     "brief": "a 'What this PR changes' bullet names a value absent from the diff",
     "desc": "PR description names a path not in the diff, or is empty",
-    "shape": "touches layouts/ or .github/ (needs --include-infra to stamp)",
+    "shape": "infra: touches layouts/ or .github/ (needs --include-infra to stamp); link-only: every changed line differs only in a link",
+    "link-fixes": "mine: a link-only diff bypassed the lane check (`link_fixes: mine` in ~/.pr-review.yml)",
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
-    "route": "the lane this PR should go to",
+    "route": "the lane this PR should go to; `no-team`: the lane's GitHub team doesn't exist yet, so the SLA person is the target",
     "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
@@ -184,6 +185,38 @@ def ranges_overlap(a: list[tuple[int, int]] | None, b: list[tuple[int, int]] | N
 # ---- links -----------------------------------------------------------------
 
 LINK_RE = re.compile(r"\]\((/[^)\s#?]+)|href=\"(/[^\"#?]+)\"")
+
+
+# A whole markdown link (text and target), an href, a bare URL, or a bare
+# site path — everything a redirect sweep is allowed to rewrite.
+URL_TOKEN_RE = re.compile(r"\[[^\]\n]*\]\([^)\s]*\)|href=\"[^\"]*\"|https?://[^\s)\"'>]+|(?<![\w/])/[\w./-]*[\w/](?=[\s)\"'>]|$)")
+
+
+def link_only_diff(files: list[dict]) -> bool:
+    """True when every hunk in every file swaps lines that are identical
+    once links are masked (a markdown link's text and target, an href, a
+    bare URL or site path): the same sentence, only the link changed. A
+    hunk with unpaired additions or deletions, a file without a patch, or
+    a diff with no change at all is not link-only. This is the queue's own
+    bar, narrower than the Sentinel's mechanical bar (which counts a link
+    edit as substantive) and wide enough for the redirect sweeps a
+    maintainer stamps without waiting on the lane owner."""
+    if not files:
+        return False
+    seen = False
+    for f in files:
+        if f.get("patch") is None:
+            return False
+        for h in parse_hunks(f["patch"]):
+            if len(h["added"]) != len(h["removed"]):
+                return False
+            for (_, plus), (_, minus) in zip(h["added"], h["removed"]):
+                if plus == minus:
+                    return False
+                if URL_TOKEN_RE.sub("<url>", plus) != URL_TOKEN_RE.sub("<url>", minus):
+                    return False
+                seen = True
+    return seen
 
 
 def links_in(lines: list[str]) -> set[str]:
@@ -470,6 +503,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     reasons: list[str] = []
     review = pr.get("review") or {}
     labels = set(pr.get("labels") or [])
+    pr.pop("recommended", None)  # a judgments merge re-adds it on judge rows; a stale one must not outlive a verdict change
     pr["handed_off_to"] = handed_off_to(pr, ctx.get("approver"), config, cfg.me)
     pr["handed_off"] = bool(pr["handed_off_to"])
     lanes = domains_and_owner(pr, config)
@@ -477,6 +511,14 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     is_mine = mine is None or bool(set(lanes["domains"]) & mine)
     for d in lanes["domains"]:
         reasons.append(f"owner:{d}:{lanes['owners'][d]['role']}")
+    if link_only_diff(pr.get("files") or []):
+        # The lane owner's review buys nothing on a diff that only retargets
+        # links, so with `link_fixes: mine` the row is the approver's to
+        # judge whatever lane it sits in.
+        reasons.append("shape:link-only")
+        if cfg.link_fixes == "mine" and not is_mine:
+            is_mine = True
+            reasons.append("link-fixes:mine")
 
     blocked: list[str] = []      # (reason, action) pairs collapse into reasons + actions
     actions: list[dict] = []
@@ -607,7 +649,15 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if not is_mine:
         route = next((lanes["owners"][d] for d in lanes["domains"] if mine is not None and d not in mine), None)
         if route:
-            target = f"@{route['person']}" if route.get("person") else f"@{route['team']}"
+            # The team when GitHub has it (collect.py asked), else the SLA
+            # person; a team that lands later is picked up on the next run.
+            team = route.get("team")
+            if team and (ctx.get("teams") or {}).get(team):
+                target = f"@{team}"
+            else:
+                target = f"@{route['person']}" if route.get("person") else f"@{team}"
+                if team:
+                    reasons.append("route:no-team")
             reasons.append(f"route:{route['role']}")
             actions.append({"id": "route", "label": f"request review from {target}", "cmd": f"--route {n}:{target}"})
     if blocked:
@@ -702,7 +752,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
                       "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}"})
     stamps = [p["number"] for p in visible if p.get("verdict") == "stamp"]
     if stamps:
-        cards.append({"kind": "stamp", "say": f"{len(stamps)} row{'s' if len(stamps) != 1 else ''} pass every gate: merge the set.",
+        cards.append({"kind": "stamp", "say": f"{len(stamps)} row{'s pass' if len(stamps) != 1 else ' passes'} every gate: merge the set.",
                       "cmd": "--stamp " + ",".join(str(n) for n in stamps), "label": "merge the stamp set"})
     return cards
 
@@ -777,7 +827,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
     ctx = {
         "cfg": cfg, "config": config, "mine": lanes_for_owner(owner, config, cfg.me),
         "include_infra": include_infra, "strict_stances": strict_stances, "cross": cross,
-        "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": handed,
+        "today": today or datetime.now(timezone.utc).date(), "approver": approver, "handed_off": handed, "teams": queue.get("teams") or {},
     }
     for pr in prs:
         analyze_pr(pr, ctx)
@@ -840,6 +890,9 @@ def merge_judgments(queue: dict, judgments: dict) -> dict:
         rec = val.get("recommended")
         if rec in VERDICTS + ("request-changes", "close") and pr.get("verdict") == "judge":
             pr["recommended"] = rec
+    # Recommendations feed the "send back" card, so the opening is rebuilt.
+    if "do_next" in queue:
+        queue["do_next"] = do_next(queue.get("prs") or [], queue.get("clusters") or [], queue.get("directional") or [])
     return queue
 
 

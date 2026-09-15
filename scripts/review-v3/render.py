@@ -50,7 +50,7 @@ BUCKET_LABEL = {
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
-                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over")
+                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes")
 ACTION_CLASS = {"stamp": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "close": "stop",
                 "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
@@ -122,10 +122,10 @@ def verdict_chip(pr: dict) -> str:
     if v == "route":
         act = next((a for a in pr.get("actions") or [] if a["id"] == "route"), None)
         if act:
-            extra = " → " + act["cmd"].split(":", 1)[1]
+            extra = esc(" → " + act["cmd"].split(":", 1)[1])
     if pr.get("recommended") and pr["recommended"] != v:
         extra += f' <span class="v v-dim">model: {esc(pr["recommended"])}</span>'
-    return f'<span class="v v-{esc(v)}">{esc(v)}{esc(extra) if not extra.startswith(" <") else extra}</span>'
+    return f'<span class="v v-{esc(v)}">{esc(v)}{extra}</span>'
 
 
 def meta_line(pr: dict) -> str:
@@ -409,6 +409,7 @@ def filter_bar(queue: dict) -> str:
     parts.append('<span class="sep"></span>')
     parts += [chip("since", s, f"since: {s}", on=False) for s in ("1d", "7d", "30d")]
     parts.append("</div>")
+    parts.append('<p class="empty" id="empty" hidden>No rows match these chips. Every lit chip is a row you want to see; a group with nothing lit hides everything. <button class="btn" id="reset-filters" type="button">reset chips</button></p>')
     return "".join(parts)
 
 
@@ -609,6 +610,7 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
 .chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-self-accepted,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
+.empty{margin:1rem 0;color:var(--ink-2);font-size:.95rem}.empty .btn{margin-left:.5rem}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
 .chip.theirs{opacity:.55;border-style:dashed}
@@ -714,25 +716,34 @@ SCRIPT = r"""
     filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on');
     f.addEventListener('click', function(){ f.classList.toggle('on'); filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on'); apply(); });
   });
-  function anyOn(kind){ return Object.keys(filters[kind]).some(function(k){ return filters[kind][k]; }); }
   function sinceCut(){
     var days = null; Object.keys(filters.since).forEach(function(k){ if (filters.since[k]) { var d = parseInt(k, 10); if (days === null || d > days) days = d; } });
     if (days === null) return null; var t = new Date(); t.setDate(t.getDate() - days); return t.toISOString().slice(0, 10);
   }
+  // Chips are literal: a row shows only while its value is lit in every
+  // group, so turning a whole group off empties the board (and says so)
+  // instead of silently meaning "no filter". `since` is the one threshold.
+  function has(kind, val){ return kind in filters && val in filters[kind] ? filters[kind][val] : true; }
   function apply(){
-    var cut = sinceCut();
+    var cut = sinceCut(), shown = 0;
     document.querySelectorAll('.mrow').forEach(function(r){
-      var ok = true;
-      if (anyOn('owner') && !filters.owner[r.dataset.owner]) ok = false;
-      if (anyOn('domain')) { var ds = r.dataset.domains.split(' '); if (!ds.some(function(d){ return filters.domain[d]; })) ok = false; }
-      if (anyOn('verdict') && !filters.verdict[r.dataset.verdict]) ok = false;
-      if (anyOn('view') && !filters.view[r.dataset.verdict]) ok = false;
-      if (anyOn('author') && !filters.author[r.dataset.author]) ok = false;
+      var ok = has('owner', r.dataset.owner) && has('view', r.dataset.verdict) && has('author', r.dataset.author);
+      var ds = r.dataset.domains.split(' ').filter(Boolean);
+      if (ds.length && !ds.some(function(d){ return has('domain', d); })) ok = false;
       if (cut && r.dataset.created < cut) ok = false;
-      r.hidden = !ok;
+      r.hidden = !ok; if (ok) shown++;
     });
     document.querySelectorAll('.grp').forEach(function(g){ g.hidden = !g.querySelector('.mrow:not([hidden])'); });
+    var empty = document.getElementById('empty'); if (empty) empty.hidden = shown > 0;
   }
+  var reset = document.getElementById('reset-filters');
+  if (reset) reset.addEventListener('click', function(){
+    document.querySelectorAll('.fchip').forEach(function(f){
+      var on = f.dataset.filter !== 'since' && !(f.dataset.filter === 'view' && (f.dataset.value === 'stamp' || f.dataset.value === 'blocked'));
+      f.classList.toggle('on', on); filters[f.dataset.filter][f.dataset.value] = on;
+    });
+    apply();
+  });
   function progress(){
     var el = document.getElementById('progress'); if (!el) return;
     var rows = document.querySelectorAll('.mrow[data-verdict="judge"], .mrow[data-verdict="route"]');
