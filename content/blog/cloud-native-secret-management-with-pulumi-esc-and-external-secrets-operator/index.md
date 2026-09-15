@@ -161,7 +161,7 @@ values:
 
 {{% notes type="info" %}}
 
-Don't know how to create a PAT? Check out the official Pulumi [documentation](https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/).
+Don't know how to create a PAT? Check out the official Pulumi [documentation](/docs/administration/concepts/access-tokens/).
 
 {{% /notes %}}
 
