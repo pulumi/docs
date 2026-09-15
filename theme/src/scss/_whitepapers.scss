@@ -18,9 +18,11 @@
     @apply flex items-center justify-center bg-violet-50 p-6 md:p-8;
 
     img {
-        // Sized to a fraction of the field rather than filling it, so the tint
-        // reads as a mat around the document instead of a backing plate.
-        @apply h-3/4 w-auto max-h-full max-w-full rounded-sm object-contain;
+        // An absolute cap, never a percentage. The field's height comes from
+        // stretching to the flex line, and the flex line is sized by this image
+        // — so a percentage height has nothing definite to resolve against,
+        // falls back to the image's natural height, and drags the card to ~780px.
+        @apply h-auto w-auto max-h-56 max-w-full rounded-sm object-contain md:max-h-72;
         // Enough lift to read as a document sitting on the field, and no more.
         // Tinted with violet-primary rather than black so it doesn't go gray
         // against the violet-50 fill.

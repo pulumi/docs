@@ -36,10 +36,12 @@
         {{/* No padding on the card itself: the text column carries its own so the
              cover field can run flush to the card's edges. `overflow-hidden` is
              what clips the field's square corners to the card's radius. */}}
-        <div class="card card-hover group relative flex flex-col overflow-hidden md:flex-row">
+        {{/* flex-col-reverse stacks the cover above the text on narrow viewports
+             while the DOM keeps the title first. */}}
+        <div class="card card-hover group relative flex flex-col-reverse overflow-hidden md:flex-row">
             <div class="flex flex-1 flex-col justify-center p-8 md:p-10">
                 {{ with .Params.card_label }}
-                <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
+                <p class="font-overline-sm text-gray-primary m-0 mb-4">{{ . }}</p>
                 {{ end }}
                 <h2 class="heading-2 m-0 mb-5">{{ .Title }}</h2>
                 <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
@@ -78,7 +80,7 @@
             <div class="card card-hover group relative flex flex-1 flex-col overflow-hidden">
                 <div class="flex flex-1 flex-col px-8 py-8">
                     {{ with .Params.card_label }}
-                    <p class="font-overline-sm text-gray-primary m-0 mb-3">{{ . }}</p>
+                    <p class="font-overline-sm text-gray-primary m-0 mb-4">{{ . }}</p>
                     {{ end }}
                     <h3 class="heading-3 m-0 mb-5">{{ .Title }}</h3>
                     <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
