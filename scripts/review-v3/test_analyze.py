@@ -96,14 +96,17 @@ def test_parse_hunks_tracks_line_numbers():
     assert analyze.parse_hunks(None) == [] and analyze.parse_hunks("garbage") == []
 
 
-def test_base_ranges_and_overlap():
-    a = analyze.base_ranges("@@ -10,7 +10,7 @@\n a\n b\n c\n-d\n+D\n e\n f\n g")
-    assert a == [(13, 13)]
-    b = analyze.base_ranges("@@ -13,7 +13,7 @@\n a\n b\n c\n-x\n+X\n e\n f\n g")
-    c = analyze.base_ranges("@@ -40,7 +40,7 @@\n a\n b\n c\n-y\n+Y\n e\n f\n g")
-    assert analyze.ranges_overlap(a, b) is False and analyze.ranges_overlap(a, a) is True
-    assert analyze.ranges_overlap(a, c) is False
-    assert analyze.ranges_overlap(None, c) is True  # binary / whole file collides with anything
+def test_touched_lines_and_adjacency_overlap():
+    a = analyze.touched_lines("@@ -10,7 +10,7 @@\n a\n b\n c\n-d\n+D\n e\n f\n g")
+    assert a == {13}
+    far = analyze.touched_lines("@@ -13,7 +13,7 @@\n a\n b\n c\n-x\n+X\n e\n f\n g")  # line 16
+    near = analyze.touched_lines("@@ -11,7 +11,7 @@\n a\n b\n c\n-x\n+X\n e\n f\n g")  # line 14, adjacent
+    assert analyze.lines_overlap(a, far) is False and analyze.lines_overlap(a, near) is True and analyze.lines_overlap(a, a) is True
+    assert analyze.touched_lines("@@ -20,3 +20,4 @@\n a\n+new\n b\n c") == {20, 21}  # a pure insertion marks where it lands
+    assert analyze.lines_overlap(None, a) is True  # binary / whole file collides with anything
+    # two edits in one hunk with a line between them do not touch the middle line
+    two = analyze.touched_lines("@@ -10,5 +10,5 @@\n-a\n+A\n b\n-c\n+C\n d\n e")
+    assert two == {10, 12} and analyze.lines_overlap(two, {11}) is True and analyze.lines_overlap(two, {14}) is False
 
 
 # ---- the stamp bar, one gate at a time ---------------------------------------
@@ -167,6 +170,10 @@ def test_gate_stale_review_is_blocked_with_refresh():
     p = row(q, 100)
     assert p["verdict"] == "blocked" and "review:stale" in p["reasons"]
     assert any(a["cmd"] == "--refresh 100" for a in p["actions"])
+    # a head moved only by a base merge (what --unblock does) keeps the review
+    q = run([stampable(head_sha="f" * 40, commits=[{"sha": HEAD_V3, "message": "x"}, {"sha": "f" * 40, "message": "Merge master", "parents": 2}])])
+    p = row(q, 100)
+    assert p["verdict"] == "stamp" and "review:base-merged" in p["reasons"] and "review:stale" not in p["reasons"]
 
 
 def test_gate_mergeable_dirty_is_blocked_with_unblock():

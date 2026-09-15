@@ -112,7 +112,10 @@ def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", memb
         _write(root, "GET", f"repos/{repo}/issues/{n}/comments", None, s["comments"])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/reviews", None, s["reviews"])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/commits", None,
-               [{"sha": f"{i:040x}", "commit": {"message": m}} for i, m in enumerate(s["commits"], 1)])
+               [({"sha": c.get("sha") or f"{i:040x}", "commit": {"message": c.get("message", "")},
+                  "parents": [{"sha": "p"} for _ in range(c.get("parents", 1))]} if isinstance(c, dict)
+                 else {"sha": f"{i:040x}", "commit": {"message": c}, "parents": [{"sha": "p"}]})
+                for i, c in enumerate(s["commits"], 1)])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/comments", None, s["review_comments"])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/requested_reviewers", None, {
             "users": [({"login": u, "type": "User"} if isinstance(u, str) else u) for u in s["requested_users"]],
@@ -358,6 +361,20 @@ def test_routing_teams_asks_github_for_every_configured_team():
         assert q["teams"] == teams
     # no routing config in the tree: no teams, route to people
     assert collect_specs([pr_spec(2)])["teams"] == {}
+
+
+def test_base_merge_only_keeps_the_review_current():
+    from test_analyze import CLEAN_AUTHOR, CLEAN_BRIEF, HEAD_V3  # noqa: PLC0415
+    reviewed = [{"sha": HEAD_V3, "message": "the change"}]
+    merge = [{"sha": "f" * 40, "message": "Merge master into branch", "parents": 2}]
+    push = [{"sha": "f" * 40, "message": "one more fix"}]
+    base = dict(labels=["review:stale", "domain:docs"], comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR)], head_sha="f" * 40)
+    r = collect_specs([pr_spec(1, commits=reviewed + merge, **base)])["prs"][0]["review"]
+    assert r["status"] == "CURRENT" and r["base_merged"] is True
+    r = collect_specs([pr_spec(2, commits=reviewed + push, **base)])["prs"][0]["review"]
+    assert r["status"] == "STALE" and r["base_merged"] is False
+    r = collect_specs([pr_spec(3, commits=merge, **base)])["prs"][0]["review"]  # reviewed head not in the list
+    assert r["status"] == "STALE"
 
 
 def test_requested_reviewers_drop_bots():

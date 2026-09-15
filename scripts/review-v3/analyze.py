@@ -66,7 +66,6 @@ BLOG_NEW_RE = re.compile(r"^content/blog/")
 INFRA_SHAPE_RE = re.compile(r"^(layouts/|\.github/)")
 DUPLICATE_WINDOW = timedelta(minutes=10)
 DUPLICATE_TITLE_RATIO = 0.8
-CONTEXT_LINES = 3
 CROSS_CODE_CAP = 6
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -74,7 +73,7 @@ REASON_CODES = {
     "risk": "risk tier from the diff shape (typo/minor/standard/major/infra)",
     "scrutiny": "heightened content scrutiny (AI-suspect) — caps at judge",
     "ai-suspect": "which AI-suspect signal fired",
-    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose)",
+    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands",
     "label": "the review:* state label",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card",
@@ -160,26 +159,32 @@ def parse_hunks(patch: str | None) -> list[dict]:
     return hunks
 
 
-def base_ranges(patch: str | None) -> list[tuple[int, int]] | None:
-    """Base-side (old) line ranges a patch changes, context trimmed; None
-    when there is no patch (binary or too large: whole file)."""
+def touched_lines(patch: str | None) -> set[int] | None:
+    """Base-side line numbers a patch changes: every removed line, and for a
+    pure insertion the two lines it lands between. None when there is no
+    patch (binary or too large: whole file). This is what git conflicts on,
+    not the hunk's span: two edits inside one hunk that leave a line between
+    them merge cleanly, so a range-based rule over-flags (PR pairs that
+    merged a minute apart) and under-flags (edits on neighbouring lines in
+    different hunks, which git rejects)."""
     if not patch:
         return None
-    out = []
+    out: set[int] = set()
     for h in parse_hunks(patch):
-        lo = h["old_start"] + CONTEXT_LINES if h["old_start"] > 1 else h["old_start"]
-        hi = h["old_start"] + max(h["old_len"], 1) - 1
-        hi = hi - CONTEXT_LINES if hi > lo else hi
-        if hi < lo:
-            lo = hi = h["old_start"] + max(h["old_len"], 1) // 2
-        out.append((lo, hi))
+        if h["removed"]:
+            out.update(ln for ln, _ in h["removed"])
+        else:
+            out.update((h["old_start"], h["old_start"] + 1))
     return out
 
 
-def ranges_overlap(a: list[tuple[int, int]] | None, b: list[tuple[int, int]] | None) -> bool:
+def lines_overlap(a: set[int] | None, b: set[int] | None) -> bool:
+    """git's rule, near enough: changes conflict when they touch the same
+    or adjacent base lines. Checked on the 2026-09-15 queue against the
+    conflicts a real base merge produced (3 of 3 files, 0 false pairs)."""
     if a is None or b is None:
         return True  # a whole-file change overlaps anything
-    return any(x0 <= y1 and y0 <= x1 for x0, x1 in a for y0, y1 in b)
+    return any(x in b or x - 1 in b or x + 1 in b for x in a)
 
 
 # ---- links -----------------------------------------------------------------
@@ -264,7 +269,7 @@ def collision_clusters(prs: list[dict]) -> list[dict]:
         lines[pr["number"]] = pr.get("changed_lines") or 0
         for f in pr.get("files") or []:
             by_path.setdefault(f["path"], []).append(pr["number"])
-            ranges[(pr["number"], f["path"])] = base_ranges(f.get("patch"))
+            ranges[(pr["number"], f["path"])] = touched_lines(f.get("patch"))
     parent: dict[int, int] = {}
 
     def find(x):
@@ -287,7 +292,7 @@ def collision_clusters(prs: list[dict]) -> list[dict]:
         for i, a in enumerate(members):
             for b in members[i + 1:]:
                 union(a, b)
-                kind = "overlap" if ranges_overlap(ranges[(a, path)], ranges[(b, path)]) else "same-file"
+                kind = "overlap" if lines_overlap(ranges[(a, path)], ranges[(b, path)]) else "same-file"
                 p = pairs.setdefault((a, b), {"a": a, "b": b, "kind": "same-file", "paths": []})
                 p["paths"].append(path)
                 if kind == "overlap":
@@ -552,6 +557,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     for l in sorted(labels):
         if l.startswith("review:"):
             reasons.append(f"label:{l}")
+    if review.get("base_merged"):
+        reasons.append("review:base-merged")
     if status != "CURRENT":
         reasons.append(f"review:{status.lower().replace('_', '-')}")
         stamp_ok = False
@@ -717,7 +724,14 @@ def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
         return {"kind": "ignore", "say": f"{c['id']}: {len(mine)} PRs share files but no hunks overlap; merge in any order.", "cmd": None}
     # Only members whose hunks actually overlap count toward a consolidation:
     # a same-file neighbour merges in any order and has nothing to fold in.
-    overlapping = sorted({n for p in c.get("pairs") or [] if p.get("kind") == "overlap" for n in (p["a"], p["b"]) if n in mine})
+    degree: dict[int, int] = {}
+    for p in c.get("pairs") or []:
+        if p.get("kind") == "overlap" and p["a"] in mine and p["b"] in mine:
+            degree[p["a"]] = degree.get(p["a"], 0) + 1
+            degree[p["b"]] = degree.get(p["b"], 0) + 1
+    # A leaf that overlaps one neighbour is a merge-order problem; only a
+    # member entangled with two or more is a sweep worth folding together.
+    overlapping = sorted(n for n, d in degree.items() if d >= 2)
     authors = [(by.get(n) or {}).get("author", {}).get("norm") for n in overlapping]
     top = max(set(authors), key=authors.count) if authors else None
     bots = sum(1 for n in overlapping if (by.get(n) or {}).get("author", {}).get("type") == "bot" and (by.get(n) or {}).get("author", {}).get("norm") == top)
@@ -748,7 +762,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     visible = [p for p in prs if not p.get("handed_off")]
     back = [p["number"] for p in visible if p.get("recommended") == "request-changes"]
     if back:
-        cards.append({"kind": "request-changes", "say": f"{len(back)} row{'s' if len(back) != 1 else ''} need the author, not you: send them back.",
+        cards.append({"kind": "request-changes", "say": f"{len(back)} row{'s need' if len(back) != 1 else ' needs'} the author, not you: send {'them' if len(back) != 1 else 'it'} back.",
                       "cmd": " ".join(f"--request-changes {n}" for n in back), "label": "send all back"})
     routes: dict[str, list[int]] = {}
     for p in visible:
@@ -757,7 +771,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
             if act:
                 routes.setdefault(act["cmd"].split(":", 1)[1], []).append(p["number"])
     for target, nums in routes.items():
-        cards.append({"kind": "route", "say": f"{len(nums)} row{'s' if len(nums) != 1 else ''} aren't your lane: route to {target}.",
+        cards.append({"kind": "route", "say": f"{len(nums)} row{'s are' if len(nums) != 1 else ' is'} not your lane: route to {target}.",
                       "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}"})
     stamps = [p["number"] for p in visible if p.get("verdict") == "stamp"]
     if stamps:
