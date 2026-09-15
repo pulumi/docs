@@ -64,6 +64,19 @@ Pulumi ships MCP support in two forms, a local server and a hosted one, so teams
 
 The local server's tool names are prefixed to keep them unambiguous inside a host that may be connected to multiple servers at once: `pulumi-registry-list-resources`, `pulumi-registry-list-functions`, `pulumi-registry-get-resource`, `pulumi-registry-get-function`, `pulumi-registry-get-type`, `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-cli-stack-output`, `pulumi-cli-refresh`, `pulumi-resource-search`, and `neo-task-launcher`, plus a `deploy-to-aws` prompt for a common starting workflow. The hosted server exposes an unprefixed set with the same intent, including `get-stacks` and `resource-search`. Full parameter-level documentation lives on the [Pulumi MCP server docs page](/docs/ai/mcp-server/).
 
+### Pulumi's MCP server by the numbers
+
+| Metric | Value | As of |
+| --- | --- | --- |
+| `@pulumi/mcp-server` npm downloads, trailing 12 months | 73,102 | 2026-09-10 |
+| `@pulumi/mcp-server` npm downloads, last 30 days | 25,238 | 2026-09-10 |
+| `mcp/pulumi` Docker Hub pulls | 18,062 | 2026-09-12 |
+| Tools exposed, local server | 11 tools, 1 prompt | 2026-09-12 |
+| Tools exposed, hosted server | 14 tools, 6 prompts | 2026-09-12 |
+| Cloud providers reachable through Pulumi's IaC engine | 312 | 2026-09-12 |
+
+No other MCP server for infrastructure as code connects an agent to this many providers through one interface. Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
+
 ## What can AI agents do with it?
 
 Connected through either transport, an agent can:
@@ -123,6 +136,8 @@ This is the most common question teams ask before connecting any agent to real c
 Independent researchers have already documented real attack classes. Invariant Labs disclosed Tool Poisoning Attacks, where malicious instructions are hidden inside a tool's description rather than its output, tricking an agent into taking unintended actions, and released MCP-Scan to detect them. Simon Willison and researchers at Snyk Labs have separately analyzed prompt injection as an MCP-specific vector, since a server's responses become part of an agent's context the same way any other tool output does. Two CVEs are publicly tracked: CVE-2025-54136, nicknamed "MCPoison," is remote code execution through silent modification of an already-approved MCP server configuration file, a config-trust issue rather than a tool-description poisoning one, and CVE-2025-49596 affects MCP-Inspector. MCPSecBench, an academic benchmark, catalogs 17 distinct attack types across 4 attack surfaces. In May 2026, the NSA published "Model Context Protocol (MCP): Security Design Considerations," warning that current mitigations offer only partial protection given the protocol's early security maturity, a caution worth taking at face value rather than downplaying.
 
 None of that is unique to Pulumi, and none of it should be read as an argument against connecting infrastructure to MCP; it's an argument for connecting it carefully. Pulumi's approach leans on controls that exist independent of MCP itself: every write operation goes through a preview step an engineer can inspect before approving, access tokens are scoped rather than broad, the hosted server authenticates through OAuth rather than shared secrets, and [policy as code](/docs/discovery-governance/policy/) can block a non-compliant change regardless of whether a human or an agent proposed it. Pulumi does not claim to solve MCP's protocol-level security questions; the discipline is treating an MCP-connected agent the same way you would treat a new, junior engineer with real access, that is, with previews, scoped permissions, and policy guardrails in the loop, not unchecked write access to production.
+
+Richard Genthner, Chief Information Security Officer at Boost Insurance, frames the requirement from a security leader's seat: "To get to market faster, we require infrastructure intelligence that understands our environment, respects our guardrails, and keeps humans in the loop so we can move faster, safely."
 
 ## How does Neo relate to MCP?
 

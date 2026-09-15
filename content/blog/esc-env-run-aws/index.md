@@ -111,7 +111,7 @@ One area that we want to draw your attention to is the **Select trusted entities
 
 ![An image of the IAM role trust policy](/blog/esc-env-run-aws/review-trust-policy.png)
 
-This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#configuring-the-iam-role-and-trust-policy).
+This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](/docs/esc/providers/login/aws-login/).
 
 After creating your role, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
@@ -140,7 +140,7 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#example) as well as the documentation for [projecting environment variables](https://www.pulumi.com/docs/pulumi-cloud/esc/environments/#projecting-environment-variables).
+The variables defined under the `environmentVariables` parameter above are the same environment variables that the AWS CLI uses if you were authenticating with something like the `aws configure` command.  What the above configuration is doing is dynamically generating the credentials and projecting those credential values into your local environment. From there, the AWS CLI picks up those environment variables and runs the designated command. You can find out more about this provider definition and how it works in the Pulumi ESC documentation for [the AWS provider](/docs/esc/providers/login/aws-login/#examples) as well as the documentation for [projecting environment variables](/docs/esc/concepts/environments/).
 
 Click **Save**.
 

@@ -40,7 +40,7 @@ When used with Pulumi, each environment definition consists of two components:
     templatePath: Pulumi.yaml
     ```
 
-2. A Pulumi program that defines the resources to deploy. This program can use any of the [Pulumi Azure providers](https://www.pulumi.com/docs/clouds/azure/) to define resources in the environment. Here is a very simple Pulumi program defined in YAML:
+2. A Pulumi program that defines the resources to deploy. This program can use any of the [Pulumi Azure providers](/docs/integrations/clouds/azure/) to define resources in the environment. Here is a very simple Pulumi program defined in YAML:
 
     ```yaml
     name: ade-pulumi

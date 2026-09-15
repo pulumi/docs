@@ -6,8 +6,8 @@
     Taxonomy pages were blanket-noindexed in pulumi-hugo#2138 (Oct 2022) because
     topical tag terms (/blog/tag/kubernetes/ etc.) cannibalized core product and
     docs pages for the same keywords. That reasoning is preserved here — plain
-    tag and author terms stay noindexed — with carve-outs for curated landing
-    pages whose titles don't compete with core pages:
+    tag terms stay noindexed — with carve-outs for curated landing pages whose
+    titles don't compete with core pages:
 
       - blog category TERM pages (/blog/category/*)  — curated kinds with
         hand-written descriptions
@@ -17,10 +17,20 @@
         multi-part landing pages with unique, blog-only titles. Both the
         directory and each series term page are indexed (the directory was an
         indexed content page before it became a taxonomy list page).
+      - blog author TERM pages (/blog/author/*) with 3 or more posts — each
+        page carries a real-name H1, ProfilePage + Person schema, and its own
+        curated post list, so it's not a thin duplicate of the tag pages this
+        rule was written to suppress. The 3-post floor (not 1 or 2) is a
+        deliberate line: most authors here don't yet have prose bios (see
+        data/team/team/*.toml), so post count is the only reliable signal
+        available today that a page carries enough unique content to be worth
+        indexing. Authors below the floor stay noindexed. See
+        layouts/taxonomy/author.html for the post-count query this mirrors.
 
-    The category carve-out is TERM-only; its bare list page (/category/) stays
-    noindexed, as do the /tags/ and /authors/ list pages and all tag/author term
-    pages. Non-taxonomy pages return true (no opinion).
+    The category and author carve-outs are TERM-only; their bare list pages
+    (/category/ and /authors/) stay noindexed, as do the /tags/ list page, all
+    tag term pages, and author term pages below the post-count floor.
+    Non-taxonomy pages return true (no opinion).
 */ -}}
 {{- $indexable := true -}}
 {{- if .Data.Singular -}}
@@ -28,6 +38,8 @@
     {{- if eq .Data.Singular "series" -}}
         {{- $indexable = true -}}
     {{- else if and (eq .Kind "term") (or (eq .Data.Singular "category") (eq .Data.Singular "industry")) -}}
+        {{- $indexable = true -}}
+    {{- else if and (eq .Kind "term") (eq .Data.Singular "author") (ge (len (where .Data.Pages "Section" "blog")) 3) -}}
         {{- $indexable = true -}}
     {{- end -}}
 {{- end -}}

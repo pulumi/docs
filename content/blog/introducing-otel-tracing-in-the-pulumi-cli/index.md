@@ -43,7 +43,7 @@ For plugins we always request both OpenTracing and OTel traces. If both are requ
 
 ## Try it out
 
-Currently the OTel exporter supports both exporting the traces directly via gRPC to a collector, or to a file, where the traces are JSON encoded. This file can then be shared and imported into a trace viewer at a later time. To do this, you can use the `--otel-traces <file://<filename>|grpc://<exporter-address>>` flag, using pulumi version v3.226 or newer. For further documentation see [our performance tracing docs](https://www.pulumi.com/docs/support/debugging/performance-tracing/#opentelemetry-tracing).
+Currently the OTel exporter supports both exporting the traces directly via gRPC to a collector, or to a file, where the traces are JSON encoded. This file can then be shared and imported into a trace viewer at a later time. To do this, you can use the `--otel-traces <file://<filename>|grpc://<exporter-address>>` flag, using pulumi version v3.226 or newer. For further documentation see [our performance tracing docs](/docs/iac/operations/debugging/performance-tracing/#opentelemetry-tracing).
 
 To view the traces, you can use one of the various exporters that exist. Popular options include [Jaeger](https://www.jaegertracing.io/), [OTel Desktop Viewer](https://github.com/CtrlSpice/otel-desktop-viewer), or [OTel TUI](https://github.com/ymtdzzz/otel-tui) if you prefer not leaving your terminal. Once you've ingested the logs there either by uploading the trace file, or sending them directly by giving pulumi the exporter address, look for the `pulumi-cli: pulumi` root span.
 

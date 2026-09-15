@@ -85,7 +85,7 @@ $ pulumi stack init dev-stack --teams devs
 
 ### Visual Indication of Retained Resources
 
-You can use the [`RetainOnDelete` resource option](https://www.pulumi.com/docs/intro/concepts/resources/options/retainondelete/) to let Pulumi retain the actual cloud resource while deleting it from your Pulumi stack. This option is useful, for instance, when you need to start managing the same resource from another stack or project.
+You can use the [`RetainOnDelete` resource option](/docs/iac/concepts/resources/options/retainondelete/) to let Pulumi retain the actual cloud resource while deleting it from your Pulumi stack. This option is useful, for instance, when you need to start managing the same resource from another stack or project.
 
 Now, the CLI will explicitly mark deleted or replaced resources as retained in the cloud. See the Plan column of the preview view:
 

@@ -66,7 +66,7 @@ To support more flexibility for .NET versions, the default image now also ships 
     ...
 ```
 
-If you want to use one of the language specific images, or your own custom built image, you can [set a custom executor image](https://www.pulumi.com/docs/deployments/deployments/using/settings/#custom-executor-images) in the Deployment settings.
+If you want to use one of the language specific images, or your own custom built image, you can [set a custom executor image](/docs/deployments/concepts/settings/custom-executor-images/) in the Deployment settings.
 
 ### Additional Tools
 

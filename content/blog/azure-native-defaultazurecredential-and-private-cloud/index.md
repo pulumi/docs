@@ -238,7 +238,7 @@ Please create a `Secret` containing a Pulumi access token to be used to authenti
 kubectl create secret generic -n ${SERVICE_ACCOUNT_NAMESPACE} pulumi-api-secret --from-literal=accessToken=${PULUMI_ACCESS_TOKEN}
 ```
 
-[doctokens]: https://www.pulumi.com/docs/pulumi-cloud/access-management/access-tokens/
+[doctokens]: /docs/administration/concepts/access-tokens/
 
 #### Update the Kubernetes Service Account
 

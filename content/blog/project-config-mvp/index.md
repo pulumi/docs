@@ -90,7 +90,7 @@ config:
 
 ### Pulumi YAML Configuration: What's Changing?
 
-When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/#configuration) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
+When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](/docs/iac/languages-sdks/yaml/yaml-language-reference/#config) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
 
 ### What's Next for Pulumi Configuration?
 

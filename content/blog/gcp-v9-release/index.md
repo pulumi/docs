@@ -73,7 +73,7 @@ You can find the [migration guide on the Pulumi registry.](https://www.pulumi.co
 
 ### NEW! Use Pulumi Neo to assist with your upgrade
 
-You can use our new automation agent, [Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/), to help you with your provider upgrade.
+You can use our new automation agent, [Neo](/docs/ai/neo/), to help you with your provider upgrade.
 In the Pulumi service, ask Neo to help you with your upgrade by providing the migration guide:
 
 ![migration-prompt.png](/blog/gcp-v9-release/migration-prompt.png)

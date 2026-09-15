@@ -171,7 +171,7 @@ Achieving these goals, a decreasing incident rate coupled with a low developer f
 
 * **[Policy as Code (CrossGuard)](https://www.pulumi.com/crossguard/):** Automatically enforce security and compliance standards.
 * **[Secure Secrets Management (Pulumi ESC)](https://www.pulumi.com/product/esc/):** Centralize and securely inject secrets without manual handling.
-* **[Identity-Based Authentication](https://www.pulumi.com/docs/pulumi-cloud/access-management/):** Simplify secure access to cloud resources using existing identities.
+* **[Identity-Based Authentication](/docs/administration/concepts/rbac/):** Simplify secure access to cloud resources using existing identities.
 
 With Pulumi, security becomes an integrated, frictionless part of your platform—accelerating innovation while building trust.
 

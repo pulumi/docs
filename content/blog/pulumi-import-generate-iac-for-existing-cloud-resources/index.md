@@ -10,7 +10,7 @@ category: product
 Most infrastructure projects require working with existing cloud resources, either by building on top of existing resources
 or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
 
-In June 2019, Pulumi introduced the ability to [import existing infrastructure resources to be under Pulumi management](https://www.pulumi.com/docs/iac/adopting-pulumi/import/)
+In June 2019, Pulumi introduced the ability to [import existing infrastructure resources to be under Pulumi management](/docs/iac/guides/migration/import/)
 no matter how you’ve provisioned these resources — manually in your cloud provider’s console or CLI, using an infrastructure
 as code tool like Terraform or AWS CloudFormation. Today, we are happy to announce a richer resource import experience.
 
