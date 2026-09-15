@@ -63,7 +63,44 @@ link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
 ignorecase: false
 nonword: false
-scope: paragraph
+# Widened from `scope: paragraph` in #20958 to also cover headings and list
+# items, the two contexts where "the Stack"/"Infrastructure as Code" most
+# commonly recur (a tutorial's "## Configuring the Stack" heading, a bulleted
+# "use Infrastructure as Code" clause). Enumerated per-level (heading.h2
+# through h6), never bare `heading` or `text`, for the same reason
+# HeadingSentenceCase.yml and CrossReferenceHeadings.yml use the enumerated
+# shape: an H1 is correctly Title Case in this repo's convention, and a bare
+# `heading` scope would false-flag every capitalized H1 that happens to start
+# with "Infrastructure" or contain "Stack".
+#
+# Widening surfaced one true self-referential-title false-positive class: the
+# recurring "What is Infrastructure as Code (IaC)?" related-topics link (11
+# occurrences across content/what-is/** and two blog posts) and a heading
+# quoting that same interrogative framing verbatim. Carved out below via
+# `exceptions` rather than a token-regex change, since the captured text is
+# identical in all 11 cases and a substring exception is the narrowest tool
+# that expresses "this exact phrase, wherever it recurs" without touching the
+# IaC token's negative-lookahead logic. A handful of other hits turned out to
+# be pages quoting the literal title of another asset (a workshop, a
+# conference panel, a companion guide, or -- most concentrated -- an entire
+# recap post whose headings are themselves workshop session titles); those
+# are carved out per-file in .vale.ini instead, following the same
+# proper-noun-title precedent as the argocd.md/cdk.md Stack opt-outs above,
+# since TokenIgnores/exceptions can't distinguish "this text in a title" from
+# "this text in prose" and a substring exception broad enough to catch them
+# would also swallow genuine violations that share the same words (multiple
+# headings read "## ... of Infrastructure as Code" or "## ... to
+# Infrastructure as Code" where the phrase is NOT part of a quoted title).
+exceptions:
+  - is Infrastructure as Code
+scope:
+  - paragraph
+  - heading.h2
+  - heading.h3
+  - heading.h4
+  - heading.h5
+  - heading.h6
+  - list
 tokens:
   # Excludes a following capitalized word via negative lookahead, so compound
   # proper nouns -- Stack Admin (an RBAC permission set), Stack API, Stack

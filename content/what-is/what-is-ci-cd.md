@@ -78,7 +78,7 @@ For a detailed exploration and steps to implement CI/CD and DevOps practices, re
 
 * **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/discovery-governance/policy/).
 
-* **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
+* **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with infrastructure as code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 
 * **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
 

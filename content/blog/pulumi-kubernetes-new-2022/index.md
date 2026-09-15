@@ -21,7 +21,7 @@ Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernete
 Today we are announcing a set of major updates which deepen and extend Pulumi’s support for Kubernetes and the Kubernetes ecosystem. In this post, we’ll highlight a few of these exciting enhancements:
 
 * [Pulumi Kubernetes Operator v1.10](https://github.com/pulumi/pulumi-kubernetes-operator/#readme): New integration with Flux for richer GitOps support, and ability to deploy Pulumi stacks from directly within the Kubernetes resource model
-* [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with Infrastructure as Code
+* [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with infrastructure as code
 * [Pulumi Kubernetes Provider v3.22](https://www.pulumi.com/registry/packages/kubernetes/): Server Side Apply and Resource Patch
 
 You can [learn more about Pulumi and Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/) or jump in and [get started](https://www.pulumi.com/docs/iac/get-started/kubernetes/) right away, or read on to learn more about what’s new for Pulumi and Kubernetes!
