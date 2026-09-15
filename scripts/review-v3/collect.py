@@ -602,7 +602,8 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
             for r in raw["reviews"]
         ],
         "requested_reviewers": {
-            "users": [u.get("login") for u in (requested.get("users") or [])],
+            "users": [u.get("login") for u in (requested.get("users") or [])
+                      if not is_bot_login(u.get("login"), u.get("type"))],
             "teams": [t.get("slug") for t in (requested.get("teams") or [])],
         },
         "one_click_suggestions": [
@@ -665,6 +666,8 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
             allowlist_path: Path | None = None, approver: str | None = None) -> dict:
     listed = gh.list_open_prs()
     chosen = select_prs(listed, numbers=numbers, authors=authors, since=parse_since(since))
+    if not approver:
+        approver = gh.me()  # who "me" is for the handed-off rule; None on a snapshot without GET/user.json
     errors: list[dict] = []
 
     def one(pr):

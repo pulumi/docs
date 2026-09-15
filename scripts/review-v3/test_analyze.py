@@ -301,7 +301,7 @@ def test_directional_conflict_against_aliases_block():
         adds = stampable(1, title="Add a link", files=[_file("content/blog/p/index.md", ["see [x](/docs/old/) now"])])
         removes = stampable(2, title="Repoint a link", files=[_file("content/blog/q/index.md", ["see [x](/docs/new/)"], ["see [x](/docs/old/)"])])
         q = run([adds, removes], aliases=None, repo_root=root)
-    assert q["directional"] == [{"path": "/docs/old/", "adds_links_pr": 1, "removes_links_pr": 2}]
+    assert q["directional"] == [{"path": "/docs/old/", "adds_links_pr": 1, "removes_links_pr": 2, "theirs": False}]
     assert "directional:#2:/docs/old/" in row(q, 1)["reasons"] and row(q, 1)["verdict"] == "judge"
     assert row(q, 2)["verdict"] == "stamp"
 
@@ -404,3 +404,55 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+# ---- handed-off ------------------------------------------------------------------
+
+
+def test_handed_off_when_a_human_who_is_not_me_is_requested():
+    q = run([stampable(1, requested_users=["cnunciato"]),
+             stampable(2, title="Mine too", requested_users=["cnunciato", "CamSoper"], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Nobody", files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Bot only", requested_users=[{"login": "copilot-pull-request-reviewer[bot]", "type": "Bot"}],
+                       files=[_file("content/docs/d.md", ["x"])])])
+    assert row(q, 1)["handed_off"] is True and row(q, 1)["handed_off_to"] == ["@cnunciato"]
+    assert "handed-off:@cnunciato" in row(q, 1)["reasons"]
+    assert row(q, 2)["handed_off"] is False  # I'm requested too
+    assert row(q, 3)["handed_off"] is False and row(q, 4)["handed_off"] is False
+    assert q["counts"]["handed-off"] == 1 and q["counts"]["stamp"] == 3
+
+
+def test_handed_off_teams_map_through_routing():
+    q = run([stampable(1, requested_teams=["docs-guild"]),
+             stampable(2, title="Marketing's", requested_teams=["docs-marketing-review"], files=[_file("content/docs/b.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 1)["handed_off"] is False  # docs-guild owns a lane in me
+    assert row(q, 2)["handed_off_to"] == ["@docs-marketing-review"]
+    assert analyze.team_lanes("docs-tools", CONFIG) == {"infra", "other"} and analyze.team_lanes("nope", CONFIG) == set()
+
+
+def test_collision_with_a_handed_off_pr_is_advisory():
+    mine = stampable(1, title="Mine", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    theirs = stampable(2, title="Chris has it", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([mine, theirs])
+    p = row(q, 1)
+    assert p["verdict"] == "stamp" and "collision:#2:theirs" in p["reasons"]
+    c = q["clusters"][0]
+    assert c["handed_off"] == [2] and c["mine"] == [1] and c["merge_order"] == [1]
+    # the same pair with nobody requested still gates
+    q = run([mine, stampable(2, title="Nobody", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])])
+    assert row(q, 1)["verdict"] == "judge" and "collision:#2" in row(q, 1)["reasons"]
+
+
+def test_directional_conflict_with_a_handed_off_pr_is_theirs():
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        page = root / "content" / "docs" / "new" / "_index.md"
+        page.parent.mkdir(parents=True)
+        page.write_text("---\ntitle: New\naliases:\n  - /docs/old/\n---\nbody\n")
+        adds = stampable(1, title="Add a link", files=[_file("content/blog/p/index.md", ["see [x](/docs/old/) now"])])
+        removes = stampable(2, title="Repoint a link", requested_users=["cnunciato"],
+                            files=[_file("content/blog/q/index.md", ["see [x](/docs/new/)"], ["see [x](/docs/old/)"])])
+        q = run([adds, removes], aliases=None, repo_root=root)
+    assert q["directional"][0]["theirs"] is True
+    assert row(q, 1)["verdict"] == "stamp" and "directional:#2:/docs/old/:theirs" in row(q, 1)["reasons"]

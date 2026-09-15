@@ -28,7 +28,7 @@ Deterministic scripts do the collecting, judging-by-rule and rendering; the mode
 /pr-review --owner any --domain blog        # what marketing has to decide
 /pr-review --act --stamp 21550,21577 --route 21431:@cnunciato --unblock 21525
 
-flags: --owner me|any|<role>|@login   --domain docs,blog,website,programs,infra,frontend,other
+flags: --owner me|any|<role>|@login   --domain docs,blog,website,programs,infra,frontend,other   --include-handed-off
        --verdict stamp,judge,route,blocked   --author app/workprentice,pulumi-bot,any
        --since 7d   --include-infra   --strict-stances   --board|--terminal   --ai|--no-ai
        --act --stamp N,N --route N:@target --unblock N --fix N --close N --superseded-by M
@@ -84,6 +84,8 @@ Per PR: `domains` (`classify_path` via `routing.resolve_lanes`), the owning role
 | `route` | Not this approver's lane per the routing matrix. | Batch "request review from owner"; any defect found rides along. |
 | `blocked` | Can't merge regardless: conflict, red CI, stale review, changes requested. | Names the blocker and offers the mechanical unblock. |
 
+**Handed off.** A PR whose requested reviewers include a human who isn't you (and don't include you) is waiting on them, not you. It keeps its verdict in `queue.json` but leaves the groups: the board and `--terminal` list it once, compactly, under "Waiting on others" (who, how old, a ✗ for red CI or ⚠ for a conflict), and `--include-handed-off` brings the full rows back when you need to act on one. A requested team counts as yours when `review-routing.yml` maps it to a lane in `me:`. The review request is the memory: it lives on the PR, every session sees it, and GitHub clears it when the reviewer acts, which is when the row returns. `--route N:@login` is therefore also the "don't show me this again" button. Collisions and directional conflicts against a handed-off PR are advisory (`:theirs`): they no longer gate your stamp, and a cluster with at most one of your PRs in it drops out of the pinned slots.
+
 The stamp bar, **all required**: label `review:no-blockers` (`review:trivial` is not enough — no review ran); zero ⚠️ rows on the brief (zero low-confidence items on a legacy review); no self-accepted disposition; review `CURRENT`; `mergeable_state` in {clean, blocked} with checks green; no overlap collision, directional conflict or duplicate; one of the PR's domains is in `me`; no new file under `content/blog/`; no `layouts/` or `.github/` change unless `--include-infra`; changed lines under `stamp_max_lines`; scrutiny not heightened. Editorial stances on the brief block only with `--strict-stances`. Heightened scrutiny (AI-suspect on a human author) caps a row at `judge`. Precedence: blocked > route > stamp/judge.
 
 Reason codes are `code[:detail]` from a closed vocabulary (`analyze.REASON_CODES`, echoed into `queue.json`): `risk:`, `scrutiny:`, `ai-suspect:`, `review:`, `label:`, `warnings:`, `outstanding:`, `self-accepted:`, `stances:`, `mergeable:`, `checks:`, `collision:`, `directional:`, `duplicate:`, `blog:`, `brief:`, `desc:`, `shape:`, `size:`, `owner:`, `route:`, `merging-over:`, `not-governed`, `author:`, `trust:`, `draft`.
@@ -124,7 +126,7 @@ python3 scripts/review-v3/render.py --in .pr-review-queue.json --terminal [--pr 
 
 Publish with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). Pass `--artifact` when rendering for it: that form omits the document skeleton the Artifact tool adds itself. The default form is a standalone file for a browser or `screenshot.mjs`. The board is grouped owner → domain with the collision clusters pinned first, has filter chips for owner / domain / verdict / author / since, and every checkbox and button composes the `/pr-review --act …` command shown at the bottom. The page never calls GitHub; the person copies the command, or asks you to run it.
 
-`--terminal` prints the table and, in this mode only, walk each judge row with AskUserQuestion (options: approve as-is / route / refresh / skip), then compose the same act command.
+Both renderings hide handed-off rows behind the "Waiting on others" list unless `--include-handed-off`. `--terminal` prints the table and, in this mode only, walk each judge row with AskUserQuestion (options: approve as-is / route / refresh / skip), then compose the same act command.
 
 ### 5. Act
 

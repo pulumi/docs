@@ -347,6 +347,14 @@ class GhClient:
                 return None
             raise
 
+    def me(self) -> str | None:
+        """The token's login (`GET /user`), or None when the backend can't say."""
+        try:
+            data = self.get("user")
+        except GhError:
+            return None
+        return (data or {}).get("login") if isinstance(data, dict) else None
+
     def merged_pr_count_by_author(self, login: str) -> int:
         q = f"repo:{self.repo} is:pr is:merged {search_author_q(login)}"
         data = self.get("search/issues", {"q": q, "per_page": 1}) or {}

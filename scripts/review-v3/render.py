@@ -30,6 +30,7 @@ import base64
 import html
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 _HERE = Path(__file__).resolve().parent
@@ -46,6 +47,7 @@ BUCKET_LABEL = {
     "low": "⚠️ Low-confidence", "style": "✏️ Style", "pre-existing": "💡 Pre-existing", "preexisting": "💡 Pre-existing",
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
+INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 
 
 def esc(v) -> str:
@@ -79,7 +81,8 @@ def chips(reasons: list[str]) -> str:
         if r.startswith(HIDDEN_REASON_PREFIXES):
             continue
         code = r.split(":", 1)[0]
-        out.append(f'<span class="chip r-{esc(code)}" title="{esc(r)}">{esc(r if len(r) <= 48 else r[:45] + "…")}</span>')
+        cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
+        out.append(f'<span class="{cls}" title="{esc(r)}">{esc(r if len(r) <= 48 else r[:45] + "…")}</span>')
     return "".join(out)
 
 
@@ -291,7 +294,10 @@ def clusters_html(queue: dict) -> str:
     if not (cl or dr or du):
         return ""
     cards = []
+    demoted = []
     for c in cl:
+        theirs = set(c.get("handed_off") or [])
+        mine = [n for n in c["prs"] if n not in theirs]
         by_path: dict[str, set] = {}
         for p in c["pairs"]:
             for path in p["paths"]:
@@ -301,26 +307,32 @@ def clusters_html(queue: dict) -> str:
         more = f"<li>… {len(by_path) - 6} more paths</li>" if len(by_path) > 6 else ""
         order = " → ".join(f'<a href="{esc(pr_url(queue, x))}">#{x}</a>' for x in c["merge_order"])
         kind_cls = "no" if c["kind"] == "overlap" else "mid"
-        cards.append(
-            f'<div class="card {kind_cls}"><h4>{esc(c["id"])} · {len(c["prs"])} PRs · {esc(c["kind"])}</h4>'
-            f"<p>Merge order: {order}</p>"
-            f"<ul>{paths}{more}</ul></div>"
+        theirs_note = f' <span class="v v-dim">+{len(theirs)} waiting on others</span>' if theirs else ""
+        card = (
+            f'<div class="card {kind_cls}"><h4>{esc(c["id"])} · {len(mine)} of {len(c["prs"])} PRs mine · {esc(c["kind"])}{theirs_note}</h4>'
+            + (f"<p>Merge order: {order}</p>" if len(c["merge_order"]) > 1 else "")
+            + f"<ul>{paths}{more}</ul></div>"
         )
+        # A cluster with at most one of my PRs in it is somebody else's merge
+        # problem; it stays available but doesn't take a pinned slot.
+        (cards if len(mine) > 1 else demoted).append(card)
     by_path: dict[str, tuple[set, set]] = {}
     for d in dr:
         adds, rems = by_path.setdefault(d["path"], (set(), set()))
         adds.add(d["adds_links_pr"])
         rems.add(d["removes_links_pr"])
+    handed = {p["number"] for p in queue.get("prs") or [] if p.get("handed_off")}
     for path, (adds, rems) in sorted(by_path.items(), key=lambda kv: -len(kv[1][0]) - len(kv[1][1])):
         link = lambda x: f'<a href="{esc(pr_url(queue, x))}">#{x}</a>'  # noqa: E731
-        cards.append(f'<div class="card no"><h4>Directional · <code>{esc(path)}</code></h4>'
+        target = cards if (adds | rems) - handed and len((adds | rems) - handed) > 1 or (adds - handed and rems - handed) else demoted
+        target.append(f'<div class="card no"><h4>Directional · <code>{esc(path)}</code></h4>'
                      f'<p>Alias-only URL. Adding links: {", ".join(link(x) for x in sorted(adds))}. Removing links: {", ".join(link(x) for x in sorted(rems))}. '
                      "Merge the removers first, then repoint the adders.</p></div>")
     for d in du:
         cards.append(f'<div class="card mid"><h4>Duplicate? #{d["newer"]} vs #{d["older"]}</h4>'
                      f'<p>Titles {int(d["title_ratio"] * 100)}% alike, opened {esc(d["minutes_apart"])} min apart, sharing {esc(", ".join(d["shared_files"][:3]))}.</p></div>')
-    head, rest = cards[:6], cards[6:]
-    more = f'<details><summary>{len(rest)} more</summary><div class="two">{"".join(rest)}</div></details>' if rest else ""
+    head, rest = cards[:6], cards[6:] + demoted
+    more = f'<details><summary>{len(rest)} more (incl. clusters that are mostly waiting on others)</summary><div class="two">{"".join(rest)}</div></details>' if rest else ""
     return '<section class="clusters"><h2>Collisions first</h2><div class="two">' + "".join(head) + "</div>" + more + "</section>"
 
 
@@ -374,8 +386,38 @@ def slim(obj):
 
 
 
-def render_board(queue: dict, *, artifact: bool = False) -> str:
-    prs = queue.get("prs") or []
+def _age_days(pr: dict, now: datetime | None = None) -> int:
+    try:
+        created = datetime.fromisoformat((pr.get("created_at") or "").replace("Z", "+00:00"))
+    except ValueError:
+        return 0
+    return max((now or datetime.now(timezone.utc)) - created, timedelta()).days
+
+
+def waiting_html(prs: list[dict]) -> str:
+    """The compact 'waiting on others' list: one line per handed-off PR,
+    for awareness only. Nothing here is actionable by the approver."""
+    rows = [p for p in prs if p.get("handed_off")]
+    if not rows:
+        return ""
+    rows.sort(key=lambda p: (", ".join(p.get("handed_off_to") or []), -_age_days(p)))
+    items = []
+    for p in rows:
+        who = esc(", ".join(p.get("handed_off_to") or []))
+        title = p.get("title") or ""
+        title = title if len(title) <= 72 else title[:69] + "…"
+        state = (p.get("checks") or {}).get("state")
+        flag = " ✗" if state == "red" else (" ⚠" if p.get("mergeable_state") == "dirty" else "")
+        items.append(f'<li><a class="pr" href="{esc(pr_url({"repo": "pulumi/docs"}, p["number"]))}">#{p["number"]}</a> '
+                     f'<span class="wt">{esc(title)}</span> <span class="who">{who}</span> <span class="age">{_age_days(p)}d{flag}</span></li>')
+    return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on others</h2><span class="count">{len(rows)}</span>'
+            '<span class="note">requested reviewer isn\'t you · ✗ red CI · ⚠ conflict · hidden from the groups above; render with --include-handed-off to act on them</span></div>'
+            '<ul>' + "".join(items) + "</ul></section>")
+
+
+def render_board(queue: dict, *, artifact: bool = False, include_handed_off: bool = False) -> str:
+    all_prs = queue.get("prs") or []
+    prs = all_prs if include_handed_off else [p for p in all_prs if not p.get("handed_off")]
     counts = queue.get("counts") or {}
     cfg = queue.get("config") or {}
     sections = []
@@ -383,6 +425,8 @@ def render_board(queue: dict, *, artifact: bool = False) -> str:
         sections.append(f'<section class="grp"><div class="sec-head"><h2>{esc(owner)}</h2><span class="dlabel">{esc(domain)}</span><span class="count">{len(rows)}</span></div>'
                         + "".join(row_html(queue, p) for p in rows) + "</section>")
     tally = "".join(f'<div class="t-{VERDICT_CLASS[v]}"><b>{counts.get(v, 0)}</b><span>{v}</span></div>' for v in VERDICT_ORDER)
+    if counts.get("handed-off"):
+        tally += f'<div class="t-dim"><b>{counts["handed-off"]}</b><span>waiting on others</span></div>'
     payload = json.dumps(slim(queue), sort_keys=True).replace("</", "<\\/")
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
@@ -391,9 +435,9 @@ def render_board(queue: dict, *, artifact: bool = False) -> str:
         h1="PR review queue",
         dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows are pre-checked; every button below only adds to the command at the bottom — the page never talks to GitHub."),
         tally=f'<div class="tally">{tally}</div>',
-        filters=filter_bar(queue),
+        filters=filter_bar({**queue, "prs": prs}),
         clusters=clusters_html(queue),
-        body="".join(sections) or '<p class="empty">Nothing to adjudicate.</p>',
+        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + ("" if include_handed_off else waiting_html(all_prs)),
         cmd=cmd_footer(),
         payload=payload,
         script=SCRIPT,
@@ -426,12 +470,14 @@ def cmd_footer() -> str:
             '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button></div>')
 
 
-def render_terminal(queue: dict, n: int | None = None, width: int = 110) -> str:
-    prs = queue.get("prs") or []
+def render_terminal(queue: dict, n: int | None = None, width: int = 110, include_handed_off: bool = False) -> str:
+    all_prs = queue.get("prs") or []
+    prs = all_prs if (include_handed_off or n is not None) else [p for p in all_prs if not p.get("handed_off")]
     if n is not None:
         prs = [p for p in prs if p["number"] == n]
     counts = queue.get("counts") or {}
-    lines = [f"PR review queue · {queue.get('repo')} · {len(prs)} rows · " + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER), ""]
+    lines = [f"PR review queue · {queue.get('repo')} · {len(prs)} rows · " + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
+             + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else ""), ""]
     hdr = f"{'#':>6}  {'verdict':<8} {'owner':<11} {'domain':<14} {'size':>9} {'CI':<4} reasons"
     lines += [hdr, "-" * len(hdr)]
     for owner, domain, rows in group_rows(prs):
@@ -457,6 +503,11 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110) -> str:
                 lines.append(f"      {j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'} {j.get('deep_link') or ''}")
             for a in p.get("actions") or []:
                 lines.append(f"      [{a['label']}]  {a['cmd']}")
+    waiting = [p for p in all_prs if p.get("handed_off")] if not include_handed_off and n is None else []
+    if waiting:
+        lines += ["", f"waiting on others ({len(waiting)}):"]
+        for p in waiting:
+            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} {', '.join(p.get('handed_off_to') or [])} {_age_days(p)}d")
     stamps = [a["cmd"].split()[1] for p in prs for a in p.get("actions") or [] if a["id"] == "stamp" and p.get("verdict") == "stamp"]
     if stamps:
         lines += ["", f"$ /pr-review --act --stamp {','.join(stamps)}"]
@@ -509,6 +560,17 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-self-accepted,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
+.chip.theirs{opacity:.55;border-style:dashed}
+.chip.r-handed-off{border-color:var(--ink-3);color:var(--ink-3)}
+.t-dim b{color:var(--ink-3)}
+.waiting{margin-top:30px;border-top:1px solid var(--line-2);padding-top:14px}
+.waiting .note{flex:1 1 100%;font-size:12px;color:var(--ink-3)}
+.waiting ul{list-style:none;margin:6px 0 0;padding:0;columns:2;column-gap:24px}
+.waiting li{break-inside:avoid;font-size:12.5px;display:flex;gap:8px;align-items:baseline;padding:2px 0;min-width:0}
+.waiting .wt{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-2)}
+.waiting .who{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--route);white-space:nowrap}
+.waiting .age{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);white-space:nowrap}
+@media (max-width:800px){.waiting ul{columns:1}}
 .sum{font-size:13.5px;color:var(--ink-2);margin:0 0 4px}
 .v{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:2px;white-space:nowrap;display:inline-block;vertical-align:middle}
 .v-stamp{background:var(--go-soft);color:var(--go)}.v-judge{background:var(--hold-soft);color:var(--hold)}.v-route{background:var(--route-soft);color:var(--route)}.v-blocked{background:var(--stop-soft);color:var(--stop)}.v-dim{background:var(--surface-2);color:var(--ink-3);text-transform:none;letter-spacing:0}
@@ -644,6 +706,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--out", help="output path for --detail")
     ap.add_argument("--terminal", action="store_true", help="print the table to stdout")
     ap.add_argument("--artifact", action="store_true", help="emit the fragment form the Artifact tool wraps (no html/head/body)")
+    ap.add_argument("--include-handed-off", action="store_true", help="show PRs waiting on another reviewer as full rows")
     ap.add_argument("--pr", type=int, help="with --terminal: one row")
     ap.add_argument("--self-test", action="store_true")
     return ap
@@ -657,7 +720,7 @@ def main(argv: list[str] | None = None) -> int:
     queue = json.loads(Path(args.inp).read_text())
     did = False
     if args.board:
-        Path(args.board).write_text(render_board(queue, artifact=args.artifact))
+        Path(args.board).write_text(render_board(queue, artifact=args.artifact, include_handed_off=args.include_handed_off))
         print(f"board → {args.board}", file=sys.stderr)
         did = True
     if args.detail is not None:
@@ -666,7 +729,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"detail #{args.detail} → {out}", file=sys.stderr)
         did = True
     if args.terminal or not did:
-        sys.stdout.write(render_terminal(queue, args.pr))
+        sys.stdout.write(render_terminal(queue, args.pr, include_handed_off=args.include_handed_off))
     return 0
 
 
