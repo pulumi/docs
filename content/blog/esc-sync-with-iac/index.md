@@ -29,7 +29,7 @@ Updating secrets manually across all these systems is not only tedious but also 
 
 Moreover, the lack of a centralized system makes it difficult to track where secrets are stored and who has access to them. This complicates security audits and compliance efforts. When a secret is compromised, the process of revoking and rotating it across multiple systems can be slow and disruptive, potentially leading to application downtime.
 
-## ESC Sync with Infrastructure as Code
+## ESC Sync with infrastructure as code
 
 Using Pulumi building blocks like ESC and IaC, we can create a pattern where secrets and configuration can be centrally defined in ESC, and then automatically synced across the external platforms where they will be utilized.
 

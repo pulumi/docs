@@ -50,7 +50,7 @@ Before developing FactoryStack™, 4IR examined the existing landscape of infras
 Pulumi quickly became a fan-favorite among 4IR’s team and offered immediate business value:
 
 - Deployment time for customer infrastructure was cut from days to hours using Pulumi-powered automation.
-- 4IR brought Infrastructure as Code in-house, up-skilling its team and saving an estimated $75,000 per year on outsourcing costs.
+- 4IR brought infrastructure as code in-house, up-skilling its team and saving an estimated $75,000 per year on outsourcing costs.
 - 4IR delivered an MVP four weeks earlier than planned, due to its engineers not having to learn a new configuration language and toolset.
 
 ### Growing with Pulumi

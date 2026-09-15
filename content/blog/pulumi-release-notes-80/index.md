@@ -76,7 +76,7 @@ We shipped new versions of the AWS Native provider, Google Native provider and t
 In October we announced a set of major updates which deepen and extend Pulumi’s support for Kubernetes and the Kubernetes ecosystem. Here are a few of these exciting enhancements:
 
 - [Pulumi Kubernetes Operator v1.10](https://github.com/pulumi/pulumi-kubernetes-operator/#readme): New integration with Flux for richer GitOps support, and ability to deploy Pulumi stacks from directly within the Kubernetes resource model
-- [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with Infrastructure as Code
+- [New Pulumi Provider for Flux](https://www.pulumi.com/registry/packages/flux/): Manage Flux with infrastructure as code
 - [Pulumi Kubernetes Provider v3.22](/registry/packages/kubernetes): Server Side Apply Option and Resource Patch
 
 👉  Learn more in the [Pulumi+Kubernetes: New Flux Integration and Inline Programs blog](/blog/pulumi-kubernetes-new-2022).
