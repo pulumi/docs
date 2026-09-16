@@ -160,6 +160,10 @@ _vendor/
 /.pr-review-board.html
 /.pr-review-shots/
 /.pr-review-cache/
+# Written by record-evidence.py and sla-sweep.py when they run without a
+# bucket configured; same argument as the block above.
+/.pr-review-evidence/
+/.pr-review-state/
 
 # Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
 # and `.glowup-scope-report.json`, the scope gate's report). Both are written
