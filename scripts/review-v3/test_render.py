@@ -157,7 +157,9 @@ def test_do_next_cards_press_the_rows_they_name():
     assert 'data-targets="{&quot;3&quot;: &quot;--request-changes 3&quot;}"' in html
     # and the script keeps a card and a contrary row decision from both being lit
     assert "function syncCards()" in html and "a chain: the rows it covers defer to it" in html
-    assert "data-claims" in html or True
+    # a chain has no single row button to light, so it marks the rows it covers
+    assert "function markClaimed(card, on)" in html and "covered by Do next" in html
+    assert 'data-claims="1,2"' in html
 
 
 def test_ownership_chips_read_as_words():

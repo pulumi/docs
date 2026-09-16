@@ -994,6 +994,8 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
 .donext .say{flex:1;font-size:14px;color:var(--ink)}
 .donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.mrow.claimed{background:var(--surface-2)}
+.claimnote{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--go);border:1px dashed var(--go);border-radius:3px;padding:2px 7px}
 .donext .btn.p{margin-left:auto;white-space:nowrap}
 .clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
 .chip.r-handed-off{border-color:var(--ink-3);color:var(--ink-3)}
@@ -1078,6 +1080,26 @@ SCRIPT = r"""
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
   }
+  // A chain does two things to two PRs, so it has no single row button to
+  // light. It marks the rows it covers instead, so the card and the rows are
+  // still visibly the same decision.
+  function markClaimed(card, on){
+    var n = card.dataset.pr.replace('next', '');
+    card.dataset.claims.split(',').forEach(function(pr){
+      var r = document.querySelector('.mrow[data-pr="' + pr + '"]');
+      if (!r) return;
+      r.classList.toggle('claimed', on);
+      var acts = r.querySelector('.acts');
+      var note = r.querySelector('.claimnote');
+      if (on && acts && !note) {
+        note = document.createElement('span');
+        note.className = 'claimnote';
+        note.textContent = '✓ covered by Do next ' + n;
+        note.title = 'Do next ' + n + ' acts on this PR, so there is nothing to pick here.';
+        acts.insertBefore(note, acts.firstChild);
+      } else if (!on && note) { note.remove(); }
+    });
+  }
   function syncCards(){
     cards.forEach(function(c){
       var t = cardTargets(c), prs = Object.keys(t), lit;
@@ -1088,7 +1110,7 @@ SCRIPT = r"""
           return document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
         });
       }
-      if (lit !== c.classList.contains('sel')) setSel(c, lit);
+      if (lit !== c.classList.contains('sel')) { setSel(c, lit); if (c.dataset.claims) markClaimed(c, lit); }
     });
   }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
@@ -1105,8 +1127,9 @@ SCRIPT = r"""
         });
         setSel(b, on); compose(); syncCards(); return;
       }
-      if (on && b.dataset.claims) {              // a chain: the rows it covers defer to it
-        b.dataset.claims.split(',').forEach(function(pr){ clearRow(pr, null); });
+      if (b.dataset.claims) {                    // a chain: the rows it covers defer to it
+        b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
+        markClaimed(b, on);
       }
       if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
         clearRow(b.dataset.pr, b);
