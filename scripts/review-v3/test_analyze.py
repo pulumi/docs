@@ -368,7 +368,11 @@ def test_collision_overlap_vs_same_file_and_merge_order():
     # the chain card is the two row buttons it presses: approve the first
     # link, unblock the next
     chain = next(d for d in q["do_next"] if d["kind"] == "chain")
-    assert list(chain["targets"].values()) == ["--stamp 1 --force", "--unblock 2"]
+    # #2 is not stuck yet, so it has no unblock button of its own: the card
+    # presses what it can and claims the rest, rather than naming a target
+    # nothing can press
+    assert list(chain["targets"].values()) == ["--stamp 1 --force"]
+    assert chain["claims"] == [2] and chain["cmd"] == "--stamp 1 --force --unblock 2"
     assert chain["cmd"] == "--stamp 1 --force --unblock 2"
 
 

@@ -922,6 +922,39 @@ HELP_SECTIONS = [
 ]
 
 
+SHOWING_HELP = {
+    "me": ("Which rows this run collected: the ones whose owning lane is yours, plus anything the routing matrix "
+           "leaves ungated. A PR owned by another lane is listed at the foot of the page instead. "
+           "`--owner any` collects every open PR."),
+    "any": "Which rows this run collected: every open PR, whoever owns it (`--owner any`).",
+}
+
+LANES_HELP = {
+    "file": "The lanes you pinned in ~/.pr-review.yml. A row is yours when the routing matrix puts its change in one of them.",
+    "github-teams": ("You have no ~/.pr-review.yml, so these are the lanes of the GitHub teams you are actually on. "
+                     "Pin them in ~/.pr-review.yml if that is not the split you want."),
+    "defaults": ("Nothing narrowed the board: you have no ~/.pr-review.yml and your GitHub team memberships could not "
+                 "be read, so every lane counts as yours and nothing is filtered out by ownership. Create "
+                 "~/.pr-review.yml with `me: [docs, infra]` to see only your own."),
+}
+
+
+def header_line(queue: dict) -> str:
+    """The eyebrow, in words rather than in flag names. Two of its facts --
+    what got collected and which lanes count as yours -- decide what the
+    whole board shows, so each one says where it came from."""
+    cfg = queue.get("config") or {}
+    owner = cfg.get("owner", "me")
+    when = queue.get("analyzed_at") or queue.get("generated_at") or ""
+    lanes = cfg.get("me") or []
+    source = cfg.get("source") or "defaults"
+    shown = "every open PR" if owner == "any" else ("rows in your lanes" if owner == "me" else f"rows owned by {owner}")
+    lane_text = "every lane (nothing pinned)" if source == "defaults" else ", ".join(lanes)
+    return (f'{esc(queue.get("repo") or "")} · queue · {esc(when)} · '
+            f'<span title="{esc(SHOWING_HELP.get(owner, SHOWING_HELP["me"]))}">showing: {esc(shown)}</span> · '
+            f'<span title="{esc(LANES_HELP.get(source, LANES_HELP["defaults"]))}">your lanes: {esc(lane_text)}</span>')
+
+
 def help_html() -> str:
     """The manual, folded, on the page it describes. Same content as
     `pr-review:references:reading-the-board`, kept short enough to read
@@ -1090,7 +1123,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
         style=STYLE,
-        eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
+        eyebrow=header_line(queue),
         h1="PR review queue",
         dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
         tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>' + do_next_html(queue),
@@ -1411,6 +1444,12 @@ SCRIPT = r"""
           if (on) clearRow(pr, row);
           setSel(row, on);
         });
+        // A card can both press rows and cover rows that have no button of
+        // their own (a chain's follow-up, until it is actually stuck).
+        if (b.dataset.claims) {
+          b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
+          markClaimed(b, on);
+        }
         setSel(b, on); compose(); syncCards(); return;
       }
       if (b.dataset.claims) {                    // a chain: the rows it covers defer to it
@@ -1447,14 +1486,20 @@ SCRIPT = r"""
   // reading order (a guide and its preview links open, the reasons behind a
   // verdict and this manual closed); this is for the pass where you want
   // everything, or nothing, at once.
+  // A row's fold button says what pressing it does next, so it has to
+  // follow the row's state however the row got there -- including when the
+  // board-wide lever moves every row at once.
+  function setRowFold(b, open){
+    b.setAttribute('aria-pressed', open ? 'true' : 'false');
+    b.textContent = open ? 'fold ▴' : 'open ▾';
+  }
   document.querySelectorAll('button.rowfold').forEach(function(b){
     b.addEventListener('click', function(){
       var row = b.closest('.mrow');
       if (!row) return;
       var open = b.getAttribute('aria-pressed') !== 'true';
       row.querySelectorAll('details').forEach(function(d){ d.open = open; });
-      b.setAttribute('aria-pressed', open ? 'true' : 'false');
-      b.textContent = open ? 'fold ▴' : 'open ▾';
+      setRowFold(b, open);
     });
   });
   (function(){
@@ -1464,6 +1509,7 @@ SCRIPT = r"""
       var open = fold.getAttribute('aria-pressed') !== 'true';
       // The manual is not part of the report, so it keeps its own state.
       document.querySelectorAll('details:not(.help)').forEach(function(d){ d.open = open; });
+      document.querySelectorAll('button.rowfold').forEach(function(b){ setRowFold(b, open); });
       fold.setAttribute('aria-pressed', open ? 'true' : 'false');
       fold.classList.toggle('on', open);
       fold.textContent = open ? 'collapse every panel' : 'expand every panel';

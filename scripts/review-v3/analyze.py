@@ -827,16 +827,27 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
             # card and those rows in agreement, the same as every other card.
             by_n = {p["number"]: p for p in prs}
             stamp = next((a["cmd"] for a in (by_n.get(first) or {}).get("actions") or [] if a["id"] == "stamp"), None)
-            targets = {}
+            targets, claimed = {}, []
             if stamp:
                 targets[str(first)] = stamp
             if nxt:
-                targets[str(nxt)] = f"--unblock {nxt}"
+                # The follow-up only has a row button of its own once that row
+                # is actually stuck. Until then it is a row this card covers,
+                # not a row it presses -- and treating it as a target would
+                # leave the card permanently unlit, since nothing could press
+                # a button that is not there.
+                unblock = next((a["cmd"] for a in (by_n.get(nxt) or {}).get("actions") or [] if a["id"] == "unblock"), None)
+                if unblock:
+                    targets[str(nxt)] = unblock
+                else:
+                    claimed.append(nxt)
+            cmd = " ".join(list(targets.values()) + [f"--unblock {n}" for n in claimed])
             does = f"Approves and squash-merges #{first}" + (
                 f", then merges master into #{nxt} so it can follow." if nxt else ".")
             cards.append({"kind": "chain", "cluster": c["id"], "say": r["say"], "does": does + " One link per run; the next one waits on CI.",
-                          "cmd": " ".join(targets.values()) if targets else r["cmd"],
+                          "cmd": cmd or r["cmd"],
                           "label": f"approve & merge #{first}",
+                          "claims": claimed,
                           # The unblock is a consequence of the merge, not a
                           # separate choice, so the lead row button and this
                           # card are one decision pressed from two places.

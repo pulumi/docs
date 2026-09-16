@@ -432,3 +432,21 @@ def test_the_panels_worth_reading_start_open_and_one_lever_moves_them_all():
     assert "document.querySelectorAll('details:not(.help)').forEach(function(d){ d.open = open; });" in html
     # and every row carries the same lever for itself alone
     assert 'class="pr rowfold"' in html and "var row = b.closest('.mrow');" in html
+    # and the board-wide lever relabels every row button it just moved
+    assert "document.querySelectorAll('button.rowfold').forEach(function(b){ setRowFold(b, open); });" in html
+
+
+def test_the_header_says_what_it_collected_and_where_your_lanes_came_from():
+    q = _queue()
+    q["config"] = {"owner": "me", "me": ["docs", "infra"], "source": "file"}
+    head = render.header_line(q)
+    assert "showing: rows in your lanes" in head and "your lanes: docs, infra" in head
+    assert "pinned in ~/.pr-review.yml" in head
+    # no config and no readable teams: say that, rather than listing every
+    # lane as though the approver had chosen them
+    q["config"] = {"owner": "me", "me": ["blog", "docs", "frontend"], "source": "defaults"}
+    head = render.header_line(q)
+    assert "your lanes: every lane (nothing pinned)" in head and "could not\nbe read" not in head
+    assert "could not be read" in head.replace("&#x27;", "'")
+    q["config"] = {"owner": "any", "me": [], "source": "file"}
+    assert "showing: every open PR" in render.header_line(q)
