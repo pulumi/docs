@@ -120,6 +120,10 @@ class SentinelDataError(Exception):
     """An API read failed in a way that must surface as action_required."""
 
 
+class GhError(Exception):
+    """A `gh api` call failed, carrying what the API actually said."""
+
+
 # ---- GitHub I/O ---------------------------------------------------------
 
 
@@ -136,8 +140,15 @@ class Gh:
             env = dict(os.environ)
             env["GH_TOKEN"] = os.environ[token_env]
         result = subprocess.run(
-            ["gh", *args], text=True, capture_output=True, check=True, env=env,
+            ["gh", *args], text=True, capture_output=True, env=env,
         )
+        if result.returncode != 0:
+            # `check=True` raises with the command and nothing else, so a
+            # failed call reaches the log as a wall of request body and no
+            # reason. What the API said is the only useful part.
+            said = (result.stderr or result.stdout or "").strip().splitlines()
+            raise GhError(f"gh {' '.join(args[:3])} failed ({result.returncode}): "
+                          + (" / ".join(said[:4]) or "no output"))
         return result.stdout
 
     def get_pr(self) -> dict:
@@ -1047,6 +1058,19 @@ def update_status_comment(gh: Gh, verdict: Verdict,
     return True
 
 
+def write_status_comment(gh: Gh, verdict: Verdict) -> bool:
+    """`update_status_comment`, but a write failure is reported rather than
+    raised. The check run is the gate; this comment is a courtesy on top of
+    it, and a token that cannot write issue comments would otherwise fail the
+    whole evaluation after every gate had already been decided -- leaving a
+    red Sentinel that says nothing about the gates it just evaluated."""
+    try:
+        return update_status_comment(gh, verdict)
+    except (GhError, subprocess.CalledProcessError) as exc:
+        print(f"warning: could not write the status comment: {exc}", file=sys.stderr)
+        return False
+
+
 # ---- CLI ----------------------------------------------------------------
 
 
@@ -1082,7 +1106,11 @@ def main() -> int:
     # Enforcing: always. Report-only: only where someone opted the PR in, so
     # the dry run stays invisible to everyone who didn't ask to see it.
     if args.status_comment and not args.dry_run and (not args.report_only or verdict.preview):
-        update_status_comment(gh, verdict)
+        # The check run is the gate; this comment is a courtesy on top of it.
+        # A repo whose token cannot write issue comments would otherwise fail
+        # the whole evaluation here, after every gate had been decided, and
+        # the PR would show a red Sentinel that says nothing about its gates.
+        write_status_comment(gh, verdict)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 
