@@ -459,3 +459,12 @@ def test_a_flex_summary_draws_its_own_chevron():
     html = render.render_board(q)
     assert '.clusters summary::before,details.help>summary::before{content:"\\25B8"' in html
     assert ".clusters details[open]>summary::before,details.help[open]>summary::before{transform:rotate(90deg)}" in html
+
+
+def test_a_workflow_authored_row_says_the_send_back_is_dead_not_the_fix():
+    # Nobody will read a changes-requested review on a workflow's PR, but the
+    # branch is still editable and closing is not the only move.
+    assert "push to the branch yourself" in render.AUTHOR_HELP["generated"]
+    assert "closes rather than going back" not in render.AUTHOR_HELP["generated"]
+    assert render.DEFERRED_NO_AUTHOR[1] == "no author to ask"
+    assert "Fix it yourself" in " ".join(render.DEFERRED_NO_AUTHOR[2].split())

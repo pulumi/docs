@@ -154,7 +154,11 @@ SHAPE_HELP = {
 AUTHOR_HELP = {
     "internal": "Opened by a Pulumi org member.",
     "external": "Opened by someone outside the org, so it gets the external-contributor treatment.",
-    "generated": "Opened by a workflow run, not a person. Nobody will ever read a review on it, so it closes rather than going back.",
+    "generated": ("Opened by a workflow run, not a person: a changes-requested review would sit unread, because nothing is "
+                  "going to come back and revise it. The work itself is still fixable -- push to the branch yourself "
+                  "(the edit link opens it in VS Code), apply the drafted fixes, or ask Claude on the PR -- it is only "
+                  "the send-back that has no audience. Closing it out is the cheap option when the lane will regenerate "
+                  "the page anyway."),
 }
 ROUTE_STATE_HELP = {
     "no-team": "GitHub has no team by the name the routing config gives this lane, so the review request goes to that role's SLA person instead.",
@@ -316,7 +320,9 @@ ACTION_HELP = {
     "stamp-merge": "Approve and squash-merge, even though the author is a person and would normally merge their own PR.",
     "stamp-no-merge": "Approve without merging, leaving the merge to someone else.",
     "request-changes": "Post a changes-requested review built from this row's findings and label it needs-author-response. Nothing merges; the author's turn.",
-    "close": "Close this PR with a comment carrying the row's findings. A workflow opened it, so the lane re-queues the page on its next run.",
+    "close": ("Close this PR with a comment carrying the row's findings. A workflow opened it, so nobody is waiting on an "
+              "answer and the lane re-queues the page on its next run. Not the only option: you can fix the branch "
+              "yourself or ask Claude on the PR instead."),
     "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
@@ -404,8 +410,10 @@ DISPOSITION_BADGE = {
     "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR. Approving posts `/resolve <id> not-applicable` with the reason below."),
     "deferred": ("hold", "needs the author", "Not yours to fix. Use the row's send-back button and this becomes the author's to answer."),
 }
-DEFERRED_NO_AUTHOR = ("hold", "nobody to fix it",
-                      "This needs an author and a workflow opened the PR. Use the row's close button; the lane re-queues the page.")
+DEFERRED_NO_AUTHOR = ("hold", "no author to ask",
+                      "This one wants a change, and a workflow opened the PR, so a send-back would go unread. Fix it "
+                      "yourself on the branch (the edit link opens it in VS Code), ask Claude on the PR, or use the "
+                      "row's close button and let the lane re-queue the page.")
 
 
 def disposition_badge(d: str | None) -> tuple[str, str, str]:
@@ -428,7 +436,7 @@ def judgment_footer(pr: dict) -> str:
     if held:
         bits.append(("Sending it back" if sends_back else "Closing it out")
                     + f" hands {'the ones' if len(held) != 1 else 'the one'} marked "
-                    + ("&ldquo;needs the author&rdquo;" if sends_back else "&ldquo;nobody to fix it&rdquo;")
+                    + ("&ldquo;needs the author&rdquo;" if sends_back else "&ldquo;no author to ask&rdquo;")
                     + (" to the author." if sends_back else " to the lane's next run."))
     bits.append("Nothing here needs a click of its own.")
     return '<p class="jfoot">' + " ".join(bits) + "</p>"
@@ -904,7 +912,7 @@ HELP_SECTIONS = [
     ("Judgment badges", [
         "A badge says why a finding does not stop the merge. It is never the author's answer: nobody has answered anything here.",
         "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are recorded on the PR as <code>/resolve</code> comments when you approve the row, before it merges.",
-        "<b>needs the author</b> goes back with the send-back button; <b>nobody to fix it</b> means a workflow opened the PR, so close it out and the lane re-queues the page.",
+        "<b>needs the author</b> goes back with the send-back button; <b>no author to ask</b> means a workflow opened the PR, so a send-back would go unread — fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page.",
     ]),
     ("Where a row came from", [
         "A chip with a dotted border and a <b>·cfg</b> mark is there because of <i>your</i> ~/.pr-review.yml, not because of the PR. Everything else is the same for every approver.",

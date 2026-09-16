@@ -67,7 +67,7 @@ A badge beside a finding says **why that finding does not stop the merge**. It i
 | fair, not blocking | Real, but not worth holding the PR. | Posts `/resolve F<n> accepted` with the reason. |
 | doesn't apply | Out of scope for this PR. | Posts `/resolve F<n> not-applicable` with the reason. |
 | needs the author | Not yours to fix. | Nothing — use send back, which puts it to the author. |
-| nobody to fix it | Needs an author, but a workflow opened the PR. | Nothing — use close it out; the lane re-queues the page. |
+| no author to ask | Wants a change, but a workflow opened the PR, so a send-back goes unread. | Nothing — fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page. |
 
 Approving a judged row posts those `/resolve` comments **before** it approves, so the review's own state records why each finding closed rather than the merge walking over them.
 
