@@ -15,6 +15,8 @@ comment templates and attribution footer):
                      a batch; the preflight is what makes a batch safe. Bot
                      PRs merge; a human-authored PR is approved only unless
                      --merge-humans (authors merge their own PRs).
+                     `N:merge` / `N:no-merge` overrides that default for one
+                     PR, so a mixed batch stays a single command.
   --route N:@user|team   request review and post the row's defects (reason
                      codes + judgments) as one comment.
   --request-changes N    post a CHANGES_REQUESTED review built from the row's
@@ -31,7 +33,10 @@ comment templates and attribution footer):
                      merges are pushed; anything else is aborted and reported.
   --fix N            apply the drafted description correction and any
                      one-click ✏️ suggestions, commit, push.
-  --close N --superseded-by M   close N with a cross-link comment on both.
+  --close N [--superseded-by M]  close N: with M, a cross-link comment on
+                     both; alone, one comment carrying --reason. Closing is
+                     the send-back for a workflow-authored PR, which has no
+                     author to answer a review.
   --refresh N        post `@claude <reason> #update-review`.
   --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
   --render N         screenshot the preview pages (screenshot.mjs + Playwright).
@@ -157,12 +162,23 @@ def with_footer(body: str) -> str:
 
 
 def _split_numbers(spec: str | None) -> list[int]:
+    return [n for n, _ in _split_stamps(spec)]
+
+
+def _split_stamps(spec: str | None) -> list[tuple[int, str | None]]:
+    """`21598,21600:no-merge` → [(21598, None), (21600, "no-merge")]. The
+    suffix is a per-PR override of the merge default, so one command can
+    approve a mixed batch and say for each row whether it merges."""
     if not spec:
         return []
-    out = []
+    out: list[tuple[int, str | None]] = []
     for part in re.split(r"[,\s]+", spec.strip()):
-        if part:
-            out.append(int(part.lstrip("#")))
+        if not part:
+            continue
+        num, _, mode = part.lstrip("#").partition(":")
+        if mode and mode not in ("merge", "no-merge"):
+            raise ActError(f"--stamp {part}: the only per-PR modes are :merge and :no-merge")
+        out.append((int(num), mode or None))
     return out
 
 
@@ -181,15 +197,28 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
                     branch=(pr.get("head") or {}).get("ref") or "", verdict=pr.get("verdict") or "")
 
     steps: list[Step] = []
-    for n in _split_numbers(args.stamp):
+    for n, mode in _split_stamps(args.stamp):
         pr = pr_of(n)
         if pr.get("verdict") != "stamp" and not args.force:
             raise ActError(f"#{n} is {pr.get('verdict')}, not stamp — pass --force to approve as-is ({', '.join(pr.get('reasons') or [])})")
         if pr.get("verdict") == "blocked":
             raise ActError(f"#{n} is blocked ({', '.join(pr.get('blockers') or [])}); unblock it first")
-        merge = not args.no_merge and (pr.get("author", {}).get("type") == "bot" or args.merge_humans)
+        is_bot = pr.get("author", {}).get("type") == "bot"
+        # A bot PR exists to be merged; a person's PR is theirs to merge. The
+        # per-PR mode beats both that default and the blanket flags.
+        if mode:
+            merge = mode == "merge"
+        else:
+            merge = not args.no_merge and (is_bot or args.merge_humans)
         s = step("stamp", n, merge=merge, note=args.approve_note or "")
-        s.note = "" if merge else "approve only (human author; --merge-humans to merge)"
+        if merge:
+            s.note = ""
+        elif mode == "no-merge":
+            s.note = "approve only (asked not to merge)"
+        elif is_bot:
+            s.note = "approve only (--no-merge)"
+        else:
+            s.note = "approve only (human author; --stamp N:merge or --merge-humans to merge)"
         steps.append(s)
     for spec in args.route or []:
         n, _, target = spec.partition(":")
@@ -204,6 +233,10 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         pr = pr_of(n)
         if not (pr.get("judgments") or open_items(pr)):
             raise ActError(f"--request-changes {n}: nothing to send back — no judgments and no open findings on the row")
+        if not can_revise(pr) and not args.force:
+            login = (pr.get("author") or {}).get("login") or "the author"
+            raise ActError(f"--request-changes {n}: @{login} is a workflow, not an author — it will never read the review. "
+                           f"Fix it here (--fix {n}) or close it (--close {n} --reason \"…\") and let the lane re-queue.")
         steps.append(step("request-changes", n, note=args.reason or ""))
     for cid in args.chain or []:
         c = next((c for c in queue.get("clusters") or [] if c["id"] == cid), None)
@@ -240,10 +273,18 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
             raise ActError(f"--fix {n}: {why}")
         steps.append(step("fix", n, description=has_desc, suggestions=has_click))
     if args.close:
-        if not args.superseded_by:
-            raise ActError("--close needs --superseded-by M")
-        pr_of(args.superseded_by)
-        steps.append(step("close", args.close, superseded_by=args.superseded_by))
+        pr = pr_of(args.close)
+        if args.superseded_by:
+            pr_of(args.superseded_by)
+            steps.append(step("close", args.close, superseded_by=args.superseded_by))
+        elif args.reason:
+            steps.append(step("close", args.close, superseded_by=None, reason=args.reason))
+        elif can_revise(pr):
+            # Closing someone's PR without saying why is the one thing worse
+            # than sitting on it. A workflow-authored row writes its own.
+            raise ActError(f"--close {args.close}: needs --superseded-by M, or --reason saying why it is closing")
+        else:
+            steps.append(step("close", args.close, superseded_by=None, reason=close_reason(pr)))
     for n in args.refresh or []:
         pr = pr_of(n)
         reason = args.reason or next((r for r in pr.get("reasons") or [] if r.startswith("review:")), "the review is stale")
@@ -289,7 +330,10 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         elif s.kind == "fix":
             lines.append("     " + ", ".join(k for k in ("description", "suggestions") if s.args.get(k)) + " → commit + push")
         elif s.kind == "close":
-            lines.append(f"     comment on #{s.pr} and #{s.args['superseded_by']} (footer), then close #{s.pr}")
+            if s.args.get("superseded_by"):
+                lines.append(f"     comment on #{s.pr} and #{s.args['superseded_by']} (footer), then close #{s.pr}")
+            else:
+                lines.append(f"     comment on #{s.pr} (footer): {s.args['reason'].splitlines()[0]}, then close #{s.pr}")
         elif s.kind == "refresh":
             lines.append(f"     comment: @claude {s.args['reason']} #update-review (footer)")
         elif s.kind == "rerun":
@@ -399,6 +443,23 @@ def open_items(pr: dict) -> list[dict]:
             if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
 
 
+def ask_lines(pr: dict) -> list[str]:
+    """The row's open items as line-anchored bullets: the judgments when the
+    judge step ran, else the findings still open on the card."""
+    lines = []
+    for j in pr.get("judgments") or []:
+        where = f"`{j['file']}` L{j['line']}: " if j.get("file") and j.get("line") else ""
+        ask = (j.get("ask") or j.get("decision") or "").strip()
+        if ask:
+            lines.append(f"- {where}{ask}")
+    if lines:
+        return lines
+    for i in open_items(pr):
+        where = f"`{i['file']}` {i.get('anchor') or ''}: " if i.get("file") else f"{i.get('anchor') or ''}: "
+        lines.append(f"- {where}{(i.get('summary') or i.get('text') or '').strip()}")
+    return lines
+
+
 def request_changes_body(pr: dict, note: str = "") -> str:
     """references/message-templates.md, Request changes row: line-anchored
     issues, no filler; the bot variant names the issue and what to change.
@@ -409,18 +470,7 @@ def request_changes_body(pr: dict, note: str = "") -> str:
     lines = []
     if note.strip():
         lines.append(note.strip())
-    items = pr.get("judgments") or []
-    if items:
-        for j in items:
-            where = f"`{j['file']}` L{j['line']}: " if j.get("file") and j.get("line") else ""
-            ask = (j.get("ask") or j.get("decision") or "").strip()
-            if not ask:
-                continue
-            lines.append(f"- {where}{ask}")
-    else:
-        for i in open_items(pr):
-            where = f"`{i['file']}` {i.get('anchor') or ''}: " if i.get("file") else f"{i.get('anchor') or ''}: "
-            lines.append(f"- {where}{(i.get('summary') or i.get('text') or '').strip()}")
+    lines.extend(ask_lines(pr))
     atype = (pr.get("author") or {}).get("type")
     if atype == "external":
         lines = ["Thanks for this. A few things before it can merge:", ""] + lines + ["", "Mention @claude if you need help."]
@@ -579,11 +629,33 @@ def _fix(gh: GhClient, git: Git, s: Step, pr: dict, repo_root: Path) -> tuple[bo
 
 
 def _close(gh: GhClient, s: Step) -> tuple[bool, str]:
-    m = s.args["superseded_by"]
+    m = s.args.get("superseded_by")
+    if not m:
+        gh.comment(s.pr, with_footer(s.args["reason"]))
+        gh.close_pr(s.pr)
+        return True, "closed"
     gh.comment(s.pr, with_footer(f"Closing in favor of #{m}, which covers the same change."))
     gh.comment(m, with_footer(f"Supersedes #{s.pr}, closed as a duplicate."))
     gh.close_pr(s.pr)
     return True, f"closed; superseded by #{m}"
+
+
+def can_revise(pr: dict) -> bool:
+    """Mirrors collect.can_revise over a queue row: only an agent bot reads a
+    review and pushes a revision; a workflow-authored PR never will."""
+    a = pr.get("author") or {}
+    if "can_revise" in a:
+        return bool(a["can_revise"])
+    return a.get("type") != "bot"
+
+
+def close_reason(pr: dict) -> str:
+    """The closing comment for a generated PR: the judgments that made the
+    call, in the author-facing voice, and what happens next."""
+    body = "\n".join(ask_lines(pr)).strip()
+    lead = "Closing this out: it was opened by a workflow run, so there is no author to pick up a review."
+    tail = "The lane re-queues the page on its next run; these notes are here for whoever picks it up."
+    return "\n\n".join(x for x in (lead, body, tail) if x)
 
 
 def _render(s: Step, *, node: str = "node") -> tuple[bool, str]:
@@ -638,7 +710,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--deploy", type=int, action="append")
     ap.add_argument("--merge-humans", action="store_true", help="squash-merge human-authored stamps too")
     ap.add_argument("--no-merge", action="store_true", help="approve only")
-    ap.add_argument("--force", action="store_true", help="stamp a judge row (approve as-is)")
+    ap.add_argument("--force", action="store_true", help="stamp a judge row (approve as-is); also sends a review back to a workflow author")
     ap.add_argument("--approve-note", help="one sentence appended to the approval body")
     ap.add_argument("--plan-out", default=str(_REPO_ROOT / ".pr-review-plan.json"))
     ap.add_argument("--execute", metavar="PLAN.json", help="run a plan written earlier")

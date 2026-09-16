@@ -69,6 +69,34 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
+def merges_on_stamp(pr: dict) -> bool:
+    """Does approving this row also merge it? A bot PR exists to be merged,
+    so it does; a person's PR is theirs to merge, so approval stops there
+    (act.py applies the same rule, and the row's second button flips it)."""
+    return (pr.get("author") or {}).get("type") == "bot"
+
+
+def stamp_actions(pr: dict, n: int, *, force: bool = False, base: str = "approve") -> list[dict]:
+    """Two buttons, so a row never hides what approving does: the default
+    first, the other way second. `:merge` / `:no-merge` is a per-PR override
+    act.py reads, so a mixed batch stays one command."""
+    f = " --force" if force else ""
+    if merges_on_stamp(pr):
+        return [{"id": "stamp", "label": f"{base} & merge", "cmd": f"--stamp {n}{f}"},
+                {"id": "stamp-no-merge", "label": f"{base}, don't merge", "cmd": f"--stamp {n}:no-merge{f}"}]
+    return [{"id": "stamp", "label": f"{base}, no merge", "cmd": f"--stamp {n}{f}"},
+            {"id": "stamp-merge", "label": f"{base} & merge", "cmd": f"--stamp {n}:merge{f}"}]
+
+
+def can_revise(pr: dict) -> bool:
+    """collect.py stamps `author.can_revise`; older queues fall back to the
+    author type, where every bot but an agent is a workflow."""
+    a = pr.get("author") or {}
+    if "can_revise" in a:
+        return bool(a["can_revise"])
+    return a.get("type") != "bot"
+
+
 REASON_CODES = {
     "risk": "risk tier from the diff shape (typo/minor/standard/major/infra)",
     "scrutiny": "heightened content scrutiny (AI-suspect) — caps at judge",
@@ -95,7 +123,7 @@ REASON_CODES = {
     "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
-    "author": "author type when human",
+    "author": "author type when human; `generated`: a workflow opened this PR and cannot answer a review, so the row closes rather than goes back",
     "trust": "membership could not be read",
     "draft": "draft PR (only reachable with an explicit --pr)",
 }
@@ -547,6 +575,8 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     author = pr.get("author") or {}
     if author.get("type") != "bot":
         reasons.append(f"author:{author.get('type')}")
+    elif not can_revise(pr):
+        reasons.append("author:generated")
     if author.get("membership_note"):
         reasons.append("trust:membership-unreadable")
     if pr.get("draft"):
@@ -681,7 +711,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             actions.append({"id": "route", "label": f"request review from {target}", "cmd": f"--route {n}:{target}"})
             # The lane is a default, not a lock: the approver can still take
             # the row. act.py accepts --force on any non-blocked verdict.
-            actions.append({"id": "stamp", "label": "approve anyway", "cmd": f"--stamp {n} --force"})
+            actions.extend(stamp_actions(pr, n, force=True, base="approve anyway"))
     if blocked:
         verdict = "blocked"
     elif not is_mine:
@@ -691,10 +721,18 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     else:
         verdict = "judge"
     if verdict == "stamp":
-        actions.insert(0, {"id": "stamp", "label": "approve & merge", "cmd": f"--stamp {n}"})
+        for i, a in enumerate(stamp_actions(pr, n)):
+            actions.insert(i, a)
     elif verdict == "judge":
-        actions.insert(0, {"id": "stamp", "label": "approve as-is", "cmd": f"--stamp {n} --force"})
-        actions.insert(1, {"id": "request-changes", "label": "send back to author", "cmd": f"--request-changes {n}"})
+        for i, a in enumerate(stamp_actions(pr, n, force=True, base="approve as-is")):
+            actions.insert(i, a)
+        if can_revise(pr):
+            actions.insert(2, {"id": "request-changes", "label": "send back to author", "cmd": f"--request-changes {n}"})
+        else:
+            # pulumi-bot's lanes open the PR from a workflow run; there is no
+            # author to send it back to. Fix it here or close it and let the
+            # lane re-queue the page.
+            actions.insert(2, {"id": "close", "label": "close it out", "cmd": f"--close {n}"})
         if pr.get("risk_tier") == "infra":
             actions.append({"id": "deploy", "label": "deploy to pulumi-test.io", "cmd": f"--deploy {n}"})
         if pr.get("one_click_suggestions") or any(r.startswith("desc:") for r in reasons):
@@ -741,7 +779,10 @@ def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
     authors = [(by.get(n) or {}).get("author", {}).get("norm") for n in overlapping]
     top = max(set(authors), key=authors.count) if authors else None
     bots = sum(1 for n in overlapping if (by.get(n) or {}).get("author", {}).get("type") == "bot" and (by.get(n) or {}).get("author", {}).get("norm") == top)
-    if top and len(overlapping) >= 3 and bots / len(overlapping) >= CONSOLIDATE_SHARE:
+    # A consolidation is an ask, so it needs an author who can answer one.
+    # A workflow-authored pile falls through to the chain.
+    answers = can_revise(by.get(max(overlapping)) or {}) if overlapping else False
+    if top and answers and len(overlapping) >= 3 and bots / len(overlapping) >= CONSOLIDATE_SHARE:
         newest = max(overlapping)
         members = ", ".join(f"#{n}" for n in overlapping)
         reason = f"These {len(overlapping)} PRs edit overlapping lines in the same files ({members}); please consolidate them into one PR so they can merge without a chain of conflicts."
@@ -766,10 +807,17 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
         if r.get("kind") in ("consolidate", "chain"):
             cards.append({"kind": r["kind"], "cluster": c["id"], "say": r["say"], "cmd": r["cmd"], "label": "send back" if r["kind"] == "consolidate" else "start the chain"})
     visible = [p for p in prs if not p.get("handed_off")]
-    back = [p["number"] for p in visible if p.get("recommended") == "request-changes"]
+    rejected = [p for p in visible if p.get("recommended") in ("request-changes", "close")]
+    back = [p["number"] for p in rejected if can_revise(p)]
     if back:
         cards.append({"kind": "request-changes", "say": f"{len(back)} row{'s need' if len(back) != 1 else ' needs'} the author, not you: send {'them' if len(back) != 1 else 'it'} back.",
                       "cmd": " ".join(f"--request-changes {n}" for n in back), "label": "send all back"})
+    # A workflow-authored row has nobody to send it back to: close it and the
+    # lane re-queues the page on its next run.
+    shut = [p["number"] for p in rejected if not can_revise(p)]
+    if shut:
+        cards.append({"kind": "close", "say": f"{len(shut)} generated row{'s have' if len(shut) != 1 else ' has'} a defect and no author to fix it: close {'them' if len(shut) != 1 else 'it'} out.",
+                      "cmd": " ".join(f"--close {n}" for n in shut), "label": "close them out" if len(shut) != 1 else "close it out"})
     routes: dict[str, list[int]] = {}
     for p in visible:
         if p.get("verdict") == "route":
@@ -779,10 +827,16 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     for target, nums in routes.items():
         cards.append({"kind": "route", "say": f"{len(nums)} row{'s are' if len(nums) != 1 else ' is'} not your lane: route to {target}.",
                       "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}"})
-    stamps = [p["number"] for p in visible if p.get("verdict") == "stamp"]
+    stamped = [p for p in visible if p.get("verdict") == "stamp"]
+    stamps = [p["number"] for p in stamped]
     if stamps:
-        cards.append({"kind": "stamp", "say": f"{len(stamps)} row{'s pass' if len(stamps) != 1 else ' passes'} every gate: merge the set.",
-                      "cmd": "--stamp " + ",".join(str(n) for n in stamps), "label": "merge the stamp set"})
+        held = [p["number"] for p in stamped if not merges_on_stamp(p)]
+        passes = f"{len(stamps)} row{'s pass' if len(stamps) != 1 else ' passes'} every gate"
+        say = f"{passes}: merge the set." if not held else \
+              f"{passes}: approve the set ({len(stamps) - len(held)} merge; {len(held)} human-authored, theirs to merge)."
+        cards.append({"kind": "stamp", "say": say,
+                      "cmd": "--stamp " + ",".join(str(n) for n in stamps),
+                      "label": "merge the stamp set" if not held else "approve the stamp set"})
     return cards
 
 
@@ -917,6 +971,8 @@ def merge_judgments(queue: dict, judgments: dict) -> dict:
             if not any(a["id"] == "fix" for a in pr.get("actions") or []):
                 pr["actions"].append({"id": "fix", "label": "apply fixes", "cmd": f"--fix {n}"})
         rec = val.get("recommended")
+        if rec == "request-changes" and not can_revise(pr):
+            rec = "close"  # nobody to send it back to; the lane re-queues
         if rec in VERDICTS + ("request-changes", "close") and pr.get("verdict") == "judge":
             pr["recommended"] = rec
     # Recommendations feed the "send back" card, so the opening is rebuilt.

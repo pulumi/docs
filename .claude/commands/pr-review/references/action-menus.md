@@ -11,16 +11,18 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 
 | Verdict | Primary | Also offered |
 |---|---|---|
-| `stamp` | `--stamp N` (approve + squash-merge; the button starts selected) | `open PR` |
-| `judge` | `--stamp N --force` (approve as-is) | `--request-changes N` (send back to author: a changes-requested review built from the judgments, plus `needs-author-response`); `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
-| `route` | `--route N:@owner` (request review + post the defects) | `open PR`, `--stamp N --force` ("approve anyway": the lane is a default, not a lock) |
+| `stamp` | `--stamp N` (the button starts selected; on a bot row it approves and squash-merges, on a human-authored row it approves only) | `--stamp N:no-merge` ("approve, don't merge") on a bot row, `--stamp N:merge` ("approve & merge") on a human-authored one; `open PR` |
+| `judge` | `--stamp N --force` (approve as-is, merging by the same rule) | the other merge choice (`--stamp N:no-merge --force` or `--stamp N:merge --force`); `--request-changes N` (send back to author: a changes-requested review built from the judgments, plus `needs-author-response`) — or, on an `author:generated` row, `--close N` ("close it out"), because a workflow never reads a review; `--fix N` when the row has a drafted description or one-click suggestions; `--render N` when it has preview pages; `--deploy N` on `risk:infra`; `--route N:@owner`; `open PR` |
+| `route` | `--route N:@owner` (request review + post the defects) | `open PR`, `--stamp N --force` ("approve anyway": the lane is a default, not a lock) and its merge counterpart |
 | `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--rerun N` (errored review), `--close N --superseded-by M` (duplicate) | `open PR` |
+
+Whether approving merges is on the button, never implied: bot PRs (dependabot, pulumi-bot, WorkPrentice) default to approve-and-merge, a person's PR defaults to approval alone because merging is the author's call. The second button is the other choice, and picking it puts the first one out. `act.py` reads the `:merge` / `:no-merge` suffix per PR, so a batch of both stays one command.
 
 A blocked row is never stampable, with or without `--force`. Red checks, an in-progress review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits. An errored review's unblock is `--rerun N` (`@claude #new-review`), and a row where no review ran at all (`review:trivial`, a draft, a bot skip) offers the same command as a side action, "run a full review".
 
 ## Do next
 
-The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--route` per owner, `--stamp` for the stamp set). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
+The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--close` for the generated rows that have no author to send anything back to, `--route` per owner, `--stamp` for the stamp set — the card says how many of the set actually merge). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
 
 ## Terminal mode
 

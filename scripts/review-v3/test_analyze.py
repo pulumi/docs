@@ -136,7 +136,9 @@ def test_gate_label_trivial_is_not_enough():
 def test_gate_open_warning_rows():
     p = _judge_because("warnings:1:F4", comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)])
     assert p["open_warning_ids"] == ["F4"]
-    assert [a["id"] for a in p["actions"][:2]] == ["stamp", "request-changes"]  # every judge row can go back to the author
+    # both stamp buttons, then the send-back: a row never hides whether
+    # approving also merges.
+    assert [a["id"] for a in p["actions"][:3]] == ["stamp", "stamp-no-merge", "request-changes"]
 
 
 def test_gate_open_blockers_on_author_card():
@@ -152,6 +154,47 @@ def test_gate_self_accepted_disposition():
     # a maintainer's disposition is not self-accepted
     q = run([stampable(comments=[comment(CLEAN_BRIEF), comment(body.replace("workprentice[bot]", "cnunciato"))])])
     assert row(q, 100)["self_accepted_ids"] == []
+
+
+def test_the_stamp_buttons_say_whether_approving_merges():
+    def page(n, **kw):
+        return stampable(n, title=f"Change page {n}", files=[{"filename": f"content/docs/p{n}.md", "status": "modified",
+                                                              "additions": 1, "deletions": 1,
+                                                              "patch": patch_for(["new line"], lines_removed=["old line"])}], **kw)
+
+    q = run([page(1), page(2, author="camsoper", author_type="User")])
+    bot, human = row(q, 1), row(q, 2)
+    assert [(a["id"], a["label"], a["cmd"]) for a in bot["actions"][:2]] == [
+        ("stamp", "approve & merge", "--stamp 1"), ("stamp-no-merge", "approve, don't merge", "--stamp 1:no-merge")]
+    # a person's PR is theirs to merge: approval is the default, merging opts in
+    assert [(a["id"], a["label"], a["cmd"]) for a in human["actions"][:2]] == [
+        ("stamp", "approve, no merge", "--stamp 2"), ("stamp-merge", "approve & merge", "--stamp 2:merge")]
+    card = next(c for c in q["do_next"] if c["kind"] == "stamp")
+    assert "1 merge; 1 human-authored, theirs to merge" in card["say"] and card["label"] == "approve the stamp set"
+    # judge rows carry the same pair, as-is
+    j = row(run([page(3, labels=["review:trivial", "domain:docs"])]), 3)
+    assert [(a["id"], a["cmd"]) for a in j["actions"][:2]] == [
+        ("stamp", "--stamp 3 --force"), ("stamp-no-merge", "--stamp 3:no-merge --force")]
+    assert j["actions"][0]["label"] == "approve as-is & merge"
+
+
+def test_a_generated_row_closes_instead_of_going_back_to_its_author():
+    # pulumi-bot opens the content-review and glow-up PRs from a workflow
+    # run: a changes-requested review would sit there forever.
+    q = run([stampable(labels=["review:trivial", "domain:docs"], author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    assert p["verdict"] == "judge" and "author:generated" in p["reasons"]
+    ids = [a["id"] for a in p["actions"]]
+    assert "request-changes" not in ids
+    assert [a["cmd"] for a in p["actions"] if a["id"] == "close"] == ["--close 100"]
+    assert [a["label"] for a in p["actions"] if a["id"] == "close"] == ["close it out"]
+    # the model's send-back recommendation becomes a close, and the opening
+    # card says so rather than promising an author who will never answer.
+    analyze.merge_judgments(q, {100: {"recommended": "request-changes"}})
+    assert p["recommended"] == "close"
+    card = next(c for c in q["do_next"] if c["kind"] == "close")
+    assert card["cmd"] == "--close 100" and "no author to fix it" in card["say"]
+    assert not any(c["kind"] == "request-changes" for c in q["do_next"])
 
 
 def test_errored_review_is_blocked_with_rerun_and_an_absent_one_offers_it():

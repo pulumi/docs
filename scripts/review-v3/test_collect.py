@@ -165,6 +165,15 @@ def test_author_classification_never_assumes_internal():
     assert ctype == "external" and "failed" in note
 
 
+def test_only_an_agent_bot_can_be_sent_a_review_back():
+    assert collect.can_revise("bot", "workprentice[bot]") is True
+    assert collect.can_revise("bot", "Copilot") is True
+    assert collect.can_revise("bot", "pulumi-bot") is False       # workflow lanes: nobody reads it
+    assert collect.can_revise("bot", "dependabot[bot]") is False
+    assert collect.can_revise("internal", "cam") is True
+    assert collect.can_revise("external", "someone") is True
+
+
 def test_etiquette_trust_matrix():
     assert collect.etiquette_trust("internal", "cam", None) == "high"
     assert collect.etiquette_trust("bot", "workprentice[bot]", None) == "high"

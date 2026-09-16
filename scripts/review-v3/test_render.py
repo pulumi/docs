@@ -87,11 +87,20 @@ def test_rerun_is_the_unblock_on_an_errored_row_and_a_side_action_elsewhere():
     assert 'data-cmd="--rerun 9" data-pr="9" data-kind="side"' in html and "run a full review" in html
 
 
+def test_a_generated_row_offers_close_where_others_offer_send_back():
+    q = run([stampable(8, labels=["review:trivial", "domain:docs"], author="pulumi-bot", author_type="User")])
+    html = render.render_board(q)
+    assert "send back to author" not in html
+    assert 'data-cmd="--close 8" data-pr="8" data-kind="decision"' in html and "close it out" in html
+
+
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)
     assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-kind="decision" data-decision="0" aria-pressed="true"' in html
     assert 'type="checkbox"' not in html
+    # the other way to approve is a decision too, so picking it puts out the default
+    assert 'data-cmd="--stamp 7:no-merge" data-pr="7" data-kind="decision"' in html and "approve, don&#x27;t merge" in html
     # One decision per row, side actions ride along: the script puts out the
     # other lit decision on the same PR, and only decisions count as made.
     jhtml = render.render_board(_queue())

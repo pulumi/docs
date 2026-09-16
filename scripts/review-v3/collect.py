@@ -90,6 +90,11 @@ def worklist():
 # ---- trust axes (ported from contributor-detection.sh) ------------------
 
 TRUSTED_BOT_PREFIXES = ("dependabot", "pulumi-bot", "renovate", "copilot", "github-actions", "workprentice")
+# Bots that read a review and push a revision. Everything else machine-authored
+# (pulumi-bot's content-review / glow-up / regen lanes, dependabot, renovate)
+# is a workflow: a changes-requested review lands on a PR nobody will answer,
+# so those rows get close-or-fix instead of send-back.
+AGENT_BOT_PREFIXES = ("workprentice", "copilot")
 INFRA_PATH_RE = re.compile(r"^(scripts/|\.github/workflows/|Makefile$|infrastructure/|package\.json$|webpack\.config\.js$)")
 PROGRAMS_PATH_RE = re.compile(r"^static/programs/")
 
@@ -108,6 +113,14 @@ def classify_author(login: str, user_type: str | None, gh: GhClient | None) -> t
     if member is None:
         return "external", "membership not visible to this token"
     return ("internal" if member else "external"), None
+
+
+def can_revise(contributor_type: str, login: str) -> bool:
+    """Can this author act on a changes-requested review? People always can;
+    a bot only when it is an agent that answers reviews."""
+    if contributor_type != "bot":
+        return True
+    return norm_login(login).startswith(AGENT_BOT_PREFIXES)
 
 
 def etiquette_trust(contributor_type: str, login: str, gh: GhClient | None) -> str:
@@ -587,6 +600,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
             "norm": norm_login(login),
             "type": ctype,
             "etiquette_trust": trust,
+            "can_revise": can_revise(ctype, login),
             "membership_note": membership_note,
         },
         "head": {
