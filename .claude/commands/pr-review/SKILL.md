@@ -170,7 +170,7 @@ The first command validates against the queue and writes `.pr-review-plan.json` 
 - `--render N` — screenshot the preview pages into `/.pr-review-shots/N/` (`screenshot.mjs`, Playwright); the detail view embeds them.
 - `--deploy N` — dispatch `testing-build-and-deploy.yml` at the head branch (the `risk:infra` row action; see `pr-review:references:infrastructure-deployment`).
 
-Which bot branches may be pushed to, and the action bar per row, are in `pr-review:references:action-menus`. Every comment `act.py` posts carries the Claude Code attribution footer except the approval body.
+`pr-review:references:reading-the-board` is the manual for the rendered page — every element, what it means, and what clicking it does. Point a new approver at it, and read it yourself before changing what the board shows. Which bot branches may be pushed to, and the action bar per row, are in `pr-review:references:action-menus`. Every comment `act.py` posts carries the Claude Code attribution footer except the approval body.
 
 ### 6. Re-collect, re-render
 

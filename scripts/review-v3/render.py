@@ -102,11 +102,56 @@ def deep_link(queue: dict, pr: dict, item: dict) -> str | None:
     return files_url(queue, pr["number"]) + _compose.diff_anchor(file, item.get("anchor") or item.get("ref") or "")
 
 
+# What each reason code means, in a sentence, for the chip's tooltip. The
+# glossary in queue.json is written for whoever greps the queue; a person
+# hovering a chip wants to know what it means for this row, so a tooltip
+# never just repeats the chip.
+REASON_HELP = {
+    "risk": "How big a change this is, read off the diff: typo, minor, standard, major, or infra.",
+    "scrutiny": "The diff looks AI-written, so this row can never be a plain stamp. Read it before approving.",
+    "ai-suspect": "The signal that made this look AI-written.",
+    "review": "The state of the pinned review: stale, absent, still running, errored, or triage prose only.",
+    "label": "A review:* label GitHub carries on this PR.",
+    "warnings": "Reviewer-check rows the review raised and nobody has answered. They don't block a merge.",
+    "outstanding": "Blocking findings still open on the author card. Answer or refute them before this merges.",
+    "self-accepted": "The PR's own author marked a finding accepted, so it doesn't count as answered.",
+    "stances": "The brief records editorial stances the reviewer took. Only blocks with --strict-stances.",
+    "mergeable": "GitHub can't merge this cleanly: dirty is a conflict, behind means the base moved on.",
+    "checks": "CI is not green on the head commit.",
+    "cluster": "This PR shares files with others. Overlap means their hunks touch the same lines and order matters; same-file means any order works; theirs means the pile is mostly someone else's.",
+    "directional": "This PR adds links to a URL another open PR is removing links from. Merge them in the wrong order and the links break.",
+    "duplicate": "Another open PR looks like the same change.",
+    "blog": "A new blog post, or a publish date old enough to look stale.",
+    "brief": "The review's summary names a value that is nowhere in the diff, so it may describe an older push.",
+    "desc": "The PR description names a file the diff doesn't touch, or is still the empty template.",
+    "shape": "The shape of the diff: infra touches the build, link-only means every changed line differs only in a link.",
+    "link-fixes": "A link-only diff, which your config makes yours to approve whatever lane it belongs to.",
+    "gate": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it.",
+    "size": "The diff is at or over your stamp_max_lines, so it gets read rather than stamped.",
+    "owner": "Which lane a changed file belongs to, and the role that owns it.",
+    "route": "The lane this PR belongs to, and who gets asked for the review.",
+    "handed-off": "Someone else is already the requested reviewer, so this row waits on them, not you.",
+    "merging-over": "A review is already on this PR: an approval, or a changes-requested that has to be settled first.",
+    "not-governed": "The Sentinel merge gate doesn't apply to this PR.",
+    "author": "Who opened it: a person, or a workflow run that will never answer a review.",
+    "trust": "The token couldn't read org membership, so the author is treated as external.",
+    "draft": "A draft PR, only ever shown when you ask for it by number.",
+}
+
+
+def chip_title(r: str) -> str:
+    """The tooltip: what the code means, then the code itself for anyone
+    grepping the queue. Never the chip's own text handed back."""
+    code, _, _detail = r.partition(":")
+    help_text = REASON_HELP.get(code)
+    return f"{help_text} ({r})" if help_text else r
+
+
 def _chip(r: str) -> str:
     code = r.split(":", 1)[0]
     cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
     text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
-    return f'<span class="{cls}" title="{esc(r)}">{esc(text)}</span>'
+    return f'<span class="{cls}" title="{esc(chip_title(r))}">{esc(text)}</span>'
 
 
 def chips(reasons: list[str]) -> str:
@@ -424,6 +469,54 @@ def clusters_html(queue: dict) -> str:
             '<div class="two">' + "".join(all_cards) + "</div></details></section>")
 
 
+HELP_SECTIONS = [
+    ("What this page is", [
+        "A worksheet, not a control panel. Nothing here talks to GitHub.",
+        "Every button is a toggle that adds a fragment to the command at the bottom. Click freely and change your mind; nothing happens until you run that command.",
+    ]),
+    ("The four verdicts", [
+        "<b>stamp</b> — passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough.",
+        "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap.",
+        "<b>route</b> — not your lane per the routing matrix. Ask the owning team, or approve anyway.",
+        "<b>blocked</b> — nothing to do until something else moves: a conflict, red CI, a stale or running review.",
+    ]),
+    ("Do next", [
+        "Each card states a fact naming its PRs, says what pressing the button does, and then presses those rows' buttons for you.",
+        "A card is a shortcut for the rows, not a separate instruction: pick a different decision on one of its PRs and the card goes out, so the command can never contradict itself.",
+        "<b>Start the chain</b> approves and merges the first PR of a collision cluster, then merges master into the next so it can follow. One link per run.",
+    ]),
+    ("A row", [
+        "Chips are the reasons for the verdict; the ones that change what you'd click stay out, the rest fold behind <b>why</b>. Hover any chip for a sentence explaining it.",
+        "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Side actions like <i>apply fixes</i> ride along with it.",
+        "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
+    ]),
+    ("Judgment badges", [
+        "A badge says why a finding does not stop the merge. It is never the author's answer: nobody has answered anything here.",
+        "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are recorded on the PR as <code>/resolve</code> comments when you approve the row, before it merges.",
+        "<b>needs the author</b> goes back with the send-back button; <b>nobody to fix it</b> means a workflow opened the PR, so close it out and the lane re-queues the page.",
+    ]),
+    ("Filters", [
+        "Chips are literal: a row shows only while its value is lit in every group, so turning a whole group off empties the board and says so.",
+        "<i>since</i> is the one threshold rather than a set of values. <i>Reset chips</i> restores the defaults.",
+    ]),
+    ("The command at the bottom", [
+        "Copy it and run it, or hand it to Claude. It plans, previews every write, and waits for a yes.",
+        "Each approval re-checks the PR immediately before merging: head unchanged, mergeable, CI green, no changes-requested review. A PR that fails is skipped and the batch continues.",
+    ]),
+]
+
+
+def help_html() -> str:
+    """The manual, folded, on the page it describes. Same content as
+    `pr-review:references:reading-the-board`, kept short enough to read
+    standing up."""
+    out = []
+    for heading, points in HELP_SECTIONS:
+        out.append(f"<div><h4>{esc(heading)}</h4><ul>" + "".join(f"<li>{p}</li>" for p in points) + "</ul></div>")
+    return ('<details class="help"><summary>How to read this board</summary>'
+            '<div class="helpgrid">' + "".join(out) + "</div></details>")
+
+
 def do_next_html(queue: dict) -> str:
     """The opening: one sentence and one button per move, most leverage
     first. Nothing else on the page competes with it for the first look."""
@@ -433,9 +526,18 @@ def do_next_html(queue: dict) -> str:
     out = []
     for i, d in enumerate(cards, 1):
         cls = ACTION_CLASS.get(d["kind"], "") or ("hold" if d["kind"] == "consolidate" else "route" if d["kind"] == "chain" else "")
-        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}" aria-pressed="false">{esc(d["label"])}</button>'
+        # `targets` are the row buttons this card presses; `claims` are rows it
+        # covers without a row button of its own (a chain, a consolidation).
+        data = ""
+        if d.get("targets"):
+            data += f' data-targets="{esc(json.dumps(d["targets"], sort_keys=True))}"'
+        if d.get("claims"):
+            data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
+        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}"{data} aria-pressed="false">{esc(d["label"])}</button>'
                if d.get("cmd") else "")
-        out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span><span class="say">{esc(d["say"])}</span>{btn}</li>')
+        does = f'<span class="does">{esc(d["does"])}</span>' if d.get("does") else ""
+        out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span>'
+                   f'<span class="say">{esc(d["say"])}{does}</span>{btn}</li>')
     return f'<section class="donext"><div class="sec-head"><h2>Do next</h2><span class="count">{len(cards)}</span></div><ol>' + "".join(out) + "</ol></section>"
 
 
@@ -539,7 +641,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
         h1="PR review queue",
         dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
-        tally=f'<div class="tally">{tally}</div><div class="progress" id="progress"></div>' + do_next_html(queue),
+        tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>' + do_next_html(queue),
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
         body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue) + ("" if include_handed_off else waiting_html(all_prs)),
@@ -677,12 +779,20 @@ details.quote[open]>summary{margin-bottom:3px}
 .acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
 .btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
 .progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
+details.help{margin:10px 0 4px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
+details.help>summary{cursor:pointer;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
+details.help[open]>summary{border-bottom:1px solid var(--line)}
+.helpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 24px;padding:12px 16px 16px}
+.helpgrid h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:0 0 4px}
+.helpgrid ul{margin:0;padding-left:16px}
+.helpgrid li{font-size:13px;color:var(--ink-2);margin:3px 0;line-height:1.45}
 .donext{margin:6px 0 18px;background:var(--surface);border:1px solid var(--line-2);border-radius:4px;padding:12px 16px;box-shadow:var(--shadow)}
 .donext ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
 .donext .next{display:flex;gap:12px;align-items:center;padding:8px 10px;border-left:3px solid var(--line-2);background:var(--surface-2);border-radius:3px}
 .donext .next.hold{border-left-color:var(--hold)}.donext .next.route{border-left-color:var(--route)}.donext .next.go{border-left-color:var(--go)}.donext .next.stop{border-left-color:var(--stop)}
 .donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
 .donext .say{flex:1;font-size:14px;color:var(--ink)}
+.donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
 .donext .btn.p{margin-left:auto;white-space:nowrap}
 .clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
 .chip.r-handed-off{border-color:var(--ink-3);color:var(--ink-3)}
@@ -749,18 +859,63 @@ SCRIPT = r"""
     if (on) { sel[k] = b.dataset.cmd; b.classList.add('sel'); } else { delete sel[k]; b.classList.remove('sel'); }
     b.setAttribute('aria-pressed', on ? 'true' : 'false');
   }
+  // A Do-next card is the same decisions as the rows it names, pressed
+  // together: `data-targets` maps a PR to the row button it presses, and
+  // `data-claims` marks rows a card covers with no row button of its own (a
+  // chain, a consolidation). Either way a card and a contrary row decision
+  // can never both be lit, so the command at the bottom cannot contradict
+  // itself.
+  var cards = [].slice.call(document.querySelectorAll('button.btn[data-targets], button.btn[data-claims]'));
+  function cardTargets(c){ return c.dataset.targets ? JSON.parse(c.dataset.targets) : {}; }
+  function cardPrs(c){
+    if (c.dataset.claims) return c.dataset.claims.split(',');
+    return Object.keys(cardTargets(c));
+  }
+  function rowButton(pr, cmd){
+    return document.querySelector('button.btn[data-pr="' + pr + '"][data-cmd="' + cmd.replace(/"/g, '\\"') + '"]');
+  }
+  function clearRow(pr, keep){
+    document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
+  }
+  function syncCards(){
+    cards.forEach(function(c){
+      var t = cardTargets(c), prs = Object.keys(t), lit;
+      if (prs.length) {
+        lit = prs.every(function(pr){ var b = rowButton(pr, t[pr]); return b && b.classList.contains('sel'); });
+      } else {   // claims-only: any decision lit on a claimed row is a contradiction
+        lit = c.classList.contains('sel') && !cardPrs(c).some(function(pr){
+          return document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
+        });
+      }
+      if (lit !== c.classList.contains('sel')) setSel(c, lit);
+    });
+  }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
     if (b.classList.contains('sel')) setSel(b, true);
     b.addEventListener('click', function(){
       var on = !b.classList.contains('sel');
-      if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
-        document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + b.dataset.pr + '"]').forEach(function(o){ if (o !== b) setSel(o, false); });
+      var t = b.dataset.targets ? JSON.parse(b.dataset.targets) : null;
+      if (t) {                                   // a batch card: press its rows
+        Object.keys(t).forEach(function(pr){
+          var row = rowButton(pr, t[pr]);
+          if (!row) return;
+          if (on) clearRow(pr, row);
+          setSel(row, on);
+        });
+        setSel(b, on); compose(); syncCards(); return;
       }
-      setSel(b, on); compose();
+      if (on && b.dataset.claims) {              // a chain: the rows it covers defer to it
+        b.dataset.claims.split(',').forEach(function(pr){ clearRow(pr, null); });
+      }
+      if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
+        clearRow(b.dataset.pr, b);
+      }
+      setSel(b, on); compose(); syncCards();
     });
   });
+  syncCards();
   document.getElementById('clear').addEventListener('click', function(){
-    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose();
+    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose(); syncCards();
   });
   document.getElementById('copy').addEventListener('click', function(){
     var t = cmdEl.textContent.replace(/^\$ /, '');

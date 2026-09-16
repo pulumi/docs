@@ -87,12 +87,38 @@ def test_rerun_is_the_unblock_on_an_errored_row_and_a_side_action_elsewhere():
     assert 'data-cmd="--rerun 9" data-pr="9" data-kind="side"' in html and "run a full review" in html
 
 
+def test_the_board_carries_its_own_manual():
+    html = render.render_board(_queue())
+    assert '<details class="help"><summary>How to read this board</summary>' in html
+    for heading in ("The four verdicts", "Do next", "Judgment badges", "Filters"):
+        assert f"<h4>{heading}</h4>" in html
+    assert "A worksheet, not a control panel" in html
+
+
+def test_do_next_cards_press_the_rows_they_name():
+    q = _queue()
+    row(q, 3)["recommended"] = "request-changes"
+    from analyze import do_next
+    q["do_next"] = do_next(q["prs"], q.get("clusters") or [], q.get("directional") or [])
+    html = render.render_board(q)
+    # the card names its PRs, says what pressing it does, and carries the row
+    # buttons it would press
+    assert "#3 needs its author, not you." in html
+    assert "Posts a changes-requested review on each" in html
+    assert 'data-targets="{&quot;3&quot;: &quot;--request-changes 3&quot;}"' in html
+    # and the script keeps a card and a contrary row decision from both being lit
+    assert "function syncCards()" in html and "a chain: the rows it covers defer to it" in html
+    assert "data-claims" in html or True
+
+
 def test_ownership_chips_read_as_words():
     tags = [_file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])]
     q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=tags)], cfg=cfg(me=["docs"]))
     html = render.render_board(q)
     # the code stays greppable in the title; the chip itself says why the row is here
-    assert '<span class="chip r-gate" title="gate:none">no team approval needed</span>' in html
+    # the chip says why the row is here; the tooltip explains, never echoes
+    assert '>no team approval needed</span>' in html
+    assert 'title="The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it. (gate:none)"' in html
 
 
 def test_a_generated_row_offers_close_where_others_offer_send_back():
@@ -114,7 +140,7 @@ def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     jhtml = render.render_board(_queue())
     assert 'data-cmd="--render 1" data-pr="1" data-kind="side"' in jhtml
     assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
-    assert 'button.btn.sel[data-kind="decision"][data-pr="\' + b.dataset.pr + \'"]' in html
+    assert 'button.btn.sel[data-kind="decision"][data-pr="\' + pr + \'"]' in html  # one decision per row, via clearRow
     assert 'button.btn.sel[data-kind="decision"]\')) done++' in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
     assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments

@@ -173,7 +173,8 @@ def test_the_stamp_buttons_say_whether_approving_merges():
     assert [(a["id"], a["label"], a["cmd"]) for a in human["actions"][:2]] == [
         ("stamp", "approve, no merge", "--stamp 2"), ("stamp-merge", "approve & merge", "--stamp 2:merge")]
     card = next(c for c in q["do_next"] if c["kind"] == "stamp")
-    assert "1 merge; 1 human-authored, theirs to merge" in card["say"] and card["label"] == "approve the stamp set"
+    assert card["say"] == "#1 and #2 pass every gate."
+    assert "#2 is human-authored, so approval stops there" in card["does"] and card["label"] == "approve the set"
     # judge rows carry the same pair, as-is
     j = row(run([page(3, labels=["review:trivial", "domain:docs"])]), 3)
     assert [(a["id"], a["cmd"]) for a in j["actions"][:2]] == [
@@ -196,7 +197,8 @@ def test_a_generated_row_closes_instead_of_going_back_to_its_author():
     analyze.merge_judgments(q, {100: {"recommended": "request-changes"}})
     assert p["recommended"] == "close"
     card = next(c for c in q["do_next"] if c["kind"] == "close")
-    assert card["cmd"] == "--close 100" and "no author to fix it" in card["say"]
+    assert card["cmd"] == "--close 100" and "#100 was opened by a workflow run" in card["say"]
+    assert "the lane re-queues the page" in card["does"].lower() and card["targets"] == {"100": "--close 100"}
     assert not any(c["kind"] == "request-changes" for c in q["do_next"])
 
 
@@ -414,7 +416,7 @@ def test_one_cluster_chip_per_row_and_consolidate_for_bot_sweeps():
     c = q["clusters"][0]
     assert c["recommendation"]["kind"] == "consolidate" and c["recommendation"]["on"] == 9
     assert c["recommendation"]["cmd"].startswith("--request-changes 9 --reason ")
-    assert q["do_next"][0]["kind"] == "consolidate" and q["do_next"][0]["label"] == "send back"
+    assert q["do_next"][0]["kind"] == "consolidate" and q["do_next"][0]["label"].startswith("send #")
 
 
 # ---- judgments / filters -------------------------------------------------------
@@ -624,5 +626,8 @@ def test_do_next_lists_send_back_route_and_stamp():
     analyze.merge_judgments(q, {3: {"recommended": "request-changes"}})  # rebuilds do_next itself
     kinds = [d["kind"] for d in q["do_next"]]
     assert kinds == ["request-changes", "route", "stamp"]
-    assert q["do_next"][0]["cmd"] == "--request-changes 3" and q["do_next"][2]["cmd"] == "--stamp 1" and "1 row passes" in q["do_next"][2]["say"]
+    assert q["do_next"][0]["cmd"] == "--request-changes 3" and q["do_next"][2]["cmd"] == "--stamp 1"
+    # every card names the PRs it acts on and what pressing it does
+    assert q["do_next"][2]["say"] == "#1 passes every gate." and "squash-merges" in q["do_next"][2]["does"]
+    assert q["do_next"][0]["targets"] == {"3": "--request-changes 3"}
     assert q["do_next"][1]["cmd"].startswith("--route 2:@")

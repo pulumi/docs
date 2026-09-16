@@ -813,46 +813,86 @@ def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
     return {"kind": "chain", "first": first, "next": nxt, "say": say, "cmd": f"--chain {c['id']}"}
 
 
+def pr_list(nums: list[int], limit: int = 3) -> str:  # noqa: D401
+    """`#1`, `#1 and #2`, `#1, #2 and #3`, `#1, #2 and 4 more` — a card names
+    the PRs it will act on, because "3 rows" is not something you can check."""
+    tags = [f"#{n}" for n in nums]
+    if len(tags) > limit:
+        return ", ".join(tags[:limit]) + f" and {len(tags) - limit} more"
+    if len(tags) > 1:
+        return ", ".join(tags[:-1]) + f" and {tags[-1]}"
+    return tags[0] if tags else ""
+
+
 def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> list[dict]:
-    """The board's opening: at most a handful of sentences, each with one
-    action. Ordered by leverage: consolidations, chains, then the batch
-    counts (send back / route / stamp)."""
+    """The board's opening: at most a handful of moves, each one sentence of
+    what is true, one sentence of what pressing the button does, and the PRs
+    it does it to. Ordered by leverage: consolidations, chains, then the
+    batches (send back / close / route / stamp).
+
+    `targets` maps a PR to the row button the card would press, so the board
+    can keep the card and the rows in agreement instead of letting a card and
+    a contrary row decision both sit lit. A card with no `targets` (a chain,
+    a consolidation) `claims` its PRs instead: picking a different decision on
+    one of them puts the card out."""
     cards: list[dict] = []
     for c in clusters:
         r = c.get("recommendation") or {}
-        if r.get("kind") in ("consolidate", "chain"):
-            cards.append({"kind": r["kind"], "cluster": c["id"], "say": r["say"], "cmd": r["cmd"], "label": "send back" if r["kind"] == "consolidate" else "start the chain"})
+        if r.get("kind") == "chain":
+            first, nxt = r.get("first"), r.get("next")
+            does = f"Approves and squash-merges #{first}" + (
+                f", then merges master into #{nxt} so it can follow." if nxt else ".")
+            cards.append({"kind": "chain", "cluster": c["id"], "say": r["say"], "does": does + " One link per run; the next one waits on CI.",
+                          "cmd": r["cmd"], "label": f"approve & merge #{first}",
+                          "claims": [n for n in (first, nxt) if n]})
+        elif r.get("kind") == "consolidate":
+            on = r.get("on")
+            cards.append({"kind": "consolidate", "cluster": c["id"], "say": r["say"],
+                          "does": f"Posts a changes-requested review on #{on} asking {r.get('target')} for one consolidated PR. Nothing merges.",
+                          "cmd": r["cmd"], "label": f"send #{on} back", "claims": [on] if on else []})
     visible = [p for p in prs if not p.get("handed_off")]
     rejected = [p for p in visible if p.get("recommended") in ("request-changes", "close")]
-    back = [p["number"] for p in rejected if can_revise(p)]
+    back = sorted(p["number"] for p in rejected if can_revise(p))
     if back:
-        cards.append({"kind": "request-changes", "say": f"{len(back)} row{'s need' if len(back) != 1 else ' needs'} the author, not you: send {'them' if len(back) != 1 else 'it'} back.",
-                      "cmd": " ".join(f"--request-changes {n}" for n in back), "label": "send all back"})
+        cards.append({"kind": "request-changes",
+                      "say": f"{pr_list(back)} need{'' if len(back) != 1 else 's'} {'their' if len(back) != 1 else 'its'} author, not you.",
+                      "does": "Posts a changes-requested review on each, written from the judgments on those rows, and labels them needs-author-response. Nothing merges.",
+                      "cmd": " ".join(f"--request-changes {n}" for n in back),
+                      "label": "send back" + (" all" if len(back) != 1 else ""),
+                      "targets": {str(n): f"--request-changes {n}" for n in back}})
     # A workflow-authored row has nobody to send it back to: close it and the
     # lane re-queues the page on its next run.
-    shut = [p["number"] for p in rejected if not can_revise(p)]
+    shut = sorted(p["number"] for p in rejected if not can_revise(p))
     if shut:
-        cards.append({"kind": "close", "say": f"{len(shut)} generated row{'s have' if len(shut) != 1 else ' has'} a defect and no author to fix it: close {'them' if len(shut) != 1 else 'it'} out.",
-                      "cmd": " ".join(f"--close {n}" for n in shut), "label": "close them out" if len(shut) != 1 else "close it out"})
+        cards.append({"kind": "close",
+                      "say": f"{pr_list(shut)} {'were' if len(shut) != 1 else 'was'} opened by a workflow run, so no author will ever answer a review.",
+                      "does": "Closes each with a comment carrying the judgments on those rows. The lane re-queues the page on its next run.",
+                      "cmd": " ".join(f"--close {n}" for n in shut),
+                      "label": "close " + ("them out" if len(shut) != 1 else "it out"),
+                      "targets": {str(n): f"--close {n}" for n in shut}})
     routes: dict[str, list[int]] = {}
     for p in visible:
         if p.get("verdict") == "route":
             act = next((a for a in p.get("actions") or [] if a["id"] == "route"), None)
             if act:
                 routes.setdefault(act["cmd"].split(":", 1)[1], []).append(p["number"])
-    for target, nums in routes.items():
-        cards.append({"kind": "route", "say": f"{len(nums)} row{'s are' if len(nums) != 1 else ' is'} not your lane: route to {target}.",
-                      "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}"})
+    for target, nums in ((t, sorted(ns)) for t, ns in routes.items()):
+        cards.append({"kind": "route", "say": f"{pr_list(nums)} {'are' if len(nums) != 1 else 'is'} not your lane.",
+                      "does": f"Requests a review from {target} on each and posts what the queue flagged as a comment. Nothing merges.",
+                      "cmd": " ".join(f"--route {n}:{target}" for n in nums), "label": f"route to {target}",
+                      "targets": {str(n): f"--route {n}:{target}" for n in nums}})
     stamped = [p for p in visible if p.get("verdict") == "stamp"]
-    stamps = [p["number"] for p in stamped]
+    stamps = sorted(p["number"] for p in stamped)
     if stamps:
-        held = [p["number"] for p in stamped if not merges_on_stamp(p)]
-        passes = f"{len(stamps)} row{'s pass' if len(stamps) != 1 else ' passes'} every gate"
-        say = f"{passes}: merge the set." if not held else \
-              f"{passes}: approve the set ({len(stamps) - len(held)} merge; {len(held)} human-authored, theirs to merge)."
-        cards.append({"kind": "stamp", "say": say,
+        held = sorted(p["number"] for p in stamped if not merges_on_stamp(p))
+        merged = [n for n in stamps if n not in held]
+        does = "Approves each, records the judged findings, and squash-merges " + (
+            "them." if not held else f"the {len(merged)} bot-authored one{'s' if len(merged) != 1 else ''}; {pr_list(held)} {'are' if len(held) != 1 else 'is'} human-authored, so approval stops there.")
+        cards.append({"kind": "stamp", "say": f"{pr_list(stamps)} pass{'' if len(stamps) != 1 else 'es'} every gate.",
+                      "does": does,
                       "cmd": "--stamp " + ",".join(str(n) for n in stamps),
-                      "label": "merge the stamp set" if not held else "approve the stamp set"})
+                      "label": "approve the set" if held else "approve & merge the set",
+                      "targets": {str(n): f"--stamp {n}" for n in stamps}})
     return cards
 
 

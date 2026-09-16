@@ -1,0 +1,91 @@
+---
+user-invocable: false
+description: How to read the /pr-review board — every element on the page, what it means, and what clicking it does
+---
+
+# Reading the board
+
+The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind.
+
+One run of `/pr-review` renders one board. Re-running re-renders it, and publishing updates the same page.
+
+## The four verdicts
+
+Every open PR you can act on gets exactly one verdict. They are a sort order, not a judgment of quality.
+
+| Verdict | Means | The usual move |
+|---|---|---|
+| **stamp** | Passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough. | Approve. Bot PRs merge; a person's PR is theirs to merge. |
+| **judge** | One thing needs a person: an open finding, a stale-looking summary, a new blog post, a diff over your size cap. | Read the judgment boxes, then approve as-is or send it back. |
+| **route** | Not your lane per `.github/review-routing.yml`. | Request review from the owning team, or approve anyway if you're confident. |
+| **blocked** | Nothing you can do until something else moves: a conflict, red CI, a stale review, a review still running. | Use the unblock the row offers, or leave it. |
+
+## The Do next strip
+
+The top of the board is a short list of moves worth making, most leverage first. Each card is three things:
+
+1. **A statement of fact**, naming the PRs. "#21664 and #21662 were opened by a workflow run, so no author will ever answer a review."
+2. **What pressing the button does**, in one sentence. "Closes each with a comment carrying the judgments on those rows."
+3. **The button**, which presses exactly those rows' buttons for you.
+
+A card is a shortcut for clicking the same buttons down in the rows, not a separate instruction. Light a card and its rows light. Pick a different decision on one of those rows and the card goes out, because it no longer describes what you asked for. A card and a row can never disagree, so the command at the bottom can never contradict itself.
+
+Two cards work slightly differently, because they have no per-row button:
+
+- **Start the chain** approves and squash-merges the first PR in a collision cluster, then merges master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. It claims both PRs, so choosing anything else on either of them puts the card out.
+- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps. Nothing merges.
+
+## A row
+
+```
+#21622  Fix stale fully-qualified /docs/ links in 6 blog posts        [judge]
+        blog · +7 −7 · 6 files · CI ✓ · reviewed@50f87c3 ≠ head 95358f6 · @workprentice[bot]
+        [link-only sweep: yours] [review:base-merged] [warnings:2:F6,F7]  ▸ why · 4
+        One-line summary of what the PR does.
+        <judgment boxes>
+        [open PR] [send back to author] [render preview]        [approve as-is & merge]
+```
+
+- **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
+- **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
+- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Picking a second decision puts the first out. Side actions (apply fixes, render preview, deploy) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **Approving says whether it merges.** A bot row leads with "approve & merge"; a person's row leads with "approve, no merge", because merging their PR is their call. The other choice is the second button.
+
+## Judgment badges
+
+A badge beside a finding says **why that finding does not stop the merge**. It is never something the PR's author answered — the author has not answered anything on this board.
+
+| Badge | Means | Approving the row does |
+|---|---|---|
+| already fixed | The diff already addresses it. | Records it as fixed. |
+| not a real issue | The review got this one wrong. | Posts `/resolve F<n> refuted` with the reason shown. |
+| fair, not blocking | Real, but not worth holding the PR. | Posts `/resolve F<n> accepted` with the reason. |
+| doesn't apply | Out of scope for this PR. | Posts `/resolve F<n> not-applicable` with the reason. |
+| needs the author | Not yours to fix. | Nothing — use send back, which puts it to the author. |
+| nobody to fix it | Needs an author, but a workflow opened the PR. | Nothing — use close it out; the lane re-queues the page. |
+
+Approving a judged row posts those `/resolve` comments **before** it approves, so the review's own state records why each finding closed rather than the merge walking over them.
+
+## Filter chips
+
+Filters are literal: **a row shows only while its value is lit in every group.** Turning a whole group off empties the board and the board says so, rather than silently meaning "no filter". `since` is the one threshold rather than a set of values. "Reset chips" restores the defaults.
+
+## The command bar
+
+The bottom of the page composes your decisions into one command:
+
+```
+$ /pr-review --act --stamp 21550,21577 --request-changes 21664 --route 21651:@pulumi/docs-blog-review
+```
+
+Copy it and run it, or hand it to Claude. `act.py` plans it, shows a preview of every write it will make, and waits for a yes before executing. Each approval runs its own preflight immediately before merging: head unchanged since the plan, mergeable, CI green, no changes-requested review. A PR that fails preflight is skipped and the rest of the batch continues.
+
+## Waiting on others
+
+A PR whose requested reviewer is a human who isn't you is waiting on them, not on you. Those rows collapse into a compact list at the bottom. `--include-handed-off` brings them back as full rows. Routing a PR is also how you say "don't show me this again": the review request lives on GitHub, so every future run sees it, and GitHub clears it when the reviewer acts.
+
+## What is not on the board
+
+- Anything that talks to GitHub. The page is inert.
+- Anyone else's decisions. Judgments are written fresh each run and are not shared between approvers.
+- Draft PRs, unless you asked for one by number.
