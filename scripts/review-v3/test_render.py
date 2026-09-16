@@ -202,9 +202,10 @@ def test_a_row_with_nothing_open_says_so():
 
 def test_filter_chips_carry_their_counts():
     html = render.render_board(_queue())
-    # an unlit chip has to say what it is keeping off the page
-    assert '<button class="fchip" data-filter="view" data-value="blocked"' in html
-    assert 'blocked <span class="fcount">' in html and 'stamp set <span class="fcount">' in html
+    # a chip has to say what it would keep off the page, lit or not
+    assert '<button class="fchip on" data-filter="view" data-value="blocked"' in html
+    assert '<button class="fchip" data-filter="since" data-value="7d"' in html
+    assert 'blocked <span class="fcount">' in html and 'stampable <span class="fcount">' in html
     assert "row in this group. Lit: they are shown. Unlit: they are hidden." in html
 
 
@@ -476,3 +477,21 @@ def test_a_workflow_authored_row_says_the_send_back_is_dead_not_the_fix():
     assert "closes rather than going back" not in render.AUTHOR_HELP["generated"]
     assert render.DEFERRED_NO_AUTHOR[1] == "no author to ask"
     assert "Fix it yourself" in " ".join(render.DEFERRED_NO_AUTHOR[2].split())
+
+
+def test_the_fold_lever_is_not_a_filter():
+    # It wears the chip styling, so a filter loop that selects on `.fchip`
+    # alone reads filters[undefined] and throws -- which silently disables
+    # every filter on the page, leaving hidden verdicts visible and their
+    # chips unlit.
+    html = render.render_board(_queue())
+    assert 'class="fchip lever" id="foldall"' in html
+    assert html.count("document.querySelectorAll('.fchip[data-filter]')") == 2
+    assert "document.querySelectorAll('.fchip')" not in html
+
+
+def test_every_verdict_starts_visible_because_the_command_acts_on_it():
+    html = render.render_board(_queue())
+    for value in ("judge", "route", "stamp", "blocked"):
+        assert f'<button class="fchip on" data-filter="view" data-value="{value}"' in html
+    assert "stampable" in html

@@ -91,6 +91,10 @@ A link sweep still needs a human: the Sentinel's mechanical bar counts any modif
 
 Filters are literal: **a row shows only while its value is lit in every group.** Turning a whole group off empties the board and the board says so, rather than silently meaning "no filter". `since` is the one threshold rather than a set of values. "Reset chips" restores the defaults.
 
+Every verdict starts lit, including **stampable** and **blocked**. That is deliberate: the stampable rows arrive with their approve-and-merge button already selected, so the command at the bottom acts on them whether or not you scroll past them — hiding them by default would mean the default command merges PRs the page never showed you. Turn either group off when you want a shorter board; the counts on the chips say what you just put away.
+
+The lever at the end of the bar is not a filter. It opens or closes every folded panel on the board at once (the manual keeps its own state), and each row carries the same lever for itself alone beside its PR links.
+
 ## The command bar
 
 The bottom of the page composes your decisions into one command:

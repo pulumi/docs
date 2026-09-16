@@ -24,7 +24,7 @@ A blocked row is never stampable, with or without `--force`. Red checks, an in-p
 
 ## Do next
 
-The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--close` for the generated rows that have no author to send anything back to, `--route` per owner, `--stamp` for the stamp set — the card says how many of the set actually merge). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
+The board opens with at most a handful of cards, each one sentence and one button, most leverage first: a cluster's recommendation (**consolidate** → `--request-changes <newest> --reason …`; **chain** → `--chain C1`), then the batches (`--request-changes` for every row the judge sent back, `--close` for the generated rows that have no author to send anything back to, `--route` per owner, `--stamp` for the stampable rows — the card says how many of the set actually merge). A same-file cluster or one that is mostly waiting on others gets no card; its detail stays in the folded "Collisions" section at the bottom.
 
 ## Terminal mode
 

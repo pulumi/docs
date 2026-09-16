@@ -748,7 +748,7 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
                     f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
-        # merges the whole stamp set unless the approver deselects one.
+        # merges every stampable row unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
                     f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" '
@@ -1038,8 +1038,8 @@ def filter_bar(queue: dict) -> str:
 
     def chip(kind, val, label=None, on=True):
         # The count rides on the chip so an unlit one still says what it is
-        # keeping off the page: "stamp set · 5" is a fact you can act on,
-        # "stamp set" is a question.
+        # keeping off the page: "stampable · 5" is a fact you can act on,
+        # "stampable" is a question.
         n = rows_matching(kind, val)
         if kind == "since":
             tip = f"Hide rows opened more than {val.rstrip('d')} days ago. This one is a threshold, not a set: the longest lit window wins."
@@ -1051,8 +1051,11 @@ def filter_bar(queue: dict) -> str:
                 f'title="{esc(tip)}">{shown}</button>')
 
     parts = ['<div class="mock-bar">']
+    # All four lit: the composed command already acts on the stampable rows,
+    # so hiding them would mean the default command merges PRs the page never
+    # showed you. Turn a group off yourself when you want a shorter board.
     parts += [chip("view", "judge", "needs a decision", on=True), chip("view", "route", "route", on=True),
-              chip("view", "stamp", "stamp set", on=False), chip("view", "blocked", "blocked", on=False)]
+              chip("view", "stamp", "stampable", on=True), chip("view", "blocked", "blocked", on=True)]
     parts.append('<span class="sep"></span>')
     parts += [chip("owner", o, f"owner: {o}") for o in owners]
     parts.append('<span class="sep"></span>')
@@ -1062,7 +1065,7 @@ def filter_bar(queue: dict) -> str:
     parts.append('<span class="sep"></span>')
     parts += [chip("since", s, f"since: {s}", on=False) for s in ("1d", "7d", "30d")]
     parts.append('<span class="sep"></span>')
-    parts.append('<button class="fchip" id="foldall" type="button" aria-pressed="false" '
+    parts.append('<button class="fchip lever" id="foldall" type="button" aria-pressed="false" '
                  'title="Open every folded panel on the whole board at once -- reviewer&#x27;s guides, preview links, '
                  'diff quotes, the reasons behind a verdict, this manual, the collisions section -- or close them all '
                  'back down. Each panel still opens and closes on its own.">expand every panel</button>')
@@ -1254,6 +1257,7 @@ h1{font-size:clamp(26px,4.6vw,40px);font-weight:800;letter-spacing:-.022em;line-
 .mock-bar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:8px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--ground);z-index:2}
 .sep{width:1px;height:18px;background:var(--line-2);margin:0 4px}
 .fchip{font-size:11.5px;border:1px solid var(--line-2);border-radius:99px;padding:2px 10px;color:var(--ink-2);background:var(--surface-2);cursor:pointer}
+.fchip.lever{margin-left:auto}
 .fchip.on{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
 .fcount{font-size:10px;opacity:.75;margin-left:3px}
 .grp{margin-top:26px}
@@ -1292,7 +1296,6 @@ details.quote[open]>summary{margin-bottom:3px}
 .acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
 .btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
 .progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
-#foldall{margin-left:auto}
 details.help{margin:10px 0 4px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
 details.help>summary{cursor:pointer;list-style:none;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
 details.help[open]>summary{border-bottom:1px solid var(--line)}
@@ -1546,7 +1549,10 @@ SCRIPT = r"""
     if (navigator.clipboard) navigator.clipboard.writeText(t);
   });
   var filters = { owner: {}, domain: {}, verdict: {}, author: {}, since: {}, view: {} };
-  document.querySelectorAll('.fchip').forEach(function(f){
+  // `[data-filter]` on purpose: the fold lever wears the chip's styling but
+  // is not a filter, and reading filters[undefined] here threw, which left
+  // apply() unreached and every row visible whatever the chips said.
+  document.querySelectorAll('.fchip[data-filter]').forEach(function(f){
     filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on');
     f.addEventListener('click', function(){ f.classList.toggle('on'); filters[f.dataset.filter][f.dataset.value] = f.classList.contains('on'); apply(); });
   });
@@ -1572,8 +1578,8 @@ SCRIPT = r"""
   }
   var reset = document.getElementById('reset-filters');
   if (reset) reset.addEventListener('click', function(){
-    document.querySelectorAll('.fchip').forEach(function(f){
-      var on = f.dataset.filter !== 'since' && !(f.dataset.filter === 'view' && (f.dataset.value === 'stamp' || f.dataset.value === 'blocked'));
+    document.querySelectorAll('.fchip[data-filter]').forEach(function(f){
+      var on = f.dataset.filter !== 'since';
       f.classList.toggle('on', on); filters[f.dataset.filter][f.dataset.value] = on;
     });
     apply();
