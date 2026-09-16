@@ -92,14 +92,52 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
 | G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
-| G4 infra-evidence | commit status `staging/pulumi-test-io` green at the current head | "a tools-team member comments `/deploy-staging`" — **not waivable** |
+| G4 infra-evidence | this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
+
+**G4's two witnesses.** The commit status is a *report* of the deploy, not
+the deploy: it is a separate API call after `gh run watch` returns, so a
+cancelled runner, a lost token, or a hand-run deploy that never went through
+`/deploy-staging` all leave a green deploy with no status. `_staging_evidence`
+therefore accepts either the status or a successful
+`testing-build-and-deploy.yml` run at the same head SHA — the run record *is*
+the deploy. The status is still written, because it is what shows in the
+merge box with a link. A failed run-history read degrades to "no evidence"
+(red), not `action_required`: red is already the conservative answer, and
+escalating would misreport an API hiccup as a corrupt PR.
+
+Evidence supply is `staging-deploy-auto.yml`: every same-repo, non-draft PR
+that `route-pr.py` says needs staging evidence gets a deploy dispatched on
+open / push, skipping when the head already has one. It shares the
+`staging-stack` concurrency group with the comment lane and calls the same
+`staging-deploy.sh`, so the two lanes cannot drift on what they produce.
 
 Conclusions are explicit about the fails-open trap: any gate ERROR (corrupt
 REVIEW_STATE, a team-membership lookup failure) concludes `action_required`
 — never `neutral`/`skipped`, which GitHub counts as passing for required
-checks. `review:waived` ⇒ success with a banner naming the actor, except a
-red G4, which stands. External contributors (fork head repo — never the
+checks.
+
+**`review:waived` is authorized, not just labelled.** A waive skips every
+gate but G4, so applying one has to be at least as privileged as approving
+something: `_waive_state` reads the actor off the label event and honors the
+waive only when they are an **active member of any team in `teams:`** — any
+of them, not just the one the PR routes to. Scoping it to the required team
+would make a waive exactly as hard to get as the approval it bypasses, which
+kills the case it most needs to cover (the required approver is the author).
+It fails closed at every step — unreadable actor, failed membership lookup,
+actor on no routing team — and an unauthorized waive is *refused out loud*
+in the summary rather than silently ignored, so the same person doesn't try
+it twice. A red G4 still stands under an authorized waive.
+
+**The pinned status comment.** `render_status_comment` / `update_status_comment`
+upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a row per gate with its
+state and, for a red one, the gate's own remediation text. The body is a pure
+function of the verdict — no timestamps, no run ids — so a re-evaluation that
+changes nothing produces a byte-identical body and the PATCH is skipped. The
+workflow passes `--status-comment` unconditionally and the evaluator decides:
+enforcing mode always maintains it; report-only mode does so only for a PR
+labelled `sentinel:preview`, so the dry run stays invisible to anyone who
+didn't opt in. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on

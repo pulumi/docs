@@ -1,0 +1,135 @@
+name: Staging deploy (auto, infra PRs)
+
+# Supplies Sentinel gate G4's evidence without anyone having to ask for it.
+#
+# G4 requires a successful pulumi-test.io deploy at the PR's current head.
+# Until now the only way to produce one was a tools-team member commenting
+# `/deploy-staging` — which, across the 14-16 Sep report-only window, nobody
+# did once, on any of the infra PRs that needed it. A gate whose evidence
+# has no supply isn't a gate, it's a wall. This workflow makes the deploy
+# the default for an infra PR, so `/deploy-staging` goes back to being what
+# it reads like: a retry.
+#
+# Design notes:
+# - WHAT COUNTS AS INFRA is not re-implemented here. `route-pr.py` resolves
+#   the same lane matrix the Sentinel enforces and reports
+#   `staging_evidence_required`; this workflow runs it and obeys it. A
+#   `paths:` filter duplicating the infra globs would drift from
+#   review-routing.yml the first time either side changed.
+# - SAME-REPO ONLY. Deploying fork code to the shared staging stack stays a
+#   deliberate tools-team action, exactly as the comment lane has it. A fork
+#   PR's token is read-only anyway, so this is belt and braces.
+# - NO PR CODE IS CHECKED OUT OR RUN. The checkout is pinned to the base
+#   repository's default branch; route-pr.py reads the diff as text, and
+#   the deploy script dispatches the existing testing-deploy workflow at the
+#   head branch — that workflow does the build, in the testing account, as
+#   it already does for master and for `/deploy-staging`.
+# - SKIP WHEN EVIDENCE ALREADY EXISTS. Re-running the same head buys
+#   nothing and costs a slot on a stack that serializes; a `synchronize`
+#   that didn't move the head (a base merge, a label) finds the green
+#   status and stops.
+# - Concurrency: the staging stack is one shared environment, so this shares
+#   the `staging-stack` group with the comment lane. GitHub holds at most
+#   one PENDING run per group and silently drops the one a newer request
+#   displaces — which is the right behaviour here, since the newer request
+#   is a newer head, and G4 only ever asks about the current one.
+# - Follows the same switch as `/deploy-staging` and the Sentinel itself:
+#   with REVIEW_V3_SENTINEL unset there is no gate to satisfy, so producing
+#   evidence for it would be pure spend.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+  actions: write       # gh workflow run + gh run watch
+
+concurrency:
+  group: staging-stack
+
+jobs:
+  deploy:
+    if: >-
+      (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+      && github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # Base repo default branch ONLY — see the design notes above.
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install classifier deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Does this PR need staging evidence?
+        id: route
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          PR_DATA_FILE=$(mktemp)
+          DIFF_FILE=$(mktemp)
+          trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
+          gh pr view "$PR" --repo "$REPO" \
+            --json files,additions,deletions > "$PR_DATA_FILE"
+          gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
+          ROUTE=$(python3 scripts/review-v3/route-pr.py \
+            --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")
+          echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
+          NEEDED=$(echo "$ROUTE" | jq -r '.staging_evidence_required')
+          echo "needed=$NEEDED" >> "$GITHUB_OUTPUT"
+          if [ "$NEEDED" != "true" ]; then
+            echo "no infra paths — gate G4 will skip; nothing to deploy"
+          fi
+
+      # Same two witnesses sentinel.py's `_staging_evidence` accepts, in the
+      # same order. Deliberately duplicated in shell rather than shelling out
+      # to the evaluator: this is a cheap "should I bother" check, and the
+      # authoritative read is the one the Sentinel does at merge time.
+      - name: Skip if this head already deployed successfully
+        id: existing
+        if: steps.route.outputs.needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          GREEN=$(gh api "repos/$REPO/commits/$HEAD_SHA/statuses" \
+            --jq '[.[] | select(.context == "staging/pulumi-test-io" and .state == "success")] | length')
+          if [ "$GREEN" = "0" ]; then
+            GREEN=$(gh api "repos/$REPO/actions/workflows/testing-build-and-deploy.yml/runs?head_sha=$HEAD_SHA&status=completed&per_page=100" \
+              --jq '[.workflow_runs[] | select(.conclusion == "success")] | length')
+          fi
+          if [ "$GREEN" = "0" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            echo "head ${HEAD_SHA:0:9} already has a successful staging deploy — nothing to do"
+          fi
+
+      - name: Deploy to staging and record the status
+        if: steps.route.outputs.needed == 'true' && steps.existing.outputs.deploy == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          scripts/review-v3/staging-deploy.sh \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --head-sha "${{ github.event.pull_request.head.sha }}" \
+            --head-ref "${{ github.event.pull_request.head.ref }}"

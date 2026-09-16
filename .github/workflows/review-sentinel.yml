@@ -149,7 +149,13 @@ jobs:
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
-          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}")
+          # --status-comment is passed unconditionally on purpose: the
+          # evaluator decides whether to actually write. Enforcing mode
+          # always maintains the pinned comment; report-only mode does so
+          # only for a PR someone labelled `sentinel:preview`, so the dry
+          # run stays invisible to contributors who didn't opt in.
+          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
+                --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then
             ARGS+=(--report-only)
           else
