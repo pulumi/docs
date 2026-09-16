@@ -450,3 +450,12 @@ def test_the_header_says_what_it_collected_and_where_your_lanes_came_from():
     assert "could not be read" in head.replace("&#x27;", "'")
     q["config"] = {"owner": "any", "me": [], "source": "file"}
     assert "showing: every open PR" in render.header_line(q)
+
+
+def test_a_flex_summary_draws_its_own_chevron():
+    # A `display:flex` summary loses the browser's disclosure marker, so the
+    # collisions fold and the manual would look like plain headings.
+    q = _queue()
+    html = render.render_board(q)
+    assert '.clusters summary::before,details.help>summary::before{content:"\\25B8"' in html
+    assert ".clusters details[open]>summary::before,details.help[open]>summary::before{transform:rotate(90deg)}" in html

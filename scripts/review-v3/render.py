@@ -1272,7 +1272,7 @@ details.quote[open]>summary{margin-bottom:3px}
 .progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
 #foldall{margin-left:auto}
 details.help{margin:10px 0 4px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
-details.help>summary{cursor:pointer;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
+details.help>summary{cursor:pointer;list-style:none;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
 details.help[open]>summary{border-bottom:1px solid var(--line)}
 .helpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 24px;padding:12px 16px 16px}
 .helpgrid h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:0 0 4px}
@@ -1287,7 +1287,11 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
 .claimnote{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--go);border:1px dashed var(--go);border-radius:3px;padding:2px 7px}
 .donext .btn.p{margin-left:auto;white-space:nowrap}
-.clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
+.clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;list-style:none}
+/* a flex summary drops the browser's own marker, so these folds draw their own */
+.clusters summary::-webkit-details-marker,details.help>summary::-webkit-details-marker{display:none}
+.clusters summary::before,details.help>summary::before{content:"\25B8";display:inline-block;margin-right:6px;color:var(--ink-3);transition:transform .12s ease}
+.clusters details[open]>summary::before,details.help[open]>summary::before{transform:rotate(90deg)}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
 .chip.r-handed-off{border-color:var(--ink-3);color:var(--ink-3)}
 .t-dim b{color:var(--ink-3)}
 .waiting{margin-top:30px;border-top:1px solid var(--line-2);padding-top:14px}
