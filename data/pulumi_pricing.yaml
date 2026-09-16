@@ -863,7 +863,7 @@ categories:
 support_plans:
   - id: standard
     name: Standard
-    eligibility_note: Available for Essentials, Pro, and Enterprise
+    eligibility_note: Available for Essentials, Pro, and&nbsp;Enterprise
     price: $625/month or $7,500/year
     price_note: Included with Enterprise contracts of at least one year.
     term: Monthly or annual
@@ -871,26 +871,26 @@ support_plans:
     coverage: 12 hours/day, 5 days/week
     urgent_response: 1 day
     normal_response: 2 days
-    private_slack: Not included
-    workshops: Not included
-    health_checks: Not included
-    named_contacts: Not included
-    named_csa: Not included
+    private_slack: false
+    workshops: false
+    health_checks: false
+    named_contacts: false
+    named_csa: false
 
   - id: bronze
     name: Bronze
-    eligibility_note: Available for Essentials, Pro, and Enterprise
+    eligibility_note: Available for Essentials, Pro, and&nbsp;Enterprise
     price: $1,250/month or $15,000/year
     term: Monthly or annual
     channels: Chat, support portal, email, and Slack
     coverage: 12 hours/day, 5 days/week
     urgent_response: 4 hours
     normal_response: 1 day
-    private_slack: Included
+    private_slack: true
     workshops: "2"
-    health_checks: Not included
+    health_checks: false
     named_contacts: Up to 2
-    named_csa: Not included
+    named_csa: false
 
   - id: silver
     name: Silver
@@ -900,11 +900,11 @@ support_plans:
     coverage: 12 hours/day, 7 days/week
     urgent_response: 2 hours
     normal_response: 8 hours
-    private_slack: Included
+    private_slack: true
     workshops: "4"
     health_checks: Annual
     named_contacts: Up to 10
-    named_csa: Not included
+    named_csa: false
 
   - id: gold
     name: Gold
@@ -914,11 +914,11 @@ support_plans:
     coverage: 24 hours/day, 7 days/week
     urgent_response: 1 hour
     normal_response: 4 hours
-    private_slack: Included
+    private_slack: true
     workshops: Unlimited
     health_checks: Quarterly
     named_contacts: Up to 25
-    named_csa: Included
+    named_csa: true
 
   - id: platinum
     name: Platinum
@@ -929,8 +929,8 @@ support_plans:
     coverage: 24 hours/day, 7 days/week
     urgent_response: Custom SLA
     normal_response: Custom SLA
-    private_slack: Included
+    private_slack: true
     workshops: Custom engagement
     health_checks: Custom engagement
     named_contacts: Up to 50
-    named_csa: Included
+    named_csa: true
