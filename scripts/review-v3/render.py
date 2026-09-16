@@ -316,7 +316,7 @@ ACTION_HELP = {
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
     "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
     "fix": "Apply the drafted description correction and any one-click suggestions, then commit and push.",
-    "render": "Screenshot this PR's preview pages into .pr-review-shots/ so you can look at them.",
+    "render": "Every PR gets its own deployed copy of the site. This opens each page this PR changes on that preview and saves a full-page screenshot to .pr-review-shots/, for when you want to see the rendered page rather than the diff. It writes nothing to GitHub.",
     "deploy": "Dispatch the testing deploy workflow for this branch, to pulumi-test.io.",
     "chain": "Approve and merge the first PR of this collision cluster, then merge master into the next so it can follow.",
     "consolidate": "Ask the bot for one consolidated PR instead of this pile of overlapping sweeps. Nothing merges.",

@@ -734,7 +734,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         if pr.get("one_click_suggestions") or any(r.startswith("desc:") for r in reasons):
             actions.append({"id": "fix", "label": "apply fixes", "cmd": f"--fix {n}"})
         if (pr.get("preview") or {}).get("pages"):
-            actions.append({"id": "render", "label": "render preview", "cmd": f"--render {n}"})
+            actions.append({"id": "render", "label": "screenshot the preview", "cmd": f"--render {n}"})
     pr["blockers"] = blocked
     pr["is_mine"] = is_mine
     pr["verdict"] = verdict
