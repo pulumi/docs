@@ -118,6 +118,7 @@ REASON_CODES = {
     "desc": "PR description names a path not in the diff, or is empty",
     "shape": "infra: touches layouts/ or .github/ (needs --include-infra to stamp); link-only: every changed line differs only in a link",
     "link-fixes": "mine: a link-only diff bypassed the lane check (`link_fixes: mine` in ~/.pr-review.yml)",
+    "gate": "none: the routing matrix requires no team approval for this change, so the row is any approver's",
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
@@ -548,6 +549,13 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     is_mine = mine is None or bool(set(lanes["domains"]) & mine)
     for d in lanes["domains"]:
         reasons.append(f"owner:{d}:{lanes['owners'][d]['role']}")
+    # No required role at all: every subject's cell for this change type is
+    # `none`, so the Sentinel asks for no team approval and there is nobody
+    # to wait for. Routing it would be inventing a gate GitHub doesn't have,
+    # so an ungated PR is any approver's to take.
+    if not lanes["roles"]:
+        reasons.append("gate:none")
+        is_mine = True
     if link_only_diff(pr.get("files") or []):
         # The lane owner's review buys nothing on a diff that only retargets
         # links, so with `link_fixes: mine` the row is the approver's to

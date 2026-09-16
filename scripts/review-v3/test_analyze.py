@@ -570,6 +570,21 @@ def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
 
 
+def test_a_change_with_no_team_gate_is_any_approver_s():
+    # A tags-only blog edit clears the mechanical bar, so the matrix asks for
+    # no role at all. Routing it would invent a gate the Sentinel doesn't
+    # have, and the chip says why it's on this board.
+    tags = _file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])
+    p = row(run([stampable(1, labels=["review:no-blockers", "domain:blog"], files=[tags])], cfg=cfg(me=["docs"])), 1)
+    assert p["mechanical"] is True and p["roles"] == []
+    assert p["is_mine"] is True and p["verdict"] == "stamp" and "gate:none" in p["reasons"]
+    assert not any(r.startswith("route:") for r in p["reasons"])
+    # the substantive version of the same lane still routes
+    prose = _file("content/blog/p/index.md", ["A new sentence about stacks."], ["An old sentence about stacks."])
+    q = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[prose])], cfg=cfg(me=["docs"])), 2)
+    assert q["roles"] == ["marketing"] and q["verdict"] == "route" and "gate:none" not in q["reasons"]
+
+
 def test_no_config_file_takes_its_lanes_from_github_teams():
     # A first run with no ~/.pr-review.yml: the org chart answers "which
     # lanes are mine" better than claiming all of them.

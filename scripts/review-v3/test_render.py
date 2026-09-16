@@ -87,6 +87,14 @@ def test_rerun_is_the_unblock_on_an_errored_row_and_a_side_action_elsewhere():
     assert 'data-cmd="--rerun 9" data-pr="9" data-kind="side"' in html and "run a full review" in html
 
 
+def test_ownership_chips_read_as_words():
+    tags = [_file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])]
+    q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=tags)], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    # the code stays greppable in the title; the chip itself says why the row is here
+    assert '<span class="chip r-gate" title="gate:none">no team approval needed</span>' in html
+
+
 def test_a_generated_row_offers_close_where_others_offer_send_back():
     q = run([stampable(8, labels=["review:trivial", "domain:docs"], author="pulumi-bot", author_type="User")])
     html = render.render_board(q)

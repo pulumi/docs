@@ -50,7 +50,16 @@ BUCKET_LABEL = {
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
-                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes")
+                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate")
+# A reason code is a vocabulary, not a sentence. These few decide whether a
+# row is on your board at all, so they read as words; the code stays in the
+# chip's title for anyone grepping the queue.
+CHIP_LABEL = {
+    "gate:none": "no team approval needed",
+    "link-fixes:mine": "link-only sweep: yours",
+    "route:no-team": "team missing, routing to a person",
+    "route:team-unverified": "team not verifiable from here",
+}
 ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "close": "stop",
                 "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
@@ -96,7 +105,8 @@ def deep_link(queue: dict, pr: dict, item: dict) -> str | None:
 def _chip(r: str) -> str:
     code = r.split(":", 1)[0]
     cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
-    return f'<span class="{cls}" title="{esc(r)}">{esc(r if len(r) <= 48 else r[:45] + "…")}</span>'
+    text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
+    return f'<span class="{cls}" title="{esc(r)}">{esc(text)}</span>'
 
 
 def chips(reasons: list[str]) -> str:
