@@ -35,7 +35,7 @@ The board opens with at most a handful of cards, each one sentence and one butto
 3. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
 4. **Skip** — leave the row for later (`--refresh N` when the finding reads as stale is offered from the row itself).
 
-AskUserQuestion is not used anywhere else in this skill; the board composes the command itself.
+In board mode the page composes the command itself, so there is no per-row walk — but the execute confirmation at the end of the plan step is an `AskUserQuestion` in both modes, and so is every other question either mode raises. The rule is the tool, not the mode: if you are asking, you are asking with `AskUserQuestion`.
 
 ## Bot PRs: what may be pushed
 
