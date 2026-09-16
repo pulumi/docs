@@ -121,7 +121,7 @@ Also draft, when the row carries `desc:stale:*` or `desc:empty`, a corrected PR 
 
 `decision` is the question you answered; `ask` is the sentence the author reads if the row goes back with `--request-changes` (on a generated row it is what the closing comment carries); `note` is your rationale and stays on the board. Then merge it: `python3 scripts/review-v3/analyze.py --in .pr-review-queue.json --judgments .pr-review-judgments.json`. A recommendation never lowers the computed verdict.
 
-A `fixed` disposition means the diff already addresses the finding; the board shows it as "already fixed in the diff", not as a recommendation, and it is never a `--fix` action (that button appears only when the row carries a drafted description or one-click suggestions). For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
+Each judgment's disposition renders as a badge beside the question, worded as your recommendation to the approver ("I'd refute", "I'd accept", "I'd send it back", "I'd close it out" on a row with no author) so it is never read as something the PR's author already answered; hovering gives the plain-English version. A `fixed` disposition means the diff already addresses the finding; the board shows it as "already fixed", not as a recommendation, and it is never a `--fix` action (that button appears only when the row carries a drafted description or one-click suggestions). For `/pr-review N` judge the one row. For the queue, judge every judge row before rendering; a row you skip renders its open findings under "Needs a call" without a quote.
 
 ### 4. Render and publish
 

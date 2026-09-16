@@ -169,16 +169,21 @@ def diffq(j: dict, *, open_: bool = True) -> str:
             + "\n".join(lines) + "</div></details>")
 
 
-DISPOSITION_BADGE = {"fixed": ("go", "already fixed"), "refuted": ("go", "refute"), "accepted": ("go", "accept"),
-                     "not-applicable": ("go", "n/a"), "deferred": ("hold", "send back")}
+# The badge is a recommendation to the approver, never a record of what the
+# author did — so it says "I'd refute this", not "refuted". The title is the
+# plain-English version for anyone who reads the badge and wonders whose call
+# it is. `fixed` is the one that isn't a call: the diff already made it.
+DISPOSITION_BADGE = {
+    "fixed": ("go", "already fixed", "The diff already addresses this finding. Nothing to decide."),
+    "refuted": ("go", "I'd refute", "My recommendation: the finding is wrong, the PR is right as written. Approving records the refusal."),
+    "accepted": ("go", "I'd accept", "My recommendation: the finding is fair but not worth holding the PR for. Approve and ship."),
+    "not-applicable": ("go", "I'd call it n/a", "My recommendation: the finding doesn't apply to this PR."),
+    "deferred": ("hold", "I'd send it back", "My recommendation: this one is the author's to fix, so the PR goes back to them."),
+}
 
 
-def disposition_label(d: str | None) -> str:
-    """`fixed` is not a call to make: the diff already did it. The other four
-    are the approver's decision, so they read as a recommendation."""
-    if d == "fixed":
-        return "<b>already fixed in the diff</b>"
-    return f"recommend <b>{esc(d or '?')}</b>"
+def disposition_badge(d: str | None) -> tuple[str, str, str]:
+    return DISPOSITION_BADGE.get(d or "", ("dim", d or "?", "Disposition recorded by the judge pass."))
 
 
 def judgment_boxes(queue: dict, pr: dict) -> str:
@@ -186,14 +191,19 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
     if not js:
         return pending_judgment(queue, pr)
     out = []
+    # A row with no author to answer a review says "close it out" on its
+    # button; the badge has to agree with the button.
+    sends_back = any(a.get("id") == "request-changes" for a in pr.get("actions") or [])
     for j in js:
         link = j.get("deep_link")
         where = f'<a href="{esc(link)}">{esc(j.get("file") or "")} L{esc(j.get("line") or "?")} ↗</a>' if link else '<a href="' + esc(pr_url(queue, pr["number"])) + '">open the PR ↗</a>'
-        cls, label = DISPOSITION_BADGE.get(j.get("disposition") or "", ("dim", j.get("disposition") or "?"))
+        cls, label, why = disposition_badge(j.get("disposition"))
+        if j.get("disposition") == "deferred" and not sends_back:
+            label, why = "I'd close it out", "My recommendation: this one needs an author and a workflow opened the PR, so close it and let the lane re-queue the page."
         out.append(
             '<div class="jbox">'
             f'<div class="qrow"><div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
-            f'<span class="v v-{cls}">{esc(label)}</span></div>'
+            f'<span class="v v-{cls}" title="{esc(why)}">{esc(label)}</span></div>'
             + (f'<div class="jnote">{esc(j["note"])}</div>' if j.get("note") else "")
             + diffq(j)
             + f'<div class="jmeta">{where}</div></div>'
@@ -495,7 +505,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         style=STYLE,
         eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub."),
+        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding is my recommendation to you, not something the author already did."),
         tally=f'<div class="tally">{tally}</div><div class="progress" id="progress"></div>' + do_next_html(queue),
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",

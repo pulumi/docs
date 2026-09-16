@@ -117,8 +117,12 @@ def test_fixed_disposition_reads_as_already_done():
     row(q, 3)["judgments"].append({"finding_id": "F9", "file": "content/docs/iac/x.md", "line": 3,
                                   "decision": "Anchor right?", "disposition": "fixed", "deep_link": "https://x/y#z"})
     html = render.render_board(q)
-    assert '<span class="v v-go">already fixed</span>' in html and "recommend <b>fixed</b>" not in html
-    assert '<span class="v v-go">refute</span>' in html
+    assert 'already fixed</span>' in html and "recommend <b>fixed</b>" not in html
+    # the badge is a recommendation to the approver, not a record of the
+    # author's answer, and says so in the first person
+    assert '<span class="v v-go" title="My recommendation: the finding is wrong' in html
+    assert "I&#x27;d refute</span>" in html
+    assert "my recommendation to you, not something the author already did" in html
 
 
 def test_theme_selectors_present_in_both_forms():
