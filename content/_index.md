@@ -38,6 +38,8 @@ sections:
         link: /case-studies/
       - name: typesafe-ai
         link: /case-studies/
+      - name: pydantic
+        link: /case-studies/
       - name: ae-networks
         link: /case-studies/
       - name: deloitte
