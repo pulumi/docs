@@ -437,7 +437,19 @@ jobs:
           # cost-optimization measurement showed ~85% denial reduction and
           # ~51% cost reduction stacked with the broadened allowed-tools
           # list (see scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md).
-          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          # The SHA this run REVIEWS is the one the checkout above resolved
+          # (workflow_run.head_sha, or the dispatcher's head_sha input) — not
+          # the live head, which is already newer if a push landed between
+          # the trigger and this step. The v3 handoff carries this SHA and
+          # the publish job's freshness guard compares it with the live head
+          # at publish time; stamping the live head here would let a review
+          # of commit A publish as a review of commit B whenever the two had
+          # diverged before the guard ran. Live head is the fallback only when
+          # neither trigger supplied one.
+          HEAD_SHA="${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}"
+          if [ -z "$HEAD_SHA" ]; then
+            HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          fi
           HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
           HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
           # owner/name of the HEAD repo — differs from $REPO on fork PRs; the
