@@ -415,6 +415,64 @@ def _brief_has_no_checks(body: str) -> bool:
     return not _card_rows(body, (heading_prefix,))
 
 
+# ---- link-only diffs -----------------------------------------------------
+
+# A markdown link (text and target), an href, a bare URL, or a site-absolute
+# path. Masking these leaves the sentence around them.
+URL_TOKEN_RE = re.compile(
+    r"\[[^\]\n]*\]\([^)\s]*\)|href=\"[^\"]*\"|https?://[^\s)\"'>]+|(?<![\w/])/[\w./-]*[\w/](?=[\s)\"'>]|$)"
+)
+_HUNK_HEAD_RE = re.compile(r"^@@ ")
+
+
+def link_only_diff(files: list[dict]) -> bool:
+    """True when every hunk swaps lines that are identical once links are
+    masked and case is folded: the same sentence, only the link changed.
+
+    A hunk with unpaired additions or deletions, a file with no patch, or a
+    diff that changes nothing is not link-only. This is deliberately narrower
+    than `classify_mechanical`'s bar, which counts any modified link as
+    substantive: that bar decides whether a change needs a human at all,
+    while this one decides whether it needs a *particular lane's* human.
+    Shared with the /pr-review queue, which renders it as `shape:link-only`.
+    """
+    if not files:
+        return False
+    seen = False
+    for f in files:
+        patch = f.get("patch")
+        if patch is None:
+            return False
+        added: list[str] = []
+        removed: list[str] = []
+
+        def flush() -> bool:
+            nonlocal seen
+            if len(added) != len(removed):
+                return False
+            for plus, minus in zip(added, removed):
+                if plus == minus:
+                    return False
+                if URL_TOKEN_RE.sub("<url>", plus).lower() != URL_TOKEN_RE.sub("<url>", minus).lower():
+                    return False
+                seen = True
+            added.clear()
+            removed.clear()
+            return True
+
+        for line in patch.splitlines():
+            if _HUNK_HEAD_RE.match(line):
+                if not flush():
+                    return False
+            elif line.startswith("+"):
+                added.append(line[1:])
+            elif line.startswith("-"):
+                removed.append(line[1:])
+        if not flush():
+            return False
+    return seen
+
+
 def _team_org_slug(team_ref: str) -> tuple[str, str]:
     org, _, slug = team_ref.partition("/")
     return org, slug
@@ -540,7 +598,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files, labels)
     paths = [f["filename"] for f in files]
-    resolution = routing.resolve_lanes(paths, mechanical, claims, config)
+    resolution = routing.resolve_lanes(paths, mechanical, claims, config, link_only=link_only_diff(files))
 
     # External-contributor lane = fork head repo. Fail closed: no head-repo
     # fact in the payload means the stricter (internal) gates apply.
@@ -702,8 +760,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         missing: list[str] = []
         errors: list[str] = []
-        for role in sorted(resolution.roles):
-            team_ref = config.teams.get(role, "")
+        # A link-only sweep needs a careful human, not a particular lane's
+        # human, so `link_only.approval: any-team` lets any review team
+        # satisfy the gate. The roles stay on the record either way.
+        required = ([config.teams[r] for r in sorted(config.teams)] if resolution.any_team
+                    else [config.teams.get(role, "") for role in sorted(resolution.roles)])
+        satisfied_any = False
+        for team_ref in required:
             org, slug = _team_org_slug(team_ref)
             satisfied = False
             for r in approvers:
@@ -714,8 +777,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                         break
                 except SentinelDataError as exc:
                     errors.append(str(exc))
-            if not satisfied and not errors:
+            if satisfied:
+                satisfied_any = True
+            elif not errors:
                 missing.append(team_ref)
+        if resolution.any_team:
+            # One team is enough; only an empty set is a miss.
+            missing = [] if satisfied_any else ["any review team (link-only sweep)"]
         if errors:
             gates.append(Gate(
                 "G3 right-approver", "error",

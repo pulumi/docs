@@ -101,7 +101,7 @@ def test_an_unjudged_row_still_shows_the_diff():
     p["files"] = [{"path": "content/docs/iac/x.md", "status": "modified", "additions": 1, "deletions": 1,
                    "patch": "@@ -93,3 +93,3 @@\n ctx\n-the old sentence\n+the new sentence\n ctx2"}]
     html = render.render_board(q)
-    assert "1 open finding, not yet judged" in html and "Run the judge step" in html
+    assert "1 open finding, not yet judged" in html and "adds a recommended disposition" in html
     # the box no longer repeats the row's chips, and the finding is whole
     assert "not yet judged: " not in html
     assert "Does this sentence still say what the link says?" in html
@@ -114,6 +114,20 @@ def test_an_unjudged_row_still_shows_the_diff():
     assert render.patch_quote(p, "content/docs/iac/x.md", "L400") is None
     assert render.patch_quote(p, "content/docs/iac/x.md", None) is None
     assert render.patch_quote(p, "no/such/file.md", "L3") is None
+
+
+def test_the_reviews_own_stance_rides_on_the_finding():
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "file": "content/docs/iac/x.md", "anchor": "L95",
+         "text": "| **F1** | [x](u) | **Spurious:** the sentence never claimed that. |"},
+        {"id": "F2", "bucket": "reviewer-check", "file": "content/docs/iac/x.md", "anchor": "L95",
+         "text": "| **F2** | [x](u) | Worth a look before you approve: the target moved. |"}]}
+    html = render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+    assert "the review calls this spurious" in html and "the review says: worth a look" in html
+    assert render.review_stance("nothing notable here") is None
 
 
 def test_a_row_with_nothing_open_says_so():

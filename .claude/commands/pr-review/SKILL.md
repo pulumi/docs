@@ -48,7 +48,7 @@ stale_date_days: 3                   # a blog `date:` older than this is stale
 link_fixes: mine                     # mine (default) | route: a link-only diff is yours whatever its lane
 ```
 
-`link_fixes: mine` is for the redirect sweeps: a diff where every changed line is the same sentence with only a link rewritten (text or target; a word's casing may change too) gets `shape:link-only` and skips the lane check, since the lane owner's review buys nothing there. It's the queue's own bar, narrower than the Sentinel's mechanical bar, which counts any link edit as substantive. The row still has to clear the stamp bar; a sweep with open ⚠️ rows is a judge row with "approve as-is" as its primary.
+`.github/review-routing.yml` carries `link_only: { approval: any-team }`, which says any review team may approve a diff whose every changed line differs only in a link. Those rows get `gate:any-team` and are any approver's, and the Sentinel agrees, so `link_fixes` only matters where that policy is `lane`. `link_fixes: mine` is then for the redirect sweeps: a diff where every changed line is the same sentence with only a link rewritten (text or target; a word's casing may change too) gets `shape:link-only` and skips the lane check, since the lane owner's review buys nothing there. It's the queue's own bar, narrower than the Sentinel's mechanical bar, which counts any link edit as substantive. The row still has to clear the stamp bar; a sweep with open ⚠️ rows is a judge row with "approve as-is" as its primary.
 
 ### What makes a row "mine"
 

@@ -118,7 +118,7 @@ REASON_CODES = {
     "desc": "PR description names a path not in the diff, or is empty",
     "shape": "infra: touches layouts/ or .github/ (needs --include-infra to stamp); link-only: every changed line differs only in a link",
     "link-fixes": "mine: a link-only diff bypassed the lane check (`link_fixes: mine` in ~/.pr-review.yml)",
-    "gate": "none: the routing matrix requires no team approval for this change, so the row is any approver's",
+    "gate": "none: the routing matrix requires no team approval for this change; any-team: a link-only sweep, which any review team may approve, so the row is any approver's either way",
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
@@ -224,37 +224,12 @@ LINK_RE = re.compile(r"\]\((/[^)\s#?]+)|href=\"(/[^\"#?]+)\"")
 
 # A whole markdown link (text and target), an href, a bare URL, or a bare
 # site path — everything a redirect sweep is allowed to rewrite.
-URL_TOKEN_RE = re.compile(r"\[[^\]\n]*\]\([^)\s]*\)|href=\"[^\"]*\"|https?://[^\s)\"'>]+|(?<![\w/])/[\w./-]*[\w/](?=[\s)\"'>]|$)")
-
-
-def link_only_diff(files: list[dict]) -> bool:
-    """True when every hunk in every file swaps lines that are identical
-    once links are masked (a markdown link's text and target, an href, a
-    bare URL or site path) and case is folded: the same sentence, only the
-    link (or a word's casing) changed. A
-    hunk with unpaired additions or deletions, a file without a patch, or
-    a diff with no change at all is not link-only. This is the queue's own
-    bar, narrower than the Sentinel's mechanical bar (which counts a link
-    edit as substantive) and wide enough for the redirect sweeps a
-    maintainer stamps without waiting on the lane owner."""
-    if not files:
-        return False
-    seen = False
-    for f in files:
-        if f.get("patch") is None:
-            return False
-        for h in parse_hunks(f["patch"]):
-            if len(h["added"]) != len(h["removed"]):
-                return False
-            for (_, plus), (_, minus) in zip(h["added"], h["removed"]):
-                if plus == minus:
-                    return False
-                # Case-insensitive: a sweep that fixes "Typescript" on the
-                # way past is still a link sweep, not a rewrite.
-                if URL_TOKEN_RE.sub("<url>", plus).lower() != URL_TOKEN_RE.sub("<url>", minus).lower():
-                    return False
-                seen = True
-    return seen
+# The link-only bar lives in sentinel.py, because the merge gate and the
+# queue have to agree on what a link sweep is: the Sentinel uses it to
+# decide that any review team may approve one, and the board renders it as
+# `shape:link-only`.
+link_only_diff = sentinel.link_only_diff
+URL_TOKEN_RE = sentinel.URL_TOKEN_RE
 
 
 def links_in(lines: list[str]) -> set[str]:
@@ -557,11 +532,16 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         reasons.append("gate:none")
         is_mine = True
     if link_only_diff(pr.get("files") or []):
-        # The lane owner's review buys nothing on a diff that only retargets
-        # links, so with `link_fixes: mine` the row is the approver's to
-        # judge whatever lane it sits in.
         reasons.append("shape:link-only")
-        if cfg.link_fixes == "mine" and not is_mine:
+        # The routing config decides who may approve a link sweep. With
+        # `link_only.approval: any-team` the Sentinel takes any review team,
+        # so the row is genuinely anyone's and the board says so. Where the
+        # lane still owns it, `link_fixes: mine` is the local override that
+        # takes it anyway.
+        if (config.link_only or {}).get("approval") == "any-team":
+            reasons.append("gate:any-team")
+            is_mine = True
+        elif cfg.link_fixes == "mine" and not is_mine:
             is_mine = True
             reasons.append("link-fixes:mine")
 

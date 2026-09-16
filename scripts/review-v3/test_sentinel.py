@@ -65,6 +65,7 @@ RAW_CONFIG = {
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
     "auto_approve": {"authors": ["pulumi-bot"]},
+    "link_only": {"approval": "any-team"},
 }
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
 assert CONFIG is not None, _errors
@@ -366,6 +367,49 @@ def test_g3_wrong_team_red_names_team():
     v = sentinel.evaluate(gh, CONFIG)
     g3 = _gate(v, "G3")
     assert g3.status == "red" and "pulumi/docs-guild" in g3.message
+
+
+def link_only_file():
+    """A blog file whose one changed line differs only in its link target."""
+    return {
+        "filename": "content/blog/p/index.md",
+        "status": "modified",
+        "patch": ("@@ -10,3 +10,3 @@\n context\n"
+                  "-See [stacks](https://www.pulumi.com/docs/concepts/stacks/) for the rest.\n"
+                  "+See [stacks](/docs/iac/concepts/stacks/) for the rest.\n context"),
+    }
+
+
+def test_g3_any_team_satisfies_a_link_only_sweep():
+    # A blog link sweep would normally need pulumi/docs-blog-review. With
+    # link_only.approval: any-team, a docs-guild member's approval clears it:
+    # checking a retargeted link is careful work, not lane knowledge.
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[link_only_file()], comments=[card],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok", g3.message
+    # and a stranger still does not clear it: any TEAM, not anyone
+    gh = StubGh(pr=pr_meta(), files=[link_only_file()], comments=[card],
+                reviews=[approval("random-person")], memberships={})
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "any review team" in g3.message
+    # a substantive change in the same lane is unaffected
+    gh = StubGh(pr=pr_meta(), files=[{"filename": "content/blog/p/index.md", "status": "modified",
+                                      "patch": "@@ -10,2 +10,3 @@\n context\n+A whole new sentence about stacks.\n context"}],
+                comments=[card], reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "docs-marketing-review" in g3.message  # blog's team in this fixture
+
+
+def test_link_only_diff_is_narrow():
+    assert sentinel.link_only_diff([link_only_file()]) is True
+    assert sentinel.link_only_diff([docs_file_substantive()]) is False
+    assert sentinel.link_only_diff([{"filename": "a.md", "status": "modified", "patch": None}]) is False
+    assert sentinel.link_only_diff([]) is False
 
 
 def test_g3_bot_denylist_and_bot_type_excluded():

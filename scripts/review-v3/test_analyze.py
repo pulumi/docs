@@ -13,6 +13,7 @@ record collect.py writes.
 from __future__ import annotations
 
 import json
+import copy
 import sys
 import tempfile
 from datetime import date
@@ -562,10 +563,16 @@ def test_link_only_diff_masks_links_and_nothing_else():
 def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
     blog = dict(title="Fix stale links", labels=["review:no-blockers", "domain:blog"],
                 files=[_file("content/blog/p/index.md", [LINK_PLUS], [LINK_MINUS])])
+    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
     p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"])), 5)
     assert p["verdict"] == "stamp" and p["is_mine"] is True
-    assert "shape:link-only" in p["reasons"] and "link-fixes:mine" in p["reasons"] and not any(r.startswith("route:") for r in p["reasons"])
-    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"], link_fixes="route")), 5)
+    # the routing config carries any-team, so the row is everyone's on its own
+    assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"] and not any(r.startswith("route:") for r in p["reasons"])
+    # under the lane policy the local setting is what takes it, and dropping
+    # that setting routes it to the lane owner
+    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"]), config=lane), 5)
+    assert p["verdict"] == "stamp" and "link-fixes:mine" in p["reasons"]
+    p = row(run([stampable(5, **blog)], cfg=cfg(me=["docs"], link_fixes="route"), config=lane), 5)
     assert p["verdict"] == "route" and "shape:link-only" in p["reasons"] and "link-fixes:mine" not in p["reasons"]
     # a prose edit in the same sweep keeps the lane owner
     p = row(run([stampable(6, **{**blog, "files": [_file("content/blog/p/index.md", [LINK_PLUS, "new sentence"], [LINK_MINUS, "old sentence"])]})], cfg=cfg(me=["docs"])), 6)
@@ -595,6 +602,23 @@ def test_blocked_rows_get_a_card_so_the_hidden_ones_still_surface():
     assert kinds["unblock"]["targets"] == {"1": "--unblock 1"} and "never resolved blind" in kinds["unblock"]["does"]
     assert kinds["refresh"]["say"].startswith("#2 is carrying a review that describes an older commit")
     assert kinds["rerun"]["targets"] == {"3": "--rerun 3"}
+
+
+def test_a_link_only_sweep_is_any_approver_s_because_any_team_may_approve():
+    # The routing config says any review team may approve a link-only sweep,
+    # so the row is genuinely anyone's -- not a local override of a lane.
+    sweep = _file("content/blog/p/index.md",
+                  ["See [stacks](/docs/iac/concepts/stacks/) for the rest."],
+                  ["See [stacks](https://www.pulumi.com/docs/concepts/stacks/) for the rest."])
+    p = row(run([stampable(1, labels=["review:no-blockers", "domain:blog"], files=[sweep])], cfg=cfg(me=["docs"])), 1)
+    assert "shape:link-only" in p["reasons"] and "gate:any-team" in p["reasons"]
+    assert p["is_mine"] is True and "link-fixes:mine" not in p["reasons"]
+    assert not any(r.startswith("route:") for r in p["reasons"])
+    # with the lane policy instead, it is the local link_fixes setting again
+    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
+    p = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[sweep])],
+                cfg=cfg(me=["docs"]), config=lane), 2)
+    assert "gate:any-team" not in p["reasons"] and "link-fixes:mine" in p["reasons"]
 
 
 def test_a_change_with_no_team_gate_is_any_approver_s():

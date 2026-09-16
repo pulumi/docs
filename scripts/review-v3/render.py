@@ -66,6 +66,7 @@ PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directi
 # chip's title for anyone grepping the queue.
 CHIP_LABEL = {
     "gate:none": "no team approval needed",
+    "gate:any-team": "any team can approve this",
     "link-fixes:mine": "link-only sweep: yours",
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
@@ -157,6 +158,7 @@ SIMPLE_HELP = {
     "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
     "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
     "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
+    "gate:any-team": "Every changed line differs only in a link, and the routing config lets ANY review team approve one of those: checking a retargeted link needs a careful reader, not a particular lane's reader. So this row is yours to take, and the merge gate agrees.",
     "link-fixes:mine": "YOUR SETTING, not a fact about the PR: link_fixes: mine in ~/.pr-review.yml makes a link-only diff yours to approve whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. Set link_fixes: route and this row would go to its lane owner instead.",
     "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
     "desc:empty": "The PR description is still the empty template.",
@@ -518,6 +520,26 @@ def finding_body(item: dict) -> str:
     return text or item.get("summary") or ""
 
 
+# The review states its own position on a finding before anyone judges it:
+# the composer tells the model to lead a body with `**Spurious:**` when the
+# finding does not hold, and "Worth a look before you approve" when it does.
+# Surfacing that is the difference between "nobody decided this" and "the
+# review already said what it thinks".
+REVIEW_STANCE = (
+    ("**Spurious:**", "go", "the review calls this spurious",
+     "The review examined this finding and concluded it does not hold. Nobody has ruled on it yet, but it is not asking you for a fix."),
+    ("Worth a look before you approve", "hold", "the review says: worth a look",
+     "The review kept this one deliberately: it wants a human to look before the PR merges."),
+)
+
+
+def review_stance(body: str) -> tuple[str, str, str] | None:
+    for marker, cls, label, why in REVIEW_STANCE:
+        if marker.lower() in body.lower():
+            return cls, label, why
+    return None
+
+
 def pending_judgment(queue: dict, pr: dict) -> str:
     """Before the judge step runs: the open findings, each with the diff
     lines it is about, and what the row asks."""
@@ -533,9 +555,12 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         link = deep_link(queue, pr, i)
         loc = f'<a href="{esc(link)}">{esc(i.get("file") or "")} {esc(i.get("anchor") or "")}</a>' if link else esc(i.get("anchor") or "")
         quote = patch_quote(pr, i.get("file"), i.get("anchor"))
+        body = finding_body(i)
+        stance = review_stance(body)
+        badge = (f' <span class="v v-{stance[0]}" title="{esc(stance[2])}">{esc(stance[1])}</span>' if stance else "")
         rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim" title="{esc(BUCKET_HELP.get(i.get("bucket"), ""))}">'
-                    f'{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span> '
-                    f'{md_inline(finding_body(i))} <span class="jmeta">{loc}</span>'
+                    f'{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span>{badge} '
+                    f'{md_inline(body)} <span class="jmeta">{loc}</span>'
                     + (diffq(quote) if quote else "") + "</li>")
     if len(items) > 8:
         rows.append(f"<li>… {len(items) - 8} more on the PR</li>")
@@ -553,8 +578,9 @@ def pending_judgment(queue: dict, pr: dict) -> str:
     return ('<div class="jbox pending"><div class="q">'
             + f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged</div>"
             + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
-            + '<p class="jfoot">Nobody has decided these yet. Run the judge step (a full <code>/pr-review</code>) '
-              "to get a recommendation and a reason for each, or open the PR and read them there.</p>"
+            + '<p class="jfoot">These are the review\'s own words, including its own stance where it took one. '
+              "What is missing is a decision: a full <code>/pr-review</code> runs the judge step, which adds a "
+              "recommended disposition and the reasoning behind it to each one, and sets this row\'s recommended button.</p>"
             + "</div>")
 
 

@@ -198,3 +198,13 @@ not_governed:
     - { author: pulumi-bot, label: automation/merge }
 
 auto_approve: { authors: [pulumi-bot] }
+
+# A diff whose every changed line differs only in a link (the redirect
+# sweeps) needs a careful reader, not a particular lane's reader: the
+# question is whether the new target resolves and still says what the
+# sentence claims, which any reviewer can answer. `any-team` lets any team
+# in `teams:` satisfy the approver gate for those; `lane` (the default) keeps
+# the ordinary per-subject rule. The mechanical bar is untouched -- a link
+# sweep is still substantive, so it still needs a human, just not a
+# particular one.
+link_only: { approval: any-team }
