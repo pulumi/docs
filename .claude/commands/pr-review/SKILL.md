@@ -50,6 +50,19 @@ link_fixes: mine                     # mine (default) | route: a link-only diff 
 
 `link_fixes: mine` is for the redirect sweeps: a diff where every changed line is the same sentence with only a link rewritten (text or target; a word's casing may change too) gets `shape:link-only` and skips the lane check, since the lane owner's review buys nothing there. It's the queue's own bar, narrower than the Sentinel's mechanical bar, which counts any link edit as substantive. The row still has to clear the stamp bar; a sweep with open ⚠️ rows is a judge row with "approve as-is" as its primary.
 
+### What makes a row "mine"
+
+Ownership is per **lane** (a content domain), never per author or per repo area, and it is computed, not declared on the PR:
+
+1. **Every changed path gets a subject** from `classify_path()` in triage-classify.py — the same classifier that writes the `domain:*` labels, so the board and triage can't disagree. The closed set is `docs`, `blog`, `website`, `programs`, `infra`, `frontend`, `other`; a path nothing else claims (`.claude/`, `styles/`, generated `data/`) lands in `other`.
+2. **The PR's domains are the union of its files' subjects.** A PR that touches a blog post and a doc is in both lanes at once.
+3. **A row is mine if any of its domains is in `me`.** Intersection, not containment: one file in a lane you own makes the whole PR yours to approve, because the queue is asking "can I act on this?", not "is all of it mine?". With `me: [docs, infra, frontend, other]`, that means everything except a PR whose files are *entirely* blog and website.
+4. **The rest routes**, and `.github/review-routing.yml` picks the target: the matrix maps subject × change type (mechanical vs substantive) to a role, the role maps to a GitHub team, and the team is used when it exists (`route:no-team` falls back to that role's `sla.escalate_to` person). Blog, website and frontend are marketing's; docs and programs are the docs guild's; infra and other are tools'.
+5. **Two overrides, both visible as reason chips.** `link-fixes:mine` makes a `shape:link-only` diff yours whatever lane it sits in (config above). `handed-off:@who` takes a row out of your list entirely — someone else is already requested as reviewer — and parks it under "Waiting on others" until they act.
+6. **`--owner` reinterprets step 3 only.** `me` is the default, `any` drops the lane check, and a role name or `@login` substitutes someone else's lanes so you can see the queue through their eyes.
+
+The `owner:<domain>:<role>` chip on each row shows the computation, one chip per domain the PR touches.
+
 Missing file: every lane counts as mine and the analyzer says so. `python3 scripts/review-v3/pr_review_config.py` prints the effective config. The AI-suspect allowlist stays at `~/.claude/pr-review/ai-suspect-authors.txt` (see `pr-review:references:trust-and-scrutiny`).
 
 ## The flow
