@@ -153,7 +153,9 @@ def meta_line(pr: dict) -> str:
     return "".join(f"<span>{esc(p)}</span>" for p in parts)
 
 
-def diffq(j: dict, *, open_: bool = False) -> str:
+def diffq(j: dict, *, open_: bool = True) -> str:
+    """Quotes start expanded: the lines are the evidence you judge on, so
+    reading a row should never cost a click. The summary still folds them."""
     minus = j.get("quote_minus") or []
     plus = j.get("quote_plus") or []
     if isinstance(minus, str):
@@ -184,7 +186,6 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
     if not js:
         return pending_judgment(queue, pr)
     out = []
-    single = len(js) == 1
     for j in js:
         link = j.get("deep_link")
         where = f'<a href="{esc(link)}">{esc(j.get("file") or "")} L{esc(j.get("line") or "?")} ↗</a>' if link else '<a href="' + esc(pr_url(queue, pr["number"])) + '">open the PR ↗</a>'
@@ -194,7 +195,7 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
             f'<div class="qrow"><div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
             f'<span class="v v-{cls}">{esc(label)}</span></div>'
             + (f'<div class="jnote">{esc(j["note"])}</div>' if j.get("note") else "")
-            + diffq(j, open_=single)
+            + diffq(j)
             + f'<div class="jmeta">{where}</div></div>'
         )
     return "".join(out)
@@ -628,6 +629,7 @@ details.why[open]>summary{margin-bottom:4px}details.why .chip{opacity:.8}
 .qrow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
 .jnote{font-size:12.5px;color:var(--ink-2);margin:2px 0 4px}
 details.quote>summary{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);cursor:pointer}
+details.quote[open]>summary{margin-bottom:3px}
 .acts{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 .acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
 .btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
