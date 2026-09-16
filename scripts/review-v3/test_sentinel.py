@@ -970,6 +970,36 @@ def test_sparse_checkout_covers_everything_the_evaluator_loads():
 
 # ---- Standalone harness --------------------------------------------------
 
+def test_the_auto_staging_lane_dispatches_and_gets_out():
+    """An evidence producer must never read as a failing check.
+
+    The unattended lane used to sit in a `staging-stack` concurrency group
+    for up to 45 minutes watching the deploy it dispatched. GitHub cancels a
+    displaced pending run, and a cancelled job shows on the PR as a failing
+    check -- on a PR whose only sin was a second push. The lane now fires
+    the existing "Build and deploy testing" workflow and exits; that run
+    writes its own `staging/pulumi-test-io` status.
+    """
+    auto = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-auto.yml").read_text()
+    assert "--dispatch-only" in auto, "the auto lane must not wait on the deploy"
+    import yaml as _yaml  # noqa: PLC0415
+    jobs = _yaml.safe_load(auto)["jobs"]
+    assert all("concurrency" not in j for j in jobs.values()), "a queued job is a job that gets cancelled"
+
+    script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
+    assert "--dispatch-only) DISPATCH_ONLY" in script
+    # stale comment guard: the header must not still promise a queue
+    assert "Concurrency sits on the DEPLOY JOB" not in auto
+    # the attended lane still watches: someone is sitting there waiting
+    pr_lane = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-pr.yml").read_text()
+    assert "--dispatch-only" not in pr_lane
+
+    deploy = (REPO_ROOT / ".github" / "workflows" / "testing-build-and-deploy.yml").read_text()
+    assert "staging-status:" in deploy, "the dispatched run has to resolve its own pending status"
+    assert "staging/pulumi-test-io" in deploy
+    assert "statuses: write" in deploy
+
+
 def run_standalone() -> int:
     """The --self-test harness. The test list is bound at call time, not at
     module level: a module-level binding only sees the tests defined above

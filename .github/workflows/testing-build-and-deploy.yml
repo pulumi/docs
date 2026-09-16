@@ -139,6 +139,37 @@ jobs:
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
+  # A dispatched run is somebody's staging evidence: `staging-deploy.sh`
+  # writes a pending `staging/pulumi-test-io` status at this SHA and, in the
+  # unattended lane, exits without waiting. Resolving that status is this
+  # run's own job — nothing else knows when the deploy finished, and a
+  # pending status that never lands is worse than no status at all.
+  # Sentinel gate G4 reads either this status or this run.
+  staging-status:
+    if: always() && github.event_name == 'workflow_dispatch'
+    name: Record the staging deploy status
+    runs-on: ubuntu-latest
+    needs: [buildSite]
+    permissions:
+      statuses: write
+    steps:
+      - name: Post the commit status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RESULT: ${{ needs.buildSite.result }}
+        run: |
+          set -uo pipefail
+          case "$RESULT" in
+            success)   STATE=success; DESC="staging deploy green" ;;
+            cancelled) STATE=error;   DESC="staging deploy cancelled" ;;
+            *)         STATE=failure; DESC="staging deploy failed" ;;
+          esac
+          gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+            -f state="$STATE" -f context="staging/pulumi-test-io" \
+            -f target_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            -f description="$DESC" >/dev/null \
+            || echo "::warning::could not write the staging/pulumi-test-io status; the run itself is still G4 evidence"
+
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification
