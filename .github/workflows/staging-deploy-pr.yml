@@ -13,8 +13,11 @@ name: Staging deploy (PR)
 #   cannot read team membership); an API failure refuses (fail closed).
 # - Fork PRs are refused with a comment: deploying fork code to the shared
 #   staging stack is a tools-team manual action, not a comment command.
-# - This workflow never checks out ANY code. It dispatches the existing
-#   "Build and deploy testing" workflow at the PR's same-repo head branch
+# - This workflow never checks out PR code. Its one checkout is a sparse,
+#   base-default-branch copy of scripts/review-v3 (for staging-deploy.sh);
+#   the permission gate above still reads the routing config through the
+#   contents API, because it runs before that checkout. It dispatches the
+#   existing "Build and deploy testing" workflow at the PR's same-repo head
 #   (that workflow checks out and builds in the testing account, as it does
 #   for master), polls the run, and records the outcome as commit status
 #   `staging/pulumi-test-io` at the deployed head SHA. Sentinel G4 checks
@@ -116,6 +119,8 @@ jobs:
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
 
       - name: Dispatch testing deploy and record status
         if: steps.gate.outputs.refused == 'false'

@@ -886,6 +886,44 @@ def test_workflow_never_checks_out_pr_code():
     assert "default_branch" in wf  # checkout pinned to base default branch
 
 
+def test_sparse_checkout_covers_everything_the_evaluator_loads():
+    """The sparse list is a dependency declaration, so pin it to reality.
+
+    A full worktree is ~1.2 GB and checkout was the entire job runtime; the
+    evaluator needs about 7 MB. The hazard of trimming it is a lazily
+    `_load`ed module (validate-pinned.py is imported inside one branch) that
+    goes missing for only the PRs whose code path reaches it. Resolve the
+    paths sentinel.py names and assert each sits under a declared root, so
+    a new dependency outside them fails here instead of in production.
+    """
+    import re as _re  # noqa: PLC0415
+
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    block = _re.search(r"sparse-checkout:\s*\|\n((?:\s+\S+\n)+)", wf)
+    assert block, "review-sentinel.yml must declare a sparse-checkout list"
+    roots = [line.strip() for line in block.group(1).splitlines() if line.strip()]
+    assert "sparse-checkout-cone-mode: true" in wf
+
+    src = (HERE / "sentinel.py").read_text()
+    needed = {
+        # `_load(..., _DOCS_REVIEW_SCRIPTS / "x.py")` and `_HERE / "y.py"`
+        *(f".claude/commands/docs-review/scripts/{m}"
+          for m in _re.findall(r'_DOCS_REVIEW_SCRIPTS / "([^"]+)"', src)),
+        *(f"scripts/review-v3/{m}" for m in _re.findall(r'_HERE / "([^"]+)"', src)),
+        # plus the ones imported by name off sys.path, and the config default
+        "scripts/review-v3/routing.py",
+        "scripts/review-v3/review_state.py",
+        ".github/review-routing.yml",
+        # compose-review.py reads these from its own parent directory
+        ".claude/commands/docs-review/footer.md",
+    }
+    assert len(needed) > 5, "the path scrape found nothing — did sentinel.py change shape?"
+    for rel in sorted(needed):
+        assert (REPO_ROOT / rel).exists(), f"{rel} does not exist — fix the test, not the workflow"
+        assert any(rel == r or rel.startswith(r.rstrip("/") + "/") for r in roots), \
+            f"{rel} is loaded by sentinel.py but no sparse-checkout root covers it: {roots}"
+
+
 # ---- Standalone harness --------------------------------------------------
 
 def run_standalone() -> int:
