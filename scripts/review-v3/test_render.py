@@ -117,6 +117,31 @@ def test_an_unjudged_row_still_shows_the_diff():
     assert render.patch_quote(p, "no/such/file.md", "L3") is None
 
 
+def test_a_row_links_both_the_pr_and_its_diff():
+    html = render.render_board(_queue())
+    assert '<a class="pr" href="https://github.com/pulumi/docs/pull/1" title="Open pull request #1' in html
+    assert '<a class="pr diff" href="https://github.com/pulumi/docs/pull/1/files"' in html
+    assert "straight to the diff" in html
+    # and into a real editor, for when a browser diff is not enough
+    assert '<a class="pr diff" href="https://vscode.dev/github/pulumi/docs/pull/1"' in html
+    assert render.vscode_url({"repo": "pulumi/docs"}, 9) == "https://vscode.dev/github/pulumi/docs/pull/9"
+
+
+def test_a_row_links_the_preview_pages():
+    q = _queue()
+    p = row(q, 1)
+    p["preview"] = {"status": "ready", "url": "http://preview.invalid",
+                    "pages": [{"file": "content/docs/a.md", "url": "/docs/a/", "title": "Page A",
+                               "preview_url": "http://preview.invalid/docs/a/"}]}
+    box = render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+    assert "<summary>preview · 1 page</summary>" in box
+    assert 'href="http://preview.invalid/docs/a/">Page A</a>' in box
+    assert 'href="http://preview.invalid">the whole preview site' in box
+    # nothing to link, nothing rendered
+    p["preview"] = {"status": "none", "pages": []}
+    assert "preview ·" not in render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+
+
 def test_the_reviews_own_stance_rides_on_the_finding():
     q = _queue()
     p = row(q, 1)

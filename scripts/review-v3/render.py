@@ -98,6 +98,12 @@ def esc(v) -> str:
 # ---- pieces --------------------------------------------------------------------
 
 
+def vscode_url(queue: dict, n: int) -> str:
+    """The PR in the VS Code web editor: a real editor over the branch, for
+    when reading a diff in a browser tab is not enough."""
+    return f"https://vscode.dev/github/{queue.get('repo') or 'pulumi/docs'}/pull/{n}"
+
+
 def pr_url(queue: dict, n: int) -> str:
     return f"https://github.com/{queue.get('repo') or 'pulumi/docs'}/pull/{n}"
 
@@ -594,6 +600,28 @@ def small_diff_html(queue: dict, pr: dict) -> str:
             + "".join(out) + "</details>")
 
 
+def preview_links(pr: dict) -> str:
+    """The pages this PR changes, on its own deployed preview, as links.
+
+    pulumi-bot posts the same list in a pinned comment; repeating it on the
+    row means looking at a rendered page costs one click instead of a trip
+    to GitHub and back."""
+    prev = pr.get("preview") or {}
+    pages = [p for p in prev.get("pages") or [] if p.get("preview_url")]
+    if not pages:
+        return ""
+    rows = "".join(
+        f'<li><a href="{esc(p["preview_url"])}">{esc(p.get("title") or p.get("url") or p["file"])}</a>'
+        f' <span class="jmeta">{esc(p.get("url") or "")}</span></li>' for p in pages[:20])
+    more = f"<li>… {len(pages) - 20} more on the PR</li>" if len(pages) > 20 else ""
+    site = (f'<p class="jmeta"><a href="{esc(prev["url"])}">the whole preview site ↗</a></p>'
+            if prev.get("url") else "")
+    return ('<details class="preview" title="Each page this PR changes, on the deployed preview of the site. '
+            'The same list pulumi-bot pins on the PR, so you can look at a rendered page without leaving this board.">'
+            f'<summary>preview · {len(pages)} page{"s" if len(pages) != 1 else ""}</summary>'
+            f"<ul>{rows}{more}</ul>{site}</details>")
+
+
 def pending_judgment(queue: dict, pr: dict) -> str:
     """Before the judge step runs: the open findings, each with the diff
     lines it is about, and what the row asks."""
@@ -677,12 +705,17 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
         f'<div class="mrow {VERDICT_CLASS.get(v, "hold")}" data-pr="{n}" data-verdict="{esc(v)}" data-owner="{esc(owner_label(pr))}" '
         f'data-domains="{esc(" ".join(pr.get("domains") or []))}" data-author="{esc(author)}" data-created="{esc(created)}" '
         f'data-mine="{"1" if pr.get("is_mine", True) else "0"}">',
-        f'<a class="pr" href="{esc(pr_url(queue, n))}">#{n}</a>',
+        # The number goes to the PR; the diff is one more click from there,
+        # and the diff is what an approver actually wants to look at.
+        (f'<div class="prcell"><a class="pr" href="{esc(pr_url(queue, n))}" title="Open pull request #{n} on GitHub.">#{n}</a>'
+         f'<a class="pr diff" href="{esc(files_url(queue, n))}" title="Open this PR\'s Files changed tab, straight to the diff.">diff ↗</a>'
+         f'<a class="pr diff" href="{esc(vscode_url(queue, n))}" title="Open this PR in the VS Code web editor, where you can read it with a real editor and edit the branch in place.">edit ↗</a></div>'),
         "<div>",
         f'<h4>{esc(pr.get("title"))} {verdict_chip(pr)}</h4>',
         f'<div class="meta">{meta_line(pr)}</div>',
         f'<div class="chips">{chips(pr.get("reasons") or [])}</div>',
         f'<p class="sum">{esc(pr.get("summary") or "")}</p>' if pr.get("summary") else "",
+        preview_links(pr),
     ]
     if v in ("judge",) or pr.get("judgments") or expanded:
         body.append(judgment_boxes(queue, pr))
@@ -1130,6 +1163,8 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .mrow>div{min-width:0}
 .jmeta,.sum,.card p,.jbox li,.detail td{overflow-wrap:anywhere}
 .pr{font-size:12px;font-weight:600;background:var(--surface-2);border:1px solid var(--line-2);border-radius:3px;padding:2px 7px;color:var(--ink);text-decoration:none;white-space:nowrap;align-self:start;justify-self:start}
+.prcell{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.pr.diff{font-weight:500;font-size:11px;color:var(--accent);background:none;border-color:var(--accent-soft)}
 .mrow h4{font-size:14.5px;font-weight:600;margin:0 0 3px;line-height:1.35}
 .meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
@@ -1192,6 +1227,11 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .diffq{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 9px;margin:6px 0;overflow-x:auto;white-space:pre}
 .diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}.diffq .hunk{color:var(--ink-3)}
 .dfile{margin-top:6px}.dfile>a{font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+details.preview{margin:2px 0 6px}
+details.preview>summary{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);cursor:pointer}
+details.preview ul{margin:4px 0 0;padding-left:18px}
+details.preview li{font-size:13px;margin:2px 0}
+details.preview .jmeta{font-family:"IBM Plex Mono",monospace;font-size:11px}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}
 .btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
