@@ -29,7 +29,7 @@
                 {{ range $plans }}
                 <th scope="col" id="support-plan-{{ .id }}" class="lg:px-4 py-3 align-top text-center font-semibold text-service-black scroll-mt-24">
                     {{ .name }}
-                    {{ with .eligibility_note }}<span class="block mt-1 text-xs font-normal text-gray-600">{{ . | safeHTML }}</span>{{ end }}
+                    {{ with .eligibility_note }}<span class="block mt-1 text-xs font-normal text-gray-700">{{ . | safeHTML }}</span>{{ end }}
                 </th>
                 {{ end }}
             </tr>
@@ -41,17 +41,17 @@
                 {{ range $plan := $plans }}
                 {{ $cell := partial "pricing/value.html" (index $plan $benefit.key) }}
                 <td class="flex items-baseline justify-between gap-6 py-1 last:pb-4 lg:table-cell lg:align-top lg:px-4 lg:py-4">
-                    <span class="lg:hidden text-gray-600">{{ $plan.name }}</span>
+                    <span class="lg:hidden text-gray-700">{{ $plan.name }}</span>
                     <span class="block text-right lg:text-center">
                         {{ if eq $cell.kind "check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block" "title" "Included") }}
                         {{ else if eq $cell.kind "blank" }}
-                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-400 size-6 inline-block" "title" "Not included") }}
+                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-600 size-6 inline-block" "title" "Not included") }}
                         {{ else }}
                         {{ $cell.content | markdownify }}
                         {{ end }}
                         {{ if eq $benefit.key "price" }}
-                            {{ with $plan.price_note }}<span class="block mt-0.5 text-xs text-gray-600">{{ . }}</span>{{ end }}
+                            {{ with $plan.price_note }}<span class="block mt-0.5 text-xs text-gray-700">{{ . }}</span>{{ end }}
                         {{ end }}
                     </span>
                 </td>

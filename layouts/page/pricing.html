@@ -248,7 +248,7 @@
                         {{ if eq $cell.kind "check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
                         {{ else if eq $cell.kind "blank" }}
-                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-400 size-6 inline-block") }}
+                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-600 size-6 inline-block") }}
                         {{ else }}
                         <span>{{ $cell.content | markdownify }}</span>
                         {{ with $cell.subtext }}
