@@ -944,6 +944,8 @@ def do_next_html(queue: dict) -> str:
         data = ""
         if d.get("targets"):
             data += f' data-targets="{esc(json.dumps(d["targets"], sort_keys=True))}"'
+        if d.get("lead"):
+            data += f' data-lead="{esc(str(d["lead"]))}"'
         if d.get("claims"):
             data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
         tip = d.get("does") or ACTION_HELP.get(d["kind"], "")
@@ -1313,10 +1315,22 @@ SCRIPT = r"""
     if (others.length) out += ' ' + others.join(' ');
     cmdEl.textContent = out;
   }
+  // The same decision can be on the board twice -- once on the compact row,
+  // once in the expanded card -- and the two must never disagree, so a
+  // selection is keyed by PR and command and painted on every button
+  // carrying that key.
+  function twins(b){
+    return [].slice.call(document.querySelectorAll('button.btn[data-pr="' + b.dataset.pr + '"]')).filter(function(o){
+      return o.dataset.cmd === b.dataset.cmd;
+    });
+  }
   function setSel(b, on){
     var k = b.dataset.pr + ':' + b.dataset.cmd;
-    if (on) { sel[k] = b.dataset.cmd; b.classList.add('sel'); } else { delete sel[k]; b.classList.remove('sel'); }
-    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (on) { sel[k] = b.dataset.cmd; } else { delete sel[k]; }
+    twins(b).forEach(function(o){
+      o.classList.toggle('sel', on);
+      o.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
   }
   // A Do-next card is the same decisions as the rows it names, pressed
   // together: `data-targets` maps a PR to the row button it presses, and
@@ -1332,6 +1346,13 @@ SCRIPT = r"""
   }
   function rowButton(pr, cmd){
     return document.querySelector('button.btn[data-pr="' + pr + '"][data-cmd="' + cmd.replace(/"/g, '\\"') + '"]');
+  }
+  // The chain card whose lead decision this button is: pressing it presses
+  // the whole chain.
+  function leadCard(b){
+    return cards.filter(function(c){
+      return c.dataset.lead === b.dataset.pr && cardTargets(c)[b.dataset.pr] === b.dataset.cmd;
+    })[0];
   }
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
@@ -1389,7 +1410,23 @@ SCRIPT = r"""
       if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
         clearRow(b.dataset.pr, b);
       }
-      setSel(b, on); compose(); syncCards();
+      setSel(b, on);
+      // A chain's follow-up is part of the same decision, so pressing the
+      // lead row button presses the rest of the chain too -- and releasing it
+      // releases the chain. Every other card is a batch of independent
+      // decisions and is only lit by `syncCards` once they all are.
+      var lead = leadCard(b);
+      if (lead) {
+        var lt = cardTargets(lead);
+        Object.keys(lt).forEach(function(pr){
+          if (pr === b.dataset.pr) return;
+          var row = rowButton(pr, lt[pr]);
+          if (!row) return;
+          if (on) clearRow(pr, row);
+          setSel(row, on);
+        });
+      }
+      compose(); syncCards();
     });
   });
   syncCards();

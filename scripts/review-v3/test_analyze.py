@@ -688,3 +688,25 @@ def test_do_next_lists_send_back_route_and_stamp():
     assert q["do_next"][2]["say"] == "#1 passes every gate." and "squash-merges" in q["do_next"][2]["does"]
     assert q["do_next"][0]["targets"] == {"3": "--request-changes 3"}
     assert q["do_next"][1]["cmd"].startswith("--route 2:@")
+
+
+def test_a_row_summarizes_the_change_not_the_template_boilerplate():
+    # A generated PR body's first surviving prose line is often a machine
+    # note to a machine ("do not edit it"), which tells an approver nothing.
+    body = (
+        "> [!IMPORTANT]\n> Auto-merge is not armed.\n\n"
+        "## Why this page\n\n"
+        "_This section is composed deterministically from the selection queue; do not edit it._\n\n"
+        "## Fixes applied\n\n"
+        "| Claim | Source | Correction |\n| --- | --- | --- |\n"
+        "| The SDK falls back to the CLI login | esc-sdk #137 | Rewrote the sentence to drop the CLI fallback. |\n\n"
+        "## Findings not applied\n\n"
+        "The items above are banked for the glow-up lane.\n"
+    )
+    pr = {"review": {"author_body": ""}, "body": body, "title": "Content review: python.md"}
+    assert analyze.one_line_summary(pr) == "Rewrote the sentence to drop the CLI fallback."
+    # with no such section, the boilerplate is still skipped for real prose
+    pr = {"review": {"author_body": ""},
+          "body": "_This section is composed deterministically from the selection queue; do not edit it._\n\nRewrites two links.\n",
+          "title": "t"}
+    assert analyze.one_line_summary(pr) == "Rewrites two links."

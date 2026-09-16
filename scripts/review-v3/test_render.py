@@ -403,3 +403,13 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+def test_a_decision_is_one_selection_wherever_it_appears():
+    # The same decision renders twice (compact row and expanded card), and a
+    # chain's lead row button is the chain card pressed from the row, so both
+    # halves have to light and unlight together.
+    q = _queue()
+    html = render.render_board(q)
+    assert "function twins(b)" in html and "o.classList.toggle('sel', on)" in html
+    assert "function leadCard(b)" in html and "c.dataset.lead === b.dataset.pr" in html
