@@ -48,7 +48,8 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
     heads = re.findall(r'<div class="sec-head"><h2>([^<]+)</h2><span class="dlabel">([^<]+)</span>', html)
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
     assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
-    assert "C1: merge #1 first, then unblock #2" in html and 'data-cmd="--chain C1"' in html
+    assert "#1 and 1 other edit the same lines in the same files" in html and 'data-cmd="--chain C1"' in html
+    assert "Approves and squash-merges #1, then merges master into #2 so it can follow." in html
 
 
 def test_board_rows_carry_verdict_chips_reasons_and_actions():

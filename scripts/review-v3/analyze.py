@@ -809,7 +809,9 @@ def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
     nxt = next((n for n in order if n != first), None)
     if first is None:
         return {"kind": "blocked", "say": f"{c['id']}: every member is blocked; unblock one to start.", "cmd": None}
-    say = f"{c['id']}: merge #{first} first" + (f", then unblock #{nxt}" if nxt else "") + f" ({len(order)} in the chain; each link waits on CI, about ten minutes)."
+    others = f" and {len(order) - 1} other{'s' if len(order) != 2 else ''}" if len(order) > 1 else ""
+    say = (f"#{first}{others} edit the same lines in the same files, so they can only merge in order "
+           f"(cluster {c['id']}, {len(order)} PRs).")
     return {"kind": "chain", "first": first, "next": nxt, "say": say, "cmd": f"--chain {c['id']}"}
 
 
