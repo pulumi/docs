@@ -425,4 +425,8 @@ def test_the_panels_worth_reading_start_open_and_one_lever_moves_them_all():
     assert '<details class="guide" open' in inspect.getsource(render.guide_block)
     # the manual and the folded reasons stay closed; nothing opens them for you
     assert '<details class="help">' in html
-    assert 'id="foldall"' in html and "fold.textContent = open ? 'collapse all' : 'expand all';" in html
+    assert 'id="foldall"' in html and "fold.textContent = open ? 'collapse every panel' : 'expand every panel';" in html
+    # it lives in the filter bar, where it plainly governs the board, and it
+    # closes the manual beside it like everything else
+    assert html.index('id="foldall"') > html.index('class="mock-bar"')
+    assert "document.querySelectorAll('details').forEach(function(d){ d.open = open; });" in html

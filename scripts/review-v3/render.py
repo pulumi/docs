@@ -926,11 +926,8 @@ def help_html() -> str:
     out = []
     for heading, points in HELP_SECTIONS:
         out.append(f"<div><h4>{esc(heading)}</h4><ul>" + "".join(f"<li>{p}</li>" for p in points) + "</ul></div>")
-    return ('<div class="helprow"><details class="help"><summary>How to read this board</summary>'
-            '<div class="helpgrid">' + "".join(out) + "</div></details>"
-            '<button class="btn" id="foldall" aria-pressed="false" '
-            'title="Open every folded panel on the board at once -- guides, previews, diff quotes, the reasons behind a '
-            'verdict -- or close them all back down. Each panel still opens and closes on its own.">expand all</button></div>')
+    return ('<details class="help"><summary>How to read this board</summary>'
+            '<div class="helpgrid">' + "".join(out) + "</div></details>")
 
 
 def do_next_html(queue: dict) -> str:
@@ -1006,6 +1003,11 @@ def filter_bar(queue: dict) -> str:
     parts += [chip("author", a, f"author: {a}") for a in authors]
     parts.append('<span class="sep"></span>')
     parts += [chip("since", s, f"since: {s}", on=False) for s in ("1d", "7d", "30d")]
+    parts.append('<span class="sep"></span>')
+    parts.append('<button class="fchip" id="foldall" type="button" aria-pressed="false" '
+                 'title="Open every folded panel on the whole board at once -- reviewer&#x27;s guides, preview links, '
+                 'diff quotes, the reasons behind a verdict, this manual, the collisions section -- or close them all '
+                 'back down. Each panel still opens and closes on its own.">expand every panel</button>')
     parts.append("</div>")
     parts.append('<p class="empty" id="empty" hidden>No rows match these chips. Every lit chip is a row you want to see; a group with nothing lit hides everything. <button class="btn" id="reset-filters" type="button">reset chips</button></p>')
     return "".join(parts)
@@ -1231,9 +1233,7 @@ details.quote[open]>summary{margin-bottom:3px}
 .acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
 .btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
 .progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
-.helprow{display:flex;align-items:flex-start;gap:10px;margin:10px 0 4px}
-.helprow>details.help{flex:1;margin:0}
-.helprow>#foldall{flex:none;margin-top:0}
+#foldall{margin-left:auto}
 details.help{margin:10px 0 4px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
 details.help>summary{cursor:pointer;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
 details.help[open]>summary{border-bottom:1px solid var(--line)}
@@ -1448,11 +1448,10 @@ SCRIPT = r"""
     if (!fold) return;
     fold.addEventListener('click', function(){
       var open = fold.getAttribute('aria-pressed') !== 'true';
-      document.querySelectorAll('details').forEach(function(d){
-        if (d !== fold.parentNode.querySelector('details.help') || open) d.open = open;
-      });
+      document.querySelectorAll('details').forEach(function(d){ d.open = open; });
       fold.setAttribute('aria-pressed', open ? 'true' : 'false');
-      fold.textContent = open ? 'collapse all' : 'expand all';
+      fold.classList.toggle('on', open);
+      fold.textContent = open ? 'collapse every panel' : 'expand every panel';
     });
   })();
   document.getElementById('copy').addEventListener('click', function(){
