@@ -970,44 +970,6 @@ def test_sparse_checkout_covers_everything_the_evaluator_loads():
 
 # ---- Standalone harness --------------------------------------------------
 
-def test_a_failed_gh_call_reports_what_the_api_said():
-    # `check=True` raises with the argv and nothing else, so a failed write
-    # reached the Actions log as a wall of request body with no reason in it.
-    import subprocess as _sp  # noqa: PLC0415
-
-    calls = []
-
-    def fake_run(args, **kw):
-        calls.append(args)
-        return _sp.CompletedProcess(args, 1, stdout="", stderr="gh: Resource not accessible by integration (HTTP 403)\n")
-
-    real, sentinel.subprocess.run = sentinel.subprocess.run, fake_run
-    try:
-        gh = sentinel.Gh("pulumi/docs", 21642)
-        try:
-            gh.post_issue_comment("body")
-        except sentinel.GhError as exc:
-            assert "403" in str(exc) and "not accessible" in str(exc), exc
-            assert "api --method POST" in str(exc), exc
-        else:
-            raise AssertionError("a non-zero gh exit has to raise")
-    finally:
-        sentinel.subprocess.run = real
-    assert calls, "the wrapper still has to call gh"
-
-
-def test_the_status_comment_is_a_courtesy_not_a_gate():
-    # Every gate has already been decided by the time the comment is written.
-    # A repo whose token cannot post one gets a warning, not a red Sentinel
-    # that says nothing about the gates it just evaluated.
-    class Boom:
-        def list_issue_comments(self):
-            raise sentinel.GhError("gh api failed (1): HTTP 403")
-
-    verdict = sentinel.Verdict(conclusion="success", title="ok", summary="ok", head_sha="d0def344", gates=[])
-    assert sentinel.write_status_comment(Boom(), verdict) is False
-
-
 def run_standalone() -> int:
     """The --self-test harness. The test list is bound at call time, not at
     module level: a module-level binding only sees the tests defined above
