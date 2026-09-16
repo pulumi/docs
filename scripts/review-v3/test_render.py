@@ -229,6 +229,14 @@ def test_every_tooltip_explains_rather_than_echoes():
     assert render.chip_title("review:absent").startswith("No review has run on this PR at all")
     assert "only because master was merged" in render.chip_title("review:base-merged")
     assert render.chip_title("review:stale") != render.chip_title("review:absent")
+    # a code that carries extra segments still gets its own sentence: the
+    # lookup keys off the state and puts the detail in the words
+    for r in ("checks:red:sentinel", "checks:pending:build,test", "warnings:2:F6,F7",
+              "cluster:C1:overlap:1/3", "owner:docs:docs-guild", "size:88>=40"):
+        t = render.chip_title(r)
+        assert t != r and len(t.split()) >= 5, f"bare chip: {r}"
+        assert "see the reviewer&#x27;s guide" not in t and "see the reviewer's guide" not in t, f"fell through to the catch-all: {r}"
+    assert "`sentinel`" in render.chip_title("checks:red:sentinel")
 
 
 def test_the_board_carries_its_own_manual():

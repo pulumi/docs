@@ -192,7 +192,14 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         elif code == "mergeable":
             text = MERGEABLE_HELP.get(detail)
         elif code == "checks":
-            text = CHECKS_HELP.get(detail)
+            # `checks:red:sentinel,build` names the failing checks, so match on
+            # the state and put the names in the sentence rather than dropping
+            # the whole tooltip for want of an exact key.
+            failing = detail.partition(":")[2]
+            named = ", ".join(f"`{f}`" for f in failing.split(",") if f)
+            text = CHECKS_HELP.get(first)
+            if text and named:
+                text += (f" Failing: {named}." if first == "red" else f" Still running: {named}.")
         elif code == "shape":
             text = SHAPE_HELP.get(detail)
         elif code == "author":
@@ -260,6 +267,13 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
                     f"{who} has already approved this PR, so your approval is not the first.")
         elif code == "gate":
             text = SIMPLE_HELP["gate:none"]
+        if text is None and first:
+            # A known code carrying an unexpected value: say what is known
+            # rather than rendering a bare chip with nothing behind it. The
+            # test below fails on this path, so it is a safety net, not a
+            # licence to skip writing the real sentence.
+            base = SIMPLE_HELP.get(f"{code}:{first}") or globals().get(f"{code.upper().replace('-', '_')}_HELP", {}).get(first)
+            text = base or f"The queue flagged this row with `{code}` = `{detail}`; see the reviewer's guide for what that means."
     return f"{text} ({r})" if text else r
 
 
