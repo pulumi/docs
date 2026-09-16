@@ -99,9 +99,19 @@ LEGACY_MARKER_RE = re.compile(r"<!-- CLAUDE_REVIEW 1/\d+ -->")
 HISTORY_SHA_RE = re.compile(r"\(([0-9a-f]{7,40})\)")
 STRIP_OPEN = "<!-- SENTINEL_STRIP -->"
 STRIP_CLOSE = "<!-- /SENTINEL_STRIP -->"
+STATUS_MARKER = "<!-- SENTINEL_STATUS -->"
 STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
+# The workflow `/deploy-staging` dispatches, and the one G4 verifies against
+# directly when the commit status is missing. See `_staging_evidence`.
+STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
 OVERSIZED_ACK = "sentinel:oversized-ack"
-BREAK_GLASS = "override: any write-access human can apply `review:waived` (logged)"
+# Opt-in preview of the pinned status comment while the Sentinel is still
+# report-only. Enforcing mode maintains the comment unconditionally.
+PREVIEW_LABEL = "sentinel:preview"
+BREAK_GLASS = (
+    "override: a member of a routing team (`.github/review-routing.yml` `teams:`) "
+    "can apply `review:waived` (logged)"
+)
 
 CHECK_NAME = "Sentinel"
 
@@ -176,9 +186,29 @@ class Gh:
         )
         return [e for e in json.loads(out) if e.get("event") == "labeled"]
 
+    def get_workflow_runs(self, workflow_file: str, head_sha: str) -> list[dict]:
+        """Completed runs of one workflow at an EXACT head SHA.
+
+        Server-side filtered on `head_sha`, so this is a handful of rows at
+        most and needs no pagination. Not `--paginate`: the runs endpoint
+        returns an object, and merging those is a different shape.
+        """
+        out = self._run([
+            "api",
+            f"repos/{self.repo}/actions/workflows/{workflow_file}/runs"
+            f"?head_sha={head_sha}&status=completed&per_page=100",
+        ])
+        return json.loads(out).get("workflow_runs") or []
+
     def patch_issue_comment(self, comment_id, body: str) -> None:
         self._run(
             ["api", "--method", "PATCH", f"repos/{self.repo}/issues/comments/{comment_id}",
+             "-f", f"body={body}"]
+        )
+
+    def post_issue_comment(self, body: str) -> None:
+        self._run(
+            ["api", "--method", "POST", f"repos/{self.repo}/issues/{self.pr}/comments",
              "-f", f"body={body}"]
         )
 
@@ -209,6 +239,10 @@ class Verdict:
     mechanical: bool = False
     governed: bool = True
     auto_approved: bool = False
+    # `sentinel:preview` is on the PR: maintain the pinned status comment even
+    # in report-only mode. Set on every return path so main() can read it
+    # without a second API call.
+    preview: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -222,6 +256,7 @@ class Verdict:
             "mechanical": self.mechanical,
             "governed": self.governed,
             "auto_approved": self.auto_approved,
+            "preview": self.preview,
         }
 
 
@@ -385,6 +420,85 @@ def _team_org_slug(team_ref: str) -> tuple[str, str]:
     return org, slug
 
 
+def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
+    """Has this exact head been deployed to staging successfully, ever?
+
+    Two independent witnesses, either of which is sufficient:
+
+      1. the `staging/pulumi-test-io` commit status, written by whichever
+         lane ran the deploy;
+      2. a completed, successful run of the staging workflow itself whose
+         head SHA is this one.
+
+    (2) exists because (1) is a *report* of the deploy, not the deploy: the
+    status write is a separate API call after `gh run watch` returns, and a
+    cancelled runner, a lost token or a hand-run deploy that never went
+    through `/deploy-staging` all leave a green deploy with no status. The
+    run record is the deploy. Checking the status first keeps the common
+    path to one API call.
+
+    A failed run-history read is swallowed deliberately: it degrades to "no
+    evidence found", which blocks the merge. Raising instead would turn an
+    API hiccup into `action_required` on a PR that simply hasn't deployed
+    yet — louder, and wrong about which of the two states it is in.
+
+    Returns a human-readable witness, or None when there is no evidence.
+    """
+    for s in gh.get_commit_statuses(head_sha):
+        if s.get("context") == STAGING_STATUS_CONTEXT and s.get("state") == "success":
+            return f"staging status green at `{head_sha[:9]}`"
+    try:
+        runs = gh.get_workflow_runs(STAGING_WORKFLOW_FILE, head_sha)
+    except Exception:  # noqa: BLE001 — see docstring: degrade to "no evidence"
+        return None
+    for r in runs:
+        if r.get("conclusion") == "success":
+            return (
+                f"staging deploy [run {r.get('id')}]({r.get('html_url')}) succeeded "
+                f"at `{head_sha[:9]}`"
+            )
+    return None
+
+
+def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool, str]:
+    """Is the waive label present AND applied by someone entitled to apply it?
+
+    The label alone is not the waive. A waive skips every gate but G4, so
+    the authority to apply one has to be at least the authority to approve
+    something: the actor must be an ACTIVE member of a team named in
+    `teams:` — any of them, not just the one this PR routes to. Scoping it
+    to the required team would make a waive exactly as hard to get as the
+    approval it bypasses, which defeats the one case it most needs to
+    cover (the required approver is the PR's own author).
+
+    Fails closed at every step. The actor can't be read, the membership
+    lookup throws, the actor is on no routing team — all of those are "not
+    waived", and the returned reason is surfaced so an unauthorized waive
+    is visibly refused rather than silently ignored.
+
+    Returns (waived, note) — note is '' when there is no label at all.
+    """
+    if config.waive.get("label", "review:waived") not in labels:
+        return False, ""
+    actor = _waive_actor(gh)
+    if actor == "unknown":
+        return False, "could not read who applied the waive label — not honored"
+    for team_ref in sorted(set(config.teams.values())):
+        org, slug = _team_org_slug(team_ref)
+        try:
+            if gh.get_team_membership(org, slug, actor) == "active":
+                return True, actor
+        except SentinelDataError:
+            return False, (
+                f"could not verify whether @{actor} may waive (team lookup "
+                "failed) — not honored"
+            )
+    return False, (
+        f"@{actor} is not an active member of any routing team "
+        "(`.github/review-routing.yml` `teams:`) — waive not honored"
+    )
+
+
 # ---- Evaluation ---------------------------------------------------------
 
 
@@ -398,7 +512,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         return Verdict(
             conclusion="neutral", title="Draft — not evaluated",
             summary="Draft PRs are not gated; the sentinel evaluates on ready-for-review.",
-            head_sha=head_sha,
+            head_sha=head_sha, preview=PREVIEW_LABEL in labels,
         )
 
     # Automation lanes the Sentinel does not govern (Dependabot, the
@@ -411,7 +525,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             summary=(f"**Not governed** — {ng_reason} (`.github/review-routing.yml` "
                      "`not_governed`). This automation lane merges on its own checks; "
                      "the Sentinel evaluates no gates for it."),
-            head_sha=head_sha, governed=False,
+            head_sha=head_sha, governed=False, preview=PREVIEW_LABEL in labels,
         )
         if report_only:
             verdict.would_be = verdict.conclusion
@@ -619,18 +733,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
-        statuses = gh.get_commit_statuses(head_sha)
-        green = any(
-            s.get("context") == STAGING_STATUS_CONTEXT and s.get("state") == "success"
-            for s in statuses
-        )
-        if green:
-            gates.append(Gate("G4 infra-evidence", "ok", f"staging deploy green at `{head_sha[:9]}`"))
+        witness = _staging_evidence(gh, head_sha)
+        if witness:
+            gates.append(Gate("G4 infra-evidence", "ok", witness))
         else:
             gates.append(Gate(
                 "G4 infra-evidence", "red",
-                f"Infra change: no green staging deploy at `{head_sha[:9]}` — a "
-                "tools-team member comments `/deploy-staging`. (Not waivable.)",
+                f"Infra change: no successful staging deploy at `{head_sha[:9]}`. "
+                "One is dispatched automatically when an infra PR opens or pushes "
+                "(`staging-deploy-auto.yml`); if it never ran or it failed, a "
+                "tools-team member can comment `/deploy-staging` to retry. "
+                "(Not waivable.)",
             ))
     else:
         gates.append(Gate("G4 infra-evidence", "skip", "no infra paths"))
@@ -650,7 +763,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
 
     # ---- Conclusion -----------------------------------------------------
-    waived = "review:waived" in labels
+    waived, waive_note = _waive_state(gh, config, labels)
     any_error = any(g.status == "error" for g in gates)
     reds = [g for g in gates if g.status == "red"]
     infra_red = any(g.name.startswith("G4") and g.status == "red" for g in gates)
@@ -675,11 +788,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # ---- Summary --------------------------------------------------------
     parts: list[str] = []
     if waived:
-        actor = _waive_actor(gh)
-        parts.append(f"## ⚠️ WAIVED by @{actor}\n\nMerge gates bypassed via `review:waived` "
+        parts.append(f"## ⚠️ WAIVED by @{waive_note}\n\nMerge gates bypassed via `review:waived` "
                      "(logged). The table below shows what the verdict would have been.")
         if infra_red:
             parts.append("**Infra staging evidence is NOT waivable** — gate G4 stands red.")
+    elif waive_note:
+        # The label is on the PR but didn't authorize. Say so loudly: a
+        # refused waive that reads as "nothing happened" invites a second
+        # one from the same person.
+        parts.append(
+            f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand."
+        )
     if brief:
         parts.append(_strip_brief_for_summary(brief.get("body") or ""))
     if external:
@@ -711,6 +830,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
         mechanical=mechanical, auto_approved=auto_approved,
+        preview=PREVIEW_LABEL in labels,
     )
 
     if report_only:
@@ -768,6 +888,97 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     return False
 
 
+# ---- Pinned status comment ----------------------------------------------
+
+# What each gate wants, in the author's words, when it is already satisfied
+# or doesn't apply. A red gate speaks for itself — its own message carries
+# the remediation — so only the quiet states need a phrasebook here.
+_GATE_BLURB = {
+    "ok": "Nothing to do.",
+    "skip": "Doesn't apply to this PR.",
+    "error": "Couldn't be evaluated — re-run the Sentinel check.",
+}
+
+_STATUS_ICON = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+
+
+def render_status_comment(verdict: Verdict) -> str:
+    """The pinned 'where this PR stands' comment.
+
+    Deliberately free of timestamps and run ids: the body is a pure
+    function of the verdict, so a re-evaluation that changes nothing
+    produces a byte-identical body and `update_status_comment` skips the
+    PATCH. A comment that edits itself on every push is the notification
+    noise v3 exists to remove.
+    """
+    lines = [STATUS_MARKER, "## Sentinel — merge gate status", ""]
+
+    if verdict.would_be:
+        lines += [
+            f"> [!NOTE]",
+            f"> **Report-only.** The Sentinel is not blocking merges yet; this is "
+            f"what it *would* conclude: `{verdict.would_be}`.",
+            "",
+        ]
+
+    if not verdict.governed:
+        lines += [verdict.summary.split("\n\n")[0], ""]
+        return "\n".join(lines).rstrip() + "\n"
+
+    if not verdict.gates:
+        lines += [verdict.summary.split("\n\n")[0], ""]
+        return "\n".join(lines).rstrip() + "\n"
+
+    blocking = [g for g in verdict.gates if g.status in ("red", "error")]
+    if blocking:
+        lines += [
+            f"**{len(blocking)} of {len(verdict.gates)} gates need attention "
+            f"before this can merge.**",
+            "",
+        ]
+    else:
+        lines += ["**All gates green — nothing is blocking this merge.**", ""]
+
+    lines += ["| | Gate | What it needs |", "|---|---|---|"]
+    for g in verdict.gates:
+        need = g.message if g.status in ("red", "error") else _GATE_BLURB[g.status]
+        # One cell, one line: a literal newline would break the row.
+        need = " ".join(need.split())
+        lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
+    lines.append("")
+
+    if any(g.status == "red" and not g.name.startswith("G4") for g in blocking):
+        # Not BREAK_GLASS verbatim — that string is written to follow a gate
+        # message ("… — override: a member of …") and reads as a doubled
+        # "override:" when it opens a sentence of its own.
+        lines += [
+            "_Break glass: a member of a routing team "
+            "(`.github/review-routing.yml` `teams:`) can apply `review:waived`, "
+            "which is logged._",
+            "",
+        ]
+    if any(g.name.startswith("G4") and g.status == "red" for g in verdict.gates):
+        lines += ["_Infra staging evidence has no waiver._", ""]
+
+    lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def update_status_comment(gh: Gh, verdict: Verdict,
+                          comments: list[dict] | None = None) -> bool:
+    """Upsert the pinned status comment. Idempotent; returns True on write."""
+    comments = comments if comments is not None else gh.list_issue_comments()
+    body = render_status_comment(verdict)
+    existing = _find_comment(comments, STATUS_MARKER)
+    if existing is None:
+        gh.post_issue_comment(body)
+        return True
+    if (existing.get("body") or "").strip() == body.strip():
+        return False
+    gh.patch_issue_comment(existing["id"], body)
+    return True
+
+
 # ---- CLI ----------------------------------------------------------------
 
 
@@ -778,6 +989,11 @@ def main() -> int:
     parser.add_argument("--config", default=str(_REPO_ROOT / ".github" / "review-routing.yml"))
     parser.add_argument("--report-only", action="store_true")
     parser.add_argument("--update-strip", action="store_true")
+    parser.add_argument(
+        "--status-comment", action="store_true",
+        help="Maintain the pinned gate-status comment. Enforcing mode always "
+             f"does; in report-only mode only a PR labelled `{PREVIEW_LABEL}` does.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
@@ -795,6 +1011,10 @@ def main() -> int:
     verdict = evaluate(gh, config, report_only=args.report_only)
     if args.update_strip and not args.report_only and not args.dry_run:
         update_strip(gh, verdict)
+    # Enforcing: always. Report-only: only where someone opted the PR in, so
+    # the dry run stays invisible to everyone who didn't ask to see it.
+    if args.status_comment and not args.dry_run and (not args.report_only or verdict.preview):
+        update_status_comment(gh, verdict)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 
