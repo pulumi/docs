@@ -116,6 +116,21 @@ def test_an_unjudged_row_still_shows_the_diff():
     assert render.patch_quote(p, "no/such/file.md", "L3") is None
 
 
+def test_a_row_with_nothing_open_says_so():
+    # A judge row whose review found nothing still needs a call. Saying
+    # "not yet judged" over an empty list implies findings that don't exist.
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": []}
+    p["reasons"] = ["risk:typo", "review:absent"]
+    html = render.render_board(q)
+    box = html.split('data-pr="1"')[1].split('class="acts"')[0]
+    assert "No open findings on the review" in box
+    assert "This row still needs a call: No review has run on this PR at all" in box
+    assert "not yet judged" not in box
+
+
 def test_filter_chips_carry_their_counts():
     html = render.render_board(_queue())
     # an unlit chip has to say what it is keeping off the page

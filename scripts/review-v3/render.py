@@ -541,8 +541,17 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         rows.append(f"<li>… {len(items) - 8} more on the PR</li>")
     # No reason codes here: the chips above the summary already carry them,
     # and repeating them makes the box look like a second, disagreeing list.
+    if not items:
+        # Nothing open on the review, but the row still needs a call. Say what
+        # is asking for one instead of implying findings nobody can see.
+        why = next((r for r in pr.get("reasons") or []
+                    if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape", "self-accepted",
+                                           "directional", "duplicate", "desc", "brief", "merging-over")), None)
+        because = chip_title(why).rsplit(" (", 1)[0] if why else "The queue could not clear every stamp gate on this row."
+        return ('<div class="jbox pending"><div class="q">No open findings on the review</div>'
+                f'<p class="jfoot">This row still needs a call: {esc(because)}</p></div>')
     return ('<div class="jbox pending"><div class="q">'
-            + (f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged" if items else "Not yet judged") + "</div>"
+            + f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged</div>"
             + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
             + '<p class="jfoot">Nobody has decided these yet. Run the judge step (a full <code>/pr-review</code>) '
               "to get a recommendation and a reason for each, or open the PR and read them there.</p>"

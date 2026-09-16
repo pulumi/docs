@@ -572,6 +572,17 @@ def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
 
 
+def test_a_summary_is_cut_at_a_boundary_not_mid_word():
+    long = ("Daily link-checker follow-up for 2026-09-16. Four entries were reported (2 internal, 2 external). "
+            "One was actionable; one was a false positive; two are already tracked by an existing issue.")
+    out = analyze.clip(long)
+    assert out.endswith(".") and "existin…" not in out and len(out) <= analyze.SUMMARY_MAX
+    assert analyze.clip("short enough") == "short enough"
+    # no sentence in range: cut at a word, and mark the cut
+    words = analyze.clip("word " * 80)
+    assert words.endswith("…") and not words.endswith("wor…")
+
+
 def test_blocked_rows_get_a_card_so_the_hidden_ones_still_surface():
     # Blocked rows are filtered off the board by default. The ones with a
     # mechanical unblock still have to reach the approver, so each kind of

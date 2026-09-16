@@ -942,6 +942,24 @@ def _day(s: str) -> date | None:
             return None
 
 
+SUMMARY_MAX = 220
+
+
+def clip(text: str, limit: int = SUMMARY_MAX) -> str:
+    """Cut at a sentence if there is one in range, else at a word. Never
+    mid-word: "…post-migration follow-through for existin…" reads as a bug,
+    because it is one."""
+    t = " ".join(text.split())
+    if len(t) <= limit:
+        return t
+    window = t[:limit]
+    stop = max(window.rfind(". "), window.rfind("? "), window.rfind("! "))
+    if stop >= limit // 2:
+        return window[:stop + 1]
+    cut = window.rfind(" ")
+    return (window[:cut] if cut > 0 else window).rstrip(",;:—- ") + "…"
+
+
 def one_line_summary(pr: dict) -> str:
     """The brief's italic one-sentence orientation line when present, else
     the first non-empty body line, else the title."""
@@ -949,11 +967,11 @@ def one_line_summary(pr: dict) -> str:
     for line in body.splitlines():
         s = line.strip()
         if s.startswith("_") and s.endswith("_") and len(s) > 2 and "TODO" not in s:
-            return s.strip("_")
+            return clip(s.strip("_"))
     for line in (pr.get("body") or "").splitlines():
         s = line.strip()
         if s and not s.startswith(("#", "<!--", "-", "|", ">", "🤖", "http", "[!")):
-            return s[:200]
+            return clip(s)
     return pr.get("title") or ""
 
 
