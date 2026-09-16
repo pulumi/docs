@@ -35,20 +35,24 @@ name: Staging deploy (auto, infra PRs)
 #   is noise on top of a signal the author already has, so everything here
 #   degrades to `::warning::` and exits 0.
 # - SKIP WHEN EVIDENCE ALREADY EXISTS. Re-running the same head buys
-#   nothing and costs a slot on a stack that serializes; a `synchronize`
+#   nothing and costs a real deploy of a shared stack; a `synchronize`
 #   that didn't move the head (a base merge, a label) finds the green
 #   status and stops.
-# - Concurrency sits on the DEPLOY JOB, never the workflow. The staging
-#   stack is one shared environment and GitHub holds at most one pending
-#   run per group, silently dropping whatever a newer request displaces. A
-#   workflow-level group would enroll every PR event — including the
-#   docs-only pushes this lane exists to ignore — before the routing check
-#   could rule them out, so an unrelated push could sit pending on the
-#   stack and displace a queued infra deploy that nobody would be told
-#   about. Routing runs in its own ungated job; only a run that is actually
-#   going to deploy joins the queue. Displacement between real deploys is
-#   still fine: the newer request is a newer head, and G4 only ever asks
-#   about the current one.
+# - DISPATCH, DON'T WAIT. This lane fires the existing "Build and deploy
+#   testing" workflow at the head branch and exits; that run does the work
+#   and writes its own `staging/pulumi-test-io` status when it finishes
+#   (the `staging-status` job there). Nobody is watching this job, so
+#   holding a runner open for 45 minutes to relay an outcome bought
+#   nothing — and it cost something real: a long-lived job in a
+#   concurrency group is a job GitHub CANCELS when a newer push displaces
+#   it, and a cancelled job reads as a failing check on the PR. An
+#   evidence producer that paints the PR red is exactly what the note
+#   below says this workflow must never do.
+# - NO CONCURRENCY GROUP, for the same reason. Serializing the shared
+#   stack by parking pending runs meant announcing displacement as
+#   failure. The dispatched deploys were never serialized in the manual
+#   `/deploy-staging` lane either, so nothing regresses here; and when two
+#   deploys do overlap, the later head is the one G4 asks about.
 # - Follows the same switch as `/deploy-staging` and the Sentinel itself:
 #   with REVIEW_V3_SENTINEL unset there is no gate to satisfy, so producing
 #   evidence for it would be pure spend.
@@ -61,7 +65,7 @@ permissions:
   contents: read
   pull-requests: read
   statuses: write
-  actions: write       # gh workflow run + gh run watch
+  actions: write       # gh workflow run (this lane never watches)
 
 jobs:
   route:
@@ -172,12 +176,9 @@ jobs:
     needs: route
     if: needs.route.outputs.deploy == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-    # The one shared environment. Only runs that will actually deploy get
-    # here, so a docs-only push can no longer displace a queued infra
-    # deploy — see the concurrency note in the header.
-    concurrency:
-      group: staging-stack
+    # Dispatch and exit: a minute of API calls, not a deploy. See the
+    # DISPATCH, DON'T WAIT note in the header.
+    timeout-minutes: 10
     steps:
       - name: Checkout base (default branch)
         uses: actions/checkout@v7
@@ -187,7 +188,7 @@ jobs:
           sparse-checkout: scripts/review-v3
           sparse-checkout-cone-mode: true
 
-      - name: Deploy to staging and record the status
+      - name: Dispatch the staging deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -205,4 +206,5 @@ jobs:
             --pr "${{ github.event.pull_request.number }}" \
             --head-sha "${{ github.event.pull_request.head.sha }}" \
             --head-ref "${{ github.event.pull_request.head.ref }}" \
+            --dispatch-only \
             || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red and /deploy-staging retries"

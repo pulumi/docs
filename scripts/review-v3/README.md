@@ -229,3 +229,32 @@ any change under `content/docs/support/faq/` or `content/what-is/`, and any
 added line naming an edition ("the Enterprise edition") or pairing
 "edition(s)" with a feature verb. Those reasons demote only; the marketing
 claims overlay still keys on the `pricing-sensitive` paths alone.
+
+## The /pr-review queue
+
+The maintainer skill `/pr-review` (`.claude/commands/pr-review/SKILL.md`) is
+a batch adjudication surface over every open PR. Its deterministic half lives
+here so it is covered by `make test-review-pipeline`; the model writes only
+the per-row judgment calls, as a JSON file the analyzer merges.
+
+| Script | Role |
+|---|---|
+| `gh_client.py` | GitHub adapter: `gh` subprocess, REST with `GITHUB_TOKEN`/`GH_TOKEN`, or a snapshot directory (`<dir>/GET/<endpoint>.json`; writes go to `writes.jsonl`). `search_author_q()` owns the `author:app/<slug>` rewrite for GitHub App authors. `record_dir=` mirrors live reads into the snapshot layout. |
+| `pr_review_config.py` | `~/.pr-review.yml` (`me:` lanes, `stamp_max_lines`, `stale_date_days`, `link_fixes`); routing itself stays in `.github/review-routing.yml`. |
+| `collect.py` | Facts → `.pr-review-queue.json`: PR metadata, files + patches, `mergeable_state` (re-asked while `unknown`), check rollup, reviews, the parsed pinned review (`review-worklist.py`, both surfaces), `REVIEW_STATE`, triage prose, reviewed-head SHA, preview URL + per-page links, trust axes / risk tier / AI-suspect (ported from the retired pr-review shell scripts). Cache under `/.pr-review-cache/<pr>/` per (head SHA, updated_at). |
+| `analyze.py` | One verdict per PR (`stamp` / `judge` / `route` / `blocked`), reason codes (`REASON_CODES`), row actions; cross-PR collision clusters (overlap vs same-file), directional link conflicts against the Hugo `aliases:` map (`frontmatter-validate.build_global_maps`), duplicates, stale blog dates, self-accepted findings, stale brief summaries. A PR whose requested reviewers are humans other than the approver (`GET /user`, or `--approver`) is `handed_off`: it keeps its verdict but the renderer folds it into a "Waiting on others" list, and collisions against it are advisory (`:theirs`). `--judgments FILE` merges the model's judge output without lowering a verdict. Each cluster carries a recommendation (consolidate / chain / ignore / theirs) and `do_next` lists the board's opening moves. |
+| `render.py` | Board HTML (published as an Artifact), one PR's detail page, or `--terminal`. Server-side rendered, one `esc()`, queue inlined as JSON, no network. |
+| `act.py` | Plan → preview → execute: `--stamp` (per-PR preflight immediately before each squash-merge; humans approve-only without `--merge-humans`), `--request-changes` (a changes-requested review from the row's judgments), `--chain C1` (stamp the first, unblock the next), `--route`, `--unblock` (merge commit, never rebase), `--fix`, `--close --superseded-by`, `--refresh`, `--render` (`screenshot.mjs`), `--deploy`. Attribution footer on every posted comment except the approval body. |
+| `screenshot.mjs` | Playwright screenshot helper (`NODE_PATH=/opt/node22/lib/node_modules` on a web session). |
+
+Tests: `test_gh_client.py`, `test_collect.py`, `test_analyze.py`,
+`test_render.py`, `test_act.py` — pytest, and each script's `--self-test`
+runs the matching file's `run_standalone()`. Fixtures come from
+`.claude/commands/docs-review/scripts/testdata/` (the v3 author/brief pair,
+the legacy monolith, the normalize-pr* triples) plus in-module PR specs
+expanded into a snapshot directory by `test_collect.make_snapshot()`, so
+every suite sees exactly the record `collect.py` writes.
+
+The queue never runs a local review refresh: a stale v3 review is a blocked
+row with a `--refresh` action (`@claude … #update-review`), and `pinned-
+comment.sh upsert` is never called on a v3 PR.

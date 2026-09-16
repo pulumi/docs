@@ -37,7 +37,7 @@ Load-bearing — these gate workflow execution.
 | `review:no-blockers` | `0e8a16` | Claude review completed cleanly — 🚨 Outstanding is empty. |
 | `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
-| `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by `pr-review`. |
+| `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by a maintainer from `/pr-review` (the route action's request-changes path). |
 | `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
 | `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
 | `sentinel:preview` | `d4c5f9` | **Opt-in.** While the Sentinel is report-only, maintain its pinned gate-status comment on this PR so the surface can be reviewed on a real PR before enforcement. Applied by humans; no effect once `REVIEW_V3_SENTINEL` is `'1'` (the comment is then maintained on every PR the Sentinel evaluates). |

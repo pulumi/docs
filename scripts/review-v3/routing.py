@@ -67,7 +67,7 @@ STAGING_EVIDENCE_VALUES = frozenset({"required"})
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "claims_overlay",
     "external_contributors", "sla", "author_staleness", "waive",
-    "not_governed", "auto_approve",
+    "not_governed", "auto_approve", "link_only",
 })
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
@@ -77,6 +77,12 @@ WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
 AUTO_APPROVE_KEYS = frozenset({"authors"})
+LINK_ONLY_KEYS = frozenset({"approval"})
+# Who may approve a diff whose every changed line differs only in a link.
+# `lane` is the ordinary rule: the subject's own team. `any-team` says any
+# team in `teams:` satisfies it, because checking a retargeted link needs a
+# careful human, not a particular lane's human.
+LINK_ONLY_APPROVAL = frozenset({"lane", "any-team"})
 
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
@@ -114,6 +120,7 @@ class Config:
     # gate. See the yaml header for the semantics.
     not_governed: dict = field(default_factory=dict)
     auto_approve: dict = field(default_factory=dict)
+    link_only: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -123,6 +130,9 @@ class Resolution:
     staging_evidence_required: bool
     subjects: dict[str, str]  # changed path -> subject
     reasons: list[str]
+    # True when any team in `teams:` satisfies the approver gate instead of
+    # the lane's own team (see `link_only.approval` in the config).
+    any_team: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -130,6 +140,7 @@ class Resolution:
             "staging_evidence_required": self.staging_evidence_required,
             "subjects": self.subjects,
             "reasons": self.reasons,
+            "any_team": self.any_team,
         }
 
 
@@ -353,6 +364,19 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         if not isinstance(aa_authors, list) or not all(_is_nonempty_str(a) for a in aa_authors):
             errors.append("auto_approve.authors must be a list of non-empty strings")
 
+    # ---- link_only (optional) ---------------------------------------------
+    link_only = raw.get("link_only", {})
+    if link_only is None:
+        link_only = {}
+    if not isinstance(link_only, dict):
+        errors.append("link_only must be a mapping with an 'approval' key")
+        link_only = {}
+    else:
+        _check_unknown_keys(link_only, LINK_ONLY_KEYS, "link_only", errors)
+        approval = link_only.get("approval", "lane")
+        if approval not in LINK_ONLY_APPROVAL:
+            errors.append("link_only.approval must be one of: " + ", ".join(sorted(LINK_ONLY_APPROVAL)))
+
     if errors:
         return None, errors, warnings
 
@@ -368,6 +392,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         waive=waive,
         not_governed=not_governed,
         auto_approve=auto_approve,
+        link_only=link_only,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -395,7 +420,7 @@ def load_config(path: Path | str) -> Config:
 
 
 def resolve_lanes(
-    changed_paths: list[str], mechanical: bool, claims: bool, config: Config
+    changed_paths: list[str], mechanical: bool, claims: bool, config: Config, link_only: bool = False
 ) -> Resolution:
     """Resolve the required roles and staging-evidence requirement for a PR.
 
@@ -442,11 +467,21 @@ def resolve_lanes(
         roles.add(overlay_role)
         reasons.append(f"claims overlay adds role:{overlay_role}")
 
+    # A link-only sweep changes nothing but link targets. Checking one is
+    # careful work, but it is not lane knowledge: the question is whether the
+    # target resolves and still says what the sentence claims, which any
+    # reviewer can answer. With `link_only.approval: any-team` the roles stay
+    # on the record and any team in `teams:` satisfies them.
+    any_team = bool(roles) and link_only and (config.link_only or {}).get("approval") == "any-team"
+    if any_team:
+        reasons.append("link-only diff: any team in teams: satisfies the approver gate")
+
     return Resolution(
         roles=roles,
         staging_evidence_required=staging_evidence_required,
         subjects=subjects,
         reasons=reasons,
+        any_team=any_team,
     )
 
 
@@ -505,6 +540,7 @@ _CANNED_CONFIG = {
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
     "auto_approve": {"authors": ["pulumi-bot"]},
+    "link_only": {"approval": "any-team"},
 }
 
 

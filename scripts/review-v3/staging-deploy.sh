@@ -5,10 +5,16 @@
 #
 # Two callers, one behaviour:
 #   - staging-deploy-pr.yml   `/deploy-staging`, a tools-team member asking
-#                             (passes --announce, because they're waiting on it)
+#                             (passes --announce, because they're waiting on it,
+#                             and watches the run so the status is final when
+#                             the job ends)
 #   - staging-deploy-auto.yml every infra PR on open/push, unattended
-#                             (no announce: the commit status is the report,
-#                             and a bot comment per push is the noise v3 removes)
+#                             (--dispatch-only: fire the deploy and get out.
+#                             Nobody is watching, so holding a runner for
+#                             45 minutes buys nothing, and a job that lives
+#                             that long is a job that shows up cancelled on
+#                             the PR when a newer push displaces it. The
+#                             dispatched run finalizes its own status.)
 #
 # This script never checks out or executes the PR's code. It dispatches the
 # existing "Build and deploy testing" workflow at the head BRANCH — that
@@ -27,7 +33,7 @@
 
 set -euo pipefail
 
-REPO=""; PR=""; HEAD_SHA=""; HEAD_REF=""; ANNOUNCE="false"
+REPO=""; PR=""; HEAD_SHA=""; HEAD_REF=""; ANNOUNCE="false"; DISPATCH_ONLY="false"
 while [ $# -gt 0 ]; do
   case "$1" in
     --repo)     REPO="$2"; shift 2 ;;
@@ -35,6 +41,7 @@ while [ $# -gt 0 ]; do
     --head-sha) HEAD_SHA="$2"; shift 2 ;;
     --head-ref) HEAD_REF="$2"; shift 2 ;;
     --announce) ANNOUNCE="true"; shift ;;
+    --dispatch-only) DISPATCH_ONLY="true"; shift ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
 done
@@ -80,6 +87,14 @@ gh api --method POST "repos/$REPO/statuses/$HEAD_SHA" \
 if [ "$ANNOUNCE" = "true" ]; then
   gh api --method POST "repos/$REPO/issues/$PR/comments" \
     -f body="🚀 Staging deploy of \`$HEAD_REF\` @ \`${HEAD_SHA:0:9}\` started: $RUN_URL — the \`staging/pulumi-test-io\` status lands here when it finishes. (Next merge to master resets pulumi-test.io. Requests queue one deep on the shared stack: a \`/deploy-staging\` that never gets this comment was displaced by a newer one — re-run it once the current deploy finishes.)" >/dev/null
+fi
+
+if [ "$DISPATCH_ONLY" = "true" ]; then
+  # The run writes its own final status (see the `staging status` job in
+  # testing-build-and-deploy.yml), so the pending status above always
+  # resolves without anyone holding a runner open to watch it.
+  echo "staging deploy dispatched for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
+  exit 0
 fi
 
 if gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
