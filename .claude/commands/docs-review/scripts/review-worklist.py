@@ -112,7 +112,7 @@ STYLE_FILE_HEADING_RE = re.compile(r"^#####\s+`?([^`\s]+)`?\s*$")
 # rule, so the two must agree by construction rather than by vigilance.
 FINDING_START_RE = _vp.FINDING_START_RE
 
-DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
+DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable", "author-accepted")
 # Dispositions that are a judgment call rather than a change in the diff. The
 # review record can't evidence these on its own, so a human-readable reason is
 # mandatory — otherwise "accepted" becomes an unaudited way to close the loop.
