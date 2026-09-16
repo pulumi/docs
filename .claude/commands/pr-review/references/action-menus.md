@@ -16,6 +16,8 @@ Every row on the board carries an action bar; every button only adds an `act.py`
 | `route` | `--route N:@owner` (request review + post the defects) | `open PR`, `--stamp N --force` ("approve anyway": the lane is a default, not a lock) and its merge counterpart |
 | `blocked` | the unblock: `--unblock N` (dirty), `--refresh N` (stale review), `--rerun N` (errored review), `--close N --superseded-by M` (duplicate) | `open PR` |
 
+Approving a judged row answers its findings on the way past: one `/resolve F<n> <disposition>: <why>` comment per judged finding, posted before the approval, then the approval, then the merge. A `deferred` judgment is not resolved — it is what the send-back (or close) button is for.
+
 Whether approving merges is on the button, never implied: bot PRs (dependabot, pulumi-bot, WorkPrentice) default to approve-and-merge, a person's PR defaults to approval alone because merging is the author's call. The second button is the other choice, and picking it puts the first one out. `act.py` reads the `:merge` / `:no-merge` suffix per PR, so a batch of both stays one command.
 
 A blocked row is never stampable, with or without `--force`. Red checks, an in-progress review, and a changes-requested review have no mechanical unblock; the row names the blocker and waits. An errored review's unblock is `--rerun N` (`@claude #new-review`), and a row where no review ran at all (`review:trivial`, a draft, a bot skip) offers the same command as a side action, "run a full review".

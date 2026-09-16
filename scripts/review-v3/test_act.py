@@ -123,6 +123,34 @@ def test_plan_guards():
         env.close()
 
 
+def test_stamping_records_the_calls_before_it_merges():
+    env = Env([stampable(1)])
+    try:
+        r = row(env.queue, 1)
+        r["judgments"] = [
+            {"finding_id": "F6", "disposition": "refuted", "decision": "Does the sentence claim that?",
+             "note": "Spurious: the list is what the team wants to build, not the target page."},
+            {"finding_id": "F7", "disposition": "accepted", "note": "Pre-existing; both bullets already shared the link."},
+            {"finding_id": "T1", "disposition": "refuted", "note": "Triage misread the item count."},   # not a card finding
+            {"finding_id": "F9", "disposition": "deferred", "note": "The author's to fix."},            # goes back, not resolved
+        ]
+        p = act.plan(env.queue, args(stamp="1"))
+        assert p.steps[0].args["resolves"] == [
+            "/resolve F6 refuted: Spurious: the list is what the team wants to build, not the target page.",
+            "/resolve F7 accepted: Pre-existing; both bullets already shared the link."]
+        assert "comment: /resolve F6 refuted" in act.preview(p, env.queue)
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok and "2 findings resolved" in res[0].message
+        w = env.writes()
+        # the record lands before the approval, so a merge never outruns it
+        assert w[0]["path"].endswith("/issues/1/comments") and "/resolve F6 refuted" in w[0]["body"]["body"]
+        assert "F9" not in w[0]["body"]["body"] and "T1" not in w[0]["body"]["body"]
+        assert w[1]["path"].endswith("/pulls/1/reviews") and w[1]["body"]["event"] == "APPROVE"
+        assert w[2]["method"] == "PUT"
+    finally:
+        env.close()
+
+
 def test_per_pr_merge_mode_beats_the_author_default():
     env = Env([stampable(1), stampable(2, author="camsoper", author_type="User")])
     try:

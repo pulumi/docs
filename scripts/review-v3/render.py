@@ -169,21 +169,44 @@ def diffq(j: dict, *, open_: bool = True) -> str:
             + "\n".join(lines) + "</div></details>")
 
 
-# The badge is a recommendation to the approver, never a record of what the
-# author did — so it says "I'd refute this", not "refuted". The title is the
-# plain-English version for anyone who reads the badge and wonders whose call
-# it is. `fixed` is the one that isn't a call: the diff already made it.
+# The badge answers "why doesn't this finding stop the merge?", in the
+# reader's terms, and the title says what approving the row does about it.
+# Nothing here is the author speaking: the PR's author has not answered.
 DISPOSITION_BADGE = {
-    "fixed": ("go", "already fixed", "The diff already addresses this finding. Nothing to decide."),
-    "refuted": ("go", "I'd refute", "My recommendation: the finding is wrong, the PR is right as written. Approving records the refusal."),
-    "accepted": ("go", "I'd accept", "My recommendation: the finding is fair but not worth holding the PR for. Approve and ship."),
-    "not-applicable": ("go", "I'd call it n/a", "My recommendation: the finding doesn't apply to this PR."),
-    "deferred": ("hold", "I'd send it back", "My recommendation: this one is the author's to fix, so the PR goes back to them."),
+    "fixed": ("go", "already fixed", "The diff already addresses this finding. Approving records it as fixed."),
+    "refuted": ("go", "not a real issue", "The review got this one wrong. Approving posts `/resolve <id> refuted` with the reason below, and the finding closes."),
+    "accepted": ("go", "fair, not blocking", "The finding stands but is not worth holding the PR for. Approving posts `/resolve <id> accepted` with the reason below."),
+    "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR. Approving posts `/resolve <id> not-applicable` with the reason below."),
+    "deferred": ("hold", "needs the author", "Not yours to fix. Use the row's send-back button and this becomes the author's to answer."),
 }
+DEFERRED_NO_AUTHOR = ("hold", "nobody to fix it",
+                      "This needs an author and a workflow opened the PR. Use the row's close button; the lane re-queues the page.")
 
 
 def disposition_badge(d: str | None) -> tuple[str, str, str]:
     return DISPOSITION_BADGE.get(d or "", ("dim", d or "?", "Disposition recorded by the judge pass."))
+
+
+def judgment_footer(pr: dict) -> str:
+    """One line under the findings saying what the reader does about them:
+    the row's buttons, and nothing per finding. Without it the badges read
+    like a form someone still has to fill in."""
+    js = pr.get("judgments") or []
+    if not js:
+        return ""
+    held = [j for j in js if j.get("disposition") == "deferred"]
+    resolved = [j for j in js if j.get("disposition") in ("fixed", "refuted", "accepted", "not-applicable")]
+    sends_back = any(a.get("id") == "request-changes" for a in pr.get("actions") or [])
+    bits = []
+    if resolved:
+        bits.append(f"Approving the row records {'these calls' if len(resolved) != 1 else 'this call'} on the PR, one `/resolve` comment each, then merges if the button says merge.")
+    if held:
+        bits.append(("Sending it back" if sends_back else "Closing it out")
+                    + f" hands {'the ones' if len(held) != 1 else 'the one'} marked "
+                    + ("&ldquo;needs the author&rdquo;" if sends_back else "&ldquo;nobody to fix it&rdquo;")
+                    + (" to the author." if sends_back else " to the lane's next run."))
+    bits.append("Nothing here needs a click of its own.")
+    return '<p class="jfoot">' + " ".join(bits) + "</p>"
 
 
 def judgment_boxes(queue: dict, pr: dict) -> str:
@@ -199,7 +222,7 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
         where = f'<a href="{esc(link)}">{esc(j.get("file") or "")} L{esc(j.get("line") or "?")} ↗</a>' if link else '<a href="' + esc(pr_url(queue, pr["number"])) + '">open the PR ↗</a>'
         cls, label, why = disposition_badge(j.get("disposition"))
         if j.get("disposition") == "deferred" and not sends_back:
-            label, why = "I'd close it out", "My recommendation: this one needs an author and a workflow opened the PR, so close it and let the lane re-queue the page."
+            cls, label, why = DEFERRED_NO_AUTHOR
         out.append(
             '<div class="jbox">'
             f'<div class="qrow"><div class="q">{esc(j.get("finding_id") or "")} {esc(j.get("decision") or j.get("question") or "")}</div>'
@@ -208,7 +231,7 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
             + diffq(j)
             + f'<div class="jmeta">{where}</div></div>'
         )
-    return "".join(out)
+    return "".join(out) + judgment_footer(pr)
 
 
 def pending_judgment(queue: dict, pr: dict) -> str:
@@ -505,7 +528,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         style=STYLE,
         eyebrow=esc(f"{queue.get('repo')} · queue · {queue.get('analyzed_at') or queue.get('generated_at')} · owner: {cfg.get('owner', 'me')} · me: {', '.join(cfg.get('me') or [])}"),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding is my recommendation to you, not something the author already did."),
+        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
         tally=f'<div class="tally">{tally}</div><div class="progress" id="progress"></div>' + do_next_html(queue),
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
@@ -670,6 +693,8 @@ details.quote[open]>summary{margin-bottom:3px}
 .jbox .q{font-weight:600;color:var(--ink);margin-bottom:5px}
 .jbox ul{margin:0;padding-left:18px}.jbox li{margin:2px 0}
 .jmeta{margin-top:5px;color:var(--ink-2)}
+.jfoot{font-size:12.5px;color:var(--ink-3);margin:6px 0 0;font-style:italic}
+.jfoot code{font-style:normal}
 .diffq{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 9px;margin:6px 0;overflow-x:auto;white-space:pre}
 .diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}

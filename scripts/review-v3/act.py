@@ -16,7 +16,10 @@ comment templates and attribution footer):
                      PRs merge; a human-authored PR is approved only unless
                      --merge-humans (authors merge their own PRs).
                      `N:merge` / `N:no-merge` overrides that default for one
-                     PR, so a mixed batch stays a single command.
+                     PR, so a mixed batch stays a single command. Approving
+                     first posts one `/resolve F<n> <disposition>: <why>` per
+                     judged finding, so the review records the call instead of
+                     the merge walking over it.
   --route N:@user|team   request review and post the row's defects (reason
                      codes + judgments) as one comment.
   --request-changes N    post a CHANGES_REQUESTED review built from the row's
@@ -210,7 +213,7 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
             merge = mode == "merge"
         else:
             merge = not args.no_merge and (is_bot or args.merge_humans)
-        s = step("stamp", n, merge=merge, note=args.approve_note or "")
+        s = step("stamp", n, merge=merge, note=args.approve_note or "", resolves=resolve_lines(pr))
         if merge:
             s.note = ""
         elif mode == "no-merge":
@@ -313,6 +316,8 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         lines.append(f"{i}. {s.kind.upper():<8} #{s.pr} {s.title}  (@{s.author}, head {head})")
         if s.kind == "stamp":
             lines.append(f"     preflight: head == {head}, mergeable_state ∈ {STAMP_STATES}, checks green, no changes-requested")
+            for r in s.args.get("resolves") or []:
+                lines.append(f"     comment: {r[:110]}")
             lines.append(f"     POST review APPROVE: \"{approval_body(s.author_type, note=s.args.get('note', ''))}\"")
             lines.append("     PUT merge (squash)" if s.args.get("merge") else f"     no merge — {s.note}")
         elif s.kind == "route":
@@ -553,11 +558,42 @@ def _stamp(gh: GhClient, s: Step) -> tuple[bool, str]:
     if not ok:
         return False, f"preflight refused: {msg}"
     trust = "high"
+    # Record the calls before approving, so the review's own state says why
+    # each finding is closed instead of the merge silently walking over it.
+    resolves = s.args.get("resolves") or []
+    if resolves:
+        gh.comment(s.pr, with_footer("\n".join(resolves)))
     gh.create_review(s.pr, "APPROVE", approval_body(s.author_type, trust, s.args.get("note", "")))
+    tail = f" ({len(resolves)} finding{'s' if len(resolves) != 1 else ''} resolved)" if resolves else ""
     if not s.args.get("merge"):
-        return True, "approved (not merged)"
+        return True, "approved (not merged)" + tail
     gh.merge(s.pr, (detail.get("head") or {}).get("sha") or s.expect_head, "squash")
-    return True, "approved and squash-merged"
+    return True, "approved and squash-merged" + tail
+
+
+RESOLVABLE = ("fixed", "refuted", "accepted", "not-applicable")  # `deferred` goes back to the author instead
+RESOLVE_NOTE_REQUIRED = ("accepted", "not-applicable")
+FINDING_ID_RE = re.compile(r"F\d+")
+
+
+def resolve_lines(pr: dict) -> list[str]:
+    """One `/resolve F<n> <disposition>: <why>` per judged finding, which is
+    how approving a row answers the review instead of merging over it. Only
+    real `F<n>` ids on a v3 card: a triage-prose question has no finding to
+    answer, and `deferred` is the author's, not ours."""
+    if (pr.get("review") or {}).get("surface") != "v3":
+        return []
+    out = []
+    for j in pr.get("judgments") or []:
+        fid = (j.get("finding_id") or "").strip()
+        disp = j.get("disposition")
+        if not FINDING_ID_RE.fullmatch(fid) or disp not in RESOLVABLE:
+            continue
+        why = " ".join((j.get("note") or j.get("decision") or "").split())
+        if disp in RESOLVE_NOTE_REQUIRED and not why:
+            continue  # the handler would reject it as a usage error
+        out.append(f"/resolve {fid} {disp}" + (f": {why}" if why else ""))
+    return out
 
 
 def _route(gh: GhClient, s: Step, pr: dict) -> tuple[bool, str]:
