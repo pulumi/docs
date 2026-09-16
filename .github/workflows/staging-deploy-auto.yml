@@ -38,11 +38,17 @@ name: Staging deploy (auto, infra PRs)
 #   nothing and costs a slot on a stack that serializes; a `synchronize`
 #   that didn't move the head (a base merge, a label) finds the green
 #   status and stops.
-# - Concurrency: the staging stack is one shared environment, so this shares
-#   the `staging-stack` group with the comment lane. GitHub holds at most
-#   one PENDING run per group and silently drops the one a newer request
-#   displaces — which is the right behaviour here, since the newer request
-#   is a newer head, and G4 only ever asks about the current one.
+# - Concurrency sits on the DEPLOY JOB, never the workflow. The staging
+#   stack is one shared environment and GitHub holds at most one pending
+#   run per group, silently dropping whatever a newer request displaces. A
+#   workflow-level group would enroll every PR event — including the
+#   docs-only pushes this lane exists to ignore — before the routing check
+#   could rule them out, so an unrelated push could sit pending on the
+#   stack and displace a queued infra deploy that nobody would be told
+#   about. Routing runs in its own ungated job; only a run that is actually
+#   going to deploy joins the queue. Displacement between real deploys is
+#   still fine: the newer request is a newer head, and G4 only ever asks
+#   about the current one.
 # - Follows the same switch as `/deploy-staging` and the Sentinel itself:
 #   with REVIEW_V3_SENTINEL unset there is no gate to satisfy, so producing
 #   evidence for it would be pure spend.
@@ -57,17 +63,18 @@ permissions:
   statuses: write
   actions: write       # gh workflow run + gh run watch
 
-concurrency:
-  group: staging-stack
-
 jobs:
-  deploy:
+  route:
+    # No concurrency group: deciding whether a PR needs a deploy must never
+    # queue behind one. See the concurrency note in the header.
     if: >-
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
       && github.event.pull_request.draft == false
       && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 10
+    outputs:
+      deploy: ${{ steps.existing.outputs.deploy }}
     steps:
       # Base repo default branch ONLY — see the design notes above.
       # Sparse: route-pr.py, the triage classifier it loads, the routing
@@ -161,8 +168,26 @@ jobs:
           fi
           echo "deploy=$DEPLOY" >> "$GITHUB_OUTPUT"
 
+  deploy:
+    needs: route
+    if: needs.route.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # The one shared environment. Only runs that will actually deploy get
+    # here, so a docs-only push can no longer displace a queued infra
+    # deploy — see the concurrency note in the header.
+    concurrency:
+      group: staging-stack
+    steps:
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
       - name: Deploy to staging and record the status
-        if: steps.route.outputs.needed == 'true' && steps.existing.outputs.deploy == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

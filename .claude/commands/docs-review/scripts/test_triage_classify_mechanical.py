@@ -327,6 +327,69 @@ def test_condition_links() -> None:
     assert_clean("test_condition_links", before)
 
 
+def test_condition_links_under_a_sparse_worktree() -> None:
+    """A link target that exists resolves even when content/ isn't on disk.
+
+    The Sentinel and staging-deploy-auto sparse-checkout the repo — content/
+    is 860 MB they never read — so `(repo_root / "content/...").exists()` is
+    false for every page. Before the `git cat-file` probe, one added
+    internal link flipped an otherwise-mechanical docs PR to substantive and
+    told the author "added link does not resolve" about a page that is
+    plainly there: fail-closed, but on a false reason, and it defeated the
+    mechanical short-circuit entirely.
+
+    This is the gap that a static import-scraping test cannot see. The
+    dependency is on repository DATA reached at runtime through the
+    classifier, not on a module anything imports.
+    """
+    print("test_condition_links_under_a_sparse_worktree")
+    import shutil  # noqa: PLC0415
+    import subprocess  # noqa: PLC0415
+
+    repo_root = HERE.parents[3]
+    if not (repo_root / ".git").exists():  # pragma: no cover - defensive
+        print("  skipped: not a git checkout")
+        return
+
+    tmp = Path(tempfile.mkdtemp())
+    try:
+        sparse = tmp / "sparse"
+        clone = subprocess.run(
+            ["git", "clone", "--quiet", "--depth", "1", "--no-single-branch",
+             f"file://{repo_root}", str(sparse)],
+            capture_output=True, timeout=300,
+        )
+        if clone.returncode != 0:  # pragma: no cover - environment dependent
+            print(f"  skipped: could not clone ({clone.stderr.decode()[:120]})")
+            return
+        subprocess.run(
+            ["git", "sparse-checkout", "set", "--cone",
+             "scripts/review-v3", ".claude/commands/docs-review", ".github"],
+            cwd=sparse, check=True, capture_output=True, timeout=120,
+        )
+        check(not (sparse / "content").exists(),
+              "fixture is only meaningful if content/ really is unmaterialized")
+
+        d_resolved = body_diff(
+            "content/docs/foo.md",
+            added=["+See [Stacks](/docs/iac/concepts/stacks/) for details."])
+        ok, reasons = run_mechanical(d_resolved, repo_root=sparse)
+        check(ok is True,
+              f"a resolvable link must stay mechanical under a sparse worktree; got {reasons}")
+
+        # And the bar must not have gone soft: a target that genuinely does
+        # not exist still fails, so this is a correctness fix, not a bypass.
+        d_ghost = body_diff(
+            "content/docs/foo.md",
+            added=["+See [Ghost](/docs/does/not/exist/) for details."])
+        ok_ghost, reasons_ghost = run_mechanical(d_ghost, repo_root=sparse)
+        check(ok_ghost is False,
+              "a genuinely unresolvable link must still fail under a sparse worktree")
+        check(any("does not resolve" in r for r in reasons_ghost), f"got {reasons_ghost}")
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 # ---- Condition 6: frontmatter keys -------------------------------------------
 
 
@@ -473,6 +536,7 @@ def main() -> int:
         test_condition_files_boundary,
         test_condition_code_and_shortcode,
         test_condition_links,
+        test_condition_links_under_a_sparse_worktree,
         test_condition_frontmatter_keys,
         test_condition_claims_signal,
         test_condition_edition_claims,
