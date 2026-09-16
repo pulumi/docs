@@ -36,6 +36,8 @@ sections:
         link: /case-studies/
       - name: supabase
         link: /case-studies/
+      - name: typesafe-ai
+        link: /case-studies/
       - name: ae-networks
         link: /case-studies/
       - name: deloitte
