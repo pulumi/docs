@@ -179,6 +179,8 @@ The following CLI commands are commonly used to manage stack settings files:
 - [`pulumi config get`](/docs/iac/cli/commands/pulumi_config_get/): Get a configuration value
 - [`pulumi config`](/docs/iac/cli/commands/pulumi_config/): List all configuration values
 - [`pulumi config rm`](/docs/iac/cli/commands/pulumi_config_remove/): Remove a configuration value
+The following commands operate on the stack's state file rather than its settings file, but are often used alongside the commands above:
+
 - [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/): Export the entire stack state
 - [`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/): Import stack state from a file
 
