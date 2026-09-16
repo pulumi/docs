@@ -712,6 +712,11 @@ categories:
         link: /docs/ai/neo/automations/
         available_from: pro
 
+      - id: neo-byok
+        name: BYOK
+        link: /docs/ai/neo/model-providers/
+        available_from: enterprise
+
   - id: administration
     name: Administration
     group: product
