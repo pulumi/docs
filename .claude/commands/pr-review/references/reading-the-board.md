@@ -30,10 +30,10 @@ The top of the board is a short list of moves worth making, most leverage first.
 
 A card is a shortcut for clicking the same buttons down in the rows, not a separate instruction. Light a card and its rows light. Pick a different decision on one of those rows and the card goes out, because it no longer describes what you asked for. A card and a row can never disagree, so the command at the bottom can never contradict itself.
 
-Two cards work slightly differently, because they have no per-row button:
+Two cards deserve a note:
 
-- **Start the chain** approves and squash-merges the first PR in a collision cluster, then merges master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. It claims both PRs, so choosing anything else on either of them puts the card out.
-- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps. Nothing merges.
+- **Start the chain** is the two row buttons it presses: approve and squash-merge the first PR in a collision cluster, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes.
+- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps, with a reason no row button carries. That one has no row equivalent, so it tags the rows it covers with "covered by Do next N" instead of lighting them; choosing anything else on a covered row puts the card out.
 
 ## A row
 

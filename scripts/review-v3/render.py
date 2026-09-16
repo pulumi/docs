@@ -1166,7 +1166,6 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
 .donext .say{flex:1;font-size:14px;color:var(--ink)}
 .donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
-.mrow.claimed{background:var(--surface-2)}
 .claimnote{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--go);border:1px dashed var(--go);border-radius:3px;padding:2px 7px}
 .donext .btn.p{margin-left:auto;white-space:nowrap}
 .clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.clusters summary h2{display:inline}.clusters .note{font-size:12px;color:var(--ink-3)}
@@ -1261,7 +1260,6 @@ SCRIPT = r"""
     card.dataset.claims.split(',').forEach(function(pr){
       var r = document.querySelector('.mrow[data-pr="' + pr + '"]');
       if (!r) return;
-      r.classList.toggle('claimed', on);
       var acts = r.querySelector('.acts');
       var note = r.querySelector('.claimnote');
       if (on && acts && !note) {

@@ -822,11 +822,22 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
         r = c.get("recommendation") or {}
         if r.get("kind") == "chain":
             first, nxt = r.get("first"), r.get("next")
+            # The chain is the two row buttons it would press: approve the
+            # first link, unblock the next. Saying that in `targets` keeps the
+            # card and those rows in agreement, the same as every other card.
+            by_n = {p["number"]: p for p in prs}
+            stamp = next((a["cmd"] for a in (by_n.get(first) or {}).get("actions") or [] if a["id"] == "stamp"), None)
+            targets = {}
+            if stamp:
+                targets[str(first)] = stamp
+            if nxt:
+                targets[str(nxt)] = f"--unblock {nxt}"
             does = f"Approves and squash-merges #{first}" + (
                 f", then merges master into #{nxt} so it can follow." if nxt else ".")
             cards.append({"kind": "chain", "cluster": c["id"], "say": r["say"], "does": does + " One link per run; the next one waits on CI.",
-                          "cmd": r["cmd"], "label": f"approve & merge #{first}",
-                          "claims": [n for n in (first, nxt) if n]})
+                          "cmd": " ".join(targets.values()) if targets else r["cmd"],
+                          "label": f"approve & merge #{first}",
+                          "targets": targets})
         elif r.get("kind") == "consolidate":
             on = r.get("on")
             cards.append({"kind": "consolidate", "cluster": c["id"], "say": r["say"],

@@ -365,7 +365,11 @@ def test_collision_overlap_vs_same_file_and_merge_order():
     assert row(q, 3)["verdict"] == "stamp" and "cluster:C1:same-file" in row(q, 3)["reasons"]
     assert row(q, 4)["verdict"] == "stamp" and cl["merge_order"] == [1, 2, 3]
     assert cl["recommendation"]["kind"] == "chain" and cl["recommendation"]["first"] == 1 and cl["recommendation"]["next"] == 2
-    assert any(d["kind"] == "chain" and d["cmd"] == "--chain C1" for d in q["do_next"])
+    # the chain card is the two row buttons it presses: approve the first
+    # link, unblock the next
+    chain = next(d for d in q["do_next"] if d["kind"] == "chain")
+    assert list(chain["targets"].values()) == ["--stamp 1 --force", "--unblock 2"]
+    assert chain["cmd"] == "--stamp 1 --force --unblock 2"
 
 
 def test_directional_conflict_against_aliases_block():

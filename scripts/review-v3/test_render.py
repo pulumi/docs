@@ -48,7 +48,8 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
     heads = re.findall(r'<div class="sec-head"><h2>([^<]+)</h2><span class="dlabel">([^<]+)</span>', html)
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
     assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
-    assert "#1 and 1 other edit the same lines in the same files" in html and 'data-cmd="--chain C1"' in html
+    assert "#1 and 1 other edit the same lines in the same files" in html
+    assert 'data-cmd="--stamp 1 --force --unblock 2"' in html or 'data-cmd="--stamp 1 --unblock 2"' in html
     assert "Approves and squash-merges #1, then merges master into #2 so it can follow." in html
 
 
@@ -206,9 +207,9 @@ def test_do_next_cards_press_the_rows_they_name():
     assert 'data-targets="{&quot;3&quot;: &quot;--request-changes 3&quot;}"' in html
     # and the script keeps a card and a contrary row decision from both being lit
     assert "function syncCards()" in html and "a chain: the rows it covers defer to it" in html
-    # a chain has no single row button to light, so it marks the rows it covers
+    # a card with no row button of its own (a consolidation) still marks the
+    # rows it covers
     assert "function markClaimed(card, on)" in html and "covered by Do next" in html
-    assert 'data-claims="1,2"' in html
 
 
 def test_ownership_chips_read_as_words():
