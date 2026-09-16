@@ -123,6 +123,22 @@ def test_publish_guard_resets_the_label_and_uses_the_script():
     assert "gh api --method PATCH" in run and "#new-review" in run
 
 
+def test_publish_guard_fails_loudly_when_the_script_does():
+    # Review finding F2 on #21676: the default `run` shell is `bash -e` with
+    # no pipefail, so a crash in handoff_guard.py behind `| tee` would leave
+    # ACTION empty and the step would silently take the rest branch. The
+    # step must set pipefail and must refuse an unrecognised action.
+    step = _step(_job("publish"), "Verify handoff is still current")
+    assert "shell" not in step  # relies on the default shell; keep the guard explicit
+    run = step["run"]
+    assert "set -o pipefail" in run
+    assert run.index("set -o pipefail") < run.index("handoff_guard.py decide")
+    assert 'case "$ACTION" in' in run
+    assert "publish) exit 0" in run
+    assert "redispatch|rest) ;;" in run
+    assert "exit 1" in run.split('case "$ACTION" in')[1].split("esac")[0]
+
+
 def test_publish_guard_is_not_weakened():
     # Every publishing step still gates on the guard's verdict; only the
     # guard itself and the error trap may run without it.

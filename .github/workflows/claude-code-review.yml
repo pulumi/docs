@@ -2042,6 +2042,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEPTH: ${{ github.event.inputs.supersede_depth || '0' }}
         run: |
+          # The default `run` shell is `bash -e` with NO pipefail, so without
+          # this a crash in handoff_guard.py would be masked by the tee below,
+          # ACTION would parse empty, and the step would silently take the
+          # rest branch — review:stale, no publish, nothing red. A guard that
+          # can't decide must fail loudly instead: the error trap then sets
+          # review:error and concludes the check-run failure, the job's
+          # normal contract for a broken publish.
+          set -o pipefail
           PR=$(jq -r .pr .review-v3-handoff.json)
           HANDOFF_SHA=$(jq -r .head_sha .review-v3-handoff.json)
           CHECK_ID=$(jq -r .check_id .review-v3-handoff.json)
@@ -2061,7 +2069,14 @@ jobs:
           ACTION=$(grep '^action=' /tmp/handoff-guard.txt | cut -d= -f2-)
           REASON=$(grep '^reason=' /tmp/handoff-guard.txt | cut -d= -f2-)
           LIVE_SHA=$(grep '^live_head=' /tmp/handoff-guard.txt | cut -d= -f2-)
-          [ "$ACTION" != "publish" ] || exit 0
+          case "$ACTION" in
+            publish) exit 0 ;;
+            redispatch|rest) ;;
+            *)
+              echo "::error::handoff-guard returned no usable action ('$ACTION'); refusing to guess — see the script output above"
+              exit 1
+              ;;
+          esac
 
           echo "publish: $REASON"
           .claude/commands/docs-review/scripts/set-review-label.sh \
