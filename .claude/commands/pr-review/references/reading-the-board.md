@@ -49,7 +49,8 @@ edit ↗
 ```
 
 - **The three links on the left** are the PR, its Files changed tab (the diff), and the PR in the VS Code web editor, which gives you a real editor over the branch.
-- **The preview fold** lists every page this PR changes on its own deployed copy of the site, the same list pulumi-bot pins on the PR. One click to a rendered page, without a trip to GitHub.
+- **The reviewer's guide fold** carries what the guide says beyond its findings: what the PR changes, what the review already verified so you needn't, and links to the guide, the author card and the evidence page.
+- **The preview fold** lists every page this PR changes on its own deployed copy of the site, the same list pulumi-bot pins on the PR. One click to a rendered page, without a trip to GitHub. Because those links exist, the screenshot action only appears in the detail view (`/pr-review N`), where the images embed in the page.
 - **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
 - **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
 - **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.

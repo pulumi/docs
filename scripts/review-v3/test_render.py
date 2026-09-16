@@ -117,6 +117,25 @@ def test_an_unjudged_row_still_shows_the_diff():
     assert render.patch_quote(p, "no/such/file.md", "L3") is None
 
 
+def test_the_row_carries_the_reviewers_guide():
+    q = _queue()
+    p = row(q, 1)
+    p["review"] = {**(p.get("review") or {}),
+                   "brief_summary_bullets": ["`a.md`: the stacks link moves to `/docs/iac/concepts/stacks/`."],
+                   "rubber_stamp": ["**Facts:** 12 claims checked, 7 verified clean."],
+                   "brief_comment_id": 42, "author_comment_id": 41,
+                   "evidence_url": "https://review-evidence.invalid/1/latest.html"}
+    box = render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+    assert "<summary>reviewer&#x27;s guide</summary>" in box
+    assert "What this PR changes" in box and "the stacks link moves" in box
+    assert "Already checked, so you needn&#x27;t" in box and "12 claims checked" in box
+    assert "#issuecomment-42" in box and "#issuecomment-41" in box
+    assert 'href="https://review-evidence.invalid/1/latest.html"' in box
+    # nothing from the guide, nothing rendered
+    p["review"] = {"brief_summary_bullets": [], "rubber_stamp": [], "evidence_url": None}
+    assert "reviewer&#x27;s guide</summary>" not in render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+
+
 def test_a_row_links_both_the_pr_and_its_diff():
     html = render.render_board(_queue())
     assert '<a class="pr" href="https://github.com/pulumi/docs/pull/1" title="Open pull request #1' in html
@@ -265,7 +284,11 @@ def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     # One decision per row, side actions ride along: the script puts out the
     # other lit decision on the same PR, and only decisions count as made.
     jhtml = render.render_board(_queue())
-    assert 'data-cmd="--render 1" data-pr="1" data-kind="side"' in jhtml
+    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    # the screenshot button is detail-view only: on the board the row already
+    # links every changed page on the preview
+    assert 'data-cmd="--render 1"' not in jhtml
+    assert 'data-cmd="--render 1"' in render.render_detail(_queue(), 1)
     assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
     assert 'button.btn.sel[data-kind="decision"][data-pr="\' + pr + \'"]' in html  # one decision per row, via clearRow
     assert 'button.btn.sel[data-kind="decision"]\')) done++' in html

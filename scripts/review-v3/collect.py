@@ -264,6 +264,28 @@ def find_review_comments(comments: list[dict]) -> tuple[dict | None, dict | None
     return None, None, "none"
 
 
+RUBBER_RE = re.compile(r"### ✅ What you can rubber-stamp\s*(.*?)(?=\n#{2,3} |\n💡|\n📎|\Z)", re.S)
+EVIDENCE_RE = re.compile(r"\[([^\]]+)\]\((https://[^)\s]*review-evidence[^)\s]*)\)")
+
+
+def rubber_stamp_lines(brief_body: str) -> list[str]:
+    """The brief's "what you can rubber-stamp" bullets: what the review
+    already checked, so the approver knows what not to re-check."""
+    m = RUBBER_RE.search(brief_body or "")
+    if not m:
+        return []
+    return [ln.strip().lstrip("-").strip() for ln in m.group(1).splitlines() if ln.strip().startswith("-")]
+
+
+def evidence_url(brief_body: str, author_body: str = "") -> str | None:
+    """The verification trail the review published for this PR."""
+    for body in (brief_body or "", author_body or ""):
+        m = EVIDENCE_RE.search(body)
+        if m:
+            return m.group(2)
+    return None
+
+
 def review_status(labels: set[str], surface: str, review_body: str, head_sha: str, triage_prose: bool) -> str:
     """CURRENT | STALE | IN_PROGRESS | ERROR | ABSENT | TRIAGE_PROSE.
 
@@ -324,6 +346,8 @@ def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
         "stances": stances,
         "nothing_blocks": nothing_blocks,
         "brief_summary_bullets": brief_change_bullets(brief_body) if brief_body else [],
+        "rubber_stamp": rubber_stamp_lines(brief_body or ""),
+        "evidence_url": evidence_url(brief_body or "", author_body or ""),
     }
 
 
@@ -576,7 +600,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     review = parse_review(author_body, brief_body, number, gh.repo) if author_body else {
         "surface": "none", "reviewed_sha": None, "parse_confidence": "low", "items": [],
         "summary": None, "review_state": None, "warning_rows": [], "stances": False,
-        "nothing_blocks": False, "brief_summary_bullets": [],
+        "nothing_blocks": False, "brief_summary_bullets": [], "rubber_stamp": [], "evidence_url": None,
     }
     review["status"] = status
     review["base_merged"] = base_merged

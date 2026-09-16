@@ -165,6 +165,19 @@ def test_author_classification_never_assumes_internal():
     assert ctype == "external" and "failed" in note
 
 
+def test_the_brief_yields_its_rubber_stamp_lines_and_evidence_link():
+    brief = ("## Reviewer's guide v2\n\n### ⚠️ Check these before approving\n\n| F1 | x | y |\n\n"
+             "### ✅ What you can rubber-stamp\n\n"
+             "- **Facts:** 12 factual claims checked — 7 verified clean.\n"
+             "- **Mechanics:** frontmatter sweep ran.\n\n"
+             "💡 **Pre-existing issues in touched files:** 2\n\n"
+             "📎 **Full evidence:** [verification trail](https://review-evidence-d1a6b84.s3.us-west-2.amazonaws.com/21622/latest.html)\n")
+    lines = collect.rubber_stamp_lines(brief)
+    assert lines == ["**Facts:** 12 factual claims checked — 7 verified clean.", "**Mechanics:** frontmatter sweep ran."]
+    assert collect.evidence_url(brief).endswith("/21622/latest.html")
+    assert collect.rubber_stamp_lines("") == [] and collect.evidence_url("", "") is None
+
+
 def test_only_an_agent_bot_can_be_sent_a_review_back():
     assert collect.can_revise("bot", "workprentice[bot]") is True
     assert collect.can_revise("bot", "Copilot") is True

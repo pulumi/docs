@@ -600,6 +600,39 @@ def small_diff_html(queue: dict, pr: dict) -> str:
             + "".join(out) + "</details>")
 
 
+def guide_block(queue: dict, pr: dict) -> str:
+    """What the reviewer's guide says beyond its findings: what the PR
+    changes, what the review already checked so you needn't, and the links
+    to the guide itself and its evidence page. The guide is written for an
+    approver, so the board should not make you go and find it."""
+    r = pr.get("review") or {}
+    bullets = r.get("brief_summary_bullets") or []
+    checked = r.get("rubber_stamp") or []
+    links = []
+    if r.get("brief_comment_id"):
+        links.append(f'<a href="{esc(pr_url(queue, pr["number"]))}#issuecomment-{esc(r["brief_comment_id"])}">'
+                     "the reviewer&#x27;s guide ↗</a>")
+    if r.get("author_comment_id"):
+        links.append(f'<a href="{esc(pr_url(queue, pr["number"]))}#issuecomment-{esc(r["author_comment_id"])}">'
+                     "the author card ↗</a>")
+    if r.get("evidence_url"):
+        links.append(f'<a href="{esc(r["evidence_url"])}">the evidence page ↗</a>')
+    if not (bullets or checked or links):
+        return ""
+    parts = []
+    if bullets:
+        parts.append("<h5>What this PR changes</h5><ul>"
+                     + "".join(f"<li>{md_inline(b)}</li>" for b in bullets[:12]) + "</ul>")
+    if checked:
+        parts.append("<h5>Already checked, so you needn&#x27;t</h5><ul>"
+                     + "".join(f"<li>{md_inline(c)}</li>" for c in checked[:6]) + "</ul>")
+    if links:
+        parts.append('<p class="jmeta">' + " · ".join(links) + "</p>")
+    return ('<details class="guide" title="The reviewer\'s guide in short: what the PR changes, what the review '
+            'already verified, and links to the guide, the author card and the evidence page.">'
+            f'<summary>reviewer&#x27;s guide</summary>{"".join(parts)}</details>')
+
+
 def preview_links(pr: dict) -> str:
     """The pages this PR changes, on its own deployed preview, as links.
 
@@ -673,8 +706,13 @@ def pending_judgment(queue: dict, pr: dict) -> str:
             + "</div>")
 
 
-def action_bar(pr: dict, queue: dict) -> str:
+def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     actions = list(pr.get("actions") or [])
+    # The row already links every changed page on the deployed preview, so a
+    # screenshot button there is a second, slower way to see the same thing.
+    # It earns its place only where the shots get embedded: the detail view.
+    if not expanded:
+        actions = [a for a in actions if a["id"] != "render"]
     # The primary is what the judge recommended when it recommended an
     # action, else the row's first action. It renders last, right-aligned,
     # colored by what it does; everything else stays grey on the left.
@@ -715,13 +753,14 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
         f'<div class="meta">{meta_line(pr)}</div>',
         f'<div class="chips">{chips(pr.get("reasons") or [])}</div>',
         f'<p class="sum">{esc(pr.get("summary") or "")}</p>' if pr.get("summary") else "",
+        guide_block(queue, pr),
         preview_links(pr),
     ]
     if v in ("judge",) or pr.get("judgments") or expanded:
         body.append(judgment_boxes(queue, pr))
     if v == "blocked":
         body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []))}</div></div>')
-    body.append(action_bar(pr, queue))
+    body.append(action_bar(pr, queue, expanded=expanded))
     if expanded:
         body.append(detail_sections(queue, pr))
     body.append("</div></div>")
@@ -1227,6 +1266,11 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .diffq{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 9px;margin:6px 0;overflow-x:auto;white-space:pre}
 .diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}.diffq .hunk{color:var(--ink-3)}
 .dfile{margin-top:6px}.dfile>a{font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+details.guide{margin:2px 0}
+details.guide>summary{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);cursor:pointer}
+details.guide h5{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin:6px 0 2px}
+details.guide ul{margin:0;padding-left:18px}
+details.guide li{font-size:13px;color:var(--ink-2);margin:2px 0}
 details.preview{margin:2px 0 6px}
 details.preview>summary{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);cursor:pointer}
 details.preview ul{margin:4px 0 0;padding-left:18px}
