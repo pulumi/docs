@@ -138,11 +138,20 @@ def test_a_row_with_nothing_open_says_so():
     p["judgments"] = []
     p["review"] = {**(p.get("review") or {}), "items": []}
     p["reasons"] = ["risk:typo", "review:absent"]
+    p["labels"] = ["review:frontmatter-only"]
     html = render.render_board(q)
     box = html.split('data-pr="1"')[1].split('class="acts"')[0]
-    assert "No open findings on the review" in box
+    assert "Nothing reviewed this diff" in box
     assert "This row still needs a call: No review has run on this PR at all" in box
+    # and it says WHY nothing reviewed it, rather than leaving that a mystery
+    assert "It was skipped because the diff only touches frontmatter" in box
     assert "not yet judged" not in box
+    # a small diff is shown in place; a big one links out instead
+    assert "the whole diff · 2 lines in 1 file" in box
+    p["files"] = [{"path": f"content/docs/p{i}.md", "additions": 30, "deletions": 30,
+                   "patch": "@@ -1,2 +1,2 @@\n-a\n+b"} for i in range(6)]
+    box = render.render_board(q).split('data-pr="1"')[1].split('class="acts"')[0]
+    assert "the whole diff" not in box and "Read the diff on GitHub" in box
 
 
 def test_filter_chips_carry_their_counts():

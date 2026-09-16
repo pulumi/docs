@@ -540,6 +540,60 @@ def review_stance(body: str) -> tuple[str, str, str] | None:
     return None
 
 
+# Why the review pipeline skipped a PR, keyed by the label it acts on. The
+# ladder is claude-code-review.yml's: draft, trivial, frontmatter-only,
+# oversized, bot author, already reviewed.
+SKIP_REASON = {
+    "review:trivial": "triage classified the diff as trivial, so the review pipeline short-circuited",
+    "review:frontmatter-only": "the diff only touches frontmatter, so the review pipeline short-circuited",
+    "review:oversized": "the diff is too big to review inside the pipeline's budget",
+    "review:prose-flagged": "only triage's cheap prose check ran, not a full review",
+}
+SMALL_DIFF_LINES = 40
+SMALL_DIFF_FILES = 4
+
+
+def why_no_review(pr: dict) -> str:
+    for label in pr.get("labels") or []:
+        if label in SKIP_REASON:
+            return SKIP_REASON[label]
+    if pr.get("draft"):
+        return "the PR is a draft, and drafts are not reviewed"
+    if (pr.get("author") or {}).get("type") == "bot":
+        return "a bot opened it and the pipeline skips most bot PRs"
+    return ""
+
+
+def small_diff_html(queue: dict, pr: dict) -> str:
+    """A diff small enough to read in place, rendered in place. When a row
+    has no findings to show, the diff IS the thing to look at, and making
+    someone open GitHub for ten lines is the wrong trade."""
+    files = pr.get("files") or []
+    changed = sum((f.get("additions") or 0) + (f.get("deletions") or 0) for f in files)
+    if not files or changed > SMALL_DIFF_LINES or len(files) > SMALL_DIFF_FILES:
+        return ""
+    if any(f.get("patch") is None for f in files):
+        return ""
+    out = []
+    for f in files:
+        lines = []
+        for line in (f.get("patch") or "").splitlines():
+            if line.startswith("+"):
+                lines.append(f'<span class="add">{esc(line)}</span>')
+            elif line.startswith("-"):
+                lines.append(f'<span class="del">{esc(line)}</span>')
+            elif line.startswith("@@"):
+                lines.append(f'<span class="hunk">{esc(line)}</span>')
+            else:
+                lines.append(esc(line))
+        out.append(f'<div class="dfile"><a href="{esc(files_url(queue, pr["number"]))}">{esc(f["path"])}</a>'
+                   f'<div class="diffq">' + "\n".join(lines) + "</div></div>")
+    return ('<details class="quote" open title="The whole diff, because it is small enough to read here. '
+            'Click to fold it away."><summary>the whole diff · '
+            f'{changed} line{"s" if changed != 1 else ""} in {len(files)} file{"s" if len(files) != 1 else ""}</summary>'
+            + "".join(out) + "</details>")
+
+
 def pending_judgment(queue: dict, pr: dict) -> str:
     """Before the judge step runs: the open findings, each with the diff
     lines it is about, and what the row asks."""
@@ -573,8 +627,15 @@ def pending_judgment(queue: dict, pr: dict) -> str:
                     if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape", "self-accepted",
                                            "directional", "duplicate", "desc", "brief", "merging-over")), None)
         because = chip_title(why).rsplit(" (", 1)[0] if why else "The queue could not clear every stamp gate on this row."
-        return ('<div class="jbox pending"><div class="q">No open findings on the review</div>'
-                f'<p class="jfoot">This row still needs a call: {esc(because)}</p></div>')
+        skipped = why_no_review(pr) if (why or "").startswith("review:absent") else ""
+        diff = small_diff_html(queue, pr)
+        return ('<div class="jbox pending"><div class="q">'
+                + ("Nothing reviewed this diff" if skipped else "No open findings on the review") + "</div>"
+                + f'<p class="jfoot">This row still needs a call: {esc(because)}'
+                + (f" It was skipped because {esc(skipped)}." if skipped else "")
+                + (" The diff is small enough to read here, so it is below."
+                   if diff else f' <a href="{esc(files_url(queue, pr["number"]))}">Read the diff on GitHub ↗</a>')
+                + "</p>" + diff + "</div>")
     return ('<div class="jbox pending"><div class="q">'
             + f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged</div>"
             + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
@@ -1130,7 +1191,8 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .jfoot{font-size:12.5px;color:var(--ink-3);margin:6px 0 0;font-style:italic}
 .jfoot code{font-style:normal}
 .diffq{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:6px 9px;margin:6px 0;overflow-x:auto;white-space:pre}
-.diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}
+.diffq .del{color:var(--stop)}.diffq .add{color:var(--go)}.diffq .hunk{color:var(--ink-3)}
+.dfile{margin-top:6px}.dfile>a{font-family:"IBM Plex Mono",monospace;font-size:11.5px}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}
 .btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
