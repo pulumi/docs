@@ -922,13 +922,17 @@ def _day(s: str) -> date | None:
             return None
 
 
-SUMMARY_MAX = 220
+# The brief writes one orientation sentence for the approver; that sentence
+# is the summary, however long it runs. Only a PR-body fallback gets cut,
+# and then at a sentence, because a body's first line is prose nobody wrote
+# for this row. The ceiling is a guard against a pathological line, not a
+# style: a row is allowed to be two lines tall.
+SUMMARY_MAX = 600
 
 
 def clip(text: str, limit: int = SUMMARY_MAX) -> str:
-    """Cut at a sentence if there is one in range, else at a word. Never
-    mid-word: "…post-migration follow-through for existin…" reads as a bug,
-    because it is one."""
+    """Never mid-word: "…follow-through for existin…" reads as a bug,
+    because it is one. Prefer ending on a sentence, else on a word."""
     t = " ".join(text.split())
     if len(t) <= limit:
         return t
@@ -947,7 +951,9 @@ def one_line_summary(pr: dict) -> str:
     for line in body.splitlines():
         s = line.strip()
         if s.startswith("_") and s.endswith("_") and len(s) > 2 and "TODO" not in s:
-            return clip(s.strip("_"))
+            # The brief's own sentence, whole: it was written to orient an
+            # approver, and cutting it mid-thought defeats the point.
+            return " ".join(s.strip("_").split())
     for line in (pr.get("body") or "").splitlines():
         s = line.strip()
         if s and not s.startswith(("#", "<!--", "-", "|", ">", "🤖", "http", "[!")):

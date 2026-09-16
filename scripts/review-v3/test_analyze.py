@@ -582,12 +582,16 @@ def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
 def test_a_summary_is_cut_at_a_boundary_not_mid_word():
     long = ("Daily link-checker follow-up for 2026-09-16. Four entries were reported (2 internal, 2 external). "
             "One was actionable; one was a false positive; two are already tracked by an existing issue.")
-    out = analyze.clip(long)
-    assert out.endswith(".") and "existin…" not in out and len(out) <= analyze.SUMMARY_MAX
+    out = analyze.clip(long, limit=120)
+    assert out.endswith(".") and "existin…" not in out and len(out) <= 120
     assert analyze.clip("short enough") == "short enough"
     # no sentence in range: cut at a word, and mark the cut
-    words = analyze.clip("word " * 80)
+    words = analyze.clip("word " * 80, limit=100)
     assert words.endswith("…") and not words.endswith("wor…")
+    # the brief's own orientation sentence is never cut, however long
+    brief = "_" + ("a sentence that runs on and on " * 12).strip() + "._"
+    pr = {"review": {"author_body": f"## guide\n\n{brief}\n"}, "body": "", "title": "t"}
+    assert analyze.one_line_summary(pr) == brief.strip("_")
 
 
 def test_blocked_rows_get_a_card_so_the_hidden_ones_still_surface():
