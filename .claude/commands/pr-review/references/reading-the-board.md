@@ -5,7 +5,7 @@ description: How to read the /pr-review board — every element on the page, wha
 
 # Reading the board
 
-The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind.
+The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind. Claude does not wait at the page for that, though: it plans the command the board opened with — read-only, no GitHub calls — and comes back with the preview and one question, execute or not.
 
 One run of `/pr-review` renders one board. Re-running re-renders it, and publishing updates the same page.
 
