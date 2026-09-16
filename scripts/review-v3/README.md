@@ -139,6 +139,21 @@ subject × change type → required approver team. Subjects come from
 `classify_path()` (shared with triage) applied to **live file lists**, never
 labels. `routing.py` fails closed on any config it cannot validate.
 
+The same resolution has two consumers. The Sentinel resolves it itself from
+live API state to decide what G3 requires. Triage resolves it through
+`route-pr.py` and *requests* those teams as PR reviewers, once at open /
+ready — never on synchronize, because assignments are sticky and a
+re-request on every push is the notification noise v3 exists to remove.
+Rollout switch: repo variable `REVIEW_V3_ROUTING` — `'1'` turns on both the
+reviewer request and triage's synchronize label-delta pass; unset (how it
+ships) means a push runs no triage pass and no team is ever requested, so
+the matrix is enforced at the merge box without anyone having been told.
+The request needs the **org-scoped** `PULUMI_BOT_TOKEN` (minted from ESC in
+`claude-triage.yml`): the `requested_reviewers` endpoint resolves `org/slug`
+against the org, which the repo-scoped `GITHUB_TOKEN` cannot do. Without it
+the step logs the teams it would have requested and routes nobody — it is an
+assist, never a gate.
+
 Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
 `website`, `programs` (docs-guild, the blog team, or marketing per the
 matrix), `infra` — exactly the build and deploy pipeline (`infrastructure/`,
