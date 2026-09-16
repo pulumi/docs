@@ -66,8 +66,19 @@ on:
 
 permissions:
   checks: write
-  pull-requests: read
-  issues: write        # the ⛔ status strip PATCHes the author card
+  # `pull-requests: write`, not `issues: write`, is what lets this job write
+  # the pinned status comment and the ⛔ strip. Both go through
+  # `POST/PATCH /repos/{o}/{r}/issues/{n}/comments`, and the endpoint's name
+  # is a trap: on a PR number that endpoint is governed by the
+  # **pull_requests** scope, not `issues`. The old block asked for
+  # `issues: write` + `pull-requests: read` and looked right for months
+  # because neither writer had ever run — the strip only fires when
+  # enforcing, and the status comment did not exist. The first real POST
+  # (PR #21642, 2026-09-16) failed with exit 1. `issues: write` is kept
+  # because gh's own endpoint naming keeps inviting it back; it is not the
+  # one doing the work.
+  pull-requests: write
+  issues: write
   contents: read
   id-token: write      # ESC OIDC for the org-scoped team-membership token
 

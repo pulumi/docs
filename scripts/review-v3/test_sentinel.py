@@ -886,6 +886,54 @@ def test_workflow_never_checks_out_pr_code():
     assert "default_branch" in wf  # checkout pinned to base default branch
 
 
+def test_workflow_can_actually_write_the_comments_it_writes():
+    """Comment writers need `pull-requests: write`, not `issues: write`.
+
+    Both the pinned status comment and the ⛔ strip go through
+    `/repos/{o}/{r}/issues/{n}/comments`, whose name is a trap: on a PR
+    number that endpoint is governed by the pull_requests scope. The block
+    asked for `issues: write` + `pull-requests: read` and read as correct
+    for months because neither writer had ever run — the strip only fires
+    when enforcing, and the status comment did not exist. The first real
+    POST failed with exit 1 (PR #21642).
+    """
+    for name in ("review-sentinel.yml", "staging-deploy-pr.yml"):
+        wf = (REPO_ROOT / ".github" / "workflows" / name).read_text()
+        assert "pull-requests: write" in wf, (
+            f"{name} posts comments on a PR and needs `pull-requests: write`; "
+            "`issues: write` does not cover the /issues/{n}/comments endpoint "
+            "when {n} is a pull request"
+        )
+
+
+def test_gh_failures_carry_the_reason():
+    """A failed `gh` call must surface stderr, not just an exit code.
+
+    CalledProcessError prints argv and a status; gh's explanation lives in
+    stderr and was being discarded, which is what turned a one-line
+    permission error into a log dive.
+    """
+    class _Failed:
+        returncode = 1
+        stdout = ""
+        stderr = "gh: Resource not accessible by integration (HTTP 403)"
+
+    gh = sentinel.Gh("pulumi/docs", 1)
+    original = sentinel.subprocess.run
+    sentinel.subprocess.run = lambda *a, **k: _Failed()
+    try:
+        gh.post_issue_comment("a" * 5000)
+    except sentinel.SentinelDataError as exc:
+        msg = str(exc)
+        assert "403" in msg and "not accessible" in msg, msg
+        assert "issues/1/comments" in msg, f"the endpoint should be named: {msg}"
+        assert "aaaa" not in msg, "the rendered body must not be echoed into the error"
+    else:  # pragma: no cover
+        raise AssertionError("a non-zero gh exit must raise")
+    finally:
+        sentinel.subprocess.run = original
+
+
 def test_sparse_checkout_covers_everything_the_evaluator_loads():
     """The sparse list is a dependency declaration, so pin it to reality.
 

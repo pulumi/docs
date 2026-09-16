@@ -136,8 +136,21 @@ class Gh:
             env = dict(os.environ)
             env["GH_TOKEN"] = os.environ[token_env]
         result = subprocess.run(
-            ["gh", *args], text=True, capture_output=True, check=True, env=env,
+            ["gh", *args], text=True, capture_output=True, env=env,
         )
+        if result.returncode != 0:
+            # `check=True` would raise CalledProcessError, whose message is
+            # the argv and an exit code — gh's actual explanation goes in
+            # stderr, which that exception never prints. The permission bug
+            # on PR #21642 cost a log dive and a guess for exactly this
+            # reason: gh had said what was wrong and the traceback dropped
+            # it. Keep the endpoint (the useful half of the argv) and the
+            # stderr; drop the body, which is kilobytes of rendered markdown.
+            endpoint = next((a for a in args if "/" in a and not a.startswith("-")), " ".join(args[:2]))
+            raise SentinelDataError(
+                f"gh {args[0]} {endpoint} failed (exit {result.returncode}): "
+                f"{(result.stderr or '').strip()[:400] or '<no stderr>'}"
+            )
         return result.stdout
 
     def get_pr(self) -> dict:
@@ -172,12 +185,17 @@ class Gh:
                 token_env="GH_TOKEN_TEAM_READ",
             )
             return out.strip() or "none"
-        except subprocess.CalledProcessError as exc:
-            stderr = (exc.stderr or "").strip()
-            if "HTTP 404" in stderr or "Not Found" in stderr:
+        except SentinelDataError as exc:
+            # A clean 404 is the ordinary "not a member" answer and must stay
+            # a plain `none` — anything else is a real lookup failure and
+            # keeps erroring, so G3 reports action_required rather than
+            # lying red. `_run` now carries gh's stderr in the message, so
+            # this matches on that text rather than on a CalledProcessError
+            # attribute.
+            if "HTTP 404" in str(exc) or "Not Found" in str(exc):
                 return "none"
             raise SentinelDataError(
-                f"team membership lookup failed ({org}/{team_slug}/{user}): {stderr[:200]}"
+                f"team membership lookup failed ({org}/{team_slug}/{user}): {exc}"
             ) from exc
 
     def get_label_events(self) -> list[dict]:

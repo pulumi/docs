@@ -40,6 +40,13 @@ on:
 
 permissions:
   contents: read
+  # Same trap as review-sentinel.yml: this workflow's refusal comments and
+  # the 🚀 started comment all POST to `/issues/{n}/comments` on a PR
+  # number, which the **pull_requests** scope governs, not `issues`. It has
+  # never shown up because `/deploy-staging` has not been invoked once
+  # (695 runs, all short-circuited), so the first real use would have failed
+  # the same way PR #21642 did.
+  pull-requests: write
   issues: write
   statuses: write
   actions: write       # gh workflow run + gh run watch
