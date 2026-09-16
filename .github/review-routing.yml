@@ -163,6 +163,7 @@ teams: # role -> GitHub team slug (org/<team>)
   docs-guild: pulumi/docs-guild
   blog: pulumi/docs-blog-review
   marketing: pulumi/docs-marketing-review
+  blog: pulumi/docs-blog-review
   tools: pulumi/docs-tools
 
 bots: [pulumi-bot] # machine USER accounts whose approvals never count (type==Bot excluded automatically)
@@ -185,6 +186,7 @@ sla:
   docs-guild: { business_days: 3, escalate_to: "tatcoo-pulumi" }
   blog: { business_days: 3, escalate_to: "cnunciato" }
   marketing: { business_days: 3, escalate_to: "cnunciato" }
+  blog: { business_days: 3, escalate_to: "cnunciato" }
 
 author_staleness: { warn_days: 14, close_days: 21 }
 

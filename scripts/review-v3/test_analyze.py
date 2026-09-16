@@ -67,10 +67,11 @@ def stampable(number: int = 100, **over) -> dict:
 NO_ALIASES: frozenset = frozenset()
 
 
-def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, **kw) -> dict:
+def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None, **kw) -> dict:
     """Collect + analyze the specs over a snapshot. `aliases=None` computes
     the alias map from `repo_root`; the default is an empty set. `teams`
-    stands in for collect's GitHub team lookup (none exist by default)."""
+    stands in for collect's GitHub team lookup (unreadable by default), and
+    `my_teams` for the approver's memberships."""
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
         make_snapshot(root, specs)
@@ -78,6 +79,8 @@ def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None,
         q = collect.collect(gh, cache_dir=None, repo_root=repo_root or root, workers=1, numbers=[s["number"] for s in specs])
         if teams is not None:
             q["teams"] = teams
+        if my_teams is not None:
+            q["my_teams"] = my_teams
         return analyze.analyze(q, kw.pop("cfg", cfg()), config=config, repo_root=repo_root or root,
                                aliases=(None if aliases is None else set(aliases)), today=TODAY, **kw)
 
@@ -245,8 +248,10 @@ def test_gate_owner_not_mine_routes():
     p = row(q, 100)
     assert p["verdict"] == "route" and "route:docs-guild" in p["reasons"]
     assert row(run([stampable()], cfg=cfg(me=["docs"])), 100)["verdict"] == "stamp"
-    assert p["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager"  # canned config's escalate_to
-    assert [a["cmd"] for a in p["actions"] if a["id"] == "stamp"] == ["--stamp 100 --force"]  # the lane is a default, not a lock
+    # teams unreadable here, so the config's team is the target, marked unchecked
+    assert p["actions"][0]["cmd"] == "--route 100:@pulumi/docs-guild" and "route:team-unverified" in p["reasons"]
+    # the lane is a default, not a lock: "approve anyway", both merge choices
+    assert [a["cmd"] for a in p["actions"] if a["id"].startswith("stamp")] == ["--stamp 100 --force", "--stamp 100:no-merge --force"]
 
 
 def test_gate_new_blog_post():
@@ -565,6 +570,22 @@ def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
 
 
+def test_no_config_file_takes_its_lanes_from_github_teams():
+    # A first run with no ~/.pr-review.yml: the org chart answers "which
+    # lanes are mine" better than claiming all of them.
+    defaults = pr_review_config.parse_config({}, source="defaults")
+    q = run([stampable(1), stampable(2, title="Blog", labels=["review:no-blockers", "domain:blog"],
+                                     files=[_file("content/blog/p/index.md", ["x"])])],
+            cfg=defaults, my_teams={"pulumi/docs-guild": True, "pulumi/docs-marketing-review": False,
+                                    "pulumi/docs-tools": None})
+    assert q["config"]["me"] == ["docs", "programs"] and q["config"]["source"] == "github-teams"
+    assert row(q, 1)["is_mine"] is True and row(q, 2)["verdict"] == "route"
+    # memberships unreadable: the old fallback stands, every lane is mine
+    q = run([stampable(1)], cfg=pr_review_config.parse_config({}, source="defaults"),
+            my_teams={"pulumi/docs-guild": None})
+    assert set(q["config"]["me"]) == set(routing.SUBJECTS) and q["config"]["source"] == "defaults"
+
+
 def test_route_targets_the_team_when_github_has_it_else_the_sla_person():
     q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": True})
     p = row(q, 100)
@@ -572,8 +593,12 @@ def test_route_targets_the_team_when_github_has_it_else_the_sla_person():
     q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": False})
     p = row(q, 100)
     assert p["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager" and "route:no-team" in p["reasons"]
-    q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": None})  # token can't read teams
-    assert row(q, 100)["actions"][0]["cmd"] == "--route 100:@TODO-owning-manager"
+    # "can't read teams" is not "the team is missing": the config's team is
+    # still the target, and the row says the check didn't run.
+    q = run([stampable()], cfg=cfg(me=["blog"]), teams={"pulumi/docs-guild": None})
+    p = row(q, 100)
+    assert p["actions"][0]["cmd"] == "--route 100:@pulumi/docs-guild"
+    assert "route:team-unverified" in p["reasons"] and "route:no-team" not in p["reasons"]
 
 
 def test_do_next_lists_send_back_route_and_stamp():

@@ -53,6 +53,20 @@ class UserConfig:
         }
 
 
+def lanes_from_teams(memberships: dict, config) -> list[str]:
+    """The lanes a person owns by virtue of the teams they are actually on:
+    every team they belong to maps back to its routing role, and every matrix
+    cell naming that role contributes its subject. This is what `me` means
+    when no config file pins it — the org chart already knows the answer, so
+    a first run doesn't have to claim every lane."""
+    roles = {r for r, team in config.teams.items() if memberships.get(team) is True}
+    if not roles:
+        return []
+    lanes = {d for d, cell in config.matrix.items()
+             if roles & {cell.get("mechanical"), cell.get("substantive")}}
+    return sorted(lanes)
+
+
 def parse_config(raw: object, source: str = "<raw>") -> UserConfig:
     """Validate a loaded YAML value into a UserConfig. Raises ValueError on a
     shape the queue can't honour (unknown lane, non-integer threshold)."""
@@ -100,7 +114,7 @@ def load_user_config(path: str | Path | None = None) -> UserConfig:
     p = Path(path) if path else DEFAULT_PATH
     if not p.exists():
         cfg = parse_config({}, source="defaults")
-        cfg.warnings = [f"{p} not found — every lane counts as mine; create it to see route rows"]
+        cfg.warnings = [f"{p} not found — falling back to your GitHub team memberships (every lane, if those can't be read); create it to pin your lanes"]
         return cfg
     try:
         raw = yaml.safe_load(p.read_text())

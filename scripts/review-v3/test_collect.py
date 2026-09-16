@@ -349,6 +349,22 @@ def test_collect_over_snapshot_end_to_end():
     assert q["approver"] == "CamSoper"  # GET /user, no --approver needed
 
 
+def test_my_team_memberships_answer_which_lanes_are_mine():
+    class _Gh:
+        def __init__(self):
+            self.asked = []
+
+        def team_member(self, org, slug, login):
+            self.asked.append((org, slug, login))
+            return {"docs-guild": True, "docs-marketing-review": False}.get(slug)  # tools: None (403)
+
+    gh = _Gh()
+    got = collect.my_team_memberships(gh, Path(__file__).resolve().parents[2], "CamSoper")
+    assert got["pulumi/docs-guild"] is True and got["pulumi/docs-marketing-review"] is False
+    assert all(who == "CamSoper" for _, _, who in gh.asked)
+    assert collect.my_team_memberships(gh, None, None) == {}  # no login, no calls
+
+
 def test_routing_teams_asks_github_for_every_configured_team():
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)

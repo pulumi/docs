@@ -189,7 +189,7 @@ def test_plan_roundtrips_through_json_and_route_target_defaults_to_row_action():
     env = Env([stampable(1)], cfg(me=["blog"]))
     try:
         p = act.plan(env.queue, args(route=["1"]))
-        assert p.steps[0].args["target"] == "@TODO-owning-manager"
+        assert p.steps[0].args["target"] == "@pulumi/docs-guild"
         again = act.Plan.from_json(json.loads(json.dumps(p.to_json())))
         assert again.steps[0].args == p.steps[0].args and again.steps[0].expect_head == p.steps[0].expect_head
     finally:

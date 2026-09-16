@@ -715,6 +715,25 @@ def routing_teams(gh: GhClient, repo_root: Path | None) -> dict[str, bool | None
     return out
 
 
+def my_team_memberships(gh: GhClient, repo_root: Path | None, login: str | None) -> dict[str, bool | None]:
+    """`{"org/slug": am I on it}` for every team review-routing.yml names, so
+    a run with no `~/.pr-review.yml` can take its lanes from the org chart
+    instead of claiming all of them. None means the token couldn't read it."""
+    if not login:
+        return {}
+    path = (repo_root or _REPO_ROOT) / ".github" / "review-routing.yml"
+    try:
+        import routing  # noqa: PLC0415
+        teams = routing.load_config(path).teams
+    except Exception:  # noqa: BLE001
+        return {}
+    out: dict[str, bool | None] = {}
+    for full in sorted(set(teams.values())):
+        org, _, slug = full.partition("/")
+        out[full] = gh.team_member(org, slug, login) if org and slug else None
+    return out
+
+
 def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str] | None = None,
             since: str | None = None, cache_dir: Path | None = DEFAULT_CACHE_DIR,
             repo_root: Path = _REPO_ROOT, ai_override: str | None = None, workers: int = 6,
@@ -745,6 +764,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
         "repo": gh.repo,
         "backend": gh.backend,
         "approver": approver,
+        "my_teams": my_team_memberships(gh, repo_root, approver),
         "teams": routing_teams(gh, repo_root),
         "filters": {"pr": numbers or [], "author": authors or [], "since": since},
         "open_count": len(listed),

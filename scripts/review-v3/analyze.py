@@ -48,6 +48,7 @@ import importlib.util
 import json
 import re
 import sys
+from dataclasses import replace
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -119,7 +120,7 @@ REASON_CODES = {
     "link-fixes": "mine: a link-only diff bypassed the lane check (`link_fixes: mine` in ~/.pr-review.yml)",
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
-    "route": "the lane this PR should go to; `no-team`: the lane's GitHub team doesn't exist yet, so the SLA person is the target",
+    "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",
     "handed-off": "a human reviewer who isn't me is requested; the row waits on them",
     "merging-over": "an approval or changes-requested review already on the PR",
     "not-governed": "the Sentinel does not gate this PR",
@@ -701,8 +702,15 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             # The team when GitHub has it (collect.py asked), else the SLA
             # person; a team that lands later is picked up on the next run.
             team = route.get("team")
-            if team and (ctx.get("teams") or {}).get(team):
+            known = (ctx.get("teams") or {}).get(team) if team else None
+            if team and known is not False:
+                # True: GitHub has it. None: the token can't read teams (403),
+                # which is not evidence the team is missing — route to the team
+                # the config names and say the check didn't run, rather than
+                # quietly demoting every lane to its SLA person.
                 target = f"@{team}"
+                if known is None:
+                    reasons.append("route:team-unverified")
             else:
                 target = f"@{route['person']}" if route.get("person") else f"@{team}"
                 if team:
@@ -877,6 +885,14 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
             repo_root: Path = _REPO_ROOT, include_infra: bool = False, strict_stances: bool = False,
             owner: str | None = None, aliases: set[str] | None = None, today: date | None = None) -> dict:
     prs = queue.get("prs") or []
+    # No config file: take the lanes from the teams this approver is actually
+    # on before falling back to "everything is mine". The org chart is a
+    # better first guess than the whole queue, and it needs no local setup.
+    if cfg.source == "defaults":
+        from_teams = pr_review_config.lanes_from_teams(queue.get("my_teams") or {}, config)
+        if from_teams:
+            cfg = replace(cfg, me=from_teams, source="github-teams",
+                          warnings=[f"no config file — lanes taken from your GitHub teams: {', '.join(from_teams)}"])
     if aliases is None:
         aliases = alias_only_urls(repo_root)
     clusters = collision_clusters(prs)

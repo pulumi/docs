@@ -363,6 +363,21 @@ class GhClient:
                 return None
             raise
 
+    def team_member(self, org: str, slug: str, login: str) -> bool | None:
+        """Whether `login` is a member of `org/slug`: True/False on a
+        definitive answer, None when the token can't read the membership
+        (403) or the team itself is gone. `state: pending` is an invitation,
+        not membership, so it reads False."""
+        try:
+            data = self.get(f"orgs/{org}/teams/{slug}/memberships/{login}")
+        except GhNotFound:
+            return False
+        except GhError as exc:
+            if exc.status in (302, 403):
+                return None
+            raise
+        return (data or {}).get("state") == "active" if isinstance(data, dict) else None
+
     def me(self) -> str | None:
         """The token's login (`GET /user`), or None when the backend can't say."""
         try:
