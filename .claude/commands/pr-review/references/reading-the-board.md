@@ -66,6 +66,20 @@ A badge beside a finding says **why that finding does not stop the merge**. It i
 
 Approving a judged row posts those `/resolve` comments **before** it approves, so the review's own state records why each finding closed rather than the merge walking over them.
 
+## Yours versus everyone's
+
+A chip with a dotted border and a small **·cfg** mark is on the row because of *your* `~/.pr-review.yml`, not because of the PR. Every other chip is a fact about the PR and reads the same for every approver.
+
+Three settings put chips on a row:
+
+| Setting | Chip | What it does |
+|---|---|---|
+| `link_fixes: mine` (the default) | **link-only sweep: yours** | Pulls a link-only diff into your lane whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. With `link_fixes: route` the row goes to its lane owner instead. |
+| `stamp_max_lines` | `size:<n>>=<cap>` | A diff at or over the cap is read rather than stamped. |
+| `stale_date_days` | `blog:stale-date:<date>` | A blog post dated further back than the window looks stale to publish now. |
+
+`shape:link-only` is *not* one of them. It is a fact about the diff — every changed line is the same sentence with only a link rewritten — and it is true for everyone. It is what `link_fixes` acts on. Nothing about link-only changes the Sentinel merge gate either way: the Sentinel's own mechanical bar counts any modified link as substantive, so a link sweep still needs whatever approval its lane requires.
+
 ## Filter chips
 
 Filters are literal: **a row shows only while its value is lit in every group.** Turning a whole group off empties the board and the board says so, rather than silently meaning "no filter". `since` is the one threshold rather than a set of values. "Reset chips" restores the defaults.

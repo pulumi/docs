@@ -572,6 +572,20 @@ def test_link_only_blog_sweep_is_mine_by_default_and_routes_when_configured():
     assert p["verdict"] == "route" and "shape:link-only" not in p["reasons"]
 
 
+def test_blocked_rows_get_a_card_so_the_hidden_ones_still_surface():
+    # Blocked rows are filtered off the board by default. The ones with a
+    # mechanical unblock still have to reach the approver, so each kind of
+    # stuck gets one card naming its PRs.
+    q = run([stampable(1, mergeable_state="dirty"),
+             stampable(2, head_sha="f" * 40, files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, labels=["review:error", "domain:docs"], files=[_file("content/docs/c.md", ["y"])])])
+    kinds = {c["kind"]: c for c in q["do_next"]}
+    assert kinds["unblock"]["say"] == "#1 is stuck behind a merge conflict."
+    assert kinds["unblock"]["targets"] == {"1": "--unblock 1"} and "never resolved blind" in kinds["unblock"]["does"]
+    assert kinds["refresh"]["say"].startswith("#2 is carrying a review that describes an older commit")
+    assert kinds["rerun"]["targets"] == {"3": "--rerun 3"}
+
+
 def test_a_change_with_no_team_gate_is_any_approver_s():
     # A tags-only blog edit clears the mechanical bar, so the matrix asks for
     # no role at all. Routing it would invent a gate the Sentinel doesn't

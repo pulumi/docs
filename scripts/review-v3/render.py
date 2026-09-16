@@ -44,6 +44,15 @@ _compose = sentinel._compose
 SHOTS_DIR = _REPO_ROOT / ".pr-review-shots"
 VERDICT_ORDER = ("stamp", "judge", "route", "blocked")
 VERDICT_CLASS = {"stamp": "go", "judge": "hold", "route": "route", "blocked": "stop"}
+BUCKET_HELP = {
+    "outstanding": "A blocking finding: the review thinks this has to be answered before the PR merges.",
+    "author-answer": "The review asked the author a question and is waiting for the answer.",
+    "reviewer-check": "Something for a human to weigh. It does not block the merge on its own.",
+    "low": "A low-confidence finding from the older review format. Same weight as a reviewer check.",
+    "style": "A wording suggestion. Never blocks anything.",
+    "pre-existing": "Something already true on master, which this PR neither caused nor made worse.",
+    "preexisting": "Something already true on master, which this PR neither caused nor made worse.",
+}
 BUCKET_LABEL = {
     "outstanding": "🚨 Outstanding", "author-answer": "❓ Author answer", "reviewer-check": "⚠️ Reviewer check",
     "low": "⚠️ Low-confidence", "style": "✏️ Style", "pre-existing": "💡 Pre-existing", "preexisting": "💡 Pre-existing",
@@ -133,7 +142,7 @@ CHECKS_HELP = {
 }
 SHAPE_HELP = {
     "infra": "Touches layouts/, .github/ or the build, so it needs --include-infra before it can be stamped.",
-    "link-only": "Every changed line is the same sentence with only a link rewritten. Nothing else moved.",
+    "link-only": "A fact about the diff, the same for everyone: every changed line is the same sentence with only a link rewritten, so nothing but link targets moved. On its own it changes nothing; it is what your link_fixes setting acts on.",
 }
 AUTHOR_HELP = {
     "internal": "Opened by a Pulumi org member.",
@@ -148,7 +157,7 @@ SIMPLE_HELP = {
     "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
     "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
     "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
-    "link-fixes:mine": "A link-only diff. Your config says those are yours to approve whatever lane they belong to, since a lane owner's review buys nothing on a link swap.",
+    "link-fixes:mine": "YOUR SETTING, not a fact about the PR: link_fixes: mine in ~/.pr-review.yml makes a link-only diff yours to approve whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. Set link_fixes: route and this row would go to its lane owner instead.",
     "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
     "desc:empty": "The PR description is still the empty template.",
     "not-governed": "The Sentinel merge gate does not apply to this PR.",
@@ -215,14 +224,16 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         elif code == "duplicate":
             text = f"{detail} looks like the same change as this PR."
         elif code == "blog" and first == "stale-date":
-            text = f"The post is dated {detail.partition(':')[2]}, old enough that publishing it now would look stale."
+            text = (f"YOUR SETTING: the post is dated {detail.partition(':')[2]}, older than the stale_date_days window in "
+                    "~/.pr-review.yml, so publishing it now would look stale.")
         elif code == "brief":
             text = (f"The review's summary says \"{detail.partition(':')[2]}\", which appears nowhere in the diff, so the "
                     "summary may describe an earlier push.")
         elif code == "desc" and first == "stale":
             text = f"The PR description names `{detail.split(':')[-1]}`, which this diff does not touch."
         elif code == "size":
-            text = f"The diff is {detail.replace('>=', ' lines against your stamp cap of ')}, so it gets read rather than stamped."
+            text = ("YOUR SETTING: the diff is "
+                    f"{detail.replace('>=', ' lines against your stamp_max_lines cap of ')}, so it gets read rather than stamped.")
         elif code == "owner":
             dom, _, role = detail.partition(":")
             text = f"Files in this PR belong to the {dom} lane, which {role} owns."
@@ -240,11 +251,23 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
     return f"{text} ({r})" if text else r
 
 
+# Codes whose presence depends on YOUR ~/.pr-review.yml rather than on the
+# PR. They get a marker, because "everyone sees this" and "you see this
+# because of a setting you chose" are different claims and the board should
+# not blur them.
+CONFIG_CODES = ("link-fixes", "size", "blog:stale-date")
+
+
+def is_config_chip(r: str) -> bool:
+    return r.startswith(CONFIG_CODES)
+
+
 def _chip(r: str) -> str:
     code = r.split(":", 1)[0]
-    cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "")
+    cls = f"chip r-{esc(code)}" + (" theirs" if r.endswith(":theirs") else "") + (" cfg" if is_config_chip(r) else "")
     text = CHIP_LABEL.get(r) or (r if len(r) <= 48 else r[:45] + "…")
-    return f'<span class="{cls}" title="{esc(chip_title(r))}">{esc(text)}</span>'
+    marker = '<span class="cfgdot" aria-hidden="true">·cfg</span>' if is_config_chip(r) else ""
+    return f'<span class="{cls}" title="{esc(chip_title(r))}">{esc(text)}{marker}</span>'
 
 
 def chips(reasons: list[str]) -> str:
@@ -469,6 +492,32 @@ def patch_quote(pr: dict, path: str | None, anchor: str | None) -> dict | None:
     return {"quote_minus": minus[:3], "quote_plus": plus[:3]}
 
 
+MD_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+
+
+def md_inline(text: str) -> str:
+    """The review writes findings in markdown. Escape first, then put back
+    the four inline forms it actually uses, so a finding reads as written."""
+    out = esc(text)
+    out = MD_LINK_RE.sub(r'<a href="\2">\1</a>', out)
+    out = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", out)
+    out = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", out)
+    return re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+
+
+def finding_body(item: dict) -> str:
+    """The whole finding, not the card's one-line excerpt. The review stores
+    each one as a markdown table row — id, location, body — so the body is
+    everything after the first two cells; `summary` is the fallback."""
+    text = (item.get("text") or "").strip()
+    if text.startswith("|"):
+        cells = [c.strip() for c in text.strip().strip("|").split("|")]
+        body = " ".join(c for c in cells[2:] if c) if len(cells) > 2 else ""
+        if body:
+            return body
+    return text or item.get("summary") or ""
+
+
 def pending_judgment(queue: dict, pr: dict) -> str:
     """Before the judge step runs: the open findings, each with the diff
     lines it is about, and what the row asks."""
@@ -484,13 +533,16 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         link = deep_link(queue, pr, i)
         loc = f'<a href="{esc(link)}">{esc(i.get("file") or "")} {esc(i.get("anchor") or "")}</a>' if link else esc(i.get("anchor") or "")
         quote = patch_quote(pr, i.get("file"), i.get("anchor"))
-        rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim">{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span> '
-                    f'{esc(i.get("summary") or i.get("text") or "")} {loc}'
+        rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim" title="{esc(BUCKET_HELP.get(i.get("bucket"), ""))}">'
+                    f'{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span> '
+                    f'{md_inline(finding_body(i))} <span class="jmeta">{loc}</span>'
                     + (diffq(quote) if quote else "") + "</li>")
     if len(items) > 8:
         rows.append(f"<li>… {len(items) - 8} more on the PR</li>")
-    why = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("warnings", "outstanding", "self-accepted", "size", "blog", "directional", "duplicate", "collision", "desc", "brief", "scrutiny", "shape", "mergeable", "checks", "review", "merging-over")]
-    return ('<div class="jbox pending"><div class="q">Open findings, not yet judged' + (": " + esc(", ".join(why[:4])) if why else "") + "</div>"
+    # No reason codes here: the chips above the summary already carry them,
+    # and repeating them makes the box look like a second, disagreeing list.
+    return ('<div class="jbox pending"><div class="q">'
+            + (f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged" if items else "Not yet judged") + "</div>"
             + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
             + '<p class="jfoot">Nobody has decided these yet. Run the judge step (a full <code>/pr-review</code>) '
               "to get a recommendation and a reason for each, or open the PR and read them there.</p>"
@@ -683,6 +735,11 @@ HELP_SECTIONS = [
         "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are recorded on the PR as <code>/resolve</code> comments when you approve the row, before it merges.",
         "<b>needs the author</b> goes back with the send-back button; <b>nobody to fix it</b> means a workflow opened the PR, so close it out and the lane re-queues the page.",
     ]),
+    ("Where a row came from", [
+        "A chip with a dotted border and a <b>·cfg</b> mark is there because of <i>your</i> ~/.pr-review.yml, not because of the PR. Everything else is the same for every approver.",
+        "<b>shape:link-only</b> is a fact: every changed line differs only in a link. <b>link-only sweep: yours</b> is your <code>link_fixes: mine</code> setting acting on that fact, which is what pulls the row into your lane; <code>link_fixes: route</code> would send it to the lane owner.",
+        "Your size cap (<code>stamp_max_lines</code>) and your stale-date window (<code>stale_date_days</code>) are the other two settings that put chips on a row.",
+    ]),
     ("Filters", [
         "Chips are literal: a row shows only while its value is lit in every group, so turning a whole group off empties the board and says so.",
         "<i>since</i> is the one threshold rather than a set of values. <i>Reset chips</i> restores the defaults.",
@@ -740,14 +797,30 @@ def filter_bar(queue: dict) -> str:
 
     GROUP_HELP = {"view": "verdict", "owner": "owner", "domain": "domain", "author": "author"}
 
+    def rows_matching(kind, val):
+        if kind == "view":
+            return sum(1 for p in prs if p.get("verdict") == val)
+        if kind == "owner":
+            return sum(1 for p in prs if owner_label(p) == val)
+        if kind == "domain":
+            return sum(1 for p in prs if val in (p.get("domains") or []))
+        if kind == "author":
+            return sum(1 for p in prs if ((p.get("author") or {}).get("norm") or "") == val)
+        return None
+
     def chip(kind, val, label=None, on=True):
+        # The count rides on the chip so an unlit one still says what it is
+        # keeping off the page: "stamp set · 5" is a fact you can act on,
+        # "stamp set" is a question.
+        n = rows_matching(kind, val)
         if kind == "since":
             tip = f"Hide rows opened more than {val.rstrip('d')} days ago. This one is a threshold, not a set: the longest lit window wins."
         else:
-            tip = (f"Lit: rows whose {GROUP_HELP.get(kind, kind)} is {val} are shown. Unlit: they are hidden. "
+            tip = (f"{n} row{'s' if n != 1 else ''} in this group. Lit: they are shown. Unlit: they are hidden. "
                    "A row shows only while its value is lit in every group, so turning a whole group off empties the board.")
+        shown = esc(label or val) + (f' <span class="fcount">{n}</span>' if n is not None else "")
         return (f'<button class="fchip{" on" if on else ""}" data-filter="{esc(kind)}" data-value="{esc(val)}" '
-                f'title="{esc(tip)}">{esc(label or val)}</button>')
+                f'title="{esc(tip)}">{shown}</button>')
 
     parts = ['<div class="mock-bar">']
     parts += [chip("view", "judge", "needs a decision", on=True), chip("view", "route", "route", on=True),
@@ -949,6 +1022,7 @@ h1{font-size:clamp(26px,4.6vw,40px);font-weight:800;letter-spacing:-.022em;line-
 .sep{width:1px;height:18px;background:var(--line-2);margin:0 4px}
 .fchip{font-size:11.5px;border:1px solid var(--line-2);border-radius:99px;padding:2px 10px;color:var(--ink-2);background:var(--surface-2);cursor:pointer}
 .fchip.on{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.fcount{font-size:10px;opacity:.75;margin-left:3px}
 .grp{margin-top:26px}
 .sec-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
 h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
@@ -969,6 +1043,8 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}
 .chip.theirs{opacity:.55;border-style:dashed}
+.chip.cfg{border-style:dotted}
+.cfgdot{font-size:8.5px;opacity:.65;margin-left:3px;vertical-align:super}
 .chip.r-cluster{border-color:var(--route);color:var(--route)}
 details.why{display:inline-block;margin-left:4px}details.why>summary{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--ink-3);cursor:pointer;list-style:none;border:1px dashed var(--line-2);border-radius:2px;padding:1px 6px}
 details.why[open]>summary{margin-bottom:4px}details.why .chip{opacity:.8}

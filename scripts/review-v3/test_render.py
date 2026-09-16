@@ -101,7 +101,10 @@ def test_an_unjudged_row_still_shows_the_diff():
     p["files"] = [{"path": "content/docs/iac/x.md", "status": "modified", "additions": 1, "deletions": 1,
                    "patch": "@@ -93,3 +93,3 @@\n ctx\n-the old sentence\n+the new sentence\n ctx2"}]
     html = render.render_board(q)
-    assert "Open findings, not yet judged" in html and "Run the judge step" in html
+    assert "1 open finding, not yet judged" in html and "Run the judge step" in html
+    # the box no longer repeats the row's chips, and the finding is whole
+    assert "not yet judged: " not in html
+    assert "Does this sentence still say what the link says?" in html
     box = html.split('data-pr="1"')[1].split('class="acts"')[0]
     assert 'class="diffq"' in box and "the new sentence" in box and "the old sentence" in box
     # the quote comes out of the patch at the finding's own line, and says
@@ -111,6 +114,14 @@ def test_an_unjudged_row_still_shows_the_diff():
     assert render.patch_quote(p, "content/docs/iac/x.md", "L400") is None
     assert render.patch_quote(p, "content/docs/iac/x.md", None) is None
     assert render.patch_quote(p, "no/such/file.md", "L3") is None
+
+
+def test_filter_chips_carry_their_counts():
+    html = render.render_board(_queue())
+    # an unlit chip has to say what it is keeping off the page
+    assert '<button class="fchip" data-filter="view" data-value="blocked"' in html
+    assert 'blocked <span class="fcount">' in html and 'stamp set <span class="fcount">' in html
+    assert "row in this group. Lit: they are shown. Unlit: they are hidden." in html
 
 
 def test_every_tooltip_explains_rather_than_echoes():

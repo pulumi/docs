@@ -895,6 +895,35 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
                       "cmd": "--stamp " + ",".join(str(n) for n in stamps),
                       "label": "approve the set" if held else "approve & merge the set",
                       "targets": {str(n): f"--stamp {n}" for n in stamps}})
+    # Blocked rows are off the board by default, which would hide the ones
+    # you can actually unstick. Each mechanical unblock gets a card, so the
+    # opening says what is stuck and how many, without unhiding nineteen rows.
+    STUCK = {
+        "unblock": ("stuck behind a merge conflict",
+                    "Merges master into each branch as a merge commit and pushes, so CI re-runs. A conflicted merge is aborted and reported, never resolved blind."),
+        "refresh": ("carrying a review that describes an older commit",
+                    "Asks each review to update itself against the current head (@claude #update-review). Nothing merges."),
+        "rerun": ("carrying a review that errored",
+                  "Throws each stale card away and runs a fresh review from scratch (@claude #new-review). Nothing merges."),
+    }
+    for kind, (why, does) in STUCK.items():
+        rows = {}
+        for p in visible:
+            if p.get("verdict") != "blocked":
+                continue
+            act = next((a for a in p.get("actions") or [] if a["id"] == kind), None)
+            if act:
+                rows[p["number"]] = act["cmd"]
+        if not rows:
+            continue
+        nums = sorted(rows)
+        cards.append({"kind": kind,
+                      "say": f"{pr_list(nums)} {'are' if len(nums) != 1 else 'is'} {why}.",
+                      "does": does,
+                      "cmd": " ".join(rows[n] for n in nums),
+                      "label": {"unblock": "merge base & retry", "refresh": "refresh the reviews",
+                                "rerun": "re-run the reviews"}[kind] + (f" ({len(nums)})" if len(nums) > 1 else ""),
+                      "targets": {str(n): rows[n] for n in nums}})
     return cards
 
 
