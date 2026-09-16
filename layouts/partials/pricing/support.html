@@ -13,39 +13,52 @@
     (dict "key" "named_csa" "name" "Named customer success architect")
 }}
 <section id="support-plans" aria-labelledby="support-plans-heading" class="container mx-auto px-6 my-16 scroll-mt-24">
-    <h2 id="support-plans-heading" class="text-3xl md:text-4xl font-semibold tracking-tight">Compare support plans</h2>
-    <p class="body-sm text-gray-700">Every edition includes access to the support agent and ticket submission.</p>
-    <p id="support-scroll-hint" class="text-sm text-gray-600 lg:hidden">Scroll horizontally to compare all five support plans.</p>
-    <div class="overflow-x-auto rounded-lg border border-gray-200" role="region" aria-label="Support plan comparison" aria-describedby="support-scroll-hint" tabindex="0">
-        <table class="w-full min-w-[1040px] table-fixed text-sm text-left border-collapse">
-            <caption class="sr-only">Support plan prices, coverage, response objectives, and included benefits</caption>
-            <thead>
-                <tr class="bg-violet-background">
-                    <th scope="col" class="p-4 font-semibold">Support plan</th>
-                    {{ range $plans }}
-                    <th scope="col" id="support-plan-{{ .id }}" class="p-4 font-semibold align-top scroll-mt-24">
-                        {{ .name }}
-                        {{ with .eligibility_note }}<span class="block mt-2 font-normal text-gray-700">{{ . }}</span>{{ end }}
-                    </th>
-                    {{ end }}
-                </tr>
-            </thead>
-            <tbody>
-                {{ range $benefit := $benefits }}
-                <tr{{ with .id }} id="{{ . }}"{{ end }} class="border-t border-gray-200 align-top scroll-mt-24">
-                    <th scope="row" class="p-4 font-medium">{{ .name }}</th>
-                    {{ range $plans }}
-                    <td class="p-4 text-gray-700">
-                        {{ index . $benefit.key }}
-                        {{ if eq $benefit.key "price" }}
-                            {{ with .price_note }}<span class="block mt-2">{{ . }}</span>{{ end }}
-                        {{ end }}
-                    </td>
-                    {{ end }}
-                </tr>
-                {{ end }}
-            </tbody>
-        </table>
+    <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="inline-flex items-center justify-center size-9 rounded-md bg-violet-background text-violet-primary">
+            {{ partial "icon.html" (dict "name" "phosphor/lifebuoy" "class" "size-6") }}
+        </span>
+        <h2 id="support-plans-heading" class="heading-2 mt-4">Compare support plans</h2>
+        <p class="mt-2 body-base text-gray-primary">Every edition includes access to the support agent and ticket submission.</p>
     </div>
-    <p class="mt-6"><a href="/contact/?form=sales" class="btn btn-secondary">Contact us about support</a></p>
+
+    <table class="table-plain block lg:table lg:table-fixed w-full text-sm text-left text-gray-900">
+        <caption class="sr-only">Support plan prices, coverage, response objectives, and included benefits</caption>
+        <thead class="hidden lg:table-header-group">
+            <tr class="border-b border-gray-200">
+                <th scope="col" class="lg:w-[20%] py-3 lg:pr-4"></th>
+                {{ range $plans }}
+                <th scope="col" id="support-plan-{{ .id }}" class="lg:px-4 py-3 align-top text-center font-semibold text-service-black scroll-mt-24">
+                    {{ .name }}
+                    {{ with .eligibility_note }}<span class="block mt-1 text-xs font-normal text-gray-700">{{ . | safeHTML }}</span>{{ end }}
+                </th>
+                {{ end }}
+            </tr>
+        </thead>
+        <tbody class="block lg:table-row-group">
+            {{ range $benefit := $benefits }}
+            <tr{{ with .id }} id="{{ . }}"{{ end }} class="block lg:table-row border-b border-gray-100 last:border-b-0 scroll-mt-24">
+                <th scope="row" class="block lg:table-cell pt-5 pb-2 lg:py-4 lg:pr-4 align-top font-semibold lg:font-medium text-service-black">{{ .name }}</th>
+                {{ range $plan := $plans }}
+                {{ $cell := partial "pricing/value.html" (index $plan $benefit.key) }}
+                <td class="flex items-baseline justify-between gap-6 py-1 last:pb-4 lg:table-cell lg:align-top lg:px-4 lg:py-4">
+                    <span class="lg:hidden text-gray-700">{{ $plan.name }}</span>
+                    <span class="block text-right lg:text-center">
+                        {{ if eq $cell.kind "check" }}
+                        {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block" "title" "Included") }}
+                        {{ else if eq $cell.kind "blank" }}
+                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-600 size-6 inline-block" "title" "Not included") }}
+                        {{ else }}
+                        {{ $cell.content | markdownify }}
+                        {{ end }}
+                        {{ if eq $benefit.key "price" }}
+                            {{ with $plan.price_note }}<span class="block mt-0.5 text-xs text-gray-700">{{ . }}</span>{{ end }}
+                        {{ end }}
+                    </span>
+                </td>
+                {{ end }}
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <p class="mt-8 text-center"><a href="/contact/?form=sales" class="btn btn-secondary">Contact us about support</a></p>
 </section>
