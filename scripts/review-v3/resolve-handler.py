@@ -525,7 +525,7 @@ def _self_test() -> int:
         # #21640: alice is the PR author, so her "accepted" collapses into
         # "author-accepted", surfaced distinctly on the brief.
         check("brief Waiting block shows the answer",
-              "author-accepted (accepted) — see State" in gh.comments[brief_id]["body"]
+              "author-accepted (accepted)" in gh.comments[brief_id]["body"]
               and "(1 more is answered — see State)" in gh.comments[brief_id]["body"])
 
     # -- bulk all with note applies to F1..high_water, bulk flags ------------

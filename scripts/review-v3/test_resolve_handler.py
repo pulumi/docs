@@ -390,8 +390,9 @@ def test_bulk_all_never_overwrites_individual_answers():
     r = handle(42, 9010, "alice", "/resolve all accepted: shipping as-is", gh)
     assert r.exit_code == 0
     new_state = review_state.parse_state(gh.comments[author_id]["body"])
-    # pre-seeded F2 already carries an author-accepted collapse from set_disposition
-    # directly (not through handle()), so it is untouched by the bulk fill either way.
+    # F2 was pre-seeded directly via set_disposition(..., "refuted", ...), bypassing
+    # handle()'s actor-based author-accepted collapse entirely -- a bulk fill only
+    # fills gaps, so an existing entry (whatever its disposition) is untouched.
     assert new_state["findings"]["F2"]["disposition"] == "refuted"
     assert new_state["findings"]["F2"]["note"] == "the flag exists"
     # #21640: alice is the PR author, so the bulk-filled gaps collapse too.

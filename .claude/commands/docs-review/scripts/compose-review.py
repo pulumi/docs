@@ -1803,7 +1803,7 @@ def waiting_state_cell(bucket: str, disposition: dict | None) -> str:
             # through rather than dissolving into the same green as
             # `review:no-blockers` gives a real reviewer's clearance.
             orig = disposition.get("original_disposition") or "accepted"
-            return f"🔏 author-accepted ({orig}) — see State"
+            return f"🔏 author-accepted ({orig})"
         if d == "accepted":
             return "✋ accepted as-is by the author"
         if d == "refuted":
