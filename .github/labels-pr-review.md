@@ -40,6 +40,7 @@ Load-bearing — these gate workflow execution.
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by `pr-review`. |
 | `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
 | `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
+| `sentinel:preview` | `d4c5f9` | **Opt-in.** While the Sentinel is report-only, maintain its pinned gate-status comment on this PR so the surface can be reviewed on a real PR before enforcement. Applied by humans; no effect once `REVIEW_V3_SENTINEL` is `'1'` (the comment is then maintained on every PR the Sentinel evaluates). |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
@@ -84,6 +85,7 @@ gh label create "review:author-stalled"  --color fad8c7 --description "Waiting o
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"
+gh label create "sentinel:preview"       --color d4c5f9 --description "Preview the Sentinel gate-status comment while it is still report-only"
 ```
 
 ## Migrate from the old two-label scheme

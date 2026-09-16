@@ -120,12 +120,30 @@ jobs:
         uses: pulumi/esc-action@v3
 
       # Base repo default branch ONLY — see the SECURITY INVARIANT above.
+      #
+      # Sparse, because this was the whole job's runtime. A full worktree is
+      # ~1.2 GB (content/ alone is 860 MB) and the evaluator reads ~7 MB of
+      # it: its own package, the docs-review scripts it loads
+      # (compose-review, validate-pinned, and triage-classify via
+      # replay-mechanical — compose-review also reads footer*.md from its
+      # parent, so the whole docs-review directory comes along), and
+      # review-routing.yml. Checkout was running 20 s to 3m40s; nothing else
+      # in the job takes more than a few seconds.
+      #
+      # test_sentinel.py pins this list against the paths sentinel.py
+      # actually loads — a new dependency outside these roots fails the
+      # suite rather than only the one PR whose code path reaches it.
       - name: Checkout base (default branch)
         if: steps.pr.outputs.pr != ''
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+          sparse-checkout-cone-mode: true
 
       - name: Set up Python
         if: steps.pr.outputs.pr != ''
@@ -149,7 +167,13 @@ jobs:
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
-          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}")
+          # --status-comment is passed unconditionally on purpose: the
+          # evaluator decides whether to actually write. Enforcing mode
+          # always maintains the pinned comment; report-only mode does so
+          # only for a PR someone labelled `sentinel:preview`, so the dry
+          # run stays invisible to contributors who didn't opt in.
+          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
+                --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then
             ARGS+=(--report-only)
           else
