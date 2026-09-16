@@ -62,15 +62,16 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html
-    assert '<details class="why"><summary>why · ' in html  # informational chips fold
-    assert 'class="chip r-risk"' in html.split('<details class="why">')[1]  # and risk is one of them
+    assert '<summary>why · ' in html and 'more reasons for this verdict' in html  # informational chips fold
+    assert 'class="chip r-risk"' in html.split('<summary>why · ')[1]  # and risk is one of them
 
 
 def test_route_chip_keeps_its_model_span_as_markup():
     q = _queue()
     row(q, 3)["recommended"] = "stamp"  # what a judgments file carried before a re-analyze turned the row into a route
     html = render.render_board(q)
-    assert '>route → @pulumi/docs-marketing-review <span class="v v-dim">model: stamp</span></span>' in html
+    assert '>route → @pulumi/docs-marketing-review <span class="v v-dim" title="The judge pass recommends stamp' in html
+    assert 'model: stamp</span></span>' in html
     assert "&lt;span" not in html.split('data-pr="3"')[1].split("</h4>")[0]
 
 
@@ -86,6 +87,53 @@ def test_rerun_is_the_unblock_on_an_errored_row_and_a_side_action_elsewhere():
     html = render.render_board(q)
     assert 'class="btn p p-stop" data-cmd="--rerun 8" data-pr="8" data-kind="decision"' in html
     assert 'data-cmd="--rerun 9" data-pr="9" data-kind="side"' in html and "run a full review" in html
+
+
+def test_an_unjudged_row_still_shows_the_diff():
+    # Before the judge step runs, a finding is still a claim about a line of
+    # the diff: the box quotes that line rather than describing it.
+    q = _queue()
+    p = row(q, 1)              # a judge row, with the judge step not yet run
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "file": "content/docs/iac/x.md", "anchor": "L95",
+         "summary": "Does this sentence still say what the link says?"}]}
+    p["files"] = [{"path": "content/docs/iac/x.md", "status": "modified", "additions": 1, "deletions": 1,
+                   "patch": "@@ -93,3 +93,3 @@\n ctx\n-the old sentence\n+the new sentence\n ctx2"}]
+    html = render.render_board(q)
+    assert "Open findings, not yet judged" in html and "Run the judge step" in html
+    box = html.split('data-pr="1"')[1].split('class="acts"')[0]
+    assert 'class="diffq"' in box and "the new sentence" in box and "the old sentence" in box
+    # the quote comes out of the patch at the finding's own line, and says
+    # nothing when it can't
+    quote = render.patch_quote(p, "content/docs/iac/x.md", "L95")
+    assert quote == {"quote_minus": ["the old sentence"], "quote_plus": ["the new sentence"]}
+    assert render.patch_quote(p, "content/docs/iac/x.md", "L400") is None
+    assert render.patch_quote(p, "content/docs/iac/x.md", None) is None
+    assert render.patch_quote(p, "no/such/file.md", "L3") is None
+
+
+def test_every_tooltip_explains_rather_than_echoes():
+    """A title that repeats its own element's text teaches nothing. Every
+    tooltip on the board has to say something the label doesn't."""
+    import html as _html
+    import re as _re
+    q = _queue()
+    row(q, 3)["recommended"] = "request-changes"
+    from analyze import do_next
+    q["do_next"] = do_next(q["prs"], q.get("clusters") or [], q.get("directional") or [])
+    page = render.render_board(q)
+    pairs = _re.findall(r'title="([^"]*)"[^>]*>([^<]*)<', page)
+    assert len(pairs) > 20, "the board should be thoroughly tooltipped"
+    for title, text in pairs:
+        t, x = _html.unescape(title).strip(), _html.unescape(text).strip()
+        assert t, f"empty tooltip on {x!r}"
+        assert t != x, f"tooltip echoes its own text: {x!r}"
+        assert len(t.split()) >= 5, f"tooltip too thin to help: {t!r} on {x!r}"
+    # and a reason chip's tooltip describes its own value, not its family
+    assert render.chip_title("review:absent").startswith("No review has run on this PR at all")
+    assert "only because master was merged" in render.chip_title("review:base-merged")
+    assert render.chip_title("review:stale") != render.chip_title("review:absent")
 
 
 def test_the_board_carries_its_own_manual():
@@ -119,7 +167,7 @@ def test_ownership_chips_read_as_words():
     # the code stays greppable in the title; the chip itself says why the row is here
     # the chip says why the row is here; the tooltip explains, never echoes
     assert '>no team approval needed</span>' in html
-    assert 'title="The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it. (gate:none)"' in html
+    assert 'title="The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take. (gate:none)"' in html
 
 
 def test_a_generated_row_offers_close_where_others_offer_send_back():
@@ -132,7 +180,8 @@ def test_a_generated_row_offers_close_where_others_offer_send_back():
 def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     q = run([stampable(7)])
     html = render.render_board(q)
-    assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-kind="decision" data-decision="0" aria-pressed="true"' in html
+    assert 'class="btn p p-go sel" data-cmd="--stamp 7" data-pr="7" data-kind="decision" data-decision="0" title="Approve this PR' in html
+    assert 'Squash-merges it." aria-pressed="true"' in html
     assert 'type="checkbox"' not in html
     # the other way to approve is a decision too, so picking it puts out the default
     assert 'data-cmd="--stamp 7:no-merge" data-pr="7" data-kind="decision"' in html and "approve, don&#x27;t merge" in html

@@ -30,6 +30,7 @@ import argparse
 import base64
 import html
 import json
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -102,49 +103,141 @@ def deep_link(queue: dict, pr: dict, item: dict) -> str | None:
     return files_url(queue, pr["number"]) + _compose.diff_anchor(file, item.get("anchor") or item.get("ref") or "")
 
 
-# What each reason code means, in a sentence, for the chip's tooltip. The
-# glossary in queue.json is written for whoever greps the queue; a person
-# hovering a chip wants to know what it means for this row, so a tooltip
-# never just repeats the chip.
-REASON_HELP = {
-    "risk": "How big a change this is, read off the diff: typo, minor, standard, major, or infra.",
-    "scrutiny": "The diff looks AI-written, so this row can never be a plain stamp. Read it before approving.",
-    "ai-suspect": "The signal that made this look AI-written.",
-    "review": "The state of the pinned review: stale, absent, still running, errored, or triage prose only.",
-    "label": "A review:* label GitHub carries on this PR.",
-    "warnings": "Reviewer-check rows the review raised and nobody has answered. They don't block a merge.",
-    "outstanding": "Blocking findings still open on the author card. Answer or refute them before this merges.",
-    "self-accepted": "The PR's own author marked a finding accepted, so it doesn't count as answered.",
-    "stances": "The brief records editorial stances the reviewer took. Only blocks with --strict-stances.",
-    "mergeable": "GitHub can't merge this cleanly: dirty is a conflict, behind means the base moved on.",
-    "checks": "CI is not green on the head commit.",
-    "cluster": "This PR shares files with others. Overlap means their hunks touch the same lines and order matters; same-file means any order works; theirs means the pile is mostly someone else's.",
-    "directional": "This PR adds links to a URL another open PR is removing links from. Merge them in the wrong order and the links break.",
-    "duplicate": "Another open PR looks like the same change.",
-    "blog": "A new blog post, or a publish date old enough to look stale.",
-    "brief": "The review's summary names a value that is nowhere in the diff, so it may describe an older push.",
-    "desc": "The PR description names a file the diff doesn't touch, or is still the empty template.",
-    "shape": "The shape of the diff: infra touches the build, link-only means every changed line differs only in a link.",
-    "link-fixes": "A link-only diff, which your config makes yours to approve whatever lane it belongs to.",
-    "gate": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it.",
-    "size": "The diff is at or over your stamp_max_lines, so it gets read rather than stamped.",
-    "owner": "Which lane a changed file belongs to, and the role that owns it.",
-    "route": "The lane this PR belongs to, and who gets asked for the review.",
-    "handed-off": "Someone else is already the requested reviewer, so this row waits on them, not you.",
-    "merging-over": "A review is already on this PR: an approval, or a changes-requested that has to be settled first.",
-    "not-governed": "The Sentinel merge gate doesn't apply to this PR.",
-    "author": "Who opened it: a person, or a workflow run that will never answer a review.",
-    "trust": "The token couldn't read org membership, so the author is treated as external.",
-    "draft": "A draft PR, only ever shown when you ask for it by number.",
+# A tooltip explains THIS chip with THIS value, not the family it belongs to:
+# "review:base-merged" has to say what a base merge did to the review, not
+# that review codes exist. The raw code rides along in parentheses so the
+# queue stays greppable.
+RISK_HELP = {
+    "typo": "A typo-sized change: a word or two.",
+    "minor": "A small change, a few lines of prose.",
+    "standard": "An ordinary content change.",
+    "major": "A big diff, by line count or file count. Worth reading properly.",
+    "infra": "Touches the build or deploy pipeline, so it needs staging evidence before it merges.",
+}
+REVIEW_HELP = {
+    "stale": "The review on this PR describes an older commit. Its findings may already be fixed, or it may have missed what was pushed since: refresh it before trusting it.",
+    "absent": "No review has run on this PR at all — no author card, no brief. Nothing has checked this diff.",
+    "in-progress": "The review is running right now. Wait for it rather than acting on a half-written card.",
+    "error": "The review job failed, so there are no findings. Re-running it is the only way to get a verdict.",
+    "triage-prose": "Only the cheap triage prose check ran, not a full review. It catches wording, not correctness.",
+    "base-merged": "The head commit moved, but only because master was merged into the branch. The diff the review read is unchanged, so the review still stands and this row is not stale.",
+}
+MERGEABLE_HELP = {
+    "dirty": "GitHub says this PR conflicts with its base branch. Merge master in and resolve it before anything else.",
+    "behind": "The base branch moved on and this PR has not caught up.",
+    "unknown": "GitHub has not finished working out whether this merges cleanly.",
+}
+CHECKS_HELP = {
+    "red": "CI is failing on the head commit.",
+    "pending": "CI is still running on the head commit.",
+}
+SHAPE_HELP = {
+    "infra": "Touches layouts/, .github/ or the build, so it needs --include-infra before it can be stamped.",
+    "link-only": "Every changed line is the same sentence with only a link rewritten. Nothing else moved.",
+}
+AUTHOR_HELP = {
+    "internal": "Opened by a Pulumi org member.",
+    "external": "Opened by someone outside the org, so it gets the external-contributor treatment.",
+    "generated": "Opened by a workflow run, not a person. Nobody will ever read a review on it, so it closes rather than going back.",
+}
+ROUTE_STATE_HELP = {
+    "no-team": "GitHub has no team by the name the routing config gives this lane, so the review request goes to that role's SLA person instead.",
+    "team-unverified": "This token cannot read the org's teams, so the team named in the routing config is used without checking it exists.",
+}
+SIMPLE_HELP = {
+    "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
+    "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
+    "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
+    "link-fixes:mine": "A link-only diff. Your config says those are yours to approve whatever lane they belong to, since a lane owner's review buys nothing on a link swap.",
+    "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
+    "desc:empty": "The PR description is still the empty template.",
+    "not-governed": "The Sentinel merge gate does not apply to this PR.",
+    "draft": "A draft PR. It only appears because you asked for it by number.",
+    "trust:membership-unreadable": "The token could not read org membership, so the author is treated as external and gets the stricter treatment.",
+    "self-accepted": "A finding on this PR was marked answered by the PR's own author. Their call on their own work, so the queue does not count it as answered.",
 }
 
 
-def chip_title(r: str) -> str:
-    """The tooltip: what the code means, then the code itself for anyone
-    grepping the queue. Never the chip's own text handed back."""
-    code, _, _detail = r.partition(":")
-    help_text = REASON_HELP.get(code)
-    return f"{help_text} ({r})" if help_text else r
+def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on purpose
+    """What this chip, with this value, means for this row."""
+    code, _, detail = r.partition(":")
+    first = detail.split(":")[0] if detail else ""
+    text = SIMPLE_HELP.get(r)
+    if text is None:
+        if code == "risk":
+            text = RISK_HELP.get(detail)
+        elif code == "review":
+            text = REVIEW_HELP.get(detail)
+        elif code == "mergeable":
+            text = MERGEABLE_HELP.get(detail)
+        elif code == "checks":
+            text = CHECKS_HELP.get(detail)
+        elif code == "shape":
+            text = SHAPE_HELP.get(detail)
+        elif code == "author":
+            text = AUTHOR_HELP.get(detail)
+        elif code == "label":
+            text = f"GitHub carries the `{detail}` label on this PR."
+        elif code == "ai-suspect":
+            text = {"trailer": "A commit trailer or PR body names an AI tool as co-author.",
+                    "prose": "The added prose matches the shape of AI-written text.",
+                    "manual": "You marked this one AI-suspect by hand."}.get(detail, f"AI-suspect signal: {detail}.")
+        elif code == "warnings":
+            n = first or "Some"
+            ids = detail.partition(":")[2]
+            text = (f"{n} reviewer-check finding{'s' if n != '1' else ''} the review raised and nobody has answered"
+                    + (f" ({ids})" if ids else "") + ". They do not block a merge, but they are unanswered.")
+        elif code == "outstanding":
+            n = first or "Some"
+            ids = detail.partition(":")[2]
+            text = (f"{n} blocking finding{'s' if n != '1' else ''} still open on the author card"
+                    + (f" ({ids})" if ids else "") + ". Answer or refute them before this merges.")
+        elif code == "self-accepted":
+            text = f"{detail} was marked answered by the PR's own author, so the queue does not count it as answered."
+        elif code == "cluster":
+            cid = first
+            rest = detail.partition(":")[2]
+            if rest.startswith("overlap"):
+                pos = rest.partition(":")[2]
+                text = (f"This PR and the rest of cluster {cid} change the same or adjacent lines, so they can only merge in "
+                        f"order. It is number {pos} in that order.")
+            elif rest == "same-file":
+                text = f"Shares files with the rest of cluster {cid}, but no changed lines touch. Any merge order works."
+            else:
+                text = f"Cluster {cid} is mostly other people's PRs, so its ordering is not yours to drive."
+        elif code == "directional":
+            if detail.startswith("+"):
+                text = f"There are {detail.lstrip('+').split('-')[0]} more conflicts of this kind on this PR."
+            else:
+                other, _, path = detail.partition(":")
+                text = (f"This PR adds links to {path}, a URL that only exists as a Hugo alias, while {other} removes links "
+                        "from it. Merge them in the wrong order and those links break.")
+        elif code == "duplicate":
+            text = f"{detail} looks like the same change as this PR."
+        elif code == "blog" and first == "stale-date":
+            text = f"The post is dated {detail.partition(':')[2]}, old enough that publishing it now would look stale."
+        elif code == "brief":
+            text = (f"The review's summary says \"{detail.partition(':')[2]}\", which appears nowhere in the diff, so the "
+                    "summary may describe an earlier push.")
+        elif code == "desc" and first == "stale":
+            text = f"The PR description names `{detail.split(':')[-1]}`, which this diff does not touch."
+        elif code == "size":
+            text = f"The diff is {detail.replace('>=', ' lines against your stamp cap of ')}, so it gets read rather than stamped."
+        elif code == "owner":
+            dom, _, role = detail.partition(":")
+            text = f"Files in this PR belong to the {dom} lane, which {role} owns."
+        elif code == "route":
+            text = ROUTE_STATE_HELP.get(detail) or f"This PR belongs to the {detail} lane, so that team gets asked for the review."
+        elif code == "handed-off":
+            text = f"{detail} is already the requested reviewer, so this row is waiting on them, not on you."
+        elif code == "merging-over":
+            kind, _, who = detail.partition(":")
+            text = (f"{who} has already requested changes on this PR; that has to be settled before it merges."
+                    if kind == "changes-requested" else
+                    f"{who} has already approved this PR, so your approval is not the first.")
+        elif code == "gate":
+            text = SIMPLE_HELP["gate:none"]
+    return f"{text} ({r})" if text else r
 
 
 def _chip(r: str) -> str:
@@ -165,7 +258,9 @@ def chips(reasons: list[str]) -> str:
         (primary if code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r) else info).append(r)
     out = "".join(_chip(r) for r in primary)
     if info:
-        out += f'<details class="why"><summary>why · {len(info)}</summary>' + "".join(_chip(r) for r in info) + "</details>"
+        out += (f'<details class="why" title="{len(info)} more reasons for this verdict that would not change what you click. '
+                'Open it to see them.">'
+                f'<summary>why · {len(info)}</summary>') + "".join(_chip(r) for r in info) + "</details>"
     return out
 
 
@@ -179,6 +274,47 @@ def owner_label(pr: dict) -> str:
     return "unowned"
 
 
+VERDICT_HELP = {
+    "stamp": "Passed every gate: a current review with nothing open, green CI, no collision, your lane, under your size cap. Approving is the whole job.",
+    "judge": "One thing on this PR needs a person. The box below says what it is.",
+    "route": "Not your lane per the routing matrix, so the owning team is the one to ask. You can still approve it yourself.",
+    "blocked": "Nothing you can do here until something else moves. The box below names the blocker.",
+}
+ACTION_HELP = {
+    "stamp": "Approve this PR, recording a /resolve comment for each judged finding first.",
+    "stamp-merge": "Approve and squash-merge, even though the author is a person and would normally merge their own PR.",
+    "stamp-no-merge": "Approve without merging, leaving the merge to someone else.",
+    "request-changes": "Post a changes-requested review built from this row's findings and label it needs-author-response. Nothing merges; the author's turn.",
+    "close": "Close this PR with a comment carrying the row's findings. A workflow opened it, so the lane re-queues the page on its next run.",
+    "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
+    "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
+    "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
+    "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
+    "fix": "Apply the drafted description correction and any one-click suggestions, then commit and push.",
+    "render": "Screenshot this PR's preview pages into .pr-review-shots/ so you can look at them.",
+    "deploy": "Dispatch the testing deploy workflow for this branch, to pulumi-test.io.",
+    "chain": "Approve and merge the first PR of this collision cluster, then merge master into the next so it can follow.",
+    "consolidate": "Ask the bot for one consolidated PR instead of this pile of overlapping sweeps. Nothing merges.",
+}
+
+
+def action_help(pr: dict, action: dict) -> str:
+    """What this button does to this PR, in a sentence. A stamp says whether
+    it merges, because that is the part a label can only hint at."""
+    base = ACTION_HELP.get(action.get("id"), "")
+    if action.get("id", "").startswith("stamp") and action["id"] != "stamp-no-merge":
+        merges = ":merge" in action.get("cmd", "") or (action["id"] == "stamp" and merges_on_stamp_row(pr))
+        base += " Squash-merges it." if merges else " Does not merge it: that is the author's to do."
+    if "--force" in action.get("cmd", ""):
+        base += " The row is not a clean stamp, so this approves it as it stands."
+    return base
+
+
+def merges_on_stamp_row(pr: dict) -> bool:
+    """Mirrors analyze.merges_on_stamp over a rendered row."""
+    return (pr.get("author") or {}).get("type") == "bot"
+
+
 def verdict_chip(pr: dict) -> str:
     v = pr.get("verdict") or "judge"
     extra = ""
@@ -187,8 +323,10 @@ def verdict_chip(pr: dict) -> str:
         if act:
             extra = esc(" → " + act["cmd"].split(":", 1)[1])
     if pr.get("recommended") and pr["recommended"] != v:
-        extra += f' <span class="v v-dim">model: {esc(pr["recommended"])}</span>'
-    return f'<span class="v v-{esc(v)}">{esc(v)}{extra}</span>'
+        rec = pr["recommended"]
+        extra += (f' <span class="v v-dim" title="{esc(f"The judge pass recommends {rec} for this row. The computed verdict stays {v}: a recommendation never lowers a gate.")}">'
+                  f'model: {esc(rec)}</span>')
+    return f'<span class="v v-{esc(v)}" title="{esc(VERDICT_HELP.get(v, ""))}">{esc(v)}{extra}</span>'
 
 
 def meta_line(pr: dict) -> str:
@@ -220,7 +358,8 @@ def diffq(j: dict, *, open_: bool = True) -> str:
     if not minus and not plus:
         return ""
     lines = [f'<span class="del">- {esc(l)}</span>' for l in minus] + [f'<span class="add">+ {esc(l)}</span>' for l in plus]
-    return (f'<details class="quote"{" open" if open_ else ""}><summary>the lines</summary><div class="diffq">'
+    return (f'<details class="quote"{" open" if open_ else ""} title="The exact lines this finding is about, straight from '
+            'the diff. Click to fold them away."><summary>the lines</summary><div class="diffq">'
             + "\n".join(lines) + "</div></details>")
 
 
@@ -289,8 +428,50 @@ def judgment_boxes(queue: dict, pr: dict) -> str:
     return "".join(out) + judgment_footer(pr)
 
 
+HUNK_RE = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
+
+
+def patch_quote(pr: dict, path: str | None, anchor: str | None) -> dict | None:
+    """The diff lines a finding sits on, read out of `files[].patch`.
+
+    An un-judged finding is a claim about a line of the diff, so the box that
+    shows it should show that line — the same evidence a judged one carries,
+    minus the reasoning nobody has written yet."""
+    if not path or not anchor:
+        return None
+    m = re.search(r"(\d+)", anchor)
+    if not m:
+        return None
+    target = int(m.group(1))
+    patch = next((f.get("patch") for f in pr.get("files") or [] if f.get("path") == path), None)
+    if not patch:
+        return None
+    new_no, minus, plus = 0, [], []
+    for line in patch.splitlines():
+        h = HUNK_RE.match(line)
+        if h:
+            if plus or minus:
+                break                      # the hunk holding the target has ended
+            new_no = int(h.group(3)) - 1
+            continue
+        in_range = abs(new_no + 1 - target) <= 1
+        if line.startswith("+"):
+            new_no += 1
+            if abs(new_no - target) <= 1:
+                plus.append(line[1:])
+        elif line.startswith("-"):
+            if in_range:
+                minus.append(line[1:])
+        elif line.startswith(" "):
+            new_no += 1
+    if not (minus or plus):
+        return None
+    return {"quote_minus": minus[:3], "quote_plus": plus[:3]}
+
+
 def pending_judgment(queue: dict, pr: dict) -> str:
-    """Before the judge step runs: the open findings and what each row asks."""
+    """Before the judge step runs: the open findings, each with the diff
+    lines it is about, and what the row asks."""
     review = pr.get("review") or {}
     items = [i for i in review.get("items") or [] if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
     if pr.get("triage_prose"):
@@ -302,12 +483,17 @@ def pending_judgment(queue: dict, pr: dict) -> str:
     for i in items[:8]:
         link = deep_link(queue, pr, i)
         loc = f'<a href="{esc(link)}">{esc(i.get("file") or "")} {esc(i.get("anchor") or "")}</a>' if link else esc(i.get("anchor") or "")
-        rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim">{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span> {esc(i.get("summary") or i.get("text") or "")} {loc}</li>')
+        quote = patch_quote(pr, i.get("file"), i.get("anchor"))
+        rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim">{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span> '
+                    f'{esc(i.get("summary") or i.get("text") or "")} {loc}'
+                    + (diffq(quote) if quote else "") + "</li>")
     if len(items) > 8:
         rows.append(f"<li>… {len(items) - 8} more on the PR</li>")
     why = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("warnings", "outstanding", "self-accepted", "size", "blog", "directional", "duplicate", "collision", "desc", "brief", "scrutiny", "shape", "mergeable", "checks", "review", "merging-over")]
-    return ('<div class="jbox pending"><div class="q">Needs a call' + (": " + esc(", ".join(why[:4])) if why else "") + "</div>"
+    return ('<div class="jbox pending"><div class="q">Open findings, not yet judged' + (": " + esc(", ".join(why[:4])) if why else "") + "</div>"
             + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
+            + '<p class="jfoot">Nobody has decided these yet. Run the judge step (a full <code>/pr-review</code>) '
+              "to get a recommendation and a reason for each, or open the PR and read them there.</p>"
             + "</div>")
 
 
@@ -318,17 +504,19 @@ def action_bar(pr: dict, queue: dict) -> str:
     # colored by what it does; everything else stays grey on the left.
     rec = pr.get("recommended")
     primary = next((a for a in actions if a["id"] == rec), None) or (actions[0] if actions else None)
-    btns = [f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}">open PR</a>']
+    btns = [f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}" title="Open this pull request on GitHub, in a new tab.">open PR</a>']
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" aria-pressed="false">{esc(a["label"])}</button>')
+        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" '
+                    f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges the whole stamp set unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
-                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
+                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" '
+                    f'title="{esc(action_help(pr, primary))}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
 
 
@@ -533,7 +721,9 @@ def do_next_html(queue: dict) -> str:
             data += f' data-targets="{esc(json.dumps(d["targets"], sort_keys=True))}"'
         if d.get("claims"):
             data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
-        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}"{data} aria-pressed="false">{esc(d["label"])}</button>'
+        tip = d.get("does") or ACTION_HELP.get(d["kind"], "")
+        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}"{data} '
+               f'title="{esc(tip)}" aria-pressed="false">{esc(d["label"])}</button>'
                if d.get("cmd") else "")
         does = f'<span class="does">{esc(d["does"])}</span>' if d.get("does") else ""
         out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span>'
@@ -548,8 +738,16 @@ def filter_bar(queue: dict) -> str:
     authors = sorted({(p.get("author") or {}).get("norm") or "" for p in prs})
     counts = queue.get("counts") or {}
 
+    GROUP_HELP = {"view": "verdict", "owner": "owner", "domain": "domain", "author": "author"}
+
     def chip(kind, val, label=None, on=True):
-        return f'<button class="fchip{" on" if on else ""}" data-filter="{esc(kind)}" data-value="{esc(val)}">{esc(label or val)}</button>'
+        if kind == "since":
+            tip = f"Hide rows opened more than {val.rstrip('d')} days ago. This one is a threshold, not a set: the longest lit window wins."
+        else:
+            tip = (f"Lit: rows whose {GROUP_HELP.get(kind, kind)} is {val} are shown. Unlit: they are hidden. "
+                   "A row shows only while its value is lit in every group, so turning a whole group off empties the board.")
+        return (f'<button class="fchip{" on" if on else ""}" data-filter="{esc(kind)}" data-value="{esc(val)}" '
+                f'title="{esc(tip)}">{esc(label or val)}</button>')
 
     parts = ['<div class="mock-bar">']
     parts += [chip("view", "judge", "needs a decision", on=True), chip("view", "route", "route", on=True),
@@ -631,9 +829,12 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
     for owner, domain, rows in group_rows(prs):
         sections.append(f'<section class="grp"><div class="sec-head"><h2>{esc(owner)}</h2><span class="dlabel">{esc(domain)}</span><span class="count">{len(rows)}</span></div>'
                         + "".join(row_html(queue, p) for p in rows) + "</section>")
-    tally = "".join(f'<div class="t-{VERDICT_CLASS[v]}"><b>{counts.get(v, 0)}</b><span>{v}</span></div>' for v in VERDICT_ORDER)
+    tally = "".join(f'<div class="t-{VERDICT_CLASS[v]}" title="{esc(VERDICT_HELP.get(v, ""))}">'
+                    f'<b>{counts.get(v, 0)}</b><span>{v}</span></div>' for v in VERDICT_ORDER)
     if counts.get("handed-off"):
-        tally += f'<div class="t-dim"><b>{counts["handed-off"]}</b><span>waiting on others</span></div>'
+        tally += (f'<div class="t-dim" title="PRs whose requested reviewer is someone other than you. They are waiting on that person, '
+                  f'so they are listed at the foot of the page instead of taking a row.">'
+                  f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
     payload = json.dumps(slim(queue), sort_keys=True).replace("</", "<\\/")
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
