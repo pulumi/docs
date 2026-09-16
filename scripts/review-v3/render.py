@@ -628,7 +628,7 @@ def guide_block(queue: dict, pr: dict) -> str:
                      + "".join(f"<li>{md_inline(c)}</li>" for c in checked[:6]) + "</ul>")
     if links:
         parts.append('<p class="jmeta">' + " · ".join(links) + "</p>")
-    return ('<details class="guide" title="The reviewer\'s guide in short: what the PR changes, what the review '
+    return ('<details class="guide" open title="The reviewer\'s guide in short: what the PR changes, what the review '
             'already verified, and links to the guide, the author card and the evidence page.">'
             f'<summary>reviewer&#x27;s guide</summary>{"".join(parts)}</details>')
 
@@ -649,7 +649,7 @@ def preview_links(pr: dict) -> str:
     more = f"<li>… {len(pages) - 20} more on the PR</li>" if len(pages) > 20 else ""
     site = (f'<p class="jmeta"><a href="{esc(prev["url"])}">the whole preview site ↗</a></p>'
             if prev.get("url") else "")
-    return ('<details class="preview" title="Each page this PR changes, on the deployed preview of the site. '
+    return ('<details class="preview" open title="Each page this PR changes, on the deployed preview of the site. '
             'The same list pulumi-bot pins on the PR, so you can look at a rendered page without leaving this board.">'
             f'<summary>preview · {len(pages)} page{"s" if len(pages) != 1 else ""}</summary>'
             f"<ul>{rows}{more}</ul>{site}</details>")
@@ -872,7 +872,7 @@ def clusters_html(queue: dict) -> str:
         cards.append(f'<div class="card mid"><h4>Duplicate? #{d["newer"]} vs #{d["older"]}</h4>'
                      f'<p>Titles {int(d["title_ratio"] * 100)}% alike, opened {esc(d["minutes_apart"])} min apart, sharing {esc(", ".join(d["shared_files"][:3]))}.</p></div>')
     all_cards = cards + demoted
-    return (f'<section class="clusters"><details><summary><h2>Collisions · {len(cl)} cluster{"s" if len(cl) != 1 else ""}'
+    return (f'<section class="clusters"><details open><summary><h2>Collisions · {len(cl)} cluster{"s" if len(cl) != 1 else ""}'
             f'{" · " + str(len(by_path)) + " directional" if by_path else ""}</h2><span class="note">the files, the pairs, the merge orders</span></summary>'
             '<div class="two">' + "".join(all_cards) + "</div></details></section>")
 
@@ -926,8 +926,11 @@ def help_html() -> str:
     out = []
     for heading, points in HELP_SECTIONS:
         out.append(f"<div><h4>{esc(heading)}</h4><ul>" + "".join(f"<li>{p}</li>" for p in points) + "</ul></div>")
-    return ('<details class="help"><summary>How to read this board</summary>'
-            '<div class="helpgrid">' + "".join(out) + "</div></details>")
+    return ('<div class="helprow"><details class="help"><summary>How to read this board</summary>'
+            '<div class="helpgrid">' + "".join(out) + "</div></details>"
+            '<button class="btn" id="foldall" aria-pressed="false" '
+            'title="Open every folded panel on the board at once -- guides, previews, diff quotes, the reasons behind a '
+            'verdict -- or close them all back down. Each panel still opens and closes on its own.">expand all</button></div>')
 
 
 def do_next_html(queue: dict) -> str:
@@ -1228,6 +1231,9 @@ details.quote[open]>summary{margin-bottom:3px}
 .acts .btn.p{margin-left:auto;padding:5px 12px;font-size:12px}
 .btn.p-go{background:var(--go);border-color:var(--go)}.btn.p-hold{background:var(--hold);border-color:var(--hold)}.btn.p-route{background:var(--route);border-color:var(--route)}.btn.p-stop{background:var(--stop);border-color:var(--stop)}
 .progress{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-3);margin:6px 0 10px}
+.helprow{display:flex;align-items:flex-start;gap:10px;margin:10px 0 4px}
+.helprow>details.help{flex:1;margin:0}
+.helprow>#foldall{flex:none;margin-top:0}
 details.help{margin:10px 0 4px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface);box-shadow:var(--shadow)}
 details.help>summary{cursor:pointer;padding:9px 14px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-2)}
 details.help[open]>summary{border-bottom:1px solid var(--line)}
@@ -1433,6 +1439,22 @@ SCRIPT = r"""
   document.getElementById('clear').addEventListener('click', function(){
     document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose(); syncCards();
   });
+  // One lever for every fold on the board. The per-panel defaults are the
+  // reading order (a guide and its preview links open, the reasons behind a
+  // verdict and this manual closed); this is for the pass where you want
+  // everything, or nothing, at once.
+  (function(){
+    var fold = document.getElementById('foldall');
+    if (!fold) return;
+    fold.addEventListener('click', function(){
+      var open = fold.getAttribute('aria-pressed') !== 'true';
+      document.querySelectorAll('details').forEach(function(d){
+        if (d !== fold.parentNode.querySelector('details.help') || open) d.open = open;
+      });
+      fold.setAttribute('aria-pressed', open ? 'true' : 'false');
+      fold.textContent = open ? 'collapse all' : 'expand all';
+    });
+  })();
   document.getElementById('copy').addEventListener('click', function(){
     var t = cmdEl.textContent.replace(/^\$ /, '');
     if (navigator.clipboard) navigator.clipboard.writeText(t);

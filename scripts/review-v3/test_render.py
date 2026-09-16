@@ -10,6 +10,7 @@ exactly what analyze.py writes.
 
 from __future__ import annotations
 
+import inspect
 import json
 import re
 import sys
@@ -413,3 +414,15 @@ def test_a_decision_is_one_selection_wherever_it_appears():
     html = render.render_board(q)
     assert "function twins(b)" in html and "o.classList.toggle('sel', on)" in html
     assert "function leadCard(b)" in html and "c.dataset.lead === b.dataset.pr" in html
+
+
+def test_the_panels_worth_reading_start_open_and_one_lever_moves_them_all():
+    q = _queue()
+    html = render.render_board(q)
+    pr = {"number": 7, "preview": {"url": "https://p.example", "pages": [
+        {"file": "content/docs/a.md", "url": "/docs/a/", "title": "A", "preview_url": "https://p.example/docs/a/"}]}}
+    assert render.preview_links(pr).startswith('<details class="preview" open')
+    assert '<details class="guide" open' in inspect.getsource(render.guide_block)
+    # the manual and the folded reasons stay closed; nothing opens them for you
+    assert '<details class="help">' in html
+    assert 'id="foldall"' in html and "fold.textContent = open ? 'collapse all' : 'expand all';" in html
