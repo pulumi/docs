@@ -747,7 +747,10 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
         # and the diff is what an approver actually wants to look at.
         (f'<div class="prcell"><a class="pr" href="{esc(pr_url(queue, n))}" title="Open pull request #{n} on GitHub.">#{n}</a>'
          f'<a class="pr diff" href="{esc(files_url(queue, n))}" title="Open this PR\'s Files changed tab, straight to the diff.">diff ↗</a>'
-         f'<a class="pr diff" href="{esc(vscode_url(queue, n))}" title="Open this PR in the VS Code web editor, where you can read it with a real editor and edit the branch in place.">edit ↗</a></div>'),
+         f'<a class="pr diff" href="{esc(vscode_url(queue, n))}" title="Open this PR in the VS Code web editor, where you can read it with a real editor and edit the branch in place.">edit ↗</a>'
+         # One row's worth of the board-wide lever: fold this row down to its
+         # headline when you have finished with it, without touching the rest.
+         f'<button class="pr rowfold" type="button" aria-pressed="true" title="Fold this row\'s panels -- its guide, preview links and diff quotes -- down to the headline, or open them all back up. Only this row.">fold ▴</button></div>'),
         "<div>",
         f'<h4>{esc(pr.get("title"))} {verdict_chip(pr)}</h4>',
         f'<div class="meta">{meta_line(pr)}</div>',
@@ -1210,6 +1213,7 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 .jmeta,.sum,.card p,.jbox li,.detail td{overflow-wrap:anywhere}
 .pr{font-size:12px;font-weight:600;background:var(--surface-2);border:1px solid var(--line-2);border-radius:3px;padding:2px 7px;color:var(--ink);text-decoration:none;white-space:nowrap;align-self:start;justify-self:start}
 .prcell{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11px}
 .pr.diff{font-weight:500;font-size:11px;color:var(--accent);background:none;border-color:var(--accent-soft)}
 .mrow h4{font-size:14.5px;font-weight:600;margin:0 0 3px;line-height:1.35}
 .meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}
@@ -1443,12 +1447,23 @@ SCRIPT = r"""
   // reading order (a guide and its preview links open, the reasons behind a
   // verdict and this manual closed); this is for the pass where you want
   // everything, or nothing, at once.
+  document.querySelectorAll('button.rowfold').forEach(function(b){
+    b.addEventListener('click', function(){
+      var row = b.closest('.mrow');
+      if (!row) return;
+      var open = b.getAttribute('aria-pressed') !== 'true';
+      row.querySelectorAll('details').forEach(function(d){ d.open = open; });
+      b.setAttribute('aria-pressed', open ? 'true' : 'false');
+      b.textContent = open ? 'fold ▴' : 'open ▾';
+    });
+  });
   (function(){
     var fold = document.getElementById('foldall');
     if (!fold) return;
     fold.addEventListener('click', function(){
       var open = fold.getAttribute('aria-pressed') !== 'true';
-      document.querySelectorAll('details').forEach(function(d){ d.open = open; });
+      // The manual is not part of the report, so it keeps its own state.
+      document.querySelectorAll('details:not(.help)').forEach(function(d){ d.open = open; });
       fold.setAttribute('aria-pressed', open ? 'true' : 'false');
       fold.classList.toggle('on', open);
       fold.textContent = open ? 'collapse every panel' : 'expand every panel';

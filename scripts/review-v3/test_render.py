@@ -427,6 +427,8 @@ def test_the_panels_worth_reading_start_open_and_one_lever_moves_them_all():
     assert '<details class="help">' in html
     assert 'id="foldall"' in html and "fold.textContent = open ? 'collapse every panel' : 'expand every panel';" in html
     # it lives in the filter bar, where it plainly governs the board, and it
-    # closes the manual beside it like everything else
+    # moves the report's panels while leaving the manual's own state alone
     assert html.index('id="foldall"') > html.index('class="mock-bar"')
-    assert "document.querySelectorAll('details').forEach(function(d){ d.open = open; });" in html
+    assert "document.querySelectorAll('details:not(.help)').forEach(function(d){ d.open = open; });" in html
+    # and every row carries the same lever for itself alone
+    assert 'class="pr rowfold"' in html and "var row = b.closest('.mrow');" in html
