@@ -160,8 +160,11 @@ _vendor/
 /.pr-review-board.html
 /.pr-review-shots/
 /.pr-review-cache/
-# Written by record-evidence.py and sla-sweep.py when they run without a
-# bucket configured; same argument as the block above.
+# record-evidence.py writes .pr-review-evidence/ on every run, S3 reachable
+# or not -- writing them is its contract, not its fallback; sla-sweep.py
+# writes .pr-review-state/ only when no bucket is configured. Same argument
+# as the block above: both land in the repo root, where prettier --check
+# sees them.
 /.pr-review-evidence/
 /.pr-review-state/
 
