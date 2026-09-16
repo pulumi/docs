@@ -32,7 +32,7 @@
     </div>
     <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
         <h1 class="heading-xl tracking-tight">Plans for teams of all&nbsp;sizes</h1>
-        <p class="max-w-xl mx-auto mt-5 body-xl">
+        <p class="max-w-xl mx-auto mt-5 body-xl text-gray-primary">
             Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
         </p>
     </div>
@@ -248,7 +248,7 @@
                         {{ if eq $cell.kind "check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
                         {{ else if eq $cell.kind "blank" }}
-                        <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-primary size-6 inline-block") }} </span>
+                        {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-400 size-6 inline-block") }}
                         {{ else }}
                         <span>{{ $cell.content | markdownify }}</span>
                         {{ with $cell.subtext }}
@@ -336,7 +336,7 @@
 {{ end }}
 
 <section id="faq" class="container mx-auto px-6 my-24">
-    <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Frequently asked questions</h2>
+    <h2 class="heading-2 text-center mb-12!">Frequently asked questions</h2>
     <div class="max-w-4xl mx-auto">
         {{ range .Params.faq }}
         <h3 id="faq-{{ .id }}" class="font-mono uppercase tracking-wider text-xs mt-12 mb-2">{{ .category }}</h3>
