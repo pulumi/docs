@@ -535,6 +535,42 @@ def md_inline(text: str) -> str:
     return re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
 
 
+FINDING_CLAIM = re.compile(r'^\s*\*"(.+?)"\*', re.S)
+FINDING_VERDICT = re.compile(r"verdict:\s*([a-z-]+)", re.I)
+
+
+def one_sentence(text: str, limit: int = 240) -> str:
+    """The first sentence, or a clean cut. A finding's reasoning runs to a
+    paragraph; the row needs the top of it and a fold for the rest."""
+    t = " ".join((text or "").split())
+    if len(t) <= limit:
+        return t
+    cut = t.rfind(". ", 0, limit)
+    return (t[:cut + 1] if cut > 60 else t[:limit].rsplit(" ", 1)[0] + "…")
+
+
+def split_finding(body: str) -> dict:
+    """The parts of a composer-written finding: the claim it quotes, the
+    verdict word, and the review's own take where it took one. Anything it
+    cannot find comes back empty, and the caller falls back to the whole
+    body."""
+    out = {"claim": "", "verdict": "", "take": "", "stance": None}
+    m = FINDING_CLAIM.search(body or "")
+    if m:
+        out["claim"] = " ".join(m.group(1).split())
+    m = FINDING_VERDICT.search(body or "")
+    if m:
+        out["verdict"] = m.group(1).replace("-", " ")
+    for marker, cls, label, why in REVIEW_STANCE:
+        plain = marker.strip("*").rstrip(":")
+        idx = (body or "").lower().find(plain.lower())
+        if idx >= 0:
+            out["stance"] = (cls, label, why)
+            out["take"] = " ".join(body[idx + len(plain):].lstrip(" :*").split())
+            break
+    return out
+
+
 def finding_body(item: dict) -> str:
     """The whole finding, not the card's one-line excerpt. The review stores
     each one as a markdown table row — id, location, body — so the body is
@@ -554,11 +590,14 @@ def finding_body(item: dict) -> str:
 # Surfacing that is the difference between "nobody decided this" and "the
 # review already said what it thinks".
 REVIEW_STANCE = (
-    ("**Spurious:**", "go", "the review calls this spurious",
-     "The review examined this finding and concluded it does not hold. Nobody has ruled on it yet, but it is not asking you for a fix."),
-    ("Worth a look before you approve", "hold", "the review says: worth a look",
-     "The review kept this one deliberately: it wants a human to look before the PR merges."),
+    ("**Spurious:**", "go", "probably not real",
+     "A checker flagged this, and the review looked at it and thinks it does not hold. Nobody has ruled on it yet, "
+     "so it is your call -- but it is not asking you for a fix."),
+    ("Worth a look before you approve", "hold", "worth a look",
+     "A checker flagged this and the review kept it deliberately: it wants a person to look before the PR merges."),
 )
+NO_STANCE = ("dim", "nobody has ruled", "A checker raised this and the review did not take a position on it. "
+                                        "Nothing has decided it either way, so it is yours to weigh.")
 
 
 def review_stance(body: str) -> tuple[str, str, str] | None:
@@ -687,20 +726,33 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         items += [{"id": f"triage:{i + 1}", "summary": b, "bucket": "reviewer-check"} for i, b in enumerate(bullets)]
     if not items and pr.get("verdict") != "judge":
         return ""
+    # Same shape as a judged finding: the claim on top, a badge for where it
+    # stands, one sentence of why, the lines, and the rest folded. A wall of
+    # the review's prose is what this box used to be, and it buried the one
+    # thing the approver has to do.
     rows = []
     for i in items[:8]:
         link = deep_link(queue, pr, i)
-        loc = f'<a href="{esc(link)}">{esc(i.get("file") or "")} {esc(i.get("anchor") or "")}</a>' if link else esc(i.get("anchor") or "")
+        loc = (f'<a href="{esc(link)}">{esc(i.get("file") or "")} {esc(i.get("anchor") or "")} ↗</a>' if link
+               else f'<a href="{esc(pr_url(queue, pr["number"]))}">open the PR ↗</a>')
         quote = patch_quote(pr, i.get("file"), i.get("anchor"))
         body = finding_body(i)
-        stance = review_stance(body)
-        badge = (f' <span class="v v-{stance[0]}" title="{esc(stance[2])}">{esc(stance[1])}</span>' if stance else "")
-        rows.append(f'<li><b>{esc(i.get("id"))}</b> <span class="v v-dim" title="{esc(BUCKET_HELP.get(i.get("bucket"), ""))}">'
-                    f'{esc(BUCKET_LABEL.get(i.get("bucket"), i.get("bucket")))}</span>{badge} '
-                    f'{md_inline(body)} <span class="jmeta">{loc}</span>'
-                    + (diffq(quote) if quote else "") + "</li>")
+        parts = split_finding(body)
+        cls, label, why = parts["stance"] or NO_STANCE
+        head = parts["claim"] or one_sentence(body, 140)
+        note = parts["take"] or parts["verdict"] and f"The checker called this {parts['verdict']}." or ""
+        rows.append(
+            '<div class="jbox pending">'
+            f'<div class="qrow"><div class="q">{esc(i.get("id") or "")} {esc(one_sentence(head, 150))}</div>'
+            f'<span class="v v-{cls}" title="{esc(why)}">{esc(label)}</span></div>'
+            + (f'<div class="jnote">{md_inline(one_sentence(note))}</div>' if note else "")
+            + (diffq(quote) if quote else "")
+            + ('<details class="why" title="Everything the review wrote about this finding, including the checker\'s '
+               'own wording and the verdict it assigned."><summary>the review&#x27;s full note</summary>'
+               f'<div class="jnote">{md_inline(body)}</div></details>' if body else "")
+            + f'<div class="jmeta">{loc}</div></div>')
     if len(items) > 8:
-        rows.append(f"<li>… {len(items) - 8} more on the PR</li>")
+        rows.append(f'<div class="jnote">… {len(items) - 8} more on the PR</div>')
     # No reason codes here: the chips above the summary already carry them,
     # and repeating them makes the box look like a second, disagreeing list.
     if not items:
@@ -719,13 +771,10 @@ def pending_judgment(queue: dict, pr: dict) -> str:
                 + (" The diff is small enough to read here, so it is below."
                    if diff else f' <a href="{esc(files_url(queue, pr["number"]))}">Read the diff on GitHub ↗</a>')
                 + "</p>" + diff + "</div>")
-    return ('<div class="jbox pending"><div class="q">'
-            + f"{len(items)} open finding{'s' if len(items) != 1 else ''}, not yet judged</div>"
-            + ("<ul>" + "".join(rows) + "</ul>" if rows else "")
-            + '<p class="jfoot">These are the review\'s own words, including its own stance where it took one. '
-              "What is missing is a decision: a full <code>/pr-review</code> runs the judge step, which adds a "
-              "recommended disposition and the reasoning behind it to each one, and sets this row\'s recommended button.</p>"
-            + "</div>")
+    return ("".join(rows)
+            + f'<p class="jfoot">{len(items)} finding{"s" if len(items) != 1 else ""} nobody has ruled on yet. '
+              "A full <code>/pr-review</code> runs the judge step, which turns each badge into a recommended call "
+              "with its reasoning and picks this row&#x27;s button; until then they are yours to weigh.</p>")
 
 
 def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:

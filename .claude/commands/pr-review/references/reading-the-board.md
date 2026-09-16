@@ -71,6 +71,16 @@ A badge beside a finding says **why that finding does not stop the merge**. It i
 
 Approving a judged row posts those `/resolve` comments **before** it approves, so the review's own state records why each finding closed rather than the merge walking over them.
 
+Before the judge step has run, a finding wears the same shape with a different badge — where it *stands*, not what was decided:
+
+| Badge | Means |
+|---|---|
+| probably not real | A checker flagged it; the review looked and thinks it does not hold. Your call, but it is not asking for a fix. |
+| worth a look | A checker flagged it and the review kept it deliberately: it wants a person to look before the merge. |
+| nobody has ruled | A checker raised it and the review took no position. Yours to weigh. |
+
+Each one leads with the claim, carries one sentence of the review's reasoning and the diff lines it is about, and folds the review's full note behind **the review's full note**.
+
 ## Yours versus everyone's
 
 A chip with a dotted border and a small **·cfg** mark is on the row because of *your* `~/.pr-review.yml`, not because of the PR. Every other chip is a fact about the PR and reads the same for every approver.
