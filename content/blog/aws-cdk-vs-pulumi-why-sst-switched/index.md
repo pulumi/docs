@@ -168,7 +168,7 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 - **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](https://www.pulumi.com/docs/pulumi-cloud/deployments/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
 - **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
-Two years on, that bet has held: SST shipped its Pulumi-based engine as v3 in August 2024 and has kept building on it through its v4 releases, while the SST team's own attention has broadened to new projects like opencode, an open-source AI coding agent. The engine choice made in this migration is now load-bearing infrastructure for thousands of SST apps in production. For a closer look at what running on Pulumi's engine actually means underneath SST's abstractions, see [SST Runs on the Pulumi Engine: What It Means to Build on Pulumi](/blog/sst-built-on-pulumi/).
+Two years on, that bet has held: SST shipped its Pulumi-based engine as v3 in August 2024 and has kept building on it through its v4 releases, while the SST team's own attention has broadened to new projects like OpenCode, an open-source AI coding agent. The engine choice made in this migration is now load-bearing for every SST app that deploys with v3 or later.
 
 ## Conclusion
 
@@ -197,4 +197,4 @@ SST leverages Pulumi behind the scenes for its providers and deployment engine w
 
 ### How does SST make money?
 
-SST (Serverless Stack) makes money primarily through its managed dashboard, called SST Console, which is optional, comes with a free tier, and bills based on the number of active resources you run through it. In short, SST relies on SaaS revenue from Console alongside potential supplemental income streams like enterprise services and consulting.
+SST (Serverless Stack) makes money primarily through its managed dashboard, called SST Console, which is optional, comes with a free tier, and [bills based on the number of active resources](https://sst.dev/docs/console/#pricing) you run through it. In short, SST relies on SaaS revenue from Console alongside potential supplemental income streams like enterprise services and consulting.
