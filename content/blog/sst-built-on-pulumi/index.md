@@ -42,9 +42,9 @@ That's what the SST team has said about their own architecture, repeatedly, sinc
 
 ## What SST is
 
-[SST](https://sst.dev/) is an open source TypeScript framework, from the team formerly known as Serverless Stack, for building and deploying full-stack applications to AWS and more than 150 other providers. You define your app's infrastructure and code together in a single `sst.config.ts` file, using SST's own components (functions, queues, buckets, static sites, and so on), and `sst deploy` handles the provisioning end to end.
+[SST](https://sst.dev/) is an open source TypeScript framework, from the team formerly known as Serverless Stack, for building and deploying full-stack applications to AWS and more than 150 providers. You define your app's infrastructure and code together in a single `sst.config.ts` file, using SST's own components (functions, queues, buckets, static sites, and so on), and `sst deploy` handles the provisioning end to end.
 
-Through 2023, SST's provisioning layer was built directly on AWS CDK and CloudFormation. In late 2023 the team began a rewrite, code-named Ion, that replaced that entire deployment layer. Ion shipped as SST v3 in mid-2024 and has been the only supported architecture since.
+Through 2023, SST's provisioning layer was built directly on AWS CDK and CloudFormation. In late 2023 the team began a rewrite, code-named Ion, that replaced that entire deployment layer. Ion shipped as SST v3 in mid-2024 and is the architecture SST develops on today.
 
 ## What "built on the Pulumi engine" actually means
 
@@ -60,7 +60,7 @@ That's confirmed outside SST's own writing, too. Independent developers who've c
 
 > "SST uses the Pulumi engine under the hood to manage and provision resources, and lets users write Pulumi code in addition to using SST's constructs, enabling resources with no associated SST constructs to still be defined and deployed." — [Gautier Blandin, "Terraform, Pulumi, SST: a tradeoff analysis"](https://www.gautierblandin.com/articles/terraform-pulumi-sst-tradeoff-analysis)
 
-> "You may notice right away the imports from Pulumi. It means the whole deployment process will be built on Pulumi now." — [Kiryl Anoshka, "SST ditches AWS CDK. Time to move on to Ion"](https://dev.to/fively/sst-ditches-aws-cdk-time-to-move-on-to-ion-19pi)
+> "...you may notice right away the imports from Pulumi. It means the whole deployment process will be built on Pulumi now." — [Kiryl Anoshka, "SST ditches AWS CDK. Time to move on to Ion"](https://dev.to/fively/sst-ditches-aws-cdk-time-to-move-on-to-ion-19pi)
 
 The published `package.json` for SST's platform package backs this up directly: it depends on `@pulumi/pulumi`, plus first-party Pulumi providers for AWS, Cloudflare, Docker builds, and more, alongside a Pulumiverse Vercel provider.[^sst-package-json]
 
@@ -88,7 +88,7 @@ For a framework like SST, that means getting a production-grade provisioning eng
 
 SST isn't the only project to make this choice.
 
-- **[Nitric](https://nitric.io/)**, a cloud-agnostic application framework, states in its own docs that "all of the direct deployment providers use Pulumi under the hood for their deployments," with official Nitric providers built directly on Pulumi's AWS, GCP, and Azure providers.
+- **[Nitric](https://nitric.io/docs/get-started/foundations/deployment)**, a cloud-agnostic application framework, states in its own docs that "all of the direct deployment providers use Pulumi under the hood for their deployments," with official Nitric providers built directly on Pulumi's AWS, GCP, and Azure providers.
 - **[Defang](https://github.com/DefangLabs/pulumi-defang)**, which deploys Docker Compose applications to the cloud, describes its Pulumi provider as taking "a Compose file, translates it to a Pulumi program, and runs `pulumi up`" to provision the result.
 
 Both, like SST, expose a narrower, more opinionated interface to their users while relying on the Pulumi engine and its provider bridge underneath.
@@ -105,13 +105,13 @@ A few things worth being precise about, since it's easy to overstate this kind o
 
 SST continues to ship: the latest release, v4.17.1, went out in July 2026, and the `sst` package on npm is pulling roughly 796,000 downloads a week as of this writing.[^npm-downloads] The team's public attention has also broadened. SST's own team page credits the same team behind [opencode](https://opencode.ai/), an open source AI coding agent that has grown quickly since launch and now carries a larger following on GitHub than SST itself.[^opencode-stars]
 
-That's a legitimate expansion of what the team works on, not a sign that SST is being abandoned — the releases and download numbers say otherwise. It's simply worth noting plainly: SST's day-to-day spotlight now shares space with a second product, and the framework's dependency on the Pulumi engine hasn't changed as a result.
+The releases and download numbers say this is a legitimate expansion of what the team works on, rather than SST losing momentum. SST's day-to-day spotlight now shares space with a second product, and the framework's dependency on the Pulumi engine hasn't changed as a result.
 
 ## What this means if you're choosing infrastructure tooling
 
 If you already run SST, you're already running Pulumi's engine, whether or not you've written a line of Pulumi code yourself. That's a reasonable place to stop — SST's abstractions are enough for a lot of teams and a lot of applications.
 
-It's also worth knowing what's available if your needs grow past a single app: [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) for cross-team visibility into infrastructure state, [policy as code](/docs/iac/concepts/policy/) for guardrails your platform team can enforce centrally, and [components](/docs/iac/concepts/components/) for sharing infrastructure patterns across a whole organization rather than just within one SST app. None of that requires leaving the engine you're already using — it's the same one.
+It's also worth knowing what's available if your needs grow past a single app: [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) for cross-team visibility into infrastructure state, [policy as code](/docs/discovery-governance/policy/) for guardrails your platform team can enforce centrally, and [components](/docs/iac/concepts/components/) for sharing infrastructure patterns across a whole organization rather than just within one SST app. None of that requires leaving the engine you're already using — it's the same one.
 
 ## Frequently asked questions
 
@@ -148,4 +148,4 @@ That depends on what you're building. SST is a strong fit if you want an opinion
 
 [^sst-package-json]: [`platform/package.json`](https://github.com/anomalyco/sst/blob/dev/platform/package.json) in the `anomalyco/sst` repository (formerly `sst/sst`), verified September 2026: `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloudflare`, `@pulumi/command`, `@pulumi/docker-build`, `@pulumi/random`, `@pulumi/tls`, and `@pulumiverse/vercel` are listed as direct dependencies.
 [^npm-downloads]: [npm download stats for `sst`](https://api.npmjs.org/downloads/point/last-week/sst), 796,291 downloads for the week of September 5-11, 2026.
-[^opencode-stars]: [`anomalyco/opencode`](https://github.com/anomalyco/opencode) on GitHub, star count observed September 2026.
+[^opencode-stars]: [`anomalyco/opencode`](https://github.com/anomalyco/opencode) had roughly 207,700 GitHub stars and [`anomalyco/sst`](https://github.com/anomalyco/sst) had roughly 26,300, both observed September 16, 2026.
