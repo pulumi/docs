@@ -389,6 +389,24 @@ def test_mostly_theirs_cluster_has_no_do_next_card():
     assert 'class="chip r-cluster theirs"' in html
 
 
+def test_a_row_carries_its_age_without_crowding_the_meta_line():
+    from datetime import datetime, timezone  # noqa: PLC0415
+
+    now = datetime(2026, 9, 17, tzinfo=timezone.utc)
+    assert render.age_label({"created_at": "2026-09-17T06:00:00Z"}, now) == "today"
+    assert render.age_label({"created_at": "2026-09-16T00:00:00Z"}, now) == "1d"
+    assert render.age_label({"created_at": "2026-08-04T00:00:00Z"}, now) == "44d"
+    assert render.age_label({"created_at": "2026-03-01T00:00:00Z"}, now) == "6mo"  # never longer than four chars
+    assert render.age_label({"created_at": ""}, now) == "today"  # a missing date reads as new, never as ancient
+
+    q = run([stampable(7), stampable(8, title="Been sitting a while", created_at="2026-01-05T00:00:00Z")])
+    html = render.render_board(q)
+    assert f'>{render.age_label(row(q, 7))}</span>' in html
+    assert 'class="age old"' in html and 'class="age"' in html  # amber past 30 days, plain before it
+    assert "Opened 2026-01-05" in html  # the exact date stays in the tooltip, not the line
+    assert f"{'age':>5}" in render.render_terminal(q)
+
+
 def run_standalone() -> int:
     """The --self-test harness; test list bound at call time (test_sentinel.py)."""
     import inspect  # noqa: PLC0415

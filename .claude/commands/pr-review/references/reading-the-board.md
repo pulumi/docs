@@ -5,7 +5,7 @@ description: How to read the /pr-review board — every element on the page, wha
 
 # Reading the board
 
-The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind. Claude does not wait at the page for that, though: it plans the command the board opened with — read-only, no GitHub calls — and comes back with the preview and one question, execute or not.
+The board is a **worksheet, not a control panel**. Nothing on the page talks to GitHub. Every button is a toggle that adds a fragment to the command at the bottom; when you are happy with that command you copy it, or ask Claude to run it. Until then you can click anything and change your mind. Claude stops when the page is published and does nothing further until you hand a command back, so a board you never read can't approve anything.
 
 One run of `/pr-review` renders one board. Re-running re-renders it, and publishing updates the same page.
 
@@ -41,7 +41,7 @@ Two cards deserve a note:
 #21622  Fix stale fully-qualified /docs/ links in 6 blog posts        [judge]
 diff ↗
 edit ↗
-        blog · +7 −7 · 6 files · CI ✓ · reviewed@50f87c3 ≠ head 95358f6 · @workprentice[bot]
+        blog · +7 −7 · 6 files · CI ✓ · reviewed@50f87c3 ≠ head 95358f6 · @workprentice[bot] 12d
         [link-only sweep: yours] [review:base-merged] [warnings:2:F6,F7]  ▸ why · 4
         One-line summary of what the PR does.
         <judgment boxes>
@@ -51,6 +51,7 @@ edit ↗
 - **The three links on the left** are the PR, its Files changed tab (the diff), and the PR in the VS Code web editor, which gives you a real editor over the branch.
 - **The reviewer's guide fold** carries what the guide says beyond its findings: what the PR changes, what the review already verified so you needn't, and links to the guide, the author card and the evidence page.
 - **The preview fold** lists every page this PR changes on its own deployed copy of the site, the same list pulumi-bot pins on the PR. One click to a rendered page, without a trip to GitHub. Because those links exist, the screenshot action only appears in the detail view (`/pr-review N`), where the images embed in the page.
+- **The age** is the last thing on the meta line: how long the PR has been open, in at most four characters (`today`, `12d`, `4mo`), and amber once it passes 30 days. It is there because it is the one fact a row cannot show you any other way — two identical sweeps read the same until you notice one has been sitting since June. Hover it for the exact date.
 - **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
 - **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
 - **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
@@ -113,7 +114,7 @@ The bottom of the page composes your decisions into one command:
 $ /pr-review --act --stamp 21550,21577 --request-changes 21664 --route 21651:@pulumi/docs-blog-review
 ```
 
-Copy it and run it, or hand it to Claude. `act.py` plans it, shows a preview of every write it will make, and waits for a yes before executing. Each approval runs its own preflight immediately before merging: head unchanged since the plan, mergeable, CI green, no changes-requested review. A PR that fails preflight is skipped and the rest of the batch continues.
+Copy it and run it, or hand it to Claude. Invoking it *is* the yes: `act.py` plans it, prints a preview of every write, and executes — the reading you did on this page is what the command carries, so nothing asks you to confirm it a second time. (`--dry-run` prints the preview and stops, if you want to look first.) Each approval runs its own preflight immediately before merging: head unchanged since the plan, mergeable, CI green, no changes-requested review. A PR that fails preflight is skipped and the rest of the batch continues.
 
 ## Waiting on others
 
