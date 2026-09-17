@@ -65,6 +65,7 @@ RAW_CONFIG = {
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
     "auto_approve": {"authors": ["pulumi-bot"]},
+    "link_only": {"approval": "any-team"},
 }
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
 assert CONFIG is not None, _errors
@@ -85,6 +86,8 @@ class StubGh:
         memberships=None,
         membership_error_users=(),
         label_events=None,
+        workflow_runs=None,
+        workflow_runs_error=False,
     ):
         self.pr = pr or {}
         self.files = files or []
@@ -94,7 +97,10 @@ class StubGh:
         self.memberships = memberships or {}  # (slug, user) -> state
         self.membership_error_users = set(membership_error_users)
         self.label_events = label_events or []
+        self.workflow_runs = workflow_runs or []
+        self.workflow_runs_error = workflow_runs_error
         self.patched = []  # (comment_id, body)
+        self.posted = []   # body
 
     def get_pr(self):
         return self.pr
@@ -119,8 +125,16 @@ class StubGh:
     def get_label_events(self):
         return self.label_events
 
+    def get_workflow_runs(self, workflow_file, head_sha):
+        if self.workflow_runs_error:
+            raise RuntimeError("actions API unavailable")
+        return self.workflow_runs
+
     def patch_issue_comment(self, comment_id, body):
         self.patched.append((comment_id, body))
+
+    def post_issue_comment(self, body):
+        self.posted.append(body)
 
 
 # ---- Fixture builders ----------------------------------------------------
@@ -355,6 +369,49 @@ def test_g3_wrong_team_red_names_team():
     assert g3.status == "red" and "pulumi/docs-guild" in g3.message
 
 
+def link_only_file():
+    """A blog file whose one changed line differs only in its link target."""
+    return {
+        "filename": "content/blog/p/index.md",
+        "status": "modified",
+        "patch": ("@@ -10,3 +10,3 @@\n context\n"
+                  "-See [stacks](https://www.pulumi.com/docs/concepts/stacks/) for the rest.\n"
+                  "+See [stacks](/docs/iac/concepts/stacks/) for the rest.\n context"),
+    }
+
+
+def test_g3_any_team_satisfies_a_link_only_sweep():
+    # A blog link sweep would normally need pulumi/docs-blog-review. With
+    # link_only.approval: any-team, a docs-guild member's approval clears it:
+    # checking a retargeted link is careful work, not lane knowledge.
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[link_only_file()], comments=[card],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok", g3.message
+    # and a stranger still does not clear it: any TEAM, not anyone
+    gh = StubGh(pr=pr_meta(), files=[link_only_file()], comments=[card],
+                reviews=[approval("random-person")], memberships={})
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "any review team" in g3.message
+    # a substantive change in the same lane is unaffected
+    gh = StubGh(pr=pr_meta(), files=[{"filename": "content/blog/p/index.md", "status": "modified",
+                                      "patch": "@@ -10,2 +10,3 @@\n context\n+A whole new sentence about stacks.\n context"}],
+                comments=[card], reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "docs-marketing-review" in g3.message  # blog's team in this fixture
+
+
+def test_link_only_diff_is_narrow():
+    assert sentinel.link_only_diff([link_only_file()]) is True
+    assert sentinel.link_only_diff([docs_file_substantive()]) is False
+    assert sentinel.link_only_diff([{"filename": "a.md", "status": "modified", "patch": None}]) is False
+    assert sentinel.link_only_diff([]) is False
+
+
 def test_g3_bot_denylist_and_bot_type_excluded():
     card = author_card([], state=_state_with([]))
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
@@ -510,22 +567,163 @@ def test_infra_needs_staging_status_g4():
     assert v_ok.conclusion == "success", v_ok.to_json()
 
 
+def _waive_events(actor="cam"):
+    return [{"event": "labeled", "label": {"name": "review:waived"},
+             "actor": {"login": actor}}]
+
+
 def test_waived_success_with_banner_and_actor():
     gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
-                label_events=[{"event": "labeled", "label": {"name": "review:waived"},
-                               "actor": {"login": "cam"}}])
+                label_events=_waive_events("cam"),
+                memberships={("docs-tools", "cam"): "active"})
     v = sentinel.evaluate(gh, CONFIG)
     assert v.conclusion == "success"
     assert "WAIVED by @cam" in v.summary
 
 
+def test_waive_honored_from_any_routing_team_not_just_the_required_one():
+    """A marketing-team member may waive a docs PR, which routes to docs-guild.
+
+    Scoping the waive to the PR's own required team would make it exactly as
+    hard to obtain as the approval it bypasses — useless for the case it
+    exists to cover (the required approver is the author).
+    """
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("marketer"),
+                memberships={("docs-marketing-review", "marketer"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion == "success", v.to_json()
+    assert "WAIVED by @marketer" in v.summary
+
+
+def test_waive_from_a_non_team_member_is_refused_and_says_so():
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("randopasserby"))
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion == "failure", v.to_json()
+    assert "NOT honored" in v.summary
+    assert "randopasserby" in v.summary
+    assert "WAIVED by" not in v.summary
+
+
+def test_waive_with_unreadable_membership_is_refused_not_granted():
+    """Fail closed: an API failure must never widen who can waive."""
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=_waive_events("cam"),
+                membership_error_users=["cam"])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion != "success", v.to_json()
+    assert "NOT honored" in v.summary
+
+
+def test_waive_with_unreadable_actor_is_refused():
+    gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[docs_file_substantive()],
+                label_events=[])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.conclusion != "success", v.to_json()
+    assert "NOT honored" in v.summary
+
+
 def test_waive_never_covers_infra_evidence():
     gh = StubGh(pr=pr_meta(labels=["review:waived"]), files=[infra_file()],
-                label_events=[{"event": "labeled", "label": {"name": "review:waived"},
-                               "actor": {"login": "cam"}}])
+                label_events=_waive_events("cam"),
+                memberships={("docs-tools", "cam"): "active"})
     v = sentinel.evaluate(gh, CONFIG)
     assert v.conclusion == "failure"
     assert "no waiver" in v.title.lower() or "NOT waivable" in v.summary
+
+
+# ---- G4: the deploy run is evidence, not just the status ----------------
+
+
+def _deploy_run(conclusion="success", run_id=99):
+    return {"id": run_id, "conclusion": conclusion,
+            "html_url": f"https://github.com/pulumi/docs/actions/runs/{run_id}"}
+
+
+def test_g4_accepts_a_successful_deploy_run_when_the_status_is_missing():
+    gh = StubGh(pr=pr_meta(), files=[infra_file()],
+                reviews=[approval("tools-member")],
+                memberships={("docs-tools", "tools-member"): "active"},
+                workflow_runs=[_deploy_run()])
+    g4 = _gate(sentinel.evaluate(gh, CONFIG), "G4")
+    assert g4.status == "ok", g4
+    assert "run 99" in g4.message
+
+
+def test_g4_ignores_a_failed_deploy_run():
+    gh = StubGh(pr=pr_meta(), files=[infra_file()],
+                workflow_runs=[_deploy_run(conclusion="failure")])
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "red"
+
+
+def test_g4_takes_a_success_among_several_runs_at_this_head():
+    """'Deployed at least once' — an earlier red run doesn't erase a green one."""
+    gh = StubGh(pr=pr_meta(), files=[infra_file()],
+                workflow_runs=[_deploy_run(conclusion="failure", run_id=1),
+                               _deploy_run(conclusion="success", run_id=2)])
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "ok"
+
+
+def test_g4_run_lookup_failure_blocks_rather_than_erroring():
+    """An unreadable run history is 'no evidence', not action_required.
+
+    Red is already the conservative answer here; escalating to
+    action_required would misreport an API hiccup as a corrupt PR.
+    """
+    gh = StubGh(pr=pr_meta(), files=[infra_file()], workflow_runs_error=True)
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "red"
+
+
+# ---- Pinned status comment ----------------------------------------------
+
+
+def test_status_comment_upserts_then_stays_byte_identical():
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+
+    assert sentinel.update_status_comment(gh, v, comments=[]) is True
+    body = gh.posted[0]
+    assert sentinel.STATUS_MARKER in body
+    assert "G3 right-approver" in body
+    assert "docs-guild" in body, "a red gate carries its own remediation"
+
+    existing = [{"id": 7, "body": body}]
+    assert sentinel.update_status_comment(gh, v, comments=existing) is False, \
+        "an unchanged verdict must not churn the comment"
+    assert gh.patched == []
+
+
+def test_status_comment_rewrites_when_a_gate_changes():
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    stale = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nsomething older\n"}]
+    assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
+                                          comments=stale) is True
+    assert gh.patched and gh.patched[0][0] == 7
+
+
+def test_status_comment_rows_are_single_line():
+    """A newline inside a cell silently breaks the markdown table."""
+    gh = StubGh(pr=pr_meta(), files=[infra_file()])
+    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
+    rows = [l for l in body.splitlines() if l.startswith("| ") and "**G" in l]
+    assert len(rows) == 5, rows
+    assert all(r.count("|") == 4 for r in rows), rows
+
+
+def test_status_comment_marks_report_only_and_flags_the_unwaivable_gate():
+    gh = StubGh(pr=pr_meta(), files=[infra_file()])
+    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
+    assert "Report-only" in body
+    assert "no waiver" in body
+
+
+def test_preview_label_is_carried_on_the_verdict():
+    gh = StubGh(pr=pr_meta(labels=[sentinel.PREVIEW_LABEL]),
+                files=[docs_file_substantive()])
+    assert sentinel.evaluate(gh, CONFIG, report_only=True).preview is True
+    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    assert sentinel.evaluate(gh2, CONFIG, report_only=True).preview is False
 
 
 def test_oversized_ack_replaces_g1_g2():
@@ -732,7 +930,123 @@ def test_workflow_never_checks_out_pr_code():
     assert "default_branch" in wf  # checkout pinned to base default branch
 
 
+def test_workflow_can_actually_write_the_comments_it_writes():
+    """Comment writers need `pull-requests: write`, not `issues: write`.
+
+    Both the pinned status comment and the ⛔ strip go through
+    `/repos/{o}/{r}/issues/{n}/comments`, whose name is a trap: on a PR
+    number that endpoint is governed by the pull_requests scope. The block
+    asked for `issues: write` + `pull-requests: read` and read as correct
+    for months because neither writer had ever run — the strip only fires
+    when enforcing, and the status comment did not exist. The first real
+    POST failed with exit 1 (PR #21642).
+    """
+    for name in ("review-sentinel.yml", "staging-deploy-pr.yml"):
+        wf = (REPO_ROOT / ".github" / "workflows" / name).read_text()
+        assert "pull-requests: write" in wf, (
+            f"{name} posts comments on a PR and needs `pull-requests: write`; "
+            "`issues: write` does not cover the /issues/{n}/comments endpoint "
+            "when {n} is a pull request"
+        )
+
+
+def test_gh_failures_carry_the_reason():
+    """A failed `gh` call must surface stderr, not just an exit code.
+
+    CalledProcessError prints argv and a status; gh's explanation lives in
+    stderr and was being discarded, which is what turned a one-line
+    permission error into a log dive.
+    """
+    class _Failed:
+        returncode = 1
+        stdout = ""
+        stderr = "gh: Resource not accessible by integration (HTTP 403)"
+
+    gh = sentinel.Gh("pulumi/docs", 1)
+    original = sentinel.subprocess.run
+    sentinel.subprocess.run = lambda *a, **k: _Failed()
+    try:
+        gh.post_issue_comment("a" * 5000)
+    except sentinel.SentinelDataError as exc:
+        msg = str(exc)
+        assert "403" in msg and "not accessible" in msg, msg
+        assert "issues/1/comments" in msg, f"the endpoint should be named: {msg}"
+        assert "aaaa" not in msg, "the rendered body must not be echoed into the error"
+    else:  # pragma: no cover
+        raise AssertionError("a non-zero gh exit must raise")
+    finally:
+        sentinel.subprocess.run = original
+
+
+def test_sparse_checkout_covers_everything_the_evaluator_loads():
+    """The sparse list is a dependency declaration, so pin it to reality.
+
+    A full worktree is ~1.2 GB and checkout was the entire job runtime; the
+    evaluator needs about 7 MB. The hazard of trimming it is a lazily
+    `_load`ed module (validate-pinned.py is imported inside one branch) that
+    goes missing for only the PRs whose code path reaches it. Resolve the
+    paths sentinel.py names and assert each sits under a declared root, so
+    a new dependency outside them fails here instead of in production.
+    """
+    import re as _re  # noqa: PLC0415
+
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    block = _re.search(r"sparse-checkout:\s*\|\n((?:\s+\S+\n)+)", wf)
+    assert block, "review-sentinel.yml must declare a sparse-checkout list"
+    roots = [line.strip() for line in block.group(1).splitlines() if line.strip()]
+    assert "sparse-checkout-cone-mode: true" in wf
+
+    src = (HERE / "sentinel.py").read_text()
+    needed = {
+        # `_load(..., _DOCS_REVIEW_SCRIPTS / "x.py")` and `_HERE / "y.py"`
+        *(f".claude/commands/docs-review/scripts/{m}"
+          for m in _re.findall(r'_DOCS_REVIEW_SCRIPTS / "([^"]+)"', src)),
+        *(f"scripts/review-v3/{m}" for m in _re.findall(r'_HERE / "([^"]+)"', src)),
+        # plus the ones imported by name off sys.path, and the config default
+        "scripts/review-v3/routing.py",
+        "scripts/review-v3/review_state.py",
+        ".github/review-routing.yml",
+        # compose-review.py reads these from its own parent directory
+        ".claude/commands/docs-review/footer.md",
+    }
+    assert len(needed) > 5, "the path scrape found nothing — did sentinel.py change shape?"
+    for rel in sorted(needed):
+        assert (REPO_ROOT / rel).exists(), f"{rel} does not exist — fix the test, not the workflow"
+        assert any(rel == r or rel.startswith(r.rstrip("/") + "/") for r in roots), \
+            f"{rel} is loaded by sentinel.py but no sparse-checkout root covers it: {roots}"
+
+
 # ---- Standalone harness --------------------------------------------------
+
+def test_the_auto_staging_lane_dispatches_and_gets_out():
+    """An evidence producer must never read as a failing check.
+
+    The unattended lane used to sit in a `staging-stack` concurrency group
+    for up to 45 minutes watching the deploy it dispatched. GitHub cancels a
+    displaced pending run, and a cancelled job shows on the PR as a failing
+    check -- on a PR whose only sin was a second push. The lane now fires
+    the existing "Build and deploy testing" workflow and exits; that run
+    writes its own `staging/pulumi-test-io` status.
+    """
+    auto = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-auto.yml").read_text()
+    assert "--dispatch-only" in auto, "the auto lane must not wait on the deploy"
+    import yaml as _yaml  # noqa: PLC0415
+    jobs = _yaml.safe_load(auto)["jobs"]
+    assert all("concurrency" not in j for j in jobs.values()), "a queued job is a job that gets cancelled"
+
+    script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
+    assert "--dispatch-only) DISPATCH_ONLY" in script
+    # stale comment guard: the header must not still promise a queue
+    assert "Concurrency sits on the DEPLOY JOB" not in auto
+    # the attended lane still watches: someone is sitting there waiting
+    pr_lane = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-pr.yml").read_text()
+    assert "--dispatch-only" not in pr_lane
+
+    deploy = (REPO_ROOT / ".github" / "workflows" / "testing-build-and-deploy.yml").read_text()
+    assert "staging-status:" in deploy, "the dispatched run has to resolve its own pending status"
+    assert "staging/pulumi-test-io" in deploy
+    assert "statuses: write" in deploy
+
 
 def run_standalone() -> int:
     """The --self-test harness. The test list is bound at call time, not at
