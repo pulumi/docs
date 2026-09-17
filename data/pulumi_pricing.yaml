@@ -932,8 +932,8 @@ support_plans:
     term: Contact sales
     channels: Chat, support portal, email, and Slack
     coverage: 24 hours/day, 7 days/week
-    urgent_response: Custom SLA
-    normal_response: Custom SLA
+    urgent_response: 1 hour
+    normal_response: 4 hours
     private_slack: true
     workshops: Custom engagement
     health_checks: Custom engagement
