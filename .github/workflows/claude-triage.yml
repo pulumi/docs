@@ -26,6 +26,16 @@ on:
   pull_request:
     types: [opened, ready_for_review, synchronize]
 
+# ESC OIDC, for the org-scoped token the reviewer-routing step needs. Same
+# environment the Sentinel and the dependabot lane mint from; harmless on
+# every other run, since nothing but that one step reads it.
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
 jobs:
   triage:
     # Skip drafts (the `opened` event fires for both draft and non-draft)
@@ -449,6 +459,24 @@ jobs:
       # ready → draft → ready dance stays quiet. continue-on-error: routing
       # is an assist — the Sentinel enforces the matrix regardless of
       # whether the request landed.
+      # A TEAM review request is not a repo-scoped operation: the
+      # requested_reviewers endpoint has to resolve `org/slug` against the
+      # org, and the default GITHUB_TOKEN can't — it fails the same way the
+      # Sentinel's team-membership reads do without PULUMI_BOT_TOKEN. Mint
+      # the org-scoped token here so the request below can actually land;
+      # reading the PR and its diff stays on GITHUB_TOKEN. continue-on-error
+      # because routing is an assist: no token degrades to "requested
+      # nobody", which is where the repo was before this step existed, and
+      # the Sentinel enforces the matrix either way.
+      - name: Fetch ESC secrets (org-scoped routing token)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && github.event.action != 'synchronize'
+          && steps.check-access.outputs.has_write_access == 'true'
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
       - name: Request lane reviewers (v3 routing)
         if: >-
           vars.REVIEW_V3_ROUTING == '1'
@@ -457,6 +485,7 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
@@ -470,9 +499,19 @@ jobs:
           ROUTE=$(python3 scripts/review-v3/route-pr.py \
             --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")
           echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
-          for team in $(echo "$ROUTE" | jq -r '.teams[]'); do
-            gh pr edit "$PR" --repo "$REPO" --add-reviewer "$team" \
-              || echo "::warning::routing: could not request $team (team missing or token lacks org scope)"
+          TEAMS=$(echo "$ROUTE" | jq -r '.teams[]')
+          if [ -z "$TEAMS" ]; then
+            echo "routing: no approver team required (mechanical or unrouted) — requesting nobody"
+            exit 0
+          fi
+          if [ -z "${TEAM_TOKEN:-}" ]; then
+            echo "::warning::routing: no org-scoped token (ESC fetch failed); team review requests need one. Would have requested: $(echo "$TEAMS" | paste -sd, -)"
+            exit 0
+          fi
+          for team in $TEAMS; do
+            GH_TOKEN="$TEAM_TOKEN" gh pr edit "$PR" --repo "$REPO" --add-reviewer "$team" \
+              && echo "routing: requested $team" \
+              || echo "::warning::routing: could not request $team (team missing, or it has no access to $REPO)"
           done
 
       # Clear the triaging label whether classification succeeded or not

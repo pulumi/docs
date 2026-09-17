@@ -590,7 +590,7 @@ def render_header(timestamp: str, head_sha: str = "") -> str:
     `pull_request: synchronize` event, so the `review:stale` label can miss a
     push entirely (PR #20556 closed wearing `review:no-blockers` while the
     pinned review described content a later conflict-resolution commit had
-    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    replaced). Label-independent consumers (`/pr-review`'s collect.py, the
     review-label-reconcile workflow) compare this SHA against the PR head —
     an exact check, immune to suppressed webhooks. The re-entrant update path
     must refresh it alongside the `Last updated` timestamp (see
@@ -1795,6 +1795,15 @@ def waiting_state_cell(bucket: str, disposition: dict | None) -> str:
     """The State cell of the brief's "Waiting on the author" table."""
     if isinstance(disposition, dict):
         d = disposition.get("disposition")
+        if d == "author-accepted":
+            # #21640: the author resolved their own finding. Sentinel counts
+            # this as answered (the author DID answer), but the marker keeps
+            # it visibly distinct from a maintainer's answer — the original
+            # disposition tells the approver exactly what the author waved
+            # through rather than dissolving into the same green as
+            # `review:no-blockers` gives a real reviewer's clearance.
+            orig = disposition.get("original_disposition") or "accepted"
+            return f"🔏 author-accepted ({orig})"
         if d == "accepted":
             return "✋ accepted as-is by the author"
         if d == "refuted":

@@ -25,7 +25,7 @@ We plan to make running your program the default behavior for refresh and destro
 
 ## Let's see it in action
 
-We are writing a Pulumi program to deploy infrastructure to AWS. Our organization's platform team provides us with a library that we can use to dynamically fetch appropriate AWS credentials for our stack. We use this to retrieve some values and set up an explicit AWS provider ([1](https://www.pulumi.com/blog/disable-default-providers/), [2](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [3](https://www.pulumi.com/registry/packages/aws/api-docs/provider/)):
+We are writing a Pulumi program to deploy infrastructure to AWS. Our organization's platform team provides us with a library that we can use to dynamically fetch appropriate AWS credentials for our stack. We use this to retrieve some values and set up an explicit AWS provider ([1](https://www.pulumi.com/blog/disable-default-providers/), [2](/docs/iac/concepts/providers/), [3](https://www.pulumi.com/registry/packages/aws/api-docs/provider/)):
 
 {{% chooser language "javascript,typescript,python,go,java,csharp" %}}
 
