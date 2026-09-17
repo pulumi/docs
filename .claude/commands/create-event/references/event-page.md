@@ -12,8 +12,7 @@ The single source of truth for the schema is `archetypes/event/index.md` (its co
 | `meta_desc` | 50–160 characters, one sentence — it's the card text on /events/ and the search snippet. |
 | `meta_image` / `meta_image_square` | Leave **blank** by default: the build auto-generates an on-brand card (landscape + square) from frontmatter. Set only when event-meta-image renders an enriched card into the bundle (`/events/<slug>/meta.png`, `/events/<slug>/meta-square.png`). |
 | `gated` | `true` renders the registration form (needs `form.hubspot_form_id`). Pulumi-hosted workshops/webinars default gated. |
-| `external` | `true` → `url_slug` becomes the external URL and `block_external_search_index: true` is required. No form. |
-| `url_slug` | Must equal the bundle directory name (internal events). |
+| `event_url` | For an event hosted elsewhere. An `https://…` URL (a third-party page, opened in a new tab) or a `/…` path (another Pulumi page). The generated `/events/<slug>/` stub redirects there and is never indexed; the list and RSS link out. Omit for a normal event that renders its own page here. No form. |
 | `event_type` | `workshop` \| `webinar` \| `talk`. Also the default card overline (uppercased). |
 | `sortable_date` | ISO 8601 with milliseconds and the offset valid **on that date** — see recipe. Sorts the list, dates schema.org, stamps the card. |
 | `youtube_url` | Leave empty until the event has run. Setting it flips the page to the on-demand layout (no form, out of "Upcoming"). Multi-session: only after the **last** session. |
@@ -85,7 +84,7 @@ Fresh clones/worktrees may lack node deps. Best effort, in order: try `make lint
 1. Frontmatter parses: `python3 -c "import yaml; yaml.safe_load(open('content/events/<slug>/index.md').read().split('---')[1])"`
 2. `title` ≤ 60 chars; `meta_desc` 50–160 chars.
 3. `event_type` ∈ {workshop, webinar, talk}; `tags.level` ∈ {Beginner, Intermediate, Advanced}.
-4. `url_slug` == directory name (or external URL + `block_external_search_index: true`).
+4. Directory name matches the slug; `event_url`, when set, is an `https://…` URL or a `/…` path.
 5. `sortable_date` matches `\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}[+-]\d{2}:\d{2}` and the offset came from the recipe.
 6. Sessions rules above, when present.
 7. No trailing whitespace; file ends with a newline.
