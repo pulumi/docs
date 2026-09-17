@@ -73,7 +73,7 @@ The local server's tool names are prefixed to keep them unambiguous inside a hos
 | `mcp/pulumi` Docker Hub pulls | 18,062 | 2026-09-12 |
 | Tools exposed, local server | 11 tools, 1 prompt | 2026-09-12 |
 | Tools exposed, hosted server | 14 tools, 6 prompts | 2026-09-12 |
-| Cloud providers reachable through Pulumi's IaC engine | [200+](/registry/) | 2026-09-12 |
+| Cloud providers reachable through Pulumi's IaC engine | [Hundreds](/registry/) | 2026-09-12 |
 
 Download and pull counts come from the [npm registry](https://www.npmjs.com/package/@pulumi/mcp-server) and [Docker Hub](https://hub.docker.com/r/mcp/pulumi) on the dates shown; the tool and prompt counts are the sets enumerated on the [Pulumi MCP server docs page](/docs/ai/mcp-server/). Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
 
