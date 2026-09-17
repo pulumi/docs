@@ -26,11 +26,14 @@
             <item>
                 {{ $eventLink := printf "%s%s" site.Params.canonicalURL $event.RelPermalink }}
                 <!--
-                    When the event is external, the `url_slug` property is set to the external link
-                    in the event template.
+                    An event hosted off-site (event_url is an "https://..." URL) links
+                    straight there; an internal landing page ("/..." path) keeps the
+                    canonical /events/ permalink, which redirects on to it.
                 -->
-                {{ if $event.Params.external }}
-                    {{ $eventLink = $event.Params.url_slug }}
+                {{ with $event.Params.event_url }}
+                    {{ if hasPrefix . "http" }}
+                        {{ $eventLink = . }}
+                    {{ end }}
                 {{ end }}
                 {{/* A labelled session has a tab on the event page to land on;
                      a single-session event has none, so its link stays bare. */}}
