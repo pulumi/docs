@@ -145,9 +145,27 @@ def test_gate_open_warning_rows():
     assert [a["id"] for a in p["actions"][:3]] == ["stamp", "stamp-no-merge", "request-changes"]
 
 
-def test_gate_open_blockers_on_author_card():
-    p = _judge_because("outstanding:3", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])
+def test_open_blockers_block_the_row_they_do_not_merely_demote_it():
+    """An unanswered 🚨 is "can't merge regardless", so the row lands in the
+    one lane --force never reaches. Demoting it to `judge` is what let
+    #21482 and #21549 merge over their open findings."""
+    q = run([stampable(comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])])
+    p = row(q, 100)
+    assert p["verdict"] == "blocked", (p["verdict"], p["reasons"])
+    assert any(r.startswith("outstanding:3") for r in p["reasons"]), p["reasons"]
+    assert "outstanding:3" in p["blockers"], p["blockers"]
     assert set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
+    # blocked, but not a dead end: the row offers the send-back.
+    assert "request-changes" in [a["id"] for a in p["actions"]], p["actions"]
+    # and no stamp button, because there is nothing here to approve yet.
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")], p["actions"]
+    # A workflow-authored row (pulumi-bot's content-review lane — #21549's own
+    # shape) has nobody to send it back to, so it offers the close instead.
+    gen = row(run([stampable(comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                             author="pulumi-bot", author_type="User")]), 100)
+    assert gen["verdict"] == "blocked" and "author:generated" in gen["reasons"], gen["reasons"]
+    ids = [a["id"] for a in gen["actions"]]
+    assert "close" in ids and "request-changes" not in ids, gen["actions"]
 
 
 def test_gate_self_accepted_disposition():
