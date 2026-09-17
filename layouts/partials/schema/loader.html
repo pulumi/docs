@@ -10,8 +10,8 @@
      and 4 of the 77 external:true event pages are indexable. Gating on
      `external` alone (the old behavior) dropped their Event schema even
      though the pages are real, canonical, indexable URLs. This gate leaves
-     every non-external page's schema untouched (the 23 non-event pages with
-     block_external_search_index: true keep emitting schema exactly as
+     every non-external page's schema untouched (the 23 non-external pages
+     with block_external_search_index: true keep emitting schema exactly as
      before) and only changes behavior for those 4 indexable event pages. */}}
 {{ if or (not .Params.external) (ne .Params.block_external_search_index true) }}
   {{/* Use @graph structure for all pages */}}
