@@ -162,6 +162,56 @@ class TestValidateEvidence:
         errors = validate_evidence(valid_evidence)
         assert any(".sha" in e for e in errors)
 
+    # ---- issue #21640: author-accepted collapses a self-answer ---------
+
+    @pytest.mark.parametrize("original", ["refuted", "deferred", "accepted", "not-applicable"])
+    def test_author_accepted_requires_valid_original_disposition(self, valid_evidence, original):
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="author-accepted", original_disposition=original,
+                                               note="n" if original in ("deferred", "accepted", "not-applicable") else ""))
+        ]
+        assert validate_evidence(valid_evidence) == []
+
+    def test_author_accepted_without_original_disposition_rejected(self, valid_evidence):
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="author-accepted", note=""))
+        ]
+        errors = validate_evidence(valid_evidence)
+        assert any("original_disposition" in e for e in errors), errors
+
+    def test_author_accepted_original_disposition_fixed_rejected(self, valid_evidence):
+        # `fixed` is a real code change, never collapsed — see AUTHOR_COLLAPSIBLE
+        # in review_state.py.
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="author-accepted", original_disposition="fixed", note=""))
+        ]
+        errors = validate_evidence(valid_evidence)
+        assert any("original_disposition" in e for e in errors), errors
+
+    def test_original_disposition_on_non_author_accepted_rejected(self, valid_evidence):
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="accepted", original_disposition="refuted"))
+        ]
+        errors = validate_evidence(valid_evidence)
+        assert any("only applies" in e for e in errors), errors
+
+    def test_author_accepted_note_requirement_follows_original_refuted(self, valid_evidence):
+        # `refuted` never requires a note; collapsing it into author-accepted
+        # must not newly demand one.
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="author-accepted", original_disposition="refuted", note=""))
+        ]
+        assert validate_evidence(valid_evidence) == []
+
+    def test_author_accepted_note_requirement_follows_original_accepted(self, valid_evidence):
+        # `accepted` always requires a note; collapsing it into author-accepted
+        # must not silently waive it.
+        valid_evidence["findings"] = [
+            _finding(disposition=_disposition(disposition="author-accepted", original_disposition="accepted", note=""))
+        ]
+        errors = validate_evidence(valid_evidence)
+        assert any(".note is required" in e for e in errors), errors
+
     @pytest.mark.parametrize("verdict", ["verified", "matches", "not-a-claim", "unverifiable",
                                           "contradicted", "mismatch", "framing-drift", "flagged"])
     def test_every_closed_verdict_accepted(self, valid_evidence, verdict):
