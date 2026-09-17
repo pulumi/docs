@@ -852,7 +852,8 @@ Stack references support the following methods for reading outputs from the refe
   use in your program's logic, or when you need to distinguish between a non-secret output
   (available as `.value`) and a secret output (available as `.secretValue`).
 
-The following example uses `requireOutput` to read a `vpcId` export:
+The following example uses `requireOutput`, the recommended default that fails at deployment
+time if the output is missing, to read a `vpcId` export:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -927,8 +928,8 @@ variables:
 
 {{< /chooser >}}
 
-The following example uses `getOutput` to read a `privateIp` output, then transforms it with
-`Output.apply` to build a derived value:
+The following example uses `getOutput`, which lets a missing output propagate silently, to read
+a `privateIp` output, then transforms it with `Output.apply` to build a derived value:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -1026,8 +1027,8 @@ exist in the referenced stack.
 
 {{< /chooser >}}
 
-The following example uses `getOutputDetails`, where the referenced stack exports a database
-hostname as a plain string:
+The following example uses `getOutputDetails`, which bypasses the `Output` wrapper, in a case
+where the referenced stack exports a database hostname as a plain string:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
