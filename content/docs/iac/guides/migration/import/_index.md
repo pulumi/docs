@@ -16,18 +16,18 @@ aliases:
 
 Most infrastructure as code projects require working with existing cloud resources, whether those resources were originally created with another IaC tool or manually provisioned with a cloud provider console or CLI. Interacting with a previously created cloud resource with Pulumi typically happens in one of two ways:
 
-1. Referencing the properties of the existing cloud resource in order to use those properties to configure a Pulumi-managed resource.
+1. Referencing the properties of the existing cloud resource to configure a Pulumi-managed resource.
 1. Adopting the existing resource to bring it under management by Pulumi.
 
 The first scenario is sometimes called _coexistence_, and you can learn more about it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it in the sections that follow.
 
 ## Two recommended approaches to importing resources
 
-There are two recommended ways to bring an existing cloud resource under management by Pulumi:
+Pulumi supports two recommended ways to bring an existing cloud resource under management:
 
 1. **CLI-first import**, in which you run [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) against a specific cloud resource. Pulumi adds the resource to your stack's state and generates the code needed to manage it, which you then copy into your Pulumi program. This approach is best suited to importing a handful of resources at a time.
 
-1. **Program-first import**, sometimes called _bulk import_, in which you write your Pulumi program first --- potentially using [components](/docs/iac/concepts/components/) to describe many resources at once --- and then run [`pulumi preview --import-file`](/docs/iac/cli/commands/pulumi_preview/) to generate an import file listing every resource the program would otherwise create. You fill in the cloud provider ID for each resource in that file, then run `pulumi import --file` to bring all of them under management in a single operation. This approach scales better when you're importing many resources, or resources that are already described by a program you've written.
+1. **Program-first import**, sometimes called _bulk import_, in which you write your Pulumi program first --- potentially using [components](/docs/iac/concepts/components/) to describe many resources at once --- and then run [`pulumi preview --import-file`](/docs/iac/cli/commands/pulumi_preview/) to generate an import file listing every resource the program would otherwise create. You fill in the cloud provider ID for each resource in that file, then run `pulumi import --file` to bring them all under management in a single operation. This approach scales better when you're importing many resources, or resources that are already described by a program you've written.
 
 Both approaches rely on the same underlying mechanics, described in [How resource import works](#how-resource-import-works) below, and both result in resources that are fully managed by Pulumi going forward. A third, older mechanism --- the [`import` resource option](#the-import-resource-option) --- is still supported and explained later in this guide, but it has generally been superseded by the two approaches above.
 
@@ -41,7 +41,7 @@ Import uses the selected stack's configured [provider](/docs/iac/concepts/provid
 
 ### Where to find the type token and lookup property {#where-to-find}
 
-You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description just above it:
+You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description immediately above it:
 
 ![Where to find the type token and lookup property for a resource](/docs/iac/guides/migration/import/token-and-lookup.png)
 
@@ -159,12 +159,13 @@ The following short video illustrates the `pulumi import` process end to end:
 
 ## Approach 2: Program-first (bulk) import
 
-If you're importing many resources at once, or resources that are already described by a Pulumi program --- for example, a set of [components](/docs/iac/concepts/components/) --- it's usually easier to let Pulumi generate the import file for you rather than writing it by hand. The workflow has four steps:
+If you're importing many resources at once, or resources that are already described by a Pulumi program --- for example, a set of [components](/docs/iac/concepts/components/) --- it's usually easier to let Pulumi generate the import file for you rather than writing it by hand. The workflow has five steps:
 
 1. Write the Pulumi program that describes the infrastructure you want to import, using resources or components as appropriate. Don't run `pulumi up` yet --- the resources described by the program already exist in your cloud account, so applying the program as written would try to create them again.
-1. Run `pulumi preview --import-file <path>` to generate an import file for every resource the program would otherwise create. The generated file already has each resource's name, [URN](/docs/iac/concepts/resources/names/#urns), and type filled in, with a blank `id` field for each one.
+1. Run `pulumi preview --import-file <path>` to generate an import file for every resource the program would otherwise create. The generated file already has each resource's name and type filled in, leaving the `id` field for you to complete.
 1. Edit the generated file, filling in the `id` field for each resource with its identifier from the cloud provider.
 1. Run `pulumi import --file <path>` to import all of the resources into your stack's state in a single operation.
+1. Run `pulumi preview` to confirm that your program and the newly imported state agree. From this point forward, the resources are managed by Pulumi, and `pulumi up` behaves as though Pulumi had provisioned them from the outset.
 
 ### Example: Import a component with all resources
 
@@ -204,23 +205,23 @@ You can also author an import file by hand rather than generating one with `pulu
 
 ```json
 {
-	"resources": [
+    "resources": [
         {
-			"type": "aws:ec2/vpc:Vpc",
-			"name": "application-vpc",
-			"id": "vpc-0ad77710973388316"
-		},
-		{
-			"type": "aws:ec2/subnet:Subnet",
-			"name": "public-1",
-			"id": "subnet-0fb5fdff92b9e5a3b"
-		},
-		{
-			"type": "aws:ec2/subnet:Subnet",
-			"name": "private-1",
-			"id": "subnet-0a39d25dd9f7b7808"
-		}
-	]
+            "type": "aws:ec2/vpc:Vpc",
+            "name": "application-vpc",
+            "id": "vpc-0ad77710973388316"
+        },
+        {
+            "type": "aws:ec2/subnet:Subnet",
+            "name": "public-1",
+            "id": "subnet-0fb5fdff92b9e5a3b"
+        },
+        {
+            "type": "aws:ec2/subnet:Subnet",
+            "name": "private-1",
+            "id": "subnet-0a39d25dd9f7b7808"
+        }
+    ]
 }
 ```
 
@@ -230,7 +231,7 @@ Pass the path to the JSON file using the `--file` (`-f`) option:
 $ pulumi import --file ./my-resources.json
 ```
 
-After adding the specified resources to the current stack state, Pulumi will generate all of the code necessary for managing the resources from that point forward:
+After adding the specified resources to the current stack state, Pulumi generates the code necessary for managing the resources from that point forward:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -466,6 +467,8 @@ class MyStack : Stack
 {{% /choosable %}}
 {{% /chooser %}}
 
+### Import file schema
+
 The bulk import JSON file follows this schema:
 
 | Property    | Type              | Required | Description                                                                                                     |
@@ -602,7 +605,7 @@ Resources:
     1 unchanged
 ```
 
-If the resource isn't found, the preview will fail:
+If the resource isn't found, the preview fails:
 
 ```
 error: Preview failed: importing sg-04aeda9a214730248: security group not found
@@ -614,7 +617,7 @@ Be aware this applies to `destroy` operations also. Once an imported resource ha
 
 ### Mismatched state
 
-When importing resources using the `import` resource option, the Pulumi engine compares the properties specified in your program with the actual state of the existing cloud resource. If there are differences, the engine will still perform the import and then issue an update step to reconcile the differences between the imported state and your program's desired state.
+When importing resources using the `import` resource option, the Pulumi engine compares the properties specified in your program with the actual state of the existing cloud resource. If there are differences, the engine still performs the import and then issues an update step to reconcile the differences between the imported state and your program's desired state.
 
 For instance, keeping with the example above, if you'd specified the wrong `ingress` rule by choosing port `22` instead of port `80`, you'd see a diff during preview showing both the import and a subsequent update:
 

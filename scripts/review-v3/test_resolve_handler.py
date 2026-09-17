@@ -54,10 +54,30 @@ def test_valid_single_command_applies_and_reacts():
     assert r.exit_code == 0
     assert r.outcome == "applied"
     state = review_state.parse_state(gh.comments[author_id]["body"])
-    assert state["findings"]["F2"]["disposition"] == "refuted"
+    # #21640: the actor IS the PR author, so the disposition they typed
+    # collapses into `author-accepted` with the typed value preserved as
+    # `original_disposition` — Sentinel still counts this as answered, but
+    # the brief keeps the row visible for the human approver.
+    assert state["findings"]["F2"]["disposition"] == "author-accepted"
+    assert state["findings"]["F2"]["original_disposition"] == "refuted"
     assert state["findings"]["F2"]["actor"] == "alice"
     assert state["findings"]["F2"]["note"] == "not actually a bug"
     assert gh.reactions == [(9001, "+1")]
+
+
+def test_valid_single_command_by_a_non_author_maintainer_is_not_collapsed():
+    """A maintainer's own resolve is a real answer, not a self-accept —
+    #21640's collapse only fires when the resolving actor IS the PR author.
+    """
+    gh = StubGh(pr_author="alice", permissions={"cam": "admin"})
+    author_id = gh.seed_comment(_author_body(3))
+
+    r = handle(42, 9001, "cam", "/resolve F2 refuted: not actually a bug", gh)
+
+    assert r.exit_code == 0
+    state = review_state.parse_state(gh.comments[author_id]["body"])
+    assert state["findings"]["F2"]["disposition"] == "refuted"
+    assert "original_disposition" not in state["findings"]["F2"]
 
 
 # ---- bulk all -------------------------------------------------------------
@@ -72,7 +92,9 @@ def test_bulk_all_with_note_applies_to_every_id_with_bulk_flag():
     assert r.exit_code == 0
     state = review_state.parse_state(gh.comments[author_id]["body"])
     assert set(state["findings"]) == {"F1", "F2", "F3"}
-    assert all(e["disposition"] == "accepted" for e in state["findings"].values())
+    # #21640: alice is the PR author, so a bulk `accepted` also collapses.
+    assert all(e["disposition"] == "author-accepted" for e in state["findings"].values())
+    assert all(e["original_disposition"] == "accepted" for e in state["findings"].values())
     assert all(e["bulk"] is True for e in state["findings"].values())
     assert all(e["note"] == "ship it" for e in state["findings"].values())
 
@@ -297,7 +319,9 @@ def test_concurrent_write_survives_alongside_ours():
     final_state = review_state.parse_state(gh.comments[author_id]["body"])
     assert final_state["findings"]["F2"]["disposition"] == "fixed"
     assert final_state["findings"]["F2"]["actor"] == "update-lane"
-    assert final_state["findings"]["F3"]["disposition"] == "refuted"
+    # #21640: alice is the PR author, so her own `refuted` collapses.
+    assert final_state["findings"]["F3"]["disposition"] == "author-accepted"
+    assert final_state["findings"]["F3"]["original_disposition"] == "refuted"
     assert final_state["findings"]["F3"]["actor"] == "alice"
 
 
@@ -366,10 +390,16 @@ def test_bulk_all_never_overwrites_individual_answers():
     r = handle(42, 9010, "alice", "/resolve all accepted: shipping as-is", gh)
     assert r.exit_code == 0
     new_state = review_state.parse_state(gh.comments[author_id]["body"])
+    # F2 was pre-seeded directly via set_disposition(..., "refuted", ...), bypassing
+    # handle()'s actor-based author-accepted collapse entirely -- a bulk fill only
+    # fills gaps, so an existing entry (whatever its disposition) is untouched.
     assert new_state["findings"]["F2"]["disposition"] == "refuted"
     assert new_state["findings"]["F2"]["note"] == "the flag exists"
-    assert new_state["findings"]["F1"]["disposition"] == "accepted"
-    assert new_state["findings"]["F3"]["disposition"] == "accepted"
+    # #21640: alice is the PR author, so the bulk-filled gaps collapse too.
+    assert new_state["findings"]["F1"]["disposition"] == "author-accepted"
+    assert new_state["findings"]["F1"]["original_disposition"] == "accepted"
+    assert new_state["findings"]["F3"]["disposition"] == "author-accepted"
+    assert new_state["findings"]["F3"]["original_disposition"] == "accepted"
 
 
 def test_patch_touches_only_review_state():

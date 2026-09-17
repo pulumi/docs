@@ -64,10 +64,14 @@ def parse_commands(body: str) -> ParseResult:
         disposition = m.group("disposition")
         note = (m.group("note") or "").strip()
         bulk = target == "all"
-        if disposition not in review_state.DISPOSITIONS:
+        # #21640: author-accepted is a derived disposition, never one a human
+        # types — USER_DISPOSITIONS excludes it, keeping it out of the
+        # `/resolve` grammar. review_state.DISPOSITIONS also lists it, since
+        # that set names everything valid in a stored REVIEW_STATE entry.
+        if disposition not in review_state.USER_DISPOSITIONS:
             result.errors.append(
                 f"`{disposition}` is not a disposition — use one of: "
-                + ", ".join(review_state.DISPOSITIONS)
+                + ", ".join(review_state.USER_DISPOSITIONS)
             )
             continue
         if bulk and not note:
@@ -128,6 +132,12 @@ def _self_test() -> int:
 
     bad_disp = parse_commands("/resolve F3 wontfix: nah")
     assert any("not a disposition" in e for e in bad_disp.errors)
+
+    # #21640: `author-accepted` is derived by resolve-handler.py from the
+    # actor's identity, never typed directly — it must stay out of the
+    # `/resolve` grammar even though it is a valid stored disposition value.
+    derived_only = parse_commands("/resolve F3 author-accepted: nah")
+    assert any("not a disposition" in e for e in derived_only.errors), derived_only.errors
 
     mixed = parse_commands("some prose\n/resolve F1 fixed\nmore prose about F9")
     assert len(mixed.commands) == 1 and not mixed.errors

@@ -100,7 +100,7 @@ Pulumi addresses these challenges by introducing **general-purpose programming l
 
 {{< youtube "Q8WKLq-v_6k?rel=0" >}}
 
-Learn more: [Pulumi Kubernetes documentation](https://www.pulumi.com/docs/iac/clouds/kubernetes/)
+Learn more: [Pulumi Kubernetes documentation](/docs/integrations/clouds/kubernetes/)
 
 ## The 2026 Convergence of AI, Platforms, and Policy in Kubernetes
 

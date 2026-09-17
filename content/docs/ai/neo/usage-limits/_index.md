@@ -15,13 +15,15 @@ menu:
 
 A Neo usage limit caps what your organization spends on [Neo](/docs/ai/) in a monthly billing period. When usage reaches the limit, Neo pauses until the next period resets. You set a limit for the whole organization, and optionally a separate limit for individual members.
 
+Requests served through [bring your own key (BYOK)](/docs/ai/neo/model-providers/) do not count toward these limits and can continue after a limit is reached. Set budgets and rate limits with your model provider to control BYOK spend.
+
 ## Who can set limits
 
 Members with the **Admin** or **Billing Manager** role can view and change Neo usage limits. Other members do not see the settings.
 
 ## Set an organization limit
 
-The organization limit is a single monthly dollar amount that covers all Neo usage across your organization.
+The organization limit is a single monthly dollar amount that covers Neo usage billed by Pulumi across your organization.
 
 1. In the Pulumi Cloud console, navigate to **Settings → Billing & usage → Neo token usage**.
 1. In the **Manage token usage** panel, enter an organization limit.

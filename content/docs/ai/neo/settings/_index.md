@@ -2,7 +2,7 @@
 title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
-meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, task modes, and notification preferences.
+meta_desc: Configure Neo instructions, model providers, integrations, access controls, task modes, and notification preferences.
 aliases:
 - /docs/ai/settings/
 menu:
@@ -44,6 +44,14 @@ If Neo was previously disabled, it will need to be enabled as outlined above.
 {{% /notes %}}
 
 To cap what your organization spends on Neo, see [Usage limits](/docs/ai/neo/usage-limits/).
+
+## Model providers
+
+{{< pulumi-cloud "neo-byok" />}}
+
+Use the **Model provider** tab in Neo Settings to run Neo tasks with your own model provider credentials. Neo currently supports Anthropic's Claude models. You can access these models through Anthropic, Azure Foundry, or a custom Anthropic-compatible endpoint.
+
+See [Bring your own model provider](/docs/ai/neo/model-providers/) for setup steps, billing behavior, and instructions to switch providers.
 
 ## Custom instructions
 

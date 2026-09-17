@@ -108,6 +108,10 @@ faq:
           answer: |
             Neo tokens are the metering method for Neo-powered features (Neo tasks, pull-request annotations, and natural-language search) and cost $3 per million tokens. The volume of tokens used by any given activity varies with the number, complexity, and duration of Neo activities.
 
+        - question: Can I use my own model provider key with Neo?
+          answer: |
+            Yes. The Enterprise edition includes bring your own key (BYOK) for Neo. Organizations on the legacy Business Critical edition also have access. Neo currently supports Anthropic's Claude models. Your model provider bills you directly for BYOK model usage, and Pulumi does not charge Neo tokens for those requests. Other Pulumi usage remains subject to your edition's pricing and contract. See [Bring your own model provider](/docs/ai/neo/model-providers/) for setup instructions.
+
         - question: Can I manage Neo usage for my organization?
           answer: |
             Neo features can be managed in the Pulumi Cloud dashboard under Settings → Neo Settings. Neo integration with your version control system is located under Management → Version Control.
