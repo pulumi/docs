@@ -438,7 +438,7 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     ms = detail.get("mergeable_state") or "unknown"
     if ms not in STAMP_STATES:
         return False, f"mergeable_state={ms}", detail
-    checks = collect.checks_rollup(gh.check_runs(head), gh.commit_statuses(head))
+    checks = collect.checks_rollup(gh.check_runs(head), gh.commit_statuses(head), gh.workflow_paths(head))
     if checks["state"] != "green":
         return False, f"checks {checks['state']}: {', '.join(checks['failing'] or checks['pending'])}", detail
     latest: dict[str, str] = {}

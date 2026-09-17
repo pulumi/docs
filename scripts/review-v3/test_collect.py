@@ -322,6 +322,17 @@ def test_checks_rollup():
     regressed = ok + [{"id": 5, "name": "lint", "status": "completed", "conclusion": "success", "started_at": "2026-09-14T10:00:00Z"},
                       {"id": 6, "name": "lint", "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T11:00:00Z"}]
     assert collect.checks_rollup(regressed, [])["failing"] == ["lint"]
+    # Job names repeat across workflows: a passing deploy build must not stand in for a failed PR build.
+    build = "Install deps and build site"
+    twins = [{"id": 7, "name": build, "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T10:00:00Z", "check_suite": {"id": 70}},
+             {"id": 8, "name": build, "status": "completed", "conclusion": "success", "started_at": "2026-09-14T11:00:00Z", "check_suite": {"id": 80}}]
+    wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/testing-build-and-deploy.yml"}
+    assert collect.checks_rollup(twins, [], wf)["failing"] == [build]
+    # An unmapped suite dedupes nothing, so it errs red rather than green.
+    assert collect.checks_rollup(twins, [])["failing"] == [build]
+    # Reruns of the same workflow do dedupe, across their separate suites.
+    rerun_wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/pull-request.yml"}
+    assert collect.checks_rollup(twins, [], rerun_wf)["state"] == "green"
 
 
 # ---- selection -----------------------------------------------------------
