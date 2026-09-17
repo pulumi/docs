@@ -1,5 +1,4 @@
 ---
-
 #################################
 
 # Name of the event, <= 60 characters
@@ -16,17 +15,6 @@ unlisted: false
 # Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
 gated: false
-
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: ai-apps-to-production
 
 # The event type (workshop, webinar, talk).
 event_type: workshop
