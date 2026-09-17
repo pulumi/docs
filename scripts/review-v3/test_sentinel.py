@@ -41,15 +41,17 @@ RAW_CONFIG = {
         "marketing": "pulumi/docs-marketing-review",
         "tools": "pulumi/docs-tools",
     },
-    "bots": ["pulumi-bot"],
+    # Mirrors the live config: every bot that opens PRs on this repo.
+    "bots": ["pulumi-bot", "workprentice[bot]", "github-copilot[bot]",
+             "eon-pulumi-agent[bot]", "dependabot[bot]"],
     "matrix": {
-        "docs": {"mechanical": "none", "substantive": "docs-guild"},
-        "blog": {"mechanical": "none", "substantive": "marketing"},
-        "website": {"mechanical": "none", "substantive": "marketing"},
-        "programs": {"mechanical": "none", "substantive": "docs-guild"},
+        "docs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "blog": {"mechanical": "marketing", "substantive": "marketing"},
+        "website": {"mechanical": "marketing", "substantive": "marketing"},
+        "programs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools"},
-        "frontend": {"mechanical": "none", "substantive": "marketing"},
-        "other": {"mechanical": "none", "substantive": "tools"},
+        "frontend": {"mechanical": "marketing", "substantive": "marketing"},
+        "other": {"mechanical": "tools", "substantive": "tools"},
     },
     # Staging evidence keys on the PATH, not the subject — `infra_file()`
     # below is on this list and `infra_data_file()` is deliberately not,
@@ -68,7 +70,6 @@ RAW_CONFIG = {
         "authors": ["dependabot[bot]"],
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
-    "auto_approve": {"authors": ["pulumi-bot"]},
     "link_only": {"approval": "any-team"},
 }
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
@@ -326,12 +327,29 @@ def _gate(verdict, prefix):
 # ---- Tests ---------------------------------------------------------------
 
 
-def test_mechanical_pr_success_no_approvals():
+def test_mechanical_skips_the_review_but_not_the_approver():
+    """`mechanical` is a model-review saving, not a human-review waiver.
+
+    It used to conclude success with no approval at all, which the repo's
+    own required-review rule contradicted — so the PR sat unmergeable under
+    a green check, and somebody stamped it by hand.
+    """
     gh = StubGh(pr=pr_meta(), files=[docs_file_mechanical()])
     v = sentinel.evaluate(gh, CONFIG)
+    assert v.mechanical is True
+    assert _gate(v, "G1").status == "ok"          # no model review needed
+    assert _gate(v, "G3").status == "red"         # a human still approves
+    assert "docs-guild" in _gate(v, "G3").message
+    assert v.conclusion == "failure", v.to_json()
+    assert "A human approver is still required" in v.summary
+
+
+def test_mechanical_pr_succeeds_once_the_lane_team_approves():
+    gh = StubGh(pr=pr_meta(), files=[docs_file_mechanical()],
+                reviews=[approval("guild")],
+                memberships={("docs-guild", "guild"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
     assert v.conclusion == "success", v.to_json()
-    assert _gate(v, "G1").status == "ok"
-    assert "no human approval required" in _gate(v, "G3").message
 
 
 def test_substantive_no_review_g1_red():
@@ -540,7 +558,8 @@ def test_trivial_without_prose_flag_is_still_mechanical():
     v = sentinel.evaluate(gh, CONFIG)
     assert v.mechanical is True
     assert _gate(v, "G1").message.startswith("mechanical change")
-    assert v.conclusion == "success"
+    # Mechanical clears G1 only; the lane team is still owed an approval.
+    assert _gate(v, "G3").status == "red"
 
 
 def test_current_author_card_beats_trivial_standin():
@@ -786,21 +805,9 @@ def test_status_comment_says_why_a_satisfied_gate_is_satisfied():
             assert cell.startswith("Doesn't apply to this PR: "), (name, cell)
 
     g3 = next(v for k, v in rows.items() if k.startswith("G3"))
-    assert "mechanical" in g3, g3
+    assert "matrix-required approval present" in g3, g3
     g4 = next(v for k, v in rows.items() if k.startswith("G4"))
     assert "no changed path affects the deploy" in g4, g4
-
-
-def test_status_comment_names_the_auto_approve_rule_on_a_bot_pr():
-    """The specific cell that misled on #21698: G3 green with no human
-    approval. It has to name the rule that let it pass."""
-    gh = StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
-                comments=[v3_author_card(0), v3_brief(0)])
-    v = sentinel.evaluate(gh, CONFIG)
-    g3 = _gate(v, "G3")
-    assert g3.status == "ok"
-    assert "bot author" in g3.message
-    assert "bot author" in sentinel.render_status_comment(v)
 
 
 def test_status_comment_marks_report_only_and_flags_the_unwaivable_gate():
@@ -944,58 +951,101 @@ def test_not_governed_report_only_wraps_neutral():
     assert v.title.startswith("Report-only")
 
 
-def test_clean_brief_auto_approves_bot_author():
+def test_a_spotless_bot_pr_still_needs_the_lane_team():
+    """The deleted `auto_approve` rule's exact scenario.
+
+    Bot author, zero blocking findings, a brief with an empty ⚠️ table —
+    the cleanest possible bot PR. G3 used to go green on it and report "no
+    human gate". It doesn't any more: nothing consumed the `auto_approved`
+    flag, and the repo's required-review rule never read this config, so
+    the only thing that "no human gate" ever did was contradict the merge
+    box and train a reflex stamp.
+    """
     base = dict(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
                 comments=[v3_author_card(0), v3_brief(0)])
     v = sentinel.evaluate(StubGh(**base), CONFIG)
-    assert _gate(v, "G3").status == "ok"
-    assert "no human gate" in _gate(v, "G3").message
-    assert v.conclusion == "success", v.to_json()
-    assert v.auto_approved is True and v.to_json()["auto_approved"] is True
-    assert "Auto-approved" in v.summary
-    # The stances-variant empty sentinel is still an empty table.
-    v_st = sentinel.evaluate(StubGh(**dict(base, comments=[v3_author_card(0), v3_brief(0, stances=True)])), CONFIG)
-    assert _gate(v_st, "G3").status == "ok" and v_st.auto_approved is True
+    assert _gate(v, "G1").status == "ok"      # the review ran and is current
+    assert _gate(v, "G2").status == "ok"      # nothing to answer
+    assert _gate(v, "G3").status == "red"     # and a human still approves
+    assert "docs-guild" in _gate(v, "G3").message
+    assert v.conclusion == "failure", v.to_json()
+
+    # No verdict field survives for a consumer to read.
+    assert "auto_approved" not in v.to_json()
+    assert not hasattr(v, "auto_approved")
+    assert "uto-approved" not in v.summary
+
+    # The same PR with the team's approval is done.
+    approved = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("guild")],
+                      memberships={("docs-guild", "guild"): "active"})), CONFIG)
+    assert approved.conclusion == "success", approved.to_json()
 
 
-def test_clean_brief_rule_needs_an_empty_checks_table():
+def test_a_bot_approval_never_satisfies_the_lane_team():
+    """No automated approval can clear G3, by either of two mechanisms.
+
+    `approval()` defaults to `type: "User"` here deliberately: it isolates
+    the `bots:` denylist from the automatic `type == Bot` exclusion. That is
+    the case the denylist exists for — `pulumi-bot` really is `type: User`
+    on GitHub, and an App identity whose marker we read wrong would slip
+    through on the type check alone.
+    """
     base = dict(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
-                comments=[v3_author_card(0), v3_brief(1)])
-    v = sentinel.evaluate(StubGh(**base), CONFIG)
-    assert _gate(v, "G3").status == "red" and v.auto_approved is False
+                comments=[v3_author_card(0), v3_brief(0)])
+    for bot in ("pulumi-bot", "workprentice[bot]", "github-copilot[bot]",
+                "eon-pulumi-agent[bot]", "dependabot[bot]"):
+        # Denylisted, even presented as a plain user and an active member.
+        v = sentinel.evaluate(
+            StubGh(**dict(base, reviews=[approval(bot)],
+                          memberships={("docs-guild", bot): "active"})), CONFIG)
+        assert _gate(v, "G3").status == "red", bot
+        # And again via the type marker, for an account not on the list.
+        v2 = sentinel.evaluate(
+            StubGh(**dict(base, reviews=[approval("some-app[bot]", utype="Bot")],
+                          memberships={("docs-guild", "some-app[bot]"): "active"})), CONFIG)
+        assert _gate(v2, "G3").status == "red"
+
+    # `github-actions[bot]` is the identity auto-approve-for-auto-merge.yml
+    # posts as. It cannot clear G3 either — the regen lane works because
+    # those PRs are `not_governed`, not because that approval counts.
+    v3 = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("github-actions[bot]", utype="Bot")],
+                      memberships={("docs-guild", "github-actions[bot]"): "active"})), CONFIG)
+    assert _gate(v3, "G3").status == "red"
+
+
+def test_workprentice_is_governed_and_routed_like_anyone_else():
+    """The second-busiest bot author on the repo (a quarter of its bot PRs)
+    was absent from the routing config entirely. It is not a
+    `not_governed` lane — nothing auto-approves or auto-merges it — so it
+    gets the full gate set."""
+    gh = StubGh(pr=pr_meta(author="workprentice[bot]"), files=[docs_file_substantive()],
+                comments=[v3_author_card(0), v3_brief(0)])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert v.governed is True
+    assert _gate(v, "G3").status == "red"
     assert "docs-guild" in _gate(v, "G3").message
 
 
-def test_clean_brief_rule_needs_nothing_blocking_and_a_listed_author():
-    # A blocking finding on the card: no auto-approval even with a clean brief.
-    v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
-                                 comments=[v3_author_card(1), v3_brief(0)]), CONFIG)
-    assert _gate(v, "G3").status == "red" and v.auto_approved is False
-    # A human author with the same clean cards still needs the matrix team.
-    v2 = sentinel.evaluate(StubGh(pr=pr_meta(author="someone"), files=[docs_file_substantive()],
-                                  comments=[v3_author_card(0), v3_brief(0)]), CONFIG)
-    assert _gate(v2, "G3").status == "red" and v2.auto_approved is False
-    # No brief at all: never clean.
-    v3 = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
-                                  comments=[v3_author_card(0)]), CONFIG)
-    assert _gate(v3, "G3").status == "red" and v3.auto_approved is False
-
-
-def test_prose_flagged_disqualifies_clean_brief_and_demotes_mechanical():
-    # Clean cards, but triage flagged prose: a human must look.
-    v = sentinel.evaluate(StubGh(pr=pr_meta(author="pulumi-bot", labels=["review:prose-flagged"]),
-                                 files=[docs_file_substantive()],
-                                 comments=[v3_author_card(0), v3_brief(0)]), CONFIG)
-    assert _gate(v, "G3").status == "red" and v.auto_approved is False
+def test_prose_flagged_still_demotes_mechanical():
     # A mechanical diff wearing the flag is substantive: review required.
     v2 = sentinel.evaluate(StubGh(pr=pr_meta(labels=["review:prose-flagged"]),
                                   files=[docs_file_mechanical()]), CONFIG)
     assert v2.mechanical is False
     assert _gate(v2, "G1").status == "red"
     assert _gate(v2, "G3").status == "red"
-    # Without the flag the same diff is mechanical.
+    # Without the flag the same diff is mechanical (G1 only).
     v3 = sentinel.evaluate(StubGh(pr=pr_meta(), files=[docs_file_mechanical()]), CONFIG)
     assert v3.mechanical is True and v3.to_json()["mechanical"] is True
+    assert _gate(v3, "G1").status == "ok"
+
+
+def test_brief_has_no_checks_helper_is_gone():
+    """It existed only for the clean-brief rule. `collect.py` still uses
+    `_author_card_nothing_blocks`, which stays."""
+    assert not hasattr(sentinel, "_brief_has_no_checks")
+    assert hasattr(sentinel, "_author_card_nothing_blocks")
 
 
 def test_workflow_has_no_concurrency_group_and_narrows_label_events():

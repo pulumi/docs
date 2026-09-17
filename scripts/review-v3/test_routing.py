@@ -61,10 +61,22 @@ def test_matrix_role_absent_from_teams_is_error(base_config):
     )
 
 
-def test_matrix_role_none_is_not_an_error(base_config):
-    base_config["matrix"]["docs"]["substantive"] = "none"
+@pytest.mark.parametrize("change_type", ["mechanical", "substantive"])
+def test_matrix_role_none_is_now_an_error(base_config, change_type):
+    """Every governed PR must resolve to an approver team.
+
+    `none` used to mean "no human gate", which was only ever true inside the
+    Sentinel — GitHub's required-review rule doesn't read this config. So a
+    `none` cell removed the reviewer request and told the author nobody was
+    needed, while a human stamped it by hand anyway. The parser rejects it
+    now so the assumption can't be reintroduced quietly.
+    """
+    base_config["matrix"]["docs"][change_type] = "none"
     _, errors, _ = routing.validate_raw(base_config)
-    assert errors == []
+    assert any(f"matrix.docs.{change_type} is 'none'" in e for e in errors)
+    # The message has to name the alternatives, or the next person just
+    # picks a team at random to get past it.
+    assert any("mechanical" in e and "not_governed" in e for e in errors)
 
 
 def test_matrix_missing_subject_is_error(base_config):
@@ -74,13 +86,13 @@ def test_matrix_missing_subject_is_error(base_config):
 
 
 def test_matrix_unknown_subject_is_error(base_config):
-    base_config["matrix"]["gadgets"] = {"mechanical": "none", "substantive": "none"}
+    base_config["matrix"]["gadgets"] = {"mechanical": "tools", "substantive": "tools"}
     _, errors, _ = routing.validate_raw(base_config)
     assert any("unknown subject 'gadgets'" in e for e in errors)
 
 
 def test_matrix_cell_unknown_key_is_error(base_config):
-    base_config["matrix"]["docs"]["surprise"] = "none"
+    base_config["matrix"]["docs"]["surprise"] = "tools"
     _, errors, _ = routing.validate_raw(base_config)
     assert any("matrix.docs: unknown key 'surprise'" in e for e in errors)
 
@@ -223,21 +235,42 @@ def test_load_config_real_file_is_valid():
     assert routing.not_governed_reason(cfg, "dependabot[bot]", set())
     assert routing.not_governed_reason(cfg, "pulumi-bot", {"automation/merge"})
     assert routing.not_governed_reason(cfg, "pulumi-bot", {"domain:docs"}) is None
-    assert routing.auto_approve_author(cfg, "pulumi-bot")
-    assert not routing.auto_approve_author(cfg, "CamSoper")
+    # Every cell routes somewhere — no unrouted lanes in the live config.
+    for subject, cell in cfg.matrix.items():
+        for change_type in routing.CHANGE_TYPES:
+            assert cell[change_type] in cfg.teams, (subject, change_type)
+    # Every bot that opens PRs on this repo is on the denylist.
+    assert {"pulumi-bot", "workprentice[bot]", "github-copilot[bot]",
+            "eon-pulumi-agent[bot]", "dependabot[bot]"} <= set(cfg.bots)
+    assert not hasattr(cfg, "auto_approve")
 
 
-# ---- not_governed / auto_approve ------------------------------------------
+# ---- not_governed ---------------------------------------------------------
 
 
-def test_not_governed_and_auto_approve_are_optional(base_config):
+def test_not_governed_is_optional(base_config):
     del base_config["not_governed"]
-    del base_config["auto_approve"]
     cfg, errors, _ = routing.validate_raw(base_config)
     assert errors == []
-    assert cfg.not_governed == {} and cfg.auto_approve == {}
+    assert cfg.not_governed == {}
     assert routing.not_governed_reason(cfg, "dependabot[bot]", set()) is None
-    assert routing.auto_approve_author(cfg, "pulumi-bot") is False
+
+
+def test_retired_auto_approve_section_is_error(base_config):
+    """`auto_approve` let a bot author pass G3 with no approval at all.
+
+    Nothing consumed the flag it set, and GitHub's required review doesn't
+    read this file, so it only made G3 report a pass the merge box
+    disagreed with. Deleted — and a config still carrying it fails closed
+    rather than having the key silently ignored.
+    """
+    base_config["auto_approve"] = {"authors": ["pulumi-bot"]}
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("unknown key 'auto_approve'" in e for e in errors)
+
+
+def test_auto_approve_helper_is_gone():
+    assert not hasattr(routing, "auto_approve_author")
 
 
 def test_not_governed_unknown_key_is_error(base_config):
@@ -256,12 +289,6 @@ def test_not_governed_authors_must_be_list(base_config):
     base_config["not_governed"]["authors"] = "dependabot[bot]"
     _, errors, _ = routing.validate_raw(base_config)
     assert any("not_governed.authors must be a list" in e for e in errors)
-
-
-def test_auto_approve_authors_must_be_list_of_strings(base_config):
-    base_config["auto_approve"]["authors"] = [""]
-    _, errors, _ = routing.validate_raw(base_config)
-    assert any("auto_approve.authors" in e for e in errors)
 
 
 def test_not_governed_pair_needs_both_author_and_label(config):
@@ -308,10 +335,28 @@ def test_content_data_files_route_with_their_content(config):
 # ---- resolve_lanes cases ----------------------------------------------------
 
 
-def test_pure_docs_mechanical_no_roles(config):
+def test_pure_docs_mechanical_still_routes_to_the_lane_team(config):
+    """`mechanical` skips the model review, not the approver.
+
+    It used to resolve to no roles, which meant no reviewer was requested
+    and G3 reported "no human approval required" — on a repo whose own
+    rules require an approving review regardless.
+    """
     r = routing.resolve_lanes(["content/docs/foo.md"], mechanical=True, claims=False, config=config)
-    assert r.roles == set()
+    assert r.roles == {"docs-guild"}
     assert r.staging_evidence_required is False
+
+
+def test_no_governed_path_resolves_to_zero_roles(config):
+    """The invariant behind "every PR is routed": for every subject and
+    both change types, some team is always on the hook."""
+    for path in ("content/docs/a.md", "content/blog/b/index.md",
+                 "content/pricing.md", "static/programs/p/index.ts",
+                 "scripts/x.sh", "layouts/y.html", "unplaceable.xyz"):
+        for mechanical in (True, False):
+            r = routing.resolve_lanes([path], mechanical=mechanical,
+                                      claims=False, config=config)
+            assert r.roles, (path, mechanical)
 
 
 def test_docs_substantive_docs_guild(config):
@@ -450,8 +495,10 @@ def test_link_only_any_team_policy():
     # not link-only, or the lane policy: the ordinary rule
     assert routing.resolve_lanes(paths, False, False, cfg, link_only=False).any_team is False
     assert routing.resolve_lanes(paths, False, False, lane, link_only=True).any_team is False
-    # nothing to satisfy in the first place stays nothing
-    assert routing.resolve_lanes(paths, True, False, cfg, link_only=True).any_team is False
+    # A mechanical link-only sweep is still routed (mechanical no longer
+    # means "nobody"), so any-team applies to it the same way.
+    mech = routing.resolve_lanes(paths, True, False, cfg, link_only=True)
+    assert mech.roles == {"marketing"} and mech.any_team is True
     # and the key is validated
     bad = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "whoever"}})
     assert bad[0] is None and any("link_only.approval" in e for e in bad[1])

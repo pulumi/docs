@@ -8,9 +8,10 @@ given a PR's changed paths and change type, which roles must approve and is
 staging evidence required (`resolve_lanes`).
 
 `load_config` fails closed: any structural problem — an unknown key at any
-level, a matrix cell naming a role outside `teams:`, a missing subject, a
-role the matrix can hand out with no `sla:` entry, a malformed team slug, a
-non-positive `business_days`, `warn_days >= close_days` — raises
+level, a matrix cell naming a role outside `teams:` or the retired literal
+`none`, a missing subject, a role the matrix can hand out with no `sla:`
+entry, a malformed team slug, a non-positive `business_days`,
+`warn_days >= close_days` — raises
 `RoutingConfigError` carrying every error found, not just the first. A
 `TODO-`-prefixed `sla.<role>.escalate_to` is the one deliberate exception:
 those names are pending an org decision, so the parser records a warning and
@@ -70,7 +71,7 @@ MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "staging_evidence", "claims_overlay",
     "external_contributors", "sla", "author_staleness", "waive",
-    "not_governed", "auto_approve", "link_only",
+    "not_governed", "link_only",
 })
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
@@ -80,7 +81,6 @@ AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
-AUTO_APPROVE_KEYS = frozenset({"authors"})
 LINK_ONLY_KEYS = frozenset({"approval"})
 # Who may approve a diff whose every changed line differs only in a link.
 # `lane` is the ordinary rule: the subject's own team. `any-team` says any
@@ -120,11 +120,9 @@ class Config:
     sla: dict[str, dict]
     author_staleness: dict
     waive: dict
-    # Both optional in the file (absent == empty): PRs the Sentinel does not
-    # govern at all, and bot authors whose clean brief satisfies the approver
-    # gate. See the yaml header for the semantics.
+    # Optional in the file (absent == empty): the automated processes the
+    # Sentinel does not govern at all. See the yaml header for the semantics.
     not_governed: dict = field(default_factory=dict)
-    auto_approve: dict = field(default_factory=dict)
     link_only: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
@@ -222,6 +220,16 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     continue
                 role = cell[change_type]
                 if role == "none":
+                    # Every governed PR must resolve to an approver team. A
+                    # `none` cell used to mean "no human gate", which was only
+                    # ever true inside the Sentinel — GitHub's required-review
+                    # rule does not read this file. See MATRIX in the yaml.
+                    errors.append(
+                        f"matrix.{subject}.{change_type} is 'none', which is no longer "
+                        "accepted: every governed PR must name an approver team. Use "
+                        "`mechanical` to skip the model review, or `not_governed` for "
+                        "an automated process that already self-approves and self-merges."
+                    )
                     continue
                 if not _is_nonempty_str(role) or role not in teams:
                     errors.append(
@@ -378,19 +386,6 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     if not _is_nonempty_str(pair.get(key)):
                         errors.append(f"not_governed.author_label_pairs[{i}].{key} must be a non-empty string")
 
-    # ---- auto_approve (optional) ------------------------------------------
-    auto_approve = raw.get("auto_approve", {})
-    if auto_approve is None:
-        auto_approve = {}
-    if not isinstance(auto_approve, dict):
-        errors.append("auto_approve must be a mapping with an 'authors' list")
-        auto_approve = {}
-    else:
-        _check_unknown_keys(auto_approve, AUTO_APPROVE_KEYS, "auto_approve", errors)
-        aa_authors = auto_approve.get("authors", [])
-        if not isinstance(aa_authors, list) or not all(_is_nonempty_str(a) for a in aa_authors):
-            errors.append("auto_approve.authors must be a list of non-empty strings")
-
     # ---- link_only (optional) ---------------------------------------------
     link_only = raw.get("link_only", {})
     if link_only is None:
@@ -419,7 +414,6 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         author_staleness=author_staleness,
         waive=waive,
         not_governed=not_governed,
-        auto_approve=auto_approve,
         link_only=link_only,
         warnings=warnings,
     )
@@ -575,11 +569,6 @@ def not_governed_reason(config: Config, author: str, labels: set[str] | frozense
     return None
 
 
-def auto_approve_author(config: Config, author: str) -> bool:
-    """Is this author eligible for the clean-brief rule (G3 without a human)?"""
-    return author in ((config.auto_approve or {}).get("authors") or [])
-
-
 # ---- self-test --------------------------------------------------------
 
 _CANNED_CONFIG = {
@@ -591,13 +580,13 @@ _CANNED_CONFIG = {
     },
     "bots": ["pulumi-bot"],
     "matrix": {
-        "docs": {"mechanical": "none", "substantive": "docs-guild"},
-        "blog": {"mechanical": "none", "substantive": "marketing"},
-        "website": {"mechanical": "none", "substantive": "marketing"},
-        "programs": {"mechanical": "none", "substantive": "docs-guild"},
+        "docs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "blog": {"mechanical": "marketing", "substantive": "marketing"},
+        "website": {"mechanical": "marketing", "substantive": "marketing"},
+        "programs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools"},
-        "frontend": {"mechanical": "none", "substantive": "marketing"},
-        "other": {"mechanical": "none", "substantive": "tools"},
+        "frontend": {"mechanical": "marketing", "substantive": "marketing"},
+        "other": {"mechanical": "tools", "substantive": "tools"},
     },
     "staging_evidence": {"paths": ["infrastructure/", "Makefile", "scripts/run-pulumi.sh"]},
     "claims_overlay": {"add": "marketing"},
@@ -613,7 +602,6 @@ _CANNED_CONFIG = {
         "authors": ["dependabot[bot]"],
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
-    "auto_approve": {"authors": ["pulumi-bot"]},
     "link_only": {"approval": "any-team"},
 }
 
@@ -645,13 +633,16 @@ def self_test() -> int:
               not_governed_reason(real, "pulumi-bot", {"automation/merge"}) is not None)
         check("real config does not govern Dependabot",
               not_governed_reason(real, "dependabot[bot]", set()) is not None)
-        check("real config auto-approves pulumi-bot", auto_approve_author(real, "pulumi-bot"))
+        check("real config routes every subject to a team (no 'none' cells)",
+              all(cell[ct] != "none" for cell in real.matrix.values() for ct in CHANGE_TYPES))
+        check("real config lists every PR-opening bot",
+              {"pulumi-bot", "workprentice[bot]"} <= set(real.bots))
     except RoutingConfigError as e:
         check(f"real .github/review-routing.yml loads ({e.errors})", False)
 
     # ---- resolve_lanes cases -------------------------------------------
     r = resolve_lanes(["content/docs/foo.md"], mechanical=True, claims=False, config=config)
-    check("pure docs mechanical -> no roles", r.roles == set())
+    check("pure docs mechanical still routes to docs-guild", r.roles == {"docs-guild"})
 
     r = resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     check("pure docs substantive -> docs-guild", r.roles == {"docs-guild"})
@@ -687,6 +678,9 @@ def self_test() -> int:
     check("unclassifiable path routed as subject:other", r.subjects["some/unknown/path.txt"] == "other")
     check("subject:other substantive -> tools, no staging evidence",
           r.roles == {"tools"} and r.staging_evidence_required is False)
+    r_mech = resolve_lanes(["some/unknown/path.txt"], mechanical=True, claims=False, config=config)
+    check("subject:other mechanical -> tools too (mechanical never means nobody)",
+          r_mech.roles == {"tools"})
 
     r = resolve_lanes(["layouts/partials/foo.html"], mechanical=False, claims=False, config=config)
     check("template -> subject:frontend -> marketing", r.roles == {"marketing"})
@@ -757,8 +751,12 @@ def self_test() -> int:
     check("not_governed: pulumi-bot needs the label",
           not_governed_reason(config, "pulumi-bot", set()) is None
           and not_governed_reason(config, "pulumi-bot", {"automation/merge"}) is not None)
-    check("auto_approve: pulumi-bot yes, humans no",
-          auto_approve_author(config, "pulumi-bot") and not auto_approve_author(config, "someone"))
+    check("every subject/change-type pair resolves to at least one role",
+          all(resolve_lanes([path], mechanical=m, claims=False, config=config).roles
+              for m in (True, False)
+              for path in ("content/docs/a.md", "content/blog/b/index.md",
+                           "content/nav/c.md", "static/programs/d/index.ts",
+                           "scripts/e.sh", "layouts/f.html", "zzz-unknown.txt")))
 
     bad = copy.deepcopy(_CANNED_CONFIG)
     bad["not_governed"] = {"authors": "dependabot[bot]"}
@@ -766,15 +764,27 @@ def self_test() -> int:
     check("not_governed.authors must be a list", any("not_governed.authors" in e for e in errs))
 
     bad = copy.deepcopy(_CANNED_CONFIG)
-    bad["auto_approve"] = {"authors": ["pulumi-bot"], "extra": 1}
+    bad["surprise_section"] = {"authors": ["pulumi-bot"]}
     _, errs, _ = validate_raw(bad)
-    check("auto_approve rejects unknown keys", any("auto_approve: unknown key" in e for e in errs))
+    check("a retired/unknown top-level section is rejected",
+          any("unknown key 'surprise_section'" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["auto_approve"] = {"authors": ["pulumi-bot"]}
+    _, errs, _ = validate_raw(bad)
+    check("the retired auto_approve section now fails closed",
+          any("unknown key 'auto_approve'" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["matrix"]["docs"]["mechanical"] = "none"
+    _, errs, _ = validate_raw(bad)
+    check("a 'none' matrix cell is rejected",
+          any("matrix.docs.mechanical is 'none'" in e for e in errs))
 
     ok_cfg = copy.deepcopy(_CANNED_CONFIG)
     del ok_cfg["not_governed"]
-    del ok_cfg["auto_approve"]
     cfg2, errs, _ = validate_raw(ok_cfg)
-    check("not_governed / auto_approve are optional", errs == [] and cfg2.not_governed == {} and cfg2.auto_approve == {})
+    check("not_governed is optional", errs == [] and cfg2.not_governed == {})
 
     # ---- validation failure modes ---------------------------------------
     bad = copy.deepcopy(_CANNED_CONFIG)
