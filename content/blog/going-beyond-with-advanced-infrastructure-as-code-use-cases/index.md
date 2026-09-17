@@ -106,12 +106,12 @@ As a concrete example, imagine an engineer on the team is debugging an issue in 
 
 The two potential remediations to drift are typically:
 
-1. Reapply the Infrastructure as Code, thereby eliminating the drift, and in this case, closing port 22 access
+1. Reapply the infrastructure as code, thereby eliminating the drift, and in this case, closing port 22 access
 2. Incorporate the infrastructure changes into our program, so that the drifted state becomes our last-known-good on a go-forward basis. It’s also sometimes interesting to compare different environments to see if the infrastructure within them has drifted, although thanks to the Pulumi model of projects and stacks, this is uncommon in practice. It’s more of a concern with per-stack configuration, for which the Pulumi Cloud offers features to detect and resolve.
 
 The Pulumi Cloud `refresh` command can be used to detect drift and then you can decide how to remediate it. All of the building blocks are there to either reapply changes, ingest them back into the program or some combination thereof. The combination of refresh, plus automation API, as well as the Pulumi Deployments capability, enables you to detect and remediate drift on demand or on a scheduled basis. [Read more about drift detection and remediation](/blog/patterns-drift-detection/) or [watch the video](https://www.youtube.com/watch?v=-K90I1F6tfs).
 
-## Learn More about Infrastructure as Code
+## Learn more about infrastructure as code
 
 The Pulumi [Getting Started guide](/docs/get-started/) is the easiest way to get up and running with infrastructure as code. In addition to that, plus exploring the Pulumi Templates and Examples, we recommend some additional resources:
 
