@@ -73,7 +73,7 @@ Configuring and using Custom Roles for scoped tokens is done via the Pulumi Clou
 Create reusable sets of fine-grained scopes.
 
 * As an admin, navigate to Organization Settings -> Roles -> Permissions
-* Follow instructions for [creating a custom permission](/docs/administration/concepts/rbac/permission-sets/#creating-custom-permissions).
+* Follow instructions for [creating a custom permission](/docs/administration/concepts/rbac/permission-sets/#creating-custom-permission-sets).
 
 ### 2. Create a Custom Role
 
