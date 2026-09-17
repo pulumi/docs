@@ -95,7 +95,7 @@ Many cloud resources accept JSON strings as inputs — IAM policies, Lambda func
 
 If you need to produce a JSON string from a data structure that contains one or more output values, use one of the JSON stringify helpers. These helpers accept a mix of plain values and Pulumi outputs, serialize the entire structure to JSON, and return an `Output<string>` suitable for passing to another resource as an input.
 
-{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="typescript,python,go,csharp" >}}
 
 {{% choosable language typescript %}}
 
