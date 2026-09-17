@@ -3,33 +3,47 @@
 # outcome as the `staging/pulumi-test-io` commit status at that head SHA —
 # the evidence Sentinel gate G4 verifies.
 #
-# Two callers, one behaviour:
+# Two callers:
 #   - staging-deploy-pr.yml   `/deploy-staging`, a tools-team member asking
-#                             (passes --announce, because they're waiting on it,
-#                             and watches the run so the status is final when
-#                             the job ends)
+#                             (--announce, because they're waiting on it;
+#                             then WATCHES the run. The watch is not how the
+#                             status gets written — see below — it is what
+#                             keeps that lane's `staging-stack` concurrency
+#                             group held for the length of the deploy, which
+#                             is the only thing serializing hand-requested
+#                             deploys of a single shared stack.)
 #   - staging-deploy-auto.yml every infra PR on open/push, unattended
 #                             (--dispatch-only: fire the deploy and get out.
 #                             Nobody is watching, so holding a runner for
 #                             45 minutes buys nothing, and a job that lives
 #                             that long is a job that shows up cancelled on
-#                             the PR when a newer push displaces it. The
-#                             dispatched run finalizes its own status.)
+#                             the PR when a newer push displaces it.)
+#
+# ONE WRITER OF THE TERMINAL STATUS, AND IT IS NOT THIS SCRIPT.
+# `.github/workflows/staging-status.yml` — a `workflow_run` listener on
+# "Build and deploy testing" — writes success/failure/error when the
+# dispatched run completes. This script writes only the PENDING status,
+# which has to happen at dispatch time. The watch path below therefore
+# records nothing: two writers of one context is noise, and the one that
+# used to live inside the dispatched run was worse than noise, because a
+# `workflow_dispatch` executes the workflow file from the ref it is
+# dispatched at — so it silently did not exist for any PR branch cut before
+# it merged. See that file's header for the rule.
 #
 # This script never checks out or executes the PR's code. It dispatches the
 # existing "Build and deploy testing" workflow at the head BRANCH — that
 # workflow does the checkout and build, in the testing account, exactly as
-# it does for master — then polls, watches, and writes the status. Keep it
-# that way: both callers run with write permissions.
+# it does for master. Keep it that way: both callers run with write
+# permissions.
 #
 # G4 also accepts the deploy RUN as evidence, so a lost status write no
 # longer silently costs a PR its green gate. The status is still written
-# because it is what shows in the merge box with a link to the run.
+# because it is what shows in the merge box, linked to the deployed site.
 #
 # Requires: gh (authenticated via GH_TOKEN), a checkout of nothing in
 # particular. Exits non-zero only when the dispatch itself could not be
-# located — a FAILED deploy is a successful run of this script that records
-# `failure`.
+# located — a FAILED deploy is a successful run of this script, because
+# reporting the deploy's outcome is the listener's job, not this one's.
 
 set -euo pipefail
 
@@ -90,20 +104,20 @@ if [ "$ANNOUNCE" = "true" ]; then
 fi
 
 if [ "$DISPATCH_ONLY" = "true" ]; then
-  # The run writes its own final status (see the `staging status` job in
-  # testing-build-and-deploy.yml), so the pending status above always
-  # resolves without anyone holding a runner open to watch it.
+  # `.github/workflows/staging-status.yml` finalizes the pending status
+  # above when this run completes, so it always resolves without anyone
+  # holding a runner open to watch it — and it resolves for a PR branch of
+  # any age, which an in-run job could not do (see that file's header).
   echo "staging deploy dispatched for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
   exit 0
 fi
 
+# Blocking mode (`/deploy-staging`). Deliberately writes NO status: the
+# listener owns the terminal `staging/pulumi-test-io`. What this watch buys
+# is the caller's concurrency group, held for the length of the deploy.
 if gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
-  STATE=success; DESC="staging deploy green"
+  STATE=success
 else
-  STATE=failure; DESC="staging deploy failed"
+  STATE=failure
 fi
-gh api --method POST "repos/$REPO/statuses/$HEAD_SHA" \
-  -f state="$STATE" -f context="staging/pulumi-test-io" \
-  -f target_url="$RUN_URL" -f description="$DESC" >/dev/null
-
 echo "staging deploy $STATE for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"

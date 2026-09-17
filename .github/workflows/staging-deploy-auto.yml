@@ -38,13 +38,24 @@ name: Staging deploy (auto, infra PRs)
 #   nothing and costs a real deploy of a shared stack; a `synchronize`
 #   that didn't move the head (a base merge, a label) finds the green
 #   status and stops.
+# - ANYTHING THAT MUST WORK FOR A PR BRANCH OF ANY AGE LIVES IN A
+#   DEFAULT-BRANCH-TRIGGERED WORKFLOW — `workflow_run`, `schedule`,
+#   `pull_request_target`, or a dispatch pinned to the default ref. This
+#   side of the lane already obeys that (the checkout below is pinned to
+#   the default branch and every script it runs comes from base). The
+#   FINALIZE side did not, and PR #21676 is what that costs: the terminal
+#   status used to be written by a job inside the dispatched run, a
+#   `workflow_dispatch` executes the workflow file from the ref it is
+#   dispatched at, and #21676 branched before that job existed — so its
+#   deploy went green and the pending status below never resolved.
+#   Finalization now lives in `.github/workflows/staging-status.yml`.
 # - DISPATCH, DON'T WAIT. This lane fires the existing "Build and deploy
-#   testing" workflow at the head branch and exits; that run does the work
-#   and writes its own `staging/pulumi-test-io` status when it finishes
-#   (the `staging-status` job there). Nobody is watching this job, so
-#   holding a runner open for 45 minutes to relay an outcome bought
-#   nothing — and it cost something real: a long-lived job in a
-#   concurrency group is a job GitHub CANCELS when a newer push displaces
+#   testing" workflow at the head branch and exits; that run does the work,
+#   and `staging-status.yml` records the outcome as the
+#   `staging/pulumi-test-io` status and re-evaluates the Sentinel. Nobody is
+#   watching this job, so holding a runner open for 45 minutes to relay an
+#   outcome bought nothing — and it cost something real: a long-lived job in
+#   a concurrency group is a job GitHub CANCELS when a newer push displaces
 #   it, and a cancelled job reads as a failing check on the PR. An
 #   evidence producer that paints the PR red is exactly what the note
 #   below says this workflow must never do.

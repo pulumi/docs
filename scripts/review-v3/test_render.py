@@ -69,7 +69,14 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
 
 
 def test_route_chip_keeps_its_model_span_as_markup():
-    q = _queue()
+    # A route row proper: someone else's domain, and nothing blocking it. The
+    # _queue() blog row carries open 🚨 findings, which make it blocked —
+    # blocked outranks route — so this builds its own clean one.
+    q = run([stampable(3, title="Blog copy edit", labels=["review:no-blockers", "domain:blog"],
+                       files=[_file("content/blog/p/index.md", ["z"], ["p"])],
+                       comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR)])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["verdict"] == "route", row(q, 3)["reasons"]
     row(q, 3)["recommended"] = "stamp"  # what a judgments file carried before a re-analyze turned the row into a route
     html = render.render_board(q)
     assert '>route → @pulumi/docs-marketing-review <span class="v v-dim" title="The judge pass recommends stamp' in html

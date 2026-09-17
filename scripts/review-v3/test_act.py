@@ -23,9 +23,9 @@ import analyze  # noqa: E402
 import collect  # noqa: E402
 import routing  # noqa: E402
 from gh_client import GhClient, snapshot_path  # noqa: E402
-from test_analyze import CONFIG, TODAY, cfg, row  # noqa: E402
+from test_analyze import CLEAN_BRIEF, CONFIG, TODAY, cfg, comment, row  # noqa: E402
 from test_analyze import stampable as _stampable  # noqa: E402
-from test_collect import make_snapshot, patch_for  # noqa: E402
+from test_collect import V3_AUTHOR, make_snapshot, patch_for  # noqa: E402
 
 
 def stampable(number: int = 100, **over) -> dict:
@@ -243,6 +243,118 @@ def test_stamp_blocked_state_needs_green_checks_and_no_changes_requested():
         s = act.Step("stamp", 1, {"merge": True}, expect_head=row(env.queue, 1)["head"]["sha"])
         ok, msg, _ = act.preflight(env.gh, s)
         assert ok is False and "changes requested by cnunciato" in msg
+    finally:
+        env.close()
+
+
+# ---- merging over an open review finding -------------------------------------
+#
+# The failure these cover: #21482 and #21549 both squash-merged carrying
+# review:outstanding-issues, approved and merged three seconds apart by
+# --stamp --force, with no /resolve recorded against either open finding.
+# Three layers now have to agree before a merge goes out.
+
+
+def _with_open_findings(n: int = 1, **over) -> dict:
+    """A row whose review card has three unanswered 🚨 findings (F1-F3)."""
+    return stampable(n, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], **over)
+
+
+def test_a_row_with_open_findings_is_blocked_and_force_does_not_reach_it():
+    env = Env([_with_open_findings(1)])
+    try:
+        assert row(env.queue, 1)["verdict"] == "blocked", row(env.queue, 1)["reasons"]
+        for a in (args(stamp="1"), args(stamp="1", force=True)):
+            try:
+                act.plan(env.queue, a)
+                raise AssertionError("plan accepted a row with open findings")
+            except act.ActError as exc:
+                assert "outstanding:3" in str(exc), str(exc)
+    finally:
+        env.close()
+
+
+def test_plan_refuses_to_merge_over_findings_a_stale_verdict_missed():
+    """The verdict is computed when the queue is collected; a review can land
+    after. The plan re-asks the row's own card before agreeing to merge, so a
+    verdict that predates the finding does not carry a merge through."""
+    env = Env([_with_open_findings(1)])
+    try:
+        r = row(env.queue, 1)
+        r["verdict"], r["blockers"] = "judge", []   # what a queue collected pre-review says
+        try:
+            act.plan(env.queue, args(stamp="1", force=True))
+            raise AssertionError("plan agreed to merge over open findings")
+        except act.ActError as exc:
+            assert "unanswered blocking review finding" in str(exc) and "F1, F2, F3" in str(exc), str(exc)
+        # Approving without merging is still an approver's call to make.
+        p = act.plan(env.queue, args(stamp="1:no-merge", force=True))
+        assert p.steps[0].args["merge"] is False
+    finally:
+        env.close()
+
+
+def test_judging_the_findings_is_what_lets_the_merge_through():
+    """The way past the gate is to answer, not to override: the `/resolve`
+    lines the stamp posts count as the answer, and the merge proceeds."""
+    env = Env([_with_open_findings(1)])
+    try:
+        r = row(env.queue, 1)
+        r["verdict"], r["blockers"] = "judge", []
+        r["judgments"] = [{"finding_id": f, "disposition": "refuted", "note": "Checked against the source; the claim holds."}
+                          for f in ("F1", "F2", "F3")]
+        p = act.plan(env.queue, args(stamp="1", force=True))
+        assert p.steps[0].args["merge"] is True
+        assert len(p.steps[0].args["resolves"]) == 3
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok and "squash-merged" in res[0].message, res[0].message
+        # one resolve comment, then approve, then merge — in that order
+        assert [w["path"] for w in env.writes()] == [
+            "repos/pulumi/docs/issues/1/comments", "repos/pulumi/docs/pulls/1/reviews", "repos/pulumi/docs/pulls/1/merge"]
+    finally:
+        env.close()
+
+    # Answer only two of the three and the merge is still refused: the gate is
+    # per finding, not "did you engage with this PR at all".
+    env = Env([_with_open_findings(1)])
+    try:
+        r = row(env.queue, 1)
+        r["verdict"], r["blockers"] = "judge", []
+        r["judgments"] = [{"finding_id": f, "disposition": "refuted", "note": "Checked."} for f in ("F1", "F2")]
+        try:
+            act.plan(env.queue, args(stamp="1", force=True))
+            raise AssertionError("plan merged with F3 unanswered")
+        except act.ActError as exc:
+            assert "F3" in str(exc) and "F1" not in str(exc), str(exc)
+    finally:
+        env.close()
+
+
+def test_preflight_re_reads_the_card_so_a_review_landing_mid_batch_stops_the_merge():
+    """master is not the only thing that moves during a batch. A review can
+    render between the plan and the merge without touching the head, so the
+    preflight asks GitHub for the card rather than trusting the queue's copy."""
+    env = Env([_with_open_findings(1)])
+    try:
+        s = act.Step("stamp", 1, {"merge": True}, expect_head=row(env.queue, 1)["head"]["sha"])
+        ok, msg, _ = act.preflight(env.gh, s)
+        assert ok is False and "unanswered blocking finding" in msg and "F1" in msg, msg
+        # …and the step's own resolves, which post seconds from now and cannot
+        # be on the card yet, are an answer.
+        s.args["resolves"] = [f"/resolve {f} refuted: checked" for f in ("F1", "F2", "F3")]
+        ok, msg, _ = act.preflight(env.gh, s)
+        assert ok, msg
+        # Approve-only never reaches the check: it merges nothing.
+        ok, _, _ = act.preflight(env.gh, act.Step("stamp", 1, {"merge": False}, expect_head=row(env.queue, 1)["head"]["sha"]))
+        assert ok
+    finally:
+        env.close()
+    # Nothing is written when the preflight refuses.
+    env = Env([_with_open_findings(1)])
+    try:
+        s = act.Step("stamp", 1, {"merge": True}, expect_head=row(env.queue, 1)["head"]["sha"])
+        res = act.execute(act.Plan(1, "pulumi/docs", "", {}, [s]), env.gh, queue=env.queue)
+        assert res[0].ok is False and env.writes() == []
     finally:
         env.close()
 

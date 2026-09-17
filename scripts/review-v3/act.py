@@ -13,7 +13,8 @@ command the board composed, which is why a plan names its PRs one by one:
   --stamp N,N        approve, then squash-merge, after a per-PR preflight run
                      immediately before each merge: head SHA unchanged since
                      the plan, mergeable_state in {clean, blocked}, checks
-                     green, no changes-requested review. master moves during
+                     green, no changes-requested review, and no blocking
+                     review finding left unanswered. master moves during
                      a batch; the preflight is what makes a batch safe. Bot
                      PRs merge; a human-authored PR is approved only unless
                      --merge-humans (authors merge their own PRs).
@@ -217,6 +218,9 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
             merge = not args.no_merge and (is_bot or args.merge_humans)
         s = step("stamp", n, merge=merge, note=args.approve_note or "", resolves=resolve_lines(pr))
         if merge:
+            open_ids = unanswered_blockers(pr.get("review") or {}, s.args["resolves"])
+            if open_ids:
+                raise ActError(refuse_merge_over_findings(n, open_ids))
             s.note = ""
         elif mode == "no-merge":
             s.note = "approve only (asked not to merge)"
@@ -317,7 +321,8 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
         head = s.expect_head[:7]
         lines.append(f"{i}. {s.kind.upper():<8} #{s.pr} {s.title}  (@{s.author}, head {head})")
         if s.kind == "stamp":
-            lines.append(f"     preflight: head == {head}, mergeable_state ∈ {STAMP_STATES}, checks green, no changes-requested")
+            lines.append(f"     preflight: head == {head}, mergeable_state ∈ {STAMP_STATES}, checks green, no changes-requested"
+                         + (", no unanswered 🚨 finding" if s.args.get("merge") else ""))
             for r in s.args.get("resolves") or []:
                 lines.append(f"     comment: {r[:110]}")
             lines.append(f"     POST review APPROVE: \"{approval_body(s.author_type, note=s.args.get('note', ''))}\"")
@@ -442,6 +447,22 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
     if "CHANGES_REQUESTED" in latest.values():
         who = [u for u, st in latest.items() if st == "CHANGES_REQUESTED"]
         return False, f"changes requested by {', '.join(who)}", detail
+    if s.args.get("merge"):
+        # Re-read the review cards, not the queue's copy of them: a review can
+        # land or re-render between the plan and this moment without moving the
+        # head, so a row that planned clean can arrive here with open findings.
+        # The step's own `/resolve` lines post seconds from now and the card
+        # will not have caught up, so they count as answered here.
+        try:
+            author_c, brief_c, _ = collect.find_review_comments(gh.issue_comments(s.pr))
+        except GhError as e:
+            return False, f"could not re-read the review cards ({e}) — not merging over an unverified review", detail
+        author_body = (author_c or {}).get("body") or ""
+        if author_body:
+            review = collect.parse_review(author_body, (brief_c or {}).get("body") or "", s.pr, gh.repo)
+            open_ids = unanswered_blockers(review, s.args.get("resolves") or [])
+            if open_ids:
+                return False, f"{len(open_ids)} unanswered blocking finding(s) on the review: {', '.join(open_ids)}", detail
     return True, "ok", detail
 
 
@@ -571,6 +592,44 @@ def _stamp(gh: GhClient, s: Step) -> tuple[bool, str]:
         return True, "approved (not merged)" + tail
     gh.merge(s.pr, (detail.get("head") or {}).get("sha") or s.expect_head, "squash")
     return True, "approved and squash-merged" + tail
+
+
+RESOLVE_ID_RE = re.compile(r"/resolve\s+(\S+)")
+
+
+def unanswered_blockers(review: dict, resolves: list[str]) -> list[str]:
+    """Blocking findings on the review with no answer — neither a disposition
+    already recorded on the card, nor a `/resolve` this step is about to post.
+
+    This is the bar `/pr-review` merges against, and it is deliberately not
+    something --force reaches. A judge row's other gates (size, shape:infra, a
+    human author) are an approver's call to make; an open 🚨 is the review
+    still waiting on an answer, and squash-merging past it destroys the only
+    chance to give one. Every way out leaves a record: push a fix, judge the
+    row so the stamp posts `/resolve <id> <disposition>: <why>`, or send it
+    back.
+
+    A legacy (v2) row has no `/resolve` lane at all, so `resolve_lines()`
+    returns nothing for it and an open 🚨 there can only be answered by
+    fixing it or refreshing the review — which is correct: there is no
+    machine-readable disposition to write.
+    """
+    answered = {m.group(1) for r in resolves if (m := RESOLVE_ID_RE.match(r))}
+    return [i["id"] for i in review.get("items") or []
+            if i.get("blocking") and not i.get("disposition") and i["id"] not in answered]
+
+
+def refuse_merge_over_findings(n: int, open_ids: list[str]) -> str:
+    """There is no flag that turns this off, deliberately. Merging anyway is a
+    disposition — `/resolve <id> accepted: <why>` — which records the reason
+    against the finding it answers, where the next reader will find it. A
+    label or a --force would record nothing."""
+    return (f"#{n} has {len(open_ids)} unanswered blocking review finding(s): {', '.join(open_ids)}. "
+            f"Merging would walk over the review, and --force does not cover this. "
+            f"Answer them first: push a fix, judge the row so the stamp posts "
+            f"`/resolve <id> <disposition>: <why>` (`accepted: <why>` is how you merge anyway), "
+            f"or `--request-changes {n}` to send it back. "
+            f"To approve without merging, `--stamp {n}:no-merge`.")
 
 
 RESOLVABLE = ("fixed", "refuted", "accepted", "not-applicable")  # `deferred` goes back to the author instead

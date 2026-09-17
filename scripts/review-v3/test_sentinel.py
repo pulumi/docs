@@ -1038,14 +1038,99 @@ def test_the_auto_staging_lane_dispatches_and_gets_out():
     assert "--dispatch-only) DISPATCH_ONLY" in script
     # stale comment guard: the header must not still promise a queue
     assert "Concurrency sits on the DEPLOY JOB" not in auto
-    # the attended lane still watches: someone is sitting there waiting
+    # The attended lane still watches -- not to write the status (that is
+    # staging-status.yml's job now) but because the watch is what holds its
+    # `staging-stack` group for the length of the deploy. Match the script
+    # invocation, not the prose: the header explains the contrast.
     pr_lane = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-pr.yml").read_text()
-    assert "--dispatch-only" not in pr_lane
+    invocation = "\n".join(
+        step["run"] for step in _yaml.safe_load(pr_lane)["jobs"]["deploy"]["steps"]
+        if "staging-deploy.sh" in step.get("run", "")
+    )
+    assert invocation, "the attended lane must still call staging-deploy.sh"
+    assert "--dispatch-only" not in invocation
+    assert "--announce" in invocation
 
+    # The dispatched run must NOT resolve its own status: see
+    # test_the_staging_status_listener_finalizes_from_the_default_branch.
     deploy = (REPO_ROOT / ".github" / "workflows" / "testing-build-and-deploy.yml").read_text()
-    assert "staging-status:" in deploy, "the dispatched run has to resolve its own pending status"
-    assert "staging/pulumi-test-io" in deploy
-    assert "statuses: write" in deploy
+    import yaml as _y  # noqa: PLC0415
+    assert "staging-status" not in _y.safe_load(deploy)["jobs"], (
+        "a job inside the dispatched run only exists for branches cut after it merged "
+        "(workflow_dispatch runs the file from the ref it is dispatched at) -- "
+        "staging-status.yml owns the terminal status"
+    )
+
+
+def test_the_staging_status_listener_finalizes_from_the_default_branch():
+    """The finalize side has to be branch-age-independent, like the dispatch side.
+
+    PR #21676 branched from 8712bb8b, before the in-run `staging-status` job
+    merged. Its deploy succeeded; the file that run executed had no such job;
+    the pending `staging/pulumi-test-io` status never resolved and the merge
+    box sat on "staging deploy running". A `workflow_run` listener always
+    executes the DEFAULT BRANCH's copy and fires for runs on any branch, so
+    branch age stops mattering -- the same property `pull_request_target`
+    gives review-sentinel.yml. These assertions pin that shape, and the
+    no-PR-code invariant that comes with holding `statuses: write` on a run
+    whose head is PR-controlled.
+    """
+    import yaml as _y  # noqa: PLC0415
+
+    path = REPO_ROOT / ".github" / "workflows" / "staging-status.yml"
+    wf = path.read_text()
+    data = _y.safe_load(wf)
+
+    # `on:` is the YAML 1.1 boolean True once parsed -- do not "fix" this.
+    on = data[True]
+    assert on["workflow_run"]["workflows"] == ["Build and deploy testing"]
+    assert on["workflow_run"]["types"] == ["completed"]
+    # Backfill entry: clear a phantom status without re-deploying (C).
+    assert on["workflow_dispatch"]["inputs"]["run_id"]["required"] is True
+    assert "pr_number" in on["workflow_dispatch"]["inputs"]
+
+    assert "concurrency" not in data, "a displaced pending run is a CANCELLED run"
+    jobs = data["jobs"]
+    assert all("concurrency" not in j for j in jobs.values())
+
+    for forbidden in ("head.ref", "head.sha", "refs/pull/", "merge_commit_sha"):
+        assert forbidden not in wf, f"the listener must never reference PR code: {forbidden}"
+    if "actions/checkout" in wf:
+        assert "ref: ${{ github.event.repository.default_branch }}" in wf,             "any checkout here must be pinned to the default branch"
+
+    gate = jobs["finalize"]["if"]
+    assert "github.event.workflow_run.event == 'workflow_dispatch'" in gate,         "a master push deploy is nobody's staging evidence"
+    assert "github.event.workflow_run.head_branch != github.event.repository.default_branch" in gate
+
+    assert 'context="staging/pulumi-test-io"' in wf
+    assert "statuses: write" in wf
+    for desc in ("staging deploy green", "staging deploy failed", "staging deploy cancelled"):
+        assert desc in wf, f"the in-run job's description is part of the contract: {desc}"
+    # G4 is only re-scored when the Sentinel runs, and a deploy finishing
+    # fires no PR event -- so the poke is the other half of this fix.
+    assert "gh workflow run review-sentinel.yml" in wf
+    assert "vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1'" in wf
+
+    # GitHub's default shell is `bash -e`, no pipefail (PR #21676, F2).
+    for step in jobs["finalize"]["steps"]:
+        if "run" in step and "|" in step["run"]:
+            assert "pipefail" in step["run"], \
+                f"step {step.get('name')!r} pipes without `set -o pipefail`"
+
+
+def test_only_one_thing_writes_the_terminal_staging_status():
+    """Two writers of one context is the noise the in-run job was deleted for.
+
+    `staging-deploy.sh` still writes the PENDING status -- that has to happen
+    at dispatch time -- but its watch path (held by `/deploy-staging` to keep
+    the `staging-stack` concurrency group for the length of the deploy) must
+    not race the listener with a terminal one.
+    """
+    script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
+    assert script.count("-f state=pending") == 1
+    assert "-f state=\"$STATE\"" not in script, \
+        "the terminal status belongs to staging-status.yml"
+    assert "gh run watch" in script, "the attended lane still holds the stack"
 
 
 def run_standalone() -> int:
