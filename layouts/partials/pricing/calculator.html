@@ -66,9 +66,9 @@
 {{- range $e := $px.editions -}}
   {{- with index $calc.editions $e.id -}}
     {{- $ce := . -}}
-    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "esc_secret_month" "insights_resource_month" -}}
+    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "iac_resource_hour" "esc_secret_month" "insights_resource_month" -}}
       {{- if not (index $ce $k) -}}
-        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all six." $where $e.id $k -}}
+        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all seven." $where $e.id $k -}}
       {{- end -}}
     {{- end -}}
     {{- $calcEditions = $calcEditions | append (dict "id" $e.id "name" $e.name "base_usd" $ce.base_usd "included_credits" $ce.included_credits) -}}
@@ -212,6 +212,23 @@
                         <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
                     </div>
                 </div>
+                {{ if eq $m.id "iac_resources" }}
+                {{/* IaC resources is the one line item the comparison table already
+                     states both ways ("$0.00025/hour", "$0.1825/month" as its
+                     subtext), so this is the one meter the estimator lets a reader
+                     flip to its hourly figure. The toggle only changes which stored
+                     rate paints into data-calc-rate above — it never touches the
+                     resource count or the credits math, which stay priced by the
+                     month regardless of what's showing. */}}
+                <div class="flex justify-end -mt-1">
+                    <div role="group" aria-label="Rate unit" class="btn-group">
+                        <button type="button" class="btn btn-xs btn-outline aria-pressed:border-gray-500 aria-pressed:bg-gray-100"
+                                data-calc-rate-unit="month" aria-pressed="true">/mo</button>
+                        <button type="button" class="btn btn-xs btn-outline aria-pressed:border-gray-500 aria-pressed:bg-gray-100"
+                                data-calc-rate-unit="hour" aria-pressed="false">/hr</button>
+                    </div>
+                </div>
+                {{ end }}
                 {{/* A position on the curve, not the meter's value — the TS module
                      converts between the two and writes the result into the number
                      input above. It also sets the starting position, so this renders

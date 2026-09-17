@@ -3,6 +3,7 @@ interface EditionRates {
     included_credits: number;
     included_resources: number;
     iac_resource_month: number;
+    iac_resource_hour: number;
     esc_secret_month: number;
     insights_resource_month: number;
 }
@@ -97,6 +98,17 @@ const usdRate = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 4,
 });
 
+// Hourly rates run an order of magnitude smaller than monthly ones (down to
+// $0.00025), so they need more room after the decimal than usdRate gives a
+// monthly figure — otherwise they'd round to $0.00 or lose the digit that
+// distinguishes them from a sibling edition's rate.
+const usdRateHour = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+});
+
 const count = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
 function creditsForResources(resources: number, edition: EditionRates): number {
@@ -189,13 +201,32 @@ function init(): void {
         ctaContact?.classList.toggle("hidden", !volume);
     };
 
+    // Only the IaC resources row has a unit toggle; every other row's rate
+    // unit is fixed, so this reads as "month" for them without needing a
+    // per-meter flag.
+    const rateUnitFor = (row: HTMLElement): "month" | "hour" => {
+        const pressed = row.querySelector<HTMLButtonElement>("[data-calc-rate-unit][aria-pressed='true']");
+        return (pressed?.dataset.calcRateUnit as "month" | "hour" | undefined) || "month";
+    };
+
     const paintRates = (): void => {
         const edition = currentEdition();
         rows.forEach(row => {
             const { id, rate } = parts(row);
             const meter = METERS[id];
             if (!rate) return;
-            rate.textContent = meter.rate ? `${usdRate.format(meter.rate(config, edition))}${meter.unit}` : "";
+            if (!meter.rate) {
+                rate.textContent = "";
+                return;
+            }
+            // The toggle only swaps which already-published rate is shown — it
+            // never derives one from the other, so it can't drift from the
+            // comparison table the way iac_resource_month / 730 could.
+            if (id === "iac_resources" && rateUnitFor(row) === "hour") {
+                rate.textContent = `${usdRateHour.format(edition.iac_resource_hour)}/resource/hr`;
+                return;
+            }
+            rate.textContent = `${usdRate.format(meter.rate(config, edition))}${meter.unit}`;
         });
     };
 
@@ -255,6 +286,14 @@ function init(): void {
         // inputs, and they are chosen to produce exactly the edition's base price.
         // Seeding from the range would round them off through the curve first.
         syncRow(row, "number");
+
+        const rateUnitButtons = Array.from(row.querySelectorAll<HTMLButtonElement>("[data-calc-rate-unit]"));
+        rateUnitButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+                paintRates();
+            });
+        });
     });
 
     const buttonFor = (id: string): HTMLButtonElement | undefined =>
