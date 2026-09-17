@@ -320,6 +320,31 @@ def only_merges_since(commits: list[dict], review_body: str) -> bool:
     return all(len(c.get("parents") or []) >= 2 for c in commits[idx + 1:])
 
 
+def reviewed_head(review_body: str) -> str | None:
+    m = sentinel.HEAD_MARKER_RE.search(review_body or "")
+    return m.group(1) if m else None
+
+
+def changed_lines(files: list[dict]) -> dict[str, list[str]]:
+    """Per file, the sorted `+`/`-` lines of its patch. Hunk headers and
+    context are left out because they move whenever the base moves; the
+    changed lines themselves only move when the PR's content does."""
+    out: dict[str, list[str]] = {}
+    for f in files:
+        name = f.get("filename") or f.get("path") or ""
+        lines = [ln for ln in (f.get("patch") or "").splitlines()
+                 if ln[:1] in "+-" and not ln.startswith(("+++", "---"))]
+        out[name] = sorted(lines)
+    return out
+
+
+def same_diff(files_then: list[dict], files_now: list[dict]) -> bool:
+    """Whether two snapshots of a PR's files carry the same changes. A merge
+    of the base that resolved a conflict by editing a line the PR adds
+    changes the content the review read, and must not count as base-only."""
+    return changed_lines(files_then) == changed_lines(files_now)
+
+
 def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
     """review-worklist.py's report, plus the raw REVIEW_STATE and the ⚠️ rows."""
     wl = worklist()
@@ -621,7 +646,17 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         # changing the diff the review read. When every commit after the
         # reviewed head is a merge commit, the review still describes the
         # PR; a real push would need the pipeline's refresh.
+        # A merge commit can still carry a content change (a conflict
+        # resolved by hand), so the shape of the history isn't enough: the
+        # `+`/`-` lines at the reviewed head have to match the ones now.
         base_merged = only_merges_since(raw["commits"], author_body)
+        if base_merged:
+            then = reviewed_head(author_body) or ""
+            base_ref = (detail.get("base") or {}).get("ref") or ""
+            try:
+                base_merged = same_diff(gh.compare_files(base_ref, then), raw["files"])
+            except GhError:
+                base_merged = False  # can't prove the diff is unchanged, so it isn't
         if base_merged:
             status = "CURRENT"
     review = parse_review(author_body, brief_body, number, gh.repo) if author_body else {

@@ -55,7 +55,7 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
             updated_at: str = "2026-09-14T10:00:00Z", commits: list[str] | None = None,
             review_comments: list[dict] | None = None, head_ref: str | None = None,
             head_repo: str = "pulumi/docs", requested_users: list | None = None,
-            requested_teams: list[str] | None = None) -> dict:
+            requested_teams: list[str] | None = None, compare_files: dict | None = None) -> dict:
     """A compact description of one PR that make_snapshot() expands into
     every endpoint collect.py reads."""
     files = files if files is not None else [
@@ -72,6 +72,7 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
         "commits": commits or ["Do the thing"], "review_comments": review_comments or [],
         "head_ref": head_ref or f"branch-{number}", "head_repo": head_repo,
         "requested_users": requested_users or [], "requested_teams": requested_teams or [],
+        "compare_files": compare_files or {},
     }
 
 
@@ -116,6 +117,13 @@ def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", memb
                   "parents": [{"sha": "p"} for _ in range(c.get("parents", 1))]} if isinstance(c, dict)
                  else {"sha": f"{i:040x}", "commit": {"message": c}, "parents": [{"sha": "p"}]})
                 for i, c in enumerate(s["commits"], 1)])
+        # The PR's diff at each earlier head, for the base-merged check;
+        # `compare_files` maps a sha to a files list that differs from now.
+        for c in s["commits"]:
+            sha = c.get("sha") if isinstance(c, dict) else None
+            if sha:
+                _write(root, "GET", f"repos/{repo}/compare/master...{sha}", None,
+                       {"files": (s.get("compare_files") or {}).get(sha, s["files"])})
         _write(root, "GET", f"repos/{repo}/pulls/{n}/comments", None, s["review_comments"])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/requested_reviewers", None, {
             "users": [({"login": u, "type": "User"} if isinstance(u, str) else u) for u in s["requested_users"]],
@@ -436,6 +444,16 @@ def test_base_merge_only_keeps_the_review_current():
     assert r["status"] == "STALE" and r["base_merged"] is False
     r = collect_specs([pr_spec(3, commits=merge, **base)])["prs"][0]["review"]  # reviewed head not in the list
     assert r["status"] == "STALE"
+    # A merge commit that resolved a conflict by editing a line the PR adds changed what the review read.
+    then = [{"filename": "content/docs/p.md", "status": "modified", "additions": 1, "deletions": 1,
+             "patch": patch_for(["the link, before the merge"], lines_removed=["old line"])}]
+    r = collect_specs([pr_spec(4, commits=reviewed + merge, compare_files={HEAD_V3: then}, **base)])["prs"][0]["review"]
+    assert r["status"] == "STALE" and r["base_merged"] is False
+    # Hunk headers and context move with the base; only the changed lines are compared.
+    shifted = [dict(f, patch=patch_for(["new line"], old_start=40, lines_removed=["old line"], context=["other ctx"]))
+               for f in pr_spec(1)["files"]]
+    r = collect_specs([pr_spec(5, commits=reviewed + merge, compare_files={HEAD_V3: shifted}, **base)])["prs"][0]["review"]
+    assert r["status"] == "CURRENT" and r["base_merged"] is True
 
 
 def test_requested_reviewers_drop_bots():
