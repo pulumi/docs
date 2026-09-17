@@ -1,23 +1,39 @@
 name: Staging deploy status
 
-# Finalizes the `staging/pulumi-test-io` commit status for a dispatched
-# pulumi-test.io staging deploy — the evidence Sentinel gate G4 reads — and
-# pokes the Sentinel so G4 is re-scored against it.
+# Writes the terminal `staging/pulumi-test-io` commit status for a dispatched
+# pulumi-test.io staging deploy — one of the two witnesses Sentinel gate G4
+# reads — and pokes the Sentinel so G4 is re-scored against it.
 #
-# THE RULE THIS INCIDENT WROTE: anything that must work for PR branches of
-# ANY AGE lives in a workflow GitHub triggers from the DEFAULT BRANCH —
+# THIS WORKFLOW IS BEST-EFFORT, AND NOTHING MAY DEPEND ON IT FIRING.
+# `workflow_run` does not fire for a run dispatched with GITHUB_TOKEN, and
+# the auto lane (`staging-deploy-auto.yml` -> `staging-deploy.sh`) dispatches
+# with GITHUB_TOKEN. Measured on 2026-09-17: all 16 runs of this workflow
+# since it landed were master *pushes* (correctly skipped by the job `if`),
+# and not one of the six dispatched PR-branch deploys in the same window
+# produced a run. A master push cascades because a person's token pushed it;
+# a token-dispatched run does not cascade at all.
+#
+# So this workflow is upside, not a contract: when it fires, the merge box
+# gets a green status linking to the deployed site and the Sentinel is
+# re-scored early. When it doesn't, G4 falls through to witness (2) — the
+# deploy run record itself, which `_staging_evidence` reads directly — and
+# the merge box simply shows one check fewer. That is why NOTHING WRITES A
+# PENDING STATUS ANY MORE: a pending status is a promise that something will
+# come back and finalize it, and this cannot promise that. See the long note
+# in `staging-deploy.sh` for the two incidents that establish it (#21676,
+# #21696). If a pending status is ever wanted again, its writer must be a
+# `schedule` sweep that finalizes any pending status whose run has completed
+# — immune to both branch age and token provenance — not an event cascade.
+#
+# THE OTHER RULE, STILL TRUE: anything that must work for PR branches of ANY
+# AGE lives in a workflow GitHub triggers from the DEFAULT BRANCH —
 # `workflow_run`, `schedule`, `pull_request_target`, or a dispatch pinned to
 # the default ref. A `workflow_dispatch` runs the workflow FILE FROM THE REF
 # IT IS DISPATCHED AT, so a job added to `testing-build-and-deploy.yml` on
 # master does not exist in a run dispatched at a branch cut before it landed.
-# The dispatch side already follows the rule: `staging-deploy-auto.yml` runs
-# base's scripts and pins its checkout to the default branch. The finalize
-# side did not — it was a job inside the dispatched run — and PR #21676
-# (branched from 8712bb8b, before that job merged) paid for it: the deploy
-# succeeded at 23:52Z on 2026-09-16, nothing wrote the terminal status, and
-# the merge box sat on "staging deploy running" indefinitely. `workflow_run`
-# listeners always execute the default branch's copy and fire for runs on any
-# branch, which makes branch age irrelevant. Keep finalization here.
+# That is what PR #21676 paid for, and why this is not a job inside the
+# dispatched run. `workflow_run` solves branch age; it just does not solve
+# token provenance, which is the half #21696 found.
 #
 # Design notes:
 # - DISPATCHED, NON-DEFAULT-BRANCH RUNS ONLY. A master push deploy is not
@@ -32,12 +48,13 @@ name: Staging deploy status
 #   auto lane dispatches at the PR's head branch, so it resolves.
 # - THE STATUS IS WRITTEN EVEN WHEN NO PR RESOLVES. The status belongs to the
 #   SHA, not to the PR; resolving a PR is only needed for the Sentinel poke.
-#   A closed/renamed branch therefore still gets its pending status cleared.
-# - ONE WRITER. This workflow is the only thing that writes a terminal
-#   `staging/pulumi-test-io`. `staging-deploy.sh` writes only the PENDING
-#   status, because that has to happen at dispatch time, and its watch path
+#   A closed or renamed branch therefore still gets its status recorded.
+# - ONE WRITER, AND NO PENDING ONE. This workflow is the only thing that
+#   writes `staging/pulumi-test-io` at all. `staging-deploy.sh` writes no
+#   status: not a terminal one (this owns that) and no longer a pending one
+#   (nothing can be trusted to finalize it — see above). Its watch path
 #   (`/deploy-staging`, which blocks to hold that lane's `staging-stack`
-#   concurrency group) was stripped of its status write when this landed.
+#   concurrency group) buys the concurrency group, not a status.
 # - NO PR CODE, EVER. This job holds `statuses: write` and `actions: write`
 #   on a run whose head is PR-controlled. It checks out nothing and runs
 #   nothing from the PR; every fact comes from the API as data. If a script
@@ -54,8 +71,10 @@ name: Staging deploy status
 #   for is "show me the thing you deployed". On a failure or a cancellation
 #   there is nothing deployed to look at, so those keep the run link.
 # - BACKFILL. `workflow_dispatch` with a `run_id` replays this against a
-#   completed deploy — for clearing a phantom pending status left by a run
-#   that predates this listener, without spending eight minutes re-deploying.
+#   completed deploy, which is how a status gets written at all for the
+#   dispatched runs whose completion never reaches this listener. It is also
+#   how the phantom pending statuses left by #21676 and #21696 were cleared,
+#   without spending eight minutes re-deploying.
 
 on:
   workflow_run:

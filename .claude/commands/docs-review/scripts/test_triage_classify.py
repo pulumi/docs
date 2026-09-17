@@ -142,6 +142,24 @@ def test_domain_routing() -> None:
     check(domains(["infrastructure/index.ts"]) == ["domain:infra"], "infrastructure routes to infra")
     check(domains(["Makefile"]) == ["domain:infra"], "Makefile routes to infra")
 
+    # The review pipelines under scripts/ are repo plumbing, not the build.
+    # They fall through to `other`: same `tools` approver as infra, but no
+    # `staging_evidence: required` — deploying the site demonstrates nothing
+    # about analyze.py, and it was costing ~9 minutes of the shared staging
+    # stack and a staging status on every pr-review tooling PR.
+    for d in ("review-v3", "review-admin", "content-review", "blog-review"):
+        check(domains([f"scripts/{d}/thing.py"]) == ["domain:other"],
+              f"scripts/{d} is repo plumbing, not infra")
+    # The narrowing is per path, not per PR: one workflow in the diff and the
+    # PR is infra again, staging run and all.
+    check(domains(["scripts/review-v3/act.py", ".github/workflows/x.yml"]) == ["domain:infra"],
+          "a workflow alongside the pipeline still routes to infra")
+    # Only those four. Everything else under scripts/ feeds the build.
+    check(domains(["scripts/review-notes/x.py"]) == ["domain:infra"],
+          "a scripts/ dir that only looks like a review pipeline is still infra")
+    check(domains(["scripts/search/update-search-index.js"]) == ["domain:infra"],
+          "the search index build stays infra")
+
     # Content-serving data files classify with the content they serve, so a
     # doc move (which edits the nav yaml) stays a docs PR and a blog tag edit
     # is a blog PR. Generated data stays unmatched (other).

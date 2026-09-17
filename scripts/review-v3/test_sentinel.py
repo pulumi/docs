@@ -1118,19 +1118,49 @@ def test_the_staging_status_listener_finalizes_from_the_default_branch():
                 f"step {step.get('name')!r} pipes without `set -o pipefail`"
 
 
-def test_only_one_thing_writes_the_terminal_staging_status():
-    """Two writers of one context is the noise the in-run job was deleted for.
+def test_staging_deploy_writes_no_status_at_all():
+    """No pending status, because nothing can be trusted to finalize one.
 
-    `staging-deploy.sh` still writes the PENDING status -- that has to happen
-    at dispatch time -- but its watch path (held by `/deploy-staging` to keep
-    the `staging-stack` concurrency group for the length of the deploy) must
-    not race the listener with a terminal one.
+    It has now failed twice, each time leaving the merge box saying "staging
+    deploy running" about a deploy that had finished:
+
+      1. #21676 -- the finalizer was a job inside the dispatched run, and
+         `workflow_dispatch` executes the file from the ref it is dispatched
+         at, so a branch cut before that job merged never had it.
+      2. #21696 -- the finalizer moved to a `workflow_run` listener, fixing
+         (1). But GitHub emits no `workflow_run` cascade for a run dispatched
+         with GITHUB_TOKEN, which is what the auto lane uses. All 16 of that
+         listener's runs were master pushes; none of the six dispatched
+         PR-branch deploys after it landed produced one.
+
+    The status is a *report* of the deploy, not the deploy. The run record is
+    the deploy, and `_staging_evidence` reads it as witness (2), so no write
+    here is load-bearing. An absent status says "no evidence recorded", which
+    is true; a stuck pending one says something false, indefinitely.
     """
     script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
-    assert script.count("-f state=pending") == 1
+    assert "-f state=pending" not in script, \
+        "a pending status needs a writer that cannot miss -- a schedule sweep, not a cascade"
     assert "-f state=\"$STATE\"" not in script, \
         "the terminal status belongs to staging-status.yml"
     assert "gh run watch" in script, "the attended lane still holds the stack"
+    # The evidence the Sentinel actually reads is the run record, and both
+    # lanes must keep producing one.
+    assert "gh workflow run testing-build-and-deploy.yml" in script
+
+
+def test_g4_reads_the_deploy_run_when_no_status_was_written():
+    """Witness (2) is what makes dropping the pending status safe: with no
+    `staging/pulumi-test-io` status on the head at all, a successful deploy
+    run at that SHA is still evidence."""
+    class _Gh:
+        def get_commit_statuses(self, sha):
+            return []
+        def get_workflow_runs(self, wf, sha):
+            return [{"id": 1, "html_url": "https://example.invalid/1", "conclusion": "success"}]
+
+    got = sentinel._staging_evidence(_Gh(), "a" * 40)
+    assert got and "succeeded" in got and "run 1" in got
 
 
 def run_standalone() -> int:
@@ -1164,3 +1194,38 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+def test_a_split_legacy_review_is_counted_whole_by_g2():
+    """The merge gate had the same page-1-only read as the collector, and it
+    is the worse place for it: a 2-page v2 review with its 🚨 section on page
+    2 counted zero outstanding findings and G2 passed as "legacy review
+    clean" (pulumi/docs#21490)."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    page2 = {"id": 10, "user": {"login": "github-actions[bot]"},
+             "body": ("<!-- CLAUDE_REVIEW 2/2 -->\n### 🚨 Outstanding in this PR\n\n"
+                      "- **[L10-12]** `f.md` — broken thing\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page2, page1],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "ok" and "legacy" in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "red" and "1 🚨 Outstanding" in _gate(v, "G2").message
+    assert v.conclusion == "failure"
+
+
+def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
+    """Page 1 of 2 and nothing else. Counting zero 🚨 here would pass the
+    merge gate on a review nobody has read whole."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page1],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "error"
+    assert "page(s) 2 could not be read" in _gate(v, "G2").message
+    assert v.conclusion != "success"

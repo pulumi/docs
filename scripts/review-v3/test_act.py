@@ -1147,3 +1147,40 @@ def test_request_changes_with_only_a_reason_goes_back():
         assert res[0].ok and env.writes()[0]["body"] == {"event": "REQUEST_CHANGES", "body": body}
     finally:
         env.close()
+
+
+def test_the_merge_preflight_refuses_a_review_it_cannot_read_whole():
+    """The preflight's re-read goes through the same collector, so a split v2
+    review now comes back joined. Two ways it can still be unreadable, and
+    neither may merge: a page the `k/N` markers promise that GitHub did not
+    return, and a card whose own tally declares more findings than its
+    sections parsed into (pulumi/docs#21490)."""
+    import test_collect as tc  # noqa: PLC0415
+
+    pages = tc.legacy_pages(total=3)
+    env = Env([stampable(1, comments=[comment(pages[0])], labels=["review:no-blockers", "domain:docs"])])
+    try:
+        s = act.Step("stamp", 1, {"merge": True}, expect_head=row(env.queue, 1)["head"]["sha"])
+        ok, msg, _ = act.preflight(env.gh, s)
+        assert ok is False and "page(s) 2, 3 could not be read" in msg, msg
+        # and a step's own /resolve lines are no answer to a review with holes
+        s.args["resolves"] = ["/resolve F1 refuted: checked"]
+        ok, msg, _ = act.preflight(env.gh, s)
+        assert ok is False and "could not be read" in msg, msg
+    finally:
+        env.close()
+
+    # One page, stamped 1/1, so nothing is missing — but its tally says three
+    # 🚨 and its sections hold none.
+    page1 = pages[0].replace("<!-- CLAUDE_REVIEW 1/3 -->", "<!-- CLAUDE_REVIEW 1/1 -->")
+    env = Env([stampable(1, comments=[comment(page1)], labels=["review:no-blockers", "domain:docs"])])
+    try:
+        s = act.Step("stamp", 1, {"merge": True}, expect_head=row(env.queue, 1)["head"]["sha"])
+        ok, msg, _ = act.preflight(env.gh, s)
+        assert ok is False and "declares more findings than its sections parsed into" in msg, msg
+        # approve-only never reaches the check: it merges nothing
+        ok, _, _ = act.preflight(env.gh, act.Step("stamp", 1, {"merge": False},
+                                                  expect_head=row(env.queue, 1)["head"]["sha"]))
+        assert ok
+    finally:
+        env.close()

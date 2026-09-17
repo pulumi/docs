@@ -752,8 +752,19 @@ def preflight(gh: GhClient, s: Step) -> tuple[bool, str, dict]:
         except GhError as e:
             return False, f"could not re-read the review cards ({e}) — not merging over an unverified review", detail
         author_body = (author_c or {}).get("body") or ""
+        missing = (author_c or {}).get("review_pages_missing") or []
+        if missing:
+            # A split (v2) review whose later comments did not come back:
+            # its findings sections are the tail of the document, so "no
+            # open findings" here would mean "none arrived", not "none".
+            return False, (f"the review is {author_c.get('review_pages')} comments and page(s) "
+                           f"{', '.join(str(k) for k in missing)} could not be read — not merging over "
+                           "a review this step cannot see whole"), detail
         if author_body:
             review = collect.parse_review(author_body, (brief_c or {}).get("body") or "", s.pr, gh.repo)
+            if review.get("counts_shortfall"):
+                return False, ("the review's own tally declares more findings than its sections parsed into "
+                               f"({review['counts_shortfall']}) — not merging over a review that arrived incomplete"), detail
             open_ids = unanswered_blockers(review, s.args.get("resolves") or [])
             if open_ids:
                 return False, f"{len(open_ids)} unanswered blocking finding(s) on the review: {', '.join(open_ids)}", detail

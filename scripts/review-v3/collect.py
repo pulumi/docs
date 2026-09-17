@@ -364,6 +364,9 @@ def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
         "surface": report["surface"] if author_body else "none",
         "reviewed_sha": report["reviewed_sha"],
         "parse_confidence": report["parse_confidence"],
+        # Buckets whose count the card's own tally declares higher than what
+        # parsed out of its sections: a body that arrived incomplete.
+        "counts_shortfall": report.get("counts_shortfall") or {},
         "items": report["items"],
         "summary": report["summary"],
         "review_state": state,
@@ -663,7 +666,15 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "surface": "none", "reviewed_sha": None, "parse_confidence": "low", "items": [],
         "summary": None, "review_state": None, "warning_rows": [], "stances": False,
         "nothing_blocks": False, "brief_summary_bullets": [], "rubber_stamp": [], "evidence_url": None,
+        "counts_shortfall": {},
     }
+    # How many comments the review is spread over, and which of them GitHub
+    # did not return. A legacy (v2) review over one comment's size limit is
+    # split, and its findings sections are the tail of the document — so a
+    # missing page is a review whose 🚨 rows may simply not be here. The
+    # analyzer fails closed on it rather than parsing what happens to exist.
+    review["pages"] = (author_c or {}).get("review_pages") or 1
+    review["pages_missing"] = (author_c or {}).get("review_pages_missing") or []
     review["status"] = status
     review["base_merged"] = base_merged
     review["author_comment_id"] = (author_c or {}).get("id")

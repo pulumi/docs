@@ -137,7 +137,7 @@ REASON_CODES = {
     "risk": "risk tier from the diff shape (typo/minor/standard/major/infra)",
     "scrutiny": "heightened content scrutiny (AI-suspect) — caps at judge",
     "ai-suspect": "which AI-suspect signal fired",
-    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands",
+    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that",
     "label": "the review:* state label; `card-clean`: the label lags a base merge, but the card itself says nothing blocks, so it stands in for review:no-blockers",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card; `judged:<ids>`: every open one has a resolvable judgment, which approving posts as `/resolve` lines",
@@ -725,10 +725,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     actions: list[dict] = []
     stamp_ok = True
 
-    def gate_fail(code: str):
+    # Every stamp gate this row missed, recorded as well as cleared, because
+    # "judge" alone does not say whether a person has to read the PR or
+    # whether it merely has to merge after another one. `chip=False` where
+    # the reason code is already on the row from somewhere else.
+    fails: list[str] = []
+
+    def gate_fail(code: str, *, chip: bool = True):
         nonlocal stamp_ok
         stamp_ok = False
-        if code not in reasons:
+        fails.append(code)
+        if chip and code not in reasons:
             reasons.append(code)
 
     def add_action(a: dict):
@@ -788,8 +795,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if review.get("base_merged"):
         reasons.append("review:base-merged")
     if status != "CURRENT":
-        reasons.append(f"review:{status.lower().replace('_', '-')}")
-        stamp_ok = False
+        gate_fail(f"review:{status.lower().replace('_', '-')}")
     if status == "STALE":
         blocked.append("review:stale")
         add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
@@ -808,6 +814,28 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # No review ran (trivial / frontmatter-only / draft / bot skip);
         # a full one is a side action the approver can ask for.
         add_action({"id": "rerun", "label": "run a full review", "cmd": f"--rerun {n}"})
+    # A review nobody could read whole is not a review, and a row carrying
+    # one must never be a `judge` row: `--force` would then merge over the
+    # findings that never arrived. Two ways to know: GitHub did not return a
+    # page the `k/N` markers promise, or the card's own tally declares more
+    # findings than parsed out of its sections. Both say the same thing --
+    # the findings may not be here -- so the row is blocked and the unblock
+    # is a fresh review, not a judgment call over a body with holes in it.
+    unreadable = []
+    if review.get("pages_missing"):
+        unreadable.append("pages:" + ",".join(str(k) for k in review["pages_missing"]))
+    if review.get("counts_shortfall"):
+        unreadable.append("tally:" + ",".join(sorted(review["counts_shortfall"])))
+    if unreadable:
+        gate_fail("review:unreadable:" + ";".join(unreadable))
+        blocked.append("review:unreadable")
+        add_action({"id": "rerun", "label": "re-run the review", "cmd": f"--rerun {n}"})
+    elif (review.get("surface") or "none") != "none" and review.get("parse_confidence") != "high":
+        # Weaker, and not a blocker: the body parsed into no findings and
+        # nothing contradicts that, but nothing corroborates it either (a v2
+        # card with no tally table; a v3 card with no head sentinel or a
+        # broken REVIEW_STATE). Not stampable, and a person reads it.
+        gate_fail("review:parse-confidence:low")
     blockers = open_blockers(pr)
     warnings = open_warnings(pr)
     label_ok = "review:no-blockers" in labels
@@ -818,7 +846,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         label_ok = True
         reasons.append("label:card-clean")
     if not label_ok:
-        stamp_ok = False
+        gate_fail("label:no-blockers-missing", chip=False)
         if review.get("base_merged") and status == "CURRENT":
             add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
     answered = answered_blockers(pr)
@@ -845,7 +873,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if review.get("stances"):
         reasons.append("stances:present")
         if ctx["strict_stances"]:
-            stamp_ok = False
+            gate_fail("stances:present", chip=False)
 
     # -- merge state
     ms = pr.get("mergeable_state") or "unknown"
@@ -899,7 +927,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     if any(INFRA_SHAPE_RE.match(f["path"]) for f in pr.get("files") or []):
         reasons.append("shape:infra")
         if not ctx["include_infra"]:
-            stamp_ok = False
+            gate_fail("shape:infra", chip=False)
     if (pr.get("changed_lines") or 0) >= cfg.stamp_max_lines:
         gate_fail(f"size:{pr.get('changed_lines')}>={cfg.stamp_max_lines}")
     for f in pr.get("files") or []:
@@ -934,7 +962,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         gating = (code.startswith("cluster:") and ":overlap:" in code) or \
                  (code.startswith(("directional:", "duplicate:")) and not code.endswith(":theirs"))
         if gating:
-            stamp_ok = False
+            gate_fail(code, chip=False)
         if code.startswith("duplicate:") and not code.endswith(":theirs"):
             other = code.split(":")[1].lstrip("#")
             add_action({"id": "close", "label": f"close as duplicate of #{other}", "cmd": f"--close {n} --superseded-by {other}"})
@@ -993,6 +1021,23 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
             add_action({"id": "fix", "label": "apply fixes", "cmd": f"--fix {n}"})
         if (pr.get("preview") or {}).get("pages"):
             add_action({"id": "render", "label": "screenshot the preview", "cmd": f"--render {n}"})
+    # A workflow opened this PR, so no author will ever answer its review:
+    # the send-back is unread and closing it only re-queues the same page on
+    # the next run. The remaining way out is to fix the branch yourself --
+    # which is a session on the branch, not an act.py write -- so it rides
+    # on the row as a handoff instead of a fragment of the composed command.
+    # Only where the fix would survive: dependabot and the generated-docs
+    # regens are rebuilt from source, and a fork head has no push access.
+    open_count = len(unanswered) + len(warnings)
+    pr["handoffs"] = []
+    if not revisable and open_count and act.push_allowed(pr)[0]:
+        pr["handoffs"].append({
+            "id": "handfix", "label": "fix it yourself", "run": f"/address-review {n}",
+            "why": f"{open_count} open finding{'s' if open_count != 1 else ''} and an author who will never read a "
+                   f"review: this hands #{n} to /address-review, which walks the findings with you and pushes the "
+                   f"fixes to the branch. It is a separate, interactive run -- it is not part of the --act command "
+                   f"at the foot of this page, and this page still writes nothing."})
+
     if author_self:
         pr["self_note"] = (f"Your own PR: GitHub takes neither your approval nor your send-back. "
                            f"Run /address-review {n} to answer the review, then the lane team approves.")
@@ -1006,6 +1051,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr["blockers"] = blocked
     pr["is_mine"] = is_mine
     pr["verdict"] = verdict
+    pr["gate_fails"] = fails
     pr["reasons"] = reasons
     pr["actions"] = actions
     pr["route_targets"] = next((a.get("targets") or [] for a in actions if a["id"] == "route"), [])
@@ -1090,6 +1136,23 @@ def cluster_recommendation(c: dict, by: dict[int, dict]) -> dict:
     return {"kind": "chain", "first": first, "next": nxt, "say": say, "cmd": f"--chain {c['id']}"}
 
 
+# A cross-PR gate is not a judgment call: it says this PR has to merge after
+# another one, which is precisely what the chain card does. Every other gate
+# means a person has to read something before approving.
+COLLISION_GATES = ("cluster:", "directional:", "duplicate:")
+
+
+def only_collisions_hold(pr: dict) -> bool:
+    """True when the row cleared every stamp gate except the cross-PR ones.
+    An overlapping member of a cluster is always a `judge` row -- the overlap
+    is itself a gate -- so "is the lead stampable" cannot be read off the
+    verdict; this is the question the Do-next chain card actually asks."""
+    fails = pr.get("gate_fails")
+    if fails is None:                       # a queue analyzed before gate_fails existed
+        return pr.get("verdict") == "stamp"
+    return bool(fails) and all(f.startswith(COLLISION_GATES) for f in fails)
+
+
 def pr_list(nums: list[int], limit: int = 3) -> str:  # noqa: D401
     """`#1`, `#1 and #2`, `#1, #2 and #3`, `#1, #2 and 4 more` — a card names
     the PRs it will act on, because "3 rows" is not something you can check."""
@@ -1111,7 +1174,14 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     can keep the card and the rows in agreement instead of letting a card and
     a contrary row decision both sit lit. A card with no `targets` (a chain,
     a consolidation) `claims` its PRs instead: picking a different decision on
-    one of them puts the card out."""
+    one of them puts the card out.
+
+    Two invariants hold over every card here. It never names a row the board
+    does not render (`visible` is exactly `render_board`'s row set), because
+    a card whose row button is absent can never light. And it never carries
+    an approval that needed a judgment call: the stamp card is the rows that
+    cleared every gate mechanically, and a chain whose lead did not states
+    the fact without a button."""
     cards: list[dict] = []
     by_n = {p["number"]: p for p in prs}
     for c in clusters:
@@ -1120,6 +1190,21 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
             first, nxt = r.get("first"), r.get("next")
             lead = by_n.get(first) or {}
             merges = merges_on_stamp(lead)
+            # The opening never offers an approval that needs reading first.
+            # `--chain` approves the lead with --force, so it is offered only
+            # where the lead cleared every gate but the collision itself --
+            # the thing the chain is for. A lead held up by anything else (an
+            # open ⚠️ row, a judged 🚨, a stale review, a new blog post, a
+            # diff over the cap) states the fact and stops: that decision
+            # belongs on #first's own row, next to the findings behind it.
+            if lead.get("verdict") != "stamp" and not only_collisions_hold(lead):
+                held = [f for f in lead.get("gate_fails") or [] if not f.startswith(COLLISION_GATES)]
+                cards.append({"kind": "chain", "cluster": c["id"], "say": r["say"], "merges": merges,
+                              "does": f"#{first} leads the chain, but it needs a call of its own first "
+                                      f"({', '.join(held[:3]) or lead.get('verdict') or 'judge'}). Decide it on its row "
+                                      f"below; the next run unblocks" + (f" #{nxt}." if nxt else " whatever follows."),
+                              "cmd": None, "claims": [], "targets": {}})
+                continue
             # `--chain C1` is one command act.py runs through the stamp gates
             # (resolves, plan-time blocker check, preflight) before it merges
             # base into the next link, so the card is that command and the
@@ -1199,9 +1284,11 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
                       "cmd": "--stamp " + ",".join(str(n) for n in stamps),
                       "label": "approve the set" if held else "approve & merge the set",
                       "targets": {str(n): f"--stamp {n}" for n in stamps}})
-    # Blocked rows are off the board by default, which would hide the ones
-    # you can actually unstick. Each mechanical unblock gets a card, so the
-    # opening says what is stuck and how many, without unhiding nineteen rows.
+    # Each mechanical unblock gets a card, so the opening says what is stuck
+    # and how many without making you read nineteen blocked rows to find it.
+    # `visible`, not `on_deck`: a row parked under "Waiting on the author"
+    # has no row on the board, and a card that names one can never light,
+    # because the button it would press is not on the page.
     STUCK = {
         "unblock": ("stuck behind a merge conflict",
                     "Merges master into each branch as a merge commit and pushes, so CI re-runs. A conflicted merge is aborted and reported, never resolved blind."),
@@ -1214,7 +1301,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     }
     for kind, (why, does) in STUCK.items():
         rows = {}
-        for p in on_deck:
+        for p in visible:
             if p.get("verdict") != "blocked":
                 continue
             act = next((a for a in p.get("actions") or [] if a["id"] == kind), None)

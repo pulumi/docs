@@ -90,12 +90,29 @@ def _load(name: str, path: Path):
 _DOCS_REVIEW_SCRIPTS = _REPO_ROOT / ".claude" / "commands" / "docs-review" / "scripts"
 _compose = _load("sentinel_compose", _DOCS_REVIEW_SCRIPTS / "compose-review.py")
 _replay = _load("sentinel_replay", _HERE / "replay-mechanical.py")
+_worklist = None
+
+
+def worklist():
+    """review-worklist.py, loaded lazily and once (it execs two large
+    siblings). It owns `PAGE_DELIMITER` / `join_pages`, the one place that
+    knows how a split pinned review is put back together -- so the joining
+    here is that function, never a second copy of it."""
+    global _worklist
+    if _worklist is None:
+        _worklist = _load("sentinel_review_worklist", _DOCS_REVIEW_SCRIPTS / "review-worklist.py")
+    return _worklist
 
 AUTHOR_MARKER = _compose.AUTHOR_MARKER
 BRIEF_MARKER = _compose.BRIEF_MARKER
 FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
 HEAD_MARKER_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD ([0-9a-f]{7,40}) -->")
-LEGACY_MARKER_RE = re.compile(r"<!-- CLAUDE_REVIEW 1/\d+ -->")
+# One page of a legacy (v2) pinned review. Any k, not just 1: a long review
+# is several comments and every one of them is part of it. The marker is the
+# body's FIRST line, which is pinned-comment.sh's own contract
+# (`list_pinned_comments` reads `.body | split("\n") | .[0]`), so a review
+# that merely quotes a marker is not mistaken for one.
+LEGACY_PAGE_RE = re.compile(r"^<!-- CLAUDE_REVIEW (\d+)/(\d+) -->\s*$")
 HISTORY_SHA_RE = re.compile(r"\(([0-9a-f]{7,40})\)")
 STRIP_OPEN = "<!-- SENTINEL_STRIP -->"
 STRIP_CLOSE = "<!-- /SENTINEL_STRIP -->"
@@ -288,12 +305,62 @@ def _find_comment(comments: list[dict], marker: str) -> dict | None:
     return None
 
 
-def _find_legacy_comment(comments: list[dict]) -> dict | None:
+def legacy_pages(comments: list[dict]) -> dict | None:
+    """Every comment of a legacy (v2) pinned review, in page order.
+
+    A v2 review too long for one GitHub comment is split across several,
+    each stamped `<!-- CLAUDE_REVIEW k/N -->` on its first line. Its section
+    tables -- 🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing -- are the
+    tail of the document, so on a split review they are on the *later*
+    pages: reading page 1 alone reports a review with no findings at all.
+
+    Returns `{"pages": [comment, ...], "total": N, "missing": [k, ...]}`, or
+    None when the PR has no legacy review. `missing` is the pages the
+    markers promise and GitHub did not return; a caller that finds it
+    non-empty has an incomplete review and must not treat it as parsed.
+    """
+    pages: dict[int, dict] = {}
+    total = 0
     for c in comments:
         body = c.get("body") or ""
-        if LEGACY_MARKER_RE.search(body) and AUTHOR_MARKER not in body:
-            return c
-    return None
+        # A v3 role card opens with a `1/1` marker of its own, so the role
+        # markers still decide which surface a comment belongs to.
+        if AUTHOR_MARKER in body or BRIEF_MARKER in body:
+            continue
+        m = LEGACY_PAGE_RE.match(body.split("\n", 1)[0])
+        if not m:
+            continue
+        k, n = int(m.group(1)), int(m.group(2))
+        total = max(total, n)
+        pages.setdefault(k, c)   # a duplicate page: the oldest wins, as pinned-comment.sh does
+    if not pages:
+        return None
+    return {"pages": [pages[k] for k in sorted(pages)], "total": total,
+            "missing": [k for k in range(1, total + 1) if k not in pages]}
+
+
+def _find_legacy_comment(comments: list[dict]) -> dict | None:
+    """The legacy (v2) review as one comment: the first page's metadata,
+    carrying *every* page's body joined in page order.
+
+    Every caller reads `.get("body")` and means "the review". Returning page
+    1 alone made a long v2 review look findings-free, which on pulumi/docs
+    #21490 turned a `blocked` row into a `judge` row wearing an "approve
+    as-is & merge" button, and passed this file's own G2 findings-answered
+    gate as "legacy review clean". The whole point of "an unanswered 🚨 is
+    blocked, never --force-able" is to stop exactly that.
+
+    `review_pages` and `review_pages_missing` ride along on the returned
+    dict so a caller can fail closed when GitHub did not return a page the
+    markers promise, rather than parse what happens to be there.
+    """
+    found = legacy_pages(comments)
+    if not found:
+        return None
+    wl = worklist()
+    body = wl.join_pages(wl.PAGE_DELIMITER.join((c.get("body") or "") for c in found["pages"]))
+    return {**found["pages"][0], "body": body,
+            "review_pages": found["total"], "review_pages_missing": found["missing"]}
 
 
 def _body_matches_head(body: str, head_sha: str) -> bool:
@@ -717,12 +784,27 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "every finding answered"))
     elif legacy:
-        try:
-            vp = _load("sentinel_validate_pinned", _DOCS_REVIEW_SCRIPTS / "validate-pinned.py")
-            outstanding = len(vp.extract_bucket_bullets(legacy.get("body") or "", "🚨 Outstanding"))
-        except Exception as exc:  # noqa: BLE001
-            gates.append(Gate("G2 findings-answered", "error", f"legacy comment unparsable: {exc}"))
-            outstanding = None
+        outstanding = None
+        missing = legacy.get("review_pages_missing") or []
+        if missing:
+            # The review is split across `review_pages` comments and GitHub
+            # did not return all of them. Its findings sections are the tail
+            # of the document, so what is missing is exactly where the 🚨
+            # rows live: counting zero here would pass the gate on a review
+            # nobody has read.
+            gates.append(Gate(
+                "G2 findings-answered", "error",
+                f"the legacy review is {legacy['review_pages']} comments and "
+                f"page(s) {', '.join(str(k) for k in missing)} could not be read — "
+                "re-run the review (`@claude #new-review`) rather than merge over an unread one.",
+            ))
+        else:
+            try:
+                vp = _load("sentinel_validate_pinned", _DOCS_REVIEW_SCRIPTS / "validate-pinned.py")
+                outstanding = len(vp.extract_bucket_bullets(legacy.get("body") or "", "🚨 Outstanding"))
+            except Exception as exc:  # noqa: BLE001
+                gates.append(Gate("G2 findings-answered", "error", f"legacy comment unparsable: {exc}"))
+                outstanding = None
         if outstanding is not None:
             if outstanding > 0:
                 gates.append(Gate(

@@ -106,6 +106,13 @@ CONTENT_DATA_PREFIXES = (
 )
 
 
+# Directories under scripts/ that hold the PR/content review pipelines: they
+# read PRs and write comments, and are never part of building or deploying
+# the site. Kept beside classify_path() so routing and triage can never
+# disagree about them, which is the whole reason classify_path is shared.
+REVIEW_PIPELINE_DIRS = ("review-v3", "review-admin", "content-review", "blog-review")
+
+
 def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
     # programs territory (the latter would otherwise fall to infra).
@@ -123,6 +130,18 @@ def classify_path(path: str) -> str | None:
             return domain
     if path.startswith(".github/workflows/"):
         return "domain:infra"
+    # The agent/review pipelines under scripts/ are repo plumbing, not the
+    # build: nothing here is read by `make build`, by a Hugo template, or by
+    # the deploy. They fall through to `other`, which routes to the same
+    # `tools` approver as `infra` and — the point — carries no
+    # `staging_evidence: required`. A change to analyze.py cannot alter the
+    # deployed site, so deploying the site to pulumi-test.io demonstrated
+    # nothing about it while costing ~9 minutes of the shared staging stack
+    # and a `staging/pulumi-test-io` status on every such PR. Everything
+    # else under scripts/ (lint, search, meta-images, redirects, the fetch
+    # and generate scripts) does feed the build and stays infra.
+    if any(path.startswith(f"scripts/{d}/") for d in REVIEW_PIPELINE_DIRS):
+        return None
     if path.startswith("scripts/") or path.startswith("infrastructure/"):
         return "domain:infra"
     if path in ("Makefile", "package.json", "webpack.config.js"):
