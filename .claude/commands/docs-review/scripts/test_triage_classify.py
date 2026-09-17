@@ -143,15 +143,16 @@ def test_domain_routing() -> None:
     check(domains(["Makefile"]) == ["domain:infra"], "Makefile routes to infra")
 
     # The review pipelines under scripts/ are repo plumbing, not the build.
-    # They fall through to `other`: same `tools` approver as infra, but no
-    # `staging_evidence: required` — deploying the site demonstrates nothing
-    # about analyze.py, and it was costing ~9 minutes of the shared staging
-    # stack and a staging status on every pr-review tooling PR.
+    # They fall through to `other`: same `tools` approver as infra, but a
+    # mechanical change there needs no approver at all. (This carve-out was
+    # originally about the staging gate; that now keys on
+    # `staging_evidence.paths` in .github/review-routing.yml, not on the
+    # domain, and is asserted in scripts/review-v3/test_routing.py.)
     for d in ("review-v3", "review-admin", "content-review", "blog-review"):
         check(domains([f"scripts/{d}/thing.py"]) == ["domain:other"],
               f"scripts/{d} is repo plumbing, not infra")
     # The narrowing is per path, not per PR: one workflow in the diff and the
-    # PR is infra again, staging run and all.
+    # PR is infra again.
     check(domains(["scripts/review-v3/act.py", ".github/workflows/x.yml"]) == ["domain:infra"],
           "a workflow alongside the pipeline still routes to infra")
     # Only those four. Everything else under scripts/ feeds the build.

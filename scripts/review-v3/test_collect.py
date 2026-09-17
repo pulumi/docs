@@ -422,8 +422,9 @@ def test_routing_teams_asks_github_for_every_configured_team():
             "schema: 1\nteams: {docs-guild: pulumi/docs-guild, marketing: pulumi/docs-marketing-review, tools: pulumi/docs-tools}\n"
             "bots: []\nmatrix:\n  docs: {mechanical: none, substantive: docs-guild}\n  blog: {mechanical: none, substantive: marketing}\n"
             "  website: {mechanical: none, substantive: marketing}\n  programs: {mechanical: none, substantive: docs-guild}\n"
-            "  infra: {mechanical: tools, substantive: tools, staging_evidence: required}\n  frontend: {mechanical: none, substantive: marketing}\n"
-            "  other: {mechanical: none, substantive: tools}\nclaims_overlay: {add: marketing}\nexternal_contributors: {skip_gates: []}\n"
+            "  infra: {mechanical: tools, substantive: tools}\n  frontend: {mechanical: none, substantive: marketing}\n"
+            "  other: {mechanical: none, substantive: tools}\nstaging_evidence: {paths: [infrastructure/]}\n"
+            "claims_overlay: {add: marketing}\nexternal_contributors: {skip_gates: []}\n"
             "sla:\n  tools: {business_days: 1, escalate_to: a}\n  docs-guild: {business_days: 3, escalate_to: b}\n  marketing: {business_days: 3, escalate_to: c}\n"
             "author_staleness: {warn_days: 14, close_days: 21}\nwaive: {label: review:waived, log_prefix: x/}\nnot_governed: {authors: [], author_label_pairs: []}\n")
         _write(root, "GET", "orgs/pulumi/teams/docs-guild", None, {"slug": "docs-guild"})

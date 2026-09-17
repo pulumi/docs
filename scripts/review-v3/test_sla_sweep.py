@@ -52,10 +52,11 @@ RAW_CONFIG = {
         "blog": {"mechanical": "none", "substantive": "marketing"},
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
-        "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
+        "infra": {"mechanical": "tools", "substantive": "tools"},
         "frontend": {"mechanical": "none", "substantive": "marketing"},
         "other": {"mechanical": "none", "substantive": "tools"},
     },
+    "staging_evidence": {"paths": ["infrastructure/"]},
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
     "sla": {

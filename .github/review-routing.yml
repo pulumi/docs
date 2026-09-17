@@ -78,23 +78,72 @@
 # dedupes to one approver instead of stacking a second.
 #
 # The review pipelines are deliberately `other` rather than `infra`: they
-# read PRs and write comments, nothing in them is read by `make build` or by
-# the deploy, so the staging run `infra` requires would demonstrate nothing
-# about them while costing ~9 minutes of the shared staging stack on every
-# such PR. Same `tools` approver either way — only the staging evidence
-# differs. One workflow or build script in the same diff and the PR is
-# `infra` again, staging run and all; the narrowing is per path, not per PR.
+# read PRs and write comments, and nothing in them is read by `make build` or
+# by the deploy. That cut was originally made to get them off the staging
+# gate, which is no longer what it does — staging keys on
+# `staging_evidence.paths` now, and none of those directories are on it
+# either way. What the cut still buys is the `mechanical` cell: a one-line
+# tweak to `analyze.py` needs no approver, where the same tweak to a build
+# script needs `tools`. Both are `tools` when substantive.
 #
-# A matrix cell may also carry `staging_evidence: required`, which the
-# Sentinel enforces independently of which role is required — currently only
-# `infra` sets it, because an infrastructure change (workflows, build
-# scripts, Makefile, build config) needs a demonstrated staging run before
-# it merges, on top of whichever role approves it. The Sentinel takes either
-# of two witnesses for that run: a green `staging/pulumi-test-io` commit
-# status, or a successful `testing-build-and-deploy.yml` run at the head
-# SHA. The run record is the authoritative one — the status is a *report* of
-# the deploy and has twice failed to be written — so nothing requires the
-# status to appear, and nothing writes a pending one (see the note in
+# A matrix cell carries ONLY those two change-type keys. Staging evidence is
+# no longer one of them — see STAGING EVIDENCE below for why it moved and
+# what it keys on instead.
+#
+# -----------------------------------------------------------------------------
+# STAGING EVIDENCE
+# -----------------------------------------------------------------------------
+# `staging_evidence.paths` is the closed list of paths that require a
+# demonstrated staging deploy (Sentinel gate G4) before the PR can merge. It
+# is REQUIRED: deleting it is a validation error, not a silent "nothing needs
+# staging".
+#
+# This keys on PATH, not on subject, and that is the whole point. It used to
+# be a `staging_evidence: required` cell on the `infra` row of the matrix,
+# which welded two unrelated questions together: *who reviews this* (a domain
+# question) and *what has to be demonstrated about it* (a blast-radius
+# question). Because the only lever was the domain, narrowing the staging
+# requirement meant lying about a path's domain — which is exactly what the
+# previous narrowing did, routing `scripts/{review-v3,content-review,…}/` to
+# `other` so they would stop asking for a site deploy, even though `tools`
+# owns them either way. Two more rounds of that and `classify_path` stops
+# describing what files are.
+#
+# So: domain still decides the approver, and this list decides the staging
+# run. `scripts/redirects/*.txt` is the case that forced it — it is
+# `domain:infra` (tools own redirects, correctly) but a redirect line cannot
+# change what the deploy *does*. The staging run proved only that the file
+# parsed, at ~9 minutes of a shared, lock-contended stack, and proved nothing
+# about the thing that was actually wrong with those lines on #21698: they
+# pointed at `/registry`, which is proxied to another distribution, so they
+# could never fire no matter how green the deploy went.
+#
+# The bar for being on this list: could changing this path break or alter the
+# deploy itself? That means the Pulumi program, the build entry points, the
+# scripts `make ci_push` actually executes, and the two workflows that run
+# it. NOT data the deploy merely reads, and not the ~50 other scripts and ~60
+# other workflows that never run during one.
+#
+# Patterns are matched against the PR's changed paths, repo-root-relative:
+#
+#   - a trailing `/` means that whole subtree (`infrastructure/`)
+#   - `*` matches within ONE path segment and never crosses `/`, so
+#     `scripts/*.sh` does not match `scripts/redirects/foo.sh`
+#   - anything else is an exact path
+#
+# IF YOU ADD A STEP TO THE DEPLOY, ADD IT HERE. The list is deliberately
+# enumerated rather than a `scripts/` wildcard: of the 70 files at the top of
+# `scripts/`, about a dozen run during a deploy, and a wildcard would put
+# `lint.sh`, `serve.sh`, and every `fetch-*` script back on the gate. The
+# chain below is `ci-push.sh` and everything it sources or invokes; the
+# pipeline's own tests assert that it resolves the way this comment says.
+#
+# The Sentinel takes either of two witnesses for the run: a green
+# `staging/pulumi-test-io` commit status, or a successful
+# `testing-build-and-deploy.yml` run at the head SHA. The run record is the
+# authoritative one — the status is a *report* of the deploy and has twice
+# failed to be written — so nothing requires the status to appear, and
+# nothing writes a pending one (see the note in
 # `scripts/review-v3/staging-deploy.sh`).
 #
 # -----------------------------------------------------------------------------
@@ -188,9 +237,45 @@ matrix: # subject x change type -> role or 'none'
   blog: { mechanical: none, substantive: blog }
   website: { mechanical: none, substantive: marketing }
   programs: { mechanical: none, substantive: docs-guild }
-  infra: { mechanical: tools, substantive: tools, staging_evidence: required }
+  infra: { mechanical: tools, substantive: tools }
   frontend: { mechanical: none, substantive: marketing }
   other: { mechanical: none, substantive: tools }
+
+staging_evidence:
+  paths:
+    # The Pulumi program that provisions the stack the deploy updates.
+    - infrastructure/
+    # Build entry points and the dependency manifest `make ensure` installs.
+    - Makefile
+    - package.json
+    - webpack.*.js
+    # `make ci_push` and everything it sources or invokes, in call order.
+    - scripts/ci-push.sh
+    - scripts/ci-login.sh
+    - scripts/common.sh
+    - scripts/ensure.sh
+    - scripts/prettier.sh
+    - scripts/build-site.sh
+    - scripts/generate-meta-images.mjs
+    - scripts/inline-critical-css.js
+    - scripts/sync-and-test-bucket.sh
+    - scripts/translate-redirects.js
+    - scripts/run-browser-tests.sh
+    - scripts/bucket-tagging.json
+    - scripts/generate-search-index.sh
+    - scripts/await-in-progress.js
+    - scripts/run-pulumi.sh
+    - scripts/make-s3-redirects.sh
+    - scripts/make-s3-redirects.js
+    # Subtrees those scripts execute.
+    - scripts/content/        # build-site.sh -> generate-docs-content.js
+    - scripts/cors/           # sync-and-test-bucket.sh -> cors.json
+    - scripts/meta-images/    # generate-meta-images.mjs imports
+    - scripts/search/         # generate-search-index.sh -> search/main.js
+    - scripts/versioned-docs/ # build-site.sh -> inject-live-sdk-selectors.sh
+    # The two workflows that run `make ci_push`.
+    - .github/workflows/build-and-deploy.yml
+    - .github/workflows/testing-build-and-deploy.yml
 
 claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
 

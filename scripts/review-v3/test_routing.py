@@ -85,10 +85,39 @@ def test_matrix_cell_unknown_key_is_error(base_config):
     assert any("matrix.docs: unknown key 'surprise'" in e for e in errors)
 
 
-def test_matrix_cell_bad_staging_evidence_value_is_error(base_config):
-    base_config["matrix"]["infra"]["staging_evidence"] = "sometimes"
+def test_retired_matrix_staging_evidence_key_is_error(base_config):
+    """`staging_evidence` moved out of the matrix and onto its own
+    path-keyed section. A config that still carries the cell must fail
+    closed — silently ignoring it would drop gate G4 for every path."""
+    base_config["matrix"]["infra"]["staging_evidence"] = "required"
     _, errors, _ = routing.validate_raw(base_config)
-    assert any("staging_evidence must be one of" in e for e in errors)
+    assert any("matrix.infra: unknown key 'staging_evidence'" in e for e in errors)
+
+
+def test_staging_evidence_section_is_required(base_config):
+    del base_config["staging_evidence"]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("staging_evidence must be a mapping" in e for e in errors)
+
+
+def test_staging_evidence_unknown_key_is_error(base_config):
+    base_config["staging_evidence"]["surprise"] = True
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("staging_evidence: unknown key 'surprise'" in e for e in errors)
+
+
+@pytest.mark.parametrize("paths", [[], "infrastructure/", None, {}])
+def test_staging_evidence_paths_must_be_a_nonempty_list(base_config, paths):
+    base_config["staging_evidence"]["paths"] = paths
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("staging_evidence.paths must be a non-empty list" in e for e in errors)
+
+
+def test_staging_evidence_paths_rejects_blank_and_absolute(base_config):
+    base_config["staging_evidence"]["paths"] = ["infrastructure/", "  ", "/Makefile"]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any("staging_evidence.paths[1] must be a non-empty string" in e for e in errors)
+    assert any("staging_evidence.paths[2] must be repo-root-relative" in e for e in errors)
 
 
 def test_missing_sla_entry_for_matrix_role_is_error(base_config):
@@ -263,7 +292,8 @@ def test_other_routes_to_tools_and_dedupes_with_infra(config):
         mechanical=False, claims=False, config=config,
     )
     assert r2.roles == {"tools"}
-    assert r2.staging_evidence_required is True
+    # subject:infra, but an arbitrary workflow is not on staging_evidence.paths.
+    assert r2.staging_evidence_required is False
 
 
 def test_content_data_files_route_with_their_content(config):
@@ -303,21 +333,23 @@ def test_mixed_docs_blog_substantive_both_roles(config):
     }
 
 
-def test_any_infra_file_requires_tools_and_staging_evidence(config):
+def test_any_infra_file_requires_tools(config):
     r = routing.resolve_lanes(["scripts/build.py"], mechanical=False, claims=False, config=config)
     assert r.roles == {"tools"}
-    assert r.staging_evidence_required is True
+    # subject:infra decides the approver. It does not decide staging.
+    assert r.staging_evidence_required is False
 
 
-def test_infra_mixed_with_docs_still_requires_staging_evidence(config):
+def test_one_staging_path_mixed_with_docs_still_requires_staging_evidence(config):
     r = routing.resolve_lanes(
-        ["scripts/build.py", "content/docs/foo.md"],
+        ["scripts/run-pulumi.sh", "content/docs/foo.md"],
         mechanical=False,
         claims=False,
         config=config,
     )
     assert r.roles == {"tools", "docs-guild"}
     assert r.staging_evidence_required is True
+    assert any("staging evidence required: scripts/run-pulumi.sh" in x for x in r.reasons)
 
 
 def test_infra_mechanical_still_requires_tools(config):
@@ -325,7 +357,56 @@ def test_infra_mechanical_still_requires_tools(config):
     # for a mechanical change — the matrix says so explicitly.
     r = routing.resolve_lanes([".github/workflows/ci.yml"], mechanical=True, claims=False, config=config)
     assert r.roles == {"tools"}
-    assert r.staging_evidence_required is True
+
+
+def test_staging_evidence_is_independent_of_change_type(config):
+    """G4 asks "could this alter the deploy", which a one-character diff
+    answers the same way a rewrite does. Mechanical must not buy a pass."""
+    for mechanical in (True, False):
+        r = routing.resolve_lanes(
+            ["infrastructure/index.ts"], mechanical=mechanical, claims=False, config=config
+        )
+        assert r.staging_evidence_required is True, mechanical
+
+
+def test_staging_evidence_reason_is_recorded_either_way(config):
+    hit = routing.resolve_lanes(["Makefile"], mechanical=False, claims=False, config=config)
+    assert any("staging evidence required: Makefile" in x for x in hit.reasons)
+    miss = routing.resolve_lanes(
+        ["content/docs/foo.md"], mechanical=False, claims=False, config=config
+    )
+    assert any("no changed path requires staging evidence" in x for x in miss.reasons)
+
+
+# ---- the path matcher ------------------------------------------------------
+
+
+@pytest.mark.parametrize("pattern,path,want", [
+    # A trailing slash is the whole subtree, however deep.
+    ("infrastructure/", "infrastructure/index.ts", True),
+    ("infrastructure/", "infrastructure/a/b/c.ts", True),
+    # ...but not the bare directory name, and not a sibling with a prefix.
+    ("infrastructure/", "infrastructure", False),
+    ("infrastructure/", "infrastructure-old/index.ts", False),
+    # An exact path is exact.
+    ("Makefile", "Makefile", True),
+    ("Makefile", "Makefile.local", False),
+    ("Makefile", "theme/Makefile", False),
+    # `*` stays inside one segment — the property fnmatch does NOT have, and
+    # the reason this matcher is hand-rolled.
+    ("scripts/*.sh", "scripts/ci-push.sh", True),
+    ("scripts/*.sh", "scripts/redirects/thing.sh", False),
+    ("webpack.*.js", "webpack.config.js", True),
+    ("webpack.*.js", "webpack.config.prod.js", True),
+    ("webpack.*.js", "theme/webpack.config.js", False),
+])
+def test_pattern_matcher_segment_semantics(pattern, path, want):
+    assert bool(routing._pattern_to_regex(pattern).match(path)) is want
+
+
+def test_patterns_are_compiled_once_per_config(config):
+    first = routing.staging_evidence_patterns(config)
+    assert routing.staging_evidence_patterns(config) is first
 
 
 def test_claims_overlay_stacks_and_forces_substantive(config):
@@ -395,37 +476,102 @@ def test_classify_path_is_the_real_triage_function():
     assert routing.classify_path("some/unknown/path.txt") is None
 
 
+def _real_lanes(paths):
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    return routing.resolve_lanes(paths, False, [], cfg)
+
+
 def test_the_review_pipelines_need_no_staging_run():
     """A staging deploy demonstrates that the site still builds. Nothing in
     `scripts/review-v3/` and its sibling pipelines is read by the build, so
-    the deploy demonstrated nothing about them — while costing ~9 minutes of
-    the shared staging stack and a `staging/pulumi-test-io` status on every
-    pr-review tooling PR. They route to `other`: same `tools` approver as
-    `infra`, no staging evidence.
+    the deploy demonstrated nothing about them.
 
-    The narrowing is per path, not per PR: one workflow or build script in
-    the same diff and the whole PR is `infra` again."""
-    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
-
-    def lanes(paths):
-        return routing.resolve_lanes(paths, False, [], cfg)
-
+    They are `subject:other` (which buys them a free `mechanical` cell) and
+    they are absent from `staging_evidence.paths` (which is what actually
+    keeps them off gate G4 now)."""
     for d in ("review-v3", "review-admin", "content-review", "blog-review"):
-        r = lanes([f"scripts/{d}/thing.py"])
+        r = _real_lanes([f"scripts/{d}/thing.py"])
         assert set(r.subjects.values()) == {"other"}, (d, r.subjects)
         assert r.staging_evidence_required is False, d
         assert "tools" in r.roles, (d, r.roles)
 
-    # Everything else under scripts/ feeds the build and keeps its deploy.
-    for path in ("scripts/lint/lint-markdown.js", "scripts/search/update-search-index.js",
-                 "scripts/meta-images/blog.mjs", "Makefile", "infrastructure/index.ts",
-                 ".github/workflows/x.yml"):
-        assert lanes([path]).staging_evidence_required is True, path
 
-    # A mixed diff is infra, staging run and all.
-    mixed = lanes(["scripts/review-v3/act.py", ".github/workflows/staging-status.yml"])
-    assert mixed.staging_evidence_required is True and "infra" in set(mixed.subjects.values())
+def test_real_config_staging_gate_covers_the_deploy_and_nothing_else():
+    """The live `staging_evidence.paths` list, asserted against the paths it
+    is meant to catch and the ones it is meant to let through.
 
-    # The approver does not change either way, so this narrows the evidence
-    # requirement and nothing else.
-    assert set(lanes(["scripts/review-v3/act.py"]).roles) == set(lanes(["Makefile"]).roles) == {"tools"}
+    The let-through half is the point of the section. `scripts/redirects/`
+    is the case that forced it (PR #21698): `domain:infra`, so it used to
+    demand a ~9-minute deploy of a shared, lock-contended stack to prove
+    that a two-line redirect data file parsed."""
+    requires = (
+        # The Pulumi program and the build entry points.
+        "infrastructure/index.ts",
+        "infrastructure/Pulumi.www-testing.yaml",
+        "Makefile",
+        "package.json",
+        # The scripts `make ci_push` executes, and the subtrees they run.
+        "scripts/ci-push.sh",
+        "scripts/build-site.sh",
+        "scripts/run-pulumi.sh",
+        "scripts/sync-and-test-bucket.sh",
+        "scripts/make-s3-redirects.js",
+        "scripts/await-in-progress.js",
+        "scripts/search/main.js",
+        "scripts/meta-images/render.mjs",
+        "scripts/content/generate-docs-content.js",
+        "scripts/versioned-docs/inject-live-sdk-selectors.sh",
+        # The two workflows that run it.
+        ".github/workflows/build-and-deploy.yml",
+        ".github/workflows/testing-build-and-deploy.yml",
+    )
+    for path in requires:
+        assert _real_lanes([path]).staging_evidence_required is True, path
+
+    exempt = (
+        # Data the deploy reads but cannot be broken by. The #21698 case.
+        "scripts/redirects/general-broken-links-redirects.txt",
+        # Tooling that never runs during a deploy.
+        "scripts/review-v3/sentinel.py",
+        "scripts/lint/lint-markdown.js",
+        "scripts/link-checker/check.js",
+        "scripts/social/post.js",
+        "scripts/serve.sh",
+        "scripts/fetch-github-stars.js",
+        # Workflows that are not the deploy.
+        ".github/workflows/blog-review-index.yml",
+        ".github/workflows/review-sentinel.yml",
+        ".github/workflows/check-links.yml",
+        # Content, templates, styles.
+        "content/blog/foo/index.md",
+        "layouts/partials/foo.html",
+        "theme/src/scss/main.scss",
+    )
+    for path in exempt:
+        assert _real_lanes([path]).staging_evidence_required is False, path
+
+
+def test_staging_gate_is_per_path_not_per_pr():
+    """One deploy-touching path in the diff arms the gate for the whole PR,
+    and the approver is unchanged either way — this section narrows what
+    must be demonstrated, not who signs off."""
+    mixed = _real_lanes(["scripts/review-v3/act.py", "scripts/run-pulumi.sh"])
+    assert mixed.staging_evidence_required is True
+
+    assert (set(_real_lanes(["scripts/review-v3/act.py"]).roles)
+            == set(_real_lanes(["Makefile"]).roles)
+            == {"tools"})
+
+
+def test_pr_21698_needs_no_staging_run():
+    """The regression this section exists for, verbatim: two blog posts and
+    one redirect data file went red on G4 for a staging deploy that raced
+    another run for the shared stack and 409'd."""
+    r = _real_lanes([
+        "content/blog/azure-v6-release/index.md",
+        "content/blog/why-azure-resource-manager-templates-suck-for-deployments/index.md",
+        "scripts/redirects/general-broken-links-redirects.txt",
+    ])
+    assert r.staging_evidence_required is False
+    # Still reviewed by both lanes; only the deploy requirement is gone.
+    assert r.roles == {"blog", "tools"}

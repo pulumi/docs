@@ -61,14 +61,18 @@ classify_path = _triage_classify.classify_path
 SUBJECTS = frozenset({"docs", "blog", "website", "programs", "infra", "frontend", "other"})
 
 CHANGE_TYPES = ("mechanical", "substantive")
-MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive", "staging_evidence"})
-STAGING_EVIDENCE_VALUES = frozenset({"required"})
+# `staging_evidence` was a matrix cell key until it moved to its own
+# path-keyed top-level section; it is NOT accepted here any more, so a config
+# that still carries it fails closed and loud rather than silently dropping
+# the gate. See STAGING EVIDENCE in the yaml header.
+MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 
 TOP_LEVEL_KEYS = frozenset({
-    "schema", "teams", "bots", "matrix", "claims_overlay",
+    "schema", "teams", "bots", "matrix", "staging_evidence", "claims_overlay",
     "external_contributors", "sla", "author_staleness", "waive",
     "not_governed", "auto_approve", "link_only",
 })
+STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
@@ -110,6 +114,7 @@ class Config:
     teams: dict[str, str]
     bots: list[str]
     matrix: dict[str, dict[str, str]]
+    staging_evidence: dict
     claims_overlay: dict
     external_contributors: dict
     sla: dict[str, dict]
@@ -225,11 +230,33 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     )
                     continue
                 matrix_roles_used.add(role)
-            if "staging_evidence" in cell and cell["staging_evidence"] not in STAGING_EVIDENCE_VALUES:
-                errors.append(
-                    f"matrix.{subject}.staging_evidence must be one of "
-                    f"{sorted(STAGING_EVIDENCE_VALUES)}, got {cell['staging_evidence']!r}"
-                )
+
+    # ---- staging_evidence ---------------------------------------------
+    # Required, not optional: an absent section would read as "nothing needs
+    # a staging run", which is the one wrong answer a merge gate must never
+    # give silently.
+    staging_evidence = raw.get("staging_evidence")
+    if not isinstance(staging_evidence, dict):
+        errors.append("staging_evidence must be a mapping with a 'paths' key")
+        staging_evidence = {"paths": []}
+    else:
+        _check_unknown_keys(staging_evidence, STAGING_EVIDENCE_KEYS, "staging_evidence", errors)
+        paths = staging_evidence.get("paths")
+        if not isinstance(paths, list) or not paths:
+            errors.append("staging_evidence.paths must be a non-empty list of path patterns")
+            staging_evidence = {"paths": []}
+        else:
+            for i, pattern in enumerate(paths):
+                if not _is_nonempty_str(pattern):
+                    errors.append(
+                        f"staging_evidence.paths[{i}] must be a non-empty string, "
+                        f"got {pattern!r}"
+                    )
+                elif pattern.startswith("/"):
+                    errors.append(
+                        f"staging_evidence.paths[{i}] must be repo-root-relative "
+                        f"with no leading slash, got {pattern!r}"
+                    )
 
     # ---- claims_overlay -----------------------------------------------
     claims_overlay = raw.get("claims_overlay")
@@ -385,6 +412,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         teams=teams,
         bots=bots,
         matrix=matrix,
+        staging_evidence=staging_evidence,
         claims_overlay=claims_overlay,
         external_contributors=external_contributors,
         sla=sla,
@@ -419,6 +447,42 @@ def load_config(path: Path | str) -> Config:
     return config
 
 
+def _pattern_to_regex(pattern: str) -> re.Pattern:
+    """Compile one `staging_evidence.paths` pattern.
+
+    Deliberately not `fnmatch`: fnmatch's `*` crosses `/`, so `scripts/*`
+    there would match `scripts/redirects/general-broken-links-redirects.txt`
+    — the exact path this section exists to exclude. Here `*` matches within
+    one segment only, and a trailing `/` means the whole subtree.
+    """
+    if pattern.endswith("/"):
+        return re.compile(re.escape(pattern) + r".+")
+    body = "".join(r"[^/]*" if part == "*" else re.escape(part)
+                   for part in re.split(r"(\*)", pattern))
+    return re.compile(body + r"\Z")
+
+
+_STAGING_REGEX_CACHE: dict[tuple[str, ...], list[re.Pattern]] = {}
+
+
+def staging_evidence_patterns(config: Config) -> list[re.Pattern]:
+    """Compiled `staging_evidence.paths`, memoized per pattern tuple."""
+    key = tuple(config.staging_evidence.get("paths") or ())
+    if key not in _STAGING_REGEX_CACHE:
+        _STAGING_REGEX_CACHE[key] = [_pattern_to_regex(pat) for pat in key]
+    return _STAGING_REGEX_CACHE[key]
+
+
+def requires_staging_evidence(config: Config, path: str) -> bool:
+    """Does changing `path` require a demonstrated staging deploy (gate G4)?
+
+    Keyed on the path alone, independent of which role reviews it — see
+    STAGING EVIDENCE in `.github/review-routing.yml` for why those two
+    questions are separate.
+    """
+    return any(rx.match(path) for rx in staging_evidence_patterns(config))
+
+
 def resolve_lanes(
     changed_paths: list[str], mechanical: bool, claims: bool, config: Config, link_only: bool = False
 ) -> Resolution:
@@ -448,7 +512,19 @@ def resolve_lanes(
     reasons.append(f"change type: {change_type}")
 
     roles: set[str] = set()
-    staging_evidence_required = False
+
+    # Staging evidence is decided per changed path against
+    # `staging_evidence.paths`, NOT by the subject's matrix row: the approver
+    # and the blast radius are different questions. See STAGING EVIDENCE in
+    # the yaml header.
+    staging_paths = [p for p in changed_paths if requires_staging_evidence(config, p)]
+    staging_evidence_required = bool(staging_paths)
+    if staging_paths:
+        reasons.append(
+            "staging evidence required: " + ", ".join(sorted(staging_paths))
+        )
+    else:
+        reasons.append("no changed path requires staging evidence")
 
     for subject in sorted(set(subjects.values())):
         cell = config.matrix[subject]
@@ -458,9 +534,6 @@ def resolve_lanes(
             reasons.append(f"subject:{subject}/{change_type} -> role:{role}")
         else:
             reasons.append(f"subject:{subject}/{change_type} -> none")
-        if cell.get("staging_evidence") == "required":
-            staging_evidence_required = True
-            reasons.append(f"subject:{subject} requires staging evidence")
 
     if claims:
         overlay_role = config.claims_overlay["add"]
@@ -522,10 +595,11 @@ _CANNED_CONFIG = {
         "blog": {"mechanical": "none", "substantive": "marketing"},
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
-        "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
+        "infra": {"mechanical": "tools", "substantive": "tools"},
         "frontend": {"mechanical": "none", "substantive": "marketing"},
         "other": {"mechanical": "none", "substantive": "tools"},
     },
+    "staging_evidence": {"paths": ["infrastructure/", "Makefile", "scripts/run-pulumi.sh"]},
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
     "sla": {
@@ -593,7 +667,17 @@ def self_test() -> int:
         mechanical=False, claims=False, config=config,
     )
     check("mixed docs+infra -> tools + docs-guild", r.roles == {"docs-guild", "tools"})
-    check("infra file -> staging evidence required", r.staging_evidence_required is True)
+    check("subject:infra alone does NOT imply staging evidence",
+          r.staging_evidence_required is False)
+
+    r = resolve_lanes(
+        ["content/docs/foo.md", "scripts/run-pulumi.sh"],
+        mechanical=False, claims=False, config=config,
+    )
+    check("a listed deploy script -> staging evidence required",
+          r.staging_evidence_required is True)
+    r = resolve_lanes(["infrastructure/index.ts"], mechanical=False, claims=False, config=config)
+    check("a subtree pattern matches below itself", r.staging_evidence_required is True)
 
     r = resolve_lanes(["content/docs/foo.md"], mechanical=True, claims=True, config=config)
     check("claims overlay adds marketing", "marketing" in r.roles)
@@ -611,6 +695,62 @@ def self_test() -> int:
     r = resolve_lanes([".github/workflows/ci.yml", ".claude/commands/x/SKILL.md"],
                       mechanical=False, claims=False, config=config)
     check("infra + other dedupes to tools alone", r.roles == {"tools"})
+
+    # ---- staging evidence keys on path, not subject --------------------
+    # The matcher's whole contract in three cases: `*` must not cross `/`,
+    # a trailing `/` must reach the whole subtree, and an unlisted path in a
+    # listed directory must stay off the gate.
+    check("`scripts/*` style pattern does not cross a path segment",
+          not requires_staging_evidence(config, "scripts/redirects/general.txt"))
+    check("exact-path pattern matches exactly",
+          requires_staging_evidence(config, "scripts/run-pulumi.sh")
+          and not requires_staging_evidence(config, "scripts/run-pulumi.sh.bak"))
+    check("subtree pattern does not match the bare directory name",
+          not requires_staging_evidence(config, "infrastructure"))
+
+    real_paths = {
+        # PR #21698: domain:infra, but a redirect line cannot change the deploy.
+        "scripts/redirects/general-broken-links-redirects.txt": False,
+        "scripts/review-v3/sentinel.py": False,
+        "scripts/lint/lint-markdown.js": False,
+        ".github/workflows/blog-review-index.yml": False,
+        "content/blog/foo/index.md": False,
+        "infrastructure/index.ts": True,
+        "Makefile": True,
+        "scripts/ci-push.sh": True,
+        "scripts/search/main.js": True,
+        ".github/workflows/testing-build-and-deploy.yml": True,
+    }
+    try:
+        for path, want in real_paths.items():
+            check(f"real config: staging {'required' if want else 'not required'} for {path}",
+                  requires_staging_evidence(real, path) is want)
+    except NameError:  # real config failed to load; already reported above
+        pass
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    del bad["staging_evidence"]
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence is required, not optional",
+          any("staging_evidence must be a mapping" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["staging_evidence"] = {"paths": []}
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence.paths must be non-empty",
+          any("staging_evidence.paths must be a non-empty list" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["staging_evidence"] = {"paths": ["/infrastructure/"]}
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence.paths rejects a leading slash",
+          any("repo-root-relative" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["matrix"]["infra"]["staging_evidence"] = "required"
+    _, errs, _ = validate_raw(bad)
+    check("the retired matrix cell key now fails closed",
+          any("unknown key 'staging_evidence'" in e for e in errs))
 
     check("not_governed: dependabot by author",
           not_governed_reason(config, "dependabot[bot]", set()) is not None)

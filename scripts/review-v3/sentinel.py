@@ -855,7 +855,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     elif auto_approved:
         gates.append(Gate(
             "G3 right-approver", "ok",
-            "No human gate: bot author, nothing blocks, brief has no reviewer checks",
+            "no human gate — bot author, nothing blocks, brief has no reviewer checks",
         ))
     else:
         missing: list[str] = []
@@ -907,14 +907,22 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         else:
             gates.append(Gate(
                 "G4 infra-evidence", "red",
-                f"Infra change: no successful staging deploy at `{head_sha[:9]}`. "
-                "One is dispatched automatically when an infra PR opens or pushes "
-                "(`staging-deploy-auto.yml`); if it never ran or it failed, a "
-                "tools-team member can comment `/deploy-staging` to retry. "
-                "(Not waivable.)",
+                f"This PR changes the deploy itself: no successful staging "
+                f"deploy at `{head_sha[:9]}`. One is dispatched automatically "
+                "when such a PR opens or pushes (`staging-deploy-auto.yml`); if "
+                "it never ran or it failed, a tools-team member can comment "
+                "`/deploy-staging` to retry. (Not waivable.)",
             ))
     else:
-        gates.append(Gate("G4 infra-evidence", "skip", "no infra paths"))
+        # NOT "no infra paths": `domain:infra` and
+        # `staging_evidence.paths` are different questions now, and a PR can
+        # be squarely infra (`scripts/redirects/`, an unrelated workflow)
+        # without touching anything the deploy runs. Saying "no infra paths"
+        # on such a PR would be false in the one cell a reader checks.
+        gates.append(Gate(
+            "G4 infra-evidence", "skip",
+            "no changed path affects the deploy",
+        ))
 
     # G5 oversized-ack ----------------------------------------------------
     if oversized:
@@ -1058,13 +1066,23 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
 
 # ---- Pinned status comment ----------------------------------------------
 
-# What each gate wants, in the author's words, when it is already satisfied
-# or doesn't apply. A red gate speaks for itself — its own message carries
-# the remediation — so only the quiet states need a phrasebook here.
+# How each quiet state opens its cell. A red gate speaks for itself — its own
+# message carries the remediation — so only the quiet states need a
+# phrasebook, and each one is completed by the gate's own message rather than
+# replacing it.
+#
+# It used to REPLACE it, and a green gate rendered as the bare words "Nothing
+# to do." That is how PR #21698 came to show a green G3 right-approver with
+# no approving review from anybody on the PR: the gate had passed under the
+# `auto_approve` clean-brief rule (bot author, nothing blocking, no reviewer
+# checks in the brief), and the one cell that could have said so said
+# "Nothing to do." instead. A merge gate that reports a pass without its
+# reason is indistinguishable from one that is broken, so the reason ships
+# with the verdict now.
 _GATE_BLURB = {
-    "ok": "Nothing to do.",
-    "skip": "Doesn't apply to this PR.",
-    "error": "Couldn't be evaluated — re-run the Sentinel check.",
+    "ok": "Nothing to do",
+    "skip": "Doesn't apply to this PR",
+    "error": "Couldn't be evaluated — re-run the Sentinel check",
 }
 
 _STATUS_ICON = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
@@ -1109,7 +1127,13 @@ def render_status_comment(verdict: Verdict) -> str:
 
     lines += ["| | Gate | What it needs |", "|---|---|---|"]
     for g in verdict.gates:
-        need = g.message if g.status in ("red", "error") else _GATE_BLURB[g.status]
+        if g.status in ("red", "error"):
+            need = g.message
+        else:
+            # "Nothing to do: matrix-required approval present." — the blurb
+            # answers the column, the gate's own message says why, and a
+            # reader can tell a satisfied gate from a mis-evaluated one.
+            need = f"{_GATE_BLURB[g.status]}: {g.message}."
         # One cell, one line: a literal newline would break the row.
         need = " ".join(need.split())
         lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
