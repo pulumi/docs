@@ -23,6 +23,10 @@ PR author), stale reviews (reviewed SHA not a prefix of head), and stale
 brief summaries (a "What this PR changes" bullet naming a value the current
 diff no longer contains).
 
+A row with unanswered 🚨 blocking findings is `blocked`, not `judge`: it
+cannot merge until the review is answered, and `blocked` is the one lane
+--force never reaches.
+
 The stamp bar (every gate required):
   label review:no-blockers · zero ⚠️ rows (zero low-confidence on legacy)
   · no self-accepted disposition · review CURRENT · mergeable_state in
@@ -602,7 +606,20 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         stamp_ok = False
     blockers = open_blockers(pr)
     if blockers:
+        # Blocked, not judge. An unanswered 🚨 is the review still waiting on
+        # an answer, and no approver's call substitutes for giving one — so
+        # the row must not sit in a lane --force can reach. Answering it is a
+        # `/resolve <id> <disposition>: <why>` on the PR (or a fix, or a
+        # send-back); the row leaves this lane on the next collect, carrying
+        # the record of why each finding closed.
         gate_fail(f"outstanding:{len(blockers)}:{','.join(blockers)}")
+        blocked.append(f"outstanding:{len(blockers)}")
+        if can_revise(pr):
+            actions.append({"id": "request-changes", "label": "send back to author", "cmd": f"--request-changes {n}"})
+        else:
+            # A workflow-authored row has no author to answer the findings;
+            # same fallback the judge branch uses.
+            actions.append({"id": "close", "label": "close it out", "cmd": f"--close {n}"})
     warnings = open_warnings(pr)
     if warnings:
         gate_fail(f"warnings:{len(warnings)}:{','.join(warnings)}")
