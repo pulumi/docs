@@ -1273,7 +1273,7 @@ Docker Compose - While not an IaC tool, Docker Compose defines multi-container a
 
 These platforms and tools serve important roles in the infrastructure automation ecosystem but should not be confused with infrastructure as code tools themselves. They enhance and orchestrate the work of actual IaC tools rather than replacing them.
 
-## The Future of infrastructure as code
+## The future of infrastructure as code
 
 The infrastructure as code landscape is rapidly evolving toward software engineering maturity, with several transformative trends reshaping how organizations approach infrastructure:
 

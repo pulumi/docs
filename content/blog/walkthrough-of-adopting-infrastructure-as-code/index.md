@@ -23,7 +23,7 @@ When you pick an infrastructure as code tool, there is a major decision up front
 
 In some cases, it’s better to just toss that infrastructure and start over from scratch. Or perhaps you can focus on succeeding first with a “new” part of the system and integrate with the existing infrastructure until you’re convinced it’s time to migrate. In many cases, however, that’s infeasible: Maybe you actually have a mission-critical service already that you need to bring under the management of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/). The good news is that Pulumi offers [tools to migrate](/migrate/) from existing tools like Terraform, AWS CloudFormation/CDK, Azure Resource Manager (ARM), Kubernetes YAML and more, bringing existing infrastructure under the management of Pulumi without any disruption. The user guides in the [Migration Hub](/migrate/) walk through this process.
 
-## Getting Started with infrastructure as code
+## Getting started with infrastructure as code
 
 Let’s assume we are starting out with new infrastructure, even though most concepts are relevant even if you’re starting with a migration.
 

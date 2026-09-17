@@ -111,7 +111,7 @@ The two potential remediations to drift are typically:
 
 The Pulumi Cloud `refresh` command can be used to detect drift and then you can decide how to remediate it. All of the building blocks are there to either reapply changes, ingest them back into the program or some combination thereof. The combination of refresh, plus automation API, as well as the Pulumi Deployments capability, enables you to detect and remediate drift on demand or on a scheduled basis. [Read more about drift detection and remediation](/blog/patterns-drift-detection/) or [watch the video](https://www.youtube.com/watch?v=-K90I1F6tfs).
 
-## Learn More about infrastructure as code
+## Learn more about infrastructure as code
 
 The Pulumi [Getting Started guide](/docs/get-started/) is the easiest way to get up and running with infrastructure as code. In addition to that, plus exploring the Pulumi Templates and Examples, we recommend some additional resources:
 
