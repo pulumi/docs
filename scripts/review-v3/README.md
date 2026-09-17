@@ -92,7 +92,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
 | G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
-| G4 infra-evidence | this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
+| G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
 
 **G4's two witnesses.** The commit status is a *report* of the deploy, not
@@ -105,6 +105,19 @@ the deploy. The status is still written, because it is what shows in the
 merge box with a link. A failed run-history read degrades to "no evidence"
 (red), not `action_required`: red is already the conservative answer, and
 escalating would misreport an API hiccup as a corrupt PR.
+
+**What G4 applies to.** `staging_evidence.paths` in
+`.github/review-routing.yml` — a path list, NOT a subject. It used to be a
+`staging_evidence: required` cell on the matrix's `infra` row, which made the
+approver and the blast radius the same question and left "bend the path's
+domain" as the only way to narrow the gate. The list is the Pulumi program,
+the build entry points, the scripts `make ci_push` actually runs, and the two
+workflows that run it. A `domain:infra` path that the deploy merely *reads*
+(`scripts/redirects/*.txt`) or never touches (an unrelated workflow, the lint
+and link-check scripts) is still tools' to approve and no longer asks for a
+~9-minute deploy of the shared stack. `routing.requires_staging_evidence()`
+answers it per path; the matcher is segment-aware (`*` never crosses `/`)
+because `fnmatch` would have made `scripts/*` match `scripts/redirects/`.
 
 Evidence supply is `staging-deploy-auto.yml`: every same-repo, non-draft PR
 that `route-pr.py` says needs staging evidence gets a deploy dispatched on
@@ -229,8 +242,9 @@ Subjects (closed set, all seven required in the matrix): `docs`, `blog`,
 `website`, `programs` (docs-guild, the blog team, or marketing per the
 matrix), `infra` — exactly the build and deploy pipeline (`infrastructure/`,
 `.github/workflows/`, `scripts/`, Makefile, bundler config): tools approves
-and a staging run is required — `frontend` — the rendering layer (`layouts/`,
-`theme/`, `assets/`, `static/`): reviewed under the infra criteria, approved
+(a staging run is a separate, path-keyed question — see G4 above) —
+`frontend` — the rendering layer (`layouts/`, `theme/`, `assets/`,
+`static/`): reviewed under the infra criteria, approved
 by marketing, never a staging run — and `other`, the classifier's fallback
 (repo plumbing such as `.claude/`, `styles/`, generated `data/` files): tools
 approves, so an infra PR that also touches plumbing dedupes to one team.

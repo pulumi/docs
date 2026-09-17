@@ -47,10 +47,14 @@ RAW_CONFIG = {
         "blog": {"mechanical": "none", "substantive": "marketing"},
         "website": {"mechanical": "none", "substantive": "marketing"},
         "programs": {"mechanical": "none", "substantive": "docs-guild"},
-        "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
+        "infra": {"mechanical": "tools", "substantive": "tools"},
         "frontend": {"mechanical": "none", "substantive": "marketing"},
         "other": {"mechanical": "none", "substantive": "tools"},
     },
+    # Staging evidence keys on the PATH, not the subject — `infra_file()`
+    # below is on this list and `infra_data_file()` is deliberately not,
+    # which is the distinction gate G4 now draws.
+    "staging_evidence": {"paths": ["infrastructure/", "Makefile", "scripts/build-site.sh"]},
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
     "sla": {
@@ -191,6 +195,19 @@ def infra_file():
         "filename": "scripts/build-site.sh",
         "status": "modified",
         "patch": "@@ -1,1 +1,1 @@\n-echo a\n+echo b",
+    }
+
+
+def infra_data_file():
+    """`domain:infra` (tools approves) but NOT on `staging_evidence.paths`.
+
+    The PR #21698 shape: a redirect data file the deploy reads and cannot be
+    broken by. Tools still own it; G4 skips it.
+    """
+    return {
+        "filename": "scripts/redirects/general-broken-links-redirects.txt",
+        "status": "modified",
+        "patch": "@@ -1,2 +1,1 @@\n-old/path.html|/docs/new/\n new/path.html|/docs/new/",
     }
 
 
@@ -665,6 +682,34 @@ def test_g4_takes_a_success_among_several_runs_at_this_head():
     assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "ok"
 
 
+def test_g4_skips_an_infra_subject_path_that_is_not_a_staging_path():
+    """PR #21698: two blog posts and a redirect data file. `domain:infra`
+    routes the redirect file to tools, correctly — but the file is not on
+    `staging_evidence.paths`, so G4 must not demand a deploy for it.
+
+    Before staging evidence keyed on paths, this PR went red on G4 and the
+    dispatched deploy raced a master push for the shared `www-testing` stack
+    and died on a 409, so the gate that could never be satisfied was also
+    the gate reporting the failure.
+    """
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[infra_data_file()], comments=[card],
+                reviews=[approval("tools-member")],
+                memberships={("docs-tools", "tools-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G4").status == "skip"
+    # Still tools' to approve — this narrows the evidence, not the approver.
+    assert _gate(v, "G3").status == "ok"
+    assert v.conclusion == "success", v.to_json()
+
+
+def test_g4_arms_for_the_whole_pr_when_one_path_qualifies():
+    """Per path, not per PR: a deploy-touching file anywhere in the diff
+    arms the gate even alongside exempt ones."""
+    gh = StubGh(pr=pr_meta(), files=[infra_data_file(), infra_file()])
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "red"
+
+
 def test_g4_run_lookup_failure_blocks_rather_than_erroring():
     """An unreadable run history is 'no evidence', not action_required.
 
@@ -709,6 +754,53 @@ def test_status_comment_rows_are_single_line():
     rows = [l for l in body.splitlines() if l.startswith("| ") and "**G" in l]
     assert len(rows) == 5, rows
     assert all(r.count("|") == 4 for r in rows), rows
+
+
+def test_status_comment_says_why_a_satisfied_gate_is_satisfied():
+    """A green gate must carry its reason, not just "Nothing to do."
+
+    PR #21698 showed a green G3 right-approver with no approving review from
+    anybody on the PR. The gate had passed under the `auto_approve`
+    clean-brief rule, which is correct, but the cell said "Nothing to do."
+    and nothing else — indistinguishable from a broken gate. Whatever the
+    verdict, the table has to be readable as an explanation.
+    """
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_mechanical()], comments=[card],
+                reviews=[approval("guild")],
+                memberships={("docs-guild", "guild"): "active"})
+    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
+    rows = {}
+    for line in body.splitlines():
+        if line.startswith("| ") and "**G" in line:
+            cells = [c.strip() for c in line.strip("|").split("|")]
+            rows[cells[1].strip("*")] = cells[2]
+
+    # Every quiet row opens with its blurb and then explains itself.
+    for name, cell in rows.items():
+        assert cell != "Nothing to do.", name
+        if cell.startswith("Nothing to do"):
+            assert cell.startswith("Nothing to do: "), (name, cell)
+            assert len(cell) > len("Nothing to do: ") + 1, (name, cell)
+        elif cell.startswith("Doesn't apply"):
+            assert cell.startswith("Doesn't apply to this PR: "), (name, cell)
+
+    g3 = next(v for k, v in rows.items() if k.startswith("G3"))
+    assert "mechanical" in g3, g3
+    g4 = next(v for k, v in rows.items() if k.startswith("G4"))
+    assert "no changed path affects the deploy" in g4, g4
+
+
+def test_status_comment_names_the_auto_approve_rule_on_a_bot_pr():
+    """The specific cell that misled on #21698: G3 green with no human
+    approval. It has to name the rule that let it pass."""
+    gh = StubGh(pr=pr_meta(author="pulumi-bot"), files=[docs_file_substantive()],
+                comments=[v3_author_card(0), v3_brief(0)])
+    v = sentinel.evaluate(gh, CONFIG)
+    g3 = _gate(v, "G3")
+    assert g3.status == "ok"
+    assert "bot author" in g3.message
+    assert "bot author" in sentinel.render_status_comment(v)
 
 
 def test_status_comment_marks_report_only_and_flags_the_unwaivable_gate():
@@ -857,7 +949,7 @@ def test_clean_brief_auto_approves_bot_author():
                 comments=[v3_author_card(0), v3_brief(0)])
     v = sentinel.evaluate(StubGh(**base), CONFIG)
     assert _gate(v, "G3").status == "ok"
-    assert "No human gate" in _gate(v, "G3").message
+    assert "no human gate" in _gate(v, "G3").message
     assert v.conclusion == "success", v.to_json()
     assert v.auto_approved is True and v.to_json()["auto_approved"] is True
     assert "Auto-approved" in v.summary

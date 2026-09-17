@@ -140,7 +140,7 @@ jobs:
               echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
               NEEDED=$(echo "$ROUTE" | jq -r '.staging_evidence_required')
               if [ "$NEEDED" != "true" ]; then
-                echo "no infra paths — gate G4 will skip; nothing to deploy"
+                echo "no changed path affects the deploy — gate G4 will skip; nothing to deploy"
               fi
             else
               echo "::warning::route-pr.py could not classify this PR — skipping the staging deploy"
