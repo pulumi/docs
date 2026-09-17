@@ -481,7 +481,20 @@ FAILED_CONCLUSIONS = {"failure", "timed_out", "cancelled", "action_required", "s
 
 def checks_rollup(check_runs: list[dict], statuses: list[dict]) -> dict:
     """green | red | pending, with the failing/pending names. Neutral and
-    skipped runs count as green (the report-only Sentinel is neutral)."""
+    skipped runs count as green (the report-only Sentinel is neutral).
+
+    Only the newest run of each check name counts. The API's default
+    `filter=latest` is per check suite, and every workflow run is its own
+    suite, so a run a concurrency group cancelled stays in the list beside
+    the run that replaced it. Counting it would turn a green PR red."""
+    newest: dict[str, dict] = {}
+    for run in check_runs:
+        name = run.get("name") or "?"
+        key = (run.get("started_at") or "", run.get("completed_at") or "", run.get("id") or 0)
+        seen = newest.get(name)
+        if seen is None or key >= (seen.get("started_at") or "", seen.get("completed_at") or "", seen.get("id") or 0):
+            newest[name] = run
+    check_runs = list(newest.values())
     failing, pending = [], []
     for run in check_runs:
         name = run.get("name") or "?"
