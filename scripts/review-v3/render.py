@@ -32,6 +32,7 @@ import html
 import json
 import re
 import sys
+import textwrap
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -60,18 +61,24 @@ BUCKET_LABEL = {
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
-                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate")
+                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
+                 "sent-back", "unblock")
+# Whole codes (not families) that change what you'd click: `author:self`
+# takes the stamp and the send-back off the row, where `author:internal` is
+# background.
+PRIMARY_VALUES = ("author:self",)
 # A reason code is a vocabulary, not a sentence. These few decide whether a
 # row is on your board at all, so they read as words; the code stays in the
 # chip's title for anyone grepping the queue.
 CHIP_LABEL = {
+    "author:self": "your own PR",
     "gate:none": "no team approval needed",
     "gate:any-team": "any team can approve this",
     "link-fixes:mine": "link-only sweep: yours",
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
 }
-ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "close": "stop",
+ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop",
                 "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
@@ -86,6 +93,30 @@ def action_kind(pr: dict, action: dict) -> str:
     if action["id"] == "rerun":
         return "decision" if "review:error" in (pr.get("blockers") or []) else "side"
     return "side" if action["id"] in SIDE_ACTIONS else "decision"
+
+
+def unblock_actions(pr: dict) -> list[dict]:
+    """The decisions a blocked row can actually take. A stamp is not one:
+    act.py refuses `--stamp` on a blocked row whatever the flags, so a
+    blocked row whose only buttons approve has nothing an approver can do
+    from here, and the board has to say so rather than show buttons that
+    the act layer will bounce."""
+    return [a for a in pr.get("actions") or []
+            if action_kind(pr, a) == "decision" and not a["id"].startswith("stamp")]
+
+
+def no_action(pr: dict) -> bool:
+    """A blocked row with no unblock: it should never happen (analyze gives
+    every verdict an action), and when it does the row says so out loud. A
+    row waiting on its author has had its buttons removed on purpose -- it
+    is the author's turn -- so it is not one of these."""
+    return pr.get("verdict") == "blocked" and not pr.get("waiting_on_author") and not unblock_actions(pr)
+
+
+def parked(pr: dict) -> bool:
+    """A row that leaves the groups for one of the compact lists at the foot
+    of the page: waiting on another reviewer, or on its own author."""
+    return bool(pr.get("handed_off") or pr.get("waiting_on_author"))
 
 
 def esc(v) -> str:
@@ -183,6 +214,8 @@ AUTHOR_HELP = {
                   "(the edit link opens it in VS Code), apply the drafted fixes, or ask Claude on the PR -- it is only "
                   "the send-back that has no audience. Closing it out is the cheap option when the lane will regenerate "
                   "the page anyway."),
+    "self": ("This is your own PR, so you cannot approve it or send it back to yourself. Route it to the lane's team for "
+             "the approval, and answer its review findings with /address-review, the author's side of the pipeline."),
 }
 ROUTE_STATE_HELP = {
     "no-team": "GitHub has no team by the name the routing config gives this lane, so the review request goes to that role's SLA person instead.",
@@ -239,6 +272,11 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             ids = detail.partition(":")[2]
             text = (f"{n} reviewer-check finding{'s' if n != '1' else ''} the review raised and nobody has answered"
                     + (f" ({ids})" if ids else "") + ". They do not block a merge, but they are unanswered.")
+        elif code == "outstanding" and first == "judged":
+            ids = detail.partition(":")[2]
+            text = ("Blocking findings the judge step has answered"
+                    + (f" ({ids})" if ids else "") + ": approving this row posts their /resolve lines before it merges, "
+                    "so they no longer hold it. Change a call to deferred and the row goes back to blocked.")
         elif code == "outstanding":
             n = first or "Some"
             ids = detail.partition(":")[2]
@@ -291,6 +329,13 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
                     f"{who} has already approved this PR, so your approval is not the first.")
         elif code == "gate":
             text = SIMPLE_HELP["gate:none"]
+        elif code == "sent-back":
+            text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
+                    "is waiting on its author, not on you. It returns to the board when a new commit lands.")
+        elif code == "unblock":
+            why = detail.partition(":")[2].replace("-", " ") if first == "refused" else detail.replace("-", " ")
+            text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
+                    "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
         if text is None and first:
             # A known code carrying an unexpected value: say what is known
             # rather than rendering a bare chip with nothing behind it. The
@@ -328,7 +373,8 @@ def chips(reasons: list[str]) -> str:
         if r.startswith(HIDDEN_REASON_PREFIXES):
             continue
         code = r.split(":", 1)[0]
-        (primary if code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r) else info).append(r)
+        is_primary = (code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r)) or r in PRIMARY_VALUES
+        (primary if is_primary else info).append(r)
     out = "".join(_chip(r) for r in primary)
     if info:
         out += (f'<details class="why" title="{len(info)} more reasons for this verdict that would not change what you click. '
@@ -365,6 +411,7 @@ ACTION_HELP = {
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
     "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
+    "rerun-checks": "Re-run the failed jobs of the head commit's workflow runs (the newest failed run per workflow), without a push, for a CI failure that looks flaky. A red commit status has no run to re-run, and the step says so. Nothing merges, and the review is not touched.",
     "fix": "Apply the drafted description correction and any one-click suggestions, then commit and push.",
     "render": "Every PR gets its own deployed copy of the site. This opens each page this PR changes on that preview and saves a full-page screenshot to .pr-review-shots/, for when you want to see the rendered page rather than the diff. It writes nothing to GitHub.",
     "deploy": "Dispatch the testing deploy workflow for this branch, to pulumi-test.io.",
@@ -396,7 +443,10 @@ def verdict_chip(pr: dict) -> str:
     if v == "route":
         act = next((a for a in pr.get("actions") or [] if a["id"] == "route"), None)
         if act:
-            extra = esc(" → " + act["cmd"].split(":", 1)[1])
+            # One route action may carry several fragments (a PR in two lanes
+            # neither of which is yours), so read every target off it.
+            targets = re.findall(r"--route \d+:(\S+)", act["cmd"]) or [act["cmd"].split(":", 1)[1]]
+            extra = esc(" → " + " + ".join(targets))
     if pr.get("recommended") and pr["recommended"] != v:
         rec = pr["recommended"]
         extra += (f' <span class="v v-dim" title="{esc(f"The judge pass recommends {rec} for this row. The computed verdict stays {v}: a recommendation never lowers a gate.")}">'
@@ -550,16 +600,35 @@ def patch_quote(pr: dict, path: str | None, anchor: str | None) -> dict | None:
 
 
 MD_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+# A fenced block: the opening fence with an optional info string, then
+# everything up to the closing fence. The info string is dropped; the body
+# is rendered verbatim, escaped, in a <pre>. Without this the inline pass
+# saw the three backticks as one inline code span and a half, and a
+# ```markdown block came out as ``<code>markdown</code>.
+FENCE_RE = re.compile(r"```[A-Za-z0-9_+.-]*[ \t]*\n?(.*?)```", re.S)
 
 
-def md_inline(text: str) -> str:
-    """The review writes findings in markdown. Escape first, then put back
-    the four inline forms it actually uses, so a finding reads as written."""
+def _md_span(text: str) -> str:
     out = esc(text)
     out = MD_LINK_RE.sub(r'<a href="\2">\1</a>', out)
     out = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", out)
     out = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", out)
     return re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+
+
+def md_inline(text: str) -> str:
+    """The review writes findings in markdown. Escape first, then put back
+    the four inline forms it actually uses, so a finding reads as written.
+    A fenced code block becomes a <pre>, escaped and untouched by the
+    inline pass, so the backticks inside it are never mistaken for spans."""
+    text = text or ""
+    out, pos = [], 0
+    for m in FENCE_RE.finditer(text):
+        out.append(_md_span(text[pos:m.start()]))
+        out.append(f"<pre>{esc(m.group(1).strip(chr(10)))}</pre>")
+        pos = m.end()
+    out.append(_md_span(text[pos:]))
+    return "".join(out)
 
 
 FINDING_CLAIM = re.compile(r'^\s*\*"(.+?)"\*', re.S)
@@ -880,7 +949,16 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
     if v in ("judge",) or pr.get("judgments") or expanded:
         body.append(judgment_boxes(queue, pr))
     if v == "blocked":
-        body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []))}</div></div>')
+        # A blocked row names its blocker; one with no unblock says that too,
+        # so a row can never sit silent with nothing to click and no word why.
+        tail = (' <span class="v v-dim" title="Every action the queue knows for this blocker is refused or absent on this row, so '
+                'nothing here changes it. Whatever moves it happens on GitHub or on the branch by hand.">no action available</span>'
+                if no_action(pr) else "")
+        if pr.get("waiting_on_author"):
+            when = sent_back_on(pr)
+            tail = (f' <span class="v v-dim" title="You sent this PR back{" on " + esc(when) if when else ""} and nothing has been '
+                    'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
+        body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
     body.append(action_bar(pr, queue, expanded=expanded))
     if expanded:
         body.append(detail_sections(queue, pr))
@@ -1007,7 +1085,7 @@ HELP_SECTIONS = [
         "<b>stamp</b> — passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough.",
         "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap.",
         "<b>route</b> — not your lane per the routing matrix. Ask the owning team, or approve anyway.",
-        "<b>blocked</b> — nothing to do until something else moves: a conflict, red CI, a stale or running review.",
+        "<b>blocked</b> — nothing to do until something else moves: an open 🚨 finding, a conflict, red CI, a stale or running review, someone else's changes requested. A row with no unblock says <i>no action available</i>.",
     ]),
     ("Do next", [
         "Each card states a fact naming its PRs, says what pressing the button does, and then presses those rows' buttons for you.",
@@ -1016,7 +1094,8 @@ HELP_SECTIONS = [
     ]),
     ("A row", [
         "Chips are the reasons for the verdict; the ones that change what you'd click stay out, the rest fold behind <b>why</b>. Hover any chip for a sentence explaining it.",
-        "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Side actions like <i>apply fixes</i> ride along with it.",
+        "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Side actions like <i>apply fixes</i> ride along with it, and only decisions count toward the progress line.",
+        "<b>your own PR</b> has no approve or send-back button: route it, and answer its findings with <code>/address-review</code>. A PR you already sent back waits under <i>Waiting on the author</i> until a commit lands.",
         "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
     ]),
     ("Judgment badges", [
@@ -1034,8 +1113,9 @@ HELP_SECTIONS = [
         "<i>since</i> is the one threshold rather than a set of values. <i>Reset chips</i> restores the defaults.",
     ]),
     ("The command at the bottom", [
-        "Copy it and run it, or hand it to Claude. Invoking it <i>is</i> the yes: act.py plans it, prints a preview of every write, and executes, so nothing asks you to confirm a second time. <code>--dry-run</code> prints the preview and stops.",
-        "Each approval re-checks the PR immediately before merging: head unchanged, mergeable, CI green, no changes-requested review. A PR that fails is skipped and the batch continues.",
+        "Copy it and run it, or hand it to Claude. Invoking it <i>is</i> the yes: act.py plans it, prints a preview of every write with its exact body, and executes, so nothing asks you to confirm a second time. <code>--dry-run</code> runs the preflights and lists every write without sending one.",
+        "Every approve button folds into one <code>--stamp</code> list (<code>--force</code> said once); a reason is scoped to its PR as <code>--reason \"N=…\"</code>; no fragment repeats.",
+        "Every write re-reads the PR first (open, head unchanged); an approval also checks mergeable, CI green, and no changes-requested review from anyone but you. A PR that fails is skipped and the batch continues.",
     ]),
 ]
 
@@ -1088,9 +1168,10 @@ def help_html() -> str:
 def card_extra(d: dict) -> str:
     """The part of a card's command that no row button carries, which is all
     a lit card adds to the composed command: its rows say the rest. A card
-    with no targets (a consolidation) is its whole command; a chain's
-    follow-up has no row button until that row is actually stuck, so its
-    unblock rides on the card; every other card is exactly its rows."""
+    with no targets (a chain's `--chain C1`, a consolidation's request) is
+    its whole command and claims its rows instead; a card that presses row
+    buttons and also claims a row carries an unblock for the claimed one;
+    every other card is exactly its rows."""
     if not d.get("targets"):
         return d.get("cmd") or ""
     return " ".join(f"--unblock {n}" for n in d.get("claims") or [])
@@ -1203,7 +1284,9 @@ def slim(obj):
     """The inlined copy of the queue minus the bulk (patches, comment
     bodies): what a viewer might copy out, not a second render source."""
     if isinstance(obj, dict):
-        return {k: slim(v) for k, v in obj.items() if k not in PAYLOAD_DROP}
+        # `_`-prefixed keys are the analyzer's private scratch (live config
+        # objects, not JSON): never part of what a viewer might copy out.
+        return {k: slim(v) for k, v in obj.items() if k not in PAYLOAD_DROP and not str(k).startswith("_")}
     if isinstance(obj, list):
         return [slim(x) for x in obj]
     return obj
@@ -1222,30 +1305,68 @@ def payload_json(obj) -> str:
 
 
 
-def waiting_html(prs: list[dict]) -> str:
+def _wait_flag(p: dict) -> str:
+    state = (p.get("checks") or {}).get("state")
+    return " ✗" if state == "red" else (" ⚠" if p.get("mergeable_state") == "dirty" else "")
+
+
+def sent_back_on(p: dict) -> str:
+    """The date the approver sent this PR back, off its `sent-back:<date>`
+    reason code; empty when the row carries none."""
+    return next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("sent-back:")), "")
+
+
+def _waiting_items(queue: dict, rows: list[dict], who_of) -> str:
+    items = []
+    for p in rows:
+        title = p.get("title") or ""
+        title = title if len(title) <= 72 else title[:69] + "…"
+        items.append(f'<li><a class="pr" href="{esc(pr_url(queue, p["number"]))}">#{p["number"]}</a> '
+                     f'<span class="wt">{esc(title)}</span> <span class="who">{esc(who_of(p))}</span> '
+                     f'<span class="age">{_age_days(p)}d{_wait_flag(p)}</span></li>')
+    return "".join(items)
+
+
+def waiting_html(prs: list[dict], queue: dict | None = None) -> str:
     """The compact 'waiting on others' list: one line per handed-off PR,
     for awareness only. Nothing here is actionable by the approver."""
+    queue = queue or {"repo": "pulumi/docs"}
     rows = [p for p in prs if p.get("handed_off")]
     if not rows:
         return ""
     rows.sort(key=lambda p: (", ".join(p.get("handed_off_to") or []), -_age_days(p)))
-    items = []
-    for p in rows:
-        who = esc(", ".join(p.get("handed_off_to") or []))
-        title = p.get("title") or ""
-        title = title if len(title) <= 72 else title[:69] + "…"
-        state = (p.get("checks") or {}).get("state")
-        flag = " ✗" if state == "red" else (" ⚠" if p.get("mergeable_state") == "dirty" else "")
-        items.append(f'<li><a class="pr" href="{esc(pr_url({"repo": "pulumi/docs"}, p["number"]))}">#{p["number"]}</a> '
-                     f'<span class="wt">{esc(title)}</span> <span class="who">{who}</span> <span class="age">{_age_days(p)}d{flag}</span></li>')
+    items = _waiting_items(queue, rows, lambda p: ", ".join(p.get("handed_off_to") or []))
     return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on others</h2><span class="count">{len(rows)}</span>'
             '<span class="note">requested reviewer isn\'t you · ✗ red CI · ⚠ conflict · hidden from the groups above; render with --include-handed-off to act on them</span></div>'
-            '<ul>' + "".join(items) + "</ul></section>")
+            '<ul>' + items + "</ul></section>")
+
+
+def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
+    """The compact 'waiting on the author' list: rows the approver already
+    sent back (`waiting_on_author`, with a `sent-back:<date>` chip) and
+    nothing has been pushed since. Same shape as the handed-off list: who
+    it waits on is the author, and the date is when you asked."""
+    queue = queue or {"repo": "pulumi/docs"}
+    rows = [p for p in prs if p.get("waiting_on_author") and not p.get("handed_off")]
+    if not rows:
+        return ""
+    rows.sort(key=lambda p: (sent_back_on(p), -_age_days(p)))
+
+    def who(p: dict) -> str:
+        login = (p.get("author") or {}).get("login") or "author"
+        when = sent_back_on(p)
+        return f"@{login} · sent back {when}" if when else f"@{login} · sent back"
+
+    items = _waiting_items(queue, rows, who)
+    return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on the author</h2><span class="count">{len(rows)}</span>'
+            '<span class="note">you sent these back and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
+            'they return to the groups above when a commit lands; render with --include-handed-off to act on one now</span></div>'
+            '<ul>' + items + "</ul></section>")
 
 
 def render_board(queue: dict, *, artifact: bool = False, include_handed_off: bool = False) -> str:
     all_prs = queue.get("prs") or []
-    prs = all_prs if include_handed_off else [p for p in all_prs if not p.get("handed_off")]
+    prs = all_prs if include_handed_off else [p for p in all_prs if not parked(p)]
     counts = queue.get("counts") or {}
     cfg = queue.get("config") or {}
     sections = []
@@ -1258,6 +1379,16 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         tally += (f'<div class="t-dim" title="PRs whose requested reviewer is someone other than you. They are waiting on that person, '
                   f'so they are listed at the foot of the page instead of taking a row.">'
                   f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
+    on_author = sum(1 for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off"))
+    if on_author:
+        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, with nothing pushed since. They are waiting '
+                  f'on the author, so they are listed at the foot of the page instead of taking a row.">'
+                  f'<b>{on_author}</b><span>waiting on the author</span></div>')
+    stuck = sum(1 for p in prs if no_action(p))
+    if stuck:
+        tally += (f'<div class="t-stop" title="Blocked rows that carry no unblock at all: nothing on this page changes them, so '
+                  f'each one says so on its row. They are counted here so a silent row can never hide in the blocked tally.">'
+                  f'<b>{stuck}</b><span>blocked, no action</span></div>')
     payload = payload_json(queue)
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
@@ -1268,7 +1399,8 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>' + do_next_html(queue),
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
-        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue) + ("" if include_handed_off else waiting_html(all_prs)),
+        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue)
+             + ("" if include_handed_off else waiting_html(all_prs, queue) + waiting_on_author_html(all_prs, queue)),
         cmd=cmd_footer(),
         payload=payload,
         script=SCRIPT,
@@ -1301,29 +1433,98 @@ def cmd_footer() -> str:
             '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button></div>')
 
 
+def open_items(pr: dict) -> list[dict]:
+    """The findings nobody has ruled on: the review's open rows (style and
+    pre-existing aside) plus triage's prose bullets. What `pending_judgment`
+    boxes on the board, and what the terminal lists under `open:`."""
+    review = pr.get("review") or {}
+    items = [i for i in review.get("items") or []
+             if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
+    if pr.get("triage_prose"):
+        bullets = [l.strip("- ").strip() for l in pr["triage_prose"].splitlines() if l.startswith("- [")]
+        items += [{"id": f"triage:{i + 1}", "summary": b, "bucket": "reviewer-check"} for i, b in enumerate(bullets)]
+    return items
+
+
+def _wrap(text: str, width: int, first: str, rest: str) -> list[str]:
+    """Wrap without ever cutting: a reason code or a command is only useful
+    whole, so a token longer than the line gets a line to itself."""
+    return textwrap.wrap(text, width=width, initial_indent=first, subsequent_indent=rest,
+                         break_long_words=False, break_on_hyphens=False) or [first.rstrip()]
+
+
 def render_terminal(queue: dict, n: int | None = None, width: int = 110, include_handed_off: bool = False) -> str:
+    """The board as text: the same rows, blockers, findings, actions and
+    Do-next moves, so a terminal reader can compose the same command the
+    page would. Nothing is cut short; long lines wrap under their row."""
     all_prs = queue.get("prs") or []
-    prs = all_prs if (include_handed_off or n is not None) else [p for p in all_prs if not p.get("handed_off")]
+    prs = all_prs if (include_handed_off or n is not None) else [p for p in all_prs if not parked(p)]
     if n is not None:
         prs = [p for p in prs if p["number"] == n]
     counts = queue.get("counts") or {}
-    lines = [f"PR review queue · {queue.get('repo')} · {len(prs)} rows · " + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
-             + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else ""), ""]
+    on_author = [p for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off")]
+    stuck = [p for p in prs if no_action(p)]
+    head = (f"PR review queue · {queue.get('repo')} · {len(prs)} rows · "
+            + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
+            + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else "")
+            + (f" · {len(on_author)} waiting on the author" if on_author else "")
+            + (f" · {len(stuck)} blocked with no action" if stuck else ""))
+    lines = [head, ""]
     hdr = f"{'#':>6}  {'verdict':<8} {'owner':<11} {'domain':<14} {'size':>9} {'age':>5} {'CI':<4} reasons"
     lines += [hdr, "-" * len(hdr)]
+    sub = " " * 8      # continuation lines sit under the verdict column
     for owner, domain, rows in group_rows(prs):
         for p in rows:
             reasons = [r for r in p.get("reasons") or [] if not r.startswith(HIDDEN_REASON_PREFIXES)]
             ci = {"green": "✓", "red": "✗", "pending": "…"}.get((p.get("checks") or {}).get("state"), "?")
             size = f"+{p.get('additions', 0)}/−{p.get('deletions', 0)}"
-            line = (f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} "
-                    f"{age_label(p):>5} {ci:<4} " + " ".join(reasons))
-            lines.append(line[:width] + ("…" if len(line) > width else ""))
+            prefix = (f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} "
+                      f"{age_label(p):>5} {ci:<4} ")
+            lines += _wrap(" ".join(reasons), width, prefix, sub + "  ")
+            if p.get("verdict") == "blocked":
+                blocked = ", ".join(p.get("blockers") or []) or "no blocker named"
+                lines += _wrap(blocked + (" (no action available)" if no_action(p) else ""), width, sub + "blocked: ", sub + "         ")
+            if not p.get("judgments"):
+                items = open_items(p)
+                for i in items[:6]:
+                    body = finding_body(i)
+                    parts = split_finding(body)
+                    stance = parts["stance"] or NO_STANCE
+                    claim = one_sentence(parts["claim"] or body or i.get("summary") or "", 160)
+                    where = f" @ {i['file']} {i.get('anchor') or ''}".rstrip() if i.get("file") else ""
+                    lines += _wrap(f"{i.get('id') or ''} {claim} [{stance[1]}]{where}", width, sub + "open: ", sub + "      ")
+                if len(items) > 6:
+                    lines.append(f"{sub}      … {len(items) - 6} more on the PR")
+            for j in p.get("judgments") or []:
+                lines += _wrap(f"{j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'}"
+                               + (f" ({j['note']})" if j.get("note") else "") + (f" {j['deep_link']}" if j.get("deep_link") else ""),
+                               width, sub + "judged: ", sub + "        ")
+            for a in p.get("actions") or []:
+                lines += _wrap(f"[{a['label']}]  {scope_reasons(a['cmd'])}", width, sub, sub + "    ")
+    cards = queue.get("do_next") or [] if n is None else []
+    if cards:
+        lines += ["", "do next (each card is the row buttons it names, pressed together):"]
+        for i, d in enumerate(cards, 1):
+            lines += _wrap(d.get("say") or "", width, f"  {i}. ", "     ")
+            if d.get("does"):
+                lines += _wrap(d["does"], width, "     ", "     ")
+            if d.get("cmd"):
+                lines += _wrap(f"$ /pr-review --act {scope_reasons(d['cmd'])}", width, "     ", "         ")
     cl = queue.get("clusters") or []
     if cl:
         lines += ["", "collisions:"]
         for c in cl:
-            lines.append(f"  {c['id']} {c['kind']}: merge " + " → ".join(f"#{x}" for x in c["merge_order"]))
+            order = c.get("merge_order") or []
+            if order:
+                lines += _wrap(f"{c['id']} {c['kind']}: merge " + " → ".join(f"#{x}" for x in order), width, "  ", "      ")
+            else:
+                # Every member is handed off: analyze strips them from the
+                # order, so the order is empty and the members are the news.
+                lines += _wrap(f"{c['id']} {c['kind']}: " + ", ".join(f"#{x}" for x in c.get("prs") or []) + " (all waiting on others)",
+                               width, "  ", "      ")
+            rec = c.get("recommendation") or {}
+            if rec.get("say"):
+                lines += _wrap(rec["say"] + (f"  → {scope_reasons(rec['cmd'])}" if rec.get("cmd") else ""), width, "      ", "      ")
     for d in queue.get("directional") or []:
         lines.append(f"  directional {d['path']}: #{d['adds_links_pr']} adds links, #{d['removes_links_pr']} removes them")
     judge = [p for p in prs if p.get("verdict") == "judge"]
@@ -1331,15 +1532,17 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
         lines += ["", "judge rows (AskUserQuestion each in --terminal mode):"]
         for p in judge:
             lines.append(f"  #{p['number']} {p.get('title')}")
-            for j in p.get("judgments") or []:
-                lines.append(f"      {j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'} {j.get('deep_link') or ''}")
-            for a in p.get("actions") or []:
-                lines.append(f"      [{a['label']}]  {scope_reasons(a['cmd'])}")
     waiting = [p for p in all_prs if p.get("handed_off")] if not include_handed_off and n is None else []
     if waiting:
         lines += ["", f"waiting on others ({len(waiting)}):"]
         for p in waiting:
-            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} {', '.join(p.get('handed_off_to') or [])} {_age_days(p)}d")
+            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} {', '.join(p.get('handed_off_to') or [])} {_age_days(p)}d{_wait_flag(p)}")
+    if on_author and not include_handed_off and n is None:
+        lines += ["", f"waiting on the author ({len(on_author)}):"]
+        for p in on_author:
+            when = sent_back_on(p)
+            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} @{(p.get('author') or {}).get('login') or '?'}"
+                         f" sent back {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
     stamps = [a["cmd"].split()[1] for p in prs for a in p.get("actions") or [] if a["id"] == "stamp" and p.get("verdict") == "stamp"]
     if stamps:
         lines += ["", f"$ /pr-review --act --stamp {','.join(stamps)}"]

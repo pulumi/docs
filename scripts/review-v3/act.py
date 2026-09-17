@@ -24,11 +24,17 @@ command the board composed, which is why a plan names its PRs one by one:
                      judged finding, so the review records the call instead of
                      the merge walking over it. Repeatable; values accumulate.
   --route N:@user|team   request review and post the row's defects (reason
-                     codes + judgments) as one comment.
+                     codes + judgments) as one comment. Repeatable, and the
+                     same PR may appear more than once: `--route N:@a --route
+                     N:@b` is one step that requests both (a PR whose lanes
+                     need two teams). `N` alone takes the row's own targets.
   --request-changes N    post a CHANGES_REQUESTED review built from the row's
                      judgments (one line-anchored item each, no filler) and
                      apply `needs-author-response`. The author-facing verb the
-                     old menus had; the approver's way to say "your turn".
+                     old menus had; the approver's way to say "your turn". A
+                     row with no open finding still goes back when a
+                     `--reason N=…` says why (red CI, a conflict act.py can't
+                     push through); the reason is then the whole review.
   --chain C1         start a collision cluster's chain: stamp the first PR in
                      its merge order (--force when it is a judge row) through
                      the same gates as --stamp, then merge base into the next
@@ -47,6 +53,10 @@ command the board composed, which is why a plan names its PRs one by one:
                      N:M` scopes M to one of several closes.
   --refresh N        post `@claude <reason> #update-review`.
   --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
+  --rerun-checks N   re-run the failed jobs of the head's workflow runs (the
+                     newest run per workflow that concluded failure); the
+                     unblock on a red-CI row. A red commit status has no run
+                     to re-run, and the step says so instead of guessing.
   --render N         screenshot the preview pages (screenshot.mjs + Playwright).
   --deploy N         dispatch testing-build-and-deploy.yml at the head branch.
   --reason TEXT | N=TEXT   what to say on a request-changes, refresh, rerun or
@@ -287,6 +297,19 @@ def _dedupe(steps: list[Step]) -> list[Step]:
     return out
 
 
+def row_route_targets(pr: dict) -> list[str]:
+    """The row's own route targets: `route_targets` when the analyzer wrote
+    it, else every `--route N:@x` fragment of the row's route action."""
+    if pr.get("route_targets"):
+        return list(pr["route_targets"])
+    a = next((a for a in pr.get("actions") or [] if a["id"] == "route"), None)
+    if not a:
+        return []
+    if a.get("targets"):
+        return list(a["targets"])
+    return re.findall(r"--route\s+\d+:(\S+)", a.get("cmd") or "")
+
+
 def plan(queue: dict, args: argparse.Namespace) -> Plan:
     by = {p["number"]: p for p in queue.get("prs") or []}
 
@@ -343,21 +366,27 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
     steps: list[Step] = []
     for n, mode in _split_stamps(args.stamp):
         steps.append(stamp_step(n, mode, force=bool(args.force)))
+    routes: dict[int, list[str]] = {}
     for spec in _listed(args.route):
-        n, _, target = str(spec).partition(":")
-        if not target:
-            pr = pr_of(int(n))
-            act = next((a for a in pr.get("actions") or [] if a["id"] == "route"), None)
-            target = act["cmd"].split(":", 1)[1] if act else ""
-        if not target:
+        n, _, target = str(spec).lstrip("#").partition(":")
+        pr = pr_of(int(n))
+        targets = [target] if target else list(row_route_targets(pr))
+        if not targets:
             raise ActError(f"--route {spec}: no target and the row has no route action")
-        target = "@" + target.lstrip("@")
-        steps.append(step("route", int(n), target=target, comment=_defect_comment(pr_of(int(n)), target)))
+        for t in targets:
+            t = "@" + t.lstrip("@")
+            if t not in routes.setdefault(int(n), []):
+                routes[int(n)].append(t)
+    for n, targets in routes.items():
+        # One step per PR however many targets: one review request carrying
+        # every reviewer, one comment.
+        steps.append(step("route", n, target=", ".join(targets), targets=targets,
+                          comment=_defect_comment(pr_of(n), " and ".join(targets))))
     for n in _listed(args.request_changes):
         pr = pr_of(n)
-        if not ask_lines(pr):
+        if not ask_lines(pr) and n not in scoped_reasons and not bare_reasons:
             raise ActError(f"--request-changes {n}: nothing to send back — no open findings on the row, "
-                           f"and every judged finding is already resolved")
+                           f"every judged finding is already resolved, and no --reason {n}=\"…\" says why")
         if not can_revise(pr) and not args.force:
             login = (pr.get("author") or {}).get("login") or "the author"
             raise ActError(f"--request-changes {n}: @{login} is a workflow, not an author — it will never read the review. "
@@ -417,12 +446,14 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         status = ((pr.get("review") or {}).get("status") or "ABSENT").lower().replace("_", "-")
         steps.append(step("rerun", n, reason={"error": "the last review run failed", "absent": "no review ran on this PR",
                                               "triage-prose": "only the triage prose check ran"}.get(status, f"the review is {status}")))
+    for n in _listed(args.rerun_checks):
+        steps.append(step("rerun-checks", n))
     for n in _listed(args.render):
         steps.append(step("render", n, pages=(pr_of(n).get("preview") or {}).get("pages") or []))
     for n in _listed(args.deploy):
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --rerun / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --rerun / --rerun-checks / --render / --deploy")
     steps = _dedupe(steps)
     _assign_reasons(steps, by, scoped_reasons, bare_reasons)
     for s in steps:
@@ -546,6 +577,9 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
             lines.append(f"     preflight: open, head == {head}")
             lines.append(f"     comment: {_body_head({'body': s.args['comment']})} (+ footer)"
                          + (" — clears the cards, fresh review from scratch" if s.kind == "rerun" else ""))
+        elif s.kind == "rerun-checks":
+            lines.append(f"     preflight: open, head == {head}")
+            lines.append(f"     GET actions/runs?head_sha={head}; POST actions/runs/<id>/rerun-failed-jobs for each newest failed run per workflow")
         elif s.kind == "render":
             lines.append(f"     screenshot {len(s.args.get('pages') or [])} preview page(s) → {SHOTS_DIR}/{s.pr}/")
         elif s.kind == "deploy":
@@ -758,19 +792,23 @@ def ask_lines(pr: dict) -> list[str]:
     approver already resolved (`RESOLVABLE`) has nothing for the author to do,
     so it rides along only when it carries an explicit `ask`: its `decision`
     is the approver's question, and posting it would invite the author to
-    change what the approver decided to leave alone."""
+    change what the approver decided to leave alone. A finding the judge
+    step never reached is still open, so it is listed from the card after
+    the judged ones: a partial judgment must not drop it from the review."""
     judgments = pr.get("judgments") or []
     lines = []
+    judged = set()
     for j in judgments:
+        judged.add((j.get("finding_id") or "").strip())
         where = f"`{j['file']}` L{j['line']}: " if j.get("file") and j.get("line") else ""
         ask = (j.get("ask") or "").strip()
         if not ask and j.get("disposition") not in RESOLVABLE:
             ask = (j.get("decision") or "").strip()
         if ask:
             lines.append(f"- {where}{ask}")
-    if judgments:
-        return lines
     for i in open_items(pr):
+        if (i.get("id") or "").strip() in judged:
+            continue
         where = f"`{i['file']}` {i.get('anchor') or ''}: " if i.get("file") else f"{i.get('anchor') or ''}: "
         lines.append(f"- {where}{(i.get('summary') or i.get('text') or '').strip()}")
     return lines
@@ -851,6 +889,8 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
                 ok, msg = _close(gh, s)
             elif s.kind in ("refresh", "rerun"):
                 ok, msg = _mention(gh, s)
+            elif s.kind == "rerun-checks":
+                ok, msg = _rerun_checks(gh, s)
             elif s.kind == "render":
                 ok, msg = _render(s, node=node)
             elif s.kind == "deploy":
@@ -984,13 +1024,43 @@ def _route(gh: GhClient, s: Step) -> tuple[bool, str]:
     ok, msg, _ = preflight_head(gh, s)
     if not ok:
         return False, f"preflight refused: {msg}"
-    target = s.args["target"].lstrip("@")
-    if "/" in target:
-        gh.request_reviewers(s.pr, [], [target.split("/", 1)[1]])
-    else:
-        gh.request_reviewers(s.pr, [target], [])
+    targets = [t.lstrip("@") for t in (s.args.get("targets") or [s.args["target"]])]
+    users = [t for t in targets if "/" not in t]
+    teams = [t.split("/", 1)[1] for t in targets if "/" in t]
+    gh.request_reviewers(s.pr, users, teams)
     gh.comment(s.pr, s.args["comment"])
-    return True, f"review requested from @{target}"
+    return True, "review requested from " + ", ".join(f"@{t}" for t in targets)
+
+
+def _run_key(run: dict) -> tuple:
+    return (int(run.get("run_number") or 0), int(run.get("run_attempt") or 0), run.get("created_at") or "")
+
+
+def failed_workflow_runs(runs: list[dict]) -> list[dict]:
+    """The newest run of each workflow on a head, kept only when it concluded
+    failure. A run a concurrency group cancelled sits beside the run that
+    replaced it (collect.checks_rollup has the same problem), so an older
+    failure under a newer success is not re-run."""
+    newest: dict[str, dict] = {}
+    for r in runs:
+        key = r.get("path") or r.get("name") or str(r.get("workflow_id") or r.get("id"))
+        if key not in newest or _run_key(r) >= _run_key(newest[key]):
+            newest[key] = r
+    return [r for r in newest.values() if r.get("status") == "completed" and (r.get("conclusion") or "") in collect.FAILED_CONCLUSIONS]
+
+
+def _rerun_checks(gh: GhClient, s: Step) -> tuple[bool, str]:
+    ok, msg, detail = preflight_head(gh, s)
+    if not ok:
+        return False, f"preflight refused: {msg}"
+    head = (detail.get("head") or {}).get("sha") or s.expect_head
+    failed = failed_workflow_runs(gh.workflow_runs(head))
+    if not failed:
+        return False, "no failed workflow run on the head — the red check is a commit status or an older run, and there is nothing to re-run"
+    for r in failed:
+        gh.rerun_failed_jobs(int(r["id"]))
+    names = ", ".join((r.get("name") or r.get("path") or str(r.get("id"))) for r in failed)
+    return True, f"re-ran the failed jobs of {len(failed)} workflow run(s): {names}"
 
 
 def _request_changes(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1178,6 +1248,7 @@ def build_parser() -> argparse.ArgumentParser:
                     help="M with exactly one --close, or N:M to say which close (repeatable)")
     ap.add_argument("--refresh", type=int, action="append")
     ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
+    ap.add_argument("--rerun-checks", type=int, action="append", help="re-run the failed jobs of the head's workflow runs")
     ap.add_argument("--reason", action="append", metavar="TEXT | N=TEXT",
                     help="for --refresh / --rerun: what changed; for --request-changes: an opening line; for --close: why. "
                          "N=TEXT scopes it to PR N; bare TEXT needs exactly one step that takes a reason")

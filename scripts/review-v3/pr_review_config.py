@@ -53,14 +53,29 @@ class UserConfig:
         }
 
 
-def lanes_from_teams(memberships: dict, config) -> list[str]:
+def lanes_from_teams(memberships: dict, config) -> list[str] | None:
     """The lanes a person owns by virtue of the teams they are actually on:
     every team they belong to maps back to its routing role, and every matrix
     cell naming that role contributes its subject. This is what `me` means
     when no config file pins it — the org chart already knows the answer, so
-    a first run doesn't have to claim every lane."""
-    roles = {r for r, team in config.teams.items() if memberships.get(team) is True}
+    a first run doesn't have to claim every lane.
+
+    Three answers, and the caller must keep them apart:
+      - `None`: unreadable. No team answered True and at least one answered
+        None (a 403: the token can't read memberships), or nothing was asked.
+        The caller falls back to every lane and says so.
+      - `[]`: readable, and a member of none of the routing teams. Every row
+        routes. (gh_client.team_member maps a 404 to False, and GitHub
+        answers 404 for a team the token can't see, so this can also mean
+        the token sees nothing — the caller's warning says so.)
+      - lanes: the teams that answered True. A None beside a True is a
+        partial read and still evidence; the caller names the unread teams.
+    """
+    answers = {team: (memberships or {}).get(team) for team in config.teams.values()}
+    roles = {r for r, team in config.teams.items() if answers.get(team) is True}
     if not roles:
+        if not answers or any(v is None for v in answers.values()):
+            return None
         return []
     lanes = {d for d, cell in config.matrix.items()
              if roles & {cell.get("mechanical"), cell.get("substantive")}}
