@@ -56,8 +56,8 @@ sections:
 
       - Manage Kubernetes clusters on all major cloud providers.
       - Increase productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate Kubernetes clusters, app workloads, or both.
-      - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/using-pulumi/continuous-delivery/).
-      - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/using-pulumi/continuous-delivery/argocd/).
+      - Automate Kubernetes deployments with CI/CD integrations for [Flux](/blog/pulumi-kubernetes-new-2022/#integration-with-flux-sources), [Spinnaker](/blog/unlocking-spinnaker-with-pulumi/), [Octopus](/blog/deploying-with-octopus-and-pulumi/), [GitHub Actions](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/), [GitLab](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/), [Azure DevOps](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/) and [more](/docs/iac/operations/continuous-delivery/).
+      - Seamlessly manage both Kubernetes and cloud resources using GitOps with the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/), including [ArgoCD integration](/docs/iac/operations/continuous-delivery/argocd/).
       - Use Kubernetes [Server-Side Apply](/registry/packages/kubernetes/how-to-guides/managing-resources-with-server-side-apply/) to safely manage shared Kubernetes resources with Pulumi and your existing controllers.
     image: /images/topics/kubernetes/k8s-diagram.png
     image_alt: Kubernetes architecture diagram
@@ -221,7 +221,7 @@ sections:
         description: YAML and templated DSLs force you to write the same boilerplate code over and over. Pulumi's Kubernetes library allows you to codify those patterns and best practices so you can stop reinventing the wheel and start inventing the platforms of the future.
       - icon: shield-check
         title: Be proactive, not reactive
-        description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
+        description: When you enable Pulumi Policies, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
       - icon: lock
         title: Centralize secrets
         description: "[Pulumi ESC](/product/secrets-management/) is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes."
@@ -268,7 +268,7 @@ sections:
         description: Neo can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures.
       - icon: shield-check
         title: Stay secure
-        description: Neo combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and detect anomalous activity.
+        description: Neo combines Pulumi's resource graph of your cloud infrastructure and knowledge about security best practices to identify security violations and detect anomalous activity.
     anchor: ai-management
 
   - type: two_column

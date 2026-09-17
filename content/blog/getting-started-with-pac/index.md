@@ -121,7 +121,7 @@ const example = new aws.elasticsearch.Domain("example", {
 });
 ```
 
-In this example, we’ll use [AWSGuard](/docs/using-pulumi/crossguard/awsguard/), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
+In this example, we’ll use [AWSGuard](https://github.com/pulumi/pulumi-policy-aws), which is a set of best practice policies for AWS. First, create a directory, change into it, and create a new policy.
 
 ```bash
 $ mkdir awsguard && cd awsguard

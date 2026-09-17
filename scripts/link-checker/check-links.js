@@ -32,6 +32,13 @@ const additionalRoutes = [
     // Alternative version of the home page for Google ads.
     "https://www.pulumi.com/b/",
     "https://www.pulumi.com/registry/sitemap.xml",
+    // Cloud REST API schema pages carry `block_external_search_index: true` (they're
+    // a large, uniformly auto-generated set with no search intent of their own; see
+    // CONTRIBUTING.md), which also drops them from sitemap.xml, so the sitemap-derived
+    // crawl below never visits any of them and their outbound links go unchecked.
+    // All ~800 pages share one template, so one representative page is enough to
+    // catch a template-wide broken-link regression even without full coverage.
+    "https://www.pulumi.com/docs/reference/cloud-rest-api/schema/decryptenvironmentsecretsrequest/",
 ]
 
 
@@ -80,7 +87,7 @@ checkLinks();
 
 // Runs the checker.
 async function checkLinks() {
-    const checker = getChecker([]);
+    const checker = getChecker([], []);
 
     // Load all URLs.
     const urls = await getURLsToCheck(baseURL);
@@ -90,9 +97,25 @@ async function checkLinks() {
     urls.forEach(url => checker.enqueue(url));
 }
 
+// Path segments that identify URL spaces that have been retired in favor of a
+// new location, each fixed up with `aliases:` front matter so the retired URL
+// still resolves via a redirect instead of going dead. A link that still
+// points at one of these but resolves via a redirect isn't broken, so the
+// checker's broken/not-broken split never sees it -- it costs the reader and
+// the crawler a hop for nothing, which is a separate, quieter kind of problem
+// than a dead link. See redirectHops below. Add a new entry here whenever
+// another retired-path class turns out to keep resurfacing in body content.
+const RETIRED_PATHS = [
+    // Moved to /docs/iac/concepts/* by #21072.
+    "/docs/concepts/",
+    // Moved to /docs/iac/concepts/resources/options/* ; occurrences fixed by
+    // #21145 and #21155.
+    "/docs/iac/concepts/options/",
+];
+
 // Returns an instance of either HtmlUrlChecker.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-function getChecker(brokenLinks) {
+function getChecker(brokenLinks, redirectHops) {
 
     // Specify an alternative user agent, as BLC's default doesn't pass some services' validations.
     const userAgent = "pulumi+blc/0.1";
@@ -111,16 +134,16 @@ function getChecker(brokenLinks) {
         ]
     };
 
-    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks));
+    return new HtmlUrlChecker(opts, getDefaultHandlers(brokenLinks, redirectHops));
 }
 
 // Returns the set of event handlers for HTMLUrlCheckers.
 // https://github.com/stevenvachon/broken-link-checker#htmlurlchecker
-function getDefaultHandlers(brokenLinks) {
+function getDefaultHandlers(brokenLinks, redirectHops) {
     return {
         link: (result) => {
             try {
-                onLink(result, brokenLinks);
+                onLink(result, brokenLinks, redirectHops);
             }
             catch (error) {
                 fail(error);
@@ -139,7 +162,7 @@ function getDefaultHandlers(brokenLinks) {
         },
         end: async () => {
             try {
-                await onComplete(brokenLinks);
+                await onComplete(brokenLinks, redirectHops);
             }
             catch (error) {
                 fail(error);
@@ -149,7 +172,7 @@ function getDefaultHandlers(brokenLinks) {
 }
 
 // Handles BLC 'link' events, adding broken links to the running list.
-function onLink(result, brokenLinks) {
+function onLink(result, brokenLinks, redirectHops) {
     const source = result.base.resolved;
     const destination = result.url.resolved;
 
@@ -161,10 +184,32 @@ function onLink(result, brokenLinks) {
         // Always log broken links to the console.
         logLink(source, destination, reason);
 
-    } else if (process.env.DEBUG) {
+    } else {
+        // Not broken, but did it get here by way of a redirect? BLC follows
+        // redirects transparently before deciding broken/not-broken, so a
+        // working-but-stale link never surfaces any other way. Scope this
+        // narrowly to the hop classes we know keep resurfacing (see
+        // RETIRED_PATHS above) rather than flagging every internal redirect
+        // -- most of those are intentional (versioned URLs, S3 redirects the
+        // exclusion list already tolerates) and would just be noise here.
+        // Match on the resolved (absolutized) URL rather than the as-authored
+        // href: a relative link into a retired space (e.g. "../concepts/
+        // stacks/", which docs/ content can't write but blog/marketing pages
+        // can) wouldn't contain the retired segment in its raw form, but its
+        // resolved URL always will.
+        const redirectedTo = result.url.redirected;
+        if (
+            redirectedTo != null &&
+            isInternalLink(destination) &&
+            RETIRED_PATHS.some((retiredPath) => destination.includes(retiredPath))
+        ) {
+            addRedirectHop(source, destination, redirectedTo, redirectHops);
+            logLink(source, destination, `REDIRECT_HOP -> ${redirectedTo}`);
+        } else if (process.env.DEBUG) {
 
-        // Log successes when DEBUG is truthy.
-        logLink(source, destination, result.http.response.statusCode);
+            // Log successes when DEBUG is truthy.
+            logLink(source, destination, result.http.response.statusCode);
+        }
     }
 }
 
@@ -180,7 +225,7 @@ function onPage(error, pageURL, brokenLinks) {
 }
 
 // Handles the BLC 'complete' event, which is raised at the end of a run.
-async function onComplete(brokenLinks) {
+async function onComplete(brokenLinks, redirectHops) {
     // Split broken links into internal and external
     const internalLinks = brokenLinks.filter(link => isInternalLink(link.destination));
     const externalLinks = brokenLinks.filter(link => !isInternalLink(link.destination));
@@ -189,6 +234,13 @@ async function onComplete(brokenLinks) {
     const filteredInternal = excludeAcceptable(internalLinks);
     const filteredExternal = excludeAcceptable(externalLinks);
 
+    // Only broken links justify a retry: a redirect hop is a permanent,
+    // deterministic finding (the link is stale until someone edits it -- it
+    // will never "pass" on a later attempt), not a transient failure that a
+    // re-crawl could clear. Folding it into the retry trigger would force up
+    // to maxRetries extra full-site crawls on every run that finds one, for
+    // no benefit. Redirect hops are still reported below via writeResults();
+    // they're just excluded from the decision to retry.
     const totalFiltered = filteredInternal.length + filteredExternal.length;
 
     // If we failed and a retry count was provided, retry. Note that retry count !==
@@ -207,19 +259,21 @@ async function onComplete(brokenLinks) {
     // broken. Slack posting now happens at the workflow level (the link-fix PR
     // link), not here. Broken links are already logged to the console as they're
     // found, in onLink.
-    writeResults(filteredInternal, filteredExternal);
+    writeResults(filteredInternal, filteredExternal, redirectHops);
 }
 
 // Writes the final broken-link results to RESULTS_FILE in the shape downstream
-// tooling expects: a generation timestamp plus separate internal/external lists.
-function writeResults(internal, external) {
+// tooling expects: a generation timestamp plus separate internal/external/
+// redirectHops lists.
+function writeResults(internal, external, redirectHops) {
     const results = {
         generated: new Date().toISOString(),
         internal,
         external,
+        redirectHops,
     };
     fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2) + "\n");
-    console.log(`Wrote ${internal.length + external.length} broken link(s) to ${RESULTS_FILE}.`);
+    console.log(`Wrote ${internal.length + external.length} broken link(s) and ${redirectHops.length} redirect hop(s) to ${RESULTS_FILE}.`);
 }
 
 /**
@@ -413,7 +467,6 @@ function getDefaultExcludedKeywords() {
         // Old internal URLs with working S3 redirects (issue #17449)
         "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
         "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
-        "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies",                  // S3-redirects to github.com/pulumi/compliance-policies; substring covers /, /index.html, and anchor variants
         // Old internal URLs with working S3 redirects, flagged on the 2026-06-16 run
         "https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies",  // blog/deployment-guardrails-with-policy-as-code, blog/devsecops-strategy-...-tivity-health: S3 → github.com/pulumi/compliance-policies (cross-host redirect BLC mishandles)
         "https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/awsguard",                   // blog/deployment-guardrails-with-policy-as-code: S3 → github.com/pulumi/pulumi-policy-aws
@@ -422,7 +475,6 @@ function getDefaultExcludedKeywords() {
         "https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/",                       // blog/unified-programmatic-approach-...-bmw, docs/reference/cloud-rest-api/organizations (from OpenAPI spec): S3 → /docs/administration/access-identity/oidc-issuers/
         // Old internal URLs with working S3 redirects, recurring false positives after PR #19980 (2026-06-30, 2026-07-02)
         "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/",                          // blog/2019-year-at-a-glance, blog/aws-enterprise-container-management, blog/beyond-yaml-kubernetes-2026-automation-era: S3 → /docs/integrations/clouds/kubernetes/ (transient CloudFront cache misses re-flag it)
-        "https://www.pulumi.com/docs/using-pulumi/crossguard/awsguard/",                                // blog/2019-year-at-a-glance, blog/getting-started-with-pac, blog/pulumi-2020-update: S3 → github.com/pulumi/pulumi-policy-aws (cross-host redirect BLC mishandles)
         "https://www.pulumi.com/blog/relaunching-pulumis-public-roadmap/",                              // blog/2021-end-of-year-review: S3 → /blog/ (post never migrated, redirect added in #19541)
         // External links reported as broken in issue #17495
         "https://roadmap.sh/videos/scaling-the-unscalable",
@@ -513,6 +565,30 @@ function addLink(source, destination, reason, links) {
         source,
         destination,
         reason,
+    });
+}
+
+// Adds a redirect-hop finding to the running list. Unlike addLink, this also
+// records where the link actually landed (redirectsTo), since the fix is to
+// rewrite the source link to that path, not to treat it as broken.
+//
+// Deduped on (destination, redirectsTo), dropping source: a stale link in
+// shared chrome (nav, footer, a partial) surfaces once per page that
+// includes it, and a broken links.json shouldn't carry thousands of
+// near-identical entries for what is, structurally, one stale link. The
+// first page it's found on is enough of a pointer for the fix to locate it.
+function addRedirectHop(source, destination, redirectsTo, links) {
+    const alreadyRecorded = links.some(
+        link => link.destination === destination && link.redirectsTo === redirectsTo
+    );
+    if (alreadyRecorded) {
+        return;
+    }
+    links.push({
+        source,
+        destination,
+        redirectsTo,
+        reason: "REDIRECT_HOP",
     });
 }
 

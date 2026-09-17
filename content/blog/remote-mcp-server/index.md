@@ -92,7 +92,7 @@ This means code generation is more accurate and up-to-date with the latest provi
 
 ### Autonomous infrastructure with Pulumi Neo
 
-This is where the Remote MCP Server truly shines. For complex infrastructure tasks that require multiple steps, code changes, testing, and pull requests, your AI assistant can delegate directly to [Pulumi Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/)—Pulumi's autonomous infrastructure AI agent.
+This is where the Remote MCP Server truly shines. For complex infrastructure tasks that require multiple steps, code changes, testing, and pull requests, your AI assistant can delegate directly to [Pulumi Neo](/docs/ai/neo/)—Pulumi's autonomous infrastructure AI agent.
 
 **What makes Neo special:**
 

@@ -4,6 +4,7 @@ meta_desc: |
      A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
 type: what-is
+date: 2024-05-22T13:29:48-07:00
 page_title: Automate AWS S3 File Expiration with Pulumi
 authors: ["james-denyer"]
 ---
@@ -83,7 +84,7 @@ The filter property with the prefix sub-property ensures that this rule only app
 
 Finally, we export the bucket name, which can be useful if you want to reference this bucket from other parts of your Pulumi program or from other Pulumi stacks.
 
-## Verify the configuration of your S3 file expiration
+## How do you verify the configuration of your S3 file expiration?
 
 After deployment, you can verify the lifecycle configuration in the AWS Management Console:
 

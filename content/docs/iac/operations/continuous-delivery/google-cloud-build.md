@@ -41,7 +41,7 @@ Before you begin, make sure you have:
 
 Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-- **A stored access token** — create a [Pulumi access token](/docs/administration/access-identity/access-tokens/) and keep it in [Secret Manager](https://cloud.google.com/secret-manager/docs), where a build step reads it at runtime.
+- **A stored access token** — create a [Pulumi access token](/docs/administration/concepts/access-tokens/) and keep it in [Secret Manager](https://cloud.google.com/secret-manager/docs), where a build step reads it at runtime.
 - **OIDC** — exchange a short-lived OpenID Connect token for a Pulumi access token at build time, so no long-lived credential is stored anywhere. Prefer this where your CI/CD system supports it well.
 
 This guide's examples use the stored-token path, because Cloud Build has no Pulumi-maintained OIDC integration yet — see [Authenticate without a stored token using OIDC](#authenticate-without-a-stored-token-using-oidc) below.
@@ -50,7 +50,7 @@ This guide's examples use the stored-token path, because Cloud Build has no Pulu
 
 ### Store the access token in Secret Manager
 
-Create a Pulumi access token, preferring an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Create a Pulumi access token, preferring an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 Store the token in Secret Manager and grant the Cloud Build service account permission to read it:
 
@@ -68,7 +68,7 @@ A build configuration then exposes the secret to a step as the `PULUMI_ACCESS_TO
 
 ### Authenticate without a stored token using OIDC
 
-You can avoid storing a static token by having Cloud Build obtain a short-lived [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) token at build time. A build step can request an OIDC id_token for the build's Google Cloud service account, and Pulumi Cloud can register that as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/) and exchange it for a short-lived Pulumi access token.
+You can avoid storing a static token by having Cloud Build obtain a short-lived [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) token at build time. A build step can request an OIDC id_token for the build's Google Cloud service account, and Pulumi Cloud can register that as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/) and exchange it for a short-lived Pulumi access token.
 
 Unlike GitHub Actions and GitLab CI, Cloud Build has no Pulumi-maintained action or component that performs this exchange for you — you would script the token request and the `pulumi login` exchange yourself. Until a dedicated integration exists, the stored-token path above is the simpler and recommended choice, and it's what the rest of this guide uses.
 
@@ -411,7 +411,7 @@ The `availableSecrets` and `options` blocks are unchanged from the build configu
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Version control integrations](/docs/integrations/version-control/) — pull request comments, status checks, and commit linking from Pulumi Cloud.
 - [Google Cloud provider](/registry/packages/gcp/) — manage Cloud Build triggers, repository connections, and the rest of Google Cloud as code.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.

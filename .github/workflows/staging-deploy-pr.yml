@@ -1,0 +1,142 @@
+name: Staging deploy (PR)
+
+# `/deploy-staging` — a tools-team member asks for a pulumi-test.io staging
+# deploy of a PR branch, producing the commit status the Sentinel's
+# infra-evidence gate (G4) requires. The proposal's rule is that infra
+# changes carry a green staging deploy recorded at head SHA, with no waiver;
+# this workflow is how that evidence gets made.
+#
+# Design notes:
+# - Permission gate: only active members of the tools team (teams.tools in
+#   .github/review-routing.yml) may trigger a deploy. Checked in-job via the
+#   org membership API with the PULUMI_BOT_TOKEN (the default GITHUB_TOKEN
+#   cannot read team membership); an API failure refuses (fail closed).
+# - Fork PRs are refused with a comment: deploying fork code to the shared
+#   staging stack is a tools-team manual action, not a comment command.
+# - This workflow never checks out PR code. Its one checkout is a sparse,
+#   base-default-branch copy of scripts/review-v3 (for staging-deploy.sh);
+#   the permission gate above still reads the routing config through the
+#   contents API, because it runs before that checkout. It dispatches the
+#   existing "Build and deploy testing" workflow at the PR's same-repo head
+#   (that workflow checks out and builds in the testing account, as it does
+#   for master), polls the run, and records the outcome as commit status
+#   `staging/pulumi-test-io` at the deployed head SHA. Sentinel G4 checks
+#   that status at the PR's CURRENT head — a later push clears the evidence
+#   automatically (fails closed).
+# - Concurrency: the staging stack is one shared environment, so deploys
+#   queue (`staging-stack` group, no cancel-in-progress). GitHub holds at
+#   most one PENDING run per group and silently drops the one a newer
+#   request displaces — and a dropped run never starts, so nothing inside
+#   this workflow can post a notice for it (every job here sits in the
+#   group; a pending run executes no steps). So a displaced request is
+#   SILENT by design, and the contract is stated where the requester will
+#   see it: the 🚀 comment the job posts when it does start says that a
+#   request which never gets that comment was displaced and should be
+#   re-run once the current deploy finishes.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  # Same trap as review-sentinel.yml: this workflow's refusal comments and
+  # the 🚀 started comment all POST to `/issues/{n}/comments` on a PR
+  # number, which the **pull_requests** scope governs, not `issues`. It has
+  # never shown up because `/deploy-staging` has not been invoked once
+  # (695 runs, all short-circuited), so the first real use would have failed
+  # the same way PR #21642 did.
+  pull-requests: write
+  issues: write
+  statuses: write
+  actions: write       # gh workflow run + gh run watch
+  id-token: write      # ESC OIDC
+
+concurrency:
+  group: staging-stack
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+jobs:
+  deploy:
+    # The commit status this writes is Sentinel gate 4's evidence; without a
+    # Sentinel to read it the command is inert, so it follows the same switch.
+    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '/deploy-staging') && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - name: Gate and gather PR facts
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          ACTOR: ${{ github.event.comment.user.login }}
+          PR: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          refuse() {
+            gh api --method POST "repos/$REPO/issues/$PR/comments" \
+              -f body="$1" >/dev/null
+            echo "refused=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          }
+
+          # Tools-team membership, fail closed on any lookup problem. No
+          # checkout has happened, so read the routing config through the
+          # contents API (this workflow never checks out code).
+          TEAM_REF=$(gh api "repos/$REPO/contents/.github/review-routing.yml" --jq .content | base64 -d | python3 -c "import sys,yaml;print(yaml.safe_load(sys.stdin)['teams']['tools'])")
+          ORG="${TEAM_REF%%/*}"; SLUG="${TEAM_REF#*/}"
+          STATE=$(GH_TOKEN="$TEAM_TOKEN" gh api "orgs/$ORG/teams/$SLUG/memberships/$ACTOR" --jq .state 2>/dev/null || echo "lookup-failed")
+          if [ "$STATE" != "active" ]; then
+            refuse "@$ACTOR \`/deploy-staging\` is limited to **$TEAM_REF** members (membership check: \`$STATE\`). Ask a tools-team member to trigger the staging deploy."
+          fi
+
+          PR_JSON=$(gh api "repos/$REPO/pulls/$PR")
+          HEAD_SHA=$(echo "$PR_JSON" | jq -r .head.sha)
+          HEAD_REF=$(echo "$PR_JSON" | jq -r .head.ref)
+          HEAD_REPO=$(echo "$PR_JSON" | jq -r .head.repo.full_name)
+          if [ "$HEAD_REPO" != "$REPO" ]; then
+            refuse "@$ACTOR this PR's head lives on a fork (\`$HEAD_REPO\`). Staging deploys of fork code are a tools-team manual action — see BUILD-AND-DEPLOY.md."
+          fi
+          {
+            echo "refused=false"
+            echo "head_sha=$HEAD_SHA"
+            echo "head_ref=$HEAD_REF"
+          } >> "$GITHUB_OUTPUT"
+
+      # The dispatch/poll/watch/status sequence lives in
+      # scripts/review-v3/staging-deploy.sh, shared with the unattended lane
+      # (staging-deploy-auto.yml) so the two can't drift on what counts as
+      # evidence. This checkout is the BASE default branch — never the PR's
+      # head — for the same reason the rest of this workflow checks out
+      # nothing: the job holds write permissions and a deploy token.
+      - name: Checkout base (default branch)
+        if: steps.gate.outputs.refused == 'false'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
+      - name: Dispatch testing deploy and record status
+        if: steps.gate.outputs.refused == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          scripts/review-v3/staging-deploy.sh \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.issue.number }}" \
+            --head-sha "${{ steps.gate.outputs.head_sha }}" \
+            --head-ref "${{ steps.gate.outputs.head_ref }}" \
+            --announce

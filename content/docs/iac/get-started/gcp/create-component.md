@@ -393,9 +393,9 @@ class GcpStorageWebsite(pulumi.ComponentResource):
         bucket = storage.Bucket(
             'my-bucket',
             location="US",
-            website=\{
+            website={
                 "main_page_suffix": "index.html"
-            \},
+            },
             uniform_bucket_level_access=True,
             opts=pulumi.ResourceOptions(parent=self),
         )

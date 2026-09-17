@@ -146,7 +146,7 @@ class PulumiServiceWebhook: Stack
             OrganizationName = "example",
             EnvironmentName = "my-environment",
             PayloadUrl = "https://example.com/webhook"
-        })
+        });
     }
 }
 ```

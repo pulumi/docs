@@ -498,10 +498,15 @@ function readPngSoftware(buf) {
  * checkFeatureImageSoftware enforces that a blog post's `feature_image` was
  * produced by the approved pipeline, using an allowlist on the PNG Software tag
  * rather than a denylist (so a new bad generator fails by default). Allowed:
- * "Figma" (designer exports), our renderer's stamp, or no tag at all (legacy
- * skill output — Pillow wrote no Software tag before the stamp was added). Any
- * other stamp (Matplotlib, PIL, DALL·E, Midjourney, etc.) fails. Scope matches
- * the other feature-image checks: blog posts, post-local PNG paths only.
+ * "Figma" (designer exports) and our renderer's stamp. Everything else fails,
+ * including an *absent* tag: a missing Software tag is the default output of
+ * every ad-hoc image writer (Pillow, canvas, sips, ImageMagick, a headless
+ * browser screenshot), so allowing it left the widest hole in this check — an
+ * agent that hand-rolls a 1884x1256 image on a #231F33 backdrop would sail
+ * through the dimension, background, and C2PA checks too. Every pre-stamp
+ * render in the repo has been back-stamped, so untagged now means "not from an
+ * approved source". Scope matches the other feature-image checks: blog posts,
+ * post-local PNG paths only.
  *
  * @param {string} featureImage The `feature_image` front-matter value.
  * @param {string} fullPath Absolute path to the markdown file being linted.
@@ -530,13 +535,14 @@ function checkFeatureImageSoftware(featureImage, fullPath) {
         return null; // Not a PNG; leave format/sizing to the other checks.
     }
 
-    // Allowlist: Figma exports, our renderer's stamp, or no tag (legacy renders).
+    // Allowlist: our renderer's stamp, or Figma (designer exports). Nothing else.
     const software = readPngSoftware(buf);
-    if (software === null || software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
+    if (software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
         return null;
     }
 
-    return `Feature image '${featureImage}' was produced by '${software}', which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+    const source = software === null ? "carries no PNG Software tag" : `was produced by '${software}'`;
+    return `Feature image '${featureImage}' ${source}, which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
 }
 
 /**
@@ -973,18 +979,15 @@ function checkChangelogFilename(date, fullPath) {
 
 /**
  * checkChangelogEditions validates the optional `editions:` front matter on
- * individual changelog entries: it must be a YAML array of edition ids from
- * data/pulumi_pricing.yaml. Templates look the ids up to render the display
- * name, so an entry writes `business-critical` and the badge reads "Business
- * Critical". Authors list every edition the feature is available in; since a
- * lower edition implies the ones above it, that means the lowest applicable
- * edition and all editions above it — checked here as a contiguous suffix of
- * the edition list, not just set membership. Applies only to entry pages, not
- * the section `_index.md`.
+ * individual changelog entries. Entries dated before the V6 launch use the V5
+ * ids. Newer entries use the current ids from data/pulumi_pricing.yaml. Authors
+ * list every edition the feature is available in, so the list must be a
+ * contiguous suffix of the edition order. Applies only to entry pages, not the
+ * section `_index.md`.
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
- * value for an edition that doesn't exist (the free edition is Individual).
+ * value from before Pulumi Cloud had editions at all.
  *
  * @param {*} editions The front matter `editions` value.
  * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
@@ -1014,8 +1017,12 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
     if (!Array.isArray(editions)) {
         return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
     }
+    const filenameDate = path.basename(normalized).slice(0, 10);
+    const legacyEditions = ["individual", "team", "enterprise", "business-critical"];
+    const isLegacyEntry = /^\d{4}-\d{2}-\d{2}$/.test(filenameDate) && filenameDate < "2026-09-15";
+    const allowedEditions = isLegacyEntry ? legacyEditions : PRICING.editions;
     const invalid = editions.filter(function (e) {
-        return !PRICING.editions.includes(e);
+        return !allowedEditions.includes(e);
     });
     if (invalid.length > 0) {
         const quoted = invalid
@@ -1023,19 +1030,20 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
                 return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+        const vocabulary = isLegacyEntry ? "the V5 edition ids" : "data/pulumi_pricing.yaml";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed for this entry date. Use an edition id from " + vocabulary + ": " + allowedEditions.join(", ") + ".";
     }
     if (editions.length === 0) {
         return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
     }
     // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
-    // three valid ids but renders a badge that tells Business Critical readers
-    // the feature isn't theirs.
-    const listed = PRICING.editions.filter(function (e) {
+    // suffix of PRICING.editions. `editions: [pro]` on its own lints as a
+    // valid id but renders a badge that tells Enterprise readers the feature
+    // isn't theirs.
+    const listed = allowedEditions.filter(function (e) {
         return editions.includes(e);
     });
-    const expected = PRICING.editions.slice(PRICING.editions.indexOf(listed[0]));
+    const expected = allowedEditions.slice(allowedEditions.indexOf(listed[0]));
     if (listed.length !== expected.length) {
         const missing = expected.filter(function (e) {
             return !listed.includes(e);
@@ -1111,9 +1119,6 @@ function pulumiCloudValueError(value, label) {
  *
  * The key names the feature because the value does: `pulumi_cloud: rbac` reads
  * as an assertion about Pulumi Cloud, when what it says is which feature the
- * page documents. It is not `cloud_feature` either — content/templates/ uses a
- * `cloud:` mapping for the cloud PROVIDER a template targets, and on a site that
- * documents AWS, Azure, and GCP "cloud feature" reads as a provider feature.
  *
  * @param {*} feature The front matter `pulumi_cloud_feature` value.
  * @param {*} legacy The front matter `pulumi_cloud` value (renamed; rejected).

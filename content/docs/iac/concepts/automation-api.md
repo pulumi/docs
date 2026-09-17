@@ -32,7 +32,7 @@ Automation API drives the Pulumi CLI under the hood, so the CLI must be availabl
 {{% /notes %}}
 
 {{% notes type="tip" %}}
-Automation API drives the Pulumi engine itself, running updates, previews, refreshes, and destroys from a program. If you instead need to read or modify Pulumi Cloud resources (for example, stack metadata, access tokens, or [Insights](/docs/insights/) data) without running a Pulumi program, use [`pulumi api`](/docs/iac/cli/api/), the CLI command for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) directly.
+Automation API drives the Pulumi engine itself, running updates, previews, refreshes, and destroys from a program. If you instead need to read or modify Pulumi Cloud resources (for example, stack metadata, access tokens, or [Discovery](/docs/discovery-governance/discovery/) data) without running a Pulumi program, use [`pulumi api`](/docs/iac/cli/api/), the CLI command for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) directly.
 {{% /notes %}}
 
 ## Use cases
@@ -61,7 +61,7 @@ To enable a broad range of runtime customization, Automation API defines a `Work
 
 ## Stacks
 
-A `Stack` is an isolated, independently configurable instance of a Pulumi program. It exposes methods for the full Pulumi lifecycle (`up`, `preview`, `refresh`, and `destroy`) as well as methods for managing configuration. Multiple stacks are commonly used to represent different phases of development---such as development, staging, and production---or feature branches. For background on stacks, see [Stacks](/docs/iac/concepts/stacks/).
+A `Stack` is an isolated, independently configurable instance of a Pulumi program. It exposes methods for the full Pulumi lifecycle (`up`, `preview`, `refresh`, and `destroy`) as well as methods for managing configuration, renaming a stack, and exporting or importing its deployment state (see [Renaming a stack and exporting or importing its state](#renaming-a-stack-and-exporting-or-importing-its-state) below). Multiple stacks are commonly used to represent different phases of development---such as development, staging, and production---or feature branches. For background on stacks, see [Stacks](/docs/iac/concepts/stacks/).
 
 A `RemoteStack` is the equivalent of a `Stack` for a `RemoteWorkspace`. It exposes the same lifecycle methods, run remotely from a remote workspace.
 
@@ -218,6 +218,118 @@ The Java Automation API doesn't yet expose a resource-import method; `WorkspaceS
 {{% /chooser %}}
 
 This capability has shipped since Pulumi CLI v3.127.0. If your program [installs the CLI programmatically](/docs/iac/guides/building-extending/automation-api/#install-the-cli-programmatically) rather than relying on a preinstalled copy, make sure it resolves to that version or later.
+
+## Renaming a stack and exporting or importing its state
+
+A `Stack` also exposes methods for renaming a stack and for exporting or
+importing its deployment state directly, the programmatic equivalents of the
+[`pulumi stack rename`](/docs/iac/cli/commands/pulumi_stack_rename/),
+[`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/), and
+[`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/) CLI
+commands. Renaming has the same consequences here as it does from the CLI —
+see [Rename a stack](/docs/iac/concepts/stacks/#rename-a-stack). Export and
+import are typically paired together to edit a stack's state directly, such
+as recovering from a failed deployment or removing a resource from state
+without destroying it in the cloud.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import { LocalWorkspace } from "@pulumi/pulumi/automation";
+
+const stack = await LocalWorkspace.createOrSelectStack(args);
+
+await stack.rename({ stackName: "dev-2" });
+
+const state = await stack.exportStack();
+
+await stack.importStack(state);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+from pulumi import automation as auto
+
+stack = auto.create_or_select_stack(stack_name=stack_name, work_dir=work_dir)
+
+stack.rename("dev-2")
+
+state = stack.export_stack()
+
+stack.import_stack(state)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+import (
+    "github.com/pulumi/pulumi/sdk/v3/go/auto"
+    "github.com/pulumi/pulumi/sdk/v3/go/auto/optrename"
+)
+
+stack, err := auto.UpsertStackLocalSource(ctx, stackName, workDir)
+if err != nil {
+    return err
+}
+
+_, err = stack.Rename(ctx, optrename.StackName("dev-2"))
+if err != nil {
+    return err
+}
+
+state, err := stack.Export(ctx)
+if err != nil {
+    return err
+}
+
+err = stack.Import(ctx, state)
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using Pulumi.Automation;
+
+var stack = await LocalWorkspace.CreateOrSelectStackAsync(args);
+
+var state = await stack.ExportStackAsync();
+
+await stack.ImportStackAsync(state);
+```
+
+The .NET Automation API doesn't yet expose a stack-rename method; `WorkspaceStack` has no equivalent to the other languages' `rename`/`Rename`. Drive `pulumi stack rename` directly through the CLI in the meantime.
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+import com.pulumi.automation.LocalWorkspace;
+
+var stack = LocalWorkspace.createOrSelectStack(args);
+
+var state = stack.exportStack();
+
+stack.importStack(state);
+```
+
+The Java Automation API doesn't yet expose a stack-rename method; `WorkspaceStack` has no equivalent to the other languages' `rename`/`Rename`. Drive `pulumi stack rename` directly through the CLI in the meantime.
+
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 ## Supported languages
 

@@ -24,6 +24,19 @@ name: Review Label Reconcile
 # 10-minute slack; if still indeterminate, skip — this job must never flip a
 # label it can't justify.
 #
+# A second sweep covers the other orphan: review:in-progress with no run
+# behind it. Both review lanes post a <!-- CLAUDE_PROGRESS --> spinner
+# comment seconds BEFORE they set the label and delete or rewrite it on
+# every terminal path, so "label present, live spinner absent" cannot be a
+# running review — it is a run that died without finalizing (job-level
+# timeout axing the finalize steps, a lost runner, or the superseded-publish
+# gap #21642 hit before claude-code-review.yml's guard learned to reset the
+# label). Those PRs move to review:stale, the state the guard itself now
+# uses, once the label is at least 30 minutes old (slack for the
+# spinner-then-label ordering and API lag; no lane sets the label before
+# its spinner). Run-list mapping is deliberately not used: a dispatched run
+# reports the default branch as its head and carries no PR number.
+#
 # Deterministic — no model calls. Mutations are label transitions only.
 
 on:
@@ -54,7 +67,7 @@ jobs:
                 --json number --jq '.[].number'
             } | sort -un
           )
-          [ -z "$prs" ] && { echo "no open PRs carry a terminal review label"; exit 0; }
+          [ -z "$prs" ] && echo "no open PRs carry a terminal review label"
 
           for pr in $prs; do
             head_sha=$(gh pr view "$pr" --repo "$REPO" --json headRefOid --jq .headRefOid)
@@ -114,4 +127,39 @@ jobs:
               gh pr edit "$pr" --repo "$REPO" \
                 --add-label "review:stale" --remove-label "review:no-blockers"
             fi
+          done
+
+          # ---- orphaned review:in-progress -------------------------------
+          stuck=$(gh pr list --repo "$REPO" --state open --label review:in-progress \
+            --json number --jq '.[].number' | sort -un)
+          [ -z "$stuck" ] && { echo "no open PRs carry review:in-progress"; exit 0; }
+          now_s=$(date -u +%s)
+          for pr in $stuck; do
+            # Most recent `labeled review:in-progress` event.
+            labeled_at=$(gh api --paginate "repos/$REPO/issues/$pr/timeline" \
+              --jq '[.[] | select(.event == "labeled" and .label.name == "review:in-progress") | .created_at] | last // empty' \
+              2>/dev/null | tail -1 || true)
+            if [ -z "$labeled_at" ]; then
+              echo "PR #$pr: in-progress label has no timeline event; skipping"
+              continue
+            fi
+            age_s=$(( now_s - $(date -u -d "$labeled_at" +%s) ))
+            if [ "$age_s" -lt 1800 ]; then
+              echo "PR #$pr: in-progress for ${age_s}s (< 30m); leaving it"
+              continue
+            fi
+            # A live run's spinner is the "Reviewing —" body; a terminal
+            # rewrite ("Review errored" / "timed out" / "superseded") is not.
+            # --paginate runs the jq per page; sum the per-page counts so a
+            # spinner on an earlier page is not missed.
+            live=$(gh api --paginate "repos/$REPO/issues/$pr/comments" \
+              --jq '[.[] | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | select(.body | test("Reviewing|starting a fresh review"))] | length' \
+              2>/dev/null | awk '{ s += $1 } END { print s + 0 }')
+            if [ "${live:-0}" -gt 0 ]; then
+              echo "PR #$pr: in-progress for ${age_s}s with a live spinner; a run may still be going"
+              continue
+            fi
+            echo "PR #$pr: review:in-progress for ${age_s}s with no live spinner; marking stale"
+            gh pr edit "$pr" --repo "$REPO" \
+              --add-label "review:stale" --remove-label "review:in-progress"
           done

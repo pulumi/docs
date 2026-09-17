@@ -1,0 +1,99 @@
+---
+title: Select the right model and edition
+meta_desc: Understanding your deployment options, Pulumi Cloud editions, and support needs to help you choose the right approach for your organization.
+aliases:
+  - /docs/administration/onboarding-guide/choose-subscription/
+  - /docs/pulumi-cloud/get-started/onboarding-guide/choose-subscription/
+  - /docs/deployments/get-started/onboarding-guide/choose-subscription/
+  - /docs/administration/onboarding-guide/choose-edition/
+weight: 1
+menu:
+    administration:
+        name: Select the right model
+        parent: administration-get-started
+        identifier: select-a-model
+---
+
+Setting up your Pulumi Cloud account will lay the foundation for onboarding your team and enabling collaboration. Understanding your deployment options, editions, and support needs will help you choose the right approach for your organization.
+
+## Choose your edition
+
+Choose an edition based on the collaboration, automation, and governance capabilities you need.
+
+### Free
+
+Choose Free when one person needs core infrastructure as code, state management, Pulumi Deployments, and basic Pulumi ESC. Free has no managed-resource limit. It does not include Pulumi Neo, Resource Search, or Property Search.
+
+### Essentials
+
+Choose Essentials when a team needs a shared organization with multiple users. Essentials adds Pulumi Neo, Resource Search, Property Search, audit logs, and policy results in advisory mode.
+
+### Pro
+
+Choose Pro when your organization needs stronger access controls, automation, and policy enforcement. Pro adds SAML SSO, advanced role-based access control, automated audit-log export, organization-managed policy enforcement, preventative policies, custom policy packs, drift remediation, scheduled Deployments, and scheduled Neo tasks.
+
+### Enterprise
+
+Choose Enterprise when your organization needs advanced compliance, identity management, or deployment controls. Enterprise adds conformance packs, unlimited custom policy packs, policy remediation, SCIM, self-hosting, GitHub Enterprise Server support, and unlimited custom roles.
+
+{{% notes type="info" %}}
+Learn more about the differences between [the editions](/pricing/).
+{{% /notes %}}
+
+{{% notes type="info" %}}
+For hands-on engineering support, consider Pulumi Professional Services. Our team can help design and implement best practices, build custom providers and components, migrate existing infrastructure, and more. We offer standard packages and custom solutions. [Learn more about Professional Services](/proserv/).
+{{% /notes %}}
+
+## Choose your deployment model
+
+Pulumi Cloud offers two deployment options, each designed for different organizational needs and security requirements.
+
+### SaaS (Recommended for most organizations)
+
+Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade reliability built in. You get high availability, disaster recovery, and geo-replication out of the box, plus security and compliance features detailed in the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper). Sign up at [pulumi.com](/) to get started.
+
+### Self-hosted (For regulated or air-gapped environments)
+
+{{< pulumi-cloud "self-hosting" />}}
+
+Choose [self-hosted Pulumi Cloud](/product/self-hosted/) if you need complete control over your hosting environment. This is ideal for air-gapped environments or customers who require an isolated version of the Pulumi platform. You can deploy anywhere: on-premises, in your cloud account, or any infrastructure you control.
+
+{{% notes type="info" %}}
+
+To get started with self-hosted Pulumi Cloud, follow the [self-hosting infrastructure](/docs/administration/self-hosting/) guide. Because Pulumi Cloud isn't yet available to store state during the initial bootstrap process, you'll need a [DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) to manage state for the deployment that stands up the platform.
+
+{{% /notes %}}
+
+## Choose your billing approach
+
+Pulumi offers flexible billing options to match your organization's procurement preferences.
+
+### Monthly billing
+
+Pay monthly with a credit card. This option provides flexibility and is ideal for teams that want to start quickly or have variable usage patterns.
+
+### Annual commitment pricing
+
+Annual commitment pricing is available on Pro and Enterprise only. Pay upfront with invoicing for a committed amount of usage. [Contact us](/contact/) to discuss commitment pricing.
+
+{{% notes type="info" %}}
+Both billing options include detailed usage insights through the Billing & usage page in your organization settings. Track IaC resources, deployment minutes, ESC secrets, and download usage history. You can also set [Neo usage limits](/docs/ai/neo/usage-limits/) to cap spend on Pulumi Neo. Only organization administrators and designated [billing administrators](/docs/administration/concepts/billing-managers/) can access these pages. You'll also receive monthly usage reports via email.
+{{% /notes %}}
+
+## Getting started with your chosen model
+
+{{% notes type="info" %}}
+
+If you are using a self-hosted installation of the Pulumi platform, the URLs used in the following documentation will need to be replaced with your instance's customer URLs.
+
+{{% /notes %}}
+
+### Create your account
+
+Sign up using your email address and password, or connect with your GitHub, GitLab, or Atlassian identity at [app.pulumi.com/signup](https://app.pulumi.com/signup). After signup, you can configure SAML/SSO for team onboarding. Learn more about [account management](/docs/administration/concepts/rbac/teams/).
+
+### Explore the console
+
+Access the Pulumi Cloud console through the "Sign In" link at [pulumi.com](/) or go directly to [app.pulumi.com](https://app.pulumi.com/signin). The dashboard provides useful content and links, while the left navigation gives you access to stacks, resources, and settings. Use the search function to find specific resources, and select the sparkle icon to access Pulumi Neo, your AI agent.
+
+{{< get-started-stepper >}}

@@ -31,7 +31,7 @@ By default, Neo reviews every pull request automatically, skipping drafts and pu
 
 You can scope Neo to review only when someone mentions `@pulumi-neo`, instead of automatically. Mention it in a pull request description, a review comment (top-level or inline), or an issue, and Neo replies in the same thread. Ask it to walk through what a change does, including resources that change in stacks the pull request does not modify directly.
 
-Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link already exists; otherwise, [link a GitHub identity to your Pulumi account](/docs/administration/organizations-teams/accounts/#adding-new-identities).
+Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link already exists; otherwise, [link a GitHub identity to your Pulumi account](/docs/administration/concepts/accounts/#adding-new-identities).
 
 ## Availability
 
@@ -46,7 +46,7 @@ Neo code reviews run on GitHub.com. They are not available on Azure DevOps, GitL
 
 ## Permissions
 
-Neo code reviews run with the same governance as any other [Neo task](/docs/ai/neo/tasks/), including the [role-based access control](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable code reviews under **Settings** > **Neo settings** > **Code reviews**.
+Neo code reviews run with the same governance as any other [Neo task](/docs/ai/neo/tasks/), including the [role-based access control](/docs/administration/concepts/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable code reviews under **Settings** > **Neo settings** > **Code reviews**.
 
 ## Troubleshooting
 

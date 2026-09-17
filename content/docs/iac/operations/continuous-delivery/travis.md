@@ -69,7 +69,7 @@ script:
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Prefer an organization or team token over a personal one.
+When your pipeline uses Pulumi Cloud as its backend, it needs a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. Prefer an organization or team token over a personal one.
 
 Provide the token to the build as the `PULUMI_ACCESS_TOKEN` environment variable. Set it as an encrypted variable so it isn't exposed in build logs or committed to source control. The recommended way is the Travis repository settings — under **Settings → Environment Variables** add `PULUMI_ACCESS_TOKEN` and leave **Display value in build log** off. You can also encrypt it into `.travis.yml` with the Travis CLI:
 

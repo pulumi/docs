@@ -53,9 +53,9 @@ Once the orb is referenced, its commands — such as `pulumi/login`, `pulumi/pre
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. The `pulumi/login` command reads the token from the `PULUMI_ACCESS_TOKEN` environment variable.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. The `pulumi/login` command reads the token from the `PULUMI_ACCESS_TOKEN` environment variable.
 
-Store the token in a CircleCI [context](https://circleci.com/docs/contexts/) rather than committing it to your repository. A context holds environment variables at the organization level, so the same token is available to every project that needs it. You can also set it as a [project environment variable](https://circleci.com/docs/set-environment-variable/#set-an-environment-variable-in-a-project) if it's used by only one project. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Store the token in a CircleCI [context](https://circleci.com/docs/contexts/) rather than committing it to your repository. A context holds environment variables at the organization level, so the same token is available to every project that needs it. You can also set it as a [project environment variable](https://circleci.com/docs/set-environment-variable/#set-an-environment-variable-in-a-project) if it's used by only one project. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a CircleCI job or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys in CircleCI.
 
@@ -202,6 +202,6 @@ pulumi package add terraform-provider mrolla/circleci
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral per-pull-request environments.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

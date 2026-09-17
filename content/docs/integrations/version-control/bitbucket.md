@@ -15,6 +15,10 @@ aliases:
 
 Pulumi Cloud integrates with Bitbucket Cloud to post pull request previews, deploy infrastructure on push, create ephemeral review stacks, and report commit statuses — the same capabilities available with [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/). Once configured, Pulumi automatically registers a webhook on each Bitbucket repository you wire up for deployments and manages authentication for you.
 
+{{% notes type="info" %}}
+This page covers the Bitbucket deployments integration. Backing a Pulumi organization's *membership* with a Bitbucket workspace is a separate feature. See [Identity providers](/docs/administration/concepts/identity-providers/#bitbucket).
+{{% /notes %}}
+
 ## Installation and configuration
 
 {{% notes type="info" %}}
@@ -125,7 +129,7 @@ The Pulumi Bitbucket integration posts results back to Bitbucket regardless of w
 
 ## OIDC authentication
 
-Use Bitbucket Pipelines' built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as pipeline variables. See [Configuring OpenID Connect for Pulumi](/docs/administration/access-identity/oidc-issuers/) for configuration details.
+Use Bitbucket Pipelines' built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as pipeline variables. See [Configuring OpenID Connect for Pulumi](/docs/administration/guides/oidc-issuers/) for configuration details.
 
 ## Troubleshooting
 
@@ -149,3 +153,9 @@ If deployments aren't triggering on push or pull request events:
 1. Verify deployment settings are enabled under **Stack** > **Settings** > **Deploy**.
 1. Check that the branch matches your configured deployment branch.
 1. If using path filters, confirm that the changed files match your glob patterns.
+
+## Learn more
+
+- [Identity providers](/docs/administration/concepts/identity-providers/#bitbucket) — backing your Pulumi organization's membership with a Bitbucket workspace.
+- [Pulumi Deployments](/docs/deployments/concepts/) — the deployment engine this integration triggers.
+- [Version control integrations](/docs/integrations/version-control/) — the same capabilities on GitHub, GitLab, and Azure DevOps.

@@ -12,6 +12,7 @@ aliases:
 - /docs/guides/adopting/from_terraform/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
+- /solutions/terraform-migration/
 ---
 
 If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi. Not all of them involve converting code: you can put your Terraform state under Pulumi Cloud's management, or run your existing HCL on the Pulumi engine, without rewriting anything.
@@ -38,7 +39,7 @@ Converting is not a prerequisite for getting value from Pulumi. Two options let 
 
 [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so pointing an existing project at it means adding a standard `backend "remote"` block. Your resource code and day-to-day workflow are unchanged, and the guide covers migrating state from HCP Terraform, Amazon S3, Azure Blob Storage, Google Cloud Storage, and local files.
 
-Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
+Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/discovery-governance/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
 
 ### Writing Pulumi programs in HCL
 
@@ -115,7 +116,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
 1. **Install the tool**:
 
-   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed.
+   The tool runs as a Pulumi plugin. Ensure you have the [Pulumi CLI](/docs/install/) installed, along with the [OpenTofu CLI](https://opentofu.org/docs/intro/install/) (`tofu`) on your `PATH`: the tool shells out to `tofu init` and `tofu refresh` to extract Terraform state read-only. It never runs a mutating command like `tofu apply`.
 
 1. **Set up your Pulumi project**:
 
@@ -450,3 +451,13 @@ pulumi package add hcl module ./path/to/module
 ```
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.
+
+## Getting help with your migration
+
+Most teams work through the options above on their own, but a few situations call for extra support:
+
+* **Large estates**, where thousands of resources or hundreds of stacks need a phased plan rather than a single conversion pass.
+* **Phased coexistence**, where Terraform and Pulumi manage the same infrastructure side by side for an extended period and the cutover needs sequencing.
+* **Module conversion at scale**, where a shared library of Terraform modules needs to become reusable Pulumi components across many teams.
+
+For any of these, [contact us](/contact/?form=sales) to talk through a migration plan, or ask in the [Pulumi community Slack](https://slack.pulumi.com/) if you'd rather start with other users who have made the same move.

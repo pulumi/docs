@@ -4,8 +4,8 @@
 This is the single source of truth for the ledger record shape and its upload.
 The per-article worker (`.github/workflows/content-review-article.yml`) runs it
 once after the review model finishes, with `if: always()`, so every dispatched
-article lands exactly one canonical ledger object — even when the model exits
-without producing any output.
+article that was actually reviewed lands exactly one canonical ledger object —
+even when the model exits without producing any output.
 
 The model's only structured output is a tiny verdict sentinel
 (`.content-review-verdict.json`); everything authoritative about the PR
@@ -22,6 +22,17 @@ Outcome derivation:
   * sentinel absent, run succeeded, no branch pushed     -> status "clean"
   * sentinel absent, run failed OR a branch exists       -> status "incomplete"
 
+A "skipped" outcome is built and written locally but never uploaded. It is
+the workflow's open-PR pre-check saying a previous run still owns this page's
+PR: nothing was reviewed, so the page's ledger record must go on describing
+its last real review. Until 2026-09-09 the skip was uploaded like any other
+outcome, and on the two days the glow-up lane picked a page the fix lane had
+dispatched minutes earlier (providers/_index.md 2026-08-28, elb.md
+2026-09-08) the skip rebuilt the record from the dispatch-time queue: status
+`skipped`, banked count 0, PR pointer null, and the stale-claim markers the
+fix review had just resolved put back with `unresolved_reviews` incremented —
+which re-boosted the page into the next sweep (#21266, #21495).
+
 The last two cases extend the file's "derive facts from observable state, not
 self-report" principle to the verdict itself: a model that completes its turn
 and pushes no `content-review/<slug>` branch reviewed the page and changed
@@ -31,7 +42,7 @@ genuinely "incomplete" and stays due for retry.
 
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, last_pr, last_pr_number, head_sha,
-    fixes, skipped_findings, glowup_degraded, glowup_degraded_runs, retirement,
+    fixes, skipped_findings, glowup_degraded, retirement,
     note, attempts,
     clarity_flag, tier, score, monthly_visits, traffic_available, signals,
     signals_available, reviewed_at }
@@ -455,13 +466,13 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         # the counters below are the PRIOR review's, carried rather than
         # measured. The selector needs this bit to tell "declined 17" (real
         # adjudication, cool down) from "never saw 17" (still owed).
+        #
+        # select-glowup.py routes a page carrying this flag to a FIX-lane
+        # repair rather than re-queueing the glow-up: re-running a recovery
+        # that already failed fails the same way, and the fix lane's review
+        # writes the findings record that makes the next glow-up real. That
+        # retired the old consecutive-run counter this flag used to need.
         "glowup_degraded": False,
-        # Consecutive degraded glow-ups. The selector exempts a degraded page
-        # from the cooldown so an unexecuted backlog isn't buried for 90 days,
-        # but an exemption with no counter is an unbounded loop when the
-        # recovery keeps failing for the same reason. `attempts` can't serve —
-        # the glowup path resets it to 0.
-        "glowup_degraded_runs": 0,
         "retirement": bool(verdict.get("retirement")) if verdict else False,
         "note": None,
         "attempts": prior_attempts + 1,
@@ -536,14 +547,9 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
                 if prior_banked or rec["clarity_flag"]:
                     rec["skipped_findings"] = prior_banked
                     rec["glowup_degraded"] = True
-                    # Consecutive, so the selector can stop exempting a page
-                    # whose recovery keeps failing the same way.
-                    rec["glowup_degraded_runs"] = (
-                        int((prior or {}).get("glowup_degraded_runs") or 0) + 1)
                     rec["note"] = (
                         "glow-up executed no backlog; prior counters preserved "
-                        f"and the page stays eligible (degraded run "
-                        f"{rec['glowup_degraded_runs']})")
+                        "and the page routes to a fix-lane repair")
         else:
             rec["status"] = "incomplete"
             branch = branch_for(slug, rec["retirement"], glowup=(v == "glowup"))
@@ -555,6 +561,18 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
 
 
 # ---- output -----------------------------------------------------------------
+
+
+def touches_ledger(record: dict) -> bool:
+    """False for the one outcome that must leave the S3 record alone.
+
+    A `skipped` status is the workflow's open-PR pre-check: a previous run
+    still owns this page's PR, nothing was reviewed, and the page's record
+    must keep describing its last real review (the module docstring has what
+    uploading it did instead). Every other status — `incomplete` included,
+    which is how a retry gets counted toward the attempt cap — is written.
+    """
+    return record.get("status") != "skipped"
 
 
 def upload(record: dict, slug: str, uri: str) -> None:
@@ -630,7 +648,10 @@ def run(args) -> int:
     out_path.write_text(json.dumps(record, indent=2) + "\n")
     log(f"status={record['status']} slug={slug} -> {out_path}")
 
-    if uri:
+    if not touches_ledger(record):
+        log(f"status={record['status']}: nothing was reviewed; the ledger record "
+            f"for {slug} is left as it was")
+    elif uri:
         upload(record, slug, uri)
     else:
         warn("CONTENT_REVIEW_LEDGER_URI unset; ledger record written locally only")
@@ -778,7 +799,7 @@ def self_test() -> int:
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "mode", "status", "pr", "pr_number",
             "last_pr", "last_pr_number", "head_sha",
-            "fixes", "skipped_findings", "glowup_degraded", "glowup_degraded_runs",
+            "fixes", "skipped_findings", "glowup_degraded",
             "retirement", "note",
             "attempts", "clarity_flag", "tier", "score", "monthly_visits",
             "traffic_available", "signals", "signals_available", "reviewed_at"})
@@ -883,6 +904,13 @@ def self_test() -> int:
         r = build_record(article, {"verdict": "skipped", "reason": "draft"},
                          None, article["slug"], prior=prior_reviewed)
         check("a skipped review keeps the pointer", r["last_pr_number"] == 19885)
+        # ...and, being no review at all, never reaches S3: uploading it
+        # overwrote the fix review that had just opened the PR the skip is
+        # about (elb.md, 2026-09-08).
+        check("a skipped outcome never touches the ledger", touches_ledger(r) is False)
+        check("every other outcome does, incomplete included",
+              all(touches_ledger({"status": s})
+                  for s in ("reviewed", "clean", "reported", "glowup", "incomplete")))
         r = build_record(article, None, None, article["slug"],
                          claude_succeeded=False, prior=prior_reviewed)
         check("an incomplete review keeps the pointer", r["last_pr_number"] == 19885)
@@ -937,21 +965,25 @@ def self_test() -> int:
         check("an empty glow-up with no prior debt is not degraded",
               r["glowup_degraded"] is False and r["skipped_findings"] == 0)
 
-        # --- the degraded exemption is bounded ------------------------------
-        # A degraded glow-up exempts the page from the cooldown, so without a
-        # counter a page whose recovery keeps failing re-qualifies every run,
-        # forever. `attempts` can't guard it — the glowup path resets it to 0.
+        # --- the degraded flag survives repeat runs -------------------------
+        # It used to carry a consecutive-run counter, because the selector
+        # exempted a degraded page from the cooldown and an exemption with no
+        # bound is an unbounded retry loop. select-glowup.py now routes a
+        # degraded page to a fix-lane repair instead of re-queueing the
+        # glow-up, so the flag needs no counter — but it must still be set on
+        # every degraded run, and cleared by one that did work.
         r1 = build_record(g_article, g_empty, g_pr, g_article["slug"], prior=prior_banked)
-        check("the first degraded glow-up counts as one",
-              r1["glowup_degraded_runs"] == 1)
+        check("a degraded glow-up sets the flag", r1["glowup_degraded"] is True)
+        check("the note says where the page goes next",
+              "fix-lane repair" in (r1["note"] or ""))
         r2 = build_record(g_article, g_empty, g_pr, g_article["slug"],
-                          prior={**prior_banked, "glowup_degraded_runs": 1})
-        check("consecutive degraded glow-ups accrue", r2["glowup_degraded_runs"] == 2)
-        check("the run count is visible in the note", "degraded run 2" in (r2["note"] or ""))
+                          prior={**prior_banked, "glowup_degraded": True})
+        check("a second degraded run keeps the flag set",
+              r2["glowup_degraded"] is True and r2["skipped_findings"] == 17)
         r3 = build_record(g_article, g_verdict, g_pr, g_article["slug"],
-                          prior={**prior_banked, "glowup_degraded_runs": 2})
-        check("a glow-up that did work resets the degraded counter",
-              r3["glowup_degraded_runs"] == 0 and r3["glowup_degraded"] is False)
+                          prior={**prior_banked, "glowup_degraded": True})
+        check("a glow-up that did work clears the degraded flag",
+              r3["glowup_degraded"] is False)
 
         # --- a failed ledger read is not "first review" ---------------------
         # Expired credentials and a wrong URI both exit non-zero. Reporting them

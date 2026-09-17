@@ -48,7 +48,7 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 });
 ```
 
-Libraries that use JavaScript callbacks as inputs that are provided as source text to resource construction, such as in the previous example, are built on top of the [`pulumi.runtime.serializeFunction`](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#serializeFunction) API. This API takes a JavaScript `Function` object as input and returns a `Promise` that contains the serialized form of that function.
+Libraries that use JavaScript callbacks as inputs that are provided as source text to resource construction, such as in the previous example, are built on top of the [`pulumi.runtime.serializeFunction`](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/runtime.serializeFunction.html) API. This API takes a JavaScript `Function` object as input and returns a `Promise` that contains the serialized form of that function.
 
 At a high level, the following occurs when a function is serialized to text:
 
@@ -161,7 +161,7 @@ Because of this, almost all JavaScript values can be serialized with very few ex
 Pulumi will attempt to reduce the size of a serialized object by removing parts of it that it can prove are not used in a program. For example:
 
 ```typescript
-const obj = { foo() { console.log("foo called"); } bar() { console.log("bar called") } };
+const obj = { foo() { console.log("foo called"); }, bar() { console.log("bar called") } };
 
 const lambda = new aws.lambda.CallbackFunction("mylambda", {
     callback: async e => {
@@ -173,7 +173,7 @@ const lambda = new aws.lambda.CallbackFunction("mylambda", {
 In this code, only the `foo` property is used from `obj`. So Pulumi will serialize a value equivalent to `{ foo() { console.log("foo called"); } }`. However, if the code were:
 
 ```typescript
-const obj = { foo() { console.log("foo called"); this.bar(); } bar() { console.log("bar called") } };
+const obj = { foo() { console.log("foo called"); this.bar(); }, bar() { console.log("bar called") } };
 
 const lambda = new aws.lambda.CallbackFunction("mylambda", {
     callback: async e => {

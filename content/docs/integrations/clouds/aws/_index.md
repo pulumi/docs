@@ -35,15 +35,15 @@ Pulumi provides several packages for working with AWS. Most projects combine mor
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new AWS projects from a pre-built template:
 
-- [Container service on AWS](/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
-- [Serverless application on AWS](/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
-- [Static website on AWS](/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
-- [Virtual machine on AWS](/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
-- [Kubernetes cluster on AWS](/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
+- [Container service on AWS](/dev/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
+- [Serverless application on AWS](/dev/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
+- [Static website on AWS](/dev/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
+- [Virtual machine on AWS](/dev/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
+- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
 
 ## Guides
 
@@ -72,15 +72,15 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 - [AWS IAM credential rotation](/docs/esc/providers/rotators/aws-iam/) — rotate IAM access keys on a schedule.
 - [AWS Lambda rotator](/docs/esc/operations/rotation/aws-lambda/) — rotate arbitrary secrets via an AWS Lambda function.
 
-## Insights
+## Discovery
 
-[Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
+[Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
+For AWS, Discovery connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
 ## Policy packs
 
-[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
+[Pulumi Policies](/docs/discovery-governance/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
 
 For AWS:
 
@@ -89,9 +89,11 @@ For AWS:
 - [NIST 800-53 for AWS](/docs/reference/pre-built-policy-packs/nist/aws/)
 - [PCI DSS for AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/)
 - [HITRUST CSF for AWS](/docs/reference/pre-built-policy-packs/hitrust/aws/)
+- [ISO/IEC 27001 for AWS](/docs/reference/pre-built-policy-packs/iso-27001/aws/)
+- [CMMC 2.0 for AWS](/docs/reference/pre-built-policy-packs/cmmc/aws/)
 - [CIS Kubernetes Benchmark on AWS](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/) — for EKS clusters.
 - [AWS Organizations Tag Policies](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) — enforce Organizations tagging standards on Pulumi-managed resources.
-- [AWS Organizations Tag Policies in Insights](/docs/insights/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Insights.
+- [AWS Organizations tag policies in Discovery](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/) — integration with Pulumi Discovery.
 
 ## Migration
 

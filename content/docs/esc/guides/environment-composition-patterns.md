@@ -24,7 +24,7 @@ A good default is one environment per group of values that share all three of th
 
 When those three disagree, split. Two database credentials owned by the same team but rotated on different schedules are two environments, not one.
 
-Access is granted per environment through [RBAC](/docs/administration/access-identity/rbac/scopes/environments/), so this decomposition is what makes least-privilege possible. It also bounds your blast radius: a bad revision or a failed rotation affects only the consumers of that one environment.
+Access is granted per environment through [RBAC](/docs/administration/reference/rbac-scopes/environments/), so this decomposition is what makes least-privilege possible. It also bounds your blast radius: a bad revision or a failed rotation affects only the consumers of that one environment.
 
 The counterweight is that every environment is something to name, permission, and maintain. Splitting a value into its own environment because a *different* team owns it is worth the overhead. Splitting because the YAML felt long is not.
 
@@ -169,4 +169,4 @@ Do the restructuring and the narrowing as two separate changes. Moving values in
 - [Imports](/docs/esc/concepts/imports/) - Merge semantics, implicit imports, and precedence rules
 - [Versioning](/docs/esc/concepts/versioning/) - Revisions, tags, and comparing versions
 - [Rotation best practices](/docs/esc/operations/rotation/best-practices/) - How to structure environments that contain rotators
-- [Environment RBAC](/docs/administration/access-identity/rbac/scopes/environments/) - Granting access per environment
+- [Environment RBAC](/docs/administration/reference/rbac-scopes/environments/) - Granting access per environment

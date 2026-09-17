@@ -74,7 +74,7 @@ Breaking Change: Ensure your permissions are up to date if you are using AWS KMS
 
 ### November
 
-* Added support for self-hosted Insights scans
+* Added support for self-hosted Discovery scans
 * Fixed policy evaluator for more reliable policy enforcement
 * Upgraded pulumi-self-hosted-installers
 

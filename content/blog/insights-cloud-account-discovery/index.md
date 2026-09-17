@@ -88,7 +88,7 @@ Account Discovery leverages Pulumi ESC to enter and manage the credentials neede
 
 ### Understanding Your Infrastructure
 
-Once each of your Accounts have started scanning, your resources will be displayed in the Insights Resources Explorer along with all Infrastructure as Code resources that you have imported. The Resources Explorer and Resources Search enables you to ask questions and factor your resources into logical groupings that significantly improves the process for managing your infrastructure and getting answers to key questions needed for your projects. For example, you can ask the AI Resource Search to 'Find all public IP addresses' and any other question you might have about your infrastructure.
+Once each of your Accounts have started scanning, your resources will be displayed in the Insights Resources Explorer along with all infrastructure as code resources that you have imported. The Resources Explorer and Resources Search enables you to ask questions and factor your resources into logical groupings that significantly improves the process for managing your infrastructure and getting answers to key questions needed for your projects. For example, you can ask the AI Resource Search to 'Find all public IP addresses' and any other question you might have about your infrastructure.
 
 {{< video title="Discovered Resources" src="resources.mp4" autoplay="true" loop="true" >}}
 

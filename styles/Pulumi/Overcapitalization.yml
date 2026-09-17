@@ -1,6 +1,6 @@
 # Flags "the Stack"-style generic references to a Pulumi stack capitalized as
 # if "Stack" were a proper noun, per the brand writing-style guide and
-# STYLE-GUIDE.md's Headings section ("use capitalization only for proper
+# the brand guide's terminology section, general rules ("use capitalization only for proper
 # nouns... use 'stack' not 'Stack'").
 #
 # A second token below flags capitalized mid-sentence "Infrastructure as
@@ -58,8 +58,8 @@
 # rather than removed on the unconfirmed premise, but noted here so the next
 # person doesn't read it as evidence the opt-out is load-bearing.
 extends: existence
-message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (STYLE-GUIDE.md §Headings, 'use capitalization only for proper nouns')."
-link: "https://brand.pulumi.com/voice/writing-style/"
+message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (brand guide: Names & terminology, general terminology rules)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
 ignorecase: false
 nonword: false

@@ -17,13 +17,13 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 ## Before you begin
 
-1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Enterprise or Business Critical plan. Publishing is gated to those tiers; reading and listing modules is available on any plan, so you always keep access to modules you have already published.
+1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Pro or Enterprise edition. Publishing is limited to those editions; reading and listing modules is available on any edition, so you always keep access to modules you have already published.
 1. You need the [Pulumi CLI](/docs/install/) installed if you plan to consume modules from a Pulumi program.
 1. You need OpenTofu or Terraform installed if you plan to consume modules from a `.tf` file with `tofu init` / `terraform init`.
 
 ## Authenticate
 
-Every surface authenticates with a [Pulumi access token](/docs/administration/access-identity/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
+Every surface authenticates with a [Pulumi access token](/docs/administration/concepts/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
 - Publishing: the go-tfe client and the tfe provider take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
 - Consuming from a Pulumi program: run `pulumi login`. `pulumi package add` passes the token through, so there is no separate registry login.

@@ -14,7 +14,7 @@ menu:
 When using Pulumi Deployments, you have options for where your workflows run:
 
 - **Pulumi Hosted Pool**: Managed by Pulumi and available to all Pulumi Cloud customers
-- **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/insights/discovery/) scans, and [policy evaluations](/docs/insights/policy/)
+- **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/discovery-governance/discovery/) scans, and [policy evaluations](/docs/discovery-governance/policy/)
 
 If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
 
@@ -32,6 +32,6 @@ If no role is selected, the deployment will only have access to the specific sta
 
 By selecting an appropriate role, you provide the deployment with the necessary permissions to access these additional resources. For fine-grained access control, you can create custom roles with specific permissions tailored to what the deployment needs to accomplish.
 
-Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/access-identity/rbac/roles/).
+Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/concepts/rbac/roles/).
 
 For a full explanation of how a deployment's permissions are determined, the default permissions for each trigger, and how to grant additional access, see [Permissions](/docs/deployments/operations/permissions/).

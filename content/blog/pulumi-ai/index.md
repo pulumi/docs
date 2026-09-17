@@ -49,7 +49,7 @@ Pulumi AI addresses this need in a direct way.  Instead of having to create ever
 
 ## Discovering, Learning, and Building with Pulumi AI
 
-For example, suppose that I want to run Metabase on Azure.  There are a few guides that discuss this on the internet, however, it’s not immediately clear what the best compute and database options might be. Most guides only describe how to point-and-click in the Azure Portal, and several of the guides are many years old and out-of-date.  It could take hours to synthesize all the information on this subject and turn it into a working Infrastructure as Code solution with Pulumi.  Instead, I can just type "run Metabase in Azure" into Pulumi AI and get an excellent starting point in seconds:
+For example, suppose that I want to run Metabase on Azure.  There are a few guides that discuss this on the internet, however, it’s not immediately clear what the best compute and database options might be. Most guides only describe how to point-and-click in the Azure Portal, and several of the guides are many years old and out-of-date.  It could take hours to synthesize all the information on this subject and turn it into a working infrastructure as code solution with Pulumi.  Instead, I can just type "run Metabase in Azure" into Pulumi AI and get an excellent starting point in seconds:
 
 ![run Metabase in Azure](run-metabase-in-azure.png)
 
@@ -81,7 +81,7 @@ Giving Pulumi AI the tools to build cloud infrastructure is an awesome power, an
 
 ## Is this the right level of abstraction?
 
-It’s reasonable to ask whether Pulumi AI offers the ideal level of abstraction for AI assistance for Infrastructure as Code. Kelsey Hightower mentioned this on the day that Pulumi AI launched:
+It’s reasonable to ask whether Pulumi AI offers the ideal level of abstraction for AI assistance for infrastructure as code. Kelsey Hightower mentioned this on the day that Pulumi AI launched:
 
 <a href="https://twitter.com/kelseyhightower/status/1646538701818986501?s=20"><img src="kelsey-tweet.png" width="560" alt="If you're using generative AI tools to write infrastructure code, or YAML files, that's a hint you're working at the wrong level of abstraction. Instead of guessing, consider using a template to abstract away the details, and only expose the decisions a human needs to make." style="padding: 3px; filter: drop-shadow(3px 3px 3px #aaaaaa);"/></a>
 

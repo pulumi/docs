@@ -132,7 +132,7 @@ You can also point `pulumi package add` at a local directory instead of a Git UR
 pulumi package add /path/to/local/secure-s3-component
 ```
 
-Pulumi identifies the folder as a component package, generates a local SDK, and makes it available in your program — even if your program is written in a different language from the component.
+Pulumi identifies the folder as a component package and follows the same steps as above, reading the schema from disk instead of fetching it from a Git repository.
 
 ### Pulumi packages with pre-published SDKs
 

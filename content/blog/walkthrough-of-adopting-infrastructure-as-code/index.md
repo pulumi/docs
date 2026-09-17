@@ -15,11 +15,11 @@ category: tutorials
 
 *This is the second of a three-part series originally published on The New Stack.*
 
-Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with Infrastructure as Code. Everything we show will be done with Pulumi’s [free and open source Infrastructure as Code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
+Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with infrastructure as code. Everything we show will be done with Pulumi’s [free and open source infrastructure as code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
 
 ## Migrating to Infrastructure as Code
 
-When you pick an Infrastructure as Code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use Infrastructure as Code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
+When you pick an infrastructure as code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use infrastructure as code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
 
 In some cases, it’s better to just toss that infrastructure and start over from scratch. Or perhaps you can focus on succeeding first with a “new” part of the system and integrate with the existing infrastructure until you’re convinced it’s time to migrate. In many cases, however, that’s infeasible: Maybe you actually have a mission-critical service already that you need to bring under the management of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/). The good news is that Pulumi offers [tools to migrate](/migrate/) from existing tools like Terraform, AWS CloudFormation/CDK, Azure Resource Manager (ARM), Kubernetes YAML and more, bringing existing infrastructure under the management of Pulumi without any disruption. The user guides in the [Migration Hub](/migrate/) walk through this process.
 
@@ -45,13 +45,13 @@ In this example, we build and publish a Docker image running an NGINX web server
 
 If our chosen cloud is AWS, we will need an Elastic Container Service (ECS) cluster and registry, with a Fargate service and application load balancer in front of it. This enables our service to be accessed over the internet:
 
-![AWS Containers Template](/templates/container-service/aws/architecture.png)
+![AWS Containers Template](/blog/walkthrough-of-adopting-infrastructure-as-code/container-service-aws-architecture.png)
 
 *See the template for AWS [here](/templates/container-service/aws/)*.
 
 If we choose Google Cloud, on the other hand, we can either use Google Kubernetes Engine (GKE) or Google Cloud Run. In this example, we use Cloud Run and the built-in artifact repository, since these services are generally easier to use when just getting started:
 
-![Google Cloud Containers Template](/templates/container-service/gcp/architecture.png)
+![Google Cloud Containers Template](/blog/walkthrough-of-adopting-infrastructure-as-code/container-service-gcp-architecture.png)
 
 In both cases, after deploying the infrastructure, we will have a fully functioning microservice environment with one load-balanced service running the NGINX web server. The Infrastructure as Code tool will give us a URL for the internet-accessible load balancer so we can browse to it.
 
@@ -63,7 +63,7 @@ In this example, we will create a serverless application. Unlike containers, whi
 
 For Azure, we’ll need to create an Azure Blob Storage container to host our code, upload the serverless function bundle, and then configure an Azure Function app that will make our function available over HTTPS:
 
-![Azure Serverless Template](/templates/serverless-application/azure/architecture.png)
+![Azure Serverless Template](/blog/walkthrough-of-adopting-infrastructure-as-code/serverless-application-azure-architecture.png)
 
 *See the template for Azure [here](/templates/serverless-application/azure/)*.
 
@@ -71,7 +71,7 @@ For AWS, although the architecture is in spirit very similar, the details differ
 
 In both cases, after deploying the infrastructure, we get back a web URL to access it. This example is a good reminder that each of the clouds is very different in its details. Infrastructure as Code doesn’t necessarily shield you from those details, although it is possible to build abstractions that do, which is both a strength but also something you’ll need to navigate.
 
-![AWS Serverless Template](/templates/serverless-application/aws/architecture.png)
+![AWS Serverless Template](/blog/walkthrough-of-adopting-infrastructure-as-code/serverless-application-aws-architecture.png)
 
 *See the template for AWS [here](/templates/serverless-application/aws/)*.
 
@@ -81,23 +81,23 @@ For the final example, let’s switch gears and focus on more “foundational”
 
 In the case of Azure’s Kubernetes Service (AKS), the design of the service is fairly chunky. So we can simply spin up a managed cluster with the associated networking infrastructure:
 
-![Azure Kubernetes Template](/templates/kubernetes/azure/architecture.png)
+![Azure Kubernetes Template](/blog/walkthrough-of-adopting-infrastructure-as-code/kubernetes-azure-architecture.png)
 
 *See the template for Azure [here](/templates/kubernetes/azure/)*.
 
 In the case of AWS’s Elastic Kubernetes Service (EKS), on the other hand, the service itself is rather complex to set up, involving many moving parts. That includes the control plane itself, the worker node groups, an autoscaling group, the AWS container network interface plugin to manage pod networking and more:
 
-![AWS Kubernetes Template](/templates/kubernetes/aws/architecture.png)
+![AWS Kubernetes Template](/blog/walkthrough-of-adopting-infrastructure-as-code/kubernetes-aws-architecture.png)
 
 *See the template for AWS [here](/templates/kubernetes/aws/)*.
 
-You can see here even greater differences between the equivalent cloud services on different cloud providers and AWS’s more “building blocks” style of approach in action. This is also a great example of Infrastructure as Code’s ability to bundle best practices so that they can be reused. This uses the [Pulumi EKS Package](/registry/packages/eks/), which configures all of the above in the standard way so that you don’t need to figure out every little detail when you’re just getting started.
+You can see here even greater differences between the equivalent cloud services on different cloud providers and AWS’s more “building blocks” style of approach in action. This is also a great example of infrastructure as code’s ability to bundle best practices so that they can be reused. This uses the [Pulumi EKS Package](/registry/packages/eks/), which configures all of the above in the standard way so that you don’t need to figure out every little detail when you’re just getting started.
 
 In both cases, we end up with a fully managed Kubernetes cluster that is ready to use. The tool spits out a kubeconfig file so we can immediately deploy into or inspect it.
 
 ## Infrastructure Projects and Stacks
 
-All of these examples had one thing in common: The Infrastructure as Code program’s job is to declare individual resource objects, their properties and how they relate to each other. That was true no matter the scenario, the cloud or the language we have chosen. Once the program has done that, the Infrastructure as Code tool takes care of the rest.
+All of these examples had one thing in common: The infrastructure as code program’s job is to declare individual resource objects, their properties and how they relate to each other. That was true no matter the scenario, the cloud or the language we have chosen. Once the program has done that, the infrastructure as code tool takes care of the rest.
 
 Pulumi uses the term **project** to refer to the code that declares all of this, and each instance of said project that is configured and ready to deploy — each “environment,” if you will — is called a **stack**.
 
@@ -144,7 +144,7 @@ Each stack is a unit of security and deployment concurrency. By layering stacks 
 
 ## Doing a Deployment
 
-After we’ve got everything wired up — a project, its code containing the declaration of a desired cloud resource topology, and at least one stack — it’s time to actually get something up and running. Since our code is written in an ordinary language, it’s tempting to think we would just run it outright. (Indeed, we will see later on that with the Automation API, we can do just that.) Infrastructure as Code is special, though; because of its declarative nature, we will run it using the Pulumi CLI, which ensures a declarative Infrastructure as Code workflow.
+After we’ve got everything wired up — a project, its code containing the declaration of a desired cloud resource topology, and at least one stack — it’s time to actually get something up and running. Since our code is written in an ordinary language, it’s tempting to think we would just run it outright. (Indeed, we will see later on that with the Automation API, we can do just that.) Infrastructure as code is special, though; because of its declarative nature, we will run it using the Pulumi CLI, which ensures a declarative infrastructure as code workflow.
 
 The `pulumi up` command is the key behind that workflow in action:
 

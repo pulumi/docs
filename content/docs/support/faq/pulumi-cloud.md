@@ -78,7 +78,7 @@ or managed manually. Organization owners and administrators can manage
 access to the organization's projects with security and administrative
 features.
 
-For more information, see [Organizations](/docs/administration/organizations-teams/organizations/).
+For more information, see [Organizations](/docs/administration/concepts/organizations/).
 
 ### How do I create a stack inside an Organization instead of my User account?
 
@@ -97,7 +97,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring stacks](/docs/administration/organizations-teams/organizations/#transferring-stacks).
+To learn more about this process, see [Transferring stacks](/docs/administration/concepts/organizations/#transferring-stacks).
 
 ### How can I delete a Pulumi organization?
 
@@ -107,21 +107,21 @@ In [Pulumi Cloud](https://app.pulumi.com/signin), open your organization, naviga
 
 If you don't see this option, confirm you're an organization admin.
 
-For detailed steps, see [Deleting an organization](/docs/administration/organizations-teams/organizations/#deleting-an-organization).
+For detailed steps, see [Deleting an organization](/docs/administration/concepts/organizations/#deleting-an-organization).
 
 ### How do I link an existing Pulumi account to my company's organization?
 
-To join your company's organization, you must sign in with the identity provider that organization is backed by (for example, GitHub, GitLab, SAML/SSO, or email).
+Your account needs the identity that backs your company's organization. How you get it depends on the kind of identity provider the organization uses.
 
-If you already have a Pulumi account, navigate to your profile in [Pulumi Cloud](https://app.pulumi.com/signin) and connect that identity provider, then accept the organization invite.
+For **GitHub, GitLab, and Atlassian (Bitbucket)**, connect the identity to your existing account: navigate to your profile in [Pulumi Cloud](https://app.pulumi.com/signin), connect that identity provider, then accept the organization invite.
 
-If this fails, delete your account, then accept the organization invite.
+You don't have to sign in to Pulumi Cloud with that provider. Signing in with email is fine. What matters is that the identity is connected to your account, and that it belongs to the GitHub organization, GitLab group, or Bitbucket workspace backing the Pulumi organization.
 
-{{% notes type="warning" %}}
-Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
-{{% /notes %}}
+For **SAML/SSO**, authenticating through the identity provider is what establishes the identity, so you do have to complete a single sign-on. Start it from your existing account rather than signing in to the organization directly, which can produce an "Email already in use" error. See [Connect SAML SSO to an existing account](/docs/administration/guides/saml/#connect-saml-sso-to-an-existing-account).
 
-For more about joining organizations, see [Joining an organization](/docs/administration/organizations-teams/organizations/#joining-an-organization).
+If your account offers no way to connect an identity provider, see [If the identity options aren't there](/docs/administration/concepts/accounts/#identity-options-missing).
+
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization) and [Identity providers](/docs/administration/concepts/identity-providers/).
 
 ## Account
 
@@ -131,7 +131,7 @@ You can delete your personal account from your account settings in [Pulumi Cloud
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [Deleting your account](/docs/administration/organizations-teams/organizations/#deleting-your-account).
+For more information, see [Deleting your account](/docs/administration/concepts/accounts/#deleting-your-account).
 
 ## Pricing
 
@@ -139,29 +139,30 @@ For more information, see [Deleting your account](/docs/administration/organizat
 
 Sign up with the identity provider your organization uses, then
 [download the CLI](/docs/get-started/) and sign in when it prompts you. The
-Individual edition is free forever and needs no credit card. It covers one user,
-unlimited projects, stacks, and environments, and unlimited updates and history.
+Free edition costs nothing and needs no credit card. It covers one user,
+state management, Pulumi Deployments, basic Pulumi ESC, unlimited projects,
+stacks, and environments, and unlimited updates and history. It does not limit
+the number of managed resources. It does not include Pulumi Neo, Resource
+Search, or Property Search.
 
-### Are organizations available on the Individual edition?
+### Can multiple people share an organization on Free?
 
-No. The Individual edition covers a single user, which suits private projects but
-not a team. Organizations — the shared workspace where several engineers work on
-the same projects — start with the Team edition. Enterprise and Business Critical
-add [role-based access control](/docs/administration/access-identity/rbac/) and
-[SAML/SSO](/docs/administration/access-identity/saml/) on top of that.
+No. Free supports one user. Choose Essentials or a higher edition to collaborate
+with other users.
 
 ### Can I start small and upgrade later?
 
-Yes. You can move up an edition at any time from your organization's
+Yes. You can upgrade to Essentials or Pro from your organization's
 **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin).
-Your stacks, environments, and history carry over untouched. Business Critical is
-priced per organization, so [contact us](/contact/?form=sales) for that one.
+Your stacks, environments, and history carry over untouched. To upgrade to
+Enterprise, [contact sales](/contact/?form=sales) for a contract.
 
 ### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
-Those editions are retired and don't include newer capabilities such as
-[Pulumi Deployments](/docs/deployments/), [Pulumi Insights](/docs/insights/), and
-[Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+These legacy plans are separate from the current Pro edition.
+They are retired and don't include newer capabilities
+such as [Pulumi Deployments](/docs/deployments/),
+[Pulumi Discovery](/docs/discovery-governance/discovery/), and [Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
 current edition. If now isn't the right time for your team, we're happy to honor
 your existing terms.
 
@@ -177,25 +178,33 @@ in touch.
 You can pay by credit card (we use Stripe for processing). Start your trial
 first, then add a card from your organization's **Billing & usage** settings.
 
-For annual billing we also offer invoicing, payable by bank transfer or check.
+Annual contracts are available on Pro and Enterprise only, with invoicing
+payable by bank transfer or check.
 To discuss that, [contact us](/contact/).
 
 ### What editions are available?
 
-- **Individual** is free forever for one user, and covers state management,
-  unlimited projects, stacks, and environments, and unlimited updates and history.
+- **Free** covers one user, state management, Pulumi Deployments, basic Pulumi
+  ESC, unlimited projects, stacks, and environments, and unlimited updates and
+  history. It does not limit the number of managed resources. It does not
+  include Pulumi Neo, Resource Search, or Property Search.
 
-- **Team** adds organizations for up to 10 users, secure collaboration and CI/CD,
-  resource search, webhooks, and automatic secrets rotation.
+- **Essentials** adds organizations with unlimited users, secure collaboration
+  and CI/CD, Pulumi Neo, Resource Search and Property Search, webhooks, automatic
+  secrets rotation, audit logs, audit policies, the Pulumi Best Practices policy
+  pack, and policy results in advisory mode.
 
-- **Enterprise** adds unlimited users, SAML/SSO and role-based access control,
-  audit logs, drift detection and remediation, time-to-live stacks, and
-  customer-managed keys.
+- **Pro** adds SAML/SSO and advanced role-based access control,
+  organization-managed policy enforcement, preventative policies, custom policy
+  packs, scheduled Neo tasks, automated audit log export, drift detection and
+  remediation, time-to-live stacks, and customer-managed keys.
 
-- **Business Critical** adds [self-hosting](/docs/administration/self-hosting/),
-  built-in compliance frameworks,
-  [SCIM](/docs/administration/access-identity/scim/) user and group sync, audit
-  log export, and 24x7 support.
+- **Enterprise** adds [self-hosting](/docs/administration/self-hosting/),
+  conformance packs for CIS, CIS Kubernetes, CMMC, HITRUST, ISO 27001, NIST,
+  and PCI DSS,
+  [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
+  custom policy packs, policy remediation, GitHub Enterprise Server support,
+  and unlimited custom roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
@@ -203,7 +212,7 @@ For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
 Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
-If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+If you need to delegate billing-only access, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## GitLab Support
 

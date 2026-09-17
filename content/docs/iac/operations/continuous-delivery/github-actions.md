@@ -57,13 +57,13 @@ Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Confi
 
 ### Authenticate with a stored access token
 
-Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
+Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
 
 Add the token as an [encrypted secret](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) named `PULUMI_ACCESS_TOKEN` under your repository's **Settings > Secrets and variables > Actions**. The workflow then reads it through the `secrets` context, as shown in the examples below.
 
 ### Authenticate without a stored token using OIDC
 
-You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
+You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
 
 Pair it with [`pulumi/esc-action`](https://github.com/pulumi/esc-action) to pull cloud credentials, secrets, and configuration from a [Pulumi ESC](/docs/esc/) environment. This is the recommended way to provide cloud credentials in GitHub Actions because it's:
 
@@ -614,6 +614,6 @@ You can manage GitHub itself — repositories, teams, branch protection rules, a
 - [`pulumi/actions`](https://github.com/pulumi/actions) — the Pulumi GitHub Action's full input reference.
 - [Pulumi GitHub App](/docs/integrations/version-control/github-app/) — rich pull request comments and commit checks from Pulumi Cloud.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to workflows and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

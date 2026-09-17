@@ -23,15 +23,9 @@ columns:
       - label: Registry
         href: /registry/
         track: footer-apis
-      - label: Templates
-        href: /templates/
-        track: footer-templates
-      - label: Tutorials
-        href: /tutorials/
-        track: footer-tutorials
-      - label: Guides
-        href: /guides/
-        track: footer-guides
+      - label: Dev Center
+        href: /dev/
+        track: footer-learn
       - label: Events
         href: /events/
         track: footer-events
@@ -54,7 +48,7 @@ columns:
         href: /product/secrets-management/
         track: footer-platform-secrets
       - label: Discovery & governance
-        href: /product/insights-governance/
+        href: /product/discovery-governance/
         track: footer-platform-insights
       - label: AI infrastructure agent
         href: /product/neo/
@@ -120,7 +114,7 @@ columns:
         href: https://slack.pulumi.com/
         track: footer-help-slack
       - label: Customer support
-        href: https://support.pulumi.com/
+        href: /support/new/
         track: footer-support
       - label: Professional services
         href: /proserv/

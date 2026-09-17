@@ -142,7 +142,7 @@ type PetAbstractedArgs struct {
 }
 
 func (f *PetAbstractedArgs) Annotate(a infer.Annotator) {
-	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are "small", "medium", "large", "xlarge", or a number representing the length of the pet name.")
+	a.Describe(&f.Size, "This input represents the size of the pet name to generate. Valid values are \"small\", \"medium\", \"large\", \"xlarge\", or a number representing the length of the pet name.")
 }
 
 type PetAbstractedOutputs struct {

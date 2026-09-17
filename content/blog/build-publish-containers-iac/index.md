@@ -393,7 +393,7 @@ var imageName = repo.RepositoryUrl;
 
 #### Learn More About ECR
 
-ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
+ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](/docs/iac/guides/clouds/aws/ecr/), [Pulumi's ECR API reference](/registry/packages/aws/api-docs/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 

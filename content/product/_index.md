@@ -21,7 +21,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*The unified platform*<br>for infrastructure teams."
+    title: "*The unified platform* <br>for infrastructure teams."
     description: |
       Infrastructure as code with modern languages, centralized secrets and governance, and AI built for infrastructure — all in one platform. Everything teams need to move fast and scale with confidence.
     image: /images/product/overview/overview-diagram.svg
@@ -34,7 +34,7 @@ sections:
     description: |
       Build infrastructure like you build software.
 
-      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, Python, Go, C#, or Java. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
+      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
     cta_text: Explore Pulumi IaC
     cta_link: /product/infrastructure-as-code/
     cards:
@@ -105,8 +105,8 @@ sections:
     title: See everything, control everything
     description: |
       Search across all clouds from a single pane of glass in Pulumi Cloud. Enforce policies automatically, track compliance, and get AI-powered insights. Know exactly what's running where and why.
-    cta_text: Explore Pulumi Discovery & Governance
-    cta_link: /product/pulumi-insights/
+    cta_text: Explore Discovery & governance
+    cta_link: /product/discovery-governance/
     image: /images/product/overview/overview-governance.svg
     image_alt: Pulumi resource search across clouds
     cards:
@@ -122,7 +122,7 @@ sections:
         title: Complete audit trail
         description: |
           Track every change, every action, and every user. Export to security and event management systems (SIEMs) for compliance reports.
-    anchor: insights
+    anchor: discovery
 
   - type: section_header
     tag_line: Internal developer platform

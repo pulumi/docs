@@ -72,7 +72,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     </tr>
     <tr>
         <td>CLI</td>
-        <td>Yes, available as <code>esc</code> CLI or <code>pulumi</code> CLI. Supports injecting application secrets as environment variables and modifying secrets.</td>
+        <td>Yes, available as <code>pulumi env</code> in the Pulumi CLI. Supports injecting application secrets as environment variables and modifying secrets.</td>
         <td>Limited, has a CLI but lacks the capabilities of injecting secrets as environment variables. The CLI is for modifying secrets only. </td>
     </tr>
     <tr>
@@ -84,7 +84,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
       <tr>
         <td>Declarative Provider</td>
         <td>Yes, support via the Pulumi Service Provider, which allows management (create, update, delete) of collections of secrets and configuration as a resource through infrastructure as code.</td>
-        <td>No</td>
+        <td>Yes, individual secrets can be managed as resources with the Vault provider for Pulumi or Terraform</td>
     </tr>
     <tr>
         <td>Composability</td>
@@ -123,7 +123,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     </tr>
     <tr>
         <td>Compare Secrets across Environment</td>
-        <td>No</td>
+        <td>Yes, <code>pulumi env diff</code> shows the changes between two environments or two versions of a single environment</td>
         <td>No</td>
     </tr>
     <tr>

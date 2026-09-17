@@ -154,6 +154,7 @@ To learn more about how Pulumi works, how it differs from CDKTF and from Terrafo
 
 * Diving into [the Pulumi docs](/docs/iac/concepts/) to get familiar with core concepts and features of the platform
 * Reading [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for more detailed, Terraform-specific migration guidance
+* Comparing [Pulumi and Terraform](/docs/iac/comparisons/terraform/) side by side if you want a deeper look at how the two platforms differ beyond CDKTF specifically
 * Joining us in the [Pulumi Community Slack](https://slack.pulumi.com/) to ask questions and learn from others who've successfully made the leap from Terraform and CDKTF to Pulumi
 * Checking out [Pulumi for All Your IaC — Including Terraform and HCL](/blog/all-iac-including-terraform-and-hcl/) to learn more about Pulumi's native support for Terraform and HCL
 

@@ -984,7 +984,7 @@ nohup python -m SimpleHTTPServer 80 &";
         {
             // Since this is an after hook, we'll have access to the new outputs of the
             // resource.
-            var outputs = args.NewOutputs
+            var outputs = args.NewOutputs;
 
             // Attempt to fetch health.json from the instance's public endpoint, backing
             // off linearly if it is not yet available.

@@ -18687,6 +18687,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Testing.IMocks.NewResourceAsync
   nameWithType: IMocks.NewResourceAsync
+- uid: Pulumi.Testing.IMocks.RegisterInvokeTransform(Pulumi.InvokeTransform)
+  name: RegisterInvokeTransform(InvokeTransform)
+  href: pulumi/pulumi.testing.imocks.html#Pulumi_Testing_IMocks_RegisterInvokeTransform_Pulumi_InvokeTransform_
+  commentId: M:Pulumi.Testing.IMocks.RegisterInvokeTransform(Pulumi.InvokeTransform)
+  fullName: Pulumi.Testing.IMocks.RegisterInvokeTransform(Pulumi.InvokeTransform)
+  nameWithType: IMocks.RegisterInvokeTransform(InvokeTransform)
+- uid: Pulumi.Testing.IMocks.RegisterInvokeTransform*
+  name: RegisterInvokeTransform
+  href: pulumi/pulumi.testing.imocks.html#Pulumi_Testing_IMocks_RegisterInvokeTransform_
+  commentId: Overload:Pulumi.Testing.IMocks.RegisterInvokeTransform
+  isSpec: "True"
+  fullName: Pulumi.Testing.IMocks.RegisterInvokeTransform
+  nameWithType: IMocks.RegisterInvokeTransform
 - uid: Pulumi.Testing.IMocks.RegisterResourceOutputs(Pulumi.Testing.MockRegisterResourceOutputsRequest)
   name: RegisterResourceOutputs(MockRegisterResourceOutputsRequest)
   href: pulumi/pulumi.testing.imocks.html#Pulumi_Testing_IMocks_RegisterResourceOutputs_Pulumi_Testing_MockRegisterResourceOutputsRequest_
@@ -18700,6 +18713,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Testing.IMocks.RegisterResourceOutputs
   nameWithType: IMocks.RegisterResourceOutputs
+- uid: Pulumi.Testing.IMocks.RegisterTransform(Pulumi.ResourceTransform)
+  name: RegisterTransform(ResourceTransform)
+  href: pulumi/pulumi.testing.imocks.html#Pulumi_Testing_IMocks_RegisterTransform_Pulumi_ResourceTransform_
+  commentId: M:Pulumi.Testing.IMocks.RegisterTransform(Pulumi.ResourceTransform)
+  fullName: Pulumi.Testing.IMocks.RegisterTransform(Pulumi.ResourceTransform)
+  nameWithType: IMocks.RegisterTransform(ResourceTransform)
+- uid: Pulumi.Testing.IMocks.RegisterTransform*
+  name: RegisterTransform
+  href: pulumi/pulumi.testing.imocks.html#Pulumi_Testing_IMocks_RegisterTransform_
+  commentId: Overload:Pulumi.Testing.IMocks.RegisterTransform
+  isSpec: "True"
+  fullName: Pulumi.Testing.IMocks.RegisterTransform
+  nameWithType: IMocks.RegisterTransform
 - uid: Pulumi.Testing.MockCallArgs
   name: MockCallArgs
   href: pulumi/pulumi.testing.mockcallargs.html
@@ -18840,6 +18866,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Testing.MockResourceArgs.Provider
   nameWithType: MockResourceArgs.Provider
+- uid: Pulumi.Testing.MockResourceArgs.Transforms
+  name: Transforms
+  href: pulumi/pulumi.testing.mockresourceargs.html#Pulumi_Testing_MockResourceArgs_Transforms
+  commentId: P:Pulumi.Testing.MockResourceArgs.Transforms
+  fullName: Pulumi.Testing.MockResourceArgs.Transforms
+  nameWithType: MockResourceArgs.Transforms
+- uid: Pulumi.Testing.MockResourceArgs.Transforms*
+  name: Transforms
+  href: pulumi/pulumi.testing.mockresourceargs.html#Pulumi_Testing_MockResourceArgs_Transforms_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Transforms
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Transforms
+  nameWithType: MockResourceArgs.Transforms
 - uid: Pulumi.Testing.MockResourceArgs.Type
   name: Type
   href: pulumi/pulumi.testing.mockresourceargs.html#Pulumi_Testing_MockResourceArgs_Type

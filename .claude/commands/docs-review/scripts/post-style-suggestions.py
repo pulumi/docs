@@ -696,7 +696,7 @@ def main() -> int:
         patch = Path(args.patch_file).read_text(encoding="utf-8")
     else:
         proc = subprocess.run(
-            ["gh", "pr", "diff", args.pr, "--repo", args.repo, "--patch"],
+            ["gh", "pr", "diff", args.pr, "--repo", args.repo],
             capture_output=True, text=True)
         if proc.returncode != 0:
             print(f"post-style-suggestions: gh pr diff failed: {proc.stderr.strip()}",

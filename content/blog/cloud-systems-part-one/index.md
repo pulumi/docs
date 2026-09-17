@@ -40,7 +40,7 @@ The simplest website you can build is a static site. That means no web server, j
 
 - NodeJS (optional if you want to preview the site locally)
 
-There are a lot of ways to provision an S3 bucket and set its permissions, but for this I’m going to use Pulumi, an Infrastructure as Code tool that allows you to provision, configure, and deploy a variety of cloud services and tools programmatically, without learning a new language. That way, we can stay in our code, and the syntax will be more familiar for developers. It also saves us the headache of going through the AWS Console. All of the code for this, both the website and the infrastructure code, can be found in the [GitHub repository](https://github.com/katcosgrove/cloud-systems-101) for the series, although I'll be walking you through everything here too.
+There are a lot of ways to provision an S3 bucket and set its permissions, but for this I’m going to use Pulumi, an infrastructure as code tool that allows you to provision, configure, and deploy a variety of cloud services and tools programmatically, without learning a new language. That way, we can stay in our code, and the syntax will be more familiar for developers. It also saves us the headache of going through the AWS Console. All of the code for this, both the website and the infrastructure code, can be found in the [GitHub repository](https://github.com/katcosgrove/cloud-systems-101) for the series, although I'll be walking you through everything here too.
 
 ## Building a Static Site
 

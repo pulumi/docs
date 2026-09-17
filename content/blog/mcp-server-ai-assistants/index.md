@@ -140,6 +140,6 @@ Integrating AI assistants with the Pulumi Model Context Protocol offers tangible
 
 ## Conclusion
 
-The synergy between AI coding assistants and the Pulumi Model Context Protocol (MCP) integration creates a remarkably efficient environment for Infrastructure as Code development. By bringing cloud resource knowledge, code generation, and the Pulumi CLI workflow directly into the editor, developers can build, deploy, and iterate on their infrastructure faster and with significantly less friction.
+The synergy between AI coding assistants and the Pulumi Model Context Protocol (MCP) integration creates a remarkably efficient environment for infrastructure as code development. By bringing cloud resource knowledge, code generation, and the Pulumi CLI workflow directly into the editor, developers can build, deploy, and iterate on their infrastructure faster and with significantly less friction.
 
 Whether you use Cursor, Copilot, Claude Code, Windsurf, or another emerging AI tool, integrating it with the Pulumi MCP server offers a glimpse into the future of streamlined, intelligent IaC development, ultimately boosting productivity and improving the overall developer experience.

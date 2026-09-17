@@ -135,7 +135,7 @@ Pulumi has been around for a long time.
 ```markdown
 | Feature | Pulumi | Terraform | CloudFormation |
 |---------|--------|-----------|----------------|
-| Languages | TypeScript, Python, Go, C#, Java | HCL only | YAML/JSON |
+| Languages | TypeScript, JavaScript, Python, Go, .NET, Java, YAML, HCL | HCL only (no general-purpose languages) | YAML/JSON |
 | Multi-cloud | Yes | Yes | AWS only |
 | Testing | Native language testing | Limited | Limited |
 | IDE Support | Full (IntelliSense, debugging) | Basic | Basic |

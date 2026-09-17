@@ -23,7 +23,7 @@ block_external_search_index: false
 
 # The url slug for the event landing page. If this is an external
 # event, use the external URL as the value here.
-url_slug: https://pulumi.com/product/pulumi-insights/
+url_slug: https://pulumi.com/product/discovery-governance/
 
 # The event type (workshop, webinar, talk).
 event_type: event

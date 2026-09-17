@@ -38,7 +38,7 @@ use_cases:
           description: |
             Modernize how your teams provision and manage infrastructure in order to adapt to the changes in technologies (containers, serverless), architectures (distributed), and software release automation associated with the cloud.
 
-            [Learn more about Terraform migration](/solutions/terraform-migration/)
+            [Learn more about Terraform migration](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 
         - name: Greenfield modern applications
           case_studies:
@@ -71,7 +71,7 @@ architectures:
     title: Common Architecture Types
     items:
         - name: Containers
-          cta_link: /templates/container-service/
+          cta_link: /dev/templates/container-service/
           cta_text: Learn More
           description: |
             Manage clusters and deploy containers with ease for Kubernetes, Amazon ECS, Azure ACI,

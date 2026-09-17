@@ -2,6 +2,7 @@
 title: What is HIPAA?
 meta_desc: "HIPAA is the US law that sets national standards for protecting health information. Learn its rules, who it covers, penalties, and how to comply."
 type: what-is
+date: 2025-05-16T13:59:54-04:00
 page_title: "What is HIPAA?"
 authors: ["alex-leventer"]
 ---
@@ -146,7 +147,7 @@ Concrete patterns that help:
 * **Encrypt ePHI by default.** Customer-managed keys (KMS, Cloud KMS, Key Vault) for storage; TLS 1.2+ for transit. Encode this in Pulumi components so every new resource inherits compliant defaults.
 * **Lock down access with least-privilege IAM.** Short-lived credentials, MFA, just-in-time elevation. Treat any wildcard permission as a finding.
 * **Centralize secrets.** Use [Pulumi ESC](/product/secrets-management/), AWS Secrets Manager, HashiCorp Vault, or Azure Key Vault. No plaintext secrets in code or state.
-* **Enforce policy as code.** [Pulumi Policies](/docs/insights/policy/) in CI block insecure configurations (public S3, missing encryption, non-HIPAA-eligible service usage) before they merge.
+* **Enforce policy as code.** [Pulumi Policies](/docs/discovery-governance/policy/) in CI block insecure configurations (public S3, missing encryption, non-HIPAA-eligible service usage) before they merge.
 * **Log everything.** CloudTrail, Activity Log, Cloud Audit Logs into a central store with retention that matches your policy. Alert on anything that looks like PHI exfiltration.
 * **Audit your IaC.** Because every change is a pull request, you have a defensible record of who changed what and when. That record is exactly the artifact an OCR investigator asks for.
 
@@ -194,7 +195,7 @@ HIPAA is the legal floor for protecting health information in the US. Frameworks
 
 ## Learn more
 
-Pulumi helps engineering teams put the controls behind HIPAA into version-controlled infrastructure: encrypted storage by default, least-privilege IAM, secrets pulled from a central vault, and [policy as code](/docs/insights/policy/) that blocks non-compliant configurations before they deploy. [Get started today](/docs/get-started/).
+Pulumi helps engineering teams put the controls behind HIPAA into version-controlled infrastructure: encrypted storage by default, least-privilege IAM, secrets pulled from a central vault, and [policy as code](/docs/discovery-governance/policy/) that blocks non-compliant configurations before they deploy. [Get started today](/docs/get-started/).
 
 Related reading:
 

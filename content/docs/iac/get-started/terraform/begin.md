@@ -26,7 +26,7 @@ All Windows examples in this tutorial assume you are running in PowerShell.
 
 ## Configure access to AWS
 
-Pulumi can use the same cloud provider credentials as Terraform. In this tutorial we're going to focus on AWS.
+Pulumi can use the same cloud provider credentials as Terraform. This tutorial focuses on AWS.
 If you're already using Terraform with AWS, or if you've <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html" target="_blank">installed</a> and <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html" target="_blank">configured</a> the AWS CLI, your existing configuration will work with Pulumi.
 
 You must use an IAM user account that has [programmatic access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html) with rights to deploy and manage S3 buckets.
@@ -51,9 +51,9 @@ $ aws sts get-caller-identity
 
 {{% /choosable %}}
 
-If your AWS user ID, account, and ARN are printed, you are good to go. If not, read on:
+If the command prints your AWS user ID, account, and ARN, your access is configured correctly. If not, read on:
 
-```
+```json
 {
     "UserId": "BXO3165...ZP36NYY5FOU:my-session",
     "Account": "9263...9123",
@@ -74,7 +74,7 @@ $ export AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 ```powershell
 > $env:AWS_ACCESS_KEY_ID = "<YOUR_ACCESS_KEY_ID>"
@@ -84,11 +84,11 @@ $ export AWS_SECRET_ACCESS_KEY="<YOUR_SECRET_ACCESS_KEY>"
 {{% /choosable %}}
 
 {{% notes type="info" %}}
-Consider using [Pulumi ESC's AWS login support](/docs/esc/providers/login/aws-login) for dynamic,
+Consider using [Pulumi ESC's AWS login support](/docs/esc/providers/login/aws-login/) for dynamic,
 short-lived AWS credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
 {{% /notes %}}
 
-You may optionally use AWS profiles if your configuration requires them:
+You can also use AWS profiles if your configuration requires them:
 
 {{% choosable os "linux,macos" %}}
 
@@ -98,7 +98,7 @@ $ export AWS_PROFILE="<YOUR_PROFILE_NAME>"
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 ```powershell
 > $env:AWS_PROFILE = "<YOUR_PROFILE_NAME>"
@@ -152,11 +152,11 @@ Next, make sure you have the necessary runtimes installed for your preferred Pul
 
 ## Verify CLI installation
 
-After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
+After installing Pulumi, verify your installation by running the `pulumi` CLI:
 
 {{% chooser os "macos,windows,linux" %}}
 
-{{% choosable os macos %}}
+{{% choosable os "macos" %}}
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-version">$ pulumi version</code></pre>
@@ -164,7 +164,7 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{% /choosable %}}
 
-{{% choosable os linux %}}
+{{% choosable os "linux" %}}
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-version">$ pulumi version</code></pre>
@@ -172,7 +172,7 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{% /choosable %}}
 
-{{% choosable os windows %}}
+{{% choosable os "windows" %}}
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-windows-version">&gt; pulumi version</code></pre>
@@ -182,6 +182,6 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{% /chooser %}}
 
-If you run into trouble, please refer to the [Download and install Pulumi](/docs/install/) page to troubleshoot your setup before moving on.
+If you run into trouble, see the [Download and install Pulumi](/docs/install/) page to troubleshoot your setup before moving on.
 
 {{< get-started-stepper >}}

@@ -38,12 +38,12 @@ Starting with our [previous blog post](https://www.pulumi.com/blog/pulumi-patter
 
 Previously we identified the [essential qualities of an effective IDP](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#an-effective-internal-developer-platform). Those were consistency, reproducibility, visibility, security and compliance, auditability, developer experience. In the [last half of the post](https://www.pulumi.com/blog/pulumi-patterns-and-practices/#a-holistic-view-of-the-patterns-and-practices-platform-reference-architecture) we discussed which parts of Pulumi could be used to meet those needs. That looks like:
 
-* **Consistency**: [component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/), [organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/), [drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/)
-* **Reproducibility**: [stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/), [deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/), [versioned data](/registry/packages/snowflake/api-docs/dynamictable/)
+* **Consistency**: [component resources](https://www.pulumi.com/learn/abstraction-encapsulation/component-resources/), [organization templates](/docs/idp/concepts/organization-templates/), [drift detection](/docs/deployments/concepts/drift/)
+* **Reproducibility**: [stacks](https://www.pulumi.com/learn/building-with-pulumi/understanding-stacks/), [deployments](/docs/deployments/concepts/), [versioned data](/registry/packages/snowflake/api-docs/dynamictable/)
 * **Visibility**: [Pulumi Insights](https://www.pulumi.com/product/pulumi-insights/), [Pulumi Copilot](https://www.pulumi.com/product/copilot/)
-* **Security and Compliance**: [RBAC](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/), [GitHub Teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#github-based-teams), [SAML-SSO](https://www.pulumi.com/docs/pulumi-cloud/access-management/saml/), [Pulumi ESC](https://www.pulumi.com/product/esc/), [Pulumi Crossguard](https://www.pulumi.com/crossguard/)
-* **Auditability**: [audit logging](https://www.pulumi.com/docs/pulumi-cloud/audit-logs/)
-* **Developer Experience**: [Python/Go/JavaScript/C#](https://www.pulumi.com/docs/languages-sdks/), [popular IDE support](https://www.pulumi.com/blog/next-level-iac-breakpoint-debugging/), [command-line tools](https://www.pulumi.com/docs/cli/), [deeply hackable](https://www.pulumi.com/automation/)
+* **Security and Compliance**: [RBAC](/docs/administration/concepts/rbac/teams/), [GitHub Teams](/docs/administration/concepts/rbac/teams/#github-based-teams), [SAML-SSO](/docs/administration/guides/saml/), [Pulumi ESC](https://www.pulumi.com/product/esc/), [Pulumi Crossguard](https://www.pulumi.com/crossguard/)
+* **Auditability**: [audit logging](/docs/administration/concepts/audit-logs/)
+* **Developer Experience**: [Python/Go/JavaScript/C#](/docs/iac/languages-sdks/), [popular IDE support](https://www.pulumi.com/blog/next-level-iac-breakpoint-debugging/), [command-line tools](/docs/iac/cli/), [deeply hackable](https://www.pulumi.com/automation/)
 
 That’s all great, and much of that is already built-into Pulumi without the need for you to do anything at all. So, what parts do you actually need to set up and configure? Here’s the bill of materials (BOM) to set up your own instance of Pulumi P3:
 
@@ -65,21 +65,21 @@ Let’s go through each of those and briefly discuss what it looks like to set t
 
 ## Authentication and identity management
 
-We highly recommend using GitHub for code management. So much so that we have deeply integrated GitHub into Pulumi Cloud across a number of features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/pulumi-cloud/organizations/#gitlab-identity-provider), this will be the easiest and more feature-rich way to configure your platform.
+We highly recommend using GitHub for code management, so much so that we have deeply integrated GitHub into Pulumi Cloud across many features. While we support [alternatives such as GitLab](https://www.pulumi.com/docs/administration/concepts/identity-providers/#gitlab), this will be the easiest and more feature-rich way to configure your platform.
 
-In Pulumi Cloud, you have the ability to create organizations. A [Pulumi Cloud organization](https://www.pulumi.com/docs/pulumi-cloud/organizations/) can help you manage teams, roles, stacks, settings, and provide a dashboard across the entire organization. Pulumi Cloud also allows you to use a variety of identity providers to log in, including GitHub.
+In Pulumi Cloud, you have the ability to create organizations. A [Pulumi Cloud organization](/docs/administration/concepts/organizations/) can help you manage teams, roles, stacks, settings, and provide a dashboard across the entire organization. Pulumi Cloud also allows you to use a variety of identity providers to log in, including GitHub.
 
 For simplicity’s sake, we suggest that you start with your GitHub organization. [Create the GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), [set up teams](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams), and [add members](https://docs.github.com/en/organizations/organizing-members-into-teams/adding-organization-members-to-a-team) to those teams, assigning either admin or user [roles](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles) to each member.
 
-Next, in Pulumi Cloud, create an organization ***with exactly the same name*** as your GitHub organization, and choose GitHub as your identity provider. When a Pulumi organization is backed by a GitHub organization, then only members of that GitHub organization may be added to the Pulumi organization. Similarly, as soon as someone loses access to the GitHub organization, they will no longer have access to the Pulumi organization. You will also be able to [import your GitHub teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#github-based-teams) directly into Pulumi Cloud. Then assign your users to the same roles in Pulumi Cloud teams as they have in the associated GitHub teams.
+Next, in Pulumi Cloud, create an organization ***with exactly the same name*** as your GitHub organization, and choose GitHub as your identity provider. When a Pulumi organization is backed by a GitHub organization, then only members of that GitHub organization may be added to the Pulumi organization. Similarly, as soon as someone loses access to the GitHub organization, they will no longer have access to the Pulumi organization. You will also be able to [import your GitHub teams](/docs/administration/concepts/rbac/teams/#github-based-teams) directly into Pulumi Cloud. Then assign your users to the same roles in Pulumi Cloud teams as they have in the associated GitHub teams.
 
 {{< figure src="teams-gh-pulumi.png" caption="Figure: Mapping GitHub orgs, teams, and roles to Pulumi">}}
 
-Finally, you can [map teams to stacks](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/#granting-access-to-stacks-within-teams) to grant access at specific permission levels. If you’re not familiar with [Pulumi Stacks](https://www.pulumi.com/docs/concepts/stack/), a stack is a materialized instance of a specific set of cloud resources, as defined in a Pulumi program.
+Finally, you can [map teams to stacks](/docs/administration/concepts/rbac/teams/) to grant access at specific permission levels. If you’re not familiar with [Pulumi Stacks](https://www.pulumi.com/docs/iac/concepts/stacks/), a stack is a materialized instance of a specific set of cloud resources, as defined in a Pulumi program.
 
 ## Pulumi ESC: Managing credentials, configuration, and other secrets
 
-In order to deploy a stack you will need secrets such as cloud credentials and other configuration values that are provided to the deployment engine. Pulumi ESC is a secure system for managing secrets. They are organized by *[environments](https://www.pulumi.com/docs/concepts/environments/)*.
+To deploy a stack you will need secrets such as cloud credentials and other configuration values that are provided to the deployment engine. Pulumi ESC is a secure system for managing secrets. They are organized by *[environments](https://www.pulumi.com/docs/esc/concepts/)*.
 
 An example set of environments might look something like this:
 
@@ -146,7 +146,7 @@ Another strong benefit of this approach is that all secrets will be encrypted bo
 
 ## Pulumi Crossguard: Policy-as-Code
 
-Pulumi Crossguard allows you to check and enforce policies on your deployments. Policies are rules, written in code, that run during deployments to check that the resources are conforming to the necessary criteria. You can use off-the-shelf policies like [AWSGuard](https://www.pulumi.com/docs/using-pulumi/crossguard/awsguard) and [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
+Pulumi Crossguard allows you to check and enforce policies on your deployments. Policies are rules, written in code, that run during deployments to check that the resources are conforming to the necessary criteria. You can use off-the-shelf policies like [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) and [Pulumi Compliance-Ready Policies](https://github.com/pulumi/compliance-policies/) or write your own.
 
 Either way you end up with a *policy pack* that you can apply to your entire Pulumi organization via Pulumi Cloud.
 
@@ -190,18 +190,18 @@ Policies:
 
 This allows you to implement company-specific policies that can be as simple or complex as you need them to be.
 
-To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/using-pulumi/crossguard/get-started/#enforcing-a-policy-pack), with the following commands:
+To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#publishing-to-your-organization), with the following commands:
 
 ```shell
 $ pulumi policy publish myorg
 $ pulumi policy enable myorg/my-policy-pack latest
 ```
 
-Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/using-pulumi/crossguard/faq/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/using-pulumi/crossguard/core-concepts/#policy-groups), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
+Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/insights/policy/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
 
 ## Multi-Language Components (MLC)
 
-In Pulumi, a *[component resource](https://www.pulumi.com/docs/concepts/resources/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/concepts/resources/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/using-pulumi/pulumi-packages/)*. There are many of these already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
+In Pulumi, a *[component resource](https://www.pulumi.com/docs/iac/concepts/components/)* is something that your developers can import in their Pulumi program, instantiate and modify. These are made available via a *[provider](https://www.pulumi.com/docs/iac/concepts/providers/)*, which is in turn, made available to Pulumi via a *[provider package](https://www.pulumi.com/docs/iac/concepts/packages/)*. Many of these are already available in the [Pulumi Registry](https://www.pulumi.com/registry/). However, in a custom internal developer platform you can define your own components, and bake appropriate settings/configuration directly into the underlying code.
 
 A *multi-language component (MLC)* is even more useful. You can author your component in your language of choice and then generate a SDK that surfaces that component into all of the languages that Pulumi supports. For example, your platform team might be comfortable writing in Python, but the developers that write your microservices might use Go, and the developers who write the front-end apps might use Node.js. Both teams might need to deploy apps and infrastructure into your Kubernetes cluster. With multi-language components you can write a component in Python that abstracts away all the details of your custom Kubernetes cluster, and make that available to both teams, in both Go, Node.js, and any other language that Pulumi supports.
 
@@ -256,9 +256,9 @@ If you want to see how to create MLCs in more detail, check out [this video](htt
 
 ## Organization templates and the New Project Wizard
 
-The final piece that ties all this together are *[organization templates](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/templates/)*. You may have used some of our [built-in templates](https://www.pulumi.com/templates/) when you learned how to use Pulumi. These are great for basic use cases, but the real magic happens when you bring together your custom components and custom security environments to create personalized templates which represent the internal use cases for your organization.
+The final piece that ties all this together are *[organization templates](/docs/idp/concepts/organization-templates/)*. You may have used some of our [built-in templates](https://www.pulumi.com/templates/) when you learned how to use Pulumi. These are great for basic use cases, but the real magic happens when you bring together your custom components and custom security environments to create personalized templates which represent the internal use cases for your organization.
 
-Pulumi’s [New Project Wizard](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/new-project-wizard/) reads these templates and provides an in-browser way to create a new project and deploy it. Running one of these templates will commit and push code to GitHub, and trigger an initial deployment – all in a few clicks and without leaving the browser.
+Pulumi’s [New Project Wizard](/docs/idp/concepts/new-project-wizard/) reads these templates and provides an in-browser way to create a new project and deploy it. Running one of these templates will commit and push code to GitHub, and trigger an initial deployment – all in a few clicks and without leaving the browser.
 
 Each template needs the following parts:
 

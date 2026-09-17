@@ -89,7 +89,7 @@ casestudy:
       cta: Read the story
       link: /case-studies/snowflake/
     - body: |
-        **BMW** enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
+        **BMW** manages more than 20,000 cloud resources through self-service infrastructure while maintaining enterprise governance.
       cta: Read the story
       logo: /logos/customers/bmw.svg
       link: /case-studies/bmw/
@@ -120,7 +120,7 @@ capabilities:
     description: |
         Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. 
         
-        Author in Python, TypeScript, Go, or C#, with HCL available when you prefer it.
+        Author in Python, TypeScript, Go, or .NET, with HCL available when you prefer it.
 
 building_blocks:
   title: "Why AI infrastructure requires dynamic orchestration"
@@ -138,7 +138,7 @@ building_blocks:
       body:
         - Built for AI workloads that require real-time resource reallocation
         - Shift capacity between inference and training based on demand
-        - "Python, TypeScript, Go, C#: languages your ML engineers already know"
+        - "Python, TypeScript, Go, .NET: languages your ML engineers already know"
         - AI tools work directly with infrastructure code (same languages that train LLMs)
         - "Full SDLC support: type safety, testing frameworks, package managers, and IDE integration"
         - "Software engineering practices apply directly to infrastructure"

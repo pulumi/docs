@@ -3,6 +3,7 @@ title: Python for DevOps
 meta_desc: "Python is the lingua franca of DevOps and MLOps automation. Learn where Python fits in IaC, CI/CD, observability, and machine-learning operations."
 
 type: what-is
+date: 2021-09-27T08:46:43-07:00
 page_title: "Python for DevOps"
 
 customer_logos:
@@ -83,7 +84,7 @@ Python is one of the primary languages for IaC tools that support real programmi
 
 Compared to writing infrastructure in HCL or YAML, Python gives you loops, conditionals, classes, type hints, and the ability to share modules through PyPI. Compared to writing infrastructure in TypeScript, the team trades off some compile-time type rigor for the language they're already using. Both options are first-class in Pulumi; the right one depends on what your team writes most of its other code in.
 
-For a deeper look at IaC concepts, see [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) and [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/).
+For a deeper look at IaC concepts, see [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/) and [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/).
 
 ## How is Python used for MLOps?
 
@@ -141,7 +142,7 @@ Python is a first-class language for Pulumi, supported on par with TypeScript, G
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
 * **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/concepts/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
-* **Pulumi policies in Python.** Write [policy as code](/docs/insights/policy/) in the same language as your infrastructure.
+* **Pulumi policies in Python.** Write [policy as code](/docs/discovery-governance/policy/) in the same language as your infrastructure.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Python programs, CI jobs, and applications.
 
 [Get started with Pulumi and Python](/docs/get-started/) to provision cloud infrastructure with the language your team is already using.
@@ -166,7 +167,7 @@ Pick the language your team writes most of its other code in. Both are first-cla
 
 ### How do you test Python IaC?
 
-Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/concepts/automation-api/) to spin up ephemeral stacks for integration tests.
+Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/discovery-governance/policy/) in CI, and use the [automation API](/docs/iac/concepts/automation-api/) to spin up ephemeral stacks for integration tests.
 
 ### What's MLOps and how does it relate to DevOps?
 
@@ -198,5 +199,5 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
-* [JavaScript and Infrastructure as Code](/what-is/javascript-and-infrastructure-as-code/)
+* [JavaScript and infrastructure as code](/what-is/javascript-and-infrastructure-as-code/)
 * [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)

@@ -82,7 +82,7 @@ TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infr
 
 ## The Beginnings of SST
 
-Application developers have witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to Infrastructure as Code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
+Application developers have witnessed the rapid evolution of cloud computing and the growing need for developers to have direct access to powerful cloud resources. However, the traditional tools and approaches to infrastructure as code (IaC) have often been geared more toward DevOps teams, leaving application developers feeling disconnected from the infrastructure side of their projects.
 
 This was the driving force behind the creation of [SST (Serverless Stack)](https://sst.dev/), a framework that aims to bridge the gap between application developers and infrastructure management. In the early days, SST was built on top of AWS's Cloud Development Kit (CDK), which allowed developers to define their infrastructure using TypeScript or Python. While this was a step in the right direction, they soon realized that the limitations of CDK and the underlying AWS CloudFormation were holding them back from truly empowering application developers.
 
@@ -165,7 +165,7 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 
 - **Deeper Integration with Application Frameworks**: By leveraging Pulumi's flexibility, they can create even tighter integrations between SST and the application frameworks and libraries that their users rely on, making managing infrastructure seamless alongside their application code.
 - **Expanded Provider Support**: the SST team will continue to add support for a wide range of cloud and on-premises providers, ensuring that their users can deploy and manage their infrastructure wherever it makes the most sense for their needs.
-- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](https://www.pulumi.com/docs/pulumi-cloud/deployments/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
+- **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](/docs/deployments/concepts/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
 - **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
 As the SST team continues to evolve with Pulumi at its core, they aim to deliver an even more powerful and user-friendly infrastructure management experience for developers. This will empower teams to focus on building great applications while effortlessly managing the underlying infrastructure.
@@ -174,7 +174,7 @@ As the SST team continues to evolve with Pulumi at its core, they aim to deliver
 
 If you're interested in exploring Pulumi further, here are several ways to get involved:
 
-- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](https://www.pulumi.com/docs/iac/clouds/aws/guides/)
+- Discover how Pulumi Crosswalk for AWS simplifies “day one” tasks in our [AWS guide](/docs/iac/guides/clouds/aws/)
 - Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
 - Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming)
 - But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!

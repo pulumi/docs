@@ -30,8 +30,12 @@ pulumi deployment settings edit [flags]
 
   # Configure a GitHub source.
   pulumi deployment settings edit \
-    --github-repo acme/infra --branch main --folder stacks/prod \
+    --vcs-provider github --repo acme/infra --branch main --folder stacks/prod \
     --preview-prs --push-to-deploy
+
+  # Configure a GitLab source.
+  pulumi deployment settings edit \
+    --vcs-provider gitlab --repo acme/infra --branch main --push-to-deploy
 
   # Set environment variables (plaintext and encrypted).
   pulumi deployment settings edit --env LOG_LEVEL=info --secret-env API_KEY=s3cret
@@ -45,10 +49,13 @@ pulumi deployment settings edit [flags]
     --oidc-aws-session-name pulumi-deploy --oidc-aws-duration 30m
 
   # Remove the AWS OIDC configuration entirely.
-  pulumi deployment settings edit --oidc-aws-clear
+  pulumi deployment settings edit --remove-oidc-aws
 
   # Clear the agent pool back to the Pulumi-hosted default.
   pulumi deployment settings edit --runner-pool ""
+
+  # Clear the pre-run command list.
+  pulumi deployment settings edit --pre-run-command ""
 ```
 
 ## Options
@@ -61,19 +68,15 @@ pulumi deployment settings edit [flags]
       --executor-image string               Custom executor image; empty string clears it to the default image
       --executor-root-path string           Executor root path; empty string clears it to the default (/)
       --folder string                       Path to the Pulumi.yaml folder within the source repo
-      --git-url string                      Git source: full repository URL (mutually exclusive with --github-repo)
-      --github-repo string                  GitHub source: organization/repository (mutually exclusive with --git-url)
+      --git-url string                      Git source: full repository URL (mutually exclusive with --repo)
   -h, --help                                help for edit
-      --oidc-aws-clear                      Remove the entire AWS OIDC configuration
       --oidc-aws-duration string            AWS OIDC: assume-role session duration (e.g. 30m, 1h)
-      --oidc-aws-policy-arn strings         AWS OIDC: replace the session policy ARN list (repeatable, comma-separated)
+      --oidc-aws-policy-arn strings         AWS OIDC: replace the session policy ARN list (repeatable or comma-separated)
       --oidc-aws-role-arn string            AWS OIDC: IAM role ARN to assume
       --oidc-aws-session-name string        AWS OIDC: assume-role session name
-      --oidc-azure-clear                    Remove the entire Azure OIDC configuration
       --oidc-azure-client-id string         Azure OIDC: federated workload identity client ID
       --oidc-azure-subscription-id string   Azure OIDC: federated workload identity subscription ID
       --oidc-azure-tenant-id string         Azure OIDC: federated workload identity tenant ID
-      --oidc-gcp-clear                      Remove the entire GCP OIDC configuration
       --oidc-gcp-project-number string      GCP OIDC: numerical project number (e.g. 987654321)
       --oidc-gcp-provider-id string         GCP OIDC: identity provider ID within the workload pool
       --oidc-gcp-region string              GCP OIDC: region
@@ -81,18 +84,24 @@ pulumi deployment settings edit [flags]
       --oidc-gcp-token-lifetime string      GCP OIDC: lifetime of the temporary credentials (e.g. 30m, 1h)
       --oidc-gcp-workload-pool-id string    GCP OIDC: workload identity pool ID
       --output string                       Output format. Supported values are: default and json (default "default")
-      --path-filter strings                 GitHub: replace the path filter list (repeatable, comma-separated)
-      --pr-template                         GitHub: use this stack as a template for PR review stacks
-      --pre-run-command stringArray         Replace the pre-run command list (repeatable; pass once per command
-      --preview-prs                         GitHub: run previews for pull requests
-      --push-to-deploy                      GitHub: run updates for pushed commits
-      --remove-env strings                  Delete an environment variable by key (repeatable, comma-separated)
+      --path-filter stringArray             Replace the path filter list (repeatable; pass once per filter); empty string clears it
+      --pr-template                         Use this stack as a template for PR review stacks
+      --pre-run-command stringArray         Replace the pre-run command list (repeatable; pass once per command); empty string clears it
+      --preview-prs                         Run previews for pull requests
+      --push-to-deploy                      Run updates for pushed commits
+      --remove-all-env                      Remove every environment variable
+      --remove-env strings                  Delete an environment variable by key (repeatable or comma-separated)
+      --remove-oidc-aws                     AWS OIDC: remove the entire configuration
+      --remove-oidc-azure                   Azure OIDC: remove the entire configuration
+      --remove-oidc-gcp                     GCP OIDC: remove the entire configuration
+      --repo string                         Version control source: repository reference, e.g. organization/repository (mutually exclusive with --git-url)
       --runner-pool string                  Deployment runner pool ID; empty string clears it to the Pulumi-hosted pool
       --secret-env stringArray              Set an encrypted environment variable (repeatable, KEY=VALUE)
       --shell string                        Shell to use for pre-run commands
       --skip-install-deps                   Skip automatic dependency installation
       --skip-intermediate-deployments       Skip intermediate deployments
   -s, --stack string                        The name of the stack to operate on. Defaults to the current stack
+      --vcs-provider string                 Version control provider: github, gitlab, azure_devops, bitbucket or custom
 ```
 
 ## Options inherited from parent commands
@@ -117,4 +126,4 @@ pulumi deployment settings edit [flags]
 
 * [pulumi deployment settings](/docs/iac/cli/commands/pulumi_deployment_settings/)	 - Manage stack deployment settings
 
-###### Auto generated by spf13/cobra on 20-Aug-2026
+###### Auto generated by spf13/cobra on 16-Sep-2026

@@ -375,7 +375,7 @@ languages to write infrastructure as code. However, there are some key
 differences:
 
 - **No Vendor Lock-In.** CDK supports only AWS, whereas Pulumi
-    supports over 150 cloud and SaaS providers, with more being added
+    supports hundreds of cloud and SaaS providers, with more being added
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
@@ -448,7 +448,7 @@ CloudFormation, Azure Resource Manager (ARM) templates, or Kubernetes
 YAML.
 
 [Self-service Tool
-Guide](https://www.pulumi.com/docs/iac/adopting-pulumi/)
+Guide](/docs/iac/guides/migration/)
 
 If you need help, we have a team of cloud experts who can answer your
 questions, give you a demo, or roll up their sleeves to get your

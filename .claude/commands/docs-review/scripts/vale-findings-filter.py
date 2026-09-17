@@ -8,14 +8,21 @@ a flat JSON list the docs-review skill consumes.
 Usage:
     vale-findings-filter.py --pr <PR_NUMBER> --in <vale-raw.json> --out <out.json>
     vale-findings-filter.py --in <vale-raw.json> --out <out.json>     # local mode
+    vale-findings-filter.py --fix-mode --in <raw.json> --out <out.json>
 
 CI passes --pr to intersect with PR-added lines. Interactive `/docs-review`
 omits --pr; the filter then categorizes and caps without diff filtering.
 
-Caps:
+Caps (review mode, the default):
     - 10 findings per file
     - 50 findings total
     - blocker findings are exempt from both caps (never silently dropped)
+    - advisory findings de-duplicated per file on (category, message)
+
+Both caps and the dedup are a *comment* budget, not an analysis budget: they
+exist so the pinned review stays readable. `--fix-mode` is for the consumer
+that applies edits instead of posting them (review-existing-content, both its
+content-review and glow-up lanes), and disables all three. See `cap()`.
 
 Output schema (flat list, sorted by file then line):
     [
@@ -106,6 +113,9 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.WordChoice": "word choice",
     "Pulumi.Nomenclature": "nomenclature",
     "Pulumi.DeprecatedProductNames": "deprecated product name",
+    "Pulumi.RetiredNames": "retired product name",
+    "Pulumi.ThirdPartyNames": "third-party name",
+    "Pulumi.Spelling": "misspelling",
     "Pulumi.BannedWords": "inclusive language",
     "Pulumi.Difficulty": "difficulty qualifier",
     "Pulumi.PoliciesSingular": "agreement",
@@ -191,7 +201,7 @@ def added_lines_per_file(patch: str) -> dict[str, set[int]]:
 def fetch_pr_patch(pr: str) -> str:
     """Fetch the unified diff for the PR via gh."""
     proc = subprocess.run(
-        ["gh", "pr", "diff", pr, "--patch"],
+        ["gh", "pr", "diff", pr],
         check=True,
         capture_output=True,
         text=True,
@@ -237,18 +247,55 @@ def flatten_vale(raw: dict, allowed_lines: dict[str, set[int]] | None) -> list[d
     return out
 
 
-def cap(findings: list[dict]) -> list[dict]:
+def cap(findings: list[dict], fix_mode: bool = False) -> list[dict]:
     """Cap to PER_FILE_CAP per file, then TOTAL_CAP overall.
 
     Blocker findings bypass both caps -- a blocker silently dropped by a cap
     would understate the 🚨 count. They still count toward neither cap, so a
     file with many blockers doesn't starve its advisory findings.
+
+    Advisory findings are de-duplicated per file on (category, message) before
+    the cap applies, keeping the earliest line. One repeated defect is one
+    thing for the author to fix, and without this a single vocabulary gap eats
+    the whole per-file budget: measured on a real post, `superintelligence`
+    recurred 27 times and took 8 of the 10 advisory slots, silently dropping
+    every heading-case and difficulty-qualifier finding in the file. The
+    surviving bullet still reads correctly for every occurrence, because the
+    message names the term rather than the position.
+
+    `fix_mode` returns every finding, unchanged: no cap, no dedup. Both of the
+    above reason about a human reading a comment, and neither survives contact
+    with a consumer that applies edits:
+
+    - The caps truncate the backlog. A single-file glow-up hits PER_FILE_CAP
+      exactly, fixes its 10, and the next review run surfaces the next 10 --
+      one backlog served as N rounds of PR churn. Observed on #21456, whose
+      run reported exactly 10 findings and whose review then produced 4 more.
+    - The dedup drops occurrences, not just bullets. It is sound when the
+      message names the term (one substitution fixes all 27
+      `superintelligence`), and wrong when the message names a *shape*:
+      Pulumi.NarrativeWe emits the same message for every "we will" in the
+      file, so a fixer sees one line and leaves the rest.
+
+    Ordering is still normalized so the caller reads findings in file/line
+    order.
     """
+    if fix_mode:
+        return sorted(findings, key=lambda f: (f["file"], f["line"]))
+
     blockers = [f for f in findings if f.get("blocker")]
     advisory = [f for f in findings if not f.get("blocker")]
     advisory.sort(key=lambda f: (f["file"], f["line"]))
-    by_file: dict[str, list[dict]] = defaultdict(list)
+    seen: set[tuple[str, str, str]] = set()
+    deduped: list[dict] = []
     for f in advisory:
+        key = (f["file"], f.get("category", ""), f.get("message", ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(f)
+    by_file: dict[str, list[dict]] = defaultdict(list)
+    for f in deduped:
         by_file[f["file"]].append(f)
     capped: list[dict] = []
     for filename in sorted(by_file):
@@ -268,6 +315,14 @@ def main() -> int:
     )
     parser.add_argument("--in", dest="infile", required=True)
     parser.add_argument("--out", dest="outfile", required=True)
+    parser.add_argument(
+        "--fix-mode",
+        action="store_true",
+        help="Emit every finding: no per-file cap, no total cap, no advisory "
+        "dedup. For the consumer that applies fixes rather than posting them "
+        "(review-existing-content). Review surfaces must NOT pass this -- the "
+        "caps are what keep the pinned comment readable.",
+    )
     args = parser.parse_args()
 
     with open(args.infile) as f:
@@ -283,11 +338,15 @@ def main() -> int:
         allowed = added_lines_per_file(patch)
     else:
         allowed = None
-    findings = cap(flatten_vale(raw, allowed))
+    findings = cap(flatten_vale(raw, allowed), fix_mode=args.fix_mode)
 
     with open(args.outfile, "w") as f:
         json.dump(findings, f, indent=2)
-    print(f"vale-findings-filter: wrote {len(findings)} findings to {args.outfile}", file=sys.stderr)
+    mode = " (fix-mode: uncapped)" if args.fix_mode else ""
+    print(
+        f"vale-findings-filter: wrote {len(findings)} findings to {args.outfile}{mode}",
+        file=sys.stderr,
+    )
     return 0
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Terraform Alternative | Pulumi"
-meta_desc: "Use Python, TypeScript, Go, or C# — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
+meta_desc: "Use Python, TypeScript, Go, or .NET — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, hundreds of cloud providers."
 layout: gads-template
 block_external_search_index: true
 
@@ -18,37 +18,37 @@ customer_quote:
     link: /case-studies/snowflake
 
 overview:
-    title: Your Choice of Language. No Resource Caps.<br/>Migrate at Your Pace.
+    title: Your Choice of Language. No Resource Caps. <br/>Migrate at Your Pace.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources per organization. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources per organization. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, JavaScript, Go, or .NET with full IDE support, testing, and hundreds of cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
 
 key_features_above:
     items:
         - title: "Author infrastructure in the language you prefer"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to 170+ providers.
+            Author infrastructure as code using programming languages you already know, including Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. Use `pulumi convert`, the free converter built into the Pulumi CLI, to migrate your existing Terraform files. Deploy to hundreds of providers.
           features:
               - title: Code faster
                 description: |
-                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL using your IDE and any language ecosystem tools.
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and hundreds of providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: AI-powered infrastructure
                 description: |
                     Convert existing Terraform with `pulumi convert`, or hand the migration to Pulumi Neo. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-        
+
 key_features:
     items:
         - title: "Migrate from Terraform in minutes"
           sub_title: "Free Migration Tools"
           description: |
-            Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or C#. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
+            Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or .NET. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Convert HCL to a general-purpose language
@@ -191,13 +191,13 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
-        number: "170+"
-        description: "Cloud and service integrations"
+        number: "200+"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud

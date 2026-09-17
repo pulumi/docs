@@ -342,7 +342,7 @@ def test_aggregate_and_stats_render():
 
 def test_real_pinned_review_pr20079():
     """Regression fixture captured from pulumi/docs#20079's actual pinned review."""
-    body = (HERE / "testdata" / "pr20079-pinned-review.md").read_text()
+    body = (HERE / "testdata" / "pr20079-pinned-review.md.txt").read_text()
     # #20079 merged at head d0c76f0…; the last 📜 history SHA matches it.
     rec = sro.scrape_body(body, merged=True, head_sha="d0c76f07aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     assert rec["parse_confidence"] == "high"
@@ -354,6 +354,173 @@ def test_real_pinned_review_pr20079():
     assert rec["pre_existing"] == 1
     assert rec["review_events"] == 2
     assert rec["disputes"] == []
+
+
+# ---- v3 surface -------------------------------------------------------------
+
+V3_AUTHOR_FIXTURE = (HERE / "testdata" / "v3-fixture-author.md.txt").read_text(encoding="utf-8")
+V3_BRIEF_FIXTURE = (HERE / "testdata" / "v3-fixture-brief.md.txt").read_text(encoding="utf-8")
+V3_MERGE_HEAD = "aaaabbbbccccddddeeeeffff0000111122223333"
+
+
+def v3_answered_author(dispositions: dict[str, tuple[str, str, bool]]) -> str:
+    """V3_AUTHOR_FIXTURE with a REVIEW_STATE block carrying `dispositions`.
+
+    `dispositions` maps finding id -> (disposition, note, bulk).
+    """
+    state = sro._rs.empty_state()
+    for fid, (disp, note, bulk) in dispositions.items():
+        state = sro._rs.set_disposition(state, fid, disp, actor="cam", note=note, bulk=bulk)
+    return sro._rs.replace_block(V3_AUTHOR_FIXTURE, state)
+
+
+def test_v3_marker_routes_extraction():
+    assert sro.AUTHOR_MARKER in V3_AUTHOR_FIXTURE
+    raw = sro.extract_v3_findings(V3_AUTHOR_FIXTURE, V3_BRIEF_FIXTURE)
+    assert {f["id"] for f in raw} == {"F1", "F2", "F3", "F4"}
+    by_id = {f["id"]: f for f in raw}
+    assert by_id["F1"]["bucket"] == "outstanding"
+    assert by_id["F2"]["bucket"] == "outstanding"
+    assert by_id["F3"]["bucket"] == "author-answer"
+    assert by_id["F4"]["bucket"] == "reviewer-check"  # from the brief, not the author card
+
+
+def test_v3_undecided_everything_still_open():
+    rec = sro.scrape_body_v3(V3_AUTHOR_FIXTURE, V3_BRIEF_FIXTURE, merged=True, head_sha=V3_MERGE_HEAD)
+    assert rec["parse_confidence"] == "high"
+    assert rec["review_current_at_merge"] is True
+    assert rec["outcomes"]["ignored_outstanding"] == 2
+    assert rec["outcomes"]["ignored_author_answer"] == 1
+    assert rec["outcomes"]["reviewer_check_open"] == 1
+    assert rec["style_findings"] == 1
+    assert rec["counts_table"] == {
+        "outstanding": 2, "author_answer": 1, "reviewer_check": 1, "resolved": 0,
+    }
+
+
+def test_v3_review_state_answered_fixed_refuted_accepted_bulk():
+    body = v3_answered_author({
+        # F1 is a BULK fix (`/resolve all fixed`): bulk, but not an acceptance.
+        "F1": ("fixed", "", True),
+        "F2": ("refuted", "style rule doesn't apply here", False),
+        "F3": ("accepted", "shipping as-is", True),
+    })
+    rec = sro.scrape_body_v3(body, V3_BRIEF_FIXTURE, merged=True, head_sha=V3_MERGE_HEAD)
+    o = rec["outcomes"]
+    assert o["fixed"] == 1
+    assert o["author_accepted"] == 1
+    # bulk_accepted ⊆ author_accepted: the bulk fix on F1 must not count, or
+    # the digest's bulk-accept rate (bulk / accepted) exceeds 100%.
+    assert o["bulk_accepted"] == 1, o
+    assert o["reviewer_check_open"] == 1  # F4 untouched by any disposition
+    # F2 is disposition=refuted but structurally still sits in 🚨 Outstanding
+    # (no re-review happened to actually remove it) -- refuted is a dispute
+    # annotation, not a silent resolution, so it stays ignored_outstanding.
+    assert o["ignored_outstanding"] == 1
+    refuted = next(d for d in rec["disputes"] if d["adjudication"] == "refuted")
+    assert refuted["outcome"] == "ignored_outstanding"
+
+
+def test_v3_unmerged_is_abandoned_regardless_of_disposition():
+    body = v3_answered_author({"F1": ("fixed", "", False)})
+    rec = sro.scrape_body_v3(body, V3_BRIEF_FIXTURE, merged=False, head_sha=None)
+    assert rec["outcomes"]["abandoned"] == 4
+    assert rec["outcomes"]["fixed"] == 0
+
+
+def test_v3_stale_review_at_merge_is_unconfirmed():
+    stale_head = "0123456789abcdef0123456789abcdef01234567"
+    rec = sro.scrape_body_v3(V3_AUTHOR_FIXTURE, V3_BRIEF_FIXTURE, merged=True, head_sha=stale_head)
+    assert rec["review_current_at_merge"] is False
+    assert rec["outcomes"]["unconfirmed_at_merge"] == 4
+    assert rec["outcomes"]["ignored_outstanding"] == 0
+
+
+def test_v3_corrupt_review_state_degrades_confidence_not_crash():
+    corrupt = V3_AUTHOR_FIXTURE.replace(
+        '<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->',
+        '<!-- REVIEW_STATE {broken -->',
+    )
+    rec = sro.scrape_body_v3(corrupt, V3_BRIEF_FIXTURE, merged=True, head_sha=V3_MERGE_HEAD)
+    assert rec["parse_confidence"] == "low"
+
+
+def test_v3_missing_brief_still_scrapes_author_findings():
+    rec = sro.scrape_body_v3(V3_AUTHOR_FIXTURE, "", merged=True, head_sha=V3_MERGE_HEAD)
+    assert rec["outcomes"]["ignored_outstanding"] == 2
+    assert rec["outcomes"]["reviewer_check_open"] == 0  # nothing to read from an absent brief
+
+
+def test_scrape_pr_auto_detects_v3_from_author_marker():
+    def fake_meta(repo, pr):
+        return {
+            "number": pr, "title": "t", "url": "u", "state": "MERGED",
+            "mergedAt": "2026-08-31T18:00:00Z", "closedAt": None,
+            "headRefOid": V3_MERGE_HEAD, "headRefName": "feature",
+            "author": {"login": "alice"}, "labels": [],
+        }
+
+    originals = (sro.fetch_pr_meta, sro.fetch_pinned_bodies, sro.fetch_brief_body)
+    sro.fetch_pr_meta = fake_meta
+    sro.fetch_pinned_bodies = lambda repo, pr: [V3_AUTHOR_FIXTURE]
+    sro.fetch_brief_body = lambda repo, pr: V3_BRIEF_FIXTURE
+    try:
+        rec = sro.scrape_pr("pulumi/docs", 999)
+    finally:
+        sro.fetch_pr_meta, sro.fetch_pinned_bodies, sro.fetch_brief_body = originals
+    assert rec["surface"] == "v3"
+    assert rec["status"] == "scraped"
+
+
+def test_scrape_pr_surface_override_forces_v2_reader():
+    # Force v2 against a v3-shaped body: the v2 reader finds no count table
+    # and no known bucket headings, so it degrades to parse_confidence "none"
+    # rather than crashing -- proving the override actually takes the v2 path.
+    def fake_meta(repo, pr):
+        return {
+            "number": pr, "title": "t", "url": "u", "state": "MERGED",
+            "mergedAt": "2026-08-31T18:00:00Z", "closedAt": None,
+            "headRefOid": V3_MERGE_HEAD, "headRefName": "feature",
+            "author": {"login": "alice"}, "labels": [],
+        }
+
+    originals = (sro.fetch_pr_meta, sro.fetch_pinned_bodies, sro.fetch_brief_body)
+    sro.fetch_pr_meta = fake_meta
+    sro.fetch_pinned_bodies = lambda repo, pr: [V3_AUTHOR_FIXTURE]
+    sro.fetch_brief_body = lambda repo, pr: V3_BRIEF_FIXTURE
+    try:
+        rec = sro.scrape_pr("pulumi/docs", 999, surface="v2")
+    finally:
+        sro.fetch_pr_meta, sro.fetch_pinned_bodies, sro.fetch_brief_body = originals
+    assert rec["surface"] == "v2"
+    assert rec["parse_confidence"] == "none"
+
+
+def test_aggregate_mixed_window_keeps_legacy_columns_stable():
+    v2_body = body_with(
+        outstanding="- **[L10]** Broken instruction.\n",
+        counts=(1, 0, 0, 0),
+    )
+    v2_rec = sro.scrape_body(v2_body, merged=True, head_sha=MERGE_HEAD)
+    v3_rec = sro.scrape_body_v3(V3_AUTHOR_FIXTURE, V3_BRIEF_FIXTURE, merged=True, head_sha=V3_MERGE_HEAD)
+    agg = sro.aggregate([
+        {"status": "scraped", "pr": 1, "author_kind": "human", "surface": "v2",
+         "parse_confidence": "high", **v2_rec},
+        {"status": "scraped", "pr": 2, "author_kind": "human", "surface": "v3",
+         "parse_confidence": "high", **v3_rec},
+    ])
+    assert agg["prs_scraped"] == 2
+    assert agg["prs_v3"] == 1
+    # The legacy ignored_outstanding column sums BOTH surfaces' outstanding
+    # counts -- that concept carried over 1:1 -- while ignored_low_confidence
+    # only ever came from the v2 record (v3 has no low-confidence bucket).
+    assert agg["outcomes"]["human"]["ignored_outstanding"] == 1 + 2
+    assert agg["outcomes"]["human"]["ignored_low_confidence"] == 0
+    assert agg["outcomes"]["human"]["ignored_author_answer"] == 1
+    assert agg["outcomes"]["human"]["reviewer_check_open"] == 1
+    report = sro.render_stats(agg, "2026-04-01")
+    assert "Ignored ❓" in report
+    assert "⚠️ Open" in report
 
 
 def main() -> int:

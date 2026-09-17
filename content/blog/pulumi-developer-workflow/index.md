@@ -167,7 +167,7 @@ Congratulations! Your developer environment is ready for some Pulumi action.
 
 ![Screenshot: Pulumi Devcontainer Codespaces session](image-vscode-codespaces-blank.png)
 
-For our final Day 0 step, we still need to decide what app to deploy with our Infrastructure-as-Code (IaC) program.
+For our final Day 0 step, we still need to decide what app to deploy with our infrastructure-as-code (IaC) program.
 
 Focusing on something fun, let's deploy Minecraft as the app for our Kubernetes exercise. It's a fun way to get started with Pulumi, a great way to show off your cloud skills to friends, and maybe even share with your favorite young future technologists! After all, Open Source DevOps is for everyone!
 

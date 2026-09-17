@@ -19,7 +19,7 @@ social:
         Learn more in our blog post: www.pulumi.com//blog/python-uv-toolchain"
 
 ---
-Continuing our work to bring [the best of modern Python to Infrastructure as Code](/blog/pulumi-loves-python/), we are excited to announce built-in support for [uv](https://docs.astral.sh/uv/) in Pulumi. uv is an extremely fast Python package manager that can install dependencies up to 100x faster than traditional tools, providing one of the fastest ways to manage your Python dependencies and virtual environments.
+Continuing our work to bring [the best of modern Python to infrastructure as code](/blog/pulumi-loves-python/), we are excited to announce built-in support for [uv](https://docs.astral.sh/uv/) in Pulumi. uv is an extremely fast Python package manager that can install dependencies up to 100x faster than traditional tools, providing one of the fastest ways to manage your Python dependencies and virtual environments.
 
 <!--more-->
 
