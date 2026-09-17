@@ -2834,9 +2834,9 @@ def check_v3_finding_grammar(ctx: Context) -> list[Violation]:
                 if where == "brief" and not looks_like_finding:
                     continue
                 v.append(Violation("v3-finding-grammar", f"<{where} line {lineno}>",
-                                   "every finding renders as a table row `| ⬜ | **F<n>** | `file` L<a>-<b> | <finding> |`",
+                                   "every finding renders as a three-column table row `| **F<n>** | `file` L<a>-<b> | <finding> |` under the header `| ID | Where | Finding |` / `|---|---|---|`",
                                    line[:120],
-                                   "Edit the Finding cell in place but keep the row shape — glyph, id, Where, Finding cells. New findings are new `| ⬜ | **F?** | … |` rows; escape literal pipes in the cell as `\\|`. (Plain advisory bullets are allowed in ⚠️ only.)"))
+                                   "Edit the Finding cell in place but keep the row shape — exactly three cells: id, Where, Finding; no leading status cell. New findings are new `| **F?** | … | … |` rows; when a section's table was empty, write the composer's header `| ID | Where | Finding |` and separator `|---|---|---|` above the first row. Escape literal pipes in a cell as `\\|`. (Plain advisory bullets are allowed in ⚠️ only.)"))
                 continue
             fid = parsed["id"]
             if fid == "F?":

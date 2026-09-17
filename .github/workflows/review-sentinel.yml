@@ -37,6 +37,18 @@ name: Sentinel
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
 # is TRUE for unset (the blog-review lesson), so "unset" is never a truthy
 # branch anywhere below.
+#
+# NO CONCURRENCY GROUP, on purpose. A cancelled job renders as a failing
+# check on the PR ("Sentinel / sentinel — Cancelled"), and a group cancels
+# the older pending job even with cancel-in-progress off, so any burst of
+# triggers put a red ✗ in the merge box (65 of 200 runs, 2026-09-12 → 14).
+# Overlapping runs are cheap (no model, ~50 s) and are made safe by two
+# things instead: the job-level `if` below ignores label events for labels
+# the evaluator never reads (triage's `domain:*` batch on open was most of
+# the burst), and scripts/review-v3/publish_guard.py refuses to publish a
+# verdict when the PR head has moved or a newer run already published at
+# this head (every check-run carries `external_id = run id`). A guarded-out
+# run concludes success with a ::notice::, never cancelled.
 
 on:
   pull_request_target:
@@ -54,14 +66,21 @@ on:
 
 permissions:
   checks: write
-  pull-requests: read
-  issues: write        # the ⛔ status strip PATCHes the author card
+  # `pull-requests: write`, not `issues: write`, is what lets this job write
+  # the pinned status comment and the ⛔ strip. Both go through
+  # `POST/PATCH /repos/{o}/{r}/issues/{n}/comments`, and the endpoint's name
+  # is a trap: on a PR number that endpoint is governed by the
+  # **pull_requests** scope, not `issues`. The old block asked for
+  # `issues: write` + `pull-requests: read` and looked right for months
+  # because neither writer had ever run — the strip only fires when
+  # enforcing, and the status comment did not exist. The first real POST
+  # (PR #21642, 2026-09-16) failed with exit 1. `issues: write` is kept
+  # because gh's own endpoint naming keeps inviting it back; it is not the
+  # one doing the work.
+  pull-requests: write
+  issues: write
   contents: read
   id-token: write      # ESC OIDC for the org-scoped team-membership token
-
-concurrency:
-  group: sentinel-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr_number || github.run_id }}
-  cancel-in-progress: true
 
 env:
   ESC_ACTION_OIDC_AUTH: true
@@ -72,7 +91,17 @@ env:
 
 jobs:
   sentinel:
-    if: (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    # Label events re-evaluate only for the labels the evaluator reads
+    # (waive, oversized, trivial, prose-flagged); every other label change
+    # cannot move a gate. Keep this list in step with sentinel.py.
+    if: |
+      (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
+      (github.event_name != 'pull_request_target' ||
+       (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+       github.event.label.name == 'review:waived' ||
+       github.event.label.name == 'review:oversized' ||
+       github.event.label.name == 'review:trivial' ||
+       github.event.label.name == 'review:prose-flagged')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -102,12 +131,30 @@ jobs:
         uses: pulumi/esc-action@v3
 
       # Base repo default branch ONLY — see the SECURITY INVARIANT above.
+      #
+      # Sparse, because this was the whole job's runtime. A full worktree is
+      # ~1.2 GB (content/ alone is 860 MB) and the evaluator reads ~7 MB of
+      # it: its own package, the docs-review scripts it loads
+      # (compose-review, validate-pinned, and triage-classify via
+      # replay-mechanical — compose-review also reads footer*.md from its
+      # parent, so the whole docs-review directory comes along), and
+      # review-routing.yml. Checkout was running 20 s to 3m40s; nothing else
+      # in the job takes more than a few seconds.
+      #
+      # test_sentinel.py pins this list against the paths sentinel.py
+      # actually loads — a new dependency outside these roots fails the
+      # suite rather than only the one PR whose code path reaches it.
       - name: Checkout base (default branch)
         if: steps.pr.outputs.pr != ''
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+          sparse-checkout-cone-mode: true
 
       - name: Set up Python
         if: steps.pr.outputs.pr != ''
@@ -131,7 +178,13 @@ jobs:
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
-          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}")
+          # --status-comment is passed unconditionally on purpose: the
+          # evaluator decides whether to actually write. Enforcing mode
+          # always maintains the pinned comment; report-only mode does so
+          # only for a PR someone labelled `sentinel:preview`, so the dry
+          # run stays invisible to contributors who didn't opt in.
+          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
+                --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then
             ARGS+=(--report-only)
           else
@@ -140,12 +193,26 @@ jobs:
           python3 scripts/review-v3/sentinel.py "${ARGS[@]}" > verdict.json
           cat verdict.json
 
-      - name: Publish check-run
+      # Overlapping runs are expected (no concurrency group — see the header).
+      # Publish only when this run still holds the newest verdict for the
+      # PR's current head; otherwise conclude success with a notice.
+      - name: Publish guard
         if: steps.pr.outputs.pr != ''
+        id: guard
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq '{name: "Sentinel", head_sha: .head_sha, status: "completed",
-               conclusion: .conclusion,
+          python3 scripts/review-v3/publish_guard.py \
+            --repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}" \
+            --run-id "${{ github.run_id }}" --verdict verdict.json
+
+      - name: Publish check-run
+        if: steps.pr.outputs.pr != '' && steps.guard.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq --arg run_id "${{ github.run_id }}" \
+             '{name: "Sentinel", head_sha: .head_sha, status: "completed",
+               conclusion: .conclusion, external_id: $run_id,
                output: {title: .title, summary: .summary}}' verdict.json \
           | gh api --method POST "repos/${{ github.repository }}/check-runs" --input -

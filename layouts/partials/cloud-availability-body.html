@@ -16,6 +16,11 @@
   An unknown feature id, and a feature that turns out to be available on the
   lowest edition (which gates nothing — say nothing instead), are both hard
   build failures, the same contract resource-option-scope.html uses.
+
+  Both sentences end in `safeHTML` because this is a Markdown string leaving an
+  .html template. Every caller either pipes the result through `markdownify` or
+  writes it into a plain-text output format, so there is no context here to
+  escape for.
 */ -}}
 {{- $lead := "This [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature is" -}}
 {{- /* Tripwire for the `edition` -> `feature` rename. The markdown output
@@ -32,7 +37,7 @@
   {{- errorf "cloud-availability-body.html was called with named: true but no feature (in %s). The named form needs a feature id to take the name from." .where -}}
 {{- end -}}
 {{- if not .feature -}}
-  {{- printf "%s available in [all editions](/pricing/)." $lead -}}
+  {{- printf "%s available in [all editions](/pricing/)." $lead | safeHTML -}}
 {{- else -}}
   {{- $id := printf "%v" .feature -}}
   {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
@@ -77,9 +82,9 @@
     {{- $href := "/pricing/" -}}
     {{- if not $f.hidden -}}{{- $href = printf "/pricing/#%s" $id -}}{{- end -}}
     {{- if .named -}}
-      {{- printf "%s is a [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature available in the [%s](%s)." $f.name $list $href -}}
+      {{- printf "%s is a [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature available in the [%s](%s)." $f.name $list $href | safeHTML -}}
     {{- else -}}
-      {{- printf "%s available in the [%s](%s)." $lead $list $href -}}
+      {{- printf "%s available in the [%s](%s)." $lead $list $href | safeHTML -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

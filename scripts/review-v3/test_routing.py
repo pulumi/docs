@@ -193,7 +193,7 @@ def test_load_config_real_file_is_valid():
     assert cfg.matrix["other"]["substantive"] == "tools"
     assert routing.not_governed_reason(cfg, "dependabot[bot]", set())
     assert routing.not_governed_reason(cfg, "pulumi-bot", {"automation/merge"})
-    assert routing.not_governed_reason(cfg, "pulumi-bot", {"surface:v3"}) is None
+    assert routing.not_governed_reason(cfg, "pulumi-bot", {"domain:docs"}) is None
     assert routing.auto_approve_author(cfg, "pulumi-bot")
     assert not routing.auto_approve_author(cfg, "CamSoper")
 
@@ -357,10 +357,29 @@ def test_no_changed_paths_resolves_to_no_roles(config):
     assert r.subjects == {}
 
 
+def test_link_only_any_team_policy():
+    cfg = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "any-team"}})[0]
+    lane = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "lane"}})[0]
+    paths = ["content/blog/p/index.md"]
+    # a link-only sweep: the lane's role stays on the record, but any team
+    # in teams: satisfies it
+    res = routing.resolve_lanes(paths, False, False, cfg, link_only=True)
+    assert res.roles == {"marketing"} and res.any_team is True
+    assert any("any team" in r for r in res.reasons)
+    # not link-only, or the lane policy: the ordinary rule
+    assert routing.resolve_lanes(paths, False, False, cfg, link_only=False).any_team is False
+    assert routing.resolve_lanes(paths, False, False, lane, link_only=True).any_team is False
+    # nothing to satisfy in the first place stays nothing
+    assert routing.resolve_lanes(paths, True, False, cfg, link_only=True).any_team is False
+    # and the key is validated
+    bad = routing.validate_raw({**copy.deepcopy(routing._CANNED_CONFIG), "link_only": {"approval": "whoever"}})
+    assert bad[0] is None and any("link_only.approval" in e for e in bad[1])
+
+
 def test_resolution_to_json_shape(config):
     r = routing.resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     payload = r.to_json()
-    assert set(payload) == {"roles", "staging_evidence_required", "subjects", "reasons"}
+    assert set(payload) == {"roles", "staging_evidence_required", "subjects", "reasons", "any_team"}
     assert payload["roles"] == ["docs-guild"]
 
 

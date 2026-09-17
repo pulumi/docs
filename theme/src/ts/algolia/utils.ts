@@ -150,21 +150,20 @@ export function formatCount(count: number) {
     return count > 1000 ? `${Math.ceil(count / 1000)}K` : count.toString();
 }
 
-// Returns the label to use for a given tag.
+// Returns the label to use for a given tag. Facet values are shown verbatim.
 export function labelForTag(facet) {
-    if (facet === "Registry") {
-        return "Packages";
-    }
     return facet;
 }
 
-// Returns the icon to use for a given tag.
-export function iconForTag(label: string) {
-    switch (label) {
-        case "Docs":
-            return "/icons/docs.svg";
-        case "Registry":
-            return "/icons/registry.svg";
-    }
-    return "/icons/list.svg";
+// Returns the sprite symbol id for a given tab, reusing the same Phosphor icons
+// (regular weight) as the main site nav. Unknown tabs fall back to a list icon.
+export function symbolForTag(label: string) {
+    const name = {
+        "all": "list",
+        "Docs": "book-open",
+        "Registry": "package",
+        "Dev Center": "compass",
+        "Blog": "newspaper",
+    }[label] || "list";
+    return `p-${name}-regular`;
 }

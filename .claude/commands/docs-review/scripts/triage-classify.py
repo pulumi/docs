@@ -611,6 +611,26 @@ def _resolve_content_target(url: str, repo_root: Path, added_paths: set[str]) ->
     # mirrors and in case a future caller relaxes that rule.
     if any(c in added_paths for c in candidates_rel):
         return True
+    # Ask git before concluding the target doesn't exist. Callers that run
+    # under a SPARSE checkout (the Sentinel and staging-deploy-auto keep
+    # content/ out of the worktree — it is 860 MB they never read) have the
+    # commit's trees but not its files, so every `.exists()` above answers
+    # false for a page that is plainly there. Without this, one added
+    # internal link turns an otherwise-mechanical docs PR substantive and
+    # tells the author "added link does not resolve", which is not true.
+    # sparse-checkout scopes the worktree, never the object store, so
+    # `cat-file -e` is authoritative in both layouts and is checked before
+    # the grep below, being exact rather than heuristic.
+    for c in candidates_rel:
+        try:
+            probe = subprocess.run(
+                ["git", "cat-file", "-e", f"HEAD:{c}"],
+                cwd=repo_root, capture_output=True, timeout=10,
+            )
+        except (subprocess.SubprocessError, OSError):
+            break  # no git here at all; the grep below won't fare better
+        if probe.returncode == 0:
+            return True
     try:
         result = subprocess.run(
             ["git", "grep", "-l", "-e", f"- {path}", "--", "content/"],

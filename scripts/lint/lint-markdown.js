@@ -979,18 +979,15 @@ function checkChangelogFilename(date, fullPath) {
 
 /**
  * checkChangelogEditions validates the optional `editions:` front matter on
- * individual changelog entries: it must be a YAML array of edition ids from
- * data/pulumi_pricing.yaml. Templates look the ids up to render the display
- * name, so an entry writes `business-critical` and the badge reads "Business
- * Critical". Authors list every edition the feature is available in; since a
- * lower edition implies the ones above it, that means the lowest applicable
- * edition and all editions above it — checked here as a contiguous suffix of
- * the edition list, not just set membership. Applies only to entry pages, not
- * the section `_index.md`.
+ * individual changelog entries. Entries dated before the V6 launch use the V5
+ * ids. Newer entries use the current ids from data/pulumi_pricing.yaml. Authors
+ * list every edition the feature is available in, so the list must be a
+ * contiguous suffix of the edition order. Applies only to entry pages, not the
+ * section `_index.md`.
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
- * value for an edition that doesn't exist (the free edition is Individual).
+ * value from before Pulumi Cloud had editions at all.
  *
  * @param {*} editions The front matter `editions` value.
  * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
@@ -1020,8 +1017,12 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
     if (!Array.isArray(editions)) {
         return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
     }
+    const filenameDate = path.basename(normalized).slice(0, 10);
+    const legacyEditions = ["individual", "team", "enterprise", "business-critical"];
+    const isLegacyEntry = /^\d{4}-\d{2}-\d{2}$/.test(filenameDate) && filenameDate < "2026-09-15";
+    const allowedEditions = isLegacyEntry ? legacyEditions : PRICING.editions;
     const invalid = editions.filter(function (e) {
-        return !PRICING.editions.includes(e);
+        return !allowedEditions.includes(e);
     });
     if (invalid.length > 0) {
         const quoted = invalid
@@ -1029,19 +1030,20 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
                 return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+        const vocabulary = isLegacyEntry ? "the V5 edition ids" : "data/pulumi_pricing.yaml";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed for this entry date. Use an edition id from " + vocabulary + ": " + allowedEditions.join(", ") + ".";
     }
     if (editions.length === 0) {
         return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
     }
     // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
-    // three valid ids but renders a badge that tells Business Critical readers
-    // the feature isn't theirs.
-    const listed = PRICING.editions.filter(function (e) {
+    // suffix of PRICING.editions. `editions: [pro]` on its own lints as a
+    // valid id but renders a badge that tells Enterprise readers the feature
+    // isn't theirs.
+    const listed = allowedEditions.filter(function (e) {
         return editions.includes(e);
     });
-    const expected = PRICING.editions.slice(PRICING.editions.indexOf(listed[0]));
+    const expected = allowedEditions.slice(allowedEditions.indexOf(listed[0]));
     if (listed.length !== expected.length) {
         const missing = expected.filter(function (e) {
             return !listed.includes(e);
