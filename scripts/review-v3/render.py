@@ -91,7 +91,8 @@ def action_kind(pr: dict, action: dict) -> str:
     """`rerun` is the unblock on an errored review (a decision) and an extra
     on a row where no review ran (a side action beside approve/route)."""
     if action["id"] == "rerun":
-        return "decision" if "review:error" in (pr.get("blockers") or []) else "side"
+        blockers = pr.get("blockers") or []
+        return "decision" if ("review:error" in blockers or "review:unreadable" in blockers) else "side"
     return "side" if action["id"] in SIDE_ACTIONS else "decision"
 
 
@@ -192,6 +193,8 @@ REVIEW_HELP = {
     "error": "The review job failed, so there are no findings. Re-running it is the only way to get a verdict.",
     "triage-prose": "Only the cheap triage prose check ran, not a full review. It catches wording, not correctness.",
     "base-merged": "The head commit moved, but only because master was merged into the branch. The diff the review read is unchanged, so the review still stands and this row is not stale.",
+    "unreadable": "The review did not arrive whole. Either a page of a split review is missing, or the card's own tally declares more findings than its sections parsed into. A long review's 🚨 rows are the tail of the document, so what is missing is exactly where they live — the row is blocked rather than approvable, and a fresh review is the way out.",
+    "parse-confidence": "The review's body parsed into no findings and nothing corroborates that: a v2 card with no tally table, or a v3 card missing its head sentinel or carrying a broken REVIEW_STATE. Not a blocker — nothing says there are findings — but not stampable either. Read the comment itself.",
 }
 MERGEABLE_HELP = {
     "dirty": "GitHub says this PR conflicts with its base branch. Merge master in and resolve it before anything else.",
@@ -245,7 +248,14 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         if code == "risk":
             text = RISK_HELP.get(detail)
         elif code == "review":
+            # `review:unreadable:pages:2,3` carries its detail past the key,
+            # so the sentence takes the key and names the detail at the end.
             text = REVIEW_HELP.get(detail)
+            if text is None and first in ("unreadable", "parse-confidence"):
+                text = REVIEW_HELP[first]
+                what = detail.partition(":")[2]
+                if what:
+                    text += f" ({what})"
         elif code == "mergeable":
             text = MERGEABLE_HELP.get(detail)
         elif code == "checks":
