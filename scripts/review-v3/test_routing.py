@@ -393,3 +393,39 @@ def test_classify_path_is_the_real_triage_function():
     assert routing.classify_path("content/blog/bar/index.md") == "domain:blog"
     assert routing.classify_path("scripts/build.py") == "domain:infra"
     assert routing.classify_path("some/unknown/path.txt") is None
+
+
+def test_the_review_pipelines_need_no_staging_run():
+    """A staging deploy demonstrates that the site still builds. Nothing in
+    `scripts/review-v3/` and its sibling pipelines is read by the build, so
+    the deploy demonstrated nothing about them — while costing ~9 minutes of
+    the shared staging stack and a `staging/pulumi-test-io` status on every
+    pr-review tooling PR. They route to `other`: same `tools` approver as
+    `infra`, no staging evidence.
+
+    The narrowing is per path, not per PR: one workflow or build script in
+    the same diff and the whole PR is `infra` again."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+
+    def lanes(paths):
+        return routing.resolve_lanes(paths, False, [], cfg)
+
+    for d in ("review-v3", "review-admin", "content-review", "blog-review"):
+        r = lanes([f"scripts/{d}/thing.py"])
+        assert set(r.subjects.values()) == {"other"}, (d, r.subjects)
+        assert r.staging_evidence_required is False, d
+        assert "tools" in r.roles, (d, r.roles)
+
+    # Everything else under scripts/ feeds the build and keeps its deploy.
+    for path in ("scripts/lint/lint-markdown.js", "scripts/search/update-search-index.js",
+                 "scripts/meta-images/blog.mjs", "Makefile", "infrastructure/index.ts",
+                 ".github/workflows/x.yml"):
+        assert lanes([path]).staging_evidence_required is True, path
+
+    # A mixed diff is infra, staging run and all.
+    mixed = lanes(["scripts/review-v3/act.py", ".github/workflows/staging-status.yml"])
+    assert mixed.staging_evidence_required is True and "infra" in set(mixed.subjects.values())
+
+    # The approver does not change either way, so this narrows the evidence
+    # requirement and nothing else.
+    assert set(lanes(["scripts/review-v3/act.py"]).roles) == set(lanes(["Makefile"]).roles) == {"tools"}
