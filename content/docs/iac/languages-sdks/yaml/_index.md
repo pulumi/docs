@@ -123,4 +123,4 @@ interpret the output as a Pulumi YAML program.
 
 ## YAML Packages
 
-The [Pulumi Registry](/registry/) houses 100+ YAML packages.
+The [Pulumi Registry](/registry/) houses hundreds of YAML packages.

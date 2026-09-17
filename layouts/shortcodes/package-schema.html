@@ -1,0 +1,177 @@
+{{/*
+  Renders the Pulumi package schema reference on
+  /docs/iac/guides/building-extending/packages/schema/, from the committed
+  data/package_schema/*.json that scripts/fetch-package-schema.js generates out of
+  pulumi/pulumi's metaschema and each language repo's *Info Go structs.
+
+  Params:
+    group   "core"      the schema's own types (Package, Resource, Type, ...)
+            "language"  the per-language extensions under a schema's `language` key
+    only    optional comma-separated list of type ids, to embed a subset elsewhere
+
+  The author keeps the surrounding Markdown "##" headings, so those stay in the
+  page's own goldmark IDs; this shortcode emits every "###".
+
+  Emitting headings from a shortcode is safe here because the docs "On this page"
+  list is not Hugo's .TableOfContents: theme/src/ts/misc.ts scans #main for h2 and
+  h3 elements that carry an id. Two consequences, both load-bearing:
+
+    * every heading below sets an explicit id (which is also its anchor -- see the
+      contract in data/package_schema/anchors.yaml), and
+    * headings are emitted OUTSIDE <pulumi-choosable>. That scan skips only
+      .hidden ancestors, while an inactive choosable is hidden by a
+      :not(.active) rule in theme/src/scss/components/_choosable.scss -- so a
+      heading inside one would appear in the TOC once per language.
+*/}}
+{{ $group := .Get "group" }}
+{{ $only := .Get "only" }}
+{{ $pos := .Position }}
+
+{{ $overrides := site.Data.package_schema_overrides }}
+{{ if not $overrides }}
+  {{ errorf "package-schema: data/package_schema_overrides.yaml is missing (%s)" $pos }}
+{{ end }}
+
+{{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+{{/* Every id this render emitted, checked against the anchor contract below. */}}
+{{ $emitted := slice }}
+
+{{ if eq $group "core" }}
+
+  {{ $core := site.Data.package_schema.core }}
+  {{ if or (not $core) (not $core.types) }}
+    {{ errorf "package-schema: data/package_schema/core.json is missing or empty. Run scripts/fetch-package-schema.js --repo pulumi --version <x.y.z>. (%s)" $pos }}
+  {{ end }}
+
+  {{ range $type := $core.types }}
+    {{ if or (not $only) (in (split $only ",") $type.id) }}
+      {{ $emitted = $emitted | append $type.id }}
+      <h3 id="{{ $type.id }}">{{ $type.title }}</h3>
+      {{ with $type.description }}<p>{{ . | markdownify }}</p>{{ end }}
+
+      {{ with $type.inherits }}
+        <p>
+          Includes every property of
+          {{ range $i, $parent := . }}{{ if $i }} and {{ end }}<a href="{{ $parent.href }}">{{ $parent.title }}</a>{{ end }}{{ if $type.properties }}, plus:{{ else }}.{{ end }}
+        </p>
+      {{ end }}
+
+      {{ with $type.properties }}
+        {{ partial "package-schema/property-rows.html" (dict "properties" . "prefix" $type.id) }}
+      {{ end }}
+
+      {{/* A type the metaschema defines as a choice between shapes. Rendering the
+           branches, rather than merging them into one flat list the way the
+           hand-written page did, is the only way to show that e.g. an array type
+           must carry "items" and must not carry "$ref". */}}
+      {{ with $type.variants }}
+        <div class="api-param-variant-label">Exactly one of</div>
+        {{ range $variant := . }}
+          <div class="api-param-variant-group">
+            <p><strong>{{ $variant.title }}</strong>{{ with $variant.ref }} &mdash; see <a href="{{ .href }}">{{ .text }}</a>{{ end }}</p>
+            {{ with $variant.description }}<p>{{ . | markdownify }}</p>{{ end }}
+            {{ with $variant.inherits }}
+              <p>
+                Includes every property of
+                {{ range $i, $parent := . }}{{ if $i }} and {{ end }}<a href="{{ $parent.href }}">{{ $parent.title }}</a>{{ end }}{{ if $variant.properties }}, plus:{{ else }}.{{ end }}
+              </p>
+            {{ end }}
+            {{ with $variant.properties }}
+              {{ partial "package-schema/property-rows.html" (dict "properties" . "prefix" (printf "%s-%s" $type.id (anchorize $variant.title))) }}
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{ else if eq $group "language" }}
+
+  {{ $spec := $overrides.language }}
+  {{ if or (not $spec) (not $spec.types) }}
+    {{ errorf "package-schema: data/package_schema_overrides.yaml declares no language.types (%s)" $pos }}
+  {{ end }}
+
+  {{/* One entry per language, in the order the overrides file fixes, skipping any
+       whose repo has not been generated yet. Each carries its own upstream version
+       because each comes from a repo that releases on its own cadence. */}}
+  {{ $languages := slice }}
+  {{ range $id := $spec.languages }}
+    {{ with index site.Data.package_schema (printf "language_%s" $id) }}
+      {{ $languages = $languages | append . }}
+    {{ else }}
+      {{ warnf "package-schema: no data/package_schema/language_%s.json yet; that tab will not render (%s)" $id $pos }}
+    {{ end }}
+  {{ end }}
+  {{ if not $languages }}
+    {{ errorf "package-schema: no data/package_schema/language_*.json files. Run scripts/fetch-package-schema.js for each source repo. (%s)" $pos }}
+  {{ end }}
+
+  {{ $options := delimit (apply $languages "index" "." "choosable") "," }}
+
+  {{ range $type := $spec.types }}
+    {{ if or (not $only) (in (split $only ",") $type.id) }}
+      {{ $emitted = $emitted | append $type.id }}
+      <h3 id="{{ $type.id }}">{{ $type.title }}</h3>
+      {{ with $type.description }}<p>{{ . | markdownify }}</p>{{ end }}
+
+      {{/* A section no target language implements yet has nothing to choose
+           between, so it gets its note and no chooser. */}}
+      {{ with $type.note }}
+        <p>{{ . | markdownify }}</p>
+      {{ else }}
+        {{/* The bare single-child <div> wrappers match layouts/shortcodes/chooser.html
+             and choosable.html, and are load-bearing: choosable.tsx walks element
+             siblings looking for exactly that shape. */}}
+        <div><pulumi-chooser type="language" options="{{ $options }}" mode=""></pulumi-chooser></div>
+        {{ range $language := $languages }}
+          {{ $section := index $language.sections $type.id }}
+          <div><pulumi-choosable type="language" values="{{ $language.choosable }}" mode="">
+            {{ if $section }}
+              <p>
+                Set under the <code>{{ $language.schemaKey }}</code> key of a
+                <code>language</code> map. Generated from
+                <a href="{{ $language.source.url }}">{{ $language.source.repo }} {{ $language.source.version }}</a>.
+              </p>
+              {{ partial "package-schema/property-rows.html" (dict
+                "properties" $section.properties
+                "prefix" (printf "%s-%s" $type.id $language.language)
+              ) }}
+            {{ else }}
+              <p>Not supported by the {{ $language.label }} code generator.</p>
+            {{ end }}
+          </pulumi-choosable></div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{ else }}
+  {{ errorf "package-schema: group must be \"core\" or \"language\", got %q (%s)" $group $pos }}
+{{ end }}
+
+{{/* The anchor contract. Nothing in CI validates URL fragments --
+     scripts/link-checker/check-links.js does not look at them -- so a generator
+     change that renames or drops a type would silently break inbound links,
+     including /docs/iac/guides/building-extending/providers/provider-configuration/'s
+     deep link to #default. Failing the build is the only backstop. */}}
+{{ if not $only }}
+  {{ $contract := where (site.Data.package_schema.anchors | default slice) "group" $group }}
+  {{ range $contract }}
+    {{ range .ids }}
+      {{ if not (in $emitted .) }}
+        {{ errorf "package-schema: anchor #%s is promised by data/package_schema/anchors.yaml but the %q group no longer emits it. Renaming a type is fine; changing its id breaks published links, so keep the id and update the title, or add an alias. (%s)" . $group $pos }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $seen := dict }}
+{{ range $emitted }}
+  {{ if isset $seen . }}
+    {{ errorf "package-schema: two types share the id %q, so one of their anchors is unreachable (%s)" . $pos }}
+  {{ end }}
+  {{ $seen = merge $seen (dict . true) }}
+{{ end }}

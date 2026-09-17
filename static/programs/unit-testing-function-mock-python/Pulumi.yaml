@@ -1,0 +1,6 @@
+name: unit-testing-function-mock-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Unit tests that mock a provider function (aws.ec2.get_ami).

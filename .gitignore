@@ -50,6 +50,7 @@ theme/stencil/src/components.d.ts
 /static/js/algolia.*.js
 /static/js/marketing.*.js
 /static/js/homepage.*.js
+/static/js/hero-animation.*.js
 /static/js/chunk-*.js
 
 # Ignore webpack-generated JS manifest for Hugo.
@@ -149,6 +150,24 @@ _vendor/
 # working state for the walkthrough, never a commit.
 /.review-worklist-*.json
 
+# Maintainer-side queue state for `/pr-review` — the collected queue, the
+# model's judge output, the act plan, the rendered board, per-PR preview
+# screenshots, and the per-(PR, head SHA) response cache. All local working
+# state; `make lint` runs `prettier --check .` so these must never be seen.
+/.pr-review-queue.json
+/.pr-review-judgments.json
+/.pr-review-plan.json
+/.pr-review-board.html
+/.pr-review-shots/
+/.pr-review-cache/
+# record-evidence.py writes .pr-review-evidence/ on every run, S3 reachable
+# or not -- writing them is its contract, not its fallback; sla-sweep.py
+# writes .pr-review-state/ only when no bucket is configured. Same argument
+# as the block above: both land in the repo root, where prettier --check
+# sees them.
+/.pr-review-evidence/
+/.pr-review-state/
+
 # Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
 # and `.glowup-scope-report.json`, the scope gate's report). Both are written
 # to the repo root before the `make lint` re-gate, so an unignored one makes
@@ -165,6 +184,12 @@ _vendor/
 /.verified-claims.json
 /.vale-raw.json
 /.vale-findings.json
+# Per-round scratch from the glow-up lane's Vale fixpoint loop (SKILL.md
+# step 3). Dot-prefixed, so the content-review export's `git add -A --
+# ':!.*'` already excludes them from the handoff patch; ignored here so a
+# local run of the skill doesn't leave committable cruft behind.
+/.vale-round*.json
+/.vale-findings-round*.json
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
 /.readthrough-findings.json
@@ -225,3 +250,10 @@ assets/images/generated/
 # Written to the repo root (prettier resolves --ignore-path patterns relative to
 # the ignore file's own directory) and removed when the run exits.
 /.prettierignore.union
+
+# Compiled output for the theme unit tests (see theme/tsconfig.test.json).
+/theme/bin-test/
+
+# Playwright MCP session artifacts (browser snapshots written into the repo root).
+.playwright-mcp/
+.pytest_cache/

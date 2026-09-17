@@ -61,14 +61,14 @@ Joshua is a longtime member of the Pulumi community, and he contributed to the i
 <img src="kat-morgan.png" width="200" height="200" alt="Kat Morgan"/>
 <a data-track="twitter" href="https://twitter.com/usrbinkat">{{< icon name="brand/x" >}}</a>&nbsp;<a data-track="github" href="https://github.com/usrbinkat">{{< icon name="brand/github" >}}</a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/usrbinkat">{{< icon name="brand/linkedin" >}}</a>
 
-Kat has been a helpful member of the Pulumi community - not only providing feedback on real-world use of Pulumi, but also sharing her knowledge with [workshops and webinars](https://konghq.com/webinars/devmyops-deploy-kong-with-pulumi?utm_souce=pulumi&utm_medium=pulumi)
+Kat has been a helpful member of the Pulumi community - not only providing feedback on real-world use of Pulumi, but also sharing her knowledge with [workshops and webinars](https://web.archive.org/web/20220701083552/https://konghq.com/webinars/devmyops-deploy-kong-with-pulumi)
 
 ### Komal Ali
 
 <img src="komal-ali.png" width="200" height="200" alt="Komal Ali"/>
 <a data-track="twitter" href="https://twitter.com/zwitkali">{{< icon name="brand/x" >}}</a>&nbsp;<a data-track="github" href="https://github.com/komalali">{{< icon name="brand/github" >}}</a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/komal-ali">{{< icon name="brand/linkedin" >}}</a>
 
-In addition to being a Puluminary, Komal is also a Pulumni, having spent time working to make Pulumi a better tool for developers -  they were ever-present in making our Python SDK better and creating the [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)!
+In addition to being a Puluminary, Komal is also a Pulumni, having spent time working to make Pulumi a better tool for developers -  they were ever-present in making our Python SDK better and creating the [Automation API](https://www.pulumi.com/docs/iac/concepts/automation-api/)!
 
 ### Paul Hicks
 

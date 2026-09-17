@@ -7,7 +7,7 @@
 {{ $jsManifest := $.Site.Data.js_manifest }}
 <script src="/js/{{ index $jsManifest "bundle" }}" defer></script>
 
-{{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" "tags" "authors" "category" }}
+{{ $searchSections := slice "docs" "registry" "blog" "tags" "authors" "category" }}
 {{ if in $searchSections .Section }}
     <script src="/js/{{ index $jsManifest "algolia" }}" defer></script>
 {{ end }}
@@ -33,7 +33,7 @@
   and inlines it automatically. Do NOT manually inline CSS here — the full
   stylesheets use @layer and unlayered inline styles will override them.
 -->
-{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "tutorials" "providers" "collections" "templates" "ai" "authors" "tags" "legal" }}
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "providers" "ai" "authors" "tags" "legal" }}
 {{ $isMarketing := not (in $nonMarketingSections .Section) }}
 
 {{ template "css-link" (dict "source" "css/bundle.css" "name" "bundle") }}

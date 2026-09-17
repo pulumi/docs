@@ -26,7 +26,7 @@ GA includes many significant updates to the Pulumi YAML support introduced since
 * __New `str` package__:  A new Pulumi Package with many string manipulation functions that can be used in Pulumi YAML and other Pulumi languages.
 * __Pulumi Kubernetes Operator Inline `Program` Support__: Support for managing Pulumi cloud resources from directly within the Kubernetes resource model.
 
-You can [get started with Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/) today!
+You can [get started with Pulumi YAML](/docs/iac/languages-sdks/yaml/) today!
 
 ## Why Pulumi YAML?
 
@@ -215,11 +215,11 @@ spec:
 
 ## Conclusion
 
-The GA of Pulumi YAML marks a stable foundation for the simple, declarative YAML interface to the Pulumi ecosystem.  We’re excited to see YAML support expand the audiences who can jump in and use the best of the Pulumi ecosystem, ensuring that Pulumi offers a great experience for every Infrastructure as Code use case and user.
+The GA of Pulumi YAML marks a stable foundation for the simple, declarative YAML interface to the Pulumi ecosystem.  We’re excited to see YAML support expand the audiences who can jump in and use the best of the Pulumi ecosystem, ensuring that Pulumi offers a great experience for every infrastructure as code use case and user.
 
 Check out these resources to get started with Pulumi YAML today:
 
-* [Pulumi YAML Overview Docs](https://www.pulumi.com/docs/languages-sdks/yaml/)
-* [Pulumi YAML Language Reference](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/)
+* [Pulumi YAML Overview Docs](/docs/iac/languages-sdks/yaml/)
+* [Pulumi YAML Language Reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/)
 * [Pulumi Templates](https://www.pulumi.com/templates/)
 * [Pulumi Getting Started](https://www.pulumi.com/docs/get-started/)

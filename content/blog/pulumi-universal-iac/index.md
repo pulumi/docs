@@ -49,7 +49,7 @@ You can get started with Pulumi using Java today in the [Pulumi Getting Started 
 
 ## Pulumi YAML
 
-Pulumi has differentiated itself as an Infrastructure as Code tool that embraces popular programming languages and their rich software engineering ecosystems. However, our goal has always been to offer the broadest range of language support for the wide variety of use cases and users who need to interact with cloud infrastructure in modern cloud organizations.
+Pulumi has differentiated itself as an infrastructure as code tool that embraces popular programming languages and their rich software engineering ecosystems. However, our goal has always been to offer the broadest range of language support for the wide variety of use cases and users who need to interact with cloud infrastructure in modern cloud organizations.
 
 Pulumi YAML offers a new, simple interface to the full richness of the Pulumi Platform. Pulumi YAML allows infrastructure as code to be authored in a single simple YAML file with just a few lines of YAML, immediately familiar to any engineer, operator or developer.
 
@@ -381,7 +381,7 @@ Every package in the Pulumi Registry supports all Pulumi programming languages, 
 
 Pulumi’s users love managing __*all*__ of their cloud infrastructure using Pulumi, and that includes managing the state of the [Pulumi Service](/product/pulumi-service/) itself.
 
-Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](https://www.pulumi.com/docs/pulumi-cloud/accounts/#access-tokens), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
+Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/administration/concepts/access-tokens/), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
 
 For example, you can create a webhook that is notified whenever a Pulumi Update completes, and log it using an AWS Lambda, with just a few lines of code using the new Pulumi Service provider along with the API Gateway package.
 
@@ -427,7 +427,7 @@ Pulumi's Universal Infrastructure as Code platform supports the widest range of 
 
 With support for a broad range of languages - from the enterprise software engineering features of Java, to the simple declarative interface of Pulumi YAML - Pulumi scales from the simplest cloud use cases up into the most complex cloud infrastructure being managed today, and bridges the gap between cloud platform teams, operations teams, and application development teams.
 
-With support for more than 80 cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider.  And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
+With support for more than 80 cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider. And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
 
 To learn more about each of the new features - check out these blog posts with more details:
 
@@ -437,4 +437,4 @@ To learn more about each of the new features - check out these blog posts with m
 * [AWS CDK on Pulumi](/blog/aws-cdk-on-pulumi/)
 * [Pulumi Provider for the Pulumi Service](/blog/announcing-pulumi-service-provider/)
 
-We’re incredibly excited about today’s launches, but also see an amazing opportunity ahead to continue to drive new innovation in Infrastructure as Code and the future of Cloud Engineering. Can’t wait to see what you build!
+We’re incredibly excited about today’s launches, but also see an amazing opportunity ahead to continue to drive new innovation in infrastructure as code and the future of Cloud Engineering. Can’t wait to see what you build!

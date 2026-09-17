@@ -1,6 +1,6 @@
 ---
 # Event title, <= 60 characters.
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" " " | humanize }}"
 meta_desc: ""
 
 # Social card. Leave blank to auto-generate an on-brand event card at build time

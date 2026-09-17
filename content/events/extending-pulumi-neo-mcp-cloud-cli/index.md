@@ -36,14 +36,14 @@ youtube_url:
 sortable_date: 2026-09-08T09:00:00.000-07:00
 
 # Duration of the event.
-duration: 90 minutes
+duration: 60 minutes
 
 # The event runs twice, once per region. Each session gets its own tab on this
 # page, its own card in the event list, and its own registration form.
 sessions:
     - label: Americas
       sortable_date: 2026-09-08T09:00:00.000-07:00
-      duration: 90 minutes
+      duration: 60 minutes
       form:
           hubspot_form_id: 13e8fea4-356f-42a2-8e6b-50300b49d666
           salesforce_campaign_id: 701PQ00000zDNF3YAO

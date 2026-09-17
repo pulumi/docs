@@ -6,7 +6,7 @@
     <section id="overview" class="mt-8 pb-16 relative">
         <div class="container mx-auto text-center">
             <div class="w-full p-4">
-                <h2>{{ .Params.overview.title | markdownify }}</h2>
+                <h2>{{ partial "functions/heading-br-space.html" .Params.overview.title | markdownify }}</h2>
             </div>
         </div>
         <div class="container mx-auto">

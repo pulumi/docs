@@ -25,7 +25,7 @@ Every executable plugin follows a strict naming convention so the Pulumi CLI can
 
 **Archive name:** `pulumi-resource-<package-name>-v<version>-<os>-<arch>.tar.gz`
 
-- `<version>` is the plugin version without a leading `v` inside the archive, but the filename uses `v<version>`.
+- `<version>` is the plugin version without a leading `v`, but the filename uses `v<version>` (for example, `v3.0.0`).
 - `<os>` is one of `darwin`, `linux`, `windows`.
 - `<arch>` is one of `amd64`, `arm64`.
 
@@ -128,7 +128,7 @@ If the boilerplates don't fit, the common pattern they implement has four parts 
 
 1. **Cross-compilation.** A Makefile target or CI matrix job produces one `.tar.gz` per OS/arch target — the archive layout described in [Binary naming and archive layout](#binary-naming-and-archive-layout).
 1. **Release workflow.** A tag-triggered workflow (typically on `v*.*.*`) runs the matrix build and uploads archives as GitHub Release assets (so `pluginDownloadURL: github://api.github.com/<org>` resolves to them), then generates and publishes per-language SDKs.
-1. **SDK publishing.** The composite action [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) handles npm, PyPI, NuGet, and Maven Central in a single step. Select languages with the `sdk:` input (e.g., `sdk: "nodejs,python"`).
+1. **SDK publishing.** Run [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/) once per target language, then publish with the composite action [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher), which handles npm, PyPI, NuGet, and Maven Central in a single step. Select languages with the `sdk:` input (e.g., `sdk: "nodejs,python"`).
 1. **Go module tag.** Push a Go module tag so consumers can `go get` the SDK — the boilerplates carry the canonical layout.
 
 Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/releases/plugins/` (the CLI's default fallback when `pluginDownloadURL` is omitted). Third-party providers do not need and cannot implement this step — point `pluginDownloadURL` at your own GitHub, GitLab, or S3 location instead.
@@ -137,13 +137,7 @@ Pulumi-hosted providers additionally upload archives to `s3://get.pulumi.com/rel
 
 The binary plugin is what removes the consumer runtime dependency — not the SDK. Consumers can still run [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/) against your schema to generate a local SDK, the same as with a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/). Once you've committed to publishing a binary per release, though, publishing per-language SDKs to npm, PyPI, NuGet, Maven Central, and as a tagged Go module is a natural extension — and most packages in the public Pulumi Registry do both.
 
-A typical release pipeline for each tagged release looks like this:
-
-1. Push a `vX.Y.Z` tag.
-1. Cross-compile the binary matrix and upload archives to GitHub Releases (or your chosen host).
-1. Run `pulumi package gen-sdk` once per target language.
-1. Publish SDKs via [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) — it handles npm, PyPI, NuGet, and Maven Central.
-1. Push a Go module tag so consumers can `go get` the Go SDK.
+Pushing a `vX.Y.Z` tag is what drives all of this: the steps a tagged release runs — cross-compile, upload archives, generate SDKs, publish them, and push the Go module tag — are the ones described in [The general release pipeline](#the-general-release-pipeline) above.
 
 ## Trade-offs vs. source-based plugins
 

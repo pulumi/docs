@@ -27,7 +27,7 @@ If the stack was deleted with `pulumi stack rm --force` while resources still ex
 
 - Only the **last 25 deleted stacks** in an organization are available for self-service restore.
 - Only **organization administrators** can restore stacks.
-- If you need to restore an older stack that is no longer in the list, [contact Pulumi support](https://support.pulumi.com/).
+- If you need to restore an older stack that is no longer in the list, [contact Pulumi support](/support/new/).
 
 ## Restore a stack
 

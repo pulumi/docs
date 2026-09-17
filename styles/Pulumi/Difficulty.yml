@@ -1,5 +1,5 @@
 extends: existence
-message: "Avoid difficulty qualifier '%s' -- it judges difficulty for the reader (STYLE-GUIDE.md §Inclusive Language)."
+message: "Avoid difficulty qualifier '%s' -- it judges difficulty for the reader (brand guide: voice, words and phrases)."
 level: warning
 ignorecase: true
 tokens:

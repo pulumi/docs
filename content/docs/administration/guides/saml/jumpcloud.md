@@ -79,6 +79,10 @@ Pulumi requires the IdP metadata XML from JumpCloud to complete SSO configuratio
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 1. Sign in to [Pulumi Cloud](https://app.pulumi.com) and navigate to your organization.
 1. Select the **Settings** tab, then **Access Management**.
 1. Under **Membership Requirements**, select **Change requirements**.

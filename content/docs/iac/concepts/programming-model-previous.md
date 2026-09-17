@@ -9,6 +9,6 @@ block_external_search_index: true
     waiting a few seconds before redirecting gives the script (see redirects.ts) a chance
     to locate a matching anchor.
 -->
-<meta http-equiv="refresh" content="4; url=/docs/concepts">
+<meta http-equiv="refresh" content="4; url=/docs/iac/concepts/">
 
 This content has moved. Redirecting to [Pulumi Concepts](/docs/iac/concepts/)....

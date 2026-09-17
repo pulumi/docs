@@ -7,7 +7,7 @@ menu:
   administration:
     name: Access tokens
     parent: administration-concepts
-    weight: 5
+    weight: 7
 aliases:
 - /docs/administration/access-identity/access-tokens/
 - /docs/intro/pulumi-service/organization-access-tokens/
@@ -26,8 +26,8 @@ The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/ia
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
-1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Team, Enterprise, and Business Critical editions.
-1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Enterprise and Business Critical customers.
+1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Essentials, Pro, and Enterprise editions.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Pro and Enterprise customers.
 
 When using tokens, be mindful of the following security best practices:
 
@@ -107,7 +107,7 @@ Deleting a token immediately revokes its access. The token name is permanently r
 
 ## Access token expiry policy
 
-Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and the time remaining until that expiration must be within the policy's cap, for requests against the organization to succeed.
+Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and their total lifetime (the time from creation to expiration) must be within the policy's cap, for requests against the organization to succeed.
 
 ### Setting a policy
 
@@ -128,10 +128,10 @@ To remove the policy, set the value to 0 (or clear the field) and save. Policy c
 
 ### How compliance is evaluated
 
-A token complies with the policy if it has an expiration date and its remaining lifetime — the time between now and its expiration — is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
+A token complies with the policy if it has an expiration date and its total lifetime (the time between its creation and its expiration) is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
 
 * A token that never expires violates any policy.
-* A token created with a long expiry becomes compliant once its remaining lifetime falls within the cap. For example, under a 30-day policy, a token that expires 20 days from now is compliant even if it was originally created with a one-year expiry.
+* A token created with a lifetime longer than the cap never becomes compliant, even as its expiration approaches. For example, under a 30-day policy, a token created with a one-year expiry is rejected even when it has only 20 days left; it must be recreated with a compliant expiry.
 
 ### What the policy affects
 

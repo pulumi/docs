@@ -34,9 +34,14 @@ async function waitForInProgressRuns() {
         auth: githubToken,
     });
 
-    // Given the current workflow name, fetch its ID.
-    const workflows = await octokit.rest.actions.listRepoWorkflows({ owner, repo });
-    const workflow_id = workflows.data.workflows.find(workflow => workflow.name === workflowName).id;
+    // Resolve the current workflow's ID from the run itself. Looking it up by name in
+    // listRepoWorkflows was a paginated search that only ever read the first page of 30:
+    // the repo has more workflows than that, and the API lists disabled workflows last,
+    // so a workflow that was disabled while a run was in flight (or that simply sorted
+    // past page 1) came back undefined and this script crashed after the bucket was built
+    // but before `pulumi up`. The run already knows which workflow it belongs to.
+    const currentRun = await octokit.rest.actions.getWorkflowRun({ owner, repo, run_id: currentRunID });
+    const workflow_id = currentRun.data.workflow_id;
 
     let waitedMs = 0;
 

@@ -20,15 +20,16 @@ Anyone using Pulumi — including users of Pulumi open source and the free tier 
 - **[Pulumi Community Slack](https://slack.pulumi.com/)** — Ask questions and discuss Pulumi with other users. The community Slack is used by other Pulumi users and is regularly monitored by Pulumi employees, including engineers and members of the developer relations team.
 - **[GitHub issues](/docs/support/filing-issues/)** — Report bugs and request features. The linked guide explains how to pick the right Pulumi repository for your issue, and how to attach the logs for a failed operation with `pulumi logs share`.
 - **[Documentation](/docs/)** — Browse the full Pulumi documentation for guidance on infrastructure, secrets, policies, and platform features.
+- **Direct chat support** — Chat with our AI agent, Fin, using the chat box in the bottom-right corner of the website.
 
 Pulumi staff are active in both the community Slack and on GitHub, but response times depend on availability and are not covered by an SLA.
 
 ## With a paid support plan
 
-Customers on a paid support plan have access to direct support channels with response-time commitments:
+In addition to the above, customers on a paid support plan have access to direct support channels with response-time commitments:
 
 - **Private chat channel** — A dedicated chat channel with Pulumi support staff for your organization.
-- **Direct email support** — Contact Pulumi support directly via the [Pulumi support portal](https://support.pulumi.com/).
+- **Direct email support** — Contact Pulumi support directly via the [Pulumi support portal](/support/new/), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
 
 If you are on a paid plan and aren't sure how to reach your support channel, contact your Pulumi account team.
 

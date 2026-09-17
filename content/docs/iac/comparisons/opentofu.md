@@ -10,10 +10,6 @@ menu:
         name: OpenTofu
         parent: iac-comparisons
         weight: 30
-    concepts:
-        identifier: vs-opentofu
-        parent: vs
-        weight: 30
 aliases:
 - /docs/reference/vs/opentofu/
 - /docs/intro/vs/opentofu/
@@ -49,11 +45,12 @@ OpenTofu is an open-source, declarative infrastructure as code tool forked from 
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others; Pulumi Cloud can also [operate as an OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) | [Self-managed by default](https://opentofu.org/docs/language/state/) (local file); remote backends include S3, GCS, Azure Blob, HTTP, and others; managed offerings available from Pulumi Cloud and third parties (Spacelift, env0, Scalr) |
 | Secrets management | [Encrypted in transit and at rest](/docs/iac/concepts/secrets/) in the state file by default, with per-stack encryption keys; pluggable KMS providers (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault) | [State and plan encryption](https://opentofu.org/docs/language/state/encryption/) (added in OpenTofu 1.7) with pluggable key providers; individual variable values are not encrypted as a first-class primitive |
 | Execution model | Local CLI, programmatic via [Automation API](/docs/iac/concepts/automation-api/), or remote runs in [Pulumi Deployments](/docs/deployments/) | Local CLI; remote execution requires a runner — Pulumi Cloud [runs `tofu` plans and applies](/docs/iac/get-started/terraform/terraform-remote-execution/) when it backs your state, or use a third-party service |
+| Audit logs | Pulumi Cloud audit logs start with Essentials. Automated export to Amazon S3 or Microsoft Sentinel starts with Pro. | Not included in OpenTofu. Audit logging depends on the remote backend or other external tooling. |
 | Rollback on failed operation | Failed updates leave the stack in a partially-updated state; subsequent `pulumi up` runs reconcile toward the desired state, and you can roll forward by reverting program code | No automatic rollback; failed `tofu apply` runs leave resources in their last reported state and require a follow-up `apply` to reconcile |
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through `tofu` CLI invocations |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Modules](https://opentofu.org/docs/language/modules/) referenced from local paths, Git, or registries; Pulumi can also [consume OpenTofu modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) and [host them in Pulumi Cloud's registry](/docs/idp/concepts/terraform-modules/), where `tofu init` can still resolve them |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [`tofu import`](https://opentofu.org/docs/cli/commands/import/) and the [`import` block](https://opentofu.org/docs/language/import/); HCL for the imported resource must be authored by hand |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code; external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) can evaluate plan output |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code; external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) can evaluate plan output |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Yes — [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE) |
 | Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | None from the OpenTofu project itself; commercial managed-state and collaboration tooling comes from Pulumi Cloud or third parties (Spacelift, env0, Scalr) |
 
@@ -81,7 +78,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. OpenTofu has no built-in policy-as-code feature; teams typically reach for external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) to evaluate plan output as a separate step.
+[Pulumi Policies](/docs/discovery-governance/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. OpenTofu has no built-in policy-as-code feature; teams typically reach for external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) to evaluate plan output as a separate step.
 
 ### Modularity and reuse
 
@@ -148,7 +145,7 @@ Yes. A Pulumi program can read outputs from an OpenTofu state file via [`terrafo
 
 ### Is Pulumi free like OpenTofu?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. OpenTofu itself is free under MPL 2.0; commercial managed-state and collaboration tooling is sold separately by third parties such as Spacelift, env0, and Scalr.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) includes managed state in the Free edition. Paid editions add multi-user collaboration, RBAC, audit logs, and policy management. OpenTofu itself is free under MPL 2.0; commercial managed-state and collaboration tooling is sold separately by third parties such as Spacelift, env0, and Scalr.
 
 ### Can Pulumi and OpenTofu run side by side during migration?
 
@@ -158,6 +155,7 @@ Yes — and this is one of the more common adoption patterns. Pulumi can read ou
 
 - [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
+- [Pulumi terms and command equivalents for OpenTofu users](/docs/iac/comparisons/terraform/#terraform-terms-and-command-equivalents)
 - [Using any Terraform or OpenTofu provider with Pulumi](/docs/iac/concepts/providers/any-terraform-provider/)
 - [Using Pulumi Cloud as a Terraform or OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
 - [Writing Pulumi programs in HCL](/docs/iac/languages-sdks/hcl/)

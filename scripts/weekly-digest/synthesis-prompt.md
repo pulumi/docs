@@ -34,6 +34,11 @@ Then:
   - On a quiet week (no scraped PRs), collapse the whole block to a single line ("No reviewed PRs closed this week") -- never drop the block entirely.
 - End with ONE line of CI health derived from `ci_health` (status plus success rate / failure count if useful). `ci_health` is computed over the last 24 hours, so describe the window that way -- do NOT call it "last N runs".
 
+- v3 SLA ops -- a short trailing block (1-3 lines) from `v3_ops`, the SLA-sweep's own operational summary (escalations, staleness warns/closes, waives). Rules:
+  - If `v3_ops.available == false`, emit exactly one line saying v3 SLA telemetry was unavailable this week (loud degradation signal, same treatment as `review_outcomes.available == false` above -- never omit it).
+  - Otherwise, one line: `escalations_total` (with the `escalations_by_role` breakdown only if more than one role fired), `warns`, `closes`, and `waives`. On a fully quiet window (all four are 0) collapse to a single line ("No SLA escalations, staleness warnings, or waives this week") -- never drop the block.
+  - If `bulk_accept_rate` is not null, add a trailing clause noting it (e.g. "N% of accepted findings were bulk-resolved") only when `author_accepted` is at least a handful (say 3+) -- a rate computed from 1-2 answers is noise, skip the clause below that floor.
+
 ## Message 2 -- backlog_digest
 
 A scan of the open-issue backlog, not a recital. Do not list the whole backlog.

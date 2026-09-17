@@ -82,6 +82,10 @@ domain users by selecting the down arrow in the **User access** panel:
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 1. Sign in to Pulumi Cloud and navigate to your organization.
 1. Select **Settings** > **Access Management**.
 1. Select the **Other** tab.
@@ -102,4 +106,4 @@ name of your Pulumi organization.
 
 Google Workspace SAML troubleshooting: [SAML app error messages](https://support.google.com/a/answer/6301076)
 
-For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
+For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](/support/new/).

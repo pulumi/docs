@@ -69,7 +69,7 @@ The [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) landscape o
 technologies that can be leveraged to build these platforms from scratch. However, the sheer number of options can be
 overwhelming, making it difficult for organizations to determine the best combination of tools for their specific needs.
 
-At Pulumi's Customer Experience Team, we've observed that adopting Infrastructure as Code often serves as a catalyst for
+At Pulumi's Customer Experience Team, we've observed that adopting infrastructure as code often serves as a catalyst for
 organizations to reassess their entire software delivery process. This reassessment frequently leads to the
 implementation of more streamlined, automated, and secure methodologies – the core principles of platform engineering
 mentioned above.
@@ -105,7 +105,7 @@ are designed to address different capabilities of our internal developer platfor
 
 {{% notes type="info" %}}
 In modern cloud computing, the [hub-and-spoke architecture](https://open-cluster-management.io/docs/concepts/architecture/)
-pattern is widely used to manage multiple [Kubernetes](https://www.pulumi.com/docs/clouds/kubernetes/) clusters. In this pattern, a central
+pattern is widely used to manage multiple [Kubernetes](/docs/integrations/clouds/kubernetes/) clusters. In this pattern, a central
 control plane (hub) manages a set of clusters (spokes) that run applications and services. The hub provides a unified
 view of the entire infrastructure, enabling centralized management, monitoring, and security.
 {{% /notes %}}
@@ -500,5 +500,5 @@ developer portal and provides a carefree experience of managing your infrastruct
 Continue to upskill and learn about platform engineering:
 
 * Read [Pulumi Patterns and Practices (P3): A Pulumi-based reference architecture for large-scale organizations](https://www.pulumi.com/blog/pulumi-patterns-and-practices/)
-* [Learn how to build Developer Portals with Pulumi](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/).
+* [Learn how to build Developer Portals with Pulumi](/docs/idp/concepts/).
 * Register for one of our [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming).

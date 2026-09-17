@@ -82,6 +82,10 @@ page.
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 To configure Pulumi Cloud with details on your new Okta-based SAML application, you need to
 obtain the IdP metadata document from Okta and then provide it to Pulumi.
 
@@ -138,4 +142,4 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/guides/saml/troubleshooting/) or [contact support](/support/new/).

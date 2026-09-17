@@ -76,7 +76,7 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 
 Our very first in-person PUG meetup took place in London, UK. The event was well-attended by developers, cloud architects, and other infrastructure enthusiasts. The attendees had the opportunity to network with other like-minded professionals and learn more about Pulumi's tools and features from expert speakers.
 
-During the meetup, attendees heard from several speakers, including Joe Duffy, Co-Founder & CEO at Pulumi, who was there to speak about Infrastructure as Code that writes itself after the release of [Pulumi Insights](/blog/pulumi-insights/), which happened that same day.
+During the meetup, attendees heard from several speakers, including Joe Duffy, Co-Founder & CEO at Pulumi, who was there to speak about infrastructure as code that writes itself after the release of [Pulumi Insights](/blog/pulumi-insights/), which happened that same day.
 
 ![Photo of Pulumi CEO Joe Duffy speaking at a Pulumi User Group (PUG) in London, UK](/blog/join-pulumi-user-group-community/pulumi-user-group-pug-london-joe-duffy.png)
 

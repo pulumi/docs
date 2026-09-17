@@ -4,6 +4,7 @@ meta_desc: |
     A CircleCI secret is an encrypted variable that keeps credentials out of config files. Learn to define, reference, and rotate secrets, and use OIDC with ESC.
 
 type: what-is
+date: 2023-12-07T15:06:13-06:00
 page_title: "What is a CircleCI Secret?"
 authors: ["diana-esteves"]
 ---

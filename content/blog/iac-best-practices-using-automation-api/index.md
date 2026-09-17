@@ -16,7 +16,7 @@ aliases:
     - /blog/iac-recommended-practices-using-automation-api/
 ---
 
-Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/iac/concepts/automation-api/) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
+Welcome to the sixth post in our series of blog posts focused on infrastructure as code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/iac/concepts/automation-api/) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that best practices are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
 
@@ -143,7 +143,7 @@ if err != nil {
 fmt.Printf("Successfully created/selected %s stack\n", env.BaseProject.Nickname)
 ```
 
-In this particular program, Zephyr decided to start with a _local workspace._ (You can read more about workspaces in the [Pulumi Automation API docs](/docs/using-pulumi/automation-api/getting-started-automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
+In this particular program, Zephyr decided to start with a _local workspace._ (You can read more about workspaces in the [Pulumi Automation API docs](/docs/iac/guides/building-extending/automation-api/#associate-with-a-stack).) This is reflected in the use of the `UpsertStackLocalSource` method shown above, which will create or select a stack for a Pulumi program found in a local filesystem location.
 
 Users can also use `UpsertStackInlineSource`, which embeds the Pulumi program into the Automation API program as a function. There are trade-offs to each approach:
 

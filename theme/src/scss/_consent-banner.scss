@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Consent banner
 //
-// Shown to first-time EU visitors at the bottom of the viewport. Rendered into
+// Shown to all first-time visitors at the bottom of the viewport. Rendered into
 // #segment-consent-manager (a placeholder in baseof.html) by the consent
 // manager. The container is hidden when empty so the layout doesn't reserve
 // space before the banner is injected.

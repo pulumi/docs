@@ -12,7 +12,7 @@ aliases:
 
 sections:
   - type: hero
-    title: "*Centralized configuration,*<br>zero sprawl."
+    title: "*Centralized configuration,* <br>zero sprawl."
     description: Compose, manage, and share configuration and secrets across environments with Pulumi ESC.
     image: /images/product/secrets-management/esc-hero.svg
     image_alt: Pulumi ESC secrets management — connect any secrets store
@@ -107,7 +107,7 @@ sections:
     highlight_first_card: true
     columns:
       - title: Start managing secrets today
-        description: Experience enterprise-grade secrets management with Pulumi Cloud's free tier.
+        description: Experience enterprise-grade secrets management with Pulumi Cloud's Free edition.
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo

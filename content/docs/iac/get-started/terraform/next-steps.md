@@ -43,7 +43,7 @@ Our goal is to empower you to use the right tool for the job while maintaining a
 * **[Adopting Pulumi](/docs/iac/guides/migration/)**: Comprehensive migration strategies
 * **[Pulumi vs Terraform](/docs/iac/comparisons/terraform/)**: Detailed comparison of features
 * **[Automation API](/docs/iac/concepts/automation-api/)**: Programmatic infrastructure management
-* **[Policy as Code](/docs/insights/policy/)**: Infrastructure governance and compliance
+* **[Policy as Code](/docs/discovery-governance/policy/)**: Infrastructure governance and compliance
 
 ### Community resources
 
@@ -355,7 +355,7 @@ Reach out to us via these support channels:
 
 * **[Pulumi Community Slack](https://slack.pulumi.com/)**: Real-time community support
 * **[GitHub Issues](https://github.com/pulumi/pulumi/issues)**: Bug reports and feature requests
-* **[Pulumi Support](https://support.pulumi.com/)**: Professional support for Pulumi Cloud customers
+* **[Pulumi Support](/support/new/)**: Professional support for Pulumi Cloud customers
 
 ### Open source contributions
 

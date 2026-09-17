@@ -16,12 +16,24 @@ from the zero-context diff and the PRE-model article snapshot:
    byte-identical before and after. Retitling and URL surgery change the
    page's identity and SEO surface — out of scope for this lane.
 
+Plus one SOFT check, a `::warning::` rather than a violation: added lines
+carrying superlative or ranking language ("fastest", "the recommended",
+"where to start", "the only", …) that no `verified` verdict in this run's
+`.verified-claims.json` sits under. PR #21291 (2026-09-01) shipped
+"`pulumi convert` is the fastest path for most configurations, and it's where
+to start" with no artifact behind it; the words are the extractor's own
+`POSITIONING_RES` (imported, not copied) plus the bare forms the glow-up
+actually wrote. The model is told to acknowledge each warning in the PR body
+— cite the supporting verdict or remove the language — and the reviewer sees
+the same list in the report's `superlatives`.
+
 Exit codes mirror verify-fix-scope: 0 = pass, 2 = violation (report written
 either way), 1 = operational error.
 
 Usage:
     verify-glowup-scope.py --diff-file .review-changes.u0.diff \
         --article <path> --article-blob .review-snapshot/article-base.txt \
+        [--verified-claims .verified-claims.json] \
         [--max-changed-lines N] [--out .glowup-scope-report.json]
 
 Self-contained smoke checks: `python3 verify-glowup-scope.py --self-test`.
@@ -30,6 +42,7 @@ Self-contained smoke checks: `python3 verify-glowup-scope.py --self-test`.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import re
 import sys
@@ -40,6 +53,36 @@ import yaml
 SCHEMA_VERSION = 1
 MAX_CHANGED_LINES = 400
 PROTECTED_KEYS = ("title", "aliases", "redirect_to")
+
+HERE = Path(__file__).resolve().parent
+_EXTRACT_CLAIMS = (HERE.parent.parent / ".claude" / "commands" / "docs-review"
+                   / "scripts" / "extract-claims.py")
+# The bare forms PR #21291 wrote; the extractor's list needs "the " before
+# recommended/primary and never matches "where to start". "best practice(s)"
+# is the one idiom a docs page says all day without ranking anything.
+SUPERLATIVE_SUPPLEMENT_RES = [
+    re.compile(r"\bwhere to start\b", re.I),
+    re.compile(r"\b(?:recommended|primary)\b", re.I),
+    re.compile(r"\bbest\b(?!\s+practices?\b)", re.I),
+]
+SUPPORT_VERDICTS = {"verified", "matches"}
+SUPPORT_TOLERANCE = 2  # lines, mirrors verify-fix-scope's TOL_DEFAULT
+
+
+def superlative_patterns() -> list[re.Pattern]:
+    """The extractor's `POSITIONING_RES` plus the supplement. Imported by path
+    so the two vocabularies cannot drift; a missing extractor degrades to the
+    supplement with a warning rather than silencing the check."""
+    pats: list[re.Pattern] = []
+    try:
+        spec = importlib.util.spec_from_file_location("extract_claims", _EXTRACT_CLAIMS)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        pats.extend(mod.POSITIONING_RES)
+    except Exception as e:  # noqa: BLE001
+        warn(f"extract-claims.py unavailable ({e}); superlative check uses the supplement only")
+    pats.extend(SUPERLATIVE_SUPPLEMENT_RES)
+    return pats
 
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 HUNK_RE = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
@@ -83,6 +126,7 @@ def parse_diff(diff_text: str) -> tuple[dict[str, dict], int]:
             current["hunks"].append({
                 "old_start": int(m.group(1)),
                 "old_count": int(m.group(2) or "1"),
+                "new_start": int(m.group(3)),
                 "added": [],
             })
             continue
@@ -121,8 +165,54 @@ def frontmatter(text: str) -> dict:
     return fm if isinstance(fm, dict) else {}
 
 
+def _verdict_spans(verified) -> list[tuple[int, int]]:
+    spans = []
+    for v in ((verified or {}).get("verdicts") or []) if isinstance(verified, dict) else []:
+        if (v.get("verdict") or "").lower() not in SUPPORT_VERDICTS:
+            continue
+        for a, b in re.findall(r"L?(\d+)(?:-L?(\d+))?", str(v.get("line_range") or "")):
+            lo = int(a)
+            hi = int(b) if b else lo
+            spans.append((min(lo, hi), max(lo, hi)))
+    return spans
+
+
+def superlatives(hunks: list[dict], verified, patterns: list[re.Pattern] | None = None) -> list[dict]:
+    """Added lines carrying superlative/ranking language, each marked with
+    whether a `verified`/`matches` verdict sits on the OLD lines the hunk
+    replaces (±SUPPORT_TOLERANCE). The verdicts are pre-model and numbered
+    against the base file, so the old side of the hunk is the only honest
+    place to look; a pure insertion anchors on the line it follows."""
+    patterns = superlative_patterns() if patterns is None else patterns
+    spans = _verdict_spans(verified)
+    out: list[dict] = []
+    for h in hunks:
+        old_lo = h["old_start"] - SUPPORT_TOLERANCE
+        old_hi = h["old_start"] + max(h["old_count"], 1) - 1 + SUPPORT_TOLERANCE
+        supported = any(a <= old_hi and b >= old_lo for a, b in spans)
+        in_fence = False
+        for i, text in enumerate(h["added"]):
+            if text.lstrip().startswith(("```", "~~~")):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
+            hit = next((m.group(0) for rx in patterns for m in [rx.search(text)] if m), None)
+            if not hit:
+                continue
+            out.append({
+                "line": h.get("new_start", h["old_start"]) + i,
+                "old_lines": f"L{h['old_start']}" + (f"-{h['old_start'] + h['old_count'] - 1}" if h["old_count"] > 1 else ""),
+                "match": hit.strip(),
+                "text": text.strip()[:200],
+                "supported": supported,
+            })
+    return out
+
+
 def evaluate(diff_text: str, article: str, base_blob: str,
-             max_changed_lines: int) -> dict:
+             max_changed_lines: int, verified=None,
+             patterns: list[re.Pattern] | None = None) -> dict:
     files, churn = parse_diff(diff_text)
     violations: list[str] = []
 
@@ -152,6 +242,14 @@ def evaluate(diff_text: str, article: str, base_blob: str,
                     f"protected frontmatter key {key!r} changed "
                     f"({before.get(key)!r} -> {after.get(key)!r})")
 
+    flagged = superlatives(art["hunks"], verified, patterns) if art and not art["deleted"] else []
+    warnings = [
+        f"superlative or ranking language added at L{f['line']} with no verified "
+        f"verdict on {f['old_lines']}: \"{f['match']}\" in \"{f['text'][:120]}\" — "
+        "cite the artifact verdict that supports it in the PR body, or remove it"
+        for f in flagged if not f["supported"]
+    ]
+
     return {
         "schema_version": SCHEMA_VERSION,
         "result": "pass" if not violations else "violation",
@@ -159,6 +257,8 @@ def evaluate(diff_text: str, article: str, base_blob: str,
         "changed_paths": sorted(files),
         "churn": churn,
         "violations": violations,
+        "superlatives": flagged,
+        "warnings": warnings,
     }
 
 
@@ -169,9 +269,17 @@ def run(args) -> int:
     except OSError as e:
         error(f"required input unreadable ({e})")
         return 1
-    report = evaluate(diff_text, args.article, base_blob, args.max_changed_lines)
+    verified = None
+    if args.verified_claims:
+        try:
+            verified = json.loads(Path(args.verified_claims).read_text())
+        except (OSError, json.JSONDecodeError) as e:
+            warn(f"{args.verified_claims} unreadable ({e}); every superlative counts as unsupported")
+    report = evaluate(diff_text, args.article, base_blob, args.max_changed_lines, verified)
     Path(args.out).write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: report[k] for k in ("result", "churn", "changed_paths")}))
+    for w in report["warnings"]:
+        warn(w)
     if report["violations"]:
         for v in report["violations"]:
             error(v)
@@ -233,6 +341,38 @@ def self_test() -> int:
     check("pure insertion passes with frontmatter intact",
           evaluate(ins, art, base, 400)["result"] == "pass")
 
+    # Superlatives: a soft check. PR #21291's sentence, verbatim.
+    pats = superlative_patterns()
+    fastest = diff_for(art, "@@ -7,1 +7,1 @@\n-Body line.\n+`pulumi convert` is the fastest path "
+                       "for most configurations, and it's where to start.\n")
+    r = evaluate(fastest, art, base, 400, None, pats)
+    check("superlative on an added line is reported, not a violation",
+          r["result"] == "pass" and len(r["superlatives"]) == 1
+          and r["superlatives"][0]["supported"] is False and len(r["warnings"]) == 1)
+    check("the report names the line, the match and the old range",
+          r["superlatives"][0]["line"] == 7 and r["superlatives"][0]["match"] == "fastest"
+          and r["superlatives"][0]["old_lines"] == "L7")
+    backed = {"verdicts": [{"claim_id": "c1", "line_range": "L8", "verdict": "verified"}]}
+    r2 = evaluate(fastest, art, base, 400, backed, pats)
+    check("a verified verdict within tolerance of the replaced lines counts as support",
+          r2["superlatives"][0]["supported"] is True and not r2["warnings"])
+    far = {"verdicts": [{"claim_id": "c1", "line_range": "L40", "verdict": "verified"}]}
+    check("a verified verdict elsewhere on the page does not",
+          evaluate(fastest, art, base, 400, far, pats)["superlatives"][0]["supported"] is False)
+    contra = {"verdicts": [{"claim_id": "c1", "line_range": "L7", "verdict": "contradicted"}]}
+    check("only verified/matches verdicts support a superlative",
+          evaluate(fastest, art, base, 400, contra, pats)["superlatives"][0]["supported"] is False)
+    bare = diff_for(art, "@@ -7,1 +7,2 @@\n-Body line.\n+This is the recommended approach.\n"
+                    "+Follow the best practices below.\n")
+    r3 = evaluate(bare, art, base, 400, None, pats)
+    check("bare 'recommended' is flagged, 'best practices' is not",
+          [f["match"].lower() for f in r3["superlatives"]] == ["the recommended"])
+    fenced = diff_for(art, "@@ -7,1 +7,3 @@\n-Body line.\n+```bash\n+echo fastest\n+```\n")
+    check("code inside an added fence is skipped",
+          not evaluate(fenced, art, base, 400, None, pats)["superlatives"])
+    plain = diff_for(art, "@@ -7,1 +7,1 @@\n-Body line.\n+A plain sentence about stacks.\n")
+    check("no superlative, no warning", not evaluate(plain, art, base, 400, None, pats)["warnings"])
+
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
         return 1
@@ -245,6 +385,9 @@ def main() -> int:
     p.add_argument("--diff-file", help="zero-context diff of the staged changes")
     p.add_argument("--article", help="the queued article path")
     p.add_argument("--article-blob", help="pre-model article content (snapshot)")
+    p.add_argument("--verified-claims", default="",
+                   help="this run's .verified-claims.json; a verified verdict on the "
+                        "replaced lines is what makes added superlative language 'supported'")
     p.add_argument("--max-changed-lines", type=int, default=MAX_CHANGED_LINES)
     p.add_argument("--out", default=".glowup-scope-report.json")
     p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")

@@ -1,0 +1,82 @@
+name: Invalidate /dev cache
+run-name: Invalidate /dev cache
+
+# Invalidates the Dev Center cache, which lives at `/dev` behind the CloudFront CDN managed by pulumi/docs.
+# We do this with a workflow dispatch because the Dev Center deploys on its own schedule (so its cache needs
+# to be cleared independently of pulumi/docs deployments), and it makes more sense for the Dev Center to
+# notify pulumi/docs of this event (so it can handle the event on its own), rather than for us to reach into its
+# live, running infrastructure from the outside.
+on:
+  repository_dispatch:
+    types: [dev-deployed]
+  # Manual escape hatch / for testing.
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: Space-separated CloudFront paths to invalidate
+        default: "/dev /dev/* /assets /assets/*"
+
+permissions:
+  id-token: write # OIDC for the AWS + ESC logins
+  contents: read
+
+concurrency:
+  # Collapse a burst of marketing-web deploys into a single in-flight
+  # invalidation rather than firing one per deploy.
+  group: invalidate-dev-cache
+  cancel-in-progress: false
+
+jobs:
+  invalidate:
+    name: Invalidate CloudFront /dev cache
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          # Same delivery role build-and-deploy.yml uses; it already carries
+          # cloudfront:CreateInvalidation on this distribution.
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: dev-cache-invalidation
+          aws-region: us-west-2
+
+      - name: Invalidate /dev paths
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
+          # Default flushes both surfaces the distribution proxies to the Dev Center:
+          # /dev* (the pages) and /assets* (its root-relative CSS/JS/images). The
+          # assets are content-hashed so they don't strictly need flushing, but
+          # clearing them is cheap and keeps the surface consistent. A dispatch
+          # caller may narrow/override the paths via client_payload.paths.
+          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev /dev/* /assets /assets/*' }}
+        run: |
+          set -o errexit -o pipefail
+          DISTRIBUTION_ID=$(pulumi -C infrastructure stack output cloudFrontDistributionId --stack "$PULUMI_STACK_NAME")
+          if [ -z "$DISTRIBUTION_ID" ]; then
+            echo "Could not resolve cloudFrontDistributionId from stack $PULUMI_STACK_NAME" >&2
+            exit 1
+          fi
+          echo "Invalidating [$PATHS] on distribution $DISTRIBUTION_ID"
+          # Word-splitting on PATHS is intentional (one arg per path).
+          # shellcheck disable=SC2086
+          aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths $PATHS
+
+env:
+  # Mirrors build-and-deploy.yml so pulumi/esc-action can mint the org token
+  # that yields PULUMI_ACCESS_TOKEN.
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

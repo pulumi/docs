@@ -3,6 +3,7 @@ title: "What is Serverless?"
 meta_desc: |
     Understand serverless architectures, along with some of the benefits of using serverless architectures for modern application development
 type: what-is
+date: 2023-11-29T17:30:32-07:00
 page_title: "What is Serverless?"
 authors: ["scott-lowe"]
 ---
@@ -108,4 +109,4 @@ Adopting a serverless architecture can offer a number of benefits:
 
 The word "serverless" describes who manages the infrastructure, but it doesn't describe what makes the model work. What makes it work are the design constraints it forces on you: functions stay small and single-purpose, state lives in external stores rather than in memory, and services talk through queues and topics instead of calling each other directly. Autoscaling and pay-per-use are the rewards you collect only after you've written your code to honor those constraints. If you treat serverless as a way to run an ordinary stateful, tightly coupled application without provisioning servers, you'll inherit the operational complexity you were trying to escape.
 
-Because the same constraints shape both your functions and the infrastructure they run on, defining that infrastructure in [the same language as your code](/what-is/what-is-infrastructure-as-code/) keeps the two in step. [Pulumi's serverless application templates](https://www.pulumi.com/templates/serverless-application/) are one place to start. The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.
+Because the same constraints shape both your functions and the infrastructure they run on, defining that infrastructure in [the same language as your code](/what-is/what-is-infrastructure-as-code/) keeps the two in step. [Pulumi's serverless application templates](https://www.pulumi.com/dev/templates/serverless-application/) are one place to start. The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

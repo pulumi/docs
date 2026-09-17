@@ -69,6 +69,10 @@ sections:
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
     link: /docs/iac/cli/
+  - icon: question
+    heading: FAQ
+    description: Answers to common questions about infrastructure as code, resource management, state, and deployments.
+    link: /docs/support/faq/infrastructure/
 - type: button-cards
   heading: Guides
   cards:

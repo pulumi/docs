@@ -19,7 +19,7 @@ aliases:
 pulumi_cloud_feature: saml-sso
 ---
 
-The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider.
+The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider. SAML is one of the [identity providers](/docs/administration/concepts/identity-providers/) that can back a Pulumi organization's membership; these guides cover configuring it once you have selected it.
 
 {{% notes type="info" %}}
 Running self-hosted Pulumi Cloud? You'll first need to [configure your self-hosted infrastructure for SAML SSO](/docs/administration/self-hosting/saml-sso/) (API service keys and environment variables), then return here to complete IdP configuration.
@@ -32,6 +32,8 @@ If you're a member of a SAML-based Pulumi organization, you can sign in to [your
 {{% notes type="info" %}}
 {{< sso-scim-limits-info >}}
 {{% /notes %}}
+
+Signing in through SSO without an existing Pulumi account creates one, and the organization manages that account: it can't join unrelated organizations, connect other identity providers, or create organizations of its own. An account that already existed and later connects a SAML identity keeps those abilities. See [Organization-managed users](/docs/administration/concepts/org-managed-users/).
 
 ## Connect SAML SSO to an existing account
 
@@ -46,6 +48,14 @@ To connect a SAML SSO identity to your existing account:
 After your identity provider confirms your identity, Pulumi adds the organization's SAML identity to your existing account and grants you access to the organization.
 
 If the connection fails, confirm with your organization administrator that your identity provider assigns you to the Pulumi application for that organization and that the SAML `NameID` it sends is stable. An unstable `NameID` can create duplicate identities and repeat the conflict.
+
+## Before you configure SAML
+
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
+Switching an organization to SAML is reversible, but not cleanly. Selecting a different identity provider later discards the organization's SAML identities, its SAML member roster, and its SCIM access token. See [Removing a third-party identity provider](/docs/administration/concepts/identity-providers/#removing-a-third-party-identity-provider).
 
 ## Integration Guides
 

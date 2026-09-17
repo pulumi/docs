@@ -32,7 +32,7 @@ Ask the user for the following using AskUserQuestion, seeding smart defaults:
   - Replace `{current-date}` with the actual current date in `YYYY-MM-DD`. Validate any custom date matches `YYYY-MM-DD`.
 - **Summary (`meta_desc`)**: Suggest a concise one- or two-sentence summary (max 160 characters) based on the title. Required — the linter fails without it.
 - **Author (`authors`)**: Included by default — the archetype pre-fills the changelog's usual author (`christian-nunciato`). Confirm it, or set a different team id (from `data/team/team`) when someone else wrote the entry. Only drop the field in the rare case the entry should have no byline; opting out is a deliberate choice, not the default.
-- **Editions (optional)**: Ask whether the release is gated to particular Pulumi Cloud editions. The `editions:` field is a YAML array of edition **ids** from the closed set in `data/pulumi_pricing.yaml` (`individual`, `team`, `enterprise`, `business-critical`) — the badge renders the display name from the id. Default is none. If gated, list **every** applicable edition — the lowest one plus all editions above it (e.g. an Enterprise feature lists both `enterprise` and `business-critical`). `make lint` enforces the set and rejects the legacy `tiers:`/`tier:`.
+- **Editions (optional)**: Ask whether the release is gated to particular Pulumi Cloud editions. The `editions:` field is a YAML array of edition **ids** from the closed set in `data/pulumi_pricing.yaml` (`free`, `essentials`, `pro`, `enterprise`) — the badge renders the display name from the id. Default is none. If gated, list **every** applicable edition — the lowest one plus all editions above it (e.g. a Pro feature lists both `pro` and `enterprise`). `make lint` enforces the set and rejects the legacy `tiers:`/`tier:`.
 
 If the user already provided the announcement details or a link to a blog post, use them to draft the body in Step 4 instead of asking again.
 
@@ -54,14 +54,14 @@ If Hugo isn't available or errors, write the file directly with this frontmatter
 
 ```markdown
 ---
-title: "Title in Title Case"
+title: "Title in sentence case"
 date: YYYY-MM-DD
 meta_desc: "One- or two-sentence summary (<= 160 chars)"
 authors:
     - christian-nunciato   # the changelog's usual author — change if someone else wrote it
 # editions:                 # optional — omit unless the feature is edition-gated
+#     - pro
 #     - enterprise
-#     - business-critical
 ---
 ```
 
@@ -70,7 +70,7 @@ authors:
 1. Remove the archetype's instructional comments from the frontmatter.
 2. Set `title`, `date`, and `meta_desc` to the gathered values (the archetype pre-fills `title`/`date` from the filename — verify and tidy the title).
 3. Keep the pre-filled `authors:` field, changing the id if a different person wrote the entry (drop it only in the rare no-byline case). Add `editions:` only if the user specified edition gating; otherwise omit it.
-4. Replace the placeholder body with the announcement: a short paragraph or two that lead with the reader benefit, then link out to the blog post (`/blog/...`) and/or docs (`/docs/...`). Follow `STYLE-GUIDE.md` (H1 = Title Case, H2+ = Sentence case; sentence-case running prose; lowercase common nouns like "stack").
+4. Replace the placeholder body with the announcement: a short paragraph or two that lead with the reader benefit, then link out to the blog post (`/blog/...`) and/or docs (`/docs/...`). Follow `STYLE-GUIDE.md` (sentence case at every heading level, the title included; sentence-case running prose; lowercase common nouns like "stack").
 5. If the entry needs an image or video, place it in `content/releases/changelog/images/` or `.../videos/` **with a date-prefixed, lowercase-hyphenated filename** (`YYYY-MM-DD-slug.ext`, using this entry's date — e.g. `2026-07-11-command-palette.mp4`), and reference it by absolute path (e.g. `/releases/changelog/images/2026-07-11-foo.png`). `make lint` enforces the asset naming too. Markdown must end with a trailing newline.
 
 ### 5. Validate and provide next steps
