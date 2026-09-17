@@ -667,19 +667,35 @@ def test_a_link_only_sweep_is_any_approver_s_because_any_team_may_approve():
     assert "gate:any-team" not in p["reasons"] and "link-fixes:mine" in p["reasons"]
 
 
-def test_a_change_with_no_team_gate_is_any_approver_s():
-    # A tags-only blog edit clears the mechanical bar, so the matrix asks for
-    # no role at all. Routing it would invent a gate the Sentinel doesn't
-    # have, and the chip says why it's on this board.
+def test_a_mechanical_change_is_still_routed_to_its_lane():
+    """There is no ungated row any more.
+
+    A tags-only blog edit clears the mechanical bar, which used to resolve
+    to no required role at all: the row got `gate:none`, went to whoever was
+    looking, and the Sentinel asked nobody to approve it. That rested on the
+    Sentinel being the merge gate — it isn't, and GitHub asked for a review
+    regardless. `none` cells are a config error now, so mechanical and
+    substantive route the same way and only the model review differs.
+    """
     tags = _file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])
     p = row(run([stampable(1, labels=["review:no-blockers", "domain:blog"], files=[tags])], cfg=cfg(me=["docs"])), 1)
-    assert p["mechanical"] is True and p["roles"] == []
-    assert p["is_mine"] is True and p["verdict"] == "stamp" and "gate:none" in p["reasons"]
-    assert not any(r.startswith("route:") for r in p["reasons"])
-    # the substantive version of the same lane still routes
+    assert p["mechanical"] is True
+    assert p["roles"] == ["marketing"]
+    assert not any(r == "gate:none" for r in p["reasons"])
+    # the substantive version of the same lane routes identically
     prose = _file("content/blog/p/index.md", ["A new sentence about stacks."], ["An old sentence about stacks."])
     q = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[prose])], cfg=cfg(me=["docs"])), 2)
-    assert q["roles"] == ["marketing"] and q["verdict"] == "route" and "gate:none" not in q["reasons"]
+    assert q["roles"] == ["marketing"] and q["verdict"] == "route"
+
+
+def test_no_row_ever_reports_an_empty_role_set():
+    """The board-level form of "every PR is routed"."""
+    for files in ([_file("content/docs/a.md", ["a typo fix"], ["a typo fxi"])],
+                  [_file("scripts/lint/x.js", ["// new"], [])],
+                  [_file("layouts/p.html", ["<div/>"], [])],
+                  [_file("whatever.xyz", ["x"], [])]):
+        q = run([stampable(3, labels=["review:no-blockers"], files=files)], cfg=cfg(me=["docs"]))
+        assert row(q, 3)["roles"], files[0]["path"]
 
 
 def test_no_config_file_takes_its_lanes_from_github_teams():

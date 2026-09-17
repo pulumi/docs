@@ -133,13 +133,18 @@ def classify_path(path: str) -> str | None:
     # The agent/review pipelines under scripts/ are repo plumbing, not the
     # build: nothing here is read by `make build`, by a Hugo template, or by
     # the deploy. They fall through to `other`, which routes to the same
-    # `tools` approver as `infra` and — the point — carries no
-    # `staging_evidence: required`. A change to analyze.py cannot alter the
-    # deployed site, so deploying the site to pulumi-test.io demonstrated
-    # nothing about it while costing ~9 minutes of the shared staging stack
-    # and a `staging/pulumi-test-io` status on every such PR. Everything
-    # else under scripts/ (lint, search, meta-images, redirects, the fetch
-    # and generate scripts) does feed the build and stays infra.
+    # `tools` approver as `infra` but gives a mechanical change there no
+    # approver at all.
+    #
+    # This cut was originally about the staging gate, which is no longer
+    # what a domain decides: gate G4 keys on `staging_evidence.paths` in
+    # `.github/review-routing.yml`, a path list that covers the Pulumi
+    # program and the scripts `make ci_push` actually runs. So do NOT reach
+    # for this function to exempt a path from a staging deploy — that lever
+    # is in the config, and bending a path's domain to move it was how this
+    # carve-out came to exist in the first place. Everything else under
+    # scripts/ (lint, search, meta-images, redirects, the fetch and generate
+    # scripts) stays infra, because tools do own it.
     if any(path.startswith(f"scripts/{d}/") for d in REVIEW_PIPELINE_DIRS):
         return None
     if path.startswith("scripts/") or path.startswith("infrastructure/"):

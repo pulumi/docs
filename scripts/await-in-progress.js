@@ -13,12 +13,27 @@ const pollIntervalMs = 60000;
 const queueWaitFile = process.env.CI_BUILD_QUEUE_WAIT_FILE
     || path.join(__dirname, "..", ".build-queue-wait-seconds");
 
-// Wait for any in-progress runs of the same workflow on this branch to complete before
-// proceeding. In other words, if the current workflow is an instance of the "foo"
-// workflow, and there's another "foo" workflow running for a different commit on the same
-// branch as this one, wait for that workflow to complete before exiting (in order to
-// prevent the current workflow from continuing).
-// Inspired by https://github.com/softprops/turnstyle.
+// Wait for any in-progress run of the same workflow — on ANY branch — to complete before
+// proceeding. What this serializes is the `pulumi up` in run-pulumi.sh, and the thing that
+// needs serializing is the Pulumi stack it updates, which is a property of the workflow
+// (one stack per workflow: www-testing for testing-build-and-deploy.yml, production for
+// build-and-deploy.yml), NOT of the branch. Two runs of the same workflow on two different
+// branches update the same stack.
+//
+// This used to pass `branch` to listWorkflowRuns, so it only ever waited for a run on the
+// *same* branch. That made it blind to exactly the collision it exists to prevent: on
+// 2026-09-17 a dispatched staging deploy for PR #21698 (branch fix/broken-links-2026-09-17,
+// run 35266933458) and a master push (run 35266996109) overlapped by 39 seconds, each
+// reported "Found 0 other job(s) running", and the second one into `pulumi refresh` died on
+//
+//     error: [409] Conflict: Another update is currently in progress.
+//
+// after having already built the site and synced the bucket — ~7 minutes in, and reported
+// on the PR as failed staging evidence for a two-line redirect change.
+//
+// Dropping the branch filter is safe against deadlock because the wait is strictly
+// ordered: a run only ever waits for runs with a LOWER id, so the oldest in-flight run
+// never waits for anybody. Inspired by https://github.com/softprops/turnstyle.
 async function waitForInProgressRuns() {
 
     // See https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables
@@ -27,7 +42,6 @@ async function waitForInProgressRuns() {
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split("/");
-    const branch = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF.replace("refs/heads/", "");
     const status = "in_progress";
 
     const octokit = new Octokit({
@@ -48,10 +62,11 @@ async function waitForInProgressRuns() {
     while (true) {
         // Fetch a paginated list of in-progress runs of the current workflow.
         const runs = await octokit.paginate(
+          // No `branch` filter: the stack this run is about to update is shared by
+          // every branch's run of this workflow. See the header comment.
           octokit.rest.actions.listWorkflowRuns.endpoint.merge({
             owner,
             repo,
-            branch,
             workflow_id,
             status,
           })
@@ -62,7 +77,7 @@ async function waitForInProgressRuns() {
             .sort((a, b) => b.id - a.id)
             .filter(run => run.id < currentRunID);
 
-        console.log(`Found ${recent.length} other ${workflowName} job(s) running on branch ${branch}.`);
+        console.log(`Found ${recent.length} other ${workflowName} job(s) running (all branches).`);
 
         if (recent.length === 0) {
             break;

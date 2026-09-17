@@ -72,7 +72,6 @@ PRIMARY_VALUES = ("author:self",)
 # chip's title for anyone grepping the queue.
 CHIP_LABEL = {
     "author:self": "your own PR",
-    "gate:none": "no team approval needed",
     "gate:any-team": "any team can approve this",
     "link-fixes:mine": "link-only sweep: yours",
     "route:no-team": "team missing, routing to a person",
@@ -227,7 +226,6 @@ ROUTE_STATE_HELP = {
 SIMPLE_HELP = {
     "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
     "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
-    "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
     "gate:any-team": "Every changed line differs only in a link, and the routing config lets ANY review team approve one of those: checking a retargeted link needs a careful reader, not a particular lane's reader. So this row is yours to take, and the merge gate agrees.",
     "link-fixes:mine": "YOUR SETTING, not a fact about the PR: link_fixes: mine in ~/.pr-review.yml makes a link-only diff yours to approve whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. Set link_fixes: route and this row would go to its lane owner instead.",
     "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
@@ -337,8 +335,6 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             text = (f"{who} has already requested changes on this PR; that has to be settled before it merges."
                     if kind == "changes-requested" else
                     f"{who} has already approved this PR, so your approval is not the first.")
-        elif code == "gate":
-            text = SIMPLE_HELP["gate:none"]
         elif code == "sent-back":
             text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
                     "is waiting on its author, not on you. It returns to the board when a new commit lands.")
