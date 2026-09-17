@@ -35,7 +35,7 @@ The board opens with at most a handful of cards, each one sentence and one butto
 3. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
 4. **Skip** — leave the row for later (`--refresh N` when the finding reads as stale is offered from the row itself).
 
-In board mode the page composes the command itself, so there is no per-row walk — but the execute confirmation at the end of the plan step is an `AskUserQuestion` in both modes, and so is every other question either mode raises. The rule is the tool, not the mode: if you are asking, you are asking with `AskUserQuestion`.
+In board mode the page composes the command itself, so there is no per-row walk. Either way the questions are about one row's disposition, never about running anything: there is no execute confirmation in this skill, in either mode, because a write is authorized by the `--act` command the person invokes and by nothing else. When a question genuinely needs asking, ask it with `AskUserQuestion`; when the "question" is really consent to approve or merge, it isn't a question, it's the board.
 
 ## Bot PRs: what may be pushed
 

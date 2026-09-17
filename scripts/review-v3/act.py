@@ -5,8 +5,10 @@
            --unblock 21525 --plan-out .pr-review-plan.json          # plan + preview
     act.py --execute .pr-review-plan.json [--dry-run]                # run it
 
-Actions (each a `Step`; every one goes through the same preview/confirm,
-comment templates and attribution footer):
+Actions (each a `Step`; every one goes through the same preview, comment
+templates and attribution footer). Nothing here is reachable without an
+explicit `--act` invocation: the person authorizes the writes by running the
+command the board composed, which is why a plan names its PRs one by one:
 
   --stamp N,N        approve, then squash-merge, after a per-PR preflight run
                      immediately before each merge: head SHA unchanged since
