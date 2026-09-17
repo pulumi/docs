@@ -103,7 +103,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     <tr>
         <td>Ability to see existing secrets</td>
         <td>Yes</td>
-        <td>No</td>
+        <td>Yes, secret values can be read back by path with <code>vault kv get</code>, the UI, or the HTTP API</td>
     </tr>
     <tr>
         <td>Secret referencing</td>
@@ -156,7 +156,7 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
     <tr>
         <td>OIDC provider</td>
         <td>Yes, Pulumi Cloud can be used as an OIDC provider from the Pulumi SDK, CLI, UI, and <code>pulumi-service</code> provider.</td>
-        <td>Limited, configuring Vault as an OIDC provider is only available from the CLI</td>
+        <td>Yes, Vault can act as an OIDC provider, configurable from the UI, CLI, and API</td>
     </tr>
 </table>
 </div>
