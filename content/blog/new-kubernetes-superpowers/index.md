@@ -16,7 +16,7 @@ Today, we’re excited to [announce](https://info.pulumi.com/press-release/kuber
 These new capabilities include:
 
 * A new in-cluster **Pulumi Kubernetes Operator** provides a Kubernetes-native GitOps experience for managing infrastructure on any cloud or Kubernetes cluster.
-* A **`kube2pulumi`** tool for converting YAML manifests to Pulumi Python, TypeScript, Go, or .NET brings Pulumi’s software engineering capabilities for Infrastructure-as-Code to bear on complex Kubernetes applications.
+* A **`kube2pulumi`** tool for converting YAML manifests to Pulumi Python, TypeScript, Go, or .NET brings Pulumi’s software engineering capabilities for infrastructure-as-code to bear on complex Kubernetes applications.
 * Support for authoring **Open Policy Agent (OPA)-based policies in Pulumi's CrossGuard policy-as-code framework** and enforcing rules across an organization.
 * A **`crd2pulumi`** tool to create strongly-typed APIs for any Kubernetes CRD, making it easy to leverage the full ecosystem of API extensions in the Cloud Native community.
 

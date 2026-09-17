@@ -22,7 +22,7 @@ Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle
 A stack's time to live is measured from the stack's **creation** date, not its most recent update. Updating a stack does not reset its TTL.
 {{% /notes %}}
 
-## Setting a Time-to-Live on a Stack
+## Setting a Time-to-Live on a stack
 
 ### Pulumi Cloud UI
 

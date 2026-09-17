@@ -21,7 +21,7 @@ The Cluster API project is a Kubernetes project for implementing a declarative A
 
 Cluster API allows you to define Kubernetes clusters as a Kubernetes resource. It lets you use the Kubernetes API to manage Kubernetes clusters, which sounds a little bit like inception, but it greatly simplifies lifecycle management both on-prem and in the cloud.
 
-## Benefits of Infrastructure as Code
+## Benefits of infrastructure as code
 
 Pulumi is well suited for enabling me to help test projects like Cluster API. I'm not a developer (not yet), but by helping to test projects like Cluster API as they are developed, I can provide useful feedback. Pulumi makes it possible to define, test quickly, and deploy infrastructure components, whether those components are used to test new builds, verify functionality, assist with capturing information in documentation, or something else entirely.
 

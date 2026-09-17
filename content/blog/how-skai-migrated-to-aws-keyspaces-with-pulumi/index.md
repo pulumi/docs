@@ -34,7 +34,7 @@ When looking for a solution, we were looking for a service that would mark the f
 * High availability and multi-region built-in.
 * Cost effective pay-as-you-go and commitment-based model.
 * Extensive support and rich documentation.
-* Fully automatable using Pulumi, our main Infrastructure as Code framework.
+* Fully automatable using Pulumi, our main infrastructure as code framework.
 
 ## Migration method
 

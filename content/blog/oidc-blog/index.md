@@ -56,7 +56,7 @@ You can call the [Deployments REST API](/docs/reference/cloud-rest-api/deploymen
 
 ![Deployment REST API payload before and after](deployment-api-payload.png)
 
-### Enabling OIDC for your Stack for Git Push to Deploy
+### Enabling OIDC for your stack for Git Push to Deploy
 
 In order to use the Git Push to Deploy and Click to Deploy features in the Pulumi Service console you will need to enable OIDC for your stack in the console. In order to enable it you will need to be an admin of your Pulumi organization.
 

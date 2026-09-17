@@ -91,7 +91,7 @@ Sam and his team orchestrates integration tests through an Azure DevOps Pipeline
 
 **Compliance & Security:** Pulumi promotes robust security and strict compliance. Pulumi addresses this through encrypted state management and the Crossguard policy-as-code framework for policy testing.
 
-## Try Pulumi for Infrastructure as Code
+## Try Pulumi for infrastructure as code
 
 [Sign up for a free account](https://app.pulumi.com/signup) to try deploying infrastructure on any cloud, or [register for an upcoming workshop](https://www.pulumi.com/resources/#upcoming) to learn more about how Pulumi can help you ship cloud infrastructure faster and more safely.
 
