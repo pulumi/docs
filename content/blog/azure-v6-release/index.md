@@ -1,6 +1,7 @@
 ---
 title: "Pulumi Azure Classic Provider Version 6.0.0"
 date: 2024-09-27T12:04:00
+updated: 2026-09-17
 draft: false
 meta_desc: "Release of the next version of the Azure Classic Pulumi Provider"
 authors:
@@ -23,7 +24,7 @@ Here are a few links to help you get started if you are new to Pulumi:
 
 - [Getting Started](https://www.pulumi.com/docs/iac/get-started/azure/) - A guided walkthrough for creating your first project
 - [Setup & Install](https://www.pulumi.com/registry/packages/azure/installation-configuration/) - Instructions on installing the Azure Classic provider
-- [How-to guides](https://www.pulumi.com/registry/packages/azure/how-to-guides/) - Learn how to use the Azure Classic provider to provision specific resources
+- [How-to guides](/dev/examples/) - Learn how to use the Azure Classic provider to provision specific resources
 - [Pulumi Neo](https://www.pulumi.com/product/neo/) - Ask Pulumi Neo to create a new project
 
 ## Looking Back
