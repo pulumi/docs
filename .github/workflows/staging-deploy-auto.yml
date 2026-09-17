@@ -1,0 +1,210 @@
+name: Staging deploy (auto, infra PRs)
+
+# Supplies Sentinel gate G4's evidence without anyone having to ask for it.
+#
+# G4 requires a successful pulumi-test.io deploy at the PR's current head.
+# Until now the only way to produce one was a tools-team member commenting
+# `/deploy-staging` — which, across the 14-16 Sep report-only window, nobody
+# did once, on any of the infra PRs that needed it. A gate whose evidence
+# has no supply isn't a gate, it's a wall. This workflow makes the deploy
+# the default for an infra PR, so `/deploy-staging` goes back to being what
+# it reads like: a retry.
+#
+# Design notes:
+# - WHAT COUNTS AS INFRA is not re-implemented here. `route-pr.py` resolves
+#   the same lane matrix the Sentinel enforces and reports
+#   `staging_evidence_required`; this workflow runs it and obeys it. A
+#   `paths:` filter duplicating the infra globs would drift from
+#   review-routing.yml the first time either side changed.
+# - SAME-REPO ONLY. Deploying fork code to the shared staging stack stays a
+#   deliberate tools-team action, exactly as the comment lane has it. A fork
+#   PR's token is read-only anyway, so this is belt and braces.
+# - NO PR CODE IS CHECKED OUT OR RUN. The checkout is pinned to the base
+#   repository's default branch; route-pr.py reads the diff as text, and
+#   the deploy script dispatches the existing testing-deploy workflow at the
+#   head branch — that workflow does the build, in the testing account, as
+#   it already does for master and for `/deploy-staging`.
+#   Consequence worth knowing: on a `pull_request` event GitHub runs the
+#   PR's copy of THIS FILE, but every script it calls comes from base. A PR
+#   that edits both sees its new YAML run against master's scripts — and a
+#   PR that ADDS a script here finds it missing until it merges. Both are
+#   handled below by warning rather than failing.
+# - THIS JOB CANNOT FAIL A PR. It produces evidence; it does not judge. The
+#   Sentinel is the gate, and a missing deploy already shows up there as a
+#   red G4 that says what to do about it. A second red X from the producer
+#   is noise on top of a signal the author already has, so everything here
+#   degrades to `::warning::` and exits 0.
+# - SKIP WHEN EVIDENCE ALREADY EXISTS. Re-running the same head buys
+#   nothing and costs a real deploy of a shared stack; a `synchronize`
+#   that didn't move the head (a base merge, a label) finds the green
+#   status and stops.
+# - DISPATCH, DON'T WAIT. This lane fires the existing "Build and deploy
+#   testing" workflow at the head branch and exits; that run does the work
+#   and writes its own `staging/pulumi-test-io` status when it finishes
+#   (the `staging-status` job there). Nobody is watching this job, so
+#   holding a runner open for 45 minutes to relay an outcome bought
+#   nothing — and it cost something real: a long-lived job in a
+#   concurrency group is a job GitHub CANCELS when a newer push displaces
+#   it, and a cancelled job reads as a failing check on the PR. An
+#   evidence producer that paints the PR red is exactly what the note
+#   below says this workflow must never do.
+# - NO CONCURRENCY GROUP, for the same reason. Serializing the shared
+#   stack by parking pending runs meant announcing displacement as
+#   failure. The dispatched deploys were never serialized in the manual
+#   `/deploy-staging` lane either, so nothing regresses here; and when two
+#   deploys do overlap, the later head is the one G4 asks about.
+# - Follows the same switch as `/deploy-staging` and the Sentinel itself:
+#   with REVIEW_V3_SENTINEL unset there is no gate to satisfy, so producing
+#   evidence for it would be pure spend.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+  actions: write       # gh workflow run (this lane never watches)
+
+jobs:
+  route:
+    # No concurrency group: deciding whether a PR needs a deploy must never
+    # queue behind one. See the concurrency note in the header.
+    if: >-
+      (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+      && github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      deploy: ${{ steps.existing.outputs.deploy }}
+    steps:
+      # Base repo default branch ONLY — see the design notes above.
+      # Sparse: route-pr.py, the triage classifier it loads, the routing
+      # config, and staging-deploy.sh — ~7 MB of a 1.2 GB worktree.
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install classifier deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Does this PR need staging evidence?
+        id: route
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          # Never `exit 1` out of this step — see THIS JOB CANNOT FAIL A PR
+          # in the header. An unresolvable route means "don't deploy", which
+          # leaves Sentinel G4 to report the missing evidence properly.
+          # One write to GITHUB_OUTPUT at the end: the file is append-only
+          # and re-declaring a key is not worth reasoning about.
+          PR_DATA_FILE=$(mktemp)
+          DIFF_FILE=$(mktemp)
+          trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
+          NEEDED=false
+          if ! gh pr view "$PR" --repo "$REPO" \
+               --json files,additions,deletions > "$PR_DATA_FILE"; then
+            echo "::warning::could not read PR files — skipping the staging deploy"
+          else
+            gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
+            if ROUTE=$(python3 scripts/review-v3/route-pr.py \
+                 --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE"); then
+              echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
+              NEEDED=$(echo "$ROUTE" | jq -r '.staging_evidence_required')
+              if [ "$NEEDED" != "true" ]; then
+                echo "no infra paths — gate G4 will skip; nothing to deploy"
+              fi
+            else
+              echo "::warning::route-pr.py could not classify this PR — skipping the staging deploy"
+            fi
+          fi
+          echo "needed=$NEEDED" >> "$GITHUB_OUTPUT"
+
+      # Same two witnesses sentinel.py's `_staging_evidence` accepts, in the
+      # same order. Deliberately duplicated in shell rather than shelling out
+      # to the evaluator: this is a cheap "should I bother" check, and the
+      # authoritative read is the one the Sentinel does at merge time.
+      - name: Skip if this head already deployed successfully
+        id: existing
+        if: steps.route.outputs.needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -uo pipefail
+          # Unreadable evidence defaults to NOT deploying. The staging stack
+          # serializes, so a redundant deploy costs a real slot; a skipped
+          # one costs a red G4 that says exactly how to retry. One write to
+          # GITHUB_OUTPUT at the end — the file is append-only.
+          DEPLOY=false
+          if GREEN=$(gh api "repos/$REPO/commits/$HEAD_SHA/statuses" \
+               --jq '[.[] | select(.context == "staging/pulumi-test-io" and .state == "success")] | length'); then
+            if [ "$GREEN" = "0" ]; then
+              GREEN=$(gh api "repos/$REPO/actions/workflows/testing-build-and-deploy.yml/runs?head_sha=$HEAD_SHA&status=completed&per_page=100" \
+                --jq '[.workflow_runs[] | select(.conclusion == "success")] | length') \
+                || GREEN="unreadable"
+            fi
+            case "$GREEN" in
+              0)          DEPLOY=true ;;
+              unreadable) echo "::warning::could not read deploy run history — skipping the staging deploy" ;;
+              *)          echo "head ${HEAD_SHA:0:9} already has a successful staging deploy — nothing to do" ;;
+            esac
+          else
+            echo "::warning::could not read commit statuses — skipping the staging deploy"
+          fi
+          echo "deploy=$DEPLOY" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: route
+    if: needs.route.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    # Dispatch and exit: a minute of API calls, not a deploy. See the
+    # DISPATCH, DON'T WAIT note in the header.
+    timeout-minutes: 10
+    steps:
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
+      - name: Dispatch the staging deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail
+          # The script comes from the BASE checkout (see the header). A PR
+          # that adds or moves it doesn't have it here until it merges —
+          # warn and stand down rather than painting the PR red for a file
+          # that exists three lines away in the diff.
+          if [ ! -x scripts/review-v3/staging-deploy.sh ]; then
+            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges, or until a tools-team member comments /deploy-staging."
+            exit 0
+          fi
+          scripts/review-v3/staging-deploy.sh \
+            --repo "${{ github.repository }}" \
+            --pr "${{ github.event.pull_request.number }}" \
+            --head-sha "${{ github.event.pull_request.head.sha }}" \
+            --head-ref "${{ github.event.pull_request.head.ref }}" \
+            --dispatch-only \
+            || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red and /deploy-staging retries"
