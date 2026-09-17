@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import copy
 import json
 import os
 import re
@@ -167,6 +168,16 @@ class GhClient:
             raise GhError("rest backend needs GITHUB_TOKEN or GH_TOKEN")
         self.backend = backend
         self.writes: list[dict] = []  # every write this client performed (any backend)
+        self.dry_run = False  # record writes in `writes` without sending them (see `dry()`)
+
+    def dry(self) -> "GhClient":
+        """A client on the same backend whose writes are recorded in `.writes`
+        and never sent — reads pass through, so preflights still see GitHub.
+        This is what `act.py --dry-run` runs the plan against."""
+        c = copy.copy(self)
+        c.dry_run = True
+        c.writes = []
+        return c
 
     # -- primitives --------------------------------------------------------
 
@@ -191,6 +202,8 @@ class GhClient:
             params["per_page"] = 100
         if method != "GET":
             self.writes.append({"method": method, "path": path, "body": body})
+            if self.dry_run:
+                return {}
         if self.backend == "snapshot":
             return self._snapshot_request(method, path, params, body)
         if self.backend == "gh":
@@ -332,6 +345,13 @@ class GhClient:
             return {}
         runs = data.get("workflow_runs", []) if isinstance(data, dict) else []
         return {r["check_suite_id"]: r.get("path") or r.get("name") or "" for r in runs if r.get("check_suite_id")}
+
+    def compare_files(self, base: str, sha: str) -> list[dict]:
+        """The files `sha` changes relative to its merge base with `base`:
+        the same shape as `pr_files`, but for any commit, so a PR's diff at
+        an earlier head can be compared with its diff now."""
+        data = self.get(f"repos/{self.repo}/compare/{base}...{sha}") or {}
+        return data.get("files", []) if isinstance(data, dict) else []
 
     def commit_statuses(self, sha: str) -> list[dict]:
         return self.get(f"repos/{self.repo}/commits/{sha}/statuses", paginate=True) or []

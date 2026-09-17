@@ -56,7 +56,8 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
 
 def test_board_rows_carry_verdict_chips_reasons_and_actions():
     html = render.render_board(_queue())
-    assert 'data-verdict="judge"' in html and 'data-verdict="route"' in html and 'data-verdict="blocked"' in html
+    # (#3 is blocked here, not route; it carries the route action all the same)
+    assert 'data-verdict="judge"' in html and 'data-verdict="blocked"' in html
     assert 'class="chip r-cluster"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@pulumi/docs-marketing-review"' in html
     assert 'class="btn p p-go" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected, primary
@@ -311,9 +312,9 @@ def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     assert 'data-cmd="--render 1"' in render.render_detail(_queue(), 1)
     assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
     assert 'button.btn.sel[data-kind="decision"][data-pr="\' + pr + \'"]' in html  # one decision per row, via clearRow
-    assert 'button.btn.sel[data-kind="decision"]\')) done++' in html
+    assert "r.querySelector('button.btn.sel[data-kind=\"decision\"]') || r.querySelector('.claimnote')" in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
-    assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments
+    assert "if (seen[k]) return; seen[k] = true;" in html  # the composer dedupes fragments
 
 
 def test_fixed_disposition_reads_as_already_done():
@@ -523,3 +524,111 @@ def test_every_verdict_starts_visible_because_the_command_acts_on_it():
     for value in ("judge", "route", "stamp", "blocked"):
         assert f'<button class="fchip on" data-filter="view" data-value="{value}"' in html
     assert "stampable" in html
+
+
+def test_a_card_adds_only_what_no_row_carries():
+    # A Do-next card presses row buttons; the command is read off the rows.
+    # What the card itself contributes is `data-extra`: a chain's unblock of
+    # a follow-up that has no row button yet, or a consolidation's request,
+    # which has no row equivalent at all. Every other card adds nothing, so
+    # pressing it can never repeat its rows' fragments.
+    html = render.render_board(_queue())
+    assert 'data-extra="--unblock 2"' in html          # the chain card: #1's stamp is a row button, #2's unblock is not
+    assert render.card_extra({"cmd": "--stamp 1,2", "targets": {"1": "--stamp 1", "2": "--stamp 2"}}) == ""
+    assert render.card_extra({"cmd": '--request-changes 9 --reason "x"', "claims": [9]}) == '--request-changes 9 --reason "x"'
+    assert "function fragment(b){ return isCard(b) ? (b.dataset.extra || '') : b.dataset.cmd; }" in html
+    assert "var sel = {}" not in html                    # no shadow list: the lit buttons are the state
+    # every --stamp N[:mode][ --force] folds into one list, --force once
+    assert "var STAMP = /^--stamp (\\d+(?::(?:no-)?merge)?)( --force)?$/;" in html
+    assert "out += ' --stamp ' + stamps.join(',') + (force ? ' --force' : '');" in html
+    # the cards settle before the command is drawn, on every click, and the
+    # copy button re-reads before it copies
+    assert "function settle(){ syncCards(); compose(); progress(); }" in html
+    assert html.count("settle();") >= 4 and "compose();   // what goes to the clipboard" in html
+    # progress counts a lit decision on any row and every row with one to make
+    assert "return r.querySelector('button.btn[data-kind=\"decision\"]');" in html
+    assert '.mrow[data-verdict="judge"], .mrow[data-verdict="route"]' not in html
+
+
+def test_a_reason_names_the_pr_it_is_for():
+    # act.py takes `--reason "N=text"`; a bare reason is a global flag, which
+    # a batch can't carry. The rewrite happens here, so the script never sees
+    # a bare one.
+    assert render.scope_reasons('--request-changes 5 --reason "a, b (c)"') == '--request-changes 5 --reason "5=a, b (c)"'
+    assert render.scope_reasons('--close 5 --superseded-by 6 --reason "x"') == '--close 5 --reason "5=x"'.replace("--reason", "--superseded-by 6 --reason")
+    assert render.scope_reasons('--refresh 7 --reason "x" --rerun 8 --reason "y"') == '--refresh 7 --reason "7=x" --rerun 8 --reason "8=y"'
+    assert render.scope_reasons('--reason "x"') == '--reason "x"'                       # nothing to scope it to
+    assert render.scope_reasons('--refresh 9 --reason "9=x"') == '--refresh 9 --reason "9=x"'   # already scoped
+    q = _queue()
+    q["do_next"] = [{"kind": "consolidate", "say": "C1: 3 overlapping sweeps by workprentice.", "does": "Posts one review.",
+                     "label": "send #2 back", "claims": [2],
+                     "cmd": '--request-changes 2 --reason "These 3 PRs overlap (#1, #2, #3); please consolidate."'}]
+    html = render.render_board(q)
+    assert 'data-cmd="--request-changes 2 --reason &quot;2=These 3 PRs overlap (#1, #2, #3); please consolidate.&quot;"' in html
+    assert 'data-extra="--request-changes 2 --reason &quot;2=These 3 PRs overlap' in html
+    assert '--reason &quot;These' not in html
+
+
+def test_the_payload_cannot_end_the_script_early():
+    # Inside <script type="application/json">, `<!--<script>` in a title or
+    # path flips the HTML parser into double-escaped script data and the JSON
+    # block swallows the page's real <script> to end of file: every button on
+    # the board goes dead. Escaping only `</` did not cover it.
+    q = run([stampable(1, title="Add guest post <!--<script>", files=[_file("content/docs/a <!--<script>.md", ["x"], ["o"])])],
+            cfg=cfg(me=["docs"]))
+    for html in (render.render_board(q), render.render_board(q, artifact=True), render.render_detail(q, 1)):
+        assert "<!--<script>" not in html
+        assert html.count("<script") == 2                           # the JSON payload and the page script, nothing else
+        payload = html.split('id="queue">')[1].split("</script>")[0]
+        assert "<" not in payload and ">" not in payload and "&" not in payload
+        assert json.loads(payload)["prs"][0]["title"] == "Add guest post <!--<script>"   # still the same JSON
+
+
+def test_the_help_says_the_command_is_the_yes():
+    # SKILL.md §5 and reading-the-board.md: invoking the command is the
+    # go-ahead; act.py plans, previews and executes without asking again.
+    html = render.render_board(_queue())
+    assert "Invoking it <i>is</i> the yes" in html and "nothing asks you to confirm a second time" in html
+    assert "waits for a yes" not in html
+    # another lane's PR is a full row under its owner; only handed-off PRs sit at the foot
+    assert "still takes a full row, grouped under that owner" in render.SHOWING_HELP["me"]
+    assert "listed at the foot of the page instead" not in render.SHOWING_HELP["me"]
+
+
+def test_the_detail_view_lists_cluster_membership():
+    html = render.render_detail(_queue(), 1)
+    assert "<h5>Cross-PR</h5>" in html
+    cross = html.split("<h5>Cross-PR</h5>")[1].split("</ul>")[0]
+    assert "cluster:C1:overlap:" in cross
+
+
+def test_the_composer_reads_the_lit_buttons():
+    """The board's script under jsdom: the click sequences an audit found
+    broken -- a card doubling its rows' fragments, the bar a click behind the
+    cards, several --stamp flags, refresh / re-run not counting. Runs when
+    node and the repo's jsdom devDependency are present, else says so."""
+    import shutil  # noqa: PLC0415
+    import subprocess  # noqa: PLC0415
+    import tempfile  # noqa: PLC0415
+    repo = HERE.parent.parent
+    node = shutil.which("node")
+    if not node or not (repo / "node_modules" / "jsdom" / "package.json").is_file():
+        print("  skip: test_the_composer_reads_the_lit_buttons (needs node and jsdom from `make ensure`)")
+        return
+    q = run([
+        stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])]),                                        # stamp, bot
+        stampable(12, files=[_file("content/docs/b.md", ["x"], ["o"])], author="camsoper", author_type="User"),  # stamp, human
+        stampable(13, labels=["review:trivial", "domain:docs"], comments=[], files=[_file("content/docs/c.md", ["x"], ["o"])]),  # judge
+        stampable(14, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["z"], ["p"])]),    # route
+        stampable(15, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/q/index.md", ["z"], ["p"])]),    # route
+        stampable(16, head_sha="f" * 40, files=[_file("content/docs/d.md", ["x"], ["o"])]),                      # blocked: refresh
+        stampable(17, labels=["review:error", "domain:docs"], files=[_file("content/docs/e.md", ["x"], ["o"])]),  # blocked: rerun
+    ], cfg=cfg(me=["docs"]))
+    prs = {"stamp": [11, 12], "judge": 13, "route": [14, 15], "refresh": 16, "rerun": 17, "team": "@pulumi/docs-marketing-review"}
+    with tempfile.TemporaryDirectory() as td:
+        board = Path(td) / "board.html"
+        board.write_text(render.render_board(q))
+        res = subprocess.run([node, str(HERE / "test_render_composer.js"), str(board), json.dumps(prs)],
+                             cwd=repo, capture_output=True, text=True, timeout=120)
+    assert res.returncode == 0, res.stdout + res.stderr
+

@@ -804,6 +804,26 @@ def pending_judgment(queue: dict, pr: dict) -> str:
               "with its reasoning and picks this row&#x27;s button; until then they are yours to weigh.</p>")
 
 
+_REASON_RE = re.compile(r'--reason "((?:[^"\\]|\\.)*)"')
+_REASON_STEP_RE = re.compile(r"--(?:request-changes|close|refresh|rerun) (\d+)\b")
+
+
+def scope_reasons(cmd: str) -> str:
+    """A `--reason "text"` that follows a `--request-changes N` / `--close N`
+    / `--refresh N` / `--rerun N` in the same fragment becomes act.py's
+    per-PR form, `--reason "N=text"`. The composer only ever concatenates
+    fragments, so a reason has to name its PR before it leaves the page: a
+    bare one is a global flag, and act.py refuses that once a second step
+    could consume it. An already-scoped reason is left alone."""
+    def sub(m: re.Match) -> str:
+        text = m.group(1)
+        steps = _REASON_STEP_RE.findall(cmd[:m.start()])
+        if not steps or re.match(r"^\d+=", text):
+            return m.group(0)
+        return f'--reason "{steps[-1]}={text}"'
+    return _REASON_RE.sub(sub, cmd)
+
+
 def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     actions = list(pr.get("actions") or [])
     # The row already links every changed page on the deployed preview, so a
@@ -820,13 +840,13 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" '
+        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" '
                     f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges every stampable row unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
-        btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
+        btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(scope_reasons(primary["cmd"]))}" data-pr="{pr["number"]}" '
                     f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" '
                     f'title="{esc(action_help(pr, primary))}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
@@ -891,7 +911,7 @@ def detail_sections(queue: dict, pr: dict) -> str:
     if review.get("stances"):
         parts.append('<p class="note">The brief lists editorial stances (advisory unless --strict-stances).</p>')
     # cross-PR
-    cross = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("collision", "directional", "duplicate")]
+    cross = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("cluster", "directional", "duplicate")]
     if cross:
         parts.append("<h5>Cross-PR</h5><ul>" + "".join(f"<li>{esc(c)}</li>" for c in cross) + "</ul>")
     # preview
@@ -1014,7 +1034,7 @@ HELP_SECTIONS = [
         "<i>since</i> is the one threshold rather than a set of values. <i>Reset chips</i> restores the defaults.",
     ]),
     ("The command at the bottom", [
-        "Copy it and run it, or hand it to Claude. It plans, previews every write, and waits for a yes.",
+        "Copy it and run it, or hand it to Claude. Invoking it <i>is</i> the yes: act.py plans it, prints a preview of every write, and executes, so nothing asks you to confirm a second time. <code>--dry-run</code> prints the preview and stops.",
         "Each approval re-checks the PR immediately before merging: head unchanged, mergeable, CI green, no changes-requested review. A PR that fails is skipped and the batch continues.",
     ]),
 ]
@@ -1022,7 +1042,8 @@ HELP_SECTIONS = [
 
 SHOWING_HELP = {
     "me": ("Which rows this run collected: the ones whose owning lane is yours, plus anything the routing matrix "
-           "leaves ungated. A PR owned by another lane is listed at the foot of the page instead. "
+           "leaves ungated. A PR owned by another lane still takes a full row, grouped under that owner, with a route action; "
+           "only PRs already waiting on another reviewer drop to the foot of the page. "
            "`--owner any` collects every open PR."),
     "any": "Which rows this run collected: every open PR, whoever owns it (`--owner any`).",
 }
@@ -1064,6 +1085,17 @@ def help_html() -> str:
             '<div class="helpgrid">' + "".join(out) + "</div></details>")
 
 
+def card_extra(d: dict) -> str:
+    """The part of a card's command that no row button carries, which is all
+    a lit card adds to the composed command: its rows say the rest. A card
+    with no targets (a consolidation) is its whole command; a chain's
+    follow-up has no row button until that row is actually stuck, so its
+    unblock rides on the card; every other card is exactly its rows."""
+    if not d.get("targets"):
+        return d.get("cmd") or ""
+    return " ".join(f"--unblock {n}" for n in d.get("claims") or [])
+
+
 def do_next_html(queue: dict) -> str:
     """The opening: one sentence and one button per move, most leverage
     first. Nothing else on the page competes with it for the first look."""
@@ -1082,8 +1114,10 @@ def do_next_html(queue: dict) -> str:
             data += f' data-lead="{esc(str(d["lead"]))}"'
         if d.get("claims"):
             data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
+        if d.get("cmd") and card_extra(d):
+            data += f' data-extra="{esc(scope_reasons(card_extra(d)))}"'
         tip = d.get("does") or ACTION_HELP.get(d["kind"], "")
-        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}"{data} '
+        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(scope_reasons(d["cmd"]))}" data-pr="next{i}"{data} '
                f'title="{esc(tip)}" aria-pressed="false">{esc(d["label"])}</button>'
                if d.get("cmd") else "")
         does = f'<span class="does">{esc(d["does"])}</span>' if d.get("does") else ""
@@ -1175,6 +1209,18 @@ def slim(obj):
     return obj
 
 
+def payload_json(obj) -> str:
+    """The slimmed queue as JSON that is inert inside
+    `<script type="application/json">`. Escaping only `</` is not enough:
+    the HTML parser has a double-escaped script state, and a title or path
+    carrying `<!--<script>` puts it there, after which the JSON block
+    swallows the page's real `<script>` up to end of file and every button
+    goes dead. Every `<`, `>` and `&` leaves as a JSON escape instead, which
+    is still the same JSON to any reader."""
+    return (json.dumps(slim(obj), sort_keys=True)
+            .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
+
+
 
 def waiting_html(prs: list[dict]) -> str:
     """The compact 'waiting on others' list: one line per handed-off PR,
@@ -1212,7 +1258,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         tally += (f'<div class="t-dim" title="PRs whose requested reviewer is someone other than you. They are waiting on that person, '
                   f'so they are listed at the foot of the page instead of taking a row.">'
                   f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
-    payload = json.dumps(slim(queue), sort_keys=True).replace("</", "<\\/")
+    payload = payload_json(queue)
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
         style=STYLE,
@@ -1233,7 +1279,7 @@ def render_detail(queue: dict, n: int, *, artifact: bool = False) -> str:
     pr = next((p for p in queue.get("prs") or [] if p["number"] == n), None)
     if pr is None:
         raise SystemExit(f"#{n} is not in the queue (drafts and filtered rows are not collected)")
-    payload = json.dumps(slim({**queue, "prs": [pr]}), sort_keys=True).replace("</", "<\\/")
+    payload = payload_json({**queue, "prs": [pr]})
     return (FRAGMENT if artifact else PAGE).format(
         title=f"#{n} · {esc(pr.get('title'))}",
         style=STYLE,
@@ -1288,7 +1334,7 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
             for j in p.get("judgments") or []:
                 lines.append(f"      {j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'} {j.get('deep_link') or ''}")
             for a in p.get("actions") or []:
-                lines.append(f"      [{a['label']}]  {a['cmd']}")
+                lines.append(f"      [{a['label']}]  {scope_reasons(a['cmd'])}")
     waiting = [p for p in all_prs if p.get("handed_off")] if not include_handed_off and n is None else []
     if waiting:
         lines += ["", f"waiting on others ({len(waiting)}):"]
@@ -1443,35 +1489,52 @@ td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:
 
 SCRIPT = r"""
 (function(){
-  var sel = {};   // 'pr:cmd' -> cmd; one entry per selected button
   var cmdEl = document.getElementById('cmd');
+  // The command is read off the lit buttons themselves, never off a shadow
+  // list, so what the bar shows can't lag a click. A Do-next card is a
+  // shortcut for the row buttons it names: lit, it contributes only
+  // `data-extra`, the part of its command no row button carries (a chain's
+  // unblock, a consolidation's request), and its rows say the rest.
+  function isCard(b){ return 'targets' in b.dataset || 'claims' in b.dataset; }
+  function fragment(b){ return isCard(b) ? (b.dataset.extra || '') : b.dataset.cmd; }
+  // Every `--stamp N[:mode][ --force]` folds into the one --stamp list, with
+  // --force said once for the batch: a second --stamp would be a second flag,
+  // and an act.py that read it single-valued would drop every PR but the last.
+  var STAMP = /^--stamp (\d+(?::(?:no-)?merge)?)( --force)?$/;
   function compose(){
-    var seen = {}, stamps = [], others = [];
-    Object.keys(sel).sort().forEach(function(k){
-      var c = sel[k]; if (!c || seen[c]) return; seen[c] = true;   // never the same fragment twice
-      var m = c.match(/^--stamp (\d+)$/); if (m) stamps.push(m[1]); else others.push(c);
+    var seen = {}, stamps = [], others = [], force = false;
+    // by PR number, so the command reads the same however it was clicked
+    var lit = [].slice.call(document.querySelectorAll('button.btn.sel[data-cmd]')).map(function(b, i){
+      return { b: b, n: parseInt(b.dataset.pr, 10), i: i };
+    }).sort(function(x, y){ return (isNaN(x.n) ? 1e9 : x.n) - (isNaN(y.n) ? 1e9 : y.n) || x.i - y.i; });
+    lit.forEach(function(e){
+      var b = e.b, c = fragment(b); if (!c) return;
+      var k = b.dataset.pr + ':' + c; if (seen[k]) return; seen[k] = true;   // twins are one selection
+      var m = c.match(STAMP);
+      if (m) { if (stamps.indexOf(m[1]) < 0) stamps.push(m[1]); if (m[2]) force = true; }
+      else if (others.indexOf(c) < 0) others.push(c);                        // never the same fragment twice
     });
+    stamps.sort(function(a, b){ return parseInt(a, 10) - parseInt(b, 10); });
     var out = '$ /pr-review --act';
-    if (stamps.length) out += ' --stamp ' + stamps.join(',');
+    if (stamps.length) out += ' --stamp ' + stamps.join(',') + (force ? ' --force' : '');
     if (others.length) out += ' ' + others.join(' ');
     cmdEl.textContent = out;
   }
   // The same decision can be on the board twice -- once on the compact row,
   // once in the expanded card -- and the two must never disagree, so a
-  // selection is keyed by PR and command and painted on every button
-  // carrying that key.
+  // selection is painted on every button carrying the same PR and command.
   function twins(b){
     return [].slice.call(document.querySelectorAll('button.btn[data-pr="' + b.dataset.pr + '"]')).filter(function(o){
       return o.dataset.cmd === b.dataset.cmd;
     });
   }
+  function paint(o, on){
+    o.classList.toggle('sel', on);
+    o.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
   function setSel(b, on){
-    var k = b.dataset.pr + ':' + b.dataset.cmd;
-    if (on) { sel[k] = b.dataset.cmd; } else { delete sel[k]; }
-    twins(b).forEach(function(o){
-      o.classList.toggle('sel', on);
-      o.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
+    if (isCard(b)) { paint(b, on); return; }   // a card is painted, never counted: its rows are
+    twins(b).forEach(function(o){ paint(o, on); });
   }
   // A Do-next card is the same decisions as the rows it names, pressed
   // together: `data-targets` maps a PR to the row button it presses, and
@@ -1520,16 +1583,22 @@ SCRIPT = r"""
   function syncCards(){
     cards.forEach(function(c){
       var t = cardTargets(c), prs = Object.keys(t), lit;
+      // any decision lit on a claimed row is a contradiction
+      var claimed = c.dataset.claims ? c.dataset.claims.split(',') : [];
+      var contradicted = claimed.some(function(pr){
+        return !!document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
+      });
       if (prs.length) {
-        lit = prs.every(function(pr){ var b = rowButton(pr, t[pr]); return b && b.classList.contains('sel'); });
-      } else {   // claims-only: any decision lit on a claimed row is a contradiction
-        lit = c.classList.contains('sel') && !cardPrs(c).some(function(pr){
-          return document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
-        });
+        lit = !contradicted && prs.every(function(pr){ var b = rowButton(pr, t[pr]); return b && b.classList.contains('sel'); });
+      } else {   // claims-only: lit until a claimed row picks something else
+        lit = c.classList.contains('sel') && !contradicted;
       }
-      if (lit !== c.classList.contains('sel')) { setSel(c, lit); if (c.dataset.claims) markClaimed(c, lit); }
+      if (lit !== c.classList.contains('sel')) { setSel(c, lit); if (claimed.length) markClaimed(c, lit); }
     });
   }
+  // Every click ends here: the cards settle first, then the command is read
+  // off whatever is lit, so the bar never shows one click ago.
+  function settle(){ syncCards(); compose(); progress(); }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
     if (b.classList.contains('sel')) setSel(b, true);
     b.addEventListener('click', function(){
@@ -1548,7 +1617,7 @@ SCRIPT = r"""
           b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
           markClaimed(b, on);
         }
-        setSel(b, on); compose(); syncCards(); return;
+        setSel(b, on); settle(); return;
       }
       if (b.dataset.claims) {                    // a chain: the rows it covers defer to it
         b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
@@ -1573,12 +1642,11 @@ SCRIPT = r"""
           setSel(row, on);
         });
       }
-      compose(); syncCards();
+      settle();
     });
   });
-  syncCards();
   document.getElementById('clear').addEventListener('click', function(){
-    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose(); syncCards();
+    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); settle();
   });
   // One lever for every fold on the board. The per-panel defaults are the
   // reading order (a guide and its preview links open, the reasons behind a
@@ -1614,6 +1682,7 @@ SCRIPT = r"""
     });
   })();
   document.getElementById('copy').addEventListener('click', function(){
+    compose();   // what goes to the clipboard is what is lit now, not what was last drawn
     var t = cmdEl.textContent.replace(/^\$ /, '');
     if (navigator.clipboard) navigator.clipboard.writeText(t);
   });
@@ -1653,15 +1722,21 @@ SCRIPT = r"""
     });
     apply();
   });
+  // A decision is any lit decision button -- approve, send back, close,
+  // route, unblock, refresh, re-run -- on any row on the page, blocked rows
+  // included; a row a Do-next card covers has had its decision made by the
+  // card. The denominator is every row that has a decision to make.
   function progress(){
     var el = document.getElementById('progress'); if (!el) return;
-    var rows = document.querySelectorAll('.mrow[data-verdict="judge"], .mrow[data-verdict="route"]');
-    var done = 0; rows.forEach(function(r){ if (r.querySelector('button.btn.sel[data-kind="decision"]')) done++; });
+    var rows = [].slice.call(document.querySelectorAll('.mrow')).filter(function(r){
+      return r.querySelector('button.btn[data-kind="decision"]');
+    });
+    var done = rows.filter(function(r){
+      return r.querySelector('button.btn.sel[data-kind="decision"]') || r.querySelector('.claimnote');
+    }).length;
     el.textContent = rows.length ? done + ' of ' + rows.length + ' decisions made' : '';
   }
-  document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){ b.addEventListener('click', progress); });
-  document.getElementById('clear').addEventListener('click', progress);
-  apply(); progress(); compose();
+  apply(); settle();
 })();
 """
 
