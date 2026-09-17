@@ -13,6 +13,7 @@ the same way.
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -258,7 +259,10 @@ def test_find_review_comments_prefers_v3_card():
     a, b, surface = collect.find_review_comments(v3)
     assert surface == "v3" and "CLAUDE_REVIEW_AUTHOR" in a["body"] and "CLAUDE_REVIEW_BRIEF" in b["body"]
     a, b, surface = collect.find_review_comments([comment(LEGACY)])
-    assert surface == "v2" and b is None and a["body"].startswith("<!-- CLAUDE_REVIEW 1/1 -->")
+    # The legacy comment comes back joined, so its page markers are stripped
+    # (join_pages' doing) and the body is the review rather than one page.
+    assert surface == "v2" and b is None and "<!-- CLAUDE_REVIEW 1/1 -->" not in a["body"]
+    assert a["body"].strip().startswith("## Pre-merge Review") and a["review_pages_missing"] == []
     assert collect.find_review_comments([comment("hi", "someone")]) == (None, None, "none")
 
 
@@ -521,3 +525,84 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+# ---- a split (multi-comment) legacy review --------------------------------
+
+# The real v2 fixture with findings written into it, split at the point the
+# poster would split it: the summary, the tally and the verification trail on
+# page 1, every findings section on page 2. That ordering is the bug's whole
+# mechanism — the sections are the tail of the document, so a page-1-only
+# read reports a review with no findings at all (pulumi/docs#21490).
+MARKER_LINE_RE = re.compile(r"^<!-- CLAUDE_REVIEW \d+/\d+ -->\n", re.M)
+_SPLIT_AT = "### 🚨 Outstanding in this PR"
+_FINDINGS = """### 🚨 Outstanding in this PR
+
+- **[L12]** `content/docs/a.md` — the claim about default output does not hold.
+- **[L40]** `content/docs/a.md` — this link 404s.
+- **[L61]** `content/docs/b.md` — the sample uses a retired flag.
+
+### ⚠️ Low-confidence
+
+- **[L20]** `content/docs/a.md` — possibly stale version number.
+"""
+
+
+def legacy_pages(outstanding: int = 3, low: int = 1, total: int = 2) -> list[str]:
+    """The fixture as `total` page bodies, each stamped `k/total`."""
+    head, _, _ = LEGACY.partition(_SPLIT_AT)
+    head = MARKER_LINE_RE.sub("", head, count=1)
+    head = head.replace("| **0** | **0** | **1** | **2** |",
+                        f"| **{outstanding}** | **{low}** | **0** | **0** |")
+    return [f"<!-- CLAUDE_REVIEW 1/{total} -->\n{head.strip()}\n",
+            f"<!-- CLAUDE_REVIEW 2/{total} -->\n{_FINDINGS}"]
+
+
+def test_a_split_legacy_review_is_read_whole_not_page_one():
+    """pulumi/docs#21490: a v2 review over one comment's size limit is split,
+    and its 🚨/⚠️ sections land on the later pages. Reading page 1 alone
+    reported `items: []` and a clean summary, which downstream turned a
+    blocked row into a judge row with a merge button."""
+    pages = legacy_pages()
+    comments = [comment(pages[1]), comment(pages[0])]        # out of order on purpose
+    a, b, surface = collect.find_review_comments(comments)
+    assert surface == "v2" and b is None
+    assert a["review_pages"] == 2 and a["review_pages_missing"] == []
+    # page order, not comment order, and the markers gone
+    assert a["body"].index("Outstanding in this PR") > a["body"].index("🚨 Outstanding |")
+    assert "<!-- CLAUDE_REVIEW" not in a["body"]
+
+    review = collect.parse_review(a["body"], "", 21490, "pulumi/docs")
+    buckets = {}
+    for it in review["items"]:
+        buckets[it["bucket"]] = buckets.get(it["bucket"], 0) + 1
+    assert buckets.get("outstanding") == 3 and buckets.get("low") == 1
+    assert review["parse_confidence"] == "high" and review["counts_shortfall"] == {}
+    assert review["summary"]["clean"] is False and review["summary"]["remaining"] == 4
+
+    # Page 1 alone: not merely findings-free, but *known* incomplete — the
+    # tally on it declares more than its sections hold.
+    only_first = collect.parse_review(collect.sentinel.worklist().join_pages(pages[0]), "", 21490, "pulumi/docs")
+    assert only_first["items"] == []
+    assert only_first["counts_shortfall"] == {"outstanding": {"declared": 3, "parsed": 0},
+                                              "low": {"declared": 1, "parsed": 0}}
+    assert only_first["parse_confidence"] == "low" and only_first["summary"]["clean"] is False
+
+
+def test_a_legacy_review_missing_a_page_says_so():
+    """GitHub returned page 1 of 3. Nothing about the text says findings are
+    missing, so the marker's own denominator is what has to say it."""
+    pages = legacy_pages(total=3)
+    a, _, surface = collect.find_review_comments([comment(pages[0])])
+    assert surface == "v2" and a["review_pages"] == 3 and a["review_pages_missing"] == [2, 3]
+    # page 2 of 3 on its own: 1 and 3 are both reported absent, page 1 included
+    found = collect.sentinel.legacy_pages([comment(pages[1])])
+    assert found["missing"] == [1, 3] and found["total"] == 3
+    assert collect.sentinel.legacy_pages([comment("not a review", "someone")]) is None
+
+
+def test_a_v3_card_is_never_mistaken_for_a_legacy_page():
+    """The v3 author card and brief open with a `1/1` marker of their own."""
+    assert collect.sentinel.legacy_pages([comment(V3_AUTHOR), comment(V3_BRIEF)]) is None
+    a, b, surface = collect.find_review_comments([comment(V3_BRIEF), comment(V3_AUTHOR)])
+    assert surface == "v3" and "CLAUDE_REVIEW_AUTHOR" in a["body"] and b is not None

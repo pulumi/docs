@@ -137,7 +137,7 @@ REASON_CODES = {
     "risk": "risk tier from the diff shape (typo/minor/standard/major/infra)",
     "scrutiny": "heightened content scrutiny (AI-suspect) — caps at judge",
     "ai-suspect": "which AI-suspect signal fired",
-    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands",
+    "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that",
     "label": "the review:* state label; `card-clean`: the label lags a base merge, but the card itself says nothing blocks, so it stands in for review:no-blockers",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
     "outstanding": "🚨/❓ rows still open on the author card; `judged:<ids>`: every open one has a resolvable judgment, which approving posts as `/resolve` lines",
@@ -814,6 +814,28 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         # No review ran (trivial / frontmatter-only / draft / bot skip);
         # a full one is a side action the approver can ask for.
         add_action({"id": "rerun", "label": "run a full review", "cmd": f"--rerun {n}"})
+    # A review nobody could read whole is not a review, and a row carrying
+    # one must never be a `judge` row: `--force` would then merge over the
+    # findings that never arrived. Two ways to know: GitHub did not return a
+    # page the `k/N` markers promise, or the card's own tally declares more
+    # findings than parsed out of its sections. Both say the same thing --
+    # the findings may not be here -- so the row is blocked and the unblock
+    # is a fresh review, not a judgment call over a body with holes in it.
+    unreadable = []
+    if review.get("pages_missing"):
+        unreadable.append("pages:" + ",".join(str(k) for k in review["pages_missing"]))
+    if review.get("counts_shortfall"):
+        unreadable.append("tally:" + ",".join(sorted(review["counts_shortfall"])))
+    if unreadable:
+        gate_fail("review:unreadable:" + ";".join(unreadable))
+        blocked.append("review:unreadable")
+        add_action({"id": "rerun", "label": "re-run the review", "cmd": f"--rerun {n}"})
+    elif (review.get("surface") or "none") != "none" and review.get("parse_confidence") != "high":
+        # Weaker, and not a blocker: the body parsed into no findings and
+        # nothing contradicts that, but nothing corroborates it either (a v2
+        # card with no tally table; a v3 card with no head sentinel or a
+        # broken REVIEW_STATE). Not stampable, and a person reads it.
+        gate_fail("review:parse-confidence:low")
     blockers = open_blockers(pr)
     warnings = open_warnings(pr)
     label_ok = "review:no-blockers" in labels

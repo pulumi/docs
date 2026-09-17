@@ -18,7 +18,7 @@ Every open PR you can act on gets exactly one verdict. It says what kind of move
 | **stamp** | Passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough. | Approve. Bot PRs merge; a person's PR is theirs to merge. |
 | **judge** | One thing needs a person: an open finding, a stale-looking summary, a new blog post, a diff over your size cap. | Read the judgment boxes, then approve as-is or send it back. |
 | **route** | Not your lane per `.github/review-routing.yml`. | Request review from the owning team, or approve anyway if you're confident. |
-| **blocked** | Nothing you can do until something else moves: an unanswered 🚨 finding, a conflict, red CI, a stale or errored review, a review still running, someone else's changes requested, or your own PR. | Use the unblock the row offers (merge base, refresh, re-run the review, re-run the failed checks, send back or close for open findings, route), or leave it. A row with no unblock says **Blocked: … no action available** and is counted on its own tally tile, so it can never sit silent. |
+| **blocked** | Nothing you can do until something else moves: an unanswered 🚨 finding, a conflict, red CI, a stale, errored or **unreadable** review (one that didn't arrive whole — see below), a review still running, someone else's changes requested, or your own PR. | Use the unblock the row offers (merge base, refresh, re-run the review, re-run the failed checks, send back or close for open findings, route), or leave it. A row with no unblock says **Blocked: … no action available** and is counted on its own tally tile, so it can never sit silent. |
 
 ## The Do next strip
 
@@ -117,6 +117,19 @@ The lever at the end of the bar is not a filter. It opens or closes every folded
 ## The progress line
 
 "3 of 21 decisions made", under the tally. A decision is a lit decision button on any row on the page — approve (either way), send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks — or a Do-next card covering the row. Side actions (apply fixes, screenshot, deploy) never count. The denominator is every row that has a decision to make, blocked rows included; rows parked in the waiting lists are not on the page and are not counted.
+
+## A review that didn't arrive whole
+
+A long review is split across several comments. Its findings sections are the tail of the document, so when the collector could only read part of it, what is missing is exactly where the 🚨 rows live — and a row that looks findings-free for that reason is the most dangerous row on the board, because "no findings" is the shape of an approvable PR.
+
+Two things say a review is incomplete, and either one blocks the row with `review:unreadable`:
+
+- **A missing page.** The `k/N` markers promise N comments and GitHub returned fewer.
+- **A tally that outruns the sections.** The card's own count table says three 🚨 and its sections parsed into none. The table and the sections are written by the same pass, so a disagreement means the body is truncated, whatever truncated it.
+
+The unblock is **re-run the review** — a fresh one, not a refresh. `act.py` refuses the merge on its own account too: the preflight re-reads the review and will not merge over one it cannot see whole, whatever the board said.
+
+Softer and not a blocker: **`review:parse-confidence:low`** on a row whose review parsed into no findings with nothing corroborating that (a v2 card with no tally table, a v3 card with no head sentinel or a broken `REVIEW_STATE`). Nothing says there *are* findings, so the row stays judgeable — but it is never stampable, and the honest move is to read the comment itself.
 
 ## Fixing one yourself
 

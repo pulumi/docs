@@ -26,6 +26,7 @@ import collect  # noqa: E402
 import pr_review_config  # noqa: E402
 import routing  # noqa: E402
 from gh_client import GhClient  # noqa: E402
+import test_collect as tc  # noqa: E402
 from test_collect import HEAD_V3, V3_AUTHOR, V3_BRIEF, comment, make_snapshot, patch_for, pr_spec  # noqa: E402
 
 CONFIG = routing.validate_raw(routing._CANNED_CONFIG)[0]
@@ -1194,3 +1195,63 @@ def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():
                        author="pulumi-bot", author_type="User", files=[_file("content/docs/c.md", ["x"])])])
     assert row(q, 1)["handoffs"] == [] and row(q, 2)["handoffs"] == []
     assert [h["run"] for h in row(q, 3)["handoffs"]] == ["/address-review 3"]
+
+
+# ---- a split (multi-comment) legacy review -------------------------------
+
+
+def test_a_split_legacy_review_blocks_the_row_it_used_to_wave_through():
+    """pulumi/docs#21490 end to end. A v2 review split across two comments
+    keeps its 🚨 section on page 2. Reading page 1 alone reported no findings
+    at all, so the row missed `outstanding:` entirely and landed in `judge`,
+    where `--stamp N --force` ("approve as-is & merge") is the primary
+    button. "An unanswered 🚨 is blocked, never --force-able" exists to stop
+    exactly that."""
+    pages = tc.legacy_pages()
+    q = run([stampable(1, comments=[comment(pages[0]), comment(pages[1])],
+                       labels=["review:outstanding-issues", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked", (p["verdict"], p["reasons"])
+    assert "outstanding:3" in p["blockers"]
+    assert set(p["open_blocker_ids"]) == {"outstanding:L12", "outstanding:L40", "outstanding:L61"}
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")]
+    assert_every_row_has_a_button(q)
+
+
+def test_a_legacy_review_with_a_page_missing_is_blocked_not_judged():
+    """GitHub returned page 1 of 3. The findings may simply not be here, so
+    the row is blocked with a fresh review as its unblock — never `judge`,
+    where --force merges over whatever did not arrive."""
+    pages = tc.legacy_pages(total=3)
+    q = run([stampable(1, comments=[comment(pages[0])], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and "review:unreadable" in p["blockers"]
+    # the missing page and the tally it left behind both fire, in one code
+    why = next(r for r in p["reasons"] if r.startswith("review:unreadable:"))
+    assert why == "review:unreadable:pages:2,3;tally:low,outstanding"
+    # the unblock is a decision here, so the row is never "no action available"
+    assert "rerun" in [a["id"] for a in p["actions"]]
+    assert_every_row_has_a_button(q)
+
+
+def test_a_tally_that_outruns_the_parsed_sections_blocks_the_row():
+    """The belt to the paging fix's braces: whatever truncated the body, a
+    card declaring three 🚨 whose sections parsed into none has said outright
+    that findings are missing. The label still says review:no-blockers."""
+    page1 = tc.legacy_pages()[0].replace("<!-- CLAUDE_REVIEW 1/2 -->", "<!-- CLAUDE_REVIEW 1/1 -->")
+    q = run([stampable(1, comments=[comment(page1)], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and "review:unreadable" in p["blockers"]
+    assert "review:unreadable:tally:low,outstanding" in p["reasons"]
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")]
+
+
+def test_a_review_that_parsed_into_nothing_is_never_stampable():
+    """Weaker than unreadable and not a blocker: a v2 card with no tally
+    table corroborating "no findings". Not blocked — nothing says there are
+    findings — but a person reads it rather than stamping it."""
+    body = "<!-- CLAUDE_REVIEW 1/1 -->\n## Pre-merge Review\n\n<!-- CLAUDE_REVIEW_HEAD %s -->\nLooks fine to me.\n" % HEAD_V3
+    q = run([stampable(1, comments=[comment(body)], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "judge" and "review:parse-confidence:low" in p["gate_fails"]
+    assert "review:unreadable" not in p["blockers"]

@@ -1164,3 +1164,38 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+def test_a_split_legacy_review_is_counted_whole_by_g2():
+    """The merge gate had the same page-1-only read as the collector, and it
+    is the worse place for it: a 2-page v2 review with its 🚨 section on page
+    2 counted zero outstanding findings and G2 passed as "legacy review
+    clean" (pulumi/docs#21490)."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    page2 = {"id": 10, "user": {"login": "github-actions[bot]"},
+             "body": ("<!-- CLAUDE_REVIEW 2/2 -->\n### 🚨 Outstanding in this PR\n\n"
+                      "- **[L10-12]** `f.md` — broken thing\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page2, page1],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "ok" and "legacy" in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "red" and "1 🚨 Outstanding" in _gate(v, "G2").message
+    assert v.conclusion == "failure"
+
+
+def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
+    """Page 1 of 2 and nothing else. Counting zero 🚨 here would pass the
+    merge gate on a review nobody has read whole."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page1],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "error"
+    assert "page(s) 2 could not be read" in _gate(v, "G2").message
+    assert v.conclusion != "success"
