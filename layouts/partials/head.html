@@ -96,7 +96,10 @@
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
 
-    {{ if .Params.redirect_to }}
+    {{/* An event hosted elsewhere (event_url) redirects its generated stub there,
+         alongside the general-purpose redirect_to mechanism. */}}
+    {{ $redirectTarget := or .Params.redirect_to .Params.event_url }}
+    {{ if $redirectTarget }}
         {{ $delay := 0 }}
 
         {{/* https://developers.google.com/search/docs/advanced/crawling/301-redirects#metarefresh */}}
@@ -105,10 +108,12 @@
         {{ end }}
 
 
-        <meta http-equiv="refresh" content="{{ $delay }}; url={{ .Params.redirect_to }}" />
+        <meta http-equiv="refresh" content="{{ $delay }}; url={{ $redirectTarget }}" />
     {{ end }}
 
-    {{ if eq .Params.block_external_search_index true }}
+    {{/* An off-page event (event_url) is never indexable: the generated stub only
+         exists so the list and RSS have something to link out from. */}}
+    {{ if or (eq .Params.block_external_search_index true) .Params.event_url }}
         <meta name="robots" content="noindex" />
     {{ end }}
 

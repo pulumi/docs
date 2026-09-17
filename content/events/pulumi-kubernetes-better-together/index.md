@@ -14,17 +14,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page. If the event is external you will need
-# set the 'block_external_search_index' flag to true so Google does not index
-# the event page created.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page. If this is an external
-# event, use the external URL as the value here.
-url_slug: pulumi-kubernetes-better-together
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -71,5 +60,4 @@ tags:
 form:
   hubspot_form_id: 7fa54625-9e6e-4133-8ea6-4e82df69c767
   salesforce_campaign_id: 701PQ00000JthRBYAZ
-
 ---

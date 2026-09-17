@@ -15,14 +15,7 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page.
-external: false
-block_external_search_index: false
 allow_long_title: true
-
-# The url slug for the event landing page.
-url_slug: autonomous-agents-need-guardrails-openclaw
 
 # The event type (workshop, webinar, talk).
 event_type: webinar
@@ -80,5 +73,4 @@ form:
     # HubSpot form id.
     hubspot_form_id: d0c8fa60-4dbc-4cc9-a8f3-1d32b836e8be
     salesforce_campaign_id: 701PQ00000w5qz6YAA
-
 ---

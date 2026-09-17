@@ -159,10 +159,10 @@ const SECTIONS = [
     // OG_SAMPLE → one representative EVENT (both variants); exclude the index so
     // the sample exercises the events renderer, not the index title card.
     sampleGroupBy: (id) => (id === "events" ? null : "events"),
-    // External events do publish an on-site page, but it's never linked (the
-    // events list links straight to the external URL) and is meant to be
-    // noindexed — not worth a card; the default og image covers it.
-    skip: (fm) => fm.external === true,
+    // An off-page event (event_url) still publishes an on-site stub, but it's
+    // never linked (the list links straight out) and is noindexed/redirected —
+    // not worth a card; the default og image covers it.
+    skip: (fm) => Boolean(fm.event_url),
     fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
     valid: (f) => !!f.title,
   },

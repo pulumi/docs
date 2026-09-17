@@ -24,13 +24,12 @@ unlisted: false
 # Show a registration form. Requires form.hubspot_form_id.
 gated: false
 
-# Link to an external page instead of rendering the event page.
-# Set block_external_search_index to true when using this.
-external: false
-block_external_search_index: false
-
-# URL slug for internal events, or external URL when external: true.
-url_slug: "{{ .Name }}"
+# For an event hosted elsewhere, set event_url to where it lives: an
+# "https://..." URL for a third-party page (opened in a new tab) or a "/..."
+# path for another Pulumi page. The generated /events/{{ .Name }}/ stub then
+# redirects there and is never indexed; the list and RSS link out to it. Omit
+# it for a normal event that renders its own page here.
+# event_url:
 
 # The event type (workshop, webinar, talk).
 event_type: workshop

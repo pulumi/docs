@@ -53,17 +53,18 @@
     {{ $label = .label }}
 {{ end }}
 
-{{/* External and internal-landing-page events point at a full URL in url_slug;
-     everything else resolves to an event page under /events/. */}}
+{{/* An event hosted elsewhere sets event_url to where it lives — an "https://..."
+     URL for a third-party page, opened in a new tab, or a "/..." path for another
+     Pulumi page. Everything else links to the event's own page under /events/. */}}
 {{ $href := "" }}
 {{ $relref := "" }}
 {{ $target := "" }}
-{{ if or $data.Params.external $data.Params.internal_landing_page }}
-    {{ $href = $data.Params.url_slug }}
+{{ if $data.Params.event_url }}
+    {{ $href = $data.Params.event_url }}
     {{ $relref = "noopener noreferrer" }}
     {{ $target = "_blank" }}
 {{ else }}
-    {{ $href = relref .pageContext (printf "/events/%s" $data.Params.url_slug) }}
+    {{ $href = $data.RelPermalink }}
     {{/* Only a labelled session has a tab to land on: a single-session event
          renders no tabs, so appending its key would be a dead hash. */}}
     {{ with $label }}
