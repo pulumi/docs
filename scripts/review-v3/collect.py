@@ -479,9 +479,35 @@ def blog_date(f: dict, head_sha: str, gh: GhClient | None, repo_root: Path) -> s
 FAILED_CONCLUSIONS = {"failure", "timed_out", "cancelled", "action_required", "startup_failure"}
 
 
-def checks_rollup(check_runs: list[dict], statuses: list[dict]) -> dict:
+def _run_order(run: dict) -> tuple:
+    return (run.get("started_at") or "", run.get("completed_at") or "", run.get("id") or 0)
+
+
+def checks_rollup(check_runs: list[dict], statuses: list[dict], workflows: dict[int, str] | None = None) -> dict:
     """green | red | pending, with the failing/pending names. Neutral and
-    skipped runs count as green (the report-only Sentinel is neutral)."""
+    skipped runs count as green (the report-only Sentinel is neutral).
+
+    Only the newest run of each check in each workflow counts. The API's
+    default `filter=latest` is per check suite, and every workflow run is its
+    own suite, so a run a concurrency group cancelled stays in the list beside
+    the run that replaced it. Counting it would turn a green PR red.
+
+    The workflow is part of the key because job names repeat across
+    workflows: pull-request.yml and testing-build-and-deploy.yml both run
+    "Install deps and build site", master's required check, and a passing
+    deploy must never stand in for a failed PR build. `workflows` maps
+    check_suite_id → workflow (`GhClient.workflow_paths`); a suite it doesn't
+    know keys on the suite itself, which dedupes nothing and so errs red."""
+    workflows = workflows or {}
+    newest: dict[tuple, dict] = {}
+    for run in check_runs:
+        suite = (run.get("check_suite") or {}).get("id")
+        owner = workflows.get(suite) if suite in workflows else f"suite:{suite}"
+        key = (owner, run.get("name") or "?")
+        seen = newest.get(key)
+        if seen is None or _run_order(run) >= _run_order(seen):
+            newest[key] = run
+    check_runs = list(newest.values())
     failing, pending = [], []
     for run in check_runs:
         name = run.get("name") or "?"
@@ -566,6 +592,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         _write_cache(cache_dir, number, key, raw)
     check_runs = gh.check_runs(head_sha) if head_sha else []
     statuses = gh.commit_statuses(head_sha) if head_sha else []
+    workflows = gh.workflow_paths(head_sha) if head_sha else {}
     requested = gh.requested_reviewers(number)
 
     files = raw["files"]
@@ -642,7 +669,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "labels": sorted(labels),
         "mergeable": detail.get("mergeable"),
         "mergeable_state": detail.get("mergeable_state") or "unknown",
-        "checks": checks_rollup(check_runs, statuses),
+        "checks": checks_rollup(check_runs, statuses, workflows),
         "files": [
             {
                 "path": f.get("filename") or "",
