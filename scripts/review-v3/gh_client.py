@@ -321,6 +321,18 @@ class GhClient:
         data = self.get(f"repos/{self.repo}/commits/{sha}/check-runs", {"per_page": 100}) or {}
         return data.get("check_runs", []) if isinstance(data, dict) else []
 
+    def workflow_paths(self, sha: str) -> dict[int, str]:
+        """check_suite_id → workflow file for the Actions runs on `sha`, so a
+        check run can be told apart from a same-named job in another workflow.
+        Empty when the runs can't be read; callers must treat an unmapped
+        suite conservatively."""
+        try:
+            data = self.get(f"repos/{self.repo}/actions/runs", {"head_sha": sha, "per_page": 100}) or {}
+        except GhNotFound:
+            return {}
+        runs = data.get("workflow_runs", []) if isinstance(data, dict) else []
+        return {r["check_suite_id"]: r.get("path") or r.get("name") or "" for r in runs if r.get("check_suite_id")}
+
     def commit_statuses(self, sha: str) -> list[dict]:
         return self.get(f"repos/{self.repo}/commits/{sha}/statuses", paginate=True) or []
 

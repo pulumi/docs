@@ -310,6 +310,29 @@ def test_checks_rollup():
     assert collect.checks_rollup(pend, [])["state"] == "pending"
     st = [{"context": "staging/pulumi-test-io", "state": "failure"}, {"context": "staging/pulumi-test-io", "state": "success"}]
     assert collect.checks_rollup(ok, st)["failing"] == ["staging/pulumi-test-io"]  # newest first wins
+    # A concurrency group cancels superseded runs; only the newest run of a name counts.
+    superseded = ok + [
+        {"id": 1, "name": "sentinel", "status": "completed", "conclusion": "cancelled", "started_at": "2026-09-14T14:21:25Z", "completed_at": "2026-09-14T14:21:26Z"},
+        {"id": 3, "name": "sentinel", "status": "completed", "conclusion": "success", "started_at": "2026-09-14T21:16:31Z", "completed_at": "2026-09-14T21:17:37Z"},
+        {"id": 2, "name": "sentinel", "status": "completed", "conclusion": "cancelled", "started_at": "2026-09-14T14:21:27Z", "completed_at": "2026-09-14T14:21:27Z"},
+    ]
+    assert collect.checks_rollup(superseded, []) == {"state": "green", "failing": [], "pending": [], "total": 4}
+    rerun = superseded + [{"id": 4, "name": "sentinel", "status": "in_progress", "conclusion": None, "started_at": "2026-09-15T09:00:00Z"}]
+    assert collect.checks_rollup(rerun, [])["pending"] == ["sentinel"]  # a newer run still going beats an older success
+    regressed = ok + [{"id": 5, "name": "lint", "status": "completed", "conclusion": "success", "started_at": "2026-09-14T10:00:00Z"},
+                      {"id": 6, "name": "lint", "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T11:00:00Z"}]
+    assert collect.checks_rollup(regressed, [])["failing"] == ["lint"]
+    # Job names repeat across workflows: a passing deploy build must not stand in for a failed PR build.
+    build = "Install deps and build site"
+    twins = [{"id": 7, "name": build, "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T10:00:00Z", "check_suite": {"id": 70}},
+             {"id": 8, "name": build, "status": "completed", "conclusion": "success", "started_at": "2026-09-14T11:00:00Z", "check_suite": {"id": 80}}]
+    wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/testing-build-and-deploy.yml"}
+    assert collect.checks_rollup(twins, [], wf)["failing"] == [build]
+    # An unmapped suite dedupes nothing, so it errs red rather than green.
+    assert collect.checks_rollup(twins, [])["failing"] == [build]
+    # Reruns of the same workflow do dedupe, across their separate suites.
+    rerun_wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/pull-request.yml"}
+    assert collect.checks_rollup(twins, [], rerun_wf)["state"] == "green"
 
 
 # ---- selection -----------------------------------------------------------
