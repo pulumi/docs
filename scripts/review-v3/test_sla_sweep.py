@@ -48,13 +48,13 @@ RAW_CONFIG = {
     },
     "bots": ["pulumi-bot"],
     "matrix": {
-        "docs": {"mechanical": "none", "substantive": "docs-guild"},
-        "blog": {"mechanical": "none", "substantive": "marketing"},
-        "website": {"mechanical": "none", "substantive": "marketing"},
-        "programs": {"mechanical": "none", "substantive": "docs-guild"},
+        "docs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "blog": {"mechanical": "marketing", "substantive": "marketing"},
+        "website": {"mechanical": "marketing", "substantive": "marketing"},
+        "programs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
         "infra": {"mechanical": "tools", "substantive": "tools"},
-        "frontend": {"mechanical": "none", "substantive": "marketing"},
-        "other": {"mechanical": "none", "substantive": "tools"},
+        "frontend": {"mechanical": "marketing", "substantive": "marketing"},
+        "other": {"mechanical": "tools", "substantive": "tools"},
     },
     "staging_evidence": {"paths": ["infrastructure/"]},
     "claims_overlay": {"add": "marketing"},
@@ -523,9 +523,16 @@ def test_comment_failure_is_fatal_for_that_pr_only():
         assert by_pr[2]["action"]["type"] == "warn"
 
 
-def test_stale_author_warn_cleared_on_no_clock_branch():
-    """Warned PR whose findings got answered and which now resolves to
-    'mechanical, no required role': the label must not leak."""
+def test_stale_author_warn_cleared_when_the_findings_get_answered():
+    """A warned PR whose findings got answered: the author-stalled label
+    must not leak, and the clock hands over to the reviewer.
+
+    This used to be the "mechanical, so no required role, so no clock at
+    all" branch. Mechanical resolves to the lane team now, so the PR moves
+    onto the reviewer clock instead of off the clock entirely — which is
+    the point: somebody is on the hook for every PR, so the sweep has
+    somebody to chase.
+    """
     with tempfile.TemporaryDirectory() as d:
         state_dir = Path(d)
         gh = StubGh()
@@ -537,7 +544,8 @@ def test_stale_author_warn_cleared_on_no_clock_branch():
         record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=False, state_dir=state_dir, evidence_uri="")
         assert gh.labels_removed == [(1, sla_sweep.AUTHOR_STALLED_LABEL)]
         assert json.loads((state_dir / "state" / "1.json").read_text())["warns"] == []
-        assert record["actions"][0]["kind"] is None
+        # The author clock stopped; the reviewer clock is what runs now.
+        assert record["actions"][0]["kind"] == "reviewer"
 
 
 def test_no_durable_state_forces_dry_run():

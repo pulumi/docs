@@ -665,13 +665,11 @@ def ownership(pr: dict, ctx: dict) -> dict:
     is_mine = mine is None or bool(set(lanes["domains"]) & mine)
     for d in lanes["domains"]:
         reasons.append(f"owner:{d}:{lanes['owners'][d]['role']}")
-    # No required role at all: every subject's cell for this change type is
-    # `none`, so the Sentinel asks for no team approval and there is nobody
-    # to wait for. Routing it would be inventing a gate GitHub doesn't have,
-    # so an ungated PR is any approver's to take.
-    if not lanes["roles"]:
-        reasons.append("gate:none")
-        is_mine = True
+    # There is no "no required role" case any more: `none` matrix cells are
+    # a config error, so every governed PR resolves to an approver team and
+    # every row has somebody on the hook. The `gate:none` reason code this
+    # branch used to emit is gone with it — it described a state that rested
+    # on the Sentinel being the merge gate, which it is not.
     if link_only_diff(pr.get("files") or []):
         reasons.append("shape:link-only")
         # The routing config decides who may approve a link sweep. With

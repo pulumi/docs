@@ -43,13 +43,24 @@
 # -----------------------------------------------------------------------------
 # BOTS
 # -----------------------------------------------------------------------------
-# `bots:` lists machine **user** accounts (e.g. a service account that also
-# leaves reviews) whose approvals never count toward satisfying a required
-# role, even if that account happens to be a team member. This is a
-# belt-and-suspenders list for bot accounts that don't carry GitHub's own
-# `type: Bot` marker on their user object — a PR's own actor with
-# `type == Bot` is excluded automatically by the Sentinel and doesn't need
-# to be listed here.
+# `bots:` lists machine accounts whose approvals never count toward
+# satisfying a required role, even if the account happens to be a team
+# member.
+#
+# `pulumi-bot` is the one that strictly needs to be here: it is a machine
+# **user** (`type: User`), so the Sentinel's automatic `type == Bot`
+# exclusion does not catch it. The GitHub App identities below are caught
+# automatically and are listed anyway, because a reader comparing this file
+# against the PR queue should see every bot that opens PRs on this repo in
+# one place, and because "it happens to be covered elsewhere" is how
+# `workprentice[bot]` stayed invisible to this file for two weeks while
+# opening a quarter of its bot PRs.
+#
+# Keep in sync with the author whitelists in `claude-triage.yml`,
+# `claude-code-review.yml`, and `claude-update.yml`. Those read the author
+# from different APIs, so they list both the `workprentice[bot]` and
+# `app/workprentice` spellings; the Sentinel reads the REST webhook's
+# `user.login`, so the `[bot]` form is the one that matters here.
 #
 # -----------------------------------------------------------------------------
 # MATRIX
@@ -58,10 +69,32 @@
 # from `classify_path()` in
 # `.claude/commands/docs-review/scripts/triage-classify.py` — shared with
 # triage so routing and triage labeling can never disagree about what a file
-# is) crossed with **change type** (`mechanical` — a change too small or
-# mechanical to need a human, e.g. a link fix or frontmatter tweak;
-# `substantive` — everything else) to a required role, or the literal string
-# `none` meaning no human gate for that combination.
+# is) crossed with **change type** (`mechanical` — a change small or
+# mechanical enough to skip the *model* review, e.g. a link fix or
+# frontmatter tweak; `substantive` — everything else) to a required role.
+#
+# **Every cell names a role. `none` is not accepted** — the parser rejects
+# it. Every governed PR therefore resolves to at least one approver team,
+# gets that team requested as a reviewer, and needs a human approval.
+#
+# That is a deliberate reversal. `mechanical: none` used to mean "no human
+# gate", which rested on the Sentinel being the thing that decides
+# mergeability. It isn't: GitHub's required-review rule is, and it does not
+# read this file. So a `none` cell never removed the human — it removed the
+# *reviewer request* and then told the author no human was needed, while the
+# merge box said otherwise and somebody stamped it by hand anyway. Same
+# false assumption as the `auto_approve` rule that used to live at the
+# bottom of this file (deleted; see git history for the autopsy).
+#
+# So `mechanical` no longer means "no human". It means exactly one thing
+# now: **G1 accepts the PR without a model review**, which is a real saving
+# on a typo fix. The approver is unchanged by it, which is why both columns
+# name the same role for every subject today. The dimension stays because
+# G1 and the claims overlay both read it, and because a future lane may want
+# to vary the approver by change type — but if you find yourself reaching
+# for `none` to make a lane quieter, the lever you want is `mechanical`
+# (skip the model) or `not_governed` (skip everything, for a closed set of
+# automated processes), not an unrouted PR.
 #
 # All seven subjects are required keys, closed set: `docs`, `blog`,
 # `website`, `programs`, `infra`, `frontend`, `other`. `frontend` is the
@@ -201,27 +234,34 @@
 # -----------------------------------------------------------------------------
 # NOT GOVERNED
 # -----------------------------------------------------------------------------
-# `not_governed:` (optional) lists the automation lanes the Sentinel does not
-# gate at all: the check concludes `success` with a "Not governed: <reason>"
-# title and no gates evaluated, logged the same way a waive is. Two shapes:
-# `authors` matches on the PR author alone (Dependabot); `author_label_pairs`
-# needs both the author and a label on the PR (pulumi-bot's generated-docs
-# regens all carry `automation/merge`; its content-review and glow-up PRs do
-# not, and those ARE governed). Without this, every regen and dependency
-# bump goes red under enforcement — no review ran, and the approval comes
-# from a Bot — and merges only by admin bypass.
+# `not_governed:` is the ONE exception to "every PR is routed and needs a
+# human approval", and it is deliberately narrow: the long-running automated
+# processes that already merge themselves end to end. The check concludes
+# `success` with a "Not governed: <reason>" title and no gates evaluated,
+# logged the same way a waive is.
 #
-# -----------------------------------------------------------------------------
-# AUTO APPROVE
-# -----------------------------------------------------------------------------
-# `auto_approve:` (optional) lists bot authors whose PRs satisfy the
-# right-approver gate without a human when the review itself found nothing
-# for a human to weigh: the author card says nothing blocks merge AND the
-# reviewer brief's "⚠️ Check these before approving" table is empty AND the
-# PR is not `review:prose-flagged`. Any ⚠️ row routes the PR to the matrix
-# team like everyone else's. This is the deterministic replacement for the
-# scheduled maintainer sweep that used to rubber-stamp the bot lane.
-
+# What makes these safe to exempt is not that they are bots — it is that a
+# real approval and a real merge already exist for them.
+# `auto-approve-for-auto-merge.yml` posts an actual GitHub approval for
+# `pulumi-bot` + `automation/merge`, and the generating workflow arms
+# `gh pr merge --auto --squash`. So the CLI-version bumps, package-schema
+# regens, and ESC schema syncs satisfy the repo's required-review rule for
+# real, and exempting them here just stops the Sentinel from also demanding
+# a review nobody was ever going to run on generated output.
+#
+# Two shapes: `authors` matches on the PR author alone (Dependabot, whose
+# own lane in `label-dependabot.yml` does the same job);
+# `author_label_pairs` needs both the author and a label. The label half is
+# load-bearing — pulumi-bot's generated-docs regens all carry
+# `automation/merge`, while its content-review, glow-up, and broken-link PRs
+# do not, and those ARE governed, routed, and need a human.
+#
+# **Do not add a bot here to make its PRs quieter.** The test for this list
+# is "does something already post a real approval and merge it?" If the
+# answer is no, adding it here produces a PR the Sentinel calls fine that
+# nobody can merge — which is the failure this file spent a release
+# learning about.
+#
 schema: 1
 
 teams: # role -> GitHub team slug (org/<team>)
@@ -230,16 +270,21 @@ teams: # role -> GitHub team slug (org/<team>)
   marketing: pulumi/docs-marketing-review
   tools: pulumi/docs-tools
 
-bots: [pulumi-bot] # machine USER accounts whose approvals never count (type==Bot excluded automatically)
+bots: # machine accounts whose approvals never count toward a required role
+  - pulumi-bot            # type: User — NOT caught by the automatic type==Bot exclusion
+  - workprentice[bot]     # Docs Groundskeeper (Joe Duffy's docs-automation identity)
+  - github-copilot[bot]
+  - eon-pulumi-agent[bot]
+  - dependabot[bot]
 
-matrix: # subject x change type -> role or 'none'
-  docs: { mechanical: none, substantive: docs-guild }
-  blog: { mechanical: none, substantive: blog }
-  website: { mechanical: none, substantive: marketing }
-  programs: { mechanical: none, substantive: docs-guild }
+matrix: # subject x change type -> role (never 'none'; see above)
+  docs: { mechanical: docs-guild, substantive: docs-guild }
+  blog: { mechanical: blog, substantive: blog }
+  website: { mechanical: marketing, substantive: marketing }
+  programs: { mechanical: docs-guild, substantive: docs-guild }
   infra: { mechanical: tools, substantive: tools }
-  frontend: { mechanical: none, substantive: marketing }
-  other: { mechanical: none, substantive: tools }
+  frontend: { mechanical: marketing, substantive: marketing }
+  other: { mechanical: tools, substantive: tools }
 
 staging_evidence:
   paths:
@@ -295,8 +340,6 @@ not_governed:
   authors: ["dependabot[bot]"]
   author_label_pairs:
     - { author: pulumi-bot, label: automation/merge }
-
-auto_approve: { authors: [pulumi-bot] }
 
 # A diff whose every changed line differs only in a link (the redirect
 # sweeps) needs a careful reader, not a particular lane's reader: the

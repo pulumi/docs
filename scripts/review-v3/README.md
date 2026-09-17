@@ -89,7 +89,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 
 | Gate | Green when | Red says |
 |---|---|---|
-| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no review required); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
+| G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
 | G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
@@ -150,7 +150,11 @@ changes nothing produces a byte-identical body and the PATCH is skipped. The
 workflow passes `--status-comment` unconditionally and the evaluator decides:
 enforcing mode always maintains it; report-only mode does so only for a PR
 labelled `sentinel:preview`, so the dry run stays invisible to anyone who
-didn't opt in. External contributors (fork head repo — never the
+didn't opt in. `content-review-article.yml` applies that label to every
+content-review and glow-up PR, making those lanes the canary cohort — the
+same pattern the v3 review comments used before they went repo-wide. A few
+real PRs a day exercise the surface, on the lane whose author is a workflow
+and whose reader is already reading the output. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
@@ -252,25 +256,40 @@ Content-serving `data/` files (docs nav, blog taxonomies, author bios, the
 pricing matrix) classify with the content they serve; the map is
 `CONTENT_DATA_EXACT` in `triage-classify.py`.
 
-Two optional config blocks shape what the Sentinel governs:
+**Every governed PR is routed and needs a human approval.** `none` matrix
+cells are a config error, so `resolve_lanes` always returns at least one
+required role, triage always has a team to request, and G3 always has an
+approver to wait for. `mechanical` skips the *model* review at G1 and
+nothing else.
 
-- `not_governed:` — automation lanes the Sentinel does not gate (`authors:`
-  matches the PR author alone, e.g. Dependabot; `author_label_pairs:` needs
-  both, e.g. pulumi-bot + `automation/merge` for the generated-docs regens).
-  The check concludes `success` titled "Not governed" with no gates evaluated
-  and `governed: false` in the verdict JSON. pulumi-bot's content-review and
-  glow-up PRs carry no such label and are governed like everyone else's.
-- `auto_approve:` — the clean-brief rule. For a listed bot author, G3 is
-  satisfied without a human when the author card's header says nothing
-  blocks merge AND the brief's `### ⚠️ Check these before approving` table
-  has no finding rows (either empty-table sentinel counts; the verdict-free
-  editorial-stances H4 is outside the rule) AND the PR is not
-  `review:prose-flagged`. Any ⚠️ row sends the PR to the matrix team. The
-  verdict JSON carries `auto_approved: true` for the auto-merge job.
+That is a reversal, and the reason is worth keeping: the Sentinel is not the
+gate that decides mergeability. GitHub's required-review rule is, and it
+does not read `review-routing.yml`. So the two shortcuts that used to mean
+"no human" — a `none` cell and the `auto_approve` clean-brief rule — never
+removed the human. They removed the *reviewer request*, told the author
+nobody was needed, and left a PR that read green and could not merge until
+somebody stamped it by hand. Both are deleted; `auto_approve` is a hard
+config error now, and nothing ever consumed the `auto_approved` verdict
+field it set.
+
+One optional config block still shapes what the Sentinel governs:
+
+- `not_governed:` — the automated processes the Sentinel does not gate at
+  all (`authors:` matches the PR author alone, e.g. Dependabot;
+  `author_label_pairs:` needs both, e.g. pulumi-bot + `automation/merge` for
+  the generated-docs regens). The check concludes `success` titled "Not
+  governed" with no gates evaluated and `governed: false` in the verdict
+  JSON. What makes these safe is not that they are bots: it is that
+  `auto-approve-for-auto-merge.yml` posts a real approval for that exact
+  author+label pair and the generating workflow arms `gh pr merge --auto`,
+  so they satisfy the repo's required-review rule for real. pulumi-bot's
+  content-review, glow-up, and broken-link PRs carry no such label and are
+  governed, routed, and need a human — as are `workprentice[bot]`'s,
+  `github-copilot[bot]`'s, and `eon-pulumi-agent[bot]`'s.
 
 `review:prose-flagged` (triage's Haiku + Vale pass on a short-circuited PR)
 demotes a mechanical PR to substantive inside the Sentinel — the bar is pure
-diff shape and cannot see labels — and disqualifies the clean-brief rule.
+diff shape and cannot see labels.
 The bar itself also refuses edition-feature rewrites Layer A cannot see:
 any change under `content/docs/support/faq/` or `content/what-is/`, and any
 added line naming an edition ("the Enterprise edition") or pairing

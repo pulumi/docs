@@ -280,13 +280,21 @@ def test_do_next_cards_press_the_rows_they_name():
 
 
 def test_ownership_chips_read_as_words():
-    tags = [_file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])]
-    q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=tags)], cfg=cfg(me=["docs"]))
+    """`gate:any-team` is the surviving "why is this on my board" gate chip.
+
+    `gate:none` went away with the `none` matrix cell — see
+    test_analyze.test_a_mechanical_change_is_still_routed_to_its_lane.
+    """
+    links = [_file("content/blog/p/index.md",
+                   ["See [the docs](/docs/iac/concepts/stacks/)."],
+                   ["See [the docs](/docs/intro/concepts/stack/)."])]
+    q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=links)], cfg=cfg(me=["docs"]))
     html = render.render_board(q)
-    # the code stays greppable in the title; the chip itself says why the row is here
     # the chip says why the row is here; the tooltip explains, never echoes
-    assert '>no team approval needed</span>' in html
-    assert 'title="The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take. (gate:none)"' in html
+    assert '>any team can approve this</span>' in html
+    assert 'title="Every changed line differs only in a link' in html
+    assert '(gate:any-team)"' in html
+    assert "no team approval needed" not in html
 
 
 def test_a_generated_row_offers_close_where_others_offer_send_back():

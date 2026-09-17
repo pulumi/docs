@@ -87,7 +87,12 @@ def _self_test() -> int:
     pr = {"additions": 1, "deletions": 1, "files": [{"path": "content/docs/foo.md"}]}
     out = route(pr, docs_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
     assert out["mechanical"] is True, out
-    assert out["roles"] == [] and out["teams"] == [], "mechanical docs PR needs no human"
+    # Mechanical skips the MODEL review, not the approver: the lane team is
+    # still requested and still has to approve. This output is what
+    # claude-triage.yml requests reviewers from, so an empty list here meant
+    # nobody was asked to review a typo fix that GitHub still gated.
+    assert out["roles"] == ["docs-guild"], out
+    assert out["teams"] == ["pulumi/docs-guild"], out
     assert out["staging_evidence_required"] is False
 
     infra_pr = {"additions": 3, "deletions": 0, "files": [{"path": ".github/workflows/foo.yml"}]}
