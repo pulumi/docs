@@ -133,4 +133,4 @@ If you’re already building with C# and .NET, you’re 90% of the way there. Wh
 
 - [Try Pulumi Open Source](https://app.pulumi.com/signup)
 - [Get Started with Azure + Pulumi Docs](https://www.pulumi.com/docs/iac/get-started/azure/)
-- [Azure Native: How-to-Guides](/dev/examples/)
+- [Browse the Pulumi examples catalog](/dev/examples/)
