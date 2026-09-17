@@ -1,6 +1,6 @@
 ---
 title_tag: Deployments | Self-Hosting Pulumi
-meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Enterprise edition.
 title: Deployments
 h1: Pulumi Cloud self-hosted Deployments
 menu:
@@ -20,7 +20,7 @@ pulumi_cloud_feature: self-hosting
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
-[Pulumi Deployments](/docs/deployments/concepts/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native workflow runner pool in Pulumi Cloud and installing one or more [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) into your installation's Kubernetes cluster. Besides deployments, customer-managed workflow runners also support [Discovery](/docs/insights/discovery/) scans and [policy evaluations](/docs/insights/policy/).
+[Pulumi Deployments](/docs/deployments/concepts/) is fully supported in Kubernetes-managed self-hosted environments. If you're using Kubernetes to manage your self-hosted Pulumi Cloud installation, you can enable Pulumi Deployments features by configuring a Kubernetes-native workflow runner pool in Pulumi Cloud and installing one or more [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) into your installation's Kubernetes cluster. Besides deployments, customer-managed workflow runners also support [Discovery](/docs/discovery-governance/discovery/) scans and [policy evaluations](/docs/discovery-governance/policy/).
 
 To do so, follow these steps:
 

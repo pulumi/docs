@@ -60,7 +60,7 @@ Classify from the labels — the five state labels are mutually exclusive (`set-
 | `review:in-progress` | Workflow running now | Step 2 (watch) |
 | `review:outstanding-issues` | Review posted, 🚨 > 0 | Step 3 |
 | `review:no-blockers` | Review posted, 🚨 == 0 | Step 3 — ⚠️ and ✏️ items still need dispositions |
-| `review:stale` | Pushed since the review ran | Refresh first (see Step 6), then Step 3 |
+| `review:stale` | Pushed since the review ran (or a run's head moved mid-review and its re-dispatch is pending or capped) | Refresh first (see Step 6), then Step 3 |
 | `review:error` | Workflow failed before publishing | Check the Actions run; `@claude #update-review` to retry |
 | `review:trivial` / `review:frontmatter-only` / `review:oversized` | Full review short-circuited | No pinned comment. If `review:prose-flagged` is also set, triage's advisory comment **is** the worklist — walk it the same way |
 

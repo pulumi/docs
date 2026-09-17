@@ -340,16 +340,23 @@ def _rebuild_detail_block(fid: str, old: list[str], detail: dict) -> list[str]:
     """A retext with `detail` refreshes the finding's Do-this block: the
     verbatim line is kept (the flagged text didn't change), Why/Fix/keep are
     replaced — same shape as the composer scaffold."""
-    verbatim = next((ln for ln in old if ln.startswith("**Line (verbatim):**")), None)
+    # Accept both the bulleted form and the pre-2026-09-11 paragraph form
+    # (cards rendered before the change stay live); always emit bullets.
+    verbatim = next((ln for ln in old if _unbullet(ln).startswith("**Line (verbatim):**")), None)
     out = [f"#### {fid} · Do this", ""]
     if verbatim:
-        out.append(verbatim)
-    out.append(f"**Why:** {str(detail['why']).strip()}")
-    out.append(f"**Fix:** {str(detail['fix']).strip()}")
+        out.append(f"- {_unbullet(verbatim)}")
+    out.append(f"- **Why:** {str(detail['why']).strip()}")
+    out.append(f"- **Fix:** {str(detail['fix']).strip()}")
     keep = str(detail.get("keep", "")).strip()
     if keep:
-        out += ["", f"**If you'd rather keep it:** {keep}"]
+        out.append(f"- **If you'd rather keep it:** {keep}")
     return out
+
+
+def _unbullet(line: str) -> str:
+    """`- **Why:** …` → `**Why:** …`; a non-bulleted line is returned as-is."""
+    return line[2:] if line.startswith("- ") else line
 
 
 def apply(

@@ -142,7 +142,7 @@ sections:
     description: |
       Stop building compliance policies from scratch. Deploy expert-authored policy packs that map directly to industry standards and audit requirements.
     cta_text: Explore the Policy Packs
-    cta_link: /docs/insights/policy/get-started/
+    cta_link: /docs/discovery-governance/policy/get-started/
     anchor: frameworks
 
   - type: logo_banner
@@ -198,15 +198,15 @@ sections:
         description: |
           Get instant visibility into all your cloud resources. Add governance policies and AI-powered remediation to maintain compliance automatically.
         cta_primary_text: Get Started with Discovery
-        cta_primary_link: /docs/insights/discovery/get-started/
+        cta_primary_link: /docs/discovery-governance/discovery/get-started/
         cta_text: Book a Demo
         cta_link: /request-a-demo/
       - title: Enforce compliance with policy as code
         description: |
           Deploy pre-built compliance packs for CIS, NIST, HITRUST, and PCI DSS, or write custom policies in TypeScript and Python.
         cta_primary_text: Get Started with Policies
-        cta_primary_link: /docs/insights/policy/get-started/
+        cta_primary_link: /docs/discovery-governance/policy/get-started/
         cta_text: Learn More
-        cta_link: /docs/insights/policy/
+        cta_link: /docs/discovery-governance/policy/
     anchor: get-started
 ---

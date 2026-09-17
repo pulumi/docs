@@ -1,15 +1,15 @@
 ---
-title: What is DevOps?
-meta_desc: DevOps combines software development and IT operations to ship faster and more reliably. Learn lifecycle, CI/CD, automation, testing, and security.
+title: What is DevOps? Definition, Practices & Lifecycle
+meta_desc: DevOps unifies dev and IT ops to ship faster with less risk. See DORA-benchmarked practices, plus how infrastructure as code and platform engineering fit in.
 type: what-is
 date: 2023-12-06T09:35:53-08:00
 page_title: "What is DevOps?"
 authors: ["james-denyer"]
 ---
 
-**DevOps is a set of practices, cultural philosophies, and tools that combines software development (Dev) and IT operations (Ops) so teams can deliver applications and services faster, more reliably, and at greater scale than traditional siloed processes allow.** DevOps teams automate the full software delivery lifecycle (plan, code, build, test, release, deploy, operate, monitor) and apply the same engineering discipline to infrastructure that they already apply to application code.
+**DevOps is a set of practices and cultural principles that unify software development (Dev) and IT operations (Ops) into one continuous cycle, replacing siloed handoffs with shared ownership of planning, building, testing, releasing, and running software.** Teams automate that lifecycle end to end and manage infrastructure with the same engineering discipline they already apply to application code.
 
-The point is to dissolve the wall between the people who write software and the people who run it in production. Instead of throwing a release "over the fence" from Dev to Ops, DevOps teams share ownership of the entire lifecycle, automate the slow manual steps that used to live between them, and use [infrastructure as code](/what-is/what-is-infrastructure-as-code/) so the platform that runs the app evolves through the same pull-request workflow as the app itself. Tools like [Pulumi](/) make that workable in practice by treating infrastructure as software written in TypeScript, Python, Go, C#, Java, or YAML, then shipping it through your existing CI/CD pipelines.
+The point is to dissolve the wall between the people who write software and the people who run it in production. Instead of throwing a release "over the fence" from Dev to Ops, DevOps teams share ownership of the entire lifecycle, automate the slow manual steps that used to live between them, and use [infrastructure as code](/what-is/what-is-infrastructure-as-code/) so the platform that runs the app evolves through the same pull-request workflow as the app itself. Tools like [Pulumi](/) make that workable in practice by treating infrastructure as software written in TypeScript, Python, Go, .NET, Java, YAML, or HCL, then shipping it through your existing CI/CD pipelines.
 
 In this article, we'll cover the key questions about DevOps:
 
@@ -18,8 +18,10 @@ In this article, we'll cover the key questions about DevOps:
 * What is the DevOps lifecycle?
 * What are the core principles of DevOps (CALMS)?
 * What are the key DevOps practices?
+* How does infrastructure as code fit into DevOps?
 * What are the benefits of DevOps?
 * How is DevOps different from Agile, SRE, DevSecOps, and platform engineering?
+* Where does platform engineering fit as DevOps matures?
 * What are the most popular DevOps tools?
 * How do I adopt DevOps?
 * Frequently asked questions about DevOps
@@ -28,13 +30,15 @@ In this article, we'll cover the key questions about DevOps:
 
 For most companies, software is now the product, and the pace it has to change at has outgrown the way most organizations were built to deliver it. DevOps addresses three pressures every engineering org is under.
 
+> "CTOs, CIOs, and engineering leaders tell us that the pace of innovation is faster than ever. To succeed, developers must move fast – without breaking things." — Joe Duffy, co-founder and CEO of [Pulumi](https://info.pulumi.com/press-release/announcing-pulumi-idp)
+
 ### Delivery speed has become a competitive requirement
 
-Customers expect new features, fixes, and security patches in days, not quarters. DORA's "State of DevOps" research has consistently shown the highest-performing engineering teams deploying on demand (often multiple times per day) and keeping change-failure rates inside the 0–15% Elite band, while teams at the other end of the curve release once a month and spend days recovering from a bad change. That gap shows up in the business: faster teams ship more, learn more, and respond to the market more quickly.
+Customers expect new features, fixes, and security patches in days, not quarters. [DORA's 2024 Accelerate State of DevOps Report](https://dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf) puts a number on the gap: elite performers (19% of respondents) deploy on demand, multiple times a day, with a 5% change failure rate and under an hour to recover from a failed deployment, while low performers (25% of respondents) deploy between once a month and once every six months, fail 40% of changes, and take between a week and a month to recover. That gap shows up in the business: faster teams ship more, learn more, and respond to the market more quickly.
 
 ### Cloud infrastructure changes constantly
 
-A modern stack isn't a couple of VMs and a database. It's hundreds or thousands of cloud resources (containers, serverless functions, managed databases, queues, networks, secrets, IAM policies) spread across multiple clouds and SaaS providers. That infrastructure changes daily or hourly. Managing it by hand through cloud consoles doesn't scale; it has to be automated, versioned, and reviewed like code.
+A modern stack isn't a couple of VMs and a database. It's hundreds or thousands of cloud resources (containers, serverless functions, managed databases, queues, networks, secrets, IAM policies) spread across multiple clouds and SaaS providers. [CNCF's 2025 Cloud Native research](https://www.cncf.io/announcements/2025/04/01/cncf-research-reveals-how-cloud-native-technology-is-reshaping-global-business-and-innovation/) found 80% of organizations now running Kubernetes in production and 60% using CI/CD for most or all applications. At that rate of change, managing infrastructure by hand through cloud consoles doesn't scale; it has to be automated, versioned, and reviewed like code.
 
 ### Reliability and security can't be bolted on at the end
 
@@ -106,9 +110,15 @@ These are the concrete engineering practices that turn the CALMS pillars into da
 * **[Configuration management](/what-is/what-is-configuration-management/) and secrets.** Keep environment-specific configuration and secrets out of code, and manage them centrally with auditing, rotation, and least-privilege access. [Pulumi ESC](/product/secrets-management/) provides hierarchical configuration and dynamic secrets across environments.
 * **Automated testing.** Beyond unit tests, DevOps teams run integration tests, [infrastructure tests](/docs/iac/guides/testing/), security tests (SAST, DAST, dependency scanning), and load tests in CI so regressions are caught before deploy.
 * **Microservices and containers.** Splitting applications into independently deployable services, packaged in containers and orchestrated by Kubernetes, frees teams from waiting on each other. The tradeoff is needing strong automation to manage the resulting complexity.
-* **Policy as code.** Encode security, compliance, and cost rules as code that runs against every change. [Pulumi Policies](/docs/insights/policy/) can be written in the same language as your infrastructure and enforced in CI.
+* **Policy as code.** Encode security, compliance, and cost rules as code that runs against every change. [Pulumi Policies](/docs/discovery-governance/policy/) can be written in the same language as your infrastructure and enforced in CI.
 * **Observability.** Metrics, structured logs, distributed traces, and SLOs make production behavior legible. When something breaks, you can see what changed and roll it back instead of guessing.
 * **Continuous feedback.** User analytics, error budgets, and incident reviews flow back into planning so the next iteration is shaped by what actually happened in production.
+
+## How does infrastructure as code fit into DevOps?
+
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is the substrate DevOps runs on. DevOps asks teams to treat the whole delivery lifecycle, application and infrastructure alike, as one reviewable, testable, automatable system; IaC is what makes the infrastructure half of that possible. Without it, "automate everything" stops at the application boundary, and the environment an app actually runs in stays a manually clicked-together artifact that nobody can diff, test, or roll back.
+
+With IaC in place, a change to a database's backup policy, a Kubernetes cluster's node pool, or a service's IAM permissions goes through the same pull request, review, and CI pipeline as a code change. That closes the biggest historical gap between Dev and Ops: application and infrastructure changes now share one audit trail, one rollback mechanism, and one definition of "done." [Pulumi](/) extends this further by letting teams write infrastructure in the same general-purpose languages (TypeScript, Python, Go, C#, Java) as the application itself, so a platform team's tests, linters, and code review standards apply to infrastructure without a separate toolchain. See [infrastructure as code for DevOps](/what-is/infrastructure-as-code-for-devops/) for a deeper look at how the two disciplines combine.
 
 ## What are the benefits of DevOps?
 
@@ -135,6 +145,12 @@ DevOps overlaps with several adjacent practices, and people often use the terms 
 
 A useful way to keep them straight: Agile is about how the software gets built, DevOps is about how it gets delivered and run, SRE is a specific operating model for the running part, DevSecOps is the security-first variant of the whole picture, and platform engineering is the organizational pattern for offering it as a service inside the company.
 
+## Where does platform engineering fit as DevOps matures?
+
+Early DevOps adoption asks every product team to own its own pipelines, cloud accounts, and on-call rotation. That works at small scale, but it doesn't hold as an organization grows: dozens of teams each maintaining their own CI/CD setup and infrastructure code duplicate effort and drift apart in quality and security posture. [Platform engineering](/what-is/what-is-platform-engineering/) is what most organizations reach for next.
+
+A platform team takes the DevOps practices described above (IaC, CI/CD, policy as code, observability) and packages them into a self-service [internal developer platform (IDP)](/what-is/what-is-an-internal-developer-platform/) that other teams consume through templates, golden paths, and APIs instead of rebuilding from scratch. Product teams keep the autonomy DevOps promised, deploying and operating their own services, while the platform team absorbs the toolchain maintenance and enforces guardrails like policy as code and secrets management centrally. Pulumi supports this transition directly: reusable [components](/docs/iac/concepts/components/) and [templates](/docs/iac/guides/building-extending/creating-templates/) let a platform team publish infrastructure building blocks that other engineers consume in whatever language they already write in, rather than learning a platform-specific DSL.
+
 ## What are the most popular DevOps tools?
 
 There is no single "DevOps tool." A real DevOps toolchain stitches together a tool from each of these categories.
@@ -147,7 +163,7 @@ There is no single "DevOps tool." A real DevOps toolchain stitches together a to
 | Configuration management | Ansible, Chef, Puppet, SaltStack |
 | Containers and orchestration | Docker, Podman, Kubernetes, Amazon ECS |
 | Secrets and config | [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
+| Policy as code | [Pulumi Policies](/docs/discovery-governance/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Observability | Prometheus, Grafana, Datadog, New Relic, Honeycomb, OpenTelemetry |
 | Incident management | PagerDuty, Opsgenie, FireHydrant, Rootly |
 | Collaboration / ChatOps | Slack, Microsoft Teams, GitHub Discussions |

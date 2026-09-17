@@ -19,7 +19,7 @@ function validPayload(): Record<string, unknown> {
         email: "jane@example.com",
         name: "Jane Doe",
         organization: "example-corp",
-        priority: "normal",
+        priority: "Normal",
         subject: "Stack update stuck in progress",
         description: "Running `pulumi up` hangs after the preview completes. Expected the update to apply.",
     };
@@ -30,7 +30,7 @@ test("accepts a fully valid payload", () => {
     assert.ok(result.ok);
     if (result.ok) {
         assert.strictEqual(result.value.email, "jane@example.com");
-        assert.strictEqual(result.value.priority, "normal");
+        assert.strictEqual(result.value.priority, "Normal");
     }
 });
 
@@ -89,6 +89,20 @@ test("blames an over-long organization on its length, not its characters", () =>
     }
     // The bound itself is LIMITS.organization, so a name exactly at it passes.
     assert.ok(validateSubmission({ ...validPayload(), organization: "a".repeat(LIMITS.organization) }).ok);
+});
+
+test("canonicalizes the casing of an accepted priority", () => {
+    // The ids were lowercase before they were capitalized to match Intercom's
+    // "Priority" list, and ?priority=urgent links under the old casing are
+    // still in the wild. They must post successfully and arrive at Intercom
+    // spelled the way Intercom expects.
+    for (const [sent, stored] of [["urgent", "Urgent"], ["NORMAL", "Normal"], ["Urgent", "Urgent"]]) {
+        const result = validateSubmission({ ...validPayload(), priority: sent });
+        assert.ok(result.ok, `expected ${sent} to be accepted`);
+        if (result.ok) {
+            assert.strictEqual(result.value.priority, stored);
+        }
+    }
 });
 
 test("rejects priorities outside the closed set", () => {

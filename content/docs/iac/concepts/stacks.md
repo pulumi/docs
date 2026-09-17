@@ -160,7 +160,7 @@ Keys that include an explicit namespace other than the project name (such as `aw
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
 {{% notes type="info" %}}
-Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun).
+Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/functions/runtime.isDryRun.html).
 {{% /notes %}}
 
 ## Update a stack
@@ -1030,12 +1030,8 @@ exist in the referenced stack.
 
 {{< /chooser >}}
 
-`getOutputDetails` is useful when you need direct access to a resolved output value.
-This is most helpful when you want to inspect whether a value is marked as a secret, or when
-you need to use the value in your program logic without calling `Output.apply()`. The method
-returns an `OutputDetails` object whose `value` field holds the raw value for non-secret
-outputs, and whose `secretValue` field holds the raw value for outputs the referenced stack
-has marked as secret.
+The `getOutputDetails` method, described above, bypasses the `Output` wrapper so you can use
+the value directly in your program logic without calling `Output.apply()`.
 
 As an example, suppose your referenced stack exports a database hostname as a plain string:
 
@@ -1061,7 +1057,7 @@ export = async () => {
 }
 ```
 
-See [Javascript Entrypoint](/docs/languages-sdks/javascript/#entrypoint)
+See [JavaScript program entrypoint](/docs/iac/languages-sdks/javascript/#program-entrypoint)
 for more information.
 
 {{% /choosable %}}

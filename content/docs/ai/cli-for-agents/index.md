@@ -56,7 +56,7 @@ pulumi stack output --json
 
 ## Verifiable by design: preview every change
 
-Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that shows exactly what will be created, updated, or deleted before anything happens. That plan-then-apply model matters for agents: a change can be inspected (by the agent, by a human, or by a [policy](/docs/insights/policy/)) and confirmed before it lands, rather than discovered after the fact. An agent can run `pulumi preview --json`, reason about the diff, and only then run `pulumi up`.
+Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that shows exactly what will be created, updated, or deleted before anything happens. That plan-then-apply model matters for agents: a change can be inspected (by the agent, by a human, or by a [policy](/docs/discovery-governance/policy/)) and confirmed before it lands, rather than discovered after the fact. An agent can run `pulumi preview --json`, reason about the diff, and only then run `pulumi up`.
 
 ## Zero-friction accounts
 

@@ -85,7 +85,7 @@ The **Environment permissions** dropdown sets the access level that members on t
 
 #### Account permissions
 
-The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/insights/):
+The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/discovery-governance/):
 
 - **None** — Members have no default access to accounts.
 - **Read** — Members can view accounts, their scan configurations, and scan results.
@@ -107,7 +107,7 @@ This group includes a single capability toggle:
 {{< pulumi-cloud "custom-roles" />}}
 
 {{% notes type="info" %}}
-Pulumi Enterprise allows up to 25 custom roles; Pulumi Business Critical allows unlimited custom roles.
+The Pro edition allows up to 25 custom roles; the Enterprise edition allows unlimited custom roles.
 
 The baseline permissions for members who have not been given an explicit custom role are configured in [Organization-wide role settings](#organization-wide-role-settings).
 {{% /notes %}}

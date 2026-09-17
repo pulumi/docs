@@ -36,7 +36,7 @@ Output (uploaded to the ledger bucket's `findings/` prefix, beside `ledger/`
 and `claims/`):
 
     {"schema_version": 2, "slug": ..., "path": ..., "reviewed_at": ...,
-     "commit": ..., "verdict": "fixed|clean|skipped|glowup",
+     "commit": ..., "verdict": "fixed|clean|glowup",
      "counts": {"total": N, "applied": N, "deferred": N, "superseded": N},
      "findings": [{"id": "f3", "label": ..., "source": ..., "detail": ...,
                    "category": ..., "line_range": ..., "fix_candidate": bool,
@@ -457,6 +457,16 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
         warn("queue has no article; nothing to record")
         return None
     art = articles[0]
+    if (verdict or {}).get("verdict") == "skipped":
+        # The workflow's open-PR pre-check: a previous run owns this page's
+        # PR, nothing was reviewed, no artifacts were computed, and the record
+        # built from that is an empty stub. One replaced elb.md's 12 KB
+        # fix-lane record on 2026-09-08 when the glow-up lane lost a same-day
+        # race to the fix lane. The previous record stands, as it does for an
+        # unknown glow-up disposition below.
+        log("verdict is skipped (a previous run owns this page's PR); leaving "
+            "the previous findings record standing")
+        return None
     cpb = _compose()
     findings, _errors = cpb.collect(
         artifacts.get("verified"), artifacts.get("vale"),
@@ -619,6 +629,12 @@ def self_test() -> int:
     # function stopped making. Writing the all-False record that falls out of
     # that would re-bank the work the glow-up just did, so it takes the same
     # exit as a sentinel carrying no lists at all.
+    # The open-PR pre-check skip computes no artifacts; a record built from it
+    # is an empty stub that replaced elb.md's fix-lane record on 2026-09-08.
+    check("a skipped verdict writes nothing (the previous record stands)",
+          build({"articles": [{"slug": "docs-x", "path": "content/docs/x.md"}]},
+                {"verdict": "skipped", "reason": "open PR already exists"},
+                {}, Path(".")) is None)
     check("a missing backlog skips the write rather than guessing by position",
           mark_from_backlog(F, {"verdict": "glowup",
                                 "executed_ids": ["findings-f2"]}, None) is None)

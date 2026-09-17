@@ -325,10 +325,14 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
     """
     if not isinstance(hugo_artifact, dict):
         return []
-    if hugo_artifact.get("skipped"):
-        return []
     out: list[dict] = []
-    for entry in hugo_artifact.get("errors", []) or []:
+    # `skipped` means the Hugo render didn't run (content-only PR), so there
+    # are no build errors to stub. `link_integrity` is still read: since
+    # link-check-diff.py the workflow appends deterministic dead-internal-link
+    # entries to it on every PR, skipped or not (#21560 quoted a dead link
+    # inside another finding and never flagged it).
+    hugo_errors = [] if hugo_artifact.get("skipped") else (hugo_artifact.get("errors", []) or [])
+    for entry in hugo_errors:
         if not isinstance(entry, str) or not entry.strip():
             continue
         file, anchor = _hugo_extract_file_line(entry)
@@ -586,7 +590,7 @@ def render_header(timestamp: str, head_sha: str = "") -> str:
     `pull_request: synchronize` event, so the `review:stale` label can miss a
     push entirely (PR #20556 closed wearing `review:no-blockers` while the
     pinned review described content a later conflict-resolution commit had
-    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    replaced). Label-independent consumers (`/pr-review`'s collect.py, the
     review-label-reconcile workflow) compare this SHA against the PR head —
     an exact check, immune to suppressed webhooks. The re-entrant update path
     must refresh it alongside the `Last updated` timestamp (see
@@ -1892,16 +1896,21 @@ def render_detail_scaffold(fid: str) -> list[str]:
     the flagged line quoted verbatim exactly once, replacement text in a
     fenced block (GitHub gives it a copy button). Model-added `F?` rows get
     NO block (ids are not assigned yet); their cell stays terse instead.
+
+    The three labelled lines are a bulleted list (2026-09-11: the paragraph
+    form read as a wall of text). Readers that key on the labels accept
+    both the bulleted and the older unbulleted form, because cards
+    rendered before this change stay live until their PR closes.
     """
     return [
         f"#### {fid} · Do this",
         "",
-        "**Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
+        "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
         "appears in the file — the only quote of it on this card; never a paraphrase>",
-        "**Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
-        "**Fix:** <TODO: exactly ONE required action, stated first; put any "
-        "replacement text in a fenced block; label an alternative "
-        "\"**If you'd rather keep it:**\" — never two competing imperatives>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
+        "replacement text in a fenced block at column 0 after this list; label an alternative "
+        "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
     ]
 
 
@@ -2007,6 +2016,14 @@ def _review_state_block(high_water: int) -> str:
     state["high_water"] = high_water
     return mod.serialize_block(state)
 
+
+# The brief's reviewer-check section heading and the author card's
+# "nothing blocks" header verb are read back by the Sentinel's clean-brief
+# rule (scripts/review-v3/sentinel.py) — named here so the writer and the
+# reader can't drift apart.
+CHECKS_HEADING = "### ⚠️ Check these before approving"
+AUTHOR_HEADER_PREFIX = "## Author action guide v"
+AUTHOR_HEADER_NOTHING_BLOCKS = "nothing blocks merge"
 
 _V3_EMPTY_OUTSTANDING = "_Nothing to fix — this section is empty._"
 _V3_EMPTY_QUESTIONS = "_No open questions for you._"
@@ -2195,7 +2212,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         noun = "item blocks" if n_blocking == 1 else "items block"
         header_verb = f"{n_blocking} {noun} merge"
     else:
-        header_verb = "nothing blocks merge"
+        header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
     orient = render_author_orient(n_blocking)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
@@ -2207,7 +2224,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
-        f"## Author action guide v{rev} — {header_verb}",
+        f"{AUTHOR_HEADER_PREFIX}{rev} — {header_verb}",
         "",
         *orient,
         "",
@@ -2261,6 +2278,24 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if hugo and not hugo.get("skipped"):
         n_hugo = len(hugo.get("errors") or []) + len(hugo.get("link_integrity") or [])
         mech_bits.append("Hugo build green" if n_hugo == 0 else f"Hugo build: {n_hugo} error(s) — see 🚨")
+    link_check = hugo.get("link_check") if isinstance(hugo, dict) else None
+    if isinstance(link_check, dict):
+        # The deterministic dead-internal-link check (link-check-diff.py).
+        # An unrun check is named as such rather than left to look clean.
+        if not link_check.get("ran"):
+            mech_bits.append("internal-link check did not run — dead links NOT verified")
+        else:
+            n_checked = int(link_check.get("checked") or 0)
+            n_dead = int(link_check.get("dead") or 0)
+            n_unknown = int(link_check.get("unknown") or 0)
+            if n_checked == 0:
+                mech_bits.append("no internal links added")
+            elif n_dead == 0:
+                mech_bits.append(f"{n_checked} added internal link(s) resolve")
+            else:
+                mech_bits.append(f"{n_dead} of {n_checked} added internal link(s) dead — see 🚨")
+            if n_unknown:
+                mech_bits.append(f"{n_unknown} added internal link(s) could not be verified against production")
     if detector_count:
         mech_bits.append(f"{detector_count} detector finding(s) filed above")
     if not mech_bits:
@@ -2307,7 +2342,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
             "> <TODO: one sentence — what specific kind of wrongness would block a reader's success — then one sentence naming which investigative passes ran>.",
             1),
         "",
-        "### ⚠️ Check these before approving",
+        CHECKS_HEADING,
         "",
     ]
     stance_block = render_stances(prep["candidate_stances"])
@@ -2405,7 +2440,7 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     for line_needed in ("### 🚨 Fix or disagree", "### ❓ Questions for you"):
         if line_needed not in author_draft:
             problems.append(f"author draft missing section {line_needed}")
-    if "### ⚠️ Check these before approving" not in brief_draft:
+    if CHECKS_HEADING not in brief_draft:
         problems.append("brief draft missing ⚠️ section")
     if "<!-- REVIEW_STATE" not in author_draft:
         problems.append("author draft missing REVIEW_STATE block")

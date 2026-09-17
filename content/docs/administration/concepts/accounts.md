@@ -30,7 +30,7 @@ When you sign up for Pulumi Cloud, Pulumi creates an _individual organization_ f
 
 Because stacks are addressed as `<organization>/<project>/<stack>`, your individual organization's name is the first segment of any stack you create outside a shared organization. Your username is therefore part of your stack names — see [Renaming your account](#renaming-your-account) if you need to change it.
 
-An individual organization is always on the Individual edition, and that cannot be changed. It covers a single user, so there is nothing to upgrade in place: to work with other people, [create an organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial of the paid editions. See [pricing](/pricing/) for what each edition includes.
+An individual organization is always on the Free edition, and that cannot be changed. It covers a single user, so there is nothing to upgrade in place: to work with other people, [create an organization](/docs/administration/concepts/organizations/#creating-an-organization), which starts a free trial of the paid editions. See [pricing](/pricing/) for what each edition includes.
 
 {{% notes type="info" %}}
 Users provisioned and managed by an organization — through [SCIM](/docs/administration/guides/scim/) or a [SAML identity provider](/docs/administration/guides/saml/) — do not get an individual organization. Their account exists only within the organizations that manage it, so the sections below that concern an individual organization do not apply to them.
@@ -43,7 +43,7 @@ An account comes into existence in one of several ways:
 - **Someone signs up.** A person creates their own account at [app.pulumi.com](https://app.pulumi.com/signup) using any of the identities listed under [Signing in](#signing-in). This is the common case, and it is the only path that creates an individual organization.
 - **An organization invites them.** An organization admin [invites a member](/docs/administration/concepts/organizations/#inviting-members-to-an-organization) by email address or invite link. The invitee still completes signup themselves; the invitation grants membership once they do.
 - **A SAML identity provider provisions them.** When an organization is backed by SAML SSO, a user who signs in through the identity provider for the first time gets an account created for them. Your organization admin configures this, not you.
-- **SCIM provisions them.** An organization on the Business Critical edition can [sync users and groups from its identity provider](/docs/administration/guides/scim/). SCIM creates accounts ahead of first login and deactivates them when the user is removed upstream.
+- **SCIM provisions them.** An organization on the Enterprise edition can [sync users and groups from its identity provider](/docs/administration/guides/scim/). SCIM creates accounts ahead of first login and deactivates them when the user is removed upstream.
 - **An AI agent creates one.** The Pulumi CLI can provision an ephemeral [agent account](/docs/administration/concepts/agent-accounts/) when it detects it is running in an agent context with no credentials. A person claims it later to take ownership.
 
 ## Account identity
@@ -186,6 +186,8 @@ You can register as many passkeys as you want. One per device is common, as is o
 To use one, select the passkey option on the sign-in page. If your browser supports passkey autofill, the email field also offers your registered passkeys as suggestions.
 
 Registering a passkey does not disable any other way of signing in. Your password, if you have one, keeps working, so losing every registered passkey does not lock you out of your account.
+
+An [organization-managed user](/docs/administration/concepts/org-managed-users/) can't register a passkey, because single sign-on through the managing organization is the account's only authentication method. Migrating an account to organization-managed revokes every passkey registered on it, and a passkey registered before the migration can no longer sign you in. The organization's [SAML admin](/docs/administration/guides/saml/saml-admin/) is the exception: they keep an alternative authentication method while they hold the role, so they can register a new passkey after the migration.
 
 {{% notes type="info" %}}
 A passkey sign-in does not prompt for a one-time password, even when you have [MFA](#setting-up-mfa) enrolled. Pulumi Cloud requires user verification, a biometric or a PIN, on every passkey ceremony, so the passkey already proves both possession of the device and the factor that unlocks it. Signing in with your password still prompts for your second factor.

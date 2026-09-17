@@ -4,7 +4,8 @@
 One blocking check-run answers "is this PR mergeable?" from four gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
-                        required: mechanical PRs, external contributions)
+                        required: mechanical PRs, fork PRs; a trivial PR
+                        may stand on triage's prose-check comment)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
   G3 right-approver     a human member of every matrix-required team approved
@@ -12,6 +13,14 @@ One blocking check-run answers "is this PR mergeable?" from four gates:
                         commit status at the current head SHA
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `sentinel:oversized-ack` in the approving review body
+
+Two config-driven shortcuts sit around the gates (both in
+`.github/review-routing.yml`): `not_governed` lanes (Dependabot, the
+generated-docs regens) conclude success with no gates evaluated, and the
+`auto_approve` clean-brief rule lets a listed bot author pass G3 without a
+human when the author card says nothing blocks and the brief's ⚠️ table is
+empty. `review:prose-flagged` demotes a mechanical PR to substantive and
+disqualifies the clean-brief rule.
 
 Everything here is a pure function of GitHub API state plus the base-ref
 routing config: NO model, NO AWS, and — because the workflow runs on
@@ -29,6 +38,20 @@ report-only mode, where the real verdict rides inside the summary.
 banner naming the waiving actor — except gate G4, which has no waiver (the
 proposal's "no waiver, no shortcut" for infra; the incident path when
 staging itself is broken is an admin-bypass merge, which rulesets log).
+
+"External contribution" means the head repo is a fork (or a deleted
+fork) — never the author's permission level: a GitHub App such as
+workprentice answers `none` on the collaborator endpoint yet pushes
+same-repo branches that get the full review, and treating those as
+external skipped G1/G2 on every one of them (2026-09-12 → 09-14). A PR
+whose head-repo fact can't be read is internal (the stricter gates).
+
+`review:trivial` short-circuits the review lane, and `review:prose-flagged`
+(triage's Haiku/Vale pass) demotes the PR from mechanical — so without a
+stand-in G1 would stay red forever on a PR nothing will ever review. The
+stand-in is triage's own `<!-- TRIAGE_PROSE -->` comment: with it present
+G1/G2 pass (advisory nits only, nothing to answer) and G3 still wants the
+human approver the demotion asked for.
 
 I/O lives behind the `Gh` wrapper (subprocess `gh api`, the
 resolve-handler.py pattern) so tests substitute a stub. Team-membership
@@ -76,9 +99,19 @@ LEGACY_MARKER_RE = re.compile(r"<!-- CLAUDE_REVIEW 1/\d+ -->")
 HISTORY_SHA_RE = re.compile(r"\(([0-9a-f]{7,40})\)")
 STRIP_OPEN = "<!-- SENTINEL_STRIP -->"
 STRIP_CLOSE = "<!-- /SENTINEL_STRIP -->"
+STATUS_MARKER = "<!-- SENTINEL_STATUS -->"
 STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
+# The workflow `/deploy-staging` dispatches, and the one G4 verifies against
+# directly when the commit status is missing. See `_staging_evidence`.
+STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
 OVERSIZED_ACK = "sentinel:oversized-ack"
-BREAK_GLASS = "override: any write-access human can apply `review:waived` (logged)"
+# Opt-in preview of the pinned status comment while the Sentinel is still
+# report-only. Enforcing mode maintains the comment unconditionally.
+PREVIEW_LABEL = "sentinel:preview"
+BREAK_GLASS = (
+    "override: a member of a routing team (`.github/review-routing.yml` `teams:`) "
+    "can apply `review:waived` (logged)"
+)
 
 CHECK_NAME = "Sentinel"
 
@@ -103,8 +136,21 @@ class Gh:
             env = dict(os.environ)
             env["GH_TOKEN"] = os.environ[token_env]
         result = subprocess.run(
-            ["gh", *args], text=True, capture_output=True, check=True, env=env,
+            ["gh", *args], text=True, capture_output=True, env=env,
         )
+        if result.returncode != 0:
+            # `check=True` would raise CalledProcessError, whose message is
+            # the argv and an exit code — gh's actual explanation goes in
+            # stderr, which that exception never prints. The permission bug
+            # on PR #21642 cost a log dive and a guess for exactly this
+            # reason: gh had said what was wrong and the traceback dropped
+            # it. Keep the endpoint (the useful half of the argv) and the
+            # stderr; drop the body, which is kilobytes of rendered markdown.
+            endpoint = next((a for a in args if "/" in a and not a.startswith("-")), " ".join(args[:2]))
+            raise SentinelDataError(
+                f"gh {args[0]} {endpoint} failed (exit {result.returncode}): "
+                f"{(result.stderr or '').strip()[:400] or '<no stderr>'}"
+            )
         return result.stdout
 
     def get_pr(self) -> dict:
@@ -126,16 +172,6 @@ class Gh:
         out = self._run(["api", "--paginate", f"repos/{self.repo}/commits/{sha}/statuses"])
         return json.loads(out)
 
-    def get_permission(self, actor: str) -> str:
-        """Collaborator permission. Failure raises SentinelDataError."""
-        try:
-            out = self._run(
-                ["api", f"repos/{self.repo}/collaborators/{actor}/permission", "--jq", ".permission"]
-            )
-        except subprocess.CalledProcessError as exc:
-            raise SentinelDataError(f"permission lookup failed for {actor}: {exc.stderr.strip()[:200]}") from exc
-        return out.strip()
-
     def get_team_membership(self, org: str, team_slug: str, user: str) -> str:
         """Returns 'active', 'pending', or 'none'.
 
@@ -149,12 +185,17 @@ class Gh:
                 token_env="GH_TOKEN_TEAM_READ",
             )
             return out.strip() or "none"
-        except subprocess.CalledProcessError as exc:
-            stderr = (exc.stderr or "").strip()
-            if "HTTP 404" in stderr or "Not Found" in stderr:
+        except SentinelDataError as exc:
+            # A clean 404 is the ordinary "not a member" answer and must stay
+            # a plain `none` — anything else is a real lookup failure and
+            # keeps erroring, so G3 reports action_required rather than
+            # lying red. `_run` now carries gh's stderr in the message, so
+            # this matches on that text rather than on a CalledProcessError
+            # attribute.
+            if "HTTP 404" in str(exc) or "Not Found" in str(exc):
                 return "none"
             raise SentinelDataError(
-                f"team membership lookup failed ({org}/{team_slug}/{user}): {stderr[:200]}"
+                f"team membership lookup failed ({org}/{team_slug}/{user}): {exc}"
             ) from exc
 
     def get_label_events(self) -> list[dict]:
@@ -163,9 +204,29 @@ class Gh:
         )
         return [e for e in json.loads(out) if e.get("event") == "labeled"]
 
+    def get_workflow_runs(self, workflow_file: str, head_sha: str) -> list[dict]:
+        """Completed runs of one workflow at an EXACT head SHA.
+
+        Server-side filtered on `head_sha`, so this is a handful of rows at
+        most and needs no pagination. Not `--paginate`: the runs endpoint
+        returns an object, and merging those is a different shape.
+        """
+        out = self._run([
+            "api",
+            f"repos/{self.repo}/actions/workflows/{workflow_file}/runs"
+            f"?head_sha={head_sha}&status=completed&per_page=100",
+        ])
+        return json.loads(out).get("workflow_runs") or []
+
     def patch_issue_comment(self, comment_id, body: str) -> None:
         self._run(
             ["api", "--method", "PATCH", f"repos/{self.repo}/issues/comments/{comment_id}",
+             "-f", f"body={body}"]
+        )
+
+    def post_issue_comment(self, body: str) -> None:
+        self._run(
+            ["api", "--method", "POST", f"repos/{self.repo}/issues/{self.pr}/comments",
              "-f", f"body={body}"]
         )
 
@@ -189,6 +250,17 @@ class Verdict:
     gates: list[Gate] = field(default_factory=list)
     would_be: str | None = None
     blocking_ids: list[str] = field(default_factory=list)
+    # Facts a downstream auto-merge job keys on, so it never has to re-derive
+    # them from the summary text: did the tightened bar call this PR
+    # mechanical; is the PR governed at all (False = a not_governed lane, no
+    # gates evaluated); did the clean-brief rule satisfy G3 without a human.
+    mechanical: bool = False
+    governed: bool = True
+    auto_approved: bool = False
+    # `sentinel:preview` is on the PR: maintain the pinned status comment even
+    # in report-only mode. Set on every return path so main() can read it
+    # without a second API call.
+    preview: bool = False
 
     def to_json(self) -> dict:
         return {
@@ -199,6 +271,10 @@ class Verdict:
             "would_be": self.would_be,
             "gates": [{"gate": g.name, "status": g.status, "message": g.message} for g in self.gates],
             "blocking_ids": self.blocking_ids,
+            "mechanical": self.mechanical,
+            "governed": self.governed,
+            "auto_approved": self.auto_approved,
+            "preview": self.preview,
         }
 
 
@@ -262,12 +338,55 @@ def _strip_brief_for_summary(body: str) -> str:
     return "\n".join(lines).strip()
 
 
-def _mechanical_and_claims(pr_detail: dict, files: list[dict]) -> tuple[bool, bool, list[str]]:
+PROSE_FLAGGED_LABEL = "review:prose-flagged"
+TRIVIAL_LABEL = "review:trivial"
+TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
+TRIAGE_BOT_LOGIN = "github-actions[bot]"
+
+
+def _is_external(pr_detail: dict) -> bool:
+    """A fork PR (head repo ≠ base repo, or a deleted fork) is external.
+
+    Fail closed: if the payload doesn't carry the head-repo fact at all, the
+    PR is internal and the stricter gates apply. Permission is deliberately
+    not consulted — see the module docstring.
+    """
+    head = pr_detail.get("head") or {}
+    if "repo" not in head:
+        return False
+    head_repo = head.get("repo")
+    if head_repo is None:
+        return True  # deleted fork: GitHub nulls head.repo
+    head_name = (head_repo.get("full_name") or "").lower()
+    base_name = (((pr_detail.get("base") or {}).get("repo") or {}).get("full_name") or "").lower()
+    if not head_name or not base_name:
+        return False
+    return head_name != base_name
+
+
+def _find_triage_prose_comment(comments: list[dict]) -> dict | None:
+    """Triage's `<!-- TRIAGE_PROSE -->` comment (github-actions[bot]), if any."""
+    for c in comments:
+        body = (c.get("body") or "").lstrip()
+        login = (c.get("user") or {}).get("login") or ""
+        if body.startswith(TRIAGE_PROSE_MARKER) and login == TRIAGE_BOT_LOGIN:
+            return c
+    return None
+
+
+def _mechanical_and_claims(
+    pr_detail: dict, files: list[dict], labels: set[str] | frozenset[str] = frozenset()
+) -> tuple[bool, bool, list[str]]:
     """Run the tightened bar over the reconstructed diff. Fail-closed.
 
     The claims-overlay signal for routing is derived from the bar's own
     reason strings (pricing-sensitive path or a Layer-A prose hit) rather
     than a second classification pass — one classifier, one vocabulary.
+
+    `review:prose-flagged` demotes: triage's prose check (Haiku + Vale) ran
+    on a short-circuited PR and found something, so the diff's shape alone
+    no longer vouches for it. The bar is pure diff shape and cannot see the
+    label, so the demotion lives here, where the labels are in hand.
     """
     try:
         diff_text = _replay.build_pr_diff(files)
@@ -280,14 +399,180 @@ def _mechanical_and_claims(pr_detail: dict, files: list[dict]) -> tuple[bool, bo
         # changes; an ordinary Layer-A prose hit already makes the PR
         # substantive via the bar and routes to the subject's own approver.
         claims = any("pricing-sensitive" in r for r in reasons)
+        if ok and PROSE_FLAGGED_LABEL in labels:
+            ok = False
+            reasons = [f"`{PROSE_FLAGGED_LABEL}`: triage's prose check flagged this PR (demoted to substantive)"]
         return ok, claims, reasons
     except Exception as exc:  # noqa: BLE001 — fail closed, never crash the gate
         return False, False, [f"classifier error (treated as substantive): {exc}"]
 
 
+def _author_card_nothing_blocks(body: str) -> bool:
+    """Does the author card's header say nothing blocks merge?
+
+    Reads the composer's own header line (`## Author action guide vN — …`)
+    rather than re-counting rows, so the card and the gate agree by
+    construction. Legacy/foreign headers (no such line) are never clean.
+    """
+    for line in body.splitlines():
+        if line.startswith(_compose.AUTHOR_HEADER_PREFIX):
+            return _compose.AUTHOR_HEADER_NOTHING_BLOCKS in line
+    return False
+
+
+def _brief_has_no_checks(body: str) -> bool:
+    """Is the brief's ⚠️ reviewer-check table empty of finding rows?
+
+    Both empty-table sentinels the composer can emit (plain, and the
+    "editorial stances below still need a human eye" variant) count as
+    empty: neither is a finding row. The verdict-free stances H4 under the
+    table is deliberately outside this rule — see review-routing.yml
+    AUTO APPROVE.
+    """
+    heading_prefix = _compose.CHECKS_HEADING[len("### "):]
+    return not _card_rows(body, (heading_prefix,))
+
+
+# ---- link-only diffs -----------------------------------------------------
+
+# A markdown link (text and target), an href, a bare URL, or a site-absolute
+# path. Masking these leaves the sentence around them.
+URL_TOKEN_RE = re.compile(
+    r"\[[^\]\n]*\]\([^)\s]*\)|href=\"[^\"]*\"|https?://[^\s)\"'>]+|(?<![\w/])/[\w./-]*[\w/](?=[\s)\"'>]|$)"
+)
+_HUNK_HEAD_RE = re.compile(r"^@@ ")
+
+
+def link_only_diff(files: list[dict]) -> bool:
+    """True when every hunk swaps lines that are identical once links are
+    masked and case is folded: the same sentence, only the link changed.
+
+    A hunk with unpaired additions or deletions, a file with no patch, or a
+    diff that changes nothing is not link-only. This is deliberately narrower
+    than `classify_mechanical`'s bar, which counts any modified link as
+    substantive: that bar decides whether a change needs a human at all,
+    while this one decides whether it needs a *particular lane's* human.
+    Shared with the /pr-review queue, which renders it as `shape:link-only`.
+    """
+    if not files:
+        return False
+    seen = False
+    for f in files:
+        patch = f.get("patch")
+        if patch is None:
+            return False
+        added: list[str] = []
+        removed: list[str] = []
+
+        def flush() -> bool:
+            nonlocal seen
+            if len(added) != len(removed):
+                return False
+            for plus, minus in zip(added, removed):
+                if plus == minus:
+                    return False
+                if URL_TOKEN_RE.sub("<url>", plus).lower() != URL_TOKEN_RE.sub("<url>", minus).lower():
+                    return False
+                seen = True
+            added.clear()
+            removed.clear()
+            return True
+
+        for line in patch.splitlines():
+            if _HUNK_HEAD_RE.match(line):
+                if not flush():
+                    return False
+            elif line.startswith("+"):
+                added.append(line[1:])
+            elif line.startswith("-"):
+                removed.append(line[1:])
+        if not flush():
+            return False
+    return seen
+
+
 def _team_org_slug(team_ref: str) -> tuple[str, str]:
     org, _, slug = team_ref.partition("/")
     return org, slug
+
+
+def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
+    """Has this exact head been deployed to staging successfully, ever?
+
+    Two independent witnesses, either of which is sufficient:
+
+      1. the `staging/pulumi-test-io` commit status, written by whichever
+         lane ran the deploy;
+      2. a completed, successful run of the staging workflow itself whose
+         head SHA is this one.
+
+    (2) exists because (1) is a *report* of the deploy, not the deploy: the
+    status write is a separate API call after `gh run watch` returns, and a
+    cancelled runner, a lost token or a hand-run deploy that never went
+    through `/deploy-staging` all leave a green deploy with no status. The
+    run record is the deploy. Checking the status first keeps the common
+    path to one API call.
+
+    A failed run-history read is swallowed deliberately: it degrades to "no
+    evidence found", which blocks the merge. Raising instead would turn an
+    API hiccup into `action_required` on a PR that simply hasn't deployed
+    yet — louder, and wrong about which of the two states it is in.
+
+    Returns a human-readable witness, or None when there is no evidence.
+    """
+    for s in gh.get_commit_statuses(head_sha):
+        if s.get("context") == STAGING_STATUS_CONTEXT and s.get("state") == "success":
+            return f"staging status green at `{head_sha[:9]}`"
+    try:
+        runs = gh.get_workflow_runs(STAGING_WORKFLOW_FILE, head_sha)
+    except Exception:  # noqa: BLE001 — see docstring: degrade to "no evidence"
+        return None
+    for r in runs:
+        if r.get("conclusion") == "success":
+            return (
+                f"staging deploy [run {r.get('id')}]({r.get('html_url')}) succeeded "
+                f"at `{head_sha[:9]}`"
+            )
+    return None
+
+
+def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool, str]:
+    """Is the waive label present AND applied by someone entitled to apply it?
+
+    The label alone is not the waive. A waive skips every gate but G4, so
+    the authority to apply one has to be at least the authority to approve
+    something: the actor must be an ACTIVE member of a team named in
+    `teams:` — any of them, not just the one this PR routes to. Scoping it
+    to the required team would make a waive exactly as hard to get as the
+    approval it bypasses, which defeats the one case it most needs to
+    cover (the required approver is the PR's own author).
+
+    Fails closed at every step. The actor can't be read, the membership
+    lookup throws, the actor is on no routing team — all of those are "not
+    waived", and the returned reason is surfaced so an unauthorized waive
+    is visibly refused rather than silently ignored.
+
+    Returns (waived, note) — note is '' when there is no label at all.
+    """
+    if config.waive.get("label", "review:waived") not in labels:
+        return False, ""
+    actor = _waive_actor(gh)
+    if actor == "unknown":
+        return False, "could not read who applied the waive label — not honored"
+    for team_ref in sorted(set(config.teams.values())):
+        org, slug = _team_org_slug(team_ref)
+        try:
+            if gh.get_team_membership(org, slug, actor) == "active":
+                return True, actor
+        except SentinelDataError:
+            return False, (
+                f"could not verify whether @{actor} may waive (team lookup "
+                "failed) — not honored"
+            )
+    return False, (
+        f"@{actor} is not an active member of any routing team "
+        "(`.github/review-routing.yml` `teams:`) — waive not honored"
+    )
 
 
 # ---- Evaluation ---------------------------------------------------------
@@ -303,30 +588,48 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         return Verdict(
             conclusion="neutral", title="Draft — not evaluated",
             summary="Draft PRs are not gated; the sentinel evaluates on ready-for-review.",
-            head_sha=head_sha,
+            head_sha=head_sha, preview=PREVIEW_LABEL in labels,
         )
+
+    # Automation lanes the Sentinel does not govern (Dependabot, the
+    # generated-docs regens): success with the reason on record, no gates
+    # evaluated. Logged like a waive so the digest can count them.
+    ng_reason = routing.not_governed_reason(config, author, labels)
+    if ng_reason:
+        verdict = Verdict(
+            conclusion="success", title="Not governed",
+            summary=(f"**Not governed** — {ng_reason} (`.github/review-routing.yml` "
+                     "`not_governed`). This automation lane merges on its own checks; "
+                     "the Sentinel evaluates no gates for it."),
+            head_sha=head_sha, governed=False, preview=PREVIEW_LABEL in labels,
+        )
+        if report_only:
+            verdict.would_be = verdict.conclusion
+            verdict.summary = f"**REPORT-ONLY — would be: `{verdict.conclusion}`**\n\n" + verdict.summary
+            verdict.title = f"Report-only (would be: {verdict.conclusion})"
+            verdict.conclusion = "neutral"
+        return verdict
 
     files = gh.list_files()
     comments = gh.list_issue_comments()
     reviews = gh.list_reviews()
 
-    mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files)
+    mechanical, claims, mech_reasons = _mechanical_and_claims(pr, files, labels)
     paths = [f["filename"] for f in files]
-    resolution = routing.resolve_lanes(paths, mechanical, claims, config)
+    resolution = routing.resolve_lanes(paths, mechanical, claims, config, link_only=link_only_diff(files))
 
-    # External-contributor lane: fail closed — an API failure means the
-    # stricter (internal) gates apply.
-    external = False
-    try:
-        external = gh.get_permission(author) not in ("admin", "write", "maintain")
-    except SentinelDataError:
-        external = False
+    # External-contributor lane = fork head repo. Fail closed: no head-repo
+    # fact in the payload means the stricter (internal) gates apply.
+    external = _is_external(pr)
     skip_gates = set((config.external_contributors or {}).get("skip_gates") or []) if external else set()
 
     author_card = _find_comment(comments, AUTHOR_MARKER)
     brief = _find_comment(comments, BRIEF_MARKER)
     legacy = _find_legacy_comment(comments) if author_card is None else None
     oversized = "review:oversized" in labels
+    trivial = TRIVIAL_LABEL in labels
+    triage_prose = _find_triage_prose_comment(comments) if trivial else None
+    trivial_standin = False  # set when triage's prose comment satisfies G1
 
     gates: list[Gate] = []
     blocking_ids: list[str] = []
@@ -348,6 +651,27 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate(
             "G1 review-ran", "ok",
             "legacy (v2) review current at head (grandfathered)",
+        ))
+    elif trivial and triage_prose is not None and author_card is None and legacy is None:
+        # The review lane skipped this PR as trivial; prose-flagged (or a
+        # classifier disagreement) keeps it out of the mechanical lane. Triage
+        # posted the prose nits it found — that comment is the review. Only
+        # for a PR that never got a review: a card or legacy comment at any
+        # head keeps the PR on the review track (a stale card with open
+        # findings must not pass on the trivial label).
+        trivial_standin = True
+        gates.append(Gate(
+            "G1 review-ran", "ok",
+            "trivial change — triage's prose check stands in for the review "
+            "(advisory nits in the triage comment)",
+        ))
+    elif trivial and author_card is None and legacy is None:
+        gates.append(Gate(
+            "G1 review-ran", "red",
+            f"No current review for `{head_sha[:9]}` — the review lane skipped this "
+            "PR as `review:trivial`, and triage's prose-check comment is missing. "
+            "Comment `@claude #new-review` to run a full review, or a maintainer "
+            "removes `review:trivial` and pushes.",
         ))
     else:
         gates.append(Gate(
@@ -408,6 +732,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
+    elif trivial_standin:
+        gates.append(Gate("G2 findings-answered", "ok", "trivial — no findings to answer"))
     else:
         gates.append(Gate("G2 findings-answered", "skip", "no review present — see G1"))
 
@@ -426,13 +752,39 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         and (r.get("user") or {}).get("type") != "Bot"
         and (r.get("user") or {}).get("login") not in set(config.bots or [])
     ]
+    # The clean-brief rule: a listed bot author whose review found nothing
+    # for a human to weigh needs no human. "Nothing to weigh" is read off
+    # the two cards the composer wrote — the author card's header and the
+    # brief's ⚠️ table — never re-derived here. A prose flag from triage
+    # disqualifies (that IS something for a human to weigh).
+    auto_approved = False
+    if (
+        resolution.roles
+        and routing.auto_approve_author(config, author)
+        and author_card is not None and brief is not None
+        and _author_card_nothing_blocks(author_card.get("body") or "")
+        and _brief_has_no_checks(brief.get("body") or "")
+        and PROSE_FLAGGED_LABEL not in labels
+    ):
+        auto_approved = True
+
     if not resolution.roles:
         gates.append(Gate("G3 right-approver", "ok", "no human approval required (mechanical)"))
+    elif auto_approved:
+        gates.append(Gate(
+            "G3 right-approver", "ok",
+            "No human gate: bot author, nothing blocks, brief has no reviewer checks",
+        ))
     else:
         missing: list[str] = []
         errors: list[str] = []
-        for role in sorted(resolution.roles):
-            team_ref = config.teams.get(role, "")
+        # A link-only sweep needs a careful human, not a particular lane's
+        # human, so `link_only.approval: any-team` lets any review team
+        # satisfy the gate. The roles stay on the record either way.
+        required = ([config.teams[r] for r in sorted(config.teams)] if resolution.any_team
+                    else [config.teams.get(role, "") for role in sorted(resolution.roles)])
+        satisfied_any = False
+        for team_ref in required:
             org, slug = _team_org_slug(team_ref)
             satisfied = False
             for r in approvers:
@@ -443,8 +795,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                         break
                 except SentinelDataError as exc:
                     errors.append(str(exc))
-            if not satisfied and not errors:
+            if satisfied:
+                satisfied_any = True
+            elif not errors:
                 missing.append(team_ref)
+        if resolution.any_team:
+            # One team is enough; only an empty set is a miss.
+            missing = [] if satisfied_any else ["any review team (link-only sweep)"]
         if errors:
             gates.append(Gate(
                 "G3 right-approver", "error",
@@ -462,18 +819,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
 
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
-        statuses = gh.get_commit_statuses(head_sha)
-        green = any(
-            s.get("context") == STAGING_STATUS_CONTEXT and s.get("state") == "success"
-            for s in statuses
-        )
-        if green:
-            gates.append(Gate("G4 infra-evidence", "ok", f"staging deploy green at `{head_sha[:9]}`"))
+        witness = _staging_evidence(gh, head_sha)
+        if witness:
+            gates.append(Gate("G4 infra-evidence", "ok", witness))
         else:
             gates.append(Gate(
                 "G4 infra-evidence", "red",
-                f"Infra change: no green staging deploy at `{head_sha[:9]}` — a "
-                "tools-team member comments `/deploy-staging`. (Not waivable.)",
+                f"Infra change: no successful staging deploy at `{head_sha[:9]}`. "
+                "One is dispatched automatically when an infra PR opens or pushes "
+                "(`staging-deploy-auto.yml`); if it never ran or it failed, a "
+                "tools-team member can comment `/deploy-staging` to retry. "
+                "(Not waivable.)",
             ))
     else:
         gates.append(Gate("G4 infra-evidence", "skip", "no infra paths"))
@@ -493,7 +849,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         gates.append(Gate("G5 oversized-ack", "skip", "not oversized"))
 
     # ---- Conclusion -----------------------------------------------------
-    waived = "review:waived" in labels
+    waived, waive_note = _waive_state(gh, config, labels)
     any_error = any(g.status == "error" for g in gates)
     reds = [g for g in gates if g.status == "red"]
     infra_red = any(g.name.startswith("G4") and g.status == "red" for g in gates)
@@ -518,11 +874,17 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     # ---- Summary --------------------------------------------------------
     parts: list[str] = []
     if waived:
-        actor = _waive_actor(gh)
-        parts.append(f"## ⚠️ WAIVED by @{actor}\n\nMerge gates bypassed via `review:waived` "
+        parts.append(f"## ⚠️ WAIVED by @{waive_note}\n\nMerge gates bypassed via `review:waived` "
                      "(logged). The table below shows what the verdict would have been.")
         if infra_red:
             parts.append("**Infra staging evidence is NOT waivable** — gate G4 stands red.")
+    elif waive_note:
+        # The label is on the PR but didn't authorize. Say so loudly: a
+        # refused waive that reads as "nothing happened" invites a second
+        # one from the same person.
+        parts.append(
+            f"## ⚠️ `review:waived` NOT honored\n\n{waive_note}. The gates below stand."
+        )
     if brief:
         parts.append(_strip_brief_for_summary(brief.get("body") or ""))
     if external:
@@ -532,6 +894,16 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         )
     if mechanical:
         parts.append("_Classified mechanical under the tightened bar — no human review required._")
+    if trivial_standin:
+        parts.append(
+            "_Trivial change: triage's prose-check comment stands in for the review; "
+            "a human approver is still required._"
+        )
+    if auto_approved:
+        parts.append(
+            "_Auto-approved: bot author, nothing blocks merge, and the brief has no "
+            "reviewer checks — no human gate (`auto_approve` in review-routing.yml)._"
+        )
     table = ["| Gate | Status | Detail |", "|---|---|---|"]
     icon = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
     for g in gates:
@@ -543,6 +915,8 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     verdict = Verdict(
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
+        mechanical=mechanical, auto_approved=auto_approved,
+        preview=PREVIEW_LABEL in labels,
     )
 
     if report_only:
@@ -600,6 +974,97 @@ def update_strip(gh: Gh, verdict: Verdict, comments: list[dict] | None = None) -
     return False
 
 
+# ---- Pinned status comment ----------------------------------------------
+
+# What each gate wants, in the author's words, when it is already satisfied
+# or doesn't apply. A red gate speaks for itself — its own message carries
+# the remediation — so only the quiet states need a phrasebook here.
+_GATE_BLURB = {
+    "ok": "Nothing to do.",
+    "skip": "Doesn't apply to this PR.",
+    "error": "Couldn't be evaluated — re-run the Sentinel check.",
+}
+
+_STATUS_ICON = {"ok": "✅", "red": "🔴", "error": "🟠", "skip": "➖"}
+
+
+def render_status_comment(verdict: Verdict) -> str:
+    """The pinned 'where this PR stands' comment.
+
+    Deliberately free of timestamps and run ids: the body is a pure
+    function of the verdict, so a re-evaluation that changes nothing
+    produces a byte-identical body and `update_status_comment` skips the
+    PATCH. A comment that edits itself on every push is the notification
+    noise v3 exists to remove.
+    """
+    lines = [STATUS_MARKER, "## Sentinel — merge gate status", ""]
+
+    if verdict.would_be:
+        lines += [
+            f"> [!NOTE]",
+            f"> **Report-only.** The Sentinel is not blocking merges yet; this is "
+            f"what it *would* conclude: `{verdict.would_be}`.",
+            "",
+        ]
+
+    if not verdict.governed:
+        lines += [verdict.summary.split("\n\n")[0], ""]
+        return "\n".join(lines).rstrip() + "\n"
+
+    if not verdict.gates:
+        lines += [verdict.summary.split("\n\n")[0], ""]
+        return "\n".join(lines).rstrip() + "\n"
+
+    blocking = [g for g in verdict.gates if g.status in ("red", "error")]
+    if blocking:
+        lines += [
+            f"**{len(blocking)} of {len(verdict.gates)} gates need attention "
+            f"before this can merge.**",
+            "",
+        ]
+    else:
+        lines += ["**All gates green — nothing is blocking this merge.**", ""]
+
+    lines += ["| | Gate | What it needs |", "|---|---|---|"]
+    for g in verdict.gates:
+        need = g.message if g.status in ("red", "error") else _GATE_BLURB[g.status]
+        # One cell, one line: a literal newline would break the row.
+        need = " ".join(need.split())
+        lines.append(f"| {_STATUS_ICON[g.status]} | **{g.name}** | {need} |")
+    lines.append("")
+
+    if any(g.status == "red" and not g.name.startswith("G4") for g in blocking):
+        # Not BREAK_GLASS verbatim — that string is written to follow a gate
+        # message ("… — override: a member of …") and reads as a doubled
+        # "override:" when it opens a sentence of its own.
+        lines += [
+            "_Break glass: a member of a routing team "
+            "(`.github/review-routing.yml` `teams:`) can apply `review:waived`, "
+            "which is logged._",
+            "",
+        ]
+    if any(g.name.startswith("G4") and g.status == "red" for g in verdict.gates):
+        lines += ["_Infra staging evidence has no waiver._", ""]
+
+    lines += [f"<sub>Evaluated at head `{verdict.head_sha[:9]}`.</sub>"]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def update_status_comment(gh: Gh, verdict: Verdict,
+                          comments: list[dict] | None = None) -> bool:
+    """Upsert the pinned status comment. Idempotent; returns True on write."""
+    comments = comments if comments is not None else gh.list_issue_comments()
+    body = render_status_comment(verdict)
+    existing = _find_comment(comments, STATUS_MARKER)
+    if existing is None:
+        gh.post_issue_comment(body)
+        return True
+    if (existing.get("body") or "").strip() == body.strip():
+        return False
+    gh.patch_issue_comment(existing["id"], body)
+    return True
+
+
 # ---- CLI ----------------------------------------------------------------
 
 
@@ -610,6 +1075,11 @@ def main() -> int:
     parser.add_argument("--config", default=str(_REPO_ROOT / ".github" / "review-routing.yml"))
     parser.add_argument("--report-only", action="store_true")
     parser.add_argument("--update-strip", action="store_true")
+    parser.add_argument(
+        "--status-comment", action="store_true",
+        help="Maintain the pinned gate-status comment. Enforcing mode always "
+             f"does; in report-only mode only a PR labelled `{PREVIEW_LABEL}` does.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
@@ -627,6 +1097,10 @@ def main() -> int:
     verdict = evaluate(gh, config, report_only=args.report_only)
     if args.update_strip and not args.report_only and not args.dry_run:
         update_strip(gh, verdict)
+    # Enforcing: always. Report-only: only where someone opted the PR in, so
+    # the dry run stays invisible to everyone who didn't ask to see it.
+    if args.status_comment and not args.dry_run and (not args.report_only or verdict.preview):
+        update_status_comment(gh, verdict)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 

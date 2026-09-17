@@ -98,6 +98,12 @@
       - organization-
       - retrial-
       - service-
+    events:
+      # A subscription change, which sits with the other organization-level
+      # settings. Listed exactly rather than by prefix because it is the only
+      # event using the abbreviated `org-` spelling; every other organization
+      # event spells it out. Add an `org-` prefix here if more of them appear.
+      - org-downgraded-to-free
 
 - id: teams
   name: Teams

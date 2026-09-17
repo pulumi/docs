@@ -28,7 +28,6 @@ import "./pricing-calculator";
 import "./extend-trial";
 import "./support-form";
 import "./developer-advocates";
-import "./toc";
 import "./docs-main";
 import "./docs-theme";
 import "./redirects";

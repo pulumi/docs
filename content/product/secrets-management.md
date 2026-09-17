@@ -107,7 +107,7 @@ sections:
     highlight_first_card: true
     columns:
       - title: Start managing secrets today
-        description: Experience enterprise-grade secrets management with Pulumi Cloud's free tier.
+        description: Experience enterprise-grade secrets management with Pulumi Cloud's Free edition.
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo

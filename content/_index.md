@@ -36,6 +36,10 @@ sections:
         link: /case-studies/
       - name: supabase
         link: /case-studies/
+      - name: typesafe-ai
+        link: /case-studies/
+      - name: pydantic
+        link: /case-studies/
       - name: ae-networks
         link: /case-studies/
       - name: deloitte
@@ -102,7 +106,7 @@ sections:
       - image: /images/home/languages-card-image.svg
         image_alt: Programming language logos
         title: Use your language of choice
-        description: Build infrastructure with modern languages like TypeScript, Python, Go, C#, and more — or config languages like YAML and HCL.
+        description: Build infrastructure with modern languages like TypeScript, Python, Go, .NET, and more — or config languages like YAML and HCL.
       - image: /images/home/secure-card-image.svg
         image_alt: Security shield illustration
         title: Keep it secure at every step

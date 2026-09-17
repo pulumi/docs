@@ -70,6 +70,21 @@
       {{/* Case studies get Article schema */}}
       {{ $entity = partial "schema/collectors/article-entity.html" . }}
 
+    {{ else if and (eq .Kind "term") (eq .Data.Singular "author") }}
+      {{/* Author archive term pages (/blog/author/{slug}/) get a Person (or
+           Organization, for a house byline) main entity, built by the same
+           schema/utils/author-entities.html logic every blog post already
+           uses for its byline, so the person's entity data can never drift
+           between the two. That partial only reads global site data
+           (site.Data.team.team, site.GetPage) plus .Params.authors off the
+           context it's given, so a synthetic one-slug context is enough to
+           reuse it verbatim rather than forking a second copy of its field
+           list here. */}}
+      {{ $authorEntities := partial "schema/utils/author-entities.html" (dict "Params" (dict "authors" (slice .Data.Term))) }}
+      {{ if gt (len $authorEntities) 0 }}
+        {{ $entity = merge (index $authorEntities 0) (dict "@id" "#main-content") }}
+      {{ end }}
+
     {{ else if .IsHome }}
       {{/* Homepage doesn't have a main content entity, handled separately in graph-builder */}}
       {{ $entity = dict }}

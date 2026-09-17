@@ -202,6 +202,15 @@ test("prefills text inputs from the query string", () => {
     assert.strictEqual(h.control("email").value, "a@b.co");
 });
 
+test("matches a query-string priority against the options case-insensitively", () => {
+    // The priority ids were lowercase before they were capitalized to match
+    // Intercom's list, so links already in the wild spell them the old way. The
+    // option's own value is what gets selected, not the string from the URL --
+    // assigning the URL's casing would silently blank the <select>.
+    const h = mount({ url: `${PAGE_URL}?priority=LOW`, extraPriorities: ["Low"] });
+    assert.strictEqual(h.control("priority").value, "Low");
+});
+
 test("ignores a query-string priority that is not a rendered option", () => {
     const h = mount({ url: `${PAGE_URL}?priority=bogus&subject=FromUrl` });
     // Left on the default rather than blanked — assigning an unmatched value to

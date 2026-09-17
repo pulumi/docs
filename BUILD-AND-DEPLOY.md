@@ -569,6 +569,17 @@ Creates S3 bucket, syncs content, and validates deployment.
    www-{environment}-pulumi-docs-origin-{build-id}
    ```
 
+   For deploy-path builds (`update`; i.e. pushes to `master` and the scheduled/manual
+   rebuilds in `build-and-deploy.yml`), `{build-id}` also carries a short per-run token, so
+   two runs at the same commit -- most commonly a scheduled rebuild with no intervening
+   push -- never compute the same bucket name. Without that, a name collision hits the
+   swallowed `BucketAlreadyOwnedByYou` error a few lines down and the script proceeds to
+   sync in place against a bucket that may already be serving the live site. PR preview
+   builds (`preview`) intentionally keep the deterministic, non-uniquified name, since
+   `build-site.sh` bakes it into the preview site's absolute `HUGO_BASEURL` at build time
+   and the same PR needs to keep reusing that bucket across pushes. See `deploy_bucket_name()`
+   and `build_identifier()` in `scripts/common.sh` for the exact logic.
+
 2. **Configures bucket**:
    - Website hosting (index.html, 404.html)
    - Public access (ACL enabled)
@@ -1401,6 +1412,24 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Why It Matters:** Keeps private documentation fork synchronized with public repository.
 
+#### warm-build-cache.yml
+
+**Purpose:** Populate the shared Hugo image cache and meta-image cache from the default branch on downstream mirrors
+
+**Triggers:**
+
+- Every 6 hours
+- Manual: `workflow_dispatch`
+
+**Target:** Only runs on private fork repositories (not pulumi/docs)
+
+**Jobs:**
+
+- Check out `master`, restore the `meta-images-*` and `hugo-resources-*` caches, run `make ensure` + `make build`, and let `actions/cache` save the result
+- No deploy, no cloud credentials
+
+**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled, so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
+
 ### Social Media Automation
 
 #### schedule-social.yml
@@ -1557,8 +1586,14 @@ www-{environment}-pulumi-docs-origin-{identifier}
 
 Examples:
 
-- Production: `www-production-pulumi-docs-origin-a1b2c3d4`
-- Testing: `www-testing-pulumi-docs-origin-pr-123-abc1234`
+- Production push/schedule/manual (deploy path, includes a per-run uniquifier so same-commit
+  reruns never collide): `www-production-pulumi-docs-origin-push-a1b2c3d4-k3f9j2`,
+  `www-production-pulumi-docs-origin-schedule-a1b2c3d4-k3f9j2`,
+  `www-production-pulumi-docs-origin-dispatch-a1b2c3d4-k3f9j2`. The event segment is a short
+  alias from `deploy_event_alias()` in `scripts/common.sh` (`workflow_dispatch` → `dispatch`),
+  so the name always fits S3's 63-character limit without trimming anything.
+- Testing PR preview (deterministic, no uniquifier -- see `sync-and-test-bucket.sh`):
+  `www-testing-pulumi-docs-origin-pr-123-abc1234`
 
 **Configuration:**
 

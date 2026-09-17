@@ -300,9 +300,9 @@ reference:
     weight: 8
 
 # -------------------------------------
-# Insights Policy Menu Section Headers
+# Policies Menu Section Headers (Discovery & governance)
 # -------------------------------------
-insights:
+discovery-governance:
   - name: Integrations
     parent: insights-policy
     identifier: integrations
