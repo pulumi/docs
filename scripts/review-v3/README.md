@@ -163,12 +163,26 @@ records the weekly digest reduces). **Before flipping the switch, create the
 `review:author-stalled` label** (`.github/labels-pr-review.md` has the
 `gh label create` line) — the sweep applies it on the first author warn.
 
-`staging-deploy-pr.yml` makes G4's evidence: `/deploy-staging` (tools-team
-members only, same-repo branches only) dispatches the existing testing
-deploy at the PR head branch and records the outcome as the
-`staging/pulumi-test-io` commit status at the deployed SHA. Deploys queue on
-the shared staging stack; a superseded request gets a comment saying to
-re-run.
+Two lanes make G4's evidence, and a third records it.
+`staging-deploy-auto.yml` dispatches a deploy for every infra PR on
+open/push; `/deploy-staging` (`staging-deploy-pr.yml`, tools-team members
+only, same-repo branches only) is the retry. Both dispatch the existing
+testing deploy at the PR head branch and write the *pending*
+`staging/pulumi-test-io` status at the deployed SHA. Deploys queue on the
+shared staging stack in the comment lane; a superseded request gets a
+comment saying to re-run.
+
+`staging-status.yml` writes the *terminal* status — one writer, a
+`workflow_run` listener on "Build and deploy testing" — and then pokes the
+Sentinel so G4 is re-scored against the finished deploy. It lives outside
+the dispatched run on purpose: a `workflow_dispatch` executes the workflow
+file from the ref it is dispatched at, so the in-run job this replaces
+silently did not exist for a PR branch cut before it merged (#21676). **The
+rule: anything that must work for a PR branch of any age belongs in a
+default-branch-triggered workflow** — `workflow_run`, `schedule`,
+`pull_request_target`, or a dispatch pinned to the default ref. Its
+`workflow_dispatch` entry (`run_id`, optional `pr_number`) backfills a
+status for a deploy that already finished.
 
 ## Superseded handoffs
 
