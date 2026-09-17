@@ -545,7 +545,7 @@ def test_a_card_adds_only_what_no_row_carries():
     assert "out += ' --stamp ' + stamps.join(',') + (force ? ' --force' : '');" in html
     # the cards settle before the command is drawn, on every click, and the
     # copy button re-reads before it copies
-    assert "function settle(){ syncCards(); compose(); progress(); }" in html
+    assert "function settle(){ syncCards(); compose(); composeHand(); progress(); }" in html
     assert html.count("settle();") >= 4 and "compose();   // what goes to the clipboard" in html
     # progress counts a lit decision on any row and every row with one to make
     assert "return r.querySelector('button.btn[data-kind=\"decision\"]');" in html
@@ -625,8 +625,11 @@ def test_the_composer_reads_the_lit_buttons():
         stampable(15, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/q/index.md", ["z"], ["p"])]),    # route
         stampable(16, head_sha="f" * 40, files=[_file("content/docs/d.md", ["x"], ["o"])]),                      # blocked: refresh
         stampable(17, labels=["review:error", "domain:docs"], files=[_file("content/docs/e.md", ["x"], ["o"])]),  # blocked: rerun
+        stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                  files=[_file("content/docs/f.md", ["x"], ["o"])]),                                             # blocked: close + a hand fix
     ], cfg=cfg(me=["docs"]))
-    prs = {"stamp": [11, 12], "judge": 13, "route": [14, 15], "refresh": 16, "rerun": 17, "team": "@pulumi/docs-marketing-review"}
+    prs = {"stamp": [11, 12], "judge": 13, "route": [14, 15], "refresh": 16, "rerun": 17, "handfix": 18,
+           "team": "@pulumi/docs-marketing-review"}
     with tempfile.TemporaryDirectory() as td:
         board = Path(td) / "board.html"
         board.write_text(render.render_board(q))
@@ -741,3 +744,56 @@ def test_a_fenced_block_in_a_finding_renders_as_pre():
     html = render.render_board(q)
     assert "<pre>{{&lt; notes type=&quot;info&quot; &gt;}}</pre>" in html
     assert "``<code>" not in html and "<code>markdown" not in html and "<code>&lt;div&gt;</code>" in html
+
+
+def test_rows_are_in_pr_number_order_inside_their_group():
+    """Verdict is already on the row, in the tally, on a filter chip and in
+    the Do-next cards. Sorting the rows by it too meant finding #21598 on the
+    page required knowing its verdict first; a number is the one thing about
+    a row you always already have."""
+    q = run([stampable(31, title="Page 31", files=[_file("content/docs/p31.md", ["x"])]),
+             stampable(12, title="Conflicted", mergeable_state="dirty", files=[_file("content/docs/p12.md", ["x"])]),
+             stampable(27, title="Page 27", files=[_file("content/docs/p27.md", ["x"])]),
+             stampable(5, title="Errored", labels=["review:error", "domain:docs"], files=[_file("content/docs/p5.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert re.findall(r'<div class="mrow [^"]*" data-pr="(\d+)"', html) == ["5", "12", "27", "31"]
+    # mixed verdicts, so this is number order and not verdict order wearing a disguise
+    assert {row(q, n)["verdict"] for n in (5, 12, 27, 31)} == {"blocked", "stamp"}
+    assert re.findall(r"^\s+(\d+)\s+(?:stamp|judge|route|blocked)", render.render_terminal(q), re.M) == ["5", "12", "27", "31"]
+
+
+def test_a_card_says_how_many_of_its_rows_still_carry_its_decision():
+    """A card that goes out because one row was decided differently used to
+    paint exactly like a card nobody had touched -- "the button does
+    nothing". It carries a live tally and a partial state now."""
+    q = run([stampable(n, title=f"Page {n}", files=[_file(f"content/docs/p{n}.md", ["x"])]) for n in (7, 8, 9)],
+            cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert '<span class="cnt" data-total="3">3/3</span>' in html
+    assert "c.classList.toggle('part', part);" in html and ".btn.p.part{" in html
+    # one row per target, and every target resolvable to a row button on the page
+    targets = json.loads(re.search(r'data-targets="([^"]+)"', html).group(1).replace("&quot;", '"'))
+    assert set(targets) == {"7", "8", "9"}
+    for n, cmd in targets.items():
+        assert f'data-cmd="{cmd}" data-pr="{n}"' in html, (n, cmd)
+    # a single-row card has nothing to tally
+    one = render.render_board(run([stampable(7, files=[_file("content/docs/p7.md", ["x"])])], cfg=cfg(me=["docs"])))
+    assert 'class="cnt"' not in one
+
+
+def test_a_stuck_workflow_row_offers_an_interactive_fix_off_the_act_command():
+    """The row of a PR no author will ever answer carries "fix it yourself".
+    It is a run, not a write, so it composes on its own line at the foot of
+    the page and never reaches the --act command."""
+    q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/f.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert '<button class="btn hand" data-run="/address-review 18" data-pr="18"' in html
+    assert ">fix it yourself</button>" in html
+    # no data-cmd on it: the composer reads --act fragments off data-cmd alone
+    hand = html.split('class="btn hand"')[1].split("</button>")[0]
+    assert "data-cmd" not in hand and "data-kind" not in hand
+    assert 'id="handwrap" hidden' in html and 'id="handcmd"' in html
+    assert "/address-review 18" in render.render_terminal(q)
+    assert "(an interactive run, not part of --act)" in render.render_terminal(q)

@@ -11,7 +11,7 @@ One run of `/pr-review` renders one board. Re-running re-renders it, and publish
 
 ## The four verdicts
 
-Every open PR you can act on gets exactly one verdict. They are a sort order, not a judgment of quality.
+Every open PR you can act on gets exactly one verdict. It says what kind of move the row needs, not how good the PR is — and it is *not* the row order: rows sit in PR number order inside their owner/domain group, so a number you already have finds its row without your having to guess its verdict first. The verdict is on the row, in the tally, on a filter chip and in the Do-next cards.
 
 | Verdict | Means | The usual move |
 |---|---|---|
@@ -30,9 +30,15 @@ The top of the board is a short list of moves worth making, most leverage first.
 
 A card is a shortcut for clicking the same buttons down in the rows, not a separate instruction. Light a card and its rows light. Pick a different decision on one of those rows and the card goes out, because it no longer describes what you asked for. A card and a row can never disagree, so the command at the bottom can never contradict itself.
 
+**A card has three states, not two.** A batch card carries a small `on/total` tally of how many of the rows it names still hold its decision. All of them and it is lit, solid, green-ticked. None of them and it is out, plain. Some of them and it is *partly* lit — dashed, amber, tallied `2/3` — which is where you land whenever you press a card and then change your mind on one of its rows. Pressing a partial card takes every row back. (Before this it painted exactly like a card nobody had ever pressed, which read as a button that did nothing.)
+
+**A card never offers an approval that needed reading.** "Approve the set" is only ever the rows that cleared every gate mechanically; a row the judge pass decided to approve stays on its own row, next to the findings behind the call. The chain card follows the same rule — see below.
+
+**A card never names a row that isn't on the page.** Cards are built from the board's own row set, so the button a card would press is always there to be pressed. (A card naming a row parked under "Waiting on the author" could be clicked and would go straight back out.)
+
 Two cards deserve a note:
 
-- **Start the chain** is `--chain C1`: approve and squash-merge the first PR in a collision cluster through the same gates as a stamp, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. No row button says that, so the card tags both links with "covered by Do next N" instead of lighting them; choosing anything on a covered row puts the card out.
+- **Start the chain** is `--chain C1`: approve and squash-merge the first PR in a collision cluster through the same gates as a stamp, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. No row button says that, so the card tags both links with "covered by Do next N" instead of lighting them; choosing anything on a covered row puts the card out. Every overlapping member of a cluster is a **judge** row — the overlap is itself a stamp gate — so the card offers the button only where the collision is the *only* thing holding the lead back. A lead with anything else against it (an open ⚠️ row, a judged 🚨, a stale review, a new blog post, a diff over your size cap) gets a card that names the hold and carries no button: `--chain` approves that lead with `--force`, and that is a call to make on the row, with the findings in front of you.
 - **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps, with a reason no row button carries. That one has no row equivalent either, so it covers its rows the same way.
 
 ## A row
@@ -55,6 +61,7 @@ edit ↗
 - **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
 - **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
 - **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **fix it yourself** is the amber dashed button on a PR a workflow opened that still has open findings. See "Fixing one yourself" below.
 - **Your own PR** wears a **your own PR** chip (`author:self`) and no approve or send-back button, because you cannot answer your own review or approve your own work from here: route it, and answer its findings with `/address-review`.
 - **Approving says whether it merges.** A bot row leads with "approve & merge"; a person's row leads with "approve, no merge", because merging their PR is their call. The other choice is the second button.
 
@@ -110,6 +117,14 @@ The lever at the end of the bar is not a filter. It opens or closes every folded
 ## The progress line
 
 "3 of 21 decisions made", under the tally. A decision is a lit decision button on any row on the page — approve (either way), send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks — or a Do-next card covering the row. Side actions (apply fixes, screenshot, deploy) never count. The denominator is every row that has a decision to make, blocked rows included; rows parked in the waiting lists are not on the page and are not counted.
+
+## Fixing one yourself
+
+pulumi-bot's content-review and glow-up lanes open their PRs from a workflow run. Nobody reads a changes-requested review there, and closing one only makes the lane re-queue the same page on its next run — so a bot PR stuck on open findings used to offer exactly one button, "close it out", which fixes nothing.
+
+Those rows carry **fix it yourself**. It is not a write and not part of the batch: it composes `/address-review N` onto a second, amber line above the `--act` command — one run per PR, because each is its own interactive session that walks the open findings with you and pushes the fixes to the branch. Light several and you get several lines; the `--act` command below is untouched either way, and the page still writes nothing.
+
+It appears wherever the fix would survive: a `pulumi-bot` content-review or glow-up branch, or any other workflow-authored PR `act.py` is allowed to push to. It does **not** appear on dependabot PRs or the generated-docs regens (`automation/merge`), which are rebuilt from source — fix the generator — nor on a fork head, where there is no push access.
 
 ## The command bar
 
