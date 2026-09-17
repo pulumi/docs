@@ -1082,3 +1082,115 @@ def test_route_asks_every_missing_team_in_one_command():
     p = row(run([stampable(1, labels=["review:no-blockers", "domain:mixed"], files=files)], cfg=cfg(me=["docs"]),
                 teams={"pulumi/docs-guild": True, "pulumi/docs-marketing-review": True}), 1)
     assert p["verdict"] == "stamp" and p["route_targets"] == []
+
+
+# ---- the Do-next opening -------------------------------------------------------
+
+
+def test_the_chain_card_never_offers_an_approval_that_needs_reading():
+    """`--chain C1` approves the lead with `--force`, so the card may only
+    offer it where the collision is the *only* thing holding that row back.
+    An overlapping cluster member is always a `judge` row — the overlap is
+    itself a stamp gate — so the verdict cannot answer this; `gate_fails`
+    can."""
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([a, b])
+    lead = row(q, 1)
+    assert lead["verdict"] == "judge" and lead["gate_fails"] == ["cluster:C1:overlap:1/2"]
+    assert analyze.only_collisions_hold(lead) is True
+    chain = next(c for c in q["do_next"] if c["kind"] == "chain")
+    assert chain["cmd"] == "--chain C1" and chain["claims"] == [1, 2] and chain["label"] == "approve & merge #1"
+
+    # Same cluster, same lead, but heightened scrutiny on it: approving that
+    # is a call somebody has to make, so the card says so and carries no
+    # button. (Merge order is smallest diff first, so #1 still leads.)
+    a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
+                   commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                   files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([a2, b])
+    lead = row(q, 1)
+    assert lead["gate_fails"] == ["scrutiny:heightened", "cluster:C1:overlap:1/2"]
+    assert analyze.only_collisions_hold(lead) is False
+    chain = next(c for c in q["do_next"] if c["kind"] == "chain")
+    assert chain["cmd"] is None and chain["claims"] == [] and chain["targets"] == {}
+    assert "#1 leads the chain, but it needs a call of its own first (scrutiny:heightened)" in chain["does"]
+    # and the row itself still carries the decision, which is the whole point
+    assert "stamp" in [x["id"] for x in lead["actions"]]
+
+
+def test_do_next_cards_only_name_rows_the_board_renders():
+    """A card presses the row buttons it names. A row parked under "Waiting
+    on the author" has no row on the board at all, so a card naming one could
+    be clicked and would go straight back out — "the group buttons don't
+    light up". Cards are built from the board's own row set now."""
+    specs = [
+        fresh(1, mergeable_state="dirty"),
+        fresh(2, title="Red CI", check_runs=_red()),
+        fresh(13, title="Sent back, red", reviews=[CR("CamSoper")], check_runs=_red()),
+        fresh(14, title="Clean"),
+    ]
+    q = run(specs, cfg=cfg(me=["docs"]))
+    parked = {p["number"] for p in q["prs"] if p.get("handed_off") or p.get("waiting_on_author")}
+    on_board = {p["number"] for p in q["prs"]} - parked
+    # #13 is waiting on its author and off the board, but still carries the
+    # action a card would have reached for.
+    assert parked == {13} and [a["id"] for a in row(q, 13)["actions"]] == ["rerun-checks"]
+    for card in q["do_next"]:
+        named = {int(t) for t in (card.get("targets") or {})} | set(card.get("claims") or [])
+        assert named <= on_board, (card["kind"], named - on_board)
+    rerun = next(c for c in q["do_next"] if c["kind"] == "rerun-checks")
+    assert set(rerun["targets"]) == {"2"}
+
+
+def test_the_stamp_card_is_only_ever_the_mechanically_stampable_rows():
+    """"Approve the set" is the one batch approval the opening offers, and it
+    is offered because nothing on those rows needed reading. A judge row that
+    the judge pass would approve stays on its own row."""
+    q = run([stampable(1), stampable(2, title="Open findings", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                                     files=[_file("content/docs/b.md", ["x"])])])
+    q = analyze.merge_judgments(q, {"2": {"recommended": "stamp"}}, ctx=q.get("_ctx"))
+    card = next(c for c in q["do_next"] if c["kind"] == "stamp")
+    assert set(card["targets"]) == {"1"} and row(q, 1)["verdict"] == "stamp"
+    assert all(row(q, int(n))["verdict"] == "stamp" for n in card["targets"])
+
+
+# ---- a stuck workflow PR is always fixable by hand ------------------------------
+
+
+def test_a_stuck_workflow_pr_always_offers_a_hand_fix():
+    """pulumi-bot's content-review lane opens a PR from a workflow run: a
+    send-back is never read and closing it only re-queues the same page next
+    run. Fixing the branch yourself is the remaining way out, so the row
+    always offers it — as an interactive run, never as part of the --act
+    command the board composes."""
+    q = run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    assert p["verdict"] == "blocked" and "author:generated" in p["reasons"]
+    assert [h["id"] for h in p["handoffs"]] == ["handfix"]
+    assert p["handoffs"][0]["run"] == "/address-review 100" and p["handoffs"][0]["label"] == "fix it yourself"
+    assert "3 open findings" in p["handoffs"][0]["why"]
+    # a handoff is not an act.py fragment: nothing here can reach --act
+    assert "cmd" not in p["handoffs"][0]
+
+    # A clean workflow row has nothing to fix, so it offers nothing.
+    assert row(run([stampable(100, author="pulumi-bot", author_type="User")]), 100)["handoffs"] == []
+    # An author who does answer reviews gets the send-back, not the handoff.
+    assert row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                              author="jdoe", author_type="User")]), 100)["handoffs"] == []
+
+
+def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():
+    """Dependabot PRs and the generated-docs regens are rebuilt from source,
+    and a fork head has no push access — `act.push_allowed` already says so,
+    and the handoff follows it rather than promising work that vanishes."""
+    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="dependabot[bot]",
+                       files=[_file("package.json", ["x"])]),
+             stampable(2, title="Regen", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User", labels=["review:no-blockers", "automation/merge"],
+                       files=[_file("content/docs/r.md", ["x"])]),
+             stampable(3, title="Content review", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User", files=[_file("content/docs/c.md", ["x"])])])
+    assert row(q, 1)["handoffs"] == [] and row(q, 2)["handoffs"] == []
+    assert [h["run"] for h in row(q, 3)["handoffs"]] == ["/address-review 3"]
