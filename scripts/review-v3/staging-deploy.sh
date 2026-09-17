@@ -93,10 +93,36 @@ if [ -z "$RUN_ID" ]; then
 fi
 RUN_URL="https://github.com/$REPO/actions/runs/$RUN_ID"
 
-gh api --method POST "repos/$REPO/statuses/$HEAD_SHA" \
-  -f state=pending -f context="staging/pulumi-test-io" \
-  -f target_url="$RUN_URL" \
-  -f description="staging deploy running" >/dev/null
+# NO PENDING STATUS. This used to post `staging/pulumi-test-io` = pending,
+# "staging deploy running", for `staging-status.yml` to finalize when the
+# run completed. Twice now the finalizer has not run and the status stayed
+# pending forever, telling every reader of the merge box that a deploy
+# finished 40 minutes ago was still going:
+#
+#   1. #21676 — the finalizer was a job inside the dispatched run, and
+#      `workflow_dispatch` executes the file from the ref it is dispatched
+#      at, so a branch cut before that job merged never had it.
+#   2. #21696 — the finalizer moved to a `workflow_run` listener, which
+#      fixed (1). But GitHub does not emit a `workflow_run` cascade for a
+#      run dispatched with GITHUB_TOKEN, which is what the auto lane
+#      dispatches with. Every one of that listener's runs was a master
+#      push; not one of the six dispatched PR-branch deploys after it
+#      landed produced one.
+#
+# The status was never the deploy — it is a *report* of the deploy, written
+# by a separate API call that can always be the thing that fails. The deploy
+# itself is the run record, and `sentinel._staging_evidence` already reads
+# it as witness (2), so nothing downstream needs this write. An absent
+# status honestly says "no evidence recorded"; a stuck pending one says
+# something false, and says it indefinitely. The terminal (green/failed)
+# status is still written by `staging-status.yml` when its cascade does
+# fire, which is upside without a failure mode: a status that never appears
+# costs a reader nothing, and G4 falls through to the run record.
+#
+# If a pending status ever comes back, it needs a writer that CANNOT miss —
+# a `schedule` sweep that finalizes any pending status whose run has
+# completed, not an event cascade. Branch age and token provenance both
+# have to stop mattering.
 
 if [ "$ANNOUNCE" = "true" ]; then
   gh api --method POST "repos/$REPO/issues/$PR/comments" \
@@ -104,10 +130,10 @@ if [ "$ANNOUNCE" = "true" ]; then
 fi
 
 if [ "$DISPATCH_ONLY" = "true" ]; then
-  # `.github/workflows/staging-status.yml` finalizes the pending status
-  # above when this run completes, so it always resolves without anyone
-  # holding a runner open to watch it — and it resolves for a PR branch of
-  # any age, which an in-run job could not do (see that file's header).
+  # Nothing is left pending on the PR. `staging-status.yml` writes a green
+  # `staging/pulumi-test-io` if its cascade fires; if it doesn't, Sentinel
+  # G4 reads this run record directly and the merge box simply shows one
+  # check fewer. Either way nobody holds a runner open to watch.
   echo "staging deploy dispatched for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
   exit 0
 fi

@@ -72,14 +72,30 @@
 # `scripts/`, `Makefile`, bundler config). `other` is the same fallback
 # `classify_path()` uses for a path it can't otherwise place — see
 # `domain:other` in triage-classify.py — repo plumbing such as `.claude/`,
-# `styles/`, generated `data/` files; it routes to tools so an infra PR that
-# also touches those dedupes to one approver instead of stacking a second.
+# `styles/`, generated `data/` files, and the review pipelines under
+# `scripts/` (`review-v3/`, `review-admin/`, `content-review/`,
+# `blog-review/`); it routes to tools so an infra PR that also touches those
+# dedupes to one approver instead of stacking a second.
+#
+# The review pipelines are deliberately `other` rather than `infra`: they
+# read PRs and write comments, nothing in them is read by `make build` or by
+# the deploy, so the staging run `infra` requires would demonstrate nothing
+# about them while costing ~9 minutes of the shared staging stack on every
+# such PR. Same `tools` approver either way — only the staging evidence
+# differs. One workflow or build script in the same diff and the PR is
+# `infra` again, staging run and all; the narrowing is per path, not per PR.
 #
 # A matrix cell may also carry `staging_evidence: required`, which the
 # Sentinel enforces independently of which role is required — currently only
-# `infra` sets it, because an infrastructure change (workflows, scripts,
-# Makefile, build config) needs a demonstrated staging run before it merges,
-# on top of whichever role approves it.
+# `infra` sets it, because an infrastructure change (workflows, build
+# scripts, Makefile, build config) needs a demonstrated staging run before
+# it merges, on top of whichever role approves it. The Sentinel takes either
+# of two witnesses for that run: a green `staging/pulumi-test-io` commit
+# status, or a successful `testing-build-and-deploy.yml` run at the head
+# SHA. The run record is the authoritative one — the status is a *report* of
+# the deploy and has twice failed to be written — so nothing requires the
+# status to appear, and nothing writes a pending one (see the note in
+# `scripts/review-v3/staging-deploy.sh`).
 #
 # -----------------------------------------------------------------------------
 # CLAIMS OVERLAY
