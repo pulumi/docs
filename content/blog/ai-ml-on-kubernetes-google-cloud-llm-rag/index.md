@@ -168,7 +168,7 @@ Once the model is trained, Pulumi can be used to:
 
 Pulumi allows teams to **manage the entire AI/ML pipeline** in a structured and automated way.
 
-Try Jay’s demo code on [Creating an AI Training Platform on GKE with Pulumi](https://github.com/jasonsmithio/pulumi-experiments/tree/main/ai-ml-platform/gke-training).
+Try Jason Smith’s demo code on [Creating an AI Training Platform on GKE with Pulumi](https://github.com/jasonsmithio/pulumi-experiments/tree/main/ai-ml-platform/gke-training).
 
 ## Why Use Pulumi for AI/ML on Kubernetes?
 
