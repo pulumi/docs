@@ -466,6 +466,35 @@ def test_request_changes_body_voice_by_author_type():
     assert act.request_changes_body(internal) == "- `a.md` L3: Wrong count."
 
 
+def test_a_send_back_leaves_out_findings_the_approver_already_resolved():
+    pr = {"author": {"type": "internal"}, "judgments": [
+        {"finding_id": "F1", "file": "a.md", "line": 3, "decision": "Is the count right?",
+         "ask": "Fix the count.", "disposition": "deferred"},
+        {"finding_id": "F2", "file": "a.md", "line": 9, "decision": "Move the role section to its own page?",
+         "disposition": "accepted", "note": "It already lived here."},
+        {"finding_id": "F3", "file": "a.md", "line": 12, "decision": "Reword a historical sentence?", "disposition": "not-applicable"},
+        {"finding_id": "F4", "file": "b.md", "line": 5, "decision": "Leave the parenthetical?",
+         "ask": "No change needed: dated, not wrong.", "disposition": "accepted"},
+    ]}
+    body = act.request_changes_body(pr)
+    assert "Fix the count." in body
+    assert "role section" not in body and "historical sentence" not in body  # the approver's question never reaches the author
+    assert "`b.md` L5: No change needed: dated, not wrong." in body  # an explicit ask is still the approver's to send
+    resolved = {"author": {"type": "internal"}, "judgments": [pr["judgments"][2]],
+                "review": {"items": [{"id": "F3", "bucket": "outstanding", "file": "a.md", "anchor": "L12", "summary": "Reword it."}]}}
+    assert act.ask_lines(resolved) == []  # the judge step ran, so the card's open items don't sneak back in
+    env = Env([stampable(1, labels=["review:trivial"])])
+    try:
+        row(env.queue, 1)["judgments"] = resolved["judgments"]
+        try:
+            act.plan(env.queue, args(request_changes=[1]))
+            raise AssertionError("expected refusal: every judged finding is resolved")
+        except act.ActError as exc:
+            assert "nothing to send back" in str(exc)
+    finally:
+        env.close()
+
+
 def test_rerun_posts_a_new_review_mention_with_a_status_reason():
     env = Env([stampable(1, labels=["review:error", "domain:docs"]), stampable(2)])
     try:

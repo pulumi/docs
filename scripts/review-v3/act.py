@@ -240,8 +240,9 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
         steps.append(step("route", int(n), target=target))
     for n in args.request_changes or []:
         pr = pr_of(n)
-        if not (pr.get("judgments") or open_items(pr)):
-            raise ActError(f"--request-changes {n}: nothing to send back — no judgments and no open findings on the row")
+        if not ask_lines(pr):
+            raise ActError(f"--request-changes {n}: nothing to send back — no open findings on the row, "
+                           f"and every judged finding is already resolved")
         if not can_revise(pr) and not args.force:
             login = (pr.get("author") or {}).get("login") or "the author"
             raise ActError(f"--request-changes {n}: @{login} is a workflow, not an author — it will never read the review. "
@@ -473,14 +474,21 @@ def open_items(pr: dict) -> list[dict]:
 
 def ask_lines(pr: dict) -> list[str]:
     """The row's open items as line-anchored bullets: the judgments when the
-    judge step ran, else the findings still open on the card."""
+    judge step ran, else the findings still open on the card. A judgment the
+    approver already resolved (`RESOLVABLE`) has nothing for the author to do,
+    so it rides along only when it carries an explicit `ask`: its `decision`
+    is the approver's question, and posting it would invite the author to
+    change what the approver decided to leave alone."""
+    judgments = pr.get("judgments") or []
     lines = []
-    for j in pr.get("judgments") or []:
+    for j in judgments:
         where = f"`{j['file']}` L{j['line']}: " if j.get("file") and j.get("line") else ""
-        ask = (j.get("ask") or j.get("decision") or "").strip()
+        ask = (j.get("ask") or "").strip()
+        if not ask and j.get("disposition") not in RESOLVABLE:
+            ask = (j.get("decision") or "").strip()
         if ask:
             lines.append(f"- {where}{ask}")
-    if lines:
+    if judgments:
         return lines
     for i in open_items(pr):
         where = f"`{i['file']}` {i.get('anchor') or ''}: " if i.get("file") else f"{i.get('anchor') or ''}: "
@@ -492,7 +500,8 @@ def request_changes_body(pr: dict, note: str = "") -> str:
     """references/message-templates.md, Request changes row: line-anchored
     issues, no filler; the bot variant names the issue and what to change.
     A judgment's `ask` is the author-facing sentence; `decision` (the
-    question the approver answered) stands in when there is no `ask`. The
+    question the approver answered) stands in when there is no `ask`, except
+    on a judgment the approver already resolved (see `ask_lines`). The
     `note` is the approver's rationale and never leaves the board. Open
     findings fill in when the judge step didn't run on the row."""
     lines = []
