@@ -346,6 +346,14 @@ class GhClient:
         runs = data.get("workflow_runs", []) if isinstance(data, dict) else []
         return {r["check_suite_id"]: r.get("path") or r.get("name") or "" for r in runs if r.get("check_suite_id")}
 
+    def workflow_runs(self, sha: str) -> list[dict]:
+        """The Actions runs on `sha`, raw. Empty when they can't be read."""
+        try:
+            data = self.get(f"repos/{self.repo}/actions/runs", {"head_sha": sha, "per_page": 100}) or {}
+        except GhNotFound:
+            return []
+        return data.get("workflow_runs", []) if isinstance(data, dict) else []
+
     def compare_files(self, base: str, sha: str) -> list[dict]:
         """The files `sha` changes relative to its merge base with `base`:
         the same shape as `pr_files`, but for any commit, so a PR's diff at
@@ -450,6 +458,9 @@ class GhClient:
         if team_reviewers:
             body["team_reviewers"] = team_reviewers
         return self.post(f"repos/{self.repo}/pulls/{number}/requested_reviewers", body) or {}
+
+    def rerun_failed_jobs(self, run_id: int) -> dict:
+        return self.post(f"repos/{self.repo}/actions/runs/{run_id}/rerun-failed-jobs") or {}
 
     def dispatch_workflow(self, workflow_file: str, ref: str, inputs: dict | None = None) -> dict:
         body = {"ref": ref}

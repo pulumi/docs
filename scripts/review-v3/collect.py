@@ -722,7 +722,11 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "changed_lines": additions + deletions,
         "reviews": [
             {"user": ((r.get("user") or {}).get("login") or ""), "state": r.get("state") or "",
-             "submitted_at": r.get("submitted_at"), "user_type": (r.get("user") or {}).get("type")}
+             "submitted_at": r.get("submitted_at"), "user_type": (r.get("user") or {}).get("type"),
+             # the head the review was left on: analyze.own_send_back compares
+             # it with the live head to tell "waiting on the author" from
+             # "they pushed since"
+             "commit_id": r.get("commit_id")}
             for r in raw["reviews"]
         ],
         "requested_reviewers": {

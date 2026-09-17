@@ -23,7 +23,7 @@ import analyze  # noqa: E402
 import collect  # noqa: E402
 import routing  # noqa: E402
 from gh_client import GhClient, snapshot_path  # noqa: E402
-from test_analyze import CLEAN_BRIEF, CONFIG, TODAY, cfg, comment, row  # noqa: E402
+from test_analyze import CLEAN_BRIEF, CONFIG, TODAY, cfg, comment, fresh, row  # noqa: E402
 from test_analyze import stampable as _stampable  # noqa: E402
 from test_collect import V3_AUTHOR, make_snapshot, patch_for  # noqa: E402
 
@@ -502,7 +502,11 @@ def test_a_send_back_leaves_out_findings_the_approver_already_resolved():
     assert "`b.md` L5: No change needed: dated, not wrong." in body  # an explicit ask is still the approver's to send
     resolved = {"author": {"type": "internal"}, "judgments": [pr["judgments"][2]],
                 "review": {"items": [{"id": "F3", "bucket": "outstanding", "file": "a.md", "anchor": "L12", "summary": "Reword it."}]}}
-    assert act.ask_lines(resolved) == []  # the judge step ran, so the card's open items don't sneak back in
+    assert act.ask_lines(resolved) == []  # the judged finding is resolved, and nothing else is open
+    partial = {"author": {"type": "internal"}, "judgments": [pr["judgments"][0]],
+               "review": {"items": [{"id": "F1", "bucket": "outstanding", "file": "a.md", "anchor": "L3", "summary": "Wrong count."},
+                                    {"id": "F5", "bucket": "outstanding", "file": "c.md", "anchor": "L8", "summary": "Dead anchor."}]}}
+    assert act.ask_lines(partial) == ["- `a.md` L3: Fix the count.", "- `c.md` L8: Dead anchor."]  # an unjudged finding still goes back
     env = Env([stampable(1, labels=["review:trivial"])])
     try:
         row(env.queue, 1)["judgments"] = resolved["judgments"]
@@ -1056,3 +1060,90 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+# ---- rerun-checks / multi-target route / reason-only send-back ------------------
+
+
+def _runs_snapshot(env: "Env", number: int, runs: list[dict]) -> None:
+    sha = row(env.queue, number)["head"]["sha"]
+    f = snapshot_path(env.root, "GET", "repos/pulumi/docs/actions/runs", {"head_sha": sha, "per_page": 100})
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps({"total_count": len(runs), "workflow_runs": runs}))
+
+
+def test_rerun_checks_reruns_the_newest_failed_run_per_workflow():
+    red = [{"name": "lint", "status": "completed", "conclusion": "failure"}]
+    env = Env([fresh(1, check_runs=red), fresh(2, check_runs=red)])
+    try:
+        assert row(env.queue, 1)["verdict"] == "blocked" and any(a["cmd"] == "--rerun-checks 1" for a in row(env.queue, 1)["actions"])
+        _runs_snapshot(env, 1, [
+            {"id": 11, "name": "Lint", "path": ".github/workflows/lint.yml", "run_number": 1, "status": "completed", "conclusion": "failure"},
+            {"id": 12, "name": "Lint", "path": ".github/workflows/lint.yml", "run_number": 2, "status": "completed", "conclusion": "success"},
+            {"id": 21, "name": "Build", "path": ".github/workflows/build.yml", "run_number": 5, "status": "completed", "conclusion": "failure"},
+            {"id": 31, "name": "Deploy", "path": ".github/workflows/deploy.yml", "run_number": 3, "status": "in_progress", "conclusion": None},
+        ])
+        _runs_snapshot(env, 2, [{"id": 41, "name": "Lint", "path": ".github/workflows/lint.yml", "run_number": 1, "status": "completed", "conclusion": "success"}])
+        p = act.plan(env.queue, args(rerun_checks=[1, 2]))
+        assert [(s.kind, s.pr) for s in p.steps] == [("rerun-checks", 1), ("rerun-checks", 2)]
+        assert "rerun-failed-jobs" in act.preview(p)
+        res = act.execute(p, env.gh, queue=env.queue)
+        # #1: only the newest failed run per workflow (the lint failure was superseded by a success)
+        assert res[0].ok and res[0].message == "re-ran the failed jobs of 1 workflow run(s): Build"
+        assert [w["path"] for w in env.writes()] == ["repos/pulumi/docs/actions/runs/21/rerun-failed-jobs"]
+        # #2: red in the rollup but no failed run to re-run — said, not guessed
+        assert res[1].ok is False and "no failed workflow run" in res[1].message
+        # a moved head refuses like every other write
+        env.move_head(1, "e" * 40)
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok is False and "head-moved" in res[0].message
+        # not a decision: it rides beside one
+        p = act.plan(env.queue, args(rerun_checks=[1], route=["1:@cnunciato"]))
+        assert [s.kind for s in p.steps] == ["route", "rerun-checks"]
+    finally:
+        env.close()
+
+
+def test_route_with_two_targets_is_one_step_and_one_request():
+    env = Env([stampable(1), stampable(2)])
+    try:
+        p = act.plan(env.queue, args(route=["1:@pulumi/docs-guild", "1:@pulumi/docs-marketing-review", "1:@cnunciato"]))
+        assert [(s.kind, s.pr) for s in p.steps] == [("route", 1)]
+        assert p.steps[0].args["targets"] == ["@pulumi/docs-guild", "@pulumi/docs-marketing-review", "@cnunciato"]
+        assert "Routing to @pulumi/docs-guild and @pulumi/docs-marketing-review and @cnunciato" in p.steps[0].args["comment"]
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok and res[0].message == "review requested from @pulumi/docs-guild, @pulumi/docs-marketing-review, @cnunciato"
+        w = env.writes()
+        assert w[0]["path"].endswith("/pulls/1/requested_reviewers")
+        assert w[0]["body"] == {"reviewers": ["cnunciato"], "team_reviewers": ["docs-guild", "docs-marketing-review"]}
+        assert w[1]["path"].endswith("/issues/1/comments") and len(w) == 2
+        # a bare --route N takes every target the row carries
+        row(env.queue, 2)["route_targets"] = ["@pulumi/docs-guild", "@pulumi/docs-marketing-review"]
+        row(env.queue, 2)["actions"] = [{"id": "route", "cmd": "--route 2:@pulumi/docs-guild --route 2:@pulumi/docs-marketing-review",
+                                         "targets": ["@pulumi/docs-guild", "@pulumi/docs-marketing-review"]}]
+        p = act.plan(env.queue, args(route=["2"]))
+        assert p.steps[0].args["targets"] == ["@pulumi/docs-guild", "@pulumi/docs-marketing-review"]
+        assert act.row_route_targets({"actions": [{"id": "route", "cmd": "--route 3:@a --route 3:@b/c"}]}) == ["@a", "@b/c"]
+    finally:
+        env.close()
+
+
+def test_request_changes_with_only_a_reason_goes_back():
+    """A red-CI or unpushable-conflict row has no finding to send back, so
+    the board's button carries the reason; that reason is the whole review."""
+    env = Env([stampable(1, check_runs=[{"name": "lint", "status": "completed", "conclusion": "failure"}])])
+    try:
+        cmd = next(a["cmd"] for a in row(env.queue, 1)["actions"] if a["id"] == "request-changes")
+        assert cmd == '--request-changes 1 --reason "1=CI is red (lint); please fix the failing checks."'
+        try:
+            act.plan(env.queue, args(request_changes=[1]))
+            raise AssertionError("sent back an empty review")
+        except act.ActError as exc:
+            assert "nothing to send back" in str(exc) and "--reason 1=" in str(exc)
+        p = act.plan(env.queue, args(request_changes=[1], reason=["1=CI is red (lint); please fix the failing checks."]))
+        body = p.steps[0].args["body"]
+        assert body.startswith("CI is red (lint); please fix the failing checks.") and "@claude F<n>" in body
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert res[0].ok and env.writes()[0]["body"] == {"event": "REQUEST_CHANGES", "body": body}
+    finally:
+        env.close()

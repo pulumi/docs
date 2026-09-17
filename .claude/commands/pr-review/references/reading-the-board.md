@@ -18,7 +18,7 @@ Every open PR you can act on gets exactly one verdict. They are a sort order, no
 | **stamp** | Passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough. | Approve. Bot PRs merge; a person's PR is theirs to merge. |
 | **judge** | One thing needs a person: an open finding, a stale-looking summary, a new blog post, a diff over your size cap. | Read the judgment boxes, then approve as-is or send it back. |
 | **route** | Not your lane per `.github/review-routing.yml`. | Request review from the owning team, or approve anyway if you're confident. |
-| **blocked** | Nothing you can do until something else moves: a conflict, red CI, a stale review, a review still running. | Use the unblock the row offers, or leave it. |
+| **blocked** | Nothing you can do until something else moves: an unanswered 🚨 finding, a conflict, red CI, a stale or errored review, a review still running, someone else's changes requested, or your own PR. | Use the unblock the row offers (merge base, refresh, re-run the review, re-run the failed checks, send back or close for open findings, route), or leave it. A row with no unblock says **Blocked: … no action available** and is counted on its own tally tile, so it can never sit silent. |
 
 ## The Do next strip
 
@@ -32,8 +32,8 @@ A card is a shortcut for clicking the same buttons down in the rows, not a separ
 
 Two cards deserve a note:
 
-- **Start the chain** is the two row buttons it presses: approve and squash-merge the first PR in a collision cluster, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes.
-- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps, with a reason no row button carries. That one has no row equivalent, so it tags the rows it covers with "covered by Do next N" instead of lighting them; choosing anything else on a covered row puts the card out.
+- **Start the chain** is `--chain C1`: approve and squash-merge the first PR in a collision cluster through the same gates as a stamp, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. No row button says that, so the card tags both links with "covered by Do next N" instead of lighting them; choosing anything on a covered row puts the card out.
+- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps, with a reason no row button carries. That one has no row equivalent either, so it covers its rows the same way.
 
 ## A row
 
@@ -54,7 +54,8 @@ edit ↗
 - **The age** is the last thing on the meta line: how long the PR has been open, in at most four characters (`today`, `12d`, `4mo`), and amber once it passes 30 days. It is there because it is the one fact a row cannot show you any other way — two identical sweeps read the same until you notice one has been sitting since June. Hover it for the exact date.
 - **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
 - **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
-- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **Your own PR** wears a **your own PR** chip (`author:self`) and no approve or send-back button, because you cannot answer your own review or approve your own work from here: route it, and answer its findings with `/address-review`.
 - **Approving says whether it merges.** A bot row leads with "approve & merge"; a person's row leads with "approve, no merge", because merging their PR is their call. The other choice is the second button.
 
 ## Judgment badges
@@ -106,19 +107,29 @@ Every verdict starts lit, including **stampable** and **blocked**. That is delib
 
 The lever at the end of the bar is not a filter. It opens or closes every folded panel on the board at once (the manual keeps its own state), and each row carries the same lever for itself alone beside its PR links.
 
+## The progress line
+
+"3 of 21 decisions made", under the tally. A decision is a lit decision button on any row on the page — approve (either way), send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks — or a Do-next card covering the row. Side actions (apply fixes, screenshot, deploy) never count. The denominator is every row that has a decision to make, blocked rows included; rows parked in the waiting lists are not on the page and are not counted.
+
 ## The command bar
 
 The bottom of the page composes your decisions into one command:
 
 ```
-$ /pr-review --act --stamp 21550,21577 --request-changes 21664 --route 21651:@pulumi/docs-blog-review
+$ /pr-review --act --stamp 21550,21577:no-merge --force --request-changes 21664 --reason "21664=…" --route 21651:@pulumi/docs-blog-review
 ```
 
-Copy it and run it, or hand it to Claude. Invoking it *is* the yes: `act.py` plans it, prints a preview of every write, and executes — the reading you did on this page is what the command carries, so nothing asks you to confirm it a second time. (`--dry-run` prints the preview and stops, if you want to look first.) Each approval runs its own preflight immediately before merging: head unchanged since the plan, mergeable, CI green, no changes-requested review. A PR that fails preflight is skipped and the rest of the batch continues.
+It is read off the lit buttons every time one changes, so it can never lag a click. Every approve button folds into the one `--stamp` list — `N`, `N:merge` or `N:no-merge` per PR, `--force` said once for the batch if any of them needs it — because `act.py` reads a flag once, and a second `--stamp` would be a second flag. A `--reason` that a card or button carries is scoped to its PR before it reaches the bar, as `--reason "N=text"`, so a batch can carry several. The same fragment is never repeated.
+
+Copy it and run it, or hand it to Claude. Invoking it *is* the yes: `act.py` plans it, prints a preview of every write with its exact body, and executes — the reading you did on this page is what the command carries, so nothing asks you to confirm it a second time. (`--dry-run` runs the preflights and lists every write it would make without sending one, if you want to look first; it never runs git.) Every write is preceded by a re-read of the PR (still open, head unchanged since the plan); an approval also checks mergeable, CI green, and no changes-requested review from anyone but you — your own is superseded by the approval it posts. A PR that fails preflight is skipped and the rest of the batch continues.
 
 ## Waiting on others
 
 A PR whose requested reviewer is a human who isn't you is waiting on them, not on you. Those rows collapse into a compact list at the bottom. `--include-handed-off` brings them back as full rows. Routing a PR is also how you say "don't show me this again": the review request lives on GitHub, so every future run sees it, and GitHub clears it when the reviewer acts.
+
+## Waiting on the author
+
+A PR you already sent back — your changes-requested review is the latest word, and nothing has been pushed since — is waiting on its author, not on you. Those rows wear `sent-back:<date>` and collapse into a second compact list under the first: the PR, its title, the author and the date you asked, the age, and a ✗ for red CI or a ⚠ for a conflict. Your own changes-requested review is never a blocker: the approval you would post supersedes it. The row returns to the groups when a commit lands; `--include-handed-off` brings it back now if you need to act on it.
 
 ## What is not on the board
 

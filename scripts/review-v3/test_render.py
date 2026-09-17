@@ -50,7 +50,9 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
     assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
     assert "#1 and 1 other edit the same lines in the same files" in html
-    assert 'data-cmd="--stamp 1 --force --unblock 2"' in html or 'data-cmd="--stamp 1 --unblock 2"' in html
+    # the chain card is `--chain C1`: one command with no row button, so it
+    # claims both links rather than pressing anything
+    assert 'data-cmd="--chain C1" data-pr="next1" data-claims="1,2" data-extra="--chain C1"' in html
     assert "Approves and squash-merges #1, then merges master into #2 so it can follow." in html
 
 
@@ -61,7 +63,7 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
     assert 'class="chip r-cluster"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@pulumi/docs-marketing-review"' in html
     assert 'class="btn p p-go" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected, primary
-    assert 'data-cmd="--request-changes 1"' in html and "send back to author" in html
+    assert 'data-cmd="--request-changes 3"' in html and "send back to author" in html   # #3 has open findings to send
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html
@@ -305,12 +307,12 @@ def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     # One decision per row, side actions ride along: the script puts out the
     # other lit decision on the same PR, and only decisions count as made.
     jhtml = render.render_board(_queue())
-    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    assert 'data-cmd="--request-changes 3" data-pr="3" data-kind="decision"' in jhtml
     # the screenshot button is detail-view only: on the board the row already
     # links every changed page on the preview
     assert 'data-cmd="--render 1"' not in jhtml
     assert 'data-cmd="--render 1"' in render.render_detail(_queue(), 1)
-    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    assert 'data-cmd="--request-changes 3" data-pr="3" data-kind="decision"' in jhtml
     assert 'button.btn.sel[data-kind="decision"][data-pr="\' + pr + \'"]' in html  # one decision per row, via clearRow
     assert "r.querySelector('button.btn.sel[data-kind=\"decision\"]') || r.querySelector('.claimnote')" in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
@@ -533,7 +535,7 @@ def test_a_card_adds_only_what_no_row_carries():
     # which has no row equivalent at all. Every other card adds nothing, so
     # pressing it can never repeat its rows' fragments.
     html = render.render_board(_queue())
-    assert 'data-extra="--unblock 2"' in html          # the chain card: #1's stamp is a row button, #2's unblock is not
+    assert 'data-extra="--chain C1"' in html            # the chain card has no row button: its command is the whole fragment
     assert render.card_extra({"cmd": "--stamp 1,2", "targets": {"1": "--stamp 1", "2": "--stamp 2"}}) == ""
     assert render.card_extra({"cmd": '--request-changes 9 --reason "x"', "claims": [9]}) == '--request-changes 9 --reason "x"'
     assert "function fragment(b){ return isCard(b) ? (b.dataset.extra || '') : b.dataset.cmd; }" in html
@@ -617,7 +619,7 @@ def test_the_composer_reads_the_lit_buttons():
         return
     q = run([
         stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])]),                                        # stamp, bot
-        stampable(12, files=[_file("content/docs/b.md", ["x"], ["o"])], author="camsoper", author_type="User"),  # stamp, human
+        stampable(12, files=[_file("content/docs/b.md", ["x"], ["o"])], author="sean1588", author_type="User"),  # stamp, human (not the approver)
         stampable(13, labels=["review:trivial", "domain:docs"], comments=[], files=[_file("content/docs/c.md", ["x"], ["o"])]),  # judge
         stampable(14, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["z"], ["p"])]),    # route
         stampable(15, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/q/index.md", ["z"], ["p"])]),    # route
@@ -632,3 +634,110 @@ def test_the_composer_reads_the_lit_buttons():
                              cwd=repo, capture_output=True, text=True, timeout=120)
     assert res.returncode == 0, res.stdout + res.stderr
 
+
+
+def test_the_terminal_carries_everything_the_board_shows():
+    # --terminal used to cut each row at 110 characters, print blockers
+    # nowhere, print actions for judge rows only, hide open findings on an
+    # unjudged row, and print an empty merge order for a cluster whose every
+    # member is handed off. A terminal reader has to be able to compose the
+    # same act command the board would, so all of it is here now.
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "file": "content/docs/iac/x.md", "anchor": "L95",
+         "summary": "Does this sentence still say what the link says?"}]}
+    p["reasons"] += [f"brief:stale-summary:token-{i}" for i in range(12)]
+    text = render.render_terminal(q)
+    assert "blocked: mergeable:dirty" in text                                     # why a row is blocked
+    for cmd in ("--unblock 4", "--route 3:@pulumi/docs-marketing-review", "--request-changes 3",
+                "--stamp 1 --force", "--stamp 1:no-merge --force", "--render 1"):
+        assert f"]  {cmd}" in text, cmd                                             # every row's actions, blocked and route rows included
+    assert "open: F1 Does this sentence still say what the link says? [nobody has ruled] @ content/docs/iac/x.md" in text
+    assert " ".join(text.split()).count("@ content/docs/iac/x.md L95") == 1                  # wrapped, not cut
+    assert "judged: F4 Keep the widened claim? → refuted https://github.com/pulumi/docs/pull/3/files#diff-xR95" in text
+    assert "do next" in text and "$ /pr-review --act --unblock 4" in text          # the Do-next moves carry their commands
+    assert "$ /pr-review --act --chain C1" in text                                 # the chain card too
+    for r in p["reasons"]:
+        if not r.startswith(render.HIDDEN_REASON_PREFIXES):
+            assert r in text, r                                                    # nothing is truncated: it wraps
+    assert "…" not in text.split("do next")[0].replace("… ", "")                   # no cut marker on any row line
+    assert all(len(line) <= 110 or " " not in line.strip() for line in text.splitlines())
+    # a cluster whose members are all handed off has no merge order to print;
+    # the members are the news, and the line says why there is no order
+    a = stampable(1, title="A", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="B", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q2 = run([a, b])
+    assert q2["clusters"][0]["merge_order"] == []
+    t2 = render.render_terminal(q2)
+    assert "C1 overlap: #1, #2 (all waiting on others)" in t2 and "merge \n" not in t2 and "merge →" not in t2
+
+
+def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
+    q = _queue()
+    stuck = row(q, 4)                       # blocked on a conflict; pretend the unblock was refused
+    stuck["actions"] = []
+    stuck["reasons"].append("unblock:refused:dependabot-branch")
+    back = row(q, 2)                        # already sent back by this approver, nothing pushed since
+    back["waiting_on_author"] = True
+    back["reasons"].append("sent-back:2026-09-10")
+    own = row(q, 1)                         # the approver's own PR
+    own["reasons"].append("author:self")
+    html = render.render_board(q)
+    # a blocked row with nothing to click says so, and the tally counts it
+    assert "Blocked: mergeable:dirty" in html and ">no action available</span>" in html
+    assert "<b>1</b><span>blocked, no action</span>" in html
+    # the sent-back row leaves the groups for its own compact list, with the date
+    assert 'data-pr="2"' not in html and "<h2>Waiting on the author</h2>" in html and "sent back 2026-09-10" in html
+    assert "<b>1</b><span>waiting on the author</span>" in html
+    full = render.render_board(q, include_handed_off=True)
+    assert 'data-pr="2"' in full and "<h2>Waiting on the author</h2>" not in full
+    back["verdict"], back["blockers"], back["actions"] = "blocked", ["outstanding:1"], []   # what analyze emits for one
+    full = render.render_board(q, include_handed_off=True)
+    assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
+    assert "<b>1</b><span>blocked, no action</span>" in full
+    assert "judged blocking finding" not in render.chip_title("outstanding:judged:F1,F2")
+    assert "approving this row posts their /resolve lines" in render.chip_title("outstanding:judged:F1,F2")
+    # the new chips read as words, stay out of the fold, and explain themselves
+    row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
+    assert ">your own PR<" in row1.split("<summary>why")[0]
+    assert "cannot approve it or send it back to yourself" in render.chip_title("author:self")
+    t = render.chip_title("sent-back:2026-09-10")
+    assert "waiting on its author, not on you" in t and "2026-09-10" in t
+    assert "could not offer one: dependabot branch" in render.chip_title("unblock:refused:dependabot-branch")
+    # the re-run-checks action, on a row and as a Do-next batch card
+    stuck["actions"] = [{"id": "rerun-checks", "label": "re-run the failed checks", "cmd": "--rerun-checks 4"}]
+    q["do_next"] = [{"kind": "rerun-checks", "say": "#4 is red on a check that looks flaky.",
+                     "does": "Re-runs the failed checks on each. Nothing merges.", "cmd": "--rerun-checks 4",
+                     "label": "re-run the failed checks", "targets": {"4": "--rerun-checks 4"}}]
+    html = render.render_board(q)
+    assert 'class="btn p p-stop" data-cmd="--rerun-checks 4" data-pr="4" data-kind="decision"' in html
+    assert "Re-run the failed jobs of the head commit" in html
+    assert '<li class="next stop">' in html and 'data-targets="{&quot;4&quot;: &quot;--rerun-checks 4&quot;}"' in html
+    assert ">no action available</span>" not in html and "blocked, no action" not in html
+    text = render.render_terminal(q)
+    assert "1 waiting on the author" in text and "waiting on the author (1):" in text and "sent back 2026-09-10" in text
+    assert "[re-run the failed checks]  --rerun-checks 4" in text and "     2  " not in text.split("waiting on the author (1)")[0]
+    stuck["actions"] = []
+    assert "blocked: mergeable:dirty (no action available)" in render.render_terminal(q)
+
+
+def test_a_fenced_block_in_a_finding_renders_as_pre():
+    # A ```markdown block inside a finding note came out as ``<code>markdown:
+    # the inline pass saw the fence as one code span and a half.
+    out = render.md_inline("See:\n```markdown\n- [x](https://e.invalid) `y` <b>\n```\nthen `code` and **b**")
+    assert "<pre>- [x](https://e.invalid) `y` &lt;b&gt;</pre>" in out
+    assert "<code>code</code>" in out and "<b>b</b>" in out
+    assert "``<code>" not in out and "<code>markdown" not in out and "<a href" not in out
+    assert render.md_inline("```bash $ pulumi up ```") == "<pre>$ pulumi up </pre>"
+    assert render.md_inline("no fence `here`") == "no fence <code>here</code>"
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "summary": "Use the shortcode",
+         "text": "Use:\n```markdown\n{{< notes type=\"info\" >}}\n```\nhere, not `<div>`."}]}
+    html = render.render_board(q)
+    assert "<pre>{{&lt; notes type=&quot;info&quot; &gt;}}</pre>" in html
+    assert "``<code>" not in html and "<code>markdown" not in html and "<code>&lt;div&gt;</code>" in html
