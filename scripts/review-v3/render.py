@@ -112,6 +112,30 @@ def files_url(queue: dict, n: int) -> str:
     return pr_url(queue, n) + "/files"
 
 
+def _age_days(pr: dict, now: datetime | None = None) -> int:
+    try:
+        created = datetime.fromisoformat((pr.get("created_at") or "").replace("Z", "+00:00"))
+    except ValueError:
+        return 0
+    return max((now or datetime.now(timezone.utc)) - created, timedelta()).days
+
+
+def age_label(pr: dict, now: datetime | None = None) -> str:
+    """How long the PR has been open, in at most four characters.
+
+    Age is the one thing a row cannot derive from the diff: two identical
+    stampable sweeps read the same until you notice one has been sitting for
+    six weeks. It stays this short because it rides in the meta line beside
+    six other facts -- days up to two months, then months, so an old PR never
+    pushes the rest of the line around."""
+    d = _age_days(pr, now)
+    if d < 1:
+        return "today"
+    if d < 60:
+        return f"{d}d"
+    return f"{d // 30}mo"
+
+
 def deep_link(queue: dict, pr: dict, item: dict) -> str | None:
     file = item.get("file")
     if not file:
@@ -394,7 +418,10 @@ def meta_line(pr: dict) -> str:
         f"risk:{pr.get('risk_tier')}",
         f"@{(pr.get('author') or {}).get('login', '')}",
     ]
-    return "".join(f"<span>{esc(p)}</span>" for p in parts)
+    days = _age_days(pr)
+    age = (f'<span class="age{" old" if days >= 30 else ""}" title="Opened {esc((pr.get("created_at") or "?")[:10])}'
+           f' -- {days} day{"s" if days != 1 else ""} ago. Amber past 30 days.">{esc(age_label(pr))}</span>')
+    return "".join(f"<span>{esc(p)}</span>" for p in parts) + age
 
 
 def diffq(j: dict, *, open_: bool = True) -> str:
@@ -1149,14 +1176,6 @@ def slim(obj):
 
 
 
-def _age_days(pr: dict, now: datetime | None = None) -> int:
-    try:
-        created = datetime.fromisoformat((pr.get("created_at") or "").replace("Z", "+00:00"))
-    except ValueError:
-        return 0
-    return max((now or datetime.now(timezone.utc)) - created, timedelta()).days
-
-
 def waiting_html(prs: list[dict]) -> str:
     """The compact 'waiting on others' list: one line per handed-off PR,
     for awareness only. Nothing here is actionable by the approver."""
@@ -1244,14 +1263,15 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
     counts = queue.get("counts") or {}
     lines = [f"PR review queue · {queue.get('repo')} · {len(prs)} rows · " + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
              + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else ""), ""]
-    hdr = f"{'#':>6}  {'verdict':<8} {'owner':<11} {'domain':<14} {'size':>9} {'CI':<4} reasons"
+    hdr = f"{'#':>6}  {'verdict':<8} {'owner':<11} {'domain':<14} {'size':>9} {'age':>5} {'CI':<4} reasons"
     lines += [hdr, "-" * len(hdr)]
     for owner, domain, rows in group_rows(prs):
         for p in rows:
             reasons = [r for r in p.get("reasons") or [] if not r.startswith(HIDDEN_REASON_PREFIXES)]
             ci = {"green": "✓", "red": "✗", "pending": "…"}.get((p.get("checks") or {}).get("state"), "?")
             size = f"+{p.get('additions', 0)}/−{p.get('deletions', 0)}"
-            line = f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} {ci:<4} " + " ".join(reasons)
+            line = (f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} "
+                    f"{age_label(p):>5} {ci:<4} " + " ".join(reasons))
             lines.append(line[:width] + ("…" if len(line) > width else ""))
     cl = queue.get("clusters") or []
     if cl:
@@ -1324,7 +1344,7 @@ h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
 button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11px}
 .pr.diff{font-weight:500;font-size:11px;color:var(--accent);background:none;border-color:var(--accent-soft)}
 .mrow h4{font-size:14.5px;font-weight:600;margin:0 0 3px;line-height:1.35}
-.meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}
+.meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}.meta .age{font-family:"IBM Plex Mono",monospace;font-size:11px;margin-right:0}.meta .age.old{color:var(--hold)}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
 .chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-self-accepted,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}

@@ -39,11 +39,17 @@ flags: --owner me|any|<role>|@login   --domain docs,blog,website,programs,infra,
 
 ## How a run ends
 
-A run invoked without `--act` ends at the published board: collect → analyze → judge → render → publish → stop. The last thing you say is one line — the board link and the command the page composed. Do not plan, do not ask whether to plan, and do not ask whether to execute. The board *is* the deliverable. The person reads each row, sets the decisions themselves, and copies the command the page composed for them; **that copy-paste is the only thing that authorizes a write**, and a run that reaches GitHub any other way has skipped the reading the board exists to make possible.
+A run invoked without `--act` ends at the published board: collect → analyze → judge → render → publish → stop. The last thing you say is one line — the board link and the command the page composed. Do not plan, do not ask whether to plan, and do not ask whether to execute. The board *is* the deliverable. The person reads each row, sets the decisions themselves, and copies the command the page composed for them; **that copy-paste is what authorizes the writes**, and a batch that reaches GitHub without it has skipped the reading the board exists to make possible.
 
-**Never put a write behind `AskUserQuestion`.** A menu option is one keystroke, and a batch of approvals and squash-merges must never sit one keystroke away from landing on PRs nobody opened — a misread option there is irreversible in a way no amount of preview text undoes. `AskUserQuestion` is for judgment the run genuinely needs from the person (which disposition fits a finding, which of two readings of a diff is right, which row is theirs), and never for consent to approve, merge, close, comment, or push. When you catch yourself drafting an options list whose "yes" performs the writes, the answer is the board: publish it and hand it over.
+**A write is never the default answer to a question.** `AskUserQuestion` may carry one — a single named action on a row the person just walked through is a fair thing to offer, and never offering it is its own kind of unhelpful — but three things have to hold together:
 
-The corollary, so this doesn't swing back the other way: the question you must not ask at all is *"want me to plan it?"* Planning is read-only, so proposing it wastes a round trip — and it isn't yours to propose in the first place, because step 5 doesn't run without `--act`. Publish and stop; the person's next invocation is the yes.
+1. **It is neither the first option nor the recommended one.** The default sits on the choice that changes nothing, because the cost of a mis-click is asymmetric: the wrong read-only answer costs a round trip, the wrong write answer costs an approval nobody can take back.
+2. **The label says the write out loud, and how far it reaches.** "Approve and squash-merge #21622" is a label. "Proceed", "Yes, go ahead" and "Run it" are not: from the option alone, the person has to be able to tell that GitHub is about to change and by how much.
+3. **They have already seen the thing itself** — that row, its findings, its diff — in this turn, not just a count of rows. A question is consent to what was read; it cannot manufacture the reading.
+
+A batch fails the third one by construction. "Approve & merge these 7" is one keystroke over seven PRs nobody opened, so the stampable set goes to the board and comes back as a command the person invokes, never as a menu option. Scale is the line: one reviewed row may be a question, a set is always the board.
+
+The corollary, so this doesn't swing back the other way: the question you must not ask at all is *"want me to plan it?"* Planning is read-only, so proposing it wastes a round trip — and on a queue run it isn't yours to propose in the first place, because step 5 starts with the person, not with you. Publish and stop; their next invocation is the yes.
 
 ## Config: `~/.pr-review.yml`
 
@@ -164,7 +170,7 @@ python3 scripts/review-v3/act.py --in .pr-review-queue.json --stamp 21550,21577 
 python3 scripts/review-v3/act.py --execute .pr-review-plan.json [--dry-run]
 ```
 
-**This step runs only when the person's own invocation carries `--act`** — typed, or pasted from the board. That invocation is the authorization for every write in it, which is why it names its PRs explicitly rather than saying "the stampable ones". Never arrive here on your own initiative, and never treat a board you just published as a decision: an unread board's command is a proposal, not an instruction.
+**This step needs the person's explicit go-ahead, and for anything more than one row that means an `--act` invocation** — typed, or pasted from the board. That invocation is the authorization for every write in it, which is why it names its PRs one by one rather than saying "the stampable ones". The single exception is a row they just walked through with you, where a named, non-default `AskUserQuestion` option can carry that one row's action under the three conditions in "How a run ends"; it opens for one row and never for a set. Otherwise: never arrive here on your own initiative, and never treat a board you just published as a decision — an unread board's command is a proposal, not an instruction.
 
 The first command validates against the queue and writes `.pr-review-plan.json` plus a preview: for each step the PR, head SHA, the preflight it will run, the exact approval text, and every write.
 

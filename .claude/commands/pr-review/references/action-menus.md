@@ -35,7 +35,7 @@ The board opens with at most a handful of cards, each one sentence and one butto
 3. **Route to owner** (`--route N:@owner`) — when the call belongs to the lane's team.
 4. **Skip** — leave the row for later (`--refresh N` when the finding reads as stale is offered from the row itself).
 
-In board mode the page composes the command itself, so there is no per-row walk. Either way the questions are about one row's disposition, never about running anything: there is no execute confirmation in this skill, in either mode, because a write is authorized by the `--act` command the person invokes and by nothing else. When a question genuinely needs asking, ask it with `AskUserQuestion`; when the "question" is really consent to approve or merge, it isn't a question, it's the board.
+In board mode the page composes the command itself, so there is no per-row walk. In either mode these options set a row's disposition and compose a command; none of them runs it. There is no batch execute confirmation anywhere in this skill — a set of writes is authorized by the `--act` command the person invokes, never by a menu. A single row is the one place a question may carry its own action, and then only on the terms in the skill's "How a run ends": not the default option, labelled with the action and its reach ("Approve and squash-merge #21622", not "Proceed"), and only for a row the person has actually just read.
 
 ## Bot PRs: what may be pushed
 
