@@ -1,6 +1,6 @@
 ---
 title_tag: "Convert Code to Pulumi"
-meta_desc: Pulumi convert allows you to convert ARM, CloudFormation, Kubernetes CustomResources, Kubernetes YAML, and Terraform to Pulumi.
+meta_desc: Pulumi convert allows you to convert Terraform, Kubernetes YAML, ARM, Bicep, and Pulumi YAML to Pulumi.
 title: Convert code
 h1: Convert code to Pulumi
 menu:
@@ -29,7 +29,7 @@ For the detailed usage of this command and options, refer to the [pulumi convert
 
 ### Supported destination languages
 
-* [TypeScript/Javascript](/docs/iac/languages-sdks/javascript/)
+* [TypeScript/JavaScript](/docs/iac/languages-sdks/javascript/)
 * [Go](/docs/iac/languages-sdks/go/)
 * [Python](/docs/iac/languages-sdks/python/)
 * [.NET](/docs/iac/languages-sdks/dotnet/)

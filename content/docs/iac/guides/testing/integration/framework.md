@@ -122,7 +122,7 @@ integration.ProgramTest(t, &integration.ProgramTestOptions{
 
 This validation runs in the harness right after the stack is stood up in response to a `go test` invocation.
 
-## Additional resources
+## Learn more
 
 - [Integration Testing in Go example](https://github.com/pulumi/examples/tree/master/testing-integration) - A minimal example using Pulumi's Go integration test framework
 - [Pulumi AWS provider tests](https://github.com/pulumi/pulumi-aws/tree/master/examples) - Comprehensive examples of integration tests in the AWS provider

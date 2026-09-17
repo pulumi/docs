@@ -16,20 +16,20 @@ This guide explains how to discover the correct AWS resource IDs to use when imp
 
 ## About Pulumi import
 
-The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you to bring a resource created outside of Pulumi under Pulumi management. This includes resources created by clicking in the AWS Console, or by other infrastructure as code tools such as Terraform, CloudFormation, and AWS CDK. Each resource to be imported requires a resource ID, along with a name for the resource, and its type.
+The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you to bring a resource created outside of Pulumi under Pulumi management. This includes resources created by clicking in the AWS Console, or by other infrastructure as code tools such as Terraform, CloudFormation, and AWS CDK. Each resource to be imported requires a resource ID, along with a name for the resource, and its type. For the import workflows themselves, see [Importing resources](/docs/iac/guides/migration/import/).
 
-## Finding resource ids
+## Finding resource IDs
 
-Whether you are running `pulumi import` for a single resource or using a bulk `import.json` file (for example, generated with `pulumi preview --import-file import.json`), you need to supply an ID that uniquely identifies the existing AWS resource. Sometimes this ID is a single value like a resource `ARN`, but other times it is a composite value made up of a combination of property values. For example, to import a [Lambda Permission](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/permission/) resource you need both the `functionName` and the Permission `id` and the id supplied to `pulumi import` must be in the format `functionName|id`.
+Whether you are running `pulumi import` for a single resource or using a bulk `import.json` file (for example, generated with [`pulumi preview --import-file import.json`](/docs/iac/cli/commands/pulumi_preview/)), you need to supply an ID that uniquely identifies the existing AWS resource. Sometimes this ID is a single value such as a resource `ARN`, and sometimes a composite value made up of several property values. For example, importing a [Lambda Permission](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/permission/) resource requires both the `functionName` and the Permission `id`, and the ID passed to `pulumi import` must be in the format `functionName|id`.
 
-The first place you should look for resource ids for Pulumi import is by querying the CloudFormation stack. Import ids for most Pulumi resource types can be extracted from the `PhysicalResourceId` property in CloudFormation:
+The first place to look for import IDs is the CloudFormation stack itself. Import IDs for most Pulumi resource types can be extracted from the `PhysicalResourceId` property in CloudFormation:
 
 ```bash
 $ aws cloudformation list-stack-resources --stack-name my-stack \
     --query 'StackResourceSummaries[].{Type:ResourceType,LogicalResourceId:LogicalResourceId,Physical:PhysicalResourceId}'
 ```
 
-Optionally, you can use the `cdk2pulumi` tool to lookup information on the import ids. `cdk2pulumi` has an `ids` subcommand that returns information on the expected import id format:
+You can also use the `cdk2pulumi` tool to look up information about import IDs. `cdk2pulumi` has an `ids` subcommand that returns the expected import ID format:
 
 ```bash
 $ pulumi plugin run cdk2pulumi -- ids AWS::Lambda::Permission
@@ -48,7 +48,7 @@ Parts:
 
 ### Finding IDs example
 
-Lets walk through an example of finding the import ids for a couple of resources.
+The following example walks through finding the import IDs for the resources in a CloudFormation stack.
 
 1. List the stack resources:
 
@@ -115,9 +115,9 @@ Lets walk through an example of finding the import ids for a couple of resources
       - integrationId (Output): The integration ID.
     ```
 
-Typically if the import id consists of a single value (e.g. `apiId` in the Api example) then it will be the `PhysicalResourceId` from CloudFormation. Similarly if it is a composite id where one of the values refers to the `id`, or `name` of itself (e.g. `routeId` of the Route resource) then this will also typically be the `PhysicalResourceId`.
+When the import ID consists of a single value (for example, `apiId` in the Api example), that value is typically the `PhysicalResourceId` from CloudFormation. A composite ID whose parts include the resource's own `id` or `name` (for example, `routeId` of the Route resource) typically takes that part from the `PhysicalResourceId` as well.
 
-We would then update the `id`s in the bulk import file based on the format and values.
+Next, update the `id`s in the bulk import file based on the formats and values you found:
 
 ```json
 {
@@ -146,9 +146,9 @@ We would then update the `id`s in the bulk import file based on the format and v
 }
 ```
 
-### Looking up Resource IDs
+### Looking up resource IDs
 
-For some resource types, the resource ID may not be the value of its `PhysicalResourceId` in CloudFormation. In these cases it is necessary to perform AWS API calls to look up the necessary information:
+For some resource types, the resource ID may not be the value of its `PhysicalResourceId` in CloudFormation. In these cases, you must call the AWS API to look up the information you need:
 
 ```bash
 $ aws cloudformation list-stack-resources --stack-name test-app-dev \
@@ -168,7 +168,7 @@ $ aws cloudformation list-stack-resources --stack-name test-app-dev \
 
 ```
 
-If we look up the information on these two resources we will see these are not as straightforward as the previous examples.
+Looking up the information for these two resources shows that they are not as straightforward as the previous examples.
 
 ```bash
 $ pulumi plugin run cdk2pulumi -- ids AWS::ApplicationAutoScaling::ScalingPolicy
@@ -192,7 +192,7 @@ Parts:
 
 ```
 
-Starting with the `ScalingPolicy` resource we can see that we need the `arn` which matches the `PhysicalResourceId`, but we also need the `scalableDimension` which is not in the CloudFormation data. Based on the information provided from the `ids` command we might be able to look at that CloudFormation resource and figure out which `scalableDimension` to use, otherwise we can use the `cloudcontrol` CLI commands. The `aws cloudcontrol list-resources` command will list all the resources of that type, which we can filter using `jq` to only include entries that have the part of the identifier that we know.
+Starting with the `ScalingPolicy` resource, the `arn` matches the `PhysicalResourceId`, but the `scalableDimension` is not in the CloudFormation data. The output of the `ids` command may be enough to determine which `scalableDimension` that CloudFormation resource uses; otherwise, use the `cloudcontrol` CLI commands. The `aws cloudcontrol list-resources` command lists all the resources of that type, and you can filter it with `jq` to include only entries containing the part of the identifier you already know.
 
 ```bash
 $ aws cloudcontrol list-resources --type-name AWS::ApplicationAutoScaling::ScalingPolicy --resource-model '{"ServiceNamespace": "dynamodb"}' --profile dev-admin | jq '.ResourceDescriptions[] | select(.Identifier | contains("arn:aws:autoscaling:us-east-2:12345678910:scalingPolicy:c54f759a-aa04-4c0e-afbc-d45a960593a4:resource/dynamodb/table/Example-Dev-StorageDynamoTable201FACD8-1KCPDDFW2WLP6:policyName/ExampleDevStorageDynamoTableReadScalingTargetTrackingDE82FE6D")) | .Identifier'
@@ -202,7 +202,7 @@ $ aws cloudcontrol list-resources --type-name AWS::ApplicationAutoScaling::Scali
 
 ```
 
-The `EIP` resource is an example of a resource which has an id containing a value that cannot be determined by either the CloudFormation data or the template. It requires the `publicIp`, which we have, and the `allocationId` which we do not. We can use the same `aws cloudcontrol list-resources` command to find the correct identifier.
+The `EIP` resource has an ID containing a value that cannot be determined from either the CloudFormation data or the template. It requires the `publicIp`, which the stack resource listing provides, and the `allocationId`, which it does not. Use the same `aws cloudcontrol list-resources` command to find the correct identifier.
 
 ```bash
 $ aws cloudcontrol list-resources --type-name AWS::EC2::EIP --profile dev-admin | jq '.ResourceDescriptions[] | select(.Identifier | contains("3.150.255.6")) | .Identifier'
