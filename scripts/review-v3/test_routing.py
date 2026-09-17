@@ -622,3 +622,59 @@ def test_pr_21698_needs_no_staging_run():
     assert r.staging_evidence_required is False
     # Still reviewed by both lanes; only the deploy requirement is gone.
     assert r.roles == {"blog", "tools"}
+
+
+# ---- the routing workflow step -------------------------------------------
+
+_TRIAGE_WF = HERE.parents[1] / ".github" / "workflows" / "claude-triage.yml"
+
+
+def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
+    """A push that widens the path set must be able to ask the new team.
+
+    The Sentinel resolves required roles from LIVE paths on every
+    evaluation, synchronize included. This step used to run only at open /
+    ready, so a push that added a `layouts/` file to a docs PR introduced a
+    required approver nobody was ever told about — under enforcement, an
+    author blocked by a team that was never pinged.
+
+    The fix is NOT "re-request on every push" (that is the notification
+    noise the sticky rule exists to prevent). It is: ask a team that has
+    never been asked on this PR. The two tests below pin both halves.
+    """
+    wf = _TRIAGE_WF.read_text()
+    step = wf.split("- name: Request lane reviewers (v3 routing)", 1)[1]
+    step = step.split("\n      - name:", 1)[0]
+
+    # Half one: the step is reachable on a push.
+    assert "github.event.action != 'synchronize'" not in step, (
+        "the routing step must not exclude synchronize — that is the gap"
+    )
+    assert "vars.REVIEW_V3_ROUTING == '1'" in step
+
+    # Half two: stickiness is preserved by an ever-requested test, and it
+    # reads the TIMELINE rather than the PR's current requested_teams.
+    # GitHub drops a team from requested_teams the moment a member reviews,
+    # so current state would re-ping a team that already answered.
+    assert 'select(.event == "review_requested")' in step
+    assert "issues/$PR/timeline" in step
+    assert "requested_team.slug" in step
+    # ...and it must not READ current state. Checked against the step's
+    # executable lines only — the comment above it names `requested_teams`
+    # precisely to explain why it is the wrong source.
+    code = "\n".join(l for l in step.splitlines() if not l.lstrip().startswith("#"))
+    assert "requested_teams" not in code, (
+        "current requested_teams is not the right source — see the docstring"
+    )
+    # Exact-slug matching, so `docs-tool` can never satisfy `docs-tools`.
+    assert "grep -qxF" in step
+
+
+def test_every_team_the_routing_step_can_request_is_in_the_config():
+    """The step requests `route-pr.py`'s `teams` output verbatim, so the
+    config's team slugs are the closed set of things it can ask for."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for slug in cfg.teams.values():
+        assert "/" in slug, slug
+        org, _, name = slug.partition("/")
+        assert org and name, slug

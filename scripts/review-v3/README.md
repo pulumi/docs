@@ -229,9 +229,24 @@ labels. `routing.py` fails closed on any config it cannot validate.
 
 The same resolution has two consumers. The Sentinel resolves it itself from
 live API state to decide what G3 requires. Triage resolves it through
-`route-pr.py` and *requests* those teams as PR reviewers, once at open /
-ready — never on synchronize, because assignments are sticky and a
-re-request on every push is the notification noise v3 exists to remove.
+`route-pr.py` and *requests* those teams as PR reviewers — each team once
+per PR, on open / ready **or on the push that first makes it required**.
+
+The rule is "ask a team that has never been asked on this PR", and the
+distinction from "not currently requested" is load-bearing. Assignments stay
+sticky: a team that reviewed (GitHub drops it from `requested_teams` when it
+does) or that a human un-requested is never re-pinged, because a re-request
+on every push is the notification noise v3 exists to remove. The test is
+therefore the timeline's `review_requested` events, not the PR's current
+`requested_teams`.
+
+What that buys is the case the open/ready-only version missed. The Sentinel
+resolves from live paths on every evaluation, synchronize included, so a
+push that WIDENS the path set — a docs PR that grows a `layouts/` file —
+introduced a required approver nobody had been told about. Under enforcement
+that is an author blocked by a team that was never pinged, with nothing on
+the PR saying so. A first request for a newly-required team is not a
+re-request; it is the notification that was missing.
 Rollout switch: repo variable `REVIEW_V3_ROUTING` — `'1'` turns on both the
 reviewer request and triage's synchronize label-delta pass; unset (how it
 ships) means a push runs no triage pass and no team is ever requested, so
