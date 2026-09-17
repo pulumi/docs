@@ -20,6 +20,14 @@ pulumi_cloud_feature: self-hosting
 
 ## 2026
 
+### September
+
+* Upgraded OpenSearch to 3.7.0 across the self-hosted installers, matching the version Pulumi Cloud runs
+
+{{< notes type="warning" >}}
+Breaking Change: Installers that deploy an OpenSearch cluster now deploy 3.7.0. Redeploying takes that cluster across the OpenSearch 2.x to 3.x major boundary, so plan for it rather than picking it up on your next update. If instead you point the service at an OpenSearch cluster you manage yourself, nothing changes on this release: the service stays compatible with 2.x, so you can update the service and keep that cluster where it is. For upgrade steps, see the README for your [installer](/docs/administration/self-hosting/deployment-options/).
+{{< /notes >}}
+
 ### August
 
 * Tightened encryption checks for Pulumi ESC environments: ciphertext that was copied from another environment is now blocked when the environment is opened
