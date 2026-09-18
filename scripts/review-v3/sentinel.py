@@ -12,11 +12,14 @@ One blocking check-run answers "is this PR mergeable?" from five gates:
                         every matrix-required team, or — under
                         `approval.scope: any-team` — of any routing team, or
                         a repo admin when `approval.admins_satisfy` is on
-  G4 infra-evidence     a change on `staging_evidence.paths` carries a green
+  G4 deploy-evidence    a change on `staging_evidence.paths` carries a green
                         staging/pulumi-test-io commit status at the current
-                        head SHA, posted by a trusted writer. NOT the same
-                        set as `domain:infra`: the matrix answers who
-                        reviews, this answers what must be demonstrated
+                        head SHA, posted by a trusted writer. That list is
+                        narrow on purpose — only what can break `pulumi up`,
+                        since a PR's own build already runs the pipeline in
+                        preview mode. NOT the same set as `domain:infra`:
+                        the matrix answers who reviews, this answers what
+                        must be applied to be believed
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `sentinel:oversized-ack` in the approving review body
 

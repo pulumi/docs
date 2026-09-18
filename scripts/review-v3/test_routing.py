@@ -548,27 +548,26 @@ def test_real_config_staging_gate_covers_the_deploy_and_nothing_else():
     """The live `staging_evidence.paths` list, asserted against the paths it
     is meant to catch and the ones it is meant to let through.
 
-    The let-through half is the point of the section. `scripts/redirects/`
-    is the case that forced it (PR #21698): `domain:infra`, so it used to
-    demand a ~9-minute deploy of a shared, lock-contended stack to prove
-    that a two-line redirect data file parsed."""
+    The let-through half is the point of the section, and it grew a lot on
+    2026-09-18. The gate exists for one thing: proving `pulumi up` lands.
+    Every PR already runs the same pipeline in preview mode via
+    `make ci_pull_request`, so a build script is exercised for real on the
+    PR that changes it — the second deploy proved nothing the first had not.
+    What a preview cannot do is APPLY, and that gap is the whole gate.
+
+    `scripts/redirects/` is the case that forced the section (PR #21698):
+    `domain:infra`, so it used to demand a ~9-minute deploy of a shared,
+    lock-contended stack to prove that a two-line data file parsed."""
     requires = (
-        # The Pulumi program and the build entry points.
+        # The program `pulumi up` applies.
         "infrastructure/index.ts",
         "infrastructure/Pulumi.www-testing.yaml",
-        "Makefile",
-        "package.json",
-        # The scripts `make ci_push` executes, and the subtrees they run.
-        "scripts/ci-push.sh",
-        "scripts/build-site.sh",
+        # The `update` branch a PR never runs, and the call chain into it.
         "scripts/run-pulumi.sh",
-        "scripts/sync-and-test-bucket.sh",
-        "scripts/make-s3-redirects.js",
+        "Makefile",
+        "scripts/ci-push.sh",
+        # The serializer that keeps two `pulumi up`s off the stack.
         "scripts/await-in-progress.js",
-        "scripts/search/main.js",
-        "scripts/meta-images/render.mjs",
-        "scripts/content/generate-docs-content.js",
-        "scripts/versioned-docs/inject-live-sdk-selectors.sh",
         # The two workflows that run it.
         ".github/workflows/build-and-deploy.yml",
         ".github/workflows/testing-build-and-deploy.yml",
@@ -579,7 +578,21 @@ def test_real_config_staging_gate_covers_the_deploy_and_nothing_else():
     exempt = (
         # Data the deploy reads but cannot be broken by. The #21698 case.
         "scripts/redirects/general-broken-links-redirects.txt",
-        # Tooling that never runs during a deploy.
+        # Build scripts. These DO run during a deploy — and during every
+        # PR's preview build, which is the point: the PR that changes one
+        # has already run it. A second deploy re-proves nothing.
+        "package.json",
+        "yarn.lock",
+        "theme/webpack.config.js",
+        "scripts/build-site.sh",
+        "scripts/ensure.sh",
+        "scripts/minify-css.js",
+        "scripts/generate-meta-images.mjs",
+        "scripts/sync-and-test-bucket.sh",
+        "scripts/make-s3-redirects.js",
+        "scripts/search/main.js",
+        "scripts/content/generate-docs-content.js",
+        # Tooling that never runs during a deploy at all.
         "scripts/review-v3/sentinel.py",
         "scripts/lint/lint-markdown.js",
         "scripts/link-checker/check.js",

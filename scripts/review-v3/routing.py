@@ -908,10 +908,17 @@ def self_test() -> int:
         "scripts/lint/lint-markdown.js": False,
         ".github/workflows/blog-review-index.yml": False,
         "content/blog/foo/index.md": False,
+        # A build script the deploy DOES run — and so does every PR's own
+        # preview build, which is why it came off the gate on 2026-09-18.
+        "scripts/search/main.js": False,
+        "scripts/build-site.sh": False,
+        "package.json": False,
+        # What a preview cannot prove: the apply, and the chain into it.
         "infrastructure/index.ts": True,
+        "scripts/run-pulumi.sh": True,
         "Makefile": True,
         "scripts/ci-push.sh": True,
-        "scripts/search/main.js": True,
+        "scripts/await-in-progress.js": True,
         ".github/workflows/testing-build-and-deploy.yml": True,
     }
     try:

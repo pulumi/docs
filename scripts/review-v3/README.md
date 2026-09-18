@@ -110,12 +110,14 @@ escalating would misreport an API hiccup as a corrupt PR.
 `.github/review-routing.yml` — a path list, NOT a subject. It used to be a
 `staging_evidence: required` cell on the matrix's `infra` row, which made the
 approver and the blast radius the same question and left "bend the path's
-domain" as the only way to narrow the gate. The list is the Pulumi program,
-the build entry points, the scripts `make ci_push` actually runs, and the two
-workflows that run it. A `domain:infra` path that the deploy merely *reads*
-(`scripts/redirects/*.txt`) or never touches (an unrelated workflow, the lint
-and link-check scripts) is still tools' to approve and no longer asks for a
-~9-minute deploy of the shared stack. `routing.requires_staging_evidence()`
+domain" as the only way to narrow the gate. The list is what can break `pulumi up`:
+the Pulumi program, `run-pulumi.sh`, the `make ci_push` call chain into it,
+`await-in-progress.js`, and the two deploy workflows. Everything else came
+off on 2026-09-18, because a PR already runs the same pipeline in preview
+mode (`make ci_pull_request`) — a build script is exercised for real on the
+PR that changes it, and asking for a second ~9-minute deploy of the shared
+stack to re-prove it is theater. What preview genuinely cannot do is
+*apply*, and that gap is the whole gate. `routing.requires_staging_evidence()`
 answers it per path; the matcher is segment-aware (`*` never crosses `/`)
 because `fnmatch` would have made `scripts/*` match `scripts/redirects/`.
 

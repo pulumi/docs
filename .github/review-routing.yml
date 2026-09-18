@@ -223,10 +223,24 @@ overrides:
 # pointed at `/registry`, which is proxied to another distribution, so they
 # could never fire no matter how green the deploy went.
 #
-# The bar for being on this list: could changing this path break or alter the
-# deploy itself? That means the Pulumi program, the build entry points, the
-# scripts `make ci_push` actually executes, and the two workflows that run
-# it. NOT data the deploy merely reads, and not the ~50 other scripts and ~60
+# THE BAR, narrowed 2026-09-18: could changing this path break or alter
+# `pulumi up`, in a way the PR's own build would not already have shown?
+#
+# That qualifier is doing the work. Every PR runs `make ci_pull_request`,
+# which is this same pipeline in preview mode -- build-site.sh,
+# sync-and-test-bucket.sh, generate-search-index.sh, run-pulumi.sh preview,
+# make-s3-redirects.sh, all of it, for real, against the preview bucket. A
+# change to a build script is therefore already exercised on the PR that
+# makes it, and demanding a second nine-minute deploy to re-prove it is
+# theater. This list used to do exactly that for 20-odd paths.
+#
+# The one thing a PR cannot do is APPLY. `pulumi preview` reads the plan out
+# loud; it does not create the resource that fails on create. That gap is the
+# entire reason this gate exists, so the list is now just the paths that can
+# change what `pulumi up` does, or whether it runs at all. Anything a PR
+# build already executes comes off, however deploy-adjacent it looks.
+#
+# NOT data the deploy merely reads, and not the ~50 other scripts and ~60
 # other workflows that never run during one.
 #
 # Patterns are matched against the PR's changed paths, repo-root-relative:
@@ -394,42 +408,29 @@ matrix: # subject x change type -> role (never 'none'; see above)
 
 staging_evidence:
   paths:
-    # The Pulumi program that provisions the stack the deploy updates.
+    # The program `pulumi up` applies. The one thing preview cannot prove.
     - infrastructure/
-    # Build entry points and the dependency manifest `make ensure` installs.
-    - Makefile
-    - package.json
-    - yarn.lock
-    # `make ensure` runs `make build-assets`, which is
-    # `yarn --cwd theme run build` -- so the theme bundler config is in the
-    # deploy path even though nothing under scripts/ names it.
-    - theme/webpack.config.js
-    # `make ci_push` and everything it sources or invokes, in call order.
-    - scripts/ci-push.sh
-    - scripts/ci-login.sh
-    - scripts/common.sh
-    - scripts/ensure.sh
-    - scripts/prettier.sh
-    - scripts/build-site.sh
-    - scripts/generate-meta-images.mjs
-    - scripts/inline-critical-css.js
-    - scripts/minify-css.js
-    - scripts/sync-and-test-bucket.sh
-    - scripts/translate-redirects.js
-    - scripts/run-browser-tests.sh
-    - scripts/bucket-tagging.json
-    - scripts/generate-search-index.sh
-    - scripts/await-in-progress.js
+    # The `update` branch of run-pulumi.sh: `refresh -t $CDN_PULUMI_URN`,
+    # `up --yes`, and the CloudFront invalidation after it. A PR only ever
+    # runs the `preview` branch, so this code path is otherwise untested
+    # until it runs against production.
     - scripts/run-pulumi.sh
-    - scripts/make-s3-redirects.sh
-    - scripts/make-s3-redirects.js
-    # Subtrees those scripts execute.
-    - scripts/content/        # build-site.sh -> generate-docs-content.js
-    - scripts/cors/           # sync-and-test-bucket.sh -> cors.json
-    - scripts/meta-images/    # generate-meta-images.mjs imports
-    - scripts/search/         # generate-search-index.sh -> search/main.js
-    - scripts/versioned-docs/ # build-site.sh -> inject-live-sdk-selectors.sh
-    # The two workflows that run `make ci_push`.
+    # The call order into that. `make ci_pull_request` runs a DIFFERENT
+    # script (ci-pull-request.sh), so the ci_push path never executes on a
+    # PR -- break it and the first run is the real one.
+    - Makefile
+    - scripts/ci-push.sh
+    # Serializes `pulumi up` against the shared stack. Runs only in ci_push,
+    # immediately before the update, and exists for no other purpose than to
+    # keep two of them off the stack at once.
+    - scripts/await-in-progress.js
+    # The two workflows that run `make ci_push`. Be honest about what the
+    # evidence covers: a staging deploy runs testing-build-and-deploy.yml, so
+    # a change THERE is directly demonstrated. build-and-deploy.yml is its
+    # structural twin -- same `make ci_push` step, same env keys; only the
+    # GitHub Environment differs, which swaps the stack -- so a staging run
+    # validates the shape and not that file. Partial evidence, kept on
+    # purpose: better than none for the workflow that deploys production.
     - .github/workflows/build-and-deploy.yml
     - .github/workflows/testing-build-and-deploy.yml
 
