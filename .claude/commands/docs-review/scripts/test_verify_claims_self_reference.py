@@ -253,10 +253,10 @@ def test_real_regression_survives_when_independently_confirmed(api):
      "could not settle it"),
     (verify_block("contradicted", "The live guide says enabled by default.",
                   "https://www.pulumi.com/docs/iac/guides/clouds/aws/ecr/"),
-     "returned `contradicted` on same-site evidence again"),
+     "returned `contradicted` on non-independent evidence again"),
     (verify_block("contradicted", "Another guide says enabled by default.",
                   "https://www.pulumi.com/docs/iac/guides/clouds/aws/ecs/"),
-     "returned `contradicted` on same-site evidence again"),
+     "returned `contradicted` on non-independent evidence again"),
 ])
 def test_unsettled_recheck_downgrades_and_keeps_the_reasoning(api, recheck_block, outcome):
     api["script"] = {"pass3": [ledger_block("21602")], "pass1": [recheck_block]}
@@ -375,3 +375,41 @@ def test_generated_from_data_gate_takes_precedence(api):
         "https://www.pulumi.com/docs/reference/pre-built-policy-packs/cis-aws/")]}
     rec = vc.run_verifier("k", claim, "pass3", None, "m", REPO_ROOT, False)
     assert rec["source_discipline_gate"] == "generated-from-data" and api["order"] == ["pass3"]
+
+
+# ---- own-file-only: a `contradicted` citing nothing but the reviewed file ----
+
+OWN_FILE = "content/docs/iac/concepts/providers/any-terraform-provider.md"
+
+
+def _own_claim():
+    return {"file": OWN_FILE, "line_range": "L57", "type": "version",
+            "text": "The example Pulumi YAML pins the `terraform-provider` package's `random` provider to version 1.4.0."}
+
+
+def test_own_file_only_shape_matches_repo_and_bare_paths():
+    for src in (f"repo:{OWN_FILE}", f"repo:{OWN_FILE} (line 289)", OWN_FILE):
+        assert vc.source_discipline_shape(_own_claim(), src) == "own-file-only", src
+
+
+def test_own_file_alongside_independent_source_is_not_gated():
+    for src in (f"repo:{OWN_FILE}; gh release list -R pulumi/pulumi-terraform-provider",
+                f"repo:{OWN_FILE}; pulumi/registry themes/default/data/registry/packages/honeycombio.yaml",
+                f"repo:{OWN_FILE} and github.com/pulumi/pulumi-terraform-provider",
+                "WebSearch ran query \"x\"; top results didn't address the claim"):
+        assert vc.source_discipline_shape(_own_claim(), src) is None, src
+
+
+def test_own_file_only_gates_contradicted_but_not_mismatch():
+    root = Path(".")
+    rec = {"verdict": "contradicted", "source": f"repo:{OWN_FILE}"}
+    assert vc._gate_for_verdict(_own_claim(), rec, root) == "own-file-only"
+    # A page that disagrees with itself is a legitimate internal-consistency finding.
+    rec = {"verdict": "mismatch", "source": f"repo:{OWN_FILE}"}
+    assert vc._gate_for_verdict(_own_claim(), rec, root) is None
+
+
+def test_own_file_recheck_note_names_the_three_outcomes():
+    msg = vc.build_user_message(_own_claim(), "pass1", None,
+                                recheck={"gate": "own-file-only", "urls": [], "own_path": None})
+    assert "not-a-claim" in msg and "mismatch" in msg and "file under review" in msg
