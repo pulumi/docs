@@ -39,13 +39,13 @@ case_studies:
     items:
         - name: SST
           link: https://sst.dev/blog/moving-away-from-cdk
-          logo: sst
+          customer: sst
           description: |
             SST builds a new version of SST (Ion) on Pulumi instead of CDK because of its limitations around speed, error handling, leaky abstractions, non-AWS provider support, and more.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Snowflake uses Pulumi to allow their application and infrastructure teams to truly treat their infrastructure as software.
 
