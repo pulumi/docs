@@ -3,7 +3,7 @@
 // One Satori renderer (blogTree) draws the landscape 1200x628 OpenGraph card for
 // a blog post from already-resolved inputs (title + optional feature-image path).
 // It replaces the committed, skill-composited meta.png: blog posts now get a
-// build-time card like docs / events / case-studies (via generate-meta-images.mjs).
+// build-time card like docs / events / customers (via generate-meta-images.mjs).
 //
 // Layout mirrors the retired Python composite
 // (.claude/commands/blog-*/scripts/compose_meta_image.py, "meta mode"): the
