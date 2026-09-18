@@ -5,23 +5,25 @@ cloud, built as a Pulumi project and saved to a Pulumi Cloud account they can
 claim afterward. Follow these steps in order. Where you have a shell, do the
 work yourself; otherwise give the user the exact commands to run.
 
-## 1. Confirm the CLI is available
+## 1. Install the CLI and put it on the PATH
 
-Run `npx pulumi version` to confirm the CLI is reachable; it does not touch
-Pulumi Cloud, and the first run downloads it, so allow a moment. Prefer `npx`,
-which resolves `pulumi` for you. If `npx` or Node.js is missing, install with
-the native installer instead:
+The user should be able to run `pulumi` now and in new shells, so onboarding
+must leave a real CLI on their PATH — not just a per-session `npx` shim. First
+check whether it is already installed: `pulumi version` (this does not touch
+Pulumi Cloud). If that works, continue.
+
+If `pulumi` is not found, install it with the native installer:
 
     curl -fsSL https://get.pulumi.com | sh
 
-The native installer does not add `pulumi` to the PATH, so a fresh shell won't
-find it. Note the install directory from the installer's output (default
-`$HOME/.pulumi/bin`), then:
+It installs to `$HOME/.pulumi/bin` (confirm the exact directory from the
+installer's output) but does not modify the PATH, so a fresh shell won't find
+`pulumi` yet. Put it on the PATH:
 
-- Make it work now: use the full path (`$HOME/.pulumi/bin/pulumi ...`) or export
-  it for the session (`export PATH="$HOME/.pulumi/bin:$PATH"`).
-- Make it permanent: offer to add that directory to the PATH in the user's
-  shell profile. Shells and profiles vary, so detect the user's shell (e.g. via
+- For now: export it for the session (`export PATH="$HOME/.pulumi/bin:$PATH"`)
+  or use the full path (`$HOME/.pulumi/bin/pulumi ...`).
+- Permanently: offer to add that directory to the PATH in the user's shell
+  profile. Shells and profiles vary, so detect the user's shell (e.g. via
   `$SHELL`) and use the matching profile and syntax rather than assuming zsh.
   Never edit the profile automatically — only with the user's go-ahead. If they
   decline or you can't write it, give them a copyable command for their shell
@@ -30,8 +32,11 @@ find it. Note the install directory from the installer's output (default
       # The Pulumi CLI is installed at $HOME/.pulumi/bin
       echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
 
-Whichever form reaches the CLI — `npx pulumi`, a PATH entry, or the full path —
-use it for every `pulumi` command below. Do not continue until `pulumi version`
+Only if the native installer can't run (say, a restricted environment) and Node
+is available, fall back to `npx pulumi` for this session — but tell the user
+plainly that `pulumi` won't be available in new shells until they install it
+natively, and point them at the installer above. Whichever form you use, use it
+for every `pulumi` command below, and don't continue until `pulumi version`
 succeeds.
 
 ## 2. Install the Pulumi skills
