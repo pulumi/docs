@@ -180,6 +180,40 @@
 # `scripts/review-v3/staging-deploy.sh`).
 #
 # -----------------------------------------------------------------------------
+# APPROVAL SCOPE
+# -----------------------------------------------------------------------------
+# `approval:` decides who can *clear* the approver gate (Sentinel G3). The
+# matrix above decides who gets *asked*. Those were the same question until
+# now, and conflating them is what made a one-line Hugo shortcode change on a
+# docs PR sit waiting on a second team's approval.
+#
+#   scope: lane      every matrix-required team must approve (the original
+#                    rule, and still the default when this section is absent)
+#   scope: any-team  a member of ANY team in `teams:` satisfies the gate,
+#                    whatever the matrix routed
+#
+# `any-team` is what we run. The matrix stays load-bearing — triage requests
+# the lane's team, the SLA sweep chases that team, and the reviewer brief
+# names them — so a `frontend` change still goes to marketing first. What
+# changed is that a mixed PR no longer needs a quorum: it needs one reviewer
+# from a routing team who is willing to put their name on it. Three teams'
+# worth of required approvals on a PR that touches docs, a template, and a
+# lint script is a scheduling problem, not a quality bar, and what it
+# actually produces is a stale PR and a hand-applied `review:waived`.
+#
+# `admins_satisfy: true` lets a repository administrator's approval clear
+# the gate on its own. That concedes something already true rather than
+# granting anything new: an admin can merge past a red required check, so a
+# Sentinel that reports them blocked is reporting a block the repo does not
+# impose. It reads GitHub's own effective permission for the approver
+# (`admin` on `repos/{repo}/collaborators/{user}/permission`), not a
+# hand-kept list here — that would rot the first time someone's role
+# changed. Bot approvals never count, at any scope, admin or not.
+#
+# Both keys are optional and both default to the strict reading, so a config
+# that predates this section gates exactly as it did before.
+#
+# -----------------------------------------------------------------------------
 # CLAIMS OVERLAY
 # -----------------------------------------------------------------------------
 # `claims_overlay: {add: <role>}` stacks one extra required role on top of
@@ -324,6 +358,8 @@ staging_evidence:
 
 claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
 
+approval: { scope: any-team, admins_satisfy: true }
+
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 
 sla:
@@ -346,7 +382,9 @@ not_governed:
 # question is whether the new target resolves and still says what the
 # sentence claims, which any reviewer can answer. `any-team` lets any team
 # in `teams:` satisfy the approver gate for those; `lane` (the default) keeps
-# the ordinary per-subject rule. The mechanical bar is untouched -- a link
-# sweep is still substantive, so it still needs a human, just not a
-# particular one.
+# the ordinary per-subject rule. It is subsumed while `approval.scope` is
+# `any-team` — every PR gets that treatment now — and stays because it is the
+# narrower rule: set the scope back to `lane` and this one is live again.
+# The mechanical bar is untouched -- a link sweep is still substantive, so it
+# still needs a human, just not a particular one.
 link_only: { approval: any-team }

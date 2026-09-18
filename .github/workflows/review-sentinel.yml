@@ -171,10 +171,12 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the team-membership endpoint only — the
-          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
-          # treats lookup failures as action_required, never as "not a
-          # member", so a missing/expired token degrades loud, not wrong.
+          # Org-scoped token for the two membership endpoints G3 reads —
+          # org team membership, and (for `approval.admins_satisfy`) the
+          # approver's effective repo permission, which wants push access.
+          # The default GITHUB_TOKEN can do neither. sentinel.py treats
+          # lookup failures as action_required, never as "not a member", so
+          # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |

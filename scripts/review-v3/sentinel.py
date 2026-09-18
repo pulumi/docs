@@ -8,7 +8,10 @@ One blocking check-run answers "is this PR mergeable?" from four gates:
                         may stand on triage's prose-check comment)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
-  G3 right-approver     a human member of every matrix-required team approved
+  G3 right-approver     a human approver who can clear the lane: a member of
+                        every matrix-required team, or — under
+                        `approval.scope: any-team` — of any routing team, or
+                        a repo admin when `approval.admins_satisfy` is on
   G4 infra-evidence     infra paths carry a green staging/pulumi-test-io
                         commit status at the current head SHA
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
@@ -219,6 +222,30 @@ class Gh:
                 return "none"
             raise SentinelDataError(
                 f"team membership lookup failed ({org}/{team_slug}/{user}): {exc}"
+            ) from exc
+
+    def get_repo_permission(self, user: str) -> str:
+        """The user's effective permission on the repo: admin/write/read/none.
+
+        Used only by the `approval.admins_satisfy` rule in G3. Like the team
+        lookup it needs a token with more reach than the default
+        GITHUB_TOKEN (the endpoint wants push access), so it rides the same
+        org-scoped token; a clean 404 is "no such collaborator" and answers
+        `none`, and any other failure raises so G3 errors rather than
+        reporting a block it could not verify.
+        """
+        try:
+            out = self._run(
+                ["api", f"repos/{self.repo}/collaborators/{user}/permission",
+                 "--jq", ".permission"],
+                token_env="GH_TOKEN_TEAM_READ",
+            )
+            return out.strip() or "none"
+        except SentinelDataError as exc:
+            if "HTTP 404" in str(exc) or "Not Found" in str(exc):
+                return "none"
+            raise SentinelDataError(
+                f"repo permission lookup failed ({self.repo}/{user}): {exc}"
             ) from exc
 
     def get_label_events(self) -> list[dict]:
@@ -835,10 +862,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         missing: list[str] = []
         errors: list[str] = []
-        # A link-only sweep needs a careful human, not a particular lane's
-        # human, so `link_only.approval: any-team` lets any review team
-        # satisfy the gate. The roles stay on the record either way.
-        required = ([config.teams[r] for r in sorted(config.teams)] if resolution.any_team
+        # `resolution.any_team` means one team is enough instead of all of
+        # them — repo-wide under `approval.scope: any-team`, or for a
+        # link-only sweep under `link_only.approval: any-team`. The matrix
+        # roles stay on the record either way: they are still who triage
+        # requests and who the SLA sweep chases.
+        all_teams = [config.teams[r] for r in sorted(config.teams)]
+        required = (all_teams if resolution.any_team
                     else [config.teams.get(role, "") for role in sorted(resolution.roles)])
         satisfied_any = False
         for team_ref in required:
@@ -854,25 +884,58 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     errors.append(str(exc))
             if satisfied:
                 satisfied_any = True
+                if resolution.any_team:
+                    break  # one team clears it; no need to ask about the rest
             elif not errors:
                 missing.append(team_ref)
         if resolution.any_team:
             # One team is enough; only an empty set is a miss.
-            missing = [] if satisfied_any else ["any review team (link-only sweep)"]
+            missing = [] if satisfied_any else ["any review team"]
+        # A repo admin can merge past a red check anyway, so with
+        # `approval.admins_satisfy` the gate says so rather than reporting a
+        # block the repo does not impose on them. Consulted only when the
+        # team rule already came up short, so the ordinary PR costs no extra
+        # API calls.
+        admin_approver = ""
+        if missing and not errors and routing.admins_satisfy(config):
+            for r in approvers:
+                login = (r.get("user") or {}).get("login") or ""
+                try:
+                    if gh.get_repo_permission(login) == "admin":
+                        admin_approver = login
+                        break
+                except SentinelDataError as exc:
+                    errors.append(str(exc))
         if errors:
             gates.append(Gate(
                 "G3 right-approver", "error",
-                "Couldn't verify team membership — re-run the check. " + errors[0],
+                "Couldn't verify the approver's team membership or repo role — "
+                "re-run the check. " + errors[0],
+            ))
+        elif admin_approver:
+            gates.append(Gate(
+                "G3 right-approver", "ok",
+                # No `@` — this message also renders in the pinned status
+                # comment, where a mention would ping the approver on every
+                # re-evaluation.
+                f"approved by repository administrator `{admin_approver}`",
             ))
         elif missing:
             names = ", ".join(f"**{m}**" for m in missing)
+            if resolution.any_team:
+                names += " (" + ", ".join(all_teams) + ")"
+            admin_clause = (" or a repository administrator"
+                            if routing.admins_satisfy(config) else "")
             gates.append(Gate(
                 "G3 right-approver", "red",
-                f"Needs approval from a member of {names} — no qualifying human "
-                "approval yet (bot approvals never count).",
+                f"Needs approval from a member of {names}{admin_clause} — no "
+                "qualifying human approval yet (bot approvals never count).",
             ))
         else:
-            gates.append(Gate("G3 right-approver", "ok", "matrix-required approval present"))
+            gates.append(Gate(
+                "G3 right-approver", "ok",
+                "a routing-team member approved" if resolution.any_team
+                else "matrix-required approval present"))
 
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:

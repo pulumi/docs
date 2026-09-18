@@ -71,7 +71,7 @@ MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 TOP_LEVEL_KEYS = frozenset({
     "schema", "teams", "bots", "matrix", "staging_evidence", "claims_overlay",
     "external_contributors", "sla", "author_staleness", "waive",
-    "not_governed", "link_only",
+    "not_governed", "link_only", "approval",
 })
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
@@ -81,6 +81,13 @@ AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
+APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
+# Who can satisfy the approver gate (G3) on an ordinary PR. `lane` is the
+# per-subject rule the matrix resolves; `any-team` says a member of any team
+# in `teams:` satisfies it, whatever the matrix routed. The matrix still
+# decides who gets REQUESTED — scope only decides who can clear the gate.
+APPROVAL_SCOPE = frozenset({"lane", "any-team"})
+
 LINK_ONLY_KEYS = frozenset({"approval"})
 # Who may approve a diff whose every changed line differs only in a link.
 # `lane` is the ordinary rule: the subject's own team. `any-team` says any
@@ -124,6 +131,7 @@ class Config:
     # Sentinel does not govern at all. See the yaml header for the semantics.
     not_governed: dict = field(default_factory=dict)
     link_only: dict = field(default_factory=dict)
+    approval: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -134,7 +142,8 @@ class Resolution:
     subjects: dict[str, str]  # changed path -> subject
     reasons: list[str]
     # True when any team in `teams:` satisfies the approver gate instead of
-    # the lane's own team (see `link_only.approval` in the config).
+    # the lane's own team — either repo-wide (`approval.scope: any-team`) or
+    # for this diff alone (`link_only.approval: any-team`).
     any_team: bool = False
 
     def to_json(self) -> dict:
@@ -399,6 +408,22 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         if approval not in LINK_ONLY_APPROVAL:
             errors.append("link_only.approval must be one of: " + ", ".join(sorted(LINK_ONLY_APPROVAL)))
 
+    # ---- approval (optional) ----------------------------------------------
+    # Absent means `{scope: lane, admins_satisfy: false}` — the strictest
+    # reading, so a config that predates this section keeps the old gate.
+    approval_cfg = raw.get("approval", {})
+    if approval_cfg is None:
+        approval_cfg = {}
+    if not isinstance(approval_cfg, dict):
+        errors.append("approval must be a mapping with optional 'scope' and 'admins_satisfy'")
+        approval_cfg = {}
+    else:
+        _check_unknown_keys(approval_cfg, APPROVAL_KEYS, "approval", errors)
+        if approval_cfg.get("scope", "lane") not in APPROVAL_SCOPE:
+            errors.append("approval.scope must be one of: " + ", ".join(sorted(APPROVAL_SCOPE)))
+        if not isinstance(approval_cfg.get("admins_satisfy", False), bool):
+            errors.append("approval.admins_satisfy must be true or false")
+
     if errors:
         return None, errors, warnings
 
@@ -415,6 +440,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         waive=waive,
         not_governed=not_governed,
         link_only=link_only,
+        approval=approval_cfg,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -534,14 +560,20 @@ def resolve_lanes(
         roles.add(overlay_role)
         reasons.append(f"claims overlay adds role:{overlay_role}")
 
-    # A link-only sweep changes nothing but link targets. Checking one is
-    # careful work, but it is not lane knowledge: the question is whether the
-    # target resolves and still says what the sentence claims, which any
-    # reviewer can answer. With `link_only.approval: any-team` the roles stay
-    # on the record and any team in `teams:` satisfies them.
-    any_team = bool(roles) and link_only and (config.link_only or {}).get("approval") == "any-team"
+    # Two rules can widen who satisfies the approver gate; the roles stay on
+    # the record either way, because they are also what triage requests.
+    #
+    #   - `approval.scope: any-team` is repo-wide: the matrix names the
+    #     reviewer best placed to look, not the only one allowed to.
+    #   - `link_only.approval: any-team` is per-diff, for a sweep that
+    #     changes nothing but link targets — careful work, but not lane
+    #     knowledge. It still applies when the repo-wide scope is `lane`.
+    scope = (config.approval or {}).get("scope", "lane")
+    link_only_any_team = link_only and (config.link_only or {}).get("approval") == "any-team"
+    any_team = bool(roles) and (scope == "any-team" or bool(link_only_any_team))
     if any_team:
-        reasons.append("link-only diff: any team in teams: satisfies the approver gate")
+        why = "approval.scope: any-team" if scope == "any-team" else "link-only diff"
+        reasons.append(f"{why}: any team in teams: satisfies the approver gate")
 
     return Resolution(
         roles=roles,
@@ -550,6 +582,16 @@ def resolve_lanes(
         reasons=reasons,
         any_team=any_team,
     )
+
+
+def admins_satisfy(config: Config) -> bool:
+    """Does a repository administrator's approval satisfy the approver gate?
+
+    Off unless `approval.admins_satisfy: true` — an admin can already merge
+    past a red check, so this only lets the gate say so out loud instead of
+    reporting a block the repo does not actually impose on them.
+    """
+    return bool((config.approval or {}).get("admins_satisfy"))
 
 
 def not_governed_reason(config: Config, author: str, labels: set[str] | frozenset[str]) -> str | None:
@@ -785,6 +827,38 @@ def self_test() -> int:
     del ok_cfg["not_governed"]
     cfg2, errs, _ = validate_raw(ok_cfg)
     check("not_governed is optional", errs == [] and cfg2.not_governed == {})
+
+    # ---- approval scope -------------------------------------------------
+    check("approval is optional and defaults to the lane rule",
+          config.approval == {} and admins_satisfy(config) is False
+          and resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False,
+                            config=config).any_team is False)
+    any_team_cfg, errs, _ = validate_raw({
+        **copy.deepcopy(_CANNED_CONFIG),
+        "approval": {"scope": "any-team", "admins_satisfy": True},
+    })
+    check("approval.scope: any-team validates", errs == [])
+    r = resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=any_team_cfg)
+    check("approval.scope: any-team widens the gate but keeps the routed role",
+          r.any_team is True and r.roles == {"docs-guild"})
+    check("approval.admins_satisfy is readable", admins_satisfy(any_team_cfg) is True)
+    check("a zero-role PR is not 'any team'",
+          resolve_lanes([], mechanical=False, claims=False, config=any_team_cfg).any_team is False)
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"scope": "whoever"}
+    _, errs, _ = validate_raw(bad)
+    check("approval.scope is validated", any("approval.scope" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"admins_satisfy": "yes"}
+    _, errs, _ = validate_raw(bad)
+    check("approval.admins_satisfy must be a bool", any("admins_satisfy" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"scope": "any-team", "admin": True}
+    _, errs, _ = validate_raw(bad)
+    check("an unknown approval key fails closed", any("unknown key 'admin'" in e for e in errs))
 
     # ---- validation failure modes ---------------------------------------
     bad = copy.deepcopy(_CANNED_CONFIG)
