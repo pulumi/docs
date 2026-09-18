@@ -327,8 +327,11 @@ def brief_comment():
     }
 
 
-def approval(user, utype="User", body=""):
-    return {"state": "APPROVED", "user": {"login": user, "type": utype}, "body": body}
+def approval(user, utype="User", body="", commit_id=None):
+    """An APPROVED review. `commit_id` defaults to the PR head, as GitHub
+    always sends it — pass an older SHA to model a pre-push approval."""
+    return {"state": "APPROVED", "user": {"login": user, "type": utype},
+            "body": body, "commit_id": commit_id or HEAD}
 
 
 def _state_with(fids, disposition="refuted", note="because"):
@@ -704,7 +707,8 @@ def test_infra_needs_staging_status_g4():
     assert v_red.conclusion == "failure"
 
     v_ok = sentinel.evaluate(
-        StubGh(**base, statuses=[{"context": "staging/pulumi-test-io", "state": "success"}]),
+        StubGh(**base, statuses=[{"context": "staging/pulumi-test-io", "state": "success",
+                   "creator": {"login": "github-actions[bot]"}}]),
         CONFIG)
     assert _gate(v_ok, "G4").status == "ok"
     assert v_ok.conclusion == "success", v_ok.to_json()
@@ -836,6 +840,57 @@ def test_g4_arms_for_the_whole_pr_when_one_path_qualifies():
     assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "red"
 
 
+def test_an_unattributed_staging_status_is_not_evidence():
+    """A commit status needs only push access:
+
+        gh api repos/OWNER/REPO/statuses/SHA -f state=success \
+          -f context=staging/pulumi-test-io
+
+    …which made the gate review-routing.yml calls "no waiver, no shortcut" a
+    one-line bypass. The run record cannot be forged that way.
+    """
+    base = dict(pr=pr_meta(), files=[infra_file()],
+                comments=[author_card([], state=_state_with([]))])
+    forged = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success",
+         "creator": {"login": "someone"}}])), CONFIG)
+    assert _gate(forged, "G4").status == "red"
+
+    unattributed = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success"}])), CONFIG)
+    assert _gate(unattributed, "G4").status == "red"
+
+    # The real writer still works, and the run-record witness is unaffected.
+    real = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success",
+         "creator": {"login": "github-actions[bot]"}}])), CONFIG)
+    assert _gate(real, "G4").status == "ok"
+
+
+def test_a_waive_clears_an_error_but_never_g4():
+    """`any_error` used to be tested before `waived`, so the break-glass was
+    inert in exactly the outage it exists for: an expired team-read token
+    errors G3 on every PR, so every PR sat at action_required and no waive
+    could move any of them — under a summary still claiming WAIVED."""
+    waive_events = [{"event": "labeled", "label": {"name": "review:waived"},
+                     "actor": {"login": "boss"}}]
+    base = dict(pr=pr_meta(labels=["review:waived"]),
+                files=[docs_file_substantive()],
+                label_events=waive_events,
+                memberships={("docs-guild", "boss"): "active"})
+
+    # G3 errors (token cannot read membership for the approver) — waived wins.
+    errored = sentinel.evaluate(StubGh(**dict(
+        base, reviews=[approval("flaky")], membership_error_users={"flaky"})), CONFIG)
+    assert errored.conclusion == "success", errored.to_json()
+    assert "WAIVED" in errored.title
+
+    # G4 is still not waivable.
+    infra = sentinel.evaluate(StubGh(**dict(base, files=[infra_file()])), CONFIG)
+    assert infra.conclusion == "failure"
+    assert "infra evidence has no waiver" in infra.title
+
+
 def test_g4_run_lookup_failure_blocks_rather_than_erroring():
     """An unreadable run history is 'no evidence', not action_required.
 
@@ -859,7 +914,7 @@ def test_status_comment_upserts_then_stays_byte_identical():
     assert "G3 right-approver" in body
     assert "docs-guild" in body, "a red gate carries its own remediation"
 
-    existing = [{"id": 7, "body": body}]
+    existing = [{"id": 7, "body": body, "user": {"login": sentinel.BOT_LOGIN}}]
     assert sentinel.update_status_comment(gh, v, comments=existing) is False, \
         "an unchanged verdict must not churn the comment"
     assert gh.patched == []
@@ -867,10 +922,145 @@ def test_status_comment_upserts_then_stays_byte_identical():
 
 def test_status_comment_rewrites_when_a_gate_changes():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
-    stale = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nsomething older\n"}]
+    stale = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nsomething older\n",
+              "user": {"login": sentinel.BOT_LOGIN}}]
     assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
                                           comments=stale) is True
     assert gh.patched and gh.patched[0][0] == 7
+
+
+def test_an_approval_does_not_survive_a_push():
+    """An approval is of a COMMIT. Without this, the sequence is: get a
+    clean one-line change approved, push the payload, let the review lane
+    post a fresh card, and every gate is green on an approval nobody
+    re-gave. The code used to defer this to "the ruleset's dismissal job" —
+    but AGENTS.md records branch protection is not in place, and nothing in
+    `.github/` configures dismissal, so nobody was doing it."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                memberships={("docs-guild", "guild"): "active"})
+
+    at_head = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("guild")])), CONFIG)
+    assert _gate(at_head, "G3").status == "ok"
+
+    pre_push = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("guild", commit_id="0" * 40)])), CONFIG)
+    assert _gate(pre_push, "G3").status == "red"
+    # And it must say WHY — "nobody approved" is a lie to someone looking at
+    # a green checkmark on the PR.
+    assert "guild" in _gate(pre_push, "G3").message
+    assert "earlier commit" in _gate(pre_push, "G3").message
+
+    # A malformed review with no commit_id at all does not clear the gate.
+    no_sha = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[{"state": "APPROVED",
+                                      "user": {"login": "guild", "type": "User"},
+                                      "body": ""}])), CONFIG)
+    assert _gate(no_sha, "G3").status == "red"
+
+
+def test_one_flaky_membership_lookup_does_not_poison_a_satisfied_gate():
+    """`errors` used to be tested before `satisfied_any`, so a transient 5xx
+    on one approver reported action_required with a qualifying approval
+    sitting right there."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky"), approval("guild")],
+                memberships={("docs-guild", "guild"): "active"},
+                membership_error_users={"flaky"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+
+
+def test_the_oversized_ack_must_come_from_a_qualifying_approver():
+    """`review:oversized` skips G1 and G2 and nothing verifies the PR is
+    actually oversized, so G5 is the only thing left. It read the ack from
+    the unfiltered approver list — anyone with read access can post an
+    APPROVED review, so a bystander could supply the magic string while a
+    real team member clicked plain Approve."""
+    base = dict(pr=pr_meta(labels=["review:oversized"]),
+                files=[docs_file_substantive()],
+                memberships={("docs-guild", "guild"): "active"})
+
+    bystander = sentinel.evaluate(StubGh(**dict(base, reviews=[
+        approval("guild"),
+        approval("randomer", body=f"lgtm {sentinel.OVERSIZED_ACK}"),
+    ])), CONFIG)
+    assert _gate(bystander, "G5").status == "red"
+
+    proper = sentinel.evaluate(StubGh(**dict(base, reviews=[
+        approval("guild", body=f"read it all {sentinel.OVERSIZED_ACK}"),
+    ])), CONFIG)
+    assert _gate(proper, "G5").status == "ok"
+
+
+def test_a_zero_file_pr_does_not_manufacture_an_approver():
+    """G3 reported `ok` for a PR with no changed paths — the one gate that
+    guarantees a human, passing with no human. Combined with a forged card
+    that was a green Sentinel with nobody involved."""
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(), files=[], comments=[], reviews=[]), CONFIG)
+    assert _gate(v, "G3").status == "skip"
+    assert v.conclusion != "success"
+
+
+def test_role_comments_must_come_from_the_bot():
+    """G1 and G2 were fully author-controllable until this check existed.
+
+    `_find_comment` matched the marker anywhere in any comment by anyone and
+    returned the first hit. Comments come back oldest-first, so a PR author
+    who commented before the review lane posted owned both gates for the
+    life of the PR — and `update_strip` then wrote the ⛔ banner into the
+    forgery, so the real card never showed it.
+
+    The rule is the one the writer already enforces: bot-authored, marker as
+    an exact line in the first three (`pinned-comment.sh list_role_comments`,
+    `resolve-handler.py:222`).
+    """
+    real = author_card([("F1", "must"), ("F2", "must")], state=_state_with([]))
+    real["user"] = {"login": sentinel.BOT_LOGIN, "type": "Bot"}
+    forged = {
+        "id": 1, "user": {"login": "attacker", "type": "User"},
+        "body": (f"{sentinel.AUTHOR_MARKER}\n"
+                 f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n"
+                 "## Author action guide v1 — nothing blocks merge\n\n"
+                 "### 🚨 Must fix or refute\n\n_Nothing to fix._\n"),
+    }
+    # Forgery first is the attacker's best case: oldest wins the lookup.
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(author="attacker"), files=[docs_file_substantive()],
+               comments=[forged, real]), CONFIG)
+    assert _gate(v, "G2").status == "red"
+    assert v.blocking_ids == ["F1", "F2"]
+
+    # A bot comment that merely QUOTES the marker below line 3 is not a card.
+    quoting = {
+        "id": 2, "user": {"login": sentinel.BOT_LOGIN, "type": "Bot"},
+        "body": "line1\nline2\nline3\n" + sentinel.AUTHOR_MARKER + "\n",
+    }
+    assert sentinel._find_comment([quoting], sentinel.AUTHOR_MARKER) is None
+    assert sentinel._find_comment([real], sentinel.AUTHOR_MARKER) is real
+
+
+def test_a_forged_legacy_page_is_not_a_review():
+    """Same rule for the v2 lane, which anchored on the first line but not
+    on the author — so a forged page could still stand in for a review."""
+    forged = {"id": 1, "user": {"login": "attacker", "type": "User"},
+              "body": "<!-- CLAUDE_REVIEW 1/1 -->\nnothing to see here\n"}
+    assert sentinel.legacy_pages([forged]) is None
+
+
+def test_the_status_comment_cannot_be_hijacked():
+    """The Sentinel's token can edit anyone's comment, so an unqualified
+    marker lookup let a contributor's comment absorb the pinned status."""
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    squatter = [{"id": 99, "user": {"login": "someone", "type": "User"},
+                 "body": sentinel.STATUS_MARKER + "\nmine now\n"}]
+    assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
+                                          comments=squatter) is True
+    assert gh.patched == [], "must not PATCH a comment it does not own"
+    assert gh.posted, "posts its own instead"
 
 
 def test_status_comment_rows_are_single_line():
