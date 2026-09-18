@@ -11,4 +11,4 @@ A row whose risk tier is `infra` (it touches `scripts/`, `.github/workflows/`, `
 
 What to check once it is up: open the console (F12) for Lambda@Edge errors, run a search, click through navigation, and for a `deps-lambda-edge-risk` PR confirm the bundle is under the 1 MB limit (see `pr-review:references:dependabot-labels`). **The next merge to master resets pulumi-test.io**, so deploy, check, then stamp.
 
-The Sentinel's G4 gate (infra evidence) is separate: it wants the `staging/pulumi-test-io` commit status green at the head, which the `/deploy-staging` comment lane produces. `--deploy` is the quicker manual look; it does not satisfy G4.
+The Sentinel's G4 gate (infra evidence) is separate: it wants the `staging/pulumi-test-io` commit status green at the head SHA, posted by a trusted writer. Two lanes produce it — `staging-deploy-auto.yml` dispatches one automatically for any PR touching `staging_evidence.paths`, and `/deploy-staging` is the manual retry. `--deploy` writes no status at all, so it is the quicker look and never satisfies G4.

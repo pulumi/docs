@@ -155,7 +155,7 @@ REASON_CODES = {
     "desc": "PR description names a path not in the diff, or is empty",
     "shape": "infra: touches layouts/ or .github/ (needs --include-infra to stamp); link-only: every changed line differs only in a link",
     "link-fixes": "mine: a link-only diff bypassed the lane check (`link_fixes: mine` in ~/.pr-review.yml)",
-    "gate": "none: the routing matrix requires no team approval for this change; any-team: a link-only sweep, which any review team may approve, so the row is any approver's either way",
+    "gate": "any-team: a link-only sweep, which any review team may approve, so the row is any approver's either way",
     "size": "changed lines at or over stamp_max_lines",
     "owner": "the PR's domains and their owning roles",
     "route": "the lane this PR should go to; `no-team`: GitHub says the lane's team doesn't exist, so the SLA person is the target; `team-unverified`: the token couldn't read teams, so the config's team is used unchecked",

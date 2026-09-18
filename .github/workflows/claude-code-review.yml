@@ -386,13 +386,14 @@ jobs:
       - name: Resolve PR context
         id: pr-context
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # PR number comes from the workflow_run pull_requests array on
           # the triage-chained path, or from the workflow_dispatch input
           # on the #new-review path.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            PR="${{ github.event.inputs.pr_number }}"
+            PR="$INPUT_PR"
           else
             PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           fi

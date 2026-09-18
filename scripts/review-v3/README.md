@@ -91,7 +91,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
-| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
+| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of a routing team — any team in `teams:` under `approval.scope: any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, from a repository administrator | the team slug(s) needed |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
 
@@ -110,12 +110,14 @@ escalating would misreport an API hiccup as a corrupt PR.
 `.github/review-routing.yml` — a path list, NOT a subject. It used to be a
 `staging_evidence: required` cell on the matrix's `infra` row, which made the
 approver and the blast radius the same question and left "bend the path's
-domain" as the only way to narrow the gate. The list is the Pulumi program,
-the build entry points, the scripts `make ci_push` actually runs, and the two
-workflows that run it. A `domain:infra` path that the deploy merely *reads*
-(`scripts/redirects/*.txt`) or never touches (an unrelated workflow, the lint
-and link-check scripts) is still tools' to approve and no longer asks for a
-~9-minute deploy of the shared stack. `routing.requires_staging_evidence()`
+domain" as the only way to narrow the gate. The list is what can break `pulumi up`:
+the Pulumi program, `run-pulumi.sh`, the `make ci_push` call chain into it,
+`await-in-progress.js`, and the two deploy workflows. Everything else came
+off on 2026-09-18, because a PR already runs the same pipeline in preview
+mode (`make ci_pull_request`) — a build script is exercised for real on the
+PR that changes it, and asking for a second ~9-minute deploy of the shared
+stack to re-prove it is theater. What preview genuinely cannot do is
+*apply*, and that gap is the whole gate. `routing.requires_staging_evidence()`
 answers it per path; the matcher is segment-aware (`*` never crosses `/`)
 because `fnmatch` would have made `scripts/*` match `scripts/redirects/`.
 
@@ -159,7 +161,9 @@ author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
 triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
-the human approver the demotion asked for. Rollout switch:
+the human approver the demotion asked for.
+
+Every label the evaluator reads must also appear in `review-sentinel.yml`'s label-event filter, or it only takes effect on the next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
@@ -181,8 +185,9 @@ records the weekly digest reduces). **Before flipping the switch, create the
 `gh label create` line) — the sweep applies it on the first author warn.
 
 Two lanes make G4's evidence, and a third records it.
-`staging-deploy-auto.yml` dispatches a deploy for every infra PR on
-open/push; `/deploy-staging` (`staging-deploy-pr.yml`, tools-team members
+`staging-deploy-auto.yml` dispatches a deploy for every PR on
+`staging_evidence.paths` (not every `domain:infra` PR — the two sets are
+deliberately different) on open/push; `/deploy-staging` (`staging-deploy-pr.yml`, tools-team members
 only, same-repo branches only) is the retry. Both dispatch the existing
 testing deploy at the PR head branch and write the *pending*
 `staging/pulumi-test-io` status at the deployed SHA. Deploys queue on the
@@ -223,15 +228,51 @@ that orphan (in-progress for 30+ minutes with no live spinner comment).
 ## Lane routing
 
 `.github/review-routing.yml` (repo root config, schema-versioned) maps
-subject × change type → required approver team. Subjects come from
+subject × change type → required approver team, with an ordered
+`overrides:` list consulted first, per path. Subjects come from
 `classify_path()` (shared with triage) applied to **live file lists**, never
 labels. `routing.py` fails closed on any config it cannot validate.
 
+**`classify_path()` says what a file IS; `overrides:` says who owns it.**
+Keeping those separate is the rule two misroutes bought on 2026-09-18.
+pulumi/docs#21723 fixed a Hugo bug blanking the Responses section of the
+Cloud REST API reference: `layouts/` is `domain:frontend`, which routes to
+marketing "who own how the site looks" — true of marketing chrome, false of
+the templates that render the API docs. pulumi/docs#21718 fixed a Get
+Started page: `content/docs/` is one subject with one owner, and Get Started
+is part of the marketing funnel. Both are the same shape — a subject whose
+path prefix spans more than one owner.
+
+#21723 is why the fix belongs at the ownership layer rather than in the
+classifier: its domain was *correct* (it is a template and wants the
+Hugo/dark-mode review criteria) and only its approver was wrong.
+Reclassifying it would have fixed the routing by breaking the review. An
+override moves the approver and leaves the subject, and therefore the
+criteria, alone — `resolve_lanes` records it in `overridden` (path → role)
+with the subject still in `subjects`. So: do not bend `classify_path` to
+answer an ownership question. Add an override, with the `why` the schema
+requires.
+
 The same resolution has two consumers. The Sentinel resolves it itself from
 live API state to decide what G3 requires. Triage resolves it through
-`route-pr.py` and *requests* those teams as PR reviewers, once at open /
-ready — never on synchronize, because assignments are sticky and a
-re-request on every push is the notification noise v3 exists to remove.
+`route-pr.py` and *requests* those teams as PR reviewers — each team once
+per PR, on open / ready **or on the push that first makes it required**.
+
+The rule is "ask a team that has never been asked on this PR", and the
+distinction from "not currently requested" is load-bearing. Assignments stay
+sticky: a team that reviewed (GitHub drops it from `requested_teams` when it
+does) or that a human un-requested is never re-pinged, because a re-request
+on every push is the notification noise v3 exists to remove. The test is
+therefore the timeline's `review_requested` events, not the PR's current
+`requested_teams`.
+
+What that buys is the case the open/ready-only version missed. The Sentinel
+resolves from live paths on every evaluation, synchronize included, so a
+push that WIDENS the path set — a docs PR that grows a `layouts/` file —
+introduced a required approver nobody had been told about. Under enforcement
+that is an author blocked by a team that was never pinged, with nothing on
+the PR saying so. A first request for a newly-required team is not a
+re-request; it is the notification that was missing.
 Rollout switch: repo variable `REVIEW_V3_ROUTING` — `'1'` turns on both the
 reviewer request and triage's synchronize label-delta pass; unset (how it
 ships) means a push runs no triage pass and no team is ever requested, so
@@ -261,6 +302,16 @@ cells are a config error, so `resolve_lanes` always returns at least one
 required role, triage always has a team to request, and G3 always has an
 approver to wait for. `mechanical` skips the *model* review at G1 and
 nothing else.
+
+**Who is asked and who can clear it are different questions.** `approval:`
+in the same config decides the second one. Under `approval.scope: any-team`
+(what we run) a member of any team in `teams:` satisfies G3 whatever the
+matrix routed, so a PR spanning three subjects needs one approval rather
+than a three-team quorum — the matrix still picks who gets requested, who
+the SLA sweep chases, and who the brief names. `approval.admins_satisfy`
+additionally lets a repository administrator's approval clear it, which
+concedes what a repo admin can already do at the merge box rather than
+granting anything new. Both default to the strict reading.
 
 That is a reversal, and the reason is worth keeping: the Sentinel is not the
 gate that decides mergeability. GitHub's required-review rule is, and it
