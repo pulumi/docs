@@ -1,0 +1,48 @@
+{{- $c := .customer -}}
+{{- $story := .story -}}
+{{- $active := .active -}}
+{{- $hidden := and (ne $active "") (ne $active $c.industry) -}}
+{{- $quote := $c.quote -}}
+{{- $testimonial := $quote -}}
+{{- $fill := and $c.color $c.logo_on_dark -}}
+{{- $lightFill := or (not $fill) $c.light_fill -}}
+{{- $swapsLogo := and $story $fill (ne $c.tile_logo "light") -}}
+<div class="customer-cell group{{ if $testimonial }} customer-cell-testimonial md:col-span-2{{ end }}{{ if $story }} customer-cell-linked{{ end }}{{ if $lightFill }} customer-cell-light-fill{{ end }}"
+     data-customer-cell
+     data-industry="{{ $c.industry }}"
+     {{- with $story }} data-has-story{{ end }}
+     {{- if $fill }} style="--customer-color:{{ $c.color }}"{{ end }}
+     {{- if $hidden }} hidden{{ end }}>
+    {{ if $testimonial }}
+        <div class="relative flex h-full flex-col gap-5 p-8">
+            <div class="customer-cell-logo">
+                {{ partial "customer-logo.html" (dict "customer" $c.id "class" (cond $swapsLogo "customer-cell-logo-light" "")) }}
+                {{ if $swapsLogo }}
+                    {{ partial "customer-logo.html" (dict "customer" $c.id "variant" "dark" "class" "customer-cell-logo-dark") }}
+                {{ end }}
+            </div>
+            <blockquote class="body-lg m-0 border-0 p-0">{{ $quote.text | markdownify }}</blockquote>
+            {{ with $quote.author }}
+            <div class="customer-cell-attrib mt-auto">
+                <p class="m-0 font-semibold">{{ . }}</p>
+                {{ with $quote.title }}<p class="body-sm m-0">{{ . }}</p>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+    {{ else }}
+        <div class="customer-cell-logo">
+            {{ partial "customer-logo.html" (dict "customer" $c.id "class" (cond $swapsLogo "customer-cell-logo-light" "")) }}
+            {{ if $swapsLogo }}
+                {{ partial "customer-logo.html" (dict "customer" $c.id "variant" "dark" "class" "customer-cell-logo-dark") }}
+            {{ end }}
+        </div>
+    {{ end }}
+    {{ with $story }}
+        <span class="customer-cell-badge">
+            {{ partial "badge.html" (dict "text" "Case study" "variant" "brand" "size" "sm") }}
+        </span>
+        <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ $c.name }} case study"></a>
+    {{ else }}
+        <a href="{{ $c.url }}" class="absolute inset-0" target="_blank" rel="noopener noreferrer" aria-label="{{ $c.name }} (opens in a new tab)"></a>
+    {{ end }}
+</div>
