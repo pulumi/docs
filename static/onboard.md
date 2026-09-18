@@ -3,7 +3,9 @@
 Get a new user from nothing to their first real Pulumi result in their own
 cloud, built as a Pulumi project and saved to a Pulumi Cloud account they can
 claim afterward. Follow these steps in order. Where you have a shell, do the
-work yourself; otherwise give the user the exact commands to run.
+work yourself; otherwise give the user the exact commands to run. Explain each
+key Pulumi concept briefly the first time it comes up, so the user learns as
+they go.
 
 ## 1. Install the CLI and put it on the PATH
 
@@ -120,6 +122,21 @@ for the path the user chose:
 - Migration: point `pulumi-overview` at where the existing code lives and let
   it drive; it covers the source formats above and routes from there.
 
+Teach as you build — when each concept first appears, explain it in a sentence
+or two, then move on:
+
+- Project: the user's program — a collection of related cloud resources defined
+  in code (the files `pulumi new` just created).
+- Stack: `pulumi new` also creates a stack, an isolated, independently
+  configurable instance of that program (here, `dev`); a project can have as
+  many as you need, such as dev, staging, and production.
+- Configuration: per-stack key-value settings saved in `Pulumi.<stack>.yaml`,
+  so stacks can differ without code changes.
+- Preview: the change plan `pulumi preview` (and the prompt before `pulumi up`)
+  shows before anything is created — nothing changes until the user approves.
+- Update: `pulumi up` applies that plan once confirmed, creating or changing
+  only what differs from the current state.
+
 Do not use `pulumi do` in this onboarding flow. Everything runs as a real
 Pulumi project with state, so even a single resource is a small project. Always
 run `preview` before `up`, and confirm with the user before creating anything.
@@ -148,5 +165,14 @@ Also make sure they can remove what you created, so trying Pulumi out doesn't
 leave billable cloud resources behind. If they want to keep the work, they
 claim it (step 6) and can tear it down later from their own account with
 `pulumi destroy`. If they were only experimenting, offer to run `pulumi
-destroy` now to remove everything — confirming before you destroy, as with any
-create.
+destroy` now — it deletes all the resources in the stack — confirming before
+you destroy, as with any create.
+
+Finally, point the user to the docs to solidify what they just did:
+
+- Projects: pulumi.com/docs/iac/concepts/projects/
+- Stacks: pulumi.com/docs/iac/concepts/stacks/
+- Configuration: pulumi.com/docs/iac/concepts/config/
+- `pulumi preview`: pulumi.com/docs/iac/cli/commands/pulumi_preview/
+- `pulumi up`: pulumi.com/docs/iac/cli/commands/pulumi_up/
+- `pulumi destroy`: pulumi.com/docs/iac/cli/commands/pulumi_destroy/
