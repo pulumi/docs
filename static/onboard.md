@@ -1,44 +1,38 @@
 # Onboard to Pulumi
 
 Get a new user from nothing to their first real Pulumi result in their own
-cloud, built as a Pulumi project, with the work saved to a Pulumi Cloud account
-they can claim afterward. Follow these steps in order. Where you have a shell,
-do the work yourself; where you cannot run commands, give the user the exact
-commands to run.
+cloud, built as a Pulumi project and saved to a Pulumi Cloud account they can
+claim afterward. Follow these steps in order. Where you have a shell, do the
+work yourself; otherwise give the user the exact commands to run.
 
 ## 1. Confirm the CLI is available
 
 Run `npx pulumi version` to confirm the CLI is reachable; it does not touch
-Pulumi Cloud. On first run this downloads a current Pulumi CLI, so allow a
-moment. `npx` resolves `pulumi` for you, so prefer it. If `npx` or Node.js is
-missing, install the CLI with the native installer instead:
+Pulumi Cloud, and the first run downloads it, so allow a moment. Prefer `npx`,
+which resolves `pulumi` for you. If `npx` or Node.js is missing, install with
+the native installer instead:
 
     curl -fsSL https://get.pulumi.com | sh
 
-The native installer does not put `pulumi` on the PATH — a fresh shell will not
-find it — so resolve that before continuing:
+The native installer does not add `pulumi` to the PATH, so a fresh shell won't
+find it. Note the install directory from the installer's output (default
+`$HOME/.pulumi/bin`), then:
 
-- Find where it installed from the installer's own output (the default is
-  `$HOME/.pulumi/bin`); use that exact directory in the steps below.
-- Make it work now: run the rest of this flow with the full path
-  (`$HOME/.pulumi/bin/pulumi ...`) or export it for the session with
-  `export PATH="$HOME/.pulumi/bin:$PATH"`.
+- Make it work now: use the full path (`$HOME/.pulumi/bin/pulumi ...`) or export
+  it for the session (`export PATH="$HOME/.pulumi/bin:$PATH"`).
 - Make it permanent: offer to add that directory to the PATH in the user's
-  shell profile. Shells and profiles vary, so detect the user's shell (for
-  example from `$SHELL`) and use the matching file and syntax rather than
-  assuming — `~/.zshrc` for zsh, `~/.bashrc` or `~/.bash_profile` for bash,
-  `~/.config/fish/config.fish` for fish, `~/.profile` as a fallback; these are
-  common cases, not the only ones. Never write to the profile automatically —
-  do it only with the user's go-ahead. If they decline or you cannot write the
-  file, give them a copyable command for their shell and state plainly where
-  the binary lives — for example, for zsh:
+  shell profile. Shells and profiles vary, so detect the user's shell (e.g. via
+  `$SHELL`) and use the matching profile and syntax rather than assuming zsh.
+  Never edit the profile automatically — only with the user's go-ahead. If they
+  decline or you can't write it, give them a copyable command for their shell
+  that names the install location — for zsh:
 
       # The Pulumi CLI is installed at $HOME/.pulumi/bin
       echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
 
 Whichever form reaches the CLI — `npx pulumi`, a PATH entry, or the full path —
-use that same form for every `pulumi` command in the steps below. Do not
-continue until `pulumi version` succeeds.
+use it for every `pulumi` command below. Do not continue until `pulumi version`
+succeeds.
 
 ## 2. Install the Pulumi skills
 
@@ -48,10 +42,9 @@ Install the Pulumi skills now so the steps below have them:
     npx skills add pulumi/agent-skills/pulumi --skill '*'
 
 Follow the `pulumi-overview` skill for the work below, not any stub `pulumi`
-skill that shipped with the CLI. If the install does not succeed, do not stop
-and do not ask the user to repair their machine. Continue with the Pulumi CLI
-directly (`pulumi new`, `pulumi up`, and each command's `--help`), which is
-enough to reach a first result.
+skill that shipped with the CLI. If the install fails, don't stop or ask the
+user to fix their machine — continue with the CLI directly (`pulumi new`,
+`pulumi up`, each command's `--help`), which is enough to reach a first result.
 
 ## 3. Ask what the user wants to do
 
@@ -80,9 +73,9 @@ the chosen template resolves before continuing; if a combination is missing,
 offer a neighboring one rather than stopping.
 
 If the user would rather describe their own infrastructure than pick a
-template, take that custom path instead: ask which cloud (AWS, Azure, GCP, or
-another provider) and what they want to build. Do not push a template on a user
-who has asked to build something specific.
+template, take that custom path: ask which cloud (AWS, Azure, GCP, or another
+provider) and what to build. Don't push a template on someone who has asked to
+build something specific.
 
 If the user wants to migrate existing infrastructure code from Terraform,
 CloudFormation, CDK, ARM, or Bicep, install the migration skills before
@@ -95,13 +88,12 @@ If the migration skill install does not succeed, continue with
 
 ## 4. Ask how to authenticate to the cloud
 
-Pulumi creates resources in the user's own cloud account, with credentials
-separate from Pulumi Cloud. Ask the user whether they already have credentials
-for the target cloud and how they are set up, since it varies: a named profile,
-environment variables, an SSO session, authenticated CLI, or a service account key. If they have
-more than one, ask which to use; if they have none, help them set up
-credentials for that provider. Ask before using credentials rather than
-detecting and choosing them yourself.
+Pulumi deploys to the user's own cloud account, using credentials separate from
+Pulumi Cloud. Ask how they authenticate to the target cloud — a named profile,
+environment variables, an SSO session, an authenticated CLI, or a service
+account key — and which to use if they have several. If they have none, help
+them set some up. Always ask before using credentials rather than detecting and
+choosing them yourself.
 
 ## 5. Build the first result as a project
 
@@ -118,9 +110,8 @@ for the path the user chose:
   HCL), then use `pulumi-overview`, Level 2. Scaffold with
   `pulumi new <cloud>-<language>`, then add the resources they asked for,
   whether that is one or several. Keep it minimal if they only want one.
-- Migration: hand it to `pulumi-overview`, which covers migrating from
-  Terraform, CloudFormation, CDK, ARM, or Bicep and routes it from there. Point
-  it at where the existing code lives and let it drive.
+- Migration: point `pulumi-overview` at where the existing code lives and let
+  it drive; it covers the source formats above and routes from there.
 
 Do not use `pulumi do` in this onboarding flow. Everything runs as a real
 Pulumi project with state, so even a single resource is a small project. Always
@@ -128,18 +119,17 @@ run `preview` before `up`, and confirm with the user before creating anything.
 
 ## 6. Save the work: surface the claim link
 
-The first time Pulumi contacts Pulumi Cloud in an agent context without saved
-credentials, it provisions a free ephemeral agent account and prints a claim
-block to stderr. The block carries a claim URL, how long the account stays
-usable, and an instruction to pass along. Read those values from what the CLI
+The first time Pulumi contacts Pulumi Cloud without saved credentials, it
+provisions a free ephemeral account and prints a claim block to stderr — a
+claim URL and how long the account stays usable. Read those from what the CLI
 printed rather than assuming them.
 
-Surface the claim URL to the user right after the first success, framed as
-saving their work: claiming transfers the project, stack, and state to their
-account and unlocks the rest of Pulumi Cloud, including Neo. Relay how long they
-have from the block, and tell them to claim after you finish, since claiming
-locks the organization during the claim process. If you are working on behalf
-of the user rather than beside them, relay the link in your response.
+Surface the claim URL right after the first success, framed as saving their
+work: claiming transfers the project, stack, and state to their account and
+unlocks the rest of Pulumi Cloud, including Neo. Relay how long they have, and
+tell them to claim after you finish, since it briefly locks the organization.
+If you're working on the user's behalf rather than beside them, include the
+link in your response.
 
 ## 7. Point to the next step
 
