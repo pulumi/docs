@@ -40,7 +40,7 @@ Then fill every field from the spec. Non-obvious ones:
 
 - `sortable_date`: compute with the stdlib recipe so the UTC offset is correct for that date (DST!):
   `python3 -c "from zoneinfo import ZoneInfo; from datetime import datetime; print(datetime(YYYY,M,D,HH,MM,tzinfo=ZoneInfo('<timezone>')).isoformat(timespec='milliseconds'))"`
-- `url_slug` = the bundle slug (or the external URL when `external: true`, which also requires `block_external_search_index: true`).
+- `event_url`: set only when the event is hosted elsewhere — an `https://…` URL or a `/…` path; the stub redirects there and is auto-`noindex`ed. Omit for a normal page. The bundle directory name is the slug.
 - `meta_image` / `meta_image_square`: leave **blank** unless step 4 renders an enriched card into the bundle.
 - `tags`: case-sensitive; `level` is exactly one of `Beginner`, `Intermediate`, `Advanced`.
 - `form`: IDs per hard rule 3. `gated: true` with empty IDs gets a `# TODO: wire in from <issue> once marketing creates the form/campaign` comment.
@@ -63,7 +63,7 @@ If the renderer fails because node dependencies are missing, skip rendering, and
 
 ### 5. Validate
 
-Run `make lint`. If it can't run (missing deps), fall back to the manual checklist in `references/event-page.md` (YAML parses; title ≤ 60 chars; meta_desc 50–160; valid `event_type` and `level`; sessions rules; slug = directory = `url_slug`). Fix and re-check until clean; report whichever validator ran and its result. Also strip trailing whitespace in files you created.
+Run `make lint`. If it can't run (missing deps), fall back to the manual checklist in `references/event-page.md` (YAML parses; title ≤ 60 chars; meta_desc 50–160; valid `event_type` and `level`; sessions rules; slug = directory; `event_url`, if set, is an `https://…` URL or `/…` path). Fix and re-check until clean; report whichever validator ran and its result. Also strip trailing whitespace in files you created.
 
 ### 6. Marketing tracking issue
 

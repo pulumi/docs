@@ -45,7 +45,7 @@ Ask **only for fields still unknown** after Step 1, in at most two `AskUserQuest
 | Duration | `60 minutes` (90 when asked) |
 | Location | `virtual`; otherwise `City, ST` |
 | Gated | `true` for Pulumi-hosted workshops/webinars; `false` for external/on-demand |
-| External? | Default `false`. `true` → `url_slug` = external URL + `block_external_search_index: true`, no form |
+| Hosted elsewhere? | If so, set `event_url` to the `https://…` URL or `/…` path; the stub redirects there and is never indexed, no form. Omit for a normal page |
 | Description (abstract) | 1–2 paragraphs; draft from whatever the user gave and show it |
 | Learn bullets | Exactly 3 outcome bullets (template convention); draft them |
 | Presenters | Prefill from git config → `data/team/team/<id>.toml` (role = its `title` + ", Pulumi"). Externals: name, role, company, optional photo |
@@ -72,8 +72,7 @@ event:
   duration: 60 minutes
   location: virtual
   gated: true
-  external: false
-  external_url: ""
+  event_url: ""        # optional; https://… or /… when hosted elsewhere, else omit
   featured: false
   description: |
     ...
