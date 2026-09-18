@@ -105,7 +105,7 @@ items:
             track: header-enterprise-solutions
           - label: Customers
             href: /customers/
-            description: How Snowflake, Mercedes-Benz, and others use Pulumi
+            description: Get a glimpse of who's using Pulumi and hear their stories
             icon: article
             track: header-enterprise-customers
           - label: Request a demo
