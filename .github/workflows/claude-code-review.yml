@@ -900,7 +900,7 @@ jobs:
         run: |
           # Added content pages, plus any blog/case-study file (any status).
           FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|case-studies)/"))) | .filename' \
+            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|customers)/"))) | .filename' \
             | paste -sd, - || true)
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
           if [ -n "$FILES" ]; then echo "readthrough scope: $FILES"; else echo "readthrough scope: none"; fi
