@@ -40,7 +40,10 @@ clean first result:
 - Migrate existing infrastructure code from Terraform, CloudFormation, CDK,
   ARM, or Bicep.
 
-Do not guess. The answer decides the path.
+When the user has no strong preference — they just want to see Pulumi work —
+recommend the template path; it is the surest first result. Honor a clear
+custom or migration intent when they have one, and do not push them off it. Do
+not guess the path silently: the answer decides it.
 
 For the template path, settle on a specific template by asking three things:
 
