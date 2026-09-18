@@ -123,19 +123,25 @@ for the path the user chose:
   it drive; it covers the source formats above and routes from there.
 
 Teach as you build — when each concept first appears, explain it in a sentence
-or two, then move on:
+or two and share its docs link so the user can open the page while you work,
+then move on:
 
 - Project: the user's program — a collection of related cloud resources defined
   in code (the files `pulumi new` just created).
+  pulumi.com/docs/iac/concepts/projects/
 - Stack: `pulumi new` also creates a stack, an isolated, independently
   configurable instance of that program (here, `dev`); a project can have as
   many as you need, such as dev, staging, and production.
+  pulumi.com/docs/iac/concepts/stacks/
 - Configuration: per-stack key-value settings saved in `Pulumi.<stack>.yaml`,
   so stacks can differ without code changes.
+  pulumi.com/docs/iac/concepts/config/
 - Preview: the change plan `pulumi preview` (and the prompt before `pulumi up`)
   shows before anything is created — nothing changes until the user approves.
+  pulumi.com/docs/iac/cli/commands/pulumi_preview/
 - Update: `pulumi up` applies that plan once confirmed, creating or changing
   only what differs from the current state.
+  pulumi.com/docs/iac/cli/commands/pulumi_up/
 
 Do not use `pulumi do` in this onboarding flow. Everything runs as a real
 Pulumi project with state, so even a single resource is a small project. Always
@@ -165,14 +171,6 @@ Also make sure they can remove what you created, so trying Pulumi out doesn't
 leave billable cloud resources behind. If they want to keep the work, they
 claim it (step 6) and can tear it down later from their own account with
 `pulumi destroy`. If they were only experimenting, offer to run `pulumi
-destroy` now — it deletes all the resources in the stack — confirming before
-you destroy, as with any create.
-
-Finally, point the user to the docs to solidify what they just did:
-
-- Projects: pulumi.com/docs/iac/concepts/projects/
-- Stacks: pulumi.com/docs/iac/concepts/stacks/
-- Configuration: pulumi.com/docs/iac/concepts/config/
-- `pulumi preview`: pulumi.com/docs/iac/cli/commands/pulumi_preview/
-- `pulumi up`: pulumi.com/docs/iac/cli/commands/pulumi_up/
-- `pulumi destroy`: pulumi.com/docs/iac/cli/commands/pulumi_destroy/
+destroy` now — it deletes all the resources in the stack
+(pulumi.com/docs/iac/cli/commands/pulumi_destroy/) — confirming before you
+destroy, as with any create.
