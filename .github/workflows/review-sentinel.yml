@@ -112,13 +112,27 @@ jobs:
           RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
           INPUT_PR: ${{ inputs.pr_number }}
         run: |
+          set -uo pipefail
           PR="${EVENT_PR:-${RUN_PR:-${INPUT_PR:-}}}"
-          if [ -z "$PR" ]; then
-            echo "No PR number resolvable from this event; nothing to evaluate."
-            echo "pr=" >> "$GITHUB_OUTPUT"
-          else
-            echo "pr=$PR" >> "$GITHUB_OUTPUT"
-          fi
+          # INPUT_PR is free text from workflow_dispatch, and this value is
+          # interpolated into later `run:` blocks as ${{ steps.pr.outputs.pr }}.
+          # Dispatching needs write access so this is defence in depth, not a
+          # fork vector — but an unvalidated value here is both a shell
+          # injection and, via `=` or a newline, a way to forge other step
+          # outputs through GITHUB_OUTPUT. Digits only.
+          case "$PR" in
+            ''|*[!0-9]*)
+              if [ -n "$PR" ]; then
+                echo "::error::PR number is not numeric: refusing to evaluate."
+              else
+                echo "No PR number resolvable from this event; nothing to evaluate."
+              fi
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "pr=$PR" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
 
       - name: Fetch secrets from ESC
         # continue-on-error: sentinel.py treats a missing/failing team-read
