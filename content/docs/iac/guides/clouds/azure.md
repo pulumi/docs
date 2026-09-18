@@ -81,7 +81,7 @@ versions are still supported for existing users:
 | Version | Status | Registry |
 |---|---|---|
 | v3 (current) | Actively developed | [/registry/packages/azure-native/](/registry/packages/azure-native/) |
-| v2 | Supported, maintenance only | [/registry/packages/azure-native-v2/](/registry/packages/azure-native-v2/) |
+| v2 | Supported, maintenance only | [/registry/packages/azure-native@2.x/](/registry/packages/azure-native@2.x/) |
 | v1 | Supported, maintenance only | Available via version selector on the registry page |
 
 Major version upgrades are documented with migration guides on the registry page. Within a major version,
