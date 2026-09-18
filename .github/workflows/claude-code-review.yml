@@ -973,7 +973,9 @@ jobs:
           include-hidden-files: true
           # A re-run attempt keeps the run id, so the name repeats.
           overwrite: true
-          retention-days: 90
+          # Matches the other debug bundles. .fetched-urls.json holds excerpts of
+          # third-party pages, which have no reason to outlive a post-mortem.
+          retention-days: 30
           if-no-files-found: ignore
       # ---- end claim verification ------------------------------------------
 

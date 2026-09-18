@@ -572,3 +572,12 @@ def test_detail_scaffold_is_a_bulleted_list():
     assert lines[0] == "#### F7 · Do this" and lines[1] == ""
     assert [ln[:6] for ln in lines[2:5]] == ["- **Li", "- **Wh", "- **Fi"]
     assert sum(ln.startswith("- **Fix:**") for ln in lines) == 1
+
+
+def test_trail_metadata_vocabularies_match_the_evidence_validator():
+    # The composer filters trail metadata to these values and the validator
+    # rejects anything outside its own copy, so the two lists must move together.
+    ve = _load("validate_evidence_for_vocab", REPO_ROOT / "scripts" / "review-v3" / "validate-evidence.py")
+    assert set(cr._TRAIL_CONFIDENCES) == ve.CONFIDENCES
+    assert set(cr._TRAIL_FRAMINGS) == ve.FRAMINGS
+

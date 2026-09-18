@@ -1049,6 +1049,10 @@ def stance_records(stances: list[dict]) -> list[dict]:
     return out
 
 
+# Mirrors CONFIDENCES / FRAMINGS in scripts/review-v3/validate-evidence.py, which
+# the publish job runs from the default branch. test_compose_v3.py pins the two
+# together: a value added here first fails validation and blocks publish; added
+# there first, it is silently dropped from the trail.
 _TRAIL_CONFIDENCES = ("high", "medium", "low")
 _TRAIL_FRAMINGS = ("exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none")
 
