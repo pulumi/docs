@@ -23,16 +23,22 @@ find it — so resolve that before continuing:
 - Make it work now: run the rest of this flow with the full path
   (`$HOME/.pulumi/bin/pulumi ...`) or export it for the session with
   `export PATH="$HOME/.pulumi/bin:$PATH"`.
-- Make it permanent: offer to append that same line to the user's shell
-  profile (`~/.zshrc` for zsh, `~/.bashrc` or `~/.bash_profile` for bash), and
-  write it only if they agree. If they decline or you cannot write the file,
-  give them a copyable command and state plainly where the binary lives — for
-  example, for zsh:
+- Make it permanent: offer to add that directory to the PATH in the user's
+  shell profile. Shells and profiles vary, so detect the user's shell (for
+  example from `$SHELL`) and use the matching file and syntax rather than
+  assuming — `~/.zshrc` for zsh, `~/.bashrc` or `~/.bash_profile` for bash,
+  `~/.config/fish/config.fish` for fish, `~/.profile` as a fallback; these are
+  common cases, not the only ones. Never write to the profile automatically —
+  do it only with the user's go-ahead. If they decline or you cannot write the
+  file, give them a copyable command for their shell and state plainly where
+  the binary lives — for example, for zsh:
 
       # The Pulumi CLI is installed at $HOME/.pulumi/bin
       echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
 
-Do not continue until `pulumi version` succeeds.
+Whichever form reaches the CLI — `npx pulumi`, a PATH entry, or the full path —
+use that same form for every `pulumi` command in the steps below. Do not
+continue until `pulumi version` succeeds.
 
 ## 2. Install the Pulumi skills
 
