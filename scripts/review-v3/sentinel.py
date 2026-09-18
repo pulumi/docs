@@ -391,16 +391,18 @@ def _find_comment(comments: list[dict], marker: str) -> dict | None:
     the WRITER already enforces and that two siblings already check:
     `pinned-comment.sh`'s `list_role_comments` requires the marker to be an
     exact line among the body's first three, and `resolve-handler.py:222`
-    requires `login == github-actions[bot]`. `_find_triage_prose_comment`
-    below checks both for the far less load-bearing triage comment. This
-    function was the one place that checked neither.
+    requires `login == github-actions[bot]`. The far less load-bearing
+    triage-prose comment was already read this way; this function was the
+    one place that checked neither, so it is now the only reader and both
+    markers come through it.
     """
     for c in comments:
         if (c.get("user") or {}).get("login") != BOT_LOGIN:
             continue
         # Exact line, first three lines — `list_role_comments`'s rule. A
         # marker merely quoted inside a body is not a role comment.
-        if marker in (c.get("body") or "").splitlines()[:3]:
+        lines = [ln.strip() for ln in (c.get("body") or "").splitlines()[:3]]
+        if marker in lines:
             return c
     return None
 
@@ -527,7 +529,6 @@ TRIVIAL_LABEL = "review:trivial"
 # instead of restating it.
 OVERSIZED_LABEL = "review:oversized"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
-TRIAGE_BOT_LOGIN = BOT_LOGIN
 
 
 def _is_external(pr_detail: dict) -> bool:
@@ -548,16 +549,6 @@ def _is_external(pr_detail: dict) -> bool:
     if not head_name or not base_name:
         return False
     return head_name != base_name
-
-
-def _find_triage_prose_comment(comments: list[dict]) -> dict | None:
-    """Triage's `<!-- TRIAGE_PROSE -->` comment (github-actions[bot]), if any."""
-    for c in comments:
-        body = (c.get("body") or "").lstrip()
-        login = (c.get("user") or {}).get("login") or ""
-        if body.startswith(TRIAGE_PROSE_MARKER) and login == TRIAGE_BOT_LOGIN:
-            return c
-    return None
 
 
 def _mechanical_and_claims(
@@ -813,7 +804,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     legacy = _find_legacy_comment(comments) if author_card is None else None
     oversized = OVERSIZED_LABEL in labels
     trivial = TRIVIAL_LABEL in labels
-    triage_prose = _find_triage_prose_comment(comments) if trivial else None
+    triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if trivial else None
     trivial_standin = False  # set when triage's prose comment satisfies G1
 
     gates: list[Gate] = []

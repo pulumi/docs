@@ -128,7 +128,14 @@
 # -----------------------------------------------------------------------------
 # `overrides:` is an ordered list of path -> role rules, consulted BEFORE the
 # matrix, per changed path. The first entry whose `paths` match a path decides
-# that path's approver; every other path still goes through `matrix`.
+# that path's role; every other path still goes through `matrix`.
+#
+# That role is who gets ASKED -- triage requests the team, the SLA sweep chases
+# it, the reviewer brief names it. Under `approval: {scope: any-team}` below it
+# is not who may CLEAR the gate, which is any routing team. Both misroutes
+# below were about the wrong people being asked, so this is the layer that
+# fixes them either way; set the scope back to `lane` and an override decides
+# the gate too.
 #
 # It exists because `matrix` answers "what kind of file is this?" and was then
 # also being used to answer "who owns it?". Those are different questions, and

@@ -641,7 +641,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     author_c, brief_c, surface = find_review_comments(comments)
     author_body = (author_c or {}).get("body") or ""
     brief_body = (brief_c or {}).get("body") or ""
-    triage_c = sentinel._find_triage_prose_comment(comments)
+    triage_c = sentinel._find_comment(comments, sentinel.TRIAGE_PROSE_MARKER)
     status = review_status(labels, surface, author_body, head_sha, triage_c is not None)
     base_merged = False
     if status == "STALE" and surface != "none":
