@@ -643,6 +643,17 @@ def test_pr_21698_needs_no_staging_run():
 _TRIAGE_WF = HERE.parents[1] / ".github" / "workflows" / "claude-triage.yml"
 
 
+@pytest.fixture(scope="module")
+def live_config():
+    """The real .github/review-routing.yml. Parsed once per module.
+
+    Seven tests were each calling load_config on the live path, and three
+    of them ALSO took the canned `config` fixture in their signature and
+    then shadowed it with a local load -- so the signature said canned
+    while the body used live."""
+    return routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+
+
 def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
     """A push that widens the path set must be able to ask the new team.
 
@@ -661,19 +672,29 @@ def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
     def _step(name: str) -> str:
         return wf.split(f"- name: {name}", 1)[1].split("\n      - name:", 1)[0]
 
-    step = _step("Request lane reviewers (v3 routing)")
+    # The decision lives in the resolve step; the request step only spends
+    # the token on whatever that step put in `pending`.
+    step = _step("Resolve lane reviewers to request")
 
-    # Half one: the step is reachable on a push — and so is the step that
-    # fetches its token. BOTH carried the `synchronize` exclusion and both
-    # lost it; pinning only the request step would let the guard come back
-    # on the ESC step, where the failure is quiet: routing then runs
-    # tokenless on every push and does nothing but log a ::warning::.
-    for name in ("Fetch ESC secrets (org-scoped routing token)",
+    # Half one: every step in the lane is reachable on a push. All three
+    # carried the `synchronize` exclusion; pinning only one would let the
+    # guard come back on another, where the failure is quiet — routing then
+    # runs tokenless, or not at all, and only logs a ::warning::.
+    for name in ("Resolve lane reviewers to request",
+                 "Fetch ESC secrets (org-scoped routing token)",
                  "Request lane reviewers (v3 routing)"):
         assert "github.event.action != 'synchronize'" not in _step(name), (
             f"{name!r} must not exclude synchronize — that is the gap"
         )
-    assert "vars.REVIEW_V3_ROUTING == '1'" in step
+        assert "vars.REVIEW_V3_ROUTING == '1'" in _step(name)
+
+    # The token is minted only when there is something to request. It is an
+    # OIDC exchange plus a CLI download, and `pending` is empty on nearly
+    # every push once the teams have been asked once.
+    assert "steps.route.outputs.pending != ''" in _step(
+        "Fetch ESC secrets (org-scoped routing token)"), (
+        "the ESC fetch must be gated on there being a team to request"
+    )
 
     # Half two: stickiness is preserved by an ever-requested test, and it
     # reads the TIMELINE rather than the PR's current requested_teams.
@@ -693,21 +714,36 @@ def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
     assert "grep -qxF" in step
 
     # Half three: a FAILED timeline read must request nobody. An empty
-    # `ASKED` makes every required team look never-asked, so swallowing the
+    # `ASKED` makes every required team look never-asked, so discarding the
     # error re-pings all of them — on every push, now that this runs on
-    # synchronize. The original `2>/dev/null | sort -u || true` did exactly
-    # that, and hid it twice over: a pipeline's exit status is the LAST
-    # command's, so `sort` succeeding masked `gh` failing.
-    code = "\n".join(l for l in step.splitlines() if not l.lstrip().startswith("#"))
-    assert "2>/dev/null" not in code, (
+    # synchronize. The original spelling was `2>/dev/null | ... || true`:
+    # `|| true` threw the status away and `2>/dev/null` threw the reason
+    # away. (`pipefail` is set for this step, so the pipe was never the
+    # problem — worth stating because the pipeline-exit-status rule is the
+    # tempting diagnosis and it is the wrong one.)
+    #
+    # Asserted on the timeline read's own statement rather than on a
+    # variable name, so renaming it or swapping `grep` for a `case` does not
+    # fail this test while a reimplementation that drops the status check
+    # does.
+    read_stmt = next(
+        (chunk for chunk in code.split("\n\n")
+         if "issues/$PR/timeline" in chunk),
+        "",
+    )
+    assert read_stmt, "could not find the timeline read"
+    assert "2>/dev/null" not in read_stmt, (
         "the timeline read must not swallow gh's stderr — a failed read has "
         "to be distinguishable from an empty one"
     )
-    assert "if ! ASKED_RAW=$(gh api" in code, (
-        "capture gh's own exit status; `gh ... | sort -u` reports sort's"
+    assert "|| true" not in read_stmt, (
+        "`|| true` discards gh's exit status, which is what made a failed "
+        "read look like 'nobody has ever been asked'"
     )
-    fail_branch = code.split("if ! ASKED_RAW=$(gh api", 1)[1].split("fi", 1)[0]
-    assert "exit 0" in fail_branch, (
+    assert read_stmt.lstrip().startswith("if !"), (
+        "the timeline read's exit status must be tested, not discarded"
+    )
+    assert "exit 0" in read_stmt.split("then", 1)[-1].split("fi", 1)[0], (
         "on a failed timeline read the step must request nobody and return"
     )
 
@@ -762,7 +798,7 @@ def test_pattern_matcher_double_star(pattern, path, want):
     assert bool(routing._pattern_to_regex(pattern).match(path)) is want
 
 
-def test_override_changes_the_owner_and_not_the_subject(config):
+def test_override_changes_the_owner_and_not_the_subject(live_config):
     """The whole point of putting ownership in its own layer.
 
     pulumi/docs#21723 was a Hugo bug blanking the Responses section of the
@@ -770,9 +806,8 @@ def test_override_changes_the_owner_and_not_the_subject(config):
     wants the Hugo/dark-mode review criteria — and only the approver was
     wrong. Reclassifying it would have fixed routing by breaking the review.
     """
-    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
     path = "layouts/partials/openapi/response-schema.html"
-    r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+    r = routing.resolve_lanes([path], mechanical=False, claims=False, config=live_config)
     assert r.roles == {"tools"}            # was marketing
     assert r.subjects[path] == "frontend"  # unchanged, so criteria are unchanged
     assert r.overridden == {path: "tools"}
@@ -807,24 +842,22 @@ def test_ordinary_paths_are_untouched_by_the_overrides():
         assert r.overridden == {}, path
 
 
-def test_override_and_matrix_paths_union_in_a_mixed_diff(config):
-    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+def test_override_and_matrix_paths_union_in_a_mixed_diff(live_config):
     r = routing.resolve_lanes(
         ["layouts/partials/openapi/x.html", "content/docs/iac/concepts/stacks.md"],
-        mechanical=False, claims=False, config=cfg,
+        mechanical=False, claims=False, config=live_config,
     )
     assert r.roles == {"tools", "docs-guild"}
     assert set(r.overridden) == {"layouts/partials/openapi/x.html"}
 
 
-def test_override_wins_for_its_path_only(config):
+def test_override_wins_for_its_path_only(live_config):
     """An overridden path must not also drag its subject into the matrix
     pass — otherwise `layouts/partials/openapi/` would stack marketing on
     top of tools and the override would add an approver instead of moving
     one."""
-    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
     r = routing.resolve_lanes(["layouts/partials/openapi/x.html"],
-                              mechanical=False, claims=False, config=cfg)
+                              mechanical=False, claims=False, config=live_config)
     assert r.roles == {"tools"}
     assert "marketing" not in r.roles
 
@@ -859,14 +892,37 @@ def test_overrides_are_optional(base_config):
     assert routing.override_role(cfg, "anything.md") is None
 
 
-def test_every_live_override_is_reachable():
-    """A pattern matching nothing in the tree is either a typo or a rule
-    whose directory moved — both silent today."""
+@pytest.fixture(scope="module")
+def tracked():
+    """Every tracked path, once per module rather than once per test."""
     import subprocess
-    tracked = subprocess.run(["git", "ls-files"], cwd=routing.REPO_ROOT,
-                             capture_output=True, text=True).stdout.split()
-    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
-    for entry in cfg.overrides:
-        hit = [p for p in tracked
-               if any(routing._pattern_to_regex(pat).match(p) for pat in entry["paths"])]
-        assert hit, f"override matches no tracked file: {entry['paths']}"
+    return subprocess.run(["git", "ls-files"], cwd=routing.REPO_ROOT,
+                          capture_output=True, text=True, check=True).stdout.split()
+
+
+def test_every_configured_path_pattern_matches_a_tracked_file(live_config, tracked):
+    """A pattern matching nothing is a typo or a moved directory, and silent.
+
+    Both pattern-bearing sections at once, and per PATTERN rather than per
+    entry. These were two tests in two modules: this one checked each
+    override entry with `any()` over its paths, so an entry with one live and
+    one dead pattern passed; the `staging_evidence` copy lived in
+    test_sentinel.py although every other staging test is here, and had the
+    stronger per-pattern assertion. A third section now gets the check for
+    free, which is the whole reason the check exists.
+    """
+    sections: list[tuple[str, str]] = [
+        ("staging_evidence.paths", pat)
+        for pat in live_config.staging_evidence.get("paths") or []
+    ]
+    for i, entry in enumerate(live_config.overrides):
+        sections += [(f"overrides[{i}].paths", pat) for pat in entry["paths"]]
+
+    # Compile once per pattern, not once per (pattern, tracked file): this
+    # comprehension used to rebuild a regex for each of ~12,700 paths.
+    dead = [f"{where}: {pat}" for where, pat in sections
+            if not any(routing._pattern_to_regex(pat).match(p) for p in tracked)]
+    assert not dead, (
+        "configured path patterns that match no tracked file:\n  "
+        + "\n  ".join(dead)
+    )

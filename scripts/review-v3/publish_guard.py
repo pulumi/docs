@@ -42,12 +42,27 @@ def latest_published_run_id(check_runs: list[dict]) -> int | None:
     return best
 
 
+def head_moved(verdict_head: str, pr_head: str | None) -> str | None:
+    """The "head moved" reason, or None. Unknown head => not moved.
+
+    Shared with sentinel.py, which asks the same question before it
+    writes the two PR comments -- those writes happen in-process, long
+    before this guard runs as a later workflow step. It had its own copy
+    and the two had already drifted: this one folds case, that one did
+    not, so a differently-cased SHA would have stopped the check-run and
+    let the comments through."""
+    if pr_head and pr_head.lower() != verdict_head.lower():
+        return (f"head moved: evaluated `{verdict_head[:9]}`, PR is at "
+                f"`{pr_head[:9]}` — the run for the new head owns the verdict")
+    return None
+
+
 def decide(my_run_id: int, verdict_head: str, pr_head: str | None,
            check_runs: list[dict]) -> tuple[bool, str]:
     """(publish?, reason). Fail toward publishing when the PR head is unknown."""
-    if pr_head and pr_head.lower() != verdict_head.lower():
-        return False, (f"head moved: evaluated `{verdict_head[:9]}`, PR is at "
-                       f"`{pr_head[:9]}` — the run for the new head owns the verdict")
+    moved = head_moved(verdict_head, pr_head)
+    if moved:
+        return False, moved
     newest = latest_published_run_id(check_runs)
     if newest is not None and newest > my_run_id:
         return False, (f"superseded: run {newest} already published a verdict at "

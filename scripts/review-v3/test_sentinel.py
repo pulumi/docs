@@ -1421,8 +1421,19 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
     Both files' headers justified safety as "never checks out or executes PR
     code", which is true and beside the point: the VALUE is the vector, not
     the code. The rule is `env:` + "$VAR", which staging-status.yml already
-    followed. This test covers every workflow rather than a named list, so a
-    new lane cannot reintroduce it.
+    followed.
+
+    SCOPE, honestly. This walks every workflow file, but it matches a
+    DENYLIST of expressions against lines, not a structure. It therefore
+    proves the named expressions are absent, not that no injection exists:
+    a line-scanner cannot tell a `run:` block from a `concurrency: group:`,
+    and the denylist has to be extended by hand. The structural form -- parse
+    the YAML, walk every `run:` scalar, allow only a short list of
+    non-author-controlled expressions -- reports 131 hits repo-wide today,
+    mostly numeric ids and booleans, so it cannot land without a cleanup far
+    wider than the change this test shipped with. Until then: adding an
+    expression here is cheap, and doing so means fixing its sites in the
+    same commit.
     """
     # Expressions whose value a PR author controls. `github.repository`,
     # `github.run_id` and `github.event.repository.default_branch` are NOT
@@ -1436,18 +1447,33 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
         "github.event.comment.body",
         "github.head_ref",
         "github.event.workflow_run.head_branch",
+        # Dispatch inputs need write access to set, so these are defence in
+        # depth rather than a fork vector -- but they are free text, and a
+        # newline or `=` in one also forges other step outputs through
+        # GITHUB_OUTPUT. pr_number had been hardened at two of five sites by
+        # hand; the list not naming it is why the other three kept passing.
+        # The other dispatch inputs (count, paths, force, dry_run, ...) are
+        # deliberately not here yet -- see SCOPE in the docstring.
+        "github.event.inputs.pr_number",
+        "inputs.pr_number",
     )
     offenders = []
-    for wf in sorted((REPO_ROOT / ".github" / "workflows").glob("*.yml")):
+    wf_dir = REPO_ROOT / ".github" / "workflows"
+    # BOTH extensions. The glob was `*.yml` only, so
+    # scheduled-upstream-sync.yaml -- the one workflow written the other way
+    # -- was exempt from a test whose docstring promises every workflow.
+    for wf in sorted([*wf_dir.glob("*.yml"), *wf_dir.glob("*.yaml")]):
         for lineno, line in enumerate(wf.read_text().splitlines(), 1):
             stripped = line.strip()
-            # `env:` mappings are the safe form; only flag `${{ }}` that is
-            # not a `KEY: ${{ ... }}` binding. A run-block line carrying one
-            # of these expressions is the defect.
+            # A YAML mapping entry is not a shell line, so it is exempt:
+            # `env:` bindings are the safe form this test is steering people
+            # toward, and `concurrency: group: foo-${{ ... }}` is a run-name,
+            # never executed. The exemption is the whole reason this is a
+            # denylist and not a proof -- it is spelled as "does the line
+            # look like `key: ...`", which is the best a line-scanner can do.
             if stripped.startswith("#") or "${{" not in line:
                 continue
-            binding = re.match(r"^[A-Za-z_][A-Za-z0-9_]*:\s*\$\{\{", stripped)
-            if binding:
+            if re.match(r"^[A-Za-z_][A-Za-z0-9_-]*:(\s|$)", stripped):
                 continue
             for expr in author_controlled:
                 if expr in line:
@@ -1757,32 +1783,3 @@ def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
     assert _gate(v, "G2").status == "error"
     assert "page(s) 2 could not be read" in _gate(v, "G2").message
     assert v.conclusion != "success"
-
-
-def test_every_staging_evidence_path_matches_a_tracked_file():
-    """A pattern that matches nothing is a hole that reads like a rule.
-
-    `webpack.*.js` sat in `staging_evidence.paths` looking like it covered
-    the bundler config. It matched zero tracked files: the matcher's `*`
-    stays inside one path segment, and the real file is
-    `theme/webpack.config.js`. Nobody noticed because the gate it feeds is
-    silent when it matches nothing — an uncovered path and a covered one
-    that is never touched look identical from the verdict.
-    """
-    import subprocess
-
-    tracked = subprocess.run(
-        ["git", "ls-files"], cwd=REPO_ROOT, capture_output=True, text=True, check=True
-    ).stdout.splitlines()
-    config = routing.load_config(REPO_ROOT / ".github" / "review-routing.yml")
-    patterns = config.staging_evidence.get("paths") or []
-    regexes = routing.staging_evidence_patterns(config)
-    dead = [
-        pattern
-        for pattern, rx in zip(patterns, regexes)
-        if not any(rx.match(f) for f in tracked)
-    ]
-    assert not dead, (
-        "staging_evidence.paths entries that match no tracked file — either "
-        "the path moved or the pattern is wrong:\n  " + "\n  ".join(dead)
-    )

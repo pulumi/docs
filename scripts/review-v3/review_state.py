@@ -77,9 +77,8 @@ def parse_state(body: str) -> dict | None:
     # row for that file, ahead of the genuine one, and `search` would read
     # the attacker's dispositions as the state. Reading from the end means
     # the block the composer actually wrote always wins.
-    m = None
-    for m in BLOCK_RE.finditer(body):
-        pass
+    matches = list(BLOCK_RE.finditer(body))
+    m = matches[-1] if matches else None
     if not m:
         if "<!-- REVIEW_STATE" in body:
             raise ValueError("REVIEW_STATE marker present but block is malformed/truncated")

@@ -90,6 +90,7 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 _REPO_ROOT = _HERE.parent.parent
 sys.path.insert(0, str(_HERE))
+import publish_guard  # noqa: E402
 import review_state  # noqa: E402
 import routing  # noqa: E402
 
@@ -140,7 +141,7 @@ STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # Identities whose `staging/pulumi-test-io` status the Sentinel will take as
 # evidence. Anyone with push access can write a commit status, so an
 # unattributed one is not evidence of anything.
-STAGING_STATUS_WRITERS = frozenset({"github-actions[bot]", "pulumi-bot"})
+STAGING_STATUS_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # The workflow `/deploy-staging` dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
@@ -225,7 +226,8 @@ class Gh:
         `_waive_state` asks the same endpoint. The whole repo deadlocks and
         nothing in the check output points at the token.
 
-        One probe, once, so the failure is named instead of inferred.
+        Cheap and idempotent (an env-var read), so every org-scoped
+        lookup runs it rather than trusting a single call site to.
         """
         if not os.environ.get("GH_TOKEN_TEAM_READ"):
             raise SentinelDataError(
@@ -236,57 +238,43 @@ class Gh:
                 "Check the ESC fetch step."
             )
 
-    def get_team_membership(self, org: str, team_slug: str, user: str) -> str:
-        """Returns 'active', 'pending', or 'none'.
+    def _org_scoped_lookup(self, api_path: str, jq: str, what: str) -> str:
+        """An org-scoped GET whose 404 means "no", not "I could not look".
 
-        A clean 404 means "not a member" (returns 'none'); any other failure
-        raises SentinelDataError so G3 errors instead of lying red. Uses the
-        org-scoped token when the workflow provides one — see
-        `require_org_read` for why its absence is not survivable.
-        """
+        Both callers below need the same three things and got them by
+        copy-paste, which promptly drifted: `get_repo_permission` was
+        missing the `require_org_read` probe its own docstring claimed,
+        so on a token-less run every approver would have answered "not an
+        admin" -- the exact 404-means-two-things conflation the probe
+        exists to stop, reintroduced one method below it.
+
+        The rule: a clean 404 is a real answer ("none"); anything else
+        raises, so the gate errors rather than reporting a block it could
+        not verify."""
         self.require_org_read()
         try:
-            out = self._run(
-                ["api", f"orgs/{org}/teams/{team_slug}/memberships/{user}", "--jq", ".state"],
-                token_env="GH_TOKEN_TEAM_READ",
-            )
+            out = self._run(["api", api_path, "--jq", jq],
+                            token_env="GH_TOKEN_TEAM_READ")
             return out.strip() or "none"
         except SentinelDataError as exc:
-            # A clean 404 is the ordinary "not a member" answer and must stay
-            # a plain `none` — anything else is a real lookup failure and
-            # keeps erroring, so G3 reports action_required rather than
-            # lying red. `_run` now carries gh's stderr in the message, so
-            # this matches on that text rather than on a CalledProcessError
-            # attribute.
             if "HTTP 404" in str(exc) or "Not Found" in str(exc):
                 return "none"
-            raise SentinelDataError(
-                f"team membership lookup failed ({org}/{team_slug}/{user}): {exc}"
-            ) from exc
+            raise SentinelDataError(f"{what} lookup failed: {exc}") from exc
+
+    def get_team_membership(self, org: str, team_slug: str, user: str) -> str:
+        """Returns 'active', 'pending', or 'none'."""
+        return self._org_scoped_lookup(
+            f"orgs/{org}/teams/{team_slug}/memberships/{user}", ".state",
+            f"team membership ({org}/{team_slug}/{user})")
 
     def get_repo_permission(self, user: str) -> str:
         """The user's effective permission on the repo: admin/write/read/none.
 
-        Used only by the `approval.admins_satisfy` rule in G3. Like the team
-        lookup it needs a token with more reach than the default
-        GITHUB_TOKEN (the endpoint wants push access), so it rides the same
-        org-scoped token; a clean 404 is "no such collaborator" and answers
-        `none`, and any other failure raises so G3 errors rather than
-        reporting a block it could not verify.
-        """
-        try:
-            out = self._run(
-                ["api", f"repos/{self.repo}/collaborators/{user}/permission",
-                 "--jq", ".permission"],
-                token_env="GH_TOKEN_TEAM_READ",
-            )
-            return out.strip() or "none"
-        except SentinelDataError as exc:
-            if "HTTP 404" in str(exc) or "Not Found" in str(exc):
-                return "none"
-            raise SentinelDataError(
-                f"repo permission lookup failed ({self.repo}/{user}): {exc}"
-            ) from exc
+        Used only by the `approval.admins_satisfy` rule in G3. The endpoint
+        wants push access, which the default GITHUB_TOKEN does not have."""
+        return self._org_scoped_lookup(
+            f"repos/{self.repo}/collaborators/{user}/permission", ".permission",
+            f"repo permission ({self.repo}/{user})")
 
     def get_label_events(self) -> list[dict]:
         out = self._run(
@@ -483,8 +471,18 @@ def _body_matches_head(body: str, head_sha: str) -> bool:
     return False
 
 
-def _card_rows(body: str, heading_prefixes: tuple[str, ...]) -> list[dict]:
-    """Finding rows from the sections whose ### heading starts with a prefix."""
+def _card_rows(body: str, heading_prefixes: tuple[str, ...], *,
+               include_unnumbered: bool = False) -> list[dict]:
+    """Finding rows from the sections whose ### heading starts with a prefix.
+
+    Rows still carrying the model's `F?` placeholder are dropped unless
+    `include_unnumbered` asks for them. That default is a contract two
+    siblings rely on and neither states: `sla-sweep.py` counts rows absent
+    from REVIEW_STATE as unanswered, and `F?` is never a key in it -- so N
+    placeholders would count N times against an author who has no id to
+    answer with, feeding `review:author-stalled` and the 21-day auto-close.
+    `collect.py` puts them on the /pr-review board. Only G2 wants them, and
+    only in order to refuse the card outright, so only G2 asks."""
     rows: list[dict] = []
     in_section = False
     for line in body.splitlines():
@@ -498,20 +496,9 @@ def _card_rows(body: str, heading_prefixes: tuple[str, ...]) -> list[dict]:
             break
         if in_section and line.startswith("|"):
             parsed = _compose.parse_finding_line(line)
-            if parsed:
+            if parsed and (include_unnumbered or parsed["id"] != "F?"):
                 rows.append(parsed)
     return rows
-
-
-class UnnumberedFinding(Exception):
-    """A blocking row still carries the model's `F?` placeholder.
-
-    `build-evidence.py` renumbers these before publish and
-    `apply-update.py` treats a surviving one as a hard error. G2 used to
-    drop them silently, which is the worst of the three readings: a card
-    that escaped renumbering passed as "every finding answered" with a live
-    blocking finding visible on screen.
-    """
 
 
 def _strip_brief_for_summary(body: str) -> str:
@@ -878,9 +865,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             ))
             state = None
         if state is not None:
-            rows = _card_rows(body, ("🚨", "❓"))
+            rows = _card_rows(body, ("🚨", "❓"), include_unnumbered=True)
             unnumbered = [r for r in rows if r["id"] == "F?"]
             if unnumbered:
+                # `build-evidence.py` renumbers these before publish and
+                # `apply-update.py` treats a survivor as a hard error. G2
+                # used to drop them silently, which is the worst of the
+                # three readings: a card that escaped renumbering passed
+                # as 'every finding answered' with a live blocking
+                # finding visible on screen.
                 gates.append(Gate(
                     "G2 findings-answered", "error",
                     f"{len(unnumbered)} blocking finding(s) still carry the "
@@ -1448,33 +1441,37 @@ def main() -> int:
             current_head = ((gh.get_pr().get("head") or {}).get("sha") or "")
         except SentinelDataError:
             current_head = verdict.head_sha  # unreadable: don't block the write
-        if current_head and verdict.head_sha and current_head != verdict.head_sha:
-            print(f"::notice::head moved {verdict.head_sha[:9]} -> "
-                  f"{current_head[:9]} during evaluation; not writing comments "
-                  f"for a superseded verdict.", file=sys.stderr)
-            print(json.dumps(verdict.to_json(), indent=2))
-            return 0
-
-    if args.update_strip and not args.report_only and not args.dry_run:
-        # Best-effort for the same reason as the status comment below: this
-        # ran before the verdict was printed, so a failed PATCH discarded a
-        # completed evaluation.
-        try:
-            update_strip(gh, verdict)
-        except SentinelDataError as exc:
-            print(f"::warning::could not update the author-card strip: {exc}",
-                  file=sys.stderr)
-    # Enforcing: always. Report-only: only where someone opted the PR in, so
-    # the dry run stays invisible to everyone who didn't ask to see it.
-    if args.status_comment and not args.dry_run and (not args.report_only or verdict.preview):
-        # Best-effort: a locked or deleted comment, or a secondary rate
-        # limit, must not suppress the verdict. This write sat before the
-        # print, so a failing PATCH threw away a perfectly good evaluation.
-        try:
-            update_status_comment(gh, verdict)
-        except SentinelDataError as exc:
-            print(f"::warning::could not maintain the status comment: {exc}",
-                  file=sys.stderr)
+        moved = publish_guard.head_moved(verdict.head_sha, current_head) if verdict.head_sha else None
+        if moved:
+            print(f"::notice::{moved}; not writing comments for a superseded "
+                  f"verdict.", file=sys.stderr)
+        else:
+            # One listing for both writers. Each used to fetch its own, so
+            # an enforcing run paginated the comment list three times.
+            try:
+                comments = gh.list_issue_comments()
+            except SentinelDataError as exc:
+                print(f"::warning::could not list comments: {exc}", file=sys.stderr)
+                comments = None
+            if comments is not None:
+                if args.update_strip and not args.report_only:
+                    # Best-effort: this ran before the verdict was printed, so
+                    # a failed PATCH discarded a completed evaluation.
+                    try:
+                        update_strip(gh, verdict, comments=comments)
+                    except SentinelDataError as exc:
+                        print(f"::warning::could not update the author-card strip: {exc}",
+                              file=sys.stderr)
+                # Enforcing: always. Report-only: only where someone opted the
+                # PR in, so the dry run stays invisible to everyone else.
+                if not args.report_only or verdict.preview:
+                    # Best-effort for the same reason: a locked comment or a
+                    # secondary rate limit must not suppress the verdict.
+                    try:
+                        update_status_comment(gh, verdict, comments=comments)
+                    except SentinelDataError as exc:
+                        print(f"::warning::could not maintain the status comment: {exc}",
+                              file=sys.stderr)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 

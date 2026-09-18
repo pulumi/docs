@@ -83,18 +83,16 @@ WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
 APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
-# Who can satisfy the approver gate (G3) on an ordinary PR. `lane` is the
-# per-subject rule the matrix resolves; `any-team` says a member of any team
-# in `teams:` satisfies it, whatever the matrix routed. The matrix still
-# decides who gets REQUESTED — scope only decides who can clear the gate.
-APPROVAL_SCOPE = frozenset({"lane", "any-team"})
 
 LINK_ONLY_KEYS = frozenset({"approval"})
-# Who may approve a diff whose every changed line differs only in a link.
-# `lane` is the ordinary rule: the subject's own team. `any-team` says any
-# team in `teams:` satisfies it, because checking a retargeted link needs a
-# careful human, not a particular lane's human.
-LINK_ONLY_APPROVAL = frozenset({"lane", "any-team"})
+# Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
+# matrix resolves; `any-team` says a member of any team in `teams:` satisfies
+# it, whatever the matrix routed -- the matrix still decides who is REQUESTED.
+# One vocabulary for both `approval.scope` (every PR) and `link_only.approval`
+# (link-only diffs), because they answer the same question at two scopes; two
+# frozensets meant a third value could be accepted by one and rejected by the
+# other with nothing noticing.
+APPROVER_SCOPE = frozenset({"lane", "any-team"})
 
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
@@ -173,6 +171,34 @@ def _bad_double_star(pattern: str) -> bool:
     `**/` form already covers the real case.
     """
     return "**" in pattern.replace("**/", "")
+
+
+def _check_path_patterns(paths, where: str, errors: list[str]) -> None:
+    """Validate a list of match patterns for `where`.
+
+    `overrides[].paths` and `staging_evidence.paths` are the same kind of
+    thing and were validated by two copies of this cascade. The copies had
+    already started to rot: the `**` rule landed in both in one commit, and
+    the second copy's message was shortened to "see overrides[].paths"
+    rather than shared. The next rule, or the next pattern-bearing section,
+    would have paid the same tax."""
+    if not isinstance(paths, list) or not paths:
+        errors.append(f"{where} must be a non-empty list of patterns")
+        return
+    for i, pattern in enumerate(paths):
+        if not _is_nonempty_str(pattern):
+            errors.append(
+                f"{where}[{i}] must be a non-empty string, got {pattern!r}")
+        elif pattern.startswith("/"):
+            errors.append(
+                f"{where}[{i}] must be repo-root-relative with no leading "
+                f"slash, got {pattern!r}")
+        elif _bad_double_star(pattern):
+            errors.append(
+                f"{where}[{i}] uses `**` outside the `**/` form, got "
+                f"{pattern!r} -- as written it collapses to a single path "
+                "segment and would match less than you meant. Write `**/` "
+                "for 'zero or more directories'.")
 
 
 def _is_nonempty_str(v) -> bool:
@@ -299,29 +325,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                 # `claims_overlay.add` was already registered here; overrides
                 # were the gap.
                 matrix_roles_used.add(role)
-            paths = entry.get("paths")
-            if not isinstance(paths, list) or not paths:
-                errors.append(f"overrides[{i}].paths must be a non-empty list of patterns")
-            else:
-                for j, pattern in enumerate(paths):
-                    if not _is_nonempty_str(pattern):
-                        errors.append(
-                            f"overrides[{i}].paths[{j}] must be a non-empty string, "
-                            f"got {pattern!r}"
-                        )
-                    elif pattern.startswith("/"):
-                        errors.append(
-                            f"overrides[{i}].paths[{j}] must be repo-root-relative "
-                            f"with no leading slash, got {pattern!r}"
-                        )
-                    elif _bad_double_star(pattern):
-                        errors.append(
-                            f"overrides[{i}].paths[{j}] uses `**` outside the "
-                            f"`**/` form, got {pattern!r} — as written it "
-                            "collapses to a single path segment and would match "
-                            "less than you meant. Write `**/` for 'zero or more "
-                            "directories'."
-                        )
+            _check_path_patterns(entry.get("paths"), f"overrides[{i}].paths", errors)
             # `why` is required on purpose: an override is a deliberate
             # exception to the matrix, and one that cannot say why it exists
             # is one nobody can safely delete later.
@@ -346,22 +350,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
             errors.append("staging_evidence.paths must be a non-empty list of path patterns")
             staging_evidence = {"paths": []}
         else:
-            for i, pattern in enumerate(paths):
-                if not _is_nonempty_str(pattern):
-                    errors.append(
-                        f"staging_evidence.paths[{i}] must be a non-empty string, "
-                        f"got {pattern!r}"
-                    )
-                elif pattern.startswith("/"):
-                    errors.append(
-                        f"staging_evidence.paths[{i}] must be repo-root-relative "
-                        f"with no leading slash, got {pattern!r}"
-                    )
-                elif _bad_double_star(pattern):
-                    errors.append(
-                        f"staging_evidence.paths[{i}] uses `**` outside the "
-                        f"`**/` form, got {pattern!r} — see overrides[].paths."
-                    )
+            _check_path_patterns(paths, "staging_evidence.paths", errors)
 
     # ---- claims_overlay -----------------------------------------------
     claims_overlay = raw.get("claims_overlay")
@@ -493,8 +482,8 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
     else:
         _check_unknown_keys(link_only, LINK_ONLY_KEYS, "link_only", errors)
         approval = link_only.get("approval", "lane")
-        if approval not in LINK_ONLY_APPROVAL:
-            errors.append("link_only.approval must be one of: " + ", ".join(sorted(LINK_ONLY_APPROVAL)))
+        if approval not in APPROVER_SCOPE:
+            errors.append("link_only.approval must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
 
     # ---- approval (optional) ----------------------------------------------
     # Absent means `{scope: lane, admins_satisfy: false}` — the strictest
@@ -507,8 +496,8 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         approval_cfg = {}
     else:
         _check_unknown_keys(approval_cfg, APPROVAL_KEYS, "approval", errors)
-        if approval_cfg.get("scope", "lane") not in APPROVAL_SCOPE:
-            errors.append("approval.scope must be one of: " + ", ".join(sorted(APPROVAL_SCOPE)))
+        if approval_cfg.get("scope", "lane") not in APPROVER_SCOPE:
+            errors.append("approval.scope must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
         if not isinstance(approval_cfg.get("admins_satisfy", False), bool):
             errors.append("approval.admins_satisfy must be true or false")
 
@@ -726,7 +715,7 @@ def resolve_lanes(
     #     knowledge. It still applies when the repo-wide scope is `lane`.
     scope = (config.approval or {}).get("scope", "lane")
     link_only_any_team = link_only and (config.link_only or {}).get("approval") == "any-team"
-    any_team = bool(roles) and (scope == "any-team" or bool(link_only_any_team))
+    any_team = bool(roles) and (scope == "any-team" or link_only_any_team)
     if any_team:
         why = "approval.scope: any-team" if scope == "any-team" else "link-only diff"
         reasons.append(f"{why}: any team in teams: satisfies the approver gate")
