@@ -657,13 +657,22 @@ def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
     never been asked on this PR. The two tests below pin both halves.
     """
     wf = _TRIAGE_WF.read_text()
-    step = wf.split("- name: Request lane reviewers (v3 routing)", 1)[1]
-    step = step.split("\n      - name:", 1)[0]
 
-    # Half one: the step is reachable on a push.
-    assert "github.event.action != 'synchronize'" not in step, (
-        "the routing step must not exclude synchronize — that is the gap"
-    )
+    def _step(name: str) -> str:
+        return wf.split(f"- name: {name}", 1)[1].split("\n      - name:", 1)[0]
+
+    step = _step("Request lane reviewers (v3 routing)")
+
+    # Half one: the step is reachable on a push — and so is the step that
+    # fetches its token. BOTH carried the `synchronize` exclusion and both
+    # lost it; pinning only the request step would let the guard come back
+    # on the ESC step, where the failure is quiet: routing then runs
+    # tokenless on every push and does nothing but log a ::warning::.
+    for name in ("Fetch ESC secrets (org-scoped routing token)",
+                 "Request lane reviewers (v3 routing)"):
+        assert "github.event.action != 'synchronize'" not in _step(name), (
+            f"{name!r} must not exclude synchronize — that is the gap"
+        )
     assert "vars.REVIEW_V3_ROUTING == '1'" in step
 
     # Half two: stickiness is preserved by an ever-requested test, and it
@@ -683,15 +692,52 @@ def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
     # Exact-slug matching, so `docs-tool` can never satisfy `docs-tools`.
     assert "grep -qxF" in step
 
+    # Half three: a FAILED timeline read must request nobody. An empty
+    # `ASKED` makes every required team look never-asked, so swallowing the
+    # error re-pings all of them — on every push, now that this runs on
+    # synchronize. The original `2>/dev/null | sort -u || true` did exactly
+    # that, and hid it twice over: a pipeline's exit status is the LAST
+    # command's, so `sort` succeeding masked `gh` failing.
+    code = "\n".join(l for l in step.splitlines() if not l.lstrip().startswith("#"))
+    assert "2>/dev/null" not in code, (
+        "the timeline read must not swallow gh's stderr — a failed read has "
+        "to be distinguishable from an empty one"
+    )
+    assert "if ! ASKED_RAW=$(gh api" in code, (
+        "capture gh's own exit status; `gh ... | sort -u` reports sort's"
+    )
+    fail_branch = code.split("if ! ASKED_RAW=$(gh api", 1)[1].split("fi", 1)[0]
+    assert "exit 0" in fail_branch, (
+        "on a failed timeline read the step must request nobody and return"
+    )
 
-def test_every_team_the_routing_step_can_request_is_in_the_config():
-    """The step requests `route-pr.py`'s `teams` output verbatim, so the
-    config's team slugs are the closed set of things it can ask for."""
+
+def test_no_two_teams_share_a_bare_slug():
+    """The ever-asked check compares BARE slugs, so they must be unique.
+
+    The step does `slug="${team##*/}"` and greps that against the timeline's
+    `.requested_team.slug`, which is also bare. Two configured teams with
+    the same name under different orgs (`pulumi/docs-tools` and
+    `pulumi-oss/docs-tools`) would therefore be indistinguishable: asking
+    one would permanently mark the other as already asked, and it would
+    never be requested on any PR.
+
+    This replaces a test that asserted each slug is `org/name` — which
+    `load_config` already rejects (routing.py's `'org/slug' team reference`
+    error, covered by its own self-test), on the very call this test makes.
+    It could not fail, while its name promised coverage of the workflow step
+    it never read.
+    """
     cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
-    for slug in cfg.teams.values():
-        assert "/" in slug, slug
-        org, _, name = slug.partition("/")
-        assert org and name, slug
+    bare: dict[str, str] = {}
+    for role, slug in cfg.teams.items():
+        name = slug.rpartition("/")[2]
+        assert name not in bare, (
+            f"teams.{role} ({slug}) and teams.{bare[name]} ({cfg.teams[bare[name]]}) "
+            f"share the bare slug {name!r}; the routing step's ever-asked "
+            "check cannot tell them apart"
+        )
+        bare[name] = role
 
 
 # ---- ownership overrides --------------------------------------------------

@@ -528,9 +528,23 @@ jobs:
           # current state, and GitHub removes a team from it the moment a
           # member reviews, so a team that already answered would look
           # un-asked and get re-pinged on the next push.
-          ASKED=$(gh api --paginate "repos/$REPO/issues/$PR/timeline" \
-                    --jq '.[] | select(.event == "review_requested") | .requested_team.slug // empty' \
-                  2>/dev/null | sort -u || true)
+          #
+          # A FAILED read is not an empty read, and conflating them is a real
+          # hazard now that this runs on every push: an empty ASKED makes
+          # every required team look never-asked, so one transient 500 or a
+          # rate limit re-requests all of them -- the exact notification
+          # spam the ever-asked test exists to prevent, on a loop. So capture
+          # gh's own status (a pipeline's status is the LAST command's, which
+          # is why `| sort -u` hid this) and, when the read fails, request
+          # nobody. Routing is an assist and the Sentinel enforces the matrix
+          # either way, so silence is the safe degradation; the next push
+          # retries. stderr is deliberately not swallowed any more.
+          if ! ASKED_RAW=$(gh api --paginate "repos/$REPO/issues/$PR/timeline" \
+                             --jq '.[] | select(.event == "review_requested") | .requested_team.slug // empty'); then
+            echo "::warning::routing: could not read the timeline for $REPO#$PR, so 'already asked' is unknowable. Requesting nobody rather than re-pinging every required team ($(echo "$TEAMS" | tr '\n' ',' | sed 's/,$//')). The next push retries."
+            exit 0
+          fi
+          ASKED=$(printf '%s\n' "$ASKED_RAW" | sort -u)
           echo "routing: teams ever requested on this PR: ${ASKED:-none}"
 
           PENDING=""
