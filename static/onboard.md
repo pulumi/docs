@@ -10,10 +10,29 @@ commands to run.
 
 Run `npx pulumi version` to confirm the CLI is reachable; it does not touch
 Pulumi Cloud. On first run this downloads a current Pulumi CLI, so allow a
-moment. If `npx` or Node.js is missing, install the CLI with the native
-installer, then re-check. Do not continue until the version command succeeds.
+moment. `npx` resolves `pulumi` for you, so prefer it. If `npx` or Node.js is
+missing, install the CLI with the native installer instead:
 
     curl -fsSL https://get.pulumi.com | sh
+
+The native installer does not put `pulumi` on the PATH — a fresh shell will not
+find it — so resolve that before continuing:
+
+- Find where it installed from the installer's own output (the default is
+  `$HOME/.pulumi/bin`); use that exact directory in the steps below.
+- Make it work now: run the rest of this flow with the full path
+  (`$HOME/.pulumi/bin/pulumi ...`) or export it for the session with
+  `export PATH="$HOME/.pulumi/bin:$PATH"`.
+- Make it permanent: offer to append that same line to the user's shell
+  profile (`~/.zshrc` for zsh, `~/.bashrc` or `~/.bash_profile` for bash), and
+  write it only if they agree. If they decline or you cannot write the file,
+  give them a copyable command and state plainly where the binary lives — for
+  example, for zsh:
+
+      # The Pulumi CLI is installed at $HOME/.pulumi/bin
+      echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+
+Do not continue until `pulumi version` succeeds.
 
 ## 2. Install the Pulumi skills
 
