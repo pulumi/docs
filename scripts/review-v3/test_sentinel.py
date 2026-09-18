@@ -1457,6 +1457,9 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
         "github.event.inputs.pr_number",
         "inputs.pr_number",
     )
+    # Mapping keys whose VALUE is executed. Everything else that looks like
+    # `key: ...` is exempt; these are not.
+    EXECUTABLE_KEYS = {"run", "script", "args", "entrypoint", "cmd"}
     offenders = []
     wf_dir = REPO_ROOT / ".github" / "workflows"
     # BOTH extensions. The glob was `*.yml` only, so
@@ -1465,15 +1468,27 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
     for wf in sorted([*wf_dir.glob("*.yml"), *wf_dir.glob("*.yaml")]):
         for lineno, line in enumerate(wf.read_text().splitlines(), 1):
             stripped = line.strip()
-            # A YAML mapping entry is not a shell line, so it is exempt:
-            # `env:` bindings are the safe form this test is steering people
-            # toward, and `concurrency: group: foo-${{ ... }}` is a run-name,
-            # never executed. The exemption is the whole reason this is a
-            # denylist and not a proof -- it is spelled as "does the line
-            # look like `key: ...`", which is the best a line-scanner can do.
+            # Most YAML mapping entries are not shell lines, so they are
+            # exempt: `env:` bindings are the safe form this test steers
+            # people toward, `if:` is evaluated by GitHub and never by bash,
+            # and `concurrency: group: foo-${{ ... }}` is a run-name.
+            #
+            # EXECUTABLE_KEYS is the carve-out from that carve-out, and it is
+            # the whole reason the exemption is keyed on the NAME rather than
+            # on shape. A single-line `run: echo ${{ github.head_ref }}` is
+            # precisely the defect this test exists to catch, and it is also
+            # a mapping entry. `with: script:` is the same hazard through
+            # actions/github-script, which runs its value as JavaScript.
+            #
+            # (The original spelling required the `${{` to follow the colon
+            # immediately, which caught single-line `run:` by accident and
+            # false-positived on `group: name-${{ ... }}`. Widening it to any
+            # mapping entry fixed the false positive and opened this hole;
+            # naming the executable keys closes both.)
             if stripped.startswith("#") or "${{" not in line:
                 continue
-            if re.match(r"^[A-Za-z_][A-Za-z0-9_-]*:(\s|$)", stripped):
+            key = re.match(r"^([A-Za-z_][A-Za-z0-9_-]*):(\s|$)", stripped)
+            if key and key.group(1) not in EXECUTABLE_KEYS:
                 continue
             for expr in author_controlled:
                 if expr in line:
