@@ -1,0 +1,13 @@
+{{- $sc := newScratch -}}
+{{- range where site.RegularPages "Section" "customers" -}}
+  {{- $page := . -}}
+  {{- $id := .Params.customer | default "" -}}
+  {{- if $id -}}
+    {{- with $sc.Get (printf "seen-%s" $id) -}}
+      {{- errorf "%s and %s both declare customer: %q. One case study per customer." .RelPermalink $page.RelPermalink $id -}}
+    {{- end -}}
+    {{- $sc.Set (printf "seen-%s" $id) $page -}}
+    {{- $sc.SetInMap "byCustomer" $id $page -}}
+  {{- end -}}
+{{- end -}}
+{{- return ($sc.Get "byCustomer" | default dict) -}}

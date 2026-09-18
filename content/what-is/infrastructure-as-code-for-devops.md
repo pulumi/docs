@@ -6,27 +6,6 @@ type: what-is
 date: 2021-09-27T08:46:43-07:00
 page_title: "Infrastructure as Code for DevOps"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["cam-soper"]
 ---
 

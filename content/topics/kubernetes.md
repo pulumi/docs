@@ -26,24 +26,14 @@ sections:
   - type: logo_banner
     text: Powering top engineering teams
     logos:
-      - src: /logos/customers/snowflake-logo.svg
-        alt: Snowflake
-      - src: /logos/customers/mercedes-benz-RDNA_logo.png
-        alt: Mercedes-Benz Research and Development
-      - src: /logos/customers/mindbody_logo.svg
-        alt: MindBody
-      - src: /logos/customers/nih.png
-        alt: National Institutes of Health
-      - src: /logos/customers/sourcegraph-logo.svg
-        alt: Sourcegraph
-      - src: /logos/customers/lemonade.svg
-        alt: Lemonade
-      - src: /logos/customers/bmw.svg
-        alt: BMW Group
-      - src: /logos/customers/unity.png
-        alt: Unity
-      - src: /logos/customers/starburst.png
-        alt: Starburst
+      - customer: snowflake
+      - customer: mercedes-benz
+      - customer: mindbody
+      - customer: sourcegraph
+      - customer: lemonade
+      - customer: bmw
+      - customer: unity
+      - customer: starburst
     anchor: customers
 
   - type: section_header_with_image

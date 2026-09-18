@@ -1,0 +1,19 @@
+{{- $id := printf "%v" (.id | default "") -}}
+{{- $where := .where | default "an unknown caller" -}}
+{{- $cx := partialCached "customers/data.html" . "customers-data" -}}
+{{- if not $id -}}
+  {{- errorf "customers/get.html was called without an id (in %s)." $where -}}
+{{- end -}}
+{{- $customer := index $cx.byId $id -}}
+{{- if not $customer -}}
+  {{- $near := slice -}}
+  {{- range $cx.ids -}}
+    {{- if or (in . $id) (in $id .) -}}{{- $near = $near | append . -}}{{- end -}}
+  {{- end -}}
+  {{- if $near -}}
+    {{- errorf "customer: %q is not in data/customers.yaml (in %s). Did you mean: %s?" $id $where (delimit $near ", ") -}}
+  {{- else -}}
+    {{- errorf "customer: %q is not in data/customers.yaml (in %s). Add an entry there — see the ADDING A CUSTOMER checklist at the top of that file." $id $where -}}
+  {{- end -}}
+{{- end -}}
+{{- return $customer -}}

@@ -132,8 +132,26 @@ def render_trail(trail: list[dict]) -> str:
             extra.append(f'<div class="trail-evidence">{esc(t["evidence"])}</div>')
         if t.get("source"):
             extra.append(f'<div class="trail-source">source: {esc(t["source"])}</div>')
-        if t.get("route"):
-            extra.append(f'<span class="trail-route">{esc(t["route"])}</span>')
+        # The shape label and the note say different things (which way the
+        # claim drifted vs. what drifted), and either can arrive alone: the
+        # verifier backfills a note for every non-clean shape, but the schema
+        # doesn't require one. `none` is the absence of a framing check.
+        shape = t.get("framing") if t.get("framing") not in (None, "", "none") else ""
+        framing = " — ".join(x for x in (shape, t.get("framing_note") or "") if x)
+        if framing:
+            extra.append(f'<div class="trail-source">framing: {esc(framing)}</div>')
+        # One muted meta line: how the verifier handled the claim. Every part
+        # is optional — records written before the verifier metadata was
+        # carried have at most a route.
+        meta = [str(t[k]) for k in ("route", "type") if t.get(k)]
+        if t.get("confidence"):
+            meta.append(f"{t['confidence']} confidence")
+        if t.get("turn_cap_exhausted"):
+            meta.append("turn cap exhausted")
+        if t.get("source_discipline_gate"):
+            meta.append(f"gate: {t['source_discipline_gate']}")
+        if meta:
+            extra.append(f'<span class="trail-route">{esc(" · ".join(meta))}</span>')
         row_html.append(f"""
     <div class="trail-row" id="claim-{n}" data-verdict="{esc(verdict)}">
       <a class="anchor" href="#claim-{n}">#{n}</a>
@@ -505,6 +523,23 @@ def self_test() -> int:
     empty_trail = {**evidence, "trail": []}
     out3 = render_evidence_html(empty_trail)
     check("empty trail renders without error", "No trail entries." in out3)
+
+    # The fixture trail carries no verifier metadata, so `out` doubles as the
+    # legacy-record rendering: no meta line at all, not an empty one.
+    check("legacy trail row renders no meta line", '<span class="trail-route">' not in out)
+    meta_row = {**evidence["trail"][0], "route": "pass3", "type": "version <b>",
+                "confidence": "low", "framing": "shifted", "framing_note": "GA vs preview",
+                "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data"}
+    out4 = render_evidence_html({**evidence, "trail": [meta_row]})
+    check("trail meta line renders route, type, confidence, and coercion markers",
+          "pass3 · version &lt;b&gt; · low confidence · turn cap exhausted · gate: generated-from-data" in out4)
+    check("framing shape and note rendered", "framing: shifted — GA vs preview" in out4)
+    shape_only = {k: v for k, v in meta_row.items() if k != "framing_note"}
+    out5 = render_evidence_html({**evidence, "trail": [shape_only]})
+    check("framing shape renders without a note", "framing: shifted</div>" in out5)
+    clean = {**shape_only, "framing": "none"}
+    check("framing `none` renders nothing",
+          "framing: none" not in render_evidence_html({**evidence, "trail": [clean]}))
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

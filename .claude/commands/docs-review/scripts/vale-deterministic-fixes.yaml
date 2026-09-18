@@ -65,7 +65,7 @@ blocker:
 # shipping the finding is acceptable -- for a dead brand name, never --  while
 # `deterministic_fix` asks whether the reviewer has to author the correction.
 # The brand guide's two carve-outs ("historical usage is fine": content/
-# case-studies/unity.md's "Pulumi Neo ... replacing Pulumi Copilot"; and "some
+# customers/unity.md's "Pulumi Neo ... replacing Pulumi Copilot"; and "some
 # replacements can't be automated": Insights is the Discovery product in most
 # sentences, the "Discovery & governance" category in others) are handled by
 # the meaning gate above and by 🚨's resolve-or-refute path -- not by demoting

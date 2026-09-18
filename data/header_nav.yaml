@@ -103,11 +103,11 @@ items:
             description: Security, compliance, and support for teams
             icon: buildings
             track: header-enterprise-solutions
-          - label: Case studies
-            href: /case-studies/
-            description: How Snowflake, Mercedes-Benz, and others use Pulumi
+          - label: Customers
+            href: /customers/
+            description: Get a glimpse of who's using Pulumi and hear their stories
             icon: article
-            track: header-enterprise-case-studies
+            track: header-enterprise-customers
           - label: Request a demo
             href: /request-a-demo/
             description: See how Pulumi can help your team

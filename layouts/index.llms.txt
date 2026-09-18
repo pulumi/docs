@@ -103,7 +103,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Dev Center](https://www.pulumi.com/dev/): Tutorials, templates, community examples, and a glossary. Has an index of its own at [/dev/llms.txt](https://www.pulumi.com/dev/llms.txt), and every detail page has a markdown twin at its URL plus `.md`
 - [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
-- [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
+- [Customers](https://www.pulumi.com/customers/): Companies running their infrastructure on Pulumi, and the case studies behind them
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms
 - [Whitepapers](https://www.pulumi.com/whitepapers/): Long-form educational and technical content
 - [Community](https://www.pulumi.com/community/): Slack, Discord, GitHub, and other community resources

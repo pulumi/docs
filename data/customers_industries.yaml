@@ -1,0 +1,99 @@
+# Customer industries — the "what vertical is this customer in" taxonomy.
+#
+# This file is the single source of truth for the set of industries a customer
+# may be filed under. It is consumed by:
+#   - data/customers.yaml, through layouts/partials/customers/data.html: every
+#     registry entry's `industry:` has to be an id listed here.
+#   - scripts/lint/lint-markdown.js (checkCaseStudyIndustry): `make lint` fails
+#     any content/customers/*.md whose `industry:` is missing, is a list, or is
+#     a value not listed here.
+#   - layouts/taxonomy/industry.html and industry.terms.html: term-page title and
+#     the /customers/industry/ directory both read from here.
+#   - layouts/partials/customers/filter-bar.html: the industry filter pills.
+#
+# Industry is SINGULAR and REQUIRED: every customer declares exactly one
+# `industry:` value (a YAML scalar, e.g. `industry: healthcare`). Never a list —
+# a customer belongs to one vertical. The set is CLOSED; to add, rename, or
+# retire an industry, edit THIS file in a PR (the id is the stable slug, so
+# changing it changes the /customers/industry/<slug>/ URL — add an alias if
+# you rename one).
+#
+# Industry stub pages live at content/industry/<id>/_index.md, one per id here,
+# so every term page exists whether or not any case study lands in it.
+# `make lint` (checkIndustryTermStubs) keeps the two sets equal.
+#
+# This is a dedicated, non-blog taxonomy: term pages live under /customers/,
+# not /blog/, and emit no RSS (scoped to HTML-only in config/_default/config.yml).
+#
+# FIELDS
+#   id          Stable slug used in front matter, by the linter, and in the URL.
+#   name        Human-readable display name (term-page heading, nav label).
+#   description Metadata-only blurb: sourced into the term page's
+#               <meta name="description"> / og:description (layouts/partials/
+#               head.html). No template renders it in the page body; omit it
+#               and the term page falls back to no description at all.
+#
+industries:
+  - id: financial-services
+    name: "Financial services & insurance"
+    description: "How banks, insurers, and fintech teams use Pulumi to manage regulated cloud infrastructure as code."
+
+  - id: security
+    name: "Security"
+    description: "How security teams use Pulumi to codify cloud infrastructure and enforce policy at scale."
+
+  - id: data-analytics
+    name: "Data & analytics"
+    description: "How data and analytics teams use Pulumi to provision and manage cloud data infrastructure."
+
+  - id: developer-tools
+    name: "Developer tools"
+    description: "How developer tools companies use Pulumi to build and operate their own cloud platforms."
+
+  - id: ai-ml
+    name: "AI & machine learning"
+    description: "How AI and machine learning teams use Pulumi to manage GPU clusters and model infrastructure as code."
+
+  - id: automotive
+    name: "Automotive"
+    description: "How automotive companies use Pulumi to manage cloud infrastructure across their engineering teams."
+
+  - id: education
+    name: "Education & edtech"
+    description: "How schools, universities, and edtech companies use Pulumi to run online learning platforms and campus systems as code."
+
+  - id: gaming-entertainment
+    name: "Gaming & entertainment"
+    description: "How gaming and entertainment companies use Pulumi to scale cloud infrastructure for global audiences."
+
+  - id: retail
+    name: "Retail"
+    description: "How retail companies use Pulumi to manage cloud infrastructure across storefronts and supply chains."
+
+  - id: healthcare
+    name: "Healthcare"
+    description: "How healthcare organizations use Pulumi to manage compliant cloud infrastructure as code."
+
+  - id: technology
+    name: "Technology"
+    description: "How software and platform companies use Pulumi to run their own products and internal developer platforms on cloud infrastructure as code."
+
+  - id: iot-transportation
+    name: "Transportation & logistics"
+    description: "How transportation and logistics companies use Pulumi to manage cloud infrastructure as code for fleet tracking and IoT device networks."
+
+  - id: manufacturing
+    name: "Manufacturing & industrial"
+    description: "How manufacturing and industrial companies use Pulumi to manage cloud infrastructure as code across factory-floor and industrial IoT systems."
+
+  - id: energy
+    name: "Energy & utilities"
+    description: "How energy and utility companies use Pulumi to manage cloud infrastructure as code across generation, grid, and customer-facing systems."
+
+  - id: public-sector
+    name: "Public sector"
+    description: "How public sector organizations use Pulumi to manage cloud infrastructure as code while meeting compliance and procurement requirements."
+
+  - id: marketing-adtech
+    name: "Marketing & adtech"
+    description: "How marketing and adtech companies use Pulumi to manage cloud infrastructure as code for high-volume ad-serving and campaign platforms."

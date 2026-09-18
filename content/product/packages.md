@@ -480,24 +480,24 @@ benefits:
 case_studies:
     title: Case Studies
     items:
-        - company: lemonade
+        - customer: lemonade
           name: Igor Shapiro
           name_title: Principal Engineer at Lemonade
-          link: /case-studies/lemonade
+          link: /customers/lemonade
           quote: |
             Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage... This empowered our developer teams to self-provision resources and ship new capabilities faster without having to wait for the infrastructure team to deploy new resources on their behalf.
 
-        - company: skai
+        - customer: skai
           name: Danny Zalkind
           name_title: DevOps Group Manager at Skai
           link: /blog/kenshoo-migrates-to-aws-with-pulumi
           quote: |
             A key benefit of Pulumi is that it allows us to modularize our cloud infrastructure as reusable Python components that enable our developer teams to build faster and more independently.
 
-        - company: panther-labs
+        - customer: panther-labs
           name: Austin Byers
           name_title: Principal Platform Engineer at Panther Labs
-          link: /case-studies/panther-labs
+          link: /customers/panther-labs
           quote: |
             Our developers needed a robust platform for managing our complex infrastructure, and it needed to be fast, modular, and testable. We now have more reliable releases and a significantly better developer experience as a result of adopting Pulumi.
 

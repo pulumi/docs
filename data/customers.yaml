@@ -1,0 +1,613 @@
+# Customers — the single source of truth for every customer Pulumi shows publicly.
+#
+# One entry per customer: the name, the link, the vertical, the brand color, and
+# (by convention, not by key) the two logo files. Every surface that renders a
+# customer reads this file and nothing else, so a name change, a rebrand, or a
+# new logo is a one-line edit here rather than a hunt through front matter.
+#
+# Consumers:
+#   - layouts/partials/customers/data.html — expands and validates this file once
+#     per build; every other consumer goes through it.
+#   - layouts/partials/customer-logo.html — renders a customer's logo anywhere.
+#   - layouts/partials/customers/{board,cell,tile,filter-bar}.html — /customers/
+#     and the /customers/industry/<id>/ term pages.
+#   - the template-page partials: logo carousel, logo banner, testimonials,
+#     case-study cards and grids.
+#   - scripts/lint/lint-markdown.js (checkCustomerRef) — `make lint` fails a
+#     page under content/customers/ whose `customer:` is missing or unknown.
+#
+# ADDING A CUSTOMER
+#   1. Add an entry below, in the position you want it to occupy on /customers/
+#      (file order is the page order — see "ORDER" below).
+#   2. Add two SVGs to assets/fingerprinted/logos/customers/:
+#        <id>.svg          for light backgrounds (the grid, testimonials, banners)
+#        <id>-on-dark.svg  for the brand-color tile and dark surfaces
+#      If the company ships no white variant, derive one:
+#        node scripts/customers/derive-on-dark.mjs <id>
+#      and check it against a dark background — a derived variant flattens a
+#      two-tone mark into one white shape.
+#   3. Optional: give a case study `customer: <id>` in its front matter. Case
+#      studies are NOT listed here; /customers/ finds them by scanning
+#      content/customers/ for that key.
+#   4. Run `make build`. The validation partial fails the build on a bad id,
+#      an unknown industry, a malformed color, or a missing logo file.
+#
+# FIELDS
+#   id          Stable lowercase-kebab slug. Unique. Names both logo files and
+#               is what every page, shortcode, and case study refers to.
+#   name        Display name, exactly as the company writes it.
+#   url         The company's website. Used for the outbound link on surfaces
+#               that link out; never rendered as bare text.
+#   industry    An id from data/customers_industries.yaml. A customer belongs to
+#               exactly one vertical.
+#   color       The brand color the logo tile is painted with, as "#RRGGBB".
+#               Omit it and the tile is neutral gray — which is better than a
+#               guessed color, so omit rather than invent.
+#   logo_scale  Optional multiplier on the logo's rendered size. Surfaces size
+#               every logo to the same optical area, derived from its aspect
+#               ratio, which is right for a wordmark and wrong for a dense
+#               lockup whose type goes unreadable at that size. Use it sparingly
+#               and only for those — it is a correction, not a preference.
+#   fill_text   `light` or `dark`: which way the type goes on a surface filled
+#               with `color`. Omit it and the color decides, by a luminance
+#               reading of where white type stops being readable. Set it when
+#               the brand has its own view — Snowflake's blue reads as light by
+#               that measure but their own material puts white on it.
+#   tile_logo   Set to `light` when the brand color is light enough that the
+#               on-dark (white) logo would disappear on it. Default: the tile
+#               shows <id>-on-dark.svg. A customer with no `color` always gets
+#               the light logo, since the fallback tile is gray.
+#   quote       Optional canonical testimonial: `text`, `author`, `title`. Used
+#               on /customers/ for a customer who has no case study (the cell
+#               widens to two columns and renders the quote), and as the
+#               fallback for a testimonial section that names the customer but
+#               supplies no quote of its own. Product pages keep their own
+#               product-specific quote text — this is the customer's, not a
+#               page's.
+#
+# ORDER
+#   File order is the only ordering mechanism, at every level. There is no
+#   `weight` and nothing sorts. /customers/ renders these entries top to bottom,
+#   so the most recognizable customers belong at the top.
+#
+# VOCABULARY
+#   "Customer", never "logo", "account", or "case study". A case study is a page
+#   about a customer; a customer is an entry here, with or without one.
+#
+# RASTER HOLDOUTS
+#   `raster_holdouts` lists the customers whose logo is still a PNG (<id>.png)
+#   because no SVG could be sourced. They render from the raster and get their
+#   dark-surface treatment from a CSS filter instead of a second file. This list
+#   exists to make the exceptions visible and must only ever SHRINK: when you
+#   find an SVG for one, add the two SVGs, delete the PNG, and remove the id.
+#   Do not add to it — a customer with no obtainable SVG stays out of the file.
+#
+raster_holdouts:
+  - 4ir
+  - altana
+  - cosine
+  - dutchie
+  - greenpark-sports
+  - imagine-learning
+  - kyruus
+  - mercedes-benz
+  - mysten-labs
+  - ncics
+  - rad-ai
+  - tivity-health
+
+customers:
+  - id: snowflake
+    name: Snowflake
+    url: https://www.snowflake.com/
+    industry: data-analytics
+    color: "#2BB6E9" # hsl(196 81% 54%)
+    fill_text: light
+    quote:
+      text: "When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked."
+      author: Raman Hariharan
+      title: Director of Cloud Platform Engineering
+  - id: nvidia
+    name: NVIDIA
+    url: https://www.nvidia.com/
+    industry: ai-ml
+    color: "#76B900"
+    tile_logo: light
+  - id: bmw
+    name: BMW Group
+    url: https://www.bmwgroup.com/
+    industry: automotive
+    color: "#10162C"
+    # The corporate lockup carries three marques beside the wordmark, so it
+    # needs the extra width to stay legible.
+    logo_scale: 1.25
+  - id: mercedes-benz
+    name: "Mercedes-Benz R&D NA"
+    url: https://mbrdna.com/
+    industry: automotive
+    color: "#000000"
+    # The division name sits on a second line in type half the wordmark's size;
+    # at its fair area that line is unreadable.
+    logo_scale: 1.5
+  - id: unity
+    name: Unity
+    url: https://unity.com/
+    industry: gaming-entertainment
+    color: "#000000"
+  - id: atlassian
+    name: Atlassian
+    url: https://www.atlassian.com/
+    industry: developer-tools
+    color: "#0052CC"
+    quote:
+      text: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go."
+      author: Mike Corsaro
+      title: Senior Software Engineer
+  - id: docker
+    name: Docker
+    url: https://www.docker.com/
+    industry: developer-tools
+    color: "#2496ED"
+  - id: midjourney
+    name: Midjourney
+    url: https://midjourney.com/
+    industry: ai-ml
+    color: "#000000"
+  - id: bluesky
+    name: Bluesky
+    url: https://bsky.app/
+    industry: technology
+    color: "#1185FE"
+  - id: supabase
+    name: Supabase
+    url: https://supabase.com/
+    industry: data-analytics
+    color: "#3ECF8E"
+  - id: wiz
+    name: Wiz
+    url: https://www.wiz.io/
+    industry: security
+    color: "#0254EC"
+    quote:
+      text: "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly — scaling and driving hundreds of thousands of infrastructure updates every day."
+      author: Yarin Miran
+      title: Senior Software Engineer
+  - id: webflow
+    name: Webflow
+    url: https://webflow.com/
+    industry: technology
+    color: "#146EF5"
+  - id: moderna
+    name: Moderna
+    url: https://www.modernatx.com/
+    industry: healthcare
+    color: "#E51937"
+  - id: monday
+    name: monday.com
+    url: https://monday.com/
+    industry: technology
+    color: "#6161FF"
+  - id: lemonade
+    name: Lemonade
+    url: https://www.lemonade.com/
+    industry: financial-services
+    color: "#FF0083"
+  - id: nubank
+    name: Nubank
+    url: https://nubank.com.br/
+    industry: financial-services
+    color: "#820AD1"
+  - id: bt
+    name: BT
+    url: https://www.bt.com/
+    industry: technology
+    color: "#6400AA"
+  - id: deloitte
+    name: Deloitte
+    url: https://www.deloitte.com/
+    industry: technology
+    color: "#86BC25"
+    tile_logo: light
+  - id: televisaunivision
+    name: TelevisaUnivision
+    url: https://corporate.televisaunivision.com/
+    industry: gaming-entertainment
+    color: "#4EBF89"
+    tile_logo: light
+  - id: linktree
+    name: Linktree
+    url: https://linktr.ee/
+    industry: technology
+    color: "#43E55E"
+    tile_logo: light
+  - id: constellation-energy
+    name: Constellation Energy
+    url: https://www.constellationenergy.com/
+    industry: energy
+    color: "#051B2E"
+  - id: university-of-michigan
+    name: University of Michigan
+    url: https://umich.edu/
+    industry: education
+    color: "#00274C"
+  - id: clear
+    name: CLEAR
+    url: https://www.clearme.com/
+    industry: security
+    color: "#041A55"
+  - id: globant
+    name: Globant
+    url: https://globant.com/
+    industry: technology
+    color: "#BFD732"
+    tile_logo: light
+  - id: tata-communications
+    name: Tata Communications
+    url: https://www.tatacommunications.com/
+    industry: technology
+    color: "#4E84C4"
+  - id: pinecone
+    name: Pinecone
+    url: https://www.pinecone.io/
+    industry: ai-ml
+    color: "#111111"
+  - id: modal
+    name: Modal
+    url: https://modal.com/
+    industry: ai-ml
+    color: "#7FEE64"
+    tile_logo: light
+  - id: modular
+    name: Modular
+    url: https://www.modular.com/
+    industry: ai-ml
+    color: "#111111"
+  - id: pydantic
+    name: Pydantic
+    url: https://pydantic.dev/
+    industry: developer-tools
+    color: "#E92063"
+  - id: sourcegraph
+    name: Sourcegraph
+    url: https://sourcegraph.com/
+    industry: developer-tools
+    color: "#A112FF"
+  - id: cockroach-labs
+    name: Cockroach Labs
+    url: https://www.cockroachlabs.com/
+    industry: data-analytics
+    color: "#6933FF"
+  - id: unstructured
+    name: Unstructured
+    url: https://unstructured.io/
+    industry: ai-ml
+    color: "#111111"
+  - id: dandy
+    name: Dandy
+    url: https://www.meetdandy.com/
+    industry: ai-ml
+    color: "#003A30"
+  - id: sst
+    name: SST
+    url: https://sst.dev/
+    industry: developer-tools
+    color: "#303055"
+  - id: materialize
+    name: Materialize
+    url: https://materialize.com/
+    industry: data-analytics
+    color: "#472F85"
+  - id: starburst
+    name: Starburst
+    url: https://www.starburst.io/
+    industry: data-analytics
+    color: "#9747FF"
+  - id: panther-labs
+    name: Panther Labs
+    url: https://panther.com/
+    industry: security
+    color: "#040C36"
+  - id: descope
+    name: Descope
+    url: https://descope.com/
+    industry: security
+    color: "#111111"
+  - id: tetrate
+    name: Tetrate
+    url: https://tetrate.io/
+    industry: technology
+    color: "#FF5500"
+    quote:
+      text: "With Pulumi ESC, our developers get dynamic AWS and Azure credentials on-demand. Onboarding new developers is quick and secure, with no more manually filling in .env templates."
+      author: Liam White
+      title: Platform Lead
+  - id: mysten-labs
+    name: Mysten Labs
+    url: https://www.mystenlabs.com/
+    industry: technology
+    quote:
+      text: "Our goal has always been to minimize the time it takes an engineer to go from an idea to an experiment in production. We're excited to see Pulumi pushing automation further."
+      author: Jk Jensen
+      title: Software Engineering Team Lead
+  - id: aptos
+    name: Aptos Labs
+    url: https://aptoslabs.com/
+    industry: technology
+    color: "#000000"
+  - id: dutchie
+    name: Dutchie
+    url: https://dutchie.com/
+    industry: technology
+  - id: stoke-space
+    name: Stoke Space
+    url: https://www.stokespace.com/
+    industry: manufacturing
+    color: "#000000"
+  - id: sans-institute
+    name: SANS Institute
+    url: https://www.sans.org/
+    industry: education
+    color: "#064C70"
+  - id: xm-cyber
+    name: XM Cyber
+    url: https://xmcyber.com/
+    industry: security
+    color: "#000035"
+  - id: oleria
+    name: Oleria
+    url: https://www.oleria.com/
+    industry: security
+    color: "#5C0F16"
+  - id: conductorone
+    name: ConductorOne
+    url: https://www.c1.ai/
+    industry: security
+    color: "#111111"
+  - id: fauna
+    name: Fauna
+    url: https://fauna.com/
+    industry: data-analytics
+    color: "#3A1AB6"
+  - id: whylabs
+    name: WhyLabs
+    url: https://whylabs.ai/
+    industry: ai-ml
+    color: "#228798"
+  - id: maven-agi
+    name: Maven AGI
+    url: https://www.mavenagi.com/
+    industry: ai-ml
+    color: "#B36FF7"
+  - id: kittl
+    name: Kittl
+    url: https://www.kittl.com/
+    industry: ai-ml
+    color: "#080B11"
+  - id: ae-global-media
+    name: A+E Global Media
+    url: https://www.aegm.com/
+    industry: gaming-entertainment
+    color: "#000000"
+  - id: korber
+    name: Körber
+    url: https://www.koerber.com/
+    industry: technology
+    color: "#111111"
+  - id: elkjop-nordic
+    name: Elkjøp Nordic
+    url: https://www.elkjopnordic.com/
+    industry: retail
+    color: "#1E1B58"
+  - id: modivcare
+    name: Modivcare
+    url: https://www.modivcare.com/
+    industry: healthcare
+    color: "#002A3A"
+  - id: mindbody
+    name: Mindbody
+    url: https://www.mindbodyonline.com/
+    industry: technology
+    color: "#CF3C4C"
+  - id: ro
+    name: Ro
+    url: https://ro.co/
+    industry: healthcare
+    color: "#1ECD96"
+    tile_logo: light
+  - id: skai
+    name: Skai
+    url: https://skai.io/
+    industry: marketing-adtech
+    color: "#406EF1"
+  - id: washington-trust-bank
+    name: Washington Trust Bank
+    url: https://www.watrust.com/
+    industry: financial-services
+    color: "#004163"
+  - id: fenergo
+    name: Fenergo
+    url: https://www.fenergo.com/
+    industry: financial-services
+    color: "#EC1D24"
+    quote:
+      text: "Pulumi improved our time-to-market by removing cloud infrastructure as a roadblock to business innovation. Every developer is now empowered to move faster and spend more time on developing things that matter to our customers."
+      author: Keith Redmond
+      title: VP of SaaS Engineering
+  - id: kyruus
+    name: Kyruus
+    url: https://kyruushealth.com/
+    industry: healthcare
+  - id: bluenile
+    name: Blue Nile
+    url: https://www.bluenile.com/
+    industry: retail
+    color: "#0C1635"
+  - id: tivity-health
+    name: Tivity Health
+    url: https://www.tivityhealth.com/
+    industry: healthcare
+  - id: altana
+    name: Altana
+    url: https://altana.ai/
+    industry: iot-transportation
+  - id: ware2go
+    name: Ware2Go
+    url: https://www.ware2go.co/
+    industry: iot-transportation
+    color: "#4D4F56"
+  - id: portx
+    name: PortX
+    url: https://portx.io/
+    industry: financial-services
+    color: "#4FC7E7"
+    tile_logo: light
+  - id: boost-insurance
+    name: Boost Insurance
+    url: https://boostinsurance.com/
+    industry: financial-services
+  - id: credijusto
+    name: Credijusto
+    url: https://www.covalto.com/
+    industry: financial-services
+  - id: menta-network
+    name: Menta Network
+    url: https://menta.global/
+    industry: retail
+  - id: imagine-learning
+    name: Imagine Learning
+    url: https://www.imaginelearning.com/
+    industry: education
+    color: "#00007C"
+  - id: learning-machine
+    name: Learning Machine
+    url: https://www.hyland.com/
+    industry: education
+    color: "#151828"
+  - id: nexxiot
+    name: Nexxiot
+    url: https://nexxiot.com/
+    industry: iot-transportation
+    color: "#6357FF"
+  - id: greenpark-sports
+    name: GreenPark Sports
+    url: https://greenparksports.com/
+    industry: gaming-entertainment
+    color: "#000000"
+  - id: alkira
+    name: Alkira
+    url: https://www.alkira.com/
+    industry: technology
+    color: "#0F1E2E"
+  - id: tonkean
+    name: Tonkean
+    url: https://www.tonkean.com/
+    industry: technology
+    color: "#34393E"
+  - id: mighty
+    name: Mighty
+    url: https://www.mighty.app/
+    industry: technology
+    color: "#00D563"
+    tile_logo: light
+  - id: flux
+    name: Flux
+    url: https://www.flux.ai/
+    industry: technology
+    color: "#5468FF"
+  - id: humanlayer
+    name: HumanLayer
+    url: https://humanlayer.dev/
+    industry: ai-ml
+    color: "#111111"
+  - id: composio
+    name: Composio
+    url: https://composio.dev/
+    industry: ai-ml
+    color: "#111111"
+  - id: ivo
+    name: Ivo
+    url: https://www.ivo.ai/
+    industry: ai-ml
+    color: "#5C6F2D"
+  - id: keycard
+    name: Keycard
+    url: https://www.keycard.ai/
+    industry: ai-ml
+    color: "#000000"
+  - id: spear-ai
+    name: Spear AI
+    url: https://spear.ai/
+    industry: ai-ml
+    color: "#000031"
+  - id: typesafe-ai
+    name: Typesafe AI
+    url: https://typesafe.ai/
+    industry: ai-ml
+    color: "#000000"
+  - id: compostable-ai
+    name: Compostable AI
+    url: https://compostable.ai/
+    industry: ai-ml
+    color: "#E9ECEF"
+    tile_logo: light
+  - id: circuitry
+    name: Circuitry.ai
+    url: https://circuitry.ai/
+    industry: ai-ml
+    color: "#6D6E70"
+  - id: powerline
+    name: Powerline
+    url: https://drivepowerline.com/
+    industry: ai-ml
+    color: "#111111"
+  - id: runloop
+    name: Runloop AI
+    url: https://runloop.ai/
+    industry: ai-ml
+    color: "#111111"
+  - id: zep
+    name: Zep AI
+    url: https://www.getzep.com/
+    industry: ai-ml
+  - id: rad-ai
+    name: Rad AI
+    url: https://radai.com/
+    industry: ai-ml
+  - id: datacurve
+    name: Datacurve
+    url: https://datacurve.ai/
+    industry: ai-ml
+    color: "#000000"
+  - id: cosine
+    name: Cosine
+    url: https://cosine.sh/
+    industry: ai-ml
+  - id: dosu
+    name: Dosu
+    url: https://dosu.dev/
+    industry: ai-ml
+    # Heavy display type: reads larger than its area.
+    logo_scale: 0.85
+  - id: arcee
+    name: Arcee AI
+    url: https://www.arcee.ai/
+    industry: ai-ml
+  - id: cynch
+    name: Cynch AI
+    url: https://www.cynch.ai/
+    industry: ai-ml
+    color: "#000000"
+  - id: gmi-cloud
+    name: GMI Cloud
+    url: https://www.gmicloud.ai/
+    industry: ai-ml
+    color: "#111111"
+  - id: 4ir
+    name: 4IR
+    url: https://4ir.cloud/
+    industry: manufacturing
+    color: "#0085E4"
+  - id: ncics
+    name: NCICS (NOAA)
+    url: https://ncics.org/
+    industry: public-sector

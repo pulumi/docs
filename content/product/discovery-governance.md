@@ -89,8 +89,7 @@ sections:
       We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in docs and diagrams. With Pulumi's Policy as Code approach, that manual review process has gone away. We've reduced our Authority to Operate (ATO) timeline from a year and a half to expecting approval in three months.
     author: Michael Hunter
     title: CEO
-    company: Spear AI
-    logo: /logos/customers/spearAI.svg
+    customer: spear-ai
     anchor: testimonial
 
   - type: section_header_with_image

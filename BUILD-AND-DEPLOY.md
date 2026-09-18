@@ -847,7 +847,7 @@ Hugo processes 46+ content directories:
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
 - `/content/product/` → Product pages
-- `/content/case-studies/` → Customer stories
+- `/content/customers/` → Customer stories (the customer registry lives in `data/customers.yaml`)
 
 > **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
 

@@ -212,6 +212,44 @@
               "pass3",
               "preflight"
             ]
+          },
+          "claim_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The verifier's id for the claim (c1, c2, …) — the join key back to the run's .verified-claims.json artifact. This and the keys below are verifier metadata, absent on objects written before they were carried."
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The extractor's claim type (version, numerical, api-surface, …). Open vocabulary: it drives verifier routing, so it is recorded as found rather than validated against a list that would drift."
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "framing": {
+            "enum": [
+              "exact-match",
+              "entailed-narrower",
+              "overclaim-broader",
+              "shifted",
+              "none"
+            ]
+          },
+          "framing_note": {
+            "type": "string"
+          },
+          "turn_cap_exhausted": {
+            "type": "boolean",
+            "description": "True when the verdict is the verifier's terminal turn-cap `unverifiable` — a retryable budget failure, not a judgment about the claim."
+          },
+          "source_discipline_gate": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Names the source-discipline gate that downgraded this verdict (e.g. generated-from-data)."
           }
         }
       }

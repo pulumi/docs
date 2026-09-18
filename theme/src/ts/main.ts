@@ -14,7 +14,7 @@ import "./blog-list";
 import "./blog-post";
 import "./blog-lightbox";
 import "./what-is-list";
-import "./case-studies-list";
+import "./customers-list";
 import "./details-dropdown";
 import "./copybutton";
 import "./copy-text";

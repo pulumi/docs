@@ -62,7 +62,7 @@ For all content files (docs, blogs, changelog entries, etc.):
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Diagrams**: Prefer Mermaid diagrams over ASCII art. The site renders Mermaid natively via a Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced code blocks. See [Mermaid docs](https://mermaid.js.org/) for syntax.
 - **Images on template-driven pages**: Place new images for template-driven pages (homepage, product pages, event pages, case studies — anything rendered through `layouts/partials/template-partials/*`) under `assets/fingerprinted/`, mirroring the path you'd use under `static/`. The template partials route every `<img>` through `layouts/partials/fingerprinted-img.html`, which content-hashes filenames, converts rasters to WebP, and generates responsive `srcset`s. Frontmatter paths still look like `/images/foo.svg`; the partial resolves them. Missing assets cause a build panic, so there is no silent fallback. `meta_image` and assets used by non-template layouts can stay in `static/`.
-- **Meta images**: `meta_image` is optional for `docs`, `case-studies`, `what-is`, `migrate`, `partner`, `topics`, `events`, and `blog` pages. Leave it blank and `scripts/generate-meta-images.mjs` produces an on-brand social card at build time (resolved by `layouts/partials/meta-image-url.html`). A page-level `meta_image` always wins, but custom overrides are discouraged — the generated card covers virtually every case and stays on-brand automatically. For blog posts the card is built from the post title + `feature_image` (generate the feature image with `/blog-feature-image`, or label the PR `needs-design` for a designer-made one); a post's off-brand legacy meta image, if any, was renamed to `meta-legacy.png` and shows in a collapsed "Archived feature image" panel.
+- **Meta images**: `meta_image` is optional for `docs`, `customers`, `what-is`, `migrate`, `partner`, `topics`, `events`, and `blog` pages. Leave it blank and `scripts/generate-meta-images.mjs` produces an on-brand social card at build time (resolved by `layouts/partials/meta-image-url.html`). A page-level `meta_image` always wins, but custom overrides are discouraged — the generated card covers virtually every case and stays on-brand automatically. For blog posts the card is built from the post title + `feature_image` (generate the feature image with `/blog-feature-image`, or label the PR `needs-design` for a designer-made one); a post's off-brand legacy meta image, if any, was renamed to `meta-legacy.png` and shows in a collapsed "Archived feature image" panel.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
 
 ---
@@ -185,13 +185,22 @@ A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few e
 
 ---
 
-## Case studies
+## Customers
 
-Case studies live at `content/case-studies/<slug>.md` — scaffold a new one with `hugo new content/case-studies/<slug>.md` (uses `archetypes/case-studies.md`). Rules that trip people up:
+`data/customers.yaml` is the single source of truth for every customer Pulumi shows publicly — display name, website, industry, brand color, and (by convention, not by key) two logo files. Every surface reads it through `layouts/partials/customers/data.html`: the `/customers/` grid and its industry term pages, the homepage logo carousel, the logo banners and logo walls, the testimonial sections, the case-study cards and grids, and the OpenGraph card generator. That file's header comment is the authoritative "ADDING A CUSTOMER" checklist; the short version:
 
-- **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
-- **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
-- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the template-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+- **Add the entry, then the two SVGs.** `assets/fingerprinted/logos/customers/<id>.svg` for light backgrounds and `<id>-on-dark.svg` for brand-color tiles and dark surfaces. Both are required — the build fails on a missing one. No official white variant? Derive it with `node scripts/customers/derive-on-dark.mjs <id>` and **check it on a dark background**: a derived variant flattens a two-tone mark into one white shape. A customer whose logo is still a raster is listed in `raster_holdouts`; that list may only shrink.
+- **Trim the new logo's viewBox**: `node scripts/customers/trim-logo.mjs <id>`. Brand kits pad their canvases, and every surface sizes logos to the same optical area derived from the aspect ratio — so a padded viewBox renders a logo smaller than its neighbours for no visible reason. Use `logo_scale` only for what trimming can't fix (a dense lockup whose type is unreadable at its fair size).
+- **The logo has to say the company's name.** The grid shows no captions, so a mark-only logo is an unidentifiable shape. Use the wordmark or the full lockup.
+- **Reference a customer by id, never by path.** `{{ partial "customer-logo.html" (dict "customer" "snowflake") }}`, `customer: snowflake` in front matter, `logos: [snowflake, bmw]` in a carousel. The retired per-page keys (`customer_name`, `customer_logo`, `card_logo`, `logo_bg_color`, `logo_style`, `logo_size`, `customer_url`) are hard `make lint` errors.
+- **Order is the only ordering mechanism.** `/customers/` renders the registry top to bottom; there is no `weight` and nothing sorts.
+
+Case studies live at `content/customers/<slug>.md` and are **not** listed in the registry — a page declares `customer: <id>` and `/customers/` finds it. Scaffold one with `hugo new content/customers/<slug>.md` (uses `archetypes/customers.md`). Rules that trip people up:
+
+- **`customer`** — required, and the id must exist in `data/customers.yaml`. Add the registry entry first.
+- **`industry`** — required, singular, closed set defined in `data/customers_industries.yaml`, and it must match the industry the registry files that customer under. It is duplicated here only because Hugo's taxonomy engine reads front matter, not data files; `make lint` keeps the two equal.
+- **Industry term pages** live at `/customers/industry/<id>/`, backed by a stub at `content/industry/<id>/_index.md` — one per id in the data file, so every term URL exists whether or not a case study has landed in it. `make lint` keeps that directory and the data file in step.
+- **Renaming a case study** changes its URL, so add an `aliases:` entry for the old `/customers/<old-slug>/` path — same SEO rule as moving any content file.
 
 ---
 

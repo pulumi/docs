@@ -13,9 +13,8 @@ customer_quote:
     text: "What used to take a week and a half now, with Pulumi, took under a day."
     author: "Raman Hariharan"
     title: "Director of Cloud Platform Engineering"
-    company: "Snowflake"
-    logo: snowflake
-    link: /case-studies/snowflake
+    customer: snowflake
+    link: /customers/snowflake
 
 overview:
     title: Your Choice of Language. No Resource Caps. <br/>Migrate at Your Pace.
@@ -203,32 +202,32 @@ case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Starburst
-          link: /case-studies/starburst/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
             Cut multi-region blue/green deployments from two weeks to three hours.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Switched from HCL to Go with Pulumi. Deployment time cut from 1.5 weeks to under a day.
 ---

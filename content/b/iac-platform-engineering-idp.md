@@ -58,85 +58,54 @@ secrets:
 customer_logos:
   title: Trusted by your peers
   logos:
-    - name: bmw
-      link: /case-studies/
-    - name: snowflake
-      link: /case-studies/
-    - name: nvidia
-      link: /case-studies/
-    - name: moderna
-      link: /case-studies/
-    - name: docker
-      link: /case-studies/
-    - name: unity
-      link: /case-studies/
-    - name: deloitte
-      link: /case-studies/
-    - name: stokespace
-      link: /case-studies/
-    - name: univision
-      link: /case-studies/
-    - name: washington-trust
-      link: /case-studies/
-    - name: kyruus
-      link: /case-studies/
-    - name: modular-ai
-      link: /case-studies/
-    - name: korber
-      link: /case-studies/
-    - name: lemonade
-      link: /case-studies/
-    - name: pinecone
-      link: /case-studies/
-    - name: ware2go
-      link: /case-studies/
-    - name: nubank
-      link: /case-studies/
-    - name: mindbody
-      link: /case-studies/
-    - name: fenergo
-      link: /case-studies/
-    - name: webflow
-      link: /case-studies/
-    - name: bluenile
-      link: /case-studies/
-    - name: dutchie
-      link: /case-studies/
-    - name: panther-labs
-      link: /case-studies/
-    - name: materialize
-      link: /case-studies/
-    - name: altana
-      link: /case-studies/
-    - name: mercedes-benz
-      link: /case-studies/
-    - name: bt
-      link: /case-studies/
-    - name: portx
-      link: /case-studies/
-    - name: tivityhealth
-      link: /case-studies/
-    - name: starburst
-      link: /case-studies/
-    - name: linktree
-      link: /case-studies/
+    - bmw
+    - snowflake
+    - nvidia
+    - moderna
+    - docker
+    - unity
+    - deloitte
+    - stoke-space
+    - televisaunivision
+    - washington-trust-bank
+    - kyruus
+    - modular
+    - korber
+    - lemonade
+    - pinecone
+    - ware2go
+    - nubank
+    - mindbody
+    - fenergo
+    - webflow
+    - bluenile
+    - dutchie
+    - panther-labs
+    - materialize
+    - altana
+    - mercedes-benz
+    - bt
+    - portx
+    - tivity-health
+    - starburst
+    - linktree
 
 customer_quotes:
   panther:
     text: |
       “Our developers needed a fast, modular, and testable platform for managing cloud infrastructure. <b>Nothing is better than having standard programming languages for building and managing infrastructure</b>”
     author: Austin Byers, Principal Platform Engineer
-    logo: panther-labs
+    customer: panther-labs
   starburst:
     text: |
       “Pulumi let us build and <b>automate cloud infrastructure projects</b> at a scale that simply wasn’t imaginable using prior-generation infrastructure as code technologies”
     author: Matt Stephenson, Senior Principal Software Engineer
-    logo: starburst
+    customer: starburst
   snowflake:
     text: |
       “Pulumi helped our team to ship a new product faster. We needed <b>one tool to set up and manage multi-cloud, multi-region Kubernetes clusters</b> that infrastructure and applications teams could use collaboratively”
     author: Justin Fitzhugh, VP of Cloud Platform Engineering
-    logo: snowflake
+    customer: snowflake
 
 get_started:
   tweets:

@@ -134,8 +134,7 @@ use_cases:
 case_studies:
     title: Case studies
     items:
-        - company: snowflake
-          link: /case-studies/snowflake
+        - customer: snowflake
           name: Jonas-Taha El Sesiy
           title: Senior Software Engineer
           quote: |
@@ -144,8 +143,7 @@ case_studies:
             solve for future use cases that we hadn’t even thought of yet - all because
             the languages and tools are general-purpose.
 
-        - company: mercedes-benz-rdna
-          link: /case-studies/mercedes-benz
+        - customer: mercedes-benz
           name: Dinesh Ramamurthy
           title: Engineering Manager, Mercedes-Benz Research and Development North America
           quote: |
@@ -153,8 +151,7 @@ case_studies:
             could use themselves to provision infrastructure to suit their own immediate needs.
             The way Pulumi solves the multi-cloud problem is exactly what I was looking for.
 
-        - company: credijusto
-          link: case-studies/credijusto/
+        - customer: credijusto
           name: Fernando Carlietti
           title: Lead DevOps Engineer, Credijusto
           quote: |
@@ -162,16 +159,14 @@ case_studies:
             you can do way more in less time. Pulumi was a natural choice based on the background
             and skills of our people in DevOps.
 
-        - company: lemonade
-          link: case-studies/lemonade/
+        - customer: lemonade
           name: Igor Shapiro
           title: Principal Engineer at Lemonade
           quote: |
             Pulumi’s Automation API helps us to build on existing best practices and further automate
             our deployment process &mdash; eliminating manual tasks and exception handling.
 
-        - company: hyland
-          link: case-studies/learning-machine/
+        - customer: learning-machine
           name:
           title:
           quote: |
@@ -179,8 +174,7 @@ case_studies:
             organization…Our industry moves with incredible speed and using tools like
             Pulumi are absolutely essential to providing teams with the agility that they require.
 
-        - company: menta
-          link: case-studies/menta-network/
+        - customer: menta-network
           name: Ernesto Mendoza
           title: CTO at Menta Network
           quote: |
@@ -190,16 +184,14 @@ case_studies:
             is just as robust as Terraform and has the added benefit of reducing the complexity
             of managing many configurations and environments.
 
-        - company: sourcegraph
-          link: case-studies/sourcegraph/
+        - customer: sourcegraph
           name: Beyang Liu
           title: Sourcegraph CTO
           quote: |
             Pulumi has changed how our team works by giving us deployment superpowers. It’s great
             to run ‘pulumi up’ and not have to worry about deploying an invalid configuration.
 
-        - company: fenergo
-          link:
+        - customer: fenergo
           name: Keith Redmond
           title:  VP of SaaS Engineering, Fenergo
           quote: |

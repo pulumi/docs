@@ -11,8 +11,11 @@
 
       - blog category TERM pages (/blog/category/*)  — curated kinds with
         hand-written descriptions
-      - case-study industry TERM pages (/case-studies/industry/*) — curated
-        customer-story landing pages, one per vertical (data-file source of truth)
+      - customer industry TERM pages (/customers/industry/*) with at least one
+        customer — curated landing pages, one per vertical (data-file source of
+        truth). An industry stub exists for every id in
+        data/customers_industries.yaml so the URL never 404s, but an empty one
+        is a thin page and stays out of the index until it has customers.
       - blog series pages (/blog/series/ and /blog/series/*) — curated
         multi-part landing pages with unique, blog-only titles. Both the
         directory and each series term page are indexed (the directory was an
@@ -37,8 +40,11 @@
     {{- $indexable = false -}}
     {{- if eq .Data.Singular "series" -}}
         {{- $indexable = true -}}
-    {{- else if and (eq .Kind "term") (or (eq .Data.Singular "category") (eq .Data.Singular "industry")) -}}
+    {{- else if and (eq .Kind "term") (eq .Data.Singular "category") -}}
         {{- $indexable = true -}}
+    {{- else if and (eq .Kind "term") (eq .Data.Singular "industry") -}}
+        {{- $cx := partialCached "customers/data.html" . "customers-data" -}}
+        {{- $indexable = gt (index $cx.counts .Data.Term | default 0) 0 -}}
     {{- else if and (eq .Kind "term") (eq .Data.Singular "author") (ge (len (where .Data.Pages "Section" "blog")) 3) -}}
         {{- $indexable = true -}}
     {{- end -}}
