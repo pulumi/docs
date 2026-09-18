@@ -138,3 +138,10 @@ link in your response.
 Ask the user what they want to do next. Useful directions are more resources in
 the project, credentials and secrets in ESC (`pulumi-overview` Level 3), or the
 provider catalog at pulumi.com/registry.
+
+Also make sure they can remove what you created, so trying Pulumi out doesn't
+leave billable cloud resources behind. If they want to keep the work, they
+claim it (step 6) and can tear it down later from their own account with
+`pulumi destroy`. If they were only experimenting, offer to run `pulumi
+destroy` now to remove everything — confirming before you destroy, as with any
+create.
