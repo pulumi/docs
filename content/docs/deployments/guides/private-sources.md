@@ -65,4 +65,4 @@ If your dependencies come from a private package registry rather than a Git repo
     dotnet nuget add source https://nuget.example.com/v3/index.json --name private --username pulumi --password "$NUGET_TOKEN" --store-password-in-clear-text
     ```
 
-In each case, store the token (`NPM_TOKEN`, `PYPI_TOKEN`, `NUGET_TOKEN`) as a **secret** environment variable so it is encrypted and kept out of logs. Leave **Skip package manager dependency installation** off if you want Pulumi Deployments to install dependencies after your pre-run commands have configured the feed.
+In each case, store the token (`NPM_TOKEN`, `PYPI_TOKEN`, `NUGET_TOKEN`) as a **secret** environment variable so Pulumi encrypts it and keeps it out of logs. Leave **Skip package manager dependency installation** off if you want Pulumi Deployments to install dependencies after your pre-run commands have configured the feed.

@@ -21,8 +21,8 @@ Private registries are authenticated with **static username and password credent
 If you need to pull a private image from ECR — or your security model requires short-lived registry credentials — use [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/), which run in your own infrastructure and can authenticate to the registry with an IAM role or any other mechanism you configure.
 {{% /notes %}}
 
+For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/guides/custom-images/).
+
 ## Executor root path
 
 By default, the deployment executor uses `/` as its root path. If your image runs as a non-root user that can't write there, turn on **Customize the executor root path** and set **Executor root path** to a writable directory, such as `/tmp`. This toggle appears only when a custom executor image is in use, or when the stack already has a root path set.
-
-For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/guides/custom-images/).

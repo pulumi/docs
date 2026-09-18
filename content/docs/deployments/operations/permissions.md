@@ -37,7 +37,7 @@ The permission model has the following practical implications:
 
 ## Granting Additional Permissions
 
-The recommended approach for granting additional permissions to deployments is through role assignment. To assign a role to a deployment, open your stack's **Settings** → **Deploy** page in Pulumi Cloud and choose one of your organization's roles from the **Pulumi Cloud role** select, then select **Save**. See [Pulumi Cloud role](/docs/deployments/concepts/settings/runner-pools/#pulumi-cloud-role). Once a role is assigned, the deployment's stack token will inherit the permissions associated with that role, enabling access to stack references, environments, and organization resources as needed. Organization roles are managed through the [Roles section](/docs/administration/concepts/rbac/roles/).
+The recommended approach for granting additional permissions to deployments is through role assignment. To assign a role to a deployment, open your stack's **Settings** → **Deploy** page in Pulumi Cloud and choose one of your organization's roles from the **Pulumi Cloud role** dropdown, then select **Save**. See [Pulumi Cloud role](/docs/deployments/concepts/settings/pulumi-cloud-role/). Once a role is assigned, the deployment's stack token will inherit the permissions associated with that role, enabling access to stack references, environments, and organization resources as needed. Organization roles are managed through the [Roles section](/docs/administration/concepts/rbac/roles/).
 
 Alternatively, you can set the `PULUMI_ACCESS_TOKEN` environment variable to a token with the desired permissions in the stack's deployment settings.
 

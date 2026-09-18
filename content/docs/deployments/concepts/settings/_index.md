@@ -47,6 +47,7 @@ Pulumi recommends against a stack defining its own Deployment Settings (that is,
 - **[Skipping intermediate deployments](/docs/deployments/concepts/settings/skip-intermediate-deployments/)** — collapse a backlog of queued deployments into a single run.
 - **[Custom executor images](/docs/deployments/concepts/settings/custom-executor-images/)** — override the default image to pin a Pulumi version or add your own tools.
 - **[Dependency caching](/docs/deployments/concepts/settings/dependency-caching/)** — speed up deployments by caching downloaded dependencies between runs.
+- **[Pulumi Cloud role](/docs/deployments/concepts/settings/pulumi-cloud-role/)** — choose the organization role a stack's deployments run as, so they can reach stack references, environments, and organization resources.
 - **[Environment variables](/docs/deployments/concepts/settings/environment-variables/)** — the variables Pulumi sets automatically, and how to define your own.
 
 To authenticate with cloud providers using short-lived credentials instead of static secrets, see the [OIDC setup guide](/docs/deployments/guides/oidc/). For task-oriented walkthroughs — supplying cloud credentials, building custom images, and more — see the [Deployments guides](/docs/deployments/guides/).
