@@ -159,7 +159,18 @@ author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on
 triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
-the human approver the demotion asked for. Rollout switch:
+the human approver the demotion asked for.
+
+**`review:reroute`** is the targeted escape hatch for a routing miss: G3
+accepts any review team's approval on that PR, and no other gate moves. The
+map of ownership is not the territory, and when it is wrong the Sentinel
+otherwise keeps demanding a team that cannot review the PR — hand-requesting
+the right one on GitHub does nothing, because G3 resolves from config. Before
+this label the only lever was `review:waived`, which skips four gates to fix
+one. Applying it fixes the PR; fixing `overrides:` fixes the next one. Note
+that every label the evaluator reads must also appear in
+`review-sentinel.yml`'s label-event filter, or it only takes effect on the
+next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
@@ -223,9 +234,30 @@ that orphan (in-progress for 30+ minutes with no live spinner comment).
 ## Lane routing
 
 `.github/review-routing.yml` (repo root config, schema-versioned) maps
-subject × change type → required approver team. Subjects come from
+subject × change type → required approver team, with an ordered
+`overrides:` list consulted first, per path. Subjects come from
 `classify_path()` (shared with triage) applied to **live file lists**, never
 labels. `routing.py` fails closed on any config it cannot validate.
+
+**`classify_path()` says what a file IS; `overrides:` says who owns it.**
+Keeping those separate is the rule two misroutes bought on 2026-09-18.
+pulumi/docs#21723 fixed a Hugo bug blanking the Responses section of the
+Cloud REST API reference: `layouts/` is `domain:frontend`, which routes to
+marketing "who own how the site looks" — true of marketing chrome, false of
+the templates that render the API docs. pulumi/docs#21718 fixed a Get
+Started page: `content/docs/` is one subject with one owner, and Get Started
+is part of the marketing funnel. Both are the same shape — a subject whose
+path prefix spans more than one owner.
+
+#21723 is why the fix belongs at the ownership layer rather than in the
+classifier: its domain was *correct* (it is a template and wants the
+Hugo/dark-mode review criteria) and only its approver was wrong.
+Reclassifying it would have fixed the routing by breaking the review. An
+override moves the approver and leaves the subject, and therefore the
+criteria, alone — `resolve_lanes` records it in `overridden` (path → role)
+with the subject still in `subjects`. So: do not bend `classify_path` to
+answer an ownership question. Add an override, with the `why` the schema
+requires.
 
 The same resolution has two consumers. The Sentinel resolves it itself from
 live API state to decide what G3 requires. Triage resolves it through

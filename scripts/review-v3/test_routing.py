@@ -507,7 +507,8 @@ def test_link_only_any_team_policy():
 def test_resolution_to_json_shape(config):
     r = routing.resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     payload = r.to_json()
-    assert set(payload) == {"roles", "staging_evidence_required", "subjects", "reasons", "any_team"}
+    assert set(payload) == {"roles", "staging_evidence_required", "subjects",
+                            "overridden", "reasons", "any_team"}
     assert payload["roles"] == ["docs-guild"]
 
 
@@ -678,3 +679,135 @@ def test_every_team_the_routing_step_can_request_is_in_the_config():
         assert "/" in slug, slug
         org, _, name = slug.partition("/")
         assert org and name, slug
+
+
+# ---- ownership overrides --------------------------------------------------
+
+
+@pytest.mark.parametrize("pattern,path,want", [
+    # `**/` is zero or more directories, INCLUDING none.
+    ("content/docs/**/get-started/", "content/docs/get-started/x.md", True),
+    ("content/docs/**/get-started/", "content/docs/iac/get-started/k8s/x.md", True),
+    ("content/docs/**/get-started/", "content/docs/ai/neo/get-started/x.md", True),
+    # ...but it does not leak sideways.
+    ("content/docs/**/get-started/", "content/docs/iac/concepts/stacks.md", False),
+    ("content/docs/**/get-started/", "content/blog/get-started/x.md", False),
+    # a get-started-ish sibling directory is not get-started
+    ("content/docs/**/get-started/", "content/docs/iac/get-started-old/x.md", False),
+    # subtree and single-segment rules still hold alongside it
+    ("layouts/partials/openapi/", "layouts/partials/openapi/a/b.html", True),
+    ("layouts/partials/openapi/", "layouts/partials/openapix/b.html", False),
+    ("scripts/*.sh", "scripts/a/b.sh", False),
+])
+def test_pattern_matcher_double_star(pattern, path, want):
+    assert bool(routing._pattern_to_regex(pattern).match(path)) is want
+
+
+def test_override_changes_the_owner_and_not_the_subject(config):
+    """The whole point of putting ownership in its own layer.
+
+    pulumi/docs#21723 was a Hugo bug blanking the Responses section of the
+    Cloud REST API reference. Its domain was RIGHT — it is a template and
+    wants the Hugo/dark-mode review criteria — and only the approver was
+    wrong. Reclassifying it would have fixed routing by breaking the review.
+    """
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    path = "layouts/partials/openapi/response-schema.html"
+    r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+    assert r.roles == {"tools"}            # was marketing
+    assert r.subjects[path] == "frontend"  # unchanged, so criteria are unchanged
+    assert r.overridden == {path: "tools"}
+    assert any("override:" in x and path in x for x in r.reasons)
+
+
+def test_get_started_routes_to_marketing_everywhere_it_lives():
+    """pulumi/docs#21718. Get Started is the marketing funnel, not general
+    docs, in all seven trees — and in an eighth the day someone adds it."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for prefix in ("content/docs", "content/docs/iac", "content/docs/esc",
+                   "content/docs/administration", "content/docs/deployments",
+                   "content/docs/ai/neo", "content/docs/discovery-governance/discovery",
+                   "content/docs/some-future-product"):
+        path = f"{prefix}/get-started/index.md"
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+        assert r.roles == {"marketing"}, path
+        assert r.subjects[path] == "docs", path
+
+
+def test_ordinary_paths_are_untouched_by_the_overrides():
+    """An override list that quietly re-owns the ordinary case is worse than
+    no override list."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for path, role in (("content/docs/iac/concepts/stacks.md", "docs-guild"),
+                       ("content/blog/p/index.md", "blog"),
+                       ("layouts/partials/blog/card/wide.html", "marketing"),
+                       ("theme/src/scss/main.scss", "marketing"),
+                       ("scripts/review-v3/sentinel.py", "tools")):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+        assert r.roles == {role}, path
+        assert r.overridden == {}, path
+
+
+def test_override_and_matrix_paths_union_in_a_mixed_diff(config):
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    r = routing.resolve_lanes(
+        ["layouts/partials/openapi/x.html", "content/docs/iac/concepts/stacks.md"],
+        mechanical=False, claims=False, config=cfg,
+    )
+    assert r.roles == {"tools", "docs-guild"}
+    assert set(r.overridden) == {"layouts/partials/openapi/x.html"}
+
+
+def test_override_wins_for_its_path_only(config):
+    """An overridden path must not also drag its subject into the matrix
+    pass — otherwise `layouts/partials/openapi/` would stack marketing on
+    top of tools and the override would add an approver instead of moving
+    one."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    r = routing.resolve_lanes(["layouts/partials/openapi/x.html"],
+                              mechanical=False, claims=False, config=cfg)
+    assert r.roles == {"tools"}
+    assert "marketing" not in r.roles
+
+
+def test_first_matching_override_wins(base_config):
+    base_config["overrides"] = [
+        {"paths": ["a/"], "role": "tools", "why": "first"},
+        {"paths": ["a/"], "role": "marketing", "why": "second, shadowed"},
+    ]
+    cfg, errors, _ = routing.validate_raw(base_config)
+    assert errors == []
+    assert routing.override_role(cfg, "a/x.md") == ("tools", "first")
+
+
+@pytest.mark.parametrize("entry,fragment", [
+    ({"paths": ["a/"], "role": "nope", "why": "x"}, "names unknown role"),
+    ({"paths": [], "role": "tools", "why": "x"}, "must be a non-empty list"),
+    ({"paths": ["/a/"], "role": "tools", "why": "x"}, "repo-root-relative"),
+    ({"paths": ["a/"], "role": "tools"}, "why is required"),
+    ({"paths": ["a/"], "role": "tools", "why": "x", "huh": 1}, "unknown key 'huh'"),
+])
+def test_override_validation(base_config, entry, fragment):
+    base_config["overrides"] = [entry]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any(fragment in e for e in errors), errors
+
+
+def test_overrides_are_optional(base_config):
+    base_config.pop("overrides", None)
+    cfg, errors, _ = routing.validate_raw(base_config)
+    assert errors == [] and cfg.overrides == []
+    assert routing.override_role(cfg, "anything.md") is None
+
+
+def test_every_live_override_is_reachable():
+    """A pattern matching nothing in the tree is either a typo or a rule
+    whose directory moved — both silent today."""
+    import subprocess
+    tracked = subprocess.run(["git", "ls-files"], cwd=routing.REPO_ROOT,
+                             capture_output=True, text=True).stdout.split()
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for entry in cfg.overrides:
+        hit = [p for p in tracked
+               if any(routing._pattern_to_regex(pat).match(p) for pat in entry["paths"])]
+        assert hit, f"override matches no tracked file: {entry['paths']}"

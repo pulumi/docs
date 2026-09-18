@@ -69,11 +69,12 @@ CHANGE_TYPES = ("mechanical", "substantive")
 MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 
 TOP_LEVEL_KEYS = frozenset({
-    "schema", "teams", "bots", "matrix", "staging_evidence", "claims_overlay",
-    "external_contributors", "sla", "author_staleness", "waive",
-    "not_governed", "link_only",
+    "schema", "teams", "bots", "matrix", "overrides", "staging_evidence",
+    "claims_overlay", "external_contributors", "sla", "author_staleness",
+    "waive", "not_governed", "link_only",
 })
 STAGING_EVIDENCE_KEYS = frozenset({"paths"})
+OVERRIDE_KEYS = frozenset({"paths", "role", "why"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
@@ -114,6 +115,7 @@ class Config:
     teams: dict[str, str]
     bots: list[str]
     matrix: dict[str, dict[str, str]]
+    overrides: list
     staging_evidence: dict
     claims_overlay: dict
     external_contributors: dict
@@ -132,6 +134,9 @@ class Resolution:
     roles: set[str]
     staging_evidence_required: bool
     subjects: dict[str, str]  # changed path -> subject
+    # changed path -> role, for paths an `overrides` entry claimed. Their
+    # subject is still in `subjects`; only the approver changed.
+    overridden: dict[str, str]
     reasons: list[str]
     # True when any team in `teams:` satisfies the approver gate instead of
     # the lane's own team (see `link_only.approval` in the config).
@@ -142,6 +147,7 @@ class Resolution:
             "roles": sorted(self.roles),
             "staging_evidence_required": self.staging_evidence_required,
             "subjects": self.subjects,
+            "overridden": self.overridden,
             "reasons": self.reasons,
             "any_team": self.any_team,
         }
@@ -238,6 +244,49 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     )
                     continue
                 matrix_roles_used.add(role)
+
+    # ---- overrides (optional, ordered) --------------------------------
+    # Path -> role, consulted before the matrix. See OVERRIDES in the yaml.
+    overrides = raw.get("overrides", [])
+    if overrides is None:
+        overrides = []
+    if not isinstance(overrides, list):
+        errors.append("overrides must be a list of {paths, role, why} entries")
+        overrides = []
+    else:
+        for i, entry in enumerate(overrides):
+            if not isinstance(entry, dict):
+                errors.append(f"overrides[{i}] must be a mapping with paths, role, why")
+                continue
+            _check_unknown_keys(entry, OVERRIDE_KEYS, f"overrides[{i}]", errors)
+            role = entry.get("role")
+            if not _is_nonempty_str(role) or role not in teams:
+                errors.append(
+                    f"overrides[{i}].role names unknown role {role!r} (not in teams)"
+                )
+            paths = entry.get("paths")
+            if not isinstance(paths, list) or not paths:
+                errors.append(f"overrides[{i}].paths must be a non-empty list of patterns")
+            else:
+                for j, pattern in enumerate(paths):
+                    if not _is_nonempty_str(pattern):
+                        errors.append(
+                            f"overrides[{i}].paths[{j}] must be a non-empty string, "
+                            f"got {pattern!r}"
+                        )
+                    elif pattern.startswith("/"):
+                        errors.append(
+                            f"overrides[{i}].paths[{j}] must be repo-root-relative "
+                            f"with no leading slash, got {pattern!r}"
+                        )
+            # `why` is required on purpose: an override is a deliberate
+            # exception to the matrix, and one that cannot say why it exists
+            # is one nobody can safely delete later.
+            if not _is_nonempty_str(entry.get("why")):
+                errors.append(
+                    f"overrides[{i}].why is required — say why this path does not "
+                    "follow its subject's owner"
+                )
 
     # ---- staging_evidence ---------------------------------------------
     # Required, not optional: an absent section would read as "nothing needs
@@ -407,6 +456,7 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         teams=teams,
         bots=bots,
         matrix=matrix,
+        overrides=overrides,
         staging_evidence=staging_evidence,
         claims_overlay=claims_overlay,
         external_contributors=external_contributors,
@@ -442,18 +492,28 @@ def load_config(path: Path | str) -> Config:
 
 
 def _pattern_to_regex(pattern: str) -> re.Pattern:
-    """Compile one `staging_evidence.paths` pattern.
+    """Compile one path pattern (`overrides[].paths`, `staging_evidence.paths`).
 
     Deliberately not `fnmatch`: fnmatch's `*` crosses `/`, so `scripts/*`
-    there would match `scripts/redirects/general-broken-links-redirects.txt`
-    — the exact path this section exists to exclude. Here `*` matches within
-    one segment only, and a trailing `/` means the whole subtree.
+    would match `scripts/redirects/general-broken-links-redirects.txt` — the
+    exact path `staging_evidence` exists to exclude. Here:
+
+      - `**/` is zero or more directories, so `content/docs/**/get-started/`
+        matches `content/docs/get-started/x.md` AND
+        `content/docs/iac/get-started/x.md`;
+      - `*` matches within ONE segment and never crosses `/`;
+      - a trailing `/` means that whole subtree;
+      - anything else is an exact path.
     """
-    if pattern.endswith("/"):
-        return re.compile(re.escape(pattern) + r".+")
-    body = "".join(r"[^/]*" if part == "*" else re.escape(part)
-                   for part in re.split(r"(\*)", pattern))
-    return re.compile(body + r"\Z")
+    suffix = r".+" if pattern.endswith("/") else r"\Z"
+    body = ""
+    # Split on `**/` first so the segment-local `*` rule below never sees it.
+    for i, chunk in enumerate(pattern.split("**/")):
+        if i:
+            body += r"(?:[^/]*/)*"
+        body += "".join(r"[^/]*" if part == "*" else re.escape(part)
+                        for part in re.split(r"(\*)", chunk))
+    return re.compile(body + suffix)
 
 
 _STAGING_REGEX_CACHE: dict[tuple[str, ...], list[re.Pattern]] = {}
@@ -465,6 +525,36 @@ def staging_evidence_patterns(config: Config) -> list[re.Pattern]:
     if key not in _STAGING_REGEX_CACHE:
         _STAGING_REGEX_CACHE[key] = [_pattern_to_regex(pat) for pat in key]
     return _STAGING_REGEX_CACHE[key]
+
+
+_OVERRIDE_REGEX_CACHE: dict[int, list[tuple[list[re.Pattern], str, str]]] = {}
+
+
+def _override_rules(config: Config) -> list[tuple[list[re.Pattern], str, str]]:
+    """Compiled `overrides`, in file order, memoized per Config object."""
+    key = id(config)
+    if key not in _OVERRIDE_REGEX_CACHE:
+        _OVERRIDE_REGEX_CACHE[key] = [
+            ([_pattern_to_regex(pat) for pat in entry.get("paths") or ()],
+             entry.get("role") or "",
+             entry.get("why") or "")
+            for entry in (config.overrides or [])
+        ]
+    return _OVERRIDE_REGEX_CACHE[key]
+
+
+def override_role(config: Config, path: str) -> tuple[str, str] | None:
+    """The (role, why) an `overrides` entry assigns to `path`, or None.
+
+    First match wins, in file order. This is consulted BEFORE the matrix and
+    answers only "who owns this file" — the path's subject, and therefore the
+    review criteria that apply to it, are untouched. See OVERRIDES in
+    `.github/review-routing.yml` for why those are separate questions.
+    """
+    for regexes, role, why in _override_rules(config):
+        if any(rx.match(path) for rx in regexes):
+            return role, why
+    return None
 
 
 def requires_staging_evidence(config: Config, path: str) -> bool:
@@ -520,14 +610,27 @@ def resolve_lanes(
     else:
         reasons.append("no changed path requires staging evidence")
 
-    for subject in sorted(set(subjects.values())):
+    # Ownership overrides run first, per path. A path an override claims is
+    # settled — it does not also contribute its subject to the matrix pass
+    # below — but its SUBJECT is untouched, so the domain label and the
+    # review criteria that follow from it are exactly what classify_path
+    # said. See OVERRIDES in the yaml header.
+    overridden: dict[str, str] = {}
+    for path in changed_paths:
+        hit = override_role(config, path)
+        if hit is not None:
+            role, _why = hit
+            overridden[path] = role
+            roles.add(role)
+            reasons.append(
+                f"override: {path} (subject:{subjects[path]}) -> role:{role}"
+            )
+
+    for subject in sorted({s for p, s in subjects.items() if p not in overridden}):
         cell = config.matrix[subject]
         role = cell[change_type]
-        if role != "none":
-            roles.add(role)
-            reasons.append(f"subject:{subject}/{change_type} -> role:{role}")
-        else:
-            reasons.append(f"subject:{subject}/{change_type} -> none")
+        roles.add(role)
+        reasons.append(f"subject:{subject}/{change_type} -> role:{role}")
 
     if claims:
         overlay_role = config.claims_overlay["add"]
@@ -547,6 +650,7 @@ def resolve_lanes(
         roles=roles,
         staging_evidence_required=staging_evidence_required,
         subjects=subjects,
+        overridden=overridden,
         reasons=reasons,
         any_team=any_team,
     )

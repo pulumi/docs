@@ -91,17 +91,25 @@ env:
 
 jobs:
   sentinel:
-    # Label events re-evaluate only for the labels the evaluator reads
-    # (waive, oversized, trivial, prose-flagged); every other label change
-    # cannot move a gate. Keep this list in step with sentinel.py.
+    # Label events re-evaluate only for the labels the evaluator reads; every
+    # other label change cannot move a gate. Keep this list in step with
+    # sentinel.py — a label the evaluator reads but this list omits still
+    # works, but only on the NEXT event, which for `review:reroute` means an
+    # author unblocking a misroute sees nothing happen and reaches for the
+    # waive instead. (`sentinel:preview` was in exactly that position: the
+    # lanes that apply it label the PR just after opening it, so the `opened`
+    # run predates the label and the preview comment waited for a later
+    # event.)
     if: |
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
       (github.event_name != 'pull_request_target' ||
        (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
        github.event.label.name == 'review:waived' ||
+       github.event.label.name == 'review:reroute' ||
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
-       github.event.label.name == 'review:prose-flagged')
+       github.event.label.name == 'review:prose-flagged' ||
+       github.event.label.name == 'sentinel:preview')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

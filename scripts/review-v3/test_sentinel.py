@@ -1048,6 +1048,89 @@ def test_brief_has_no_checks_helper_is_gone():
     assert hasattr(sentinel, "_author_card_nothing_blocks")
 
 
+def test_reroute_label_lets_any_review_team_satisfy_g3():
+    """The targeted fix for a routing miss.
+
+    Two live ones on 2026-09-18: pulumi/docs#21723 (an OpenAPI renderer bug
+    routed to marketing because `layouts/` is `domain:frontend`) and
+    pulumi/docs#21718 (a Get Started page routed to docs-guild). Both are
+    fixed properly in `overrides:`, but the map will be wrong again, and
+    before this label the only lever was `review:waived` — four gates
+    skipped to fix one.
+    """
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
+                files=[docs_file_substantive()], comments=[card])
+
+    # docs-guild is what the matrix wants; marketing's approval now counts.
+    v = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("mkt")],
+                      memberships={("docs-marketing-review", "mkt"): "active"})), CONFIG)
+    assert _gate(v, "G3").status == "ok"
+    assert "review:reroute" in _gate(v, "G3").message
+    assert v.conclusion == "success", v.to_json()
+    assert "wrong lane" in v.summary
+
+
+def test_reroute_still_needs_somebody_from_a_review_team():
+    """It widens who may approve. It does not remove the approval."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
+                files=[docs_file_substantive()], comments=[card])
+
+    # Nobody has approved at all.
+    assert _gate(sentinel.evaluate(StubGh(**base), CONFIG), "G3").status == "red"
+
+    # Approved by someone on no review team.
+    v = sentinel.evaluate(StubGh(**dict(base, reviews=[approval("randomer")])), CONFIG)
+    assert _gate(v, "G3").status == "red"
+    assert "review:reroute" in _gate(v, "G3").message
+
+    # A bot approval is still worthless.
+    v2 = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("pulumi-bot")],
+                      memberships={("docs-tools", "pulumi-bot"): "active"})), CONFIG)
+    assert _gate(v2, "G3").status == "red"
+
+
+def test_reroute_touches_no_other_gate():
+    """The difference from `review:waived`, and the reason to prefer it."""
+    # G1: no review on a substantive PR is still red.
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
+               files=[docs_file_substantive()],
+               reviews=[approval("mkt")],
+               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
+    assert _gate(v, "G1").status == "red"
+
+    # G2: an unanswered finding is still red.
+    card = author_card([("F1", "must")], state=_state_with([]))
+    v2 = sentinel.evaluate(
+        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
+               files=[docs_file_substantive()], comments=[card],
+               reviews=[approval("mkt")],
+               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
+    assert _gate(v2, "G2").status == "red"
+
+    # G4: staging evidence is as unwaivable as ever.
+    v3 = sentinel.evaluate(
+        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]), files=[infra_file()],
+               comments=[author_card([], state=_state_with([]))],
+               reviews=[approval("mkt")],
+               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
+    assert _gate(v3, "G4").status == "red"
+
+
+def test_without_the_label_the_lane_team_is_still_required():
+    card = author_card([], state=_state_with([]))
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+               reviews=[approval("mkt")],
+               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
+    assert _gate(v, "G3").status == "red"
+    assert "docs-guild" in _gate(v, "G3").message
+
+
 def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     # A cancelled job renders as a failing check; the workflow must not own
     # a concurrency group (publish_guard.py handles overlap instead), and
@@ -1055,7 +1138,8 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
     assert "cancel-in-progress:" not in wf
     assert "\nconcurrency:" not in wf
-    for label in ("review:waived", "review:oversized", "review:trivial", "review:prose-flagged"):
+    for label in ("review:waived", "review:reroute", "review:oversized",
+                  "review:trivial", "review:prose-flagged", "sentinel:preview"):
         assert f"github.event.label.name == '{label}'" in wf, label
     assert "publish_guard.py" in wf
     assert "external_id: $run_id" in wf

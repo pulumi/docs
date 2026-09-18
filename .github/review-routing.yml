@@ -124,6 +124,71 @@
 # what it keys on instead.
 #
 # -----------------------------------------------------------------------------
+# OVERRIDES
+# -----------------------------------------------------------------------------
+# `overrides:` is an ordered list of path -> role rules, consulted BEFORE the
+# matrix, per changed path. The first entry whose `paths` match a path decides
+# that path's approver; every other path still goes through `matrix`.
+#
+# It exists because `matrix` answers "what kind of file is this?" and was then
+# also being used to answer "who owns it?". Those are different questions, and
+# they only give the same answer when a subject happens to have exactly one
+# owner. Two live misroutes, both the same shape -- a subject whose path prefix
+# spans more than one owner:
+#
+#   - pulumi/docs#21723 fixed `layouts/partials/openapi/response-schema.html`,
+#     a Hugo bug blanking the Responses section of the Cloud REST API
+#     reference. `layouts/` is `domain:frontend`, which routes to marketing
+#     "who own how the site looks" -- true of marketing chrome, false of the
+#     templates that render the API docs. It went to docs-marketing-review,
+#     who cannot review it.
+#   - pulumi/docs#21718 fixed drifted samples on a Get Started page.
+#     `content/docs/` is one subject with one owner, so it went to docs-guild;
+#     Get Started is part of the marketing funnel and is marketing's.
+#
+# THE RULE THIS ENCODES: `classify_path()` says what a file IS, which decides
+# which review CRITERIA apply. Do not bend it to say who owns the file. When
+# ownership does not follow the subject boundary, put it here instead.
+#
+# #21723 is the proof that this is the right layer: its domain was correct --
+# it is a Hugo template and genuinely wants the Hugo/dark-mode review criteria
+# -- and only the approver was wrong. Reclassifying it would have fixed the
+# routing by breaking the review. An override changes the approver and leaves
+# the `domain:frontend` label, and therefore the criteria, exactly as they were.
+#
+# Each entry takes:
+#   - `paths`: one or more patterns, same matcher as `staging_evidence.paths`
+#     below, plus `**/` for "zero or more directories" (so
+#     `content/docs/**/get-started/` catches all seven of them, including the
+#     top-level one, and a new one the day it lands).
+#   - `role`: a role from `teams:`.
+#   - `why`: required prose. An override is a deliberate exception to the
+#     matrix; one that cannot say why it exists is one nobody can safely
+#     delete later.
+#
+# Keep the list short. An override that starts wanting sub-overrides is a
+# subject that should have been split.
+
+overrides:
+  - paths: [layouts/partials/openapi/]
+    role: tools
+    why: >-
+      The Cloud REST API reference renderer, driven by the OpenAPI spec that
+      scripts/fetch-openapi-spec.sh pulls and update-openapi-lastmod.yml
+      maintains. It is docs-generation tooling wearing a Hugo template's
+      clothes; `domain:frontend` is right about what it is and wrong about
+      who owns it (pulumi/docs#21723).
+
+  - paths: [content/docs/**/get-started/]
+    role: marketing
+    why: >-
+      Get Started is part of the marketing funnel, not general docs, so it is
+      marketing's to approve even though it lives under content/docs/ and
+      reads as `domain:docs` (pulumi/docs#21718). Matches all seven
+      get-started trees -- administration, ai/neo, deployments,
+      discovery-governance/discovery, esc, iac, and the top-level one.
+
+# -----------------------------------------------------------------------------
 # STAGING EVIDENCE
 # -----------------------------------------------------------------------------
 # `staging_evidence.paths` is the closed list of paths that require a

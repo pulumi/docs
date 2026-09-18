@@ -410,6 +410,16 @@ def _strip_brief_for_summary(body: str) -> str:
 
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
+# The targeted counterpart to `review:waived`. Routing can be wrong — the
+# matrix and `overrides` are a map of ownership, and a map is never the
+# territory — and when it is, the Sentinel keeps demanding a team that cannot
+# review the PR. Hand-requesting the right team on GitHub does nothing,
+# because G3 resolves from config, so before this label the only lever was
+# `review:waived`, which skips G1, G2, G3 and G5 to fix G3 alone. This makes
+# G3 accept any review team's approval on this PR and touches no other gate:
+# the review still has to have run, the findings still have to be answered,
+# and infra staging evidence is as unwaivable as ever.
+REROUTE_LABEL = "review:reroute"
 TRIVIAL_LABEL = "review:trivial"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
 TRIAGE_BOT_LOGIN = "github-actions[bot]"
@@ -835,10 +845,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         missing: list[str] = []
         errors: list[str] = []
-        # A link-only sweep needs a careful human, not a particular lane's
-        # human, so `link_only.approval: any-team` lets any review team
-        # satisfy the gate. The roles stay on the record either way.
-        required = ([config.teams[r] for r in sorted(config.teams)] if resolution.any_team
+        # Two ways any review team can satisfy the gate instead of the lane's
+        # own: a link-only sweep (`link_only.approval: any-team` — checking a
+        # retargeted link needs a careful human, not a particular lane's), and
+        # `review:reroute`, the escape hatch for a routing miss. The roles
+        # stay on the record either way, so the verdict still shows what the
+        # config thought.
+        rerouted = REROUTE_LABEL in labels
+        any_team = resolution.any_team or rerouted
+        required = ([config.teams[r] for r in sorted(config.teams)] if any_team
                     else [config.teams.get(role, "") for role in sorted(resolution.roles)])
         satisfied_any = False
         for team_ref in required:
@@ -856,9 +871,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 satisfied_any = True
             elif not errors:
                 missing.append(team_ref)
-        if resolution.any_team:
+        if any_team:
             # One team is enough; only an empty set is a miss.
-            missing = [] if satisfied_any else ["any review team (link-only sweep)"]
+            why = "`review:reroute`" if rerouted else "link-only sweep"
+            missing = [] if satisfied_any else [f"any review team ({why})"]
         if errors:
             gates.append(Gate(
                 "G3 right-approver", "error",
@@ -870,6 +886,12 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "G3 right-approver", "red",
                 f"Needs approval from a member of {names} — no qualifying human "
                 "approval yet (bot approvals never count).",
+            ))
+        elif rerouted:
+            gates.append(Gate(
+                "G3 right-approver", "ok",
+                f"approved by a review team under `{REROUTE_LABEL}` "
+                "(routing sent this to the wrong lane)",
             ))
         else:
             gates.append(Gate("G3 right-approver", "ok", "matrix-required approval present"))
@@ -961,6 +983,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(
             "_Classified mechanical under the tightened bar — no model review required. "
             "A human approver is still required._"
+        )
+    if REROUTE_LABEL in labels:
+        parts.append(
+            f"_`{REROUTE_LABEL}`: routing sent this to the wrong lane, so any "
+            "review team's approval satisfies G3. Every other gate is "
+            "unchanged — fix the mapping in `.github/review-routing.yml` "
+            "(`overrides:`) so the next PR lands right._"
         )
     if trivial_standin:
         parts.append(
