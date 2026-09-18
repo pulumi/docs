@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -1177,6 +1178,61 @@ def test_workflow_never_checks_out_pr_code():
                       "refs/pull/", "merge_commit_sha"):
         assert forbidden not in wf, f"workflow must never reference PR code: {forbidden}"
     assert "default_branch" in wf  # checkout pinned to base default branch
+
+
+def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
+    """`${{ }}` is substituted textually BEFORE bash parses the script.
+
+    So an author-controlled value written that way inside a `run:` block is
+    not a string, it is script. A branch name is author-controlled and
+    `git check-ref-format` accepts `"`, `$`, backtick, `;`, `&`, `|`, `(`,
+    `)` and `'` — space is the only shell metacharacter it rejects, and
+    `$IFS` covers that.
+
+    staging-deploy-auto.yml and staging-deploy-pr.yml both did this with
+    `github.event.pull_request.head.ref`. The PR lane holds `id-token: write`
+    with ESC already authenticated, so the payload could mint an OIDC token
+    and read the org-scoped PULUMI_BOT_TOKEN — repo-write escalating to
+    org-scoped credentials.
+
+    Both files' headers justified safety as "never checks out or executes PR
+    code", which is true and beside the point: the VALUE is the vector, not
+    the code. The rule is `env:` + "$VAR", which staging-status.yml already
+    followed. This test covers every workflow rather than a named list, so a
+    new lane cannot reintroduce it.
+    """
+    # Expressions whose value a PR author controls. `github.repository`,
+    # `github.run_id` and `github.event.repository.default_branch` are NOT
+    # author-controlled and stay allowed.
+    author_controlled = (
+        "github.event.pull_request.head.ref",
+        "github.event.pull_request.title",
+        "github.event.pull_request.body",
+        "github.event.issue.title",
+        "github.event.issue.body",
+        "github.event.comment.body",
+        "github.head_ref",
+        "github.event.workflow_run.head_branch",
+    )
+    offenders = []
+    for wf in sorted((REPO_ROOT / ".github" / "workflows").glob("*.yml")):
+        for lineno, line in enumerate(wf.read_text().splitlines(), 1):
+            stripped = line.strip()
+            # `env:` mappings are the safe form; only flag `${{ }}` that is
+            # not a `KEY: ${{ ... }}` binding. A run-block line carrying one
+            # of these expressions is the defect.
+            if stripped.startswith("#") or "${{" not in line:
+                continue
+            binding = re.match(r"^[A-Za-z_][A-Za-z0-9_]*:\s*\$\{\{", stripped)
+            if binding:
+                continue
+            for expr in author_controlled:
+                if expr in line:
+                    offenders.append(f"{wf.name}:{lineno}: {stripped[:90]}")
+    assert not offenders, (
+        "PR-controlled value interpolated outside an `env:` binding "
+        "(use env: + \"$VAR\"):\n  " + "\n  ".join(offenders)
+    )
 
 
 def test_workflow_can_actually_write_the_comments_it_writes():
