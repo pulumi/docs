@@ -30,15 +30,37 @@ enough to reach a first result.
 
 ## 3. Ask what the user wants to do
 
-Ask the user which of these fits, and which cloud they are targeting (AWS,
-Azure, GCP, or another provider):
+Ask which path fits. Lead with the template path — it is the surest route to a
+clean first result:
 
-- Create new infrastructure, from a single resource to several related ones, as
-  a Pulumi project
-- Bring existing infrastructure code (migrate from Terraform, CloudFormation,
-  CDK, ARM, or Bicep)
+- Start from a template (recommended). A curated, known-good architecture that
+  deploys as-is, so the first `up` is the most likely to succeed.
+- Build something custom. Create infrastructure from scratch, from a single
+  resource to several related ones.
+- Migrate existing infrastructure code from Terraform, CloudFormation, CDK,
+  ARM, or Bicep.
 
 Do not guess. The answer decides the path.
+
+For the template path, settle on a specific template by asking three things:
+
+- Use case: static website, serverless app, or container service.
+- Cloud: AWS, Azure, GCP, or Cloudflare.
+- Language: TypeScript, Python, Go, C#, YAML, or HCL.
+
+The template name is `<use-case>-<cloud>-<language>` from
+github.com/pulumi/templates, where `<use-case>` is `static-website`,
+`serverless`, or `container` — for example, `static-website-aws-typescript` or
+`serverless-cloudflare-python`. Those six languages are the only ones the
+architecture templates come in; Java is not among them, so do not offer it on
+this path (it exists only for custom projects). Cloudflare has no container
+template: offer Cloudflare only static website or serverless, and offer
+container service only on AWS, Azure, or GCP. Confirm the chosen template
+resolves before continuing; if a combination is missing, offer a neighboring
+one rather than stopping.
+
+For the custom path, ask which cloud they are targeting (AWS, Azure, GCP, or
+another provider) and what they want to build.
 
 If the user chooses migration, install the migration skills before continuing:
 
@@ -59,11 +81,15 @@ detecting and choosing them yourself.
 
 ## 5. Build the first result as a project
 
-Ask the user for the specifics of what they chose in step 3, then follow the
-`pulumi-overview` skill from step 2:
+Follow the `pulumi-overview` skill from step 2. Fill in any remaining specifics
+for the path the user chose:
 
-- New infrastructure: confirm the language (TypeScript, Python, Go, C#, Java,
-  YAML, or HCL) and what to build, then use `pulumi-overview`, Level 2. Scaffold with
+- Template: scaffold with `pulumi new <use-case>-<cloud>-<language>` (for
+  example, `pulumi new static-website-cloudflare-python`). This produces a
+  complete, working project — the template is the result, so do not add
+  resources unless the user asks. Walk the user through what it creates.
+- Custom: confirm the language (TypeScript, Python, Go, C#, Java, YAML, or
+  HCL), then use `pulumi-overview`, Level 2. Scaffold with
   `pulumi new <cloud>-<language>`, then add the resources they asked for,
   whether that is one or several. Keep it minimal if they only want one.
 - Migration: hand it to `pulumi-overview`, which covers migrating from
