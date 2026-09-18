@@ -162,6 +162,19 @@ class Resolution:
         }
 
 
+def _bad_double_star(pattern: str) -> bool:
+    """Does `pattern` contain a `**` the matcher will not honor?
+
+    `_pattern_to_regex` splits on the literal `"**/"`. Anything else with two
+    adjacent stars falls through to the segment-local `*` rule and compiles
+    to `[^/]*[^/]*` — one segment, not recursive. So `content/**` matches
+    `content/a.md` and NOT `content/a/b.md`, the opposite of what anyone
+    writing it intends, silently. Cheaper to reject than to support: the
+    `**/` form already covers the real case.
+    """
+    return "**" in pattern.replace("**/", "")
+
+
 def _is_nonempty_str(v) -> bool:
     return isinstance(v, str) and bool(v.strip())
 
@@ -187,7 +200,11 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
     _check_unknown_keys(raw, TOP_LEVEL_KEYS, "top level", errors)
 
     schema = raw.get("schema")
-    if schema != 1:
+    # `isinstance(..., bool)` first: in Python `True == 1` and `1.0 == 1`, so
+    # `schema: true` (a plausible YAML slip) and `schema: 1.0` both passed a
+    # bare `!= 1`. The same guard already protects `business_days` and
+    # `warn_days`/`close_days`.
+    if isinstance(schema, bool) or not isinstance(schema, int) or schema != 1:
         errors.append(f"schema must be 1, got {schema!r}")
 
     # ---- teams --------------------------------------------------------
@@ -273,6 +290,15 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                 errors.append(
                     f"overrides[{i}].role names unknown role {role!r} (not in teams)"
                 )
+            else:
+                # An overrides role is handed out exactly like a matrix role,
+                # so it needs an `sla:` entry exactly like one. Without this
+                # the config validated clean and `sla-sweep.py` then did
+                # `config.sla[role]["business_days"]` and took the whole
+                # sweep down with a KeyError for every PR in the batch.
+                # `claims_overlay.add` was already registered here; overrides
+                # were the gap.
+                matrix_roles_used.add(role)
             paths = entry.get("paths")
             if not isinstance(paths, list) or not paths:
                 errors.append(f"overrides[{i}].paths must be a non-empty list of patterns")
@@ -287,6 +313,14 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                         errors.append(
                             f"overrides[{i}].paths[{j}] must be repo-root-relative "
                             f"with no leading slash, got {pattern!r}"
+                        )
+                    elif _bad_double_star(pattern):
+                        errors.append(
+                            f"overrides[{i}].paths[{j}] uses `**` outside the "
+                            f"`**/` form, got {pattern!r} — as written it "
+                            "collapses to a single path segment and would match "
+                            "less than you meant. Write `**/` for 'zero or more "
+                            "directories'."
                         )
             # `why` is required on purpose: an override is a deliberate
             # exception to the matrix, and one that cannot say why it exists
@@ -322,6 +356,11 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     errors.append(
                         f"staging_evidence.paths[{i}] must be repo-root-relative "
                         f"with no leading slash, got {pattern!r}"
+                    )
+                elif _bad_double_star(pattern):
+                    errors.append(
+                        f"staging_evidence.paths[{i}] uses `**` outside the "
+                        f"`**/` form, got {pattern!r} — see overrides[].paths."
                     )
 
     # ---- claims_overlay -----------------------------------------------
@@ -553,12 +592,26 @@ def staging_evidence_patterns(config: Config) -> list[re.Pattern]:
     return _STAGING_REGEX_CACHE[key]
 
 
-_OVERRIDE_REGEX_CACHE: dict[int, list[tuple[list[re.Pattern], str, str]]] = {}
+_OVERRIDE_REGEX_CACHE: dict[tuple, list[tuple[list[re.Pattern], str, str]]] = {}
 
 
 def _override_rules(config: Config) -> list[tuple[list[re.Pattern], str, str]]:
-    """Compiled `overrides`, in file order, memoized per Config object."""
-    key = id(config)
+    """Compiled `overrides`, in file order, memoized per rule content.
+
+    Keyed on the rules, NOT on `id(config)`. A `Config` is an ordinary
+    object: once one is garbage-collected CPython reuses the address, so an
+    id-keyed entry gets served to a *different* config that happens to land
+    there — a merge gate routing a PR to a team named in a config that no
+    longer exists. This reproduced as an INTERMITTENT failure of
+    `test_first_matching_override_wins` under the full suite (enough Configs
+    allocated and freed for an address to be reused) while passing when that
+    file ran alone. `_STAGING_REGEX_CACHE` below was always keyed correctly;
+    this one was the asymmetry.
+    """
+    key = tuple(
+        (tuple(entry.get("paths") or ()), entry.get("role") or "")
+        for entry in (config.overrides or [])
+    )
     if key not in _OVERRIDE_REGEX_CACHE:
         _OVERRIDE_REGEX_CACHE[key] = [
             ([_pattern_to_regex(pat) for pat in entry.get("paths") or ()],

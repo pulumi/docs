@@ -1355,6 +1355,39 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     for label in ("review:waived", "review:oversized", "review:trivial",
                   "review:prose-flagged", "sentinel:preview"):
         assert f"github.event.label.name == '{label}'" in wf, label
+
+
+def test_label_event_filter_covers_every_label_the_evaluator_reads():
+    """Derived, not restated — a hardcoded list is how one went missing.
+
+    `automation/merge` is read through the CONFIG
+    (`not_governed.author_label_pairs`) rather than a constant in
+    sentinel.py, so a list of sentinel.py's constants looked complete while
+    omitting the label that flips the verdict hardest: present ⇒ success
+    with no gates evaluated. Its lane applies it after opening the PR and
+    then arms auto-merge, so the Sentinel stayed red and auto-merge never
+    completed.
+    """
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+
+    read_by_evaluator = {
+        sentinel.PREVIEW_LABEL,
+        sentinel.PROSE_FLAGGED_LABEL,
+        sentinel.TRIVIAL_LABEL,
+        sentinel.OVERSIZED_LABEL,
+        cfg.waive.get("label", "review:waived"),
+    }
+    # …plus every label the config can make load-bearing.
+    for pair in (cfg.not_governed or {}).get("author_label_pairs") or []:
+        read_by_evaluator.add(pair["label"])
+
+    missing = [l for l in sorted(read_by_evaluator)
+               if f"github.event.label.name == '{l}'" not in wf]
+    assert not missing, (
+        "labels the evaluator reads that the workflow's label-event filter "
+        f"drops (they only take effect on the next unrelated event): {missing}"
+    )
     assert "publish_guard.py" in wf
     assert "external_id: $run_id" in wf
     assert "steps.guard.outputs.publish == 'true'" in wf

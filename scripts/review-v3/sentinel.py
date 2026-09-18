@@ -519,6 +519,10 @@ def _strip_brief_for_summary(body: str) -> str:
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
 TRIVIAL_LABEL = "review:trivial"
+# Named, not inlined, so `test_label_event_filter_covers_every_label_the_
+# evaluator_reads` can derive the workflow's trigger list from the evaluator
+# instead of restating it.
+OVERSIZED_LABEL = "review:oversized"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
 TRIAGE_BOT_LOGIN = BOT_LOGIN
 
@@ -804,7 +808,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     author_card = _find_comment(comments, AUTHOR_MARKER)
     brief = _find_comment(comments, BRIEF_MARKER)
     legacy = _find_legacy_comment(comments) if author_card is None else None
-    oversized = "review:oversized" in labels
+    oversized = OVERSIZED_LABEL in labels
     trivial = TRIVIAL_LABEL in labels
     triage_prose = _find_triage_prose_comment(comments) if trivial else None
     trivial_standin = False  # set when triage's prose comment satisfies G1
@@ -1431,6 +1435,29 @@ def main() -> int:
         )
         print(json.dumps(verdict.to_json(), indent=2))
         return 0
+    # publish_guard.py protects the CHECK-RUN, and runs as a later workflow
+    # step — but the two comment writes below happen inside this process,
+    # before the guard has said anything. So a run evaluating head A while
+    # the author pushes B could finish second and rewrite both comments to
+    # A's verdict, after which the guard correctly declined to publish the
+    # check-run: a green check next to two comments saying the opposite, and
+    # nothing rewrites them until an unrelated event, because
+    # `render_status_comment` is a pure function of the verdict.
+    #
+    # One re-read immediately before writing closes it. Cheap, and it is the
+    # same question the guard asks, asked at the point that matters.
+    if (args.update_strip or args.status_comment) and not args.dry_run:
+        try:
+            current_head = ((gh.get_pr().get("head") or {}).get("sha") or "")
+        except SentinelDataError:
+            current_head = verdict.head_sha  # unreadable: don't block the write
+        if current_head and verdict.head_sha and current_head != verdict.head_sha:
+            print(f"::notice::head moved {verdict.head_sha[:9]} -> "
+                  f"{current_head[:9]} during evaluation; not writing comments "
+                  f"for a superseded verdict.", file=sys.stderr)
+            print(json.dumps(verdict.to_json(), indent=2))
+            return 0
+
     if args.update_strip and not args.report_only and not args.dry_run:
         # Best-effort for the same reason as the status comment below: this
         # ran before the verdict was printed, so a failed PATCH discarded a
