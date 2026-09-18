@@ -8,7 +8,10 @@ One blocking check-run answers "is this PR mergeable?" from four gates:
                         may stand on triage's prose-check comment)
   G2 findings-answered  every 🚨/❓ finding on the author card carries a
                         REVIEW_STATE disposition (or is checked off)
-  G3 right-approver     a human member of every matrix-required team approved
+  G3 right-approver     a human approver who can clear the lane: a member of
+                        every matrix-required team, or — under
+                        `approval.scope: any-team` — of any routing team, or
+                        a repo admin when `approval.admins_satisfy` is on
   G4 infra-evidence     infra paths carry a green staging/pulumi-test-io
                         commit status at the current head SHA
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
@@ -221,6 +224,30 @@ class Gh:
                 f"team membership lookup failed ({org}/{team_slug}/{user}): {exc}"
             ) from exc
 
+    def get_repo_permission(self, user: str) -> str:
+        """The user's effective permission on the repo: admin/write/read/none.
+
+        Used only by the `approval.admins_satisfy` rule in G3. Like the team
+        lookup it needs a token with more reach than the default
+        GITHUB_TOKEN (the endpoint wants push access), so it rides the same
+        org-scoped token; a clean 404 is "no such collaborator" and answers
+        `none`, and any other failure raises so G3 errors rather than
+        reporting a block it could not verify.
+        """
+        try:
+            out = self._run(
+                ["api", f"repos/{self.repo}/collaborators/{user}/permission",
+                 "--jq", ".permission"],
+                token_env="GH_TOKEN_TEAM_READ",
+            )
+            return out.strip() or "none"
+        except SentinelDataError as exc:
+            if "HTTP 404" in str(exc) or "Not Found" in str(exc):
+                return "none"
+            raise SentinelDataError(
+                f"repo permission lookup failed ({self.repo}/{user}): {exc}"
+            ) from exc
+
     def get_label_events(self) -> list[dict]:
         out = self._run(
             ["api", "--paginate", f"repos/{self.repo}/issues/{self.pr}/timeline"]
@@ -410,16 +437,6 @@ def _strip_brief_for_summary(body: str) -> str:
 
 
 PROSE_FLAGGED_LABEL = "review:prose-flagged"
-# The targeted counterpart to `review:waived`. Routing can be wrong — the
-# matrix and `overrides` are a map of ownership, and a map is never the
-# territory — and when it is, the Sentinel keeps demanding a team that cannot
-# review the PR. Hand-requesting the right team on GitHub does nothing,
-# because G3 resolves from config, so before this label the only lever was
-# `review:waived`, which skips G1, G2, G3 and G5 to fix G3 alone. This makes
-# G3 accept any review team's approval on this PR and touches no other gate:
-# the review still has to have run, the findings still have to be answered,
-# and infra staging evidence is as unwaivable as ever.
-REROUTE_LABEL = "review:reroute"
 TRIVIAL_LABEL = "review:trivial"
 TRIAGE_PROSE_MARKER = "<!-- TRIAGE_PROSE -->"
 TRIAGE_BOT_LOGIN = "github-actions[bot]"
@@ -845,15 +862,16 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     else:
         missing: list[str] = []
         errors: list[str] = []
-        # Two ways any review team can satisfy the gate instead of the lane's
-        # own: a link-only sweep (`link_only.approval: any-team` — checking a
-        # retargeted link needs a careful human, not a particular lane's), and
-        # `review:reroute`, the escape hatch for a routing miss. The roles
-        # stay on the record either way, so the verdict still shows what the
-        # config thought.
-        rerouted = REROUTE_LABEL in labels
-        any_team = resolution.any_team or rerouted
-        required = ([config.teams[r] for r in sorted(config.teams)] if any_team
+        # `resolution.any_team` means one team is enough instead of all of
+        # them — repo-wide under `approval.scope: any-team`, or for a
+        # link-only sweep under `link_only.approval: any-team`. The matrix
+        # roles stay on the record either way: they are still who triage
+        # requests and who the SLA sweep chases, and with `any-team` the
+        # request is the ONLY thing putting the right eyes on the PR — which
+        # is what makes `overrides:` (who gets asked) load-bearing rather
+        # than cosmetic.
+        all_teams = [config.teams[r] for r in sorted(config.teams)]
+        required = (all_teams if resolution.any_team
                     else [config.teams.get(role, "") for role in sorted(resolution.roles)])
         satisfied_any = False
         for team_ref in required:
@@ -869,32 +887,58 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     errors.append(str(exc))
             if satisfied:
                 satisfied_any = True
+                if resolution.any_team:
+                    break  # one team clears it; no need to ask about the rest
             elif not errors:
                 missing.append(team_ref)
-        if any_team:
+        if resolution.any_team:
             # One team is enough; only an empty set is a miss.
-            why = "`review:reroute`" if rerouted else "link-only sweep"
-            missing = [] if satisfied_any else [f"any review team ({why})"]
+            missing = [] if satisfied_any else ["any review team"]
+        # A repo admin can merge past a red check anyway, so with
+        # `approval.admins_satisfy` the gate says so rather than reporting a
+        # block the repo does not impose on them. Consulted only when the
+        # team rule already came up short, so the ordinary PR costs no extra
+        # API calls.
+        admin_approver = ""
+        if missing and not errors and routing.admins_satisfy(config):
+            for r in approvers:
+                login = (r.get("user") or {}).get("login") or ""
+                try:
+                    if gh.get_repo_permission(login) == "admin":
+                        admin_approver = login
+                        break
+                except SentinelDataError as exc:
+                    errors.append(str(exc))
         if errors:
             gates.append(Gate(
                 "G3 right-approver", "error",
-                "Couldn't verify team membership — re-run the check. " + errors[0],
+                "Couldn't verify the approver's team membership or repo role — "
+                "re-run the check. " + errors[0],
+            ))
+        elif admin_approver:
+            gates.append(Gate(
+                "G3 right-approver", "ok",
+                # No `@` — this message also renders in the pinned status
+                # comment, where a mention would ping the approver on every
+                # re-evaluation.
+                f"approved by repository administrator `{admin_approver}`",
             ))
         elif missing:
             names = ", ".join(f"**{m}**" for m in missing)
+            if resolution.any_team:
+                names += " (" + ", ".join(all_teams) + ")"
+            admin_clause = (" or a repository administrator"
+                            if routing.admins_satisfy(config) else "")
             gates.append(Gate(
                 "G3 right-approver", "red",
-                f"Needs approval from a member of {names} — no qualifying human "
-                "approval yet (bot approvals never count).",
-            ))
-        elif rerouted:
-            gates.append(Gate(
-                "G3 right-approver", "ok",
-                f"approved by a review team under `{REROUTE_LABEL}` "
-                "(routing sent this to the wrong lane)",
+                f"Needs approval from a member of {names}{admin_clause} — no "
+                "qualifying human approval yet (bot approvals never count).",
             ))
         else:
-            gates.append(Gate("G3 right-approver", "ok", "matrix-required approval present"))
+            gates.append(Gate(
+                "G3 right-approver", "ok",
+                "a routing-team member approved" if resolution.any_team
+                else "matrix-required approval present"))
 
     # G4 infra-evidence ---------------------------------------------------
     if resolution.staging_evidence_required:
@@ -983,13 +1027,6 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         parts.append(
             "_Classified mechanical under the tightened bar — no model review required. "
             "A human approver is still required._"
-        )
-    if REROUTE_LABEL in labels:
-        parts.append(
-            f"_`{REROUTE_LABEL}`: routing sent this to the wrong lane, so any "
-            "review team's approval satisfies G3. Every other gate is "
-            "unchanged — fix the mapping in `.github/review-routing.yml` "
-            "(`overrides:`) so the next PR lands right._"
         )
     if trivial_standin:
         parts.append(

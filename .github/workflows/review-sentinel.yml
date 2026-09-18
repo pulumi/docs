@@ -94,18 +94,15 @@ jobs:
     # Label events re-evaluate only for the labels the evaluator reads; every
     # other label change cannot move a gate. Keep this list in step with
     # sentinel.py — a label the evaluator reads but this list omits still
-    # works, but only on the NEXT event, which for `review:reroute` means an
-    # author unblocking a misroute sees nothing happen and reaches for the
-    # waive instead. (`sentinel:preview` was in exactly that position: the
-    # lanes that apply it label the PR just after opening it, so the `opened`
-    # run predates the label and the preview comment waited for a later
-    # event.)
+    # works, but only on the NEXT event. `sentinel:preview` was in exactly
+    # that position: the lanes that apply it label the PR just after opening
+    # it, so the `opened` run predates the label and the preview comment
+    # waited for a later event.
     if: |
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
       (github.event_name != 'pull_request_target' ||
        (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
        github.event.label.name == 'review:waived' ||
-       github.event.label.name == 'review:reroute' ||
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
        github.event.label.name == 'review:prose-flagged' ||
@@ -179,10 +176,12 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the team-membership endpoint only — the
-          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
-          # treats lookup failures as action_required, never as "not a
-          # member", so a missing/expired token degrades loud, not wrong.
+          # Org-scoped token for the two membership endpoints G3 reads —
+          # org team membership, and (for `approval.admins_satisfy`) the
+          # approver's effective repo permission, which wants push access.
+          # The default GITHUB_TOKEN can do neither. sentinel.py treats
+          # lookup failures as action_required, never as "not a member", so
+          # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |

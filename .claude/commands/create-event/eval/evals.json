@@ -9,7 +9,7 @@
             "files": [],
             "assertions": [
                 "Bundle created at content/events/getting-started-with-pulumi-on-aws/index.md",
-                "Core frontmatter: exact title, event_type=workshop, gated=true, location=virtual, duration='60 minutes', url_slug matches",
+                "Core frontmatter: exact title, event_type=workshop, gated=true, location=virtual, duration='60 minutes', no event_url (renders its own page)",
                 "sortable_date is DST-correct: 2026-09-24T11:00:00.000-07:00",
                 "Presenter resolved from team data: Engin Diri, role contains 'Principal Solutions Architect', photo /images/team/engin-diri.jpg",
                 "Tags exact vocabulary: level=Beginner, topics=[Infrastructure as Code], clouds=[AWS], languages=[TypeScript]",

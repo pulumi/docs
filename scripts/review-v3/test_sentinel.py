@@ -75,6 +75,13 @@ RAW_CONFIG = {
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
 assert CONFIG is not None, _errors
 
+# The live config's approver policy (`.github/review-routing.yml`): any
+# routing team clears G3, and so does a repo admin. CONFIG keeps the strict
+# `lane` default so the rest of the battery still tests the narrow rule.
+LOOSE_CONFIG, _loose_errors, _ = routing.validate_raw(
+    {**RAW_CONFIG, "approval": {"scope": "any-team", "admins_satisfy": True}})
+assert LOOSE_CONFIG is not None, _loose_errors
+
 
 # ---- Stub Gh -------------------------------------------------------------
 
@@ -90,6 +97,8 @@ class StubGh:
         statuses=None,
         memberships=None,
         membership_error_users=(),
+        permissions=None,
+        permission_error_users=(),
         label_events=None,
         workflow_runs=None,
         workflow_runs_error=False,
@@ -101,6 +110,9 @@ class StubGh:
         self.statuses = statuses or []
         self.memberships = memberships or {}  # (slug, user) -> state
         self.membership_error_users = set(membership_error_users)
+        self.permissions = permissions or {}  # user -> admin/write/read/none
+        self.permission_error_users = set(permission_error_users)
+        self.permission_calls = []
         self.label_events = label_events or []
         self.workflow_runs = workflow_runs or []
         self.workflow_runs_error = workflow_runs_error
@@ -126,6 +138,12 @@ class StubGh:
         if user in self.membership_error_users:
             raise sentinel.SentinelDataError(f"lookup failed for {user}")
         return self.memberships.get((team_slug, user), "none")
+
+    def get_repo_permission(self, user):
+        self.permission_calls.append(user)
+        if user in self.permission_error_users:
+            raise sentinel.SentinelDataError(f"permission lookup failed for {user}")
+        return self.permissions.get(user, "none")
 
     def get_label_events(self):
         return self.label_events
@@ -445,6 +463,94 @@ def test_link_only_diff_is_narrow():
     assert sentinel.link_only_diff([docs_file_substantive()]) is False
     assert sentinel.link_only_diff([{"filename": "a.md", "status": "modified", "patch": None}]) is False
     assert sentinel.link_only_diff([]) is False
+
+
+def test_g3_any_team_scope_clears_another_lane_s_pr():
+    """`approval.scope: any-team`: the matrix routes, it does not gatekeep.
+
+    PR #21630's shape — docs pages plus the Hugo shortcode they use, so the
+    matrix asks for docs-guild AND marketing. Under the lane rule that is a
+    two-team quorum on a one-line template change; under any-team, one
+    routing-team member's approval is the gate.
+    """
+    card = author_card([], state=_state_with([]))
+    files = [docs_file_substantive(), frontend_file()]
+    gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    # lane: marketing is still owed
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "docs-marketing-review" in g3.message
+    # any-team: the same approval clears it
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "ok", g3.message
+    # the routed roles are unchanged — triage still requests both teams
+    res = routing.resolve_lanes([f["filename"] for f in files], False, False, LOOSE_CONFIG)
+    assert res.roles == {"docs-guild", "marketing"} and res.any_team is True
+
+
+def test_g3_any_team_still_means_a_team():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("random-person")], memberships={})
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "red"
+    assert "any review team" in g3.message
+    # the red names the teams that would do, and the admin escape
+    assert "pulumi/docs-tools" in g3.message
+    assert "administrator" in g3.message
+
+
+def test_g3_repo_admin_satisfies_when_configured():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("an-admin")], memberships={},
+                permissions={"an-admin": "admin"})
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "ok" and "an-admin" in g3.message
+    # write access is not admin
+    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("a-committer")], memberships={},
+                 permissions={"a-committer": "write"})
+    assert _gate(sentinel.evaluate(gh2, LOOSE_CONFIG), "G3").status == "red"
+
+
+def test_g3_admin_rule_is_opt_in_and_never_costs_a_call_when_off():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("an-admin")], memberships={},
+                permissions={"an-admin": "admin"})
+    # CONFIG has no `approval:` section at all: the strict default.
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G3").status == "red"
+    assert gh.permission_calls == []
+    # and with the rule on, a team member's approval short-circuits it too
+    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("guild-member")],
+                 memberships={("docs-guild", "guild-member"): "active"},
+                 permissions={"guild-member": "admin"})
+    assert _gate(sentinel.evaluate(gh2, LOOSE_CONFIG), "G3").status == "ok"
+    assert gh2.permission_calls == []
+
+
+def test_g3_bot_admin_approval_still_never_counts():
+    """The admin rule widens who counts, not what counts as a human."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("pulumi-bot"), approval("actions-bot", utype="Bot")],
+                memberships={},
+                permissions={"pulumi-bot": "admin", "actions-bot": "admin"})
+    assert _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3").status == "red"
+    assert gh.permission_calls == []  # denylisted/Bot reviews never reach the lookup
+
+
+def test_g3_permission_api_failure_action_required_not_red():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("maybe-an-admin")], memberships={},
+                permission_error_users={"maybe-an-admin"})
+    v = sentinel.evaluate(gh, LOOSE_CONFIG)
+    assert _gate(v, "G3").status == "error"
+    assert v.conclusion == "action_required"
 
 
 def test_g3_bot_denylist_and_bot_type_excluded():
@@ -1048,89 +1154,6 @@ def test_brief_has_no_checks_helper_is_gone():
     assert hasattr(sentinel, "_author_card_nothing_blocks")
 
 
-def test_reroute_label_lets_any_review_team_satisfy_g3():
-    """The targeted fix for a routing miss.
-
-    Two live ones on 2026-09-18: pulumi/docs#21723 (an OpenAPI renderer bug
-    routed to marketing because `layouts/` is `domain:frontend`) and
-    pulumi/docs#21718 (a Get Started page routed to docs-guild). Both are
-    fixed properly in `overrides:`, but the map will be wrong again, and
-    before this label the only lever was `review:waived` — four gates
-    skipped to fix one.
-    """
-    card = author_card([], state=_state_with([]))
-    base = dict(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
-                files=[docs_file_substantive()], comments=[card])
-
-    # docs-guild is what the matrix wants; marketing's approval now counts.
-    v = sentinel.evaluate(
-        StubGh(**dict(base, reviews=[approval("mkt")],
-                      memberships={("docs-marketing-review", "mkt"): "active"})), CONFIG)
-    assert _gate(v, "G3").status == "ok"
-    assert "review:reroute" in _gate(v, "G3").message
-    assert v.conclusion == "success", v.to_json()
-    assert "wrong lane" in v.summary
-
-
-def test_reroute_still_needs_somebody_from_a_review_team():
-    """It widens who may approve. It does not remove the approval."""
-    card = author_card([], state=_state_with([]))
-    base = dict(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
-                files=[docs_file_substantive()], comments=[card])
-
-    # Nobody has approved at all.
-    assert _gate(sentinel.evaluate(StubGh(**base), CONFIG), "G3").status == "red"
-
-    # Approved by someone on no review team.
-    v = sentinel.evaluate(StubGh(**dict(base, reviews=[approval("randomer")])), CONFIG)
-    assert _gate(v, "G3").status == "red"
-    assert "review:reroute" in _gate(v, "G3").message
-
-    # A bot approval is still worthless.
-    v2 = sentinel.evaluate(
-        StubGh(**dict(base, reviews=[approval("pulumi-bot")],
-                      memberships={("docs-tools", "pulumi-bot"): "active"})), CONFIG)
-    assert _gate(v2, "G3").status == "red"
-
-
-def test_reroute_touches_no_other_gate():
-    """The difference from `review:waived`, and the reason to prefer it."""
-    # G1: no review on a substantive PR is still red.
-    v = sentinel.evaluate(
-        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
-               files=[docs_file_substantive()],
-               reviews=[approval("mkt")],
-               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
-    assert _gate(v, "G1").status == "red"
-
-    # G2: an unanswered finding is still red.
-    card = author_card([("F1", "must")], state=_state_with([]))
-    v2 = sentinel.evaluate(
-        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]),
-               files=[docs_file_substantive()], comments=[card],
-               reviews=[approval("mkt")],
-               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
-    assert _gate(v2, "G2").status == "red"
-
-    # G4: staging evidence is as unwaivable as ever.
-    v3 = sentinel.evaluate(
-        StubGh(pr=pr_meta(labels=[sentinel.REROUTE_LABEL]), files=[infra_file()],
-               comments=[author_card([], state=_state_with([]))],
-               reviews=[approval("mkt")],
-               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
-    assert _gate(v3, "G4").status == "red"
-
-
-def test_without_the_label_the_lane_team_is_still_required():
-    card = author_card([], state=_state_with([]))
-    v = sentinel.evaluate(
-        StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
-               reviews=[approval("mkt")],
-               memberships={("docs-marketing-review", "mkt"): "active"}), CONFIG)
-    assert _gate(v, "G3").status == "red"
-    assert "docs-guild" in _gate(v, "G3").message
-
-
 def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     # A cancelled job renders as a failing check; the workflow must not own
     # a concurrency group (publish_guard.py handles overlap instead), and
@@ -1138,8 +1161,8 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
     assert "cancel-in-progress:" not in wf
     assert "\nconcurrency:" not in wf
-    for label in ("review:waived", "review:reroute", "review:oversized",
-                  "review:trivial", "review:prose-flagged", "sentinel:preview"):
+    for label in ("review:waived", "review:oversized", "review:trivial",
+                  "review:prose-flagged", "sentinel:preview"):
         assert f"github.event.label.name == '{label}'" in wf, label
     assert "publish_guard.py" in wf
     assert "external_id: $run_id" in wf

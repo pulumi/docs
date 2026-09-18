@@ -91,7 +91,7 @@ executes PR code** (test-enforced). Gates, each red message naming its fix:
 |---|---|---|
 | G1 review-ran | author card's `CLAUDE_REVIEW_HEAD` == head SHA; or mechanical (no *model* review required — the lane team still approves at G3); or a legacy v2 review current at head (grandfather note) | push / `@claude #update-review` / `#new-review` |
 | G2 findings-answered | every 🚨/❓ row carrying a REVIEW_STATE disposition | the undecided ids + the `@claude … #update-review` phrasing (the `/resolve` lane stays as agent-facing plumbing, never user-facing copy) |
-| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of every matrix-required team | the team slug(s) needed |
+| G3 right-approver | an APPROVED latest review from a human, non-denylisted, active member of a routing team — any team in `teams:` under `approval.scope: any-team`, every matrix-required team under `lane` — or, with `approval.admins_satisfy`, from a repository administrator | the team slug(s) needed |
 | G4 infra-evidence | the PR changes no path on `staging_evidence.paths` (skip); or this exact head deployed to staging successfully at least once — either the `staging/pulumi-test-io` commit status is green, or a completed run of `testing-build-and-deploy.yml` at this head SHA succeeded | the deploy is dispatched automatically (`staging-deploy-auto.yml`); `/deploy-staging` retries — **not waivable** |
 | G5 oversized-ack | `review:oversized` PRs: approval body contains `sentinel:oversized-ack` | explains the ack |
 
@@ -161,16 +161,7 @@ skip G1/G2 per config — the approving reviewer's review is the review. A
 triage's `<!-- TRIAGE_PROSE -->` comment instead of a review; G3 still needs
 the human approver the demotion asked for.
 
-**`review:reroute`** is the targeted escape hatch for a routing miss: G3
-accepts any review team's approval on that PR, and no other gate moves. The
-map of ownership is not the territory, and when it is wrong the Sentinel
-otherwise keeps demanding a team that cannot review the PR — hand-requesting
-the right one on GitHub does nothing, because G3 resolves from config. Before
-this label the only lever was `review:waived`, which skips four gates to fix
-one. Applying it fixes the PR; fixing `overrides:` fixes the next one. Note
-that every label the evaluator reads must also appear in
-`review-sentinel.yml`'s label-event filter, or it only takes effect on the
-next unrelated event. Rollout switch:
+Every label the evaluator reads must also appear in `review-sentinel.yml`'s label-event filter, or it only takes effect on the next unrelated event. Rollout switch:
 repo variable `REVIEW_V3_SENTINEL` is tri-state — unset = dark (no job, no
 check-run, the review lanes skip their pokes; the state the file merges in),
 `'report'` = report-only (conclusions `neutral` with "would be: …" in the
@@ -308,6 +299,16 @@ cells are a config error, so `resolve_lanes` always returns at least one
 required role, triage always has a team to request, and G3 always has an
 approver to wait for. `mechanical` skips the *model* review at G1 and
 nothing else.
+
+**Who is asked and who can clear it are different questions.** `approval:`
+in the same config decides the second one. Under `approval.scope: any-team`
+(what we run) a member of any team in `teams:` satisfies G3 whatever the
+matrix routed, so a PR spanning three subjects needs one approval rather
+than a three-team quorum — the matrix still picks who gets requested, who
+the SLA sweep chases, and who the brief names. `approval.admins_satisfy`
+additionally lets a repository administrator's approval clear it, which
+concedes what a repo admin can already do at the merge box rather than
+granting anything new. Both default to the strict reading.
 
 That is a reversal, and the reason is worth keeping: the Sentinel is not the
 gate that decides mergeability. GitHub's required-review rule is, and it
