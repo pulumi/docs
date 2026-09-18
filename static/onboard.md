@@ -14,31 +14,46 @@ must leave a real CLI on their PATH — not just a per-session `npx` shim. First
 check whether it is already installed: `pulumi version` (this does not touch
 Pulumi Cloud). If that works, continue.
 
-If `pulumi` is not found, install it with the native installer:
+If `pulumi` is not found, install it for the user's platform:
 
-    curl -fsSL https://get.pulumi.com | sh
+- macOS or Linux — the install script, which installs to `$HOME/.pulumi/bin`
+  but does not modify the PATH:
 
-It installs to `$HOME/.pulumi/bin` (confirm the exact directory from the
-installer's output) but does not modify the PATH, so a fresh shell won't find
-`pulumi` yet. Put it on the PATH:
+      curl -fsSL https://get.pulumi.com | sh
 
-- For now: export it for the session (`export PATH="$HOME/.pulumi/bin:$PATH"`)
-  or use the full path (`$HOME/.pulumi/bin/pulumi ...`).
-- Permanently: offer to add that directory to the PATH in the user's shell
-  profile. Shells and profiles vary, so detect the user's shell (e.g. via
-  `$SHELL`) and use the matching profile and syntax rather than assuming zsh.
-  Never edit the profile automatically — only with the user's go-ahead. If they
-  decline or you can't write it, give them a copyable command for their shell
-  that names the install location — for zsh:
+- Windows — prefer a package manager, which also puts `pulumi` on the PATH.
+  Pass the non-interactive flags so the install runs unattended (the MSI
+  installer is a GUI wizard and won't work in an agent session):
+  `winget install pulumi --accept-package-agreements --accept-source-agreements`
+  (winget ships with current Windows) or `choco install pulumi -y` (Chocolatey).
+  If neither is available, run the PowerShell install script, which installs to
+  `%USERPROFILE%\.pulumi\bin` and, like the macOS/Linux script, does not modify
+  the PATH:
+
+      iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))
+
+When the install did not put `pulumi` on the PATH — the macOS/Linux script or
+the Windows PowerShell script (confirm the install directory from the
+installer's output) — a fresh shell won't find it yet. Put it on the PATH:
+
+- For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
+  (macOS/Linux) or `$env:Path += ";$HOME\.pulumi\bin"` (PowerShell) — or use the
+  full path.
+- Permanently: offer to add that directory to the PATH — the user's shell
+  profile on macOS/Linux, or their user PATH on Windows. Shells and profiles
+  vary, so detect the user's shell (e.g. via `$SHELL`) and use the matching
+  target and syntax rather than assuming zsh. Never edit it automatically —
+  only with the user's go-ahead. If they decline or you can't write it, give
+  them a copyable command that names the install location — for zsh:
 
       # The Pulumi CLI is installed at $HOME/.pulumi/bin
       echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
 
-Only if the native installer can't run (say, a restricted environment) and Node
-is available, fall back to `npx pulumi` for this session — but tell the user
+Only if no installer can run (say, a restricted environment) and Node is
+available, fall back to `npx pulumi` for this session — but tell the user
 plainly that `pulumi` won't be available in new shells until they install it
-natively, and point them at the installer above. Whichever form you use, use it
-for every `pulumi` command below, and don't continue until `pulumi version`
+natively, and point them at the installers above. Whichever form you use, use
+it for every `pulumi` command below, and don't continue until `pulumi version`
 succeeds.
 
 ## 2. Install the Pulumi skills
