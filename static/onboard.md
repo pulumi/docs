@@ -130,6 +130,10 @@ for the path the user chose:
 - Migration: point `pulumi-overview` at where the existing code lives and let
   it drive; it covers the source formats above and routes from there.
 
+Once the project is scaffolded, tell the user the exact directory it lives in
+(an absolute path) and invite them to open it in their editor of choice to look
+through the code — it's theirs to read and change.
+
 Teach as you build — when each concept first appears, explain it in a sentence
 or two and share its docs link so the user can open the page while you work,
 then move on:
