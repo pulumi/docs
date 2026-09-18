@@ -30,42 +30,41 @@ enough to reach a first result.
 
 ## 3. Ask what the user wants to do
 
-Ask which path fits. Lead with the template path — it is the surest route to a
-clean first result:
+Default to a template — it is the surest route to a clean first result. Walk
+the user through three choices, in this order, and do not guess any of them
+silently:
 
-- Start from a template (recommended). A curated, known-good architecture that
-  deploys as-is, so the first `up` is the most likely to succeed.
-- Build something custom. Create infrastructure from scratch, from a single
-  resource to several related ones.
-- Migrate existing infrastructure code from Terraform, CloudFormation, CDK,
-  ARM, or Bicep.
+1. Cloud: AWS, Azure, GCP, or Cloudflare.
+2. What to build. Lead with the minimal starter; offer the richer
+   architectures after it:
+   - Minimal starter (recommended) — the quickest way to see Pulumi work: a
+     single-resource project (a storage bucket on AWS and GCP, a storage
+     account on Azure, a Workers KV namespace on Cloudflare).
+   - Static website
+   - Serverless app
+   - Container service
 
-When the user has no strong preference — they just want to see Pulumi work —
-recommend the template path; it is the surest first result. Honor a clear
-custom or migration intent when they have one, and do not push them off it. Do
-not guess the path silently: the answer decides it.
+   Offer only what exists for the chosen cloud: Cloudflare has no container
+   service, so do not offer it there.
+3. Language: TypeScript, Python, Go, C#, YAML, or HCL. Java is available only
+   for the minimal starter on AWS, Azure, and GCP — offer it only if the user
+   asks, never for Cloudflare or an architecture template.
 
-For the template path, settle on a specific template by asking three things:
+The template name is the minimal starter `<cloud>-<language>` (for example,
+`aws-typescript`) or an architecture `<use-case>-<cloud>-<language>` where
+`<use-case>` is `static-website`, `serverless`, or `container` (for example,
+`static-website-aws-typescript`), all from github.com/pulumi/templates. Confirm
+the chosen template resolves before continuing; if a combination is missing,
+offer a neighboring one rather than stopping.
 
-- Use case: static website, serverless app, or container service.
-- Cloud: AWS, Azure, GCP, or Cloudflare.
-- Language: TypeScript, Python, Go, C#, YAML, or HCL.
+If the user would rather describe their own infrastructure than pick a
+template, take that custom path instead: ask which cloud (AWS, Azure, GCP, or
+another provider) and what they want to build. Do not push a template on a user
+who has asked to build something specific.
 
-The template name is `<use-case>-<cloud>-<language>` from
-github.com/pulumi/templates, where `<use-case>` is `static-website`,
-`serverless`, or `container` — for example, `static-website-aws-typescript` or
-`serverless-cloudflare-python`. Those six languages are the only ones the
-architecture templates come in; Java is not among them, so do not offer it on
-this path (it exists only for custom projects). Cloudflare has no container
-template: offer Cloudflare only static website or serverless, and offer
-container service only on AWS, Azure, or GCP. Confirm the chosen template
-resolves before continuing; if a combination is missing, offer a neighboring
-one rather than stopping.
-
-For the custom path, ask which cloud they are targeting (AWS, Azure, GCP, or
-another provider) and what they want to build.
-
-If the user chooses migration, install the migration skills before continuing:
+If the user wants to migrate existing infrastructure code from Terraform,
+CloudFormation, CDK, ARM, or Bicep, install the migration skills before
+continuing:
 
     npx skills add pulumi/agent-skills/migration --skill '*'
 
@@ -87,10 +86,12 @@ detecting and choosing them yourself.
 Follow the `pulumi-overview` skill from step 2. Fill in any remaining specifics
 for the path the user chose:
 
-- Template: scaffold with `pulumi new <use-case>-<cloud>-<language>` (for
-  example, `pulumi new static-website-cloudflare-python`). This produces a
-  complete, working project — the template is the result, so do not add
-  resources unless the user asks. Walk the user through what it creates.
+- Template: scaffold with the resolved name — the minimal starter
+  `pulumi new <cloud>-<language>` (for example, `pulumi new aws-typescript`) or
+  an architecture `pulumi new <use-case>-<cloud>-<language>` (for example,
+  `pulumi new static-website-cloudflare-python`). This produces a complete,
+  working project — the template is the result, so do not add resources unless
+  the user asks. Walk the user through what it creates.
 - Custom: confirm the language (TypeScript, Python, Go, C#, Java, YAML, or
   HCL), then use `pulumi-overview`, Level 2. Scaffold with
   `pulumi new <cloud>-<language>`, then add the resources they asked for,
