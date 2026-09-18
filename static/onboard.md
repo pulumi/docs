@@ -14,27 +14,20 @@ must leave a real CLI on their PATH — not just a per-session `npx` shim. First
 check whether it is already installed: `pulumi version` (this does not touch
 Pulumi Cloud). If that works, continue.
 
-If `pulumi` is not found, install it for the user's platform:
+If `pulumi` is not found, install it for the user's platform. Neither installer
+modifies the PATH, so a fresh shell won't find `pulumi` yet — set that up next.
 
-- macOS or Linux — the install script, which installs to `$HOME/.pulumi/bin`
-  but does not modify the PATH:
+- macOS or Linux — the install script (installs to `$HOME/.pulumi/bin`):
 
       curl -fsSL https://get.pulumi.com | sh
 
-- Windows — prefer a package manager, which also puts `pulumi` on the PATH.
-  Pass the non-interactive flags so the install runs unattended (the MSI
-  installer is a GUI wizard and won't work in an agent session):
-  `winget install pulumi --accept-package-agreements --accept-source-agreements`
-  (winget ships with current Windows) or `choco install pulumi -y` (Chocolatey).
-  If neither is available, run the PowerShell install script, which installs to
-  `%USERPROFILE%\.pulumi\bin` and, like the macOS/Linux script, does not modify
-  the PATH:
+- Windows — the PowerShell install script, the analog of the macOS/Linux one
+  (installs to `%USERPROFILE%\.pulumi\bin`):
 
       iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))
 
-When the install did not put `pulumi` on the PATH — the macOS/Linux script or
-the Windows PowerShell script (confirm the install directory from the
-installer's output) — a fresh shell won't find it yet. Put it on the PATH:
+Confirm the install directory from the installer's output, then put it on the
+PATH:
 
 - For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
   (macOS/Linux) or `$env:Path += ";$HOME\.pulumi\bin"` (PowerShell) — or use the
