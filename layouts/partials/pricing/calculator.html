@@ -15,14 +15,17 @@
   this partial reads are validated here; `card_tooltip`, which only the pricing
   cards render, is validated in layouts/partials/pricing/card-usage.html.
 
-  The model the TS module implements, recorded here because that file carries no
-  comments. Everything is denominated in Pulumi Credits (1 credit = $1) drawn
-  from one shared pool, and the monthly base buys the first tranche of it:
+  The model the TS module implements, given here as an overview; the module
+  documents the pieces that aren't obvious from this summary inline. Everything
+  is denominated in Pulumi Credits (1 credit = $1) drawn from one shared pool,
+  and the monthly base buys the first tranche of it:
 
-      iacCredits = iac_resources <= included_resources
-                     ? iac_resources * (included_credits / included_resources)
-                     : included_credits
-                       + (iac_resources - included_resources) * iac_resource_month
+      iacCredits = iacUnit === "hour"
+                     ? iac_resources * iac_resource_hour
+                     : iac_resources <= included_resources
+                       ? iac_resources * (included_credits / included_resources)
+                       : included_credits
+                         + (iac_resources - included_resources) * iac_resource_month
       credits    = iacCredits
                    + secrets    * esc_secret_month
                    + minutes    * workflow_minute
@@ -30,16 +33,21 @@
                    + insights   * insights_resource_month
       monthly    = base_usd + max(0, credits - included_credits)
 
-  Everything is priced for a whole month. IaC and discovered resources are really
-  billed by the hour, so a resource that exists for only part of the month costs
-  proportionally less, but there is deliberately no utilization control: it would
-  be a slider nearly every reader leaves where it starts. The disclaimer states
-  the whole-month assumption instead.
+  Every meter but IaC resources is priced for a whole month, unconditionally.
+  Discovered resources are also really billed by the hour, so a resource that
+  exists for only part of the month costs proportionally less, but there is
+  deliberately no utilization control for them: it would be a slider nearly
+  every reader leaves where it starts. IaC resources gets the one exception,
+  because the comparison table already states its rate both ways — see the
+  comment on the /mo-/hr toggle below. Selecting /hr re-prices only that one
+  meter's contribution, so `credits` becomes a genuine mix of an hourly and
+  several monthly figures; the toggle doesn't touch anything else in the
+  formula above.
 
-  The first branch is what makes the cards true: it prices the opening tranche
-  of resources low enough that $40 covers 500 and $400 covers 2,000, then
-  charges the list rate above that. Essentials at 500 resources is therefore
-  exactly $40, and at 1,000 it is $131.25.
+  The monthly (non-hourly) IaC branch is what makes the cards true: it prices
+  the opening tranche of resources low enough that $40 covers 500 and $400
+  covers 2,000, then charges the list rate above that. Essentials at 500
+  resources is therefore exactly $40, and at 1,000 it is $131.25.
 */ -}}
 
 {{- $where := "data/pulumi_pricing.yaml" -}}
@@ -216,10 +224,12 @@
                 {{/* IaC resources is the one line item the comparison table already
                      states both ways ("$0.00025/hour", "$0.1825/month" as its
                      subtext), so this is the one meter the estimator lets a reader
-                     flip to its hourly figure. The toggle only changes which stored
-                     rate paints into data-calc-rate above — it never touches the
-                     resource count or the credits math, which stay priced by the
-                     month regardless of what's showing. */}}
+                     flip to its hourly figure. Flipping it re-prices this meter's
+                     contribution to the credits total at the flat hourly rate too —
+                     every other meter (secrets, workflow minutes, Neo tokens,
+                     discovered resources) stays priced by the month regardless, so
+                     the total becomes a genuine mix of an hourly and several
+                     monthly figures once /hr is selected. */}}
                 <div class="flex justify-end -mt-1">
                     <div role="group" aria-label="Rate unit" class="btn-group">
                         <button type="button" class="btn btn-xs btn-outline aria-pressed:border-gray-500 aria-pressed:bg-gray-100"

@@ -172,6 +172,16 @@ function init(): void {
         return isFinite(raw) && raw > 0 ? raw : 0;
     };
 
+    // Only the IaC resources row has a unit toggle; every other row's rate
+    // unit is fixed, so this reads as "month" for them without needing a
+    // per-meter flag.
+    const rateUnitFor = (row: HTMLElement): "month" | "hour" => {
+        const pressed = row.querySelector<HTMLButtonElement>("[data-calc-rate-unit][aria-pressed='true']");
+        return (pressed?.dataset.calcRateUnit as "month" | "hour" | undefined) || "month";
+    };
+
+    const iacRow = (): HTMLElement | undefined => rows.find(row => row.dataset.calcMeter === "iac_resources");
+
     const recompute = (): void => {
         const edition = currentEdition();
         const values: Record<string, number> = {};
@@ -179,7 +189,18 @@ function init(): void {
             values[row.dataset.calcMeter as string] = valueOf(row);
         });
 
-        let credits = creditsForResources(values.iac_resources || 0, edition);
+        // The included-resources tranche (creditsForResources' tiered rate) prices
+        // a month of usage against the monthly base fee, so it has no meaning once
+        // the reader is asking "what does this fleet cost for one hour" instead —
+        // that view prices every resource at the flat published hourly rate, with
+        // no tier of its own.
+        const row = iacRow();
+        const iacCredits =
+            row && rateUnitFor(row) === "hour"
+                ? (values.iac_resources || 0) * edition.iac_resource_hour
+                : creditsForResources(values.iac_resources || 0, edition);
+
+        let credits = iacCredits;
         credits += (values.esc_secrets || 0) * edition.esc_secret_month;
         credits += (values.workflow_minutes || 0) * config.meters.workflow_minute;
         credits += (values.neo_tokens || 0) * config.meters.neo_tokens_per_million;
@@ -201,14 +222,6 @@ function init(): void {
         ctaContact?.classList.toggle("hidden", !volume);
     };
 
-    // Only the IaC resources row has a unit toggle; every other row's rate
-    // unit is fixed, so this reads as "month" for them without needing a
-    // per-meter flag.
-    const rateUnitFor = (row: HTMLElement): "month" | "hour" => {
-        const pressed = row.querySelector<HTMLButtonElement>("[data-calc-rate-unit][aria-pressed='true']");
-        return (pressed?.dataset.calcRateUnit as "month" | "hour" | undefined) || "month";
-    };
-
     const paintRates = (): void => {
         const edition = currentEdition();
         rows.forEach(row => {
@@ -219,9 +232,9 @@ function init(): void {
                 rate.textContent = "";
                 return;
             }
-            // The toggle only swaps which already-published rate is shown — it
-            // never derives one from the other, so it can't drift from the
-            // comparison table the way iac_resource_month / 730 could.
+            // Swaps in the other already-published rate rather than deriving one
+            // from the other, so it can't drift from the comparison table the way
+            // iac_resource_month / 730 could. recompute() prices by it too.
             if (id === "iac_resources" && rateUnitFor(row) === "hour") {
                 rate.textContent = `${usdRateHour.format(edition.iac_resource_hour)}/resource/hr`;
                 return;
@@ -292,6 +305,7 @@ function init(): void {
             button.addEventListener("click", () => {
                 rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
                 paintRates();
+                recompute();
             });
         });
     });
