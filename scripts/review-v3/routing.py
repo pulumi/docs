@@ -8,9 +8,10 @@ given a PR's changed paths and change type, which roles must approve and is
 staging evidence required (`resolve_lanes`).
 
 `load_config` fails closed: any structural problem — an unknown key at any
-level, a matrix cell naming a role outside `teams:`, a missing subject, a
-role the matrix can hand out with no `sla:` entry, a malformed team slug, a
-non-positive `business_days`, `warn_days >= close_days` — raises
+level, a matrix cell naming a role outside `teams:` or the retired literal
+`none`, a missing subject, a role the matrix can hand out with no `sla:`
+entry, a malformed team slug, a non-positive `business_days`,
+`warn_days >= close_days` — raises
 `RoutingConfigError` carrying every error found, not just the first. A
 `TODO-`-prefixed `sla.<role>.escalate_to` is the one deliberate exception:
 those names are pending an org decision, so the parser records a warning and
@@ -61,14 +62,19 @@ classify_path = _triage_classify.classify_path
 SUBJECTS = frozenset({"docs", "blog", "website", "programs", "infra", "frontend", "other"})
 
 CHANGE_TYPES = ("mechanical", "substantive")
-MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive", "staging_evidence"})
-STAGING_EVIDENCE_VALUES = frozenset({"required"})
+# `staging_evidence` was a matrix cell key until it moved to its own
+# path-keyed top-level section; it is NOT accepted here any more, so a config
+# that still carries it fails closed and loud rather than silently dropping
+# the gate. See STAGING EVIDENCE in the yaml header.
+MATRIX_CELL_KEYS = frozenset({"mechanical", "substantive"})
 
 TOP_LEVEL_KEYS = frozenset({
-    "schema", "teams", "bots", "matrix", "claims_overlay",
-    "external_contributors", "sla", "author_staleness", "waive",
-    "not_governed", "auto_approve", "link_only",
+    "schema", "teams", "bots", "matrix", "overrides", "staging_evidence",
+    "claims_overlay", "approval", "external_contributors", "sla",
+    "author_staleness", "waive", "not_governed", "link_only",
 })
+STAGING_EVIDENCE_KEYS = frozenset({"paths"})
+OVERRIDE_KEYS = frozenset({"paths", "role", "why"})
 CLAIMS_OVERLAY_KEYS = frozenset({"add"})
 EXTERNAL_CONTRIBUTORS_KEYS = frozenset({"skip_gates"})
 SLA_ENTRY_KEYS = frozenset({"business_days", "escalate_to"})
@@ -76,13 +82,17 @@ AUTHOR_STALENESS_KEYS = frozenset({"warn_days", "close_days"})
 WAIVE_KEYS = frozenset({"label", "log_prefix"})
 NOT_GOVERNED_KEYS = frozenset({"authors", "author_label_pairs"})
 AUTHOR_LABEL_PAIR_KEYS = frozenset({"author", "label"})
-AUTO_APPROVE_KEYS = frozenset({"authors"})
+APPROVAL_KEYS = frozenset({"scope", "admins_satisfy"})
+
 LINK_ONLY_KEYS = frozenset({"approval"})
-# Who may approve a diff whose every changed line differs only in a link.
-# `lane` is the ordinary rule: the subject's own team. `any-team` says any
-# team in `teams:` satisfies it, because checking a retargeted link needs a
-# careful human, not a particular lane's human.
-LINK_ONLY_APPROVAL = frozenset({"lane", "any-team"})
+# Who can satisfy the approver gate (G3). `lane` is the per-subject rule the
+# matrix resolves; `any-team` says a member of any team in `teams:` satisfies
+# it, whatever the matrix routed -- the matrix still decides who is REQUESTED.
+# One vocabulary for both `approval.scope` (every PR) and `link_only.approval`
+# (link-only diffs), because they answer the same question at two scopes; two
+# frozensets meant a third value could be accepted by one and rejected by the
+# other with nothing noticing.
+APPROVER_SCOPE = frozenset({"lane", "any-team"})
 
 # Closed vocabulary for external_contributors.skip_gates. Add a gate id here
 # when the Sentinel grows a new gate that a fork PR can legitimately skip.
@@ -110,17 +120,18 @@ class Config:
     teams: dict[str, str]
     bots: list[str]
     matrix: dict[str, dict[str, str]]
+    overrides: list
+    staging_evidence: dict
     claims_overlay: dict
     external_contributors: dict
     sla: dict[str, dict]
     author_staleness: dict
     waive: dict
-    # Both optional in the file (absent == empty): PRs the Sentinel does not
-    # govern at all, and bot authors whose clean brief satisfies the approver
-    # gate. See the yaml header for the semantics.
+    # Optional in the file (absent == empty): the automated processes the
+    # Sentinel does not govern at all. See the yaml header for the semantics.
     not_governed: dict = field(default_factory=dict)
-    auto_approve: dict = field(default_factory=dict)
     link_only: dict = field(default_factory=dict)
+    approval: dict = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
 
 
@@ -129,9 +140,13 @@ class Resolution:
     roles: set[str]
     staging_evidence_required: bool
     subjects: dict[str, str]  # changed path -> subject
+    # changed path -> role, for paths an `overrides` entry claimed. Their
+    # subject is still in `subjects`; only the approver changed.
+    overridden: dict[str, str]
     reasons: list[str]
     # True when any team in `teams:` satisfies the approver gate instead of
-    # the lane's own team (see `link_only.approval` in the config).
+    # the lane's own team — either repo-wide (`approval.scope: any-team`) or
+    # for this diff alone (`link_only.approval: any-team`).
     any_team: bool = False
 
     def to_json(self) -> dict:
@@ -139,9 +154,51 @@ class Resolution:
             "roles": sorted(self.roles),
             "staging_evidence_required": self.staging_evidence_required,
             "subjects": self.subjects,
+            "overridden": self.overridden,
             "reasons": self.reasons,
             "any_team": self.any_team,
         }
+
+
+def _bad_double_star(pattern: str) -> bool:
+    """Does `pattern` contain a `**` the matcher will not honor?
+
+    `_pattern_to_regex` splits on the literal `"**/"`. Anything else with two
+    adjacent stars falls through to the segment-local `*` rule and compiles
+    to `[^/]*[^/]*` — one segment, not recursive. So `content/**` matches
+    `content/a.md` and NOT `content/a/b.md`, the opposite of what anyone
+    writing it intends, silently. Cheaper to reject than to support: the
+    `**/` form already covers the real case.
+    """
+    return "**" in pattern.replace("**/", "")
+
+
+def _check_path_patterns(paths, where: str, errors: list[str]) -> None:
+    """Validate a list of match patterns for `where`.
+
+    `overrides[].paths` and `staging_evidence.paths` are the same kind of
+    thing and were validated by two copies of this cascade. The copies had
+    already started to rot: the `**` rule landed in both in one commit, and
+    the second copy's message was shortened to "see overrides[].paths"
+    rather than shared. The next rule, or the next pattern-bearing section,
+    would have paid the same tax."""
+    if not isinstance(paths, list) or not paths:
+        errors.append(f"{where} must be a non-empty list of patterns")
+        return
+    for i, pattern in enumerate(paths):
+        if not _is_nonempty_str(pattern):
+            errors.append(
+                f"{where}[{i}] must be a non-empty string, got {pattern!r}")
+        elif pattern.startswith("/"):
+            errors.append(
+                f"{where}[{i}] must be repo-root-relative with no leading "
+                f"slash, got {pattern!r}")
+        elif _bad_double_star(pattern):
+            errors.append(
+                f"{where}[{i}] uses `**` outside the `**/` form, got "
+                f"{pattern!r} -- as written it collapses to a single path "
+                "segment and would match less than you meant. Write `**/` "
+                "for 'zero or more directories'.")
 
 
 def _is_nonempty_str(v) -> bool:
@@ -169,7 +226,11 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
     _check_unknown_keys(raw, TOP_LEVEL_KEYS, "top level", errors)
 
     schema = raw.get("schema")
-    if schema != 1:
+    # `isinstance(..., bool)` first: in Python `True == 1` and `1.0 == 1`, so
+    # `schema: true` (a plausible YAML slip) and `schema: 1.0` both passed a
+    # bare `!= 1`. The same guard already protects `business_days` and
+    # `warn_days`/`close_days`.
+    if isinstance(schema, bool) or not isinstance(schema, int) or schema != 1:
         errors.append(f"schema must be 1, got {schema!r}")
 
     # ---- teams --------------------------------------------------------
@@ -217,6 +278,16 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     continue
                 role = cell[change_type]
                 if role == "none":
+                    # Every governed PR must resolve to an approver team. A
+                    # `none` cell used to mean "no human gate", which was only
+                    # ever true inside the Sentinel — GitHub's required-review
+                    # rule does not read this file. See MATRIX in the yaml.
+                    errors.append(
+                        f"matrix.{subject}.{change_type} is 'none', which is no longer "
+                        "accepted: every governed PR must name an approver team. Use "
+                        "`mechanical` to skip the model review, or `not_governed` for "
+                        "an automated process that already self-approves and self-merges."
+                    )
                     continue
                 if not _is_nonempty_str(role) or role not in teams:
                     errors.append(
@@ -225,11 +296,61 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     )
                     continue
                 matrix_roles_used.add(role)
-            if "staging_evidence" in cell and cell["staging_evidence"] not in STAGING_EVIDENCE_VALUES:
+
+    # ---- overrides (optional, ordered) --------------------------------
+    # Path -> role, consulted before the matrix. See OVERRIDES in the yaml.
+    overrides = raw.get("overrides", [])
+    if overrides is None:
+        overrides = []
+    if not isinstance(overrides, list):
+        errors.append("overrides must be a list of {paths, role, why} entries")
+        overrides = []
+    else:
+        for i, entry in enumerate(overrides):
+            if not isinstance(entry, dict):
+                errors.append(f"overrides[{i}] must be a mapping with paths, role, why")
+                continue
+            _check_unknown_keys(entry, OVERRIDE_KEYS, f"overrides[{i}]", errors)
+            role = entry.get("role")
+            if not _is_nonempty_str(role) or role not in teams:
                 errors.append(
-                    f"matrix.{subject}.staging_evidence must be one of "
-                    f"{sorted(STAGING_EVIDENCE_VALUES)}, got {cell['staging_evidence']!r}"
+                    f"overrides[{i}].role names unknown role {role!r} (not in teams)"
                 )
+            else:
+                # An overrides role is handed out exactly like a matrix role,
+                # so it needs an `sla:` entry exactly like one. Without this
+                # the config validated clean and `sla-sweep.py` then did
+                # `config.sla[role]["business_days"]` and took the whole
+                # sweep down with a KeyError for every PR in the batch.
+                # `claims_overlay.add` was already registered here; overrides
+                # were the gap.
+                matrix_roles_used.add(role)
+            _check_path_patterns(entry.get("paths"), f"overrides[{i}].paths", errors)
+            # `why` is required on purpose: an override is a deliberate
+            # exception to the matrix, and one that cannot say why it exists
+            # is one nobody can safely delete later.
+            if not _is_nonempty_str(entry.get("why")):
+                errors.append(
+                    f"overrides[{i}].why is required — say why this path does not "
+                    "follow its subject's owner"
+                )
+
+    # ---- staging_evidence ---------------------------------------------
+    # Required, not optional: an absent section would read as "nothing needs
+    # a staging run", which is the one wrong answer a merge gate must never
+    # give silently.
+    staging_evidence = raw.get("staging_evidence")
+    if not isinstance(staging_evidence, dict):
+        errors.append("staging_evidence must be a mapping with a 'paths' key")
+        staging_evidence = {"paths": []}
+    else:
+        _check_unknown_keys(staging_evidence, STAGING_EVIDENCE_KEYS, "staging_evidence", errors)
+        paths = staging_evidence.get("paths")
+        if not isinstance(paths, list) or not paths:
+            errors.append("staging_evidence.paths must be a non-empty list of path patterns")
+            staging_evidence = {"paths": []}
+        else:
+            _check_path_patterns(paths, "staging_evidence.paths", errors)
 
     # ---- claims_overlay -----------------------------------------------
     claims_overlay = raw.get("claims_overlay")
@@ -351,19 +472,6 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
                     if not _is_nonempty_str(pair.get(key)):
                         errors.append(f"not_governed.author_label_pairs[{i}].{key} must be a non-empty string")
 
-    # ---- auto_approve (optional) ------------------------------------------
-    auto_approve = raw.get("auto_approve", {})
-    if auto_approve is None:
-        auto_approve = {}
-    if not isinstance(auto_approve, dict):
-        errors.append("auto_approve must be a mapping with an 'authors' list")
-        auto_approve = {}
-    else:
-        _check_unknown_keys(auto_approve, AUTO_APPROVE_KEYS, "auto_approve", errors)
-        aa_authors = auto_approve.get("authors", [])
-        if not isinstance(aa_authors, list) or not all(_is_nonempty_str(a) for a in aa_authors):
-            errors.append("auto_approve.authors must be a list of non-empty strings")
-
     # ---- link_only (optional) ---------------------------------------------
     link_only = raw.get("link_only", {})
     if link_only is None:
@@ -374,8 +482,24 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
     else:
         _check_unknown_keys(link_only, LINK_ONLY_KEYS, "link_only", errors)
         approval = link_only.get("approval", "lane")
-        if approval not in LINK_ONLY_APPROVAL:
-            errors.append("link_only.approval must be one of: " + ", ".join(sorted(LINK_ONLY_APPROVAL)))
+        if approval not in APPROVER_SCOPE:
+            errors.append("link_only.approval must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
+
+    # ---- approval (optional) ----------------------------------------------
+    # Absent means `{scope: lane, admins_satisfy: false}` — the strictest
+    # reading, so a config that predates this section keeps the old gate.
+    approval_cfg = raw.get("approval", {})
+    if approval_cfg is None:
+        approval_cfg = {}
+    if not isinstance(approval_cfg, dict):
+        errors.append("approval must be a mapping with optional 'scope' and 'admins_satisfy'")
+        approval_cfg = {}
+    else:
+        _check_unknown_keys(approval_cfg, APPROVAL_KEYS, "approval", errors)
+        if approval_cfg.get("scope", "lane") not in APPROVER_SCOPE:
+            errors.append("approval.scope must be one of: " + ", ".join(sorted(APPROVER_SCOPE)))
+        if not isinstance(approval_cfg.get("admins_satisfy", False), bool):
+            errors.append("approval.admins_satisfy must be true or false")
 
     if errors:
         return None, errors, warnings
@@ -385,14 +509,16 @@ def validate_raw(raw: dict) -> tuple[Config | None, list[str], list[str]]:
         teams=teams,
         bots=bots,
         matrix=matrix,
+        overrides=overrides,
+        staging_evidence=staging_evidence,
         claims_overlay=claims_overlay,
         external_contributors=external_contributors,
         sla=sla,
         author_staleness=author_staleness,
         waive=waive,
         not_governed=not_governed,
-        auto_approve=auto_approve,
         link_only=link_only,
+        approval=approval_cfg,
         warnings=warnings,
     )
     return config, errors, warnings
@@ -417,6 +543,96 @@ def load_config(path: Path | str) -> Config:
     if errors:
         raise RoutingConfigError(errors)
     return config
+
+
+def _pattern_to_regex(pattern: str) -> re.Pattern:
+    """Compile one path pattern (`overrides[].paths`, `staging_evidence.paths`).
+
+    Deliberately not `fnmatch`: fnmatch's `*` crosses `/`, so `scripts/*`
+    would match `scripts/redirects/general-broken-links-redirects.txt` — the
+    exact path `staging_evidence` exists to exclude. Here:
+
+      - `**/` is zero or more directories, so `content/docs/**/get-started/`
+        matches `content/docs/get-started/x.md` AND
+        `content/docs/iac/get-started/x.md`;
+      - `*` matches within ONE segment and never crosses `/`;
+      - a trailing `/` means that whole subtree;
+      - anything else is an exact path.
+    """
+    suffix = r".+" if pattern.endswith("/") else r"\Z"
+    body = ""
+    # Split on `**/` first so the segment-local `*` rule below never sees it.
+    for i, chunk in enumerate(pattern.split("**/")):
+        if i:
+            body += r"(?:[^/]*/)*"
+        body += "".join(r"[^/]*" if part == "*" else re.escape(part)
+                        for part in re.split(r"(\*)", chunk))
+    return re.compile(body + suffix)
+
+
+_STAGING_REGEX_CACHE: dict[tuple[str, ...], list[re.Pattern]] = {}
+
+
+def staging_evidence_patterns(config: Config) -> list[re.Pattern]:
+    """Compiled `staging_evidence.paths`, memoized per pattern tuple."""
+    key = tuple(config.staging_evidence.get("paths") or ())
+    if key not in _STAGING_REGEX_CACHE:
+        _STAGING_REGEX_CACHE[key] = [_pattern_to_regex(pat) for pat in key]
+    return _STAGING_REGEX_CACHE[key]
+
+
+_OVERRIDE_REGEX_CACHE: dict[tuple, list[tuple[list[re.Pattern], str, str]]] = {}
+
+
+def _override_rules(config: Config) -> list[tuple[list[re.Pattern], str, str]]:
+    """Compiled `overrides`, in file order, memoized per rule content.
+
+    Keyed on the rules, NOT on `id(config)`. A `Config` is an ordinary
+    object: once one is garbage-collected CPython reuses the address, so an
+    id-keyed entry gets served to a *different* config that happens to land
+    there — a merge gate routing a PR to a team named in a config that no
+    longer exists. This reproduced as an INTERMITTENT failure of
+    `test_first_matching_override_wins` under the full suite (enough Configs
+    allocated and freed for an address to be reused) while passing when that
+    file ran alone. `_STAGING_REGEX_CACHE` below was always keyed correctly;
+    this one was the asymmetry.
+    """
+    key = tuple(
+        (tuple(entry.get("paths") or ()), entry.get("role") or "")
+        for entry in (config.overrides or [])
+    )
+    if key not in _OVERRIDE_REGEX_CACHE:
+        _OVERRIDE_REGEX_CACHE[key] = [
+            ([_pattern_to_regex(pat) for pat in entry.get("paths") or ()],
+             entry.get("role") or "",
+             entry.get("why") or "")
+            for entry in (config.overrides or [])
+        ]
+    return _OVERRIDE_REGEX_CACHE[key]
+
+
+def override_role(config: Config, path: str) -> tuple[str, str] | None:
+    """The (role, why) an `overrides` entry assigns to `path`, or None.
+
+    First match wins, in file order. This is consulted BEFORE the matrix and
+    answers only "who owns this file" — the path's subject, and therefore the
+    review criteria that apply to it, are untouched. See OVERRIDES in
+    `.github/review-routing.yml` for why those are separate questions.
+    """
+    for regexes, role, why in _override_rules(config):
+        if any(rx.match(path) for rx in regexes):
+            return role, why
+    return None
+
+
+def requires_staging_evidence(config: Config, path: str) -> bool:
+    """Does changing `path` require a demonstrated staging deploy (gate G4)?
+
+    Keyed on the path alone, independent of which role reviews it — see
+    STAGING EVIDENCE in `.github/review-routing.yml` for why those two
+    questions are separate.
+    """
+    return any(rx.match(path) for rx in staging_evidence_patterns(config))
 
 
 def resolve_lanes(
@@ -448,41 +664,80 @@ def resolve_lanes(
     reasons.append(f"change type: {change_type}")
 
     roles: set[str] = set()
-    staging_evidence_required = False
 
-    for subject in sorted(set(subjects.values())):
+    # Staging evidence is decided per changed path against
+    # `staging_evidence.paths`, NOT by the subject's matrix row: the approver
+    # and the blast radius are different questions. See STAGING EVIDENCE in
+    # the yaml header.
+    staging_paths = [p for p in changed_paths if requires_staging_evidence(config, p)]
+    staging_evidence_required = bool(staging_paths)
+    if staging_paths:
+        reasons.append(
+            "staging evidence required: " + ", ".join(sorted(staging_paths))
+        )
+    else:
+        reasons.append("no changed path requires staging evidence")
+
+    # Ownership overrides run first, per path. A path an override claims is
+    # settled — it does not also contribute its subject to the matrix pass
+    # below — but its SUBJECT is untouched, so the domain label and the
+    # review criteria that follow from it are exactly what classify_path
+    # said. See OVERRIDES in the yaml header.
+    overridden: dict[str, str] = {}
+    for path in changed_paths:
+        hit = override_role(config, path)
+        if hit is not None:
+            role, _why = hit
+            overridden[path] = role
+            roles.add(role)
+            reasons.append(
+                f"override: {path} (subject:{subjects[path]}) -> role:{role}"
+            )
+
+    for subject in sorted({s for p, s in subjects.items() if p not in overridden}):
         cell = config.matrix[subject]
         role = cell[change_type]
-        if role != "none":
-            roles.add(role)
-            reasons.append(f"subject:{subject}/{change_type} -> role:{role}")
-        else:
-            reasons.append(f"subject:{subject}/{change_type} -> none")
-        if cell.get("staging_evidence") == "required":
-            staging_evidence_required = True
-            reasons.append(f"subject:{subject} requires staging evidence")
+        roles.add(role)
+        reasons.append(f"subject:{subject}/{change_type} -> role:{role}")
 
     if claims:
         overlay_role = config.claims_overlay["add"]
         roles.add(overlay_role)
         reasons.append(f"claims overlay adds role:{overlay_role}")
 
-    # A link-only sweep changes nothing but link targets. Checking one is
-    # careful work, but it is not lane knowledge: the question is whether the
-    # target resolves and still says what the sentence claims, which any
-    # reviewer can answer. With `link_only.approval: any-team` the roles stay
-    # on the record and any team in `teams:` satisfies them.
-    any_team = bool(roles) and link_only and (config.link_only or {}).get("approval") == "any-team"
+    # Two rules can widen who satisfies the approver gate; the roles stay on
+    # the record either way, because they are also what triage requests.
+    #
+    #   - `approval.scope: any-team` is repo-wide: the matrix names the
+    #     reviewer best placed to look, not the only one allowed to.
+    #   - `link_only.approval: any-team` is per-diff, for a sweep that
+    #     changes nothing but link targets — careful work, but not lane
+    #     knowledge. It still applies when the repo-wide scope is `lane`.
+    scope = (config.approval or {}).get("scope", "lane")
+    link_only_any_team = link_only and (config.link_only or {}).get("approval") == "any-team"
+    any_team = bool(roles) and (scope == "any-team" or link_only_any_team)
     if any_team:
-        reasons.append("link-only diff: any team in teams: satisfies the approver gate")
+        why = "approval.scope: any-team" if scope == "any-team" else "link-only diff"
+        reasons.append(f"{why}: any team in teams: satisfies the approver gate")
 
     return Resolution(
         roles=roles,
         staging_evidence_required=staging_evidence_required,
         subjects=subjects,
+        overridden=overridden,
         reasons=reasons,
         any_team=any_team,
     )
+
+
+def admins_satisfy(config: Config) -> bool:
+    """Does a repository administrator's approval satisfy the approver gate?
+
+    Off unless `approval.admins_satisfy: true` — an admin can already merge
+    past a red check, so this only lets the gate say so out loud instead of
+    reporting a block the repo does not actually impose on them.
+    """
+    return bool((config.approval or {}).get("admins_satisfy"))
 
 
 def not_governed_reason(config: Config, author: str, labels: set[str] | frozenset[str]) -> str | None:
@@ -502,11 +757,6 @@ def not_governed_reason(config: Config, author: str, labels: set[str] | frozense
     return None
 
 
-def auto_approve_author(config: Config, author: str) -> bool:
-    """Is this author eligible for the clean-brief rule (G3 without a human)?"""
-    return author in ((config.auto_approve or {}).get("authors") or [])
-
-
 # ---- self-test --------------------------------------------------------
 
 _CANNED_CONFIG = {
@@ -518,14 +768,15 @@ _CANNED_CONFIG = {
     },
     "bots": ["pulumi-bot"],
     "matrix": {
-        "docs": {"mechanical": "none", "substantive": "docs-guild"},
-        "blog": {"mechanical": "none", "substantive": "marketing"},
-        "website": {"mechanical": "none", "substantive": "marketing"},
-        "programs": {"mechanical": "none", "substantive": "docs-guild"},
-        "infra": {"mechanical": "tools", "substantive": "tools", "staging_evidence": "required"},
-        "frontend": {"mechanical": "none", "substantive": "marketing"},
-        "other": {"mechanical": "none", "substantive": "tools"},
+        "docs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "blog": {"mechanical": "marketing", "substantive": "marketing"},
+        "website": {"mechanical": "marketing", "substantive": "marketing"},
+        "programs": {"mechanical": "docs-guild", "substantive": "docs-guild"},
+        "infra": {"mechanical": "tools", "substantive": "tools"},
+        "frontend": {"mechanical": "marketing", "substantive": "marketing"},
+        "other": {"mechanical": "tools", "substantive": "tools"},
     },
+    "staging_evidence": {"paths": ["infrastructure/", "Makefile", "scripts/run-pulumi.sh"]},
     "claims_overlay": {"add": "marketing"},
     "external_contributors": {"skip_gates": ["review-ran", "findings-answered"]},
     "sla": {
@@ -539,7 +790,6 @@ _CANNED_CONFIG = {
         "authors": ["dependabot[bot]"],
         "author_label_pairs": [{"author": "pulumi-bot", "label": "automation/merge"}],
     },
-    "auto_approve": {"authors": ["pulumi-bot"]},
     "link_only": {"approval": "any-team"},
 }
 
@@ -571,13 +821,16 @@ def self_test() -> int:
               not_governed_reason(real, "pulumi-bot", {"automation/merge"}) is not None)
         check("real config does not govern Dependabot",
               not_governed_reason(real, "dependabot[bot]", set()) is not None)
-        check("real config auto-approves pulumi-bot", auto_approve_author(real, "pulumi-bot"))
+        check("real config routes every subject to a team (no 'none' cells)",
+              all(cell[ct] != "none" for cell in real.matrix.values() for ct in CHANGE_TYPES))
+        check("real config lists every PR-opening bot",
+              {"pulumi-bot", "workprentice[bot]"} <= set(real.bots))
     except RoutingConfigError as e:
         check(f"real .github/review-routing.yml loads ({e.errors})", False)
 
     # ---- resolve_lanes cases -------------------------------------------
     r = resolve_lanes(["content/docs/foo.md"], mechanical=True, claims=False, config=config)
-    check("pure docs mechanical -> no roles", r.roles == set())
+    check("pure docs mechanical still routes to docs-guild", r.roles == {"docs-guild"})
 
     r = resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     check("pure docs substantive -> docs-guild", r.roles == {"docs-guild"})
@@ -593,7 +846,17 @@ def self_test() -> int:
         mechanical=False, claims=False, config=config,
     )
     check("mixed docs+infra -> tools + docs-guild", r.roles == {"docs-guild", "tools"})
-    check("infra file -> staging evidence required", r.staging_evidence_required is True)
+    check("subject:infra alone does NOT imply staging evidence",
+          r.staging_evidence_required is False)
+
+    r = resolve_lanes(
+        ["content/docs/foo.md", "scripts/run-pulumi.sh"],
+        mechanical=False, claims=False, config=config,
+    )
+    check("a listed deploy script -> staging evidence required",
+          r.staging_evidence_required is True)
+    r = resolve_lanes(["infrastructure/index.ts"], mechanical=False, claims=False, config=config)
+    check("a subtree pattern matches below itself", r.staging_evidence_required is True)
 
     r = resolve_lanes(["content/docs/foo.md"], mechanical=True, claims=True, config=config)
     check("claims overlay adds marketing", "marketing" in r.roles)
@@ -603,6 +866,9 @@ def self_test() -> int:
     check("unclassifiable path routed as subject:other", r.subjects["some/unknown/path.txt"] == "other")
     check("subject:other substantive -> tools, no staging evidence",
           r.roles == {"tools"} and r.staging_evidence_required is False)
+    r_mech = resolve_lanes(["some/unknown/path.txt"], mechanical=True, claims=False, config=config)
+    check("subject:other mechanical -> tools too (mechanical never means nobody)",
+          r_mech.roles == {"tools"})
 
     r = resolve_lanes(["layouts/partials/foo.html"], mechanical=False, claims=False, config=config)
     check("template -> subject:frontend -> marketing", r.roles == {"marketing"})
@@ -612,13 +878,80 @@ def self_test() -> int:
                       mechanical=False, claims=False, config=config)
     check("infra + other dedupes to tools alone", r.roles == {"tools"})
 
+    # ---- staging evidence keys on path, not subject --------------------
+    # The matcher's whole contract in three cases: `*` must not cross `/`,
+    # a trailing `/` must reach the whole subtree, and an unlisted path in a
+    # listed directory must stay off the gate.
+    check("`scripts/*` style pattern does not cross a path segment",
+          not requires_staging_evidence(config, "scripts/redirects/general.txt"))
+    check("exact-path pattern matches exactly",
+          requires_staging_evidence(config, "scripts/run-pulumi.sh")
+          and not requires_staging_evidence(config, "scripts/run-pulumi.sh.bak"))
+    check("subtree pattern does not match the bare directory name",
+          not requires_staging_evidence(config, "infrastructure"))
+
+    real_paths = {
+        # PR #21698: domain:infra, but a redirect line cannot change the deploy.
+        "scripts/redirects/general-broken-links-redirects.txt": False,
+        "scripts/review-v3/sentinel.py": False,
+        "scripts/lint/lint-markdown.js": False,
+        ".github/workflows/blog-review-index.yml": False,
+        "content/blog/foo/index.md": False,
+        # A build script the deploy DOES run — and so does every PR's own
+        # preview build, which is why it came off the gate on 2026-09-18.
+        "scripts/search/main.js": False,
+        "scripts/build-site.sh": False,
+        "package.json": False,
+        # What a preview cannot prove: the apply, and the chain into it.
+        "infrastructure/index.ts": True,
+        "scripts/run-pulumi.sh": True,
+        "Makefile": True,
+        "scripts/ci-push.sh": True,
+        "scripts/await-in-progress.js": True,
+        ".github/workflows/testing-build-and-deploy.yml": True,
+    }
+    try:
+        for path, want in real_paths.items():
+            check(f"real config: staging {'required' if want else 'not required'} for {path}",
+                  requires_staging_evidence(real, path) is want)
+    except NameError:  # real config failed to load; already reported above
+        pass
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    del bad["staging_evidence"]
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence is required, not optional",
+          any("staging_evidence must be a mapping" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["staging_evidence"] = {"paths": []}
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence.paths must be non-empty",
+          any("staging_evidence.paths must be a non-empty list" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["staging_evidence"] = {"paths": ["/infrastructure/"]}
+    _, errs, _ = validate_raw(bad)
+    check("staging_evidence.paths rejects a leading slash",
+          any("repo-root-relative" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["matrix"]["infra"]["staging_evidence"] = "required"
+    _, errs, _ = validate_raw(bad)
+    check("the retired matrix cell key now fails closed",
+          any("unknown key 'staging_evidence'" in e for e in errs))
+
     check("not_governed: dependabot by author",
           not_governed_reason(config, "dependabot[bot]", set()) is not None)
     check("not_governed: pulumi-bot needs the label",
           not_governed_reason(config, "pulumi-bot", set()) is None
           and not_governed_reason(config, "pulumi-bot", {"automation/merge"}) is not None)
-    check("auto_approve: pulumi-bot yes, humans no",
-          auto_approve_author(config, "pulumi-bot") and not auto_approve_author(config, "someone"))
+    check("every subject/change-type pair resolves to at least one role",
+          all(resolve_lanes([path], mechanical=m, claims=False, config=config).roles
+              for m in (True, False)
+              for path in ("content/docs/a.md", "content/blog/b/index.md",
+                           "content/nav/c.md", "static/programs/d/index.ts",
+                           "scripts/e.sh", "layouts/f.html", "zzz-unknown.txt")))
 
     bad = copy.deepcopy(_CANNED_CONFIG)
     bad["not_governed"] = {"authors": "dependabot[bot]"}
@@ -626,15 +959,59 @@ def self_test() -> int:
     check("not_governed.authors must be a list", any("not_governed.authors" in e for e in errs))
 
     bad = copy.deepcopy(_CANNED_CONFIG)
-    bad["auto_approve"] = {"authors": ["pulumi-bot"], "extra": 1}
+    bad["surprise_section"] = {"authors": ["pulumi-bot"]}
     _, errs, _ = validate_raw(bad)
-    check("auto_approve rejects unknown keys", any("auto_approve: unknown key" in e for e in errs))
+    check("a retired/unknown top-level section is rejected",
+          any("unknown key 'surprise_section'" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["auto_approve"] = {"authors": ["pulumi-bot"]}
+    _, errs, _ = validate_raw(bad)
+    check("the retired auto_approve section now fails closed",
+          any("unknown key 'auto_approve'" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["matrix"]["docs"]["mechanical"] = "none"
+    _, errs, _ = validate_raw(bad)
+    check("a 'none' matrix cell is rejected",
+          any("matrix.docs.mechanical is 'none'" in e for e in errs))
 
     ok_cfg = copy.deepcopy(_CANNED_CONFIG)
     del ok_cfg["not_governed"]
-    del ok_cfg["auto_approve"]
     cfg2, errs, _ = validate_raw(ok_cfg)
-    check("not_governed / auto_approve are optional", errs == [] and cfg2.not_governed == {} and cfg2.auto_approve == {})
+    check("not_governed is optional", errs == [] and cfg2.not_governed == {})
+
+    # ---- approval scope -------------------------------------------------
+    check("approval is optional and defaults to the lane rule",
+          config.approval == {} and admins_satisfy(config) is False
+          and resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False,
+                            config=config).any_team is False)
+    any_team_cfg, errs, _ = validate_raw({
+        **copy.deepcopy(_CANNED_CONFIG),
+        "approval": {"scope": "any-team", "admins_satisfy": True},
+    })
+    check("approval.scope: any-team validates", errs == [])
+    r = resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=any_team_cfg)
+    check("approval.scope: any-team widens the gate but keeps the routed role",
+          r.any_team is True and r.roles == {"docs-guild"})
+    check("approval.admins_satisfy is readable", admins_satisfy(any_team_cfg) is True)
+    check("a zero-role PR is not 'any team'",
+          resolve_lanes([], mechanical=False, claims=False, config=any_team_cfg).any_team is False)
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"scope": "whoever"}
+    _, errs, _ = validate_raw(bad)
+    check("approval.scope is validated", any("approval.scope" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"admins_satisfy": "yes"}
+    _, errs, _ = validate_raw(bad)
+    check("approval.admins_satisfy must be a bool", any("admins_satisfy" in e for e in errs))
+
+    bad = copy.deepcopy(_CANNED_CONFIG)
+    bad["approval"] = {"scope": "any-team", "admin": True}
+    _, errs, _ = validate_raw(bad)
+    check("an unknown approval key fails closed", any("unknown key 'admin'" in e for e in errs))
 
     # ---- validation failure modes ---------------------------------------
     bad = copy.deepcopy(_CANNED_CONFIG)

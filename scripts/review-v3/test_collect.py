@@ -13,6 +13,7 @@ the same way.
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -55,7 +56,7 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
             updated_at: str = "2026-09-14T10:00:00Z", commits: list[str] | None = None,
             review_comments: list[dict] | None = None, head_ref: str | None = None,
             head_repo: str = "pulumi/docs", requested_users: list | None = None,
-            requested_teams: list[str] | None = None) -> dict:
+            requested_teams: list[str] | None = None, compare_files: dict | None = None) -> dict:
     """A compact description of one PR that make_snapshot() expands into
     every endpoint collect.py reads."""
     files = files if files is not None else [
@@ -72,6 +73,7 @@ def pr_spec(number: int, *, title: str = "A change", author: str = "workprentice
         "commits": commits or ["Do the thing"], "review_comments": review_comments or [],
         "head_ref": head_ref or f"branch-{number}", "head_repo": head_repo,
         "requested_users": requested_users or [], "requested_teams": requested_teams or [],
+        "compare_files": compare_files or {},
     }
 
 
@@ -116,6 +118,13 @@ def make_snapshot(root: Path, specs: list[dict], repo: str = "pulumi/docs", memb
                   "parents": [{"sha": "p"} for _ in range(c.get("parents", 1))]} if isinstance(c, dict)
                  else {"sha": f"{i:040x}", "commit": {"message": c}, "parents": [{"sha": "p"}]})
                 for i, c in enumerate(s["commits"], 1)])
+        # The PR's diff at each earlier head, for the base-merged check;
+        # `compare_files` maps a sha to a files list that differs from now.
+        for c in s["commits"]:
+            sha = c.get("sha") if isinstance(c, dict) else None
+            if sha:
+                _write(root, "GET", f"repos/{repo}/compare/master...{sha}", None,
+                       {"files": (s.get("compare_files") or {}).get(sha, s["files"])})
         _write(root, "GET", f"repos/{repo}/pulls/{n}/comments", None, s["review_comments"])
         _write(root, "GET", f"repos/{repo}/pulls/{n}/requested_reviewers", None, {
             "users": [({"login": u, "type": "User"} if isinstance(u, str) else u) for u in s["requested_users"]],
@@ -250,7 +259,10 @@ def test_find_review_comments_prefers_v3_card():
     a, b, surface = collect.find_review_comments(v3)
     assert surface == "v3" and "CLAUDE_REVIEW_AUTHOR" in a["body"] and "CLAUDE_REVIEW_BRIEF" in b["body"]
     a, b, surface = collect.find_review_comments([comment(LEGACY)])
-    assert surface == "v2" and b is None and a["body"].startswith("<!-- CLAUDE_REVIEW 1/1 -->")
+    # The legacy comment comes back joined, so its page markers are stripped
+    # (join_pages' doing) and the body is the review rather than one page.
+    assert surface == "v2" and b is None and "<!-- CLAUDE_REVIEW 1/1 -->" not in a["body"]
+    assert a["body"].strip().startswith("## Pre-merge Review") and a["review_pages_missing"] == []
     assert collect.find_review_comments([comment("hi", "someone")]) == (None, None, "none")
 
 
@@ -310,6 +322,29 @@ def test_checks_rollup():
     assert collect.checks_rollup(pend, [])["state"] == "pending"
     st = [{"context": "staging/pulumi-test-io", "state": "failure"}, {"context": "staging/pulumi-test-io", "state": "success"}]
     assert collect.checks_rollup(ok, st)["failing"] == ["staging/pulumi-test-io"]  # newest first wins
+    # A concurrency group cancels superseded runs; only the newest run of a name counts.
+    superseded = ok + [
+        {"id": 1, "name": "sentinel", "status": "completed", "conclusion": "cancelled", "started_at": "2026-09-14T14:21:25Z", "completed_at": "2026-09-14T14:21:26Z"},
+        {"id": 3, "name": "sentinel", "status": "completed", "conclusion": "success", "started_at": "2026-09-14T21:16:31Z", "completed_at": "2026-09-14T21:17:37Z"},
+        {"id": 2, "name": "sentinel", "status": "completed", "conclusion": "cancelled", "started_at": "2026-09-14T14:21:27Z", "completed_at": "2026-09-14T14:21:27Z"},
+    ]
+    assert collect.checks_rollup(superseded, []) == {"state": "green", "failing": [], "pending": [], "total": 4}
+    rerun = superseded + [{"id": 4, "name": "sentinel", "status": "in_progress", "conclusion": None, "started_at": "2026-09-15T09:00:00Z"}]
+    assert collect.checks_rollup(rerun, [])["pending"] == ["sentinel"]  # a newer run still going beats an older success
+    regressed = ok + [{"id": 5, "name": "lint", "status": "completed", "conclusion": "success", "started_at": "2026-09-14T10:00:00Z"},
+                      {"id": 6, "name": "lint", "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T11:00:00Z"}]
+    assert collect.checks_rollup(regressed, [])["failing"] == ["lint"]
+    # Job names repeat across workflows: a passing deploy build must not stand in for a failed PR build.
+    build = "Install deps and build site"
+    twins = [{"id": 7, "name": build, "status": "completed", "conclusion": "failure", "started_at": "2026-09-14T10:00:00Z", "check_suite": {"id": 70}},
+             {"id": 8, "name": build, "status": "completed", "conclusion": "success", "started_at": "2026-09-14T11:00:00Z", "check_suite": {"id": 80}}]
+    wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/testing-build-and-deploy.yml"}
+    assert collect.checks_rollup(twins, [], wf)["failing"] == [build]
+    # An unmapped suite dedupes nothing, so it errs red rather than green.
+    assert collect.checks_rollup(twins, [])["failing"] == [build]
+    # Reruns of the same workflow do dedupe, across their separate suites.
+    rerun_wf = {70: ".github/workflows/pull-request.yml", 80: ".github/workflows/pull-request.yml"}
+    assert collect.checks_rollup(twins, [], rerun_wf)["state"] == "green"
 
 
 # ---- selection -----------------------------------------------------------
@@ -385,10 +420,11 @@ def test_routing_teams_asks_github_for_every_configured_team():
         (root / ".github").mkdir()
         (root / ".github" / "review-routing.yml").write_text(
             "schema: 1\nteams: {docs-guild: pulumi/docs-guild, marketing: pulumi/docs-marketing-review, tools: pulumi/docs-tools}\n"
-            "bots: []\nmatrix:\n  docs: {mechanical: none, substantive: docs-guild}\n  blog: {mechanical: none, substantive: marketing}\n"
-            "  website: {mechanical: none, substantive: marketing}\n  programs: {mechanical: none, substantive: docs-guild}\n"
-            "  infra: {mechanical: tools, substantive: tools, staging_evidence: required}\n  frontend: {mechanical: none, substantive: marketing}\n"
-            "  other: {mechanical: none, substantive: tools}\nclaims_overlay: {add: marketing}\nexternal_contributors: {skip_gates: []}\n"
+            "bots: []\nmatrix:\n  docs: {mechanical: docs-guild, substantive: docs-guild}\n  blog: {mechanical: marketing, substantive: marketing}\n"
+            "  website: {mechanical: marketing, substantive: marketing}\n  programs: {mechanical: docs-guild, substantive: docs-guild}\n"
+            "  infra: {mechanical: tools, substantive: tools}\n  frontend: {mechanical: marketing, substantive: marketing}\n"
+            "  other: {mechanical: tools, substantive: tools}\nstaging_evidence: {paths: [infrastructure/]}\n"
+            "claims_overlay: {add: marketing}\nexternal_contributors: {skip_gates: []}\n"
             "sla:\n  tools: {business_days: 1, escalate_to: a}\n  docs-guild: {business_days: 3, escalate_to: b}\n  marketing: {business_days: 3, escalate_to: c}\n"
             "author_staleness: {warn_days: 14, close_days: 21}\nwaive: {label: review:waived, log_prefix: x/}\nnot_governed: {authors: [], author_label_pairs: []}\n")
         _write(root, "GET", "orgs/pulumi/teams/docs-guild", None, {"slug": "docs-guild"})
@@ -413,6 +449,16 @@ def test_base_merge_only_keeps_the_review_current():
     assert r["status"] == "STALE" and r["base_merged"] is False
     r = collect_specs([pr_spec(3, commits=merge, **base)])["prs"][0]["review"]  # reviewed head not in the list
     assert r["status"] == "STALE"
+    # A merge commit that resolved a conflict by editing a line the PR adds changed what the review read.
+    then = [{"filename": "content/docs/p.md", "status": "modified", "additions": 1, "deletions": 1,
+             "patch": patch_for(["the link, before the merge"], lines_removed=["old line"])}]
+    r = collect_specs([pr_spec(4, commits=reviewed + merge, compare_files={HEAD_V3: then}, **base)])["prs"][0]["review"]
+    assert r["status"] == "STALE" and r["base_merged"] is False
+    # Hunk headers and context move with the base; only the changed lines are compared.
+    shifted = [dict(f, patch=patch_for(["new line"], old_start=40, lines_removed=["old line"], context=["other ctx"]))
+               for f in pr_spec(1)["files"]]
+    r = collect_specs([pr_spec(5, commits=reviewed + merge, compare_files={HEAD_V3: shifted}, **base)])["prs"][0]["review"]
+    assert r["status"] == "CURRENT" and r["base_merged"] is True
 
 
 def test_requested_reviewers_drop_bots():
@@ -480,3 +526,84 @@ def run_standalone() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_standalone())
+
+
+# ---- a split (multi-comment) legacy review --------------------------------
+
+# The real v2 fixture with findings written into it, split at the point the
+# poster would split it: the summary, the tally and the verification trail on
+# page 1, every findings section on page 2. That ordering is the bug's whole
+# mechanism — the sections are the tail of the document, so a page-1-only
+# read reports a review with no findings at all (pulumi/docs#21490).
+MARKER_LINE_RE = re.compile(r"^<!-- CLAUDE_REVIEW \d+/\d+ -->\n", re.M)
+_SPLIT_AT = "### 🚨 Outstanding in this PR"
+_FINDINGS = """### 🚨 Outstanding in this PR
+
+- **[L12]** `content/docs/a.md` — the claim about default output does not hold.
+- **[L40]** `content/docs/a.md` — this link 404s.
+- **[L61]** `content/docs/b.md` — the sample uses a retired flag.
+
+### ⚠️ Low-confidence
+
+- **[L20]** `content/docs/a.md` — possibly stale version number.
+"""
+
+
+def legacy_pages(outstanding: int = 3, low: int = 1, total: int = 2) -> list[str]:
+    """The fixture as `total` page bodies, each stamped `k/total`."""
+    head, _, _ = LEGACY.partition(_SPLIT_AT)
+    head = MARKER_LINE_RE.sub("", head, count=1)
+    head = head.replace("| **0** | **0** | **1** | **2** |",
+                        f"| **{outstanding}** | **{low}** | **0** | **0** |")
+    return [f"<!-- CLAUDE_REVIEW 1/{total} -->\n{head.strip()}\n",
+            f"<!-- CLAUDE_REVIEW 2/{total} -->\n{_FINDINGS}"]
+
+
+def test_a_split_legacy_review_is_read_whole_not_page_one():
+    """pulumi/docs#21490: a v2 review over one comment's size limit is split,
+    and its 🚨/⚠️ sections land on the later pages. Reading page 1 alone
+    reported `items: []` and a clean summary, which downstream turned a
+    blocked row into a judge row with a merge button."""
+    pages = legacy_pages()
+    comments = [comment(pages[1]), comment(pages[0])]        # out of order on purpose
+    a, b, surface = collect.find_review_comments(comments)
+    assert surface == "v2" and b is None
+    assert a["review_pages"] == 2 and a["review_pages_missing"] == []
+    # page order, not comment order, and the markers gone
+    assert a["body"].index("Outstanding in this PR") > a["body"].index("🚨 Outstanding |")
+    assert "<!-- CLAUDE_REVIEW" not in a["body"]
+
+    review = collect.parse_review(a["body"], "", 21490, "pulumi/docs")
+    buckets = {}
+    for it in review["items"]:
+        buckets[it["bucket"]] = buckets.get(it["bucket"], 0) + 1
+    assert buckets.get("outstanding") == 3 and buckets.get("low") == 1
+    assert review["parse_confidence"] == "high" and review["counts_shortfall"] == {}
+    assert review["summary"]["clean"] is False and review["summary"]["remaining"] == 4
+
+    # Page 1 alone: not merely findings-free, but *known* incomplete — the
+    # tally on it declares more than its sections hold.
+    only_first = collect.parse_review(collect.sentinel.worklist().join_pages(pages[0]), "", 21490, "pulumi/docs")
+    assert only_first["items"] == []
+    assert only_first["counts_shortfall"] == {"outstanding": {"declared": 3, "parsed": 0},
+                                              "low": {"declared": 1, "parsed": 0}}
+    assert only_first["parse_confidence"] == "low" and only_first["summary"]["clean"] is False
+
+
+def test_a_legacy_review_missing_a_page_says_so():
+    """GitHub returned page 1 of 3. Nothing about the text says findings are
+    missing, so the marker's own denominator is what has to say it."""
+    pages = legacy_pages(total=3)
+    a, _, surface = collect.find_review_comments([comment(pages[0])])
+    assert surface == "v2" and a["review_pages"] == 3 and a["review_pages_missing"] == [2, 3]
+    # page 2 of 3 on its own: 1 and 3 are both reported absent, page 1 included
+    found = collect.sentinel.legacy_pages([comment(pages[1])])
+    assert found["missing"] == [1, 3] and found["total"] == 3
+    assert collect.sentinel.legacy_pages([comment("not a review", "someone")]) is None
+
+
+def test_a_v3_card_is_never_mistaken_for_a_legacy_page():
+    """The v3 author card and brief open with a `1/1` marker of their own."""
+    assert collect.sentinel.legacy_pages([comment(V3_AUTHOR), comment(V3_BRIEF)]) is None
+    a, b, surface = collect.find_review_comments([comment(V3_BRIEF), comment(V3_AUTHOR)])
+    assert surface == "v3" and "CLAUDE_REVIEW_AUTHOR" in a["body"] and b is not None

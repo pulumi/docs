@@ -139,9 +139,9 @@ Key areas where IaC can be applied within the platform include:
 - **Runtime platforms**: Deploy and configure the runtime environments where application workloads will be executed, such as Kubernetes clusters or serverless functions.
 - **Observability and monitoring**: Set up the logging, metrics, and alerting systems that provide visibility into the platform's health and performance.
 - **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](/docs/discovery-governance/policy/get-started/), to ensure the platform meets regulatory and organizational requirements.
-- **Pipelines and [automation](https://www.pulumi.com/docs/iac/packages-and-automation/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
+- **Pipelines and [automation](/docs/iac/concepts/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
 
-With [infrastructure as code](https://www.pulumi.com/docs/pulumi-cloud/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization.
+With [infrastructure as code](/docs/iac/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization.
 
 ## Step 6: Implementing Policy as Code
 

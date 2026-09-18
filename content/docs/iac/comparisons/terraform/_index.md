@@ -59,9 +59,9 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 
 These figures come from Pulumi's own published customer case studies, not independent third-party benchmarks. Terraform has a comparably large base of production users, and its longer incumbency in the IaC market means a larger catalog of community modules and provider maturity exists today than for any single alternative, Pulumi included.
 
-* **[Starburst](/case-studies/starburst/)** replaced Terraform with Pulumi for its multi-region Kubernetes deployments and cut deployment time from two weeks to about three hours — a 112x improvement — by replacing hand-maintained HCL glue scripts with [Automation API](/docs/iac/concepts/automation-api/)-driven orchestration written in Java.
-* **[Wiz](/case-studies/wiz/)** uses Pulumi's Automation API to manage over one million cloud resources across thousands of Kubernetes clusters worldwide, handling hundreds of thousands of infrastructure updates daily.
-* **[BMW](/case-studies/bmw/)**'s Software Factory manages 20,000+ cloud resources with Python-based infrastructure code integrated into its existing CI/CD workflows.
+* **[Starburst](/customers/starburst/)** replaced Terraform with Pulumi for its multi-region Kubernetes deployments and cut deployment time from two weeks to about three hours — a 112x improvement — by replacing hand-maintained HCL glue scripts with [Automation API](/docs/iac/concepts/automation-api/)-driven orchestration written in Java.
+* **[Wiz](/customers/wiz/)** uses Pulumi's Automation API to manage over one million cloud resources across thousands of Kubernetes clusters worldwide, handling hundreds of thousands of infrastructure updates daily.
+* **[BMW](/customers/bmw/)**'s Software Factory manages 20,000+ cloud resources with Python-based infrastructure code integrated into its existing CI/CD workflows.
 
 ## Key differences
 

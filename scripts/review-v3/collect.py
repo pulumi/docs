@@ -320,6 +320,31 @@ def only_merges_since(commits: list[dict], review_body: str) -> bool:
     return all(len(c.get("parents") or []) >= 2 for c in commits[idx + 1:])
 
 
+def reviewed_head(review_body: str) -> str | None:
+    m = sentinel.HEAD_MARKER_RE.search(review_body or "")
+    return m.group(1) if m else None
+
+
+def changed_lines(files: list[dict]) -> dict[str, list[str]]:
+    """Per file, the sorted `+`/`-` lines of its patch. Hunk headers and
+    context are left out because they move whenever the base moves; the
+    changed lines themselves only move when the PR's content does."""
+    out: dict[str, list[str]] = {}
+    for f in files:
+        name = f.get("filename") or f.get("path") or ""
+        lines = [ln for ln in (f.get("patch") or "").splitlines()
+                 if ln[:1] in "+-" and not ln.startswith(("+++", "---"))]
+        out[name] = sorted(lines)
+    return out
+
+
+def same_diff(files_then: list[dict], files_now: list[dict]) -> bool:
+    """Whether two snapshots of a PR's files carry the same changes. A merge
+    of the base that resolved a conflict by editing a line the PR adds
+    changes the content the review read, and must not count as base-only."""
+    return changed_lines(files_then) == changed_lines(files_now)
+
+
 def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
     """review-worklist.py's report, plus the raw REVIEW_STATE and the ⚠️ rows."""
     wl = worklist()
@@ -339,6 +364,9 @@ def parse_review(author_body: str, brief_body: str, pr: int, repo: str) -> dict:
         "surface": report["surface"] if author_body else "none",
         "reviewed_sha": report["reviewed_sha"],
         "parse_confidence": report["parse_confidence"],
+        # Buckets whose count the card's own tally declares higher than what
+        # parsed out of its sections: a body that arrived incomplete.
+        "counts_shortfall": report.get("counts_shortfall") or {},
         "items": report["items"],
         "summary": report["summary"],
         "review_state": state,
@@ -479,9 +507,35 @@ def blog_date(f: dict, head_sha: str, gh: GhClient | None, repo_root: Path) -> s
 FAILED_CONCLUSIONS = {"failure", "timed_out", "cancelled", "action_required", "startup_failure"}
 
 
-def checks_rollup(check_runs: list[dict], statuses: list[dict]) -> dict:
+def _run_order(run: dict) -> tuple:
+    return (run.get("started_at") or "", run.get("completed_at") or "", run.get("id") or 0)
+
+
+def checks_rollup(check_runs: list[dict], statuses: list[dict], workflows: dict[int, str] | None = None) -> dict:
     """green | red | pending, with the failing/pending names. Neutral and
-    skipped runs count as green (the report-only Sentinel is neutral)."""
+    skipped runs count as green (the report-only Sentinel is neutral).
+
+    Only the newest run of each check in each workflow counts. The API's
+    default `filter=latest` is per check suite, and every workflow run is its
+    own suite, so a run a concurrency group cancelled stays in the list beside
+    the run that replaced it. Counting it would turn a green PR red.
+
+    The workflow is part of the key because job names repeat across
+    workflows: pull-request.yml and testing-build-and-deploy.yml both run
+    "Install deps and build site", master's required check, and a passing
+    deploy must never stand in for a failed PR build. `workflows` maps
+    check_suite_id → workflow (`GhClient.workflow_paths`); a suite it doesn't
+    know keys on the suite itself, which dedupes nothing and so errs red."""
+    workflows = workflows or {}
+    newest: dict[tuple, dict] = {}
+    for run in check_runs:
+        suite = (run.get("check_suite") or {}).get("id")
+        owner = workflows.get(suite) if suite in workflows else f"suite:{suite}"
+        key = (owner, run.get("name") or "?")
+        seen = newest.get(key)
+        if seen is None or _run_order(run) >= _run_order(seen):
+            newest[key] = run
+    check_runs = list(newest.values())
     failing, pending = [], []
     for run in check_runs:
         name = run.get("name") or "?"
@@ -566,6 +620,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         _write_cache(cache_dir, number, key, raw)
     check_runs = gh.check_runs(head_sha) if head_sha else []
     statuses = gh.commit_statuses(head_sha) if head_sha else []
+    workflows = gh.workflow_paths(head_sha) if head_sha else {}
     requested = gh.requested_reviewers(number)
 
     files = raw["files"]
@@ -586,7 +641,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
     author_c, brief_c, surface = find_review_comments(comments)
     author_body = (author_c or {}).get("body") or ""
     brief_body = (brief_c or {}).get("body") or ""
-    triage_c = sentinel._find_triage_prose_comment(comments)
+    triage_c = sentinel._find_comment(comments, sentinel.TRIAGE_PROSE_MARKER)
     status = review_status(labels, surface, author_body, head_sha, triage_c is not None)
     base_merged = False
     if status == "STALE" and surface != "none":
@@ -594,14 +649,32 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         # changing the diff the review read. When every commit after the
         # reviewed head is a merge commit, the review still describes the
         # PR; a real push would need the pipeline's refresh.
+        # A merge commit can still carry a content change (a conflict
+        # resolved by hand), so the shape of the history isn't enough: the
+        # `+`/`-` lines at the reviewed head have to match the ones now.
         base_merged = only_merges_since(raw["commits"], author_body)
+        if base_merged:
+            then = reviewed_head(author_body) or ""
+            base_ref = (detail.get("base") or {}).get("ref") or ""
+            try:
+                base_merged = same_diff(gh.compare_files(base_ref, then), raw["files"])
+            except GhError:
+                base_merged = False  # can't prove the diff is unchanged, so it isn't
         if base_merged:
             status = "CURRENT"
     review = parse_review(author_body, brief_body, number, gh.repo) if author_body else {
         "surface": "none", "reviewed_sha": None, "parse_confidence": "low", "items": [],
         "summary": None, "review_state": None, "warning_rows": [], "stances": False,
         "nothing_blocks": False, "brief_summary_bullets": [], "rubber_stamp": [], "evidence_url": None,
+        "counts_shortfall": {},
     }
+    # How many comments the review is spread over, and which of them GitHub
+    # did not return. A legacy (v2) review over one comment's size limit is
+    # split, and its findings sections are the tail of the document — so a
+    # missing page is a review whose 🚨 rows may simply not be here. The
+    # analyzer fails closed on it rather than parsing what happens to exist.
+    review["pages"] = (author_c or {}).get("review_pages") or 1
+    review["pages_missing"] = (author_c or {}).get("review_pages_missing") or []
     review["status"] = status
     review["base_merged"] = base_merged
     review["author_comment_id"] = (author_c or {}).get("id")
@@ -642,7 +715,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "labels": sorted(labels),
         "mergeable": detail.get("mergeable"),
         "mergeable_state": detail.get("mergeable_state") or "unknown",
-        "checks": checks_rollup(check_runs, statuses),
+        "checks": checks_rollup(check_runs, statuses, workflows),
         "files": [
             {
                 "path": f.get("filename") or "",
@@ -660,7 +733,11 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "changed_lines": additions + deletions,
         "reviews": [
             {"user": ((r.get("user") or {}).get("login") or ""), "state": r.get("state") or "",
-             "submitted_at": r.get("submitted_at"), "user_type": (r.get("user") or {}).get("type")}
+             "submitted_at": r.get("submitted_at"), "user_type": (r.get("user") or {}).get("type"),
+             # the head the review was left on: analyze.own_send_back compares
+             # it with the live head to tell "waiting on the author" from
+             # "they pushed since"
+             "commit_id": r.get("commit_id")}
             for r in raw["reviews"]
         ],
         "requested_reviewers": {

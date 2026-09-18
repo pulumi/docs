@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import copy
 import json
 import os
 import re
@@ -167,6 +168,16 @@ class GhClient:
             raise GhError("rest backend needs GITHUB_TOKEN or GH_TOKEN")
         self.backend = backend
         self.writes: list[dict] = []  # every write this client performed (any backend)
+        self.dry_run = False  # record writes in `writes` without sending them (see `dry()`)
+
+    def dry(self) -> "GhClient":
+        """A client on the same backend whose writes are recorded in `.writes`
+        and never sent — reads pass through, so preflights still see GitHub.
+        This is what `act.py --dry-run` runs the plan against."""
+        c = copy.copy(self)
+        c.dry_run = True
+        c.writes = []
+        return c
 
     # -- primitives --------------------------------------------------------
 
@@ -191,6 +202,8 @@ class GhClient:
             params["per_page"] = 100
         if method != "GET":
             self.writes.append({"method": method, "path": path, "body": body})
+            if self.dry_run:
+                return {}
         if self.backend == "snapshot":
             return self._snapshot_request(method, path, params, body)
         if self.backend == "gh":
@@ -321,6 +334,33 @@ class GhClient:
         data = self.get(f"repos/{self.repo}/commits/{sha}/check-runs", {"per_page": 100}) or {}
         return data.get("check_runs", []) if isinstance(data, dict) else []
 
+    def workflow_paths(self, sha: str) -> dict[int, str]:
+        """check_suite_id → workflow file for the Actions runs on `sha`, so a
+        check run can be told apart from a same-named job in another workflow.
+        Empty when the runs can't be read; callers must treat an unmapped
+        suite conservatively."""
+        try:
+            data = self.get(f"repos/{self.repo}/actions/runs", {"head_sha": sha, "per_page": 100}) or {}
+        except GhNotFound:
+            return {}
+        runs = data.get("workflow_runs", []) if isinstance(data, dict) else []
+        return {r["check_suite_id"]: r.get("path") or r.get("name") or "" for r in runs if r.get("check_suite_id")}
+
+    def workflow_runs(self, sha: str) -> list[dict]:
+        """The Actions runs on `sha`, raw. Empty when they can't be read."""
+        try:
+            data = self.get(f"repos/{self.repo}/actions/runs", {"head_sha": sha, "per_page": 100}) or {}
+        except GhNotFound:
+            return []
+        return data.get("workflow_runs", []) if isinstance(data, dict) else []
+
+    def compare_files(self, base: str, sha: str) -> list[dict]:
+        """The files `sha` changes relative to its merge base with `base`:
+        the same shape as `pr_files`, but for any commit, so a PR's diff at
+        an earlier head can be compared with its diff now."""
+        data = self.get(f"repos/{self.repo}/compare/{base}...{sha}") or {}
+        return data.get("files", []) if isinstance(data, dict) else []
+
     def commit_statuses(self, sha: str) -> list[dict]:
         return self.get(f"repos/{self.repo}/commits/{sha}/statuses", paginate=True) or []
 
@@ -418,6 +458,9 @@ class GhClient:
         if team_reviewers:
             body["team_reviewers"] = team_reviewers
         return self.post(f"repos/{self.repo}/pulls/{number}/requested_reviewers", body) or {}
+
+    def rerun_failed_jobs(self, run_id: int) -> dict:
+        return self.post(f"repos/{self.repo}/actions/runs/{run_id}/rerun-failed-jobs") or {}
 
     def dispatch_workflow(self, workflow_file: str, ref: str, inputs: dict | None = None) -> dict:
         body = {"ref": ref}

@@ -142,6 +142,25 @@ def test_domain_routing() -> None:
     check(domains(["infrastructure/index.ts"]) == ["domain:infra"], "infrastructure routes to infra")
     check(domains(["Makefile"]) == ["domain:infra"], "Makefile routes to infra")
 
+    # The review pipelines under scripts/ are repo plumbing, not the build.
+    # They fall through to `other`: same `tools` approver as infra, but a
+    # mechanical change there needs no approver at all. (This carve-out was
+    # originally about the staging gate; that now keys on
+    # `staging_evidence.paths` in .github/review-routing.yml, not on the
+    # domain, and is asserted in scripts/review-v3/test_routing.py.)
+    for d in ("review-v3", "review-admin", "content-review", "blog-review"):
+        check(domains([f"scripts/{d}/thing.py"]) == ["domain:other"],
+              f"scripts/{d} is repo plumbing, not infra")
+    # The narrowing is per path, not per PR: one workflow in the diff and the
+    # PR is infra again.
+    check(domains(["scripts/review-v3/act.py", ".github/workflows/x.yml"]) == ["domain:infra"],
+          "a workflow alongside the pipeline still routes to infra")
+    # Only those four. Everything else under scripts/ feeds the build.
+    check(domains(["scripts/review-notes/x.py"]) == ["domain:infra"],
+          "a scripts/ dir that only looks like a review pipeline is still infra")
+    check(domains(["scripts/search/update-search-index.js"]) == ["domain:infra"],
+          "the search index build stays infra")
+
     # Content-serving data files classify with the content they serve, so a
     # doc move (which edits the nav yaml) stays a docs PR and a blog tag edit
     # is a blog PR. Generated data stays unmatched (other).
@@ -149,7 +168,8 @@ def test_domain_routing() -> None:
     check(domains(["data/resource_options.yaml"]) == ["domain:docs"], "resource options data routes to docs")
     check(domains(["data/blog_tags.yaml"]) == ["domain:blog"], "blog tags yaml routes to blog")
     check(domains(["data/team/team/cam-soper.toml"]) == ["domain:blog"], "author bios route to blog")
-    check(domains(["data/case_study_industries.yaml"]) == ["domain:blog"], "case-study industries route to blog")
+    check(domains(["data/customers_industries.yaml"]) == ["domain:blog"], "customer industries route to blog")
+    check(domains(["data/customers.yaml"]) == ["domain:blog"], "the customer registry routes to blog")
     check(domains(["data/pulumi_pricing.yaml"]) == ["domain:website"], "pricing data routes to website")
     check(domains(["data/header_nav.yaml"]) == ["domain:website"], "site chrome data routes to website")
     check(domains(["data/hero_agent_loop.yaml"]) == ["domain:frontend"], "hero animation data routes to frontend")

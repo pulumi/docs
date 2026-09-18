@@ -50,17 +50,20 @@ def test_board_groups_owner_then_domain_and_pins_clusters_first():
     assert heads[0][0] == "mine" and ("marketing", "blog") in heads
     assert "C1 · 2 of 2 PRs mine · overlap" in html and "Merge order:" in html
     assert "#1 and 1 other edit the same lines in the same files" in html
-    assert 'data-cmd="--stamp 1 --force --unblock 2"' in html or 'data-cmd="--stamp 1 --unblock 2"' in html
+    # the chain card is `--chain C1`: one command with no row button, so it
+    # claims both links rather than pressing anything
+    assert 'data-cmd="--chain C1" data-pr="next1" data-claims="1,2" data-extra="--chain C1"' in html
     assert "Approves and squash-merges #1, then merges master into #2 so it can follow." in html
 
 
 def test_board_rows_carry_verdict_chips_reasons_and_actions():
     html = render.render_board(_queue())
-    assert 'data-verdict="judge"' in html and 'data-verdict="route"' in html and 'data-verdict="blocked"' in html
+    # (#3 is blocked here, not route; it carries the route action all the same)
+    assert 'data-verdict="judge"' in html and 'data-verdict="blocked"' in html
     assert 'class="chip r-cluster"' in html and 'class="chip r-mergeable"' in html
     assert 'data-cmd="--unblock 4"' in html and 'data-cmd="--route 3:@pulumi/docs-marketing-review"' in html
     assert 'class="btn p p-go" data-cmd="--stamp 1 --force"' in html  # judge rows keep approve-as-is, unselected, primary
-    assert 'data-cmd="--request-changes 1"' in html and "send back to author" in html
+    assert 'data-cmd="--request-changes 3"' in html and "send back to author" in html   # #3 has open findings to send
     assert '<div class="jbox">' in html and "Keep the widened claim?" in html and 'class="del">- old &lt;b&gt;' in html
     assert 'href="https://github.com/pulumi/docs/pull/3/files#diff-xR95"' in html
     assert "Blocked: mergeable:dirty" in html
@@ -69,7 +72,14 @@ def test_board_rows_carry_verdict_chips_reasons_and_actions():
 
 
 def test_route_chip_keeps_its_model_span_as_markup():
-    q = _queue()
+    # A route row proper: someone else's domain, and nothing blocking it. The
+    # _queue() blog row carries open 🚨 findings, which make it blocked —
+    # blocked outranks route — so this builds its own clean one.
+    q = run([stampable(3, title="Blog copy edit", labels=["review:no-blockers", "domain:blog"],
+                       files=[_file("content/blog/p/index.md", ["z"], ["p"])],
+                       comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR)])],
+            cfg=cfg(me=["docs"]))
+    assert row(q, 3)["verdict"] == "route", row(q, 3)["reasons"]
     row(q, 3)["recommended"] = "stamp"  # what a judgments file carried before a re-analyze turned the row into a route
     html = render.render_board(q)
     assert '>route → @pulumi/docs-marketing-review <span class="v v-dim" title="The judge pass recommends stamp' in html
@@ -270,13 +280,21 @@ def test_do_next_cards_press_the_rows_they_name():
 
 
 def test_ownership_chips_read_as_words():
-    tags = [_file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])]
-    q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=tags)], cfg=cfg(me=["docs"]))
+    """`gate:any-team` is the surviving "why is this on my board" gate chip.
+
+    `gate:none` went away with the `none` matrix cell — see
+    test_analyze.test_a_mechanical_change_is_still_routed_to_its_lane.
+    """
+    links = [_file("content/blog/p/index.md",
+                   ["See [the docs](/docs/iac/concepts/stacks/)."],
+                   ["See [the docs](/docs/intro/concepts/stack/)."])]
+    q = run([stampable(9, labels=["review:no-blockers", "domain:blog"], files=links)], cfg=cfg(me=["docs"]))
     html = render.render_board(q)
-    # the code stays greppable in the title; the chip itself says why the row is here
     # the chip says why the row is here; the tooltip explains, never echoes
-    assert '>no team approval needed</span>' in html
-    assert 'title="The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take. (gate:none)"' in html
+    assert '>any team can approve this</span>' in html
+    assert 'title="Every changed line differs only in a link' in html
+    assert '(gate:any-team)"' in html
+    assert "no team approval needed" not in html
 
 
 def test_a_generated_row_offers_close_where_others_offer_send_back():
@@ -297,16 +315,16 @@ def test_stamp_rows_start_selected_and_there_are_no_checkboxes():
     # One decision per row, side actions ride along: the script puts out the
     # other lit decision on the same PR, and only decisions count as made.
     jhtml = render.render_board(_queue())
-    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    assert 'data-cmd="--request-changes 3" data-pr="3" data-kind="decision"' in jhtml
     # the screenshot button is detail-view only: on the board the row already
     # links every changed page on the preview
     assert 'data-cmd="--render 1"' not in jhtml
     assert 'data-cmd="--render 1"' in render.render_detail(_queue(), 1)
-    assert 'data-cmd="--request-changes 1" data-pr="1" data-kind="decision"' in jhtml
+    assert 'data-cmd="--request-changes 3" data-pr="3" data-kind="decision"' in jhtml
     assert 'button.btn.sel[data-kind="decision"][data-pr="\' + pr + \'"]' in html  # one decision per row, via clearRow
-    assert 'button.btn.sel[data-kind="decision"]\')) done++' in html
+    assert "r.querySelector('button.btn.sel[data-kind=\"decision\"]') || r.querySelector('.claimnote')" in html
     assert 'id="cmd">$ /pr-review --act</div>' in html and 'id="copy"' in html
-    assert "if (!c || seen[c]) return;" in html  # the composer dedupes fragments
+    assert "if (seen[k]) return; seen[k] = true;" in html  # the composer dedupes fragments
 
 
 def test_fixed_disposition_reads_as_already_done():
@@ -516,3 +534,274 @@ def test_every_verdict_starts_visible_because_the_command_acts_on_it():
     for value in ("judge", "route", "stamp", "blocked"):
         assert f'<button class="fchip on" data-filter="view" data-value="{value}"' in html
     assert "stampable" in html
+
+
+def test_a_card_adds_only_what_no_row_carries():
+    # A Do-next card presses row buttons; the command is read off the rows.
+    # What the card itself contributes is `data-extra`: a chain's unblock of
+    # a follow-up that has no row button yet, or a consolidation's request,
+    # which has no row equivalent at all. Every other card adds nothing, so
+    # pressing it can never repeat its rows' fragments.
+    html = render.render_board(_queue())
+    assert 'data-extra="--chain C1"' in html            # the chain card has no row button: its command is the whole fragment
+    assert render.card_extra({"cmd": "--stamp 1,2", "targets": {"1": "--stamp 1", "2": "--stamp 2"}}) == ""
+    assert render.card_extra({"cmd": '--request-changes 9 --reason "x"', "claims": [9]}) == '--request-changes 9 --reason "x"'
+    assert "function fragment(b){ return isCard(b) ? (b.dataset.extra || '') : b.dataset.cmd; }" in html
+    assert "var sel = {}" not in html                    # no shadow list: the lit buttons are the state
+    # every --stamp N[:mode][ --force] folds into one list, --force once
+    assert "var STAMP = /^--stamp (\\d+(?::(?:no-)?merge)?)( --force)?$/;" in html
+    assert "out += ' --stamp ' + stamps.join(',') + (force ? ' --force' : '');" in html
+    # the cards settle before the command is drawn, on every click, and the
+    # copy button re-reads before it copies
+    assert "function settle(){ syncCards(); compose(); composeHand(); progress(); }" in html
+    assert html.count("settle();") >= 4 and "compose();   // what goes to the clipboard" in html
+    # progress counts a lit decision on any row and every row with one to make
+    assert "return r.querySelector('button.btn[data-kind=\"decision\"]');" in html
+    assert '.mrow[data-verdict="judge"], .mrow[data-verdict="route"]' not in html
+
+
+def test_a_reason_names_the_pr_it_is_for():
+    # act.py takes `--reason "N=text"`; a bare reason is a global flag, which
+    # a batch can't carry. The rewrite happens here, so the script never sees
+    # a bare one.
+    assert render.scope_reasons('--request-changes 5 --reason "a, b (c)"') == '--request-changes 5 --reason "5=a, b (c)"'
+    assert render.scope_reasons('--close 5 --superseded-by 6 --reason "x"') == '--close 5 --reason "5=x"'.replace("--reason", "--superseded-by 6 --reason")
+    assert render.scope_reasons('--refresh 7 --reason "x" --rerun 8 --reason "y"') == '--refresh 7 --reason "7=x" --rerun 8 --reason "8=y"'
+    assert render.scope_reasons('--reason "x"') == '--reason "x"'                       # nothing to scope it to
+    assert render.scope_reasons('--refresh 9 --reason "9=x"') == '--refresh 9 --reason "9=x"'   # already scoped
+    q = _queue()
+    q["do_next"] = [{"kind": "consolidate", "say": "C1: 3 overlapping sweeps by workprentice.", "does": "Posts one review.",
+                     "label": "send #2 back", "claims": [2],
+                     "cmd": '--request-changes 2 --reason "These 3 PRs overlap (#1, #2, #3); please consolidate."'}]
+    html = render.render_board(q)
+    assert 'data-cmd="--request-changes 2 --reason &quot;2=These 3 PRs overlap (#1, #2, #3); please consolidate.&quot;"' in html
+    assert 'data-extra="--request-changes 2 --reason &quot;2=These 3 PRs overlap' in html
+    assert '--reason &quot;These' not in html
+
+
+def test_the_payload_cannot_end_the_script_early():
+    # Inside <script type="application/json">, `<!--<script>` in a title or
+    # path flips the HTML parser into double-escaped script data and the JSON
+    # block swallows the page's real <script> to end of file: every button on
+    # the board goes dead. Escaping only `</` did not cover it.
+    q = run([stampable(1, title="Add guest post <!--<script>", files=[_file("content/docs/a <!--<script>.md", ["x"], ["o"])])],
+            cfg=cfg(me=["docs"]))
+    for html in (render.render_board(q), render.render_board(q, artifact=True), render.render_detail(q, 1)):
+        assert "<!--<script>" not in html
+        assert html.count("<script") == 2                           # the JSON payload and the page script, nothing else
+        payload = html.split('id="queue">')[1].split("</script>")[0]
+        assert "<" not in payload and ">" not in payload and "&" not in payload
+        assert json.loads(payload)["prs"][0]["title"] == "Add guest post <!--<script>"   # still the same JSON
+
+
+def test_the_help_says_the_command_is_the_yes():
+    # SKILL.md §5 and reading-the-board.md: invoking the command is the
+    # go-ahead; act.py plans, previews and executes without asking again.
+    html = render.render_board(_queue())
+    assert "Invoking it <i>is</i> the yes" in html and "nothing asks you to confirm a second time" in html
+    assert "waits for a yes" not in html
+    # another lane's PR is a full row under its owner; only handed-off PRs sit at the foot
+    assert "still takes a full row, grouped under that owner" in render.SHOWING_HELP["me"]
+    assert "listed at the foot of the page instead" not in render.SHOWING_HELP["me"]
+
+
+def test_the_detail_view_lists_cluster_membership():
+    html = render.render_detail(_queue(), 1)
+    assert "<h5>Cross-PR</h5>" in html
+    cross = html.split("<h5>Cross-PR</h5>")[1].split("</ul>")[0]
+    assert "cluster:C1:overlap:" in cross
+
+
+def test_the_composer_reads_the_lit_buttons():
+    """The board's script under jsdom: the click sequences an audit found
+    broken -- a card doubling its rows' fragments, the bar a click behind the
+    cards, several --stamp flags, refresh / re-run not counting. Runs when
+    node and the repo's jsdom devDependency are present, else says so."""
+    import shutil  # noqa: PLC0415
+    import subprocess  # noqa: PLC0415
+    import tempfile  # noqa: PLC0415
+    repo = HERE.parent.parent
+    node = shutil.which("node")
+    if not node or not (repo / "node_modules" / "jsdom" / "package.json").is_file():
+        print("  skip: test_the_composer_reads_the_lit_buttons (needs node and jsdom from `make ensure`)")
+        return
+    q = run([
+        stampable(11, files=[_file("content/docs/a.md", ["x"], ["o"])]),                                        # stamp, bot
+        stampable(12, files=[_file("content/docs/b.md", ["x"], ["o"])], author="sean1588", author_type="User"),  # stamp, human (not the approver)
+        stampable(13, labels=["review:trivial", "domain:docs"], comments=[], files=[_file("content/docs/c.md", ["x"], ["o"])]),  # judge
+        stampable(14, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["z"], ["p"])]),    # route
+        stampable(15, labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/q/index.md", ["z"], ["p"])]),    # route
+        stampable(16, head_sha="f" * 40, files=[_file("content/docs/d.md", ["x"], ["o"])]),                      # blocked: refresh
+        stampable(17, labels=["review:error", "domain:docs"], files=[_file("content/docs/e.md", ["x"], ["o"])]),  # blocked: rerun
+        stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                  files=[_file("content/docs/f.md", ["x"], ["o"])]),                                             # blocked: close + a hand fix
+    ], cfg=cfg(me=["docs"]))
+    prs = {"stamp": [11, 12], "judge": 13, "route": [14, 15], "refresh": 16, "rerun": 17, "handfix": 18,
+           "team": "@pulumi/docs-marketing-review"}
+    with tempfile.TemporaryDirectory() as td:
+        board = Path(td) / "board.html"
+        board.write_text(render.render_board(q))
+        res = subprocess.run([node, str(HERE / "test_render_composer.js"), str(board), json.dumps(prs)],
+                             cwd=repo, capture_output=True, text=True, timeout=120)
+    assert res.returncode == 0, res.stdout + res.stderr
+
+
+
+def test_the_terminal_carries_everything_the_board_shows():
+    # --terminal used to cut each row at 110 characters, print blockers
+    # nowhere, print actions for judge rows only, hide open findings on an
+    # unjudged row, and print an empty merge order for a cluster whose every
+    # member is handed off. A terminal reader has to be able to compose the
+    # same act command the board would, so all of it is here now.
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "file": "content/docs/iac/x.md", "anchor": "L95",
+         "summary": "Does this sentence still say what the link says?"}]}
+    p["reasons"] += [f"brief:stale-summary:token-{i}" for i in range(12)]
+    text = render.render_terminal(q)
+    assert "blocked: mergeable:dirty" in text                                     # why a row is blocked
+    for cmd in ("--unblock 4", "--route 3:@pulumi/docs-marketing-review", "--request-changes 3",
+                "--stamp 1 --force", "--stamp 1:no-merge --force", "--render 1"):
+        assert f"]  {cmd}" in text, cmd                                             # every row's actions, blocked and route rows included
+    assert "open: F1 Does this sentence still say what the link says? [nobody has ruled] @ content/docs/iac/x.md" in text
+    assert " ".join(text.split()).count("@ content/docs/iac/x.md L95") == 1                  # wrapped, not cut
+    assert "judged: F4 Keep the widened claim? → refuted https://github.com/pulumi/docs/pull/3/files#diff-xR95" in text
+    assert "do next" in text and "$ /pr-review --act --unblock 4" in text          # the Do-next moves carry their commands
+    assert "$ /pr-review --act --chain C1" in text                                 # the chain card too
+    for r in p["reasons"]:
+        if not r.startswith(render.HIDDEN_REASON_PREFIXES):
+            assert r in text, r                                                    # nothing is truncated: it wraps
+    assert "…" not in text.split("do next")[0].replace("… ", "")                   # no cut marker on any row line
+    assert all(len(line) <= 110 or " " not in line.strip() for line in text.splitlines())
+    # a cluster whose members are all handed off has no merge order to print;
+    # the members are the news, and the line says why there is no order
+    a = stampable(1, title="A", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="B", requested_users=["cnunciato"], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q2 = run([a, b])
+    assert q2["clusters"][0]["merge_order"] == []
+    t2 = render.render_terminal(q2)
+    assert "C1 overlap: #1, #2 (all waiting on others)" in t2 and "merge \n" not in t2 and "merge →" not in t2
+
+
+def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
+    q = _queue()
+    stuck = row(q, 4)                       # blocked on a conflict; pretend the unblock was refused
+    stuck["actions"] = []
+    stuck["reasons"].append("unblock:refused:dependabot-branch")
+    back = row(q, 2)                        # already sent back by this approver, nothing pushed since
+    back["waiting_on_author"] = True
+    back["reasons"].append("sent-back:2026-09-10")
+    own = row(q, 1)                         # the approver's own PR
+    own["reasons"].append("author:self")
+    html = render.render_board(q)
+    # a blocked row with nothing to click says so, and the tally counts it
+    assert "Blocked: mergeable:dirty" in html and ">no action available</span>" in html
+    assert "<b>1</b><span>blocked, no action</span>" in html
+    # the sent-back row leaves the groups for its own compact list, with the date
+    assert 'data-pr="2"' not in html and "<h2>Waiting on the author</h2>" in html and "sent back 2026-09-10" in html
+    assert "<b>1</b><span>waiting on the author</span>" in html
+    full = render.render_board(q, include_handed_off=True)
+    assert 'data-pr="2"' in full and "<h2>Waiting on the author</h2>" not in full
+    back["verdict"], back["blockers"], back["actions"] = "blocked", ["outstanding:1"], []   # what analyze emits for one
+    full = render.render_board(q, include_handed_off=True)
+    assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
+    assert "<b>1</b><span>blocked, no action</span>" in full
+    assert "judged blocking finding" not in render.chip_title("outstanding:judged:F1,F2")
+    assert "approving this row posts their /resolve lines" in render.chip_title("outstanding:judged:F1,F2")
+    # the new chips read as words, stay out of the fold, and explain themselves
+    row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
+    assert ">your own PR<" in row1.split("<summary>why")[0]
+    assert "cannot approve it or send it back to yourself" in render.chip_title("author:self")
+    t = render.chip_title("sent-back:2026-09-10")
+    assert "waiting on its author, not on you" in t and "2026-09-10" in t
+    assert "could not offer one: dependabot branch" in render.chip_title("unblock:refused:dependabot-branch")
+    # the re-run-checks action, on a row and as a Do-next batch card
+    stuck["actions"] = [{"id": "rerun-checks", "label": "re-run the failed checks", "cmd": "--rerun-checks 4"}]
+    q["do_next"] = [{"kind": "rerun-checks", "say": "#4 is red on a check that looks flaky.",
+                     "does": "Re-runs the failed checks on each. Nothing merges.", "cmd": "--rerun-checks 4",
+                     "label": "re-run the failed checks", "targets": {"4": "--rerun-checks 4"}}]
+    html = render.render_board(q)
+    assert 'class="btn p p-stop" data-cmd="--rerun-checks 4" data-pr="4" data-kind="decision"' in html
+    assert "Re-run the failed jobs of the head commit" in html
+    assert '<li class="next stop">' in html and 'data-targets="{&quot;4&quot;: &quot;--rerun-checks 4&quot;}"' in html
+    assert ">no action available</span>" not in html and "blocked, no action" not in html
+    text = render.render_terminal(q)
+    assert "1 waiting on the author" in text and "waiting on the author (1):" in text and "sent back 2026-09-10" in text
+    assert "[re-run the failed checks]  --rerun-checks 4" in text and "     2  " not in text.split("waiting on the author (1)")[0]
+    stuck["actions"] = []
+    assert "blocked: mergeable:dirty (no action available)" in render.render_terminal(q)
+
+
+def test_a_fenced_block_in_a_finding_renders_as_pre():
+    # A ```markdown block inside a finding note came out as ``<code>markdown:
+    # the inline pass saw the fence as one code span and a half.
+    out = render.md_inline("See:\n```markdown\n- [x](https://e.invalid) `y` <b>\n```\nthen `code` and **b**")
+    assert "<pre>- [x](https://e.invalid) `y` &lt;b&gt;</pre>" in out
+    assert "<code>code</code>" in out and "<b>b</b>" in out
+    assert "``<code>" not in out and "<code>markdown" not in out and "<a href" not in out
+    assert render.md_inline("```bash $ pulumi up ```") == "<pre>$ pulumi up </pre>"
+    assert render.md_inline("no fence `here`") == "no fence <code>here</code>"
+    q = _queue()
+    p = row(q, 1)
+    p["judgments"] = []
+    p["review"] = {**(p.get("review") or {}), "items": [
+        {"id": "F1", "bucket": "reviewer-check", "summary": "Use the shortcode",
+         "text": "Use:\n```markdown\n{{< notes type=\"info\" >}}\n```\nhere, not `<div>`."}]}
+    html = render.render_board(q)
+    assert "<pre>{{&lt; notes type=&quot;info&quot; &gt;}}</pre>" in html
+    assert "``<code>" not in html and "<code>markdown" not in html and "<code>&lt;div&gt;</code>" in html
+
+
+def test_rows_are_in_pr_number_order_inside_their_group():
+    """Verdict is already on the row, in the tally, on a filter chip and in
+    the Do-next cards. Sorting the rows by it too meant finding #21598 on the
+    page required knowing its verdict first; a number is the one thing about
+    a row you always already have."""
+    q = run([stampable(31, title="Page 31", files=[_file("content/docs/p31.md", ["x"])]),
+             stampable(12, title="Conflicted", mergeable_state="dirty", files=[_file("content/docs/p12.md", ["x"])]),
+             stampable(27, title="Page 27", files=[_file("content/docs/p27.md", ["x"])]),
+             stampable(5, title="Errored", labels=["review:error", "domain:docs"], files=[_file("content/docs/p5.md", ["x"])])],
+            cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert re.findall(r'<div class="mrow [^"]*" data-pr="(\d+)"', html) == ["5", "12", "27", "31"]
+    # mixed verdicts, so this is number order and not verdict order wearing a disguise
+    assert {row(q, n)["verdict"] for n in (5, 12, 27, 31)} == {"blocked", "stamp"}
+    assert re.findall(r"^\s+(\d+)\s+(?:stamp|judge|route|blocked)", render.render_terminal(q), re.M) == ["5", "12", "27", "31"]
+
+
+def test_a_card_says_how_many_of_its_rows_still_carry_its_decision():
+    """A card that goes out because one row was decided differently used to
+    paint exactly like a card nobody had touched -- "the button does
+    nothing". It carries a live tally and a partial state now."""
+    q = run([stampable(n, title=f"Page {n}", files=[_file(f"content/docs/p{n}.md", ["x"])]) for n in (7, 8, 9)],
+            cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert '<span class="cnt" data-total="3">3/3</span>' in html
+    assert "c.classList.toggle('part', part);" in html and ".btn.p.part{" in html
+    # one row per target, and every target resolvable to a row button on the page
+    targets = json.loads(re.search(r'data-targets="([^"]+)"', html).group(1).replace("&quot;", '"'))
+    assert set(targets) == {"7", "8", "9"}
+    for n, cmd in targets.items():
+        assert f'data-cmd="{cmd}" data-pr="{n}"' in html, (n, cmd)
+    # a single-row card has nothing to tally
+    one = render.render_board(run([stampable(7, files=[_file("content/docs/p7.md", ["x"])])], cfg=cfg(me=["docs"])))
+    assert 'class="cnt"' not in one
+
+
+def test_a_stuck_workflow_row_offers_an_interactive_fix_off_the_act_command():
+    """The row of a PR no author will ever answer carries "fix it yourself".
+    It is a run, not a write, so it composes on its own line at the foot of
+    the page and never reaches the --act command."""
+    q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/f.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    assert '<button class="btn hand" data-run="/address-review 18" data-pr="18"' in html
+    assert ">fix it yourself</button>" in html
+    # no data-cmd on it: the composer reads --act fragments off data-cmd alone
+    hand = html.split('class="btn hand"')[1].split("</button>")[0]
+    assert "data-cmd" not in hand and "data-kind" not in hand
+    assert 'id="handwrap" hidden' in html and 'id="handcmd"' in html
+    assert "/address-review 18" in render.render_terminal(q)
+    assert "(an interactive run, not part of --act)" in render.render_terminal(q)

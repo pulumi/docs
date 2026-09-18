@@ -86,8 +86,8 @@
       "lastmod": "2026-08-25"
     },
     "Neo": {
-      "hash": "56d9548b54de4014a0bc86f0081d88d775383378baab047d006c00256566cf78",
-      "lastmod": "2026-09-15"
+      "hash": "237051a0999af8b4018e1a6510871a29218e318e620f9982ea60568e57a1aa25",
+      "lastmod": "2026-09-17"
     },
     "OAuthTokenExchange": {
       "hash": "c38b243b0f25e563b19f0762ef1b2c54d5e3e2bcdac3d85fb84e142d83fca5cc",
@@ -377,8 +377,8 @@
       "lastmod": "2026-05-13"
     },
     "AgentUserEventToolResultItem": {
-      "hash": "3aac0b026709388c1c0fdf83762d3accd0c67d246804da21d0e08d551b1c60c2",
-      "lastmod": "2026-05-13"
+      "hash": "22b725bb4826011dfca17d3de52b76c1269f1bc1732a6021a252fc6da2ef3391",
+      "lastmod": "2026-09-17"
     },
     "AgentWorkflowDefinition": {
       "hash": "ffe032d335e3165db1b57dffc1757e286e41c60def10e9a56b376a4af859b959",
@@ -1764,8 +1764,8 @@
       "lastmod": "2026-08-15"
     },
     "GraphNode": {
-      "hash": "d4228cc6e142d90dace196ad09096cedd9ac937b607e9e99981056afbfc36a32",
-      "lastmod": "2026-08-27"
+      "hash": "626f90af20f4bb25d7e2d8be3a21981889c1e76f0787302d75a518d84b957bfc",
+      "lastmod": "2026-09-18"
     },
     "GraphNodeMatch": {
       "hash": "921ef5f4daf7e741f6f3874b36a61c3df67fbd6577dca06472e5e1e9d937d52e",
@@ -1804,8 +1804,8 @@
       "lastmod": "2026-08-20"
     },
     "GraphQueryReturn": {
-      "hash": "8c4f45c837c0eecb76b1bd97d2c481b01aaa27f484900d108e4491dbf002902d",
-      "lastmod": "2026-09-15"
+      "hash": "43c8b80465514950924c81ace54bea2c05226b524884361a5abf01449563d457",
+      "lastmod": "2026-09-18"
     },
     "GraphQueryScope": {
       "hash": "784e2ee0feb4a4d76cc87d34847e509b7aabefd984f02a2c6f56a3ea203a9c5f",
@@ -1820,8 +1820,8 @@
       "lastmod": "2026-09-15"
     },
     "GraphSchemaNodeType": {
-      "hash": "fedbfd9d34269aa345f6d590fb795a739e49001914f3c715108b3af50b12322c",
-      "lastmod": "2026-08-27"
+      "hash": "94feb9db5dfe2c76d5d981a2cd5abe6d302c3762bbf696d624af7037f6b7b295",
+      "lastmod": "2026-09-18"
     },
     "GraphSchemaResponse": {
       "hash": "f5b11b76208b0481bbd8d80c692abf66c0b0cef51b43e80ceae81706cebc9627",
