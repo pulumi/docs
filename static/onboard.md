@@ -159,6 +159,14 @@ Do not use `pulumi do` in this onboarding flow. Everything runs as a real
 Pulumi project with state, so even a single resource is a small project. Always
 run `preview` before `up`, and confirm with the user before creating anything.
 
+After a successful `up`, give the user a concrete way to see it working, built
+from a stack output (`pulumi stack output <name>`) — and run it yourself if you
+can. Match it to what was deployed: open a served URL
+(`open $(pulumi stack output url)` for a static site or serverless app), hit an
+API endpoint with `curl`, or list what a resource created
+(`aws s3 ls $(pulumi stack output bucketName)`). Always leave them with one
+copyable verification command.
+
 ## 6. Save the work: surface the claim link
 
 The first time Pulumi contacts Pulumi Cloud without saved credentials, it
