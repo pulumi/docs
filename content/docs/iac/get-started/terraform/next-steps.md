@@ -54,9 +54,9 @@ Our goal is to empower you to use the right tool for the job while maintaining a
 
 ### Case studies and real-world implementations
 
-* **[Snowflake's Multi-Cloud Strategy](/case-studies/snowflake/)**: How Snowflake uses Pulumi with existing tools
-* **[Mercedes-Benz's Platform Engineering](/case-studies/mercedes-benz/)**: Large-scale infrastructure modernization
-* **[Lemonade's Insurance Platform](/case-studies/lemonade/)**: Rapid development with Pulumi and Terraform
+* **[Snowflake's Multi-Cloud Strategy](/customers/snowflake/)**: How Snowflake uses Pulumi with existing tools
+* **[Mercedes-Benz's Platform Engineering](/customers/mercedes-benz/)**: Large-scale infrastructure modernization
+* **[Lemonade's Insurance Platform](/customers/lemonade/)**: Rapid development with Pulumi and Terraform
 
 ## Advanced integration patterns
 

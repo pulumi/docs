@@ -85,7 +85,8 @@ CONTENT_DATA_EXACT = {
     "data/blog_series.yml": "domain:blog",
     "data/blog_home.yaml": "domain:blog",
     "data/blog_link_types.yaml": "domain:blog",
-    "data/case_study_industries.yaml": "domain:blog",
+    "data/customers_industries.yaml": "domain:blog",
+    "data/customers.yaml": "domain:blog",
     # website: the pricing matrix (also PRICING_SENSITIVE) and site chrome /
     # marketing data rendered on landing pages
     "data/pulumi_pricing.yaml": "domain:website",
@@ -118,7 +119,7 @@ def classify_path(path: str) -> str | None:
     # programs territory (the latter would otherwise fall to infra).
     if path.startswith("static/programs/") or path.startswith("scripts/programs/"):
         return "domain:programs"
-    if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
+    if path.startswith("content/blog/") or path.startswith("content/customers/"):
         return "domain:blog"
     for prefix in ("content/docs/", "content/what-is/"):
         if path.startswith(prefix):
