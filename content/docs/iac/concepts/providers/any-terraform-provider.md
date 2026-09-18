@@ -10,7 +10,7 @@ menu:
         weight: 5
 ---
 
-Pulumi can use any [Terraform](https://registry.terraform.io) or [OpenTofu](https://search.opentofu.org) provider directly in your Pulumi programs. Between them, those ecosystems cover thousands of providers spanning clouds, SaaS platforms, on-premises systems, and internal tooling, and the Any Terraform Provider feature makes them available to Pulumi.
+You can use any [Terraform](https://registry.terraform.io) or [OpenTofu](https://search.opentofu.org) provider directly in your Pulumi programs. Between them, those ecosystems cover thousands of providers spanning clouds, SaaS platforms, on-premises systems, and internal tooling, and the Any Terraform Provider feature makes them available to Pulumi.
 
 Reach for it when:
 
@@ -20,7 +20,7 @@ Reach for it when:
 
 ## Language support
 
-The Any Terraform Provider feature works with every Pulumi language. In every language except Pulumi HCL, `pulumi package add` is how you add a provider; what then differs between them is whether you also get a generated SDK.
+The Any Terraform Provider feature works with every Pulumi language. In every language except Pulumi HCL, `pulumi package add` is how you add a provider; what differs is whether you also get a generated SDK.
 
 In TypeScript, Python, Go, .NET, and Java, `pulumi package add` generates a typed SDK for the provider in your project, so you get autocompletion, type checking, and inline documentation in your editor, the same as with a provider published to the [Pulumi Registry](/registry/).
 
@@ -54,14 +54,14 @@ Along with making the provider available to your program, this adds an entry to 
 packages:
   random:
     source: terraform-provider
-    version: 0.10.0
+    version: 1.4.0
     parameters:
       - hashicorp/random
 ```
 
 ### Specifying a version
 
-If you don't specify a version, Pulumi uses the latest one available from the registry. Pin the version instead, so that everyone on your team and every CI run gets the same provider:
+If you don't specify a version, Pulumi uses the latest one available from the registry. Pin the version instead so that everyone on your team and every CI run gets the same provider:
 
 ```bash
 pulumi package add terraform-provider hashicorp/random 3.7.1
@@ -73,7 +73,7 @@ The pinned version is recorded in `Pulumi.yaml` alongside the provider name:
 packages:
   random:
     source: terraform-provider
-    version: 0.10.0  # Version of the terraform-provider package
+    version: 1.4.0  # Version of the terraform-provider package
     parameters:
       - hashicorp/random
       - 3.7.1  # Version of the hashicorp/random Terraform provider
@@ -91,7 +91,7 @@ pulumi package add terraform-provider /path/to/my/terraform-provider-binary
 
 ## Walkthrough
 
-The following walkthrough uses the Honeycomb Terraform provider with Pulumi. [Honeycomb](https://www.honeycomb.io/) is an observability platform whose provider is available to Pulumi through this feature.
+This walkthrough adds the Honeycomb Terraform provider to a new Pulumi project. [Honeycomb](https://www.honeycomb.io/) is an observability platform whose provider is available to Pulumi through this feature.
 
 ### Step 1: Create a new Pulumi project
 
@@ -286,7 +286,7 @@ outputs:
 packages:
   honeycombio:
     source: terraform-provider
-    version: 0.10.0
+    version: 1.4.0
     parameters:
       - honeycombio/honeycombio
 ```
