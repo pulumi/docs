@@ -1179,7 +1179,13 @@ function checkPulumiCloudShortcode(content) {
             // claims the feature is available on every edition.
             err = `Invalid {{< pulumi-cloud >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud "rbac" />}}.`;
         } else {
-            err = pulumiCloudValueError(args.replace(/^"(.*)"$/, "$1"), "{{< pulumi-cloud >}}");
+            // An optional second positional argument, "named", leads the
+            // callout with the feature's name instead of "This feature".
+            const tokens = args.match(/"[^"]*"|\S+/g).map(t => t.replace(/^"(.*)"$/, "$1"));
+            err = pulumiCloudValueError(tokens[0], "{{< pulumi-cloud >}}");
+            if (!err && tokens.length > 1 && (tokens.length > 2 || tokens[1] !== "named")) {
+                err = `Invalid {{< pulumi-cloud >}} argument: '${tokens.slice(1).join(" ")}'. The only optional second argument is "named", as {{< pulumi-cloud "rbac" "named" />}}.`;
+            }
         }
         if (err && !messages.includes(err)) {
             messages.push(err);

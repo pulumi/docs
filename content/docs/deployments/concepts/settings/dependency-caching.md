@@ -25,7 +25,7 @@ Dependency caching is unavailable on stacks that use a [customer-managed runner 
 
 Dependency caching is off by default. You can enable it per stack:
 
-- **Pulumi Cloud**: on the stack's **Settings** → **Deploy** page, turn on **Enable dependency caching**.
+- **Pulumi Cloud**: on the stack's **Settings** → **Deploy** page, turn on **Cache dependencies to speed up deployments**.
 - **Deployment settings**: set `cacheOptions.enable` to `true`.
 - **REST API**: set the same `cacheOptions.enable` field on the stack's [deployment settings](/docs/reference/cloud-rest-api/deployments/).
 
