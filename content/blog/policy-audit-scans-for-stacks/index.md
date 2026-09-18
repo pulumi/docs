@@ -49,7 +49,7 @@ This new mechanism runs against the last known successfully deployed state of yo
 
 ## How to Get Started
 
-You can enable audit scans for your IaC stacks by adding them to an **[Audit Policy Group](https://www.pulumi.com/docs/discovery-governance/policy/policy-groups/#audit-policy-groups)**.
+You can enable audit scans for your IaC stacks by adding them to an **[Audit Policy Group](https://www.pulumi.com/docs/discovery-governance/policy/policy-groups/#types-of-policy-groups)**.
 
 1. Navigate to the **Policies** tab in the left navigation bar of the Pulumi Cloud console.
 2. Create a new **Audit Policy Group** or select an existing one.

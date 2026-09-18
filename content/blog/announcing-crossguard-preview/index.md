@@ -28,9 +28,9 @@ As an organization administrator, you may want to encourage use of smaller compu
 The key features available during the CrossGuard preview are:
 
 * [Policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies using TypeScript or JavaScript
-* [Run Policy Packs locally](/docs/discovery-governance/policy/get-started/#running-locally) using the `--policy-pack` flag, available to all users
+* [Run Policy Packs locally](/docs/discovery-governance/policy/policy-packs/authoring/#running-policies-locally) using the `--policy-pack` flag, available to all users
 * [AWSGuard](https://github.com/pulumi/pulumi-awsguard) codifies best practices for AWS
-* [Enforce Policy Packs](/docs/discovery-governance/policy/get-started/#enforcing-a-policy-pack) across your organization or particular stacks in the Pulumi Service, for Team and Enterprise users
+* [Enforce Policy Packs](/docs/discovery-governance/policy/policy-groups/) across your organization or particular stacks in the Pulumi Service, for Team and Enterprise users
 * View policy errors and Policy Packs for an update in the Pulumi Service
 
 ## Pulumi CrossGuard for Everyone
