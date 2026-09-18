@@ -134,25 +134,26 @@ Once the project is scaffolded, tell the user the exact directory it lives in
 (an absolute path) and invite them to open it in their editor of choice to look
 through the code — it's theirs to read and change.
 
-Teach as you build — when each concept first appears, explain it in a sentence
-or two and share its docs link so the user can open the page while you work,
-then move on:
+Teach as you build — as each concept first appears, explain it to the user in a
+sentence or two, then move on. Each time, show the user its "Learn more" link so
+they can open the page while you work — present the URL to them in your reply;
+don't just read it yourself:
 
 - Project: the user's program — a collection of related cloud resources defined
-  in code (the files `pulumi new` just created).
+  in code (the files `pulumi new` just created). Learn more:
   pulumi.com/docs/iac/concepts/projects/
 - Stack: `pulumi new` also creates a stack, an isolated, independently
   configurable instance of that program (here, `dev`); a project can have as
-  many as you need, such as dev, staging, and production.
+  many as you need, such as dev, staging, and production. Learn more:
   pulumi.com/docs/iac/concepts/stacks/
 - Configuration: per-stack key-value settings saved in `Pulumi.<stack>.yaml`,
-  so stacks can differ without code changes.
+  so stacks can differ without code changes. Learn more:
   pulumi.com/docs/iac/concepts/config/
 - Preview: the change plan `pulumi preview` (and the prompt before `pulumi up`)
   shows before anything is created — nothing changes until the user approves.
-  pulumi.com/docs/iac/cli/commands/pulumi_preview/
+  Learn more: pulumi.com/docs/iac/cli/commands/pulumi_preview/
 - Update: `pulumi up` applies that plan once confirmed, creating or changing
-  only what differs from the current state.
+  only what differs from the current state. Learn more:
   pulumi.com/docs/iac/cli/commands/pulumi_up/
 
 Do not use `pulumi do` in this onboarding flow. Everything runs as a real
