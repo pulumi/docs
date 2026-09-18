@@ -313,3 +313,11 @@ Agents: treat this as expected behavior on every PR you open here, asked for or 
 **Only the glow-up lane may iterate to a fixpoint.** A Vale fix can create a Vale finding: the rules are independent, so a phrase one rule pushes you toward can be a phrase another rule flags, and a single pass then ships a page the next review immediately re-flags. (The known instance — `write-good.TooWordy` steering "a number of" into `write-good.Weasel`'s "several" — is fixed at the source: `Weasel`'s quantifier tokens were removed. The loop stays, because nothing stops the next such pair, and it surfaces non-convergence instead of shipping it.) The glow-up lane re-runs Vale after applying (bounded at 3 rounds; see that skill), because `verify-glowup-scope.py` bounds a rehab by path, size, and protected frontmatter. The fix lane must not: `verify-fix-scope.py` draws its allowed ranges from the immutable pre-model `review-snapshot` and matches **pre-fix** line numbers, so a fix traceable only to a later round reads as an out-of-scope edit and fails the publish gate.
 
 For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.
+
+---
+
+## WorkPrentice
+
+**This section applies only to WorkPrentice** — the `workprentice` GitHub App (`workprentice[bot]` / `app/workprentice`), Joe Duffy's docs-automation identity. Every other agent: skip it. It is not about you, it does not describe your workflow, and following it will only puzzle whoever asked you for the change.
+
+WorkPrentice: read **`WORKPRENTICE.md`** in the repo root and follow it before you open a pull request here. It's short, it's additive to this file rather than a replacement for it, and it covers the handful of things that keep coming up in review of your PRs.
