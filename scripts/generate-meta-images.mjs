@@ -66,7 +66,10 @@ const OG_TEMPLATE_VERSION = "6"
 //   events r2: byline measured/fitted rather than -webkit-line-clamp'd (it used
 //     to be sliced mid-glyph), 3-line budget on square/portrait, names-only
 //     byline on square.
-const TEMPLATE_REVISION = { events: 2 }
+//   title r2: optional violet label pill between the logo and the title (the
+//     whitepapers section uses it); unlabelled title cards are unchanged.
+//   title r3: more clearance between the logo and the label pill.
+const TEMPLATE_REVISION = { events: 2, title: 3 }
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
@@ -84,11 +87,13 @@ const menuLabels = once(() => {
 
 // Shared shape for the plain centered-title sections (what-is + the small
 // marketing sections). They differ only in name and recursion.
-const titleSection = (name, recursive) => ({
+const titleSection = (name, recursive, label) => ({
   name,
   template: "title",
   recursive,
-  fields: (fm) => ({ title: clean(fm.title) }),
+  // `label` is the optional violet pill above the title, naming the kind of
+  // page. Omit it for sections whose title already says what the page is.
+  fields: (fm) => ({ title: clean(fm.title), label }),
   valid: (f) => !!f.title,
 })
 
@@ -114,6 +119,7 @@ const SECTIONS = [
   titleSection("migrate", true),
   titleSection("partner", true),
   titleSection("topics", true),
+  titleSection("whitepapers", false, "Whitepaper"),
   {
     name: "docs",
     template: "info",
