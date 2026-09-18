@@ -277,9 +277,9 @@ Provision your clusters, their cloud resources, and the workloads on them from o
 
 **The rule:** every change goes through at least one policy engine.
 
-- **Pre-deploy** — validate Pulumi or Helm output with [Pulumi CrossGuard](/docs/insights/policy/) or [Conftest](https://www.conftest.dev/) in CI.
+- **Pre-deploy** — validate Pulumi or Helm output with [Pulumi CrossGuard](/docs/discovery-governance/policy/) or [Conftest](https://www.conftest.dev/) in CI.
 - **Admission-time** — install [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) and require, for example, signed images, a `team` label, and a non-root `securityContext` on every Pod.
-- **Continuous** — scan running clusters with [Pulumi Insights](/docs/insights/policy/) or `kubescape` for drift from policy.
+- **Continuous** — scan running clusters with [Pulumi Insights](/docs/discovery-governance/policy/) or `kubescape` for drift from policy.
 
 See [the benefits of policy-as-code](/blog/benefits-of-policy-as-code/) and [enforcing policy-as-code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/) for end-to-end examples.
 
@@ -323,7 +323,7 @@ Native YAML scales until your team doesn't. Once you have more than a handful of
 - **One stack, full topology** — manage the cloud (EKS/GKE/AKS, VPC, IAM, DNS) and the workloads in it together. See [easily create and manage AWS EKS clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/).
 - **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/concepts/packages/) other teams `import` instead of copy-pasting.
 - **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack on every Git push.
-- **Policy-as-code** built in — [CrossGuard](/docs/insights/policy/) blocks non-compliant changes before `pulumi up`.
+- **Policy-as-code** built in — [CrossGuard](/docs/discovery-governance/policy/) blocks non-compliant changes before `pulumi up`.
 - **Secrets done right** — [Pulumi ESC](/docs/esc/) federates secrets and configuration across stacks, environments, and Kubernetes clusters.
 
 For a deeper comparison of hand-written YAML, Terraform, and Pulumi for Kubernetes, see [YAML, Terraform, Pulumi: what's the smart choice for deployment automation with Kubernetes](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/), and the [beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/) write-up on where Kubernetes automation is heading in 2026.

@@ -110,7 +110,7 @@ By default, if a resource must be replaced, Pulumi will attempt to create a new 
 
 Pods not bound to a ReplicaSet or Deployment will not be rescheduled in the event of a node failure. A Deployment with a ReplicaSet ensures that the specified number of Pods is always available and a strategy to replace Pods (such as RollingUpdate) is preferable to creating Pods directly.
 
-Pulumi's policy as code solution, Crossguard, lets you create a policy that checks if there are naked Pods. Learn more about [Crossguard](/docs/insights/policy/).
+Pulumi's policy as code solution, Crossguard, lets you create a policy that checks if there are naked Pods. Learn more about [Crossguard](/docs/discovery-governance/policy/).
 
 ```typescript
 const policies = new PolicyPack("best-practices", {
@@ -252,4 +252,4 @@ Learn how to manage Kubernetes with code with these resources:
 
 [Kubernetes Tutorials](/registry/packages/kubernetes/how-to-guides/)
 [Crosswalk for Kubernetes](/docs/integrations/clouds/kubernetes/)
-[Crossguard - Policy as Code](/docs/insights/policy/)
+[Crossguard - Policy as Code](/docs/discovery-governance/policy/)
