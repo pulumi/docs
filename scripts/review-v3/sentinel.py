@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The Sentinel — deterministic merge-gate evaluator for the v3 review workflow.
 
-One blocking check-run answers "is this PR mergeable?" from four gates:
+One blocking check-run answers "is this PR mergeable?" from five gates:
 
   G1 review-ran         a current review exists at head SHA (or none is
                         required: mechanical PRs, fork PRs; a trivial PR
@@ -12,8 +12,11 @@ One blocking check-run answers "is this PR mergeable?" from four gates:
                         every matrix-required team, or — under
                         `approval.scope: any-team` — of any routing team, or
                         a repo admin when `approval.admins_satisfy` is on
-  G4 infra-evidence     infra paths carry a green staging/pulumi-test-io
-                        commit status at the current head SHA
+  G4 infra-evidence     a change on `staging_evidence.paths` carries a green
+                        staging/pulumi-test-io commit status at the current
+                        head SHA, posted by a trusted writer. NOT the same
+                        set as `domain:infra`: the matrix answers who
+                        reviews, this answers what must be demonstrated
   G5 oversized-ack      review:oversized PRs replace G1/G2 with an explicit
                         `sentinel:oversized-ack` in the approving review body
 

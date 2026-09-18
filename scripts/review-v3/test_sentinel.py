@@ -1757,3 +1757,32 @@ def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
     assert _gate(v, "G2").status == "error"
     assert "page(s) 2 could not be read" in _gate(v, "G2").message
     assert v.conclusion != "success"
+
+
+def test_every_staging_evidence_path_matches_a_tracked_file():
+    """A pattern that matches nothing is a hole that reads like a rule.
+
+    `webpack.*.js` sat in `staging_evidence.paths` looking like it covered
+    the bundler config. It matched zero tracked files: the matcher's `*`
+    stays inside one path segment, and the real file is
+    `theme/webpack.config.js`. Nobody noticed because the gate it feeds is
+    silent when it matches nothing — an uncovered path and a covered one
+    that is never touched look identical from the verdict.
+    """
+    import subprocess
+
+    tracked = subprocess.run(
+        ["git", "ls-files"], cwd=REPO_ROOT, capture_output=True, text=True, check=True
+    ).stdout.splitlines()
+    config = routing.load_config(REPO_ROOT / ".github" / "review-routing.yml")
+    patterns = config.staging_evidence.get("paths") or []
+    regexes = routing.staging_evidence_patterns(config)
+    dead = [
+        pattern
+        for pattern, rx in zip(patterns, regexes)
+        if not any(rx.match(f) for f in tracked)
+    ]
+    assert not dead, (
+        "staging_evidence.paths entries that match no tracked file — either "
+        "the path moved or the pattern is wrong:\n  " + "\n  ".join(dead)
+    )

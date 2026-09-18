@@ -392,7 +392,11 @@ staging_evidence:
     # Build entry points and the dependency manifest `make ensure` installs.
     - Makefile
     - package.json
-    - webpack.*.js
+    - yarn.lock
+    # `make ensure` runs `make build-assets`, which is
+    # `yarn --cwd theme run build` -- so the theme bundler config is in the
+    # deploy path even though nothing under scripts/ names it.
+    - theme/webpack.config.js
     # `make ci_push` and everything it sources or invokes, in call order.
     - scripts/ci-push.sh
     - scripts/ci-login.sh
@@ -402,6 +406,7 @@ staging_evidence:
     - scripts/build-site.sh
     - scripts/generate-meta-images.mjs
     - scripts/inline-critical-css.js
+    - scripts/minify-css.js
     - scripts/sync-and-test-bucket.sh
     - scripts/translate-redirects.js
     - scripts/run-browser-tests.sh
