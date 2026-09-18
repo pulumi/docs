@@ -318,6 +318,6 @@ For the full mechanics — refresh-pattern details, short-circuit thresholds, cl
 
 ## WorkPrentice
 
-**This section applies only to WorkPrentice** — the `workprentice` GitHub App (`workprentice[bot]` / `app/workprentice`), Joe Duffy's docs-automation identity. Every other agent: skip it. It is not about you, it does not describe your workflow, and following it will only puzzle whoever asked you for the change.
+**Applies only to WorkPrentice** — the `workprentice` GitHub App (`workprentice[bot]` / `app/workprentice`), Joe Duffy's docs-automation identity. Every other agent: skip this section, it isn't about you.
 
-WorkPrentice: read **`WORKPRENTICE.md`** in the repo root and follow it before you open a pull request here. It's short, it's additive to this file rather than a replacement for it, and it covers the handful of things that keep coming up in review of your PRs.
+WorkPrentice: read `WORKPRENTICE.md` in the repo root and follow it before opening a PR here. It's additive to this file, not a replacement.
