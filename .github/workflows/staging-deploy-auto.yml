@@ -200,8 +200,27 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Dispatch the staging deploy
+        # Every PR-controlled value goes through `env:` and is referenced as
+        # "$VAR". NOTHING author-controlled may be written as ${{ }} inside a
+        # `run:` block: GitHub substitutes those textually BEFORE bash parses
+        # the script, so the value becomes script. A branch name is
+        # author-controlled and `git check-ref-format` accepts `"`, `$`, backtick,
+        # `;`, `&`, `|`, `(`, `)` and `'` — space is the only shell
+        # metacharacter it rejects, and $IFS covers that. This job holds
+        # `actions: write`, and the PR lane next door additionally holds
+        # `id-token: write` with ESC already authenticated, so an injection
+        # there reaches the org-scoped PULUMI_BOT_TOKEN.
+        #
+        # The headers here and in staging-deploy-pr.yml both justify safety as
+        # "never checks out or executes PR code". That is true and beside the
+        # point — the VALUE is the vector, not the code. staging-status.yml
+        # already does this correctly; these two lanes did not.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: |
           set -uo pipefail
           # The script comes from the BASE checkout (see the header). A PR
@@ -213,9 +232,9 @@ jobs:
             exit 0
           fi
           scripts/review-v3/staging-deploy.sh \
-            --repo "${{ github.repository }}" \
-            --pr "${{ github.event.pull_request.number }}" \
-            --head-sha "${{ github.event.pull_request.head.sha }}" \
-            --head-ref "${{ github.event.pull_request.head.ref }}" \
+            --repo "$REPO" \
+            --pr "$PR_NUMBER" \
+            --head-sha "$HEAD_SHA" \
+            --head-ref "$HEAD_REF" \
             --dispatch-only \
             || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red and /deploy-staging retries"

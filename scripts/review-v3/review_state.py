@@ -69,7 +69,16 @@ def parse_state(body: str) -> dict | None:
     exists but does not decode or validate — a corrupt block must be surfaced,
     never silently treated as empty (that would un-answer every finding).
     """
-    m = BLOCK_RE.search(body)
+    # LAST match, not the first. The composer appends the real block at the
+    # end of the card, after the finding rows — and a finding row renders the
+    # changed file's path verbatim inside backticks, with a permissive
+    # character class. So a PR that adds a file whose *path* embeds a
+    # `<!-- REVIEW_STATE {...} -->` block gets that block quoted into every
+    # row for that file, ahead of the genuine one, and `search` would read
+    # the attacker's dispositions as the state. Reading from the end means
+    # the block the composer actually wrote always wins.
+    matches = list(BLOCK_RE.finditer(body))
+    m = matches[-1] if matches else None
     if not m:
         if "<!-- REVIEW_STATE" in body:
             raise ValueError("REVIEW_STATE marker present but block is malformed/truncated")

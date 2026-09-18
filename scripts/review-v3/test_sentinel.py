@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -75,6 +76,13 @@ RAW_CONFIG = {
 CONFIG, _errors, _warnings = routing.validate_raw(RAW_CONFIG)
 assert CONFIG is not None, _errors
 
+# The live config's approver policy (`.github/review-routing.yml`): any
+# routing team clears G3, and so does a repo admin. CONFIG keeps the strict
+# `lane` default so the rest of the battery still tests the narrow rule.
+LOOSE_CONFIG, _loose_errors, _ = routing.validate_raw(
+    {**RAW_CONFIG, "approval": {"scope": "any-team", "admins_satisfy": True}})
+assert LOOSE_CONFIG is not None, _loose_errors
+
 
 # ---- Stub Gh -------------------------------------------------------------
 
@@ -90,6 +98,8 @@ class StubGh:
         statuses=None,
         memberships=None,
         membership_error_users=(),
+        permissions=None,
+        permission_error_users=(),
         label_events=None,
         workflow_runs=None,
         workflow_runs_error=False,
@@ -101,6 +111,9 @@ class StubGh:
         self.statuses = statuses or []
         self.memberships = memberships or {}  # (slug, user) -> state
         self.membership_error_users = set(membership_error_users)
+        self.permissions = permissions or {}  # user -> admin/write/read/none
+        self.permission_error_users = set(permission_error_users)
+        self.permission_calls = []
         self.label_events = label_events or []
         self.workflow_runs = workflow_runs or []
         self.workflow_runs_error = workflow_runs_error
@@ -126,6 +139,12 @@ class StubGh:
         if user in self.membership_error_users:
             raise sentinel.SentinelDataError(f"lookup failed for {user}")
         return self.memberships.get((team_slug, user), "none")
+
+    def get_repo_permission(self, user):
+        self.permission_calls.append(user)
+        if user in self.permission_error_users:
+            raise sentinel.SentinelDataError(f"permission lookup failed for {user}")
+        return self.permissions.get(user, "none")
 
     def get_label_events(self):
         return self.label_events
@@ -308,8 +327,11 @@ def brief_comment():
     }
 
 
-def approval(user, utype="User", body=""):
-    return {"state": "APPROVED", "user": {"login": user, "type": utype}, "body": body}
+def approval(user, utype="User", body="", commit_id=None):
+    """An APPROVED review. `commit_id` defaults to the PR head, as GitHub
+    always sends it — pass an older SHA to model a pre-push approval."""
+    return {"state": "APPROVED", "user": {"login": user, "type": utype},
+            "body": body, "commit_id": commit_id or HEAD}
 
 
 def _state_with(fids, disposition="refuted", note="because"):
@@ -445,6 +467,94 @@ def test_link_only_diff_is_narrow():
     assert sentinel.link_only_diff([docs_file_substantive()]) is False
     assert sentinel.link_only_diff([{"filename": "a.md", "status": "modified", "patch": None}]) is False
     assert sentinel.link_only_diff([]) is False
+
+
+def test_g3_any_team_scope_clears_another_lane_s_pr():
+    """`approval.scope: any-team`: the matrix routes, it does not gatekeep.
+
+    PR #21630's shape — docs pages plus the Hugo shortcode they use, so the
+    matrix asks for docs-guild AND marketing. Under the lane rule that is a
+    two-team quorum on a one-line template change; under any-team, one
+    routing-team member's approval is the gate.
+    """
+    card = author_card([], state=_state_with([]))
+    files = [docs_file_substantive(), frontend_file()]
+    gh = StubGh(pr=pr_meta(), files=files, comments=[card],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    # lane: marketing is still owed
+    g3 = _gate(sentinel.evaluate(gh, CONFIG), "G3")
+    assert g3.status == "red" and "docs-marketing-review" in g3.message
+    # any-team: the same approval clears it
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "ok", g3.message
+    # the routed roles are unchanged — triage still requests both teams
+    res = routing.resolve_lanes([f["filename"] for f in files], False, False, LOOSE_CONFIG)
+    assert res.roles == {"docs-guild", "marketing"} and res.any_team is True
+
+
+def test_g3_any_team_still_means_a_team():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("random-person")], memberships={})
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "red"
+    assert "any review team" in g3.message
+    # the red names the teams that would do, and the admin escape
+    assert "pulumi/docs-tools" in g3.message
+    assert "administrator" in g3.message
+
+
+def test_g3_repo_admin_satisfies_when_configured():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("an-admin")], memberships={},
+                permissions={"an-admin": "admin"})
+    g3 = _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3")
+    assert g3.status == "ok" and "an-admin" in g3.message
+    # write access is not admin
+    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("a-committer")], memberships={},
+                 permissions={"a-committer": "write"})
+    assert _gate(sentinel.evaluate(gh2, LOOSE_CONFIG), "G3").status == "red"
+
+
+def test_g3_admin_rule_is_opt_in_and_never_costs_a_call_when_off():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("an-admin")], memberships={},
+                permissions={"an-admin": "admin"})
+    # CONFIG has no `approval:` section at all: the strict default.
+    assert _gate(sentinel.evaluate(gh, CONFIG), "G3").status == "red"
+    assert gh.permission_calls == []
+    # and with the rule on, a team member's approval short-circuits it too
+    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                 reviews=[approval("guild-member")],
+                 memberships={("docs-guild", "guild-member"): "active"},
+                 permissions={"guild-member": "admin"})
+    assert _gate(sentinel.evaluate(gh2, LOOSE_CONFIG), "G3").status == "ok"
+    assert gh2.permission_calls == []
+
+
+def test_g3_bot_admin_approval_still_never_counts():
+    """The admin rule widens who counts, not what counts as a human."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("pulumi-bot"), approval("actions-bot", utype="Bot")],
+                memberships={},
+                permissions={"pulumi-bot": "admin", "actions-bot": "admin"})
+    assert _gate(sentinel.evaluate(gh, LOOSE_CONFIG), "G3").status == "red"
+    assert gh.permission_calls == []  # denylisted/Bot reviews never reach the lookup
+
+
+def test_g3_permission_api_failure_action_required_not_red():
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("maybe-an-admin")], memberships={},
+                permission_error_users={"maybe-an-admin"})
+    v = sentinel.evaluate(gh, LOOSE_CONFIG)
+    assert _gate(v, "G3").status == "error"
+    assert v.conclusion == "action_required"
 
 
 def test_g3_bot_denylist_and_bot_type_excluded():
@@ -597,7 +707,8 @@ def test_infra_needs_staging_status_g4():
     assert v_red.conclusion == "failure"
 
     v_ok = sentinel.evaluate(
-        StubGh(**base, statuses=[{"context": "staging/pulumi-test-io", "state": "success"}]),
+        StubGh(**base, statuses=[{"context": "staging/pulumi-test-io", "state": "success",
+                   "creator": {"login": "github-actions[bot]"}}]),
         CONFIG)
     assert _gate(v_ok, "G4").status == "ok"
     assert v_ok.conclusion == "success", v_ok.to_json()
@@ -729,6 +840,57 @@ def test_g4_arms_for_the_whole_pr_when_one_path_qualifies():
     assert _gate(sentinel.evaluate(gh, CONFIG), "G4").status == "red"
 
 
+def test_an_unattributed_staging_status_is_not_evidence():
+    """A commit status needs only push access:
+
+        gh api repos/OWNER/REPO/statuses/SHA -f state=success \
+          -f context=staging/pulumi-test-io
+
+    …which made the gate review-routing.yml calls "no waiver, no shortcut" a
+    one-line bypass. The run record cannot be forged that way.
+    """
+    base = dict(pr=pr_meta(), files=[infra_file()],
+                comments=[author_card([], state=_state_with([]))])
+    forged = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success",
+         "creator": {"login": "someone"}}])), CONFIG)
+    assert _gate(forged, "G4").status == "red"
+
+    unattributed = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success"}])), CONFIG)
+    assert _gate(unattributed, "G4").status == "red"
+
+    # The real writer still works, and the run-record witness is unaffected.
+    real = sentinel.evaluate(StubGh(**dict(base, statuses=[
+        {"context": "staging/pulumi-test-io", "state": "success",
+         "creator": {"login": "github-actions[bot]"}}])), CONFIG)
+    assert _gate(real, "G4").status == "ok"
+
+
+def test_a_waive_clears_an_error_but_never_g4():
+    """`any_error` used to be tested before `waived`, so the break-glass was
+    inert in exactly the outage it exists for: an expired team-read token
+    errors G3 on every PR, so every PR sat at action_required and no waive
+    could move any of them — under a summary still claiming WAIVED."""
+    waive_events = [{"event": "labeled", "label": {"name": "review:waived"},
+                     "actor": {"login": "boss"}}]
+    base = dict(pr=pr_meta(labels=["review:waived"]),
+                files=[docs_file_substantive()],
+                label_events=waive_events,
+                memberships={("docs-guild", "boss"): "active"})
+
+    # G3 errors (token cannot read membership for the approver) — waived wins.
+    errored = sentinel.evaluate(StubGh(**dict(
+        base, reviews=[approval("flaky")], membership_error_users={"flaky"})), CONFIG)
+    assert errored.conclusion == "success", errored.to_json()
+    assert "WAIVED" in errored.title
+
+    # G4 is still not waivable.
+    infra = sentinel.evaluate(StubGh(**dict(base, files=[infra_file()])), CONFIG)
+    assert infra.conclusion == "failure"
+    assert "infra evidence has no waiver" in infra.title
+
+
 def test_g4_run_lookup_failure_blocks_rather_than_erroring():
     """An unreadable run history is 'no evidence', not action_required.
 
@@ -752,7 +914,7 @@ def test_status_comment_upserts_then_stays_byte_identical():
     assert "G3 right-approver" in body
     assert "docs-guild" in body, "a red gate carries its own remediation"
 
-    existing = [{"id": 7, "body": body}]
+    existing = [{"id": 7, "body": body, "user": {"login": sentinel.BOT_LOGIN}}]
     assert sentinel.update_status_comment(gh, v, comments=existing) is False, \
         "an unchanged verdict must not churn the comment"
     assert gh.patched == []
@@ -760,10 +922,145 @@ def test_status_comment_upserts_then_stays_byte_identical():
 
 def test_status_comment_rewrites_when_a_gate_changes():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
-    stale = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nsomething older\n"}]
+    stale = [{"id": 7, "body": sentinel.STATUS_MARKER + "\nsomething older\n",
+              "user": {"login": sentinel.BOT_LOGIN}}]
     assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
                                           comments=stale) is True
     assert gh.patched and gh.patched[0][0] == 7
+
+
+def test_an_approval_does_not_survive_a_push():
+    """An approval is of a COMMIT. Without this, the sequence is: get a
+    clean one-line change approved, push the payload, let the review lane
+    post a fresh card, and every gate is green on an approval nobody
+    re-gave. The code used to defer this to "the ruleset's dismissal job" —
+    but AGENTS.md records branch protection is not in place, and nothing in
+    `.github/` configures dismissal, so nobody was doing it."""
+    card = author_card([], state=_state_with([]))
+    base = dict(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                memberships={("docs-guild", "guild"): "active"})
+
+    at_head = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("guild")])), CONFIG)
+    assert _gate(at_head, "G3").status == "ok"
+
+    pre_push = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[approval("guild", commit_id="0" * 40)])), CONFIG)
+    assert _gate(pre_push, "G3").status == "red"
+    # And it must say WHY — "nobody approved" is a lie to someone looking at
+    # a green checkmark on the PR.
+    assert "guild" in _gate(pre_push, "G3").message
+    assert "earlier commit" in _gate(pre_push, "G3").message
+
+    # A malformed review with no commit_id at all does not clear the gate.
+    no_sha = sentinel.evaluate(
+        StubGh(**dict(base, reviews=[{"state": "APPROVED",
+                                      "user": {"login": "guild", "type": "User"},
+                                      "body": ""}])), CONFIG)
+    assert _gate(no_sha, "G3").status == "red"
+
+
+def test_one_flaky_membership_lookup_does_not_poison_a_satisfied_gate():
+    """`errors` used to be tested before `satisfied_any`, so a transient 5xx
+    on one approver reported action_required with a qualifying approval
+    sitting right there."""
+    card = author_card([], state=_state_with([]))
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[card],
+                reviews=[approval("flaky"), approval("guild")],
+                memberships={("docs-guild", "guild"): "active"},
+                membership_error_users={"flaky"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G3").status == "ok", _gate(v, "G3").message
+
+
+def test_the_oversized_ack_must_come_from_a_qualifying_approver():
+    """`review:oversized` skips G1 and G2 and nothing verifies the PR is
+    actually oversized, so G5 is the only thing left. It read the ack from
+    the unfiltered approver list — anyone with read access can post an
+    APPROVED review, so a bystander could supply the magic string while a
+    real team member clicked plain Approve."""
+    base = dict(pr=pr_meta(labels=["review:oversized"]),
+                files=[docs_file_substantive()],
+                memberships={("docs-guild", "guild"): "active"})
+
+    bystander = sentinel.evaluate(StubGh(**dict(base, reviews=[
+        approval("guild"),
+        approval("randomer", body=f"lgtm {sentinel.OVERSIZED_ACK}"),
+    ])), CONFIG)
+    assert _gate(bystander, "G5").status == "red"
+
+    proper = sentinel.evaluate(StubGh(**dict(base, reviews=[
+        approval("guild", body=f"read it all {sentinel.OVERSIZED_ACK}"),
+    ])), CONFIG)
+    assert _gate(proper, "G5").status == "ok"
+
+
+def test_a_zero_file_pr_does_not_manufacture_an_approver():
+    """G3 reported `ok` for a PR with no changed paths — the one gate that
+    guarantees a human, passing with no human. Combined with a forged card
+    that was a green Sentinel with nobody involved."""
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(), files=[], comments=[], reviews=[]), CONFIG)
+    assert _gate(v, "G3").status == "skip"
+    assert v.conclusion != "success"
+
+
+def test_role_comments_must_come_from_the_bot():
+    """G1 and G2 were fully author-controllable until this check existed.
+
+    `_find_comment` matched the marker anywhere in any comment by anyone and
+    returned the first hit. Comments come back oldest-first, so a PR author
+    who commented before the review lane posted owned both gates for the
+    life of the PR — and `update_strip` then wrote the ⛔ banner into the
+    forgery, so the real card never showed it.
+
+    The rule is the one the writer already enforces: bot-authored, marker as
+    an exact line in the first three (`pinned-comment.sh list_role_comments`,
+    `resolve-handler.py:222`).
+    """
+    real = author_card([("F1", "must"), ("F2", "must")], state=_state_with([]))
+    real["user"] = {"login": sentinel.BOT_LOGIN, "type": "Bot"}
+    forged = {
+        "id": 1, "user": {"login": "attacker", "type": "User"},
+        "body": (f"{sentinel.AUTHOR_MARKER}\n"
+                 f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n"
+                 "## Author action guide v1 — nothing blocks merge\n\n"
+                 "### 🚨 Must fix or refute\n\n_Nothing to fix._\n"),
+    }
+    # Forgery first is the attacker's best case: oldest wins the lookup.
+    v = sentinel.evaluate(
+        StubGh(pr=pr_meta(author="attacker"), files=[docs_file_substantive()],
+               comments=[forged, real]), CONFIG)
+    assert _gate(v, "G2").status == "red"
+    assert v.blocking_ids == ["F1", "F2"]
+
+    # A bot comment that merely QUOTES the marker below line 3 is not a card.
+    quoting = {
+        "id": 2, "user": {"login": sentinel.BOT_LOGIN, "type": "Bot"},
+        "body": "line1\nline2\nline3\n" + sentinel.AUTHOR_MARKER + "\n",
+    }
+    assert sentinel._find_comment([quoting], sentinel.AUTHOR_MARKER) is None
+    assert sentinel._find_comment([real], sentinel.AUTHOR_MARKER) is real
+
+
+def test_a_forged_legacy_page_is_not_a_review():
+    """Same rule for the v2 lane, which anchored on the first line but not
+    on the author — so a forged page could still stand in for a review."""
+    forged = {"id": 1, "user": {"login": "attacker", "type": "User"},
+              "body": "<!-- CLAUDE_REVIEW 1/1 -->\nnothing to see here\n"}
+    assert sentinel.legacy_pages([forged]) is None
+
+
+def test_the_status_comment_cannot_be_hijacked():
+    """The Sentinel's token can edit anyone's comment, so an unqualified
+    marker lookup let a contributor's comment absorb the pinned status."""
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    squatter = [{"id": 99, "user": {"login": "someone", "type": "User"},
+                 "body": sentinel.STATUS_MARKER + "\nmine now\n"}]
+    assert sentinel.update_status_comment(gh, sentinel.evaluate(gh, CONFIG),
+                                          comments=squatter) is True
+    assert gh.patched == [], "must not PATCH a comment it does not own"
+    assert gh.posted, "posts its own instead"
 
 
 def test_status_comment_rows_are_single_line():
@@ -1055,8 +1352,42 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
     assert "cancel-in-progress:" not in wf
     assert "\nconcurrency:" not in wf
-    for label in ("review:waived", "review:oversized", "review:trivial", "review:prose-flagged"):
+    for label in ("review:waived", "review:oversized", "review:trivial",
+                  "review:prose-flagged", "sentinel:preview"):
         assert f"github.event.label.name == '{label}'" in wf, label
+
+
+def test_label_event_filter_covers_every_label_the_evaluator_reads():
+    """Derived, not restated — a hardcoded list is how one went missing.
+
+    `automation/merge` is read through the CONFIG
+    (`not_governed.author_label_pairs`) rather than a constant in
+    sentinel.py, so a list of sentinel.py's constants looked complete while
+    omitting the label that flips the verdict hardest: present ⇒ success
+    with no gates evaluated. Its lane applies it after opening the PR and
+    then arms auto-merge, so the Sentinel stayed red and auto-merge never
+    completed.
+    """
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+
+    read_by_evaluator = {
+        sentinel.PREVIEW_LABEL,
+        sentinel.PROSE_FLAGGED_LABEL,
+        sentinel.TRIVIAL_LABEL,
+        sentinel.OVERSIZED_LABEL,
+        cfg.waive.get("label", "review:waived"),
+    }
+    # …plus every label the config can make load-bearing.
+    for pair in (cfg.not_governed or {}).get("author_label_pairs") or []:
+        read_by_evaluator.add(pair["label"])
+
+    missing = [l for l in sorted(read_by_evaluator)
+               if f"github.event.label.name == '{l}'" not in wf]
+    assert not missing, (
+        "labels the evaluator reads that the workflow's label-event filter "
+        f"drops (they only take effect on the next unrelated event): {missing}"
+    )
     assert "publish_guard.py" in wf
     assert "external_id: $run_id" in wf
     assert "steps.guard.outputs.publish == 'true'" in wf
@@ -1070,6 +1401,87 @@ def test_workflow_never_checks_out_pr_code():
                       "refs/pull/", "merge_commit_sha"):
         assert forbidden not in wf, f"workflow must never reference PR code: {forbidden}"
     assert "default_branch" in wf  # checkout pinned to base default branch
+
+
+def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
+    """`${{ }}` is substituted textually BEFORE bash parses the script.
+
+    So an author-controlled value written that way inside a `run:` block is
+    not a string, it is script. A branch name is author-controlled and
+    `git check-ref-format` accepts `"`, `$`, backtick, `;`, `&`, `|`, `(`,
+    `)` and `'` — space is the only shell metacharacter it rejects, and
+    `$IFS` covers that.
+
+    staging-deploy-auto.yml and staging-deploy-pr.yml both did this with
+    `github.event.pull_request.head.ref`. The PR lane holds `id-token: write`
+    with ESC already authenticated, so the payload could mint an OIDC token
+    and read the org-scoped PULUMI_BOT_TOKEN — repo-write escalating to
+    org-scoped credentials.
+
+    Both files' headers justified safety as "never checks out or executes PR
+    code", which is true and beside the point: the VALUE is the vector, not
+    the code. The rule is `env:` + "$VAR", which staging-status.yml already
+    followed.
+
+    SCOPE, honestly. This walks every workflow file, but it matches a
+    DENYLIST of expressions against lines, not a structure. It therefore
+    proves the named expressions are absent, not that no injection exists:
+    a line-scanner cannot tell a `run:` block from a `concurrency: group:`,
+    and the denylist has to be extended by hand. The structural form -- parse
+    the YAML, walk every `run:` scalar, allow only a short list of
+    non-author-controlled expressions -- reports 131 hits repo-wide today,
+    mostly numeric ids and booleans, so it cannot land without a cleanup far
+    wider than the change this test shipped with. Until then: adding an
+    expression here is cheap, and doing so means fixing its sites in the
+    same commit.
+    """
+    # Expressions whose value a PR author controls. `github.repository`,
+    # `github.run_id` and `github.event.repository.default_branch` are NOT
+    # author-controlled and stay allowed.
+    author_controlled = (
+        "github.event.pull_request.head.ref",
+        "github.event.pull_request.title",
+        "github.event.pull_request.body",
+        "github.event.issue.title",
+        "github.event.issue.body",
+        "github.event.comment.body",
+        "github.head_ref",
+        "github.event.workflow_run.head_branch",
+        # Dispatch inputs need write access to set, so these are defence in
+        # depth rather than a fork vector -- but they are free text, and a
+        # newline or `=` in one also forges other step outputs through
+        # GITHUB_OUTPUT. pr_number had been hardened at two of five sites by
+        # hand; the list not naming it is why the other three kept passing.
+        # The other dispatch inputs (count, paths, force, dry_run, ...) are
+        # deliberately not here yet -- see SCOPE in the docstring.
+        "github.event.inputs.pr_number",
+        "inputs.pr_number",
+    )
+    offenders = []
+    wf_dir = REPO_ROOT / ".github" / "workflows"
+    # BOTH extensions. The glob was `*.yml` only, so
+    # scheduled-upstream-sync.yaml -- the one workflow written the other way
+    # -- was exempt from a test whose docstring promises every workflow.
+    for wf in sorted([*wf_dir.glob("*.yml"), *wf_dir.glob("*.yaml")]):
+        for lineno, line in enumerate(wf.read_text().splitlines(), 1):
+            stripped = line.strip()
+            # A YAML mapping entry is not a shell line, so it is exempt:
+            # `env:` bindings are the safe form this test is steering people
+            # toward, and `concurrency: group: foo-${{ ... }}` is a run-name,
+            # never executed. The exemption is the whole reason this is a
+            # denylist and not a proof -- it is spelled as "does the line
+            # look like `key: ...`", which is the best a line-scanner can do.
+            if stripped.startswith("#") or "${{" not in line:
+                continue
+            if re.match(r"^[A-Za-z_][A-Za-z0-9_-]*:(\s|$)", stripped):
+                continue
+            for expr in author_controlled:
+                if expr in line:
+                    offenders.append(f"{wf.name}:{lineno}: {stripped[:90]}")
+    assert not offenders, (
+        "PR-controlled value interpolated outside an `env:` binding "
+        "(use env: + \"$VAR\"):\n  " + "\n  ".join(offenders)
+    )
 
 
 def test_workflow_can_actually_write_the_comments_it_writes():

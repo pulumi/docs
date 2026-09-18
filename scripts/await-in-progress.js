@@ -5,6 +5,10 @@ const { Octokit } = require("@octokit/rest");
 // How long to sleep between checks for other in-progress runs.
 const pollIntervalMs = 60000;
 
+// Stop waiting after this long. A deploy runs ~9 minutes, so a healthy queue
+// never approaches it; hitting it means a predecessor is wedged.
+const maxWaitMs = 45 * 60 * 1000;
+
 // Where we record the number of seconds this run spent parked in the queue. The
 // build-duration alert (scripts/ci-build-duration-alert.sh) reads this file and subtracts
 // the wait from the wall-clock time of the "Build and deploy" step, so a backed-up queue
@@ -42,7 +46,15 @@ async function waitForInProgressRuns() {
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split("/");
-    const status = "in_progress";
+    // Both statuses that hold the stack. `in_progress` alone left a hole the
+    // branch fix below did not close: a QUEUED run (waiting for a runner, or
+    // waiting on environment approval) is not returned by
+    // `status=in_progress`. Run 100 queued while 101 is running → 101 lists
+    // in-progress runs, sees none, proceeds; 100 then starts, sees 101, and
+    // discards it because 101 > 100 — both enter `pulumi up` on the same
+    // stack and one takes the 409 this script exists to prevent. Queued runs
+    // are the common case precisely when the queue is backed up.
+    const statuses = ["in_progress", "queued", "waiting"];
 
     const octokit = new Octokit({
         auth: githubToken,
@@ -60,30 +72,46 @@ async function waitForInProgressRuns() {
     let waitedMs = 0;
 
     while (true) {
-        // Fetch a paginated list of in-progress runs of the current workflow.
-        const runs = await octokit.paginate(
-          // No `branch` filter: the stack this run is about to update is shared by
-          // every branch's run of this workflow. See the header comment.
-          octokit.rest.actions.listWorkflowRuns.endpoint.merge({
-            owner,
-            repo,
-            workflow_id,
-            status,
-          })
-        );
+        // Fetch every run of this workflow that is holding or about to hold
+        // the stack. No `branch` filter: the stack is shared by every
+        // branch's run of this workflow. See the header comment.
+        const pages = await Promise.all(statuses.map(status =>
+          octokit.paginate(
+            octokit.rest.actions.listWorkflowRuns.endpoint.merge({
+              owner,
+              repo,
+              workflow_id,
+              status,
+            })
+          )
+        ));
+        const byId = new Map();
+        for (const run of pages.flat()) {
+            byId.set(run.id, run);  // a run can change status between calls
+        }
+        const runs = [...byId.values()];
 
         // Sort in-progress runs descendingly, excluding the current one.
         const recent = runs
             .sort((a, b) => b.id - a.id)
             .filter(run => run.id < currentRunID);
 
-        console.log(`Found ${recent.length} other ${workflowName} job(s) running (all branches).`);
+        console.log(`Found ${recent.length} other ${workflowName} job(s) running or queued (all branches).`);
 
         if (recent.length === 0) {
             break;
         }
 
         const [ mostRecent ] = recent;
+        if (waitedMs >= maxWaitMs) {
+            // Proceeding is the lesser evil: a 409 fails one deploy loudly,
+            // where an unbounded wait parks this job until the six-hour
+            // default and fails it with nothing to read.
+            console.log(`::warning::Waited ${Math.round(waitedMs / 60000)}m for ` +
+                `${mostRecent.html_url}; giving up on the queue and proceeding. ` +
+                `A [409] Conflict here means that run is still holding the stack.`);
+            break;
+        }
         console.log(`Waiting for ${mostRecent.html_url} to complete before continuing.`);
         await new Promise(resolve => setTimeout(resolve, pollIntervalMs)); // One minute.
         waitedMs += pollIntervalMs;

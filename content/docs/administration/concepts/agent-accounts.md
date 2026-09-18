@@ -12,10 +12,6 @@ aliases:
   - /docs/administration/organizations-teams/agent-accounts/
 ---
 
-{{% notes type="info" %}}
-Agent accounts are in **preview**. Behavior and limits may change based on feedback.
-{{% /notes %}}
-
 Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
 
 ## How it works

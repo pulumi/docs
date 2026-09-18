@@ -507,7 +507,8 @@ def test_link_only_any_team_policy():
 def test_resolution_to_json_shape(config):
     r = routing.resolve_lanes(["content/docs/foo.md"], mechanical=False, claims=False, config=config)
     payload = r.to_json()
-    assert set(payload) == {"roles", "staging_evidence_required", "subjects", "reasons", "any_team"}
+    assert set(payload) == {"roles", "staging_evidence_required", "subjects",
+                            "overridden", "reasons", "any_team"}
     assert payload["roles"] == ["docs-guild"]
 
 
@@ -547,27 +548,26 @@ def test_real_config_staging_gate_covers_the_deploy_and_nothing_else():
     """The live `staging_evidence.paths` list, asserted against the paths it
     is meant to catch and the ones it is meant to let through.
 
-    The let-through half is the point of the section. `scripts/redirects/`
-    is the case that forced it (PR #21698): `domain:infra`, so it used to
-    demand a ~9-minute deploy of a shared, lock-contended stack to prove
-    that a two-line redirect data file parsed."""
+    The let-through half is the point of the section, and it grew a lot on
+    2026-09-18. The gate exists for one thing: proving `pulumi up` lands.
+    Every PR already runs the same pipeline in preview mode via
+    `make ci_pull_request`, so a build script is exercised for real on the
+    PR that changes it — the second deploy proved nothing the first had not.
+    What a preview cannot do is APPLY, and that gap is the whole gate.
+
+    `scripts/redirects/` is the case that forced the section (PR #21698):
+    `domain:infra`, so it used to demand a ~9-minute deploy of a shared,
+    lock-contended stack to prove that a two-line data file parsed."""
     requires = (
-        # The Pulumi program and the build entry points.
+        # The program `pulumi up` applies.
         "infrastructure/index.ts",
         "infrastructure/Pulumi.www-testing.yaml",
-        "Makefile",
-        "package.json",
-        # The scripts `make ci_push` executes, and the subtrees they run.
-        "scripts/ci-push.sh",
-        "scripts/build-site.sh",
+        # The `update` branch a PR never runs, and the call chain into it.
         "scripts/run-pulumi.sh",
-        "scripts/sync-and-test-bucket.sh",
-        "scripts/make-s3-redirects.js",
+        "Makefile",
+        "scripts/ci-push.sh",
+        # The serializer that keeps two `pulumi up`s off the stack.
         "scripts/await-in-progress.js",
-        "scripts/search/main.js",
-        "scripts/meta-images/render.mjs",
-        "scripts/content/generate-docs-content.js",
-        "scripts/versioned-docs/inject-live-sdk-selectors.sh",
         # The two workflows that run it.
         ".github/workflows/build-and-deploy.yml",
         ".github/workflows/testing-build-and-deploy.yml",
@@ -578,7 +578,21 @@ def test_real_config_staging_gate_covers_the_deploy_and_nothing_else():
     exempt = (
         # Data the deploy reads but cannot be broken by. The #21698 case.
         "scripts/redirects/general-broken-links-redirects.txt",
-        # Tooling that never runs during a deploy.
+        # Build scripts. These DO run during a deploy — and during every
+        # PR's preview build, which is the point: the PR that changes one
+        # has already run it. A second deploy re-proves nothing.
+        "package.json",
+        "yarn.lock",
+        "theme/webpack.config.js",
+        "scripts/build-site.sh",
+        "scripts/ensure.sh",
+        "scripts/minify-css.js",
+        "scripts/generate-meta-images.mjs",
+        "scripts/sync-and-test-bucket.sh",
+        "scripts/make-s3-redirects.js",
+        "scripts/search/main.js",
+        "scripts/content/generate-docs-content.js",
+        # Tooling that never runs during a deploy at all.
         "scripts/review-v3/sentinel.py",
         "scripts/lint/lint-markdown.js",
         "scripts/link-checker/check.js",
@@ -622,3 +636,293 @@ def test_pr_21698_needs_no_staging_run():
     assert r.staging_evidence_required is False
     # Still reviewed by both lanes; only the deploy requirement is gone.
     assert r.roles == {"blog", "tools"}
+
+
+# ---- the routing workflow step -------------------------------------------
+
+_TRIAGE_WF = HERE.parents[1] / ".github" / "workflows" / "claude-triage.yml"
+
+
+@pytest.fixture(scope="module")
+def live_config():
+    """The real .github/review-routing.yml. Parsed once per module.
+
+    Seven tests were each calling load_config on the live path, and three
+    of them ALSO took the canned `config` fixture in their signature and
+    then shadowed it with a local load -- so the signature said canned
+    while the body used live."""
+    return routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+
+
+def test_routing_step_runs_on_synchronize_and_only_asks_new_teams():
+    """A push that widens the path set must be able to ask the new team.
+
+    The Sentinel resolves required roles from LIVE paths on every
+    evaluation, synchronize included. This step used to run only at open /
+    ready, so a push that added a `layouts/` file to a docs PR introduced a
+    required approver nobody was ever told about — under enforcement, an
+    author blocked by a team that was never pinged.
+
+    The fix is NOT "re-request on every push" (that is the notification
+    noise the sticky rule exists to prevent). It is: ask a team that has
+    never been asked on this PR. The two tests below pin both halves.
+    """
+    wf = _TRIAGE_WF.read_text()
+
+    def _step(name: str) -> str:
+        return wf.split(f"- name: {name}", 1)[1].split("\n      - name:", 1)[0]
+
+    # The decision lives in the resolve step; the request step only spends
+    # the token on whatever that step put in `pending`.
+    step = _step("Resolve lane reviewers to request")
+
+    # Half one: every step in the lane is reachable on a push. All three
+    # carried the `synchronize` exclusion; pinning only one would let the
+    # guard come back on another, where the failure is quiet — routing then
+    # runs tokenless, or not at all, and only logs a ::warning::.
+    for name in ("Resolve lane reviewers to request",
+                 "Fetch ESC secrets (org-scoped routing token)",
+                 "Request lane reviewers (v3 routing)"):
+        assert "github.event.action != 'synchronize'" not in _step(name), (
+            f"{name!r} must not exclude synchronize — that is the gap"
+        )
+        assert "vars.REVIEW_V3_ROUTING == '1'" in _step(name)
+
+    # The token is minted only when there is something to request. It is an
+    # OIDC exchange plus a CLI download, and `pending` is empty on nearly
+    # every push once the teams have been asked once.
+    assert "steps.route.outputs.pending != ''" in _step(
+        "Fetch ESC secrets (org-scoped routing token)"), (
+        "the ESC fetch must be gated on there being a team to request"
+    )
+
+    # Half two: stickiness is preserved by an ever-requested test, and it
+    # reads the TIMELINE rather than the PR's current requested_teams.
+    # GitHub drops a team from requested_teams the moment a member reviews,
+    # so current state would re-ping a team that already answered.
+    assert 'select(.event == "review_requested")' in step
+    assert "issues/$PR/timeline" in step
+    assert "requested_team.slug" in step
+    # ...and it must not READ current state. Checked against the step's
+    # executable lines only — the comment above it names `requested_teams`
+    # precisely to explain why it is the wrong source.
+    code = "\n".join(l for l in step.splitlines() if not l.lstrip().startswith("#"))
+    assert "requested_teams" not in code, (
+        "current requested_teams is not the right source — see the docstring"
+    )
+    # Exact-slug matching, so `docs-tool` can never satisfy `docs-tools`.
+    assert "grep -qxF" in step
+
+    # Half three: a FAILED timeline read must request nobody. An empty
+    # `ASKED` makes every required team look never-asked, so discarding the
+    # error re-pings all of them — on every push, now that this runs on
+    # synchronize. The original spelling was `2>/dev/null | ... || true`:
+    # `|| true` threw the status away and `2>/dev/null` threw the reason
+    # away. (`pipefail` is set for this step, so the pipe was never the
+    # problem — worth stating because the pipeline-exit-status rule is the
+    # tempting diagnosis and it is the wrong one.)
+    #
+    # Asserted on the timeline read's own statement rather than on a
+    # variable name, so renaming it or swapping `grep` for a `case` does not
+    # fail this test while a reimplementation that drops the status check
+    # does.
+    read_stmt = next(
+        (chunk for chunk in code.split("\n\n")
+         if "issues/$PR/timeline" in chunk),
+        "",
+    )
+    assert read_stmt, "could not find the timeline read"
+    assert "2>/dev/null" not in read_stmt, (
+        "the timeline read must not swallow gh's stderr — a failed read has "
+        "to be distinguishable from an empty one"
+    )
+    assert "|| true" not in read_stmt, (
+        "`|| true` discards gh's exit status, which is what made a failed "
+        "read look like 'nobody has ever been asked'"
+    )
+    assert read_stmt.lstrip().startswith("if !"), (
+        "the timeline read's exit status must be tested, not discarded"
+    )
+    assert "exit 0" in read_stmt.split("then", 1)[-1].split("fi", 1)[0], (
+        "on a failed timeline read the step must request nobody and return"
+    )
+
+
+def test_no_two_teams_share_a_bare_slug():
+    """The ever-asked check compares BARE slugs, so they must be unique.
+
+    The step does `slug="${team##*/}"` and greps that against the timeline's
+    `.requested_team.slug`, which is also bare. Two configured teams with
+    the same name under different orgs (`pulumi/docs-tools` and
+    `pulumi-oss/docs-tools`) would therefore be indistinguishable: asking
+    one would permanently mark the other as already asked, and it would
+    never be requested on any PR.
+
+    This replaces a test that asserted each slug is `org/name` — which
+    `load_config` already rejects (routing.py's `'org/slug' team reference`
+    error, covered by its own self-test), on the very call this test makes.
+    It could not fail, while its name promised coverage of the workflow step
+    it never read.
+    """
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    bare: dict[str, str] = {}
+    for role, slug in cfg.teams.items():
+        name = slug.rpartition("/")[2]
+        assert name not in bare, (
+            f"teams.{role} ({slug}) and teams.{bare[name]} ({cfg.teams[bare[name]]}) "
+            f"share the bare slug {name!r}; the routing step's ever-asked "
+            "check cannot tell them apart"
+        )
+        bare[name] = role
+
+
+# ---- ownership overrides --------------------------------------------------
+
+
+@pytest.mark.parametrize("pattern,path,want", [
+    # `**/` is zero or more directories, INCLUDING none.
+    ("content/docs/**/get-started/", "content/docs/get-started/x.md", True),
+    ("content/docs/**/get-started/", "content/docs/iac/get-started/k8s/x.md", True),
+    ("content/docs/**/get-started/", "content/docs/ai/neo/get-started/x.md", True),
+    # ...but it does not leak sideways.
+    ("content/docs/**/get-started/", "content/docs/iac/concepts/stacks.md", False),
+    ("content/docs/**/get-started/", "content/blog/get-started/x.md", False),
+    # a get-started-ish sibling directory is not get-started
+    ("content/docs/**/get-started/", "content/docs/iac/get-started-old/x.md", False),
+    # subtree and single-segment rules still hold alongside it
+    ("layouts/partials/openapi/", "layouts/partials/openapi/a/b.html", True),
+    ("layouts/partials/openapi/", "layouts/partials/openapix/b.html", False),
+    ("scripts/*.sh", "scripts/a/b.sh", False),
+])
+def test_pattern_matcher_double_star(pattern, path, want):
+    assert bool(routing._pattern_to_regex(pattern).match(path)) is want
+
+
+def test_override_changes_the_owner_and_not_the_subject(live_config):
+    """The whole point of putting ownership in its own layer.
+
+    pulumi/docs#21723 was a Hugo bug blanking the Responses section of the
+    Cloud REST API reference. Its domain was RIGHT — it is a template and
+    wants the Hugo/dark-mode review criteria — and only the approver was
+    wrong. Reclassifying it would have fixed routing by breaking the review.
+    """
+    path = "layouts/partials/openapi/response-schema.html"
+    r = routing.resolve_lanes([path], mechanical=False, claims=False, config=live_config)
+    assert r.roles == {"tools"}            # was marketing
+    assert r.subjects[path] == "frontend"  # unchanged, so criteria are unchanged
+    assert r.overridden == {path: "tools"}
+    assert any("override:" in x and path in x for x in r.reasons)
+
+
+def test_get_started_routes_to_marketing_everywhere_it_lives():
+    """pulumi/docs#21718. Get Started is the marketing funnel, not general
+    docs, in all seven trees — and in an eighth the day someone adds it."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for prefix in ("content/docs", "content/docs/iac", "content/docs/esc",
+                   "content/docs/administration", "content/docs/deployments",
+                   "content/docs/ai/neo", "content/docs/discovery-governance/discovery",
+                   "content/docs/some-future-product"):
+        path = f"{prefix}/get-started/index.md"
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+        assert r.roles == {"marketing"}, path
+        assert r.subjects[path] == "docs", path
+
+
+def test_ordinary_paths_are_untouched_by_the_overrides():
+    """An override list that quietly re-owns the ordinary case is worse than
+    no override list."""
+    cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
+    for path, role in (("content/docs/iac/concepts/stacks.md", "docs-guild"),
+                       ("content/blog/p/index.md", "blog"),
+                       ("layouts/partials/blog/card/wide.html", "marketing"),
+                       ("theme/src/scss/main.scss", "marketing"),
+                       ("scripts/review-v3/sentinel.py", "tools")):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)
+        assert r.roles == {role}, path
+        assert r.overridden == {}, path
+
+
+def test_override_and_matrix_paths_union_in_a_mixed_diff(live_config):
+    r = routing.resolve_lanes(
+        ["layouts/partials/openapi/x.html", "content/docs/iac/concepts/stacks.md"],
+        mechanical=False, claims=False, config=live_config,
+    )
+    assert r.roles == {"tools", "docs-guild"}
+    assert set(r.overridden) == {"layouts/partials/openapi/x.html"}
+
+
+def test_override_wins_for_its_path_only(live_config):
+    """An overridden path must not also drag its subject into the matrix
+    pass — otherwise `layouts/partials/openapi/` would stack marketing on
+    top of tools and the override would add an approver instead of moving
+    one."""
+    r = routing.resolve_lanes(["layouts/partials/openapi/x.html"],
+                              mechanical=False, claims=False, config=live_config)
+    assert r.roles == {"tools"}
+    assert "marketing" not in r.roles
+
+
+def test_first_matching_override_wins(base_config):
+    base_config["overrides"] = [
+        {"paths": ["a/"], "role": "tools", "why": "first"},
+        {"paths": ["a/"], "role": "marketing", "why": "second, shadowed"},
+    ]
+    cfg, errors, _ = routing.validate_raw(base_config)
+    assert errors == []
+    assert routing.override_role(cfg, "a/x.md") == ("tools", "first")
+
+
+@pytest.mark.parametrize("entry,fragment", [
+    ({"paths": ["a/"], "role": "nope", "why": "x"}, "names unknown role"),
+    ({"paths": [], "role": "tools", "why": "x"}, "must be a non-empty list"),
+    ({"paths": ["/a/"], "role": "tools", "why": "x"}, "repo-root-relative"),
+    ({"paths": ["a/"], "role": "tools"}, "why is required"),
+    ({"paths": ["a/"], "role": "tools", "why": "x", "huh": 1}, "unknown key 'huh'"),
+])
+def test_override_validation(base_config, entry, fragment):
+    base_config["overrides"] = [entry]
+    _, errors, _ = routing.validate_raw(base_config)
+    assert any(fragment in e for e in errors), errors
+
+
+def test_overrides_are_optional(base_config):
+    base_config.pop("overrides", None)
+    cfg, errors, _ = routing.validate_raw(base_config)
+    assert errors == [] and cfg.overrides == []
+    assert routing.override_role(cfg, "anything.md") is None
+
+
+@pytest.fixture(scope="module")
+def tracked():
+    """Every tracked path, once per module rather than once per test."""
+    import subprocess
+    return subprocess.run(["git", "ls-files"], cwd=routing.REPO_ROOT,
+                          capture_output=True, text=True, check=True).stdout.split()
+
+
+def test_every_configured_path_pattern_matches_a_tracked_file(live_config, tracked):
+    """A pattern matching nothing is a typo or a moved directory, and silent.
+
+    Both pattern-bearing sections at once, and per PATTERN rather than per
+    entry. These were two tests in two modules: this one checked each
+    override entry with `any()` over its paths, so an entry with one live and
+    one dead pattern passed; the `staging_evidence` copy lived in
+    test_sentinel.py although every other staging test is here, and had the
+    stronger per-pattern assertion. A third section now gets the check for
+    free, which is the whole reason the check exists.
+    """
+    sections: list[tuple[str, str]] = [
+        ("staging_evidence.paths", pat)
+        for pat in live_config.staging_evidence.get("paths") or []
+    ]
+    for i, entry in enumerate(live_config.overrides):
+        sections += [(f"overrides[{i}].paths", pat) for pat in entry["paths"]]
+
+    # Compile once per pattern, not once per (pattern, tracked file): this
+    # comprehension used to rebuild a regex for each of ~12,700 paths.
+    dead = [f"{where}: {pat}" for where, pat in sections
+            if not any(routing._pattern_to_regex(pat).match(p) for p in tracked)]
+    assert not dead, (
+        "configured path patterns that match no tracked file:\n  "
+        + "\n  ".join(dead)
+    )

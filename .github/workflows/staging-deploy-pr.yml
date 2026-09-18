@@ -143,12 +143,21 @@ jobs:
 
       - name: Dispatch the staging deploy and hold the stack
         if: steps.gate.outputs.refused == 'false'
+        # See the note in staging-deploy-auto.yml: the head ref is
+        # author-controlled and must never be interpolated into the script.
+        # This job is the worse of the two — `id-token: write` plus an
+        # already-authenticated ESC session means an injection here can mint
+        # an OIDC token and read the org-scoped PULUMI_BOT_TOKEN out of ESC.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+          HEAD_SHA: ${{ steps.gate.outputs.head_sha }}
+          HEAD_REF: ${{ steps.gate.outputs.head_ref }}
         run: |
           scripts/review-v3/staging-deploy.sh \
-            --repo "${{ github.repository }}" \
-            --pr "${{ github.event.issue.number }}" \
-            --head-sha "${{ steps.gate.outputs.head_sha }}" \
-            --head-ref "${{ steps.gate.outputs.head_ref }}" \
+            --repo "$REPO" \
+            --pr "$PR_NUMBER" \
+            --head-sha "$HEAD_SHA" \
+            --head-ref "$HEAD_REF" \
             --announce
