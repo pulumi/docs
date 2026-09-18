@@ -34,21 +34,18 @@ Default to a template — it is the surest route to a clean first result. Walk
 the user through three choices, in this order, and do not guess any of them
 silently:
 
-1. Cloud: AWS, Azure, GCP, or Cloudflare.
+1. Cloud: AWS, Azure, or GCP.
 2. What to build. Lead with the minimal starter; offer the richer
    architectures after it:
    - Minimal starter (recommended) — the quickest way to see Pulumi work: a
      single-resource project (a storage bucket on AWS and GCP, a storage
-     account on Azure, a Workers KV namespace on Cloudflare).
+     account on Azure).
    - Static website
    - Serverless app
    - Container service
-
-   Offer only what exists for the chosen cloud: Cloudflare has no container
-   service, so do not offer it there.
 3. Language: TypeScript, Python, Go, C#, YAML, or HCL. Java is available only
-   for the minimal starter on AWS, Azure, and GCP — offer it only if the user
-   asks, never for Cloudflare or an architecture template.
+   for the minimal starter — offer it only if the user asks, never for an
+   architecture template.
 
 The template name is the minimal starter `<cloud>-<language>` (for example,
 `aws-typescript`) or an architecture `<use-case>-<cloud>-<language>` where
@@ -89,7 +86,7 @@ for the path the user chose:
 - Template: scaffold with the resolved name — the minimal starter
   `pulumi new <cloud>-<language>` (for example, `pulumi new aws-typescript`) or
   an architecture `pulumi new <use-case>-<cloud>-<language>` (for example,
-  `pulumi new static-website-cloudflare-python`). This produces a complete,
+  `pulumi new static-website-gcp-python`). This produces a complete,
   working project — the template is the result, so do not add resources unless
   the user asks. Walk the user through what it creates.
 - Custom: confirm the language (TypeScript, Python, Go, C#, Java, YAML, or
