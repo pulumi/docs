@@ -68,9 +68,11 @@ silently:
 The template name is the minimal starter `<cloud>-<language>` (for example,
 `aws-typescript`) or an architecture `<use-case>-<cloud>-<language>` where
 `<use-case>` is `static-website`, `serverless`, or `container` (for example,
-`static-website-aws-typescript`), all from github.com/pulumi/templates. Confirm
-the chosen template resolves before continuing; if a combination is missing,
-offer a neighboring one rather than stopping.
+`static-website-aws-typescript`). github.com/pulumi/templates is the source of
+truth for what exists — always use it, and never `pulumi template list` or
+Pulumi Cloud org templates, which the user may not have. `pulumi new` resolves
+these bare names from that repo; if one is missing, offer a neighboring
+template rather than stopping.
 
 If the user would rather describe their own infrastructure than pick a
 template, take that custom path: ask which cloud (AWS, Azure, GCP, or another
