@@ -368,6 +368,126 @@ def test_stances_survive_build_evidence(v3_with_stances, tmp_path):
     assert 'id="stances"' in page and "fastest path" in page
 
 
+# ---- verifier metadata on trail records ------------------------------------
+
+_TRAIL_META_KEYS = ("claim_id", "type", "confidence", "framing", "framing_note",
+                    "turn_cap_exhausted", "source_discipline_gate")
+
+
+def test_trail_metadata_carries_every_field_the_verdict_has():
+    got = cr._trail_verdict_metadata({
+        "claim_id": "c7", "type": "version", "confidence": "low",
+        "framing": "shifted", "framing_note": "  page says GA, source says preview  ",
+        "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data",
+        # Verifier bookkeeping the evidence object has no use for.
+        "model_usage": {"turns": 4}, "intuition_flag": "smells stale",
+    })
+    assert got == {
+        "claim_id": "c7", "type": "version", "confidence": "low",
+        "framing": "shifted", "framing_note": "page says GA, source says preview",
+        "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data",
+    }
+
+
+def test_trail_metadata_drops_malformed_values_instead_of_coercing():
+    """A bad optional field must not fail the whole evidence object's schema
+    validation — that would cost the review its publish over a debug aid."""
+    assert cr._trail_verdict_metadata({
+        "claim_id": "", "type": None, "confidence": "certain", "framing": "vibes",
+        "framing_note": 3, "turn_cap_exhausted": "yes", "source_discipline_gate": "  ",
+    }) == {}
+    assert cr._trail_verdict_metadata({"turn_cap_exhausted": False}) == {}
+    assert cr._trail_verdict_metadata({}) == {}
+
+
+def test_trail_metadata_redacts_the_framing_note():
+    got = cr._trail_verdict_metadata({"framing_note": "token ghp_" + "a" * 36 + " leaked"})
+    assert "ghp_" not in got["framing_note"] and "[REDACTED]" in got["framing_note"]
+
+
+def test_composed_trail_carries_verdict_metadata(v3_outputs):
+    _, _, ev = v3_outputs
+    verdicts = json.loads((ART / "verified-claims.json").read_text())["verdicts"]
+    by_id = {t["claim_id"]: t for t in ev["trail"]}
+    assert set(by_id) == {v["claim_id"] for v in verdicts}
+    for v in verdicts:
+        assert by_id[v["claim_id"]]["type"] == v["type"]
+        assert by_id[v["claim_id"]]["confidence"] == v["confidence"]
+    assert by_id["c4"]["framing_note"] == "widened denominator"
+
+
+def _run_build_evidence(author: str, brief: str, base: dict, tmp_path: Path) -> dict:
+    a, b, bj = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "base.json"
+    a.write_text(author); b.write_text(brief); bj.write_text(json.dumps(base))
+    out = tmp_path / "final.json"
+    proc = subprocess.run(
+        [sys.executable, str(HERE / "build-evidence.py"),
+         "--author-body", str(a), "--brief-body", str(b), "--base", str(bj),
+         "--output", str(out),
+         "--author-out", str(tmp_path / "a-clean.md"), "--brief-out", str(tmp_path / "b-clean.md")],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+    return json.loads(out.read_text())
+
+
+def _update_round(prior: dict, author: str, brief: str) -> dict:
+    """One `#update-review` round: apply-update rebuilds the evidence object
+    from the prior record (and validates it before returning)."""
+    up = {"schema": 1, "case": "mixed", "history_summary": "round trip",
+          "findings": [{"id": "F1", "action": "resolve", "annotation": "fixed in e7e8e9"}]}
+    sha = "c" * 40
+    a_out, b_out, state, report = au.apply(author, brief, up, head_sha=sha, actor="cam", auto=False)
+    return au.assemble_evidence(prior, a_out, b_out, state, up,
+                                repo="pulumi/docs", pr=999, head_sha=sha, run_id="t",
+                                timestamp=report["timestamp"])
+
+
+def _render_page(evidence: dict, tmp_path: Path) -> str:
+    src, out = tmp_path / "render-in.json", tmp_path / "e.html"
+    src.write_text(json.dumps(evidence))
+    proc = subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "review-v3" / "render-evidence-html.py"),
+         "--evidence", str(src), "--output", str(out)],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+    return out.read_text()
+
+
+def test_trail_metadata_round_trips_compose_to_update_lane(v3_outputs, tmp_path):
+    """compose → build-evidence → validate → apply-update → render: every
+    stage that touches the trail keeps the verifier metadata intact."""
+    author, brief, base = v3_outputs
+    assert any(k in t for t in base["trail"] for k in _TRAIL_META_KEYS)
+    final = _run_build_evidence(author, brief, base, tmp_path)
+    assert final["trail"] == base["trail"]
+    ve = _load("validate_evidence_for_trail_meta", REPO_ROOT / "scripts" / "review-v3" / "validate-evidence.py")
+    assert ve.validate_evidence(final) == []
+    updated = _update_round(final, author, brief)
+    assert updated["trail"] == base["trail"]
+    page = _render_page(updated, tmp_path)
+    assert "pass3 · statistic · low confidence" in page
+    assert "framing: widened denominator" in page
+
+
+def test_legacy_trail_without_metadata_still_round_trips(v3_outputs, tmp_path):
+    """Evidence objects already in S3 pre-date the metadata; an update round
+    over one must validate, carry the trail unchanged, and render."""
+    author, brief, base = v3_outputs
+    legacy = {**base, "trail": [{k: v for k, v in t.items() if k not in _TRAIL_META_KEYS}
+                                for t in base["trail"]]}
+    final = _run_build_evidence(author, brief, legacy, tmp_path)
+    assert final["trail"] == legacy["trail"]
+    ve = _load("validate_evidence_for_legacy_trail", REPO_ROOT / "scripts" / "review-v3" / "validate-evidence.py")
+    assert ve.validate_evidence(final) == []
+    updated = _update_round(final, author, brief)
+    assert updated["trail"] == legacy["trail"]
+    page = _render_page(updated, tmp_path)
+    assert "confidence</span>" not in page
+    assert '<span class="trail-route">pass3</span>' in page
+
+
 def test_empty_checks_sentinel_acknowledges_stances(v3_with_stances, tmp_path):
     """An empty ⚠️ table above a stances H4 must not say nothing needs a human
     eye (pulumi/docs#21369). All three emitters agree: apply-update's

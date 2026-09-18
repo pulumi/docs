@@ -945,6 +945,36 @@ jobs:
             --pr "$PR" --repo "$GITHUB_REPOSITORY" \
             --out .verified-claims.json \
             || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+
+      # Raw claim records for post-mortems. The evidence trail keeps a rendered,
+      # truncated view of each verdict; the questions a false `contradicted`
+      # raises — what `type` / `source_hint` the extractor assigned, which
+      # layer found the claim, why it routed to web search, what the
+      # pre-fetch actually returned — are only answerable from these files,
+      # and they vanished with the runner. Uploaded here rather than beside
+      # the other debug bundles so a later timeout or model failure can't
+      # lose them. Everything in them derives from the public diff, public
+      # web pages (unauthenticated fetch, 8 KB/URL × 30 URLs at most), and
+      # repo-scoped GITHUB_TOKEN reads.
+      - name: Upload claim artifacts
+        if: always() && steps.pr-context.outputs.pr_number != '' && steps.pr-context.outputs.skip_reason == ''
+        # Observability only — an upload hiccup must not fail the review.
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-claims-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            .candidate-claims.json
+            .verified-claims.json
+            .fetched-urls.json
+          # All dotfiles: upload-artifact skips hidden files unless this is
+          # set, and with if-no-files-found: ignore the bundle would come up
+          # empty without a word.
+          include-hidden-files: true
+          # A re-run attempt keeps the run id, so the name repeats.
+          overwrite: true
+          retention-days: 90
+          if-no-files-found: ignore
       # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
