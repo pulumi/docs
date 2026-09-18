@@ -19,7 +19,7 @@ tags:
 category: product
 
 ---
-[Pulumi Cloud](/product/pulumi-cloud/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.
+[Pulumi Cloud](/product/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.
 
 For a long time, one request has consistently come up from the Pulumi community: dark mode. Today, we’re announcing that this request is now available in Pulumi Cloud.
 

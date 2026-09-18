@@ -30,7 +30,7 @@ In addition to our three products, Pulumi’s platform incorporates three core c
 
 You can see this visually depicted here:
 
-[![Pulumi Platform](platform.png)](/product/pulumi-cloud)
+[![Pulumi Platform](platform.png)](/product/)
 
 We’ve now worked with 3,000 customers to help with their cloud journey and have listened to and solved the problems we regularly hear about. That includes Nvidia who is at the forefront of the AI revolution as well as [BMW](/case-studies/bmw/) who is reimagining their entire engineering mindset in a cloud-first world, both leveraging Pulumi. [Unity Games](/case-studies/unity/) now ships **5x faster** from code to cloud, and Tivity Health **saved 71%** of their cloud spend, automating everything and saving $6.5M annually.
 

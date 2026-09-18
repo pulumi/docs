@@ -25,7 +25,7 @@ social:
 
 AI agents do a lot of their work through CLIs. They're easier to call than HTTP APIs and they produce predictable output. Over the last few months our own CLI traffic has shifted from mostly people typing commands to people and agents running commands together, often in the same session.
 
-Today we're shipping a release built for both. The [Pulumi CLI](/docs/iac/cli/) is reorganized around three ideas: the right command should be the one you can guess, anything you can do in [Pulumi Cloud](/product/pulumi-cloud/) should also be doable from the terminal, and what comes back should be just as readable to an agent as it is to a person.
+Today we're shipping a release built for both. The [Pulumi CLI](/docs/iac/cli/) is reorganized around three ideas: the right command should be the one you can guess, anything you can do in [Pulumi Cloud](/product/) should also be doable from the terminal, and what comes back should be just as readable to an agent as it is to a person.
 
 <!--more-->
 
@@ -297,4 +297,4 @@ More on how it works, and what you can do with it, in the days ahead.
 
 A lot of what makes a developer tool worth using is in the details, and most of what's in [this release](/releases/agentic-infrastructure-era/) is exactly that, across the whole CLI, with humans and agents in mind.
 
-We'd love for you to [grab the latest release](/docs/get-started/download-install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.
+We'd love for you to [grab the latest release](/docs/install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.
