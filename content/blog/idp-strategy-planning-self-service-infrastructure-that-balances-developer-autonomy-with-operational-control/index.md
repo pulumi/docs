@@ -214,7 +214,7 @@ Too many platform teams create approval processes and manual checkpoints that co
 Guardrails are different.
 They start with the best practices and security built into the reusable abstractions. But even the most secure solutions need a safety net.
 This safety net is policy-as-code that runs automatically, preventing violations before deployment happens.
-When we work with customers on implementing [Pulumi CrossGuard](https://www.pulumi.com/crossguard/), we're not creating new friction. We're embedding security, compliance, and cost controls directly into the deployment process.
+When we work with customers on implementing [Pulumi Policies](/docs/insights/policy/), we're embedding security, compliance, and cost controls directly into the deployment process rather than creating new friction.
 The developer gets immediate feedback, and you get the assurance that nothing goes to production without meeting your standards.
 
 ### 5. Self-service
