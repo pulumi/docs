@@ -72,20 +72,23 @@ const vnet = new network.VirtualNetwork("my-vnet", {
 });
 ```
 
-### azure-native versioning
+### Azure API versions
 
-The Azure Native provider follows semantic versioning and has gone through three major versions since its
-introduction. The current major version is **v3**, and all new projects should target it. Earlier major
-versions are still supported for existing users:
+Azure's REST APIs are versioned per service, using date-based versions such as `2024-01-01` or
+`2025-04-01-preview`. Azure Native selects a default API version for each resource, and that default is
+what the SDKs expose and the [API reference docs](/registry/packages/azure-native/api-docs/) describe.
 
-| Version | Status | Registry |
-|---|---|---|
-| v3 (current) | Actively developed | [/registry/packages/azure-native/](/registry/packages/azure-native/) |
-| v2 | Supported, maintenance only | [/registry/packages/azure-native-v2/](/registry/packages/azure-native-v2/) |
-| v1 | Supported, maintenance only | Available via version selector on the registry page |
+When you need a different API version, for example to pin one for extra stability, to stay on an older
+version you cannot migrate off yet, or to reach a preview feature, you can generate a local SDK for that
+exact version:
 
-Major version upgrades are documented with migration guides on the registry page. Within a major version,
-upgrades are backward compatible and straightforward.
+```bash
+pulumi package add azure-native storage v20240101
+```
+
+Every API version Azure publishes is also reachable through the provider's generic resource type. For how
+default versions are chosen and how both of these approaches work, see the
+[Azure Native version guide](/registry/packages/azure-native/version-guide/).
 
 ## The Azure Classic provider
 

@@ -5,7 +5,8 @@
          link be the drill-down (used by Request Body). */}}
     {{ $maxDepth := 1 }}
     {{ if isset . "maxDepth" }}{{ $maxDepth = .maxDepth }}{{ end }}
-    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" .schema "openapi" .openapi) }}
+    {{ $openapi := .openapi }}
+    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" .schema "openapi" $openapi) }}
     {{ if $resolved.schemaName }}
         <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $resolved.schemaName | urlize }}/">{{ $resolved.schemaName }}</a></div>
     {{ end }}
@@ -14,11 +15,78 @@
             {{ partial "openapi/property-rows.html" (dict
                 "properties" $resolved.properties
                 "required" $resolved.required
-                "openapi" .openapi
+                "openapi" $openapi
                 "depth" 0
                 "maxDepth" $maxDepth
             ) }}
         </ul>
+
+    {{/* Bodies that are not objects have no `properties`, so without the branches below
+         they render as an empty Responses block — the endpoint's whole schema silently
+         disappears from the page. A bare enum is the worst case: its values and their
+         documented meanings are in the spec but never shown (e.g. GetDeploymentsStatus,
+         which returns a JobStatus directly rather than wrapped in an object). */}}
+    {{ else if $resolved.enum }}
+        <div class="api-param-enum">
+            <strong>Values:</strong>
+            {{ partial "openapi/enum-values.html" (dict "schema" $resolved.raw) }}
+        </div>
+
+    {{ else if $resolved.type }}
+        {{/* Array / map / scalar. The type notation mirrors the property type column in
+             openapi/property-rows.html so the two read the same way. */}}
+        {{ $itemSchemaName := "" }}
+        <div class="api-schema-label">Type:
+            <span class="api-param-badge api-param-type">
+                {{ if eq $resolved.type "array" }}
+                    {{ if isset $resolved.items "$ref" }}
+                        {{ $itemRefParts := split (index $resolved.items "$ref") "/" }}
+                        {{ $itemSchemaName = index $itemRefParts (sub (len $itemRefParts) 1) }}
+                        array[<a href="/docs/reference/cloud-rest-api/schema/{{ $itemSchemaName | urlize }}/">{{ $itemSchemaName }}</a>]
+                    {{ else if $resolved.items.type }}
+                        array[{{ $resolved.items.type }}]
+                    {{ else }}
+                        array
+                    {{ end }}
+                {{ else if eq $resolved.type "object" }}
+                    {{/* An object with no properties is a map (additionalProperties). */}}
+                    {{ with index $resolved.raw "additionalProperties" }}
+                        {{ if isset . "$ref" }}
+                            {{ $objRefParts := split (index . "$ref") "/" }}
+                            {{ $objSchemaName := index $objRefParts (sub (len $objRefParts) 1) }}
+                            map[string]<a href="/docs/reference/cloud-rest-api/schema/{{ $objSchemaName | urlize }}/">{{ $objSchemaName }}</a>
+                        {{ else if isset . "type" }}
+                            map[string]{{ .type }}
+                        {{ else }}
+                            object
+                        {{ end }}
+                    {{ else }}
+                        object
+                    {{ end }}
+                {{ else }}
+                    {{ $resolved.type }}
+                {{ end }}
+            </span>
+        </div>
+
+        {{/* For an array of objects, the item's fields are what the reader actually came for;
+             a bare "array[Foo]" label would just move the question one click away. */}}
+        {{ if and (gt $maxDepth 0) $itemSchemaName }}
+            {{ with index $openapi.components.schemas $itemSchemaName }}
+                {{ $item := partial "openapi/resolve-schema.html" (dict "schema" . "openapi" $openapi) }}
+                {{ if $item.properties }}
+                    <ul class="api-params">
+                        {{ partial "openapi/property-rows.html" (dict
+                            "properties" $item.properties
+                            "required" $item.required
+                            "openapi" $openapi
+                            "depth" 0
+                            "maxDepth" $maxDepth
+                        ) }}
+                    </ul>
+                {{ end }}
+            {{ end }}
+        {{ end }}
     {{ end }}
 {{ end }}
 {{ end }}
