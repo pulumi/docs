@@ -1,5 +1,3 @@
-registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
-registry/packages/azure/api-docs/voice/index.html|/registry/packages/azure/
 containers/index.html|/docs/integrations/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/
 docs/iac/guides/index.html|/docs/iac/
@@ -104,8 +102,13 @@ events/neo-in-a-docker-sandbox-eu/meta-square.png|/events/neo-in-a-docker-sandbo
 # legacy Copilot service (and its REST API) was retired in favor of Pulumi Neo.
 blog/pulumi-copilot-rest/index.html|/docs/ai/
 
-# The per-provider "How-to guides" indexes were retired from the Registry. The
-# blog posts that link them have no equivalent replacement page, so the old
-# paths point at the package landing pages instead of the prose being reworded.
-registry/packages/azure/how-to-guides/index.html|/registry/packages/azure/
-registry/packages/azure-native/how-to-guides/index.html|/registry/packages/azure-native/
+# Do NOT add `registry/...` sources to this file: they never fire. /registry is
+# proxied to the Registry's own CloudFront distribution (see infrastructure/index.ts),
+# so redirect rules published from this bucket are not consulted for those paths.
+# The Registry owns its redirects in pulumi/registry's redirects.js.
+#
+# The retired per-provider "How-to guides" indexes were previously mapped here
+# (registry/packages/azure{,-native}/how-to-guides/index.html) and kept 404ing
+# for exactly that reason; the blog links into them are now pointed straight at
+# /dev/examples/, where those guides actually live. The remaining Registry-side
+# breakage is tracked in pulumi/registry#12449.
