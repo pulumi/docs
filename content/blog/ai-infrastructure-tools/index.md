@@ -38,6 +38,8 @@ This guide covers both categories: the compute and MLOps stack in Part 1, and AI
 
 ### AI-powered infrastructure management tools
 
+If you're specifically evaluating AI agents that manage infrastructure rather than the broader AI-infrastructure landscape, see our dedicated roundup: [Best AI Agents for Infrastructure Management in 2026](/blog/best-ai-agents-infrastructure-management/).
+
 1. [Pulumi Neo](#pulumi-neo): infrastructure agent with policy automation
 1. [Firefly](#firefly): asset codification with an emerging agent layer
 1. [env zero](#env-zero): multi-IaC insights, now with an agent CLI
