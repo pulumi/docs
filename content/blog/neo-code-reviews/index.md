@@ -41,7 +41,7 @@ Normal code review agents can't reliably anticipate the impact an infrastructure
 
 Neo can review every pull request automatically, or only when someone mentions `@pulumi-neo`. Either way, it skips draft pull requests and those opened by bots by default.
 
-A review is a comment, so it informs the person approving the merge and sits alongside the required checks and branch protection you already enforce. Neo code reviews run inside the same governance as every other Neo task, with the [RBAC](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has set.
+A review is a comment, so it informs the person approving the merge and sits alongside the required checks and branch protection you already enforce. Neo code reviews run inside the same governance as every other Neo task, with the [RBAC](/docs/administration/concepts/rbac/), guardrails, and audit logging your organization has set.
 
 ![Neo code review on a GitHub pull request, showing a risk assessment and the resource changes the update would make](neo-code-review.png)
 
