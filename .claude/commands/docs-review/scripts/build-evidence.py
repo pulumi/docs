@@ -212,7 +212,11 @@ def _walk(body: str, headings: dict[str, str], where: str):
 
 ANCHOR_SLACK = 3  # mirrors auto-refresh-gate.SLACK_LINES; they must agree
 
-_DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
+# `b/` is optional so that a deletion's `+++ /dev/null` matches and clears the
+# current file. With `b/` required it never matched, `path` kept the previous
+# file, and the deleted file's `@@ -N,M +K,0 @@` header was appended to that
+# file's ranges as a bogus (K, K) span.
+_DIFF_FILE_RE = re.compile(r"^\+\+\+ (?:b/)?(.+)$")
 _DIFF_HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
@@ -241,13 +245,21 @@ def parse_diff_ranges(diff_text: str) -> dict[str, list[tuple[int, int]]]:
 
 
 def anchor_note(file: str, lines: list[int] | None,
-                diff_ranges: dict[str, list[tuple[int, int]]]) -> str | None:
+                diff_ranges: dict[str, list[tuple[int, int]]],
+                bucket: str | None = None) -> str | None:
     """Why this finding's anchor can't be trusted, or None when it can.
 
-    Only checked for a file the PR actually touches: a finding may legitimately
-    point outside the diff (a pre-existing issue, a caller in an untouched
-    file), and flagging those would be noise rather than signal.
+    Two kinds of finding legitimately point outside the diff and are never
+    judged here. A finding in a file the PR does not touch (a caller, a
+    doc that references the changed code). And a `preexisting` finding,
+    which is the 💡 "Pre-existing issues in touched files" bucket: a touched
+    file at an untouched line is its whole definition, so checking it would
+    mark every such entry `⚠︎ unverified` -- a false accusation against a
+    correct line reference, which is worse than the silence this check
+    exists to break.
     """
+    if bucket == "preexisting":
+        return None
     if not lines or not file or file not in diff_ranges:
         return None
     spans = diff_ranges[file]
@@ -322,7 +334,8 @@ def build(author_body: str, brief_body: str, base: dict,
             elif prior and prior.get("lines"):
                 record["lines"] = prior["lines"]
             if diff_ranges:
-                note = anchor_note(record["file"], record.get("lines"), diff_ranges)
+                note = anchor_note(record["file"], record.get("lines"), diff_ranges,
+                                   record["bucket"])
                 if note:
                     record["anchor_ok"] = False
                     record["anchor_note"] = note
@@ -730,8 +743,20 @@ def _self_test() -> int:
     note = anchor_note("a.md", [199], ranges)
     assert note and "L199 is outside this PR's changed lines in a.md" in note, note
     assert "5-8, 41-42" in note, note
-    # a file the PR never touches is not ours to judge (pre-existing findings)
+    # a file the PR never touches is not ours to judge
     assert anchor_note("untouched.md", [199], ranges) is None
+    # …nor is a pre-existing finding, which is a touched file at an untouched
+    # line by definition — judging it would mark every 💡 entry unverified (F1)
+    assert anchor_note("a.md", [199], ranges, "preexisting") is None
+    assert anchor_note("a.md", [199], ranges, "outstanding") is not None
+    # a deleted file must not spill its hunk onto the previous file (F2)
+    with_deletion = parse_diff_ranges("\n".join([
+        "diff --git a/a.md b/a.md", "--- a/a.md", "+++ b/a.md",
+        "@@ -5,3 +5,4 @@", " c", "+x", " c", " c",
+        "diff --git a/gone.md b/gone.md", "--- a/gone.md", "+++ /dev/null",
+        "@@ -1,50 +0,0 @@", "-bye",
+    ]))
+    assert with_deletion == {"a.md": [(5, 8)]}, with_deletion
     assert anchor_note("a.md", None, ranges) is None and anchor_note("", [1], ranges) is None
     # …and it rides the finding, without ever failing the build
     # F1 is at L8 (inside the hunk) and F2 at L9 (one past it, inside the
@@ -749,6 +774,13 @@ def _self_test() -> int:
     # no diff supplied → the check is inert and nothing is annotated
     ev_c, _, _ = build(author, brief, base)
     assert not any("anchor_ok" in f for f in ev_c["findings"])
+    # …and a finding the model rewrote as pre-existing is never flagged, even
+    # though its line is nowhere near the diff (F1)
+    pre = author.replace("| **F1** | `a.md` L8 | the model's edited fix prose |",
+                         "| **F1** | `a.md` L8 | **Pre-existing:** broken before this PR |")
+    ev_d, _, _ = build(pre, brief, base, diff_ranges={"a.md": [(100, 120)]})
+    pre_f = {f["id"]: f for f in ev_d["findings"]}["F1"]
+    assert pre_f["bucket"] == "preexisting" and "anchor_ok" not in pre_f, pre_f
 
     print("build-evidence self-test passed")
     return 0
