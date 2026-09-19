@@ -12,7 +12,6 @@ tags:
     - internal-developer-platform
     - platform-engineering
     - policy-as-code
-    - crossguard
     - compliance
     - security
     - self-service

@@ -9,7 +9,6 @@ feature_image: feature.png
 tags:
     - pulumi-cloud
     - policy-as-code
-    - crossguard
     - features
     - compliance
     - governance
