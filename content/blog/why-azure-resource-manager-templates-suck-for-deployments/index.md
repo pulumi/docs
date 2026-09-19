@@ -2,6 +2,7 @@
 title: "Why Azure Teams Are Moving from ARM Templates to .NET"
 allow_long_title: true
 date: 2025-08-22T01:41:10Z
+updated: 2026-09-17
 draft: false
 meta_desc: ARM slowing you down? Ditch the JSON pain and deploy Azure like a pro with Pulumi + C#. Faster, cleaner, and actually developer-friendly.
 authors:
@@ -132,4 +133,4 @@ If you’re already building with C# and .NET, you’re 90% of the way there. Wh
 
 - [Try Pulumi Open Source](https://app.pulumi.com/signup)
 - [Get Started with Azure + Pulumi Docs](https://www.pulumi.com/docs/iac/get-started/azure/)
-- [Azure Native: How-to-Guides](https://www.pulumi.com/registry/packages/azure-native/how-to-guides/)
+- [Browse the Pulumi examples catalog](/dev/examples/)
