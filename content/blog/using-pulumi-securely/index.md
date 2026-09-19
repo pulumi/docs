@@ -76,7 +76,7 @@ These are scoped to the entire Pulumi organization.  Use these for tooling with 
 
 #### Team Access Tokens
 
-Scoped to the [stack access](/docs/administration/concepts/access-tokens/#stacks) of a Pulumi team.  Use these when resources associated with different environments or services are commingled within a single cloud account or organization.  In general, it is often recommended to create a [Team Access Token](/docs/administration/concepts/access-tokens/) for each CI/CD pipeline, for example, `dev` vs `production`.
+Scoped to the [stack access](/docs/administration/concepts/access-tokens/#team-access-tokens) of a Pulumi team.  Use these when resources associated with different environments or services are commingled within a single cloud account or organization.  In general, it is often recommended to create a [Team Access Token](/docs/administration/concepts/access-tokens/) for each CI/CD pipeline, for example, `dev` vs `production`.
 
 #### Personal Access Tokens
 
