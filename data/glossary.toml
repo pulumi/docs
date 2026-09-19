@@ -144,7 +144,7 @@ link = "/docs/iac/concepts/packages/"
 [[entries]]
 term = "Pulumi Policies"
 description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Discovery](#pulumi-discovery), regardless of how they were created."
-link = "/docs/insights/policy/"
+link = "/docs/discovery-governance/policy/"
 
 [[entries]]
 term = "Preview"
@@ -189,7 +189,7 @@ link = "/docs/esc/"
 [[entries]]
 term = "Pulumi Discovery"
 description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and makes them available to [Pulumi Policies](#pulumi-policies) for evaluation."
-link = "/docs/insights/"
+link = "/docs/discovery-governance/"
 
 [[entries]]
 term = "Pulumi Neo"
@@ -239,7 +239,7 @@ link = "/docs/iac/concepts/providers/"
 [[entries]]
 term = "Resource Search"
 description = "The [Pulumi Discovery](#pulumi-discovery) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
-link = "/docs/insights/discovery/search/"
+link = "/docs/discovery-governance/discovery/search/"
 
 [[entries]]
 term = "Resources"

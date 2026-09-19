@@ -461,9 +461,9 @@ _<one sentence: what the PR is and what the review checked>_
 |---|---|---|
 | **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
 #### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
-**Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
-**Why:** <1-2 sentences>
-**Fix:** <exactly ONE required action; replacement text in a fenced block>
+- **Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
+- **Why:** <1-2 sentences>
+- **Fix:** <exactly ONE required action; replacement text in a fenced block at column 0 after the list>
 ### ❓ Questions for you
 | ID | Where | Finding |                  ← same row + block shape
 #### F3 · Do this
@@ -554,11 +554,13 @@ these rules:
    build-evidence files those on the evidence page and drops them from the
    published card. A finding that simply vanishes is a violation.
 1. **Fill every `#### F<n> · Do this` block** (they are scaffolded per
-   blocking finding): `**Line (verbatim):**` quotes the flagged file line
+   blocking finding). The block is a three-bullet list — keep the `- `
+   markers: `- **Line (verbatim):**` quotes the flagged file line
    exactly ONCE on the whole card — a paraphrase never appears inside
-   quotation marks; `**Why:**` is 1-2 sentences; `**Fix:**` states exactly
+   quotation marks; `- **Why:**` is 1-2 sentences; `- **Fix:**` states exactly
    ONE required action, first. Replacement text goes in a fenced block
-   (GitHub gives it a copy button). If deletion is the better fix, LEAD
+   at column 0 after the list (GitHub gives it a copy button); an
+   alternative is a fourth bullet, `- **If you'd rather keep it:**`. If deletion is the better fix, LEAD
    with deletion — a reword is offered only under a
    `**If you'd rather keep it:**` label, never as a competing imperative.
    A structural observation shared by several findings ("both new sentences
@@ -570,7 +572,21 @@ these rules:
 1. **New findings** are added as `| **F?** | … | … |` rows in the right
    section's table; build-evidence assigns the real id. An `F?` row gets NO
    detail block (ids aren't assigned yet) — put a terse action clause in
-   its Finding cell instead.
+   its Finding cell instead. When the section is empty (its body is the
+   italic `_Nothing …_` / `_No …_` sentinel), replace the sentinel with the
+   composer's table — exactly this header and separator, then your row:
+
+   ```text
+   | ID | Where | Finding |
+   |---|---|---|
+   | **F?** | `path/to/file.md` L12 | <finding> |
+   ```
+
+   Three columns, no leading status cell. (A deterministic pass,
+   `normalize-v3-draft.py`, repairs a four-column header or a stray
+   leading cell before validation and regenerates a deleted `#### F<n> ·
+   Do this` block from its row — but only those shapes; anything else the
+   validator refuses.)
 1. **⚠️ rows and the confidence table speak to a non-docs reader.** Every
    LOW/MEDIUM confidence row's Notes cell says whose problem it is — either
    "Not yours to check — <why>" or "→ see F<n>" — and uses reader terms

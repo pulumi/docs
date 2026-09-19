@@ -127,7 +127,7 @@ To enable this transition, enterprises are investing in:
 - **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads
 - **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers
 - **Strong identity, secrets, and access controls** as AI systems increase security exposure
-- **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
+- **Automation through infrastructure as code** to ensure reproducibility and reduce drift
 - **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
 As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as infrastructure as code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.

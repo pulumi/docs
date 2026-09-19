@@ -1,0 +1,4 @@
+{{- $stories := partialCached "customers/stories.html" . "customer-stories" -}}
+{{- $href := "/customers/" -}}
+{{- with index $stories (printf "%v" .) -}}{{- $href = .RelPermalink -}}{{- end -}}
+{{- return $href -}}

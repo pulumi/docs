@@ -1,6 +1,6 @@
 ---
 title: "Crossplane Alternative | Pulumi"
-meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. 170+ providers."
+meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. Hundreds of providers."
 layout: gads-template
 block_external_search_index: true
 
@@ -13,9 +13,8 @@ customer_quote:
     text: "If Kubernetes is AC power, Pulumi is like the universal travel adapter that lets us plug into all these resources and abstract away the complexities of each individual platform."
     author: "Raman Hariharan"
     title: "Director of Cloud Platform Engineering"
-    company: "Snowflake"
-    logo: snowflake
-    link: /case-studies/snowflake
+    customer: snowflake
+    link: /customers/snowflake
 
 overview:
     title: "Cloud + Kubernetes in One Workflow."
@@ -26,7 +25,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+                Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to hundreds of providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
@@ -34,14 +33,14 @@ key_features_above:
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and hundreds of providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: AI-powered infrastructure
                 description: |
                     Convert existing Terraform with `pulumi convert`, or hand the migration to Pulumi Neo. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-        
+
 key_features:
     items:
         - title: "Build infrastructure faster with reusable components"
@@ -171,50 +170,50 @@ stats:
         Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: "Community members"
+        description: "community members"
     company:
         number: "4,000+"
-        description: "Companies in production"
+        description: "companies in production"
     integration:
-        number: "170+"
-        description: "Cloud and service integrations"
+        number: "200+"
+        description: "cloud and service integrations"
 
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
         - name: Atlassian
-          link: /case-studies/atlassian/
-          logo: atlassian-wordmark
+          link: /customers/atlassian/
+          customer: atlassian
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
         - name: Elkjop
-          link: /case-studies/elkjop-nordic/
-          logo: elkjop-nordic
+          link: /customers/elkjop-nordic/
+          customer: elkjop-nordic
           description: |
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /case-studies/starburst/
-          logo: starburst
+          link: /customers/starburst/
+          customer: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 3x faster.
 
         - name: BMW
-          link: /case-studies/bmw/
-          logo: bmw
+          link: /customers/bmw/
+          customer: bmw
           description: |
             Enabled developers to deploy across hybrid cloud environments.
 
         - name: Lemonade
-          link: /case-studies/lemonade/
-          logo: lemonade
+          link: /customers/lemonade/
+          customer: lemonade
           description: |
             Standardized infrastructure architectures with reusable components.
 
         - name: Snowflake
-          link: /case-studies/snowflake/
-          logo: snowflake
+          link: /customers/snowflake/
+          customer: snowflake
           description: |
             Built a multi-cloud, Kubernetes-based platform to standardize all deployments
 ---

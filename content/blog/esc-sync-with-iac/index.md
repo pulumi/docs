@@ -29,7 +29,7 @@ Updating secrets manually across all these systems is not only tedious but also 
 
 Moreover, the lack of a centralized system makes it difficult to track where secrets are stored and who has access to them. This complicates security audits and compliance efforts. When a secret is compromised, the process of revoking and rotating it across multiple systems can be slow and disruptive, potentially leading to application downtime.
 
-## ESC Sync with Infrastructure as Code
+## ESC sync with infrastructure as code
 
 Using Pulumi building blocks like ESC and IaC, we can create a pattern where secrets and configuration can be centrally defined in ESC, and then automatically synced across the external platforms where they will be utilized.
 
@@ -179,4 +179,4 @@ Using Pulumi IaC to synchronize secrets and configuration across platform bounda
 
 Whether you're working with AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, GitHub Secrets or other platforms, Pulumi ESC provides a streamlined solution that ensures your secrets are always secure and up-to-date. It offers the convenience and security of a single source of truth for all your secrets, allowing you to focus on building and improving your applications rather than wrestling with secret management.
 
-We encourage you to explore [Pulumi's documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/get-started) and dive into the [Pulumi ESC Sync Examples repository](https://github.com/pulumi/esc-examples/tree/main/sync) to see how you can implement this powerful tool in your own projects. Join our vibrant [community on Slack](https://slack.pulumi.com/) to discuss your experiences, ask questions, and share insights. Together, we can make secret management simpler, more secure, and more efficient.
+We encourage you to explore [Pulumi's documentation](/docs/esc/get-started/) and dive into the [Pulumi ESC Sync Examples repository](https://github.com/pulumi/esc-examples/tree/main/sync) to see how you can implement this powerful tool in your own projects. Join our vibrant [community on Slack](https://slack.pulumi.com/) to discuss your experiences, ask questions, and share insights. Together, we can make secret management simpler, more secure, and more efficient.

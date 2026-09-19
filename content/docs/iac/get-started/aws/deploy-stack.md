@@ -54,8 +54,8 @@ Do you want to perform this update?
   details
 ```
 
-No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
-see more information about the proposed update like your bucket's properties.
+No changes have been made yet. Select `no` to decline the update, or `details` to see more
+information about the proposed update, like your bucket's properties.
 
 ### Performing the update
 
@@ -85,8 +85,8 @@ however, so the update will finish in just a few seconds.
 
 ### Using stack outputs
 
-The bucket ID can be accessed with the `pulumi stack output` command. You can use this to easily list
-the contents of your new bucket -- which of course will be empty:
+The bucket ID can be accessed with the `pulumi stack output` command. You can use it to list
+the contents of your new bucket, which will be empty:
 
 {{% choosable os "linux,macos" %}}
 
@@ -113,7 +113,7 @@ $ aws s3 ls s3://$(pulumi stack output bucket_name)
 {{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```powershell
-$ aws s3 ls ("s3://" + (pulumi stack output bucketName))
+> aws s3 ls ("s3://" + (pulumi stack output bucketName))
 ```
 
 {{% /choosable %}}
@@ -121,7 +121,7 @@ $ aws s3 ls ("s3://" + (pulumi stack output bucketName))
 {{% choosable language "python,hcl" %}}
 
 ```powershell
-$ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
+> aws s3 ls ("s3://" + (pulumi stack output bucket_name))
 ```
 
 {{% /choosable %}}
@@ -130,10 +130,10 @@ $ aws s3 ls ("s3://" + (pulumi stack output bucket_name))
 
 ### View your update on Pulumi Cloud
 
-If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com/signin) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
+If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. Each one opens your stack in the [Pulumi Cloud console](https://app.pulumi.com/), which shows detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
 
 <a href="/images/getting-started/console-update.png" target="_blank">
-    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
+    <img src="/images/getting-started/console-update.png" alt="A stack update with console output in the Pulumi Cloud console" />
 </a>
 
 Now that the S3 bucket has been provisioned, you'll update it to host a static website.

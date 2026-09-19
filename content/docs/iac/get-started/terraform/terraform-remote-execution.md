@@ -22,7 +22,7 @@ Remote execution gives you:
 - **Centralized credentials** — use [Pulumi ESC](/docs/esc/) for cloud provider credentials instead of configuring them on every developer's laptop
 - **VCS automation** — pushes and pull requests trigger runs automatically through [deployment settings](/docs/deployments/concepts/settings/)
 - **Run approvals** — VCS-triggered applies pause for confirmation before proceeding, with confirm and discard controls in the Pulumi Cloud console
-- **Policy enforcement** — [preventative policies](/docs/insights/policy/) evaluate against the plan and block applies that violate policy
+- **Policy enforcement** — [preventative policies](/docs/discovery-governance/policy/) evaluate against the plan and block applies that violate policy
 - **Team visibility** — run history, logs, and status are visible in the Pulumi Cloud console
 
 ## How it works
@@ -244,6 +244,9 @@ To set up VCS-triggered runs:
 1. Connect a [version control integration](/docs/integrations/version-control/) (GitHub, GitLab, Bitbucket, or Azure DevOps) to your Pulumi organization.
 1. Configure [deployment settings](/docs/deployments/concepts/settings/) on your stack, specifying the source repository and branch.
 1. Optionally, configure a [working directory](/docs/deployments/concepts/settings/source/) if your Terraform files are in a subdirectory.
+1. Optionally, if your organization has custom roles enabled, choose the [Pulumi Cloud role](/docs/deployments/concepts/settings/pulumi-cloud-role/) that runs use. The role is saved together with the source. To set only a role, leave the source set to **None**.
+
+Deployment settings for Terraform remote-execution stacks cover only the source and, if your organization has custom roles enabled, the Pulumi Cloud role. Dependency caching, skipping dependency installation, custom executor images, runner pools, OIDC, and environment variables don't apply to these stacks.
 
 ### Manual approval for VCS-triggered applies
 
@@ -255,9 +258,9 @@ To enable auto-apply (skip the approval step), set the `terraform:auto-apply` [s
 
 {{< pulumi-cloud "preventative-policies" />}}
 
-[Preventative policies](/docs/insights/policy/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
+[Preventative policies](/docs/discovery-governance/policy/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
 
-Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) — add your stack to a [policy group](/docs/insights/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 
 ## Control execution mode
 
@@ -298,7 +301,7 @@ If you are migrating from HCP Terraform (Terraform Cloud), the remote execution 
 | --- | --- |
 | Workspace variables for credentials | [Pulumi ESC](/docs/esc/) environments |
 | `hostname = "app.terraform.io"` | `hostname = "tf.pulumi.com"` |
-| Sentinel / OPA for policy | [Pulumi policy packs](/docs/insights/policy/) |
+| Sentinel / OPA for policy | [Pulumi policy packs](/docs/discovery-governance/policy/) |
 | Runs page in HCP UI | Runs view in Pulumi Cloud console (plan logs, apply logs, confirm/discard) |
 
 To migrate:

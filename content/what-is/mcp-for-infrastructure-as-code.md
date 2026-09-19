@@ -2,6 +2,7 @@
 title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 meta_desc: MCP connects AI agents to your cloud infrastructure. Learn what MCP for IaC means, how vendors are building it, and how Pulumi's MCP server works.
 type: what-is
+date: 2026-07-21T12:18:32-07:00
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 schema_type: auto
 authors: ["alex-leventer"]
@@ -45,7 +46,7 @@ MCP for infrastructure is a genuinely multi-vendor category, and it's moving fas
 | **Red Hat** | MCP servers for OpenShift and Ansible Automation Platform | Available for cluster operations and playbook-driven automation |
 | **Community / CNCF ecosystem** | Independent `k8s-mcp-server` projects exposing `kubectl`-equivalent operations | Multiple community implementations, varying in scope and maintenance |
 
-A few patterns hold across most of them. Well-designed servers distinguish read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and the ones built around a plan-and-apply workflow treat the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's 180+ providers rather than one cloud.
+A few patterns hold across most of them. Well-designed servers distinguish read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and the ones built around a plan-and-apply workflow treat the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's hundreds of providers rather than one cloud.
 
 The category is young enough that survey data captures both the appetite and the friction. Zuplo's "State of MCP" research counted over 17,000 publicly listed MCP servers, and a [companion survey of technical professionals](https://zuplo.com/blog/mcp-survey) conducted November-December 2025 found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, [Stacklok's "State of Model Context Protocol in Software 2026" report](https://stacklok.com/wp-content/uploads/2026/01/State-of-MCP-in-Software-2026_FINAL.pdf), published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
 
@@ -63,12 +64,25 @@ Pulumi ships MCP support in two forms, a local server and a hosted one, so teams
 
 The local server's tool names are prefixed to keep them unambiguous inside a host that may be connected to multiple servers at once: `pulumi-registry-list-resources`, `pulumi-registry-list-functions`, `pulumi-registry-get-resource`, `pulumi-registry-get-function`, `pulumi-registry-get-type`, `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-cli-stack-output`, `pulumi-cli-refresh`, `pulumi-resource-search`, and `neo-task-launcher`, plus a `deploy-to-aws` prompt for a common starting workflow. The hosted server exposes an unprefixed set with the same intent, including `get-stacks` and `resource-search`. Full parameter-level documentation lives on the [Pulumi MCP server docs page](/docs/ai/mcp-server/).
 
+### Pulumi's MCP server by the numbers
+
+| Metric | Value | As of |
+| --- | --- | --- |
+| `@pulumi/mcp-server` npm downloads, trailing 12 months | 73,102 | 2026-09-10 |
+| `@pulumi/mcp-server` npm downloads, last 30 days | 25,238 | 2026-09-10 |
+| `mcp/pulumi` Docker Hub pulls | 18,062 | 2026-09-12 |
+| Tools exposed, local server | 11 tools, 1 prompt | 2026-09-12 |
+| Tools exposed, hosted server | 14 tools, 6 prompts | 2026-09-12 |
+| Cloud providers reachable through Pulumi's IaC engine | [Hundreds](/registry/) | 2026-09-12 |
+
+Download and pull counts come from the [npm registry](https://www.npmjs.com/package/@pulumi/mcp-server) and [Docker Hub](https://hub.docker.com/r/mcp/pulumi) on the dates shown; the tool and prompt counts are the sets enumerated on the [Pulumi MCP server docs page](/docs/ai/mcp-server/). Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
+
 ## What can AI agents do with it?
 
 Connected through either transport, an agent can:
 
 - **Inspect your registry and cloud state.** Search Pulumi's registry of resources and providers, look up a resource's exact schema, and read current stack outputs, all without you switching out of your editor to check documentation or the CLI.
-- **Generate infrastructure in your language.** Because Pulumi programs are ordinary TypeScript, Python, Go, C#, Java, or YAML, an agent generates infrastructure the same way it generates application code: reading existing patterns in your repository, following your conventions, and producing a diff you review like any other pull request.
+- **Generate infrastructure in your language.** Because Pulumi programs are ordinary TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL, an agent generates infrastructure the same way it generates application code: reading existing patterns in your repository, following your conventions, and producing a diff you review like any other pull request.
 - **Run a preview before anything changes.** `pulumi-cli-preview` runs the same dry-run Pulumi engineers use manually, showing exactly which resources would be created, updated, or deleted, so the agent's proposal is inspectable before `pulumi-cli-up` executes it.
 - **Delegate multi-step work to Neo.** For tasks that span multiple files or require iterating on a plan, `neo-task-launcher` hands the job to [Neo](/product/neo/), Pulumi's infrastructure engineering agent, which can migrate Terraform to Pulumi, enforce policy, and manage multi-cloud deployments inside your existing workflows.
 
@@ -121,7 +135,9 @@ This is the most common question teams ask before connecting any agent to real c
 
 Independent researchers have already documented real attack classes. Invariant Labs disclosed Tool Poisoning Attacks, where malicious instructions are hidden inside a tool's description rather than its output, tricking an agent into taking unintended actions, and released MCP-Scan to detect them. Simon Willison and researchers at Snyk Labs have separately analyzed prompt injection as an MCP-specific vector, since a server's responses become part of an agent's context the same way any other tool output does. Two CVEs are publicly tracked: CVE-2025-54136, nicknamed "MCPoison," is remote code execution through silent modification of an already-approved MCP server configuration file, a config-trust issue rather than a tool-description poisoning one, and CVE-2025-49596 affects MCP-Inspector. MCPSecBench, an academic benchmark, catalogs 17 distinct attack types across 4 attack surfaces. In May 2026, the NSA published "Model Context Protocol (MCP): Security Design Considerations," warning that current mitigations offer only partial protection given the protocol's early security maturity, a caution worth taking at face value rather than downplaying.
 
-None of that is unique to Pulumi, and none of it should be read as an argument against connecting infrastructure to MCP; it's an argument for connecting it carefully. Pulumi's approach leans on controls that exist independent of MCP itself: every write operation goes through a preview step an engineer can inspect before approving, access tokens are scoped rather than broad, the hosted server authenticates through OAuth rather than shared secrets, and [policy as code](/docs/insights/policy/) can block a non-compliant change regardless of whether a human or an agent proposed it. Pulumi does not claim to solve MCP's protocol-level security questions; the discipline is treating an MCP-connected agent the same way you would treat a new, junior engineer with real access, that is, with previews, scoped permissions, and policy guardrails in the loop, not unchecked write access to production.
+None of that is unique to Pulumi, and none of it should be read as an argument against connecting infrastructure to MCP; it's an argument for connecting it carefully. Pulumi's approach leans on controls that exist independent of MCP itself: every write operation goes through a preview step an engineer can inspect before approving, access tokens are scoped rather than broad, the hosted server authenticates through OAuth rather than shared secrets, and [policy as code](/docs/discovery-governance/policy/) can block a non-compliant change regardless of whether a human or an agent proposed it. Pulumi does not claim to solve MCP's protocol-level security questions; the discipline is treating an MCP-connected agent the same way you would treat a new, junior engineer with real access, that is, with previews, scoped permissions, and policy guardrails in the loop, not unchecked write access to production.
+
+Richard Genthner, Chief Information Security Officer at Boost Insurance, frames the requirement from a security leader's seat: "To get to market faster, we require infrastructure intelligence that understands our environment, respects our guardrails, and keeps humans in the loop so we can move faster, safely."
 
 ## How does Neo relate to MCP?
 

@@ -38,8 +38,8 @@
 
   The first branch is what makes the cards true: it prices the opening tranche
   of resources low enough that $40 covers 500 and $400 covers 2,000, then
-  charges the list rate above that. Team at 500 resources is therefore exactly
-  $40, and at 1,000 it is $131.25.
+  charges the list rate above that. Essentials at 500 resources is therefore
+  exactly $40, and at 1,000 it is $131.25.
 */ -}}
 
 {{- $where := "data/pulumi_pricing.yaml" -}}
@@ -114,7 +114,7 @@
           "min" 0 "max" 250000 "step" 100 "start" 500)
     (dict "id" "esc_secrets"
           "label" "ESC secrets"
-          "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free, and secrets are billed for the whole month."
+          "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free. This estimate assumes a full month of secret usage; actual billing is hourly."
           "min" 0 "max" 50000 "step" 10 "start" 0)
     (dict "id" "neo_tokens"
           "label" "Neo tokens (millions)"
@@ -258,7 +258,7 @@
                      same role, read for a dark surface — 7.9:1 here. */}}
                 <div class="hidden relative lg:absolute lg:bottom-full lg:-left-8 lg:-right-8 mb-4 p-4 z-10 rounded-lg bg-service-black" data-calc-volume-note>
                     <p class="m-0 text-sm text-white">
-                        At this level, volume discounts and annual pricing can reduce your cost.
+                        At this level, volume discounts can reduce your cost. Annual commitment pricing is available on Pro and Enterprise only.
                         <a href="/contact/?form=sales" data-track="pricing-calculator-volume-note" class="text-violet-300 hover:underline">Contact us</a>
                         to learn how we can help you save as you scale.
                     </p>

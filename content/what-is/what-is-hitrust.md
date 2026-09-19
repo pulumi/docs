@@ -2,6 +2,7 @@
 title: What is HITRUST?
 meta_desc: "HITRUST CSF is a certifiable security framework that harmonizes HIPAA, NIST, ISO 27001, and more into one assessment. Learn the levels, scope, and process."
 type: what-is
+date: 2025-05-22T12:46:23-04:00
 page_title: "What is HITRUST?"
 authors: ["asaf-ashirov"]
 ---
@@ -124,11 +125,11 @@ Pulumi ships a HITRUST policy pack specifically for AWS:
 pulumi policy new aws-hitrust-compliance-policies-typescript
 ```
 
-The pack contains prebuilt [Pulumi policies](/docs/insights/policy/) that block non-compliant configurations in CI before they deploy. Source and customization details are in the [aws-hitrust-compliance-policies-typescript template](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript).
+The pack contains prebuilt [Pulumi policies](/docs/discovery-governance/policy/) that block non-compliant configurations in CI before they deploy. Source and customization details are in the [aws-hitrust-compliance-policies-typescript template](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript).
 
 More broadly, Pulumi helps with HITRUST control maturity in concrete ways:
 
-* **Policy maturity (level 1).** Encode security policy as code with [Pulumi Policies](/docs/insights/policy/). Policy lives in version control with the same review process as application code.
+* **Policy maturity (level 1).** Encode security policy as code with [Pulumi Policies](/docs/discovery-governance/policy/). Policy lives in version control with the same review process as application code.
 * **Procedure maturity (level 2).** The Pulumi program is itself the procedure. The same code is run by every engineer in every environment.
 * **Implementation maturity (level 3).** Pulumi applies the configuration. The state file is evidence that the control was deployed.
 * **Measurement maturity (level 4).** `pulumi preview` and policy reports give auditors continuous evidence of compliance status across accounts and clouds.
@@ -137,7 +138,7 @@ More broadly, Pulumi helps with HITRUST control maturity in concrete ways:
 * **Centralized secrets.** [Pulumi ESC](/product/secrets-management/) keeps secrets out of code and CI logs, with audit trails for every read.
 * **Reusable secure defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with HITRUST-aligned settings baked in (encryption, logging, restricted IAM), so product teams consume compliant infrastructure by default.
 
-[Get started with Pulumi](/docs/get-started/) to manage HITRUST-relevant cloud infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi](/docs/get-started/) to manage HITRUST-relevant cloud infrastructure as code in TypeScript, Python, Go, .NET, Java, YAML, or HCL.
 
 ## Frequently asked questions about HITRUST
 
@@ -183,7 +184,7 @@ A way to reuse controls operated by another party (a cloud provider, a SaaS vend
 
 ## Learn more
 
-Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [Pulumi policies](/docs/insights/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to accelerate the technical work. [Get started today](/docs/get-started/).
+Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [Pulumi policies](/docs/discovery-governance/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to speed up the technical work. [Get started today](/docs/get-started/).
 
 Related reading:
 

@@ -87,11 +87,11 @@ Here is a quick walkthrough of each layer and how Pulumi IDP constructs fit this
 **Layer 1: Infrastructure Layer** - This is your raw cloud resources: VMs, databases, networks, storage.
 These are the fundamental building blocks that exist in AWS, Azure, GCP, and other cloud providers.
 
-**Layer 2: Platform Layer** - This is where [Pulumi Components](https://www.pulumi.com/docs/iac/concepts/resources/components/) live.
+**Layer 2: Platform Layer** - This is where [Pulumi Components](/docs/iac/concepts/components/) live.
 Components take those raw infrastructure resources and package them into higher-level abstractions that encapsulate best practices, security policies, and organizational standards.
 For example, instead of manually configuring 15 different AWS resources to create a secure web application, you create a component that handles all that complexity and exposes just the configuration options that matter to your developers.
 
-**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](https://www.pulumi.com/docs/idp/get-started/private-registry/) come into play.
+**Layer 3: Developer Experience Layer** - This is where [Pulumi Templates](https://www.pulumi.com/templates/) and the [Private Registry](/docs/idp/concepts/private-registry/) come into play.
 Templates provide ready-to-deploy patterns that developers can customize, while the private registry makes everything discoverable and manageable at scale.
 
 In our workshop, we focused specifically on those top two layers because that's where the transformation happens. This is where you turn raw infrastructure into something developers can actually use productively without becoming infrastructure experts themselves.
@@ -181,7 +181,7 @@ Let me be clear about something: abstractions aren't about dumbing down infrastr
 The abstraction is really where you're hiding the complexity of the underlying infrastructure from your end users, but you're doing it intentionally to provide appropriate interfaces for different personas in your organization.
 
 We've seen too many platform teams get this wrong by either over-abstracting (creating black boxes that developers can't customize) or under-abstracting (exposing too much complexity).
-The sweet spot is creating [component resources](https://www.pulumi.com/docs/iac/concepts/resources/components/) that encapsulate your infrastructure patterns and best practices into reusable building blocks that can be consumed across different programming languages and deployment scenarios, while still providing escape hatches when needed.
+The sweet spot is creating [component resources](/docs/iac/concepts/components/) that encapsulate your infrastructure patterns and best practices into reusable building blocks that can be consumed across different programming languages and deployment scenarios, while still providing escape hatches when needed.
 
 ### 2. Blueprints
 
@@ -262,7 +262,7 @@ The workflow is beautifully simple: you publish standardized building blocks wit
 One pattern we see in every successful IDP implementation is that the platform reflects how the organization actually works.
 Your developers don't think in terms of individual stacks or resources. They think in terms of services, applications, and business functionality.
 
-That's why we built [Pulumi Services](https://www.pulumi.com/docs/idp/get-started/services/) - to let teams logically group stacks and ESC environments in ways that make sense to your organization.
+That's why we built [Pulumi Services](/docs/idp/concepts/services/) - to let teams logically group stacks and ESC environments in ways that make sense to your organization.
 Pulumi Services improve organization by helping your team model infrastructure in a way that's familiar - simplifying Day 2 operations by providing additional context like links to relevant dashboards, Slack channels and more.
 When something breaks at 2 AM, your on-call engineer needs to understand dependencies, track usage, and manage infrastructure in the context of the business services that are actually impacted.
 

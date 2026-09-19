@@ -20,10 +20,8 @@ use_cases:
 
         - name: Infrastructure CI/CD
           case_studies:
-            - name: Atlassian
-              link: /case-studies/atlassian/
-            - name: Panther Labs
-              link: /case-studies/panther-labs/
+            - customer: atlassian
+            - customer: panther-labs
           description: |
             Automate your infrastructure provisioning and management through a CI/CD pipeline. Run all infrastructure updates through a standard set of unit and integration tests, allowing reduced errors, greater security, and increased delivery velocity.
 
@@ -31,21 +29,17 @@ use_cases:
 
         - name: Terraform Migration
           case_studies:
-            - name: Lemonade
-              link: /case-studies/lemonade/
-            - name: Panther Labs
-              link: /case-studies/sans-institute/
+            - customer: lemonade
+            - customer: sans-institute
           description: |
             Modernize how your teams provision and manage infrastructure in order to adapt to the changes in technologies (containers, serverless), architectures (distributed), and software release automation associated with the cloud.
 
-            [Learn more about Terraform migration](/solutions/terraform-migration/)
+            [Learn more about Terraform migration](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 
         - name: Greenfield modern applications
           case_studies:
-            - name: Snowflake
-              link: /case-studies/snowflake
-            - name: Menta Network
-              link: /case-studies/menta-network
+            - customer: snowflake
+            - customer: menta-network
           description: |
             Use Pulumi to develop your next greenfield application that uses modern cloud technologies, like containers and serverless. Pulumi is designed for building
             these types of complex and distributed applications.
@@ -77,12 +71,9 @@ architectures:
             Manage clusters and deploy containers with ease for Kubernetes, Amazon ECS, Azure ACI,
             or Google GKE.
           case_studies:
-            - logo: sourcegraph
-              link: /case-studies/sourcegraph
-            - logo: credijusto
-              link: /case-studies/credijusto
-            - logo: snowflake
-              link: /case-studies/snowflake
+            - customer: sourcegraph
+            - customer: credijusto
+            - customer: snowflake
 
         - name: Serverless
           cta_link: /serverless
@@ -90,12 +81,9 @@ architectures:
           description: |
             Focus on business logic and managing infrastructure in the same familiar language you’re already using to write code.
           case_studies:
-            - logo: menta
-              link: /case-studies/menta-network
-            - logo: lemonade
-              link: /case-studies/lemonade
-            - logo: hyland
-              link: /case-studies/learning-machine
+            - customer: menta-network
+            - customer: lemonade
+            - customer: learning-machine
 
         - name: Server-based
           cta_link: /registry/packages/aws/how-to-guides/ec2-webserver
@@ -103,8 +91,7 @@ architectures:
           description: |
             Define and manage cloud infrastructure using server-based architectures, such as compute and database instances.
           case_studies:
-            - logo: menta
-              link: /case-studies/menta-network
+            - customer: menta-network
 
         - name: Kubernetes
           cta_link: /kubernetes
@@ -112,12 +99,9 @@ architectures:
           description: |
             The easiest way to deploy, configure, and monitor Kubernetes clusters on any cloud, with a single tool, and in your favorite language.
           case_studies:
-            - logo: sourcegraph
-              link: /case-studies/sourcegraph
-            - logo: credijusto
-              link: /case-studies/credijusto
-            - logo: snowflake
-              link: /case-studies/snowflake
+            - customer: sourcegraph
+            - customer: credijusto
+            - customer: snowflake
 
 personas:
     title: Pulumi

@@ -11,21 +11,18 @@ customer_logos:
   title: Leading engineering organizations are building with Pulumi
   logos:
     - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
+        - snowflake
+        - atlassian
+        - fauna
+        - ware2go
     - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
+        - mindbody
+        - sourcegraph
+        - fenergo
+        - skai
+        - lemonade
     - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
+        - webflow
+        - supabase
+        - ro
 ---

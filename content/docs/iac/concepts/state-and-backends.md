@@ -24,7 +24,7 @@ aliases:
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/iac/concepts/stacks/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
 
-Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or a local filesystem.
+Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or a local filesystem.
 
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 

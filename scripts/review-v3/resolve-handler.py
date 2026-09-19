@@ -272,6 +272,13 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
         if not prose_hits:
             return HandleResult(0, "no-op")
 
+        # Only the PR author owes an answer, so only the author gets the
+        # nudge. A maintainer's status note ("F2 is recorded as accepted —
+        # please proceed") mentions ids too; on #21395 it earned the
+        # maintainer a pointer telling them how to answer their own PR.
+        if actor != gh.get_pr_author():
+            return HandleResult(0, "prose-not-author")
+
         pointer_marker = POINTER_MARKER_TMPL.format(actor=actor)
         if find_marker_comment(comments, pointer_marker) is not None:
             return HandleResult(0, "pointer-already-sent")
@@ -352,9 +359,23 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
         now = datetime.now(timezone.utc)
         new_state = state
         for fid, cmd in targets:
+            # #21640: the PR author's own word on a judgment call reads
+            # exactly like a maintainer's answer once it lands as `accepted`
+            # / `refuted` / `deferred` / `not-applicable` — the same green,
+            # the same "nothing blocks merge". Collapse it into
+            # `author-accepted` so Sentinel still counts it as answered
+            # (the author DID answer) while the brief keeps the row visible
+            # for the human approver. `fixed` is a real code change, not a
+            # disposition to relabel, so it is excluded from the collapse.
+            disposition = cmd["disposition"]
+            original_disposition = None
+            if is_author and disposition in review_state.AUTHOR_COLLAPSIBLE:
+                original_disposition = disposition
+                disposition = "author-accepted"
             new_state = review_state.set_disposition(
-                new_state, fid, cmd["disposition"],
+                new_state, fid, disposition,
                 actor=actor, note=cmd["note"], bulk=cmd["bulk"], now=now,
+                original_disposition=original_disposition,
             )
 
         # Re-fetch immediately before writing — the lost-update race
@@ -483,7 +504,10 @@ def _self_test() -> int:
     r = handle(42, 9001, "alice", "/resolve F2 refuted: not actually a bug", gh)
     check("valid command exits 0", r.exit_code == 0 and r.outcome == "applied")
     state = review_state.parse_state(gh.comments[author_id]["body"])
-    check("F2 recorded", state["findings"]["F2"]["disposition"] == "refuted")
+    # #21640: alice is the PR author, so her own "refuted" collapses into
+    # "author-accepted" with "refuted" preserved as original_disposition.
+    check("F2 recorded", state["findings"]["F2"]["disposition"] == "author-accepted")
+    check("F2 original disposition preserved", state["findings"]["F2"]["original_disposition"] == "refuted")
     check("actor recorded", state["findings"]["F2"]["actor"] == "alice")
     check("reaction added", gh.reactions == [(9001, "+1")])
 
@@ -498,8 +522,10 @@ def _self_test() -> int:
         r = handle(42, 9010, "alice", "/resolve F3 accepted: internal figure, shipping as-is", gh)
         check("fixture resolve applies", r.exit_code == 0 and r.outcome == "applied")
         check("author header recounted", "— 2 items block merge" in gh.comments[author_id]["body"])
+        # #21640: alice is the PR author, so her "accepted" collapses into
+        # "author-accepted", surfaced distinctly on the brief.
         check("brief Waiting block shows the answer",
-              "✋ accepted as-is by the author" in gh.comments[brief_id]["body"]
+              "author-accepted (accepted)" in gh.comments[brief_id]["body"]
               and "(1 more is answered — see State)" in gh.comments[brief_id]["body"])
 
     # -- bulk all with note applies to F1..high_water, bulk flags ------------
@@ -510,7 +536,8 @@ def _self_test() -> int:
     state = review_state.parse_state(gh.comments[author_id]["body"])
     check("bulk covers F1..F3", set(state["findings"]) == {"F1", "F2", "F3"})
     check("bulk entries flagged", all(e["bulk"] for e in state["findings"].values()))
-    check("bulk disposition applied", all(e["disposition"] == "accepted" for e in state["findings"].values()))
+    # #21640: alice is the PR author, so a bulk "accepted" also collapses.
+    check("bulk disposition applied", all(e["disposition"] == "author-accepted" for e in state["findings"].values()))
 
     # -- malformed command -> RESOLVE_ERRORS reply, state untouched ----------
     gh = StubGh(pr_author="alice")
@@ -533,25 +560,24 @@ def _self_test() -> int:
     check("state untouched by out-of-range id", gh.comments[author_id]["body"] == original_body)
     check("no reaction on full rejection", gh.reactions == [])
 
-    # -- prose answer -> pointer once; second prose by same actor -> no repeat
+    # -- prose answer by the author -> pointer once; second -> no repeat -----
     gh = StubGh(pr_author="alice")
     gh.seed_comment(_author_body(3))
-    r1 = handle(42, 9005, "bob", "I think F2 is wrong because the docs say otherwise", gh)
-    check("first prose hit posts a pointer", r1.outcome == "pointer-sent")
-    pointer_marker = POINTER_MARKER_TMPL.format(actor="bob")
+    r1 = handle(42, 9005, "alice", "I think F2 is wrong because the docs say otherwise", gh)
+    check("first prose hit by the author posts a pointer", r1.outcome == "pointer-sent")
+    pointer_marker = POINTER_MARKER_TMPL.format(actor="alice")
     first_count = sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"])
     check("exactly one pointer posted", first_count == 1)
-    r2 = handle(42, 9006, "bob", "actually F2 is still wrong, see above", gh)
-    check("second prose by same actor is a no-op", r2.outcome == "pointer-already-sent")
+    r2 = handle(42, 9006, "alice", "actually F2 is still wrong, see above", gh)
+    check("second prose by the author is a no-op", r2.outcome == "pointer-already-sent")
     second_count = sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"])
-    check("still exactly one pointer for bob", second_count == 1)
+    check("still exactly one pointer for alice", second_count == 1)
 
-    # -- different actor gets their own pointer -------------------------------
-    r3 = handle(42, 9007, "carol", "F2 looks wrong to me too", gh)
-    check("a different actor gets their own pointer", r3.outcome == "pointer-sent")
+    # -- anyone else mentioning an id gets nothing -----------------------------
+    r3 = handle(42, 9007, "carol", "F2 is recorded as accepted — please proceed", gh)
+    check("a non-author's prose gets no pointer", r3.outcome == "prose-not-author")
     carol_marker = POINTER_MARKER_TMPL.format(actor="carol")
-    check("carol's pointer exists", find_marker_comment(gh.list_issue_comments(), carol_marker) is not None)
-    check("bob's pointer count unaffected", sum(1 for c in gh.list_issue_comments() if pointer_marker in c["body"]) == 1)
+    check("no pointer posted for carol", find_marker_comment(gh.list_issue_comments(), carol_marker) is None)
 
     # -- non-author without write -> refused, state untouched -----------------
     gh = StubGh(pr_author="alice", permissions={"mallory": "read"})
@@ -597,7 +623,8 @@ def _self_test() -> int:
     check("race scenario applies", r.exit_code == 0)
     final_state = review_state.parse_state(gh.comments[author_id]["body"])
     check("F2 (concurrent) survives", final_state["findings"]["F2"]["disposition"] == "fixed")
-    check("F3 (ours) survives", final_state["findings"]["F3"]["disposition"] == "refuted")
+    # #21640: alice is the PR author, so her own "refuted" collapses.
+    check("F3 (ours) survives", final_state["findings"]["F3"]["disposition"] == "author-accepted")
 
     # -- --dry-run writes nothing -----------------------------------------------
     gh = StubGh(pr_author="alice", dry_run=True)

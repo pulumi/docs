@@ -381,7 +381,7 @@ Every package in the Pulumi Registry supports all Pulumi programming languages, 
 
 Pulumi’s users love managing __*all*__ of their cloud infrastructure using Pulumi, and that includes managing the state of the [Pulumi Service](/product/pulumi-service/) itself.
 
-Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](https://www.pulumi.com/docs/pulumi-cloud/accounts/#access-tokens), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
+Today, we released a new [Pulumi provider for the Pulumi Service](/registry/packages/pulumiservice/), supporting configuration of [Teams](/docs/pulumi-cloud/access-management/teams/), [Access Tokens](/docs/administration/concepts/access-tokens/), [Stack Tags](/docs/iac/cli/commands/pulumi_stack_tag/) and [Webhooks](/docs/pulumi-cloud/webhooks/) using infrastructure as code.
 
 For example, you can create a webhook that is notified whenever a Pulumi Update completes, and log it using an AWS Lambda, with just a few lines of code using the new Pulumi Service provider along with the API Gateway package.
 
@@ -427,7 +427,7 @@ Pulumi's Universal Infrastructure as Code platform supports the widest range of 
 
 With support for a broad range of languages - from the enterprise software engineering features of Java, to the simple declarative interface of Pulumi YAML - Pulumi scales from the simplest cloud use cases up into the most complex cloud infrastructure being managed today, and bridges the gap between cloud platform teams, operations teams, and application development teams.
 
-With support for more than 80 cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider.  And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
+With support for more than 80 cloud and SaaS providers, Pulumi can be used across multi-cloud workloads, and to coordinate the entire range of cloud infrastructure and managed services that define your cloud application - not just a single cloud provider. And with high level components for AWS from both Pulumi Crosswalk for AWS and AWS CDK on Pulumi, developers working in AWS have the richest set of high level infrastructure building blocks available for productively composing well-architected cloud infrastructure on AWS.
 
 To learn more about each of the new features - check out these blog posts with more details:
 

@@ -29,7 +29,7 @@ There are several reasons why you might want to write a dynamic resource provide
 - You want to create some new custom resource types.
 - You want to use a cloud provider that Pulumi doesn't support.
 
-All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `update` and `delete` functions as well. Note that `read` is not currently functional for dynamic providers. For the full interface, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
+All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `update` and `delete` functions as well. For the full interface, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
 
 For example, if creating a dynamic resource provider for WordPress, you would probably want to create new blogs, update existing blogs, and destroy them. The mechanics of how these operations happen would be essentially the same as if you used one of the standard resource providers. The difference is that the calls that would've been made on the standard resource provider by the Pulumi engine would now be made on your dynamic resource provider and it, in turn, would make the API calls to WordPress.
 
@@ -101,11 +101,11 @@ We can now create instances of the new `MyResource` resource type in our program
 
 Specifically:
 
+1. In all cases, Pulumi first calls the check method with the resource arguments to give the provider a chance to verify that the arguments are valid.
 1. If Pulumi determines the resource has not yet been created, it will call the create method on the resource provider interface.
 1. If another Pulumi deployment happens and the resource already exists, Pulumi will call the diff method to determine whether a change can be made in place or whether a replacement is needed.
 1. If a replacement is needed, Pulumi will call create for the new resource and then call delete for the old resource.
 1. If no replacement is needed, Pulumi will call update.
-1. In all cases, Pulumi first calls the check method with the resource arguments to give the provider a chance to verify that the arguments are valid.
 1. If Pulumi needs to read an existing resource without managing it directly, it will call read. (Note: `read` is not currently implemented for dynamic providers.)
 
 For details on each of these functions, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
@@ -127,7 +127,7 @@ Dynamic providers are deliberately lightweight, and that comes with trade-offs. 
 - **Function serialization limits.** Provider methods are serialized to run in a separate process, which limits what code they can capture. See [function serialization](/docs/iac/concepts/functions/function-serialization/).
 - **No pnpm support (TypeScript).** Dynamic providers in TypeScript are incompatible with projects using pnpm as a package manager. Use npm or yarn instead. See [pulumi/pulumi#9085](https://github.com/pulumi/pulumi/issues/9085).
 - **No Bun runtime support (TypeScript).** Dynamic providers are not supported with the Bun runtime (`runtime: bun`), because they depend on function serialization, which requires Node.js v8/inspector APIs that Bun [does not fully implement yet](https://bun.com/docs/runtime/nodejs-compat#nodeinspector). Use `runtime: nodejs` instead.
-- **Awkward policy authoring.** All dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript or `pulumi-python:dynamic:Resource` for Python), so [Pulumi Policy Packs](/docs/insights/policy/) must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/insights/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers).
+- **Awkward policy authoring.** All dynamic resources share the same resource type (`pulumi-nodejs:dynamic:Resource` for TypeScript or `pulumi-python:dynamic:Resource` for Python), so [Pulumi Policy Packs](/docs/discovery-governance/policy/) must identify specific dynamic providers by checking for unique properties. See [Writing policies for dynamic providers](/docs/discovery-governance/policy/policy-packs/authoring/#writing-policies-for-dynamic-providers).
 
 ## Authoring a dynamic provider
 

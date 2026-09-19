@@ -25,7 +25,7 @@ Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerf
 
 Platform engineers and other centralized teams curate an infrastructure source of truth by authoring and publishing components and templates to the private registry. Templates and components are codified with security, compliance, and operational standards to ensure golden paths are hardened from the beginning.
 
-Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [Pulumi Components](/docs/iac/concepts/components/), and [Pulumi Templates](/docs/idp/concepts/organization-templates/). You can also learn about securing artifacts with [Pulumi ESC](/docs/esc/) and ensuring compliance and standards with [Pulumi Policies](/docs/insights/discovery/get-started/add-policies/).
+Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [Pulumi Components](/docs/iac/concepts/components/), and [Pulumi Templates](/docs/idp/concepts/organization-templates/). You can also learn about securing artifacts with [Pulumi ESC](/docs/esc/) and ensuring compliance and standards with [Pulumi Policies](/docs/discovery-governance/discovery/get-started/add-policies/).
 
 ## Day 1 - Provision infrastructure through flexible workflows
 

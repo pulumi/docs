@@ -30,7 +30,7 @@ Most Pulumi providers fall into one of two implementation approaches:
 - **Bridged providers** take a Terraform or OpenTofu provider as an underlying dependency and use the [Pulumi Terraform Bridge](https://github.com/pulumi/pulumi-terraform-bridge) to translate the underlying provider's schema into a Pulumi schema. The [AWS](/registry/packages/aws) and [Google Cloud](/registry/packages/gcp) providers are examples.
 - **Native providers** are not bridged. They are generated from a cloud or service's API specification, which produces both the resource definitions and the CRUD calls that manage those resources. The [Azure Native](/registry/packages/azure-native) and [Kubernetes](/registry/packages/kubernetes) providers are examples.
 
-Some providers are also **parameterized providers**, accepting parameters at install time to generate a local SDK in the language of your Pulumi program. The [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) is a parameterized bridged provider that can wrap any Terraform or OpenTofu provider, even ones without a pre-built Pulumi package. The [Azure Native](/registry/packages/azure-native) provider supports parameters to generate an SDK that targets a specific Azure API version, useful because Azure publishes many API versions for a given service. See [Installing a Parameterized Provider](#installing-a-parameterized-provider-via-pulumi-package-add) for details.
+Some providers are also **parameterized providers**, accepting parameters at install time to generate a local SDK in the language of your Pulumi program. The [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) is a parameterized bridged provider that can wrap any Terraform or OpenTofu provider, even ones without a pre-built Pulumi package. The [Azure Native](/registry/packages/azure-native) provider supports parameters to generate an SDK that targets a specific Azure API version, useful because Azure publishes many API versions for a given service, and the [Kubernetes](/registry/packages/kubernetes) provider uses them to generate typed SDKs for [custom resource definitions](/registry/packages/kubernetes/how-to-guides/typed-customresources-with-provider-extensions/). See [Installing a Parameterized Provider](#installing-a-parameterized-provider-via-pulumi-package-add) for details.
 
 Pulumi also supports **[dynamic providers](/docs/iac/concepts/providers/dynamic-providers/)** in TypeScript and Python, which let you declare custom resources inline within a Pulumi program without authoring or installing a separate provider package.
 
@@ -42,10 +42,10 @@ Some organizations also maintain their own private providers, though this is rel
 
 ## Installing providers
 
-There are two methods for installing a provider and using it in your Pulumi program:
+You can install a provider and use it in your Pulumi program in two ways:
 
 1. **Adding a reference to a provider's SDK using a package manager** in the language of your Pulumi program (e.g., npm in Node.js). This method is more common and is used for nearly all packages in the [Pulumi Registry](/registry).
-1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry in your Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
+1. **Using the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command**. This method is most commonly used for [parameterized providers](https://pulumi-developer-docs.readthedocs.io/latest/docs/architecture/providers/parameterized.html), such as the [Any Terraform Provider](/registry/packages/terraform-provider). The `pulumi package add` command generates a local SDK on disk (as opposed to downloading a pre-generated SDK from a package feed like npm) and allows you to consume any provider in the OpenTofu registry (or any Terraform-registry-compatible source) in your Pulumi program, even if there is no corresponding provider in the Pulumi Registry.
 
 ### Installing a provider via a package manager
 
@@ -57,11 +57,11 @@ The most common method of installing a provider is to use your language's packag
 - .NET: `Pulumi.Aws`
 - Java: `com.pulumi.aws`
 
-After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. When you first run `pulumi preview` or `pulumi up`, the Pulumi CLI will install any required providers that are not already in your plugin cache.
+After installing the provider using your package manager, you reference the provider in your Pulumi program to define the desired state of the resources for that provider. The first time you run `pulumi preview` or `pulumi up`, the Pulumi CLI installs any required providers that are not already in your plugin cache.
 
 ### Installing a parameterized provider via `pulumi package add`
 
-Parameterized providers allow you to generate a local provider SDK in the language of your Pulumi program. This method of consuming a provider is most commonly applicable when a pre-built provider SDK does not exist for a given cloud provider, SaaS service, or on-prem device, but a provider does exist in [the OpenTofu registry](https://search.opentofu.org). The [Any Terraform Provider](/registry/packages/terraform-provider) is a parameterized provider that provides this capability.
+Parameterized providers accept parameters at install time and generate a local provider SDK in the language of your Pulumi program. The [Any Terraform Provider](/registry/packages/terraform-provider) is one of them: its parameter is a Terraform or OpenTofu provider, and it's how you use a provider that has no Pulumi provider at all — no plugin and no SDK — because a provider for the cloud, SaaS service, or on-prem device you need exists only in [the OpenTofu registry](https://search.opentofu.org) or another Terraform-registry-compatible source. Other parameterized providers specialize a provider that already exists: [Azure Native](/registry/packages/azure-native) generates an SDK for a specific Azure API version, and [Kubernetes](/registry/packages/kubernetes) generates typed SDKs for custom resource definitions.
 
 For example, to generate a local SDK for the [`hashicorp/random` provider](https://search.opentofu.org/provider/hashicorp/random/latest):
 
@@ -78,7 +78,7 @@ This command does two things:
 In order to make sure Pulumi users are aware of the Any Terraform Provider's capabilities, Pulumi has included select, popular providers that can be consumed in Pulumi via the Any Terraform Provider in the Pulumi Registry, such as [The Honeycomb provider](/registry/packages/honeycombio/).
 {{% /notes %}}
 
-The generated SDK will include a `.gitignore` so it can be safely committed to version control without including all of the SDK's dependencies. The SDK installation process also downloads the provider binary to a shared location on your local system outside of the working directory. The binary is cached, so it will not need to be downloaded more than once, and is not committed to version control.
+The generated SDK includes a `.gitignore` so you can safely commit it to version control without the SDK's dependencies. The SDK installation process also downloads the provider binary to a shared location on your local system outside of the working directory. The binary is cached, so it downloads only once, and is not committed to version control.
 
 #### About provider packages in the project configuration file
 
@@ -167,7 +167,7 @@ When specifying default provider configuration, be sure to pay attention to whet
 
 #### Example: Setting the region on the default AWS provider
 
-To see how default provider configuration works, let's look at a detailed example. If you run this CLI command:
+To see how default provider configuration works, work through this detailed example. First, run this CLI command:
 
 ```bash
 pulumi config set aws:region us-west-2
@@ -249,13 +249,21 @@ It creates a single EC2 instance in the us-west-2 region, no matter what the `AW
 
 ### Explicit provider configuration
 
-Explicit providers are Pulumi resources themselves and take Pulumi inputs as configuration values. This enables powerful scenarios that aren't possible with default providers. For example, you can create a Kubernetes cluster and then immediately deploy resources to that cluster in the same Pulumi program. This works because the kubeconfig of the newly created cluster (a Pulumi output) can be passed directly to the `kubeconfig` argument of an explicit Kubernetes provider (which accepts Pulumi inputs). The explicit provider can then be assigned to resources that should be deployed to the newly provisioned cluster. This scenario is _only_ possible by using explicit providers: We cannot use the default Kubernetes provider because we don't know what its kubeconfig should be until after the cluster is created.
+Explicit providers are Pulumi resources themselves and take Pulumi inputs as configuration values. This enables powerful scenarios that aren't possible with default providers. For example, you can create a Kubernetes cluster and then immediately deploy resources to that cluster in the same Pulumi program. This works because the kubeconfig of the newly created cluster (a Pulumi output) can be passed directly to the `kubeconfig` argument of an explicit Kubernetes provider (which accepts Pulumi inputs). The explicit provider can then be assigned to resources that should be deployed to the newly provisioned cluster. This scenario is _only_ possible with explicit providers: the default Kubernetes provider can't be used here because its kubeconfig isn't known until after the cluster is created.
 
 Default provider configuration suits the majority of Pulumi programs, but some have requirements it can't meet, such as deploying to multiple AWS regions simultaneously. You declare an explicit provider by instantiating the relevant package’s `Provider` type and passing it as the `provider` option on each resource that needs to use it. For example, the following configuration and program creates an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
 {{% notes type="info" %}}
-**Note:** This example for AWS does not apply to Azure which provides access to all regions regardless of the default region defined in your Pulumi program. That means you don't need to explicitly create and configure providers for each region when working with Azure. You can simply specify the region in the resource definition itself.
+**Note:** This example for AWS does not apply to Azure which provides access to all regions regardless of the default region defined in your Pulumi program. That means you don't need to explicitly create and configure providers for each region when working with Azure. You can specify the region in the resource definition itself.
 {{% /notes %}}
+
+The listener's `us-west-2` region comes from the default AWS provider, so set that region in your stack configuration first:
+
+```bash
+pulumi config set aws:region us-west-2
+```
+
+Then deploy the following program, which uses an explicit provider for the certificate:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -456,19 +464,13 @@ resources:
 
 {{< /chooser >}}
 
-The `us-west-2` region for the load balancer listener comes from the default AWS provider's stack configuration:
-
-```bash
-pulumi config set aws:region us-west-2
-```
-
 {{% notes type="info" %}}
 Explicit providers don't automatically inherit configuration values set on the default
-provider of the same type. In the example above, if `aws:profile`, `aws:assumeRole`, or
+provider of the same type. In this example, if `aws:profile`, `aws:assumeRole`, or
 `aws:allowedAccountIds` were set in stack configuration for the default AWS provider, the
 `useast1` explicit provider would still need those same values passed to it directly; it
 starts from an empty configuration rather than copying the default provider's settings.
-If several explicit providers (or an explicit provider and the default provider) need to
+If multiple explicit providers (or an explicit provider and the default provider) need to
 share credentials or account-level settings, read those values once from your stack
 configuration and pass them to each provider explicitly, rather than relying on any
 implicit inheritance.
@@ -621,7 +623,7 @@ resources:
 While default providers are enabled by default, they [can be disabled](/docs/iac/concepts/config/#pulumidisable-default-providers) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
 
 {{% notes type="tip" %}}
-Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/resources/options/provider/) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
+Disabling default providers helps ensure that the [`provider` resource option](/docs/iac/concepts/resources/options/provider/) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake), the resource uses the default provider, which can result in resources being deployed to the wrong environment.
 {{% /notes %}}
 
 ### Using the Pulumi CLI

@@ -1,6 +1,6 @@
 ---
 title_tag: "Azure | Pulumi Integrations"
-meta_desc: Azure integration with Pulumi — providers, packages, templates, ARM conversion, ESC integrations, Insights, and policy packs.
+meta_desc: Azure integration with Pulumi — providers, packages, templates, ARM conversion, ESC integrations, Discovery, and policy packs.
 title: Azure
 linktitle: Azure
 h1: Azure
@@ -63,15 +63,15 @@ ESC integrates directly with Azure for short-lived credentials and secret retrie
 - [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
 - [Azure application secret rotation](/docs/esc/providers/rotators/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
 
-## Insights
+## Discovery
 
-[Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
+[Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Azure, Insights connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
+For Azure, Discovery connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/discovery/) for background.
 
 ## Policy packs
 
-[Pulumi Policies](/docs/insights/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
+[Pulumi Policies](/docs/discovery-governance/policy/) lets you enforce rules on infrastructure at preview and update time, rejecting stacks that violate security, cost, or compliance standards. [Pre-built policy packs](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) are maintained by Pulumi and cover common regulatory and best-practice frameworks.
 
 For Azure:
 

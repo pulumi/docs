@@ -60,3 +60,45 @@ def test_no_urls_at_all():
     claim = {"text": "Encryption is enabled by default.", "source_hint": "AWS docs"}
     assert vc._claim_urls(claim) == []
     assert vc.find_fetched_url(claim, fetched(INSTALL)) is None
+
+
+# --- version claims: the hint names a package, not an external authority ---
+#
+# claim-extraction.md tells the extractor to put "the package/product" in
+# `source_hint` for a version claim; route_claim read any non-URL hint as "a
+# named external source" and web-searched it. For a Pulumi package whose name
+# has no pulumi-shaped token, the top web hit is pulumi.com's own page — PR
+# #21720's pin bump came back `contradicted` against the page under review.
+
+PR21720_TEXT = ("The example Pulumi YAML pins the `terraform-provider` package version to 1.4.0, "
+                "described as 'Version of the terraform-provider package'.")
+
+
+def test_version_claim_with_bare_package_hint_routes_pass1():
+    claim = {"text": PR21720_TEXT, "type": "version", "source_hint": "terraform-provider"}
+    assert vc.route_claim(claim, {}) == "pass1"
+    for hint in ("command", "docker-build", "hashicorp/random", "Node.js"):
+        assert vc.route_claim({"text": "The example pins it to 1.4.0.", "type": "version",
+                               "source_hint": hint}, {}) == "pass1"
+
+
+def test_version_claim_with_repo_hint_routes_pass1():
+    claim = {"text": PR21720_TEXT, "type": "version", "source_hint": "pulumi/pulumi-terraform-provider"}
+    assert vc.route_claim(claim, {}) == "pass1"
+
+
+def test_version_claim_urls_still_route_by_url():
+    text = "Requires Node.js 18+ per https://nodejs.org/en/about/previous-releases."
+    claim = {"text": text, "type": "version", "source_hint": "Node.js"}
+    assert vc.route_claim(claim, {}) == "pass3"
+    assert vc.route_claim(claim, fetched("https://nodejs.org/en/about/previous-releases")) == "pass2"
+
+
+def test_non_version_claim_with_named_external_source_still_routes_pass3():
+    for ctype in ("attribution", "numerical", "behavior", "quote"):
+        claim = {"text": "Retries default to 3 attempts.", "type": ctype, "source_hint": "AWS Lambda docs"}
+        assert vc.route_claim(claim, {}) == "pass3"
+    # Same text and hint as the #21720 claim, different type: the carve-out is
+    # keyed on `version`, not on the hint.
+    assert vc.route_claim({"text": PR21720_TEXT, "type": "behavior",
+                           "source_hint": "terraform-provider"}, {}) == "pass3"

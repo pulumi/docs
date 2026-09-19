@@ -241,7 +241,7 @@ You also don't have to do it alone. Pulumi provides [self-serve conversion tools
 
 ## Manage Terraform state in Pulumi Cloud
 
-You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with agentic infrastructure coding through Neo on top.
+You don't have to rewrite anything to start getting value from Pulumi. Pulumi Cloud can serve as a Terraform state backend, letting you store and manage Terraform state alongside your Pulumi stacks. Your team can keep using the Terraform or OpenTofu CLI for day-to-day operations while gaining encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through Pulumi Insights — with [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) coding through Neo on top.
 
 It uses Terraform's standard remote backend, so you point the CLI at Pulumi Cloud without changing your infrastructure code:
 

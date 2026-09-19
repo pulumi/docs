@@ -4,29 +4,9 @@ meta_desc: |
      Compare Cosmos DB and MongoDB strengths and limitations to determine the best database option.
 
 type: what-is
+date: 2022-09-26T07:16:39-07:00
 page_title: "Cosmos DB vs MongoDB, Know The Differences"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["kat-cosgrove"]
 ---
 {{% notes type="info" %}}

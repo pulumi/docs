@@ -18,18 +18,15 @@ stats:
       supabase:
           number: "80,000+"
           description: resources across 16 regions, infrastructure written in the same language as our services
-          logo: /logos/customers/supabase-wordmark.svg
-          link: /case-studies/supabase/
+          customer: supabase
       snowflake:
           number: "< 1 Day"
           description: deployment cycles reduced from 1.5 weeks to under 24 hours
-          logo: /logos/pkg/snowflake.svg
-          link: /case-studies/snowflake/
+          customer: snowflake
       bmw:
           number: "15,000"
           description: developers with self-service access to production-grade infrastructure
-          logo: /logos/customers/bmw.svg
-          link: /case-studies/bmw/
+          customer: bmw
 
 features:
   title: The complete AI infrastructure lifecycle
@@ -85,14 +82,12 @@ casestudy:
   items:
     - body: |
         **Snowflake** manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi — massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
-      logo: /logos/pkg/snowflake.svg
+      customer: snowflake
       cta: Read the story
-      link: /case-studies/snowflake/
     - body: |
-        **BMW** enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
+        **BMW** manages more than 20,000 cloud resources through self-service infrastructure while maintaining enterprise governance.
+      customer: bmw
       cta: Read the story
-      logo: /logos/customers/bmw.svg
-      link: /case-studies/bmw/
 
 enablement:
   title: Code enables AI-managed infrastructure

@@ -2,6 +2,7 @@
 title: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
 type: what-is
+date: 2024-03-06T10:18:35-08:00
 page_title: "OpenTofu vs. Terraform"
 authors: ["pulumi-content-team"]
 include_floqer: true
@@ -114,7 +115,7 @@ Pulumi integrates with existing CI/CD providers, including AWS Code Services, Az
 
 ### Policy as Code {#policy}
 
-Pulumi provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/insights/policy/).
+Pulumi provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/discovery-governance/policy/).
 
 ### Secrets Management {#secrets}
 
@@ -122,7 +123,7 @@ Pulumi securely transmits and stores full state files at all times. In addition,
 
 ### Audit Capabilities {#auditing}
 
-Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available to organizations on the Enterprise and Business Critical editions. To learn more, see [Audit Logs](/docs/administration/concepts/audit-logs/).
+Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available from the Essentials edition. Automated audit log export is available from the Pro edition. To learn more, see [Audit Logs](/docs/administration/concepts/audit-logs/).
 
 ### Adopt Existing Resources {#adopting}
 

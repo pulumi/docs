@@ -17,13 +17,13 @@ category: tutorials
 
 Following the first piece in this series, [Infrastructure as Code in Any Programming Language](/blog/infrastructure-as-code-in-any-programming-language/), this walkthrough will show what it takes to get up and running with infrastructure as code. Everything we show will be done with Pulumi’s [free and open source infrastructure as code SDK](/docs/install/). You can also sign up for [Pulumi Cloud](https://app.pulumi.com/signup). After discussing the basics of how to get going, we’ll then dive into some advanced use cases to show what you can do from there.
 
-## Migrating to Infrastructure as Code
+## Migrating to infrastructure as code
 
 When you pick an infrastructure as code tool, there is a major decision up front: Is this going to be net new infrastructure, or are you adopting existing infrastructure? In the latter case, maybe you clicked to experiment in the AWS console but are now ready to use infrastructure as code. Or maybe you started with Terraform and now want to migrate to Pulumi. In either case, there’s no getting around it. This is a trickier situation.
 
 In some cases, it’s better to just toss that infrastructure and start over from scratch. Or perhaps you can focus on succeeding first with a “new” part of the system and integrate with the existing infrastructure until you’re convinced it’s time to migrate. In many cases, however, that’s infeasible: Maybe you actually have a mission-critical service already that you need to bring under the management of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/). The good news is that Pulumi offers [tools to migrate](/migrate/) from existing tools like Terraform, AWS CloudFormation/CDK, Azure Resource Manager (ARM), Kubernetes YAML and more, bringing existing infrastructure under the management of Pulumi without any disruption. The user guides in the [Migration Hub](/migrate/) walk through this process.
 
-## Getting Started with Infrastructure as Code
+## Getting started with infrastructure as code
 
 Let’s assume we are starting out with new infrastructure, even though most concepts are relevant even if you’re starting with a migration.
 
