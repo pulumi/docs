@@ -1,0 +1,57 @@
+{{/*
+  Renders the shared type-notation badge content for a property or response schema:
+  a linked schema name, "array[Foo]", "map[string]Foo", "enum", or a bare scalar type.
+  Used by openapi/property-rows.html (the property type column) and
+  openapi/response-schema.html (the response body "Type:" line) so the two stay in sync
+  instead of carrying two copies of the same notation logic.
+
+  Input: dict with "schema" - a map that may carry "$ref", "type", "items", and
+  "additionalProperties" (each following the same shape as the raw OpenAPI schema
+  object), and "enum" as a presence flag for a bare enum type.
+
+  Output: dict with:
+    "html"       - the notation as a safe-HTML string (links included), or "" when the
+                    schema carries neither "$ref" nor "type".
+    "schemaName" - the schema name to recursively expand, for a top-level "$ref" or an
+                    array item "$ref". Callers use this to drive their own $refSchemaName
+                    / $itemSchemaName recursion. A map/object "$ref" is rendered as a link
+                    but intentionally does not set "schemaName": neither caller expands a
+                    map's value schema.
+*/}}
+{{ $schema := .schema }}
+{{ $html := "" }}
+{{ $schemaName := "" }}
+
+{{ if isset $schema "$ref" }}
+  {{ $refParts := split (index $schema "$ref") "/" }}
+  {{ $schemaName = index $refParts (sub (len $refParts) 1) }}
+  {{ $html = printf `<a href="/docs/reference/cloud-rest-api/schema/%s/">%s</a>` ($schemaName | urlize) $schemaName }}
+{{ else if isset $schema "type" }}
+  {{ if eq $schema.type "array" }}
+    {{ if and (isset $schema "items") (isset $schema.items "$ref") }}
+      {{ $itemRefParts := split (index $schema.items "$ref") "/" }}
+      {{ $schemaName = index $itemRefParts (sub (len $itemRefParts) 1) }}
+      {{ $html = printf `array[<a href="/docs/reference/cloud-rest-api/schema/%s/">%s</a>]` ($schemaName | urlize) $schemaName }}
+    {{ else if $schema.items.type }}
+      {{ $html = printf "array[%s]" $schema.items.type }}
+    {{ else }}
+      {{ $html = "array" }}
+    {{ end }}
+  {{ else if eq $schema.type "object" }}
+    {{ if and (isset $schema "additionalProperties") (isset $schema.additionalProperties "$ref") }}
+      {{ $objRefParts := split (index $schema.additionalProperties "$ref") "/" }}
+      {{ $objSchemaName := index $objRefParts (sub (len $objRefParts) 1) }}
+      {{ $html = printf `map[string]<a href="/docs/reference/cloud-rest-api/schema/%s/">%s</a>` ($objSchemaName | urlize) $objSchemaName }}
+    {{ else if and (isset $schema "additionalProperties") (isset $schema.additionalProperties "type") }}
+      {{ $html = printf "map[string]%s" $schema.additionalProperties.type }}
+    {{ else }}
+      {{ $html = $schema.type }}
+    {{ end }}
+  {{ else if isset $schema "enum" }}
+    {{ $html = "enum" }}
+  {{ else }}
+    {{ $html = $schema.type }}
+  {{ end }}
+{{ end }}
+
+{{ return dict "html" $html "schemaName" $schemaName }}
