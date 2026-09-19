@@ -4,9 +4,9 @@
 Fixtures are the real model output that errored on the first repo-wide
 weekend (2026-09-11 → 09-14): PR 21603 (❓ row kept, its detail block
 deleted) and PR 21585 (a four-column table hand-built in an empty brief
-section). Each test asserts three things: the validator refuses the draft
-as shipped, accepts it after normalization, and a second normalization is a
-no-op.
+section), plus PR 21748 (2026-09-19: the one ⚠️ row never closed). Each
+test asserts three things: the validator refuses the draft as shipped,
+accepts it after normalization, and a second normalization is a no-op.
 """
 from __future__ import annotations
 
@@ -63,7 +63,9 @@ def _normalize(author: Path, brief: Path, base: Path, summary: Path | None = Non
     return r.returncode, r.stdout + r.stderr
 
 
-@pytest.mark.parametrize("pr, rule", [("21603", "v3-detail-blocks"), ("21585", "v3-finding-grammar")])
+@pytest.mark.parametrize("pr, rule", [("21603", "v3-detail-blocks"),
+                                     ("21585", "v3-finding-grammar"),
+                                     ("21748", "v3-finding-grammar")])
 def test_fixture_refused_then_accepted_then_idempotent(tmp_path, pr, rule):
     author, brief, base = _fixture(tmp_path, pr)
     rc, out = _validate(author, brief, base)
@@ -97,6 +99,17 @@ def test_21603_block_regenerated_from_row(tmp_path):
     # The block sits between the ❓ table and the browser hint, where the
     # composer puts it.
     assert text.index("| **F1** |") < text.index("#### F1 · Do this") < text.index("_Editing in the browser?")
+
+
+def test_21748_long_finding_row_closed_in_place(tmp_path):
+    author, brief, base = _fixture(tmp_path, "21748")
+    _normalize(author, brief, base)
+    lines = brief.read_text().splitlines()
+    row = next(l for l in lines if l.startswith("| **F?** |"))
+    assert row.endswith("whether the strip still exists. |")
+    # Closed, not rewritten: the Finding cell reaches build-evidence intact.
+    assert "Three comments the PR leaves behind" in row
+    assert nv.cr.parse_finding_line(row) is not None
 
 
 def test_21585_header_and_separator_rewritten(tmp_path):
@@ -222,3 +235,37 @@ def test_script_exits_zero_on_unreadable_input(tmp_path):
     assert r.returncode == 0
     assert "::warning::normalize-v3-draft: skipped" in r.stdout
     assert json.loads((tmp_path / "s.json").read_text())["repairs"][0]["rule"] == "error"
+
+
+def test_unclosed_rows_closed_only_when_the_result_parses():
+    rep = nv.Repairs()
+    lines = ["### ⚠️ Check these before approving", "",
+             "| ID | Where | Finding",
+             "|---|---|---",
+             "| **F1** | `a.md` L3 | ran off the end",
+             "| ⬜ | **F2** | `b.md` L4 | glyph cell and no close",
+             "| **F3** | `c.md` L5 | already closed |",
+             "| not a finding row at all",
+             ""]
+    out = nv._normalize_tables(lines, nv.BRIEF_SECTIONS, "brief", rep)
+    assert out[2] == "| ID | Where | Finding |"
+    assert out[3] == "|---|---|---|"
+    assert out[4] == "| **F1** | `a.md` L3 | ran off the end |"
+    assert out[5] == "| **F2** | `b.md` L4 | glyph cell and no close |"
+    assert out[6] == lines[6]                                  # untouched
+    assert out[7] == lines[7]                                  # not closeable
+    assert [r["rule"] for r in rep.items] == [
+        "row-unclosed", "row-unclosed", "row-unclosed", "row-unclosed", "row-leading-cell"]
+    rep2 = nv.Repairs()
+    assert nv._normalize_tables(out, nv.BRIEF_SECTIONS, "brief", rep2) == out
+    assert rep2.items == []
+
+
+def test_close_row_refuses_what_it_cannot_prove():
+    assert nv._close_row("| **F1** | `a.md` L3 | fine |") is None      # already closed
+    assert nv._close_row("- **One editorial call:** keep it") is None  # not a row
+    assert nv._close_row("| two | cells") is None                      # wouldn't parse
+    assert nv._close_row("| a | b | c | d | e") is None                # too many cells
+    assert nv._close_row("|") is None
+    # A cell ending in an escaped pipe is unclosed, not closed.
+    assert nv._close_row(r"| **F1** | `a.md` L3 | a \| b") == r"| **F1** | `a.md` L3 | a \| b |"

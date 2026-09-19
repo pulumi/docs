@@ -1101,7 +1101,7 @@ def test_route_asks_every_missing_team_in_one_command():
     assert p["verdict"] == "stamp" and p["route_targets"] == []
 
 
-# ---- the Do-next opening -------------------------------------------------------
+# ---- the opening moves: row buttons and the --terminal list ---------------------
 
 
 def test_the_chain_card_never_offers_an_approval_that_needs_reading():
@@ -1134,6 +1134,55 @@ def test_the_chain_card_never_offers_an_approval_that_needs_reading():
     assert "#1 leads the chain, but it needs a call of its own first (scrutiny:heightened)" in chain["does"]
     # and the row itself still carries the decision, which is the whole point
     assert "stamp" in [x["id"] for x in lead["actions"]]
+
+
+def test_the_cluster_moves_are_row_buttons():
+    """The board has no batch strip, so a cluster's recommendation is a
+    button on the row it belongs to: the chain on its lead (covering the
+    next link), the consolidation on the newest sweep. Both are decisions,
+    both rebuild with the rows, and neither lands on a row that is not on
+    the board."""
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([a, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["cmd"] == "--chain C1" and chain["covers"] == [2] and chain["cluster"] == "C1"
+    assert chain["label"] == "approve & merge, then unblock #2" and "merges master into #2" in chain["help"]
+    assert "chain" in analyze.DECISION_IDS and "consolidate" in analyze.DECISION_IDS
+    assert not any(x["id"] == "chain" for x in row(q, 2)["actions"])
+    # A human-authored lead is approved without merging, so act.py's
+    # `requires=["stamp", first]` skips the unblock and #2 is untouched this
+    # run: the chain covers nothing, or the board would mark #2 decided for a
+    # write that never happens.
+    human = stampable(1, title="Fix the intro", author="jdoe", author_type="User",
+                      files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([human, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["covers"] == []
+    assert chain["label"] == "approve, then unblock #2" and "the next run merges master" in chain["help"]
+    # a lead held by more than the collision carries no chain
+    a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
+                   commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                   files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([a2, b])
+    assert not any(x["id"] == "chain" for x in row(q, 1)["actions"])
+    # merge_judgments rebuilds the touched row, and the chain comes back
+    # with it -- and moves if the judgment changed which member can lead
+    q = run([a, b])
+    analyze.merge_judgments(q, {1: {"recommended": "stamp"}})
+    assert row(q, 1)["actions"][0]["id"] == "chain"
+    # idempotent: a second attach does not stack a second button
+    analyze.attach_cluster_actions(q["prs"], q["clusters"])
+    assert [x["id"] for x in row(q, 1)["actions"]].count("chain") == 1
+    # a consolidation lands on the newest sweep, carrying the request
+    q = run([stampable(i, title=f"Sweep {i}", files=[_file("content/docs/a.md", [f"x{i}"], ["o"], old_start=10)]) for i in range(1, 10)])
+    c = q["clusters"][0]
+    assert c["recommendation"]["kind"] == "consolidate" and c["recommendation"]["on"] == 9
+    act = row(q, 9)["actions"][0]
+    assert act["id"] == "consolidate" and act["cmd"] == c["recommendation"]["cmd"] and act["cluster"] == "C1"
+    assert act["label"] == f"ask {c['recommendation']['target']} for one consolidated PR" and "Nothing merges" in act["help"]
+    assert not any(x["id"] == "consolidate" for n in range(1, 9) for x in row(q, n)["actions"])
+    assert not any(x["id"] == "chain" for n in range(1, 10) for x in row(q, n)["actions"])
 
 
 def test_do_next_cards_only_name_rows_the_board_renders():
