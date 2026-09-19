@@ -194,7 +194,75 @@ def _walk(body: str, headings: dict[str, str], where: str):
                 )
 
 
-def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str]:
+# ---- anchor sanity ------------------------------------------------------
+#
+# A finding's `Where` cell is the only machine-readable pointer from the card
+# back into the code, and one consumer acts on it: `auto-refresh-gate.py`
+# refuses to dispatch a refresh unless every hunk of the author's push
+# overlaps an outstanding finding's line range. So a wrong line number does
+# not merely misdirect the reader -- it silently breaks the documented "push
+# a fix and the card refreshes itself" path, and the author is left with an
+# open finding, no banner, and no reason given. (#21748: F1 cited
+# `analyze.py` L199 for code at L1195; the gate correctly reported the push
+# as "outside outstanding finding lines" and stood down.)
+#
+# This is advisory on purpose. A bad anchor degrades one automation; refusing
+# to publish over it would cost the whole review, which is the failure mode
+# the v3 fail-closed design already over-serves. We record it and move on.
+
+ANCHOR_SLACK = 3  # mirrors auto-refresh-gate.SLACK_LINES; they must agree
+
+_DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
+_DIFF_HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+
+
+def parse_diff_ranges(diff_text: str) -> dict[str, list[tuple[int, int]]]:
+    """{path: [(new_start, new_end), ...]} — the head-side line spans a
+    unified diff touches. Findings cite lines in the PR's head version, so
+    the new side is the one to compare against."""
+    ranges: dict[str, list[tuple[int, int]]] = {}
+    path = None
+    for line in (diff_text or "").splitlines():
+        m = _DIFF_FILE_RE.match(line)
+        if m:
+            path = None if m.group(1) == "/dev/null" else m.group(1)
+            continue
+        if path is None:
+            continue
+        m = _DIFF_HUNK_RE.match(line)
+        if m:
+            start = int(m.group(1))
+            length = int(m.group(2)) if m.group(2) is not None else 1
+            if length <= 0:            # pure deletion: the join point
+                ranges.setdefault(path, []).append((start, start))
+            else:
+                ranges.setdefault(path, []).append((start, start + length - 1))
+    return ranges
+
+
+def anchor_note(file: str, lines: list[int] | None,
+                diff_ranges: dict[str, list[tuple[int, int]]]) -> str | None:
+    """Why this finding's anchor can't be trusted, or None when it can.
+
+    Only checked for a file the PR actually touches: a finding may legitimately
+    point outside the diff (a pre-existing issue, a caller in an untouched
+    file), and flagging those would be noise rather than signal.
+    """
+    if not lines or not file or file not in diff_ranges:
+        return None
+    spans = diff_ranges[file]
+    if not spans:
+        return None
+    lo, hi = min(lines), max(lines)
+    if any(lo <= end + ANCHOR_SLACK and hi >= start - ANCHOR_SLACK for start, end in spans):
+        return None
+    nearest = ", ".join(f"{s}-{e}" for s, e in sorted(spans)[:4])
+    return (f"L{lo}" if lo == hi else f"L{lo}-{hi}") + \
+        f" is outside this PR's changed lines in {file} (changed: {nearest})"
+
+
+def build(author_body: str, brief_body: str, base: dict,
+          diff_ranges: dict[str, list[tuple[int, int]]] | None = None) -> tuple[dict, str, str]:
     high_water = int(base.get("high_water", 0))
     base_findings = {f["id"]: f for f in base.get("findings", [])}
 
@@ -253,6 +321,12 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
                 record["lines"] = lines_nums
             elif prior and prior.get("lines"):
                 record["lines"] = prior["lines"]
+            if diff_ranges:
+                note = anchor_note(record["file"], record.get("lines"), diff_ranges)
+                if note:
+                    record["anchor_ok"] = False
+                    record["anchor_note"] = note
+                    print(f"::warning::build-evidence: {fid} anchor {note}")
             findings.append(record)
 
     vanished = [
@@ -639,6 +713,43 @@ def _self_test() -> int:
     ra0, _ = refresh_counts(fx_author, None, None)
     assert "— 3 items block merge" in ra0
 
+    # --- anchor sanity ---------------------------------------------------
+    diff = "\n".join([
+        "diff --git a/a.md b/a.md", "--- a/a.md", "+++ b/a.md",
+        "@@ -5,3 +5,4 @@", " ctx", "+added", " ctx", " ctx",
+        "@@ -40,2 +41,2 @@", "-old", "+new", " ctx",
+    ])
+    ranges = parse_diff_ranges(diff)
+    assert ranges == {"a.md": [(5, 8), (41, 42)]}, ranges
+    # inside a hunk, and inside the ±3 slack around one
+    assert anchor_note("a.md", [6], ranges) is None
+    assert anchor_note("a.md", [11], ranges) is None, "slack of 3 past the hunk end"
+    # a span that straddles the gap still overlaps a hunk
+    assert anchor_note("a.md", [6, 44], ranges) is None
+    # the #21748 shape: real file, line ~1000 away from anything it changed
+    note = anchor_note("a.md", [199], ranges)
+    assert note and "L199 is outside this PR's changed lines in a.md" in note, note
+    assert "5-8, 41-42" in note, note
+    # a file the PR never touches is not ours to judge (pre-existing findings)
+    assert anchor_note("untouched.md", [199], ranges) is None
+    assert anchor_note("a.md", None, ranges) is None and anchor_note("", [1], ranges) is None
+    # …and it rides the finding, without ever failing the build
+    # F1 is at L8 (inside the hunk) and F2 at L9 (one past it, inside the
+    # slack): neither is flagged, which is the slack doing its job on a card
+    # whose line drifted by a line or two.
+    ev_a, _, _ = build(author, brief, base, diff_ranges={"a.md": [(5, 8)]})
+    assert not any("anchor_ok" in f for f in ev_a["findings"])
+    # Move the diff a long way off and both anchors become unreachable.
+    ev_b, _, _ = build(author, brief, base, diff_ranges={"a.md": [(100, 120)]})
+    by_id = {f["id"]: f for f in ev_b["findings"]}
+    assert {f["id"] for f in ev_b["findings"] if f.get("anchor_ok") is False} == {"F1", "F2"}
+    assert "changed: 100-120" in by_id["F1"]["anchor_note"], by_id["F1"]
+    # Flagging is all it does — the finding keeps its text, file and lines.
+    assert by_id["F1"]["lines"] == [8] and by_id["F1"]["file"] == "a.md"
+    # no diff supplied → the check is inert and nothing is annotated
+    ev_c, _, _ = build(author, brief, base)
+    assert not any("anchor_ok" in f for f in ev_c["findings"])
+
     print("build-evidence self-test passed")
     return 0
 
@@ -652,16 +763,28 @@ def main() -> int:
     ap.add_argument("--output")
     ap.add_argument("--author-out", help="cleaned author body for publish (optional)")
     ap.add_argument("--brief-out", help="cleaned brief body for publish (optional)")
+    ap.add_argument("--pr-diff", help="unified diff of the PR; enables the advisory "
+                                      "anchor check (never fails the build)")
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
     if not (args.author_body and args.brief_body and args.base and args.output):
         ap.error("--author-body, --brief-body, --base, --output are required")
     try:
+        diff_ranges = None
+        if args.pr_diff:
+            # Advisory only: an unreadable diff disables the anchor check, it
+            # never fails the build.
+            try:
+                diff_ranges = parse_diff_ranges(Path(args.pr_diff).read_text())
+            except (OSError, UnicodeDecodeError) as exc:
+                print(f"::warning::build-evidence: --pr-diff unreadable ({exc}); "
+                      "skipping the anchor check")
         evidence, author_out, brief_out = build(
             Path(args.author_body).read_text(),
             Path(args.brief_body).read_text(),
             json.loads(Path(args.base).read_text()),
+            diff_ranges=diff_ranges,
         )
     except ContractViolation as e:
         print(f"::error::build-evidence: {e}", file=sys.stderr)
