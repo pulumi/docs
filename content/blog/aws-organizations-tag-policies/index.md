@@ -9,7 +9,6 @@ tags:
   - aws
   - pulumi-cloud
   - policy-as-code
-  - crossguard
   - features
   - governance
   - compliance
