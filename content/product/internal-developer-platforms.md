@@ -29,7 +29,7 @@ sections:
       - icon: rocket
         title: Ship faster
         description: |
-          Golden paths and reusable components get engineers from idea to production in minutes.
+          Golden paths and reusable components let engineers ship approved infrastructure without waiting on the platform team.
       - icon: shield-check
         title: Engineer-friendly governance
         description: |
