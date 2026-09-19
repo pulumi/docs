@@ -14,32 +14,26 @@ aliases:
 ---
 
 **Use Pulumi alongside your existing Terraform infrastructure** rather than replacing it entirely.
-This guide is for existing Terraform users to understand how Pulumi works and how it can integrate into your existing Terraform workflows.
-
-This step-by-step tutorial focuses on coexistence patterns that let you leverage Pulumi's powerful features while maintaining your existing investments into Terraform.
+This step-by-step tutorial is for existing Terraform users and focuses on coexistence patterns that let you adopt Pulumi's features while keeping your existing investments in Terraform.
 
 ## What you'll learn
 
-Through progressive examples, you'll discover how to:
+Each step below is a page in this guide, and the buttons at the bottom of every page walk you through them in order:
 
-* Reference existing Terraform state files from Pulumi
-* Use any Terraform provider in Pulumi programs
-* Import and use Terraform modules directly
-* Convert HCL code to Pulumi when beneficial
-* Orchestrate both Terraform and Pulumi deployments together
+1. [Install and configure Pulumi](/docs/iac/get-started/terraform/begin/) alongside your existing Terraform setup
+1. [First look](/docs/iac/get-started/terraform/first-look/): create the same resources with Terraform HCL and with a Pulumi program
+1. **Coexistence**: [reference existing Terraform state files](/docs/iac/get-started/terraform/reference-state/) from Pulumi
+1. **Module reuse**: [import and use Terraform modules directly](/docs/iac/get-started/terraform/terraform-modules/)
+1. **Provider sharing**: [use any Terraform provider](/docs/iac/get-started/terraform/terraform-providers/) in Pulumi programs
+1. **Selective conversion**: [convert specific HCL](/docs/iac/get-started/terraform/convert-hcl/) to Pulumi when beneficial
+1. **Orchestration**: [manage both tools in unified workflows](/docs/iac/get-started/terraform/orchestrate/)
+1. **State management**: [store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/)
+1. **Remote execution**: [run Terraform plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/)
 
 ## Overview of examples
 
 You'll build a containerized web application managed by Pulumi that integrates with ECS infrastructure managed by Terraform.
-Starting with simple state referencing, you'll progressively add complexity while learning integration patterns that work in real-world scenarios.
-
-The examples demonstrate:
-
-1. **Coexistence**: Reading Terraform state from Pulumi
-2. **Provider sharing**: Using Terraform providers in Pulumi
-3. **Module reuse**: Leveraging existing Terraform modules
-4. **Selective conversion**: Converting specific HCL when advantageous
-5. **Orchestration**: Managing both tools in unified workflows
+Starting with state referencing, you'll progressively add complexity while learning integration patterns that work in real-world scenarios.
 
 ## Prerequisites
 

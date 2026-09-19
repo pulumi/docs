@@ -35,8 +35,11 @@ glow-up executes nothing — 43% of the eligible pool when measured against the
 live ledger on 2026-08-25. Those pages are excluded from `articles` and the
 highest-scoring one rides the queue's `repairs` array instead: the dispatcher
 sends it to the FIX lane, whose review needs no ledger and writes the findings
-record that makes a real glow-up possible next time. `--exclude-paths` keeps a
-repair off a page the fix lane already queued this run.
+record that makes a real glow-up possible next time. `--exclude-paths` keeps
+both the glow-up pick and the repair off a page the fix lane already queued
+this run: two workers on one page the same day race for its branch, the
+loser's open-PR pre-check throws its dispatch away, and until 2026-09-09 its
+`skipped` outcome also overwrote the winner's ledger and findings records.
 
 Backlog cap: when >= GLOWUP_MAX_OPEN_PRS open `content-review/glowup-*`
 branches exist, emit an empty queue with `"halted": "max_open_glowup_prs"` —
@@ -268,8 +271,8 @@ def main() -> int:
                    help="Comma-separated open content-review branch names (testing)")
     p.add_argument("--exclude-paths", default="",
                    help="Comma-separated content paths the fix lane already "
-                        "queued this run; they are never chosen for a repair, "
-                        "so one page is not reviewed twice in a day")
+                        "queued this run; they are never chosen for a glow-up "
+                        "or a repair, so one page is not reviewed twice in a day")
     p.add_argument("--dry-run", action="store_true", help="Print queue, write nothing")
     args = p.parse_args()
 
@@ -355,6 +358,15 @@ def main() -> int:
             continue
         if _select.slugify(path) in open_slugs:
             continue
+        # The fix lane queued this page this run (--exclude-paths). Until
+        # 2026-09-09 only the repair path honored the list; the glow-up pick
+        # did not, so on 2026-09-08 both lanes dispatched elb.md within a
+        # minute of each other. The glow-up worker lost the race to the fix
+        # PR, hit the open-PR pre-check, and its `skipped` record overwrote
+        # the fix review's ledger entry (putting back two stale-claim markers
+        # that review had just resolved) and its findings record.
+        if path in exclude_paths:
+            continue
         if _select.is_draft(repo / path):
             continue
         if _select.is_redirect_stub(repo / path):
@@ -390,8 +402,6 @@ def main() -> int:
     for score, path, entry, reason in stranded:
         if len(queue["repairs"]) >= GLOWUP_REPAIRS_PER_RUN:
             break
-        if path in exclude_paths:
-            continue
         queue["repairs"].append({
             "path": path,
             "url": _select.url_for(path),

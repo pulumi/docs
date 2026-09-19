@@ -74,15 +74,15 @@ This year, Pulumi unveiled a bold new vision for Pulumi—[a comprehensive produ
 
 - **[Pulumi IaC](https://www.pulumi.com/docs/iac/)**: Open source infrastructure as code in any programming language. With over 100M downloads, 167% growth in contributions, and industry-leading innovations, Pulumi IaC continues to redefine cloud automation.
 - **[Pulumi ESC](https://www.pulumi.com/docs/esc/)**: Centralized secrets management and orchestration that scales. General availability this year brought features like SDKs, versioning, tagging, and integrations with 1Password and Kubernetes secrets operators.
-- **[Pulumi Insights](https://www.pulumi.com/docs/pulumi-cloud/insights/)**: Visibility, intelligence, and control over all infrastructure resources. Insights 2.0 expanded support for resources created outside Pulumi IaC, delivering advanced graph visualizations and policy enforcement powered by Pulumi CrossGuard.
+- **[Pulumi Insights](/docs/insights/discovery/)**: Visibility, intelligence, and control over all infrastructure resources. Insights 2.0 expanded support for resources created outside Pulumi IaC, delivering advanced graph visualizations and policy enforcement powered by Pulumi CrossGuard.
 
 {{< youtube "AepHQaXeNX0?rel=0" >}}
 
 Three core capabilities unite these products:
 
-- **[Pulumi Copilot](https://www.pulumi.com/docs/pulumi-cloud/copilot/)**: Generative AI is used to manage cloud resources.
-- **[Pulumi CrossGuard](https://www.pulumi.com/docs/iac/using-pulumi/crossguard/)**: A policy-as-code engine for compliance and best practices.
-- **[Pulumi Deployments](https://www.pulumi.com/docs/pulumi-cloud/deployments/)**: Infrastructure task orchestration.
+- **[Pulumi Copilot](/product/neo/)**: Generative AI is used to manage cloud resources.
+- **[Pulumi CrossGuard](/docs/insights/policy/)**: A policy-as-code engine for compliance and best practices.
+- **[Pulumi Deployments](/docs/deployments/concepts/)**: Infrastructure task orchestration.
 
 Over 3,000 customers, including Nvidia, BMW, Unity Games, and Tivity Health, leveraged these solutions to enhance velocity, save costs, and secure their infrastructure.
 
@@ -96,7 +96,7 @@ Pulumi's product innovations this year have empowered teams to automate, secure,
 - **[Pulumi Insights 2.0](https://www.pulumi.com/blog/pulumi-insights-2/)** delivers AI-powered search, a comprehensive inventory of resources created by Pulumi IaC as well as other tools like Terraform and CloudFormation, and automated remediation capabilities powered by CrossGuard.
 - **[Pulumi Copilot](https://www.pulumi.com/product/copilot/)** leverages Generative AI to transform how teams diagnose and resolve IaC issues, providing instant feedback and deployment recommendations.
 - **[Pulumi Kubernetes Operator 2.0](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0/)** introduced scalable, secure deployments with dedicated workspace pods, enhanced customization options, and improved stability under dynamic conditions.
-- **[Drift Detection and Remediation](https://www.pulumi.com/blog/drift-detection/)** in Pulumi Cloud now automates drift detection for all 180+ supported providers, ensuring infrastructure consistency, enhanced security, and reduced operational risks.
+- **[Drift Detection and Remediation](https://www.pulumi.com/blog/drift-detection/)** in Pulumi Cloud now automates drift detection for all supported providers, ensuring infrastructure consistency, enhanced security, and reduced operational risks.
 - **[Azure Classic Provider v6.0.0](https://www.pulumi.com/blog/azure-v6-release/)** updates included the latest upstream changes and ensured compatibility with Pulumi Azure Native Provider.
 - **[Google Cloud Provider v8.0.0](https://www.pulumi.com/blog/gcp-v8-release/)** provides full resource coverage for the latest Google Cloud updates.
 - **[AWS CDK 1.0](https://www.pulumi.com/blog/aws-cdk-on-pulumi-1.0/)** expands compatibility with AWS CDK features, bridging the CDK and Pulumi ecosystems and enabling integration with constructs from AWS's construct hub.

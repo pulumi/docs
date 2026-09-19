@@ -23,20 +23,28 @@ const BLOG_CATEGORIES = (function () {
     }
 })();
 
-/**
- * Allowed case-study industry ids, loaded once from the single source of truth
- * at data/case_study_industries.yaml. See that file's header for the rules.
- */
-const CASE_STUDY_INDUSTRIES = (function () {
+const CUSTOMER_INDUSTRIES = (function () {
     try {
-        const p = path.resolve(__dirname, "../../data/case_study_industries.yaml");
+        const p = path.resolve(__dirname, "../../data/customers_industries.yaml");
         const doc = yaml.load(fs.readFileSync(p, "utf8"));
         return (doc.industries || []).map(i => i.id);
     } catch (e) {
-        console.warn(`Warning: could not load case-study industries: ${e.message}`);
+        console.warn(`Warning: could not load customer industries: ${e.message}`);
         return [];
     }
 })();
+
+const CUSTOMERS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/customers.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return Object.fromEntries((doc.customers || []).map(c => [c.id, c]));
+    } catch (e) {
+        console.warn(`Warning: could not load customers: ${e.message}`);
+        return {};
+    }
+})();
+const CUSTOMER_IDS = Object.keys(CUSTOMERS).sort();
 
 /**
  * The Pulumi Cloud editions and the feature availability matrix, loaded once
@@ -183,7 +191,10 @@ function checkPageTitle(title, allowLongTitle) {
  *
  * @param {string} meta The meta description for a given page
  */
-function checkPageMetaDescription(meta) {
+function checkPageMetaDescription(meta, fullPath) {
+    if (fullPath && /[/\\]content[/\\]industry[/\\][^/\\]+[/\\]_index\.md$/.test(fullPath)) {
+        return null;
+    }
     if (!meta) {
         return "Missing meta description";
     } else if (typeof meta === "string") {
@@ -636,14 +647,14 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
 /**
  * checkCaseStudyIndustry validates the `industry:` front matter on case studies
  * against the closed set in data/case_study_industries.yaml. It applies ONLY to
- * individual case-study pages (content/case-studies/<slug>.md), not the section
+ * individual case-study pages (content/customers/<slug>.md), not the section
  * index (_index.md) or any other content.
  *
  * Industry is REQUIRED and SINGULAR: every case study declares exactly one
  * `industry:` scalar value from the allowed set — a customer belongs to one
  * vertical. A list value, a missing value, or a value outside the set is an
  * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
- * generates a public term page at /case-studies/industry/<slug>/; a typo would
+ * generates a public term page at /customers/industry/<slug>/; a typo would
  * silently ship an orphan URL, which this guard prevents.
  *
  * @param {*} industry The `industry` front matter value.
@@ -651,60 +662,66 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
  */
 function checkCaseStudyIndustry(industry, fullPath) {
     const isCaseStudy =
-        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
     if (!isCaseStudy) {
         return null;
     }
 
     if (Array.isArray(industry)) {
-        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/case_study_industries.yaml.";
+        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/customers_industries.yaml.";
     }
     if (!industry) {
-        return "Case study is missing a required 'industry' value. Add exactly one industry from data/case_study_industries.yaml.";
+        return "Case study is missing a required 'industry' value. Add exactly one industry from data/customers_industries.yaml.";
     }
-    if (!CASE_STUDY_INDUSTRIES.includes(industry)) {
-        return `Invalid case-study industry value: '${industry}'. Allowed: ${CASE_STUDY_INDUSTRIES.join(", ")}. See data/case_study_industries.yaml.`;
+    if (!CUSTOMER_INDUSTRIES.includes(industry)) {
+        return `Invalid case-study industry value: '${industry}'. Allowed: ${CUSTOMER_INDUSTRIES.join(", ")}. See data/customers_industries.yaml.`;
     }
 
     return null;
 }
 
-/**
- * checkCaseStudyLogoTile validates the optional logo-tile front matter on case
- * studies, rendered by layouts/partials/case-studies/card.html (see its header
- * comment for what each field does):
- *   - logo_bg_color: a hex color ("#RRGGBB" or "#RGB")
- *   - logo_style: "white" or "dark", lowercase
- *   - logo_size: "lg"
- * All are optional; this guard rejects present-but-malformed values, which
- * would otherwise ship silently — the template compares exactly, so e.g.
- * `logo_style: White` just renders the logo in its original colors, and a bad
- * hex paints no tile background at all.
- *
- * @param {*} obj The parsed front matter object.
- * @param {string} fullPath The absolute path of the file being linted.
- */
-function checkCaseStudyLogoTile(obj, fullPath) {
+function checkCustomerRef(obj, fullPath) {
     const isCaseStudy =
-        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+        fullPath.includes("/content/customers/") && path.basename(fullPath) !== "_index.md";
     if (!isCaseStudy) {
         return null;
     }
 
     const errors = [];
-    if (obj.logo_bg_color !== undefined && !/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(String(obj.logo_bg_color))) {
-        errors.push(
-            `Invalid 'logo_bg_color' value: '${obj.logo_bg_color}'. Use a quoted hex color like "#0052CC".`,
-        );
+    const RETIRED = {
+        customer_name: "name",
+        customer_url: "url",
+        customer_logo: "the <id>.svg logo file",
+        card_logo: "the <id>-on-dark.svg logo file",
+        logo_bg_color: "color",
+        logo_style: "the light/on-dark logo pair",
+        logo_size: "the logo file itself",
+    };
+    for (const [key, replacement] of Object.entries(RETIRED)) {
+        if (obj[key] !== undefined) {
+            errors.push(
+                `'${key}' is no longer read: ${replacement} comes from data/customers.yaml. Remove it and set 'customer: <id>'.`,
+            );
+        }
     }
-    if (obj.logo_style !== undefined && !["white", "dark"].includes(obj.logo_style)) {
+
+    const customer = obj.customer;
+    if (Array.isArray(customer)) {
+        errors.push("Case study 'customer' must be a single scalar value, not a list (e.g. 'customer: snowflake').");
+    } else if (!customer) {
         errors.push(
-            `Invalid 'logo_style' value: '${obj.logo_style}'. Allowed: white, dark (lowercase), or omit to render the logo in its original colors.`,
+            "Case study is missing a required 'customer' value. Add the id of an entry in data/customers.yaml (see the ADDING A CUSTOMER checklist there).",
         );
-    }
-    if (obj.logo_size !== undefined && obj.logo_size !== "lg") {
+    } else if (!CUSTOMERS[customer]) {
+        const near = CUSTOMER_IDS.filter(id => id.includes(customer) || customer.includes(id));
         errors.push(
-            `Invalid 'logo_size' value: '${obj.logo_size}'. Allowed: lg, or omit for the default size.`,
+            near.length
+                ? `Unknown customer '${customer}'. Did you mean: ${near.join(", ")}? See data/customers.yaml.`
+                : `Unknown customer '${customer}'. Add an entry to data/customers.yaml (see the ADDING A CUSTOMER checklist there).`,
+        );
+    } else if (obj.industry && CUSTOMERS[customer].industry !== obj.industry) {
+        errors.push(
+            `Industry mismatch: this page says '${obj.industry}' but data/customers.yaml files '${customer}' under '${CUSTOMERS[customer].industry}'. Change one so they agree.`,
         );
     }
 
@@ -979,18 +996,15 @@ function checkChangelogFilename(date, fullPath) {
 
 /**
  * checkChangelogEditions validates the optional `editions:` front matter on
- * individual changelog entries: it must be a YAML array of edition ids from
- * data/pulumi_pricing.yaml. Templates look the ids up to render the display
- * name, so an entry writes `business-critical` and the badge reads "Business
- * Critical". Authors list every edition the feature is available in; since a
- * lower edition implies the ones above it, that means the lowest applicable
- * edition and all editions above it — checked here as a contiguous suffix of
- * the edition list, not just set membership. Applies only to entry pages, not
- * the section `_index.md`.
+ * individual changelog entries. Entries dated before the V6 launch use the V5
+ * ids. Newer entries use the current ids from data/pulumi_pricing.yaml. Authors
+ * list every edition the feature is available in, so the list must be a
+ * contiguous suffix of the edition order. Applies only to entry pages, not the
+ * section `_index.md`.
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
- * value for an edition that doesn't exist (the free edition is Individual).
+ * value from before Pulumi Cloud had editions at all.
  *
  * @param {*} editions The front matter `editions` value.
  * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
@@ -1020,8 +1034,12 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
     if (!Array.isArray(editions)) {
         return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
     }
+    const filenameDate = path.basename(normalized).slice(0, 10);
+    const legacyEditions = ["individual", "team", "enterprise", "business-critical"];
+    const isLegacyEntry = /^\d{4}-\d{2}-\d{2}$/.test(filenameDate) && filenameDate < "2026-09-15";
+    const allowedEditions = isLegacyEntry ? legacyEditions : PRICING.editions;
     const invalid = editions.filter(function (e) {
-        return !PRICING.editions.includes(e);
+        return !allowedEditions.includes(e);
     });
     if (invalid.length > 0) {
         const quoted = invalid
@@ -1029,19 +1047,20 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
                 return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+        const vocabulary = isLegacyEntry ? "the V5 edition ids" : "data/pulumi_pricing.yaml";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed for this entry date. Use an edition id from " + vocabulary + ": " + allowedEditions.join(", ") + ".";
     }
     if (editions.length === 0) {
         return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
     }
     // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
-    // three valid ids but renders a badge that tells Business Critical readers
-    // the feature isn't theirs.
-    const listed = PRICING.editions.filter(function (e) {
+    // suffix of PRICING.editions. `editions: [pro]` on its own lints as a
+    // valid id but renders a badge that tells Enterprise readers the feature
+    // isn't theirs.
+    const listed = allowedEditions.filter(function (e) {
         return editions.includes(e);
     });
-    const expected = PRICING.editions.slice(PRICING.editions.indexOf(listed[0]));
+    const expected = allowedEditions.slice(allowedEditions.indexOf(listed[0]));
     if (listed.length !== expected.length) {
         const missing = expected.filter(function (e) {
             return !listed.includes(e);
@@ -1177,7 +1196,13 @@ function checkPulumiCloudShortcode(content) {
             // claims the feature is available on every edition.
             err = `Invalid {{< pulumi-cloud >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud "rbac" />}}.`;
         } else {
-            err = pulumiCloudValueError(args.replace(/^"(.*)"$/, "$1"), "{{< pulumi-cloud >}}");
+            // An optional second positional argument, "named", leads the
+            // callout with the feature's name instead of "This feature".
+            const tokens = args.match(/"[^"]*"|\S+/g).map(t => t.replace(/^"(.*)"$/, "$1"));
+            err = pulumiCloudValueError(tokens[0], "{{< pulumi-cloud >}}");
+            if (!err && tokens.length > 1 && (tokens.length > 2 || tokens[1] !== "named")) {
+                err = `Invalid {{< pulumi-cloud >}} argument: '${tokens.slice(1).join(" ")}'. The only optional second argument is "named", as {{< pulumi-cloud "rbac" "named" />}}.`;
+            }
         }
         if (err && !messages.includes(err)) {
             messages.push(err);
@@ -1245,6 +1270,47 @@ function checkChangelogAssets() {
         walk(path.resolve(__dirname, rel));
     });
     return errors;
+}
+
+function checkIndustryTermStubs() {
+    const dir = path.resolve(__dirname, "../../content/industry");
+    let present;
+    try {
+        present = fs
+            .readdirSync(dir, { withFileTypes: true })
+            .filter(e => e.isDirectory())
+            .map(e => e.name);
+    } catch (e) {
+        return [
+            {
+                path: "content/industry/",
+                errors: [
+                    {
+                        lineNumber: "Directory",
+                        ruleDescription: `content/industry/ does not exist, so no /customers/industry/<id>/ term page is generated. Add one _index.md stub per id in data/customers_industries.yaml.`,
+                    },
+                ],
+            },
+        ];
+    }
+
+    const expected = CUSTOMER_INDUSTRIES;
+    const missing = expected.filter(id => !present.includes(id));
+    const extra = present.filter(id => !expected.includes(id));
+    const errors = [];
+    if (missing.length > 0) {
+        errors.push({
+            lineNumber: "Directory",
+            ruleDescription: `Missing industry term stub(s): ${missing.join(", ")}. Add content/industry/<id>/_index.md for each, or drop the id from data/customers_industries.yaml — without a stub, /customers/industry/<id>/ 404s while the filter bar still links to it.`,
+        });
+    }
+    if (extra.length > 0) {
+        errors.push({
+            lineNumber: "Directory",
+            ruleDescription: `Industry term stub(s) with no entry in data/customers_industries.yaml: ${extra.join(", ")}. Add the industry there or delete the stub — a stub with no entry renders an untitled term page.`,
+        });
+    }
+    return errors.length > 0 ? [{ path: "content/industry/", errors }] : [];
 }
 
 /**
@@ -1541,7 +1607,7 @@ function searchForMarkdown(paths) {
                 result.frontMatter[fullPath] = {
                     error: null,
                     title: checkPageTitle(obj.title, allowLongTitle),
-                    metaDescription: checkPageMetaDescription(obj.meta_desc),
+                    metaDescription: checkPageMetaDescription(obj.meta_desc, fullPath),
                     metaImage: checkMetaImage(obj.meta_image),
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
@@ -1549,7 +1615,7 @@ function searchForMarkdown(paths) {
                     featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
-                    caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
+                    customerRef: checkCustomerRef(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     eventSessions: checkEventSessions(obj, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
@@ -1708,10 +1774,10 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.caseStudyIndustry,
                 });
             }
-            if (frontMatterErrors.caseStudyLogoTile) {
+            if (frontMatterErrors.customerRef) {
                 lintErrors.push({
                     lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.caseStudyLogoTile,
+                    ruleDescription: frontMatterErrors.customerRef,
                 });
             }
             if (frontMatterErrors.seriesConsistency) {
@@ -1847,6 +1913,9 @@ const errors = groupLintErrorOutput(result);
 if (filesFromArgs.length === 0) {
     checkChangelogAssets().forEach(function (assetError) {
         errors.push(assetError);
+    });
+    checkIndustryTermStubs().forEach(function (stubError) {
+        errors.push(stubError);
     });
 }
 

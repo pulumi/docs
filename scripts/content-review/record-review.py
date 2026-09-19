@@ -4,8 +4,8 @@
 This is the single source of truth for the ledger record shape and its upload.
 The per-article worker (`.github/workflows/content-review-article.yml`) runs it
 once after the review model finishes, with `if: always()`, so every dispatched
-article lands exactly one canonical ledger object — even when the model exits
-without producing any output.
+article that was actually reviewed lands exactly one canonical ledger object —
+even when the model exits without producing any output.
 
 The model's only structured output is a tiny verdict sentinel
 (`.content-review-verdict.json`); everything authoritative about the PR
@@ -21,6 +21,17 @@ Outcome derivation:
   * verdict "fixed"  + no PR on the canonical branch     -> status "incomplete"
   * sentinel absent, run succeeded, no branch pushed     -> status "clean"
   * sentinel absent, run failed OR a branch exists       -> status "incomplete"
+
+A "skipped" outcome is built and written locally but never uploaded. It is
+the workflow's open-PR pre-check saying a previous run still owns this page's
+PR: nothing was reviewed, so the page's ledger record must go on describing
+its last real review. Until 2026-09-09 the skip was uploaded like any other
+outcome, and on the two days the glow-up lane picked a page the fix lane had
+dispatched minutes earlier (providers/_index.md 2026-08-28, elb.md
+2026-09-08) the skip rebuilt the record from the dispatch-time queue: status
+`skipped`, banked count 0, PR pointer null, and the stale-claim markers the
+fix review had just resolved put back with `unresolved_reviews` incremented —
+which re-boosted the page into the next sweep (#21266, #21495).
 
 The last two cases extend the file's "derive facts from observable state, not
 self-report" principle to the verdict itself: a model that completes its turn
@@ -552,6 +563,18 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
 # ---- output -----------------------------------------------------------------
 
 
+def touches_ledger(record: dict) -> bool:
+    """False for the one outcome that must leave the S3 record alone.
+
+    A `skipped` status is the workflow's open-PR pre-check: a previous run
+    still owns this page's PR, nothing was reviewed, and the page's record
+    must keep describing its last real review (the module docstring has what
+    uploading it did instead). Every other status — `incomplete` included,
+    which is how a retry gets counted toward the attempt cap — is written.
+    """
+    return record.get("status") != "skipped"
+
+
 def upload(record: dict, slug: str, uri: str) -> None:
     """Upload the record to <uri>/<slug>.json via the aws CLI (stdin)."""
     key = f"{uri.rstrip('/')}/{slug}.json"
@@ -625,7 +648,10 @@ def run(args) -> int:
     out_path.write_text(json.dumps(record, indent=2) + "\n")
     log(f"status={record['status']} slug={slug} -> {out_path}")
 
-    if uri:
+    if not touches_ledger(record):
+        log(f"status={record['status']}: nothing was reviewed; the ledger record "
+            f"for {slug} is left as it was")
+    elif uri:
         upload(record, slug, uri)
     else:
         warn("CONTENT_REVIEW_LEDGER_URI unset; ledger record written locally only")
@@ -878,6 +904,13 @@ def self_test() -> int:
         r = build_record(article, {"verdict": "skipped", "reason": "draft"},
                          None, article["slug"], prior=prior_reviewed)
         check("a skipped review keeps the pointer", r["last_pr_number"] == 19885)
+        # ...and, being no review at all, never reaches S3: uploading it
+        # overwrote the fix review that had just opened the PR the skip is
+        # about (elb.md, 2026-09-08).
+        check("a skipped outcome never touches the ledger", touches_ledger(r) is False)
+        check("every other outcome does, incomplete included",
+              all(touches_ledger({"status": s})
+                  for s in ("reviewed", "clean", "reported", "glowup", "incomplete")))
         r = build_record(article, None, None, article["slug"],
                          claude_succeeded=False, prior=prior_reviewed)
         check("an incomplete review keeps the pointer", r["last_pr_number"] == 19885)

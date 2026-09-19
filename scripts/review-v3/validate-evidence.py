@@ -52,10 +52,16 @@ SCHEMA_VERSION = 1
 
 BUCKETS = {"outstanding", "author-answer", "reviewer-check", "preexisting"}
 STATUSES = {"open", "resolved", "conceded", "disputed-held", "accepted-as-is"}
-DISPOSITIONS = {"fixed", "refuted", "deferred", "accepted", "not-applicable"}
+DISPOSITIONS = {"fixed", "refuted", "deferred", "accepted", "not-applicable", "author-accepted"}
+# The subset of DISPOSITIONS that `author-accepted` (issue #21640) may
+# collapse. Must stay in sync with review_state.AUTHOR_COLLAPSIBLE.
+AUTHOR_COLLAPSIBLE_DISPOSITIONS = {"refuted", "deferred", "accepted", "not-applicable"}
 # Same rule, same set, as review-worklist.py's NOTE_REQUIRED: these three
 # dispositions record a judgment call, not a fact the diff or a dispute
 # comment already proves — the note is the audit trail for that call.
+# `author-accepted` is deliberately absent: whether a note was required
+# depends on the ORIGINAL disposition it collapsed, checked separately
+# below, not on the collapsed value itself (refuted never requires one).
 NOTE_REQUIRED_DISPOSITIONS = {"deferred", "accepted", "not-applicable"}
 BLOCKING_BUCKETS = {"outstanding", "author-answer"}
 VERDICTS = {
@@ -93,10 +99,19 @@ FINDING_REQUIRED = {"id", "bucket", "file", "text", "origin", "status"}
 FINDING_OPTIONAL = {"lines", "disposition", "detail"}
 
 DISPOSITION_REQUIRED = {"disposition", "actor", "updated_at"}
-DISPOSITION_OPTIONAL = {"note", "sha", "bulk"}
+DISPOSITION_OPTIONAL = {"note", "sha", "bulk", "original_disposition"}
 
 TRAIL_REQUIRED = {"file", "claim", "verdict"}
-TRAIL_OPTIONAL = {"line", "evidence", "source", "route"}
+# The second row is verifier metadata carried for post-mortems (why a claim
+# routed where it did, whether a verdict was coerced). Optional so objects
+# written before it was carried still validate.
+TRAIL_OPTIONAL = {
+    "line", "evidence", "source", "route",
+    "claim_id", "type", "confidence", "framing", "framing_note",
+    "turn_cap_exhausted", "source_discipline_gate",
+}
+CONFIDENCES = {"high", "medium", "low"}
+FRAMINGS = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
 
 HISTORY_REQUIRED = {"ts", "summary", "sha"}
 
@@ -142,6 +157,16 @@ def _validate_disposition(disp, where: str) -> list[str]:
         errors.append(
             f"{where}.disposition {d!r} must be one of {', '.join(sorted(DISPOSITIONS))}"
         )
+    original = disp.get("original_disposition")
+    if d == "author-accepted":
+        if original not in AUTHOR_COLLAPSIBLE_DISPOSITIONS:
+            errors.append(
+                f"{where}.original_disposition must be one of "
+                f"{', '.join(sorted(AUTHOR_COLLAPSIBLE_DISPOSITIONS))} when disposition "
+                f"is 'author-accepted', got {original!r}"
+            )
+    elif original is not None:
+        errors.append(f"{where}.original_disposition only applies when disposition is 'author-accepted'")
     if not _nonempty_str(disp.get("actor")):
         errors.append(f"{where}.actor must be a non-empty string")
     updated_at = disp.get("updated_at")
@@ -154,10 +179,14 @@ def _validate_disposition(disp, where: str) -> list[str]:
     if bulk is not None and not isinstance(bulk, bool):
         errors.append(f"{where}.bulk must be a boolean")
     # The load-bearing check: a disposition in the note-required set with no
-    # note (or a blank one) is an unaudited close.
-    if d in NOTE_REQUIRED_DISPOSITIONS and not _nonempty_str(disp.get("note")):
+    # note (or a blank one) is an unaudited close. `author-accepted` follows
+    # the ORIGINAL disposition's requirement (see AUTHOR_COLLAPSIBLE_DISPOSITIONS
+    # comment above) rather than its own — it collapses `refuted`, which
+    # never required a note, alongside three dispositions that always did.
+    note_check = original if d == "author-accepted" else d
+    if note_check in NOTE_REQUIRED_DISPOSITIONS and not _nonempty_str(disp.get("note")):
         errors.append(
-            f"{where}.note is required and non-empty when disposition is {d!r}"
+            f"{where}.note is required and non-empty when disposition is {note_check!r}"
         )
     return errors
 
@@ -293,6 +322,21 @@ def validate_evidence(obj) -> list[str]:
         route = t.get("route")
         if route is not None and route not in ROUTES:
             errors.append(f"{where}.route {route!r} must be one of {', '.join(sorted(ROUTES))}")
+        for key in ("claim_id", "type", "source_discipline_gate"):
+            if key in t and not _nonempty_str(t[key]):
+                errors.append(f"{where}.{key} must be a non-empty string when present")
+        if "confidence" in t and t["confidence"] not in CONFIDENCES:
+            errors.append(
+                f"{where}.confidence {t['confidence']!r} must be one of {', '.join(sorted(CONFIDENCES))}"
+            )
+        if "framing" in t and t["framing"] not in FRAMINGS:
+            errors.append(
+                f"{where}.framing {t['framing']!r} must be one of {', '.join(sorted(FRAMINGS))}"
+            )
+        if "framing_note" in t and not isinstance(t["framing_note"], str):
+            errors.append(f"{where}.framing_note must be a string")
+        if "turn_cap_exhausted" in t and not isinstance(t["turn_cap_exhausted"], bool):
+            errors.append(f"{where}.turn_cap_exhausted must be a boolean")
 
     # ---- stances (optional) ----
     stances = obj.get("stances")
@@ -520,6 +564,24 @@ def self_test() -> int:
     check("unknown trail verdict rejected",
           any(".verdict" in e for e in validate_evidence({
               **good, "trail": [{**good["trail"][0], "verdict": "definitely-true"}]})))
+
+    trail_meta = {"claim_id": "c7", "type": "version", "confidence": "low",
+                  "framing": "shifted", "framing_note": "page says GA, source says preview",
+                  "turn_cap_exhausted": True, "source_discipline_gate": "generated-from-data"}
+    check("trail verifier metadata accepted",
+          validate_evidence({**good, "trail": [{**good["trail"][0], **trail_meta}]}) == [])
+
+    check("unknown trail confidence rejected",
+          any(".confidence" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "confidence": "certain"}]})))
+
+    check("non-boolean turn_cap_exhausted rejected",
+          any(".turn_cap_exhausted" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "turn_cap_exhausted": "yes"}]})))
+
+    check("unknown trail key still rejected",
+          any("model_usage" in e for e in validate_evidence({
+              **good, "trail": [{**good["trail"][0], "model_usage": {}}]})))
 
     check("empty history rejected",
           any("history must be non-empty" in e for e in validate_evidence({**good, "history": []})))

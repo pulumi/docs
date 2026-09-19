@@ -1,3 +1,33 @@
+# Flags empty intensifiers -- words that assert force without adding
+# information ("very fast", "clearly the best").
+#
+# Vendored from write-good, with the QUANTIFIER tokens removed: `several`,
+# `various`, `usually`, `mostly`, `largely`, `relatively`, and the dead
+# `is a number`. Those state a quantity rather than hedge a claim, and
+# keeping them put this rule in direct conflict with write-good.TooWordy,
+# which pushes authors TOWARD the compact quantifiers this rule then flagged.
+#
+# The collision is structural, not incidental. Worked example (pulumi/docs#21456,
+# content/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes.md L407):
+# TooWordy flagged "provides a number of options" -> the fix chose "provides
+# several options" -> this rule flagged "several" -> the fix became "provides
+# options", which lost the reader the fact that six options follow. Three
+# review rounds to delete two words and drop information.
+#
+# Measured over content/docs + content/what-is when the tokens were removed:
+# the quantifiers accounted for ~303 findings (several 134, various 76,
+# usually 76, mostly 12, relatively 3, largely 2, is a number 0) against
+# ~298 for the intensifiers that remain -- of which `very` alone is 281 and
+# is the catch this rule is actually worth keeping for.
+#
+# Advisory only: this rule is on neither the `deterministic_fix` nor the
+# `blocker` list in .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml,
+# so its findings reach authors as optional style suggestions and are never
+# auto-applied. See pulumi/docs#21470 for the full rationale.
+#
+# If you add a token here, check it against write-good.TooWordy's token list
+# first -- a word that appears as a *replacement* for a TooWordy phrase does
+# not belong in this rule.
 extends: existence
 message: "'%s' is a weasel word!"
 ignorecase: true
@@ -11,19 +41,12 @@ tokens:
   - fairly
   - huge
   - interestingly
-  - is a number
-  - largely
-  - mostly
   - obviously
   - quite
-  - relatively
   - remarkably
-  - several
   - significantly
   - substantially
   - surprisingly
   - tiny
-  - usually
-  - various
   - vast
   - very

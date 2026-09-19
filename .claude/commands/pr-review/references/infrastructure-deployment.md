@@ -1,87 +1,14 @@
 ---
 user-invocable: false
-description: Infrastructure deployment detection and workflow triggers
+description: The deploy-to-pulumi-test.io row action for infra PRs
 ---
 
-# Infrastructure Deployment
+# Infrastructure deployment (`--deploy N`)
 
-Check if the PR contains dependency or infrastructure changes by examining the files changed.
+A row whose risk tier is `infra` (it touches `scripts/`, `.github/workflows/`, `Makefile`, `infrastructure/`, `package.json` or `webpack.config.js` — `collect.py::risk_tier`) carries a **deploy to pulumi-test.io** action. It is a row action, not a step everyone walks through: nothing prompts for it, and a Dependabot or Renovate dependency bump is the same `infra` tier by path.
 
-**CRITICAL OUTPUT**: Always use the message templates below to display deployment status to the user.
+`act.py --deploy N` dispatches `testing-build-and-deploy.yml` at the PR's head branch (`POST actions/workflows/testing-build-and-deploy.yml/dispatches`). The run appears under the workflow's runs; the site rebuilds at https://pulumi-test.io in about ten minutes.
 
-## Dependency Changes - Patterns
+What to check once it is up: open the console (F12) for Lambda@Edge errors, run a search, click through navigation, and for a `deps-lambda-edge-risk` PR confirm the bundle is under the 1 MB limit (see `pr-review:references:dependabot-labels`). **The next merge to master resets pulumi-test.io**, so deploy, check, then stamp.
 
-Any of these patterns indicate dependency changes:
-
-- PR author contains `dependabot` or `renovate`
-- Files changed include: `package.json`, `yarn.lock`, `package-lock.json`
-- Files changed include: `go.mod`, `go.sum`
-- Files changed include: `requirements.txt`, `Pipefile`, `Pipefile.lock`, `poetry.lock`
-- Files changed include: `Gemfile`, `Gemfile.lock`
-
-## Infrastructure Changes - Patterns
-
-Any of these patterns indicate infrastructure changes:
-
-- Files changed include anything in `infrastructure/` directory
-- Files changed include: `.github/workflows/*.yml` or `.github/workflows/*.yaml`
-- Files changed include: `netlify.toml`, `vercel.json`, or deployment configuration files
-
-## Decision Logic
-
-- ❌ **If NONE of the patterns above match** → Skip to next step
-- ✅ **If ANY pattern matches** → **STOP HERE** and present the infrastructure deployment prompt
-
-## Prompt User (When Patterns Match)
-
-Use AskUserQuestion with:
-
-**Question**: "This PR contains dependency/infrastructure changes. Deploy to pulumi-test.io for testing?"
-
-**Options**: Yes, deploy now | No, skip
-
-### If User Chooses "Yes"
-
-1. Get PR branch name:
-
-   ```bash
-   gh pr view {{arg}} --json headRefName --jq '.headRefName'
-   ```
-
-2. Trigger workflow:
-
-   ```bash
-   gh workflow run testing-build-and-deploy.yml --ref <branch-name>
-   ```
-
-3. Wait 2-3s, fetch URL:
-
-   ```bash
-   gh run list --workflow=testing-build-and-deploy.yml --limit 1 --json databaseId,status,url,headBranch --jq '.[0]'
-   ```
-
-4. Display deployment monitoring instructions with this template and continue:
-
-   ```markdown
-   ## 🔧 Infrastructure Deployment Initiated
-
-   Deployment started for PR #{{arg}} to pulumi-test.io
-
-   📊 Monitor: [Workflow URL] | 🌐 Test site (~10 min): https://pulumi-test.io
-
-   Instructions: Monitor workflow → Wait ~10 min → Visit pulumi-test.io → Check console (F12) → Test search → Verify no Lambda@Edge errors
-
-   ⚠️ Next merge to master resets pulumi-test.io.
-
-   PR Deployment [if available]: [URL]
-   ```
-
-### If User Chooses "No"
-
-Display this message and continue:
-
-```markdown
-## 🔧 Infrastructure Testing Skipped
-
-PR Deployment [if available]: [URL]
-```
+The Sentinel's G4 gate (infra evidence) is separate: it wants the `staging/pulumi-test-io` commit status green at the head SHA, posted by a trusted writer. Two lanes produce it — `staging-deploy-auto.yml` dispatches one automatically for any PR touching `staging_evidence.paths`, and `/deploy-staging` is the manual retry. `--deploy` writes no status at all, so it is the quicker look and never satisfies G4.

@@ -2,8 +2,9 @@
     Template Case Study Grid Partial
 
     Static 3-up grid of customer cards backed by case study frontmatter (no
-    carousel). Each card pulls the customer logo and case study link from
-    /case-studies/{slug}.md, with optional per-card overrides for the title,
+    carousel). Each card pulls the case study link and quote from
+    /customers/{slug}.md and the logo from data/customers.yaml via that
+    page's `customer:` key, with optional per-card overrides for the title,
     description, and CTA text.
 
     Parameters:
@@ -12,7 +13,9 @@
     - align: Optional "left" (default) or "center" for the title block.
     - cards: Array of card objects, each with:
         - slug: Case study filename stem (required). Looks up
-                /case-studies/{slug}.md for logo, customer name, and quote.
+                /customers/{slug}.md for the customer and the quote. A slug
+                with no case study is a hard build failure — fix the slug rather
+                than let a card silently disappear.
         - title: Optional custom card heading. Overrides the default (which
                  is the case study's quote_block.headline_stat + headline).
         - description: Optional custom card body. Overrides the default
@@ -45,9 +48,10 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {{ range $cards }}
-            {{ $page := site.GetPage (printf "/case-studies/%s" .slug) }}
-            {{ $logo := $page.Params.customer_logo }}
-            {{ $name := $page.Params.customer_name }}
+            {{ $page := site.GetPage (printf "/customers/%s" .slug) }}
+            {{ if not $page }}
+                {{ errorf "template-case-study-grid.html: no case study at /customers/%s/ (card %q)." .slug (.title | default .slug) }}
+            {{ end }}
             {{ $link := default $page.RelPermalink .cta_link }}
             {{ $ctaText := .cta_text | default "Read case study" }}
             {{ $cardTitle := .title }}
@@ -59,11 +63,9 @@
             {{ $headline := $page.Params.quote_block.headline }}
 
             <div class="card flex flex-col p-8 gap-6 h-full">
-                {{ if $logo }}
-                <div class="flex items-start">
-                    {{ partial "fingerprinted-img.html" (dict "src" $logo "alt" $name "class" "max-h-12 w-auto object-contain") }}
+                <div class="case-study-card-logo flex items-start">
+                    {{ partial "customer-logo.html" (dict "customer" $page.Params.customer) }}
                 </div>
-                {{ end }}
 
                 <div class="flex flex-col gap-3 grow">
                     {{ if $cardTitle }}

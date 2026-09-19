@@ -20,6 +20,14 @@
             </svg>
         </a>
         </div>
+        {{/* The <title> Hugo renders for this page comes from Hugo's own default .Title for
+             the 404 node (this template sets no .Title of its own), wrapped by the "{{ $title
+             }} | Pulumi" pattern in layouts/partials/head.html. That rendered title is grepped
+             by .github/workflows/post-deployment-health-check.yml as the soft-404 signature.
+             If a Hugo upgrade or a head.html change alters that default or its wrapping, update
+             SOFT_404_SIGNATURE in the workflow too, or the health check will silently stop
+             detecting soft 404s. (The <h1> below is separate markup and editing it alone does
+             not affect this coupling.) */}}
         <main class="flex flex-col items-center justify-center w-full max-w-full my-auto">
             <div class="flex items-center justify-center w-full h-[24em]">
                 <pre

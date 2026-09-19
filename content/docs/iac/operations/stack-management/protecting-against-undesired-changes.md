@@ -159,7 +159,7 @@ Undesired changes don't only come from your program. Someone can also modify a r
 
 ## Enforce guardrails with policy as code
 
-The safeguards above are opt-in per resource or per run. [Policy as code](/docs/insights/policy/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/insights/policy/ci-cd/).
+The safeguards above are opt-in per resource or per run. [Policy as code](/docs/discovery-governance/policy/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/discovery-governance/policy/ci-cd/).
 
 ## Gate previews in CI/CD
 

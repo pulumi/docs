@@ -111,31 +111,77 @@ def test_domain_routing() -> None:
         return run_classify(_pr(10, 0, paths))["target_domains"]
 
     # theme/ is asset-pipeline source (SCSS + TypeScript compiled into the
-    # site bundles) and routes to infra like layouts/ and assets/. The gap
+    # site bundles) and routes to frontend like layouts/ and assets/. The gap
     # this closes: PR #21164 touched only theme/src/{scss,ts} and came out
     # of triage with no domain label at all.
-    check(domains(["theme/src/ts/consent-manager/index.ts"]) == ["domain:infra"],
-          f"theme/src/ts routes to infra; got {domains(['theme/src/ts/consent-manager/index.ts'])}")
-    check(domains(["theme/src/scss/_consent-banner.scss"]) == ["domain:infra"],
-          "theme/src/scss routes to infra")
-    check(domains(["theme/scripts/build-color-theme.mjs"]) == ["domain:infra"],
-          "theme/scripts routes to infra")
+    check(domains(["theme/src/ts/consent-manager/index.ts"]) == ["domain:frontend"],
+          f"theme/src/ts routes to frontend; got {domains(['theme/src/ts/consent-manager/index.ts'])}")
+    check(domains(["theme/src/scss/_consent-banner.scss"]) == ["domain:frontend"],
+          "theme/src/scss routes to frontend")
+    check(domains(["theme/scripts/build-color-theme.mjs"]) == ["domain:frontend"],
+          "theme/scripts routes to frontend")
 
     # Existing precedence is unchanged by the theme/ rule and the fallback.
     check(domains(["static/programs/aws-ts-s3/index.ts"]) == ["domain:programs"],
-          "static/programs beats the static/ infra rule")
+          "static/programs beats the static/ frontend rule")
     check(domains(["scripts/programs/ignore.txt"]) == ["domain:programs"],
           "scripts/programs beats the scripts/ infra rule")
     check(domains(["content/blog/post/index.md"]) == ["domain:blog"], "blog routes to blog")
     check(domains(["content/docs/a.md"]) == ["domain:docs"], "docs routes to docs")
     check(domains(["content/pricing/_index.md"]) == ["domain:website"],
           "non-docs content markdown routes to website")
-    check(domains(["layouts/index.html"]) == ["domain:infra"], "layouts routes to infra")
+
+    # The rendering layer is its own domain (2026-09-11): reviewed under the
+    # infra criteria, approved by marketing, never needs a staging run.
+    # Infra is exactly the build/deploy pipeline.
+    check(domains(["layouts/index.html"]) == ["domain:frontend"], "layouts routes to frontend")
+    check(domains(["assets/fingerprinted/images/x.svg"]) == ["domain:frontend"], "assets routes to frontend")
+    check(domains(["static/images/logo.png"]) == ["domain:frontend"], "static (non-programs) routes to frontend")
+    check(domains([".github/workflows/ci.yml"]) == ["domain:infra"], "workflows route to infra")
+    check(domains(["scripts/lint/lint-markdown.js"]) == ["domain:infra"], "scripts route to infra")
+    check(domains(["infrastructure/index.ts"]) == ["domain:infra"], "infrastructure routes to infra")
+    check(domains(["Makefile"]) == ["domain:infra"], "Makefile routes to infra")
+
+    # The review pipelines under scripts/ are repo plumbing, not the build.
+    # They fall through to `other`: same `tools` approver as infra, but a
+    # mechanical change there needs no approver at all. (This carve-out was
+    # originally about the staging gate; that now keys on
+    # `staging_evidence.paths` in .github/review-routing.yml, not on the
+    # domain, and is asserted in scripts/review-v3/test_routing.py.)
+    for d in ("review-v3", "review-admin", "content-review", "blog-review"):
+        check(domains([f"scripts/{d}/thing.py"]) == ["domain:other"],
+              f"scripts/{d} is repo plumbing, not infra")
+    # The narrowing is per path, not per PR: one workflow in the diff and the
+    # PR is infra again.
+    check(domains(["scripts/review-v3/act.py", ".github/workflows/x.yml"]) == ["domain:infra"],
+          "a workflow alongside the pipeline still routes to infra")
+    # Only those four. Everything else under scripts/ feeds the build.
+    check(domains(["scripts/review-notes/x.py"]) == ["domain:infra"],
+          "a scripts/ dir that only looks like a review pipeline is still infra")
+    check(domains(["scripts/search/update-search-index.js"]) == ["domain:infra"],
+          "the search index build stays infra")
+
+    # Content-serving data files classify with the content they serve, so a
+    # doc move (which edits the nav yaml) stays a docs PR and a blog tag edit
+    # is a blog PR. Generated data stays unmatched (other).
+    check(domains(["data/docs_menu_sections.yml"]) == ["domain:docs"], "docs nav yaml routes to docs")
+    check(domains(["data/resource_options.yaml"]) == ["domain:docs"], "resource options data routes to docs")
+    check(domains(["data/blog_tags.yaml"]) == ["domain:blog"], "blog tags yaml routes to blog")
+    check(domains(["data/team/team/cam-soper.toml"]) == ["domain:blog"], "author bios route to blog")
+    check(domains(["data/customers_industries.yaml"]) == ["domain:blog"], "customer industries route to blog")
+    check(domains(["data/customers.yaml"]) == ["domain:blog"], "the customer registry routes to blog")
+    check(domains(["data/pulumi_pricing.yaml"]) == ["domain:website"], "pricing data routes to website")
+    check(domains(["data/header_nav.yaml"]) == ["domain:website"], "site chrome data routes to website")
+    check(domains(["data/hero_agent_loop.yaml"]) == ["domain:frontend"], "hero animation data routes to frontend")
+    check(domains(["content/docs/a.md", "data/docs_menu_sections.yml"]) == ["domain:docs"],
+          "a doc move with its nav edit is a single-domain docs PR")
+    check(domains(["data/versions.json"]) == ["domain:other"],
+          f"generated data falls back to domain:other; got {domains(['data/versions.json'])}")
 
     # Fallback: a PR where nothing matches still carries one domain signal,
     # so "no domain label" unambiguously means triage never ran.
-    check(domains(["data/blog_tags.yaml"]) == ["domain:other"],
-          f"unmatched paths fall back to domain:other; got {domains(['data/blog_tags.yaml'])}")
+    check(domains(["data/package_schema/aws.json"]) == ["domain:other"],
+          f"unmatched paths fall back to domain:other; got {domains(['data/package_schema/aws.json'])}")
     check(domains(["data/a.yaml", "styles/Pulumi/Terms.yml"]) == ["domain:other"],
           "several unmatched paths still collapse to a single domain:other")
     check(run_classify(_pr(10, 0, ["data/a.yaml"]))["mixed"] is False,
@@ -151,9 +197,12 @@ def test_domain_routing() -> None:
 
     # A genuinely multi-domain PR is still mixed, and never picks up the fallback.
     real_mix = run_classify(_pr(10, 0, ["content/docs/a.md", "theme/src/ts/x.ts"]))
-    check(real_mix["target_domains"] == ["domain:docs", "domain:infra"],
+    check(real_mix["target_domains"] == ["domain:docs", "domain:frontend"],
           f"docs + theme is a real two-domain PR; got {real_mix['target_domains']}")
     check(real_mix["mixed"] is True, "docs + theme sets mixed")
+    infra_mix = run_classify(_pr(10, 0, ["layouts/index.html", ".github/workflows/ci.yml"]))
+    check(infra_mix["target_domains"] == ["domain:frontend", "domain:infra"],
+          f"template + workflow is frontend + infra; got {infra_mix['target_domains']}")
 
     # An empty file list yields no domain at all (nothing to label).
     check(run_classify(_pr(0, 0, []))["target_domains"] == [],

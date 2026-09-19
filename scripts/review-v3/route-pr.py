@@ -87,20 +87,78 @@ def _self_test() -> int:
     pr = {"additions": 1, "deletions": 1, "files": [{"path": "content/docs/foo.md"}]}
     out = route(pr, docs_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
     assert out["mechanical"] is True, out
-    assert out["roles"] == [] and out["teams"] == [], "mechanical docs PR needs no human"
+    # Mechanical skips the MODEL review, not the approver: the lane team is
+    # still requested and still has to approve. This output is what
+    # claude-triage.yml requests reviewers from, so an empty list here meant
+    # nobody was asked to review a typo fix that GitHub still gated.
+    assert out["roles"] == ["docs-guild"], out
+    assert out["teams"] == ["pulumi/docs-guild"], out
     assert out["staging_evidence_required"] is False
 
-    infra_pr = {"additions": 3, "deletions": 0, "files": [{"path": "layouts/partials/foo.html"}]}
+    infra_pr = {"additions": 3, "deletions": 0, "files": [{"path": ".github/workflows/foo.yml"}]}
     infra_diff = (
+        "diff --git a/.github/workflows/foo.yml b/.github/workflows/foo.yml\n"
+        "--- a/.github/workflows/foo.yml\n"
+        "+++ b/.github/workflows/foo.yml\n"
+        "@@ -1,0 +1,1 @@\n"
+        "+name: foo\n"
+    )
+    out2 = route(infra_pr, infra_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
+    assert out2["mechanical"] is False
+    assert "tools" in out2["roles"]
+    # subject:infra, but an arbitrary workflow is not the deploy. Staging
+    # evidence keys on `staging_evidence.paths`, not on the domain — this is
+    # the value staging-deploy-auto.yml reads to decide whether to dispatch
+    # a ~9-minute deploy, so a false positive here costs a real deploy.
+    assert out2["staging_evidence_required"] is False, out2
+
+    deploy_pr = {"additions": 3, "deletions": 0, "files": [{"path": "infrastructure/index.ts"}]}
+    deploy_diff = (
+        "diff --git a/infrastructure/index.ts b/infrastructure/index.ts\n"
+        "--- a/infrastructure/index.ts\n"
+        "+++ b/infrastructure/index.ts\n"
+        "@@ -1,0 +1,1 @@\n"
+        "+const x = 1;\n"
+    )
+    out3 = route(deploy_pr, deploy_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
+    assert "tools" in out3["roles"] and out3["staging_evidence_required"] is True, out3
+
+    # A template is frontend: marketing approves, no staging run.
+    frontend_pr = {"additions": 3, "deletions": 0, "files": [{"path": "layouts/partials/foo.html"}]}
+    frontend_diff = (
         "diff --git a/layouts/partials/foo.html b/layouts/partials/foo.html\n"
         "--- a/layouts/partials/foo.html\n"
         "+++ b/layouts/partials/foo.html\n"
         "@@ -1,0 +1,1 @@\n"
         "+<div></div>\n"
     )
-    out2 = route(infra_pr, infra_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
-    assert out2["mechanical"] is False
-    assert "tools" in out2["roles"] and out2["staging_evidence_required"] is True
+    out4 = route(frontend_pr, frontend_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
+    assert out4["mechanical"] is False
+    assert out4["roles"] == ["marketing"], out4["roles"]
+    assert out4["staging_evidence_required"] is False
+
+    # An infra PR that also touches repo plumbing dedupes to tools alone.
+    plumbing_pr = {"additions": 2, "deletions": 0,
+                   "files": [{"path": ".github/workflows/foo.yml"}, {"path": ".claude/commands/x/SKILL.md"}]}
+    out5 = route(plumbing_pr, infra_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
+    assert out5["roles"] == ["tools"], out5["roles"]
+
+    # An edition-feature rewrite on the FAQ is never mechanical, and it does
+    # NOT stack the marketing overlay (that is reserved for pricing paths).
+    faq_pr = {"additions": 1, "deletions": 1,
+              "files": [{"path": "content/docs/support/faq/pulumi-cloud.md"}]}
+    faq_diff = (
+        "diff --git a/content/docs/support/faq/pulumi-cloud.md b/content/docs/support/faq/pulumi-cloud.md\n"
+        "--- a/content/docs/support/faq/pulumi-cloud.md\n"
+        "+++ b/content/docs/support/faq/pulumi-cloud.md\n"
+        "@@ -40,1 +40,1 @@\n"
+        "-The Enterprise edition adds audit logs.\n"
+        "+The Enterprise edition adds audit logs and conformance packs.\n"
+    )
+    out6 = route(faq_pr, faq_diff, _REPO_ROOT / ".github/review-routing.yml", _REPO_ROOT)
+    assert out6["mechanical"] is False
+    assert any("edition" in r for r in out6["mechanical_reasons"]), out6["mechanical_reasons"]
+    assert out6["claims"] is False and out6["roles"] == ["docs-guild"], out6
 
     pricing_pr = {"additions": 1, "deletions": 0, "files": [{"path": "data/pulumi_pricing.yaml"}]}
     pricing_diff = (

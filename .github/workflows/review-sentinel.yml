@@ -37,12 +37,33 @@ name: Sentinel
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
 # is TRUE for unset (the blog-review lesson), so "unset" is never a truthy
 # branch anywhere below.
+#
+# NO CONCURRENCY GROUP, on purpose. A cancelled job renders as a failing
+# check on the PR ("Sentinel / sentinel — Cancelled"), and a group cancels
+# the older pending job even with cancel-in-progress off, so any burst of
+# triggers put a red ✗ in the merge box (65 of 200 runs, 2026-09-12 → 14).
+# Overlapping runs are cheap (no model, ~50 s) and are made safe by two
+# things instead: the job-level `if` below ignores label events for labels
+# the evaluator never reads (triage's `domain:*` batch on open was most of
+# the burst), and scripts/review-v3/publish_guard.py refuses to publish a
+# verdict when the PR head has moved or a newer run already published at
+# this head (every check-run carries `external_id = run id`). A guarded-out
+# run concludes success with a ::notice::, never cancelled.
 
 on:
   pull_request_target:
     types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
   pull_request_review:
-    types: [submitted, dismissed]
+    # `edited` matters: G5 reads `sentinel:oversized-ack` out of the approving
+    # review's BODY, so the natural human sequence — approve, see the red gate
+    # explaining the magic string, edit the review to add it — fired no event
+    # at all. The gate stayed red on a PR that satisfied it, and an oversized
+    # PR is exactly the one you do not want re-pushed to shake an event loose.
+    # Narrowed in the job `if:` below: only an APPROVING review's edit can
+    # move a gate, and editing a typo in your own COMMENTED review is the
+    # common case. Unnarrowed it ran the whole job -- checkout alone is 20s
+    # to 3m40s -- for something that provably changes nothing.
+    types: [submitted, dismissed, edited]
   workflow_run:
     workflows: ["Pre-merge Review (main)", "Pre-merge Review (update-review)"]
     types: [completed]
@@ -54,14 +75,21 @@ on:
 
 permissions:
   checks: write
-  pull-requests: read
-  issues: write        # the ⛔ status strip PATCHes the author card
+  # `pull-requests: write`, not `issues: write`, is what lets this job write
+  # the pinned status comment and the ⛔ strip. Both go through
+  # `POST/PATCH /repos/{o}/{r}/issues/{n}/comments`, and the endpoint's name
+  # is a trap: on a PR number that endpoint is governed by the
+  # **pull_requests** scope, not `issues`. The old block asked for
+  # `issues: write` + `pull-requests: read` and looked right for months
+  # because neither writer had ever run — the strip only fires when
+  # enforcing, and the status comment did not exist. The first real POST
+  # (PR #21642, 2026-09-16) failed with exit 1. `issues: write` is kept
+  # because gh's own endpoint naming keeps inviting it back; it is not the
+  # one doing the work.
+  pull-requests: write
+  issues: write
   contents: read
   id-token: write      # ESC OIDC for the org-scoped team-membership token
-
-concurrency:
-  group: sentinel-${{ github.event.pull_request.number || github.event.workflow_run.pull_requests[0].number || inputs.pr_number || github.run_id }}
-  cancel-in-progress: true
 
 env:
   ESC_ACTION_OIDC_AUTH: true
@@ -72,7 +100,37 @@ env:
 
 jobs:
   sentinel:
-    if: (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    # Label events re-evaluate only for the labels the evaluator reads; every
+    # other label change cannot move a gate. Keep this list in step with
+    # sentinel.py — a label the evaluator reads but this list omits still
+    # works, but only on the NEXT event. `sentinel:preview` was in exactly
+    # that position: the lanes that apply it label the PR just after opening
+    # it, so the `opened` run predates the label and the preview comment
+    # waited for a later event.
+    #
+    # `automation/merge` is read through the CONFIG rather than a constant in
+    # sentinel.py (`not_governed.author_label_pairs`), which is why it was
+    # missed — and it flips the verdict hardest of all: present ⇒ success
+    # with no gates evaluated. Its lane applies it *after* opening the PR
+    # and then arms auto-merge, so the Sentinel stayed red on a bot regen
+    # nobody pushes to and auto-merge never completed.
+    #
+    # `test_label_event_filter_covers_every_label_the_evaluator_reads`
+    # derives this list from the evaluator's constants and review-routing.yml
+    # rather than restating it, so a sixth label cannot go missing the same way.
+    if: |
+      (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
+      (github.event_name != 'pull_request_target' ||
+       (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+       github.event.label.name == 'review:waived' ||
+       github.event.label.name == 'review:oversized' ||
+       github.event.label.name == 'review:trivial' ||
+       github.event.label.name == 'review:prose-flagged' ||
+       github.event.label.name == 'automation/merge' ||
+       github.event.label.name == 'sentinel:preview') &&
+      (github.event_name != 'pull_request_review' ||
+       github.event.action != 'edited' ||
+       github.event.review.state == 'approved')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -83,13 +141,27 @@ jobs:
           RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
           INPUT_PR: ${{ inputs.pr_number }}
         run: |
+          set -uo pipefail
           PR="${EVENT_PR:-${RUN_PR:-${INPUT_PR:-}}}"
-          if [ -z "$PR" ]; then
-            echo "No PR number resolvable from this event; nothing to evaluate."
-            echo "pr=" >> "$GITHUB_OUTPUT"
-          else
-            echo "pr=$PR" >> "$GITHUB_OUTPUT"
-          fi
+          # INPUT_PR is free text from workflow_dispatch, and this value is
+          # interpolated into later `run:` blocks as ${{ steps.pr.outputs.pr }}.
+          # Dispatching needs write access so this is defence in depth, not a
+          # fork vector — but an unvalidated value here is both a shell
+          # injection and, via `=` or a newline, a way to forge other step
+          # outputs through GITHUB_OUTPUT. Digits only.
+          case "$PR" in
+            '')
+              echo "No PR number resolvable from this event; nothing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *[!0-9]*)
+              echo "::error::PR number is not numeric: refusing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "pr=$PR" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
 
       - name: Fetch secrets from ESC
         # continue-on-error: sentinel.py treats a missing/failing team-read
@@ -102,16 +174,34 @@ jobs:
         uses: pulumi/esc-action@v3
 
       # Base repo default branch ONLY — see the SECURITY INVARIANT above.
+      #
+      # Sparse, because this was the whole job's runtime. A full worktree is
+      # ~1.2 GB (content/ alone is 860 MB) and the evaluator reads ~7 MB of
+      # it: its own package, the docs-review scripts it loads
+      # (compose-review, validate-pinned, and triage-classify via
+      # replay-mechanical — compose-review also reads footer*.md from its
+      # parent, so the whole docs-review directory comes along), and
+      # review-routing.yml. Checkout was running 20 s to 3m40s; nothing else
+      # in the job takes more than a few seconds.
+      #
+      # test_sentinel.py pins this list against the paths sentinel.py
+      # actually loads — a new dependency outside these roots fails the
+      # suite rather than only the one PR whose code path reaches it.
       - name: Checkout base (default branch)
         if: steps.pr.outputs.pr != ''
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+          sparse-checkout-cone-mode: true
 
       - name: Set up Python
         if: steps.pr.outputs.pr != ''
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -124,14 +214,22 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the team-membership endpoint only — the
-          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
-          # treats lookup failures as action_required, never as "not a
-          # member", so a missing/expired token degrades loud, not wrong.
+          # Org-scoped token for the two membership endpoints G3 reads —
+          # org team membership, and (for `approval.admins_satisfy`) the
+          # approver's effective repo permission, which wants push access.
+          # The default GITHUB_TOKEN can do neither. sentinel.py treats
+          # lookup failures as action_required, never as "not a member", so
+          # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
-          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}")
+          # --status-comment is passed unconditionally on purpose: the
+          # evaluator decides whether to actually write. Enforcing mode
+          # always maintains the pinned comment; report-only mode does so
+          # only for a PR someone labelled `sentinel:preview`, so the dry
+          # run stays invisible to contributors who didn't opt in.
+          ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
+                --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then
             ARGS+=(--report-only)
           else
@@ -140,12 +238,26 @@ jobs:
           python3 scripts/review-v3/sentinel.py "${ARGS[@]}" > verdict.json
           cat verdict.json
 
-      - name: Publish check-run
+      # Overlapping runs are expected (no concurrency group — see the header).
+      # Publish only when this run still holds the newest verdict for the
+      # PR's current head; otherwise conclude success with a notice.
+      - name: Publish guard
         if: steps.pr.outputs.pr != ''
+        id: guard
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq '{name: "Sentinel", head_sha: .head_sha, status: "completed",
-               conclusion: .conclusion,
+          python3 scripts/review-v3/publish_guard.py \
+            --repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}" \
+            --run-id "${{ github.run_id }}" --verdict verdict.json
+
+      - name: Publish check-run
+        if: steps.pr.outputs.pr != '' && steps.guard.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq --arg run_id "${{ github.run_id }}" \
+             '{name: "Sentinel", head_sha: .head_sha, status: "completed",
+               conclusion: .conclusion, external_id: $run_id,
                output: {title: .title, summary: .summary}}' verdict.json \
           | gh api --method POST "repos/${{ github.repository }}/check-runs" --input -

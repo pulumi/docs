@@ -180,7 +180,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-2018-11-28"><code>v0.12.2</code></a>,
+            As of <a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0122-2018-05-19"><code>v0.12.2</code></a>,
             the promise leak experience has been improved and shows a simple error message. Set this environment variable to
             get more verbose error messages when debugging promise leaks.
         </p>

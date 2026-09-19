@@ -2,7 +2,7 @@
 	"name": "Pulumi Docs Author Environment",
 	"image": "mcr.microsoft.com/devcontainers/base:trixie",
 	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
+		"ghcr.io/devcontainers/features/node:2": {
 			"version": "24"
 		},
 		"ghcr.io/devcontainers/features/dotnet:2": {

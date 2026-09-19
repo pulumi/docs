@@ -35,7 +35,7 @@ itemlist:
     - name: "OpenTofu"
 ---
 
-The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. As of August 2026, [Pulumi's own package registry](https://www.pulumi.com/registry/) lists more than 300 packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
+The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. [Pulumi's own package registry](https://www.pulumi.com/registry/) lists hundreds of packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
 
 <!--more-->
 
@@ -131,7 +131,7 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 
 | Tool | Language / approach | Clouds supported | License | Latest stable release (Aug 2026) | Best for |
 |---|---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers | Apache-2.0 | v3.259.0 (2026-08-19) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers | Apache-2.0 | v3.259.0 (2026-08-19) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
 | [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.15.9 (2026-08-19) | Teams with existing Terraform expertise and established workflows |
 | [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Apache-2.0 | v2.266.0 (2026-08-19) | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Proprietary (managed service) | Continuously updated by AWS | AWS-only deployments requiring deep service integration |
@@ -188,7 +188,7 @@ If you're short on time, start here:
 
 | Your situation | Recommended tool | Why |
 |---|---|---|
-| You want one language across every cloud, plus native testing and packages | Pulumi | Real programming languages (Python, TypeScript, Go, C#, Java) with unit tests, IDE support, and 170+ providers |
+| You want one language across every cloud, plus native testing and packages | Pulumi | Real programming languages (Python, TypeScript, Go, C#, Java) with unit tests, IDE support, and hundreds of providers |
 | You have deep existing Terraform/HCL expertise and workflows | Terraform | Largest ecosystem and community knowledge base, despite the BUSL-1.1 licensing tradeoff |
 | You need an open-source, community-governed Terraform-compatible tool | OpenTofu | MPL-2.0, Linux Foundation governance, high HCL compatibility |
 | You're AWS-only and want programming languages instead of templates | AWS CDK | Compiles to CloudFormation, so it inherits native AWS support with a real language on top |
@@ -210,7 +210,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 ### Key Features:
 
 - **Universal language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL configurations—no new DSL to learn
-- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers
+- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
@@ -481,7 +481,7 @@ Key Features:
 
 - **General-purpose language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
-- **Multi-cloud flexibility**: [170+ providers](/registry/), with native AWS, Azure, Google Cloud, and Kubernetes providers offering same-day access to new cloud features
+- **Multi-cloud flexibility**: [hundreds of providers](/registry/), with native AWS, Azure, Google Cloud, and Kubernetes providers offering same-day access to new cloud features
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
 - **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
 
@@ -1273,7 +1273,7 @@ Docker Compose - While not an IaC tool, Docker Compose defines multi-container a
 
 These platforms and tools serve important roles in the infrastructure automation ecosystem but should not be confused with infrastructure as code tools themselves. They enhance and orchestrate the work of actual IaC tools rather than replacing them.
 
-## The Future of Infrastructure as Code
+## The future of infrastructure as code
 
 The infrastructure as code landscape is rapidly evolving toward software engineering maturity, with several transformative trends reshaping how organizations approach infrastructure:
 
@@ -1497,7 +1497,7 @@ Declarative DSL-based tools such as Terraform and OpenTofu can also be driven by
 
 By GitHub stars, Kubernetes leads the broader infrastructure ecosystem at roughly 124,900 stars, reflecting its role as the de facto container orchestration standard rather than a pure IaC tool. Among dedicated IaC tools, Terraform remains the most-starred at roughly 49,500, followed by OpenTofu at roughly 29,900, Pulumi at roughly 25,600, AWS CDK at roughly 12,900, and Crossplane at roughly 12,000 (measured 2026-08-22; star counts change continuously and are one signal among many, not a ranking of technical merit). Terraform's larger community reflects a decade of first-mover adoption, while Pulumi, OpenTofu, and Crossplane have grown fastest among teams prioritizing general-purpose languages, open governance, or Kubernetes-native infrastructure management, respectively.
 
-## Conclusion: The Evolution of Infrastructure as Code
+## Conclusion: The evolution of infrastructure as code
 
 The infrastructure as code landscape in 2026 reflects a maturing field where different approaches serve different organizational needs and team preferences. The evolution from manual processes to automated infrastructure has branched into multiple viable paths, each with distinct advantages.
 

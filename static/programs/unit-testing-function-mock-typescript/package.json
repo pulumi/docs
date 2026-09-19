@@ -1,0 +1,18 @@
+{
+    "name": "unit-testing-function-mock-typescript",
+    "version": "0.0.1",
+    "main": "index.ts",
+    "dependencies": {
+        "@pulumi/aws": "^7.0.0",
+        "@pulumi/pulumi": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^22.0.0",
+        "mocha": "^11.1.0",
+        "tsx": "^4.0.0"
+    },
+    "scripts": {
+        "test": "npx mocha --require tsx 'test/**/*.spec.ts' --exit"
+    }
+}

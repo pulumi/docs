@@ -54,7 +54,7 @@ runtime:
 
 Pulumi Python SDKs include type hints compatible with type checkers such as [MyPy](https://www.mypy-lang.org) and [Pyright](https://microsoft.github.io/pyright/#/). In the latest release of Pulumi, you can ask Pulumi to run your typechecker of choice for you as part of Pulumi operations and fail if there are any type errors. This can help you catch type errors earlier and ensure that your Pulumi programs are type-safe.
 
-Add the typechecker of your choice to [your dependencies](https://www.pulumi.com/docs/languages-sdks/python/#packages) and set the [`typechecker` runtime option](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
+Add the typechecker of your choice to [your dependencies](/docs/iac/languages-sdks/python/#packages) and set the [`typechecker` runtime option](https://www.pulumi.com/docs/iac/concepts/projects/project-file/#runtime-options) in your project file to `mypy` or `pyright` to enable automatic type checking.
 
 ```yaml
 name: python-with-typechecking
