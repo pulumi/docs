@@ -101,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -1144,11 +1144,64 @@ def only_collisions_hold(pr: dict) -> bool:
     """True when the row cleared every stamp gate except the cross-PR ones.
     An overlapping member of a cluster is always a `judge` row -- the overlap
     is itself a gate -- so "is the lead stampable" cannot be read off the
-    verdict; this is the question the Do-next chain card actually asks."""
+    verdict; this is the question the chain button actually asks."""
     fails = pr.get("gate_fails")
     if fails is None:                       # a queue analyzed before gate_fails existed
         return pr.get("verdict") == "stamp"
     return bool(fails) and all(f.startswith(COLLISION_GATES) for f in fails)
+
+
+CLUSTER_ACTION_IDS = ("chain", "consolidate")
+
+
+def attach_cluster_actions(prs: list[dict], clusters: list[dict]) -> None:
+    """A cluster's recommendation as a button on the row it belongs to, so
+    the move sits next to the evidence for it instead of in a strip at the
+    top of the page naming rows you can't see.
+
+    The chain goes on its lead: `--chain C1` approves the lead through the
+    stamp gates and then merges master into the next link, so the button
+    `covers` that link -- the board marks the covered row and puts the chain
+    out if a decision is picked there instead. `--chain` approves the lead
+    with `--force`, so it is offered only where the collision is the *only*
+    thing holding the lead back (`only_collisions_hold`); a lead held up by
+    anything else keeps its own approve-as-is button, next to the findings,
+    and nothing pretends the chain is mechanical. A consolidation goes on
+    the newest sweep, which is the PR its request is posted on.
+
+    Idempotent: every row's earlier cluster action is dropped first, since
+    `merge_judgments` rebuilds rows and recommendations move."""
+    by = {p["number"]: p for p in prs}
+    for p in prs:
+        p["actions"] = [a for a in p.get("actions") or [] if a["id"] not in CLUSTER_ACTION_IDS]
+    for c in clusters:
+        r = c.get("recommendation") or {}
+        if r.get("kind") == "chain":
+            first, nxt = r.get("first"), r.get("next")
+            lead = by.get(first)
+            if not lead or not nxt or lead.get("waiting_on_author") or lead.get("handed_off"):
+                continue
+            if lead.get("verdict") != "stamp" and not only_collisions_hold(lead):
+                continue
+            if merges_on_stamp(lead):
+                label = f"approve & merge, then unblock #{nxt}"
+                help_ = (f"Approves and squash-merges #{first} through the same gates as a stamp, then merges master into "
+                         f"#{nxt} so it can follow (cluster {c['id']}). One link per run; the next one waits on CI.")
+            else:
+                label = f"approve, then unblock #{nxt}"
+                help_ = (f"Approves #{first}; it is human-authored, so the author merges it, and the next run merges master "
+                         f"into #{nxt} once it has landed (cluster {c['id']}). One link per run.")
+            lead["actions"].insert(0, {"id": "chain", "label": label, "cmd": r["cmd"], "cluster": c["id"],
+                                       "covers": [nxt], "help": help_})
+        elif r.get("kind") == "consolidate":
+            on = by.get(r.get("on"))
+            if not on or on.get("waiting_on_author") or on.get("handed_off"):
+                continue
+            on["actions"].insert(0, {"id": "consolidate", "label": f"ask {r.get('target')} for one consolidated PR",
+                                     "cmd": r["cmd"], "cluster": c["id"],
+                                     "help": (f"Posts a changes-requested review on #{on['number']} asking {r.get('target')} to fold "
+                                              f"the overlapping sweeps in cluster {c['id']} into one PR, instead of N serial "
+                                              f"merges. Nothing merges.")})
 
 
 def pr_list(nums: list[int], limit: int = 3) -> str:  # noqa: D401
@@ -1163,23 +1216,24 @@ def pr_list(nums: list[int], limit: int = 3) -> str:  # noqa: D401
 
 
 def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> list[dict]:
-    """The board's opening: at most a handful of moves, each one sentence of
-    what is true, one sentence of what pressing the button does, and the PRs
-    it does it to. Ordered by leverage: consolidations, chains, then the
-    batches (send back / close / route / stamp).
+    """The batch moves, as `--terminal` prints them after the table: at most
+    a handful, each one sentence of what is true, one sentence of what the
+    command does, and the PRs it does it to. Ordered by leverage:
+    consolidations, chains, then the batches (send back / close / route /
+    stamp). The board does not render these: every one of them is the row
+    buttons it names, and a row is where the evidence for the decision is,
+    so the board keeps each decision on its row (`attach_cluster_actions`
+    puts the chain and the consolidation there too).
 
-    `targets` maps a PR to the row button the card would press, so the board
-    can keep the card and the rows in agreement instead of letting a card and
-    a contrary row decision both sit lit. A card with no `targets` (a chain,
-    a consolidation) `claims` its PRs instead: picking a different decision on
-    one of them puts the card out.
+    `targets` maps a PR to the row action the entry batches, and an entry
+    with no `targets` (a chain, a consolidation) `claims` its PRs instead,
+    so a reader can check an entry against the rows above it.
 
-    Two invariants hold over every card here. It never names a row the board
-    does not render (`visible` is exactly `render_board`'s row set), because
-    a card whose row button is absent can never light. And it never carries
-    an approval that needed a judgment call: the stamp card is the rows that
-    cleared every gate mechanically, and a chain whose lead did not states
-    the fact without a button."""
+    Two invariants hold over every entry here. It never names a row the board
+    does not render (`visible` is exactly `render_board`'s row set). And it
+    never carries an approval that needed a judgment call: the stamp entry is
+    the rows that cleared every gate mechanically, and a chain whose lead did
+    not states the fact without a command."""
     cards: list[dict] = []
     by_n = {p["number"]: p for p in prs}
     for c in clusters:
@@ -1535,6 +1589,7 @@ def analyze(queue: dict, cfg: pr_review_config.UserConfig, *, config: routing.Co
     by_number = {p["number"]: p for p in prs}
     for c in clusters:
         c["recommendation"] = cluster_recommendation(c, by_number)
+    attach_cluster_actions(prs, clusters)
     queue["do_next"] = do_next(prs, clusters, directional)
     queue["clusters"] = clusters
     queue["directional"] = directional
@@ -1637,9 +1692,17 @@ def merge_judgments(queue: dict, judgments: dict, *, ctx: dict | None = None) ->
             rejected = f"{rec}: the row is {pr.get('verdict')}, not judge"
         if rejected:
             pr["rejected_recommendation"] = rejected
-    # Recommendations feed the "send back" card, so the opening is rebuilt.
+    # A judged row can change verdict, which can change which member leads a
+    # chain; the recommendations, the cluster buttons on the rows, and the
+    # terminal's batch list are all rebuilt from the rows as they stand now.
+    prs = queue.get("prs") or []
+    clusters = queue.get("clusters") or []
+    by_number = {p["number"]: p for p in prs}
+    for c in clusters:
+        c["recommendation"] = cluster_recommendation(c, by_number)
+    attach_cluster_actions(prs, clusters)
     if "do_next" in queue:
-        queue["do_next"] = do_next(queue.get("prs") or [], queue.get("clusters") or [], queue.get("directional") or [])
+        queue["do_next"] = do_next(prs, clusters, queue.get("directional") or [])
     queue["counts"] = _counts(queue.get("prs") or [])
     return queue
 
