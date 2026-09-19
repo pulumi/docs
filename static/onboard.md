@@ -191,7 +191,7 @@ reach, so any `pulumi` command they run — `stack output`, `preview`, `up`,
 run `pulumi login`. Claim first, then `pulumi login`, then the CLI works for
 them.
 
-## 7. Encourage the next steps
+## 7. Suggest the next steps
 
 Don't just ask "what next" — actively encourage the user to keep going, in this
 order of importance:
