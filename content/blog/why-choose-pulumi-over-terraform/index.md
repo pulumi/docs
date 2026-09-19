@@ -1,7 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
-lastmod: 2026-08-22
+updated: 2026-08-22
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 feature_image: feature.png
 authors:

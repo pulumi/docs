@@ -331,10 +331,10 @@ scalability, and collaboration.
     programming language](https://www.pulumi.com/docs/iac/languages-sdks/) rather
     than a bespoke configuration language, Neo can read, reason about,
     test, and ship it the same way an AI coding agent already handles the rest of
-    your codebase. Terraform, by contrast, is defined in HCL, a domain-specific
-    configuration language that AI agents can generate and reason about less
-    reliably than a general-purpose programming language — one more reason
-    teams switch.
+    your codebase, using the same linters, type checkers, and test frameworks.
+    Terraform, by contrast, is defined in HCL, a domain-specific configuration
+    language with none of that tooling and far less representation in the
+    codebases AI models are trained on — one more reason teams switch.
 
 - **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of
