@@ -1150,6 +1150,16 @@ def test_the_cluster_moves_are_row_buttons():
     assert chain["label"] == "approve & merge, then unblock #2" and "merges master into #2" in chain["help"]
     assert "chain" in analyze.DECISION_IDS and "consolidate" in analyze.DECISION_IDS
     assert not any(x["id"] == "chain" for x in row(q, 2)["actions"])
+    # A human-authored lead is approved without merging, so act.py's
+    # `requires=["stamp", first]` skips the unblock and #2 is untouched this
+    # run: the chain covers nothing, or the board would mark #2 decided for a
+    # write that never happens.
+    human = stampable(1, title="Fix the intro", author="jdoe", author_type="User",
+                      files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([human, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["covers"] == []
+    assert chain["label"] == "approve, then unblock #2" and "the next run merges master" in chain["help"]
     # a lead held by more than the collision carries no chain
     a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
                    commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],

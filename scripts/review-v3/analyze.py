@@ -1162,7 +1162,9 @@ def attach_cluster_actions(prs: list[dict], clusters: list[dict]) -> None:
     The chain goes on its lead: `--chain C1` approves the lead through the
     stamp gates and then merges master into the next link, so the button
     `covers` that link -- the board marks the covered row and puts the chain
-    out if a decision is picked there instead. `--chain` approves the lead
+    out if a decision is picked there instead. It covers nothing when the
+    lead is human-authored: approving it does not merge it, so act.py skips
+    the unblock and the next link waits for a later run. `--chain` approves the lead
     with `--force`, so it is offered only where the collision is the *only*
     thing holding the lead back (`only_collisions_hold`); a lead held up by
     anything else keeps its own approve-as-is button, next to the findings,
@@ -1183,7 +1185,8 @@ def attach_cluster_actions(prs: list[dict], clusters: list[dict]) -> None:
                 continue
             if lead.get("verdict") != "stamp" and not only_collisions_hold(lead):
                 continue
-            if merges_on_stamp(lead):
+            merges = merges_on_stamp(lead)
+            if merges:
                 label = f"approve & merge, then unblock #{nxt}"
                 help_ = (f"Approves and squash-merges #{first} through the same gates as a stamp, then merges master into "
                          f"#{nxt} so it can follow (cluster {c['id']}). One link per run; the next one waits on CI.")
@@ -1191,8 +1194,15 @@ def attach_cluster_actions(prs: list[dict], clusters: list[dict]) -> None:
                 label = f"approve, then unblock #{nxt}"
                 help_ = (f"Approves #{first}; it is human-authored, so the author merges it, and the next run merges master "
                          f"into #{nxt} once it has landed (cluster {c['id']}). One link per run.")
+            # `covers` only where the unblock actually runs this time. act.py
+            # gates the unblock step on `requires=["stamp", first]` and skips
+            # it unless that stamp merged, so a human-authored lead -- approved
+            # and left for its author to merge -- never reaches #nxt in this
+            # run. The label and help already say the next run does it; a
+            # `covers` here would have the board contradict them, marking the
+            # covered row decided for a write nothing will perform.
             lead["actions"].insert(0, {"id": "chain", "label": label, "cmd": r["cmd"], "cluster": c["id"],
-                                       "covers": [nxt], "help": help_})
+                                       "covers": [nxt] if merges else [], "help": help_})
         elif r.get("kind") == "consolidate":
             on = by.get(r.get("on"))
             if not on or on.get("waiting_on_author") or on.get("handed_off"):
