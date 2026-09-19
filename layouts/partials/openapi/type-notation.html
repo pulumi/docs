@@ -32,7 +32,7 @@
       {{ $itemRefParts := split (index $schema.items "$ref") "/" }}
       {{ $schemaName = index $itemRefParts (sub (len $itemRefParts) 1) }}
       {{ $html = printf `array[<a href="/docs/reference/cloud-rest-api/schema/%s/">%s</a>]` ($schemaName | urlize) $schemaName }}
-    {{ else if isset $schema "items" }}
+    {{ else if $schema.items.type }}
       {{ $html = printf "array[%s]" $schema.items.type }}
     {{ else }}
       {{ $html = "array" }}
