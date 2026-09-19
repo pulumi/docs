@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "repo": "pulumi/docs",
+  "pr": 21748,
+  "head_sha": "eb04ed04b14589cac2790df5bca6799cf80eb485",
+  "run_id": "35456832433",
+  "generated_at": "2026-09-19T17:03:25Z",
+  "high_water": 0,
+  "findings": [],
+  "trail": [
+    {
+      "file": ".claude/commands/pr-review/SKILL.md",
+      "claim": "Each collision cluster gets one recommendation, in words: **consolidate** (mostly one bot author's overlapping sweeps: one `--request-changes` on the newest\u2026",
+      "verdict": "not-a-claim",
+      "line": 136,
+      "evidence": "evidence: This is a description of the PR author's own internal workflow/skill documentation (.claude/commands/pr-review/SKILL.md) defining recommendation categories for its own tooling, not a falsifiable external or product claim.; source: .claude/commands/pr-review/SKILL.md (reviewed file, author's own design)",
+      "source": ".claude/commands/pr-review/SKILL.md (reviewed file, author's own design)",
+      "route": "pass3",
+      "claim_id": "c1",
+      "type": "entity-spec",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".claude/commands/pr-review/SKILL.md",
+      "claim": "Publish with the Artifact tool (favicon \ud83d\uddc2\ufe0f; update the same artifact on re-render rather than creating a new one). There is no batch strip: every decision is\u2026",
+      "verdict": "not-a-claim",
+      "line": 174,
+      "evidence": "evidence: This is a description of the PR author's own design for the pr-review skill's Artifact tool usage (favicon, update-vs-create behavior, row-based UI layout) \u2014 an internal workflow/design description, not a falsifiable external claim.; source: .claude/commands/pr-review/SKILL.md (self-describing design doc)",
+      "source": ".claude/commands/pr-review/SKILL.md (self-describing design doc)",
+      "route": "pass3",
+      "claim_id": "c2",
+      "type": "temporal",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".claude/commands/pr-review/references/action-menus.md",
+      "claim": "- **chain** \u2192 `--chain C1`, on the lead's row, as its coloured button. It is offered only where the collision is the *only* thing holding the lead back\u2026",
+      "verdict": "not-a-claim",
+      "line": 30,
+      "evidence": "evidence: This is an internal design-document line from the PR author's own `.claude/commands/pr-review` tooling reference, describing their own action-menu logic (a faithful description of the author's own pipeline), not a falsifiable\u2026; source: repo:.claude/commands/pr-review/references/action-menus.md",
+      "source": "repo:.claude/commands/pr-review/references/action-menus.md",
+      "route": "pass1",
+      "claim_id": "c3",
+      "type": "temporal",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".claude/commands/pr-review/references/action-menus.md",
+      "claim": "`--terminal` prints the table \u2014 every row with its reasons wrapped rather than cut, its blockers (`blocked: \u2026`, with `(no action available)` when nothing\u2026",
+      "verdict": "not-a-claim",
+      "line": 38,
+      "evidence": "evidence: (escalated from pass3) The text is a verbatim excerpt of line 38 in the same file describing this internal Claude-command skill's own `--terminal` mode output format \u2014 a faithful self-description of the author's own tooling design, not a\u2026; source: repo:.claude/commands/pr-review/references/action-menus.md L38",
+      "source": "repo:.claude/commands/pr-review/references/action-menus.md L38",
+      "route": "pass1",
+      "claim_id": "c4",
+      "type": "entity-spec",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": ".claude/commands/pr-review/references/reading-the-board.md",
+      "claim": "- **Cluster moves** sit on the row they belong to. **approve & merge, then unblock #N** is on the lead of a collision chain: `--chain C1` approves and\u2026",
+      "verdict": "not-a-claim",
+      "line": 53,
+      "evidence": "evidence: This is internal documentation describing the PR author's own tool design (the `/pr-review` board's `--chain` behavior), read directly from the file's surrounding context \u2014 a faithful self-description of the author's own feature, not a\u2026; source: .claude/commands/pr-review/references/reading-the-board.md",
+      "source": ".claude/commands/pr-review/references/reading-the-board.md",
+      "route": "pass1",
+      "claim_id": "c5",
+      "type": "temporal",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "scripts/review-v3/README.md",
+      "claim": "| `analyze.py` | One verdict per PR (`stamp` / `judge` / `route` / `blocked`), reason codes (`REASON_CODES`), row actions \u2014 every verdict carries one\u2026",
+      "verdict": "not-a-claim",
+      "line": 362,
+      "evidence": "evidence: This is a description of the PR author's own internal script (analyze.py) and its behavior within their own review tooling repo, not a falsifiable third-party assertion checkable via external sources.; source: scripts/review-v3/README.md (self-described tooling documentation)",
+      "source": "scripts/review-v3/README.md (self-described tooling documentation)",
+      "route": "pass3",
+      "claim_id": "c6",
+      "type": "attribution",
+      "confidence": "high",
+      "framing": "none"
+    },
+    {
+      "file": "scripts/review-v3/README.md",
+      "claim": "| `render.py` | Board HTML (published as an Artifact), one PR's detail page, or `--terminal`. Server-side rendered, one `esc()`, queue inlined as JSON, no\u2026",
+      "verdict": "not-a-claim",
+      "line": 363,
+      "evidence": "evidence: This is a description of the PR author's own internal script (render.py) and its design/behavior within their own review tooling pipeline, not a falsifiable external or product claim.; source: scripts/review-v3/README.md (self-describing internal tooling documentation)",
+      "source": "scripts/review-v3/README.md (self-describing internal tooling documentation)",
+      "route": "pass3",
+      "claim_id": "c7",
+      "type": "entity-spec",
+      "confidence": "high",
+      "framing": "none"
+    }
+  ],
+  "investigation_log": {
+    "cross-sibling-reads": "not run (not in a templated section)",
+    "external-claim-verification": "0 of 7 claims verified (0 unverifiable, 0 contradicted) \u00b7 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations \u00b7 routed: 0 inline, 3 Pass 1, 0 Pass 2, 4 Pass 3 (verified 0, contradicted 0, unverifiable 4).",
+    "cited-claim-spot-checks": "not run (no cited claims)",
+    "frontmatter-sweep": "not run (no frontmatter in diff)",
+    "temporal-trigger-sweep": "ran (recency words present in diff; spot-check in-review)",
+    "code-execution": "not run (no `static/programs/` change)",
+    "code-examples-checks": "not run (no fenced code blocks in content files)",
+    "editorial-balance-pass": "not run (not under content/blog/)"
+  },
+  "editorial_balance": null,
+  "triaged": [],
+  "style_suggestions_count": 0,
+  "confidence": {
+    "mechanics": "TODO",
+    "facts": "TODO"
+  },
+  "summary": null,
+  "stances": [
+    {
+      "file": ".claude/commands/pr-review/SKILL.md",
+      "text": "Each collision cluster gets one recommendation, in words: **consolidate** (mostly one bot author's overlapping sweeps: one `--request-changes` on the newest\u2026",
+      "type": "comparison",
+      "line": 136,
+      "found_by": [
+        "regex"
+      ]
+    },
+    {
+      "file": ".claude/commands/pr-review/SKILL.md",
+      "text": "Publish with the Artifact tool (favicon \ud83d\uddc2\ufe0f; update the same artifact on re-render rather than creating a new one). There is no batch strip: every decision is\u2026",
+      "type": "positioning",
+      "line": 174,
+      "found_by": [
+        "regex"
+      ]
+    },
+    {
+      "file": ".claude/commands/pr-review/references/action-menus.md",
+      "text": "A collision cluster's recommendation is a button on the row it belongs to (`analyze.attach_cluster_actions`), not a strip above the rows: the board has no\u2026",
+      "type": "positioning",
+      "line": 28,
+      "found_by": [
+        "regex"
+      ]
+    },
+    {
+      "file": ".claude/commands/pr-review/references/reading-the-board.md",
+      "text": "- **Approve the set** was the stampable rows, which arrive with their approve button already selected \u2014 the default command merges them whether or not a\u2026",
+      "type": "positioning",
+      "line": 27,
+      "found_by": [
+        "regex"
+      ]
+    },
+    {
+      "file": ".claude/commands/pr-review/references/reading-the-board.md",
+      "text": "- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks, start the\u2026",
+      "type": "positioning",
+      "line": 52,
+      "found_by": [
+        "regex"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "ts": "2026-09-19T17:03:25Z",
+      "summary": "initial review (pending publication)",
+      "sha": "eb04ed0"
+    }
+  ]
+}
