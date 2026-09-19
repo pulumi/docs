@@ -17,7 +17,7 @@ Alongside these features, we are also introducing today a [Self-Hosted Changelog
 
 ## Self-Hosted Pulumi Cloud Overview
 
-Self-Hosting is available in the Pulumi Business Critical edition of Pulumi Cloud, you can try it out with [our 30 day trial](/product/self-hosted). This allows organizations to run the Pulumi Cloud within their own environments, ensuring data control, compliance, and customizability. While Pulumi manages all aspects of its SaaS offering (Pulumi Cloud), Self-Hosted Pulumi Cloud requires customers to handle data backups, service maintenance, and updates.
+Self-Hosting is available in the Pulumi Business Critical edition of Pulumi Cloud, and you can [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) to try it out. This allows organizations to run the Pulumi Cloud within their own environments, ensuring data control, compliance, and customizability. While Pulumi manages all aspects of its SaaS offering (Pulumi Cloud), Self-Hosted Pulumi Cloud requires customers to handle data backups, service maintenance, and updates.
 
 Here’s a deep dive into what the new features offer and how they can benefit your organization:
 
@@ -66,4 +66,4 @@ The addition of Resource Search and Pulumi Deployments to our Self-Hosted Pulumi
 
 As of today, all Pulumi Cloud features that have been made generally available are supported in the self-hosted version. We intend to continue to have parity with Pulumi Cloud features in the self-hosted version within 6 months of making the feature generally available.
 
-Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to start a 30-day trial, contact us or visit our [self-hosting documentation](/docs/administration/self-hosting/).
+Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial), contact us or visit our [self-hosting documentation](/docs/administration/self-hosting/).
