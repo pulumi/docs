@@ -774,8 +774,8 @@ def test_a_fenced_block_in_a_finding_renders_as_pre():
 
 
 def test_rows_are_in_pr_number_order_inside_their_group():
-    """Verdict is already on the row, in the tally, on a filter chip and in
-    the Do-next cards. Sorting the rows by it too meant finding #21598 on the
+    """Verdict is already on the row, in the tally and on a filter chip.
+    Sorting the rows by it too meant finding #21598 on the
     page required knowing its verdict first; a number is the one thing about
     a row you always already have."""
     q = run([stampable(31, title="Page 31", files=[_file("content/docs/p31.md", ["x"])]),

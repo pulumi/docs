@@ -1101,7 +1101,7 @@ def test_route_asks_every_missing_team_in_one_command():
     assert p["verdict"] == "stamp" and p["route_targets"] == []
 
 
-# ---- the Do-next opening -------------------------------------------------------
+# ---- the opening moves: row buttons and the --terminal list ---------------------
 
 
 def test_the_chain_card_never_offers_an_approval_that_needs_reading():

@@ -1144,7 +1144,7 @@ def only_collisions_hold(pr: dict) -> bool:
     """True when the row cleared every stamp gate except the cross-PR ones.
     An overlapping member of a cluster is always a `judge` row -- the overlap
     is itself a gate -- so "is the lead stampable" cannot be read off the
-    verdict; this is the question the Do-next chain card actually asks."""
+    verdict; this is the question the chain button actually asks."""
     fails = pr.get("gate_fails")
     if fails is None:                       # a queue analyzed before gate_fails existed
         return pr.get("verdict") == "stamp"
