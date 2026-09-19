@@ -160,13 +160,14 @@ Do not use `pulumi do` in this onboarding flow. Everything runs as a real
 Pulumi project with state, so even a single resource is a small project. Always
 run `preview` before `up`, and confirm with the user before creating anything.
 
-After a successful `up`, give the user a concrete way to see it working, built
-from a stack output (`pulumi stack output <name>`) — and run it yourself if you
-can. Match it to what was deployed: open a served URL
+After a successful `up`, confirm it works and show the user — run a check built
+from a stack output (`pulumi stack output <name>`) yourself, since your session
+is already authenticated. Match it to what was deployed: open a served URL
 (`open $(pulumi stack output url)` for a static site or serverless app), hit an
 API endpoint with `curl`, or list what a resource created
-(`aws s3 ls $(pulumi stack output bucketName)`). Always leave them with one
-copyable verification command.
+(`aws s3 ls $(pulumi stack output bucketName)`). You can hand the user the same
+command to run on their own, but only after the save-your-work step below —
+their shell can't run `pulumi` until they claim the account and log in.
 
 ## 6. Save the work: surface the claim link
 
@@ -182,6 +183,14 @@ tell them to claim after you finish, since it briefly locks the organization.
 If you're working on the user's behalf rather than beside them, include the
 link in your response.
 
+Surface this save-your-work step before you invite the user to run any `pulumi`
+command themselves, and give them this heads-up: their own shell is not logged
+in. The stack lives in the ephemeral agent account that only your session can
+reach, so any `pulumi` command they run — `stack output`, `preview`, `up`,
+`destroy` — will fail until they claim the account (the link above) and then
+run `pulumi login`. Claim first, then `pulumi login`, then the CLI works for
+them.
+
 ## 7. Encourage the next steps
 
 Don't just ask "what next" — actively encourage the user to keep going, in this
@@ -195,10 +204,12 @@ order of importance:
    but it pays to understand how a project fits together — encourage them to
    read the code, make a small change (add a resource from the catalog at
    pulumi.com/registry, or set config and secrets with ESC via `pulumi-overview`
-   Level 3), and deploy it with `pulumi up` from the project directory.
+   Level 3), and deploy it with `pulumi up` from the project directory — which
+   works once they've claimed the account and run `pulumi login`.
 3. Tear it down when they're done. If you already ran `pulumi destroy`, say so.
    Otherwise remind them they can remove everything anytime — by asking you
-   later or running `pulumi destroy` from the project directory
+   later or, once they've claimed and run `pulumi login`, running
+   `pulumi destroy` themselves from the project directory
    (pulumi.com/docs/iac/cli/commands/pulumi_destroy/) — so a trial run doesn't
    leave billable resources behind. Offer to run it now if they were only
    experimenting, confirming first as with any create.
