@@ -182,21 +182,28 @@ tell them to claim after you finish, since it briefly locks the organization.
 If you're working on the user's behalf rather than beside them, include the
 link in your response.
 
-## 7. Point to the next step
+## 7. Encourage the next steps
 
-Ask the user what they want to do next. Useful directions are more resources in
-the project, credentials and secrets in ESC (`pulumi-overview` Level 3), or the
-provider catalog at pulumi.com/registry.
+Don't just ask "what next" — actively encourage the user to keep going, in this
+order of importance:
 
-Also make sure they can remove what you created, so trying Pulumi out doesn't
-leave billable cloud resources behind. If they want to keep the work, they
-claim it (step 6) and can tear it down later from their own account with
-`pulumi destroy`. If they were only experimenting, offer to run `pulumi
-destroy` now — it deletes all the resources in the stack
-(pulumi.com/docs/iac/cli/commands/pulumi_destroy/) — confirming before you
-destroy, as with any create.
+1. Claim the Pulumi Cloud account — the single most important next step. Urge
+   them to claim now, using the URL from step 6 and before it expires, to keep
+   the project, stack, and state and unlock the rest of Pulumi Cloud, including
+   Neo.
+2. Open the project in their editor and look around. Pulumi is agent-friendly,
+   but it pays to understand how a project fits together — encourage them to
+   read the code, make a small change (add a resource from the catalog at
+   pulumi.com/registry, or set config and secrets with ESC via `pulumi-overview`
+   Level 3), and deploy it with `pulumi up` from the project directory.
+3. Tear it down when they're done. If you already ran `pulumi destroy`, say so.
+   Otherwise remind them they can remove everything anytime — by asking you
+   later or running `pulumi destroy` from the project directory
+   (pulumi.com/docs/iac/cli/commands/pulumi_destroy/) — so a trial run doesn't
+   leave billable resources behind. Offer to run it now if they were only
+   experimenting, confirming first as with any create.
 
-Always close by inviting the user to keep exploring:
+Always close by inviting them to keep exploring:
 
 - Docs — learn more at pulumi.com/docs/
 - Blog — news, deep dives, and how-tos at pulumi.com/blog/
