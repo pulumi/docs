@@ -32,15 +32,20 @@ PATH:
 - For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
   (macOS/Linux) or `$env:Path += ";$HOME\.pulumi\bin"` (PowerShell) — or use the
   full path.
-- Permanently: offer to add that directory to the PATH — the user's shell
-  profile on macOS/Linux, or their user PATH on Windows. Shells and profiles
-  vary, so detect the user's shell (e.g. via `$SHELL`) and use the matching
-  target and syntax rather than assuming zsh. Never edit it automatically —
-  only with the user's go-ahead. If they decline or you can't write it, give
-  them a copyable command that names the install location — for zsh:
+- Permanently: offer to add that directory to the PATH for future shells —
+  never edit anything automatically, only with the user's go-ahead. Detect the
+  shell and use its own target and syntax rather than assuming zsh (`$SHELL`
+  names the login shell on macOS/Linux; on Windows you're in PowerShell):
+  - zsh: add `export PATH="$HOME/.pulumi/bin:$PATH"` to `~/.zshrc`.
+  - bash: the same line in `~/.bashrc` (Linux) or `~/.bash_profile` (macOS).
+  - fish: run `fish_add_path $HOME/.pulumi/bin`.
+  - PowerShell: add `$env:Path += ";$HOME\.pulumi\bin"` to the file at
+    `$PROFILE`, or persist it with `[Environment]::SetEnvironmentVariable('Path',
+    "$env:Path;$HOME\.pulumi\bin", 'User')`.
 
-      # The Pulumi CLI is installed at $HOME/.pulumi/bin
-      echo 'export PATH="$HOME/.pulumi/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+  If the user declines or you can't write the file, hand them the matching
+  command for their shell and name the install location (`$HOME/.pulumi/bin`, or
+  `%USERPROFILE%\.pulumi\bin` on Windows).
 
 Only if no installer can run (say, a restricted environment) and Node is
 available, fall back to `npx pulumi` for this session — but tell the user
