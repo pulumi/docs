@@ -295,7 +295,7 @@ Begin with just two or three critical policies that address your most pressing r
 
 ### Provide Clear, Actionable Error Messages
 
-Nothing frustrates developers more than cryptic policy violations. Your error messages should explain not just what's wrong, but how to fix it:
+Nothing frustrates developers more than cryptic policy violations. Your error messages should explain what's wrong and how to fix it:
 
 ```python
 def good_error_message(args, report_violation):
@@ -341,9 +341,9 @@ When asked if developers were actually using the self-service platform, Tyrone's
 
 ## Building Your Policy Strategy
 
-Implementing deployment guardrails isn't a big-bang transformation; it's a journey that unfolds in phases. Based on patterns we've seen across successful implementations, the first week or two should focus on assessment. Start by understanding your current state, auditing existing infrastructure patterns to identify what teams are actually deploying. Look for common misconfigurations that have caused incidents or near-misses, and document your security and compliance requirements as specific, enforceable rules. Most importantly, survey your developers to understand their pain points with the current infrastructure process, as this assessment forms the foundation for policies that solve real problems rather than creating new ones.
+Implementing deployment guardrails is a journey that unfolds in phases. Based on patterns we've seen across successful implementations, the first week or two should focus on assessment. Start by understanding your current state, auditing existing infrastructure patterns to identify what teams are actually deploying. Look for common misconfigurations that have caused incidents or near-misses, and document your security and compliance requirements as specific, enforceable rules. Most importantly, survey your developers to understand their pain points with the current infrastructure process, as this assessment forms the foundation for policies that solve real problems rather than creating new ones.
 
-In weeks three and four, build your foundation by implementing three to five core policies that address your most critical risks. Set up [CI/CD integration](/docs/iac/operations/continuous-delivery/) so policies run automatically on every pull request, starting with advisory enforcement to gather feedback without blocking deployments. Create clear documentation and runbooks that explain not just what the policies do, but why they exist and how to work with them.
+In weeks three and four, build your foundation by implementing three to five core policies that address your most critical risks. Set up [CI/CD integration](/docs/iac/operations/continuous-delivery/) so policies run automatically on every pull request, starting with advisory enforcement to gather feedback without blocking deployments. Create clear documentation and runbooks that explain what the policies do, why they exist, and how to work with them.
 
 By the second month, you're ready to expand. Add [compliance-specific policies](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) for regulatory requirements and implement [server-side enforcement](/docs/discovery-governance/policy/get-started/#policy-groups) to ensure policies can't be bypassed. Create formal processes for policy exemptions and exceptions, and begin measuring policy effectiveness through metrics like violation rates and remediation times.
 
