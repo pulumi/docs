@@ -76,9 +76,13 @@ silently:
    - Static website
    - Serverless app
    - Container service
-3. Language: TypeScript, Python, Go, C#, YAML, or HCL. Java is available only
-   for the minimal starter — offer it only if the user asks, never for an
-   architecture template.
+3. Language. Make clear when you ask that Pulumi supports general-purpose
+   programming languages — TypeScript, Python, Go, and C# — and configuration
+   languages — YAML and HashiCorp Configuration Language (HCL). If the UX fits
+   only a few choices, offer TypeScript, Python, and a cloud-appropriate third
+   (Go for AWS and GCP, C# for Azure), and make the rest available on request.
+   Java is available only for the minimal starter — offer it only if the user
+   asks, never for an architecture template.
 
 The template name is the minimal starter `<cloud>-<language>` (for example,
 `aws-typescript`) or an architecture `<use-case>-<cloud>-<language>` where
