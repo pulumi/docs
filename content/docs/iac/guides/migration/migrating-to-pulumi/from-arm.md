@@ -100,7 +100,7 @@ For instance, let's say your infrastructure team has provisioned your Azure stor
 
 Instead, you can look up that ARM deployment by name and use one of its output values. The following example reads a deployment by its fully qualified ID and then uses the exported `storageAccountName` value to upload a private zipfile to blob storage, containing a `wwwroot/` directory locally:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -250,11 +250,57 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+An HCL program reads the deployment through the same `azurerm` provider your Terraform configuration already uses, so the lookup is a data source rather than a resource `get`:
+
+```hcl
+# Read the ARM deployment and the storage account name it exported.
+data "azurerm_resource_group_template_deployment" "storage" {
+  name                = "myStorageDeployment"
+  resource_group_name = "myrg"
+}
+
+locals {
+  storage_account_name = jsondecode(data.azurerm_resource_group_template_deployment.storage.output_content).storageAccountName.value
+}
+
+data "azurerm_storage_account" "storage" {
+  name                = local.storage_account_name
+  resource_group_name = "myrg"
+}
+
+# Create a blob for our own deployment.
+resource "azurerm_storage_container" "files" {
+  name               = "files"
+  storage_account_id = data.azurerm_storage_account.storage.id
+}
+
+resource "azurerm_storage_blob" "zip" {
+  name                 = "zip"
+  storage_container_id = azurerm_storage_container.files.id
+  type                 = "Block"
+  source               = "wwwroot.zip"
+}
+
+output "blob_url" {
+  value = azurerm_storage_blob.zip.url
+}
+```
+
+The deployment is identified by its name and resource group rather than its fully qualified ID, and `output_content` is the deployment's outputs as a JSON string, so `jsondecode` unwraps it.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the ARM deployment to retrieve its output values. In this case, the deployment and all of its resources are treated entirely as read-only, and Pulumi will never attempt to modify any of them.
 
+{{% choosable language "typescript,python,go,csharp" %}}
+
 Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-NAME>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-NAME>`. Consult the Azure CLI or portal to find this ID.
+
+{{% /choosable %}}
 
 > Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
 
@@ -266,7 +312,7 @@ Let's see how to actually migrate your ARM-managed resources fully to Pulumi. Th
 
 Our example below will result in a Pulumi program that creates a Storage Account equivalent to the ARM template below. The example will also use [import](/docs/iac/guides/migration/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in .NET, TypeScript, Python, Go, Java, or YAML.
+You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in .NET, TypeScript, Python, Go, Java, YAML, or HCL.
 
 Let's say you have an existing ARM Template shown below.
 
@@ -291,7 +337,7 @@ Let's say you have an existing ARM Template shown below.
 
 Run `pulumi convert --from arm --language <language>` in the directory containing your ARM template. You will receive the Pulumi program that is equivalent to the ARM template.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -394,6 +440,25 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+`hcl` is a conversion target like any other, so the same command produces a Pulumi HCL project:
+
+```bash
+pulumi convert --from arm --language hcl --out .
+```
+
+The converter writes a `Pulumi.yaml` that selects the HCL runtime alongside the generated `.tf` files:
+
+```yaml
+name: arm-conversion
+runtime: hcl
+```
+
+Run `pulumi install` to fetch the providers the converted program declares, then `pulumi preview` to check the result. See the [Pulumi HCL docs](/docs/iac/languages-sdks/hcl/) for the program model.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Next, we will adjust the code to adopt the existing resource instead of creating a new one.
@@ -404,7 +469,7 @@ To adopt the ARM resources under Pulumi's control, we will rewrite the code gene
 
 Create a new Pulumi project, if you don't have one yet, and copy-paste the program generated by `pulumi convert`. Adjust the code to specify the `import` ID for the storage account.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -507,6 +572,42 @@ class MyStack : Stack
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+HCL declares the adoption with an `import` block that names the target resource and its cloud ID:
+
+```hcl
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 4.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+import {
+  to = azurerm_storage_account.storagecreatedbyarm
+  id = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm"
+}
+
+resource "azurerm_storage_account" "storagecreatedbyarm" {
+  name                     = "storagecreatedbyarm"
+  resource_group_name      = "existing-rg"
+  location                 = "westeurope"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+  account_kind             = "StorageV2"
+}
+```
+
+The ARM template's `sku.name` of `Standard_LRS` splits into the provider's `account_tier` and `account_replication_type`. You can also set the ID inline with the [`import_id`](/docs/iac/concepts/resources/options/import/) attribute of the resource's `pulumi` block instead of using a separate `import` block.
 
 {{% /choosable %}}
 

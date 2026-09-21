@@ -221,7 +221,7 @@ This produces a single HCL file for each stack at `./cdktf.out/stacks/<stack-nam
 
 To use the converter, first [install Pulumi](/docs/install/), then change to a folder containing the HCL source files you'd like to convert.  Next, run `pulumi convert --from terraform` from within that folder:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
 
 ```bash
@@ -250,9 +250,39 @@ pulumi convert --from terraform --language csharp
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+[Pulumi HCL](/docs/iac/languages-sdks/hcl/) runs your existing `.tf` files as they are, so nothing needs converting. Add a `Pulumi.yaml` alongside them instead of generating a new program:
+
+```yaml
+name: my-project
+runtime: hcl
+description: My infrastructure, still in HCL
+```
+
+Then fetch the providers your program uses:
+
+```bash
+pulumi install
+```
+
+Asking the converter for HCL output is rejected on purpose:
+
+```bash
+$ pulumi convert --from terraform --language hcl
+error: cannot convert a Terraform program to the "hcl" language: pulumi-hcl runs Terraform directly, so no conversion is needed; converting would re-home every resource onto a different provider and show a delete and create for each one on the next preview
+```
+
+Adopting the resources you already have is a state migration rather than a code conversion. See [Keep your code in HCL](#keep-your-code-in-hcl) for that step.
+
+{{% /choosable %}}
 {{< /chooser >}}
 
+{{% choosable language "typescript,python,go,csharp" %}}
+
 This will generate a Pulumi program that when run with `pulumi up` will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated {{< langfile >}} file.
+
+{{% /choosable %}}
 
 #### Supported Terraform features
 
@@ -308,6 +338,8 @@ Pulumi allows you to use existing Terraform modules directly in your Pulumi prog
 
 #### Adding a Terraform module to your Pulumi project
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To use a Terraform module in Pulumi, you can add it to your project using the `pulumi package add` command:
 
 ```bash
@@ -322,7 +354,15 @@ pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program. You can then use this module like any other Pulumi package:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+An HCL program consumes a Terraform module the way Terraform does — a `module` block — so there is no `pulumi package add` step and no generated SDK:
+
+{{% /choosable %}}
+
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -441,14 +481,56 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+module "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.19.0"
+
+  name = "pulumi-vpc"
+  cidr = "10.0.0.0/16"
+
+  azs             = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
+
+  enable_nat_gateway = true
+}
+
+# Access outputs from the module
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
+```
+
+Run `pulumi install` after adding the block so the module's providers are fetched. Pulumi caches remote modules under `~/.pulumi/modules/` and registers each module instance as a [component resource](/docs/iac/concepts/resources/components/).
+
+{{% /choosable %}}
 
 {{< /chooser >}}
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 This feature also works seamlessly with local Terraform modules:
 
 ```bash
 pulumi package add hcl module ./path/to/module
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+A local module works the same way — point `source` at its directory:
+
+```hcl
+module "vpc" {
+  source = "./path/to/module"
+}
+```
+
+{{% /choosable %}}
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/integrations/terraform/modules/) guide.
 
