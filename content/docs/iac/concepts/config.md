@@ -107,7 +107,7 @@ For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -192,6 +192,38 @@ config:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+In Pulumi HCL, configuration is the program's `variable` blocks. A variable with no `default` is required, and a `default` makes it optional; `sensitive = true` makes the value a [secret](/docs/iac/concepts/secrets/):
+
+```hcl
+variable "name" {
+  type = string
+}
+
+variable "lucky" {
+  type    = number
+  default = 42
+}
+
+variable "secret" {
+  type      = string
+  sensitive = true
+}
+```
+
+Reference the values elsewhere in the program as `var.name`, `var.lucky`, and `var.secret`.
+
+{{% notes type="info" %}}
+Pulumi HCL variables always read from the project's own namespace, so a value set without
+an explicit namespace — `pulumi config set name Joe` — resolves to `<project>:name` and
+reaches `var.name`. Variables also load from `terraform.tfvars` and `*.auto.tfvars` files
+and from `TF_VAR_<name>` environment variables; see
+[Setting variable values](/docs/iac/languages-sdks/hcl/hcl-language-reference/#setting-variable-values)
+for the full priority order.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -205,7 +237,7 @@ config:
 
 Given that configuration, the following shows how to read the value from within your Pulumi program:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -255,12 +287,38 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+A `variable` block only ever reads the project's own namespace, so a value set under another namespace — such as `aws:region` — is not reachable as `var.region`. Provider settings are configured where the provider is declared instead:
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+```
+
+To keep the region in stack configuration rather than in the program, declare it as a project variable and pass it through:
+
+```hcl
+variable "region" {
+  type    = string
+  default = "us-west-2"
+}
+
+provider "aws" {
+  region = var.region
+}
+```
+
+Set it with `pulumi config set region us-east-1`.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/iac/concepts/components/), pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -358,6 +416,32 @@ class MyComponent extends ComponentResource {
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL reaches the same isolation through [modules](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a namespace argument. Only the root module reads stack configuration, so a module declares the settings it accepts as its own `variable` blocks and the caller supplies them:
+
+```hcl
+# modules/mylib/main.tf
+variable "name" {
+  type = string
+}
+```
+
+```hcl
+# main.tf
+variable "mylib_name" {
+  type = string
+}
+
+module "mylib" {
+  source = "./modules/mylib"
+  name   = var.mylib_name
+}
+```
+
+A module's variables are never read from stack config directly — leaving `name` unset in the `module` block is an error even when `mylib:name` is set — which is what keeps a module's inputs explicit at each call site.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -388,7 +472,7 @@ config:
 
 The `data` config can be accessed in your Pulumi program using:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -487,6 +571,26 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Declare the key as a variable with an object type constraint. Values set with `pulumi config set --path` populate it, and the type constraint is checked as the value is loaded:
+
+```hcl
+variable "data" {
+  type = object({
+    active = bool
+    nums   = list(number)
+  })
+}
+
+resource "aws_s3_bucket" "my_bucket" {
+  tags = {
+    Active = var.data.active
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -503,7 +607,7 @@ $ pulumi config set --path 'api.headers.content-type' "application/json"
 
 Read the whole `api` object once, then walk it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -620,6 +724,29 @@ outputs:
   timeout: ${api.timeout}
   authHeader: ${api.headers.authorization}
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Nest the type constraint as deeply as the value goes, then reach into the variable with ordinary attribute and index access:
+
+```hcl
+variable "api" {
+  type = object({
+    endpoint = string
+    timeout  = number
+    headers  = map(string)
+  })
+}
+
+locals {
+  endpoint    = var.api.endpoint                  # "https://api.example.com"
+  timeout     = var.api.timeout                   # 30
+  auth_header = var.api.headers["authorization"]  # "Bearer token123"
+}
+```
+
+Attributes declared in an `object({...})` constraint are reachable with a dot, while a `map(...)` is indexed with a key — which is what lets `content-type`, whose hyphen is not a valid attribute name, live in `headers`.
 
 {{% /choosable %}}
 
