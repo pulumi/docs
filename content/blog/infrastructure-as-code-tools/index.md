@@ -131,26 +131,26 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 
 | Tool | Language / approach | Clouds supported | License | Latest stable release (as of 2026-09-21) | Best for |
 |---|---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers | Apache-2.0 | v3.261.0 (2026-09-02) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
-| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.16.1 (2026-09-02) | Teams with existing Terraform expertise and established workflows |
-| [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Apache-2.0 | v2.268.0 (2026-09-02) | AWS-focused teams who prefer programming languages over templates |
+| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and hundreds of other providers | Apache-2.0 | v3.263.0 (2026-09-16) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.16.3 (2026-09-16) | Teams with existing Terraform expertise and established workflows |
+| [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Apache-2.0 | v2.270.0 (2026-09-17) | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Proprietary (managed service) | Continuously updated by AWS | AWS-only deployments requiring deep service integration |
 | [Azure ARM](#5-azure-resource-manager-arm) | JSON templates | Azure only | Proprietary (managed service) | Continuously updated by Microsoft | Azure-native deployments requiring comprehensive platform integration |
-| [Azure Bicep](#6-azure-bicep) | Bicep DSL (compiles to ARM JSON) | Azure only | MIT | v0.46.1 (2026-07-30) | Azure deployments requiring improved readability and developer experience |
+| [Azure Bicep](#6-azure-bicep) | Bicep DSL (compiles to ARM JSON) | Azure only | MIT | v0.47.16 (2026-09-08) | Azure deployments requiring improved readability and developer experience |
 | [Google Cloud Infrastructure Manager](#7-google-cloud-infrastructure-manager) | HCL (Terraform-based) | Google Cloud | Proprietary (managed service) | Continuously updated by Google | Google Cloud Platform deployments using Terraform |
 | [Kubernetes YAML](#8-kubernetes-yaml) | YAML manifests | Any Kubernetes cluster | Apache-2.0 | v1.37.0 (2026-08-26) | Teams managing container-native applications and cloud-native infrastructure |
-| [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Apache-2.0 | v2.4.0 (2026-08-20) | Kubernetes-first organizations managing multi-cloud infrastructure |
+| [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Apache-2.0 | v2.4.1 (2026-09-15) | Kubernetes-first organizations managing multi-cloud infrastructure |
 | [OpenTofu](#10-opentofu) | HCL (community-governed Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | MPL-2.0 | v1.12.6 (2026-08-19) | Teams seeking an open-source Terraform alternative with community governance |
 
 Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for." Version and release-date figures are dated snapshots, checked against each project's GitHub releases on 2026-09-21; expect them to drift as each project keeps shipping.
 
 ### Pricing at a glance
 
-Tool cost is rarely the license alone. Here's what each option actually costs to run, based on published pricing as of September 2026:
+Tool cost is rarely the license alone. Here's what each option actually costs to run, based on published pricing checked on 2026-09-21:
 
 | Tool | Free tier | Entry paid tier | Enterprise / top tier |
 |---|---|---|---|
-| Pulumi | Individual: free forever, 1 user, unlimited stacks, 500 workflow min/mo, 5M Pulumi Neo tokens/mo | Team: from $40/mo (≈40 credits, up to 10 users) | Enterprise from $400/mo; Business Critical (custom) |
+| Pulumi | Free: free forever, 1 user, unlimited stacks, up to 500 workflow min/mo | Essentials: from $40/mo (40 credits included, up to 500 managed resources) | Pro: from $400/mo (400 credits included, up to 2,000 managed resources); Enterprise (custom, contract-priced) |
 | Terraform (HCP Terraform) | Free up to 500 managed resources, 1 concurrent run | Essentials: $0.10/resource/mo | Standard $0.47/resource/mo; Premium $0.99/resource/mo; self-hosted Terraform Enterprise (custom) |
 | AWS CDK | No tool fee — free and open source | N/A | N/A (pay only for provisioned AWS resources) |
 | AWS CloudFormation | No tool fee — included with AWS | N/A | N/A (pay only for provisioned AWS resources) |
@@ -165,7 +165,7 @@ Spacelift and env zero (formerly env0), two managed CI/CD layers frequently comp
 
 ### License, governance, and release cadence
 
-For teams weighing long-term risk, licensing model and governance matter as much as features. This is the reference table competitors rarely publish in one place:
+For teams weighing long-term risk, licensing model and governance matter as much as features. This is the reference table competitors rarely publish in one place; GitHub star counts were measured on 2026-09-21:
 
 | Tool | License | Governing body | Latest version | Released | GitHub stars |
 |---|---|---|---|---|---|
