@@ -109,7 +109,7 @@ dotnet add package MyOrg.MyComponent
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
-The equivalent is a plain HCL module, consumable only from HCL. No package manager is involved: name the module's source and Pulumi fetches it when the program runs, caching it under `~/.pulumi/modules/`.
+The equivalent is a plain HCL module, consumable only from HCL. No package manager is involved: name the module's source and `pulumi install` fetches it, caching it under `~/.pulumi/modules/`.
 
 ```hcl
 module "my_component" {

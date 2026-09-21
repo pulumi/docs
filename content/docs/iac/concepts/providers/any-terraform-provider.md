@@ -158,6 +158,8 @@ runtime: hcl
 description: Using the Honeycomb Terraform provider with Pulumi
 ```
 
+Pulumi HCL takes providers from a `required_providers` block rather than from `pulumi package add`, so skip step 2 and go straight to step 3.
+
 {{% /choosable %}}
 
 ### Step 2: Add the Terraform provider
@@ -166,7 +168,7 @@ description: Using the Honeycomb Terraform provider with Pulumi
 pulumi package add terraform-provider honeycombio/honeycombio
 ```
 
-This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates and links a typed SDK in your project.
+This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML and Pulumi HCL, it also generates and links a typed SDK in your project. Pulumi HCL doesn't use this command at all — see its tab in step 3.
 
 ### Step 3: Use the provider in your code
 
@@ -310,7 +312,7 @@ packages:
 
 {{% choosable language hcl %}}
 
-Skip step 2. Name the provider's source in a `required_providers` block, then run `pulumi install`:
+Name the provider's source in a `required_providers` block, then run `pulumi install` — there is no `pulumi package add` step:
 
 ```hcl
 terraform {

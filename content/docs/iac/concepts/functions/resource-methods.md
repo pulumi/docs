@@ -70,9 +70,17 @@ No example available for YAML
 <div>
 <pulumi-choosable type="language" values="hcl">
 
-Pulumi HCL has no method syntax. A `call` block invokes the method instead, labeled with the resource's logical name and the method name in snake_case, and its results are read as `call.<resource>.<method>.<attribute>`:
+Pulumi HCL has no method syntax. A `call` block invokes the method instead, labeled with the resource's logical name and the method name in snake_case, and its results are read as `call.<resource>.<method>.<attribute>`. The `required_providers` entry is load-bearing: without `source = "pulumi/eks"`, an unqualified `eks` resolves against the OpenTofu registry rather than the native Pulumi EKS package that defines this method.
 
 ```hcl
+terraform {
+  required_providers {
+    eks = {
+      source = "pulumi/eks"
+    }
+  }
+}
+
 resource "eks_cluster" "cluster" {
   # ...
 }
