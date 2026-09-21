@@ -85,6 +85,8 @@ Classify from the labels — the five state labels are mutually exclusive (`set-
 | `review:waived` | Someone used the Sentinel break-glass | The gate is bypassed and logged. Findings still deserve dispositions — ask before treating the PR as done |
 | `review:trivial` / `review:frontmatter-only` / `review:oversized` | Full review short-circuited | No review cards. If `review:prose-flagged` is also set, triage's advisory comment **is** the worklist — walk it the same way |
 
+When two of those labels are set at once — a failed run can leave `review:error` beside the terminal label from the write that preceded it — the labels are the unreliable half. Believe the cards: their content and `CLAUDE_REVIEW_HEAD` say what was actually published, and a `review:error` alongside them means the run died after writing, so re-read before assuming the list is complete.
+
 Then read the surface off the comments themselves rather than guessing:
 
 ```bash
@@ -122,7 +124,7 @@ The script detects the surface itself. On v3 it reads both cards, enumerates eve
 
 **If `parse_confidence` comes back `low`, do not proceed as if the list were complete** — read the cards yourself and work from them, saying that the enumerator couldn't parse them. On v3, `low` means the head sentinel is missing or `REVIEW_STATE` didn't parse; either gap means the seeded dispositions can't be trusted.
 
-Present the counts before working: `4 items: 1 blocker, 1 author question, 2 style (1 one-click). Reviewer checks: 1 (advisory). Pre-existing: 1 (optional).` Then start.
+Present the counts before working: `5 items: 1 blocker, 1 author question, 2 style (1 one-click), 1 reviewer check (advisory). Pre-existing: 1 (optional).` Everything you walk goes in the total — the script's `total` counts every item and `remaining` excludes only the `optional` ones, which is 💡 pre-existing alone, so a count that leaves the advisory buckets out won't match what `--require-clean` is measuring. Then start.
 
 ### Step 4 — Walk the worklist with the user
 
