@@ -1110,16 +1110,72 @@ def test_status_comment_says_why_a_satisfied_gate_is_satisfied():
 def test_status_comment_marks_report_only_and_flags_the_unwaivable_gate():
     gh = StubGh(pr=pr_meta(), files=[infra_file()])
     body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
-    assert "Report-only" in body
+    assert "(preview)" in body, "the heading itself must say preview"
     assert "no waiver" in body
 
 
-def test_preview_label_is_carried_on_the_verdict():
-    gh = StubGh(pr=pr_meta(labels=[sentinel.PREVIEW_LABEL]),
-                files=[docs_file_substantive()])
-    assert sentinel.evaluate(gh, CONFIG, report_only=True).preview is True
-    gh2 = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
-    assert sentinel.evaluate(gh2, CONFIG, report_only=True).preview is False
+def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
+    """Not blocking today AND enforced soon. Either half alone misleads.
+
+    Half one on its own trains everyone to scroll past the comment; half two
+    on its own reads as a PR that is blocked when it is not.
+    """
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
+    assert "> [!WARNING]" in body
+    assert "NOT blocking your merge" in body
+    assert "you can merge this PR right now even with red rows" in body
+    assert "enforced in the near future" in body
+    assert "*would* have concluded: `failure`" in body
+
+    enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
+    assert "Preview mode" not in enforcing and "(preview)" not in enforcing
+
+
+def test_the_preview_headline_never_contradicts_the_preview_banner():
+    """The banner says nothing blocks you; the headline must not say it does.
+
+    Same failure the waive branch was written for — a gate surface that
+    argues with itself — one mode over. A waived PR in preview used to reach
+    the "N gates need attention" headline at all, because `conclusion` is
+    `neutral` in preview and the waive branch only looked at that.
+    """
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
+    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
+    assert "would block this merge once the Sentinel is enforced" in body
+    assert "before this can merge" not in body
+
+    enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
+    assert "before this can merge" in enforcing
+
+    waived = StubGh(pr=pr_meta(labels=["review:waived"]),
+                    files=[docs_file_substantive()],
+                    label_events=_waive_events("cam"),
+                    memberships={("docs-tools", "cam"): "active"})
+    body = sentinel.render_status_comment(sentinel.evaluate(waived, CONFIG, report_only=True))
+    assert "Waived — this PR can merge." in body
+    assert "need attention" not in body
+
+
+def test_the_status_comment_is_maintained_for_every_pr_in_report_only():
+    """The `sentinel:preview` opt-in label is retired — no cohort, no gating.
+
+    A dry run only visible to a canary cohort exercises the surface without
+    exercising the readers, which is the half that actually needs testing.
+    The banner above is what makes writing everywhere safe.
+    """
+    assert not hasattr(sentinel, "PREVIEW_LABEL")
+    assert "preview" not in sentinel.evaluate(
+        StubGh(pr=pr_meta(), files=[docs_file_substantive()]),
+        CONFIG, report_only=True).to_json()
+    # The comments in those workflows still *name* the retired label, which is
+    # the point of a retirement note; what must be gone is every place one is
+    # read or applied. Shell usage quotes it, prose backticks it.
+    wf = (REPO_ROOT / ".github" / "workflows" / "review-sentinel.yml").read_text()
+    assert "github.event.label.name == 'sentinel:preview'" not in wf
+    for lane in ("content-review-article.yml", "check-links.yml"):
+        text = (REPO_ROOT / ".github" / "workflows" / lane).read_text()
+        assert '"sentinel:preview"' not in text, lane
 
 
 def test_oversized_ack_replaces_g1_g2():
@@ -1168,7 +1224,9 @@ def test_report_only_wraps_neutral():
     v = sentinel.evaluate(gh, CONFIG, report_only=True)
     assert v.conclusion == "neutral"
     assert v.would_be == "failure"
-    assert v.summary.startswith("**REPORT-ONLY — would be: `failure`**")
+    assert v.summary.startswith("**PREVIEW MODE — not blocking merges yet. "
+                                "This check would be: `failure`.**")
+    assert "Enforcement is coming" in v.summary
 
 
 def test_draft_neutral():
@@ -1245,7 +1303,7 @@ def test_not_governed_regen_needs_author_and_label():
 def test_not_governed_report_only_wraps_neutral():
     v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
     assert v.conclusion == "neutral" and v.would_be == "success"
-    assert v.title.startswith("Report-only")
+    assert v.title == "Preview — would be: success (not enforced yet)"
 
 
 def test_a_spotless_bot_pr_still_needs_the_lane_team():
@@ -1353,7 +1411,7 @@ def test_workflow_has_no_concurrency_group_and_narrows_label_events():
     assert "cancel-in-progress:" not in wf
     assert "\nconcurrency:" not in wf
     for label in ("review:waived", "review:oversized", "review:trivial",
-                  "review:prose-flagged", "sentinel:preview"):
+                  "review:prose-flagged"):
         assert f"github.event.label.name == '{label}'" in wf, label
 
 
@@ -1372,7 +1430,6 @@ def test_label_event_filter_covers_every_label_the_evaluator_reads():
     cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
 
     read_by_evaluator = {
-        sentinel.PREVIEW_LABEL,
         sentinel.PROSE_FLAGGED_LABEL,
         sentinel.TRIVIAL_LABEL,
         sentinel.OVERSIZED_LABEL,

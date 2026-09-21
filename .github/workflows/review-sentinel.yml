@@ -31,7 +31,11 @@ name: Sentinel
 #              is the state the workflow file merges in (Phase 0/1): merging
 #              must change nothing a contributor can see.
 #   'report' → report-only (Phase 2). The check concludes `neutral` with
-#              the real verdict in the summary ("REPORT-ONLY — would be: …").
+#              the real verdict in its title and summary ("Preview — would be:
+#              …"), and the pinned status comment is maintained on EVERY PR it
+#              evaluates, leading with a banner that says it blocks nothing
+#              yet and that it soon will. Report-only is a visible dry run on
+#              purpose: the surface only gets tested if the readers do.
 #   '1'      → enforcing (Phase 4): real conclusions, made required by the
 #              ruleset.
 # Every comparison is written against a literal on purpose — `vars.X != '0'`
@@ -103,10 +107,12 @@ jobs:
     # Label events re-evaluate only for the labels the evaluator reads; every
     # other label change cannot move a gate. Keep this list in step with
     # sentinel.py — a label the evaluator reads but this list omits still
-    # works, but only on the NEXT event. `sentinel:preview` was in exactly
-    # that position: the lanes that apply it label the PR just after opening
-    # it, so the `opened` run predates the label and the preview comment
-    # waited for a later event.
+    # works, but only on the NEXT event. `sentinel:preview` used to be in
+    # exactly that position: the lanes that applied it labelled the PR just
+    # after opening it, so the `opened` run predated the label and the
+    # preview comment waited for a later event. That label is retired
+    # (2026-09-21) — report-only now writes the comment on every PR — which
+    # deletes the failure mode rather than working around it.
     #
     # `automation/merge` is read through the CONFIG rather than a constant in
     # sentinel.py (`not_governed.author_label_pairs`), which is why it was
@@ -117,7 +123,7 @@ jobs:
     #
     # `test_label_event_filter_covers_every_label_the_evaluator_reads`
     # derives this list from the evaluator's constants and review-routing.yml
-    # rather than restating it, so a sixth label cannot go missing the same way.
+    # rather than restating it, so a further label cannot go missing the same way.
     if: |
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
       (github.event_name != 'pull_request_target' ||
@@ -126,8 +132,7 @@ jobs:
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
        github.event.label.name == 'review:prose-flagged' ||
-       github.event.label.name == 'automation/merge' ||
-       github.event.label.name == 'sentinel:preview') &&
+       github.event.label.name == 'automation/merge') &&
       (github.event_name != 'pull_request_review' ||
        github.event.action != 'edited' ||
        github.event.review.state == 'approved')
@@ -224,10 +229,11 @@ jobs:
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |
           # --status-comment is passed unconditionally on purpose: the
-          # evaluator decides whether to actually write. Enforcing mode
-          # always maintains the pinned comment; report-only mode does so
-          # only for a PR someone labelled `sentinel:preview`, so the dry
-          # run stays invisible to contributors who didn't opt in.
+          # evaluator maintains the pinned comment in both modes, on every PR
+          # it evaluates. In report-only mode the comment leads with a
+          # preview banner ("not blocking your merge … will be enforced"),
+          # which is what makes a repo-wide dry run safe. --update-strip
+          # stays enforcing-only: that one edits the author card.
           ARGS=(--repo "${{ github.repository }}" --pr "${{ steps.pr.outputs.pr }}"
                 --status-comment)
           if [ "$REPORT_ONLY" = "true" ]; then

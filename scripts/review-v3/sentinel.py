@@ -47,7 +47,11 @@ Conclusion mapping is where merge gates silently rot, so it is explicit:
 ERRORED (a team-membership lookup failed, the state block is corrupt) ⇒
 `action_required` — never `neutral`/`skipped`, which GitHub counts as
 PASSING for a required check. `neutral` is reserved for drafts and for
-report-only mode, where the real verdict rides inside the summary.
+report-only mode, where the real verdict rides inside the summary. Report-only
+is not a silent mode: the pinned status comment is maintained on every PR in
+both modes, leading with a preview banner that says the check blocks nothing
+yet and that it soon will (`render_status_comment`). Only the ⛔ author-card
+strip stays enforcing-only — that one edits someone else's comment.
 
 `review:waived` is the break-glass: the check concludes success with a loud
 banner naming the waiving actor — except gate G4, which has no waiver (the
@@ -146,9 +150,15 @@ STAGING_STATUS_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
 OVERSIZED_ACK = "sentinel:oversized-ack"
-# Opt-in preview of the pinned status comment while the Sentinel is still
-# report-only. Enforcing mode maintains the comment unconditionally.
-PREVIEW_LABEL = "sentinel:preview"
+# The pinned status comment is maintained on EVERY PR the Sentinel evaluates,
+# report-only included — see `render_status_comment` for the preview banner
+# that carries the "this is not blocking you yet" disclaimer. There used to be
+# a `sentinel:preview` opt-in label here that made report-only mode write the
+# comment for a canary cohort only (the content-review, glow-up, and
+# link-sweep lanes labelled themselves). It was retired 2026-09-21: a dry run
+# nobody sees is a dry run that proves nothing, and the one cohort it did
+# cover had a workflow for an author. Anything still applying that label is
+# inert; nothing reads it.
 BREAK_GLASS = (
     "override: a member of a routing team (`.github/review-routing.yml` `teams:`) "
     "can apply `review:waived` (logged)"
@@ -334,10 +344,6 @@ class Verdict:
     # gates evaluated).
     mechanical: bool = False
     governed: bool = True
-    # `sentinel:preview` is on the PR: maintain the pinned status comment even
-    # in report-only mode. Set on every return path so main() can read it
-    # without a second API call.
-    preview: bool = False
     # Whether `review:waived` was honored. The pinned status comment used to
     # read only `gates`, so on a waived PR it announced "2 of 5 gates need
     # attention before this can merge" and recommended the label that was
@@ -357,7 +363,6 @@ class Verdict:
             "blocking_ids": self.blocking_ids,
             "mechanical": self.mechanical,
             "governed": self.governed,
-            "preview": self.preview,
         }
 
 
@@ -744,6 +749,27 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
 # ---- Evaluation ---------------------------------------------------------
 
 
+def _stamp_report_only(verdict: Verdict) -> Verdict:
+    """Turn a real verdict into its report-only twin, in place.
+
+    Report-only has three surfaces and they have to agree: the check-run's
+    conclusion (`neutral`, which GitHub counts as passing), its title and
+    summary in the merge box, and the pinned status comment. `would_be` is
+    what every one of them reports, and the only place the true conclusion
+    survives, so it is set before `conclusion` is overwritten.
+    """
+    verdict.would_be = verdict.conclusion
+    verdict.summary = (
+        f"**PREVIEW MODE — not blocking merges yet. This check would be: "
+        f"`{verdict.conclusion}`.** Enforcement is coming: once it lands, a red "
+        f"gate below stops the merge. Treat red as work you will owe shortly.\n\n"
+        + verdict.summary
+    )
+    verdict.title = f"Preview — would be: {verdict.conclusion} (not enforced yet)"
+    verdict.conclusion = "neutral"
+    return verdict
+
+
 def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Verdict:
     pr = gh.get_pr()
     head_sha = (pr.get("head") or {}).get("sha") or ""
@@ -754,7 +780,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         return Verdict(
             conclusion="neutral", title="Draft — not evaluated",
             summary="Draft PRs are not gated; the sentinel evaluates on ready-for-review.",
-            head_sha=head_sha, preview=PREVIEW_LABEL in labels,
+            head_sha=head_sha,
         )
 
     # Automation lanes the Sentinel does not govern (Dependabot, the
@@ -767,13 +793,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             summary=(f"**Not governed** — {ng_reason} (`.github/review-routing.yml` "
                      "`not_governed`). This automation lane merges on its own checks; "
                      "the Sentinel evaluates no gates for it."),
-            head_sha=head_sha, governed=False, preview=PREVIEW_LABEL in labels,
+            head_sha=head_sha, governed=False,
         )
         if report_only:
-            verdict.would_be = verdict.conclusion
-            verdict.summary = f"**REPORT-ONLY — would be: `{verdict.conclusion}`**\n\n" + verdict.summary
-            verdict.title = f"Report-only (would be: {verdict.conclusion})"
-            verdict.conclusion = "neutral"
+            _stamp_report_only(verdict)
         return verdict
 
     files = gh.list_files()
@@ -1199,14 +1222,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
         conclusion=conclusion, title=title, summary=summary,
         head_sha=head_sha, gates=gates, blocking_ids=blocking_ids,
         mechanical=mechanical, waived=waived,
-        preview=PREVIEW_LABEL in labels,
     )
 
     if report_only:
-        verdict.would_be = verdict.conclusion
-        verdict.summary = f"**REPORT-ONLY — would be: `{verdict.conclusion}`**\n\n" + verdict.summary
-        verdict.title = f"Report-only (would be: {verdict.conclusion})"
-        verdict.conclusion = "neutral"
+        _stamp_report_only(verdict)
     return verdict
 
 
@@ -1289,13 +1308,29 @@ def render_status_comment(verdict: Verdict) -> str:
     PATCH. A comment that edits itself on every push is the notification
     noise v3 exists to remove.
     """
-    lines = [STATUS_MARKER, "## Sentinel — merge gate status", ""]
+    preview = bool(verdict.would_be)
+    heading = ("## Sentinel — merge gate status (preview)" if preview
+               else "## Sentinel — merge gate status")
+    lines = [STATUS_MARKER, heading, ""]
 
-    if verdict.would_be:
+    if preview:
+        # Two things, in this order, and neither is optional: nothing here
+        # blocks you today, and it will. A disclaimer that only says the
+        # first teaches everyone to scroll past the comment, and then
+        # enforcement day is the first time anyone reads a gate row.
         lines += [
-            f"> [!NOTE]",
-            f"> **Report-only.** The Sentinel is not blocking merges yet; this is "
-            f"what it *would* conclude: `{verdict.would_be}`.",
+            "> [!WARNING]",
+            "> ## ⚠️ Preview mode — this is NOT blocking your merge",
+            "> ",
+            f"> The Sentinel is running in **preview (report-only) mode**. Its check-run "
+            f"concludes `neutral` no matter what the gates below say, so **you can merge "
+            f"this PR right now even with red rows.** What it *would* have concluded: "
+            f"`{verdict.would_be}`.",
+            "> ",
+            "> **This will be enforced in the near future.** When the rollout flips, the "
+            "Sentinel becomes a required check and any red gate below will block the merge "
+            "outright. So treat red rows as work you are about to owe — and if a row looks "
+            "wrong, say so in `#docs-ops` now, while a bad gate still costs nobody a merge.",
             "",
         ]
 
@@ -1308,7 +1343,12 @@ def render_status_comment(verdict: Verdict) -> str:
         return "\n".join(lines).rstrip() + "\n"
 
     blocking = [g for g in verdict.gates if g.status in ("red", "error")]
-    if verdict.waived and verdict.conclusion == "success":
+    # In preview mode `conclusion` is always `neutral` and the real answer
+    # lives in `would_be`, so read the effective one — otherwise a waived PR
+    # in preview falls through to the "N gates need attention" headline the
+    # waive branch exists to prevent.
+    effective = verdict.would_be or verdict.conclusion
+    if verdict.waived and effective == "success":
         # Say what the check-run says. The rows below still show what the
         # gates found — that is the audit trail a waive is supposed to leave
         # — but the headline must not tell an author they are blocked when
@@ -1319,13 +1359,19 @@ def render_status_comment(verdict: Verdict) -> str:
             "",
         ]
     elif blocking:
+        # Tense matters here, and only here: in preview nothing is blocking
+        # anything, so a headline reading "before this can merge" hands the
+        # banner directly above it a contradiction to lose.
         lines += [
-            f"**{len(blocking)} of {len(verdict.gates)} gates need attention "
-            f"before this can merge.**",
+            (f"**{len(blocking)} of {len(verdict.gates)} gates would block this "
+             f"merge once the Sentinel is enforced.**" if preview else
+             f"**{len(blocking)} of {len(verdict.gates)} gates need attention "
+             f"before this can merge.**"),
             "",
         ]
     else:
-        lines += ["**All gates green — nothing is blocking this merge.**", ""]
+        lines += ["**All gates green — nothing would block this merge.**" if preview
+                  else "**All gates green — nothing is blocking this merge.**", ""]
 
     lines += ["| | Gate | What it needs |", "|---|---|---|"]
     for g in verdict.gates:
@@ -1386,8 +1432,9 @@ def main() -> int:
     parser.add_argument("--update-strip", action="store_true")
     parser.add_argument(
         "--status-comment", action="store_true",
-        help="Maintain the pinned gate-status comment. Enforcing mode always "
-             f"does; in report-only mode only a PR labelled `{PREVIEW_LABEL}` does.",
+        help="Maintain the pinned gate-status comment. Both modes do, on every "
+             "PR; in report-only mode the comment leads with a preview banner "
+             "saying it blocks nothing yet.",
     )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--self-test", action="store_true")
@@ -1462,16 +1509,19 @@ def main() -> int:
                     except SentinelDataError as exc:
                         print(f"::warning::could not update the author-card strip: {exc}",
                               file=sys.stderr)
-                # Enforcing: always. Report-only: only where someone opted the
-                # PR in, so the dry run stays invisible to everyone else.
-                if not args.report_only or verdict.preview:
-                    # Best-effort for the same reason: a locked comment or a
-                    # secondary rate limit must not suppress the verdict.
-                    try:
-                        update_status_comment(gh, verdict, comments=comments)
-                    except SentinelDataError as exc:
-                        print(f"::warning::could not maintain the status comment: {exc}",
-                              file=sys.stderr)
+                # Every PR the Sentinel evaluates, in both modes. Report-only
+                # used to write only for a `sentinel:preview` cohort; the
+                # comment now carries its own preview banner instead, which
+                # is what makes showing it everywhere safe (and showing it
+                # everywhere is what makes the dry run worth running).
+                # Best-effort for the same reason as the strip: a locked
+                # comment or a secondary rate limit must not suppress the
+                # verdict.
+                try:
+                    update_status_comment(gh, verdict, comments=comments)
+                except SentinelDataError as exc:
+                    print(f"::warning::could not maintain the status comment: {exc}",
+                          file=sys.stderr)
     print(json.dumps(verdict.to_json(), indent=2))
     return 0
 

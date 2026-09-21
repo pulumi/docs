@@ -170,38 +170,10 @@ jobs:
             --model claude-opus-5 --effort low
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(curl:*)"
-      # Sentinel preview cohort. Same purpose as the `sentinel:preview` label
-      # content-review-article.yml applies to the content-review and glow-up
-      # lanes: while `REVIEW_V3_SENTINEL` is `report`, the pinned gate-status
-      # comment is maintained ONLY on a labelled PR, so the daily automated
-      # docs PRs are where the surface gets exercised on real work. This is
-      # the lane that produced #21698, the PR that turned up the false green
-      # G3 and the staging race in the first place.
-      #
-      # Labelled HERE rather than by the model: `gh pr edit` is deliberately
-      # not in the step's --allowed-tools, and a deterministic step keyed off
-      # the results file cannot forget. Fail-open — a missing label must never
-      # fail a link-fix run — and gated exactly like the Slack step below, so
-      # a run where Claude never opened a PR does nothing.
-      - name: Label the PR for the Sentinel preview cohort
-        if: steps.detect.outputs.has_broken == 'true' && hashFiles('.broken-links-pr.txt') != ''
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          set -uo pipefail
-          # The file carries the PR URL plus a one-line summary; take the
-          # first PR URL in it and label that number.
-          PR=$(grep -oE 'https://github\.com/[^/]+/[^/]+/pull/[0-9]+' .broken-links-pr.txt \
-                 | head -1 | grep -oE '[0-9]+$' || true)
-          if [ -z "$PR" ]; then
-            echo "::warning::no PR URL found in .broken-links-pr.txt; nothing to label"
-            exit 0
-          fi
-          gh pr edit "$PR" --repo "$REPO" --add-label "sentinel:preview" \
-            && echo "labelled PR #$PR sentinel:preview" \
-            || echo "::warning::could not label PR #$PR (label missing from repo?)"
+      # A step here used to label this lane's PR `sentinel:preview` (the
+      # opt-in that made a report-only Sentinel post its pinned gate-status
+      # comment). Retired 2026-09-21: report-only now posts that comment on
+      # every PR it evaluates, so nothing replaces the step.
 
       # Post the PR link to #docs-ops. Gated on the results file the Claude step
       # writes, so a run where Claude couldn't open a PR stays silent rather than
