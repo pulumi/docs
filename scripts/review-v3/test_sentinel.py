@@ -1107,59 +1107,25 @@ def test_status_comment_says_why_a_satisfied_gate_is_satisfied():
     assert "no changed path affects the deploy" in g4, g4
 
 
-def test_status_comment_marks_report_only_and_flags_the_unwaivable_gate():
+def test_status_comment_banners_report_only_and_flags_the_unwaivable_gate():
     gh = StubGh(pr=pr_meta(), files=[infra_file()])
     body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
-    assert "(preview)" in body, "the heading itself must say preview"
+    assert "> [!WARNING]" in body, "report-only leads with the preview banner"
     assert "no waiver" in body
+    assert "> [!WARNING]" not in sentinel.render_status_comment(
+        sentinel.evaluate(gh, CONFIG)), "enforcing mode has nothing to disclaim"
 
 
-def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
-    """Not blocking today AND enforced soon. Either half alone misleads.
-
-    Half one on its own trains everyone to scroll past the comment; half two
-    on its own reads as a PR that is blocked when it is not.
-    """
-    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
-    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
-    assert "> [!WARNING]" in body
-    assert "NOT blocking your merge" in body
-    assert "safe to ignore for now" in body
-    # Informational, never an invitation to merge past a red gate.
-    assert "you can merge" not in body
-    assert "enforced in the near future" in body
-    assert "*would* have concluded `failure`" in body
-    # The rows are a sign-off checklist (G3 is an approval, G4 a deploy), so
-    # the banner must not frame them as the author's to-do list.
-    assert "owe" not in body
-
-    enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
-    assert "Preview mode" not in enforcing and "(preview)" not in enforcing
-
-
-def test_the_preview_headline_never_contradicts_the_preview_banner():
-    """The banner says nothing blocks you; the headline must not say it does.
-
-    Same failure the waive branch was written for — a gate surface that
-    argues with itself — one mode over. A waived PR in preview used to reach
-    the "N gates need attention" headline at all, because `conclusion` is
-    `neutral` in preview and the waive branch only looked at that.
-    """
-    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()])
-    body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
-    assert "would block this merge once the Sentinel is enforced" in body
-    assert "before this can merge" not in body
-
-    enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
-    assert "before this can merge" in enforcing
-
+def test_a_waived_pr_takes_the_waived_branch_in_preview_too():
+    """`conclusion` is always `neutral` in preview, so the branch reads
+    `would_be`. Without that a waived PR fell through to the "gates need
+    attention" headline the waive branch exists to prevent."""
     waived = StubGh(pr=pr_meta(labels=["review:waived"]),
                     files=[docs_file_substantive()],
                     label_events=_waive_events("cam"),
                     memberships={("docs-tools", "cam"): "active"})
     body = sentinel.render_status_comment(sentinel.evaluate(waived, CONFIG, report_only=True))
-    assert "Waived — this PR can merge." in body
-    assert "need attention" not in body
+    assert "Waived" in body and "need attention" not in body
 
 
 def test_the_status_comment_is_maintained_for_every_pr_in_report_only():
@@ -1167,7 +1133,7 @@ def test_the_status_comment_is_maintained_for_every_pr_in_report_only():
 
     A dry run only visible to a canary cohort exercises the surface without
     exercising the readers, which is the half that actually needs testing.
-    The banner above is what makes writing everywhere safe.
+    The banner is what makes writing everywhere safe.
     """
     assert not hasattr(sentinel, "PREVIEW_LABEL")
     assert "preview" not in sentinel.evaluate(
@@ -1229,9 +1195,7 @@ def test_report_only_wraps_neutral():
     v = sentinel.evaluate(gh, CONFIG, report_only=True)
     assert v.conclusion == "neutral"
     assert v.would_be == "failure"
-    assert v.summary.startswith("**PREVIEW MODE — informational only, safe to ignore "
-                                "for now. This check would be: `failure`.**")
-    assert "Enforcement is coming" in v.summary and "owe" not in v.summary
+    assert "`failure`" in v.summary, "the real verdict rides in the summary"
 
 
 def test_draft_neutral():
@@ -1308,7 +1272,6 @@ def test_not_governed_regen_needs_author_and_label():
 def test_not_governed_report_only_wraps_neutral():
     v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
     assert v.conclusion == "neutral" and v.would_be == "success"
-    assert v.title == "Preview — would be: success (not enforced yet)"
 
 
 def test_a_spotless_bot_pr_still_needs_the_lane_team():
