@@ -95,7 +95,7 @@ resource "aws_iam_role" "my_role" {
 }
 ```
 
-The label is also how the rest of the program refers to the resource, as `aws_iam_role.my_role`. To give the resource a logical name that differs from the label Pulumi would derive — an HCL label cannot contain a hyphen, for instance — set `name` in the resource's [`pulumi` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#resource-options):
+The label is also how the rest of the program refers to the resource, as `aws_iam_role.my_role`. To give the resource a logical name that differs from its label — to match the `my-role` the other languages use here, for instance — set `name` in the resource's [`pulumi` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#resource-options):
 
 ```hcl
 resource "aws_iam_role" "my_role" {

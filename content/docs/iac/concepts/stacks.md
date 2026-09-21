@@ -888,8 +888,7 @@ resources:
 terraform {
   required_providers {
     kubernetes = {
-      source  = "pulumi/kubernetes"
-      version = "4.23.0"
+      source = "pulumi/kubernetes"
     }
   }
 }
