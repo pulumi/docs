@@ -1,0 +1,61 @@
+<!-- CLAUDE_REVIEW 1/1 -->
+<!-- CLAUDE_REVIEW_AUTHOR -->
+<!-- CLAUDE_REVIEW_HEAD 7b8d01c14bb82c63b37d7b6afab5457c7fe9b23a -->
+## Author action guide v1 — nothing blocks merge
+
+> [!NOTE]
+> Nothing here blocks merge — no open items need an answer from you. A human reviewer still approves the merge.
+
+_This PR adds a README documenting the `scripts/redirects/` file format and the pulumi/docs vs. pulumi/registry ownership boundary; the review checked each statement against the scripts it describes and against the rules already sitting in this directory, and two of them don't hold._
+
+### 🚨 Fix or disagree
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/redirects/README.md` L24 | The deploy script does not glob `*.txt` — `scripts/make-s3-redirects.sh` feeds it *every* file in this directory (`ls -l "./scripts/redirects/" \| tail -n +2 \| awk '{print $9}'`), so adding `README.md` here makes the next production deploy upload this file's own prose lines into the site bucket as public S3 objects, and its `<source-key>\|<destination>` example line as a live 301. Change that loop to iterate `./scripts/redirects/*.txt` in this same PR — which also makes the L24 sentence true. |
+| **F?** | `scripts/redirects/README.md` L61 | "If you're adding a rule for a `registry/**` key, it belongs in pulumi/registry, not here" is contradicted by the 48 `registry/**` rules this directory already ships (in `aws-v6-redirects.txt` and `general-broken-links-redirects.txt`, mostly `registry/packages/aws/api-docs/…` renames). Narrow both L61 and the "owned there, not here" sentence at L49–51 to the `how-to-guides` → `/dev/` family they are actually about. |
+
+### ❓ Questions for you
+
+_No open questions for you._
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<!-- REVIEW_STATE {"findings":{},"high_water":0,"schema":1} -->
+<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->
+
+<sub>Review v1 · updated 2026-09-21T21:49:26Z · head commit 7b8d01c</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+### How to answer
+
+Every 🚨 and ❓ item above needs one of these before merge:
+
+1. **Fix it** — push the change. If your push lines up with the flagged lines, this card shows a 🔄 banner within a minute and then refreshes itself. No banner? Comment:
+
+   ```text
+   @claude I pushed a fix for F1 #update-review
+   ```
+
+1. **Disagree with it** — say which item and why; the review re-checks with your input:
+
+   ```text
+   @claude F2: <your reasoning — e.g. where the figure comes from> #update-review
+   ```
+
+   Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
+
+1. **Accept it as-is** — you own the PR; a one-line reason is a valid answer, and your reviewer sees it beside the finding:
+
+   ```text
+   @claude F2: accepting as-is — <your reason> #update-review
+   ```
+
+   To accept every open item at once: `@claude accepting all open items — <reason> #update-review`.
+
+The `#update-review` hashtag matters — it routes your reply to this review, and (besides pushing a fix) **it is the only reply that unblocks merge**. A bare `@claude` gets you ad-hoc help and leaves this card — and the merge block — untouched.
+
+Please don't edit, hide, or delete this comment — it is the review's record. Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions).

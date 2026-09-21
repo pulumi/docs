@@ -1,0 +1,62 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+**Approval needed from:** @pulumi/docs-tools — any member's approval satisfies the merge gate.
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - `sentinel.py`: the pinned gate-status comment is now written on every PR in report-only mode, not just a labelled cohort.
+> - `sentinel.py`: report-only wrapping moves into one `_stamp_report_only()` helper, with new preview wording for the check title and summary.
+> - `sentinel.py`: `render_status_comment()` gains a `[!WARNING]` preview banner, a "(preview)" heading, and preview-tense headlines.
+> - `sentinel.py`: the waived-PR headline now reads the effective verdict, fixing a waived PR in report-only falling through to the "gates need attention" headline.
+> - `sentinel.py`: the `sentinel:preview` label constant and the `Verdict.preview` field are removed.
+> - `content-review-article.yml` and `check-links.yml`: stop applying the retired label; the link-sweep labelling step is deleted outright.
+> - `review-sentinel.yml`: drops the retired label from the label-event filter and updates the mode comments.
+> - `labels-pr-review.md`, `CONTRIBUTING.md`, `README.md`: document the retirement and the new preview-mode behavior.
+>
+> The wrongness that would matter here is a contributor-visible comment that misstates whether the check blocks their merge — either a preview comment missing its disclaimer or an enforcing one carrying it. The review read the diff in full, traced every code path that reaches `render_status_comment()`, checked the new and updated tests against the code they cover, and grepped the repo for surviving references to the retired label (all remaining ones are prose retirement notes, which is intended).
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | HIGH |  |
+> | code correctness | MEDIUM | The tests were read, not run, and the new report-only write path has no test of its own — see the ⚠️ items. |
+
+### ⚠️ Check these before approving
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/review-v3/sentinel.py` L1516 | The change at the heart of this PR — the status comment now being written in report-only mode for every PR — is the one change with no test. The new test named for it only asserts that the label constant is gone and that the workflows no longer apply it; it never exercises this write path. Not yours to check line-by-line — just confirm you're comfortable merging the behavior change on that coverage. |
+| **F?** | `scripts/review-v3/test_sentinel.py` L1148 | `assert "owe" not in body` is a bare substring guard for the "don't frame rows as the author's homework" rule, and `owe` is a substring of ordinary words (lower, power, followed). If a gate message ever picks one up, the test fails for a reason that has nothing to do with the rule. Worth deciding whether a word-boundary match is wanted; it can't cause a false pass, only a false failure. |
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+_None — the extractor found no positioning or comparison language in this PR's added lines._
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** no factual claims found in the changed lines.
+- **Mechanics:** no internal links added.
+- **Style:** 0 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-21T21:51:26Z · head commit 49a63af</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.
