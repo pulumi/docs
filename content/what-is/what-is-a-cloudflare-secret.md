@@ -248,24 +248,24 @@ func main() {
 {{% choosable language hcl %}}
 
 ```hcl
-variable "accountId" {
+variable "account_id" {
   type = string
 }
 
-variable "secrets-demo" {
+variable "secrets_demo" {
   type      = string
   sensitive = true
 }
 
 resource "cloudflare_workers_script" "my_script" {
-  account_id  = var.accountId
+  account_id  = var.account_id
   script_name = "script_1"
   content     = file("script.js")
 
   bindings {
     type = "secret_text"
     name = "MY_SECRET_NAME_KEY" # secret key
-    text = var["secrets-demo"]  # secret value
+    text = var.secrets_demo    # secret value
   }
 }
 ```

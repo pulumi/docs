@@ -129,6 +129,8 @@ provider "kubernetes" {
 }
 
 # 3. Deploy a Helm chart onto that cluster with the current helm.sh/v4 Chart resource.
+#    The type name keeps the dot from the Pulumi token (kubernetes:helm.sh/v4:Chart),
+#    so refer to this resource with depends_on rather than a dotted traversal.
 resource "kubernetes_helm.sh_v4_chart" "nginx_ingress" {
   provider  = kubernetes.eks
   chart     = "ingress-nginx"
