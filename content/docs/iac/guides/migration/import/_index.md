@@ -151,6 +151,26 @@ Duration: 2s
 
 Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/options/protect/) documentation to learn more.
 
+### Importing a resource managed by a non-default provider
+
+By default, `pulumi import` looks up the resource using the stack's default provider for that resource's package. If the resource you're importing is actually managed by an explicit [provider resource](/docs/iac/concepts/resources/options/provider/) in your program --- for example, a provider configured for a different account, region, or set of credentials than the default --- you need to tell `pulumi import` which provider to use. Otherwise, the import will either fail to locate the resource or bring it under management by the wrong provider, and you'll see a diff or a replacement the next time you run `pulumi preview`.
+
+Use the `--provider` flag to specify the provider by name and URN, in the form `name=urn`:
+
+```bash
+$ pulumi import <type> <name> <id> --provider <providerName>=<providerUrn>
+```
+
+`<providerName>` is the variable name the generated code will use to reference the provider, and `<providerUrn>` is the URN of the existing provider resource already present in your stack.
+
+To find a provider resource's URN, run [`pulumi stack --show-urns`](/docs/iac/cli/commands/pulumi_stack/) and look for a resource with a type token of the form `pulumi:providers:<package>`, or inspect the output of [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/). For example, importing an Amazon S3 bucket using an explicit AWS provider named `usEast1` would look like this:
+
+```bash
+$ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs --provider usEast1=urn:pulumi:dev::my-project::pulumi:providers:aws::usEast1::12345678-90ab-cdef-1234-567890abcdef
+```
+
+The [`--parent`](/docs/iac/cli/commands/pulumi_import/) flag, used when the imported resource is a child of a component, accepts the same `name=urn` format. If you're importing many resources that share a non-default provider, consider the [program-first (bulk) import](#approach-2-program-first-bulk-import) approach instead, whose [import file schema](#import-file-schema) lets you set a `provider` field once per resource entry.
+
 ### Demo
 
 The following short video illustrates the `pulumi import` process end to end:

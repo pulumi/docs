@@ -24,7 +24,7 @@ aliases:
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/iac/concepts/stacks/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
 
-Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or a local filesystem.
+Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud — a secure, reliable hosted application with policies and safeguards for team collaboration — along with object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or a local filesystem.
 
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
@@ -38,12 +38,12 @@ This page covers the technical details of state management and backend configura
 
 Pulumi supports two classes of state backend:
 
-- **Pulumi Cloud**: a managed backend using the online or self-hosted Pulumi Cloud application. It is the default backend and requires no additional configuration after [installing the CLI](/docs/install/).
+- **Pulumi Cloud**: a managed backend using the online or self-hosted Pulumi Cloud application. Pulumi Cloud is the default backend: after [installing the CLI](/docs/install/), the CLI prompts you to sign in the first time you run `pulumi login`.
 - **DIY backend**: a "Do It Yourself" backend that stores state in an object store you manage—AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem.
 
 Pulumi's SDK works with all backends, although some details differ between them. For a full comparison of the two options—including the operational concerns each one entails—see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/). For DIY backend setup instructions, see [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
-## Logging into and out of State Backends
+## Logging into and out of state backends
 
 The [`login` command](/docs/iac/cli/commands/pulumi_login/) logs you into a backend:
 
@@ -57,20 +57,20 @@ The [`logout` command](/docs/iac/cli/commands/pulumi_logout/) logs you out of th
 $ pulumi logout
 ```
 
-This will remove the credentials for the current backend from `~/.pulumi/credentials.json` and you will need to log in again before performing any subsequent stack or state operations. To remove credentials for all backends at once, use `pulumi logout --all`.
+This removes the credentials for the current backend from `~/.pulumi/credentials.json`, and you must log in again before performing any further stack or state operations. To remove credentials for all backends at once, use `pulumi logout --all`.
 
 To change backends, run `pulumi logout` followed by `pulumi login`.
 
-The basic form of `login` will use Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
+The basic form of `login` uses Pulumi Cloud by default. If you wish to log in to a specific backend, pass the backend-specific URL as the sole argument:
 
 ```sh
 $ pulumi login <backend-url>
 ```
 
-Alternatively, there are 2 other options that help to avoid the need to type it every time:
+Two other options save you from typing it every time:
 
 1. Set the `PULUMI_BACKEND_URL` environment variable.
-2. Set `backend` property in the project `Pulumi.yaml` config file as below:
+1. Set the `backend` property in the project's `Pulumi.yaml` config file:
 
 ```yaml
 ....
@@ -79,13 +79,13 @@ backend:
 ....
 ```
 
-For details on the various backend URL formats and options, see the Pulumi Cloud backend section below and [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
+For details on the various backend URL formats and options, see [Pulumi Cloud backend](#pulumi-cloud-backend) and [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
-If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
+If you forget to log in, Pulumi prompts you automatically before you do anything that requires stacks or state.
 
-After logging in, your credentials are recorded in the `~/.pulumi/credentials.json` file, and all subsequent operations will use the chosen backend. From time to time, you will see a helpful URL to your update or stack pages. For example, after an update completes, you will see a link to that update's details. You can always go there to see a full history of updates.
+After logging in, your credentials are recorded in the `~/.pulumi/credentials.json` file, and all later operations use the chosen backend. From time to time, Pulumi prints a helpful URL to your update or stack pages. For example, after an update completes, it prints a link to that update's details. You can always go there to see a full history of updates.
 
-If you ever want to check what user is logged in, use the [`whoami` command](/docs/iac/cli/commands/pulumi_whoami/). To additionally see what  backend is currently being used, pass the `--verbose` (or `-v`) flag:
+If you ever want to check what user is logged in, use the [`whoami` command](/docs/iac/cli/commands/pulumi_whoami/). To additionally see what backend is currently being used, pass the `--verbose` (or `-v`) flag:
 
 ```bash
 $ pulumi whoami -v
@@ -93,17 +93,17 @@ User: <your-username>
 Backend URL: https://app.pulumi.com/<your-username>
 ```
 
-## Pulumi Cloud Backend
+## Pulumi Cloud backend
 
 {{< pulumi-cloud />}}
 
-Running `pulumi login` without any argument will log into the default Pulumi Cloud backend:
+Running `pulumi login` without any argument logs into the default Pulumi Cloud backend:
 
 ```sh
 $ pulumi login
 ```
 
-This will display a prompt that asks for an [access token](/docs/administration/concepts/access-tokens/):
+This displays a prompt that asks for an [access token](/docs/administration/concepts/access-tokens/):
 
 ```
 Manage your Pulumi stacks by logging in.
@@ -112,9 +112,9 @@ Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser:
 ```
 
-To automatically generate and use a new access token, hit `<ENTER>`. This will open a web browser to interact with Pulumi Cloud and request a token. If this is your first time using Pulumi Cloud, you will be asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
+To automatically generate and use a new access token, hit `<ENTER>`. This opens a web browser to interact with Pulumi Cloud and request a token. If this is your first time using Pulumi Cloud, you are asked to authenticate using your chosen identity provider (GitHub, GitLab, Atlassian, SAML/SSO, or email).
 
-To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
+To view your access tokens, or create a new one manually, view the [Access Tokens](https://app.pulumi.com/account/tokens) page. The page lists past tokens, when they were last used, and lets you revoke them.
 
 To log into a self-hosted instance of Pulumi Cloud, pass its API URL to the `login` command:
 
@@ -122,7 +122,7 @@ To log into a self-hosted instance of Pulumi Cloud, pass its API URL to the `log
 $ pulumi login https://pulumi.acmecorp.com
 ```
 
-Everything works the same as with the standard Pulumi Cloud, except that Pulumi will target your private instance instead of the shared one hosted at `app.pulumi.com`.
+Everything works the same as with the standard Pulumi Cloud, except that Pulumi targets your private instance instead of the shared one hosted at `app.pulumi.com`.
 
 To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/).
 
@@ -205,11 +205,11 @@ For teams that want to detect and remediate [out-of-band changes](/what-is/what-
 
 To learn more, see [Drift detection](/docs/deployments/concepts/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
 
-## Advanced State
+## Advanced state
 
-Pulumi is designed to abstract state management away from you so that you can operate in terms of declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly, especially when using DIY backends. In those cases, the following sections may be helpful.
+Pulumi is designed to abstract state management away from you so that you can work with declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly, especially when using DIY backends. In those cases, the following sections may be helpful.
 
-### Importing Existing Resources
+### Importing existing resources
 
 Pulumi supports importing resources that were already created outside of Pulumi, such as resources created using the cloud console, a cloud CLI or SDK, or even another infrastructure as code tool. Resource metadata is imported into your Pulumi state and source code is generated in your chosen language to match that state.
 
@@ -217,13 +217,13 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 ### Checkpoints
 
-Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
+Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, the way database transactions do. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
 The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to transparently recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but because they are fundamentally limited by the non-transactional protocols of blob storage, they cannot transparently recover from certain kinds of partial failures (read more about how Pulumi Cloud addresses this with [journaling](/blog/journaling/)). This same limitation is why DIY backends offer only a blunt instrument for tuning performance on large stacks: [skipping checkpoints](/docs/iac/cli/environment-variables/) altogether, trading durability for speed.
 
-### State Encryption
+### State encryption
 
-State is stored in your target backend in the form of checkpoints. In the case of the Pulumi Cloud backend, all remote communication is done over TLS and data is encrypted at rest.
+State is stored in your target backend in the form of checkpoints. With the Pulumi Cloud backend, all remote communication is done over TLS and data is encrypted at rest.
 
 ### Secrets
 
@@ -233,12 +233,12 @@ A secret can be created one of two ways: passing `--secret` to the `pulumi confi
 
 To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption](/docs/iac/concepts/secrets/#configuring-secrets-encryption).
 
-### Exporting and Importing State
+### Exporting and importing state
 
 The `pulumi stack export` and `pulumi stack import` commands can be used to export the latest or a specific version of a stack's state. This can be used to inspect or even manually edit the contents for advanced use cases. For more information on usage, [refer to the CLI documentation](/docs/iac/cli/commands/pulumi_stack/).
 
-### Editing State Manually
+### Editing state manually
 
 Although Pulumi was designed to shield you from manually needing to manage state, there are some circumstances where you will want or need to. This includes certain catastrophic failure scenarios, adding, deleting, renaming resources, and other advanced scenarios.
 
-The Pulumi state file uses a relatively easy to understand JSON format. The precise JSON format these state files use is not documented, but is defined in the [APIType source code](https://github.com/pulumi/pulumi/tree/master/sdk/go/common/apitype/). The [`state` command](/docs/iac/cli/commands/pulumi_state/) also includes some helpful commands to edit your state.
+The Pulumi state file uses a human-readable JSON format. The precise JSON format these state files use is not documented, but is defined in the [APIType source code](https://github.com/pulumi/pulumi/tree/master/sdk/go/common/apitype/). The [`state` command](/docs/iac/cli/commands/pulumi_state/) also includes some helpful commands to edit your state.
