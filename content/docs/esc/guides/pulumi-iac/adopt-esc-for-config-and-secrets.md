@@ -38,7 +38,7 @@ config:
 
 The program reads them with the standard [Configuration API](/docs/iac/concepts/config/):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -98,6 +98,20 @@ config:
   dbConnectionString:
     type: string
     secret: true
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "containerImage" {
+  type = string
+}
+
+variable "dbConnectionString" {
+  type      = string
+  sensitive = true
+}
 ```
 
 {{% /choosable %}}

@@ -39,7 +39,7 @@ Provisioning the cluster and deploying to it in a single Pulumi program looks li
 2. Point a Kubernetes provider at the new cluster, using the cluster's `kubeconfigJson` output.
 3. Deploy a Helm chart onto that cluster with the current `helm.v4.Chart` resource, targeting the provider from step 2.
 
-{{< chooser language "typescript,python" / >}}
+{{< chooser language "typescript,python,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -98,6 +98,53 @@ nginx_ingress = Chart(
 )
 
 pulumi.export("kubeconfig", cluster.kubeconfig_json)
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    eks = {
+      source  = "pulumi/eks"
+      version = "4.3.0"
+    }
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.30.0"
+    }
+  }
+}
+
+# 1. Provision a managed EKS cluster (VPC, IAM, and node groups included).
+resource "eks_cluster" "eks_cluster" {}
+
+# 2. Point a Kubernetes provider at the new cluster. Use kubeconfig_json
+#    (the stringified-JSON output), not the bare kubeconfig object.
+provider "kubernetes" {
+  alias      = "eks"
+  kubeconfig = eks_cluster.eks_cluster.kubeconfig_json
+}
+
+# 3. Deploy a Helm chart onto that cluster with the current helm.sh/v4 Chart resource.
+resource "kubernetes_helm.sh_v4_chart" "nginx_ingress" {
+  provider  = kubernetes.eks
+  chart     = "ingress-nginx"
+  namespace = "ingress-nginx"
+
+  repository_opts = {
+    repo = "https://kubernetes.github.io/ingress-nginx"
+  }
+
+  depends_on = [eks_cluster.eks_cluster]
+}
+
+output "kubeconfig" {
+  value     = eks_cluster.eks_cluster.kubeconfig_json
+  sensitive = true
+}
 ```
 
 {{% /choosable %}}

@@ -147,7 +147,7 @@ $ pulumi config set secrets-demo --secret
 value:  ****
 ```
 
-{{< chooser language "typescript,python,go" / >}}
+{{< chooser language "typescript,python,go,hcl" / >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -241,6 +241,32 @@ func main() {
 		}
 		return nil
 	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "accountId" {
+  type = string
+}
+
+variable "secrets-demo" {
+  type      = string
+  sensitive = true
+}
+
+resource "cloudflare_workers_script" "my_script" {
+  account_id  = var.accountId
+  script_name = "script_1"
+  content     = file("script.js")
+
+  bindings {
+    type = "secret_text"
+    name = "MY_SECRET_NAME_KEY" # secret key
+    text = var["secrets-demo"]  # secret value
+  }
 }
 ```
 
