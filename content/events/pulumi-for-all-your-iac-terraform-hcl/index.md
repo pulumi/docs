@@ -14,14 +14,6 @@ unlisted: false
 # to fill out the form before viewing.
 gated: true
 
-# External events will link to an external page instead of an event
-# landing/registration page.
-external: false
-block_external_search_index: false
-
-# The url slug for the event landing page.
-url_slug: pulumi-for-all-your-iac-terraform-hcl
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 

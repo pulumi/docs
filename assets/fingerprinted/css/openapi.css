@@ -438,6 +438,15 @@
     color: var(--color-violet-800);
 }
 
+/* A type badge sitting inside the Type: line keeps the badge's own color, so the
+   array[Foo] notation reads the same here as it does in the property rows. Without
+   this, .api-schema-label a above ties .api-param-badge a on specificity and wins on
+   source order, and the link renders in the docs link color instead. */
+.api-schema-label .api-param-badge a,
+.api-schema-label .api-param-badge a:hover {
+    color: inherit;
+}
+
 .api-request-body .api-schema-label {
     margin-top: 0;
 }
@@ -581,6 +590,13 @@ html[data-theme="dark"] body.section-docs .api-param-deprecated {
 
 html[data-theme="dark"] body.section-docs .api-schema-label a:hover {
     color: var(--color-violet-200);
+}
+
+/* Dark counterpart to the light rule: the hover above outweighs it otherwise, and the
+   badge link would flip violet on hover while sitting blue the rest of the time. */
+html[data-theme="dark"] body.section-docs .api-schema-label .api-param-badge a,
+html[data-theme="dark"] body.section-docs .api-schema-label .api-param-badge a:hover {
+    color: inherit;
 }
 
 html[data-theme="dark"] body.section-docs .api-status-2xx {

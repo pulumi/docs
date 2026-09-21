@@ -29,7 +29,7 @@ There are several reasons why you might want to write a dynamic resource provide
 - You want to create some new custom resource types.
 - You want to use a cloud provider that Pulumi doesn't support.
 
-All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `update` and `delete` functions as well. Note that `read` is not currently functional for dynamic providers. For the full interface, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
+All dynamic providers must conform to certain interface requirements. You must at least implement the `create` function but, in practice, you will probably also want to implement the `update` and `delete` functions as well. For the full interface, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
 
 For example, if creating a dynamic resource provider for WordPress, you would probably want to create new blogs, update existing blogs, and destroy them. The mechanics of how these operations happen would be essentially the same as if you used one of the standard resource providers. The difference is that the calls that would've been made on the standard resource provider by the Pulumi engine would now be made on your dynamic resource provider and it, in turn, would make the API calls to WordPress.
 
@@ -101,11 +101,11 @@ We can now create instances of the new `MyResource` resource type in our program
 
 Specifically:
 
+1. In all cases, Pulumi first calls the check method with the resource arguments to give the provider a chance to verify that the arguments are valid.
 1. If Pulumi determines the resource has not yet been created, it will call the create method on the resource provider interface.
 1. If another Pulumi deployment happens and the resource already exists, Pulumi will call the diff method to determine whether a change can be made in place or whether a replacement is needed.
 1. If a replacement is needed, Pulumi will call create for the new resource and then call delete for the old resource.
 1. If no replacement is needed, Pulumi will call update.
-1. In all cases, Pulumi first calls the check method with the resource arguments to give the provider a chance to verify that the arguments are valid.
 1. If Pulumi needs to read an existing resource without managing it directly, it will call read. (Note: `read` is not currently implemented for dynamic providers.)
 
 For details on each of these functions, see [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).

@@ -33,21 +33,11 @@ solutions_header:
 customer_logos:
   title: Organizations managing AI infrastructure with Pulumi
   logos:
-    - name: altana
-    - name: cto-ai
-    - name: fennel-ai
-    - name: ai-io
-    - name: nvidia
-    - name: levitate-ai
-    - name: modal
-    - name: pinecone
-    - name: ozette
-    - name: nostra-ai
-    - name: flux-ai
-    - name: outmind-ai
-    - name: synthesis-ai
-    - name: retain-ai
-    - name: taranis
+    - altana
+    - nvidia
+    - modal
+    - pinecone
+    - flux
 
 form:
     title: "Talk to a Cloud Architect"

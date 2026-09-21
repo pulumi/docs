@@ -200,4 +200,4 @@ error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown):
 - **Missing region configuration (AWS S3).** The AWS SDK can't determine which region the bucket is in. Specify the region in the backend URL—for example, `pulumi login 's3://<bucket-name>?region=us-east-1'`—or set the `AWS_REGION` environment variable before logging in.
 - **Missing authentication environment variables.** DIY backends authenticate using the cloud provider's own SDK. Verify that the variables that SDK expects are set—see the section for your backend ([AWS S3](#aws-s3), [Azure Blob Storage](#azure-blob-storage), or [Google Cloud Storage](#google-cloud-storage)) above for the specifics.
 
-To get more detail while diagnosing the problem, re-run the command with [CLI verbose logging](/docs/support/debugging/logging/#cli-verbose-logging) enabled.
+To get more detail while diagnosing the problem, re-run the command with [CLI verbose logging](/docs/iac/operations/debugging/logging/#cli-verbose-logging) enabled.

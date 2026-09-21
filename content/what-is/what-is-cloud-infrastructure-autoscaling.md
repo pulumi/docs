@@ -6,27 +6,6 @@ type: what-is
 date: 2021-07-27T08:05:57-07:00
 page_title: Autoscaling 101
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["cam-soper"]
 ---
 
@@ -133,7 +112,7 @@ With Pulumi:
 * **Kubernetes HPAs, VPAs, KEDA scaled objects, and Cluster Autoscaler / Karpenter configurations** are defined through [`@pulumi/kubernetes`](https://www.pulumi.com/registry/packages/kubernetes/) alongside the workloads they scale. See [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/).
 * **Policy as code for scaling guardrails.** [Pulumi Policies](/docs/discovery-governance/policy/) can enforce "every production ASG must have a non-zero max," "no ASG without scale-in protection in stateful tiers," "production database autoscaling must have an upper bound."
 
-[Get started with Pulumi](/docs/get-started/) to define autoscaling policies alongside the rest of your cloud infrastructure in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi](/docs/get-started/) to define autoscaling policies alongside the rest of your cloud infrastructure in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL.
 
 ## Frequently asked questions about autoscaling
 

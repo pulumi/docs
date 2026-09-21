@@ -435,10 +435,13 @@ Domain files may bump scrutiny internally for whole-file rewrites or new pages.
 
 ## The v3 surface (`--surface v3`)
 
-> **Status:** ships behind the `REVIEW_V3_COMMENTS` flag. Everything above this
-> section describes the v2 single-comment surface, which remains the default
-> and stays valid through the transition. The v3 architecture reference is
-> `scripts/review-v3/README.md`.
+> **Status:** on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so every
+> fresh review renders these cards. Everything above this section describes
+> the v2 single-comment surface, which is no longer produced for new reviews
+> but stays valid for PRs reviewed before the flip: those keep their monolith,
+> and `#update-review` refreshes it in place until someone runs
+> `@claude #new-review` to regenerate it as cards. The v3 architecture
+> reference is `scripts/review-v3/README.md`.
 
 Under v3 the composer emits **two comments plus a machine-owned evidence
 object** instead of one monolith. Evidence (the 🔍 verification trail, the
@@ -461,9 +464,9 @@ _<one sentence: what the PR is and what the review checked>_
 |---|---|---|
 | **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
 #### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
-**Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
-**Why:** <1-2 sentences>
-**Fix:** <exactly ONE required action; replacement text in a fenced block>
+- **Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
+- **Why:** <1-2 sentences>
+- **Fix:** <exactly ONE required action; replacement text in a fenced block at column 0 after the list>
 ### ❓ Questions for you
 | ID | Where | Finding |                  ← same row + block shape
 #### F3 · Do this
@@ -546,19 +549,24 @@ these rules:
 1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
    reason (move the line between sections/drafts and keep its id). Moving a
    finding down is a contract violation `build-evidence.py` rejects (exit 2).
-   Exception: a `route: preflight` detector stub whose TODO explicitly says
-   "bucket by reader impact" may land in ⚠️.
+   Exception: a readthrough detector stub (origin `preflight:readthrough-*`)
+   — its TODO says "bucket by reader impact", so it may land in ⚠️. The
+   validator and `build-evidence.py` both take that from
+   `compose-review.v3_may_demote`; Hugo and frontmatter stubs stay
+   promote-only.
 1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
    `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
    `**Pre-existing:** <reason>`. The cell must START with the label.
    build-evidence files those on the evidence page and drops them from the
    published card. A finding that simply vanishes is a violation.
 1. **Fill every `#### F<n> · Do this` block** (they are scaffolded per
-   blocking finding): `**Line (verbatim):**` quotes the flagged file line
+   blocking finding). The block is a three-bullet list — keep the `- `
+   markers: `- **Line (verbatim):**` quotes the flagged file line
    exactly ONCE on the whole card — a paraphrase never appears inside
-   quotation marks; `**Why:**` is 1-2 sentences; `**Fix:**` states exactly
+   quotation marks; `- **Why:**` is 1-2 sentences; `- **Fix:**` states exactly
    ONE required action, first. Replacement text goes in a fenced block
-   (GitHub gives it a copy button). If deletion is the better fix, LEAD
+   at column 0 after the list (GitHub gives it a copy button); an
+   alternative is a fourth bullet, `- **If you'd rather keep it:**`. If deletion is the better fix, LEAD
    with deletion — a reword is offered only under a
    `**If you'd rather keep it:**` label, never as a competing imperative.
    A structural observation shared by several findings ("both new sentences
@@ -570,7 +578,21 @@ these rules:
 1. **New findings** are added as `| **F?** | … | … |` rows in the right
    section's table; build-evidence assigns the real id. An `F?` row gets NO
    detail block (ids aren't assigned yet) — put a terse action clause in
-   its Finding cell instead.
+   its Finding cell instead. When the section is empty (its body is the
+   italic `_Nothing …_` / `_No …_` sentinel), replace the sentinel with the
+   composer's table — exactly this header and separator, then your row:
+
+   ```text
+   | ID | Where | Finding |
+   |---|---|---|
+   | **F?** | `path/to/file.md` L12 | <finding> |
+   ```
+
+   Three columns, no leading status cell. (A deterministic pass,
+   `normalize-v3-draft.py`, repairs a four-column header or a stray
+   leading cell before validation and regenerates a deleted `#### F<n> ·
+   Do this` block from its row — but only those shapes; anything else the
+   validator refuses.)
 1. **⚠️ rows and the confidence table speak to a non-docs reader.** Every
    LOW/MEDIUM confidence row's Notes cell says whose problem it is — either
    "Not yours to check — <why>" or "→ see F<n>" — and uses reader terms
@@ -622,7 +644,8 @@ high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n
 this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no `F?` blocks,
 exactly one `**Fix:**` line each, none on the brief), and
 `bucket-split-faithful` (promote-only against the evidence base; a finding
-may never be demoted or deleted — rewrite it as `**Spurious:** …` instead).
+may never be demoted or deleted — rewrite it as `**Spurious:** …` instead;
+the one exception is a readthrough stub moved to ⚠️, per rule 1 above).
 
 Shared rules that also run on v3 (some against both bodies):
 `no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,

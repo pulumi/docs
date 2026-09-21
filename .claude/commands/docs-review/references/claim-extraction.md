@@ -23,7 +23,7 @@ Every claim record carries a `type`. Use the most specific type that fits; a sen
 | `type` | What it is | How to record it |
 |---|---|---|
 | `numerical` | A specific quantity — price, rate, limit, size, count, percentage, multiplier, duration, version-distance ("two minor versions"). | `text` = the assertion as a self-contained sentence. If a source is named in the same sentence, set `source_hint` to it; the verifier framing-compares (§Framing). Unrounded/unsourced specifics also warrant the intuition-check flag downstream. |
-| `version` | A pinned version, SDK/runtime version, or availability-by-version statement ("`pulumi-gcp` v8.2.0", "requires Node.js 18+", "available since v3.230", "Go 1.21"). | `text` = the pin and what it applies to. `source_hint` = the package/product if extractable. The verifier checks it against release notes / the registry; a stale-but-correct pin gets an §API-currency note, not a 🚨. |
+| `version` | A pinned version, SDK/runtime version, or availability-by-version statement ("`pulumi-gcp` v8.2.0", "requires Node.js 18+", "available since v3.230", "Go 1.21"). | `text` = the pin and what it applies to — the thing the version number *belongs to*, which in a nested config block is not always the nearest name (worked example 14). `source_hint` = the package/product if extractable; when it ships from a Pulumi repo, use the `pulumi/<repo>` form (`pulumi/pulumi-terraform-provider`, not `terraform-provider`) — release tags decide a pin, and the bare package name reads downstream as a third-party product. The verifier checks it against release notes / the registry; a stale-but-correct pin gets an §API-currency note, not a 🚨. |
 | `temporal` | A recency/time-bounded assertion — "recently", "now supports", "new in v…", "as of April 2026", "retiring in March 2026", "deprecated", "introduced". | `text` = the assertion. Set `source_hint` if a date or release is named. The verifier records the result with a date anchor ("As of $TODAY, …") or flags temporal *misuse* ("recently" describing a years-old change) as contradicted. |
 | `feature` | "Feature/integration X exists / is supported / works on Y" (and the negative: "X is not supported"). | `text` = the capability statement. Negatives are harder to verify (proving absence) — say so in `text` so the verifier knows to read the provider registry / source. |
 | `behavior` | What a command / API / resource *does* — output, side effect, default value, flag semantics ("`pulumi up` deploys all resources in the stack", "encryption is enabled by default", "`--cwd` accepts a path"). | `text` = the behavior as a testable statement. The verifier reads the source / runs the command. |
@@ -258,6 +258,23 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 
 - Record (type `version`): `text` = "As of Pulumi CLI v3.33.1, the `awskms` secrets-provider URL accepts `awssdk=v2` and `profile=<name>` in its query string as an alternative to the `AWS_PROFILE` environment variable." `source_hint` = "pulumi/pulumi" `confidence` = high.
 - Reasoning: on the page, "the query string" can only mean the awskms URL — the heading and the surrounding examples say so. Lifted out verbatim, the sentence reads as a claim about AWS query strings in general, and a verifier holding only the record will find the v3.33.1 release note scoped to `awskms` and call the record over-broad. It is the record that is over-broad, not the page. The `source_hint` names the product whose release notes decide the pin, so the claim keys as `version/pulumi` rather than on the sentence's opening words.
+
+**14 — A version pin in a nested config block: whose version is it?**
+
+> ```yaml
+> packages:
+>   random:
+>     source: terraform-provider
+>     version: 1.4.0
+>     parameters:
+>       - hashicorp/random
+>       - 3.7.1
+> ```
+
+- Wrong record: `text` = "The example `Pulumi.yaml` pins the `terraform-provider` package's `random` provider to version 1.4.0." — this attaches 1.4.0 to the wrapped Terraform provider, which no release of `hashicorp/random` matches, so a correct pin verifies as `contradicted`.
+- Record A (type `version`): `text` = "The example `Pulumi.yaml` pins Pulumi's `terraform-provider` package (the Any Terraform Provider bridge) to version 1.4.0." `source_hint` = "pulumi/pulumi-terraform-provider" `confidence` = high.
+- Record B (type `version`, only if the block carries it): `text` = "The example `Pulumi.yaml` parameterizes the `terraform-provider` package with the `hashicorp/random` Terraform provider at version 3.7.1." `source_hint` = "hashicorp/random".
+- Reasoning: in a `packages:` entry, `version:` pins the package named by the sibling `source:` key; the map key (`random`) is only the local name. The entries under `parameters:` name the wrapped Terraform provider and, optionally, *its* version — a different number from a different release stream. Read the structure, not the proximity: the two versions are separate claims with separate sources. The `pulumi/<repo>` hint sends Record A to the lane that can read release tags; a bare `terraform-provider` hint reads as an external product and gets web-searched, where the top hit is the page under review.
 
 ---
 

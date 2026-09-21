@@ -104,13 +104,13 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # Keyed on the Hugo resolved above, not a literal, so the four
+          # Keyed on the Hugo resolved above, not a literal, so the five
           # workflows that share this cache (pull-request.yml,
           # build-and-deploy.yml, testing-build-and-deploy.yml,
-          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
-          # remembering to bump them. Hugo does not put its version in its own
-          # cache entries, so without this an upgrade keeps serving images
-          # encoded by the previous version indefinitely.
+          # pulumi-cli-docs.yml, warm-build-cache.yml) stay in step through an
+          # upgrade without anyone remembering to bump them. Hugo does not put
+          # its version in its own cache entries, so without this an upgrade
+          # keeps serving images encoded by the previous version indefinitely.
           key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
             hugo-resources-${{ steps.hugo-version.outputs.version }}-
@@ -139,6 +139,20 @@ jobs:
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
+  # A dispatched run is somebody's staging evidence: `staging-deploy.sh`
+  # writes a pending `staging/pulumi-test-io` status at this SHA and exits
+  # without waiting. Resolving that status is NOT this run's job, and must
+  # never be moved back here.
+  #
+  # It used to be (a `staging-status` job, #21642/#21677), and that job only
+  # ever existed for PR branches cut after it merged: a workflow_dispatch
+  # runs the workflow file from the ref it is dispatched at. PR #21676
+  # branched from 8712bb8b, its deploy succeeded, and the file the run
+  # executed had no such job — so the pending status never resolved.
+  # `.github/workflows/staging-status.yml` owns the terminal status now: a
+  # `workflow_run` listener always runs the default branch's copy and fires
+  # for runs on any branch, so branch age stops mattering. Sentinel gate G4
+  # reads either that status or this run.
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification

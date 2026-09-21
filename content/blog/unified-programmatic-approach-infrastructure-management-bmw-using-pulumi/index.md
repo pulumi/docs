@@ -117,7 +117,7 @@ BMW used Pydantic, a data validation library, to define schema-based configurati
 ### Policy Enforcement: Ensuring Compliance and Security
 
 One key benefit of [Pulumi's IaC approach](https://www.pulumi.com/product/infrastructure-as-code/) is the ability to define and enforce policies across the organization, ensuring that infrastructure deployments adhere to security and compliance standards.
-BMW has leveraged [Pulumi's policy-as-code](/docs/insights/policy/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
+BMW has leveraged [Pulumi's policy-as-code](/docs/discovery-governance/policy/) capabilities to implement mandatory checks, such as ensuring that all S3 buckets are encrypted at rest, preventing the deployment of non-compliant resources.
 
 - By integrating these policy checks into their deployment workflows, BMW has shifted security and compliance concerns to the left, addressing issues early in the development process and reducing the risk of costly post-deployment [remediations](https://www.pulumi.com/blog/remediation-policies/).
 

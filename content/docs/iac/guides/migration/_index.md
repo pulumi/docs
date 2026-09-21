@@ -25,6 +25,7 @@ Below we will review some basic concepts, but feel free to jump straight to a sp
 
 * [**Importing Infrastructure**](/docs/iac/guides/migration/import/): for any cloud, no matter how it's provisioned
 * [**From Terraform or CDKTF**](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
+* [**From AWS CDK**](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/): migrate with Neo, coexist via stack outputs, or use the Pulumi CDK adapter
 * [**From AWS CloudFormation**](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/): coexist with, deploy, or convert your templates and stacks
 * [**From Azure Resource Manager (ARM)**](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/): coexist with, deploy, or convert your templates and deployments
 * [**From Kubernetes YAML or Helm**](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/): coexist with, deploy, or convert your configuration
@@ -39,6 +40,7 @@ Support for these techniques differs based on how your existing infrastructure w
 |                    | [Coexistence](#coexistence) | [Importing](#importing-infrastructure) | [Conversion](#conversion) |
 |--------------------|:-------:|:------:|:-------:|
 | [Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) | ✅      | ✅     | ✅      |
+| [AWS CDK](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/) | ✅      | ✅     | ✅      |
 | [AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) | ✅      | ✅     | ✅       |
 | [Azure ARM](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/)          | ✅      | ✅     | ✅      |
 | [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)    | ✅      | ✅     | ✅      |

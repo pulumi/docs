@@ -1,6 +1,6 @@
 import { liteClient as algoliasearch, SearchClient } from "algoliasearch/lite";
 import { autocomplete, getAlgoliaResults, getAlgoliaFacets } from "@algolia/autocomplete-js";
-import { getTags, getTagsPlugin, setTags, Tag, iconForTag, labelForTag, mapTagsToFilters, groupBy, formatCount, debounce, listenForEvents } from "./utils";
+import { getTags, getTagsPlugin, setTags, Tag, symbolForTag, labelForTag, mapTagsToFilters, groupBy, formatCount, debounce, listenForEvents } from "./utils";
 
 interface SearchResultHit {
     objectID: string;
@@ -20,6 +20,16 @@ const autocompleteContainer = "#search";
 let appID: string;
 let searchKey: string;
 let indexName: string;
+
+// URL of the icon sprite (a fingerprinted asset), used to render tab icons from the
+// same Phosphor set as the main site nav. Set via data-sprite-url on the container.
+let spriteUrl: string;
+
+// Returns the inline SVG markup for a tab icon, referencing the shared sprite so the
+// icon inherits the tab's text color (and thus dark mode) via `currentColor`.
+function tabIcon(label: string): string {
+    return `<svg class="ph-icon ph-icon--regular" fill="currentColor" aria-hidden="true" focusable="false"><use href="${spriteUrl}#${symbolForTag(label)}"></use></svg>`;
+}
 
 // The autocomplete search client.
 let searchClient: SearchClient;
@@ -132,6 +142,7 @@ function initAutocomplete(el: HTMLElement) {
     appID = el.getAttribute("data-app-id");
     searchKey = el.getAttribute("data-search-key");
     indexName = el.getAttribute("data-index");
+    spriteUrl = el.getAttribute("data-sprite-url") || "";
     baseTags = el.getAttribute("data-facets").split(",").map(f => ({ label: f, facet: "section" }));
 
     if (!appID || !searchKey ||!indexName ||!baseTags) {
@@ -245,7 +256,9 @@ function initAutocomplete(el: HTMLElement) {
             // Tells the autocomplete control which URL to use for navigation (specifically keyboard navigation).
             // https://www.algolia.com/doc/ui-libraries/autocomplete/core-concepts/sources/#param-getitemurl
             getItemUrl: ({ item }) => {
-                const url = new URL([document.location.origin, item.href].join(""));
+                // Resolve against the origin so relative hrefs work; an already-absolute
+                // href (e.g. an off-site Dev Center link) is returned unchanged.
+                const url = new URL(item.href, document.location.origin);
                 return url.toString();
             },
 
@@ -263,8 +276,8 @@ function initAutocomplete(el: HTMLElement) {
                             <ul class="header">
                                 <li class="${ getTags(state).length === baseTags.length ? "active" : "" }">
                                     <button>
-                                        <img src="${ iconForTag("all") }" />
-                                        <span class="label">All results</span>
+                                        <span class="tab-icon" dangerouslySetInnerHTML=${{ __html: tabIcon("all") }}></span>
+                                        <span class="label">All</span>
                                         <span class="count count-${allCount}">
                                             ${ formatCount(allCount) }
                                         </span>
@@ -286,8 +299,8 @@ function initAutocomplete(el: HTMLElement) {
                                         setTags(state, baseTags);
                                         refresh();
                                     }}">
-                                    <img src="${ iconForTag("all") }" />
-                                    <span class="label">All results</span>
+                                    <span class="tab-icon" dangerouslySetInnerHTML=${{ __html: tabIcon("all") }}></span>
+                                    <span class="label">All</span>
                                     <span class="count count-${allCount}">
                                         ${ formatCount(allCount) }
                                     </span>
@@ -312,7 +325,7 @@ function initAutocomplete(el: HTMLElement) {
                                                 setTags(state, [ { label: tag.label, facet: "section" } ]);
                                                 refresh();
                                             }}">
-                                            <img src="${ iconForTag(tag.label) }"/>
+                                            <span class="tab-icon" dangerouslySetInnerHTML=${{ __html: tabIcon(tag.label) }}></span>
                                             <span class="label">${ labelForTag(tag.label) }</span>
                                             <span class="count count-${ facetCount }">${ formatCount(facetCount) }</span>
                                         </button>

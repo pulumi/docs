@@ -1,7 +1,8 @@
 {{/* Main Schema Loader - Uses @graph structure for all pages */}}
 
-{{/* Skip schemas for external content */}}
-{{ if not .Params.external }}
+{{/* Skip structured data for events hosted elsewhere (event_url): the generated
+     stub is a redirected, noindexed by-product, not a real destination. */}}
+{{ if not .Params.event_url }}
   {{/* Use @graph structure for all pages */}}
   {{ partial "schema/graph-builder.html" . }}
 {{ end }}

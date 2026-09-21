@@ -12,6 +12,7 @@ aliases:
 - /docs/guides/adopting/from_terraform/
 - /docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/
 - /docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/
+- /solutions/terraform-migration/
 ---
 
 If your infrastructure was provisioned with Terraform or the CDK for Terraform (CDKTF), there are a number of options that will help you adopt Pulumi. Not all of them involve converting code: you can put your Terraform state under Pulumi Cloud's management, or run your existing HCL on the Pulumi engine, without rewriting anything.
@@ -450,3 +451,13 @@ pulumi package add hcl module ./path/to/module
 ```
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.
+
+## Getting help with your migration
+
+Most teams work through the options above on their own, but a few situations call for extra support:
+
+* **Large estates**, where thousands of resources or hundreds of stacks need a phased plan rather than a single conversion pass.
+* **Phased coexistence**, where Terraform and Pulumi manage the same infrastructure side by side for an extended period and the cutover needs sequencing.
+* **Module conversion at scale**, where a shared library of Terraform modules needs to become reusable Pulumi components across many teams.
+
+For any of these, [contact us](/contact/?form=sales) to talk through a migration plan, or ask in the [Pulumi community Slack](https://slack.pulumi.com/) if you'd rather start with other users who have made the same move.

@@ -39,7 +39,7 @@ flowchart TD
 Keep these constraints in mind when choosing a dynamic provider:
 
 - A dynamic provider can only be used from programs written in the same language as the provider.
-- The `read` method is not currently functional, so [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and the static [`get` method](/docs/iac/concepts/functions/get-functions/) are not supported. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175).
+- The `read` method is not currently functional, so `pulumi import` and the static `get` method are not supported. See [`read(id, props)`](#readid-props) for details and the workaround.
 - Provider methods are serialized to run in a separate process, which limits what code they can capture. See [function serialization](/docs/iac/concepts/functions/function-serialization/).
 
 ## The resource provider interface
@@ -307,7 +307,7 @@ A dynamic provider that calls an API needs credentials. Passing credentials as r
 - **Pulumi config**, read in `configure`, as the GitHub labels example does above. Set the value with `pulumi config set githubToken <VALUE> --secret`.
 - **Environment variables**, read inside each provider method. A benefit of this approach is that if the credentials change before `pulumi destroy` runs, there is no need to first run `pulumi up` to refresh them.
 
-The following example manages a fictional widget service through its REST API at `https://api.example.com`, reading an API token from the `WIDGET_API_TOKEN` environment variable. Each method reads the variable itself, rather than sharing a client, because the methods are serialized and run in a separate process:
+The following example manages a fictional widget service through its REST API at `https://api.example.com`. It reuses the same `create`/`delete` shape as the GitHub labels example above; the only new idea is where the credential comes from — an API token read from the `WIDGET_API_TOKEN` environment variable. Each method reads the variable itself, rather than sharing a client, because the methods are serialized and run in a separate process:
 
 {{< chooser language "typescript,python" >}}
 

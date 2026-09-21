@@ -36,7 +36,7 @@ Policy authors who need external credentials or environment-specific configurati
 
 ## The problem
 
-Pulumi [policy packs](/docs/insights/policy/policy-packs/) let you enforce rules across your infrastructure, but some policies need more than just the resource inputs they evaluate. A policy that validates resources against an external compliance API needs an API token. A cost-enforcement policy might need different spending thresholds for development and production environments. An access-control policy might need to reference an internal service registry.
+Pulumi [policy packs](/docs/discovery-governance/policy/policy-packs/) let you enforce rules across your infrastructure, but some policies need more than just the resource inputs they evaluate. A policy that validates resources against an external compliance API needs an API token. A cost-enforcement policy might need different spending thresholds for development and production environments. An access-control policy might need to reference an internal service registry.
 
 Until now, these values had to be hardcoded in your policy group configuration or managed through a separate process entirely. This created several problems:
 
@@ -104,5 +104,5 @@ To learn more:
 
 - [`policyConfig` reference](/docs/esc/concepts/outputs/)
 - [Pulumi ESC documentation](/docs/esc/)
-- [Policy packs documentation](/docs/insights/policy/policy-packs/)
+- [Policy packs documentation](/docs/discovery-governance/policy/policy-packs/)
 - [Get started with Pulumi ESC](/docs/esc/get-started/)

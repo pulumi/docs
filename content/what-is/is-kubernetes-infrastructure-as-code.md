@@ -7,29 +7,8 @@ date: 2026-07-08T10:45:17-07:00
 page_title: "Is Kubernetes Infrastructure as Code?"
 
 authors:
-  - alex-leventer
+  - pulumi-content-team
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - mercedes-benz
 ---
 
 Kubernetes genuinely behaves like infrastructure as code within its own domain: you declare desired state in YAML, and a control loop continuously reconciles the live cluster toward it, correcting drift without being told to. That's the same declarative, convergent model IaC is built on, and it's a big part of why Kubernetes is often held up as the reference implementation of the idea. Where it falls short of infrastructure as code in the fuller, cross-cloud sense is the boundary of what it reconciles: the cluster, its node groups, the VPC it runs in, and the IAM roles behind it all have to exist before Kubernetes's control loop has anything to converge. Extending that same declarative, code-reviewable model to the infrastructure underneath the cluster is what a general-purpose tool like Pulumi or Terraform adds.
@@ -48,7 +27,7 @@ A useful way to hold both truths at once: **within the Kubernetes API boundary, 
 
 A Kubernetes manifest is genuinely declarative and genuinely reconciled, which is exactly why it's easy to mistake it for the whole of infrastructure as code. What it lacks is everything a general-purpose IaC program adds around that reconciliation: a way to describe the cloud resources the cluster itself depends on (which creates a chicken-and-egg problem, since you can't apply a manifest to a cluster that the manifest was supposed to create), a dependency-aware plan step built into the apply workflow itself (`kubectl diff` gets you a raw pre-apply diff as a separate command, but not a `pulumi preview`-style plan across resources), and general-purpose logic like loops, functions, and conditionals rather than templating YAML by hand. The [Kubernetes documentation on declarative configuration](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/) is explicit that `kubectl apply` merges intent against live [object state](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/) inside the cluster; it says nothing about how that cluster came to exist, because that's outside the scope Kubernetes was built to reconcile.
 
-General-purpose infrastructure as code closes that gap rather than competing with what Kubernetes already does well. Because Pulumi programs are written in real languages (TypeScript, Python, Go, C#, Java), they extend the same declarative, convergent model past the Kubernetes API boundary: `pulumi preview` shows a diff before anything changes, loops and functions express repeated patterns without copy-pasting YAML, and the same testing and packaging tools your application code already uses apply to your infrastructure code too.
+General-purpose infrastructure as code closes that gap rather than competing with what Kubernetes already does well. Because Pulumi programs are written in real languages (TypeScript, Python, Go, .NET, Java), they extend the same declarative, convergent model past the Kubernetes API boundary: `pulumi preview` shows a diff before anything changes, loops and functions express repeated patterns without copy-pasting YAML, and the same testing and packaging tools your application code already uses apply to your infrastructure code too.
 
 ## Can you manage Kubernetes with Pulumi
 
@@ -125,7 +104,7 @@ pulumi.export("kubeconfig", cluster.kubeconfig_json)
 
 The `provider` option in step 3 is what routes a resource to a specific cluster's API; leaving it off silently falls back to whatever kubeconfig is ambient on the machine running `pulumi up`. And because Pulumi tracks the dependency between the cluster and the chart, a single `pulumi up` provisions the cluster and deploys the chart in the right order, without the two-phase apply that a separately-configured Kubernetes provider block often forces in other tools.
 
-At scale, this is exactly how [Wiz manages thousands of Kubernetes clusters across hundreds of data centers worldwide with Pulumi's Automation API](/case-studies/wiz/), maintaining more than 1M cloud resources and hundreds of thousands of infrastructure updates daily.
+At scale, this is exactly how [Wiz manages thousands of Kubernetes clusters across hundreds of data centers worldwide with Pulumi's Automation API](/customers/wiz/), maintaining more than 1M cloud resources and hundreds of thousands of infrastructure updates daily.
 
 ## How does Pulumi compare to Helm and Kustomize
 
@@ -137,7 +116,7 @@ Pulumi doesn't replace the Helm ecosystem, it consumes it. [`helm.v4.Chart`](/do
 
 Both are legitimate answers to "is there IaC for Kubernetes," and the [comparison between Pulumi and Terraform](/docs/iac/comparisons/terraform/) is a fair one to make: both provision the cluster and can manage the workloads that run on it.
 
-The difference is in how you write and evolve that code. Pulumi programs are TypeScript, Python, Go, C#, or Java, so they get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform added a native `terraform test` framework in v1.6, but HCL is still a purpose-built configuration language rather than a general-purpose one, so it lacks general-purpose loops and functions, and its Kubernetes and Helm providers typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies.
+The difference is in how you write and evolve that code. Pulumi programs are TypeScript, Python, Go, .NET, or Java, so they get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform added a native `terraform test` framework in v1.6, but HCL is still a purpose-built configuration language rather than a general-purpose one, so its control flow is limited to `count`, `for_each`, and for-expressions, with no user-defined functions, and its Kubernetes and Helm providers typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies.
 
 ## Frequently asked questions about Kubernetes and infrastructure as code
 

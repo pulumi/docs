@@ -12,7 +12,7 @@ authors: ["pulumi-content-team"]
 
 **Infrastructure as code (IaC), sometimes written infra as code, is the practice of provisioning and managing computing infrastructure with machine-readable configuration files instead of clicking through a console or running one-off scripts.** You write code that describes the infrastructure you want, check it into Git, and let an IaC engine make the real world match what you've declared.
 
-The idea is to treat infrastructure the way software engineers already treat application code. Version control, code review, testing, and CI/CD all become available to whoever is provisioning a VPC or a Kubernetes cluster. Modern platforms like [Pulumi](/) take it a step further by letting you write that code in TypeScript, Python, Go, C#, Java, or YAML rather than a custom configuration language.
+The idea is to treat infrastructure the way software engineers already treat application code. Version control, code review, testing, and CI/CD all become available to whoever is provisioning a VPC or a Kubernetes cluster. Modern platforms like [Pulumi](/) take it a step further by letting you write that code in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL rather than a custom configuration language.
 
 | | |
 | --- | --- |
@@ -205,17 +205,17 @@ These benefits compound as a team's footprint grows. Engineers who've made the s
 
 > "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
 >
-> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/case-studies/starburst/)
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/customers/starburst/)
 
 ### What infrastructure as code looks like at scale
 
 | Company | Scale | Result |
 | --- | --- | --- |
-| [Wiz](/case-studies/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
-| [Supabase](/case-studies/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
-| [BMW](/case-studies/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
-| [Atlassian](/case-studies/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
-| [Spear AI](/case-studies/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
+| [Wiz](/customers/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
+| [Supabase](/customers/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
+| [BMW](/customers/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
+| [Atlassian](/customers/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
+| [Spear AI](/customers/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
 
 ## What are common use cases for infrastructure as code?
 
@@ -232,9 +232,9 @@ IaC shows up across a lot of cloud workflows, but a few patterns account for mos
 
 ## What are the most popular infrastructure as code tools?
 
-The IaC tooling landscape has grown a lot since CFEngine kicked off the category back in 1993. The tools you're most likely to encounter today:
+The IaC tooling landscape has grown a lot since CFEngine — released in 1993 and one of the earliest tools in the category — kicked things off. The tools you're most likely to encounter today:
 
-* **[Pulumi](/)** is declarative IaC written in general-purpose programming languages: TypeScript, Python, Go, C#, Java, or YAML. It supports [hundreds of packages in the Pulumi Registry](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
+* **[Pulumi](/)** is declarative IaC written in general-purpose programming languages — TypeScript, JavaScript, Python, Go, .NET, and Java — plus YAML and HCL. It supports [hundreds of packages in the Pulumi Registry](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
 * **Terraform** is HashiCorp's tool. It uses the HashiCorp Configuration Language (HCL) and moved to a source-available BUSL license in 2023.
 * **OpenTofu** is an open-source fork of Terraform under the Linux Foundation, started in response to that license change.
 * **AWS CloudFormation** is AWS's native IaC service. It's declarative, written in YAML or JSON, and is focused on AWS resources.
@@ -300,7 +300,7 @@ No. DevOps is a broader culture and set of practices for delivering software; Ia
 
 ### What languages are used for infrastructure as code?
 
-Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses YAML or JSON, and Bicep is a DSL for Azure. Pulumi is the outlier in supporting general-purpose languages: TypeScript, Python, Go, C#, Java, or YAML.
+Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses YAML or JSON, and Bicep is a DSL for Azure. Pulumi is the outlier in supporting general-purpose languages — TypeScript, JavaScript, Python, Go, .NET, and Java — alongside declarative YAML and HCL options.
 
 ### Which infrastructure as code tool should I use?
 

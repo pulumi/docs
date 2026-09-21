@@ -7,28 +7,7 @@ type: what-is
 date: 2022-09-26T07:16:39-07:00
 page_title: "What is YAML?"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 
 YAML is a data serialization language most commonly used for configuration files. Its easy readability and rich feature set have made it an increasingly popular choice over the years, for everything from configuration files to object serialization. Originally named "Yet Another Markup Language," the creators changed the name to "YAML Ain't a Markup Language" in order to better reflect its strength as a data-oriented language rather than simply markup.

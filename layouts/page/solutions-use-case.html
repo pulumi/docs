@@ -74,15 +74,13 @@
 
     <!-- Logos -->
     <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
-        {{ $pageContext := . }}
-
         <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
         <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
         <div class="flex flex-wrap items-center justify-center">
-            {{ range $logo := .Params.customer_logos.logos }}
+            {{ range $id := .Params.customer_logos.logos }}
                 <div class="w-3/4 lg:w-1/5 p-10">
-                    <a href="{{ relref $pageContext $logo.link }}">
-                        {{ partial "customer-logo.html" (dict "logo" $logo.name "hoverable" true) }}
+                    <a href="{{ partial "customers/href.html" $id }}">
+                        {{ partial "customer-logo.html" (dict "customer" $id "hoverable" true) }}
                     </a>
                 </div>
             {{ end }}
