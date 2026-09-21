@@ -79,7 +79,7 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `cloudbuild-preview.yaml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
 - `cloudbuild-deploy.yaml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-Both configurations install your program's dependencies and run Pulumi from one of the official `pulumi/pulumi-*` images. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the step image and the dependency-install command differ between languages.
+Both configurations run Pulumi from one of the official `pulumi/pulumi-*` images, and every language except Pulumi HCL installs your program's dependencies first. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the step image and the dependency-install command differ between languages — the Pulumi HCL tab uses the CLI-only `pulumi/pulumi-base` image and has no install step at all.
 
 {{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 

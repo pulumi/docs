@@ -82,7 +82,7 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `deploy-staging` runs `pulumi up` against the staging stack when changes land on `main`.
 - `deploy-production` runs `pulumi up` against the production stack when a `release-*` tag is pushed.
 
-GitLab [`rules`](https://docs.gitlab.com/ci/yaml/#rules) decide which jobs run for a given pipeline. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. A hidden `.pulumi` job, reused through [`extends`](https://docs.gitlab.com/ci/yaml/#extends), holds the steps the three jobs share; only the image and the dependency-install command differ between languages:
+GitLab [`rules`](https://docs.gitlab.com/ci/yaml/#rules) decide which jobs run for a given pipeline. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. A hidden `.pulumi` job, reused through [`extends`](https://docs.gitlab.com/ci/yaml/#extends), holds the steps the three jobs share; only the image and the dependency-install command differ between languages — the Pulumi HCL tab uses the CLI-only `pulumi/pulumi-base` image and has no install step:
 
 {{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
