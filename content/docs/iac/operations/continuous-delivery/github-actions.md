@@ -117,7 +117,7 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `.github/workflows/pr.yml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
 - `.github/workflows/main.yml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-Both files check out the repository and then invoke `pulumi/actions`; every language except Pulumi HCL sets up a language runtime and installs dependencies in between. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only those setup and install steps differ between languages — the Pulumi HCL tab has neither:
+Both files check out the repository and then invoke `pulumi/actions`. TypeScript, Python, and Go set up a language runtime and install dependencies first; C# and Java set up a runtime and let the Pulumi run restore dependencies; Pulumi HCL needs neither. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only those setup and install steps differ between languages:
 
 {{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
