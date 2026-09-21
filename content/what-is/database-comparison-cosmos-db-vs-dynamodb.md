@@ -7,7 +7,7 @@ type: what-is
 date: 2022-09-26T07:16:39-07:00
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs DynamoDB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#dynamo-db-vs-cosmos-db) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**

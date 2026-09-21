@@ -1,0 +1,65 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+**Approval needed from:** @pulumi/docs-tools — any member's approval satisfies the merge gate.
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - The board's "Do next" batch strip is removed: `do_next_html`, `card_extra`, the card CSS, and the card half of the board's click script all go.
+> - A new `analyze.attach_cluster_actions` puts a cluster's chain on its lead's row and its consolidation on the newest sweep's row, as decisions.
+> - `chain` and `consolidate` join `DECISION_IDS`, so a row still takes only one of them.
+> - A chain button carries `data-covers`; the board marks the next link "covered" while it is lit and puts the chain out if that row decides something else.
+> - `action_bar` lets a chain outrank a bare approve for the coloured slot, and `action_help` now prefers an action's own `help` string.
+> - `merge_judgments` rebuilds the cluster recommendations and the row buttons, not just `do_next`.
+> - `queue.do_next` survives in the data model but is printed only by `--terminal`.
+> - The three pr-review prose files are rewritten to match: the "Do next" sections become "Cluster moves" / "No batch strip".
+>
+> The wrongness that would matter here is a board that composes a command the approver did not intend — a button that acts on a row it should not, or two lit buttons that contradict each other. The review read the full diff, traced the new chain/consolidate guards against `cluster_recommendation` and `row_actions`, and checked the board script's new cover/contradiction path and the three prose files for leftover "Do next" claims.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | HIGH |  |
+> | board behaviour | MEDIUM | Not yours to check — the click sequences are covered by the jsdom test in this PR, which the review read but did not run; CI runs it. |
+
+### ⚠️ Check these before approving
+
+| ID | Where | Finding |
+|---|---|---|
+| **F?** | `scripts/review-v3/analyze.py` L1147 | Three comments the PR leaves behind still describe the chain as a Do-next card: `only_collisions_hold`'s docstring ("the question the Do-next chain card actually asks"), the `# ---- the Do-next opening ----` banner at `scripts/review-v3/test_analyze.py` L1104, and the `test_rows_are_in_pr_number_order_inside_their_group` docstring at `scripts/review-v3/test_render.py` L778 ("in the tally, on a filter chip and in the Do-next cards") — which is the exact sentence `render.group_rows` was corrected to drop in this same diff. Cosmetic, but these are the comments a future reader uses to find out whether the strip still exists.
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+- L136 `.claude/commands/pr-review/SKILL.md` — *"Each collision cluster gets one recommendation, in words: **consolidate** (mostly one bot author's overlapping sweeps: one `--request-changes` on the newest…"* — comparison (found by regex)
+- L174 `.claude/commands/pr-review/SKILL.md` — *"Publish with the Artifact tool (favicon 🗂️; update the same artifact on re-render rather than creating a new one). There is no batch strip: every decision is…"* — positioning (found by regex)
+- L28 `.claude/commands/pr-review/references/action-menus.md` — *"A collision cluster's recommendation is a button on the row it belongs to (`analyze.attach_cluster_actions`), not a strip above the rows: the board has no…"* — positioning (found by regex)
+- L27 `.claude/commands/pr-review/references/reading-the-board.md` — *"- **Approve the set** was the stampable rows, which arrive with their approve button already selected — the default command merges them whether or not a…"* — positioning (found by regex)
+- L52 `.claude/commands/pr-review/references/reading-the-board.md` — *"- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks, start the…"* — positioning (found by regex)
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** no factual claims found in the changed lines.
+- **Mechanics:** no internal links added.
+- **Style:** 0 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-19T17:03:25Z · head commit eb04ed0</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

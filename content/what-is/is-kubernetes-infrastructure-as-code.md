@@ -7,7 +7,7 @@ date: 2026-07-08T10:45:17-07:00
 page_title: "Is Kubernetes Infrastructure as Code?"
 
 authors:
-  - alex-leventer
+  - pulumi-content-team
 
 ---
 

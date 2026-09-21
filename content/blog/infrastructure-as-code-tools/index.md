@@ -214,7 +214,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
-- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/insights/policy/)
+- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/discovery-governance/policy/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 Universal Language Code Examples:
