@@ -23,7 +23,7 @@ Dynamic providers are supported only in TypeScript and Python. For other languag
 A dynamic provider is the right tool when you need to manage a resource that no existing Pulumi provider supports, the logic is specific to a single program, and you don't need to share it across languages or teams. Before reaching for one, consider the alternatives:
 
 - **An existing provider.** Search the [Pulumi Registry](/registry/) first. If a well-maintained provider already covers your resource, use it. If a Terraform or OpenTofu provider exists, [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) lets you consume it directly.
-- **The Command provider.** If you only need to run a command or script as part of provisioning — rather than model a resource with a real lifecycle — the [Command provider](https://www.pulumi.com/registry/packages/command/) is lighter weight.
+- **The Command provider.** If you only need to run a command or script as part of provisioning — rather than model a resource with a real lifecycle — the [Command provider](/registry/packages/command/) is lighter weight.
 - **A full provider.** If the provider should be reusable across languages, shared with other teams, published to the Registry, or needs `import` support, build a [full provider](/docs/iac/guides/building-extending/providers/build-a-provider/) instead.
 
 ```mermaid
@@ -39,7 +39,7 @@ flowchart TD
 Keep these constraints in mind when choosing a dynamic provider:
 
 - A dynamic provider can only be used from programs written in the same language as the provider.
-- The `read` method is not currently functional, so `pulumi import` and the static `get` method are not supported. See [`read(id, props)`](#readid-props) for details and the workaround.
+- The `read` method is not currently functional, so `pulumi import` and the static `get` method are unsupported. See [`read(id, props)`](#readid-props).
 - Provider methods are serialized to run in a separate process, which limits what code they can capture. See [function serialization](/docs/iac/concepts/functions/function-serialization/).
 
 ## The resource provider interface
@@ -53,7 +53,7 @@ Pulumi calls these methods at well-defined points in a deployment:
 1. If another deployment happens and the resource already exists, Pulumi calls `diff` to determine whether a change can be made in place or whether a replacement is needed.
 1. If no replacement is needed, Pulumi calls `update`.
 1. If a replacement is needed, Pulumi calls `create` for the new resource and then `delete` for the old one.
-1. If Pulumi needs to read an existing resource without managing it directly, it calls `read`. (Note: `read` is not currently functional for dynamic providers.)
+1. If Pulumi needs to read an existing resource without managing it directly, it calls `read`.
 
 ### configure(ConfigureRequest)
 
@@ -66,7 +66,7 @@ The `check` method is invoked before any other method. It receives the old input
 1. Verify that the inputs are valid, returning useful error messages if they are not.
 1. Return a set of checked inputs.
 
-The inputs returned from `check` are the inputs Pulumi uses for all further processing of the resource, including the values passed to `diff`, `create`, and `update`. In many cases the news can be returned directly. When the provider needs to populate defaults or normalize values, do so in `check` so the data is complete before it reaches the other methods.
+The inputs returned from `check` are the inputs Pulumi uses for all further processing of the resource, including the values passed to `diff`, `create`, and `update`. Often the new inputs can be returned unchanged. When the provider needs to populate defaults or normalize values, do so in `check` so the data is complete before it reaches the other methods.
 
 ### create(inputs)
 
@@ -81,7 +81,7 @@ If an error occurs, throw an exception to surface it to the user.
 
 The `diff` method is invoked when the resource's URN already exists. It receives the `id` returned by `create`, the old outputs from state, and the checked inputs from the current deployment. It returns four optional values:
 
-- `changes`: `true` if the provider believes there is a difference between the olds and news that should trigger an update or replace.
+- `changes`: `true` if the provider believes there is a difference between the old and new values that should trigger an update or replace.
 - `replaces`: an array of property names whose change should force a replacement instead of an in-place update. Replacements might involve downtime, so use this only when a diff cannot be implemented as an in-place update.
 - `stables`: an array of property names known not to change between updates. Pulumi uses this to process some [`apply`](/docs/iac/concepts/inputs-outputs/#working-with-outputs) calls during previews.
 - `deleteBeforeReplace`: `true` if a replacement requires deleting the existing resource before creating the new one. By default, Pulumi creates the new resource before deleting the old one to avoid downtime.
@@ -100,7 +100,7 @@ The `delete` method is invoked when the URN exists in the previous state but not
 The `read` method is not currently functional for dynamic providers. Attempting to invoke it — for example, by running `pulumi import` or using the static `get` method on a dynamic resource — results in an unimplemented exception. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175). If your use case requires importing existing resources, implement a [component resource](/docs/iac/concepts/components/) backed by a [native provider](/docs/iac/guides/building-extending/providers/build-a-provider/) instead.
 {{% /notes %}}
 
-When functional, `read` looks up an existing resource by `id` and returns its canonical `id` and output properties. It is intended to support the static [`get` method](/docs/iac/concepts/functions/get-functions/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), and [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/).
+When functional, `read` looks up an existing resource by `id` and returns its canonical `id` and output properties, backing the static [`get` method](/docs/iac/concepts/functions/get-functions/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), and [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/).
 
 ## Strongly typed inputs
 
@@ -247,7 +247,7 @@ class MyResource(Resource):
 
 ## A minimal example: a stable random ID
 
-This example generates a random ID once, when the resource is created, and keeps it stable across subsequent deployments by storing it in state. Generating the value in regular program code instead would produce a new value on every run. It implements only `create` — the result is similar to the [`random` provider](https://www.pulumi.com/registry/packages/random/), specific to your program and language.
+This example generates a random ID once, when the resource is created, and keeps it stable across later deployments by storing it in state. Generating the value in regular program code instead would produce a new value on every run. It implements only `create`, producing something like the [`random` provider](/registry/packages/random/) but specific to your program and language.
 
 {{< chooser language "typescript,python" >}}
 
@@ -420,3 +420,9 @@ To force an update after changing your provider code, use one of these options:
 - **Add a version input.** Include a version property in your resource inputs and increment it when you change the provider code. Pulumi sees the difference and triggers an update.
 - **Use `diff` to force changes.** Implement a `diff` method that returns `{ changes: true }` when you want to force an update.
 - **Delete and recreate.** Remove the resource from your program, run `pulumi up`, then add it back. This recreates the resource with the updated provider code.
+
+## Next steps
+
+- [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) — the conceptual overview of how dynamic providers execute.
+- [Function serialization](/docs/iac/concepts/functions/function-serialization/) — what your provider methods can and cannot capture.
+- [Build a provider](/docs/iac/guides/building-extending/providers/build-a-provider/) — for logic you need to share across languages or teams.
