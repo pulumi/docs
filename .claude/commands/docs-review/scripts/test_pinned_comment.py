@@ -444,3 +444,37 @@ def test_guard_covers_the_brief_too(env):
 
     assert r.returncode == 0, r.stderr
     assert not (stub_dir / "patched-12.body").exists()
+
+
+def test_refused_notice_names_iso_times_not_epochs(env):
+    """The stand-down notice is the only diagnostic a refused publish leaves,
+    so it has to name times a human recognizes."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [comment(11, stamped_author_card("2026-09-21T20:49:07Z", rev=2))])
+    stale = stamped_author_card("2026-09-21T20:48:08Z")
+
+    r = run(env, "upsert", "--pr", "21785", "--role", "author", body=stale)
+
+    out = r.stdout + r.stderr
+    assert "2026-09-21T20:49:07Z" in out and "2026-09-21T20:48:08Z" in out
+    assert "1758" not in out, "raw epoch seconds are not a diagnostic"
+
+
+def test_unreadable_published_card_warns_before_failing_open(env):
+    """Fail open, but say so: 'no newer card' and 'could not look' must not
+    be indistinguishable in the log."""
+    stub_dir, e = env
+    # A comment id the list reports but the single-comment GET cannot serve.
+    card = stamped_author_card("2026-09-21T20:48:08Z")
+    set_comments(stub_dir, [comment(11, card)])
+    broken = stub_dir / "gh"
+    broken.write_text(GH_STUB.replace(
+        'payload = json.dumps(next(c for c in comments if c["id"] == cid))',
+        'sys.exit(1)'))
+    broken.chmod(broken.stat().st_mode | stat.S_IEXEC)
+
+    r = run((stub_dir, e), "upsert", "--pr", "21785", "--role", "author", body=card)
+
+    assert r.returncode == 0, r.stderr
+    assert "could not read the published" in r.stdout + r.stderr
+    assert (stub_dir / "patched-11.body").exists(), "must still publish"

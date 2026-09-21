@@ -382,12 +382,14 @@ cmd_find() {
     list_pinned_comments "$repo" "$pr" | cut -f1
 }
 
-# card_stamp_epoch <file> — the card's composition time as a float epoch, or
-# nothing at all when the body carries no parseable `<sub>… · updated <ts>`
+# card_stamp <file> — the card's composition time as `<epoch><TAB><ISO8601>`,
+# or nothing at all when the body carries no parseable `<sub>… · updated <ts>`
 # stamp. "Nothing" is the fail-open answer on purpose: a legacy body, a
 # hand-written fixture, or a composer that changes the stamp format must never
-# cost a review its publish.
-card_stamp_epoch() {
+# cost a review its publish. The epoch is what the guard compares; the ISO
+# string rides along so a refusal can name the times a human recognizes
+# rather than two float seconds-since-1970.
+card_stamp() {
     python3 -c '
 import datetime, re, sys
 try:
@@ -398,7 +400,7 @@ m = re.search(sys.argv[2], body)
 if not m:
     sys.exit(0)
 try:
-    print(datetime.datetime.fromisoformat(m.group(1).replace("Z", "+00:00")).timestamp())
+    print("%s\t%s" % (datetime.datetime.fromisoformat(m.group(1).replace("Z", "+00:00")).timestamp(), m.group(1)))
 except ValueError:
     sys.exit(0)
 ' "$1" "$CARD_STAMP_RE" 2>/dev/null
@@ -480,20 +482,32 @@ cmd_upsert_role() {
         # already on the PR is the right state, so this run has nothing left
         # to do and must not fail a job over having been beaten to it.
         if (( ! ALLOW_STALE )); then
-            local published_file incoming_at published_at
+            local published_file incoming_stamp published_stamp incoming_at published_at
             published_file=$(mktemp)
-            gh api "repos/$repo/issues/comments/$id" --jq '.body' \
-                >"$published_file" 2>/dev/null || true
+            if ! gh api "repos/$repo/issues/comments/$id" --jq '.body' \
+                    >"$published_file" 2>/dev/null; then
+                # Fail open, but never silently: an unchecked publish is the
+                # exact scenario this guard exists to catch, so a reader of
+                # the log has to be able to tell "no newer card" apart from
+                # "could not look".
+                printf '::warning::pinned-comment.sh: could not read the published %s card on PR %s; publishing without the stale-publish check.\n' \
+                    "$ROLE" "$pr"
+                : >"$published_file"
+            fi
             # `|| true` inside each substitution: this script runs under
             # `set -e`, and a guard that cannot read a stamp must fail open
             # rather than take a review's publish down with it.
-            incoming_at=$(card_stamp_epoch "$body_file" || true)
-            published_at=$(card_stamp_epoch "$published_file" || true)
+            incoming_stamp=$(card_stamp "$body_file" || true)
+            published_stamp=$(card_stamp "$published_file" || true)
+            incoming_at=$(printf '%s' "$incoming_stamp" | cut -f1)
+            published_at=$(printf '%s' "$published_stamp" | cut -f1)
             rm -f "$published_file"
             if [[ -n "$incoming_at" && -n "$published_at" ]] \
                && awk "BEGIN{exit !($published_at > $incoming_at)}"; then
-                printf '::notice::pinned-comment.sh: not overwriting the %s card — the one on PR %s was composed after this one (%s > %s). A concurrent run already published a newer card; this run stands down.\n' \
-                    "$ROLE" "$pr" "$published_at" "$incoming_at"
+                printf '::notice::pinned-comment.sh: not overwriting the %s card — the one on PR %s was composed at %s, after this one at %s. A concurrent run already published a newer card; this run stands down.\n' \
+                    "$ROLE" "$pr" \
+                    "$(printf '%s' "$published_stamp" | cut -f2)" \
+                    "$(printf '%s' "$incoming_stamp" | cut -f2)"
                 return 0
             fi
         fi
