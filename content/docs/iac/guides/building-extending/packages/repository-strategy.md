@@ -37,13 +37,7 @@ Multiple components inside a single package, on the other hand, are fine and exp
 
 ## Pulumi's recommended approach
 
-To keep package versioning intuitive as your usage of Pulumi grows, we recommend:
-
-1. Define exactly one package per repository.
-1. Group a cohesive set of components together inside that package.
-1. Use multiple repositories — one per package — to manage the distinct packages your organization publishes.
-
-The importance of these principles grows as your organization's adoption of Pulumi grows.
+Because each repository defines exactly one package, the decision left to you is which components to group inside that package. The importance of getting that grouping right grows as your organization's adoption of Pulumi grows.
 
 ### What cohesive means in practice
 
