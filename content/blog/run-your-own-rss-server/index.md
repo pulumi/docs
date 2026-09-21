@@ -65,7 +65,7 @@ import * as awsx from "@pulumi/awsx";
 
 Now let's define a few configuration values for the project.
 
-## Configuring the Stack
+## Configuring the stack
 
 While we could certainly hard-code all of these values into our program, it'd be better to use Pulumi to set them, since doing so give us the option to vary them by [stack](/docs/iac/concepts/stacks/) (say, if we wanted to run this particular app in multiple environments), but more importantly, to set some passwords for the database user and service administrator. So let's do that first, so we'll have them all ready as we develop our program:
 

@@ -62,7 +62,7 @@ With this release, stacks with Terraform state are first-class entities in Pulum
 
 - **[Manage access to your Terraform stacks at scale](/docs/administration/access-identity/rbac/)** using tag-based access control, team role assignments, and user role assignments.
 - [**Take advantage of Neo code reviews**](/docs/ai/neo/code-reviews/). On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge changes to your Terraform and OpenTofu projects.
-- [**Run preventive policies**](/docs/insights/policy/) after a Terraform plan to block non-compliant resources before deployment.
+- [**Run preventive policies**](/docs/discovery-governance/policy/) after a Terraform plan to block non-compliant resources before deployment.
 - **[Configure your Terraform deployments with Pulumi ESC](/docs/esc/)**, which is natively available to Pulumi Cloud-backed Terraform projects, to securely inject OIDC credentials at apply time and expose outputs to downstream stacks and services.
 
 Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/).

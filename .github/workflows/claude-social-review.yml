@@ -52,22 +52,42 @@ jobs:
     steps:
       - name: Resolve PR info
         id: pr-info
+        # Author-controlled values go through `env:` and are read as "$VAR".
+        # `${{ }}` is substituted textually before bash parses the script, so
+        # a branch name written that way IS script — and `git
+        # check-ref-format` permits every shell metacharacter but space.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
+          ISSUE_PR: ${{ github.event.issue.number }}
+          EVENT_PR: ${{ github.event.pull_request.number }}
+          EVENT_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          EVENT_BASE_REF: ${{ github.event.pull_request.base.ref }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            PR_NUMBER="${{ github.event.inputs.pr_number }}"
-          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
-            PR_NUMBER="${{ github.event.issue.number }}"
+          set -uo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            PR_NUMBER="${INPUT_PR:-}"
+          elif [ "$EVENT_NAME" = "issue_comment" ]; then
+            PR_NUMBER="${ISSUE_PR:-}"
           else
-            PR_NUMBER="${{ github.event.pull_request.number }}"
+            PR_NUMBER="${EVENT_PR:-}"
           fi
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            HEAD_REF="${{ github.event.pull_request.head.ref }}"
-            BASE_REF="${{ github.event.pull_request.base.ref }}"
+          # Digits only: PR_NUMBER reaches `gh` and GITHUB_OUTPUT below, and
+          # the dispatch input is free text.
+          case "$PR_NUMBER" in
+            ''|*[!0-9]*)
+              echo "::error::PR number is not numeric; refusing to continue."
+              exit 1
+              ;;
+          esac
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            HEAD_REF="${EVENT_HEAD_REF:-}"
+            BASE_REF="${EVENT_BASE_REF:-}"
           else
-            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefName -q .headRefName)
-            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json baseRefName -q .baseRefName)
+            HEAD_REF=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json headRefName -q .headRefName)
+            BASE_REF=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json baseRefName -q .baseRefName)
           fi
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
           echo "head_ref=$HEAD_REF" >> "$GITHUB_OUTPUT"

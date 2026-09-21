@@ -43,13 +43,24 @@
 # -----------------------------------------------------------------------------
 # BOTS
 # -----------------------------------------------------------------------------
-# `bots:` lists machine **user** accounts (e.g. a service account that also
-# leaves reviews) whose approvals never count toward satisfying a required
-# role, even if that account happens to be a team member. This is a
-# belt-and-suspenders list for bot accounts that don't carry GitHub's own
-# `type: Bot` marker on their user object — a PR's own actor with
-# `type == Bot` is excluded automatically by the Sentinel and doesn't need
-# to be listed here.
+# `bots:` lists machine accounts whose approvals never count toward
+# satisfying a required role, even if the account happens to be a team
+# member.
+#
+# `pulumi-bot` is the one that strictly needs to be here: it is a machine
+# **user** (`type: User`), so the Sentinel's automatic `type == Bot`
+# exclusion does not catch it. The GitHub App identities below are caught
+# automatically and are listed anyway, because a reader comparing this file
+# against the PR queue should see every bot that opens PRs on this repo in
+# one place, and because "it happens to be covered elsewhere" is how
+# `workprentice[bot]` stayed invisible to this file for two weeks while
+# opening a quarter of its bot PRs.
+#
+# Keep in sync with the author whitelists in `claude-triage.yml`,
+# `claude-code-review.yml`, and `claude-update.yml`. Those read the author
+# from different APIs, so they list both the `workprentice[bot]` and
+# `app/workprentice` spellings; the Sentinel reads the REST webhook's
+# `user.login`, so the `[bot]` form is the one that matters here.
 #
 # -----------------------------------------------------------------------------
 # MATRIX
@@ -58,10 +69,32 @@
 # from `classify_path()` in
 # `.claude/commands/docs-review/scripts/triage-classify.py` — shared with
 # triage so routing and triage labeling can never disagree about what a file
-# is) crossed with **change type** (`mechanical` — a change too small or
-# mechanical to need a human, e.g. a link fix or frontmatter tweak;
-# `substantive` — everything else) to a required role, or the literal string
-# `none` meaning no human gate for that combination.
+# is) crossed with **change type** (`mechanical` — a change small or
+# mechanical enough to skip the *model* review, e.g. a link fix or
+# frontmatter tweak; `substantive` — everything else) to a required role.
+#
+# **Every cell names a role. `none` is not accepted** — the parser rejects
+# it. Every governed PR therefore resolves to at least one approver team,
+# gets that team requested as a reviewer, and needs a human approval.
+#
+# That is a deliberate reversal. `mechanical: none` used to mean "no human
+# gate", which rested on the Sentinel being the thing that decides
+# mergeability. It isn't: GitHub's required-review rule is, and it does not
+# read this file. So a `none` cell never removed the human — it removed the
+# *reviewer request* and then told the author no human was needed, while the
+# merge box said otherwise and somebody stamped it by hand anyway. Same
+# false assumption as the `auto_approve` rule that used to live at the
+# bottom of this file (deleted; see git history for the autopsy).
+#
+# So `mechanical` no longer means "no human". It means exactly one thing
+# now: **G1 accepts the PR without a model review**, which is a real saving
+# on a typo fix. The approver is unchanged by it, which is why both columns
+# name the same role for every subject today. The dimension stays because
+# G1 and the claims overlay both read it, and because a future lane may want
+# to vary the approver by change type — but if you find yourself reaching
+# for `none` to make a lane quieter, the lever you want is `mechanical`
+# (skip the model) or `not_governed` (skip everything, for a closed set of
+# automated processes), not an unrouted PR.
 #
 # All seven subjects are required keys, closed set: `docs`, `blog`,
 # `website`, `programs`, `infra`, `frontend`, `other`. `frontend` is the
@@ -72,14 +105,199 @@
 # `scripts/`, `Makefile`, bundler config). `other` is the same fallback
 # `classify_path()` uses for a path it can't otherwise place — see
 # `domain:other` in triage-classify.py — repo plumbing such as `.claude/`,
-# `styles/`, generated `data/` files; it routes to tools so an infra PR that
-# also touches those dedupes to one approver instead of stacking a second.
+# `styles/`, generated `data/` files, and the review pipelines under
+# `scripts/` (`review-v3/`, `review-admin/`, `content-review/`,
+# `blog-review/`); it routes to tools so an infra PR that also touches those
+# dedupes to one approver instead of stacking a second.
 #
-# A matrix cell may also carry `staging_evidence: required`, which the
-# Sentinel enforces independently of which role is required — currently only
-# `infra` sets it, because an infrastructure change (workflows, scripts,
-# Makefile, build config) needs a demonstrated staging run before it merges,
-# on top of whichever role approves it.
+# The review pipelines are deliberately `other` rather than `infra`: they
+# read PRs and write comments, and nothing in them is read by `make build` or
+# by the deploy. That cut was originally made to get them off the staging
+# gate, which is no longer what it does — staging keys on
+# `staging_evidence.paths` now, and none of those directories are on it
+# either way. What the cut still buys is the `mechanical` cell: a one-line
+# tweak to `analyze.py` needs no approver, where the same tweak to a build
+# script needs `tools`. Both are `tools` when substantive.
+#
+# A matrix cell carries ONLY those two change-type keys. Staging evidence is
+# no longer one of them — see STAGING EVIDENCE below for why it moved and
+# what it keys on instead.
+#
+# -----------------------------------------------------------------------------
+# OVERRIDES
+# -----------------------------------------------------------------------------
+# `overrides:` is an ordered list of path -> role rules, consulted BEFORE the
+# matrix, per changed path. The first entry whose `paths` match a path decides
+# that path's role; every other path still goes through `matrix`.
+#
+# That role is who gets ASKED -- triage requests the team, the SLA sweep chases
+# it, the reviewer brief names it. Under `approval: {scope: any-team}` below it
+# is not who may CLEAR the gate, which is any routing team. Both misroutes
+# below were about the wrong people being asked, so this is the layer that
+# fixes them either way; set the scope back to `lane` and an override decides
+# the gate too.
+#
+# It exists because `matrix` answers "what kind of file is this?" and was then
+# also being used to answer "who owns it?". Those are different questions, and
+# they only give the same answer when a subject happens to have exactly one
+# owner. Two live misroutes, both the same shape -- a subject whose path prefix
+# spans more than one owner:
+#
+#   - pulumi/docs#21723 fixed `layouts/partials/openapi/response-schema.html`,
+#     a Hugo bug blanking the Responses section of the Cloud REST API
+#     reference. `layouts/` is `domain:frontend`, which routes to marketing
+#     "who own how the site looks" -- true of marketing chrome, false of the
+#     templates that render the API docs. It went to docs-marketing-review,
+#     who cannot review it.
+#   - pulumi/docs#21718 fixed drifted samples on a Get Started page.
+#     `content/docs/` is one subject with one owner, so it went to docs-guild;
+#     Get Started is part of the marketing funnel and is marketing's.
+#
+# THE RULE THIS ENCODES: `classify_path()` says what a file IS, which decides
+# which review CRITERIA apply. Do not bend it to say who owns the file. When
+# ownership does not follow the subject boundary, put it here instead.
+#
+# #21723 is the proof that this is the right layer: its domain was correct --
+# it is a Hugo template and genuinely wants the Hugo/dark-mode review criteria
+# -- and only the approver was wrong. Reclassifying it would have fixed the
+# routing by breaking the review. An override changes the approver and leaves
+# the `domain:frontend` label, and therefore the criteria, exactly as they were.
+#
+# Each entry takes:
+#   - `paths`: one or more patterns, same matcher as `staging_evidence.paths`
+#     below, plus `**/` for "zero or more directories" (so
+#     `content/docs/**/get-started/` catches all seven of them, including the
+#     top-level one, and a new one the day it lands).
+#   - `role`: a role from `teams:`.
+#   - `why`: required prose. An override is a deliberate exception to the
+#     matrix; one that cannot say why it exists is one nobody can safely
+#     delete later.
+#
+# Keep the list short. An override that starts wanting sub-overrides is a
+# subject that should have been split.
+
+overrides:
+  - paths: [layouts/partials/openapi/]
+    role: tools
+    why: >-
+      The Cloud REST API reference renderer, driven by the OpenAPI spec that
+      scripts/fetch-openapi-spec.sh pulls and update-openapi-lastmod.yml
+      maintains. It is docs-generation tooling wearing a Hugo template's
+      clothes; `domain:frontend` is right about what it is and wrong about
+      who owns it (pulumi/docs#21723).
+
+  - paths: [content/docs/**/get-started/]
+    role: marketing
+    why: >-
+      Get Started is part of the marketing funnel, not general docs, so it is
+      marketing's to approve even though it lives under content/docs/ and
+      reads as `domain:docs` (pulumi/docs#21718). Matches all seven
+      get-started trees -- administration, ai/neo, deployments,
+      discovery-governance/discovery, esc, iac, and the top-level one.
+
+# -----------------------------------------------------------------------------
+# STAGING EVIDENCE
+# -----------------------------------------------------------------------------
+# `staging_evidence.paths` is the closed list of paths that require a
+# demonstrated staging deploy (Sentinel gate G4) before the PR can merge. It
+# is REQUIRED: deleting it is a validation error, not a silent "nothing needs
+# staging".
+#
+# This keys on PATH, not on subject, and that is the whole point. It used to
+# be a `staging_evidence: required` cell on the `infra` row of the matrix,
+# which welded two unrelated questions together: *who reviews this* (a domain
+# question) and *what has to be demonstrated about it* (a blast-radius
+# question). Because the only lever was the domain, narrowing the staging
+# requirement meant lying about a path's domain — which is exactly what the
+# previous narrowing did, routing `scripts/{review-v3,content-review,…}/` to
+# `other` so they would stop asking for a site deploy, even though `tools`
+# owns them either way. Two more rounds of that and `classify_path` stops
+# describing what files are.
+#
+# So: domain still decides the approver, and this list decides the staging
+# run. `scripts/redirects/*.txt` is the case that forced it — it is
+# `domain:infra` (tools own redirects, correctly) but a redirect line cannot
+# change what the deploy *does*. The staging run proved only that the file
+# parsed, at ~9 minutes of a shared, lock-contended stack, and proved nothing
+# about the thing that was actually wrong with those lines on #21698: they
+# pointed at `/registry`, which is proxied to another distribution, so they
+# could never fire no matter how green the deploy went.
+#
+# THE BAR, narrowed 2026-09-18: could changing this path break or alter
+# `pulumi up`, in a way the PR's own build would not already have shown?
+#
+# That qualifier is doing the work. Every PR runs `make ci_pull_request`,
+# which is this same pipeline in preview mode -- build-site.sh,
+# sync-and-test-bucket.sh, generate-search-index.sh, run-pulumi.sh preview,
+# make-s3-redirects.sh, all of it, for real, against the preview bucket. A
+# change to a build script is therefore already exercised on the PR that
+# makes it, and demanding a second nine-minute deploy to re-prove it is
+# theater. This list used to do exactly that for 20-odd paths.
+#
+# The one thing a PR cannot do is APPLY. `pulumi preview` reads the plan out
+# loud; it does not create the resource that fails on create. That gap is the
+# entire reason this gate exists, so the list is now just the paths that can
+# change what `pulumi up` does, or whether it runs at all. Anything a PR
+# build already executes comes off, however deploy-adjacent it looks.
+#
+# NOT data the deploy merely reads, and not the ~50 other scripts and ~60
+# other workflows that never run during one.
+#
+# Patterns are matched against the PR's changed paths, repo-root-relative:
+#
+#   - a trailing `/` means that whole subtree (`infrastructure/`)
+#   - `*` matches within ONE path segment and never crosses `/`, so
+#     `scripts/*.sh` does not match `scripts/redirects/foo.sh`
+#   - anything else is an exact path
+#
+# IF YOU ADD A STEP TO THE DEPLOY, ADD IT HERE. The list is deliberately
+# enumerated rather than a `scripts/` wildcard: of the 70 files at the top of
+# `scripts/`, about a dozen run during a deploy, and a wildcard would put
+# `lint.sh`, `serve.sh`, and every `fetch-*` script back on the gate. The
+# chain below is `ci-push.sh` and everything it sources or invokes; the
+# pipeline's own tests assert that it resolves the way this comment says.
+#
+# The Sentinel takes either of two witnesses for the run: a green
+# `staging/pulumi-test-io` commit status, or a successful
+# `testing-build-and-deploy.yml` run at the head SHA. The run record is the
+# authoritative one — the status is a *report* of the deploy and has twice
+# failed to be written — so nothing requires the status to appear, and
+# nothing writes a pending one (see the note in
+# `scripts/review-v3/staging-deploy.sh`).
+#
+# -----------------------------------------------------------------------------
+# APPROVAL SCOPE
+# -----------------------------------------------------------------------------
+# `approval:` decides who can *clear* the approver gate (Sentinel G3). The
+# matrix above decides who gets *asked*. Those were the same question until
+# now, and conflating them is what made a one-line Hugo shortcode change on a
+# docs PR sit waiting on a second team's approval.
+#
+#   scope: lane      every matrix-required team must approve (the original
+#                    rule, and still the default when this section is absent)
+#   scope: any-team  a member of ANY team in `teams:` satisfies the gate,
+#                    whatever the matrix routed
+#
+# `any-team` is what we run. The matrix stays load-bearing — triage requests
+# the lane's team, the SLA sweep chases that team, and the reviewer brief
+# names them — so a `frontend` change still goes to marketing first. What
+# changed is that a mixed PR no longer needs a quorum: it needs one reviewer
+# from a routing team who is willing to put their name on it. Three teams'
+# worth of required approvals on a PR that touches docs, a template, and a
+# lint script is a scheduling problem, not a quality bar, and what it
+# actually produces is a stale PR and a hand-applied `review:waived`.
+#
+# `admins_satisfy: true` lets a repository administrator's approval clear
+# the gate on its own. That concedes something already true rather than
+# granting anything new: an admin can merge past a red required check, so a
+# Sentinel that reports them blocked is reporting a block the repo does not
+# impose. It reads GitHub's own effective permission for the approver
+# (`admin` on `repos/{repo}/collaborators/{user}/permission`), not a
+# hand-kept list here — that would rot the first time someone's role
+# changed. Bot approvals never count, at any scope, admin or not.
+#
+# Both keys are optional and both default to the strict reading, so a config
+# that predates this section gates exactly as it did before.
 #
 # -----------------------------------------------------------------------------
 # CLAIMS OVERLAY
@@ -136,27 +354,34 @@
 # -----------------------------------------------------------------------------
 # NOT GOVERNED
 # -----------------------------------------------------------------------------
-# `not_governed:` (optional) lists the automation lanes the Sentinel does not
-# gate at all: the check concludes `success` with a "Not governed: <reason>"
-# title and no gates evaluated, logged the same way a waive is. Two shapes:
-# `authors` matches on the PR author alone (Dependabot); `author_label_pairs`
-# needs both the author and a label on the PR (pulumi-bot's generated-docs
-# regens all carry `automation/merge`; its content-review and glow-up PRs do
-# not, and those ARE governed). Without this, every regen and dependency
-# bump goes red under enforcement — no review ran, and the approval comes
-# from a Bot — and merges only by admin bypass.
+# `not_governed:` is the ONE exception to "every PR is routed and needs a
+# human approval", and it is deliberately narrow: the long-running automated
+# processes that already merge themselves end to end. The check concludes
+# `success` with a "Not governed: <reason>" title and no gates evaluated,
+# logged the same way a waive is.
 #
-# -----------------------------------------------------------------------------
-# AUTO APPROVE
-# -----------------------------------------------------------------------------
-# `auto_approve:` (optional) lists bot authors whose PRs satisfy the
-# right-approver gate without a human when the review itself found nothing
-# for a human to weigh: the author card says nothing blocks merge AND the
-# reviewer brief's "⚠️ Check these before approving" table is empty AND the
-# PR is not `review:prose-flagged`. Any ⚠️ row routes the PR to the matrix
-# team like everyone else's. This is the deterministic replacement for the
-# scheduled maintainer sweep that used to rubber-stamp the bot lane.
-
+# What makes these safe to exempt is not that they are bots — it is that a
+# real approval and a real merge already exist for them.
+# `auto-approve-for-auto-merge.yml` posts an actual GitHub approval for
+# `pulumi-bot` + `automation/merge`, and the generating workflow arms
+# `gh pr merge --auto --squash`. So the CLI-version bumps, package-schema
+# regens, and ESC schema syncs satisfy the repo's required-review rule for
+# real, and exempting them here just stops the Sentinel from also demanding
+# a review nobody was ever going to run on generated output.
+#
+# Two shapes: `authors` matches on the PR author alone (Dependabot, whose
+# own lane in `label-dependabot.yml` does the same job);
+# `author_label_pairs` needs both the author and a label. The label half is
+# load-bearing — pulumi-bot's generated-docs regens all carry
+# `automation/merge`, while its content-review, glow-up, and broken-link PRs
+# do not, and those ARE governed, routed, and need a human.
+#
+# **Do not add a bot here to make its PRs quieter.** The test for this list
+# is "does something already post a real approval and merge it?" If the
+# answer is no, adding it here produces a PR the Sentinel calls fine that
+# nobody can merge — which is the failure this file spent a release
+# learning about.
+#
 schema: 1
 
 teams: # role -> GitHub team slug (org/<team>)
@@ -165,18 +390,53 @@ teams: # role -> GitHub team slug (org/<team>)
   marketing: pulumi/docs-marketing-review
   tools: pulumi/docs-tools
 
-bots: [pulumi-bot] # machine USER accounts whose approvals never count (type==Bot excluded automatically)
+bots: # machine accounts whose approvals never count toward a required role
+  - pulumi-bot            # type: User — NOT caught by the automatic type==Bot exclusion
+  - workprentice[bot]     # Docs Groundskeeper (Joe Duffy's docs-automation identity)
+  - github-copilot[bot]
+  - eon-pulumi-agent[bot]
+  - dependabot[bot]
 
-matrix: # subject x change type -> role or 'none'
-  docs: { mechanical: none, substantive: docs-guild }
-  blog: { mechanical: none, substantive: blog }
-  website: { mechanical: none, substantive: marketing }
-  programs: { mechanical: none, substantive: docs-guild }
-  infra: { mechanical: tools, substantive: tools, staging_evidence: required }
-  frontend: { mechanical: none, substantive: marketing }
-  other: { mechanical: none, substantive: tools }
+matrix: # subject x change type -> role (never 'none'; see above)
+  docs: { mechanical: docs-guild, substantive: docs-guild }
+  blog: { mechanical: blog, substantive: blog }
+  website: { mechanical: marketing, substantive: marketing }
+  programs: { mechanical: docs-guild, substantive: docs-guild }
+  infra: { mechanical: tools, substantive: tools }
+  frontend: { mechanical: marketing, substantive: marketing }
+  other: { mechanical: tools, substantive: tools }
+
+staging_evidence:
+  paths:
+    # The program `pulumi up` applies. The one thing preview cannot prove.
+    - infrastructure/
+    # The `update` branch of run-pulumi.sh: `refresh -t $CDN_PULUMI_URN`,
+    # `up --yes`, and the CloudFront invalidation after it. A PR only ever
+    # runs the `preview` branch, so this code path is otherwise untested
+    # until it runs against production.
+    - scripts/run-pulumi.sh
+    # The call order into that. `make ci_pull_request` runs a DIFFERENT
+    # script (ci-pull-request.sh), so the ci_push path never executes on a
+    # PR -- break it and the first run is the real one.
+    - Makefile
+    - scripts/ci-push.sh
+    # Serializes `pulumi up` against the shared stack. Runs only in ci_push,
+    # immediately before the update, and exists for no other purpose than to
+    # keep two of them off the stack at once.
+    - scripts/await-in-progress.js
+    # The two workflows that run `make ci_push`. Be honest about what the
+    # evidence covers: a staging deploy runs testing-build-and-deploy.yml, so
+    # a change THERE is directly demonstrated. build-and-deploy.yml is its
+    # structural twin -- same `make ci_push` step, same env keys; only the
+    # GitHub Environment differs, which swaps the stack -- so a staging run
+    # validates the shape and not that file. Partial evidence, kept on
+    # purpose: better than none for the workflow that deploys production.
+    - .github/workflows/build-and-deploy.yml
+    - .github/workflows/testing-build-and-deploy.yml
 
 claims_overlay: { add: marketing } # stacked when the claims signal fires; never mechanical
+
+approval: { scope: any-team, admins_satisfy: true }
 
 external_contributors: { skip_gates: [review-ran, findings-answered] }
 
@@ -195,14 +455,14 @@ not_governed:
   author_label_pairs:
     - { author: pulumi-bot, label: automation/merge }
 
-auto_approve: { authors: [pulumi-bot] }
-
 # A diff whose every changed line differs only in a link (the redirect
 # sweeps) needs a careful reader, not a particular lane's reader: the
 # question is whether the new target resolves and still says what the
 # sentence claims, which any reviewer can answer. `any-team` lets any team
 # in `teams:` satisfy the approver gate for those; `lane` (the default) keeps
-# the ordinary per-subject rule. The mechanical bar is untouched -- a link
-# sweep is still substantive, so it still needs a human, just not a
-# particular one.
+# the ordinary per-subject rule. It is subsumed while `approval.scope` is
+# `any-team` — every PR gets that treatment now — and stays because it is the
+# narrower rule: set the scope back to `lane` and this one is live again.
+# The mechanical bar is untouched -- a link sweep is still substantive, so it
+# still needs a human, just not a particular one.
 link_only: { approval: any-team }

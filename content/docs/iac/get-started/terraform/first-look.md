@@ -18,7 +18,7 @@ Let's try creating the same resources using both Terraform HCL and a Pulumi prog
 
 ## The Terraform way of doing things
 
-In Terraform, if you wanted to query an AMI ID you might write something like this in [Hashicorp Configuration Language (HCL)](https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md):
+In Terraform, if you wanted to query an AMI ID you might write something like this in [HashiCorp Configuration Language (HCL)](https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md):
 
 ```hcl
 data "aws_ami" "ubuntu" {

@@ -54,7 +54,16 @@ on:
   pull_request_target:
     types: [opened, ready_for_review, synchronize, reopened, labeled, unlabeled]
   pull_request_review:
-    types: [submitted, dismissed]
+    # `edited` matters: G5 reads `sentinel:oversized-ack` out of the approving
+    # review's BODY, so the natural human sequence — approve, see the red gate
+    # explaining the magic string, edit the review to add it — fired no event
+    # at all. The gate stayed red on a PR that satisfied it, and an oversized
+    # PR is exactly the one you do not want re-pushed to shake an event loose.
+    # Narrowed in the job `if:` below: only an APPROVING review's edit can
+    # move a gate, and editing a typo in your own COMMENTED review is the
+    # common case. Unnarrowed it ran the whole job -- checkout alone is 20s
+    # to 3m40s -- for something that provably changes nothing.
+    types: [submitted, dismissed, edited]
   workflow_run:
     workflows: ["Pre-merge Review (main)", "Pre-merge Review (update-review)"]
     types: [completed]
@@ -91,9 +100,24 @@ env:
 
 jobs:
   sentinel:
-    # Label events re-evaluate only for the labels the evaluator reads
-    # (waive, oversized, trivial, prose-flagged); every other label change
-    # cannot move a gate. Keep this list in step with sentinel.py.
+    # Label events re-evaluate only for the labels the evaluator reads; every
+    # other label change cannot move a gate. Keep this list in step with
+    # sentinel.py — a label the evaluator reads but this list omits still
+    # works, but only on the NEXT event. `sentinel:preview` was in exactly
+    # that position: the lanes that apply it label the PR just after opening
+    # it, so the `opened` run predates the label and the preview comment
+    # waited for a later event.
+    #
+    # `automation/merge` is read through the CONFIG rather than a constant in
+    # sentinel.py (`not_governed.author_label_pairs`), which is why it was
+    # missed — and it flips the verdict hardest of all: present ⇒ success
+    # with no gates evaluated. Its lane applies it *after* opening the PR
+    # and then arms auto-merge, so the Sentinel stayed red on a bot regen
+    # nobody pushes to and auto-merge never completed.
+    #
+    # `test_label_event_filter_covers_every_label_the_evaluator_reads`
+    # derives this list from the evaluator's constants and review-routing.yml
+    # rather than restating it, so a sixth label cannot go missing the same way.
     if: |
       (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1') &&
       (github.event_name != 'pull_request_target' ||
@@ -101,7 +125,12 @@ jobs:
        github.event.label.name == 'review:waived' ||
        github.event.label.name == 'review:oversized' ||
        github.event.label.name == 'review:trivial' ||
-       github.event.label.name == 'review:prose-flagged')
+       github.event.label.name == 'review:prose-flagged' ||
+       github.event.label.name == 'automation/merge' ||
+       github.event.label.name == 'sentinel:preview') &&
+      (github.event_name != 'pull_request_review' ||
+       github.event.action != 'edited' ||
+       github.event.review.state == 'approved')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -112,13 +141,27 @@ jobs:
           RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
           INPUT_PR: ${{ inputs.pr_number }}
         run: |
+          set -uo pipefail
           PR="${EVENT_PR:-${RUN_PR:-${INPUT_PR:-}}}"
-          if [ -z "$PR" ]; then
-            echo "No PR number resolvable from this event; nothing to evaluate."
-            echo "pr=" >> "$GITHUB_OUTPUT"
-          else
-            echo "pr=$PR" >> "$GITHUB_OUTPUT"
-          fi
+          # INPUT_PR is free text from workflow_dispatch, and this value is
+          # interpolated into later `run:` blocks as ${{ steps.pr.outputs.pr }}.
+          # Dispatching needs write access so this is defence in depth, not a
+          # fork vector — but an unvalidated value here is both a shell
+          # injection and, via `=` or a newline, a way to forge other step
+          # outputs through GITHUB_OUTPUT. Digits only.
+          case "$PR" in
+            '')
+              echo "No PR number resolvable from this event; nothing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *[!0-9]*)
+              echo "::error::PR number is not numeric: refusing to evaluate."
+              echo "pr=" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "pr=$PR" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
 
       - name: Fetch secrets from ESC
         # continue-on-error: sentinel.py treats a missing/failing team-read
@@ -171,10 +214,12 @@ jobs:
         id: verdict
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Org-scoped token for the team-membership endpoint only — the
-          # default GITHUB_TOKEN cannot read org team membership. sentinel.py
-          # treats lookup failures as action_required, never as "not a
-          # member", so a missing/expired token degrades loud, not wrong.
+          # Org-scoped token for the two membership endpoints G3 reads —
+          # org team membership, and (for `approval.admins_satisfy`) the
+          # approver's effective repo permission, which wants push access.
+          # The default GITHUB_TOKEN can do neither. sentinel.py treats
+          # lookup failures as action_required, never as "not a member", so
+          # a missing/expired token degrades loud, not wrong.
           GH_TOKEN_TEAM_READ: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           REPORT_ONLY: ${{ vars.REVIEW_V3_SENTINEL != '1' }}
         run: |

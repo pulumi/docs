@@ -32,6 +32,7 @@ import html
 import json
 import re
 import sys
+import textwrap
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -60,19 +61,24 @@ BUCKET_LABEL = {
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
 PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
-                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate")
+                 "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
+                 "sent-back", "unblock")
+# Whole codes (not families) that change what you'd click: `author:self`
+# takes the stamp and the send-back off the row, where `author:internal` is
+# background.
+PRIMARY_VALUES = ("author:self",)
 # A reason code is a vocabulary, not a sentence. These few decide whether a
 # row is on your board at all, so they read as words; the code stays in the
 # chip's title for anyone grepping the queue.
 CHIP_LABEL = {
-    "gate:none": "no team approval needed",
+    "author:self": "your own PR",
     "gate:any-team": "any team can approve this",
     "link-fixes:mine": "link-only sweep: yours",
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
 }
-ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "close": "stop",
-                "fix": "", "render": "", "deploy": ""}
+ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop",
+                "chain": "go", "consolidate": "hold", "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
 # actions (things done on the way). The board's toggles enforce that: lighting
@@ -84,8 +90,33 @@ def action_kind(pr: dict, action: dict) -> str:
     """`rerun` is the unblock on an errored review (a decision) and an extra
     on a row where no review ran (a side action beside approve/route)."""
     if action["id"] == "rerun":
-        return "decision" if "review:error" in (pr.get("blockers") or []) else "side"
+        blockers = pr.get("blockers") or []
+        return "decision" if ("review:error" in blockers or "review:unreadable" in blockers) else "side"
     return "side" if action["id"] in SIDE_ACTIONS else "decision"
+
+
+def unblock_actions(pr: dict) -> list[dict]:
+    """The decisions a blocked row can actually take. A stamp is not one:
+    act.py refuses `--stamp` on a blocked row whatever the flags, so a
+    blocked row whose only buttons approve has nothing an approver can do
+    from here, and the board has to say so rather than show buttons that
+    the act layer will bounce."""
+    return [a for a in pr.get("actions") or []
+            if action_kind(pr, a) == "decision" and not a["id"].startswith("stamp")]
+
+
+def no_action(pr: dict) -> bool:
+    """A blocked row with no unblock: it should never happen (analyze gives
+    every verdict an action), and when it does the row says so out loud. A
+    row waiting on its author has had its buttons removed on purpose -- it
+    is the author's turn -- so it is not one of these."""
+    return pr.get("verdict") == "blocked" and not pr.get("waiting_on_author") and not unblock_actions(pr)
+
+
+def parked(pr: dict) -> bool:
+    """A row that leaves the groups for one of the compact lists at the foot
+    of the page: waiting on another reviewer, or on its own author."""
+    return bool(pr.get("handed_off") or pr.get("waiting_on_author"))
 
 
 def esc(v) -> str:
@@ -161,6 +192,8 @@ REVIEW_HELP = {
     "error": "The review job failed, so there are no findings. Re-running it is the only way to get a verdict.",
     "triage-prose": "Only the cheap triage prose check ran, not a full review. It catches wording, not correctness.",
     "base-merged": "The head commit moved, but only because master was merged into the branch. The diff the review read is unchanged, so the review still stands and this row is not stale.",
+    "unreadable": "The review did not arrive whole. Either a page of a split review is missing, or the card's own tally declares more findings than its sections parsed into. A long review's 🚨 rows are the tail of the document, so what is missing is exactly where they live — the row is blocked rather than approvable, and a fresh review is the way out.",
+    "parse-confidence": "The review's body parsed into no findings and nothing corroborates that: a v2 card with no tally table, or a v3 card missing its head sentinel or carrying a broken REVIEW_STATE. Not a blocker — nothing says there are findings — but not stampable either. Read the comment itself.",
 }
 MERGEABLE_HELP = {
     "dirty": "GitHub says this PR conflicts with its base branch. Merge master in and resolve it before anything else.",
@@ -183,6 +216,8 @@ AUTHOR_HELP = {
                   "(the edit link opens it in VS Code), apply the drafted fixes, or ask Claude on the PR -- it is only "
                   "the send-back that has no audience. Closing it out is the cheap option when the lane will regenerate "
                   "the page anyway."),
+    "self": ("This is your own PR, so you cannot approve it or send it back to yourself. Route it to the lane's team for "
+             "the approval, and answer its review findings with /address-review, the author's side of the pipeline."),
 }
 ROUTE_STATE_HELP = {
     "no-team": "GitHub has no team by the name the routing config gives this lane, so the review request goes to that role's SLA person instead.",
@@ -191,7 +226,6 @@ ROUTE_STATE_HELP = {
 SIMPLE_HELP = {
     "scrutiny:heightened": "The diff looks AI-written, so this row can never be a plain stamp however clean it looks.",
     "stances:present": "The review recorded editorial judgement calls it made. They only block with --strict-stances.",
-    "gate:none": "The routing matrix asks for no team approval on a change like this, so nobody is waiting to review it and the row is yours to take.",
     "gate:any-team": "Every changed line differs only in a link, and the routing config lets ANY review team approve one of those: checking a retargeted link needs a careful reader, not a particular lane's reader. So this row is yours to take, and the merge gate agrees.",
     "link-fixes:mine": "YOUR SETTING, not a fact about the PR: link_fixes: mine in ~/.pr-review.yml makes a link-only diff yours to approve whatever lane it belongs to, because a lane owner's review buys nothing on a link swap. Set link_fixes: route and this row would go to its lane owner instead.",
     "blog:new-post": "This PR adds a new blog post, which is never a stamp: somebody reads a new post before it ships.",
@@ -212,7 +246,14 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
         if code == "risk":
             text = RISK_HELP.get(detail)
         elif code == "review":
+            # `review:unreadable:pages:2,3` carries its detail past the key,
+            # so the sentence takes the key and names the detail at the end.
             text = REVIEW_HELP.get(detail)
+            if text is None and first in ("unreadable", "parse-confidence"):
+                text = REVIEW_HELP[first]
+                what = detail.partition(":")[2]
+                if what:
+                    text += f" ({what})"
         elif code == "mergeable":
             text = MERGEABLE_HELP.get(detail)
         elif code == "checks":
@@ -239,6 +280,11 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             ids = detail.partition(":")[2]
             text = (f"{n} reviewer-check finding{'s' if n != '1' else ''} the review raised and nobody has answered"
                     + (f" ({ids})" if ids else "") + ". They do not block a merge, but they are unanswered.")
+        elif code == "outstanding" and first == "judged":
+            ids = detail.partition(":")[2]
+            text = ("Blocking findings the judge step has answered"
+                    + (f" ({ids})" if ids else "") + ": approving this row posts their /resolve lines before it merges, "
+                    "so they no longer hold it. Change a call to deferred and the row goes back to blocked.")
         elif code == "outstanding":
             n = first or "Some"
             ids = detail.partition(":")[2]
@@ -289,8 +335,13 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             text = (f"{who} has already requested changes on this PR; that has to be settled before it merges."
                     if kind == "changes-requested" else
                     f"{who} has already approved this PR, so your approval is not the first.")
-        elif code == "gate":
-            text = SIMPLE_HELP["gate:none"]
+        elif code == "sent-back":
+            text = (f"You already sent this PR back on {detail or 'an earlier run'} and nothing has been pushed since, so it "
+                    "is waiting on its author, not on you. It returns to the board when a new commit lands.")
+        elif code == "unblock":
+            why = detail.partition(":")[2].replace("-", " ") if first == "refused" else detail.replace("-", " ")
+            text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
+                    "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
         if text is None and first:
             # A known code carrying an unexpected value: say what is known
             # rather than rendering a bare chip with nothing behind it. The
@@ -328,7 +379,8 @@ def chips(reasons: list[str]) -> str:
         if r.startswith(HIDDEN_REASON_PREFIXES):
             continue
         code = r.split(":", 1)[0]
-        (primary if code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r) else info).append(r)
+        is_primary = (code in PRIMARY_CODES and not (code == "merging-over" and ":approved-by:" in r)) or r in PRIMARY_VALUES
+        (primary if is_primary else info).append(r)
     out = "".join(_chip(r) for r in primary)
     if info:
         out += (f'<details class="why" title="{len(info)} more reasons for this verdict that would not change what you click. '
@@ -365,6 +417,7 @@ ACTION_HELP = {
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
     "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
+    "rerun-checks": "Re-run the failed jobs of the head commit's workflow runs (the newest failed run per workflow), without a push, for a CI failure that looks flaky. A red commit status has no run to re-run, and the step says so. Nothing merges, and the review is not touched.",
     "fix": "Apply the drafted description correction and any one-click suggestions, then commit and push.",
     "render": "Every PR gets its own deployed copy of the site. This opens each page this PR changes on that preview and saves a full-page screenshot to .pr-review-shots/, for when you want to see the rendered page rather than the diff. It writes nothing to GitHub.",
     "deploy": "Dispatch the testing deploy workflow for this branch, to pulumi-test.io.",
@@ -376,7 +429,7 @@ ACTION_HELP = {
 def action_help(pr: dict, action: dict) -> str:
     """What this button does to this PR, in a sentence. A stamp says whether
     it merges, because that is the part a label can only hint at."""
-    base = ACTION_HELP.get(action.get("id"), "")
+    base = action.get("help") or ACTION_HELP.get(action.get("id"), "")
     if action.get("id", "").startswith("stamp") and action["id"] != "stamp-no-merge":
         merges = ":merge" in action.get("cmd", "") or (action["id"] == "stamp" and merges_on_stamp_row(pr))
         base += " Squash-merges it." if merges else " Does not merge it: that is the author's to do."
@@ -396,7 +449,10 @@ def verdict_chip(pr: dict) -> str:
     if v == "route":
         act = next((a for a in pr.get("actions") or [] if a["id"] == "route"), None)
         if act:
-            extra = esc(" → " + act["cmd"].split(":", 1)[1])
+            # One route action may carry several fragments (a PR in two lanes
+            # neither of which is yours), so read every target off it.
+            targets = re.findall(r"--route \d+:(\S+)", act["cmd"]) or [act["cmd"].split(":", 1)[1]]
+            extra = esc(" → " + " + ".join(targets))
     if pr.get("recommended") and pr["recommended"] != v:
         rec = pr["recommended"]
         extra += (f' <span class="v v-dim" title="{esc(f"The judge pass recommends {rec} for this row. The computed verdict stays {v}: a recommendation never lowers a gate.")}">'
@@ -550,16 +606,35 @@ def patch_quote(pr: dict, path: str | None, anchor: str | None) -> dict | None:
 
 
 MD_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+# A fenced block: the opening fence with an optional info string, then
+# everything up to the closing fence. The info string is dropped; the body
+# is rendered verbatim, escaped, in a <pre>. Without this the inline pass
+# saw the three backticks as one inline code span and a half, and a
+# ```markdown block came out as ``<code>markdown</code>.
+FENCE_RE = re.compile(r"```[A-Za-z0-9_+.-]*[ \t]*\n?(.*?)```", re.S)
 
 
-def md_inline(text: str) -> str:
-    """The review writes findings in markdown. Escape first, then put back
-    the four inline forms it actually uses, so a finding reads as written."""
+def _md_span(text: str) -> str:
     out = esc(text)
     out = MD_LINK_RE.sub(r'<a href="\2">\1</a>', out)
     out = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", out)
     out = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", out)
     return re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+
+
+def md_inline(text: str) -> str:
+    """The review writes findings in markdown. Escape first, then put back
+    the four inline forms it actually uses, so a finding reads as written.
+    A fenced code block becomes a <pre>, escaped and untouched by the
+    inline pass, so the backticks inside it are never mistaken for spans."""
+    text = text or ""
+    out, pos = [], 0
+    for m in FENCE_RE.finditer(text):
+        out.append(_md_span(text[pos:m.start()]))
+        out.append(f"<pre>{esc(m.group(1).strip(chr(10)))}</pre>")
+        pos = m.end()
+    out.append(_md_span(text[pos:]))
+    return "".join(out)
 
 
 FINDING_CLAIM = re.compile(r'^\s*\*"(.+?)"\*', re.S)
@@ -804,6 +879,26 @@ def pending_judgment(queue: dict, pr: dict) -> str:
               "with its reasoning and picks this row&#x27;s button; until then they are yours to weigh.</p>")
 
 
+_REASON_RE = re.compile(r'--reason "((?:[^"\\]|\\.)*)"')
+_REASON_STEP_RE = re.compile(r"--(?:request-changes|close|refresh|rerun) (\d+)\b")
+
+
+def scope_reasons(cmd: str) -> str:
+    """A `--reason "text"` that follows a `--request-changes N` / `--close N`
+    / `--refresh N` / `--rerun N` in the same fragment becomes act.py's
+    per-PR form, `--reason "N=text"`. The composer only ever concatenates
+    fragments, so a reason has to name its PR before it leaves the page: a
+    bare one is a global flag, and act.py refuses that once a second step
+    could consume it. An already-scoped reason is left alone."""
+    def sub(m: re.Match) -> str:
+        text = m.group(1)
+        steps = _REASON_STEP_RE.findall(cmd[:m.start()])
+        if not steps or re.match(r"^\d+=", text):
+            return m.group(0)
+        return f'--reason "{steps[-1]}={text}"'
+    return _REASON_RE.sub(sub, cmd)
+
+
 def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     actions = list(pr.get("actions") or [])
     # The row already links every changed page on the deployed preview, so a
@@ -816,20 +911,42 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     # colored by what it does; everything else stays grey on the left.
     rec = pr.get("recommended")
     primary = next((a for a in actions if a["id"] == rec), None) or (actions[0] if actions else None)
+    # The chain is an approval too -- the same one, through the same gates,
+    # plus the unblock of the next link -- so on a chain lead it outranks a
+    # bare "approve" recommendation for the coloured slot.
+    chain = next((a for a in actions if a["id"] == "chain"), None)
+    if chain and (primary is None or primary["id"].startswith("stamp")):
+        primary = chain
     btns = [f'<a class="btn" href="{esc(pr_url(queue, pr["number"]))}" title="Open this pull request on GitHub, in a new tab.">open PR</a>']
+    # A handoff is not an `act.py` fragment and never joins the --act
+    # command: it is a separate, interactive run, composed on its own line
+    # at the foot of the page. It is a toggle like everything else here, so
+    # the page stays a worksheet.
+    for h in pr.get("handoffs") or []:
+        btns.append(f'<button class="btn hand" data-run="{esc(h["run"])}" data-pr="{pr["number"]}" '
+                    f'title="{esc(h.get("why") or "")}" aria-pressed="false">{esc(h["label"])}</button>')
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(a["cmd"])}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}" '
+        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}"{covers_attr(a)} '
                     f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges every stampable row unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
-        btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(primary["cmd"])}" data-pr="{pr["number"]}" '
-                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}" '
+        btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(scope_reasons(primary["cmd"]))}" data-pr="{pr["number"]}" '
+                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}"{covers_attr(primary)} '
                     f'title="{esc(action_help(pr, primary))}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
+
+
+def covers_attr(action: dict) -> str:
+    """A chain button acts on a second row (the next link gets master
+    merged in), so it says which: the script marks that row as covered
+    while the button is lit, and puts the button out if a decision is
+    picked there instead."""
+    covers = action.get("covers") or []
+    return f' data-covers="{esc(",".join(str(n) for n in covers))}"' if covers else ""
 
 
 def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
@@ -860,7 +977,16 @@ def row_html(queue: dict, pr: dict, *, expanded: bool = False) -> str:
     if v in ("judge",) or pr.get("judgments") or expanded:
         body.append(judgment_boxes(queue, pr))
     if v == "blocked":
-        body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []))}</div></div>')
+        # A blocked row names its blocker; one with no unblock says that too,
+        # so a row can never sit silent with nothing to click and no word why.
+        tail = (' <span class="v v-dim" title="Every action the queue knows for this blocker is refused or absent on this row, so '
+                'nothing here changes it. Whatever moves it happens on GitHub or on the branch by hand.">no action available</span>'
+                if no_action(pr) else "")
+        if pr.get("waiting_on_author"):
+            when = sent_back_on(pr)
+            tail = (f' <span class="v v-dim" title="You sent this PR back{" on " + esc(when) if when else ""} and nothing has been '
+                    'pushed since, so its buttons are off: it is the author\'s turn, not yours.">waiting on the author</span>')
+        body.append(f'<div class="jbox stop"><div class="q">Blocked: {esc(", ".join(pr.get("blockers") or []) or "no blocker named")}{tail}</div></div>')
     body.append(action_bar(pr, queue, expanded=expanded))
     if expanded:
         body.append(detail_sections(queue, pr))
@@ -891,7 +1017,7 @@ def detail_sections(queue: dict, pr: dict) -> str:
     if review.get("stances"):
         parts.append('<p class="note">The brief lists editorial stances (advisory unless --strict-stances).</p>')
     # cross-PR
-    cross = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("collision", "directional", "duplicate")]
+    cross = [r for r in pr.get("reasons") or [] if r.split(":")[0] in ("cluster", "directional", "duplicate")]
     if cross:
         parts.append("<h5>Cross-PR</h5><ul>" + "".join(f"<li>{esc(c)}</li>" for c in cross) + "</ul>")
     # preview
@@ -984,19 +1110,19 @@ HELP_SECTIONS = [
         "Every button is a toggle that adds a fragment to the command at the bottom. Click freely and change your mind; nothing happens until you run that command.",
     ]),
     ("The four verdicts", [
+        "One per PR. It says what kind of move the row needs, not how good the PR is — and it is not the row order: rows sit in PR number order inside their group.",
         "<b>stamp</b> — passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough.",
-        "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap.",
+        "<b>judge</b> — one thing needs a person: an open finding, a new blog post, a diff over your size cap, a collision with another PR.",
         "<b>route</b> — not your lane per the routing matrix. Ask the owning team, or approve anyway.",
-        "<b>blocked</b> — nothing to do until something else moves: a conflict, red CI, a stale or running review.",
-    ]),
-    ("Do next", [
-        "Each card states a fact naming its PRs, says what pressing the button does, and then presses those rows' buttons for you.",
-        "A card is a shortcut for the rows, not a separate instruction: pick a different decision on one of its PRs and the card goes out, so the command can never contradict itself.",
-        "<b>Start the chain</b> approves and merges the first PR of a collision cluster, then merges master into the next so it can follow. One link per run.",
+        "<b>blocked</b> — nothing to do until something else moves: an open 🚨 finding, a conflict, red CI, a stale or running review, someone else's changes requested. A row with no unblock says <i>no action available</i>.",
     ]),
     ("A row", [
         "Chips are the reasons for the verdict; the ones that change what you'd click stay out, the rest fold behind <b>why</b>. Hover any chip for a sentence explaining it.",
-        "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run). Side actions like <i>apply fixes</i> ride along with it.",
+        "One decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Side actions like <i>apply fixes</i> ride along with it, and only decisions count toward the progress line.",
+        "Every decision is on its row, next to the evidence for it. There is no batch strip: the stampable rows arrive already selected, and everything else is one button on the row it concerns.",
+        "A collision cluster's move sits on the row it belongs to. <b>approve &amp; merge, then unblock #N</b> is on the chain's lead, and only where the collision is the one thing holding it back: it merges the lead through the stamp gates, then merges master into #N so it can follow, so it marks #N <i>covered</i> while it is lit. <b>ask … for one consolidated PR</b> is on the newest of a bot's overlapping sweeps.",
+        "<b>your own PR</b> has no approve or send-back button: route it, and answer its findings with <code>/address-review</code>. A PR you already sent back waits under <i>Waiting on the author</i> until a commit lands.",
+        "<b>fix it yourself</b> (amber, dashed) is on a PR a workflow opened that still has open findings: nobody will ever answer its review, so this is the way out that isn't closing it. It composes <code>/address-review N</code> on its own line above the command — an interactive run, never part of the batch.",
         "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
     ]),
     ("Judgment badges", [
@@ -1014,15 +1140,17 @@ HELP_SECTIONS = [
         "<i>since</i> is the one threshold rather than a set of values. <i>Reset chips</i> restores the defaults.",
     ]),
     ("The command at the bottom", [
-        "Copy it and run it, or hand it to Claude. It plans, previews every write, and waits for a yes.",
-        "Each approval re-checks the PR immediately before merging: head unchanged, mergeable, CI green, no changes-requested review. A PR that fails is skipped and the batch continues.",
+        "Copy it and run it, or hand it to Claude. Invoking it <i>is</i> the yes: act.py plans it, prints a preview of every write with its exact body, and executes, so nothing asks you to confirm a second time. <code>--dry-run</code> runs the preflights and lists every write without sending one.",
+        "Every approve button folds into one <code>--stamp</code> list (<code>--force</code> said once); a reason is scoped to its PR as <code>--reason \"N=…\"</code>; no fragment repeats.",
+        "Every write re-reads the PR first (open, head unchanged); an approval also checks mergeable, CI green, and no changes-requested review from anyone but you. A PR that fails is skipped and the batch continues.",
     ]),
 ]
 
 
 SHOWING_HELP = {
     "me": ("Which rows this run collected: the ones whose owning lane is yours, plus anything the routing matrix "
-           "leaves ungated. A PR owned by another lane is listed at the foot of the page instead. "
+           "leaves ungated. A PR owned by another lane still takes a full row, grouped under that owner, with a route action; "
+           "only PRs already waiting on another reviewer drop to the foot of the page. "
            "`--owner any` collects every open PR."),
     "any": "Which rows this run collected: every open PR, whoever owns it (`--owner any`).",
 }
@@ -1062,34 +1190,6 @@ def help_html() -> str:
         out.append(f"<div><h4>{esc(heading)}</h4><ul>" + "".join(f"<li>{p}</li>" for p in points) + "</ul></div>")
     return ('<details class="help"><summary>How to read this board</summary>'
             '<div class="helpgrid">' + "".join(out) + "</div></details>")
-
-
-def do_next_html(queue: dict) -> str:
-    """The opening: one sentence and one button per move, most leverage
-    first. Nothing else on the page competes with it for the first look."""
-    cards = queue.get("do_next") or []
-    if not cards:
-        return ""
-    out = []
-    for i, d in enumerate(cards, 1):
-        cls = ACTION_CLASS.get(d["kind"], "") or ("hold" if d["kind"] == "consolidate" else "route" if d["kind"] == "chain" else "")
-        # `targets` are the row buttons this card presses; `claims` are rows it
-        # covers without a row button of its own (a chain, a consolidation).
-        data = ""
-        if d.get("targets"):
-            data += f' data-targets="{esc(json.dumps(d["targets"], sort_keys=True))}"'
-        if d.get("lead"):
-            data += f' data-lead="{esc(str(d["lead"]))}"'
-        if d.get("claims"):
-            data += f' data-claims="{esc(",".join(str(n) for n in d["claims"]))}"'
-        tip = d.get("does") or ACTION_HELP.get(d["kind"], "")
-        btn = (f'<button class="btn p p-{esc(cls)}" data-cmd="{esc(d["cmd"])}" data-pr="next{i}"{data} '
-               f'title="{esc(tip)}" aria-pressed="false">{esc(d["label"])}</button>'
-               if d.get("cmd") else "")
-        does = f'<span class="does">{esc(d["does"])}</span>' if d.get("does") else ""
-        out.append(f'<li class="next {esc(cls)}"><span class="n">{i}</span>'
-                   f'<span class="say">{esc(d["say"])}{does}</span>{btn}</li>')
-    return f'<section class="donext"><div class="sec-head"><h2>Do next</h2><span class="count">{len(cards)}</span></div><ol>' + "".join(out) + "</ol></section>"
 
 
 def filter_bar(queue: dict) -> str:
@@ -1151,12 +1251,17 @@ def filter_bar(queue: dict) -> str:
 
 
 def group_rows(prs: list[dict]) -> list[tuple[str, str, list[dict]]]:
+    """Grouped owner -> domain, and inside a group strictly by PR number,
+    ascending. Verdict is on the row, in the tally and on a filter chip;
+    sorting by it as well only meant that finding #21598 on the page
+    required knowing its verdict first. A number is the one thing about a
+    row you always already have."""
     groups: dict[tuple[str, str], list[dict]] = {}
     for p in prs:
         key = (owner_label(p), ", ".join(p.get("domains") or []) or "other")
         groups.setdefault(key, []).append(p)
     order = lambda k: (0 if k[0] == "mine" else 1, k[0], k[1])  # noqa: E731
-    return [(o, d, sorted(rows, key=lambda p: (VERDICT_ORDER.index(p.get("verdict") or "judge"), -p["number"])))
+    return [(o, d, sorted(rows, key=lambda p: p["number"]))
             for (o, d), rows in sorted(groups.items(), key=lambda kv: order(kv[0]))]
 
 
@@ -1169,37 +1274,89 @@ def slim(obj):
     """The inlined copy of the queue minus the bulk (patches, comment
     bodies): what a viewer might copy out, not a second render source."""
     if isinstance(obj, dict):
-        return {k: slim(v) for k, v in obj.items() if k not in PAYLOAD_DROP}
+        # `_`-prefixed keys are the analyzer's private scratch (live config
+        # objects, not JSON): never part of what a viewer might copy out.
+        return {k: slim(v) for k, v in obj.items() if k not in PAYLOAD_DROP and not str(k).startswith("_")}
     if isinstance(obj, list):
         return [slim(x) for x in obj]
     return obj
 
 
+def payload_json(obj) -> str:
+    """The slimmed queue as JSON that is inert inside
+    `<script type="application/json">`. Escaping only `</` is not enough:
+    the HTML parser has a double-escaped script state, and a title or path
+    carrying `<!--<script>` puts it there, after which the JSON block
+    swallows the page's real `<script>` up to end of file and every button
+    goes dead. Every `<`, `>` and `&` leaves as a JSON escape instead, which
+    is still the same JSON to any reader."""
+    return (json.dumps(slim(obj), sort_keys=True)
+            .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
 
-def waiting_html(prs: list[dict]) -> str:
+
+
+def _wait_flag(p: dict) -> str:
+    state = (p.get("checks") or {}).get("state")
+    return " ✗" if state == "red" else (" ⚠" if p.get("mergeable_state") == "dirty" else "")
+
+
+def sent_back_on(p: dict) -> str:
+    """The date the approver sent this PR back, off its `sent-back:<date>`
+    reason code; empty when the row carries none."""
+    return next((r.partition(":")[2] for r in p.get("reasons") or [] if r.startswith("sent-back:")), "")
+
+
+def _waiting_items(queue: dict, rows: list[dict], who_of) -> str:
+    items = []
+    for p in rows:
+        title = p.get("title") or ""
+        title = title if len(title) <= 72 else title[:69] + "…"
+        items.append(f'<li><a class="pr" href="{esc(pr_url(queue, p["number"]))}">#{p["number"]}</a> '
+                     f'<span class="wt">{esc(title)}</span> <span class="who">{esc(who_of(p))}</span> '
+                     f'<span class="age">{_age_days(p)}d{_wait_flag(p)}</span></li>')
+    return "".join(items)
+
+
+def waiting_html(prs: list[dict], queue: dict | None = None) -> str:
     """The compact 'waiting on others' list: one line per handed-off PR,
     for awareness only. Nothing here is actionable by the approver."""
+    queue = queue or {"repo": "pulumi/docs"}
     rows = [p for p in prs if p.get("handed_off")]
     if not rows:
         return ""
     rows.sort(key=lambda p: (", ".join(p.get("handed_off_to") or []), -_age_days(p)))
-    items = []
-    for p in rows:
-        who = esc(", ".join(p.get("handed_off_to") or []))
-        title = p.get("title") or ""
-        title = title if len(title) <= 72 else title[:69] + "…"
-        state = (p.get("checks") or {}).get("state")
-        flag = " ✗" if state == "red" else (" ⚠" if p.get("mergeable_state") == "dirty" else "")
-        items.append(f'<li><a class="pr" href="{esc(pr_url({"repo": "pulumi/docs"}, p["number"]))}">#{p["number"]}</a> '
-                     f'<span class="wt">{esc(title)}</span> <span class="who">{who}</span> <span class="age">{_age_days(p)}d{flag}</span></li>')
+    items = _waiting_items(queue, rows, lambda p: ", ".join(p.get("handed_off_to") or []))
     return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on others</h2><span class="count">{len(rows)}</span>'
             '<span class="note">requested reviewer isn\'t you · ✗ red CI · ⚠ conflict · hidden from the groups above; render with --include-handed-off to act on them</span></div>'
-            '<ul>' + "".join(items) + "</ul></section>")
+            '<ul>' + items + "</ul></section>")
+
+
+def waiting_on_author_html(prs: list[dict], queue: dict | None = None) -> str:
+    """The compact 'waiting on the author' list: rows the approver already
+    sent back (`waiting_on_author`, with a `sent-back:<date>` chip) and
+    nothing has been pushed since. Same shape as the handed-off list: who
+    it waits on is the author, and the date is when you asked."""
+    queue = queue or {"repo": "pulumi/docs"}
+    rows = [p for p in prs if p.get("waiting_on_author") and not p.get("handed_off")]
+    if not rows:
+        return ""
+    rows.sort(key=lambda p: (sent_back_on(p), -_age_days(p)))
+
+    def who(p: dict) -> str:
+        login = (p.get("author") or {}).get("login") or "author"
+        when = sent_back_on(p)
+        return f"@{login} · sent back {when}" if when else f"@{login} · sent back"
+
+    items = _waiting_items(queue, rows, who)
+    return (f'<section class="waiting"><div class="sec-head"><h2>Waiting on the author</h2><span class="count">{len(rows)}</span>'
+            '<span class="note">you sent these back and nothing has been pushed since · ✗ red CI · ⚠ conflict · '
+            'they return to the groups above when a commit lands; render with --include-handed-off to act on one now</span></div>'
+            '<ul>' + items + "</ul></section>")
 
 
 def render_board(queue: dict, *, artifact: bool = False, include_handed_off: bool = False) -> str:
     all_prs = queue.get("prs") or []
-    prs = all_prs if include_handed_off else [p for p in all_prs if not p.get("handed_off")]
+    prs = all_prs if include_handed_off else [p for p in all_prs if not parked(p)]
     counts = queue.get("counts") or {}
     cfg = queue.get("config") or {}
     sections = []
@@ -1212,17 +1369,28 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         tally += (f'<div class="t-dim" title="PRs whose requested reviewer is someone other than you. They are waiting on that person, '
                   f'so they are listed at the foot of the page instead of taking a row.">'
                   f'<b>{counts["handed-off"]}</b><span>waiting on others</span></div>')
-    payload = json.dumps(slim(queue), sort_keys=True).replace("</", "<\\/")
+    on_author = sum(1 for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off"))
+    if on_author:
+        tally += (f'<div class="t-dim" title="PRs you already sent back to their author, with nothing pushed since. They are waiting '
+                  f'on the author, so they are listed at the foot of the page instead of taking a row.">'
+                  f'<b>{on_author}</b><span>waiting on the author</span></div>')
+    stuck = sum(1 for p in prs if no_action(p))
+    if stuck:
+        tally += (f'<div class="t-stop" title="Blocked rows that carry no unblock at all: nothing on this page changes them, so '
+                  f'each one says so on its row. They are counted here so a silent row can never hide in the blocked tally.">'
+                  f'<b>{stuck}</b><span>blocked, no action</span></div>')
+    payload = payload_json(queue)
     return (FRAGMENT if artifact else PAGE).format(
         title="PR review queue",
         style=STYLE,
         eyebrow=header_line(queue),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs sorted into stamp / judge / route / blocked. Stamp rows start selected; every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
-        tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>' + do_next_html(queue),
+        dek=esc(f"{len(prs)} open PRs, one verdict each (stamp / judge / route / blocked), grouped by owner and domain and listed in PR number order. Stamp rows start selected; every other decision is a button on the row it concerns, and every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
+        tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>',
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
-        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue) + ("" if include_handed_off else waiting_html(all_prs)),
+        body=("".join(sections) or '<p class="empty">Nothing to adjudicate.</p>') + clusters_html(queue)
+             + ("" if include_handed_off else waiting_html(all_prs, queue) + waiting_on_author_html(all_prs, queue)),
         cmd=cmd_footer(),
         payload=payload,
         script=SCRIPT,
@@ -1233,7 +1401,7 @@ def render_detail(queue: dict, n: int, *, artifact: bool = False) -> str:
     pr = next((p for p in queue.get("prs") or [] if p["number"] == n), None)
     if pr is None:
         raise SystemExit(f"#{n} is not in the queue (drafts and filtered rows are not collected)")
-    payload = json.dumps(slim({**queue, "prs": [pr]}), sort_keys=True).replace("</", "<\\/")
+    payload = payload_json({**queue, "prs": [pr]})
     return (FRAGMENT if artifact else PAGE).format(
         title=f"#{n} · {esc(pr.get('title'))}",
         style=STYLE,
@@ -1251,33 +1419,116 @@ def render_detail(queue: dict, n: int, *, artifact: bool = False) -> str:
 
 
 def cmd_footer() -> str:
-    return ('<div class="cmdwrap"><div class="cmd" id="cmd">$ /pr-review --act</div>'
-            '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button></div>')
+    """Two lines, because there are two kinds of move. The `--act` command is
+    the batch of writes `act.py` makes. The line above it, which appears only
+    when a "fix it yourself" is lit, is one interactive run per PR — a
+    different thing entirely, so it is never folded into the same command."""
+    return ('<div class="cmdwrap">'
+            '<div class="cmdrow hand" id="handwrap" hidden>'
+            '<span class="handlabel" title="Each of these is its own interactive run: /address-review walks the PR\'s open '
+            'findings with you and pushes the fixes to the branch. They are not part of the --act command below, and '
+            'nothing here runs until you invoke it.">then, one at a time</span>'
+            '<div class="cmd" id="handcmd"></div>'
+            '<button class="btn" id="copyhand">copy</button></div>'
+            '<div class="cmdrow"><div class="cmd" id="cmd">$ /pr-review --act</div>'
+            '<button class="btn" id="copy">copy</button><button class="btn" id="clear">clear</button></div>'
+            '</div>')
+
+
+def open_items(pr: dict) -> list[dict]:
+    """The findings nobody has ruled on: the review's open rows (style and
+    pre-existing aside) plus triage's prose bullets. What `pending_judgment`
+    boxes on the board, and what the terminal lists under `open:`."""
+    review = pr.get("review") or {}
+    items = [i for i in review.get("items") or []
+             if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
+    if pr.get("triage_prose"):
+        bullets = [l.strip("- ").strip() for l in pr["triage_prose"].splitlines() if l.startswith("- [")]
+        items += [{"id": f"triage:{i + 1}", "summary": b, "bucket": "reviewer-check"} for i, b in enumerate(bullets)]
+    return items
+
+
+def _wrap(text: str, width: int, first: str, rest: str) -> list[str]:
+    """Wrap without ever cutting: a reason code or a command is only useful
+    whole, so a token longer than the line gets a line to itself."""
+    return textwrap.wrap(text, width=width, initial_indent=first, subsequent_indent=rest,
+                         break_long_words=False, break_on_hyphens=False) or [first.rstrip()]
 
 
 def render_terminal(queue: dict, n: int | None = None, width: int = 110, include_handed_off: bool = False) -> str:
+    """The board as text: the same rows, blockers, findings, actions and
+    Do-next moves, so a terminal reader can compose the same command the
+    page would. Nothing is cut short; long lines wrap under their row."""
     all_prs = queue.get("prs") or []
-    prs = all_prs if (include_handed_off or n is not None) else [p for p in all_prs if not p.get("handed_off")]
+    prs = all_prs if (include_handed_off or n is not None) else [p for p in all_prs if not parked(p)]
     if n is not None:
         prs = [p for p in prs if p["number"] == n]
     counts = queue.get("counts") or {}
-    lines = [f"PR review queue · {queue.get('repo')} · {len(prs)} rows · " + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
-             + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else ""), ""]
+    on_author = [p for p in all_prs if p.get("waiting_on_author") and not p.get("handed_off")]
+    stuck = [p for p in prs if no_action(p)]
+    head = (f"PR review queue · {queue.get('repo')} · {len(prs)} rows · "
+            + " · ".join(f"{counts.get(v, 0)} {v}" for v in VERDICT_ORDER)
+            + (f" · {counts['handed-off']} waiting on others" if counts.get("handed-off") else "")
+            + (f" · {len(on_author)} waiting on the author" if on_author else "")
+            + (f" · {len(stuck)} blocked with no action" if stuck else ""))
+    lines = [head, ""]
     hdr = f"{'#':>6}  {'verdict':<8} {'owner':<11} {'domain':<14} {'size':>9} {'age':>5} {'CI':<4} reasons"
     lines += [hdr, "-" * len(hdr)]
+    sub = " " * 8      # continuation lines sit under the verdict column
     for owner, domain, rows in group_rows(prs):
         for p in rows:
             reasons = [r for r in p.get("reasons") or [] if not r.startswith(HIDDEN_REASON_PREFIXES)]
             ci = {"green": "✓", "red": "✗", "pending": "…"}.get((p.get("checks") or {}).get("state"), "?")
             size = f"+{p.get('additions', 0)}/−{p.get('deletions', 0)}"
-            line = (f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} "
-                    f"{age_label(p):>5} {ci:<4} " + " ".join(reasons))
-            lines.append(line[:width] + ("…" if len(line) > width else ""))
+            prefix = (f"{p['number']:>6}  {p.get('verdict'):<8} {owner[:11]:<11} {domain[:14]:<14} {size:>9} "
+                      f"{age_label(p):>5} {ci:<4} ")
+            lines += _wrap(" ".join(reasons), width, prefix, sub + "  ")
+            if p.get("verdict") == "blocked":
+                blocked = ", ".join(p.get("blockers") or []) or "no blocker named"
+                lines += _wrap(blocked + (" (no action available)" if no_action(p) else ""), width, sub + "blocked: ", sub + "         ")
+            if not p.get("judgments"):
+                items = open_items(p)
+                for i in items[:6]:
+                    body = finding_body(i)
+                    parts = split_finding(body)
+                    stance = parts["stance"] or NO_STANCE
+                    claim = one_sentence(parts["claim"] or body or i.get("summary") or "", 160)
+                    where = f" @ {i['file']} {i.get('anchor') or ''}".rstrip() if i.get("file") else ""
+                    lines += _wrap(f"{i.get('id') or ''} {claim} [{stance[1]}]{where}", width, sub + "open: ", sub + "      ")
+                if len(items) > 6:
+                    lines.append(f"{sub}      … {len(items) - 6} more on the PR")
+            for j in p.get("judgments") or []:
+                lines += _wrap(f"{j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'}"
+                               + (f" ({j['note']})" if j.get("note") else "") + (f" {j['deep_link']}" if j.get("deep_link") else ""),
+                               width, sub + "judged: ", sub + "        ")
+            for a in p.get("actions") or []:
+                lines += _wrap(f"[{a['label']}]  {scope_reasons(a['cmd'])}", width, sub, sub + "    ")
+            for h in p.get("handoffs") or []:
+                lines += _wrap(f"[{h['label']}]  $ {h['run']}  (an interactive run, not part of --act)", width, sub, sub + "    ")
+    cards = queue.get("do_next") or [] if n is None else []
+    if cards:
+        lines += ["", "do next (the row actions above, batched into one command each):"]
+        for i, d in enumerate(cards, 1):
+            lines += _wrap(d.get("say") or "", width, f"  {i}. ", "     ")
+            if d.get("does"):
+                lines += _wrap(d["does"], width, "     ", "     ")
+            if d.get("cmd"):
+                lines += _wrap(f"$ /pr-review --act {scope_reasons(d['cmd'])}", width, "     ", "         ")
     cl = queue.get("clusters") or []
     if cl:
         lines += ["", "collisions:"]
         for c in cl:
-            lines.append(f"  {c['id']} {c['kind']}: merge " + " → ".join(f"#{x}" for x in c["merge_order"]))
+            order = c.get("merge_order") or []
+            if order:
+                lines += _wrap(f"{c['id']} {c['kind']}: merge " + " → ".join(f"#{x}" for x in order), width, "  ", "      ")
+            else:
+                # Every member is handed off: analyze strips them from the
+                # order, so the order is empty and the members are the news.
+                lines += _wrap(f"{c['id']} {c['kind']}: " + ", ".join(f"#{x}" for x in c.get("prs") or []) + " (all waiting on others)",
+                               width, "  ", "      ")
+            rec = c.get("recommendation") or {}
+            if rec.get("say"):
+                lines += _wrap(rec["say"] + (f"  → {scope_reasons(rec['cmd'])}" if rec.get("cmd") else ""), width, "      ", "      ")
     for d in queue.get("directional") or []:
         lines.append(f"  directional {d['path']}: #{d['adds_links_pr']} adds links, #{d['removes_links_pr']} removes them")
     judge = [p for p in prs if p.get("verdict") == "judge"]
@@ -1285,15 +1536,17 @@ def render_terminal(queue: dict, n: int | None = None, width: int = 110, include
         lines += ["", "judge rows (AskUserQuestion each in --terminal mode):"]
         for p in judge:
             lines.append(f"  #{p['number']} {p.get('title')}")
-            for j in p.get("judgments") or []:
-                lines.append(f"      {j.get('finding_id') or ''} {j.get('decision') or ''} → {j.get('disposition') or '?'} {j.get('deep_link') or ''}")
-            for a in p.get("actions") or []:
-                lines.append(f"      [{a['label']}]  {a['cmd']}")
     waiting = [p for p in all_prs if p.get("handed_off")] if not include_handed_off and n is None else []
     if waiting:
         lines += ["", f"waiting on others ({len(waiting)}):"]
         for p in waiting:
-            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} {', '.join(p.get('handed_off_to') or [])} {_age_days(p)}d")
+            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} {', '.join(p.get('handed_off_to') or [])} {_age_days(p)}d{_wait_flag(p)}")
+    if on_author and not include_handed_off and n is None:
+        lines += ["", f"waiting on the author ({len(on_author)}):"]
+        for p in on_author:
+            when = sent_back_on(p)
+            lines.append(f"  #{p['number']} {(p.get('title') or '')[:60]:<60} @{(p.get('author') or {}).get('login') or '?'}"
+                         f" sent back {when or '?'} {_age_days(p)}d{_wait_flag(p)}")
     stamps = [a["cmd"].split()[1] for p in prs for a in p.get("actions") or [] if a["id"] == "stamp" and p.get("verdict") == "stamp"]
     if stamps:
         lines += ["", f"$ /pr-review --act --stamp {','.join(stamps)}"]
@@ -1372,15 +1625,7 @@ details.help[open]>summary{border-bottom:1px solid var(--line)}
 .helpgrid h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:0 0 4px}
 .helpgrid ul{margin:0;padding-left:16px}
 .helpgrid li{font-size:13px;color:var(--ink-2);margin:3px 0;line-height:1.45}
-.donext{margin:6px 0 18px;background:var(--surface);border:1px solid var(--line-2);border-radius:4px;padding:12px 16px;box-shadow:var(--shadow)}
-.donext ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
-.donext .next{display:flex;gap:12px;align-items:center;padding:8px 10px;border-left:3px solid var(--line-2);background:var(--surface-2);border-radius:3px}
-.donext .next.hold{border-left-color:var(--hold)}.donext .next.route{border-left-color:var(--route)}.donext .next.go{border-left-color:var(--go)}.donext .next.stop{border-left-color:var(--stop)}
-.donext .n{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;color:var(--ink-3);width:18px}
-.donext .say{flex:1;font-size:14px;color:var(--ink)}
-.donext .does{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
 .claimnote{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--go);border:1px dashed var(--go);border-radius:3px;padding:2px 7px}
-.donext .btn.p{margin-left:auto;white-space:nowrap}
 .clusters{margin-top:28px}.clusters summary{cursor:pointer;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;list-style:none}
 /* a flex summary drops the browser's own marker, so these folds draw their own */
 .clusters summary::-webkit-details-marker,details.help>summary::-webkit-details-marker{display:none}
@@ -1421,6 +1666,8 @@ details.preview li{font-size:13px;margin:2px 0}
 details.preview .jmeta{font-family:"IBM Plex Mono",monospace;font-size:11px}
 .btn{font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:3px;padding:3px 9px;background:var(--surface);color:var(--ink-2);cursor:pointer;text-decoration:none}
 .btn.p{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.sel{outline:2px solid var(--go);outline-offset:1px}.btn.sel::before{content:"✓ "}
+.btn.hand{border-color:var(--hold);color:var(--hold);border-style:dashed}
+.btn.hand.sel{outline-color:var(--hold);background:var(--hold-soft)}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:12px 14px}
 .card h4{margin:0 0 6px;font-size:14px}.card p{font-size:13.5px;color:var(--ink-2);margin:0 0 6px}.card ul{margin:0;padding-left:18px;font-size:13px;color:var(--ink-2)}
@@ -1434,7 +1681,11 @@ td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:
 .pages li,.files li{margin:3px 0;font-size:13.5px}
 .shot{max-width:100%;border:1px solid var(--line-2);border-radius:3px;margin-top:6px}
 .note{font-size:13px;color:var(--ink-3)}
-.cmdwrap{position:fixed;left:0;right:0;bottom:0;background:var(--ground);border-top:1px solid var(--line-2);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;align-items:center;z-index:3}
+.cmdwrap{position:fixed;left:0;right:0;bottom:0;background:var(--ground);border-top:1px solid var(--line-2);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:6px;z-index:3}
+.cmdrow{display:flex;gap:8px;align-items:center}
+.cmdrow[hidden]{display:none}
+.handlabel{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--hold);white-space:nowrap}
+#handcmd{background:var(--hold-soft);color:var(--ink);border:1px solid var(--hold);white-space:pre;line-height:1.5}
 .wrap{padding-inline:16px}
 .cmd{flex:1;background:var(--ink);color:var(--ground);border-radius:3px;padding:8px 12px;font-size:12.5px;overflow-x:auto;white-space:nowrap}
 .empty{color:var(--ink-3)}
@@ -1443,67 +1694,61 @@ td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;color:
 
 SCRIPT = r"""
 (function(){
-  var sel = {};   // 'pr:cmd' -> cmd; one entry per selected button
   var cmdEl = document.getElementById('cmd');
+  // The command is read off the lit buttons themselves, never off a shadow
+  // list, so what the bar shows can't lag a click. Every button is a row
+  // button: there is no batch strip, so nothing on the page can carry a
+  // fragment a row does not.
+  function fragment(b){ return b.dataset.cmd; }
+  // Every `--stamp N[:mode][ --force]` folds into the one --stamp list, with
+  // --force said once for the batch: a second --stamp would be a second flag,
+  // and an act.py that read it single-valued would drop every PR but the last.
+  var STAMP = /^--stamp (\d+(?::(?:no-)?merge)?)( --force)?$/;
   function compose(){
-    var seen = {}, stamps = [], others = [];
-    Object.keys(sel).sort().forEach(function(k){
-      var c = sel[k]; if (!c || seen[c]) return; seen[c] = true;   // never the same fragment twice
-      var m = c.match(/^--stamp (\d+)$/); if (m) stamps.push(m[1]); else others.push(c);
+    var seen = {}, stamps = [], others = [], force = false;
+    // by PR number, so the command reads the same however it was clicked
+    var lit = [].slice.call(document.querySelectorAll('button.btn.sel[data-cmd]')).map(function(b, i){
+      return { b: b, n: parseInt(b.dataset.pr, 10), i: i };
+    }).sort(function(x, y){ return (isNaN(x.n) ? 1e9 : x.n) - (isNaN(y.n) ? 1e9 : y.n) || x.i - y.i; });
+    lit.forEach(function(e){
+      var b = e.b, c = fragment(b); if (!c) return;
+      var k = b.dataset.pr + ':' + c; if (seen[k]) return; seen[k] = true;   // twins are one selection
+      var m = c.match(STAMP);
+      if (m) { if (stamps.indexOf(m[1]) < 0) stamps.push(m[1]); if (m[2]) force = true; }
+      else if (others.indexOf(c) < 0) others.push(c);                        // never the same fragment twice
     });
+    stamps.sort(function(a, b){ return parseInt(a, 10) - parseInt(b, 10); });
     var out = '$ /pr-review --act';
-    if (stamps.length) out += ' --stamp ' + stamps.join(',');
+    if (stamps.length) out += ' --stamp ' + stamps.join(',') + (force ? ' --force' : '');
     if (others.length) out += ' ' + others.join(' ');
     cmdEl.textContent = out;
   }
   // The same decision can be on the board twice -- once on the compact row,
   // once in the expanded card -- and the two must never disagree, so a
-  // selection is keyed by PR and command and painted on every button
-  // carrying that key.
+  // selection is painted on every button carrying the same PR and command.
   function twins(b){
     return [].slice.call(document.querySelectorAll('button.btn[data-pr="' + b.dataset.pr + '"]')).filter(function(o){
       return o.dataset.cmd === b.dataset.cmd;
     });
   }
+  function paint(o, on){
+    o.classList.toggle('sel', on);
+    o.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
   function setSel(b, on){
-    var k = b.dataset.pr + ':' + b.dataset.cmd;
-    if (on) { sel[k] = b.dataset.cmd; } else { delete sel[k]; }
-    twins(b).forEach(function(o){
-      o.classList.toggle('sel', on);
-      o.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-  }
-  // A Do-next card is the same decisions as the rows it names, pressed
-  // together: `data-targets` maps a PR to the row button it presses, and
-  // `data-claims` marks rows a card covers with no row button of its own (a
-  // chain, a consolidation). Either way a card and a contrary row decision
-  // can never both be lit, so the command at the bottom cannot contradict
-  // itself.
-  var cards = [].slice.call(document.querySelectorAll('button.btn[data-targets], button.btn[data-claims]'));
-  function cardTargets(c){ return c.dataset.targets ? JSON.parse(c.dataset.targets) : {}; }
-  function cardPrs(c){
-    if (c.dataset.claims) return c.dataset.claims.split(',');
-    return Object.keys(cardTargets(c));
-  }
-  function rowButton(pr, cmd){
-    return document.querySelector('button.btn[data-pr="' + pr + '"][data-cmd="' + cmd.replace(/"/g, '\\"') + '"]');
-  }
-  // The chain card whose lead decision this button is: pressing it presses
-  // the whole chain.
-  function leadCard(b){
-    return cards.filter(function(c){
-      return c.dataset.lead === b.dataset.pr && cardTargets(c)[b.dataset.pr] === b.dataset.cmd;
-    })[0];
+    if (b.dataset.run) { paint(b, on); return; }   // a handoff is its own line, with no twin and no fragment
+    twins(b).forEach(function(o){ paint(o, on); });
   }
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
   }
-  // A chain does two things to two PRs, so it has no single row button to
-  // light. It marks the rows it covers instead, so the card and the rows are
-  // still visibly the same decision.
-  function markClaimed(card, on){
-    var n = card.dataset.pr.replace('next', '');
-    card.dataset.claims.split(',').forEach(function(pr){
+  // A chain button acts on a second row: once the lead lands, the next link
+  // gets master merged in. That row has no button for it, so it is marked
+  // covered while the chain is lit, and a decision picked there instead
+  // puts the chain out -- the command can never carry both.
+  function coveredBy(b){ return b.dataset.covers ? b.dataset.covers.split(',') : []; }
+  function markCovered(b, on){
+    coveredBy(b).forEach(function(pr){
       var r = document.querySelector('.mrow[data-pr="' + pr + '"]');
       if (!r) return;
       var acts = r.querySelector('.acts');
@@ -1511,74 +1756,61 @@ SCRIPT = r"""
       if (on && acts && !note) {
         note = document.createElement('span');
         note.className = 'claimnote';
-        note.textContent = '✓ covered by Do next ' + n;
-        note.title = 'Do next ' + n + ' acts on this PR, so there is nothing to pick here.';
+        note.textContent = '✓ covered by the chain from #' + b.dataset.pr;
+        note.title = 'The chain button on #' + b.dataset.pr + ' merges master into this PR once that one lands, so there is nothing to pick here. Pick something anyway and the chain goes out.';
         acts.insertBefore(note, acts.firstChild);
       } else if (!on && note) { note.remove(); }
     });
   }
-  function syncCards(){
-    cards.forEach(function(c){
-      var t = cardTargets(c), prs = Object.keys(t), lit;
-      if (prs.length) {
-        lit = prs.every(function(pr){ var b = rowButton(pr, t[pr]); return b && b.classList.contains('sel'); });
-      } else {   // claims-only: any decision lit on a claimed row is a contradiction
-        lit = c.classList.contains('sel') && !cardPrs(c).some(function(pr){
-          return document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
-        });
-      }
-      if (lit !== c.classList.contains('sel')) { setSel(c, lit); if (c.dataset.claims) markClaimed(c, lit); }
+  function syncCovers(){
+    document.querySelectorAll('button.btn[data-covers]').forEach(function(b){
+      var lit = b.classList.contains('sel');
+      var contradicted = coveredBy(b).some(function(pr){
+        return !!document.querySelector('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]');
+      });
+      if (lit && contradicted) { setSel(b, false); lit = false; }
+      markCovered(b, lit);
     });
   }
+  // "Fix it yourself" is a run, not a write. It composes on its own line
+  // above the --act command and never joins it: one `/address-review N` per
+  // PR, because each is a separate interactive session.
+  var handEl = document.getElementById('handcmd'), handWrap = document.getElementById('handwrap');
+  function composeHand(){
+    if (!handEl || !handWrap) return;
+    var runs = [].slice.call(document.querySelectorAll('button.btn.hand.sel[data-run]')).map(function(b){
+      return { run: b.dataset.run, n: parseInt(b.dataset.pr, 10) };
+    }).sort(function(x, y){ return x.n - y.n; }).map(function(e){ return '$ ' + e.run; });
+    handEl.textContent = runs.join('\n');
+    handWrap.hidden = !runs.length;
+  }
+  document.querySelectorAll('button.btn.hand[data-run]').forEach(function(b){
+    b.addEventListener('click', function(){ setSel(b, !b.classList.contains('sel')); composeHand(); });
+  });
+  var copyHand = document.getElementById('copyhand');
+  if (copyHand) copyHand.addEventListener('click', function(){
+    composeHand();
+    if (navigator.clipboard) navigator.clipboard.writeText(handEl.textContent.replace(/^\$ /gm, ''));
+  });
+  // Every click ends here: the covered rows settle first, then the command
+  // is read off whatever is lit, so the bar never shows one click ago.
+  function settle(){ syncCovers(); compose(); composeHand(); progress(); }
   document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){
     if (b.classList.contains('sel')) setSel(b, true);
     b.addEventListener('click', function(){
       var on = !b.classList.contains('sel');
-      var t = b.dataset.targets ? JSON.parse(b.dataset.targets) : null;
-      if (t) {                                   // a batch card: press its rows
-        Object.keys(t).forEach(function(pr){
-          var row = rowButton(pr, t[pr]);
-          if (!row) return;
-          if (on) clearRow(pr, row);
-          setSel(row, on);
-        });
-        // A card can both press rows and cover rows that have no button of
-        // their own (a chain's follow-up, until it is actually stuck).
-        if (b.dataset.claims) {
-          b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
-          markClaimed(b, on);
-        }
-        setSel(b, on); compose(); syncCards(); return;
-      }
-      if (b.dataset.claims) {                    // a chain: the rows it covers defer to it
-        b.dataset.claims.split(',').forEach(function(pr){ if (on) clearRow(pr, null); });
-        markClaimed(b, on);
-      }
       if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
         clearRow(b.dataset.pr, b);
       }
+      // Lighting a chain clears whatever was picked on the row it covers, so
+      // the covered mark is that row's only state.
+      if (on) coveredBy(b).forEach(function(pr){ clearRow(pr, null); });
       setSel(b, on);
-      // A chain's follow-up is part of the same decision, so pressing the
-      // lead row button presses the rest of the chain too -- and releasing it
-      // releases the chain. Every other card is a batch of independent
-      // decisions and is only lit by `syncCards` once they all are.
-      var lead = leadCard(b);
-      if (lead) {
-        var lt = cardTargets(lead);
-        Object.keys(lt).forEach(function(pr){
-          if (pr === b.dataset.pr) return;
-          var row = rowButton(pr, lt[pr]);
-          if (!row) return;
-          if (on) clearRow(pr, row);
-          setSel(row, on);
-        });
-      }
-      compose(); syncCards();
+      settle();
     });
   });
-  syncCards();
   document.getElementById('clear').addEventListener('click', function(){
-    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); compose(); syncCards();
+    document.querySelectorAll('button.btn.sel').forEach(function(b){ setSel(b, false); }); settle();
   });
   // One lever for every fold on the board. The per-panel defaults are the
   // reading order (a guide and its preview links open, the reasons behind a
@@ -1614,6 +1846,7 @@ SCRIPT = r"""
     });
   })();
   document.getElementById('copy').addEventListener('click', function(){
+    compose();   // what goes to the clipboard is what is lit now, not what was last drawn
     var t = cmdEl.textContent.replace(/^\$ /, '');
     if (navigator.clipboard) navigator.clipboard.writeText(t);
   });
@@ -1653,15 +1886,21 @@ SCRIPT = r"""
     });
     apply();
   });
+  // A decision is any lit decision button -- approve, send back, close,
+  // route, unblock, refresh, re-run -- on any row on the page, blocked rows
+  // included; a row a lit chain covers has had its decision made on the
+  // lead's row. The denominator is every row that has a decision to make.
   function progress(){
     var el = document.getElementById('progress'); if (!el) return;
-    var rows = document.querySelectorAll('.mrow[data-verdict="judge"], .mrow[data-verdict="route"]');
-    var done = 0; rows.forEach(function(r){ if (r.querySelector('button.btn.sel[data-kind="decision"]')) done++; });
+    var rows = [].slice.call(document.querySelectorAll('.mrow')).filter(function(r){
+      return r.querySelector('button.btn[data-kind="decision"]');
+    });
+    var done = rows.filter(function(r){
+      return r.querySelector('button.btn.sel[data-kind="decision"]') || r.querySelector('.claimnote');
+    }).length;
     el.textContent = rows.length ? done + ' of ' + rows.length + ' decisions made' : '';
   }
-  document.querySelectorAll('button.btn[data-cmd]').forEach(function(b){ b.addEventListener('click', progress); });
-  document.getElementById('clear').addEventListener('click', progress);
-  apply(); progress(); compose();
+  apply(); settle();
 })();
 """
 

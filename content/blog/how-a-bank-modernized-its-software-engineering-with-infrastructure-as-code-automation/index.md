@@ -86,9 +86,9 @@ Pulumi also gave the bank total confidence in being able to rapidly recover its 
 
 ### Policy as Code Guardrails with Pulumi CrossGuard
 
-[Pulumi CrossGuard](/docs/insights/policy/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
+[Pulumi CrossGuard](/docs/discovery-governance/policy/) adds an extra layer of security and control and is used in conjunction with Azure Policies, which are used for auditing purposes. CrossGuard prevents the deployment of undesired, insecure, or expensive resources during the preview and deployment stage, thus preventing developers from even reaching Azure to provision resources. Custom error messages give developers context on why their deployment was not allowed.
 
-[Pulumi Cloud Policy Packs](/docs/insights/policy/policy-packs/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
+[Pulumi Cloud Policy Packs](/docs/discovery-governance/policy/policy-packs/) allow them to group and deploy many policies simultaneously. The Policy Packs prevent specified resources from being deployed into staging and live environments. For example, one policy requires all SQL databases to use TLS 1.2 by default and another ensures all storage buckets have public access disabled by default. These capabilities helped bolster the security of the bank's cloud infrastructure.
 
 ## Financial services cloud modernization with Pulumi
 

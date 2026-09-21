@@ -1,0 +1,6 @@
+{{- $customer := partial "customers/get.html" (dict "id" .customer "where" "customers/tile.html") -}}
+{{- $color := $customer.color | default "" -}}
+{{- $variant := cond (or (not $color) (eq $customer.tile_logo "light")) "light" "dark" -}}
+<div class="aspect-[4/2] w-full flex items-center justify-center{{ if not $color }} bg-gray-100{{ end }}{{ with .class }} {{ . }}{{ end }}"{{ with $color }} style="{{ printf "background-color:%s" . | safeCSS }}"{{ end }}>
+    {{- partial "customer-logo.html" (dict "customer" $customer.id "variant" $variant "class" "h-20 w-auto max-w-[60%] object-contain") -}}
+</div>

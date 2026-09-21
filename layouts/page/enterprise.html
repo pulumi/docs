@@ -34,7 +34,7 @@
                                     <p class="text-left mt-0 italic font-semibold text-black">{{ $item.quote | markdownify }}</p>
                                     <div class="flex flex-col flex-grow items-center justify-end pb-8">
                                         <div class="w-48 mx-auto">
-                                            {{ partial "customer-logo.html" (dict "logo" $item.company) }}
+                                            {{ partial "customer-logo.html" (dict "customer" $item.customer) }}
                                         </div>
                                     </div>
 

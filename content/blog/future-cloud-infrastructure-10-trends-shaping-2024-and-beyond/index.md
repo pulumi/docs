@@ -93,7 +93,7 @@ Hyperscalers are making the largest infrastructure investments in cloud history 
 - **Oracle** anticipates 15–20% cloud revenue growth in FY 2026–2027 attributable to AI infrastructure demand, tied to its partnership in the [Stargate initiative](https://www.pcgamer.com/software/ai/openais-skyrocketing-spending-could-see-billions-of-dollars-in-silicon-headed-down-the-ai-mines-in-the-next-few-years-including-2-million-nvidia-chips-headed-to-texas-stargate-facility/).
 
 As hyperscalers integrate AI deeper into their service layers, engineering teams must adapt with IaC-driven automation, reusable patterns, and policy controls to deploy cloud and AI infrastructure consistently.
-See how organizations [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video) and [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/).
+See how organizations [deploy AWS infrastructure at the speed of AI with Pulumi](https://www.pulumi.com/aws/#video) and [Pulumi Policies](https://www.pulumi.com/docs/discovery-governance/policy/).
 
 ## 3. Hybrid and Multi-Cloud to Drive Innovation
 
@@ -127,7 +127,7 @@ To enable this transition, enterprises are investing in:
 - **Data pipelines, vector databases, and feature stores** needed for real-time AI workloads
 - **Model-serving infrastructure**, including gateways, inference routers, and autoscaling layers
 - **Strong identity, secrets, and access controls** as AI systems increase security exposure
-- **Automation through Infrastructure as Code** to ensure reproducibility and reduce drift
+- **Automation through infrastructure as code** to ensure reproducibility and reduce drift
 - **Policy-driven governance** to secure cost, compliance, and architectural consistency
 
 As AI becomes deeply embedded across engineering organizations, teams are increasingly using software engineering approaches such as infrastructure as code, reusable components, platform engineering, and policy automation to standardize how AI infrastructure is deployed, scaled, and secured across clouds.
@@ -139,7 +139,7 @@ To support this shift, Pulumi's perspective on [Superintelligence Infrastructure
 - [Pulumi IaC](https://www.pulumi.com/docs/iac/) for standardized AI infrastructure
 - [Pulumi ESC](https://www.pulumi.com/product/secrets-management/) to manage all secrets and configuration at scale
 - [Pulumi Insights](https://www.pulumi.com/product/insights-governance/) for visibility and misconfiguration analysis
-- [Pulumi Policies](https://www.pulumi.com/docs/insights/policy/) for AI-specific guardrails in code, cost detection, and to provide automated compliance protections
+- [Pulumi Policies](https://www.pulumi.com/docs/discovery-governance/policy/) for AI-specific guardrails in code, cost detection, and to provide automated compliance protections
 
 ## 5. IaC Drives Scalable Cloud, Multi-Cloud, and AI Operations
 
@@ -150,8 +150,8 @@ Modern [Infrastructure as Code](https://www.pulumi.com/what-is/what-is-infrastru
 - **Standardizing multi-cloud and hybrid patterns** so teams can deploy consistently across AWS, Azure, Google Cloud, on-prem, and edge environments.
 - **Integrating seamlessly with cloud providers and third-party services**, including data platforms and messaging systems like CockroachDB, Confluent Cloud, and Kafka.
 - **Providing deeper validation and type-safety**, ensuring parameters, dependencies, and security controls are correct before deployment.
-- **Improving cloud resource efficiency and visibility** with tools like [Pulumi Insights Discovery](https://www.pulumi.com/docs/insights/discovery/).
-- **Embedding security and compliance through [Policy as Code](https://www.pulumi.com/docs/insights/policy/)**, enforcing guardrails, cost controls, and regulatory requirements automatically, enabling truly policy-driven cloud management.
+- **Improving cloud resource efficiency and visibility** with tools like [Pulumi Insights Discovery](https://www.pulumi.com/docs/discovery-governance/discovery/).
+- **Embedding security and compliance through [Policy as Code](https://www.pulumi.com/docs/discovery-governance/policy/)**, enforcing guardrails, cost controls, and regulatory requirements automatically, enabling truly policy-driven cloud management.
 - **Enabling intelligent automation**, from unit and integration tests to auto-remediation policies and policy-driven approvals.
 - **Incorporating AI-driven optimization and insights**, helping teams detect misconfigurations, analyze usage patterns, and generate infrastructure updates with tools like [Pulumi Neo](https://www.pulumi.com/product/neo/) and [Pulumi Policies](https://www.pulumi.com/blog/policy-next-gen/).
 

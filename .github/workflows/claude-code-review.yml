@@ -386,13 +386,14 @@ jobs:
       - name: Resolve PR context
         id: pr-context
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # PR number comes from the workflow_run pull_requests array on
           # the triage-chained path, or from the workflow_dispatch input
           # on the #new-review path.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            PR="${{ github.event.inputs.pr_number }}"
+            PR="$INPUT_PR"
           else
             PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           fi
@@ -900,7 +901,7 @@ jobs:
         run: |
           # Added content pages, plus any blog/case-study file (any status).
           FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|case-studies)/"))) | .filename' \
+            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|customers)/"))) | .filename' \
             | paste -sd, - || true)
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
           if [ -n "$FILES" ]; then echo "readthrough scope: $FILES"; else echo "readthrough scope: none"; fi
@@ -945,6 +946,38 @@ jobs:
             --pr "$PR" --repo "$GITHUB_REPOSITORY" \
             --out .verified-claims.json \
             || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+
+      # Raw claim records for post-mortems. The evidence trail keeps a rendered,
+      # truncated view of each verdict; the questions a false `contradicted`
+      # raises — what `type` / `source_hint` the extractor assigned, which
+      # layer found the claim, why it routed to web search, what the
+      # pre-fetch actually returned — are only answerable from these files,
+      # and they vanished with the runner. Uploaded here rather than beside
+      # the other debug bundles so a later timeout or model failure can't
+      # lose them. Everything in them derives from the public diff, public
+      # web pages (unauthenticated fetch, 8 KB/URL × 30 URLs at most), and
+      # repo-scoped GITHUB_TOKEN reads.
+      - name: Upload claim artifacts
+        if: always() && steps.pr-context.outputs.pr_number != '' && steps.pr-context.outputs.skip_reason == ''
+        # Observability only — an upload hiccup must not fail the review.
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-claims-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            .candidate-claims.json
+            .verified-claims.json
+            .fetched-urls.json
+          # All dotfiles: upload-artifact skips hidden files unless this is
+          # set, and with if-no-files-found: ignore the bundle would come up
+          # empty without a word.
+          include-hidden-files: true
+          # A re-run attempt keeps the run id, so the name repeats.
+          overwrite: true
+          # Matches the other debug bundles. .fetched-urls.json holds excerpts of
+          # third-party pages, which have no reason to outlive a post-mortem.
+          retention-days: 30
+          if-no-files-found: ignore
       # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
@@ -1588,6 +1621,10 @@ jobs:
           && steps.claude-review.outcome == 'success'
         id: v3-build
         continue-on-error: true
+        env:
+          # Only for the advisory anchor-check diff fetch below; without it
+          # `gh api` fails and the check silently never runs.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           if [[ "${{ steps.validate-body.outputs.violations_present }}" != "false" ]]; then
@@ -1595,13 +1632,26 @@ jobs:
             echo "ready=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          # Advisory anchor check: build-evidence flags a finding whose cited
+          # line falls outside the PR's own changed lines, which is what
+          # silently disables auto-refresh (#21748). A failed fetch just
+          # leaves the check off -- it is never allowed to cost the review.
+          rm -f /tmp/anchor-pr.diff
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/${{ github.repository }}/pulls/${{ steps.pr-context.outputs.pr_number }}" \
+            > /tmp/anchor-pr.diff 2>/dev/null \
+            || echo "::warning::could not fetch the PR diff; skipping the anchor check"
+          ANCHOR_ARGS=""
+          if [ -s /tmp/anchor-pr.diff ]; then
+            ANCHOR_ARGS="--pr-diff /tmp/anchor-pr.diff"
+          fi
           if ! python3 .claude/commands/docs-review/scripts/build-evidence.py \
               --author-body .review-draft-author.md \
               --brief-body .review-draft-brief.md \
               --base .review-evidence-base.json \
               --output .review-evidence.json \
               --author-out .review-author.md \
-              --brief-out .review-brief.md; then
+              --brief-out .review-brief.md $ANCHOR_ARGS; then
             echo "::error::build-evidence.py failed — a card row didn't parse. See log above."
             echo "ready=false" >> "$GITHUB_OUTPUT"
             exit 0

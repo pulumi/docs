@@ -214,7 +214,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
-- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/insights/policy/)
+- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/discovery-governance/policy/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 Universal Language Code Examples:
@@ -1273,7 +1273,7 @@ Docker Compose - While not an IaC tool, Docker Compose defines multi-container a
 
 These platforms and tools serve important roles in the infrastructure automation ecosystem but should not be confused with infrastructure as code tools themselves. They enhance and orchestrate the work of actual IaC tools rather than replacing them.
 
-## The Future of Infrastructure as Code
+## The future of infrastructure as code
 
 The infrastructure as code landscape is rapidly evolving toward software engineering maturity, with several transformative trends reshaping how organizations approach infrastructure:
 
@@ -1497,7 +1497,7 @@ Declarative DSL-based tools such as Terraform and OpenTofu can also be driven by
 
 By GitHub stars, Kubernetes leads the broader infrastructure ecosystem at roughly 124,900 stars, reflecting its role as the de facto container orchestration standard rather than a pure IaC tool. Among dedicated IaC tools, Terraform remains the most-starred at roughly 49,500, followed by OpenTofu at roughly 29,900, Pulumi at roughly 25,600, AWS CDK at roughly 12,900, and Crossplane at roughly 12,000 (measured 2026-08-22; star counts change continuously and are one signal among many, not a ranking of technical merit). Terraform's larger community reflects a decade of first-mover adoption, while Pulumi, OpenTofu, and Crossplane have grown fastest among teams prioritizing general-purpose languages, open governance, or Kubernetes-native infrastructure management, respectively.
 
-## Conclusion: The Evolution of Infrastructure as Code
+## Conclusion: The evolution of infrastructure as code
 
 The infrastructure as code landscape in 2026 reflects a maturing field where different approaches serve different organizational needs and team preferences. The evolution from manual processes to automated infrastructure has branched into multiple viable paths, each with distinct advantages.
 

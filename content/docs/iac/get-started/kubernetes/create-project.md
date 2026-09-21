@@ -297,9 +297,7 @@ export const name = deployment.metadata.name;
 """A Kubernetes Python Pulumi program"""
 
 import pulumi
-from pulumi_kubernetes.apps.v1 import Deployment, DeploymentSpecArgs
-from pulumi_kubernetes.meta.v1 import LabelSelectorArgs, ObjectMetaArgs
-from pulumi_kubernetes.core.v1 import ContainerArgs, PodSpecArgs, PodTemplateSpecArgs
+from pulumi_kubernetes.apps.v1 import Deployment
 
 app_labels = { "app": "nginx" }
 
@@ -480,7 +478,7 @@ public class App {
                     .build());
 
             var name = deployment.metadata()
-                .applyValue(m -> m.orElseThrow().name().orElse(""));
+                .applyValue(m -> m.name().orElse(""));
 
             ctx.export("name", name);
         });

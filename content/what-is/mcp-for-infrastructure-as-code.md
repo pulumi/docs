@@ -5,7 +5,7 @@ type: what-is
 date: 2026-07-21T12:18:32-07:00
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 schema_type: auto
-authors: ["alex-leventer"]
+authors: ["pulumi-content-team"]
 ---
 
 MCP for infrastructure as code is the use of the Model Context Protocol, an open standard for connecting AI applications to external tools, to let AI agents read, generate, and act on cloud infrastructure defined in code. An MCP server exposes IaC operations, like previewing and deploying resources, through one consistent interface any MCP-compatible agent can call.
@@ -73,9 +73,9 @@ The local server's tool names are prefixed to keep them unambiguous inside a hos
 | `mcp/pulumi` Docker Hub pulls | 18,062 | 2026-09-12 |
 | Tools exposed, local server | 11 tools, 1 prompt | 2026-09-12 |
 | Tools exposed, hosted server | 14 tools, 6 prompts | 2026-09-12 |
-| Cloud providers reachable through Pulumi's IaC engine | 312 | 2026-09-12 |
+| Cloud providers reachable through Pulumi's IaC engine | [Hundreds](/registry/) | 2026-09-12 |
 
-No other MCP server for infrastructure as code connects an agent to this many providers through one interface. Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
+Download and pull counts come from the [npm registry](https://www.npmjs.com/package/@pulumi/mcp-server) and [Docker Hub](https://hub.docker.com/r/mcp/pulumi) on the dates shown; the tool and prompt counts are the sets enumerated on the [Pulumi MCP server docs page](/docs/ai/mcp-server/). Package-manager download counts include CI and automation traffic alongside interactive use, so treat them as a usage floor rather than a headcount of engineers.
 
 ## What can AI agents do with it?
 
