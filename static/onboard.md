@@ -36,17 +36,19 @@ output) on the PATH:
 
 - For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
   — or use the full path.
-- Permanently (do not skip, and do not wait to be asked): proactively offer to
-  add that directory to the PATH for future shells, and make the offer in this
-  step. Never edit anything automatically — only with the user's go-ahead.
+- Permanently (do not skip, and do not wait to be asked): this is what makes
+  `pulumi` available in the user's future shells — without it, the command won't
+  be found the next time they open a terminal. Say that plainly, then offer to
+  amend their PATH for them: on their go-ahead, add the install directory to the
+  right shell config. Never edit it automatically — only with their go-ahead.
   Detect the shell (`$SHELL` names the login shell) and use its own target and
   syntax rather than assuming zsh:
   - zsh: add `export PATH="$HOME/.pulumi/bin:$PATH"` to `~/.zshrc`.
   - bash: the same line in `~/.bashrc` (Linux) or `~/.bash_profile` (macOS).
   - fish: run `fish_add_path $HOME/.pulumi/bin`.
 
-  If the user declines or you can't write the file, hand them the matching
-  command for their shell and name the install location (`$HOME/.pulumi/bin`).
+  If they'd rather do it themselves, quote the exact command for their shell so
+  they can run it later, and name the install location (`$HOME/.pulumi/bin`).
 
 Only if no installer can run (say, a restricted environment) and Node is
 available, fall back to `npx pulumi` for this session — but tell the user
