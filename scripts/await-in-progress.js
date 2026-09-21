@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { Octokit } = require("@octokit/rest");
+// @octokit/rest is required lazily inside waitForInProgressRuns so that requiring
+// this file (as scripts/await-in-progress.test.js does, to reach dropStaleRuns)
+// does not need the dependency installed. Nothing at module scope talks to GitHub.
 
 // How long to sleep between checks for other in-progress runs.
 const pollIntervalMs = 60000;
@@ -8,6 +10,61 @@ const pollIntervalMs = 60000;
 // Stop waiting after this long. A deploy runs ~9 minutes, so a healthy queue
 // never approaches it; hitting it means a predecessor is wedged.
 const maxWaitMs = 45 * 60 * 1000;
+
+// Ignore runs too old to still be executing. GitHub Actions kills a job at its
+// timeout -- six hours by default -- so a run whose start is older than that has
+// either finished, in which case the status query below does not return it, or is
+// wedged in a state it will never leave. That makes this threshold safe by
+// construction: it cannot skip a run that is genuinely holding the stack.
+//
+// This exists because three wedged runs accumulated here by 2026-09, all reported
+// by the API as `queued` and none of them ever started:
+//
+//     23509983446  build-and-deploy.yml          queued since 2026-03-24
+//     31117840729  build-and-deploy.yml          queued since 2026-08-06 (cancelled)
+//     32907599016  testing-build-and-deploy.yml  queued since 2026-08-25
+//
+// Two of them cannot be cleared at all: cancel, force-cancel and delete all refuse
+// ("Cannot cancel a workflow run that has not been queued yet", HTTP 409/403), so
+// filtering them here is the only available remedy.
+//
+// They are not a cosmetic problem. The sole early exit from the wait loop is
+// `recent.length === 0`, and a run that never completes is permanently lower-id
+// than every new run. So from 2026-09-18, when `queued` joined the status query and
+// these became visible, every deploy waited out the full maxWaitMs and then
+// proceeded regardless: 40 consecutive production runs went from ~9 minutes to a
+// median of 54, and the serialization this script exists to provide was silently
+// switched off for three days. Three 409 stack conflicts on 2026-09-21 were the
+// first symptom anyone traced back here.
+const maxRunAgeMs = 6 * 60 * 60 * 1000;
+
+// Drop runs older than maxRunAgeMs, logging each one. Exported for tests.
+//
+// The logging is not incidental. The old line reported only a count -- "Found 5
+// other job(s)" -- so a queue holding a run from March looked exactly like a busy
+// afternoon. Naming what is being waited on is what makes the next wedged run take
+// minutes to diagnose instead of three days.
+//
+// A run whose timestamp is missing or unparseable is treated as live: this filter
+// should only ever remove a run it can prove is too old, and waiting needlessly is
+// the safe direction to fail.
+function dropStaleRuns(runs, nowMs, log = console.log) {
+    return runs.filter(run => {
+        const startedAt = Date.parse(run.run_started_at || run.created_at);
+        if (Number.isNaN(startedAt)) {
+            return true;
+        }
+        const ageMs = nowMs - startedAt;
+        if (ageMs <= maxRunAgeMs) {
+            return true;
+        }
+        log(`::warning::Ignoring ${run.html_url} (status ${run.status}, started ` +
+            `${Math.round(ageMs / (60 * 60 * 1000))}h ago): older than a job can run, ` +
+            `so it cannot be holding the stack. This run is wedged and should be ` +
+            `cancelled or reported to GitHub.`);
+        return false;
+    });
+}
 
 // Where we record the number of seconds this run spent parked in the queue. The
 // build-duration alert (scripts/ci-build-duration-alert.sh) reads this file and subtracts
@@ -56,6 +113,7 @@ async function waitForInProgressRuns() {
     // are the common case precisely when the queue is backed up.
     const statuses = ["in_progress", "queued", "waiting"];
 
+    const { Octokit } = require("@octokit/rest");
     const octokit = new Octokit({
         auth: githubToken,
     });
@@ -89,7 +147,7 @@ async function waitForInProgressRuns() {
         for (const run of pages.flat()) {
             byId.set(run.id, run);  // a run can change status between calls
         }
-        const runs = [...byId.values()];
+        const runs = dropStaleRuns([...byId.values()], Date.now());
 
         // Sort in-progress runs descendingly, excluding the current one.
         const recent = runs
@@ -140,4 +198,11 @@ process.on("unhandledRejection", (error) => {
     throw error;
 });
 
-waitForInProgressRuns();
+// Only run when invoked directly (`node ./scripts/await-in-progress.js`, as
+// scripts/ci-push.sh does), so the test file can require dropStaleRuns without
+// the script trying to talk to GitHub on import.
+if (require.main === module) {
+    waitForInProgressRuns();
+}
+
+module.exports = { dropStaleRuns, maxRunAgeMs };
