@@ -549,8 +549,11 @@ these rules:
 1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
    reason (move the line between sections/drafts and keep its id). Moving a
    finding down is a contract violation `build-evidence.py` rejects (exit 2).
-   Exception: a `route: preflight` detector stub whose TODO explicitly says
-   "bucket by reader impact" may land in ⚠️.
+   Exception: a readthrough detector stub (origin `preflight:readthrough-*`)
+   — its TODO says "bucket by reader impact", so it may land in ⚠️. The
+   validator and `build-evidence.py` both take that from
+   `compose-review.v3_may_demote`; Hugo and frontmatter stubs stay
+   promote-only.
 1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
    `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
    `**Pre-existing:** <reason>`. The cell must START with the label.
@@ -641,7 +644,8 @@ high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n
 this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no `F?` blocks,
 exactly one `**Fix:**` line each, none on the brief), and
 `bucket-split-faithful` (promote-only against the evidence base; a finding
-may never be demoted or deleted — rewrite it as `**Spurious:** …` instead).
+may never be demoted or deleted — rewrite it as `**Spurious:** …` instead;
+the one exception is a readthrough stub moved to ⚠️, per rule 1 above).
 
 Shared rules that also run on v3 (some against both bodies):
 `no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,
