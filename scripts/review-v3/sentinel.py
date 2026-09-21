@@ -337,6 +337,12 @@ class Verdict:
     head_sha: str
     gates: list[Gate] = field(default_factory=list)
     would_be: str | None = None
+    # The summary as it read before `_stamp_report_only` prepended the preview
+    # paragraph. The status comment's gateless branches (not governed, no
+    # gates) render the summary's first paragraph as their one informative
+    # line; after stamping, that first paragraph is the preview text, so the
+    # comment repeated its own banner and never said "Not governed — …".
+    base_summary: str | None = None
     blocking_ids: list[str] = field(default_factory=list)
     # Facts a downstream auto-merge job keys on, so it never has to re-derive
     # them from the summary text: did the tightened bar call this PR
@@ -759,6 +765,7 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
     survives, so it is set before `conclusion` is overwritten.
     """
     verdict.would_be = verdict.conclusion
+    verdict.base_summary = verdict.summary
     verdict.summary = (
         f"**PREVIEW MODE — informational only, safe to ignore for now. This check "
         f"would be: `{verdict.conclusion}`.** Enforcement is coming: once it lands, "
@@ -1332,19 +1339,26 @@ def render_status_comment(verdict: Verdict) -> str:
             f"are informational and **safe to ignore for now**. It *would* have concluded "
             f"`{verdict.would_be}`.",
             "> ",
-            "> **This will be enforced in the near future.** Once it is, every row below "
-            "has to be green before this PR can merge. The rows are the sign-offs a merge "
-            "needs — some yours, some a reviewer's or a deploy's. Tell us in `#docs` if one "
-            "looks wrong.",
-            "",
         ]
+        # The enforcement half promises "every row below", so it only goes
+        # above a gate table. A gateless comment (not governed) has no rows
+        # to turn green, and nothing about it changes on enforcement day.
+        if verdict.governed and verdict.gates:
+            lines += [
+                "> **This will be enforced in the near future.** Once it is, every row below "
+                "has to be green before this PR can merge. The rows are the sign-offs a merge "
+                "needs — some yours, some a reviewer's or a deploy's. Tell us in `#docs` if one "
+                "looks wrong.",
+            ]
+        else:
+            lines += [
+                "> **This will be enforced in the near future.** Tell us in `#docs` if "
+                "anything here looks wrong.",
+            ]
+        lines += [""]
 
-    if not verdict.governed:
-        lines += [verdict.summary.split("\n\n")[0], ""]
-        return "\n".join(lines).rstrip() + "\n"
-
-    if not verdict.gates:
-        lines += [verdict.summary.split("\n\n")[0], ""]
+    if not verdict.governed or not verdict.gates:
+        lines += [(verdict.base_summary or verdict.summary).split("\n\n")[0], ""]
         return "\n".join(lines).rstrip() + "\n"
 
     blocking = [g for g in verdict.gates if g.status in ("red", "error")]

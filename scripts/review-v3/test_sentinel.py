@@ -349,6 +349,11 @@ def _gate(verdict, prefix):
 # ---- Tests ---------------------------------------------------------------
 
 
+# "owe"/"owes"/"owed" as a word — the framing the preview copy must avoid. A
+# bare substring test would also trip on "lower", "power", or "follower".
+_OWE_RE = re.compile(r"\bowe[sd]?\b", re.IGNORECASE)
+
+
 def test_mechanical_skips_the_review_but_not_the_approver():
     """`mechanical` is a model-review saving, not a human-review waiver.
 
@@ -1131,7 +1136,7 @@ def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
     assert "*would* have concluded `failure`" in body
     # The rows are a sign-off checklist (G3 is an approval, G4 a deploy), so
     # the banner must not frame them as the author's to-do list.
-    assert "owe" not in body
+    assert not _OWE_RE.search(body)
 
     enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
     assert "Preview mode" not in enforcing and "(preview)" not in enforcing
@@ -1231,7 +1236,7 @@ def test_report_only_wraps_neutral():
     assert v.would_be == "failure"
     assert v.summary.startswith("**PREVIEW MODE — informational only, safe to ignore "
                                 "for now. This check would be: `failure`.**")
-    assert "Enforcement is coming" in v.summary and "owe" not in v.summary
+    assert "Enforcement is coming" in v.summary and not _OWE_RE.search(v.summary)
 
 
 def test_draft_neutral():
@@ -1303,6 +1308,23 @@ def test_not_governed_regen_needs_author_and_label():
     v3 = sentinel.evaluate(StubGh(pr=pr_meta(author="someone", labels=["automation/merge"]),
                                   files=[docs_file_substantive()]), CONFIG)
     assert v3.governed is True
+
+
+def test_not_governed_preview_comment_still_says_not_governed():
+    """The gateless branches render the summary's first paragraph. Stamping
+    prepends the preview paragraph, so without `base_summary` the comment
+    repeated its banner and dropped the one line that explains the PR."""
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
+    body = sentinel.render_status_comment(v)
+    assert "**Not governed**" in body and "not_governed" in body
+    assert "PREVIEW MODE" not in body, "the check-run paragraph is not comment copy"
+    assert "> [!WARNING]" in body and "(preview)" in body
+    # No gate table, so no promise about its rows.
+    assert "every row below" not in body and "| Gate |" not in body
+
+    enforcing = sentinel.render_status_comment(
+        sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG))
+    assert "**Not governed**" in enforcing and "Preview mode" not in enforcing
 
 
 def test_not_governed_report_only_wraps_neutral():
