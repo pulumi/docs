@@ -847,7 +847,7 @@ Hugo processes 46+ content directories:
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
 - `/content/product/` → Product pages
-- `/content/case-studies/` → Customer stories
+- `/content/customers/` → Customer stories (the customer registry lives in `data/customers.yaml`)
 
 > **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary) is served the same way, from pulumi/marketing-web.
 
@@ -1411,6 +1411,24 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Preserves private fork changes
 
 **Why It Matters:** Keeps private documentation fork synchronized with public repository.
+
+#### warm-build-cache.yml
+
+**Purpose:** Populate the shared Hugo image cache and meta-image cache from the default branch on downstream mirrors
+
+**Triggers:**
+
+- Every 6 hours
+- Manual: `workflow_dispatch`
+
+**Target:** Only runs on private fork repositories (not pulumi/docs)
+
+**Jobs:**
+
+- Check out `master`, restore the `meta-images-*` and `hugo-resources-*` caches, run `make ensure` + `make build`, and let `actions/cache` save the result
+- No deploy, no cloud credentials
+
+**Why It Matters:** GitHub scopes `actions/cache` so a branch can only restore entries written by itself or by the default branch. On the mirrors, `build-and-deploy.yml` and `testing-build-and-deploy.yml` are disabled, so nothing ever wrote a cache from `master` and every PR build there started cold (Hugo re-encoding ~2,700 images, ~19-24 minutes per run versus ~7 warm on pulumi/docs). This job is the missing default-branch writer. `pulumi/docs` doesn't need it because its master deploys already save the same caches on every push.
 
 ### Social Media Automation
 

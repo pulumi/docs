@@ -32,6 +32,13 @@ const additionalRoutes = [
     // Alternative version of the home page for Google ads.
     "https://www.pulumi.com/b/",
     "https://www.pulumi.com/registry/sitemap.xml",
+    // Cloud REST API schema pages carry `block_external_search_index: true` (they're
+    // a large, uniformly auto-generated set with no search intent of their own; see
+    // CONTRIBUTING.md), which also drops them from sitemap.xml, so the sitemap-derived
+    // crawl below never visits any of them and their outbound links go unchecked.
+    // All ~800 pages share one template, so one representative page is enough to
+    // catch a template-wide broken-link regression even without full coverage.
+    "https://www.pulumi.com/docs/reference/cloud-rest-api/schema/decryptenvironmentsecretsrequest/",
 ]
 
 

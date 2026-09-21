@@ -5,19 +5,18 @@
     Body is YAML: a list of rows. Each row carries a body and one of two tile
     treatments.
 
-      body   the proof itself, markdown (required)
-      logo   a customer id resolved through layouts/partials/customer-logo.html,
-             i.e. assets/fingerprinted/logos/customers/<id>.svg or a
-             layouts/partials/customer-logos/<id>.html
-      icon   a phosphor icon name, for a customer that can't be named — renders
-             a dark tile with the mark instead of a logo
-      label  the name to show. Required with `icon` (it is the tile's only
-             text); optional with `logo`, where it becomes the tile's label for
-             assistive tech and defaults to the logo id.
+      body      the proof itself, markdown (required)
+      customer  an id from data/customers.yaml, rendered through
+                layouts/partials/customer-logo.html
+      icon      a phosphor icon name, for a customer that can't be named —
+                renders a dark tile with the mark instead of a logo
+      label     the name to show. Required with `icon` (it is the tile's only
+                text); optional with `customer`, where it becomes the tile's
+                label for assistive tech and defaults to the customer id.
 
     Usage:
       {{< customer-proof >}}
-      - logo: supabase
+      - customer: supabase
         label: Supabase
         body: "**Supabase** runs **16 regions**, inside guardrails."
       - icon: detective
@@ -31,8 +30,8 @@
 {{- end -}}
 <div class="customer-proof">
     {{- range $rows -}}
-        {{- if and (not .logo) (not .icon) -}}
-            {{- errorf "customer-proof: every row needs a logo= or an icon= (called from %s)." $.Page.File.Filename -}}
+        {{- if and (not .customer) (not .icon) -}}
+            {{- errorf "customer-proof: every row needs a customer= or an icon= (called from %s)." $.Page.File.Filename -}}
         {{- end -}}
         {{- if and .icon (not .label) -}}
             {{- errorf "customer-proof: an icon row needs a label=, since the mark carries no name (called from %s)." $.Page.File.Filename -}}
@@ -47,8 +46,8 @@
             {{ partial "icon.html" (dict "name" .icon "weight" "regular" "class" "size-8") }}
         </div>
         {{- else -}}
-        <div class="customer-proof-tile" role="img" aria-label="{{ .label | default .logo }}">
-            {{ partial "customer-logo.html" (dict "logo" .logo) }}
+        <div class="customer-proof-tile" role="img" aria-label="{{ .label | default .customer }}">
+            {{ partial "customer-logo.html" (dict "customer" .customer "where" "the customer-proof shortcode") }}
         </div>
         {{- end -}}
         <div class="customer-proof-body">{{ $.Page.RenderString .body }}</div>

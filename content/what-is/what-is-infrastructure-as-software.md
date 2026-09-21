@@ -6,27 +6,6 @@ type: what-is
 date: 2021-07-22T15:11:35-07:00
 page_title: "Infrastructure as Software: The Next Step in Cloud Management"
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["cam-soper"]
 ---
 
@@ -59,7 +38,7 @@ Both describe the desired state of cloud resources. The difference is what's aro
 
 | Dimension | DSL-based IaC (HCL, YAML, ARM) | Infrastructure as Software |
 |---|---|---|
-| Language | Domain-specific | TypeScript, Python, Go, C#, Java, etc. |
+| Language | Domain-specific | TypeScript, Python, Go, .NET, Java, etc. |
 | Types | Limited or none | Full static types over cloud APIs |
 | Abstractions | Modules, limited generics | Classes, functions, packages, generics |
 | Sharing | Per-tool registry (Terraform Registry, etc.) | Standard package managers (npm, PyPI, etc.) |

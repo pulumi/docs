@@ -590,7 +590,7 @@ def render_header(timestamp: str, head_sha: str = "") -> str:
     `pull_request: synchronize` event, so the `review:stale` label can miss a
     push entirely (PR #20556 closed wearing `review:no-blockers` while the
     pinned review described content a later conflict-resolution commit had
-    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    replaced). Label-independent consumers (`/pr-review`'s collect.py, the
     review-label-reconcile workflow) compare this SHA against the PR head —
     an exact check, immune to suppressed webhooks. The re-entrant update path
     must refresh it alongside the `Last updated` timestamp (see
@@ -1046,6 +1046,42 @@ def stance_records(stances: list[dict]) -> list[dict]:
         if fb:
             rec["found_by"] = fb
         out.append(rec)
+    return out
+
+
+# Mirrors CONFIDENCES / FRAMINGS in scripts/review-v3/validate-evidence.py, which
+# the publish job runs from the default branch. test_compose_v3.py pins the two
+# together: a value added here first fails validation and blocks publish; added
+# there first, it is silently dropped from the trail.
+_TRAIL_CONFIDENCES = ("high", "medium", "low")
+_TRAIL_FRAMINGS = ("exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none")
+
+
+def _trail_verdict_metadata(v: dict) -> dict:
+    """The verifier metadata a trail record carries beside the rendered verdict
+    — all optional, each emitted only when the verdict has a well-formed value.
+
+    A verdict that looks wrong is diagnosed from these: the claim `type`
+    drives routing, `confidence` and `framing` drive bucket placement, and
+    `turn_cap_exhausted` / `source_discipline_gate` mark a verdict the
+    verifier coerced rather than reached. Without them the evidence object
+    shows what was decided and nothing about why. Anything malformed is
+    dropped, never coerced: a bad optional field must not cost the whole
+    evidence object its schema validation."""
+    out: dict = {}
+    for key in ("claim_id", "type", "source_discipline_gate"):
+        val = v.get(key)
+        if isinstance(val, str) and val.strip():
+            out[key] = trunc(val.strip(), 80)
+    if v.get("confidence") in _TRAIL_CONFIDENCES:
+        out["confidence"] = v["confidence"]
+    if v.get("framing") in _TRAIL_FRAMINGS:
+        out["framing"] = v["framing"]
+    note = v.get("framing_note")
+    if isinstance(note, str) and note.strip():
+        out["framing_note"] = redact(trunc(note.strip(), EVIDENCE_TRUNC))
+    if v.get("turn_cap_exhausted") is True:
+        out["turn_cap_exhausted"] = True
     return out
 
 
@@ -1795,6 +1831,15 @@ def waiting_state_cell(bucket: str, disposition: dict | None) -> str:
     """The State cell of the brief's "Waiting on the author" table."""
     if isinstance(disposition, dict):
         d = disposition.get("disposition")
+        if d == "author-accepted":
+            # #21640: the author resolved their own finding. Sentinel counts
+            # this as answered (the author DID answer), but the marker keeps
+            # it visibly distinct from a maintainer's answer — the original
+            # disposition tells the approver exactly what the author waved
+            # through rather than dissolving into the same green as
+            # `review:no-blockers` gives a real reviewer's clearance.
+            orig = disposition.get("original_disposition") or "accepted"
+            return f"🔏 author-accepted ({orig})"
         if d == "accepted":
             return "✋ accepted as-is by the author"
         if d == "refuted":
@@ -2153,6 +2198,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         route = v.get("route")
         if route in ("pass0", "pass1", "pass2", "pass3", "preflight"):
             rec["route"] = route
+        rec.update(_trail_verdict_metadata(v))
         trail_records.append(rec)
 
     log_block = render_investigation_log(

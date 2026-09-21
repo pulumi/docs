@@ -11,13 +11,13 @@
 //
 // Templates (all from the Figma "Social assets — banners" file):
 //   - "title"      — centered title on the LIGHT brand field (what-is, migrate,
-//     partner, topics, and the case-studies index). Simple frame.
+//     partner, topics, and the customers index). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
 //     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
 //   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT). Used for the
 //     case-study industry cards (meta-images/industries.mjs).
 //   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
-//     right-aligned "CASE STUDY" badge and a large title (case-studies).
+//     right-aligned "CASE STUDY" badge and a large title (customers).
 //   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
 //   - "blog"       — DARK blog-post card: the post's feature image bled off the
 //     right, faded into the field, with a "Blog" badge + title (meta-images/blog.mjs).
@@ -69,7 +69,10 @@ const OG_TEMPLATE_VERSION = "6"
 //   title r2: optional violet label pill between the logo and the title (the
 //     whitepapers section uses it); unlabelled title cards are unchanged.
 //   title r3: more clearance between the logo and the label pill.
-const TEMPLATE_REVISION = { events: 2, title: 3 }
+//   case-study r2: the co-brand logo comes from data/customers.yaml (the
+//     registry's light-background SVG) rather than each page's customer_logo
+//     path, so a few cards pick up a different variant of the same logo.
+const TEMPLATE_REVISION = { events: 2, title: 3, "case-study": 2 }
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
@@ -103,15 +106,13 @@ const titleSection = (name, recursive, label) => ({
 const SECTIONS = [
   titleSection("what-is", false),
   {
-    name: "case-studies",
-    // Section index → plain "Case Studies" title card; individual studies → the
-    // co-branded case-study card.
-    template: (fm, id) => (id === "case-studies" ? "title" : "case-study"),
+    name: "customers",
+    template: (fm, id) => (id === "customers" ? "title" : "case-study"),
     recursive: false,
     fields: (fm, id) =>
-      id === "case-studies"
-        ? { title: clean(fm.title) || "Case Studies" }
-        : { title: clean(fm.title), companyLogo: customerLogo(fm.customer_logo) },
+      id === "customers"
+        ? { title: clean(fm.title) || "Customers" }
+        : { title: clean(fm.title), companyLogo: customerLogo(fm.customer) },
     // Individual studies need a resolvable customer logo; the root title card doesn't.
     valid: (f, t) => !!f.title && (t === "title" || !!f.companyLogo),
   },
@@ -152,7 +153,7 @@ const SECTIONS = [
     // Event / workshop cards (content/events/<slug>/index.md leaf bundles).
     // Individual events → the events card in two sizes (landscape OG meta image
     // + square second og:image). The /events/ index page → a plain title card,
-    // landscape only (same treatment as the case-studies index). The
+    // landscape only (same treatment as the customers index). The
     // /event-meta-image skill produces enriched, committed overrides.
     name: "events",
     template: (fm, id) => (id === "events" ? "title" : "events"),
@@ -165,10 +166,10 @@ const SECTIONS = [
     // OG_SAMPLE → one representative EVENT (both variants); exclude the index so
     // the sample exercises the events renderer, not the index title card.
     sampleGroupBy: (id) => (id === "events" ? null : "events"),
-    // External events do publish an on-site page, but it's never linked (the
-    // events list links straight to the external URL) and is meant to be
-    // noindexed — not worth a card; the default og image covers it.
-    skip: (fm) => fm.external === true,
+    // An off-page event (event_url) still publishes an on-site stub, but it's
+    // never linked (the list links straight out) and is noindexed/redirected —
+    // not worth a card; the default og image covers it.
+    skip: (fm) => Boolean(fm.event_url),
     fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
     valid: (f) => !!f.title,
   },
@@ -206,26 +207,21 @@ const SECTIONS = [
   },
 ]
 
-// --- Customer logo (case-study co-brand) -------------------------------------
-// Resolve a frontmatter logo path ("/logos/customers/foo.svg") under static/ to
-// a data URI + display dims scaled into the header lockup. Returns null when the
-// asset is missing or an unsupported type, so the page is skipped (valid()).
-// Customer logos live under assets/fingerprinted/ (routed through Hugo's
-// fingerprinted-img partial on the case-study page); a few also sit in static/.
-const LOGO_ROOTS = [join(REPO_ROOT, "assets", "fingerprinted"), join(REPO_ROOT, "static")]
-function customerLogo(p, { maxH = 52, maxW = 260 } = {}) {
-  const rel = clean(p).replace(/^\//, "")
-  if (!rel) return null
-  const file = LOGO_ROOTS.map((r) => join(r, rel)).find((f) => existsSync(f))
-  if (!file) return null
-  const lower = rel.toLowerCase()
-  const mime = lower.endsWith(".svg") ? "image/svg+xml" : lower.endsWith(".png") ? "image/png" : null
-  if (!mime) return null
+const LOGO_DIR = join(REPO_ROOT, "assets", "fingerprinted", "logos", "customers")
+function customerLogo(id, { maxH = 52, maxW = 260 } = {}) {
+  const slug = clean(id)
+  if (!slug) return null
+  const candidates = [[`${slug}.svg`, "image/svg+xml"], [`${slug}.png`, "image/png"]]
+  const hit = candidates.find(([name]) => existsSync(join(LOGO_DIR, name)))
+  if (!hit) return null
+  const [name, mime] = hit
+  const file = join(LOGO_DIR, name)
+  const lower = name.toLowerCase()
   const buf = readFileSync(file)
   const { w, h } = intrinsicSize(buf, lower)
-  let dw = (w / h) * maxH, dh = maxH
-  if (dw > maxW) { dw = maxW; dh = (h / w) * maxW }
-  return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(dw), h: Math.round(dh) }
+  let displayW = (w / h) * maxH, displayH = maxH
+  if (displayW > maxW) { displayW = maxW; displayH = (h / w) * maxW }
+  return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(displayW), h: Math.round(displayH) }
 }
 
 // --- Page discovery ----------------------------------------------------------

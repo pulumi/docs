@@ -12,6 +12,10 @@ are mechanical, not editorial:
   the table with a four-column header `| | ID | Where | Finding |`
   (`v3-finding-grammar` on the header line). The validator's own hint still
   described the abandoned glyph column at the time.
+* #21748 (2026-09-19): the model's one ⚠️ row ran off the end of a long
+  Finding cell and never closed — three pipes, not four, so `_split_cells`
+  read it as prose and the row failed `v3-finding-grammar`. An advisory nit
+  on a PR with no blocking findings cost the entire review.
 
 This script fixes exactly those shapes, in place, and nothing else. It is
 idempotent, needs no model, and always exits 0 — a repair it cannot make
@@ -27,7 +31,12 @@ Rules:
    separator under it becomes `|---|---|---|`; a data row that starts with an
    empty or glyph cell followed by `**F<n>**` / `**F?**` loses that cell.
    Rows already in the right shape are never touched.
-2. Missing detail blocks (author card only): every numbered, un-dispositioned
+2. Unclosed rows (author 🚨/❓, brief ⚠️): a line that opens with `|` but
+   never closes gets its final `|` back — but only when the closed line is
+   something the grammar recognizes (a finding row, the three-column header,
+   a separator, or a row the leading-cell rule above can then fix). Anything
+   else stays unclosed for the validator to refuse.
+3. Missing detail blocks (author card only): every numbered, un-dispositioned
    `| **F<n>** |` row under 🚨 / ❓ without a `#### F<n> · Do this` block gets
    one regenerated from the row itself (Line from the row's quoted span or
    the evidence base, Why from the finding cell, Fix as a bucket-appropriate
@@ -129,6 +138,36 @@ def _looks_like_header(cells: list[str]) -> bool:
     return tuple(words) == _HEADER_CELLS
 
 
+def _close_row(line: str) -> str | None:
+    """A finding-table line that lost its closing `|`, closed — or None when
+    appending one doesn't produce something the grammar recognizes.
+
+    The Finding cell is written last and is by far the longest, so it is the
+    one the model runs off the end of (#21748). Closing the line is only
+    safe when the result parses, which leaves every other unclosed line —
+    a genuinely truncated row, a prose line that happens to start with a
+    pipe — to the validator.
+    """
+    s = line.rstrip()
+    if not s.startswith("|") or len(s) < 2:
+        return None
+    if s.endswith("|") and not s.endswith("\\|"):
+        return None                                  # already closed
+    candidate = s + " |"
+    if _is_separator(candidate):
+        return cr.FINDING_TABLE_SEPARATOR
+    cells = _split_cells(candidate)
+    if cells is None:
+        return None
+    if _looks_like_header(cells) or cr.parse_finding_line(candidate) is not None:
+        return candidate
+    # Still carrying the abandoned leading status cell: closing the line is
+    # what lets the row-leading-cell rule below see it at all.
+    if len(cells) == 4 and _GLYPH_CELL_RE.match(cells[0]) and _ID_CELL_RE.match(cells[1]):
+        return candidate
+    return None
+
+
 def _normalize_tables(lines: list[str], sections: tuple[str, ...], doc: str,
                       rep: Repairs) -> list[str]:
     body = "\n".join(lines)
@@ -147,7 +186,16 @@ def _normalize_tables(lines: list[str], sections: tuple[str, ...], doc: str,
                 i += 1
                 continue
             cells = _split_cells(line)
-            if cells is None or _is_separator(line):
+            if cells is None:
+                closed = _close_row(line)
+                if closed is None:
+                    i += 1
+                    continue
+                out[i] = line = closed
+                cells = _split_cells(line)
+                rep.add("row-unclosed", doc, f"line {i + 1}",
+                        "closed a table row that was missing its final `|`")
+            if _is_separator(line):
                 i += 1
                 continue
             if _looks_like_header(cells):

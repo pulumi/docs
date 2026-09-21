@@ -12,16 +12,13 @@
         {{ end }}
     </section>
 
-    {{- /* The cards share one shell, deliberately the same as
-           layouts/partials/case-studies/card.html minus the two things a whitepaper
-           doesn't have (a logo tile and an industry badge): shared .card +
+    {{- /* The cards share one shell built from the shared primitives: .card +
            .card-hover, a link stretched over the whole card, and a "Read the…" cue
            that only appears on hover/focus.
 
-           Two differences follow from dropping the logo tile. The title is visible
-           here rather than sr-only — the tile is what carries the name on a
-           case-study card — and it is plain text, not a link, so the stretched
-           anchor is the card's only link.
+           A whitepaper has no logo tile, so the title is visible rather than
+           sr-only, and it is plain text, not a link — which leaves the stretched
+           anchor as the card's only link.
 
            `.Pages` is weight-ordered (the newest paper carries `weight: 1`), so the
            first one leads full width and the rest fall into the grid below. */ -}}

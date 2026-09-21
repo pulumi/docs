@@ -44,7 +44,9 @@ Routing (first match wins):
      or `pulumi.com` / `github.com/pulumi/` URL → **pass1** (`gh` + local reads)
   3. an unfetched URL, OR a named external source with no URL, OR shape is
      `numerical` / `entity-spec` / `attribution` / `positioning` / `comparison`
-     with no pulumi signal → **pass3** (server-side `web_search`)
+     with no pulumi signal → **pass3** (server-side `web_search`). Exception:
+     a `version` claim's non-URL hint names a package, not an authority, so it
+     goes to **pass1** (release tags are only readable there).
   4. else (ambiguous / weak shape) → **pass1**.
   Escalation (one hop, both directions): a pass1 verifier may emit
   `route_escalation: "pass3"` (a public web source could close it) and a pass3
@@ -54,6 +56,13 @@ Routing (first match wins):
   auto-escalates to pass3; a claim that still can't converge carries
   `turn_cap_exhausted: true` so consumers can distinguish a retryable budget
   failure from a genuinely unverifiable claim.
+  Source-discipline re-check (one hop, independent of escalation): a
+  `contradicted`/`mismatch` whose only source is the live published copy of the
+  file under review, or a `contradicted` resting on editorial pulumi.com pages
+  alone, is re-verified once in pass1 with a note saying why that source is not
+  evidence. An independently sourced answer stands; otherwise the verdict is
+  downgraded to `unverifiable` and stamped `source_discipline_gate` (see
+  `_source_discipline_recheck`).
 
 Usage:
     verify-claims.py --in .candidate-claims.json \
@@ -78,6 +87,11 @@ Output schema:
          "framing_note": "...",        # optional
          "intuition_flag": "...",      # optional
          "turn_cap_exhausted": true,   # optional; only on a terminal turn-cap unverifiable (retryable budget failure)
+         "source_discipline_gate": "generated-from-data" | "self-reference" | "same-site-only" | "own-file-only",
+                                       # optional; the harness downgraded a contradicted/mismatch to
+                                       # `unverifiable` (see §Source discipline in VERIFY_SYSTEM). Always an
+                                       # author question, never a blocking finding. Consumers must treat an
+                                       # unknown value the same way — the set grows.
          "model_usage": {"input_tokens": T, "output_tokens": T,
                          "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
                          "turns": N}},
@@ -326,13 +340,13 @@ Set `framing` on EVERY cited-claim verdict (use `exact-match` or `entailed-narro
 
 # Source discipline
 
-Four hard rules. Each one exists because violating it produced false `contradicted` verdicts in a full ledger re-adjudication (2026-07): 17 of 22 contradicted verdicts were false, and most traced to these.
+Five hard rules. Each one exists because violating it produced false `contradicted` verdicts in a full ledger re-adjudication (2026-07): 17 of 22 contradicted verdicts were false, and most traced to these.
 
 - **Target alignment.** Verdict a claim only against the source the claim itself names. If the pre-fetched page's URL is not the URL in the claim text, that page is the wrong target — do not run the framing check against it; return `unverifiable` with evidence noting the target mismatch. When one doc line carries several links, each claim binds to its own link's target; never judge a claim against the neighboring anchor's page, and never let an accurate description of the *wrong* page become a `contradicted` verdict on the claim.
-- **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
+- **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence. The harness enforces this deterministically: a `contradicted` whose every cited source is an editorial pulumi.com page triggers one re-check against product source, and if that cannot settle it the verdict is downgraded to `unverifiable` — so cite the `gh`/`read_file` evidence you actually consulted, or the contradiction is discarded.
 - **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction. **`contradicted` is not available for these pages.** The harness enforces this deterministically: a `contradicted` verdict on a generated page is downgraded to `unverifiable` after you return, so emitting one only discards your confidence rating. If the transcription genuinely disagrees with its own data file, that IS a doc bug — say so in `evidence` and return `mismatch`.
 - **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
-- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`.
+- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`. **The live published copy of the page under review is the same file**: `https://www.pulumi.com/<path of the reviewed file>` shows the PRE-CHANGE text, so it disagrees with every value a PR changes and proves nothing about which value is right — web search will hand you that page first; do not rest a verdict on it. The harness enforces this deterministically: a `contradicted` or `mismatch` citing the reviewed page's own URL with no independent source alongside triggers one re-check against product source, and is downgraded to `unverifiable` if that cannot settle it. "The PR changes what the live page says" is worth recording in `evidence`; it is not a contradiction until product source or an external authority says the old value was right. The same goes for a `contradicted` whose only source is the reviewed file's repo path: that says your claim text and the page disagree — either the claim misdescribes the page (`not-a-claim`) or the page disagrees with itself (`mismatch`, cite both line ranges) — and it gets the same re-check.
 
 # Intuition check
 
@@ -407,6 +421,21 @@ def route_claim(claim: dict, fetched_by_url: dict[str, dict]) -> str:
     # 3. external signal
     if urls:           # an unfetched URL → external
         return "pass3"
+    # A version claim's non-URL hint names a *package*, not an external
+    # authority. `references/claim-extraction.md` tells the extractor to put
+    # "the package/product" in `source_hint` for `version` claims, and the
+    # branch below reads any non-URL hint as "a named external source" — so a
+    # pin for a Pulumi-distributed package whose name carries no pulumi-shaped
+    # token (`terraform-provider`, `command`, `docker-build`) was web-searched,
+    # where the top hit for a Pulumi package is pulumi.com's own page about it.
+    # PR #21720: `version: 1.4.0` with hint `terraform-provider` went to pass3
+    # and came back `contradicted` against the live copy of the page under
+    # review; the same claim hinted `pulumi/pulumi-terraform-provider` routes
+    # pass1, the only lane that can read release tags. pass1 is the cheap lane
+    # and still escalates to pass3 when the package really is third-party, so
+    # nothing external is lost by trying it first.
+    if ctype == "version" and src:
+        return "pass1"
     if src:            # a named external source with no URL → external
         return "pass3"
     if ctype in EXTERNAL_SHAPE_TYPES:
@@ -675,7 +704,11 @@ def tools_for_route(route: str) -> list[dict]:
 
 
 def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
-                       impl_refs: list[str] | None = None) -> str:
+                       impl_refs: list[str] | None = None,
+                       recheck: dict | None = None) -> str:
+    """`recheck` is set only on the source-discipline re-verification hop (see
+    `_recheck_note`): it names the same-site page(s) the previous pass leaned
+    on so this pass is told, specifically, not to."""
     lines = [
         "Verify this claim:",
         "",
@@ -720,6 +753,46 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
         if evidence_pack.get("error"):
             lines.append(f"- fetch_error: {evidence_pack['error']}")
         lines += ["- body (truncated):", "```", body, "```"]
+    if recheck:
+        cited = ", ".join(recheck.get("urls") or []) or "a pulumi.com page"
+        if recheck.get("gate") == "self-reference":
+            lines += [
+                "",
+                "SOURCE-DISCIPLINE RE-CHECK. A previous pass judged this claim against the live "
+                f"published copy of the page under review ({cited}). When the claim comes from a PR "
+                "that edits this page, the live copy shows the PRE-CHANGE text, so it is not "
+                "evidence either way — of course it disagrees with a value the PR changes. The "
+                "question is which value is right. Decide from product source (`gh_query`: release "
+                "tags, source, schemas; `read_file`: data files, programs) or an external "
+                "authority. Do not cite "
+                f"pulumi.com{recheck.get('own_path') or ''} — a verdict resting on it is discarded. "
+                "If no independent source settles it, return `unverifiable`.",
+            ]
+        elif recheck.get("gate") == "own-file-only":
+            lines += [
+                "",
+                "SOURCE-DISCIPLINE RE-CHECK. A previous pass returned `contradicted` citing only the "
+                "file under review. That file is what made this text a claim, so it cannot "
+                "contradict it. Work out which of three things happened. (1) The claim TEXT "
+                "misdescribes what the page says — an extraction misreading, e.g. attributing a "
+                "version pin to the wrong package: return `not-a-claim` and say what the page "
+                "actually asserts. (2) The page disagrees with itself, prose against its own code "
+                "sample: return `mismatch` and cite both line ranges. (3) The page asserts "
+                "something checkable about the world: check it against product source "
+                "(`gh_query`, `read_file` on a DIFFERENT file) or an external authority. A second "
+                "`contradicted` resting on the reviewed file alone is discarded.",
+            ]
+        else:
+            lines += [
+                "",
+                "SOURCE-DISCIPLINE RE-CHECK. A previous pass returned `contradicted` on the strength "
+                f"of other pulumi.com page(s) alone ({cited}). Same-site pages are never ground "
+                "truth: two Pulumi pages disagreeing is an internal inconsistency, not proof of "
+                "which one is wrong. Decide from product source (`gh_query`: release tags, source, "
+                "schemas; `read_file`: data files, programs) or an external authority. Do not rest "
+                "the verdict on a pulumi.com docs page — such a verdict is discarded. If no "
+                "independent source settles it, return `unverifiable`.",
+            ]
     lines += ["", "Now emit exactly one verify_claim tool call."]
     return "\n".join(lines)
 
@@ -758,6 +831,236 @@ def _is_generated_from_data(file_path: str, repo_root: Path | None) -> bool:
     rel = file_path.strip().lstrip("./")
     return any(rel == root or rel.startswith(root + "/")
                for root in _generated_content_roots(repo_root))
+
+
+# ---- source-discipline gates: self-reference, same-site-only, own-file-only --
+#
+# Rule 2 ("same-site pages are never ground truth") and the self-reference half
+# of rule 5 ("the content under review never verifies its own claims") were
+# prompt-only, and the prompt lost. A ledger audit of 117 PR reviews found 66
+# `contradicted` verdicts: 9 cited the LIVE PUBLISHED COPY of the file under
+# review and 9 more rested on other pulumi.com pages alone, every one of the
+# first group from the pass3 web-search lane, where the top hit for a claim
+# about a Pulumi page is that page. The live copy shows the pre-change text, so
+# "the live page says otherwise" is true of every PR that changes a fact — it
+# is a tautology, not evidence.
+#
+# It is not noise either, which is why this is a re-verification hop rather
+# than a blunt downgrade. The same shape fired falsely on intentional value
+# refreshes (#21720 bumped a `terraform-provider` pin 0.10.0 → 1.4.0, the real
+# latest release; #21394; #21509) AND caught two real regressions where a bot
+# rewrite weakened a correct fact (#21552 `ES2022` → `ES2017`; #21602
+# "typically enabled by default" → "must be granted explicitly"). "The PR
+# changed a fact the live page states differently" is a good change detector
+# and a worthless judge. So the harness keeps the detection and replaces the
+# judgment: one more hop in the pass1 lane, told the live page is not evidence
+# either way. An independently sourced answer stands, whichever way it goes;
+# if the re-check cannot settle it, the verdict is `unverifiable` with the
+# original reasoning preserved, so the reviewer still sees "live page says X,
+# this PR says Y" as a question for the author rather than a blocking finding.
+
+_SOURCE_URL_RE = re.compile(r"https?://[^\s,;)\]>\"'`]+", re.IGNORECASE)
+_SITE_URL_RE = re.compile(r"^https?://(?:www\.)?pulumi\.com(?P<rest>[/?#].*)?$", re.IGNORECASE)
+# The carve-out in source-discipline rule 2, as site paths: pages transcribed
+# from product source rather than written by hand, which therefore carry
+# product-source authority and count as independent evidence. Keep this list in
+# step with the rule's prose in VERIFY_SYSTEM and `references/fact-check.md`.
+GENERATED_REFERENCE_PATH_RES = [
+    re.compile(r"^/registry/packages/[^/]+/api-docs(?:/|$)"),   # registry API docs, from provider schemas
+    re.compile(r"^/docs/iac/cli/commands/"),                     # CLI command pages, from `pulumi gen-markdown`
+    re.compile(r"^/docs/reference/pkg/"),                        # SDK reference, from SDK source
+    re.compile(r"^/docs/reference/cloud-rest-api/"),             # REST reference, from the OpenAPI spec
+]
+_GH_COMMAND_RE = re.compile(r"(?:^|[\s`(\[])gh\s+(?:search|api|release|issue|pr|repo)\b")
+_BARE_GITHUB_RE = re.compile(r"(?<![\w/.])github\.com/[\w.-]+", re.IGNORECASE)
+_REPO_PATH_RE = re.compile(
+    r"(?:\brepo:\s*`?([^\s,;`)]+)"
+    r"|(?<![\w/.-])((?:content|data|static|layouts|assets|scripts|themes?|config)/[\w./@-]+\.\w+))")
+
+
+def content_path_to_site_path(file_path: str) -> str | None:
+    """Rendered site path for a content file: `content/docs/a/b.md` → `/docs/a/b/`.
+
+    `_index.md` (section) and `index.md` (leaf bundle) render at their
+    directory. Returns None for anything that is not a markdown file under
+    `content/` — a `data/` file or a program has no page of its own. A page
+    that overrides its URL in front matter (`url:` / `slug:`) is not resolved;
+    the predicate then simply does not recognise the self-reference, which
+    fails open (the verdict is left as the model returned it)."""
+    rel = (file_path or "").strip().lstrip("./")
+    if not rel.startswith("content/") or not rel.endswith((".md", ".html")):
+        return None
+    parts = rel[len("content/"):].rsplit(".", 1)[0].split("/")
+    if parts[-1] in ("_index", "index"):
+        parts.pop()
+    return ("/" + "/".join(parts) + "/").replace("//", "/").lower()
+
+
+def _site_path_of_url(url: str) -> str | None:
+    """Site path of a www.pulumi.com URL (query and anchor dropped, trailing
+    slash normalised, lowercased); None for any other host. `app.` / `api.`
+    subdomains are the product, not this repo rendered, so they don't match."""
+    m = _SITE_URL_RE.match(url.strip().rstrip(".,;:"))
+    if not m:
+        return None
+    path = re.split(r"[?#]", m.group("rest") or "/", maxsplit=1)[0] or "/"
+    if not path.endswith("/") and "." not in path.rsplit("/", 1)[-1]:
+        path += "/"
+    return path.lower()
+
+
+def _is_generated_reference_path(site_path: str) -> bool:
+    return any(rx.search(site_path) for rx in GENERATED_REFERENCE_PATH_RES)
+
+
+def _claim_names_url(claim: dict, url: str) -> bool:
+    """True when the claim is ABOUT this URL — it names it, so judging the claim
+    against it is target alignment (rule 1), not a same-site shortcut. The
+    pass2 dead-link shape lives here: "the diagram is at
+    https://www.pulumi.com/images/x.svg" + HTTP 404 is a legitimate
+    `contradicted` whose only possible source is that pulumi.com URL. Internal
+    links are usually written site-relative, so a claim text carrying the
+    URL's path counts too."""
+    want = _normalize_url(url)
+    if any(_normalize_url(u) == want for u in _claim_urls(claim)):
+        return True
+    path = (_site_path_of_url(url) or "").rstrip("/")
+    if not path:
+        return False
+    # Delimited on both sides: `/docs` must not match inside `/docs/iac/...`.
+    return bool(re.search(r"(?<![\w/.-])" + re.escape(path) + r"/?(?![\w/-])",
+                          (claim.get("text") or "").lower()))
+
+
+def source_discipline_shape(claim: dict, source: str) -> str | None:
+    """Classify a verdict's `source` string: `"self-reference"`,
+    `"same-site-only"`, or None. Pure — no I/O, no verdict logic; the caller
+    decides which verdicts each shape matters for.
+
+    - `self-reference`: a cited URL is the live page of the file under review,
+      and nothing independent is cited alongside it.
+    - `same-site-only`: every cited URL is an editorial pulumi.com page, and
+      nothing independent is cited alongside them.
+    - `own-file-only`: no URL at all, and the only thing cited is the repo path
+      of the file under review. The reviewed file is what made the text a
+      claim; a verdict against it says the claim record and the page disagree,
+      which is an extraction misreading or a page contradicting itself — not
+      evidence about the world.
+
+    Independent means: a URL on any other host, a `gh ...` command, a bare
+    `github.com/...` pointer, a repo path to a file OTHER than the one under
+    review, or a pulumi.com page in GENERATED_REFERENCE_PATH_RES. Positive
+    evidence only — a source naming no URL at all (`WebSearch ran query ...`,
+    free text) is left alone: unrecognised is not the same as circular. A
+    source may list several URLs (` and `, `;`, `,`, ` vs `); the URL regex
+    stops at those separators."""
+    src = source or ""
+    urls = [u.rstrip(".,;:") for u in _SOURCE_URL_RE.findall(src)]
+    own_path = content_path_to_site_path(claim.get("file", ""))
+    own_file = (claim.get("file") or "").strip().lstrip("./")
+    if not urls:
+        if not own_file or _GH_COMMAND_RE.search(src) or _BARE_GITHUB_RE.search(src):
+            return None
+        cited = [(m.group(1) or m.group(2)).strip().lstrip("./").rstrip(".:")
+                 for m in _REPO_PATH_RE.finditer(src)]
+        cited = [c for c in cited if c]
+        if cited and all(c == own_file or c.endswith(":" + own_file) for c in cited):
+            return "own-file-only"
+        return None
+    cites_self = False
+    for u in urls:
+        path = _site_path_of_url(u)
+        if path is None:
+            return None                      # another host → independent
+        if _claim_names_url(claim, u):
+            return None                      # the claim is about this URL
+        if own_path is not None and path == own_path:
+            cites_self = True
+        elif _is_generated_reference_path(path):
+            return None                      # product-source authority
+    rest = _SOURCE_URL_RE.sub(" ", src)
+    if _GH_COMMAND_RE.search(rest) or _BARE_GITHUB_RE.search(rest):
+        return None
+    for m in _REPO_PATH_RE.finditer(rest):
+        cited = (m.group(1) or m.group(2)).strip().lstrip("./").rstrip(".:")
+        if cited and cited != own_file and not cited.endswith(":" + own_file):
+            return None                      # read a different file
+    return "self-reference" if cites_self else "same-site-only"
+
+
+def _gate_for_verdict(claim: dict, rec: dict, repo_root: Path | None) -> str | None:
+    """Which source-discipline re-check, if any, a finalized verdict needs.
+
+    Self-reference covers `contradicted` and `mismatch`: the live copy of the
+    page is not a sibling, so it cannot establish a sibling-consistency
+    `mismatch` either. Same-site-only covers `contradicted` alone — rule 2
+    makes `mismatch` the *correct* verdict for two Pulumi pages disagreeing.
+    Own-file-only covers `contradicted` alone for the same reason: a page that
+    disagrees with itself is a legitimate `mismatch`.
+    Inert without a repo root or a file path (the degraded paths finalize
+    without them), and on a verdict another gate already reclassified."""
+    if repo_root is None or not claim.get("file") or rec.get("source_discipline_gate"):
+        return None
+    verdict = rec.get("verdict")
+    if verdict not in ("contradicted", "mismatch"):
+        return None
+    shape = source_discipline_shape(claim, rec.get("source", ""))
+    if shape == "self-reference":
+        return shape
+    if shape in ("same-site-only", "own-file-only") and verdict == "contradicted":
+        return shape
+    return None
+
+
+def _recheck_note(claim: dict, gate: str, source: str) -> dict:
+    """The `recheck` argument for build_user_message: what the first pass
+    leaned on, so the re-check is told precisely what not to lean on."""
+    own_path = content_path_to_site_path(claim.get("file", ""))
+    urls = [u.rstrip(".,;:") for u in _SOURCE_URL_RE.findall(source or "")]
+    if gate == "self-reference":
+        urls = [u for u in urls if _site_path_of_url(u) == own_path] or urls
+    return {"gate": gate, "urls": urls, "own_path": own_path}
+
+
+_GATE_EXPLANATIONS = {
+    "self-reference": (
+        "the only source cited is the live published copy of the page under review, "
+        "which shows the pre-change text — that a PR changes a fact is not evidence the "
+        "new value is wrong"),
+    "same-site-only": (
+        "every source cited is another pulumi.com page, and two Pulumi pages disagreeing "
+        "is an internal inconsistency, not proof of which one is wrong"),
+    "own-file-only": (
+        "the only source cited is the file under review itself, so the verdict says the "
+        "extracted claim and the page disagree — an extraction misreading or a page "
+        "contradicting itself, not evidence that the page is factually wrong"),
+}
+
+
+_GATE_QUESTIONS = {
+    "self-reference": "what is the source for the changed value?",
+    "same-site-only": "which of the two pages is right, and what is the source?",
+    "own-file-only": "does the page say what this claim says it does?",
+}
+
+
+def _gated_record(rec: dict, gate: str, recheck_outcome: str) -> dict:
+    """Downgrade `rec` (the FIRST pass's verdict) in place of trusting it.
+
+    Built from the first pass rather than the re-check because its reasoning is
+    the useful part: "live page says X, this PR says Y" is exactly what the
+    reviewer needs in order to ask the author the right question."""
+    out = dict(rec)
+    was = rec.get("verdict")
+    out["verdict"] = "unverifiable"
+    out["confidence"] = "low"
+    out["source_discipline_gate"] = gate
+    out["evidence"] = (
+        f"[source-discipline gate: {_GATE_EXPLANATIONS[gate]}. An independent re-check "
+        f"against product source {recheck_outcome}, so `{was}` is downgraded to "
+        f"`unverifiable`. Surface as an author question (\"{_GATE_QUESTIONS[gate]}\"), "
+        "never as a 🚨 finding.] " + rec.get("evidence", ""))
+    return out
 
 
 def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int,
@@ -829,8 +1132,13 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
 
 def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | None,
                  model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True,
-                 impl_refs: list[str] | None = None) -> dict:
-    """Run one claim through one lane (with at most one pass1→pass3 escalation hop)."""
+                 impl_refs: list[str] | None = None, recheck: dict | None = None) -> dict:
+    """Run one claim through one lane (with at most one pass1→pass3 escalation hop,
+    and at most one source-discipline re-check — see `_source_discipline_recheck`).
+
+    `recheck` marks this call AS that re-check: it threads the note into the
+    user message and switches the gate off for the result, so a re-check can
+    never spawn another."""
     if dry_run:
         return {
             "claim_id": claim.get("__id", "?"), "file": claim.get("file", ""),
@@ -846,7 +1154,8 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
     ]
     tools = tools_for_route(route)
     tool_choice: dict = ({"type": "tool", "name": "verify_claim"} if route == "pass2" else {"type": "auto"})
-    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack, impl_refs)}]
+    messages: list[dict] = [{"role": "user", "content": build_user_message(
+        claim, route, evidence_pack, impl_refs, recheck=recheck)}]
     agg_usage = _zero_usage()
     max_turns = MAX_TURNS.get(route, 4)
 
@@ -891,6 +1200,9 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
                 rec2["model_usage"]["turns"] += rec["model_usage"]["turns"]
                 rec2["evidence"] = f"(escalated from {route}) {rec2['evidence']}"
                 return rec2
+            if recheck is None:
+                return _source_discipline_recheck(api_key, claim, rec, model, repo_root,
+                                                  impl_refs=impl_refs)
             return rec
 
         # Echo the assistant turn back (including any server_tool_use / web_search_tool_result blocks).
@@ -942,6 +1254,60 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         "turn_cap_exhausted": True,
         "model_usage": {**agg_usage, "turns": max_turns},
     }
+
+
+def _source_discipline_recheck(api_key: str, claim: dict, rec: dict, model: str,
+                               repo_root: Path | None,
+                               impl_refs: list[str] | None = None) -> dict:
+    """Give a self-referential / same-site-only verdict one independent re-check.
+
+    Returns `rec` untouched when no gate applies. Otherwise runs ONE more hop in
+    the pass1 lane — the lane that reads release tags, source, and data files —
+    with `allow_escalate=False` (a pass3 hop would land on the same pulumi.com
+    page again) and the `recheck` note. Then:
+
+    - the re-check closes the claim on an independent source → that verdict
+      stands, whichever way it went. A confirmed `contradicted` is a real
+      finding and carries no gate stamp; a `verified` clears a value refresh.
+    - the re-check is `unverifiable`, leans on the same page(s) again, or
+      fails outright → the FIRST verdict is downgraded to `unverifiable` and
+      stamped `source_discipline_gate`. A re-check error is recorded in the
+      evidence rather than raised: the first pass did run, and turning its
+      result into a verifier-outage record would hide what it found.
+
+    Usage and turns from both hops are summed, as the escalation path does."""
+    gate = _gate_for_verdict(claim, rec, repo_root)
+    if gate is None:
+        return rec
+    note = _recheck_note(claim, gate, rec.get("source", ""))
+    try:
+        rec2 = run_verifier(api_key, claim, "pass1", None, model, repo_root, False,
+                            allow_escalate=False, impl_refs=impl_refs, recheck=note)
+    except Exception as e:  # noqa: BLE001
+        return _gated_record(rec, gate, f"failed ({type(e).__name__}: {e})")
+    usage = rec2["model_usage"]
+    for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
+        usage[k] += rec["model_usage"][k]
+    usage["turns"] += rec["model_usage"]["turns"]
+
+    shape2 = source_discipline_shape(claim, rec2.get("source", ""))
+    settled = (rec2["verdict"] != "unverifiable"
+               and not rec2.get("source_discipline_gate")
+               and shape2 != "self-reference"
+               and not (shape2 in ("same-site-only", "own-file-only")
+                        and rec2["verdict"] == "contradicted"))
+    if settled:
+        rec2["evidence"] = f"(re-verified after {gate}) {rec2['evidence']}"
+        return rec2
+    if rec2.get("turn_cap_exhausted"):
+        outcome = "ran out of turns"
+    elif rec2["verdict"] == "unverifiable":
+        outcome = "could not settle it"
+    else:
+        outcome = f"returned `{rec2['verdict']}` on non-independent evidence again"
+    out = _gated_record(rec, gate, outcome)
+    out["model_usage"] = usage
+    return out
 
 
 def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],

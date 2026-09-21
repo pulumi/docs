@@ -7,27 +7,6 @@ type: what-is
 date: 2023-09-14T16:21:22-07:00
 page_title: What Is DevOps Automation?
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
 authors: ["james-denyer"]
 ---
 
@@ -86,7 +65,7 @@ Measuring the effectiveness of DevOps automation requires a set of KPIs (Key Per
 * **Change Failure Rate:** This is the percentage of changes that fail. A lower change failure rate indicates a more stable and reliable deployment process, whereas a higher rate may suggest issues with testing or integration processes.
 * **Mean Time to Recovery (MTTR):** When failures occur, how long does it take to restore service? A shorter MTTR implies a more resilient system and effective incident response.
 * **Automated Test Pass Rate:** The percentage of automated tests that pass during the CI/CD process. A high pass rate may indicate good code health, while a low rate can be a red flag for potential quality issues.
-* **Infrastructure Automation Rate:** Measures the percentage of infrastructure provisioning and management tasks that are automated. Higher automation rates indicate a mature Infrastructure as Code (IaC) approach.
+* **Infrastructure Automation Rate:** Measures the percentage of infrastructure provisioning and management tasks that are automated. Higher automation rates indicate a mature infrastructure as code (IaC) approach.
 * **Feedback Loop Time:** The time it takes for developers to receive feedback on their changes, whether through automated tests, code reviews, or production monitoring. Quicker feedback loops enhance the development process and reduce latent defects.
 * **Percent of Defects Found in Automation:** A higher percentage indicates that your automation processes, especially testing, are effective in catching issues before they reach production.
 * **Operational Overhead:** The time spent on operational tasks as opposed to value-added activities. Effective automation should reduce this overhead, allowing teams to focus more on innovation and less on maintenance.
@@ -100,15 +79,15 @@ How have existing companies successfully leveraged devops automation to improve 
 
 ### Atlassian
 
-Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/case-studies/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
+Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/customers/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
 
 ### Mercedes-Benz
 
-Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/case-studies/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
+Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/customers/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
 
 ### SANS Institute
 
-The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/case-studies/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
+The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/customers/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
 
 In each of these examples, devops teams improved scalability and reliability of their infrastructure by introducing automation.
 

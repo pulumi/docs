@@ -159,16 +159,16 @@ Organizations of all sizes, from startups to the Global 2000, have chosen Pulumi
 
 ### Snowflake
 
-Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study](/case-studies/snowflake/).
+Snowflake’s platform team enabled its developers to deploy standardized Kubernetes environments across AWS, Azure, and Google Cloud with a self-service platform that’s powered by Pulumi and Golang. [Read the case study](/customers/snowflake/).
 
 ### Mercedes-Benz
 
 Mercedes-Benz Research & Development North America and its platform team enabled developers to deploy standardized Kubernetes environments on Azure with a self-service platform.
-[Read the case study](/case-studies/mercedes-benz/).
+[Read the case study](/customers/mercedes-benz/).
 
 ### Atlassian
 
-Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study](/case-studies/atlassian/).
+Atlassian Bitbucket reduced its developers’ time spent on cloud maintenance by 50% through creating a self-service platform that deploys standard development environments for Bitbucket. [Read the case study](/customers/atlassian/).
 
 ### Skai
 
@@ -176,7 +176,7 @@ Skai’s DevOps group migrated a core monolith service from its private cloud to
 
 ### SANS Institute
 
-SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/case-studies/sans-institute/).
+SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/customers/sans-institute/).
 
 ---
 

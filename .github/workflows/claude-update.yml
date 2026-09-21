@@ -138,6 +138,7 @@ jobs:
       - name: Resolve PR head SHA
         id: head
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           case "${{ github.event_name }}" in
@@ -150,7 +151,7 @@ jobs:
               IS_PR="true"
               ;;
             workflow_dispatch)
-              PR="${{ github.event.inputs.pr_number }}"
+              PR="$INPUT_PR"
               IS_PR="true"
               ;;
             *)
@@ -293,6 +294,7 @@ jobs:
         id: pr-context
         if: steps.check-access.outputs.has_write_access == 'true'
         env:
+          INPUT_PR: ${{ github.event.inputs.pr_number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Determine PR / issue number, whether it's a PR, and whether
@@ -317,7 +319,7 @@ jobs:
               IS_PR="false"
               ;;
             workflow_dispatch)
-              PR_NUMBER="${{ github.event.inputs.pr_number }}"
+              PR_NUMBER="$INPUT_PR"
               IS_PR="true"
               ;;
           esac
@@ -361,9 +363,7 @@ jobs:
           # v2 refresh path — grandfathered until it is regenerated.
           RETRY_INITIAL="false"
           if [ "$IS_PR" = "true" ] && [ -n "$PR_NUMBER" ] && [ "$HAS_PINNED" = "false" ]; then
-            V3_LABEL=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" \
-              --json labels --jq '[.labels[].name] | index("surface:v3") != null' 2>/dev/null || echo "false")
-            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ] || [ "$V3_LABEL" = "true" ]; then
+            if [ "${{ vars.REVIEW_V3_COMMENTS }}" = "1" ]; then
               RETRY_INITIAL="true"
               echo "No review on PR #$PR_NUMBER and the v3 surface is active — dispatching the initial lane instead of the v2 fallback"
             fi

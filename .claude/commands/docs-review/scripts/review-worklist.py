@@ -56,6 +56,14 @@ block a "clean" verdict, so --require-clean can only pass when the whole list
 was actually seen: an unparseable body (`parse_confidence: "low"`), a failed
 inline-suggestions fetch (`suggestions_ok: false` — distinct from a PR that
 genuinely has none), and any parsed item without a recorded disposition.
+
+On the v2 surface, "unparseable" also covers a body that parsed into *fewer*
+findings than the card's own tally table declares (`counts_shortfall`). The
+tally and the sections are rendered by the same pass, so the table is the one
+signal that can catch a body which arrived incomplete — which no amount of
+careful section parsing can notice from the inside. It is what pulumi/docs
+#21490 needed: a split review read one page deep parsed into zero findings
+while the tally on that page still said three 🚨.
 """
 
 from __future__ import annotations
@@ -112,7 +120,13 @@ STYLE_FILE_HEADING_RE = re.compile(r"^#####\s+`?([^`\s]+)`?\s*$")
 # rule, so the two must agree by construction rather than by vigilance.
 FINDING_START_RE = _vp.FINDING_START_RE
 
-DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
+DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable", "author-accepted")
+# The values a hand-edited --state file may set. `author-accepted` is
+# excluded: it is derived by resolve-handler.py from the actor's identity
+# (#21640) and carries an `original_disposition` this loader doesn't parse,
+# so accepting it here would let a note-less "author-accepted" slip past the
+# reason check below that a typed "accepted" could never pass.
+USER_DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
 # Dispositions that are a judgment call rather than a change in the diff. The
 # review record can't evidence these on its own, so a human-readable reason is
 # mandatory — otherwise "accepted" becomes an unaudited way to close the loop.
@@ -583,10 +597,10 @@ def load_state(path: Path) -> dict[str, dict]:
         if not isinstance(value, dict):
             raise SystemExit(f"review-worklist: state entry {key!r} is not an object or string")
         disp = value.get("disposition")
-        if disp not in DISPOSITIONS:
+        if disp not in USER_DISPOSITIONS:
             raise SystemExit(
                 f"review-worklist: state entry {key!r} has disposition {disp!r}; "
-                f"expected one of {', '.join(DISPOSITIONS)}"
+                f"expected one of {', '.join(USER_DISPOSITIONS)}"
             )
         out[key] = {"disposition": disp, "note": str(value.get("note") or "").strip()}
     return out
@@ -624,6 +638,33 @@ def apply_state(items: list[dict], state: dict[str, dict]) -> list[dict]:
         if key not in known
     ]
     return stale
+
+
+def counts_shortfall(counts_table: dict | None, items: list[dict]) -> dict:
+    """Buckets where the v2 card's own tally table declares more findings
+    than were parsed out of its sections.
+
+    The tally and the sections are rendered by the same pass, so the table
+    is an independent statement of how many findings the review holds --
+    the one check that catches a body which arrived *incomplete*, which no
+    amount of careful section parsing can notice from the inside. That is
+    what hid every 🚨 on pulumi/docs#21490: a split review read page 1 only,
+    so the sections were absent while the page-1 tally still said "3".
+
+    One-directional on purpose. The table claiming more than was parsed
+    means findings went missing, which is the merge hazard. Parsing more
+    than the table claims is a stale tally, not a risk, and is left alone.
+    `style` bullets sit inside the ⚠️ section but are not counted in its
+    cell, so that bucket is not compared at all.
+    """
+    if not counts_table:
+        return {}
+    got: dict[str, int] = {}
+    for it in items:
+        got[it["bucket"]] = got.get(it["bucket"], 0) + 1
+    pairs = (("outstanding", "outstanding"), ("low", "low_confidence"), ("pre-existing", "pre_existing"))
+    return {bucket: {"declared": counts_table.get(cell, 0), "parsed": got.get(bucket, 0)}
+            for bucket, cell in pairs if counts_table.get(cell, 0) > got.get(bucket, 0)}
 
 
 def summarize(items: list[dict], parse_confidence: str, suggestions_ok: bool = True) -> dict:
@@ -746,11 +787,18 @@ def build_report(body: str, suggestions: list[dict], state: dict[str, dict], pr:
         # gap means the list can't be trusted the way a parsed v2 body can.
         parse_confidence = "high" if (head and state_ok) else "low"
         counts_table = None
+        shortfall = {}   # v3 has no tally table; REVIEW_STATE is its own cross-check
     else:
-        parse_confidence = "high" if _vp.extract_count_table_row(body) else "low"
         items = extract_items(body, suggestions)
         head = HEAD_SENTINEL_RE.search(body)
         counts_table = _vp.extract_count_table_row(body)
+        # High confidence needs a tally table AND agreement with it: a body
+        # that parsed into fewer findings than it says it holds did not
+        # parse, whatever the sections that survived look like.
+        shortfall = counts_shortfall(counts_table, items)
+        if shortfall:
+            log(f"warning: the card's tally declares more findings than parsed: {shortfall}")
+        parse_confidence = "high" if (counts_table and not shortfall) else "low"
 
     stale = apply_state(items, state)
     summary = summarize(items, parse_confidence, suggestions_ok)
@@ -762,6 +810,7 @@ def build_report(body: str, suggestions: list[dict], state: dict[str, dict], pr:
         "parse_confidence": parse_confidence,
         "suggestions_ok": suggestions_ok,
         "counts_table": counts_table,
+        "counts_shortfall": shortfall,
         "items": items,
         "stale_state": stale,
         "summary": summary,
@@ -930,6 +979,17 @@ def self_test() -> int:
             check("invalid disposition rejected", False)
         except SystemExit:
             check("invalid disposition rejected", True)
+        # #21640: author-accepted is derived, never hand-typed, and this
+        # loader doesn't parse original_disposition — accepting it here
+        # would let a note-less author-accepted through the reason check
+        # below that a typed "accepted" could never pass.
+        derived = Path(tmp) / "derived.json"
+        derived.write_text('{"outstanding:L40": "author-accepted"}', encoding="utf-8")
+        try:
+            load_state(derived)
+            check("derived-only disposition rejected in --state file", False)
+        except SystemExit:
+            check("derived-only disposition rejected in --state file", True)
 
     # An unparseable body must never read as an all-clear.
     r4 = build_report("nothing to see here", [], {}, 20123, DEFAULT_REPO)

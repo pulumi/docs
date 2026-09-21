@@ -238,16 +238,16 @@ Deployment recovery within 24 hours, Neo-worked vs. not. Source: Pulumi internal
 And it holds at every scale.
 
 {{< customer-proof >}}
-- logo: supabase
+- customer: supabase
   label: Supabase
   body: "**Supabase** runs **16 regions and 80,000 resources with one small platform team**; every service engineer ships their own infrastructure in TypeScript, inside guardrails."
-- logo: wiz
+- customer: wiz
   label: Wiz
   body: "**Wiz** drives **over 1,000,000 cloud resources** with hundreds of thousands of daily updates through the Automation API: infrastructure as a programmable capability of their product."
-- logo: compostable-ai
+- customer: compostable-ai
   label: Compostable AI
   body: "**Compostable AI** runs **100% agent-managed infrastructure**, today, with agents driving IaC through skills and structured tooling."
-- logo: snowflake
+- customer: snowflake
   label: Snowflake
   body: "**Snowflake** cut multi-cloud Kubernetes deployments **from weeks to same-day** on one unified programming model. *\"When we demonstrated to people that what used to take a week and a half now, with Pulumi, took under a day, they were shocked.\"* — Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
 - icon: detective

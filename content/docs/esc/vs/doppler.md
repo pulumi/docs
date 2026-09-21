@@ -79,7 +79,7 @@ Here's a detailed comparison of the two:
       <tr>
         <td>Declarative Provider</td>
         <td>Yes, support via the Pulumi Service Provider, which allows management (create, update, delete) of collections of secrets and configuration as a resource through infrastructure as code</td>
-        <td>No</td>
+        <td>Yes, a Doppler-maintained Pulumi provider (<code>pulumiverse/doppler</code>) manages Doppler resources through infrastructure as code</td>
     </tr>
     <tr>
         <td>Composability</td>
@@ -113,8 +113,8 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Compare Secrets across Environments</td>
-        <td>No</td>
-        <td>No</td>
+        <td>Yes, the <code>pulumi env diff</code> command shows the changes between two environments or between two versions of a single environment</td>
+        <td>Yes, the Compare feature shows the differences between environments</td>
     </tr>
     <tr>
         <td>In-built Functions</td>
@@ -147,13 +147,14 @@ Here's a detailed comparison of the two:
     <tr>
         <td>OIDC Trust</td>
         <td>Yes, trust relationships are established with third-party OIDC providers</td>
-        <td>No</td>
+        <td>Yes, service account identities can authenticate to Doppler over OIDC without a static API token</td>
     </tr>
     <tr>
         <td>Secure Environment Variables</td>
         <td>Yes, the <code>pulumi env run</code> CLI command can be used to specify which secrets are available as environment variables</td>
         <td>No, all values are available as environment variables</td>
     </tr>
+    <tr>
         <td>Plaintext Read Only Mode</td>
         <td>Yes, ESC offers a <code>read</code> mode that allows reading only plaintext values while not being able to decrypt secrets or access dynamic credentials</td>
         <td>No</td>
