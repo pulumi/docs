@@ -696,13 +696,20 @@ def test_unblock_pushes_only_a_clean_merge_and_works_in_a_worktree():
         assert act.UNBLOCK_CONFLICT_MARKER in body and "content/docs/a.md" in body and head[:7] in body
         # and the record is keyed to the head, so collect can tell a conflict
         # that still stands from one a later push settled
-        mine = [{"user": {"login": "approver"}, "body": body}]
-        assert collect.unblock_conflict(mine, head, {"approver"}) is not None
-        assert collect.unblock_conflict(mine, "9" * 40, {"approver"}) is None
+        mine = [{"user": {"login": "CamSoper"}, "body": body}]
+        ours = collect._unblock_conflict_authors("camsoper")
+        assert collect.unblock_conflict(mine, head, ours) is not None
+        assert collect.unblock_conflict(mine, "9" * 40, ours) is None
         # and a marker somebody else posted is not a record of our merge
-        assert collect.unblock_conflict(mine, head, {"someone-else"}) is None
-        quoted = [{"user": {"login": "approver"}, "body": "as I said:\n\n> " + body}]
-        assert collect.unblock_conflict(quoted, head, {"approver"}) is None
+        assert collect.unblock_conflict(mine, head, collect._unblock_conflict_authors("someone-else")) is None
+        quoted = [{"user": {"login": "CamSoper"}, "body": "as I said:\n\n> " + body}]
+        assert collect.unblock_conflict(quoted, head, ours) is None
+        # the roster is the approver collect() resolved, not whatever the
+        # token answers: a run started with --approver used to check a
+        # different login than the rest of the queue and see no record at all
+        assert collect._unblock_conflict_authors("CamSoper") == collect._unblock_conflict_authors("camsoper")
+        bot = [{"user": {"login": "github-actions[bot]"}, "body": body}]
+        assert collect.unblock_conflict(bot, head, collect._unblock_conflict_authors(None)) is not None
         # origin moved after the plan: nothing is merged or pushed
         git = FakeGit(merge_ok=True, head="f" * 40)
         res = act.execute(p, env.gh, git, queue=env.queue)

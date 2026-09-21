@@ -52,16 +52,16 @@ The old rule was "no changes on bot PRs". It applies only where a push would be 
 
 - **Dependabot** — never push. The PR is regenerated on the next run; edits break the update.
 - **Generated-docs regens** (`pulumi-bot` with the `automation/merge` label) — never push. Regenerated from source; fix the generator.
+- **`workprentice[bot]`** and **`content-review/*`** branches (pulumi-bot's content-review and glow-up PRs) — pushes are allowed: `--fix`, `--unblock`, and a hand fix all land as ordinary commits or **merge commits**. Never rebase, never force-push: the pipelines and other checkouts track these branches.
+
+`act.py::push_allowed` enforces this and refuses `--unblock` / `--fix` on a branch it must not touch. A fork head is never pushed to.
+
 **The two ways out of a stuck workflow PR.** A row whose author is a workflow (`author:generated`) with open findings carries both, because nobody will ever answer its review and closing it only re-queues the page:
 
 - **fix it yourself** — the handoff. Composes `/address-review N` on its own amber line above the `--act` command, one interactive run per PR. You walk the findings and push the fixes.
 - **ask @claude to fix them** — `--ask-fix N`. One comment, `@claude fix F1 and F3 #update-review`, naming the row's open findings by id with their summaries beneath, so the agent already watching the PR fixes them and refreshes the review. It is an ordinary write, so unlike the handoff it batches with everything else.
 
 They do the same job, so they share one exclusive group (`data-exclusive="fix"`) and lighting either puts the other out — `clearRow` cannot pair them, since the handoff is deliberately not a decision. `--ask-fix` names only the review's *open* rows: a style or pre-existing finding is the review's own take-it-or-leave-it, and asking for it would turn an optional note into a push. A row with nothing open is refused at plan time rather than posting `@claude fix  #update-review`.
-
-- **`workprentice[bot]`** and **`content-review/*`** branches (pulumi-bot's content-review and glow-up PRs) — pushes are allowed: `--fix`, `--unblock`, and a hand fix all land as ordinary commits or **merge commits**. Never rebase, never force-push: the pipelines and other checkouts track these branches.
-
-`act.py::push_allowed` enforces this and refuses `--unblock` / `--fix` on a branch it must not touch. A fork head is never pushed to.
 
 ## "fix it yourself": the handoff
 

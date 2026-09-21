@@ -603,7 +603,8 @@ def fetch_detail(gh: GhClient, number: int, retries: int = 3, delay: float = 1.5
 
 
 def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root: Path,
-               ai_override: str | None = None, allowlist_path: Path | None = None) -> dict:
+               ai_override: str | None = None, allowlist_path: Path | None = None,
+               approver: str | None = None) -> dict:
     number = listed["number"]
     detail = fetch_detail(gh, number)  # always live: mergeable_state is transient
     head_sha = (detail.get("head") or {}).get("sha") or ""
@@ -756,7 +757,7 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "ai_suspect": {"flag": suspect, "reasons": reasons},
         "review": review,
         "triage_prose": (triage_c or {}).get("body"),
-        "unblock_conflict": unblock_conflict(comments, head_sha, _unblock_conflict_authors(gh)),
+        "unblock_conflict": unblock_conflict(comments, head_sha, _unblock_conflict_authors(approver)),
         "preview": preview_info(comments, files, repo_root),
         "cache_key": key,
     }
@@ -768,10 +769,18 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
 UNBLOCK_CONFLICT_MARKER = "<!-- PR_REVIEW_UNBLOCK_CONFLICT -->"
 
 
-def _unblock_conflict_authors(gh: GhClient) -> set[str]:
-    """Who may write the conflict record: the review bot, or the token
-    running the board -- which is the one that ran the merge that failed."""
-    return {sentinel.BOT_LOGIN} | ({gh.me()} - {None})
+def _unblock_conflict_authors(approver: str | None) -> set[str]:
+    """Who may write the conflict record: the review bot, or the approver --
+    the one who ran the merge that failed.
+
+    `collect()` has already resolved the approver (`--approver`, else
+    `gh.me()`), so this takes it rather than asking the token again. Asking
+    again was wrong twice over: a run started with `--approver` would check
+    a different login than the one the rest of the queue uses, and a backend
+    that cannot answer `GET /user` would check nothing at all -- either way
+    the record goes unseen and the board re-offers the dead button this
+    reader exists to withhold."""
+    return {norm_login(sentinel.BOT_LOGIN)} | ({norm_login(approver)} - {""})
 _UNBLOCK_CONFLICT_HEAD_RE = re.compile(r"the branch is exactly as it was at `([0-9a-f]{7,40})`")
 
 
@@ -790,12 +799,13 @@ def unblock_conflict(comments: list[dict], head_sha: str, authors: set[str] | No
     service. It cannot go through that reader, though -- act.py comments as
     whoever ran `/pr-review`, not as the review app -- so the rule is the
     same shape with a different roster: the marker on an exact line among
-    the body's first three, from the review bot or from the token reading
-    the board. `authors` is that roster; None means don't check, which is
-    only for callers that have no token identity to check against."""
+    the body's first three, from the review bot or from the approver whose
+    run wrote it. `authors` is that roster, already normalized by
+    `_unblock_conflict_authors`; None means don't check, which is only for
+    callers with no identity to check against."""
     for c in reversed(comments):  # newest first: a re-tried merge supersedes
         login = (c.get("user") or {}).get("login") or ""
-        if authors is not None and login not in authors:
+        if authors is not None and norm_login(login) not in authors:
             continue
         body = c.get("body") or ""
         if UNBLOCK_CONFLICT_MARKER not in [ln.strip() for ln in body.splitlines()[:3]]:
@@ -893,7 +903,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
     def one(pr):
         try:
             return collect_pr(gh, pr, cache_dir=cache_dir, repo_root=repo_root,
-                              ai_override=ai_override, allowlist_path=allowlist_path)
+                              ai_override=ai_override, allowlist_path=allowlist_path, approver=approver)
         except GhError as exc:
             errors.append({"pr": pr["number"], "error": str(exc)})
             return None
