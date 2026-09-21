@@ -2,7 +2,7 @@
 title: "10 tips to improve your coding agent game"
 date: 2026-09-21
 draft: false
-meta_desc: "Ten coding agent habits checked against the research behind them, from rules files that rot and /compact to model switching, subagents, and review."
+meta_desc: "Ten coding agent habits checked against the research behind them, from AGENTS.md drift and /compact to model switching, subagents, and review."
 feature_image: feature.png
 authors:
     - engin-diri
@@ -27,14 +27,14 @@ social:
     linkedin: |
         This summer, a run of arXiv papers put numbers on how coding agents behave: what they read, what survives /compact, and what a mid-task model switch really costs.
 
-        Engin Diri turned the research into ten tips. Rules files rot: 23% of repositories in one sample referenced code that no longer existed. One /compact round kept about half of an agent's safety rules. Escalating to a bigger model mid-task cost more than twice as much as starting with it in an AWS study, and a restart did better. And the model that wrote the code shouldn't be the one that approves it.
+        Engin Diri turned the research into ten tips. Agent instruction files rot: 23% of repositories in one sample referenced code that no longer existed. One /compact round kept about half of an agent's safety rules. Escalating to a bigger model mid-task cost more than twice as much as starting with it in an AWS study, and a restart did better. And the model that wrote the code shouldn't be the one that approves it.
     bluesky: |
         Ten coding agent tips, each checked against the research.
 
         The most expensive habit on the list: escalating to a bigger model mid-task. In an AWS study on SWE-bench, restarting Opus from scratch cost less and solved more than handing it Haiku's transcript.
 ---
 
-In May I told you to [trim the root rules file until it fits on one screen](/blog/stop-tuning-prompts-build-a-harness/), and to back the rules that need a hard guarantee with hooks. In June I argued that [the model that wrote the code shouldn't be the one grading it](/blog/stop-prompting-design-the-loop/). Advice like that costs nothing to give. This summer, a run of arXiv papers started measuring it.
+In May I told you to [trim the root instruction file until it fits on one screen](/blog/stop-tuning-prompts-build-a-harness/), and to back the rules that need a hard guarantee with hooks. In June I argued that [the model that wrote the code shouldn't be the one grading it](/blog/stop-prompting-design-the-loop/). Advice like that costs nothing to give. This summer, a run of arXiv papers started measuring it.
 
 Most of the numbers back those habits harder than I did. One cuts against something I wrote in that same May post, and I'll own that when we get there. Below are ten tips for working with any coding agent, each held up against what the research actually measured, including the places where it measured something narrower than the headline suggests.
 
@@ -42,19 +42,19 @@ Most of the numbers back those habits harder than I did. One cuts against someth
 
 Read side by side, the papers point one way. The chat with your agent is a lossy place to keep anything that matters. Nearly every fix below moves something out of the chat and into a file, a hook, a test, or a fresh session, which is what I meant in June by "the agent forgets, the repo does not." Now there's data on how much it forgets.
 
-## Rules files
+## Agent instructions
 
-### 1. Write rules for the agent, not for a new hire
+### 1. Write for the agent, not for a new hire
 
-A new hire can take a vague convention and work out what it means from the code around it. An agent can't. It fills the gap with a guess, and the guess sounds confident. Anthropic's [docs on project instructions](https://code.claude.com/docs/en/memory) ask for rules "concrete enough to verify," like "API handlers live in `src/api/handlers/`" instead of "Keep files organized."
+A new hire can take a vague convention and work out what it means from the code around it. An agent can't. It fills the gap with a guess, and the guess sounds confident. Anthropic's [docs on project instructions](https://code.claude.com/docs/en/memory) ask for instructions "concrete enough to verify," like "API handlers live in `src/api/handlers/`" instead of "Keep files organized."
 
 One line in my own Go rules says to wrap errors with `fmt.Errorf("...: %w", err)` and never discard one silently. An agent can follow that, and a reviewer can check it. Try doing either with "handle errors properly."
 
 The instruction file is also where agents look first. A Peking University study by Zhijun Gao and Jing Chen [traced 557 real agent sessions](https://arxiv.org/abs/2608.20195) and sorted every documentation touch: instruction files and the agents' own working notes made up 60.5% of them, API references only 1.3%. The authors couldn't show that any particular writing style changes behavior, and most of their sessions came from Claude Code, so the style question is still open. The attention question isn't.
 
-### 2. Treat rules files like code, because they rot
+### 2. Treat agent instructions like code, because they rot
 
-Specific rules go stale. Rename a folder or swap a database, and the file keeps describing a codebase that no longer exists, which leaves the agent two options: burn turns reconciling the two, or believe the file.
+Specific instructions go stale. Rename a folder or swap a database, and the file keeps describing a codebase that no longer exists, which leaves the agent two options: burn turns reconciling the two, or believe the file.
 
 How often does that happen? Christoph Treude and Sebastian Baltes [ran an existing documentation checker](https://arxiv.org/abs/2606.09090), DOCER, unchanged over 612 agent config files from 356 randomly sampled GitHub repositories. In 82 of those repositories, 23.0%, a file named a function, path, or script that has since vanished from the code. That's close to one in four.
 
@@ -62,17 +62,17 @@ The authors call the number a feasibility signal rather than a precise rate, and
 
 A crude version of the check, run in September against the AGENTS.md of the repository this blog is built from, flagged 37 of 124 path-like references. Nearly all were noise, mostly relative paths and files that live in other repositories. One wasn't. Since a dark mode change in June, the file had been pointing agents at a `docs-logo.html` partial that was never added to the repository.
 
-The authors suggest running the check in CI, and DOCER already has a [GitHub Actions version](https://github.com/wesleytanws/DOCER_tool). In May I described [a `Stop` hook that proposes rules-file updates](/blog/stop-tuning-prompts-build-a-harness/) at the end of every session, which catches drift while the diff behind it is still small. Either works. What matters is that a human reads what it flags.
+The authors suggest running the check in CI, and DOCER already has a [GitHub Actions version](https://github.com/wesleytanws/DOCER_tool). In May I described [a `Stop` hook that drafts instruction-file updates](/blog/stop-tuning-prompts-build-a-harness/) at the end of every session, which catches drift while the diff behind it is still small. Either works. What matters is that a human reads what it flags.
 
-### 3. Keep the rules file short, but don't delete it
+### 3. Keep AGENTS.md short, but don't delete it
 
-The mistake I see most often is a root rules file that has grown into a small book. Every session pays for the whole thing. Anthropic's docs for Claude Code set a target of [under 200 lines per file](https://code.claude.com/docs/en/memory), because "longer files consume more context and reduce adherence." Codex [stops reading AGENTS.md files](https://learn.chatgpt.com/docs/agent-configuration/agents-md) once they add up to 32 KiB by default, and since v2.1.277, Claude Code [reads AGENTS.md directly](https://code.claude.com/docs/en/memory#agents-md) as well, which means one short file can now brief both agents.
+The mistake I see most often is a root AGENTS.md that has grown into a small book. Every session pays for the whole thing. Anthropic's docs for Claude Code set a target of [under 200 lines per file](https://code.claude.com/docs/en/memory), because "longer files consume more context and reduce adherence." Codex [stops reading AGENTS.md files](https://learn.chatgpt.com/docs/agent-configuration/agents-md) once they add up to 32 KiB by default, and since v2.1.277, Claude Code [reads AGENTS.md directly](https://code.claude.com/docs/en/memory#agents-md) as well, which means one short file can now brief both agents.
 
 The cleanest measurement of that cost comes from hotel bills, not code. Lodha and colleagues at Microsoft [followed a GPT-5 agent](https://arxiv.org/abs/2606.10209) that itemizes hotel expenses. When they trimmed the tool-call history it carried from step to step down to the last five calls, completion went up from 71.0% to 79.0%, and the agent used 63.9% fewer tokens doing it.
 
-Closer to home, a team from ETH Zurich and LogicStar.ai [tested context files](https://arxiv.org/abs/2602.11988) with Claude Code, Codex, and Qwen Code. The files didn't measurably help. Neither the generated nor the developer-written ones produced a statistically significant gain in task success, and the generated ones raised inference cost by 20% or more. If an agent wrote your rules file and nobody has edited it since, you're paying for it without a measurable return.
+Closer to home, a team from ETH Zurich and LogicStar.ai [tested context files](https://arxiv.org/abs/2602.11988) with Claude Code, Codex, and Qwen Code. The files didn't measurably help. Neither the generated nor the developer-written ones produced a statistically significant gain in task success, and the generated ones raised inference cost by 20% or more. If an agent wrote your AGENTS.md and nobody has edited it since, you're paying for it without a measurable return.
 
-Don't swing to zero, though. [Denisov-Blanch and colleagues](https://arxiv.org/abs/2608.25241) followed 509 open-source repositories after they adopted coding agents, and among the agent-first ones, those with no committed AI configuration saw cognitive complexity grow 53%, against 27% for the ones with at least a rules file. The authors call that hypothesis-generating rather than causal. It's still a good reason to keep the file, and to prune it with the question Anthropic's [best practices](https://code.claude.com/docs/en/best-practices) suggest for every line: "Would removing this cause Claude to make mistakes? If not, cut it." Whatever survives the cut but only matters for some tasks belongs in skills or subdirectory files that load when the work gets there.
+Don't swing to zero, though. [Denisov-Blanch and colleagues](https://arxiv.org/abs/2608.25241) followed 509 open-source repositories after they adopted coding agents, and among the agent-first ones, those with no committed AI configuration saw cognitive complexity grow 53%, against 27% for the ones with at least an instruction file. The authors call that hypothesis-generating rather than causal. It's still a good reason to keep the file, and to prune it with the question Anthropic's [best practices](https://code.claude.com/docs/en/best-practices) suggest for every line: "Would removing this cause Claude to make mistakes? If not, cut it." Whatever survives the cut but only matters for some tasks belongs in skills or subdirectory files that load when the work gets there.
 
 ## Long sessions
 
@@ -150,7 +150,7 @@ The models were small, but the fixes are cheap. Commit the moment the tests pass
 
 If you have one afternoon, go in this order:
 
-1. **Run a drift check on your rules files.** Read what it flags yourself.
+1. **Run a drift check on every AGENTS.md you have.** Read what it flags yourself.
 1. **Cut the root file to what's specific and true.** Move the rest into skills or subdirectory files.
 1. **Turn one rule into a hook.** For most teams, that's running the tests.
 1. **Restart instead of compacting or escalating.** Write the handoff note yourself.
