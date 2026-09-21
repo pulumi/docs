@@ -82,11 +82,11 @@ Adopting any pack means you skip the authoring work entirely, inherit framework 
 The ISO 27001 pack is available now on the [Business Critical edition](/pricing/#pre-built-policy-packs) of Pulumi Cloud:
 
 1. Browse the [pack reference](/docs/reference/pre-built-policy-packs/iso-27001/aws/) to see all 238 policies and how they map to the standard's controls.
-1. Explore the full [pre-built packs index](/docs/insights/policy/policy-packs/pre-built-packs/).
-1. Follow the [get-started guide](/docs/insights/policy/get-started/) to run your first audit.
+1. Explore the full [pre-built packs index](/docs/discovery-governance/policy/policy-packs/pre-built-packs/).
+1. Follow the [get-started guide](/docs/discovery-governance/policy/get-started/) to run your first audit.
 
 ## Try Pulumi policies
 
-Ready to align your AWS infrastructure to ISO 27001? [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and run the pack against your estate, or read the [policy get-started guide](/docs/insights/policy/get-started/) to dig in.
+Ready to align your AWS infrastructure to ISO 27001? [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and run the pack against your estate, or read the [policy get-started guide](/docs/discovery-governance/policy/get-started/) to dig in.
 
 Need a compliance pack for a framework that isn't listed here? Open a request in [pulumi/pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests) or come tell us in the [community Slack](https://slack.pulumi.com/). We're listening.
