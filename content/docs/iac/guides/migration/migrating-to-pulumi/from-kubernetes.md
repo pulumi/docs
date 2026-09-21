@@ -202,7 +202,11 @@ resource "kubernetes_yaml_v2_config_file" "guestbook" {
 
 {{< /chooser >}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
+
+{{% /choosable %}}
 
 Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
 
