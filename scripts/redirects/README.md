@@ -15,9 +15,11 @@ Each non-blank, non-comment line is:
   (e.g. `registry/packages/aws/how-to-guides/example/index.html`).
 - `<destination>` is either an absolute URL (`https://www.pulumi.com/...`) or a
   path relative to the current bucket (`/dev/tutorials/example/`).
-- Lines starting with `#`, and blank lines, are skipped — see the filter in
-  `scripts/make-s3-redirects.js` (`.filter(line => line && !line.startsWith("#"))`).
-  Use `#` comments freely to explain a rule's history or why it can't simply be deleted.
+- In this repo, lines starting with `#`, and blank lines, are skipped — see the filter
+  in `scripts/make-s3-redirects.js` (`.filter(line => line && !line.startsWith("#"))`).
+  Use `#` comments freely here to explain a rule's history or why it can't simply be
+  deleted. **This is not universal** — pulumi/registry's applier has no such filter (see
+  below), so don't copy a `#`-commented file there expecting the same behavior.
 
 ## How these rules are applied
 
@@ -51,9 +53,14 @@ pipeline. Redirect keys under `registry/**` — most notably the large family of
 or `/dev/examples/...` — are documented and owned there, not here. See
 `pulumi/registry :: scripts/redirects/how-to-guides-to-dev-redirects.txt`.
 
-Both repos use the identical file format and directory name, so a search for a
-`registry/**` key in this repo alone will report a false "orphan": the rule exists, just
-in the other repo. Before concluding a live redirect is undocumented, check both:
+Both repos share the same `<source-key>|<destination>` line format and directory name, so
+a search for a `registry/**` key in this repo alone will report a false "orphan": the rule
+exists, just in the other repo. The two appliers are *not* otherwise identical, though —
+pulumi/registry's `scripts/ci/make-s3-redirects.sh` reads every line as `key|location`
+with no `#`-comment filter, so a `#` comment in one of its redirect files gets uploaded as
+a real (broken) S3 redirect keyed by the comment text. Don't assume a convention that's
+safe in this repo's files is safe in pulumi/registry's. Before concluding a live redirect
+is undocumented, check both directories for the key itself:
 
 - `pulumi/docs :: scripts/redirects/*.txt` (this directory)
 - `pulumi/registry :: scripts/redirects/*.txt`
