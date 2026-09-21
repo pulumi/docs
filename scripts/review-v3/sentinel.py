@@ -1314,25 +1314,24 @@ def render_status_comment(verdict: Verdict) -> str:
     lines = [STATUS_MARKER, heading, ""]
 
     if preview:
-        # Two things, in this order, and neither is optional: this is
-        # informational today, and it will be enforced. A disclaimer that only
-        # says the first teaches everyone to scroll past the comment, and then
-        # enforcement day is the first time anyone reads a gate row. The first
-        # half says "safe to ignore for now", never "you can merge anyway":
-        # the gate surface is not the place to coach anyone past a red row.
+        # Both halves, in this order, and neither is optional: informational
+        # today, enforced soon. Half one alone teaches everyone to scroll past
+        # the comment, and enforcement day is then the first time anyone reads
+        # a gate row; half two alone reads as a PR that is blocked. And half
+        # one says "safe to ignore for now", never "you can merge anyway" —
+        # the gate surface is no place to coach someone past a red row.
         lines += [
             "> [!WARNING]",
             "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
             "> ",
-            f"> The Sentinel is running in **preview (report-only) mode**. Its check-run "
-            f"concludes `neutral` no matter what the gates below say, so nothing here gates "
-            f"this PR: the rows below are informational, and **safe to ignore for now**. "
-            f"What it *would* have concluded: `{verdict.would_be}`.",
+            f"> The Sentinel is in **preview (report-only) mode**: its check-run concludes "
+            f"`neutral` whatever the gates below say, so nothing here gates this PR. The rows "
+            f"are informational and **safe to ignore for now**. It *would* have concluded "
+            f"`{verdict.would_be}`.",
             "> ",
-            "> **This will be enforced in the near future.** When the rollout flips, the "
-            "Sentinel becomes a required check and any red gate below will block the merge. "
-            "Treat a red row as work you'll owe shortly, and tell us in `#docs` if one looks "
-            "wrong.",
+            "> **This will be enforced in the near future.** Once it is, a red gate below "
+            "blocks the merge — so treat a red row as work you'll owe shortly, and tell us "
+            "in `#docs` if one looks wrong.",
             "",
         ]
 

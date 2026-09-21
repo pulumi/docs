@@ -150,15 +150,14 @@ state and, for a red one, the gate's own remediation text. The body is a pure
 function of the verdict — no timestamps, no run ids — so a re-evaluation that
 changes nothing produces a byte-identical body and the PATCH is skipped. The
 comment is maintained on **every** PR the Sentinel evaluates, in both modes.
-In report-only mode it leads with a `[!WARNING]` preview banner that says
-both halves out loud — this is informational today and safe to ignore, and
-it will be enforced soon, so a red row is work you are about to owe — and the
-heading itself reads "(preview)". That banner is what makes a repo-wide dry
-run safe, and repo-wide is what makes the dry run worth running: the
-`sentinel:preview` opt-in cohort (content-review, glow-up, link sweeps) was
-retired 2026-09-21 because a surface only a workflow's PRs carry tests the
-renderer and not a single reader. `--update-strip` stays enforcing-only — the
-⛔ strip edits the author card, which is someone else's comment. External contributors (fork head repo — never the
+In report-only mode the heading reads "(preview)" and a `[!WARNING]` banner
+says both halves: informational and safe to ignore today, enforced soon, so a
+red row is work you will owe. That banner is what makes a repo-wide dry run
+safe, and repo-wide is what makes it worth running — the `sentinel:preview`
+opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21
+because a surface only workflow-authored PRs carry tests the renderer and no
+reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
+card, which is someone else's comment. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on

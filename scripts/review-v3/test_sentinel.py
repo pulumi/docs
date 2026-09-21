@@ -1128,7 +1128,7 @@ def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
     # Informational, never an invitation to merge past a red gate.
     assert "you can merge" not in body
     assert "enforced in the near future" in body
-    assert "*would* have concluded: `failure`" in body
+    assert "*would* have concluded `failure`" in body
 
     enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
     assert "Preview mode" not in enforcing and "(preview)" not in enforcing
