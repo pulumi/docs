@@ -435,10 +435,13 @@ Domain files may bump scrutiny internally for whole-file rewrites or new pages.
 
 ## The v3 surface (`--surface v3`)
 
-> **Status:** ships behind the `REVIEW_V3_COMMENTS` flag. Everything above this
-> section describes the v2 single-comment surface, which remains the default
-> and stays valid through the transition. The v3 architecture reference is
-> `scripts/review-v3/README.md`.
+> **Status:** on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so every
+> fresh review renders these cards. Everything above this section describes
+> the v2 single-comment surface, which is no longer produced for new reviews
+> but stays valid for PRs reviewed before the flip: those keep their monolith,
+> and `#update-review` refreshes it in place until someone runs
+> `@claude #new-review` to regenerate it as cards. The v3 architecture
+> reference is `scripts/review-v3/README.md`.
 
 Under v3 the composer emits **two comments plus a machine-owned evidence
 object** instead of one monolith. Evidence (the 🔍 verification trail, the

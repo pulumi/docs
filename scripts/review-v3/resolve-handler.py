@@ -78,6 +78,36 @@ def _load_build_evidence():
     return mod
 
 
+# The `<sub>Review vN · updated <ISO8601> · head commit <sha7></sub>` stamp
+# every card carries. `vN` and the head are left alone here — a /resolve is
+# not a new review round and does not move the head — but the timestamp is
+# rewritten, because it is what pinned-comment.sh's stale-publish guard
+# compares.
+_STAMP_RE = re.compile(r"(<sub>(?:Review )?v\d+ · updated )([^ <]+)( ·)")
+
+
+def restamp_updated(body: str, now: datetime) -> str:
+    """Move the card's `updated` stamp to `now`, leaving `vN` and the head as
+    they are.
+
+    Without this a /resolve is invisible to the stale-publish guard: it writes
+    REVIEW_STATE into the published card but leaves the stamp at whenever the
+    review last COMPOSED, so a run composed after that stamp still reads as
+    newer than the card and overwrites the disposition — the very loss the
+    guard exists to stop, reached through the /resolve door instead of the
+    concurrent-run one. Bumping the stamp on every disposition write makes the
+    card's own clock reflect its latest content.
+
+    A body with no parseable stamp is returned unchanged: the guard fails open
+    on those anyway, so there is nothing to protect and nothing to break.
+    """
+    return _STAMP_RE.sub(
+        lambda m: f"{m.group(1)}{now.replace(microsecond=0).isoformat().replace('+00:00', 'Z')}{m.group(3)}",
+        body,
+        count=1,
+    )
+
+
 def refresh_cards(author_body: str, brief_body: str | None, state: dict) -> tuple[str, str | None]:
     """Recount the author header and the brief's Waiting block for the new
     dispositions. Returns the inputs unchanged when the renderer is
@@ -394,6 +424,12 @@ def handle(pr: int, comment_id, actor: str, body: str, gh: Gh) -> HandleResult:
         brief_comment = find_marker_comment(comments, BRIEF_MARKER)
         brief_body = gh.get_issue_comment(brief_comment["id"])["body"] if brief_comment else None
         new_body, new_brief = refresh_cards(new_body, brief_body, merged)
+        # Bump the card's own `updated` stamp so the disposition just written
+        # is visible to pinned-comment.sh's stale-publish guard — see
+        # restamp_updated for what goes wrong without it.
+        new_body = restamp_updated(new_body, now)
+        if new_brief is not None:
+            new_brief = restamp_updated(new_brief, now)
         gh.patch_issue_comment(author_comment["id"], new_body)
         if brief_comment and new_brief is not None and new_brief != brief_body:
             gh.patch_issue_comment(brief_comment["id"], new_brief)
@@ -497,6 +533,28 @@ def _self_test() -> int:
         else:
             failures.append(name)
             print(f"FAIL: {name}", file=sys.stderr)
+
+    # -- the card's `updated` stamp moves when a disposition lands ----------
+    # Regression cover for pulumi/docs#21788 F1: without this, /resolve wrote
+    # REVIEW_STATE but left the stamp at the last COMPOSITION time, so
+    # pinned-comment.sh's stale-publish guard read a run composed after that
+    # stamp as newer than the card and let it erase the disposition.
+    stamped = ("## Review\n" + AUTHOR_MARKER + "\n"
+               + review_state.serialize_block(
+                   {"schema": 1, "high_water": 3, "findings": {}})
+               + "\n<sub>Review v1 · updated 2026-09-21T20:48:08Z · head commit aaaaaaa</sub>\n")
+    gh = StubGh(pr_author="alice")
+    stamped_id = gh.seed_comment(stamped)
+    handle(42, 9002, "alice", "/resolve F1 fixed", gh)
+    after = gh.comments[stamped_id]["body"]
+    check("resolve moves the card's updated stamp off the composition time",
+          "2026-09-21T20:48:08Z" not in after)
+    check("resolve leaves vN and the head alone",
+          "Review v1 · updated " in after and "head commit aaaaaaa" in after)
+    check("a body with no stamp round-trips unchanged",
+          restamp_updated("## Review\nno stamp here\n",
+                          datetime(2026, 9, 21, tzinfo=timezone.utc))
+          == "## Review\nno stamp here\n")
 
     # -- valid single command applied + reaction -----------------------------
     gh = StubGh(pr_author="alice")

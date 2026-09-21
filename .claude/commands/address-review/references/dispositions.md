@@ -5,17 +5,60 @@ description: The closed set of dispositions for a review finding — what each m
 
 # Dispositions
 
-Every item on the worklist ends in exactly one of five states. There is no sixth state, and "we talked about it" is not one of them.
+Every item on the worklist ends in exactly one of five states. "We talked about it" is not one of them.
 
 | Disposition | Means | Note required | Evidence that it happened |
 |---|---|:---:|---|
 | `fixed` | The diff changed; the finding no longer applies | no | The commit |
-| `refuted` | Disputed with evidence; the model conceded | no | The `#update-review` mention + the ✅ Resolved `concede:` annotation |
+| `refuted` | Disputed with evidence; the model conceded | no | The `#update-review` mention + the concede annotation |
 | `deferred` | Real, but out of scope for this PR | **yes** | A filed issue, linked in the note |
 | `accepted` | Knowingly shipping as-is | **yes** | The note (and, for a blocker, a PR comment) |
 | `not-applicable` | The finding misreads the change; nothing to do and nothing to argue | **yes** | The note |
 
-`fixed` and `refuted` evidence themselves. The other three are judgment calls someone has to own, so `review-worklist.py --require-clean` treats a missing note as an open item.
+`fixed` and `refuted` evidence themselves. The other three are judgment calls someone has to own, so `review-worklist.py --require-clean` treats a missing note as an open item — and `/resolve` rejects them outright without a reason.
+
+There is a sixth value in the data, `author-accepted`, but **nobody types it**. See [When you are the author](#when-you-are-the-author).
+
+---
+
+## Where a disposition lives
+
+On the v3 surface the ledger is the `<!-- REVIEW_STATE … -->` block on the author card. It is the PR's own record: the Sentinel reads it to score G2, the reviewer brief renders it in the **Waiting on the author** list, and `review-worklist.py` seeds from it. A finding id absent from that block is **open**, whatever any comment says.
+
+Two lanes write it, and the choice matters:
+
+- **`/resolve F<n> <disposition>[: reason]`** — deterministic, zero model cost, agent-facing plumbing. Use it to *record* a decision the user has already made. `/resolve all <disposition>: <reason>` dispositions every open finding at once and always needs a reason. It requires the PR author or a write/maintain/admin collaborator and fails closed on an unreadable permission; comments from bot accounts are ignored entirely.
+- **`@claude <reasoning> #update-review`** — the model lane. Use it whenever the finding needs *adjudicating* rather than recording: a dispute, a fix the auto-refresh gate didn't catch, an answer to an ❓ question. It is the only lane that can change the review's mind.
+
+On the legacy v2 surface there is no `REVIEW_STATE` and no `/resolve`; `#update-review` and the local state file are all you have.
+
+`.review-worklist-<PR>.json` at the repo root (gitignored) stays useful either way — it's where style items (which carry no `F<n>`) and your in-progress notes live:
+
+```json
+{
+  "items": {
+    "F1": { "disposition": "fixed", "note": "" },
+    "F3": { "disposition": "refuted", "note": "cited two paragraphs down; model conceded" },
+    "style:content/docs/a.md:L91": { "disposition": "accepted", "note": "term of art on this page" }
+  }
+}
+```
+
+Write it as each decision is made, not at the end. On v3 it is a cache the enumerator will re-seed from `REVIEW_STATE`; on v2 it is the only ledger there is.
+
+---
+
+## When you are the author
+
+If the PR author dispositions their own finding as anything other than `fixed`, the handler records it as **`author-accepted`**, preserving what they typed as `original_disposition`.
+
+This is deliberate, not a bug: self-adjudication shouldn't read as independent adjudication. The Sentinel counts the item as answered — the author *did* answer — while the brief keeps the row in front of the human approver, labelled with both values (`author-accepted (refuted)`).
+
+What follows from it:
+
+- **Tell the user before they pick.** "Refuting your own finding records as author-accepted and stays visible to your reviewer" is a fifteen-word heads-up that prevents a surprise in review.
+- **A refutation you want *weighed* goes through `#update-review`,** not `/resolve`. The model can concede, which clears the finding on its own merits; `/resolve refuted` on your own PR just files your opinion.
+- **`fixed` is never collapsed.** A real code change is evidence, not an opinion.
 
 ---
 
@@ -23,7 +66,8 @@ Every item on the worklist ends in exactly one of five states. There is no sixth
 
 The ordinary path. Make the change, keep it minimal, and keep it to what the finding actually asks for — a review fix is not an invitation to rewrite the section.
 
-- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on flagged lines is what `auto-refresh-gate.py` recognizes, and it refreshes the review with no mention needed.
+- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on the lines a 🚨 or ❓ finding anchors is what `auto-refresh-gate.py` recognizes: the card shows a 🔄 banner within a minute and refreshes itself with no mention needed. Only those two buckets anchor it, so a push that also fixes a ⚠️ or ✏️ item is declined as a whole and needs `#update-review` — worth knowing before you batch an advisory fix into a blocker's push.
+- The v3 card usually writes the fix for you. Each blocking finding carries an `F<n> · Do this` block with the verbatim line, why it's wrong, and a replacement — often with an **If you'd rather keep it** alternative. Confirm the line still matches the file, then apply it.
 - For a `[style-blocker]` bullet in 🚨 (wrong product name, banned term, misspelling): fix it. These come from Vale's blocker allowlist, they are deterministic, and they are not worth disputing.
 - For an inline ✏️ one-click suggestion: either the user clicks it in the Files-changed tab **or** you edit the line locally. Never both — the second one conflicts with the first.
 
@@ -31,13 +75,13 @@ The ordinary path. Make the change, keep it minimal, and keep it to what the fin
 
 Use when the finding is wrong, not when it's inconvenient. Refuting well is a service: it tunes the pipeline. Refuting lazily poisons the outcome telemetry.
 
-Dispute in the same `@claude #update-review` mention as the fixes, saying which finding and why. The update path classifies the dispute three ways, and what counts as evidence differs:
+Dispute in the same `@claude #update-review` mention as the fixes, naming the finding by its id and saying why. The update path classifies the dispute three ways, and what counts as evidence differs:
 
 - **Domain-knowledge** ("this pattern is intentional; the team decided it") — the model defaults to conceding, and maintainer write access is itself sufficient evidence for design intent. Say plainly that it's a design decision.
-- **Verifiable claim** ("that was added in v3.0", "the docs already say this elsewhere") — author authority proves nothing here. Bring the link, the file:line, or the command output, or the model will hold.
+- **Verifiable claim** ("that was added in 3.261", "the docs already say this elsewhere") — author authority proves nothing here. Bring the link, the file:line, or the command output, or the model will hold.
 - **Reframing** ("you misread the sentence; the qualifier bounds it") — quote the sentence and the reading you intend.
 
-Then check the outcome. A concede moves the finding to ✅ Resolved with a `concede: <reason>` annotation. **If the model holds** — a `🛡️ Disputed by … model held.` line — the item is *not* resolved. Take it back into the walk with the model's cited evidence in hand and pick a different disposition. Don't record `refuted` on a finding that was held.
+Then check the outcome. A concede clears the finding. **If the model holds** — a 🛡️ note beside the finding — the item is *not* resolved; it stops blocking merge, but it stays visible to the human approver with the model's reasoning attached. Take it back into the walk and pick a different disposition rather than recording `refuted` on a finding that was held.
 
 ## `deferred`
 
@@ -45,7 +89,7 @@ Real finding, wrong PR. Legitimate for a pre-existing problem the change merely 
 
 - File the issue **now**, in the same session, and put its URL in the note. A deferral without an issue is an acceptance wearing a disguise.
 - Give the issue enough context to act on cold: the finding text, the file, the line, and why it was out of scope here.
-- Say it in the PR thread too, so the maintainer isn't left wondering. One line: "L88 heading case is pre-existing — filed #20456."
+- Say it in the PR thread too, so the maintainer isn't left wondering. One line: "F4's heading case is pre-existing — filed #20456."
 
 ## `accepted`
 
@@ -53,7 +97,7 @@ Knowingly shipping with the finding standing. Always available, never free.
 
 - The note must say *why*, in terms someone reading the PR later can evaluate: "house voice — we say 'simply' in tutorials deliberately", not "won't fix".
 - For a 🚨 blocker, also post the reason as a PR comment. A blocker accepted silently reads to the scraper as `ignored_outstanding`, and to a maintainer as an oversight.
-- This is the disposition to use when the user says "just merge it." Record it, with their reason, on each open item. That is the honest ledger entry, and it takes ten seconds.
+- This is the disposition to use when the user says "just merge it." `/resolve all accepted: <their reason>` records it across every open finding in one comment. That is the honest ledger entry, and it takes ten seconds.
 
 ## `not-applicable`
 
@@ -66,23 +110,9 @@ The finding is about something the change doesn't do — the reviewer matched th
 
 ## Bucket-specific rules
 
-- **🚨 Outstanding** — `fixed` or `refuted` are the expected outcomes. `deferred` and `accepted` are allowed but must be visible in the PR thread, not only in the local state file. Never leave one undecided.
-- **⚠️ Low-confidence** — these don't block the PR and they still get a disposition. Most are author questions ("can you cite this?"); the answer is usually a one-line `fixed` or a `refuted` with the citation.
-- **✏️ Style** — advisory. Apply, or `accepted` with a reason. Batch identical rewrites into one question; don't ask six times about "simply".
-- **💡 Pre-existing** — optional by construction: not introduced by this PR and not the author's debt. Ask once whether to include them, default no, and `deferred` with an issue is the good outcome when the user says yes.
-
-## Recording
-
-State file, `.review-worklist-<PR>.json` at the repo root (gitignored):
-
-```json
-{
-  "items": {
-    "outstanding:L40": { "disposition": "fixed", "note": "" },
-    "low:L12": { "disposition": "refuted", "note": "cited two paragraphs down; model conceded" },
-    "style:content/docs/a.md:L91": { "disposition": "accepted", "note": "term of art on this page" }
-  }
-}
-```
-
-Write it as each decision is made, not at the end. The file is what makes `--resume` work after a lost session, and what `--require-clean` reads to answer the only question that matters at merge time: **is anything still undecided?**
+- **🚨 Outstanding** (v3 "Fix or disagree") — blocks merge. `fixed` or `refuted` are the expected outcomes. `deferred` and `accepted` are allowed but must be visible in the PR thread, not only in the ledger. Never leave one undecided.
+- **❓ Author-answer** (v3 "Questions for you") — blocks merge, and it is addressed to you specifically: the reviewer is told not to police it. These are the items only the author can settle ("where does this figure come from?"). Usually a one-line `fixed` or a `refuted` with the citation, and answering is what unblocks it — a question left unanswered blocks just as hard as a 🚨.
+- **⚠️ Reviewer-check** (v3, on the brief) — advisory, and written *for the approver*, not for you. It still gets a disposition, because an item someone is told to check is an item someone has to answer, but it never blocks and it batches well.
+- **⚠️ Low-confidence** (legacy v2 only) — doesn't block, still gets a disposition. Most are author questions; the answer is usually a one-line `fixed` or a `refuted` with the citation.
+- **✏️ Style** — advisory. Apply, or `accepted` with a reason. Batch identical rewrites into one question; don't ask six times about "simply". These carry no `F<n>`, so they live in the local state file only.
+- **💡 Pre-existing** — optional by construction: not introduced by this PR and not the author's debt. Ask once whether to include them, default no, and `deferred` with an issue is the good outcome when the user says yes. **Only v2 puts these in the worklist** (the one bucket carrying `optional: True`); on v3 the brief gives a count and the evidence page the detail, so there is no row to disposition and nothing for `--require-clean` to skip. Note that what you leave open here is banked: `build-glowup-backlog.py` reads still-open and accepted findings off a content-review PR as page debt for the glow-up lane.
