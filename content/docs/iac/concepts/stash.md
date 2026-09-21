@@ -154,7 +154,7 @@ output "stashed_value" {
 
 The `lifecycle` block is what makes this a stash. On its own, `terraform_data` keeps Terraform's semantics, where `output` is the computed value of `input` and follows it on every update. Adding [`ignore_changes`](/docs/iac/concepts/resources/options/ignorechanges/) for `input` pins the value the resource was created with, giving you the stateful `output` described above. Leave it out and `terraform_data.my_stash.output` returns the current `input` instead.
 
-One consequence: because `input` is ignored, `terraform_data.my_stash.input` reports the pinned value too, rather than echoing the most recent one. An HCL program gets one of the two output properties, not both.
+One consequence: because `input` is ignored, `terraform_data.my_stash.input` reports the pinned value too, rather than echoing the most recent one. Both properties return the stashed value, so there is no way to read the resource's current `input` expression back out of it.
 
 {{% /choosable %}}
 
