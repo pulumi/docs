@@ -1,7 +1,7 @@
 ---
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
-updated: 2026-07-05
+updated: 2026-09-21
 meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and use Pulumi Neo to automate infrastructure management with AI."
 authors:
     - aaron-kao
@@ -333,8 +333,9 @@ scalability, and collaboration.
     test, and ship it the same way an AI coding agent already handles the rest of
     your codebase, using the same linters, type checkers, and test frameworks.
     Terraform, by contrast, is defined in HCL, a domain-specific configuration
-    language with none of that tooling and far less representation in the
-    codebases AI models are trained on — one more reason teams switch.
+    language, so the general-purpose language tooling and AI coding agents
+    your team already uses don't apply to it directly — one more reason teams
+    switch.
 
 - **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of

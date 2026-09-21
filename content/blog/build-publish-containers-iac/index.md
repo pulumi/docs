@@ -6,7 +6,7 @@ tags: [containers, docker, kubernetes]
 category: tutorials
 meta_desc: "Go from Dockerfile to a fully running containerized service on your cloud of choice using infrastructure as code."
 date: "2020-12-08"
-updated: 2026-08-22
+updated: 2026-09-21
 
 ---
 

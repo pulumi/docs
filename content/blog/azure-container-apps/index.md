@@ -1,7 +1,7 @@
 ---
 title: "Deploy Azure Container Apps with Docker and Pulumi"
 date: 2021-11-02T09:00:00-07:00
-updated: 2026-08-22
+updated: 2026-09-21
 meta_desc: "Learn how to deploy Docker containers to Azure Container Apps using Pulumi. A step-by-step guide for building scalable serverless apps in any language."
 authors:
     - mikhail-shilkov

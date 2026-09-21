@@ -1,7 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
-updated: 2026-08-22
+updated: 2026-09-21
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 feature_image: feature.png
 authors:
@@ -59,7 +59,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 
 Terraform modules are powerful, but larger HCL codebases can require teams to maintain separate conventions for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever [supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/) they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
 
-Teams with HCL muscle memory are not left out, either. Pulumi now [supports HCL natively](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) as one of its languages, alongside Python, TypeScript, JavaScript, Go, .NET, Java, and YAML. A project written in Pulumi HCL runs your existing `.tf` files largely unchanged, backed by the same state management, secrets handling, and deployment engine as every other Pulumi language.
+Teams with HCL muscle memory are not left out, either. Pulumi now [supports HCL natively](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) as one of its languages, alongside Python, TypeScript, JavaScript, Go, .NET, Java, and YAML. Pulumi HCL aims to run valid Terraform configurations [without changes](https://www.pulumi.com/docs/iac/languages-sdks/hcl/#terraform-compatibility), with a small number of documented differences, backed by the same state management, secrets handling, and deployment engine as every other Pulumi language.
 
 For example, a platform team can wrap a standard storage pattern in a `ComponentResource` and share it like any other TypeScript abstraction:
 

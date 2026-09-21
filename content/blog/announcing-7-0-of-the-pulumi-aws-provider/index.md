@@ -2,7 +2,7 @@
 title: "Pulumi AWS Provider 7.0: Multi-Region Support, IAM Role Chaining, and S3 Resource Simplification"
 allow_long_title: true
 date: 2025-08-05T09:00:00-04:00
-updated: 2026-08-22
+updated: 2026-09-21
 draft: false
 meta_desc: "Pulumi AWS Provider 7.0 adds multi-region support, IAM role chaining, and improved S3 resource management for seamless AWS infrastructure as code."
 authors:

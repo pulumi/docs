@@ -8,7 +8,7 @@ title: "AWS CDK vs Pulumi: Why SST Chose Pulumi"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2024-09-25T07:32:40Z
-updated: 2026-08-22
+updated: 2026-09-21
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
