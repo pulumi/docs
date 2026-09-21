@@ -166,7 +166,7 @@ A push alone answers only `fixed`. Everything else has to land in `REVIEW_STATE`
 
 | Lane | Use it for | Cost |
 |---|---|---|
-| **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk on a flagged line) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. | free |
+| **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk within ±3 lines of a finding's `[L…]` anchor) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. **Only the author card's 🚨 and ❓ findings anchor a refresh** — a hunk fixing a ⚠️ brief item or a ✏️ suggestion falls outside every anchor and declines the whole push, so a mixed fix-push needs the mention below. | free |
 | **`/resolve F<n> <disposition>[: reason]`** | Agent-facing bookkeeping — recording a disposition the user already decided, in bulk if needed (`/resolve all accepted: <why>`). Writes `REVIEW_STATE` directly, no model runs. | zero model cost |
 | **`@claude <reasoning> #update-review`** | Anything needing adjudication: a dispute, a fix the gate didn't catch, a question answered in prose. The only lane that can *change the review's mind*. | a model run |
 

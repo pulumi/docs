@@ -66,7 +66,7 @@ What follows from it:
 
 The ordinary path. Make the change, keep it minimal, and keep it to what the finding actually asks for — a review fix is not an invitation to rewrite the section.
 
-- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on flagged lines is what `auto-refresh-gate.py` recognizes: the card shows a 🔄 banner within a minute and refreshes itself with no mention needed.
+- Apply to the working tree during the walk; push once at the end (Step 5). A single small fix-push that lands only on the lines a 🚨 or ❓ finding anchors is what `auto-refresh-gate.py` recognizes: the card shows a 🔄 banner within a minute and refreshes itself with no mention needed. Only those two buckets anchor it, so a push that also fixes a ⚠️ or ✏️ item is declined as a whole and needs `#update-review` — worth knowing before you batch an advisory fix into a blocker's push.
 - The v3 card usually writes the fix for you. Each blocking finding carries an `F<n> · Do this` block with the verbatim line, why it's wrong, and a replacement — often with an **If you'd rather keep it** alternative. Confirm the line still matches the file, then apply it.
 - For a `[style-blocker]` bullet in 🚨 (wrong product name, banned term, misspelling): fix it. These come from Vale's blocker allowlist, they are deterministic, and they are not worth disputing.
 - For an inline ✏️ one-click suggestion: either the user clicks it in the Files-changed tab **or** you edit the line locally. Never both — the second one conflicts with the first.
