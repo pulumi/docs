@@ -65,7 +65,10 @@ def _normalize(author: Path, brief: Path, base: Path, summary: Path | None = Non
 
 @pytest.mark.parametrize("pr, rule", [("21603", "v3-detail-blocks"),
                                      ("21585", "v3-finding-grammar"),
-                                     ("21748", "v3-finding-grammar")])
+                                     ("21722", "v3-finding-grammar"),
+                                     ("21748", "v3-finding-grammar"),
+                                     ("21759", "v3-finding-grammar"),
+                                     ("21782", "v3-blocking-count")])
 def test_fixture_refused_then_accepted_then_idempotent(tmp_path, pr, rule):
     author, brief, base = _fixture(tmp_path, pr)
     rc, out = _validate(author, brief, base)
@@ -269,3 +272,72 @@ def test_close_row_refuses_what_it_cannot_prove():
     assert nv._close_row("|") is None
     # A cell ending in an escaped pipe is unclosed, not closed.
     assert nv._close_row(r"| **F1** | `a.md` L3 | a \| b") == r"| **F1** | `a.md` L3 | a \| b |"
+
+
+def test_21759_range_dash_rewritten_in_where_cell_only(tmp_path):
+    author, brief, base = _fixture(tmp_path, "21759")
+    assert "L47–52" in brief.read_text()
+    _normalize(author, brief, base)
+    row = next(l for l in brief.read_text().splitlines() if l.startswith("| **F?** |"))
+    assert "`scripts/redirects/README.md` L47-52" in row
+    assert " — " in row, "dashes in the Finding cell are prose and stay"
+
+
+def test_range_dash_left_alone_when_the_row_still_would_not_parse():
+    rep = nv.Repairs()
+    lines = ["### ⚠️ Check these before approving", "",
+             "| ID | Where | Finding |", "|---|---|---|",
+             "| **F?** | L47–52 of the readme | no file, no backticks |", ""]
+    out = nv._normalize_tables(lines, nv.BRIEF_SECTIONS, "brief", rep)
+    assert out == lines and not rep.items
+
+
+def test_21782_header_restored_with_the_cards_own_row_count(tmp_path):
+    author, brief, base = _fixture(tmp_path, "21782")
+    _normalize(author, brief, base)
+    assert "## Author action guide v1 — 1 item blocks merge" in author.read_text().splitlines()
+
+
+def test_header_in_either_composed_shape_is_untouched():
+    for tail in ("3 items block merge", "1 item blocks merge", "nothing blocks merge"):
+        rep = nv.Repairs()
+        lines = [f"## Author action guide v2 — {tail}", "", "### 🚨 Fix or disagree", ""]
+        assert nv._normalize_header(lines, rep) == lines and not rep.items
+
+
+def test_reworded_header_with_no_open_rows_becomes_nothing_blocks():
+    rep = nv.Repairs()
+    lines = ["## Author action guide v1 — all clear", "", "### 🚨 Fix or disagree", "",
+             "| ID | Where | Finding |", "|---|---|---|",
+             "| **F1** | `a.md` L8 | **Spurious:** stale comparison |", "",
+             "### ❓ Questions for you", "", "_No open questions for you._", ""]
+    out = nv._normalize_header(lines, rep)
+    assert out[0] == "## Author action guide v1 — nothing blocks merge"
+    assert [r["rule"] for r in rep.items] == ["author-header"]
+
+
+def test_21787_readthrough_demotion_needs_no_repair(tmp_path):
+    """The model moved two readthrough stubs to the brief's ⚠️ list, as their
+    TODO told it to. That is legal (compose-review.v3_may_demote), so the
+    draft validates as shipped and the normalizer has nothing to do."""
+    author, brief, base = _fixture(tmp_path, "21787")
+    rc, out = _validate(author, brief, base)
+    assert rc == 0, out
+    rc, out = _normalize(author, brief, base)
+    assert rc == 0 and "0 repair(s)" in out
+
+
+def test_21722_split_finding_cell_joined_as_a_rewrite(tmp_path):
+    author, brief, base = _fixture(tmp_path, "21722")
+    _normalize(author, brief, base)
+    row = next(l for l in author.read_text().splitlines() if l.startswith("| **F1** |"))
+    assert row.count(" | ") == 2 and "…\"* — **Spurious:** " in row
+
+
+def test_four_cell_row_left_alone_when_the_join_would_not_parse():
+    rep = nv.Repairs()
+    lines = ["### ⚠️ Check these before approving", "",
+             "| ID | Where | Finding |", "|---|---|---|",
+             "| **F2** | not a where cell | one | two |", ""]
+    out = nv._normalize_tables(lines, nv.BRIEF_SECTIONS, "brief", rep)
+    assert out == lines and not rep.items

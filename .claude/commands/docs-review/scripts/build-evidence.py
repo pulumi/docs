@@ -298,7 +298,8 @@ def build(author_body: str, brief_body: str, base: dict,
                 raise ContractViolation(f"{doc_name}: finding {fid} appears twice across the drafts")
             seen_ids.add(fid)
             prior = base_findings.get(fid)
-            if prior and _BUCKET_RANK[bucket] < _BUCKET_RANK.get(prior["bucket"], 0):
+            if (prior and _BUCKET_RANK[bucket] < _BUCKET_RANK.get(prior["bucket"], 0)
+                    and not cr.v3_may_demote(prior)):
                 raise ContractViolation(
                     f"{doc_name}: {fid} demoted from {prior['bucket']} to {bucket} — promote-only"
                 )
@@ -657,6 +658,15 @@ def _self_test() -> int:
         assert "demoted" in str(e), e
     else:
         raise AssertionError("demotion must be a contract violation")
+
+    # …unless F1 is a readthrough stub, which its TODO sends to ⚠️ by reader
+    # impact (pulumi/docs#21787): legal, and it stops counting as blocking.
+    rt_base = dict(base, findings=[
+        dict(f, origin="preflight:readthrough-self-redundancy") if f["id"] == "F1" else f
+        for f in base["findings"]])
+    ev_rt, author_rt, _ = build(demoted_author, demoted_brief, rt_base)
+    assert {f["id"]: f["bucket"] for f in ev_rt["findings"]}["F1"] == "reviewer-check"
+    assert "## Author action guide v1 — 2 items block merge" in author_rt, author_rt.splitlines()[2]
 
     # vanish: F2 removed without a rewrite → violation
     vanished_author = author.replace("| **F2** | `a.md` L9 | promoted question now a blocker |\n", "")

@@ -1823,6 +1823,22 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
     return author_answer, reviewer_check
 
 
+def v3_may_demote(finding: dict) -> bool:
+    """The one exception to promote-only: a readthrough detector finding.
+
+    `build_stubs` pre-stubs every readthrough finding in 🚨 and tells the model
+    to "bucket by reader impact: 🚨 if a reader cannot reach the page's stated
+    outcome without it, otherwise move to ⚠️" — so moving one to the brief's
+    ⚠️ list is the model following its instructions, not arguing a finding
+    down. The validator and build-evidence.py both ask here, so the TODO and
+    the two enforcers can't disagree again (pulumi/docs#21787, 2026-09-21: a
+    redundancy and an orphaned heading moved to ⚠️ as told, review:error).
+    Hugo and frontmatter detector stubs carry no such instruction and stay
+    promote-only, as does every fact-check verdict.
+    """
+    return str(finding.get("origin") or "").startswith("preflight:readthrough-")
+
+
 AUTHOR_STATE_BEGIN = "<!-- AUTHOR_STATE_BEGIN -->"
 AUTHOR_STATE_END = "<!-- AUTHOR_STATE_END -->"
 
