@@ -176,7 +176,7 @@ primitive its own stack — that is the micro-stacks pattern below, and it's rar
 Layers connect through [stack references](/docs/iac/concepts/stacks/#stackreferences), which let one stack read the
 outputs another stack exported. The `clusters` program reads the network the `networking` program published:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -321,6 +321,31 @@ variables:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+variable "org" {
+  type        = string
+  description = "Pulumi organization that owns the networking stack"
+}
+
+# Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+resource "pulumi_stack_reference" "networking" {
+  name = "${var.org}/networking/${pulumi.stack}"
+}
+
+locals {
+  vpc_id             = pulumi_stack_reference.networking.outputs["vpcId"]
+  private_subnet_ids = pulumi_stack_reference.networking.outputs["privateSubnetIds"]
+}
+
+# Create cluster resources in the shared network...
+```
+
+Set `org` once per stack with `pulumi config set clusters:org myorg`. The `outputs` keys are map keys rather than HCL identifiers, so they are read back exactly as the producing stack exported them — `vpcId`, not `vpc_id`.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The stack name resolves dynamically: deploying the `prod` stack of `clusters` reads the `prod` stack of `networking` in
@@ -375,7 +400,7 @@ environment:
 The outputs now arrive as plain configuration, which your program reads exactly like any other config value — no
 `StackReference` in sight:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -496,6 +521,25 @@ config:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Supplied by the imported ESC environment — no stack reference needed.
+variable "vpcId" {
+  type = string
+}
+
+variable "privateSubnetIds" {
+  type = list(string)
+}
+
+# Create cluster resources in the shared network...
+```
+
+A `variable` block reads whatever the stack's configuration supplies under the project's namespace, so these names match the `pulumiConfig` keys above rather than HCL's usual snake_case.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 See [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) for the full workflow.
@@ -595,7 +639,7 @@ code lives in.
 A common multi-repo layout puts a platform team's shared infrastructure in one repo and a service team's resources in
 another:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -713,6 +757,26 @@ my-service/              # service team: one workload
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── main.tf
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+└── sdks/                # provider descriptors written by `pulumi install`
+
+my-service/              # service team: one workload
+├── main.tf
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+└── sdks/
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The service program reads the platform stack with a stack reference, exactly as shown in
@@ -746,7 +810,7 @@ workloads or aspects of your infrastructure** — the same networking / clusters
 than around individual cloud services. Files named for the *purpose* they serve stay meaningful as your infrastructure
 grows; files named for cloud primitives do not.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -836,6 +900,31 @@ my-platform/
 ├── Pulumi.yaml       # the entire program, defined inline
 ├── Pulumi.dev.yaml
 └── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+A Pulumi HCL project is a directory of `.tf` files, and every `.tf` file in that directory is loaded into a single root module. The files are merged rather than imported, so splitting the program across them is purely organizational: no file has to compose the others, and any file can reference the resources, locals, and variables any other file declares.
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── networking.tf     # VPC, subnets, security groups
+├── clusters.tf       # Kubernetes / compute clusters
+└── workloads.tf      # application services
+```
+
+Because those files share one namespace, the unit of reuse is the [`module` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a package import. A module is its own directory of `.tf` files, and Pulumi instantiates it as a component resource:
+
+```hcl
+module "vpc" {
+  source     = "./modules/vpc"
+  cidr_block = "10.0.0.0/16"
+}
 ```
 
 {{% /choosable %}}

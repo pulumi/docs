@@ -26,7 +26,7 @@ This page describes how Pulumi Infrastructure as Code (IaC) turns a program into
 
 Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -123,11 +123,42 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: my-project
+runtime: hcl
+```
+
+`main.tf`:
+
+```hcl
+resource "aws_s3_bucket" "media_bucket" {}
+
+resource "aws_s3_bucket" "content_bucket" {}
+```
+
+HCL resource labels are identifiers, so the logical names here are `media_bucket` and `content_bucket` — the snake_case counterparts of the `media-bucket` and `content-bucket` names this walkthrough uses.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new [stack](/docs/iac/concepts/stacks/), the "last deployed state" has no resources.
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Next, we run `pulumi up`. Since this program is written in {{% pulumi-language %}}, the Pulumi CLI launches the {{% pulumi-host %}} language host and requests that it execute the program. When the first {{% pulumi-bucket %}} object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to_ {{% pulumi-new-bucket %}} _returns, it does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. The language host continues to execute your program concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, we run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. HCL has no object construction, so there is no constructor call to return from: as the language host evaluates the configuration, each `resource` block becomes a _resource registration_ request sent to the deployment engine. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+
+{{% /choosable %}}
 
 In this case, since the last deployed state has no resources, the engine determines that it needs to create the `media-bucket` resource. It uses the AWS resource plugin in order to create the resource and the AWS resource plugin uses the AWS SDK in order to go create it.  Note that the engine does not talk directly to AWS, instead it just asks the AWS Resource Plugin to create a Bucket. As new resource types are added, you can update the version of a resource provider to gain access to these new resources without having to update the CLI itself. When the operation to create this bucket is complete, the engine records information about the newly created resource in its state file.
 
@@ -153,7 +184,7 @@ The names shown above—`media-bucket` and `content-bucket`—are the _logical n
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to add tags to the S3 `media-bucket`.  We change our program to express this new desired state:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -269,6 +300,20 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "media_bucket" {
+  tags = {
+    owner = "media-team"
+  }
+}
+
+resource "aws_s3_bucket" "content_bucket" {}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
@@ -277,7 +322,7 @@ The engine also receives a resource registration request for "content-bucket".  
 
 Now, suppose we rename `content-bucket` to `app-bucket`.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -393,6 +438,22 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "media_bucket" {
+  tags = {
+    owner = "media-team"
+  }
+}
+
+resource "aws_s3_bucket" "app_bucket" {}
+```
+
+Renaming the label registers a new resource and drops the old one. To rename a resource *without* replacing it, add a [`moved` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#moved-blocks) recording the old address.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state so it must create a new S3 bucket. Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.
@@ -448,7 +509,7 @@ By default, if a resource must be replaced, Pulumi will attempt to create a new 
 
 Three main components work together when you run `pulumi up`: a language host, a deployment engine, and [resource providers](/docs/iac/concepts/providers/). The following diagram illustrates how they interact. Because each language has its own language host and program entrypoint, select your language to see the corresponding diagram:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -575,6 +636,29 @@ flowchart LR
         k8s["Kubernetes"]
     end
     program -->|"aws:s3:Bucket"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```mermaid
+flowchart LR
+    subgraph host["HCL language host"]
+        program["main.tf"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"aws_s3_bucket"| engine
     engine <-->|"read / write"| state
     engine -->|"create, update, delete"| aws
     engine -->|"create, update, delete"| azure
