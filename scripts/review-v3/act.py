@@ -51,6 +51,14 @@ command the board composed, which is why a plan names its PRs one by one:
                      the send-back for a workflow-authored PR, which has no
                      author to answer a review. Repeatable; `--superseded-by
                      N:M` scopes M to one of several closes.
+  --ask-fix N        comment `@claude fix <ids> #update-review`, naming the
+                     row's open findings: the second way out of a PR whose
+                     author will never answer its review. `/address-review`
+                     is the interactive one -- you walk the findings and push
+                     the fixes yourself; this hands the same list to the
+                     agent already watching the PR and asks it to refresh the
+                     review after. One comment, no push, so unlike the
+                     handoff it batches with everything else.
   --refresh N        post `@claude <reason> #update-review`.
   --rerun N          post `@claude <reason> #new-review` (fresh review from scratch).
   --rerun-checks N   re-run the failed jobs of the head's workflow runs (the
@@ -122,6 +130,12 @@ REASON_KINDS = ("request-changes", "refresh", "rerun", "close")
 SENTINEL_CHECK = "sentinel"
 SENTINEL_WAIT_S = 90
 SENTINEL_POLL_S = 10
+# A conflicted --unblock used to fail into the run's stdout and nowhere else:
+# nothing was written, so the next collect saw the same `mergeable:dirty` and
+# the board offered the same "merge base & retry" button, forever. The marker
+# carries the head the merge was attempted against, so collect can tell a
+# conflict that still stands from one a later push already settled.
+UNBLOCK_CONFLICT_MARKER = "<!-- PR_REVIEW_UNBLOCK_CONFLICT -->"
 
 
 class ActError(Exception):
@@ -438,6 +452,12 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
                               supersede_comment=with_footer(f"Supersedes #{n}, closed as a duplicate.")))
         else:
             steps.append(step("close", n, superseded_by=None, reason=None))
+    for n in _listed(args.ask_fix):
+        pr = pr_of(n)
+        items = ask_fix_items(pr)
+        if not items:
+            raise ActError(f"--ask-fix {n}: no open findings to name — nothing to ask for")
+        steps.append(step("ask-fix", n, items=items))
     for n in _listed(args.refresh):
         pr = pr_of(n)
         steps.append(step("refresh", n, reason=next((r for r in pr.get("reasons") or [] if r.startswith("review:")), "the review is stale")))
@@ -453,7 +473,7 @@ def plan(queue: dict, args: argparse.Namespace) -> Plan:
     for n in _listed(args.deploy):
         steps.append(step("deploy", n))
     if not steps:
-        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --refresh / --rerun / --rerun-checks / --render / --deploy")
+        raise ActError("nothing to do: pass --stamp / --route / --unblock / --fix / --close / --ask-fix / --refresh / --rerun / --rerun-checks / --render / --deploy")
     steps = _dedupe(steps)
     _assign_reasons(steps, by, scoped_reasons, bare_reasons)
     for s in steps:
@@ -506,6 +526,8 @@ def _render_bodies(s: Step, pr: dict) -> None:
         s.args["body"] = request_changes_body(pr, s.args.get("reason") or "")
     elif s.kind == "close" and not s.args.get("superseded_by"):
         s.args["comment"] = with_footer(s.args["reason"])
+    elif s.kind == "ask-fix":
+        s.args["comment"] = ask_fix_body(pr, s.args["items"])
     elif s.kind == "refresh":
         s.args["comment"] = with_footer(f"@claude {s.args['reason']} #update-review")
     elif s.kind == "rerun":
@@ -573,6 +595,10 @@ def preview(plan_: Plan, queue: dict | None = None) -> str:
                 lines.append(f"     comment on #{s.pr}:")
                 lines += _indent(s.args["comment"])
                 lines.append(f"     PATCH #{s.pr} state=closed")
+        elif s.kind == "ask-fix":
+            lines.append(f"     preflight: open, head == {head}")
+            lines.append(f"     comment on #{s.pr} ({len(s.args['items'])} finding(s); one comment, nothing pushed):")
+            lines += _indent(s.args["comment"])
         elif s.kind in ("refresh", "rerun"):
             lines.append(f"     preflight: open, head == {head}")
             lines.append(f"     comment: {_body_head({'body': s.args['comment']})} (+ footer)"
@@ -898,7 +924,7 @@ def execute(plan_: Plan, gh: GhClient, git: Git | None = None, *, queue: dict | 
                 ok, msg = _fix(gh, git or Git(repo_root), s, dry_run=dry_run)
             elif s.kind == "close":
                 ok, msg = _close(gh, s)
-            elif s.kind in ("refresh", "rerun"):
+            elif s.kind in ("ask-fix", "refresh", "rerun"):
                 ok, msg = _mention(gh, s)
             elif s.kind == "rerun-checks":
                 ok, msg = _rerun_checks(gh, s)
@@ -1008,6 +1034,51 @@ RESOLVABLE = ("fixed", "refuted", "accepted", "not-applicable")  # `deferred` go
 FINDING_ID_RE = re.compile(r"F\d+")
 
 
+def ask_fix_items(pr: dict) -> list[dict]:
+    """The open findings an `@claude fix …` mention should name.
+
+    The review's own open rows: no disposition, and never a style or
+    pre-existing one. Those two buckets are marked optional by the review
+    itself, and a mention that asked for them would turn "take it or leave
+    it" into a push."""
+    review = pr.get("review") or {}
+    items = review.get("items") or []
+    out = [{"id": (i.get("id") or "").strip(), "summary": (i.get("summary") or "").strip()}
+           for i in items
+           if not i.get("disposition") and i.get("bucket") not in ("style", "pre-existing", "preexisting")]
+    if review.get("surface") == "v3":
+        # On a v3 card the ⚠️ rows live in the brief, not in `items`.
+        disposed = {i["id"] for i in items if i.get("disposition")}
+        seen = {o["id"] for o in out}
+        out += [{"id": w["id"], "summary": (w.get("body") or "").strip()}
+                for w in review.get("warning_rows") or []
+                if w.get("id") and w["id"] not in disposed and w["id"] not in seen]
+    return [o for o in out if o["id"]]
+
+
+def _and_join(parts: list[str]) -> str:
+    if len(parts) <= 1:
+        return parts[0] if parts else ""
+    if len(parts) == 2:
+        return f"{parts[0]} and {parts[1]}"
+    return ", ".join(parts[:-1]) + f" and {parts[-1]}"
+
+
+def ask_fix_body(pr: dict, items: list[dict]) -> str:
+    """`@claude fix F1 and F3 #update-review`, then what each id is.
+
+    The ids go on the mention line because that is the instruction; the
+    summaries follow it so a person scrolling the thread can read what was
+    asked for without opening the card. One mention does both halves -- fix,
+    then re-review -- which is what the pipeline's `#update-review` is for."""
+    ids = _and_join([i["id"] for i in items])
+    lines = [f"@claude fix {ids} #update-review", ""]
+    for i in items:
+        summary = " ".join((i["summary"] or "").split())
+        lines.append(f"- **{i['id']}**" + (f" — {summary[:200]}{'…' if len(summary) > 200 else ''}" if summary else ""))
+    return with_footer("\n".join(lines))
+
+
 def resolve_lines(pr: dict) -> list[str]:
     """One `/resolve F<n> <disposition>: <why>` per judged finding, which is
     how approving a row answers the review instead of merging over it. Only
@@ -1088,7 +1159,9 @@ def _mention(gh: GhClient, s: Step) -> tuple[bool, str]:
     if not ok:
         return False, f"preflight refused: {msg}"
     gh.comment(s.pr, s.args["comment"])
-    return True, "refresh requested" if s.kind == "refresh" else "fresh review requested"
+    return True, {"refresh": "refresh requested",
+                  "ask-fix": f"asked @claude to fix {len(s.args.get('items') or [])} finding(s) and refresh the review",
+                  }.get(s.kind, "fresh review requested")
 
 
 def _deploy(gh: GhClient, s: Step) -> tuple[bool, str]:
@@ -1126,9 +1199,42 @@ def _unblock(gh: GhClient, git: Git, s: Step, *, dry_run: bool = False) -> tuple
             wt.push(s.branch)
             return True, "merged origin/master into the head branch and pushed"
         conflicts = wt.conflicted_files()
+        _report_unblock_conflict(gh, s, conflicts)
         return False, "conflicts need a human: " + ", ".join(conflicts[:8])
     finally:
         git.remove_worktree(wt)  # a conflicted or half-done merge goes with it
+
+
+def unblock_conflict_body(head: str, base: str, conflicts: list[str]) -> str:
+    """What act.py leaves on the PR when the base merge stops on conflicts.
+
+    The files, and the head it was tried against, so the next board render
+    can see that this conflict is still the current one rather than a
+    settled one -- and so the approver who pressed the button finds out
+    somewhere other than the terminal they have already closed."""
+    files = "\n".join(f"- `{f}`" for f in conflicts[:20])
+    more = f"\n- …and {len(conflicts) - 20} more" if len(conflicts) > 20 else ""
+    return with_footer(
+        f"{UNBLOCK_CONFLICT_MARKER}\n"
+        f"Tried to merge `{base}` into this branch from `/pr-review` and stopped on conflicts, so nothing was "
+        f"pushed. The merge is aborted, not half-applied — the branch is exactly as it was at `{head[:7]}`.\n\n"
+        f"Conflicted file{'s' if len(conflicts) != 1 else ''}:\n\n{files}{more}\n\n"
+        f"Resolving these needs someone who can say which side wins, so `/pr-review` will not offer the base "
+        f"merge again while `{head[:7]}` is the head. Merge `{base}` in by hand, or push any commit that settles "
+        f"it, and the button comes back.")
+
+
+def _report_unblock_conflict(gh: GhClient, s: Step, conflicts: list[str]) -> None:
+    """Best-effort: the conflict report must never turn a failed merge into a
+    raised exception, because the merge failing is the thing worth telling."""
+    if not conflicts:
+        return
+    body = unblock_conflict_body(s.expect_head, s.args.get("base") or "master", conflicts)
+    try:
+        if not _already_commented(gh.issue_comments(s.pr), norm_login(gh.me()), body):
+            gh.comment(s.pr, body)
+    except (GhError, OSError):
+        pass
 
 
 def _fix(gh: GhClient, git: Git, s: Step, *, dry_run: bool = False) -> tuple[bool, str]:
@@ -1257,6 +1363,9 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--close", type=int, action="append", help="close N (repeatable)")
     ap.add_argument("--superseded-by", action="append", metavar="M | N:M",
                     help="M with exactly one --close, or N:M to say which close (repeatable)")
+    ap.add_argument("--ask-fix", type=int, action="append", dest="ask_fix", metavar="N",
+                    help="comment `@claude fix <ids> #update-review`: ask the PR-side agent to fix the row's open "
+                         "findings and refresh the review, instead of running /address-review yourself")
     ap.add_argument("--refresh", type=int, action="append")
     ap.add_argument("--rerun", type=int, action="append", help="post `@claude <reason> #new-review`: a fresh review from scratch")
     ap.add_argument("--rerun-checks", type=int, action="append", help="re-run the failed jobs of the head's workflow runs")

@@ -603,7 +603,8 @@ def fetch_detail(gh: GhClient, number: int, retries: int = 3, delay: float = 1.5
 
 
 def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root: Path,
-               ai_override: str | None = None, allowlist_path: Path | None = None) -> dict:
+               ai_override: str | None = None, allowlist_path: Path | None = None,
+               approver: str | None = None) -> dict:
     number = listed["number"]
     detail = fetch_detail(gh, number)  # always live: mergeable_state is transient
     head_sha = (detail.get("head") or {}).get("sha") or ""
@@ -756,12 +757,66 @@ def collect_pr(gh: GhClient, listed: dict, *, cache_dir: Path | None, repo_root:
         "ai_suspect": {"flag": suspect, "reasons": reasons},
         "review": review,
         "triage_prose": (triage_c or {}).get("body"),
+        "unblock_conflict": unblock_conflict(comments, head_sha, _unblock_conflict_authors(approver)),
         "preview": preview_info(comments, files, repo_root),
         "cache_key": key,
     }
 
 
 # ---- queue --------------------------------------------------------------
+
+
+UNBLOCK_CONFLICT_MARKER = "<!-- PR_REVIEW_UNBLOCK_CONFLICT -->"
+
+
+def _unblock_conflict_authors(approver: str | None) -> set[str]:
+    """Who may write the conflict record: the review bot, or the approver --
+    the one who ran the merge that failed.
+
+    `collect()` has already resolved the approver (`--approver`, else
+    `gh.me()`), so this takes it rather than asking the token again. Asking
+    again was wrong twice over: a run started with `--approver` would check
+    a different login than the one the rest of the queue uses, and a backend
+    that cannot answer `GET /user` would check nothing at all -- either way
+    the record goes unseen and the board re-offers the dead button this
+    reader exists to withhold."""
+    return {norm_login(sentinel.BOT_LOGIN)} | ({norm_login(approver)} - {""})
+_UNBLOCK_CONFLICT_HEAD_RE = re.compile(r"the branch is exactly as it was at `([0-9a-f]{7,40})`")
+
+
+def unblock_conflict(comments: list[dict], head_sha: str, authors: set[str] | None = None) -> dict | None:
+    """The record `act.py` leaves when a `--unblock` base merge stops on
+    conflicts, but only while it still describes *this* head.
+
+    Without it the board had no memory of a refused merge: the row came back
+    `mergeable:dirty` with the same "merge base & retry" button, and pressing
+    it re-ran the same conflict. A push after the report settles the question
+    one way or the other, so a marker recorded against an older head is spent
+    and this returns None.
+
+    Provenance, for the same reason `sentinel._find_comment` cares: the
+    marker withholds a button, so a forged one is a (mild) denial of
+    service. It cannot go through that reader, though -- act.py comments as
+    whoever ran `/pr-review`, not as the review app -- so the rule is the
+    same shape with a different roster: the marker on an exact line among
+    the body's first three, from the review bot or from the approver whose
+    run wrote it. `authors` is that roster, already normalized by
+    `_unblock_conflict_authors`; None means don't check, which is only for
+    callers with no identity to check against."""
+    for c in reversed(comments):  # newest first: a re-tried merge supersedes
+        login = (c.get("user") or {}).get("login") or ""
+        if authors is not None and norm_login(login) not in authors:
+            continue
+        body = c.get("body") or ""
+        if UNBLOCK_CONFLICT_MARKER not in [ln.strip() for ln in body.splitlines()[:3]]:
+            continue
+        m = _UNBLOCK_CONFLICT_HEAD_RE.search(body)
+        if not head_sha or not m or not head_sha.startswith(m.group(1)):
+            continue
+        files = [l.strip("- ").strip("`") for l in body.splitlines()
+                 if l.startswith("- `") and l.rstrip().endswith("`")]
+        return {"head": head_sha, "files": files, "by": login, "url": c.get("html_url") or ""}
+    return None
 
 
 def parse_since(spec: str | None, now: datetime | None = None) -> datetime | None:
@@ -848,7 +903,7 @@ def collect(gh: GhClient, *, numbers: list[int] | None = None, authors: list[str
     def one(pr):
         try:
             return collect_pr(gh, pr, cache_dir=cache_dir, repo_root=repo_root,
-                              ai_override=ai_override, allowlist_path=allowlist_path)
+                              ai_override=ai_override, allowlist_path=allowlist_path, approver=approver)
         except GhError as exc:
             errors.append({"pr": pr["number"], "error": str(exc)})
             return None

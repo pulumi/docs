@@ -101,7 +101,7 @@ DUPLICATE_TITLE_RATIO = 0.8
 CROSS_CODE_CAP = 6
 # The row buttons that are decisions (a row takes one); everything else is a
 # side action. A row that is waiting on its author keeps only the side ones.
-DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate")
+DECISION_IDS = ("stamp", "stamp-merge", "stamp-no-merge", "request-changes", "close", "route", "chain", "consolidate", "ask-fix")
 SENTINEL_CHECK = act.SENTINEL_CHECK
 
 # code -> meaning; the detail after ':' is free text. Rendered as chips.
@@ -599,7 +599,16 @@ def answered_blockers(pr: dict) -> set[str]:
 
 def unblock_refusal(pr: dict) -> str | None:
     """Why act.py would refuse `--unblock` on this row, as a short slug for
-    the `unblock:refused:<why>` chip, or None when a push is allowed."""
+    the `unblock:refused:<why>` chip, or None when a push is allowed.
+
+    A conflict act.py already hit on this head counts. The merge is
+    mechanical or it is nobody's: offering the button a second time asks the
+    approver to re-run a merge that stopped on the same files and reported
+    it, which is how "merge base & retry" became a button that did nothing.
+    Collect only carries the record while it describes the current head, so
+    a push that settles the conflict brings the button back on its own."""
+    if pr.get("unblock_conflict"):
+        return "conflict"
     ok, why = act.push_allowed(pr)
     if ok:
         return None
@@ -1030,11 +1039,20 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr["handoffs"] = []
     if not revisable and open_count and act.push_allowed(pr)[0]:
         pr["handoffs"].append({
-            "id": "handfix", "label": "fix it yourself", "run": f"/address-review {n}",
+            "id": "handfix", "label": "fix it yourself", "run": f"/address-review {n}", "exclusive": "fix",
             "why": f"{open_count} open finding{'s' if open_count != 1 else ''} and an author who will never read a "
                    f"review: this hands #{n} to /address-review, which walks the findings with you and pushes the "
                    f"fixes to the branch. It is a separate, interactive run -- it is not part of the --act command "
                    f"at the foot of this page, and this page still writes nothing."})
+        # The same job, handed to the agent already watching the PR instead
+        # of to you. It is one comment, so unlike the handoff it is an
+        # ordinary act.py fragment and rides in the batch; the two are
+        # alternatives, and the board's toggles put one out when the other
+        # lights. Offered only when there are ids to name -- an `@claude fix`
+        # with nothing after it asks for nothing.
+        if act.ask_fix_items(pr):
+            add_action({"id": "ask-fix", "label": "ask @claude to fix them", "cmd": f"--ask-fix {n}",
+                        "exclusive": "fix"})
 
     if author_self:
         pr["self_note"] = (f"Your own PR: GitHub takes neither your approval nor your send-back. "

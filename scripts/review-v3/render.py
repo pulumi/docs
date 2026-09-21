@@ -77,7 +77,7 @@ CHIP_LABEL = {
     "route:no-team": "team missing, routing to a person",
     "route:team-unverified": "team not verifiable from here",
 }
-ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop",
+ACTION_CLASS = {"stamp": "go", "stamp-merge": "go", "stamp-no-merge": "go", "request-changes": "hold", "route": "route", "unblock": "stop", "refresh": "stop", "rerun": "stop", "rerun-checks": "stop", "close": "stop", "ask-fix": "hold",
                 "chain": "go", "consolidate": "hold", "fix": "", "render": "", "deploy": ""}
 INCLUDE_HANDED_OFF = False  # render.py --include-handed-off flips this
 # A row takes one decision (what happens to the PR) and any number of side
@@ -340,8 +340,13 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
                     "is waiting on its author, not on you. It returns to the board when a new commit lands.")
         elif code == "unblock":
             why = detail.partition(":")[2].replace("-", " ") if first == "refused" else detail.replace("-", " ")
-            text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
-                    "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
+            if why == "conflict":
+                text = ("The base merge was already tried on this head and stopped on conflicts; act.py reported the "
+                        "conflicted files on the PR rather than resolving them blind. Offering the button again would "
+                        "just re-run the same merge, so it is withheld until a push settles the conflict.")
+            else:
+                text = (f"The queue looked for a mechanical unblock on this row and could not offer one: {why or 'no unblock applies'}. "
+                        "Whatever moves this PR has to happen on GitHub or on the branch by hand.")
         if text is None and first:
             # A known code carrying an unexpected value: say what is known
             # rather than rendering a bare chip with nothing behind it. The
@@ -415,6 +420,9 @@ ACTION_HELP = {
               "yourself or ask Claude on the PR instead."),
     "route": "Request a review from the lane's owner and post what the queue flagged as a comment. Nothing merges, and the row moves to 'waiting on others'.",
     "unblock": "Merge master into this branch as a merge commit and push, so it stops conflicting. A conflicted merge is aborted and reported, never resolved blind.",
+    "ask-fix": ("Comment `@claude fix <ids> #update-review` on the PR, naming this row's open findings, so the agent "
+                "watching the PR fixes them and refreshes the review. The batched alternative to running "
+                "/address-review yourself: one comment, no push from here, and it rides in the command below."),
     "refresh": "Ask the existing review to update itself against the current head (@claude #update-review).",
     "rerun": "Throw the current review away and run a fresh one from scratch (@claude #new-review).",
     "rerun-checks": "Re-run the failed jobs of the head commit's workflow runs (the newest failed run per workflow), without a push, for a CI failure that looks flaky. A red commit status has no run to re-run, and the step says so. Nothing merges, and the review is not touched.",
@@ -923,21 +931,32 @@ def action_bar(pr: dict, queue: dict, *, expanded: bool = False) -> str:
     # at the foot of the page. It is a toggle like everything else here, so
     # the page stays a worksheet.
     for h in pr.get("handoffs") or []:
-        btns.append(f'<button class="btn hand" data-run="{esc(h["run"])}" data-pr="{pr["number"]}" '
+        btns.append(f'<button class="btn hand" data-run="{esc(h["run"])}" data-pr="{pr["number"]}"{exclusive_attr(h)} '
                     f'title="{esc(h.get("why") or "")}" aria-pressed="false">{esc(h["label"])}</button>')
     for a in actions:
         if a is primary:
             continue
-        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}"{covers_attr(a)} '
+        btns.append(f'<button class="btn" data-cmd="{esc(scope_reasons(a["cmd"]))}" data-pr="{pr["number"]}" data-kind="{action_kind(pr, a)}"{covers_attr(a)}{exclusive_attr(a)} '
                     f'title="{esc(action_help(pr, a))}" aria-pressed="false">{esc(a["label"])}</button>')
     if primary:
         # A stamp row starts with its stamp selected: the composed command
         # merges every stampable row unless the approver deselects one.
         selected = " sel" if (primary["id"] == "stamp" and pr.get("verdict") == "stamp") else ""
         btns.append(f'<button class="btn p p-{esc(ACTION_CLASS.get(primary["id"], ""))}{selected}" data-cmd="{esc(scope_reasons(primary["cmd"]))}" data-pr="{pr["number"]}" '
-                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}"{covers_attr(primary)} '
+                    f'data-kind="{action_kind(pr, primary)}" data-decision="{"1" if pr.get("verdict") in ("judge", "route") else "0"}"{covers_attr(primary)}{exclusive_attr(primary)} '
                     f'title="{esc(action_help(pr, primary))}" aria-pressed="{"true" if selected else "false"}">{esc(primary["label"])}</button>')
     return '<div class="acts">' + "".join(btns) + "</div>"
+
+
+def exclusive_attr(action: dict) -> str:
+    """Two buttons that do the same job by different means belong to one
+    exclusive group, and lighting either puts the other out. "fix it
+    yourself" and "ask @claude to fix them" are the pair: the first is an
+    interactive run on your machine, the second a comment in the batch, and
+    picking both would ask for the same fixes twice. The handoff is not a
+    decision, so `clearRow` alone cannot pair them."""
+    group = action.get("exclusive")
+    return f' data-exclusive="{esc(group)}"' if group else ""
 
 
 def covers_attr(action: dict) -> str:
@@ -1123,6 +1142,7 @@ HELP_SECTIONS = [
         "A collision cluster's move sits on the row it belongs to. <b>approve &amp; merge, then unblock #N</b> is on the chain's lead, and only where the collision is the one thing holding it back: it merges the lead through the stamp gates, then merges master into #N so it can follow, so it marks #N <i>covered</i> while it is lit. <b>ask … for one consolidated PR</b> is on the newest of a bot's overlapping sweeps.",
         "<b>your own PR</b> has no approve or send-back button: route it, and answer its findings with <code>/address-review</code>. A PR you already sent back waits under <i>Waiting on the author</i> until a commit lands.",
         "<b>fix it yourself</b> (amber, dashed) is on a PR a workflow opened that still has open findings: nobody will ever answer its review, so this is the way out that isn't closing it. It composes <code>/address-review N</code> on its own line above the command — an interactive run, never part of the batch.",
+        "<b>ask @claude to fix them</b> is the same row's other way out: one comment naming the open findings (<code>@claude fix F1 and F3 #update-review</code>) that asks the agent already on the PR to fix them and re-review. It is a write, so it rides in the <code>--act</code> command like everything else. The two are alternatives — lighting either puts the other out.",
         "The button says whether approving merges: a bot row leads with <i>approve &amp; merge</i>, a person's row with <i>approve, no merge</i>, because merging their PR is their call.",
     ]),
     ("Judgment badges", [
@@ -1742,6 +1762,15 @@ SCRIPT = r"""
   function clearRow(pr, keep){
     document.querySelectorAll('button.btn.sel[data-kind="decision"][data-pr="' + pr + '"]').forEach(function(o){ if (o !== keep) setSel(o, false); });
   }
+  // "Fix it yourself" and "ask @claude to fix them" are the same job by two
+  // routes, so they share an exclusive group and lighting either puts the
+  // other out. clearRow cannot do it: the handoff is deliberately not a
+  // decision, so it is invisible to the one-decision-per-row rule.
+  function clearExclusive(b){
+    if (!b.dataset.exclusive) return;
+    document.querySelectorAll('button.btn.sel[data-exclusive="' + b.dataset.exclusive + '"][data-pr="' + b.dataset.pr + '"]')
+      .forEach(function(o){ if (o !== b) setSel(o, false); });
+  }
   // A chain button acts on a second row: once the lead lands, the next link
   // gets master merged in. That row has no button for it, so it is marked
   // covered while the chain is lit, and a decision picked there instead
@@ -1785,7 +1814,12 @@ SCRIPT = r"""
     handWrap.hidden = !runs.length;
   }
   document.querySelectorAll('button.btn.hand[data-run]').forEach(function(b){
-    b.addEventListener('click', function(){ setSel(b, !b.classList.contains('sel')); composeHand(); });
+    b.addEventListener('click', function(){
+      var on = !b.classList.contains('sel');
+      if (on) clearExclusive(b);
+      setSel(b, on);
+      settle();
+    });
   });
   var copyHand = document.getElementById('copyhand');
   if (copyHand) copyHand.addEventListener('click', function(){
@@ -1802,6 +1836,7 @@ SCRIPT = r"""
       if (on && b.dataset.kind === 'decision') {   // one decision per row; side actions ride along
         clearRow(b.dataset.pr, b);
       }
+      if (on) clearExclusive(b);
       // Lighting a chain clears whatever was picked on the row it covers, so
       // the covered mark is that row's only state.
       if (on) coveredBy(b).forEach(function(pr){ clearRow(pr, null); });
