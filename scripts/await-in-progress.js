@@ -11,11 +11,22 @@ const pollIntervalMs = 60000;
 // never approaches it; hitting it means a predecessor is wedged.
 const maxWaitMs = 45 * 60 * 1000;
 
-// Ignore runs too old to still be executing. GitHub Actions kills a job at its
-// timeout -- six hours by default -- so a run whose start is older than that has
-// either finished, in which case the status query below does not return it, or is
-// wedged in a state it will never leave. That makes this threshold safe by
-// construction: it cannot skip a run that is genuinely holding the stack.
+// Ignore runs too old to still be executing.
+//
+// Sizing this needs care, because run age is not job runtime. GitHub kills a job
+// at its timeout -- six hours by default -- but that clock starts when the job
+// gets a runner, and time spent queued is not counted against it. So a run that
+// waited a long time for a runner can be older than six hours while its deploy
+// job is genuinely executing and holding the stack. Six hours would be the wrong
+// number here, and calling it a guarantee would be wrong twice.
+//
+// 48 hours is the bound instead: comfortably beyond any plausible queue wait plus
+// a full six-hour job, and still two orders of magnitude below the ages actually
+// seen here (27 to 181 days). It is a heuristic, not a proof, so it is worth being
+// precise about the worst case if it ever does skip a live run: the loop below
+// already gives up after maxWaitMs and proceeds regardless, so the only thing this
+// filter can change is *when* a run stops waiting, never *whether* it does. The
+// downside is bounded by behavior that already exists.
 //
 // This exists because three wedged runs accumulated here by 2026-09, all reported
 // by the API as `queued` and none of them ever started:
@@ -36,7 +47,7 @@ const maxWaitMs = 45 * 60 * 1000;
 // median of 54, and the serialization this script exists to provide was silently
 // switched off for three days. Three 409 stack conflicts on 2026-09-21 were the
 // first symptom anyone traced back here.
-const maxRunAgeMs = 6 * 60 * 60 * 1000;
+const maxRunAgeMs = 48 * 60 * 60 * 1000;
 
 // Drop runs older than maxRunAgeMs, logging each one. Exported for tests.
 //
@@ -45,10 +56,16 @@ const maxRunAgeMs = 6 * 60 * 60 * 1000;
 // afternoon. Naming what is being waited on is what makes the next wedged run take
 // minutes to diagnose instead of three days.
 //
+// `warned` carries the run ids already announced, so a caller polling once a minute
+// reports each wedged run once rather than on every pass. That is not just noise
+// control: GitHub renders at most 10 warning annotations per step, and 45 repeats
+// of the same run would push the "giving up on the queue and proceeding" warning --
+// the one that actually explains a failed deploy -- off the end of the list.
+//
 // A run whose timestamp is missing or unparseable is treated as live: this filter
 // should only ever remove a run it can prove is too old, and waiting needlessly is
 // the safe direction to fail.
-function dropStaleRuns(runs, nowMs, log = console.log) {
+function dropStaleRuns(runs, nowMs, log = console.log, warned = new Set()) {
     return runs.filter(run => {
         const startedAt = Date.parse(run.run_started_at || run.created_at);
         if (Number.isNaN(startedAt)) {
@@ -58,10 +75,13 @@ function dropStaleRuns(runs, nowMs, log = console.log) {
         if (ageMs <= maxRunAgeMs) {
             return true;
         }
-        log(`::warning::Ignoring ${run.html_url} (status ${run.status}, started ` +
-            `${Math.round(ageMs / (60 * 60 * 1000))}h ago): older than a job can run, ` +
-            `so it cannot be holding the stack. This run is wedged and should be ` +
-            `cancelled or reported to GitHub.`);
+        if (!warned.has(run.id)) {
+            warned.add(run.id);
+            log(`::warning::Ignoring ${run.html_url} (status ${run.status}, started ` +
+                `${Math.round(ageMs / (60 * 60 * 1000))}h ago): far older than a job can ` +
+                `run, so it is wedged rather than holding the stack. It should be ` +
+                `cancelled, or reported to GitHub if it refuses to cancel.`);
+        }
         return false;
     });
 }
@@ -129,6 +149,10 @@ async function waitForInProgressRuns() {
 
     let waitedMs = 0;
 
+    // Shared across poll iterations so each wedged run is announced once per
+    // deploy rather than once per minute. See dropStaleRuns.
+    const warnedStaleRuns = new Set();
+
     while (true) {
         // Fetch every run of this workflow that is holding or about to hold
         // the stack. No `branch` filter: the stack is shared by every
@@ -147,7 +171,7 @@ async function waitForInProgressRuns() {
         for (const run of pages.flat()) {
             byId.set(run.id, run);  // a run can change status between calls
         }
-        const runs = dropStaleRuns([...byId.values()], Date.now());
+        const runs = dropStaleRuns([...byId.values()], Date.now(), console.log, warnedStaleRuns);
 
         // Sort in-progress runs descendingly, excluding the current one.
         const recent = runs
