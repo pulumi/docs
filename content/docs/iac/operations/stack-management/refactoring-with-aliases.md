@@ -36,7 +36,7 @@ Before any of these refactors, run `pulumi preview` on each stack to confirm the
 
 Pass the old name in an alias entry. The first `pulumi up` after the change updates the stack state to use the new URN; no cloud resource is touched.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -97,13 +97,42 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+In Pulumi HCL, a resource's Pulumi name is its HCL label, so renaming the label is what changes the URN. Name the old label in an alias entry:
+
+```hcl
+resource "database" "primary_db" {
+  # ...
+
+  pulumi {
+    aliases = [{ name = "old_db" }]
+  }
+}
+```
+
+Terraform's `moved` block does the same job and reads more naturally for a straight rename. It lowers onto the same `aliases` option:
+
+```hcl
+resource "database" "primary_db" {
+  # ...
+}
+
+moved {
+  from = database.old_db
+  to   = database.primary_db
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ## Re-parenting a resource
 
 When a resource moves under a new explicit parent, reference the old parent in the alias. Pulumi will recognize the resource by its previous URN and update the parent path in state.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -181,6 +210,25 @@ resources:
       aliases:
         - parent: ${oldParent}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Pulumi HCL has no separate component type: a `module` *is* a component resource, and a resource's parent is the module it's declared in. Re-parenting means moving the declaration into the new module and naming its old address in a `moved` block:
+
+```hcl
+module "new_parent" {
+  source = "./modules/service-account"
+}
+
+moved {
+  from = google_service_account_key.primary_key
+  to   = module.new_parent.google_service_account_key.primary_key
+}
+```
+
+Pulumi matches the old address to the resource inside the module and updates the parent path in state; only the new component wrapper is created. If you'd rather record the alias on the resource itself, the `pulumi` block takes the old parent's URN directly — `aliases = [{ parent_urn = "urn:pulumi:..." }]` — since HCL has no reference to a parent that no longer exists in the program.
 
 {{% /choosable %}}
 
@@ -358,7 +406,7 @@ YAML programs don't define component resources directly. To group resources in Y
 
 When a provider deprecates a resource type or you migrate to a different provider entirely, the resource's type token changes. Add the old type in an alias entry:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -419,6 +467,22 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_db_instance" "primary_db" {
+  # ...
+
+  pulumi {
+    aliases = [{ type = "aws:rds/database:Database" }]
+  }
+}
+```
+
+The `type` value is the Pulumi type token, not the HCL type name — `aws:rds/database:Database`, not `aws_rds_database`.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 A type-change alias only convinces Pulumi that the URN refers to the same resource. The new resource's schema must still be compatible with the cloud resource that exists — for example, the provider must use the same underlying API and accept the same identifiers. If the schemas are incompatible, use [`pulumi import`](/docs/iac/guides/migration/import/) instead.
@@ -427,7 +491,7 @@ A type-change alias only convinces Pulumi that the URN refers to the same resour
 
 When a resource moves to a new stack name or project name, supply the old identity:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -485,6 +549,20 @@ resources:
       aliases:
         - stack: old-stack
           project: old-project
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "primary_db" {
+  # ...
+
+  pulumi {
+    aliases = [{ stack = "old-stack", project = "old-project" }]
+  }
+}
 ```
 
 {{% /choosable %}}

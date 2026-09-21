@@ -81,7 +81,7 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 
 Both configurations install your program's dependencies and run Pulumi from one of the official `pulumi/pulumi-*` images. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the step image and the dependency-install command differ between languages.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -292,6 +292,53 @@ options:
 # cloudbuild-deploy.yaml
 steps:
   - name: 'pulumi/pulumi-java'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Pulumi HCL needs no language runtime, so the CLI-only `pulumi/pulumi-base` image is enough and there are no dependencies to install. Commit the `sdks/` descriptors `pulumi install` writes alongside your `.tf` files; the build then resolves providers from them and downloads the plugins on demand.
+
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-base'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'pulumi preview --stack acme/website/staging'
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
+
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-base'
     dir: 'infra'
     entrypoint: 'bash'
     args:
