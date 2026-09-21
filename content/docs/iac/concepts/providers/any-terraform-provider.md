@@ -98,7 +98,7 @@ This walkthrough adds the Honeycomb Terraform provider to a new Pulumi project. 
 
 ### Step 1: Create a new Pulumi project
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -148,6 +148,18 @@ pulumi new yaml
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Create a directory with a `Pulumi.yaml` that selects the HCL runtime:
+
+```yaml
+name: honeycomb-example
+runtime: hcl
+description: Using the Honeycomb Terraform provider with Pulumi
+```
+
+{{% /choosable %}}
+
 ### Step 2: Add the Terraform provider
 
 ```bash
@@ -158,7 +170,7 @@ This downloads the provider and records it in your `Pulumi.yaml`. In every langu
 
 ### Step 3: Use the provider in your code
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -292,6 +304,31 @@ packages:
     version: 1.4.0
     parameters:
       - honeycombio/honeycombio
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Skip step 2. Name the provider's source in a `required_providers` block, then run `pulumi install`:
+
+```hcl
+terraform {
+  required_providers {
+    honeycombio = {
+      source = "honeycombio/honeycombio"
+    }
+  }
+}
+
+resource "honeycombio_marker" "deployment_marker" {
+  message = "Deployed via Pulumi"
+  dataset = "my-dataset"
+}
+
+output "marker_id" {
+  value = honeycombio_marker.deployment_marker.id
+}
 ```
 
 {{% /choosable %}}

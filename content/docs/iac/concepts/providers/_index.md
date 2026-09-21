@@ -175,7 +175,7 @@ pulumi config set aws:region us-west-2
 
 Then, you deploy the following Pulumi program:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -242,6 +242,16 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_instance" "my_instance" {
+  instance_type = "t2.micro"
+  ami           = "myAMI"
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -265,7 +275,7 @@ pulumi config set aws:region us-west-2
 
 Then deploy the following program, which uses an explicit provider for the certificate:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -461,6 +471,48 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+An explicit provider in Pulumi HCL is an aliased `provider` block, selected on a resource with the `provider` meta-argument.
+
+```hcl
+variable "load_balancer_arn" {
+  type = string
+}
+
+variable "target_group_arn" {
+  type = string
+}
+
+# Create an AWS provider for the us-east-1 region.
+provider "aws" {
+  alias  = "useast1"
+  region = "us-east-1"
+}
+
+# Create an ACM certificate in us-east-1.
+resource "aws_acm_certificate" "cert" {
+  provider          = aws.useast1
+  domain_name       = "foo.com"
+  validation_method = "EMAIL"
+}
+
+# Create an ALB listener in the default region that references the ACM certificate created above.
+resource "aws_lb_listener" "listener" {
+  load_balancer_arn = var.load_balancer_arn
+  port              = 443
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = aws_acm_certificate.cert.arn
+
+  default_action {
+    target_group_arn = var.target_group_arn
+    type             = "forward"
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -478,7 +530,7 @@ implicit inheritance.
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -612,6 +664,56 @@ resources:
       # pod properties...
     options:
       provider: ${myk8s}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+A Pulumi HCL module becomes a component resource, and the `providers` meta-argument passes provider configurations down to everything it declares.
+
+`my-resource/main.tf` declares the children:
+
+```hcl
+resource "aws_instance" "instance" {
+  ami           = "ami-0e2c8caa4b6378d8c"
+  instance_type = "t3.micro"
+}
+
+resource "kubernetes_pod_v1" "pod" {
+  metadata {
+    name = "my-pod"
+  }
+
+  spec {
+    container {
+      name  = "app"
+      image = "nginx:1.27"
+    }
+  }
+}
+```
+
+The root program configures the providers and hands them to the module:
+
+```hcl
+provider "aws" {
+  alias  = "useast1"
+  region = "us-east-1"
+}
+
+provider "kubernetes" {
+  alias          = "myk8s"
+  config_context = "test-ci"
+}
+
+module "my_resource" {
+  source = "./my-resource"
+
+  providers = {
+    aws        = aws.useast1
+    kubernetes = kubernetes.myk8s
+  }
+}
 ```
 
 {{% /choosable %}}

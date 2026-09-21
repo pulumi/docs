@@ -21,7 +21,7 @@ For example, you might use a provider function to get the latest virtual machine
 
 ## Get functions
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language "typescript,python,csharp,java" %}}
 
@@ -38,6 +38,12 @@ For example, you might use a provider function to get the latest virtual machine
 {{% choosable language yaml %}}
 
 **[Get functions](/docs/iac/concepts/functions/get-functions/)** are available on all Pulumi resource types (via the `get:` stanza) and allow you to reference an existing resource that is not managed by Pulumi. Unlike the `pulumi import` command which brings resources under Pulumi management, get functions simply allow you to read the properties of existing resources.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+**[Get functions](/docs/iac/concepts/functions/get-functions/)** are written as `data` blocks, which reference an existing resource that is not managed by Pulumi and expose its attributes as `data.<type>.<name>.<attribute>`. Unlike the `pulumi import` command which brings resources under Pulumi management, a `data` block simply allows you to read the properties of existing resources.
 
 {{% /choosable %}}
 

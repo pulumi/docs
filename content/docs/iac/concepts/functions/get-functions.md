@@ -14,7 +14,7 @@ aliases:
 - /docs/concepts/resources/get/
 ---
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language "typescript,python,csharp,java" %}}
 
@@ -34,6 +34,12 @@ You can use the `get` stanza, which is available on all resource types, to look 
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+You can use a `data` block, which is available for every data source the provider exposes, to look up an existing resource that is not managed by Pulumi.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 The `get` function is different from the [`import` CLI command](/docs/iac/cli/commands/pulumi_import/): `pulumi import` is used to bring an existing resource under management by Pulumi. `get` is used to allow the attributes of an existing resource to be used within a Pulumi program. A resource read with the `get` function will never be updated or deleted by Pulumi during an update.
@@ -45,7 +51,7 @@ Two values are passed to the `get` function:
 
 You can use the `get` function to consume properties from a resource that was provisioned elsewhere. For example, this program reads an existing EC2 Security Group whose ID is `sg-0dfd33cdac25b1ec9` and uses the result as input to create an EC2 Instance that Pulumi will manage:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -158,6 +164,21 @@ resources:
       instanceType: t2.micro
       securityGroups:
         - ${group.name}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+data "aws_security_group" "group" {
+  id = "sg-0dfd33cdac25b1ec9"
+}
+
+resource "aws_instance" "web_server" {
+  ami             = "ami-6869aa05"
+  instance_type   = "t2.micro"
+  security_groups = [data.aws_security_group.group.name] # reference the security group above
+}
 ```
 
 {{% /choosable %}}

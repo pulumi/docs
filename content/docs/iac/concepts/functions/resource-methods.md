@@ -13,7 +13,7 @@ menu:
 Provider SDKs may also include _methods_ attached to a resource type. These methods return computed values from resources you are managing with Pulumi. For example, in the [EKS](/registry/packages/eks/api-docs/) SDK, the `Cluster` resource has a [.GetKubeconfig](/registry/packages/eks/api-docs/cluster/#method_GetKubeconfig) method:
 
 <div><pulumi-examples>
-<div><pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml"></pulumi-chooser></div>
+<div><pulumi-chooser type="language" options="typescript,python,go,csharp,java,yaml,hcl"></pulumi-chooser></div>
 <div>
 <pulumi-choosable type="language" values="typescript">
 
@@ -64,6 +64,28 @@ No example available for Java
 <pulumi-choosable type="language" values="yaml">
 
 No example available for YAML
+
+</pulumi-choosable>
+</div>
+<div>
+<pulumi-choosable type="language" values="hcl">
+
+Pulumi HCL has no method syntax. A `call` block invokes the method instead, labeled with the resource's logical name and the method name in snake_case, and its results are read as `call.<resource>.<method>.<attribute>`:
+
+```hcl
+resource "eks_cluster" "cluster" {
+  # ...
+}
+
+call "cluster" "get_kubeconfig" {
+  profile_name = "my-profile"
+}
+
+output "kubeconfig" {
+  value     = call.cluster.get_kubeconfig.result
+  sensitive = true
+}
+```
 
 </pulumi-choosable>
 </div>
