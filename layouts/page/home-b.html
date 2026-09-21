@@ -305,7 +305,7 @@
                                         {{ end }}
 
                                         {{ if eq $tweet.source "linkedin" }}
-                                            {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/linkedin.svg" "alt" "LinkedIn" "class" "w-8 h-8") }}
+                                            {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/linkedin.svg" "alt" "LinkedIn" "class" "w-8 h-8" "width" 24 "height" 24) }}
                                         {{ end }}
 
                                         {{ if eq $tweet.source "blog" }}
