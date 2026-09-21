@@ -96,7 +96,7 @@ case "$BODY" in
 esac
 ```
 
-`fetch` returns the union of both surfaces' comments, and the v3 author card keeps `<!-- CLAUDE_REVIEW 1/1 -->` as a legacy alias on its first line — so **test for the author marker first**, or every v3 PR reads as v2.
+`fetch` selects comments by the `<!-- CLAUDE_REVIEW N/M -->` first line, and the v3 author card keeps `<!-- CLAUDE_REVIEW 1/1 -->` as exactly that — so the author card comes back, and the reviewer brief, which carries no `N/M` marker, does not. **Test for the author marker first**, or every v3 PR reads as v2. You don't need the brief here; `review-worklist.py` fetches it itself in Step 3.
 
 Freshness is the same check on both surfaces:
 
@@ -209,7 +209,7 @@ gh pr checks "$PR" | grep -i sentinel
 - **Clean but Sentinel red on G3** — nothing is yours. It's waiting on a human approver; say so once and stop. A push cannot add an approval and can dismiss the ones already given.
 - **Not clean** — name exactly what's left and offer to keep going. Don't call a PR ready while the exit code says otherwise.
 
-The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing) and today only the `sentinel:preview` cohort sees its comment. When there's no Sentinel check on the PR, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
+The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-only, `1` = enforcing). That's a repo variable, so which mode is live can't be read from the repo — read the check run itself instead of trusting any sentence about the rollout, this one included. A `neutral` conclusion means the verdict rides inside the summary rather than gating: either report-only mode (`REPORT-ONLY — would be: …`) or a draft PR. `success` / `failure` means it's enforcing. Report-only mode maintains the gate-status *comment* only on `sentinel:preview` PRs, so no comment doesn't mean no check. When there's no Sentinel check on the PR at all, `--require-clean` is the whole bar — say that rather than implying a gate that isn't running.
 
 ---
 
