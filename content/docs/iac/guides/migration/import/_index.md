@@ -253,7 +253,7 @@ $ pulumi import --file ./my-resources.json
 
 After adding the specified resources to the current stack state, Pulumi generates the code necessary for managing the resources from that point forward:
 
-{{< chooser language "typescript,python,csharp,go" >}}
+{{< chooser language "typescript,python,csharp,go,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -485,6 +485,50 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_vpc" "application_vpc" {
+  assign_generated_ipv6_cidr_block = false
+  cidr_block                       = "172.16.0.0/16"
+  enable_dns_support               = true
+  instance_tenancy                 = "default"
+
+  tags = {
+    Name    = "pulumi-vpc"
+    Owner   = "pulumi"
+    Project = "pulumi-k8s-aws-cluster"
+  }
+
+  pulumi {
+    protect = true
+  }
+}
+
+resource "aws_subnet" "public_1" {
+  vpc_id     = aws_vpc.application_vpc.id
+  cidr_block = "172.16.1.0/24"
+
+  pulumi {
+    protect = true
+  }
+}
+```
+
+If the resources you are importing are already described by a Terraform or OpenTofu state file, skip the import file entirely and point the converter at the state file instead:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads your `.tf` files alongside the state file, so run it from the project directory. See [Keep your code in HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#keep-your-code-in-hcl) for the full workflow.
+
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 ### Import file schema
@@ -521,7 +565,7 @@ Code-based import also differs from the CLI-based approach in that it doesn't im
 
 The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -604,6 +648,40 @@ var group = new SecurityGroup("my-sg",
         ImportId = "sg-04aeda9a214730248"
     }
 );
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_security_group" "my_sg" {
+  name = "my-sg-62a569b"
+
+  ingress {
+    protocol    = "tcp"
+    from_port   = 80
+    to_port     = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  pulumi {
+    import_id = "sg-04aeda9a214730248"
+  }
+}
+```
+
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job without touching the resource body, which keeps the adoption separable from the declaration:
+
+```hcl
+import {
+  to = aws_security_group.my_sg
+  id = "sg-04aeda9a214730248"
+}
 ```
 
 {{% /choosable %}}

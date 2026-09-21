@@ -97,7 +97,7 @@ The Serverless Framework exports several outputs from each CloudFormation stack,
 
 The following example reads a Serverless Framework stack named `my-api-dev` and uses its API endpoint and a function ARN:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -206,6 +206,38 @@ return await Deployment.RunAsync(async () =>
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+data "aws_cloudformation_stack" "serverless" {
+  name = "my-api-dev"
+}
+
+locals {
+  api_endpoint      = data.aws_cloudformation_stack.serverless.outputs["ServiceEndpoint"]
+  process_order_arn = data.aws_cloudformation_stack.serverless.outputs["ProcessOrderLambdaFunctionQualifiedArn"]
+}
+
+# Use these values in new infrastructure
+resource "aws_sqs_queue" "new_queue" {
+  name = "new-queue"
+}
+
+output "endpoint" {
+  value = local.api_endpoint
+}
+
+output "order_function_arn" {
+  value = local.process_order_arn
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 Run `pulumi up` and the Pulumi runtime queries the CloudFormation stack and retrieves its output values. The Serverless Framework stack is treated as read-only, and Pulumi will not attempt to modify it or any resources managed by it.
@@ -272,7 +304,7 @@ resources:
 
 ### Pulumi equivalent
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -740,6 +772,120 @@ return await Deployment.RunAsync(() =>
     };
 });
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+variable "stage" {
+  type    = string
+  default = "dev"
+}
+
+# DynamoDB table
+resource "aws_dynamodb_table" "orders" {
+  name         = "my-api-orders-${var.stage}"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "id"
+
+  attribute {
+    name = "id"
+    type = "S"
+  }
+}
+
+# IAM role for the Lambda function
+resource "aws_iam_role" "lambda" {
+  name = "create-order-role-${var.stage}"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect    = "Allow"
+      Action    = "sts:AssumeRole"
+      Principal = { Service = "lambda.amazonaws.com" }
+    }]
+  })
+
+  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]
+}
+
+resource "aws_iam_role_policy" "lambda" {
+  name = "create-order-policy"
+  role = aws_iam_role.lambda.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["dynamodb:PutItem", "dynamodb:GetItem", "dynamodb:Query"]
+      Resource = aws_dynamodb_table.orders.arn
+    }]
+  })
+}
+
+# Lambda function
+resource "aws_lambda_function" "create_order" {
+  function_name = "create-order-${var.stage}"
+  runtime       = "nodejs20.x"
+  handler       = "src/handlers/createOrder.handler"
+  role          = aws_iam_role.lambda.arn
+  filename      = "app.zip"
+
+  environment {
+    variables = {
+      ORDERS_TABLE = aws_dynamodb_table.orders.name
+    }
+  }
+}
+
+# HTTP API (API Gateway v2)
+resource "aws_apigatewayv2_api" "api" {
+  name          = "api-${var.stage}"
+  protocol_type = "HTTP"
+}
+
+resource "aws_apigatewayv2_integration" "create_order" {
+  api_id                 = aws_apigatewayv2_api.api.id
+  integration_type       = "AWS_PROXY"
+  integration_uri        = aws_lambda_function.create_order.arn
+  payload_format_version = "2.0"
+}
+
+resource "aws_apigatewayv2_route" "create_order" {
+  api_id    = aws_apigatewayv2_api.api.id
+  route_key = "POST /orders"
+  target    = "integrations/${aws_apigatewayv2_integration.create_order.id}"
+}
+
+resource "aws_apigatewayv2_stage" "default" {
+  api_id      = aws_apigatewayv2_api.api.id
+  name        = "$default"
+  auto_deploy = true
+}
+
+resource "aws_lambda_permission" "api" {
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.create_order.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_apigatewayv2_api.api.execution_arn}/*/*"
+}
+
+output "endpoint" {
+  value = aws_apigatewayv2_api.api.api_endpoint
+}
+
+output "table_name" {
+  value = aws_dynamodb_table.orders.name
+}
+```
+
+The Serverless Framework derives the stage from its own configuration; here the stage is an ordinary input variable, so `pulumi config set stage prod` selects it per stack.
 
 {{% /choosable %}}
 
