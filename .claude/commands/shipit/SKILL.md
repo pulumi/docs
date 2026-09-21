@@ -346,8 +346,9 @@ Commands that will run:
 
 4. **Display the closing line**:
    ```
-   Next: the pre-merge review. I'll work every finding with you — blockers,
-   low-confidence, and style — until each one is fixed, refuted, or explicitly
+   Next: the pre-merge review. I'll work every finding with you — the
+   blocking ones, the questions it puts to you, and the advisory style and
+   reviewer-check items — until each one is fixed, refuted, or explicitly
    accepted. That's what "done" means on this repo.
    ```
 

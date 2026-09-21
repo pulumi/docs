@@ -1247,6 +1247,51 @@ def test_a_stuck_workflow_pr_always_offers_a_hand_fix():
                               author="jdoe", author_type="User")]), 100)["handoffs"] == []
 
 
+def test_a_stuck_workflow_pr_can_also_hand_the_findings_to_claude():
+    """The same job by the other route. `/address-review` is a session on
+    your machine; `--ask-fix` is one comment asking the agent already on the
+    PR to fix the findings and refresh the review. It is a write act.py
+    makes, so unlike the handoff it is an ordinary fragment of the batch —
+    and the two are alternatives, which the board enforces by pairing them
+    in one exclusive group."""
+    q = run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    ask = next(a for a in p["actions"] if a["id"] == "ask-fix")
+    assert ask["cmd"] == "--ask-fix 100" and ask["exclusive"] == "fix"
+    assert p["handoffs"][0]["exclusive"] == "fix"   # same group: one puts out the other
+    assert "ask-fix" in analyze.DECISION_IDS       # it is the row's way out, not a side action
+
+    # Nothing open, nothing to ask for.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, author="pulumi-bot", author_type="User")]), 100)["actions"])
+    # An author who answers reviews gets the send-back instead, as before.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                                               author="jdoe", author_type="User")]), 100)["actions"])
+
+
+def test_a_conflicted_unblock_is_not_offered_twice():
+    """`merge base & retry` on a branch whose base merge already stopped on
+    conflicts is a button that does nothing: act.py aborts the same merge and
+    reports the same files. Once that report is on the PR against this head,
+    the row stops offering it and hands the conflict to the author instead —
+    and a push that moves the head brings the button back, because the
+    record no longer describes the branch."""
+    import act  # noqa: PLC0415
+    report = comment(act.unblock_conflict_body(HEAD_V3, "master", ["content/docs/d.md"]))
+    q = run([stampable(1, mergeable_state="dirty", files=[_file("content/docs/d.md", ["x"])],
+                       comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), report]),
+             stampable(2, mergeable_state="dirty", files=[_file("content/docs/e.md", ["x"])])])
+    assert row(q, 1)["unblock_conflict"]["files"] == ["content/docs/d.md"]
+    p = row(q, 1)
+    assert "unblock:refused:conflict" in p["reasons"], p["reasons"]
+    assert not any(a["id"] == "unblock" for a in p["actions"]), p["actions"]
+    assert any(a["id"] == "request-changes" for a in p["actions"]), p["actions"]
+    # the row next to it has no such record, so it keeps the button
+    assert [a["cmd"] for a in row(q, 2)["actions"]] == ["--unblock 2"]
+
+
 def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():
     """Dependabot PRs and the generated-docs regens are rebuilt from source,
     and a fork head has no push access — `act.push_allowed` already says so,
