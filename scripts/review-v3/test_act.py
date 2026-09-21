@@ -549,6 +549,63 @@ def test_close_cross_links_and_refresh_mention():
         env.close()
 
 
+def test_ask_fix_names_the_open_findings_and_asks_for_a_refresh():
+    """The batched alternative to `/address-review`: one comment that names
+    the row's open findings by id and asks the agent on the PR to fix them
+    and re-review. A write, so it goes in the batch — the handoff never
+    could."""
+    env = Env([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                         author="pulumi-bot", author_type="User")])
+    try:
+        pr = row(env.queue, 1)
+        ids = [i["id"] for i in act.ask_fix_items(pr)]
+        assert len(ids) >= 2, ids
+        p = act.plan(env.queue, args(ask_fix=[1]))
+        assert [s.kind for s in p.steps] == ["ask-fix"]
+        body = p.steps[0].args["comment"]
+        first = body.splitlines()[0]
+        assert first.startswith("@claude fix ") and first.endswith(" #update-review"), first
+        assert all(i in first for i in ids), (first, ids)
+        assert " and " in first          # the ids read as a list, not a blob
+        assert body.endswith("(https://claude.ai/code)_")
+        # the summaries follow the mention so the thread is readable on its own
+        assert all(f"- **{i}**" in body for i in ids), body
+        res = act.execute(p, env.gh, queue=env.queue)
+        assert all(r.ok for r in res)
+        w = env.writes()
+        assert len(w) == 1 and w[0]["path"].endswith("/issues/1/comments") and w[0]["body"]["body"] == body
+    finally:
+        env.close()
+
+
+def test_ask_fix_refuses_a_row_with_nothing_open():
+    """`@claude fix  #update-review` asks for nothing. A row with no open
+    finding has no list to hand over, so the plan refuses instead of posting
+    an empty instruction."""
+    env = Env([stampable(1)])
+    try:
+        assert act.ask_fix_items(row(env.queue, 1)) == []
+        try:
+            act.plan(env.queue, args(ask_fix=[1]))
+            raise AssertionError("expected refusal")
+        except act.ActError as exc:
+            assert "no open findings" in str(exc)
+    finally:
+        env.close()
+
+
+def test_ask_fix_leaves_the_optional_buckets_alone():
+    """Style and pre-existing rows are the review's own take-it-or-leave-it.
+    Naming them in a fix request turns an optional note into a push, so they
+    are never in the list."""
+    pr = {"review": {"surface": "v3", "warning_rows": [{"id": "F9", "body": "a low-confidence one"}],
+                     "items": [{"id": "F1", "summary": "a real one", "blocking": True},
+                               {"id": "F2", "summary": "a nit", "bucket": "style"},
+                               {"id": "F3", "summary": "was already broken", "bucket": "pre-existing"},
+                               {"id": "F4", "summary": "answered", "disposition": "not-an-issue"}]}}
+    assert [i["id"] for i in act.ask_fix_items(pr)] == ["F1", "F9"]
+
+
 # ---- fix / unblock ---------------------------------------------------------------
 
 
@@ -624,19 +681,38 @@ def test_unblock_pushes_only_a_clean_merge_and_works_in_a_worktree():
         assert res[0].ok, res[0].message
         assert git.calls == [("fetch", ("master", "branch-1")), ("rev-parse", "origin/branch-1"), ("worktree-add", "origin/branch-1"),
                              ("merge", "origin/master"), ("push", "branch-1"), ("worktree-remove", "/nonexistent")]
+        # A conflict aborts the merge -- and says so on the PR. It used to say
+        # so only in this process's stdout, so the next board render saw the
+        # same `mergeable:dirty` and offered the same button: "merge base &
+        # retry" was a button that did nothing, twice.
+        before = len(env.writes())
         git = FakeGit(merge_ok=False, head=head)
         res = act.execute(p, env.gh, git, queue=env.queue)
         assert res[0].ok is False and "content/docs/a.md" in res[0].message
         assert git.calls[-1][0] == "worktree-remove" and not any(c[0] == "push" for c in git.calls)
+        reported = env.writes()[before:]
+        assert len(reported) == 1 and reported[0]["path"].endswith("/issues/1/comments"), reported
+        body = reported[0]["body"]["body"]
+        assert act.UNBLOCK_CONFLICT_MARKER in body and "content/docs/a.md" in body and head[:7] in body
+        # and the record is keyed to the head, so collect can tell a conflict
+        # that still stands from one a later push settled
+        mine = [{"user": {"login": "approver"}, "body": body}]
+        assert collect.unblock_conflict(mine, head, {"approver"}) is not None
+        assert collect.unblock_conflict(mine, "9" * 40, {"approver"}) is None
+        # and a marker somebody else posted is not a record of our merge
+        assert collect.unblock_conflict(mine, head, {"someone-else"}) is None
+        quoted = [{"user": {"login": "approver"}, "body": "as I said:\n\n> " + body}]
+        assert collect.unblock_conflict(quoted, head, {"approver"}) is None
         # origin moved after the plan: nothing is merged or pushed
         git = FakeGit(merge_ok=True, head="f" * 40)
         res = act.execute(p, env.gh, git, queue=env.queue)
         assert res[0].ok is False and "head-moved on origin/branch-1" in res[0].message
         assert not any(c[0] in ("worktree-add", "push") for c in git.calls)
         # dry-run never runs git
+        before = len(env.writes())
         git = FakeGit(merge_ok=True, head=head)
         res = act.execute(p, env.gh, git, queue=env.queue, dry_run=True)
-        assert res[0].ok and res[0].message.startswith("dry-run") and git.calls == [] and env.writes() == []
+        assert res[0].ok and res[0].message.startswith("dry-run") and git.calls == [] and env.writes()[before:] == []
     finally:
         env.close()
 

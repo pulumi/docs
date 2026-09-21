@@ -133,6 +133,28 @@ clear();
 expect("clear empties both lines", `${handCmd.textContent}|${cmd()}`, "|$ /pr-review --act");
 expect("and hides the interactive one again", handWrap.hidden, true);
 
+// 7. The two ways to fix a stuck row are alternatives, so they put each
+// other out -- across the handoff/fragment boundary, which `clearRow` cannot
+// cross because a handoff is deliberately not a decision.
+clear();
+const askFix = btn(prs.handfix, `--ask-fix ${prs.handfix}`);
+click(hand);
+click(askFix);
+expect("asking @claude composes into --act", cmd(), `$ /pr-review --act --ask-fix ${prs.handfix}`);
+expect("and puts the interactive handoff out", handCmd.textContent, "");
+expect("so its line hides again", handWrap.hidden, true);
+expect("the ask is a decision, the handoff was not", progress(), `1 of ${TOTAL} decisions made`);
+click(hand);
+expect("lighting the handoff back puts the ask out", cmd(), "$ /pr-review --act");
+expect("and composes the run again", handCmd.textContent, `$ /address-review ${prs.handfix}`);
+expect("leaving no decision on the row", progress(), `0 of ${TOTAL} decisions made`);
+// A different decision on the same row is not in that group: it displaces
+// the ask by the one-decision rule, but leaves the handoff riding along.
+click(askFix);
+click(btn(prs.handfix, `--close ${prs.handfix}`));
+expect("close displaces the ask", cmd(), `$ /pr-review --act --close ${prs.handfix}`);
+clear();
+
 // The page keeps exactly one runnable script whatever the queue held.
 expect("one script element runs", [...d.querySelectorAll("script")].filter((s) => !s.type).length, 1);
 

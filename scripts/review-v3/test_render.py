@@ -837,3 +837,21 @@ def test_a_stuck_workflow_row_offers_an_interactive_fix_off_the_act_command():
     assert 'id="handwrap" hidden' in html and 'id="handcmd"' in html
     assert "/address-review 18" in render.render_terminal(q)
     assert "(an interactive run, not part of --act)" in render.render_terminal(q)
+
+
+def test_the_two_ways_to_fix_a_stuck_row_put_each_other_out():
+    """"fix it yourself" and "ask @claude to fix them" do the same job by
+    different routes, so they share one exclusive group and the composer
+    lights only one. The handoff is deliberately not a decision, so the
+    one-decision-per-row rule cannot pair them on its own."""
+    q = run([stampable(18, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/f.md", ["x"], ["o"])])], cfg=cfg(me=["docs"]))
+    html = render.render_board(q)
+    hand = html.split('class="btn hand"')[1].split("</button>")[0]
+    assert 'data-exclusive="fix"' in hand, hand
+    ask = html.split('data-cmd="--ask-fix 18"')[1].split("</button>")[0]
+    assert 'data-exclusive="fix"' in ask and ">ask @claude to fix them" in ask, ask
+    # the ask is a write, so unlike the handoff it is an --act fragment
+    assert 'data-kind="decision"' in ask
+    assert "clearExclusive" in html
+    assert "--ask-fix 18" in render.render_terminal(q)
