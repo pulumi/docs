@@ -1124,7 +1124,9 @@ def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
     body = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG, report_only=True))
     assert "> [!WARNING]" in body
     assert "NOT blocking your merge" in body
-    assert "you can merge this PR right now even with red rows" in body
+    assert "safe to ignore for now" in body
+    # Informational, never an invitation to merge past a red gate.
+    assert "you can merge" not in body
     assert "enforced in the near future" in body
     assert "*would* have concluded: `failure`" in body
 
@@ -1224,8 +1226,8 @@ def test_report_only_wraps_neutral():
     v = sentinel.evaluate(gh, CONFIG, report_only=True)
     assert v.conclusion == "neutral"
     assert v.would_be == "failure"
-    assert v.summary.startswith("**PREVIEW MODE — not blocking merges yet. "
-                                "This check would be: `failure`.**")
+    assert v.summary.startswith("**PREVIEW MODE — informational only, safe to ignore "
+                                "for now. This check would be: `failure`.**")
     assert "Enforcement is coming" in v.summary
 
 

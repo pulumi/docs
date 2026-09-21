@@ -760,9 +760,9 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
     """
     verdict.would_be = verdict.conclusion
     verdict.summary = (
-        f"**PREVIEW MODE — not blocking merges yet. This check would be: "
-        f"`{verdict.conclusion}`.** Enforcement is coming: once it lands, a red "
-        f"gate below stops the merge. Treat red as work you will owe shortly.\n\n"
+        f"**PREVIEW MODE — informational only, safe to ignore for now. This check "
+        f"would be: `{verdict.conclusion}`.** Enforcement is coming: once it lands, a "
+        f"red gate below stops the merge. Treat red as work you will owe shortly.\n\n"
         + verdict.summary
     )
     verdict.title = f"Preview — would be: {verdict.conclusion} (not enforced yet)"
@@ -1314,23 +1314,25 @@ def render_status_comment(verdict: Verdict) -> str:
     lines = [STATUS_MARKER, heading, ""]
 
     if preview:
-        # Two things, in this order, and neither is optional: nothing here
-        # blocks you today, and it will. A disclaimer that only says the
-        # first teaches everyone to scroll past the comment, and then
-        # enforcement day is the first time anyone reads a gate row.
+        # Two things, in this order, and neither is optional: this is
+        # informational today, and it will be enforced. A disclaimer that only
+        # says the first teaches everyone to scroll past the comment, and then
+        # enforcement day is the first time anyone reads a gate row. The first
+        # half says "safe to ignore for now", never "you can merge anyway":
+        # the gate surface is not the place to coach anyone past a red row.
         lines += [
             "> [!WARNING]",
-            "> ## ⚠️ Preview mode — this is NOT blocking your merge",
+            "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
             "> ",
             f"> The Sentinel is running in **preview (report-only) mode**. Its check-run "
-            f"concludes `neutral` no matter what the gates below say, so **you can merge "
-            f"this PR right now even with red rows.** What it *would* have concluded: "
-            f"`{verdict.would_be}`.",
+            f"concludes `neutral` no matter what the gates below say, so nothing here gates "
+            f"this PR: the rows below are informational, and **safe to ignore for now**. "
+            f"What it *would* have concluded: `{verdict.would_be}`.",
             "> ",
             "> **This will be enforced in the near future.** When the rollout flips, the "
-            "Sentinel becomes a required check and any red gate below will block the merge "
-            "outright. So treat red rows as work you are about to owe — and if a row looks "
-            "wrong, say so in `#docs-ops` now, while a bad gate still costs nobody a merge.",
+            "Sentinel becomes a required check and any red gate below will block the merge. "
+            "Treat a red row as work you'll owe shortly, and tell us in `#docs` if one looks "
+            "wrong.",
             "",
         ]
 

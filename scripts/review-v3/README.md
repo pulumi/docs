@@ -151,8 +151,8 @@ function of the verdict — no timestamps, no run ids — so a re-evaluation tha
 changes nothing produces a byte-identical body and the PATCH is skipped. The
 comment is maintained on **every** PR the Sentinel evaluates, in both modes.
 In report-only mode it leads with a `[!WARNING]` preview banner that says
-both halves out loud — nothing here is blocking your merge today, and this
-will be enforced soon, so a red row is work you are about to owe — and the
+both halves out loud — this is informational today and safe to ignore, and
+it will be enforced soon, so a red row is work you are about to owe — and the
 heading itself reads "(preview)". That banner is what makes a repo-wide dry
 run safe, and repo-wide is what makes the dry run worth running: the
 `sentinel:preview` opt-in cohort (content-review, glow-up, link sweeps) was
