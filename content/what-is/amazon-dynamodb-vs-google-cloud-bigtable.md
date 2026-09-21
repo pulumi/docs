@@ -7,7 +7,7 @@ type: what-is
 date: 2022-09-26T07:16:39-07:00
 page_title: "Amazon DynamoDB vs Google Cloud Bigtable"
 
-authors: ["kat-cosgrove"]
+authors: ["pulumi-content-team"]
 ---
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB

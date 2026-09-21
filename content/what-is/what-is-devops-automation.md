@@ -7,7 +7,7 @@ type: what-is
 date: 2023-09-14T16:21:22-07:00
 page_title: What Is DevOps Automation?
 
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 
 Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern infrastructure as code solutions.
