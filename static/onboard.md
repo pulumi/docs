@@ -9,10 +9,13 @@ they go.
 
 ## 1. Install the CLI and put it on the PATH
 
-The user should be able to run `pulumi` now and in new shells, so onboarding
-must leave a real CLI on their PATH — not just a per-session `npx` shim. First
-check whether it is already installed: `pulumi version` (this does not touch
-Pulumi Cloud). If that works, continue.
+The user must end up able to run `pulumi` in a brand-new shell — not only in
+your session via `npx`, a one-off `export`, or the full path. So installing is
+not enough: on macOS or Linux you must also actively offer to put it on their
+PATH for good (see below), in this step, before moving on — don't leave it
+session-only and let them discover later that `pulumi` isn't found. First check
+whether it is already installed: `pulumi version` (this does not touch Pulumi
+Cloud). If that works, continue.
 
 If `pulumi` is not found, install it for the user's platform:
 
@@ -33,10 +36,11 @@ output) on the PATH:
 
 - For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
   — or use the full path.
-- Permanently: offer to add that directory to the PATH for future shells —
-  never edit anything automatically, only with the user's go-ahead. Detect the
-  shell (`$SHELL` names the login shell) and use its own target and syntax
-  rather than assuming zsh:
+- Permanently (do not skip, and do not wait to be asked): proactively offer to
+  add that directory to the PATH for future shells, and make the offer in this
+  step. Never edit anything automatically — only with the user's go-ahead.
+  Detect the shell (`$SHELL` names the login shell) and use its own target and
+  syntax rather than assuming zsh:
   - zsh: add `export PATH="$HOME/.pulumi/bin:$PATH"` to `~/.zshrc`.
   - bash: the same line in `~/.bashrc` (Linux) or `~/.bash_profile` (macOS).
   - fish: run `fish_add_path $HOME/.pulumi/bin`.
