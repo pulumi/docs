@@ -53,7 +53,7 @@ Pulumi calls these methods at well-defined points in a deployment:
 1. If another deployment happens and the resource already exists, Pulumi calls `diff` to determine whether a change can be made in place or whether a replacement is needed.
 1. If no replacement is needed, Pulumi calls `update`.
 1. If a replacement is needed, Pulumi calls `create` for the new resource and then `delete` for the old one.
-1. If Pulumi needs to read an existing resource without managing it directly, it calls `read`.
+1. If Pulumi needs to read an existing resource without managing it directly, it calls `read`. (Note: `read` is not currently functional for dynamic providers.)
 
 ### configure(ConfigureRequest)
 
