@@ -27,15 +27,15 @@ Pulumi's [OPA (Open Policy Agent)](https://www.openpolicyagent.org/) support is 
 
 ## What's in the stable release
 
-OPA/Rego is now fully supported as a policy language for [Pulumi Insights](/docs/insights/policy/), with the same capabilities as the TypeScript and Python SDKs:
+OPA/Rego is now fully supported as a policy language for [Pulumi Insights](/docs/discovery-governance/policy/), with the same capabilities as the TypeScript and Python SDKs:
 
 - **Resource and stack-level policies**: Validate individual resources with `deny` and `warn` rules, or evaluate your entire stack at once with `stack_deny` and `stack_warn` for cross-resource checks like relationship validation and resource count limits.
 - **Enforcement levels**: Control how violations are handled. `mandatory` blocks deployments, `advisory` surfaces warnings, and `disabled` turns rules off without removing them. Enforcement levels can be overridden per policy without modifying Rego source.
 - **Policy configuration**: Pass custom parameters to policies via configuration files, with optional JSON schema validation. Configuration values are accessible in Rego as `data.config.<policy_name>.<key>`.
 - **OPA metadata annotations**: Use standard OPA `# METADATA` comments to provide titles, descriptions, and messages for your policies. These populate the policy metadata displayed in Pulumi Cloud.
-- **Preventative and audit evaluation**: OPA policies work with both [preventative enforcement](/docs/insights/policy/) during `pulumi up` and [audit policy scans](/blog/policy-audit-scans-for-stacks/) for continuous compliance monitoring.
+- **Preventative and audit evaluation**: OPA policies work with both [preventative enforcement](/docs/discovery-governance/policy/) during `pulumi up` and [audit policy scans](/blog/policy-audit-scans-for-stacks/) for continuous compliance monitoring.
 
-You can choose whichever language best fits your team. Organizations already using OPA across their toolchain can standardize on Rego for Pulumi policies, while teams preferring TypeScript or Python can continue to use those. All three languages work side by side in the same [policy groups](/docs/insights/policy/policy-groups/).
+You can choose whichever language best fits your team. Organizations already using OPA across their toolchain can standardize on Rego for Pulumi policies, while teams preferring TypeScript or Python can continue to use those. All three languages work side by side in the same [policy groups](/docs/discovery-governance/policy/policy-groups/).
 
 ## Kubernetes Gatekeeper compatibility
 
@@ -145,7 +145,7 @@ The [OPA Gatekeeper Library](https://github.com/open-policy-agent/gatekeeper-lib
 
     Any Kubernetes deployment using an image outside the allowed registries will produce a violation at preview time, before it reaches the cluster.
 
-1. Publish the pack and add it to a [policy group](/docs/insights/policy/policy-groups/) to enforce it across your organization:
+1. Publish the pack and add it to a [policy group](/docs/discovery-governance/policy/policy-groups/) to enforce it across your organization:
 
     ```bash
     pulumi policy publish
@@ -155,11 +155,11 @@ The same approach works for any policy in the gatekeeper-library: [`containerlim
 
 ## Part of the Pulumi Insights governance story
 
-OPA policy support is part of the broader [Pulumi Insights](/docs/insights/) governance platform. Insights gives you visibility and compliance across your entire cloud footprint, and OPA policies plug directly into that:
+OPA policy support is part of the broader [Pulumi Insights](/docs/discovery-governance/) governance platform. Insights gives you visibility and compliance across your entire cloud footprint, and OPA policies plug directly into that:
 
 - **Audit policy scans** continuously evaluate OPA policies against your [Pulumi stacks](/blog/policy-audit-scans-for-stacks/) and discovered cloud resources, providing a compliance baseline without redeploying anything.
 - **Self-hosted execution** lets you [run policy evaluations on your own infrastructure](/blog/self-hosted-insights/) using customer-managed workflow runners, keeping credentials and data within your network.
-- **Pre-built compliance packs** for CIS, NIST, PCI DSS, and other frameworks are available alongside your custom OPA policies in the same [policy groups](/docs/insights/policy/policy-groups/).
+- **Pre-built compliance packs** for CIS, NIST, PCI DSS, and other frameworks are available alongside your custom OPA policies in the same [policy groups](/docs/discovery-governance/policy/policy-groups/).
 
 Whether you're enforcing policy at deployment time, scanning existing infrastructure for drift, or running continuous compliance checks, OPA policies are a native participant.
 
@@ -187,8 +187,8 @@ Gatekeeper constraint templates can be reused directly via the `kubernetes-admis
 
 ## Get started
 
-Templates are available for `kubernetes-opa`, `aws-opa`, `azure-opa`, and `gcp-opa` via `pulumi policy new`. For more details, see the [policy authoring guide](/docs/insights/policy/policy-packs/authoring/) and the [Policy as Code overview](/docs/insights/policy/).
+Templates are available for `kubernetes-opa`, `aws-opa`, `azure-opa`, and `gcp-opa` via `pulumi policy new`. For more details, see the [policy authoring guide](/docs/discovery-governance/policy/policy-packs/authoring/) and the [Policy as Code overview](/docs/discovery-governance/policy/).
 
-{{< blog/cta-button "Get started with OPA policies" "/docs/insights/policy/" >}}
+{{< blog/cta-button "Get started with OPA policies" "/docs/discovery-governance/policy/" >}}
 
 {{< github-card repo="pulumi/pulumi-policy-opa" >}}

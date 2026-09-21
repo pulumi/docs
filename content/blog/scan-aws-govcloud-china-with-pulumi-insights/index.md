@@ -45,4 +45,4 @@ In the Pulumi Cloud console:
 1. Under **Add your configuration**, pick the target partition.
 1. Supply credentials via a Pulumi ESC environment. The OIDC trust policy uses the partition-appropriate ARN prefix (`arn:aws-us-gov:`, `arn:aws-cn:`, etc.).
 
-For IAM and ESC setup, see the [Insights accounts docs](/docs/insights/discovery/accounts/). Log in to [Pulumi Cloud](https://app.pulumi.com/) to get started.
+For IAM and ESC setup, see the [Insights accounts docs](/docs/discovery-governance/discovery/accounts/). Log in to [Pulumi Cloud](https://app.pulumi.com/) to get started.

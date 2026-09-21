@@ -36,36 +36,16 @@
         {{/* Array / map / scalar. The type notation mirrors the property type column in
              openapi/property-rows.html so the two read the same way. */}}
         {{ $itemSchemaName := "" }}
+        {{ $notationSchema := dict "type" $resolved.type "items" $resolved.items }}
+        {{/* An object with no properties is a map (additionalProperties). */}}
+        {{ with index $resolved.raw "additionalProperties" }}
+            {{ $notationSchema = merge $notationSchema (dict "additionalProperties" .) }}
+        {{ end }}
+        {{ $notation := partial "openapi/type-notation.html" (dict "schema" $notationSchema) }}
+        {{ $itemSchemaName = $notation.schemaName }}
         <div class="api-schema-label">Type:
             <span class="api-param-badge api-param-type">
-                {{ if eq $resolved.type "array" }}
-                    {{ if isset $resolved.items "$ref" }}
-                        {{ $itemRefParts := split (index $resolved.items "$ref") "/" }}
-                        {{ $itemSchemaName = index $itemRefParts (sub (len $itemRefParts) 1) }}
-                        array[<a href="/docs/reference/cloud-rest-api/schema/{{ $itemSchemaName | urlize }}/">{{ $itemSchemaName }}</a>]
-                    {{ else if $resolved.items.type }}
-                        array[{{ $resolved.items.type }}]
-                    {{ else }}
-                        array
-                    {{ end }}
-                {{ else if eq $resolved.type "object" }}
-                    {{/* An object with no properties is a map (additionalProperties). */}}
-                    {{ with index $resolved.raw "additionalProperties" }}
-                        {{ if isset . "$ref" }}
-                            {{ $objRefParts := split (index . "$ref") "/" }}
-                            {{ $objSchemaName := index $objRefParts (sub (len $objRefParts) 1) }}
-                            map[string]<a href="/docs/reference/cloud-rest-api/schema/{{ $objSchemaName | urlize }}/">{{ $objSchemaName }}</a>
-                        {{ else if isset . "type" }}
-                            map[string]{{ .type }}
-                        {{ else }}
-                            object
-                        {{ end }}
-                    {{ else }}
-                        object
-                    {{ end }}
-                {{ else }}
-                    {{ $resolved.type }}
-                {{ end }}
+                {{ $notation.html | safeHTML }}
             </span>
         </div>
 

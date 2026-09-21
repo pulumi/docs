@@ -47,7 +47,7 @@ pulumi.export("ip", nginx.ip)
 
 ```go
 nginx, err := NewKubernetesNginxService(ctx, "my-nginx", KubernetesNginxServiceArgs{
-    IsMinikube: config.GetBool(ctx, "isMinikube"),
+    IsMinikube: config.RequireBool(ctx, "isMinikube"),
 })
 if err != nil {
     return err
@@ -62,7 +62,7 @@ ctx.Export("ip", nginx.Ip)
 ```csharp
 var nginx = new KubernetesNginxService("my-nginx", new KubernetesNginxServiceArgs()
 {
-    IsMinikube = config.GetBoolean("isMinikube") ?? false
+    IsMinikube = config.RequireBoolean("isMinikube")
 });
 
 return new Dictionary<string, object?>
@@ -915,7 +915,7 @@ import (
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Read the configuration value:
-        isMinikube := config.GetBool(ctx, "isMinikube")
+        isMinikube := config.RequireBool(ctx, "isMinikube")
 
         // Create an instance of the component:
         nginx, err := NewKubernetesNginxService(ctx, "my-nginx", KubernetesNginxServiceArgs{
@@ -949,7 +949,7 @@ return await Pulumi.Deployment.RunAsync(() =>
     // Create an instance of the component:
     var nginx = new KubernetesNginxService("my-nginx", new KubernetesNginxServiceArgs()
     {
-        IsMinikube = config.GetBoolean("isMinikube") ?? false
+        IsMinikube = config.RequireBoolean("isMinikube")
     });
 
    // And export its autoassigned IP:

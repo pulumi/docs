@@ -83,9 +83,9 @@ For users with unique access requirements, go to **Settings** > **Access Managem
 
 ## Enforce tagging standards with Pulumi Policy
 
-Tag-based access control relies on consistent tagging. If a stack is missing a tag or has an incorrect value, permissions won't be applied as expected. [Pulumi Policy](/docs/insights/policy/) closes this gap by letting you enforce tagging standards as a [preventative policy group](/docs/insights/policy/policy-groups/), so any `pulumi up` on a stack with missing or invalid tags is blocked before deployment. This ensures your tag-based RBAC rules always grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
+Tag-based access control relies on consistent tagging. If a stack is missing a tag or has an incorrect value, permissions won't be applied as expected. [Pulumi Policy](/docs/discovery-governance/policy/) closes this gap by letting you enforce tagging standards as a [preventative policy group](/docs/discovery-governance/policy/policy-groups/), so any `pulumi up` on a stack with missing or invalid tags is blocked before deployment. This ensures your tag-based RBAC rules always grant the correct permissions. Policy enforces the standard, RBAC enforces the access.
 
-To learn how to write policies that validate stack tags, see [Using stack tags in policies](/docs/insights/policy/policy-packs/authoring/#using-stack-tags-in-policies).
+To learn how to write policies that validate stack tags, see [Using stack tags in policies](/docs/discovery-governance/policy/policy-packs/authoring/#using-stack-tags-in-policies).
 
 {{% notes type="info" %}}
 Pulumi Policy currently supports tag enforcement for IaC stacks. For ESC environments and Insights accounts, tags are managed through the Pulumi Cloud console or REST API.

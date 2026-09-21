@@ -12,8 +12,8 @@
                 </div>
             </div>
             <hr/>
-            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/hero.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 hidden md:block" "loading" "eager" "maxWidth" 1024) }}
-            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/superintelligence-hero-mobile.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 block md:hidden" "loading" "eager" "maxWidth" 1024) }}
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/hero.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 hidden md:block" "loading" "eager" "maxWidth" 1024 "width" 3353 "height" 2136) }}
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/superintelligence-hero-mobile.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 block md:hidden" "loading" "eager" "maxWidth" 1024 "width" 2504 "height" 3204) }}
         {{ end }}
     </section>
 
@@ -62,7 +62,7 @@
         {{ with .Params.capabilities }}
             <h2 class="heading-1">{{ .title }}</h2>
             <p class="text-center w-full lg:w-3/4 mx-auto text-2xl">{{ .description | markdownify }}</p>
-            <div class="flex justify-center">{{ partial "fingerprinted-img.html" (dict "src" "/images/product/ml-engineer.png" "alt" "ML engineer" "maxWidth" 1200 "style" "max-height: 1200px; width:auto") }}</div>
+            <div class="flex justify-center">{{ partial "fingerprinted-img.html" (dict "src" "/images/product/ml-engineer.png" "alt" "ML engineer" "maxWidth" 1200 "style" "max-height: 1200px; width:auto" "width" 3508 "height" 6042) }}</div>
         {{ end }}
     </section>
 

@@ -32,7 +32,7 @@ social:
         We built a wizard that handles all of it. Here's how it works.
 ---
 
-[Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint, but that visibility is only as complete as the set of accounts you've connected. Until now, connecting an account meant repeating a manual setup for each one: OIDC configuration, hand-written [Pulumi ESC](/docs/esc/) environments, and per-account scan and policy setup. For an organization with dozens or hundreds of AWS accounts, Azure subscriptions, or Google Cloud projects, that per-account friction was the biggest obstacle to getting a complete picture. Today, the new **Connect cloud accounts** wizard removes it: discover every account in your cloud organization, select the ones you want, and onboard them all in a single guided flow.
+[Pulumi Insights](/docs/discovery-governance/) gives you visibility and governance across your entire cloud footprint, but that visibility is only as complete as the set of accounts you've connected. Until now, connecting an account meant repeating a manual setup for each one: OIDC configuration, hand-written [Pulumi ESC](/docs/esc/) environments, and per-account scan and policy setup. For an organization with dozens or hundreds of AWS accounts, Azure subscriptions, or Google Cloud projects, that per-account friction was the biggest obstacle to getting a complete picture. Today, the new **Connect cloud accounts** wizard removes it: discover every account in your cloud organization, select the ones you want, and onboard them all in a single guided flow.
 
 <!--more-->
 
@@ -45,7 +45,7 @@ The wizard handles the entire onboarding lifecycle for AWS, Microsoft Azure, and
 - **Bulk discovery**: Authenticate once with your cloud organization and the wizard lists every account, subscription, or project you can access. Accounts that are already connected are recognized and skipped.
 - **Automatic OIDC setup**: The recommended flows configure each account with short-lived credentials based on OpenID Connect (OIDC) and workload identity federation. No long-lived cloud secrets are stored in Pulumi Cloud.
 - **ESC environments, created for you**: The wizard generates [Pulumi ESC](/docs/esc/) environments that follow the best practices from the manual OIDC guides — environments that previously had to be authored one by one.
-- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built policy pack](/docs/insights/policy/policy-packs/pre-built-packs/) are applied to every account as part of setup: the Pulumi Best Practices pack on the Team and Enterprise editions, or a compliance pack (CIS, or NIST 800-53 for AWS and Google Cloud) on Business Critical.
+- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built policy pack](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) are applied to every account as part of setup: the Pulumi Best Practices pack on the Team and Enterprise editions, or a compliance pack (CIS, or NIST 800-53 for AWS and Google Cloud) on Business Critical.
 
 ## How it works
 
@@ -72,7 +72,7 @@ When setup completes, the summary shows exactly what was created: the ESC enviro
 
 ![The summary step showing setup complete with discovery running, the policy pack applied, and the list of created ESC environments](summary.png)
 
-For security reviewers, the docs include a full accounting of [what the wizard creates](/docs/insights/discovery/connect-cloud-accounts/#what-the-wizard-creates) in your cloud provider and in Pulumi Cloud: the IAM roles, app registrations, and service accounts on the cloud side, and the ESC environments and Insights accounts on the Pulumi side.
+For security reviewers, the docs include a full accounting of [what the wizard creates](/docs/discovery-governance/discovery/connect-cloud-accounts/#what-the-wizard-creates) in your cloud provider and in Pulumi Cloud: the IAM roles, app registrations, and service accounts on the cloud side, and the ESC environments and Insights accounts on the Pulumi side.
 
 ## Get started
 
@@ -80,10 +80,10 @@ The Connect cloud accounts wizard is available now for all Pulumi Cloud organiza
 
 1. Navigate to [**Management** > **Accounts**](https://app.pulumi.com/) in the Pulumi Cloud console and select **Connect cloud accounts**.
 1. Follow the guided flow for AWS, Azure, or Google Cloud.
-1. Explore your [discovered resources](/docs/insights/discovery/search/) and [policy findings](/docs/insights/policy/policy-findings/).
+1. Explore your [discovered resources](/docs/discovery-governance/discovery/search/) and [policy findings](/docs/discovery-governance/policy/policy-findings/).
 
 To learn more:
 
-- [Connect cloud accounts documentation](/docs/insights/discovery/connect-cloud-accounts/) — prerequisites, each wizard step in detail, and troubleshooting
-- [Insights & Governance overview](/docs/insights/) — full documentation for discovery and policy capabilities
+- [Connect cloud accounts documentation](/docs/discovery-governance/discovery/connect-cloud-accounts/) — prerequisites, each wizard step in detail, and troubleshooting
+- [Insights & Governance overview](/docs/discovery-governance/) — full documentation for discovery and policy capabilities
 - [Pulumi ESC](/docs/esc/) — how the generated environments manage cloud credentials with OIDC

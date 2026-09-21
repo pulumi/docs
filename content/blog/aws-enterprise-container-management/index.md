@@ -59,7 +59,7 @@ Adhering to the principle of least privilege for users and roles is an important
 
 ### Centralized Governance and Compliance Controls
 
-Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/insights/policy/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
+Many customers are using Pulumi and Kubernetes to stand up shared services platforms (SSP) to empower their developers to self-service new infrastructure environments. To keep these environments compliant with internal policies, Pulumi Business Critical Edition includes [CrossGuard](/docs/discovery-governance/policy/) policy-as-code capabilities built-in.  This helps operators to ensure that configuration mistakes won’t reach production with policies that are enforced organization-wide.
 
 ### Support for Hybrid Deployments
 

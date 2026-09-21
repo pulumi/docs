@@ -672,7 +672,7 @@ describe("MicroserviceComponent", () => {
 
 ### 5. Enforce guardrails with policy as code
 
-Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/insights/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production.
+Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/discovery-governance/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production.
 
 A policy pack is ordinary code, written in the same language as the golden path it governs:
 
@@ -795,7 +795,7 @@ A service catalog gives developers a menu; a golden path gives them a paved road
 
 Backstage, for example, is a software catalog and a scaffolder: its Software Templates generate a new repository and open a pull request, then hand off to whatever CI and IaC tooling that repository is wired to. Port and Cortex follow a similar shape, orchestrating external webhooks, GitHub Actions, or Terraform runs to carry out the actions a developer requests through the portal. In each case, the golden path is defined in one system and executed by another, so keeping the two in sync is an integration problem the platform team owns.
 
-Pulumi collapses that hand-off. A golden path built with [Pulumi components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/insights/policy/). No second system has to stay in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
+Pulumi collapses that hand-off. A golden path built with [Pulumi components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/) is defined in the same general-purpose language and the same IaC engine that provisions the infrastructure, published to your [private registry](/docs/idp/concepts/private-registry/) and secured with [Pulumi Policies](/docs/discovery-governance/policy/). No second system has to stay in sync, because the catalog entry and the thing that runs are the same artifact. For a deeper comparison of the two approaches, see [Backstage vs. Pulumi IDP: Why Infrastructure-First Platform Engineering Matters](/blog/backstage-vs-pulumi-idp-why-infrastructure-first-platform-engineering-matters/).
 
 ### Do golden paths stop teams from going off-path?
 
@@ -803,7 +803,7 @@ No, and a golden path that forbids deviation stops being a path and becomes a go
 
 ### How does policy as code keep self-service safe?
 
-Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/insights/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, written as ordinary code in the same language as the golden path itself, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production. See [Enforce guardrails with policy as code](#5-enforce-guardrails-with-policy-as-code) above for a working policy pack example, and [How to Implement Robust Security Guardrails Using Policy as Code](/blog/deployment-guardrails-with-policy-as-code/) for the full model across an organization.
+Self-service only works if the platform team can trust what gets deployed without reviewing every change by hand. [Pulumi Policies](/docs/discovery-governance/policy/) close that gap by attaching automated guardrails directly to the golden paths you publish, written as ordinary code in the same language as the golden path itself, so a stack that violates a security or cost standard fails at `pulumi preview` instead of in production. See [Enforce guardrails with policy as code](#5-enforce-guardrails-with-policy-as-code) above for a working policy pack example, and [How to Implement Robust Security Guardrails Using Policy as Code](/blog/deployment-guardrails-with-policy-as-code/) for the full model across an organization.
 
 ### How do you measure golden path adoption?
 

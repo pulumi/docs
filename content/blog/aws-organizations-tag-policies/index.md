@@ -26,7 +26,7 @@ Today, we're excited to announce a new pre-built policy pack created in partners
 
 The new policy pack integrates directly with your AWS Organizations Tag Policies as the single source of truth. No separate policy configuration or custom code required. When you run `pulumi up`, the pack retrieves your tag requirements from your AWS organization and validates that every resource has the required tags.
 
-Start by enabling the pack in advisory mode to surface tagging violations in Pulumi Cloud's [Policy Findings](/docs/insights/policy/policy-findings/) hub without blocking deployments. This collaborative workspace allows your team to triage, prioritize, and systematically remediate missing tags. Once your infrastructure is compliant, switch to mandatory mode to prevent future non-compliant deployments.
+Start by enabling the pack in advisory mode to surface tagging violations in Pulumi Cloud's [Policy Findings](/docs/discovery-governance/policy/policy-findings/) hub without blocking deployments. This collaborative workspace allows your team to triage, prioritize, and systematically remediate missing tags. Once your infrastructure is compliant, switch to mandatory mode to prevent future non-compliant deployments.
 
 ## Getting started
 
@@ -47,7 +47,7 @@ Within minutes, every Pulumi deployment in your organization will validate tag c
 
 The AWS Organizations Tag Policies policy pack is now available to all Pulumi Team and Enterprise customers.
 
-- [Get started with the integration](/docs/insights/policy/integrations/aws-organizations-tag-policies/)
+- [Get started with the integration](/docs/discovery-governance/policy/integrations/aws-organizations-tag-policies/)
 - [Learn about enforcing tag policies with AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/enforce-required-tag-keys-iac.html)
 - [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) if you're new to Pulumi
 - [Join the Community Slack](https://slack.pulumi.com/) to share feedback

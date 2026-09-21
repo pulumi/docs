@@ -190,14 +190,14 @@ Policies:
 
 This allows you to implement company-specific policies that can be as simple or complex as you need them to be.
 
-To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/insights/policy/policy-packs/authoring/#publishing-to-your-organization), with the following commands:
+To apply this across your entire organization, you can [publish this policy pack to Pulumi Cloud](https://www.pulumi.com/docs/discovery-governance/policy/policy-packs/authoring/#publishing-to-your-organization), with the following commands:
 
 ```shell
 $ pulumi policy publish myorg
 $ pulumi policy enable myorg/my-policy-pack latest
 ```
 
-Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/insights/policy/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
+Some other great features of Crossguard are the ability to [version policies](https://www.pulumi.com/docs/support/faq/policies/#how-do-i-version-a-policy-pack), define multiple [policy groups](https://www.pulumi.com/docs/discovery-governance/policy/policy-groups/), and create [remediation policies](https://www.pulumi.com/blog/remediation-policies/) that automatically fix policy violations when possible. We will cover these topics in a future post where we go deeper on how to use policies effectively.
 
 ## Multi-Language Components (MLC)
 

@@ -37,13 +37,13 @@ social:
         Here's a brief tour.
 ---
 
-Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the [Pulumi Context API](/docs/insights/context-api/), a read-only API that connects Pulumi-managed and discovered resources, stacks, and their relationships into a graph. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and other agents can fetch the current graph vocabulary and query guidance on demand. It's available in public preview for organizations on the Enterprise and Business Critical editions.
+Every platform team fields the same questions: What is running? What breaks if we change this? What can we safely delete? The answers exist, but they're scattered across state files, cloud consoles, and the memories of whoever set things up. Today we're launching the [Pulumi Context API](/docs/discovery-governance/context-api/), a read-only API that connects Pulumi-managed and discovered resources, stacks, and their relationships into a graph. It's designed agent-first: [Pulumi Neo](/product/neo/), our infrastructure agent, uses it out of the box, and other agents can fetch the current graph vocabulary and query guidance on demand. It's available in public preview for organizations on the Enterprise and Business Critical editions.
 
 <!--more-->
 
 ## Answers that follow infrastructure relationships
 
-Pulumi already records the resources your programs manage, their dependencies, how stacks consume each other's outputs, and the resources [Pulumi Discovery](/docs/insights/discovery/) finds outside infrastructure as code (IaC). The Context API connects this data so you can ask questions that depend on the relationships:
+Pulumi already records the resources your programs manage, their dependencies, how stacks consume each other's outputs, and the resources [Pulumi Discovery](/docs/discovery-governance/discovery/) finds outside infrastructure as code (IaC). The Context API connects this data so you can ask questions that depend on the relationships:
 
 - **Impact**: Which stacks are affected if we upgrade this provider? If this stack changes, what consumes its outputs?
 - **Coverage**: How much of our infrastructure lives outside IaC, and in which accounts?
@@ -104,7 +104,7 @@ A response for one matching provider and one managed resource looks like this (a
 }
 ```
 
-The `anchor` frontier marks the provider, while `managed` marks the EC2 instance reached by the traversal. The `provided_by` edge keeps its defined direction from the instance to its provider, and `resultCount` reflects the two nodes on this page. The [Context API query guide](/docs/insights/guides/context-api/#put-the-clauses-together) walks through the complete response, and its [completeness guidance](/docs/insights/guides/context-api/#check-completeness-before-acting) explains how to assess an answer before acting on it.
+The `anchor` frontier marks the provider, while `managed` marks the EC2 instance reached by the traversal. The `provided_by` edge keeps its defined direction from the instance to its provider, and `resultCount` reflects the two nodes on this page. The [Context API query guide](/docs/discovery-governance/guides/context-api/#put-the-clauses-together) walks through the complete response, and its [completeness guidance](/docs/discovery-governance/guides/context-api/#check-completeness-before-acting) explains how to assess an answer before acting on it.
 
 ## Ask Neo or bring your own agent
 
@@ -116,16 +116,16 @@ Claude Code, Cursor, Codex, and other agents that can run authenticated Pulumi C
 pulumi api GetGraphQuerySchema
 ```
 
-The primer explains the current graph vocabulary, query grammar, engine limits, examples, pagination, and completeness checks. Put the command in your `AGENTS.md` or `CLAUDE.md` so the agent can refresh the primer as the API evolves. The [human-readable query guide](/docs/insights/guides/context-api/) explains the same concepts and includes direct CLI and REST examples.
+The primer explains the current graph vocabulary, query grammar, engine limits, examples, pagination, and completeness checks. Put the command in your `AGENTS.md` or `CLAUDE.md` so the agent can refresh the primer as the API evolves. The [human-readable query guide](/docs/discovery-governance/guides/context-api/) explains the same concepts and includes direct CLI and REST examples.
 
 ## Available in public preview
 
-The Context API is available now for every organization on the Enterprise and Business Critical editions. The [`pulumi api` access requirements](/docs/insights/context-api/#get-access) include [Pulumi CLI](/docs/install/) v3.243.0 or later, an authenticated session, and a role with the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission. Pulumi Cloud [role-based access control](/docs/administration/concepts/rbac/) limits responses to the resources, stacks, and cloud accounts the caller can read.
+The Context API is available now for every organization on the Enterprise and Business Critical editions. The [`pulumi api` access requirements](/docs/discovery-governance/context-api/#get-access) include [Pulumi CLI](/docs/install/) v3.243.0 or later, an authenticated session, and a role with the [`resources:search` permission](/docs/administration/reference/rbac-scopes/org-settings/#resources). The default Member and Admin roles grant this permission. Pulumi Cloud [role-based access control](/docs/administration/concepts/rbac/) limits responses to the resources, stacks, and cloud accounts the caller can read.
 
-During public preview, the graph vocabulary and limits may change. Fetch the [deployed schema](/docs/insights/guides/context-api/#get-the-deployed-schema) when you need the current contract. We also plan to connect more Pulumi Cloud data, including [Pulumi ESC](/docs/esc/) environments, teams and roles, cloud accounts, and service catalog concepts from [Pulumi IDP](/docs/idp/). Feedback during preview will shape the relationships and data sources we add next.
+During public preview, the graph vocabulary and limits may change. Fetch the [deployed schema](/docs/discovery-governance/guides/context-api/#get-the-deployed-schema) when you need the current contract. We also plan to connect more Pulumi Cloud data, including [Pulumi ESC](/docs/esc/) environments, teams and roles, cloud accounts, and service catalog concepts from [Pulumi IDP](/docs/idp/). Feedback during preview will shape the relationships and data sources we add next.
 
 ## Get started
 
-Start with the [Context API overview](/docs/insights/context-api/), then follow the [agent workflow](/docs/insights/guides/context-api/#ask-questions-through-an-ai-agent) to equip your agent. Ask a natural-language question such as, "Which stacks consume outputs from the `payments/prod` stack?"
+Start with the [Context API overview](/docs/discovery-governance/context-api/), then follow the [agent workflow](/docs/discovery-governance/guides/context-api/#ask-questions-through-an-ai-agent) to equip your agent. Ask a natural-language question such as, "Which stacks consume outputs from the `payments/prod` stack?"
 
 Give it a try today, and share your feedback in the [Pulumi Community Slack](https://slack.pulumi.com/) or through your account team.
