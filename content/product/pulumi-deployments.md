@@ -11,19 +11,19 @@ overview:
 
 quotes:
     items:
-        - company: mighty
+        - customer: mighty
           name: Aaron Gibralter
           name_title: Head of Engineering at Mighty
           quote: |
             “Pulumi allows every engineer to build and update infrastructure instead of only our infrastructure team. With Pulumi Deployments, we could easily set up a standardized CI/CD infrastructure workflow for every engineer that immediately makes them productive.”
 
-        - company: oleria
+        - customer: oleria
           name: Jim Alkove
           name_title: CEO of Oleria
           quote: |
             “At Oleria, we understand the importance of addressing issues with privacy, security, and data integrity. Earning and maintaining our trust isn’t just a responsibility but a fundamental aspect of our mission. Pulumi also understands how these attributes affect cloud infrastructure. Our team is excited to use these new [infrastructure lifecycle management] capabilities, giving us even more confidence as we enable our customers to securely manage access to decentralized SaaS applications, adaptively and intelligently."
 
-        - company: alkira
+        - customer: alkira
           name: Santosh Dornal
           name_title: Head of Software Test & DevOps at Alkira
           quote: |
@@ -54,7 +54,7 @@ options:
         - icon: code-window
           icon_color: blue
           title: REST API
-          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/platform/deployments/reference/#rest-api) code.
+          description: Deploy infrastructure by calling the Pulumi Service REST API. You can also use the API to run [Remote Automation API](/docs/deployments/concepts/triggers/#rest-api) code.
         - icon: eye
           icon_color: violet
           title: Review Stacks

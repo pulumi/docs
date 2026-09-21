@@ -7,28 +7,7 @@ type: what-is
 date: 2023-09-14T16:21:22-07:00
 page_title: What Is DevOps Automation?
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - ro
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 
 Discover the transformative power of DevOps automation through real-world examples. Learn essential best practices like version control and modular design, and find out how Pulumi is reshaping modern infrastructure as code solutions.
@@ -100,15 +79,15 @@ How have existing companies successfully leveraged devops automation to improve 
 
 ### Atlassian
 
-Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/case-studies/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
+Atlassian’s Bitbucket DevSpeed team is responsible for improving developer productivity through better workflows and tooling. The DevSpeed team built [a self-service dashboard](/customers/atlassian/) using Pulumi and the existing CI/CD process that enables any Bitbucket developer to quickly and easily provision a cloud-based development environment through automation. Now any developer can deploy and configure AWS instances for feature development, increasing developer productivity and leading to a 50% reduction in the time developers spend maintaining their instances.
 
 ### Mercedes-Benz
 
-Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/case-studies/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
+Mercedes-Benz Research & Development North America (MBRDNA) enabled its distributed innovation teams to move hundreds of microservices to the cloud leveraging automation. Infrastructure teams used [Pulumi’s Automation API](/customers/mercedes-benz/) to build self-service tools for building, deploying, and managing infrastructure and offer the right levels of complexity and customization for the tool’s target audience.
 
 ### SANS Institute
 
-The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/case-studies/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
+The DevOps team at SANS Institute, which provides cybersecurity training and certification, needed to provide each student with a virtual training environment. Instructors needed a way to spin up ephemeral AWS EC2 instances and related resources, but the process required manual steps that involved gluing together multiple provisioning and scripting tools. To solve this challenge, they built [a self-service platform](/customers/sans-institute/) that can automatically deploy, configure and destroy approved infrastructure with best practices baked-in from SANS security and operations teams, eliminating the need for a manual ticketing process.
 
 In each of these examples, devops teams improved scalability and reliability of their infrastructure by introducing automation.
 

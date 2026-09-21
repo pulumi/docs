@@ -18,7 +18,7 @@ schema_type: auto
 
 ---
 
-Pulumi Cloud orchestrates a growing number of workflow types: [Deployments](/docs/deployments/), [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/). Some of that work runs on Pulumi's infrastructure, and some of it runs on yours via [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). We needed a scheduling system that could handle all of these workflow types reliably across both environments. In this post, we'll take a look at the system we built.
+Pulumi Cloud orchestrates a growing number of workflow types: [Deployments](/docs/deployments/), [Insights](/docs/discovery-governance/) discovery scans, and [policy evaluations](/docs/discovery-governance/policy/). Some of that work runs on Pulumi's infrastructure, and some of it runs on yours via [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). We needed a scheduling system that could handle all of these workflow types reliably across both environments. In this post, we'll take a look at the system we built.
 
 <!--more-->
 
@@ -291,4 +291,4 @@ Retention policies are configurable per organization and per workflow type. Comp
 
 Today this system powers deployments, Insights discovery scans, and policy evaluations across both Pulumi Cloud and customer-managed infrastructure. The architecture is general enough that every new workflow type we add inherits the full scheduling, routing, retry, and observability stack without additional plumbing.
 
-If you're interested in running workflows on your own infrastructure, check out [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). To see how Insights can help you understand and manage your cloud infrastructure, [get started with Pulumi Insights](/docs/insights/).
+If you're interested in running workflows on your own infrastructure, check out [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). To see how Insights can help you understand and manage your cloud infrastructure, [get started with Pulumi Insights](/docs/discovery-governance/).

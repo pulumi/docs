@@ -29,12 +29,27 @@ case ${PULUMI_ACTION} in
         # Invalidate CloudFront cache after deploy so updated content is served immediately.
         # Only invalidate HTML and non-fingerprinted paths. Fingerprinted assets (css, js,
         # images under /fingerprinted/) use content-hash URLs and don't need invalidation.
+        #
+        # Each section is listed twice, as "/x/" and "/x/*": the glob matches everything
+        # below /x/ but not /x/ itself, which left every section landing page
+        # uninvalidated.
         DISTRIBUTION_ID=$(pulumi -C infrastructure stack output cloudFrontDistributionId 2>/dev/null || true)
         if [ -n "${DISTRIBUTION_ID}" ]; then
             echo "Invalidating CloudFront cache for distribution ${DISTRIBUTION_ID}..."
             if aws cloudfront create-invalidation \
                 --distribution-id "${DISTRIBUTION_ID}" \
-                --paths "/docs/*" "/registry/*" "/blog/*" "/tutorials/*" "/learn/*" "/dev/*" "/guides/*" "/product/*" "/pricing/*" "/contact/*" "/index.html" "/"; then
+                --paths \
+                    "/docs/" "/docs/*" \
+                    "/registry/" "/registry/*" \
+                    "/blog/" "/blog/*" \
+                    "/tutorials/" "/tutorials/*" \
+                    "/learn/" "/learn/*" \
+                    "/dev/" "/dev/*" \
+                    "/guides/" "/guides/*" \
+                    "/product/" "/product/*" \
+                    "/pricing/" "/pricing/*" \
+                    "/contact/" "/contact/*" \
+                    "/index.html" "/"; then
                 echo "CloudFront cache invalidation submitted successfully."
             else
                 echo "WARNING: CloudFront cache invalidation failed. Content will refresh within 30 minutes."

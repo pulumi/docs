@@ -11,35 +11,24 @@ One run of `/pr-review` renders one board. Re-running re-renders it, and publish
 
 ## The four verdicts
 
-Every open PR you can act on gets exactly one verdict. It says what kind of move the row needs, not how good the PR is — and it is *not* the row order: rows sit in PR number order inside their owner/domain group, so a number you already have finds its row without your having to guess its verdict first. The verdict is on the row, in the tally, on a filter chip and in the Do-next cards.
+Every open PR you can act on gets exactly one verdict. It says what kind of move the row needs, not how good the PR is — and it is *not* the row order: rows sit in PR number order inside their owner/domain group, so a number you already have finds its row without your having to guess its verdict first. The verdict is on the row, in the tally and on a filter chip.
 
 | Verdict | Means | The usual move |
 |---|---|---|
 | **stamp** | Passed every gate: current review, no open findings, green CI, no collisions, your lane, small enough. | Approve. Bot PRs merge; a person's PR is theirs to merge. |
 | **judge** | One thing needs a person: an open finding, a stale-looking summary, a new blog post, a diff over your size cap. | Read the judgment boxes, then approve as-is or send it back. |
 | **route** | Not your lane per `.github/review-routing.yml`. | Request review from the owning team, or approve anyway if you're confident. |
-| **blocked** | Nothing you can do until something else moves: an unanswered 🚨 finding, a conflict, red CI, a stale, errored or **unreadable** review (one that didn't arrive whole — see below), a review still running, someone else's changes requested, or your own PR. | Use the unblock the row offers (merge base, refresh, re-run the review, re-run the failed checks, send back or close for open findings, route), or leave it. A row with no unblock says **Blocked: … no action available** and is counted on its own tally tile, so it can never sit silent. |
+| **blocked** | Nothing you can do until something else moves: an unanswered 🚨 finding, a conflict, red CI, a stale, errored or **unreadable** review (one that didn't arrive whole — see below), a review still running, someone else's changes requested, or your own PR. | Use the unblock the row offers (merge base, refresh, re-run the review, re-run the failed checks, send back or close for open findings, hand the findings to `/address-review` or to `@claude`, route), or leave it. A row with no unblock says **Blocked: … no action available** and is counted on its own tally tile, so it can never sit silent. A **merge base & retry** that already failed on this head is not offered again: the row carries `unblock:refused:conflict` and points at the conflict report `act.py` left on the PR. |
 
-## The Do next strip
+## No batch strip
 
-The top of the board is a short list of moves worth making, most leverage first. Each card is three things:
+Every decision is on its row, next to the evidence for it. The board used to open with a "Do next" strip — one card per batch (approve the set, send back, route, each unblock) naming PRs as text, plus the chain and the consolidation, which had no row button at all. Every card was the row buttons it named, pressed together, and it sat where you could not see the rows it was talking about; judging a batch meant scrolling down to find each row and back up to the card. It is gone. What it did is covered without it:
 
-1. **A statement of fact**, naming the PRs. "#21664 and #21662 were opened by a workflow run, so no author will ever answer a review."
-2. **What pressing the button does**, in one sentence. "Closes each with a comment carrying the judgments on those rows."
-3. **The button**, which presses exactly those rows' buttons for you.
+- **Approve the set** was the stampable rows, which arrive with their approve button already selected — the default command merges them whether or not a strip says so.
+- **Send back / close / route / re-run** batches were each row's own button, pressed for several rows at once. Press them on the rows.
+- **Start the chain** and **consolidate** were the two moves with no row button. They are row buttons now: see "Cluster moves" under "A row".
 
-A card is a shortcut for clicking the same buttons down in the rows, not a separate instruction. Light a card and its rows light. Pick a different decision on one of those rows and the card goes out, because it no longer describes what you asked for. A card and a row can never disagree, so the command at the bottom can never contradict itself.
-
-**A card has three states, not two.** A batch card carries a small `on/total` tally of how many of the rows it names still hold its decision. All of them and it is lit, solid, green-ticked. None of them and it is out, plain. Some of them and it is *partly* lit — dashed, amber, tallied `2/3` — which is where you land whenever you press a card and then change your mind on one of its rows. Pressing a partial card takes every row back. (Before this it painted exactly like a card nobody had ever pressed, which read as a button that did nothing.)
-
-**A card never offers an approval that needed reading.** "Approve the set" is only ever the rows that cleared every gate mechanically; a row the judge pass decided to approve stays on its own row, next to the findings behind the call. The chain card follows the same rule — see below.
-
-**A card never names a row that isn't on the page.** Cards are built from the board's own row set, so the button a card would press is always there to be pressed. (A card naming a row parked under "Waiting on the author" could be clicked and would go straight back out.)
-
-Two cards deserve a note:
-
-- **Start the chain** is `--chain C1`: approve and squash-merge the first PR in a collision cluster through the same gates as a stamp, then merge master into the next one so it can follow. It is one link per run; the next link waits on CI, about ten minutes. No row button says that, so the card tags both links with "covered by Do next N" instead of lighting them; choosing anything on a covered row puts the card out. Every overlapping member of a cluster is a **judge** row — the overlap is itself a stamp gate — so the card offers the button only where the collision is the *only* thing holding the lead back. A lead with anything else against it (an open ⚠️ row, a judged 🚨, a stale review, a new blog post, a diff over your size cap) gets a card that names the hold and carries no button: `--chain` approves that lead with `--force`, and that is a call to make on the row, with the findings in front of you.
-- **Consolidate** posts one changes-requested review asking a bot for a single PR instead of N overlapping sweeps, with a reason no row button carries. That one has no row equivalent either, so it covers its rows the same way.
+The tally and the progress line stay at the top, because they are read-only: neither asks you to decide anything about a PR you are not looking at. (`--terminal` still prints the batch list after its table, as `$ /pr-review --act …` commands, because a terminal has no buttons to press.)
 
 ## A row
 
@@ -60,7 +49,8 @@ edit ↗
 - **The age** is the last thing on the meta line: how long the PR has been open, in at most four characters (`today`, `12d`, `4mo`), and amber once it passes 30 days. It is there because it is the one fact a row cannot show you any other way — two identical sweeps read the same until you notice one has been sitting since June. Hover it for the exact date.
 - **The chips** are the reasons for the verdict. The ones that change what you would click stay visible; the rest fold behind **why · N**. Hover any chip for a sentence explaining it; the raw code is in the tooltip too, so the queue stays greppable.
 - **The judgment boxes** are the open findings, each with the question that was decided, the reasoning, the diff lines, and a badge saying why it does not stop the merge. See below.
-- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks). Picking a second decision puts the first out. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **The buttons**: one decision per row (approve, send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks, ask @claude to fix the findings, start the chain, ask for a consolidated PR). Picking a second decision puts the first out. Two buttons that do the same job by different routes — **fix it yourself** and **ask @claude to fix them** — are paired more tightly still: they share an exclusive group, so either one puts the other out even though the handoff is not a decision. Side actions (apply fixes, screenshot the preview, deploy to the test site) ride along with whichever decision is lit. The right-aligned coloured button is the recommended one.
+- **Cluster moves** sit on the row they belong to. **approve & merge, then unblock #N** is on the lead of a collision chain: `--chain C1` approves and squash-merges the lead through the same gates as a stamp (approval alone on a person's PR: "approve, then unblock #N"), then merges master into #N so it can follow — one link per run, and the next waits on CI. It is only offered where the collision is the *only* thing holding the lead back, because `--chain` approves that lead with `--force`; a lead with anything else against it (an open ⚠️ row, a judged 🚨, a stale review, a new blog post, a diff over your size cap) just keeps its approve-as-is button, next to the findings, and that is a call to make on the row. While the chain is lit, #N's row reads **✓ covered by the chain from #lead** and counts as decided; pick anything on #N and the chain goes out, so the command can never carry both. **ask … for one consolidated PR** is on the newest of a bot author's overlapping sweeps: it posts one changes-requested review asking for a single PR instead of N serial merges, and nothing merges.
 - **fix it yourself** is the amber dashed button on a PR a workflow opened that still has open findings. See "Fixing one yourself" below.
 - **Your own PR** wears a **your own PR** chip (`author:self`) and no approve or send-back button, because you cannot answer your own review or approve your own work from here: route it, and answer its findings with `/address-review`.
 - **Approving says whether it merges.** A bot row leads with "approve & merge"; a person's row leads with "approve, no merge", because merging their PR is their call. The other choice is the second button.
@@ -116,7 +106,7 @@ The lever at the end of the bar is not a filter. It opens or closes every folded
 
 ## The progress line
 
-"3 of 21 decisions made", under the tally. A decision is a lit decision button on any row on the page — approve (either way), send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks — or a Do-next card covering the row. Side actions (apply fixes, screenshot, deploy) never count. The denominator is every row that has a decision to make, blocked rows included; rows parked in the waiting lists are not on the page and are not counted.
+"3 of 21 decisions made", under the tally. A decision is a lit decision button on any row on the page — approve (either way), send back, close it out, route, unblock, refresh, re-run the review, re-run the failed checks, ask @claude to fix the findings, start the chain, ask for a consolidated PR — or a lit chain covering the row from its lead. Side actions (apply fixes, screenshot, deploy) never count. The denominator is every row that has a decision to make, blocked rows included; rows parked in the waiting lists are not on the page and are not counted.
 
 ## A review that didn't arrive whole
 

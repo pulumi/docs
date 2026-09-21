@@ -497,6 +497,22 @@ The example above shows a single resource type. Real providers typically have ma
 Since Pulumi SDK v3.132.0, the type token is available directly in the request via `getType()`:
 
 ```typescript
+// Per-resource handlers, defined alongside the helpers in Step 3
+function createFile(
+    call: grpc.ServerUnaryCall<any, any>,
+    callback: grpc.sendUnaryData<any>
+) {
+    // ... the body of create() from Step 3
+}
+
+function createDirectory(
+    call: grpc.ServerUnaryCall<any, any>,
+    callback: grpc.sendUnaryData<any>
+) {
+    // ... create a directory instead of a file
+}
+
+// In providerImpl, dispatch on the type token
 create(
     call: grpc.ServerUnaryCall<any, any>,
     callback: grpc.sendUnaryData<any>
@@ -505,9 +521,9 @@ create(
 
     switch (resourceType) {
         case "myfiles:index:File":
-            return this.createFile(call, callback);
+            return createFile(call, callback);
         case "myfiles:index:Directory":
-            return this.createDirectory(call, callback);
+            return createDirectory(call, callback);
         default:
             callback({
                 code: grpc.status.UNIMPLEMENTED,
@@ -516,6 +532,11 @@ create(
     }
 }
 ```
+
+Defining the per-resource handlers as standalone functions — like the
+`structToObject` and `objectToStruct` helpers in Step 3 — keeps them callable
+from the `providerImpl` object literal without depending on how `this` binds
+inside a handler that `addService` invokes.
 
 Apply the same pattern to Check, Diff, Read, Update, and Delete.
 

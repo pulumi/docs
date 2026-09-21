@@ -19,18 +19,15 @@ testimonial:
     quote: Pulumi helped our team ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
     author: Justin Fitzhugh
     role: VP of Cloud Platform Engineering
-    logo: snowflake
+    customer: snowflake
 
 customers:
     - stat: "**5x faster** time to market"
-      logo: unity
-      link: /case-studies/unity
+      customer: unity
     - stat: "**100 days saved** each year with Pulumi Cloud instead of DIY state management"
-      logo: starburst
-      link: /case-studies/starburst
+      customer: starburst
     - stat: "**10x faster deployments**, from weeks to hours"
-      logo: snowflake
-      link: /case-studies/snowflake
+      customer: snowflake
 
 faq:
     - category: Pricing
@@ -121,7 +118,7 @@ faq:
       items:
         - question: What are Pulumi open source and Pulumi Cloud?
           answer: |
-            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/pulumi-cloud/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
+            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
 
             You're not required to use Pulumi Cloud. You can use any cloud or on-premises storage to build and run your own backend.
         - question: Can I use Pulumi for free?
@@ -159,11 +156,11 @@ faq:
             >
             >Here are some examples of their customers to give you an idea of who is using it and why:
             >
-            >- [BMW](/case-studies/bmw/) and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.
-            >- [Snowflake migrated to](/case-studies/snowflake/) Kubernetes across multiple clouds in three months.
-            >- [Mercedes-Benz](/case-studies/mercedes-benz/) Research & Development North America improved collaboration between its infrastructure and application development teams.
+            >- [BMW](/customers/bmw/) and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.
+            >- [Snowflake migrated to](/customers/snowflake/) Kubernetes across multiple clouds in three months.
+            >- [Mercedes-Benz](/customers/mercedes-benz/) Research & Development North America improved collaboration between its infrastructure and application development teams.
             >- [Skai](/blog/kenshoo-migrates-to-aws-with-pulumi/) managed a complex public cloud migration project.
-            >- [Wiz](/case-studies/wiz/), [Supabase](/case-studies/supabase/), and [Lemonade](/case-studies/lemonade/) created innovative engineering cultures.
+            >- [Wiz](/customers/wiz/), [Supabase](/customers/supabase/), and [Lemonade](/customers/lemonade/) created innovative engineering cultures.
             >
             >Pulumi is open source and has a SaaS product that helps organizations like ours manage infrastructure with advanced security and policies. Because it's a SaaS, we can start small and grow as our success with the product grows.
             >

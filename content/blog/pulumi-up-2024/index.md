@@ -30,7 +30,7 @@ In addition to our three products, Pulumi’s platform incorporates three core c
 
 You can see this visually depicted here:
 
-[![Pulumi Platform](platform.png)](/product/pulumi-cloud)
+[![Pulumi Platform](platform.png)](/product/)
 
 We’ve now worked with 3,000 customers to help with their cloud journey and have listened to and solved the problems we regularly hear about. That includes Nvidia who is at the forefront of the AI revolution as well as [BMW](/case-studies/bmw/) who is reimagining their entire engineering mindset in a cloud-first world, both leveraging Pulumi. [Unity Games](/case-studies/unity/) now ships **5x faster** from code to cloud, and Tivity Health **saved 71%** of their cloud spend, automating everything and saving $6.5M annually.
 
@@ -60,7 +60,7 @@ Pulumi Insights already delivers visibility, intelligence, and controls over you
 
 The big news with Pulumi Insights 2.0 is that *we’re bringing these capabilities to **all of your cloud infrastructure***, no matter where it is, and no matter how it was created. You point Pulumi at your cloud accounts for any of nearly 200 supported clouds, and you get an instant asset inventory of everything you have. This is true even for resources created by Terraform, CloudFormation, Azure Resource Manager, cloud CLIs and SDKs, or even by clicking in your cloud console. An improved resource view gives you pivot-table-like capabilities so you can understand everything you have, and new graph visualizations with inferred dependencies help you to make sense of how things relate. Search and Pulumi Copilot work over discovered cloud resources, letting you explore and ask questions interactively. Pulumi Insights leverages Pulumi CrossGuard, our policy as code technology, and can tap into any existing IaC policies to find issues pertaining to security, compliance, cost, and best practices. Pulumi’s compliance-ready policy packs just work. Insights can also leverage CrossGuard’s ability to automate remediations so that Insights not only tells you about your issues, but helps you fix them with the click of a button. Finally, Insights is better together with Pulumi IaC, and enables you to migrate any resources in the cloud to Pulumi IaC – improving the robustness and built-in security of your operations – with a fully interactive import experience.
 
-This marks the start of an ambitious long-term vision for Pulumi Insights. Some of what was announced is actively shipping while other pieces will ship in the coming weeks. [Learn more in the launch blog](/blog/pulumi-insights-2) and, [get started with Pulumi Insights 2.0](/docs/insights/discovery/get-started/).
+This marks the start of an ambitious long-term vision for Pulumi Insights. Some of what was announced is actively shipping while other pieces will ship in the coming weeks. [Learn more in the launch blog](/blog/pulumi-insights-2) and, [get started with Pulumi Insights 2.0](/docs/discovery-governance/discovery/get-started/).
 
 ## Thank You
 

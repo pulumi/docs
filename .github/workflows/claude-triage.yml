@@ -12,7 +12,10 @@ name: Pre-merge Review (triage)
 # lying). The synchronize pass skips everything but the label delta: no
 # review:triaging churn, no Haiku/Vale prose check (an existing
 # review:prose-flagged is carried forward, not reconciled away), no prose
-# comment, no reviewer routing (assignments are sticky from open).
+# comment, and no RE-request of a team already asked (assignments are sticky
+# from open). It does request a team the live paths now require that has
+# never been asked on this PR — see the routing step for why that is not the
+# same thing as a re-request.
 # review-state staleness on push is still claude-code-review.yml's
 # mark-stale job, unchanged. It does NOT run on reopen — reopening is
 # usually administrative; the explicit `@claude #new-review` path is the
@@ -452,40 +455,41 @@ jobs:
           echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY oversized=$OVERSIZED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
 
       # v3 reviewer routing (Phase 3, flag-gated): resolve the approval
-      # matrix from live paths and request the lane team(s) once, at open /
-      # ready — never on synchronize; assignments are sticky by design (a
-      # re-request on every push is the notification noise v3 removes).
-      # Requesting an already-requested team is a no-op, so the draft →
-      # ready → draft → ready dance stays quiet. continue-on-error: routing
-      # is an assist — the Sentinel enforces the matrix regardless of
-      # whether the request landed.
-      # A TEAM review request is not a repo-scoped operation: the
-      # requested_reviewers endpoint has to resolve `org/slug` against the
-      # org, and the default GITHUB_TOKEN can't — it fails the same way the
-      # Sentinel's team-membership reads do without PULUMI_BOT_TOKEN. Mint
-      # the org-scoped token here so the request below can actually land;
-      # reading the PR and its diff stays on GITHUB_TOKEN. continue-on-error
-      # because routing is an assist: no token degrades to "requested
-      # nobody", which is where the repo was before this step existed, and
-      # the Sentinel enforces the matrix either way.
-      - name: Fetch ESC secrets (org-scoped routing token)
+      # matrix from live paths and request each lane team that has never
+      # been asked on this PR.
+      #
+      # "Never been asked" is the whole rule, and it is not the same as
+      # "not currently requested". Assignments stay sticky — a team that
+      # reviewed (GitHub drops it from requested_reviewers when it does), or
+      # that a human deliberately un-requested, is never re-pinged, because
+      # a re-request on every push is the notification noise v3 exists to
+      # remove. What the ever-requested test adds is the case that rule used
+      # to miss: this step ran only at open / ready, while the Sentinel
+      # resolves required roles from LIVE paths on every evaluation
+      # (including synchronize). So a push that WIDENED the path set — a
+      # docs PR that grows a `layouts/` file, say — introduced a required
+      # approver that nobody was ever told about. Under enforcement that is
+      # an author blocked by a team that was never pinged, with nothing on
+      # the PR saying so. A first request for a newly-required team is not a
+      # re-request; it is the notification that was missing.
+      #
+      # The test is the timeline's `review_requested` events, not the PR's
+      # current `requested_teams`, precisely so an answered or withdrawn
+      # request still counts as asked.
+      #
+      # continue-on-error: routing is an assist — the Sentinel enforces the
+      # matrix regardless of whether the request landed.
+      # Which teams still need asking. GITHUB_TOKEN only: reading the PR,
+      # its diff and its timeline needs no org scope, and keeping this step
+      # token-free is what lets the ESC fetch below be conditional.
+      - name: Resolve lane reviewers to request
+        id: route
         if: >-
           vars.REVIEW_V3_ROUTING == '1'
-          && github.event.action != 'synchronize'
-          && steps.check-access.outputs.has_write_access == 'true'
-        id: esc-secrets
-        continue-on-error: true
-        uses: pulumi/esc-action@v3
-
-      - name: Request lane reviewers (v3 routing)
-        if: >-
-          vars.REVIEW_V3_ROUTING == '1'
-          && github.event.action != 'synchronize'
           && steps.check-access.outputs.has_write_access == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
@@ -501,14 +505,96 @@ jobs:
           echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
           TEAMS=$(echo "$ROUTE" | jq -r '.teams[]')
           if [ -z "$TEAMS" ]; then
-            echo "routing: no approver team required (mechanical or unrouted) — requesting nobody"
+            echo "routing: no approver team required — requesting nobody"
+            echo "pending=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ -z "${TEAM_TOKEN:-}" ]; then
-            echo "::warning::routing: no org-scoped token (ESC fetch failed); team review requests need one. Would have requested: $(echo "$TEAMS" | paste -sd, -)"
+
+          # Every team ever review-requested on this PR, by bare slug. The
+          # timeline is the right source: `requested_teams` on the PR is
+          # current state, and GitHub removes a team from it the moment a
+          # member reviews, so a team that already answered would look
+          # un-asked and get re-pinged on the next push.
+          #
+          # A FAILED read is not an empty read, and conflating them is a real
+          # hazard now that this runs on every push: an empty ASKED makes
+          # every required team look never-asked, so one transient 500 or a
+          # rate limit re-requests all of them -- the exact notification
+          # spam the ever-asked test exists to prevent, on a loop.
+          #
+          # The old line was `... 2>/dev/null | sort -u || true`. `|| true` is
+          # what discarded gh's status; `2>/dev/null` threw away the reason.
+          # (`pipefail` is set at the top of this step, so the pipe itself was
+          # never the problem -- it propagates gh's failure fine. Worth saying
+          # because the pipeline-status rule is the tempting explanation and
+          # it is the wrong one here.) So: test the status instead of
+          # discarding it, and when the read fails request nobody. Routing is
+          # an assist and the Sentinel enforces the matrix either way, so
+          # silence is the safe degradation; the next push retries.
+          if ! ASKED=$(gh api --paginate "repos/$REPO/issues/$PR/timeline" \
+                         --jq '.[] | select(.event == "review_requested") | .requested_team.slug // empty' \
+                       | sort -u); then
+            echo "::warning::routing: could not read the timeline for $REPO#$PR, so 'already asked' is unknowable. Requesting nobody rather than re-pinging every required team ($(echo "$TEAMS" | tr '\n' ',' | sed 's/,$//')). The next push retries."
+            echo "pending=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          echo "routing: teams ever requested on this PR: ${ASKED:-none}"
+
+          PENDING=""
           for team in $TEAMS; do
+            slug="${team##*/}"
+            if printf '%s\n' "$ASKED" | grep -qxF "$slug"; then
+              echo "routing: $team already asked on this PR — leaving it sticky"
+            else
+              PENDING="$PENDING $team"
+            fi
+          done
+          PENDING="${PENDING# }"
+
+          if [ -z "$PENDING" ]; then
+            echo "routing: every required team has already been asked — nothing to do"
+          fi
+          echo "pending=$PENDING" >> "$GITHUB_OUTPUT"
+
+      # A TEAM review request is not a repo-scoped operation: the
+      # requested_reviewers endpoint has to resolve `org/slug` against the
+      # org, and the default GITHUB_TOKEN can't — it fails the same way the
+      # Sentinel's team-membership reads do without PULUMI_BOT_TOKEN.
+      #
+      # Gated on there being something to request. This is an OIDC exchange
+      # plus a CLI download, and after the first request `pending` is empty
+      # on essentially every later push — which, since this lane lost its
+      # `synchronize` exclusion, is now most of the runs. continue-on-error
+      # because routing is an assist: no token degrades to "requested
+      # nobody", which is where the repo was before this step existed, and
+      # the Sentinel enforces the matrix either way.
+      - name: Fetch ESC secrets (org-scoped routing token)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.route.outputs.pending != ''
+        id: esc-secrets
+        continue-on-error: true
+        uses: pulumi/esc-action@v3
+
+      - name: Request lane reviewers (v3 routing)
+        if: >-
+          vars.REVIEW_V3_ROUTING == '1'
+          && steps.check-access.outputs.has_write_access == 'true'
+          && steps.route.outputs.pending != ''
+        continue-on-error: true
+        env:
+          TEAM_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          PENDING: ${{ steps.route.outputs.pending }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TEAM_TOKEN:-}" ]; then
+            echo "::warning::routing: no org-scoped token (ESC fetch failed); team review requests need one. Would have requested: $(echo "$PENDING" | tr ' ' ',')"
+            exit 0
+          fi
+          for team in $PENDING; do
             GH_TOKEN="$TEAM_TOKEN" gh pr edit "$PR" --repo "$REPO" --add-reviewer "$team" \
               && echo "routing: requested $team" \
               || echo "::warning::routing: could not request $team (team missing, or it has no access to $REPO)"

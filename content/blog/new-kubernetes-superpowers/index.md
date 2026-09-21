@@ -297,7 +297,7 @@ func main() {
 
 ## OPA support in Pulumi CrossGuard Policy-as-Code
 
-Pulumi’s [CrossGuard](/docs/insights/policy/) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
+Pulumi’s [CrossGuard](/docs/discovery-governance/policy/) policy-as-code framework enforces policy across all your modern cloud infrastructure and/or in Kubernetes - using the full expressiveness of rich programming languages. It is deeply integrated into the deployment process to ensure that policy violations are identified *before* infrastructure is deployed instead of minutes or hours after changes are made.
 
 Today’s release of [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) support in Pulumi policy-as-code extends the existing support for TypeScript and Python to include OPA’s `.rego` language and runtime for declarative policy specification. As an emerging standard for cloud native policy, OPA is already used across a wide variety of cloud native technologies, and can now also be leveraged to author policies to run in Pulumi’s policy model across any cloud or Kubernetes.
 

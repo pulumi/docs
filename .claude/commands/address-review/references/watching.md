@@ -1,11 +1,11 @@
 ---
 user-invocable: false
-description: How to wait for a pinned pre-merge review to land — event subscription, bounded polling, and when to hand back.
+description: How to wait for a pre-merge review to land — event subscription, bounded polling, and when to hand back.
 ---
 
 # Watching for the review
 
-The pre-merge review is a GitHub Actions job, not something you can block on. `claude-code-review.yml` gives the job a 40-minute ceiling and the model step 18 minutes; in practice a review posts in **5-15 minutes** from the ready-for-review transition. Anything past ~40 minutes without a pinned comment is a failure, not a slow run.
+The pre-merge review is a GitHub Actions job, not something you can block on. `claude-code-review.yml` gives the job a 40-minute ceiling and the model step 18 minutes; in practice a review posts in **5-15 minutes** from the ready-for-review transition. Anything past ~40 minutes with no cards is a failure, not a slow run.
 
 ## First: is a review even coming?
 
@@ -14,11 +14,13 @@ Don't watch a PR that will never post one.
 | Situation | Signal | What to say |
 |---|---|---|
 | PR is a draft | `isDraft: true` | "Review fires when this goes ready-for-review — want me to mark it ready?" |
-| Trivial short-circuit | `review:trivial` | No pinned comment is coming. If `review:prose-flagged` is also set, triage posted an advisory comment — walk that instead. |
+| Trivial short-circuit | `review:trivial` | No cards are coming. If `review:prose-flagged` is also set, triage posted an advisory comment — walk that instead. |
 | Frontmatter-only | `review:frontmatter-only` | Same as above. |
 | Oversized | `review:oversized` | Triage posted a `<!-- TRIAGE_OVERSIZED -->` advisory suggesting a split. Offer to split the hand-written source into its own PR — that PR gets a real review. |
 | Bot-authored PR | author is `pulumi-bot` / `dependabot[bot]` | Review skips bot PRs. |
 | `review:error` | Workflow failed before publishing | Watching won't help. Read the Actions log; `@claude #new-review` reruns from scratch. |
+
+A short-circuited PR is not an ungoverned one. Where the Sentinel is enforcing, a mechanical lane skips the *model* review but never the approver — G1/G2 pass on triage's `<!-- TRIAGE_PROSE -->` comment, and the team named in `.github/review-routing.yml` still has to approve. So "no review is coming" means "nothing here for us to work," not "merge it."
 
 ## Preferred: subscribe to PR events
 
@@ -26,7 +28,7 @@ When the session has PR activity subscription available (Claude Code on the web 
 
 - Subscribe once with the repo and PR number, then **end the turn**. Review completion, CI results, and comments arrive as wake events; the session resumes on its own.
 - Do not also poll. A subscription plus a polling loop wakes twice per event and burns the session for nothing.
-- On the wake event: re-fetch the pinned comment, then go to the skill's Step 3. The event tells you *that* something happened, never *what the review says*.
+- On the wake event: re-fetch the cards, then go to the skill's Step 3. The event tells you *that* something happened, never *what the review says*.
 - Unsubscribe when the PR merges or closes, or when the user says to stop.
 
 ## Fallback: bounded polling
@@ -43,6 +45,8 @@ for i in $(seq 1 15); do
   sleep 120
 done
 ```
+
+The labels are surface-agnostic — they mean the same thing whether the run rendered v3 cards or a legacy monolith — so this loop is unchanged from v2. Which surface landed is Step 1's job, after the wait.
 
 Rules for the fallback:
 
@@ -62,10 +66,12 @@ Don't start speculative edits while waiting unless the user asks. A push during 
 
 ## When it doesn't land
 
-Past the 40-minute ceiling with no pinned comment and no `review:error`:
+Past the 40-minute ceiling with no cards and no `review:error`:
 
 1. Check the workflow run for the head SHA — a cancelled or timed-out job leaves no comment.
 1. Check whether the PR is still marked ready (a draft transition mid-run kills it).
 1. Re-trigger with `@claude #new-review`, which bypasses the skip paths, or transition draft → ready.
+
+`#new-review` is also the only thing that will regenerate a legacy v2 monolith as v3 cards — `#update-review` refreshes a v2 review in place, by design. Don't reach for it as a retry on a PR that already has a working review unless the user wants that migration and knows it costs a full review round.
 
 Report what happened rather than waiting again. Two silent 40-minute waits is worse than one clear "the review job timed out; want me to retrigger it?"
