@@ -761,8 +761,8 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
     verdict.would_be = verdict.conclusion
     verdict.summary = (
         f"**PREVIEW MODE — informational only, safe to ignore for now. This check "
-        f"would be: `{verdict.conclusion}`.** Enforcement is coming: once it lands, a "
-        f"red gate below stops the merge. Treat red as work you will owe shortly.\n\n"
+        f"would be: `{verdict.conclusion}`.** Enforcement is coming: once it lands, "
+        f"every gate below has to be green before the PR can merge.\n\n"
         + verdict.summary
     )
     verdict.title = f"Preview — would be: {verdict.conclusion} (not enforced yet)"
@@ -1317,9 +1317,12 @@ def render_status_comment(verdict: Verdict) -> str:
         # Both halves, in this order, and neither is optional: informational
         # today, enforced soon. Half one alone teaches everyone to scroll past
         # the comment, and enforcement day is then the first time anyone reads
-        # a gate row; half two alone reads as a PR that is blocked. And half
-        # one says "safe to ignore for now", never "you can merge anyway" —
-        # the gate surface is no place to coach someone past a red row.
+        # a gate row; half two alone reads as a PR that is blocked. Half one
+        # says "safe to ignore for now", never "you can merge anyway" — the
+        # gate surface is no place to coach someone past a red row. And
+        # neither half calls a red row the author's homework: G3 is an
+        # approval and G4 a deploy, so the rows are a sign-off checklist, and
+        # only some of them are ever the author's to clear.
         lines += [
             "> [!WARNING]",
             "> ## ⚠️ Preview mode — this check is NOT blocking your merge",
@@ -1329,9 +1332,10 @@ def render_status_comment(verdict: Verdict) -> str:
             f"are informational and **safe to ignore for now**. It *would* have concluded "
             f"`{verdict.would_be}`.",
             "> ",
-            "> **This will be enforced in the near future.** Once it is, a red gate below "
-            "blocks the merge — so treat a red row as work you'll owe shortly, and tell us "
-            "in `#docs` if one looks wrong.",
+            "> **This will be enforced in the near future.** Once it is, every row below "
+            "has to be green before this PR can merge. The rows are the sign-offs a merge "
+            "needs — some yours, some a reviewer's or a deploy's. Tell us in `#docs` if one "
+            "looks wrong.",
             "",
         ]
 

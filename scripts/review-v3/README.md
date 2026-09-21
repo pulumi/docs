@@ -151,8 +151,9 @@ function of the verdict — no timestamps, no run ids — so a re-evaluation tha
 changes nothing produces a byte-identical body and the PATCH is skipped. The
 comment is maintained on **every** PR the Sentinel evaluates, in both modes.
 In report-only mode the heading reads "(preview)" and a `[!WARNING]` banner
-says both halves: informational and safe to ignore today, enforced soon, so a
-red row is work you will owe. That banner is what makes a repo-wide dry run
+says both halves: informational and safe to ignore today, enforced soon, when
+every row has to be green to merge. Neither half calls a red row the author's
+homework — G3 is an approval and G4 a deploy. That banner is what makes a repo-wide dry run
 safe, and repo-wide is what makes it worth running — the `sentinel:preview`
 opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21
 because a surface only workflow-authored PRs carry tests the renderer and no

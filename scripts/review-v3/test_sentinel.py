@@ -1129,6 +1129,9 @@ def test_preview_banner_says_both_halves_and_only_shows_in_report_only():
     assert "you can merge" not in body
     assert "enforced in the near future" in body
     assert "*would* have concluded `failure`" in body
+    # The rows are a sign-off checklist (G3 is an approval, G4 a deploy), so
+    # the banner must not frame them as the author's to-do list.
+    assert "owe" not in body
 
     enforcing = sentinel.render_status_comment(sentinel.evaluate(gh, CONFIG))
     assert "Preview mode" not in enforcing and "(preview)" not in enforcing
@@ -1228,7 +1231,7 @@ def test_report_only_wraps_neutral():
     assert v.would_be == "failure"
     assert v.summary.startswith("**PREVIEW MODE — informational only, safe to ignore "
                                 "for now. This check would be: `failure`.**")
-    assert "Enforcement is coming" in v.summary
+    assert "Enforcement is coming" in v.summary and "owe" not in v.summary
 
 
 def test_draft_neutral():
