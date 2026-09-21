@@ -116,13 +116,15 @@ When they dropped the transcript and kept only the file edits on disk, recovery 
 
 Parallel agents burn tokens fast. Anthropic's write-up of [its multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system) puts rough numbers on it. Agents use about 4× the tokens of a chat. Multi-agent systems use about 15×. The same post notes that most coding tasks parallelize less well than research does. Claude Code's [cost docs](https://code.claude.com/docs/en/costs) put agent teams at roughly 7× the tokens of a standard session when teammates run in plan mode.
 
+The newer multi-agent features cost more too. Claude Code's docs say a [dynamic workflow](https://code.claude.com/docs/en/workflows) "can use meaningfully more tokens than working through the same task in conversation." Claude Code warns when a run schedules more than 25 agents or its projected token total passes 1.5 million. Even a message sent through [cross-session messaging](https://code.claude.com/docs/en/cross-session-messaging) "counts toward usage like a prompt you type."
+
 The cost figures qualify my earlier advice. In May I told you to [use the Explore subagent liberally](/blog/stop-tuning-prompts-build-a-harness/), and for exploration I still would. A subagent that reads forty files to find the three that matter keeps all forty out of your main session.
 
 On Claude subscription plans, `/usage` now breaks recent usage down by subagents, skills, plugins, and MCP servers, so you can see where it went. I prefer to decide which tasks get delegated before the agent starts spawning helpers. In [the parallel coding playbook](/blog/parallel-coding-playbook-for-pulumi/), the parallelism came from issues a human wrote, and that's how I'd keep it.
 
 ### 8. Skip the coordinator agent
 
-The team-lead pattern is tempting. One agent assigns the work, the others report back and message each other, and you get to watch it all happen. Claude Code's own [agent teams](https://code.claude.com/docs/en/agent-teams) are still "experimental and disabled by default," and the research gives a reason not to rush.
+The team-lead pattern is tempting. One agent assigns the work, the others report back and message each other, and you get to watch it all happen. Claude Code's own [agent teams](https://code.claude.com/docs/en/agent-teams) are still "experimental and disabled by default," and the research gives a reason not to rush. Dynamic workflows sit alongside agent teams rather than replacing them. Cross-session messaging is for your separate sessions, not a supervised team.
 
 Giuseppe Destefanis and Tomaso Aste at UCL [tested the cheapest kind of coordinator](https://arxiv.org/abs/2608.16801): a prompt that names one agent the lead. Their sample covered 1,902 graded Claude Code runs, with teams of one to sixteen agents. The coordinator created no communication hub and no reliable improvement.
 
@@ -130,7 +132,7 @@ The failure worth remembering came from an eight-step invoice pipeline, which wo
 
 The tasks were synthetic Python, and the coordinator was only a prompt label. Still, Walden Yan at Cognition [described the mechanism in 2025](https://cognition.com/blog/dont-build-multi-agents): "Actions carry implicit decisions, and conflicting decisions carry bad results." The rounding failure is a clean example of that.
 
-A main agent that hands out self-contained tasks and collects the results is enough. Give every interface between those tasks an owner, and write the contract into a file. That's what stood out in GSD when I [compared orchestration frameworks in April](/blog/claude-code-orchestration-frameworks/): its orchestrator never touches source files.
+A main agent that hands out self-contained tasks and collects the results is enough. Give every interface between those tasks an owner, and write the contract into a file. That's what stood out in GSD when I [compared orchestration frameworks in April](/blog/claude-code-orchestration-frameworks/): its orchestrator never touches source files. Dynamic workflows push the same idea further. In the docs' words, "a workflow moves the plan into code," so no lead agent has to hold it in its context.
 
 ## Checking the work
 
