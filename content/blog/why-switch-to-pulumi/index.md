@@ -328,7 +328,7 @@ scalability, and collaboration.
     changes, runs previews, responds to failures, and opens pull requests in tight
     feedback loops, grounded in the real state of your infrastructure in Pulumi
     Cloud. Because that infrastructure is defined in a [general-purpose
-    programming language](https://www.pulumi.com/docs/iac/languages-sdks/) rather
+    programming language](/docs/iac/languages-sdks/) rather
     than a bespoke configuration language, Neo can read, reason about,
     test, and ship it the same way an AI coding agent already handles the rest of
     your codebase, using the same linters, type checkers, and test frameworks.
