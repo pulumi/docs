@@ -135,7 +135,7 @@ The first two block merge. ⚠️ lives on the *reviewer's* brief and is address
 For each item, present a compact block — never a wall:
 
 ```text
-[1/4] 🚨 F1  content/docs/ai/skills/index.md L40
+[1/5] 🚨 F1  content/docs/ai/skills/index.md L40
 Finding:  "Pulumi supports 9 languages" — the docs say six.
 Evidence: ❌ contradicted (source: content/docs/iac/languages-sdks/)
 Proposal: change "nine" → "six" on line 40.
