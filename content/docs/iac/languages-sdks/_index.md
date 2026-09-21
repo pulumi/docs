@@ -6,7 +6,7 @@ h1: Languages & SDKs
 docs_home: true
 notitle: true
 norightnav: true
-description: <p>Pulumi supports TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Each language is equally capable and supports the full surface area of all <a href="/registry/">Pulumi Registry</a> providers.</p>
+description: <p>Pulumi supports TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Each language is equally capable of provisioning and managing infrastructure with <a href="/registry/">Pulumi Registry</a> providers, though some languages may provide functionality that's not yet available in others.</p>
 menu:
     iac:
         name: Languages & SDKs
