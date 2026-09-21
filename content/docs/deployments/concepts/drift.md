@@ -102,7 +102,7 @@ curl -H "Accept: application/vnd.pulumi+json" \
 
 The Pulumi Service Provider allows you to set up automated drift detection and remediation in source control.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -265,6 +265,46 @@ outputs:
   driftScheduleId: ${driftDetectionSchedule.scheduleId}
 
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: drift-detection-setup
+runtime: hcl
+description: Setup of automated drift detection with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source  = "pulumi/pulumiservice"
+      version = "1.3.0"
+    }
+  }
+}
+
+resource "pulumiservice_drift_schedule" "drift_detection_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "production"
+
+  schedule_cron  = "0 0 * * *" # Run drift detection daily at midnight
+  auto_remediate = true        # Automatically remediate any drift detected
+}
+
+output "drift_schedule_id" {
+  value = pulumiservice_drift_schedule.drift_detection_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider, which takes an exact version rather than a version constraint. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

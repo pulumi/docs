@@ -74,7 +74,7 @@ The following example shows how to create an Environment webhook in a Pulumi IaC
 
 To create an Organization webhook instead of an Environment webhook, the code is virtually identical - just omit the `environmentName` value when declaring the webhook resource.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -152,6 +152,30 @@ class PulumiServiceWebhook: Stack
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source  = "pulumi/pulumiservice"
+      version = "1.3.0"
+    }
+  }
+}
+
+resource "pulumiservice_webhook" "example_webhook" {
+  active            = true
+  display_name      = "webhook example"
+  organization_name = "example"
+  environment_name  = "my-environment"
+  payload_url       = "https://example.com/webhook"
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ## Event Filtering
