@@ -14,38 +14,35 @@ must leave a real CLI on their PATH — not just a per-session `npx` shim. First
 check whether it is already installed: `pulumi version` (this does not touch
 Pulumi Cloud). If that works, continue.
 
-If `pulumi` is not found, install it for the user's platform. Neither installer
-modifies the PATH, so a fresh shell won't find `pulumi` yet — set that up next.
+If `pulumi` is not found, install it for the user's platform:
 
-- macOS or Linux — the install script (installs to `$HOME/.pulumi/bin`):
+- macOS or Linux — the install script (installs to `$HOME/.pulumi/bin`). It
+  does not modify the PATH, so set that up next:
 
       curl -fsSL https://get.pulumi.com | sh
 
-- Windows — the PowerShell install script, the analog of the macOS/Linux one
-  (installs to `%USERPROFILE%\.pulumi\bin`):
+- Windows — the PowerShell install script (installs to
+  `%USERPROFILE%\.pulumi\bin`). It adds `pulumi` to the user's PATH for you and
+  updates the current session, so there's nothing more to do — a newly opened
+  shell may just need a restart to see it:
 
       iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))
 
-Confirm the install directory from the installer's output, then put it on the
-PATH:
+On macOS or Linux, put the install directory (confirm it from the installer's
+output) on the PATH:
 
 - For now: export it for the session — `export PATH="$HOME/.pulumi/bin:$PATH"`
-  (macOS/Linux) or `$env:Path += ";$HOME\.pulumi\bin"` (PowerShell) — or use the
-  full path.
+  — or use the full path.
 - Permanently: offer to add that directory to the PATH for future shells —
   never edit anything automatically, only with the user's go-ahead. Detect the
-  shell and use its own target and syntax rather than assuming zsh (`$SHELL`
-  names the login shell on macOS/Linux; on Windows you're in PowerShell):
+  shell (`$SHELL` names the login shell) and use its own target and syntax
+  rather than assuming zsh:
   - zsh: add `export PATH="$HOME/.pulumi/bin:$PATH"` to `~/.zshrc`.
   - bash: the same line in `~/.bashrc` (Linux) or `~/.bash_profile` (macOS).
   - fish: run `fish_add_path $HOME/.pulumi/bin`.
-  - PowerShell: add `$env:Path += ";$HOME\.pulumi\bin"` to the file at
-    `$PROFILE`, or persist it with `[Environment]::SetEnvironmentVariable('Path',
-    "$env:Path;$HOME\.pulumi\bin", 'User')`.
 
   If the user declines or you can't write the file, hand them the matching
-  command for their shell and name the install location (`$HOME/.pulumi/bin`, or
-  `%USERPROFILE%\.pulumi\bin` on Windows).
+  command for their shell and name the install location (`$HOME/.pulumi/bin`).
 
 Only if no installer can run (say, a restricted environment) and Node is
 available, fall back to `npx pulumi` for this session — but tell the user
@@ -175,50 +172,56 @@ is already authenticated. Match it to what was deployed: open a served URL
 (`open $(pulumi stack output url)` for a static site or serverless app), hit an
 API endpoint with `curl`, or list what a resource created
 (`aws s3 ls $(pulumi stack output bucketName)`). You can hand the user the same
-command to run on their own, but only after the save-your-work step below —
-their shell can't run `pulumi` until they claim the account and log in.
+command to run on their own, but only after the save-your-work step below: if
+the work is in an unclaimed ephemeral account, `pulumi` won't run in their shell
+until they claim it and log in; if they're already on their own account, they
+just need `pulumi login`.
 
-## 6. Save the work: surface the claim link
+## 6. Save the work: surface the claim link (only if one was printed)
 
-The first time Pulumi contacts Pulumi Cloud without saved credentials, it
-provisions a free ephemeral account and prints a claim block to stderr — a
-claim URL and how long the account stays usable. Read those from what the CLI
-printed rather than assuming them.
+The claim flow happens only when the user had no saved Pulumi Cloud
+credentials: the first time Pulumi contacts Pulumi Cloud it provisions a free
+ephemeral account and prints a claim block to stderr — a claim URL and how long
+the account stays usable. If the user was already logged in to their own
+account, there is no claim block; skip this step, since the work is already in
+their account. (If their shell just isn't logged in, `pulumi login` is all they
+need.)
 
-Surface the claim URL right after the first success, framed as saving their
-work: claiming transfers the project, stack, and state to their account and
-unlocks the rest of Pulumi Cloud, including Neo. Relay how long they have, and
-tell them to claim after you finish, since it briefly locks the organization.
-If you're working on the user's behalf rather than beside them, include the
-link in your response.
+When a claim block is printed, read the URL and expiry from it rather than
+assuming them, and surface the URL right after the first success as saving
+their work: claiming transfers the project, stack, and state to their account
+and unlocks the rest of Pulumi Cloud, including Neo. Relay how long they have,
+and tell them to claim after you finish, since it briefly locks the
+organization. If you're working on the user's behalf rather than beside them,
+include the link in your response.
 
-Surface this save-your-work step before you invite the user to run any `pulumi`
-command themselves, and give them this heads-up: their own shell is not logged
-in. The stack lives in the ephemeral agent account that only your session can
-reach, so any `pulumi` command they run — `stack output`, `preview`, `up`,
-`destroy` — will fail until they claim the account (the link above) and then
-run `pulumi login`. Claim first, then `pulumi login`, then the CLI works for
-them.
+While the work sits in an unclaimed ephemeral account, only your session can
+reach it — so surface this step before inviting the user to run any `pulumi`
+command themselves, and warn them that `pulumi` in their own shell (`stack
+output`, `preview`, `up`, `destroy`) will fail until they claim the account and
+then run `pulumi login`.
 
 ## 7. Suggest the next steps
 
 Don't just ask "what next" — actively encourage the user to keep going, in this
 order of importance:
 
-1. Claim the Pulumi Cloud account — the single most important next step. Urge
-   them to claim now, using the URL from step 6 and before it expires, to keep
-   the project, stack, and state and unlock the rest of Pulumi Cloud, including
-   Neo.
+1. Save the work to a Pulumi Cloud account — the single most important next
+   step. If the CLI printed a claim link (step 6), urge them to claim now,
+   before it expires, to move the project, stack, and state into their account
+   and unlock the rest of Pulumi Cloud, including Neo. If they were already on
+   their own account, there's nothing to claim — just confirm they're logged in.
 2. Open the project in their editor and look around. Pulumi is agent-friendly,
    but it pays to understand how a project fits together — encourage them to
    read the code, make a small change (add a resource from the catalog at
    pulumi.com/registry, or set config and secrets with ESC via `pulumi-overview`
    Level 3), and deploy it with `pulumi up` from the project directory — which
-   works once they've claimed the account and run `pulumi login`.
+   works once they can run `pulumi` themselves (claim first if the work is in an
+   ephemeral account, then `pulumi login`).
 3. Tear it down when they're done. If you already ran `pulumi destroy`, say so.
    Otherwise remind them they can remove everything anytime — by asking you
-   later or, once they've claimed and run `pulumi login`, running
-   `pulumi destroy` themselves from the project directory
+   later or, once they can run `pulumi` themselves (claim if needed, then
+   `pulumi login`), running `pulumi destroy` from the project directory
    (pulumi.com/docs/iac/cli/commands/pulumi_destroy/) — so a trial run doesn't
    leave billable resources behind. Offer to run it now if they were only
    experimenting, confirming first as with any create.
