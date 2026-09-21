@@ -124,11 +124,11 @@ The script detects the surface itself. On v3 it reads both cards, enumerates eve
 
 **If `parse_confidence` comes back `low`, do not proceed as if the list were complete** — read the cards yourself and work from them, saying that the enumerator couldn't parse them. On v3, `low` means the head sentinel is missing or `REVIEW_STATE` didn't parse; either gap means the seeded dispositions can't be trusted.
 
-Present the counts before working: `5 items: 1 blocker, 1 author question, 2 style (1 one-click), 1 reviewer check (advisory). Pre-existing: 1 (optional).` Everything you walk goes in the total — the script's `total` counts every item and `remaining` excludes only the `optional` ones, which is 💡 pre-existing alone, so a count that leaves the advisory buckets out won't match what `--require-clean` is measuring. Then start.
+Present the counts before working: `5 items: 1 blocker, 1 author question, 2 style (1 one-click), 1 reviewer check (advisory).` Everything the enumerator returns goes in that total. **On v3 nothing is optional** — `extract_items_v3` emits 🚨, ❓, ⚠️ and ✏️ items, all with `optional: False`, so `remaining` is simply every undecided item and a count that leaves the advisory buckets out won't match what `--require-clean` measures. There is no 💡 item to leave out: pre-existing issues appear on the brief as a *count*, with the detail on the evidence page, and the enumerator never emits one. (On v2 it does, and there `optional: True` makes 💡 the one bucket `remaining` skips.) Then start.
 
 ### Step 4 — Walk the worklist with the user
 
-**One item at a time, in bucket order:** 🚨 Outstanding → ❓ Questions for you → ✏️ Style → ⚠️ Reviewer checks → 💡 Pre-existing (optional; ask once whether to include them at all, default no).
+**One item at a time, in bucket order:** 🚨 Outstanding → ❓ Questions for you → ✏️ Style → ⚠️ Reviewer checks. That's the whole v3 walk — 💡 pre-existing is a walk step on v2 only, since the v3 enumerator emits no such item. When the brief's pre-existing count is non-zero and the user wants them, read them off the evidence page and treat them as out-of-scope candidates (`deferred` with an issue), not as worklist rows.
 
 The first two block merge. ⚠️ lives on the *reviewer's* brief and is addressed to the approver, not to you — it still gets a disposition, because an item the reviewer is told to check is an item someone has to answer, but it never blocks and it's the right bucket to batch.
 
