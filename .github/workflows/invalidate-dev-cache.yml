@@ -15,7 +15,7 @@ on:
       paths:
         # Keep in sync with the PATHS fallback below.
         description: Space-separated CloudFront paths to invalidate
-        default: "/dev* /assets*"
+        default: "/dev /dev/ /dev/* /assets /assets/ /assets/*"
 
 permissions:
   id-token: write # OIDC for the AWS + ESC logins
@@ -61,10 +61,9 @@ jobs:
           # clearing them is cheap and keeps the surface consistent. A dispatch
           # caller may narrow/override the paths via client_payload.paths.
           #
-          # No trailing slash, deliberately: "/dev/*" misses /dev/ itself, which left
-          # the landing page stale. The slashless form mirrors these behaviors' own
-          # pathPatterns in infrastructure/index.ts.
-          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev* /assets*' }}
+          # "/dev/" is listed on its own because "/dev/*" matches everything below
+          # /dev/ but not /dev/ itself, which left the landing page uninvalidated.
+          PATHS: ${{ github.event.client_payload.paths || github.event.inputs.paths || '/dev /dev/ /dev/* /assets /assets/ /assets/*' }}
         run: |
           set -o errexit -o pipefail
           DISTRIBUTION_ID=$(pulumi -C infrastructure stack output cloudFrontDistributionId --stack "$PULUMI_STACK_NAME")
