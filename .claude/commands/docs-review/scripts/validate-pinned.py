@@ -2958,6 +2958,21 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
     return v
 
 
+def _v3_demoted_ids(ctx: Context) -> set[str]:
+    """Base findings composed as blocking that now sit in the brief's ⚠️ list
+    under the readthrough exception (compose-review.v3_may_demote)."""
+    base = ctx.evidence_base
+    if base is None or not ctx.brief:
+        return set()
+    in_brief = {p["id"] for _, _, p in
+                v3_finding_rows(ctx.brief, "⚠️ Check these before approving") if p}
+    may_demote = _compose_mod().v3_may_demote
+    return {f.get("id") for f in base.get("findings", [])
+            if f.get("id") in in_brief
+            and f.get("bucket") in ("outstanding", "author-answer")
+            and may_demote(f)}
+
+
 def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     """The author header's `(N blocking)` is a sanity floor: it must equal the
     🚨+❓ row count, either counting `F?` additions or not (the model adds
@@ -3001,7 +3016,14 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     composed_total = sum(1 for _, _, p in rows if _open(p) or p is None)
     composed_numbered = sum(1 for _, _, p in rows if _open(p) and p["id"] != "F?")
     stated = int(m.group(1)) if m.group(1) else 0
-    if stated not in (total, numbered, composed_total, composed_numbered):
+    # A readthrough stub the model moved to the brief's ⚠️ list (the one legal
+    # demotion — compose-review.v3_may_demote) has left these rows but is
+    # still in the composer's untouched header, so the composed counts are
+    # also legal with those rows added back.
+    moved = _v3_demoted_ids(ctx)
+    legal = {total, numbered, composed_total, composed_numbered,
+             composed_total + len(moved), composed_numbered + len(moved)}
+    if stated not in legal:
         return [Violation("v3-blocking-count", "<author header>",
                           f"(N blocking) matches the open 🚨+❓ row count ({numbered} composed, {total} with additions; "
                           f"dispositioned rows excluded; rewritten rows may count either way: {composed_numbered}/{composed_total})",
@@ -3012,7 +3034,9 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
 
 def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     """Promote-only against the composer's evidence base: a base finding may
-    move up (reviewer-check → author-answer → outstanding), never down, and
+    move up (reviewer-check → author-answer → outstanding), never down (the
+    one exception: a readthrough stub, whose TODO tells the model to bucket
+    by reader impact — compose-review.v3_may_demote), and
     may not vanish — it is either in a bucket, rewritten in place with a
     disposition label, or referenced elsewhere (✅ Resolved). Mirrors
     compose-review.split_v3_buckets: `unverifiable` → ❓, everything else
@@ -3051,6 +3075,8 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
                                "finding vanished from both cards",
                                "Never delete a finding — disposition it: fix, promote, or rewrite its body as `**Spurious:**` / `**Mis-sourced:**` / `**Pre-existing:**` with a reason."))
         elif V3_BUCKET_RANK[now] < V3_BUCKET_RANK[base_bucket]:
+            if _compose_mod().v3_may_demote(f):
+                continue  # readthrough stub, bucketed by reader impact as its TODO says
             v.append(Violation("bucket-split-faithful", f"<{fid}>",
                                f"{fid} at or above its composed bucket `{base_bucket}`",
                                f"demoted to `{now}`",

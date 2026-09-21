@@ -1641,8 +1641,15 @@ jobs:
             "repos/${{ github.repository }}/pulls/${{ steps.pr-context.outputs.pr_number }}" \
             > /tmp/anchor-pr.diff 2>/dev/null \
             || echo "::warning::could not fetch the PR diff; skipping the anchor check"
+          # This YAML comes from master but the scripts come from the PR's
+          # head, so a branch cut before build-evidence.py grew `--pr-diff`
+          # rejects the flag outright -- which errored every review on such a
+          # branch the day the flag landed (#21787's first run, #21783,
+          # #21759). Probe for it; an older script just runs without the check.
           ANCHOR_ARGS=""
-          if [ -s /tmp/anchor-pr.diff ]; then
+          if [ -s /tmp/anchor-pr.diff ] \
+              && python3 .claude/commands/docs-review/scripts/build-evidence.py --help 2>/dev/null \
+                | grep -q -- '--pr-diff'; then
             ANCHOR_ARGS="--pr-diff /tmp/anchor-pr.diff"
           fi
           if ! python3 .claude/commands/docs-review/scripts/build-evidence.py \
