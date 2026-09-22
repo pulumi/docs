@@ -63,4 +63,4 @@ Create project templates for bootstrapping new Pulumi projects.
 
 Leverage existing infrastructure tools and modules within Pulumi programs.
 
-**[Use Terraform Module](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/)** - Integrate Terraform modules into Pulumi programs to reuse existing infrastructure code without rewriting it.
+**[Use Terraform Module](/docs/integrations/terraform/modules/)** - Integrate Terraform modules into Pulumi programs to reuse existing infrastructure code without rewriting it.

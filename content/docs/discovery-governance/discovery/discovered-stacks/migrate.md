@@ -128,7 +128,7 @@ class Messaging extends pulumi.ComponentResource {
 
 ## Terraform stacks
 
-[Pulumi-hosted Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/) are not discovered stacks, but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion.
+[Pulumi-hosted Terraform stacks](/docs/integrations/terraform/state-backend/) are not discovered stacks, but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion.
 
 ## Use the API
 
