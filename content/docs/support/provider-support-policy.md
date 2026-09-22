@@ -40,7 +40,7 @@ An LTS release does not contain:
 - New resources or new resource properties.
 - Performance improvements.
 - Non-security bug fixes.
-- Compatibility with newer versions of the Pulumi engine, the Pulumi SDKs, or language runtimes.
+- Compatibility with newer versions of language runtimes.
 
 ### Engine support
 
