@@ -10,11 +10,6 @@ menu:
     identifier: integrations-terraform
     parent: integrations-home
     weight: 3
-  iac:
-    name: Terraform users
-    identifier: terraform-get-started
-    parent: iac-get-started
-    weight: 50
 aliases:
   - /docs/iac/get-started/terraform/
   - /docs/iac/get-started/terraform/begin/
