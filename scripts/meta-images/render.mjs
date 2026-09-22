@@ -55,16 +55,32 @@ INFO_LIGHT.logo = LOGO_LIGHT
 const T_PAD_X = 152
 const T_BOX_W = CANVAS_W - 2 * T_PAD_X
 const T_BOX_H = 363
+// Optional `label` renders a violet pill between the logo and the title, naming
+// the kind of page ("Whitepaper"). It takes its height out of the title box
+// rather than pushing the title down, so the card keeps its bottom edge at
+// T_BOX_BOTTOM either way and the title fitter gets an accurate height budget.
+const T_TOP = 122 // title box top on an unlabelled card
+const T_BOX_BOTTOM = T_TOP + T_BOX_H
+const T_BADGE_H = 40 // badge(): 24px line + 8px padding top/bottom
+const T_BADGE_TOP = 141 // the logo ends at y=105; this clears it with room to breathe
+const T_BADGE_GAP = 28 // badge → title
 async function titleTree(fields) {
+  const label = fields.label
+  const boxTop = label ? T_BADGE_TOP + T_BADGE_H + T_BADGE_GAP : T_TOP
+  const boxH = T_BOX_BOTTOM - boxTop
   // Largest font (96..40) whose wrapped title fits 90% of the box height;
   // lineClamp uses the full-height line count as a safety net.
   const font = await titleFont()
-  const fit = fitTitle(font, fields.title, { maxFont: 96, minFont: 40, boxW: T_BOX_W, boxH: T_BOX_H })
+  const fit = fitTitle(font, fields.title, { maxFont: 96, minFont: 40, boxW: T_BOX_W, boxH })
   return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
     h("img", { src: ACCENTS, width: CANVAS_W, height: CANVAS_H, style: { position: "absolute", top: 0, left: 0, width: CANVAS_W, height: CANVAS_H } }),
     h("div", { style: { position: "absolute", top: 45, left: 0, width: CANVAS_W, display: "flex", justifyContent: "center" } },
       h("img", { src: LOGO_LIGHT, height: 60, style: { height: 60 } })),
-    h("div", { style: { position: "absolute", top: 122, left: 0, width: CANVAS_W, height: T_BOX_H, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: `0 ${T_PAD_X}px` } },
+    label
+      ? h("div", { style: { position: "absolute", top: T_BADGE_TOP, left: 0, width: CANVAS_W, display: "flex", justifyContent: "center" } },
+          badge(label, LIGHT.badgeBg, LIGHT.badgeFg))
+      : null,
+    h("div", { style: { position: "absolute", top: boxTop, left: 0, width: CANVAS_W, height: boxH, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: `0 ${T_PAD_X}px` } },
       h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), textOverflow: "ellipsis", color: LIGHT.fg, textAlign: "center" } }, fields.title)))
 }
 

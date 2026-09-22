@@ -1,0 +1,139 @@
+// Long-form document components, each backing one top-level shortcode in
+// layouts/shortcodes/: svg-figure, panel, key-point, customer-proof. They are
+// deliberately unscoped — the shortcodes are general-purpose, so the styles
+// can't be nested under any one section's content wrapper.
+//
+// The white-paper-only treatments (the editorial table restyle, the pull quote,
+// the section rules) live under .template-sidebar-content in _templates.scss
+// instead, because those override shared defaults.
+
+// A diagram inlined as SVG with a numbered caption. The diagram grows to fill
+// the column but never shrinks below its native width: Figma pins every label
+// to an absolute x/y, so scaling down would crush the text rather than reflow
+// it. Below that width the figure scrolls sideways, the same affordance
+// .table-wrapper gives a wide table.
+.svg-figure {
+    @apply my-12;
+
+    .svg-figure-scroll {
+        @apply block w-full max-w-full overflow-x-auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .svg-figure-canvas svg {
+        @apply block w-full h-auto;
+    }
+
+    // main.scss centers and italicizes every figcaption on the site. A figure
+    // caption here is a label set with the body copy, so both are overridden.
+    // The rule under it closes the figure off from the prose that follows.
+    figcaption {
+        @apply body-sm text-gray-primary text-left not-italic mt-4 mb-0 pb-4 border-b border-gray-200;
+    }
+
+    .svg-figure-number {
+        @apply font-semibold text-gray-primary;
+    }
+}
+
+// A tinted panel for a summary or a closing ask. The fill comes from the shared
+// .card-highlight primitive; this only handles the type and rhythm inside it.
+.panel {
+    @apply my-12;
+
+    // Opening summary: no leading gap above the first thing on the page.
+    &:first-child {
+        @apply mt-0;
+    }
+
+    // A panel can stand in for a section heading (and its anchor), so an
+    // id'd one needs the same fixed-nav offset the headings get.
+    &[id] {
+        @apply scroll-mt-22;
+
+        @include screen-lg {
+            @apply scroll-mt-28;
+        }
+    }
+
+    // A step up from body copy: body-lg is only text-base at mobile, which is
+    // the size the surrounding prose already sets.
+    p,
+    li {
+        @apply body-xl;
+    }
+
+    // Set at the body size rather than a heading size: where this replaces a
+    // section heading it should read as the panel's label, not compete with the
+    // h2s around it. Weight and color carry it instead.
+    .panel-title {
+        @apply font-semibold body-xl text-black mb-4;
+    }
+
+    > :last-child {
+        @apply mb-0;
+    }
+
+    ul:last-child li:last-child p:last-child {
+        @apply mb-0;
+    }
+}
+
+// A titled capability block, ticked in the margin, optionally tagged with the
+// product that delivers it.
+.key-point {
+    @apply my-6 pl-6;
+    border-left: 4px solid var(--color-gray-200);
+
+    .key-point-title {
+        @apply font-semibold body-lg text-black mb-2;
+    }
+
+    .key-point-body > :last-child {
+        @apply mb-0;
+    }
+
+    // Set in the body face, not the mono overline: at this size, next to body
+    // copy, mono read as a code reference rather than a product name.
+    .key-point-product {
+        @apply body-sm font-semibold text-violet-primary mt-3 mb-0;
+    }
+}
+
+// A strip of customer results: logo tile beside the proof, separated by
+// hairlines rather than boxed as cards.
+.customer-proof {
+    @apply my-10;
+
+    .customer-proof-row {
+        @apply flex flex-col gap-4 py-6 border-t border-gray-200;
+
+        @include screen-sm {
+            @apply flex-row items-center gap-8;
+        }
+
+        &:last-child {
+            @apply border-b border-gray-200;
+        }
+    }
+
+    .customer-proof-tile {
+        @apply flex shrink-0 items-center justify-center rounded-lg bg-gray-50 px-5 py-3;
+        width: 10rem;
+        height: 4.5rem;
+    }
+
+    // A customer that can't be named gets a mark instead of a logo. The name is
+    // carried by the proof line beside it, not repeated on the tile.
+    .customer-proof-tile--anonymous {
+        @apply text-gray-primary;
+    }
+
+    .customer-proof-body {
+        @apply body-base;
+
+        > :last-child {
+            @apply mb-0;
+        }
+    }
+}

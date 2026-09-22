@@ -166,6 +166,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "docs/main-nav";
     @import "docs/docs-home";
     @import "customer-logo";
+    @import "doc-components";
     @import "marketing/developer-advocates";
     @import "docs/footer";
     @import "docs/icons";
@@ -222,6 +223,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/tabs";
     @import "templates";
     @import "customers";
+    @import "whitepapers";
     @import "neo-mode";
 
     .nav-main {

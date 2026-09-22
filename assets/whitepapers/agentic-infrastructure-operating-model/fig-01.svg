@@ -1,0 +1,23 @@
+<svg width="560" height="251" viewBox="0 0 560 251" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="251" rx="6" fill="#F5F5FF"/>
+<rect x="27.4518" y="19.4518" width="505.096" height="51.9037" rx="3.44046" fill="white"/>
+<rect x="27.4518" y="19.4518" width="505.096" height="51.9037" rx="3.44046" stroke="#9077F3" stroke-width="0.903687"/>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="6.81154" letter-spacing="0.05em"><tspan x="266.477" y="38.4411">AGENTS</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" letter-spacing="0em"><tspan x="143.959" y="56.8807">Neo and the coding agents you already use &#xb7; Assisted &#x2192; Supervised &#x2192; Autonomous</tspan></text>
+<rect x="158.365" y="71.5461" width="0.973077" height="17.5154" fill="#5A30C5"/>
+<rect x="401.635" y="71.5461" width="0.973077" height="17.5154" fill="#5A30C5"/>
+<rect x="27.4518" y="89.5136" width="242.366" height="101.904" rx="3.44046" fill="white"/>
+<rect x="27.4518" y="89.5136" width="242.366" height="101.904" rx="3.44046" stroke="#9077F3" stroke-width="0.903687"/>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="6.81154" letter-spacing="0.05em"><tspan x="98.5951" y="112.503">PILLAR ONE &#xb7; SUBSTRATE</tspan></text>
+<text fill="#2E2932" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="11.6769" font-weight="600" letter-spacing="-0.05em"><tspan x="121.049" y="135.211">Pulumi IaC</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" letter-spacing="0em"><tspan x="82.1323" y="154.942">Infrastructure as real code, on any cloud.</tspan></text>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" font-weight="600" letter-spacing="0em"><tspan x="92.3995" y="173.442">Makes infrastructure self-service.</tspan></text>
+<rect x="290.183" y="89.5136" width="242.366" height="101.904" rx="3.44046" fill="white"/>
+<rect x="290.183" y="89.5136" width="242.366" height="101.904" rx="3.44046" stroke="#9077F3" stroke-width="0.903687"/>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Monaspace Neon Var', ui-monospace, monospace" font-size="6.81154" letter-spacing="0.05em"><tspan x="352.197" y="112.503">PILLAR TWO &#xb7; CONTROL PLANE</tspan></text>
+<text fill="#2E2932" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="11.6769" font-weight="600" letter-spacing="-0.05em"><tspan x="377.339" y="135.211">Pulumi Cloud</tspan></text>
+<text fill="#6A6675" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" letter-spacing="0em"><tspan x="343.646" y="154.942">Records, bounds, and polices every actor.</tspan></text>
+<text fill="#5A30C5" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" font-weight="600" letter-spacing="0em"><tspan x="350.687" y="173.442">Makes infrastructure self-governing.</tspan></text>
+<rect x="27" y="209" width="506" height="29.1923" rx="3.89231" fill="#EBEBFF"/>
+<text fill="#2E2932" style="white-space: pre" xml:space="preserve" font-family="'Inter', sans-serif" font-size="6.81154" letter-spacing="0em"><tspan x="156.351" y="226.681">Any cloud: AWS &#xb7; Azure &#xb7; Google Cloud &#xb7; Kubernetes &#xb7; thousands of providers</tspan></text>
+</svg>
