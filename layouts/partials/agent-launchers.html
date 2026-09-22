@@ -1,0 +1,66 @@
+{{- /*
+    Agent launchers partial
+
+    The action set that sits under a copy-prompt box: a "Send to myself" share
+    button, and one launcher per agent that can actually finish the playbook at
+    static/onboard.md — that is, one with a shell that can install the CLI, run
+    `npx skills add`, and run `pulumi up` with the reader's cloud credentials.
+    Chat surfaces (Claude chat, ChatGPT, Neo) can't, so they get no button.
+
+    Parameters:
+        - prompt (required): the prompt text, handed to every launcher
+        - track (required): prefix for the data-track names on each control
+
+    Behavior lives in theme/src/ts/open-in-app.ts: it reveals the share button
+    only where navigator.share exists, and reveals a fallback line when a
+    custom-scheme link appears not to have opened anything.
+
+    Only /agent-onboarding/ renders this today. It is a partial so the docs
+    prompt box can adopt it later without a rewrite.
+*/ -}}
+{{- $prompt := .prompt -}}
+{{- $track := .track -}}
+
+{{/* Hugo's urlquery emits `+` for a space. The custom-scheme handlers below
+     don't necessarily decode `+` as a space, so match encodeURIComponent.
+
+     Each href is then assembled in agent-launchers-list.html and piped through
+     safeURL. Interpolating $q straight into an href instead would hand it to
+     html/template's URL escaper, which re-encodes the `%` of each escape and
+     ships `%2520` for a space; safeURL also keeps the custom schemes from being
+     filtered to #ZgotmplZ. The inputs are template literals and a constant
+     prompt, so nothing reader-supplied is being trusted here. */}}
+{{- $q := replace (urlquery $prompt) "+" "%20" -}}
+
+{{/* On a phone the realistic job is getting the prompt onto a laptop, so this
+     and the copy button above it are the whole above-the-fold action set.
+     Rendered hidden: navigator.share is absent on most desktop browsers, and a
+     button that does nothing is worse than no button. */}}
+<button type="button" class="btn btn-outline btn-xl w-full" data-share-text="{{ $prompt }}" data-track="{{ $track }}-share" hidden>
+    {{ partial "icon.html" (dict "name" "share-network" "class" "size-5") }}
+    Send to myself
+</button>
+
+{{/* The launchers are collapsed behind a disclosure on a phone, where the copy
+     and share buttons should be the whole above-the-fold action set, and simply
+     open at md+, where there is room and the terminal agents are the point.
+
+     Rendering both forms and switching with md:hidden / hidden md:block is the
+     pattern layouts/customers/single.html and layouts/whitepapers/single.html
+     already use for their collapsible-vs-sidebar TOC. CSS alone can't open a
+     <details>, and doing it in JS would either flash the open list on a phone or
+     leave it shut for a reader who blocks scripts. */}}
+<div class="md:hidden">
+    <details class="group mt-6 border-b border-gray-200 pb-3">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-3 marker:hidden [&::-webkit-details-marker]:hidden">
+            <span class="text-sm font-semibold">More options</span>
+            {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 text-gray-500 transition-transform group-open:rotate-180") }}
+        </summary>
+        <div class="mt-1 mb-4">{{ partial "agent-launchers-list.html" (dict "q" $q "track" $track) }}</div>
+    </details>
+</div>
+
+<div class="hidden md:block">
+    <p class="mt-8 mb-4 text-sm font-semibold text-center">More options</p>
+    {{ partial "agent-launchers-list.html" (dict "q" $q "track" $track) }}
+</div>

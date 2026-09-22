@@ -1,0 +1,53 @@
+{{- /*
+    The launcher grid itself, split out of agent-launchers.html because that
+    partial renders it twice — once inside the mobile disclosure, once plain at
+    md+ — the same way layouts/customers/single.html renders section-toc.html in
+    both a collapsible and an always-open form. Keeping it here is what stops the
+    two copies drifting.
+
+    Parameters:
+        - q (required): the prompt, already encoded for a query string
+        - track (required): prefix for the data-track names on each link
+*/ -}}
+{{- $q := .q -}}
+{{- $track := .track -}}
+
+{{/* Each launcher is wrapped so its fallback line stays its immediate sibling
+     (open-in-app.ts walks nextElementSibling) and so the grid gets uniform
+     cells. Two-up once there is room; stacked on a phone. */}}
+<div class="grid gap-2 sm:grid-cols-2">
+    {{/* Universal link: opens the Claude app into a new Claude Code session on a
+         phone, Claude Code on the web elsewhere. Prefills, doesn't send. */}}
+    <div>
+        <a class="btn btn-outline w-full" href="{{ printf "https://claude.ai/code/new?q=%s" $q | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-claude-code">
+            {{ partial "icon.html" (dict "name" "brand/claude" "class" "size-5") }}
+            Claude Code
+        </a>
+    </div>
+
+    <div>
+        <a class="btn btn-outline w-full" href="{{ printf "claude-cli://open?q=%s" $q | safeURL }}" data-open-scheme data-track="{{ $track }}-open-claude-cli">
+            {{ partial "icon.html" (dict "name" "terminal" "class" "size-5") }}
+            Claude Code in your terminal
+        </a>
+        <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener">Install Claude Code</a>, or copy the prompt above.</p>
+    </div>
+
+    <div>
+        <a class="btn btn-outline w-full" href="{{ printf "codex://new?prompt=%s" $q | safeURL }}" data-open-scheme data-track="{{ $track }}-open-codex">
+            {{ partial "icon.html" (dict "name" "brand/openai" "class" "size-5") }}
+            Codex app
+        </a>
+        <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://chatgpt.com/codex" target="_blank" rel="noopener">Install the Codex app</a>, or copy the prompt above.</p>
+    </div>
+
+    {{/* Cursor's own https wrapper for cursor://anysphere.cursor-deeplink/prompt.
+         It redirects to a page with an "open in Cursor" / copy fallback, so this
+         one needs no heuristic. */}}
+    <div>
+        <a class="btn btn-outline w-full" href="{{ printf "https://cursor.com/link/prompt?text=%s" $q | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-cursor">
+            {{ partial "icon.html" (dict "name" "brand/cursor" "class" "size-5") }}
+            Cursor
+        </a>
+    </div>
+</div>

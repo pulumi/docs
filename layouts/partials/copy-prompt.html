@@ -1,0 +1,60 @@
+{{- /*
+    Copy Prompt partial
+
+    The prompt box itself: the prompt in full, plus a button that copies it. The
+    copy-prompt shortcode is a thin wrapper over this for content pages; layouts
+    call it directly (see layouts/agent-onboarding/list.html).
+
+    Parameters:
+        - prompt (required): the prompt text
+        - label (optional): button text (default: "Copy prompt")
+        - track (optional): names the control in the analytics event copy-text.ts
+          fires on a successful copy (default: "copy-prompt")
+        - variant (optional): the .btn variant for the copy control, without the
+          `btn-` prefix (default: "ghost"). /agent-onboarding/ passes "primary",
+          where copying is the page's whole job and the control earns a solid
+          button; in the docs the box is one option among several, so it stays a
+          plain ghost.
+*/ -}}
+{{- $prompt := .prompt -}}
+{{- $label := default "Copy prompt" .label -}}
+{{- $track := default "copy-prompt" .track -}}
+{{- $variant := default "ghost" .variant -}}
+{{/* The "copied" check is a violet accent on a flat button, but would be violet
+     on violet on a solid one, where it has to inherit the button's own color. */}}
+{{- $doneIconClass := cond (eq $variant "primary") "size-5" "size-5 text-violet-primary" -}}
+
+{{/* The prompt and its copy control share one outlined box, so the pair reads as
+     a single control. The <pre> is repainted light — the site's default is the
+     dark violet-950 code block from _code.scss, far too heavy for a sentence —
+     and squared off, since the wrapper owns the corners. Those element-selector
+     styles are layered, so these utilities beat them and no !important is needed.
+
+     The `copy-prompt` class is not styling; it is the hook the docs code-panel
+     themes exclude on. Those rules (docs/_code-light.scss and the mirrored dark
+     block in docs/_docs-theme.scss) are imported *unlayered* so they beat the
+     layered component rules — which means they also beat the utilities here, and
+     on a docs page they repainted this box violet and drew a second border
+     inside the wrapper's. They carry an exclusion list for components that own
+     their own chrome (.code-chrome, .code-tabbed, .example-program); this box
+     owns its chrome the same way, so it joins that list.
+
+     Docs dark mode is explicit: the per-utility color flips were removed from
+     _docs-theme.scss in favor of `dark:` variants at the source. .btn-ghost is
+     the exception — it's @apply-styled, so it carries its own dark skin there. */}}
+<div class="copy-prompt mb-4 overflow-hidden rounded-md border border-gray-300 bg-white dark:border-gray-800 dark:bg-transparent">
+    <pre class="m-0 rounded-none whitespace-pre-wrap break-words text-center bg-gray-50 p-4 dark:bg-gray-900"><code class="font-mono text-sm text-gray-950 dark:text-gray-50">{{ $prompt }}</code></pre>
+    {{/* The control is the card's bottom edge, so it bleeds over the wrapper's
+         1px border on three sides and takes the wrapper's bottom radius; left
+         inset it reads as a button sitting inside the card with a hairline gap
+         and square corners. `flex` beats .btn's inline-flex (which would also
+         leave a baseline gap under it) and `max-w-none` beats .btn's max-w-full,
+         which otherwise clamps the width back to the content box. The wrapper's
+         overflow-hidden does the actual corner clipping. */}}
+    <button type="button" class="btn btn-{{ $variant }} btn-xl flex max-w-none w-[calc(100%+2px)] -mx-px -mb-px rounded-t-none rounded-b-md" data-copy-text="{{ $prompt }}" data-track="{{ $track }}" aria-label="Copy the prompt to the clipboard">
+        <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+        <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" $doneIconClass) }}</span>
+        <span data-copy-idle>{{ $label }}</span>
+        <span data-copy-done hidden>Copied!</span>
+    </button>
+</div>
