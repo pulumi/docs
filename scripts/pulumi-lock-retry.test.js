@@ -39,7 +39,7 @@ function extractFunction() {
 // options run-pulumi.sh sets. Returns the exit status plus a call counter that
 // the fake commands increment, so a test can tell "failed once" from "failed
 // after three retries" -- the two look identical by exit status alone.
-function runSnippet(snippet, { errexit = true } = {}) {
+function runSnippet(snippet, { errexit = true, env = {} } = {}) {
     const tmpdir = fs.mkdtempSync(path.join(os.tmpdir(), "lock-retry-"));
     const counter = path.join(tmpdir, "calls");
     fs.writeFileSync(counter, "0");
@@ -63,6 +63,15 @@ function runSnippet(snippet, { errexit = true } = {}) {
         `    fi`,
         `    echo "Updating (pulumi/www-production)"`,
         `}`,
+        // Mentions the lock phrase in passing, then dies of something unrelated.
+        // An unanchored substring match reads this as a lock conflict and retries
+        // a permanent failure for minutes.
+        `mentions_lock_then_fails() {`,
+        `    echo $(( $(cat "$COUNT") + 1 )) > "$COUNT"`,
+        `    echo "warning: retrying: [409] Conflict: Another update is currently in progress."`,
+        `    echo "error: update failed: aws:cloudfront/distribution: InvalidViewerCertificate" >&2`,
+        `    return 9`,
+        `}`,
         `other_failure() {`,
         `    echo $(( $(cat "$COUNT") + 1 )) > "$COUNT"`,
         `    echo "error: the stack has a resource in a failed state" >&2`,
@@ -81,6 +90,7 @@ function runSnippet(snippet, { errexit = true } = {}) {
             // Keep the suite fast; the real defaults are 5 attempts / 30s.
             PULUMI_LOCK_MAX_ATTEMPTS: "3",
             PULUMI_LOCK_RETRY_DELAY: "0",
+            ...env,
         },
     });
 
@@ -152,4 +162,57 @@ test("restores the caller's errexit when it was NOT set", () => {
         { errexit: false },
     );
     assert.match(r.stdout, /REACHED/, "errexit must not be switched on behind the caller's back");
+});
+
+// The function can be flawless and still do nothing if it is not called. Deleting
+// `retry_on_stack_lock` from both call sites left every other test in this file
+// passing, which means the suite proved the logic and not the wiring -- for a
+// change whose whole value is that it runs in production, that is the gap that
+// matters. These two tests read the script rather than the extracted function.
+test("both stack-taking commands go through the wrapper", () => {
+    const source = fs.readFileSync(RUN_PULUMI_SH, "utf8");
+    const wrapped = [...source.matchAll(
+        /^\s*retry_on_stack_lock\s+pulumi\s+-C\s+infrastructure\s+(refresh|up)\b/gm,
+    )].map(m => m[1]).sort();
+    assert.deepEqual(wrapped, ["refresh", "up"],
+        "both `pulumi refresh` and `pulumi up` must be wrapped in retry_on_stack_lock");
+});
+
+test("no bare pulumi refresh/up escapes the wrapper", () => {
+    const source = fs.readFileSync(RUN_PULUMI_SH, "utf8");
+    const bare = [...source.matchAll(
+        /^\s*pulumi\s+-C\s+infrastructure\s+(?:refresh|up)\b.*$/gm,
+    )].map(m => m[0].trim());
+    assert.deepEqual(bare, [],
+        `these take the stack lock but are not wrapped: ${bare.join("; ")}`);
+});
+
+// F1's shape. The phrase appears in recovered-warning output, but the attempt died
+// of something permanent. Retrying it burns the whole backoff budget and delays a
+// real error -- exactly what the "fails fast" promise rules out.
+test("does NOT retry a non-lock failure whose output merely mentions the lock", () => {
+    const r = runSnippet(`retry_on_stack_lock mentions_lock_then_fails || echo "EXIT=$?"`);
+    assert.match(r.stdout, /EXIT=9/, "the command's own status must surface");
+    assert.equal(r.calls, 1, "a passing mention of the phrase must not trigger a retry");
+});
+
+// A non-numeric override made `[ 1 -ge five ]` exit 2, which `if` reads as false,
+// so the attempt cap never tripped and the loop ran until the job timed out.
+test("survives a non-numeric attempt cap instead of looping forever", () => {
+    const r = runSnippet(
+        `retry_on_stack_lock lock_then_succeed 99 || echo "EXIT=$?"`,
+        { env: { PULUMI_LOCK_MAX_ATTEMPTS: "five" } },
+    );
+    assert.match(r.stdout, /EXIT=255/, "it must still terminate and propagate the failure");
+    assert.equal(r.calls, 5, "a bad value must fall back to the documented default of 5");
+    assert.match(r.stderr, /not a number/, "and say so, rather than failing silently");
+});
+
+test("survives a non-numeric retry delay", () => {
+    const r = runSnippet(
+        `retry_on_stack_lock lock_then_succeed 1 || echo "EXIT=$?"`,
+        { env: { PULUMI_LOCK_RETRY_DELAY: "soon", PULUMI_LOCK_MAX_ATTEMPTS: "2" } },
+    );
+    assert.equal(r.calls, 2, "it must retry normally rather than hang on a bad delay");
+    assert.match(r.stderr, /not a number/);
 });

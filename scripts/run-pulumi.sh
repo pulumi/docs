@@ -33,11 +33,37 @@ export PULUMI_ACTION=${1}
 # reaches that cap at once -- on 2026-09-21 three runs did, and all three took a
 # 409 within 40 seconds of each other. This is the backstop for that, and for a
 # lock held from outside Actions entirely (scripts/laptop-deploy.sh, or a console
-# operation). The backoff below tolerates roughly 7.5 minutes of contention.
+# operation).
+#
+# Budget: 5 attempts with a 30s doubling delay is 30+60+120+240 = 450s, so each
+# wrapped call tolerates about 7.5 minutes of contention. Both `refresh` and `up`
+# are wrapped separately and each gets its own budget, so a single deploy can spend
+# up to ~15 minutes here in the worst case. That time is invisible to
+# scripts/ci-build-duration-alert.sh, which subtracts only the queue wait that
+# await-in-progress.js records -- so a heavily contended deploy can read as a slow
+# build in the #docs-ops alert rather than as contention.
 retry_on_stack_lock() {
     # Overridable so the behavior can be exercised without a 7-minute test.
+    #
+    # Validated rather than trusted: `[ 1 -ge five ]` exits 2, which `if` reads as
+    # false, so a non-numeric value would mean the attempt cap never trips. With the
+    # real doubling delay that does not spin -- it parks, because `delay` passes a
+    # year within about twenty iterations, and the job then sits until the six-hour
+    # Actions timeout. Falling back to the documented default is noisy but safe.
     local max_attempts=${PULUMI_LOCK_MAX_ATTEMPTS:-5}
     local delay=${PULUMI_LOCK_RETRY_DELAY:-30}
+    case ${max_attempts} in
+        ''|*[!0-9]*)
+            echo "PULUMI_LOCK_MAX_ATTEMPTS='${max_attempts}' is not a number; using 5." >&2
+            max_attempts=5
+            ;;
+    esac
+    case ${delay} in
+        ''|*[!0-9]*)
+            echo "PULUMI_LOCK_RETRY_DELAY='${delay}' is not a number; using 30." >&2
+            delay=30
+            ;;
+    esac
     local attempt=1
     local log status
 
@@ -56,7 +82,21 @@ retry_on_stack_lock() {
         status=${PIPESTATUS[0]}
 
         # Succeeded, or failed for some reason other than the lock. Done either way.
-        if [ "${status}" -eq 0 ] || ! grep -q "Another update is currently in progress" "${log}"; then
+        #
+        # The match is deliberately anchored to an `error:` line carrying the 409
+        # code, not a bare substring of the whole captured output. `${log}` holds
+        # everything the attempt printed on both streams, so an unanchored match
+        # would also fire on a warning Pulumi logged and recovered from, or on a
+        # different error that happened to quote the phrase -- retrying a permanent
+        # failure for minutes and contradicting the promise above that anything but
+        # a lock conflict fails fast.
+        #
+        # Note this is a contract with an unpinned tool: pulumi/actions@v7 is used
+        # without a `pulumi-version`, so the CLI floats. If a future release rewords
+        # the 409, this stops matching and the deploy fails the way it did before
+        # this wrapper existed -- the safe direction, but silently.
+        if [ "${status}" -eq 0 ] \
+            || ! grep -qE '^error:.*\[409\].*Another update is currently in progress' "${log}"; then
             break
         fi
 
