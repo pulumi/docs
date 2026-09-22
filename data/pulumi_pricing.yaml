@@ -556,12 +556,12 @@ categories:
 
       - id: resource-search
         name: Resource search
-        link: /docs/discovery-governance/discovery/search/
+        link: /docs/discovery-governance/guides/search-resources/
         available_from: essentials
 
       - id: insights-discovery
         name: Cloud account discovery
-        link: /docs/discovery-governance/discovery/
+        link: /docs/discovery-governance/concepts/discovery/
         available_from: essentials
 
       - id: insights-primary-accounts
@@ -573,27 +573,27 @@ categories:
 
       - id: insights-data-export
         name: Data export
-        link: /docs/discovery-governance/discovery/data-export/
+        link: /docs/discovery-governance/guides/export-resource-data/
         available_from: pro
 
       - id: property-search
         name: Property search
-        link: /docs/discovery-governance/discovery/search/#property-queries
+        link: /docs/discovery-governance/guides/search-resources/#property-queries
         available_from: essentials
 
       - id: policy-enforcement
         name: Policy enforcement
-        link: /docs/discovery-governance/policy/
+        link: /docs/discovery-governance/concepts/policy-as-code/
         requires: essentials
         availability:
           free: Manual
           essentials: Advisory only
-          pro: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
-          enterprise: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
+          pro: "[Organization-managed](/docs/discovery-governance/get-started/enforce-policy-as-code/)"
+          enterprise: "[Organization-managed](/docs/discovery-governance/get-started/enforce-policy-as-code/)"
 
       - id: preventative-policies
         name: Preventative policies
-        link: /docs/discovery-governance/policy/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-groups/
         requires: pro
         available_from: pro
         availability:
@@ -601,12 +601,12 @@ categories:
 
       - id: audit-policies
         name: Audit policies
-        link: /docs/discovery-governance/policy/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-groups/
         available_from: essentials
 
       - id: pre-built-policy-packs
         name: Pre-built policy packs
-        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/guides/pre-built-policy-packs/
         availability:
           essentials: Pulumi Best Practices, AWS Organizations Tag Policies
           pro: Pulumi Best Practices, AWS Organizations Tag Policies
@@ -618,13 +618,13 @@ categories:
       # resolves to Essentials.
       - id: compliance-policy-packs
         name: Compliance policy packs
-        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/guides/pre-built-policy-packs/
         available_from: enterprise
         hidden: true
 
       - id: custom-policy-packs
         name: Custom policy packs
-        link: /docs/discovery-governance/policy/policy-packs/authoring/#creating-a-policy-pack
+        link: /docs/discovery-governance/guides/write-a-policy-pack/#creating-a-policy-pack
         availability:
           pro:
             content: Up to 10 packs
@@ -633,7 +633,7 @@ categories:
 
       - id: policy-enforcement-modes
         name: Enforcement modes
-        link: /docs/discovery-governance/policy/#local-policy-execution
+        link: /docs/discovery-governance/concepts/policy-as-code/#local-policy-execution
         availability:
           essentials: Advisory
           pro: Advisory and Mandatory
@@ -641,12 +641,12 @@ categories:
 
       - id: insights-self-hosted
         name: Discovery on self-hosted Pulumi Cloud
-        link: /docs/discovery-governance/self-hosted/
+        link: /docs/discovery-governance/operations/self-hosted/
         available_from: enterprise
 
       - id: context-api
         name: Context API
-        link: /docs/discovery-governance/context-api/
+        link: /docs/discovery-governance/concepts/context-api/
         available_from: pro
         hidden: true
 
