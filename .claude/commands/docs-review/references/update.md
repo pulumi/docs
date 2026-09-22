@@ -314,7 +314,7 @@ while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
 cleared by the card rewrite (or, on the error path, explicitly); the
 brief's `#### Editorial stances` sub-list sits below the ⚠️ table's section
 span and comes through verbatim. It then
-validates both cards against schema v23,
+validates both cards against schema v24,
 records the evidence object (prior trail/investigation log/stances carried
 forward from S3; `"degraded": "prior-evidence-unavailable"` when it can't be
 fetched), re-renders the evidence page, and upserts brief-then-author. Any

@@ -152,7 +152,13 @@ from pathlib import Path
 # and the three-verb answer footer; later v3 rule refinements (rewritten rows
 # need no detail block, `v3-blocking-count` follows REVIEW_STATE dispositions)
 # ride the same version.
-SCHEMA_VERSION = 23
+# v23→v24: `style-advisory-provenance`. The v3 advisory block opened to
+# model-found nits (it is the author card's only non-blocking lane), so the
+# `[style]` / `[nit]` tags now split by provenance and the rule holds each to
+# its own — the same guarantee `style-blocker-provenance` gives one tier up.
+# `style-render-mode` also reaches the v3 author card now; it had been scoped
+# to a `⚠️ Low-confidence` section that surface doesn't have.
+SCHEMA_VERSION = 24
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -797,9 +803,15 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     """
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
-        return []
-    start, end = span
-    section_lines = ctx.body_lines[start:end]
+        # v3: the block sits on the author card, which has no ⚠️ host section
+        # (that one is the brief's `⚠️ Check these`). Scoping the scan to a
+        # section the card doesn't have made this rule a silent no-op on the
+        # whole v3 surface, while the rules table advertised it as running
+        # there. v2 always has the H3, so the fallback only fires on v3.
+        section_lines = ctx.body_lines
+    else:
+        start, end = span
+        section_lines = ctx.body_lines[start:end]
 
     style_idx = None
     for i, line in enumerate(section_lines):
@@ -822,6 +834,58 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
                   "them hides the ✏️ marks that flag one-click suggestions."),
         )]
     return []
+
+
+def check_style_advisory_provenance(ctx: Context) -> list[Violation]:
+    """Every `[style]` bullet traces to an advisory entry in `.vale-findings.json`;
+    `[nit]` is the tag for one the review found itself.
+
+    The v3 advisory block is the author card's only non-blocking lane, so it is
+    open to model-found nits — a typo, a stray space, the mechanical slips
+    Vale's rules don't carry (before this, PR #21787 parked one on the
+    *reviewer's* card, which is addressed to someone who can't fix it). Opening
+    it recreates the bypass `style-blocker-provenance` exists to close one tier
+    up: an unverified finding rendered as `[style]` reads as linter output, and
+    the block is quoted out of context often enough for that to matter.
+
+    So the tags split by provenance and the rule holds each to it. `[style]`
+    means Vale said so and is checked against the artifact; `[nit]` means the
+    review says so, is never blocking, and is counted separately in the brief's
+    rubber-stamp line. Neither can impersonate the other.
+    """
+    if ctx.vale_findings is None:
+        return []  # pre-step didn't run — absence isn't evidence
+    advisory: set[tuple[str, int]] = {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in ctx.vale_findings
+        if not f.get("blocker")
+    }
+    violations: list[Violation] = []
+    for b in _compose_mod().walk_style_bullets(ctx.body):
+        if b["tag"] == _compose_mod().NIT_TAG:
+            if ctx.surface != "v3":
+                violations.append(Violation(
+                    rule_id="style-advisory-provenance",
+                    line_ref=f"<style L{b['line']}>",
+                    expected="[nit] bullets are a v3 author-card lane",
+                    actual=f"[nit] bullet on the {ctx.surface} surface",
+                    hint=("The v2 monolith is read by the author and the reviewer both, so its "
+                          "⚠️ Low-confidence section already reaches the author. Render this as "
+                          "an ordinary ⚠️ bullet."),
+                ))
+            continue
+        if (b["file"], b["line"]) in advisory:
+            continue
+        violations.append(Violation(
+            rule_id="style-advisory-provenance",
+            line_ref=f"<style {b['file'] or '?'}:{b['line']}>",
+            expected="every [style] bullet matches an advisory entry in .vale-findings.json",
+            actual=f"no advisory finding at {b['file'] or '?'}:{b['line']}",
+            hint=("`[style]` means Vale's advisory tier produced this finding. If you found it "
+                  "yourself, tag it `[nit]` instead — same block, same non-blocking treatment, "
+                  "honest provenance: `- **line N:** [nit] _category_ — <what and the fix>`."),
+        ))
+    return violations
 
 
 def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
@@ -3111,6 +3175,13 @@ RULES = [
         "desc": "Every [style-blocker] bullet in 🚨 traces to a blocker entry in .vale-findings.json (the marker exempts trail-matching, so it must not be forgeable).",
         "hint": "Do not author [style-blocker] bullets — that marker is composer-only. Render reviewer-found issues as normal **[L…]** bullets with a trail record.",
         "check": check_style_blocker_provenance,
+        "surfaces": ("v2", "v3"),
+    },
+    {
+        "id": "style-advisory-provenance",
+        "desc": "Advisory `[style]` bullets trace to .vale-findings.json; model-found ones are tagged `[nit]`.",
+        "hint": "Tag a bullet you found yourself `[nit]`, not `[style]` — `[style]` asserts Vale produced it.",
+        "check": check_style_advisory_provenance,
         "surfaces": ("v2", "v3"),
     },
     {

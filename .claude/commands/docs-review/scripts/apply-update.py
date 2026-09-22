@@ -745,10 +745,15 @@ def assemble_evidence(
         "investigation_log": (prior or {}).get("investigation_log", {}),
         "history": list((prior or {}).get("history", [])) + [entry],
     }
-    for key in ("editorial_balance", "triaged", "style_suggestions_count", "confidence", "summary",
-                "stances"):
+    for key in ("editorial_balance", "triaged", "confidence", "summary", "stances"):
         if prior and key in prior:
             evidence[key] = prior[key]
+    # NOT carried from `prior`: the model re-renders the advisory block on
+    # every refresh and may add a `[nit]` to it (compose-review.NIT_TAG), so
+    # the count is re-derived from the card being published rather than pinned
+    # to whatever Vale reported on the first run.
+    n_style, n_nits = be.count_style_bullets(author_out)
+    evidence["style_suggestions_count"] = n_style + n_nits
     if prior is None:
         evidence["degraded"] = "prior-evidence-unavailable"
     problems = validate_evidence_mod.validate_evidence(evidence)
@@ -809,6 +814,12 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
+        # Same recount the initial lane does: the model re-renders the advisory
+        # block on a refresh, so a `[nit]` it added (or a bullet it dropped)
+        # has to move the brief's rubber-stamp line. The evidence count moves
+        # with it inside assemble_evidence.
+        brief_out = be.refresh_style_line(brief_out, *be.count_style_bullets(author_out))
+        author_out = be.drop_empty_style_block(author_out)
         author_out = set_evidence_url(author_out, args.evidence_url)
         brief_out = set_evidence_url(brief_out, args.evidence_url)
     except UpdateError as exc:
