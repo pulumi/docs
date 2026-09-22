@@ -36,7 +36,7 @@ presenters:
     - name: Ellen Körbes
       role: Head of Product, Tilt
     - name: Rizel Scarlett
-      role: Junior Developer Advocate, Github
+      role: Junior Developer Advocate, GitHub
     - name: Paul Czarkowski
       role: Managed OpenShift Black Belt, Red Hat
 ---

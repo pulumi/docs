@@ -642,7 +642,7 @@ wordpress = Release(
 )
 
 srv = Service.get("wpdev-wordpress", Output.concat(wordpress.status.namespace, "/", wordpress.status.name, "-wordpress"))
-# Export the ingress IP for Wordpress frontend.
+# Export the ingress IP for WordPress frontend.
 pulumi.export("frontendIP", srv.status.load_balancer.ingress[0].ip)
 ```
 
@@ -670,7 +670,7 @@ func main() {
 			},
 		})
 
-        // Export the ingress IP for Wordpress frontend.
+        // Export the ingress IP for WordPress frontend.
 		frontendIp := pulumi.All(wordpress.Status.Namespace(), wordpress.Status.Name()).ApplyT(func(r interface{})(interface{}, error){
 			arr := r.([]interface{})
 			namespace := arr[0].(*string)
@@ -722,7 +722,7 @@ class MyStack : Stack
         var status = wordpress.Status;
         var service = Service.Get("wpdev-wordpress", Output.All(status).Apply(
             s => $"{s[0].Namespace}/{s[0].Name}-wordpress"));
-        // Export the ingress IP for Wordpress frontend.
+        // Export the ingress IP for WordPress frontend.
         this.FrontendIP = service.Status.Apply(status => status.LoadBalancer.Ingress[0].Ip);
     }
 

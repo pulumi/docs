@@ -85,7 +85,7 @@ languages:
 
 ## The Benefits of YAML With Pulumi
 
-If a high degree of readability is your concern and you do not need the expressivity of a full-fledged programming language like Python or Typescript, YAML is a great option for defining and deploying your infrastructure with Pulumi. Take the following example, which creates an AWS S3 bucket and deploys a simple "hello world" website before returning the URL of your bucket:
+If a high degree of readability is your concern and you do not need the expressivity of a full-fledged programming language like Python or TypeScript, YAML is a great option for defining and deploying your infrastructure with Pulumi. Take the following example, which creates an AWS S3 bucket and deploys a simple "hello world" website before returning the URL of your bucket:
 
 ```yaml
 ---
@@ -190,7 +190,7 @@ outputs:
   bucketEndpoint: http://${my-bucket.websiteEndpoint}
 ```
 
-Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with Javascript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
+Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with JavaScript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
 
 ## Conclusion
 

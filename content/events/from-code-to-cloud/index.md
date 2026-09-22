@@ -36,5 +36,5 @@ description: |
 # The event presenters
 presenters:
     - name: Rizel Scarlett
-      role: Junior Developer Advocate, Github
+      role: Junior Developer Advocate, GitHub
 ---
