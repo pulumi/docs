@@ -64,7 +64,7 @@ privateKey:
 
 ### Owner
 
-An installation access token is always scoped to a particular Github account, set by the environment as `owner`.
+An installation access token is always scoped to a particular GitHub account, set by the environment as `owner`.
 The `owner` property may refer to a personal account or an organization account. The owner or app manager of the account must first install
 the GitHub App that was registered earlier. For more information, see "[Installing your own GitHub App](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app)"
 and "[Sharing your GitHub App](https://docs.github.com/en/apps/sharing-github-apps/sharing-your-github-app)".

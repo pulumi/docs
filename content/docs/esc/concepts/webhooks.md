@@ -423,5 +423,5 @@ only, so ESC environment and organization webhooks must be redelivered from the 
 
 ## Additional Resources
 
-- [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
+- [Managing GitHub Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
 - [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

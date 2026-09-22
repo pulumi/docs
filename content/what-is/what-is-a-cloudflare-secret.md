@@ -34,7 +34,7 @@ You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/
     ```bash
     $ npx wrangler init secrets-demo
     # Select "Hello World" Worker
-    # Confirm "Yes" to using Typescript
+    # Confirm "Yes" to using TypeScript
     # Confirm "Yes" to using Git
     # Select "No" to deploy the application
 

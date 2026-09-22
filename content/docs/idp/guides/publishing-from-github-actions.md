@@ -299,7 +299,7 @@ In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/operati
 
 For the integration tests:
 
-- [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the Github runner
+- [`actions/checkout`](https://github.com/actions/checkout) - check out the code into the GitHub runner
 - [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) - authenticate with Pulumi Cloud (make sure to [setup GitHub OIDC](/docs/administration/guides/oidc-issuers/github/))
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
@@ -374,7 +374,7 @@ This workflow will be automatically triggered any time a tag is pushed. The easi
 
 Similarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
 
-- `actions/checkout@v4` - check out the code into the Github runner
+- `actions/checkout@v4` - check out the code into the GitHub runner
 - `pulumi/auth-actions@v1` - authenticate with Pulumi Cloud
 
 However, `pulumi/actions` doesn't support the `publish` subcommand, so we set that step up manually via a `run` step. Use the `PULUMI_ORG` variable to set the `--publisher` and the GitHub Actions-internal `github.repository` variable to get the name of the repository.

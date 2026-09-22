@@ -29,7 +29,7 @@ duration: "24 minutes"
 description: |
     Infrastructure as Code provides a way for teams and companies to standardize the way they manage and secure applications. In this talk, Fariba Khan and Stephen Van Gordon will share how they leverage a custom state backend with SSO, RBAC, and programmatically configurable pipelines powered by CICD tooling and the Pulumi Automation API to drive IaC at Apple.
 
-    This framework of tools enables teams to provision secure-by-default Compute, Storage, Identity, Ingress, and other components available in multiple languages in very little time and without any manual interventions. This experience is complemented by operations-friendly workflows previewing infrastructure changes between deployments, as well as cost and policy violations directly in Github comments. This results in reduced cognitive overhead when making changes to a deployment. Finally, by providing the state store for IaC stacks our team gains insight into usage patterns, security issues, and compliance via rich data and analytics.
+    This framework of tools enables teams to provision secure-by-default Compute, Storage, Identity, Ingress, and other components available in multiple languages in very little time and without any manual interventions. This experience is complemented by operations-friendly workflows previewing infrastructure changes between deployments, as well as cost and policy violations directly in GitHub comments. This results in reduced cognitive overhead when making changes to a deployment. Finally, by providing the state store for IaC stacks our team gains insight into usage patterns, security issues, and compliance via rich data and analytics.
 
 # The event presenters
 presenters:

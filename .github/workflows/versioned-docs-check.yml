@@ -1,0 +1,55 @@
+name: Versioned docs program check
+
+# Type-checks infrastructure/versioned-docs/, the Pulumi program that owns the
+# permanent archive bucket and publisher role behind /docs/versioned/.
+#
+# It is a separate program from infrastructure/: its own Pulumi.yaml,
+# package.json, yarn.lock and tsconfig.json (whose `files` is just index.ts),
+# and the main program reaches it only by stack reference, never by import.
+# So `tsc -p infrastructure/tsconfig.json` never compiles a line of it, and
+# before this workflow nothing in CI did: scripts/ensure.sh installs only the
+# main program's dependencies, and a type error here first surfaced at
+# `pulumi up` against the versioned-docs stack. See pulumi/docs#21136.
+#
+# Deliberately standalone rather than folded into `make ci_pull_request`, for
+# the same reason as support-form-tests.yml: that path needs AWS and Pulumi
+# credentials and degrades to a plain build without them, so it skips on fork
+# PRs. A dependency-free type check should run for everyone.
+#
+# Only `tsc --noEmit` runs here. The package's `lint` script is tslint, which
+# is deprecated and currently fails repo-wide on the main infrastructure/
+# program; wiring it up is a separate decision (also tracked on #21136).
+on:
+  pull_request:
+    paths:
+      - 'infrastructure/versioned-docs/**'
+      - '.github/workflows/versioned-docs-check.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: versioned-docs-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  typecheck:
+    name: Type-check versioned-docs program
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: infrastructure/versioned-docs/yarn.lock
+      - name: Install deps
+        run: yarn --cwd infrastructure/versioned-docs install --frozen-lockfile
+      # `yarn --cwd` only sets the working directory for yarn itself, so tsc is
+      # run from the program's directory to resolve its own node_modules.
+      - name: Type-check
+        working-directory: infrastructure/versioned-docs
+        run: npx tsc --noEmit -p tsconfig.json
