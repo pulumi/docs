@@ -24,8 +24,8 @@ stats:
           description: deployment cycles reduced from 1.5 weeks to under 24 hours
           customer: snowflake
       bmw:
-          number: "15,000"
-          description: developers with self-service access to production-grade infrastructure
+          number: "20,000+"
+          description: cloud resources managed with Python-based infrastructure code
           customer: bmw
 
 features:
