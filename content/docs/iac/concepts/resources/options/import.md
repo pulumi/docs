@@ -22,6 +22,8 @@ To import a resource, first specify the `import` option with the resource’s ID
 
 This example imports an existing EC2 security group with ID `sg-04aeda9a214730248` and an EC2 instance with ID `i-06a1073de86f4adef`:
 
+For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct. Check the current value with `pulumi config get aws:region`, and set it with `pulumi config set aws:region <region>`.
+
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
@@ -228,9 +230,9 @@ HCL also supports Terraform's standard top-level `import` blocks as an alternati
 
 {{< /chooser >}}
 
-For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct. Check the current value with `pulumi config get aws:region`, and set it with `pulumi config set aws:region <region>`.
-
 If the resource's arguments differ from the imported state, the import will succeed, and the resource will then be modified to reflect the inputs in your Pulumi program.
+
+Because of auto-naming, it is common to see this update during import when you import a resource's name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource's name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource's name property.
 
 The following example preview output, from a program that imports an S3 bucket, shows what that looks like:
 
@@ -251,7 +253,5 @@ Resources:
     = 1 to import
     2 changes. 2 unchanged
 ```
-
-Because of auto-naming, it is common to see this update during import when you import a resource's name property. Unless you explicitly specify a name, Pulumi will auto-generate one, which is guaranteed not to match, because it will have a random hex suffix. To fix this problem, explicitly specify the resource's name or disable auto-naming [as described here](/docs/iac/concepts/resources/names/#autonaming-configuration). Note that, in the example for the EC2 security group, the name was specified by passing `web-sg-62a569b` as the resource's name property.
 
 Once a resource is successfully imported, remove the `import` option because Pulumi is now managing the resource.

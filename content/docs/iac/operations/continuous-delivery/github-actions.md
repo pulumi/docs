@@ -585,7 +585,7 @@ The cache key includes a hash of your dependency manifest so the cache is rebuil
 
 ## Control concurrent runs
 
-When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once.
+When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once. Letting two runs reach the same stack at once causes one to fail with an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/), so a concurrency group on your deployment jobs is worth setting up before you hit one.
 
 For **pull request previews**, key the group to the pull request and cancel superseded runs so reviewers always see the result of the latest commit:
 
