@@ -35,7 +35,6 @@ tags:
     - fintech
     - case-studies
     - enterprise
-    - crossguard
     - policy-as-code
 category: customers
 

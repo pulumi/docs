@@ -9,7 +9,6 @@ tags:
    - releases
    - policy-as-code
    - pulumi
-   - crossguard
    - aws
    - azure
    - oci
