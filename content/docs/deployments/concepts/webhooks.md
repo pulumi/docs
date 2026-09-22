@@ -524,5 +524,5 @@ environment webhooks from the Pulumi Cloud UI.
 
 ## Additional Resources
 
-* [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
+* [Managing GitHub Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
 * [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

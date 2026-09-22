@@ -75,7 +75,7 @@ capabilities:
           icon: buildings
           icon_color: blue
           description: |
-            Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMWare vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations.
+            Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMware vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations.
 
         - title: Security
           icon: shield
