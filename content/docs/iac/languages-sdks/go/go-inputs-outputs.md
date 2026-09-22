@@ -252,9 +252,7 @@ ctx.Export("bucketUrl", pulumi.Sprintf("https://%s.s3.amazonaws.com", bucket.Buc
 
 **Type assertions within ApplyT.** When using `pulumi.All`, the `args []interface{}` slice must be type-asserted element by element. If the assertion does not match the actual type of the resolved value, the program will panic at runtime. Check the provider documentation to confirm the concrete Go types that a given resource property resolves to.
 
-**Creating resources inside ApplyT.** As noted above, this breaks `pulumi preview` and should be avoided. If you need a resource that depends on another resource's output, pass the output as a direct input argument.
-
-## Further reading
+## Learn more
 
 - [Inputs & outputs](/docs/iac/concepts/inputs-outputs/) — the language-neutral conceptual overview, with examples in all supported languages
 - [Accessing single outputs with Apply](/docs/iac/concepts/inputs-outputs/apply/) — details on the `ApplyT` lifecycle and common usage patterns
