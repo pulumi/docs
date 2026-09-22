@@ -1,0 +1,22 @@
+{{- $prompt := .prompt -}}
+{{- $label := default "Copy prompt" .label -}}
+{{- $track := default "copy-prompt" .track -}}
+{{- $variant := default "ghost" .variant -}}
+{{- $isSolidButton := eq $variant "primary" -}}
+{{- $doneIconClass := cond $isSolidButton "size-5" "size-5 text-violet-primary" -}}
+
+{{/* `copy-prompt` is not styling: docs/_code-light.scss and docs/_docs-theme.scss
+     exclude `.copy-prompt *` from the docs code-panel theming. Those files are
+     imported unlayered, so they would otherwise beat these utilities. */}}
+<div class="copy-prompt mb-4 overflow-hidden rounded-md border border-gray-300 bg-white dark:border-gray-800 dark:bg-transparent">
+    <pre class="m-0 rounded-none whitespace-pre-wrap break-words text-center bg-gray-50 p-4 dark:bg-gray-900"><code class="font-mono text-sm text-gray-950 dark:text-gray-50">{{ $prompt }}</code></pre>
+    {{/* The control bleeds 1px over the wrapper's border on three sides so no
+         hairline shows around it; `flex` beats .btn's inline-flex (which also
+         leaves a baseline gap) and `max-w-none` beats its max-w-full. */}}
+    <button type="button" class="btn btn-{{ $variant }} btn-xl flex max-w-none w-[calc(100%+2px)] -mx-px -mb-px rounded-t-none rounded-b-md" data-copy-text="{{ $prompt }}" data-track="{{ $track }}" aria-label="Copy the prompt to the clipboard">
+        <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+        <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" $doneIconClass) }}</span>
+        <span data-copy-idle>{{ $label }}</span>
+        <span data-copy-done hidden>Copied!</span>
+    </button>
+</div>
