@@ -78,12 +78,22 @@ function runSnippet(snippet, { errexit = true, env = {} } = {}) {
         `    return 7`,
         `}`,
         `always_succeeds() { echo $(( $(cat "$COUNT") + 1 )) > "$COUNT"; echo "Resources: 1 unchanged"; }`,
+        // Shadow the real sleep. Most tests pin PULUMI_LOCK_RETRY_DELAY to 0, but a
+        // test that deliberately feeds the validation a bad value gets the real 30s
+        // default back -- and then paid for it, adding 30 seconds to every
+        // `make test`. The backoff schedule is documented in run-pulumi.sh and
+        // asserted by reading it, not by waiting for it; nothing here tests timing.
+        `sleep() { :; }`,
         extractFunction(),
         snippet,
     ].join("\n");
 
     const result = spawnSync("bash", ["-c", program], {
         encoding: "utf8",
+        // A bug in the attempt cap means an unbounded loop, and with sleep stubbed
+        // that loop spins hot -- it would hang the suite rather than fail it. Kill
+        // it instead, so the bug surfaces as a failed assertion in seconds.
+        timeout: 15000,
         env: {
             ...process.env,
             TMPDIR: scratch,
