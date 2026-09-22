@@ -1269,6 +1269,22 @@ def test_not_governed_regen_needs_author_and_label():
     assert v3.governed is True
 
 
+def test_not_governed_preview_comment_still_says_not_governed():
+    """The gateless branches render the summary's first paragraph. Stamping
+    prepends the preview paragraph, so without `base_summary` the comment
+    repeated its banner and dropped the one line that explains the PR."""
+    v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
+    body = sentinel.render_status_comment(v)
+    assert "**Not governed**" in body, "the one line that explains the PR"
+    assert "PREVIEW MODE" not in body, "the check-run paragraph is not comment copy"
+    assert "> [!WARNING]" in body, "the banner still applies"
+    assert "| Gate |" not in body, "no gate table on a gateless comment"
+
+    enforcing = sentinel.render_status_comment(
+        sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG))
+    assert "**Not governed**" in enforcing and "> [!WARNING]" not in enforcing
+
+
 def test_not_governed_report_only_wraps_neutral():
     v = sentinel.evaluate(StubGh(pr=pr_meta(author="dependabot[bot]")), CONFIG, report_only=True)
     assert v.conclusion == "neutral" and v.would_be == "success"
