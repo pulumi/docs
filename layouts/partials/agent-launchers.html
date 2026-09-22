@@ -6,7 +6,7 @@
 {{- $encodedPrompt := replace (urlquery $prompt) "+" "%20" -}}
 
 <button type="button" class="btn btn-outline btn-xl w-full" data-share-text="{{ $prompt }}" data-track="{{ $track }}-share" hidden>
-    {{ partial "icon.html" (dict "name" "share-network" "class" "size-5") }}
+    {{ partial "icon.html" (dict "name" "paper-plane-right" "class" "size-5") }}
     Send to myself
 </button>
 
