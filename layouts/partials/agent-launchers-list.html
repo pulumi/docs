@@ -6,7 +6,7 @@
      schemes to #ZgotmplZ. */}}
 <div class="grid gap-2 sm:grid-cols-2">
     <div>
-        <a class="btn btn-outline w-full" href="{{ printf "https://claude.ai/code/new?q=%s" $encodedPrompt | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-claude-code">
+        <a class="btn btn-outline w-full" href="{{ printf "https://claude.ai/code?prompt=%s" $encodedPrompt | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-claude-code">
             {{ partial "icon.html" (dict "name" "brand/claude" "class" "size-5") }}
             Claude Code
         </a>

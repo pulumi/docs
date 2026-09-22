@@ -11,8 +11,8 @@ function trackOpen(name: string | null): void {
 }
 
 function fallbackFor(link: HTMLAnchorElement): HTMLElement | null {
-    const next = link.nextElementSibling;
-    return next instanceof HTMLElement && next.hasAttribute("data-open-fallback") ? next : null;
+    const launcher = link.parentElement;
+    return launcher ? launcher.querySelector<HTMLElement>("[data-open-fallback]") : null;
 }
 
 function initSchemeLinks(): void {
