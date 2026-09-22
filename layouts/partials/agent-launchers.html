@@ -15,7 +15,7 @@
 </button>
 
 <div class="hidden md:block">
-    <p class="mt-8 mb-4 text-sm font-semibold text-center">More options</p>
+    <p class="mt-8 mb-4 text-sm font-semibold text-center">Or open in:</p>
 
     {{/* safeURL on every href is load-bearing: without it html/template re-encodes
          the `%` of each escape (shipping `%2520` for a space) and filters the custom
@@ -23,11 +23,11 @@
 
          Each launcher is wrapped so its fallback line stays inside it; open-in-app.ts
          finds the line by scoping to the anchor's parent. */}}
-    <div class="flex flex-col gap-2">
+    <div class="grid grid-cols-3 gap-2">
         <div>
             <a class="btn btn-outline w-full" href="{{ printf "claude-cli://open?q=%s" $encodedPrompt | safeURL }}" data-open-scheme data-track="{{ $track }}-open-claude-cli">
                 {{ partial "icon.html" (dict "name" "brand/claude" "class" "size-5") }}
-                Claude Code in your terminal
+                Claude Code
             </a>
             <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener">Install Claude Code</a>, or copy the prompt above.</p>
         </div>
