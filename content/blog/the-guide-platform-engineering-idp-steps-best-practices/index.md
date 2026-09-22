@@ -9,6 +9,7 @@ allow_long_title: true
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2024-10-22T07:47:03Z
+updated: 2026-09-22
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -61,7 +62,7 @@ social:
 faq_schema: true
 ---
 
-In today’s fast-paced digital landscape, organizations are increasingly adopting platform engineering to optimize their software delivery and operations. Gartner predicts that by 2026, 80% of large software engineering organizations will have platform engineering teams to provide reusable services, components, and tools for application delivery. Additionally, by 2027, 80% of large enterprises will leverage platform engineering to scale DevOps initiatives in hybrid cloud environments effectively.
+In today’s fast-paced digital landscape, organizations are increasingly adopting platform engineering to optimize their software delivery and operations. [Gartner predicted](https://www.gartner.com/en/newsroom/press-releases/2023-11-28-gartner-hype-cycle-shows-ai-practices-and-platform-engineering-will-reach-mainstream-adoption-in-software-engineering-in-two-to-five-years) that by 2026, 80% of large software engineering organizations would establish platform engineering teams as internal providers of reusable services, components, and tools for application delivery, up from 45% in 2022. Gartner also forecasts that [by 2027, 80% of large organizations](https://www.gartner.com/en/newsroom/press-releases/2024-05-16-gartner-identifies-the-top-five-strategic-technology-trends-in-software-engineering-for-2024) will embrace platform engineering to scale DevOps initiatives in hybrid cloud environments. That shift is already showing up in the data: Puppet's [2026 State of DevOps Report: Platform Engineering Edition](https://www.puppet.com/resources/2026-state-of-platform-engineering) found that 52% of organizations with an internal developer platform now report fully automated governance capabilities.
 
 This shift is driven by the rise of cloud adoption, where many enterprises face the challenge of uncoordinated application teams deploying workloads in different ways across various cloud platforms. This siloed approach often results in a lack of standardization, security risks, and operational inefficiencies.
 
@@ -86,7 +87,7 @@ Platform engineering offers a strategic solution to these issues. This guide pro
 
 The first step in your platform engineering journey is securing executive buy-in. This high-level support is essential, as platform engineering teams must create an organization-wide strategy that integrates internal developer portals (IDPs) and self-service capabilities. Leadership needs to understand how platform engineering can address inefficiencies caused by siloed application teams and uncoordinated cloud deployments.
 
-To do this, present a clear roadmap with measurable outcomes, such as improved delivery speed and security. Use metrics like [DORA](https://en.wikipedia.org/wiki/DevOps_Research_and_Assessment) (Deployment Frequency, Lead Time, Mean Time to Recovery) to demonstrate how platform engineering enhances security, standardization, and efficiency. Outline the required resources (headcount, budget, tooling) and align the project with business objectives.
+To do this, present a clear roadmap with measurable outcomes, such as improved delivery speed and security. Use metrics like [DORA](https://dora.dev/) (Deployment Frequency, Lead Time, Mean Time to Recovery) to demonstrate how platform engineering enhances security, standardization, and efficiency. Outline the required resources (headcount, budget, tooling) and align the project with business objectives. This case only gets stronger with AI in the mix: [DORA's 2025 research](https://dora.dev/dora-report-2025/) found that AI acts as an amplifier of an organization's existing strengths, so a mature, well-governed platform is what lets teams turn AI-driven velocity into safe, reliable delivery rather than faster chaos.
 
 ## Step 2: Staffing the Platform Engineering Team
 
@@ -112,6 +113,8 @@ The platform mandate should serve as a central reference point for the platform 
 - **Supported systems**: A list of the infrastructure, services, and tools that the platform team is responsible for managing and supporting.
 - **Support model**: Details on how application teams can access platform services, including any self-service capabilities and the team's response times for different types of requests.
 - **Team structure**: An overview of the platform team's members and their areas of expertise, making it easy for application teams to identify the right point of contact.
+
+Increasingly, "customers" of the platform aren't only human developers. AI coding agents now open pull requests, run previews, and request infrastructure changes too, so a mandate written today should say how the platform authenticates, scopes, and governs agent-initiated work alongside human requests.
 
 A well-defined mandate aligns the team and its customers with the platform’s value and purpose.
 
@@ -141,7 +144,7 @@ Key areas where IaC can be applied within the platform include:
 - **Security and compliance**: Implement security controls, such as [secrets management](https://www.pulumi.com/docs/esc/) and [access policies](/docs/discovery-governance/policy/get-started/), to ensure the platform meets regulatory and organizational requirements.
 - **Pipelines and [automation](/docs/iac/concepts/automation-api/)**: Use IaC to define and version-control the platform's own deployment and management pipelines, ensuring consistency and repeatability.
 
-With [infrastructure as code](/docs/iac/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization.
+With [infrastructure as code](/docs/iac/), the platform engineering team can ensure reliable, scalable, and secure infrastructure across the organization. Teams standardizing on a config-language-based tool like Terraform often hit its limits once the platform itself needs testing, reuse, and real abstractions; see [how Pulumi compares to Terraform](/docs/iac/comparisons/terraform/) if that tradeoff sounds familiar.
 
 ## Step 6: Implementing Policy as Code
 
@@ -191,7 +194,7 @@ For a more in-depth explanation of real-world use cases, see [What is platform e
 
 ### Who are the Platform Customers?
 
-The platform customers are the end users, typically internal teams (e.g., application developers and DevOps engineers), who use the platform's tools and services to build, deploy, and manage software.
+The platform customers are the end users, typically internal teams (e.g., application developers and DevOps engineers) and, increasingly, the AI coding agents acting on their behalf, who use the platform's tools and services to build, deploy, and manage software.
 
 ### What is an Internal Developer Platform (IDP)?
 
