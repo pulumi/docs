@@ -86,12 +86,12 @@
                                 {{ if $item.items }}
                                     <div class="hidden xl:flex w-full justify-between h-8 items-center">
                                         <img class="h-8" src="/logos/pkg/azuread.svg" alt="Azure Active Directory" />
-                                        {{ partial "fingerprinted-img.html" (dict "src" "/images/self-hosted/bitbucket.svg" "alt" "Bitbucket" "class" "h-5") }}
+                                        {{ partial "fingerprinted-img.html" (dict "src" "/images/self-hosted/bitbucket.svg" "alt" "Bitbucket" "class" "h-5" "width" 110 "height" 16) }}
                                         <img class="h-6" src=/logos/pkg/github.svg alt="GitHub" />
                                     </div>
                                     <div class="hidden xl:flex w-8/12 justify-between self-center items-center mt-2 h-8">
                                         <img class="h-8" src="/logos/pkg/gitlab.svg" alt="GitLab" />
-                                        {{ partial "fingerprinted-img.html" (dict "src" "/images/self-hosted/samlsso.svg" "alt" "SAML SSO" "class" "h-5") }}
+                                        {{ partial "fingerprinted-img.html" (dict "src" "/images/self-hosted/samlsso.svg" "alt" "SAML SSO" "class" "h-5" "width" 102 "height" 16) }}
                                     </div>
                                     <p class="xl:hidden">Identity providers include Azure Active Directory, Bitbucket, GitHub, GitLab, and SAML SSO.</p>
                                 {{ end }}

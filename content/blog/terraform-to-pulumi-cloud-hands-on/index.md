@@ -204,7 +204,7 @@ When you do that, you'll see a new plan in the **Deployments** tab, and once tha
 
 Click **Confirm**, and you're off and running.
 
-And that's it! Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi Policies](/docs/insights/policy/) all available to them. [Audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) are runnable on any Terraform stack, and preventative policies can be used to block non-compliant changes before they happen.
+And that's it! Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi Policies](/docs/discovery-governance/policy/) all available to them. [Audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) are runnable on any Terraform stack, and preventative policies can be used to block non-compliant changes before they happen.
 
 Next up: modules.
 

@@ -12,6 +12,20 @@ are mechanical, not editorial:
   the table with a four-column header `| | ID | Where | Finding |`
   (`v3-finding-grammar` on the header line). The validator's own hint still
   described the abandoned glyph column at the time.
+* #21748 (2026-09-19): the model's one ⚠️ row ran off the end of a long
+  Finding cell and never closed — three pipes, not four, so `_split_cells`
+  read it as prose and the row failed `v3-finding-grammar`. An advisory nit
+  on a PR with no blocking findings cost the entire review.
+
+* #21722 (2026-09-18): the model kept the composed claim quote in the Finding
+  cell and put its `**Spurious:**` verdict in a cell of its own — four cells.
+* #21759 (2026-09-21): the model's added `F?` row cited `L47–52` with an en
+  dash. The row grammar reads a hyphen, so the whole row failed
+  `v3-finding-grammar`.
+* #21782 (2026-09-21): the model added an `F?` row to a card composed as
+  "nothing blocks merge" and rewrote the header to "1 item needs an answer".
+  The count is build-evidence.py's to recompute, but it only recognizes the
+  composed header shape, so `v3-blocking-count` refused the card first.
 
 This script fixes exactly those shapes, in place, and nothing else. It is
 idempotent, needs no model, and always exits 0 — a repair it cannot make
@@ -27,7 +41,24 @@ Rules:
    separator under it becomes `|---|---|---|`; a data row that starts with an
    empty or glyph cell followed by `**F<n>**` / `**F?**` loses that cell.
    Rows already in the right shape are never touched.
-2. Missing detail blocks (author card only): every numbered, un-dispositioned
+2. Unclosed rows (author 🚨/❓, brief ⚠️): a line that opens with `|` but
+   never closes gets its final `|` back — but only when the closed line is
+   something the grammar recognizes (a finding row, the three-column header,
+   a separator, or a row the leading-cell rule above can then fix). Anything
+   else stays unclosed for the validator to refuse.
+3. Line-range dashes (author 🚨/❓, brief ⚠️): a data row that fails the
+   grammar only because its Where cell spells a range `L47–52` (en dash, em
+   dash, or minus sign) gets the hyphen back. Only the Where cell is
+   touched, and only when the row then parses.
+4. Split Finding cell (author 🚨/❓, brief ⚠️): a four-cell data row whose
+   first two cells are a valid ID and Where has its last two cells joined
+   with ` — `, the separator the composer itself puts between a claim quote
+   and its verdict. Only when the joined row parses.
+5. Author header: a `## Author action guide v<N> — …` line whose tail is not
+   one of the composer's two shapes is rewritten to the composed shape with
+   the card's open 🚨+❓ row count. build-evidence.py recomputes the count
+   after validation either way; this only restores a shape it can find.
+6. Missing detail blocks (author card only): every numbered, un-dispositioned
    `| **F<n>** |` row under 🚨 / ❓ without a `#### F<n> · Do this` block gets
    one regenerated from the row itself (Line from the row's quoted span or
    the evidence base, Why from the finding cell, Fix as a bucket-appropriate
@@ -71,6 +102,9 @@ _ID_CELL_RE = re.compile(r"^\s*\*\*(F\d+|F\?)\*\*\s*$")
 _HEADER_CELLS = ("id", "where", "finding")
 _QUOTE_SPAN_RE = re.compile(r"\*[\"“](?P<q>.+?)[\"”]\*")
 _LEADING_SEP_RE = re.compile(r"^\s*[—–-]\s*")
+
+_RANGE_DASH_RE = re.compile(r"\bL(\d+)\s*[–—−]\s*(\d+)\b")
+_AUTHOR_HEADER_LINE_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — ")
 
 FIX_BY_BUCKET = {
     "❓ Questions for you": (
@@ -129,6 +163,36 @@ def _looks_like_header(cells: list[str]) -> bool:
     return tuple(words) == _HEADER_CELLS
 
 
+def _close_row(line: str) -> str | None:
+    """A finding-table line that lost its closing `|`, closed — or None when
+    appending one doesn't produce something the grammar recognizes.
+
+    The Finding cell is written last and is by far the longest, so it is the
+    one the model runs off the end of (#21748). Closing the line is only
+    safe when the result parses, which leaves every other unclosed line —
+    a genuinely truncated row, a prose line that happens to start with a
+    pipe — to the validator.
+    """
+    s = line.rstrip()
+    if not s.startswith("|") or len(s) < 2:
+        return None
+    if s.endswith("|") and not s.endswith("\\|"):
+        return None                                  # already closed
+    candidate = s + " |"
+    if _is_separator(candidate):
+        return cr.FINDING_TABLE_SEPARATOR
+    cells = _split_cells(candidate)
+    if cells is None:
+        return None
+    if _looks_like_header(cells) or cr.parse_finding_line(candidate) is not None:
+        return candidate
+    # Still carrying the abandoned leading status cell: closing the line is
+    # what lets the row-leading-cell rule below see it at all.
+    if len(cells) == 4 and _GLYPH_CELL_RE.match(cells[0]) and _ID_CELL_RE.match(cells[1]):
+        return candidate
+    return None
+
+
 def _normalize_tables(lines: list[str], sections: tuple[str, ...], doc: str,
                       rep: Repairs) -> list[str]:
     body = "\n".join(lines)
@@ -147,7 +211,16 @@ def _normalize_tables(lines: list[str], sections: tuple[str, ...], doc: str,
                 i += 1
                 continue
             cells = _split_cells(line)
-            if cells is None or _is_separator(line):
+            if cells is None:
+                closed = _close_row(line)
+                if closed is None:
+                    i += 1
+                    continue
+                out[i] = line = closed
+                cells = _split_cells(line)
+                rep.add("row-unclosed", doc, f"line {i + 1}",
+                        "closed a table row that was missing its final `|`")
+            if _is_separator(line):
                 i += 1
                 continue
             if _looks_like_header(cells):
@@ -172,7 +245,60 @@ def _normalize_tables(lines: list[str], sections: tuple[str, ...], doc: str,
                     out[i] = new
                     rep.add("row-leading-cell", doc, f"line {i + 1}",
                             "dropped the leading status cell from a finding row")
+            # Finding cell split in two by a stray pipe (quote | verdict).
+            cells = _split_cells(out[i])
+            if cells is not None and len(cells) == 4 and _ID_CELL_RE.match(cells[0]) \
+                    and cells[2].strip() and cells[3].strip():
+                new = "| " + " | ".join(
+                    [cells[0].strip(), cells[1].strip(),
+                     cells[2].strip() + " — " + cells[3].strip()]) + " |"
+                if cr.parse_finding_line(new) is not None:
+                    out[i] = new
+                    rep.add("finding-cell-split", doc, f"line {i + 1}",
+                            "joined a Finding cell the model split in two with a stray `|`")
+            # Where cell spelling a line range with a typographic dash.
+            cells = _split_cells(out[i])
+            if cells is not None and len(cells) == 3 and _ID_CELL_RE.match(cells[0]) \
+                    and cr.parse_finding_line(out[i]) is None \
+                    and _RANGE_DASH_RE.search(cells[1]):
+                cells[1] = _RANGE_DASH_RE.sub(r"L\1-\2", cells[1])
+                new = "|" + "|".join(cells) + "|"
+                if cr.parse_finding_line(new) is not None:
+                    out[i] = new
+                    rep.add("range-dash", doc, f"line {i + 1}",
+                            "rewrote a typographic dash in the row's line range to a hyphen")
             i += 1
+    return out
+
+
+# ---------------------------------------------------------------- header --
+
+def _normalize_header(lines: list[str], rep: Repairs) -> list[str]:
+    """Restore the composed header shape when the model reworded its tail.
+    The count written here is the card's own open-row count — one of the
+    counts `v3-blocking-count` accepts — and build-evidence.py recomputes it
+    from the final findings before publish."""
+    body = "\n".join(lines)
+    if vp.V3_AUTHOR_HEADER_RE.search(body):
+        return lines
+    out = list(lines)
+    for i, line in enumerate(out):
+        m = _AUTHOR_HEADER_LINE_RE.match(line)
+        if not m:
+            continue
+        n = 0
+        for heading in AUTHOR_SECTIONS:
+            for _, _, parsed in vp.v3_finding_rows(body, heading):
+                if parsed is None or not vp._V3_REWRITTEN_RE.match(parsed["body"]):
+                    n += 1
+        if n:
+            tail = f"{n} item blocks merge" if n == 1 else f"{n} items block merge"
+        else:
+            tail = "nothing blocks merge"
+        out[i] = f"## Author action guide v{m.group('rev')} — {tail}"
+        rep.add("author-header", "author", f"line {i + 1}",
+                f"restored the composed header shape (was: {line.strip()[:80]!r})")
+        break
     return out
 
 
@@ -305,6 +431,7 @@ def normalize(author: str, brief: str | None, evidence_base: dict | None,
               rep: Repairs) -> tuple[str, str | None]:
     a_lines = author.splitlines()
     a_lines = _normalize_tables(a_lines, AUTHOR_SECTIONS, "author", rep)
+    a_lines = _normalize_header(a_lines, rep)
     evidence_by_id: dict[str, dict] = {}
     for f in (evidence_base or {}).get("findings", []) or []:
         if isinstance(f, dict) and f.get("id"):

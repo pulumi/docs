@@ -80,9 +80,14 @@ def _file_lines(f: dict) -> str:
     lines = f.get("lines") or []
     if not lines:
         return file
-    if len(lines) == 1:
-        return f"{file}:{lines[0]}"
-    return f"{file}:{lines[0]}-{lines[1]}"
+    at = f"{file}:{lines[0]}" if len(lines) == 1 else f"{file}:{lines[0]}-{lines[1]}"
+    # build-evidence flags an anchor it could not place inside the PR's own
+    # changed lines. Say so here rather than showing a line number that reads
+    # as authoritative: it is also why a push onto it will not auto-refresh
+    # the card.
+    if f.get("anchor_ok") is False:
+        at += " ⚠︎ unverified"
+    return at
 
 
 def render_header(evidence: dict) -> str:

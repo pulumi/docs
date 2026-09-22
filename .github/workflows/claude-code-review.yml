@@ -1621,6 +1621,10 @@ jobs:
           && steps.claude-review.outcome == 'success'
         id: v3-build
         continue-on-error: true
+        env:
+          # Only for the advisory anchor-check diff fetch below; without it
+          # `gh api` fails and the check silently never runs.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           if [[ "${{ steps.validate-body.outputs.violations_present }}" != "false" ]]; then
@@ -1628,13 +1632,33 @@ jobs:
             echo "ready=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          # Advisory anchor check: build-evidence flags a finding whose cited
+          # line falls outside the PR's own changed lines, which is what
+          # silently disables auto-refresh (#21748). A failed fetch just
+          # leaves the check off -- it is never allowed to cost the review.
+          rm -f /tmp/anchor-pr.diff
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/${{ github.repository }}/pulls/${{ steps.pr-context.outputs.pr_number }}" \
+            > /tmp/anchor-pr.diff 2>/dev/null \
+            || echo "::warning::could not fetch the PR diff; skipping the anchor check"
+          # This YAML comes from master but the scripts come from the PR's
+          # head, so a branch cut before build-evidence.py grew `--pr-diff`
+          # rejects the flag outright -- which errored every review on such a
+          # branch the day the flag landed (#21787's first run, #21783,
+          # #21759). Probe for it; an older script just runs without the check.
+          ANCHOR_ARGS=""
+          if [ -s /tmp/anchor-pr.diff ] \
+              && python3 .claude/commands/docs-review/scripts/build-evidence.py --help 2>/dev/null \
+                | grep -q -- '--pr-diff'; then
+            ANCHOR_ARGS="--pr-diff /tmp/anchor-pr.diff"
+          fi
           if ! python3 .claude/commands/docs-review/scripts/build-evidence.py \
               --author-body .review-draft-author.md \
               --brief-body .review-draft-brief.md \
               --base .review-evidence-base.json \
               --output .review-evidence.json \
               --author-out .review-author.md \
-              --brief-out .review-brief.md; then
+              --brief-out .review-brief.md $ANCHOR_ARGS; then
             echo "::error::build-evidence.py failed — a card row didn't parse. See log above."
             echo "ready=false" >> "$GITHUB_OUTPUT"
             exit 0

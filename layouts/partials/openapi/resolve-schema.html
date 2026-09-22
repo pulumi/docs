@@ -2,7 +2,14 @@
   Resolves a schema by handling allOf composition and $ref resolution.
 
   Input: dict with "schema", "openapi", optional "depth" (default 0)
-  Returns: dict with "properties", "required", "description", "type", "schemaName"
+  Returns: dict with "properties", "required", "description", "type", "schemaName",
+  "enum", "items", "raw".
+
+  "enum" / "items" / "raw" describe response and property bodies that are NOT objects --
+  a bare enum, an array, a map, a scalar. Callers that only render "properties" ignore them.
+  "raw" is the resolved leaf schema itself, which is what openapi/enum-values.html needs:
+  it reads the sibling "x-pulumi-model-property" extension (enumFieldNames /
+  enumFieldComments) off the schema object it is handed, not off the bare enum array.
 */}}
 {{ $schema := .schema }}
 {{ $openapi := .openapi }}
@@ -12,6 +19,9 @@
 {{ $description := "" }}
 {{ $schemaType := "" }}
 {{ $schemaName := "" }}
+{{ $enum := slice }}
+{{ $items := dict }}
+{{ $raw := dict }}
 
 {{ if le $depth 10 }}
 
@@ -54,6 +64,7 @@
     {{ $description = . }}
   {{ end }}
   {{ $schemaType = "object" }}
+  {{ $raw = $schema }}
 
 {{ else if isset $schema "$ref" }}
   {{ $refPath := index $schema "$ref" }}
@@ -67,6 +78,9 @@
     {{ $required = $resolved.required }}
     {{ $description = $resolved.description }}
     {{ $schemaType = $resolved.type }}
+    {{ $enum = $resolved.enum }}
+    {{ $items = $resolved.items }}
+    {{ $raw = $resolved.raw }}
   {{ end }}
 
 {{ else }}
@@ -76,8 +90,11 @@
   {{ end }}
   {{ $description = $schema.description | default "" }}
   {{ $schemaType = $schema.type | default "" }}
+  {{ $enum = $schema.enum | default slice }}
+  {{ $items = $schema.items | default dict }}
+  {{ $raw = $schema }}
 {{ end }}
 
 {{ end }}{{/* le $depth 10 */}}
 
-{{ return (dict "properties" $properties "required" $required "description" $description "type" $schemaType "schemaName" $schemaName) }}
+{{ return (dict "properties" $properties "required" $required "description" $description "type" $schemaType "schemaName" $schemaName "enum" $enum "items" $items "raw" $raw) }}
