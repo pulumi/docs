@@ -33,7 +33,7 @@ category: product
 
 > **Pulumi** — AWS Partner · [Connect with Pulumi]
 
-[XXX], AWS Identity and Access Management (IAM) launched A**ccount Access Manager**, which lets administrators assign IAM roles to workforce users and groups in AWS IAM Identity Center. Account access manager combines Identity Center's single federation point and user awareness with the flexibility of IAM roles.
+[XXX], AWS Identity and Access Management (IAM) launched **Account Access Manager**, which lets administrators assign IAM roles to workforce users and groups in AWS IAM Identity Center. Account access manager combines Identity Center's single federation point and user awareness with the flexibility of IAM roles.
 
 Today, as part of our partner launch enablement we're pleased to share that account access manager is fully supported in Pulumi. You can manage account access manager applications and entitlements with the Pulumi AWS provider and the Pulumi AWS Cloud Control provider (AWS Native). Both work in every Pulumi language: TypeScript, Python, Go, C#, Java, HCL, and YAML. Teams that already manage their AWS organization with Pulumi can adopt account access manager in the same stacks, languages, and review workflows they use today. If you’re not using Pulumi today, this post demonstrates how usage of IaC can help you adopt new AWS services and securely scale them out to your organization faster.
 
@@ -49,7 +49,7 @@ Until now, organizations managing human access across many AWS accounts have had
 
 Account access manager removes this tradeoff. You keep your own IAM roles, with their policies, tags, paths, and trust conditions. You assign those roles to Identity Center users and groups from one place. Users sign in once, see the accounts and roles assigned to them in the account access portal, and get CLI credentials with `aws login`.
 
-## Why manage account access manager with Infrastructure as Code
+## Why manage account access manager with infrastructure as code
 
 Account access manager moves more of your access model into IAM roles that you own. AWS provisions permission sets automatically, but account access manager roles have to be created by you, either by hand or with infrastructure as code. At enterprise scale, three things matter:
 
