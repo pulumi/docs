@@ -189,8 +189,9 @@ records the weekly digest reduces). **Before flipping the switch, create the
 Two lanes make G4's evidence, and a third records it.
 `staging-deploy-auto.yml` dispatches a deploy for every PR on
 `staging_evidence.paths` (not every `domain:infra` PR — the two sets are
-deliberately different) on open/push; `/deploy-staging` (`staging-deploy-pr.yml`, tools-team members
-only, same-repo branches only) is the retry. Both dispatch the existing
+deliberately different) on open/push; `/deploy-staging` (`staging-deploy-pr.yml`, members of any
+team under `teams:` in `.github/review-routing.yml` — the same any-team set
+G3 accepts for approval — same-repo branches only) is the retry. Both dispatch the existing
 testing deploy at the PR head branch and write the *pending*
 `staging/pulumi-test-io` status at the deployed SHA. Deploys queue on the
 shared staging stack in the comment lane; a superseded request gets a
