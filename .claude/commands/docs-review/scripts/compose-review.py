@@ -1049,6 +1049,42 @@ def stance_records(stances: list[dict]) -> list[dict]:
     return out
 
 
+# Mirrors CONFIDENCES / FRAMINGS in scripts/review-v3/validate-evidence.py, which
+# the publish job runs from the default branch. test_compose_v3.py pins the two
+# together: a value added here first fails validation and blocks publish; added
+# there first, it is silently dropped from the trail.
+_TRAIL_CONFIDENCES = ("high", "medium", "low")
+_TRAIL_FRAMINGS = ("exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none")
+
+
+def _trail_verdict_metadata(v: dict) -> dict:
+    """The verifier metadata a trail record carries beside the rendered verdict
+    — all optional, each emitted only when the verdict has a well-formed value.
+
+    A verdict that looks wrong is diagnosed from these: the claim `type`
+    drives routing, `confidence` and `framing` drive bucket placement, and
+    `turn_cap_exhausted` / `source_discipline_gate` mark a verdict the
+    verifier coerced rather than reached. Without them the evidence object
+    shows what was decided and nothing about why. Anything malformed is
+    dropped, never coerced: a bad optional field must not cost the whole
+    evidence object its schema validation."""
+    out: dict = {}
+    for key in ("claim_id", "type", "source_discipline_gate"):
+        val = v.get(key)
+        if isinstance(val, str) and val.strip():
+            out[key] = trunc(val.strip(), 80)
+    if v.get("confidence") in _TRAIL_CONFIDENCES:
+        out["confidence"] = v["confidence"]
+    if v.get("framing") in _TRAIL_FRAMINGS:
+        out["framing"] = v["framing"]
+    note = v.get("framing_note")
+    if isinstance(note, str) and note.strip():
+        out["framing_note"] = redact(trunc(note.strip(), EVIDENCE_TRUNC))
+    if v.get("turn_cap_exhausted") is True:
+        out["turn_cap_exhausted"] = True
+    return out
+
+
 def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "",
                          stances: list[dict] | None = None) -> str:
     has_style = bool(vale_findings)
@@ -1787,6 +1823,22 @@ def split_v3_buckets(lowconf_stubs: list[dict]) -> tuple[list[dict], list[dict]]
     return author_answer, reviewer_check
 
 
+def v3_may_demote(finding: dict) -> bool:
+    """The one exception to promote-only: a readthrough detector finding.
+
+    `build_stubs` pre-stubs every readthrough finding in 🚨 and tells the model
+    to "bucket by reader impact: 🚨 if a reader cannot reach the page's stated
+    outcome without it, otherwise move to ⚠️" — so moving one to the brief's
+    ⚠️ list is the model following its instructions, not arguing a finding
+    down. The validator and build-evidence.py both ask here, so the TODO and
+    the two enforcers can't disagree again (pulumi/docs#21787, 2026-09-21: a
+    redundancy and an orphaned heading moved to ⚠️ as told, review:error).
+    Hugo and frontmatter detector stubs carry no such instruction and stay
+    promote-only, as does every fact-check verdict.
+    """
+    return str(finding.get("origin") or "").startswith("preflight:readthrough-")
+
+
 AUTHOR_STATE_BEGIN = "<!-- AUTHOR_STATE_BEGIN -->"
 AUTHOR_STATE_END = "<!-- AUTHOR_STATE_END -->"
 
@@ -2162,6 +2214,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         route = v.get("route")
         if route in ("pass0", "pass1", "pass2", "pass3", "preflight"):
             rec["route"] = route
+        rec.update(_trail_verdict_metadata(v))
         trail_records.append(rec)
 
     log_block = render_investigation_log(

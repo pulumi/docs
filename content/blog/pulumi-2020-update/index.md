@@ -30,7 +30,7 @@ We've also added support for core Pulumi features, including [aliases](/docs/iac
 
 ## Policy as Code
 
-[CrossGuard, our Policy as Code framework](/docs/insights/policy/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) package.
+[CrossGuard, our Policy as Code framework](/docs/discovery-governance/policy/), is now ready to take for a serious test drive. CrossGuard lets you to write policies in real code and enforce them during updates. Policies can check for anything; however, common checks include security, compliance, cost management, and general and team best practices. You can write your policy packages or use off-the-shelf policy packs like our [AWSGuard](https://github.com/pulumi/pulumi-policy-aws) package.
 
 CrossGuard is open source and the functionality is behind [the new `pulumi policy` command](/docs/iac/cli/commands/pulumi_policy/), as well as [the new `--policy-pack` flag](/docs/iac/cli/commands/pulumi_up/#options) for the `preview` and `up` commands. You can use these features with any edition of Pulumi, without restriction, including the offline backends.
 
@@ -48,7 +48,7 @@ The remaining areas of focus between now and launch include:
 
 * Making reference policy packs available for AWS, Azure, GCP, and Kubernetes. These packs will be usable out-of-the-box with a collection of some of the most important configurable rules we've seen, in addition to being a starting point for creating your packs.
 
-[CrossGuard is ready to try today](/docs/insights/policy/get-started/), and [we've begun blogging about some example use cases](/blog/manage-infrastructure-with-pac) that you may find interesting.
+[CrossGuard is ready to try today](/docs/discovery-governance/policy/get-started/), and [we've begun blogging about some example use cases](/blog/manage-infrastructure-with-pac) that you may find interesting.
 
 ## Other Goodies
 

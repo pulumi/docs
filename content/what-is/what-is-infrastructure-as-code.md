@@ -205,17 +205,17 @@ These benefits compound as a team's footprint grows. Engineers who've made the s
 
 > "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
 >
-> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/case-studies/starburst/)
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/customers/starburst/)
 
 ### What infrastructure as code looks like at scale
 
 | Company | Scale | Result |
 | --- | --- | --- |
-| [Wiz](/case-studies/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
-| [Supabase](/case-studies/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
-| [BMW](/case-studies/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
-| [Atlassian](/case-studies/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
-| [Spear AI](/case-studies/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
+| [Wiz](/customers/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
+| [Supabase](/customers/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
+| [BMW](/customers/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
+| [Atlassian](/customers/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
+| [Spear AI](/customers/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
 
 ## What are common use cases for infrastructure as code?
 

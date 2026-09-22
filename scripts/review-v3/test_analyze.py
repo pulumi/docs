@@ -1101,7 +1101,7 @@ def test_route_asks_every_missing_team_in_one_command():
     assert p["verdict"] == "stamp" and p["route_targets"] == []
 
 
-# ---- the Do-next opening -------------------------------------------------------
+# ---- the opening moves: row buttons and the --terminal list ---------------------
 
 
 def test_the_chain_card_never_offers_an_approval_that_needs_reading():
@@ -1134,6 +1134,55 @@ def test_the_chain_card_never_offers_an_approval_that_needs_reading():
     assert "#1 leads the chain, but it needs a call of its own first (scrutiny:heightened)" in chain["does"]
     # and the row itself still carries the decision, which is the whole point
     assert "stamp" in [x["id"] for x in lead["actions"]]
+
+
+def test_the_cluster_moves_are_row_buttons():
+    """The board has no batch strip, so a cluster's recommendation is a
+    button on the row it belongs to: the chain on its lead (covering the
+    next link), the consolidation on the newest sweep. Both are decisions,
+    both rebuild with the rows, and neither lands on a row that is not on
+    the board."""
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([a, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["cmd"] == "--chain C1" and chain["covers"] == [2] and chain["cluster"] == "C1"
+    assert chain["label"] == "approve & merge, then unblock #2" and "merges master into #2" in chain["help"]
+    assert "chain" in analyze.DECISION_IDS and "consolidate" in analyze.DECISION_IDS
+    assert not any(x["id"] == "chain" for x in row(q, 2)["actions"])
+    # A human-authored lead is approved without merging, so act.py's
+    # `requires=["stamp", first]` skips the unblock and #2 is untouched this
+    # run: the chain covers nothing, or the board would mark #2 decided for a
+    # write that never happens.
+    human = stampable(1, title="Fix the intro", author="jdoe", author_type="User",
+                      files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([human, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["covers"] == []
+    assert chain["label"] == "approve, then unblock #2" and "the next run merges master" in chain["help"]
+    # a lead held by more than the collision carries no chain
+    a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
+                   commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                   files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([a2, b])
+    assert not any(x["id"] == "chain" for x in row(q, 1)["actions"])
+    # merge_judgments rebuilds the touched row, and the chain comes back
+    # with it -- and moves if the judgment changed which member can lead
+    q = run([a, b])
+    analyze.merge_judgments(q, {1: {"recommended": "stamp"}})
+    assert row(q, 1)["actions"][0]["id"] == "chain"
+    # idempotent: a second attach does not stack a second button
+    analyze.attach_cluster_actions(q["prs"], q["clusters"])
+    assert [x["id"] for x in row(q, 1)["actions"]].count("chain") == 1
+    # a consolidation lands on the newest sweep, carrying the request
+    q = run([stampable(i, title=f"Sweep {i}", files=[_file("content/docs/a.md", [f"x{i}"], ["o"], old_start=10)]) for i in range(1, 10)])
+    c = q["clusters"][0]
+    assert c["recommendation"]["kind"] == "consolidate" and c["recommendation"]["on"] == 9
+    act = row(q, 9)["actions"][0]
+    assert act["id"] == "consolidate" and act["cmd"] == c["recommendation"]["cmd"] and act["cluster"] == "C1"
+    assert act["label"] == f"ask {c['recommendation']['target']} for one consolidated PR" and "Nothing merges" in act["help"]
+    assert not any(x["id"] == "consolidate" for n in range(1, 9) for x in row(q, n)["actions"])
+    assert not any(x["id"] == "chain" for n in range(1, 10) for x in row(q, n)["actions"])
 
 
 def test_do_next_cards_only_name_rows_the_board_renders():
@@ -1196,6 +1245,51 @@ def test_a_stuck_workflow_pr_always_offers_a_hand_fix():
     # An author who does answer reviews gets the send-back, not the handoff.
     assert row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
                               author="jdoe", author_type="User")]), 100)["handoffs"] == []
+
+
+def test_a_stuck_workflow_pr_can_also_hand_the_findings_to_claude():
+    """The same job by the other route. `/address-review` is a session on
+    your machine; `--ask-fix` is one comment asking the agent already on the
+    PR to fix the findings and refresh the review. It is a write act.py
+    makes, so unlike the handoff it is an ordinary fragment of the batch —
+    and the two are alternatives, which the board enforces by pairing them
+    in one exclusive group."""
+    q = run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    ask = next(a for a in p["actions"] if a["id"] == "ask-fix")
+    assert ask["cmd"] == "--ask-fix 100" and ask["exclusive"] == "fix"
+    assert p["handoffs"][0]["exclusive"] == "fix"   # same group: one puts out the other
+    assert "ask-fix" in analyze.DECISION_IDS       # it is the row's way out, not a side action
+
+    # Nothing open, nothing to ask for.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, author="pulumi-bot", author_type="User")]), 100)["actions"])
+    # An author who answers reviews gets the send-back instead, as before.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                                               author="jdoe", author_type="User")]), 100)["actions"])
+
+
+def test_a_conflicted_unblock_is_not_offered_twice():
+    """`merge base & retry` on a branch whose base merge already stopped on
+    conflicts is a button that does nothing: act.py aborts the same merge and
+    reports the same files. Once that report is on the PR against this head,
+    the row stops offering it and hands the conflict to the author instead —
+    and a push that moves the head brings the button back, because the
+    record no longer describes the branch."""
+    import act  # noqa: PLC0415
+    report = comment(act.unblock_conflict_body(HEAD_V3, "master", ["content/docs/d.md"]))
+    q = run([stampable(1, mergeable_state="dirty", files=[_file("content/docs/d.md", ["x"])],
+                       comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), report]),
+             stampable(2, mergeable_state="dirty", files=[_file("content/docs/e.md", ["x"])])])
+    assert row(q, 1)["unblock_conflict"]["files"] == ["content/docs/d.md"]
+    p = row(q, 1)
+    assert "unblock:refused:conflict" in p["reasons"], p["reasons"]
+    assert not any(a["id"] == "unblock" for a in p["actions"]), p["actions"]
+    assert any(a["id"] == "request-changes" for a in p["actions"]), p["actions"]
+    # the row next to it has no such record, so it keeps the button
+    assert [a["cmd"] for a in row(q, 2)["actions"]] == ["--unblock 2"]
 
 
 def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():

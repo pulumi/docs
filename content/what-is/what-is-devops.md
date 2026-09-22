@@ -4,7 +4,7 @@ meta_desc: DevOps unifies dev and IT ops to ship faster with less risk. See DORA
 type: what-is
 date: 2023-12-06T09:35:53-08:00
 page_title: "What is DevOps?"
-authors: ["james-denyer"]
+authors: ["pulumi-content-team"]
 ---
 
 **DevOps is a set of practices and cultural principles that unify software development (Dev) and IT operations (Ops) into one continuous cycle, replacing siloed handoffs with shared ownership of planning, building, testing, releasing, and running software.** Teams automate that lifecycle end to end and manage infrastructure with the same engineering discipline they already apply to application code.

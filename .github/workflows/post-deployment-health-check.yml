@@ -137,7 +137,7 @@ jobs:
           check_endpoint "/docs/iac/cli/commands/" "CLI reference"
           check_endpoint "/blog/" "Blog landing"
           check_endpoint "/what-is/" "What-is landing"
-          check_endpoint "/case-studies/" "Case studies landing"
+          check_endpoint "/customers/" "Customers landing"
 
           # /dev/tutorials/ and /dev/templates/ are proxied here from
           # pulumi/marketing-web (see infrastructure/index.ts); they are not

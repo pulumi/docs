@@ -1,0 +1,31 @@
+{{- $active := .active -}}
+{{- $section := site.GetPage "/customers" -}}
+{{- $cx := partialCached "customers/data.html" . "customers-data" -}}
+{{- $stories := partialCached "customers/stories.html" . "customer-stories" -}}
+{{- $heading := $section.Title -}}
+{{- if $active -}}
+    {{- $heading = printf "%s customers" (partial "customers/industry-name.html" $active) -}}
+{{- end -}}
+<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-8 md:gap-12 overflow-hidden">
+
+    <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+        <h1 id="customers-heading" data-default-heading="{{ $section.Title }}" data-default-title="{{ $section.Title }} | Pulumi" class="heading-1">{{ $heading }}</h1>
+        {{ with $section.Params.description }}
+        <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>
+        {{ end }}
+    </section>
+
+    <section id="browse-by-industry" aria-labelledby="browse-by-industry-heading">
+        <h2 id="browse-by-industry-heading" class="sr-only">Filter customers</h2>
+        {{ partial "customers/filter-bar.html" (dict "active" $active) }}
+    </section>
+
+    <section id="customers-grid" class="customer-grid-clip">
+        <div class="customer-grid">
+            {{ range $cx.list }}
+                {{ partial "customers/cell.html" (dict "customer" . "story" (index $stories .id) "active" $active) }}
+            {{ end }}
+        </div>
+    </section>
+
+</div>
