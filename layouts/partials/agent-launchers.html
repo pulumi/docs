@@ -5,22 +5,46 @@
      necessarily decode that, so match encodeURIComponent. */}}
 {{- $encodedPrompt := replace (urlquery $prompt) "+" "%20" -}}
 
-<button type="button" class="btn btn-outline btn-xl w-full" data-share-text="{{ $prompt }}" data-track="{{ $track }}-share" hidden>
+{{/* The two halves are for different readers and never both show. On a phone
+     the realistic job is getting the prompt onto a laptop, so the share button
+     is the only extra action; every launcher below targets an agent that runs
+     on a desktop, so they start at md+. */}}
+<button type="button" class="btn btn-outline btn-xl w-full md:hidden" data-share-text="{{ $prompt }}" data-track="{{ $track }}-share" hidden>
     {{ partial "icon.html" (dict "name" "paper-plane-right" "class" "size-5") }}
     Send to myself
 </button>
 
-<div class="md:hidden">
-    <details class="group mt-6 border-b border-gray-200 pb-3">
-        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-3 marker:hidden [&::-webkit-details-marker]:hidden">
-            <span class="text-sm font-semibold">More options</span>
-            {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 text-gray-500 transition-transform group-open:rotate-180") }}
-        </summary>
-        <div class="mt-1 mb-4">{{ partial "agent-launchers-list.html" (dict "encodedPrompt" $encodedPrompt "track" $track) }}</div>
-    </details>
-</div>
-
 <div class="hidden md:block">
     <p class="mt-8 mb-4 text-sm font-semibold text-center">More options</p>
-    {{ partial "agent-launchers-list.html" (dict "encodedPrompt" $encodedPrompt "track" $track) }}
+
+    {{/* safeURL on every href is load-bearing: without it html/template re-encodes
+         the `%` of each escape (shipping `%2520` for a space) and filters the custom
+         schemes to #ZgotmplZ.
+
+         Each launcher is wrapped so its fallback line stays inside it; open-in-app.ts
+         finds the line by scoping to the anchor's parent. */}}
+    <div class="flex flex-col gap-2">
+        <div>
+            <a class="btn btn-outline w-full" href="{{ printf "claude-cli://open?q=%s" $encodedPrompt | safeURL }}" data-open-scheme data-track="{{ $track }}-open-claude-cli">
+                {{ partial "icon.html" (dict "name" "brand/claude" "class" "size-5") }}
+                Claude Code in your terminal
+            </a>
+            <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener">Install Claude Code</a>, or copy the prompt above.</p>
+        </div>
+
+        <div>
+            <a class="btn btn-outline w-full" href="{{ printf "codex://new?prompt=%s" $encodedPrompt | safeURL }}" data-open-scheme data-track="{{ $track }}-open-codex">
+                {{ partial "icon.html" (dict "name" "brand/openai" "class" "size-5") }}
+                Codex
+            </a>
+            <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://chatgpt.com/codex" target="_blank" rel="noopener">Install the Codex app</a>, or copy the prompt above.</p>
+        </div>
+
+        <div>
+            <a class="btn btn-outline w-full" href="{{ printf "https://cursor.com/link/prompt?text=%s" $encodedPrompt | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-cursor">
+                {{ partial "icon.html" (dict "name" "brand/cursor" "class" "size-5") }}
+                Cursor
+            </a>
+        </div>
+    </div>
 </div>
