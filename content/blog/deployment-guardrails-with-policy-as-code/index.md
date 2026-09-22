@@ -54,7 +54,7 @@ Deployment guardrails are automated policies that act as your infrastructure's s
 
 A helpful analogy is to think of guardrails like type checking in programming languages. Just as TypeScript doesn't restrict your ability to write JavaScript but rather catches type errors before runtime, deployment guardrails don't limit your infrastructure creativity. They simply ensure you're following secure patterns and catch potentially dangerous configurations before they cause problems in production.
 
-## Introducing Pulumi Policies: Policy as Code
+## Introducing Pulumi Policies: policy as code
 
 [Pulumi Policies](/docs/discovery-governance/policy/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in familiar programming languages like [Python](/docs/discovery-governance/policy/policy-packs/authoring/#creating-a-policy-pack), [TypeScript](/docs/discovery-governance/policy/policy-packs/authoring/#creating-a-policy-pack), or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
 
