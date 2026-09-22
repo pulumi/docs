@@ -149,14 +149,16 @@ upsert one `<!-- SENTINEL_STATUS -->` comment per PR: a row per gate with its
 state and, for a red one, the gate's own remediation text. The body is a pure
 function of the verdict — no timestamps, no run ids — so a re-evaluation that
 changes nothing produces a byte-identical body and the PATCH is skipped. The
-workflow passes `--status-comment` unconditionally and the evaluator decides:
-enforcing mode always maintains it; report-only mode does so only for a PR
-labelled `sentinel:preview`, so the dry run stays invisible to anyone who
-didn't opt in. `content-review-article.yml` applies that label to every
-content-review and glow-up PR, making those lanes the canary cohort — the
-same pattern the v3 review comments used before they went repo-wide. A few
-real PRs a day exercise the surface, on the lane whose author is a workflow
-and whose reader is already reading the output. External contributors (fork head repo — never the
+comment is maintained on **every** PR the Sentinel evaluates, in both modes.
+In report-only mode the heading reads "(preview)" and a `[!WARNING]` banner
+says both halves: informational and safe to ignore today, enforced soon, when
+every row has to be green to merge. Neither half calls a red row the author's
+homework — G3 is an approval and G4 a deploy. That banner is what makes a repo-wide dry run
+safe, and repo-wide is what makes it worth running — the `sentinel:preview`
+opt-in cohort (content-review, glow-up, link sweeps) was retired 2026-09-21
+because a surface only workflow-authored PRs carry tests the renderer and no
+reader. `--update-strip` stays enforcing-only: the ⛔ strip edits the author
+card, which is someone else's comment. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
 skip G1/G2 per config — the approving reviewer's review is the review. A
 `review:trivial` PR that isn't mechanical (prose-flagged) passes G1/G2 on

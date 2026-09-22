@@ -1,17 +1,16 @@
 ---
-title_tag: Store Terraform State in Pulumi Cloud | Pulumi for Terraform Users
-title: Store Terraform State in Pulumi Cloud
-h1: "Store Terraform State in Pulumi Cloud"
+title_tag: Store Terraform state in Pulumi Cloud | Pulumi
+title: Store Terraform state in Pulumi Cloud
+h1: Store Terraform state in Pulumi Cloud
 meta_desc: Use Pulumi Cloud as your Terraform state backend for update history, state locking, RBAC, audit policies, and unified resource visibility.
-weight: 9
 menu:
-    iac:
-        name: Store Terraform State
-        parent: terraform-get-started
-        weight: 9
-        identifier: terraform-state-backend
-
+  integrations:
+    name: State backend
+    parent: integrations-terraform
+    identifier: integrations-terraform-state-backend
+    weight: 1
 aliases:
+  - /docs/iac/get-started/terraform/terraform-state-backend/
 ---
 
 Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Discovery](/docs/discovery-governance/discovery/).
@@ -32,7 +31,7 @@ If you are managing Terraform state in S3, Azure Blob Storage, or another DIY ba
 Pulumi Cloud implements the [Terraform remote backend API](https://developer.hashicorp.com/terraform/language/backend/remote). You can point the Terraform CLI at Pulumi Cloud using the standard `backend "remote"` configuration block or the newer `cloud` block — no changes to your Terraform code or workflow are required.
 
 {{% notes "info" %}}
-Pulumi Cloud also supports [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) — running your plans and applies on Pulumi Cloud's managed infrastructure instead of your local machine.
+Pulumi Cloud also supports [remote execution](/docs/integrations/terraform/remote-execution/) — running your plans and applies on Pulumi Cloud's managed infrastructure instead of your local machine.
 {{% /notes %}}
 
 ### Concept mapping
@@ -439,7 +438,7 @@ You can run [audit (detective) policy packs](/docs/discovery-governance/policy/p
 To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/discovery-governance/policy/policy-groups/) in Discovery. Policy packs are then evaluated continuously against the stack's resources.
 
 {{% notes type="info" %}}
-Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/integrations/terraform/remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 {{% /notes %}}
 
 ### Restoring a previous state version
@@ -457,17 +456,17 @@ You can find version numbers in the stack's **Activity** tab in the Pulumi Cloud
 
 ### Can I run plans and applies remotely?
 
-Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remotely using managed infrastructure. See [Remote Execution](/docs/iac/get-started/terraform/terraform-remote-execution/) for setup instructions.
+Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remotely using managed infrastructure. See [Remote Execution](/docs/integrations/terraform/remote-execution/) for setup instructions.
 
 ### Can I use drift detection with Terraform-managed stacks?
 
-Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
+Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/integrations/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
 
 Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
 
 ### Can I use preventative policies?
 
-Yes, with [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/). When a plan runs remotely on Pulumi Cloud, preventative policies evaluate against the plan before an apply proceeds — violations block the apply. For stacks using local execution mode, only audit (detective) policies are supported. See [audit policies](#audit-policies) above.
+Yes, with [remote execution](/docs/integrations/terraform/remote-execution/). When a plan runs remotely on Pulumi Cloud, preventative policies evaluate against the plan before an apply proceeds — violations block the apply. For stacks using local execution mode, only audit (detective) policies are supported. See [audit policies](#audit-policies) above.
 
 ### How do update diffs work for Terraform stacks?
 

@@ -1051,23 +1051,14 @@ jobs:
           # branch prefix). Labels are a one-time repo pre-req:
           #   gh label create content-review/deterministic ... etc.
           #
-          # `sentinel:preview` makes these lanes the Sentinel's canary cohort,
-          # the same way content-review and glow-up PRs carried the v3 review
-          # comments before those went repo-wide. While `REVIEW_V3_SENTINEL` is
-          # `report`, the pinned gate-status comment is maintained ONLY on a PR
-          # wearing this label — so the surface gets exercised on real PRs,
-          # every day, on the lane whose author is a workflow and whose reader
-          # is already reviewing the output. It is inert once the Sentinel
-          # enforces (the comment is then maintained on every PR it evaluates),
-          # so this line needs no follow-up removal; drop it if and when the
-          # cohort has served its purpose.
-          #
-          # Added in the same breath as the class label and just as fail-open:
-          # a missing label must never block an automated content PR.
-          for label in "content-review/$CLASS" "sentinel:preview"; do
-            gh pr edit "$BRANCH" --add-label "$label" \
-              || echo "::warning::could not add label $label (missing from repo?)"
-          done
+          # These lanes used to also carry `sentinel:preview`, the label that
+          # made report-only mode maintain the Sentinel's pinned gate-status
+          # comment on a canary cohort only. Retired 2026-09-21: the comment
+          # is now maintained on every PR the Sentinel evaluates, carrying its
+          # own "preview — not blocking yet" banner, so a cohort of
+          # workflow-authored PRs no longer buys anything.
+          gh pr edit "$BRANCH" --add-label "content-review/$CLASS" \
+            || echo "::warning::could not add label content-review/$CLASS (missing from repo?)"
 
       # Post-publish bookkeeping. The authoritative `make lint` already ran in
       # the publish step and decided whether the PR opened ready (PASS) or draft

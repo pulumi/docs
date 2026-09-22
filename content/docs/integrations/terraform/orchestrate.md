@@ -1,28 +1,30 @@
 ---
-title_tag: Orchestrate Together | Pulumi for Terraform Users
-title: Orchestrate Together
-h1: "Orchestrate Together"
-meta_desc: Learn advanced patterns for orchestrating Terraform and Pulumi deployments together in production environments.
-weight: 8
+title_tag: Orchestrate Terraform and Pulumi together | Pulumi
+title: Orchestrate Terraform and Pulumi together
+h1: Orchestrate Terraform and Pulumi together
+meta_desc: Coordinate Terraform and Pulumi deployments in CI/CD, share configuration with Pulumi ESC, and manage dependencies between the two tools.
 menu:
-    iac:
-        name: Orchestrate Together
-        parent: terraform-get-started
-        weight: 8
-
+  integrations:
+    name: Orchestrate with Terraform
+    parent: integrations-terraform
+    identifier: integrations-terraform-orchestrate
+    weight: 7
 aliases:
+  - /docs/iac/get-started/terraform/orchestrate/
 ---
+
+When Terraform and Pulumi manage different parts of the same system, you'll often need to deploy them together.
+This page covers patterns for orchestrating those deployments, managing dependencies between them, and sharing configuration.
 
 ## Deployment orchestration
 
-In production environments, you'll often need to deploy both Terraform and Pulumi stacks together.
-This section covers patterns for orchestrating deployments, managing dependencies, and sharing configuration.
+In production environments, the order of deployments matters: a Pulumi stack that [reads Terraform state](/docs/integrations/terraform/reference-state/) can only use outputs that Terraform has already applied.
 
 ## CI/CD pipeline integration
 
 ### GitHub Actions example
 
-Let's consider the example from the [Referencing Terraform State](/docs/iac/get-started/terraform/reference-state/) step earlier. The configuration below shows a complete GitHub Actions workflow that deploys both the Terraform-managed ECS/ECR backend and the Pulumi-managed application stacks that depend on the backend infrastructure:
+Consider the ECS example from [Reference Terraform state](/docs/integrations/terraform/reference-state/). The configuration below shows a complete GitHub Actions workflow that deploys both the Terraform-managed ECS/ECR backend and the Pulumi-managed application stacks that depend on the backend infrastructure:
 
 ```yaml
 # .github/workflows/deploy.yml
@@ -358,5 +360,3 @@ Some best practice tips to keep your two systems orchestrated:
 6. **Monitoring**: Use common logging and metrics endpoints to monitor both Terraform and Pulumi deployments
 7. **Security**: Use a single tool to manage secrets across both tools — see [Shared configuration with Pulumi ESC](#shared-configuration-with-pulumi-esc)
 8. **Version control**: Tag releases that include both Terraform and Pulumi changes to create a unified release
-
-{{< get-started-stepper >}}

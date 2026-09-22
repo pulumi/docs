@@ -1,17 +1,20 @@
 ---
-title_tag: "Use a Terraform Module in Pulumi"
-meta_desc: "Learn how to use existing Terraform modules directly in your Pulumi programs."
-title: Use a Terraform Module in Pulumi
-h1: Use a Terraform Module in Pulumi
+title_tag: Use Terraform modules in Pulumi | Pulumi
+title: Use Terraform modules in Pulumi
+h1: Use Terraform modules in Pulumi
+meta_desc: Use existing Terraform and OpenTofu modules directly in your Pulumi programs, with generated, typed SDKs in any Pulumi language.
 menu:
-    iac:
-        name: Use a Terraform Module
-        parent: iac-guides-using-existing-tools
-        weight: 50
+  integrations:
+    name: Terraform modules
+    parent: integrations-terraform
+    identifier: integrations-terraform-modules
+    weight: 4
 aliases:
-- /docs/iac/using-pulumi/extending-pulumi/use-terraform-module/
-- /docs/iac/extending-pulumi/use-terraform-module/
-- /docs/iac/build-with-pulumi/use-terraform-module/
+  - /docs/iac/using-pulumi/extending-pulumi/use-terraform-module/
+  - /docs/iac/extending-pulumi/use-terraform-module/
+  - /docs/iac/build-with-pulumi/use-terraform-module/
+  - /docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/
+  - /docs/iac/get-started/terraform/terraform-modules/
 ---
 
 This guide will walk you through the process of using existing Terraform modules directly in your Pulumi programs, allowing you to leverage the vast Terraform module ecosystem.
@@ -25,19 +28,19 @@ This guide will walk you through the process of using existing Terraform modules
 
 {{< /notes >}}
 
-## Why Use Terraform Modules in Pulumi?
+## Why use Terraform modules in Pulumi?
 
 Terraform has a mature ecosystem with thousands of modules available in the [Terraform Registry](https://registry.terraform.io/). These modules encapsulate well-tested infrastructure patterns that you might want to leverage in your Pulumi projects without having to rewrite them.
 
 Also, many Terraform users have created their own custom modules and would like to avoid re-writing them in order to use Pulumi. Using Terraform modules directly within Pulumi allows you to use Terraform and Pulumi side-by-side, enabling the two technologies to coexist, taking a slower gentler migration path from Terraform to Pulumi. This is especially powerful in larger organizations, where some teams prefer Pulumi's workflows, and others prefer to continue using Terraform.
 
-### Key benefits:
+### Key benefits
 
 - **Leverage Existing Modules**: Use the rich ecosystem of Terraform modules directly in Pulumi.
 - **Migrate Gradually**: Incrementally migrate from Terraform to Pulumi without rewriting everything at once.
 - **Consistency**: Maintain consistency across teams that may be using a mix of Terraform and Pulumi.
 
-## How It Works
+## How it works
 
 The [Any HCL Module](/registry/packages/hcl/) package allows you to consume Terraform modules as if they were native Pulumi packages. It works by:
 
@@ -46,9 +49,9 @@ The [Any HCL Module](/registry/packages/hcl/) package allows you to consume Terr
 3. Managing state through your standard Pulumi state backend.
 4. Exposing module outputs as native Pulumi outputs.
 
-## Getting Started
+## Get started
 
-### Adding a Terraform Module to Your Pulumi Project
+### Add a Terraform module to your Pulumi project
 
 To use a Terraform module in Pulumi, first add it to your project using the `pulumi package add` command:
 
@@ -73,7 +76,7 @@ This will generate a local SDK in your programming language that you can import 
 See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for details on generating and using SDKs from local or parameterized providers.
 {{% /notes %}}
 
-### Using a Local Terraform Module
+### Use a local Terraform module
 
 You can also use local Terraform modules:
 
@@ -83,9 +86,9 @@ pulumi package add hcl module ./path/to/module
 
 Any directory containing `.tf` files and optionally `variables.tf` and `outputs.tf` is considered a valid module.
 
-### Using a module from Pulumi Cloud
+### Use a module from Pulumi Cloud
 
-If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen. The system is the last segment of the module's address, naming what the module provisions, such as `aws` or `azurerm`:
+If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/integrations/terraform/module-registry/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen. The system is the last segment of the module's address, naming what the module provisions, such as `aws` or `azurerm`:
 
 ```bash
 pulumi package add <name>-<system>[@<version>]
@@ -95,9 +98,9 @@ A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the sam
 
 The package's page in Pulumi Cloud shows whether a given version has converted.
 
-See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
+See [Terraform Modules in the Pulumi Cloud Registry](/docs/integrations/terraform/module-registry/) for the publishing side and the broader module workflow.
 
-## Example: Using the AWS S3 Bucket Module
+## Example: AWS S3 bucket module
 
 Here's an example of how to use the AWS S3 bucket module to create a bucket in your Pulumi program.
 
@@ -321,7 +324,198 @@ packages:
 
 In the above code, the imported Terraform module works the same as any other Pulumi code. Outputs are returned, and resource state is stored in your Pulumi state storage, alongside all your other Pulumi-native resources. This also means that resource dependencies work as expected between Pulumi-native resources and resources created by Terraform modules.
 
-## Configuring Terraform Providers
+## Load a module at runtime
+
+Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [Any HCL Module](/registry/packages/hcl/) package directly.
+
+Add the Any HCL Module package to your project:
+
+```bash
+$ pulumi package add hcl
+```
+
+Then use its `Module` resource to load the module you want. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as hcl from "@pulumi/hcl";
+
+const bucket = new hcl.Module("bucket", {
+    source: "terraform-aws-modules/s3-bucket/aws",
+    version: "4.1.2",
+    inputs: {
+        bucket_prefix: "my-example-bucket",
+    },
+});
+
+export const bucketArn = bucket.outputs.apply(o => o["s3_bucket_arn"]);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+import pulumi
+import pulumi_hcl as hcl
+
+bucket = hcl.Module("bucket",
+    source="terraform-aws-modules/s3-bucket/aws",
+    version="4.1.2",
+    inputs={
+        "bucket_prefix": "my-example-bucket",
+    })
+
+pulumi.export("bucket_arn", bucket.outputs["s3_bucket_arn"])
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-hcl/sdk/go/hcl"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := hcl.NewModule(ctx, "bucket", &hcl.ModuleArgs{
+			Source:  "terraform-aws-modules/s3-bucket/aws",
+			Version: pulumi.StringRef("4.1.2"),
+			Inputs: pulumi.Map{
+				"bucket_prefix": pulumi.String("my-example-bucket"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("bucketArn", bucket.Outputs.MapIndex(pulumi.String("s3_bucket_arn")))
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Hcl;
+
+return await Deployment.RunAsync(() =>
+{
+    var bucket = new Module("bucket", new ModuleArgs
+    {
+        Source = "terraform-aws-modules/s3-bucket/aws",
+        Version = "4.1.2",
+        Inputs =
+        {
+            { "bucket_prefix", "my-example-bucket" },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["bucketArn"] = bucket.Outputs.Apply(o => o["s3_bucket_arn"]),
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+package myapp;
+
+import com.pulumi.Pulumi;
+import com.pulumi.hcl.Module;
+import com.pulumi.hcl.ModuleArgs;
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var bucket = new Module("bucket", ModuleArgs.builder()
+                .source("terraform-aws-modules/s3-bucket/aws")
+                .version("4.1.2")
+                .inputs(Map.of(
+                    "bucket_prefix", "my-example-bucket"))
+                .build());
+
+            ctx.export("bucketArn", bucket.outputs().applyValue(o -> o.get("s3_bucket_arn")));
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+```yaml
+name: example
+runtime: yaml
+resources:
+  bucket:
+    type: hcl:index:Module
+    properties:
+      source: terraform-aws-modules/s3-bucket/aws
+      version: "4.1.2"
+      inputs:
+        bucket_prefix: my-example-bucket
+outputs:
+  bucketArn: ${bucket.outputs["s3_bucket_arn"]}
+```
+
+{{% /choosable %}}
+
+## Compare with Terraform
+
+The same functionality in Terraform would look like:
+
+```hcl
+# Terraform equivalent
+module "s3_bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
+
+  bucket_prefix = "my-example-bucket"
+
+  tags = {
+    Environment = "dev"
+  }
+}
+
+output "bucket_arn" {
+  value = module.s3_bucket.s3_bucket_arn
+}
+
+output "bucket_id" {
+  value = module.s3_bucket.s3_bucket_id
+}
+```
+
+## Best practices
+
+1. **Pin module versions**: Always specify module versions in production
+1. **Review module source**: Understand what the module does before using it
+1. **Test module outputs**: Verify that module outputs work as expected
+1. **Monitor module updates**: Keep track of module updates and breaking changes
+1. **Use reputable sources**: Prefer well-maintained modules from trusted sources
+1. **Document module usage**: Document why you chose specific modules and their configuration
+1. **Use `pulumi install` for setup**: When cloning a project that uses Terraform modules, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including local SDKs defined in `Pulumi.yaml`
+
+## Configure Terraform providers
 
 A Terraform module runs against your project's default provider configuration — the same configuration your Pulumi-native resources use — so it inherits whatever region, account, or credentials you've already set. To target a specific region, for example, set it the way you would for any Pulumi provider:
 
@@ -333,7 +527,7 @@ You can also supply provider settings, including short-lived credentials, throug
 
 ## Troubleshooting
 
-### Fixing Invalid Relative Paths
+### Fix invalid relative paths
 
 When a module accepts a file path, pass an absolute path instead of a relative one. For example, the [AWS Lambda module](https://registry.terraform.io/modules/terraform-aws-modules/lambda/aws) accepts a `source_path` that points to your function's code:
 

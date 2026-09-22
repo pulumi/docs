@@ -1,17 +1,16 @@
 ---
-title_tag: Remote Execution for Terraform and OpenTofu | Pulumi for Terraform Users
-title: Remote Execution
-h1: "Remote Execution"
+title_tag: Remote execution for Terraform and OpenTofu | Pulumi
+title: Remote execution for Terraform and OpenTofu
+h1: Remote execution for Terraform and OpenTofu
 meta_desc: Run Terraform and OpenTofu plans and applies remotely on Pulumi Cloud using managed infrastructure, ESC for credentials, and VCS-triggered automation.
-weight: 10
 menu:
-    iac:
-        name: Remote Execution
-        parent: terraform-get-started
-        weight: 10
-        identifier: terraform-remote-execution
-
+  integrations:
+    name: Remote execution
+    parent: integrations-terraform
+    identifier: integrations-terraform-remote-execution
+    weight: 2
 aliases:
+  - /docs/iac/get-started/terraform/terraform-remote-execution/
 ---
 
 Pulumi Cloud can run your Terraform and OpenTofu operations remotely. Instead of running `plan` and `apply` on your local machine, the Terraform or OpenTofu CLI uploads your configuration to Pulumi Cloud, which executes the operation in a managed container and streams the output back to your terminal in real time. Pulumi Cloud implements the Terraform Cloud remote execution protocol, so the CLI workflow you already know — `terraform plan`, `terraform apply`, saved plans — works unchanged.
@@ -44,7 +43,7 @@ Terraform workspaces map to Pulumi Cloud [stacks](/docs/iac/concepts/stacks/). T
 
 ## Enable remote execution
 
-Remote execution uses the same backend configuration as [Terraform state storage](/docs/iac/get-started/terraform/terraform-state-backend/) — both the `cloud` block and `backend "remote"` block work. If you have not set up a Pulumi Cloud backend yet, follow the [state storage setup steps](/docs/iac/get-started/terraform/terraform-state-backend/#2-update-your-backend-configuration) first.
+Remote execution uses the same backend configuration as [Terraform state storage](/docs/integrations/terraform/state-backend/) — both the `cloud` block and `backend "remote"` block work. If you have not set up a Pulumi Cloud backend yet, follow the [state storage setup steps](/docs/integrations/terraform/state-backend/#2-update-your-backend-configuration) first.
 
 New stacks created through the Terraform or OpenTofu CLI default to remote execution. For existing stacks, set the `terraform:execution-mode` [stack tag](/docs/iac/concepts/stacks/#stack-tags) to `remote` to enable it. See [Control execution mode](#control-execution-mode) for details.
 
@@ -260,7 +259,7 @@ To enable auto-apply (skip the approval step), set the `terraform:auto-apply` [s
 
 [Preventative policies](/docs/discovery-governance/policy/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
 
-Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/integrations/terraform/state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 
 ## Control execution mode
 
@@ -306,7 +305,7 @@ If you are migrating from HCP Terraform (Terraform Cloud), the remote execution 
 
 To migrate:
 
-1. Follow the [HCP Terraform state migration steps](/docs/iac/get-started/terraform/terraform-state-backend/#migrate-from-hcp-terraform-terraform-cloud) to move your state.
+1. Follow the [HCP Terraform state migration steps](/docs/integrations/terraform/state-backend/#migrate-from-hcp-terraform-terraform-cloud) to move your state.
 1. Update your `cloud` block to point at Pulumi Cloud (change `hostname` and `organization`).
 1. Add your cloud credentials to the stack's [automatically provisioned ESC environment](#provide-credentials-with-esc) to replace workspace variables. If you were using HashiCorp Vault for secrets, ESC can integrate directly via the [Vault secrets provider](/docs/esc/providers/secrets/vault-secrets/) and [Vault login provider](/docs/esc/providers/login/vault-login/).
 1. Run `terraform plan` to verify the migration — you should see **No changes**.
@@ -327,7 +326,7 @@ Not currently. Use environment variables through an [ESC environment](#provide-c
 
 ### Is drift detection available?
 
-Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually, or [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) (including [Pulumi HCL](/docs/iac/languages-sdks/hcl/)) and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
+Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually, or [convert your Terraform code to Pulumi](/docs/integrations/terraform/convert-hcl/) (including [Pulumi HCL](/docs/iac/languages-sdks/hcl/)) and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
 
 ### How are resources priced?
 

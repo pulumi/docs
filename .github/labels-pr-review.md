@@ -41,7 +41,6 @@ Load-bearing — these gate workflow execution.
 | `review:waived` | `d93f0b` | **Break-glass.** A human deliberately waived the v3 merge gates (Sentinel concludes success, except infra staging evidence, which is never waivable). Actor and reason are logged to the waive ledger and the waive rate is tracked — apply it on purpose, in an incident, not to skip the answer loop. Applied by humans only; never by automation. |
 | `review:author-stalled` | `fad8c7` | The PR has been waiting on its author (unanswered findings or a standing changes-requested review) for 14+ days. Applied and cleared by the SLA sweep; the PR closes at 21 days if nothing changes, with one-click reopen. |
 | `automation/merge` | `ededed` | Marks a PR the Sentinel does not gate at all: with it, a `not_governed.author_label_pairs` match (today `pulumi-bot` + this label) concludes the check `success` with **no gates evaluated**. That is safe only because the generating workflow posts its own approval and arms auto-merge. Applied by those workflows, never by hand — putting it on a human PR turns the merge gate off. Predates this scheme, so it is not in the create-them-all block below. |
-| `sentinel:preview` | `d4c5f9` | **Opt-in.** While the Sentinel is report-only, maintain its pinned gate-status comment on this PR so the surface can be reviewed on a real PR before enforcement. Applied automatically by `content-review-article.yml` (content-review and glow-up PRs) and `check-links.yml` (broken-link sweeps) — the canary cohort, same pattern the v3 review comments used before going repo-wide — and by humans on anything else worth previewing. No effect once `REVIEW_V3_SENTINEL` is `'1'` — the comment is then maintained on every PR the Sentinel evaluates. |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
@@ -86,7 +85,19 @@ gh label create "review:author-stalled"  --color fad8c7 --description "Waiting o
 gh label create "content-review/deterministic" --color c5def5 --description "Content-review PR whose fixes are all deterministic-class (links, Vale, frontmatter)"
 gh label create "content-review/judgment"      --color bfd4f2 --description "Content-review PR containing judgment-class fixes (needs a human eye)"
 gh label create "content-review/glow-up"       --color d4c5f9 --description "Content glow-up PR (whole-article polish)"
-gh label create "sentinel:preview"       --color d4c5f9 --description "Preview the Sentinel gate-status comment while it is still report-only"
+```
+
+## Retired labels
+
+| Label | Retired | Why |
+|---|---|---|
+| `sentinel:preview` | 2026-09-21 | Opt-in preview of the Sentinel's pinned gate-status comment while the check is report-only. Retired when report-only went repo-wide: the comment is now maintained on **every** PR the Sentinel evaluates, in both modes, and in report-only mode it leads with a ⚠️ banner saying it blocks nothing yet and will be enforced soon. `content-review-article.yml` and `check-links.yml` no longer apply it, nothing reads it, and `review-sentinel.yml`'s label-event filter no longer lists it. |
+| `surface:v3` | 2026-09-14 | Per-PR opt-in to the v3 review comment surface, retired once the repo-wide `REVIEW_V3_COMMENTS` variable had soaked. |
+
+Delete them from the repo once no open PR is still wearing one — a stale label on a merged PR is harmless, but an existing label invites someone to apply it:
+
+```bash
+gh label delete "sentinel:preview" --yes
 ```
 
 ## Migrate from the old two-label scheme

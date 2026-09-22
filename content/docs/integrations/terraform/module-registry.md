@@ -1,16 +1,23 @@
 ---
-title_tag: Terraform modules in the Pulumi Cloud registry | Pulumi IDP
-title: Terraform modules
-h1: "Terraform modules in the Pulumi Cloud registry"
+title_tag: Terraform module registry | Pulumi
+title: Terraform module registry
+h1: Terraform modules in the Pulumi Cloud registry
 meta_desc: Publish and consume Terraform modules in Pulumi Cloud using the HCP-compatible registry surface.
 menu:
+  integrations:
+    name: Module registry
+    parent: integrations-terraform
+    identifier: integrations-terraform-module-registry
+    weight: 3
   idp:
+    name: Terraform modules
     parent: idp-concepts
     identifier: idp-concepts-terraform-modules
     weight: 15
 aliases:
   - /docs/terraform-modules/
   - /docs/iac/using-pulumi/pulumi-cloud/registry/terraform-modules/
+  - /docs/idp/concepts/terraform-modules/
 ---
 
 Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Every module version you publish is also converted into a Pulumi package. The module's variables become typed inputs and its outputs become typed outputs, with a generated SDK in TypeScript, JavaScript, Python, Go, .NET, or Java, an API reference on the package's page, and a record of which stacks depend on it. You can also consume it directly from YAML or HCL, without generating an SDK. Conversion is additive: existing `.tf` consumers keep resolving the module over the Terraform protocol.
@@ -110,7 +117,7 @@ Usage tracking only counts consumption through the converted package. A stack or
 Installing a converted package requires Pulumi CLI 3.248.0 or newer. See [Download & Install Pulumi](/docs/install/) to install or upgrade.
 {{% /notes %}}
 
-The install resolves using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
+The install resolves using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/integrations/terraform/modules/) for examples.
 
 ## Consume from OpenTofu or Terraform
 

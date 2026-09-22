@@ -18,10 +18,6 @@ iac:
     parent: iac-guides-building-extending
     identifier: iac-guides-providers
     weight: 3
-  - name: Using Existing Tools
-    parent: iac-guides-building-extending
-    identifier: iac-guides-using-existing-tools
-    weight: 4
   - name: Migrating from...
     parent: iac-guides-migration
     identifier: iac-guides-migration-from
