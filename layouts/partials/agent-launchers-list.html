@@ -23,7 +23,7 @@
     <div>
         <a class="btn btn-outline w-full" href="{{ printf "codex://new?prompt=%s" $encodedPrompt | safeURL }}" data-open-scheme data-track="{{ $track }}-open-codex">
             {{ partial "icon.html" (dict "name" "brand/openai" "class" "size-5") }}
-            Codex app
+            Codex
         </a>
         <p class="mt-2 mb-0 text-sm text-gray-primary" data-open-fallback hidden>Nothing opened? <a href="https://chatgpt.com/codex" target="_blank" rel="noopener">Install the Codex app</a>, or copy the prompt above.</p>
     </div>
