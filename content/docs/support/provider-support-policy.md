@@ -16,18 +16,18 @@ For a set of widely used providers, Pulumi also ships security updates for the p
 
 ## Providers covered
 
-- `pulumi-aws`
-- `pulumi-azure`
-- `pulumi-azure-native`
-- `pulumi-azuread`
-- `pulumi-command`
-- `pulumi-docker-build`
-- `pulumi-gcp`
-- `pulumi-kubernetes`
-- `pulumi-tls`
-- `pulumi-vault`
+- [`pulumi-aws`](/registry/packages/aws/)
+- [`pulumi-azure`](/registry/packages/azure/)
+- [`pulumi-azure-native`](/registry/packages/azure-native/)
+- [`pulumi-azuread`](/registry/packages/azuread/)
+- [`pulumi-command`](/registry/packages/command/)
+- [`pulumi-docker-build`](/registry/packages/docker-build/)
+- [`pulumi-gcp`](/registry/packages/gcp/)
+- [`pulumi-kubernetes`](/registry/packages/kubernetes/)
+- [`pulumi-tls`](/registry/packages/tls/)
+- [`pulumi-vault`](/registry/packages/vault/)
 
-## What ships on the long-term support branch
+## What ships on the long-term support (LTS) branch
 
 High/Critical CVE security patches:
 
@@ -39,22 +39,12 @@ An LTS release does not contain:
 - New upstream API versions.
 - New resources or new resource properties.
 - Performance improvements.
-- Non-security bug fixes, including customer-reported bugs.
+- Non-security bug fixes.
 - Compatibility with newer versions of the Pulumi engine, the Pulumi SDKs, or language runtimes.
 
 ### Engine support
 
 Providers will be compatible with the version of Pulumi they were frozen at unless otherwise prompted via security fixes.
-
-## Summary
-
-At any time, exactly one major version of a covered provider is the LTS version. Older majors receive no patches.
-
-| Support phase | Which version | Duration | What ships |
-| --- | --- | --- | --- |
-| **Current major (N)** | The latest released major. If v3 is the newest release, v3 is N. | Until the next major, N+1, ships. | New features, new resources, bug fixes, security patches, dependency upgrades, and new upstream API versions. |
-| **Long-term support (N−1)** | The major immediately before the current one. If v3 is N, then v2 is N−1. | Up to 12 months from the general availability of N, or until N+1 ships, whichever comes first. | Security updates in the provider's code or its direct dependencies. |
-| **End of life (N−2 and older)** | Every older major. | — | Nothing. |
 
 ### What the policy guarantees
 
@@ -65,8 +55,18 @@ At any time, exactly one major version of a covered provider is the LTS version.
 
 ## How to consume LTS releases
 
-- LTS releases follow the same distribution channels as current-major releases (i. e. the relevant SDK package registries for each language), but are tagged differently.
+- LTS releases are available through the same standard package registries as current-major releases, but are tagged differently.
 - Customers pinning to a specific major version (recommended) will automatically receive patch releases as they ship.
+
+## Summary
+
+At any time, exactly one major version of a covered provider is the LTS version. Older majors receive no patches. **N** is the latest released major version: if v3 is the newest release, then v3 is N, v2 is N−1, and v1 and earlier are end of life.
+
+| Support phase | Duration | What ships |
+| --- | --- | --- |
+| **Current major (N)** | Until N+1 ships. | New features, new resources, bug fixes, security patches, dependency upgrades, and new upstream API versions. |
+| **Long-term support (N−1)** | Up to 12 months from N's release, or until N+1 ships. | Security updates in the provider's code or its direct dependencies. |
+| **End of life (N−2 and older)** | — | Nothing. |
 
 ## Learn more
 
