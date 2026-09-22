@@ -17,8 +17,8 @@ description: |
 
 link_buttons:
   primary:
-    label: Get Started
-    link: /docs/discovery-governance/discovery/get-started/
+    label: Get started
+    link: /docs/discovery-governance/get-started/
 
 sections:
 - type: flat
@@ -27,60 +27,60 @@ sections:
     Pulumi Cloud provides complete visibility and control over your cloud infrastructure, whether resources were provisioned by Pulumi, Terraform, CloudFormation, or created manually.
 
     **Ways to get started:**
-    - **New to Pulumi?** Start with [Discovery](/docs/discovery-governance/discovery/) to scan existing infrastructure, then add Policy enforcement.
-    - **Already using Pulumi IaC?** Add [Policy](/docs/discovery-governance/policy/) to enforce compliance before deployments reach production.
-    - **Investigating infrastructure relationships?** Use the [Context API](/docs/discovery-governance/context-api/) to query dependencies, ownership, stack consumers, and change impact.
+    - **New to Pulumi?** Start with [Discovery](/docs/discovery-governance/concepts/discovery/) to scan existing infrastructure, then add Policy enforcement.
+    - **Already using Pulumi IaC?** Add [Policy](/docs/discovery-governance/concepts/policy-as-code/) to enforce compliance before deployments reach production.
+    - **Investigating infrastructure relationships?** Use the [Context API](/docs/discovery-governance/concepts/context-api/) to query dependencies, ownership, stack consumers, and change impact.
 
 - type: button-cards
   heading: Discovery
   cards:
   - icon: rocket-launch
-    heading: Get Started
-    link: /docs/discovery-governance/discovery/get-started/
+    heading: Get started
+    link: /docs/discovery-governance/get-started/
     description: Scan your cloud accounts and discover all infrastructure resources.
   - icon: lightbulb
-    heading: How Discovery Works
-    link: /docs/discovery-governance/discovery/
+    heading: How Discovery works
+    link: /docs/discovery-governance/concepts/discovery/
     description: Learn how Discovery scans cloud accounts and organizes resources for visibility and import.
   - icon: link
-    heading: Cloud Accounts
-    link: /docs/discovery-governance/discovery/accounts/
+    heading: Cloud accounts
+    link: /docs/discovery-governance/concepts/cloud-accounts/
     description: Connect cloud accounts to sync and monitor infrastructure resources.
   - icon: magnifying-glass
-    heading: Resource Search
-    link: /docs/discovery-governance/discovery/search/
+    heading: Search resources
+    link: /docs/discovery-governance/guides/search-resources/
     description: Find resources using structured queries or natural language.
   - icon: chart-bar
     heading: Visual Import
-    link: /docs/discovery-governance/discovery/visual-import/
+    link: /docs/discovery-governance/guides/visual-import/
     description: Import existing cloud resources into Pulumi management.
   - icon: upload
-    heading: Data Export
-    link: /docs/discovery-governance/discovery/data-export/
+    heading: Export resource data
+    link: /docs/discovery-governance/guides/export-resource-data/
     description: Export resource data to CSV or integrate via REST API.
 
 - type: button-cards
   heading: Policies
   cards:
   - icon: rocket-launch
-    heading: Get Started
-    link: /docs/discovery-governance/policy/get-started/
+    heading: Get started
+    link: /docs/discovery-governance/get-started/enforce-policy-as-code/
     description: Configure your first policy group and enforce compliance across Pulumi stacks and discovered cloud resources.
   - icon: lightbulb
-    heading: Policies Concepts
-    link: /docs/discovery-governance/policy/
+    heading: Policy as code
+    link: /docs/discovery-governance/concepts/policy-as-code/
     description: Learn how policies, policy packs, and policy groups work together to enforce compliance.
   - icon: package
-    heading: Pre-built Policy Packs
-    link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
+    heading: Pre-built policy packs
+    link: /docs/discovery-governance/guides/pre-built-policy-packs/
     description: Use ready-made compliance rules for CIS, HITRUST, NIST, PCI DSS, ISO 27001, and CMMC with no code required.
   - icon: arrows-clockwise
-    heading: Policy Groups
-    link: /docs/discovery-governance/policy/policy-groups/
+    heading: Policy groups
+    link: /docs/discovery-governance/concepts/policy-groups/
     description: Apply policy packs with preventative enforcement to block non-compliant deployments or audit mode to scan all discovered resources.
   - icon: warning
-    heading: Policy Findings
-    link: /docs/discovery-governance/policy/policy-findings/
+    heading: Policy findings
+    link: /docs/discovery-governance/operations/policy-findings/
     description: View violations, track remediation progress, and monitor compliance trends across all infrastructure.
 
 - type: button-cards
@@ -88,7 +88,7 @@ sections:
   cards:
   - icon: link
     heading: Context API overview
-    link: /docs/discovery-governance/context-api/
+    link: /docs/discovery-governance/concepts/context-api/
     description: Learn how graph queries help people investigate infrastructure dependencies, ownership, consumers, and change impact.
   - icon: code-window
     heading: Query the Context API
@@ -99,8 +99,8 @@ sections:
   heading: Self-hosted
   cards:
   - icon: buildings
-    heading: Self-hosted Discovery
-    link: /docs/discovery-governance/self-hosted/
+    heading: Self-hosted discovery and policy
+    link: /docs/discovery-governance/operations/self-hosted/
     description: Run Discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
 
 - type: flat

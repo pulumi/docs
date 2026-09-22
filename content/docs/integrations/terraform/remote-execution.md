@@ -21,7 +21,7 @@ Remote execution gives you:
 - **Centralized credentials** — use [Pulumi ESC](/docs/esc/) for cloud provider credentials instead of configuring them on every developer's laptop
 - **VCS automation** — pushes and pull requests trigger runs automatically through [deployment settings](/docs/deployments/concepts/settings/)
 - **Run approvals** — VCS-triggered applies pause for confirmation before proceeding, with confirm and discard controls in the Pulumi Cloud console
-- **Policy enforcement** — [preventative policies](/docs/discovery-governance/policy/) evaluate against the plan and block applies that violate policy
+- **Policy enforcement** — [preventative policies](/docs/discovery-governance/concepts/policy-as-code/) evaluate against the plan and block applies that violate policy
 - **Team visibility** — run history, logs, and status are visible in the Pulumi Cloud console
 
 ## How it works
@@ -257,9 +257,9 @@ To enable auto-apply (skip the approval step), set the `terraform:auto-apply` [s
 
 {{< pulumi-cloud "preventative-policies" />}}
 
-[Preventative policies](/docs/discovery-governance/policy/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
+[Preventative policies](/docs/discovery-governance/concepts/policy-as-code/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
 
-Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/integrations/terraform/state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/integrations/terraform/state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/concepts/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 
 ## Control execution mode
 
@@ -300,7 +300,7 @@ If you are migrating from HCP Terraform (Terraform Cloud), the remote execution 
 | --- | --- |
 | Workspace variables for credentials | [Pulumi ESC](/docs/esc/) environments |
 | `hostname = "app.terraform.io"` | `hostname = "tf.pulumi.com"` |
-| Sentinel / OPA for policy | [Pulumi policy packs](/docs/discovery-governance/policy/) |
+| Sentinel / OPA for policy | [Pulumi policy packs](/docs/discovery-governance/concepts/policy-as-code/) |
 | Runs page in HCP UI | Runs view in Pulumi Cloud console (plan logs, apply logs, confirm/discard) |
 
 To migrate:
