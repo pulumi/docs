@@ -18,6 +18,7 @@ import "./customers-list";
 import "./details-dropdown";
 import "./copybutton";
 import "./copy-text";
+import "./share-button";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";

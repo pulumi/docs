@@ -1,0 +1,39 @@
+{{- $prompt := .prompt -}}
+{{- $track := .track -}}
+
+{{/* urlquery emits `+` for a space; the custom-scheme handlers below do not
+     necessarily decode that, so match encodeURIComponent. */}}
+{{- $encodedPrompt := replace (urlquery $prompt) "+" "%20" -}}
+
+{{/* The two halves are for different readers and never both show. On a phone
+     the realistic job is getting the prompt onto a laptop, so the share button
+     is the only extra action; every launcher below targets an agent that runs
+     on a desktop, so they start at md+. */}}
+<button type="button" class="btn btn-outline btn-xl w-full md:hidden" data-share-text="{{ $prompt }}" data-track="{{ $track }}-share" hidden>
+    {{ partial "icon.html" (dict "name" "paper-plane-right" "class" "size-5") }}
+    Send to myself
+</button>
+
+<div class="hidden md:block">
+    <p class="mt-8 mb-4 text-sm font-semibold text-center">Or open in:</p>
+
+    {{/* safeURL on every href is load-bearing: without it html/template re-encodes
+         the `%` of each escape (shipping `%2520` for a space) and filters the custom
+         schemes to #ZgotmplZ. */}}
+    <div class="grid grid-cols-3 gap-2">
+        <a class="btn btn-outline w-full" href="{{ printf "claude-cli://open?q=%s" $encodedPrompt | safeURL }}" data-track="{{ $track }}-open-claude-cli">
+            {{ partial "icon.html" (dict "name" "brand/claude" "class" "size-5") }}
+            Claude Code
+        </a>
+
+        <a class="btn btn-outline w-full" href="{{ printf "codex://new?prompt=%s" $encodedPrompt | safeURL }}" data-track="{{ $track }}-open-codex">
+            {{ partial "icon.html" (dict "name" "brand/openai" "class" "size-5") }}
+            Codex
+        </a>
+
+        <a class="btn btn-outline w-full" href="{{ printf "https://cursor.com/link/prompt?text=%s" $encodedPrompt | safeURL }}" target="_blank" rel="noopener" data-track="{{ $track }}-open-cursor">
+            {{ partial "icon.html" (dict "name" "brand/cursor" "class" "size-5") }}
+            Cursor
+        </a>
+    </div>
+</div>
