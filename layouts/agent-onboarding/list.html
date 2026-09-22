@@ -1,19 +1,4 @@
-{{/*
-    /agent-onboarding/ — a standalone page holding the onboarding prompt, a copy
-    button, and the agent launchers. Linked from a QR code at events, so the
-    phone case has to be right, but it is a normal responsive page rather than a
-    phone-shaped one: the hero is the same centered composition as the case-study
-    and whitepaper heroes, and the launchers open out at md+
-    (layouts/partials/agent-launchers.html).
-
-    Defining only "main" inherits the default chrome from layouts/_default/baseof.html
-    — header, footer, skip link, consent manager — rather than hand-rolling a
-    shell. Light theme only: the page isn't under body.section-docs, so the docs
-    dark-mode system doesn't apply to it.
-*/}}
-
 {{ define "main" }}
-    {{/* Same text as the copy-prompt block on /docs/get-started/. */}}
     {{ $prompt := "Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi." }}
     <div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-8 md:gap-12">
 

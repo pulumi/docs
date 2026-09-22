@@ -7,9 +7,6 @@
 // canonical palette.
 html:not([data-theme="dark"]) body.section-docs {
     // Flip the dark code surface + text (set in _chroma.scss / _code.scss).
-    // `.copy-prompt` is excluded the same way the chrome-owning components below
-    // are: its wrapper draws the border and paints the surface itself, and its
-    // content is one sentence of prose rather than code to syntax-highlight.
     pre:not(.copy-prompt *) {
         background: color-mix(in srgb, var(--color-violet-50) 50%, transparent);
         color: #212121;
