@@ -50,6 +50,14 @@ sections:
     link: /docs/integrations/version-control/azure-devops-integration/
 
 - type: button-cards
+  heading: Terraform & OpenTofu
+  cards:
+  - image: /logos/tech/terraform.svg
+    heading: Terraform & OpenTofu
+    description: Store Terraform state and run plans in Pulumi Cloud, use Terraform providers and modules in Pulumi programs, or convert HCL.
+    link: /docs/integrations/terraform/
+
+- type: button-cards
   heading: Developer tools
   cards:
   - icon: code-window

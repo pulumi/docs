@@ -1,14 +1,16 @@
 ---
-title_tag: Convert HCL Code | Pulumi for Terraform Users
-title: Convert HCL Code
-h1: "Convert HCL Code"
+title_tag: Convert Terraform HCL to Pulumi | Pulumi
+title: Convert Terraform HCL to Pulumi
+h1: Convert Terraform HCL to Pulumi
 meta_desc: Learn when and how to convert existing Terraform HCL code to Pulumi programs using automated tools and manual techniques.
-weight: 7
 menu:
-    iac:
-        name: Convert HCL Code
-        parent: terraform-get-started
-        weight: 7
+  integrations:
+    name: Convert HCL
+    parent: integrations-terraform
+    identifier: integrations-terraform-convert-hcl
+    weight: 6
+aliases:
+  - /docs/iac/get-started/terraform/convert-hcl/
 ---
 
 ## Do you need to convert?
@@ -1288,5 +1290,3 @@ Any time you use an automated conversion tool, review and validate what it produ
 1. **Preserve structure**: Keep similar resource organization when possible
 1. **Document changes**: Note any differences between original and converted code
 1. **Version control**: Use Git to track conversion changes
-
-{{< get-started-stepper >}}

@@ -8,6 +8,9 @@ menu:
         name: Any Terraform Provider
         parent: iac-concepts-providers
         weight: 5
+aliases:
+  - /docs/iac/get-started/terraform/terraform-providers/
+  - /docs/iac/using-pulumi/pulumi-packages/terraform-provider/
 ---
 
 You can use any [Terraform](https://registry.terraform.io) or [OpenTofu](https://search.opentofu.org) provider directly in your Pulumi programs. Between them, those ecosystems cover thousands of providers spanning clouds, SaaS platforms, on-premises systems, and internal tooling, and the Any Terraform Provider feature makes them available to Pulumi.
@@ -339,12 +342,19 @@ Many of the more popular providers Pulumi makes available this way are also list
 
 If the provider you need isn't in the Pulumi Registry, search the [OpenTofu registry](https://search.opentofu.org) and add it with [`pulumi package add`](#adding-a-terraform-provider).
 
+## Best practices
+
+1. **Use a Pulumi provider when one exists**: A provider published in the Pulumi Registry is maintained, documented, and versioned for Pulumi, so prefer it over adding the Terraform provider directly.
+1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job generates the same SDK.
+1. **Document provider usage**: Record which Terraform providers your team uses and why, so they can be revisited when a Pulumi provider becomes available.
+1. **Watch for upstream changes**: Track the provider's releases for breaking changes before you upgrade.
+
 ## Learn more
 
 - [Pulumi Registry: Terraform Provider](/registry/packages/terraform-provider/) - Installation and configuration guide
 - [Resource providers](/docs/iac/concepts/providers/) - How providers work in Pulumi
 - [Pulumi packages](/docs/iac/concepts/packages/) - Pulumi's package system
 - [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) - Working with locally generated SDKs
-- [Use Terraform Providers](/docs/iac/get-started/terraform/terraform-providers/) - Quick start guide
+- [Terraform & OpenTofu integration](/docs/integrations/terraform/) - Every way Pulumi works with Terraform and OpenTofu
 - [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) - Command reference
 - [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) - Command reference

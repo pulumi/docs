@@ -1,16 +1,16 @@
 ---
-title_tag: Reference Terraform State | Pulumi for Terraform Users
-title: Reference Terraform State
-h1: "Reference Terraform State"
-meta_desc: Learn how to read from existing Terraform state files in Pulumi for seamless coexistence.
-weight: 4
+title_tag: Reference Terraform state | Pulumi
+title: Reference Terraform state
+h1: Reference Terraform state
+meta_desc: Read outputs from existing Terraform state files in Pulumi programs so Pulumi and Terraform can manage infrastructure side by side.
 menu:
-    iac:
-        name: Reference Terraform State
-        parent: terraform-get-started
-        weight: 4
-
+  integrations:
+    name: Reference Terraform state
+    parent: integrations-terraform
+    identifier: integrations-terraform-reference-state
+    weight: 5
 aliases:
+  - /docs/iac/get-started/terraform/reference-state/
 ---
 
 ## Why reference state?
@@ -23,7 +23,7 @@ Common scenarios include:
 * Development teams deploy applications with Pulumi
 * Gradual adoption of Pulumi happens alongside existing Terraform workflows
 
-## Referencing Existing Infrastructure State
+## Reference existing infrastructure state
 
 Here's an example of a minimal Terraform config that centrally manages an AWS ECS cluster and ECR repository. Pulumi can reference these outputs programmatically.
 
@@ -513,11 +513,41 @@ Our Pulumi program references a local Terraform state file to get the important 
 
 This example demonstrates how Pulumi can seamlessly consume Terraform outputs to deploy applications on existing shared infrastructure.
 
+## Reference multiple state files
+
+Larger Terraform estates usually split state by layer, such as networking in one workspace and security in another. A Pulumi program can read from as many state files as it needs. This example uses [`getS3Reference`](/registry/packages/terraform/api-docs/state/gets3reference/), the counterpart of `getLocalReference` and `getRemoteReference` for state stored in an S3 bucket, to combine outputs from two workspaces:
+
+```typescript
+import * as aws from "@pulumi/aws";
+import * as terraform from "@pulumi/terraform";
+
+const networkState = terraform.state.getS3ReferenceOutput({
+    bucket: "terraform-state",
+    key: "network/terraform.tfstate",
+});
+
+const securityState = terraform.state.getS3ReferenceOutput({
+    bucket: "terraform-state",
+    key: "security/terraform.tfstate",
+});
+
+const cluster = new aws.ecs.Cluster("app-cluster", {
+    configuration: {
+        executeCommandConfiguration: {
+            kmsKeyId: securityState.outputs["kms_key_id"],
+            logging: "DEFAULT",
+        },
+    },
+});
+
+export const privateSubnetIds = networkState.outputs["private_subnet_ids"];
+```
+
+Each call returns an object whose `outputs` map holds the values the Terraform configuration exports through its `output` blocks. Those values are Pulumi [outputs](/docs/iac/concepts/inputs-outputs/), so pass them directly into other resources rather than treating them as plain strings.
+
 ## Best practices
 
 1. **Use consistent naming**: Ensure Terraform output names are descriptive and stable
 2. **Secure state access**: Use Terraform Cloud to control access to state files
 3. **Document dependencies**: Document which Pulumi stacks depend on which Terraform states
 4. **Monitor state changes**: Be aware that changes to Terraform outputs will affect dependent Pulumi stacks
-
-{{< get-started-stepper >}}

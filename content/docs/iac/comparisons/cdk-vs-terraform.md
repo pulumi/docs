@@ -28,7 +28,7 @@ The three tools diverge structurally in how code becomes a deployed resource. AW
 | Cloud coverage | Any cloud or SaaS via [200+ providers](/registry/) | Any cloud via Terraform/OpenTofu providers | AWS only |
 | Deploys through | Pulumi's own deployment engine | Terraform CLI applies directly | AWS CloudFormation (CDK synthesizes to CFN templates) |
 | Preview/diff | `pulumi preview`, resource-level, no synthesis step | `terraform plan`, resource-level | `cdk diff`, compares to synthesized CloudFormation template |
-| State management | Pulumi Cloud (default), self-managed backends, or use Pulumi as a [Terraform/OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/) | HCP Terraform, S3/other remote backends, or local state | CloudFormation stack state (AWS-managed) |
+| State management | Pulumi Cloud (default), self-managed backends, or use Pulumi as a [Terraform/OpenTofu state backend](/docs/integrations/terraform/state-backend/) | HCP Terraform, S3/other remote backends, or local state | CloudFormation stack state (AWS-managed) |
 | Testing | Native unit/property tests in-language, run before any cloud call | Separate harness (`terraform test`, Terratest) | Native unit tests in-language (CDK assertions library), against synthesized template |
 | Reusable abstractions | Components, packages published to language package managers | Modules | Constructs, published as libraries via JSII |
 | Policy as code | Built-in ([Pulumi Policies](/docs/discovery-governance/policy/)) | Sentinel/OPA (HCP Terraform or separate tooling) | CloudFormation Guard, cdk-nag (separate tooling) |
@@ -47,7 +47,7 @@ Terraform and Pulumi both provision any cloud through a provider ecosystem. The 
 
 CDK relies entirely on CloudFormation's own stack state; there is no separate state file to manage, but there is also no state backend choice to make; you get CloudFormation's model or nothing.
 
-Terraform and OpenTofu track state in a file, typically stored remotely (HCP Terraform, an S3 bucket, or another supported backend). Pulumi defaults to Pulumi Cloud as a managed state backend, but as of 2026 can also run as [the state backend for existing Terraform or OpenTofu configurations](/docs/iac/get-started/terraform/terraform-state-backend/) via a standard `backend "remote"` block, with no change to how `.tf` files are authored.
+Terraform and OpenTofu track state in a file, typically stored remotely (HCP Terraform, an S3 bucket, or another supported backend). Pulumi defaults to Pulumi Cloud as a managed state backend, but as of 2026 can also run as [the state backend for existing Terraform or OpenTofu configurations](/docs/integrations/terraform/state-backend/) via a standard `backend "remote"` block, with no change to how `.tf` files are authored.
 
 ## How do you test infrastructure in each tool?
 
@@ -89,7 +89,7 @@ No. AWS CDK synthesizes to AWS CloudFormation templates, and CloudFormation only
 
 ### Is Pulumi a Terraform replacement or a CDK replacement?
 
-Both, depending on what you're replacing. Pulumi replaces CDK for teams that want the same general-purpose-language model without being locked to AWS and CloudFormation. Pulumi also replaces Terraform for teams that want the same multi-cloud provider coverage with real languages and tests instead of HCL — and, if you're not ready to leave HCL, Pulumi can run as [a drop-in state backend for existing Terraform or OpenTofu configurations](/docs/iac/get-started/terraform/terraform-state-backend/) with no rewrite required.
+Both, depending on what you're replacing. Pulumi replaces CDK for teams that want the same general-purpose-language model without being locked to AWS and CloudFormation. Pulumi also replaces Terraform for teams that want the same multi-cloud provider coverage with real languages and tests instead of HCL — and, if you're not ready to leave HCL, Pulumi can run as [a drop-in state backend for existing Terraform or OpenTofu configurations](/docs/integrations/terraform/state-backend/) with no rewrite required.
 
 ### What happened to CDK for Terraform (CDKTF)?
 
@@ -118,7 +118,7 @@ No. All three tools support incremental adoption. Pulumi can [import existing re
 * [Pulumi vs. CDKTF](/docs/iac/comparisons/cdktf/) — migration guidance now that CDKTF is deprecated
 * [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/) — comparing the underlying deployment target CDK synthesizes to
 * [HCL on Pulumi](/docs/iac/languages-sdks/hcl/) — run existing Terraform HCL files directly on Pulumi
-* [Using Pulumi Cloud as a Terraform/OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
+* [Using Pulumi Cloud as a Terraform/OpenTofu state backend](/docs/integrations/terraform/state-backend/)
 * [Migrating from AWS CDK to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cdk/)
 * [Token efficiency vs. cognitive efficiency: choosing IaC for AI agents](/blog/token-efficiency-vs-cognitive-efficiency-choosing-iac-for-ai-agents/) — Pulumi's own benchmark data on agent generation cost and repair cycles
 * [Pulumi Neo](/docs/ai/neo/) — an infrastructure engineering agent that works across these workflows
