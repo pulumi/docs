@@ -8,6 +8,9 @@ allow_long_title: true
 # of this value to schedule posts for publishing later.
 date: 2022-03-02
 
+# updated is shown to readers as an "Updated <date>" line beside the publish date.
+updated: 2026-09-21
+
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
 # previews. This field is required or the build will fail the linter test.
@@ -35,6 +38,10 @@ category: product
 In the last 12 months, we have experienced 350% year-over-year growth of our enterprise customers, including Mercedes-Benz, Snowflake, Atlassian and SANS Institute. Given the growth in our enterprise customer base, we are excited to launch today a new Business Critical Edition for the Pulumi Service, a 30 day Self-Hosted Pulumi Service trial, and the option to purchase Pulumi Enterprise and Business Critical through the AWS Marketplace!
 
 <!--more-->
+
+{{% notes type="info" %}}
+**Update:** The 30-day self-hosted trial announced in this 2022 post is no longer offered. To evaluate the Self-Hosted Pulumi Cloud today, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial).
+{{% /notes %}}
 
 ## Pulumi Business Critical Edition
 
@@ -66,7 +73,7 @@ We are also announcing today a 30 day trial for self-hosting the [Pulumi Service
 
 ![Self-Hosted Screenshot](self-hosted.png)
 
-The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For assistance setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
+The Self-Hosted Pulumi Service can be installed in any on-premises or cloud provider environment. It can also run in air-gapped environments without access to the Internet, including those with the most demanding compliance needs such as FedRAMP. In concert with the launch of the 30 day trial, we have made the [deployment reference architectures](https://github.com/pulumi/pulumi-self-hosted-installers) public. For help setting up your environment or if you don’t see your desired deployment option, [contact us](/contact/).  Full details on self-hosting the Pulumi Service can be found in our [Self-Hosted Pulumi Service documentation](/docs/administration/self-hosting/).
 
 ## Pulumi in the Amazon Web Services (AWS) Marketplace
 
