@@ -16,15 +16,19 @@ social:
   twitter: |
     AI agents need continuity, not just context.
 
-    How Pulumi Neo uses Kopia-backed workspace snapshots to recover files, tool output, and in-progress work when long-running tasks resume.
+    When a long-running task resumes, the hard part is not only restoring the conversation. It is getting the working directory back too.
+
+    Here's how we approached it in Pulumi Neo.
   linkedin: |
     Long-running infrastructure agents do not only produce messages. They produce working directories: source changes, generated files, local commits, tool output, and state that may live outside Git.
 
-    We wrote about how Pulumi Neo moved from reconstructing repositories to restoring Kopia-backed workspace snapshots, and what we learned about recovery boundaries, rollout safety, observability, and task-scoped isolation.
+    We wrote about what it took to make Pulumi Neo resume with real workspace continuity, and the design lessons that fell out of treating agent recovery as more than conversation replay.
   bluesky: |
     AI agents need continuity, not just context.
 
-    How Pulumi Neo uses Kopia-backed workspace snapshots so long-running tasks can recover their files and keep working.
+    Resuming a long-running task means getting the workspace back, not just the chat history.
+
+    Here's how we approached that in Pulumi Neo.
 ---
 
 Pulumi Neo works on infrastructure the way an engineer does: it clones repositories, edits files, installs dependencies, runs previews, and sometimes leaves behind useful generated state. That means a task is not just a conversation. It is also a filesystem.
