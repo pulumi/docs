@@ -348,8 +348,8 @@
       "hash": "36e1f7036fefadc0a3a47ea32a7aa9e179acf4677baaeac19d88c1f596fd8455"
     },
     "AgentTask": {
-      "hash": "b282c037f9c88dda4e4aae3af924019647c424ed9d4c849333940a0e5c0bf65f",
-      "lastmod": "2026-09-15"
+      "hash": "5d34fac5d8d2f503b21ed6bc6902ee4e71c199e196a0c3748f65bd542fde66db",
+      "lastmod": "2026-09-22"
     },
     "AgentTaskIntegrationRef": {
       "hash": "b05a08fca109dbfd03a0975e1a7dd6fd63b4946c794a6603c617893bd2248539",
@@ -2270,8 +2270,8 @@
       "lastmod": "2026-09-15"
     },
     "OrganizationFeatures": {
-      "hash": "86bba177f6d142860f1434304448affab69087037d517e382525d814b9e844c7",
-      "lastmod": "2026-09-19"
+      "hash": "58c85f6c89e145b9d231913bd53d745ec470e3c6193a0ddcd3e67e2fd1ccdd1c",
+      "lastmod": "2026-09-22"
     },
     "OrganizationMember": {
       "hash": "a19db2f6f84025b43e38bcd81a4805699b2f33aa4905a2f78be83f55897b180f",
