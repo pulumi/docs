@@ -27,10 +27,6 @@ For a set of widely used providers, Pulumi also ships security updates for the p
 - `pulumi-tls`
 - `pulumi-vault`
 
-## Duration of long-term support
-
-A provider's LTS branch is supported until the next major version ships, for up to 12 months.
-
 ## What ships on the long-term support branch
 
 High/Critical CVE security patches:
