@@ -1,5 +1,5 @@
 ---
-title: Accelerating Enterprise Innovation through Cloud Engineering
+title: Accelerating enterprise innovation through cloud engineering
 description: |
     Pulumi is a cloud engineering platform that gives enterprises a unified process for delivering infrastructure and applications for greater innovation velocity.
 meta_desc: |
@@ -23,11 +23,13 @@ sections:
       anchor: conclusion
 ---
 
-## Executive summary
-
+{{% panel title="Executive summary" id="executive-summary" %}}
 Enterprises are facing an unprecedented challenge of delivering business innovation and customer value more quickly and at high scale. They must tame complexity across hybrid clouds and increase reliability and security across the organization in order to accelerate release velocity and match the scale of customer demand. Enterprises are faced with managing disparate teams across infrastructure, development, and compliance using countless technologies and tools to deliver and manage infrastructure critical for business innovation. Cloud engineering is the practice of applying software engineering to tame the complexity of delivering and managing modern cloud applications.
 
 In this whitepaper, we will look at the implications of cloud engineering and present solutions for adopting cloud engineering to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation.
+{{% /panel %}}
+
+---
 
 ## Introduction to cloud engineering
 
@@ -51,9 +53,9 @@ Cloud engineering teams deliver both infrastructure and application code through
 
 Cloud engineering teams manage and secure their cloud infrastructure and applications through repeatable, auditable code and management processes that enable visibility. Teams use policy-as-code as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Auditing controls that track all cloud resource changes across all cloud infrastructure enable faster, more reliable compliance even across the most complex of architectures and deployments. Finally, enabling deeper visibility increases collaboration between infrastructure, development, and compliance teams by reducing miscommunication and friction among teams.<br>
 
----
-
 Cloud engineering is a practice that provides a blueprint on the processes to employ in order to use software engineering across infrastructure, development, and compliance teams to transform the way infrastructure is managed. The next section discusses the tools needed to make it easier to adopt the practices.
+
+---
 
 ## Accelerating innovation through cloud engineering
 
@@ -72,6 +74,8 @@ Enterprises that require specific data controls can use the self-hosted Pulumi s
 The new order of problems that come with the adoption of the modern cloud—multi-cloud complexity, repeatability risks, security and reliability, velocity slowdowns—can be solved through cloud engineering empowered by the Pulumi platform. __Pulumi tames modern cloud complexity.__ It provides one consistent approach to accessing hundreds of cloud providers and works for the entire enterprise as each team scales up. __Pulumi reduces risk through automation.__ Enterprises can leverage a rich and programmable cloud interface with reusable packages that abstract away complexity to increase consistency and reduce maintenance across infrastructure. __Pulumi provides better guardrails for reliability and security.__ Pulumi also fosters collaboration between developers, infrastructure teams, and security engineers using Policy as Code to ensure cloud services and resources are used in a secure, consistent, and well-architected way. Lastly, __Pulumi accelerates development velocity.__ Enterprises can employ software engineering practices with infrastructure as code—including modularity, testing, and CI/CD—to reduce deployment risks and increase development velocity.
 
 Pulumi accelerates innovation for enterprises because it allows enterprises to fully maximize the benefits of the modern cloud and capitalize on software engineering as a lever for digital transformation. The next section discusses the steps that should be taken to employ cloud engineering.
+
+---
 
 ## The cloud engineering journey
 
@@ -145,9 +149,9 @@ The next step after building reusable and modular components is establishing a s
 
 SSPs have a control and data plane. The control plane exposes the interface that users interact with and orchestrates the provisioning of infrastructure requested. The data plane is the shared platform components or application components used by developers. The Pulumi Automation API allows the embedding of Pulumi programs directly into the application code of the SSP control plane. The Automation API is a strongly typed, programmatic interface for running Pulumi programs without the Pulumi CLI. With the Automation API, enterprises can build control planes that natively execute Pulumi programs to provision data plane infrastructure components. No other infrastructure as code tool has this capability.
 
----
-
 Pulumi provides a platform that supports all stages of the cloud engineering journey with each stage progressively unlocking greater benefits of the modern cloud. Enterprises rely on Pulumi as a trusted advisor and partner through this entire journey.
+
+---
 
 ## Success stories
 
@@ -173,6 +177,8 @@ Skai’s DevOps group migrated a core monolith service from its private cloud to
 ### SANS Institute
 
 SANS Institute’s DevOps team reduced deployment times for a key service by up to 70% by moving from a domain-specific language to Pulumi and implementing software engineering practices like Git and CI/CD. [Read the case study](/customers/sans-institute/).
+
+---
 
 ## Conclusion
 

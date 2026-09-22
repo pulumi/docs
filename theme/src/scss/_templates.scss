@@ -101,17 +101,6 @@
         @include section-description();
     }
 
-    // Centered variant for non-event, non-product pages (e.g. whitepapers)
-    &--centered {
-        .title {
-            @apply text-black heading-xl text-center leading-tight tracking-tight;
-        }
-
-        .description {
-            @include section-description();
-            @apply text-center;
-        }
-    }
 
     // Product page widgets
     //
@@ -372,44 +361,6 @@
     }
 }
 
-// Shared content styles for sidebar-nav pages (whitepapers, case studies, etc.)
-.template-sidebar-content {
-    h2 {
-        @apply font-semibold heading-2 leading-extra-tight scroll-mt-22;
-
-        @include screen-lg {
-            @apply scroll-mt-28;
-        }
-    }
-
-    h3 {
-        @apply font-semibold heading-3 leading-tight scroll-mt-22;
-
-        @include screen-lg {
-            @apply scroll-mt-28;
-        }
-    }
-
-    h4, h5, h6 {
-        @apply font-semibold body-2xl leading-tight scroll-mt-22;
-
-        @include screen-lg {
-            @apply scroll-mt-28;
-        }
-    }
-
-    .description {
-        @include section-description();
-    }
-
-    p a, li a, .description a {
-        @apply text-violet-primary;
-
-        &:hover {
-            @apply text-violet-600;
-        }
-    }
-}
 
 .template-section-header {
 
@@ -517,6 +468,12 @@
     .counter-card-label {
         @apply body-lg;
         @apply m-0;
+    }
+
+    // Opt-in accent for a stat row set inside body copy, where the default black
+    // numbers read as a second set of headings.
+    &.template-counter-cards--violet .counter-card-number {
+        @apply text-violet-primary;
     }
 }
 

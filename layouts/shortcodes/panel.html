@@ -1,0 +1,31 @@
+{{/*
+    panel — markdown body in the shared tinted panel (.card-highlight from
+    theme/src/scss/shared/_card.scss). For a summary, an aside, or a closing
+    call to action that should read as set apart from the body without being a
+    callout with an icon.
+
+    Do not hand-roll a violet box: .card-highlight is the site's tinted panel and
+    already resolves to the right fill in docs dark mode.
+
+    Params:
+      title  optional label rendered above the body
+      id     optional anchor, for when the panel replaces a heading that a table
+             of contents links to
+
+    Usage:
+      {{% panel title="Start today" %}}
+      Body **markdown**.
+      {{% /panel %}}
+*/}}
+{{- /* The blank lines around .Inner are load-bearing. An opening tag starts a
+       raw HTML block, and markdown stops processing until a blank line closes
+       it — without them the body's first paragraph renders its own asterisks.
+       Same reason for the blank line before the closing </div>. */ -}}
+{{- $title := .Get "title" -}}
+{{- $id := .Get "id" -}}
+<div class="panel card-highlight p-8 md:p-10"{{ with $id }} id="{{ . }}"{{ end }}>
+{{ with $title }}<p class="panel-title">{{ . | $.Page.RenderString }}</p>{{ end }}
+
+{{ .Inner }}
+
+</div>
