@@ -10,7 +10,6 @@ allow_long_title: true
 tags:
     - pulumi-cloud
     - policy-as-code
-    - crossguard
     - features
     - user-experience
     - pulumi-neo

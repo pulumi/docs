@@ -3,7 +3,7 @@ title: "Golden Paths in IDPs: A Complete Guide to Reusable Infrastructure with P
 feature_image: feature.png
 allow_long_title: true
 date: 2025-08-20T10:00:00+02:00
-updated: 2026-09-01
+updated: 2026-09-06
 draft: false
 series: idp-best-practices
 faq_schema: true
@@ -58,6 +58,10 @@ const app = new SecureWebApplication("my-app", {
     environment: "production"
 });
 ```
+
+### Layer 3: Golden path layer - templates
+
+Templates are the layer developers actually consume. A [template](/docs/idp/concepts/organization-templates/) wraps one or more components in opinionated project scaffolding — repo structure, CI/CD wiring, policy guardrails, and sensible defaults — so starting a new service is one command instead of a design exercise. The rest of this guide builds a component first, then shows how a golden path template turns it into that one-command experience.
 
 ## Part 1: Building Reusable Infrastructure Components
 
@@ -202,15 +206,18 @@ This documentation will help developers understand how to use your component eff
 
 ### Publishing Your Component via Private Registry
 
-Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/concepts/private-registry/):
+Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/concepts/private-registry/). This assumes your component's source already lives in a Git repository — the example below publishes from `github.com/myorg/microservice-component`, so swap in your own repository's path:
 
 ```bash
 # Tag your component version
 git tag v1.0.1
+git push origin v1.0.1
 
-# Publish to your organization's registry
-pulumi package publish https://registry.pulumi.com/myorg/microservice-component
+# Publish to your organization's private registry
+pulumi package publish github.com/myorg/microservice-component@1.0.1
 ```
+
+The argument is the component's source, not a registry URL: `pulumi package publish` takes a Git repository, a plugin reference, or a local schema file, and publishes it to the private registry of your [default organization](/docs/iac/cli/commands/pulumi_org_set-default/). If you belong to more than one org, pass `--publisher ORG_NAME`.
 
 Now any team in your organization can discover and use your component, regardless of their language preference. All they need is to navigate to the `Components` section in the Pulumi IDP and search for `microservice-component`.
 
@@ -722,13 +729,13 @@ Golden paths aren’t complete until they deliver measurable value. Use these KP
 
 ## Real-World Results: Success Stories
 
-Organizations using golden paths report significant improvements in speed and reliability:
+Organizations using golden paths report significant improvements in speed and consistency:
 
 - **[Snowflake](https://www.pulumi.com/case-studies/snowflake/)** reduced deployment time from 1.5 weeks to less than a day
-- **[Mercedes-Benz](https://www.pulumi.com/case-studies/mercedes-benz/)** decreased infrastructure provisioning from weeks to minutes
-- **[Starburst Data](https://www.pulumi.com/case-studies/starburst/)** cut deployment time from 2 weeks to 3 hours
+- **[Starburst Data](https://www.pulumi.com/case-studies/starburst/)** cut deployment time from 2 weeks to 3 hours, a 112x improvement
+- **[Mercedes-Benz R&D North America](https://www.pulumi.com/case-studies/mercedes-benz/)** moved hundreds of microservices to the cloud on one toolset shared by its application and infrastructure teams
 
-These results show that golden paths are not just developer tools, they're a competitive advantage. To learn more, download the whitepaper: [The Golden Path to Cloud Success: Your IDP Roadmap](https://info.pulumi.com/whitepaper-the-golden-path-to-cloud-success).
+Golden paths give developers a faster route to production and give platform teams a consistent one to maintain. To learn more, download the whitepaper: [The Golden Path to Cloud Success: Your IDP Roadmap](https://info.pulumi.com/whitepaper-the-golden-path-to-cloud-success).
 
 ## Common Pitfalls and How to Avoid Them
 
