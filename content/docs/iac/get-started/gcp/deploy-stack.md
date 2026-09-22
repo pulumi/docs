@@ -26,7 +26,7 @@ $ pulumi up
 
 This command first shows you a **preview** of the changes that will be made:
 
-```
+```output
 Previewing update (dev)
 
      Type                   Name            Plan
@@ -52,7 +52,7 @@ see more information about the proposed update like your bucket's properties.
 
 To proceed and deploy your new storage bucket, select `yes`. This begins an **update**:
 
-```
+```output
 Do you want to perform this update? yes
 Updating (dev):
 
@@ -69,8 +69,8 @@ Resources:
 Duration: 4s
 ```
 
-Updates can take some time since they wait for the cloud resources to finish being created. Storage buckets
-are quick, however, so the update will finish in just a few seconds.
+Updates can take some time because they wait for the cloud resources to finish being created. Storage buckets
+are quick, however, so this update finishes in a few seconds.
 
 {{< auto-naming-note resource="bucket" suffix="daa12be" >}}
 
@@ -128,14 +128,14 @@ $ pulumi stack output bucketName
 
 {{% /choosable %}}
 
-Running that command will print out the name of your bucket.
+Running that command prints the name of your bucket.
 
 ### View your update on Pulumi Cloud
 
-If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com/signin) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
+If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. Each one opens your stack in the [Pulumi Cloud console](https://app.pulumi.com/), which shows detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
 
 <a href="/images/getting-started/console-update.png" target="_blank">
-    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
+    <img src="/images/getting-started/console-update.png" alt="A stack update with console output in the Pulumi Cloud console" />
 </a>
 
 Now that the storage bucket has been provisioned, you'll update it to host a static website.
