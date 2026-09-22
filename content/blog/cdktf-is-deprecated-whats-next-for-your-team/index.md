@@ -38,11 +38,11 @@ HashiCorp's official recommendation is to export your projects to HashiCorp Conf
 cdktf synth --hcl
 ```
 
-As HashiCorp puts it in [the project's FAQ](https://github.com/hashicorp/terraform-cdk): "If you are not using AWS CDK, we highly recommend migrating to standard Terraform and HCL for long-term support and ecosystem alignment."
+As HashiCorp puts it in [the project's FAQ](https://github.com/hashicorp/terraform-cdk#faq): "If you are not using AWS CDK, we highly recommend migrating to standard Terraform and HCL for long-term support and ecosystem alignment."
 
 You don't have to stay on Terraform itself to take this path. [OpenTofu](/docs/iac/comparisons/opentofu/), the open-source fork now stewarded by the Linux Foundation, is broadly compatible with Terraform's HCL, providers, and modules, and it's continued to ship on its own schedule — the latest stable release, 1.12.6, landed in August 2026 with capabilities like state encryption, early variable evaluation, and OCI registry support that arrived on OpenTofu before Terraform. Either way, you're still writing HCL.
 
-Some teams managing many Terraform or OpenTofu configurations also reach for [Terragrunt](https://terragrunt.gruntwork.io/) to keep them DRY. Terragrunt hit its 1.0 milestone in early 2026 with an explicit backwards-compatibility guarantee and stabilized support for defining multiple environments as "Stacks" from a single configuration. It's a genuinely useful orchestration layer, but it sits on top of the `terraform` or `tofu` CLI rather than replacing it, so it changes how your HCL is organized, not what language you write it in.
+Some teams managing many Terraform or OpenTofu configurations also reach for Terragrunt to keep them DRY. [Terragrunt hit its 1.0 milestone in March 2026](https://www.gruntwork.io/blog/terragrunt-1-0-released) with an explicit backwards-compatibility guarantee and stabilized support for defining multiple environments as "Stacks" from a single configuration. It's a genuinely useful orchestration layer, but it sits on top of the `terraform` or `tofu` CLI rather than replacing it, so it changes how your HCL is organized, not what language you write it in.
 
 Of course, if you're using CDKTF, you probably chose it specifically to avoid HCL in the first place. Terraform, OpenTofu, and Terragrunt on top of either one, are all still HCL under the hood, so this path is worth considering mainly for teams willing to make that tradeoff.
 
@@ -57,8 +57,9 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 
 const bucket = new s3.Bucket(this, 'my-bucket', {
     bucketName: 'my-example-bucket',
-    versioned: true,
-    publicReadAccess: false,
+    tags: {
+        Environment: 'dev',
+    },
 });
 ```
 
@@ -81,9 +82,9 @@ Despite their surface similarities, CDKTF and AWS CDK have little in common. Mig
 
 ### Option 3: Move to the community fork, CDK Terrain
 
-A newer option didn't exist when CDKTF was first deprecated: [CDK Terrain](https://cdktn.io/) (CDKTN), a community-led fork of CDKTF maintained under the [Open Construct Foundation](https://github.com/open-constructs). It lets you keep writing infrastructure in TypeScript or Python, keep your existing constructs largely intact, and run the result against either Terraform or OpenTofu. It's picked up enough traction to land on the ThoughtWorks Technology Radar, and it's the lowest-diff path off CDKTF of any option here, since much of your existing code carries over directly.
+A newer option didn't exist when CDKTF was first deprecated: [CDK Terrain](https://github.com/open-constructs/cdk-terrain) (CDKTN), a community-led fork of CDKTF governed by the Open Construct Foundation. It supports TypeScript, Python, Java, C#, and Go, and runs the result against either Terraform or OpenTofu. [ThoughtWorks placed it in the "Assess" ring of its Technology Radar](https://www.thoughtworks.com/en-us/radar/tools/cdk-terrain), noting that it "picks up where CDKTF left off" while also flagging that community-maintained forks of vendor-abandoned projects carry inherent long-term-support risk. With that caveat in mind, it's the lowest-diff path off CDKTF of any option here, since much of your existing code carries over directly.
 
-The tradeoff is what you're giving up along with HashiCorp: CDK Terrain is run by its community rather than a vendor with dedicated engineering resources, so its long-term pace and support are still being established. It also inherits CDKTF's underlying execution model — your code still synthesizes to HCL or JSON before anything gets applied, rather than deploying directly the way CDKTF's own docs described as one of its slower points. If you want to keep exactly the authoring experience CDKTF gave you and are comfortable betting on a young, community-run project, it's worth a serious look.
+The tradeoff is what you're giving up along with HashiCorp: CDK Terrain is run by its community rather than a vendor with dedicated engineering resources, so its long-term pace and support are still being established. It also inherits CDKTF's underlying execution model — your code still synthesizes to HCL or JSON as a separate step before anything gets applied. If you want to keep exactly the authoring experience CDKTF gave you and are comfortable betting on a young, community-run project, it's worth a serious look.
 
 ### Option 4: Migrate to Pulumi
 
@@ -177,7 +178,7 @@ Yes, in the short term. Existing CDKTF projects will keep working, since Terrafo
 
 ### Is there a maintained fork of CDKTF?
 
-Yes. [CDK Terrain](https://cdktn.io/) (CDKTN) is a community-led fork of CDKTF, maintained under the Open Construct Foundation, that lets you keep writing infrastructure in TypeScript or Python and run it against Terraform or OpenTofu. It's the closest option to staying exactly where you are, though it's run by the community rather than a commercial vendor.
+Yes. [CDK Terrain](https://github.com/open-constructs/cdk-terrain) (CDKTN) is a community-led fork of CDKTF, governed by the Open Construct Foundation, that supports TypeScript, Python, Java, C#, and Go and runs against Terraform or OpenTofu. [ThoughtWorks lists it in the "Assess" ring](https://www.thoughtworks.com/en-us/radar/tools/cdk-terrain) of its Technology Radar. It's the closest option to staying exactly where you are, though it's run by the community rather than a commercial vendor.
 
 ### Do OpenTofu or Terragrunt replace CDKTF?
 
