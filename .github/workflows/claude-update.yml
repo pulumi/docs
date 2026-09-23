@@ -580,7 +580,7 @@ jobs:
           steps.pr-context.outputs.surface != 'v3' &&
           steps.pr-context.outputs.retry_initial != 'true'
         id: claude
-        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
+        uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Use bot token so pushes trigger downstream workflows (e.g., social review)
@@ -703,7 +703,7 @@ jobs:
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.surface == 'v3'
         id: claude-v3
-        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
+        uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}

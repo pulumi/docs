@@ -129,7 +129,7 @@ jobs:
       - name: Run Claude Code
         if: steps.detect.outputs.has_broken == 'true'
         id: claude
-        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
+        uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Bot token so the PR/pushes trigger downstream workflows.

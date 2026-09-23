@@ -1259,7 +1259,7 @@ jobs:
         # re-failed. Keep in sync with STEP_BUDGET_S in the
         # classify-outcome step.
         timeout-minutes: 18
-        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
+        uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Expose ANTHROPIC_API_KEY in the step env so Bash sub-shells (e.g.
