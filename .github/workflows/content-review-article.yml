@@ -248,7 +248,7 @@ jobs:
           python3 $S/verify-claims.py \
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-opus-5-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
           python3 $S/frontmatter-validate.py \
             --changed-files "$ARTICLE_PATH" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
@@ -262,7 +262,7 @@ jobs:
           python3 $S/readthrough.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-opus-5-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
           # --fix-mode: this lane APPLIES Vale findings; it does not post them.
           # The filter's default caps (10/file, 50 total) and its advisory
@@ -327,7 +327,7 @@ jobs:
           python3 $S/verify-claims.py \
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-opus-5-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
 
           echo "--- pre-compute artifacts (report-only) ---"
           jq -r '"\((.verdicts // []) | length) verdict(s), \((.errors // []) | length) error(s); tokens in=\(.meta.input_tokens // 0) out=\(.meta.output_tokens // 0)"' \
@@ -556,7 +556,7 @@ jobs:
           steps.precheck.outputs.skip != 'true' &&
           steps.backlog.outputs.skip != 'true' &&
           github.event.inputs.mode != 'report'
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # No github_token override: the action falls back to the job's
@@ -761,15 +761,14 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
-          # Effort: the fix lane applies high-confidence corrections and stays
-          # cheap. The glow-up lane is the one making judgment calls over a
-          # reconciled backlog and a page-wide sweep, and at `low` it executed
-          # a decline reason's aside as a finding (PR #21291) and trimmed a
-          # definition it then had to restore (PR #21293); the composer now
-          # removes those two traps mechanically, and `medium` is what the
-          # remaining judgment gets. Not `high` without a measurement.
+          # Effort: `medium` for both lanes. On Opus 5 the glow-up lane needed it
+          # (at `low` it executed a decline reason's aside as a finding, PR
+          # #21291, and trimmed a definition it then had to restore, PR #21293)
+          # while the fix lane ran `low`. On Opus 5.5 (`2026-09-22-opus55-fitness`)
+          # medium matched the fix lane's recall at half the old cost and lifted
+          # glow-up recall 10 -> 14 of 16, so one setting serves both.
           claude_args: |
-            --model claude-opus-5 --effort ${{ github.event.inputs.mode == 'glowup' && 'medium' || 'low' }}
+            --model claude-opus-5-5 --effort medium
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 

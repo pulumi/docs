@@ -224,8 +224,11 @@ STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 # answer to "is this line a new finding?" — extract_bucket_bullets and
 # extract_finding_paragraphs below, scrape-review-outcomes.py's paragraph walk,
 # and review-worklist.py's _bullet_blocks. Four private copies had already
-# drifted into existence; one definition is the point.
-FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
+# drifted into existence; one definition is the point. A struck-through
+# finding (`- ~~**[L6]** …~~ (resolved in abc123)`) is still a finding: update.md
+# tells the lane to strike X through when it moves to ✅ Resolved, and Opus 5.5
+# does so literally.
+FINDING_START_RE = re.compile(r"^(?:- )?(?:~~)?\*\*\S")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",

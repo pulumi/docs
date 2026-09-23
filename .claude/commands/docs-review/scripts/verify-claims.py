@@ -21,10 +21,9 @@ per-claim dispatch), gate it with the validator, leave only irreducible
 judgment (triage / bucket-promotion / framing / rendering) in the review.
 
 Why a direct API call (not `claude-code-action`): same reasons as
-`extract-claims-llm.py` — we need a forced tool schema, an explicit
-`thinking: {type: "disabled"}` (Sonnet 5 defaults adaptive thinking on and
-rejects non-default sampling params), and a small bounded loop, none of which
-`claude-code-action` exposes. Precedent: `extract-claims-llm.py` and
+`extract-claims-llm.py` — we need a strict tool schema, explicit
+thinking/effort control (Opus 5.5 at `medium`, adaptive thinking), and a small
+bounded loop, none of which `claude-code-action` exposes. Precedent: `extract-claims-llm.py` and
 `claude-triage.yml` already call `/v1/messages`.
 
 Routing (first match wins):
@@ -72,7 +71,7 @@ Usage:
 Output schema:
     {
       "schema_version": 1,
-      "model": "claude-sonnet-5",
+      "model": "claude-opus-5-5",
       "verdicts": [
         {"claim_id": "c1", "file": "content/blog/foo.md", "line_range": "L42",
          "text": "...", "type": "...",
@@ -133,11 +132,12 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-5"
+DEFAULT_MODEL = "claude-opus-5-5"
+EFFORT = "medium"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 
-MAX_TOKENS_VERIFY = 2048
+MAX_TOKENS_VERIFY = 4096     # per turn; adaptive thinking shares it
 HTTP_TIMEOUT = 120          # seconds per API call
 MAX_RETRIES = 3             # API-level retries on 429 / 5xx / transient network
 MAX_CONCURRENCY = 16        # parallel per-claim verifiers (short HTTPS round-trips — more parallelism trims wall-clock, same $)
@@ -1153,7 +1153,9 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         {"type": "text", "text": ROUTE_HEADERS.get(route, ROUTE_HEADERS["pass1"])},
     ]
     tools = tools_for_route(route)
-    tool_choice: dict = ({"type": "tool", "name": "verify_claim"} if route == "pass2" else {"type": "auto"})
+    # Opus 5.5 rejects a forced tool_choice (400), so pass2 relies on its route
+    # header plus the no-tool nudge below to land its single verify_claim call.
+    tool_choice: dict = {"type": "auto"}
     messages: list[dict] = [{"role": "user", "content": build_user_message(
         claim, route, evidence_pack, impl_refs, recheck=recheck)}]
     agg_usage = _zero_usage()
@@ -1163,12 +1165,10 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         body = {
             "model": model,
             "max_tokens": MAX_TOKENS_VERIFY,
-            # Sonnet 5 rejects non-default sampling params (temperature/top_p/
-            # top_k → 400) and defaults adaptive thinking ON when `thinking` is
-            # omitted. Disable thinking to preserve the prior behavior: it keeps
-            # the small per-turn token budget for the verdict/tool calls and
-            # avoids thinking interleaving with the forced pass-2 `verify_claim`.
-            "thinking": {"type": "disabled"},
+            # Opus 5.5 can't disable thinking (400); adaptive at medium effort
+            # measured +3 adjudicated anchors of 9 over Sonnet 5 (2026-09-22).
+            "thinking": {"type": "adaptive"},
+            "output_config": {"effort": EFFORT},
             "system": system,
             "tools": tools,
             "tool_choice": tool_choice,
@@ -1176,6 +1176,10 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         }
         resp = _post_messages(api_key, body)
         _accumulate_usage(agg_usage, resp.get("usage", {}) or {})
+        if resp.get("stop_reason") == "max_tokens":
+            # A truncated turn can carry a half-built tool call with empty input.
+            # Don't act on it or echo it back; spend a turn and ask again.
+            continue
         content = resp.get("content", []) or []
         tool_uses = [b for b in content if isinstance(b, dict) and b.get("type") == "tool_use"]
 

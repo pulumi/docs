@@ -396,14 +396,14 @@ jobs:
           python3 $S/verify-claims.py \
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-opus-5-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
           python3 $S/frontmatter-validate.py \
             --changed-files "$POST_PATH" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
           python3 $S/readthrough.py \
             --patch-file .synthetic.patch --changed-files "$POST_PATH" \
             --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-opus-5-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
           vale --no-exit --output=JSON "$POST_PATH" > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
@@ -418,7 +418,7 @@ jobs:
 
       - name: Run Claude Code
         id: claude
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Scheduled runs surface a Bot actor, which claude-code-action@v1
@@ -456,8 +456,11 @@ jobs:
           # The public Pulumi brand MCP server (voice/writing-style/terminology
           # source of truth) is wired via `claude_args --mcp-config`; its tools
           # are in --allowed-tools. No auth: the server is public.
+          # `high`, not the `low` it ran on Opus 5: on Opus 5.5 low/medium lost
+          # adjudicated recall; high came closest (6 vs 7.5 of 18) at ~0.6x the
+          # old cost (`2026-09-22-opus55-fitness`).
           claude_args: |
-            --model claude-opus-5 --effort low
+            --model claude-opus-5-5 --effort high
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 

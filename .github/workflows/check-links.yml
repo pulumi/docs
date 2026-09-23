@@ -129,7 +129,7 @@ jobs:
       - name: Run Claude Code
         if: steps.detect.outputs.has_broken == 'true'
         id: claude
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@9ca9355b36297178e28d37c799d1c9c8a28e6507 # v1 + Claude Code 2.1.280 (Opus 5.5 needs >= 2.1.280); back to @v1 once the tag moves
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Bot token so the PR/pushes trigger downstream workflows.
@@ -167,7 +167,7 @@ jobs:
           # source of truth) is wired via `claude_args --mcp-config`; its tools
           # are in --allowed-tools. No auth: the server is public.
           claude_args: |
-            --model claude-opus-5 --effort low
+            --model claude-opus-5-5 --effort low
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(curl:*)"
       # A step here used to label this lane's PR `sentinel:preview` (the
