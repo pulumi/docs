@@ -488,36 +488,74 @@ class MyStack : Stack
 {{% choosable language hcl %}}
 
 ```hcl
-provider "aws" {
-  region = "us-west-2"
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
 }
 
-resource "aws_vpc" "application_vpc" {
+resource "aws_ec2_vpc" "application-vpc" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
   assign_generated_ipv6_cidr_block = false
   cidr_block                       = "172.16.0.0/16"
   enable_dns_support               = true
   instance_tenancy                 = "default"
-
   tags = {
-    Name    = "pulumi-vpc"
-    Owner   = "pulumi"
-    Project = "pulumi-k8s-aws-cluster"
-  }
-
-  pulumi {
-    protect = true
+    "Name"    = "pulumi-vpc"
+    "Owner"   = "pulumi"
+    "Project" = "pulumi-k8s-aws-cluster"
   }
 }
 
-resource "aws_subnet" "public_1" {
-  vpc_id     = aws_vpc.application_vpc.id
-  cidr_block = "172.16.1.0/24"
-
+resource "aws_ec2_subnet" "public-1" {
   pulumi {
     protect = true
   }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.32.0/19"
+  map_public_ip_on_launch         = true
+  tags = {
+    "Name"                   = "pulumi-vpc-public-1"
+    "Owner"                  = "pulumi"
+    "Project"                = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/elb" = "1"
+    "type"                   = "public"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+
+resource "aws_ec2_subnet" "private-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.160.0/19"
+  map_public_ip_on_launch         = false
+  tags = {
+    "Name"                            = "pulumi-vpc-private-1"
+    "Owner"                           = "pulumi"
+    "Project"                         = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/internal-elb" = "1"
+    "type"                            = "private"
+  }
+  vpc_id = "vpc-0ad77710973388316"
 }
 ```
+
+The import file names resources by Pulumi type tokens such as `aws:ec2/vpc:Vpc`, so the generated program uses the `pulumi/aws` provider and its matching types (`aws_ec2_vpc`, `aws_ec2_subnet`). Keep that provider. The Terraform `aws` provider's `aws_vpc` and `aws_subnet` register under different tokens (`aws:index:Vpc`), so Pulumi would treat them as new resources rather than the ones you just imported.
 
 If the resources you are importing are already described by a Terraform or OpenTofu state file, skip the import file entirely and point the converter at the state file instead:
 
@@ -675,7 +713,7 @@ resource "aws_security_group" "my_sg" {
 }
 ```
 
-A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job without touching the resource body, which keeps the adoption separable from the declaration:
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job and leaves the resource body unchanged:
 
 ```hcl
 import {

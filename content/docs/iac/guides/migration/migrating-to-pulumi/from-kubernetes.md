@@ -196,7 +196,7 @@ resource "kubernetes_yaml_v2_config_file" "guestbook" {
 }
 ```
 
-`ConfigFile` exposes the objects it created as its `resources` output. HCL has no equivalent of the `getResource` helper the other languages use to pick one out by kind and name.
+`ConfigFile` exposes the objects it created as its `resources` output. HCL has no equivalent of the `getResource` helper the other languages use to pick one out by kind and name, so this program deploys the guestbook without exporting the frontend service's IP address.
 
 {{% /choosable %}}
 
@@ -208,7 +208,17 @@ As we can see here, the `getResource` function lets us retrieve an internal reso
 
 {{% /choosable %}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Running `pulumi up` deploys the same resources. Because the HCL program exports nothing, its output omits the `Outputs` section shown here:
+
+{{% /choosable %}}
 
 ```bash
 Updating (dev)
@@ -403,11 +413,23 @@ resource "kubernetes_yaml_v2_config_group" "guestbook" {
 }
 ```
 
+As with `ConfigFile`, HCL can't pick the frontend service out of the group's `resources` output, so this program exports no IP address.
+
 {{% /choosable %}}
 
 {{< /chooser >}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Running `pulumi up` will deploy the resources in every YAML file and then export the resulting frontend service's auto-assigned cluster IP address:
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Running `pulumi up` deploys the resources in every YAML file. Because the HCL program exports nothing, its output omits the `Outputs` section shown here:
+
+{{% /choosable %}}
 
 ```bash
 Updating (dev)
@@ -1050,7 +1072,7 @@ locals {
 }
 
 # Create an NGINX Deployment and load-balanced Service that use it.
-resource "kubernetes_apps_v1_deployment" "nginx_dep" {
+resource "kubernetes_apps_v1_deployment" "nginx-dep" {
   provider = kubernetes.renderer
 
   spec = {
@@ -1068,7 +1090,7 @@ resource "kubernetes_apps_v1_deployment" "nginx_dep" {
   }
 }
 
-resource "kubernetes_core_v1_service" "nginx_svc" {
+resource "kubernetes_core_v1_service" "nginx-svc" {
   provider = kubernetes.renderer
 
   metadata = { labels = local.labels }

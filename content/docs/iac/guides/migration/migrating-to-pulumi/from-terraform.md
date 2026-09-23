@@ -219,7 +219,17 @@ This produces a single HCL file for each stack at `./cdktf.out/stacks/<stack-nam
 
 #### Using the converter
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To use the converter, first [install Pulumi](/docs/install/), then change to a folder containing the HCL source files you'd like to convert.  Next, run `pulumi convert --from terraform` from within that folder:
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+To run your Terraform code on Pulumi without converting it, first [install Pulumi](/docs/install/), then change to the folder containing your `.tf` files:
+
+{{% /choosable %}}
 
 {{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
@@ -278,7 +288,7 @@ Adopting the resources you already have is a state migration rather than a code 
 {{% /choosable %}}
 {{< /chooser >}}
 
-{{% choosable language "typescript,python,go,csharp" %}}
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 This will generate a Pulumi program that when run with `pulumi up` will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated {{< langfile >}} file.
 
@@ -358,7 +368,7 @@ This will generate a local SDK in your programming language that you can import 
 
 {{% choosable language hcl %}}
 
-An HCL program consumes a Terraform module the way Terraform does — a `module` block — so there is no `pulumi package add` step and no generated SDK:
+An HCL program consumes a Terraform module with a `module` block, as Terraform does, so there is no `pulumi package add` step and no generated SDK:
 
 {{% /choosable %}}
 
@@ -504,7 +514,7 @@ output "vpc_id" {
 }
 ```
 
-Run `pulumi install` after adding the block so the module's providers are fetched. Pulumi caches remote modules under `~/.pulumi/modules/` and registers each module instance as a [component resource](/docs/iac/concepts/resources/components/).
+Run `pulumi install` after adding the block. It downloads the module into `~/.pulumi/modules/` and fetches the providers the module uses. Each module instance is registered as a [component resource](/docs/iac/concepts/components/).
 
 {{% /choosable %}}
 
@@ -522,7 +532,7 @@ pulumi package add hcl module ./path/to/module
 
 {{% choosable language hcl %}}
 
-A local module works the same way — point `source` at its directory:
+For a local module, point `source` at its directory:
 
 ```hcl
 module "vpc" {
