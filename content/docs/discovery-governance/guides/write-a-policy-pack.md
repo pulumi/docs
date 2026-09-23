@@ -46,7 +46,7 @@ Before authoring your first policy pack, ensure you have:
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/discovery-governance/concepts/policy-as-code/).
 
-The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements).
+The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements).
 
 ## Creating a policy pack
 
@@ -542,7 +542,7 @@ PolicyPack(
 {{% notes type="info" %}}
 Stack tags are available on both `StackValidationArgs` and `ResourceValidationArgs`, so resource-level policies can also make decisions based on stack metadata.
 
-You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`pulumi:tags` config](/docs/iac/concepts/config/#pulumitags) in your `Pulumi.yaml` or `Pulumi.<stack>.yaml` file, the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/discovery-governance/concepts/policy-groups/).
+You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac/cli/commands/pulumi_stack_tag_set/)), the [`pulumi:tags` config](/docs/iac/concepts/config/#pulumitags) in your `Pulumi.yaml` or `Pulumi.<stack>.yaml` file, the [`StackTag`](/registry/packages/pulumiservice/api-docs/stacktag/) resource from the [Pulumi Cloud provider](/registry/packages/pulumiservice/), the Pulumi Cloud console, or the [Stack Tags REST API](/docs/reference/cloud-rest-api/stack-tags/). To learn how to apply policy packs to groups of stacks, see [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/).
 {{% /notes %}}
 
 {{% notes type="info" %}}
@@ -1394,5 +1394,5 @@ This format helps users understand which resource failed and why.
 
 - [Apply policies to stacks and accounts using policy groups](/docs/discovery-governance/get-started/enforce-policy-as-code/)
 - [View and manage policy findings](/docs/discovery-governance/operations/policy-findings/)
-- [Learn about policy groups and enforcement modes](/docs/discovery-governance/concepts/policy-groups/#types-of-policy-groups)
-- [Learn about policy pack configuration](/docs/discovery-governance/concepts/policy-packs/)
+- [Learn about policy groups and enforcement modes](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#types-of-policy-groups)
+- [Learn about policy pack configuration](/docs/discovery-governance/concepts/policy-as-code/policy-packs/)

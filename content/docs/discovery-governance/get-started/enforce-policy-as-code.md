@@ -87,7 +87,7 @@ The policy groups table shows:
 - **Entities Applied**: Number of stacks or accounts governed by this group
 - **Policy Packs**: Number of policy packs included in this group
 
-Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/discovery-governance/concepts/policy-groups/#default-policy-groups).
+Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#default-policy-groups).
 
 #### Creating a preventative policy group
 
@@ -137,6 +137,6 @@ To deepen your understanding of Pulumi Policies:
 - **Write custom policies**: [Authoring Guide](/docs/discovery-governance/guides/write-a-policy-pack/)
 - **Explore pre-built policy packs**: [Pre-built Policy Packs](/docs/discovery-governance/guides/pre-built-policy-packs/)
 - **View and manage policy findings**: [Policy Findings](/docs/discovery-governance/operations/policy-findings/)
-- **Learn about enforcement modes**: [Policy Groups](/docs/discovery-governance/concepts/policy-groups/)
-- **Configure policy pack settings**: [Policy Packs](/docs/discovery-governance/concepts/policy-packs/)
+- **Learn about enforcement modes**: [Policy Groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/)
+- **Configure policy pack settings**: [Policy Packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/)
 - **Understand policy fundamentals**: [Policy Overview](/docs/discovery-governance/concepts/policy-as-code/)

@@ -6,8 +6,8 @@ meta_desc: Learn how to organize and apply policy packs using policy groups to e
 menu:
   discovery-governance:
     name: Policy groups
-    parent: dg-concepts
-    weight: 60
+    parent: dg-concepts-policy-as-code
+    weight: 30
 aliases:
   - /docs/insights/policy/preventative-vs-audit-policies/
   - /docs/insights/preventative-vs-audit-policies/
@@ -26,7 +26,7 @@ Pulumi Policies provides two types of policy groups, each designed for a differe
 
 - <a id="preventative-policy-groups"></a>**Preventative policy groups** apply to Pulumi stacks and run before any resource is deployed. They act as guardrails during `pulumi preview` and `pulumi up`, evaluating the resources your program declares and reporting violations in the same command the developer was already running. Because they run ahead of the deployment, a policy set to `mandatory` enforcement stops a non-compliant change before it reaches your cloud provider. They see only the resources Pulumi manages.
 
-- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/). For stacks, they evaluate the latest state each time the stack updates. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
+- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/). For stacks, they evaluate the latest state each time the stack updates. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
 
 At a glance:
 
@@ -60,7 +60,7 @@ Be careful when changing the default policy group. `default-policy-group` is a p
 
 To roll out a new policy pack safely, add it to a purpose-built audit policy group first, review the findings, then move it to `default-policy-group` once you understand its impact. See [Best practices](#best-practices).
 
-Adding a policy pack to `default-policy-group` also makes that pack's [runtime](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements) a prerequisite for everyone who runs Pulumi against any stack in your organization. Pulumi's pre-built policy packs all run on Node.js, so enabling one for every stack means every developer machine and CI runner needs Node.js installed, whatever language the Pulumi programs themselves are written in.
+Adding a policy pack to `default-policy-group` also makes that pack's [runtime](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements) a prerequisite for everyone who runs Pulumi against any stack in your organization. Pulumi's pre-built policy packs all run on Node.js, so enabling one for every stack means every developer machine and CI runner needs Node.js installed, whatever language the Pulumi programs themselves are written in.
 
 ### Managing the default policy groups programmatically
 
@@ -138,5 +138,5 @@ Rolling policy out in stages gives teams time to absorb each change and gives yo
 
 - [Create and configure policy groups](/docs/discovery-governance/get-started/enforce-policy-as-code/)
 - [View and manage policy findings](/docs/discovery-governance/operations/policy-findings/)
-- [Check policy pack runtime requirements](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements)
+- [Check policy pack runtime requirements](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements)
 - [Write custom policy packs](/docs/discovery-governance/guides/write-a-policy-pack/)

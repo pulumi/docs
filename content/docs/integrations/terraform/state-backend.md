@@ -418,7 +418,7 @@ steps:
 Once your Terraform state is in Pulumi Cloud, you can:
 
 - **View resources** in [Resource Search](/docs/discovery-governance/guides/search-resources/) alongside your Pulumi-managed resources
-- **Run audit policies** by adding the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-groups/) in Discovery
+- **Run audit policies** by adding the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) in Discovery
 - **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
 
 ### Resource mapping
@@ -433,9 +433,9 @@ Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/con
 
 {{< pulumi-cloud "audit-policies" />}}
 
-You can run [audit (detective) policy packs](/docs/discovery-governance/concepts/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/discovery-governance/guides/pre-built-policy-packs/) — to evaluate Terraform resources.
+You can run [audit (detective) policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/discovery-governance/guides/pre-built-policy-packs/) — to evaluate Terraform resources.
 
-To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-groups/) in Discovery. Policy packs are then evaluated continuously against the stack's resources.
+To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) in Discovery. Policy packs are then evaluated continuously against the stack's resources.
 
 {{% notes type="info" %}}
 Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/integrations/terraform/remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.

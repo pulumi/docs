@@ -42,7 +42,7 @@ The pack now appears in the **Organization** view, ready to use in policy groups
 An audit policy group evaluates the resources in your cloud accounts and reports violations without blocking anything.
 
 {{% notes type="info" %}}
-When you connected your account, the wizard added it to `default-accounts-policy-group`, which may already apply a policy pack to it. Creating your own audit group lets you choose exactly which packs apply. See [default policy groups](/docs/discovery-governance/concepts/policy-groups/#default-policy-groups).
+When you connected your account, the wizard added it to `default-accounts-policy-group`, which may already apply a policy pack to it. Creating your own audit group lets you choose exactly which packs apply. See [default policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#default-policy-groups).
 {{% /notes %}}
 
 1. On the **Policy Groups** tab, select **Create audit policy group**.
@@ -82,11 +82,11 @@ Now run a preview of that stack:
 pulumi preview
 ```
 
-Pulumi downloads the policy pack and evaluates it against the resources your program declares. Any violations appear in the preview output as advisory warnings, and the preview still completes. With the `mandatory` enforcement level, available in the Pro and Enterprise editions, a violation would stop `pulumi up` before any resource changes. To choose between the two, see [Choosing an enforcement level](/docs/discovery-governance/concepts/policy-groups/#choosing-an-enforcement-level).
+Pulumi downloads the policy pack and evaluates it against the resources your program declares. Any violations appear in the preview output as advisory warnings, and the preview still completes. With the `mandatory` enforcement level, available in the Pro and Enterprise editions, a violation would stop `pulumi up` before any resource changes. To choose between the two, see [Choosing an enforcement level](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#choosing-an-enforcement-level).
 
 ## Next steps
 
-- [Policy groups](/docs/discovery-governance/concepts/policy-groups/): how audit and preventative groups work, and how to roll policies out across an organization.
+- [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/): how audit and preventative groups work, and how to roll policies out across an organization.
 - [Use pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/): the compliance-framework packs, such as CIS, PCI DSS, and HITRUST.
 - [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/): write custom policies for your organization's own rules.
 

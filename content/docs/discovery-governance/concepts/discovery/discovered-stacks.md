@@ -6,7 +6,7 @@ meta_desc: Discovered stacks model your AWS CloudFormation, AWS CDK, and Azure A
 menu:
   discovery-governance:
     name: Discovered stacks
-    parent: dg-concepts
+    parent: dg-concepts-discovery
     weight: 30
 aliases:
 - /docs/insights/discovery/discovered-stacks/
@@ -25,7 +25,7 @@ Discovered stacks are created automatically. Whenever a scanned account contains
 - **AWS CloudFormation**: each CloudFormation stack becomes a discovered stack. For CDK applications, the synthesized CloudFormation stacks are discovered.
 - **Azure Resource Manager**: Discovery reads every ARM and Bicep deployment made to a resource group and combines their resources into one discovered stack per resource group — including resources whose deployment history has aged out of Azure's retention window.
 
-To set up scanning, see [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/).
+To set up scanning, see [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/).
 
 ## Naming
 
@@ -74,5 +74,5 @@ Together with the computed statuses, this keeps the record complete: every resou
 ## Next steps
 
 - [Migrate from a Discovered Stack](/docs/discovery-governance/guides/migrate-discovered-stack/)
-- [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/)
+- [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/)
 - [Migrating from AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)

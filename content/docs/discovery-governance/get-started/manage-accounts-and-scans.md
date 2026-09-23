@@ -32,7 +32,7 @@ For example, AWS enables you to divide your infrastructure into regions and Disc
 
 It's important to note that if you **Scan** or **Delete** the `production` account, Pulumi applies this action to all child accounts.
 
-For a detailed explanation and more examples of how child accounts and hierarchies work see the [cloud accounts documentation](/docs/discovery-governance/concepts/cloud-accounts/#account-hierarchies)
+For a detailed explanation and more examples of how child accounts and hierarchies work see the [cloud accounts documentation](/docs/discovery-governance/concepts/discovery/cloud-accounts/#account-hierarchies)
 
 ## Manage accounts
 

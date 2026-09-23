@@ -122,7 +122,7 @@ Pulumi addresses cloud misconfiguration on two fronts: making configuration revi
 
 **Preventative policy enforcement during preview.** [Pulumi's policy as code](/docs/discovery-governance/concepts/policy-as-code/) evaluates resources during `pulumi preview` and `pulumi up`, before any change reaches the cloud. Rules such as "no S3 bucket may allow public access," "no security group may permit ingress from 0.0.0.0/0," or "all storage must be encrypted" run automatically on every deployment. A violation can warn (advisory mode), block the deployment (mandatory mode), or be corrected automatically (remediate mode), so a misconfiguration is stopped the moment it appears rather than discovered after a breach.
 
-**Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/discovery-governance/concepts/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
+**Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
 
 **Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/discovery-governance/concepts/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not only the resources managed with Pulumi.
 
@@ -167,7 +167,7 @@ Pulumi helps you prevent cloud misconfigurations at the source: define infrastru
 Related reading:
 
 * [Pulumi policy as code documentation](/docs/discovery-governance/concepts/policy-as-code/)
-* [Policy packs guide](/docs/discovery-governance/concepts/policy-packs/)
+* [Policy packs guide](/docs/discovery-governance/concepts/policy-as-code/policy-packs/)
 * [Discovery & governance](/product/discovery-governance/)
 * [Pulumi Discovery](/docs/discovery-governance/concepts/discovery/)
 * [What is policy as code?](/what-is/what-is-policy-as-code/)

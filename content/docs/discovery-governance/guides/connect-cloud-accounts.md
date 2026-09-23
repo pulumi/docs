@@ -16,7 +16,7 @@ pulumi_cloud_feature: insights-discovery
 
 The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.
 
-The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/).
+The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/).
 
 ## Prerequisites
 
@@ -185,7 +185,7 @@ The wizard doesn't detect access that the service principal already inherits fro
 
 ### Grant the role yourself at management-group scope
 
-If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
+If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
 
 Because the environment carries the subscription ID, this path takes one ESC environment and one wizard run per subscription. Reuse a single app registration across those environments rather than creating one per subscription. Each environment needs its own federated identity credential, because the subject identifier includes the environment path, and Azure limits an app registration to 20 federated identity credentials. If you are onboarding more subscriptions than that, use the wizard's OIDC flow, which shares a single environment and credential across the tenant.
 
@@ -193,7 +193,7 @@ Because the environment carries the subscription ID, this path takes one ESC env
 
 ### Some accounts failed to connect
 
-When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/).
+When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/).
 
 ### AWS IAM role creation is denied
 

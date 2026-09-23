@@ -28,7 +28,7 @@ Currently while in public preview, Discovery supports AWS, Azure, Oracle Cloud, 
 
 1. Select **Connect cloud accounts** and choose your cloud provider. For this example, choose **AWS**.
 
-1. On the **Authentication** step, keep the recommended **Connect using IAM Identity Center (SSO)** option. Enter your organization's **SSO start URL** and **Region**, then select **Next** and approve the authorization request that AWS opens in a new window. The wizard then lists the AWS accounts you can access. If your organization doesn't use IAM Identity Center, choose **Connect using static credentials**, or **Connect using existing ESC credentials** with [an environment you configure yourself](/docs/discovery-governance/concepts/cloud-accounts/#configure-esc-credentials).
+1. On the **Authentication** step, keep the recommended **Connect using IAM Identity Center (SSO)** option. Enter your organization's **SSO start URL** and **Region**, then select **Next** and approve the authorization request that AWS opens in a new window. The wizard then lists the AWS accounts you can access. If your organization doesn't use IAM Identity Center, choose **Connect using static credentials**, or **Connect using existing ESC credentials** with [an environment you configure yourself](/docs/discovery-governance/concepts/discovery/cloud-accounts/#configure-esc-credentials).
 
 1. On the **Accounts** step, the wizard pre-selects every discovered account that isn't already connected. For this tutorial, select **Edit selected accounts** and narrow the selection to a single account. Keep the default **Build & Manage** access level, or switch to the read-only **Discovery & Policy** level if your security review requires it.
 

@@ -390,7 +390,7 @@ To apply the policy pack across your organization without passing `--policy-pack
 pulumi policy publish
 ```
 
-Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-groups/). A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
+Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
 
 ## Reuse OPA Gatekeeper policies
 

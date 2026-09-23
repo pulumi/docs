@@ -16,14 +16,16 @@ These pages explain how Discovery, Pulumi Policies, and the Context API work. To
 ## Discovery
 
 - [Discovery](/docs/discovery-governance/concepts/discovery/): How Discovery scans your cloud accounts and organizes the resources it finds.
-- [Cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/): The accounts Discovery scans, how account hierarchies work, and the credentials each one uses.
-- [Discovered stacks](/docs/discovery-governance/concepts/discovered-stacks/): How Discovery models CloudFormation, AWS CDK, and ARM deployments as stacks.
+  - [Cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/): The accounts Discovery scans, how account hierarchies work, and the credentials each one uses.
+  - [Visual Import](/docs/discovery-governance/concepts/discovery/visual-import/): How Visual Import turns discovered resources into Pulumi IaC code.
+  - [Discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/): How Discovery models CloudFormation, AWS CDK, and ARM deployments as stacks.
 
-## Policies
+## Policy as code
 
-- [Policy as code](/docs/discovery-governance/concepts/policy-as-code/): How policies validate resources, the enforcement modes, and running policies locally or through Pulumi Cloud.
-- [Policy packs](/docs/discovery-governance/concepts/policy-packs/): How policies are packaged, versioned, configured, and run.
-- [Policy groups](/docs/discovery-governance/concepts/policy-groups/): How policy packs are applied to stacks and cloud accounts in preventative or audit mode.
+- [Policy as code](/docs/discovery-governance/concepts/policy-as-code/): How Pulumi Policies checks IaC-managed and discovered resources, and the enforcement modes.
+  - [Policies](/docs/discovery-governance/concepts/policy-as-code/policies/): Resource and stack validation policies, enforcement levels, remediation, and configuration.
+  - [Policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/): How policies are packaged, versioned, configured, and run.
+  - [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/): How policy packs are applied to stacks and cloud accounts in preventative or audit mode.
 
 ## Context API
 

@@ -133,7 +133,7 @@ Getting started with Pulumi Policies takes a few minutes if you already have Pul
 
 6. **Graduate to mandatory enforcement.** Start in `advisory` mode to understand the scope of violations, then promote critical rules to `mandatory` as teams address them. Use the `remediate` level for rules where automatic correction is appropriate.
 
-The [Pulumi Policies documentation](/docs/discovery-governance/concepts/policy-as-code/) and [policy packs guide](/docs/discovery-governance/concepts/policy-packs/) walk through the full lifecycle in detail.
+The [Pulumi Policies documentation](/docs/discovery-governance/concepts/policy-as-code/) and [policy packs guide](/docs/discovery-governance/concepts/policy-as-code/policy-packs/) walk through the full lifecycle in detail.
 
 ## What does policy as code look like in production?
 
@@ -206,7 +206,7 @@ Pulumi Policies enforces policy as code across any cloud using TypeScript, Pytho
 Related reading:
 
 * [Pulumi Policies documentation](/docs/discovery-governance/concepts/policy-as-code/)
-* [Policy packs guide](/docs/discovery-governance/concepts/policy-packs/)
+* [Policy packs guide](/docs/discovery-governance/concepts/policy-as-code/policy-packs/)
 * [Discovery & governance](/product/discovery-governance/)
 * [Benefits of policy as code](/blog/benefits-of-policy-as-code/)
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)

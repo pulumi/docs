@@ -7,7 +7,7 @@ menu:
   discovery-governance:
     name: Context API
     parent: dg-concepts
-    weight: 70
+    weight: 30
 aliases:
 - /docs/insights/context-api/
 - /docs/discovery-governance/context-api/

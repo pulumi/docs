@@ -6,8 +6,8 @@ meta_desc: This page describes how to create cloud accounts used by Discovery to
 menu:
   discovery-governance:
     name: Cloud accounts
-    parent: dg-concepts
-    weight: 20
+    parent: dg-concepts-discovery
+    weight: 10
 aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
@@ -77,7 +77,7 @@ Key benefits of child accounts include:
 
 All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
 
-If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [discovered stacks](/docs/discovery-governance/concepts/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
+If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
 
 ### Viewing resources in the grid
 

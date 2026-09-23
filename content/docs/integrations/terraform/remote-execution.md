@@ -259,7 +259,7 @@ To enable auto-apply (skip the approval step), set the `terraform:auto-apply` [s
 
 [Preventative policies](/docs/discovery-governance/concepts/policy-as-code/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
 
-Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/integrations/terraform/state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/concepts/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/integrations/terraform/state-backend/#audit-policies) — add your stack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 
 ## Control execution mode
 

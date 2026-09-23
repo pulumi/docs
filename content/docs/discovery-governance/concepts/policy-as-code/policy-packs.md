@@ -6,8 +6,8 @@ meta_desc: How policy packs are structured, versioned, and applied, including th
 menu:
   discovery-governance:
     name: Policy packs
-    parent: dg-concepts
-    weight: 50
+    parent: dg-concepts-policy-as-code
+    weight: 20
 aliases:
   - /docs/insights/policy/configuration/
   - /docs/using-pulumi/crossguard/configuration/
@@ -22,7 +22,7 @@ aliases:
 
 A policy pack is the unit that Pulumi Policies publishes, versions, and applies. Each pack is a project directory holding a `PulumiPolicy.yaml` file and one or more policies, and each policy inspects resources and reports a violation when something does not meet your standards.
 
-A pack does nothing on its own. To enforce it, add it to a [policy group](/docs/discovery-governance/concepts/policy-groups/), which determines the stacks or cloud accounts it applies to and whether violations block a deployment or are reported for later.
+A pack does nothing on its own. To enforce it, add it to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/), which determines the stacks or cloud accounts it applies to and whether violations block a deployment or are reported for later.
 
 ## Types of policy packs
 
@@ -62,7 +62,7 @@ Policy packs run on the machine that runs Pulumi, so the pack's runtime must be 
 
 Bun is not a substitute. Although Pulumi supports [`runtime: bun`](/docs/iac/languages-sdks/javascript/#bun-runtime) for Pulumi programs, a policy pack that declares `runtime: nodejs` is always executed with Node.js, even when the stack's own program uses Bun.
 
-When Pulumi Cloud enforces a policy pack through a [policy group](/docs/discovery-governance/concepts/policy-groups/), the CLI downloads the pack to `~/.pulumi/policies` and installs its dependencies the first time it encounters a given version. That first run needs network access to the relevant package registry; later runs use the cached copy.
+When Pulumi Cloud enforces a policy pack through a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/), the CLI downloads the pack to `~/.pulumi/policies` and installs its dependencies the first time it encounters a given version. That first run needs network access to the relevant package registry; later runs use the cached copy.
 
 ## Next steps
 
@@ -70,5 +70,5 @@ When Pulumi Cloud enforces a policy pack through a [policy group](/docs/discover
 - [Write custom policy packs](/docs/discovery-governance/guides/write-a-policy-pack/)
 - [Run policies in CI/CD](/docs/discovery-governance/guides/policies-in-ci-cd/)
 - [PulumiPolicy.yaml project file reference](/docs/discovery-governance/reference/policy-project-file/)
-- [Configure policy groups](/docs/discovery-governance/concepts/policy-groups/)
+- [Configure policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/)
 - [View policy findings](/docs/discovery-governance/operations/policy-findings/)

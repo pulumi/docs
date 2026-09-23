@@ -14,7 +14,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Migrating from a [discovered stack](/docs/discovery-governance/concepts/discovered-stacks/) means bringing its resources under Pulumi IaC management: a Pulumi program in your repository whose state matches the cloud exactly. The console is where you plan the migration, decide what to include, and track progress — the migration itself completes as code and CLI operations in your own repository.
+Migrating from a [discovered stack](/docs/discovery-governance/concepts/discovery/discovered-stacks/) means bringing its resources under Pulumi IaC management: a Pulumi program in your repository whose state matches the cloud exactly. The console is where you plan the migration, decide what to include, and track progress — the migration itself completes as code and CLI operations in your own repository.
 
 A migration is done when three things are true:
 
@@ -24,7 +24,7 @@ A migration is done when three things are true:
 
 ## Before you begin
 
-- A discovered stack, created by a [Discovery scan](/docs/discovery-governance/concepts/cloud-accounts/) of the cloud account that holds your CloudFormation or ARM resources.
+- A discovered stack, created by a [Discovery scan](/docs/discovery-governance/concepts/discovery/cloud-accounts/) of the cloud account that holds your CloudFormation or ARM resources.
 - A git repository where the generated Pulumi program will live.
 - Cloud credentials that match the source account, ideally through a [Pulumi ESC environment](/docs/esc/).
 
@@ -64,7 +64,7 @@ No `pulumi up` is required to complete a migration. `pulumi import` already sync
 
 ## Resolve Not found and No exact match resources
 
-Some resources need a decision or validation before the accounting is complete. When Neo drives the migration, it makes these decisions and annotates each resource with the call it made. Resolve each one by importing it or by [marking it resolved](/docs/discovery-governance/concepts/discovered-stacks/#resolving-resources) — either way, the outcome shows up in the console and persists across sessions.
+Some resources need a decision or validation before the accounting is complete. When Neo drives the migration, it makes these decisions and annotates each resource with the call it made. Resolve each one by importing it or by [marking it resolved](/docs/discovery-governance/concepts/discovery/discovered-stacks/#resolving-resources) — either way, the outcome shows up in the console and persists across sessions.
 
 **Not found** resources are mapped but unconfirmed — sometimes deleted, sometimes a type whose live state Discovery doesn't verify (a log group, for example), in which case the resource is really there. Attempting the import is the fastest way to find out which:
 
@@ -105,7 +105,7 @@ Generated code is occasionally invalid — for instance an empty nested block th
 
 ### Link an imported resource to its origin
 
-When a resource can't be matched automatically to the counterpart you migrated it into, [annotate and link them](/docs/discovery-governance/concepts/discovered-stacks/#resolving-resources) — a comment plus a link to the migrated resource keeps a record of the decisions you made.
+When a resource can't be matched automatically to the counterpart you migrated it into, [annotate and link them](/docs/discovery-governance/concepts/discovery/discovered-stacks/#resolving-resources) — a comment plus a link to the migrated resource keeps a record of the decisions you made.
 
 ### Reorganize the generated code safely
 
@@ -155,7 +155,7 @@ GET /api/preview/insights/{org}/stacks/{project}/{stack}/migration?compareTo={ta
 
 ### Write back resolutions
 
-Decisions are written back through the same API — [marking a resource resolved](/docs/discovery-governance/concepts/discovered-stacks/#resolving-resources), with an optional comment and a link to the target-stack resource — so an agent can drive an entire migration end to end without the console:
+Decisions are written back through the same API — [marking a resource resolved](/docs/discovery-governance/concepts/discovery/discovered-stacks/#resolving-resources), with an optional comment and a link to the target-stack resource — so an agent can drive an entire migration end to end without the console:
 
 ```bash
 PUT /api/preview/insights/{org}/discovered-stacks/{project}/{stack}/migration
@@ -163,6 +163,6 @@ PUT /api/preview/insights/{org}/discovered-stacks/{project}/{stack}/migration
 
 ## Next steps
 
-- [Discovered stacks](/docs/discovery-governance/concepts/discovered-stacks/)
+- [Discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/)
 - [Migrating from AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)
 - [The `pulumi import` guide](/docs/iac/guides/migration/import/)

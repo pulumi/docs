@@ -43,7 +43,7 @@ Pulumi-supported language plugins are installed automatically with the Pulumi CL
 
 Analyzer plugins scan Pulumi programs for potential issues and power [Pulumi Policy as Code](/docs/discovery-governance/concepts/policy-as-code/). These plugins enable you to enforce compliance, security, and best practices across your infrastructure.
 
-Policy plugins are installed automatically with the Pulumi CLI. The policy packs themselves run on the machine that runs Pulumi, so that machine also needs the pack's [runtime](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements) installed.
+Policy plugins are installed automatically with the Pulumi CLI. The policy packs themselves run on the machine that runs Pulumi, so that machine also needs the pack's [runtime](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements) installed.
 
 ### Converter plugins
 

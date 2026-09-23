@@ -7,7 +7,8 @@ menu:
   discovery-governance:
     name: Policy as code
     parent: dg-concepts
-    weight: 40
+    identifier: dg-concepts-policy-as-code
+    weight: 20
 aliases:
 - /docs/guides/crossguard/
 - /policy-as-code/
@@ -60,8 +61,8 @@ Policies run as [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins)
 Pulumi Policies organizes rules in three layers:
 
 1. **Policies** are individual rules that validate a resource or a whole stack, for example "S3 buckets must be private" or "VMs must use approved instance types."
-1. **[Policy packs](/docs/discovery-governance/concepts/policy-packs/)** are versioned collections of related policies that you publish and manage together. Use Pulumi's [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/), such as Pulumi Best Practices or packs for CIS, HITRUST, ISO 27001, NIST, PCI DSS, and CMMC, or [write your own](/docs/discovery-governance/guides/write-a-policy-pack/).
-1. **[Policy groups](/docs/discovery-governance/concepts/policy-groups/)** apply policy packs to specific stacks or cloud accounts in Pulumi Cloud, so you can enforce stricter policies in production than in development.
+1. **[Policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/)** are versioned collections of related policies that you publish and manage together. Use Pulumi's [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/), such as Pulumi Best Practices or packs for CIS, HITRUST, ISO 27001, NIST, PCI DSS, and CMMC, or [write your own](/docs/discovery-governance/guides/write-a-policy-pack/).
+1. **[Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/)** apply policy packs to specific stacks or cloud accounts in Pulumi Cloud, so you can enforce stricter policies in production than in development.
 
 ### IaC-managed and discovered resources
 
@@ -78,7 +79,7 @@ The two cases above correspond to Pulumi's two enforcement modes. These are Pulu
 - **Preventative** policy groups evaluate IaC-managed resources during `pulumi preview` and `pulumi up`, and can block a deployment.
 - **Audit** policy groups evaluate discovered resources and the latest state of stacks, and report violations without blocking anything.
 
-Each policy also has an **enforcement level**, which is specific to Pulumi as well: `advisory` reports a violation as a warning, `mandatory` blocks the deployment, `remediate` fixes the resource automatically, and `disabled` turns the policy off. Audit policy groups report violations rather than blocking them, whatever the enforcement level. For how to choose between them, see [Policy groups](/docs/discovery-governance/concepts/policy-groups/#best-practices).
+Each policy also has an **enforcement level**, which is specific to Pulumi as well: `advisory` reports a violation as a warning, `mandatory` blocks the deployment, `remediate` fixes the resource automatically, and `disabled` turns the policy off. Audit policy groups report violations rather than blocking them, whatever the enforcement level. For how to choose between them, see [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#best-practices).
 
 ### Local execution and Pulumi Cloud
 
@@ -96,7 +97,7 @@ To apply more than one policy pack, repeat the flag:
 pulumi up --policy-pack /path/to/pack-1 --policy-pack /path/to/pack-2
 ```
 
-Local execution works with any backend, including the self-managed backend, and with both open source and custom policy packs. The policy pack must be on disk where you run Pulumi, and the machine needs the pack's [runtime](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements) installed.
+Local execution works with any backend, including the self-managed backend, and with both open source and custom policy packs. The policy pack must be on disk where you run Pulumi, and the machine needs the pack's [runtime](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements) installed.
 
 #### Pulumi Cloud
 
@@ -104,7 +105,7 @@ Local execution works with any backend, including the self-managed backend, and 
 
 Pulumi Cloud adds central management on top of local execution:
 
-- Apply policy packs to many stacks and cloud accounts with [policy groups](/docs/discovery-governance/concepts/policy-groups/), without passing `--policy-pack` on each command. Pulumi downloads the packs automatically.
+- Apply policy packs to many stacks and cloud accounts with [policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/), without passing `--policy-pack` on each command. Pulumi downloads the packs automatically.
 - Use Pulumi's [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/): Pulumi Best Practices on the Essentials edition and above, and compliance-framework packs on the Enterprise edition.
 - Publish your own packs to your organization, with versioning and rollback.
 - Run audit policies against discovered resources. Audit policies require Pulumi Cloud and aren't available with a self-managed backend.

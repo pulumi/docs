@@ -7,6 +7,7 @@ menu:
   discovery-governance:
     name: Discovery
     parent: dg-concepts
+    identifier: dg-concepts-discovery
     weight: 10
 aliases:
 - /docs/intro/insights/
@@ -24,7 +25,7 @@ Pulumi's Discovery feature enables organizations to gain complete visibility int
 
 Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
 
-1. **Account management**: Create and configure [cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/) under **Resources** > **Discovery** in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
+1. **Account management**: Create and configure [cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/) under **Resources** > **Discovery** in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
 2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the resource graph with the latest state.
 
@@ -32,7 +33,7 @@ Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)
 
 4. **Import**: Use [Visual Import](/docs/discovery-governance/guides/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
 
-5. **Migration**: [Discovered stacks](/docs/discovery-governance/concepts/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/discovery-governance/guides/migrate-discovered-stack/).
+5. **Migration**: [Discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/discovery-governance/guides/migrate-discovered-stack/).
 
 ### Account hierarchies
 
@@ -84,8 +85,8 @@ Resource search is available to all organization members, but users can only see
 ## Learn more
 
 - [Connect cloud accounts in bulk](/docs/discovery-governance/guides/connect-cloud-accounts/)
-- [Create and manage cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/)
+- [Create and manage cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/)
 - [Learn Resource Search syntax](/docs/discovery-governance/guides/search-resources/)
-- [Explore discovered stacks](/docs/discovery-governance/concepts/discovered-stacks/)
+- [Explore discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/)
 - [Import resources into Pulumi IaC](/docs/discovery-governance/guides/visual-import/)
 - [Export resource data](/docs/discovery-governance/guides/export-resource-data/)

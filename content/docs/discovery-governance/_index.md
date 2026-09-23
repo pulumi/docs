@@ -44,7 +44,7 @@ sections:
     description: Learn how Discovery scans cloud accounts and organizes resources for visibility and import.
   - icon: link
     heading: Cloud accounts
-    link: /docs/discovery-governance/concepts/cloud-accounts/
+    link: /docs/discovery-governance/concepts/discovery/cloud-accounts/
     description: Connect cloud accounts to sync and monitor infrastructure resources.
   - icon: magnifying-glass
     heading: Search resources
@@ -76,7 +76,7 @@ sections:
     description: Use ready-made compliance rules for CIS, HITRUST, NIST, PCI DSS, ISO 27001, and CMMC with no code required.
   - icon: arrows-clockwise
     heading: Policy groups
-    link: /docs/discovery-governance/concepts/policy-groups/
+    link: /docs/discovery-governance/concepts/policy-as-code/policy-groups/
     description: Apply policy packs with preventative enforcement to block non-compliant deployments or audit mode to scan all discovered resources.
   - icon: warning
     heading: Policy findings
