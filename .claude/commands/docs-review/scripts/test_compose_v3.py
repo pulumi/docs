@@ -581,3 +581,84 @@ def test_trail_metadata_vocabularies_match_the_evidence_validator():
     assert set(cr._TRAIL_CONFIDENCES) == ve.CONFIDENCES
     assert set(cr._TRAIL_FRAMINGS) == ve.FRAMINGS
 
+
+# ---- the `[nit]` lane -------------------------------------------------------
+# The v3 author card's advisory block is its only non-blocking lane, so it also
+# carries the nits the review finds itself (compose-review.NIT_TAG). Before
+# that, PR #21787 F3 shipped "Typo: `i. e.` has a stray space … Trivial fix for
+# the author" on the reviewer's card, which is headed "not for the author".
+
+NIT_BULLET = "- **line 73:** [nit] _typo_ — `i. e.` has a stray space; use `i.e.`"
+
+
+def _append_nit(author: str, bullet: str = NIT_BULLET) -> str:
+    """Drop a bullet under the last `##### <path>` group, the way the
+    editorial pass does."""
+    lines = author.splitlines()
+    last = max(i for i, ln in enumerate(lines) if ln.startswith("- **line "))
+    lines.insert(last + 1, bullet)
+    return "\n".join(lines) + "\n"
+
+
+def _compose_v3_without_vale(tmp_path) -> tuple[str, str, dict]:
+    vale = tmp_path / "vale-empty.json"
+    vale.write_text("[]")
+    author, brief, ev = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(brief), "--out-evidence", str(ev),
+    ])
+    cmd[cmd.index("--vale-findings") + 1] = str(vale)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(ev.read_text())
+
+
+def test_style_block_is_always_composed_on_v3(tmp_path):
+    """The model needs a stable anchor to append a `[nit]` under; asking it to
+    author the H4 and caption verbatim is how you get a malformed block."""
+    author, _brief, _ev = _compose_v3_without_vale(tmp_path)
+    assert cr.STYLE_HEADING in author
+    assert cr._V3_EMPTY_STYLE in author
+
+
+def test_empty_style_block_is_dropped_at_publish(tmp_path):
+    """...but an empty one never reaches the published card."""
+    author, brief, base = _compose_v3_without_vale(tmp_path)
+    be_mod = _load("build_evidence_for_style", HERE / "build-evidence.py")
+    _ev, author_out, _brief_out = be_mod.build(author, brief, base)
+    assert cr.STYLE_HEADING not in author_out
+    assert cr._V3_EMPTY_STYLE not in author_out
+    assert "\n\n\n" not in author_out, "collapsing the block left a gap"
+
+
+def test_model_added_nit_keeps_the_block(tmp_path):
+    author, brief, base = _compose_v3_without_vale(tmp_path)
+    lines = author.splitlines()
+    i = lines.index(cr._V3_EMPTY_STYLE)
+    lines[i:i + 1] = ["##### content/docs/iac/x.md", "", NIT_BULLET]
+    be_mod = _load("build_evidence_for_style2", HERE / "build-evidence.py")
+    ev, author_out, brief_out = be_mod.build("\n".join(lines) + "\n", brief, base)
+    assert NIT_BULLET in author_out
+    assert ev["style_suggestions_count"] == 1
+    assert "0 from linting, 1 found by the review" in brief_out
+
+
+def test_nit_moves_the_briefs_rubber_stamp_count(v3_outputs, tmp_path):
+    """The reviewer is asked to rubber-stamp this number, so it has to be the
+    number on the card — not the one Vale produced before the model read the
+    diff."""
+    author, brief, base = v3_outputs
+    assert "- **Style:** 1 advisory suggestion left" in brief
+    final = _run_build_evidence(_append_nit(author), brief, base, tmp_path)
+    assert final["style_suggestions_count"] == 2
+    published = (tmp_path / "b-clean.md").read_text()
+    assert "- **Style:** 2 advisory suggestions (1 from linting, 1 found by the review)" in published
+
+
+def test_update_lane_recounts_nits(v3_outputs):
+    """A refresh re-renders the block; carrying the prior count forward would
+    pin the brief to whatever Vale said on the first run."""
+    author, brief, base = v3_outputs
+    ev = _update_round(base, _append_nit(author), brief)
+    assert ev["style_suggestions_count"] == 2
