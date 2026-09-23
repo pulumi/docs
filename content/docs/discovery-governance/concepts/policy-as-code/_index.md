@@ -53,7 +53,7 @@ Policy as code typically serves a few goals:
 Pulumi Policies is Pulumi's policy as code product. You write policies in TypeScript, JavaScript, Python, or OPA (Rego), or use the pre-built policy packs that Pulumi publishes, and they apply to infrastructure written in any language.
 
 {{% notes type="info" %}}
-Policies run as [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins). TypeScript, JavaScript, and Python policies use the language support that comes with the Pulumi CLI, plus the [runtime](/docs/discovery-governance/concepts/policy-as-code/policy-packs/#runtime-requirements) installed on the machine. OPA policies need the [OPA language plugin](/docs/discovery-governance/guides/write-opa-policies/#prerequisites).
+Policies run as [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which the Pulumi CLI installs automatically.
 {{% /notes %}}
 
 ### Policies, policy packs, and policy groups
@@ -113,7 +113,7 @@ Pulumi Cloud adds central management on top of local execution:
 
 ## Languages
 
-You can write policies in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-opa-policies/). Policies in any of these languages apply to Pulumi programs written in any language. For the SDKs, see the [Policy API and SDK reference](/docs/discovery-governance/reference/policy-api-sdk/).
+You can write policies in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-a-policy-pack/#opa). Policies in any of these languages apply to Pulumi programs written in any language. For the SDKs, see the [Policy API and SDK reference](/docs/discovery-governance/reference/policy-api-sdk/).
 
 ## Next steps
 

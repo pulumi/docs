@@ -10,7 +10,7 @@ menu:
     weight: 10
 ---
 
-A policy is a single rule that your infrastructure must follow, such as "S3 buckets must not be public" or "every stack may declare at most three databases." You write policies in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-opa-policies/), and group related policies into a [policy pack](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) then decide which stacks and cloud accounts each pack applies to.
+A policy is a single rule that your infrastructure must follow, such as "S3 buckets must not be public" or "every stack may declare at most three databases." You write policies in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-a-policy-pack/#opa), and group related policies into a [policy pack](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). [Policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) then decide which stacks and cloud accounts each pack applies to.
 
 ## Resource and stack validation policies
 
@@ -55,5 +55,4 @@ Besides its validation logic, a policy carries fields that describe it: a unique
 ## Next steps
 
 - [Use pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) to apply policies that Pulumi maintains, with no code to write.
-- [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/) in TypeScript, JavaScript, or Python.
-- [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/) in Rego.
+- [Write a policy pack](/docs/discovery-governance/guides/write-a-policy-pack/) in TypeScript, JavaScript, Python, or OPA.

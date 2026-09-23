@@ -42,7 +42,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
-- For OPA policies: the OPA language plugin, installed with `pulumi plugin install language opa`.
+- For OPA policies: Pulumi CLI v3.227.0+ automatically installs the OPA analyzer plugin on first use. No manual installation is needed.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/discovery-governance/concepts/policy-as-code/).
 
@@ -225,8 +225,6 @@ Create your first policy pack:
 
     This creates a `PulumiPolicy.yaml` (with `runtime: opa`) and a starter `policy.rego` file. Templates are available for AWS (`aws-opa`), Azure (`azure-opa`), GCP (`gcp-opa`), and Kubernetes (`kubernetes-opa`).
 
-    For a complete walkthrough of OPA policies, including the input document, configuration, and testing, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
-
 1. Replace the generated policy in `policy.rego` with this example, which demonstrates metadata annotations and multiple rules:
 
     Each resource is passed as `input` with metadata fields like `__name` (logical name), `__urn`, and `type`, plus all resource properties at the top level.
@@ -236,14 +234,12 @@ Create your first policy pack:
     ```rego
     package aws
 
-    import rego.v1
-
     # METADATA
     # title: Require RDS Storage Encryption
     # description: RDS instances must have storage encryption enabled, unless tagged as non-production data.
     # custom:
     #   message: Set storageEncrypted to true, or tag the instance data-classification=non-production.
-    deny_unencrypted_rds contains msg if {
+    deny_unencrypted_rds[msg] {
         input.type == "aws:rds/instance:Instance"
         not input.storageEncrypted
         not non_production
@@ -255,14 +251,14 @@ Create your first policy pack:
     # description: RDS instances must not be publicly accessible.
     # custom:
     #   message: Set publiclyAccessible to false.
-    deny_public_rds contains msg if {
+    deny_public_rds[msg] {
         input.type == "aws:rds/instance:Instance"
         input.publiclyAccessible
         msg := sprintf("RDS instance '%s' must not be publicly accessible", [input.__name])
     }
 
     # An instance is exempt from the encryption rule when tagged as non-production data.
-    non_production if {
+    non_production {
         input.tags["data-classification"] == "non-production"
     }
     ```
@@ -312,9 +308,7 @@ OPA policies can be tested using the standard `opa test` command from the [OPA C
 ```rego
 package aws
 
-import rego.v1
-
-test_deny_unencrypted_rds if {
+test_deny_unencrypted_rds {
     count(deny_unencrypted_rds) > 0 with input as {
         "type": "aws:rds/instance:Instance",
         "__name": "my-db",
@@ -322,7 +316,7 @@ test_deny_unencrypted_rds if {
     }
 }
 
-test_allow_encrypted_rds if {
+test_allow_encrypted_rds {
     count(deny_unencrypted_rds) == 0 with input as {
         "type": "aws:rds/instance:Instance",
         "__name": "my-db",
@@ -330,7 +324,7 @@ test_allow_encrypted_rds if {
     }
 }
 
-test_allow_non_production_rds if {
+test_allow_non_production_rds {
     count(deny_unencrypted_rds) == 0 with input as {
         "type": "aws:rds/instance:Instance",
         "__name": "my-db",
@@ -445,13 +439,11 @@ In OPA, the rule name prefix determines the validation scope. Use `stack_deny` o
 ```rego
 package aws
 
-import rego.v1
-
 # METADATA
 # title: Maximum S3 Bucket Count
 # description: Limits the number of S3 buckets per stack.
-stack_deny_too_many_buckets contains msg if {
-    buckets := [r | some r in input.resources; r.type == "aws:s3/bucket:Bucket"]
+stack_deny_too_many_buckets[msg] {
+    buckets := [r | r := input.resources[_]; r.type == "aws:s3/bucket:Bucket"]
     n := count(buckets)
     n > 3
     msg := sprintf("Stack has %d S3 buckets, maximum allowed is 3", [n])
@@ -730,17 +722,14 @@ OPA policies can validate dynamic resources using the same `input.type` field. D
 ```rego
 package dynamic
 
-import rego.v1
-
-# This rule only fires for dynamic resources that have an environmentName
-# property. Other dynamic resources are silently skipped.
-
 # METADATA
 # title: Environment Name Validation
 # description: Dynamic environment resources must use the correct name.
 # custom:
 #   message: Set the environmentName property to 'myTestEnv'.
-deny_environment_name contains msg if {
+# This rule only fires for dynamic resources that have an environmentName
+# property. Other dynamic resources are silently skipped.
+deny_environment_name[msg] {
     input.type == "pulumi-nodejs:dynamic:Resource"
     input.environmentName
     input.environmentName != "myTestEnv"
@@ -1034,14 +1023,14 @@ Test your policy pack locally before publishing.
         +   pulumi:pulumi:Stack   test-dev      create     1 error
         +   └─ aws:rds:Instance   my-db         create
 
-    Policies:
-        ❌ aws@v0.0.1 (local: <path-to-policy-pack>)
-            - [mandatory]  deny_unencrypted_rds  (aws:rds:Instance: my-db)
-              RDS instance 'my-db' must have storage encryption enabled
-
     Diagnostics:
         pulumi:pulumi:Stack (test-dev):
         error: preview failed
+
+    Policy Violations:
+        [mandatory]  Require RDS Storage Encryption  deny_unencrypted_rds (my-db: aws:rds/instance:Instance)
+        RDS instances must have storage encryption enabled, unless tagged as non-production data.
+        RDS instance 'my-db' must have storage encryption enabled
     ```
 
     Set `storageEncrypted: true` (or tag the instance `data-classification=non-production`) and the preview succeeds.
@@ -1157,14 +1146,12 @@ OPA policies access configuration values through `data.config.<rule_name>.<key>`
 ```rego
 package aws
 
-import rego.v1
-
 # METADATA
 # title: Restrict EC2 Instance Size
 # description: EC2 instances must not exceed the configured maximum size.
 # custom:
 #   message: Use an instance type at or below the configured maxInstanceSize.
-deny_large_instances contains msg if {
+deny_large_instances[msg] {
     input.type == "aws:ec2/instance:Instance"
     max_size := data.config.deny_large_instances.maxInstanceSize
     sizes := {"t3.micro": 1, "t3.small": 2, "t3.medium": 3, "t3.large": 4,
@@ -1175,17 +1162,17 @@ deny_large_instances contains msg if {
 }
 ```
 
-Pass configuration values using the standard Pulumi policy configuration. The values for each rule are injected as `data.config.<rule_name>`. Put them directly under the rule name, with no wrapper object:
+Pass configuration values using the standard Pulumi policy configuration. The values inside the `"properties"` object are injected as `data.config.<rule_name>`. The `"properties"` wrapper key is required in the configuration JSON:
 
 ```json
 {
     "deny_large_instances": {
-        "maxInstanceSize": "m5.xlarge"
+        "properties": {
+            "maxInstanceSize": "m5.xlarge"
+        }
     }
 }
 ```
-
-A rule that reads a configuration value doesn't fire when that value isn't set. For more on configuring OPA policies, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
 
 {{% /choosable %}}
 
@@ -1232,7 +1219,23 @@ config_schema=PolicyConfigSchema(
 
 {{% choosable language opa %}}
 
-OPA policy packs don't currently support configuration schemas. Rules that read `data.config` don't fire when a value is missing, so test your rules with and without configuration. See [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/#configuration).
+For OPA policies, declare a configuration schema in a `config-schema.json` file alongside your Rego files. Pulumi validates configuration against this schema before evaluation:
+
+```json
+{
+    "deny_large_instances": {
+        "properties": {
+            "maxInstanceSize": {
+                "type": "string",
+                "default": "m5.xlarge"
+            }
+        },
+        "required": ["maxInstanceSize"]
+    }
+}
+```
+
+If a rule declares a config schema but no configuration is provided, the analyzer emits a warning because rules that reference `data.config` will silently not fire without configuration.
 
 {{% /choosable %}}
 
