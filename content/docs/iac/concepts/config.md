@@ -289,15 +289,17 @@ variables:
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
-A `variable` block only ever reads the project's own namespace, so a value set under another namespace — such as `aws:region` — is not reachable as `var.region`. Provider settings are configured where the provider is declared instead:
+A `variable` block only reads the project's own namespace, so a value set under another namespace, such as `aws:region`, is not reachable as `var.region`. The default AWS provider, which the program uses when it has no `provider "aws"` block, reads `aws:region` from stack configuration on its own. To use the region as a value in the program, read it back from the provider with the `aws_region` data source:
 
 ```hcl
-provider "aws" {
-  region = "us-west-2"
+data "aws_region" "current" {}
+
+locals {
+  aws_region = data.aws_region.current.region
 }
 ```
 
-To keep the region in stack configuration rather than in the program, declare it as a project variable and pass it through:
+A `provider "aws"` block does not read `aws:region` from stack configuration, so set its arguments in the block. To keep the region in stack configuration, declare it as a project variable and pass it through:
 
 ```hcl
 variable "region" {
@@ -439,7 +441,7 @@ module "mylib" {
 }
 ```
 
-A module's variables are never read from stack config directly — leaving `name` unset in the `module` block is an error even when `mylib:name` is set — which is what keeps a module's inputs explicit at each call site.
+A module's variables are never read from stack config directly. Leaving `name` unset in the `module` block is an error even when `mylib:name` is set.
 
 {{% /choosable %}}
 
@@ -746,7 +748,7 @@ locals {
 }
 ```
 
-Attributes declared in an `object({...})` constraint are reachable with a dot, while a `map(...)` is indexed with a key — which is what lets `content-type`, whose hyphen is not a valid attribute name, live in `headers`.
+An `object({...})` constraint fixes the set of attributes, while a `map(string)` accepts any key, so `headers` can hold whatever header names you set.
 
 {{% /choosable %}}
 

@@ -1140,7 +1140,7 @@ resource "pulumi_stack_reference" "infra" {
 }
 
 locals {
-  ip      = try(pulumi_stack_reference.infra.outputs["privateIp"], null)
+  ip      = try(pulumi_stack_reference.infra.outputs["privateIp"], "unknown")
   log_key = "logs/${local.ip}.log"
 }
 

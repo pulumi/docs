@@ -87,7 +87,7 @@ to refer to it. Unlike other languages, Pulumi YAML has no distinct variable nam
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
-A resource's second label is its logical name, so this role's logical name is `my_role`. (`aws_iam_role` requires an assume-role policy, declared here and in the examples below as a separate `aws_iam_policy_document` data source.)
+A resource's second label is its logical name, so this role's logical name is `my_role`. (`aws_iam_role` requires an assume-role policy. This example and the ones below read it from an `aws_iam_policy_document` data source named `assume_role`, which isn't shown.)
 
 ```hcl
 resource "aws_iam_role" "my_role" {
