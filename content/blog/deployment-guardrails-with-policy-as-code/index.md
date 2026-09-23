@@ -21,7 +21,7 @@ category: best-practices
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi Policies](/docs/discovery-governance/policy/) to create deployment guardrails that make self-service infrastructure both powerful and safe.
 
-Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer isn't to choose between speed and safety, but rather to embrace **automated guardrails** powered by policy as code that make both possible simultaneously.
+Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer is **automated guardrails** powered by policy as code, which make speed and safety possible at the same time.
 
 <!--more-->
 
@@ -33,9 +33,9 @@ Platform engineering presents a fundamental tension: we want to enable developer
 
 Let me tell you a story that perfectly captures the platform engineering dilemma. Statsig, a fast-growing feature flag platform processing an incredible 2 trillion events daily, had one infrastructure engineer named Jason who handled all infrastructure requests. Everything worked smoothly until Jason went on parental leave. Suddenly, the entire engineering organization ground to a halt. Infrastructure requests piled up, deployments slowed to a crawl, and the team faced a stark realization: their entire infrastructure capability depended on a single person.
 
-This crisis forced them to confront a fundamental question that every growing engineering team eventually faces: How do you enable self-service infrastructure without sacrificing security, compliance, or operational stability? The answer wasn't to hire more Jasons or to lock down infrastructure even tighter. Instead, they discovered that deployment guardrails with policy as code could transform their infrastructure conversation from "talk to the infrastructure person" to "ship with confidence, knowing guardrails will catch any issues."
+This crisis forced them to confront a fundamental question that every growing engineering team eventually faces: How do you enable self-service infrastructure without sacrificing security, compliance, or operational stability? They discovered that deployment guardrails with policy as code could transform their infrastructure conversation from "talk to the infrastructure person" to "ship with confidence, knowing guardrails will catch any issues."
 
-Think of it like building a system of roads with guardrails. When you create well-designed infrastructure components with proper safety barriers, teams can drive fast and confidently, knowing they're protected from going off the cliff. The guardrails don't slow them down; they enable speed by removing fear.
+Think of it like building a system of roads with guardrails. When you create well-designed infrastructure components with proper safety barriers, teams can drive fast and confidently, knowing they're protected from going off the cliff. The guardrails enable speed by removing fear.
 
 ## Understanding Platform Engineering Layers
 
@@ -51,7 +51,7 @@ The most dynamic layer is **Layer 3: The Workloads Layer**, where deployable art
 
 Deployment guardrails are automated policies that act as your infrastructure's safety net. Rather than relying on manual reviews or hoping developers remember all the security requirements, guardrails automatically prevent misconfigurations before they reach production. They enforce security standards without human intervention, guide developers toward best practices through immediate feedback, and enable safe self-service by catching issues at the earliest possible moment.
 
-A helpful analogy is to think of guardrails like type checking in programming languages. Just as TypeScript doesn't restrict your ability to write JavaScript but rather catches type errors before runtime, deployment guardrails don't limit your infrastructure creativity. They simply ensure you're following secure patterns and catch potentially dangerous configurations before they cause problems in production.
+A helpful analogy is to think of guardrails like type checking in programming languages. Just as TypeScript doesn't restrict your ability to write JavaScript but rather catches type errors before runtime, deployment guardrails leave your infrastructure design open while catching potentially dangerous configurations before they reach production. They keep you on secure patterns as you build.
 
 ## Introducing Pulumi Policies: policy as code
 
@@ -228,7 +228,7 @@ The third model integrates policies directly into your deployment pipeline. This
 
 ## Policy Remediation: Beyond Detection
 
-Modern policy frameworks don't just detect violations; they can **[automatically fix](/docs/discovery-governance/policy/policy-packs/authoring/#remediating-policy-violations)** them:
+Modern policy frameworks can also **[automatically fix](/docs/discovery-governance/policy/policy-packs/authoring/#remediating-policy-violations)** the violations they detect:
 
 ```python
 def auto_tag_resources(args, report_violation):
@@ -384,11 +384,11 @@ Finally, policy enforcement is moving closer to where developers actually work. 
 
 We started this post with a fundamental tension in platform engineering: the need for both speed and safety. Through the lens of Statsig's transformation and the technical deep-dive into Pulumi Policies, we've seen that the tension is a false dichotomy, and policy as code eliminates it entirely.
 
-The key insight from successful platform teams like Statsig is that guardrails don't restrict freedom; they enable it. When developers know that automated policies will catch dangerous configurations, they gain the confidence to move fast and experiment. When platform teams know that policies automatically enforce security and compliance standards, they can focus on building better platforms instead of reviewing every change. This is the magic of policy as code: it transforms infrastructure governance from a bottleneck into an accelerator.
+The key insight from successful platform teams like Statsig is that guardrails enable freedom. When developers know that automated policies will catch dangerous configurations, they gain the confidence to move fast and experiment. When platform teams know that policies automatically enforce security and compliance standards, they can focus on building better platforms instead of reviewing every change. This is the magic of policy as code: it transforms infrastructure governance from a bottleneck into an accelerator.
 
 But perhaps the most important lesson is what policy as code is really for. It's about intelligent automation that makes the secure path the path of least resistance. It's about catching mistakes before they become incidents. It's about encoding your organization's hard-won knowledge into systems that give every developer the benefit of that experience.
 
-As you embark on your own journey to implement deployment guardrails, remember that perfection isn't the goal; progress is. Start small, iterate based on feedback, and gradually expand your coverage. Your developers will thank you for the clarity and confidence that comes with well-designed guardrails, and your security team will sleep better knowing that policies are enforced automatically and consistently.
+As you embark on your own journey to implement deployment guardrails, remember that progress is the goal. Start small, iterate based on feedback, and gradually expand your coverage. Your developers will thank you for the clarity and confidence that comes with well-designed guardrails, and your security team will sleep better knowing that policies are enforced automatically and consistently.
 
 The path from manual reviews to automated guardrails is well-traveled and well-documented. Our [complete policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) provide real-world implementations you can adapt to your needs, while the [Pulumi Policies documentation](/docs/discovery-governance/policy/) offers deep technical details for advanced use cases. If you're on AWS, the [CIS AWS Foundations policy pack](/docs/reference/pre-built-policy-packs/cis/aws/) offers immediate value, and our [compliance-ready policy catalog](/docs/discovery-governance/policy/policy-packs/pre-built-packs/) addresses specific regulatory requirements.
 
