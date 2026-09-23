@@ -311,7 +311,11 @@ function resolveMode(stackName, env) {
     if (override !== "") {
         return override;
     }
-    return MODES_BY_STACK[stackName] || "skip";
+    // `pulumi stack --show-name` prints the bare stack name today, but PULUMI_STACK_NAME
+    // is org-qualified ("pulumi/www-production"). Match on the last segment so a CLI that
+    // starts qualifying the name can't quietly turn production into "skip".
+    const bare = String(stackName).split("/").pop();
+    return MODES_BY_STACK[bare] || "skip";
 }
 
 // --- the impure half ------------------------------------------------------------
@@ -495,11 +499,14 @@ function main(deps = realDeps) {
         "  result. Confirm the live origin above looks right and you are done.",
         "",
         "  If you MEANT to publish this older build -- a deliberate rollback --",
-        "  there are two ways through:",
+        "  don't re-run this run: a re-run keeps its old run id and will be",
+        "  stopped again. Instead:",
         "",
-        `    1. Re-run "Build and deploy" via workflow_dispatch with the`,
-        '       "Publish even if a newer deploy already published" input checked.',
-        `    2. Set ${OVERRIDE_VAR}=true in the deploy environment.`,
+        `    1. Dispatch a NEW "Build and deploy" run (workflow_dispatch) at the`,
+        "       ref you want live. A new run has a newer run id, so it publishes",
+        "       normally. Check its \"Publish even if a newer deploy already",
+        "       published\" input only if another run may publish while it waits.",
+        `    2. Deploying from a laptop: set ${OVERRIDE_VAR}=true.`,
         "",
         "  Note that the ordinary rollback -- `git revert` and push -- does not",
         "  need either one: a revert is a new commit in a new run, so it is",

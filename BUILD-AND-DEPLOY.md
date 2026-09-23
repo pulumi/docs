@@ -1665,9 +1665,11 @@ rather than skip, because a skipped check reads exactly like a passing one.
 
 **Overriding it for a deliberate rollback:** the ordinary rollback (`git revert` and
 push) needs nothing — a revert is a new commit in a newer run. To re-publish an *older*
-build as-is, either run "Build and deploy" via `workflow_dispatch` with the **Publish
-even if a newer deploy already published** input checked, or set
-`ALLOW_OUT_OF_ORDER_PUBLISH=true` in the deploy environment. Pinning
+build as-is, dispatch a *new* "Build and deploy" run via `workflow_dispatch` at that
+ref: a new run has a newer run id, so it publishes normally. Re-running the old run
+won't work, because a re-run keeps its old run id. Check the **Publish even if a newer
+deploy already published** input only if another run may publish while yours waits
+its turn. From a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`. Pinning
 `originBucketNameOverride` also bypasses the check, since the metadata file isn't what
 gets published in that case.
 
@@ -2006,10 +2008,11 @@ CloudFront switches origins within 1-2 minutes (no rebuild required).
 **Note on the publish-ordering guard:** neither Method 1 nor Method 2 is affected by it.
 A revert is a new commit in a newer run, and a pinned `originBucketNameOverride` bypasses
 the check outright. The only rollback it stops is re-publishing an *older* build as-is —
-re-running an earlier "Build and deploy" run, or dispatching the workflow at an older
-ref. For that, check the **Publish even if a newer deploy already published** input on
-the `workflow_dispatch` form (or set `ALLOW_OUT_OF_ORDER_PUBLISH=true`). The failure
-message says all of this too, so you don't have to remember it.
+re-running an earlier "Build and deploy" run. Dispatch a new run at the older ref
+instead; it publishes normally because it's the newer run. Check the **Publish even if
+a newer deploy already published** input only if another run may publish while yours
+waits (or, from a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`). The failure message
+says all of this too, so you don't have to remember it.
 
 **Important:** After the issue is resolved, clear the override to resume normal deployments:
 

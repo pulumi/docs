@@ -24,7 +24,9 @@ on:
           escape hatch for scripts/check-publish-ordering.js, which normally refuses
           to move the live origin backwards. You do NOT need this to roll back by
           reverting and pushing -- a revert is a new commit in a newer run, and
-          publishes normally. You DO need it to re-publish an older build as-is.
+          publishes normally. A new dispatch at an older ref also publishes normally,
+          since it is the newest run; check this only if another run may publish
+          while this one waits its turn.
         type: boolean
         default: false
 permissions:

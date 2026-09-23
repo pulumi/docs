@@ -170,6 +170,12 @@ test("resolveMode scopes enforcement to the stacks with a shared publish stream"
     assert.equal(resolveMode("www-production", { [MODE_VAR]: "warn" }), "warn");
 });
 
+test("resolveMode matches an org-qualified stack name on its last segment", () => {
+    assert.equal(resolveMode("pulumi/www-production", {}), "enforce");
+    assert.equal(resolveMode("pulumi/www-testing", {}), "warn");
+    assert.equal(resolveMode("pulumi/staging", {}), "skip");
+});
+
 // ---------------------------------------------------------------------------
 // Layer 2: the wiring, with injected deps.
 // ---------------------------------------------------------------------------
