@@ -233,10 +233,42 @@ Only required if using GitLab as the backing identity provider for your organiza
 | PULUMI_CORS_ENFORCE           | When `false`, requests whose `Origin` is not in `PULUMI_CORS_ALLOWED_ORIGINS` are still logged and counted but are answered as if the list were `*`. Use it to audit a candidate allowlist without affecting users, then unset it (or set `true`, the default) to enforce. |
 | PULUMI_DISABLE_EMAIL_LOGIN    | When `true` the API will disallow logins using the email/password identity. To hide the email login option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console.   |
 | PULUMI_DISABLE_EMAIL_SIGNUP   | When `true` the API will disallow signups using the email/password identity. To hide the email signup option from the Console refer to the [email identity configuration](/docs/administration/self-hosting/components/console#email-identity) for the Console. |
+| PULUMI_DISABLE_SSRF_PROTECTION | Comma-separated list of features whose SSRF protection is switched off: `ESC`, `AGENTS_BYOK`, `OIDC_ISSUER`, `WEBHOOKS`. Unset by default, which keeps the protection on for every feature. See [SSRF protection](#ssrf-protection). |
+| PULUMI_DISABLE_ESC_SSRF_PROTECTION | Deprecated. When `true`, treated as `ESC` in `PULUMI_DISABLE_SSRF_PROTECTION`. Use `PULUMI_DISABLE_SSRF_PROTECTION=ESC` instead. |
 | PULUMI_PASSKEY_CEREMONY_KEY   | Signs the state token that links a passkey registration or sign-in attempt's start and finish steps. Must be the standard-base64 encoding of exactly 32 random bytes (44 characters including padding); generate one with `openssl rand -base64 32`. The API service validates this at startup and fails to boot if the value is the wrong length or isn't valid base64. Leaving it unset disables the passkey routes entirely. Passkeys are also gated by a platform-level setting outside this variable's control, so if the routes still return 404 once this is set, contact Pulumi support to confirm passkeys are enabled for your deployment. Rotating the key invalidates any passkey ceremony in progress (each has a five-minute window to complete), but does not affect passkeys your users have already registered. |
 | RECAPTCHA_SECRET_KEY          | Used for password reset requests by users. [Create a Cloudflare Turnstile Widget](https://www.cloudflare.com/application-services/products/turnstile/) to generate the `Secret Key`. See also [Console Component](/docs/administration/self-hosting/components/console#environment-variables-for-identities).                                                                                          |
 | SAML_CERTIFICATE_PUBLIC_KEY   | Public key used by the IdP to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                |
 | SAML_CERTIFICATE_PRIVATE_KEY  | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY](/docs/administration/self-hosting/saml-sso/).                                                                                       |
+
+## SSRF protection
+
+To protect against server-side request forgery (SSRF), the API service refuses outbound requests to URLs that users supply when the destination resolves to a loopback, private, link-local, carrier-grade NAT (RFC 6598), or other reserved address. This includes the cloud metadata endpoint `169.254.169.254`. The address is checked when the connection is made, so a hostname that resolves to a public address when it's saved and to a private one later is still refused.
+
+If a feature needs to reach a service on the same host or private network as your installation, such as a secret store that a Pulumi ESC provider reads from, switch the protection off for that feature only by listing it in `PULUMI_DISABLE_SSRF_PROTECTION`. Names are case-insensitive and unknown names are ignored with a warning in the API service logs.
+
+| Scope         | Outbound requests it covers                                                                                                  |
+|---------------|------------------------------------------------------------------------------------------------------------------------------|
+| `ESC`         | Pulumi ESC providers and rotators that call a URL you configure: Vault, Infisical, Terraform state, GitHub login, and external providers and rotators. |
+| `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/neo/model-providers/).                                             |
+| `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. Self-hosted installations don't check these requests, so this scope currently has no effect. |
+| `WEBHOOKS`    | Webhook delivery. Self-hosted installations don't check these requests, so this scope currently has no effect.               |
+
+For example, to let ESC providers and Neo reach services on your private network:
+
+```bash
+PULUMI_DISABLE_SSRF_PROTECTION=ESC,AGENTS_BYOK
+```
+
+The API service logs a warning once for each scope that is switched off. `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` is still honored as `ESC`, but it's deprecated and no longer switches off the protection for any other feature.
+
+### Outbound proxies
+
+Requests covered by SSRF protection honor the standard `HTTPS_PROXY`, `HTTP_PROXY`, and `NO_PROXY` environment variables. The proxy itself may be on a private address. The API service checks the destination before handing the request to the proxy, so a blocked destination never reaches the proxy, and a request sent directly to the proxy's own address is refused.
+
+Two limitations apply when a proxy is configured:
+
+* The API service must be able to resolve the destination's hostname itself. If only the proxy can resolve external names, protected requests fail. Switch off the protection for the affected feature if that applies to your network.
+* The proxy resolves the hostname again after the API service has checked it. To guard against DNS rebinding behind a proxy, restrict private destinations with an egress policy on the proxy.
 
 ## TLS Environment Variables
 
