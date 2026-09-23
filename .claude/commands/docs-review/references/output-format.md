@@ -570,7 +570,11 @@ and is not counted in any bucket cell.
 
 **The two tags are a provenance split and `style-advisory-provenance` enforces
 both directions.** `[style]` asserts Vale's advisory tier produced the finding
-and is matched against `.vale-findings.json`; `[nit]` says the review found it.
+and, on the composed v3 draft, is matched against `.vale-findings.json`; `[nit]`
+says the review found it. (The match runs only where the block was built from
+that artifact. A refresh carries the block through verbatim while regenerating
+Vale for the new head, so an author who fixes a flagged line would otherwise
+fail the refresh for doing exactly what the block asked.)
 Never tag your own find `[style]` — that is the same laundering
 `style-blocker-provenance` closes one tier up, and the block is quoted out of
 context often enough for the label to matter. `[nit]` is v3-only: v2's monolith

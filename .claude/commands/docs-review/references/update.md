@@ -333,5 +333,10 @@ disputes or raise findings.
 - The v3 refresh does not regenerate advisory style suggestions (the author
   card keeps its style block from the last full compose, and existing
   one-click buttons stand). A full re-style pass is `@claude #new-review`.
+- For the same reason a refresh can't add a `[nit]` (output-format §Nits):
+  `add` only creates finding rows. A mechanical nit you notice on a refresh is
+  **not** a `reviewer-check` row — that's the misroute the nit lane exists to
+  prevent, a fix only the author can make parked on the card addressed to the
+  reviewer. Leave it for the next full review.
 - `history_summary` is the only history the lane writes; the card has no 📜
   section — history lives on the evidence page.

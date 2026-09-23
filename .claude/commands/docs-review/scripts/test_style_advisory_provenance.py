@@ -44,12 +44,17 @@ VALE = [
 ]
 
 
-def ctx_for(body: str, findings, surface: str = "v3"):
+# The composed v3 draft is the only body validated with an evidence base; the
+# refresh lane validates the published card without one.
+COMPOSED = {"findings": [], "high_water": 0}
+
+
+def ctx_for(body: str, findings, surface: str = "v3", evidence_base=COMPOSED):
     return vp.Context(
         body=body, body_lines=body.splitlines(), pr=None, repo=None,
         diff_files=[], diff_files_added=set(), diff_text="",
         repo_root=pathlib.Path("."), is_blog=False, vale_findings=findings,
-        surface=surface)
+        surface=surface, evidence_base=evidence_base)
 
 
 def block(*bullets: str) -> str:
@@ -93,6 +98,29 @@ def test_nit_bullet_rejected_on_v2():
     v = vp.check_style_advisory_provenance(ctx_for(block(NIT_72), VALE, surface="v2"))
     assert len(v) == 1
     assert "v3" in v[0].expected
+
+
+def test_refresh_lane_does_not_recheck_carried_style_bullets():
+    """Regression: the v3 refresh passes the prior card's style block through
+    verbatim but regenerates `.vale-findings.json` for the new head. When the
+    author fixes the flagged line, fresh Vale stops reporting it — and a check
+    against that artifact would fail the refresh for doing what we asked."""
+    fixed_since = [f for f in VALE if f["line"] != 97]
+    ctx = ctx_for(block(STYLE_97), fixed_since, evidence_base=None)
+    assert vp.check_style_advisory_provenance(ctx) == []
+
+
+def test_v2_style_bullets_are_not_newly_constrained():
+    """v2's block was never opened to nits, so there is no new channel to
+    guard there — and no new failure mode for a legacy lane."""
+    fake = "- **line 72:** [style] _typo_ — message."
+    assert vp.check_style_advisory_provenance(ctx_for(block(fake), VALE, surface="v2")) == []
+
+
+def test_nit_on_v2_is_rejected_without_any_artifact():
+    v = vp.check_style_advisory_provenance(
+        ctx_for(block(NIT_72), None, surface="v2", evidence_base=None))
+    assert len(v) == 1
 
 
 def test_missing_artifact_skips():

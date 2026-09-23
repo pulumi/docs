@@ -748,10 +748,11 @@ def assemble_evidence(
     for key in ("editorial_balance", "triaged", "confidence", "summary", "stances"):
         if prior and key in prior:
             evidence[key] = prior[key]
-    # NOT carried from `prior`: the model re-renders the advisory block on
-    # every refresh and may add a `[nit]` to it (compose-review.NIT_TAG), so
-    # the count is re-derived from the card being published rather than pinned
-    # to whatever Vale reported on the first run.
+    # NOT carried from `prior`: derived from the card being published, the
+    # same way build-evidence derives it, so the count can only ever describe
+    # the block a reader sees. The refresh passes that block through verbatim
+    # today, but a prior record written before `[nit]` bullets existed held a
+    # Vale-only count, and nothing about the card should depend on that.
     n_style, n_nits = be.count_style_bullets(author_out)
     evidence["style_suggestions_count"] = n_style + n_nits
     if prior is None:
@@ -814,12 +815,11 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
-        # Same recount the initial lane does: the model re-renders the advisory
-        # block on a refresh, so a `[nit]` it added (or a bullet it dropped)
-        # has to move the brief's rubber-stamp line. The evidence count moves
-        # with it inside assemble_evidence.
+        # The brief's rubber-stamp Style line follows the card too (the
+        # evidence count moves with it inside assemble_evidence). No empty-block
+        # drop here: build-evidence already removed any empty block before the
+        # card was first published, and the refresh doesn't re-render it.
         brief_out = be.refresh_style_line(brief_out, *be.count_style_bullets(author_out))
-        author_out = be.drop_empty_style_block(author_out)
         author_out = set_evidence_url(author_out, args.evidence_url)
         brief_out = set_evidence_url(brief_out, args.evidence_url)
     except UpdateError as exc:

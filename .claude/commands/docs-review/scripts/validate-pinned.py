@@ -837,8 +837,8 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
 
 
 def check_style_advisory_provenance(ctx: Context) -> list[Violation]:
-    """Every `[style]` bullet traces to an advisory entry in `.vale-findings.json`;
-    `[nit]` is the tag for one the review found itself.
+    """Every `[style]` bullet on a composed v3 draft traces to an advisory entry
+    in `.vale-findings.json`; `[nit]` is the tag for one the review found itself.
 
     The v3 advisory block is the author card's only non-blocking lane, so it is
     open to model-found nits — a typo, a stray space, the mechanical slips
@@ -848,22 +848,22 @@ def check_style_advisory_provenance(ctx: Context) -> list[Violation]:
     up: an unverified finding rendered as `[style]` reads as linter output, and
     the block is quoted out of context often enough for that to matter.
 
-    So the tags split by provenance and the rule holds each to it. `[style]`
-    means Vale said so and is checked against the artifact; `[nit]` means the
-    review says so, is never blocking, and is counted separately in the brief's
-    rubber-stamp line. Neither can impersonate the other.
+    So the tags split by provenance. `[nit]` is v3-only, checked everywhere.
+    `[style]` is checked only where the block was built from THIS artifact: the
+    composed v3 draft, which is the only body validated with an evidence base.
+    The v3 refresh lane passes the prior card's block through verbatim while
+    regenerating `.vale-findings.json` for the new head — so once an author
+    fixes a flagged line (the thing the block asks them to do), the carried
+    bullet no longer matches, and checking it there would fail the refresh for
+    exactly the behavior we want. v2 is left alone: its block was never
+    opened, so there is no new laundering channel on it to guard.
     """
-    if ctx.vale_findings is None:
-        return []  # pre-step didn't run — absence isn't evidence
-    advisory: set[tuple[str, int]] = {
-        (str(f.get("file") or ""), int(f.get("line") or 0))
-        for f in ctx.vale_findings
-        if not f.get("blocker")
-    }
     violations: list[Violation] = []
-    for b in _compose_mod().walk_style_bullets(ctx.body):
-        if b["tag"] == _compose_mod().NIT_TAG:
-            if ctx.surface != "v3":
+    bullets = _compose_mod().walk_style_bullets(ctx.body)
+    nit_tag = _compose_mod().NIT_TAG
+    if ctx.surface != "v3":
+        for b in bullets:
+            if b["tag"] == nit_tag:
                 violations.append(Violation(
                     rule_id="style-advisory-provenance",
                     line_ref=f"<style L{b['line']}>",
@@ -873,8 +873,16 @@ def check_style_advisory_provenance(ctx: Context) -> list[Violation]:
                           "⚠️ Low-confidence section already reaches the author. Render this as "
                           "an ordinary ⚠️ bullet."),
                 ))
-            continue
-        if (b["file"], b["line"]) in advisory:
+        return violations
+    if ctx.vale_findings is None or ctx.evidence_base is None:
+        return []  # not a composed draft, or no artifact — nothing to trace against
+    advisory: set[tuple[str, int]] = {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in ctx.vale_findings
+        if not f.get("blocker")
+    }
+    for b in bullets:
+        if b["tag"] == nit_tag or (b["file"], b["line"]) in advisory:
             continue
         violations.append(Violation(
             rule_id="style-advisory-provenance",
@@ -3179,7 +3187,7 @@ RULES = [
     },
     {
         "id": "style-advisory-provenance",
-        "desc": "Advisory `[style]` bullets trace to .vale-findings.json; model-found ones are tagged `[nit]`.",
+        "desc": "On a composed v3 draft, advisory `[style]` bullets trace to .vale-findings.json; model-found ones are tagged `[nit]` (v3-only).",
         "hint": "Tag a bullet you found yourself `[nit]`, not `[style]` — `[style]` asserts Vale produced it.",
         "check": check_style_advisory_provenance,
         "surfaces": ("v2", "v3"),

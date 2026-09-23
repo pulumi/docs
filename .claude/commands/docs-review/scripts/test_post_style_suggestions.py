@@ -596,16 +596,36 @@ def test_caption_matches_composer():
     sys.modules["compose_review"] = cr
     spec.loader.exec_module(cr)
 
-    for url in ("", "https://github.com/o/r/pull/7/files"):
-        block = cr._render_style_findings(
-            [{"file": "content/docs/foo.md", "line": 2,
-              "category": "wordiness", "message": "'utilize' is too wordy."}],
-            files_url=url)
-        caption = next(ln for ln in block.splitlines()
-                       if ln.startswith("*Optional polish"))
-        assert caption == pss._caption_text(url), (
-            f"caption drift for files_url={url!r}:\n"
-            f"  composer: {caption}\n  annotator: {pss._caption_text(url)}")
+    # Both variants: v2's, and v3's, which also names the review's own
+    # `[nit]` bullets. Pinning only the first let the second be reverted by
+    # the annotator on every published v3 card.
+    for nits in (False, True):
+        for url in ("", "https://github.com/o/r/pull/7/files"):
+            block = cr._render_style_findings(
+                [{"file": "content/docs/foo.md", "line": 2,
+                  "category": "wordiness", "message": "'utilize' is too wordy."}],
+                files_url=url, allow_nits=nits)
+            caption = next(ln for ln in block.splitlines()
+                           if ln.startswith("*Optional polish"))
+            assert caption == pss._caption_text(url, nits), (
+                f"caption drift for files_url={url!r}, nits={nits}:\n"
+                f"  composer: {caption}\n  annotator: {pss._caption_text(url, nits)}")
+
+
+def test_annotator_keeps_the_v3_caption():
+    """Regression: the annotator runs on the v3 author draft before publish and
+    reconciles the caption authoritatively — so it has to reconcile TO the v3
+    caption on a v3 card, not back to the v2 one."""
+    card = ("<!-- CLAUDE_REVIEW 1/1 -->\n<!-- CLAUDE_REVIEW_AUTHOR -->\n\n"
+            "#### Style suggestions\n\n" + pss._caption_text("", nits=True) + "\n\n"
+            "##### content/docs/foo.md\n\n- **line 2:** [nit] _typo_ — x.\n")
+    out, _ = pss.annotate_text(card, [])
+    assert pss._caption_text("", nits=True) in out
+    assert pss._caption_text("", nits=False) not in out
+    # ...and a v2 body keeps the v2 caption.
+    v2 = card.replace("<!-- CLAUDE_REVIEW_AUTHOR -->\n", "")
+    out2, _ = pss.annotate_text(v2, [])
+    assert pss._caption_text("", nits=False) in out2
 
 
 def test_key_ignores_note_but_not_replacement():
