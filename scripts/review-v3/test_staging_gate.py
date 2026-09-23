@@ -19,10 +19,10 @@ spend a slot on the shared staging stack, and it had never once been
 executed. These tests execute it.
 """
 
+import ast
 import os
 import shutil
 import subprocess
-import textwrap
 from pathlib import Path
 
 import pytest
@@ -398,6 +398,34 @@ def test_extraction_is_pointed_at_a_real_step():
     assert "review-routing.yml" in script
 
 
+def g4_red_message() -> str:
+    """The G4 red remedy text, read from sentinel.py's syntax tree.
+
+    Found by the `Gate("G4 infra-evidence", "red", ...)` call itself, not
+    by a character window after it. A fixed-size slice ran past the end of
+    the call into the next branch's comments, so unrelated text added there
+    could fail the assertion below with a message pointing nowhere useful.
+    Only the string pieces are collected; the f-string's `{head_sha[:9]}`
+    placeholder contributes nothing, which is fine for a wording check.
+    """
+    tree = ast.parse((REPO_ROOT / "scripts/review-v3/sentinel.py").read_text(
+        encoding="utf-8"))
+    found = []
+    for node in ast.walk(tree):
+        if not (isinstance(node, ast.Call)
+                and getattr(node.func, "id", None) == "Gate"
+                and len(node.args) >= 3):
+            continue
+        name, status, message = node.args[:3]
+        if (isinstance(name, ast.Constant) and name.value == "G4 infra-evidence"
+                and isinstance(status, ast.Constant) and status.value == "red"):
+            found.append("".join(
+                n.value for n in ast.walk(message)
+                if isinstance(n, ast.Constant) and isinstance(n.value, str)))
+    assert len(found) == 1, f"expected one G4 red Gate(...) call, found {len(found)}"
+    return found[0]
+
+
 def test_g4_remedy_text_matches_who_the_gate_accepts():
     """The Sentinel's advice and the gate's rule are one fact, stated twice.
 
@@ -405,9 +433,7 @@ def test_g4_remedy_text_matches_who_the_gate_accepts():
     tools-team while the gate accepts any review team, the PR sits waiting
     on one person for no reason.
     """
-    sentinel_src = (REPO_ROOT / "scripts/review-v3/sentinel.py").read_text(
-        encoding="utf-8")
-    start = sentinel_src.index('"G4 infra-evidence", "red"')
-    message = sentinel_src[start:start + 800]
-    assert "any review team" in message, textwrap.shorten(message, 400)
-    assert "tools-team" not in message, textwrap.shorten(message, 400)
+    message = g4_red_message()
+    assert "any review team" in message, message
+    assert "tools-team" not in message, message
+    assert "/deploy-staging" in message, message
