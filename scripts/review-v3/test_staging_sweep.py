@@ -385,6 +385,30 @@ def test_unreadable_statuses_skip_that_sha_rather_than_guessing():
         h.close()
 
 
+
+def test_a_failed_pr_lookup_is_retried_rather_than_sealed_as_no_open_pr():
+    """A transient /pulls error is not "no open PR": writing the status after
+    one would trip already-recorded on every later sweep, and the Sentinel
+    would never be poked for a PR whose deploy went green."""
+    h = Harness([run(SHA_A)], statuses={SHA_A: []})  # no /pulls snapshot: the GET fails
+    try:
+        rec = h.sweep()
+        assert rec["finalized"] == []
+        assert rec["skipped"] == [{"sha": SHA_A, "reason": "pr-lookup-failed"}]
+        assert h.gh.writes == [], "neither a poke nor a sealing status"
+    finally:
+        h.close()
+
+
+def test_the_shared_constants_match_sentinel():
+    """Re-spelled rather than imported (sentinel.py needs yaml; the sweep job
+    installs nothing), so this is what keeps the sweep writing the status the
+    gate reads."""
+    sentinel = _load("sentinel_for_staging_sweep", HERE / "sentinel.py")
+    assert staging_sweep.STAGING_WORKFLOW_FILE == sentinel.STAGING_WORKFLOW_FILE
+    assert staging_sweep.STAGING_STATUS_CONTEXT == sentinel.STAGING_STATUS_CONTEXT
+    assert staging_sweep.STAGING_STATUS_WRITERS == sentinel.STAGING_STATUS_WRITERS
+
 # ---- workflow wiring ----------------------------------------------------
 
 

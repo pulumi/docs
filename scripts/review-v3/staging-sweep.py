@@ -89,9 +89,12 @@ if str(HERE) not in sys.path:
 
 from gh_client import GhClient  # noqa: E402
 
-# The workflow whose runs are G4's evidence, and the context the verdict is
-# recorded under. Both are shared with sentinel.py rather than re-spelled:
-# a drift here is a gate that reads one thing and a sweep that writes another.
+# The workflow whose runs are G4's evidence, the context the verdict is
+# recorded under, and the writer allowlist below all mirror sentinel.py's.
+# They are re-spelled rather than imported because sentinel.py pulls in yaml
+# (via routing) and the sweep job installs nothing; test_staging_sweep.py
+# pins them equal, since a drift here is a gate that reads one thing and a
+# sweep that writes another.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
 STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # Identities whose status the Sentinel will take as evidence. Anyone with
@@ -207,18 +210,19 @@ def existing_verdict(statuses: list[dict]) -> str | None:
 
 
 def open_pr_for_branch(gh: GhClient, branch: str) -> dict | None:
-    """The open PR whose head is `branch`, or None.
+    """The open PR whose head is `branch`, or None when there genuinely is none.
 
     `workflow_run.pull_requests[]` is not available here (there is no event),
     and the head branch is the handle both deploy lanes dispatch at, so this
     is the same resolution `staging-status.yml` does.
+
+    A failed lookup RAISES rather than returning None: "no open PR" lets the
+    sweep write the status, and a status written after a lookup that merely
+    hiccuped would seal the SHA without the Sentinel ever being poked.
     """
     owner = gh.repo.split("/", 1)[0]
-    try:
-        prs = gh.get(f"repos/{gh.repo}/pulls",
-                     {"state": "open", "head": f"{owner}:{branch}"}) or []
-    except Exception:  # noqa: BLE001 — an unresolvable PR is a notice, not a failure
-        return None
+    prs = gh.get(f"repos/{gh.repo}/pulls",
+                 {"state": "open", "head": f"{owner}:{branch}"}) or []
     return prs[0] if prs else None
 
 
@@ -259,7 +263,12 @@ def sweep(gh: GhClient, *, default_branch: str, now: datetime,
         # idempotence key, so sealing it before the poke lands would make a
         # failed poke permanent. G4 is only re-scored when the Sentinel runs.
         if is_success and poke_sentinel:
-            pr = open_pr_for_branch(gh, fact["branch"])
+            try:
+                pr = open_pr_for_branch(gh, fact["branch"])
+            except Exception as exc:  # noqa: BLE001 — retried next cycle
+                log(f"::warning::could not look up the open PR for {fact['branch']}: {exc}")
+                record["skipped"].append({"sha": sha, "reason": "pr-lookup-failed"})
+                continue
             if pr is None:
                 entry["poked"] = "no-open-pr"
             elif ((pr.get("head") or {}).get("sha") or "") != sha:
