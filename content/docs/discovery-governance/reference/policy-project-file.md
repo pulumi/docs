@@ -56,12 +56,12 @@ Select your policy pack runtime to see the relevant attributes and examples:
 
 {{% choosable language opa %}}
 
-[OPA (Open Policy Agent)](https://github.com/pulumi/pulumi-policy-opa) policy packs let you write policies in [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) instead of TypeScript or Python. Install the analyzer plugin with `pulumi plugin install analyzer policy-opa`.
+[OPA (Open Policy Agent)](https://github.com/pulumi/pulumi-policy-opa) policy packs let you write policies in [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) instead of TypeScript or Python. OPA packs need the OPA language plugin, which you install with `pulumi plugin install language opa`. For a walkthrough, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
 
 | Name | Required | Description |
 | - | - | - |
 | `runtime` | required | Must be `opa`. |
-| `version` | optional | The version of the policy pack, following [semantic versioning](https://semver.org/). |
+| `version` | optional | The version of the policy pack, following [semantic versioning](https://semver.org/). Always set it: Pulumi warns with `warning[opa/missing-version]` when it's missing. |
 | `description` | optional | A brief description of the policy pack. |
 | `inputFormat` | optional | Controls how resource properties are structured before OPA evaluation. Set to `kubernetes-admission` to enable [Kubernetes Admission Controller compatibility](#inputformat). When omitted, resources use the default Pulumi OPA input structure. |
 
