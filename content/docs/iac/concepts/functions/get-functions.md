@@ -36,7 +36,7 @@ You can use the `get` stanza, which is available on all resource types, to look 
 
 {{% choosable language hcl %}}
 
-You can use a `data` block, which is available for every data source the provider exposes, to look up an existing resource that is not managed by Pulumi.
+Pulumi HCL has no `get` function. To look up an existing resource that is not managed by Pulumi, use a `data` block, which calls the [provider function](/docs/iac/concepts/functions/provider-functions/) behind that data source. A `data` block takes the data source's own lookup arguments, such as `id`, rather than a logical name and physical ID.
 
 {{% /choosable %}}
 

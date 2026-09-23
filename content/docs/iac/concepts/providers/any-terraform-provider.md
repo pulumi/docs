@@ -168,7 +168,7 @@ Pulumi HCL takes providers from a `required_providers` block rather than from `p
 pulumi package add terraform-provider honeycombio/honeycombio
 ```
 
-This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML and Pulumi HCL, it also generates and links a typed SDK in your project. Pulumi HCL doesn't use this command at all — see its tab in step 3.
+This downloads the provider and records it in your `Pulumi.yaml`. In every language except YAML, it also generates and links a typed SDK in your project. Pulumi HCL skips this step.
 
 ### Step 3: Use the provider in your code
 
@@ -312,7 +312,7 @@ packages:
 
 {{% choosable language hcl %}}
 
-Name the provider's source in a `required_providers` block, then run `pulumi install` — there is no `pulumi package add` step:
+Name the provider's source in a `required_providers` block, then run `pulumi install`:
 
 ```hcl
 terraform {
@@ -363,7 +363,7 @@ To look up a name, read the provider's own documentation in the [OpenTofu](https
 
 ## Working with your team
 
-Commit your `Pulumi.yaml` to source control. It records the provider and its version, which is all a teammate or a CI job needs to reproduce your setup.
+Commit your `Pulumi.yaml` to source control. It records the provider and its version, which is all a teammate or a CI job needs to reproduce your setup. In Pulumi HCL, the provider is named in your `.tf` files instead, so commit those along with the `sdks/<provider>/hcl.sdk.json` descriptor that `pulumi install` writes for each provider.
 
 When someone clones the repository, they run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/):
 
@@ -384,7 +384,7 @@ If the provider you need isn't in the Pulumi Registry, search the [OpenTofu regi
 ## Best practices
 
 1. **Use a Pulumi provider when one exists**: A provider published in the Pulumi Registry is maintained, documented, and versioned for Pulumi, so prefer it over adding the Terraform provider directly.
-1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job generates the same SDK.
+1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job gets the same provider. In Pulumi HCL, set `version` in the provider's `required_providers` entry.
 1. **Document provider usage**: Record which Terraform providers your team uses and why, so they can be revisited when a Pulumi provider becomes available.
 1. **Watch for upstream changes**: Track the provider's releases for breaking changes before you upgrade.
 
