@@ -1,6 +1,6 @@
 ---
 title_tag: "Policy fields reference | Pulumi Policies"
-meta_desc: Reference for the fields you set on policies and policy packs in TypeScript and Python, such as severity, enforcement level, and remediation steps.
+meta_desc: Reference for the fields you set on policies and policy packs in TypeScript, Python, and OPA, such as severity and remediation steps.
 title: Policy fields
 h1: Policy fields
 menu:
@@ -21,6 +21,7 @@ Where you write the fields depends on the language:
 
 - **TypeScript**: properties on each policy object in the `policies` array passed to `new PolicyPack()`.
 - **Python**: keyword arguments to `ResourceValidationPolicy` or `StackValidationPolicy`. Python uses snake_case names, such as `remediation_steps`.
+- **OPA**: `# METADATA` annotations on each Rego rule. OPA supports a smaller set of fields. See [OPA](#opa).
 
 A second, smaller set of fields describes the [policy pack as a whole](#policy-pack-fields).
 
@@ -170,3 +171,36 @@ These fields describe the pack as a whole. In TypeScript, set them on the argume
 | `provider` | `provider` | The cloud provider or platform the pack applies to, such as AWS or Azure. |
 | `tags` | `tags` | Labels for the pack. |
 | `repository` | `repository` | URL of the repository where the pack is defined. |
+
+## OPA
+
+OPA policy packs set fields with [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/policy-reference/#annotations), in a `# METADATA` comment block directly above each rule:
+
+```rego
+package aws
+
+import rego.v1
+
+# METADATA
+# title: Require RDS storage encryption
+# description: RDS instances must have storage encryption enabled.
+# custom:
+#   message: Set storageEncrypted to true.
+deny_unencrypted_rds contains msg if {
+    input.type == "aws:rds/instance:Instance"
+    not input.storageEncrypted
+    msg := sprintf("RDS instance '%s' must have storage encryption enabled", [input.__name])
+}
+```
+
+The OPA analyzer reads these annotations and maps them to policy fields:
+
+| OPA | Policy field | Notes |
+|-----|--------------|-------|
+| Rule name | `name` | For example, `deny_unencrypted_rds`. |
+| Rule name prefix | `enforcementLevel` | `deny` or `violation` for mandatory rules, `warn` for advisory rules. |
+| `title` | `displayName` | Defaults to the name of the `.rego` file, without its extension. |
+| `description` | `description` | |
+| `custom.message` | Violation message | Shown with each violation of the rule. |
+
+A `title` annotation with package scope sets the pack's display name. OPA policies don't support `severity`, `remediationSteps`, `url`, `tags`, `framework`, or `configSchema`. For more on writing OPA policies, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).
