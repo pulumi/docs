@@ -181,16 +181,35 @@ test("restores the caller's errexit when it was NOT set", () => {
 // matters. These two tests read the script rather than the extracted function.
 test("both stack-taking commands go through the wrapper", () => {
     const source = fs.readFileSync(RUN_PULUMI_SH, "utf8");
-    const wrapped = [...source.matchAll(
-        /^\s*retry_on_stack_lock\s+pulumi\s+-C\s+infrastructure\s+(refresh|up)\b/gm,
-    )].map(m => m[1]).sort();
-    assert.deepEqual(wrapped, ["refresh", "up"],
-        "both `pulumi refresh` and `pulumi up` must be wrapped in retry_on_stack_lock");
+    assert.match(source,
+        /^\s*retry_on_stack_lock\s+pulumi\s+-C\s+infrastructure\s+refresh\b/m,
+        "`pulumi refresh` must be wrapped in retry_on_stack_lock");
+    assert.match(source, /^\s*retry_on_stack_lock\s+publish_if_newest\s*$/m,
+        "`pulumi up` must run inside publish_if_newest, wrapped in retry_on_stack_lock");
+});
+
+// The publish-ordering check only means something if it runs on the same attempt
+// as the `pulumi up` it guards. Checked once before the retry, a run that lost a
+// lock conflict to a newer deploy would pass the stale check and then publish over
+// that newer deploy on its retry -- the exact regression the check exists to stop.
+test("the publish-ordering check runs inside the retried unit, before up", () => {
+    const source = fs.readFileSync(RUN_PULUMI_SH, "utf8");
+    const body = source.match(/publish_if_newest\(\)\s*\{([\s\S]*?)^\s*\}/m);
+    assert.ok(body, "publish_if_newest() must exist");
+    const check = body[1].search(/node\s+\.\/scripts\/check-publish-ordering\.js\s*\|\|\s*return/);
+    const up = body[1].search(/pulumi\s+-C\s+infrastructure\s+up\b/);
+    assert.ok(check >= 0, "publish_if_newest must run the ordering check and stop if it refuses");
+    assert.ok(up > check, "the ordering check must come before `pulumi up`");
+    const outside = source.replace(body[0], "");
+    assert.doesNotMatch(outside, /check-publish-ordering\.js/,
+        "the ordering check must not also run once outside the retried unit");
 });
 
 test("no bare pulumi refresh/up escapes the wrapper", () => {
     const source = fs.readFileSync(RUN_PULUMI_SH, "utf8");
-    const bare = [...source.matchAll(
+    const body = source.match(/publish_if_newest\(\)\s*\{[\s\S]*?^\s*\}/m);
+    const outside = body ? source.replace(body[0], "") : source;
+    const bare = [...outside.matchAll(
         /^\s*pulumi\s+-C\s+infrastructure\s+(?:refresh|up)\b.*$/gm,
     )].map(m => m[0].trim());
     assert.deepEqual(bare, [],

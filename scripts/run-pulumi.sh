@@ -129,19 +129,23 @@ case ${PULUMI_ACTION} in
         # await-in-progress.js makes unlikely but cannot prevent.
         #
         # This has to run immediately before the update and nowhere else, because the
-        # race it detects only resolves at publish time. If a retry loop is ever wrapped
-        # around the `pulumi up` below -- e.g. to survive a `[409] Conflict` -- this call
-        # belongs INSIDE it: the run that won the conflict is exactly the newer run this
-        # check exists to avoid overwriting. It is cheap and idempotent, so re-running it
-        # per attempt costs nothing.
-        node ./scripts/check-publish-ordering.js
+        # race it detects only resolves at publish time. That is why the check and the
+        # `pulumi up` are one unit inside the stack-lock retry rather than the check
+        # running once up front: a `[409] Conflict` means another run holds the lock,
+        # and the run that wins that conflict is exactly the newer run this check
+        # exists to avoid overwriting. Re-checking per attempt is cheap and idempotent.
+        # A refusal exits 1 without a 409 line, so the retry lets it fail at once.
+        publish_if_newest() {
+            node ./scripts/check-publish-ordering.js || return
+            pulumi -C infrastructure up --yes
+        }
 
         # Given how frequently we update the CloudFront distribution, and how easy it can
         # be for our checkpointed CloudFront Etag to fall out of sync with what's current,
         # we refresh the distribution on every update.
         retry_on_stack_lock pulumi -C infrastructure refresh -t "${CDN_PULUMI_URN}" --yes
 
-        retry_on_stack_lock pulumi -C infrastructure up --yes
+        retry_on_stack_lock publish_if_newest
 
         # Invalidate CloudFront cache after deploy so updated content is served immediately.
         # Only invalidate HTML and non-fingerprinted paths. Fingerprinted assets (css, js,
