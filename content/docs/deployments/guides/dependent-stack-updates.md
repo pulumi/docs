@@ -594,11 +594,6 @@ terraform {
   }
 }
 
-variable "organization" {
-  type        = string
-  description = "The Pulumi organization that owns these stacks."
-}
-
 locals {
   stack = "prod"
 }
@@ -609,7 +604,7 @@ locals {
 
 # The application sits at the top of the graph and has no downstream stacks.
 resource "auto-deploy_auto_deployer" "app" {
-  organization    = var.organization
+  organization    = pulumi.organization
   project         = "app"
   stack           = local.stack
   downstream_refs = []
@@ -617,14 +612,14 @@ resource "auto-deploy_auto_deployer" "app" {
 
 # The database and the cluster each feed the application.
 resource "auto-deploy_auto_deployer" "database" {
-  organization    = var.organization
+  organization    = pulumi.organization
   project         = "database"
   stack           = local.stack
   downstream_refs = [auto-deploy_auto_deployer.app.ref]
 }
 
 resource "auto-deploy_auto_deployer" "cluster" {
-  organization    = var.organization
+  organization    = pulumi.organization
   project         = "cluster"
   stack           = local.stack
   downstream_refs = [auto-deploy_auto_deployer.app.ref]
@@ -632,7 +627,7 @@ resource "auto-deploy_auto_deployer" "cluster" {
 
 # The network underpins everything; updating it updates the database and the cluster.
 resource "auto-deploy_auto_deployer" "network" {
-  organization    = var.organization
+  organization    = pulumi.organization
   project         = "network"
   stack           = local.stack
   downstream_refs = [
@@ -642,7 +637,7 @@ resource "auto-deploy_auto_deployer" "network" {
 }
 ```
 
-The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type. Set the organization with `pulumi config set organization <your-org>`.
+The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type.
 
 {{% /choosable %}}
 
