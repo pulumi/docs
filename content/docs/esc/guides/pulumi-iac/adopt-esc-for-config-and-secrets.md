@@ -103,6 +103,8 @@ config:
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
+Pulumi HCL reads each config key into the `variable` with the same name, minus the `myapp:` prefix, so these names stay camelCase to match the keys.
+
 ```hcl
 variable "containerImage" {
   type = string

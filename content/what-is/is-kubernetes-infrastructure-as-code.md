@@ -130,7 +130,7 @@ provider "kubernetes" {
 
 # 3. Deploy a Helm chart onto that cluster with the current helm.sh/v4 Chart resource.
 #    The type name keeps the dot from the Pulumi token (kubernetes:helm.sh/v4:Chart),
-#    so refer to this resource with depends_on rather than a dotted traversal.
+#    so other blocks can't refer to this resource, even in depends_on.
 resource "kubernetes_helm.sh_v4_chart" "nginx_ingress" {
   provider  = kubernetes.eks
   chart     = "ingress-nginx"
@@ -165,7 +165,7 @@ Pulumi doesn't replace the Helm ecosystem, it consumes it. [`helm.v4.Chart`](/do
 
 Both are legitimate answers to "is there IaC for Kubernetes," and the [comparison between Pulumi and Terraform](/docs/iac/comparisons/terraform/) is a fair one to make: both provision the cluster and can manage the workloads that run on it.
 
-The difference is in how you write and evolve that code. Pulumi programs are TypeScript, Python, Go, .NET, or Java, so they get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform added a native `terraform test` framework in v1.6, but HCL is still a purpose-built configuration language rather than a general-purpose one, so its control flow is limited to `count`, `for_each`, and for-expressions, with no user-defined functions, and its Kubernetes and Helm providers typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies.
+The difference is in how you write and evolve that code. Pulumi programs written in TypeScript, Python, Go, .NET, or Java get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform added a native `terraform test` framework in v1.6, but HCL is still a purpose-built configuration language rather than a general-purpose one, so its control flow is limited to `count`, `for_each`, and for-expressions, with no user-defined functions. Terraform's Kubernetes and Helm providers also typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies. Teams that prefer HCL can write the same Pulumi program in HCL, as the HCL tab of the example above shows, and still deploy the cluster and its workloads in one `pulumi up`.
 
 ## Frequently asked questions about Kubernetes and infrastructure as code
 

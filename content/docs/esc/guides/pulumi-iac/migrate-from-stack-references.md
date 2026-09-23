@@ -255,7 +255,7 @@ variable "publicSubnetIds" {
 
 {{< /chooser >}}
 
-Use the accessor that matches each output's type: a string accessor (`require` / `Require`) for `vpcId`, an object accessor (`requireObject` / `RequireObject`) for the `publicSubnetIds` list, and a secret accessor (`requireSecret` / `RequireSecret`) for any value that was secret in the producer stack.
+Use the accessor that matches each output's type: a string accessor (`require` / `Require`) for `vpcId`, an object accessor (`requireObject` / `RequireObject`) for the `publicSubnetIds` list, and a secret accessor (`requireSecret` / `RequireSecret`) for any value that was secret in the producer stack. In HCL, each `variable` block reads the config key with the same name, and its `type` does the accessor's job (`list(string)` for `publicSubnetIds`). A value that arrives as a secret stays secret without any extra declaration.
 
 ## Verify the migration is a no-op
 

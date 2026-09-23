@@ -247,6 +247,12 @@ func main() {
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
+Pulumi HCL reads each config key into the `variable` with the same name, so for this program set the secret under `secrets_demo`:
+
+```bash
+$ pulumi config set secrets_demo --secret
+```
+
 ```hcl
 variable "account_id" {
   type = string
