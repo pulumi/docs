@@ -114,7 +114,7 @@ PolicyPack(
 |------------|--------|----------|-------------|
 | `name` | `name` | Yes | Identifier for the policy. Must be unique within the policy pack. |
 | `description` | `description` | Yes | Short summary of what the policy checks and why. |
-| `enforcementLevel` | `enforcement_level` | No | What happens on a violation: `advisory` (warn only), `mandatory` (block the update), `remediate` (fix the resource automatically), or `disabled` (turn the policy off). Overrides the pack's default enforcement level. In Python, use the `EnforcementLevel` enum. Organization-managed `mandatory` enforcement is available with Pro and Enterprise. The `remediate` level is available with [Enterprise](/pricing/#policy-enforcement-modes). |
+| `enforcementLevel` | `enforcement_level` | No | What happens on a violation: `advisory` (warn only), `mandatory` (block the update), `remediate` (fix the resource automatically), or `disabled` (turn the policy off). Overrides the pack's default enforcement level. In Python, use the `EnforcementLevel` enum. Organization-managed `mandatory` and `remediate` enforcement require a paid Pulumi Cloud edition; see [pricing](/pricing/#policy-enforcement-modes). |
 | `severity` | `severity` | No | How serious a violation is: `low`, `medium`, `high`, or `critical`. In Python, use the `Severity` enum. |
 | `displayName` | `display_name` | No | Human-readable name, shown instead of `name`. |
 | `remediationSteps` | `remediation_steps` | No | Guidance for fixing a violation by hand. This is unrelated to the `remediate` enforcement level, which fixes resources automatically. |

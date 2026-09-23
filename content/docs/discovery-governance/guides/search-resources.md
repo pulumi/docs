@@ -128,6 +128,7 @@ Examples:
 - _modified:2023-03-31T01:02:03.456_
 - _modified:[2023-01-01 to 2023-03-31]_
 - _modified:>=2023-01-01_
+- _modified:>now-30d_ (relative dates use `now` with an offset such as `-1d`, `-2w`, `-1M`, or `-1y`)
 
 #### name
 

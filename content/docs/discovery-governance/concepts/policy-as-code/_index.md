@@ -23,6 +23,8 @@ aliases:
 - /docs/iac/using-pulumi/crossguard/core-concepts/
 - /docs/insights/policy/
 - /docs/discovery-governance/policy/
+- /docs/discovery-governance/policy/cli/
+- /docs/insights/policy/cli/
 - /docs/insights/policy/policy-as-code/snyk-policy/
 - /docs/iac/crossguard/snyk-policy/
 - /docs/guides/crossguard/snyk-container-scanning/
@@ -125,7 +127,7 @@ Choose your path based on your needs:
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/discovery-governance/operations/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
 - **Configuring discovered resources?** Visit the [Discovery Get Started tutorial](/docs/discovery-governance/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 - **Using the CLI?** See the [`pulumi policy` commands](/docs/iac/cli/commands/pulumi_policy/) to create, publish, and manage policy packs from the command line.
-- **Enforcing policies in CI/CD?** Learn how to [integrate policy enforcement](/docs/discovery-governance/guides/policies-in-ci-cd/) into GitHub Actions, Google Cloud Build, and other CI/CD pipelines.
+- **Enforcing policies in CI/CD?** Learn how to [integrate policy enforcement](/docs/discovery-governance/guides/policies-in-ci-cd/) into GitHub Actions, Azure Pipelines, and other CI/CD pipelines.
 - **Building custom tooling?** Explore the [API & SDK reference](/docs/discovery-governance/reference/policy-api-sdk/) for the Policy SDK and Pulumi Cloud REST API endpoints.
 - **Looking for tutorials?** Follow the [custom policy pack tutorial](/dev/tutorials/custom-policy-pack/) to create, validate, and publish a policy pack step by step. Or learn how to [evaluate Terraform compliance with Pulumi](/dev/tutorials/eval-compliance-terraform/).
 - **Building an internal developer platform?** Explore advanced patterns including [policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests/), [validating component inputs using policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions/), and [cost control using components, policies, and constrained inputs](/docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/).

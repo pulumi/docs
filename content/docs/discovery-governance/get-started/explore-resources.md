@@ -36,13 +36,13 @@ The following examples use the [query syntax](/docs/discovery-governance/guides/
 To see all resources modified in the last 30 days:
 
 ```text
-modified:<now-30d
+modified:>now-30d
 ```
 
 To find resources with a particular tag, such as every S3 bucket that belongs to a cost center:
 
 ```text
-type:aws:s3/bucket:Bucket tags.costcenter:1234
+type:aws:s3/bucket:Bucket .tags.costcenter:1234
 ```
 
 ### AI Assist

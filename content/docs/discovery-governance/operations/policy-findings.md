@@ -34,7 +34,7 @@ Policy Findings provides a centralized view for managing compliance across your 
 To access Policy Findings in Pulumi Cloud:
 
 1. Navigate to your organization in Pulumi Cloud.
-1. Select **Policy Findings** from the sidebar under the Policies section.
+1. Navigate to **Governance** > **Policy findings** in the left navigation.
 
 ## Overview tab
 
