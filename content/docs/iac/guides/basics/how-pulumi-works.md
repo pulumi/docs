@@ -140,7 +140,7 @@ resource "aws_s3_bucket" "media_bucket" {}
 resource "aws_s3_bucket" "content_bucket" {}
 ```
 
-HCL resource labels are identifiers, so the logical names here are `media_bucket` and `content_bucket` — the snake_case counterparts of the `media-bucket` and `content-bucket` names this walkthrough uses.
+HCL convention is snake_case resource labels, and the label becomes the logical name, so this program's resources are `media_bucket` and `content_bucket` where this walkthrough says `media-bucket` and `content-bucket`. Because the unqualified `aws` provider is bridged from the OpenTofu registry, `pulumi up` also reports their type as `aws:index:S3Bucket` rather than `aws:s3/bucket:Bucket`.
 
 {{% /choosable %}}
 
@@ -156,7 +156,7 @@ Next, we run `pulumi up`. Since this program is written in {{% pulumi-language %
 
 {{% choosable language hcl %}}
 
-Next, we run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. HCL has no object construction, so there is no constructor call to return from: as the language host evaluates the configuration, each `resource` block becomes a _resource registration_ request sent to the deployment engine. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
+Next, we run `pulumi up`. Since this program is written in HCL, the Pulumi CLI launches the HCL language host and requests that it execute the program. The language host reads every `.tf` file in the project, builds a dependency graph from the references between blocks, and walks that graph, sending a _resource registration_ request to the deployment engine for each `resource` block. This is subtle, but important: _registering_ `aws_s3_bucket.media_bucket` _does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure. Blocks that do not depend on one another are registered without waiting on each other, so the language host keeps working concurrently with the engine processing this request. (The language host and deployment engine used throughout this walkthrough are defined in detail under [Architecture](#architecture) below.)
 
 {{% /choosable %}}
 
@@ -316,7 +316,7 @@ resource "aws_s3_bucket" "content_bucket" {}
 
 {{< /chooser >}}
 
-When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
+When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the media bucket's definition causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `tags` property has changed from empty to a map assigning the `owner` tag. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the `tags` property to set the `owner` tag. When this operation completes, the current state is updated to reflect the change that had been made.
 
 The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
 
@@ -673,8 +673,8 @@ flowchart LR
 
 The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the deployment engine. Language hosts are implemented via [plugins](/docs/iac/concepts/plugins/) (specifically, language plugins). The language host consists of two different pieces:
 
-1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
-2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_—by constructing a resource object in your program—the language SDK communicates the registration request back to the deployment engine. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the TypeScript and JavaScript SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
+1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). Most language executors are distributed with the Pulumi CLI; the CLI downloads the HCL executor, `pulumi-language-hcl`, automatically the first time you run an HCL project.
+2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_—by constructing a resource object in your program—the language SDK communicates the registration request back to the deployment engine. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the TypeScript and JavaScript SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI. Pulumi YAML and Pulumi HCL have no separate language SDK: the language executor reads the program files itself and sends each resource registration to the engine.
 
 ### Deployment engine
 
@@ -689,7 +689,7 @@ A resource provider is made up of two different pieces:
 1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
-Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
+Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com. Pulumi HCL has no per-provider SDK package: `pulumi install` downloads the resource plugin for each provider your program uses and writes a descriptor file for it to `sdks/<provider>/hcl.sdk.json`.
 
 ### Pulumi Cloud architecture
 

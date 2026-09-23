@@ -342,7 +342,8 @@ locals {
 # Create cluster resources in the shared network...
 ```
 
-Set `org` once per stack with `pulumi config set clusters:org myorg`. The `outputs` keys are map keys rather than HCL identifiers, so they are read back exactly as the producing stack exported them — `vpcId`, not `vpc_id`.
+Set `org` once per stack with `pulumi config set clusters:org myorg`. Output names are map keys, so use them exactly
+as the producing stack exported them: `vpcId`, not `vpc_id`.
 
 {{% /choosable %}}
 
@@ -536,7 +537,8 @@ variable "privateSubnetIds" {
 # Create cluster resources in the shared network...
 ```
 
-A `variable` block reads whatever the stack's configuration supplies under the project's namespace, so these names match the `pulumiConfig` keys above rather than HCL's usual snake_case.
+Each `variable` block reads the stack configuration value of the same name in the project's namespace, so these names
+match the `pulumiConfig` keys above rather than HCL's usual snake_case.
 
 {{% /choosable %}}
 
@@ -906,7 +908,10 @@ my-platform/
 
 {{% choosable language hcl %}}
 
-A Pulumi HCL project is a directory of `.tf` files, and every `.tf` file in that directory is loaded into a single root module. The files are merged rather than imported, so splitting the program across them is purely organizational: no file has to compose the others, and any file can reference the resources, locals, and variables any other file declares.
+A Pulumi HCL project is a directory of `.tf` files, and every `.tf` file in that directory is loaded into a single
+root module. The files are merged rather than imported, so splitting the program across them is purely organizational:
+no file has to compose the others, and any file can reference the resources, locals, and variables any other file
+declares.
 
 ```
 my-platform/
@@ -918,7 +923,9 @@ my-platform/
 └── workloads.tf      # application services
 ```
 
-Because those files share one namespace, the unit of reuse is the [`module` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a package import. A module is its own directory of `.tf` files, and Pulumi instantiates it as a component resource:
+Because those files share one namespace, the unit of reuse is the
+[`module` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#modules) rather than a package import. A module
+is its own directory of `.tf` files, and Pulumi instantiates it as a component resource:
 
 ```hcl
 module "vpc" {
