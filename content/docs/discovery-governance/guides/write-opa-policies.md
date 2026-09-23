@@ -36,6 +36,8 @@ mkdir policy-pack && cd policy-pack
 pulumi policy new aws-opa --generate-only
 ```
 
+The command's output suggests running `pulumi install` next. Skip it: OPA packs have no dependencies to install, and the Pulumi CLI installs the OPA analyzer plugin itself the first time you run the pack.
+
 To follow this guide, create the files by hand instead. Create a `PulumiPolicy.yaml` file:
 
 ```yaml
