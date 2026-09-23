@@ -22,7 +22,23 @@
     <lastmod>{{ safeHTML ( site.Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
   </sitemap>
   {{/* Built and deployed separately by pulumi/registry; lastmod intentionally
-       omitted, see comment above. */ -}}
+       omitted, see comment above.
+
+       NOTE: /registry/sitemap.xml is itself a <sitemapindex> (it fans out to
+       dynamically-sharded /registry/sitemap-0.xml, -1.xml, ... as the
+       registry grows past 45,000 URLs per shard) -- so referencing it here
+       nests one sitemap index inside another, which the sitemaps.org
+       protocol disallows ("You can not nest Sitemap index files.") and which
+       not every crawler will recurse into. We keep this entry regardless:
+       Google Search Console downloads it successfully with zero errors, so
+       removing it would be a regression for the crawler that does handle it.
+       To give the registry's 60k+ URLs a second, spec-compliant discovery
+       path that does not depend on nesting, /registry/sitemap.xml is ALSO
+       declared as its own top-level `Sitemap:` line directly in
+       layouts/robots.txt -- do not "fix" this nesting by hardcoding the
+       registry's leaf shard filenames here or in robots.txt; the shard
+       count and names are dynamic and owned entirely by pulumi/registry's
+       own build. */ -}}
   <sitemap>
     <loc>{{ .Site.Params.canonicalURL }}/registry/sitemap.xml</loc>
   </sitemap>

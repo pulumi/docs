@@ -18,6 +18,16 @@ Sitemap: https://www.pulumi.com/sitemap-index.xml
 
 Sitemap: https://www.pulumi.com/dev/sitemap-index.xml
 
+# The registry sitemap is also declared here directly, in addition to being
+# referenced from sitemap-index.xml above. Per the sitemaps.org protocol, a
+# sitemap index file may not itself be listed inside another sitemap index
+# ("You can not nest Sitemap index files."), and /registry/sitemap.xml (built
+# and deployed separately by pulumi/registry) is itself a sitemapindex over
+# its own dynamically-sharded leaf files. Declaring it as a top-level
+# Sitemap: entry here gives it a spec-compliant discovery path that does not
+# depend on recursing into a nested index, which not every crawler does.
+Sitemap: https://www.pulumi.com/registry/sitemap.xml
+
 # Dev Center, for agents:
 #   llms.txt index:    https://www.pulumi.com/dev/llms.txt
 #   Per-page markdown: append `.md` to any /dev detail URL
