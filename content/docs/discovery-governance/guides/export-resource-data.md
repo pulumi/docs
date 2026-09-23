@@ -22,9 +22,7 @@ Data Export allows you to export any set of Resource Search results to a CSV fil
 
 There are two ways to perform a data export:
 
-1. Point-and-click, via the Pulumi Cloud web UI, by clicking the Export CSV menu item:
-
-    ![a screenshot of the Pulumi Cloud web UI showing the drop-down for Resource Search results and the Export CSV command highlighted](/docs/discovery-governance/assets/data-export-pulumi-cloud-ui.png)
+1. In the Pulumi Cloud console, by selecting **Download CSV** on the **Resources** page.
 
 1. Programmatically, by calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/cloud-rest-api/#data-export)
 

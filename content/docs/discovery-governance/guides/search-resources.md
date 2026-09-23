@@ -398,7 +398,7 @@ Clicking the "X" within the search bar will remove all previously selected filte
 
 {{< pulumi-cloud "insights-data-export" />}}
 
-You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
+To download a CSV of all resources matching your query, select **Download CSV**.
 
 For a complete description of the CSV format returned, see the [Data Export](/docs/discovery-governance/guides/export-resource-data/) documentation.
 
@@ -430,9 +430,7 @@ or, if you're not sure which type is appropriate, you can use AI Assist again to
 
 You may want to expand the "Advanced filtering" menu if you are interested in specific resource counts.
 
-You do not need to query AI Assist with English:
-
-![AI Assist](/docs/discovery-governance/assets/search-ai.png)
+You don't need to ask AI Assist questions in English. For example, asking in Chinese for all virtual machines across every cloud provider produces:
 
 > (type:aws:ec2/instance:Instance OR type:azure:compute:VirtualMachine OR type:gcp:compute:Instance)
 

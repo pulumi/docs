@@ -92,8 +92,6 @@ If a scanned account contains resources managed by an external IaC provider, suc
   * **Properties**: View detailed properties for each resource version.  
   * **References**: See edges (relationships) to other resources in the same account.
 
-![Resource details page](/docs/discovery-governance/assets/insights-resources.png)
-
 ## Configure ESC credentials
 
 ### AWS
