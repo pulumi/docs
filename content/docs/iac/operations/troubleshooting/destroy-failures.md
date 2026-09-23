@@ -56,7 +56,7 @@ The following resources are common sources of this kind of failure:
 | AWS | `aws.s3.BucketV2` | `forceDestroy` | Defaults to `false`; a non-empty bucket otherwise fails to delete. |
 | AWS | `aws.ec2.Instance` | `disableApiTermination` | Enforced by the AWS API (EC2 termination protection). |
 | AWS | `aws.dynamodb.Table` | `deletionProtectionEnabled` | Enforced by the AWS API; defaults to `false`. |
-| Azure | Any resource under a management lock | N/A (`azure-native.authorization.ManagementLock`) | Enforced by Azure Resource Manager; a `CanNotDelete` lock must be removed before the resource can be deleted, independent of anything in your Pulumi program. |
+| Azure | Any resource under a management lock | N/A (`azure-native.authorization.ManagementLockByScope` and its scope-specific variants, e.g. `ManagementLockAtResourceLevel`) | Enforced by Azure Resource Manager; a `CanNotDelete` lock must be removed before the resource can be deleted, independent of anything in your Pulumi program. |
 | Azure | `azure-native.keyvault.Vault` | Soft delete and purge protection | Destroying the vault only soft-deletes it. Recreating a vault with the same name fails with `VaultAlreadyExists` until the soft-deleted vault is purged or recovered, and purge protection prevents purging until its retention period elapses. |
 
 ## Check to see if a resource was deleted after all
