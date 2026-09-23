@@ -41,7 +41,7 @@ For full setup and configuration details, see the [customer-managed workflow run
 ### Setting up policy evaluations
 
 1. [Set up a customer-managed workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#using-customer-managed-workflow-runners)
-1. Navigate to **Management** > **Policies** > **Policy Groups** in Pulumi Cloud
+1. Navigate to **Governance** > **Policy configuration** in Pulumi Cloud and select the **Policy Groups** tab
 1. Select the workflow runner pool for an audit policy group
 1. Run a policy evaluation against a stack and confirm the results appear as expected
 

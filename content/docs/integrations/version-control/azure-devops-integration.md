@@ -32,7 +32,7 @@ To set up the Azure DevOps integration you must be an org admin in Pulumi Cloud,
 {{% /notes %}}
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
-1. Navigate to **Management** > **Version control**.
+1. Navigate to **Settings** > **Version control**.
 1. Select **Authorize Azure DevOps** and complete the Microsoft Entra ID sign-in.
 1. Select the Azure DevOps organization and project you want to integrate with, then configure your [integration settings](#integration-settings).
 
@@ -75,7 +75,7 @@ Deleting the integration removes the service hooks, the service principal and it
 
 ### Individual user setup
 
-Separately from the org-level integration, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their Azure DevOps account.
+Separately from the org-level integration, individual users can complete an OAuth flow under **Settings** > **Version control** to grant Pulumi access to their Azure DevOps account.
 
 Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create service hooks. The org-level integration continues to handle pull request comments and deployments regardless of whether you grant individual access.
 
@@ -191,7 +191,7 @@ The Pulumi Azure DevOps integration posts results back to Azure DevOps regardles
 
 If comments aren't appearing on your pull requests, verify that:
 
-1. In the [Pulumi Cloud console](https://app.pulumi.com), the Azure DevOps integration is connected and shows a valid status under **Management** > **Version control**.
+1. In the [Pulumi Cloud console](https://app.pulumi.com), the Azure DevOps integration is connected and shows a valid status under **Settings** > **Version control**.
 1. Pull request comments are enabled in your [integration settings](#integration-settings).
 1. In Azure DevOps, the service hooks exist. Navigate to **Project Settings** > **Service hooks** and look for the Pulumi subscriptions.
 1. In the Pulumi Cloud console, the stack is associated with the correct Azure DevOps repository and branch.

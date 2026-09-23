@@ -55,7 +55,7 @@ Resources are displayed in a paginated table showing up to 10,000 results. For l
 
 ### Resource relationships
 
-Discovery maintains a graph of relationships between resources, tracking connections like S3 buckets and their bucket policies, virtual machines and attached storage, or network interfaces and security groups. These relationships are visible in the Resource Explorer and help you understand infrastructure dependencies.
+Discovery maintains a graph of relationships between resources, tracking connections like S3 buckets and their bucket policies, virtual machines and attached storage, or network interfaces and security groups. These relationships are visible on the **Resources** page and help you understand infrastructure dependencies.
 
 ### Unified resources
 

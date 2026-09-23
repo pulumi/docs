@@ -40,7 +40,7 @@ You can manage each by selecting your desired account, where you can see the pro
 
 The wizard already started an initial scan when you connected the account. Here, let's launch one manually so you know how to re-scan on demand.
 
-After you select the `production` account, select the **Actions** drop-down, choose the **Scan** action, and select the **Scan** button.
+After you select the `production` account, select **Actions**, choose **Scan**, and select **Run**.
 
 ## View account discovery progress
 
@@ -48,6 +48,6 @@ Discovery will kick off a scan across each child account / region in parallel an
 
 As each account scan completes, you will see a checkmark and status update per account. The scan duration will depend on the number of resources for each account, however as soon as they are discovered you can begin exploring the discovered resources and do not have to wait for the entire discovery to finish.
 
-Let's introduce the Pulumi Resource Explorer for your newly discovered resources and learn how to draw insights about your cloud infrastructure.
+Next, you'll explore your newly discovered resources on the **Resources** page.
 
 {{< get-started-stepper >}}

@@ -32,7 +32,7 @@ To set up a Custom VCS integration, you must be an org admin in Pulumi Cloud.
 {{% /notes %}}
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
-1. Navigate to **Management** > **Version control**.
+1. Navigate to **Settings** > **Version control**.
 1. Select **Add integration** and choose **Custom VCS**.
 1. Enter a **Name** for the integration (e.g., "My Git Server"). Names must be unique within your organization.
 1. Enter a **Base URL** — the URL prefix for your repositories (e.g., `https://git.example.com/myorg`). Repository names are appended to this URL to form clone URLs.
@@ -87,7 +87,7 @@ Credentials are resolved at deployment time using the access permissions of the 
 
 Custom VCS integrations do not auto-discover repositories from your VCS server. You must add each repository manually.
 
-1. Navigate to **Management** > **Version control** and select your Custom VCS integration.
+1. Navigate to **Settings** > **Version control** and select your Custom VCS integration.
 1. Select **Add repository**.
 1. Enter the repository **name** or path (e.g., `infra-prod` or `team/infra-prod`).
 1. Optionally enter a **display name** for the repository.

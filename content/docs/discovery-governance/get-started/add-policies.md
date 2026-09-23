@@ -29,13 +29,11 @@ You don't need to write any policy code. To write policies of your own later, se
 - The Discovery account you connected in the previous steps.
 - For the preventative section: a Pulumi stack that deploys AWS resources, and [Node.js](https://nodejs.org/) installed on the machine where you run `pulumi preview`. Pulumi's pre-built policy packs run on Node.js, whatever language your program uses.
 
-## Add the Pulumi Best Practices pack to your organization
+## Find the Pulumi Best Practices pack
 
-1. In the Pulumi Cloud console, navigate to **Management** > **Policies**.
-1. On the **Policy Packs** tab, switch to the **Available** view.
-1. Select **Pulumi Best Practices** for AWS, then select **Add to organization**.
+In the Pulumi Cloud console, navigate to **Governance** > **Policy configuration**. The **Policy Packs** tab lists every policy pack available to your organization: the ones you've published, and the pre-built packs that Pulumi publishes for your edition. You don't need to add Pulumi's packs to your organization first.
 
-The pack now appears in the **Organization** view, ready to use in policy groups. Its [reference page](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/) lists every policy it contains.
+Select **Pulumi Best Practices** for AWS to see the policies it contains, or see its [reference page](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/).
 
 ## Audit your discovered resources
 
@@ -45,7 +43,7 @@ An audit policy group evaluates the resources in your cloud accounts and reports
 When you connected your account, the wizard added it to `default-accounts-policy-group`, which may already apply a policy pack to it. Creating your own audit group lets you choose exactly which packs apply. See [default policy groups](/docs/discovery-governance/concepts/policy-as-code/policy-groups/#default-policy-groups).
 {{% /notes %}}
 
-1. On the **Policy Groups** tab, select **Create audit policy group**.
+1. On the **Policy configuration** page, select the **Policy Groups** tab, then select **Create audit policy group**.
 1. Enter a name, such as `best-practices-audit`.
 1. Under **Entities**, select **Choose accounts** and select the Discovery account you connected, for example `production`.
 1. Under **Policy Packs**, select **Select policy packs** and choose **Pulumi Best Practices**.
@@ -54,11 +52,11 @@ When you connected your account, the wizard added it to `default-accounts-policy
 Policies evaluate each time Discovery scans the account. To see results now instead of waiting for the next scheduled scan, run a scan manually:
 
 1. Navigate to **Resources** > **Discovery**.
-1. Select the account, then select **Actions** > **Scan**.
+1. Select the account, then select **Actions**, choose **Scan**, and select **Run**.
 
 ## Review policy findings
 
-When the scan finishes, navigate to **Policy Findings** to see the results. The page has three tabs:
+When the scan finishes, navigate to **Governance** > **Policy findings** to see the results. The page has three tabs:
 
 - **Overview**: compliance metrics across your accounts and policy packs.
 - **Compliance**: the failing resources for each policy, organized by policy group.
@@ -70,7 +68,7 @@ Each issue shows the resource that failed, the policy it violated, and how to fi
 
 Audit policies find problems after resources exist. A preventative policy group catches the same problems in Pulumi stacks before they're deployed.
 
-1. Navigate to **Management** > **Policies**, and on the **Policy Groups** tab, select **Create preventative policy group**.
+1. Navigate to **Governance** > **Policy configuration**, and on the **Policy Groups** tab, select **Create preventative policy group**.
 1. Enter a name, such as `best-practices-preventative`.
 1. Under **Entities**, select **Choose stacks** and select the stack you want to govern.
 1. Under **Policy Packs**, select **Select policy packs** and choose **Pulumi Best Practices**.

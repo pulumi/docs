@@ -46,34 +46,26 @@ To follow this guide, ensure you have:
 
 ## Understanding the Policies page
 
-The Policies page is the central hub for managing Pulumi Policies. To get there, navigate to **Management** > **Policies** in the left navigation.
+The **Policy configuration** page is the central hub for managing Pulumi Policies. To get there, navigate to **Governance** > **Policy configuration** in the left navigation.
 
 The page displays two tabs: **Policy Packs** and **Policy Groups**.
 
 ### Policy Packs
 
-![The Policies page with the Policy Packs tab selected](/docs/discovery-governance/assets/policy-packs.png)
+The Policy Packs tab lists every policy pack available to your organization, with its publisher, provider, latest version, and the number of stacks and accounts it's applied to. This includes:
 
-The Policy Packs tab has two switchable views:
+- Custom policy packs you've authored and published
+- [Pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) that Pulumi publishes, for the packs your edition includes. You don't need to add them to your organization before using them.
 
-- **Organization**: Policy packs published to your organization and ready to apply. This includes:
-  - Custom policy packs you've authored and published
-  - Pulumi-provided policy packs you've added from the marketplace
-- **Available**: Pre-authored policy packs from Pulumi that you can add to your organization
-
-Select any policy pack in either view to see its details across three tabs:
+Select any policy pack to see its details across three tabs:
 
 - **Overview**: Displays pack metadata including name, publisher, version, source, and tags
 - **Policies**: Lists individual policies in the pack with their descriptions and enforcement levels
-- **Entities Applied**: Shows which stacks or accounts use this pack and which policy groups apply it (disabled in the Available view)
-
-{{% notes type="info" %}}
-You may not see any packs in the Organization view until you add some from the Available view or publish your own.
-{{% /notes %}}
+- **Entities Applied**: Shows which stacks or accounts use this pack and which policy groups apply it
 
 ### Policy Groups
 
-![The Policies page with the Policy Groups tab selected](/docs/discovery-governance/assets/policy-groups.png)
+![The Policy configuration page with the Policy Groups tab selected](/docs/discovery-governance/assets/policy-groups.png)
 
 Policy groups enforce policy packs across stacks or accounts within your organization. The Policy Groups tab displays two types:
 
@@ -117,7 +109,7 @@ After setting up your policy groups, view violations and take action from the Po
 
 To access policy findings:
 
-1. Navigate to **Policy Findings** in the left navigation
+1. Navigate to **Governance** > **Policy findings** in the left navigation
 1. View compliance issues organized by policy, resource, or account
 
 Each policy violation creates an issue that you can act on:

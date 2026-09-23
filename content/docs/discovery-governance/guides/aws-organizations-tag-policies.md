@@ -56,12 +56,12 @@ The policy pack will use the same AWS credentials configured for your stack to f
 
 ## Enabling the pack
 
-To enable this policy pack for your organization:
+The pack is available to your organization in Pulumi Cloud without any setup. To enforce it, add it to a policy group:
 
-1. From within your organization, navigate to the **Policies** tab
-1. Under Policy Packs, select the **Available** tab
-1. Select **AWS Organizations Tag Policies** and select **Add to organization**
-1. From the Organizations tab, apply the policy to a Policy Group to enforce tag validation
+1. Navigate to **Governance** > **Policy configuration** and select the **Policy Groups** tab.
+1. Create a policy group, or select an existing one that covers the stacks you want to check.
+1. Select **Select policy packs**, choose **AWS Organizations Tag Policies**, and set its enforcement level.
+1. Select **Save Policy Group**.
 
 For more information about enabling policy packs, see [Use pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/).
 

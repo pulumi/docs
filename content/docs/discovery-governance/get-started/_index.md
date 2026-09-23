@@ -19,7 +19,7 @@ pulumi_cloud_feature: insights-discovery
 
 Discovery is the resource-scanning product in Pulumi Cloud that helps you discover, understand, manage, and improve your cloud infrastructure. It improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
-Discovery and Resource Explorer give you the tools to:
+Discovery gives you the tools to:
 
 - **Discover**: Scan and sync all your cloud infrastructure – including resources provisioned manually or through other tools like Terraform, CloudFormation, Kubernetes and ARM – to bring everything under a single pane of glass. Gain complete visibility across clouds, regions, and accounts.
 
@@ -31,12 +31,12 @@ Discovery and Resource Explorer give you the tools to:
 
 If you only want to enforce policies on your Pulumi IaC stacks, skip ahead to [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
 
-This guide will take you through the following steps to get started with Discovery and Resource Explorer:
+This guide will take you through the following steps to get started with Discovery:
 
 1. Confirm the prerequisites for connecting your cloud accounts.
 1. Connect a cloud account and run your first discovery scan.
 1. Manage your accounts and launch scans on demand.
-1. Use Resource Explorer to understand your infrastructure, and ask natural language questions using Pulumi Neo.
+1. Search and explore your resources on the **Resources** page, including with natural language queries.
 1. Apply the Pulumi Best Practices policy pack to your discovered resources and your Pulumi stacks.
 
 {{< get-started-stepper >}}

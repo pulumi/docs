@@ -87,8 +87,6 @@ If a scanned account contains resources managed by an external IaC provider, suc
     * **Project**: `my-aws-account`  
     * **Stack/Account**: `us-east-1/my-cluster`
 
-![Resources page](/docs/discovery-governance/assets/insights-resource-explorer.png)
-
 * **Resource navigation**: Click on a resource's name to view its **Resource Details** page. This page includes:  
   * **Resource history**: Pulumi tracks and displays all versions of a resource, with changes based on property updates.  
   * **Properties**: View detailed properties for each resource version.  
