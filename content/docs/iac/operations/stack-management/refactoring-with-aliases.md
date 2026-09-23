@@ -228,7 +228,22 @@ moved {
 }
 ```
 
-Pulumi matches the old address to the resource inside the module and updates the parent path in state; only the new component wrapper is created. If you'd rather record the alias on the resource itself, the `pulumi` block takes the old parent's URN directly — `aliases = [{ parent_urn = "urn:pulumi:..." }]` — since HCL has no reference to a parent that no longer exists in the program.
+Pulumi matches the old address to the resource inside the module and updates the parent path in state; only the new component wrapper is created.
+
+To move a resource from one module to another, record the alias on the resource inside the new module. HCL has no reference to a parent that's gone from the program, so the alias takes the old parent's URN. A resource declared in a module also takes the module's name as a prefix on its Pulumi name, so the alias names the old name too:
+
+```hcl
+resource "google_service_account_key" "primary_key" {
+  # ...
+
+  pulumi {
+    aliases = [{
+      name       = "old_parent.primary_key"
+      parent_urn = "urn:pulumi:..."
+    }]
+  }
+}
+```
 
 {{% /choosable %}}
 

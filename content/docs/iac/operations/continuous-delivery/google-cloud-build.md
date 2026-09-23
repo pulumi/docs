@@ -22,7 +22,7 @@ aliases:
 
 [Google Cloud Build](https://cloud.google.com/build/docs) is Google Cloud's serverless CI/CD platform. It runs builds as a series of container-image steps defined in a `cloudbuild.yaml` file, started by triggers that respond to repository events such as pull requests, branch pushes, and tags.
 
-You run Pulumi in a build step by using one of Pulumi's official Docker images as the step's container image. Each image bundles the Pulumi CLI with a language runtime — `pulumi/pulumi-nodejs`, `pulumi/pulumi-python`, `pulumi/pulumi-go`, `pulumi/pulumi-dotnet`, and `pulumi/pulumi-java` — so a step can install dependencies and run Pulumi commands against a program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
+You run Pulumi in a build step by using one of Pulumi's official Docker images as the step's container image. Each image bundles the Pulumi CLI with a language runtime — `pulumi/pulumi-nodejs`, `pulumi/pulumi-python`, `pulumi/pulumi-go`, `pulumi/pulumi-dotnet`, and `pulumi/pulumi-java` — so a step can install dependencies and run Pulumi commands against a program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/). Pulumi HCL needs no language runtime, so it runs from the CLI-only `pulumi/pulumi-base` image.
 
 {{< cicd-cloud-note >}}
 
