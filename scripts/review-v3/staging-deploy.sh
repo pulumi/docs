@@ -4,7 +4,7 @@
 # the evidence Sentinel gate G4 verifies.
 #
 # Two callers:
-#   - staging-deploy-pr.yml   `/deploy-staging`, a tools-team member asking
+#   - staging-deploy-pr.yml   `/deploy-staging`, a review-team member asking
 #                             (--announce, because they're waiting on it;
 #                             then WATCHES the run. The watch is not how the
 #                             status gets written — see below — it is what
