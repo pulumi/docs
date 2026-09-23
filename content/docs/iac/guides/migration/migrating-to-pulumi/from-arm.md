@@ -252,43 +252,45 @@ class MyStack : Stack
 
 {{% choosable language hcl %}}
 
-An HCL program reads the deployment through the same `azurerm` provider your Terraform configuration already uses, so the lookup is a data source rather than a resource `get`:
-
 ```hcl
-# Read the ARM deployment and the storage account name it exported.
-data "azurerm_resource_group_template_deployment" "storage" {
-  name                = "myStorageDeployment"
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+# Read the deployment and the storage account name.
+data "azure-native_resources_get_deployment" "storage" {
+  deployment_name     = "myStorageDeployment62ba53a3"
   resource_group_name = "myrg"
 }
 
 locals {
-  storage_account_name = jsondecode(data.azurerm_resource_group_template_deployment.storage.output_content).storageAccountName.value
-}
-
-data "azurerm_storage_account" "storage" {
-  name                = local.storage_account_name
-  resource_group_name = "myrg"
+  storage_account_name = data.azure-native_resources_get_deployment.storage.properties.outputs.storageAccountName.value
 }
 
 # Create a blob for our own deployment.
-resource "azurerm_storage_container" "files" {
-  name               = "files"
-  storage_account_id = data.azurerm_storage_account.storage.id
+resource "azure-native_storage_blob_container" "myStorageContainer" {
+  resource_group_name = "myrg"
+  account_name        = local.storage_account_name
+  container_name      = "files"
 }
 
-resource "azurerm_storage_blob" "zip" {
-  name                 = "zip"
-  storage_container_id = azurerm_storage_container.files.id
-  type                 = "Block"
-  source               = "wwwroot.zip"
+resource "azure-native_storage_blob" "zip" {
+  resource_group_name = "myrg"
+  account_name        = local.storage_account_name
+  container_name      = azure-native_storage_blob_container.myStorageContainer.name
+  source              = filearchive("wwwroot")
 }
 
 output "blob_url" {
-  value = azurerm_storage_blob.zip.url
+  value = azure-native_storage_blob.zip.url
 }
 ```
 
-The deployment is identified by its name and resource group rather than its fully qualified ID, and `output_content` is the deployment's outputs as a JSON string, so `jsondecode` unwraps it.
+HCL has no resource `get`, so the program reads the deployment through the `getDeployment` function as a data source, which takes the deployment's name and resource group rather than its fully qualified ID.
 
 {{% /choosable %}}
 
@@ -296,13 +298,13 @@ The deployment is identified by its name and resource group rather than its full
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the ARM deployment to retrieve its output values. In this case, the deployment and all of its resources are treated entirely as read-only, and Pulumi will never attempt to modify any of them.
 
-{{% choosable language "typescript,python,go,csharp" %}}
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/resourceGroups/<DEPLOYMENT-RG-NAME>/providers/Microsoft.Resources/deployments/<DEPLOYMENT-NAME>`. Consult the Azure CLI or portal to find this ID.
 
 {{% /choosable %}}
 
-> Although we've hard-coded the ARM deployment ID here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
+> Although we've hard-coded the ARM deployment here, it's common to dynamically compute a name using unique per-stack information, like the stack name, subscription ID, or other configuration variables.
 
 ### Convert ARM templates to Pulumi
 
@@ -442,20 +444,34 @@ class MyStack : Stack
 
 {{% choosable language hcl %}}
 
-`hcl` is a conversion target like any other, so the same command produces a Pulumi HCL project:
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
 
-```bash
-pulumi convert --from arm --language hcl --out .
+variable "resourceGroupNameParam" {
+  type = string
+}
+
+resource "azure-native_storage_storage_account" "storagecreatedbyarm" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  account_name        = "storagecreatedbyarm"
+  kind                = "StorageV2"
+  location            = "westeurope"
+  resource_group_name = var.resourceGroupNameParam
+  sku = {
+    name = "Standard_LRS"
+  }
+}
 ```
 
-The converter writes a `Pulumi.yaml` that selects the HCL runtime alongside the generated `.tf` files:
-
-```yaml
-name: arm-conversion
-runtime: hcl
-```
-
-Run `pulumi install` to fetch the providers the converted program declares, then `pulumi preview` to check the result. See the [Pulumi HCL docs](/docs/iac/languages-sdks/hcl/) for the program model.
+Alongside the `.tf` file, `pulumi convert --from arm --language hcl` writes a `Pulumi.yaml` with `runtime: hcl`, so the output is a complete Pulumi HCL project. Run `pulumi install` to fetch the providers it declares.
 
 {{% /choosable %}}
 
@@ -576,38 +592,34 @@ class MyStack : Stack
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
-HCL declares the adoption with an `import` block that names the target resource and its cloud ID:
-
 ```hcl
 terraform {
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">= 4.0"
+    azure-native = {
+      source = "pulumi/azure-native"
     }
   }
 }
 
-provider "azurerm" {
-  features {}
-}
+resource "azure-native_storage_storage_account" "storagecreatedbyarm" {
+  lifecycle {
+    create_before_destroy = true
+  }
+  account_name        = "storagecreatedbyarm"
+  kind                = "StorageV2"
+  location            = "westeurope"
+  resource_group_name = "existing-rg"
+  sku = {
+    name = "Standard_LRS"
+  }
 
-import {
-  to = azurerm_storage_account.storagecreatedbyarm
-  id = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm"
-}
-
-resource "azurerm_storage_account" "storagecreatedbyarm" {
-  name                     = "storagecreatedbyarm"
-  resource_group_name      = "existing-rg"
-  location                 = "westeurope"
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-  account_kind             = "StorageV2"
+  pulumi {
+    import_id = "/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/existing-rg/providers/Microsoft.Storage/storageAccounts/storagecreatedbyarm"
+  }
 }
 ```
 
-The ARM template's `sku.name` of `Standard_LRS` splits into the provider's `account_tier` and `account_replication_type`. You can also set the ID inline with the [`import_id`](/docs/iac/concepts/resources/options/import/) attribute of the resource's `pulumi` block instead of using a separate `import` block.
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) that names `azure-native_storage_storage_account.storagecreatedbyarm` and the same ID does the same job.
 
 {{% /choosable %}}
 
@@ -628,6 +640,19 @@ Diagnostics:
 ```
 
 This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+
+{{% choosable language hcl %}}
+
+In HCL, list the same properties by their snake_case names in the resource's `lifecycle` block:
+
+```hcl
+lifecycle {
+  create_before_destroy = true
+  ignore_changes        = [access_tier, enable_https_traffic_only, encryption, network_rule_set]
+}
+```
+
+{{% /choosable %}}
 
 After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
 

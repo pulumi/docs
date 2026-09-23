@@ -782,14 +782,13 @@ provider "aws" {
   region = "us-west-2"
 }
 
-variable "stage" {
-  type    = string
-  default = "dev"
+locals {
+  stage = pulumi.stack
 }
 
 # DynamoDB table
 resource "aws_dynamodb_table" "orders" {
-  name         = "my-api-orders-${var.stage}"
+  name         = "my-api-orders-${local.stage}"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "id"
 
@@ -801,7 +800,7 @@ resource "aws_dynamodb_table" "orders" {
 
 # IAM role for the Lambda function
 resource "aws_iam_role" "lambda" {
-  name = "create-order-role-${var.stage}"
+  name = "create-order-role-${local.stage}"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -834,7 +833,7 @@ resource "aws_iam_role_policy" "lambda" {
 
 # Lambda function
 resource "aws_lambda_function" "create_order" {
-  function_name = "create-order-${var.stage}"
+  function_name = "create-order-${local.stage}"
   runtime       = "nodejs20.x"
   handler       = "src/handlers/createOrder.handler"
   role          = aws_iam_role.lambda.arn
@@ -849,7 +848,7 @@ resource "aws_lambda_function" "create_order" {
 
 # HTTP API (API Gateway v2)
 resource "aws_apigatewayv2_api" "api" {
-  name          = "api-${var.stage}"
+  name          = "api-${local.stage}"
   protocol_type = "HTTP"
 }
 
@@ -888,13 +887,15 @@ output "table_name" {
 }
 ```
 
-The Serverless Framework derives the stage from its own configuration; here the stage is an ordinary input variable, so `pulumi config set stage prod` selects it per stack.
-
 {{% /choosable %}}
 
 {{< /chooser >}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 With Pulumi, you get the full power of a programming language. You can create reusable functions, use loops to create multiple similar resources, add conditional logic, and write tests for your infrastructure code.
+
+{{% /choosable %}}
 
 ## Importing existing resources
 
