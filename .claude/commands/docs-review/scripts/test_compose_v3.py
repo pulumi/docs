@@ -582,7 +582,6 @@ def test_trail_metadata_vocabularies_match_the_evidence_validator():
     assert set(cr._TRAIL_FRAMINGS) == ve.FRAMINGS
 
 
-
 # ---- the `[nit]` lane -------------------------------------------------------
 # The v3 author card's advisory block is its only non-blocking lane, so it also
 # carries the nits the review finds itself (compose-review.NIT_TAG). Before

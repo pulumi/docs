@@ -821,7 +821,15 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     if style_idx is None:
         return []  # no style suggestions — render-mode N/A
 
-    style_lines = section_lines[style_idx:]
+    # Bound the block at the next heading or card furniture. On v2 the ⚠️
+    # section ends right after it anyway; on v3 the scan runs over the whole
+    # card, and without a bound a `<details>` in anything rendered below the
+    # block (a Resolved list, say) would be reported as a collapsed style block.
+    # `##### <path>` groups stay inside: "##### x" doesn't start with "#### ".
+    end = next((j for j in range(style_idx + 1, len(section_lines))
+                if section_lines[j].startswith(("## ", "### ", "#### ", "📎 ", "<!-- "))),
+               len(section_lines))
+    style_lines = section_lines[style_idx:end]
     bullet_count = sum(1 for ln in style_lines if ln.lstrip().startswith("- **line "))
     if bullet_count and any("<details>" in ln for ln in style_lines):
         return [Violation(

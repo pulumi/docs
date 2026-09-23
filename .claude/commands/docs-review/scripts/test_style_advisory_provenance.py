@@ -194,3 +194,12 @@ def test_style_render_mode_reaches_the_v3_author_card():
     v = vp.check_style_render_mode(ctx_for(collapsed, VALE))
     assert len(v) == 1 and v[0].rule_id == "style-render-mode"
     assert vp.check_style_render_mode(ctx_for(block(STYLE_97), VALE)) == []
+
+
+def test_style_render_mode_ignores_details_below_the_block():
+    """The v3 fallback scans the whole card, so the block needs its own bound:
+    a `<details>` in a section rendered after it is not a collapsed style
+    block (PR #21804 review, F1)."""
+    card = (block(STYLE_97) + "\n### ✅ Resolved since last review\n\n"
+            "<details>\n<summary>older rounds</summary>\n\n- F9 fixed\n</details>\n")
+    assert vp.check_style_render_mode(ctx_for(card, VALE)) == []
