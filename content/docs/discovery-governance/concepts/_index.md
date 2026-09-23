@@ -17,6 +17,7 @@ These pages explain how Discovery, Pulumi Policies, and the Context API work. To
 
 - [Discovery](/docs/discovery-governance/concepts/discovery/): How Discovery scans your cloud accounts and organizes the resources it finds.
   - [Cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/): The accounts Discovery scans, how account hierarchies work, and the credentials each one uses.
+  - [Querying resources](/docs/discovery-governance/concepts/discovery/querying-resources/): How to search Pulumi-managed and discovered resources in one place.
   - [Visual Import](/docs/discovery-governance/concepts/discovery/visual-import/): How Visual Import turns discovered resources into Pulumi IaC code.
   - [Discovered stacks](/docs/discovery-governance/concepts/discovery/discovered-stacks/): How Discovery models CloudFormation, AWS CDK, and ARM deployments as stacks.
 
