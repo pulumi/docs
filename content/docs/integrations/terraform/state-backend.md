@@ -421,6 +421,20 @@ Once your Terraform state is in Pulumi Cloud, you can:
 - **Run audit policies** by adding the stack to an [audit policy group](/docs/discovery-governance/policy/policy-groups/) in Discovery
 - **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
 
+### Switching from the Terraform or OpenTofu CLI to the Pulumi CLI
+
+{{% notes type="warning" %}}
+Don't run `pulumi up` directly against a stack whose state was produced by the Terraform or OpenTofu CLI — including a stack that uses Pulumi Cloud as its state backend. Pulumi computes resource URNs differently than Terraform does, so `pulumi up` against Terraform-produced state proposes replacing every resource in the stack instead of leaving it unchanged.
+{{% /notes %}}
+
+If you want to move from running `terraform apply`/`tofu apply` against Pulumi Cloud to running `pulumi up` directly — for example, to adopt [Pulumi HCL](/docs/iac/languages-sdks/hcl/) or convert to a general-purpose language — first adopt the existing resources into a native Pulumi stack:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads your `.tf` files together with a Terraform or OpenTofu state file, and imports every managed resource in the root module into your Pulumi stack using the URNs `pulumi up` expects. Run `pulumi preview` afterward to confirm the import produced a clean, no-op plan before relying on `pulumi up` for further changes. See [Keep your code in HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#keep-your-code-in-hcl) for the full walkthrough, including how to handle resources nested inside modules and how to import once you've converted to a general-purpose language.
+
 ### Resource mapping
 
 When Terraform state is stored in Pulumi Cloud, each Terraform resource is converted to a synthetic Pulumi resource for visibility in the console and Resource Search. Resources are stored using a `pulumi:terraform:<tf-type>` type convention — for example, an `aws_instance` resource in Terraform appears as `pulumi:terraform:aws_instance` in Pulumi Cloud.
@@ -462,7 +476,7 @@ Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remo
 
 Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/integrations/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
 
-Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
+Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate` as described in [Switching from the Terraform or OpenTofu CLI to the Pulumi CLI](#switching-from-the-terraform-or-opentofu-cli-to-the-pulumi-cli) above.
 
 ### Can I use preventative policies?
 

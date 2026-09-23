@@ -95,6 +95,10 @@ If Neo doesn't support your specific use case, or if you prefer manual control o
 
 If your configuration is fine as it stands and it's the platform you want to change, you don't have to convert anything. Set `runtime: hcl` in `Pulumi.yaml` and Pulumi runs your existing `.tf` files unchanged. See the [HCL language docs](/docs/iac/languages-sdks/hcl/) for details.
 
+{{% notes type="warning" %}}
+Don't run `pulumi up` directly against your existing Terraform or OpenTofu state — including a stack that uses [Pulumi Cloud as its Terraform state backend](/docs/integrations/terraform/state-backend/). Pulumi computes resource URNs differently than Terraform does, so `pulumi up` against that state proposes replacing every resource instead of leaving it unchanged. Import first, as described below.
+{{% /notes %}}
+
 State migration still applies. Pulumi does not reuse a Terraform state file in place — state lives in whichever backend `pulumi login` points at — so bring your existing resources across with:
 
 ```bash
