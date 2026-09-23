@@ -66,7 +66,7 @@ The [Dev Center](/dev/) (tutorials, templates, examples, and a glossary) ships f
 1. **Facet landing pages**: `/dev/browse/cloud/<cloud>/`, `/dev/browse/language/<language>/`, and `/dev/browse/collection/<collection>/` (for example `/dev/browse/cloud/aws/`).
 1. **Filter URLs** when you need more than one facet: `/dev/browse/?cloud=aws&tag=containers`. The query parameters (`type`, `cloud`, `language`, `collection`, `tag`, `q`) are a frozen contract on the Dev Center side, so these URLs always resolve.
 1. **Hubs and template groups**: `/dev/`, `/dev/tutorials/`, `/dev/templates/`, a tutorial series index (such as `/dev/tutorials/pulumi-fundamentals/`), or a template group (`/dev/templates/<group>/[<cloud>/]`).
-1. **Tag landing pages**: `/dev/browse/tag/<tag>/`. A tag page exists only while at least five items carry the tag, so it can disappear. Link to one only if it's listed at `https://www.pulumi.com/dev/sitemap-0.xml`, and prefer a filter URL (`/dev/browse/?tag=<tag>`) when a tag has few items.
+1. **Tag landing pages**: `/dev/browse/tag/<tag>/`. A tag page exists only while at least five items carry the tag (currently; set by `MIN_LANDING_ROWS` in marketing-web's `apps/www/src/lib/dev-facets.ts`), so it can disappear. Link to one only if it's listed at `https://www.pulumi.com/dev/sitemap-0.xml`, and prefer a filter URL (`/dev/browse/?tag=<tag>`) when a tag has few items.
 
 **Deep links to a single tutorial** (`/dev/tutorials/<slug>/`) are fine only when that tutorial is the hands-on companion to the docs page, for example a concept page that links to the tutorial walking through it. Don't use a list of individual tutorials as a page's navigation.
 
