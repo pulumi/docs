@@ -1,7 +1,6 @@
 ---
-title: "AI Agents Need Continuity, Not Just Context"
+title: "AI agents need continuity, not just context"
 date: 2026-09-22T12:00:00-07:00
-draft: true
 meta_desc: "Why reliable AI agents need workspace recovery, and how Pulumi Neo uses Kopia-backed snapshots to restore context, files, and in-progress work."
 feature_image:
 authors:
@@ -14,26 +13,22 @@ category: engineering
 schema_type: auto
 social:
   twitter: |
-    AI agents need continuity, not just context.
+    Pulumi Neo works on real infrastructure projects, which means a resumed task needs more than chat history.
 
-    When a long-running task resumes, the hard part is not only restoring the conversation. It is getting the working directory back too.
-
-    Here's how we approached it in Pulumi Neo.
+    Here's how we approached workspace continuity for long-running AI agent tasks.
   linkedin: |
     Long-running infrastructure agents do not only produce messages. They produce working directories: source changes, generated files, local commits, tool output, and state that may live outside Git.
 
-    We wrote about what it took to make Pulumi Neo resume with real workspace continuity, and the design lessons that fell out of treating agent recovery as more than conversation replay.
+    We wrote about how Pulumi Neo approaches workspace continuity for long-running AI agent tasks, and why recovery has to account for the files and state an agent actually used.
   bluesky: |
-    AI agents need continuity, not just context.
+    Pulumi Neo works on real infrastructure projects, so resuming a task means more than restoring chat history.
 
-    Resuming a long-running task means getting the workspace back, not just the chat history.
-
-    Here's how we approached that in Pulumi Neo.
+    Here's how we approached workspace continuity for long-running AI agent tasks.
 ---
 
-Pulumi Neo works on infrastructure the way an engineer does: it clones repositories, edits files, installs dependencies, runs previews, and sometimes leaves behind useful generated state. That means a task is not just a conversation. It is also a filesystem.
+Pulumi Neo works on infrastructure the way an engineer does: it clones repositories, edits files, installs dependencies, runs previews, and sometimes leaves behind useful generated state. That means a task is not just a conversation, it is also a filesystem.
 
-For early Neo tasks, we persisted enough information to reconstruct Git repositories later. That worked for simple cases, but it was the wrong abstraction for long-running agent work. We needed to recover the workspace Neo had actually used.
+For early Neo tasks, that filesystem recovery started with Git. We persisted enough information to reconstruct repositories later: remotes, branches, commits, and local diffs. That worked for simple cases, but it was the wrong abstraction for long-running agent work. We needed to recover the workspace Neo had actually used.
 
 <!--more-->
 
