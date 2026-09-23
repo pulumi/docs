@@ -152,9 +152,9 @@ output "stashed_value" {
 }
 ```
 
-The `lifecycle` block is what makes this a stash. On its own, `terraform_data` keeps Terraform's semantics, where `output` is the computed value of `input` and follows it on every update. Adding [`ignore_changes`](/docs/iac/concepts/resources/options/ignorechanges/) for `input` pins the value the resource was created with, giving you the stateful `output` described above. Leave it out and `terraform_data.my_stash.output` returns the current `input` instead.
+Without the `lifecycle` block, `terraform_data` keeps Terraform's semantics: `output` mirrors `input` and follows it on every update. Adding [`ignore_changes`](/docs/iac/concepts/resources/options/ignorechanges/) for `input` pins the value the resource was created with, which gives you the stateful `output` described above.
 
-One consequence: because `input` is ignored, `terraform_data.my_stash.input` reports the pinned value too, rather than echoing the most recent one. Both properties return the stashed value, so there is no way to read the resource's current `input` expression back out of it.
+Because `input` is ignored, `terraform_data.my_stash.input` also returns the pinned value rather than the most recent one. No attribute of the resource echoes the current `input` expression.
 
 {{% /choosable %}}
 
@@ -411,6 +411,8 @@ To update the value stored in a `Stash` you need to replace it. Three ways to do
 1. Set the [`replacementTrigger`](/docs/iac/concepts/resources/options/replacementtrigger/) resource option to replace the stash whenever a trigger value changes.
 
 Without a replacement, changes to the `input` property are reflected in the `input` output property, but the `output` property does not change. It continues to return the original value the `Stash` was constructed with.
+
+In Pulumi HCL, the replacement trigger is the `triggers_replace` argument of `terraform_data`. Because the HCL examples on this page ignore changes to `input`, both `input` and `output` keep returning the stashed value until the resource is replaced, and the replacement stores the current value of `input`.
 
 ## Deleting a stash
 
@@ -680,7 +682,7 @@ output "first_deployed" {
 }
 ```
 
-`timestamp()` returns a new value on every run. Ignoring changes to `input` is what holds the stash at the timestamp of the first deployment.
+`timestamp()` returns a new value on every run. Ignoring changes to `input` keeps the stash at the timestamp of the first deployment.
 
 {{% /choosable %}}
 
