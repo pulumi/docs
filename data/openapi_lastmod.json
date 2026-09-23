@@ -789,8 +789,8 @@
       "hash": "51d5cb48099a20d8cb48bba6834d4c283ec5e0a7046b2f43028eebdba4bb79c1"
     },
     "ApprovalRuleEligibilityInputPermission": {
-      "hash": "e200733f68f40299f0ba5241b85c6036757d4b470f45a84867e3ae607c630b9c",
-      "lastmod": "2026-08-25"
+      "hash": "b04369137479629e2a7cab0b0329d6edbd9c41dc824301c946957002c03b32a5",
+      "lastmod": "2026-09-23"
     },
     "ApprovalRuleEligibilityInputTeam": {
       "hash": "3a99b8c35c705ebc60692aa6a6350dad0986054db002df8a023cccbfc1a8f09f"
@@ -802,8 +802,8 @@
       "hash": "468c478a2ca53b58914f68518c366eacdd3018352ce2a14780575a0e50ea032c"
     },
     "ApprovalRuleEligibilityOutputPermission": {
-      "hash": "971348fd963beb17c9bf7a56e25e3659a4468ada6d4d702b543b2e3b82c83914",
-      "lastmod": "2026-08-25"
+      "hash": "708680000f2b5eed302685616a39b407794324a8baff1688635ef108bde89472",
+      "lastmod": "2026-09-23"
     },
     "ApprovalRuleEligibilityOutputTeam": {
       "hash": "92d53d1a479fe3d756ea91d6c33c65cc651c80dcdef75cb394ea724e7d14c47d"
@@ -2336,8 +2336,8 @@
       "hash": "4dbf036c07c514c178419ce7739f5acf2758514705832b8b20951a43ab374f6a"
     },
     "PermissionDescriptorAllow": {
-      "hash": "7dd1777a1c9c54a2bae7688c5a33fb80558340a41b4c05d2e66655d8a7e28930",
-      "lastmod": "2026-09-15"
+      "hash": "b7e7927f1d529b91555d3e40912d38b60421614099de798cc4f3c07cc5f52dc9",
+      "lastmod": "2026-09-23"
     },
     "PermissionDescriptorBase": {
       "hash": "e98421ae30171d68a06ff1b0bc7ef360ba189aeccc042e5d111ad921debb017f",
@@ -2521,8 +2521,8 @@
       "lastmod": "2026-09-15"
     },
     "RbacScope": {
-      "hash": "66452f0ce2417a461b8ea0a580bbdc091dd4648d4c1fabc37e6e42e1ccfa2568",
-      "lastmod": "2026-08-25"
+      "hash": "d336640243499479b626f0e7ba519e58abc63a67c634399c1be8e5d341e8e184",
+      "lastmod": "2026-09-23"
     },
     "RbacScopeGroup": {
       "hash": "dd2e5e14bcfb4a196bffada47022efb60dc554e1c1c07ba6746e59ab2d3f9f92",
