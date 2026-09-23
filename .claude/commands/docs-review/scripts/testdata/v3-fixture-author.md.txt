@@ -43,7 +43,7 @@ _Editing in the browser? The ✏️ links open the file in GitHub's editor — C
 
 #### Style suggestions
 
-*Optional polish from pattern-based linting — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the [Files changed](https://github.com/pulumi/docs/pull/999/files) tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
+*Optional polish from pattern-based linting and the review's own read — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the [Files changed](https://github.com/pulumi/docs/pull/999/files) tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
 
 ##### content/docs/iac/x.md
 

@@ -376,21 +376,30 @@ def _banner_text(n: int, files_url: str) -> str:
 STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 
 
-def _caption_text(files_url: str) -> str:
+# The v3 author card marker. Its style block also carries the review's own
+# `[nit]` bullets (compose-review.NIT_TAG), so its caption names both sources.
+V3_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
+
+
+def _caption_text(files_url: str, nits: bool = False) -> str:
     """The canonical caption under the style heading.
 
     Must stay byte-identical to what `compose-review.py` emits, so that
     reconciling an initial-lane body is a no-op rather than a churn edit.
-    `test_caption_matches_composer` pins the two together.
+    `test_caption_matches_composer` pins the two together — for BOTH variants:
+    pinning only the v2 one let the v3 caption be silently reverted here on
+    every published card, since this runs on the author draft before publish.
     """
     link = f"[Files changed]({files_url})" if files_url else "Files changed"
-    return ("*Optional polish from pattern-based linting — never blocking, not counted above. "
+    source = ("pattern-based linting and the review's own read"
+              if nits else "pattern-based linting")
+    return (f"*Optional polish from {source} — never blocking, not counted above. "
             "Take the ones that read better and ignore the rest. "
             f"✏️ marks one you can apply from the {link} tab — use **Add suggestion to batch** "
             "on each, then **Commit suggestions** to take several in a single commit.*")
 
 
-def _reconcile_caption(lines: list[str], files_url: str) -> bool:
+def _reconcile_caption(lines: list[str], files_url: str, nits: bool = False) -> bool:
     """Rewrite the italic caption under the style heading.
 
     Authoritative, for the same reason the marks and the banner are. The
@@ -412,7 +421,7 @@ def _reconcile_caption(lines: list[str], files_url: str) -> bool:
         j += 1
     if j >= len(lines):
         return False
-    want = _caption_text(files_url)
+    want = _caption_text(files_url, nits)
     cur = lines[j].strip()
     # Positional, not shape-based: the slot between the heading and the first
     # `##### <path>` group holds the caption and nothing else, so whatever sits
@@ -516,7 +525,7 @@ def annotate_text(text: str, posted: list[dict], files_url: str = "") -> tuple[s
             marked += 1
         if rebuilt != line:
             lines[i] = rebuilt
-    _reconcile_caption(lines, files_url)
+    _reconcile_caption(lines, files_url, nits=V3_AUTHOR_MARKER in text)
     _reconcile_banner(lines, len(want), files_url)
     out = "\n".join(lines)
     # Preserve the input's trailing-newline state. GitHub stores comment bodies

@@ -810,6 +810,35 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
 # "findings" oversold it. validate-pinned.py still recognizes the old spelling
 # so an in-flight review that merges a pre-rename body keeps validating.
 STYLE_HEADING = "#### Style suggestions"
+# On v3 the block is the author card's ONLY non-blocking lane, so it is also
+# where a model-found nit goes — a typo, a stray space, a mechanical wording
+# slip Vale's rules don't carry. Before this, such a find had nowhere to land:
+# 🚨 overshoots (it blocks merge on a one-character fix), ❓ is the composer's
+# deterministic `unverifiable` lane, and a hand-written `[style]` bullet
+# desynced the brief's Vale-derived count. So the model parked them on the
+# brief's ⚠️ list, which is addressed to the reviewer — PR #21787 F3 shipped
+# "Typo: `i. e.` has a stray space … Trivial fix for the author" on the card
+# headed "not for the author", making a human relay a one-character fix.
+#
+# The two tags are the provenance split, and both are load-bearing:
+#   [style] — Vale's advisory tier. `style-advisory-provenance` matches every
+#             one against `.vale-findings.json`, so the tag can't be used to
+#             launder a model finding into a lane that claims linter backing.
+#   [nit]   — the review found it itself. Free-form, never blocking, counted
+#             separately in the brief's rubber-stamp line.
+# Keep them distinguishable: the block is quoted out of context often enough
+# that a bullet has to say where it came from on its own.
+NIT_TAG = "nit"
+STYLE_TAG = "style"
+# Current spelling first; "Style findings" is the pre-2026-08-03 name, still
+# accepted so an in-flight review that merges a pre-rename body keeps parsing.
+# validate-pinned.py and post-style-suggestions.py carry their own copies.
+STYLE_HEADINGS = (STYLE_HEADING, "#### Style findings")
+# The v3 block always renders at compose time — the model needs a stable
+# anchor to append a `[nit]` under, and asking it to author the H4 + caption
+# verbatim is how you get a malformed block. build-evidence.py drops it again
+# when nothing landed, so an empty one never reaches the published card.
+_V3_EMPTY_STYLE = "_No style suggestions or nits._"
 # Editorial stances the diff introduces — "the fastest path", "the recommended
 # approach", "unlike Terraform". Listed under ⚠️ with NO verdict: a page's own
 # framing has no external ground truth (the verifier lands these `not-a-claim`
@@ -1107,7 +1136,8 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url
     return "\n".join(lines)
 
 
-def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
+def _render_style_findings(findings: list[dict], files_url: str = "",
+                           allow_nits: bool = False) -> str:
     # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
     # are advisory nags kept for the rule-tuning loop, not reviewer burden —
     # the count exclusion carries that signal, so hiding them behind a
@@ -1130,15 +1160,26 @@ def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
     # "Add suggestion to batch" lets the author stage several and commit them
     # in one go. Without a link the reader has to work out where to look.
     files_link = f"[Files changed]({files_url})" if files_url else "Files changed"
+    # The v3 caption has to cover both tags, because the block now mixes two
+    # provenances and the author's response to each is the same (take it or
+    # leave it) but their trustworthiness isn't.
+    source = ("pattern-based linting and the review's own read"
+              if allow_nits else "pattern-based linting")
     out = [
         STYLE_HEADING,
         "",
-        "*Optional polish from pattern-based linting — never blocking, not counted above. "
+        f"*Optional polish from {source} — never blocking, not counted above. "
         "Take the ones that read better and ignore the rest. "
         f"✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
         "on each, then **Commit suggestions** to take several in a single commit.*",
         "",
     ]
+    if allow_nits and not by_file:
+        # Empty anchor: the heading and caption stand so the model has
+        # somewhere to append. build-evidence.py removes the whole block if it
+        # is still empty at publish time.
+        out.append(_V3_EMPTY_STYLE)
+        return "\n".join(out)
     multi = len(by_file) > 1
     for fname in sorted(by_file):
         items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
@@ -1161,6 +1202,61 @@ def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
     while out and out[-1] == "":
         out.pop()
     return "\n".join(out)
+
+
+# The advisory block's read side. `_render_style_findings` writes this shape
+# and `post-style-suggestions.annotate_text` re-reads it to place ✏️ marks;
+# this is the third reader (build-evidence's recount, validate-pinned's
+# provenance rule), so it lives here with the writer rather than as another
+# private copy of the `##### <path>` walk. Keep all of them in sync.
+_STYLE_FILE_RE = re.compile(r"^#{5}\s+(\S+\.\w+)")
+_STYLE_BULLET_RE = re.compile(
+    rf"^\s*- \*\*line (?P<line>\d+):\*\*\s*\[(?P<tag>{STYLE_TAG}|{NIT_TAG})\]\s*(?P<rest>.*)$")
+
+
+def walk_style_bullets(body: str) -> list[dict]:
+    """Every advisory bullet under `#### Style suggestions`, with the file the
+    `##### <path>` heading above it attributes it to.
+
+    Returns `{"file", "line", "tag", "text"}` per bullet; `file` is "" when a
+    bullet has no heading above it (a split review's later part — the same
+    degradation `annotate_text` tolerates). Bullets outside the block are not
+    returned: the walk starts at the heading and ends at the next `#### `.
+    """
+    lines = body.splitlines()
+    start = next((i for i, ln in enumerate(lines) if ln.strip() in STYLE_HEADINGS), None)
+    if start is None:
+        return []
+    out: list[dict] = []
+    current = ""
+    for ln in lines[start + 1:]:
+        if ln.startswith("#### ") or ln.startswith("### ") or ln.startswith("## "):
+            break
+        fm = _STYLE_FILE_RE.match(ln)
+        if fm:
+            current = fm.group(1)
+            continue
+        bm = _STYLE_BULLET_RE.match(ln)
+        if bm:
+            out.append({"file": current, "line": int(bm.group("line")),
+                        "tag": bm.group("tag"), "text": bm.group("rest").strip()})
+    return out
+
+
+def render_style_line(n_style: int, n_nits: int) -> str:
+    """The brief's rubber-stamp **Style** bullet. Composed from Vale's count
+    and RE-DERIVED by build-evidence.py from the published author card, because
+    the model may add `[nit]` bullets after this runs — a count fixed at
+    compose time would under-report them and the reviewer would rubber-stamp a
+    number that doesn't match the card they're being asked to trust."""
+    total = n_style + n_nits
+    noun = "suggestion" if total == 1 else "suggestions"
+    if n_nits:
+        detail = f" ({n_style} from linting, {n_nits} found by the review)"
+    else:
+        detail = ""
+    return (f"- **Style:** {total} advisory {noun}{detail} left with the author; "
+            "never blocking.")
 
 
 def render_triaged() -> str:
@@ -2313,8 +2409,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     author += [""]
     if edit_base and (outstanding_lines or question_lines):
         author += [V3_BROWSER_HINT, ""]
-    if prep["vale_nags"]:
-        author += [_render_style_findings(prep["vale_nags"], prep["files_url"]), ""]
+    # Always rendered on v3 (see NIT_TAG) — build-evidence.py drops it again
+    # when neither Vale nor the model put a bullet in it.
+    author += [_render_style_findings(prep["vale_nags"], prep["files_url"], allow_nits=True), ""]
     # ✅ Resolved is omitted while empty (a v1 card has no "last review" to
     # refer to — persona pass 2026-09-01); apply-update.py inserts the
     # section the first time something resolves.
@@ -2428,7 +2525,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         _render_facts_line(prep["verdicts"], prep["trail_nxyz"]),
         f"- **Mechanics:** {'; '.join(mech_bits)}.",
-        f"- **Style:** {len(prep['vale_nags'])} advisory suggestion(s) left with the author; never blocking.",
+        render_style_line(len(prep["vale_nags"]), 0),
         "",
         "💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.",
         "",

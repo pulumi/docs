@@ -4,26 +4,50 @@ name: Staging deploy status
 # pulumi-test.io staging deploy — one of the two witnesses Sentinel gate G4
 # reads — and pokes the Sentinel so G4 is re-scored against it.
 #
-# THIS WORKFLOW IS BEST-EFFORT, AND NOTHING MAY DEPEND ON IT FIRING.
-# `workflow_run` does not fire for a run dispatched with GITHUB_TOKEN, and
-# the auto lane (`staging-deploy-auto.yml` -> `staging-deploy.sh`) dispatches
-# with GITHUB_TOKEN. Measured on 2026-09-17: all 16 runs of this workflow
-# since it landed were master *pushes* (correctly skipped by the job `if`),
-# and not one of the six dispatched PR-branch deploys in the same window
-# produced a run. A master push cascades because a person's token pushed it;
-# a token-dispatched run does not cascade at all.
+# THE `workflow_run` LISTENER IS BEST-EFFORT, AND NOTHING MAY DEPEND ON IT
+# FIRING. `workflow_run` does not fire for a run dispatched with
+# GITHUB_TOKEN, and the auto lane (`staging-deploy-auto.yml` ->
+# `staging-deploy.sh`) dispatches with GITHUB_TOKEN. Measured on 2026-09-17:
+# all 16 runs of this workflow since it landed were master *pushes*
+# (correctly skipped by the job `if`), and not one of the six dispatched
+# PR-branch deploys in the same window produced a run. Re-measured on
+# 2026-09-21 over the whole history: 95 runs, 94 master pushes and one
+# hand-run backfill, against 28 dispatched PR-branch deploys — still zero. A
+# master push cascades because a person's token pushed it; a token-dispatched
+# run does not cascade at all.
 #
-# So this workflow is upside, not a contract: when it fires, the merge box
-# gets a green status linking to the deployed site and the Sentinel is
-# re-scored early. When it doesn't, G4 falls through to witness (2) — the
-# deploy run record itself, which `_staging_evidence` reads directly — and
-# the merge box simply shows one check fewer. That is why NOTHING WRITES A
-# PENDING STATUS ANY MORE: a pending status is a promise that something will
-# come back and finalize it, and this cannot promise that. See the long note
-# in `staging-deploy.sh` for the two incidents that establish it (#21676,
-# #21696). If a pending status is ever wanted again, its writer must be a
-# `schedule` sweep that finalizes any pending status whose run has completed
-# — immune to both branch age and token provenance — not an event cascade.
+# SO THE SCHEDULE IS THE TRIGGER THAT ACTUALLY FIRES. `sweep` below runs
+# `scripts/review-v3/staging-sweep.py` every 10 minutes and finalizes every
+# dispatched deploy the cascade did not report: it writes the terminal status
+# and pokes the Sentinel with an explicit `pr_number`. That is the writer
+# this header has been asking for in prose since #21696 — a `schedule` is the
+# only trigger immune to BOTH branch age and token provenance. The listener
+# stays because when it does fire it is free latency, and the two converge
+# without coordinating: the sweep skips any SHA whose authorized status
+# already carries the verdict it would write.
+#
+# WHAT THIS FIXES. G4 is evaluated only when the Sentinel runs, and until now
+# nothing re-ran it when a deploy finished — so a PR could sit indefinitely
+# on a red, explicitly NON-WAIVABLE gate whose condition it had already met.
+# PR #21789: deploy green at 22:44, gate still red at 23:04, cleared only by
+# a hand-run `workflow_dispatch` of `review-sentinel.yml`. That manual action
+# is what the sweep automates.
+#
+# THE ONE-LINER THAT LOOKS LIKE THE FIX AND IS NOT: adding "Build and deploy
+# testing" to `review-sentinel.yml`'s own `workflow_run:` list. It is a
+# silent no-op twice over — the cascade that never fires for this listener
+# does not fire for that one either, and `review-sentinel.yml` resolves its
+# PR from `workflow_run.pull_requests[0]`, which a dispatched run's event
+# does not populate. `test_staging_sweep.py` pins it out of that list so the
+# no-op cannot be re-landed as a fix.
+#
+# NOTHING WRITES A PENDING STATUS. A pending status is a promise that
+# something will come back and finalize it, and for as long as an event
+# cascade was the only finalizer nothing could promise that — see the long
+# note in `staging-deploy.sh` for the two incidents (#21676, #21696). The
+# sweep is now exactly the writer that note specifies, so a pending status
+# could come back; it deliberately has not, because G4 reads the run record
+# directly and a pending status buys a reader nothing the run link doesn't.
 #
 # THE OTHER RULE, STILL TRUE: anything that must work for PR branches of ANY
 # AGE lives in a workflow GitHub triggers from the DEFAULT BRANCH —
@@ -70,13 +94,34 @@ name: Staging deploy status
 #   already has a link in the Sentinel's G4 row; what the merge box is good
 #   for is "show me the thing you deployed". On a failure or a cancellation
 #   there is nothing deployed to look at, so those keep the run link.
-# - BACKFILL. `workflow_dispatch` with a `run_id` replays this against a
-#   completed deploy, which is how a status gets written at all for the
-#   dispatched runs whose completion never reaches this listener. It is also
-#   how the phantom pending statuses left by #21676 and #21696 were cleared,
-#   without spending eight minutes re-deploying.
+# - THE SWEEP'S IDEMPOTENCE KEY IS THE STATUS ITSELF. It runs every 10
+#   minutes over a 6-hour window, so most of what it scans it has already
+#   handled. A SHA whose AUTHORIZED `staging/pulumi-test-io` status already
+#   equals the verdict the sweep would write is finished: no rewrite, no
+#   re-poke. Keying on the verdict rather than on the mere presence of a
+#   status is what lets a failed deploy's green retry still flip the gate,
+#   and the writer allowlist is what stops anyone with push access from
+#   parking a hand-written status to keep the real one from being recorded.
+#   The poke is sent BEFORE the status write, so a poke that fails is retried
+#   next cycle instead of being sealed off by a status saying "handled".
+# - ONLY A SUCCESS POKES. A failed deploy leaves G4 red, which it already
+#   was; re-scoring tells the PR nothing it is not already showing. Nor does
+#   a SHA that is no longer the PR's head — the push that moved it already
+#   re-ran the Sentinel and already triggered a fresh deploy.
+# - BACKFILL. `workflow_dispatch` with a `run_id` replays the finalize job
+#   against one completed deploy. The sweep has taken over the routine case;
+#   this stays as the hand lever for a specific run, and is how the phantom
+#   pending statuses left by #21676 and #21696 were cleared without spending
+#   eight minutes re-deploying.
 
 on:
+  # The trigger that actually fires. Everything above explains why the two
+  # below cannot be relied on; `scripts/review-v3/staging-sweep.py` finalizes
+  # whatever they missed. Offset off :00 so it doesn't contend with the other
+  # scheduled jobs, and every 10 minutes because G4 blocks a merge: the wait
+  # is bounded by this interval on top of a ~9-minute deploy.
+  schedule:
+    - cron: '7,17,27,37,47,57 * * * *'
   workflow_run:
     workflows: ["Build and deploy testing"]
     types: [completed]
@@ -225,3 +270,43 @@ jobs:
         run: |
           set -euo pipefail
           gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$PR"
+
+  sweep:
+    # The trigger that actually fires — see THE SCHEDULE IS THE TRIGGER in
+    # the header. No concurrency group, for the same reason nothing else
+    # here has one: a displaced pending run is a CANCELLED run.
+    name: Finalize dispatched deploys the cascade never reported
+    if: >-
+      github.event_name == 'schedule'
+      && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Sparse and pinned to the base default branch, the same shape
+      # staging-deploy-auto.yml uses: this job holds `statuses: write` and
+      # `actions: write` over PR-controlled heads and must never run PR code.
+      # staging-sweep.py reads every fact through the API as data.
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # No `pip install`: staging-sweep.py imports gh_client and the stdlib,
+      # nothing else. Keep it that way — this runs 144 times a day.
+      - name: Finalize completed staging deploys
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          python3 scripts/review-v3/staging-sweep.py \
+            --repo "$REPO" --default-branch "$DEFAULT_BRANCH"

@@ -745,10 +745,16 @@ def assemble_evidence(
         "investigation_log": (prior or {}).get("investigation_log", {}),
         "history": list((prior or {}).get("history", [])) + [entry],
     }
-    for key in ("editorial_balance", "triaged", "style_suggestions_count", "confidence", "summary",
-                "stances"):
+    for key in ("editorial_balance", "triaged", "confidence", "summary", "stances"):
         if prior and key in prior:
             evidence[key] = prior[key]
+    # NOT carried from `prior`: derived from the card being published, the
+    # same way build-evidence derives it, so the count can only ever describe
+    # the block a reader sees. The refresh passes that block through verbatim
+    # today, but a prior record written before `[nit]` bullets existed held a
+    # Vale-only count, and nothing about the card should depend on that.
+    n_style, n_nits = be.count_style_bullets(author_out)
+    evidence["style_suggestions_count"] = n_style + n_nits
     if prior is None:
         evidence["degraded"] = "prior-evidence-unavailable"
     problems = validate_evidence_mod.validate_evidence(evidence)
@@ -809,6 +815,11 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
+        # The brief's rubber-stamp Style line follows the card too (the
+        # evidence count moves with it inside assemble_evidence). No empty-block
+        # drop here: build-evidence already removed any empty block before the
+        # card was first published, and the refresh doesn't re-render it.
+        brief_out = be.refresh_style_line(brief_out, *be.count_style_bullets(author_out))
         author_out = set_evidence_url(author_out, args.evidence_url)
         brief_out = set_evidence_url(brief_out, args.evidence_url)
     except UpdateError as exc:
