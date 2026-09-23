@@ -76,7 +76,7 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 
 [Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For AWS, Discovery connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/get-started/create-an-account/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/concepts/discovery/) for background.
+For AWS, Discovery connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/discovery-governance/get-started/create-a-discovery-account/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/concepts/discovery/) for background.
 
 ## Policy packs
 

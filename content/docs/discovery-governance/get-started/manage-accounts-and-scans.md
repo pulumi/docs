@@ -16,7 +16,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Now that you have connected a new account you can select the **Accounts** page to see a list of all your accounts, the last update and number of resources discovered.
+Now that you have connected a new account navigate to **Resources** > **Discovery** to see a list of all your accounts, the last update and number of resources discovered.
 
 ## View accounts
 

@@ -34,50 +34,55 @@ aliases:
 - /docs/discovery-governance/policy/integrations/snyk-policy/
 ---
 
-Pulumi Policies enables you to implement policy as code across your entire cloud infrastructure. You define guardrails in code and apply them consistently across resources managed by Pulumi IaC, provisioned with Terraform or CloudFormation, or created manually. These codified business and security rules provide automated compliance protections for your organization.
+Policy as code lets you write the rules your infrastructure must follow as code, then check every resource against them automatically. Pulumi Policies applies policy as code to resources you deploy with Pulumi IaC and to resources that Discovery finds in your cloud accounts, however those resources were created.
 
 ## What is policy as code?
 
-Policy as code applies software engineering practices to infrastructure policies. You write policies in programming languages and manage them alongside your infrastructure code, instead of manually configuring compliance rules through cloud provider consoles or maintaining policy documentation in wikis.
+Policy as code applies software engineering practices to infrastructure rules. Instead of documenting compliance requirements in a wiki or configuring them by hand in each cloud provider's console, you write them as code. That code is version-controlled, reviewed, tested, and shared like any other code, and a machine checks your infrastructure against it on every change.
 
-This approach provides several key benefits:
+Policy as code typically serves a few goals:
 
-- **Cost control**: Define policies based on resource pricing to prevent expensive deployments before they happen. Set spending limits, identify unused resources, and enforce tagging for cost tracking and allocation across teams.
+- **Security and compliance**: Prevent common misconfigurations, such as public storage buckets, exposed databases, or overly permissive network rules, and map your rules to frameworks like CIS, PCI DSS, or HIPAA.
+- **Cost control**: Restrict expensive instance types, require the tags you use to allocate costs, and flag unused resources.
+- **Early feedback**: Check changes before they're deployed, when fixing a violation is cheapest, instead of finding the problem in production.
+- **Consistent standards**: Encode organizational conventions once and apply them to every team and environment.
 
-- **Compliance and security**: Enforce guardrails that prevent common misconfigurations like public S3 buckets, exposed databases, or overly permissive security groups. Apply consistent security standards across development, staging, and production environments.
+## Policy as code in Pulumi
 
-- **Early validation**: Catch policy violations during `pulumi preview` before resources are created, not after deployment. This prevents non-compliant infrastructure from reaching production and reduces the time and cost of remediation.
-
-- **Best practices as code**: Encode organizational standards and cloud provider best practices as versioned, testable policies. Share policy packs across teams to ensure consistent infrastructure patterns throughout your organization.
-
-- **Integration with cloud-native tools**: Work alongside cloud provider features like AWS IAM Access Analyzer or AWS Organizations tag policies, combining Pulumi's policy enforcement with native cloud governance capabilities.
-
-Pulumi Policies brings these policy as code benefits to both Pulumi-managed infrastructure and resources discovered from other tools or created manually.
+Pulumi Policies is Pulumi's policy as code product. You write policies in TypeScript, JavaScript, Python, or OPA (Rego), or use the pre-built policy packs that Pulumi publishes, and they apply to infrastructure written in any language.
 
 {{% notes type="info" %}}
-Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which are installed automatically with the Pulumi CLI.
+Policies run as [analyzer plugins](/docs/iac/concepts/plugins/#analyzer-plugins), which the Pulumi CLI installs automatically.
 {{% /notes %}}
 
-## How it works
+### Policies, policy packs, and policy groups
 
-Pulumi Policies uses a hierarchy of components to enforce compliance rules:
+Pulumi Policies organizes rules in three layers:
 
-1. **Policies** are individual rules that validate infrastructure configuration (e.g., "S3 buckets must be private" or "VMs must use approved instance types").
-1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) for common compliance frameworks (CIS, HITRUST, ISO 27001, NIST, PCI DSS, and CMMC) or [write custom packs](/docs/discovery-governance/guides/write-a-policy-pack/) in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-a-policy-pack/#opa).
-1. **Policy groups** apply policy packs to specific stacks or cloud accounts. This lets you enforce stricter policies in production and more permissive policies in development environments. Learn more about [policy groups](/docs/discovery-governance/concepts/policy-groups/).
+1. **Policies** are individual rules that validate a resource or a whole stack, for example "S3 buckets must be private" or "VMs must use approved instance types."
+1. **[Policy packs](/docs/discovery-governance/concepts/policy-packs/)** are versioned collections of related policies that you publish and manage together. Use Pulumi's [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/), such as Pulumi Best Practices or packs for CIS, HITRUST, ISO 27001, NIST, PCI DSS, and CMMC, or [write your own](/docs/discovery-governance/guides/write-a-policy-pack/).
+1. **[Policy groups](/docs/discovery-governance/concepts/policy-groups/)** apply policy packs to specific stacks or cloud accounts in Pulumi Cloud, so you can enforce stricter policies in production than in development.
+
+### IaC-managed and discovered resources
+
+When a policy runs depends on how the resource is managed.
+
+**IaC-managed resources are checked before they're provisioned.** Pulumi evaluates policies against the resources a Pulumi program declares during `pulumi preview` and `pulumi up`, before anything changes in your cloud provider. A violation of a mandatory policy stops the deployment. This applies to Pulumi IaC stacks in every language. It also applies to Terraform and OpenTofu stacks that use Pulumi Cloud [remote execution](/docs/integrations/terraform/remote-execution/#enforce-policy), where policies evaluate the plan before an apply proceeds.
+
+**Discovered resources are checked after they're provisioned.** [Discovery](/docs/discovery-governance/concepts/discovery/) scans your cloud accounts on a schedule and finds every resource in them, whether it was created with Pulumi, CloudFormation, Terraform, the cloud console, or a cloud service itself. Policies evaluate those resources after the fact and report violations in [Policy Findings](/docs/discovery-governance/operations/policy-findings/). They can't block a change that has already happened, but they cover infrastructure that no IaC tool manages. Terraform stacks that store their state in Pulumi Cloud but [run locally](/docs/integrations/terraform/state-backend/#audit-policies) are also checked this way.
 
 ### Enforcement modes
 
-Policy enforcement works in two modes:
+The two cases above correspond to Pulumi's two enforcement modes. These are Pulumi terms, and you choose one for each policy group:
 
-- **Preventative**: Validates Pulumi stack resources during `pulumi preview` and `pulumi up`, blocking deployments when violations are detected. Prevents non-compliant resources from being created.
-- **Audit**: Continuously scans resources discovered through [Discovery](/docs/discovery-governance/concepts/discovery/) to identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually. Provides visibility without blocking operations.
+- **Preventative** policy groups evaluate IaC-managed resources during `pulumi preview` and `pulumi up`, and can block a deployment.
+- **Audit** policy groups evaluate discovered resources and the latest state of stacks, and report violations without blocking anything.
 
-Organization administrators configure which enforcement mode applies to each policy group. Policy violations can gate deployments (preventative) or appear in the [Policy Findings](/docs/discovery-governance/operations/policy-findings/) dashboard (audit).
+Each policy also has an **enforcement level**, which is specific to Pulumi as well: `advisory` reports a violation as a warning, `mandatory` blocks the deployment, `remediate` fixes the resource automatically, and `disabled` turns the policy off. Audit policy groups report violations rather than blocking them, whatever the enforcement level. For how to choose between them, see [Policy groups](/docs/discovery-governance/concepts/policy-groups/#best-practices).
 
-## Local execution and Pulumi Cloud
+### Local execution and Pulumi Cloud
 
-### Local policy execution
+#### Local policy execution
 
 The open source Pulumi CLI runs policy packs locally. Pass the `--policy-pack` flag to `pulumi preview` or `pulumi up`:
 
@@ -93,39 +98,21 @@ pulumi up --policy-pack /path/to/pack-1 --policy-pack /path/to/pack-2
 
 Local execution works with any backend, including the self-managed backend, and with both open source and custom policy packs. The policy pack must be on disk where you run Pulumi, and the machine needs the pack's [runtime](/docs/discovery-governance/concepts/policy-packs/#runtime-requirements) installed.
 
-### Pulumi Cloud integration
+#### Pulumi Cloud
 
 {{< pulumi-cloud "policy-enforcement" />}}
 
-Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
+Pulumi Cloud adds central management on top of local execution:
 
-**Preventative policies:**
-
-- Centralized management via [Policy Groups](/docs/discovery-governance/concepts/policy-groups/)
-- Access to Pulumi-authored [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/) (Pulumi Best Practices on the Essentials edition and above; compliance-framework packs on the Enterprise edition)
-- Support for open source policy packs by publishing them to your organization's private registry
-- Automatic policy pack download to local cache
-- No need to specify `--policy-pack` flag for each command
-- Version control and rollback for policy packs
-- Policy violation results visible in the Pulumi Cloud console
-
-**Audit policies:**
-
-- Continuously scan resources discovered through [Discovery](/docs/discovery-governance/concepts/discovery/)
-- Identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually
-- View violations in the [Policy Findings](/docs/discovery-governance/operations/policy-findings/) dashboard
-- Monitor compliance trends across your organization
-- Only available with Pulumi Cloud (cannot be used with the self-managed backend)
+- Apply policy packs to many stacks and cloud accounts with [policy groups](/docs/discovery-governance/concepts/policy-groups/), without passing `--policy-pack` on each command. Pulumi downloads the packs automatically.
+- Use Pulumi's [pre-built policy packs](/docs/discovery-governance/guides/pre-built-policy-packs/): Pulumi Best Practices on the Essentials edition and above, and compliance-framework packs on the Enterprise edition.
+- Publish your own packs to your organization, with versioning and rollback.
+- Run audit policies against discovered resources. Audit policies require Pulumi Cloud and aren't available with a self-managed backend.
+- Track violations across your organization in [Policy Findings](/docs/discovery-governance/operations/policy-findings/).
 
 ## Languages
 
-Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego) and can be applied to Pulumi stacks written in any language.
-
-- **[TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/)** - Stable
-- **[Python](/docs/reference/pkg/python/pulumi_policy/)** - Stable
-- **[Open Policy Agent (OPA)](/docs/discovery-governance/guides/write-a-policy-pack/#opa)** - Stable
-- **.NET** - [Future](https://github.com/pulumi/pulumi-policy/issues/229)
-- **Go** - [Future](https://github.com/pulumi/pulumi-policy/issues/230)
+You can write policies in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/discovery-governance/guides/write-opa-policies/). Policies in any of these languages apply to Pulumi programs written in any language. For the SDKs, see the [Policy API and SDK reference](/docs/discovery-governance/reference/policy-api-sdk/).
 
 ## Next steps
 

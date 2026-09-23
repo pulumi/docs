@@ -1,12 +1,12 @@
 ---
-title_tag: Create a Cloud Account | Discovery & governance
-title: Create a cloud account
-h1: Create a cloud account
-meta_desc: This page provides an overview on how to create a cloud account in Pulumi.
+title_tag: Create a Discovery account | Discovery & governance
+title: Create a Discovery account
+h1: Create a Discovery account
+meta_desc: Add your first cloud account to Pulumi Cloud as a Discovery account and run a discovery scan.
 weight: 3
 menu:
   discovery-governance:
-    name: Create an account
+    name: Create a Discovery account
     parent: dg-get-started
     weight: 3
 aliases:
@@ -16,15 +16,15 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-With the prerequisites in place, let’s connect your first cloud account and kick off a discovery scan. In this example you will see the steps for AWS; Azure and Google Cloud follow the same flow with their own browser-based sign-in. For Oracle Cloud and Kubernetes, choose **Connect using existing ESC credentials** on the Authentication step instead, using the [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configured earlier.
+With the prerequisites in place, you'll add your first cloud account to Pulumi Cloud and kick off a discovery scan. You aren't creating a new account with your cloud provider: a Discovery account is Pulumi Cloud's connection to a cloud account you already have. In this example you will see the steps for AWS; Azure and Google Cloud follow the same flow with their own browser-based sign-in. For Oracle Cloud and Kubernetes, choose **Connect using existing ESC credentials** on the Authentication step instead, using the [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configured earlier.
 
 {{< notes type="info" >}}
 Currently while in public preview, Discovery supports AWS, Azure, Oracle Cloud, Kubernetes, and Google Cloud.
 {{< /notes >}}
 
-## Create a cloud account
+## Create a Discovery account
 
-1. Navigate to **Management** > **Accounts** in the Pulumi Cloud console. You will be directed to the Accounts landing page where you'll be able to create and manage all your cloud accounts and view scan statuses.
+1. In the Pulumi Cloud console, navigate to **Resources** > **Discovery**. This page lists your Discovery accounts and their scan statuses.
 
 1. Select **Connect cloud accounts** and choose your cloud provider. For this example, choose **AWS**.
 

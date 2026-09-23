@@ -24,7 +24,7 @@ Pulumi's Discovery feature enables organizations to gain complete visibility int
 
 Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
 
-1. **Account management**: Create and configure cloud accounts on the [**Accounts** page](/docs/discovery-governance/concepts/cloud-accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
+1. **Account management**: Create and configure [cloud accounts](/docs/discovery-governance/concepts/cloud-accounts/) under **Resources** > **Discovery** in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
 2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the resource graph with the latest state.
 

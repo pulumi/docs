@@ -31,7 +31,7 @@ Resource scans and policy evaluations consume workflow minutes and can incur cha
 
 You can open the wizard from two places in the Pulumi Cloud console:
 
-- Navigate to **Management** > **Accounts** and select **Connect cloud accounts**.
+- Navigate to **Resources** > **Discovery** and select **Connect cloud accounts**.
 - On the home dashboard, select the **Connect cloud accounts** task on the **Get to know Pulumi** card.
 
 The wizard opens as a panel and walks you through the onboarding steps.
@@ -126,7 +126,7 @@ These settings apply to every account you're connecting. You can adjust each acc
 
 ### Scan schedule
 
-Scheduled scans are enabled by default and run every 24 hours. You can switch to a 12-hour schedule, or turn scanning off and enable it later from the **Accounts** page.
+Scheduled scans are enabled by default and run every 24 hours. You can switch to a 12-hour schedule, or turn scanning off and enable it later from **Resources** > **Discovery**.
 
 ### AWS partition (AWS only)
 

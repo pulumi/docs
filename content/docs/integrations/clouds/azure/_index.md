@@ -67,7 +67,7 @@ ESC integrates directly with Azure for short-lived credentials and secret retrie
 
 [Pulumi Discovery](/docs/discovery-governance/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Azure, Discovery connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/get-started/create-an-account/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/concepts/discovery/) for background.
+For Azure, Discovery connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/discovery-governance/get-started/create-a-discovery-account/) for a step-by-step setup guide and [Discovery overview](/docs/discovery-governance/concepts/discovery/) for background.
 
 ## Policy packs
 

@@ -124,6 +124,19 @@ PolicyPack(
 | `framework` | `framework` | No | The compliance framework the policy belongs to. See [Framework fields](#framework-fields). |
 | `configSchema` | `config_schema` | No | Schema for the policy's configurable parameters. See [Configuration schema fields](#configuration-schema-fields). |
 
+### Overriding fields in configuration
+
+Only `enforcementLevel` can be overridden without changing the policy pack's code. Set it in the [policy pack's configuration](/docs/discovery-governance/guides/write-a-policy-pack/#enforcement-levels), either for one policy or for every policy in the pack with the `all` key:
+
+```json
+{
+    "all": "advisory",
+    "rds-storage-encrypted": "mandatory"
+}
+```
+
+All other fields, including `severity`, are fixed when you publish the pack. To change them, update the code and publish a new version. The rest of a policy's configuration consists of the parameters its `configSchema` defines, not overrides of these fields.
+
 ### Framework fields
 
 | TypeScript | Python | Description |
@@ -164,12 +177,16 @@ These fields describe the pack as a whole. In TypeScript, set them on the argume
 OPA policy packs set fields with [OPA metadata annotations](https://www.openpolicyagent.org/docs/latest/policy-reference/#annotations), in a `# METADATA` comment block directly above each rule:
 
 ```rego
+package aws
+
+import rego.v1
+
 # METADATA
 # title: Require RDS storage encryption
 # description: RDS instances must have storage encryption enabled.
 # custom:
 #   message: Set storageEncrypted to true.
-deny_unencrypted_rds[msg] {
+deny_unencrypted_rds contains msg if {
     input.type == "aws:rds/instance:Instance"
     not input.storageEncrypted
     msg := sprintf("RDS instance '%s' must have storage encryption enabled", [input.__name])
@@ -182,9 +199,8 @@ The OPA analyzer reads these annotations and maps them to policy fields:
 |-----|--------------|-------|
 | Rule name | `name` | For example, `deny_unencrypted_rds`. |
 | Rule name prefix | `enforcementLevel` | `deny` or `violation` for mandatory rules, `warn` for advisory rules. |
-| `title` | `displayName` | Defaults to the rule name. |
+| `title` | `displayName` | Defaults to the name of the `.rego` file, without its extension. |
 | `description` | `description` | |
 | `custom.message` | Violation message | Shown with each violation of the rule. |
-| `config-schema.json` | `configSchema` | A file next to your Rego files. See [Configuring policy packs](/docs/discovery-governance/guides/write-a-policy-pack/#configuring-policy-packs). |
 
-A `title` annotation with package scope sets the pack's display name. OPA policies don't support `severity`, `remediationSteps`, `url`, `tags`, or `framework`.
+A `title` annotation with package scope sets the pack's display name. OPA policies don't support `severity`, `remediationSteps`, `url`, `tags`, `framework`, or `configSchema`. For more on writing OPA policies, see [Write OPA policies](/docs/discovery-governance/guides/write-opa-policies/).

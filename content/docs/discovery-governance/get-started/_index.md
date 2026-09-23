@@ -29,17 +29,6 @@ Discovery and Resource Explorer give you the tools to:
 
 - **Improve**: Optimize your cloud infrastructure with actionable recommendations. Detect and remediate security violations, reduce costs by identifying inefficient resources, and enforce compliance policies.
 
-For an overview of how Discovery works, check out the following 5-min video:
-
-<div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
-    <iframe
-        src="//www.youtube.com/embed/fa7s5_oYnaM?rel=0"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
-        allowfullscreen=""
-        title="Pulumi Discovery: Scanning and managing cloud accounts">
-    </iframe>
-</div>
-
 If you only want to enforce policies on your Pulumi IaC stacks, skip ahead to [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
 
 This guide will take you through the following steps to get started with Discovery and Resource Explorer:
@@ -48,6 +37,6 @@ This guide will take you through the following steps to get started with Discove
 1. Connect a cloud account and run your first discovery scan.
 1. Manage your accounts and launch scans on demand.
 1. Use Resource Explorer to understand your infrastructure, and ask natural language questions using Pulumi Neo.
-1. Apply policies to your discovered resources.
+1. Apply the Pulumi Best Practices policy pack to your discovered resources and your Pulumi stacks.
 
 {{< get-started-stepper >}}

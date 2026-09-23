@@ -54,7 +54,7 @@ The following pre-built policy packs are available out of the box in Pulumi Clou
 
 Our pre-built packs provide a strong foundation for cloud governance by covering common controls for major frameworks. However, every organization has unique requirements.
 
-We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/discovery-governance/get-started/enforce-policy-as-code/#creating-a-policy-pack) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
+We recommend that you enhance these pre-built packs with your own custom policies tailored to your specific business, security, and operational needs. Pulumi's flexible Policy as Code framework allows you to [author your own packs](/docs/discovery-governance/guides/write-a-policy-pack/) and add them to the same Policy Groups alongside pre-built packs, giving you complete and comprehensive coverage.
 
 ### Frequently asked questions (FAQ)
 

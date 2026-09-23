@@ -34,7 +34,7 @@ For full setup and configuration details, see the [customer-managed workflow run
 ### Setting up Discovery scans
 
 1. [Set up a customer-managed workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#using-customer-managed-workflow-runners)
-1. Navigate to **Management** > **Accounts** in Pulumi Cloud
+1. Navigate to **Resources** > **Discovery** in Pulumi Cloud
 1. Select the workflow runner pool for the account you want to scan
 1. Trigger a scan and confirm it completes successfully
 

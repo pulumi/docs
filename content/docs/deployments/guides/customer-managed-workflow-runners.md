@@ -23,12 +23,12 @@ Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [
 1. Verify the workflow runner status by refreshing the page
 1. Configure the workflow runner pool for the workflows you want to run:
    - **Deployments**: Navigate to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool dropdown
-   - **Discovery scans**: Navigate to **Management** > **Accounts** and select the pool for the account you want to scan
+   - **Discovery scans**: Navigate to **Resources** > **Discovery** and select the pool for the account you want to scan
    - **Policy evaluation**: Navigate to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
 1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
 1. Verify your setup:
    - **Deployments**: Run a `pulumi refresh` through the **Actions** dropdown in your stack page
-   - **Discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
+   - **Discovery scans**: Trigger a scan from **Resources** > **Discovery** and confirm it completes successfully
    - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
 
 Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
