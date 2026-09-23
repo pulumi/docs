@@ -53,7 +53,7 @@ The [Any HCL Module](/registry/packages/hcl/) package allows you to consume Terr
 
 ### Add a Terraform module to your Pulumi project
 
-To use a Terraform module in Pulumi, first add it to your project using the `pulumi package add` command:
+A [Pulumi HCL](/docs/iac/languages-sdks/hcl/) program can skip this step and declare the module inline with a `module` block, as the [example below](#example-aws-s3-bucket-module) shows. In every other language, first add the module to your project using the `pulumi package add` command:
 
 ```bash
 pulumi package add hcl module <module-source> [<version>]
@@ -104,6 +104,8 @@ See [Terraform Modules in the Pulumi Cloud Registry](/docs/integrations/terrafor
 
 Here's an example of how to use the AWS S3 bucket module to create a bucket in your Pulumi program.
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 First, add the module to your project:
 
 ```bash
@@ -130,7 +132,22 @@ packages:
       - 4.1.2
 ```
 
-{{% chooser language "typescript,python,go,csharp,java,yaml" %}}
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+An HCL program declares the module inline, so there is no `pulumi package add` step and no generated SDK. The `Pulumi.yaml` only has to select the runtime:
+
+**Example:** Pulumi.yaml
+
+```yaml
+name: s3-bucket-example
+runtime: hcl
+```
+
+{{% /choosable %}}
+
+{{% chooser language "typescript,python,go,csharp,java,yaml,hcl" %}}
 
 {{% choosable language typescript %}}
 
@@ -320,6 +337,38 @@ packages:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+Declare the module with a `module` block and read its outputs as `module.<name>.<output>`. HCL programs keep the module's original snake_case input and output names:
+
+**Example:** main.tf
+
+```hcl
+# Create an S3 bucket using the Terraform module
+module "s3_bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.1.2"
+
+  bucket_prefix = "my-example-bucket"
+
+  tags = {
+    Environment = "dev"
+  }
+}
+
+output "bucket_arn" {
+  value = module.s3_bucket.s3_bucket_arn
+}
+
+output "bucket_id" {
+  value = module.s3_bucket.s3_bucket_id
+}
+```
+
+Run `pulumi install` to fetch the module and the providers it uses. Besides registry addresses like this one, a `module` block accepts local paths, Git URLs, and HTTP archives; see [Module sources](/docs/iac/languages-sdks/hcl/hcl-language-reference/#module-sources).
+
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 In the above code, the imported Terraform module works the same as any other Pulumi code. Outputs are returned, and resource state is stored in your Pulumi state storage, alongside all your other Pulumi-native resources. This also means that resource dependencies work as expected between Pulumi-native resources and resources created by Terraform modules.
@@ -327,6 +376,8 @@ In the above code, the imported Terraform module works the same as any other Pul
 ## Load a module at runtime
 
 Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [Any HCL Module](/registry/packages/hcl/) package directly.
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 Add the Any HCL Module package to your project:
 
@@ -336,7 +387,15 @@ $ pulumi package add hcl
 
 Then use its `Module` resource to load the module you want. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+A Pulumi HCL `module` block can't do this, because its `source` must be a literal string. Use the package's `hcl_module` resource instead, whose `source` is an ordinary argument that can come from a variable. Declare the package in `required_providers` rather than running `pulumi package add`, then run `pulumi install`. The resource takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+
+{{% /choosable %}}
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -476,6 +535,34 @@ resources:
         bucket_prefix: my-example-bucket
 outputs:
   bucketArn: ${bucket.outputs["s3_bucket_arn"]}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+```hcl
+terraform {
+  required_providers {
+    hcl = {
+      source  = "pulumi/hcl"
+      version = "0.18.2"
+    }
+  }
+}
+
+resource "hcl_module" "bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.1.2"
+
+  inputs = {
+    bucket_prefix = "my-example-bucket"
+  }
+}
+
+output "bucket_arn" {
+  value = hcl_module.bucket.outputs["s3_bucket_arn"]
+}
 ```
 
 {{% /choosable %}}
