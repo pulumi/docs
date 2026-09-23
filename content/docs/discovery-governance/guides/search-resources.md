@@ -422,7 +422,7 @@ You may need to refine the pre-populated query slightly to capture your intent. 
 
 This isn't accurate if you're using Google Cloud, however. In that case you could modify the query to be
 
-> type:"gcp:storage:Bucket"
+> type:"gcp:storage/bucket:Bucket"
 
 or, if you're not sure which type is appropriate, you can use AI Assist again to clarify:
 

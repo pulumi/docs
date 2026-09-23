@@ -50,7 +50,7 @@ type:aws:s3/bucket:Bucket tags.costcenter:1234
 Switch the search bar to AI Assist mode and ask a question in plain language. For example, **"show me all cloud storage buckets"** produces a query like:
 
 ```text
-type:"aws:s3/bucket:Bucket" OR type:"gcp:storage/bucket:Bucket" OR type:"azure:storage/bucket:Bucket"
+type:"aws:s3/bucket:Bucket" OR type:"gcp:storage/bucket:Bucket" OR type:"azure-native:storage:BlobContainer"
 ```
 
 AI Assist is also useful during a security review. **"show me all s3 public buckets"** produces a query like:

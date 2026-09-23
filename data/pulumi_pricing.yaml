@@ -593,7 +593,7 @@ categories:
 
       - id: preventative-policies
         name: Preventative policies
-        link: /docs/discovery-governance/concepts/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-as-code/policy-groups/
         requires: pro
         available_from: pro
         availability:
@@ -601,7 +601,7 @@ categories:
 
       - id: audit-policies
         name: Audit policies
-        link: /docs/discovery-governance/concepts/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-as-code/policy-groups/
         available_from: essentials
 
       - id: pre-built-policy-packs
