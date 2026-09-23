@@ -2,7 +2,7 @@
 title: "AI agents need continuity, not just context"
 date: 2026-09-22T12:00:00-07:00
 meta_desc: "Why reliable AI agents need workspace recovery, and how Pulumi Neo uses Kopia-backed snapshots to restore context, files, and in-progress work."
-feature_image:
+feature_image: feature.png
 authors:
   - derek-schaller
 tags:
