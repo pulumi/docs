@@ -250,8 +250,8 @@ If a feature needs to reach a service on the same host or private network as you
 |---------------|------------------------------------------------------------------------------------------------------------------------------|
 | `ESC`         | Pulumi ESC providers and rotators that call a URL you configure: Vault, Infisical, Terraform state, GitHub login, and external providers and rotators. |
 | `AGENTS_BYOK` | Pulumi Neo requests to a [custom model provider](/docs/ai/neo/model-providers/).                                             |
-| `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. Self-hosted installations don't check these requests, so this scope currently has no effect. |
-| `WEBHOOKS`    | Webhook delivery. Self-hosted installations don't check these requests, so this scope currently has no effect.               |
+| `OIDC_ISSUER` | Registering an OIDC issuer and fetching its signing keys. |
+| `WEBHOOKS`    | Webhook delivery. |
 
 For example, to let ESC providers and Neo reach services on your private network:
 
