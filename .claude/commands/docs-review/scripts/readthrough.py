@@ -15,9 +15,11 @@ buckets with the standard two-question test (a reader-blocking defect can be a
 applies `local_repair` findings as fixes and flags `reconception` findings
 without rewriting them.
 
-Why a direct Anthropic API call (not `claude-code-action`): same rationale as
-`extract-claims-llm.py` — one model call against a strict tool-use schema,
-on Opus 5.5 at `high` effort with adaptive thinking. Opus 5.5 can't disable
+Why a direct Anthropic API call (not `claude-code-action`): one bounded model
+call per page against a strict tool-use schema, which `claude-code-action`
+doesn't expose. It runs on Opus 5.5 at `high` effort with adaptive thinking
+(`extract-claims-llm.py` shares the call shape but stays on Sonnet 5 with
+thinking disabled and a forced `tool_choice`). Opus 5.5 can't disable
 thinking and rejects a forced `tool_choice` (both 400), so the tool is offered
 with `tool_choice: auto` and a response without it is an error, not an empty
 result. The system prompt is `references/readthrough.md`
@@ -87,6 +89,15 @@ ANTHROPIC_VERSION = "2023-06-01"
 # page-calls mid-tool-call and the findings vanished silently (2026-09-22).
 MAX_TOKENS = 32000
 HTTP_TIMEOUT = 300  # seconds per API call; a high-effort page can think for minutes
+# Wall-clock budget for the whole run. Once it's spent, calls that haven't started
+# are skipped (recorded in errors[]) and in-flight calls get only what's left, so
+# the lane can't eat the review job's budget: 5 waves of 2 x 300s would be ~50 min.
+RUN_BUDGET_S = 600
+_START = time.monotonic()
+
+
+def _remaining() -> float:
+    return RUN_BUDGET_S - (time.monotonic() - _START)
 MAX_RETRIES = 3
 MAX_CONCURRENCY = 4
 FILE_CAP = 20  # process at most this many content files
@@ -424,8 +435,11 @@ def _post_messages(api_key: str, body: dict) -> dict:
     )
     last_err: Exception | None = None
     for attempt in range(MAX_RETRIES):
+        left = _remaining()
+        if left <= 0:
+            raise RuntimeError(f"readthrough time budget ({RUN_BUDGET_S}s) exhausted; call skipped")
         try:
-            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as resp:
+            with urllib.request.urlopen(req, timeout=min(HTTP_TIMEOUT, max(30.0, left))) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             code = e.code

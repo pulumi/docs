@@ -20,11 +20,11 @@ atomized claim *extraction*: atomize the deterministic part (routing +
 per-claim dispatch), gate it with the validator, leave only irreducible
 judgment (triage / bucket-promotion / framing / rendering) in the review.
 
-Why a direct API call (not `claude-code-action`): same reasons as
-`extract-claims-llm.py` — we need a strict tool schema, explicit
-thinking/effort control (Opus 5.5 at `medium`, adaptive thinking), and a small
-bounded loop, none of which `claude-code-action` exposes. Precedent: `extract-claims-llm.py` and
-`claude-triage.yml` already call `/v1/messages`.
+Why a direct API call (not `claude-code-action`): we need a strict tool
+schema, explicit thinking/effort control (Opus 5.5 at `medium`, adaptive
+thinking, `tool_choice: auto`), and a small bounded loop, none of which
+`claude-code-action` exposes. `extract-claims-llm.py` and `claude-triage.yml`
+also call `/v1/messages`, on Sonnet 5 with thinking disabled.
 
 Routing (first match wins):
   0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
@@ -1178,7 +1178,13 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         _accumulate_usage(agg_usage, resp.get("usage", {}) or {})
         if resp.get("stop_reason") == "max_tokens":
             # A truncated turn can carry a half-built tool call with empty input.
-            # Don't act on it or echo it back; spend a turn and ask again.
+            # Re-ask the same turn once at double the budget, without spending a
+            # turn: pass2 has only two, and an identical retry would likely
+            # truncate the same way.
+            resp = _post_messages(api_key, {**body, "max_tokens": MAX_TOKENS_VERIFY * 2})
+            _accumulate_usage(agg_usage, resp.get("usage", {}) or {})
+        if resp.get("stop_reason") == "max_tokens":
+            # Truncated twice: don't act on it or echo it back; spend the turn.
             continue
         content = resp.get("content", []) or []
         tool_uses = [b for b in content if isinstance(b, dict) and b.get("type") == "tool_use"]
