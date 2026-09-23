@@ -39,13 +39,17 @@ Pulumi Cloud also supports [remote execution](/docs/integrations/terraform/remot
 | Terraform concept | Pulumi Cloud concept |
 | --- | --- |
 | Workspace | [Stack](/docs/iac/concepts/stacks/) |
-| Workspace prefix | [Project](/docs/iac/concepts/projects/) |
+| Workspace prefix (`backend "remote"`) | [Project](/docs/iac/concepts/projects/) |
 | State file | Checkpoint (versioned) |
 | Workspace lock | Stack update lock |
 
-When you migrate state, each Terraform workspace maps to a Pulumi stack. The workspace name follows the convention `<project>_<stack>` (for example, `networking_prod` creates a stack named `prod` in the `networking` project).
+When you migrate state, each Terraform workspace maps to a Pulumi stack. The workspace name follows the convention `<project>_<stack>` (for example, `networking_prod` creates a stack named `prod` in the `networking` project). Because the project is always encoded in the workspace name, two different Pulumi projects can each have a stack literally named `prod` — for example `networking_prod` and `webapp_prod` — without any collision: Pulumi Cloud enforces uniqueness on the full workspace name, which already bundles project and stack together, not on the bare stack name.
 
-If you use Terraform [workspace prefixes](https://developer.hashicorp.com/terraform/language/backend/remote#workspace-prefix) instead of a single named workspace, Pulumi Cloud supports the `workspaces.prefix` configuration as well. Each workspace matching the prefix maps to a separate stack under the same project.
+If you use Terraform [workspace prefixes](https://developer.hashicorp.com/terraform/language/backend/remote#workspace-prefix) instead of a single named workspace, Pulumi Cloud supports the `workspaces.prefix` configuration under `backend "remote"` as well. Each workspace matching the prefix maps to a separate stack under the same project.
+
+{{% notes type="warning" %}}
+The mapping above is confirmed for the `backend "remote"` block's `workspaces.name` and `workspaces.prefix` settings. Terraform's newer `cloud` block instead selects or auto-creates workspaces using `workspaces.tags` and `workspaces.project` — this guide does not yet confirm how (or whether) Pulumi Cloud honors those two attributes. If you're using the `cloud` block, set `workspaces.name` to a single explicit workspace, which maps the same way `backend "remote"` does, rather than relying on `tags` or `project` until that's confirmed.
+{{% /notes %}}
 
 {{% notes type="warning" %}}
 If no stacks exist yet under your `workspaces.prefix` in Pulumi Cloud, migration may fail with a workspace error. To work around this:
@@ -108,6 +112,25 @@ Replace the placeholders:
 | `<your-pulumi-org>` | Your Pulumi Cloud organization name | `acme-corp` |
 | `<project>` | The Pulumi project name for this stack | `networking` |
 | `<stack>` | The Pulumi stack name | `prod` |
+
+If your Terraform version uses the newer `cloud` block instead of `backend "remote"`, the single-workspace form is equivalent:
+
+```hcl
+terraform {
+  cloud {
+    hostname     = "tf.pulumi.com"
+    organization = "<your-pulumi-org>"
+
+    workspaces {
+      name = "<project>_<stack>"
+    }
+  }
+}
+```
+
+{{% notes type="warning" %}}
+Use `workspaces.name` as shown above. Selecting or auto-creating workspaces with `workspaces.tags` or `workspaces.project` — as you would against HCP Terraform — is not yet confirmed to work against Pulumi Cloud; see the note in [Concept mapping](#concept-mapping) above.
+{{% /notes %}}
 
 {{% notes type="info" %}}
 If you are using a [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) instance, replace `tf.pulumi.com` with your instance's API URL in:
