@@ -228,7 +228,7 @@ jobs:
           # warn and stand down rather than painting the PR red for a file
           # that exists three lines away in the diff.
           if [ ! -x scripts/review-v3/staging-deploy.sh ]; then
-            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges, or until a tools-team member comments /deploy-staging."
+            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges; /deploy-staging runs the same base-branch script, so it cannot help here either."
             exit 0
           fi
           scripts/review-v3/staging-deploy.sh \
