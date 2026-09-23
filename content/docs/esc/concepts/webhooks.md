@@ -163,8 +163,7 @@ class PulumiServiceWebhook: Stack
 terraform {
   required_providers {
     pulumiservice = {
-      source  = "pulumi/pulumiservice"
-      version = "1.3.0"
+      source = "pulumi/pulumiservice"
     }
   }
 }
@@ -178,6 +177,8 @@ resource "pulumiservice_webhook" "example_webhook" {
   payload_url       = "https://example.com/webhook"
 }
 ```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

@@ -284,8 +284,7 @@ description: Setup of automated drift detection with Pulumi
 terraform {
   required_providers {
     pulumiservice = {
-      source  = "pulumi/pulumiservice"
-      version = "1.3.0"
+      source = "pulumi/pulumiservice"
     }
   }
 }
@@ -304,7 +303,7 @@ output "drift_schedule_id" {
 }
 ```
 
-The `pulumi/` prefix on the source selects the native Pulumi provider, which takes an exact version rather than a version constraint. Run `pulumi install` after you add the `required_providers` block.
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 

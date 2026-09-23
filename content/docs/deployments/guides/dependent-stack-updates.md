@@ -250,8 +250,7 @@ description: A simple auto-deploy example
 terraform {
   required_providers {
     pulumiservice = {
-      source  = "pulumi/pulumiservice"
-      version = "1.3.0"
+      source = "pulumi/pulumiservice"
     }
   }
 }
@@ -278,6 +277,8 @@ resource "pulumiservice_webhook" "compute_webhook" {
   filters           = ["update_succeeded"]
 }
 ```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 
@@ -588,8 +589,7 @@ description: Layered infrastructure with automatic dependent-stack updates
 terraform {
   required_providers {
     auto-deploy = {
-      source  = "pulumi/auto-deploy"
-      version = "0.0.4"
+      source = "pulumi/auto-deploy"
     }
   }
 }
@@ -637,7 +637,7 @@ resource "auto-deploy_auto_deployer" "network" {
 }
 ```
 
-The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type.
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block. The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type.
 
 {{% /choosable %}}
 

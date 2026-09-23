@@ -235,8 +235,7 @@ description: Setup of a raw schedule for automatic operations with Pulumi
 terraform {
   required_providers {
     pulumiservice = {
-      source  = "pulumi/pulumiservice"
-      version = "1.3.0"
+      source = "pulumi/pulumiservice"
     }
   }
 }
@@ -255,7 +254,7 @@ output "schedule_id" {
 }
 ```
 
-The `pulumi/` prefix on the source selects the native Pulumi provider, which takes an exact version rather than a version constraint. Run `pulumi install` after you add the `required_providers` block.
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
 
 {{% /choosable %}}
 
