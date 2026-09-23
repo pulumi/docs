@@ -193,7 +193,7 @@ overrides:
       marketing's to approve even though it lives under content/docs/ and
       reads as `domain:docs` (pulumi/docs#21718). Matches all seven
       get-started trees -- administration, ai/neo, deployments,
-      discovery-governance/discovery, esc, iac, and the top-level one.
+      discovery-governance, esc, iac, and the top-level one.
 
 # -----------------------------------------------------------------------------
 # STAGING EVIDENCE

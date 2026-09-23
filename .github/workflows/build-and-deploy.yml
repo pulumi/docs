@@ -15,8 +15,20 @@ on:
     - cron: '43 12 * * *'
     # Afternoon rebuild for hour-granular dates — 4:23 PM Eastern
     - cron: '23 20 * * *'
-  workflow_dispatch: null
   # Allows manual triggering of the workflow
+  workflow_dispatch:
+    inputs:
+      allow_out_of_order_publish:
+        description: >-
+          Publish even if a newer deploy already published. This is the rollback
+          escape hatch for scripts/check-publish-ordering.js, which normally refuses
+          to move the live origin backwards. You do NOT need this to roll back by
+          reverting and pushing -- a revert is a new commit in a newer run, and
+          publishes normally. A new dispatch at an older ref also publishes normally,
+          since it is the newest run; check this only if another run may publish
+          while this one waits its turn.
+        type: boolean
+        default: false
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
@@ -157,6 +169,10 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+          # Empty for push and schedule; the string "true"/"false" for a dispatch.
+          # scripts/check-publish-ordering.js only treats recognizably affirmative
+          # values as on, so the unchecked box and the absent input both mean off.
+          ALLOW_OUT_OF_ORDER_PUBLISH: ${{ inputs.allow_out_of_order_publish }}
 
       # Duration guardrail: the July 2026 regression sat unnoticed for three
       # weeks because nothing watched build time. Warn in Slack when a

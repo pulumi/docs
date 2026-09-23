@@ -296,10 +296,11 @@ reference:
     weight: 8
 
 # -------------------------------------
-# Policies Menu Section Headers (Discovery & governance)
+# Discovery & governance
 # -------------------------------------
 discovery-governance:
-  - name: Integrations
-    parent: insights-policy
-    identifier: integrations
-    weight: 50
+  - name: pulumi policy CLI ↗
+    parent: dg-reference
+    url: /docs/iac/cli/commands/pulumi_policy/
+    identifier: dg-reference-policy-cli
+    weight: 10

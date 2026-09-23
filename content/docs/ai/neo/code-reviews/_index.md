@@ -42,7 +42,7 @@ Neo code reviews run on GitHub.com. They are not available on Azure DevOps, GitL
 1. Enable [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) for your organization.
 1. Install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) on the repositories you want Neo to analyze.
 1. Confirm code reviews are enabled under **Settings** > **Neo settings** > **Code reviews**. They're on by default.
-1. Grant Pulumi access to your GitHub account by completing the [individual OAuth flow](/docs/integrations/version-control/github-app/#individual-user-setup) under **Management** > **Version control**.
+1. Grant Pulumi access to your GitHub account by completing the [individual OAuth flow](/docs/integrations/version-control/github-app/#individual-user-setup) under **Settings** > **Version control**.
 
 ## Permissions
 

@@ -820,7 +820,7 @@ def test_get_started_routes_to_marketing_everywhere_it_lives():
     cfg = routing.load_config(str(routing.DEFAULT_CONFIG_PATH))
     for prefix in ("content/docs", "content/docs/iac", "content/docs/esc",
                    "content/docs/administration", "content/docs/deployments",
-                   "content/docs/ai/neo", "content/docs/discovery-governance/discovery",
+                   "content/docs/ai/neo", "content/docs/discovery-governance",
                    "content/docs/some-future-product"):
         path = f"{prefix}/get-started/index.md"
         r = routing.resolve_lanes([path], mechanical=False, claims=False, config=cfg)

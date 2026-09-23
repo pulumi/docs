@@ -19,6 +19,19 @@ case ${PULUMI_ACTION} in
         pulumi -C infrastructure preview
         ;;
     update)
+        # `pulumi up` on this program IS the publish step: it swings the live CloudFront
+        # origin to whichever bucket ./origin-bucket-metadata.json names. Refuse to do
+        # that if a newer run has already published, which the queueing in
+        # await-in-progress.js makes unlikely but cannot prevent.
+        #
+        # This has to run immediately before the update and nowhere else, because the
+        # race it detects only resolves at publish time. If a retry loop is ever wrapped
+        # around the `pulumi up` below -- e.g. to survive a `[409] Conflict` -- this call
+        # belongs INSIDE it: the run that won the conflict is exactly the newer run this
+        # check exists to avoid overwriting. It is cheap and idempotent, so re-running it
+        # per attempt costs nothing.
+        node ./scripts/check-publish-ordering.js
+
         # Given how frequently we update the CloudFront distribution, and how easy it can
         # be for our checkpointed CloudFront Etag to fall out of sync with what's current,
         # we refresh the distribution on every update.
