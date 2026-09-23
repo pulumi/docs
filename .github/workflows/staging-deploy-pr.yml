@@ -7,17 +7,17 @@ name: Staging deploy (PR)
 # this workflow is how that evidence gets made.
 #
 # Design notes:
-# - Permission gate: active membership in ANY team under `teams:` in
-#   .github/review-routing.yml (docs-guild, blog, marketing, tools) may
-#   trigger a deploy — the same set, and the same any-team rule, that the
-#   Sentinel's G3 accepts for approval. It was tools-only until the first
-#   time anyone looked at who that was: one person, which made a
-#   not-waivable gate depend on a single human being awake. The blast radius
-#   is unchanged by widening it, because the fork guard below already limits
-#   this to branches in this repo, i.e. to people who can push here anyway.
-#   Checked in-job via the org membership API with the PULUMI_BOT_TOKEN (the
-#   default GITHUB_TOKEN cannot read team membership); an API failure
-#   refuses (fail closed).
+# - Permission gate: active membership in any team under `teams:` in
+#   .github/review-routing.yml may trigger a deploy — the teams the Sentinel
+#   routes review to. It was tools-only, which rested a not-waivable gate on
+#   a very small team. What the gate governs is narrower than it looks: the
+#   fork guard below means only code already pushed to this repo can be
+#   deployed, the unattended lane (staging-deploy-auto.yml) already deploys
+#   such branches on its own when they touch the deploy paths, and anyone
+#   with write access can dispatch testing-build-and-deploy.yml directly.
+#   This gate decides who may do it by comment. Checked in-job via the org
+#   membership API with the PULUMI_BOT_TOKEN (the default GITHUB_TOKEN
+#   cannot read team membership); an API failure refuses (fail closed).
 # - Fork PRs are refused with a comment: deploying fork code to the shared
 #   staging stack is a tools-team manual action, not a comment command.
 # - This workflow never checks out PR code. Its one checkout is a sparse,
@@ -110,36 +110,50 @@ jobs:
           }
 
           # Review-team membership: active membership in ANY team under
-          # `teams:` clears the gate. That is deliberately the same set, and
-          # the same any-team rule, the Sentinel's G3 applies to approvals —
-          # the two questions are "who does this repo trust with a PR" and
-          # they should not have different answers. Order follows
-          # sentinel.py's `sorted(config.teams)` so a refusal lists the teams
-          # exactly as G3's message does.
+          # `teams:` clears the gate. These are the teams G3 counts approvals
+          # from, but the gate deliberately follows neither G3's
+          # `approval.scope` nor its admin allowance: the question here is who
+          # may spend a staging slot, not who may merge. Teams are listed in
+          # `sorted(teams)` order, as sentinel.py does, so a refusal reads the
+          # same as G3's message.
           #
-          # Fail closed on any lookup problem, but say which kind: a 404 is
-          # an ordinary non-member and gets the "ask someone else" refusal,
-          # while anything else means the check itself could not be made and
-          # says so. The single-team version reported both as
-          # `lookup-failed`, which told a non-member the tooling was broken.
+          # Fail closed on any lookup problem, and say which kind. GitHub
+          # answers 404 both for a non-member and for a team the token cannot
+          # see — the conflation sentinel.py's `require_org_read` exists to
+          # stop. So a 404 counts as "not a member" only when the same token
+          # can see the team itself; otherwise the check could not be made,
+          # and the refusal says so rather than blaming the commenter.
+          #
           # No checkout has happened, so read the routing config through the
           # contents API (this workflow never checks out code). No `?ref=`:
           # the contents API answers from the DEFAULT branch, which is what
           # keeps a PR from widening `teams:` in its own diff and then
-          # deploying on the strength of it. That mattered less when the
-          # list was read for one hardcoded role; it is the whole gate now.
+          # deploying on the strength of it.
           TEAM_REFS=$(gh api "repos/$REPO/contents/.github/review-routing.yml" --jq .content | base64 -d | python3 -c "import sys,yaml;t=yaml.safe_load(sys.stdin)['teams'];print('\n'.join(t[r] for r in sorted(t)))")
+          # `paste -d` cycles through its delimiter CHARACTERS, so ", " there
+          # would alternate comma and space. Join on one, then widen it.
+          TEAM_LIST=$(printf '%s\n' "$TEAM_REFS" | sed '/^$/d; s/.*/**&**/' | paste -sd, - | sed 's/,/, /g')
+          CANNOT_VERIFY="@$ACTOR \`/deploy-staging\` could not verify your team membership, so it is refusing rather than guessing. Try again in a moment, or ask a member of $TEAM_LIST to trigger the staging deploy."
+
+          if [ -z "${TEAM_TOKEN:-}" ]; then
+            echo "::warning::no org-scoped token (PULUMI_BOT_TOKEN is empty) — team membership cannot be read"
+            refuse "$CANNOT_VERIFY"
+          fi
+
           ALLOWED=false
           LOOKUP_FAILED=false
           while read -r TEAM_REF; do
             [ -n "$TEAM_REF" ] || continue
             ORG="${TEAM_REF%%/*}"; SLUG="${TEAM_REF#*/}"
             if OUT=$(GH_TOKEN="$TEAM_TOKEN" gh api "orgs/$ORG/teams/$SLUG/memberships/$ACTOR" 2>&1); then
-              STATE=$(printf '%s' "$OUT" | jq -r '.state // "unknown"')
-            elif printf '%s' "$OUT" | grep -q "HTTP 404"; then
+              STATE=$(printf '%s' "$OUT" | jq -r '.state // "unknown"' 2>/dev/null) || STATE="lookup-failed"
+            elif [[ "$OUT" == *"HTTP 404"* ]] \
+                 && GH_TOKEN="$TEAM_TOKEN" gh api "orgs/$ORG/teams/$SLUG" --silent >/dev/null 2>&1; then
               STATE="not-a-member"
             else
               STATE="lookup-failed"
+            fi
+            if [ "$STATE" = "lookup-failed" ]; then
               LOOKUP_FAILED=true
             fi
             echo "$TEAM_REF: $STATE"
@@ -150,11 +164,10 @@ jobs:
           done <<< "$TEAM_REFS"
 
           if [ "$ALLOWED" != "true" ]; then
-            TEAM_LIST=$(printf '%s\n' "$TEAM_REFS" | sed '/^$/d; s/.*/**&**/' | paste -sd ", " -)
             if [ "$LOOKUP_FAILED" = "true" ]; then
-              refuse "@$ACTOR \`/deploy-staging\` could not verify your team membership, so it is refusing rather than guessing. Try again in a moment, or ask a member of $TEAM_LIST to trigger the staging deploy."
+              refuse "$CANNOT_VERIFY"
             fi
-            refuse "@$ACTOR \`/deploy-staging\` is limited to members of a review team ($TEAM_LIST) — the same teams whose approval satisfies Sentinel gate G3. Ask one of them to trigger the staging deploy."
+            refuse "@$ACTOR \`/deploy-staging\` is limited to members of a review team ($TEAM_LIST). Ask one of them to trigger the staging deploy."
           fi
 
           PR_JSON=$(gh api "repos/$REPO/pulls/$PR")

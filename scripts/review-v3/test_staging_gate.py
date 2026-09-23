@@ -60,7 +60,9 @@ def routing_teams() -> list[str]:
 # A fake `gh`. Each membership lookup answers from MEMBERSHIPS, written by
 # the test as "<org>/<slug>/<login>=<state>" lines; a slug listed in
 # ERRORING_TEAMS fails the way a token or network problem does (not a 404),
-# which is the branch that must refuse differently. Everything the fake
+# which is the branch that must refuse differently. A slug in HIDDEN_TEAMS
+# is one the token cannot see: GitHub 404s the membership AND the team
+# itself, and that 404 must not be read as "not a member". Everything the fake
 # refuses is recorded, so a test can assert on the comment body a real
 # reviewer would have read.
 FAKE_GH = r"""#!/usr/bin/env bash
@@ -116,12 +118,31 @@ case "$ENDPOINT" in
         exit 1
         ;;
     esac
+    case " $HIDDEN_TEAMS " in
+      *" $SLUG "*)
+        echo "gh: Not Found (HTTP 404)" >&2
+        exit 1
+        ;;
+    esac
     STATE=$(printf '%s\n' "$MEMBERSHIPS" | sed -n "s|^$ORG/$SLUG/$LOGIN=||p")
     if [ -z "$STATE" ]; then
       echo "gh: Not Found (HTTP 404)" >&2
       exit 1
     fi
     emit "$(jq -n --arg s "$STATE" '{state: $s}')"
+    exit 0
+    ;;
+  orgs/*/teams/*)
+    # The team itself: 404 when the token cannot see it, which is what
+    # tells a real non-member apart from a token that sees nothing.
+    SLUG="${ENDPOINT##*/}"
+    case " $HIDDEN_TEAMS " in
+      *" $SLUG "*)
+        echo "gh: Not Found (HTTP 404)" >&2
+        exit 1
+        ;;
+    esac
+    emit "$(jq -n --arg s "$SLUG" '{slug: $s}')"
     exit 0
     ;;
   repos/*/pulls/*)
@@ -151,7 +172,8 @@ class GateResult:
 
 
 def run_gate(tmp_path, *, actor="someone", memberships=None,
-             erroring_teams=(), head_repo="pulumi/docs") -> GateResult:
+             erroring_teams=(), hidden_teams=(), head_repo="pulumi/docs",
+             team_token="fake-team-token") -> GateResult:
     bin_dir = tmp_path / "bin"
     bin_dir.mkdir()
     fake = bin_dir / "gh"
@@ -170,10 +192,11 @@ def run_gate(tmp_path, *, actor="someone", memberships=None,
         "ROUTING_FILE": str(ROUTING),
         "MEMBERSHIPS": "\n".join(memberships or []),
         "ERRORING_TEAMS": " ".join(erroring_teams),
+        "HIDDEN_TEAMS": " ".join(hidden_teams),
         "PR_HEAD_REPO": head_repo,
         # The step's own `env:` block.
         "GH_TOKEN": "fake-github-token",
-        "TEAM_TOKEN": "fake-team-token",
+        "TEAM_TOKEN": team_token,
         "ACTOR": actor,
         "PR": "21789",
         "REPO": "pulumi/docs",
@@ -196,6 +219,10 @@ def run_gate(tmp_path, *, actor="someone", memberships=None,
 
 def member_of(team_ref, login="someone", state="active"):
     return [f"{team_ref}/{login}={state}"]
+
+
+def slug(team_ref):
+    return team_ref.split("/", 1)[1]
 
 
 # --- the widening itself ------------------------------------------------
@@ -244,9 +271,8 @@ def test_lookup_failure_refuses_rather_than_guessing(tmp_path):
     non-member gets, because "we could not check" and "you are not on the
     list" call for different next actions.
     """
-    result = run_gate(tmp_path, erroring_teams=[
-        ref.split("/", 1)[1] for ref in routing_teams()
-    ])
+    result = run_gate(tmp_path,
+                      erroring_teams=[slug(t) for t in routing_teams()])
     assert result.refused, result.log
     assert "could not verify your team membership" in result.refusal
     assert "limited to members of a review team" not in result.refusal
@@ -263,7 +289,7 @@ def test_one_broken_team_does_not_block_a_member_of_another(tmp_path):
     result = run_gate(
         tmp_path,
         memberships=member_of(teams[-1]),
-        erroring_teams=[teams[0].split("/", 1)[1]],
+        erroring_teams=[slug(teams[0])],
     )
     assert not result.refused, result.log
 
@@ -278,10 +304,62 @@ def test_non_member_during_partial_outage_gets_the_cautious_refusal(tmp_path):
     result = run_gate(
         tmp_path,
         memberships=[],
-        erroring_teams=[teams[0].split("/", 1)[1]],
+        erroring_teams=[slug(teams[0])],
     )
     assert result.refused, result.log
     assert "could not verify your team membership" in result.refusal
+
+
+def test_refusal_lists_the_teams_readably(tmp_path):
+    """The team list is prose a person reads, so pin its exact shape.
+
+    `paste -sd ", "` looks like it joins on ", " and doesn't: `-d` takes a
+    list of delimiter characters and cycles through them, so four teams
+    came out as `**a**,**b** **c**,**d**`. A test that only checked each
+    name appeared somewhere passed straight over that.
+    """
+    result = run_gate(tmp_path, memberships=[])
+    expected = ", ".join(f"**{t}**" for t in routing_teams())
+    assert f"({expected})" in result.refusal, result.refusal
+
+
+def test_token_that_cannot_see_the_teams_is_not_blamed_on_the_actor(tmp_path):
+    """Every lookup 404ing is not proof nobody is a member.
+
+    GitHub answers 404 for a team the token cannot see, byte-identical to
+    "not a member" (sentinel.py's `require_org_read` docstring tells the
+    story of that conflation deadlocking the repo). A token that lost its
+    org scope must produce "could not verify", not "you are not on a team".
+    """
+    result = run_gate(tmp_path, memberships=[],
+                      hidden_teams=[slug(t) for t in routing_teams()])
+    assert result.refused, result.log
+    assert "could not verify your team membership" in result.refusal
+    assert "limited to members of a review team" not in result.refusal
+    for team_ref in routing_teams():
+        assert f"{team_ref}: lookup-failed" in result.log, result.log
+
+
+def test_one_invisible_team_does_not_block_a_member_of_another(tmp_path):
+    """A renamed or unreadable team degrades to the teams that answered."""
+    teams = routing_teams()
+    result = run_gate(tmp_path, memberships=member_of(teams[-1]),
+                      hidden_teams=[slug(teams[0])])
+    assert not result.refused, result.log
+
+
+def test_missing_team_token_refuses_before_asking_anything(tmp_path):
+    """No org-scoped token means no lookup can mean anything.
+
+    The same guard sentinel.py's `require_org_read` applies: with the
+    token unset, every membership answer would be noise, so refuse with
+    the cautious wording up front.
+    """
+    result = run_gate(tmp_path, team_token="",
+                      memberships=member_of(routing_teams()[0]))
+    assert result.refused, result.log
+    assert "could not verify your team membership" in result.refusal
+    assert "PULUMI_BOT_TOKEN is empty" in result.log
 
 
 # --- guards the widening must not have loosened -------------------------
