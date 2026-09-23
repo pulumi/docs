@@ -1568,7 +1568,7 @@ The docs CloudFront distribution uses StackReferences to dynamically configure o
 1. External stack (for example, registry) deploys → creates new CloudFront distribution with new domain
 2. Docs infrastructure automatically reads the updated output via StackReference on next deployment
 3. Docs CloudFront distribution origins are updated with the new domain
-4. CloudFront changes propagate globally (15-20 minutes)
+4. CloudFront changes propagate globally (typically within several minutes)
 
 **Important:** StackReferences always read the latest outputs from referenced stacks. No manual refresh is needed.
 

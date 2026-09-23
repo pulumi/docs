@@ -63,8 +63,8 @@
 // https://www.pulumi.com/metadata.json serves the same document and is NOT used, though
 // not for the obvious reason: that path has its own zero-TTL cache behavior in
 // infrastructure/index.ts, so it isn't edge-cached. The problem is one layer down.
-// Swinging the origin is a CloudFront DISTRIBUTION CONFIG change, and those take 15-20
-// minutes to propagate globally (see BUILD-AND-DEPLOY.md). For that whole window the
+// Swinging the origin is a CloudFront DISTRIBUTION CONFIG change, and those can take
+// several minutes to propagate globally (see BUILD-AND-DEPLOY.md). For that whole window the
 // public endpoint can still answer from the previous origin -- and that window is
 // exactly the one this check runs in, since the race it detects is two deploys minutes
 // apart. Of the three candidate sources of truth, the public URL is the only one that
