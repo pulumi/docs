@@ -42,7 +42,7 @@ Before authoring your first policy pack, ensure you have:
 - [Pulumi CLI installed](/docs/install/).
 - For TypeScript/JavaScript policies: [Node.js installed](https://nodejs.org/en/download/).
 - For Python policies: [Python installed](https://python.org/downloads/).
-- For OPA policies: Pulumi CLI v3.227.0+ automatically installs the OPA analyzer plugin on first use. No manual installation is needed.
+- For OPA policies: the OPA language plugin, installed with `pulumi plugin install language opa`.
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/discovery-governance/concepts/policy-as-code/).
 
@@ -220,7 +220,7 @@ Create your first policy pack:
 1. Create a new OPA project:
 
     ```sh
-    $ pulumi policy new aws-opa --generate-only
+    $ pulumi policy new aws-opa
     ```
 
     This creates a `PulumiPolicy.yaml` (with `runtime: opa`) and a starter `policy.rego` file. Templates are available for AWS (`aws-opa`), Azure (`azure-opa`), GCP (`gcp-opa`), and Kubernetes (`kubernetes-opa`).

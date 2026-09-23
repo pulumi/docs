@@ -22,21 +22,25 @@ OPA policies have a few limits compared with TypeScript and Python policies:
 
 ## Prerequisites
 
-- [Pulumi CLI](/docs/install/) v3.227.0 or later. The CLI installs the OPA analyzer plugin automatically the first time you run an OPA policy pack.
+- [Pulumi CLI](/docs/install/) v3.227.0 or later.
+- The OPA language plugin. Install it with:
+
+    ```bash
+    pulumi plugin install language opa
+    ```
+
 - Optional: the [OPA CLI](https://www.openpolicyagent.org/docs/latest/#running-opa), to [test your policies](#test-your-policies).
 
 ## Create a policy pack
 
 An OPA policy pack is a directory that contains a `PulumiPolicy.yaml` file and one or more `.rego` files.
 
-To start from a template, run `pulumi policy new` with one of the OPA templates: `aws-opa`, `azure-opa`, `gcp-opa`, or `kubernetes-opa`. Pass `--generate-only`, since OPA packs have no dependencies to install:
+To start from a template, run `pulumi policy new` with one of the OPA templates: `aws-opa`, `azure-opa`, `gcp-opa`, or `kubernetes-opa`:
 
 ```bash
 mkdir policy-pack && cd policy-pack
-pulumi policy new aws-opa --generate-only
+pulumi policy new aws-opa
 ```
-
-The command's output suggests running `pulumi install` next. Skip it: OPA packs have no dependencies to install, and the Pulumi CLI installs the OPA analyzer plugin itself the first time you run the pack.
 
 To follow this guide, create the files by hand instead. Create a `PulumiPolicy.yaml` file:
 
@@ -46,7 +50,7 @@ version: 0.1.0
 description: Example OPA policy pack for random resources.
 ```
 
-Always set `version`. Pulumi uses it to identify the pack in the output of `pulumi preview` and when you [publish](#publish-and-enforce) the pack. For every field, see the [project file reference](/docs/discovery-governance/reference/policy-project-file/).
+Always set `version`. Pulumi uses it to identify the pack in the output of `pulumi preview` and when you [publish](#publish-and-enforce) the pack, and warns with `warning[opa/missing-version]` if it's missing. For every field, see the [project file reference](/docs/discovery-governance/reference/policy-project-file/).
 
 Every `.rego` file in the pack must declare the same package. The package name becomes the policy pack's name.
 
@@ -392,7 +396,7 @@ To apply the policy pack across your organization without passing `--policy-pack
 pulumi policy publish
 ```
 
-Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
+Then add the pack to a [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/). Every machine that runs Pulumi against a stack in that group, including CI runners, needs the OPA language plugin installed with `pulumi plugin install language opa`. A preventative policy group checks stacks during `pulumi preview` and `pulumi up`, and an audit policy group checks discovered cloud resources. For the full workflow, see [Enforce policy as code](/docs/discovery-governance/get-started/enforce-policy-as-code/).
 
 ## Reuse OPA Gatekeeper policies
 
