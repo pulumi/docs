@@ -113,7 +113,7 @@ const defaultMetadataFile = path.join(repoRoot, "origin-bucket-metadata.json");
 //
 //   enforce  Abort the deploy. www-production is the live docs site: a silent
 //            flip backwards is served to everyone, and it persists until the next
-//            push or scheduled rebuild -- up to ~8 hours across the overnight gap
+//            push or scheduled rebuild -- up to ~15 hours across the overnight gap
 //            between the 4:23pm and 7:17am slots in build-and-deploy.yml.
 //
 //            Aborting is cheap here in a way that is worth stating plainly, because
