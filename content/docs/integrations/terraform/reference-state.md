@@ -52,7 +52,7 @@ output "ecr_repository_url" {
 
 For Terraform workspaces using local state files, you can reference them directly, via the [`getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/) function:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -202,11 +202,37 @@ outputs:
 
 {{% /choosable %}}
 
+{{% choosable language "hcl" %}}
+
+In Pulumi HCL, read the state file with the same `terraform_remote_state` data source you would use in Terraform. The [`terraform`](/registry/packages/terraform/) provider serves it, and `pulumi install` fetches that provider for you:
+
+```hcl
+# Reference local Terraform state
+data "terraform_remote_state" "infra" {
+  backend = "local"
+
+  config = {
+    path = "../infrastructure/terraform.tfstate"
+  }
+}
+
+# Access Terraform outputs
+output "clusterName" {
+  value = data.terraform_remote_state.infra.outputs["ecs_cluster_name"]
+}
+
+output "repositoryUrl" {
+  value = data.terraform_remote_state.infra.outputs["ecr_repository_url"]
+}
+```
+
+{{% /choosable %}}
+
 ### Reference remote state
 
 For production environments, many prefer to store their state in Terraform Cloud. To reference remote state, use the [`getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) function:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -383,6 +409,48 @@ variables:
 outputs:
   clusterName: ${tfState.outputs["ecs_cluster_name"]}
   repositoryUrl: ${tfState.outputs["ecr_repository_url"]}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+Switch the same data source to the `remote` backend. Keep the API token out of the program by declaring it as a sensitive variable, which Pulumi stores as a [secret](/docs/iac/concepts/secrets/):
+
+```hcl
+variable "tfe_token" {
+  type      = string
+  sensitive = true
+}
+
+# Reference remote Terraform state
+data "terraform_remote_state" "infra" {
+  backend = "remote"
+
+  config = {
+    organization = "my-org"
+    token        = var.tfe_token
+
+    workspaces = {
+      prefix = "dev"
+    }
+  }
+}
+
+# Access Terraform outputs
+output "clusterName" {
+  value = data.terraform_remote_state.infra.outputs["ecs_cluster_name"]
+}
+
+output "repositoryUrl" {
+  value = data.terraform_remote_state.infra.outputs["ecr_repository_url"]
+}
+```
+
+Set the token once per stack, and Pulumi encrypts it at rest:
+
+```bash
+$ pulumi config set --secret tfe_token <your-token>
 ```
 
 {{% /choosable %}}
