@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Pulumi SDK 3.263.0 documentation</title>
+  <title>Index &mdash; Pulumi SDK 3.264.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -12,7 +12,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=305f6d3d"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=4184c757"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
@@ -32,7 +32,7 @@
             Pulumi SDK
           </a>
               <div class="version">
-                3.263.0
+                3.264.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -761,6 +761,8 @@
 </li>
       <li><a href="../#pulumi.runtime.Mocks.new_resource">new_resource() (pulumi.runtime.Mocks method)</a>
 </li>
+      <li><a href="../#pulumi.StateMigrationResult.new_state">new_state (pulumi.StateMigrationResult attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -779,6 +781,8 @@
         <li><a href="../#pulumi.ResourceHookArgs.old_outputs">(pulumi.ResourceHookArgs attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../#pulumi.StateMigrationArgs.old_state">old_state (pulumi.StateMigrationArgs attribute)</a>
+</li>
       <li><a href="../#pulumi.ResourceHookOptions.on_dry_run">on_dry_run (pulumi.ResourceHookOptions attribute)</a>
 </li>
       <li><a href="../#pulumi.ResourceHookBinding.on_error">on_error (pulumi.ResourceHookBinding attribute)</a>
@@ -1282,10 +1286,10 @@
         <li><a href="../#pulumi.automation.Workspace.set_config">(pulumi.automation.Workspace method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../#pulumi.runtime.set_mocks">set_mocks() (in module pulumi.runtime)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../#pulumi.automation.LocalWorkspace.set_tag">set_tag() (pulumi.automation.LocalWorkspace method)</a>
 
       <ul>
@@ -1340,6 +1344,12 @@
 </li>
       <li><a href="../#pulumi.provider.ConstructResult.state">state (pulumi.provider.ConstructResult attribute)</a>
 </li>
+      <li><a href="../#pulumi.ResourceOptions.state_migrations">state_migrations (pulumi.ResourceOptions attribute)</a>
+</li>
+      <li><a href="../#pulumi.StateMigrationArgs">StateMigrationArgs (class in pulumi)</a>
+</li>
+      <li><a href="../#pulumi.StateMigrationResult">StateMigrationResult (class in pulumi)</a>
+</li>
       <li><a href="../#pulumi.automation.StdoutEngineEvent">StdoutEngineEvent (class in pulumi.automation)</a>
 </li>
       <li><a href="../#pulumi.automation.StepEventMetadata">StepEventMetadata (class in pulumi.automation)</a>
@@ -1347,6 +1357,8 @@
       <li><a href="../#pulumi.automation.StepEventStateMetadata">StepEventStateMetadata (class in pulumi.automation)</a>
 </li>
       <li><a href="../#pulumi.StringAsset">StringAsset (class in pulumi)</a>
+</li>
+      <li><a href="../#pulumi.StateMigrationResult.successors">successors (pulumi.StateMigrationResult attribute)</a>
 </li>
       <li><a href="../#pulumi.automation.SummaryEvent">SummaryEvent (class in pulumi.automation)</a>
 </li>
@@ -1424,10 +1436,10 @@
 </li>
       <li><a href="../#pulumi.dynamic.UpdateResult">UpdateResult (class in pulumi.dynamic)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../#pulumi.automation.UpResult">UpResult (class in pulumi.automation)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../#pulumi.ErrorHookArgs.urn">urn (pulumi.ErrorHookArgs attribute)</a>
 
       <ul>
@@ -1438,6 +1450,8 @@
         <li><a href="../#pulumi.ResourceHookArgs.urn">(pulumi.ResourceHookArgs attribute)</a>
 </li>
         <li><a href="../#pulumi.ResourceOptions.urn">(pulumi.ResourceOptions attribute)</a>
+</li>
+        <li><a href="../#pulumi.StateMigrationArgs.urn">(pulumi.StateMigrationArgs attribute)</a>
 </li>
       </ul></li>
       <li><a href="../#pulumi.automation.RemoteGitAuth.username">username (pulumi.automation.RemoteGitAuth attribute)</a>
