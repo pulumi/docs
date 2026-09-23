@@ -545,8 +545,7 @@ outputs:
 terraform {
   required_providers {
     hcl = {
-      source  = "pulumi/hcl"
-      version = "0.18.2"
+      source = "pulumi/hcl"
     }
   }
 }
