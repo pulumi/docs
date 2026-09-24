@@ -904,19 +904,21 @@ _REPO_PATH_RE = re.compile(
     r"(?:\brepo:\s*`?([^\s,;`)]+)"
     r"|(?<![\w/.-])((?:content|data|static|layouts|assets|scripts|themes?|config)/[\w./@-]+\.\w+))")
 # A file of any kind, wherever it lives: `pkg/cmd/esc/cli/env_provider_gcp_login.go`,
-# `sdk/Pulumi/Stack.cs`, `changelog/v3.133.0.md`. _REPO_PATH_RE only knows this
+# `sdk/Pulumi/Stack.cs`, `changelog/v3.133.0.md`. It needs a directory component: a
+# bare name is the page's own example talking (`Pulumi.yaml`, `index.ts`,
+# `Node.js`, `__main__.py`), not a file anyone read. _REPO_PATH_RE only knows this
 # repo's top-level directories, so product source cited without a `gh` command
 # or a URL read as nothing at all, and a `verified` that had read Go source
 # classified as `own-file-only` (about 95 of 1,172 in the #21733 audit).
 _ANY_PATH_RE = re.compile(
-    r"(?<![\w/-])[\w][\w./@-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml|proto|gotmpl|html)\b")
+    r"(?<![\w/-])[\w][\w.@-]*/[\w./@-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml|proto|gotmpl|html)\b")
 # `pulumi/<repo>` as citations write it (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/
-# contents`, `pulumi/pulumi:pkg/...`, "the pulumi/esc README"), but not a path segment
-# or import path that merely contains it. Same pattern as reverify-claims.py's
+# contents`, `pulumi/pulumi:pkg/...`, "the pulumi/esc README"), but not a path segment,
+# import path, or npm scope (`@pulumi/aws`) that merely contains it. Same pattern as reverify-claims.py's
 # _PULUMI_REPO_RE, which learned this first; keep the two in step.
-_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
-# A line anchor on a cited path: `page.md#L99`, `page.md#L10-L20`, `page.md:346`.
-_LINE_ANCHOR_RE = re.compile(r"(?:#L\d+(?:-L?\d+)?|:\d+(?:-\d+)?)$")
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./@-]))pulumi/([\w.-]+)")
+# A line anchor on a cited path: `page.md#L99`, `page.md#L10-L20`, `page.md:346`, `page.md:L57`.
+_LINE_ANCHOR_RE = re.compile(r"(?:#L\d+(?:-L?\d+)?|:L?\d+(?:-L?\d+)?)$")
 
 
 def _normalize_cited_path(path: str) -> str:
@@ -1038,8 +1040,9 @@ def source_discipline_shape(claim: dict, source: str) -> str | None:
     rest = _SOURCE_URL_RE.sub(" ", src)
     if _GH_COMMAND_RE.search(rest) or _BARE_GITHUB_RE.search(rest) or _cites_product_repo(rest):
         return None
-    for m in _REPO_PATH_RE.finditer(rest):
-        cited = _normalize_cited_path(m.group(1) or m.group(2))
+    cited_paths = [_normalize_cited_path(m.group(1) or m.group(2)) for m in _REPO_PATH_RE.finditer(rest)]
+    cited_paths += [_normalize_cited_path(p) for p in _ANY_PATH_RE.findall(rest)]
+    for cited in cited_paths:
         if cited and cited != own_file and not cited.endswith(":" + own_file):
             return None                      # read a different file
     return "self-reference" if cites_self else "same-site-only"
@@ -1379,8 +1382,9 @@ RECHECK_EVIDENCE_CAP = 300
 
 def trunc_evidence(text: str) -> str:
     """A re-check's evidence, whitespace-collapsed and capped for splicing
-    into the gated record's bracketed preamble."""
-    text = " ".join((text or "").split())
+    into the gated record's bracketed preamble. A gate preamble the re-check
+    carries itself is dropped first, so the cap spends on its reasoning."""
+    text = re.sub(r"^\[source-discipline gate:.*?\]\s*", "", " ".join((text or "").split()))
     return text if len(text) <= RECHECK_EVIDENCE_CAP else text[:RECHECK_EVIDENCE_CAP - 1] + "…"
 
 
@@ -1424,19 +1428,28 @@ def _source_discipline_recheck(api_key: str, claim: dict, rec: dict, model: str,
                and shape2 != "self-reference"
                and not (shape2 in ("same-site-only", "own-file-only")
                         and rec2["verdict"] == "contradicted")
-               and not (shape2 == "own-file-only" and rec2["verdict"] == "verified"))
+               # Any passing verdict resting on the page alone is the same
+               # circular `verified` again, whatever label it came back under:
+               # `framing-drift` is a coerced `verified`, and `matches` counts
+               # toward "verified clean" on the brief.
+               and not (shape2 == "own-file-only"
+                        and rec2["verdict"] in ("verified", "matches", "framing-drift")))
     if settled:
         rec2["evidence"] = f"(re-verified after {gate}) {rec2['evidence']}"
         return rec2
     if rec2.get("turn_cap_exhausted"):
         outcome = "ran out of turns"
-    elif rec2["verdict"] == "unverifiable":
+    else:
         # The re-check's reasoning is what the author question needs when it
         # found something concrete ("pinned v4, latest is v7"), so carry it.
         found = trunc_evidence(rec2.get("evidence", ""))
-        outcome = f"could not settle it ({found})" if found else "could not settle it"
-    else:
-        outcome = f"returned `{rec2['verdict']}` on non-independent evidence again"
+        if rec2["verdict"] == "unverifiable":
+            outcome = "could not settle it"
+        else:
+            again = "" if rec.get("verdict") == "verified" else " again"
+            outcome = f"returned `{rec2['verdict']}` on non-independent evidence{again}"
+        if found:
+            outcome += f" ({found})"
     out = _gated_record(rec, gate, outcome)
     out["model_usage"] = usage
     return out

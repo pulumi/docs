@@ -211,9 +211,10 @@ _PATH_RE = re.compile(
 # (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/contents`, `repo:pulumi/docs`,
 # `pulumi/docs:content/...`). Not a path segment that merely ends in the word
 # (`migrating-to-pulumi/from-kubernetes.md`) and not an import path or URL
-# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`): those are the
-# claim's own content echoed back, not evidence consulted.
-_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
+# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`) or npm scope
+# (`@pulumi/aws`): those are the claim's own content echoed back, not
+# evidence consulted. verify-claims.py carries the same pattern.
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./@-]))pulumi/([\w.-]+)")
 
 
 def source_is_own_corpus(source: str) -> bool:

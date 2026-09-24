@@ -550,3 +550,59 @@ def test_contradicted_own_file_note_is_unchanged_by_the_verified_branch(api):
     assert "does the page say what this claim says it does?" in rec["evidence"]
     body = user_text(api["bodies"][1])
     assert "returned `contradicted` citing only" in body and "latest release" not in body
+
+
+# ---- review regressions --------------------------------------------------------
+
+
+@pytest.mark.parametrize("source", [
+    f"repo:{OWN_FILE} (the Pulumi.yaml example at L57)",
+    f"repo:{OWN_FILE} (the index.ts snippet)",
+    f"repo:{OWN_FILE} (the page's Node.js example)",
+    f"repo:{OWN_FILE} lines 57; tsconfig.json settings shown",
+    f"repo:{OWN_FILE} (__main__.py block)",
+    f"repo:{OWN_FILE}; the example imports @pulumi/aws",
+    f"repo:{OWN_FILE}:L57",
+])
+def test_bare_file_names_and_npm_scopes_are_not_independent(source):
+    assert vc.source_discipline_shape(_own_claim(), source) == "own-file-only"
+
+
+def test_npm_scope_does_not_rescue_a_same_site_contradiction():
+    claim = {"file": OWN_FILE, "text": "t"}
+    src = "https://www.pulumi.com/docs/iac/concepts/stacks/ (@pulumi/pulumi)"
+    assert vc.source_discipline_shape(claim, src) == "same-site-only"
+
+
+def test_url_branch_counts_product_source_paths_as_independent():
+    claim = {"file": OWN_FILE, "text": "t"}
+    assert vc.source_discipline_shape(claim, f"{ATP_URL}; pkg/cmd/pulumi/up.go") is None
+    assert vc.source_discipline_shape(
+        claim, "https://www.pulumi.com/docs/iac/concepts/stacks/; sdk/nodejs/runtime/closure.ts") is None
+
+
+@pytest.mark.parametrize("second", [
+    verify_block("verified", "still the page", OWN_SOURCE, framing="shifted"),
+    verify_block("matches", "the page agrees with itself", OWN_SOURCE),
+])
+def test_recheck_cannot_launder_an_own_file_pass_through_another_label(api, second):
+    api["script"] = {"pass1": [verify_block("verified", "the doc itself states it", OWN_SOURCE), second]}
+    rec = vc.run_verifier("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and rec["source_discipline_gate"] == "own-file-only"
+
+
+def test_verified_then_own_file_contradiction_is_worded_without_again(api):
+    api["script"] = {"pass1": [
+        verify_block("verified", "the doc itself states 1.4.0", OWN_SOURCE),
+        verify_block("contradicted", "the page's table says 3.7.1", OWN_SOURCE),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("version"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable"
+    assert "non-independent evidence (the page's table says 3.7.1)" in rec["evidence"]
+    assert "evidence again" not in rec["evidence"]
+
+
+def test_carried_recheck_evidence_drops_a_nested_gate_preamble():
+    nested = "[source-discipline gate: this page is generated from `data/` ... 🚨 finding.] the data file lists 4.2"
+    assert vc.trunc_evidence(nested) == "the data file lists 4.2"
+    assert len(vc.trunc_evidence("x " * 400)) == vc.RECHECK_EVIDENCE_CAP
