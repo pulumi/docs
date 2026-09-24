@@ -95,7 +95,7 @@ new aws.s3.BucketObject("readme", {
 });
 ```
 
-Before reaching for `apply` at all, check whether the resource you are configuring can accept the output directly as one of its inputs, since Pulumi resources are built to accept outputs everywhere a plain value would otherwise go.
+Before reaching for `apply` at all, check whether the resource you are configuring can accept the output directly as one of its inputs, since most resource inputs accept outputs as well as plain values. (A handful of positions cannot, such as a resource's logical name; see [Using an output as a resource name, a map key, or a loop bound](#using-an-output-as-a-resource-name-a-map-key-or-a-loop-bound) below.)
 
 ## Branching program logic on an output produces the wrong branch, or an error at synthesis time
 
@@ -119,7 +119,7 @@ Because the two branches can no longer be expressed as separate blocks of resour
 
 ## Using an output as a resource name, a map key, or a loop bound
 
-A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions fails to compile in TypeScript, Go, and C#, where these positions are typed as plain strings or numbers. Python's dynamic typing does not catch the mismatch, so the program keeps running with the wrong result — for example, a resource named after the `Calling __str__` placeholder text.
+A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions fails to compile in TypeScript, Go, and C#, where these positions are typed as plain strings or numbers. Python's dynamic typing does not catch this at compile time, but the SDK still checks it in most of these positions at runtime: passing an output as a resource's logical name raises `TypeError: Expected resource name to be a string`, and using one as a loop bound (`range(some_output)`) raises `TypeError: 'Output' object cannot be interpreted as an integer`. Using an output as a dictionary key is the one position that does not raise — Python falls back to comparing and hashing the output object itself, so the lookup silently keys on the wrong thing rather than on the value the output will eventually resolve to.
 
 If you need resource names or counts to depend on data that is only known once a resource has been created, the two usual fixes are: derive that data from configuration or another data source that is already available as a plain value at program-authoring time, or, if it genuinely cannot be known until an earlier resource has been provisioned, restructure the dependent resources so they are provisioned in a later, separate stack that consumes the first stack's outputs through a [`StackReference`](/docs/iac/concepts/stacks/#stackreferences).
 
