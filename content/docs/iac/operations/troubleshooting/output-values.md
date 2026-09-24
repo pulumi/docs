@@ -36,7 +36,7 @@ The resulting string contains literal text such as `Calling [toString] on an [Ou
 {{% choosable language python %}}
 
 ```python
-# Silently produces a broken string; no exception is raised.
+# Produces a broken string and logs a warning; no exception is raised.
 print(f"The bucket name is {bucket.bucket}")
 ```
 
@@ -119,13 +119,13 @@ Because the two branches can no longer be expressed as separate blocks of resour
 
 ## Using an output as a resource name, a map key, or a loop bound
 
-A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions fails to compile in Go and C#, and in TypeScript and Python it silently produces the wrong result — for example, a resource named after the `Calling [toString]` placeholder text.
+A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions fails to compile in TypeScript, Go, and C#, where these positions are typed as plain strings or numbers. Python's dynamic typing does not catch the mismatch, so the program keeps running with the wrong result — for example, a resource named after the `Calling __str__` placeholder text.
 
 If you need resource names or counts to depend on data that is only known once a resource has been created, the two usual fixes are: derive that data from configuration or another data source that is already available as a plain value at program-authoring time, or, if it genuinely cannot be known until an earlier resource has been provisioned, restructure the dependent resources so they are provisioned in a later, separate stack that consumes the first stack's outputs through a [`StackReference`](/docs/iac/concepts/stacks/#stackreferences).
 
 ## Trying to read an output's value synchronously
 
-Reaching for `await` on an output outside of an `async` `apply` callback, or a `.get()`/`.Result` method, generally does not compile or fails at runtime — Pulumi has no supported way to block your program and pull a resolved value out of an output synchronously. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
+Trying to `await` an output or read its value synchronously generally does not compile or fails at runtime — Pulumi has no supported way to block your program and pull a resolved value out of an output synchronously. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
 
 If what you actually want is to read a value that a Pulumi program has already produced, from outside that program, the output is not the right place to reach for it. Use one of:
 
