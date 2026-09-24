@@ -26,17 +26,19 @@ social:
     Here's how we approached workspace continuity for long-running AI agent tasks.
 ---
 
-Pulumi Neo works on infrastructure the way an engineer does: it clones repositories, edits files, installs dependencies, runs previews, and sometimes leaves behind useful generated state. That means a task is not just a conversation, it is also a filesystem.
+Pulumi Neo works on infrastructure the way an engineer does: it clones repositories, edits files, installs dependencies, runs previews, and produces intermediate work along the way. A task is not only a conversation with a model. It is also a working directory that has to survive long enough for the agent to keep making progress.
 
-For early Neo tasks, that filesystem recovery started with Git. We persisted enough information to reconstruct repositories later: remotes, branches, commits, and local diffs. That worked for simple cases, but it was the wrong abstraction for long-running agent work. We needed to recover the workspace Neo had actually used.
+Imagine asking an agent to upgrade a Pulumi provider version across a repository, regenerate SDK code, run previews and tests, inspect the failures, and open a pull request. Halfway through, the runtime restarts. Conversation replay can recover what the agent said and which tools it called, but it does not recover the generated files, dependency state, local commits, or scratch output the next step may depend on. Without workspace continuity, the agent can wake up remembering the plan but missing the room it was working in.
+
+For early hosted Neo tasks, workspace recovery started with Git. We persisted enough information to reconstruct repositories later: remotes, branches, commits, and local diffs. This was about the hosted runtime workspace, not a user's local checkout when running `pulumi neo`, where local filesystem and shell tools execute on the user's machine. The Git-based approach worked for simple hosted-runtime cases, but it was the wrong abstraction for long-running agent work. We needed to recover the workspace Neo had actually used.
 
 <!--more-->
 
-This post walks through why we moved to Kopia-backed incremental filesystem snapshots, how we rolled the migration out safely, and what we learned about storage, failure semantics, and observability along the way.
+This post walks through how we tackled workspace continuity for long-running agent tasks, what we learned along the way, and how the same techniques can help you build more resilient agentic systems of your own. The core primitive we chose was [Kopia](https://kopia.io/), an open source backup tool that creates encrypted, incremental, content-addressed snapshots and stores them in backends such as object storage.
 
 ## Git was the wrong recovery boundary
 
-The original persistence model was repository-oriented. After a turn, the agent runtime scanned the working directory for Git repositories, recorded each remote, branch, commit, and local diff, and stored that representation through our task state API. On a cold start, a new runtime fetched that state, cloned the repositories again, checked out the saved revisions, and reapplied patches.
+The original persistence model was repository-oriented. After a turn, the hosted agent runtime scanned its own working directory for Git repositories, recorded each remote, branch, commit, and local diff, and stored that representation through our task state API. On a cold start, a new runtime fetched that state, cloned the repositories again, checked out the saved revisions, and reapplied patches.
 
 That was a reasonable first design because most infrastructure work starts in Git. It also kept persisted state relatively small when local changes were simple.
 
@@ -81,13 +83,15 @@ s3://<task-backup-bucket>/
         ...encrypted repository data...
 ```
 
-That gives up cross-task deduplication, but it aligns the storage boundary with the security and lifecycle boundary. One task's credentials and repository password should not unlock another task's history.
+That gives up cross-task deduplication, but it aligns the storage boundary with the security and lifecycle boundary. A task ID names the storage prefix; it is not the access-control boundary by itself. The service still has to authenticate the task before minting temporary credentials, those credentials are scoped to that task's prefix, and the Kopia repository is encrypted with a per-task password. One task's runtime must never be able to read another task's snapshot history.
 
 ## Split the control plane from the data plane
 
 The next decision was where the bytes should move. We wanted the service to authorize recovery, not become the storage proxy for every dependency tree, generated artifact, and scratch file an agent might create.
 
 Our service remains the control plane. It authenticates the task, decides whether snapshotting is `disabled`, `shadow`, or `enabled`, and mints temporary credentials scoped to that task's storage prefix. The runtime remains the data plane for its own local workspace: it restores and checkpoints directly against object storage instead of streaming large filesystem payloads through the service.
+
+That split is also the multi-tenant security boundary. The runtime gets only the storage authority for the task it is currently serving, and the encrypted repository it opens is protected by that task's repository password. A different task would need both a different storage grant and a different repository password to read its snapshots.
 
 ```mermaid
 flowchart LR
@@ -104,9 +108,9 @@ This split matters. If the service were the only storage principal, every snapsh
 Isolation has several layers:
 
 - The service only issues credentials after authenticating the task.
-- Credentials are short-lived and scoped to a single task prefix.
-- Runtime credentials can read and write snapshots, but cannot delete durable history.
-- Each task has its own Kopia repository password.
+- Credentials are short-lived and scoped to a single task prefix, not just a bucket.
+- Runtime credentials can read and write only that task's snapshots, but cannot delete durable history.
+- Each task has its own Kopia repository password, so object access and repository decryption are separate checks.
 - Cleanup runs through a trusted path with delete authority.
 
 Kopia's retention model also helped us keep delete permission out of the runtime. Snapshot expiration removes references, and maintenance later reclaims unreferenced encrypted blobs. The agent-controlled runtime can create recoverable history without being able to erase it.
@@ -153,9 +157,9 @@ The runtime snapshots existing workspace roots such as:
 - `/tmp-workspace`
 - `/var-workspace`
 
-Regenerable caches and short-lived dependency or build trees are ignored where appropriate. This is a balancing act. Snapshot too much and storage plus request volume become noisy. Snapshot too little and the workspace stops representing what the agent actually saw.
+Regenerable caches and short-lived dependency or build trees are ignored where appropriate. This is an engineering tradeoff for the team operating the agent. Snapshot too much and storage plus request volume become noisy. Snapshot too little and the workspace stops representing what the agent actually saw.
 
-The rule of thumb is that a snapshot should preserve user-relevant work and operational continuity, not every byte a package manager can recreate.
+The boundary we cared about was user-relevant continuity. Source changes, generated configuration, local commits, and tool output should be there after recovery. A dependency cache or build directory that can be recreated may not be. In practice, that means a recovered task might spend extra time reinstalling packages or rebuilding generated artifacts, but it should not lose the work the agent produced or the files it needs to decide what to do next.
 
 ## Pay for isolation on purpose
 
@@ -174,7 +178,7 @@ In the planning model, blob-backed Kopia repositories were dramatically cheaper 
 
 ## Make failures diagnosable, not mysterious
 
-Snapshotting added a new storage system, but we did not want "persistence failed" to become a mystery bucket. Useful telemetry has to identify the phase and the task:
+Snapshotting added a new storage system, so we instrumented recovery as a sequence of named phases instead of one "persistence failed" bucket. For each task, we wanted the logs and metrics to answer:
 
 - Was the invocation warm or a cold start?
 - Was the task in `disabled`, `shadow`, or `enabled` mode?
@@ -186,11 +190,13 @@ Snapshotting added a new storage system, but we did not want "persistence failed
 - Did event replay succeed independently of filesystem recovery?
 - Did cleanup expire snapshots or reclaim physical blobs?
 
-The important pattern is to log recovery as a sequence of named phases, not as one giant success or failure. A task can restore files but fail to replay model history. It can replay history but fall back to a stale or reconstructed workspace. Those are different incidents with different remediations, so the logs and metrics need to preserve the distinction.
+The takeaway is to make recovery observable at the same boundaries where it can fail. A task can restore files but fail to replay model history. It can replay history but fall back to a stale or reconstructed workspace. Those are different incidents with different remediations, so the logs and metrics need to preserve the distinction.
 
 ## Workers made ordering matter
 
-The first snapshot path recovered a task when a runtime cold-started. The next step was making the same continuity model work as Neo moved tool execution into managed workers.
+Our initial Kopia snapshot path recovered a task when a runtime cold-started. The next step was making the same continuity model work as Neo moved tool execution into managed workers.
+
+Worker mode was a separate change to how Neo executes tools: instead of every tool running inside the runtime process, a managed worker can own the workspace and execute the tool calls. Because recovery had already moved from "rebuild Git repositories" to "restore the task workspace," the migration did not need a second persistence model. The main new problem was ordering: making sure the tool result and the snapshot pointer advanced together.
 
 In worker mode, a separate process owns the task workspace, runs tool calls against that workspace, snapshots it after each completed tool call, and reports both the tool result and the latest recovery pointer back to the service.
 
@@ -200,7 +206,9 @@ The important invariant is:
 
 > Only the current worker can commit the tool result and the snapshot pointer that becomes the next restore source.
 
-Each worker has a lease, and replacements get a newer lease. If an older worker stalls and a replacement takes over, the stale worker cannot later publish an old result or make an old snapshot pointer authoritative. That invariant matters because tool results and workspace state have to advance together. A result that points at the wrong workspace is just another kind of corrupted recovery. The lease check ties tool-call persistence, worker replacement, and workspace recovery into one ordered flow.
+The service uses a worker lease to keep snapshot pointers ordered. At any point, one worker lease is current for the task. If that worker stalls, dies, or stops heartbeating, the service can assign a replacement worker with a newer lease. If the old worker later wakes up and tries to report a tool result with an older snapshot pointer, the stale lease prevents that pointer from becoming the next restore source.
+
+That matters because the result and the snapshot describe the same moment in the task. If Neo records "the command finished" but restores the next worker from an older snapshot, the agent can continue from a workspace that does not contain the files produced by the completed tool call. The lease check makes the persisted tool result and the authoritative recovery pointer advance together.
 
 Worker snapshots also have failure fuses. A restore failure resets the workspace and marks the next result so the agent knows local filesystem continuity was lost. Repeated snapshot failures disable further snapshot attempts for that worker process rather than blocking tool execution.
 
@@ -212,7 +220,7 @@ During our internal stress testing for agent tasks, legacy recovery often took a
 
 Restores became faster and much more stable, but the write path did get slower. Kopia checkpoints cost seconds, not milliseconds, because they preserve the workspace rather than a reconstruction recipe. We mitigated that by making turn-level checkpoints non-blocking: the task can return its completed response, then checkpoint the workspace in the background. For our tasks, a few seconds of asynchronous durability work was the right tradeoff for reliable recovery.
 
-## What I would steal from this design
+## What's worth stealing from this design
 
 If you are building long-running agents, the storage question is easy to underestimate. It can look like an implementation detail: clone the repository again, replay the conversation, rehydrate some state, and keep going. But agents do not only produce messages. They produce working directories.
 
