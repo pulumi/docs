@@ -2,6 +2,7 @@
 title: "Pulumi vs HCL: Understanding the Language Differences in Infrastructure as Code"
 allow_long_title: true
 date: 2024-07-09
+updated: 2026-09-24
 meta_desc: "Compare Pulumi and HCL for infrastructure as code. Discover how general-purpose languages boost productivity and collaboration cloud management."
 social:
    twitter: "Discover how general-purpose languages like Python, JavaScript, and Go boost productivity and collaboration in cloud management with Pulumi. Learn why Pulumi offers key advantages over HCL for infrastructure as code. #infrastructureascode #cloudmanagement"
@@ -946,7 +947,7 @@ data "google_compute_network" "vpc_restricted_net_hub" {
 ```
 
 In this HCL
-[example](https://github.com/terraform-google-modules/terraform-example-foundation/blob/master/3-networks-hub-and-spoke/modules/shared_vpc/main.tf),
+[example](https://github.com/terraform-google-modules/terraform-example-foundation/blob/3f8a7dc47931245e4ed43a63d02d51acf8f3de06/3-networks-hub-and-spoke/modules/shared_vpc/main.tf),
 we see the `count` parameter being used in a way that stretches its original intent—essentially using it to
 conditionally create or skip resources based on the value of `var.mode`. This method, while functional, can make the
 code more difficult to understand and maintain, as it repurposes Terraform constructs in unintended ways.
