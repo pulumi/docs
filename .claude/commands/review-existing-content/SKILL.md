@@ -225,25 +225,29 @@ only:
   This is verify-a-proposed-fix, not compose-a-fix; it is still a judgment.
   Vale findings *without* the flag are style/judgment nags — leave them for the
   human (see `docs-review:references:spelling-grammar`).
-- **Readthrough `local_repair` findings** — `.readthrough-findings.json`
-  findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
-  Apply the finding's `proposed_fix` and nothing beyond it: reorder so a
-  prerequisite precedes its use, add a missing definition/step, split a
-  mixed-concept H2, delete a genuinely redundant passage, or surface a buried
-  outcome. The change stays inside the one page and preserves its purpose — that
-  bound is what makes it high-confidence. If applying it would mean touching
-  other files or reshaping the whole page, it isn't `local_repair`; treat it as
-  `reconception`.
+
+**Never apply a readthrough finding in this lane**, whatever its `fix_class`.
+Readthrough repairs change a page's structure, and one page read in isolation
+doesn't tell you why it's shaped the way it is. In September 2026, 4 of the
+first 14 decided fix-lane PRs carrying one went wrong over the readthrough edit:
+it broke rendering, flattened prescriptive guidance, or deleted a section's only
+example. Every readthrough finding is banked for the glow-up lane (see
+§Glow-up mode), where a human reviews the whole page.
+`scripts/content-review/publish-gate.py` refuses a `fixed` verdict whose
+`applied[]` lists a `readthrough` entry, so a readthrough edit fails the whole
+run.
 
 Everything else — `unverifiable` verdicts, low-confidence corrections,
-prose-quality findings, structural suggestions, **every readthrough finding with
-`fix_class: "reconception"`** (a whole-page rewrite, cross-file split/merge, or
-purpose change — flag, never auto-rewrite), anything you'd phrase with
+prose-quality findings, structural suggestions, **every readthrough finding**
+(`local_repair` and `reconception` alike), anything you'd phrase with
 "consider" — goes in the PR description's **Findings not applied** section
 (one line of reasoning each), not in the diff. That list is the
-almost-made-the-cut record the human reviewer adjudicates. When you flag a
-`reconception`, set `clarity_flag: true` in the verdict sentinel (step 8) so the
-ledger carries the signal even on an otherwise-clean page.
+almost-made-the-cut record the human reviewer adjudicates, and the backlog the
+glow-up lane executes. Count every one of them in the verdict's
+`skipped_findings`, **including on a `clean` verdict**: the glow-up selector
+ranks pages on that number. When you flag a `reconception`, set
+`clarity_flag: true` in the verdict sentinel (step 8) so the ledger carries the
+signal even on an otherwise-clean page.
 
 Record every fix you apply as an entry in the verdict sentinel's `applied`
 array (step 8): its category, file, **pre-fix** line range, and a pointer to
@@ -465,11 +469,12 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
 - `retirement`: `true` only for a retirement PR (branch
   `content-review/retire-<slug>`).
 - `applied`: one entry per applied fix — `category` (one of `claim`, `link`,
-  `frontmatter`, `vale`, `readthrough`), `file`, `lines` (`[start, end]`,
-  inclusive, **pre-fix** line numbers — the file as it was on master, the same
-  numbering the pre-step artifacts use), and `source` (the artifact finding it
-  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`,
-  `readthrough:L40-58`, or the dead link's old path). `fixes` should equal
+  `frontmatter`, `vale`; never `readthrough`, which the publish gate rejects),
+  `file`, `lines` (`[start, end]`, inclusive, **pre-fix** line numbers — the
+  file as it was on master, the same numbering the pre-step artifacts use),
+  and `source` (the artifact finding it
+  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`, or the
+  dead link's old path). `fixes` should equal
   `len(applied)`. The workflow's scope gate cross-checks these against the
   artifacts and the branch diff; for link fixes (which have no artifact) the
   declared lines must actually carry the link in the pre-fix file.
@@ -558,7 +563,11 @@ Each banked item is split in two, and the split is the point:
 **Procedure**:
 
 1. **Work the backlog first.** Execute every banked finding, or explicitly
-   decline it with one line of reasoning. Every item lands in exactly one of
+   decline it with one line of reasoning. This includes banked readthrough
+   findings: step 3's ban on applying them is the fix lane's rule, and this
+   lane is where they get executed. A `reconception` still means a
+   restructure a human should green-light, so decline it with a reason rather
+   than rewrite the page to fit it. Every item lands in exactly one of
    the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
    item; fill "What changed") or **Backlog declined** (move the whole row,
    keeping its id cell, and fill "Why not executed"). No silent drops, and

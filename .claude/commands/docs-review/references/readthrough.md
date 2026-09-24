@@ -32,7 +32,7 @@ A finding must be exactly one of these. If none fits, it's out of scope.
 
 ## `fix_class`: in-page repair vs. flag-for-a-human
 
-This is the safety boundary: `local_repair` findings may be applied automatically; `reconception` findings are only ever flagged.
+This is the safety boundary: a `local_repair` is a bounded edit a reviewer can accept as-is; a `reconception` is only ever flagged. Neither is applied unattended. The scheduled existing-content review banks every readthrough finding, `local_repair` included, and its glow-up lane executes them under human review.
 
 - **`local_repair`** — a bounded, in-page edit that doesn't change what the page is:
   - reorder so a prerequisite precedes its use,

@@ -5,7 +5,8 @@ Deterministic pre-step for the glow-up lane of the review-existing-content
 dispatcher. Where `select-articles.py` picks pages whose FACTS are most likely
 stale, this selector picks the page with the largest ACCUMULATED backlog of
 judgment-level findings the fix lane has banked and deferred — the
-"Findings not applied" sections, readthrough reconceptions (`clarity_flag`),
+"Findings not applied" sections (every readthrough finding lands there, since
+the fix lane never applies one), readthrough reconceptions (`clarity_flag`),
 and the flag-only Search-opportunity signal. The glow-up worker executes that
 backlog under human review (glow-up PRs never arm auto-merge; the PR-review
 sweep routes them to Cam/Josh).
@@ -14,8 +15,10 @@ Scoring (over ledger entries only — a never-reviewed page has no banked
 backlog to execute):
 
     score = skipped_findings * tier_w * (0.25 + 0.75*traffic_n)
-            + CLARITY_BOOST   (ledger clarity_flag — a flagged reconception
-                               is the strongest single glow-up signal)
+            + BLOCKER_BOOST   (the findings record carries an unapplied
+                               readthrough finding marked `blocker`: a reader
+                               cannot reach the page's stated outcome)
+            + CLARITY_BOOST   (ledger clarity_flag — a flagged reconception)
             + LOW_CTR_BOOST   (the queue-recorded low_ctr_flag rode into the
                                ledger's signals block: searchers see the page
                                and don't click)
@@ -125,6 +128,13 @@ GLOWUP_REPAIRS_PER_RUN = 1
 # skipped_findings, typically 1-6, times a tier weight <= 1).
 CLARITY_BOOST = 5.0
 LOW_CTR_BOOST = 3.0
+# The fix lane banks every readthrough finding instead of applying it (see
+# publish-gate.py FIX_LANE_BANKED_CATEGORIES), so this lane is now the only
+# place a structural defect gets fixed. A `blocker` — the reader cannot reach
+# what the page promises — must not queue behind pages that merely carry more
+# minor findings, so it outranks a reconception flag. Per page, not per
+# finding: one blocker already means the page is broken.
+BLOCKER_BOOST = 8.0
 
 
 def low_ctr_flagged(entry: dict) -> bool:
@@ -221,12 +231,27 @@ def findings_for(findings_dir: Path | None, slug: str) -> dict | None:
     return rec if isinstance(rec, dict) else None
 
 
+def open_readthrough_blockers(record: dict | None) -> int:
+    """Unapplied readthrough findings the record marks `blocker`. Records
+    written before severity was persisted carry none, so they score as
+    before."""
+    if not isinstance(record, dict):
+        return 0
+    return sum(
+        1 for f in record.get("findings") or []
+        if isinstance(f, dict) and f.get("category") == "readthrough"
+        and f.get("severity") == "blocker" and not f.get("applied"))
+
+
 def score_entry(entry: dict, tier: int, visits: int | None, max_visits: int,
-                median_visits: int, have_traffic: bool) -> float:
+                median_visits: int, have_traffic: bool,
+                record: dict | None = None) -> float:
     tier_w = TIER_WEIGHTS.get(tier, TIER_WEIGHTS[3])
     banked = max(int(entry.get("skipped_findings") or 0), 0)
     base = banked * tier_w * _traffic_term(visits, max_visits, median_visits, have_traffic)
     boost = 0.0
+    if open_readthrough_blockers(record):
+        boost += BLOCKER_BOOST
     if entry.get("clarity_flag"):
         boost += CLARITY_BOOST
     if low_ctr_flagged(entry):
@@ -372,10 +397,15 @@ def main() -> int:
         if _select.is_redirect_stub(repo / path):
             continue
         banked = int(entry.get("skipped_findings") or 0)
-        if banked <= 0 and not entry.get("clarity_flag"):
+        record = findings_for(findings_dir, _select.slugify(path))
+        # An open blocker qualifies on its own: the ledger count is the model's
+        # own tally, and a clean verdict that under-counts it must not hide a
+        # page a reader cannot get through.
+        if (banked <= 0 and not entry.get("clarity_flag")
+                and not open_readthrough_blockers(record)):
             continue  # nothing banked to execute
         score = score_entry(entry, tier, traffic.get(path), max_visits,
-                            median_visits, have_traffic)
+                            median_visits, have_traffic, record)
         # A glow-up that degraded executed nothing and declined nothing, so the
         # page is still owed its rehab — but re-running the same glow-up fails
         # for the same reason it failed the first time. Route it to a repair
@@ -388,7 +418,6 @@ def main() -> int:
             continue
         if glowup_cooldown_active(entry, today):
             continue
-        record = findings_for(findings_dir, _select.slugify(path))
         if check_recoverable and not recoverable(entry, record):
             stranded.append((score, path, entry,
                              "no findings record and no review PR — the banked "

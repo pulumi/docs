@@ -54,12 +54,13 @@ VALE = [
     {"file": "x.md", "line": 12, "rule": "Google.Passive", "category": "passive voice",
      "severity": "suggestion", "message": "consider active voice"},
 ]
-# One local_repair (-> fix), one reconception (-> defer).
+# One local_repair, one reconception: both defer (the fix lane banks readthrough).
 READTHROUGH = {
     "ran": True,
     "findings": [
         {"line_range": "L40", "failure_mode": "missing-step", "anchor_quote": "run pulumi up",
-         "fix_class": "local_repair", "proposed_fix": "add a login step before L40"},
+         "fix_class": "local_repair", "severity_hint": "blocker",
+         "proposed_fix": "add a login step before L40"},
         {"line_range": "L1-90", "failure_mode": "purpose-mismatch", "anchor_quote": "Configure access",
          "fix_class": "reconception", "proposed_fix": "split architecture half into its own page"},
     ],
@@ -86,7 +87,7 @@ check("provenance shows real visits", "384 monthly visits" in out)
 # High-confidence findings land as fix stubs.
 check("contradicted high-confidence claim -> fix row", "c3" in out.split("## Findings not applied")[0])
 check("mechanical Vale -> fix row", "difficulty qualifier" in out.split("## Findings not applied")[0])
-check("local_repair readthrough -> fix row", "missing-step" in out.split("## Findings not applied")[0])
+check("local_repair readthrough is NOT a fix row", "missing-step" not in out.split("## Findings not applied")[0])
 check("alias collision -> fix row", "alias collision" in out.split("## Findings not applied")[0])
 
 # Judgment-level findings land as deferral stubs.
@@ -94,6 +95,11 @@ deferral_block = out.split("## Findings not applied")[1].split("## Screenshot")[
 check("unverifiable claim -> deferral", "c5" in deferral_block)
 check("style Vale -> deferral", "passive voice" in deferral_block)
 check("reconception readthrough -> deferral", "purpose-mismatch" in deferral_block)
+check("local_repair readthrough -> deferral", "missing-step" in deferral_block)
+_rt = [f for f in c.collect(None, None, READTHROUGH, None)[0] if f["category"] == "readthrough"]
+check("readthrough findings are never fix candidates", _rt and not any(f["fix"] for f in _rt))
+check("readthrough severity_hint rides onto the finding",
+      [f["severity"] for f in _rt] == ["blocker", ""])
 check("legacy menu parent -> deferral", "menu parent" in deferral_block)
 
 # TODO markers for the model to fill; lint placeholder for the gate to stamp.
