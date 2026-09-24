@@ -1431,6 +1431,15 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                        "no authoritative source exists — never describe it as 'out of scope' or 'can't be verified'. "
                        "Verify it yourself in-review if cheap (one gh read / one fetch), else file the author-question "
                        "line saying verification ran out of budget and the claim is retryable."))
+            elif v.get("source_discipline_gate"):
+                # verify-claims.py downgraded this for resting on evidence that
+                # can't settle it (the page itself, its live copy, another
+                # Pulumi page). The evidence opens with the question to ask.
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a SOURCE-DISCIPLINE GATE (see the bracketed note opening the evidence): "
+                       "the verifier's only source could not settle the claim either way. File the author-question "
+                       "line with the question the note names. NEVER promote it to 🚨 Outstanding and never call the "
+                       "claim wrong; if the note carries a concrete finding (e.g. a stale pin), quote it in the question."))
             elif PROMOTE_UNVERIFIABLE_TO == "outstanding":
                 outstanding.append(_stub_bullet(
                     v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "

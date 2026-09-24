@@ -904,12 +904,14 @@ _REPO_PATH_RE = re.compile(
     r"(?:\brepo:\s*`?([^\s,;`)]+)"
     r"|(?<![\w/.-])((?:content|data|static|layouts|assets|scripts|themes?|config)/[\w./@-]+\.\w+))")
 # A file of any kind, wherever it lives: `pkg/cmd/esc/cli/env_provider_gcp_login.go`,
-# `sdk/Pulumi/Stack.cs`, `changelog/v3.133.0.md`. It needs a directory component: a
-# bare name is the page's own example talking (`Pulumi.yaml`, `index.ts`,
-# `Node.js`, `__main__.py`), not a file anyone read. _REPO_PATH_RE only knows this
+# `sdk/Pulumi/Stack.cs`, `changelog/v3.133.0.md`. _REPO_PATH_RE only knows this
 # repo's top-level directories, so product source cited without a `gh` command
 # or a URL read as nothing at all, and a `verified` that had read Go source
-# classified as `own-file-only` (about 95 of 1,172 in the #21733 audit).
+# classified as `own-file-only` (about 95 of 1,172 in the #21733 audit). It needs
+# a directory component: a bare name is the page's own example talking
+# (`Pulumi.yaml`, `index.ts`, `Node.js`, `__main__.py`), not a file anyone read.
+# reverify-claims.py's `_PATH_RE` is deliberately looser: it only has to tell
+# `content/` paths from everything else.
 _ANY_PATH_RE = re.compile(
     r"(?<![\w/-])[\w][\w.@-]*/[\w./@-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml|proto|gotmpl|html)\b")
 # `pulumi/<repo>` as citations write it (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/
@@ -1140,11 +1142,13 @@ def _gated_record(rec: dict, gate: str, recheck_outcome: str) -> dict:
     out["verdict"] = "unverifiable"
     out["confidence"] = "low"
     out["source_discipline_gate"] = gate
+    # Instruction and re-check result first: the review trail cuts evidence at
+    # 240 characters and the content-review PR body at 160, and the reasoning
+    # behind the gate matters less to a reader than what to do with it.
     out["evidence"] = (
-        f"[source-discipline gate: {explanation}. An independent re-check "
-        f"against product source {recheck_outcome}, so `{was}` is downgraded to "
-        f"`unverifiable`. Surface as an author question (\"{question}\"), "
-        "never as a 🚨 finding.] " + rec.get("evidence", ""))
+        f"[source-discipline gate: author question (\"{question}\"), never a 🚨 finding. "
+        f"An independent re-check against product source {recheck_outcome}, so `{was}` "
+        f"is downgraded to `unverifiable`: {explanation}.] " + rec.get("evidence", ""))
     return out
 
 

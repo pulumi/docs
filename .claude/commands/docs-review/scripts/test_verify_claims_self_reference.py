@@ -606,3 +606,37 @@ def test_carried_recheck_evidence_drops_a_nested_gate_preamble():
     nested = "[source-discipline gate: this page is generated from `data/` ... 🚨 finding.] the data file lists 4.2"
     assert vc.trunc_evidence(nested) == "the data file lists 4.2"
     assert len(vc.trunc_evidence("x " * 400)) == vc.RECHECK_EVIDENCE_CAP
+
+
+def test_verified_recheck_turn_cap_and_error_downgrade_rather_than_raise(api, monkeypatch):
+    api["script"] = {"pass1": [verify_block("verified", "the doc itself states it", OWN_SOURCE)]}
+    real = vc.run_verifier
+
+    def capped(*a, recheck=None, **kw):
+        if recheck is None:
+            return real(*a, recheck=recheck, **kw)
+        return {**real(*a, recheck=recheck, **kw), "verdict": "unverifiable",
+                "turn_cap_exhausted": True}
+
+    monkeypatch.setattr(vc, "run_verifier", capped)
+    rec = capped("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["source_discipline_gate"] == "own-file-only" and "ran out of turns" in rec["evidence"]
+
+    def boom(*a, recheck=None, **kw):
+        if recheck is None:
+            return real(*a, recheck=recheck, **kw)
+        raise RuntimeError("HTTP 529")
+
+    monkeypatch.setattr(vc, "run_verifier", boom)
+    rec = boom("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and "HTTP 529" in rec["evidence"]
+
+
+def test_gated_evidence_survives_the_trail_truncation():
+    # compose-review.py cuts trail evidence at 240 characters, compose-pr-body.py at 160.
+    rec = {"verdict": "verified", "evidence": "the doc itself states it", "source": OWN_SOURCE}
+    out = vc._gated_record(rec, "own-file-only", "could not settle it (pinned v4, latest is v7)")
+    head = out["evidence"][:240]
+    assert "never a 🚨 finding" in out["evidence"][:160]
+    assert "what is the source for this value?" in out["evidence"][:160]
+    assert "pinned v4, latest is v7" in head
