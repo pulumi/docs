@@ -22,13 +22,10 @@
 {{/* Create WebPage/ProfilePage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
-     nav label — except on an author term page, where it's the real name. */}}
-{{ $pageName := or .Params.title_tag .Title }}
-{{ if $isAuthorTerm }}
-  {{ with index site.Data.team.team .Data.Term }}
-    {{ $pageName = .name }}
-  {{ end }}
-{{ end }}
+     nav label — except on a blog author/category/series/tag term page,
+     where schema/utils/term-display-name.html resolves the same real name
+     the page's own H1 uses instead of Hugo's slug-derived term title. */}}
+{{ $pageName := partial "schema/utils/term-display-name.html" (dict "page" . "default" (or .Params.title_tag .Title)) }}
 {{ $webpage := dict
   "@type" (cond $isAuthorTerm "ProfilePage" "WebPage")
   "@id" (printf "%s#webpage" .Permalink)

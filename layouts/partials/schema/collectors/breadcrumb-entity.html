@@ -330,13 +330,13 @@
   {{ end }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb; on a blog author/category/series/tag term page, term-display-name.html resolves the same real name the page's own H1 uses instead of Hugo's slug-derived term title. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
 {{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
     "position" $position
-    "name" (or .Params.page_title .Title)
+    "name" (partial "schema/utils/term-display-name.html" (dict "page" . "default" (or .Params.page_title .Title)))
   ) }}
 {{ end }}
 
