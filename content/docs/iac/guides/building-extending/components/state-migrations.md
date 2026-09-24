@@ -194,7 +194,7 @@ The successor assertions check that both the old bucket and the versioning resou
 
 State-changing migrations require a full update. Pulumi rejects them in these situations:
 
-- Targeted or excluded updates, including `--target`, `--exclude`, `--replace`, and `--target-snippet`.
+- Targeted or excluded updates, including `--target`, `--exclude`, and `--replace`.
 - Generating or applying an update plan. Apply the migration without a saved plan before returning to a plan-based workflow.
 - Pending operations in the snapshot. Resolve them with `pulumi refresh` before migrating.
 - Resources pending deletion in the subtree. Complete the unfinished deletion with the migration returning no changes before retrying.
