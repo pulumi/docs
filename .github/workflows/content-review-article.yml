@@ -258,7 +258,8 @@ jobs:
           # Readthrough runs unconditionally here: the synthetic whole-file diff
           # is always whole-page, so every swept article gets the coherence pass.
           # The worker reads .readthrough-findings.json directly (this path has no
-          # compose-review) to apply local_repair fixes and flag reconceptions.
+          # compose-review) and banks every finding for the glow-up lane; the
+          # fix lane never applies one (publish-gate.py enforces it).
           python3 $S/readthrough.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --out .readthrough-findings.json \
@@ -601,7 +602,11 @@ jobs:
                description and continue with what you have.)
             3. Apply HIGH-CONFIDENCE fixes only, editing files in the current
                checkout; everything judgment-level goes in the PR
-               description's "Findings not applied" section. For
+               description's "Findings not applied" section. NEVER apply a
+               `.readthrough-findings.json` finding, `local_repair` or not:
+               every one is banked for the glow-up lane (count it in
+               `skipped_findings`, even on a clean verdict), and the publish
+               gate rejects a verdict that applies one. For
                `.vale-findings.json` entries stamped `deterministic_fix:
                true`, apply Vale's exact replacement ONLY after confirming it
                preserves meaning in context — skip and flag ones that would
@@ -647,7 +652,7 @@ jobs:
                for clean/skipped>", "fixes": <int>, "skipped_findings": <int>,
                "retirement": <bool>, "applied": [<one entry per applied fix>]}`.
                Each `applied` entry is `{"category":
-               "claim|link|frontmatter|vale|readthrough", "file": "<path>",
+               "claim|link|frontmatter|vale", "file": "<path>",
                "lines": [<start>, <end>], "source": "<finding pointer>"}` with
                `lines` the PRE-FIX line numbers (the file as it was on master —
                the same numbering the artifacts use). The publish job

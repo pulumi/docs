@@ -11,9 +11,9 @@ procedure step, a page trying to be two things — against a forced tool schema.
 `.readthrough-findings.json`) and synthesizes one `🚩 flagged` detector verdict
 per finding (`route: "preflight"`); Opus then triages each into the normal
 buckets with the standard two-question test (a reader-blocking defect can be a
-🚨 blocker). The existing-content sweep reads the same artifact directly: it
-applies `local_repair` findings as fixes and flags `reconception` findings
-without rewriting them.
+🚨 blocker). The existing-content sweep reads the same artifact directly: its
+fix lane banks every finding without applying it, and its glow-up lane
+executes the banked findings under human review.
 
 Why a direct Anthropic API call (not `claude-code-action`): one bounded model
 call per page against a strict tool-use schema, which `claude-code-action`
