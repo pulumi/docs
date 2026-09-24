@@ -11,11 +11,6 @@ tags:
     - typescript
     - infrastructure-as-code
 category: product
-canonical_url: https://www.pulumi.com/docs/iac/guides/building-extending/components/state-migrations/
-social:
-    twitter:
-    linkedin:
-    bluesky:
 resource_links:
     - type: documentation
       url: /docs/iac/guides/building-extending/components/state-migrations/
