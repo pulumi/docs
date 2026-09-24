@@ -177,14 +177,21 @@
 # subject that should have been split.
 
 overrides:
-  - paths: [layouts/partials/openapi/]
+  - paths:
+      - layouts/partials/openapi/
+      - layouts/shortcodes/openapi-tag-list.html
+      - layouts/shortcodes/schema-components.html
+      - assets/fingerprinted/css/openapi.css
     role: tools
     why: >-
       The Cloud REST API reference renderer, driven by the OpenAPI spec that
       scripts/fetch-openapi-spec.sh pulls and update-openapi-lastmod.yml
       maintains. It is docs-generation tooling wearing a Hugo template's
       clothes; `domain:frontend` is right about what it is and wrong about
-      who owns it (pulumi/docs#21723).
+      who owns it (pulumi/docs#21723). The two shortcodes build the API
+      reference's index pages, and the stylesheet belongs to the renderer.
+      #21723 changed the stylesheet too, and until it was listed here that
+      file alone kept requesting marketing.
 
   - paths: [content/docs/**/get-started/]
     role: marketing
