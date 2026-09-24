@@ -46,7 +46,7 @@ The resulting string contains literal text such as `Calling __str__ on an Output
 
 {{% choosable language go %}}
 
-Go's static typing generally prevents this: passing a `pulumi.StringOutput` where a `string` is expected is a compile error, not a runtime surprise. If you go around the type system with `fmt.Sprintf("%v", output)`, you get the output's internal struct representation printed instead of its value, rather than a helpful message.
+Go's static typing generally prevents this: passing a `pulumi.StringOutput` where a `string` is expected is a compile error, not a runtime surprise. The same restructuring described above still applies here — resolve the value inside `ApplyT` and pass the result on, rather than trying to read a `pulumi.StringOutput` as a plain `string`.
 
 {{% /choosable %}}
 
@@ -65,7 +65,7 @@ The resulting string contains literal text such as `Calling [ToString] on an [Ou
 
 Because this fails by producing a string rather than throwing, the mistake is easy to miss during development: the program runs, `pulumi up` succeeds, and the placeholder text only surfaces later, embedded in a log line, a generated config file, or a downstream resource property. To catch it immediately instead, set the environment variable `PULUMI_ERROR_OUTPUT_STRING=true` (TypeScript, Python, and C#) while developing; with it set, the same code throws an exception at the point of the mistake instead of returning the placeholder text.
 
-The fix is the same across languages: keep the output inside an `apply`/`Apply` callback (or Python's equivalent), or use the string-composition helpers built for this purpose — `pulumi.interpolate` and `Output.concat`/`Output.format` in TypeScript, `Output.concat`/`Output.format`/`Output.json_dumps` in Python, `pulumi.Sprintf`/`pulumi.JSONMarshal` in Go, and `Output.Format` in C#. See [Printing output values](/docs/iac/concepts/inputs-outputs/apply/#printing-output-values) for worked examples of each.
+The fix is the same across languages: keep the output inside an `apply`/`Apply` callback (or Python's equivalent), or use the string-composition helpers built for this purpose — `pulumi.interpolate` and `pulumi.concat` in TypeScript, `Output.concat`/`Output.format`/`Output.json_dumps` in Python, `pulumi.Sprintf`/`pulumi.JSONMarshal` in Go, and `Output.Format` in C#. See [Accessing single outputs with apply](/docs/iac/concepts/inputs-outputs/apply/) and [Working with multiple outputs](/docs/iac/concepts/inputs-outputs/all/) for examples.
 
 ## A value that "worked" outside `apply` stops working further down the program
 
@@ -119,18 +119,18 @@ Because the two branches can no longer be expressed as separate blocks of resour
 
 ## Using an output as a resource name, a map key, or a loop bound
 
-A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions either fails to compile, or fails at runtime once the mismatch is discovered.
+A resource's logical name (the first argument to its constructor) and the loop bounds or map keys you use while authoring a program all need to be known plain values while your program is still being evaluated, before any resource actually exists. An output is a promise of a future value, so passing one in any of these positions fails to compile in Go and C#, and in TypeScript and Python it silently produces the wrong result — for example, a resource named after the `Calling [toString]` placeholder text.
 
 If you need resource names or counts to depend on data that is only known once a resource has been created, the two usual fixes are: derive that data from configuration or another data source that is already available as a plain value at program-authoring time, or, if it genuinely cannot be known until an earlier resource has been provisioned, restructure the dependent resources so they are provisioned in a later, separate stack that consumes the first stack's outputs through a [`StackReference`](/docs/iac/concepts/stacks/#stackreferences).
 
 ## Trying to read an output's value synchronously
 
-Reaching for `await` on an output outside of an `async` `apply` callback, or a `.get()`/`.Result` method, generally does not compile or fails at runtime — Pulumi does not expose a way to block your program and pull a resolved value out of an output synchronously, in any of the supported languages. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
+Reaching for `await` on an output outside of an `async` `apply` callback, or a `.get()`/`.Result` method, generally does not compile or fails at runtime — Pulumi has no supported way to block your program and pull a resolved value out of an output synchronously. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
 
 If what you actually want is to read a value that a Pulumi program has already produced, from outside that program, the output is not the right place to reach for it. Use one of:
 
 - `pulumi stack output <name>` from the CLI, to read a single stack output after a deployment.
 - A [`StackReference`](/docs/iac/concepts/stacks/#stackreferences) from another Pulumi program, to consume one stack's outputs as another stack's inputs.
-- The [Automation API](/docs/iac/automation-api/)'s `summary.outputs` (or the equivalent in your language's Automation API package), when driving deployments programmatically.
+- The [Automation API](/docs/iac/concepts/automation-api/)'s `outputs` field on the result of running an update (for example `res.Outputs` in Go, or the equivalent in your language's Automation API package), when driving deployments programmatically.
 
 All three read a value that has already resolved, rather than trying to unwrap an in-flight output from inside the same program that created it.
