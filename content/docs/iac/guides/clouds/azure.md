@@ -19,7 +19,7 @@ aliases:
 ---
 
 Pulumi offers several packages for working with Azure. Rather than a single monolithic provider, the Azure
-ecosystem is divided along the lines of the underlying Azure APIs: one package for Azure infrastructure
+ecosystem is organized around the underlying Azure APIs: one package for Azure infrastructure
 (Resource Manager), one for identity management (Microsoft Graph), one for DevOps platform resources, and
 a community-maintained package for low-level ARM access. This guide explains what each package does, how
 they compare, and which ones to use for your project.
@@ -27,14 +27,12 @@ they compare, and which ones to use for your project.
 {{% notes type="info" %}}
 For all new Azure infrastructure projects, use the **[Azure Native provider (`@pulumi/azure-native`)](/registry/packages/azure-native/)**.
 It is auto-generated from the Azure Resource Manager (ARM) API specifications and covers 100% of ARM
-resources, with new resources and API updates available the same day Microsoft publishes them. Use the
+resources, with new resources and API updates arriving in regular releases generated from those specifications. Use the
 other providers alongside it to cover the parts of Azure that ARM does not manage, such as Entra ID
 identities and Azure DevOps platform configuration.
 {{% /notes %}}
 
 ## Packages at a glance
-
-### Providers
 
 | | [Azure Native](/registry/packages/azure-native/) | [Azure Classic](/registry/packages/azure/) | [Azure AD / Entra ID](/registry/packages/azuread/) | [Azure DevOps](/registry/packages/azuredevops/) |
 |---|---|---|---|---|
@@ -43,7 +41,7 @@ identities and Azure DevOps platform configuration.
 | **Go** | `github.com/pulumi/pulumi-azure-native-sdk/...` | `github.com/pulumi/pulumi-azure/sdk/v6/go/azure` | `github.com/pulumi/pulumi-azuread/sdk/v6/go/azuread` | `github.com/pulumi/pulumi-azuredevops/sdk/v3/go/azuredevops` |
 | **.NET** | `Pulumi.AzureNative` | `Pulumi.Azure` | `Pulumi.AzureAD` | `Pulumi.AzureDevOps` |
 | **Java** | `com.pulumi/azure-native` | `com.pulumi/azure` | `com.pulumi/azuread` | `com.pulumi/azuredevops` |
-| **Built on** | ARM API specs (auto-generated) | Terraform AzureRM (bridged) | Microsoft Graph API | Azure DevOps REST API |
+| **Built on** | ARM API specs (auto-generated) | Terraform AzureRM (bridged) | Terraform AzureAD (bridged), targeting Microsoft Graph API | Terraform Azure DevOps (bridged), targeting Azure DevOps REST API |
 | **Manages** | All Azure cloud resources | Azure cloud resources (subset) | Entra ID users, groups, apps, SPs | Projects, repos, pipelines |
 | **Maintenance** | Pulumi (official) | Pulumi (official) | Pulumi (official) | Pulumi (official) |
 | **Best for** | All new Azure projects | Existing Azure Classic projects | Identity and access management | DevOps platform automation |
@@ -51,11 +49,11 @@ identities and Azure DevOps platform configuration.
 ## The Azure Native provider
 
 The [Azure Native provider (`@pulumi/azure-native`)](/registry/packages/azure-native/) is the recommended
-choice for managing Azure cloud resources with Pulumi. It is generated directly from the Azure Resource
-Manager (ARM) OpenAPI specifications that Microsoft publishes, which means it achieves 100% API coverage
-on the day new services and properties become available. Resources in Azure Native use PascalCase property
-names that match the ARM API, and each resource type can be pinned to a specific ARM API version,
-giving you granular control over compatibility and upgrade cadence.
+choice for managing Azure cloud resources with Pulumi. Pulumi generates it directly from the Azure Resource
+Manager (ARM) OpenAPI specifications that Microsoft publishes, which means it achieves 100% API coverage,
+and new services and properties arrive with each regular release. Resource properties mirror the ARM API
+schema, using each language's naming convention, and each resource type can be pinned to a specific ARM API
+version, giving you granular control over compatibility and upgrade cadence.
 
 ```typescript
 import * as resources from "@pulumi/azure-native/resources";
@@ -93,9 +91,9 @@ default versions are chosen and how both of these approaches work, see the
 ## The Azure Classic provider
 
 The [Azure Classic provider (`@pulumi/azure`)](/registry/packages/azure/) is built on the Terraform
-AzureRM provider via the Pulumi Terraform bridge. It was Pulumi's original Azure provider, predating the
+AzureRM provider via the Pulumi Terraform bridge. Pulumi's original Azure provider, it predates the
 auto-generated Azure Native approach. Pulumi continues to support it for teams that have existing
-infrastructure managed with Azure Classic, but it is not recommended for new projects.
+infrastructure managed with Azure Classic, but it isn't recommended for new projects.
 
 Azure Classic covers a subset of Azure resources and receives new resources and API updates more slowly
 than Azure Native, since changes must flow through the upstream Terraform provider first. If you are
@@ -105,7 +103,7 @@ currently using Azure Classic and want to migrate, see the
 ## The Azure AD / Entra ID provider
 
 The [Azure Active Directory provider (`@pulumi/azuread`)](/registry/packages/azuread/) manages identity
-resources in Microsoft Entra ID (formerly known as Azure Active Directory). It is a distinct provider from
+resources in Microsoft Entra ID (formerly known as Azure Active Directory). It's a distinct provider from
 `azure-native` because it targets the **Microsoft Graph API** rather than the Azure Resource Manager API.
 Microsoft Graph is a separate API surface that governs directory objects — users, groups, application
 registrations, service principals, conditional access policies, and other Entra ID constructs.
@@ -116,11 +114,11 @@ package retains the `azuread` name for backward compatibility, but the resources
 as those in the Microsoft Entra admin center.
 {{% /notes %}}
 
-The `azuread` provider is used together with `azure-native` in almost every real-world Azure deployment,
-because applications running on Azure infrastructure typically need service principals and managed identity
-configurations. For example, an AKS cluster provisioned with `azure-native` commonly requires a service
-principal or an Entra ID application registration, which you configure with `azuread` in the same Pulumi
-program.
+The `azuread` provider is often used together with `azure-native`, because applications running on Azure
+infrastructure frequently need service principals, application registrations, or group memberships. For
+example, if an AKS cluster provisioned with `azure-native` uses a service principal instead of its default
+system-assigned managed identity, you create that service principal and its Entra ID application registration
+with `azuread` in the same Pulumi program.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -167,7 +165,7 @@ variables, or via the Azure CLI (`az login`).
 ## The Azure DevOps provider
 
 The [Azure DevOps provider (`@pulumi/azuredevops`)](/registry/packages/azuredevops/) manages Azure DevOps
-organizational resources via the Azure DevOps Service REST API. It is independent of both ARM and Microsoft
+organizational resources via the Azure DevOps Service REST API. It's independent of both ARM and Microsoft
 Graph — it targets the DevOps platform itself rather than Azure cloud resources or identity objects.
 
 Use the Azure DevOps provider to automate the configuration of your DevOps platform: creating projects,
@@ -205,18 +203,19 @@ const pipeline = new azuredevops.BuildDefinition("my-pipeline", {
 });
 ```
 
-The Azure DevOps provider requires an organization service URL and a Personal Access Token (PAT), supplied
-via the `AZDO_ORG_SERVICE_URL` and `AZDO_PERSONAL_ACCESS_TOKEN` environment variables, or through the
-Pulumi provider configuration.
+The Azure DevOps provider requires an organization service URL, supplied via the `AZDO_ORG_SERVICE_URL`
+environment variable or the Pulumi provider configuration. For authentication it accepts a Personal Access
+Token (PAT) via the `AZDO_PERSONAL_ACCESS_TOKEN` environment variable, and also supports service principals,
+OIDC, managed identity, and the Azure CLI.
 
 ## The community AzAPI package
 
 The [`azapi` package](/registry/packages/azapi/) is a community-maintained provider built by
 [`@dirien`](https://github.com/dirien/pulumi-azapi) on top of the Terraform AzAPI provider. It provides a
-generic approach to ARM resource management using JSON body definitions and ARM type strings (e.g.,
+generic approach to ARM resource management using JSON body definitions and ARM type strings (for example,
 `"Microsoft.Web/serverfarms@2020-06-01"`), without requiring typed resource classes for each resource.
 
-This approach is analogous to using raw ARM templates or making direct REST calls, just with Pulumi's
+This approach is analogous to using raw ARM templates or making direct REST calls, but with Pulumi's
 dependency graph and state management layered on top.
 
 {{% notes type="warning" %}}
@@ -229,7 +228,7 @@ specifications, and provides typed, Pulumi-idiomatic resources for every ARM res
 
 A scenario where `azapi` has historically been useful is accessing a brand-new or preview ARM resource
 type before Pulumi has published an updated `azure-native` release. In practice, because `azure-native`
-auto-generates from the ARM spec with a very fast release cadence, this gap is rarely significant.
+auto-generates from the ARM spec and releases regularly, this gap is rarely significant.
 
 ## Composing providers in a single program
 
