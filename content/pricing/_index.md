@@ -35,7 +35,7 @@ faq:
       items:
         - question: Do I pay as I go, or prepaid up-front?
           answer: |
-            The Essentials, Pro, and Enterprise editions are available month to month with a credit card. You will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
+            The Essentials, Pro, and Enterprise editions are available month to month with a credit card. You will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. Unused monthly credits expire at the end of each monthly term. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
 
             Annual commitment pricing is available on Pro and Enterprise only. [Contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
         - question: What are Pulumi Credits?
