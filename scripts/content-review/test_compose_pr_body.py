@@ -45,6 +45,10 @@ VERIFIED = {
          "evidence": "verifier did not converge", "source": "(no source pointer)"},
         {"claim_id": "c2", "text": "TS signature", "verdict": "verified", "confidence": "high",
          "evidence": "matches", "source": "sdk/nodejs/cluster.ts"},
+        {"claim_id": "c6", "line_range": "L60", "text": "The example pins pulumi-aws v4",
+         "verdict": "unverifiable", "confidence": "low", "source_discipline_gate": "own-file-only",
+         "evidence": "[source-discipline gate: author question] pinned v4, latest is v7",
+         "source": "repo:content/docs/iac/concepts/functions/resource-methods.md"},
     ],
 }
 # One mechanical Vale (difficulty qualifier -> fix), one style (passive -> defer).
@@ -93,6 +97,8 @@ check("alias collision -> fix row", "alias collision" in out.split("## Findings 
 # Judgment-level findings land as deferral stubs.
 deferral_block = out.split("## Findings not applied")[1].split("## Screenshot")[0]
 check("unverifiable claim -> deferral", "c5" in deferral_block)
+check("gated unverifiable -> labelled as an author question, not a plain unverifiable",
+      "c6" in deferral_block and "no independent source; author question" in deferral_block)
 check("style Vale -> deferral", "passive voice" in deferral_block)
 check("reconception readthrough -> deferral", "purpose-mismatch" in deferral_block)
 check("local_repair readthrough -> deferral", "missing-step" in deferral_block)
@@ -115,7 +121,7 @@ check("lint hint rides in an HTML comment", "<!--" in lint_line.split(c.LINT_PLA
 check("lint label is make-lint-only (no make build)", "make build`:" not in lint_line)
 
 # Verification inventory is deterministic.
-check("inventory counts verdicts", "3 verdict(s); 1 contradicted/mismatch, 1 unverifiable" in out)
+check("inventory counts verdicts", "4 verdict(s); 1 contradicted/mismatch, 2 unverifiable" in out)
 
 # Graceful degradation: all artifacts missing still yields a valid full draft.
 bare = c.compose(QUEUE, None, None, None, None)

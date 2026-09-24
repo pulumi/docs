@@ -413,3 +413,230 @@ def test_own_file_recheck_note_names_the_three_outcomes():
     msg = vc.build_user_message(_own_claim(), "pass1", None,
                                 recheck={"gate": "own-file-only", "urls": [], "own_path": None})
     assert "not-a-claim" in msg and "mismatch" in msg and "file under review" in msg
+
+
+# ---- own-file-only `verified`: re-check (#21733) -----------------------------
+#
+# 27% of `verified` verdicts in the claims index (13% in PR reviews) cited only
+# the page under review. A hand audit of 50 found two-thirds were checkable
+# product claims nobody checked, so each one gets the same re-check hop.
+
+OWN_SOURCE = f"repo:{OWN_FILE} (L57)"
+RELEASES = "gh release list -R pulumi/pulumi-terraform-provider"
+
+
+def _typed_claim(ctype: str) -> dict:
+    return {**_own_claim(), "__id": "c1", "type": ctype}
+
+
+@pytest.mark.parametrize("source", [
+    # Real audit sources that name product source without a `gh` command or URL.
+    "pulumi/pulumi:pkg/cmd/esc/cli/env_provider_gcp_login.go; "
+    "pulumi/docs:content/docs/iac/concepts/providers/any-terraform-provider.md",
+    f"repo:{OWN_FILE} (lines 77-96); pulumi/esc README",
+    f"{OWN_FILE}; pulumi/pulumi-dotnet sdk/Pulumi/Stack.cs",
+    f"repo:{OWN_FILE}; pulumi/pulumi changelog/v3.133.0.md",
+])
+def test_product_source_without_a_gh_marker_is_independent(source):
+    assert vc.source_discipline_shape(_own_claim(), source) is None
+
+
+@pytest.mark.parametrize("source", [
+    f"repo:{OWN_FILE}#L99",
+    f"repo:{OWN_FILE}#L10-L20",
+    f"repo:{OWN_FILE}:346",
+    f"pulumi/docs:{OWN_FILE}",
+    f"repo:{OWN_FILE} (L141-144); general knowledge of Pulumi engine diff semantics",
+])
+def test_own_file_with_line_anchors_or_general_knowledge_is_own_file_only(source):
+    assert vc.source_discipline_shape(_own_claim(), source) == "own-file-only"
+
+
+def test_import_path_echoed_from_the_claim_is_not_a_product_citation():
+    # Go import paths are the claim's own content, not a repository consulted.
+    src = f"repo:{OWN_FILE} (imports github.com/pulumi/pulumi-aws/sdk/v4)"
+    assert vc.source_discipline_shape(_own_claim(), src) is None  # bare github.com still fails open
+    assert vc._cites_product_repo("content/docs/migrating-to-pulumi/from-kubernetes.md") is False
+
+
+def test_verified_gate_scope():
+    def gate(source, confidence="high", ctype="behavior"):
+        return vc._gate_for_verdict(_typed_claim(ctype),
+                                    {"verdict": "verified", "confidence": confidence,
+                                     "source": source}, REPO_ROOT)
+
+    for ctype in ("behavior", "feature", "api-surface", "url", "version", "numerical"):
+        assert gate(OWN_SOURCE, ctype=ctype) == "own-file-only", ctype
+    assert gate(OWN_SOURCE, confidence="medium") == "own-file-only"
+    # Low confidence already surfaces as a ⚠️ "verified weakly" stub.
+    assert gate(OWN_SOURCE, confidence="low") is None
+    assert gate(f"{OWN_SOURCE}; {RELEASES}") is None
+    assert gate("repo:content/docs/iac/concepts/providers/_index.md") is None
+    assert gate("the page under review") is None
+
+
+def test_finalize_never_relabels_a_verified():
+    rec = vc._finalize_verdict(_typed_claim("behavior"), "pass1",
+                               {"verdict": "verified", "confidence": "high",
+                                "evidence": "e", "source": OWN_SOURCE},
+                               vc._zero_usage(), 1, REPO_ROOT)
+    assert rec["verdict"] == "verified" and "source_discipline_gate" not in rec
+
+
+def test_behavior_claim_is_rechecked_and_an_independent_answer_stands(api):
+    api["script"] = {"pass1": [
+        verify_block("verified", "The doc itself states replacements are created first.", OWN_SOURCE),
+        verify_block("verified", "deleteBeforeReplace defaults to false",
+                     "gh api repos/pulumi/pulumi/contents/sdk/go/common/resource/resource_goal.go"),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "verified" and "source_discipline_gate" not in rec
+    assert rec["evidence"].startswith("(re-verified after own-file-only)")
+    assert api["order"] == ["pass1", "pass1"]
+    note = user_text(api["bodies"][1])
+    assert "returned `verified` citing only the file under review" in note
+    assert "not-a-claim" in note and "DIFFERENT" in note
+    assert "latest release" not in note  # the currency ask is version-only
+
+
+def test_stale_example_pin_asks_about_currency_and_keeps_what_it_found(api):
+    # get-functions.md pins pulumi-aws/sdk/v4 in its Go example; latest is v7.
+    api["script"] = {"pass1": [
+        verify_block("verified", "the doc's own Go example imports sdk/v4", OWN_SOURCE),
+        verify_block("unverifiable", "pinned v4, latest is v7.4.0", "gh release list -R pulumi/pulumi-aws"),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("version"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and rec["source_discipline_gate"] == "own-file-only"
+    assert "pinned v4, latest is v7.4.0" in rec["evidence"]
+    assert "what is the source for this value?" in rec["evidence"]
+    assert "latest release" in user_text(api["bodies"][1])
+
+
+def test_own_file_verified_recheck_may_settle_on_not_a_claim(api):
+    api["script"] = {"pass1": [
+        verify_block("verified", "the page's example uses 3 replicas", OWN_SOURCE),
+        verify_block("not-a-claim", "the replica count is the example's own choice", OWN_SOURCE),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("numerical"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "not-a-claim" and "source_discipline_gate" not in rec
+
+
+def test_own_file_verified_twice_is_downgraded_to_an_author_question(api):
+    api["script"] = {"pass1": [
+        verify_block("verified", "the doc itself states 1.4.0", OWN_SOURCE),
+        verify_block("verified", "the doc still says 1.4.0", OWN_SOURCE),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("feature"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and rec["confidence"] == "low"
+    assert rec["source_discipline_gate"] == "own-file-only"
+    assert "`verified` is downgraded" in rec["evidence"]
+    assert rec["evidence"].endswith("the doc itself states 1.4.0")
+    assert rec["model_usage"]["turns"] == 2
+
+
+def test_low_confidence_own_file_verified_is_not_rechecked(api):
+    api["script"] = {"pass1": [verify_block("verified", "the doc says so", OWN_SOURCE, confidence="low")]}
+    rec = vc.run_verifier("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "verified" and api["order"] == ["pass1"]
+
+
+def test_contradicted_own_file_note_is_unchanged_by_the_verified_branch(api):
+    api["script"] = {"pass1": [
+        verify_block("contradicted", "page says 3.7.1", OWN_SOURCE),
+        verify_block("unverifiable", "no source", "none"),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("version"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable"
+    assert "does the page say what this claim says it does?" in rec["evidence"]
+    body = user_text(api["bodies"][1])
+    assert "returned `contradicted` citing only" in body and "latest release" not in body
+
+
+# ---- review regressions --------------------------------------------------------
+
+
+@pytest.mark.parametrize("source", [
+    f"repo:{OWN_FILE} (the Pulumi.yaml example at L57)",
+    f"repo:{OWN_FILE} (the index.ts snippet)",
+    f"repo:{OWN_FILE} (the page's Node.js example)",
+    f"repo:{OWN_FILE} lines 57; tsconfig.json settings shown",
+    f"repo:{OWN_FILE} (__main__.py block)",
+    f"repo:{OWN_FILE}; the example imports @pulumi/aws",
+    f"repo:{OWN_FILE}:L57",
+])
+def test_bare_file_names_and_npm_scopes_are_not_independent(source):
+    assert vc.source_discipline_shape(_own_claim(), source) == "own-file-only"
+
+
+def test_npm_scope_does_not_rescue_a_same_site_contradiction():
+    claim = {"file": OWN_FILE, "text": "t"}
+    src = "https://www.pulumi.com/docs/iac/concepts/stacks/ (@pulumi/pulumi)"
+    assert vc.source_discipline_shape(claim, src) == "same-site-only"
+
+
+def test_url_branch_counts_product_source_paths_as_independent():
+    claim = {"file": OWN_FILE, "text": "t"}
+    assert vc.source_discipline_shape(claim, f"{ATP_URL}; pkg/cmd/pulumi/up.go") is None
+    assert vc.source_discipline_shape(
+        claim, "https://www.pulumi.com/docs/iac/concepts/stacks/; sdk/nodejs/runtime/closure.ts") is None
+
+
+@pytest.mark.parametrize("second", [
+    verify_block("verified", "still the page", OWN_SOURCE, framing="shifted"),
+    verify_block("matches", "the page agrees with itself", OWN_SOURCE),
+])
+def test_recheck_cannot_launder_an_own_file_pass_through_another_label(api, second):
+    api["script"] = {"pass1": [verify_block("verified", "the doc itself states it", OWN_SOURCE), second]}
+    rec = vc.run_verifier("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and rec["source_discipline_gate"] == "own-file-only"
+
+
+def test_verified_then_own_file_contradiction_is_worded_without_again(api):
+    api["script"] = {"pass1": [
+        verify_block("verified", "the doc itself states 1.4.0", OWN_SOURCE),
+        verify_block("contradicted", "the page's table says 3.7.1", OWN_SOURCE),
+    ]}
+    rec = vc.run_verifier("k", _typed_claim("version"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable"
+    assert "non-independent evidence (the page's table says 3.7.1)" in rec["evidence"]
+    assert "evidence again" not in rec["evidence"]
+
+
+def test_carried_recheck_evidence_drops_a_nested_gate_preamble():
+    nested = "[source-discipline gate: this page is generated from `data/` ... 🚨 finding.] the data file lists 4.2"
+    assert vc.trunc_evidence(nested) == "the data file lists 4.2"
+    assert len(vc.trunc_evidence("x " * 400)) == vc.RECHECK_EVIDENCE_CAP
+
+
+def test_verified_recheck_turn_cap_and_error_downgrade_rather_than_raise(api, monkeypatch):
+    api["script"] = {"pass1": [verify_block("verified", "the doc itself states it", OWN_SOURCE)]}
+    real = vc.run_verifier
+
+    def capped(*a, recheck=None, **kw):
+        if recheck is None:
+            return real(*a, recheck=recheck, **kw)
+        return {**real(*a, recheck=recheck, **kw), "verdict": "unverifiable",
+                "turn_cap_exhausted": True}
+
+    monkeypatch.setattr(vc, "run_verifier", capped)
+    rec = capped("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["source_discipline_gate"] == "own-file-only" and "ran out of turns" in rec["evidence"]
+
+    def boom(*a, recheck=None, **kw):
+        if recheck is None:
+            return real(*a, recheck=recheck, **kw)
+        raise RuntimeError("HTTP 529")
+
+    monkeypatch.setattr(vc, "run_verifier", boom)
+    rec = boom("k", _typed_claim("behavior"), "pass1", None, "m", REPO_ROOT, False)
+    assert rec["verdict"] == "unverifiable" and "HTTP 529" in rec["evidence"]
+
+
+def test_gated_evidence_survives_the_trail_truncation():
+    # compose-review.py cuts trail evidence at 240 characters, compose-pr-body.py at 160.
+    rec = {"verdict": "verified", "evidence": "the doc itself states it", "source": OWN_SOURCE}
+    out = vc._gated_record(rec, "own-file-only", "could not settle it (pinned v4, latest is v7)")
+    head = out["evidence"][:240]
+    assert "never a 🚨 finding" in out["evidence"][:160]
+    assert "what is the source for this value?" in out["evidence"][:160]
+    assert "pinned v4, latest is v7" in head

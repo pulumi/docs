@@ -393,7 +393,14 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                 # downstream (a budget failure is worth retrying; "no source
                 # exists" is not).
                 cap = bool(v.get("turn_cap_exhausted"))
-                tag = " — unverifiable (verifier turn budget exhausted; retryable)" if cap else " — unverifiable"
+                if cap:
+                    tag = " — unverifiable (verifier turn budget exhausted; retryable)"
+                elif v.get("source_discipline_gate"):
+                    # The only evidence was the page itself or other Pulumi
+                    # pages: an author question, never a claim shown wrong.
+                    tag = " — unverifiable (no independent source; author question)"
+                else:
+                    tag = " — unverifiable"
                 findings.append({
                     "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
