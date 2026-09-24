@@ -3,3 +3,7 @@ name = "Sangharsh Agarwal"
 title = "Senior SRE and DevOps Engineer"
 company = "Adobe"
 status = "guest"
+
+[social]
+github = "sangharshcs"
+linkedin = "agarwalsangharsh"
