@@ -814,6 +814,42 @@ def test_override_changes_the_owner_and_not_the_subject(live_config):
     assert any("override:" in x and path in x for x in r.reasons)
 
 
+def test_the_whole_21723_diff_routes_to_tools_alone(live_config):
+    """The single-path test above passed while the real PR still asked
+    marketing: #21723 also touched the renderer's stylesheet, which read as
+    `frontend` and put marketing back on the request list. Pin the PR's
+    actual file list, plus the two REST API index shortcodes, so a partial
+    fix can't pass for a complete one again."""
+    paths = [
+        "assets/fingerprinted/css/openapi.css",
+        "layouts/partials/openapi/resolve-schema.html",
+        "layouts/partials/openapi/response-schema.html",
+        "layouts/shortcodes/openapi-tag-list.html",
+        "layouts/shortcodes/schema-components.html",
+    ]
+    r = routing.resolve_lanes(paths, mechanical=False, claims=False, config=live_config)
+    assert r.roles == {"tools"}
+    assert set(r.overridden) == set(paths)
+    assert set(r.subjects.values()) == {"frontend"}
+
+
+def test_every_generated_reference_renderer_routes_to_tools(live_config):
+    """The package-schema and ESC schema renderers are the same shape as the
+    openapi one -- templates over a fetched schema -- and share its
+    stylesheet. One path from each, checked on its own, so dropping any of
+    them from the override fails here by name."""
+    for path in (
+        "layouts/partials/package-schema/property-rows.html",
+        "layouts/shortcodes/package-schema.html",
+        "layouts/partials/esc/property-rows.html",
+        "layouts/shortcodes/esc-schema.html",
+        "layouts/shortcodes/esc-context-schema.html",
+    ):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=live_config)
+        assert r.roles == {"tools"}, path
+        assert r.subjects[path] == "frontend", path
+
+
 def test_get_started_routes_to_marketing_everywhere_it_lives():
     """pulumi/docs#21718. Get Started is the marketing funnel, not general
     docs, in all seven trees — and in an eighth the day someone adds it."""
