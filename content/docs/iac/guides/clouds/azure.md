@@ -51,9 +51,9 @@ identities and Azure DevOps platform configuration.
 The [Azure Native provider (`@pulumi/azure-native`)](/registry/packages/azure-native/) is the recommended
 choice for managing Azure cloud resources with Pulumi. Pulumi generates it directly from the Azure Resource
 Manager (ARM) OpenAPI specifications that Microsoft publishes, which means it achieves 100% API coverage,
-and new services and properties arrive with each regular release. Resources in Azure Native use PascalCase property
-names that match the ARM API, and each resource type can be pinned to a specific ARM API version,
-giving you granular control over compatibility and upgrade cadence.
+and new services and properties arrive with each regular release. Resource properties mirror the ARM API
+schema, using each language's naming convention, and each resource type can be pinned to a specific ARM API
+version, giving you granular control over compatibility and upgrade cadence.
 
 ```typescript
 import * as resources from "@pulumi/azure-native/resources";
@@ -114,11 +114,11 @@ package retains the `azuread` name for backward compatibility, but the resources
 as those in the Microsoft Entra admin center.
 {{% /notes %}}
 
-The `azuread` provider is used together with `azure-native` in almost every real-world Azure deployment,
-because applications running on Azure infrastructure typically need service principals and managed identity
-configurations. For example, if an AKS cluster provisioned with `azure-native` uses a service principal
-instead of its default system-assigned managed identity, you create that service principal and its Entra ID
-application registration with `azuread` in the same Pulumi program.
+The `azuread` provider is often used together with `azure-native`, because applications running on Azure
+infrastructure frequently need service principals, application registrations, or group memberships. For
+example, if an AKS cluster provisioned with `azure-native` uses a service principal instead of its default
+system-assigned managed identity, you create that service principal and its Entra ID application registration
+with `azuread` in the same Pulumi program.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
