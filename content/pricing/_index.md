@@ -35,7 +35,7 @@ faq:
       items:
         - question: Do I pay as I go, or prepaid up-front?
           answer: |
-            If you self-serve by entering a credit card, you will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
+            The Essentials, Pro, and Enterprise editions are available month to month with a credit card. You will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. Unused monthly credits expire at the end of each monthly term. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
 
             Annual commitment pricing is available on Pro and Enterprise only. [Contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
         - question: What are Pulumi Credits?
@@ -47,7 +47,7 @@ faq:
 
             Pro receives volume discounts, so the incremental rate decreases as resource use increases.
 
-            Enterprise is available through a sales-led contract. [Contact sales](/contact/?form=sales) for pricing.
+            Enterprise starts at $2,000/month, with 2,000 Pulumi Credits covering up to 4,750 managed resources. Additional IaC resources start at $0.00075 per resource-hour ($0.5475 per resource per month). Enterprise is available month to month, or you can [contact sales](/contact/?form=sales) for contract pricing.
 
             For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/iac/concepts/resources/) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
@@ -84,7 +84,7 @@ faq:
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
         - question: How are ESC secrets billed?
           answer: |
-            ESC secrets are billed hourly at the rate of $0.000685 for Essentials ($0.50 per secret per month) and $0.001 for Pro ($0.75 per secret per month). This is the cost of managing an ESC secret for a full hour.
+            ESC secrets are billed hourly at the rate of $0.000685 for Essentials ($0.50 per secret per month), $0.001 for Pro ($0.75 per secret per month), and $0.00137 for Enterprise ($1.00 per secret per month). This is the cost of managing an ESC secret for a full hour.
 
             For example, if you have your secrets stored for 4 days on the Pulumi Cloud Essentials edition, the price you pay would be 4 x 24 x 0.5 / 730 = $0.0657
 

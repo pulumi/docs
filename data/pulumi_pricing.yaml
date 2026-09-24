@@ -115,9 +115,8 @@
 # derivation between them.
 #
 # `calculator.editions` is keyed by edition id and only covers the editions the
-# estimator offers. Free has no bill, and Enterprise requires a sales-led
-# contract. The calculator therefore covers Essentials
-# and Pro only.
+# estimator offers. Free has no bill, so the calculator covers Essentials,
+# Pro, and Enterprise.
 #
 # The metered rates here are the MONTHLY ones — the figure each comparison cell
 # carries as its subtext — even though billing is hourly. Rounding runs in both
@@ -222,12 +221,17 @@ editions:
     name: Enterprise
     card:
       subtitle: Compliance, control, and governance for at-scale operations.
-      price: Custom
-      note: Contract pricing and invoicing
+      price: $2,000
+      price_label: /month
+      unit: "**Includes 2,000 Credits**"
+      note: Up to 4,750 managed resources.
       cta:
+        label: Start with Enterprise
+        href: https://app.pulumi.com/signup?create-organization=1
+        style: primary
+      cta_secondary:
         label: Contact sales
         href: /contact/?form=sales
-        style: primary
       features_intro: "Everything in **Pro**, plus:"
       features:
         - Self-hosting available
@@ -263,6 +267,13 @@ calculator:
       iac_resource_month: 0.365
       esc_secret_month: 0.75
       insights_resource_month: 0.0365
+    enterprise:
+      base_usd: 2000
+      included_credits: 2000
+      included_resources: 4750
+      iac_resource_month: 0.5475
+      esc_secret_month: 1.00
+      insights_resource_month: 0.05475
   # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
   # usage" note. This is a *view* of the rates above, not a second copy of them:
   # `key` names one of the per-edition rates or shared meters, and the card
@@ -285,7 +296,7 @@ calculator:
       - label: 1 IaC resource
         key: iac_resource_month
         suffix: /month
-        from: [pro]
+        from: [pro, enterprise]
       - label: 1 managed secret
         key: esc_secret_month
         suffix: /month
@@ -318,7 +329,9 @@ categories:
           pro:
             content: Starting at $0.0005/hour
             subtext: $0.365/month
-          enterprise: Custom
+          enterprise:
+            content: Starting at $0.00075/hour
+            subtext: $0.5475/month
 
       - id: iac-commitment-pricing
         name: Commitment pricing
@@ -429,7 +442,9 @@ categories:
           pro:
             content: $0.001/hour
             subtext: $0.75/month
-          enterprise: Custom
+          enterprise:
+            content: $0.00137/hour
+            subtext: $1.00/month
 
       - id: esc-plaintext-config-price
         name: Price per plaintext config
@@ -543,7 +558,9 @@ categories:
           pro:
             content: Starting at $0.00005/hour
             subtext: $0.0365/month
-          enterprise: Custom
+          enterprise:
+            content: $0.000075/hour
+            subtext: $0.05475/month
 
       - id: workflow-minutes-price
         name: Workflow cost per minute / included per month
