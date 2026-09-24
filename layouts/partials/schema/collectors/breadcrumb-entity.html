@@ -3,6 +3,11 @@
 {{ $breadcrumbs := slice }}
 {{ $position := 0 }}
 
+{{/* Blog category/tag/series/author term pages. Hugo sets a term page's .Type
+     to its taxonomy ("tags", "category", ...), not "blog", so these need their
+     own check to get the Blog crumb their visible "Blog / ..." header shows. */}}
+{{ $isBlogTerm := and (eq .Kind "term") (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+
 {{/* Home is the first item for most page types, but skipped for what-is to match visible breadcrumb */}}
 {{ if ne .Type "what-is" }}
   {{ $position = add $position 1 }}
@@ -37,7 +42,7 @@
     ) }}
   {{ end }}
 
-{{ else if eq .Type "blog" }}
+{{ else if or (eq .Type "blog") $isBlogTerm }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
@@ -330,11 +335,11 @@
   {{ end }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb; on a blog author/category/series/tag term page, this stays short ("Best Practices", "Kubernetes") using blog/term-name.html — the trail already places it under Blog, so it doesn't need the "Pulumi Blog category:" qualifier graph-builder.html's WebPage name uses — instead of Hugo's slug-derived term title. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb; on a blog term page, use the short display name from blog/term-name.html ("Best Practices", "Kubernetes") instead of Hugo's slug-derived term title, since the Blog crumb above already gives it context. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
 {{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
   {{ $position = add $position 1 }}
   {{ $crumbName := or .Params.page_title .Title }}
-  {{ if and (eq .Kind "term") (not .Params.page_title) (in (slice "category" "tag" "series" "author") .Data.Singular) }}
+  {{ if and $isBlogTerm (not .Params.page_title) }}
     {{ $crumbName = partial "blog/term-name.html" . }}
   {{ end }}
   {{ $breadcrumbs = $breadcrumbs | append (dict

@@ -22,15 +22,12 @@
 {{/* Create WebPage/ProfilePage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
-     nav label — except on a blog taxonomy term page, where Hugo's
-     slug-derived term title ("Best-Practices") never carries the caller's
-     own title_tag override, so it's replaced with a name qualified by the
-     kind of page it is (a WebPage named "Best Practices" alone reads like a
-     page about that topic, when it's a list of Pulumi Blog posts), built
-     from blog/term-name.html — the same lookup <title>, og:title, and the
-     term RSS feeds already use, so this can never drift from those. An
-     author term page is the exception: it's a ProfilePage, so it's named
-     after the person, unqualified. */}}
+     nav label. Blog category/tag/series term pages have no title_tag and a
+     slug-derived .Title ("Best-Practices"), so they get the display name from
+     blog/term-name.html (the same lookup <title> and og:title use), prefixed
+     with the kind of page ("Pulumi Blog tag: Kubernetes") so the name doesn't
+     read as a page about that topic. Author term pages are ProfilePages and
+     are named after the person alone. */}}
 {{ $pageName := or .Params.title_tag .Title }}
 {{ if and (eq .Kind "term") (not .Params.title_tag) }}
   {{ if in (slice "category" "tag" "series") .Data.Singular }}
