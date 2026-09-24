@@ -40,13 +40,13 @@ The resulting string contains literal text such as `Calling [toString] on an [Ou
 print(f"The bucket name is {bucket.bucket}")
 ```
 
-The resulting string contains literal text such as `Calling __str__ on an Output[T] is not supported`, and Pulumi also logs a warning. Passing an output to `json.dumps()` fails outright with `TypeError: Object of type Output is not JSON serializable`, because `Output` has no `__str__`-based fallback that `json.dumps` can use.
+The resulting string contains literal text such as `Calling __str__ on an Output[T] is not supported`, and Pulumi also logs a warning. Passing an output to `json.dumps()` fails outright with `TypeError: Object of type Output is not JSON serializable`; use `Output.json_dumps()` instead.
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-Go's static typing generally prevents this: passing a `pulumi.StringOutput` where a `string` is expected is a compile error, not a runtime surprise. The same restructuring described above still applies here — resolve the value inside `ApplyT` and pass the result on, rather than trying to read a `pulumi.StringOutput` as a plain `string`.
+Go's static typing generally prevents this: passing a `pulumi.StringOutput` where a `string` is expected is a compile error, not a runtime surprise. The fix is the same as in other languages: resolve the value inside `ApplyT` and pass the result on, rather than trying to read a `pulumi.StringOutput` as a plain `string`.
 
 {{% /choosable %}}
 
@@ -79,12 +79,12 @@ bucket.bucketName.apply((name) => {
 
 // bucketName is still undefined here — the apply callback above has not run yet.
 new aws.s3.BucketObject("readme", {
-    bucket: bucketName, // undefined, or a stale value from a previous run.
+    bucket: bucketName, // Still undefined here.
     key: "README.md",
 });
 ```
 
-The `apply` callback runs asynchronously once the output resolves, which in general is after the rest of your program's top-level code has already finished running. Reading the outer variable before that happens gets you `undefined` (or, in a language without a compiler catching the type mismatch, a stale value left over from a previous invocation). This is not a timing bug you can fix by adding a delay: the callback runs when the engine resolves the dependency graph, not on your program's clock.
+The `apply` callback runs asynchronously once the output resolves, which in general is after the rest of your program's top-level code has already finished running. Reading the outer variable before that happens gets you `undefined`. This is not a timing bug you can fix by adding a delay: the callback runs when the engine resolves the dependency graph, not on your program's clock.
 
 The fix is to never let the plain value leave the callback chain. Either do the downstream work inside the same `apply`, chain a further `apply` on the result, or — usually the better option — pass the output itself as the input to whatever needs it, and let Pulumi resolve the dependency:
 
@@ -99,7 +99,7 @@ Before reaching for `apply` at all, check whether the resource you are configuri
 
 ## Branching program logic on an output produces the wrong branch, or an error at synthesis time
 
-Code like `if (someOutput) { ... } else { ... }`, or a loop bound, or a Python `for _ in range(some_output)`, does not do what it looks like. In a dynamically typed language the output object itself is what gets evaluated, not its eventual value, so an `if` on an output is generally always true (an object is a true value in a boolean context) regardless of what the output resolves to. In a statically typed language this is usually a compile error instead, because an `Output<bool>` is not a `bool`.
+Code like `if (someOutput) { ... } else { ... }` does not do what it looks like. In a dynamically typed language the output object itself is what gets evaluated, not its eventual value, so an `if` on an output is generally always true (an object is a true value in a boolean context) regardless of what the output resolves to. In a statically typed language this is usually a compile error instead, because an `Output<bool>` is not a `bool`.
 
 This only applies to values that come from resources — outputs, in other words. A value that is already known when your program starts, such as a stack configuration setting read with `pulumi.Config`, an environment variable, or a hardcoded flag, is a plain value and branches on it exactly the way you would expect; there is nothing to fix there.
 
