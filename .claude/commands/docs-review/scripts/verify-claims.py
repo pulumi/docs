@@ -61,11 +61,9 @@ Routing (first match wins):
   alone, is re-verified once in pass1 with a note saying why that source is not
   evidence. An independently sourced answer stands; otherwise the verdict is
   downgraded to `unverifiable` and stamped `source_discipline_gate` (see
-  `_source_discipline_recheck`). The mirror image, a `verified` whose only
-  source is the reviewed file, is split by claim type: a `version` /
-  `numerical` / `api-surface` / `entity-spec` claim gets the same one-hop
-  re-check; any other type at high or medium confidence is relabelled
-  `not-a-claim` with no model call (see `OWN_FILE_VERIFIED_RECHECK_TYPES`).
+  `_source_discipline_recheck`). The mirror image, a high- or
+  medium-confidence `verified` whose only source is the reviewed file, gets
+  the same one-hop re-check.
 
 Usage:
     verify-claims.py --in .candidate-claims.json \
@@ -92,10 +90,9 @@ Output schema:
          "turn_cap_exhausted": true,   # optional; only on a terminal turn-cap unverifiable (retryable budget failure)
          "source_discipline_gate": "generated-from-data" | "self-reference" | "same-site-only" | "own-file-only",
                                        # optional; the harness downgraded a contradicted/mismatch/verified to
-                                       # `unverifiable` (see §Source discipline in VERIFY_SYSTEM), or relabelled
-                                       # an own-file-only `verified` to `not-a-claim`. On `unverifiable` it is
-                                       # always an author question, never a blocking finding. Consumers must
-                                       # treat an unknown value the same way — the set grows.
+                                       # `unverifiable` (see §Source discipline in VERIFY_SYSTEM). Always an
+                                       # author question, never a blocking finding. Consumers must treat an
+                                       # unknown value the same way — the set grows.
          "model_usage": {"input_tokens": T, "output_tokens": T,
                          "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
                          "turns": N}},
@@ -351,7 +348,7 @@ Five hard rules. Each one exists because violating it produced false `contradict
 - **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence. The harness enforces this deterministically: a `contradicted` whose every cited source is an editorial pulumi.com page triggers one re-check against product source, and if that cannot settle it the verdict is downgraded to `unverifiable` — so cite the `gh`/`read_file` evidence you actually consulted, or the contradiction is discarded.
 - **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction. **`contradicted` is not available for these pages.** The harness enforces this deterministically: a `contradicted` verdict on a generated page is downgraded to `unverifiable` after you return, so emitting one only discards your confidence rating. If the transcription genuinely disagrees with its own data file, that IS a doc bug — say so in `evidence` and return `mismatch`.
 - **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
-- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`. The harness enforces this too: a high- or medium-confidence `verified` whose only source is the reviewed file is relabelled `not-a-claim`, or, for a `version`, `numerical`, `api-surface`, or `entity-spec` claim, re-checked once against product source and downgraded to `unverifiable` if that cannot settle it — so return the verdict you actually reached. **The live published copy of the page under review is the same file**: `https://www.pulumi.com/<path of the reviewed file>` shows the PRE-CHANGE text, so it disagrees with every value a PR changes and proves nothing about which value is right — web search will hand you that page first; do not rest a verdict on it. The harness enforces this deterministically: a `contradicted` or `mismatch` citing the reviewed page's own URL with no independent source alongside triggers one re-check against product source, and is downgraded to `unverifiable` if that cannot settle it. "The PR changes what the live page says" is worth recording in `evidence`; it is not a contradiction until product source or an external authority says the old value was right. The same goes for a `contradicted` whose only source is the reviewed file's repo path: that says your claim text and the page disagree — either the claim misdescribes the page (`not-a-claim`) or the page disagrees with itself (`mismatch`, cite both line ranges) — and it gets the same re-check.
+- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`. The harness enforces this too: a high- or medium-confidence `verified` whose only source is the reviewed file is re-checked once against product source and downgraded to `unverifiable` if that cannot settle it — so return the verdict you actually reached. **The live published copy of the page under review is the same file**: `https://www.pulumi.com/<path of the reviewed file>` shows the PRE-CHANGE text, so it disagrees with every value a PR changes and proves nothing about which value is right — web search will hand you that page first; do not rest a verdict on it. The harness enforces this deterministically: a `contradicted` or `mismatch` citing the reviewed page's own URL with no independent source alongside triggers one re-check against product source, and is downgraded to `unverifiable` if that cannot settle it. "The PR changes what the live page says" is worth recording in `evidence`; it is not a contradiction until product source or an external authority says the old value was right. The same goes for a `contradicted` whose only source is the reviewed file's repo path: that says your claim text and the page disagree — either the claim misdescribes the page (`not-a-claim`) or the page disagrees with itself (`mismatch`, cite both line ranges) — and it gets the same re-check.
 
 # Intuition check
 
@@ -789,6 +786,15 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
                 "file) or an external authority. A second `verified` resting on the reviewed file "
                 "alone is discarded. If no independent source settles it, return `unverifiable`.",
             ]
+            if claim.get("type") == "version":
+                lines += [
+                    "",
+                    "This is a version claim, and a pin that exists can still be stale. Look up the "
+                    "latest release (`gh release list` / tags on the package's repository). If the "
+                    "page pins a version a major release or more behind it and does not say the old "
+                    "version is deliberate, return `unverifiable` with evidence \"pinned vX, latest "
+                    "is vY\" so the author is asked whether the pin is intentional.",
+                ]
         elif recheck.get("gate") == "own-file-only":
             lines += [
                 "",
@@ -897,6 +903,33 @@ _BARE_GITHUB_RE = re.compile(r"(?<![\w/.])github\.com/[\w.-]+", re.IGNORECASE)
 _REPO_PATH_RE = re.compile(
     r"(?:\brepo:\s*`?([^\s,;`)]+)"
     r"|(?<![\w/.-])((?:content|data|static|layouts|assets|scripts|themes?|config)/[\w./@-]+\.\w+))")
+# A file of any kind, wherever it lives: `pkg/cmd/esc/cli/env_provider_gcp_login.go`,
+# `sdk/Pulumi/Stack.cs`, `changelog/v3.133.0.md`. _REPO_PATH_RE only knows this
+# repo's top-level directories, so product source cited without a `gh` command
+# or a URL read as nothing at all, and a `verified` that had read Go source
+# classified as `own-file-only` (about 95 of 1,172 in the #21733 audit).
+_ANY_PATH_RE = re.compile(
+    r"(?<![\w/-])[\w][\w./@-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml|proto|gotmpl|html)\b")
+# `pulumi/<repo>` as citations write it (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/
+# contents`, `pulumi/pulumi:pkg/...`, "the pulumi/esc README"), but not a path segment
+# or import path that merely contains it. Same pattern as reverify-claims.py's
+# _PULUMI_REPO_RE, which learned this first; keep the two in step.
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
+# A line anchor on a cited path: `page.md#L99`, `page.md#L10-L20`, `page.md:346`.
+_LINE_ANCHOR_RE = re.compile(r"(?:#L\d+(?:-L?\d+)?|:\d+(?:-\d+)?)$")
+
+
+def _normalize_cited_path(path: str) -> str:
+    """A cited repo path as the claim's `file` would spell it: no `./`, no
+    `pulumi/docs:` prefix, no line anchor, no trailing punctuation."""
+    p = path.strip().lstrip("./").rstrip(".:,")
+    p = re.sub(r"^pulumi/docs:", "", p)
+    return _LINE_ANCHOR_RE.sub("", p)
+
+
+def _cites_product_repo(source: str) -> bool:
+    """True when the source names a pulumi/* repository other than this one."""
+    return bool({r.lower().rstrip(".") for r in _PULUMI_REPO_RE.findall(source)} - {"docs"})
 
 
 def content_path_to_site_path(file_path: str) -> str | None:
@@ -969,8 +1002,10 @@ def source_discipline_shape(claim: dict, source: str) -> str | None:
       evidence about the world.
 
     Independent means: a URL on any other host, a `gh ...` command, a bare
-    `github.com/...` pointer, a repo path to a file OTHER than the one under
-    review, or a pulumi.com page in GENERATED_REFERENCE_PATH_RES. Positive
+    `github.com/...` pointer, a `pulumi/<repo>` other than docs, a path to any
+    file OTHER than the one under review (line anchors like `#L99` or `:346`
+    are ignored when comparing), or a pulumi.com page in
+    GENERATED_REFERENCE_PATH_RES. Positive
     evidence only — a source naming no URL at all (`WebSearch ran query ...`,
     free text) is left alone: unrecognised is not the same as circular. A
     source may list several URLs (` and `, `;`, `,`, ` vs `); the URL regex
@@ -980,11 +1015,12 @@ def source_discipline_shape(claim: dict, source: str) -> str | None:
     own_path = content_path_to_site_path(claim.get("file", ""))
     own_file = (claim.get("file") or "").strip().lstrip("./")
     if not urls:
-        if not own_file or _GH_COMMAND_RE.search(src) or _BARE_GITHUB_RE.search(src):
+        if (not own_file or _GH_COMMAND_RE.search(src) or _BARE_GITHUB_RE.search(src)
+                or _cites_product_repo(src)):
             return None
-        cited = [(m.group(1) or m.group(2)).strip().lstrip("./").rstrip(".:")
-                 for m in _REPO_PATH_RE.finditer(src)]
-        cited = [c for c in cited if c]
+        cited = {_normalize_cited_path(m.group(1) or m.group(2)) for m in _REPO_PATH_RE.finditer(src)}
+        cited |= {_normalize_cited_path(p) for p in _ANY_PATH_RE.findall(src)}
+        cited.discard("")
         if cited and all(c == own_file or c.endswith(":" + own_file) for c in cited):
             return "own-file-only"
         return None
@@ -1000,10 +1036,10 @@ def source_discipline_shape(claim: dict, source: str) -> str | None:
         elif _is_generated_reference_path(path):
             return None                      # product-source authority
     rest = _SOURCE_URL_RE.sub(" ", src)
-    if _GH_COMMAND_RE.search(rest) or _BARE_GITHUB_RE.search(rest):
+    if _GH_COMMAND_RE.search(rest) or _BARE_GITHUB_RE.search(rest) or _cites_product_repo(rest):
         return None
     for m in _REPO_PATH_RE.finditer(rest):
-        cited = (m.group(1) or m.group(2)).strip().lstrip("./").rstrip(".:")
+        cited = _normalize_cited_path(m.group(1) or m.group(2))
         if cited and cited != own_file and not cited.endswith(":" + own_file):
             return None                      # read a different file
     return "self-reference" if cites_self else "same-site-only"
@@ -1018,16 +1054,15 @@ def _gate_for_verdict(claim: dict, rec: dict, repo_root: Path | None) -> str | N
     makes `mismatch` the *correct* verdict for two Pulumi pages disagreeing.
     Own-file-only covers `contradicted` alone for the same reason: a page that
     disagrees with itself is a legitimate `mismatch`. It also covers a
-    `verified` of a type in OWN_FILE_VERIFIED_RECHECK_TYPES; an own-file-only
-    `verified` of any other type never gets here, `_finalize_verdict` having
-    already relabelled it `not-a-claim`.
+    high- or medium-confidence `verified` (see the own-file-only `verified`
+    section below).
     Inert without a repo root or a file path (the degraded paths finalize
     without them), and on a verdict another gate already reclassified."""
     if repo_root is None or not claim.get("file") or rec.get("source_discipline_gate"):
         return None
     verdict = rec.get("verdict")
     if verdict == "verified":
-        if (claim.get("type") in OWN_FILE_VERIFIED_RECHECK_TYPES
+        if (rec.get("confidence") != "low"
                 and source_discipline_shape(claim, rec.get("source", "")) == "own-file-only"):
             return "own-file-only"
         return None
@@ -1110,47 +1145,30 @@ def _gated_record(rec: dict, gate: str, recheck_outcome: str) -> dict:
     return out
 
 
-# ---- own-file-only `verified`: relabel or re-check ------------------------
+# ---- own-file-only `verified`: re-check -----------------------------------
 #
-# A 2026-09-18 audit of the content-review claims index (#21733) found 1,075
-# of 3,986 `verified` verdicts (27%) citing only the page under review — the
-# circular shape rule 5 has named since the prompt was written, and which the
-# prompt alone did not stop. Each one inflated the brief's "N verified clean"
-# count and sat in the claims index looking checked.
+# A 2026-09-18 look at the content-review claims index (#21733) found 27% of
+# `verified` verdicts citing only the page under review — the circular shape
+# rule 5 has named since the prompt was written, and which the prompt alone did
+# not stop. The PR-review evidence trail runs at 13% (446 of 3,532 over 205
+# PRs, every one from the pass1 lane). Each one inflates the brief's "N
+# verified clean" count and sits in the claims index looking checked.
 #
-# The `contradicted` side re-checks every hit, which is affordable because
-# `contradicted` is rare. A self-sourced `verified` is a quarter of all
-# verdicts, so re-checking each would add roughly a quarter again to every
-# review's verifier bill. The split is by what a wrong `verified` costs. Most
-# hits are `behavior` and `feature` claims, typically the page describing its
-# own example or design: those are relabelled `not-a-claim` deterministically,
-# which is what an honest verifier would have returned, and costs nothing. The
-# types where a stale value misleads a reader (a pinned version, a limit, an
-# API name, a spec — about 285 of the 1,075) get one re-check hop through
-# `_source_discipline_recheck`, which may itself land on `not-a-claim` when
-# the value really is only the page's own illustration.
+# A deterministic relabel to `not-a-claim` was the first idea, on the theory
+# that most hits were the page describing its own example. A stratified hand
+# audit of 50 (2026-09-24) said otherwise: 33 were checkable product claims
+# nobody had checked ("by default Pulumi creates replacements first", the
+# `options.binary` field for Java in Pulumi.yaml), concentrated in exactly the
+# `behavior` / `api-surface` / `feature` types a relabel would have hidden;
+# 11 described the page itself; 6 were self-evident (the page's own aliases,
+# arithmetic in a worked example). All 5 `version` hits were "the example pins
+# X" — self-descriptive, and 3 of them stale by a major version or more.
 #
-# Neither path hides a finding the old behavior surfaced. A high- or
-# medium-confidence `verified` never produced one, and a low-confidence one —
-# which does, as a ⚠️ "verified weakly" stub — is left for the reviewer rather
-# than relabelled.
-OWN_FILE_VERIFIED_RECHECK_TYPES = frozenset({"version", "numerical", "api-surface", "entity-spec"})
-
-
-def _relabel_own_file_verified(claim: dict, rec: dict) -> None:
-    """Relabel, in place, a `verified` citing only the reviewed file whose
-    type does not warrant a re-check (see OWN_FILE_VERIFIED_RECHECK_TYPES)."""
-    if (rec.get("verdict") != "verified" or rec.get("confidence") == "low"
-            or rec.get("source_discipline_gate")
-            or claim.get("type") in OWN_FILE_VERIFIED_RECHECK_TYPES
-            or source_discipline_shape(claim, rec.get("source", "")) != "own-file-only"):
-        return
-    rec["verdict"] = "not-a-claim"
-    rec["source_discipline_gate"] = "own-file-only"
-    rec["evidence"] = (
-        "[source-discipline gate: `verified` citing only the file under review is "
-        "circular — the page restating a claim is what made it a claim — so it is "
-        "relabelled `not-a-claim`: nothing independent checked it.] " + rec["evidence"])
+# So every hit gets the same one re-check the `contradicted` side uses, with a
+# note that names both honest exits: `not-a-claim` for the page describing
+# itself, and an independent check for everything else — for a version,
+# against the latest release rather than mere existence. Low confidence is
+# exempt: it already reaches the reviewer as a ⚠️ "verified weakly" stub.
 
 
 def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int,
@@ -1209,7 +1227,6 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
             "feedback, not a doc contradiction — `contradicted` downgraded to "
             "`unverifiable`. Surface as an author question / upstream issue, not "
             "as a 🚨 finding.] " + rec["evidence"])
-    _relabel_own_file_verified(claim, rec)
     if framing:
         rec["framing"] = framing
     if isinstance(inp.get("framing_note"), str) and inp["framing_note"].strip():
@@ -1357,6 +1374,16 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
     }
 
 
+RECHECK_EVIDENCE_CAP = 300
+
+
+def trunc_evidence(text: str) -> str:
+    """A re-check's evidence, whitespace-collapsed and capped for splicing
+    into the gated record's bracketed preamble."""
+    text = " ".join((text or "").split())
+    return text if len(text) <= RECHECK_EVIDENCE_CAP else text[:RECHECK_EVIDENCE_CAP - 1] + "…"
+
+
 def _source_discipline_recheck(api_key: str, claim: dict, rec: dict, model: str,
                                repo_root: Path | None,
                                impl_refs: list[str] | None = None) -> dict:
@@ -1404,7 +1431,10 @@ def _source_discipline_recheck(api_key: str, claim: dict, rec: dict, model: str,
     if rec2.get("turn_cap_exhausted"):
         outcome = "ran out of turns"
     elif rec2["verdict"] == "unverifiable":
-        outcome = "could not settle it"
+        # The re-check's reasoning is what the author question needs when it
+        # found something concrete ("pinned v4, latest is v7"), so carry it.
+        found = trunc_evidence(rec2.get("evidence", ""))
+        outcome = f"could not settle it ({found})" if found else "could not settle it"
     else:
         outcome = f"returned `{rec2['verdict']}` on non-independent evidence again"
     out = _gated_record(rec, gate, outcome)
