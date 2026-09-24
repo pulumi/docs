@@ -86,6 +86,7 @@ def is_section_terminator(line: str) -> bool:
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
+_STYLE_LINE_RE = re.compile(r"^- \*\*Style:\*\* .*$", re.M)
 _HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _DETAIL_HEADING_RE = re.compile(r"^#### (?P<id>F\d+|F\?) · Do this\s*$")
@@ -429,6 +430,14 @@ def build(author_body: str, brief_body: str, base: dict,
     author_out = _fix_header(author_out, n_blocking)
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
     brief_out = _PREEXISTING_COUNT_RE.sub(lambda m: m.group(1) + str(n_pre), brief_out)
+    # The advisory block is the author card's only non-blocking lane, and the
+    # model may have added `[nit]` bullets to it. Recount before the empty
+    # block is dropped, and restate the brief's rubber-stamp line from the
+    # recount — a stale Vale-only number would under-report the card.
+    n_style, n_nits = count_style_bullets(author_out)
+    evidence["style_suggestions_count"] = n_style + n_nits
+    brief_out = refresh_style_line(brief_out, n_style, n_nits)
+    author_out = drop_empty_style_block(author_out)
     # The Waiting-on-the-author block is composer-owned: regenerate it from
     # the FINAL findings + dispositions so model edits (promotions included)
     # can never leave it stale.
@@ -485,6 +494,47 @@ def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
         line += " — " + ", ".join(parts)
     return brief_body[:m.start()] + line + "." + brief_body[m.end():]
 
+
+
+def count_style_bullets(author_body: str) -> tuple[int, int]:
+    """`(linting, nits)` from the author card's advisory block."""
+    bullets = cr.walk_style_bullets(author_body)
+    nits = sum(1 for b in bullets if b["tag"] == cr.NIT_TAG)
+    return len(bullets) - nits, nits
+
+
+def refresh_style_line(brief_body: str, n_style: int, n_nits: int) -> str:
+    """Re-derive the brief's rubber-stamp **Style** bullet from the author
+    card as published. The composer fixes it at Vale's count, but the model
+    may add `[nit]` bullets during the editorial pass, and the reviewer is
+    asked to rubber-stamp that number — so it has to be the number actually on
+    the card, not the one Vale produced before the model read the diff."""
+    return _STYLE_LINE_RE.sub(
+        lambda _m: cr.render_style_line(n_style, n_nits), brief_body, count=1)
+
+
+def drop_empty_style_block(author_body: str) -> str:
+    """Remove the advisory block when nothing landed in it.
+
+    The composer renders the block unconditionally on v3 so the model has a
+    stable anchor to append a `[nit]` under (see compose-review.NIT_TAG). If it
+    didn't, an empty heading + caption + sentinel would ship on every clean PR
+    — three lines of furniture saying nothing. Runs after the annotator, which
+    no-ops on an empty block either way."""
+    if cr.walk_style_bullets(author_body):
+        return author_body
+    lines = author_body.splitlines()
+    start = next((i for i, ln in enumerate(lines) if ln.strip() in cr.STYLE_HEADINGS), None)
+    if start is None:
+        return author_body
+    end = start + 1
+    while end < len(lines) and not is_section_terminator(lines[end]):
+        end += 1
+    # Leave one blank line behind so the surrounding sections stay separated.
+    while start > 0 and not lines[start - 1].strip():
+        start -= 1
+    lines[start:end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
 
 
 _EMPTY_SENTINEL = {

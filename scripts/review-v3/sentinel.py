@@ -1119,8 +1119,11 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "G4 infra-evidence", "red",
                 f"This PR changes the deploy itself: no successful staging "
                 f"deploy at `{head_sha[:9]}`. One is dispatched automatically "
-                "when such a PR opens or pushes (`staging-deploy-auto.yml`); if "
-                "it never ran or it failed, a tools-team member can comment "
+                "when such a PR opens or pushes (`staging-deploy-auto.yml`). A "
+                "deploy that has *finished* since this gate was last scored is "
+                "picked up within ~10 minutes by `staging-status.yml`'s sweep, "
+                "which re-runs this check — no action needed. If it never ran "
+                "or it failed, a member of any review team can comment "
                 "`/deploy-staging` to retry. (Not waivable.)",
             ))
     else:

@@ -79,6 +79,74 @@ current_time_in_ms() {
     echo "$(node -e 'console.log(Date.now())')"
 }
 
+# publish_run_id returns the GitHub Actions run ID of the current run, or the bare JSON
+# literal `null` when there isn't one (a laptop or dev-stack build) or when the value
+# isn't something that can be compared as a number.
+#
+# This is the ordering key scripts/check-publish-ordering.js uses to refuse a publish
+# that would move the live site backwards. Run IDs are assigned by GitHub, strictly
+# increasing per repository, and immune to the clock skew that makes the metadata
+# document's `timestamp` field untrustworthy for ordering. See that script's header for
+# why the comparison is built on them rather than on wall clock or commit ancestry.
+#
+# The numeric check is not paranoia about GitHub: it's about the JSON. These values are
+# interpolated unquoted into the metadata document (they have to be, so a consumer reads
+# a number and not a string), so anything non-numeric would emit a document that no
+# consumer can parse -- which would take out the ordering check, list-recent-buckets.sh,
+# and the bucket-cleanup retention window together.
+publish_run_id() {
+    if [[ "$GITHUB_RUN_ID" =~ ^[0-9]+$ ]]; then
+        echo "$GITHUB_RUN_ID"
+    else
+        echo "null"
+    fi
+}
+
+# publish_run_attempt returns the GitHub Actions run attempt, or `null`. Same contract as
+# publish_run_id. A re-run keeps its run ID and increments this, which is why the
+# ordering check treats equal run IDs as "the same run publishing again" rather than as a
+# regression -- it's the content that run built either way.
+publish_run_attempt() {
+    if [[ "$GITHUB_RUN_ATTEMPT" =~ ^[0-9]+$ ]]; then
+        echo "$GITHUB_RUN_ATTEMPT"
+    else
+        echo "null"
+    fi
+}
+
+# render_origin_bucket_metadata prints the JSON document that sync-and-test-bucket.sh
+# writes to origin_bucket_metadata_filepath() and uploads into the bucket it just built.
+#
+# Usage: render_origin_bucket_metadata <timestamp-ms> <commit-sha> <bucket> <url>
+#
+# Consumers, so the shape isn't changed casually:
+#   - infrastructure/index.ts reads `.bucket` and makes it the CloudFront origin.
+#   - scripts/check-publish-ordering.js reads `.runId`, `.commit` and `.timestamp` from
+#     both this file and the live bucket's uploaded copy.
+#   - scripts/list-recent-buckets.sh reads `.bucket`, `.url`, `.commit` and `.timestamp`
+#     when working out which buckets are safe to delete.
+#
+# `runId` and `runAttempt` are numbers or JSON null, never strings, so a consumer can
+# compare them without knowing where the document came from. It lives here rather than
+# inline in sync-and-test-bucket.sh so the document's validity is unit-testable
+# (scripts/check-publish-ordering.test.js) without running a full site build.
+render_origin_bucket_metadata() {
+    local timestamp=$1
+    local commit=$2
+    local bucket=$3
+    local url=$4
+
+    printf '{
+    "timestamp": %s,
+    "commit": "%s",
+    "runId": %s,
+    "runAttempt": %s,
+    "bucket": "%s",
+    "url": "%s"
+}
+' "$timestamp" "$commit" "$(publish_run_id)" "$(publish_run_attempt)" "$bucket" "$url"
+}
+
 origin_bucket_prefix() {
     # This function returns the bucket name prefix to be used when naming the
     # S3 buckets. We are adding a `www` prefix to the buckets being deployed

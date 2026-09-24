@@ -44,7 +44,7 @@ _Not your area? Any member of @pulumi/docs-guild can approve — hand it off rat
 
 - **Facts:** 5 factual claims checked — 2 verified clean, 2 open on the author's card ("Waiting on the author" above), 1 flagged in the ⚠️ list.
 - **Mechanics:** frontmatter sweep ran.
-- **Style:** 1 advisory suggestion(s) left with the author; never blocking.
+- **Style:** 1 advisory suggestion left with the author; never blocking.
 
 💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
 

@@ -320,3 +320,12 @@ def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
                         "--brief-file", str(b), "--pr", "999", "--repo", "pulumi/docs"],
                        capture_output=True, text=True)
     assert "v3-blocking-count" not in r.stdout + r.stderr, r.stdout + r.stderr
+
+
+def test_struck_through_resolved_bullet_counts():
+    """update.md says to strike a fixed finding through as it moves to ✅
+    Resolved; the count-table check must still see it as a finding."""
+    body = ("### ✅ Resolved since last review\n\n"
+            "- ~~**[L6]** `content/docs/x.md` — stale version~~ (resolved in abc1234)\n"
+            "- **[L9]** `content/docs/x.md` — concede: author is right\n")
+    assert len(vp.extract_bucket_bullets(body, "✅ Resolved")) == 2
