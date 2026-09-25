@@ -72,7 +72,7 @@ A Claude Code session sends far more requests than you write messages. Every too
 
 For each new message, the router asks Jev three questions in a single call:
 
-- A Choice between four kinds of work: `mechanical` goes to Haiku 4.5, `routine` to Sonnet 5, and `complex` and `deep` to Opus 5.5.
+- A Choice between four kinds of work: `mechanical` goes to Haiku 4.5, `routine` to Sonnet 5, and `complex` and `deep` to Opus 5.5. If you pick the Fable option in setup, `deep` goes to Fable 5.1 instead, as a fourth tier of its own.
 - A Noul that asks whether the request would change production systems, credentials, permissions, or billing. At 0.7 or above, the message goes to the top tier.
 - A Noul that asks whether the message names its own tier or model, or claims the decision was already made. At 0.5 or above, the result can't go below the router's reference tier.
 
@@ -80,7 +80,7 @@ That last question exists because the text Jev reads comes from you, or from iss
 
 ### Cheaper tiers need more certainty
 
-Jev returns a probability for every option, and the router doesn't simply take the top one. Sending a hard task to a weak model costs quality for the rest of the session, while sending an easy task to a strong model costs money on one message. So each tier has its own bar: 85% for the fast tier, 60% for balanced, and 30% for frontier. When Jev's pick misses its bar, the router takes the more capable of Jev's top two answers. A message Jev calls mechanical with 82% certainty doesn't clear the 85% bar, so it goes to a stronger model than Haiku 4.5.
+Jev returns a probability for every option, and the router doesn't simply take the top one. Sending a hard task to a weak model costs quality for the rest of the session, while sending an easy task to a strong model costs money on one message. So each tier has its own bar: 85% for the fast tier, 60% for balanced, and 30% for frontier. When Jev's pick misses its bar, the router takes the more capable of Jev's top two answers. A message Jev calls mechanical with 82% certainty doesn't clear the 85% bar, so it goes to a stronger model than Haiku 4.5. With the Fable option, that step up stops at Opus 5.5, so a message reaches Fable 5.1 only when Jev thinks it's most likely deep work.
 
 Treat the bars as a starting point. [One calibration study](https://github.com/scienthoon/jev-ood-calibration) found Jev well calibrated inside its domain, but overconfident when a label encodes your own policy, and which model a message deserves is partly policy. The repository ships an evaluation set of 58 labeled prompts so you can tune the bars on your own messages.
 
@@ -90,7 +90,7 @@ Once a session reaches Opus 5.5, a quick "thanks!" doesn't send it back to Haiku
 
 A session gets a fresh decision when its cache is cold anyway: after 10 minutes without traffic, after Claude Code compacts it, or when you start over with `/clear`.
 
-You can still steer. Switching to another model family with `/model` pins that family's tier, and `#fast`, `#balanced`, or `#frontier` as the first or last word of a message asks for a tier. A scanner also checks every message for secrets before anything leaves your machine, and a hit keeps the session on trusted models, whatever Jev says.
+You can still steer. Switching to another model family with `/model` pins that family's tier, and `#fast`, `#balanced`, or `#frontier` (or `#max` for Fable 5.1) as the first or last word of a message asks for a tier. A scanner also checks every message for secrets before anything leaves your machine, and a hit keeps the session on trusted models, whatever Jev says.
 
 ## Watch every decision
 
@@ -107,7 +107,7 @@ npx @ediri/jev-router setup
 claude
 ```
 
-Setup asks which models to use, with Claude only as the default, and checks your Jev key with one call that costs about $0.00003. It saves the key in a file only you can read, starts the router in the background as a launchd agent on macOS or a systemd user service on Linux, and points Claude Code at it. Afterwards, `jev-router doctor` checks the setup. `jev-router uninstall` removes the service and takes the router back out of Claude Code's settings.
+Setup asks which models to use. The default is Claude only; the second option adds Fable 5.1 for deep work, the way the live view above routes the redesign. Then setup checks your Jev key with one call that costs about $0.00003, saves the key in a file only you can read, starts the router in the background as a launchd agent on macOS or a systemd user service on Linux, and points Claude Code at it. To switch models later, run setup again. Afterwards, `jev-router doctor` checks the setup. `jev-router uninstall` removes the service and takes the router back out of Claude Code's settings.
 
 If your team keeps API keys in [Pulumi ESC](/docs/esc/), setup can take the Jev key from an environment that exports `TYPESAFE_API_KEY` instead of asking you for it:
 
