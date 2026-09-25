@@ -937,15 +937,26 @@ jobs:
       #
       # continue-on-error: suggestions are a convenience layer; a failure here
       # must never mark a successful review as errored.
+      #
+      # REVIEW_STYLE_INLINE gates advisory buttons exactly as in
+      # claude-code-review.yml Step D3: off, an explicit empty sidecar clears
+      # what an earlier run posted and strips the marks.
       - name: Post inline style suggestions
         if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STYLE_INLINE: ${{ vars.REVIEW_STYLE_INLINE }}
         run: |
+          SIDECAR=.style-suggestions.json
+          if [[ "$STYLE_INLINE" != "1" ]]; then
+            SIDECAR=.style-suggestions.off.json
+            echo '[]' > "$SIDECAR"
+          fi
           python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
+            --in "$SIDECAR" \
             --vale-findings .vale-findings.json \
             --annotate-pinned
 

@@ -1607,21 +1607,37 @@ jobs:
       # the style bullets that actually posted with ✏️, and keying that mark
       # off the API's accepted set (rather than what the model staged) is what
       # keeps it from advertising a button that isn't there.
+      #
+      # Advisory suggestions stay off the Files-changed view unless the repo
+      # variable REVIEW_STYLE_INLINE is '1' (reader feedback, 2026-09-22:
+      # non-binding bot suggestions interleaved with the human review read as
+      # noise). Off, the step still runs — with an explicit empty sidecar,
+      # which the script treats as authoritative: it deletes any advisory
+      # buttons a previous run posted and strips the ✏️ marks, banner, and
+      # caption legend, so the card never points at buttons that aren't
+      # there. The style block itself stays on the card either way.
       - name: Post inline style suggestions (Step D3)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
+          STYLE_INLINE: ${{ vars.REVIEW_STYLE_INLINE }}
         run: |
           # v3: the style block and ✏️ banner live on the author card. This
           # runs BEFORE the v3 build step so the ✏️ annotations ride into the
           # cleaned publish body and the handoff artifact.
           DRAFT=.review-draft.md
           [[ "$REVIEW_V3" == "1" ]] && DRAFT=.review-draft-author.md
+          SIDECAR=.style-suggestions.json
+          if [[ "$STYLE_INLINE" != "1" ]]; then
+            SIDECAR=.style-suggestions.off.json
+            echo '[]' > "$SIDECAR"
+          fi
           python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
+            --in "$SIDECAR" \
             --vale-findings .vale-findings.json \
             --annotate-draft "$DRAFT"
 

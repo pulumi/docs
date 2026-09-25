@@ -381,25 +381,33 @@ STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 V3_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTHOR -->"
 
 
-def _caption_text(files_url: str, nits: bool = False) -> str:
+def _caption_text(files_url: str, nits: bool = False, legend: bool = True) -> str:
     """The canonical caption under the style heading.
 
-    Must stay byte-identical to what `compose-review.py` emits, so that
-    reconciling an initial-lane body is a no-op rather than a churn edit.
+    With `legend` (the default) it must stay byte-identical to what
+    `compose-review.py` emits, so that reconciling an initial-lane body with
+    suggestions posted is a no-op rather than a churn edit.
     `test_caption_matches_composer` pins the two together — for BOTH variants:
     pinning only the v2 one let the v3 caption be silently reverted here on
     every published card, since this runs on the author draft before publish.
+
+    Without `legend` the ✏️ sentence is gone: annotate_text drops it when no
+    bullet carries a mark, since a legend for marks that aren't on the page
+    only sends the reader to the Files tab for nothing (and with
+    REVIEW_STYLE_INLINE off, none ever are).
     """
     link = f"[Files changed]({files_url})" if files_url else "Files changed"
     source = ("pattern-based linting and the review's own read"
               if nits else "pattern-based linting")
+    tail = (f" ✏️ marks one you can apply from the {link} tab — use **Add suggestion to batch** "
+            "on each, then **Commit suggestions** to take several in a single commit."
+            if legend else "")
     return (f"*Optional polish from {source} — never blocking, not counted above. "
-            "Take the ones that read better and ignore the rest. "
-            f"✏️ marks one you can apply from the {link} tab — use **Add suggestion to batch** "
-            "on each, then **Commit suggestions** to take several in a single commit.*")
+            f"Take the ones that read better and ignore the rest.{tail}*")
 
 
-def _reconcile_caption(lines: list[str], files_url: str, nits: bool = False) -> bool:
+def _reconcile_caption(lines: list[str], files_url: str, nits: bool = False,
+                       legend: bool = True) -> bool:
     """Rewrite the italic caption under the style heading.
 
     Authoritative, for the same reason the marks and the banner are. The
@@ -421,7 +429,7 @@ def _reconcile_caption(lines: list[str], files_url: str, nits: bool = False) -> 
         j += 1
     if j >= len(lines):
         return False
-    want = _caption_text(files_url, nits)
+    want = _caption_text(files_url, nits, legend)
     cur = lines[j].strip()
     # Positional, not shape-based: the slot between the heading and the first
     # `##### <path>` group holds the caption and nothing else, so whatever sits
@@ -525,7 +533,7 @@ def annotate_text(text: str, posted: list[dict], files_url: str = "") -> tuple[s
             marked += 1
         if rebuilt != line:
             lines[i] = rebuilt
-    _reconcile_caption(lines, files_url, nits=V3_AUTHOR_MARKER in text)
+    _reconcile_caption(lines, files_url, nits=V3_AUTHOR_MARKER in text, legend=marked > 0)
     _reconcile_banner(lines, len(want), files_url)
     out = "\n".join(lines)
     # Preserve the input's trailing-newline state. GitHub stores comment bodies

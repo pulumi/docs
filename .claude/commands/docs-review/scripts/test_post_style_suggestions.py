@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -332,7 +333,9 @@ def test_banner_removed_when_nothing_posts(tmp_path):
     d.write_text(DRAFT_TABLE)
     pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}], FILES_URL)
     assert pss.annotate_draft(d, [], FILES_URL) == 0
-    assert d.read_text() == DRAFT_TABLE
+    # ...and the caption's ✏️ legend goes with them: no marks, no legend.
+    assert d.read_text() == DRAFT_TABLE.replace(
+        pss._caption_text(FILES_URL), pss._caption_text(FILES_URL, legend=False))
 
 
 def test_banner_skipped_without_a_count_table(tmp_path):
@@ -414,7 +417,8 @@ def test_annotate_pinned_strips_when_nothing_posted(monkeypatch):
     stub2 = _GhStub([(11, stub.patched[11])])
     monkeypatch.setattr(pss, "gh_api", stub2)
     assert pss.annotate_pinned("o/r", "7", [], FILES_URL) == 0
-    assert stub2.patched[11] == DRAFT_TABLE
+    assert stub2.patched[11] == DRAFT_TABLE.replace(
+        pss._caption_text(FILES_URL), pss._caption_text(FILES_URL, legend=False))
 
 
 def test_post_individually_returns_only_landed(monkeypatch):
@@ -539,8 +543,8 @@ CAPTION_BODY = """\
 """
 
 
-def _canonical(files_url=""):
-    return pss._caption_text(files_url)
+def _canonical(files_url="", legend=True):
+    return pss._caption_text(files_url, legend=legend)
 
 
 def test_caption_normalized_when_model_paraphrased():
@@ -548,7 +552,7 @@ def test_caption_normalized_when_model_paraphrased():
                "Apply them from the Files changed tab.*")
     body = CAPTION_BODY.format(caption=drifted)
     out, _ = pss.annotate_text(body, [])
-    assert _canonical() in out
+    assert _canonical(legend=False) in out
     assert drifted not in out
 
 
@@ -579,7 +583,9 @@ def test_caption_not_invented_without_style_block():
 
 def test_caption_carries_files_url_when_known():
     body = CAPTION_BODY.format(caption="*stale*")
-    out, _ = pss.annotate_text(body, [], files_url="https://x/pull/1/files")
+    path = next(ln.split()[1] for ln in body.splitlines() if ln.startswith("##### "))
+    n = int(re.search(r"\*\*line (\d+):", body).group(1))
+    out, _ = pss.annotate_text(body, [{"file": path, "line": n}], files_url="https://x/pull/1/files")
     assert "[Files changed](https://x/pull/1/files)" in out
 
 
@@ -620,12 +626,12 @@ def test_annotator_keeps_the_v3_caption():
             "#### Style suggestions\n\n" + pss._caption_text("", nits=True) + "\n\n"
             "##### content/docs/foo.md\n\n- **line 2:** [nit] _typo_ — x.\n")
     out, _ = pss.annotate_text(card, [])
-    assert pss._caption_text("", nits=True) in out
-    assert pss._caption_text("", nits=False) not in out
+    assert pss._caption_text("", nits=True, legend=False) in out
+    assert pss._caption_text("", nits=False, legend=False) not in out
     # ...and a v2 body keeps the v2 caption.
     v2 = card.replace("<!-- CLAUDE_REVIEW_AUTHOR -->\n", "")
     out2, _ = pss.annotate_text(v2, [])
-    assert pss._caption_text("", nits=False) in out2
+    assert pss._caption_text("", nits=False, legend=False) in out2
 
 
 def test_key_ignores_note_but_not_replacement():
@@ -803,7 +809,7 @@ def test_caption_replaced_when_model_wrapped_it_in_bold(tmp_path):
     out, _ = pss.annotate_text(body, [])
     assert bold not in out
     assert out.count("Optional polish") == 1
-    assert _canonical() in out
+    assert _canonical(legend=False) in out
 
 
 def test_caption_replaced_when_model_wrote_plain_prose(tmp_path):
@@ -811,3 +817,16 @@ def test_caption_replaced_when_model_wrote_plain_prose(tmp_path):
     out, _ = pss.annotate_text(body, [])
     assert "Some optional polish suggestions follow." not in out
     assert out.count("Optional polish") == 1
+
+
+def test_caption_legend_only_when_a_mark_is_on_the_page():
+    """A legend for ✏️ marks that aren't there sends the reader to the Files
+    tab for nothing — and with REVIEW_STYLE_INLINE off, none ever are."""
+    body = CAPTION_BODY.format(caption=_canonical())
+    bare, marked = pss.annotate_text(body, [])
+    assert marked == 0 and "✏️" not in bare and _canonical(legend=False) in bare
+    lines = bare.splitlines()
+    path = next(ln.split()[1] for ln in lines if ln.startswith("##### "))
+    n = int(re.search(r"\*\*line (\d+):", bare).group(1))
+    with_mark, marked = pss.annotate_text(bare, [{"file": path, "line": n}])
+    assert marked == 1 and _canonical() in with_mark
