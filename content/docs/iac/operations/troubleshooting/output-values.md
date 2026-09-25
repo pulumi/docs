@@ -125,7 +125,7 @@ If you need resource names or counts to depend on data that is only known once a
 
 ## Trying to read an output's value synchronously
 
-Trying to `await` an output or read its value synchronously generally does not compile or fails at runtime — Pulumi has no supported way to block your program and pull a resolved value out of an output synchronously. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
+Trying to `await` an output or read its value synchronously either doesn't compile, fails at runtime, or quietly returns placeholder text instead of the value — Pulumi has no supported way to block your program and pull a resolved value out of an output synchronously. This is deliberate: doing so would defeat the whole point of building a dependency graph up front, since the engine would need the value before it has finished figuring out in what order to create anything.
 
 If what you actually want is to read a value that a Pulumi program has already produced, from outside that program, the output is not the right place to reach for it. Use one of:
 
