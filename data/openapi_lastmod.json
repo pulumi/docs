@@ -38,8 +38,8 @@
   },
   "tags": {
     "AI": {
-      "hash": "436fe558c0ba526d51cec18ecc1b83783d8f9fb0b8e3e5d80c4e399d4075fc22",
-      "lastmod": "2026-08-02"
+      "hash": "27d9d5b19fa519272901450f016ccead7d64b5650b901f0a25ce29f5b60c2a7b",
+      "lastmod": "2026-09-25"
     },
     "AI Agents": {
       "hash": "c73991c0cf6b43cf83d265d9d014cae4db07a50c420ca21d06920f664b76cf6b",
@@ -86,8 +86,8 @@
       "lastmod": "2026-08-25"
     },
     "Neo": {
-      "hash": "56d9548b54de4014a0bc86f0081d88d775383378baab047d006c00256566cf78",
-      "lastmod": "2026-09-15"
+      "hash": "237051a0999af8b4018e1a6510871a29218e318e620f9982ea60568e57a1aa25",
+      "lastmod": "2026-09-17"
     },
     "OAuthTokenExchange": {
       "hash": "c38b243b0f25e563b19f0762ef1b2c54d5e3e2bcdac3d85fb84e142d83fca5cc",
@@ -348,8 +348,8 @@
       "hash": "36e1f7036fefadc0a3a47ea32a7aa9e179acf4677baaeac19d88c1f596fd8455"
     },
     "AgentTask": {
-      "hash": "b282c037f9c88dda4e4aae3af924019647c424ed9d4c849333940a0e5c0bf65f",
-      "lastmod": "2026-09-15"
+      "hash": "5d34fac5d8d2f503b21ed6bc6902ee4e71c199e196a0c3748f65bd542fde66db",
+      "lastmod": "2026-09-22"
     },
     "AgentTaskIntegrationRef": {
       "hash": "b05a08fca109dbfd03a0975e1a7dd6fd63b4946c794a6603c617893bd2248539",
@@ -377,8 +377,8 @@
       "lastmod": "2026-05-13"
     },
     "AgentUserEventToolResultItem": {
-      "hash": "3aac0b026709388c1c0fdf83762d3accd0c67d246804da21d0e08d551b1c60c2",
-      "lastmod": "2026-05-13"
+      "hash": "22b725bb4826011dfca17d3de52b76c1269f1bc1732a6021a252fc6da2ef3391",
+      "lastmod": "2026-09-17"
     },
     "AgentWorkflowDefinition": {
       "hash": "ffe032d335e3165db1b57dffc1757e286e41c60def10e9a56b376a4af859b959",
@@ -536,8 +536,8 @@
       "hash": "5e704e5a5b795e16a1ef5f71ba3d7113788e6e18300247fbbb1d76365465aca3"
     },
     "AppJournalEntry": {
-      "hash": "5995c83c70e0ce4f638d931823a74e91125999a6a46e32adcd9e92b387e9cc84",
-      "lastmod": "2026-09-15"
+      "hash": "2e902adfc8b050f013344a96c3e6ff25648835697a4f765843ce11c37e825410",
+      "lastmod": "2026-09-19"
     },
     "AppJournalLayoutItem": {
       "hash": "dd70ed2341f6ab543ae68167e169a7015ed6cdf3bbbb39d6dd9182d2858a2768"
@@ -789,8 +789,8 @@
       "hash": "51d5cb48099a20d8cb48bba6834d4c283ec5e0a7046b2f43028eebdba4bb79c1"
     },
     "ApprovalRuleEligibilityInputPermission": {
-      "hash": "e200733f68f40299f0ba5241b85c6036757d4b470f45a84867e3ae607c630b9c",
-      "lastmod": "2026-08-25"
+      "hash": "b04369137479629e2a7cab0b0329d6edbd9c41dc824301c946957002c03b32a5",
+      "lastmod": "2026-09-23"
     },
     "ApprovalRuleEligibilityInputTeam": {
       "hash": "3a99b8c35c705ebc60692aa6a6350dad0986054db002df8a023cccbfc1a8f09f"
@@ -802,8 +802,8 @@
       "hash": "468c478a2ca53b58914f68518c366eacdd3018352ce2a14780575a0e50ea032c"
     },
     "ApprovalRuleEligibilityOutputPermission": {
-      "hash": "971348fd963beb17c9bf7a56e25e3659a4468ada6d4d702b543b2e3b82c83914",
-      "lastmod": "2026-08-25"
+      "hash": "708680000f2b5eed302685616a39b407794324a8baff1688635ef108bde89472",
+      "lastmod": "2026-09-23"
     },
     "ApprovalRuleEligibilityOutputTeam": {
       "hash": "92d53d1a479fe3d756ea91d6c33c65cc651c80dcdef75cb394ea724e7d14c47d"
@@ -1086,6 +1086,36 @@
     "ContextSchema": {
       "hash": "d82b9925a628f1838dbddbd6c3c0f3f70ffcf9597ba740ba712ee6fa411db8dd",
       "lastmod": "2026-09-15"
+    },
+    "CopilotClientState": {
+      "hash": "a2fbaf8be299328498394a5393ff54ca810944d2008c8cdc8cb702fd9733abdc"
+    },
+    "CopilotCloudContext": {
+      "hash": "1f57f9aad728b0fccfec7b1aa545235f151162ef7ab69a0f766e83b3b3ee7b04"
+    },
+    "CopilotDirectSkillCall": {
+      "hash": "b395186d171d33e7cf25bbc31496d1accab168ad6d57d2452843fdc572178b66"
+    },
+    "CopilotDirectSkillCallExplainPreview": {
+      "hash": "8557036a488c7eabdb69671b4258a6d45270fc54826a69afd84a1faffad4ea3e"
+    },
+    "CopilotDirectSkillCallSummarizeUpdateParams": {
+      "hash": "08b450e3b00ab37036ba371996f25fed51788d6dabeaace419f6181827028ed3"
+    },
+    "CopilotExplainPreviewDetails": {
+      "hash": "f8b1fb2c02c0574230faffb6f421418c92b351e6e31f0bf12e29ca097eb3b048"
+    },
+    "CopilotMessage": {
+      "hash": "3bb374fabb7942dc715e13ebd1bed1d60f0d943a619f84c6bcd41c32644ad6ca"
+    },
+    "CopilotRequest": {
+      "hash": "e9ad02f0dd95e097e5de420bc95679fe1b79ec48a9dbe9ae50b5a1b0defc71ca"
+    },
+    "CopilotResponse": {
+      "hash": "e75f7f78feaf29abffdbc94c4ecf2f3cbdaeaf89581cd862ee79a06d9525058b"
+    },
+    "CopilotState": {
+      "hash": "e29514e7b770a96e12ef62cb3e468fa4f1738606c757d71353fd2964259afc47"
     },
     "CreateAccessTokenResponse": {
       "hash": "ddf3250e2c751cbbfa2c8cfb8d846550e0c3c781d3e208b6f5e4dc6c11f6d818"
@@ -1465,8 +1495,8 @@
       "lastmod": "2026-08-28"
     },
     "EscSchemaSchema": {
-      "hash": "e4437b4cabf0e870885c355d6eebbc4578b79503195b9dbb70dda382a360e6df",
-      "lastmod": "2026-09-15"
+      "hash": "3aef9322edac0cd56155b7247d91f7e6f72ad85b9637931cb87870fb7ee0900d",
+      "lastmod": "2026-09-19"
     },
     "EscTrace": {
       "hash": "b5b8851d819373ae0c2cd46f68ccee1e9411cce1f9b756890568c06ab427d87b",
@@ -1764,8 +1794,8 @@
       "lastmod": "2026-08-15"
     },
     "GraphNode": {
-      "hash": "d4228cc6e142d90dace196ad09096cedd9ac937b607e9e99981056afbfc36a32",
-      "lastmod": "2026-08-27"
+      "hash": "626f90af20f4bb25d7e2d8be3a21981889c1e76f0787302d75a518d84b957bfc",
+      "lastmod": "2026-09-18"
     },
     "GraphNodeMatch": {
       "hash": "921ef5f4daf7e741f6f3874b36a61c3df67fbd6577dca06472e5e1e9d937d52e",
@@ -1804,8 +1834,8 @@
       "lastmod": "2026-08-20"
     },
     "GraphQueryReturn": {
-      "hash": "8c4f45c837c0eecb76b1bd97d2c481b01aaa27f484900d108e4491dbf002902d",
-      "lastmod": "2026-09-15"
+      "hash": "43c8b80465514950924c81ace54bea2c05226b524884361a5abf01449563d457",
+      "lastmod": "2026-09-18"
     },
     "GraphQueryScope": {
       "hash": "784e2ee0feb4a4d76cc87d34847e509b7aabefd984f02a2c6f56a3ea203a9c5f",
@@ -1820,8 +1850,8 @@
       "lastmod": "2026-09-15"
     },
     "GraphSchemaNodeType": {
-      "hash": "fedbfd9d34269aa345f6d590fb795a739e49001914f3c715108b3af50b12322c",
-      "lastmod": "2026-08-27"
+      "hash": "94feb9db5dfe2c76d5d981a2cd5abe6d302c3762bbf696d624af7037f6b7b295",
+      "lastmod": "2026-09-18"
     },
     "GraphSchemaResponse": {
       "hash": "f5b11b76208b0481bbd8d80c692abf66c0b0cef51b43e80ceae81706cebc9627",
@@ -2270,8 +2300,8 @@
       "lastmod": "2026-09-15"
     },
     "OrganizationFeatures": {
-      "hash": "2ea27aeee8a8370c7a8c6eb3428297a16ae46251cfa81e44fc7a15cfd3ed1a84",
-      "lastmod": "2026-09-16"
+      "hash": "58c85f6c89e145b9d231913bd53d745ec470e3c6193a0ddcd3e67e2fd1ccdd1c",
+      "lastmod": "2026-09-22"
     },
     "OrganizationMember": {
       "hash": "a19db2f6f84025b43e38bcd81a4805699b2f33aa4905a2f78be83f55897b180f",
@@ -2336,8 +2366,8 @@
       "hash": "4dbf036c07c514c178419ce7739f5acf2758514705832b8b20951a43ab374f6a"
     },
     "PermissionDescriptorAllow": {
-      "hash": "7dd1777a1c9c54a2bae7688c5a33fb80558340a41b4c05d2e66655d8a7e28930",
-      "lastmod": "2026-09-15"
+      "hash": "b7e7927f1d529b91555d3e40912d38b60421614099de798cc4f3c07cc5f52dc9",
+      "lastmod": "2026-09-23"
     },
     "PermissionDescriptorBase": {
       "hash": "e98421ae30171d68a06ff1b0bc7ef360ba189aeccc042e5d111ad921debb017f",
@@ -2521,8 +2551,8 @@
       "lastmod": "2026-09-15"
     },
     "RbacScope": {
-      "hash": "66452f0ce2417a461b8ea0a580bbdc091dd4648d4c1fabc37e6e42e1ccfa2568",
-      "lastmod": "2026-08-25"
+      "hash": "d336640243499479b626f0e7ba519e58abc63a67c634399c1be8e5d341e8e184",
+      "lastmod": "2026-09-23"
     },
     "RbacScopeGroup": {
       "hash": "dd2e5e14bcfb4a196bffada47022efb60dc554e1c1c07ba6746e59ab2d3f9f92",

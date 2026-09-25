@@ -180,6 +180,36 @@ def test_bucket_demotion_rejected() -> None:
     assert "bucket-split-faithful" in rule_ids(check(author=demoted))
 
 
+def _demote_to_brief(fid: str) -> tuple[str, str]:
+    """Move `fid`'s row from the author card to the brief's ⚠️ table."""
+    row = next(line for line in AUTHOR.splitlines() if line.startswith(f"| **{fid}** |"))
+    f4 = next(line for line in BRIEF.splitlines() if line.startswith("| **F4** |"))
+    return AUTHOR.replace(row + "\n", ""), BRIEF.replace(f4, f4 + "\n" + row)
+
+
+def _base_with_origin(fid: str, origin: str) -> dict:
+    base = json.loads(json.dumps(BASE))
+    next(f for f in base["findings"] if f["id"] == fid)["origin"] = origin
+    return base
+
+
+def test_readthrough_stub_may_move_to_reviewer_check() -> None:
+    # The composer's readthrough TODO says "bucket by reader impact … otherwise
+    # move to ⚠️"; following it is not a demotion (pulumi/docs#21787). The
+    # untouched header still counts the moved row, and that is legal too.
+    author, brief = _demote_to_brief("F1")
+    base = _base_with_origin("F1", "preflight:readthrough-self-redundancy")
+    ids = rule_ids(check(author=author, brief=brief, base=base))
+    assert "bucket-split-faithful" not in ids and "v3-blocking-count" not in ids, ids
+
+
+def test_other_origins_stay_promote_only() -> None:
+    author, brief = _demote_to_brief("F1")
+    for origin in ("verdict:contradicted", "preflight:hugo-error", "preflight:frontmatter-alias-collision"):
+        ids = rule_ids(check(author=author, brief=brief, base=_base_with_origin("F1", origin)))
+        assert "bucket-split-faithful" in ids, origin
+
+
 def test_vanished_finding_rejected_and_rewrite_accepted() -> None:
     f3 = next(line for line in AUTHOR.splitlines() if line.startswith("| **F3** |"))
     vanished = AUTHOR.replace(f3 + "\n", "")
@@ -290,3 +320,12 @@ def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
                         "--brief-file", str(b), "--pr", "999", "--repo", "pulumi/docs"],
                        capture_output=True, text=True)
     assert "v3-blocking-count" not in r.stdout + r.stderr, r.stdout + r.stderr
+
+
+def test_struck_through_resolved_bullet_counts():
+    """update.md says to strike a fixed finding through as it moves to ✅
+    Resolved; the count-table check must still see it as a finding."""
+    body = ("### ✅ Resolved since last review\n\n"
+            "- ~~**[L6]** `content/docs/x.md` — stale version~~ (resolved in abc1234)\n"
+            "- **[L9]** `content/docs/x.md` — concede: author is right\n")
+    assert len(vp.extract_bucket_bullets(body, "✅ Resolved")) == 2

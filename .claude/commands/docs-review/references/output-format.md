@@ -331,7 +331,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
 - **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus `unverifiable` factual claims (the verifier couldn't confirm them — surface one bullet quoting the claim and asking the author to cite a source, the "author-question buffer line" per `docs-review:references:fact-check`), plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
-  - **Style suggestions (advisory tier).** Vale findings split into two tiers on the `blocker` field in `.vale-findings.json`. Blocker-tier findings render in 🚨 Outstanding (see the carve-out above) as `- **[L<n>]** <file-in-backticks> — [style-blocker] _category_ — <message>` and count in the 🚨 cell. Everything else is advisory: render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style suggestions` block. Examples:
+  - **Style suggestions (advisory tier).** Vale findings split into two tiers on the `blocker` field in `.vale-findings.json`. Blocker-tier findings render in 🚨 Outstanding (see the carve-out above) as `- **[L<n>]** <file-in-backticks> — [style-blocker] _category_ — <message>` and count in the 🚨 cell. Everything else is advisory: render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style suggestions` block. On v3 the block also carries `[nit]` bullets — mechanical fixes the review found itself, which have no other non-blocking author-facing home; see §Nits below for when one qualifies, and never tag your own find `[style]` (`style-advisory-provenance` matches every `[style]` bullet against the artifact). Examples:
     - `- **line 42:** [style] _wordiness_ — 'prioritize' is too wordy.`
     - `- **line 87:** [style] _weasel word_ — 'usually' is a weasel word!`
 
@@ -435,10 +435,13 @@ Domain files may bump scrutiny internally for whole-file rewrites or new pages.
 
 ## The v3 surface (`--surface v3`)
 
-> **Status:** ships behind the `REVIEW_V3_COMMENTS` flag. Everything above this
-> section describes the v2 single-comment surface, which remains the default
-> and stays valid through the transition. The v3 architecture reference is
-> `scripts/review-v3/README.md`.
+> **Status:** on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so every
+> fresh review renders these cards. Everything above this section describes
+> the v2 single-comment surface, which is no longer produced for new reviews
+> but stays valid for PRs reviewed before the flip: those keep their monolith,
+> and `#update-review` refreshes it in place until someone runs
+> `@claude #new-review` to regenerate it as cards. The v3 architecture
+> reference is `scripts/review-v3/README.md`.
 
 Under v3 the composer emits **two comments plus a machine-owned evidence
 object** instead of one monolith. Evidence (the 🔍 verification trail, the
@@ -468,7 +471,7 @@ _<one sentence: what the PR is and what the review checked>_
 | ID | Where | Finding |                  ← same row + block shape
 #### F3 · Do this
 …
-#### Style suggestions                    ← unchanged v2 block (annotator-compatible)
+#### Style suggestions                    ← v2 block + the `[nit]` lane; ALWAYS composed, dropped at publish if empty
 ### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
 📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
@@ -535,6 +538,56 @@ author's job — turn-cap unverifiables included); `framing-drift` and other
 low-confidence stubs → ⚠️ Check these (whether it is really an issue is the
 reviewer's judgment).
 
+### Nits: the author card's non-blocking lane
+
+⚠️ Check these is addressed to the **reviewer**, and approving it asserts only
+that those items *looked right*. So a finding whose fix is mechanical and whose
+actor is the author does not belong there — there is no judgment for the
+reviewer to supply, and parking one makes a human relay a one-character fix.
+(PR #21787 F3: *"Typo: `i. e.` has a stray space … Trivial fix for the author"*,
+shipped on the card headed "not for the author".)
+
+**A finding you found yourself goes to the author as a `[nit]` bullet in
+`#### Style suggestions` when all three hold:**
+
+1. the fix is mechanical — a typo, a stray space, a doubled word, a wrong-word
+   substitution, a missing Oxford comma (per `docs-review:references:spelling-grammar`);
+1. a reader still reaches the page's stated outcome without it (so it fails the
+   two-question test and can't be 🚨); **and**
+1. there is nothing for a reviewer to decide.
+
+If any one of them fails it is a normal finding: 🚨 when the carve-outs or the
+two-question test say so, ⚠️ when the residual call is genuinely the reviewer's.
+A `[nit]` never blocks merge, never gets an `F` id, never enters REVIEW_STATE,
+and is not counted in any bucket cell.
+
+**Shape** — the `[style]` bullet's, with the tag swapped, under the same
+`##### <path>` H5 heading (add the heading if the file has none yet):
+
+```markdown
+- **line 72:** [nit] _typo_ — `i. e.` has a stray space; use `i.e.`
+```
+
+**The two tags are a provenance split and `style-advisory-provenance` enforces
+both directions.** `[style]` asserts Vale's advisory tier produced the finding
+and, on the composed v3 draft, is matched against `.vale-findings.json`; `[nit]`
+says the review found it. (The match runs only where the block was built from
+that artifact. A refresh carries the block through verbatim while regenerating
+Vale for the new head, so an author who fixes a flagged line would otherwise
+fail the refresh for doing exactly what the block asked.)
+Never tag your own find `[style]` — that is the same laundering
+`style-blocker-provenance` closes one tier up, and the block is quoted out of
+context often enough for the label to matter. `[nit]` is v3-only: v2's monolith
+is read by the author and the reviewer both, so its ⚠️ section already reaches
+the author.
+
+**The block is always composed on v3**, with the empty form
+`_No style suggestions or nits._` when Vale found nothing — so you always have
+an anchor to append under, and never author the H4 or its caption yourself.
+`build-evidence.py` drops the whole block again when nothing landed in it, and
+re-derives the brief's rubber-stamp **Style** line from the bullets actually on
+the card. Leave that line alone; it is composer-owned like the other counts.
+
 ### The model's edit contract (v3)
 
 The model edits **both drafts** the way it edits the v2 draft — triage the
@@ -546,8 +599,11 @@ these rules:
 1. **Promote, never demote.** ⚠️ → ❓ → 🚨 moves are allowed with a stated
    reason (move the line between sections/drafts and keep its id). Moving a
    finding down is a contract violation `build-evidence.py` rejects (exit 2).
-   Exception: a `route: preflight` detector stub whose TODO explicitly says
-   "bucket by reader impact" may land in ⚠️.
+   Exception: a readthrough detector stub (origin `preflight:readthrough-*`)
+   — its TODO says "bucket by reader impact", so it may land in ⚠️. The
+   validator and `build-evidence.py` both take that from
+   `compose-review.v3_may_demote`; Hugo and frontmatter stubs stay
+   promote-only.
 1. **Never delete a finding.** Judged spurious → rewrite its Finding cell as
    `**Spurious:** <reason>` (or `**Mis-sourced:** <reason>`); pre-existing →
    `**Pre-existing:** <reason>`. The cell must START with the label.
@@ -594,7 +650,9 @@ these rules:
    ("cross-sibling"). Before a ⚠️ item asks the reviewer to look something
    up in the PR's own files, do that lookup yourself and hand over only the
    residual judgment ("step 3 says both classes go in App.java — confirm"),
-   with the file read cited in the evidence trail.
+   with the file read cited in the evidence trail. **If the residual judgment
+   is nothing — the fix is mechanical and the actor is the author — it is not a
+   ⚠️ row at all; it is a `[nit]` on the author card** (§Nits above).
 1. **Never touch**: the marker comments, the `CLAUDE_REVIEW_HEAD` sentinel,
    the REVIEW_STATE block and its legend note, the `AUTHOR_STATE_BEGIN` …
    `AUTHOR_STATE_END` span on the brief ("Waiting on the author" —
@@ -615,7 +673,7 @@ summary/confidence/history from the brief, and emits the final evidence object
 plus the cleaned publish bodies. Any parse failure or contract violation exits
 2 and the workflow treats the run like a validation failure.
 
-### Validation (schema v23)
+### Validation (schema v24)
 
 `validate-pinned.py check` auto-detects the surface (the
 `<!-- CLAUDE_REVIEW_AUTHOR -->` marker; `--surface` overrides) and, on v3,
@@ -638,11 +696,12 @@ high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n
 this` blocks pair 1:1 with open 🚨/❓ rows — no orphans, no `F?` blocks,
 exactly one `**Fix:**` line each, none on the brief), and
 `bucket-split-faithful` (promote-only against the evidence base; a finding
-may never be demoted or deleted — rewrite it as `**Spurious:** …` instead).
+may never be demoted or deleted — rewrite it as `**Spurious:** …` instead;
+the one exception is a readthrough stub moved to ⚠️, per rule 1 above).
 
 Shared rules that also run on v3 (some against both bodies):
 `no-todo-tokens`, `style-render-mode`, `style-blocker-provenance`,
-`outcome-annotation-shape`, `no-placeholder-empty-form`,
+`style-advisory-provenance`, `outcome-annotation-shape`, `no-placeholder-empty-form`,
 `internal-link-existence`, `shortcode-existence`. The trail /
 investigation-log / external-claim faithfulness rules do **not** run on v3
 bodies: the verification trail is machine-owned in the evidence object and

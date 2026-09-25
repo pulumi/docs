@@ -19,18 +19,15 @@ testimonial:
     quote: Pulumi helped our team ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
     author: Justin Fitzhugh
     role: VP of Cloud Platform Engineering
-    logo: snowflake
+    customer: snowflake
 
 customers:
     - stat: "**5x faster** time to market"
-      logo: unity
-      link: /case-studies/unity
+      customer: unity
     - stat: "**100 days saved** each year with Pulumi Cloud instead of DIY state management"
-      logo: starburst
-      link: /case-studies/starburst
+      customer: starburst
     - stat: "**10x faster deployments**, from weeks to hours"
-      logo: snowflake
-      link: /case-studies/snowflake
+      customer: snowflake
 
 faq:
     - category: Pricing
@@ -38,7 +35,7 @@ faq:
       items:
         - question: Do I pay as I go, or prepaid up-front?
           answer: |
-            If you self-serve by entering a credit card, you will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
+            The Essentials, Pro, and Enterprise editions are available month to month with a credit card. You will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. Unused monthly credits expire at the end of each monthly term. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
 
             Annual commitment pricing is available on Pro and Enterprise only. [Contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
         - question: What are Pulumi Credits?
@@ -50,7 +47,7 @@ faq:
 
             Pro receives volume discounts, so the incremental rate decreases as resource use increases.
 
-            Enterprise is available through a sales-led contract. [Contact sales](/contact/?form=sales) for pricing.
+            Enterprise starts at $2,000/month, with 2,000 Pulumi Credits covering up to 4,750 managed resources. Additional IaC resources start at $0.00075 per resource-hour ($0.5475 per resource per month). Enterprise is available month to month, or you can [contact sales](/contact/?form=sales) for contract pricing.
 
             For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/iac/concepts/resources/) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
@@ -87,7 +84,7 @@ faq:
             This scenario is a stack with an Amazon VPC (including subnets, security groups, and route table associations), Amazon ECS (including cluster and service, load balancer resources, and IAM resources), and Amazon RDS (including RDS instance and subnet group). Each group of resources (VPC, ECS, RDS) is represented by a component resource.
         - question: How are ESC secrets billed?
           answer: |
-            ESC secrets are billed hourly at the rate of $0.000685 for Essentials ($0.50 per secret per month) and $0.001 for Pro ($0.75 per secret per month). This is the cost of managing an ESC secret for a full hour.
+            ESC secrets are billed hourly at the rate of $0.000685 for Essentials ($0.50 per secret per month), $0.001 for Pro ($0.75 per secret per month), and $0.00137 for Enterprise ($1.00 per secret per month). This is the cost of managing an ESC secret for a full hour.
 
             For example, if you have your secrets stored for 4 days on the Pulumi Cloud Essentials edition, the price you pay would be 4 x 24 x 0.5 / 730 = $0.0657
 
@@ -121,7 +118,7 @@ faq:
       items:
         - question: What are Pulumi open source and Pulumi Cloud?
           answer: |
-            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/pulumi-cloud/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
+            Pulumi's Infrastructure as Code CLI and SDK are an open-source project that is supported by an active community. [Pulumi Cloud](/product/) is a managed service for the open source CLI and SDK. It tracks your infrastructure’s state and coordinates updates with the CLI, which creates or updates resources to reach your infrastructure’s desired state. It also manages secrets, supports SAML SSO, integrates with CI/CD pipelines, enforces compliance rules, and much more.
 
             You're not required to use Pulumi Cloud. You can use any cloud or on-premises storage to build and run your own backend.
         - question: Can I use Pulumi for free?
@@ -159,11 +156,11 @@ faq:
             >
             >Here are some examples of their customers to give you an idea of who is using it and why:
             >
-            >- [BMW](/case-studies/bmw/) and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.
-            >- [Snowflake migrated to](/case-studies/snowflake/) Kubernetes across multiple clouds in three months.
-            >- [Mercedes-Benz](/case-studies/mercedes-benz/) Research & Development North America improved collaboration between its infrastructure and application development teams.
+            >- [BMW](/customers/bmw/) and Fenergo can now release new features faster by empowering their developers to deploy cloud infrastructure easily.
+            >- [Snowflake migrated to](/customers/snowflake/) Kubernetes across multiple clouds in three months.
+            >- [Mercedes-Benz](/customers/mercedes-benz/) Research & Development North America improved collaboration between its infrastructure and application development teams.
             >- [Skai](/blog/kenshoo-migrates-to-aws-with-pulumi/) managed a complex public cloud migration project.
-            >- [Wiz](/case-studies/wiz/), [Supabase](/case-studies/supabase/), and [Lemonade](/case-studies/lemonade/) created innovative engineering cultures.
+            >- [Wiz](/customers/wiz/), [Supabase](/customers/supabase/), and [Lemonade](/customers/lemonade/) created innovative engineering cultures.
             >
             >Pulumi is open source and has a SaaS product that helps organizations like ours manage infrastructure with advanced security and policies. Because it's a SaaS, we can start small and grow as our success with the product grows.
             >

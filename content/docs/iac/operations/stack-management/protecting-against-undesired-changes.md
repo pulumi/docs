@@ -110,6 +110,8 @@ Child resources inherit `protect` from their [parent](/docs/iac/concepts/resourc
 
 Pulumi has no single flag to protect every resource in a stack. To apply `protect: true` across the board, use [stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms) to set the option on every resource as it's registered.
 
+`protect` guards a resource within Pulumi, but it's not the only layer worth knowing about: many cloud resources carry their own, separate deletion-protection attributes that the provider or the cloud API enforces independently, such as `deletionProtection` on a GCP Cloud SQL instance or an AWS RDS instance. The two layers are complementary rather than substitutes for one another. See [Deletion protection on the resource itself](/docs/iac/operations/troubleshooting/destroy-failures/#deletion-protection-on-the-resource-itself) for how to tell them apart and resolve a destroy failure caused by either.
+
 ## Retain data on delete
 
 Where `protect` refuses to delete a resource, [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) takes the opposite approach: it lets Pulumi remove the resource from state without calling the provider's delete, leaving the underlying cloud resource in place. It's the right choice when you want to stop managing a resource with Pulumi, or hand it off, without destroying its data:
@@ -159,7 +161,7 @@ Undesired changes don't only come from your program. Someone can also modify a r
 
 ## Enforce guardrails with policy as code
 
-The safeguards above are opt-in per resource or per run. [Policy as code](/docs/discovery-governance/policy/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/discovery-governance/policy/ci-cd/).
+The safeguards above are opt-in per resource or per run. [Policy as code](/docs/discovery-governance/concepts/policy-as-code/) makes them enforceable across every stack automatically. A policy pack can, for example, block the deletion of any resource tagged `environment: production`, require encryption on storage, or fail an update that violates your organization's standards, and it's evaluated on every `pulumi preview` and `pulumi up`. Wire policy packs into your pipeline so the rules apply consistently; see [policy in CI/CD](/docs/discovery-governance/guides/policies-in-ci-cd/).
 
 ## Gate previews in CI/CD
 

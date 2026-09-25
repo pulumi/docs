@@ -22,11 +22,18 @@
 {{/* Create WebPage/ProfilePage entity as the main container.
      name uses the same title_tag-then-.Title precedence head.html uses for
      the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
-     nav label — except on an author term page, where it's the real name. */}}
+     nav label. Blog category/tag/series term pages have no title_tag and a
+     slug-derived .Title ("Best-Practices"), so they get the display name from
+     blog/term-name.html (the same lookup <title> and og:title use), prefixed
+     with the kind of page ("Pulumi Blog tag: Kubernetes") so the name doesn't
+     read as a page about that topic. Author term pages are ProfilePages and
+     are named after the person alone. */}}
 {{ $pageName := or .Params.title_tag .Title }}
-{{ if $isAuthorTerm }}
-  {{ with index site.Data.team.team .Data.Term }}
-    {{ $pageName = .name }}
+{{ if and (eq .Kind "term") (not .Params.title_tag) }}
+  {{ if in (slice "category" "tag" "series") .Data.Singular }}
+    {{ $pageName = printf "Pulumi Blog %s: %s" .Data.Singular (partial "blog/term-name.html" .) }}
+  {{ else if eq .Data.Singular "author" }}
+    {{ $pageName = partial "blog/term-name.html" . }}
   {{ end }}
 {{ end }}
 {{ $webpage := dict

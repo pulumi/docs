@@ -8,9 +8,12 @@ menu:
         name: Any Terraform Provider
         parent: iac-concepts-providers
         weight: 5
+aliases:
+  - /docs/iac/get-started/terraform/terraform-providers/
+  - /docs/iac/using-pulumi/pulumi-packages/terraform-provider/
 ---
 
-Pulumi can use any [Terraform](https://registry.terraform.io) or [OpenTofu](https://search.opentofu.org) provider directly in your Pulumi programs. Between them, those ecosystems cover thousands of providers spanning clouds, SaaS platforms, on-premises systems, and internal tooling, and the Any Terraform Provider feature makes them available to Pulumi.
+You can use any [Terraform](https://registry.terraform.io) or [OpenTofu](https://search.opentofu.org) provider directly in your Pulumi programs. Between them, those ecosystems cover thousands of providers spanning clouds, SaaS platforms, on-premises systems, and internal tooling, and the Any Terraform Provider feature makes them available to Pulumi.
 
 Reach for it when:
 
@@ -20,7 +23,7 @@ Reach for it when:
 
 ## Language support
 
-The Any Terraform Provider feature works with every Pulumi language. In every language except Pulumi HCL, `pulumi package add` is how you add a provider; what then differs between them is whether you also get a generated SDK.
+The Any Terraform Provider feature works with every Pulumi language. In every language except Pulumi HCL, `pulumi package add` is how you add a provider; what differs is whether you also get a generated SDK.
 
 In TypeScript, Python, Go, .NET, and Java, `pulumi package add` generates a typed SDK for the provider in your project, so you get autocompletion, type checking, and inline documentation in your editor, the same as with a provider published to the [Pulumi Registry](/registry/).
 
@@ -54,14 +57,14 @@ Along with making the provider available to your program, this adds an entry to 
 packages:
   random:
     source: terraform-provider
-    version: 0.10.0
+    version: 1.4.0
     parameters:
       - hashicorp/random
 ```
 
 ### Specifying a version
 
-If you don't specify a version, Pulumi uses the latest one available from the registry. Pin the version instead, so that everyone on your team and every CI run gets the same provider:
+If you don't specify a version, Pulumi uses the latest one available from the registry. Pin the version instead so that everyone on your team and every CI run gets the same provider:
 
 ```bash
 pulumi package add terraform-provider hashicorp/random 3.7.1
@@ -73,7 +76,7 @@ The pinned version is recorded in `Pulumi.yaml` alongside the provider name:
 packages:
   random:
     source: terraform-provider
-    version: 0.10.0  # Version of the terraform-provider package
+    version: 1.4.0  # Version of the terraform-provider package
     parameters:
       - hashicorp/random
       - 3.7.1  # Version of the hashicorp/random Terraform provider
@@ -91,7 +94,7 @@ pulumi package add terraform-provider /path/to/my/terraform-provider-binary
 
 ## Walkthrough
 
-The following walkthrough uses the Honeycomb Terraform provider with Pulumi. [Honeycomb](https://www.honeycomb.io/) is an observability platform whose provider is available to Pulumi through this feature.
+This walkthrough adds the Honeycomb Terraform provider to a new Pulumi project. [Honeycomb](https://www.honeycomb.io/) is an observability platform whose provider is available to Pulumi through this feature.
 
 ### Step 1: Create a new Pulumi project
 
@@ -286,7 +289,7 @@ outputs:
 packages:
   honeycombio:
     source: terraform-provider
-    version: 0.10.0
+    version: 1.4.0
     parameters:
       - honeycombio/honeycombio
 ```
@@ -339,12 +342,19 @@ Many of the more popular providers Pulumi makes available this way are also list
 
 If the provider you need isn't in the Pulumi Registry, search the [OpenTofu registry](https://search.opentofu.org) and add it with [`pulumi package add`](#adding-a-terraform-provider).
 
+## Best practices
+
+1. **Use a Pulumi provider when one exists**: A provider published in the Pulumi Registry is maintained, documented, and versioned for Pulumi, so prefer it over adding the Terraform provider directly.
+1. **Pin provider versions**: Specify a version when you add a provider so that every teammate and CI job generates the same SDK.
+1. **Document provider usage**: Record which Terraform providers your team uses and why, so they can be revisited when a Pulumi provider becomes available.
+1. **Watch for upstream changes**: Track the provider's releases for breaking changes before you upgrade.
+
 ## Learn more
 
 - [Pulumi Registry: Terraform Provider](/registry/packages/terraform-provider/) - Installation and configuration guide
 - [Resource providers](/docs/iac/concepts/providers/) - How providers work in Pulumi
 - [Pulumi packages](/docs/iac/concepts/packages/) - Pulumi's package system
 - [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) - Working with locally generated SDKs
-- [Use Terraform Providers](/docs/iac/get-started/terraform/terraform-providers/) - Quick start guide
+- [Terraform & OpenTofu integration](/docs/integrations/terraform/) - Every way Pulumi works with Terraform and OpenTofu
 - [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) - Command reference
 - [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) - Command reference

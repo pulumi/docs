@@ -1,0 +1,523 @@
+---
+title_tag: Store Terraform state in Pulumi Cloud | Pulumi
+title: Store Terraform state in Pulumi Cloud
+h1: Store Terraform state in Pulumi Cloud
+meta_desc: Use Pulumi Cloud as your Terraform state backend for update history, state locking, RBAC, audit policies, and unified resource visibility.
+menu:
+  integrations:
+    name: State backend
+    parent: integrations-terraform
+    identifier: integrations-terraform-state-backend
+    weight: 1
+aliases:
+  - /docs/iac/get-started/terraform/terraform-state-backend/
+---
+
+Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Discovery](/docs/discovery-governance/concepts/discovery/).
+
+## Why store Terraform state in Pulumi Cloud
+
+If you are managing Terraform state in S3, Azure Blob Storage, or another DIY backend, migrating to Pulumi Cloud gives you:
+
+- **Encrypted state** — state is encrypted in transit and at rest, a common concern with S3 backends
+- **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [Pulumi Cloud](https://app.pulumi.com/signin) stack Activity tab
+- **Automatic state locking** — prevents concurrent operations from corrupting state
+- **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/concepts/rbac/)
+- **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/discovery-governance/guides/search-resources/)
+- **Platform integration** — root module outputs become Pulumi stack outputs, accessible via [stack references](/docs/iac/concepts/stacks/#stackreferences) from other Pulumi stacks or via the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/) with no extra tokens or credentials required
+
+## How it works
+
+Pulumi Cloud implements the [Terraform remote backend API](https://developer.hashicorp.com/terraform/language/backend/remote). You can point the Terraform CLI at Pulumi Cloud using the standard `backend "remote"` configuration block or the newer `cloud` block — no changes to your Terraform code or workflow are required.
+
+{{% notes "info" %}}
+Pulumi Cloud also supports [remote execution](/docs/integrations/terraform/remote-execution/) — running your plans and applies on Pulumi Cloud's managed infrastructure instead of your local machine.
+{{% /notes %}}
+
+### Concept mapping
+
+| Terraform concept | Pulumi Cloud concept |
+| --- | --- |
+| Workspace | [Stack](/docs/iac/concepts/stacks/) |
+| Workspace prefix | [Project](/docs/iac/concepts/projects/) |
+| State file | Checkpoint (versioned) |
+| Workspace lock | Stack update lock |
+
+When you migrate state, each Terraform workspace maps to a Pulumi stack. The workspace name follows the convention `<project>_<stack>` (for example, `networking_prod` creates a stack named `prod` in the `networking` project).
+
+If you use Terraform [workspace prefixes](https://developer.hashicorp.com/terraform/language/backend/remote#workspace-prefix) instead of a single named workspace, Pulumi Cloud supports the `workspaces.prefix` configuration as well. Each workspace matching the prefix maps to a separate stack under the same project.
+
+{{% notes type="warning" %}}
+If no stacks exist yet under your `workspaces.prefix` in Pulumi Cloud, migration may fail with a workspace error. To work around this:
+
+1. Configure `workspaces.name` pointing to a specific stack.
+1. Run `terraform init` to create that stack.
+1. Update your configuration to use `workspaces.prefix`.
+1. Run `terraform init` again.
+{{% /notes %}}
+
+## Migrate from a standard backend (S3, Azure Blob, GCS, local)
+
+If your Terraform state is currently stored in S3, Azure Blob Storage, GCS, a local file, or any other standard backend, migration is a single command.
+
+### 1. Back up your state
+
+Before making any changes, create a backup of your current state file:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform state pull > terraform_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state pull > terraform_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### 2. Update your backend configuration
+
+Replace your existing backend block with the Pulumi Cloud remote backend:
+
+```hcl
+terraform {
+  backend "remote" {
+    hostname     = "tf.pulumi.com"
+    organization = "<your-pulumi-org>"
+
+    workspaces {
+      name = "<project>_<stack>"
+    }
+  }
+}
+```
+
+Replace the placeholders:
+
+| Placeholder | Description | Example |
+| --- | --- | --- |
+| `<your-pulumi-org>` | Your Pulumi Cloud organization name | `acme-corp` |
+| `<project>` | The Pulumi project name for this stack | `networking` |
+| `<stack>` | The Pulumi stack name | `prod` |
+
+{{% notes type="info" %}}
+If you are using a [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) instance, replace `tf.pulumi.com` with your instance's API URL in:
+
+- The backend configuration above
+- The `terraform login` or `tofu login` command (e.g., `terraform login your-pulumi-host.example.com`)
+- The `TF_TOKEN_*` variable name (e.g., `TF_TOKEN_your_pulumi_host_example_com`)
+{{% /notes %}}
+
+### 3. Authenticate with Pulumi Cloud
+
+Run the login command — it opens a browser to generate a token and stores it in `~/.terraform.d/credentials.tfrc.json` for future runs:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform login tf.pulumi.com
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu login tf.pulumi.com
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+For non-interactive environments like CI/CD, set the `TF_TOKEN_tf_pulumi_com` environment variable instead. See [Update CI/CD pipelines](#update-cicd-pipelines) below.
+
+### 4. Run the migration
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform init -migrate-state
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init -migrate-state
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Terraform detects the backend change and prompts you to confirm the migration. Type `yes` to proceed.
+
+### 5. Verify the migration
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform plan
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+You should see **No changes**. This confirms that the state was migrated correctly and matches your infrastructure.
+
+You can also verify in the Pulumi Cloud console — navigate to your organization and look for the new stack. Terraform-managed stacks appear with a Terraform icon in the default group-by-project view!
+
+![Terraform-managed stack in the Pulumi Cloud console](/images/docs/iac/get-started/terraform/terraform-stack-console.png)
+
+## Migrate from HCP Terraform (Terraform Cloud)
+
+HCP Terraform does not support automatic state migration using `terraform init -migrate-state`. You need to export the state manually and push it to Pulumi Cloud.
+
+### 1. Back up your state from HCP Terraform
+
+Make sure your local Terraform version matches the version configured in your HCP workspace, then pull the state:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform state pull > hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state pull > hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Verify the backup contains your resources:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform state list -state=hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state list -state=hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### 2. Remove the HCP Terraform configuration
+
+Back up your configuration file, then remove the `cloud` block:
+
+```hcl
+terraform {
+  # Remove or comment out the cloud block:
+  # cloud {
+  #   organization = "your-org"
+  #   workspaces {
+  #     name = "your-workspace"
+  #   }
+  # }
+
+  required_providers {
+    # ... your providers remain unchanged
+  }
+}
+```
+
+Clear the local cache:
+
+```bash
+rm -rf .terraform
+```
+
+### 3. Add the Pulumi Cloud backend configuration
+
+Add the remote backend block as described in the [standard migration section above](#2-update-your-backend-configuration).
+
+### 4. Initialize the new backend
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform init
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Since this is a fresh backend with no existing state, the CLI initializes without prompting for migration.
+
+### 5. Push the state
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform state push hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state push hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+If you encounter lineage or serial number errors, you can force the push:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform state push -force hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state push -force hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% notes type="warning" %}}
+Only use `-force` if you are certain the state file is correct and no concurrent operations are running.
+{{% /notes %}}
+
+### 6. Verify the migration
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform plan
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+You should see **No changes**.
+
+## Update CI/CD pipelines
+
+After migrating, update your CI/CD pipelines to authenticate with Pulumi Cloud instead of your previous backend.
+
+### GitHub Actions example
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```yaml
+env:
+  TF_TOKEN_tf_pulumi_com: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+steps:
+  - name: Terraform Init
+    run: terraform init
+
+  - name: Terraform Plan
+    run: terraform plan
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```yaml
+env:
+  TF_TOKEN_tf_pulumi_com: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+steps:
+  - name: OpenTofu Init
+    run: tofu init
+
+  - name: OpenTofu Plan
+    run: tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+## Post-migration: using Pulumi Cloud
+
+Once your Terraform state is in Pulumi Cloud, you can:
+
+- **View resources** in [Resource Search](/docs/discovery-governance/guides/search-resources/) alongside your Pulumi-managed resources
+- **Run audit policies** by adding the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) in Discovery
+- **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
+
+### Resource mapping
+
+When Terraform state is stored in Pulumi Cloud, each Terraform resource is converted to a synthetic Pulumi resource for visibility in the console and Resource Search. Resources are stored using a `pulumi:terraform:<tf-type>` type convention — for example, an `aws_instance` resource in Terraform appears as `pulumi:terraform:aws_instance` in Pulumi Cloud.
+
+This "mechanical" mapping preserves the Terraform resource structure (attribute names, IDs, dependencies) without transforming it to Pulumi provider schemas. Resource properties use Terraform naming conventions, so practitioners can search for resources in Resource Search using the attribute names they are already familiar with. Sensitive values marked in your Terraform state are encrypted.
+
+Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available for [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/). This means your Pulumi stacks can directly reference Terraform outputs — useful for sharing foundational infrastructure like VPC IDs or DNS zones, and for incremental migrations where legacy infrastructure can stay in Terraform while new stacks are written in Pulumi.
+
+### Audit policies
+
+{{< pulumi-cloud "audit-policies" />}}
+
+You can run [audit (detective) policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/discovery-governance/guides/pre-built-policy-packs/) — to evaluate Terraform resources.
+
+To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) in Discovery. Policy packs are then evaluated continuously against the stack's resources.
+
+{{% notes type="info" %}}
+Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/integrations/terraform/remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+{{% /notes %}}
+
+### Restoring a previous state version
+
+Pulumi Cloud stores every state update as a versioned checkpoint. If you need to restore a previous version, export it and import it back:
+
+```bash
+pulumi stack export --version <version-number> > previous_checkpoint.json
+pulumi stack import --file previous_checkpoint.json
+```
+
+You can find version numbers in the stack's **Activity** tab in the Pulumi Cloud console. For more details on working with state files, see [Editing state files](/docs/iac/operations/stack-management/editing-state-files/).
+
+## FAQ
+
+### Can I run plans and applies remotely?
+
+Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remotely using managed infrastructure. See [Remote Execution](/docs/integrations/terraform/remote-execution/) for setup instructions.
+
+### Can I use drift detection with Terraform-managed stacks?
+
+Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/integrations/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
+
+Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
+
+### Can I use preventative policies?
+
+Yes, with [remote execution](/docs/integrations/terraform/remote-execution/). When a plan runs remotely on Pulumi Cloud, preventative policies evaluate against the plan before an apply proceeds — violations block the apply. For stacks using local execution mode, only audit (detective) policies are supported. See [audit policies](#audit-policies) above.
+
+### How do update diffs work for Terraform stacks?
+
+Pulumi Cloud generates update diffs by comparing the previous and current Terraform state snapshots. These diffs are best-effort — they show which resources were created, updated, replaced, or deleted, along with property-level changes, but they may not match `terraform plan` output exactly since they are derived from state rather than from the Terraform execution plan.
+
+Terraform [check blocks](https://developer.hashicorp.com/terraform/language/checks) are surfaced as diagnostic events in the update timeline, giving you visibility into check failures directly in the Pulumi Cloud console.
+
+### How are Terraform resources priced?
+
+Each Terraform resource stored in Pulumi Cloud counts as a resource under management (RUM), the same as a Pulumi-managed resource. See the [pricing page](/pricing/) for details.
+
+## Troubleshooting
+
+### "Backend configuration changed" error
+
+If you see this error after modifying the backend, re-initialize with:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
+```bash
+terraform init -reconfigure
+```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init -reconfigure
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### "State serial is less than current" error
+
+The state in Pulumi Cloud has a higher serial number than your local copy. Either pull the current state and merge manually, or use `terraform state push -force` (or `tofu state push -force` for OpenTofu) if you are certain your local state is correct.
+
+### "Failed to get existing workspaces" error
+
+Verify your Pulumi access token is correct:
+
+```bash
+pulumi whoami
+```
+
+Make sure you have authenticated with `terraform login tf.pulumi.com` or `tofu login tf.pulumi.com` (or set `TF_TOKEN_tf_pulumi_com`) and that the token has permissions for the target organization.
+
+### "Migrating state from HCP Terraform to another backend is not yet implemented" error
+
+This is expected when migrating from HCP Terraform. Follow the [HCP Terraform migration steps](#migrate-from-hcp-terraform-terraform-cloud) instead of using `terraform init -migrate-state` (or `tofu init -migrate-state` for OpenTofu).

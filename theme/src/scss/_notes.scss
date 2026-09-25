@@ -171,27 +171,33 @@ section.docs-content div.note {
 }
 
 blockquote.pullquote {
-    font-family: 'Inter';
-    font-style: italic;
-    font-size: 30px;
-    line-height: 1.35;
-    font-weight: 300;
-    color: #2a2a2e;
-    margin: 48px auto;
-    padding: 8px 32px;
-    max-width: 92%;
-    border-left: 6px solid var(--color-violet-primary, #9077f3);
+    // Sizes come from the shared body scale (shared/_utilities.scss) rather than
+    // hand-set pixels, and the color is inherited from the body.
+    @apply body-xl font-normal not-italic my-10;
+    // The base `blockquote` rule in main.scss gives every quote a rounded violet
+    // rule. A pull quote is a break in the prose, not a nested aside, so it sits
+    // flush with the body copy instead.
+    @apply rounded-none border-l-0 p-0;
+    max-width: none;
 
     p {
         margin: 0;
     }
 
     cite {
-        display: block;
+        @apply font-overline-sm block text-gray-primary mt-4;
         font-style: normal;
-        font-size: 16px;
-        font-weight: 400;
-        color: #6b6b6e;
-        margin-top: 16px;
     }
+}
+
+// The `statement` variant of the same shortcode: an emphasis line in the
+// author's own voice. It takes the pull quote's frame and scale but is set
+// upright and bold, because it is a claim being made rather than a quotation —
+// which is also why the shortcode renders it as a <p>, not a <blockquote>.
+p.pullquote-statement {
+    // tracking-tighter is the -0.05em the headings in shared/_base.scss use:
+    // this is display type, so it takes the display tracking rather than the
+    // body default it would otherwise inherit from body-2xl.
+    @apply body-2xl font-semibold not-italic tracking-tighter my-12 pl-6;
+    border-left: 4px solid var(--color-violet-primary, #9077f3);
 }

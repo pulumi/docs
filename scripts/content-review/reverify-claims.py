@@ -51,7 +51,12 @@ Evidence independence: a verdict whose only cited source is Pulumi's own
 published docs — a www.pulumi.com URL, or a `content/` source file — is
 demoted to `unverifiable` before that mapping (see `source_is_own_corpus`).
 The site is this repo rendered, so such a check has confirmed the page
-against itself and cannot detect drift in either direction.
+against itself and cannot detect drift in either direction. Since #21733
+`verify-claims.py` also catches the narrowest case itself: a `verified`
+citing only the page's own file gets one independent re-check inside
+`process_claim`, and comes back `unverifiable` with `source_discipline_gate`
+set if that can't settle it. Both paths are counted in `n_demoted` and
+reported under their own reasons in the inconclusive breakdown.
 
 The same rule runs BEFORE the call, on the evidence the claims index already
 holds: `record-claims.py` persists the `source` the page's full review cited
@@ -211,9 +216,15 @@ _PATH_RE = re.compile(
 # (`-R pulumi/pulumi`, `repos/pulumi/pulumi-aws/contents`, `repo:pulumi/docs`,
 # `pulumi/docs:content/...`). Not a path segment that merely ends in the word
 # (`migrating-to-pulumi/from-kubernetes.md`) and not an import path or URL
-# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`): those are the
-# claim's own content echoed back, not evidence consulted.
-_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./-]))pulumi/([\w.-]+)")
+# fragment (`github.com/pulumi/pulumi-kubernetes/sdk/...`) or npm scope
+# (`@pulumi/aws`): those are the claim's own content echoed back, not
+# evidence consulted. verify-claims.py carries the same pattern.
+_PULUMI_REPO_RE = re.compile(r"(?:\brepos/|(?<![\w./@-]))pulumi/([\w.-]+)")
+
+
+# verify-claims.py `source_discipline_gate` values that mean the verdict rested
+# on Pulumi's own docs alone — the same finding `source_is_own_corpus` makes.
+OWN_CORPUS_GATES = {"own-file-only", "self-reference", "same-site-only"}
 
 
 def source_is_own_corpus(source: str) -> bool:
@@ -708,9 +719,10 @@ def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
 
     - by_type:   the entity_key's ctype prefix (the part before the first
                  "/", per entity_key.py) — which kinds of fact can't verify.
-    - by_reason: "demoted" (decided, but only own-corpus evidence), "error"
-                 (verifier crashed), else the raw verdict ("unverifiable",
-                 "no_verdict" for a missing one).
+    - by_reason: "demoted" (decided, but only own-corpus evidence),
+                 "gated:<gate>" (verify-claims.py's own source-discipline
+                 downgrade), "error" (verifier crashed), else the raw verdict
+                 ("unverifiable", "no_verdict" for a missing one).
 
     Instrumentation only — nothing downstream keys on these; the routing
     fixes they motivate are follow-up work.
@@ -724,6 +736,8 @@ def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
         by_type[ctype] = by_type.get(ctype, 0) + 1
         if r.get("demoted_from"):
             reason = "demoted"
+        elif r.get("source_discipline_gate"):
+            reason = f"gated:{r['source_discipline_gate']}"
         elif r.get("error"):
             reason = "error"
         else:
@@ -802,7 +816,11 @@ def tally(results: list[dict], known_upstream: dict[str, dict],
         # inflating the rate the health signal watches and eventually
         # degrading the lane for doing its job. Soft verdicts are decided too.
         "n_inconclusive": len(results) - len(contradicted) - len(soft) - len(fresh),
-        "n_demoted": sum(1 for r in results if r.get("demoted_from")),
+        # Both demotion paths mean "only our own docs said so": this file's
+        # own-corpus rule, and verify-claims.py's source-discipline gates
+        # (generated-from-data is a different finding and stays out).
+        "n_demoted": sum(1 for r in results
+                         if r.get("demoted_from") or r.get("source_discipline_gate") in OWN_CORPUS_GATES),
         "inconclusive_by_type": by_type,
         "inconclusive_by_reason": by_reason,
     }, stale
@@ -965,6 +983,7 @@ def run(args) -> int:
             "evidence": rec.get("evidence"),
             "source": rec.get("source"),
             "route": rec.get("route"),
+            "source_discipline_gate": rec.get("source_discipline_gate"),
             "error": err,
             "pages": [{"path": a["path"], "slug": a["slug"]} for a in assertions],
         }
@@ -1064,12 +1083,14 @@ def self_test() -> int:
         {"entity_key": "numerical/c", "verdict": "unverifiable"},
         {"entity_key": "numerical/d", "verdict": None, "error": "boom"},
         {"entity_key": None, "verdict": "unverifiable"},
+        {"entity_key": "version/e", "verdict": "unverifiable",
+         "source_discipline_gate": "own-file-only"},
     ]
     b_type, b_reason = inconclusive_breakdowns(mixed)
     check("breakdown by type buckets on the ctype prefix",
-          b_type == {"numerical": 2, "unknown": 1, "version": 1})
-    check("breakdown by reason splits demoted/error/verdict",
-          b_reason == {"demoted": 1, "error": 1, "unverifiable": 2})
+          b_type == {"numerical": 2, "unknown": 1, "version": 2})
+    check("breakdown by reason splits demoted/gated/error/verdict",
+          b_reason == {"demoted": 1, "error": 1, "gated:own-file-only": 1, "unverifiable": 2})
 
     # Re-derived volatility overrides the snapshot's stored flag, so a
     # narrowed policy reaches the whole index the night it ships.
@@ -1391,6 +1412,14 @@ def self_test() -> int:
          "demoted_from": "verified", "pages": page_a},
     ]
     counts, markable = tally(rows, {}, [], None, None)
+    gated_rows = rows + [
+        {"entity_key": "numerical/v", "verdict": "unverifiable",
+         "source_discipline_gate": "own-file-only", "pages": page_a},
+        {"entity_key": "numerical/u", "verdict": "unverifiable",
+         "source_discipline_gate": "generated-from-data", "pages": page_a},
+    ]
+    check("an own-corpus source-discipline gate counts as demoted; generated-from-data doesn't",
+          tally(gated_rows, {}, [], None, None)[0]["n_demoted"] == 2)
     check("framing-drift is soft: reported, never markable",
           counts["n_soft"] == 1 and [r["entity_key"] for r in markable] == ["numerical/x"])
     check("soft verdicts are decided, not inconclusive",

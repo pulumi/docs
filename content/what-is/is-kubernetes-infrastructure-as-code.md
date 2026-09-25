@@ -7,29 +7,8 @@ date: 2026-07-08T10:45:17-07:00
 page_title: "Is Kubernetes Infrastructure as Code?"
 
 authors:
-  - alex-leventer
+  - pulumi-content-team
 
-customer_logos:
-  title: Leading engineering organizations are building with Pulumi
-  logos:
-    - items:
-      - snowflake
-      - tableau
-      - atlassian
-      - fauna
-      - ware2go
-    - items:
-      - mindbody
-      - sourcegraph
-      - fenergo
-      - skai
-      - lemonade
-    - items:
-      - clearsale
-      - angellist
-      - webflow
-      - supabase
-      - mercedes-benz
 ---
 
 Kubernetes genuinely behaves like infrastructure as code within its own domain: you declare desired state in YAML, and a control loop continuously reconciles the live cluster toward it, correcting drift without being told to. That's the same declarative, convergent model IaC is built on, and it's a big part of why Kubernetes is often held up as the reference implementation of the idea. Where it falls short of infrastructure as code in the fuller, cross-cloud sense is the boundary of what it reconciles: the cluster, its node groups, the VPC it runs in, and the IAM roles behind it all have to exist before Kubernetes's control loop has anything to converge. Extending that same declarative, code-reviewable model to the infrastructure underneath the cluster is what a general-purpose tool like Pulumi or Terraform adds.
@@ -125,7 +104,7 @@ pulumi.export("kubeconfig", cluster.kubeconfig_json)
 
 The `provider` option in step 3 is what routes a resource to a specific cluster's API; leaving it off silently falls back to whatever kubeconfig is ambient on the machine running `pulumi up`. And because Pulumi tracks the dependency between the cluster and the chart, a single `pulumi up` provisions the cluster and deploys the chart in the right order, without the two-phase apply that a separately-configured Kubernetes provider block often forces in other tools.
 
-At scale, this is exactly how [Wiz manages thousands of Kubernetes clusters across hundreds of data centers worldwide with Pulumi's Automation API](/case-studies/wiz/), maintaining more than 1M cloud resources and hundreds of thousands of infrastructure updates daily.
+At scale, this is exactly how [Wiz manages thousands of Kubernetes clusters across hundreds of data centers worldwide with Pulumi's Automation API](/customers/wiz/), maintaining more than 1M cloud resources and hundreds of thousands of infrastructure updates daily.
 
 ## How does Pulumi compare to Helm and Kustomize
 

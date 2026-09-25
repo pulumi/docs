@@ -41,6 +41,9 @@ const BRAND_ICONS = [
     { name: 'reddit',   simpleIconsSlug: 'reddit',   svglogosUrl: null },
     // Hacker News shares Y Combinator's mark (simple-icons has no `hackernews`).
     { name: 'hackernews', simpleIconsSlug: 'ycombinator', svglogosUrl: null },
+    { name: 'claude',   simpleIconsSlug: 'claude',   svglogosUrl: null },
+    { name: 'openai',   simpleIconsSlug: null,        svglogosUrl: 'https://cdn.svglogos.dev/logos/openai-icon.svg' },
+    { name: 'cursor',   simpleIconsSlug: 'cursor',   svglogosUrl: null },
 ];
 
 // ─── Utilities ───────────────────────────────────────────────────────────────

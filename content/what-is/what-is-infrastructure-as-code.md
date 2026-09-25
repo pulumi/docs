@@ -205,17 +205,17 @@ These benefits compound as a team's footprint grows. Engineers who've made the s
 
 > "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
 >
-> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/case-studies/starburst/)
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/customers/starburst/)
 
 ### What infrastructure as code looks like at scale
 
 | Company | Scale | Result |
 | --- | --- | --- |
-| [Wiz](/case-studies/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
-| [Supabase](/case-studies/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
-| [BMW](/case-studies/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
-| [Atlassian](/case-studies/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
-| [Spear AI](/case-studies/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
+| [Wiz](/customers/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
+| [Supabase](/customers/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
+| [BMW](/customers/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
+| [Atlassian](/customers/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
+| [Spear AI](/customers/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
 
 ## What are common use cases for infrastructure as code?
 
@@ -226,7 +226,7 @@ IaC shows up across a lot of cloud workflows, but a few patterns account for mos
 1. **Kubernetes and container platforms.** Define a cluster alongside the workloads, ingress, IAM, and managed databases the app depends on, so the platform and the application ship as a single unit. See [infrastructure as code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/) for how this works in practice.
 1. **CI/CD pipelines.** Infrastructure changes go through the same pull-request workflow as application code, with a preview step so reviewers can see what's about to change before it lands.
 1. **Disaster recovery.** Re-provision a complete environment in a different region or account from versioned code, rather than rebuilding individual resources by hand.
-1. **Policy and compliance.** Encode security, cost, and architectural rules as [policy as code](/docs/discovery-governance/policy/) and have every deployment checked against them automatically.
+1. **Policy and compliance.** Encode security, cost, and architectural rules as [policy as code](/docs/discovery-governance/concepts/policy-as-code/) and have every deployment checked against them automatically.
 1. **Platform engineering.** Platform teams package vetted infrastructure patterns as reusable [components](/docs/iac/concepts/components/) that product teams consume through a standard interface.
 1. **Ephemeral environments.** Spin up short-lived environments for pull request previews, load tests, or customer demos, then tear them down when you're done.
 

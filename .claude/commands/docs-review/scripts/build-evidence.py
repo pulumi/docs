@@ -86,6 +86,7 @@ def is_section_terminator(line: str) -> bool:
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
 _PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
+_STYLE_LINE_RE = re.compile(r"^- \*\*Style:\*\* .*$", re.M)
 _HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _DETAIL_HEADING_RE = re.compile(r"^#### (?P<id>F\d+|F\?) · Do this\s*$")
@@ -194,7 +195,87 @@ def _walk(body: str, headings: dict[str, str], where: str):
                 )
 
 
-def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str]:
+# ---- anchor sanity ------------------------------------------------------
+#
+# A finding's `Where` cell is the only machine-readable pointer from the card
+# back into the code, and one consumer acts on it: `auto-refresh-gate.py`
+# refuses to dispatch a refresh unless every hunk of the author's push
+# overlaps an outstanding finding's line range. So a wrong line number does
+# not merely misdirect the reader -- it silently breaks the documented "push
+# a fix and the card refreshes itself" path, and the author is left with an
+# open finding, no banner, and no reason given. (#21748: F1 cited
+# `analyze.py` L199 for code at L1195; the gate correctly reported the push
+# as "outside outstanding finding lines" and stood down.)
+#
+# This is advisory on purpose. A bad anchor degrades one automation; refusing
+# to publish over it would cost the whole review, which is the failure mode
+# the v3 fail-closed design already over-serves. We record it and move on.
+
+ANCHOR_SLACK = 3  # mirrors auto-refresh-gate.SLACK_LINES; they must agree
+
+# `b/` is optional so that a deletion's `+++ /dev/null` matches and clears the
+# current file. With `b/` required it never matched, `path` kept the previous
+# file, and the deleted file's `@@ -N,M +K,0 @@` header was appended to that
+# file's ranges as a bogus (K, K) span.
+_DIFF_FILE_RE = re.compile(r"^\+\+\+ (?:b/)?(.+)$")
+_DIFF_HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+
+
+def parse_diff_ranges(diff_text: str) -> dict[str, list[tuple[int, int]]]:
+    """{path: [(new_start, new_end), ...]} — the head-side line spans a
+    unified diff touches. Findings cite lines in the PR's head version, so
+    the new side is the one to compare against."""
+    ranges: dict[str, list[tuple[int, int]]] = {}
+    path = None
+    for line in (diff_text or "").splitlines():
+        m = _DIFF_FILE_RE.match(line)
+        if m:
+            path = None if m.group(1) == "/dev/null" else m.group(1)
+            continue
+        if path is None:
+            continue
+        m = _DIFF_HUNK_RE.match(line)
+        if m:
+            start = int(m.group(1))
+            length = int(m.group(2)) if m.group(2) is not None else 1
+            if length <= 0:            # pure deletion: the join point
+                ranges.setdefault(path, []).append((start, start))
+            else:
+                ranges.setdefault(path, []).append((start, start + length - 1))
+    return ranges
+
+
+def anchor_note(file: str, lines: list[int] | None,
+                diff_ranges: dict[str, list[tuple[int, int]]],
+                bucket: str | None = None) -> str | None:
+    """Why this finding's anchor can't be trusted, or None when it can.
+
+    Two kinds of finding legitimately point outside the diff and are never
+    judged here. A finding in a file the PR does not touch (a caller, a
+    doc that references the changed code). And a `preexisting` finding,
+    which is the 💡 "Pre-existing issues in touched files" bucket: a touched
+    file at an untouched line is its whole definition, so checking it would
+    mark every such entry `⚠︎ unverified` -- a false accusation against a
+    correct line reference, which is worse than the silence this check
+    exists to break.
+    """
+    if bucket == "preexisting":
+        return None
+    if not lines or not file or file not in diff_ranges:
+        return None
+    spans = diff_ranges[file]
+    if not spans:
+        return None
+    lo, hi = min(lines), max(lines)
+    if any(lo <= end + ANCHOR_SLACK and hi >= start - ANCHOR_SLACK for start, end in spans):
+        return None
+    nearest = ", ".join(f"{s}-{e}" for s, e in sorted(spans)[:4])
+    return (f"L{lo}" if lo == hi else f"L{lo}-{hi}") + \
+        f" is outside this PR's changed lines in {file} (changed: {nearest})"
+
+
+def build(author_body: str, brief_body: str, base: dict,
+          diff_ranges: dict[str, list[tuple[int, int]]] | None = None) -> tuple[dict, str, str]:
     high_water = int(base.get("high_water", 0))
     base_findings = {f["id"]: f for f in base.get("findings", [])}
 
@@ -218,7 +299,8 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
                 raise ContractViolation(f"{doc_name}: finding {fid} appears twice across the drafts")
             seen_ids.add(fid)
             prior = base_findings.get(fid)
-            if prior and _BUCKET_RANK[bucket] < _BUCKET_RANK.get(prior["bucket"], 0):
+            if (prior and _BUCKET_RANK[bucket] < _BUCKET_RANK.get(prior["bucket"], 0)
+                    and not cr.v3_may_demote(prior)):
                 raise ContractViolation(
                     f"{doc_name}: {fid} demoted from {prior['bucket']} to {bucket} — promote-only"
                 )
@@ -253,6 +335,13 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
                 record["lines"] = lines_nums
             elif prior and prior.get("lines"):
                 record["lines"] = prior["lines"]
+            if diff_ranges:
+                note = anchor_note(record["file"], record.get("lines"), diff_ranges,
+                                   record["bucket"])
+                if note:
+                    record["anchor_ok"] = False
+                    record["anchor_note"] = note
+                    print(f"::warning::build-evidence: {fid} anchor {note}")
             findings.append(record)
 
     vanished = [
@@ -341,6 +430,14 @@ def build(author_body: str, brief_body: str, base: dict) -> tuple[dict, str, str
     author_out = _fix_header(author_out, n_blocking)
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
     brief_out = _PREEXISTING_COUNT_RE.sub(lambda m: m.group(1) + str(n_pre), brief_out)
+    # The advisory block is the author card's only non-blocking lane, and the
+    # model may have added `[nit]` bullets to it. Recount before the empty
+    # block is dropped, and restate the brief's rubber-stamp line from the
+    # recount — a stale Vale-only number would under-report the card.
+    n_style, n_nits = count_style_bullets(author_out)
+    evidence["style_suggestions_count"] = n_style + n_nits
+    brief_out = refresh_style_line(brief_out, n_style, n_nits)
+    author_out = drop_empty_style_block(author_out)
     # The Waiting-on-the-author block is composer-owned: regenerate it from
     # the FINAL findings + dispositions so model edits (promotions included)
     # can never leave it stale.
@@ -397,6 +494,47 @@ def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
         line += " — " + ", ".join(parts)
     return brief_body[:m.start()] + line + "." + brief_body[m.end():]
 
+
+
+def count_style_bullets(author_body: str) -> tuple[int, int]:
+    """`(linting, nits)` from the author card's advisory block."""
+    bullets = cr.walk_style_bullets(author_body)
+    nits = sum(1 for b in bullets if b["tag"] == cr.NIT_TAG)
+    return len(bullets) - nits, nits
+
+
+def refresh_style_line(brief_body: str, n_style: int, n_nits: int) -> str:
+    """Re-derive the brief's rubber-stamp **Style** bullet from the author
+    card as published. The composer fixes it at Vale's count, but the model
+    may add `[nit]` bullets during the editorial pass, and the reviewer is
+    asked to rubber-stamp that number — so it has to be the number actually on
+    the card, not the one Vale produced before the model read the diff."""
+    return _STYLE_LINE_RE.sub(
+        lambda _m: cr.render_style_line(n_style, n_nits), brief_body, count=1)
+
+
+def drop_empty_style_block(author_body: str) -> str:
+    """Remove the advisory block when nothing landed in it.
+
+    The composer renders the block unconditionally on v3 so the model has a
+    stable anchor to append a `[nit]` under (see compose-review.NIT_TAG). If it
+    didn't, an empty heading + caption + sentinel would ship on every clean PR
+    — three lines of furniture saying nothing. Runs after the annotator, which
+    no-ops on an empty block either way."""
+    if cr.walk_style_bullets(author_body):
+        return author_body
+    lines = author_body.splitlines()
+    start = next((i for i, ln in enumerate(lines) if ln.strip() in cr.STYLE_HEADINGS), None)
+    if start is None:
+        return author_body
+    end = start + 1
+    while end < len(lines) and not is_section_terminator(lines[end]):
+        end += 1
+    # Leave one blank line behind so the surrounding sections stay separated.
+    while start > 0 and not lines[start - 1].strip():
+        start -= 1
+    lines[start:end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
 
 
 _EMPTY_SENTINEL = {
@@ -571,6 +709,15 @@ def _self_test() -> int:
     else:
         raise AssertionError("demotion must be a contract violation")
 
+    # …unless F1 is a readthrough stub, which its TODO sends to ⚠️ by reader
+    # impact (pulumi/docs#21787): legal, and it stops counting as blocking.
+    rt_base = dict(base, findings=[
+        dict(f, origin="preflight:readthrough-self-redundancy") if f["id"] == "F1" else f
+        for f in base["findings"]])
+    ev_rt, author_rt, _ = build(demoted_author, demoted_brief, rt_base)
+    assert {f["id"]: f["bucket"] for f in ev_rt["findings"]}["F1"] == "reviewer-check"
+    assert "## Author action guide v1 — 2 items block merge" in author_rt, author_rt.splitlines()[2]
+
     # vanish: F2 removed without a rewrite → violation
     vanished_author = author.replace("| **F2** | `a.md` L9 | promoted question now a blocker |\n", "")
     try:
@@ -639,6 +786,62 @@ def _self_test() -> int:
     ra0, _ = refresh_counts(fx_author, None, None)
     assert "— 3 items block merge" in ra0
 
+    # --- anchor sanity ---------------------------------------------------
+    diff = "\n".join([
+        "diff --git a/a.md b/a.md", "--- a/a.md", "+++ b/a.md",
+        "@@ -5,3 +5,4 @@", " ctx", "+added", " ctx", " ctx",
+        "@@ -40,2 +41,2 @@", "-old", "+new", " ctx",
+    ])
+    ranges = parse_diff_ranges(diff)
+    assert ranges == {"a.md": [(5, 8), (41, 42)]}, ranges
+    # inside a hunk, and inside the ±3 slack around one
+    assert anchor_note("a.md", [6], ranges) is None
+    assert anchor_note("a.md", [11], ranges) is None, "slack of 3 past the hunk end"
+    # a span that straddles the gap still overlaps a hunk
+    assert anchor_note("a.md", [6, 44], ranges) is None
+    # the #21748 shape: real file, line ~1000 away from anything it changed
+    note = anchor_note("a.md", [199], ranges)
+    assert note and "L199 is outside this PR's changed lines in a.md" in note, note
+    assert "5-8, 41-42" in note, note
+    # a file the PR never touches is not ours to judge
+    assert anchor_note("untouched.md", [199], ranges) is None
+    # …nor is a pre-existing finding, which is a touched file at an untouched
+    # line by definition — judging it would mark every 💡 entry unverified (F1)
+    assert anchor_note("a.md", [199], ranges, "preexisting") is None
+    assert anchor_note("a.md", [199], ranges, "outstanding") is not None
+    # a deleted file must not spill its hunk onto the previous file (F2)
+    with_deletion = parse_diff_ranges("\n".join([
+        "diff --git a/a.md b/a.md", "--- a/a.md", "+++ b/a.md",
+        "@@ -5,3 +5,4 @@", " c", "+x", " c", " c",
+        "diff --git a/gone.md b/gone.md", "--- a/gone.md", "+++ /dev/null",
+        "@@ -1,50 +0,0 @@", "-bye",
+    ]))
+    assert with_deletion == {"a.md": [(5, 8)]}, with_deletion
+    assert anchor_note("a.md", None, ranges) is None and anchor_note("", [1], ranges) is None
+    # …and it rides the finding, without ever failing the build
+    # F1 is at L8 (inside the hunk) and F2 at L9 (one past it, inside the
+    # slack): neither is flagged, which is the slack doing its job on a card
+    # whose line drifted by a line or two.
+    ev_a, _, _ = build(author, brief, base, diff_ranges={"a.md": [(5, 8)]})
+    assert not any("anchor_ok" in f for f in ev_a["findings"])
+    # Move the diff a long way off and both anchors become unreachable.
+    ev_b, _, _ = build(author, brief, base, diff_ranges={"a.md": [(100, 120)]})
+    by_id = {f["id"]: f for f in ev_b["findings"]}
+    assert {f["id"] for f in ev_b["findings"] if f.get("anchor_ok") is False} == {"F1", "F2"}
+    assert "changed: 100-120" in by_id["F1"]["anchor_note"], by_id["F1"]
+    # Flagging is all it does — the finding keeps its text, file and lines.
+    assert by_id["F1"]["lines"] == [8] and by_id["F1"]["file"] == "a.md"
+    # no diff supplied → the check is inert and nothing is annotated
+    ev_c, _, _ = build(author, brief, base)
+    assert not any("anchor_ok" in f for f in ev_c["findings"])
+    # …and a finding the model rewrote as pre-existing is never flagged, even
+    # though its line is nowhere near the diff (F1)
+    pre = author.replace("| **F1** | `a.md` L8 | the model's edited fix prose |",
+                         "| **F1** | `a.md` L8 | **Pre-existing:** broken before this PR |")
+    ev_d, _, _ = build(pre, brief, base, diff_ranges={"a.md": [(100, 120)]})
+    pre_f = {f["id"]: f for f in ev_d["findings"]}["F1"]
+    assert pre_f["bucket"] == "preexisting" and "anchor_ok" not in pre_f, pre_f
+
     print("build-evidence self-test passed")
     return 0
 
@@ -652,16 +855,28 @@ def main() -> int:
     ap.add_argument("--output")
     ap.add_argument("--author-out", help="cleaned author body for publish (optional)")
     ap.add_argument("--brief-out", help="cleaned brief body for publish (optional)")
+    ap.add_argument("--pr-diff", help="unified diff of the PR; enables the advisory "
+                                      "anchor check (never fails the build)")
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
     if not (args.author_body and args.brief_body and args.base and args.output):
         ap.error("--author-body, --brief-body, --base, --output are required")
     try:
+        diff_ranges = None
+        if args.pr_diff:
+            # Advisory only: an unreadable diff disables the anchor check, it
+            # never fails the build.
+            try:
+                diff_ranges = parse_diff_ranges(Path(args.pr_diff).read_text())
+            except (OSError, UnicodeDecodeError) as exc:
+                print(f"::warning::build-evidence: --pr-diff unreadable ({exc}); "
+                      "skipping the anchor check")
         evidence, author_out, brief_out = build(
             Path(args.author_body).read_text(),
             Path(args.brief_body).read_text(),
             json.loads(Path(args.base).read_text()),
+            diff_ranges=diff_ranges,
         )
     except ContractViolation as e:
         print(f"::error::build-evidence: {e}", file=sys.stderr)

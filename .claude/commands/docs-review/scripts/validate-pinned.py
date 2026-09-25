@@ -152,7 +152,13 @@ from pathlib import Path
 # and the three-verb answer footer; later v3 rule refinements (rewritten rows
 # need no detail block, `v3-blocking-count` follows REVIEW_STATE dispositions)
 # ride the same version.
-SCHEMA_VERSION = 23
+# v23→v24: `style-advisory-provenance`. The v3 advisory block opened to
+# model-found nits (it is the author card's only non-blocking lane), so the
+# `[style]` / `[nit]` tags now split by provenance and the rule holds each to
+# its own — the same guarantee `style-blocker-provenance` gives one tier up.
+# `style-render-mode` also reaches the v3 author card now; it had been scoped
+# to a `⚠️ Low-confidence` section that surface doesn't have.
+SCHEMA_VERSION = 24
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -224,8 +230,11 @@ STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 # answer to "is this line a new finding?" — extract_bucket_bullets and
 # extract_finding_paragraphs below, scrape-review-outcomes.py's paragraph walk,
 # and review-worklist.py's _bullet_blocks. Four private copies had already
-# drifted into existence; one definition is the point.
-FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
+# drifted into existence; one definition is the point. A struck-through
+# finding (`- ~~**[L6]** …~~ (resolved in abc123)`) is still a finding: update.md
+# tells the lane to strike X through when it moves to ✅ Resolved, and Opus 5.5
+# does so literally.
+FINDING_START_RE = re.compile(r"^(?:- )?(?:~~)?\*\*\S")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -794,9 +803,15 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     """
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
-        return []
-    start, end = span
-    section_lines = ctx.body_lines[start:end]
+        # v3: the block sits on the author card, which has no ⚠️ host section
+        # (that one is the brief's `⚠️ Check these`). Scoping the scan to a
+        # section the card doesn't have made this rule a silent no-op on the
+        # whole v3 surface, while the rules table advertised it as running
+        # there. v2 always has the H3, so the fallback only fires on v3.
+        section_lines = ctx.body_lines
+    else:
+        start, end = span
+        section_lines = ctx.body_lines[start:end]
 
     style_idx = None
     for i, line in enumerate(section_lines):
@@ -806,7 +821,15 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     if style_idx is None:
         return []  # no style suggestions — render-mode N/A
 
-    style_lines = section_lines[style_idx:]
+    # Bound the block at the next heading or card furniture. On v2 the ⚠️
+    # section ends right after it anyway; on v3 the scan runs over the whole
+    # card, and without a bound a `<details>` in anything rendered below the
+    # block (a Resolved list, say) would be reported as a collapsed style block.
+    # `##### <path>` groups stay inside: "##### x" doesn't start with "#### ".
+    end = next((j for j in range(style_idx + 1, len(section_lines))
+                if section_lines[j].startswith(("## ", "### ", "#### ", "📎 ", "<!-- "))),
+               len(section_lines))
+    style_lines = section_lines[style_idx:end]
     bullet_count = sum(1 for ln in style_lines if ln.lstrip().startswith("- **line "))
     if bullet_count and any("<details>" in ln for ln in style_lines):
         return [Violation(
@@ -819,6 +842,66 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
                   "them hides the ✏️ marks that flag one-click suggestions."),
         )]
     return []
+
+
+def check_style_advisory_provenance(ctx: Context) -> list[Violation]:
+    """Every `[style]` bullet on a composed v3 draft traces to an advisory entry
+    in `.vale-findings.json`; `[nit]` is the tag for one the review found itself.
+
+    The v3 advisory block is the author card's only non-blocking lane, so it is
+    open to model-found nits — a typo, a stray space, the mechanical slips
+    Vale's rules don't carry (before this, PR #21787 parked one on the
+    *reviewer's* card, which is addressed to someone who can't fix it). Opening
+    it recreates the bypass `style-blocker-provenance` exists to close one tier
+    up: an unverified finding rendered as `[style]` reads as linter output, and
+    the block is quoted out of context often enough for that to matter.
+
+    So the tags split by provenance. `[nit]` is v3-only, checked everywhere.
+    `[style]` is checked only where the block was built from THIS artifact: the
+    composed v3 draft, which is the only body validated with an evidence base.
+    The v3 refresh lane passes the prior card's block through verbatim while
+    regenerating `.vale-findings.json` for the new head — so once an author
+    fixes a flagged line (the thing the block asks them to do), the carried
+    bullet no longer matches, and checking it there would fail the refresh for
+    exactly the behavior we want. v2 is left alone: its block was never
+    opened, so there is no new laundering channel on it to guard.
+    """
+    violations: list[Violation] = []
+    bullets = _compose_mod().walk_style_bullets(ctx.body)
+    nit_tag = _compose_mod().NIT_TAG
+    if ctx.surface != "v3":
+        for b in bullets:
+            if b["tag"] == nit_tag:
+                violations.append(Violation(
+                    rule_id="style-advisory-provenance",
+                    line_ref=f"<style L{b['line']}>",
+                    expected="[nit] bullets are a v3 author-card lane",
+                    actual=f"[nit] bullet on the {ctx.surface} surface",
+                    hint=("The v2 monolith is read by the author and the reviewer both, so its "
+                          "⚠️ Low-confidence section already reaches the author. Render this as "
+                          "an ordinary ⚠️ bullet."),
+                ))
+        return violations
+    if ctx.vale_findings is None or ctx.evidence_base is None:
+        return []  # not a composed draft, or no artifact — nothing to trace against
+    advisory: set[tuple[str, int]] = {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in ctx.vale_findings
+        if not f.get("blocker")
+    }
+    for b in bullets:
+        if b["tag"] == nit_tag or (b["file"], b["line"]) in advisory:
+            continue
+        violations.append(Violation(
+            rule_id="style-advisory-provenance",
+            line_ref=f"<style {b['file'] or '?'}:{b['line']}>",
+            expected="every [style] bullet matches an advisory entry in .vale-findings.json",
+            actual=f"no advisory finding at {b['file'] or '?'}:{b['line']}",
+            hint=("`[style]` means Vale's advisory tier produced this finding. If you found it "
+                  "yourself, tag it `[nit]` instead — same block, same non-blocking treatment, "
+                  "honest provenance: `- **line N:** [nit] _category_ — <what and the fix>`."),
+        ))
+    return violations
 
 
 def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
@@ -2958,6 +3041,21 @@ def check_v3_detail_blocks(ctx: Context) -> list[Violation]:
     return v
 
 
+def _v3_demoted_ids(ctx: Context) -> set[str]:
+    """Base findings composed as blocking that now sit in the brief's ⚠️ list
+    under the readthrough exception (compose-review.v3_may_demote)."""
+    base = ctx.evidence_base
+    if base is None or not ctx.brief:
+        return set()
+    in_brief = {p["id"] for _, _, p in
+                v3_finding_rows(ctx.brief, "⚠️ Check these before approving") if p}
+    may_demote = _compose_mod().v3_may_demote
+    return {f.get("id") for f in base.get("findings", [])
+            if f.get("id") in in_brief
+            and f.get("bucket") in ("outstanding", "author-answer")
+            and may_demote(f)}
+
+
 def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     """The author header's `(N blocking)` is a sanity floor: it must equal the
     🚨+❓ row count, either counting `F?` additions or not (the model adds
@@ -3001,7 +3099,14 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     composed_total = sum(1 for _, _, p in rows if _open(p) or p is None)
     composed_numbered = sum(1 for _, _, p in rows if _open(p) and p["id"] != "F?")
     stated = int(m.group(1)) if m.group(1) else 0
-    if stated not in (total, numbered, composed_total, composed_numbered):
+    # A readthrough stub the model moved to the brief's ⚠️ list (the one legal
+    # demotion — compose-review.v3_may_demote) has left these rows but is
+    # still in the composer's untouched header, so the composed counts are
+    # also legal with those rows added back.
+    moved = _v3_demoted_ids(ctx)
+    legal = {total, numbered, composed_total, composed_numbered,
+             composed_total + len(moved), composed_numbered + len(moved)}
+    if stated not in legal:
         return [Violation("v3-blocking-count", "<author header>",
                           f"(N blocking) matches the open 🚨+❓ row count ({numbered} composed, {total} with additions; "
                           f"dispositioned rows excluded; rewritten rows may count either way: {composed_numbered}/{composed_total})",
@@ -3012,7 +3117,9 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
 
 def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
     """Promote-only against the composer's evidence base: a base finding may
-    move up (reviewer-check → author-answer → outstanding), never down, and
+    move up (reviewer-check → author-answer → outstanding), never down (the
+    one exception: a readthrough stub, whose TODO tells the model to bucket
+    by reader impact — compose-review.v3_may_demote), and
     may not vanish — it is either in a bucket, rewritten in place with a
     disposition label, or referenced elsewhere (✅ Resolved). Mirrors
     compose-review.split_v3_buckets: `unverifiable` → ❓, everything else
@@ -3051,6 +3158,8 @@ def check_v3_bucket_split_faithful(ctx: Context) -> list[Violation]:
                                "finding vanished from both cards",
                                "Never delete a finding — disposition it: fix, promote, or rewrite its body as `**Spurious:**` / `**Mis-sourced:**` / `**Pre-existing:**` with a reason."))
         elif V3_BUCKET_RANK[now] < V3_BUCKET_RANK[base_bucket]:
+            if _compose_mod().v3_may_demote(f):
+                continue  # readthrough stub, bucketed by reader impact as its TODO says
             v.append(Violation("bucket-split-faithful", f"<{fid}>",
                                f"{fid} at or above its composed bucket `{base_bucket}`",
                                f"demoted to `{now}`",
@@ -3082,6 +3191,13 @@ RULES = [
         "desc": "Every [style-blocker] bullet in 🚨 traces to a blocker entry in .vale-findings.json (the marker exempts trail-matching, so it must not be forgeable).",
         "hint": "Do not author [style-blocker] bullets — that marker is composer-only. Render reviewer-found issues as normal **[L…]** bullets with a trail record.",
         "check": check_style_blocker_provenance,
+        "surfaces": ("v2", "v3"),
+    },
+    {
+        "id": "style-advisory-provenance",
+        "desc": "On a composed v3 draft, advisory `[style]` bullets trace to .vale-findings.json; model-found ones are tagged `[nit]` (v3-only).",
+        "hint": "Tag a bullet you found yourself `[nit]`, not `[style]` — `[style]` asserts Vale produced it.",
+        "check": check_style_advisory_provenance,
         "surfaces": ("v2", "v3"),
     },
     {

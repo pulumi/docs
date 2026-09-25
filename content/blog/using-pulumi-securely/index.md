@@ -58,7 +58,7 @@ We have previously covered [Tag Policies](/blog/automatically-enforcing-aws-reso
 
 ### Deploy from Pipelines
 
-Automate every step of your deployment process for anything beyond local development by creating CI/CD pipelines. Manual approval steps in your pipeline should be avoided. Consider creating automated checks to ensure your infrastructure is created only with approved [Pulumi Packages](/docs/iac/guides/building-extending/providers/debugging-providers/) and automatically ensure your infrastructure is in compliance by using [CrossGuard](/docs/insights/policy/).
+Automate every step of your deployment process for anything beyond local development by creating CI/CD pipelines. Manual approval steps in your pipeline should be avoided. Consider creating automated checks to ensure your infrastructure is created only with approved [Pulumi Packages](/docs/iac/guides/building-extending/providers/debugging-providers/) and automatically ensure your infrastructure is in compliance by using [CrossGuard](/docs/discovery-governance/policy/).
 
 Leveraging [Automation API](/docs/iac/concepts/automation-api/) as the programmatic interface for running Pulumi programs without the Pulumi CLI is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI. For example, [Elkjop Nordic uses Automation API to provide a self-service portal](/blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/) that serves as a secure IT vending machine full of their application and infrastructure building blocks.
 

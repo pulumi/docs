@@ -38,13 +38,24 @@ name: Staging deploy (auto, infra PRs)
 #   nothing and costs a real deploy of a shared stack; a `synchronize`
 #   that didn't move the head (a base merge, a label) finds the green
 #   status and stops.
+# - ANYTHING THAT MUST WORK FOR A PR BRANCH OF ANY AGE LIVES IN A
+#   DEFAULT-BRANCH-TRIGGERED WORKFLOW — `workflow_run`, `schedule`,
+#   `pull_request_target`, or a dispatch pinned to the default ref. This
+#   side of the lane already obeys that (the checkout below is pinned to
+#   the default branch and every script it runs comes from base). The
+#   FINALIZE side did not, and PR #21676 is what that costs: the terminal
+#   status used to be written by a job inside the dispatched run, a
+#   `workflow_dispatch` executes the workflow file from the ref it is
+#   dispatched at, and #21676 branched before that job existed — so its
+#   deploy went green and the pending status below never resolved.
+#   Finalization now lives in `.github/workflows/staging-status.yml`.
 # - DISPATCH, DON'T WAIT. This lane fires the existing "Build and deploy
-#   testing" workflow at the head branch and exits; that run does the work
-#   and writes its own `staging/pulumi-test-io` status when it finishes
-#   (the `staging-status` job there). Nobody is watching this job, so
-#   holding a runner open for 45 minutes to relay an outcome bought
-#   nothing — and it cost something real: a long-lived job in a
-#   concurrency group is a job GitHub CANCELS when a newer push displaces
+#   testing" workflow at the head branch and exits; that run does the work,
+#   and `staging-status.yml` records the outcome as the
+#   `staging/pulumi-test-io` status and re-evaluates the Sentinel. Nobody is
+#   watching this job, so holding a runner open for 45 minutes to relay an
+#   outcome bought nothing — and it cost something real: a long-lived job in
+#   a concurrency group is a job GitHub CANCELS when a newer push displaces
 #   it, and a cancelled job reads as a failing check on the PR. An
 #   evidence producer that paints the PR red is exactly what the note
 #   below says this workflow must never do.
@@ -129,7 +140,7 @@ jobs:
               echo "$ROUTE" | jq -c '{roles, teams, mechanical, staging_evidence_required}'
               NEEDED=$(echo "$ROUTE" | jq -r '.staging_evidence_required')
               if [ "$NEEDED" != "true" ]; then
-                echo "no infra paths — gate G4 will skip; nothing to deploy"
+                echo "no changed path affects the deploy — gate G4 will skip; nothing to deploy"
               fi
             else
               echo "::warning::route-pr.py could not classify this PR — skipping the staging deploy"
@@ -189,8 +200,27 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Dispatch the staging deploy
+        # Every PR-controlled value goes through `env:` and is referenced as
+        # "$VAR". NOTHING author-controlled may be written as ${{ }} inside a
+        # `run:` block: GitHub substitutes those textually BEFORE bash parses
+        # the script, so the value becomes script. A branch name is
+        # author-controlled and `git check-ref-format` accepts `"`, `$`, backtick,
+        # `;`, `&`, `|`, `(`, `)` and `'` — space is the only shell
+        # metacharacter it rejects, and $IFS covers that. This job holds
+        # `actions: write`, and the PR lane next door additionally holds
+        # `id-token: write` with ESC already authenticated, so an injection
+        # there reaches the org-scoped PULUMI_BOT_TOKEN.
+        #
+        # The headers here and in staging-deploy-pr.yml both justify safety as
+        # "never checks out or executes PR code". That is true and beside the
+        # point — the VALUE is the vector, not the code. staging-status.yml
+        # already does this correctly; these two lanes did not.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: |
           set -uo pipefail
           # The script comes from the BASE checkout (see the header). A PR
@@ -198,13 +228,13 @@ jobs:
           # warn and stand down rather than painting the PR red for a file
           # that exists three lines away in the diff.
           if [ ! -x scripts/review-v3/staging-deploy.sh ]; then
-            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges, or until a tools-team member comments /deploy-staging."
+            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges; /deploy-staging runs the same base-branch script, so it cannot help here either."
             exit 0
           fi
           scripts/review-v3/staging-deploy.sh \
-            --repo "${{ github.repository }}" \
-            --pr "${{ github.event.pull_request.number }}" \
-            --head-sha "${{ github.event.pull_request.head.sha }}" \
-            --head-ref "${{ github.event.pull_request.head.ref }}" \
+            --repo "$REPO" \
+            --pr "$PR_NUMBER" \
+            --head-sha "$HEAD_SHA" \
+            --head-ref "$HEAD_REF" \
             --dispatch-only \
             || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red and /deploy-staging retries"

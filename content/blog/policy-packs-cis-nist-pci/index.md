@@ -9,7 +9,6 @@ allow_long_title: true
 tags:
   - pulumi-cloud
   - policy-as-code
-  - crossguard
   - features
   - compliance
   - governance
@@ -19,7 +18,7 @@ category: product
 
 Achieving compliance with industry standards such as **CIS, NIST**, or **PCI DSS** is a foundational step for every organization. Yet for many teams, it's often a manual, months-long process that involves interpreting controls, authoring custom policies, and validating configurations across multiple clouds. These challenges often slow progress toward a known and secure cloud state.
 
-We're changing that. To simplify this journey, Pulumi launched a new suite of **pre-built compliance policy packs** for [CIS Controls v8.1, NIST SP 800-53 Rev. 5, and PCI DSS v4.0](https://www.pulumi.com/docs/insights/policy/policy-packs/pre-built-packs/#available-policy-packs).
+We're changing that. To simplify this journey, Pulumi launched a new suite of **pre-built compliance policy packs** for [CIS Controls v8.1, NIST SP 800-53 Rev. 5, and PCI DSS v4.0](https://www.pulumi.com/docs/discovery-governance/policy/policy-packs/pre-built-packs/#available-policy-packs).
 
 These packs are your accelerator for the "**Get Clean**" journey, allowing you to enforce critical security and compliance baselines across your cloud infrastructure **in minutes, not months**.
 
@@ -67,7 +66,7 @@ Need a compliance pack for a standard that isn't listed here? Please let us know
 **New to Pulumi? Start your governance journey today.**
 
 * [Sign up for Pulumi Cloud](https://app.pulumi.com/signup) and start a compliance task with Neo  
-* [Read the Get Started guide](/docs/insights/policy/get-started/) to apply and manage policies across your cloud infrastructure
+* [Read the Get Started guide](/docs/discovery-governance/policy/get-started/) to apply and manage policies across your cloud infrastructure
 * [Join the Community Slack](https://slack.pulumi.com/) to share feedback on the new features
 
-For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+For complete documentation, visit our [Policies documentation](https://www.pulumi.com/docs/discovery-governance/policy/).

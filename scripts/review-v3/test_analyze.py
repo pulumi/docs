@@ -26,6 +26,7 @@ import collect  # noqa: E402
 import pr_review_config  # noqa: E402
 import routing  # noqa: E402
 from gh_client import GhClient  # noqa: E402
+import test_collect as tc  # noqa: E402
 from test_collect import HEAD_V3, V3_AUTHOR, V3_BRIEF, comment, make_snapshot, patch_for, pr_spec  # noqa: E402
 
 CONFIG = routing.validate_raw(routing._CANNED_CONFIG)[0]
@@ -66,6 +67,19 @@ def stampable(number: int = 100, **over) -> dict:
 
 
 NO_ALIASES: frozenset = frozenset()
+
+
+def fresh(number: int, **over) -> dict:
+    """`stampable` with its own head SHA and a review card written against
+    it, so a batch of rows never shares the per-head snapshots (check runs,
+    workflow runs): with everything at HEAD_V3, the last row written wins
+    for all of them."""
+    sha = f"{number:040x}"
+    over.setdefault("head_sha", sha)
+    over.setdefault("comments", [comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR.replace(HEAD_V3, sha))])
+    over.setdefault("title", f"Change page {number}")
+    over.setdefault("files", [_file(f"content/docs/p{number}.md", ["x"], ["o"])])
+    return stampable(number, **over)
 
 
 def run(specs: list[dict], *, config=CONFIG, aliases=NO_ALIASES, repo_root=None, teams=None, my_teams=None, **kw) -> dict:
@@ -145,9 +159,27 @@ def test_gate_open_warning_rows():
     assert [a["id"] for a in p["actions"][:3]] == ["stamp", "stamp-no-merge", "request-changes"]
 
 
-def test_gate_open_blockers_on_author_card():
-    p = _judge_because("outstanding:3", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])
+def test_open_blockers_block_the_row_they_do_not_merely_demote_it():
+    """An unanswered 🚨 is "can't merge regardless", so the row lands in the
+    one lane --force never reaches. Demoting it to `judge` is what let
+    #21482 and #21549 merge over their open findings."""
+    q = run([stampable(comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])])
+    p = row(q, 100)
+    assert p["verdict"] == "blocked", (p["verdict"], p["reasons"])
+    assert any(r.startswith("outstanding:3") for r in p["reasons"]), p["reasons"]
+    assert "outstanding:3" in p["blockers"], p["blockers"]
     assert set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
+    # blocked, but not a dead end: the row offers the send-back.
+    assert "request-changes" in [a["id"] for a in p["actions"]], p["actions"]
+    # and no stamp button, because there is nothing here to approve yet.
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")], p["actions"]
+    # A workflow-authored row (pulumi-bot's content-review lane — #21549's own
+    # shape) has nobody to send it back to, so it offers the close instead.
+    gen = row(run([stampable(comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                             author="pulumi-bot", author_type="User")]), 100)
+    assert gen["verdict"] == "blocked" and "author:generated" in gen["reasons"], gen["reasons"]
+    ids = [a["id"] for a in gen["actions"]]
+    assert "close" in ids and "request-changes" not in ids, gen["actions"]
 
 
 def test_gate_self_accepted_disposition():
@@ -166,7 +198,7 @@ def test_the_stamp_buttons_say_whether_approving_merges():
                                                               "additions": 1, "deletions": 1,
                                                               "patch": patch_for(["new line"], lines_removed=["old line"])}], **kw)
 
-    q = run([page(1), page(2, author="camsoper", author_type="User")])
+    q = run([page(1), page(2, author="jdoe", author_type="User")])
     bot, human = row(q, 1), row(q, 2)
     assert [(a["id"], a["label"], a["cmd"]) for a in bot["actions"][:2]] == [
         ("stamp", "approve & merge", "--stamp 1"), ("stamp-no-merge", "approve, don't merge", "--stamp 1:no-merge")]
@@ -210,8 +242,10 @@ def test_errored_review_is_blocked_with_rerun_and_an_absent_one_offers_it():
     p = row(run([stampable(labels=["review:trivial", "domain:docs"], comments=[])]), 100)
     assert p["verdict"] == "judge" and "review:absent" in p["reasons"]
     assert [a["label"] for a in p["actions"] if a["id"] == "rerun"] == ["run a full review"]
+    # in-progress is usually a wait, but a crashed run leaves the label with
+    # no run behind it (test_handoff_guard.py), so the fresh review is offered
     p = row(run([stampable(labels=["review:in-progress", "domain:docs"])]), 100)
-    assert p["verdict"] == "blocked" and not any(a["id"] == "rerun" for a in p["actions"])  # wait for it
+    assert p["verdict"] == "blocked" and [a["cmd"] for a in p["actions"] if a["id"] == "rerun"] == ["--rerun 100"]
 
 
 def test_gate_stale_review_is_blocked_with_refresh():
@@ -365,15 +399,15 @@ def test_collision_overlap_vs_same_file_and_merge_order():
     assert row(q, 3)["verdict"] == "stamp" and "cluster:C1:same-file" in row(q, 3)["reasons"]
     assert row(q, 4)["verdict"] == "stamp" and cl["merge_order"] == [1, 2, 3]
     assert cl["recommendation"]["kind"] == "chain" and cl["recommendation"]["first"] == 1 and cl["recommendation"]["next"] == 2
-    # the chain card is the two row buttons it presses: approve the first
-    # link, unblock the next
+    # the chain card is the one command act.py runs through the stamp gates;
+    # the two rows it covers defer to it rather than mapping to row buttons
     chain = next(d for d in q["do_next"] if d["kind"] == "chain")
-    # #2 is not stuck yet, so it has no unblock button of its own: the card
-    # presses what it can and claims the rest, rather than naming a target
-    # nothing can press
-    assert list(chain["targets"].values()) == ["--stamp 1 --force"]
-    assert chain["claims"] == [2] and chain["cmd"] == "--stamp 1 --force --unblock 2"
-    assert chain["cmd"] == "--stamp 1 --force --unblock 2"
+    assert chain["cmd"] == "--chain C1" and chain["targets"] == {} and chain["claims"] == [1, 2]
+    assert chain["label"] == "approve & merge #1" and chain["merges"] is True  # a bot lead merges on stamp
+    q = run([stampable(1, title="Fix the intro", author="jdoe", author_type="User", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)]), b])
+    chain = next(d for d in q["do_next"] if d["kind"] == "chain")
+    assert chain["label"] == "approve #1, then unblock the next" and chain["merges"] is False
+    assert "the author merges it" in chain["does"] and chain["cmd"] == "--chain C1"
 
 
 def test_directional_conflict_against_aliases_block():
@@ -633,19 +667,35 @@ def test_a_link_only_sweep_is_any_approver_s_because_any_team_may_approve():
     assert "gate:any-team" not in p["reasons"] and "link-fixes:mine" in p["reasons"]
 
 
-def test_a_change_with_no_team_gate_is_any_approver_s():
-    # A tags-only blog edit clears the mechanical bar, so the matrix asks for
-    # no role at all. Routing it would invent a gate the Sentinel doesn't
-    # have, and the chip says why it's on this board.
+def test_a_mechanical_change_is_still_routed_to_its_lane():
+    """There is no ungated row any more.
+
+    A tags-only blog edit clears the mechanical bar, which used to resolve
+    to no required role at all: the row got `gate:none`, went to whoever was
+    looking, and the Sentinel asked nobody to approve it. That rested on the
+    Sentinel being the merge gate — it isn't, and GitHub asked for a review
+    regardless. `none` cells are a config error now, so mechanical and
+    substantive route the same way and only the model review differs.
+    """
     tags = _file("content/blog/p/index.md", ["tags: [kubernetes, aws]"], ["tags: [kubernetes]"])
     p = row(run([stampable(1, labels=["review:no-blockers", "domain:blog"], files=[tags])], cfg=cfg(me=["docs"])), 1)
-    assert p["mechanical"] is True and p["roles"] == []
-    assert p["is_mine"] is True and p["verdict"] == "stamp" and "gate:none" in p["reasons"]
-    assert not any(r.startswith("route:") for r in p["reasons"])
-    # the substantive version of the same lane still routes
+    assert p["mechanical"] is True
+    assert p["roles"] == ["marketing"]
+    assert not any(r == "gate:none" for r in p["reasons"])
+    # the substantive version of the same lane routes identically
     prose = _file("content/blog/p/index.md", ["A new sentence about stacks."], ["An old sentence about stacks."])
     q = row(run([stampable(2, labels=["review:no-blockers", "domain:blog"], files=[prose])], cfg=cfg(me=["docs"])), 2)
-    assert q["roles"] == ["marketing"] and q["verdict"] == "route" and "gate:none" not in q["reasons"]
+    assert q["roles"] == ["marketing"] and q["verdict"] == "route"
+
+
+def test_no_row_ever_reports_an_empty_role_set():
+    """The board-level form of "every PR is routed"."""
+    for files in ([_file("content/docs/a.md", ["a typo fix"], ["a typo fxi"])],
+                  [_file("scripts/lint/x.js", ["// new"], [])],
+                  [_file("layouts/p.html", ["<div/>"], [])],
+                  [_file("whatever.xyz", ["x"], [])]):
+        q = run([stampable(3, labels=["review:no-blockers"], files=files)], cfg=cfg(me=["docs"]))
+        assert row(q, 3)["roles"], files[0]["path"]
 
 
 def test_no_config_file_takes_its_lanes_from_github_teams():
@@ -714,3 +764,604 @@ def test_a_row_summarizes_the_change_not_the_template_boilerplate():
           "body": "_This section is composed deterministically from the selection queue; do not edit it._\n\nRewrites two links.\n",
           "title": "t"}
     assert analyze.one_line_summary(pr) == "Rewrites two links."
+
+
+# ---- every verdict leaves a button --------------------------------------------
+
+
+def assert_every_row_has_a_button(q: dict) -> None:
+    """The invariant the 2026-09-17 audit was about: a `blocked` row with no
+    action is a row nobody can move (#21598 sat invisible that way). The one
+    exception is a row that is the author's turn (`waiting_on_author`), which
+    the board groups with the handed-off ones rather than as a dead end. And
+    a blocked row never carries a stamp: act.py refuses it, and one refusal
+    used to sink the whole batch."""
+    for p in q["prs"]:
+        ids = [a["id"] for a in p.get("actions") or []]
+        assert p["verdict"] in analyze.VERDICTS, p["number"]
+        if p["verdict"] == "blocked" and not p.get("waiting_on_author"):
+            assert ids, (p["number"], p["blockers"], p["reasons"])
+        if p["verdict"] == "blocked":
+            assert not any(i.startswith("stamp") for i in ids), (p["number"], ids)
+        if p.get("author_self"):
+            assert not any(i.startswith("stamp") or i == "request-changes" for i in ids), (p["number"], ids)
+            assert "author:self" in p["reasons"]
+        if p.get("waiting_on_author"):
+            assert not any(i in analyze.DECISION_IDS for i in ids), (p["number"], ids)
+        for a in p.get("actions") or []:
+            assert a["cmd"].startswith("--"), a
+
+
+def _red(name="lint"):
+    return [{"name": name, "status": "completed", "conclusion": "failure"}]
+
+
+CR = lambda who, at="2026-09-12T00:00:00Z", commit_id=None: {  # noqa: E731
+    "user": {"login": who, "type": "User"}, "state": "CHANGES_REQUESTED", "submitted_at": at, "commit_id": commit_id}
+
+
+def test_no_verdict_leaves_the_approver_without_a_button():
+    specs = [
+        fresh(1, mergeable_state="dirty"),
+        fresh(2, title="Red CI", check_runs=_red()),
+        fresh(3, title="Red CI, generated", check_runs=_red(), author="pulumi-bot", author_type="User"),
+        stampable(4, title="Stale", head_sha="f" * 40, files=[_file("content/docs/d.md", ["x"])]),
+        fresh(5, title="Errored", labels=["review:error", "domain:docs"]),
+        fresh(6, title="Running", labels=["review:in-progress", "domain:docs"]),
+        fresh(7, title="Their CR", reviews=[CR("cnunciato")]),
+        stampable(8, title="Open findings", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], files=[_file("content/docs/h.md", ["x"])]),
+        fresh(9, title="Dependabot conflict", author="dependabot[bot]", mergeable_state="dirty", files=[_file("package.json", ["x"])]),
+        fresh(10, title="Fork conflict", author="outsider", author_type="User", head_repo="outsider/docs", mergeable_state="dirty"),
+        fresh(11, title="Mine, red", author="CamSoper", author_type="User", check_runs=_red()),
+        fresh(12, title="Not my lane, dirty", labels=["review:no-blockers", "domain:blog"], mergeable_state="dirty",
+              files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old sentence."])]),
+        fresh(13, title="Sent back, red", reviews=[CR("CamSoper")], check_runs=_red()),
+        fresh(14, title="Clean"),
+    ]
+    q = run(specs, cfg=cfg(me=["docs"]))
+    assert_every_row_has_a_button(q)
+    assert q["counts"]["blocked"] == 12 and q["counts"]["stamp"] == 1 and q["counts"]["waiting-on-author"] == 1, q["counts"]
+    assert {p["number"] for p in q["prs"] if p["verdict"] == "blocked" and not p["waiting_on_author"]} == {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+    assert row(q, 13)["waiting_on_author"] is True and [a["id"] for a in row(q, 13)["actions"]] == ["rerun-checks"]
+
+
+REAL_QUEUE = HERE.parent.parent / ".pr-review-queue.json"
+
+
+def test_the_real_queue_leaves_no_row_without_a_button():
+    """Over the live queue when one is on disk (read-only; a copy is
+    analyzed). Skipped silently where there is none (CI)."""
+    if not REAL_QUEUE.exists():
+        return
+    q = json.loads(REAL_QUEUE.read_text())
+    conf = q.get("config") or {}
+    user_cfg = pr_review_config.parse_config({"me": conf.get("me") or ALL_LANES, "stamp_max_lines": conf.get("stamp_max_lines", 40),
+                                              "stale_date_days": conf.get("stale_date_days", 3)}, source="file")
+    q = analyze.analyze(q, user_cfg, config=routing.load_config(str(routing.DEFAULT_CONFIG_PATH)), aliases=None)
+    assert_every_row_has_a_button(q)
+    assert set(q["counts"]) >= {"waiting-on-author", "handed-off"}
+
+
+def test_red_ci_offers_a_rerun_and_a_send_back_that_names_the_checks():
+    # (one row per run: stampable rows share HEAD_V3, and check runs are keyed by head)
+    q = run([stampable(1, check_runs=_red("lint"))])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and "checks:red" in p["blockers"]
+    acts = {a["id"]: a for a in p["actions"]}
+    assert acts["rerun-checks"]["cmd"] == "--rerun-checks 1" and "lint" in acts["rerun-checks"]["label"]
+    assert acts["request-changes"]["cmd"] == '--request-changes 1 --reason "1=CI is red (lint); please fix the failing checks."'
+    assert "lint" in acts["request-changes"]["label"]
+    card = next(c for c in q["do_next"] if c["kind"] == "rerun-checks")
+    assert card["cmd"] == "--rerun-checks 1" and card["targets"] == {"1": "--rerun-checks 1"} and card["label"] == "re-run failed checks"
+    # a workflow-authored row has nobody to send it back to
+    g = row(run([stampable(2, check_runs=_red("build"), author="pulumi-bot", author_type="User")]), 2)
+    ids = [a["id"] for a in g["actions"]]
+    assert "rerun-checks" in ids and "close" in ids and "request-changes" not in ids
+
+
+def test_a_red_sentinel_alone_is_not_red_ci():
+    # The Sentinel concludes failure until an approval exists; act.py's
+    # preflight leaves it out, and so does the board. #21598's own shape.
+    p = row(run([stampable(1, check_runs=_red("sentinel"))]), 1)
+    assert p["verdict"] == "stamp" and "checks:sentinel:failing" in p["reasons"] and "checks:red" not in p["blockers"]
+    p = row(run([stampable(1, check_runs=_red("sentinel") + _red("lint"))]), 1)
+    assert p["verdict"] == "blocked" and "checks:red:lint" in p["reasons"]
+
+
+def test_own_changes_requested_is_not_a_blocker_and_waits_on_the_author():
+    """The approver's own CR is superseded by the approval about to post
+    (act.py ignores it in the preflight); the row is the author's turn until
+    they push, and the board must not show it as blocked with nothing to do."""
+    head = HEAD_V3
+    q = run([stampable(1, reviews=[CR("CamSoper", commit_id=head)]),
+             stampable(2, title="Pushed since", reviews=[CR("CamSoper", commit_id="0" * 40)], files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Older collect", reviews=[CR("CamSoper")], files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Generated", reviews=[CR("CamSoper", commit_id=head)], author="pulumi-bot", author_type="User",
+                       files=[_file("content/docs/d.md", ["x"])]),
+             stampable(5, title="Open findings", reviews=[CR("CamSoper", commit_id=head)], comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       files=[_file("content/docs/e.md", ["x"])])])
+    p = row(q, 1)
+    assert p["verdict"] == "stamp" and "changes-requested" not in p["blockers"] and "merging-over:changes-requested:CamSoper" not in p["reasons"]
+    assert "sent-back:2026-09-12" in p["reasons"] and p["sent_back"] == {"at": "2026-09-12", "by": "CamSoper", "commit_id": head, "head_moved": False}
+    assert p["waiting_on_author"] is True and p["actions"] == []  # no decision: it is the author's turn
+    # the head moved since the send-back: the row is live again, decisions and all
+    p = row(q, 2)
+    assert p["waiting_on_author"] is False and p["sent_back"]["head_moved"] is True and p["actions"][0]["cmd"] == "--stamp 2"
+    # a review with no commit_id (an older collect) never guesses "they pushed"
+    assert row(q, 3)["waiting_on_author"] is True
+    # a workflow author never answers, so there is nobody to wait on
+    g = row(q, 4)
+    assert g["waiting_on_author"] is False and "sent-back:2026-09-12" in g["reasons"] and [a["id"] for a in g["actions"][:2]] == ["stamp", "stamp-no-merge"]
+    # open findings + my own send-back: blocked, waiting, and no second send-back
+    b = row(q, 5)
+    assert b["verdict"] == "blocked" and b["waiting_on_author"] is True and "request-changes" not in [a["id"] for a in b["actions"]]
+    assert q["counts"] == {"stamp": 2, "judge": 0, "route": 0, "blocked": 0, "handed-off": 0, "waiting-on-author": 3}
+    # waiting rows sit out of the decision cards
+    assert not any(c["kind"] == "stamp" and "1" in c["targets"] for c in q["do_next"])
+    assert_every_row_has_a_button(q)
+
+
+def test_unblock_is_replaced_where_act_refuses_to_push():
+    q = run([stampable(1, author="dependabot[bot]", mergeable_state="dirty", files=[_file("package.json", ["x"])]),
+             stampable(2, title="Fork", author="outsider", author_type="User", head_repo="outsider/docs", mergeable_state="dirty",
+                       files=[_file("content/docs/b.md", ["x"])]),
+             stampable(3, title="Regen", author="pulumi-bot", author_type="User", labels=["review:no-blockers", "automation/merge"],
+                       mergeable_state="dirty", files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Pushable", mergeable_state="dirty", files=[_file("content/docs/d.md", ["x"])])])
+    import act  # noqa: PLC0415
+    for n, why in ((1, "dependabot"), (2, "fork"), (3, "generated")):
+        p = row(q, n)
+        assert p["verdict"] == "blocked" and f"unblock:refused:{why}" in p["reasons"], p["reasons"]
+        assert not any(a["id"] == "unblock" for a in p["actions"]), p["actions"]
+        assert act.push_allowed(p)[0] is False  # the board and the act layer agree
+    assert [a["id"] for a in row(q, 1)["actions"]] == ["close"]
+    assert row(q, 2)["actions"][0]["cmd"] == '--request-changes 2 --reason "2=This branch conflicts with master and can\'t be updated from here; please merge master into it."'
+    assert [a["cmd"] for a in row(q, 4)["actions"]] == ["--unblock 4"] and "unblock:refused" not in " ".join(row(q, 4)["reasons"])
+
+
+def test_a_blocked_row_never_carries_approve_anyway():
+    # A route row offers "approve anyway"; the same lane's blocked row must
+    # not, because act.py refuses a stamp on a blocked row and the refusal
+    # used to sink the batch.
+    blog = dict(labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old one."])])
+    q = run([stampable(1, **blog), stampable(2, title="Dirty", mergeable_state="dirty", **blog)], cfg=cfg(me=["docs"]))
+    ids = lambda n: [a["id"] for a in row(q, n)["actions"] if a["id"] != "render"]  # noqa: E731
+    assert row(q, 1)["verdict"] == "route" and ids(1) == ["route", "stamp", "stamp-no-merge"]
+    assert row(q, 2)["verdict"] == "blocked" and ids(2) == ["unblock", "route"]
+
+
+def test_someone_elses_changes_requested_asks_them_to_re_review():
+    p = row(run([stampable(1, reviews=[CR("cnunciato")])]), 1)
+    assert p["verdict"] == "blocked" and "changes-requested" in p["blockers"]
+    assert [a["cmd"] for a in p["actions"]] == ["--route 1:@cnunciato"] and p["route_targets"] == ["@cnunciato"]
+    # on a routed row the lane team rides along in the same request
+    blog = dict(labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["A new sentence."], ["An old one."])])
+    p = row(run([stampable(2, reviews=[CR("jdoe")], **blog)], cfg=cfg(me=["docs"]), teams={"pulumi/docs-marketing-review": True}), 2)
+    assert p["route_targets"] == ["@jdoe", "@pulumi/docs-marketing-review"]
+    assert p["actions"][0]["cmd"] == "--route 2:@jdoe --route 2:@pulumi/docs-marketing-review"
+
+
+def test_my_own_pr_routes_to_the_lane_team():
+    """GitHub rejects an approval or a send-back on your own PR (422), so
+    the row takes neither; it routes, and points at /address-review."""
+    q = run([stampable(1, author="camsoper", author_type="User"),
+             stampable(2, title="Mine, blocked", author="CamSoper", author_type="User", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       files=[_file("content/docs/b.md", ["x"])])], teams={"pulumi/docs-guild": True})
+    p = row(q, 1)
+    assert p["verdict"] == "route" and p["author_self"] is True and "author:self" in p["reasons"] and p["is_mine"] is False
+    assert [a["cmd"] for a in p["actions"] if a["id"] != "render"] == ["--route 1:@pulumi/docs-guild"]
+    assert "/address-review 1" in p["self_note"]
+    b = row(q, 2)
+    assert b["verdict"] == "blocked" and [a["id"] for a in b["actions"]] == ["route"]
+    # the judge step can't recommend a send-back on my own PR
+    analyze.merge_judgments(q, {1: {"recommended": "request-changes"}})
+    assert "recommended" not in row(q, 1) and row(q, 1)["rejected_recommendation"].startswith("request-changes:")
+    assert_every_row_has_a_button(q)
+
+
+def test_directional_conflicts_count_net_links_per_url():
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        page = root / "content" / "docs" / "new" / "_index.md"
+        page.parent.mkdir(parents=True)
+        page.write_text("---\ntitle: New\naliases:\n  - /docs/old/\n---\nbody\n")
+        # #1 rewrites a sentence that carries the alias link untouched: the
+        # link is in both the added and the removed set, net zero
+        rewrite = stampable(1, title="Reword", files=[_file("content/blog/p/index.md", ["See [x](/docs/old/) for more detail."], ["See [x](/docs/old/) for detail."])])
+        removes = stampable(2, title="Repoint", files=[_file("content/blog/q/index.md", ["see [x](/docs/new/)"], ["see [x](/docs/old/)"])])
+        adds = stampable(3, title="Add", files=[_file("content/blog/r/index.md", ["see [x](/docs/old/) and [y](/docs/old/)"], ["see [y](/docs/old/)"])])
+        q = run([rewrite, removes, adds], aliases=None, repo_root=root)
+    assert q["directional"] == [{"path": "/docs/old/", "adds_links_pr": 3, "removes_links_pr": 2, "theirs": False}]
+    assert row(q, 1)["verdict"] == "stamp" and not any(r.startswith("directional:") for r in row(q, 1)["reasons"])
+    assert analyze.net_link_changes(row(q, 3))["/docs/old/"] == 1 and analyze.net_link_changes(row(q, 1))["/docs/old/"] == 0
+
+
+def test_cluster_mine_is_my_rows_and_next_overlaps_first():
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y", "yy"], ["o"], old_start=10)])
+    # smaller than #2, so it sorts before it in the merge order, but its hunk
+    # is nowhere near #1's: it is not the link the first merge will dirty
+    c = stampable(3, title="Trim the appendix", files=[_file("content/docs/a.md", ["z"], ["p"], old_start=200)])
+    # my own PR routes (GitHub won't take my approval): it overlaps #1 but
+    # must neither gate it nor lead the chain
+    d = stampable(4, title="My rewrite", author="CamSoper", author_type="User", files=[_file("content/docs/a.md", ["w"], ["o"], old_start=10)])
+    q = run([a, b, c, d], cfg=cfg(me=["docs"]))
+    cl = q["clusters"][0]
+    assert cl["prs"] == [1, 2, 3, 4] and cl["mine"] == [1, 2, 3] and cl["theirs"] == [4] and cl["merge_order"] == [1, 3, 2]
+    assert row(q, 4)["verdict"] == "route" and "cluster:C1:theirs" in row(q, 4)["reasons"]
+    assert "cluster:C1:overlap:1/3" in row(q, 1)["reasons"] and "cluster:C1:same-file" in row(q, 3)["reasons"]
+    rec = cl["recommendation"]
+    assert rec["kind"] == "chain" and rec["first"] == 1 and rec["next"] == 2 and rec["cmd"] == "--chain C1"
+    # an overlap with a routed row alone is advisory: #1 stamps once #2 is out of the picture
+    q = run([a, d], cfg=cfg(me=["docs"]))
+    assert row(q, 1)["verdict"] == "stamp" and "cluster:C1:theirs" in row(q, 1)["reasons"]
+    assert q["clusters"][0]["recommendation"]["say"] == "C1: nothing of yours to sequence (to route 1)."
+    # a cluster whose members are all mine but none can lead says what they are
+    q = run([stampable(1, title="Fix the intro", mergeable_state="dirty", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)]),
+             stampable(2, title="Reword the intro", reviews=[CR("CamSoper", commit_id=HEAD_V3)], files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])])
+    assert q["clusters"][0]["recommendation"]["say"] == "C1: none of your 2 PRs can lead the chain yet (waiting on author 1, blocked 1); unblock one to start."
+
+
+def test_no_config_tells_unreadable_teams_from_being_on_none():
+    defaults = lambda: pr_review_config.parse_config({}, source="defaults")  # noqa: E731
+    blog = stampable(2, title="Blog", labels=["review:no-blockers", "domain:blog"], files=[_file("content/blog/p/index.md", ["A new sentence."], ["Old."])])
+    # readable, on none of the teams: no lane is mine, every gated row routes
+    q = run([stampable(1), blog], cfg=defaults(), my_teams={"pulumi/docs-guild": False, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": False})
+    assert q["config"]["me"] == [] and q["config"]["source"] == "github-teams"
+    assert "none of the routing teams" in q["config"]["warnings"][0] and "404" in q["config"]["warnings"][0]
+    assert row(q, 1)["verdict"] == "route" and row(q, 2)["verdict"] == "route"
+    # unreadable: every lane, and the warning says why
+    q = run([stampable(1)], cfg=defaults(), my_teams={"pulumi/docs-guild": None, "pulumi/docs-marketing-review": None, "pulumi/docs-tools": None})
+    assert set(q["config"]["me"]) == set(routing.SUBJECTS) and q["config"]["source"] == "defaults"
+    assert "unreadable" in q["config"]["warnings"][0]
+    # a partial read is still evidence, and names what it couldn't read
+    q = run([stampable(1)], cfg=defaults(), my_teams={"pulumi/docs-guild": True, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": None})
+    assert q["config"]["me"] == ["docs", "programs"] and "pulumi/docs-tools unreadable" in q["config"]["warnings"][0]
+    assert pr_review_config.lanes_from_teams({}, CONFIG) is None
+    assert pr_review_config.lanes_from_teams({"pulumi/docs-guild": False, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": False}, CONFIG) == []
+
+
+def test_judged_blockers_lift_the_row_out_of_blocked():
+    """SKILL: judging the row is what lets the stamp post the /resolve lines.
+    So a row whose every open 🚨 has a resolvable judgment with a note is an
+    approver's call again; one judgment short and it stays blocked."""
+    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
+    js = [{"finding_id": f, "disposition": d, "note": "checked; holds"} for f, d in (("F1", "refuted"), ("F2", "accepted"), ("F3", "not-applicable"))]
+    analyze.merge_judgments(q, {1: {"judgments": js[:2], "recommended": "stamp"}})
+    assert p["verdict"] == "blocked" and p["open_blocker_ids"] == ["F3"] and "recommended" not in p
+    assert p["rejected_recommendation"] == "stamp: the row is blocked, not judge"
+    analyze.merge_judgments(q, {1: {"judgments": js, "recommended": "stamp"}})
+    assert p["verdict"] == "judge" and p["open_blocker_ids"] == [] and p["judged_blocker_ids"] == ["F1", "F2", "F3"]
+    assert "outstanding:judged:F1,F2,F3" in p["reasons"] and p["recommended"] == "stamp"
+    assert [a["cmd"] for a in p["actions"][:2]] == ["--stamp 1 --force", "--stamp 1:no-merge --force"]
+    assert q["counts"]["judge"] == 1 and q["counts"]["blocked"] == 0
+    # `deferred` is the author's, and a judgment without a note posts nothing: neither answers
+    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "deferred", "note": "theirs"}]}})
+    assert p["verdict"] == "blocked"
+    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "refuted"}]}})
+    assert p["verdict"] == "blocked"
+    # red CI still holds a fully judged row
+    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], check_runs=_red())])
+    analyze.merge_judgments(q, {1: {"judgments": js}})
+    assert row(q, 1)["verdict"] == "blocked" and row(q, 1)["blockers"] == ["checks:red"]
+
+
+def test_close_and_route_recommendations_add_their_buttons():
+    judge = dict(comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)])
+    q = run([stampable(1, **judge),
+             stampable(2, title="Generated", author="pulumi-bot", author_type="User", files=[_file("content/docs/b.md", ["x"])], **judge),
+             stampable(3, title="Route me", files=[_file("content/docs/c.md", ["x"])], **judge)], teams={"pulumi/docs-guild": True})
+    # a person's close needs a reason, written from the judgments' asks
+    analyze.merge_judgments(q, {1: {"recommended": "close", "judgments": [{"finding_id": "F4", "ask": "Drop the claim.", "disposition": "deferred"}]}})
+    p = row(q, 1)
+    assert p["recommended"] == "close" and [a["cmd"] for a in p["actions"] if a["id"] == "close"] == ['--close 1 --reason "1=Drop the claim."']
+    assert next(c for c in q["do_next"] if c["kind"] == "close")["targets"] == {"1": '--close 1 --reason "1=Drop the claim."'}
+    # ...and without one the recommendation is rejected rather than rendered as a button that fails
+    analyze.merge_judgments(q, {1: {"recommended": "close", "judgments": []}})
+    assert "recommended" not in p and p["rejected_recommendation"].startswith("close:")
+    # a generated row already carries the close; act.py writes its comment
+    analyze.merge_judgments(q, {2: {"recommended": "close"}})
+    assert row(q, 2)["recommended"] == "close" and [a["cmd"] for a in row(q, 2)["actions"] if a["id"] == "close"] == ["--close 2"]
+    # route on a row in my lane: the lane's own team is the target
+    analyze.merge_judgments(q, {3: {"recommended": "route"}})
+    r = row(q, 3)
+    assert r["recommended"] == "route" and [a["cmd"] for a in r["actions"] if a["id"] == "route"] == ["--route 3:@pulumi/docs-guild"]
+    assert r["route_targets"] == ["@pulumi/docs-guild"]
+
+
+def test_base_merge_satisfies_the_label_gate_from_the_card():
+    merged = dict(head_sha="f" * 40, commits=[{"sha": HEAD_V3, "message": "x"}, {"sha": "f" * 40, "message": "Merge master", "parents": 2}])
+    # the push swapped review:no-blockers for review:stale; the card still says nothing blocks
+    p = row(run([stampable(1, labels=["review:stale", "domain:docs"], **merged)]), 1)
+    assert p["verdict"] == "stamp" and "label:card-clean" in p["reasons"] and "review:base-merged" in p["reasons"]
+    # an open ⚠️ on the card: the label can't be inferred, so the refresh is offered
+    p = row(run([stampable(2, labels=["review:stale", "domain:docs"], comments=[comment(V3_BRIEF), comment(CLEAN_AUTHOR)], **merged)]), 2)
+    assert p["verdict"] == "judge" and "label:card-clean" not in p["reasons"]
+    assert [a["cmd"] for a in p["actions"] if a["id"] == "refresh"] == ["--refresh 2"]
+
+
+def test_route_asks_every_missing_team_in_one_command():
+    files = [_file("content/docs/a.md", ["A new sentence."], ["Old."]), _file("content/blog/p/index.md", ["A new sentence."], ["Old."])]
+    q = run([stampable(1, labels=["review:no-blockers", "domain:mixed"], files=files)], cfg=cfg(me=["infra"]),
+            teams={"pulumi/docs-guild": True, "pulumi/docs-marketing-review": True})
+    p = row(q, 1)
+    a = p["actions"][0]
+    assert a["cmd"] == "--route 1:@pulumi/docs-marketing-review --route 1:@pulumi/docs-guild" and a["targets"] == p["route_targets"]
+    assert a["label"] == "request review from @pulumi/docs-marketing-review and @pulumi/docs-guild"
+    assert "route:docs-guild" in p["reasons"] and "route:marketing" in p["reasons"]
+    card = next(c for c in q["do_next"] if c["kind"] == "route")
+    assert card["cmd"] == a["cmd"] and card["label"] == "route to @pulumi/docs-marketing-review and @pulumi/docs-guild"
+    # one domain in `me` makes the whole PR mine (intersection, not
+    # containment), so there is no "partly routed" row: a route asks every
+    # owning role, and a mine row asks none
+    p = row(run([stampable(1, labels=["review:no-blockers", "domain:mixed"], files=files)], cfg=cfg(me=["docs"]),
+                teams={"pulumi/docs-guild": True, "pulumi/docs-marketing-review": True}), 1)
+    assert p["verdict"] == "stamp" and p["route_targets"] == []
+
+
+# ---- the opening moves: row buttons and the --terminal list ---------------------
+
+
+def test_the_chain_card_never_offers_an_approval_that_needs_reading():
+    """`--chain C1` approves the lead with `--force`, so the card may only
+    offer it where the collision is the *only* thing holding that row back.
+    An overlapping cluster member is always a `judge` row — the overlap is
+    itself a stamp gate — so the verdict cannot answer this; `gate_fails`
+    can."""
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([a, b])
+    lead = row(q, 1)
+    assert lead["verdict"] == "judge" and lead["gate_fails"] == ["cluster:C1:overlap:1/2"]
+    assert analyze.only_collisions_hold(lead) is True
+    chain = next(c for c in q["do_next"] if c["kind"] == "chain")
+    assert chain["cmd"] == "--chain C1" and chain["claims"] == [1, 2] and chain["label"] == "approve & merge #1"
+
+    # Same cluster, same lead, but heightened scrutiny on it: approving that
+    # is a call somebody has to make, so the card says so and carries no
+    # button. (Merge order is smallest diff first, so #1 still leads.)
+    a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
+                   commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                   files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([a2, b])
+    lead = row(q, 1)
+    assert lead["gate_fails"] == ["scrutiny:heightened", "cluster:C1:overlap:1/2"]
+    assert analyze.only_collisions_hold(lead) is False
+    chain = next(c for c in q["do_next"] if c["kind"] == "chain")
+    assert chain["cmd"] is None and chain["claims"] == [] and chain["targets"] == {}
+    assert "#1 leads the chain, but it needs a call of its own first (scrutiny:heightened)" in chain["does"]
+    # and the row itself still carries the decision, which is the whole point
+    assert "stamp" in [x["id"] for x in lead["actions"]]
+
+
+def test_the_cluster_moves_are_row_buttons():
+    """The board has no batch strip, so a cluster's recommendation is a
+    button on the row it belongs to: the chain on its lead (covering the
+    next link), the consolidation on the newest sweep. Both are decisions,
+    both rebuild with the rows, and neither lands on a row that is not on
+    the board."""
+    a = stampable(1, title="Fix the intro", files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    b = stampable(2, title="Reword the intro", files=[_file("content/docs/a.md", ["y"], ["o"], old_start=10)])
+    q = run([a, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["cmd"] == "--chain C1" and chain["covers"] == [2] and chain["cluster"] == "C1"
+    assert chain["label"] == "approve & merge, then unblock #2" and "merges master into #2" in chain["help"]
+    assert "chain" in analyze.DECISION_IDS and "consolidate" in analyze.DECISION_IDS
+    assert not any(x["id"] == "chain" for x in row(q, 2)["actions"])
+    # A human-authored lead is approved without merging, so act.py's
+    # `requires=["stamp", first]` skips the unblock and #2 is untouched this
+    # run: the chain covers nothing, or the board would mark #2 decided for a
+    # write that never happens.
+    human = stampable(1, title="Fix the intro", author="jdoe", author_type="User",
+                      files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([human, b])
+    chain = row(q, 1)["actions"][0]
+    assert chain["id"] == "chain" and chain["covers"] == []
+    assert chain["label"] == "approve, then unblock #2" and "the next run merges master" in chain["help"]
+    # a lead held by more than the collision carries no chain
+    a2 = stampable(1, title="Fix the intro", author="human-dev", author_type="User",
+                   commits=["Fix\n\nCo-Authored-By: Claude <noreply@anthropic.com>"],
+                   files=[_file("content/docs/a.md", ["x"], ["o"], old_start=10)])
+    q = run([a2, b])
+    assert not any(x["id"] == "chain" for x in row(q, 1)["actions"])
+    # merge_judgments rebuilds the touched row, and the chain comes back
+    # with it -- and moves if the judgment changed which member can lead
+    q = run([a, b])
+    analyze.merge_judgments(q, {1: {"recommended": "stamp"}})
+    assert row(q, 1)["actions"][0]["id"] == "chain"
+    # idempotent: a second attach does not stack a second button
+    analyze.attach_cluster_actions(q["prs"], q["clusters"])
+    assert [x["id"] for x in row(q, 1)["actions"]].count("chain") == 1
+    # a consolidation lands on the newest sweep, carrying the request
+    q = run([stampable(i, title=f"Sweep {i}", files=[_file("content/docs/a.md", [f"x{i}"], ["o"], old_start=10)]) for i in range(1, 10)])
+    c = q["clusters"][0]
+    assert c["recommendation"]["kind"] == "consolidate" and c["recommendation"]["on"] == 9
+    act = row(q, 9)["actions"][0]
+    assert act["id"] == "consolidate" and act["cmd"] == c["recommendation"]["cmd"] and act["cluster"] == "C1"
+    assert act["label"] == f"ask {c['recommendation']['target']} for one consolidated PR" and "Nothing merges" in act["help"]
+    assert not any(x["id"] == "consolidate" for n in range(1, 9) for x in row(q, n)["actions"])
+    assert not any(x["id"] == "chain" for n in range(1, 10) for x in row(q, n)["actions"])
+
+
+def test_do_next_cards_only_name_rows_the_board_renders():
+    """A card presses the row buttons it names. A row parked under "Waiting
+    on the author" has no row on the board at all, so a card naming one could
+    be clicked and would go straight back out — "the group buttons don't
+    light up". Cards are built from the board's own row set now."""
+    specs = [
+        fresh(1, mergeable_state="dirty"),
+        fresh(2, title="Red CI", check_runs=_red()),
+        fresh(13, title="Sent back, red", reviews=[CR("CamSoper")], check_runs=_red()),
+        fresh(14, title="Clean"),
+    ]
+    q = run(specs, cfg=cfg(me=["docs"]))
+    parked = {p["number"] for p in q["prs"] if p.get("handed_off") or p.get("waiting_on_author")}
+    on_board = {p["number"] for p in q["prs"]} - parked
+    # #13 is waiting on its author and off the board, but still carries the
+    # action a card would have reached for.
+    assert parked == {13} and [a["id"] for a in row(q, 13)["actions"]] == ["rerun-checks"]
+    for card in q["do_next"]:
+        named = {int(t) for t in (card.get("targets") or {})} | set(card.get("claims") or [])
+        assert named <= on_board, (card["kind"], named - on_board)
+    rerun = next(c for c in q["do_next"] if c["kind"] == "rerun-checks")
+    assert set(rerun["targets"]) == {"2"}
+
+
+def test_the_stamp_card_is_only_ever_the_mechanically_stampable_rows():
+    """"Approve the set" is the one batch approval the opening offers, and it
+    is offered because nothing on those rows needed reading. A judge row that
+    the judge pass would approve stays on its own row."""
+    q = run([stampable(1), stampable(2, title="Open findings", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                                     files=[_file("content/docs/b.md", ["x"])])])
+    q = analyze.merge_judgments(q, {"2": {"recommended": "stamp"}}, ctx=q.get("_ctx"))
+    card = next(c for c in q["do_next"] if c["kind"] == "stamp")
+    assert set(card["targets"]) == {"1"} and row(q, 1)["verdict"] == "stamp"
+    assert all(row(q, int(n))["verdict"] == "stamp" for n in card["targets"])
+
+
+# ---- a stuck workflow PR is always fixable by hand ------------------------------
+
+
+def test_a_stuck_workflow_pr_always_offers_a_hand_fix():
+    """pulumi-bot's content-review lane opens a PR from a workflow run: a
+    send-back is never read and closing it only re-queues the same page next
+    run. Fixing the branch yourself is the remaining way out, so the row
+    always offers it — as an interactive run, never as part of the --act
+    command the board composes."""
+    q = run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    assert p["verdict"] == "blocked" and "author:generated" in p["reasons"]
+    assert [h["id"] for h in p["handoffs"]] == ["handfix"]
+    assert p["handoffs"][0]["run"] == "/address-review 100" and p["handoffs"][0]["label"] == "fix it yourself"
+    assert "3 open findings" in p["handoffs"][0]["why"]
+    # a handoff is not an act.py fragment: nothing here can reach --act
+    assert "cmd" not in p["handoffs"][0]
+
+    # A clean workflow row has nothing to fix, so it offers nothing.
+    assert row(run([stampable(100, author="pulumi-bot", author_type="User")]), 100)["handoffs"] == []
+    # An author who does answer reviews gets the send-back, not the handoff.
+    assert row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                              author="jdoe", author_type="User")]), 100)["handoffs"] == []
+
+
+def test_a_stuck_workflow_pr_can_also_hand_the_findings_to_claude():
+    """The same job by the other route. `/address-review` is a session on
+    your machine; `--ask-fix` is one comment asking the agent already on the
+    PR to fix the findings and refresh the review. It is a write act.py
+    makes, so unlike the handoff it is an ordinary fragment of the batch —
+    and the two are alternatives, which the board enforces by pairing them
+    in one exclusive group."""
+    q = run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User")])
+    p = row(q, 100)
+    ask = next(a for a in p["actions"] if a["id"] == "ask-fix")
+    assert ask["cmd"] == "--ask-fix 100" and ask["exclusive"] == "fix"
+    assert p["handoffs"][0]["exclusive"] == "fix"   # same group: one puts out the other
+    assert "ask-fix" in analyze.DECISION_IDS       # it is the row's way out, not a side action
+
+    # Nothing open, nothing to ask for.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, author="pulumi-bot", author_type="User")]), 100)["actions"])
+    # An author who answers reviews gets the send-back instead, as before.
+    assert not any(a["id"] == "ask-fix"
+                   for a in row(run([stampable(100, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                                               author="jdoe", author_type="User")]), 100)["actions"])
+
+
+def test_a_conflicted_unblock_is_not_offered_twice():
+    """`merge base & retry` on a branch whose base merge already stopped on
+    conflicts is a button that does nothing: act.py aborts the same merge and
+    reports the same files. Once that report is on the PR against this head,
+    the row stops offering it and hands the conflict to the author instead —
+    and a push that moves the head brings the button back, because the
+    record no longer describes the branch."""
+    import act  # noqa: PLC0415
+    report = comment(act.unblock_conflict_body(HEAD_V3, "master", ["content/docs/d.md"]))
+    q = run([stampable(1, mergeable_state="dirty", files=[_file("content/docs/d.md", ["x"])],
+                       comments=[comment(CLEAN_BRIEF), comment(CLEAN_AUTHOR), report]),
+             stampable(2, mergeable_state="dirty", files=[_file("content/docs/e.md", ["x"])])])
+    assert row(q, 1)["unblock_conflict"]["files"] == ["content/docs/d.md"]
+    p = row(q, 1)
+    assert "unblock:refused:conflict" in p["reasons"], p["reasons"]
+    assert not any(a["id"] == "unblock" for a in p["actions"]), p["actions"]
+    assert any(a["id"] == "request-changes" for a in p["actions"]), p["actions"]
+    # the row next to it has no such record, so it keeps the button
+    assert [a["cmd"] for a in row(q, 2)["actions"]] == ["--unblock 2"]
+
+
+def test_a_hand_fix_is_never_offered_where_the_fix_would_be_thrown_away():
+    """Dependabot PRs and the generated-docs regens are rebuilt from source,
+    and a fork head has no push access — `act.push_allowed` already says so,
+    and the handoff follows it rather than promising work that vanishes."""
+    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], author="dependabot[bot]",
+                       files=[_file("package.json", ["x"])]),
+             stampable(2, title="Regen", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User", labels=["review:no-blockers", "automation/merge"],
+                       files=[_file("content/docs/r.md", ["x"])]),
+             stampable(3, title="Content review", comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)],
+                       author="pulumi-bot", author_type="User", files=[_file("content/docs/c.md", ["x"])])])
+    assert row(q, 1)["handoffs"] == [] and row(q, 2)["handoffs"] == []
+    assert [h["run"] for h in row(q, 3)["handoffs"]] == ["/address-review 3"]
+
+
+# ---- a split (multi-comment) legacy review -------------------------------
+
+
+def test_a_split_legacy_review_blocks_the_row_it_used_to_wave_through():
+    """pulumi/docs#21490 end to end. A v2 review split across two comments
+    keeps its 🚨 section on page 2. Reading page 1 alone reported no findings
+    at all, so the row missed `outstanding:` entirely and landed in `judge`,
+    where `--stamp N --force` ("approve as-is & merge") is the primary
+    button. "An unanswered 🚨 is blocked, never --force-able" exists to stop
+    exactly that."""
+    pages = tc.legacy_pages()
+    q = run([stampable(1, comments=[comment(pages[0]), comment(pages[1])],
+                       labels=["review:outstanding-issues", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked", (p["verdict"], p["reasons"])
+    assert "outstanding:3" in p["blockers"]
+    assert set(p["open_blocker_ids"]) == {"outstanding:L12", "outstanding:L40", "outstanding:L61"}
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")]
+    assert_every_row_has_a_button(q)
+
+
+def test_a_legacy_review_with_a_page_missing_is_blocked_not_judged():
+    """GitHub returned page 1 of 3. The findings may simply not be here, so
+    the row is blocked with a fresh review as its unblock — never `judge`,
+    where --force merges over whatever did not arrive."""
+    pages = tc.legacy_pages(total=3)
+    q = run([stampable(1, comments=[comment(pages[0])], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and "review:unreadable" in p["blockers"]
+    # the missing page and the tally it left behind both fire, in one code
+    why = next(r for r in p["reasons"] if r.startswith("review:unreadable:"))
+    assert why == "review:unreadable:pages:2,3;tally:low,outstanding"
+    # the unblock is a decision here, so the row is never "no action available"
+    assert "rerun" in [a["id"] for a in p["actions"]]
+    assert_every_row_has_a_button(q)
+
+
+def test_a_tally_that_outruns_the_parsed_sections_blocks_the_row():
+    """The belt to the paging fix's braces: whatever truncated the body, a
+    card declaring three 🚨 whose sections parsed into none has said outright
+    that findings are missing. The label still says review:no-blockers."""
+    page1 = tc.legacy_pages()[0].replace("<!-- CLAUDE_REVIEW 1/2 -->", "<!-- CLAUDE_REVIEW 1/1 -->")
+    q = run([stampable(1, comments=[comment(page1)], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "blocked" and "review:unreadable" in p["blockers"]
+    assert "review:unreadable:tally:low,outstanding" in p["reasons"]
+    assert not [a["id"] for a in p["actions"] if a["id"].startswith("stamp")]
+
+
+def test_a_review_that_parsed_into_nothing_is_never_stampable():
+    """Weaker than unreadable and not a blocker: a v2 card with no tally
+    table corroborating "no findings". Not blocked — nothing says there are
+    findings — but a person reads it rather than stamping it."""
+    body = "<!-- CLAUDE_REVIEW 1/1 -->\n## Pre-merge Review\n\n<!-- CLAUDE_REVIEW_HEAD %s -->\nLooks fine to me.\n" % HEAD_V3
+    q = run([stampable(1, comments=[comment(body)], labels=["review:no-blockers", "domain:docs"])])
+    p = row(q, 1)
+    assert p["verdict"] == "judge" and "review:parse-confidence:low" in p["gate_fails"]
+    assert "review:unreadable" not in p["blockers"]

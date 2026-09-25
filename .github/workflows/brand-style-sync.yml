@@ -31,7 +31,18 @@ jobs:
     # Upstream only: the fork has no ESC trust policy, so this would fail at the
     # first step and show a weekly red X there. BRAND_SYNC_ENABLED='0' is the
     # kill switch (unset = on), matching the BLOG_REVIEW_COUNT pattern.
-    if: github.repository == 'pulumi/docs' && vars.BRAND_SYNC_ENABLED != '0'
+    #
+    # The variable is wrapped in format('{0}', ...) — do not "simplify" it back
+    # to a bare `vars.BRAND_SYNC_ENABLED != '0'`. An unset variable is null,
+    # and GitHub coerces a Null-vs-String comparison to numbers (null -> 0,
+    # '0' -> 0), so the bare form evaluates 0 != 0 = FALSE and unset silently
+    # means OFF, inverting the default documented above. That bare form is what
+    # this job shipped with, and every scheduled run from 2026-08-31 through
+    # 2026-09-21 skipped on it. format() renders null as '', and '' != '0' is a
+    # string comparison, so unset means ON as intended. Same fix and same note
+    # as blog-review-index.yml, review-existing-content.yml and
+    # claims-reverify.yml.
+    if: github.repository == 'pulumi/docs' && format('{0}', vars.BRAND_SYNC_ENABLED) != '0'
     timeout-minutes: 20
     steps:
       # ESC runs before checkout so the bot token can authenticate the
@@ -122,7 +133,7 @@ jobs:
           # (claude-code-action@v1 has no mcp_config input); its tools are in
           # --allowed-tools. No auth: the server is public.
           claude_args: |
-            --model claude-opus-5 --effort low
+            --model claude-opus-5-5 --effort low
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make lint:*),Bash(make lint-prose:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(sed:*),Bash(awk:*),Bash(jq:*),Bash(diff:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(python3 -c:*)"
 

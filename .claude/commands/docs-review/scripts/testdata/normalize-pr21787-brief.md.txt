@@ -1,0 +1,69 @@
+<!-- CLAUDE_REVIEW_BRIEF -->
+## Reviewer's guide v1 — not for the author
+
+> [!TIP]
+> **This is the reviewer's guide.** Work through the ⚠️ checklist below, then approve — **approving asserts only that the ⚠️ items looked right to you.** Machine-verified this run: links, shortcodes, page metadata, and every claim marked verified (receipts on the evidence page). Code samples are read, not compiled.
+>
+> _PR author: your to-do list is the other review comment, "Author action guide" — nothing on this card is yours._
+
+**Approval needed from:** @pulumi/docs-guild — any member's approval satisfies the merge gate.
+
+<!-- AUTHOR_STATE_BEGIN -->
+**Waiting on the author** — 3 items block merge from the author's own card; you don't need to police them, but check the final diff shows them answered before you approve:
+
+| ID | State | Claim |
+|---|---|---|
+| **F1** | 🚨 open | Pulumi maintains a provider support policy documented at /docs/support/provider-support-policy/ that… |
+| **F2** | 🚨 open | A provider's LTS branch is supported until the next major version ships, for up to 12 months. |
+| **F3** | 🚨 open | ### Engine support  Providers will be compatible with the version of Pulumi they were frozen at unless… |
+<!-- AUTHOR_STATE_END -->
+
+> [!NOTE]
+> **What this PR changes:**
+>
+> - New page `content/docs/support/provider-support-policy.md` states the provider long-term support policy: covered providers, duration, what an LTS release does and doesn't contain, and a summary table.
+> - The support landing page gains a "Provider support policy" card linking to it.
+> - The provider-version FAQ answer is rewritten from "no formal long-term support" to the new policy, and gains a "Learn more" link to the page.
+>
+> The wrongness that would block a reader here is a support commitment the docs state but the company doesn't actually make — a wrong provider list, duration, or set of covered fixes. Each new statement was checked against the policy page itself, the support menu and link targets, and the page was read end to end for structure.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH |  |
+> | facts | MEDIUM | This page *is* the policy, so most of its statements are Pulumi's own commitment and can't be checked against an outside source — only their internal consistency was. Someone who owns the policy should confirm the provider list and the 12-month window. |
+> | coherence | HIGH |  |
+> | cross-sibling consistency | HIGH |  |
+
+### ⚠️ Check these before approving
+
+| ID | Where | Finding |
+|---|---|---|
+| **F2** | `content/docs/support/provider-support-policy.md` L30-32 | The "Duration of long-term support" section says only what the page's opening paragraph and the summary table already say — the same 12-months-or-next-major rule, three times. Not yours to check for correctness; just confirm you're happy with the repetition, or ask the author to drop the standalone section and let the summary table carry the detail. Moved off the author's card because a reader still gets the right answer either way. |
+| **F3** | `content/docs/support/provider-support-policy.md` L34-47 | The "Engine support" heading reads like a new topic, but its one sentence restates an exclusion already in the bulleted "does not contain" list just above it ("Compatibility with newer versions of the Pulumi engine…"). Confirm that's the intended emphasis, or ask for it to be folded into that bullet. Moved off the author's card for the same reason as F2 — presentation, not correctness. |
+
+#### Editorial stances introduced by this PR
+
+*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own framing isn't fact-checkable — but confirm each is a stance the docs should take, and that no agent-written rewrite introduced it unasked.*
+
+- L103 `content/docs/support/faq/infrastructure.md` — *"Pulumi recommends at least quarterly considering updating to the latest minor version on the current major, and minimally reviewing provider release notes."* — positioning (found by llm-atomic)
+- L79 `content/docs/support/faq/infrastructure.md` — *"Pulumi is a declarative tool that uses imperative languages to define your end state."* — positioning (found by llm-atomic)
+
+### ✅ What you can rubber-stamp
+
+- **Facts:** 40 factual claims checked — 39 verified clean, 1 open on the author's card ("Waiting on the author" above).
+- **Mechanics:** frontmatter sweep ran; 4 added internal link(s) resolve; 2 detector finding(s) filed above.
+- **Style:** 1 advisory suggestion(s) left with the author; never blocking.
+
+💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+
+📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+
+<sub>Review v1 · updated 2026-09-21T21:48:09Z · head commit 438cef5</sub>
+
+<!-- CLAUDE_REVIEW_FOOTER -->
+
+---
+
+**For the reviewer:** the ⚠️ items above are the minutes that matter — the receipts for everything machine-verified are on the evidence page. The author's open items live on their own card (the comment headed "Author action guide"); while any are open, a **Waiting on the author** list above tracks them, and merge stays blocked until they're answered. If something here seems off, comment on the PR — `@claude <your point> #update-review` re-adjudicates with your input.

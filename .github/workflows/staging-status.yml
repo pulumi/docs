@@ -1,0 +1,312 @@
+name: Staging deploy status
+
+# Writes the terminal `staging/pulumi-test-io` commit status for a dispatched
+# pulumi-test.io staging deploy — one of the two witnesses Sentinel gate G4
+# reads — and pokes the Sentinel so G4 is re-scored against it.
+#
+# THE `workflow_run` LISTENER IS BEST-EFFORT, AND NOTHING MAY DEPEND ON IT
+# FIRING. `workflow_run` does not fire for a run dispatched with
+# GITHUB_TOKEN, and the auto lane (`staging-deploy-auto.yml` ->
+# `staging-deploy.sh`) dispatches with GITHUB_TOKEN. Measured on 2026-09-17:
+# all 16 runs of this workflow since it landed were master *pushes*
+# (correctly skipped by the job `if`), and not one of the six dispatched
+# PR-branch deploys in the same window produced a run. Re-measured on
+# 2026-09-21 over the whole history: 95 runs, 94 master pushes and one
+# hand-run backfill, against 28 dispatched PR-branch deploys — still zero. A
+# master push cascades because a person's token pushed it; a token-dispatched
+# run does not cascade at all.
+#
+# SO THE SCHEDULE IS THE TRIGGER THAT ACTUALLY FIRES. `sweep` below runs
+# `scripts/review-v3/staging-sweep.py` every 10 minutes and finalizes every
+# dispatched deploy the cascade did not report: it writes the terminal status
+# and pokes the Sentinel with an explicit `pr_number`. That is the writer
+# this header has been asking for in prose since #21696 — a `schedule` is the
+# only trigger immune to BOTH branch age and token provenance. The listener
+# stays because when it does fire it is free latency, and the two converge
+# without coordinating: the sweep skips any SHA whose authorized status
+# already carries the verdict it would write.
+#
+# WHAT THIS FIXES. G4 is evaluated only when the Sentinel runs, and until now
+# nothing re-ran it when a deploy finished — so a PR could sit indefinitely
+# on a red, explicitly NON-WAIVABLE gate whose condition it had already met.
+# PR #21789: deploy green at 22:44, gate still red at 23:04, cleared only by
+# a hand-run `workflow_dispatch` of `review-sentinel.yml`. That manual action
+# is what the sweep automates.
+#
+# THE ONE-LINER THAT LOOKS LIKE THE FIX AND IS NOT: adding "Build and deploy
+# testing" to `review-sentinel.yml`'s own `workflow_run:` list. It is a
+# silent no-op twice over — the cascade that never fires for this listener
+# does not fire for that one either, and `review-sentinel.yml` resolves its
+# PR from `workflow_run.pull_requests[0]`, which a dispatched run's event
+# does not populate. `test_staging_sweep.py` pins it out of that list so the
+# no-op cannot be re-landed as a fix.
+#
+# NOTHING WRITES A PENDING STATUS. A pending status is a promise that
+# something will come back and finalize it, and for as long as an event
+# cascade was the only finalizer nothing could promise that — see the long
+# note in `staging-deploy.sh` for the two incidents (#21676, #21696). The
+# sweep is now exactly the writer that note specifies, so a pending status
+# could come back; it deliberately has not, because G4 reads the run record
+# directly and a pending status buys a reader nothing the run link doesn't.
+#
+# THE OTHER RULE, STILL TRUE: anything that must work for PR branches of ANY
+# AGE lives in a workflow GitHub triggers from the DEFAULT BRANCH —
+# `workflow_run`, `schedule`, `pull_request_target`, or a dispatch pinned to
+# the default ref. A `workflow_dispatch` runs the workflow FILE FROM THE REF
+# IT IS DISPATCHED AT, so a job added to `testing-build-and-deploy.yml` on
+# master does not exist in a run dispatched at a branch cut before it landed.
+# That is what PR #21676 paid for, and why this is not a job inside the
+# dispatched run. `workflow_run` solves branch age; it just does not solve
+# token provenance, which is the half #21696 found.
+#
+# Design notes:
+# - DISPATCHED, NON-DEFAULT-BRANCH RUNS ONLY. A master push deploy is not
+#   anybody's staging evidence and must not have a `staging/pulumi-test-io`
+#   status written at its SHA; a manual dispatch at master is the same. Both
+#   are filtered by the job `if` (and re-checked for the backfill entry,
+#   which takes an arbitrary run id).
+# - THE PR IS RESOLVED BY HEAD BRANCH. `workflow_run.pull_requests[]` is
+#   EMPTY for a run started by workflow_dispatch — the same gap
+#   claude-code-review.yml's publish job works around by poking the Sentinel
+#   explicitly. Head branch is the only handle this event carries, and the
+#   auto lane dispatches at the PR's head branch, so it resolves.
+# - THE STATUS IS WRITTEN EVEN WHEN NO PR RESOLVES. The status belongs to the
+#   SHA, not to the PR; resolving a PR is only needed for the Sentinel poke.
+#   A closed or renamed branch therefore still gets its status recorded.
+# - ONE WRITER, AND NO PENDING ONE. This workflow is the only thing that
+#   writes `staging/pulumi-test-io` at all. `staging-deploy.sh` writes no
+#   status: not a terminal one (this owns that) and no longer a pending one
+#   (nothing can be trusted to finalize it — see above). Its watch path
+#   (`/deploy-staging`, which blocks to hold that lane's `staging-stack`
+#   concurrency group) buys the concurrency group, not a status.
+# - NO PR CODE, EVER. This job holds `statuses: write` and `actions: write`
+#   on a run whose head is PR-controlled. It checks out nothing and runs
+#   nothing from the PR; every fact comes from the API as data. If a script
+#   is ever needed here, pin the checkout to
+#   `github.event.repository.default_branch`, sparse `scripts/review-v3` —
+#   the same shape as staging-deploy-auto.yml. test_sentinel.py enforces it.
+# - NO CONCURRENCY GROUP, for the reason the Sentinel and the auto lane
+#   don't have one: a displaced pending run is a CANCELLED run, and these
+#   finalize a status the merge box shows. Overlapping runs are cheap and
+#   safe — each writes one SHA's status, and two deploys of the same SHA
+#   agree.
+# - `target_url` POINTS AT THE DEPLOYED SITE ON SUCCESS. The Actions run
+#   already has a link in the Sentinel's G4 row; what the merge box is good
+#   for is "show me the thing you deployed". On a failure or a cancellation
+#   there is nothing deployed to look at, so those keep the run link.
+# - THE SWEEP'S IDEMPOTENCE KEY IS THE STATUS ITSELF. It runs every 10
+#   minutes over a 6-hour window, so most of what it scans it has already
+#   handled. A SHA whose AUTHORIZED `staging/pulumi-test-io` status already
+#   equals the verdict the sweep would write is finished: no rewrite, no
+#   re-poke. Keying on the verdict rather than on the mere presence of a
+#   status is what lets a failed deploy's green retry still flip the gate,
+#   and the writer allowlist is what stops anyone with push access from
+#   parking a hand-written status to keep the real one from being recorded.
+#   The poke is sent BEFORE the status write, so a poke that fails is retried
+#   next cycle instead of being sealed off by a status saying "handled".
+# - ONLY A SUCCESS POKES. A failed deploy leaves G4 red, which it already
+#   was; re-scoring tells the PR nothing it is not already showing. Nor does
+#   a SHA that is no longer the PR's head — the push that moved it already
+#   re-ran the Sentinel and already triggered a fresh deploy.
+# - BACKFILL. `workflow_dispatch` with a `run_id` replays the finalize job
+#   against one completed deploy. The sweep has taken over the routine case;
+#   this stays as the hand lever for a specific run, and is how the phantom
+#   pending statuses left by #21676 and #21696 were cleared without spending
+#   eight minutes re-deploying.
+
+on:
+  # The trigger that actually fires. Everything above explains why the two
+  # below cannot be relied on; `scripts/review-v3/staging-sweep.py` finalizes
+  # whatever they missed. Offset off :00 so it doesn't contend with the other
+  # scheduled jobs, and every 10 minutes because G4 blocks a merge: the wait
+  # is bounded by this interval on top of a ~9-minute deploy.
+  schedule:
+    - cron: '7,17,27,37,47,57 * * * *'
+  workflow_run:
+    workflows: ["Build and deploy testing"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Run id of a completed 'Build and deploy testing' dispatch to finalize"
+        required: true
+      pr_number:
+        description: "PR to re-evaluate (optional; resolved from the run's head branch when omitted)"
+        required: false
+
+permissions:
+  contents: read
+  statuses: write
+  pull-requests: read
+  actions: write       # gh workflow run review-sentinel.yml
+
+jobs:
+  finalize:
+    # No concurrency group — see the header.
+    if: >-
+      github.event_name == 'workflow_dispatch'
+      || (github.event.workflow_run.event == 'workflow_dispatch'
+          && github.event.workflow_run.head_branch != github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Resolve the deploy run
+        id: run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_RUN_ID: ${{ inputs.run_id }}
+          WR_ID: ${{ github.event.workflow_run.id }}
+          WR_SHA: ${{ github.event.workflow_run.head_sha }}
+          WR_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          WR_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          WR_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          # pipefail is NOT GitHub's default (`bash -e`), and the jq reads
+          # below are the whole point of the step — a gh failure upstream of
+          # one must not be masked by jq exiting 0 on empty input.
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            # Backfill: the run id is operator-supplied, so re-apply every
+            # guard the workflow_run job `if` applies to the live event.
+            RUN_JSON=$(gh api "repos/$REPO/actions/runs/$INPUT_RUN_ID")
+            RUN_ID="$INPUT_RUN_ID"
+            SHA=$(jq -er .head_sha <<<"$RUN_JSON")
+            BRANCH=$(jq -er .head_branch <<<"$RUN_JSON")
+            CONCLUSION=$(jq -r '.conclusion // ""' <<<"$RUN_JSON")
+            RUN_URL=$(jq -er .html_url <<<"$RUN_JSON")
+            TRIGGER=$(jq -er .event <<<"$RUN_JSON")
+            STATUS=$(jq -er .status <<<"$RUN_JSON")
+            if [ "$TRIGGER" != "workflow_dispatch" ]; then
+              echo "::error::run $RUN_ID was triggered by '$TRIGGER', not workflow_dispatch — it is not staging evidence for a PR"
+              exit 1
+            fi
+            if [ "$STATUS" != "completed" ]; then
+              echo "::error::run $RUN_ID is '$STATUS', not completed — nothing terminal to record yet"
+              exit 1
+            fi
+            if [ "$BRANCH" = "$DEFAULT_BRANCH" ]; then
+              echo "::error::run $RUN_ID deployed '$DEFAULT_BRANCH' — the default branch is not a PR head and gets no staging status"
+              exit 1
+            fi
+          else
+            RUN_ID="$WR_ID"
+            SHA="$WR_SHA"
+            BRANCH="$WR_BRANCH"
+            CONCLUSION="$WR_CONCLUSION"
+            RUN_URL="$WR_URL"
+          fi
+          echo "run $RUN_ID: branch=$BRANCH sha=${SHA:0:9} conclusion=$CONCLUSION"
+          {
+            echo "run_id=$RUN_ID"
+            echo "sha=$SHA"
+            echo "branch=$BRANCH"
+            echo "conclusion=$CONCLUSION"
+            echo "run_url=$RUN_URL"
+          } >> "$GITHUB_OUTPUT"
+
+      # Only the Sentinel poke needs this; the status write does not. An
+      # unresolvable PR is a notice, never a failure.
+      - name: Resolve the PR from the head branch
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ steps.run.outputs.branch }}
+          INPUT_PR: ${{ inputs.pr_number }}
+        run: |
+          set -uo pipefail
+          PR="${INPUT_PR:-}"
+          if [ -z "$PR" ]; then
+            # workflow_run.pull_requests[] is empty for a dispatched run —
+            # see the header. The head branch is the only handle we have.
+            PR=$(gh pr list --repo "$REPO" --head "$BRANCH" --state open \
+                   --json number --jq '.[0].number // empty') || PR=""
+          fi
+          if [ -z "$PR" ]; then
+            echo "::notice::no open PR for branch '$BRANCH' — writing the status, skipping the Sentinel poke"
+          else
+            echo "PR #$PR"
+          fi
+          echo "pr=$PR" >> "$GITHUB_OUTPUT"
+
+      - name: Write the terminal staging status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ steps.run.outputs.sha }}
+          CONCLUSION: ${{ steps.run.outputs.conclusion }}
+          RUN_URL: ${{ steps.run.outputs.run_url }}
+        run: |
+          set -euo pipefail
+          # Same three descriptions the in-run job used, so nothing a reader
+          # or a script has learned to recognize changes. `error` for
+          # cancelled: it is neither a green deploy nor a broken build.
+          case "$CONCLUSION" in
+            success)   STATE=success; DESC="staging deploy green";     URL="https://www.pulumi-test.io" ;;
+            cancelled) STATE=error;   DESC="staging deploy cancelled"; URL="$RUN_URL" ;;
+            *)         STATE=failure; DESC="staging deploy failed";    URL="$RUN_URL" ;;
+          esac
+          gh api --method POST "repos/$REPO/statuses/$SHA" \
+            -f state="$STATE" -f context="staging/pulumi-test-io" \
+            -f target_url="$URL" -f description="$DESC" >/dev/null
+          echo "staging/pulumi-test-io = $STATE at ${SHA:0:9} ($RUN_URL)"
+
+      # G4 is evaluated when the Sentinel runs, and a deploy finishing fires
+      # no PR event — so on #21676 the gate was scored red five minutes
+      # before the deploy went green and stayed red. Poke it, exactly as
+      # claude-code-review.yml's publish job does.
+      - name: Re-evaluate Sentinel
+        if: >-
+          steps.pr.outputs.pr != ''
+          && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ steps.pr.outputs.pr }}
+        run: |
+          set -euo pipefail
+          gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$PR"
+
+  sweep:
+    # The trigger that actually fires — see THE SCHEDULE IS THE TRIGGER in
+    # the header. No concurrency group, for the same reason nothing else
+    # here has one: a displaced pending run is a CANCELLED run.
+    name: Finalize dispatched deploys the cascade never reported
+    if: >-
+      github.event_name == 'schedule'
+      && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Sparse and pinned to the base default branch, the same shape
+      # staging-deploy-auto.yml uses: this job holds `statuses: write` and
+      # `actions: write` over PR-controlled heads and must never run PR code.
+      # staging-sweep.py reads every fact through the API as data.
+      - name: Checkout base (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          sparse-checkout: scripts/review-v3
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # No `pip install`: staging-sweep.py imports gh_client and the stdlib,
+      # nothing else. Keep it that way — this runs 144 times a day.
+      - name: Finalize completed staging deploys
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          python3 scripts/review-v3/staging-sweep.py \
+            --repo "$REPO" --default-branch "$DEFAULT_BRANCH"

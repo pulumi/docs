@@ -16,8 +16,10 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # PRs (links, Vale-named fixes, frontmatter; small churn) arm GitHub
 # auto-merge — master requires an approving review + the build check, so a
 # human approval is still what merges them; judgment-class PRs (claim
-# corrections, readthrough repairs, retirements) open UN-armed and merge only
-# when the PR-review sweep arms them post-approval or a human merges.
+# corrections, retirements) open UN-armed and merge only when the PR-review
+# sweep arms them post-approval or a human merges. Readthrough findings are
+# never applied here: the fix lane banks them and the glow-up lane executes
+# them under human review (publish-gate.py FIX_LANE_BANKED_CATEGORIES).
 #
 # THREE LANES live in this dispatcher, all sharing the weekday cron, the
 # holiday gate, and the CONTENT_REVIEW_COUNT kill switch: the fix lane (below),

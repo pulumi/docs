@@ -115,9 +115,8 @@
 # derivation between them.
 #
 # `calculator.editions` is keyed by edition id and only covers the editions the
-# estimator offers. Free has no bill, and Enterprise requires a sales-led
-# contract. The calculator therefore covers Essentials
-# and Pro only.
+# estimator offers. Free has no bill, so the calculator covers Essentials,
+# Pro, and Enterprise.
 #
 # The metered rates here are the MONTHLY ones — the figure each comparison cell
 # carries as its subtext — even though billing is hourly. Rounding runs in both
@@ -222,12 +221,17 @@ editions:
     name: Enterprise
     card:
       subtitle: Compliance, control, and governance for at-scale operations.
-      price: Custom
-      note: Contract pricing and invoicing
+      price: $2,000
+      price_label: /month
+      unit: "**Includes 2,000 Credits**"
+      note: Up to 4,750 managed resources.
       cta:
+        label: Start with Enterprise
+        href: https://app.pulumi.com/signup?create-organization=1
+        style: primary
+      cta_secondary:
         label: Contact sales
         href: /contact/?form=sales
-        style: primary
       features_intro: "Everything in **Pro**, plus:"
       features:
         - Self-hosting available
@@ -263,6 +267,13 @@ calculator:
       iac_resource_month: 0.365
       esc_secret_month: 0.75
       insights_resource_month: 0.0365
+    enterprise:
+      base_usd: 2000
+      included_credits: 2000
+      included_resources: 4750
+      iac_resource_month: 0.5475
+      esc_secret_month: 1.00
+      insights_resource_month: 0.05475
   # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
   # usage" note. This is a *view* of the rates above, not a second copy of them:
   # `key` names one of the per-edition rates or shared meters, and the card
@@ -285,7 +296,7 @@ calculator:
       - label: 1 IaC resource
         key: iac_resource_month
         suffix: /month
-        from: [pro]
+        from: [pro, enterprise]
       - label: 1 managed secret
         key: esc_secret_month
         suffix: /month
@@ -318,7 +329,9 @@ categories:
           pro:
             content: Starting at $0.0005/hour
             subtext: $0.365/month
-          enterprise: Custom
+          enterprise:
+            content: Starting at $0.00075/hour
+            subtext: $0.5475/month
 
       - id: iac-commitment-pricing
         name: Commitment pricing
@@ -429,7 +442,9 @@ categories:
           pro:
             content: $0.001/hour
             subtext: $0.75/month
-          enterprise: Custom
+          enterprise:
+            content: $0.00137/hour
+            subtext: $1.00/month
 
       - id: esc-plaintext-config-price
         name: Price per plaintext config
@@ -543,7 +558,9 @@ categories:
           pro:
             content: Starting at $0.00005/hour
             subtext: $0.0365/month
-          enterprise: Custom
+          enterprise:
+            content: $0.000075/hour
+            subtext: $0.05475/month
 
       - id: workflow-minutes-price
         name: Workflow cost per minute / included per month
@@ -556,12 +573,12 @@ categories:
 
       - id: resource-search
         name: Resource search
-        link: /docs/discovery-governance/discovery/search/
+        link: /docs/discovery-governance/guides/search-resources/
         available_from: essentials
 
       - id: insights-discovery
         name: Cloud account discovery
-        link: /docs/discovery-governance/discovery/
+        link: /docs/discovery-governance/concepts/discovery/
         available_from: essentials
 
       - id: insights-primary-accounts
@@ -573,27 +590,27 @@ categories:
 
       - id: insights-data-export
         name: Data export
-        link: /docs/discovery-governance/discovery/data-export/
+        link: /docs/discovery-governance/guides/export-resource-data/
         available_from: pro
 
       - id: property-search
         name: Property search
-        link: /docs/discovery-governance/discovery/search/#property-queries
+        link: /docs/discovery-governance/guides/search-resources/#property-queries
         available_from: essentials
 
       - id: policy-enforcement
         name: Policy enforcement
-        link: /docs/discovery-governance/policy/
+        link: /docs/discovery-governance/concepts/policy-as-code/
         requires: essentials
         availability:
           free: Manual
           essentials: Advisory only
-          pro: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
-          enterprise: "[Organization-managed](/docs/discovery-governance/policy/get-started/)"
+          pro: "[Organization-managed](/docs/discovery-governance/get-started/enforce-policy-as-code/)"
+          enterprise: "[Organization-managed](/docs/discovery-governance/get-started/enforce-policy-as-code/)"
 
       - id: preventative-policies
         name: Preventative policies
-        link: /docs/discovery-governance/policy/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-as-code/policy-groups/
         requires: pro
         available_from: pro
         availability:
@@ -601,12 +618,12 @@ categories:
 
       - id: audit-policies
         name: Audit policies
-        link: /docs/discovery-governance/policy/policy-groups/
+        link: /docs/discovery-governance/concepts/policy-as-code/policy-groups/
         available_from: essentials
 
       - id: pre-built-policy-packs
         name: Pre-built policy packs
-        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/guides/pre-built-policy-packs/
         availability:
           essentials: Pulumi Best Practices, AWS Organizations Tag Policies
           pro: Pulumi Best Practices, AWS Organizations Tag Policies
@@ -618,13 +635,13 @@ categories:
       # resolves to Essentials.
       - id: compliance-policy-packs
         name: Compliance policy packs
-        link: /docs/discovery-governance/policy/policy-packs/pre-built-packs/
+        link: /docs/discovery-governance/guides/pre-built-policy-packs/
         available_from: enterprise
         hidden: true
 
       - id: custom-policy-packs
         name: Custom policy packs
-        link: /docs/discovery-governance/policy/policy-packs/authoring/#creating-a-policy-pack
+        link: /docs/discovery-governance/guides/write-a-policy-pack/#creating-a-policy-pack
         availability:
           pro:
             content: Up to 10 packs
@@ -633,7 +650,7 @@ categories:
 
       - id: policy-enforcement-modes
         name: Enforcement modes
-        link: /docs/discovery-governance/policy/#local-policy-execution
+        link: /docs/discovery-governance/concepts/policy-as-code/#local-policy-execution
         availability:
           essentials: Advisory
           pro: Advisory and Mandatory
@@ -641,12 +658,12 @@ categories:
 
       - id: insights-self-hosted
         name: Discovery on self-hosted Pulumi Cloud
-        link: /docs/discovery-governance/self-hosted/
+        link: /docs/discovery-governance/operations/self-hosted/
         available_from: enterprise
 
       - id: context-api
         name: Context API
-        link: /docs/discovery-governance/context-api/
+        link: /docs/discovery-governance/concepts/context-api/
         available_from: pro
         hidden: true
 
@@ -932,8 +949,8 @@ support_plans:
     term: Contact sales
     channels: Chat, support portal, email, and Slack
     coverage: 24 hours/day, 7 days/week
-    urgent_response: Custom SLA
-    normal_response: Custom SLA
+    urgent_response: 1 hour
+    normal_response: 4 hours
     private_slack: true
     workshops: Custom engagement
     health_checks: Custom engagement

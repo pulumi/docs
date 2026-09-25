@@ -45,6 +45,10 @@ VERIFIED = {
          "evidence": "verifier did not converge", "source": "(no source pointer)"},
         {"claim_id": "c2", "text": "TS signature", "verdict": "verified", "confidence": "high",
          "evidence": "matches", "source": "sdk/nodejs/cluster.ts"},
+        {"claim_id": "c6", "line_range": "L60", "text": "The example pins pulumi-aws v4",
+         "verdict": "unverifiable", "confidence": "low", "source_discipline_gate": "own-file-only",
+         "evidence": "[source-discipline gate: author question] pinned v4, latest is v7",
+         "source": "repo:content/docs/iac/concepts/functions/resource-methods.md"},
     ],
 }
 # One mechanical Vale (difficulty qualifier -> fix), one style (passive -> defer).
@@ -54,12 +58,13 @@ VALE = [
     {"file": "x.md", "line": 12, "rule": "Google.Passive", "category": "passive voice",
      "severity": "suggestion", "message": "consider active voice"},
 ]
-# One local_repair (-> fix), one reconception (-> defer).
+# One local_repair, one reconception: both defer (the fix lane banks readthrough).
 READTHROUGH = {
     "ran": True,
     "findings": [
         {"line_range": "L40", "failure_mode": "missing-step", "anchor_quote": "run pulumi up",
-         "fix_class": "local_repair", "proposed_fix": "add a login step before L40"},
+         "fix_class": "local_repair", "severity_hint": "blocker",
+         "proposed_fix": "add a login step before L40"},
         {"line_range": "L1-90", "failure_mode": "purpose-mismatch", "anchor_quote": "Configure access",
          "fix_class": "reconception", "proposed_fix": "split architecture half into its own page"},
     ],
@@ -86,14 +91,21 @@ check("provenance shows real visits", "384 monthly visits" in out)
 # High-confidence findings land as fix stubs.
 check("contradicted high-confidence claim -> fix row", "c3" in out.split("## Findings not applied")[0])
 check("mechanical Vale -> fix row", "difficulty qualifier" in out.split("## Findings not applied")[0])
-check("local_repair readthrough -> fix row", "missing-step" in out.split("## Findings not applied")[0])
+check("local_repair readthrough is NOT a fix row", "missing-step" not in out.split("## Findings not applied")[0])
 check("alias collision -> fix row", "alias collision" in out.split("## Findings not applied")[0])
 
 # Judgment-level findings land as deferral stubs.
 deferral_block = out.split("## Findings not applied")[1].split("## Screenshot")[0]
 check("unverifiable claim -> deferral", "c5" in deferral_block)
+check("gated unverifiable -> labelled as an author question, not a plain unverifiable",
+      "c6" in deferral_block and "no independent source; author question" in deferral_block)
 check("style Vale -> deferral", "passive voice" in deferral_block)
 check("reconception readthrough -> deferral", "purpose-mismatch" in deferral_block)
+check("local_repair readthrough -> deferral", "missing-step" in deferral_block)
+_rt = [f for f in c.collect(None, None, READTHROUGH, None)[0] if f["category"] == "readthrough"]
+check("readthrough findings are never fix candidates", _rt and not any(f["fix"] for f in _rt))
+check("readthrough severity_hint rides onto the finding",
+      [f["severity"] for f in _rt] == ["blocker", ""])
 check("legacy menu parent -> deferral", "menu parent" in deferral_block)
 
 # TODO markers for the model to fill; lint placeholder for the gate to stamp.
@@ -109,7 +121,7 @@ check("lint hint rides in an HTML comment", "<!--" in lint_line.split(c.LINT_PLA
 check("lint label is make-lint-only (no make build)", "make build`:" not in lint_line)
 
 # Verification inventory is deterministic.
-check("inventory counts verdicts", "3 verdict(s); 1 contradicted/mismatch, 1 unverifiable" in out)
+check("inventory counts verdicts", "4 verdict(s); 1 contradicted/mismatch, 2 unverifiable" in out)
 
 # Graceful degradation: all artifacts missing still yields a valid full draft.
 bare = c.compose(QUEUE, None, None, None, None)

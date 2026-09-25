@@ -1475,6 +1475,10 @@ Not all [resource options](/docs/iac/concepts/resources/options/) apply to compo
 
 The `providers` option is the most common reason to pass options to a component instance — it flows the consumer's chosen provider configuration through to every child resource the component creates. See the [`providers` resource option](/docs/iac/concepts/resources/options/providers/) for details and a worked example targeting one component at multiple provider configurations from a single program.
 
+## Evolving a component
+
+When a new component version changes how its children are represented in state, use [state migrations](/docs/iac/guides/building-extending/components/state-migrations/) to translate the prior state before Pulumi calculates changes. For changes to resource names or parents that do not require translating saved properties, use [aliases](/docs/iac/concepts/resources/options/aliases/).
+
 ## Next steps
 
 Now that you've written a component, the next step is to package it so it can be installed and used from any Pulumi program in any supported language.

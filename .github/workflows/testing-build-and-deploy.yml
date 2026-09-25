@@ -52,7 +52,9 @@ jobs:
         run: |
           S5CMD_VERSION="2.3.0"
           S5CMD_SHA256="de0fdbfa3aceae55e069ba81a0fc17b2026567637603734a387b2fca06c299b4"
-          curl -fsSL -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/s5cmd.tar.gz "https://github.com/peak/s5cmd/releases/download/v${S5CMD_VERSION}/s5cmd_${S5CMD_VERSION}_Linux-64bit.tar.gz"
           echo "${S5CMD_SHA256}  /tmp/s5cmd.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin s5cmd -f /tmp/s5cmd.tar.gz
           rm /tmp/s5cmd.tar.gz
@@ -61,7 +63,9 @@ jobs:
         run: |
           VALE_VERSION="3.14.1"
           VALE_SHA256="ff2b49ffaa9dcd246fd5008f03ff67746d2790b75bf4d3657e2fb9530fb96db3"
-          curl -fsSL -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl -fsSL --retry 3 --retry-all-errors --retry-delay 5 \
+            --retry-max-time 300 --connect-timeout 10 --max-time 120 \
+            -o /tmp/vale.tar.gz "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
@@ -140,36 +144,19 @@ jobs:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
   # A dispatched run is somebody's staging evidence: `staging-deploy.sh`
-  # writes a pending `staging/pulumi-test-io` status at this SHA and, in the
-  # unattended lane, exits without waiting. Resolving that status is this
-  # run's own job — nothing else knows when the deploy finished, and a
-  # pending status that never lands is worse than no status at all.
-  # Sentinel gate G4 reads either this status or this run.
-  staging-status:
-    if: always() && github.event_name == 'workflow_dispatch'
-    name: Record the staging deploy status
-    runs-on: ubuntu-latest
-    needs: [buildSite]
-    permissions:
-      statuses: write
-    steps:
-      - name: Post the commit status
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RESULT: ${{ needs.buildSite.result }}
-        run: |
-          set -uo pipefail
-          case "$RESULT" in
-            success)   STATE=success; DESC="staging deploy green" ;;
-            cancelled) STATE=error;   DESC="staging deploy cancelled" ;;
-            *)         STATE=failure; DESC="staging deploy failed" ;;
-          esac
-          gh api --method POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
-            -f state="$STATE" -f context="staging/pulumi-test-io" \
-            -f target_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-            -f description="$DESC" >/dev/null \
-            || echo "::warning::could not write the staging/pulumi-test-io status; the run itself is still G4 evidence"
-
+  # writes a pending `staging/pulumi-test-io` status at this SHA and exits
+  # without waiting. Resolving that status is NOT this run's job, and must
+  # never be moved back here.
+  #
+  # It used to be (a `staging-status` job, #21642/#21677), and that job only
+  # ever existed for PR branches cut after it merged: a workflow_dispatch
+  # runs the workflow file from the ref it is dispatched at. PR #21676
+  # branched from 8712bb8b, its deploy succeeded, and the file the run
+  # executed had no such job — so the pending status never resolved.
+  # `.github/workflows/staging-status.yml` owns the terminal status now: a
+  # `workflow_run` listener always runs the default branch's copy and fires
+  # for runs on any branch, so branch age stops mattering. Sentinel gate G4
+  # reads either that status or this run.
   notify:
     if: (github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification

@@ -393,7 +393,14 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                 # downstream (a budget failure is worth retrying; "no source
                 # exists" is not).
                 cap = bool(v.get("turn_cap_exhausted"))
-                tag = " — unverifiable (verifier turn budget exhausted; retryable)" if cap else " — unverifiable"
+                if cap:
+                    tag = " — unverifiable (verifier turn budget exhausted; retryable)"
+                elif v.get("source_discipline_gate"):
+                    # The only evidence was the page itself or other Pulumi
+                    # pages: an author question, never a claim shown wrong.
+                    tag = " — unverifiable (no independent source; author question)"
+                else:
+                    tag = " — unverifiable"
                 findings.append({
                     "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
@@ -422,21 +429,24 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
     elif vale is not None:
         errors.append("vale-findings (unexpected shape)")
 
-    # Readthrough: local_repair -> fix candidate; reconception -> deferral (flag only).
+    # Readthrough: always a deferral, local_repair and reconception alike. The
+    # fix lane banks structural findings for the glow-up lane, where a human
+    # reviews the whole page; publish-gate.py refuses a fixed verdict that
+    # applies one. `severity` rides along for select-glowup.py's blocker boost.
     if isinstance(readthrough, dict):
         if readthrough.get("errors"):
             errors.append("readthrough")
         for f in readthrough.get("findings") or []:
-            fix_class = (f.get("fix_class") or "reconception").lower()
             loc = f.get("line_range") or ""
             findings.append({
                 "label": f"Readthrough {f.get('failure_mode', 'finding')}"
                          f"{' (' + loc + ')' if loc else ''}: \"{_truncate(f.get('anchor_quote', ''), 100)}\"",
                 "source": "readthrough coherence pass",
                 "detail": _truncate(f.get("proposed_fix", "")),
-                "fix": fix_class == "local_repair",
+                "fix": False,
                 "category": "readthrough",
                 "line_range": loc,
+                "severity": (f.get("severity_hint") or "").lower(),
             })
     elif readthrough is not None:
         errors.append("readthrough (unexpected shape)")

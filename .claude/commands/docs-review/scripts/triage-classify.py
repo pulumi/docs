@@ -85,7 +85,8 @@ CONTENT_DATA_EXACT = {
     "data/blog_series.yml": "domain:blog",
     "data/blog_home.yaml": "domain:blog",
     "data/blog_link_types.yaml": "domain:blog",
-    "data/case_study_industries.yaml": "domain:blog",
+    "data/customers_industries.yaml": "domain:blog",
+    "data/customers.yaml": "domain:blog",
     # website: the pricing matrix (also PRICING_SENSITIVE) and site chrome /
     # marketing data rendered on landing pages
     "data/pulumi_pricing.yaml": "domain:website",
@@ -106,12 +107,19 @@ CONTENT_DATA_PREFIXES = (
 )
 
 
+# Directories under scripts/ that hold the PR/content review pipelines: they
+# read PRs and write comments, and are never part of building or deploying
+# the site. Kept beside classify_path() so routing and triage can never
+# disagree about them, which is the whole reason classify_path is shared.
+REVIEW_PIPELINE_DIRS = ("review-v3", "review-admin", "content-review", "blog-review")
+
+
 def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
     # programs territory (the latter would otherwise fall to infra).
     if path.startswith("static/programs/") or path.startswith("scripts/programs/"):
         return "domain:programs"
-    if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
+    if path.startswith("content/blog/") or path.startswith("content/customers/"):
         return "domain:blog"
     for prefix in ("content/docs/", "content/what-is/"):
         if path.startswith(prefix):
@@ -123,6 +131,23 @@ def classify_path(path: str) -> str | None:
             return domain
     if path.startswith(".github/workflows/"):
         return "domain:infra"
+    # The agent/review pipelines under scripts/ are repo plumbing, not the
+    # build: nothing here is read by `make build`, by a Hugo template, or by
+    # the deploy. They fall through to `other`, which routes to the same
+    # `tools` approver as `infra` but gives a mechanical change there no
+    # approver at all.
+    #
+    # This cut was originally about the staging gate, which is no longer
+    # what a domain decides: gate G4 keys on `staging_evidence.paths` in
+    # `.github/review-routing.yml`, a path list that covers the Pulumi
+    # program and the scripts `make ci_push` actually runs. So do NOT reach
+    # for this function to exempt a path from a staging deploy — that lever
+    # is in the config, and bending a path's domain to move it was how this
+    # carve-out came to exist in the first place. Everything else under
+    # scripts/ (lint, search, meta-images, redirects, the fetch and generate
+    # scripts) stays infra, because tools do own it.
+    if any(path.startswith(f"scripts/{d}/") for d in REVIEW_PIPELINE_DIRS):
+        return None
     if path.startswith("scripts/") or path.startswith("infrastructure/"):
         return "domain:infra"
     if path in ("Makefile", "package.json", "webpack.config.js"):
