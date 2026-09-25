@@ -231,7 +231,7 @@ $ pulumi convert --from hcl --language typescript --out ./pulumi-converted
 
 The `pulumi convert` command would generate something like this:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -1173,6 +1173,22 @@ outputs:
   publicIp: ${web.publicIp}
   websiteUrl: http://${web.publicIp}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+[Pulumi HCL](/docs/iac/languages-sdks/hcl/) has nothing to convert: it runs the configuration above as-is. Add a `Pulumi.yaml` next to your existing `.tf` files and leave the files alone:
+
+```yaml
+name: my-infrastructure
+runtime: hcl
+description: Existing Terraform configuration, run by Pulumi
+```
+
+For this reason, `pulumi convert --from terraform --language hcl` exits with an error. Converting would move each resource onto a different provider, so the next `pulumi preview` would show a delete and a create for every resource in your configuration. Running the `.tf` files directly keeps the same providers and resource addresses.
+
+See [Do you need to convert?](#do-you-need-to-convert) for when to run HCL directly and when to convert to another language.
 
 {{% /choosable %}}
 
