@@ -128,6 +128,14 @@
 # number on the page identical. The estimator prices whole months and says so;
 # it has no utilization control and no hours constant.
 #
+# `iac_resource_hour` is the one exception, and it is stored rather than
+# derived for the same reason: the IaC resources meter is the one line item the
+# estimator lets a reader flip to its hourly figure (the "$0.00025/hour" the
+# iac-on-demand-price row already leads with), and computing it as
+# iac_resource_month / 730 would round to a number that can silently drift from
+# that published figure the next time either rate changes by hand. Keep both in
+# sync yourself, the same as every other rate on this page.
+#
 # -----------------------------------------------------------------------------
 # ADDING OR RENAMING
 # -----------------------------------------------------------------------------
@@ -258,6 +266,7 @@ calculator:
       included_credits: 40
       included_resources: 500
       iac_resource_month: 0.1825
+      iac_resource_hour: 0.00025
       esc_secret_month: 0.50
       insights_resource_month: 0.0185
     pro:
@@ -265,6 +274,7 @@ calculator:
       included_credits: 400
       included_resources: 2000
       iac_resource_month: 0.365
+      iac_resource_hour: 0.0005
       esc_secret_month: 0.75
       insights_resource_month: 0.0365
     enterprise:

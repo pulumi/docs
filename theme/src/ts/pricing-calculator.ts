@@ -3,6 +3,7 @@ interface EditionRates {
     included_credits: number;
     included_resources: number;
     iac_resource_month: number;
+    iac_resource_hour: number;
     esc_secret_month: number;
     insights_resource_month: number;
 }
@@ -97,6 +98,17 @@ const usdRate = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 5,
 });
 
+// Hourly rates run an order of magnitude smaller than monthly ones (down to
+// $0.00025), so they need more room after the decimal than usdRate gives a
+// monthly figure — otherwise they'd round to $0.00 or lose the digit that
+// distinguishes them from a sibling edition's rate.
+const usdRateHour = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+});
+
 const count = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
 function creditsForResources(resources: number, edition: EditionRates): number {
@@ -160,6 +172,16 @@ function init(): void {
         return isFinite(raw) && raw > 0 ? raw : 0;
     };
 
+    // Only the IaC resources row has a unit toggle; every other row's rate
+    // unit is fixed, so this reads as "month" for them without needing a
+    // per-meter flag.
+    const rateUnitFor = (row: HTMLElement): "month" | "hour" => {
+        const pressed = row.querySelector<HTMLButtonElement>("[data-calc-rate-unit][aria-pressed='true']");
+        return (pressed?.dataset.calcRateUnit as "month" | "hour" | undefined) || "month";
+    };
+
+    const iacRow = (): HTMLElement | undefined => rows.find(row => row.dataset.calcMeter === "iac_resources");
+
     const recompute = (): void => {
         const edition = currentEdition();
         const values: Record<string, number> = {};
@@ -167,7 +189,18 @@ function init(): void {
             values[row.dataset.calcMeter as string] = valueOf(row);
         });
 
-        let credits = creditsForResources(values.iac_resources || 0, edition);
+        // The included-resources tranche (creditsForResources' tiered rate) prices
+        // a month of usage against the monthly base fee, so it has no meaning once
+        // the reader is asking "what does this fleet cost for one hour" instead —
+        // that view prices every resource at the flat published hourly rate, with
+        // no tier of its own.
+        const row = iacRow();
+        const iacCredits =
+            row && rateUnitFor(row) === "hour"
+                ? (values.iac_resources || 0) * edition.iac_resource_hour
+                : creditsForResources(values.iac_resources || 0, edition);
+
+        let credits = iacCredits;
         credits += (values.esc_secrets || 0) * edition.esc_secret_month;
         credits += (values.workflow_minutes || 0) * config.meters.workflow_minute;
         credits += (values.neo_tokens || 0) * config.meters.neo_tokens_per_million;
@@ -195,7 +228,18 @@ function init(): void {
             const { id, rate } = parts(row);
             const meter = METERS[id];
             if (!rate) return;
-            rate.textContent = meter.rate ? `${usdRate.format(meter.rate(config, edition))}${meter.unit}` : "";
+            if (!meter.rate) {
+                rate.textContent = "";
+                return;
+            }
+            // Swaps in the other already-published rate rather than deriving one
+            // from the other, so it can't drift from the comparison table the way
+            // iac_resource_month / 730 could. recompute() prices by it too.
+            if (id === "iac_resources" && rateUnitFor(row) === "hour") {
+                rate.textContent = `${usdRateHour.format(edition.iac_resource_hour)}/resource/hr`;
+                return;
+            }
+            rate.textContent = `${usdRate.format(meter.rate(config, edition))}${meter.unit}`;
         });
     };
 
@@ -255,6 +299,15 @@ function init(): void {
         // inputs, and they are chosen to produce exactly the edition's base price.
         // Seeding from the range would round them off through the curve first.
         syncRow(row, "number");
+
+        const rateUnitButtons = Array.from(row.querySelectorAll<HTMLButtonElement>("[data-calc-rate-unit]"));
+        rateUnitButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                rateUnitButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+                paintRates();
+                recompute();
+            });
+        });
     });
 
     const buttonFor = (id: string): HTMLButtonElement | undefined =>
