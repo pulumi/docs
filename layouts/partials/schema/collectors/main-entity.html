@@ -67,13 +67,7 @@
       {{ $entity = partial "schema/collectors/product-entity.html" . }}
 
     {{ else if eq .Section "customers" }}
-      {{/* Individual case studies get Article schema. The /customers/ section
-           index is a directory of them, not a story itself, so it gets
-           CollectionPage + ItemList instead — the same split already applied
-           to /what-is/ above. Before this, the index page was mislabeled as a
-           single TechArticle (the same @type as every case study it links
-           to), which is the kind of ambiguous, one-entity-per-page violation
-           the AEO entity-authority guidance warns against. */}}
+      {{/* Case studies get Article schema; the section index gets CollectionPage + ItemList, same split as /what-is/ above. */}}
       {{ if .IsPage }}
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
       {{ else }}
