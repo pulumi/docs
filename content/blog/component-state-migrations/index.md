@@ -86,7 +86,7 @@ Legacy and modern AWSX organize their resources differently. The legacy componen
 
 ## The first migration: from legacy to modern AWSX
 
-To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration, `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
+To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration. `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
 
 ```typescript
 {{% example-program-snippet path="awsx-vpc-state-migration-blog" language="typescript" file="modern-vpc.ts.txt" %}}

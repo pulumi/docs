@@ -36,7 +36,7 @@ A migration rewrites state only. It does not create, import, update, or delete c
 
 ## Write a migration callback
 
-A component state migration is a pure function that transforms the saved state of a component and its children into the state expected by a new component version. It returns the updated state records and successor mappings for any changed URNs, or no result if no migration is needed.
+A component state migration is a pure function that transforms the saved state of a component and its children into the state expected by a new component version. It returns the updated state records and successor mappings. Each mapping connects an old URN omitted from the result to the URN of the returned resource that takes its place. If no migration is needed, the callback returns no result.
 
 The [option reference](/docs/iac/concepts/resources/options/statemigrations/#callback-api) explains the callback API. The state entries use the [checkpoint resource format](https://pulumi-developer-docs.readthedocs.io/latest/docs/references/deployment-schema.html#pulumi-resource-state), including fields such as `urn`, `type`, `id`, `parent`, `provider`, `inputs`, and `outputs`.
 
@@ -202,4 +202,4 @@ State-changing migrations require a full update. Pulumi rejects them in these si
 - Resources pending deletion in the subtree. Complete the unfinished deletion with the migration returning no changes before retrying.
 - Persisted snippet references that would need to change. Update or remove those snippets first.
 
-A callback that returns no result can remain attached when using update plans or targeted updates, the restrictions on state-changing results do not require removing an already-applied migration.
+A callback that returns no result can remain attached when using update plans or targeted updates. The restrictions on state-changing results do not require removing an already-applied migration.
