@@ -8,11 +8,15 @@ accepted / not-applicable). It lives on the PR — not in S3 — because the Sen
 atomically with the findings it answers; the credentialed record job
 mirrors it one-way into `pr-review/<pr>/latest.json` for telemetry.
 
-The update lane (`apply-update.py`) is the only writer, and claude-update.yml
-runs one update per PR at a time. It still merges rather than overwrites —
-per finding-id, newest `updated_at` winning — against a card re-fetched just
-before publish, so a second writer added later can't reintroduce the
-lost-update race from the v3 design review.
+Two lanes publish the author card, and this block with it: the full-review
+lane (claude-code-review.yml — a ready-transition, triage's auto-fire,
+`#new-review`) and the update lane (`apply-update.py`), which is the only one
+that records dispositions. Their runs overlap routinely (#21785, #21871), and
+the update lane's model step can take ~10 minutes between fetching the card
+and writing it back. So it MUST merge rather than overwrite: per finding-id,
+newest `updated_at` winning, against a card re-fetched just before publish.
+pinned-comment.sh's stale-publish guard (#21788) is the other half: it
+refuses to publish a card composed before the one already on the PR.
 
 Serialization escapes `<` and `>` inside the JSON payload: an HTML comment
 terminates at the first `-->`, so a disposition note containing one would

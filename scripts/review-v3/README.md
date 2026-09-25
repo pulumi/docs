@@ -73,9 +73,13 @@ Lives as an HTML comment in the bot-owned author comment:
 - Dispositions: `fixed | refuted | deferred | accepted | not-applicable`
   (note required for `deferred`/`accepted`/`not-applicable` — same closed set
   as `review-worklist.py`).
-- Writer: the update lane (`apply-update.py`) only. It merges per finding-id
-  (latest `updated_at` wins, never a whole-block overwrite) against a freshly
-  re-fetched card. `bulk: true` marks an accept-everything answer (telemetry).
+- Writers: the full-review lane publishes the block with the card; only the
+  update lane (`apply-update.py`) records dispositions in it. Runs of the two
+  overlap routinely, so the update lane merges per finding-id (latest
+  `updated_at` wins, never a whole-block overwrite) against a card re-fetched
+  just before publish, and `pinned-comment.sh`'s stale-publish guard refuses
+  an older composition. `bulk: true` marks an accept-everything answer
+  (telemetry).
 - Readers: Sentinel gate 2 (uncredentialed, fork-safe), `review-worklist.py`
   (`--body-file` / `--brief-file`), the record job's mirror into `latest.json`.
 - Sentinel accepts the block only from the bot-authored comment.

@@ -296,7 +296,8 @@ inline") are theirs to make, not grounds to hold.
 ### What the deterministic side does
 
 `claude-update.yml`'s publish step re-fetches the LIVE author card (merging
-per finding with what it already records — newest `updated_at` wins), runs `apply-update.py` (validate patch → apply actions → merge
+per finding with whatever another run published while the model worked —
+newest `updated_at` wins), runs `apply-update.py` (validate patch → apply actions → merge
 REVIEW_STATE → refresh header count, `Last updated`, and the
 `CLAUDE_REVIEW_HEAD` marker). The `#### F<n> · Do this` detail blocks
 follow their rows automatically — apply-update strips them, re-inserts each

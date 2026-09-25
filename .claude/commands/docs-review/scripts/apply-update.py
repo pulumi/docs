@@ -37,14 +37,14 @@ classifier, which this must never contradict):
   - `hold` writes NO disposition: the finding is still open; the author may
     still fix it.
 
-REVIEW_STATE: this lane is its only writer, and claude-update.yml runs one
-update per PR at a time (a newer trigger cancels the in-flight run), so
-nothing else writes it while the model works. The publish chain still
-re-fetches the live author card just before calling this script, and this
-script parses REVIEW_STATE from that fresh body and merges its own
-action-implied dispositions per finding-id (newest `updated_at` wins) —
-never a whole-block overwrite — so a future second writer can't be
-silently clobbered.
+The REVIEW_STATE race: another review run can publish the author card while
+the model works — a full review triage auto-fired, a `#new-review`, another
+update dispatch (#21785, #21871). The publish chain re-fetches the live
+author card just before calling this script, and this script parses
+REVIEW_STATE from that fresh body and merges its own action-implied
+dispositions per finding-id (newest `updated_at` wins) — never a
+whole-block overwrite. pinned-comment.sh's stale-publish guard (#21788)
+separately refuses a card composed before the one already on the PR.
 
 Evidence: the trail/investigation log live only in S3, not on the cards, so
 the credentialed publish step downloads the prior evidence object and passes
@@ -538,7 +538,8 @@ def apply(
                 detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks.get(fid, []), entry["detail"])
 
     # Merge action-implied dispositions with the LIVE card's state — whatever
-    # the card already records survives unless this run is newer.
+    # another run published while the model worked survives unless this run
+    # is newer.
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
     # A reopened finding sheds the lane's own machine-recorded `fixed` entry,

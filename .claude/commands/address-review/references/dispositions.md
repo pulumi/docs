@@ -23,7 +23,7 @@ Every item on the worklist ends in exactly one of five states. "We talked about 
 
 On the v3 surface the ledger is the `<!-- REVIEW_STATE … -->` block on the author card. It is the PR's own record: the Sentinel reads it to score G2, the reviewer brief renders it in the **Waiting on the author** list, and `review-worklist.py` seeds from it. A finding id absent from that block is **open**, whatever any comment says.
 
-Only the update lane writes it: a push the auto-refresh gate recognizes, or an `@claude <reasoning> #update-review` mention. The model adjudicates every answer — it concedes a dispute, holds it, or records an acceptance — so an author's word on their own finding is weighed rather than just filed. The update lane has one verb for knowingly shipping a finding (`accept`); a deferral is an acceptance whose reason names the issue.
+Only the update lane records dispositions in it: a push the auto-refresh gate recognizes, or an `@claude <reasoning> #update-review` mention. The model adjudicates every answer — it concedes a dispute, holds it, or records an acceptance — so an author's word on their own finding is weighed rather than just filed. The update lane has one verb for knowingly shipping a finding (`accept`); a deferral is an acceptance whose reason names the issue.
 
 On the legacy v2 surface there is no `REVIEW_STATE`; `#update-review` and the local state file are all you have.
 

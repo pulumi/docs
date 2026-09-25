@@ -3069,7 +3069,8 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     rows = (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
             + v3_finding_rows(ctx.body, "❓ Questions for you"))
     # Blocking = rows without a REVIEW_STATE disposition and not rewritten
-    # in place (Spurious/…). A row can sit in ❓ carrying a disposition;
+    # in place (Spurious/…). A card another run published between this run's
+    # fetch and publish can leave a row in ❓ carrying a disposition;
     # build-evidence/apply-update count it as answered, and this rule must
     # agree (fork PR 242, 2026-09-01: a held dispute failed publish here).
     try:

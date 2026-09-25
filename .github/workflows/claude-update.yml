@@ -560,7 +560,8 @@ jobs:
       # v3 model inputs: the two live cards on disk. Fetched here (not in the
       # publish step) so the model reads the same cards the mention was about;
       # the publish step re-fetches the author card fresh right before
-      # apply-update, so it merges against what the card holds at publish.
+      # apply-update to merge whatever another run published while the model
+      # worked (a full review auto-fired beside this update, #21871).
       - name: Fetch v3 review cards
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
@@ -782,7 +783,8 @@ jobs:
           exit 0
 
       # One step, one ordering, one failure surface: prior evidence → fresh
-      # card re-fetch (apply-update merges against the live card) → apply-update → validate v21 → record evidence + page → upsert
+      # card re-fetch (merges whatever another run published during the
+      # model's run) → apply-update → validate v21 → record evidence + page → upsert
       # brief → upsert author (the label-driving card publishes LAST, so a
       # partial publish can never show a green label against a stale card).
       - name: Publish v3 refresh
@@ -831,7 +833,7 @@ jobs:
             EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           fi
 
-          # Fresh card fetch — apply-update merges against this, not the stale copy.
+          # Fresh card fetch — the race window with other review runs closes here.
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
             --jq .body > .review-card-author.md
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
