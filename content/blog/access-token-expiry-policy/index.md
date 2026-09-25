@@ -62,7 +62,7 @@ Enforcement is tailored to each token type:
 
 - **Organization and team tokens** can't be created out of compliance: the creation dialog caps the expiry picker at your policy maximum, and the API rejects requests that exceed it. Existing machine tokens that violate the policy stop authenticating and need to be recreated with a compliant expiry.
 - **Personal tokens** span all of a user's organizations, so they can't be blocked at creation. Instead, a non-compliant personal token is rejected when it's used against your organization, and the member sees an error explaining the policy and how to fix it. The personal token creation dialog also warns members when a chosen expiry doesn't meet a policy in one of their organizations, steering them toward a compliant choice up front.
-- **Web console sessions are unaffected**, as are the short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/) — those are already bounded by their issuer.
+- **Web console sessions are unaffected**, as are the short-lived tokens issued through [OIDC token exchange](/docs/administration/guides/oidc-issuers/) — those are already bounded by their issuer.
 
 Once a policy is active, the creation dialog does the steering for you — the expiry picker tops out at the policy maximum:
 
@@ -89,6 +89,6 @@ A reasonable rollout looks like:
 
 ## Get started
 
-The access token expiry policy is available now in your organization's access settings. For the full reference — compliance rules, per-token-type behavior, and exemptions — see the [access tokens documentation](/docs/administration/access-identity/access-tokens/#access-token-expiry-policy).
+The access token expiry policy is available now in your organization's access settings. For the full reference — compliance rules, per-token-type behavior, and exemptions — see the [access tokens documentation](/docs/administration/concepts/access-tokens/#access-token-expiry-policy).
 
 If you have feedback, we'd love to hear it in the [Pulumi Community Slack](https://slack.pulumi.com/) or on [GitHub](https://github.com/pulumi/pulumi/issues).

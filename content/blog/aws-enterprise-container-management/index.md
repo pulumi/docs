@@ -55,7 +55,7 @@ Logging and monitoring are critical capabilities for keeping tabs on the health 
 
 ### Authentication and Authorization
 
-Adhering to the principle of least privilege for users and roles is an important step in securing your clusters and Pulumi has many capabilities to help you manage the complexities of authentication and authorization. For example, with Pulumi you can [create and manage AWS IAM roles](/docs/iac/guides/clouds/aws/iam/) and you can integrate Pulumi Enterprise with your centralized identity and access management platform of choice via [SAML 2.0](/docs/administration/access-identity/saml/sso/) and [OIDC](/blog/eks-oidc/).
+Adhering to the principle of least privilege for users and roles is an important step in securing your clusters and Pulumi has many capabilities to help you manage the complexities of authentication and authorization. For example, with Pulumi you can [create and manage AWS IAM roles](/docs/iac/guides/clouds/aws/iam/) and you can integrate Pulumi Enterprise with your centralized identity and access management platform of choice via [SAML 2.0](/docs/administration/guides/saml/sso/) and [OIDC](/blog/eks-oidc/).
 
 ### Centralized Governance and Compliance Controls
 
