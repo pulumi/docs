@@ -48,6 +48,11 @@ on:
         required: false
         type: string
         default: ''
+      ack_target:
+        description: 'API path (issues/comments/<id> or pulls/comments/<id>) of the comment that asked for this review; on success it gets a 🚀 reaction instead of the terminal comment (ack-request.sh). Empty keeps the comment.'
+        required: false
+        type: string
+        default: ''
       # Set only by this workflow's own `redispatch` job. Counts how many
       # automatic re-dispatches this run is downstream of, so the publish
       # guard can stop chaining at handoff_guard.py's MAX_DEPTH instead of
@@ -1851,8 +1856,17 @@ jobs:
           if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "skipped" ] || [ "$SUPERSEDED" = "true" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
             if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
-              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+              # A 🚀 on the requesting comment, not a timeline comment
+              # (ack-request.sh has the why). Scripts here run from the PR
+              # head, which may predate the helper — keep the old comment then.
+              MSG="🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
+              ACK=.claude/commands/docs-review/scripts/ack-request.sh
+              if [ -f "$ACK" ]; then
+                bash "$ACK" --pr "$PR" --repo "$REPO" --target "${{ github.event.inputs.ack_target }}" --message "$MSG"
+              else
+                BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+                gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+              fi
             fi
           elif [ "$TIMED_OUT" = "true" ]; then
             # printf, not a YAML literal: an indented continuation line
@@ -2345,8 +2359,11 @@ jobs:
             gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
           fi
           if [ -n "$MENTION_AUTHOR" ]; then
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
-            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            # A 🚀 on the requesting comment, not a timeline comment
+            # (ack-request.sh has the why; it falls back to the comment).
+            bash .claude/commands/docs-review/scripts/ack-request.sh --pr "$PR" --repo "$REPO" \
+              --target "${{ github.event.inputs.ack_target }}" \
+              --message "🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
           fi
           exit 0
 
@@ -2471,12 +2488,13 @@ jobs:
             exit 0
           fi
           echo "redispatch: PR #$PR at $HEAD (depth $NEXT_DEPTH)"
-          # force / mention_author carry a human #new-review's intent through
-          # to the re-run; dispatcher_comment_id does not (deleted by the
-          # guard — the re-run posts its own spinner).
+          # force / mention_author / ack_target carry a human #new-review's
+          # intent through to the re-run; dispatcher_comment_id does not
+          # (deleted by the guard — the re-run posts its own spinner).
           gh workflow run claude-code-review.yml --repo "$REPO" \
             -f pr_number="$PR" \
             -f head_sha="$HEAD" \
             -f force="${{ github.event.inputs.force || 'false' }}" \
             -f mention_author="${{ github.event.inputs.mention_author }}" \
+            -f ack_target="${{ github.event.inputs.ack_target }}" \
             -f supersede_depth="$NEXT_DEPTH"

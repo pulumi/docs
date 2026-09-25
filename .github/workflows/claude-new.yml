@@ -162,10 +162,12 @@ jobs:
       #
       # Capture the comment ID via `gh api … --jq '.id'` so the dispatched
       # CCR's finalize step can delete this confirmation on completion and
-      # replace it with a terminal "Review regenerated on @<author>'s
-      # request." comment (created, not edited — fires a notification).
-      # Mirror of claude-update.yml's pattern. If the post fails the ID
-      # falls through empty and CCR's cleanup branches no-op cleanly.
+      # acknowledge the request with a 🚀 reaction on the #new-review
+      # comment (ack_target; ack-request.sh falls back to a terminal
+      # "Review regenerated on @<author>'s request." comment when there is
+      # nothing to react to). Mirror of claude-update.yml's pattern. If the
+      # post fails the ID falls through empty and CCR's cleanup branches
+      # no-op cleanly.
       - name: Post confirmation
         id: post-confirmation
         if: |
@@ -208,7 +210,8 @@ jobs:
             -f head_sha="${{ steps.pr-context.outputs.head_sha }}" \
             -f force=true \
             -f dispatcher_comment_id="${{ steps.post-confirmation.outputs.comment_id }}" \
-            -f mention_author="${{ steps.check-access.outputs.author }}"
+            -f mention_author="${{ steps.check-access.outputs.author }}" \
+            -f ack_target="${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}"
 
 env:
   ESC_ACTION_OIDC_AUTH: true

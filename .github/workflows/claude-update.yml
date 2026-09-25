@@ -554,7 +554,8 @@ jobs:
             -f head_sha="${{ steps.head.outputs.sha }}" \
             -f force=true \
             -f dispatcher_comment_id="$COMMENT_ID" \
-            -f mention_author="$MENTION_AUTHOR"
+            -f mention_author="$MENTION_AUTHOR" \
+            -f ack_target="${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}"
           echo "dispatched claude-code-review.yml for PR #$PR at ${{ steps.head.outputs.sha }}"
 
       # v3 model inputs: the two live cards on disk. Fetched here (not in the
@@ -1029,11 +1030,15 @@ jobs:
       # comment always reaches a terminal state.
       #
       # Outcome handling:
-      # - success: DELETE the spinner comment, then post a fresh
-      #   `🤖 Review updated on @<author>'s request.` This is a *create*
-      #   (not an edit) so the embedded @-mention fires a GitHub
-      #   notification — that's the whole point of attribution. Editing
-      #   the existing comment to add a mention would not notify.
+      # - success: DELETE the spinner comment and put a 🚀 reaction on the
+      #   comment that asked for the refresh (ack-request.sh). The card is
+      #   the record of what changed; a `🤖 Review updated on @<author>'s
+      #   request.` comment per refresh only buried it in timeline noise
+      #   (six on pulumi/docs#21871). A submitted review body can't take a
+      #   reaction, and a PR branched before ack-request.sh existed doesn't
+      #   carry it (scripts run from the PR head) — both fall back to the
+      #   old comment. An auto-refresh has no requester, so success is
+      #   silent: the cleared 🔄 banner and the card's new stamp say it.
       # - failure: same delete-and-repost, with `🤖 @<author> — review
       #   errored. …` so the requester is notified that their request
       #   failed.
@@ -1048,6 +1053,9 @@ jobs:
         if: always() && steps.progress.outputs.comment_id != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The API path of the comment that asked for this run, for the
+          # success reaction. Empty for events that can't take one.
+          ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
@@ -1090,12 +1098,16 @@ jobs:
           # unrelated account of that name). Plain wording instead.
           if [ "$OUTCOME" = "success" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-            if [ "$AUTHOR" = "auto-refresh" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review auto-refreshed — the latest push only touched lines with outstanding findings.")
-            else
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review updated on @${AUTHOR}'s request.")
+            if [ "$AUTHOR" != "auto-refresh" ]; then
+              MSG="🤖 Review updated on @${AUTHOR}'s request."
+              ACK=.claude/commands/docs-review/scripts/ack-request.sh
+              if [ -f "$ACK" ]; then
+                bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
+              else
+                BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+                gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+              fi
             fi
-            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
