@@ -354,6 +354,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
     - **line 14:** [style] _weasel word_ — 'usually' is a weasel word!
     ```
 
+    **Posting is off unless the repo variable `REVIEW_STYLE_INLINE` is `1`.** Off, both lanes run the poster with an explicit empty sidecar, which deletes any advisory buttons an earlier run posted and strips the ✏️ marks, the ✏️ banner, and the caption's ✏️ legend (the annotator writes the legend only when a mark is on the page). The block itself is unaffected, and you still write the sidecar as described below — the switch is the workflow's, not yours.
+
     **Inline-suggestion sidecar (both CI lanes).** The editorial pass may additionally stage up to 10 advisory findings as one-click GitHub `suggestion` comments by writing `.style-suggestions.json` (see `ci.md` §3 step 10); `post-style-suggestions.py` validates each entry against the PR diff and file content and posts them as a single `event: COMMENT` review, deleting the prior run's suggestion comments first. Suggestions are a *copy* of the actionable subset — the `#### Style suggestions` block remains the complete record, and a suggested finding keeps its `[style]` bullet. Blocker findings never render as suggestions. Because each run deletes what the last one posted, **stage the full qualifying set every run, not just what's new** — an omitted finding silently loses its button. A run that posts an identical set is short-circuited: the existing comments are left live rather than deleted and re-posted, since a re-post drops the buttons, re-notifies every subscriber, and strands another undeletable review event in the timeline. **An explicit `[]` is authoritative and clears the buttons; an absent, unreadable, or non-array sidecar means "unknown" and leaves them standing** — the marks are then reconciled against what is actually posted, so they can't over-promise either way. The two are deliberately not the same: conflating them once deleted three live buttons on a refresh where the model simply forgot the file.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear. Annotate conceded findings with `concede: <reason>` (per `docs-review:references:update` Case 2) — the outcome telemetry (`scrape-review-outcomes.py`) distinguishes fixed from conceded by that exact token, and the `outcome-annotation-shape` validator rule flags freelanced variants. The same applies to the held-dispute annotation `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` in 🚨/⚠️.
@@ -457,12 +459,12 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
 ## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
-> [!IMPORTANT] orienting alert            ← composed; explains what the card demands
+> [!IMPORTANT] orienting alert            ← composed; what the card demands + the one reply shape (`@claude F1: … #update-review`)
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Fix or disagree
 | ID | Where | Finding |
 |---|---|---|
-| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
+| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: short claim excerpt (≤90 chars) + verdict — the block below quotes the full line, and the verifier's framing note feeds its **Why**> |
 #### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
 - **Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
 - **Why:** <1-2 sentences>
@@ -473,14 +475,32 @@ _<one sentence: what the PR is and what the review checked>_
 …
 #### Style suggestions                    ← v2 block + the `[nit]` lane; ALWAYS composed, dropped at publish if empty
 ### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
-📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
+<details><summary>N resolved items — …</summary>   ← the table is COLLAPSED; the H3 stays outside the fold (parsers anchor on it)
+**Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).   ← no emoji (cards before 2026-09-25 led with 📎; readers accept both)
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
-<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md   ← **How to answer** is a collapsed <details>; the callout carries the must-know line
 ```
 
+**One-click fixes.** A 🚨 row anchored to one line whose block quotes that line's text
+exactly and carries exactly **one single-line** fenced replacement for that quoted span is
+also posted as an applyable GitHub suggestion, by `post-style-suggestions.py
+--fixes-from-author-card` after the build (initial lane) and after the publish (update
+lane). Findings on the same line merge into one suggestion. It posts under its own marker
+(`<!-- CLAUDE_FIX_SUGGESTION -->`), is derived from the card rather than written by you, and
+skips ❓ rows, answered findings, multi-line fences, and quotes that don't occur literally on
+the anchored line. So quote the source text verbatim, and put only its replacement in the
+fence.
+
 The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
-alert instead of the IMPORTANT one. Rows carry no status column —
+alert instead of the IMPORTANT one. When 🚨 and ❓ both hold nothing but their empty
+placeholders, the published card omits **both** sections (the NOTE already says there is
+nothing to do): `build-evidence.drop_empty_author_sections` at initial publish and after
+every update-lane render. The composer still emits them so the model has an anchor to add a
+row under, and the update lane restores the pair (`ensure_author_sections`) before placing a
+reopened, added, or promoted row. Never one without the other, and never on the
+strength of the header alone: the test is the sections' own content (any row keeps
+both). Rows carry no status column —
 REVIEW_STATE is the state, and the section a row lives in is the display.
 
 ### Reviewer brief — `.review-draft-brief.md`
@@ -500,8 +520,8 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 #### Editorial stances introduced by this PR  ← composer-owned; the v2 block (see §Editorial stances above) hosted here instead of ⚠️ Low-confidence
 - L12 `file.md` — *"the fastest path …"* — positioning (found by regex+llm)
 ### ✅ What you can rubber-stamp            ← composer-owned count lines
-💡 **Pre-existing issues in touched files:** N — <link>
-📎 **Full evidence:** %%EVIDENCE_URL%%
+**Pre-existing issues in touched files:** N — <link>
+**Full evidence:** %%EVIDENCE_URL%%
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-reviewer.md
 ```
 
@@ -689,7 +709,7 @@ validate-pinned.py check --body-file .review-draft-author.md \
 v3-only rules: `v3-markers` (marker lines intact; author card is the sole
 `CLAUDE_REVIEW_HEAD` carrier; brief carries none), `v3-section-order`,
 `v3-review-state` (a corrupt REVIEW_STATE block hard-fails — it would
-silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
+silently un-answer every finding), `v3-evidence-link` (the **Full evidence:** line carries
 the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/⚠️ row
 parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
 high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n> · Do

@@ -133,6 +133,12 @@ TEMPORAL_TRIGGERS = {
 # entries; on a claims-dense post that approaches the 65K body cap — keep
 # entries terse).
 TEXT_TRUNC = 160
+# The v3 author card quotes a claim twice: in its table cell and, verbatim,
+# in the `#### F<n> · Do this` block right under the table. The cell only has
+# to say WHICH claim; the block carries the full line. So an author-card
+# cell gets a short excerpt (reader feedback 2026-09-25: the duplicate made
+# the card twice as long as its content).
+AUTHOR_CELL_TRUNC = 90
 EVIDENCE_TRUNC = 240
 
 GH_TIMEOUT = 30
@@ -1353,7 +1359,25 @@ def _stub_bullet(v: dict, todo: str) -> dict:
         "file": file_path,
         "text": redact(trunc(v.get("text") or "", TEXT_TRUNC)),
         "origin": origin,
+        "framing": redact(trunc(fn, 160)) if fn else "",
+        "todo": todo,
     }
+
+
+def author_cell_bullet(stub: dict) -> str:
+    """The v2-shaped bullet for an author-card (🚨/❓) row: a short claim
+    excerpt + the verdict, with no `framing:` note — that moves into the
+    Do-this block's **Why** prompt (render_detail_scaffold), which is where
+    the author reads the reason. Only claim verdicts are shortened: a
+    detector finding's text IS its message, and a stub without the parts
+    (a style-blocker) keeps its bullet."""
+    if not str(stub.get("origin") or "").startswith("verdict:") or "todo" not in stub:
+        return stub["bullet"]
+    text = stub.get("text") or ""
+    excerpt = f"*{quote(trunc(text, AUTHOR_CELL_TRUNC))}* " if text else ""
+    file_part = f" `{stub['file']}` —" if stub.get("file") else ""
+    return (f"- **[{stub['ref']}]**{file_part} {excerpt}— verdict: {stub['verdict']} "
+            f"<TODO: {stub['todo']}>")
 
 
 def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -1791,7 +1815,36 @@ _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 # Where cell links to the PR's Files-changed diff anchor (sha256 of the
 # path + `R<line>`), so clicking a finding lands on the change itself.
 FINDING_TABLE_HEADER = "| ID | Where | Finding |"
+# The evidence-link line that closes both cards. It led with a decorative 📎
+# until 2026-09-25; cards published before then keep it until they refresh,
+# so every reader that keys on the line accepts both prefixes.
+EVIDENCE_LINE_PREFIX = "**Full evidence:**"
+EVIDENCE_LINE_PREFIXES = ("📎 ", EVIDENCE_LINE_PREFIX)
 FINDING_TABLE_SEPARATOR = "|---|---|---|"
+
+
+def render_resolved_block(rows: list[str]) -> list[str]:
+    """The ✅ Resolved table, collapsed. Resolved rows are history — nothing
+    on them asks the author for anything — so they fold away under a count
+    and stop pushing the open items and the footer off the screen (reader
+    feedback, 2026-09-25). The H3 stays outside the fold: it is the section
+    anchor every parser keys on. The `<details>`/`<summary>` lines are
+    neither `|` rows nor `- ` bullets, so the finding-row walkers skip them;
+    the blank line after `<summary>` is what lets GitHub render the table."""
+    n = len(rows)
+    noun = "item" if n == 1 else "items"
+    return [
+        "<details>",
+        f"<summary>{n} resolved {noun} — click to expand</summary>",
+        "",
+        FINDING_TABLE_HEADER,
+        FINDING_TABLE_SEPARATOR,
+        *rows,
+        "",
+        "</details>",
+    ]
+
+
 _TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
 # The Where cell parses BOTH forms — linked (composer output, deep link to
 # the PR diff) and bare (a model-added row; the next full render re-links
@@ -2028,15 +2081,23 @@ def render_author_orient(n_blocking: int) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
-    before this PR can merge" (2026-09-01 update-lane smoke)."""
+    before this PR can merge" (2026-09-01 update-lane smoke).
+
+    The blocking form carries the one reply shape an author must get right,
+    because the full **How to answer** footer is collapsed (2026-09-25:
+    authors lost the open items under a screenful of instructions). The
+    callout is the part of the card everyone reads; the fold keeps the
+    worked examples one click away."""
     if n_blocking:
         return [
             "> [!IMPORTANT]",
             "> **You = the PR author.** This review needs your answers before this "
-            "PR can merge. Fix each item below, or tell the review why it's "
-            "wrong — **How to answer** at the bottom shows exactly what to "
-            "type. Answering unblocks the review; a human reviewer still "
-            "approves the merge.",
+            "PR can merge. A human reviewer still approves the merge.",
+            ">",
+            "> **To answer:** push a fix, or reply with the item's ID — "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "The `#update-review` tag is required; a reply without it doesn't count. "
+            "Worked examples: **How to answer** at the bottom.",
         ]
     return [
         "> [!NOTE]",
@@ -2045,7 +2106,7 @@ def render_author_orient(n_blocking: int) -> list[str]:
     ]
 
 
-def render_detail_scaffold(fid: str) -> list[str]:
+def render_detail_scaffold(fid: str, framing: str = "") -> list[str]:
     """The per-finding "Do this" block scaffold under the author tables.
 
     One block per blocking finding; the model fills the TODOs. The shape is
@@ -2064,9 +2125,12 @@ def render_detail_scaffold(fid: str) -> list[str]:
         "",
         "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
         "appears in the file — the only quote of it on this card; never a paraphrase>",
-        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)"
+        + (f". The verifier's note, to write from (not to paste): {framing}" if framing else "") + ">",
         "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
-        "replacement text in a fenced block at column 0 after this list; label an alternative "
+        "replacement text in a fenced block at column 0 after this list — on 🚨, make the fence "
+        "a one-line replacement for exactly the text quoted above, and it also posts as a "
+        "one-click suggestion; label an alternative "
         "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
     ]
 
@@ -2251,10 +2315,12 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     outstanding_lines: list[str] = []
     outstanding_ids: list[str] = []
+    framing_by_id: dict[str, str] = {}
     for s in prep["outstanding_stubs"]:
         fid, _ = _assign(s, "outstanding", s["bullet"])
         outstanding_ids.append(fid)
-        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+        framing_by_id[fid] = s.get("framing") or ""
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
     for f in prep["vale_blockers"]:
         fname = str(f.get("file") or "").strip()
         cat = str(f.get("category") or "style")
@@ -2276,7 +2342,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
         question_ids.append(fid)
-        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+        framing_by_id[fid] = s.get("framing") or ""
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
 
     check_lines: list[str] = []
     for s in reviewer_check_stubs:
@@ -2390,14 +2457,14 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if prep["outage_banner"]:
         author += [prep["outage_banner"], ""]
     author += [
-        "_<TODO: one sentence — what this PR is and what the review checked>_",
+        "_<TODO: one sentence — what this PR is and what the review checked. No counts of open items and nothing only the author can answer: the header and sections carry the live state, and this line outlives them>_",
         "",
         "### 🚨 Fix or disagree",
         "",
     ]
     author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
     for fid in outstanding_ids:
-        author += ["", *render_detail_scaffold(fid)]
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
     author += [
         "",
         "### ❓ Questions for you",
@@ -2405,7 +2472,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     ]
     author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
     for fid in question_ids:
-        author += ["", *render_detail_scaffold(fid)]
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
     author += [""]
     if edit_base and (outstanding_lines or question_lines):
         author += [V3_BROWSER_HINT, ""]
@@ -2416,7 +2483,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     # refer to — persona pass 2026-09-01); apply-update.py inserts the
     # section the first time something resolves.
     author += [
-        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
         "",
         _review_state_block(high_water),
         "<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->",
@@ -2527,9 +2594,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         f"- **Mechanics:** {'; '.join(mech_bits)}.",
         render_style_line(len(prep["vale_nags"]), 0),
         "",
-        "💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.",
+        "**Pre-existing issues in touched files:** 0 — details on the evidence page.",
         "",
-        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
         "",
         sub_line,
         "",

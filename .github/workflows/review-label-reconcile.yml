@@ -25,16 +25,19 @@ name: Review Label Reconcile
 # label it can't justify.
 #
 # A second sweep covers the other orphan: review:in-progress with no run
-# behind it. Both review lanes post a <!-- CLAUDE_PROGRESS --> spinner
-# comment seconds BEFORE they set the label and delete or rewrite it on
-# every terminal path, so "label present, live spinner absent" cannot be a
-# running review — it is a run that died without finalizing (job-level
+# behind it. Both review lanes put up a progress signal seconds BEFORE they
+# set the label — a <!-- CLAUDE_PROGRESS --> spinner comment, or, for a
+# requested run, a 👀 from github-actions[bot] on the requesting comment —
+# and take it down on every terminal path, so "label present, no live
+# signal" cannot be a running review — it is a run that died without
+# finalizing (job-level
 # timeout axing the finalize steps, a lost runner, or the superseded-publish
 # gap #21642 hit before claude-code-review.yml's guard learned to reset the
 # label). Those PRs move to review:stale, the state the guard itself now
-# uses, once the label is at least 30 minutes old (slack for the
-# spinner-then-label ordering and API lag; no lane sets the label before
-# its spinner). Run-list mapping is deliberately not used: a dispatched run
+# uses, once the label is at least 30 minutes old (slack for API lag and
+# for the update lane, which sets the label before its signal and whose
+# "Working on it" spinner and auto-refresh 🔄 banner aren't read here — a
+# refresh finishes well inside the window). Run-list mapping is deliberately not used: a dispatched run
 # reports the default branch as its head and carries no PR number.
 #
 # Deterministic — no model calls. Mutations are label transitions only.
@@ -159,7 +162,22 @@ jobs:
               echo "PR #$pr: in-progress for ${age_s}s with a live spinner; a run may still be going"
               continue
             fi
-            echo "PR #$pr: review:in-progress for ${age_s}s with no live spinner; marking stale"
+            # A requested run signals with a 👀 on the request instead of a
+            # spinner. Only comments carrying any 👀 are worth a lookup.
+            eyes=0
+            for kind in issues pulls; do
+              for cid in $(gh api --paginate "repos/$REPO/$kind/$pr/comments" \
+                  --jq '.[] | select(.reactions.eyes > 0) | .id' 2>/dev/null); do
+                n=$(gh api "repos/$REPO/$kind/comments/$cid/reactions?content=eyes" \
+                  --jq '[.[] | select(.user.login == "github-actions[bot]")] | length' 2>/dev/null || echo 0)
+                eyes=$(( eyes + ${n:-0} ))
+              done
+            done
+            if [ "$eyes" -gt 0 ]; then
+              echo "PR #$pr: in-progress for ${age_s}s with a live 👀 on a request; a run may still be going"
+              continue
+            fi
+            echo "PR #$pr: review:in-progress for ${age_s}s with no live progress signal; marking stale"
             gh pr edit "$pr" --repo "$REPO" \
               --add-label "review:stale" --remove-label "review:in-progress"
           done

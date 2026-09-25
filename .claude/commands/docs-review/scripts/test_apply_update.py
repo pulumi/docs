@@ -108,12 +108,12 @@ def test_last_section_rerender_keeps_evidence_line_and_hint():
     up = _update([{"id": "F3", "action": "retext", "text": "*\"x\"* — sharper, still open"}])
     a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False,
                                   head_repo="example/docs-fork", head_branch="fix/component-doc")
-    assert a_out.count("📎 **Full evidence:**") == 1
+    assert a_out.count("**Full evidence:**") == 1
     assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
     _spans, texts = au.be.collect_detail_blocks(a_out)
     assert set(texts) == {"F1", "F2", "F3"}
     assert not any("Editing in the browser" in t for t in texts.values()), "hint never inside a block"
-    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("**Full evidence:**")
 
 
 def test_hold_moves_row_to_brief_and_records_refuted():
@@ -227,7 +227,7 @@ def test_browser_hint_follows_author_rows():
     a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up_one, head_sha=SHA, actor="cam", auto=False,
                               head_repo="example/docs-fork", head_branch="fix/component-doc")
     assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
-    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("**Full evidence:**")
 
 
 def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
@@ -241,6 +241,11 @@ def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
     assert au.set_evidence_url(body, "") == body
     tok = "📎 **Full evidence:** %%EVIDENCE_URL%%\n"
     assert au.set_evidence_url(tok, "https://n/3") == "📎 **Full evidence:** https://n/3\n"
+    # The 📎 above is the legacy prefix live cards still carry; the current
+    # composer writes the line without it, and both must rewrite.
+    new_body = "x\n**Full evidence:** [verification trail](https://old.example/1).\n"
+    assert au.set_evidence_url(new_body, "https://new.example/2") == \
+        "x\n**Full evidence:** [verification trail](https://new.example/2).\n"
 
 
 def test_refresh_strips_the_auto_refresh_banner():
@@ -272,6 +277,26 @@ def _resolved_fixture():
     assert state1["findings"]["F1"]["disposition"] == "fixed" and state1["findings"]["F1"]["actor"] == "update-lane"
     assert "F1" not in _open_author_ids(a1)
     return a1, b1
+
+
+def test_resolved_section_is_collapsed_and_stays_one_fold_across_refreshes():
+    """Reader feedback 2026-09-25: resolved rows are history, so they fold
+    away under a count. The H3 stays outside the fold (every parser anchors
+    on it), and a second resolve re-renders the span into ONE fold rather
+    than nesting a new one inside the old."""
+    a1, b1 = _resolved_fixture()
+    section = a1.split(au.RESOLVED_HEADING, 1)[1].split("**Full evidence:**", 1)[0]
+    assert section.count("<details>") == 1 and section.count("</details>") == 1
+    assert "<summary>1 resolved item — click to expand</summary>\n\n| ID | Where | Finding |" in section
+    assert section.index("| **F1** |") < section.index("</details>"), "the row is inside the fold"
+    up = _update([{"id": "F2", "action": "resolve", "annotation": "fixed in 2cb28d8"}], case="fix-response")
+    a2, b2, _, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    section = a2.split(au.RESOLVED_HEADING, 1)[1].split("**Full evidence:**", 1)[0]
+    assert section.count("<details>") == 1 and section.count("</details>") == 1
+    assert "<summary>2 resolved items — click to expand</summary>" in section
+    assert [ln.split("|")[1].strip() for ln in au._collect_resolved(a2)] == ["**F1**", "**F2**"]
+    vp = _load("validate_pinned_for_resolved_fold", HERE / "validate-pinned.py")
+    assert [r[1] for r in vp.v3_finding_rows(a2, "✅ Resolved since last review")] == au._collect_resolved(a2)
 
 
 def test_accept_on_a_resolved_finding_reopens_it_first():
@@ -383,3 +408,115 @@ def test_rebuild_detail_block_accepts_the_legacy_paragraph_form_and_emits_bullet
     ]
     bulleted = ["#### F2 · Do this", "", '- **Line (verbatim):** "b"', "- **Why:** w", "- **Fix:** f"]
     assert au._rebuild_detail_block("F2", bulleted, {"why": "w2", "fix": "f2"})[2] == '- **Line (verbatim):** "b"'
+
+
+def test_summary_replaces_the_stale_sentence_and_nothing_else():
+    """pulumi/docs#21871: the v1 sentence named four claims "only you can
+    confirm" and stayed on the card after all four resolved."""
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["summary"] = "Adds a component doc; the review fact-checked 12 claims and the build."
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "_Adds a component doc; the review fact-checked 12 claims and the build._" in a_out
+    assert "<TODO: one sentence" not in a_out
+    head = a_out.split("### ", 1)[0]
+    assert head.count("\n_") == 1, "exactly one summary line above the first section"
+    no_summary, _, _, _ = au.apply(AUTHOR, BRIEF, _update([{"id": "F1", "action": "resolve",
+                                                            "annotation": "fixed in 9f9f9f9"}]),
+                                   head_sha=SHA, actor="cam", auto=False)
+    assert "<TODO: one sentence" in no_summary, "an omitted summary leaves the line alone"
+
+
+def test_summary_is_inserted_when_the_card_has_none():
+    body = "\n".join(ln for ln in AUTHOR.splitlines() if not ln.startswith("_<TODO: one sentence"))
+    out = au.replace_summary(body + "\n", "A new sentence.")
+    lines = out.splitlines()
+    i = lines.index("_A new sentence._")
+    assert lines[i - 1] == "" and lines[i - 2].startswith(">"), "lands right under the callout"
+    assert i < next(j for j, ln in enumerate(lines) if ln.startswith("### "))
+
+
+def test_summary_shape_is_validated():
+    for bad, needle in ((42, "non-empty"), ("two\nlines", "one line"), ("x" * 301, "≤300")):
+        up = _update([])
+        up["summary"] = bad
+        try:
+            au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+        except au.UpdateError as exc:
+            assert needle in str(exc), exc
+        else:
+            raise AssertionError(f"summary {bad[:10]!r} must be rejected")
+
+
+def _all_answered():
+    up = _update([
+        {"id": "F1", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+        {"id": "F2", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+        {"id": "F3", "action": "concede", "reason": "author named the source"},
+    ])
+    return au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+
+
+def test_empty_blocking_sections_drop_together_when_nothing_is_left():
+    """Reader feedback 2026-09-25: a nothing-for-you card spent eight lines
+    on two sections each saying "nothing here" under a NOTE that already
+    said so."""
+    a_out, b_out, _, report = _all_answered()
+    assert report["blocking"] == 0 and "— nothing blocks merge" in a_out
+    assert "\n### 🚨" not in a_out and "\n### ❓" not in a_out
+    assert au.cr._V3_EMPTY_OUTSTANDING not in a_out and au.cr._V3_EMPTY_QUESTIONS not in a_out
+    assert "\n\n\n" not in a_out.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0], "no blank-line pile-up"
+    assert [ln.split("|")[1].strip() for ln in au._collect_resolved(a_out)] == ["**F1**", "**F2**", "**F3**"]
+    import test_validate_pinned_v3 as tv
+    assert [v.rule_id for v in tv.check(a_out, b_out)] == []
+
+
+def test_dropped_sections_come_back_for_a_reopened_row():
+    a1, b1, _, _ = _all_answered()
+    up = _update([{"id": "F2", "action": "reopen", "reason": "d1d1d1d reverted it"}], case="re-verify")
+    a2, _, _, report = au.apply(a1, b1, up, head_sha="d" * 40, actor="update-lane", auto=False)
+    assert report["blocking"] == 1
+    assert "### 🚨 Fix or disagree" in a2 and "### ❓ Questions for you" in a2
+    assert "F2" in _open_author_ids(a2)
+    assert a2.index("\n### 🚨") < a2.index("\n### ❓") < a2.index("\n" + au.RESOLVED_HEADING)
+
+
+def test_dropped_sections_come_back_for_an_added_row():
+    a1, b1, _, _ = _all_answered()
+    up = _update([{"action": "add", "bucket": "author-answer", "file": "content/docs/iac/x.md",
+                   "lines": [70], "text": "*\"new claim\"* — verdict: unverifiable"}], case="re-verify")
+    a2, _, _, report = au.apply(a1, b1, up, head_sha="e" * 40, actor="update-lane", auto=False)
+    assert report["blocking"] == 1 and "### ❓ Questions for you" in a2
+    assert au.cr._V3_EMPTY_OUTSTANDING in a2, "the other section returns in its empty form"
+
+
+def test_a_row_in_either_section_keeps_both():
+    be = au.be
+    assert be.drop_empty_author_sections(AUTHOR) == AUTHOR
+    one_left = AUTHOR.replace(au.cr._V3_EMPTY_QUESTIONS, "- a stray prose line")
+    assert be.drop_empty_author_sections(one_left) == one_left
+    assert be.ensure_author_sections(AUTHOR) == AUTHOR, "no-op when the headings exist"
+
+
+def test_evidence_line_never_reads_as_a_resolved_finding():
+    """Review finding 2026-09-25: the unprefixed `**Full evidence:**` line
+    matches FINDING_START_RE, so the ✅ Resolved paragraph walk swallowed it
+    and the REVIEW_STATE block behind it; a hold reason saying "conceding"
+    then tripped outcome-annotation-shape and failed the publish."""
+    import test_validate_pinned_v3 as tv
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+                  {"id": "F2", "action": "hold", "reason": "Holding rather than conceding: the registry lists 300."}])
+    a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="alice", auto=False)
+    assert "outcome-annotation-shape" not in [v.rule_id for v in tv.check(a_out, b_out)]
+    vp = tv.vp
+    assert vp.extract_bucket_bullets(a_out, "✅ Resolved") == []
+
+
+def test_empty_or_placeholder_summary_is_treated_as_absent():
+    """Review finding 2026-09-25: the model writes the optional key as "",
+    null, or the prompt's placeholder copied verbatim; none may fail the
+    refresh or reach the card."""
+    for val in ("", "   ", None, "<optional: one sentence>"):
+        up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+        up["summary"] = val
+        a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+        assert "<TODO: one sentence" in a_out and "<optional" not in a_out

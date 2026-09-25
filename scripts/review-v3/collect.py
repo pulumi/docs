@@ -264,7 +264,9 @@ def find_review_comments(comments: list[dict]) -> tuple[dict | None, dict | None
     return None, None, "none"
 
 
-RUBBER_RE = re.compile(r"### ✅ What you can rubber-stamp\s*(.*?)(?=\n#{2,3} |\n💡|\n📎|\Z)", re.S)
+# 💡/📎 are the pre-2026-09-25 prefixes of the two lines after the list.
+RUBBER_RE = re.compile(r"### ✅ What you can rubber-stamp\s*(.*?)"
+                       r"(?=\n#{2,3} |\n💡|\n📎|\n\*\*Pre-existing issues|\n\*\*Full evidence:|\Z)", re.S)
 EVIDENCE_RE = re.compile(r"\[([^\]]+)\]\((https://[^)\s]*review-evidence[^)\s]*)\)")
 
 
