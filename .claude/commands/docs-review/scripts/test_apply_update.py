@@ -2,7 +2,7 @@
 """Tests for apply-update.py — the v3 update lane's deterministic renderer.
 
 The heavy truth-table lives in the script's own `--self-test` (every action,
-the /resolve race, auto-mode drops, demotion/unknown-id rejection, evidence
+the racing-disposition merge, auto-mode drops, demotion/unknown-id rejection, evidence
 carry-forward + degraded path); this file makes pytest collection run it and
 adds the cases that read better as separate tests.
 """

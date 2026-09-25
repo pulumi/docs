@@ -79,3 +79,17 @@ def test_review_uploads_raw_claim_artifacts():
     # reason a review fails.
     assert str(step.get("if", "")).startswith("always()")
     assert step.get("continue-on-error") is True
+
+
+def test_update_lane_trigger_leaves_new_review_to_the_mention_gate():
+    """A job-level `if:` is a substring match and can't see quoting. When the
+    update lane's excluded `#new-review` there, a comment that only quoted
+    that hashtag ran neither lane: claude-new.yml's gate declined it as a
+    quote, and this one never reached its own gate (#21909). The exclusion
+    belongs to mention-gate.py's `--exclude new-review`, which reads only
+    live text."""
+    wf = _WF_DIR / "claude-update.yml"
+    gate = yaml.safe_load(wf.read_text())["jobs"]["gate"]
+    assert "#new-review" not in gate["if"], "the trigger must not screen #new-review by substring"
+    runs = "\n".join(s.get("run") or "" for s in gate.get("steps") or [])
+    assert "--hashtag update-review --exclude new-review" in runs, "the mention gate must still apply the exclusion"

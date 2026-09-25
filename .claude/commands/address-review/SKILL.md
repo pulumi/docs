@@ -26,7 +26,7 @@ The v3 surface is on repo-wide for pulumi/docs (`REVIEW_V3_COMMENTS`), so **ever
 | Dispositions recorded in | `<!-- REVIEW_STATE … -->` on the author card (**source of truth**) | Nowhere — the ✅ Resolved prose is the only trace |
 | Buckets | 🚨 outstanding · ❓ author-answer (both block) · ⚠️ reviewer-check (brief, advisory) · ✏️ style · 💡 pre-existing | 🚨 outstanding · ⚠️ low-confidence · ✏️ style · 💡 pre-existing |
 | Merge gate | the **Sentinel** check run | none — the labels are advisory |
-| Answer lanes | push · `@claude … #update-review` · `/resolve F<n> …` | push · `@claude … #update-review` |
+| Answer lanes | push · `@claude … #update-review` | push · `@claude … #update-review` |
 
 A PR reviewed before the flip **keeps its v2 monolith forever** — a `#update-review` on it refreshes v2 in place (`claude-update.yml` grandfathers it deliberately). Only `@claude #new-review` regenerates it as cards. Detect the surface, don't assume it from the PR's age.
 
@@ -164,19 +164,16 @@ Rules for the walk:
 
 A push alone answers only `fixed`. Everything else has to land in `REVIEW_STATE`, and an unanswered finding blocks the Sentinel however thoroughly you discussed it here.
 
-**Pick the lane by what the finding needs:**
+There are two lanes, for agents and humans alike:
 
 | Lane | Use it for | Cost |
 |---|---|---|
 | **Push a fix** | `fixed`. A small fix-push (≤80 changed lines, every hunk within ±3 lines of a finding's `[L…]` anchor) trips `auto-refresh-gate.py`: the card shows a 🔄 banner within a minute and refreshes itself. Wait for it rather than double-posting. **Only the author card's 🚨 and ❓ findings anchor a refresh** — a hunk fixing a ⚠️ brief item or a ✏️ suggestion falls outside every anchor and declines the whole push, so a mixed fix-push needs the mention below. | free |
-| **`/resolve F<n> <disposition>[: reason]`** | Agent-facing bookkeeping — recording a disposition the user already decided, in bulk if needed (`/resolve all accepted: <why>`). Writes `REVIEW_STATE` directly, no model runs. | zero model cost |
-| **`@claude <reasoning> #update-review`** | Anything needing adjudication: a dispute, a fix the gate didn't catch, a question answered in prose. The only lane that can *change the review's mind*. | a model run |
+| **`@claude <reasoning> #update-review`** | Everything a push doesn't answer: a dispute, a fix the gate didn't catch, a question answered in prose, an acceptance or deferral (say which findings and why — a deferral names its issue). The model adjudicates: it concedes, holds, or records the acceptance. | a model run |
 
-`/resolve` is deliberately not surfaced to human contributors — it's plumbing. Use it when you're recording, not arguing. It needs the PR author or a write/maintain/admin collaborator (it fails closed), it is ignored on comments from bot accounts, and `deferred` / `accepted` / `not-applicable` each need a reason after the colon.
+An acceptance or a held dispute stops blocking merge but moves the row to the reviewer brief's ⚠️ list with the reason attached, so the human approver weighs it. Tell the user that before they pick *Accept* or *Refute*.
 
-**On your own PR, a non-`fixed` disposition is recorded as `author-accepted`**, with what you typed preserved as `original_disposition`. That's by design: self-adjudication shouldn't read as independent adjudication. The Sentinel counts it as answered, and the reviewer brief keeps the row visible for the human approver. Tell the user that's what will happen before they pick *Refute* on their own PR — a refutation they want the model to actually weigh belongs in `#update-review`, not `/resolve`.
-
-Put fixes and disputes in the *same* mention — the update path handles both:
+Put fixes, disputes, and acceptances in the *same* mention — the update path handles all of them:
 
 ```text
 @claude #update-review
@@ -186,6 +183,8 @@ suggestions.
 
 Disputing F3: "teams often" is sourced from the 2026 state-of-IaC survey,
 cited two paragraphs down. Please re-check with that in view.
+
+Accepting F5 as-is: pre-existing heading case, deferred to #20456.
 ```
 
 Then re-run Step 3's command and confirm the fixed items moved to answered and the disputed ones were adjudicated (conceded, or held with a reason). **A finding the model holds after a dispute is still open** — take it back into Step 4 with the model's reasoning in hand.
@@ -220,7 +219,7 @@ The Sentinel is behind `REVIEW_V3_SENTINEL` (unset = dark, `report` = report-onl
 A PR still carrying the monolith works the same way with four differences:
 
 1. **Ids are synthetic** (`outstanding:L40-50`, `low:L12`, `pre-existing:L7`) and get re-invented on every refresh, so a stale local state file can mismatch. Re-run Step 3 after any refresh rather than trusting `--resume` across one.
-1. **There is no `REVIEW_STATE` and no `/resolve`** — that lane is gated on the v3 surface. Every non-`fixed` disposition goes through `@claude … #update-review`, and the local state file is the only ledger.
+1. **There is no `REVIEW_STATE`.** Every non-`fixed` disposition still goes through `@claude … #update-review`, and the local state file is the only ledger.
 1. **The bucket order is** 🚨 Outstanding → ⚠️ Low-confidence → ✏️ Style → 💡 Pre-existing. There is no ❓ bucket; ⚠️ here is low-confidence findings addressed to *you*, not reviewer checks.
 1. **The Sentinel scores it by counting 🚨 bullets** on the current head. A v2 PR with open blockers can only clear G2 by having them disappear from the comment — there is no disposition lane to answer them with. If the user wants to answer rather than fix, the honest move is `@claude #new-review` to regenerate as cards; say so plainly, and note it costs a full review.
 
@@ -232,7 +231,7 @@ Offer the migration when it buys something (open blockers the user wants to disp
 
 - **Never** mark an item resolved because it looks minor. Style suggestions get a disposition like everything else — `accepted` with "house voice, leaving it" is a fine answer; silence is not.
 - **Never** delete, hide, or resolve the review's own comments — the `<!-- CLAUDE_REVIEW_AUTHOR -->` card, the `<!-- CLAUDE_REVIEW_BRIEF -->` brief, or a legacy `<!-- CLAUDE_REVIEW N/M -->` monolith. Hiding one makes later refreshes edit a comment nobody can see, and the author card carries `REVIEW_STATE` — delete it and every disposition on the PR is gone.
-- **Never** hand-edit `REVIEW_STATE`. Write it through `/resolve` or `#update-review`, both of which re-fetch the card immediately before writing; a hand-edit races the update lane's model step and loses.
+- **Never** hand-edit `REVIEW_STATE`. Write it through `#update-review`, which re-fetches the card immediately before writing; a hand-edit races the update lane's model step and loses.
 - **Never** push a fix without confirming the review caught up afterward.
 - **Never** invent a finding's resolution in the PR thread that the diff doesn't support. The cards are scraped after merge into the `#docs-ops` digest; a false "fixed" corrupts the tuning data the review's severity rules are built from.
 - **Never** hold the user hostage. Pushy means asking once, clearly, with the cost stated. It does not mean refusing to proceed.

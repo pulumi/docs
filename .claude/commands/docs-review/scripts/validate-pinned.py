@@ -3069,8 +3069,8 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     rows = (v3_finding_rows(ctx.body, "🚨 Fix or disagree")
             + v3_finding_rows(ctx.body, "❓ Questions for you"))
     # Blocking = rows without a REVIEW_STATE disposition and not rewritten
-    # in place (Spurious/…). A `/resolve F3 accepted` that lands between an
-    # update run's fetch and publish leaves F3's row in ❓ with a disposition;
+    # in place (Spurious/…). A card another run published between this run's
+    # fetch and publish can leave a row in ❓ carrying a disposition;
     # build-evidence/apply-update count it as answered, and this rule must
     # agree (fork PR 242, 2026-09-01: a held dispute failed publish here).
     try:
@@ -3090,7 +3090,7 @@ def check_v3_blocking_count(ctx: Context) -> list[Violation]:
     # in place as Spurious/Mis-sourced/Pre-existing therefore still shows in
     # the composer's count on the draft (build-evidence.py files the rewrite
     # and recomputes the header before publish), while the published body
-    # the update/resolve lanes re-validate already carries the recomputed,
+    # the update lane re-validates already carries the recomputed,
     # rewrite-excluded count. Accepting only the latter refused every review
     # that dismissed a finding in place (pulumi/docs#21372, 2026-09-03: one
     # 🚨 row rewritten Spurious, header still "1 item", review:error).

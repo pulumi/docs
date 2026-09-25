@@ -34,9 +34,6 @@ on:
       # resolvable, matrix complete, SLA entries present), so a config-only
       # edit must run it too.
       - '.github/review-routing.yml'
-      # test_staging_gate.py executes this workflow's gate step, extracted
-      # from the YAML, so an edit to the workflow alone must run it too.
-      - '.github/workflows/staging-deploy-pr.yml'
       - '.github/workflows/review-pipeline-tests.yml'
 
 permissions:

@@ -57,18 +57,16 @@ edit ↗
 
 ## Judgment badges
 
-A badge beside a finding says **why that finding does not stop the merge**. It is never something the PR's author answered — the author has not answered anything on this board.
+A badge beside a finding is **your own call on it**, kept on the board. It is never something the PR's author answered — the author has not answered anything on this board — and nothing is posted for it: approving a judged row posts the approval and the merge, nothing else. A badge never answers a blocking finding either; those are the author's, so a row with an unanswered 🚨 stays blocked however it is judged.
 
-| Badge | Means | Approving the row does |
+| Badge | Means | What to do |
 |---|---|---|
-| already fixed | The diff already addresses it. | Records it as fixed. |
-| not a real issue | The review got this one wrong. | Posts `/resolve F<n> refuted` with the reason shown. |
-| fair, not blocking | Real, but not worth holding the PR. | Posts `/resolve F<n> accepted` with the reason. |
-| doesn't apply | Out of scope for this PR. | Posts `/resolve F<n> not-applicable` with the reason. |
-| needs the author | Not yours to fix. | Nothing — use send back, which puts it to the author. |
-| no author to ask | Wants a change, but a workflow opened the PR, so a send-back goes unread. | Nothing — fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page. |
-
-Approving a judged row posts those `/resolve` comments **before** it approves, so the review's own state records why each finding closed rather than the merge walking over them.
+| already fixed | The diff already addresses it. | Nothing. |
+| not a real issue | The review got this one wrong. | Nothing, on a ⚠️ row. |
+| fair, not blocking | Real, but not worth holding the PR. | Nothing, on a ⚠️ row. |
+| doesn't apply | Out of scope for this PR. | Nothing, on a ⚠️ row. |
+| needs the author | Not yours to fix. | Use send back, which puts it to the author. |
+| no author to ask | Wants a change, but a workflow opened the PR, so a send-back goes unread. | Fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page. |
 
 Before the judge step has run, a finding wears the same shape with a different badge — where it *stands*, not what was decided:
 

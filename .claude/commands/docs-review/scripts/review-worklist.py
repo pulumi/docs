@@ -120,13 +120,7 @@ STYLE_FILE_HEADING_RE = re.compile(r"^#####\s+`?([^`\s]+)`?\s*$")
 # rule, so the two must agree by construction rather than by vigilance.
 FINDING_START_RE = _vp.FINDING_START_RE
 
-DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable", "author-accepted")
-# The values a hand-edited --state file may set. `author-accepted` is
-# excluded: it is derived by resolve-handler.py from the actor's identity
-# (#21640) and carries an `original_disposition` this loader doesn't parse,
-# so accepting it here would let a note-less "author-accepted" slip past the
-# reason check below that a typed "accepted" could never pass.
-USER_DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
+DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
 # Dispositions that are a judgment call rather than a change in the diff. The
 # review record can't evidence these on its own, so a human-readable reason is
 # mandatory — otherwise "accepted" becomes an unaudited way to close the loop.
@@ -554,8 +548,8 @@ def seed_from_review_state(items: list[dict], state: dict) -> None:
     """Pre-populate F-id items' disposition/note from the REVIEW_STATE block.
 
     A finding with a recorded disposition counts as decided without needing a
-    matching `--state` entry — REVIEW_STATE (via `/resolve` or the update
-    lane) is now the primary disposition source for the v3 surface; `--state`
+    matching `--state` entry — REVIEW_STATE (written by the update lane) is
+    now the primary disposition source for the v3 surface; `--state`
     remains available to layer manual overrides on top (applied afterwards by
     `apply_state`). Style items never match (they carry no `F<n>` id), so this
     is safe to call unconditionally over the full item list.
@@ -597,10 +591,10 @@ def load_state(path: Path) -> dict[str, dict]:
         if not isinstance(value, dict):
             raise SystemExit(f"review-worklist: state entry {key!r} is not an object or string")
         disp = value.get("disposition")
-        if disp not in USER_DISPOSITIONS:
+        if disp not in DISPOSITIONS:
             raise SystemExit(
                 f"review-worklist: state entry {key!r} has disposition {disp!r}; "
-                f"expected one of {', '.join(USER_DISPOSITIONS)}"
+                f"expected one of {', '.join(DISPOSITIONS)}"
             )
         out[key] = {"disposition": disp, "note": str(value.get("note") or "").strip()}
     return out
@@ -979,17 +973,6 @@ def self_test() -> int:
             check("invalid disposition rejected", False)
         except SystemExit:
             check("invalid disposition rejected", True)
-        # #21640: author-accepted is derived, never hand-typed, and this
-        # loader doesn't parse original_disposition — accepting it here
-        # would let a note-less author-accepted through the reason check
-        # below that a typed "accepted" could never pass.
-        derived = Path(tmp) / "derived.json"
-        derived.write_text('{"outstanding:L40": "author-accepted"}', encoding="utf-8")
-        try:
-            load_state(derived)
-            check("derived-only disposition rejected in --state file", False)
-        except SystemExit:
-            check("derived-only disposition rejected in --state file", True)
 
     # An unparseable body must never read as an all-clear.
     r4 = build_report("nothing to see here", [], {}, 20123, DEFAULT_REPO)

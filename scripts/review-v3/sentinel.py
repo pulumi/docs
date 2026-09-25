@@ -72,8 +72,8 @@ stand-in is triage's own `<!-- TRIAGE_PROSE -->` comment: with it present
 G1/G2 pass (advisory nits only, nothing to answer) and G3 still wants the
 human approver the demotion asked for.
 
-I/O lives behind the `Gh` wrapper (subprocess `gh api`, the
-resolve-handler.py pattern) so tests substitute a stub. Team-membership
+I/O lives behind the `Gh` wrapper (subprocess `gh api`) so tests
+substitute a stub. Team-membership
 reads need an org-scoped token (the default GITHUB_TOKEN cannot read team
 membership): the workflow passes PULUMI_BOT_TOKEN as $GH_TOKEN_TEAM_READ,
 used for that one endpoint only.
@@ -146,7 +146,7 @@ STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # evidence. Anyone with push access can write a commit status, so an
 # unattributed one is not evidence of anything.
 STAGING_STATUS_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
-# The workflow `/deploy-staging` dispatches, and the one G4 verifies against
+# The workflow the staging lane dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
 OVERSIZED_ACK = "sentinel:oversized-ack"
@@ -390,11 +390,11 @@ def _find_comment(comments: list[dict], marker: str) -> dict | None:
     the forgery, so the real card never showed it either.
 
     The two conditions below are not new inventions; they are the contract
-    the WRITER already enforces and that two siblings already check:
-    `pinned-comment.sh`'s `list_role_comments` requires the marker to be an
-    exact line among the body's first three, and `resolve-handler.py:222`
-    requires `login == github-actions[bot]`. The far less load-bearing
-    triage-prose comment was already read this way; this function was the
+    the WRITER already enforces: `pinned-comment.sh`'s `list_role_comments`
+    requires the marker to be an exact line among the body's first three,
+    and only `github-actions[bot]` ever posts the card. The far less
+    load-bearing triage-prose comment was already read this way; this
+    function was the
     one place that checked neither, so it is now the only reader and both
     markers come through it.
     """
@@ -673,8 +673,8 @@ def _staging_evidence(gh: Gh, head_sha: str) -> str | None:
 
     (2) exists because (1) is a *report* of the deploy, not the deploy: the
     status write is a separate API call after `gh run watch` returns, and a
-    cancelled runner, a lost token or a hand-run deploy that never went
-    through `/deploy-staging` all leave a green deploy with no status. The
+    cancelled runner, a lost token or a dispatch whose `workflow_run`
+    cascade never fired all leave a green deploy with no status. The
     run record is the deploy. Checking the status first keeps the common
     path to one API call.
 
@@ -1123,8 +1123,10 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                 "deploy that has *finished* since this gate was last scored is "
                 "picked up within ~10 minutes by `staging-status.yml`'s sweep, "
                 "which re-runs this check — no action needed. If it never ran "
-                "or it failed, a member of any review team can comment "
-                "`/deploy-staging` to retry. (Not waivable.)",
+                "or it failed, re-run the \"Build and deploy testing\" run, or "
+                "dispatch it at this branch: "
+                "`gh workflow run testing-build-and-deploy.yml --ref <branch>`. "
+                "(Not waivable.)",
             ))
     else:
         # NOT "no infra paths": `domain:infra` and

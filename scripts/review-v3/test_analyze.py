@@ -182,14 +182,17 @@ def test_open_blockers_block_the_row_they_do_not_merely_demote_it():
     assert "close" in ids and "request-changes" not in ids, gen["actions"]
 
 
-def test_gate_self_accepted_disposition():
-    state = '<!-- REVIEW_STATE {"findings":{"F2":{"disposition":"accepted","note":"will fix later","actor":"workprentice[bot]","sha":"","bulk":false,"updated_at":"2026-09-01T00:00:00Z"}},"high_water":4,"schema":1} -->'
-    body = CLEAN_AUTHOR.replace('<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->', state)
-    p = _judge_because("self-accepted:F2", comments=[comment(CLEAN_BRIEF), comment(body)])
-    assert p["self_accepted_ids"] == ["F2"]
-    # a maintainer's disposition is not self-accepted
-    q = run([stampable(comments=[comment(CLEAN_BRIEF), comment(body.replace("workprentice[bot]", "cnunciato"))])])
-    assert row(q, 100)["self_accepted_ids"] == []
+def test_a_disposition_on_a_brief_row_does_not_clear_it():
+    """A ⚠️ row is the approver's checklist. The author accepting it (the
+    update lane's `accept` moves the row onto the brief) is their answer,
+    not the approver's, so the row still holds the stamp — whoever recorded
+    the disposition."""
+    for actor in ("workprentice[bot]", "cnunciato"):
+        state = ('<!-- REVIEW_STATE {"findings":{"F4":{"disposition":"accepted","note":"will fix later","actor":"%s",'
+                 '"sha":"","bulk":false,"updated_at":"2026-09-01T00:00:00Z"}},"high_water":4,"schema":1} -->' % actor)
+        body = CLEAN_AUTHOR.replace('<!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->', state)
+        p = _judge_because("warnings:1:F4", comments=[comment(V3_BRIEF), comment(body)])
+        assert p["open_warning_ids"] == ["F4"]
 
 
 def test_the_stamp_buttons_say_whether_approving_merges():
@@ -1021,31 +1024,19 @@ def test_no_config_tells_unreadable_teams_from_being_on_none():
     assert pr_review_config.lanes_from_teams({"pulumi/docs-guild": False, "pulumi/docs-marketing-review": False, "pulumi/docs-tools": False}, CONFIG) == []
 
 
-def test_judged_blockers_lift_the_row_out_of_blocked():
-    """SKILL: judging the row is what lets the stamp post the /resolve lines.
-    So a row whose every open 🚨 has a resolvable judgment with a note is an
-    approver's call again; one judgment short and it stays blocked."""
+def test_judging_the_blockers_never_lifts_the_row_out_of_blocked():
+    """Blocking findings are the author's to answer. The approver's judgments
+    are board notes, so even a row whose every 🚨 is judged stays blocked,
+    and a stamp recommendation on it is recorded as rejected."""
     q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)])])
     p = row(q, 1)
     assert p["verdict"] == "blocked" and set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
     js = [{"finding_id": f, "disposition": d, "note": "checked; holds"} for f, d in (("F1", "refuted"), ("F2", "accepted"), ("F3", "not-applicable"))]
-    analyze.merge_judgments(q, {1: {"judgments": js[:2], "recommended": "stamp"}})
-    assert p["verdict"] == "blocked" and p["open_blocker_ids"] == ["F3"] and "recommended" not in p
-    assert p["rejected_recommendation"] == "stamp: the row is blocked, not judge"
     analyze.merge_judgments(q, {1: {"judgments": js, "recommended": "stamp"}})
-    assert p["verdict"] == "judge" and p["open_blocker_ids"] == [] and p["judged_blocker_ids"] == ["F1", "F2", "F3"]
-    assert "outstanding:judged:F1,F2,F3" in p["reasons"] and p["recommended"] == "stamp"
-    assert [a["cmd"] for a in p["actions"][:2]] == ["--stamp 1 --force", "--stamp 1:no-merge --force"]
-    assert q["counts"]["judge"] == 1 and q["counts"]["blocked"] == 0
-    # `deferred` is the author's, and a judgment without a note posts nothing: neither answers
-    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "deferred", "note": "theirs"}]}})
-    assert p["verdict"] == "blocked"
-    analyze.merge_judgments(q, {1: {"judgments": js[:2] + [{"finding_id": "F3", "disposition": "refuted"}]}})
-    assert p["verdict"] == "blocked"
-    # red CI still holds a fully judged row
-    q = run([stampable(1, comments=[comment(CLEAN_BRIEF), comment(V3_AUTHOR)], check_runs=_red())])
-    analyze.merge_judgments(q, {1: {"judgments": js}})
-    assert row(q, 1)["verdict"] == "blocked" and row(q, 1)["blockers"] == ["checks:red"]
+    assert p["verdict"] == "blocked" and set(p["open_blocker_ids"]) == {"F1", "F2", "F3"}
+    assert "recommended" not in p and p["rejected_recommendation"] == "stamp: the row is blocked, not judge"
+    assert not [a for a in p["actions"] if a["id"].startswith("stamp")], p["actions"]
+    assert q["counts"]["blocked"] == 1
 
 
 def test_close_and_route_recommendations_add_their_buttons():

@@ -2,9 +2,9 @@
 """Finalize dispatched pulumi-test.io staging deploys that no event cascade reports.
 
 Sentinel gate G4 requires a successful staging deploy at the PR's current
-head. The deploy is produced by `staging-deploy-auto.yml` (unattended) or
-`/deploy-staging` (attended), both of which dispatch "Build and deploy
-testing" and then — correctly — get out of the way. Nothing then tells the
+head. The deploy is produced by `staging-deploy-auto.yml` (unattended) or a
+hand-dispatched retry, both of which run "Build and deploy testing" and
+then — correctly — get out of the way. Nothing then tells the
 Sentinel to look again, so a PR that has satisfied G4 keeps a red,
 **non-waivable** gate until somebody dispatches `review-sentinel.yml` by
 hand. PR #21789 is the worked example: deploy green at 22:44, gate still red

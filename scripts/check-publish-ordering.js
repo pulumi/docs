@@ -129,7 +129,7 @@ const defaultMetadataFile = path.join(repoRoot, "origin-bucket-metadata.json");
 //            testing-build-and-deploy.yml at PR branch refs, and "next merge to
 //            master resets pulumi-test.io" is documented behavior, not a bug. The
 //            blast radius is one reviewer's preview. Failing those deploys would
-//            make /deploy-staging flaky for a reason the PR author cannot act on,
+//            make staging deploys flaky for a reason the PR author cannot act on,
 //            so testing gets the signal without the gate.
 const MODES_BY_STACK = {
     "www-production": "enforce",

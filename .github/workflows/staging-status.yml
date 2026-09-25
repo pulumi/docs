@@ -76,9 +76,7 @@ name: Staging deploy status
 # - ONE WRITER, AND NO PENDING ONE. This workflow is the only thing that
 #   writes `staging/pulumi-test-io` at all. `staging-deploy.sh` writes no
 #   status: not a terminal one (this owns that) and no longer a pending one
-#   (nothing can be trusted to finalize it — see above). Its watch path
-#   (`/deploy-staging`, which blocks to hold that lane's `staging-stack`
-#   concurrency group) buys the concurrency group, not a status.
+#   (nothing can be trusted to finalize it — see above).
 # - NO PR CODE, EVER. This job holds `statuses: write` and `actions: write`
 #   on a run whose head is PR-controlled. It checks out nothing and runs
 #   nothing from the PR; every fact comes from the API as data. If a script
