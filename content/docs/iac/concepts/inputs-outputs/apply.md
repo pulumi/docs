@@ -27,6 +27,10 @@ For more information about what outputs are and why they are necessary in Pulumi
 The `apply` method is designed for accessing single output values. If you need to access multiple output values across multiple resources, use Pulumi's [`all` method](/docs/iac/concepts/inputs-outputs/all/) instead.
 {{% /notes %}}
 
+{{% notes type="info" %}}
+Seeing placeholder text like `Calling [toString] on an [Output<T>] is not supported` in a log line, a generated file, or a resource property instead of the value you expected? See [Output value errors](/docs/iac/operations/troubleshooting/output-values/) for a rundown of this and other symptoms of treating an output as if it were already a plain value.
+{{% /notes %}}
+
 {{% notes type="warning" %}}
 Creating resources inside an `apply` should be avoided whenever possible. Resources created inside `apply` will not appear in `pulumi preview` unless the output's value is already known. This means the preview output may not match the actual changes when `pulumi up` is run, making it difficult to understand what changes will be made to your infrastructure.
 
