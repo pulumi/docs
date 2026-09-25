@@ -34,7 +34,7 @@ The SDK supports any [supported version](https://go.dev/doc/devel/release#policy
 
 Run `go get github.com/pulumi/esc-sdk/sdk` to install the SDK package.
 
-### Initializing ESC SDK client
+## Initializing ESC SDK client
 
 The easiest way to initialize an ESC SDK client and authorization context is to run:
 
@@ -46,7 +46,7 @@ import (
 authCtx, escClient, err := esc.DefaultLogin()
 ```
 
-This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using the Pulumi CLI.
+This method reads the access token from the `PULUMI_ACCESS_TOKEN` environment variable and returns an error if it isn't set. It doesn't fall back to Pulumi CLI credentials. The backend URL comes from the `PULUMI_BACKEND_URL` environment variable, which defaults to `https://api.pulumi.com`.
 
 If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
 
@@ -134,7 +134,7 @@ func main() {
 
 ### Tag revision example
 
-This example lists revisions for an environment, tags a revision, and lists revision tags.
+This example lists revisions for an environment, tags a revision, and lists revision tags. It uses the `examples/sdk-go-example` environment from the [manage environment example](#manage-environment-example), so run that example first. The environment needs at least two revisions; otherwise, the example exits without tagging anything.
 
 ```go
 package main

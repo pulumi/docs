@@ -84,10 +84,11 @@ resources:
 {{% choosable language hcl %}}
 
 ```hcl
-# HCL follows Terraform's replacement semantics: resources are deleted
-# before their replacement is created by default. Set
-# create_before_destroy = true to opt into Pulumi's default
-# create-first behavior instead.
+# The HCL equivalent of deleteBeforeReplace: true is
+# create_before_destroy = false, shown explicitly here. HCL follows
+# Terraform's replacement semantics, where deleting before creating is
+# already the default; set create_before_destroy = true to opt into
+# Pulumi's default create-first behavior instead.
 resource "database" "db" {
   # ...
 

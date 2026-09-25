@@ -110,6 +110,8 @@ Child resources inherit `protect` from their [parent](/docs/iac/concepts/resourc
 
 Pulumi has no single flag to protect every resource in a stack. To apply `protect: true` across the board, use [stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms) to set the option on every resource as it's registered.
 
+`protect` guards a resource within Pulumi, but it's not the only layer worth knowing about: many cloud resources carry their own, separate deletion-protection attributes that the provider or the cloud API enforces independently, such as `deletionProtection` on a GCP Cloud SQL instance or an AWS RDS instance. The two layers are complementary rather than substitutes for one another. See [Deletion protection on the resource itself](/docs/iac/operations/troubleshooting/destroy-failures/#deletion-protection-on-the-resource-itself) for how to tell them apart and resolve a destroy failure caused by either.
+
 ## Retain data on delete
 
 Where `protect` refuses to delete a resource, [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) takes the opposite approach: it lets Pulumi remove the resource from state without calling the provider's delete, leaving the underlying cloud resource in place. It's the right choice when you want to stop managing a resource with Pulumi, or hand it off, without destroying its data:

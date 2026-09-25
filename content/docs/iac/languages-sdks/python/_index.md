@@ -22,7 +22,7 @@ aliases:
 Pulumi supports writing your infrastructure as code in Python. Using a general-purpose language for infrastructure as code provides several key advantages:
 
 - **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
-- **Rich ecosystem**: Leverage the vast [PyPI](https://pypi.org/) package ecosystem in your infrastructure code
+- **Rich ecosystem**: Use any package from [PyPI](https://pypi.org/) in your infrastructure code
 - **Native tooling**: Use your existing IDE, linters, test frameworks such as `pytest` and `unittest`, and other development tools without requiring plugins or extensions
 - **Type safety**: Pulumi's Python libraries ship with type hints, and Pulumi has first-class support for the `mypy` and `pyright` type checkers
 
@@ -41,7 +41,11 @@ runtime: python
 Install [Python](https://www.python.org/downloads/). To reduce potential issues with setting up your Python environment on Windows or macOS, you should install Python through the official Python installer.
 
 {{% notes type="info" %}}
-Either `pip`, `poetry` or `uv` is required to install dependencies. If you installed Python from source, with an installer from [python.org](https://python.org/), or via [Homebrew](https://brew.sh/) you should already have `pip`. If Python is installed using your OS package manager, you may have to install `pip` separately, see [Installing pip/setuptools/wheel with Linux Package Managers](https://packaging.python.org/guides/installing-using-linux-tools/). For example, on Debian/Ubuntu you must run `sudo apt install python3-venv python3-pip`. To install `poetry` follow the [installation instructions](https://python-poetry.org/docs/#installation). To install `uv` follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+Installing dependencies requires one of `pip`, `poetry`, or `uv`:
+
+- **pip**: You already have `pip` if you installed Python from source, with an installer from [python.org](https://www.python.org/downloads/), or via [Homebrew](https://brew.sh/). If Python came from your OS package manager, you may have to install `pip` separately — see [Installing pip/setuptools/wheel with Linux Package Managers](https://packaging.python.org/guides/installing-using-linux-tools/). On Debian and Ubuntu, for example, run `sudo apt install python3-venv python3-pip`.
+- **Poetry**: Follow the [Poetry installation instructions](https://python-poetry.org/docs/#installation).
+- **uv**: Follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 {{% /notes %}}
 
 ### Package managers
@@ -72,7 +76,7 @@ See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for ful
 
 ### Program entrypoint
 
-By default, Pulumi runs your program from the `__main__.py` file (or a `setup.py` file) in the project directory. Alternatively, you can set the top-level `main` attribute in your `Pulumi.yaml` to point at a different module file, and Pulumi will pass it to `python`:
+By default, Pulumi runs your program from the `__main__.py` file (or a `setup.py` file) in the project directory. To point at a different module file, set the top-level `main` attribute in your `Pulumi.yaml`, and Pulumi passes it to `python`:
 
 ```yaml
 name: my-project
@@ -127,7 +131,7 @@ See [Resource identity in Python](/docs/iac/languages-sdks/python/resource-ident
 
 Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI handles authentication, state management, and orchestrating resource operations.
 
-Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Python code. The Automation API allows you to:
+You can also use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Python code. The Automation API allows you to:
 
 - Embed Pulumi operations in regular Python applications
 - Build custom deployment tools and workflows
@@ -143,7 +147,7 @@ A Python Pulumi program is single threaded, and the Pulumi runtime creates an ev
 
 ### Virtual environments
 
-It is not required, but we recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
+A [virtual environment](https://docs.python.org/3/tutorial/venv.html) isn't required, but we recommend one to isolate the dependencies of your projects and ensure reproducibility between machines.
 
 When creating a new Python project with `pulumi new`, you are offered the choice between `pip` (default), `poetry` and `uv` to manage your dependencies. You can also change this at any time by updating the `toolchain` option in `Pulumi.yaml`. Existing Python projects that do not use a virtual environment can opt-in to using the built-in virtual environment support by setting the option and then running `pulumi install` to create the virtual environment and install dependencies.
 
@@ -151,7 +155,7 @@ When creating a new Python project with `pulumi new`, you are offered the choice
 
 {{% choosable pythontoolchain pip %}}
 
-When using `pip` Pulumi will create a virtual environment and install the required dependencies from `requirements.txt`. The `virtualenv` option is required for `pip` and controls the name of the virtual environment directory.
+When using `pip`, Pulumi creates a virtual environment and installs the required dependencies from `requirements.txt`. The `virtualenv` option is required for `pip` and controls the name of the virtual environment directory.
 
 ```yaml
 runtime:
@@ -165,7 +169,7 @@ runtime:
 
 {{% choosable pythontoolchain uv %}}
 
-When using `uv` Pulumi will create a virtual environment in the `.venv` directory and install the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi will look for a `requirements.txt` file and convert it to a `pyproject.toml` file. The `virtualenv` option controls the name of the virtual environment directory. This is optional for `uv` and defaults to `.venv`.
+When using `uv`, Pulumi creates a virtual environment in the `.venv` directory and installs the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi looks for a `requirements.txt` file and converts it to a `pyproject.toml` file. The `virtualenv` option controls the name of the virtual environment directory. This is optional for `uv` and defaults to `.venv`.
 
 ```yaml
 runtime:
@@ -179,7 +183,7 @@ runtime:
 
 {{% choosable pythontoolchain poetry %}}
 
-When using `poetry` Pulumi will run Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment) and install the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi will look for a `requirements.txt` file and convert it to a `pyproject.toml` file.
+When using `poetry`, Pulumi runs Poetry to create a virtual environment in its [default location](https://python-poetry.org/docs/basic-usage/#using-your-virtual-environment) and installs the required dependencies from `pyproject.toml`. When no `pyproject.toml` file is present, Pulumi looks for a `requirements.txt` file and converts it to a `pyproject.toml` file.
 
 Pulumi requires Poetry version 1.8.0 or later.
 
@@ -208,7 +212,7 @@ When managing the virtual environment on your own, you'll need to run any `pulum
 
 ### Adding a dependency {#packages}
 
-There are many [Pulumi Python packages](/registry) available.
+Many [Pulumi Python packages](/registry/) are available.
 
 {{< chooser pythontoolchain "pip,uv,poetry" >}}
 
@@ -224,7 +228,7 @@ pip install -r requirements.txt
 
 {{% choosable pythontoolchain poetry %}}
 
-To add a new dependency when using `poetry`, run the `poetry add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
+To add a new dependency when using `poetry`, run the `poetry add` command in your project directory. Poetry adds the dependency to the `pyproject.toml` file and installs it in the virtual environment:
 
 ```bash
 poetry add ${PACKAGE_NAME}
@@ -234,7 +238,7 @@ poetry add ${PACKAGE_NAME}
 
 {{% choosable pythontoolchain uv %}}
 
-To add a new dependency when using `uv`, run the `uv add` command in your project directory. The dependency will be added to the `pyproject.toml` file and installed in the virtual environment:
+To add a new dependency when using `uv`, run the `uv add` command in your project directory. This adds the dependency to the `pyproject.toml` file and installs it in the virtual environment:
 
 ```bash
 uv add ${PACKAGE_NAME}
@@ -257,13 +261,13 @@ runtime:
     typechecker: mypy
 ```
 
-When set, Pulumi will invoke the type checker before running your program. This can be used to ensure your program is always type safe when running `pulumi up` without you having to remember to run a separate checking command beforehand.
+When set, Pulumi invokes the type checker before running your program, so every `pulumi up` checks your program's types without you having to remember to run a separate command beforehand.
 
 ## Documentation and resources
 
 ### Pulumi SDK
 
-The [Pulumi SDK (`pulumi`)](/docs/reference/pkg/python/pulumi/) is distributed on PyPI and contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
+The [Pulumi SDK (`pulumi`)](/docs/reference/pkg/python/pulumi/) is distributed on PyPI and contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. Most Pulumi programs reference it.
 
 ### Provider SDKs
 

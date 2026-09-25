@@ -18,6 +18,10 @@ node scripts/make-s3-redirects.js "${destination_bucket}" "${build_dir}/redirect
 
 echo "Processing custom redirects in scripts/redirects..."
 ls -l "./scripts/redirects/" | tail -n +2 | awk '{print $9}' | while read line; do
+    # Only rule files (scripts/redirects/*.txt) are redirect definitions. Skip anything
+    # else in this directory (e.g. README.md) instead of uploading every line of it as a
+    # bogus S3 redirect key.
+    [[ "$line" == *.txt ]] || continue
     redirect_file="./scripts/redirects/$line"
     node scripts/make-s3-redirects.js "${destination_bucket}" "${redirect_file}" "$(aws_region)"
 done

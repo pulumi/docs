@@ -14,7 +14,7 @@ aliases:
     - /docs/iac/troubleshooting/common-issues/update-conflicts/
 ---
 
-Run `pulumi cancel` to cancel the update.
+If you hit a 409 conflict error, run `pulumi cancel` to cancel the update.
 
 {{% notes type="warning" %}}
 Warning! If you cancel another person's update, their update will fail immediately.
@@ -54,4 +54,4 @@ How you serialize updates depends on your CI/CD system:
 
 - **Any other system** — look for its equivalent of a named lock or serial job queue (most CI/CD systems have one) and key it to the stack, the same way as above.
 
-If you'd rather not wire this up yourself, [Pulumi Deployments](/docs/deployments/) queues updates per stack automatically — see [Deployment queue](/docs/deployments/operations/deployment-queue/) — so this class of conflict can't occur regardless of what triggers the update.
+If you'd rather not wire this up yourself, [Pulumi Deployments](/docs/deployments/) queues updates per stack automatically — see [Deployment queue](/docs/deployments/operations/deployment-queue/) — so deployments submitted through it never collide with one another. A direct `pulumi up` bypasses that queue, so the guidance above about treating pipeline-owned stacks as pipeline-owned still applies.
