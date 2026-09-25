@@ -51,7 +51,7 @@ _Editing in the browser? The ✏️ links open the file in GitHub's editor — C
 
 - **line 33:** [style] _wordiness_ — Consider 'use' instead of 'utilize'
 
-📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+**Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
 
 <!-- REVIEW_STATE {"findings":{},"high_water":4,"schema":1} -->
 <!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->

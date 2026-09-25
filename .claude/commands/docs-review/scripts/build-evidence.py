@@ -72,7 +72,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 # line off the author card on the first live #update-review (2026-09-01).
 _SECTION_TERMINATORS = (
     "### ", "#### ", "<!-- REVIEW_STATE", "<!-- AUTHOR_STATE", "<!-- CLAUDE_REVIEW",
-    "<sub>", "📎 ",
+    "<sub>", *cr.EVIDENCE_LINE_PREFIXES,
 )
 
 
@@ -85,7 +85,7 @@ def is_section_terminator(line: str) -> bool:
 # stub as triaged (caught by test_build_evidence_on_fixtures).
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
-_PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
+_PREEXISTING_COUNT_RE = re.compile(r"((?:💡 )?\*\*Pre-existing issues in touched files:\*\* )\d+")
 _STYLE_LINE_RE = re.compile(r"^- \*\*Style:\*\* .*$", re.M)
 _HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")

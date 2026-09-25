@@ -1815,6 +1815,11 @@ _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 # Where cell links to the PR's Files-changed diff anchor (sha256 of the
 # path + `R<line>`), so clicking a finding lands on the change itself.
 FINDING_TABLE_HEADER = "| ID | Where | Finding |"
+# The evidence-link line that closes both cards. It led with a decorative 📎
+# until 2026-09-25; cards published before then keep it until they refresh,
+# so every reader that keys on the line accepts both prefixes.
+EVIDENCE_LINE_PREFIX = "**Full evidence:**"
+EVIDENCE_LINE_PREFIXES = ("📎 ", EVIDENCE_LINE_PREFIX)
 FINDING_TABLE_SEPARATOR = "|---|---|---|"
 
 
@@ -2485,7 +2490,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     # refer to — persona pass 2026-09-01); apply-update.py inserts the
     # section the first time something resolves.
     author += [
-        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
         "",
         _review_state_block(high_water),
         "<!-- The block above stores dispositions only; a finding ID absent from it is OPEN. Machines parse the JSON block, not this note. -->",
@@ -2596,9 +2601,9 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         f"- **Mechanics:** {'; '.join(mech_bits)}.",
         render_style_line(len(prep["vale_nags"]), 0),
         "",
-        "💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.",
+        "**Pre-existing issues in touched files:** 0 — details on the evidence page.",
         "",
-        f"📎 **Full evidence:** [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
+        f"{EVIDENCE_LINE_PREFIX} [verification trail, investigation log, review history]({EVIDENCE_URL_TOKEN}).",
         "",
         sub_line,
         "",

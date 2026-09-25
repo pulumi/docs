@@ -141,11 +141,11 @@ _HINT_RE = re.compile(r"^_Editing in the browser\?[^\n]*\n(?:\n)?", re.M)
 # re-renders from the LIVE body, so the banner must be stripped here — the
 # first live auto-refresh published a fresh card still promising a refresh.
 _BANNER_RE = re.compile(r"^> 🔄 \*\*Re-review in progress\*\*[^\n]*\n(?:\n)?", re.M)
-_EVIDENCE_LINK_RE = re.compile(r"(📎 \*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
+_EVIDENCE_LINK_RE = re.compile(r"((?:📎 )?\*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
 
 
 def set_evidence_url(body: str, url: str) -> str:
-    """Point the 📎 line at this refresh's evidence page. The composer's
+    """Point the evidence line at this refresh's evidence page. The composer's
     token is long gone from a published card, so a refresh must rewrite the
     live URL — on the fork's artifact-only path the link otherwise keeps
     pointing at the FIRST run's artifact forever."""
@@ -601,7 +601,7 @@ def apply(
     if resolved_rows and RESOLVED_HEADING not in author_out:
         # the composer omits ✅ Resolved while empty — insert it on first resolve
         a_lines = author_out.splitlines()
-        at = next((i for i, ln in enumerate(a_lines) if ln.startswith("📎 ")), len(a_lines))
+        at = next((i for i, ln in enumerate(a_lines) if ln.startswith(cr.EVIDENCE_LINE_PREFIXES)), len(a_lines))
         a_lines[at:at] = [RESOLVED_HEADING, "", *cr.render_resolved_block(resolved_rows), ""]
         author_out = "\n".join(a_lines) + ("\n" if author_out.endswith("\n") else "")
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
@@ -830,7 +830,7 @@ def main() -> int:
     parser.add_argument("--evidence-out", default=".review-evidence.json")
     parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
     parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
-    parser.add_argument("--evidence-url", default="", help="URL for the 📎 evidence line on both cards")
+    parser.add_argument("--evidence-url", default="", help="URL for the evidence line on both cards")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -918,7 +918,7 @@ def _self_test() -> int:
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
     assert "## Author action guide v2 — 2 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
-    assert a_out.count("📎 **Full evidence:**") == 1, "evidence line survives the re-render"
+    assert a_out.count("**Full evidence:**") == 1, "evidence line survives the re-render"
     assert a_out.count(cr.V3_BROWSER_HINT_PREFIX) == 1, "browser hint survives, exactly once"
     assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
     assert f"· head commit {sha[:7]}</sub>" in a_out and "." not in a_out.split("· updated ")[1].split(" ·")[0], "sub: 7-char sha, no microseconds"

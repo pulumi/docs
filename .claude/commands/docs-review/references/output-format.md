@@ -476,7 +476,7 @@ _<one sentence: what the PR is and what the review checked>_
 #### Style suggestions                    ← v2 block + the `[nit]` lane; ALWAYS composed, dropped at publish if empty
 ### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
 <details><summary>N resolved items — …</summary>   ← the table is COLLAPSED; the H3 stays outside the fold (parsers anchor on it)
-📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
+**Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).   ← no emoji (cards before 2026-09-25 led with 📎; readers accept both)
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md   ← **How to answer** is a collapsed <details>; the callout carries the must-know line
@@ -509,8 +509,8 @@ REVIEW_STATE is the state, and the section a row lives in is the display.
 #### Editorial stances introduced by this PR  ← composer-owned; the v2 block (see §Editorial stances above) hosted here instead of ⚠️ Low-confidence
 - L12 `file.md` — *"the fastest path …"* — positioning (found by regex+llm)
 ### ✅ What you can rubber-stamp            ← composer-owned count lines
-💡 **Pre-existing issues in touched files:** N — <link>
-📎 **Full evidence:** %%EVIDENCE_URL%%
+**Pre-existing issues in touched files:** N — <link>
+**Full evidence:** %%EVIDENCE_URL%%
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-reviewer.md
 ```
 
@@ -698,7 +698,7 @@ validate-pinned.py check --body-file .review-draft-author.md \
 v3-only rules: `v3-markers` (marker lines intact; author card is the sole
 `CLAUDE_REVIEW_HEAD` carrier; brief carries none), `v3-section-order`,
 `v3-review-state` (a corrupt REVIEW_STATE block hard-fails — it would
-silently un-answer every finding), `v3-evidence-link` (the 📎 line carries
+silently un-answer every finding), `v3-evidence-link` (the **Full evidence:** line carries
 the token or its substituted URL), `v3-finding-grammar` (every 🚨/❓/⚠️ row
 parses; numbered ids unique across both cards and ≤ the REVIEW_STATE
 high-water mark), `v3-blocking-count`, `v3-detail-blocks` (author-card `#### F<n> · Do

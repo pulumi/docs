@@ -108,12 +108,12 @@ def test_last_section_rerender_keeps_evidence_line_and_hint():
     up = _update([{"id": "F3", "action": "retext", "text": "*\"x\"* — sharper, still open"}])
     a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False,
                                   head_repo="example/docs-fork", head_branch="fix/component-doc")
-    assert a_out.count("📎 **Full evidence:**") == 1
+    assert a_out.count("**Full evidence:**") == 1
     assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
     _spans, texts = au.be.collect_detail_blocks(a_out)
     assert set(texts) == {"F1", "F2", "F3"}
     assert not any("Editing in the browser" in t for t in texts.values()), "hint never inside a block"
-    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("**Full evidence:**")
 
 
 def test_hold_moves_row_to_brief_and_records_refuted():
@@ -227,7 +227,7 @@ def test_browser_hint_follows_author_rows():
     a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up_one, head_sha=SHA, actor="cam", auto=False,
                               head_repo="example/docs-fork", head_branch="fix/component-doc")
     assert a_out.count(au.cr.V3_BROWSER_HINT_PREFIX) == 1
-    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("📎 **Full evidence:**")
+    assert a_out.index(au.cr.V3_BROWSER_HINT_PREFIX) < a_out.index("**Full evidence:**")
 
 
 def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
@@ -241,6 +241,11 @@ def test_add_ref_collapses_single_line_and_evidence_url_rewrites():
     assert au.set_evidence_url(body, "") == body
     tok = "📎 **Full evidence:** %%EVIDENCE_URL%%\n"
     assert au.set_evidence_url(tok, "https://n/3") == "📎 **Full evidence:** https://n/3\n"
+    # The 📎 above is the legacy prefix live cards still carry; the current
+    # composer writes the line without it, and both must rewrite.
+    new_body = "x\n**Full evidence:** [verification trail](https://old.example/1).\n"
+    assert au.set_evidence_url(new_body, "https://new.example/2") == \
+        "x\n**Full evidence:** [verification trail](https://new.example/2).\n"
 
 
 def test_refresh_strips_the_auto_refresh_banner():
@@ -280,13 +285,13 @@ def test_resolved_section_is_collapsed_and_stays_one_fold_across_refreshes():
     on it), and a second resolve re-renders the span into ONE fold rather
     than nesting a new one inside the old."""
     a1, b1 = _resolved_fixture()
-    section = a1.split(au.RESOLVED_HEADING, 1)[1].split("📎 ", 1)[0]
+    section = a1.split(au.RESOLVED_HEADING, 1)[1].split("**Full evidence:**", 1)[0]
     assert section.count("<details>") == 1 and section.count("</details>") == 1
     assert "<summary>1 resolved item — click to expand</summary>\n\n| ID | Where | Finding |" in section
     assert section.index("| **F1** |") < section.index("</details>"), "the row is inside the fold"
     up = _update([{"id": "F2", "action": "resolve", "annotation": "fixed in 2cb28d8"}], case="fix-response")
     a2, b2, _, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
-    section = a2.split(au.RESOLVED_HEADING, 1)[1].split("📎 ", 1)[0]
+    section = a2.split(au.RESOLVED_HEADING, 1)[1].split("**Full evidence:**", 1)[0]
     assert section.count("<details>") == 1 and section.count("</details>") == 1
     assert "<summary>2 resolved items — click to expand</summary>" in section
     assert [ln.split("|")[1].strip() for ln in au._collect_resolved(a2)] == ["**F1**", "**F2**"]

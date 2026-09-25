@@ -335,7 +335,7 @@ def _block_spans(lines: list[str], start: int, end: int) -> list[tuple[str, int,
             continue
         if cur_id is not None and (line.startswith("### ") or line.startswith("#### ")
                                    or line.startswith("<!-- REVIEW_STATE")
-                                   or line.startswith("<sub>") or line.startswith("📎 ")
+                                   or line.startswith("<sub>") or line.startswith(cr.EVIDENCE_LINE_PREFIXES)
                                    or line.startswith(cr.V3_BROWSER_HINT_PREFIX)):
             close(i)
     close(end)
