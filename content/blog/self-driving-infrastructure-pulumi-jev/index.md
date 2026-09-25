@@ -44,9 +44,9 @@ It's been a weirdly great time to be building software. We've never had so many 
 
 <!--more-->
 
-![The GeoDeploy decision panel for the us-east geo, showing Jev's selection, scores, and confidence for each question](geodeploy-decision-panel.png)
+![The GeoDeploy web UI showing the us-east deployment on a live globe](screenshot-1.png)
 
-![The GeoDeploy web UI showing the us-east deployment on a live globe](geodeploy-globe.png)
+![The GeoDeploy decision panel for the us-east geo, showing the region selection plus the coverage, cost, maturity, sprawl, and architecture scores with their confidence](screenshot-2.png)
 
 Almost immediately we were able to whip up some test agentic workflows that were making real, live decisions about infrastructure. If you're not familiar with [TypeSafe's Jev](https://docs.typesafe.ai/introduction), it comes with a powerful set of AI primitives that let your apps, agents, and workflows make decisions based on context.
 
