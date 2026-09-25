@@ -965,3 +965,20 @@ def test_fix_mode_skips_findings_the_author_already_answered(fix_repo):
 def test_fix_mode_posts_nothing_over_a_corrupt_state_block(fix_repo):
     entries, skipped = pss.derive_fix_entries(FIX_CARD + "<!-- REVIEW_STATE {not json} -->\n", fix_repo)
     assert entries == [] and skipped == ["REVIEW_STATE block is corrupt; posting no fixes"]
+
+
+def test_fix_mode_skips_a_fence_that_rewrites_only_part_of_a_long_quote(tmp_path):
+    """pulumi/docs#21645 F4: the quote was a whole three-sentence bullet and
+    the fence rewrote only its last sentence. Splicing would have deleted
+    the first two sentences from the author's file."""
+    line = ("- Hyperscaler capex: ~$700B guided for 2026 across the major clouds. "
+            "Roughly 75% of it goes to AI. Agentic coding share: over 80% of code.")
+    (tmp_path / "content" / "docs").mkdir(parents=True)
+    (tmp_path / "content" / "docs" / "fix.md").write_text(f"# T\n{line}\n")
+    card = "\n".join([
+        "### 🚨 Fix or disagree", "", "| ID | Where | Finding |", "|---|---|---|",
+        _row("F1", "L2"), "", *_block("F1", f"`{line}`", "Stale figure.",
+                                     ["Agentic coding share: roughly 90% of code by 2026."]),
+    ])
+    entries, skipped = pss.derive_fix_entries(card, tmp_path)
+    assert entries == [] and skipped[0].startswith("F1: fence rewrites only part of the quote")

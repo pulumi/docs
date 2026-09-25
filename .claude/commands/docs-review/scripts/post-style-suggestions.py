@@ -749,6 +749,12 @@ _WHY_LABEL_RE = re.compile(r"^(?:-\s+)?\*\*Why:\*\*\s*(?P<w>.+?)\s*$")
 _REF_RE = re.compile(r"^L(\d+)(?:-(\d+))?$")
 _QUOTE_WRAPPERS = (("``", "``"), ("`", "`"), ('"', '"'), ("\u201c", "\u201d"))
 FIX_WHY_TRUNC = 220
+# A long quote whose fence is much shorter is a PARTIAL rewrite (live case:
+# pulumi/docs#21645 F4 quoted a three-sentence bullet and fenced only its
+# rewritten last sentence — splicing it would have deleted the first two).
+# Whole-quote rewrites in the same card ran 87-95% of the quote's length.
+FIX_PARTIAL_MIN_QUOTE = 80
+FIX_PARTIAL_MIN_RATIO = 0.6
 
 
 def _load_compose():
@@ -880,6 +886,11 @@ def derive_fix_entries(card: str, repo_root: Path) -> tuple[list[dict], list[str
             continue
         original = _unwrap_quote(quote)
         replacement = body[0].strip()
+        if (len(original) >= FIX_PARTIAL_MIN_QUOTE
+                and len(replacement) < FIX_PARTIAL_MIN_RATIO * len(original)):
+            skipped.append(f"{fid}: fence rewrites only part of the quote "
+                           f"({len(replacement)}/{len(original)} chars)")
+            continue
         ref = _REF_RE.match(row.get("ref") or "")
         fname = row.get("file") or ""
         if not (original and fname and ref):
