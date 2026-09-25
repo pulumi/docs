@@ -19,24 +19,24 @@ aliases:
 
 ## Make an update
 
-Now you will update your project to serve a static website out of your AWS S3 bucket. You will change
-your code and then re-run `pulumi up` which will update your infrastructure.
+Next, you'll update your project to serve a static website out of your AWS S3 bucket. You'll change
+your code and then rerun `pulumi up` to update your infrastructure.
 
 ### Add new resources
 
 Pulumi knows how to evolve your current infrastructure to your project's new desired state, both for
-the first deployment as well as subsequent updates.
+the first deployment and for later updates.
 
 To turn your bucket into a static website, start by adding three new AWS S3 resources:
 
 1. [`BucketWebsiteConfiguration`](/registry/packages/aws/api-docs/s3/bucketwebsiteconfiguration/):
     configures your bucket as a website
-2. [`BucketOwnershipControls`](/registry/packages/aws/api-docs/s3/bucketownershipcontrols/):
+1. [`BucketOwnershipControls`](/registry/packages/aws/api-docs/s3/bucketownershipcontrols/):
     allows bucket access controls to be configured
-3. [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/): permits
-    public access to your bucket; this is disabled by default so you don't allow access over the Internet by accident
+1. [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/): configures
+    public access blocking for your bucket; new S3 buckets block public access by default so you don't allow access over the internet by accident
 
-Open up {{< langfile >}} in your editor and add them right after your S3 bucket:
+Open {{< langfile >}} in your editor and add them right after your S3 bucket:
 
 {{% choosable language "typescript" %}}
 
@@ -132,7 +132,6 @@ publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, "public-access-bloc
 if err != nil {
     return err
 }
-
 ```
 
 {{% /choosable %}}
@@ -347,7 +346,7 @@ _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Source:      pulumi.NewFileAsset("index.html"),
     ContentType: pulumi.String("text/html"),
     Acl:         pulumi.String("public-read"),
-}, pulumi.DependsOn([]pulumi.Resource{ownershipControls,publicAccessBlock}))
+}, pulumi.DependsOn([]pulumi.Resource{ownershipControls, publicAccessBlock}))
 if err != nil {
     return err
 }
@@ -450,12 +449,12 @@ one), so the resource is labeled `index-html` and the `key` attribute names the 
 This uploads the `index.html` file to your bucket using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
 The bucket object also declares that it [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) the other resources. That is because
-those other resources need to be created first so that AWS permits the object's `public-acl` grant. Pulumi usually tracks dependencies
-automatically but these ones are invisible to Pulumi because those specific resources cause side-effects within AWS.
+those other resources need to be created first so that AWS permits the object's `public-read` ACL. Pulumi usually tracks dependencies
+automatically, but these are invisible to Pulumi because those specific resources cause side effects within AWS.
 
 ### Export the website URL
 
-Now to export the website's URL for easy access add this to the end of your program:
+To export the website's URL for easy access, add this to the end of your program:
 
 {{% choosable language typescript %}}
 
@@ -482,6 +481,17 @@ pulumi.export('url', pulumi.Output.concat('http://', website.website_endpoint))
 ctx.Export("url", website.WebsiteEndpoint.ApplyT(func(websiteEndpoint string) (string, error) {
     return fmt.Sprintf("http://%v", websiteEndpoint), nil
 }).(pulumi.StringOutput))
+```
+
+Also make sure you've imported `fmt` at the top of the file:
+
+```go
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
 ```
 
 {{% /choosable %}}
@@ -531,12 +541,13 @@ output "url" {
 
 {{% /choosable %}}
 
-We prepend `http://` because the bucket's website endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
-that AWS assigns at deployment time, not a raw string, meaning its value isn't known in advance.
+The bucket's website endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#working-with-outputs)
+that AWS assigns at deployment time, so its value isn't known in advance. That's why each example builds the URL with an
+output-aware helper rather than plain string concatenation. The endpoint is a bare hostname, so the examples prepend `http://`.
 
 ### Deploy the changes
 
-To deploy the changes, run `pulumi up` again and it will figure out the deltas:
+To deploy the changes, run `pulumi up` again. Pulumi figures out the deltas:
 
 {{% choosable "os" "macos,linux" %}}
 
@@ -553,9 +564,9 @@ $ pulumi up
 
 {{% /choosable %}}
 
-Just like the first time you will see a preview of the changes before they happen:
+Just like the first time, you'll see a preview of the changes before they happen:
 
-```
+```text
 Previewing update (dev):
 
      Type                                    Name                 Plan       Info
@@ -570,7 +581,7 @@ Outputs:
 
 Resources:
     + 4 to create
-    4 changes. 1 unchanged
+    4 changes. 2 unchanged
 
 Do you want to perform this update?
 > yes
@@ -580,14 +591,14 @@ Do you want to perform this update?
 
 Choose `yes` to perform the deployment:
 
-```
+```text
 Do you want to perform this update? yes
 Updating (dev):
 
      Type                                    Name                 Status              Info
-     pulumi:pulumi:Stack.                    quickstart-dev
+     pulumi:pulumi:Stack                     quickstart-dev
  +   ├─ aws:s3:BucketWebsiteConfiguration    website              created (0.51s)
- +   ├─ aws:s3:BucketOwnershipControls.      ownership-controls   created (0.84s)
+ +   ├─ aws:s3:BucketOwnershipControls       ownership-controls   created (0.84s)
  +   ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (1s)
  +   └─ aws:s3:BucketObject                  index.html           created (0.53s)
 
@@ -597,12 +608,12 @@ Outputs:
 
 Resources:
     + 4 created
-    4 changes. 1 unchanged
+    4 changes. 2 unchanged
 
 Duration: 8s
 ```
 
-In just a few seconds, your new website will be ready. Curl the endpoint to see it live:
+In a few seconds, your new website will be ready. Curl the endpoint to see it live:
 
 {{% choosable os "linux,macos" %}}
 
@@ -620,9 +631,9 @@ $ curl $(pulumi stack output url)
 
 {{% /choosable %}}
 
-This will reveal your new website!
+The response is your new website:
 
-```
+```html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -630,7 +641,7 @@ This will reveal your new website!
 </html>
 ```
 
-Feel free to experiment, such as changing the contents of `index.html` and redeploying.
+Try experimenting, such as by changing the contents of `index.html` and redeploying.
 
 Next, wrap the website into an infrastructure abstraction.
 
