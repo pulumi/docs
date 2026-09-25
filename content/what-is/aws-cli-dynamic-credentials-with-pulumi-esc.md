@@ -49,7 +49,7 @@ Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `I
 
 ### UnrecognizedClientException
 
-"The security token included in the request is invalid" backed by an `UnrecognizedClientException` (HTTP 403) means AWS could not match the access key ID, or X.509 certificate, signing the request to anything in its records. AWS documents this error the same way for both IAM and STS, and its wording overlaps heavily with `InvalidClientTokenId`, so treat the two as close cousins rather than cleanly separable causes. In practice, `UnrecognizedClientException` tends to surface on regional service calls such as DynamoDB, KMS, Lambda, or SES, and it is worth double-checking that the request is reaching the intended region as well as ruling out an expired or rotated key.
+"The security token included in the request is invalid" backed by an `UnrecognizedClientException` (HTTP 403) means AWS could not match the access key ID, or X.509 certificate, signing the request to anything in its records. The [AWS STS common errors reference](https://docs.aws.amazon.com/STS/latest/APIReference/CommonErrors.html) documents this error the same way for both IAM and STS, and its wording overlaps heavily with `InvalidClientTokenId`, so treat the two as close cousins rather than cleanly separable causes. In practice, `UnrecognizedClientException` tends to surface on regional service calls such as DynamoDB, KMS, Lambda, or SES, and it is worth double-checking that the request is reaching the intended region as well as ruling out an expired or rotated key.
 
 ### Unable to locate credentials
 
