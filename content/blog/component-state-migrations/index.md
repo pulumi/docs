@@ -30,6 +30,8 @@ Pulumi's new component state migrations let you ship the upgrade path with the c
 
 {{% notes type="info" %}}
 The state migrations API is experimental and may change.
+
+Share feedback in the [component state migrations discussion](https://github.com/pulumi/pulumi/discussions/24799).
 {{% /notes %}}
 
 ## Start with legacy AWSX (v1)
