@@ -33,7 +33,7 @@ For stateful plugins that store and replace credentials on demand or on a schedu
 
 ## Categories
 
-Providers fall into two functional categories. For the complete list of plugins in each — along with their configuration options — see the [provider reference](/docs/esc/providers/).
+Providers fall into three functional categories. For the complete list of plugins in each — along with their configuration options — see the [provider reference](/docs/esc/providers/).
 
 - **[Login providers](/docs/esc/providers/login/)** — authenticate to a downstream service and issue short-lived credentials for it, typically through OpenID Connect. See [OIDC setup](/docs/esc/guides/configuring-oidc/) for per-provider trust configuration.
 - **[Secrets and configuration providers](/docs/esc/providers/secrets/)** — pull configuration and secrets from an external system of record into your environment at open time.
