@@ -65,18 +65,22 @@ jobs:
     # Trigger requires:
     #   1. `@claude` mention.
     #   2. `#update-review` hashtag.
-    #   3. NOT `#new-review` -- if both hashtags are present, the more
-    #      decisive #new-review wins (handled by claude-new.yml's filter;
-    #      this workflow excludes itself in that case).
+    #   3. `#new-review` is NOT screened here. A substring test can't tell
+    #      a live hashtag from a quoted one, so excluding it here dropped
+    #      any update request that merely quoted `#new-review`, while
+    #      claude-new.yml's gate declined the same comment as a quote --
+    #      and neither lane ran. The mention-gate step below applies
+    #      `--exclude new-review` to the live text only: a live
+    #      #new-review still wins, a quoted one no longer suppresses.
     #   4. Author is not claude[bot] itself -- the pinned-review footer
     #      contains literal "@claude" instructions which would otherwise
     #      re-trigger on every review post.
     if: |
       ((github.event_name == 'workflow_dispatch') ||
-       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
-       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
+       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && github.event.issue.user.login != 'claude[bot]'))
     runs-on: ubuntu-latest
     permissions:
       contents: read
