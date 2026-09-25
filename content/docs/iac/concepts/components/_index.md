@@ -66,7 +66,7 @@ Components that live in the same repository as your Pulumi program are consumed 
 
 Some components are distributed as native language packages—standard packages published to a language registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. Because they have no cross-language support, they can only be consumed in the language in which they were authored. Add them to your project via your native package manager:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -107,6 +107,17 @@ dotnet add package MyOrg.MyComponent
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+The equivalent is a plain HCL module, consumable only from HCL. No package manager is involved: name the module's source and `pulumi install` fetches it, caching it under `~/.pulumi/modules/`.
+
+```hcl
+module "my_component" {
+  source = "github.com/my-org/my-component"
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -140,7 +151,7 @@ Some Pulumi packages have pre-generated SDKs published for each language, allowi
 
 Add the package to your project using your native package manager:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -181,6 +192,22 @@ dotnet add package Pulumi.Awsx
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Pulumi HCL has no SDK to install. Declare the package with the `pulumi/` source namespace and an exact version, then run `pulumi install`.
+
+```hcl
+terraform {
+  required_providers {
+    awsx = {
+      source  = "pulumi/awsx"
+      version = "3.0.0"
+    }
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -194,7 +221,7 @@ The `awsx.ec2.Vpc` component from the [AWSx](/registry/packages/awsx/) package i
 
 After adding the AWSx package (see above), instantiate the component like any other Pulumi resource, passing arguments and resource options:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -326,6 +353,50 @@ public class App {
             ctx.export("publicSubnetIds", vpc.publicSubnetIds());
         });
     }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+A component's Pulumi resource token becomes an HCL type name, so `awsx:ec2:Vpc` is `awsx_ec2_vpc`, and its camelCase properties become snake_case. Resource options go in the nested `pulumi` block.
+
+```hcl
+terraform {
+  required_providers {
+    awsx = {
+      source  = "pulumi/awsx"
+      version = "3.0.0"
+    }
+  }
+}
+
+resource "awsx_ec2_vpc" "vpc" {
+  subnet_specs {
+    type      = "Public"
+    cidr_mask = 22
+  }
+
+  subnet_specs {
+    type      = "Private"
+    cidr_mask = 20
+  }
+
+  pulumi {
+    protect = true
+  }
+}
+
+output "vpc_id" {
+  value = awsx_ec2_vpc.vpc.vpc_id
+}
+
+output "private_subnet_ids" {
+  value = awsx_ec2_vpc.vpc.private_subnet_ids
+}
+
+output "public_subnet_ids" {
+  value = awsx_ec2_vpc.vpc.public_subnet_ids
 }
 ```
 
