@@ -1,14 +1,14 @@
 ---
 title: "Change your components, keep your infrastructure"
-date: 2026-09-24
-draft: true
-meta_desc: "Use Pulumi component state migrations to move a VPC from classic AWSX to modern AWSX and plain AWS resources while keeping the same infrastructure."
+date: 2026-09-25
+draft: false
+meta_desc: "Evolve reusable Pulumi components with state migrations that preserve existing infrastructure and ship upgrade paths alongside your component code."
 feature_image:
 authors:
     - julien-poissonnier
 tags:
-    - aws
-    - typescript
+    - components
+    - migration
     - infrastructure-as-code
 category: product
 resource_links:
