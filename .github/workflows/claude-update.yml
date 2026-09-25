@@ -1070,9 +1070,9 @@ jobs:
       #   the record of what changed; a `🤖 Review updated on @<author>'s
       #   request.` comment per refresh only buried it in timeline noise
       #   (six on pulumi/docs#21871). A submitted review body can't take a
-      #   reaction, and a PR branched before ack-request.sh existed doesn't
-      #   carry it (scripts run from the PR head) — both fall back to the
-      #   old comment. An auto-refresh has no requester, so success is
+      #   reaction, and a checkout without ack-request.sh (see the note
+      #   below on which `.claude/` this step sees) has no helper — both
+      #   fall back to the old comment. An auto-refresh has no requester, so success is
       #   silent: the cleared 🔄 banner and the card's new stamp say it.
       # - failure: same delete-and-repost, with `🤖 @<author> — review
       #   errored. …` so the requester is notified that their request
@@ -1084,6 +1084,17 @@ jobs:
       # refreshed body's 🚨 Outstanding count: ≥1 → review:outstanding-issues,
       # else → review:no-blockers. On failure, set review:error if no review
       # was published; otherwise the existing terminal label is preserved.
+      #
+      # Which `.claude/` runs here: claude-code-action treats an
+      # issue_comment-triggered PR head as untrusted and restores `.claude/`
+      # (and CLAUDE.md, .mcp.json, …) from the DEFAULT branch before the model
+      # step, so every script this job calls afterwards — apply-update,
+      # validate-pinned, ack-request.sh — is the default branch's copy, not
+      # the PR's. Consequence: a PR that changes the card format cannot
+      # self-refresh through this lane before it merges (the default branch's
+      # validator rejects the new-format card it published; pulumi/docs#21908
+      # hit exactly this). Use `@claude #new-review` there: the initial lane
+      # (workflow_run) keeps the PR's own scripts.
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
