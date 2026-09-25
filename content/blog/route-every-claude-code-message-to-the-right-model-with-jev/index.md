@@ -22,7 +22,7 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: "Not every Claude Code message needs Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. Here's how it decides:"
-    linkedin: "Not every message you send to Claude Code needs the most capable model, but switching models by hand before every message isn't realistic. Jev, TypeSafe AI's new System One model, doesn't write text: it answers typed questions in a few hundred milliseconds, and its output is free.\n\nI built jev-router, an open source router that asks Jev which Claude model each of your messages needs and sends it there. It only asks when you write a message, and within a session it only moves up, so it never throws away your prompt cache.\n\nHere's how it decides, and how to try it with one command:"
+    linkedin: "Not every message you send to Claude Code needs the most capable model, but switching models by hand before every message isn't realistic. Jev, TypeSafe AI's new System One model, doesn't write text: it answers typed questions in a few hundred milliseconds, and its output is free.\n\nI built jev-router, an open source router that asks Jev which Claude model each of your messages needs and sends it there. It only asks when you write a message, and within a session it only moves up, so a quick follow-up doesn't throw away your prompt cache.\n\nHere's how it decides, and how to try it with one command:"
     bluesky: "Not every Claude Code message needs Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. How it works, and how to try it:"
 ---
 
@@ -34,7 +34,7 @@ Not every message you send to Claude Code needs the most capable model. A quick 
 
 {{< x user="CompleteSkeptic" id="2099925682726002904" >}}
 
-TypeSafe AI [released Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) in September 2026. Its founder, Diogo Almeida, co-invented RLHF and InstructGPT at OpenAI, the research that led to ChatGPT.
+TypeSafe AI [released Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) in September 2026. Its founder, Diogo Almeida, co-authored OpenAI's InstructGPT paper, the research behind ChatGPT.
 
 ![Diagram: Diogo Almeida founded TypeSafe AI, which built Jev, the first System One model. Jev answers in 70–500 ms and costs $0.042 per million input tokens, with free output tokens.](what-is-jev.png)
 
@@ -56,7 +56,9 @@ Claude Code runs every message in a session on the model you picked. Sonnet 5 an
 
 Jev makes the decision cheap enough to ask every time. A routing call sends Jev a few hundred tokens that describe your message and the session, and costs about $0.00003. jev-router puts that decision in front of every message you write in Claude Code.
 
-That's the use case I wanted to try. My idea was to let the prompt pick the model, so a request to rename a variable lands on Haiku 4.5 and a request to redesign a service lands on Opus 5.5, without me switching models in between. The Jev routers I found worked differently. Two decided once, when the session started, and the other two asked Jev on every request, tool calls included, and could switch models halfway through a task. Every one of those switches throws the prompt cache away. I wanted a router that decides again each time I write a message and never moves a session down, and I wanted to watch those decisions while I type. So I built jev-router.
+That's the use case I wanted to try. My idea was to let the prompt pick the model, so a request to rename a variable lands on Haiku 4.5 and a request to redesign a service lands on Opus 5.5, without me switching models in between.
+
+The Jev routers I found worked differently. One kept the model it picked when the session started, and the others could switch models halfway through a task or move a session back down. Every one of those switches throws the prompt cache away. I wanted a router that decides again each time I write a message and never moves a session down, and I wanted to watch those decisions while I type. So I built jev-router.
 
 {{< github-card repo="dirien/jev-router" >}}
 
@@ -88,7 +90,7 @@ Treat the bars as a starting point. [One calibration study](https://github.com/s
 
 Once a session reaches Opus 5.5, a quick "thanks!" doesn't send it back to Haiku 4.5. A new message can raise the tier, but it never lowers it. Anthropic's prompt cache belongs to one model, so a switch starts the next request cold, and an agent's requests are mostly cache reads. Handing half-done work to another model doesn't pay off either: in [an AWS study of 500 SWE-bench Verified tasks](https://arxiv.org/abs/2608.24358), handing a Haiku 4.5 transcript to Opus 4.7 recovered only 47% of the quality gap, at $1.61 per task against $0.72 for starting on Opus.
 
-A session gets a fresh decision when its cache is cold anyway: after 10 minutes without traffic, after Claude Code compacts it, or when you start over with `/clear`.
+A session gets a fresh decision after 10 minutes without traffic, after Claude Code compacts it, or when you start over with `/clear`.
 
 You can still steer. Switching to another model family with `/model` pins that family's tier, and `#fast`, `#balanced`, or `#frontier` (or `#max` for Fable 5.1) as the first or last word of a message asks for a tier. A scanner also checks every message for secrets before anything leaves your machine, and a hit keeps the session on trusted models, whatever Jev says.
 
