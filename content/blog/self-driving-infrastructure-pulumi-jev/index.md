@@ -35,9 +35,22 @@ resource_links:
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        We paired TypeSafe's Jev with the Pulumi Automation API to build GeoDeploy: it picks the best AWS, Azure, or Google Cloud region for your users, gates every AI decision on confidence, and provisions Kubernetes for you. Open source today.
+    linkedin: |
+        What if your infrastructure could decide where to run and then build it?
+
+        We paired TypeSafe's Jev with the Pulumi Automation API to build GeoDeploy, an open source example that:
+
+        - Prices every AWS, Azure, and Google Cloud region with managed Kubernetes
+        - Asks Jev to pick the best region per geo from a closed list, so it can't hallucinate a region
+        - Gates every decision on confidence, with hard rejects for data residency
+        - Provisions consistent clusters with one Pulumi stack per region
+        - Scales itself in self-driving mode, with a human in the loop when confidence is low
+
+        Read how it works and grab the code.
+    bluesky: |
+        We paired TypeSafe's Jev with the Pulumi Automation API to build GeoDeploy: confidence-gated AI picks the best AWS, Azure, or Google Cloud region for your users, and Pulumi provisions the Kubernetes. Open source today.
 ---
 
 It's been a weirdly great time to be building software. We've never had so many tools that help us get things done: endless cloud providers, regions, deployment frameworks, and now AI agents that can actually build and manage infrastructure for us. That's part of what made this past week feel so big. TypeSafe AI opened early access to Jev, their SystemOne model, and we here at Pulumi were bitten by the excitement bug and got straight to work building.
