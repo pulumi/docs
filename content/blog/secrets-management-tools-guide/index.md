@@ -1,8 +1,9 @@
 ---
-title: "Secrets Management Tools: The Complete Guide"
+title: "17 Secrets Management Tools Compared for 2027"
 date: 2025-07-24
+updated: 2026-09-25
 draft: false
-meta_desc: "Compare secrets orchestration platforms, enterprise vaults, and cloud-native secrets managers like Vault, AWS Secrets Manager, and Pulumi ESC."
+meta_desc: "Compare 17 secrets management tools for 2027 on pricing, licensing, and rotation: Vault, OpenBao, AWS Secrets Manager, Azure Key Vault, and Pulumi ESC."
 authors:
     - asaf-ashirov
     - boris-schlosser
@@ -13,405 +14,257 @@ tags:
     - configuration-as-code
     - esc
 category: general
+faq_schema: true
+itemlist_name: "Secrets Management Tools"
+itemlist:
+    - name: "Pulumi ESC"
+      url: "https://www.pulumi.com/docs/esc/"
+    - name: "Doppler"
+      url: "https://www.doppler.com/"
+    - name: "Infisical"
+      url: "https://infisical.com/"
+    - name: "HashiCorp Vault"
+      url: "https://www.hashicorp.com/products/vault"
+    - name: "OpenBao"
+      url: "https://openbao.org/"
+    - name: "CyberArk Conjur"
+      url: "https://www.cyberark.com/products/secrets-manager/"
+    - name: "Akeyless"
+      url: "https://www.akeyless.io/"
+    - name: "AWS Secrets Manager"
+      url: "https://aws.amazon.com/secrets-manager/"
+    - name: "Azure Key Vault"
+      url: "https://azure.microsoft.com/products/key-vault"
+    - name: "Google Secret Manager"
+      url: "https://cloud.google.com/security/products/secret-manager"
+    - name: "1Password Secrets Automation"
+      url: "https://1password.com/products/secrets-automation"
+    - name: "Bitwarden Secrets Manager"
+      url: "https://bitwarden.com/products/secrets-manager/"
+    - name: "GitGuardian"
+      url: "https://www.gitguardian.com/"
+    - name: "TruffleHog"
+      url: "https://trufflesecurity.com/trufflehog"
+    - name: "External Secrets Operator"
+      url: "https://external-secrets.io/"
+    - name: "SOPS"
+      url: "https://github.com/getsops/sops"
+    - name: "Sealed Secrets"
+      url: "https://github.com/bitnami-labs/sealed-secrets"
 ---
 
-Every modern application depends on secrets to function: database passwords, API keys, certificates, and configuration values that enable secure communication between services. But here's the challenge: as your infrastructure grows, managing these secrets becomes exponentially more complex.
+[Secrets management](/what-is/what-is-secrets-management/) tools store, distribute, and rotate the credentials your applications depend on: database passwords, API keys, TLS certificates, and the tokens that let one service talk to another. The right tool depends less on which one has the longest feature list and more on how many clouds you run, how much operational overhead your team can absorb, and whether you're trying to replace a secret store or orchestrate the ones you already have.
 
 <!--more-->
 
-The numbers tell a stark story. According to the [Akeyless State of Secrets Management Report](https://www.prnewswire.com/news-releases/the-akeyless-state-of-secrets-management-report-96-of-organizations-are-vulnerable-to-breach-due-to-mismanaged-secrets-301987276.html), 96% of organizations struggle with secrets sprawl such as credentials scattered across code repositories, configuration files, and deployment scripts. The consequences are severe: [Verizon's 2025 Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/) found that 88% of data breaches involved compromised credentials, with [IBM's research](https://www.ibm.com/reports/data-breach) showing the average breach now costs organizations $4.88 million.
-
-The path forward requires more than just storing secrets securely, it demands intelligent orchestration across your entire infrastructure. But with dozens of solutions available, from traditional enterprise vaults to modern orchestration platforms, finding the right approach can feel overwhelming.
-
-This guide cuts through the complexity. We'll examine the leading secrets management tools across multiple categories, helping you understand not just what they do, but when and why to use them. Whether you're architecting your startup's first production environment or modernizing enterprise legacy systems, you'll find actionable insights to make the right choice for your specific needs.
+This guide compares 17 tools across secrets orchestration platforms, enterprise vaults, cloud-native managers, developer-focused tools, scanning and detection tools, and the Kubernetes-native layer, with a decision framework and honest answers to the questions people are actually asking about secrets management in 2027.
 
 <!--more-->
 
-## Secrets Management Tools Overview
+## At a glance: 17 secrets management tools compared
 
-### Secrets Orchestration Platforms
+| Tool | Category | Deployment | License / model | Rotation | Best for |
+|---|---|---|---|---|---|
+| [Pulumi ESC](#pulumi-esc-environments-secrets-and-configuration) | Orchestration | Managed SaaS or self-hosted | Open-source engine, commercial platform | Dynamic, short-lived OIDC credentials | Teams orchestrating multiple existing stores |
+| [Doppler](#doppler) | Orchestration | Managed SaaS | Commercial | Sync-based, integrations-driven | Developer-experience-first teams |
+| [Infisical](#infisical) | Orchestration | Self-hosted or managed | Open-source core, commercial cloud | Dynamic secrets on paid tiers | Teams wanting open-source with a cloud option |
+| [HashiCorp Vault](#hashicorp-vault) | Enterprise vault | Self-hosted or HCP-managed | BSL 1.1 (source-available) | Dynamic secrets, 50+ engines | Complex, multi-cloud enterprises with platform teams |
+| [OpenBao](#openbao) | Enterprise vault | Self-hosted | Open source (MPL 2.0) | Dynamic secrets (Vault-compatible) | Teams that want Vault's model without the BSL |
+| [CyberArk Conjur](#cyberark-conjur) | Enterprise vault | Self-hosted or Conjur Cloud | Commercial, open-source core | Policy-driven rotation | Regulated industries needing PAM integration |
+| [Akeyless](#akeyless) | Enterprise vault | Managed SaaS | Commercial, usage-based | Just-in-time, zero-knowledge | Cloud-first teams avoiding self-hosted ops |
+| [AWS Secrets Manager](#aws-secrets-manager) | Cloud-native | Managed (AWS) | Usage-based | Native for RDS/Aurora + Managed External Secrets | AWS-centric workloads |
+| [Azure Key Vault](#azure-key-vault) | Cloud-native | Managed (Azure) | Usage-based | Certificate auto-renewal | Azure and FIPS-regulated environments |
+| [Google Secret Manager](#google-secret-manager) | Cloud-native | Managed (GCP) | Usage-based | Notification-only, no execution | GCP-native, high-scale global apps |
+| [1Password Secrets Automation](#1password-secrets-automation) | Developer-focused | Managed SaaS | Bundled with Business plan | Manual with CLI/CI hooks | Mixed technical and non-technical teams |
+| [Bitwarden Secrets Manager](#bitwarden-secrets-manager) | Developer-focused | Managed SaaS or self-hosted | Per-user, machine accounts included | Manual with CLI/CI hooks | Cost-conscious small and mid-size teams |
+| [GitGuardian](#gitguardian) | Scanning | Managed SaaS | Commercial, free tier | N/A — detection, not storage | Large codebases, DevSecOps programs |
+| [TruffleHog](#trufflehog) | Scanning | Self-hosted or CLI | Open source, commercial add-ons | N/A — detection, not storage | Teams wanting open-source scanning |
+| [External Secrets Operator](#external-secrets-operator) | Kubernetes-native | Self-hosted (K8s operator) | Open source (Apache 2.0), CNCF Sandbox | Syncs from upstream store on interval | Kubernetes teams syncing external vaults |
+| [SOPS](#sops) | Kubernetes-native | CLI / GitOps | Open source (MPL 2.0), CNCF | Manual, encrypted-in-git | GitOps teams encrypting values in version control |
+| [Sealed Secrets](#sealed-secrets) | Kubernetes-native | Self-hosted (K8s controller) | Open source (Apache 2.0) | Manual, one-way encryption | Simple GitOps without an external vault |
 
-- [Pulumi ESC](#pulumi-esc-environments-secrets-and-configuration)
-- [Doppler](#doppler)
-- [Infisical](#infisical)
+## Secrets orchestration platforms
 
-### Enterprise Secrets Vaults
+Orchestration platforms connect and coordinate multiple secret sources rather than requiring you to abandon your existing infrastructure. Instead of migrating wholesale to another secret store, they act as a unified layer over the stores you already run, adding dynamic credential generation and configuration-as-code on top.
 
-- [HashiCorp Vault](#hashicorp-vault)
-- [CyberArk Conjur](#cyberark-conjur)
-- [Akeyless](#akeyless)
+### Pulumi ESC (Environments, Secrets, and Configuration)
 
-### Cloud-Native Secrets Managers
+[Pulumi ESC](/docs/esc/) orchestrates the secret stores you already have, connecting HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Secret Manager, 1Password, and 20-plus other providers through a unified interface. You can modernize your secrets workflow without abandoning current infrastructure investments.
 
-- [AWS Secrets Manager](#aws-secrets-manager)
-- [Azure Key Vault](#azure-key-vault)
-- [Google Secret Manager](#google-secret-manager)
+The platform's [configuration-as-code approach](/docs/esc/concepts/) defines hierarchical YAML environments that cascade from base configuration through development, staging, and production. Define common settings once, inherit them everywhere, and keep appropriate security boundaries between environments.
 
-### Developer-Focused Tools
+ESC provides [audit logging](/docs/esc/administration/audit-logs/) with user identity, timestamp, access method, and resource detail on every access, supporting compliance frameworks like SOC 2 and GDPR. Dynamic credential generation is the bigger differentiator: instead of storing long-lived AWS access keys or Azure service principal secrets, ESC provisions short-lived OIDC tokens on demand through its [provider model](/docs/esc/providers/), so credentials expire automatically rather than sitting around waiting to be misused.
 
-- [1Password Secrets Automation](#1password-secrets-automation)
-- [Bitwarden Secrets Manager](#bitwarden-secrets-manager)
+The platform keeps a zero-lock-in posture through its [open-source engine](https://github.com/pulumi/esc) and [SDK support](/docs/esc/languages-sdks/) for TypeScript, Python, Go, and .NET. GitGuardian's own 2027 tooling roundup independently describes ESC as pulling credentials dynamically from AWS Secrets Manager, Azure Key Vault, Google Secret Manager, Vault, and 1Password via OIDC, with automated rotation shipped for AWS IAM keys and Postgres/MySQL credentials — third-party confirmation of the orchestration model rather than Pulumi's own marketing copy.
 
-### Application Security & Scanning
+ESC's [free tier](/pricing/) covers unlimited environments, and usage-based pricing for advanced features scales with organizational growth. For teams with strict data residency requirements, [Pulumi's self-hosting options](/product/self-hosted/) add cost predictability and control. ESC fits best when you're running multiple clouds or already have secrets scattered across several stores; if you have exactly one secret store and no plans to add a second, a cloud-native manager or a lighter developer tool may be all you need.
 
-- [GitGuardian](#gitguardian)
-- [TruffleHog](#trufflehog)
+### Doppler
 
-### Specialized & Integration Tools
+Doppler focuses on developer experience: an intuitive interface, branch-based environment management, and real-time secret sync across connected services. Pricing has moved well past its old entry point — the free Developer plan covers 3 users, and additional users on that tier run [$8/user/month](https://www.doppler.com/pricing), while the Team plan (after a 14-day trial) is $21/user/month. Doppler's newer positioning explicitly does not charge per AI agent or non-human identity, only per human seat, which matters as more of the calls hitting your secrets are coming from agents rather than people.
 
-- [External Secrets Operator](#external-secrets-operator)
-- [Berglas](#berglas)
-- [Confidant](#confidant)
-- [Chamber](#chamber)
+### Infisical
 
-## The Evolution Beyond Simple Secret Storage
+Infisical pairs an open-source core with a managed cloud option, and it now prices secrets management [per identity](https://infisical.com/pricing) — human and machine — rather than per human user. The free tier covers 5 identities; Pro runs $20/identity/month billed annually ($23 month-to-month), with Advanced at $40/identity/month annually for dynamic-secret proxying and stronger access controls.
 
-What started as simple password vaults has evolved into something far more sophisticated. Traditional secret storage addressed only part of the challenge: keeping credentials secure. But modern infrastructure demands orchestration across complex, distributed environments where applications need dozens of different secrets available across multiple cloud providers and deployment stages.
+Infisical has also shipped **Agent Vault**, an open-source credential broker built specifically for AI agents: it sits between an agent and the API it calls, hands the agent's sandbox a placeholder value, and swaps in the real credential only as the request leaves the sandbox — a direct response to agents that would otherwise need standing access to real secrets. It's a newer, standalone project, and it overlaps in purpose with the "Agent Proxy" capability bundled into Infisical's paid tiers, so check Infisical's own docs for which one fits your deployment before you commit to either. Infisical has also broadened its scope beyond secrets into certificate management and privileged access, positioning itself as an identity security platform rather than a single-purpose vault.
 
-The fundamental shift happened when teams realized that managing secrets effectively requires treating them as infrastructure components, not just security artifacts. Your applications don't just need database passwords stored securely—they need those credentials dynamically generated, automatically rotated, and consistently available across development, staging, and production environments without manual intervention.
+## Enterprise secrets vaults
 
-Today's leading platforms function as intelligent orchestrators rather than simple storage systems. They aggregate secrets from multiple existing sources, provide [configuration-as-code](/what-is/what-is-infrastructure-as-code/) capabilities that enable version control and reproducible deployments, and generate dynamic credentials with automatic expiration. This orchestration approach means you can work with your existing secret stores while gaining centralized management and modern capabilities like hierarchical organization that reduces duplication across environments.
+Enterprise vaults prioritize maximum flexibility, extensibility, and compliance depth, aimed at organizations with dedicated security or platform teams.
 
-The best solutions recognize that secrets management is fundamentally an infrastructure orchestration problem. They provide unified access patterns that work seamlessly across [multi-cloud environments](/docs/integrations/clouds/), comprehensive audit logging for compliance requirements, and fine-grained access controls that adapt to your organizational structure all while maintaining compatibility with the tools and workflows your teams already use.
+### HashiCorp Vault
 
-## Most Popular Secrets Management Tools
+[HashiCorp Vault](/what-is/what-is-hashicorp-vault/) is still the reference point for enterprise secrets management, with dynamic secrets generation across 50-plus systems and support for more than 100 authentication methods and secret engines. Two changes matter for anyone budgeting or evaluating Vault today. First, HashiCorp is now HashiCorp, an IBM Company: IBM's roughly $6.4 billion acquisition closed February 27, 2025, and Vault ships under IBM's stewardship going forward. Second, Vault moved off the open-source MPL 2.0 license to the Business Source License (BSL) 1.1 starting with v1.15.0 in August 2023, so Vault today is source-available rather than OSI-approved open source. HCP Vault Dedicated, the managed offering, now bills by the cluster-hour rather than the flat per-node rate some older comparisons still quote; a production-grade cluster commonly runs well over $1,000/month, so confirm current numbers directly with HashiCorp before you budget against an old figure.
 
-### Secrets Orchestration Platforms
+Vault remains the right call for organizations that need maximum flexibility, run genuinely complex multi-cloud environments, and have the DevOps expertise to operate it well.
 
-This represents the newest evolution in secrets management: platforms that connect and coordinate multiple secret sources rather than forcing you to abandon your existing infrastructure. Instead of requiring wholesale migration to yet another secret store, these intelligent brokers provide unified interfaces that work with your current tools while adding modern capabilities like dynamic credential generation and configuration-as-code workflows.
+### OpenBao
 
-#### Pulumi ESC (Environments, Secrets, and Configuration)
+The BSL relicensing is the reason [OpenBao](https://openbao.org/) exists. OpenBao is a Linux Foundation and OpenSSF-hosted fork of Vault, forked from the last MPL-licensed release, and it keeps growing on its own open-source cadence — the 2.5.x line was current through 2026. It's Vault-API-compatible, so most Vault clients, Terraform providers, and integrations work against it with minimal changes. It's showing up in GitOps-heavy Kubernetes stacks where teams want Vault's dynamic-secrets model without accepting a source-available license. If you're evaluating Vault today and licensing terms matter to your organization, put OpenBao on the shortlist before you sign anything.
 
-[Pulumi ESC](/docs/esc/) takes a fundamentally different approach to secrets management. Rather than forcing you to migrate from your existing secret stores, it orchestrates them connecting HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Secret Manager, and over 20 other providers through a unified interface. This means you can modernize your secrets workflow without abandoning your current infrastructure investments.
+### CyberArk Conjur
 
-The platform's strength lies in its [configuration-as-code approach](/docs/esc/concepts/). You define hierarchical YAML environments that cascade from base configurations through development, staging, and production. This eliminates the manual configuration copying that leads to secrets sprawl: define common settings once, inherit them everywhere they're needed, while maintaining appropriate security boundaries between environments.
+CyberArk Conjur focuses on enterprise security and compliance, backed by CyberArk's broader privileged access management suite for session monitoring, just-in-time access, and threat detection. CyberArk now also offers **Conjur Cloud**, a managed SaaS version, alongside the self-hosted Conjur Enterprise and open-source editions — a meaningful change for teams that wanted Conjur's policy engine without running the infrastructure themselves. Enterprise licensing is scale-based; Conjur targets regulated industries and organizations for whom compliance depth outweighs operational simplicity.
 
-**Enterprise-Grade Security and Compliance**: ESC provides comprehensive [audit logging](/docs/esc/administration/audit-logs/) with detailed access trails, including user identity, timestamp, access method, and resource details. The platform's audit capabilities support compliance requirements for frameworks like SOC 2, GDPR, and industry-specific regulations by providing immutable audit logs and real-time monitoring of secret access patterns.
+### Akeyless
 
-**Performance and Scalability**: ESC delivers enterprise-scale performance with low-latency secret retrieval, high availability across multiple regions, and the ability to handle thousands of concurrent requests. The architecture is designed to scale automatically with organizational growth while maintaining consistent sub-second response times for secret operations.
+Akeyless delivers enterprise vault capabilities as SaaS, using zero-knowledge, client-side encryption so that even Akeyless can't read customer secrets. The free tier covers roughly 5 clients with a small allotment of static and dynamic secrets; beyond that, Akeyless bills on usage across clients, transactions, connectors, and certificate volume rather than a flat per-seat price, so get a quote against your actual usage pattern before comparing it to a per-user competitor. It suits cloud-first teams that want enterprise vault features without operating the underlying infrastructure.
 
-Dynamic credential generation sets Pulumi ESC apart from traditional storage-focused tools. Instead of storing long-lived AWS access keys or Azure service principal secrets, it automatically provisions short-lived OIDC tokens on-demand. This [dynamic approach](/docs/esc/providers/) eliminates entire categories of security risk by ensuring credentials expire automatically and can't be misused over extended periods.
+## Cloud-native secrets managers
 
-**Advanced Key Management**: ESC provides advanced key management capabilities with support for industry-standard encryption algorithms, automated key rotation, and secure key derivation. The platform offers envelope encryption and fine-grained access controls that ensure encryption keys are managed securely and in accordance with regulatory requirements.
+Cloud-native managers trade portability for tight integration with one provider's identity and service ecosystem.
 
-The platform maintains a zero vendor lock-in philosophy through its [open-source engine](https://github.com/pulumi/esc) and comprehensive [multi-language SDK support](/docs/esc/languages-sdks/) for TypeScript, Python, Go, and .NET. Teams can integrate ESC into existing workflows through familiar CLI tooling while maintaining full visibility into orchestration logic through transparent, auditable code.
+### AWS Secrets Manager
 
-**Cost-Effective Enterprise Solution**: Pulumi ESC offers significant cost advantages through its unified platform approach, reducing the need for multiple point solutions and simplifying operational overhead. ESC's integration with existing infrastructure workflows eliminates the need for separate tools and reduces training costs, while its automated rotation and compliance features reduce manual administrative tasks and associated labor costs. For organizations with strict data residency requirements, [Pulumi Service offers self-hosting options](/product/self-hosted/) that provide additional cost predictability and security control.
+[AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) integrates natively with more than 50 AWS services, with automatic rotation built in for RDS, Aurora, and several other databases. The newest addition is **Managed External Secrets (MES)**, launched November 2025, which extends AWS's zero-code rotation model to third-party SaaS credentials rather than just AWS-native ones. At launch it covered Salesforce, BigID, and Snowflake; AWS has been adding partners through 2026, including Datadog, Jenkins/SonarQube integrations, and further SaaS providers, so check the [MES partner list](https://aws.amazon.com/about-aws/whats-new/2025/11/aws-secrets-manager-managed-external-secrets/) for your specific vendor before assuming coverage. Pricing is unchanged: $0.40 per secret per month plus $0.05 per 10,000 API calls.
 
-Pulumi ESC offers a [generous free tier](/pricing/) with unlimited environments, making it accessible for teams to experiment with configuration-as-code principles. Usage-based pricing for advanced features scales naturally with organizational growth, making it particularly attractive for multi-cloud environments and teams prioritizing systematic approaches to eliminating secrets sprawl.
+AWS Secrets Manager is the default choice for [AWS-native organizations](/docs/integrations/clouds/aws/) that want rotation handled for them rather than built by hand.
 
-#### Doppler
+### Azure Key Vault
 
-Doppler focuses on developer experience with an intuitive interface and extensive integrations for modern development workflows. The platform provides branch-based environment management and real-time secret synchronization across connected services, with plans starting at $3 per user per month.
+[Azure Key Vault](/what-is/what-is-azure-key-vault/) manages secrets, keys, and certificates with Azure Active Directory-based access control and certificate lifecycle management with automatic renewal. Its cryptographic validation has moved forward: Premium tier and Managed HSM now run on **FIPS 140-3 Level 3** validated hardware, a step up from the FIPS 140-2 Level 2 figure still floating around in older comparisons. Standard tier pricing runs on a per-10,000-operations basis; confirm the current rate directly against [Azure's pricing page](https://azure.microsoft.com/pricing/details/key-vault/) since Microsoft revises these more often than the marketing pages update. Azure Key Vault is the natural fit for [Azure-centric organizations](/docs/integrations/clouds/azure/) and government contractors who need FIPS-validated HSMs without standing up their own.
 
-#### Infisical
+### Google Secret Manager
 
-Infisical combines open-source transparency with modern secrets management, offering both self-hosted and cloud options. The platform includes built-in secrets scanning capabilities and comprehensive SDK support, with cloud service starting at $8 per user per month.
+[Google Secret Manager](/what-is/what-is-google-cloud-secret-manager/) is built for high-volume, globally distributed workloads, with automatic replication across GCP regions and IAM-based, condition-aware permissions. One thing hasn't changed: Secret Manager still has no built-in rotation *execution*. Its "rotation" feature only fires a Pub/Sub notification on schedule; you still have to write the Cloud Function (or equivalent) that actually rotates the credential and no dynamic secrets generation exists at all. Pricing runs about $0.06 per secret-version per month plus $0.03 per 10,000 access operations after a small free tier. It's the right pick for [GCP-native teams](/docs/integrations/clouds/gcp/) prioritizing scale and low latency who are comfortable owning their own rotation logic.
 
-### Enterprise Secrets Vaults
+## Developer-focused tools
 
-Traditional enterprise vaults focus on maximum security and compliance, offering comprehensive secret storage with advanced features designed for large organizations with sophisticated security requirements.
+These tools trade some enterprise depth for ease of adoption, often serving as a team's first secrets manager.
 
-#### HashiCorp Vault
+### 1Password Secrets Automation
 
-HashiCorp Vault remains the established standard for enterprise secrets management, offering unmatched flexibility and a comprehensive feature set for complex environments. The platform provides dynamic secrets generation with automatic expiration for over 50 different systems, enabling organizations to move away from static, long-lived credentials toward more secure, just-in-time access patterns.
+1Password's developer tooling — CLI, SDKs, SSH and Git commit signing, and secrets management — is no longer sold as a separate "Secrets Automation" SKU. It's bundled into the standard Business plan at $8.99/user/month (paid annually), with more advanced privileged-access and AI-agent runtime credential features available only through custom Enterprise quotes. 1Password remains a strong fit for mixed technical and non-technical teams that want zero-knowledge encryption without asking non-engineers to learn a CLI.
 
-Vault's architecture supports over 100 authentication methods and secret engines, providing flexibility to integrate with virtually any existing infrastructure or identity system. Multi-region clustering with strong consistency guarantees ensures high availability and data integrity across geographically distributed deployments. Extensive audit logging and compliance reporting capabilities help organizations meet regulatory requirements while maintaining operational visibility.
+### Bitwarden Secrets Manager
 
-The platform's cloud-agnostic deployment options support both [Kubernetes](/docs/integrations/clouds/kubernetes/) and traditional VM-based infrastructure, making it suitable for organizations with diverse technical environments. Vault's open-source core provides transparency and community-driven development, while commercial enterprise features starting at $2 per node per hour add advanced management, replication, and support capabilities.
+Bitwarden's Teams plan runs $6/user/month and includes up to 20 machine accounts, unlimited secrets and projects, and audit logging; Enterprise runs $12/user/month with up to 50 machine accounts plus SSO/SCIM and granular access control. Machine-account support for CI/CD is built in rather than an add-on, which is the main reason small and mid-size teams pick it over a heavier vault.
 
-HashiCorp Vault excels in organizations requiring maximum flexibility and customization, complex [multi-cloud environments](/docs/integrations/clouds/), and teams with strong DevOps expertise capable of managing sophisticated infrastructure platforms.
+## Application security and secrets scanning
 
-#### CyberArk Conjur
+Scanning tools find secrets that have already leaked into code, commits, or CI logs, which is a different and complementary job to everything above.
 
-CyberArk Conjur focuses on enterprise security with advanced compliance features and integration with broader privileged access management systems. The platform provides enterprise-grade role-based access control with comprehensive audit capabilities, enabling organizations to implement fine-grained security policies across their entire infrastructure.
+### GitGuardian
 
-Modern versions of Conjur incorporate AI-powered anomaly detection and threat analysis, helping security teams identify unusual access patterns that may indicate compromise or policy violations. Automated compliance reporting supports SOC 2, PCI-DSS, and other regulatory frameworks, reducing the operational overhead of maintaining compliance documentation.
+GitGuardian scans commits, pull requests, and issues across GitHub, GitLab, Bitbucket, and Azure DevOps in real time, detecting over 350 secret types. Its published Standard tier runs [$18/developer/month](https://www.gitguardian.com/pricing) for teams of 26-100 developers; above that, and for Enterprise, pricing moves to a custom quote. GitGuardian fits organizations with large codebases and formal DevSecOps programs that need to catch exposure before it reaches production.
 
-Conjur's integration with CyberArk's broader privileged access management suite provides a comprehensive approach to credential security that extends beyond simple secret storage to include session monitoring, just-in-time access provisioning, and threat detection. The platform's advanced policy engine enables fine-grained access controls that can adapt to changing organizational and regulatory requirements.
+### TruffleHog
 
-With enterprise licensing based on scale and deployment requirements, CyberArk Conjur targets regulated industries, enterprises with strict compliance requirements, and organizations prioritizing maximum security over operational simplicity.
+TruffleHog is open-source secrets detection combining entropy analysis with pattern matching across more than 700 credential types, plus historical git-history scanning to find out when and how a credential first landed in a repo. It integrates with GitHub Actions, GitLab CI, and Jenkins, and an enterprise tier adds commercial support. TruffleHog suits teams that want transparent, self-hostable detection without a SaaS dependency.
 
-#### Akeyless
+## Kubernetes-native secrets tools
 
-Akeyless offers a modern, cloud-native approach to enterprise secrets management without the operational complexity of traditional self-hosted solutions. The platform's SaaS-first architecture eliminates infrastructure management overhead while providing enterprise-grade capabilities including just-in-time access and automated credential rotation.
+If you're running Kubernetes, "how do I get external secrets into a Pod" is a separate question from "which vault do I use," and a small set of purpose-built, CNCF-affiliated tools answer it.
 
-The platform implements zero-knowledge encryption with client-side key management, ensuring that even Akeyless cannot access customer secrets. This approach addresses concerns about cloud-based secret storage while maintaining the operational benefits of a managed service. A comprehensive API and integration ecosystem enables connection with existing tools and workflows.
+### External Secrets Operator
 
-Akeyless provides a generous free tier supporting up to 5 clients, with usage-based pricing that scales naturally with organizational growth. This pricing model, combined with the elimination of operational overhead, makes Akeyless attractive for organizations seeking enterprise features without the complexity of self-managed infrastructure, particularly cloud-first teams prioritizing rapid deployment and scaling.
+External Secrets Operator (ESO) syncs secrets from Vault, AWS, Azure, GCP, and other external stores into native Kubernetes Secrets on a configurable refresh interval, using Custom Resource Definitions so it fits normal Kubernetes operational patterns. It's Apache 2.0-licensed, lives in the CNCF Sandbox, and has become the de facto standard for this job — if you're syncing an external vault into Kubernetes today and not using ESO, it's worth asking why.
 
-### Cloud-Native Secrets Managers
+### SOPS
 
-Cloud-native solutions provide tight integration with specific cloud platforms, offering optimized experiences for organizations committed to particular cloud ecosystems. These platforms leverage native cloud services and identity systems to provide seamless integration with existing infrastructure.
+[SOPS](https://github.com/getsops/sops) (Secrets OPerationS) encrypts individual values inside YAML, JSON, or .env files so the encrypted file itself can live safely in Git — the encryption keys come from AWS KMS, GCP KMS, Azure Key Vault, PGP, or age. It's MPL 2.0-licensed, adopted by the CNCF, and maintained independently of any single vendor. Flux CD supports SOPS natively; Argo CD needs a plugin like KSOPS or helm-secrets to do the same. SOPS is the right tool when your GitOps workflow wants secrets encrypted *in* version control rather than fetched from an external store at deploy time.
 
-#### AWS Secrets Manager
+### Sealed Secrets
 
-Amazon's native secrets management service provides deep integration with the AWS ecosystem and automatic rotation capabilities specifically designed for AWS services. The platform offers native integration with over 50 AWS services including RDS, Lambda, ECS, and EKS, enabling seamless credential management across the entire AWS service portfolio.
+Sealed Secrets, maintained under bitnami-labs (Bitnami itself now sits under Broadcom, a provenance detail worth knowing rather than a red flag), takes a one-way approach: a cluster-side controller holds a private key, and anyone can encrypt a secret against the matching public key without needing cluster access. The encrypted "SealedSecret" is safe to commit to Git and only decrypts inside the cluster that holds the private key. It's a simpler mental model than SOPS or ESO for teams that don't want to run or connect to an external vault at all.
 
-Automatic rotation capabilities for supported databases and AWS services eliminate the operational overhead of manual credential management while improving security through regular rotation cycles. Cross-region replication with automatic failover ensures high availability for critical secrets, while fine-grained IAM permissions with resource-based policies provide precise access control aligned with AWS security best practices.
-
-VPC endpoint support enables private network access without internet routing, addressing security requirements for air-gapped or highly secure environments. The service's pricing model of $0.40 per secret per month plus $0.05 per 10,000 API calls provides predictable costs that scale with usage.
-
-AWS Secrets Manager excels for [AWS-native organizations](/docs/integrations/clouds/aws/), applications requiring automatic credential rotation, and teams leveraging extensive AWS service portfolios where tight integration provides operational efficiency and security benefits.
-
-#### Azure Key Vault
-
-Microsoft's comprehensive platform manages secrets, keys, and certificates within the Azure ecosystem while providing strong compliance features particularly valued by government and enterprise customers. The platform integrates seamlessly with Azure services and Active Directory authentication, leveraging existing identity infrastructure to provide consistent access control across the Azure ecosystem.
-
-FIPS 140-2 Level 2 validated Hardware Security Modules provide the highest levels of cryptographic security, making Azure Key Vault suitable for government contractors and organizations with stringent security requirements. Managed HSM support extends these capabilities for scenarios requiring maximum security control and audit capabilities.
-
-Certificate lifecycle management with automatic renewal reduces operational overhead while ensuring consistent security posture across web applications and services. Virtual network integration and private endpoint support enable secure access patterns that align with enterprise network security architectures.
-
-Azure Key Vault's standard tier pricing of $0.03 per 10,000 operations provides cost-effective secret management for [Azure-centric organizations](/docs/integrations/clouds/azure/), government contractors requiring FIPS compliance, and enterprises with Microsoft-heavy infrastructure environments.
-
-#### Google Secret Manager
-
-Google Cloud's scalable secrets management service is optimized for high-volume, global deployments with strong integration across GCP services. The platform provides automatic global replication across all GCP regions, ensuring low-latency access to secrets regardless of geographic distribution.
-
-IAM integration supports fine-grained, condition-based permissions that can adapt to complex organizational structures and security requirements. Secret versioning with automatic rollback capabilities provides operational safety for configuration changes, while integration with Cloud Build, GKE, Cloud Run, and App Engine enables seamless secret management across Google Cloud's entire service portfolio.
-
-The platform's high-performance API with global edge caching minimizes latency for high-frequency secret retrieval operations, making it suitable for applications with demanding performance requirements. Pricing of $0.06 per secret version per month plus $0.03 per 10,000 API calls provides cost-effective scaling for high-volume usage patterns.
-
-Google Secret Manager serves [Google Cloud-native organizations](/docs/integrations/clouds/gcp/), applications requiring massive scale, and global deployments where low latency and high availability are critical operational requirements.
-
-### Developer-Focused Tools
-
-These tools prioritize user experience and ease of adoption, often serving as excellent entry points for teams beginning their secrets management journey. They emphasize intuitive interfaces and efficient workflows that reduce barriers to adoption.
-
-#### 1Password Secrets Automation
-
-1Password has successfully expanded beyond personal password management to offer comprehensive business secrets management while maintaining their renowned user experience. The platform implements zero-knowledge architecture with client-side encryption, ensuring that even 1Password cannot access customer secrets while providing the usability that made their consumer products successful.
-
-The intuitive interface remains accessible to both technical and non-technical users, addressing the common challenge of secrets management tools that require specialized expertise. Comprehensive SDK and CLI support enables developer workflows while maintaining the simplicity that drives organization-wide adoption. Integration with popular CI/CD platforms and development tools provides the automation capabilities modern development teams require.
-
-Advanced sharing capabilities include granular, time-limited permissions that enable secure collaboration while maintaining audit trails and access control. This combination of security and usability makes 1Password particularly effective in mixed environments where both technical and business users need access to secrets.
-
-At $8 per user per month with volume discounts available, 1Password Secrets Automation targets teams prioritizing usability over advanced features, mixed technical/non-technical environments, and organizations already invested in the 1Password ecosystem.
-
-#### Bitwarden Secrets Manager
-
-Bitwarden leverages their password management expertise to provide cost-effective secrets management specifically designed for development teams. The platform includes machine account support for automated CI/CD workflows, addressing the common requirement for non-human access to secrets in modern development processes.
-
-CLI and SDK integration covers major programming languages while maintaining the straightforward approach that characterizes Bitwarden's products. Comprehensive event logging and audit trails provide the visibility required for security and compliance, while two-person integrity controls add an extra layer of protection for sensitive operations.
-
-The platform's competitive per-user pricing of $3 per month with transparent costs makes it particularly attractive for small to medium teams, organizations seeking simple and cost-effective solutions, and existing Bitwarden users looking to extend their investment into development workflows.
-
-### Application Security & Scanning
-
-These tools focus on preventing secrets leakage by detecting credentials in code repositories, CI/CD pipelines, and other development artifacts. Rather than managing secrets after they're created, these platforms prevent security incidents by identifying and remediating credential exposure.
-
-#### GitGuardian
-
-GitGuardian provides comprehensive secrets detection and remediation across the entire software development lifecycle with high accuracy and low false positives. The platform offers real-time scanning of commits, pull requests, and issues across all major Git platforms, ensuring that credential exposure is identified and addressed before code reaches production environments.
-
-Advanced machine learning algorithms detect over 350 secret types while minimizing false positives that can lead to alert fatigue. Developer-friendly remediation workflows provide guided resolution steps that help development teams address issues quickly without disrupting their normal workflows. Historical repository scanning capabilities enable comprehensive security assessment of existing codebases.
-
-Integration with GitHub, GitLab, Bitbucket, and Azure DevOps ensures coverage across diverse development environments. The platform's free tier supports small teams, while enterprise plans starting at $18 per developer per month provide advanced features and support for larger organizations.
-
-GitGuardian excels in organizations with large codebases, teams implementing [DevSecOps practices](/blog/devsecops-strategy-security-automation-tivity-health/), and compliance-focused environments where preventing credential exposure is critical to maintaining security posture.
-
-#### TruffleHog
-
-TruffleHog offers powerful open-source secrets detection with both community and enterprise versions for comprehensive credential scanning. The platform uses high-performance scanning algorithms that combine advanced entropy analysis with pattern matching to identify credentials across diverse file types and encoding formats.
-
-Support for over 700 credential types includes custom patterns that can adapt to organization-specific secret formats. CI/CD integration with GitHub Actions, GitLab CI, and Jenkins enables automated scanning as part of existing development workflows. Historical git repository scanning provides commit-level analysis that can identify when and how credentials entered the codebase.
-
-The active open-source community ensures regular updates and improvements while providing transparency into detection algorithms. Enterprise features and support options are available for organizations requiring commercial backing and advanced capabilities.
-
-TruffleHog serves open-source advocates, security-conscious development teams, and organizations with strong technical security expertise capable of implementing and maintaining open-source security tools.
-
-### Specialized & Integration Tools
-
-These tools address specific use cases or provide bridge functionality between secrets managers and deployment platforms, filling gaps in comprehensive secrets management architectures.
-
-#### External Secrets Operator
-
-The External Secrets Operator provides [Kubernetes](/docs/integrations/clouds/kubernetes/)-native integration with external secrets management systems, enabling GitOps workflows with secure secret handling. The platform uses Kubernetes Custom Resource Definitions to provide native resource management that integrates seamlessly with existing Kubernetes operational patterns.
-
-Multi-provider support includes Vault, AWS, Azure, GCP, and numerous other secret sources, enabling organizations to maintain consistent Kubernetes secret management regardless of their underlying secret storage choices. Automatic secret synchronization with configurable refresh intervals ensures that Kubernetes secrets remain current with external sources while minimizing API load.
-
-Template-based secret transformation and formatting capabilities enable adaptation of external secret formats to Kubernetes requirements. As an active CNCF community project with growing enterprise adoption, the External Secrets Operator benefits from diverse contributions and broad compatibility testing.
-
-This free and open-source tool excels in [Kubernetes-heavy environments](/docs/integrations/clouds/kubernetes/), teams adopting [GitOps practices](/blog/pulumi-developer-workflow/), and organizations requiring cloud-agnostic secret synchronization across diverse infrastructure platforms.
-
-#### Berglas
-
-Google's Berglas provides optimized secrets injection for serverless and container environments, particularly Google Cloud Run and similar platforms. The platform's serverless-optimized secret injection minimizes cold start impact, addressing one of the key performance challenges in serverless architectures.
-
-Deep integration with Google Cloud services and IAM leverages existing cloud infrastructure to provide secure, efficient secret access. Container-native deployment patterns use init container approaches that work seamlessly with existing containerized application architectures. Minimal runtime overhead and memory footprint ensure that secret management doesn't impact application performance.
-
-As an open-source project backed by Google's engineering team, Berglas benefits from direct integration with Google Cloud services and ongoing development aligned with Google Cloud platform evolution. The free and open-source nature makes it accessible for teams of all sizes.
-
-Berglas serves [Google Cloud serverless deployments](/docs/integrations/clouds/gcp/), container-native applications, and teams prioritizing minimal overhead in performance-sensitive environments.
-
-#### Confidant
-
-Lyft's open-source Confidant offers a production-proven approach to secrets management with focus on developer experience and AWS optimization. Battle-tested at Lyft's scale with millions of requests daily, Confidant provides real-world validation of its architecture and performance characteristics.
-
-AWS-optimized architecture leverages KMS and DynamoDB to provide secure, scalable secret storage using proven AWS services. Developer-centric design emphasizes simple API and CLI interfaces that reduce friction in day-to-day development workflows. The blind credentials feature provides enhanced security by ensuring that even system administrators cannot access certain types of sensitive information.
-
-IAM integration with fine-grained permissions leverages AWS's native access control systems to provide consistent security policies across the entire infrastructure. As a free and open-source solution, Confidant enables organizations to implement enterprise-grade secret management without licensing costs.
-
-Confidant excels in [AWS-heavy environments](/docs/integrations/clouds/aws/), teams with strong technical capabilities, and organizations seeking proven open-source solutions with demonstrated scale and reliability.
-
-#### Chamber
-
-Segment's Chamber provides elegant secrets management using AWS Parameter Store, optimizing for simplicity and cost-effectiveness. The platform leverages existing AWS infrastructure to minimize complexity while providing essential secret management capabilities.
-
-Cost-effective operations use Parameter Store's generous free tier to provide secret storage without additional infrastructure or licensing costs. Simple deployment requires minimal operational overhead, making it suitable for teams with limited DevOps resources. Version control integration supports [infrastructure as code practices](/what-is/what-is-infrastructure-as-code/) by enabling secret management through familiar development workflows.
-
-Namespace organization with hierarchical parameter structure provides logical organization that scales with application complexity while maintaining simplicity of operation. As a free and open-source tool with only AWS Parameter Store costs, Chamber provides extremely cost-effective secret management.
-
-Chamber serves [AWS-native deployments](/docs/integrations/clouds/aws/) seeking simplicity, teams with cost constraints, and organizations preferring minimal tooling complexity over advanced feature sets.
-
-## Top Features to Look for in Secrets Management Tools
-
-### Secrets Orchestration and Multi-Source Integration
-
-The most advanced secrets management platforms function as intelligent orchestrators, connecting multiple secret sources and providing unified access patterns. This capability is crucial for organizations with heterogeneous environments where secrets are distributed across multiple systems. Rather than forcing migration to a single secret store, orchestration platforms work with existing infrastructure investments while providing centralized management and consistent access patterns.
-
-Effective orchestration platforms can aggregate secrets from existing enterprise vaults like HashiCorp Vault and CyberArk, cloud-native services including AWS Secrets Manager, Azure Key Vault, and Google Secret Manager, legacy systems with database configuration and file-based secrets, and third-party services like 1Password, Bitwarden, and specialized tools. [Pulumi ESC](/docs/esc/) exemplifies this orchestration approach, providing a unified interface across over 20 secret sources while maintaining compatibility with existing infrastructure investments.
-
-This orchestration capability reduces migration risk and preserves existing investments while enabling gradual adoption of modern secret management practices. Organizations can maintain their current secret stores while gaining the benefits of centralized management, consistent access patterns, and advanced features like dynamic credential generation.
-
-### Configuration as Code and Environment Management
-
-Modern secrets management extends beyond simple credential storage to comprehensive configuration management. The best platforms support [configuration-as-code principles](/what-is/what-is-infrastructure-as-code/) that bring software engineering discipline to environment management and secret distribution.
-
-Version control integration with full change tracking and rollback capabilities ensures that configuration changes undergo the same scrutiny as application code. Hierarchical organization reduces duplication through inheritance and composition, enabling teams to define common configurations once and apply them consistently across multiple environments. Reproducible deployments ensure consistency across environments while code review processes apply software engineering practices to configuration changes. Automated testing capabilities validate configuration changes before deployment, preventing configuration errors that could lead to security vulnerabilities or application failures.
-
-This approach transforms secrets from scattered, manual processes into systematic, auditable infrastructure that follows established software engineering best practices. Teams can apply familiar development workflows to secret management, improving both security and operational efficiency.
-
-### Dynamic Credential Generation
-
-Static secrets pose inherent security risks due to their long-lived nature and potential for unauthorized sharing. [Dynamic credential generation](/docs/esc/providers/) addresses these challenges by creating credentials on-demand with automatic expiration, significantly reducing the attack surface associated with credential compromise.
-
-Effective dynamic credential systems provide short-lived tokens with automatic expiration and renewal, eliminating the need for manual rotation while ensuring credentials cannot be misused over extended periods. Just-in-time access generates credentials only when needed, reducing the window of opportunity for credential misuse. OIDC integration leverages identity providers for cloud access, enabling seamless authentication without storing long-lived cloud credentials.
-
-Database credentials with automatic rotation for major database systems ensure that application access remains current while removing the operational burden of manual credential management. API keys with configurable lifespans and scope limitations provide fine-grained control over third-party service access. This dynamic approach significantly improves security posture while reducing operational overhead.
-
-### Multi-Platform Integration and SDK Support
-
-Your secrets management platform should integrate seamlessly with your existing development and deployment infrastructure, providing native support for the tools and workflows your teams already use. Effective integration reduces friction in adoption while ensuring that secret management becomes a natural part of existing processes rather than an additional burden.
-
-Development integration should include [CI/CD platforms](/docs/iac/operations/continuous-delivery/) like GitHub Actions, GitLab CI, Jenkins, and Azure DevOps, enabling automated secret management as part of deployment workflows. [Container orchestration](/docs/integrations/clouds/kubernetes/) platforms including Kubernetes, Docker Swarm, and Nomad should provide native secret injection capabilities. [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) tools like Terraform, Pulumi, and CloudFormation should support secret management through familiar provisioning workflows. Local development integration should include environment synchronization and IDE integration to provide consistent experiences across development and production environments.
-
-Runtime integration capabilities should extend to application frameworks like Spring Boot, Django, and Express.js, enabling developers to access secrets through familiar programming patterns. [Cloud platforms](/docs/integrations/clouds/) including AWS Lambda, Azure Functions, and Google Cloud Run should provide optimized secret injection with minimal performance impact. Monitoring tools, service meshes, and other infrastructure components should integrate seamlessly to provide comprehensive observability and management capabilities.
-
-### Comprehensive Audit and Compliance Capabilities
-
-Security and compliance requirements demand detailed visibility into secret access and management activities. Effective audit capabilities provide the transparency required for security monitoring, compliance reporting, and incident investigation while enabling organizations to demonstrate adherence to regulatory requirements.
-
-Complete audit trails with detailed attribution, timestamps, and context enable security teams to understand exactly who accessed which secrets when and from where. Change tracking for all secret modifications, rotations, and access grants provides visibility into the complete lifecycle of credential management. Compliance reporting supporting SOC 2, ISO 27001, PCI-DSS, and other regulatory frameworks automates the documentation required for compliance audits.
-
-Anomaly detection capabilities identify unusual access patterns that may indicate compromise or policy violations, enabling proactive security response. Integration with SIEM systems provides centralized security monitoring and alerting, ensuring that secret management activities are included in overall security operations. These capabilities transform secret management from a potential compliance liability into a security asset that enhances overall organizational security posture.
-
-### Performance and Scalability
-
-Consider both current requirements and future growth when evaluating secrets management platforms. API performance with low latency for high-frequency secret retrieval ensures that secret management doesn't become a bottleneck in application performance. Geographic distribution supporting global deployments with regional access provides consistent performance regardless of deployment location.
-
-High availability with automatic failover and disaster recovery ensures that secret management doesn't become a single point of failure in critical applications. Horizontal scaling capabilities handle increased load without performance degradation as organizations grow. Intelligent caching strategies optimize performance while maintaining security, reducing API load while ensuring secrets remain current.
-
-Effective performance and scalability ensure that secret management enhances rather than hinders application performance, enabling organizations to scale their security practices alongside their infrastructure growth.
+A few narrower AWS- and GCP-specific tools are worth a mention without a full section each: Segment's **Chamber** wraps AWS Parameter Store for teams that want the cheapest possible option and already live in AWS, and Google's **Berglas** optimizes secret injection for Cloud Run and other serverless GCP workloads. Lyft's **Confidant**, previously a common recommendation in this space, was archived by its maintainers in 2025 and is now read-only — don't stand up new infrastructure on it.
 
 {{< blog/cta-card title="Try secrets orchestration" href="/docs/esc/" >}}
 Pulumi ESC connects your existing secret stores behind a single interface, adding configuration as code and dynamic, short-lived credentials.
 {{< /blog/cta-card >}}
 
-## Key Considerations for Choosing Secrets Management Tools
+## Secrets management for AI agents and non-human identities
 
-### Orchestration vs. Replacement Strategy
+The growing number of AI agents, CI jobs, and service accounts now outnumber human users in most environments, and they're the newest source of pressure on secrets management. This "non-human identity" (NHI) surge changes the threat model: an agent with standing access to a real API key can be manipulated into misusing it, and a credential embedded in an agent's configuration is a credential that can leak through logs, prompts, or a misconfigured MCP server.
 
-The fundamental choice between orchestration and replacement approaches significantly impacts both implementation complexity and long-term flexibility. Orchestration platforms like [Pulumi ESC](/docs/esc/) work with existing infrastructure, providing unified interfaces without requiring complete migration. This approach offers reduced migration risk with gradual adoption, preserved investments in existing secret stores and processes, flexibility to use best-of-breed solutions for different use cases, and simplified operations through centralized management of distributed secrets.
+The practitioner consensus, echoed across security forums, is blunt: a secrets manager protects storage, not workflow, and the fix is making credentials as short-lived and invisible to the calling code as possible. Three patterns are emerging as the default response:
 
-Replacement approaches require migration of all secrets to a single platform. While potentially simpler architecturally, this approach involves higher migration costs and extended transition periods, vendor lock-in that makes future changes more difficult, all-or-nothing adoption requiring complete workflow changes, and potential loss of functionality from specialized existing systems.
+- **Short-lived, dynamically generated credentials** instead of long-lived API keys, so a leaked credential is worthless within minutes rather than valid indefinitely. This is the model Pulumi ESC, Vault, and Akeyless all built around before "AI agent" was the reason to want it.
+- **Credential proxies for agents**, like Infisical's Agent Vault, which hand an agent a placeholder value and inject the real credential only at the network edge, so the agent's own context never holds a usable secret.
+- **Configuration hygiene for agent tooling**, since scanners have found real credentials sitting in plaintext inside MCP server configuration files — the same mistake as committing a `.env` file to Git, just in a newer wrapper.
 
-Organizations with heterogeneous environments, multiple cloud providers, or significant existing investments in secret management infrastructure typically benefit from orchestration approaches that preserve flexibility while providing centralized management capabilities.
+If your organization is deploying AI coding agents or infrastructure agents like Pulumi Neo, treat their credential access the same way you'd treat a new service account: scope it narrowly, make it short-lived, and put it behind the same [orchestration layer](/product/secrets-management/) as everything else, rather than handing it a static key because it was faster to wire up.
 
-### Cloud Strategy Alignment
+## How to choose: a practical decision framework
 
-Your choice of secrets management platform should align with your overall cloud strategy and deployment patterns. Organizations with [multi-cloud](/docs/integrations/clouds/) or hybrid strategies benefit from cloud-agnostic solutions that provide consistent experiences across platforms. [Pulumi ESC](/docs/esc/), HashiCorp Vault, and other orchestration platforms excel in these environments by providing unified interfaces regardless of underlying infrastructure.
+Most teams overthink this decision. In practice, three questions get you most of the way there:
 
-Organizations committed to specific cloud platforms can leverage native services like AWS Secrets Manager, Azure Key Vault, and Google Secret Manager for optimal integration and cost efficiency within their chosen ecosystem. These platforms provide deep integration with cloud-native services while optimizing costs through native billing and resource management.
+1. **Do you use exactly one secret store today, with no plans to add a second?** Use your cloud provider's native tool — AWS Secrets Manager, Azure Key Vault, or Google Secret Manager. It's cheaper, better integrated, and there's nothing to orchestrate yet.
+2. **Do you operate across multiple clouds, or do you already have secrets scattered across more than one store?** This is when an orchestration layer (Pulumi ESC) or a self-hosted vault (HashiCorp Vault or OpenBao) earns its keep, because the alternative is manually keeping several stores in sync.
+3. **Is your team small, cost-sensitive, or short on dedicated security headcount?** Skip the enterprise vaults entirely. A developer-focused tool like Bitwarden Secrets Manager or Infisical's free tier will cover real needs without the operational weight of running Vault yourself — a complaint that shows up constantly in practitioner discussions about the cost and staffing burden of HA Vault-plus-Consul deployments.
 
-Migration flexibility becomes important as organizational requirements evolve. Orchestration platforms provide natural migration paths between different underlying secret stores as requirements change, while cloud-native solutions may require more significant changes if cloud strategy evolves. Consider solutions that maintain flexibility for future changes while meeting current operational requirements.
+Compliance and licensing add a fourth filter on top of those three: government and regulated environments often need FIPS-validated HSMs (Azure Key Vault, CyberArk), and organizations wary of the BSL should weigh OpenBao against Vault before committing either way, on top of anything above.
 
-### Team Structure and Expertise
+## Frequently asked questions
 
-The technical complexity and operational requirements of different secrets management platforms vary significantly, making team structure and expertise critical factors in platform selection. High-complexity tools like HashiCorp Vault and CyberArk Conjur suit organizations with dedicated security or platform teams capable of managing sophisticated infrastructure. These platforms offer maximum flexibility and features but require significant expertise to implement and operate effectively.
+### What's the difference between AWS Secrets Manager and HashiCorp Vault?
 
-Medium-complexity tools like [Pulumi ESC](/docs/esc/) and Doppler balance advanced features with operational simplicity, making them suitable for organizations with strong technical teams that prefer managed services or simplified operations. These platforms provide enterprise-grade capabilities without the operational overhead of self-managed infrastructure.
+AWS Secrets Manager is a managed, AWS-only service with native rotation for AWS databases and, since late 2025, a growing set of third-party SaaS integrations through Managed External Secrets. HashiCorp Vault is self-hosted (or HCP-managed) and cloud-agnostic, supporting over 50 dynamic secret engines across any infrastructure. Choose Secrets Manager if you're AWS-only; choose Vault or OpenBao if you're multi-cloud or need engines AWS doesn't offer.
 
-Low-complexity tools like 1Password and Bitwarden prioritize ease of use over advanced capabilities, making them suitable for organizations with limited technical resources or mixed teams where non-technical users require access to secrets. These platforms excel in environments where adoption and usability take priority over advanced features.
+### Is base64 encoding in Kubernetes Secrets actually secure?
 
-Organizational structure also influences platform choice. Centralized teams can manage sophisticated platforms and enforce consistent policies across the organization, while distributed teams benefit from self-service capabilities and intuitive interfaces that enable independent operation. Mixed environments require tools accessible to both technical and non-technical users, emphasizing usability and clear documentation.
+No. Base64 is an encoding, not encryption, and anyone with read access to etcd or the Kubernetes API can decode a [Kubernetes Secret](/what-is/what-are-kubernetes-secrets/) trivially. Kubernetes Secrets need encryption at rest enabled on etcd plus an external tool — Sealed Secrets, SOPS, or External Secrets Operator pulling from a real vault — to be meaningfully protected.
 
-### Security and Compliance Requirements
+### What are the best secrets management tools for a self-hosted, small team setup?
 
-Regulatory and security requirements significantly influence platform selection, with different industries and use cases demanding specific capabilities and certifications. Government and defense organizations may require FIPS 140-2 Level 2 validation provided by platforms like Azure Key Vault and CyberArk, while financial services often need comprehensive audit trails and segregation of duties capabilities.
+Passbolt, Bitwarden Secrets Manager, and Infisical's self-hosted open-source edition are the most commonly recommended options for teams that want to avoid a SaaS dependency without taking on Vault's operational overhead. For Kubernetes-only workloads, Sealed Secrets is the simplest self-hosted option with no external service to run at all.
 
-Healthcare organizations require HIPAA-compliant secret handling and access controls, while European operations must consider GDPR implications for secret storage and processing. Understanding these requirements early in the selection process helps narrow platform choices and avoid costly compliance gaps.
+### What's the best way to manage secrets in GitHub Actions?
 
-Security model preferences also vary significantly between organizations. Zero-knowledge encryption models where service providers cannot access secrets appeal to security-conscious organizations, while Hardware Security Module support provides the highest levels of cryptographic security for sensitive applications. Network isolation capabilities become important for air-gapped or highly secure environments, while multi-factor authentication integration with existing identity systems ensures consistent security policies.
+Use [GitHub's native encrypted repository or organization secrets](/what-is/what-is-a-github-action-secret/) for simple cases, and OIDC federation to your cloud provider (AWS, Azure, GCP) instead of long-lived cloud credentials wherever possible. For larger organizations already running Vault, Pulumi ESC, or Doppler, pull secrets into the workflow at runtime through that platform's GitHub Action rather than duplicating them into GitHub's own secret store.
 
-### Cost Optimization
+### How often should secrets actually be rotated?
 
-Understanding the total cost of ownership for different secrets management approaches requires consideration of both direct and indirect costs. Per-user pricing models suit teams with predictable user counts but can become expensive as organizations scale. Usage-based pricing scales naturally with actual consumption but requires careful monitoring to avoid unexpected costs. Per-secret pricing works well for applications with many users but few secrets, while enterprise licensing may provide cost-effective solutions for large deployments.
+Static, long-lived credentials (API keys, service account passwords) should rotate on a schedule — 90 days is a common baseline, tighter for anything privileged. The better answer, where it's available, is to stop rotating on a calendar and instead issue short-lived dynamic credentials that expire automatically after minutes or hours, which is the model Vault, OpenBao, Akeyless, and Pulumi ESC all support.
 
-Total cost of ownership extends beyond licensing to include operational overhead for self-hosted versus managed solutions, training and certification requirements for specialized platforms, integration costs including development time and ongoing maintenance, and migration expenses from existing solutions. Managed services may appear more expensive initially but often provide better total cost of ownership when operational overhead is considered.
+### What is zero-trust secrets management?
 
-Consider both current costs and future scaling requirements when evaluating pricing models. Platforms that provide cost-effective entry points while supporting growth can provide better long-term value than solutions optimized only for current requirements.
+Zero-trust secrets management assumes any credential could be compromised and limits the damage a single leaked secret can do: short lifetimes, narrow scope, and no standing access. In practice that means dynamic credential generation over static secrets, fine-grained per-identity access instead of broad service accounts, and full audit trails so a compromise is visible fast rather than discovered months later.
 
-## The Future of Secrets Management: Orchestration and Configuration as Code
+### Should I use HashiCorp Vault or OpenBao?
 
-The secrets management landscape is undergoing a fundamental shift from simple storage systems to sophisticated orchestration platforms. This evolution reflects the reality of modern infrastructure—applications span [multiple clouds](/docs/integrations/clouds/), integrate with dozens of services, and require dynamic adaptation to changing requirements.
+If you need commercial support, HCP's managed offering, or you're already standardized on Vault, staying with Vault under HashiCorp (now HashiCorp, an IBM Company) is the lower-friction path. If the Business Source License is a blocker for your organization, or you want to stay on a fully open-source, community-governed project, OpenBao is API-compatible with Vault and run under the Linux Foundation and OpenSSF.
 
-### From Storage to Orchestration
+### What is a non-human identity (NHI) and why does it matter for secrets management?
 
-Traditional secret management models rely on centralized vaults where all secrets are stored in a single system, requiring applications to understand specific retrieval mechanisms and access patterns. This approach often creates vendor lock-in and forces organizations to migrate from existing secret stores, disrupting established workflows and creating migration risk.
+A non-human identity is any credentialed actor that isn't a person — a CI job, a service account, or an AI agent. NHIs already outnumber human identities in most organizations, and they're driving demand for short-lived, narrowly scoped credentials and agent-specific credential proxies, since a static API key handed to an autonomous agent is a much larger blast radius than the same key handed to a person.
 
-The emerging orchestration model uses intelligent brokers that aggregate secrets from multiple sources—existing vaults, cloud services, legacy systems—presenting them through unified, consistent interfaces. This orchestration approach provides investment protection by working with existing secret stores, gradual migration without disruptive all-or-nothing transitions, best-of-breed integration leveraging specialized solutions where appropriate, and operational simplification through centralized management of distributed secrets.
+### Do I need a dedicated secrets manager if I'm already using environment variables?
 
-Orchestration platforms enable organizations to maintain their current infrastructure investments while gaining the benefits of centralized management, consistent access patterns, and modern capabilities like dynamic credential generation. This approach reduces both risk and cost while providing a clear path toward modern secret management practices.
+Environment variables are only a delivery mechanism: they don't rotate, audit access, or prevent a secret from ending up in a log or a crash dump. Even a lightweight tool like Bitwarden Secrets Manager or Infisical's free tier adds rotation, access logging, and centralized revocation that plain environment variables can't provide on their own.
 
-### Configuration as Code Revolution
+### Can I use more than one secrets management tool at once?
 
-The convergence of secrets and configuration management represents the next major evolution in infrastructure management. Modern applications require more than isolated credentials—they need comprehensive environment configuration including secrets, feature flags, service endpoints, and deployment parameters. Managing these elements separately creates complexity and increases the risk of configuration drift between environments.
+Yes, and most organizations of any size end up doing exactly that: a cloud-native manager for cloud-native workloads, a Kubernetes-native tool like External Secrets Operator or SOPS for cluster secrets, and an orchestration layer like Pulumi ESC on top to keep configuration and access consistent across all of them rather than managing each store's quirks separately.
 
-[Configuration-as-code principles](/what-is/what-is-infrastructure-as-code/) bring software engineering discipline to environment management by providing version control with complete change history and rollback capabilities, code review processes that ensure changes undergo appropriate scrutiny, automated testing that validates configuration changes before deployment, and reproducible environments that eliminate configuration drift between stages.
+## Choosing the right path forward
 
-[Pulumi ESC](/blog/environments-secrets-configurations-management/) pioneered this approach, demonstrating how configuration-as-code can systematically address secrets sprawl while improving security, reliability, and developer productivity. This convergence transforms environment management from manual, error-prone processes into systematic, auditable infrastructure that follows established software engineering best practices.
+Secrets management has moved from simple storage to orchestration, and the practical test for any tool on this list is whether it reduces the number of places a credential can leak from. Start with the decision framework above rather than the feature list: a single-cloud team gains little from Vault's flexibility, and a multi-cloud team will eventually regret standardizing on a single provider's native tool.
 
-### Dynamic Credentials and Zero-Trust Architecture
-
-The shift toward dynamic, short-lived credentials aligns with zero-trust security principles that assume compromise and limit blast radius through minimal access grants. Rather than managing long-lived secrets that require careful rotation and access control, modern platforms generate credentials on-demand with automatic expiration.
-
-This approach provides reduced attack surface through minimal credential lifetime, simplified rotation with automatic credential lifecycle management, enhanced audit trails with precise attribution and timing, and improved compliance through automated policy enforcement. Dynamic credentials eliminate many of the operational challenges associated with traditional secret management while significantly improving security posture.
-
-Organizations adopting zero-trust architectures benefit from secret management platforms that support dynamic credential generation, fine-grained access controls, and comprehensive audit capabilities. These platforms become integral components of zero-trust implementations rather than separate security tools.
-
-### AI and Machine Learning Integration
-
-Advanced platforms are incorporating AI and machine learning capabilities to enhance security and operational efficiency. Anomaly detection algorithms identify unusual access patterns that may indicate compromise or policy violations, enabling proactive security response before incidents escalate. Intelligent rotation systems optimize credential lifecycles based on usage patterns and risk assessment, balancing security requirements with operational efficiency.
-
-Automated compliance capabilities ensure policies are consistently applied across all environments while predictive security features identify potential vulnerabilities before they're exploited. These AI-powered capabilities transform secret management from reactive operations into proactive security systems that enhance overall organizational security posture.
-
-## Choosing the Right Path Forward
-
-The secrets management landscape has fundamentally shifted from simple storage to intelligent orchestration. Your choice today will determine not just your current security posture, but your ability to scale and adapt as your infrastructure grows more complex.
-
-The decision framework is clearer than you might expect. If you're managing multi-cloud environments or have significant existing secret store investments, orchestration platforms like [Pulumi ESC](/docs/esc/) provide the most strategic value. They let you modernize your approach without disrupting current workflows, while adding [configuration-as-code capabilities](/what-is/what-is-infrastructure-as-code/) and [hierarchical environment management](/docs/esc/concepts/environments/) that systematically address secrets sprawl.
-
-Organizations committed to maximum flexibility and customization will find HashiCorp Vault's extensibility unmatched, though it requires substantial technical expertise to operate effectively. Cloud-native teams can leverage AWS Secrets Manager, Azure Key Vault, or Google Secret Manager for seamless integration within their chosen ecosystem, optimizing both cost and operational complexity.
-
-Teams prioritizing rapid adoption and developer experience should consider Doppler, Infisical, or 1Password Secrets Automation. These platforms excel at driving organization-wide adoption through intuitive interfaces while providing essential capabilities without overwhelming complexity.
-
-Here's the critical insight: secrets management isn't just a security decision—it directly impacts your development velocity and operational efficiency. Platforms that embrace orchestration, [configuration-as-code](/what-is/what-is-infrastructure-as-code/), and dynamic credentials enable faster development cycles while reducing the operational overhead that comes from managing scattered, manual processes.
-
-The cost of maintaining ad-hoc secrets management extends far beyond security incidents. Developer productivity losses from hunting down credentials, operational complexity from manual rotation processes, and the constant risk of configuration drift between environments create technical debt that compounds over time. The investment in systematic solutions pays dividends immediately through reduced operational overhead and improved security posture.
-
-The industry's evolution toward zero-trust architectures and configuration-as-code practices isn't slowing down. Organizations that adopt systematic approaches today position themselves to handle tomorrow's infrastructure complexity with confidence, while those that delay face increasingly difficult migration challenges as their systems grow more distributed and interdependent.
+Whatever you land on, prioritize dynamic and short-lived credentials over static ones wherever your tooling supports it, keep AI agents on the same narrow, auditable access as any other non-human identity, and treat secrets management as infrastructure orchestration rather than a single point product. [Pulumi ESC](/docs/esc/) is built for exactly that orchestration layer — pulling from AWS Secrets Manager, Azure Key Vault, Vault, or whatever you already run, and adding [configuration-as-code](/what-is/what-is-infrastructure-as-code/) and dynamic credentials on top without asking you to migrate away from anything first.
 
 ---
 
-*Ready to revolutionize your secrets and configuration management? [Explore Pulumi ESC](/docs/esc/) and discover how secrets orchestration can transform your development workflows while eliminating sprawl across your entire infrastructure.*
+*Ready to bring configuration and secrets together? [Explore Pulumi ESC](/docs/esc/) and see how orchestrating your existing secret stores compares to running another one from scratch.*
