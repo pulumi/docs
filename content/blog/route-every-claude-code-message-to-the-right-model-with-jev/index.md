@@ -54,6 +54,10 @@ Claude Code runs every message in a session on the model you picked. Sonnet 5 an
 
 Jev makes the decision cheap enough to ask every time. A routing call sends Jev a few hundred tokens that describe your message and the session, and costs about $0.00003. jev-router puts that decision in front of every message you write in Claude Code.
 
+That's the use case I wanted to try. My idea was to let the prompt pick the model, so a request to rename a variable lands on Haiku 4.5 and a request to redesign a service lands on Opus 5.5, without me switching models in between. The Jev routers I found worked differently. Two decided once, when the session started, and the other two asked Jev on every request, tool calls included, and could switch models halfway through a task. Every one of those switches throws the prompt cache away. I wanted a router that decides again each time I write a message and never moves a session down, and I wanted to watch those decisions while I type. So I built jev-router.
+
+{{< github-card repo="dirien/jev-router" >}}
+
 ## How jev-router works
 
 [jev-router](https://github.com/dirien/jev-router) is a pass-through proxy that runs on your machine. Claude Code sends its requests to the router instead of to Anthropic, and the router forwards each one to the model it picked. It changes only the `model` field, plus the few fields a smaller model can't accept, and it streams responses back byte for byte. Your Claude login passes through to Anthropic untouched. The only key the router holds is your Jev key.
