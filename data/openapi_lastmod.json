@@ -38,8 +38,8 @@
   },
   "tags": {
     "AI": {
-      "hash": "436fe558c0ba526d51cec18ecc1b83783d8f9fb0b8e3e5d80c4e399d4075fc22",
-      "lastmod": "2026-08-02"
+      "hash": "27d9d5b19fa519272901450f016ccead7d64b5650b901f0a25ce29f5b60c2a7b",
+      "lastmod": "2026-09-25"
     },
     "AI Agents": {
       "hash": "c73991c0cf6b43cf83d265d9d014cae4db07a50c420ca21d06920f664b76cf6b",
@@ -1086,6 +1086,36 @@
     "ContextSchema": {
       "hash": "d82b9925a628f1838dbddbd6c3c0f3f70ffcf9597ba740ba712ee6fa411db8dd",
       "lastmod": "2026-09-15"
+    },
+    "CopilotClientState": {
+      "hash": "a2fbaf8be299328498394a5393ff54ca810944d2008c8cdc8cb702fd9733abdc"
+    },
+    "CopilotCloudContext": {
+      "hash": "1f57f9aad728b0fccfec7b1aa545235f151162ef7ab69a0f766e83b3b3ee7b04"
+    },
+    "CopilotDirectSkillCall": {
+      "hash": "b395186d171d33e7cf25bbc31496d1accab168ad6d57d2452843fdc572178b66"
+    },
+    "CopilotDirectSkillCallExplainPreview": {
+      "hash": "8557036a488c7eabdb69671b4258a6d45270fc54826a69afd84a1faffad4ea3e"
+    },
+    "CopilotDirectSkillCallSummarizeUpdateParams": {
+      "hash": "08b450e3b00ab37036ba371996f25fed51788d6dabeaace419f6181827028ed3"
+    },
+    "CopilotExplainPreviewDetails": {
+      "hash": "f8b1fb2c02c0574230faffb6f421418c92b351e6e31f0bf12e29ca097eb3b048"
+    },
+    "CopilotMessage": {
+      "hash": "3bb374fabb7942dc715e13ebd1bed1d60f0d943a619f84c6bcd41c32644ad6ca"
+    },
+    "CopilotRequest": {
+      "hash": "e9ad02f0dd95e097e5de420bc95679fe1b79ec48a9dbe9ae50b5a1b0defc71ca"
+    },
+    "CopilotResponse": {
+      "hash": "e75f7f78feaf29abffdbc94c4ecf2f3cbdaeaf89581cd862ee79a06d9525058b"
+    },
+    "CopilotState": {
+      "hash": "e29514e7b770a96e12ef62cb3e468fa4f1738606c757d71353fd2964259afc47"
     },
     "CreateAccessTokenResponse": {
       "hash": "ddf3250e2c751cbbfa2c8cfb8d846550e0c3c781d3e208b6f5e4dc6c11f6d818"
