@@ -103,6 +103,11 @@ items:
             description: Security, compliance, and support for teams
             icon: buildings
             track: header-enterprise-solutions
+          - label: Agentic infrastructure
+            href: /whitepapers/agentic-infrastructure-operating-model/
+            description: The path to agents operating your infrastructure at scale
+            icon: path
+            track: header-enterprise-agentic-infrastructure
           - label: Customers
             href: /customers/
             description: Get a glimpse of who's using Pulumi and hear their stories
