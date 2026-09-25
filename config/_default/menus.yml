@@ -186,11 +186,6 @@ iac:
     weight: 2
     parent: iac-cli-commands
 
-  - name: watch
-    url: /docs/iac/cli/commands/pulumi_watch/
-    weight: 2
-    parent: iac-cli-commands
-
   - name: whoami
     url: /docs/iac/cli/commands/pulumi_whoami/
     weight: 2
