@@ -1,0 +1,35 @@
+<div id="{{ .targetId }}" class="riverside-form">Loading...</div>
+<script
+    src="https://assets.riverside.fm/rs-webinar-form/loader.js"
+    async
+    data-api-base="https://riverside.com"
+    data-event-id="{{ .eventId }}"
+    data-target="#{{ .targetId }}"
+    crossorigin="anonymous">
+</script>
+<script>
+    document.addEventListener("riverside:registrationSuccess", function (e) {
+        var webinarLink = e.detail && e.detail.webinarLink;
+        var container = document.getElementById("{{ .targetId }}");
+        if (!container || !webinarLink) {
+            return;
+        }
+        var wrapper = document.createElement("div");
+        wrapper.className = "text-center py-5";
+        var message = document.createElement("p");
+        message.className = "mb-4";
+        message.innerText = "You're registered for this webinar.";
+        var join = document.createElement("a");
+        join.className = "btn btn-primary";
+        join.href = webinarLink;
+        join.target = "_blank";
+        join.rel = "noopener";
+        join.innerText = "Join webinar";
+        wrapper.appendChild(message);
+        wrapper.appendChild(join);
+        container.replaceChildren(wrapper);
+    });
+    document.addEventListener("riverside:registrationFailure", function (e) {
+        console.error("Registration failed:", (e.detail && e.detail.message) || "Unknown error");
+    });
+</script>
