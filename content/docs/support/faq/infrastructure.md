@@ -92,8 +92,9 @@ Some Pulumi functionality is released as _experimental_. Experimental features a
 
 ### What is Pulumi's policy on provider version support?
 
-Pulumi focuses on actively supporting the latest released version of the providers we maintain.
-While we do not formally designate older versions for long term support, we are committed to helping our users succeed and continuously improve our providers based on community feedback and contributions. We encourage users to update to the latest versions to benefit from the most recent features, bug fixes, and security enhancements. You can find the current version for all providers maintained by Pulumi in the [Pulumi Registry](https://www.pulumi.com/registry/).
+Pulumi focuses on actively supporting the latest released major version of the providers we maintain. For a set of widely used providers, Pulumi also ships security updates for the previous major version for up to a year, or until the next major version is released, whichever comes first. The [provider support policy](/docs/support/provider-support-policy/) lists the covered providers and what a long-term support release contains.
+
+Older majors receive no patches at all, so update to the latest version to benefit from the most recent features, bug fixes, and security enhancements. You can find the current version for all providers maintained by Pulumi in the [Pulumi Registry](/registry/).
 
 ### What are the best practices for maintaining provider versions?
 
@@ -107,6 +108,7 @@ While we do not formally designate older versions for long term support, we are 
 
 ## Learn more
 
+- [Provider support policy](/docs/support/provider-support-policy/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
 - [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
 - [Pulumi Policies FAQ](/docs/support/faq/policies/)
