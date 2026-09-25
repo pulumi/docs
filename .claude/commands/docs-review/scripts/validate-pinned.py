@@ -235,6 +235,19 @@ STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 # tells the lane to strike X through when it moves to ✅ Resolved, and Opus 5.5
 # does so literally.
 FINDING_START_RE = re.compile(r"^(?:- )?(?:~~)?\*\*\S")
+# v3 card furniture that closes the last finding section. Every walker that
+# splits a section into FINDING_START_RE paragraphs stops here: since
+# 2026-09-25 the evidence line is an unprefixed column-0 `**Full evidence:**`,
+# which FINDING_START_RE matches, so without the stop it read as a finding
+# under ✅ Resolved and swallowed the REVIEW_STATE block after it — a hold
+# reason saying "conceding" then tripped outcome-annotation-shape and failed
+# the update lane's publish. The 📎 form is the pre-change evidence line.
+CARD_FURNITURE_PREFIXES = ("📎 ", "**Full evidence:**", "**Pre-existing issues in touched files:**",
+                           "<!-- REVIEW_STATE")
+
+
+def is_card_furniture(line: str) -> bool:
+    return line.startswith(CARD_FURNITURE_PREFIXES)
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -537,6 +550,8 @@ def extract_bucket_bullets(body: str, heading_substring: str) -> list[str]:
     start, end = span
     bullets = []
     for line in body.splitlines()[start:end]:
+        if is_card_furniture(line):
+            break
         if FINDING_START_RE.match(line):
             bullets.append(line)
     return bullets
@@ -2724,6 +2739,8 @@ def _finding_paragraphs(ctx: Context, heading_substring: str) -> list[tuple[int,
     current: list[str] = []
     for i in range(start + 1, end):
         line = ctx.body_lines[i]
+        if is_card_furniture(line):
+            break
         if FINDING_START_RE.match(line):
             if current:
                 paragraphs.append((current_start + 1, "\n".join(current)))

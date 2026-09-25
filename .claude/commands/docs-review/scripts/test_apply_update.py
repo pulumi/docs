@@ -436,7 +436,7 @@ def test_summary_is_inserted_when_the_card_has_none():
 
 
 def test_summary_shape_is_validated():
-    for bad, needle in (("", "non-empty"), ("two\nlines", "one line"), ("x" * 301, "≤300")):
+    for bad, needle in ((42, "non-empty"), ("two\nlines", "one line"), ("x" * 301, "≤300")):
         up = _update([])
         up["summary"] = bad
         try:
@@ -495,3 +495,28 @@ def test_a_row_in_either_section_keeps_both():
     one_left = AUTHOR.replace(au.cr._V3_EMPTY_QUESTIONS, "- a stray prose line")
     assert be.drop_empty_author_sections(one_left) == one_left
     assert be.ensure_author_sections(AUTHOR) == AUTHOR, "no-op when the headings exist"
+
+
+def test_evidence_line_never_reads_as_a_resolved_finding():
+    """Review finding 2026-09-25: the unprefixed `**Full evidence:**` line
+    matches FINDING_START_RE, so the ✅ Resolved paragraph walk swallowed it
+    and the REVIEW_STATE block behind it; a hold reason saying "conceding"
+    then tripped outcome-annotation-shape and failed the publish."""
+    import test_validate_pinned_v3 as tv
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+                  {"id": "F2", "action": "hold", "reason": "Holding rather than conceding: the registry lists 300."}])
+    a_out, b_out, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="alice", auto=False)
+    assert "outcome-annotation-shape" not in [v.rule_id for v in tv.check(a_out, b_out)]
+    vp = tv.vp
+    assert vp.extract_bucket_bullets(a_out, "✅ Resolved") == []
+
+
+def test_empty_or_placeholder_summary_is_treated_as_absent():
+    """Review finding 2026-09-25: the model writes the optional key as "",
+    null, or the prompt's placeholder copied verbatim; none may fail the
+    refresh or reach the card."""
+    for val in ("", "   ", None, "<optional: one sentence>"):
+        up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+        up["summary"] = val
+        a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+        assert "<TODO: one sentence" in a_out and "<optional" not in a_out

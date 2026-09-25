@@ -693,11 +693,23 @@ def sync_posted(repo: str, pr: str, valid: list[dict], marker: str,
     """
     prior = fetch_prior_suggestions(repo, pr, marker)
     posted: list[dict] = []
+
+    def key(path, line, body):
+        k = suggestion_key(path, line, body)
+        if marker == FIX_MARKER:
+            # A fix comment's header names the F-ids it answers and why. A
+            # full re-review renumbers from F1, so a kept comment would point
+            # the author at the wrong finding: the header is identity here
+            # (unlike a style note, whose reworded reason is cosmetic).
+            lines = (body or "").replace("\r\n", "\n").split("\n")
+            k = k + (lines[1] if len(lines) > 1 else "",)
+        return k
+
     if prior is not None:
         by_key: dict[tuple, list] = {}
         for c in prior:
-            by_key.setdefault(suggestion_key(c.get("path"), c.get("line"), c.get("body")), []).append(c)
-        wanted = {suggestion_key(e["file"], e["line"], comment_body(e)) for e in valid}
+            by_key.setdefault(key(c.get("path"), c.get("line"), c.get("body")), []).append(c)
+        wanted = {key(e["file"], e["line"], comment_body(e)) for e in valid}
         if wanted <= set(by_key):
             extras = [c["id"] for k, cs in by_key.items() for c in (cs if k not in wanted else cs[1:])]
             if valid:
@@ -755,6 +767,40 @@ FIX_WHY_TRUNC = 220
 # Whole-quote rewrites in the same card ran 87-95% of the quote's length.
 FIX_PARTIAL_MIN_QUOTE = 80
 FIX_PARTIAL_MIN_RATIO = 0.6
+# A leading list/heading/blockquote marker. The quote and the fence must agree
+# on it, or the splice drops the marker ("- x" → "x") or doubles it ("- - x").
+_LINE_MARKER_RE = re.compile(r"^\s*(?:[-*+]|\d+[.)]|#{1,6}|>)\s+")
+# Text outside the quoted span that the fence repeats is the tell of a
+# whole-line fence written against a phrase quote; below this length a repeat
+# is just shared punctuation or a short word.
+FIX_CONTEXT_REPEAT_MIN = 4
+# When the quote is the whole line, the fence must read as a whole-line
+# rewrite: it shares an opening or an ending with the quote at least this long
+# (capped for long lines). pulumi/docs#21645's whole-line rewrites shared
+# 43-156 chars; a one-sentence fence against a two-sentence line shares ~none.
+FIX_WHOLE_LINE_ANCHOR_FRAC = 0.3
+FIX_WHOLE_LINE_ANCHOR_CAP = 12
+
+
+def _span_mismatch(content: str, original: str, replacement: str) -> str | None:
+    """Why splicing `replacement` over `original` in `content` would corrupt
+    the line, or None. Every case here passed validate_entries and would have
+    posted (2026-09-25 review of this mode) — a wrong button is worse than none."""
+    idx = content.find(original)
+    before, after = content[:idx].strip(), content[idx + len(original):].strip()
+    for ctx in (before, after):
+        if len(ctx) >= FIX_CONTEXT_REPEAT_MIN and ctx in replacement:
+            return "fence repeats text outside the quote (a whole-line fence against a phrase quote)"
+    mq, mr = _LINE_MARKER_RE.match(original), _LINE_MARKER_RE.match(replacement)
+    if (mq.group(0).strip() if mq else "") != (mr.group(0).strip() if mr else ""):
+        return "quote and fence disagree on the leading list/heading marker"
+    if not before and not after:
+        need = min(FIX_WHOLE_LINE_ANCHOR_CAP, FIX_WHOLE_LINE_ANCHOR_FRAC * len(original))
+        pre = len(os.path.commonprefix([original, replacement]))
+        suf = len(os.path.commonprefix([original[::-1], replacement[::-1]]))
+        if max(pre, suf) < need:
+            return "quote is the whole line but the fence doesn't read as a whole-line rewrite"
+    return None
 
 
 def _load_compose():
@@ -886,6 +932,11 @@ def derive_fix_entries(card: str, repo_root: Path) -> tuple[list[dict], list[str
             continue
         original = _unwrap_quote(quote)
         replacement = body[0].strip()
+        raw = quote.strip()
+        if raw != original and len(replacement) >= 2 and replacement[0] == raw[0] and replacement[-1] == raw[-1]:
+            # The fence keeps the wrapper, so the wrapper is part of the line
+            # (a quoted string), not quoting markup: match it as written.
+            original = raw
         if (len(original) >= FIX_PARTIAL_MIN_QUOTE
                 and len(replacement) < FIX_PARTIAL_MIN_RATIO * len(original)):
             skipped.append(f"{fid}: fence rewrites only part of the quote "
@@ -910,6 +961,10 @@ def derive_fix_entries(card: str, repo_root: Path) -> tuple[list[dict], list[str
         hits = [n for n in range(a, min(b, len(src)) + 1) if original in src[n - 1]]
         if len(hits) != 1:
             skipped.append(f"{fid}: quote found on {len(hits)} anchored lines (need exactly one)")
+            continue
+        why_not = _span_mismatch(src[hits[0] - 1], original, replacement)
+        if why_not:
+            skipped.append(f"{fid}: {why_not}")
             continue
         by_line.setdefault((fname, hits[0]), []).append(
             {"id": fid, "original": original, "replacement": replacement,
@@ -967,6 +1022,20 @@ def run_fix_mode(args) -> int:
                   file=sys.stderr)
             return 0
         patch = proc.stdout
+    if entries and not args.patch_file and not args.dry_run:
+        # Lines were matched against the CHECKOUT, but a review posts against
+        # the PR's live head. If the author pushed since, line N may be a
+        # different line there, and the button would overwrite it with a
+        # rewrite of the old one. Stand down; the next refresh posts against
+        # the new head (the existing set is left as it is, not cleared).
+        local = subprocess.run(["git", "-C", args.repo_root, "rev-parse", "HEAD"],
+                               capture_output=True, text=True).stdout.strip()
+        live = gh_api([f"repos/{args.repo}/pulls/{args.pr}", "--jq", ".head.sha"])
+        if live.returncode != 0 or live.stdout.strip() != local:
+            print(f"post-style-suggestions: fix mode: PR head {live.stdout.strip()[:12] or '?'} "
+                  f"is not the checkout {local[:12] or '?'}; posting nothing this run.",
+                  file=sys.stderr)
+            return 0
     valid, dropped = validate_entries(entries, _vff.added_lines_per_file(patch),
                                       Path(args.repo_root))
     for reason in dropped:

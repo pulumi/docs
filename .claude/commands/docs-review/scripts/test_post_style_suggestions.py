@@ -835,6 +835,8 @@ def test_caption_legend_only_when_a_mark_is_on_the_page():
 
 # ---- blocking-fix mode ------------------------------------------------------
 
+_REAL_RUN = subprocess.run
+
 FIX_SRC = [
     "# Title",
     "Pulumi Service stores your state.",               # L2: backtick quote, phrase fence
@@ -982,3 +984,75 @@ def test_fix_mode_skips_a_fence_that_rewrites_only_part_of_a_long_quote(tmp_path
     ])
     entries, skipped = pss.derive_fix_entries(card, tmp_path)
     assert entries == [] and skipped[0].startswith("F1: fence rewrites only part of the quote")
+
+
+@pytest.mark.parametrize("line, quote, fence, want", [
+    # phrase quote, whole-line fence → would duplicate the context around it
+    ("Pulumi is great. It supports 100 clouds. Use it today.", '"It supports 100 clouds."',
+     "Pulumi is great. It supports 150+ clouds. Use it today.", "fence repeats text outside"),
+    # whole-line quote under 80 chars, one-sentence fence → would drop a sentence
+    ("Pulumi is fast. It supports 100 clouds.", '"Pulumi is fast. It supports 100 clouds."',
+     "It supports 150+ clouds.", "doesn't read as a whole-line rewrite"),
+    # list marker in the quote but not the fence → would drop the bullet
+    ("- Pulumi supports 100 clouds.", '"- Pulumi supports 100 clouds."',
+     "Pulumi supports 150+ clouds.", "leading list/heading marker"),
+    # list marker in the fence but not the quote → would double it
+    ("- Pulumi supports 100 clouds.", '"Pulumi supports 100 clouds."',
+     "- Pulumi supports 150+ clouds.", "leading list/heading marker"),
+    # the line is itself a quoted string → keep its quotes, don't double them
+    ('"Deploy with Pulumi Service"', '"Deploy with Pulumi Service"',
+     '"Deploy with Pulumi Cloud"', '"Deploy with Pulumi Cloud"'),
+])
+def test_fix_mode_never_posts_a_span_mismatched_splice(tmp_path, line, quote, fence, want):
+    """Review of this mode, 2026-09-25: each case passed validate_entries and
+    would have posted a button that corrupts the author's line."""
+    (tmp_path / "content" / "docs").mkdir(parents=True)
+    (tmp_path / "content" / "docs" / "fix.md").write_text(f"# T\n{line}\n")
+    card = "\n".join(["### 🚨 Fix or disagree", "", "| ID | Where | Finding |", "|---|---|---|",
+                      _row("F1", "L2"), "", *_block("F1", quote, "Why.", [fence])])
+    entries, skipped = pss.derive_fix_entries(card, tmp_path)
+    if want.startswith('"'):
+        assert [e["replacement"] for e in entries] == [want]
+    else:
+        assert entries == [] and want in skipped[0]
+
+
+def test_fix_comment_with_renumbered_ids_is_reposted(fix_repo, monkeypatch):
+    """Review finding 2026-09-25: a #new-review renumbers from F1; keeping the
+    live `**F2** blocks merge` comment would point at the wrong finding."""
+    entries, _ = pss.derive_fix_entries(FIX_CARD, fix_repo)
+    valid, _ = pss.validate_entries(entries, pss._vff.added_lines_per_file(_fix_patch()), fix_repo)
+    e = valid[0]
+    stale = dict(e, ids=["F9"])
+    posted = [{"id": 100, "path": e["file"], "line": e["line"], "body": pss.comment_body(stale)}]
+    calls: list = []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: posted)
+    monkeypatch.setattr(pss, "gh_api", lambda args, input_json=None: calls.append(args) or
+                        subprocess.CompletedProcess(args, 0, "", ""))
+    pss.sync_posted("o/r", "7", [e], pss.FIX_MARKER, pss.FIX_REVIEW_BODY)
+    assert ["-X", "DELETE", "repos/o/r/pulls/comments/100"] in calls
+    assert any("reviews" in " ".join(c) for c in calls), "reposted under the new id"
+
+
+def test_fix_mode_stands_down_when_the_head_moved(fix_repo, monkeypatch, capsys):
+    """Review finding 2026-09-25: lines matched on the checkout must not be
+    posted against a newer PR head."""
+    (fix_repo / "card.md").write_text(FIX_CARD)
+    subprocess.run(["git", "init", "-q", str(fix_repo)], check=True)
+    subprocess.run(["git", "-C", str(fix_repo), "-c", "user.name=t", "-c", "user.email=t@t",
+                    "commit", "-q", "--allow-empty", "-m", "x"], check=True)
+    calls: list = []
+
+    def fake(args, input_json=None):
+        calls.append(args)
+        return subprocess.CompletedProcess(args, 0, "f" * 40 + "\n", "")
+    monkeypatch.setattr(pss, "gh_api", fake)
+    monkeypatch.setattr(pss.subprocess, "run", lambda cmd, **kw: (
+        subprocess.CompletedProcess(cmd, 0, _fix_patch(), "") if cmd[:3] == ["gh", "pr", "diff"]
+        else _REAL_RUN(cmd, **kw)))
+    monkeypatch.setattr(sys, "argv", ["p", "--pr", "7", "--repo", "o/r", "--repo-root", str(fix_repo),
+                                      "--fixes-from-author-card", str(fix_repo / "card.md")])
+    assert pss.main() == 0
+    assert "posting nothing this run" in capsys.readouterr().err
+    assert not any("reviews" in " ".join(c) or "DELETE" in c for c in calls)
+

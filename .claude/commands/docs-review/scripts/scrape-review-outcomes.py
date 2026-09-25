@@ -329,6 +329,8 @@ def extract_finding_paragraphs(body: str, heading_substring: str) -> list[str]:
     paragraphs: list[str] = []
     current: list[str] = []
     for line in lines:
+        if _vp.is_card_furniture(line):
+            break
         if FINDING_START_RE.match(line):
             if current:
                 paragraphs.append("\n".join(current))

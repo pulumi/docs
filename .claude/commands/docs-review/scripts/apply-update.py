@@ -182,6 +182,16 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
     if "schema" not in u:
         u["schema"] = 1
         notes.append("`schema` defaulted to 1")
+    # `summary` is optional, and "optional" slips into the envelope as "",
+    # null, or the prompt's own `<…>` placeholder copied verbatim. All mean
+    # "leave the sentence alone" — none may fail an otherwise good refresh or
+    # put a placeholder on the card.
+    if "summary" in u:
+        sv = u["summary"]
+        text = sv.strip() if isinstance(sv, str) else sv
+        if text is None or text == "" or (isinstance(text, str) and text.startswith("<") and text.endswith(">")):
+            del u["summary"]
+            notes.append("empty/placeholder `summary` dropped")
     if u.get("case") is None and isinstance(u.get("findings"), list):
         acts = {e.get("action") for e in u["findings"] if isinstance(e, dict)}
         if acts and acts <= {"resolve", "add"}:
