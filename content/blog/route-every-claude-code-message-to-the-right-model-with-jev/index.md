@@ -38,15 +38,15 @@ TypeSafe AI [released Jev](https://typesafe.ai/blog/introducing-system-one-model
 
 ![Diagram: Diogo Almeida founded TypeSafe AI, which built Jev, the first System One model. Jev answers in 70–500 ms and costs $0.042 per million input tokens, with free output tokens.](what-is-jev.png)
 
-Jev isn't a large language model, and it can't write you a sentence. TypeSafe calls it a System One model, a term borrowed from Daniel Kahneman's *Thinking, Fast and Slow*. LLMs like Claude and GPT work like System Two: they write their answer token by token, take seconds to minutes, and can say anything. Jev works like System One. You describe a situation, ask a few typed questions, and it answers all of them in one parallel pass, in 70–500 milliseconds end to end, according to [TypeSafe's launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+Jev isn't a large language model, and it can't write you a sentence. TypeSafe calls it a [System One model](https://docs.typesafe.ai/concepts/system-one), a term borrowed from Daniel Kahneman's *Thinking, Fast and Slow*. LLMs like Claude and GPT work like System Two: they write their answer token by token, take seconds to minutes, and can say anything. Jev works like System One. You describe a situation, ask a few typed questions, and it answers all of them in one parallel pass, in 70–500 milliseconds end to end, according to [TypeSafe's launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
 
 ![Diagram comparing System 1 and System 2. Jev turns an input into decisions in one parallel pass of 70–500 ms and picks only from your options. LLMs turn an input into free-form text, token by token, over seconds to minutes.](jev-system-one-vs-llm.png)
 
-Every question takes one of three shapes. A *Noul* asks whether a statement is true and returns a probability. A *Choice* picks from a list of options you provide, with a probability for each one. A *Score* places the situation on a scale. Jev never answers outside your options, so there's no malformed JSON to parse and no made-up category to handle.
+Every question takes one of three shapes. A [*Noul*](https://docs.typesafe.ai/primitives/noul) asks whether a statement is true and returns a probability. A [*Choice*](https://docs.typesafe.ai/primitives/choice) picks from a list of options you provide, with a probability for each one. A [*Score*](https://docs.typesafe.ai/primitives/score) places the situation on a scale. Jev never answers outside your options, so there's no malformed JSON to parse and no made-up category to handle.
 
 ![Diagram of Jev's three answer shapes: a Noul returns 0.95 for "Is this urgent?", a Choice picks billing out of four teams, and a Score rates the customer's anger at 7 of 10.](jev-three-answer-shapes.png)
 
-TypeSafe trains Jev with a method it calls reinforcement learning for calibrated decisions (RLCD), and says the probabilities are calibrated: a higher confidence should mean a higher accuracy. It charges $0.042 per million input tokens and calls output tokens too cheap to meter, so they're free.
+TypeSafe trains Jev with a method it calls [reinforcement learning for calibrated decisions](https://docs.typesafe.ai/introduction/machine-learning-primer) (RLCD), and says the probabilities are calibrated: a higher confidence should mean a higher accuracy. It charges $0.042 per million input tokens and calls output tokens too cheap to meter, so they're free.
 
 TypeSafe's launch post pitches Jev as one general model for the decisions a program makes: classifying, routing, scoring, extracting, and branching. Deciding which model a prompt needs is one of those routing decisions.
 
