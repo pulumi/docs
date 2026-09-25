@@ -1,8 +1,10 @@
 ---
 # Metadata for the tags taxonomy LIST page (/blog/tag/, via permalinks.taxonomy
 # in config.yml; rendered by layouts/taxonomy/tag.terms.html). Hugo merges this
-# file into the generated taxonomy page. Unlike the individual tag pages, this
-# list page is indexed (carve-out in layouts/partials/taxonomy-indexable.html).
+# file into the generated taxonomy page. This page is noindexed by
+# layouts/partials/taxonomy-indexable.html (pulumi-hugo#2138, anti tag-page
+# cannibalization), so this description is not for search ranking, it's for
+# link and social previews, which don't consult robots directives.
 title: Tags
 meta_desc: Browse every topic covered on the Pulumi blog, from infrastructure as code and Kubernetes to platform engineering, security, and AI.
 

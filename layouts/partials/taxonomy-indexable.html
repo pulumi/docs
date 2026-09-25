@@ -29,13 +29,12 @@
         available today that a page carries enough unique content to be worth
         indexing. Authors below the floor stay noindexed. See
         layouts/taxonomy/author.html for the post-count query this mirrors.
-      - the blog tag and author LIST pages (/blog/tag/, /blog/author/) —
-        directories of every tag and author with a blog post. /blog/tag/ was
-        an indexed content page before it became the taxonomy list page.
-        Individual tag terms stay noindexed.
+      - the blog author LIST page (/blog/author/) — a directory of every
+        author with a blog post.
 
     The category carve-out is TERM-only; its list page (/blog/category/) stays
-    noindexed, as do all tag term pages and author term pages below the
+    noindexed, as do the /blog/tag/ list page (it links almost entirely to
+    noindexed tag terms), all tag term pages, and author term pages below the
     post-count floor.
     Non-taxonomy pages return true (no opinion).
 */ -}}
@@ -44,7 +43,7 @@
     {{- $indexable = false -}}
     {{- if eq .Data.Singular "series" -}}
         {{- $indexable = true -}}
-    {{- else if and (eq .Kind "taxonomy") (in (slice "tag" "author") .Data.Singular) -}}
+    {{- else if and (eq .Kind "taxonomy") (eq .Data.Singular "author") -}}
         {{- $indexable = true -}}
     {{- else if and (eq .Kind "term") (eq .Data.Singular "category") -}}
         {{- $indexable = true -}}
