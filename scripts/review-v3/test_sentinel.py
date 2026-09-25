@@ -703,7 +703,7 @@ def test_infra_needs_staging_status_g4():
                 memberships={("docs-tools", "tools-member"): "active"})
     v_red = sentinel.evaluate(StubGh(**base), CONFIG)
     assert _gate(v_red, "G4").status == "red"
-    assert "/deploy-staging" in _gate(v_red, "G4").message
+    assert "testing-build-and-deploy.yml" in _gate(v_red, "G4").message
     assert v_red.conclusion == "failure"
 
     v_ok = sentinel.evaluate(
@@ -1015,8 +1015,7 @@ def test_role_comments_must_come_from_the_bot():
     forgery, so the real card never showed it.
 
     The rule is the one the writer already enforces: bot-authored, marker as
-    an exact line in the first three (`pinned-comment.sh list_role_comments`,
-    `resolve-handler.py:222`).
+    an exact line in the first three (`pinned-comment.sh list_role_comments`).
     """
     real = author_card([("F1", "must"), ("F2", "must")], state=_state_with([]))
     real["user"] = {"login": sentinel.BOT_LOGIN, "type": "Bot"}
@@ -1453,11 +1452,11 @@ def test_no_workflow_interpolates_pr_controlled_text_into_a_shell():
     `)` and `'` — space is the only shell metacharacter it rejects, and
     `$IFS` covers that.
 
-    staging-deploy-auto.yml and staging-deploy-pr.yml both did this with
-    `github.event.pull_request.head.ref`. The PR lane holds `id-token: write`
-    with ESC already authenticated, so the payload could mint an OIDC token
-    and read the org-scoped PULUMI_BOT_TOKEN — repo-write escalating to
-    org-scoped credentials.
+    staging-deploy-auto.yml and the since-retired comment-triggered staging
+    lane both did this with `github.event.pull_request.head.ref`. The latter
+    held `id-token: write` with ESC already authenticated, so the payload
+    could mint an OIDC token and read the org-scoped PULUMI_BOT_TOKEN —
+    repo-write escalating to org-scoped credentials.
 
     Both files' headers justified safety as "never checks out or executes PR
     code", which is true and beside the point: the VALUE is the vector, not
@@ -1551,7 +1550,7 @@ def test_workflow_can_actually_write_the_comments_it_writes():
     when enforcing, and the status comment did not exist. The first real
     POST failed with exit 1 (PR #21642).
     """
-    for name in ("review-sentinel.yml", "staging-deploy-pr.yml"):
+    for name in ("review-sentinel.yml",):
         wf = (REPO_ROOT / ".github" / "workflows" / name).read_text()
         assert "pull-requests: write" in wf, (
             f"{name} posts comments on a PR and needs `pull-requests: write`; "
@@ -1639,27 +1638,17 @@ def test_the_auto_staging_lane_dispatches_and_gets_out():
     writes its own `staging/pulumi-test-io` status.
     """
     auto = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-auto.yml").read_text()
-    assert "--dispatch-only" in auto, "the auto lane must not wait on the deploy"
     import yaml as _yaml  # noqa: PLC0415
     jobs = _yaml.safe_load(auto)["jobs"]
     assert all("concurrency" not in j for j in jobs.values()), "a queued job is a job that gets cancelled"
 
     script = (REPO_ROOT / "scripts" / "review-v3" / "staging-deploy.sh").read_text()
-    assert "--dispatch-only) DISPATCH_ONLY" in script
+    # The script is dispatch-only: nothing that calls it may hold a runner
+    # open on the deploy. Match the command, not the prose.
+    assert not any(ln.lstrip().startswith(("gh run watch", "if gh run watch"))
+                   for ln in script.splitlines()), "staging-deploy.sh must not wait on the deploy"
     # stale comment guard: the header must not still promise a queue
     assert "Concurrency sits on the DEPLOY JOB" not in auto
-    # The attended lane still watches -- not to write the status (that is
-    # staging-status.yml's job now) but because the watch is what holds its
-    # `staging-stack` group for the length of the deploy. Match the script
-    # invocation, not the prose: the header explains the contrast.
-    pr_lane = (REPO_ROOT / ".github" / "workflows" / "staging-deploy-pr.yml").read_text()
-    invocation = "\n".join(
-        step["run"] for step in _yaml.safe_load(pr_lane)["jobs"]["deploy"]["steps"]
-        if "staging-deploy.sh" in step.get("run", "")
-    )
-    assert invocation, "the attended lane must still call staging-deploy.sh"
-    assert "--dispatch-only" not in invocation
-    assert "--announce" in invocation
 
     # The dispatched run must NOT resolve its own status: see
     # test_the_staging_status_listener_finalizes_from_the_default_branch.
@@ -1753,9 +1742,8 @@ def test_staging_deploy_writes_no_status_at_all():
         "a pending status needs a writer that cannot miss -- a schedule sweep, not a cascade"
     assert "-f state=\"$STATE\"" not in script, \
         "the terminal status belongs to staging-status.yml"
-    assert "gh run watch" in script, "the attended lane still holds the stack"
-    # The evidence the Sentinel actually reads is the run record, and both
-    # lanes must keep producing one.
+    # The evidence the Sentinel actually reads is the run record, and the
+    # lane must keep producing one.
     assert "gh workflow run testing-build-and-deploy.yml" in script
 
 

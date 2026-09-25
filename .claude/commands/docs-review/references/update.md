@@ -296,16 +296,15 @@ inline") are theirs to make, not grounds to hold.
 ### What the deterministic side does
 
 `claude-update.yml`'s publish step re-fetches the LIVE author card (merging
-any `/resolve` that landed while the model worked — newest `updated_at`
-wins), runs `apply-update.py` (validate patch → apply actions → merge
+per finding with whatever another run published while the model worked —
+newest `updated_at` wins), runs `apply-update.py` (validate patch → apply actions → merge
 REVIEW_STATE → refresh header count, `Last updated`, and the
 `CLAUDE_REVIEW_HEAD` marker). The `#### F<n> · Do this` detail blocks
 follow their rows automatically — apply-update strips them, re-inserts each
 under its finding's current section, and drops the block when its row
 resolves or concedes; the brief's "Waiting on the author" table is
-regenerated from the post-application findings + dispositions (a row a
-`/resolve` dispositioned stays put but leaves the blocking count on both
-cards — `build-evidence.refresh_counts`, which the /resolve lane calls too);
+regenerated from the post-application findings + dispositions, and the
+blocking count on both cards is recomputed (`build-evidence.refresh_counts`);
 the brief's **Facts** bullet is re-derived from the refreshed evidence
 (`refresh_facts_line`: totals fixed at compose time, open/⚠️/settled
 recounted); the ✅
