@@ -40,7 +40,7 @@ Try all three styles of testing and use the ones that suit your quality targets,
 
 ## Unit testing
 
-Unit tests evaluate the behavior of your code in isolation, while all external dependencies are replaced by **mocks**. Unit tests run in memory without any out-of-process calls, which makes them fast. Therefore, unit tests are suitable for fast feedback loops during development, including **Test-Driven Development** (TDD).
+Unit tests evaluate the behavior of your code in isolation, while all external dependencies are replaced by **mocks**. Unit tests run in memory without any out-of-process calls, which makes them fast. As a result, unit tests are suitable for fast feedback loops during development, including **Test-Driven Development** (TDD).
 
 Unit tests are authored in the same language as the Pulumi program under test. You can use your favorite test and mock frameworks, such as Mocha for Node.js or NUnit for .NET.
 
