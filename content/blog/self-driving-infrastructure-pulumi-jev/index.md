@@ -6,7 +6,7 @@ meta_desc: "GeoDeploy pairs TypeSafe Jev's confidence-scored decisions with the 
 # Leave blank — add a real hero image later with /blog-feature-image or a
 # designer-supplied one (1884x1256). Never commit a placeholder. Required
 # before publishing unless the post is `category: general` or `draft: true`.
-feature_image:
+feature_image: feature.png
 authors:
     - peter-yoakum
 tags:
