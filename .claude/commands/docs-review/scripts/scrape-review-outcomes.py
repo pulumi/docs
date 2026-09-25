@@ -143,7 +143,8 @@ OUTCOME_KEYS = (
 # dispositions (`accepted`/`deferred`/`not-applicable`) that are an active,
 # adjudicated answer rather than something merged over unaddressed.
 # `bulk_accepted` is the honesty-metric counter: how many of those answers
-# came from a single `/resolve all …` rather than a per-finding decision.
+# came from one accept-everything `#update-review` mention (the update lane's
+# `bulk: true`) rather than a per-finding decision.
 V3_ONLY_OUTCOME_KEYS = (
     "ignored_author_answer",
     "reviewer_check_open",
@@ -599,7 +600,7 @@ def scrape_body_v3(author_body: str, brief_body: str, merged: bool, head_sha: st
     for f in findings:
         outcome_counts[f["outcome"]] += 1
         # `bulk_accepted` ⊆ `author_accepted` by definition (see the key
-        # docs above): a `/resolve all fixed` is bulk but not an acceptance,
+        # docs above): a bulk-flagged `fixed` is bulk but not an acceptance,
         # and counting it here let the digest's bulk-accept rate exceed 100%.
         if f.get("bulk") and f["outcome"] == "author_accepted":
             outcome_counts["bulk_accepted"] += 1

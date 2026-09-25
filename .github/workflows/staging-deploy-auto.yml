@@ -3,12 +3,11 @@ name: Staging deploy (auto, infra PRs)
 # Supplies Sentinel gate G4's evidence without anyone having to ask for it.
 #
 # G4 requires a successful pulumi-test.io deploy at the PR's current head.
-# Until now the only way to produce one was a tools-team member commenting
-# `/deploy-staging` — which, across the 14-16 Sep report-only window, nobody
-# did once, on any of the infra PRs that needed it. A gate whose evidence
-# has no supply isn't a gate, it's a wall. This workflow makes the deploy
-# the default for an infra PR, so `/deploy-staging` goes back to being what
-# it reads like: a retry.
+# This workflow makes that deploy the default for an infra PR, and it is the
+# only lane. A retry is a re-run of the failed "Build and deploy testing" run,
+# or `gh workflow run testing-build-and-deploy.yml --ref <branch>` by anyone
+# with write access (`/pr-review --act --deploy N` does the same); the
+# Sentinel accepts any successful run at the head either way.
 #
 # Design notes:
 # - WHAT COUNTS AS INFRA is not re-implemented here. `route-pr.py` resolves
@@ -17,13 +16,13 @@ name: Staging deploy (auto, infra PRs)
 #   `paths:` filter duplicating the infra globs would drift from
 #   review-routing.yml the first time either side changed.
 # - SAME-REPO ONLY. Deploying fork code to the shared staging stack stays a
-#   deliberate tools-team action, exactly as the comment lane has it. A fork
+#   deliberate tools-team action. A fork
 #   PR's token is read-only anyway, so this is belt and braces.
 # - NO PR CODE IS CHECKED OUT OR RUN. The checkout is pinned to the base
 #   repository's default branch; route-pr.py reads the diff as text, and
 #   the deploy script dispatches the existing testing-deploy workflow at the
 #   head branch — that workflow does the build, in the testing account, as
-#   it already does for master and for `/deploy-staging`.
+#   it already does for master.
 #   Consequence worth knowing: on a `pull_request` event GitHub runs the
 #   PR's copy of THIS FILE, but every script it calls comes from base. A PR
 #   that edits both sees its new YAML run against master's scripts — and a
@@ -61,10 +60,9 @@ name: Staging deploy (auto, infra PRs)
 #   below says this workflow must never do.
 # - NO CONCURRENCY GROUP, for the same reason. Serializing the shared
 #   stack by parking pending runs meant announcing displacement as
-#   failure. The dispatched deploys were never serialized in the manual
-#   `/deploy-staging` lane either, so nothing regresses here; and when two
-#   deploys do overlap, the later head is the one G4 asks about.
-# - Follows the same switch as `/deploy-staging` and the Sentinel itself:
+#   failure. The dispatched deploys themselves are not serialized either;
+#   when two do overlap, the later head is the one G4 asks about.
+# - Follows the same switch as the Sentinel itself:
 #   with REVIEW_V3_SENTINEL unset there is no gate to satisfy, so producing
 #   evidence for it would be pure spend.
 
@@ -207,18 +205,14 @@ jobs:
         # author-controlled and `git check-ref-format` accepts `"`, `$`, backtick,
         # `;`, `&`, `|`, `(`, `)` and `'` — space is the only shell
         # metacharacter it rejects, and $IFS covers that. This job holds
-        # `actions: write`, and the PR lane next door additionally holds
-        # `id-token: write` with ESC already authenticated, so an injection
-        # there reaches the org-scoped PULUMI_BOT_TOKEN.
+        # `actions: write`, so an injection here could dispatch workflows.
         #
-        # The headers here and in staging-deploy-pr.yml both justify safety as
-        # "never checks out or executes PR code". That is true and beside the
-        # point — the VALUE is the vector, not the code. staging-status.yml
-        # already does this correctly; these two lanes did not.
+        # The header justifies safety as "never checks out or executes PR
+        # code". That is true and beside the point — the VALUE is the vector,
+        # not the code. staging-status.yml already does this correctly.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           HEAD_REF: ${{ github.event.pull_request.head.ref }}
         run: |
@@ -228,13 +222,11 @@ jobs:
           # warn and stand down rather than painting the PR red for a file
           # that exists three lines away in the diff.
           if [ ! -x scripts/review-v3/staging-deploy.sh ]; then
-            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges; /deploy-staging runs the same base-branch script, so it cannot help here either."
+            echo "::warning::staging-deploy.sh is not present on the base branch yet — no staging deploy dispatched. Sentinel G4 will stay red until this PR merges, or until someone dispatches testing-build-and-deploy.yml at this branch."
             exit 0
           fi
           scripts/review-v3/staging-deploy.sh \
             --repo "$REPO" \
-            --pr "$PR_NUMBER" \
             --head-sha "$HEAD_SHA" \
             --head-ref "$HEAD_REF" \
-            --dispatch-only \
-            || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red and /deploy-staging retries"
+            || echo "::warning::staging deploy could not be dispatched; Sentinel G4 stays red until a testing-build-and-deploy.yml run succeeds at this head"

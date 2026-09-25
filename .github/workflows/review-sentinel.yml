@@ -20,10 +20,7 @@ name: Sentinel
 # gate's answer: pushes and label changes (pull_request_target), approvals
 # and dismissals (pull_request_review — required checks do NOT re-run on
 # review events by themselves, this wiring is why the sentinel notices), and
-# both review lanes finishing (workflow_run). /resolve dispatches are
-# covered by pull_request_target's `labeled`? No — the resolve workflow's
-# comment PATCH fires no PR event, so review-resolve.yml pokes this
-# workflow via workflow_dispatch when it applies dispositions.
+# both review lanes finishing (workflow_run).
 #
 # Rollout switch — the repo variable REVIEW_V3_SENTINEL is tri-state:
 #   unset    → DARK. The job never runs, no check-run is posted, and the

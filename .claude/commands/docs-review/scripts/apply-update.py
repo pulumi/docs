@@ -41,13 +41,16 @@ classifier, which this must never contradict):
     flip the scraper's dispute adjudication from "conceded" (model yielded)
     to "refuted" (author answer standing un-reviewed) — a different claim.
   - `hold` writes NO disposition: the finding is still open; the author may
-    still fix it or `/resolve` it.
+    still fix it.
 
-The REVIEW_STATE race: a `/resolve` can land while the model works. The
-publish chain re-fetches the live author card just before calling this
-script, and this script parses REVIEW_STATE from that fresh body and merges
-its own action-implied dispositions per finding-id (newest `updated_at`
-wins) — never a whole-block overwrite.
+The REVIEW_STATE race: another review run can publish the author card while
+the model works — a full review triage auto-fired, a `#new-review`, another
+update dispatch (#21785, #21871). The publish chain re-fetches the live
+author card just before calling this script, and this script parses
+REVIEW_STATE from that fresh body and merges its own action-implied
+dispositions per finding-id (newest `updated_at` wins) — never a
+whole-block overwrite. pinned-comment.sh's stale-publish guard (#21788)
+separately refuses a card composed before the one already on the PR.
 
 Evidence: the trail/investigation log live only in S3, not on the cards, so
 the credentialed publish step downloads the prior evidence object and passes
@@ -592,13 +595,14 @@ def apply(
                 # _rebuild_detail_block tolerates an empty `old`.
                 detail_blocks[fid] = _rebuild_detail_block(fid, detail_blocks.get(fid, []), entry["detail"])
 
-    # Merge action-implied dispositions with the LIVE card's state — a
-    # /resolve that landed while the model worked survives (newest wins).
+    # Merge action-implied dispositions with the LIVE card's state — whatever
+    # another run published while the model worked survives unless this run
+    # is newer.
     merged_state = review_state.merge_states(state, disposition_state)
     merged_state["high_water"] = max(merged_state["high_water"], high_water)
     # A reopened finding sheds the lane's own machine-recorded `fixed` entry,
-    # or it would still count as answered. A human's disposition (a /resolve
-    # that landed meanwhile, or an accept/hold applied above) is kept — newer
+    # or it would still count as answered. A human's disposition (one an
+    # earlier run recorded, or an accept/hold applied above) is kept — newer
     # wins in the merge, and an answered finding stays answered.
     for fid in reopened:
         live = merged_state["findings"].get(fid)
@@ -624,8 +628,8 @@ def apply(
     brief_out = cr.replace_waiting_block(
         brief_out, open_findings, merged_state.get("findings", {}))
     author_out = review_state.replace_block(author_out, merged_state)
-    # Blocking = author-card rows WITHOUT a disposition: a `/resolve F1
-    # accepted` that landed before this refresh must not be counted back in.
+    # Blocking = author-card rows WITHOUT a disposition: an answer an earlier
+    # run recorded must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
     author_out = be.drop_empty_author_sections(author_out)
@@ -936,14 +940,14 @@ def _self_test() -> int:
     reparsed = review_state.parse_state(a_out)
     assert reparsed is not None and reparsed["high_water"] == 5
 
-    # Racing /resolve survives: author card carries a disposition for F2.
+    # A racing disposition survives: the live author card carries one for F2.
     from datetime import datetime, timezone
     live = review_state.set_disposition(
         review_state.parse_state(author), "F2", "refuted", actor="author", note="n",
         now=datetime(2026, 8, 31, 23, 0, tzinfo=timezone.utc))
     author_live = review_state.replace_block(author, live)
     a2, _b2, state2, _ = apply(author_live, brief, update, head_sha=sha, actor="cam", auto=False)
-    assert state2["findings"]["F2"]["disposition"] == "refuted", "racing /resolve merged, not clobbered"
+    assert state2["findings"]["F2"]["disposition"] == "refuted", "racing disposition merged, not clobbered"
     assert review_state.parse_state(a2)["findings"]["F2"]["disposition"] == "refuted"
 
     # Auto mode drops adjudication actions but keeps resolve.

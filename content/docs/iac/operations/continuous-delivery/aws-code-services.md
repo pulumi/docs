@@ -149,6 +149,12 @@ Production updates should be deliberate. Keep production on its own stack and de
 
 Configure this CodeBuild project (or CodePipeline source stage) to trigger on git tag events rather than branch pushes. Promotion then becomes a single, traceable Git operation, and production never deploys from an untested commit.
 
+## Serialize pipeline executions
+
+CodePipeline's default [execution mode](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works.html), `SUPERSEDED`, locks a stage to one execution at a time, but only protects an execution once it's actually running: a newer execution can still overtake one that's still *waiting* to enter a locked stage, dropping it before it ever starts. If your CodeBuild stage runs `pulumi up`, and enough commits land while it's busy, a queued execution waiting behind it can be superseded and never run at all — silently skipping a deployment rather than colliding with one already in progress.
+
+Set the pipeline's execution mode to `QUEUED` instead, so waiting executions form a queue and each one runs in turn rather than a later commit erasing an earlier one that never got its turn. `QUEUED` requires a V2 pipeline, so set both `executionMode` and `pipelineType` when you define the pipeline — with the AWS CLI's `create-pipeline`/`update-pipeline`, or as code by setting the `executionMode` and `pipelineType` inputs on the [`aws.codepipeline.Pipeline`](/registry/packages/aws/api-docs/codepipeline/pipeline/) resource described below.
+
 ## Manage the pipeline with Pulumi
 
 The CodeBuild projects, CodePipeline pipelines, IAM roles, and Parameter Store entries described above are themselves AWS resources, so you can define them with Pulumi using the [AWS provider](/registry/packages/aws/). Managing the pipeline as code keeps it versioned, reviewable, and reproducible alongside the infrastructure it deploys.

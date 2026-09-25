@@ -18,23 +18,20 @@ Cross-PR: collision clusters (union-find over shared paths; a pair is
 directional conflicts (a PR adding links to a URL that exists only as a
 Hugo `aliases:` entry while another open PR removes links from it),
 duplicate candidates (shared file, similar title, opened within 10
-minutes), stale blog dates, self-accepted findings (REVIEW_STATE actor ==
-PR author), stale reviews (reviewed SHA not a prefix of head), and stale
+minutes), stale blog dates, stale reviews (reviewed SHA not a prefix of head), and stale
 brief summaries (a "What this PR changes" bullet naming a value the current
 diff no longer contains).
 
 A row with unanswered 🚨 blocking findings is `blocked`, not `judge`: it
 cannot merge until the review is answered, and `blocked` is the one lane
---force never reaches. A blocking finding the judge step resolved
-(`fixed|refuted|accepted|not-applicable`, with a note) counts as answered,
-because approving the row posts that `/resolve` line before it merges
-(`act.resolve_lines` is the contract); the row then carries
-`outstanding:judged:<ids>` and sits in `judge` with stamp buttons.
+--force never reaches. Answering them is the author's job (a fix, or
+`@claude <why> #update-review`); the approver's judgments are board notes
+and never answer a finding.
 
 The stamp bar (every gate required):
   label review:no-blockers (or, after a base merge, the card itself saying
   nothing blocks with no open ⚠️ row) · zero ⚠️ rows (zero low-confidence on
-  legacy) · no self-accepted disposition · review CURRENT · mergeable_state
+  legacy; a v3 ⚠️ row counts whatever its disposition) · review CURRENT · mergeable_state
   in {clean, blocked} with checks green (the Sentinel is left out, as
   act.py's preflight leaves it out: it concludes failure until an approval
   exists) · no overlap collision, directional conflict or duplicate · one
@@ -64,7 +61,7 @@ routes to the lane team and points at `/address-review`.
 
 `--judgments FILE` merges the model's judge output (`judgments[]`,
 `fix_draft`, `recommended`) into the matching rows and recomputes each
-row, so judged blockers can lift it out of `blocked`. It never lowers a
+row. It never lowers a
 verdict below what this script computed; the model only adds the
 judgment call. Deterministic, no model calls.
 """
@@ -85,7 +82,7 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 _REPO_ROOT = _HERE.parent.parent
 sys.path.insert(0, str(_HERE))
-import act  # noqa: E402  (push policy and the /resolve contract, so the board and the act layer can't disagree)
+import act  # noqa: E402  (push policy, so the board and the act layer can't disagree)
 import pr_review_config  # noqa: E402
 import routing  # noqa: E402
 import sentinel  # noqa: E402
@@ -140,10 +137,9 @@ REASON_CODES = {
     "review": "pinned review status when not CURRENT (stale/absent/in-progress/error/triage-prose); base-merged: the head moved only by merging the base, so the reviewed diff still stands; unreadable:<why>: the review did not arrive whole (a missing page of a split review, or a tally declaring more findings than parsed) — blocked, never judge; parse-confidence:low: it parsed into no findings and nothing corroborates that",
     "label": "the review:* state label; `card-clean`: the label lags a base merge, but the card itself says nothing blocks, so it stands in for review:no-blockers",
     "warnings": "⚠️ reviewer-check rows still open on the brief (legacy: low-confidence)",
-    "outstanding": "🚨/❓ rows still open on the author card; `judged:<ids>`: every open one has a resolvable judgment, which approving posts as `/resolve` lines",
+    "outstanding": "🚨/❓ rows still open on the author card",
     "sent-back": "the approver's own changes-requested review, by date; not a blocker (the approval supersedes it). With no push since, the row waits on the author",
     "unblock": "refused:<why>: act.py will not push to this head (dependabot, a generated-docs regen, a fork), so the conflict is the author's to resolve",
-    "self-accepted": "a REVIEW_STATE disposition recorded by the PR author",
     "stances": "the brief lists editorial stances (blocks only with --strict-stances)",
     "mergeable": "GitHub mergeable_state when not clean/blocked",
     "checks": "check rollup when not green; `sentinel:failing`: only the Sentinel is red, which it is until an approval exists, so it is not a CI failure",
@@ -466,23 +462,17 @@ def desc_findings(pr: dict) -> list[str]:
     return reasons
 
 
-def self_accepted(pr: dict) -> list[str]:
-    state = (pr.get("review") or {}).get("review_state") or {}
-    author = norm_login((pr.get("author") or {}).get("login"))
-    out = []
-    for fid, entry in sorted((state.get("findings") or {}).items()):
-        if norm_login(entry.get("actor")) == author and entry.get("disposition") != "fixed":
-            out.append(fid)
-    return out
-
-
 def open_warnings(pr: dict) -> list[str]:
-    """⚠️ rows (v3 brief) or low-confidence items (legacy) with no disposition."""
+    """⚠️ rows (v3 brief) or low-confidence items (legacy) with no disposition.
+
+    A v3 brief row is open whatever REVIEW_STATE says about it. The brief is
+    the approver's checklist, and a disposition there is the author's answer
+    (an update-lane `accept` or a held dispute moves the row onto it), not
+    the approver's — so it is exactly what a stamp must not skip reading."""
     review = pr.get("review") or {}
     items = review.get("items") or []
-    disposed = {i["id"] for i in items if i.get("disposition")}
     if review.get("surface") == "v3":
-        return [w["id"] for w in review.get("warning_rows") or [] if w["id"] not in disposed]
+        return [w["id"] for w in review.get("warning_rows") or []]
     return [i["id"] for i in items if i.get("bucket") == "low" and not i.get("disposition")]
 
 
@@ -587,14 +577,6 @@ def own_send_back(pr: dict, approver: str | None) -> dict | None:
     cid = latest.get("commit_id") or None
     return {"at": (latest.get("submitted_at") or "")[:10] or "unknown", "by": latest.get("user") or "",
             "commit_id": cid, "head_moved": bool(cid and head and cid != head)}
-
-
-def answered_blockers(pr: dict) -> set[str]:
-    """Blocking finding ids the row's judgments answer: exactly the ones the
-    stamp will post a `/resolve` line for. `act.resolve_lines` is the
-    contract (v3 card, real `F<n>` id, resolvable disposition, a note), so a
-    judgment that would post nothing answers nothing here either."""
-    return {m.group(1) for line in act.resolve_lines(pr) if (m := act.RESOLVE_ID_RE.match(line))}
 
 
 def unblock_refusal(pr: dict) -> str | None:
@@ -856,27 +838,17 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
         gate_fail("label:no-blockers-missing", chip=False)
         if review.get("base_merged") and status == "CURRENT":
             add_action({"id": "refresh", "label": "refresh review", "cmd": f"--refresh {n}"})
-    answered = answered_blockers(pr)
-    unanswered = [b for b in blockers if b not in answered]
-    if unanswered:
+    if blockers:
         # Blocked, not judge. An unanswered 🚨 is the review still waiting on
-        # an answer, and no approver's call substitutes for giving one — so
-        # the row must not sit in a lane --force can reach. Answering it is a
-        # `/resolve <id> <disposition>: <why>` on the PR (or a fix, or a
-        # send-back); the row leaves this lane on the next collect, carrying
-        # the record of why each finding closed.
-        gate_fail(f"outstanding:{len(unanswered)}:{','.join(unanswered)}")
-        blocked.append(f"outstanding:{len(unanswered)}")
+        # the author, and no approver's call substitutes for their answer —
+        # so the row must not sit in a lane --force can reach. The author
+        # answers with a fix or `@claude <why> #update-review`; the row
+        # leaves this lane on the next collect.
+        gate_fail(f"outstanding:{len(blockers)}:{','.join(blockers)}")
+        blocked.append(f"outstanding:{len(blockers)}")
         send_back("send back to author")
-    elif blockers:
-        # Every open blocker has a resolvable judgment: approving posts the
-        # `/resolve` lines first (act.resolve_lines), so the stamp is the
-        # answer and the row is an approver's call again.
-        gate_fail(f"outstanding:judged:{','.join(blockers)}")
     if warnings:
         gate_fail(f"warnings:{len(warnings)}:{','.join(warnings)}")
-    for fid in self_accepted(pr):
-        gate_fail(f"self-accepted:{fid}")
     if review.get("stances"):
         reasons.append("stances:present")
         if ctx["strict_stances"]:
@@ -1035,7 +1007,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     # on the row as a handoff instead of a fragment of the composed command.
     # Only where the fix would survive: dependabot and the generated-docs
     # regens are rebuilt from source, and a fork head has no push access.
-    open_count = len(unanswered) + len(warnings)
+    open_count = len(blockers) + len(warnings)
     pr["handoffs"] = []
     if not revisable and open_count and act.push_allowed(pr)[0]:
         pr["handoffs"].append({
@@ -1072,9 +1044,7 @@ def analyze_pr(pr: dict, ctx: dict) -> None:
     pr["actions"] = actions
     pr["route_targets"] = next((a.get("targets") or [] for a in actions if a["id"] == "route"), [])
     pr["open_warning_ids"] = warnings
-    pr["open_blocker_ids"] = unanswered
-    pr["judged_blocker_ids"] = [b for b in blockers if b in answered]
-    pr["self_accepted_ids"] = self_accepted(pr)
+    pr["open_blocker_ids"] = blockers
     pr.setdefault("judgments", [])
     pr.setdefault("fix_draft", None)
     pr["summary"] = one_line_summary(pr)
@@ -1274,7 +1244,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
             # `--chain` approves the lead with --force, so it is offered only
             # where the lead cleared every gate but the collision itself --
             # the thing the chain is for. A lead held up by anything else (an
-            # open ⚠️ row, a judged 🚨, a stale review, a new blog post, a
+            # open ⚠️ row, a stale review, a new blog post, a
             # diff over the cap) states the fact and stops: that decision
             # belongs on #first's own row, next to the findings behind it.
             if lead.get("verdict") != "stamp" and not only_collisions_hold(lead):
@@ -1286,7 +1256,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
                               "cmd": None, "claims": [], "targets": {}})
                 continue
             # `--chain C1` is one command act.py runs through the stamp gates
-            # (resolves, plan-time blocker check, preflight) before it merges
+            # (plan-time blocker check, preflight) before it merges
             # base into the next link, so the card is that command and the
             # rows it covers defer to it (`claims`) rather than mapping to a
             # row button of their own.
@@ -1357,7 +1327,7 @@ def do_next(prs: list[dict], clusters: list[dict], directional: list[dict]) -> l
     if stamps:
         held = sorted(p["number"] for p in stamped if not merges_on_stamp(p))
         merged = [n for n in stamps if n not in held]
-        does = "Approves each, records the judged findings, and squash-merges " + (
+        does = "Approves each and squash-merges " + (
             "them." if not held else f"the {len(merged)} bot-authored one{'s' if len(merged) != 1 else ''}; {pr_list(held)} {'are' if len(held) != 1 else 'is'} human-authored, so approval stops there.")
         cards.append({"kind": "stamp", "say": f"{pr_list(stamps)} pass{'' if len(stamps) != 1 else 'es'} every gate.",
                       "does": does,
@@ -1669,9 +1639,9 @@ def _close_with_judgments(pr: dict) -> dict | None:
 def merge_judgments(queue: dict, judgments: dict, *, ctx: dict | None = None) -> dict:
     """Fold the model's judge output into the rows. Keys are PR numbers (as
     strings or ints); each value may carry `judgments` (list), `fix_draft`
-    (dict) and `recommended` (verdict). Each touched row is recomputed, so a
-    blocking finding every judgment resolves lifts the row out of `blocked`
-    (approving then posts the `/resolve` lines). A recommendation never
+    (dict) and `recommended` (verdict). Each touched row is recomputed. A
+    judgment never answers a finding, so it never lifts a row out of
+    `blocked`. A recommendation never
     lowers the computed verdict: blocked stays blocked, route stays route —
     and one the row can't carry (a close with nothing to say, a route with
     no team, a send-back on my own PR) is recorded as rejected rather than

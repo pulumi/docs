@@ -421,7 +421,7 @@ def build(author_body: str, brief_body: str, base: dict,
     brief_out = refresh_facts_line(brief_out, findings)
     # A model-added `F?` row got a real id above; the author card's
     # REVIEW_STATE high-water mark must move with it, or every later reader
-    # (validate-pinned's grammar rule, /resolve's range check) rejects the id
+    # (validate-pinned's grammar rule) rejects the id
     # (fork PR 245, 2026-09-01: brief carried F1 against high_water 0).
     if evidence["high_water"] != state.get("high_water", 0):
         author_out = review_state.replace_block(
@@ -657,17 +657,16 @@ def count_blocking(findings: list[dict], state_findings: dict) -> int:
 def refresh_counts(author_body: str, brief_body: str | None, state: dict | None) -> tuple[str, str | None]:
     """Recompute everything that depends on dispositions after REVIEW_STATE
     changes: the author header's blocking count and the brief's "Waiting on
-    the author" block. Shared by apply-update.py (update lane) and
-    resolve-handler.py (/resolve lane) — before this, a `/resolve F1
-    accepted` left both saying "1 item blocks merge" (2026-09-01 smoke)."""
+    the author" block. Called by apply-update.py (update lane) — before
+    this, an accepted F1 left both saying "1 item blocks merge" (2026-09-01
+    smoke)."""
     findings = open_author_findings(author_body)
     sf = (state or {}).get("findings", {}) or {}
     author_body = _fix_header(author_body, count_blocking(findings, sf))
     if brief_body is not None:
         brief_body = cr.replace_waiting_block(brief_body, findings, sf)
         # The Facts bullet moves too (an accepted ❓ is no longer "open").
-        # No evidence object here (the /resolve lane is uncredentialed), so
-        # rows stand in: origin "model" + the claim-quote heuristic.
+        # No evidence object here, so rows stand in: origin "model" + the claim-quote heuristic.
         rows = [dict(f, origin="model", status="open", disposition=sf.get(f["id"])) for f in findings]
         rows += [{"id": p["id"], "bucket": b, "text": p["body"], "origin": "model", "status": "open",
                   "disposition": sf.get(p["id"])}

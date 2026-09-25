@@ -65,18 +65,22 @@ jobs:
     # Trigger requires:
     #   1. `@claude` mention.
     #   2. `#update-review` hashtag.
-    #   3. NOT `#new-review` -- if both hashtags are present, the more
-    #      decisive #new-review wins (handled by claude-new.yml's filter;
-    #      this workflow excludes itself in that case).
+    #   3. `#new-review` is NOT screened here. A substring test can't tell
+    #      a live hashtag from a quoted one, so excluding it here dropped
+    #      any update request that merely quoted `#new-review`, while
+    #      claude-new.yml's gate declined the same comment as a quote --
+    #      and neither lane ran. The mention-gate step below applies
+    #      `--exclude new-review` to the live text only: a live
+    #      #new-review still wins, a quoted one no longer suppresses.
     #   4. Author is not claude[bot] itself -- the pinned-review footer
     #      contains literal "@claude" instructions which would otherwise
     #      re-trigger on every review post.
     if: |
       ((github.event_name == 'workflow_dispatch') ||
-       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
-       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
-       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
+       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && github.event.issue.user.login != 'claude[bot]'))
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -561,7 +565,8 @@ jobs:
       # v3 model inputs: the two live cards on disk. Fetched here (not in the
       # publish step) so the model reads the same cards the mention was about;
       # the publish step re-fetches the author card fresh right before
-      # apply-update to merge any /resolve that lands while the model works.
+      # apply-update to merge whatever another run published while the model
+      # worked (a full review auto-fired beside this update, #21871).
       - name: Fetch v3 review cards
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
@@ -783,8 +788,8 @@ jobs:
           exit 0
 
       # One step, one ordering, one failure surface: prior evidence → fresh
-      # card re-fetch (merges any /resolve that landed during the model's
-      # run) → apply-update → validate v21 → record evidence + page → upsert
+      # card re-fetch (merges whatever another run published during the
+      # model's run) → apply-update → validate v21 → record evidence + page → upsert
       # brief → upsert author (the label-driving card publishes LAST, so a
       # partial publish can never show a green label against a stale card).
       - name: Publish v3 refresh
@@ -833,7 +838,7 @@ jobs:
             EVIDENCE_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           fi
 
-          # Fresh card fetch — the /resolve race window closes here.
+          # Fresh card fetch — the race window with other review runs closes here.
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.author_cid }}" \
             --jq .body > .review-card-author.md
           gh api "repos/$REPO/issues/comments/${{ steps.pr-context.outputs.brief_cid }}" \
