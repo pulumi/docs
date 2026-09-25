@@ -498,8 +498,9 @@ placeholders, the published card omits **both** sections (the NOTE already says 
 nothing to do): `build-evidence.drop_empty_author_sections` at initial publish and after
 every update-lane render. The composer still emits them so the model has an anchor to add a
 row under, and the update lane restores the pair (`ensure_author_sections`) before placing a
-reopened, added, or promoted row. Never one without the other — a row that a `/resolve`
-dispositioned stays visible in its section. Rows carry no status column —
+reopened, added, or promoted row. Never one without the other, and never on the
+strength of the header alone: the test is the sections' own content (any row keeps
+both). Rows carry no status column —
 REVIEW_STATE is the state, and the section a row lives in is the display.
 
 ### Reviewer brief — `.review-draft-brief.md`

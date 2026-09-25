@@ -552,8 +552,9 @@ def drop_empty_author_sections(author_body: str) -> str:
     here" (reader feedback, 2026-09-25). The NOTE is the whole message.
 
     Strict on purpose: any row, bullet, or other text in either section
-    keeps both. "Nothing blocks merge" is not the test — a `/resolve`d row
-    stays in its section with a disposition, and must stay visible. The
+    keeps both. "Nothing blocks merge" is not the test — the header counts
+    dispositions from REVIEW_STATE, and a row that carries one still sits in
+    its section until a refresh moves it, so it must stay visible. The
     update lane re-inserts the pair (ensure_author_sections) before placing
     a reopened, added, or promoted row, then calls this again."""
     lines = author_body.splitlines()

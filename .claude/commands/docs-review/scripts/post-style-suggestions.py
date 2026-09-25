@@ -814,8 +814,9 @@ def _load_compose():
 def _dispositioned_ids(card: str) -> set[str] | None:
     """Finding ids the author already answered (REVIEW_STATE), or None when
     the block is corrupt — the caller then posts nothing rather than guess.
-    A `/resolve F1 accepted` leaves the row in 🚨 until the next refresh; a
-    fix button on a finding the author declined would be a nag."""
+    A row whose finding already carries a disposition can still sit in 🚨
+    until a refresh re-renders the card; a fix button on a finding the author
+    already answered would be a nag."""
     spec = importlib.util.spec_from_file_location(
         "pss_review_state", HERE.parents[3] / "scripts" / "review-v3" / "review_state.py")
     mod = importlib.util.module_from_spec(spec)
