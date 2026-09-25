@@ -223,3 +223,34 @@ def test_reconcile_sweeps_orphaned_in_progress():
     assert "CLAUDE_PROGRESS" in wf
     assert '--add-label "review:stale" --remove-label "review:in-progress"' in wf
     assert "-lt 1800" in wf  # 30-minute minimum age
+
+
+# ---- same-head race: auto-fired full review vs. #update-review ------------
+#
+# pulumi/docs#21871, three times in a day: the author pushes, then comments
+# `#update-review` seconds later. The update lane flips the PR to
+# review:in-progress before triage's workflow_run reaches the pr-context
+# gate, so the auto-fired full review proceeded; it finished minutes after
+# the update and republished v1 over the author's resolved card at the same
+# head. handoff_guard.py can't see it (the head didn't move), and the
+# stale-publish guard in pinned-comment.sh let it through because the full
+# review stamped its card at compose time, after the update had published.
+
+def test_autofire_skips_while_another_review_is_in_progress():
+    run = _step(_job("claude-review"), "Resolve PR context")["run"]
+    guard_block = run.split('SKIP="bot-author"')[1].split('SKIP="already-reviewed"')[0]
+    assert '"workflow_run"' in guard_block
+    for label in ("outstanding-issues", "no-blockers", "stale", "error", "in-progress"):
+        assert f'*",review:{label},"*' in guard_block, label
+
+
+def test_card_stamp_is_taken_when_the_run_reads_the_pr():
+    # The stale-publish guard compares this stamp with the card on the PR;
+    # it must mark when this run looked, not when it finished composing.
+    names = [s.get("name") for s in _job("claude-review")["steps"]]
+    ctx = names.index("Resolve PR context")
+    now = names.index("Compute review timestamp")
+    assert now == ctx + 1, names[ctx:now + 1]
+    step = _job("claude-review")["steps"][now]
+    assert step["id"] == "now"
+    assert "if" not in step, "every later consumer of steps.now assumes it ran"

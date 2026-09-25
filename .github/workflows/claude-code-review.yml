@@ -529,7 +529,13 @@ jobs:
             # (no commits since — mark-stale would have transitioned
             # otherwise). stale: review ran, commits pushed; refresh via
             # explicit mention. error: workflow failed; explicit retry
-            # avoids transient-error loops. The publish guard rests a
+            # avoids transient-error loops. in-progress: another review
+            # (usually an `#update-review` the author posted seconds after
+            # pushing) is already running on this PR and will publish for
+            # it; a second, full review racing it only overwrites the
+            # author's resolved card with a fresh v1 (pulumi/docs#21871). An
+            # orphaned in-progress label is review-label-reconcile.yml's
+            # to clear, not this run's. The publish guard rests a
             # superseded run at review:stale and its `redispatch` job
             # re-enters via workflow_dispatch, which this guard doesn't
             # cover — by design, the re-run is the refresh.
@@ -537,7 +543,8 @@ jobs:
               [[ ",$LABELS_CSV," == *",review:outstanding-issues,"* ]] || \
               [[ ",$LABELS_CSV," == *",review:no-blockers,"* ]] || \
               [[ ",$LABELS_CSV," == *",review:stale,"* ]] || \
-              [[ ",$LABELS_CSV," == *",review:error,"* ]]
+              [[ ",$LABELS_CSV," == *",review:error,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:in-progress,"* ]]
             ); then
               SKIP="already-reviewed"
             fi
@@ -589,6 +596,24 @@ jobs:
           else
             echo "review: pr=$PR proceed (labels=$LABELS_CSV, files=$FILE_COUNT, +$ADDITIONS/-$DELETIONS, head=$HEAD_SHA_SHORT)"
           fi
+
+      # Wall-clock timestamp for the card's `<sub>Review vN · updated <ts>`
+      # stamp and the `## Pre-merge Review — Last updated <ts>` line. Computed
+      # in the workflow (not by the model) so the timestamp is always a real
+      # UTC instant — left to the model, it sometimes renders a T00:00:00Z /
+      # round-hour placeholder instead of the actual time.
+      #
+      # Taken HERE, right after the run reads PR state, not when the composer
+      # starts: pinned-comment.sh's stale-publish guard compares this stamp
+      # against the card already on the PR, and the question it has to answer
+      # is "did anything publish after this run looked?". Stamped at compose
+      # time (6+ minutes of pre-steps later), a full review that started
+      # BEFORE an `#update-review` finished looked newer than it, and
+      # overwrote the author's resolved card with a fresh v1 (pulumi/docs#21871,
+      # three times: 09-24 15:32, 09-25 10:41 and 14:51).
+      - name: Compute review timestamp
+        id: now
+        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
       # Publish a Checks API check-run pinned to the PR's head SHA so
       # the review status appears in the PR's Status checks list.
@@ -1114,15 +1139,6 @@ jobs:
             --pr "$PR" --repo "$GITHUB_REPOSITORY" --repo-root . \
             --merge-into .hugo-build.json \
             || python3 -c "import json,pathlib; p=pathlib.Path('.hugo-build.json'); d=json.loads(p.read_text()) if p.is_file() else {'schema_version': 1, 'link_integrity': []}; d['link_check']={'ran': False, 'checked': 0, 'dead': 0, 'error': 'link-check-diff.py failed to start'}; p.write_text(json.dumps(d, indent=2)+'\\n'); print('::warning::link-check-diff.py failed to start; dead internal links were NOT checked')"
-
-      # Wall-clock timestamp for the `## Pre-merge Review — Last updated <ts>`
-      # line. Computed in the workflow (not by the model) so the timestamp is
-      # always a real UTC instant — left to the model, it sometimes renders a
-      # T00:00:00Z / round-hour placeholder instead of the actual time.
-      - name: Compute review timestamp
-        if: steps.check-access.outputs.has_write_access == 'true'
-        id: now
-        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
       # v3 brief header: which team's approval satisfies the merge gate.
       # Same resolver the triage routing step uses (route-pr.py →
