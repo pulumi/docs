@@ -82,9 +82,9 @@ The most common way to run Pulumi in CI/CD follows a [trunk-based development mo
 - `deploy-staging` runs `pulumi up` against the staging stack when changes land on `main`.
 - `deploy-production` runs `pulumi up` against the production stack when a `release-*` tag is pushed.
 
-GitLab [`rules`](https://docs.gitlab.com/ci/yaml/#rules) decide which jobs run for a given pipeline. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. A hidden `.pulumi` job, reused through [`extends`](https://docs.gitlab.com/ci/yaml/#extends), holds the steps the three jobs share; only the image and the dependency-install command differ between languages:
+GitLab [`rules`](https://docs.gitlab.com/ci/yaml/#rules) decide which jobs run for a given pipeline. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. A hidden `.pulumi` job, reused through [`extends`](https://docs.gitlab.com/ci/yaml/#extends), holds the steps the three jobs share. Only the image and the dependency-install command differ between languages: TypeScript, Python, and Go install dependencies in `before_script`; C# and Java let the language runtime restore them during the Pulumi run; Pulumi HCL uses the CLI-only `pulumi/pulumi-base` image and installs nothing:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -329,6 +329,64 @@ variables:
 
 # Shared setup: enter the program directory.
 # The Java runtime resolves and builds the project during the Pulumi run.
+.pulumi:
+  before_script:
+    - cd infra
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Pulumi HCL needs no language runtime, so the CLI-only `pulumi/pulumi-base` image is enough and there are no dependencies to install. Commit the `sdks/` descriptors `pulumi install` writes alongside your `.tf` files; the runner resolves providers from them and downloads the plugins on demand.
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-base:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory.
 .pulumi:
   before_script:
     - cd infra
