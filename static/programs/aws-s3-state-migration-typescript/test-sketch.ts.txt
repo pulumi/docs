@@ -1,0 +1,29 @@
+test("migrates component state", () => {
+    const before = [
+        { urn: componentUrn, type: "example:storage:VersionedBucket" },
+        { urn: oldBucketUrn, type: "aws:s3/bucketV2:BucketV2", /* ... */ },
+        {
+            urn: versioningUrn, type: "aws:s3/bucketVersioningV2:BucketVersioningV2",
+            outputs: { versioningConfiguration: { status: "Enabled", mfaDelete: "Disabled" } },
+            /* ... */
+        },
+    ];
+    const expected = [
+        { urn: componentUrn, type: "example:storage:VersionedBucket" },
+        {
+            urn: bucketUrn, type: "aws:s3/bucket:Bucket",
+            outputs: { versioning: { enabled: true, mfaDelete: false } },
+            /* ... */
+        },
+    ];
+
+    const result = migrateBucketState({ urn: before[0].urn, oldState: before });
+
+    assert.ok(result);
+    assert.deepEqual(result.newState, expected);
+    // Both prior resources have the inline bucket as their successor.
+    assert.deepEqual(result.successors, {
+        [oldBucketUrn]: bucketUrn,
+        [versioningUrn]: bucketUrn,
+    });
+});

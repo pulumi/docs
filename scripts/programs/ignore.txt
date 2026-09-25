@@ -10,6 +10,11 @@
 # aws-.* will ignore all programs that start with "aws-"
 #
 
+# Component implementation snippets for the experimental state migration API;
+# not a standalone Pulumi program.
+aws-s3-state-migration-.*
+component-state-migrations-option-.*
+
 # Java SDK serialization bug: FargateService container/containers inputs
 # not received by AWSX provider. https://github.com/pulumi/pulumi-java/issues/2090
 awsx-load-balanced-fargate-nginx-java

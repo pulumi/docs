@@ -241,6 +241,12 @@ retainOnDelete:
     custom resource of the component, which is the idiomatic way to retain a
     whole subtree.
 
+stateMigrations:
+  description: Migrate a component’s saved state and its children before calculating changes.
+  applies_to: both
+  typed_on: base
+  inherited_by_children: no
+
 transformations:
   description: Dynamically transform a resource's properties (prefer `transforms`).
   applies_to: both

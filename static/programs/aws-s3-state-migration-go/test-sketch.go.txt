@@ -1,0 +1,42 @@
+func TestMigratesComponentState(t *testing.T) {
+    before := []map[string]any{
+        {"urn": componentURN, "type": "example:storage:VersionedBucket"},
+        {"urn": oldBucketURN, "type": "aws:s3/bucketV2:BucketV2", /* ... */},
+        {
+            "urn": versioningURN, "type": "aws:s3/bucketVersioningV2:BucketVersioningV2",
+            "outputs": map[string]any{
+                "versioningConfiguration": map[string]any{"status": "Enabled", "mfaDelete": "Disabled"},
+            },
+            // ...
+        },
+    }
+    expected := []map[string]any{
+        {"urn": componentURN, "type": "example:storage:VersionedBucket"},
+        {
+            "urn": bucketURN, "type": "aws:s3/bucket:Bucket",
+            "outputs": map[string]any{
+                "versioning": map[string]any{"enabled": true, "mfaDelete": false},
+            },
+            // ...
+        },
+    }
+
+    result, err := migrateBucketState(context.Background(), &pulumi.StateMigrationArgs{
+        URN: pulumi.URN(before[0]["urn"].(string)), OldState: before,
+    })
+
+    if err != nil {
+        t.Fatal(err)
+    }
+    if result == nil || !reflect.DeepEqual(result.NewState, expected) {
+        t.Fatal("migration did not produce the expected state")
+    }
+    // Both prior resources have the inline bucket as their successor.
+    expectedSuccessors := map[string]string{
+        oldBucketURN: bucketURN,
+        versioningURN: bucketURN,
+    }
+    if !reflect.DeepEqual(result.Successors, expectedSuccessors) {
+        t.Fatal("migration did not map both prior resources to the inline bucket")
+    }
+}

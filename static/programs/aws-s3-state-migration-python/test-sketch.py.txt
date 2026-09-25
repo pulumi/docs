@@ -1,0 +1,33 @@
+def test_migrates_component_state():
+    before = [
+        {"urn": component_urn, "type": "example:storage:VersionedBucket"},
+        {
+            "urn": old_bucket_urn, "type": "aws:s3/bucketV2:BucketV2",
+            # ...
+        },
+        {
+            "urn": versioning_urn, "type": "aws:s3/bucketVersioningV2:BucketVersioningV2",
+            "outputs": {"versioningConfiguration": {"status": "Enabled", "mfaDelete": "Disabled"}},
+            # ...
+        },
+    ]
+    expected = [
+        {"urn": component_urn, "type": "example:storage:VersionedBucket"},
+        {
+            "urn": bucket_urn, "type": "aws:s3/bucket:Bucket",
+            "outputs": {"versioning": {"enabled": True, "mfaDelete": False}},
+            # ...
+        },
+    ]
+
+    result = migrate_bucket_state(
+        pulumi.StateMigrationArgs(urn=before[0]["urn"], old_state=before)
+    )
+
+    assert result is not None
+    assert result.new_state == expected
+    # Both prior resources have the inline bucket as their successor.
+    assert result.successors == {
+        old_bucket_urn: bucket_urn,
+        versioning_urn: bucket_urn,
+    }
