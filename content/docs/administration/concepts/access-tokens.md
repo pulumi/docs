@@ -81,6 +81,8 @@ Actions taken by organization tokens appear in audit logs attributed to the orga
 
 Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Management** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
 
+Creating or deleting an organization token requires a user credential, such as a personal access token. A request authenticated with an organization or team access token fails with `403 Forbidden: Machine tokens are not allowed to perform this operation`, whatever role the token has, including Admin. This is a security control: if a token could create organization tokens, a leaked token could create new ones and keep access after the original was revoked. To automate organization token management, for example with the [Pulumi Cloud provider](/registry/packages/pulumiservice/), use a personal access token that belongs to a dedicated service-account user.
+
 Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name is permanently reserved after deletion to preserve audit log integrity.
 
 ## Team access tokens
@@ -101,7 +103,7 @@ As with organization tokens, team token activity is recorded in audit logs with 
 
 ### Who can manage team tokens
 
-Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
+Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens. Unlike organization tokens, team tokens can also be created by a machine token whose role grants enough permission.
 
 Deleting a token immediately revokes its access. The token name is permanently reserved after deletion to preserve audit log integrity.
 
