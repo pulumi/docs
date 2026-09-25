@@ -16,11 +16,9 @@ resource_links:
       url: /docs/iac/guides/building-extending/components/state-migrations/
       text: Component state migrations
     - type: github
-      url: https://github.com/pulumi/examples/pull/3050
+      url: https://github.com/pulumi/examples/tree/master/aws-ts-awsx-vpc-state-migration
       text: AWSX VPC migration example
 ---
-
-<!-- TODO: After pulumi/examples#3050 merges, update the GitHub resource_links URL above to the example directory on master. -->
 
 [Components](/docs/iac/concepts/components/) let you turn a group of resources into a reusable building block. You can define a network, a database, or an application service once and share it across projects and teams. People using the component work with its inputs and outputs without needing to understand every resource inside it.
 
@@ -36,9 +34,7 @@ The state migrations API is experimental and may change.
 
 ## Start with legacy AWSX (v1)
 
-<!-- TODO: After pulumi/examples#3050 merges, link to the example directory on master. -->
-
-The [AWSX VPC example](https://github.com/pulumi/examples/pull/3050) follows a network as your needs change over time. You start with v1, upgrade to v2, and later move to v3. Each version builds on the infrastructure already running.
+The [AWSX VPC example](https://github.com/pulumi/examples/tree/master/aws-ts-awsx-vpc-state-migration) follows a network as your needs change over time. You start with v1, upgrade to v2, and later move to v3. Each version builds on the infrastructure already running.
 
 You start with the legacy `awsx.classic.ec2.Vpc` component. This first version creates a VPC with one isolated subnet, a route table and its association, and an internet gateway. A security group sits outside the component and refers to the VPC.
 
@@ -88,9 +84,7 @@ Legacy and modern AWSX organize their resources differently. The legacy componen
 
 ## Later, upgrade to modern AWSX (v1 to v2)
 
-<!-- TODO: After pulumi/examples#3050 merges, update this migration file link to use master instead of the PR commit. -->
-
-To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration; `availabilityZone` and `vpcTags` hold the same settings used in the first version, and `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/bc9ef9b524cbb91dbe21d131a21900e511e3d333/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
+To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration; `availabilityZone` and `vpcTags` hold the same settings used in the first version, and `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
 
 ```typescript
 {{% example-program-snippet path="awsx-vpc-state-migration-blog" language="typescript" file="modern-vpc.ts.txt" %}}
@@ -105,9 +99,7 @@ The alias lets Pulumi find the old component. The callback then receives its sav
 {{% example-program-snippet path="awsx-vpc-state-migration-blog" language="typescript" file="migration-sketch.ts.txt" %}}
 ```
 
-<!-- TODO: After pulumi/examples#3050 merges, update this migration file link to use master instead of the PR commit. -->
-
-[Full migration code](https://github.com/pulumi/examples/blob/bc9ef9b524cbb91dbe21d131a21900e511e3d333/aws-ts-awsx-vpc-state-migration/v2/migration.ts)
+[Full migration code](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts)
 
 The first checks make the callback safe to run again: if the state already uses modern AWSX or plain AWS resources, there is nothing to do. An unexpected component type raises an error instead of guessing how to migrate it.
 
@@ -119,9 +111,7 @@ The two subnet entries in `successors` let the Pulumi engine know that the old c
 
 You have been running v2 for a while when a new requirement calls for a subnet or routing layout that the modern component does not support. You decide to manage those choices in your own code. The third version declares the VPC, subnet, route table, association, and internet gateway directly with `@pulumi/aws`. This migration changes who defines those resources in your program; you can then adjust their configuration in a separate update.
 
-<!-- TODO: After pulumi/examples#3050 merges, update this migration file link to use master instead of the PR commit. -->
-
-The [second migration](https://github.com/pulumi/examples/blob/bc9ef9b524cbb91dbe21d131a21900e511e3d333/aws-ts-awsx-vpc-state-migration/v3/migration.ts) removes the AWSX VPC component record and moves the managed VPC into its place. Both the old component and its VPC child map to the new VPC record. The VPC keeps its AWS ID, and the other resources remain beneath it.
+The [second migration](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v3/migration.ts) removes the AWSX VPC component record and moves the managed VPC into its place. Both the old component and its VPC child map to the new VPC record. The VPC keeps its AWS ID, and the other resources remain beneath it.
 
 The VPC registration keeps aliases for both previous component types and both migration callbacks:
 
@@ -149,6 +139,4 @@ For an internal change that keeps the same component inputs and outputs, users c
 
 That makes the upgrade path part of the reusable building block. You write and test it once, and each team using the component gets it with the new version.
 
-<!-- TODO: After pulumi/examples#3050 merges, link to the example directory on master. -->
-
-The [component state migrations guide](/docs/iac/guides/building-extending/components/state-migrations/) covers the callback contract. The [VPC example](https://github.com/pulumi/examples/pull/3050) contains all three programs and the migration code shown here.
+The [component state migrations guide](/docs/iac/guides/building-extending/components/state-migrations/) covers the callback contract. The [VPC example](https://github.com/pulumi/examples/tree/master/aws-ts-awsx-vpc-state-migration) contains all three programs and the migration code shown here.
