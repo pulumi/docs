@@ -198,7 +198,7 @@ Browse all packages available to your organization, including public providers a
 
 ### Private components
 
-This tab shows only the component packages published by your organization via `pulumi package publish`.
+This tab shows only the component packages published by your organization.
 
 ## Usage tracking
 
