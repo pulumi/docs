@@ -554,8 +554,7 @@ def apply(
         # the composer omits ✅ Resolved while empty — insert it on first resolve
         a_lines = author_out.splitlines()
         at = next((i for i, ln in enumerate(a_lines) if ln.startswith("📎 ")), len(a_lines))
-        a_lines[at:at] = [RESOLVED_HEADING, "", cr.FINDING_TABLE_HEADER,
-                          cr.FINDING_TABLE_SEPARATOR, *resolved_rows, ""]
+        a_lines[at:at] = [RESOLVED_HEADING, "", *cr.render_resolved_block(resolved_rows), ""]
         author_out = "\n".join(a_lines) + ("\n" if author_out.endswith("\n") else "")
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
                             link_base=link_base)
@@ -630,7 +629,7 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
     replacements: list[tuple[int, int, list[str]]] = []
     for bucket, start, end in spans:
         if bucket == "resolved":
-            new_lines = _table(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
+            new_lines = cr.render_resolved_block(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
         else:
             bucket_rows = by_bucket.get(bucket)
             empty = SECTION_EMPTY.get(bucket, "")

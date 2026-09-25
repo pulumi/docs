@@ -1792,6 +1792,30 @@ _REVIEW_V3_DIR = Path(__file__).resolve().parents[4] / "scripts" / "review-v3"
 # path + `R<line>`), so clicking a finding lands on the change itself.
 FINDING_TABLE_HEADER = "| ID | Where | Finding |"
 FINDING_TABLE_SEPARATOR = "|---|---|---|"
+
+
+def render_resolved_block(rows: list[str]) -> list[str]:
+    """The ✅ Resolved table, collapsed. Resolved rows are history — nothing
+    on them asks the author for anything — so they fold away under a count
+    and stop pushing the open items and the footer off the screen (reader
+    feedback, 2026-09-25). The H3 stays outside the fold: it is the section
+    anchor every parser keys on. The `<details>`/`<summary>` lines are
+    neither `|` rows nor `- ` bullets, so the finding-row walkers skip them;
+    the blank line after `<summary>` is what lets GitHub render the table."""
+    n = len(rows)
+    noun = "item" if n == 1 else "items"
+    return [
+        "<details>",
+        f"<summary>{n} resolved {noun} — click to expand</summary>",
+        "",
+        FINDING_TABLE_HEADER,
+        FINDING_TABLE_SEPARATOR,
+        *rows,
+        "",
+        "</details>",
+    ]
+
+
 _TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-{2,}:?\s*\|){2,}\s*$")
 # The Where cell parses BOTH forms — linked (composer output, deep link to
 # the PR diff) and bare (a model-added row; the next full render re-links
@@ -2037,15 +2061,23 @@ def render_author_orient(n_blocking: int) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
-    before this PR can merge" (2026-09-01 update-lane smoke)."""
+    before this PR can merge" (2026-09-01 update-lane smoke).
+
+    The blocking form carries the one reply shape an author must get right,
+    because the full **How to answer** footer is collapsed (2026-09-25:
+    authors lost the open items under a screenful of instructions). The
+    callout is the part of the card everyone reads; the fold keeps the
+    worked examples one click away."""
     if n_blocking:
         return [
             "> [!IMPORTANT]",
             "> **You = the PR author.** This review needs your answers before this "
-            "PR can merge. Fix each item below, or tell the review why it's "
-            "wrong — **How to answer** at the bottom shows exactly what to "
-            "type. Answering unblocks the review; a human reviewer still "
-            "approves the merge.",
+            "PR can merge. A human reviewer still approves the merge.",
+            ">",
+            "> **To answer:** push a fix, or reply with the item's ID — "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "The `#update-review` tag is required; a reply without it doesn't count. "
+            "Worked examples: **How to answer** at the bottom.",
         ]
     return [
         "> [!NOTE]",

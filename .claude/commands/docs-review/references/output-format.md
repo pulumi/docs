@@ -457,7 +457,7 @@ the `%%EVIDENCE_URL%%` token (substituted at publish).
 <!-- CLAUDE_REVIEW_AUTHOR -->
 <!-- CLAUDE_REVIEW_HEAD <sha> -->         ← the ONLY machine-read head carrier
 ## Author action guide vN — N item(s) block merge     ← vN = review revision; no timestamps here
-> [!IMPORTANT] orienting alert            ← composed; explains what the card demands
+> [!IMPORTANT] orienting alert            ← composed; what the card demands + the one reply shape (`@claude F1: … #update-review`)
 _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Fix or disagree
 | ID | Where | Finding |
@@ -473,10 +473,11 @@ _<one sentence: what the PR is and what the review checked>_
 …
 #### Style suggestions                    ← v2 block + the `[nit]` lane; ALWAYS composed, dropped at publish if empty
 ### ✅ Resolved since last review         ← OMITTED while empty (apply-update inserts it on first resolve)
+<details><summary>N resolved items — …</summary>   ← the table is COLLAPSED; the H3 stays outside the fold (parsers anchor on it)
 📎 **Full evidence:** [verification trail, …](%%EVIDENCE_URL%%).
 <sub>vN · updated <ISO 8601> · head <short sha></sub>   ← display-only; NEVER edit
 <!-- REVIEW_STATE {"schema":1,…} -->      ← disposition store; NEVER edit
-<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md
+<!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md   ← **How to answer** is a collapsed <details>; the callout carries the must-know line
 ```
 
 The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE

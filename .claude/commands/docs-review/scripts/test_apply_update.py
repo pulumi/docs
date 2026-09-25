@@ -274,6 +274,26 @@ def _resolved_fixture():
     return a1, b1
 
 
+def test_resolved_section_is_collapsed_and_stays_one_fold_across_refreshes():
+    """Reader feedback 2026-09-25: resolved rows are history, so they fold
+    away under a count. The H3 stays outside the fold (every parser anchors
+    on it), and a second resolve re-renders the span into ONE fold rather
+    than nesting a new one inside the old."""
+    a1, b1 = _resolved_fixture()
+    section = a1.split(au.RESOLVED_HEADING, 1)[1].split("📎 ", 1)[0]
+    assert section.count("<details>") == 1 and section.count("</details>") == 1
+    assert "<summary>1 resolved item — click to expand</summary>\n\n| ID | Where | Finding |" in section
+    assert section.index("| **F1** |") < section.index("</details>"), "the row is inside the fold"
+    up = _update([{"id": "F2", "action": "resolve", "annotation": "fixed in 2cb28d8"}], case="fix-response")
+    a2, b2, _, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="update-lane", auto=False)
+    section = a2.split(au.RESOLVED_HEADING, 1)[1].split("📎 ", 1)[0]
+    assert section.count("<details>") == 1 and section.count("</details>") == 1
+    assert "<summary>2 resolved items — click to expand</summary>" in section
+    assert [ln.split("|")[1].strip() for ln in au._collect_resolved(a2)] == ["**F1**", "**F2**"]
+    vp = _load("validate_pinned_for_resolved_fold", HERE / "validate-pinned.py")
+    assert [r[1] for r in vp.v3_finding_rows(a2, "✅ Resolved since last review")] == au._collect_resolved(a2)
+
+
 def test_accept_on_a_resolved_finding_reopens_it_first():
     """pulumi/docs#21395: the fix for F2 was reverted and the author had
     accepted the finding as-is; the model's `accept` was refused as "not an

@@ -310,7 +310,8 @@ the brief's **Facts** bullet is re-derived from the refreshed evidence
 (`refresh_facts_line`: totals fixed at compose time, open/⚠️/settled
 recounted); the ✅
 Resolved section is inserted on the first resolve (the composer omits it
-while empty); a 🔄 re-review banner stamped by the auto-refresh gate is
+while empty), its table folded into a `<details>` whose summary counts the
+rows (`compose-review.render_resolved_block`, shared by both paths); a 🔄 re-review banner stamped by the auto-refresh gate is
 cleared by the card rewrite (or, on the error path, explicitly); the
 brief's `#### Editorial stances` sub-list sits below the ⚠️ table's section
 span and comes through verbatim. It then
