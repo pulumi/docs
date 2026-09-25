@@ -96,7 +96,7 @@ You can still steer. Switching to another model family with `/model` pins that f
 
 The router serves a live view on `http://127.0.0.1:4100`. Each message you write shows up with the category Jev picked, the probability behind it, and the tier and model the router chose. Select a request to see why it went where it went. The view reads the router's log, which never contains your prompts or keys. `jev-router report` sums up requests, spend, and savings from the same log.
 
-![jev-router's live view during a Claude Code session: a rename request, 86% mechanical, goes to Haiku 4.5 with a tool step and a background call. The next message, a flaky-test fix at 88% complex, moves the session up to Opus 5.5, and the routing flow animates each route.](jev-router-live-view.gif)
+![jev-router's live view during a Claude Code session: a rename request, 86% mechanical, goes to Haiku 4.5 with a tool step and a background call. A flaky-test fix at 88% complex moves the session up to Opus 5.5, and a redesign of the session store at 81% deep moves it up to Fable 5.1. The routing flow animates each route, and the totals show 51% saved against running every request on Fable 5.1.](jev-router-live-view.gif)
 
 ## Try jev-router
 
