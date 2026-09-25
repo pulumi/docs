@@ -32,7 +32,9 @@ Not every message you send to Claude Code needs the most capable model. A quick 
 
 ## What Jev is
 
-TypeSafe AI released Jev in September 2026. Its founder, Diogo Almeida, co-invented RLHF and InstructGPT at OpenAI, the research that led to ChatGPT.
+{{< x user="CompleteSkeptic" id="2099925682726002904" >}}
+
+TypeSafe AI [released Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) in September 2026. Its founder, Diogo Almeida, co-invented RLHF and InstructGPT at OpenAI, the research that led to ChatGPT.
 
 ![Diagram: Diogo Almeida founded TypeSafe AI, which built Jev, the first System One model. Jev answers in 70–500 ms and costs $0.042 per million input tokens, with free output tokens.](what-is-jev.png)
 
