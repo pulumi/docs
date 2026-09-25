@@ -335,7 +335,7 @@ def _block_spans(lines: list[str], start: int, end: int) -> list[tuple[str, int,
             continue
         if cur_id is not None and (line.startswith("### ") or line.startswith("#### ")
                                    or line.startswith("<!-- REVIEW_STATE")
-                                   or line.startswith("<sub>") or line.startswith("📎 ")
+                                   or line.startswith("<sub>") or line.startswith(cr.EVIDENCE_LINE_PREFIXES)
                                    or line.startswith(cr.V3_BROWSER_HINT_PREFIX)):
             close(i)
     close(end)
@@ -356,10 +356,12 @@ def _why_from_row(body: str) -> str:
 
 
 def _render_block(fid: str, heading: str, parsed: dict, evidence: dict | None) -> list[str]:
-    quote = _quote_from_row(parsed["body"])
-    if quote is None and evidence:
-        text = str(evidence.get("text") or "").strip()
-        quote = text or None
+    # The evidence record's claim text first: an author-card cell carries
+    # only a short excerpt (compose-review.AUTHOR_CELL_TRUNC), and this
+    # bullet promises the line verbatim.
+    quote = str((evidence or {}).get("text") or "").strip() or None
+    if quote is None:
+        quote = _quote_from_row(parsed["body"])
     if quote is None:
         where = f"`{parsed['file']}`" if parsed.get("file") else "the flagged line"
         if parsed.get("ref"):

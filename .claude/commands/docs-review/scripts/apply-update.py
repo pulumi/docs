@@ -25,6 +25,12 @@ The model's patch is a closed action vocabulary over finding ids:
   add       a new finding from the push delta; gets the next F-id
   retext    the finding's body text changes; id and anchor preserved
 
+Beside the actions, an optional top-level `summary` replaces the author
+card's one-sentence italic summary. The composer's sentence is written once
+at v1; when it named open items it went stale the moment they resolved (a
+"nothing blocks merge" card still saying four claims "only you can
+confirm", pulumi/docs#21871).
+
 Disposition mapping (aligned with scrape-review-outcomes.py's v3
 classifier, which this must never contradict):
   - `resolve` writes REVIEW_STATE disposition `fixed` (actor `update-lane`,
@@ -114,6 +120,7 @@ AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
 RESOLVED_HEADING = "### ✅ Resolved since last review"
+SUMMARY_MAX = 300
 RESOLVED_PLACEHOLDER = "_No items resolved since the last review._"
 # Same placeholder strings the composer uses, so an emptied section reads
 # identically whether the initial lane or a refresh emptied it.
@@ -137,11 +144,11 @@ _HINT_RE = re.compile(r"^_Editing in the browser\?[^\n]*\n(?:\n)?", re.M)
 # re-renders from the LIVE body, so the banner must be stripped here — the
 # first live auto-refresh published a fresh card still promising a refresh.
 _BANNER_RE = re.compile(r"^> 🔄 \*\*Re-review in progress\*\*[^\n]*\n(?:\n)?", re.M)
-_EVIDENCE_LINK_RE = re.compile(r"(📎 \*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
+_EVIDENCE_LINK_RE = re.compile(r"((?:📎 )?\*\*Full evidence:\*\* \[[^\]]+\]\()[^)]*(\))")
 
 
 def set_evidence_url(body: str, url: str) -> str:
-    """Point the 📎 line at this refresh's evidence page. The composer's
+    """Point the evidence line at this refresh's evidence page. The composer's
     token is long gone from a published card, so a refresh must rewrite the
     live URL — on the fork's artifact-only path the link otherwise keeps
     pointing at the FIRST run's artifact forever."""
@@ -178,6 +185,16 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
     if "schema" not in u:
         u["schema"] = 1
         notes.append("`schema` defaulted to 1")
+    # `summary` is optional, and "optional" slips into the envelope as "",
+    # null, or the prompt's own `<…>` placeholder copied verbatim. All mean
+    # "leave the sentence alone" — none may fail an otherwise good refresh or
+    # put a placeholder on the card.
+    if "summary" in u:
+        sv = u["summary"]
+        text = sv.strip() if isinstance(sv, str) else sv
+        if text is None or text == "" or (isinstance(text, str) and text.startswith("<") and text.endswith(">")):
+            del u["summary"]
+            notes.append("empty/placeholder `summary` dropped")
     if u.get("case") is None and isinstance(u.get("findings"), list):
         acts = {e.get("action") for e in u["findings"] if isinstance(e, dict)}
         if acts and acts <= {"resolve", "add"}:
@@ -201,6 +218,14 @@ def validate_update(update: dict, known_ids: set[str],
         problems.append(f"update.case {update.get('case')!r} not in the closed set")
     if not str(update.get("history_summary", "")).strip():
         problems.append("update.history_summary is required")
+    if "summary" in update:
+        summary = update.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            problems.append("update.summary, when present, must be a non-empty string")
+        elif "\n" in summary.strip():
+            problems.append("update.summary must be one line")
+        elif len(summary.strip()) > SUMMARY_MAX:
+            problems.append(f"update.summary must be ≤{SUMMARY_MAX} chars")
     findings = update.get("findings")
     if not isinstance(findings, list):
         return problems + ["update.findings must be a list"]
@@ -308,6 +333,36 @@ def _collect_resolved(author_body: str) -> list[str]:
     return out
 
 
+def replace_summary(body: str, text: str) -> str:
+    """Swap the author card's italic one-sentence summary for `text`.
+
+    The summary is the first single-line `_…_` paragraph between the H2
+    header and the first section heading (the browser hint is also italic
+    but sits below the tables, and starts with its own fixed prefix). A card
+    with no summary line gets one after the orienting callout rather than
+    silently dropping the model's refresh."""
+    text = " ".join(text.split()).strip("_ ")
+    lines = body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if _AUTHOR_REV_RE.match(ln)), None)
+    if head is None:
+        return body
+    end = next((i for i in range(head + 1, len(lines)) if lines[i].startswith("### ")), len(lines))
+    for i in range(head + 1, end):
+        ln = lines[i]
+        if (len(ln) > 2 and ln.startswith("_") and ln.endswith("_")
+                and not ln.startswith(cr.V3_BROWSER_HINT_PREFIX)):
+            lines[i] = f"_{text}_"
+            break
+    else:
+        # Right after the orienting callout (or the header, if it has none).
+        at = head + 1
+        callout = [i for i in range(head + 1, end) if lines[i].startswith(">")]
+        if callout:
+            at = callout[-1] + 1
+        lines[at:at] = ["", f"_{text}_"]
+    return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
+
+
 def _render_row(fid: str, ref: str, file: str, body: str,
                 link_base: str = "", edit_base: str = "") -> str:
     return cr.render_finding_row(fid, ref=ref, file=file, body=body,
@@ -393,6 +448,9 @@ def apply(
     new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
     author_body = _BANNER_RE.sub("", author_body)
+    # A nothing-for-you card publishes without 🚨/❓; restore them so a
+    # reopened, added, or promoted row has a section to land in.
+    author_body = be.ensure_author_sections(author_body)
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
@@ -557,9 +615,8 @@ def apply(
     if resolved_rows and RESOLVED_HEADING not in author_out:
         # the composer omits ✅ Resolved while empty — insert it on first resolve
         a_lines = author_out.splitlines()
-        at = next((i for i, ln in enumerate(a_lines) if ln.startswith("📎 ")), len(a_lines))
-        a_lines[at:at] = [RESOLVED_HEADING, "", cr.FINDING_TABLE_HEADER,
-                          cr.FINDING_TABLE_SEPARATOR, *resolved_rows, ""]
+        at = next((i for i, ln in enumerate(a_lines) if ln.startswith(cr.EVIDENCE_LINE_PREFIXES)), len(a_lines))
+        a_lines[at:at] = [RESOLVED_HEADING, "", *cr.render_resolved_block(resolved_rows), ""]
         author_out = "\n".join(a_lines) + ("\n" if author_out.endswith("\n") else "")
     brief_out = _render_doc(brief_body, rows, resolved_rows, doc="brief",
                             link_base=link_base)
@@ -575,6 +632,9 @@ def apply(
     # run recorded must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
+    author_out = be.drop_empty_author_sections(author_out)
+    if str(update.get("summary") or "").strip():
+        author_out = replace_summary(author_out, update["summary"])
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
     brief_out = _BRIEF_HEADER_RE.sub(
         f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)
@@ -634,7 +694,7 @@ def _render_doc(body: str, rows: dict[str, dict], resolved_rows: list[str], doc:
     replacements: list[tuple[int, int, list[str]]] = []
     for bucket, start, end in spans:
         if bucket == "resolved":
-            new_lines = _table(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
+            new_lines = cr.render_resolved_block(resolved_rows) if resolved_rows else [RESOLVED_PLACEHOLDER]
         else:
             bucket_rows = by_bucket.get(bucket)
             empty = SECTION_EMPTY.get(bucket, "")
@@ -784,7 +844,7 @@ def main() -> int:
     parser.add_argument("--evidence-out", default=".review-evidence.json")
     parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
     parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
-    parser.add_argument("--evidence-url", default="", help="URL for the 📎 evidence line on both cards")
+    parser.add_argument("--evidence-url", default="", help="URL for the evidence line on both cards")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -872,7 +932,7 @@ def _self_test() -> int:
     assert "**F5**" in b_out and "new soft mismatch" in b_out, "add landed in brief with next id"
     assert f"<!-- CLAUDE_REVIEW_HEAD {sha} -->" in a_out
     assert "## Author action guide v2 — 2 items block merge" in a_out, f"count refreshed and rev bumped: {report}"
-    assert a_out.count("📎 **Full evidence:**") == 1, "evidence line survives the re-render"
+    assert a_out.count("**Full evidence:**") == 1, "evidence line survives the re-render"
     assert a_out.count(cr.V3_BROWSER_HINT_PREFIX) == 1, "browser hint survives, exactly once"
     assert "<sub>Review v2 · updated " in a_out and "<sub>Review v2 · updated " in b_out, "sub line rewritten on both cards"
     assert f"· head commit {sha[:7]}</sub>" in a_out and "." not in a_out.split("· updated ")[1].split(" ·")[0], "sub: 7-char sha, no microseconds"

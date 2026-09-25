@@ -46,9 +46,9 @@ _Not your area? Any member of @pulumi/docs-guild can approve — hand it off rat
 - **Mechanics:** frontmatter sweep ran.
 - **Style:** 1 advisory suggestion left with the author; never blocking.
 
-💡 **Pre-existing issues in touched files:** 0 — details on the evidence page.
+**Pre-existing issues in touched files:** 0 — details on the evidence page.
 
-📎 **Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
+**Full evidence:** [verification trail, investigation log, review history](%%EVIDENCE_URL%%).
 
 <sub>Review v1 · updated 2026-08-31T18:00:00Z · head commit aaaabbbb</sub>
 

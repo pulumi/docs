@@ -59,6 +59,8 @@ A pinned review goes **stale** when you push new commits after it ran. One case 
         - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
         - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
         - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
+
+        While it works, your comment gets a 👀; when the card is updated, the 👀 becomes a 🚀. A failed refresh comments back to you with how to retry. `#new-review` signals the same way.
     - **`@claude` alone, no hashtag** — ad-hoc questions, code fixes, or one-off requests. Tag mode: the action handles it directly with its own animated tracking comment. Doesn't touch the pinned review. Use this when you want help, not a re-review.
 1. **Transition through draft and back to ready** — re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
 1. **Wait for the human reviewer** — the reviewer's guide is their source of truth, and the Sentinel check tells them (and you) whether anything still blocks. A reviewer who wants a fresh look asks for one with `@claude #update-review`, same as you.
