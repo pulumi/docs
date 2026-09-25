@@ -2137,7 +2137,9 @@ def render_detail_scaffold(fid: str, framing: str = "") -> list[str]:
         "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)"
         + (f". The verifier's note, to write from (not to paste): {framing}" if framing else "") + ">",
         "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
-        "replacement text in a fenced block at column 0 after this list; label an alternative "
+        "replacement text in a fenced block at column 0 after this list — on 🚨, make the fence "
+        "a one-line replacement for exactly the text quoted above, and it also posts as a "
+        "one-click suggestion; label an alternative "
         "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
     ]
 

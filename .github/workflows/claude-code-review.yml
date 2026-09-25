@@ -1714,6 +1714,25 @@ jobs:
             > .review-v3-handoff.json
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
+      # One-click fixes for what blocks merge (reader feedback, 2026-09-25:
+      # authors wanted applyable suggestions inline for the findings they
+      # must act on, and the optional nags off the Files view). Derived
+      # deterministically from the card's 🚨 Do-this blocks — only a quoted
+      # line with exactly one single-line fenced replacement qualifies — and
+      # validated against the checked-out file and the PR diff. Own marker,
+      # so it never touches the style set; a fix that landed loses its
+      # comment without a new review event. Best-effort: never fails the run.
+      - name: Post one-click fixes for blocking findings (v3)
+        if: steps.v3-build.outputs.ready == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --fixes-from-author-card .review-author.md
+
       - name: Upload v3 handoff artifact
         if: steps.v3-build.outputs.ready == 'true'
         uses: actions/upload-artifact@v7

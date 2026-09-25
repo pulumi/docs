@@ -482,6 +482,16 @@ _<one sentence: what the PR is and what the review checked>_
 <!-- CLAUDE_REVIEW_FOOTER --> + footer-author.md   ← **How to answer** is a collapsed <details>; the callout carries the must-know line
 ```
 
+**One-click fixes.** A 🚨 row anchored to one line whose block quotes that line's text
+exactly and carries exactly **one single-line** fenced replacement for that quoted span is
+also posted as an applyable GitHub suggestion, by `post-style-suggestions.py
+--fixes-from-author-card` after the build (initial lane) and after the publish (update
+lane). Findings on the same line merge into one suggestion. It posts under its own marker
+(`<!-- CLAUDE_FIX_SUGGESTION -->`), is derived from the card rather than written by you, and
+skips ❓ rows, answered findings, multi-line fences, and quotes that don't occur literally on
+the anchored line. So quote the source text verbatim, and put only its replacement in the
+fence.
+
 The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
 alert instead of the IMPORTANT one. When 🚨 and ❓ both hold nothing but their empty
 placeholders, the published card omits **both** sections (the NOTE already says there is

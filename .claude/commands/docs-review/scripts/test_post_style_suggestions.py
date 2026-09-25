@@ -9,6 +9,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -465,7 +466,7 @@ def test_unchanged_set_skips_repost(repo, tmp_path, monkeypatch):
     existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
                  "body": pss.comment_body(dict(entry(), new_line="You can use the CLI to deploy."))}]
     calls = []
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: existing)
     monkeypatch.setattr(pss, "delete_comments", lambda r, ids: calls.append(("delete", ids)))
     monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or SimpleNamespace(
         returncode=1, stdout="", stderr=""))
@@ -483,7 +484,7 @@ def test_changed_set_does_repost(repo, tmp_path, monkeypatch):
     (tmp_path / "sugg.json").write_text(json.dumps([entry()]))
     (tmp_path / "pr.patch").write_text(PATCH)
     deleted, posts = [], []
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: existing)
     monkeypatch.setattr(pss, "delete_comments", lambda r, ids: deleted.extend(ids))
     monkeypatch.setattr(pss, "gh_api", lambda *a, **k: posts.append(a) or SimpleNamespace(
         returncode=0, stdout="", stderr=""))
@@ -659,7 +660,7 @@ def test_unchanged_set_skips_repost_despite_reworded_note(repo, tmp_path, monkey
                  "body": pss.comment_body(dict(entry(), new_line="You can use the CLI to deploy.",
                                                note="'utilize' means 'use'"))}]
     calls = []
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: existing)
     monkeypatch.setattr(pss, "delete_comments", lambda r, ids: calls.append(("delete", ids)))
     monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or SimpleNamespace(
         returncode=1, stdout="", stderr=""))
@@ -678,7 +679,7 @@ def test_changed_replacement_still_reposts(repo, tmp_path, monkeypatch):
     existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
                  "body": pss.comment_body(dict(entry(), new_line="Something else entirely."))}]
     deleted, posts = [], []
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: existing)
     monkeypatch.setattr(pss, "delete_comments", lambda r, ids: deleted.extend(ids))
     monkeypatch.setattr(pss, "gh_api", lambda *a, **k: posts.append(a) or SimpleNamespace(
         returncode=0, stdout="", stderr=""))
@@ -708,7 +709,7 @@ def _prior(n=3):
 
 def _run(tmp_path, repo, monkeypatch, sidecar, prior, extra_argv=()):
     calls = []
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: prior)
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: prior)
     monkeypatch.setattr(pss, "delete_comments",
                         lambda r, ids: calls.append(("delete", list(ids))))
     monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or
@@ -761,7 +762,7 @@ def test_absent_sidecar_marks_from_what_is_actually_posted(tmp_path, repo, monke
 
 def test_live_posted_drops_outdated_comments(monkeypatch):
     """An outdated comment reports line: null and cannot be marked."""
-    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: [
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: [
         {"id": 1, "path": "a.md", "line": 5, "body": "x"},
         {"id": 2, "path": "a.md", "line": None, "body": "x"},
     ])
@@ -830,3 +831,137 @@ def test_caption_legend_only_when_a_mark_is_on_the_page():
     n = int(re.search(r"\*\*line (\d+):", bare).group(1))
     with_mark, marked = pss.annotate_text(bare, [{"file": path, "line": n}])
     assert marked == 1 and _canonical() in with_mark
+
+
+# ---- blocking-fix mode ------------------------------------------------------
+
+FIX_SRC = [
+    "# Title",
+    "Pulumi Service stores your state.",               # L2: backtick quote, phrase fence
+    "The CLI ships 400 providers and 90 languages.",   # L3: two findings, one line
+    "social:",
+    "    bluesky: Read the Pulumi Service guide.",     # L5: indented YAML, bare labels
+    "It runs everywhere.",                             # L6: multi-line fence (skip)
+    "Nothing to see.",                                 # L7: quote not on the line (skip)
+    "A question line.",                                # L8: ❓ row (never converted)
+]
+
+
+def _fix_patch() -> str:
+    body = "".join(f"+{ln}\n" for ln in FIX_SRC)
+    return ("diff --git a/content/docs/fix.md b/content/docs/fix.md\nnew file mode 100644\n"
+            "--- /dev/null\n+++ b/content/docs/fix.md\n"
+            f"@@ -0,0 +1,{len(FIX_SRC)} @@\n{body}")
+
+
+def _row(fid: str, ref: str, text: str = '*"claim"* — verdict: contradicted') -> str:
+    return f"| **{fid}** | `content/docs/fix.md` {ref} | {text} |"
+
+
+def _block(fid: str, quote: str, why: str, fence: list[str], bullets: bool = True) -> list[str]:
+    d = "- " if bullets else ""
+    return [f"#### {fid} · Do this", "", f"{d}**Line (verbatim):** {quote}", f"{d}**Why:** {why}",
+            f"{d}**Fix:** Replace it:", "", "```text", *fence, "```", ""]
+
+
+FIX_CARD = "\n".join([
+    "<!-- CLAUDE_REVIEW_AUTHOR -->", "## Author action guide v1 — 6 items block merge", "",
+    "### 🚨 Fix or disagree", "", "| ID | Where | Finding |", "|---|---|---|",
+    _row("F1", "L2"), _row("F2", "L3"), _row("F3", "L3"), _row("F4", "L5"),
+    _row("F5", "L6"), _row("F6", "L7"), "",
+    *_block("F1", "`Pulumi Service`", "The product is Pulumi Cloud now.", ["Pulumi Cloud"]),
+    *_block("F2", '"400 providers"', "The registry lists 300.", ["300 providers"]),
+    *_block("F3", '"90 languages"', "It's six languages.", ["six languages"]),
+    *_block("F4", '"bluesky: Read the Pulumi Service guide."', "Retired name.",
+            ["bluesky: Read the Pulumi Cloud guide."], bullets=False),
+    *_block("F5", "`It runs everywhere.`", "Overclaims.", ["It runs on", "most platforms."]),
+    *_block("F6", "`Something else entirely`", "Paraphrased quote.", ["x"]),
+    "### ❓ Questions for you", "", "| ID | Where | Finding |", "|---|---|---|",
+    _row("F7", "L8", '*"q"* — verdict: unverifiable'), "",
+    *_block("F7", "`A question line.`", "Only you know.", ["An answered line."]),
+    "**Full evidence:** [trail](https://x).", "",
+])
+
+
+@pytest.fixture
+def fix_repo(tmp_path: Path) -> Path:
+    f = tmp_path / "content" / "docs" / "fix.md"
+    f.parent.mkdir(parents=True)
+    f.write_text("\n".join(FIX_SRC) + "\n")
+    return tmp_path
+
+
+def test_fix_entries_splice_the_fence_into_the_quoted_span(fix_repo):
+    entries, skipped = pss.derive_fix_entries(FIX_CARD, fix_repo)
+    by_line = {e["line"]: e for e in entries}
+    assert by_line[2]["replacement"] == "Pulumi Cloud stores your state."
+    assert by_line[2]["ids"] == ["F1"]
+    # Two findings on one line merge into ONE suggestion (GitHub replaces
+    # whole lines, so two separate ones would each undo the other).
+    assert by_line[3]["replacement"] == "The CLI ships 300 providers and six languages."
+    assert by_line[3]["ids"] == ["F2", "F3"]
+    # Unbulleted labels + double quotes; the indentation outside the quote stays.
+    assert by_line[5]["replacement"] == "    bluesky: Read the Pulumi Cloud guide."
+    assert set(by_line) == {2, 3, 5}, "multi-line fence, missing quote, and ❓ are all skipped"
+    assert any(r.startswith("F5: multi-line") for r in skipped)
+    assert any(r.startswith("F6: quote found on 0") for r in skipped)
+    assert not any("F7" in r for r in skipped), "❓ rows are never even considered"
+
+
+def test_fix_collision_keeps_the_first_and_skips_the_rest(fix_repo):
+    card = FIX_CARD.replace(_row("F3", "L3"), _row("F3", "L3")).replace(
+        '**Line (verbatim):** "90 languages"', '**Line (verbatim):** "400 providers"')
+    entries, skipped = pss.derive_fix_entries(card, fix_repo)
+    line3 = next(e for e in entries if e["line"] == 3)
+    assert line3["ids"] == ["F2"] and line3["replacement"] == "The CLI ships 300 providers and 90 languages."
+    assert any(r.startswith("F3: collides") for r in skipped)
+
+
+def test_fix_mode_dry_run_payload(fix_repo, capsys, monkeypatch):
+    (fix_repo / "card.md").write_text(FIX_CARD)
+    (fix_repo / "pr.patch").write_text(_fix_patch())
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "7", "--repo", "o/r", "--repo-root", str(fix_repo),
+        "--fixes-from-author-card", str(fix_repo / "card.md"),
+        "--patch-file", str(fix_repo / "pr.patch"), "--dry-run"])
+    assert pss.main() == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["body"] == pss.FIX_REVIEW_BODY
+    bodies = [c["body"] for c in payload["comments"]]
+    assert len(bodies) == 3 and all(b.startswith(pss.FIX_MARKER + "\n") for b in bodies)
+    assert "**F2**, **F3** block merge — The registry lists 300. It's six languages." in bodies[1]
+    assert "```suggestion\nThe CLI ships 300 providers and six languages.\n```" in bodies[1]
+    assert pss.MARKER not in "".join(bodies), "fix comments never carry the style marker"
+
+
+def test_fix_mode_removes_resolved_fixes_without_a_new_review(fix_repo, monkeypatch):
+    """A fix landed: its suggestion goes, the survivors stay live, and no new
+    (undeletable) review event is created."""
+    entries, _ = pss.derive_fix_entries(FIX_CARD, fix_repo)
+    valid, _ = pss.validate_entries(entries, pss._vff.added_lines_per_file(_fix_patch()), fix_repo)
+    posted = [{"id": 100 + i, "path": e["file"], "line": e["line"], "body": pss.comment_body(e)}
+              for i, e in enumerate(valid)]
+    calls: list[list[str]] = []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p, *_: posted)
+    monkeypatch.setattr(pss, "gh_api", lambda args, input_json=None: calls.append(args) or
+                        subprocess.CompletedProcess(args, 0, "", ""))
+    live = pss.sync_posted("o/r", "7", valid[1:], pss.FIX_MARKER, pss.FIX_REVIEW_BODY)
+    assert live == valid[1:]
+    assert calls == [["-X", "DELETE", "repos/o/r/pulls/comments/100"]]
+
+
+def test_fix_mode_skips_findings_the_author_already_answered(fix_repo):
+    rs = pss.sys.modules.get("pss_review_state")
+    if rs is None:
+        pss._dispositioned_ids("")
+        rs = pss.sys.modules["pss_review_state"]
+    state = rs.set_disposition(dict(rs.empty_state(), high_water=7), "F1", "accepted",
+                               actor="alice", note="shipping as-is")
+    entries, skipped = pss.derive_fix_entries(FIX_CARD + rs.serialize_block(state) + "\n", fix_repo)
+    assert 2 not in {e["line"] for e in entries}
+    assert "F1: already answered on the card" in skipped
+
+
+def test_fix_mode_posts_nothing_over_a_corrupt_state_block(fix_repo):
+    entries, skipped = pss.derive_fix_entries(FIX_CARD + "<!-- REVIEW_STATE {not json} -->\n", fix_repo)
+    assert entries == [] and skipped == ["REVIEW_STATE block is corrupt; posting no fixes"]
