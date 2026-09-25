@@ -59,7 +59,7 @@ Refer to the [Pulumi Deployments REST API documentation](/docs/deployments/deplo
 
 ### Pulumi Cloud Service provider
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -218,6 +218,46 @@ outputs:
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+`Pulumi.yaml`:
+
+```yaml
+name: raw-schedule-setup
+runtime: hcl
+description: Setup of a raw schedule for automatic operations with Pulumi
+```
+
+`main.tf`:
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_deployment_schedule" "raw_schedule" {
+  organization = "my-org"
+  project      = "my-project"
+  stack        = "prod-stack"
+
+  schedule_cron    = "0 0 * * *" # Run an update daily at midnight
+  pulumi_operation = "update"
+}
+
+output "schedule_id" {
+  value = pulumiservice_deployment_schedule.raw_schedule.schedule_id
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 See the [Pulumi Service Provider documentation](/registry/packages/pulumiservice/api-docs/provider) for more details on how to manage Scheduled Deployments in source control.
