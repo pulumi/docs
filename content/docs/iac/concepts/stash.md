@@ -25,7 +25,7 @@ The built-in `Stash` resource was added in Pulumi v3.208.0. Upgrade the Pulumi C
 
 To create a new stash, instantiate a `Stash` resource and provide a value for the `input` property. The stash stores this value in your stack's state and makes it available through the `output` property.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -134,6 +134,29 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+In Pulumi HCL, Terraform's built-in [`terraform_data`](/docs/iac/languages-sdks/hcl/hcl-language-reference/#terraform-built-in-resources) resource lowers onto this same built-in stash resource:
+
+```hcl
+resource "terraform_data" "my_stash" {
+  input = "Hello, World!"
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+
+output "stashed_value" {
+  value = terraform_data.my_stash.output
+}
+```
+
+Without the `lifecycle` block, `terraform_data` keeps Terraform's semantics: `output` mirrors `input` and follows it on every update. Adding [`ignore_changes`](/docs/iac/concepts/resources/options/ignorechanges/) for `input` pins the value the resource was created with, which gives you the stateful `output` described above.
+
+Because `input` is ignored, `terraform_data.my_stash.input` also returns the pinned value rather than the most recent one. No attribute of the resource echoes the current `input` expression.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -143,7 +166,7 @@ Like any other resource, a `Stash` needs a name that is unique across your progr
 
 The `input` property of a `Stash` resource can accept any value, including complex objects, arrays, and nested structures. The value is serialized as a Pulumi property value when stored in state.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -242,6 +265,28 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "terraform_data" "config_stash" {
+  input = {
+    region       = "us-west-2"
+    instanceType = "t3.micro"
+    tags = {
+      Environment = "production"
+      Team        = "platform"
+    }
+  }
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+```
+
+Map keys are stored exactly as written — Pulumi HCL's `snake_case` to `camelCase` conversion applies to provider schema properties, not to the keys of a map you define yourself.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -249,7 +294,7 @@ resources:
 
 The `Stash` resource respects secret annotations. If the `input` value is marked as a secret, the `output` is also secret, and the value is encrypted in your stack's state.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -332,6 +377,26 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "terraform_data" "api_key_stash" {
+  input = sensitive("my-secret-api-key")
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+
+# The output is also marked as secret
+output "api_key" {
+  value = terraform_data.api_key_stash.output
+}
+```
+
+A variable declared with `sensitive = true` works the same way. Either source makes the stashed value a Pulumi secret, so the `output` block does not need its own `sensitive = true` to keep it encrypted.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -347,6 +412,8 @@ To update the value stored in a `Stash` you need to replace it. Three ways to do
 
 Without a replacement, changes to the `input` property are reflected in the `input` output property, but the `output` property does not change. It continues to return the original value the `Stash` was constructed with.
 
+In Pulumi HCL, the replacement trigger is the `triggers_replace` argument of `terraform_data`. Because the HCL examples on this page ignore changes to `input`, both `input` and `output` keep returning the stashed value until the resource is replaced, and the replacement stores the current value of `input`.
+
 ## Deleting a stash
 
 To delete a `Stash` resource, remove it from your program and run `pulumi up`. Pulumi removes the stash — and the value it holds — from your stack's state during the update.
@@ -359,7 +426,7 @@ The `Stash` resource is useful for keeping track of a computed value across depl
 
 When you need to record who first deployed the infrastructure:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -461,6 +528,33 @@ public class App {
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+HCL has no function that reads the current user, so pass it into the program as a variable:
+
+```hcl
+variable "deployer" {
+  type        = string
+  description = "The user running the deployment."
+}
+
+resource "terraform_data" "first_deployer" {
+  input = var.deployer
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+
+# The output will always show the original deployer, even if others run updates later
+output "original_deployer" {
+  value = terraform_data.first_deployer.output
+}
+```
+
+Supply the value on the command line with `TF_VAR_deployer="$USER" pulumi up`, or from stack configuration.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -468,7 +562,7 @@ public class App {
 
 When you need to persist the timestamp of when the infrastructure was first created:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -571,6 +665,26 @@ public class App {
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "terraform_data" "creation_time" {
+  input = timestamp()
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+
+# This will always return the original creation time
+output "first_deployed" {
+  value = terraform_data.creation_time.output
+}
+```
+
+`timestamp()` returns a new value on every run. Ignoring changes to `input` keeps the stash at the timestamp of the first deployment.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -578,7 +692,7 @@ public class App {
 
 Use a stash when you need a random value that remains constant across deployments. In these examples, `generatePassword` is your own helper function that produces a fresh value on every run; the stash is what keeps the first value stable.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -695,6 +809,28 @@ public class App {
     }
 }
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+`uuid()` stands in for the `generatePassword` helper the other examples use: it also produces a fresh value on every run.
+
+```hcl
+resource "terraform_data" "password_stash" {
+  input = sensitive(uuid())
+
+  lifecycle {
+    ignore_changes = [input]
+  }
+}
+
+# Use the stashed password for database configuration
+output "db_password" {
+  value = terraform_data.password_stash.output
+}
+```
+
+To rotate the value later, add a `triggers_replace` argument and change it; that lowers onto [`replacementTrigger`](/docs/iac/concepts/resources/options/replacementtrigger/) and replaces the stash, re-evaluating `uuid()`.
 
 {{% /choosable %}}
 
