@@ -260,7 +260,7 @@ def resolve_ledger_bucket() -> str | None:
 
 def _bulk_accept_keys() -> tuple[str, str]:
     """(bulk_key, accepted_key) -- the outcome-count field names for a
-    bulk `/resolve all ...` answer vs. any adjudicated accept/defer/n-a
+    bulk accept-everything answer vs. any adjudicated accept/defer/n-a
     answer, per scrape-review-outcomes.py's V3_ONLY_OUTCOME_KEYS.
 
     Imported by path (loose coupling, not a hard dependency -- see

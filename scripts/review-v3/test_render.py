@@ -349,13 +349,12 @@ def test_fixed_disposition_reads_as_already_done():
                                   "decision": "Anchor right?", "disposition": "fixed", "deep_link": "https://x/y#z"})
     html = render.render_board(q)
     assert "already fixed</span>" in html and "recommend <b>fixed</b>" not in html
-    # A badge says why the finding doesn't stop the merge, never what the
-    # author answered, and the title says what approving does about it.
+    # A badge is the approver's own call: it stays on the board and nothing
+    # is posted for it.
     assert "not a real issue</span>" in html
-    assert "title=\"The review got this one wrong. Approving posts `/resolve &lt;id&gt; refuted`" in html
-    assert "the author has not answered anything here" in html
-    # and the row says what the reader actually clicks
-    assert "Approving the row records these calls on the PR" in html and "Nothing here needs a click of its own." in html
+    assert 'title="The review got this one wrong."' in html and "/resolve" not in html
+    assert "never answers a blocking finding for the author" in html
+    assert "Nothing here needs a click of its own." in html
 
 
 def test_theme_selectors_present_in_both_forms():
@@ -725,8 +724,7 @@ def test_rows_waiting_on_the_author_and_rows_with_no_unblock_are_never_silent():
     full = render.render_board(q, include_handed_off=True)
     assert ">waiting on the author</span>" in full and full.count(">no action available</span>") == 1   # #4 only
     assert "<b>1</b><span>blocked, no action</span>" in full
-    assert "judged blocking finding" not in render.chip_title("outstanding:judged:F1,F2")
-    assert "approving this row posts their /resolve lines" in render.chip_title("outstanding:judged:F1,F2")
+    assert "#update-review" in render.chip_title("outstanding:2:F1,F2")
     # the new chips read as words, stay out of the fold, and explain themselves
     row1 = html.split('data-pr="1"')[1].split('class="acts"')[0]
     assert ">your own PR<" in row1.split("<summary>why")[0]

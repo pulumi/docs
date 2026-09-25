@@ -15,9 +15,7 @@ Every item on the worklist ends in exactly one of five states. "We talked about 
 | `accepted` | Knowingly shipping as-is | **yes** | The note (and, for a blocker, a PR comment) |
 | `not-applicable` | The finding misreads the change; nothing to do and nothing to argue | **yes** | The note |
 
-`fixed` and `refuted` evidence themselves. The other three are judgment calls someone has to own, so `review-worklist.py --require-clean` treats a missing note as an open item — and `/resolve` rejects them outright without a reason.
-
-There is a sixth value in the data, `author-accepted`, but **nobody types it**. See [When you are the author](#when-you-are-the-author).
+`fixed` and `refuted` evidence themselves. The other three are judgment calls someone has to own, so `review-worklist.py --require-clean` treats a missing note as an open item.
 
 ---
 
@@ -25,12 +23,9 @@ There is a sixth value in the data, `author-accepted`, but **nobody types it**. 
 
 On the v3 surface the ledger is the `<!-- REVIEW_STATE … -->` block on the author card. It is the PR's own record: the Sentinel reads it to score G2, the reviewer brief renders it in the **Waiting on the author** list, and `review-worklist.py` seeds from it. A finding id absent from that block is **open**, whatever any comment says.
 
-Two lanes write it, and the choice matters:
+Only the update lane writes it: a push the auto-refresh gate recognizes, or an `@claude <reasoning> #update-review` mention. The model adjudicates every answer — it concedes a dispute, holds it, or records an acceptance — so an author's word on their own finding is weighed rather than just filed. The update lane has one verb for knowingly shipping a finding (`accept`); a deferral is an acceptance whose reason names the issue.
 
-- **`/resolve F<n> <disposition>[: reason]`** — deterministic, zero model cost, agent-facing plumbing. Use it to *record* a decision the user has already made. `/resolve all <disposition>: <reason>` dispositions every open finding at once and always needs a reason. It requires the PR author or a write/maintain/admin collaborator and fails closed on an unreadable permission; comments from bot accounts are ignored entirely.
-- **`@claude <reasoning> #update-review`** — the model lane. Use it whenever the finding needs *adjudicating* rather than recording: a dispute, a fix the auto-refresh gate didn't catch, an answer to an ❓ question. It is the only lane that can change the review's mind.
-
-On the legacy v2 surface there is no `REVIEW_STATE` and no `/resolve`; `#update-review` and the local state file are all you have.
+On the legacy v2 surface there is no `REVIEW_STATE`; `#update-review` and the local state file are all you have.
 
 `.review-worklist-<PR>.json` at the repo root (gitignored) stays useful either way — it's where style items (which carry no `F<n>`) and your in-progress notes live:
 
@@ -45,20 +40,6 @@ On the legacy v2 surface there is no `REVIEW_STATE` and no `/resolve`; `#update-
 ```
 
 Write it as each decision is made, not at the end. On v3 it is a cache the enumerator will re-seed from `REVIEW_STATE`; on v2 it is the only ledger there is.
-
----
-
-## When you are the author
-
-If the PR author dispositions their own finding as anything other than `fixed`, the handler records it as **`author-accepted`**, preserving what they typed as `original_disposition`.
-
-This is deliberate, not a bug: self-adjudication shouldn't read as independent adjudication. The Sentinel counts the item as answered — the author *did* answer — while the brief keeps the row in front of the human approver, labelled with both values (`author-accepted (refuted)`).
-
-What follows from it:
-
-- **Tell the user before they pick.** "Refuting your own finding records as author-accepted and stays visible to your reviewer" is a fifteen-word heads-up that prevents a surprise in review.
-- **A refutation you want *weighed* goes through `#update-review`,** not `/resolve`. The model can concede, which clears the finding on its own merits; `/resolve refuted` on your own PR just files your opinion.
-- **`fixed` is never collapsed.** A real code change is evidence, not an opinion.
 
 ---
 
@@ -97,7 +78,7 @@ Knowingly shipping with the finding standing. Always available, never free.
 
 - The note must say *why*, in terms someone reading the PR later can evaluate: "house voice — we say 'simply' in tutorials deliberately", not "won't fix".
 - For a 🚨 blocker, also post the reason as a PR comment. A blocker accepted silently reads to the scraper as `ignored_outstanding`, and to a maintainer as an oversight.
-- This is the disposition to use when the user says "just merge it." `/resolve all accepted: <their reason>` records it across every open finding in one comment. That is the honest ledger entry, and it takes ten seconds.
+- This is the disposition to use when the user says "just merge it." One `@claude accepting all open findings as-is: <their reason> #update-review` mention records it across every open finding (the update lane flags it `bulk`). That is the honest ledger entry. Each accepted row moves to the reviewer brief's ⚠️ list, where the approver sees it.
 
 ## `not-applicable`
 

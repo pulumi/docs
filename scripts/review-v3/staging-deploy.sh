@@ -1,39 +1,28 @@
 #!/usr/bin/env bash
-# Dispatch a pulumi-test.io staging deploy of a PR head and record the
-# outcome as the `staging/pulumi-test-io` commit status at that head SHA —
+# Dispatch a pulumi-test.io staging deploy of a PR head — the deploy whose
+# run record (and the `staging/pulumi-test-io` status written from it) is
 # the evidence Sentinel gate G4 verifies.
 #
-# Two callers:
-#   - staging-deploy-pr.yml   `/deploy-staging`, a review-team member asking
-#                             (--announce, because they're waiting on it;
-#                             then WATCHES the run. The watch is not how the
-#                             status gets written — see below — it is what
-#                             keeps that lane's `staging-stack` concurrency
-#                             group held for the length of the deploy, which
-#                             is the only thing serializing hand-requested
-#                             deploys of a single shared stack.)
-#   - staging-deploy-auto.yml every infra PR on open/push, unattended
-#                             (--dispatch-only: fire the deploy and get out.
-#                             Nobody is watching, so holding a runner for
-#                             45 minutes buys nothing, and a job that lives
-#                             that long is a job that shows up cancelled on
-#                             the PR when a newer push displaces it.)
+# One caller: staging-deploy-auto.yml, for every infra PR on open/push,
+# unattended. It fires the deploy and gets out. Nobody is watching, so
+# holding a runner for 45 minutes buys nothing, and a job that lives that
+# long is a job that shows up cancelled on the PR when a newer push
+# displaces it. A retry is a re-run of the dispatched "Build and deploy
+# testing" run, or a fresh dispatch of that workflow at the head branch.
 #
 # ONE WRITER OF THE TERMINAL STATUS, AND IT IS NOT THIS SCRIPT.
 # `.github/workflows/staging-status.yml` — a `workflow_run` listener on
 # "Build and deploy testing" — writes success/failure/error when the
-# dispatched run completes. This script writes only the PENDING status,
-# which has to happen at dispatch time. The watch path below therefore
-# records nothing: two writers of one context is noise, and the one that
-# used to live inside the dispatched run was worse than noise, because a
-# `workflow_dispatch` executes the workflow file from the ref it is
-# dispatched at — so it silently did not exist for any PR branch cut before
-# it merged. See that file's header for the rule.
+# dispatched run completes. Two writers of one context is noise, and the
+# one that used to live inside the dispatched run was worse than noise,
+# because a `workflow_dispatch` executes the workflow file from the ref it
+# is dispatched at — so it silently did not exist for any PR branch cut
+# before it merged. See that file's header for the rule.
 #
 # This script never checks out or executes the PR's code. It dispatches the
 # existing "Build and deploy testing" workflow at the head BRANCH — that
 # workflow does the checkout and build, in the testing account, exactly as
-# it does for master. Keep it that way: both callers run with write
+# it does for master. Keep it that way: the caller runs with write
 # permissions.
 #
 # G4 also accepts the deploy RUN as evidence, so a lost status write no
@@ -47,19 +36,21 @@
 
 set -euo pipefail
 
-REPO=""; PR=""; HEAD_SHA=""; HEAD_REF=""; ANNOUNCE="false"; DISPATCH_ONLY="false"
+REPO=""; HEAD_SHA=""; HEAD_REF=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --repo)     REPO="$2"; shift 2 ;;
-    --pr)       PR="$2"; shift 2 ;;
     --head-sha) HEAD_SHA="$2"; shift 2 ;;
     --head-ref) HEAD_REF="$2"; shift 2 ;;
-    --announce) ANNOUNCE="true"; shift ;;
-    --dispatch-only) DISPATCH_ONLY="true"; shift ;;
+    # Accepted and ignored: an open PR branch runs ITS copy of
+    # staging-deploy-auto.yml against this base-branch script, and a branch
+    # cut before the watch mode went away still passes both.
+    --pr)            shift 2 ;;
+    --dispatch-only) shift ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
 done
-for required in REPO PR HEAD_SHA HEAD_REF; do
+for required in REPO HEAD_SHA HEAD_REF; do
   if [ -z "${!required}" ]; then
     echo "missing required argument: --$(echo "$required" | tr '[:upper:]_' '[:lower:]-')" >&2
     exit 2
@@ -68,7 +59,7 @@ done
 
 # The dispatch API returns nothing. Stamp the time first and select the
 # first workflow_dispatch run on this branch created after it — `--limit 1`
-# on the branch would happily pick up an earlier push or /deploy-staging run
+# on the branch would happily pick up an earlier push or re-dispatched run
 # and post ITS outcome as this head's status. Backed off 2 s: both sides are
 # whole seconds and the compare is strict, so a run created in the stamp's
 # own second would otherwise be excluded by its own timestamp.
@@ -124,26 +115,8 @@ RUN_URL="https://github.com/$REPO/actions/runs/$RUN_ID"
 # completed, not an event cascade. Branch age and token provenance both
 # have to stop mattering.
 
-if [ "$ANNOUNCE" = "true" ]; then
-  gh api --method POST "repos/$REPO/issues/$PR/comments" \
-    -f body="🚀 Staging deploy of \`$HEAD_REF\` @ \`${HEAD_SHA:0:9}\` started: $RUN_URL — the \`staging/pulumi-test-io\` status lands here when it finishes. (Next merge to master resets pulumi-test.io. Requests queue one deep on the shared stack: a \`/deploy-staging\` that never gets this comment was displaced by a newer one — re-run it once the current deploy finishes.)" >/dev/null
-fi
-
-if [ "$DISPATCH_ONLY" = "true" ]; then
-  # Nothing is left pending on the PR. `staging-status.yml` writes a green
-  # `staging/pulumi-test-io` if its cascade fires; if it doesn't, Sentinel
-  # G4 reads this run record directly and the merge box simply shows one
-  # check fewer. Either way nobody holds a runner open to watch.
-  echo "staging deploy dispatched for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
-  exit 0
-fi
-
-# Blocking mode (`/deploy-staging`). Deliberately writes NO status: the
-# listener owns the terminal `staging/pulumi-test-io`. What this watch buys
-# is the caller's concurrency group, held for the length of the deploy.
-if gh run watch "$RUN_ID" --repo "$REPO" --exit-status; then
-  STATE=success
-else
-  STATE=failure
-fi
-echo "staging deploy $STATE for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
+# Nothing is left pending on the PR. `staging-status.yml` writes a green
+# `staging/pulumi-test-io` if its cascade fires; if it doesn't, Sentinel G4
+# reads this run record directly and the merge box simply shows one check
+# fewer. Either way nobody holds a runner open to watch.
+echo "staging deploy dispatched for $HEAD_REF @ ${HEAD_SHA:0:9}: $RUN_URL"
