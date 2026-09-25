@@ -34,7 +34,7 @@ The state migrations API is experimental and may change.
 Share feedback in the [component state migrations discussion](https://github.com/pulumi/pulumi/discussions/24799).
 {{% /notes %}}
 
-## Start with legacy AWSX (v1)
+## One VPC, three versions of the code
 
 The [AWSX VPC example](https://github.com/pulumi/examples/tree/master/aws-ts-awsx-vpc-state-migration) follows a network as your needs change over time. You start with v1, upgrade to v2, and later move to v3. Each version builds on the infrastructure already running.
 
@@ -84,9 +84,9 @@ Legacy and modern AWSX organize their resources differently. The legacy componen
 
 [Aliases](/docs/iac/concepts/resources/options/aliases/) handle changes to a resource's name, type, or parent when its saved state remains compatible. This upgrade also needs to remove component wrappers and transfer references to the resources that take their place. A state migration describes that whole change together.
 
-## Later, upgrade to modern AWSX (v1 to v2)
+## The first migration: from legacy to modern AWSX
 
-To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration; `availabilityZone` and `vpcTags` hold the same settings used in the first version, and `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
+To move your existing network to modern AWSX, you register the new VPC component with an alias for the legacy component type and a migration callback through the `stateMigrations` option. This excerpt from the example shows the registration, `migrateClassicVpc` comes from the example's [migration file](https://github.com/pulumi/examples/blob/master/aws-ts-awsx-vpc-state-migration/v2/migration.ts).
 
 ```typescript
 {{% example-program-snippet path="awsx-vpc-state-migration-blog" language="typescript" file="modern-vpc.ts.txt" %}}
@@ -109,7 +109,7 @@ The `rename` helper copies the saved record and changes its URN, type, and paren
 
 The two subnet entries in `successors` let the Pulumi engine know that the old component wrapper and the managed subnet point to the same new subnet record. Pulumi uses these mappings to update dependencies and resource references elsewhere in the stack. For example, the security group lives outside the VPC component, but its reference to the VPC still needs to be valid after the migration. The VPC successor mapping keeps that reference connected to the migrated VPC record, which retains the same AWS VPC ID.
 
-## Later still, manage each resource directly (v2 to v3)
+## The second migration: from AWSX to plain AWS resources
 
 You have been running v2 for a while when a new requirement calls for a subnet or routing layout that the modern component does not support. You decide to manage those choices in your own code. The third version declares the VPC, subnet, route table, association, and internet gateway directly with `@pulumi/aws`. This migration changes who defines those resources in your program; you can then adjust their configuration in a separate update.
 
