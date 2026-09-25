@@ -462,7 +462,7 @@ _<one sentence: what the PR is and what the review checked>_
 ### 🚨 Fix or disagree
 | ID | Where | Finding |
 |---|---|---|
-| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: claim quote ref + verdict> |
+| **F1** | [`file.md` L12-14](…R12) · [✏️ edit](…/edit/<branch>/file.md) | <ONE-line finding: short claim excerpt (≤90 chars) + verdict — the block below quotes the full line, and the verifier's framing note feeds its **Why**> |
 #### F1 · Do this                         ← one detail block per 🚨/❓ finding, directly under its table
 - **Line (verbatim):** "<the flagged line, quoted exactly — the ONLY quote of it on this card>"
 - **Why:** <1-2 sentences>

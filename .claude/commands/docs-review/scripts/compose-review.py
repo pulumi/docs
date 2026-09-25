@@ -133,6 +133,12 @@ TEMPORAL_TRIGGERS = {
 # entries; on a claims-dense post that approaches the 65K body cap — keep
 # entries terse).
 TEXT_TRUNC = 160
+# The v3 author card quotes a claim twice: in its table cell and, verbatim,
+# in the `#### F<n> · Do this` block right under the table. The cell only has
+# to say WHICH claim; the block carries the full line. So an author-card
+# cell gets a short excerpt (reader feedback 2026-09-25: the duplicate made
+# the card twice as long as its content).
+AUTHOR_CELL_TRUNC = 90
 EVIDENCE_TRUNC = 240
 
 GH_TIMEOUT = 30
@@ -1353,7 +1359,25 @@ def _stub_bullet(v: dict, todo: str) -> dict:
         "file": file_path,
         "text": redact(trunc(v.get("text") or "", TEXT_TRUNC)),
         "origin": origin,
+        "framing": redact(trunc(fn, 160)) if fn else "",
+        "todo": todo,
     }
+
+
+def author_cell_bullet(stub: dict) -> str:
+    """The v2-shaped bullet for an author-card (🚨/❓) row: a short claim
+    excerpt + the verdict, with no `framing:` note — that moves into the
+    Do-this block's **Why** prompt (render_detail_scaffold), which is where
+    the author reads the reason. Only claim verdicts are shortened: a
+    detector finding's text IS its message, and a stub without the parts
+    (a style-blocker) keeps its bullet."""
+    if not str(stub.get("origin") or "").startswith("verdict:") or "todo" not in stub:
+        return stub["bullet"]
+    text = stub.get("text") or ""
+    excerpt = f"*{quote(trunc(text, AUTHOR_CELL_TRUNC))}* " if text else ""
+    file_part = f" `{stub['file']}` —" if stub.get("file") else ""
+    return (f"- **[{stub['ref']}]**{file_part} {excerpt}— verdict: {stub['verdict']} "
+            f"<TODO: {stub['todo']}>")
 
 
 def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -2086,7 +2110,7 @@ def render_author_orient(n_blocking: int) -> list[str]:
     ]
 
 
-def render_detail_scaffold(fid: str) -> list[str]:
+def render_detail_scaffold(fid: str, framing: str = "") -> list[str]:
     """The per-finding "Do this" block scaffold under the author tables.
 
     One block per blocking finding; the model fills the TODOs. The shape is
@@ -2105,7 +2129,8 @@ def render_detail_scaffold(fid: str) -> list[str]:
         "",
         "- **Line (verbatim):** <TODO: the flagged line, quoted exactly as it "
         "appears in the file — the only quote of it on this card; never a paraphrase>",
-        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>",
+        "- **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)"
+        + (f". The verifier's note, to write from (not to paste): {framing}" if framing else "") + ">",
         "- **Fix:** <TODO: exactly ONE required action, stated first; put any "
         "replacement text in a fenced block at column 0 after this list; label an alternative "
         "\"- **If you'd rather keep it:**\" as a fourth bullet — never two competing imperatives>",
@@ -2292,10 +2317,12 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     outstanding_lines: list[str] = []
     outstanding_ids: list[str] = []
+    framing_by_id: dict[str, str] = {}
     for s in prep["outstanding_stubs"]:
         fid, _ = _assign(s, "outstanding", s["bullet"])
         outstanding_ids.append(fid)
-        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+        framing_by_id[fid] = s.get("framing") or ""
+        outstanding_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
     for f in prep["vale_blockers"]:
         fname = str(f.get("file") or "").strip()
         cat = str(f.get("category") or "style")
@@ -2317,7 +2344,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     for s in author_answer_stubs:
         fid, _ = _assign(s, "author-answer", s["bullet"])
         question_ids.append(fid)
-        question_lines.append(render_finding_line(fid, _v3_adapt_todo(s["bullet"]), link_base=link_base, edit_base=edit_base))
+        framing_by_id[fid] = s.get("framing") or ""
+        question_lines.append(render_finding_line(fid, _v3_adapt_todo(author_cell_bullet(s)), link_base=link_base, edit_base=edit_base))
 
     check_lines: list[str] = []
     for s in reviewer_check_stubs:
@@ -2438,7 +2466,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     ]
     author += _finding_table(outstanding_lines, _V3_EMPTY_OUTSTANDING)
     for fid in outstanding_ids:
-        author += ["", *render_detail_scaffold(fid)]
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
     author += [
         "",
         "### ❓ Questions for you",
@@ -2446,7 +2474,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     ]
     author += _finding_table(question_lines, _V3_EMPTY_QUESTIONS)
     for fid in question_ids:
-        author += ["", *render_detail_scaffold(fid)]
+        author += ["", *render_detail_scaffold(fid, framing_by_id.get(fid, ""))]
     author += [""]
     if edit_base and (outstanding_lines or question_lines):
         author += [V3_BROWSER_HINT, ""]
