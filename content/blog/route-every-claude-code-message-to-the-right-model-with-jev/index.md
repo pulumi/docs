@@ -21,12 +21,12 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter: "Most Claude Code messages don't need Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. Here's how it decides:"
-    linkedin: "Most messages you send to Claude Code don't need the most capable model, but switching models by hand before every message isn't realistic. Jev, TypeSafe AI's new System One model, doesn't write text: it answers typed questions in a few hundred milliseconds, and its output is free.\n\nI built jev-router, an open source router that asks Jev which Claude model each of your messages needs and sends it there. It only asks when you write a message, and within a session it only moves up, so it never throws away your prompt cache.\n\nHere's how it decides, and how to try it with one command:"
-    bluesky: "Most Claude Code messages don't need Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. How it works, and how to try it:"
+    twitter: "Not every Claude Code message needs Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. Here's how it decides:"
+    linkedin: "Not every message you send to Claude Code needs the most capable model, but switching models by hand before every message isn't realistic. Jev, TypeSafe AI's new System One model, doesn't write text: it answers typed questions in a few hundred milliseconds, and its output is free.\n\nI built jev-router, an open source router that asks Jev which Claude model each of your messages needs and sends it there. It only asks when you write a message, and within a session it only moves up, so it never throws away your prompt cache.\n\nHere's how it decides, and how to try it with one command:"
+    bluesky: "Not every Claude Code message needs Opus. jev-router asks Jev, TypeSafe's System One model, which Claude model each message needs, in a few hundred milliseconds and for a fraction of a cent. How it works, and how to try it:"
 ---
 
-Most messages you send to Claude Code don't need the most capable model. A quick question about a Git command runs on the same model as a refactor across three services, unless you remember to switch models first. Jev, a new model from TypeSafe AI, can make that decision for you in a few hundred milliseconds and for a fraction of a cent. So I built jev-router, an open source router that asks Jev which Claude model each of your messages needs, and sends it there.
+Not every message you send to Claude Code needs the most capable model. A quick question about a Git command runs on the same model as a refactor across three services, unless you remember to switch models first. Jev, a new model from TypeSafe AI, can make that decision for you in a few hundred milliseconds and for a fraction of a cent. So I built jev-router, an open source router that asks Jev which Claude model each of your messages needs, and sends it there.
 
 <!--more-->
 
@@ -46,17 +46,13 @@ Every question takes one of three shapes. A *Noul* asks whether a statement is t
 
 TypeSafe trains Jev with a method it calls reinforcement learning for calibrated decisions (RLCD), and says the probabilities are calibrated: a higher confidence should mean a higher accuracy. It charges $0.042 per million input tokens and calls output tokens too cheap to meter, so they're free.
 
-Cole Medin built with Jev before he [made a video about it](https://youtu.be/bA8WeHYmJko), and he takes on the most common criticism, that Jev is just another classification model. He agrees that's partly true. The difference, in his view, is how general Jev is: the same model triages pull requests in his coding workflows, picks the next move in a video game, and decides where a prompt should go.
+TypeSafe's launch post pitches Jev as one general model for the decisions a program makes: classifying, routing, scoring, extracting, and branching. Deciding which model a prompt needs is one of those routing decisions.
 
 ## Why Claude Code needs a router
 
 Claude Code runs every message in a session on the model you picked. Sonnet 5 and Haiku 4.5 handle plenty of everyday work, but switching by hand means making a decision before every message, and defaulting to Opus 5.5 or Fable 5.1 drains your usage limits or your budget. A router could make that choice for each message, but only if the choice itself is fast and cheap. Asking an LLM which model to use adds seconds and tokens to every message, and that eats into whatever the routing saves.
 
-Jev makes the decision cheap enough to ask every time. In [a video about Jev and Claude Code](https://www.youtube.com/watch?v=tTnUcSj-QPA), Jay E of RoboNuggets ran 12 prompts twice: once with Jev choosing the model for each prompt, and once with Fable 5.1 for all of them. Jev sent three prompts to Haiku, four to Sonnet, two to Opus, and three to Fable. The routed run cost $0.32, and Fable on every prompt cost $0.55.
-
-![Diagram of the RoboNuggets demo: Jev routed 12 prompts to Haiku (3), Sonnet (4), Opus (2), and Fable (3). The routed run cost $0.32, and Fable 5.1 on every prompt cost $0.55, 1.7 times as much.](jev-routing-cost-demo.png)
-
-Cole Medin measured the routing decision itself. In his tests, dozens of decisions cost four tenths of a cent in total and took about two tenths of a second each. jev-router puts that decision in front of every message you write in Claude Code.
+Jev makes the decision cheap enough to ask every time. A routing call sends Jev a few hundred tokens that describe your message and the session, and costs about $0.00003. jev-router puts that decision in front of every message you write in Claude Code.
 
 ## How jev-router works
 
