@@ -41,7 +41,7 @@ How you serialize updates depends on your CI/CD system:
 - **GitLab CI/CD** — assign deployment jobs a [`resource_group`](/docs/iac/operations/continuous-delivery/gitlab-ci/#serialize-deployments) so GitLab runs them one at a time.
 - **Travis CI** — set **Limit concurrent jobs** to `1` for deployment builds, as described in the [Travis CI guide](/docs/iac/operations/continuous-delivery/travis/#concurrency).
 - **Azure Pipelines** — add an [exclusive lock check](/docs/iac/operations/continuous-delivery/azure-devops/#serialize-deployments-with-an-exclusive-lock) to the environment your deployment job targets, with `lockBehavior: sequential` on the stage.
-- **AWS CodePipeline** — set the pipeline's [execution mode](/docs/iac/operations/continuous-delivery/aws-code-services/#serialize-pipeline-executions) to `QUEUED` so executions run one at a time instead of the default, which lets a newer one cancel an older one mid-flight.
+- **AWS CodePipeline** — set the pipeline's [execution mode](/docs/iac/operations/continuous-delivery/aws-code-services/#serialize-pipeline-executions) to `QUEUED` so waiting executions run in turn instead of the default, which lets a newer execution supersede an older one that's still waiting to start.
 - **TeamCity** — set **Limit the number of simultaneously running builds** to `1` on the build configuration, as described in the [TeamCity guide](/docs/iac/operations/continuous-delivery/teamcity/#limit-concurrent-builds).
 - **Jenkins** — wrap the deployment stage in a [`lock`](https://www.jenkins.io/doc/pipeline/steps/lockable-resources/) step from the Lockable Resources plugin, keyed to the stack, so the Jenkins queue holds a second run until the first finishes:
 
