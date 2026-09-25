@@ -211,7 +211,7 @@ A stack can export values as stack outputs. These outputs are shown during an up
 
 To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -274,6 +274,15 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "url" {
+  value = aws_instance.web.public_dns
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -285,7 +294,7 @@ Stack exports are effectively JSON serialized, though quotes are removed when ex
 
 For example, the following statements:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -351,6 +360,19 @@ outputs:
   x: hello
   o:
     num: 42
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "x" {
+  value = "hello"
+}
+
+output "o" {
+  value = { num = 42 }
+}
 ```
 
 {{% /choosable %}}
@@ -497,7 +519,7 @@ After running `pulumi up`, the rendered README appears on the stack's **README**
 
 The {{< pulumi-getstack >}} function gives you the currently deploying stack, which can be useful in naming, tagging, or accessing resources.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -542,6 +564,17 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  stack = pulumi.stack
+}
+```
+
+The companion references `pulumi.project` and `pulumi.organization` are available the same way.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -551,7 +584,7 @@ Stack references allow you to access the outputs of one stack from another stack
 
 To reference values from another stack, create an instance of the `StackReference` type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -613,6 +646,21 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+In Pulumi HCL, a stack reference is a `pulumi_stack_reference` resource. Its `outputs` attribute is a map of the referenced stack's exports, indexed by name:
+
+```hcl
+resource "pulumi_stack_reference" "other" {
+  name = "acmecorp/infra/other"
+}
+
+locals {
+  other_output = pulumi_stack_reference.other.outputs["x"]
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -630,7 +678,7 @@ and testing — you have six distinct stacks that pair up in the following ways:
 The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 your infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -685,6 +733,15 @@ outputs:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+output "kubeConfig" {
+  value = module.cluster.kubeconfig # a cluster's output property
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -693,7 +750,7 @@ connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -825,6 +882,35 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+resource "pulumi_stack_reference" "infra" {
+  name = "mycompany/infra/${pulumi.stack}"
+}
+
+provider "kubernetes" {
+  kubeconfig = pulumi_stack_reference.infra.outputs["kubeConfig"]
+}
+
+resource "kubernetes_namespace" "app" {
+  metadata = {
+    name = "my-app"
+  }
+}
+```
+
+The `pulumi/` source prefix selects the native Pulumi Kubernetes provider, which takes a `kubeconfig` argument directly. The bridged `hashicorp/kubernetes` provider you would get from an unqualified `kubernetes` source configures itself differently — with `config_path`, `host`, and friends — so check the provider's own documentation when you use a bridged provider here.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -855,7 +941,7 @@ Stack references support the following methods for reading outputs from the refe
 The following example uses `requireOutput`, the recommended default that fails at deployment
 time if the output is missing, to read a `vpcId` export:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -925,13 +1011,33 @@ variables:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "pulumi_stack_reference" "infra" {
+  name = "acmecorp/infra/prod"
+}
+
+locals {
+  # Fails at deployment time if "vpcId" is not in the referenced stack's exports.
+  vpc_id = pulumi_stack_reference.infra.outputs["vpcId"]
+}
+```
+
+{{% notes type="info" %}}
+Indexing the `outputs` map is the Pulumi HCL equivalent of `requireOutput`: a name that
+the referenced stack does not export is an `Invalid index` error at deployment time. For
+`getOutput` behavior, see the next example.
+{{% /notes %}}
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 The following example uses `getOutput`, which lets a missing output propagate silently, to read
 a `privateIp` output, then transforms it with `Output.apply` to build a derived value:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1024,13 +1130,34 @@ exist in the referenced stack.
 {{% /notes %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+Wrap the lookup in [`try`](/docs/iac/languages-sdks/hcl/hcl-language-reference/#try-and-can), or use `lookup` with a fallback, to get `getOutput`'s tolerance of a missing name. No `apply` step is needed: an ordinary HCL expression over a stack reference output produces a derived value directly.
+
+```hcl
+resource "pulumi_stack_reference" "infra" {
+  name = "acmecorp/infra/prod"
+}
+
+locals {
+  ip      = try(pulumi_stack_reference.infra.outputs["privateIp"], "unknown")
+  log_key = "logs/${local.ip}.log"
+}
+
+resource "aws_s3_object" "log" {
+  # ...
+  key = local.log_key
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 The following example uses `getOutputDetails`, which bypasses the `Output` wrapper, in a case
 where the referenced stack exports a database hostname as a plain string:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1141,6 +1268,17 @@ infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
 `getOutputDetails` is not supported in Pulumi YAML. To read a stack reference
 output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
 `requireOutput` example above.
+{{% /notes %}}
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+{{% notes type="info" %}}
+`getOutputDetails` has no Pulumi HCL equivalent. HCL expressions are not wrapped in
+`Output`, so there is nothing to unwrap: index the `outputs` map of a
+`pulumi_stack_reference` resource, as shown in the `requireOutput` example above, and use
+the result like any other value. A secret output stays secret as it flows through the
+program.
 {{% /notes %}}
 
 {{% /choosable %}}
