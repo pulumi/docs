@@ -107,12 +107,12 @@ npx @ediri/jev-router setup
 claude
 ```
 
-Setup asks which models to use. The default is Claude only; the second option adds Fable 5.1 for deep work, the way the live view above routes the redesign. Then setup checks your Jev key with one call that costs about $0.00003, saves the key in a file only you can read, starts the router in the background as a launchd agent on macOS or a systemd user service on Linux, and points Claude Code at it. To switch models later, run setup again. Afterwards, `jev-router doctor` checks the setup. `jev-router uninstall` removes the service and takes the router back out of Claude Code's settings.
+Setup asks which models to use. The default is Claude only; the second option adds Fable 5.1 for deep work, the way the live view above routes the redesign. Then it asks for your Jev key and checks it with one call that costs about $0.00003. It saves the key in a file only you can read, installs jev-router globally with npm because a background service can't run from npx's cache, starts the router as a launchd agent on macOS or a systemd user service on Linux, and points Claude Code at it. To switch models later, run setup again. Afterwards, `jev-router doctor` checks the setup. `jev-router uninstall` removes the service and takes the router back out of Claude Code's settings.
 
-If your team keeps API keys in [Pulumi ESC](/docs/esc/), setup can take the Jev key from an environment that exports `TYPESAFE_API_KEY` instead of asking you for it:
+If your team keeps API keys in [Pulumi ESC](/docs/esc/), setup can take the Jev key from an environment that exports `TYPESAFE_API_KEY` instead of asking you for it. With `--yes`, setup asks nothing and takes its defaults; add `--models fable` for the Fable option:
 
 ```bash
-pulumi env run <your-org>/<your-environment> -- npx --yes @ediri/jev-router setup --yes
+pulumi env run <your-org>/<your-project>/<your-environment> -- npx --yes @ediri/jev-router setup --yes
 ```
 
 Setup keeps Claude Code on Claude models by default, because Anthropic doesn't support pointing Claude Code at other models through a gateway. The router also works with the Codex CLI, which it routes across OpenAI and Ollama Cloud models.
