@@ -440,3 +440,53 @@ def test_summary_shape_is_validated():
             assert needle in str(exc), exc
         else:
             raise AssertionError(f"summary {bad[:10]!r} must be rejected")
+
+
+def _all_answered():
+    up = _update([
+        {"id": "F1", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+        {"id": "F2", "action": "resolve", "annotation": "fixed in 5a5a5a5"},
+        {"id": "F3", "action": "concede", "reason": "author named the source"},
+    ])
+    return au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+
+
+def test_empty_blocking_sections_drop_together_when_nothing_is_left():
+    """Reader feedback 2026-09-25: a nothing-for-you card spent eight lines
+    on two sections each saying "nothing here" under a NOTE that already
+    said so."""
+    a_out, b_out, _, report = _all_answered()
+    assert report["blocking"] == 0 and "— nothing blocks merge" in a_out
+    assert "\n### 🚨" not in a_out and "\n### ❓" not in a_out
+    assert au.cr._V3_EMPTY_OUTSTANDING not in a_out and au.cr._V3_EMPTY_QUESTIONS not in a_out
+    assert "\n\n\n" not in a_out.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0], "no blank-line pile-up"
+    assert [ln.split("|")[1].strip() for ln in au._collect_resolved(a_out)] == ["**F1**", "**F2**", "**F3**"]
+    import test_validate_pinned_v3 as tv
+    assert [v.rule_id for v in tv.check(a_out, b_out)] == []
+
+
+def test_dropped_sections_come_back_for_a_reopened_row():
+    a1, b1, _, _ = _all_answered()
+    up = _update([{"id": "F2", "action": "reopen", "reason": "d1d1d1d reverted it"}], case="re-verify")
+    a2, _, _, report = au.apply(a1, b1, up, head_sha="d" * 40, actor="update-lane", auto=False)
+    assert report["blocking"] == 1
+    assert "### 🚨 Fix or disagree" in a2 and "### ❓ Questions for you" in a2
+    assert "F2" in _open_author_ids(a2)
+    assert a2.index("\n### 🚨") < a2.index("\n### ❓") < a2.index("\n" + au.RESOLVED_HEADING)
+
+
+def test_dropped_sections_come_back_for_an_added_row():
+    a1, b1, _, _ = _all_answered()
+    up = _update([{"action": "add", "bucket": "author-answer", "file": "content/docs/iac/x.md",
+                   "lines": [70], "text": "*\"new claim\"* — verdict: unverifiable"}], case="re-verify")
+    a2, _, _, report = au.apply(a1, b1, up, head_sha="e" * 40, actor="update-lane", auto=False)
+    assert report["blocking"] == 1 and "### ❓ Questions for you" in a2
+    assert au.cr._V3_EMPTY_OUTSTANDING in a2, "the other section returns in its empty form"
+
+
+def test_a_row_in_either_section_keeps_both():
+    be = au.be
+    assert be.drop_empty_author_sections(AUTHOR) == AUTHOR
+    one_left = AUTHOR.replace(au.cr._V3_EMPTY_QUESTIONS, "- a stray prose line")
+    assert be.drop_empty_author_sections(one_left) == one_left
+    assert be.ensure_author_sections(AUTHOR) == AUTHOR, "no-op when the headings exist"

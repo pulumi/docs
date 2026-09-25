@@ -435,6 +435,9 @@ def apply(
     new_rev = (int(m_rev.group(1)) + 1) if m_rev else 2
 
     author_body = _BANNER_RE.sub("", author_body)
+    # A nothing-for-you card publishes without 🚨/❓; restore them so a
+    # reopened, added, or promoted row has a section to land in.
+    author_body = be.ensure_author_sections(author_body)
     author_body, detail_blocks = _strip_detail_blocks(author_body)
     rows = _collect_rows(author_body, brief_body)
     resolved_rows = _collect_resolved(author_body)
@@ -615,6 +618,7 @@ def apply(
     # accepted` that landed before this refresh must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
+    author_out = be.drop_empty_author_sections(author_out)
     if str(update.get("summary") or "").strip():
         author_out = replace_summary(author_out, update["summary"])
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)

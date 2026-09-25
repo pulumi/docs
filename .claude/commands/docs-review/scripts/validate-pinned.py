@@ -351,6 +351,7 @@ V3_AUTHOR_SECTIONS = ["🚨 Fix or disagree", "❓ Questions for you", "✅ Reso
 # v1 card made readers hunt for a review that never existed); apply-update.py
 # inserts it on the first resolve.
 V3_OPTIONAL_SECTIONS = {"✅ Resolved since last review"}
+V3_AUTHOR_DROPPABLE_PAIR = ("🚨 Fix or disagree", "❓ Questions for you")
 V3_BRIEF_SECTIONS = ["⚠️ Check these before approving", "✅ What you can rubber-stamp"]
 # The in-place rewrite labels build-evidence.py files off the cards — a bullet
 # whose body starts with one of these is dispositioned, not deleted.
@@ -2834,10 +2835,16 @@ def check_v3_section_order(ctx: Context) -> list[Violation]:
                                   ("brief", ctx.brief or "", V3_BRIEF_SECTIONS)):
         h3s = [line for line in text.splitlines() if line.startswith("### ")]
         positions = []
+        # A card with nothing for the author drops 🚨 and ❓ together
+        # (build-evidence.drop_empty_author_sections) — never one alone.
+        pair_dropped = where == "author" and not any(
+            n in h for h in h3s for n in V3_AUTHOR_DROPPABLE_PAIR)
         for name in expected:
             idx = next((i for i, h in enumerate(h3s) if name in h), None)
             if idx is None:
                 if name in V3_OPTIONAL_SECTIONS:
+                    continue
+                if pair_dropped and name in V3_AUTHOR_DROPPABLE_PAIR:
                     continue
                 v.append(Violation("v3-section-order", f"<{where}>",
                                    f"section `### {name}` present", "section missing",

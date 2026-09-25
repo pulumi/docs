@@ -438,6 +438,7 @@ def build(author_body: str, brief_body: str, base: dict,
     evidence["style_suggestions_count"] = n_style + n_nits
     brief_out = refresh_style_line(brief_out, n_style, n_nits)
     author_out = drop_empty_style_block(author_out)
+    author_out = drop_empty_author_sections(author_out)
     # The Waiting-on-the-author block is composer-owned: regenerate it from
     # the FINAL findings + dispositions so model edits (promotions included)
     # can never leave it stale.
@@ -534,6 +535,64 @@ def drop_empty_style_block(author_body: str) -> str:
     while start > 0 and not lines[start - 1].strip():
         start -= 1
     lines[start:end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
+
+
+_EMPTY_AUTHOR_BLOCK = [
+    "### 🚨 Fix or disagree", "", cr._V3_EMPTY_OUTSTANDING, "",
+    "### ❓ Questions for you", "", cr._V3_EMPTY_QUESTIONS,
+]
+
+
+def drop_empty_author_sections(author_body: str) -> str:
+    """Remove 🚨 and ❓ when BOTH hold nothing but their empty placeholder.
+
+    A card with nothing for the author to do opened with a NOTE saying so
+    and then spent eight lines on two headed sections each saying "nothing
+    here" (reader feedback, 2026-09-25). The NOTE is the whole message.
+
+    Strict on purpose: any row, bullet, or other text in either section
+    keeps both. "Nothing blocks merge" is not the test — a `/resolve`d row
+    stays in its section with a disposition, and must stay visible. The
+    update lane re-inserts the pair (ensure_author_sections) before placing
+    a reopened, added, or promoted row, then calls this again."""
+    lines = author_body.splitlines()
+    spans = _sections(author_body, AUTHOR_SECTIONS)
+    if sorted(b for b, _s, _e in spans) != ["author-answer", "outstanding"]:
+        return author_body
+    allowed = {cr._V3_EMPTY_OUTSTANDING, cr._V3_EMPTY_QUESTIONS}
+    for _bucket, start, end in spans:
+        if any(ln.strip() and ln.strip() not in allowed for ln in lines[start:end]):
+            return author_body
+    (_b1, first_start, first_end), (_b2, second_start, second_end) = sorted(spans, key=lambda t: t[1])
+    if first_end != second_start - 1:
+        return author_body  # not adjacent (something sits between them): leave it alone
+    head = first_start - 1  # _sections spans start on the line after the heading
+    while head > 0 and not lines[head - 1].strip():
+        head -= 1
+    lines[head:second_end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
+
+
+def ensure_author_sections(author_body: str) -> str:
+    """Inverse of drop_empty_author_sections: when a card has neither 🚨
+    nor ❓, put the empty pair back where the composer renders it (after
+    the header region, before the first H3/H4 or card furniture), so a
+    re-render has somewhere to place a row. A card with either heading is
+    returned unchanged."""
+    lines = author_body.splitlines()
+    # Line-anchored: finding text can quote a heading (the composer's own
+    # TODO stubs say "promote to `### 🚨 Fix or disagree`").
+    if any(ln.startswith(h) for ln in lines for h in AUTHOR_SECTIONS):
+        return author_body
+    head = next((i for i, ln in enumerate(lines) if _HEADER_RE.match(ln)), None)
+    if head is None:
+        return author_body
+    at = next((i for i in range(head + 1, len(lines)) if is_section_terminator(lines[i])),
+              len(lines))
+    while at > head + 1 and not lines[at - 1].strip():
+        at -= 1
+    lines[at:at] = ["", *_EMPTY_AUTHOR_BLOCK]
     return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
 
 

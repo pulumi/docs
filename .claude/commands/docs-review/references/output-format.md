@@ -481,7 +481,13 @@ _<one sentence: what the PR is and what the review checked>_
 ```
 
 The zero-blocking header is `## Author action guide vN — nothing blocks merge` with a NOTE
-alert instead of the IMPORTANT one. Rows carry no status column —
+alert instead of the IMPORTANT one. When 🚨 and ❓ both hold nothing but their empty
+placeholders, the published card omits **both** sections (the NOTE already says there is
+nothing to do): `build-evidence.drop_empty_author_sections` at initial publish and after
+every update-lane render. The composer still emits them so the model has an anchor to add a
+row under, and the update lane restores the pair (`ensure_author_sections`) before placing a
+reopened, added, or promoted row. Never one without the other — a row that a `/resolve`
+dispositioned stays visible in its section. Rows carry no status column —
 REVIEW_STATE is the state, and the section a row lives in is the display.
 
 ### Reviewer brief — `.review-draft-brief.md`

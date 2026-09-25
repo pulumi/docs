@@ -662,3 +662,36 @@ def test_update_lane_recounts_nits(v3_outputs):
     author, brief, base = v3_outputs
     ev = _update_round(base, _append_nit(author), brief)
     assert ev["style_suggestions_count"] == 2
+
+
+def _compose_v3_clean(tmp_path) -> tuple[str, str, dict]:
+    """A v3 compose with nothing to report: no Vale findings, no verdicts,
+    no detector artifacts."""
+    empty = tmp_path / "empty.json"
+    empty.write_text("[]")
+    author, brief, ev = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(brief), "--out-evidence", str(ev),
+    ])
+    for flag in ("--vale-findings", "--verified-claims"):
+        cmd[cmd.index(flag) + 1] = str(empty)
+    for flag in ("--frontmatter", "--hugo-build", "--editorial-balance", "--cross-sibling"):
+        cmd[cmd.index(flag) + 1] = "/dev/null"
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(ev.read_text())
+
+
+def test_clean_card_publishes_without_the_empty_blocking_sections(tmp_path):
+    """The composer keeps both sections so the model has somewhere to add a
+    finding; with none added, the published card is just the NOTE."""
+    author, brief, base = _compose_v3_clean(tmp_path)
+    assert "\n### 🚨 Fix or disagree\n" in author and "\n### ❓ Questions for you\n" in author
+    be_mod = _load("build_evidence_for_clean", HERE / "build-evidence.py")
+    _ev, author_out, brief_out = be_mod.build(author, brief, base)
+    assert "— nothing blocks merge" in author_out
+    assert "\n### 🚨" not in author_out and "\n### ❓" not in author_out
+    assert "\n\n\n" not in author_out.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0]
+    import test_validate_pinned_v3 as tv
+    assert [v.rule_id for v in tv.check(author_out, brief_out, _ev)] == []
