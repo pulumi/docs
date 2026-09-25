@@ -2431,7 +2431,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     if prep["outage_banner"]:
         author += [prep["outage_banner"], ""]
     author += [
-        "_<TODO: one sentence — what this PR is and what the review checked>_",
+        "_<TODO: one sentence — what this PR is and what the review checked. No counts of open items and nothing only the author can answer: the header and sections carry the live state, and this line outlives them>_",
         "",
         "### 🚨 Fix or disagree",
         "",

@@ -403,3 +403,40 @@ def test_rebuild_detail_block_accepts_the_legacy_paragraph_form_and_emits_bullet
     ]
     bulleted = ["#### F2 · Do this", "", '- **Line (verbatim):** "b"', "- **Why:** w", "- **Fix:** f"]
     assert au._rebuild_detail_block("F2", bulleted, {"why": "w2", "fix": "f2"})[2] == '- **Line (verbatim):** "b"'
+
+
+def test_summary_replaces_the_stale_sentence_and_nothing_else():
+    """pulumi/docs#21871: the v1 sentence named four claims "only you can
+    confirm" and stayed on the card after all four resolved."""
+    up = _update([{"id": "F1", "action": "resolve", "annotation": "fixed in 9f9f9f9"}])
+    up["summary"] = "Adds a component doc; the review fact-checked 12 claims and the build."
+    a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "_Adds a component doc; the review fact-checked 12 claims and the build._" in a_out
+    assert "<TODO: one sentence" not in a_out
+    head = a_out.split("### ", 1)[0]
+    assert head.count("\n_") == 1, "exactly one summary line above the first section"
+    no_summary, _, _, _ = au.apply(AUTHOR, BRIEF, _update([{"id": "F1", "action": "resolve",
+                                                            "annotation": "fixed in 9f9f9f9"}]),
+                                   head_sha=SHA, actor="cam", auto=False)
+    assert "<TODO: one sentence" in no_summary, "an omitted summary leaves the line alone"
+
+
+def test_summary_is_inserted_when_the_card_has_none():
+    body = "\n".join(ln for ln in AUTHOR.splitlines() if not ln.startswith("_<TODO: one sentence"))
+    out = au.replace_summary(body + "\n", "A new sentence.")
+    lines = out.splitlines()
+    i = lines.index("_A new sentence._")
+    assert lines[i - 1] == "" and lines[i - 2].startswith(">"), "lands right under the callout"
+    assert i < next(j for j, ln in enumerate(lines) if ln.startswith("### "))
+
+
+def test_summary_shape_is_validated():
+    for bad, needle in (("", "non-empty"), ("two\nlines", "one line"), ("x" * 301, "≤300")):
+        up = _update([])
+        up["summary"] = bad
+        try:
+            au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+        except au.UpdateError as exc:
+            assert needle in str(exc), exc
+        else:
+            raise AssertionError(f"summary {bad[:10]!r} must be rejected")

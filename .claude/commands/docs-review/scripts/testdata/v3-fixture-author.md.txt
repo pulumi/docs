@@ -8,7 +8,7 @@
 >
 > **To answer:** push a fix, or reply with the item's ID — `@claude F1: <what you fixed, why it's wrong, or "accepting as-is — why"> #update-review`. The `#update-review` tag is required; a reply without it doesn't count. Worked examples: **How to answer** at the bottom.
 
-_<TODO: one sentence — what this PR is and what the review checked>_
+_<TODO: one sentence — what this PR is and what the review checked. No counts of open items and nothing only the author can answer: the header and sections carry the live state, and this line outlives them>_
 
 ### 🚨 Fix or disagree
 

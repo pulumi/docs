@@ -25,6 +25,12 @@ The model's patch is a closed action vocabulary over finding ids:
   add       a new finding from the push delta; gets the next F-id
   retext    the finding's body text changes; id and anchor preserved
 
+Beside the actions, an optional top-level `summary` replaces the author
+card's one-sentence italic summary. The composer's sentence is written once
+at v1; when it named open items it went stale the moment they resolved (a
+"nothing blocks merge" card still saying four claims "only you can
+confirm", pulumi/docs#21871).
+
 Disposition mapping (aligned with scrape-review-outcomes.py's v3
 classifier, which this must never contradict):
   - `resolve` writes REVIEW_STATE disposition `fixed` (actor `update-lane`,
@@ -111,6 +117,7 @@ AUTO_FORBIDDEN = ("concede", "hold", "accept", "add")
 ADD_BUCKETS = ("outstanding", "author-answer", "reviewer-check")
 
 RESOLVED_HEADING = "### ✅ Resolved since last review"
+SUMMARY_MAX = 300
 RESOLVED_PLACEHOLDER = "_No items resolved since the last review._"
 # Same placeholder strings the composer uses, so an emptied section reads
 # identically whether the initial lane or a refresh emptied it.
@@ -198,6 +205,14 @@ def validate_update(update: dict, known_ids: set[str],
         problems.append(f"update.case {update.get('case')!r} not in the closed set")
     if not str(update.get("history_summary", "")).strip():
         problems.append("update.history_summary is required")
+    if "summary" in update:
+        summary = update.get("summary")
+        if not isinstance(summary, str) or not summary.strip():
+            problems.append("update.summary, when present, must be a non-empty string")
+        elif "\n" in summary.strip():
+            problems.append("update.summary must be one line")
+        elif len(summary.strip()) > SUMMARY_MAX:
+            problems.append(f"update.summary must be ≤{SUMMARY_MAX} chars")
     findings = update.get("findings")
     if not isinstance(findings, list):
         return problems + ["update.findings must be a list"]
@@ -303,6 +318,36 @@ def _collect_resolved(author_body: str) -> list[str]:
         if in_section and line.startswith("|") and not cr.is_table_furniture(line):
             out.append(line)
     return out
+
+
+def replace_summary(body: str, text: str) -> str:
+    """Swap the author card's italic one-sentence summary for `text`.
+
+    The summary is the first single-line `_…_` paragraph between the H2
+    header and the first section heading (the browser hint is also italic
+    but sits below the tables, and starts with its own fixed prefix). A card
+    with no summary line gets one after the orienting callout rather than
+    silently dropping the model's refresh."""
+    text = " ".join(text.split()).strip("_ ")
+    lines = body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if _AUTHOR_REV_RE.match(ln)), None)
+    if head is None:
+        return body
+    end = next((i for i in range(head + 1, len(lines)) if lines[i].startswith("### ")), len(lines))
+    for i in range(head + 1, end):
+        ln = lines[i]
+        if (len(ln) > 2 and ln.startswith("_") and ln.endswith("_")
+                and not ln.startswith(cr.V3_BROWSER_HINT_PREFIX)):
+            lines[i] = f"_{text}_"
+            break
+    else:
+        # Right after the orienting callout (or the header, if it has none).
+        at = head + 1
+        callout = [i for i in range(head + 1, end) if lines[i].startswith(">")]
+        if callout:
+            at = callout[-1] + 1
+        lines[at:at] = ["", f"_{text}_"]
+    return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
 
 def _render_row(fid: str, ref: str, file: str, body: str,
@@ -570,6 +615,8 @@ def apply(
     # accepted` that landed before this refresh must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
+    if str(update.get("summary") or "").strip():
+        author_out = replace_summary(author_out, update["summary"])
     author_out = _HEAD_RE.sub(f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->", author_out, count=1)
     brief_out = _BRIEF_HEADER_RE.sub(
         f"## Reviewer's guide v{new_rev} — not for the author", brief_out, count=1)

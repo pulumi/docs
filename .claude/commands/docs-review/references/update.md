@@ -242,6 +242,7 @@ If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run
 ```json
 {"schema": 1, "case": "fix-response|dispute|re-verify|mixed",
  "history_summary": "one line for the evidence history (≤120 chars)",
+ "summary": "optional: a replacement for the card's italic one-sentence summary (≤300 chars)",
  "findings": [
    {"id": "F3", "action": "resolve", "annotation": "fixed in a1b2c3"},
    {"id": "F4", "action": "concede", "reason": "author is right about X"},
@@ -341,3 +342,10 @@ disputes or raise findings.
   reviewer. Leave it for the next full review.
 - `history_summary` is the only history the lane writes; the card has no 📜
   section — history lives on the evidence page.
+- `summary` is the only way to change the card's italic one-sentence summary.
+  Send it when the current sentence names open items, counts, or anything
+  "only you can confirm" that this refresh changes — a card headed "nothing
+  blocks merge" must not open by listing claims the author still has to
+  confirm (pulumi/docs#21871). The replacement describes the PR and what the
+  review checked, never the open-item state: the header and sections carry
+  that. Omit it when the existing sentence stays true.
