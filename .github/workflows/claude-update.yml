@@ -497,12 +497,16 @@ jobs:
             --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author
-      # sees something is happening while Sonnet works. The animated
-      # spinner GIF is the action's own tracking-comment image (CDN-
-      # stable). The post step below edits this comment to a done /
-      # errored state when the run completes; the spinner does not
-      # persist past terminal state. Skipped on issue mentions.
+      # In-flight signal. A requested refresh gets a 👀 on the comment that
+      # asked for it (ack-request.sh --start; the finalize step swaps it for
+      # 🚀 or clears it) — a transient "Working on it" comment notified every
+      # PR subscriber and was deleted minutes later. An auto-refresh posts
+      # nothing: the auto-refresh gate already stamped the card's 🔄 banner.
+      # Everything else (a review-body mention, a manual dispatch, a failed
+      # reaction, a PR head without the helper — this step runs before the
+      # action restores `.claude/`) falls back to the spinner comment.
+      # `signal` gates the finalize step, so it's written on every path.
+      # Skipped on issue mentions.
       - name: Post progress signal
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
@@ -510,9 +514,19 @@ jobs:
         id: progress
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          if [ "${{ steps.check-access.outputs.author }}" = "auto-refresh" ]; then
+            echo "signal=none" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ -f "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+            echo "signal=reaction" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           BODY=$(cat <<'EOF'
           <!-- CLAUDE_PROGRESS -->
           <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Working on it — this can take several minutes.
@@ -520,17 +534,21 @@ jobs:
           )
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
+          echo "signal=comment" >> "$GITHUB_OUTPUT"
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
       # No review on a v3-governed PR: hand the whole job to the initial
       # lane. Same dispatch shape as claude-new.yml — force=true bypasses the
-      # skip heuristics (an explicit request overrides them), the progress
-      # comment id travels as dispatcher_comment_id so the initial lane's
-      # finalize step deletes it, and mention_author gets the "regenerated
-      # on @x's request" terminal comment (empty for the auto-refresh path,
-      # which has no human to mention). Everything after this step is
-      # gated off the retry path; the finalize step leaves the progress
-      # comment standing for the dispatched run to own.
+      # skip heuristics (an explicit request overrides them), a spinner
+      # comment (when this run fell back to one) travels as
+      # dispatcher_comment_id so the initial lane's finalize step deletes
+      # it, and mention_author + ack_target get the requester their 🚀 (or
+      # the "regenerated on @x's request" fallback comment; both empty for
+      # the auto-refresh path, which has no human to mention). A 👀 already
+      # on the request stays there: the initial lane re-adds it (a no-op)
+      # and owns clearing it. Everything after this step is gated off the
+      # retry path; the finalize step leaves the progress signal standing
+      # for the dispatched run to own.
       - name: Retry the initial review (no v3 review on this PR yet)
         id: retry-initial
         if: |
@@ -1061,11 +1079,13 @@ jobs:
           fi
           exit 0
 
-      # Runs on success or failure so the transient CLAUDE_PROGRESS
-      # comment always reaches a terminal state.
+      # Runs on success or failure so the progress signal (👀 on the
+      # request, or the fallback spinner comment) always reaches a terminal
+      # state, and the review-state label with it — so it runs whenever the
+      # progress step did, including an auto-refresh that posted nothing.
       #
       # Outcome handling:
-      # - success: DELETE the spinner comment and put a 🚀 reaction on the
+      # - success: clear the 👀 / delete the spinner, and put a 🚀 on the
       #   comment that asked for the refresh (ack-request.sh). The card is
       #   the record of what changed; a `🤖 Review updated on @<author>'s
       #   request.` comment per refresh only buried it in timeline noise
@@ -1074,11 +1094,11 @@ jobs:
       #   below on which `.claude/` this step sees) has no helper — both
       #   fall back to the old comment. An auto-refresh has no requester, so success is
       #   silent: the cleared 🔄 banner and the card's new stamp say it.
-      # - failure: same delete-and-repost, with `🤖 @<author> — review
+      # - failure: clear the signal and post `🤖 @<author> — review
       #   errored. …` so the requester is notified that their request
       #   failed.
-      # - cancelled / skipped: delete the orphan comment (newer run owns
-      #   the surface). No replacement.
+      # - cancelled / skipped: clear the signal (newer run owns the
+      #   surface). No replacement.
       #
       # On success the review-state label transitions based on the
       # refreshed body's 🚨 Outstanding count: ≥1 → review:outstanding-issues,
@@ -1096,11 +1116,11 @@ jobs:
       # hit exactly this). Use `@claude #new-review` there: the initial lane
       # (workflow_run) keeps the PR's own scripts.
       - name: Finalize progress signal
-        if: always() && steps.progress.outputs.comment_id != ''
+        if: always() && steps.progress.outputs.signal != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # The API path of the comment that asked for this run, for the
-          # success reaction. Empty for events that can't take one.
+          # 👀 → 🚀 swap. Empty for events that can't take one.
           ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
@@ -1108,6 +1128,18 @@ jobs:
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
           AUTHOR="${{ steps.check-access.outputs.author }}"
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          # Take down the in-flight signal: the spinner comment if this run
+          # fell back to one, and our 👀 on the request either way (a no-op
+          # when there is none).
+          clear_progress() {
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            fi
+            if [ -f "$ACK" ]; then
+              bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            fi
+          }
           # Retry path: the initial lane was dispatched and owns the progress
           # comment (it deletes it as dispatcher_comment_id) and the labels.
           # Only a failed dispatch is ours to report.
@@ -1116,7 +1148,7 @@ jobs:
               echo "retry dispatched; the initial lane owns the progress signal"
               exit 0
             fi
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            clear_progress
             if [ "$AUTHOR" = "auto-refresh" ]; then
               BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Couldn't start a fresh review (dispatch failed). Mention @claude #new-review to retry.")
             else
@@ -1143,10 +1175,11 @@ jobs:
           # GitHub user, so never render it as an @-mention (it would ping an
           # unrelated account of that name). Plain wording instead.
           if [ "$OUTCOME" = "success" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            fi
             if [ "$AUTHOR" != "auto-refresh" ]; then
               MSG="🤖 Review updated on @${AUTHOR}'s request."
-              ACK=.claude/commands/docs-review/scripts/ack-request.sh
               if [ -f "$ACK" ]; then
                 bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
               else
@@ -1155,9 +1188,9 @@ jobs:
               fi
             fi
           elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            clear_progress
           else
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            clear_progress
             if [ "$AUTHOR" = "auto-refresh" ]; then
               BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Mention @claude #update-review to refresh it.")
             else

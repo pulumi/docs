@@ -221,17 +221,20 @@ an artifact stamped with the SHA it checked out. `handoff_guard.py` compares
 that SHA with the live PR head at publish time and returns one of three
 actions; the workflow owns the side effects of each. `publish` is the normal
 path. `redispatch` (head moved) rests the label at `review:stale`, cleans up
-the spinner, check-run and any `#new-review` confirmation, and hands off to
+the spinner, check-run and any `#new-review` confirmation (a requested run's
+👀 on the request stays for the re-run to own), and hands off to
 the `redispatch` job, which waits for the head to be quiet for `SETTLE_S`
 and dispatches a fresh review at it with `supersede_depth` incremented.
 `rest` (head moved AND this run is already `MAX_DEPTH` re-dispatches deep)
-stops there and rewrites the spinner to say how to refresh by hand. One full
+stops there and rewrites the spinner (or, for a requested run, clears the 👀
+and comments to the requester) to say how to refresh by hand. One full
 review per supersession, never per push: re-triggering on `synchronize` and
 letting `cancel-in-progress` sort it out would burn a partial model run for
 every push in a train. Before this guard learned to reset the label (#21642)
 a superseded publish exited 0 with `review:in-progress` still on the PR and
 nothing scheduled to replace it; `review-label-reconcile.yml` now also sweeps
-that orphan (in-progress for 30+ minutes with no live spinner comment).
+that orphan (in-progress for 30+ minutes with no live spinner comment and no
+bot 👀 on a request).
 
 ## Lane routing
 

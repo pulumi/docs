@@ -154,20 +154,19 @@ jobs:
             clear --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" || true
 
-      # Post a one-line confirmation so the user sees that the dispatch
-      # fired. The dispatched claude-code-review.yml run posts its own
-      # CLAUDE_PROGRESS comment shortly afterwards — that's the user-
-      # visible "working" signal. Two competing CLAUDE_PROGRESS comments
-      # would be confusing, so this one is plain text only.
-      #
-      # Capture the comment ID via `gh api … --jq '.id'` so the dispatched
-      # CCR's finalize step can delete this confirmation on completion and
-      # acknowledge the request with a 🚀 reaction on the #new-review
-      # comment (ack_target; ack-request.sh falls back to a terminal
-      # "Review regenerated on @<author>'s request." comment when there is
-      # nothing to react to). Mirror of claude-update.yml's pattern. If the
-      # post fails the ID falls through empty and CCR's cleanup branches
-      # no-op cleanly.
+      # Acknowledge the request so the user sees the dispatch fired: a 👀
+      # on the #new-review comment (ack-request.sh --start). The dispatched
+      # claude-code-review.yml run keeps it (re-adding it is a no-op) and
+      # swaps it for 🚀 once the cards land, or clears it and posts the
+      # error — so a successful regenerate leaves no bot comment on the
+      # timeline. A plain-text confirmation comment is the fallback when
+      # there's nothing to react to (a review-body mention) or the reaction
+      # fails; its ID travels as dispatcher_comment_id so the dispatched
+      # run deletes it on completion. It stays plain text (no
+      # CLAUDE_PROGRESS marker) because the dispatched run may post its own
+      # spinner, and two competing CLAUDE_PROGRESS comments would confuse.
+      # If the post fails the ID falls through empty and the cleanup
+      # branches no-op cleanly.
       - name: Post confirmation
         id: post-confirmation
         if: |
@@ -178,7 +177,13 @@ jobs:
           AUTHOR: ${{ steps.check-access.outputs.author }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
           REPO: ${{ github.repository }}
+          ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
         run: |
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          if [ -f "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+            echo "comment_id=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           BODY=$(printf '🤖 @%s — pinned review cleared; regenerating from scratch.' "$AUTHOR")
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")

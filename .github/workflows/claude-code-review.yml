@@ -691,19 +691,32 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
-      # "something is happening" while the pre-steps and Opus run. The post
-      # step below edits it to a done/errored state when the review completes.
-      # Separate marker from the pinned review so pinned-comment.sh never
-      # touches it.
+      # In-flight signal. A requested run (#new-review, or the update lane's
+      # retry — both dispatch with ack_target) gets a 👀 on the comment that
+      # asked for it (ack-request.sh --start; re-adding one the dispatcher
+      # already put there is a no-op), which the finalize step or the
+      # publish job swaps for 🚀 or clears. Everything else — a
+      # ready-transition has no request to react to, a failed reaction, a
+      # PR head without the helper — posts a transient <!-- CLAUDE_PROGRESS
+      # --> comment so the author sees "something is happening" while the
+      # pre-steps and Opus run; the finalize step edits it to a
+      # done/errored state. Separate marker from the pinned review so
+      # pinned-comment.sh never touches it. `signal` gates the finalize
+      # step, so it's written on every path.
       - name: Post progress signal
         if: steps.check-access.outputs.has_write_access == 'true'
         id: progress
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACK_TARGET: ${{ github.event.inputs.ack_target }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          if [ -f "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+            echo "signal=reaction" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           BODY=$(cat <<'EOF'
           <!-- CLAUDE_PROGRESS -->
           <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
@@ -711,6 +724,7 @@ jobs:
           )
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
+          echo "signal=comment" >> "$GITHUB_OUTPUT"
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
       # Set the in-progress state label right after the progress signal so
@@ -1817,16 +1831,17 @@ jobs:
           retention-days: 30
           if-no-files-found: ignore
 
-      # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state regardless of outcome.
+      # Runs on success or failure so the progress signal (👀 on the
+      # request, or the spinner comment) always reaches a terminal state
+      # regardless of outcome.
       #
-      # Spinner outcome handling:
-      # - success: delete the spinner. The pinned review is the durable
-      #   artifact; "Review updated." would read strangely as the bot's
-      #   first comment on a fresh PR.
-      # - superseded / skipped: delete the orphan spinner. A superseding
-      #   run owns the user-visible state and this one's progress comment
-      #   is just noise.
+      # Outcome handling:
+      # - success: delete the spinner / swap the 👀 for 🚀. The pinned
+      #   review is the durable artifact; "Review updated." would read
+      #   strangely as the bot's first comment on a fresh PR.
+      # - superseded / skipped: delete the orphan spinner / clear the 👀.
+      #   A superseding run owns the user-visible state (a requested re-run
+      #   puts its own 👀 back) and this one's signal is just noise.
       # - timed out (step or job): edit to a "Review timed out" message
       #   that says the PR exceeds the automated budget and that a bare
       #   retry will hit the same wall — the one case where the generic
@@ -1835,10 +1850,11 @@ jobs:
       #   branch here and silently DELETED the spinner: the author's only
       #   signal was a bare review:error label (observed on PR #20560).
       # - any other (failure, etc.): edit to "Review errored." The
-      #   message stays unattributed; the synchronize path has no
-      #   requester, and on the dispatch path the requester's mention
-      #   is consumed by the success-only "Review regenerated" terminal
-      #   below.
+      #   message stays unattributed on the spinner (the synchronize path
+      #   has no requester). With no spinner to edit — a requested run
+      #   signalled with 👀, or the spinner post failed — the 👀 is cleared
+      #   and the message goes up as a new comment, @-mentioning the
+      #   requester when there is one so their failed request notifies them.
       #
       # Dispatcher confirmation comment cleanup (workflow_dispatch from
       # claude-new.yml only): the dispatcher posts "🤖 @<author> — pinned
@@ -1852,11 +1868,12 @@ jobs:
       # notification). Both branches are no-ops when the inputs are
       # empty (workflow_run path).
       - name: Finalize progress signal
-        if: always() && steps.progress.outputs.comment_id != ''
+        if: always() && steps.progress.outputs.signal != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
           V3_READY: ${{ steps.v3-build.outputs.ready }}
+          ACK_TARGET: ${{ github.event.inputs.ack_target }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
@@ -1864,6 +1881,30 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          clear_eyes() {
+            if [ -f "$ACK" ]; then
+              bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            fi
+          }
+          # Terminal message: edit the spinner in place, or — with none to
+          # edit — clear the 👀 and post it, addressed to the requester.
+          say() {
+            local msg="$1" body
+            if [ -n "$COMMENT_ID" ]; then
+              body=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$msg")
+              gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+                -f body="$body" >/dev/null || true
+              return
+            fi
+            clear_eyes
+            if [ -n "$MENTION_AUTHOR" ]; then
+              msg="🤖 @${MENTION_AUTHOR} — ${msg#🤖 }"
+              msg="${msg/— Review /— review }"
+            fi
+            body=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$msg")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$body" >/dev/null || true
+          }
 
           # v3 handoff succeeded: the credentialed publish job owns every
           # terminal user-visible state — spinner, dispatcher cleanup, the
@@ -1889,31 +1930,30 @@ jobs:
           SUPERSEDED="${{ steps.outcome.outputs.superseded }}"
 
           if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "skipped" ] || [ "$SUPERSEDED" = "true" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            if [ -n "$COMMENT_ID" ]; then
+              gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            fi
             if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
               # A 🚀 on the requesting comment, not a timeline comment
               # (ack-request.sh has the why). Scripts here run from the PR
               # head, which may predate the helper — keep the old comment then.
               MSG="🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
-              ACK=.claude/commands/docs-review/scripts/ack-request.sh
               if [ -f "$ACK" ]; then
-                bash "$ACK" --pr "$PR" --repo "$REPO" --target "${{ github.event.inputs.ack_target }}" --message "$MSG"
+                bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
               else
                 BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
                 gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
               fi
+            else
+              clear_eyes
             fi
           elif [ "$TIMED_OUT" = "true" ]; then
-            # printf, not a YAML literal: an indented continuation line
+            # One line, not a YAML literal: an indented continuation line
             # inside the quoted string would reach GitHub with leading
             # spaces and can render as a Markdown code block.
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it — triage deliberately never removes it).')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
+            say '🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it — triage deliberately never removes it).'
           else
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
+            say '🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
           fi
 
       # Finalize the review-state label based on the published body. Counts
@@ -2203,17 +2243,29 @@ jobs:
           echo "publish: $REASON"
           .claude/commands/docs-review/scripts/set-review-label.sh \
             --pr "$PR" --repo "$REPO" --label review:stale || true
+          ACK_TARGET="${{ github.event.inputs.ack_target }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
           if [ "$ACTION" = "redispatch" ]; then
             SUMMARY="Superseded — the PR head moved to ${LIVE_SHA:0:7} while the review ran. A fresh review is being dispatched at that head."
-            # The re-run posts its own spinner within a minute.
+            # The re-run posts its own spinner within a minute — or, for a
+            # requested run, keeps the 👀 already on the request.
             if [ -n "$PROGRESS_ID" ]; then
               gh api -X DELETE "repos/$REPO/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
             fi
           else
             SUMMARY="Superseded — the PR head kept moving across $DEPTH automatic re-runs, so no review was published. Mention @claude #new-review once the branch settles."
+            MSG='🤖 Review superseded — the branch kept moving while the review ran, so no review was published. Mention `@claude #new-review` once it settles.'
             if [ -n "$PROGRESS_ID" ]; then
-              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review superseded — the branch kept moving while the review ran, so no review was published. Mention `@claude #new-review` once it settles.')
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
               gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
+            elif [ -n "$ACK_TARGET" ]; then
+              # A requested run signalled with 👀 and has no spinner to
+              # edit: take the 👀 down and tell the requester directly.
+              bash .claude/commands/docs-review/scripts/ack-request.sh --clear \
+                --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+              [ -z "$MENTION_AUTHOR" ] || MSG="🤖 @${MENTION_AUTHOR} — review superseded — the branch kept moving while the review ran, so no review was published. Mention \`@claude #new-review\` once it settles."
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
             fi
           fi
           if [ -n "$CHECK_ID" ]; then
@@ -2399,6 +2451,10 @@ jobs:
             bash .claude/commands/docs-review/scripts/ack-request.sh --pr "$PR" --repo "$REPO" \
               --target "${{ github.event.inputs.ack_target }}" \
               --message "🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
+          else
+            # No requester to thank, but never leave a 👀 behind.
+            bash .claude/commands/docs-review/scripts/ack-request.sh --clear --pr "$PR" --repo "$REPO" \
+              --target "${{ github.event.inputs.ack_target }}"
           fi
           exit 0
 
@@ -2440,9 +2496,19 @@ jobs:
               | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true
           fi
           PROGRESS_ID="${{ steps.current.outputs.progress_id }}"
+          MSG='🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
+          ACK_TARGET="${{ github.event.inputs.ack_target }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
           if [ -n "$PROGRESS_ID" ]; then
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.')
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
             gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
+          elif [ -n "$ACK_TARGET" ]; then
+            # 👀-signalled request: clear it and tell the requester directly.
+            bash .claude/commands/docs-review/scripts/ack-request.sh --clear \
+              --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
+            [ -z "$MENTION_AUTHOR" ] || MSG="🤖 @${MENTION_AUTHOR} — review errored while publishing. Flip to draft and back to ready, or mention \`@claude #update-review\`, to retry."
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
           exit 0
 
