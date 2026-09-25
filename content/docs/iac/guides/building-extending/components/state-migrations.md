@@ -190,6 +190,8 @@ These test sketches call the S3 migration directly with inline arrays of JSON-co
 
 The successor assertions check that both the old bucket and the versioning resource map to the new inline bucket’s URN. You can pass the migrated state back into the callback and assert that it returns no changes. Use a preview and update to verify how the engine and provider apply the complete component upgrade.
 
+For a runnable TypeScript example, see the [AWSX VPC state migration](https://github.com/pulumi/examples/tree/master/aws-ts-awsx-vpc-state-migration). It upgrades a VPC from legacy AWSX to modern AWSX and then to plain AWS resources, preserving the existing AWS resource IDs. It includes migration callbacks, tests, and instructions for running each version against the same stack.
+
 ## Restrictions
 
 State-changing migrations require a full update. Pulumi rejects them in these situations:
