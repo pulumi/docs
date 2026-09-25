@@ -1,47 +1,38 @@
 {{ define "main" }}
-    {{- /* The tags taxonomy LIST page, placed at /tags/ because the "tag"
-        taxonomy is not remapped by permalinks.taxonomy (config/_default/
-        config.yml only remaps category/series/industry). Renders an
-        alphabetical directory of every tag term actually in use, linked to
-        its term page (/blog/tag/:slug/, layouts/taxonomy/tag.html), with a
-        post count.
-
-        Unlike categories (data/blog_categories.yaml, a CLOSED, lint-enforced
-        set) tags are curated-but-OPEN: data/blog_tags.yaml is authoring
-        guidance, not build-enforced, and says itself it is "not exhaustive".
-        So this ranges over the real taxonomy (.Data.Terms), which reflects
-        every tag actually applied to a post, rather than that curated list,
-        which would silently omit real tags and 404 nowhere while still
-        under-representing the site.
-
-        Before this template existed, /tags/ fell through to the generic
-        layouts/taxonomy/taxonomy.html, which rendered each row via
-        partialCached "blog/card/list-row.html" -- a blog-POST row card that
-        expects post front matter (category, authors) a term page does not
-        carry. Confirmed by rendering: every row showed an empty category
-        badge, no avatar, and a raw humanized slug for a title (e.g. "Aws"
-        for the "aws" tag). Tags have no curated display-name source
-        (data/blog_tags.yaml is authoring guidance, not build-enforced, and
-        is explicitly non-exhaustive), so the humanized term is still the
-        right title here -- this template gets it from the same
-        partials/blog/term-name.html helper the rest of the tag surface
-        (RSS titles) already uses, rather than reimplementing the fallback.
-        Mirrors the directory-grid markup of layouts/taxonomy/category.terms.html
-        and series.terms.html. Kept noindexed
-        (layouts/partials/taxonomy-indexable.html) -- individual tag term
-        pages stay noindexed too (pulumi-hugo#2138, anti tag-page
-        cannibalization); this is a courtesy index for stray visitors. */ -}}
+    {{- /* The tags taxonomy list page, placed at /blog/tag/ by the
+        permalinks.taxonomy config. An A-Z index of every tag with at least
+        one blog post, linked to its term page. Counts and membership use the
+        same blog-only query as layouts/taxonomy/tag.html, since event and
+        docs pages carry tags too. Labels match the term page header. */ -}}
     {{ partial "blog/header.html" (dict "title" "Tags" "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-8 lg:py-12">
         {{ with .Content }}<div class="blog-post-content mb-10 max-w-3xl">{{ . }}</div>{{ end }}
 
-        <div class="grid grid-cols-1 gap-8 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3">
-            {{ range .Data.Terms.Alphabetical }}
-                <article class="group relative flex flex-col items-start gap-2">
-                    <h2 class="heading-4 m-0!"><a href="{{ .Page.RelPermalink }}" data-track="blog-tag-{{ .Term }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ partial "blog/term-name.html" .Page }}</a></h2>
-                    <p class="m-0! body-sm text-service-black">{{ .Count }} post{{ if ne .Count 1 }}s{{ end }}</p>
-                </article>
+        {{ $groups := dict }}
+        {{ $letters := slice }}
+        {{ range .Data.Terms.Alphabetical }}
+            {{ $count := len (where .Pages "Section" "blog") }}
+            {{ if gt $count 0 }}
+                {{ $letter := substr .Term 0 1 | upper }}
+                {{ if not (in $letters $letter) }}{{ $letters = $letters | append $letter }}{{ end }}
+                {{ $entry := dict "label" (.Term | humanize | lower) "term" .Term "url" .Page.RelPermalink "count" $count }}
+                {{ $groups = merge $groups (dict $letter ((index $groups $letter | default slice) | append $entry)) }}
+            {{ end }}
+        {{ end }}
+        <div class="columns-2 gap-8 sm:columns-3 lg:columns-4 xl:columns-5">
+            {{ range $letters }}
+                <section class="mb-6 break-inside-avoid">
+                    <h2 class="font-overline-sm m-0! mb-2! text-gray-600">{{ . }}</h2>
+                    <ul class="m-0! list-none p-0">
+                        {{ range index $groups . }}
+                            <li class="m-0! body-sm leading-7">
+                                <a href="{{ .url }}" data-track="blog-tag-{{ .term }}" class="text-service-black transition-colors hover:text-violet-primary">{{ .label }}</a>
+                                <span class="text-gray-600">{{ .count }}</span>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </section>
             {{ end }}
         </div>
     </div>

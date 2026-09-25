@@ -1,28 +1,9 @@
 {{ define "main" }}
-    {{- /* The authors taxonomy LIST page, placed at /authors/ because the
-        "authors" taxonomy is not remapped by permalinks.taxonomy
-        (config/_default/config.yml only remaps category/series/industry).
-        Renders a directory of every author term, linked to their term page
-        (/blog/author/:slug/, layouts/taxonomy/author.html), with the
-        person's real name from partials/blog/term-name.html (the same
-        site.Data.team.team lookup author.html and the RSS-title partial
-        already use), and a post count.
-
-        Before this template existed, /authors/ fell through to the generic
-        layouts/taxonomy/taxonomy.html, which rendered each row via
-        partialCached "blog/card/list-row.html" -- a blog-POST row card that
-        expects post front matter (category, authors) a term page does not
-        carry, and a title that is just Hugo's default humanized term slug.
-        Confirmed by rendering: every row showed an empty category badge, no
-        avatar, and a mangled name like "Monica-Rodriguez" instead of
-        "Monica Rodriguez". (The row's date was not the commonly-assumed
-        Hugo zero date -- Hugo aggregates a term page's Date from its member
-        posts -- but the identity and badge fields were still wrong.) Mirrors
-        the directory-grid markup of layouts/taxonomy/category.terms.html and
-        series.terms.html. Kept noindexed
-        (layouts/partials/taxonomy-indexable.html) -- the term pages with 3+
-        posts are the indexable landing pages; this is a courtesy index for
-        stray visitors. */ -}}
+    {{- /* The authors taxonomy list page, placed at /blog/author/ by the
+        permalinks.taxonomy config. A directory of everyone with at least one
+        blog post, linked to their term page. Counts and membership use the
+        same blog-only query as layouts/taxonomy/author.html, since the
+        authors taxonomy also spans docs, changelog, and what-is pages. */ -}}
     {{ partial "blog/header.html" (dict "title" "Authors" "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-8 lg:py-12">
@@ -30,17 +11,25 @@
 
         {{ $authors := slice }}
         {{ range .Data.Terms.Alphabetical }}
-            {{ $name := partial "blog/term-name.html" .Page }}
-            {{ $authors = $authors | append (dict "name" $name "slug" .Term "url" .Page.RelPermalink "count" .Count) }}
-        {{ end }}
-        {{ $authors = sort $authors "name" }}
-        <div class="grid grid-cols-1 gap-8 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3">
-            {{ range $authors }}
-                <article class="group relative flex flex-col items-start gap-2">
-                    <h2 class="heading-4 m-0!"><a href="{{ .url }}" data-track="blog-author-{{ .slug }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ .name }}</a></h2>
-                    <p class="m-0! body-sm text-service-black">{{ .count }} post{{ if ne .count 1 }}s{{ end }}</p>
-                </article>
+            {{ $count := len (where .Pages "Section" "blog") }}
+            {{ if gt $count 0 }}
+                {{ $name := .Term | humanize }}
+                {{ $title := "" }}
+                {{ with index site.Data.team.team .Term }}{{ $name = .name }}{{ $title = .title }}{{ end }}
+                {{ $authors = $authors | append (dict "id" .Term "name" $name "title" $title "url" .Page.RelPermalink "count" $count) }}
             {{ end }}
-        </div>
+        {{ end }}
+        <ul class="m-0! grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {{ range sort $authors "name" }}
+                <li class="group relative m-0! flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-gray-50">
+                    <img src="/images/team/{{ .id }}.jpg" alt="" class="size-14 shrink-0 rounded-full bg-violet-200 object-cover" loading="lazy" decoding="async" />
+                    <div class="flex min-w-0 flex-col">
+                        <a href="{{ .url }}" data-track="blog-author-{{ .id }}" class="body-base truncate font-semibold text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ .name }}</a>
+                        {{ with .title }}<span class="body-sm truncate text-gray-600">{{ . }}</span>{{ end }}
+                        <span class="body-sm text-gray-600">{{ .count }} post{{ if ne .count 1 }}s{{ end }}</span>
+                    </div>
+                </li>
+            {{ end }}
+        </ul>
     </div>
 {{ end }}
