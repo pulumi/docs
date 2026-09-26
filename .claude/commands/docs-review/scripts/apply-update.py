@@ -632,6 +632,9 @@ def apply(
     # run recorded must not be counted back in.
     n_blocking = be.count_blocking(open_findings, merged_state.get("findings", {}))
     author_out = be._fix_header(author_out, n_blocking, rev=new_rev)
+    _contrib = cr.contributing_url_for(repo)
+    author_out = be.restamp_footer(author_out, cr.render_author_footer(_contrib, n_blocking))
+    brief_out = be.restamp_footer(brief_out, cr.render_reviewer_footer(_contrib))
     author_out = be.drop_empty_author_sections(author_out)
     if str(update.get("summary") or "").strip():
         author_out = replace_summary(author_out, update["summary"])
