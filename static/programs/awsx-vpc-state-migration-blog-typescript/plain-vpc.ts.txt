@@ -1,0 +1,13 @@
+const vpc = new aws.ec2.Vpc("vpc", {
+    cidrBlock: "10.0.0.0/16",
+    enableDnsHostnames: true,
+    enableDnsSupport: true,
+    instanceTenancy: "default",
+    tags: vpcTags,
+}, {
+    aliases: [
+        { type: "awsx:x:ec2:Vpc" },
+        { type: "awsx:ec2:Vpc" },
+    ],
+    stateMigrations: [migrateClassicVpc, migrateAwsxVpc],
+});
