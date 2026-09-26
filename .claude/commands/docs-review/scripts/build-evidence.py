@@ -695,6 +695,27 @@ def restamp_footer(body: str, footer: str) -> str:
     return body[:at] + footer.rstrip("\n") + "\n"
 
 
+def restamp_brief_orient(brief_body: str) -> str:
+    """Replace the TIP callout directly under the brief header with the
+    composer's current one, so a refreshed guide doesn't keep the intro it
+    was first published with. Only a `> [!TIP]` block right under the
+    header is touched; anything else there is left alone."""
+    lines = brief_body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if ln.startswith("## Reviewer's guide v")), None)
+    if head is None:
+        return brief_body
+    j = head + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines) or lines[j].strip() != "> [!TIP]":
+        return brief_body
+    k = j
+    while k < len(lines) and lines[k].startswith(">"):
+        k += 1
+    lines[j:k] = cr.render_brief_orient()
+    return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
+
+
 def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
     """Recompute the header's blocking count; `rev` bumps the display
     revision (the update lane passes it — initial-lane fixes keep v1)."""

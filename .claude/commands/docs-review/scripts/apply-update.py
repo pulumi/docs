@@ -635,6 +635,7 @@ def apply(
     _contrib = cr.contributing_url_for(repo)
     author_out = be.restamp_footer(author_out, cr.render_author_footer(_contrib, n_blocking))
     brief_out = be.restamp_footer(brief_out, cr.render_reviewer_footer(_contrib))
+    brief_out = be.restamp_brief_orient(brief_out)
     author_out = be.drop_empty_author_sections(author_out)
     if str(update.get("summary") or "").strip():
         author_out = replace_summary(author_out, update["summary"])

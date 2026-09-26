@@ -569,4 +569,10 @@ def test_old_card_footer_is_replaced_by_the_current_one():
                                   repo="pulumi/docs", pr=999)
     assert "### How to answer" not in a_out and _footer(a_out).count(HOW) == 1
     assert "minutes that matter" not in b_out
+    new_tip = "\n".join(au.cr.render_brief_orient())
+    old_brief_tip = old_brief.replace(new_tip, "> [!TIP]\n> **This is the reviewer's guide.** Work through the ⚠️ checklist below.")
+    assert old_brief_tip != old_brief, "fixture carries the current TIP to swap out"
+    _, b_tip, _, _ = au.apply(old_author, old_brief_tip, up, head_sha=SHA, actor="cam", auto=False,
+                              repo="pulumi/docs", pr=999)
+    assert "This is the reviewer's guide" not in b_tip and new_tip in b_tip
     assert _footer(b_out) == au.cr.render_reviewer_footer("x").rstrip("\n") + "\n"

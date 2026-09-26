@@ -2097,6 +2097,22 @@ def replace_waiting_block(brief_body: str, findings: list[dict],
     return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
 
 
+def render_brief_orient() -> list[str]:
+    """The TIP callout under the brief header. Owned here so the update lane
+    can re-stamp it on cards composed with older wording
+    (build-evidence.restamp_brief_orient)."""
+    return [
+        "> [!TIP]",
+        "> **Check the ⚠️ items, then approve.** Your approval covers only "
+        "those; links, shortcodes, metadata, and verified claims were checked "
+        "by machine (receipts on the evidence page). Code samples are read, "
+        "not compiled.",
+        ">",
+        '> _PR author: nothing here is yours. Your to-do list is the "Author '
+        'action guide" comment._',
+    ]
+
+
 def render_author_orient(n_blocking: int) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
@@ -2574,14 +2590,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         BRIEF_MARKER,
         f"## Reviewer's guide v{rev} — not for the author",
         "",
-        "> [!TIP]",
-        "> **Check the ⚠️ items, then approve.** Your approval covers only "
-        "those; links, shortcodes, metadata, and verified claims were checked "
-        "by machine (receipts on the evidence page). Code samples are read, "
-        "not compiled.",
-        ">",
-        '> _PR author: nothing here is yours. Your to-do list is the "Author '
-        'action guide" comment._',
+        *render_brief_orient(),
         "",
     ]
     if prep["outage_banner"]:
