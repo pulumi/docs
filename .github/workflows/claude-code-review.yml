@@ -696,8 +696,8 @@ jobs:
       # asked for it (ack-request.sh --start; re-adding one the dispatcher
       # already put there is a no-op), which the finalize step or the
       # publish job swaps for 🚀 or clears. Everything else — a
-      # ready-transition has no request to react to, a failed reaction, a
-      # PR head without the helper — posts a transient <!-- CLAUDE_PROGRESS
+      # ready-transition has no request to react to, a failed reaction —
+      # posts a transient <!-- CLAUDE_PROGRESS
       # --> comment so the author sees "something is happening" while the
       # pre-steps and Opus run; the finalize step edits it to a
       # done/errored state. Separate marker from the pinned review so
@@ -712,8 +712,14 @@ jobs:
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
-          ACK=.claude/commands/docs-review/scripts/ack-request.sh
-          if [ -f "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+          # This job checks out the PR head, which can predate ack-request.sh
+          # (every branch cut before it landed), so run the default branch's
+          # copy — otherwise those PRs silently fall back to the spinner.
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
+          if [ -s "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
             echo "signal=reaction" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -1881,9 +1887,14 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
-          ACK=.claude/commands/docs-review/scripts/ack-request.sh
+          # PR-head checkout: run the default branch's ack-request.sh (see
+          # "Post progress signal").
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          [ -s "$ACK" ] || gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
           clear_eyes() {
-            if [ -f "$ACK" ]; then
+            if [ -s "$ACK" ]; then
               bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
             fi
           }
@@ -1935,10 +1946,10 @@ jobs:
             fi
             if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
               # A 🚀 on the requesting comment, not a timeline comment
-              # (ack-request.sh has the why). Scripts here run from the PR
-              # head, which may predate the helper — keep the old comment then.
+              # (ack-request.sh has the why). Keep the old comment if the
+              # default branch's copy couldn't be fetched.
               MSG="🤖 Review regenerated on @${MENTION_AUTHOR}'s request."
-              if [ -f "$ACK" ]; then
+              if [ -s "$ACK" ]; then
                 bash "$ACK" --pr "$PR" --repo "$REPO" --target "$ACK_TARGET" --message "$MSG"
               else
                 BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")

@@ -503,8 +503,7 @@ jobs:
       # PR subscriber and was deleted minutes later. An auto-refresh posts
       # nothing: the auto-refresh gate already stamped the card's 🔄 banner.
       # Everything else (a review-body mention, a manual dispatch, a failed
-      # reaction, a PR head without the helper — this step runs before the
-      # action restores `.claude/`) falls back to the spinner comment.
+      # reaction) falls back to the spinner comment.
       # `signal` gates the finalize step, so it's written on every path.
       # Skipped on issue mentions.
       - name: Post progress signal
@@ -518,12 +517,18 @@ jobs:
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
-          ACK=.claude/commands/docs-review/scripts/ack-request.sh
           if [ "${{ steps.check-access.outputs.author }}" = "auto-refresh" ]; then
             echo "signal=none" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ -f "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
+          # This job checks out the PR head, which can predate ack-request.sh
+          # (every branch cut before it landed), so run the default branch's
+          # copy — otherwise those PRs silently fall back to the spinner.
+          ACK="$RUNNER_TEMP/ack-request.sh"
+          gh api -H 'Accept: application/vnd.github.raw' \
+            "repos/$REPO/contents/.claude/commands/docs-review/scripts/ack-request.sh?ref=${{ github.event.repository.default_branch }}" \
+            > "$ACK" 2>/dev/null || : > "$ACK"
+          if [ -s "$ACK" ] && bash "$ACK" --start --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"; then
             echo "signal=reaction" >> "$GITHUB_OUTPUT"
             exit 0
           fi

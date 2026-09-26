@@ -56,7 +56,7 @@ Automations default to two settings that fit recurring work. Approval mode is [*
 
 A scheduled task uses the same context as an interactive Neo task. [Custom Instructions](/docs/ai/neo/settings/) at the organization and project level apply, so a scheduled run respects the same naming conventions, tagging policies, and architecture rules your team has written down.
 
-[MCP integrations](/docs/ai/neo/integrations/mcp/) and [CLI integrations](/docs/ai/neo/integrations/cli/) work in scheduled tasks the same way they work in interactive ones, so a weekly drift check can query AWS through the `aws` CLI, file [Linear](https://linear.app/) issues, and link related [PagerDuty](https://www.pagerduty.com/) incidents. Scheduled tasks also run with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the user who scheduled them, checked at run time; if permissions change between scheduling and execution, the new permissions apply.
+[MCP integrations](/docs/ai/neo/integrations/mcp/) and [CLI integrations](/docs/ai/neo/integrations/cli/) work in scheduled tasks the same way they work in interactive ones, so a weekly drift check can query AWS through the `aws` CLI, file [Linear](https://linear.app/) issues, and link related [PagerDuty](https://www.pagerduty.com/) incidents. Scheduled tasks also run with the [RBAC permissions](/docs/administration/concepts/rbac/) of the user who scheduled them, checked at run time; if permissions change between scheduling and execution, the new permissions apply.
 
 ## Try it out
 
