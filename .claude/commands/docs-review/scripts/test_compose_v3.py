@@ -748,3 +748,12 @@ def test_author_footer_folds_how_to_answer_only_while_something_blocks():
     assert "<summary><strong>How to answer</strong>" in blocking
     assert "How to answer" not in clear and "</details>" not in clear
     assert clear.startswith(cr.FOOTER_SENTINEL) and clear.rstrip().endswith("the review's record.")
+
+
+def test_stale_vocabulary_check_skips_text_quoted_from_the_pr():
+    cr = _load("cr_stale", HERE / "compose-review.py")
+    stance = cr.render_stances([{"file": "references/output-format.md", "line_range": "L340",
+                                 "text": "renders a second H4 inside ⚠️ Low-confidence, before the style block",
+                                 "type": "positioning"}], v3=True)
+    assert cr.stale_v2_tokens(stance) == [], "a quoted stance is the PR's text, not composer scaffolding"
+    assert cr.stale_v2_tokens("### ⚠️ Low-confidence\n") == ["⚠️ Low-confidence"], "composer text still trips it"

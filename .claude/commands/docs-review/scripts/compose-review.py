@@ -2271,6 +2271,19 @@ _V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
 # Stale v2 vocabulary that must never reach a published v3 card; the
 # self-check greps for these (TODO text only — the style H4 is fine).
 _V3_STALE_TOKENS = ("📋 Triaged", "⚠️ Low-confidence", "### 💡 Pre-existing", "trail-verdict-bucket-promotion")
+# Text the composer quotes from the PR (claim cells, stance bullets) always
+# renders through quote() inside italics: *"…"*, with inner double quotes
+# already turned to single ones.
+_QUOTED_SPAN_RE = re.compile(r'\*"[^"\n]*"\*')
+
+
+def stale_v2_tokens(draft: str) -> list[str]:
+    """v2 vocabulary in the composer's own text. Quoted PR text is skipped:
+    a PR that edits the review docs can quote "⚠️ Low-confidence" in a
+    stance bullet, and failing the self-check on that stopped #21920's
+    first review cold."""
+    own = _QUOTED_SPAN_RE.sub("", draft)
+    return [tok for tok in _V3_STALE_TOKENS if tok in own]
 
 
 def _v3_adapt_todo(bullet: str) -> str:
@@ -2729,9 +2742,8 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     if blocking_ids and AUTHOR_STATE_BEGIN not in brief_draft:
         problems.append("brief draft missing the Waiting-on-the-author block")
     for name, draft in (("author", author_draft), ("brief", brief_draft)):
-        for tok in _V3_STALE_TOKENS:
-            if tok in draft:
-                problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
+        for tok in stale_v2_tokens(draft):
+            problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
     ids = [f["id"] for f in evidence_base.get("findings", [])]
     if len(ids) != len(set(ids)):
         problems.append("duplicate finding ids in evidence base")
