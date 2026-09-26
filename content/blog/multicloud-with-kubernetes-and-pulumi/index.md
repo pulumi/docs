@@ -1,7 +1,7 @@
 ---
 title: "Multicloud with Kubernetes and Pulumi"
 date: 2022-06-09T11:40:47-07:00
-meta_desc: "Learn how to customize the multi-cloud developer experience with Kubernetes and Pulumi, using TypeScript"
+meta_desc: "Build a self-service Kubernetes platform with Pulumi Components and the Automation API, provisioning clusters on Civo, Linode, and KinD through one golden-path abstraction."
 authors:
     - guinevere-saenger
 tags:
@@ -17,6 +17,11 @@ decisions which will both support your customers on multiple different clouds, a
 frontend service teams to more easily own their respective parts of your codebase.
 
 <!--more-->
+
+If you're looking for an overview of provisioning and deploying to EKS, AKS, and GKE directly, see
+[Multicloud Kubernetes: Running Apps Across EKS, AKS, and GKE](/blog/multicloud-app/) instead. This
+article goes a layer deeper: it builds a reusable Component and an Automation API-driven workflow so
+other teams can self-serve Kubernetes clusters without touching the underlying provisioning code.
 
 Let's say you provide a hosted service for your customers. You would like to offer customizable Kubernetes cluster
 provisioning, on multiple different clouds, as well as your product service itself.
