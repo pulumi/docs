@@ -178,6 +178,7 @@ If you're interested in exploring Pulumi further, here are several ways to get i
 - Watch our on-demand workshop [Getting Stated with Infrastructure as Code on AWS](https://www.pulumi.com/resources/getting-started-with-iac-pulumi-aws/)
 - Register for one of our upcoming [Platform Engineering or DevOps workshops](https://www.pulumi.com/resources/#upcoming)
 - But most importantly, [try Pulumi](https://app.pulumi.com/signup) today!
+- For a closer look at the engine mechanics behind this migration, see [SST Runs on the Pulumi Engine: What It Means to Build on Pulumi](/blog/sst-built-on-pulumi/)
 
 ---
 
