@@ -428,6 +428,9 @@ def build(author_body: str, brief_body: str, base: dict,
             author_out, dict(state, high_water=evidence["high_water"]))
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     author_out = _fix_header(author_out, n_blocking)
+    _contrib = cr.contributing_url_for(base.get("repo") or "")
+    author_out = restamp_footer(author_out, cr.render_author_footer(_contrib, n_blocking))
+    brief_out = restamp_footer(brief_out, cr.render_reviewer_footer(_contrib))
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
     brief_out = _PREEXISTING_COUNT_RE.sub(lambda m: m.group(1) + str(n_pre), brief_out)
     # The advisory block is the author card's only non-blocking lane, and the
@@ -676,6 +679,43 @@ def refresh_counts(author_body: str, brief_body: str | None, state: dict | None)
     return author_body, brief_body
 
 
+def restamp_footer(body: str, footer: str) -> str:
+    """Replace everything from FOOTER_SENTINEL to the end with `footer`.
+
+    The footer is the card's last block by contract (output-format.md), and
+    both cards' footers are composer-owned, so a refresh re-stamps them
+    rather than carrying forward whatever the card was first published with.
+    Without this, a card composed before a footer change kept the old one
+    through every refresh (#21760 kept an expanded "### How to answer" after
+    the fold shipped). A body with no sentinel is returned unchanged; the
+    validator reports that separately."""
+    at = body.find(cr.FOOTER_SENTINEL)
+    if at < 0:
+        return body
+    return body[:at] + footer.rstrip("\n") + "\n"
+
+
+def restamp_brief_orient(brief_body: str) -> str:
+    """Replace the TIP callout directly under the brief header with the
+    composer's current one, so a refreshed guide doesn't keep the intro it
+    was first published with. Only a `> [!TIP]` block right under the
+    header is touched; anything else there is left alone."""
+    lines = brief_body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if ln.startswith("## Reviewer's guide v")), None)
+    if head is None:
+        return brief_body
+    j = head + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines) or lines[j].strip() != "> [!TIP]":
+        return brief_body
+    k = j
+    while k < len(lines) and lines[k].startswith(">"):
+        k += 1
+    lines[j:k] = cr.render_brief_orient()
+    return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
+
+
 def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
     """Recompute the header's blocking count; `rev` bumps the display
     revision (the update lane passes it — initial-lane fixes keep v1)."""
@@ -837,9 +877,9 @@ def _self_test() -> int:
             fx_all, fid, "accepted", actor="alice", note="ship it",
             now=datetime(2026, 9, 1, 20, 1, tzinfo=timezone.utc))
     ra_all, _ = refresh_counts(review_state.replace_block(fx_author, fx_all), None, fx_all)
-    assert "— nothing blocks merge" in ra_all and "> [!NOTE]" in ra_all and "needs your answers" not in ra_all, "callout swaps at zero"
+    assert "— nothing blocks merge" in ra_all and "> [!NOTE]" in ra_all and "Answer every item" not in ra_all, "callout swaps at zero"
     ra_back, _ = refresh_counts(ra_all, None, None)
-    assert "> [!IMPORTANT]" in ra_back and "needs your answers" in ra_back, "and swaps back"
+    assert "> [!IMPORTANT]" in ra_back and "Answer every item" in ra_back, "and swaps back"
     assert "✋ accepted as-is by the author" in rb and "(1 more is answered — see State)" in rb, rb
     assert "1 settled — see the evidence page" in rb or "Facts:" not in fx_brief, rb
     ra0, _ = refresh_counts(fx_author, None, None)

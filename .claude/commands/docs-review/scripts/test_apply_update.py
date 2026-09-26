@@ -520,3 +520,59 @@ def test_empty_or_placeholder_summary_is_treated_as_absent():
         up["summary"] = val
         a_out, _, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
         assert "<TODO: one sentence" in a_out and "<optional" not in a_out
+
+
+# ---- footers are re-stamped on refresh -------------------------------------
+
+_ALL_ACCEPTED = [{"id": fid, "action": "accept", "reason": "shipping as-is"} for fid in ("F1", "F2", "F3")]
+HOW = "<summary><strong>How to answer</strong>"
+
+
+def _footer(body: str) -> str:
+    return body[body.index(au.cr.FOOTER_SENTINEL):]
+
+
+def test_how_to_answer_fold_leaves_when_nothing_blocks():
+    assert HOW in AUTHOR, "fixture blocks merge, so it carries the fold"
+    a_out, _, _, report = au.apply(AUTHOR, BRIEF, _update(_ALL_ACCEPTED, case="dispute"),
+                                   head_sha=SHA, actor="cam", auto=False, repo="pulumi/docs", pr=999)
+    assert report["blocking"] == 0
+    assert HOW not in a_out and "Every 🚨 and ❓ item" not in a_out
+    assert _footer(a_out).rstrip().endswith("Please don't edit or delete this comment; it's the review's record.")
+
+
+def test_how_to_answer_fold_returns_when_a_finding_reopens():
+    resolve_all = [{"id": fid, "action": "resolve", "annotation": "fixed in 1cb28d8"} for fid in ("F1", "F2", "F3")]
+    a1, b1, _, r1 = au.apply(AUTHOR, BRIEF, _update(resolve_all, case="fix-response"),
+                             head_sha=SHA, actor="update-lane", auto=False, repo="pulumi/docs", pr=999)
+    assert r1["blocking"] == 0 and HOW not in a1
+    prior = {"findings": [{"id": "F1", "bucket": "outstanding", "text": "original F1 text", "file": "content/docs/iac/x.md"}]}
+    a2, _, _, r2 = au.apply(a1, b1, _update([{"id": "F1", "action": "reopen", "reason": "reverted"}], case="re-verify"),
+                            head_sha=SHA, actor="update-lane", auto=False, repo="pulumi/docs", pr=999, prior=prior)
+    assert r2["blocking"] == 1
+    assert _footer(a2).count(HOW) == 1
+    assert "https://github.com/pulumi/docs/blob/master/CONTRIBUTING.md#ai-assisted-contributions" in _footer(a2)
+
+
+def test_old_card_footer_is_replaced_by_the_current_one():
+    # Cards published before the fold shipped carry an expanded
+    # "### How to answer" and the old reviewer footer; a refresh re-stamps both.
+    old_author = AUTHOR[:AUTHOR.index(au.cr.FOOTER_SENTINEL)] + (
+        au.cr.FOOTER_SENTINEL + "\n\n---\n\n### How to answer\n\nEvery 🚨 and ❓ item above needs one "
+        "of these before merge:\n\n1. **Fix it**\n\nPlease don't edit, hide, or delete this comment — "
+        "it is the review's record.\n")
+    old_brief = BRIEF[:BRIEF.index(au.cr.FOOTER_SENTINEL)] + (
+        au.cr.FOOTER_SENTINEL + "\n\n---\n\n**For the reviewer:** the ⚠️ items above are the minutes "
+        "that matter — …\n")
+    up = _update([{"id": "F3", "action": "retext", "text": "sharper question"}])
+    a_out, b_out, _, _ = au.apply(old_author, old_brief, up, head_sha=SHA, actor="cam", auto=False,
+                                  repo="pulumi/docs", pr=999)
+    assert "### How to answer" not in a_out and _footer(a_out).count(HOW) == 1
+    assert "minutes that matter" not in b_out
+    new_tip = "\n".join(au.cr.render_brief_orient())
+    old_brief_tip = old_brief.replace(new_tip, "> [!TIP]\n> **This is the reviewer's guide.** Work through the ⚠️ checklist below.")
+    assert old_brief_tip != old_brief, "fixture carries the current TIP to swap out"
+    _, b_tip, _, _ = au.apply(old_author, old_brief_tip, up, head_sha=SHA, actor="cam", auto=False,
+                              repo="pulumi/docs", pr=999)
+    assert "This is the reviewer's guide" not in b_tip and new_tip in b_tip
+    assert _footer(b_out) == au.cr.render_reviewer_footer("x").rstrip("\n") + "\n"

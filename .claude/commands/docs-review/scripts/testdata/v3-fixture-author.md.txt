@@ -4,9 +4,9 @@
 ## Author action guide v1 — 3 items block merge
 
 > [!IMPORTANT]
-> **You = the PR author.** This review needs your answers before this PR can merge. A human reviewer still approves the merge.
+> **You = the PR author.** Answer every item below before this PR can merge.
 >
-> **To answer:** push a fix, or reply with the item's ID — `@claude F1: <what you fixed, why it's wrong, or "accepting as-is — why"> #update-review`. The `#update-review` tag is required; a reply without it doesn't count. Worked examples: **How to answer** at the bottom.
+> **To answer:** push a fix, or reply `@claude F1: <what you fixed, why it's wrong, or "accepting as-is — why"> #update-review`. A reply without the `#update-review` tag doesn't count. Examples: **How to answer** at the bottom.
 
 _<TODO: one sentence — what this PR is and what the review checked. No counts of open items and nothing only the author can answer: the header and sections carry the live state, and this line outlives them>_
 
@@ -41,11 +41,11 @@ _<TODO: one sentence — what this PR is and what the review checked. No counts 
 - **Why:** <TODO: 1-2 sentences — what is wrong (🚨) or what only the author can settle (❓)>
 - **Fix:** <TODO: exactly ONE required action, stated first; put any replacement text in a fenced block at column 0 after this list — on 🚨, make the fence a one-line replacement for exactly the text quoted above, and it also posts as a one-click suggestion; label an alternative "- **If you'd rather keep it:**" as a fourth bullet — never two competing imperatives>
 
-_Editing in the browser? The ✏️ links open the file in GitHub's editor — Ctrl+F for the quoted line._
+_Editing in the browser? ✏️ opens the file in GitHub's editor; Ctrl+F for the quoted line._
 
 #### Style suggestions
 
-*Optional polish from pattern-based linting and the review's own read — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the [Files changed](https://github.com/pulumi/docs/pull/999/files) tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
+*Optional polish from pattern-based linting and the review's own read; never blocking. ✏️ marks one you can apply from the [Files changed](https://github.com/pulumi/docs/pull/999/files) tab (**Add suggestion to batch** on each, then **Commit suggestions**).*
 
 ##### content/docs/iac/x.md
 
@@ -95,4 +95,4 @@ Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](https://github.com
 
 </details>
 
-Please don't edit, hide, or delete this comment — it is the review's record.
+Please don't edit or delete this comment; it's the review's record.
