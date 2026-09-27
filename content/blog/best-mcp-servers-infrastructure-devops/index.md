@@ -175,7 +175,9 @@ Rather than an infrastructure-specific MCP server, this is distribution and aggr
 
 Lets an agent query dashboards, datasources, and alert rules directly rather than working from a description of what a dashboard shows.
 
-**Best for:** teams wanting an agent to reason over live Grafana dashboards and alerting state during investigation.
+**Security note:** a session-spoofing vulnerability chained to SSRF (CVE-2026-19516), disclosed in September 2026, let an unauthenticated caller turn an affected `mcp-grafana` deployment into a proxy reachable from outside, including toward internal networks and cloud metadata endpoints. Confirm you're on a patched release before exposing this server beyond a trusted local network, and apply the same transport and auth scrutiny this guide recommends for every other server on the list.
+
+**Best for:** teams wanting an agent to reason over live Grafana dashboards and alerting state during investigation, on a patched release.
 
 ### Datadog MCP Server
 
@@ -212,7 +214,7 @@ This server pairs with HashiCorp's broader "agentic identity" push in Vault Ente
 | Flux Operator MCP Server | ControlPlane / Flux | stdio | Self-run | No | Yes | Actively developed |
 | GitHub MCP Server | GitHub | stdio or remote | Both | Available, opt-in | Yes (default) | GA (local and remote) |
 | Docker MCP Gateway | Docker | Local plugin | Self-run | Depends on catalog | Depends on catalog | Shipping |
-| Grafana MCP Server | Grafana Labs | Local | Self-run | Yes (query-focused) | No | Actively released |
+| Grafana MCP Server | Grafana Labs | Local | Self-run | Yes (query-focused) | No | Actively released; patch CVE-2026-19516 before exposing |
 | Datadog MCP Server | Datadog | Local or hosted | Both | Yes (query-focused) | No | Shipping |
 | PagerDuty MCP Server | PagerDuty | Local | Self-run | Mostly (check scopes) | Depends on scopes | Actively maintained |
 
