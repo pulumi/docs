@@ -175,7 +175,7 @@ Rather than an infrastructure-specific MCP server, this is distribution and aggr
 
 Lets an agent query dashboards, datasources, and alert rules directly rather than working from a description of what a dashboard shows.
 
-**Security note:** a session-spoofing vulnerability chained to SSRF (CVE-2026-19516), disclosed in September 2026, let an unauthenticated caller turn an affected `mcp-grafana` deployment into a proxy reachable from outside, including toward internal networks and cloud metadata endpoints. Confirm you're on a patched release before exposing this server beyond a trusted local network, and apply the same transport and auth scrutiny this guide recommends for every other server on the list.
+**Security note:** a header-controlled SSRF vulnerability (CVE-2026-19516), disclosed 2026-08-11, let a caller already permitted to invoke the tool turn an affected `mcp-grafana` deployment into a proxy reachable from outside, including toward internal networks and cloud metadata endpoints. Confirm you're on a patched release before exposing this server beyond a trusted local network, and apply the same transport and auth scrutiny this guide recommends for every other server on the list.
 
 **Best for:** teams wanting an agent to reason over live Grafana dashboards and alerting state during investigation, on a patched release.
 
