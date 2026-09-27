@@ -200,6 +200,9 @@ logos:
   - filename: slack.svg
     name: Slack
     tags: [slack, messaging]
+  - filename: typesafe.svg
+    name: TypeSafe AI
+    tags: [typesafe, jev, ai, llm]
   - filename: typescript.svg
     name: TypeScript
     tags: [typescript, javascript, language]
