@@ -164,4 +164,16 @@ sed -i -E 's/^(  href: )([^#]+)(#.*)?$/\1\L\2\E\3/' "$DOTNET_OUT/xrefmap.yml"
 echo "  [5/5] lowercasing manifest.json relative_path"
 sed -i -E 's/"relative_path": "([^"]+)"/"relative_path": "\L\1\E"/g' "$DOTNET_OUT/manifest.json"
 
+# --- SEO/AEO head metadata post-pass --------------------------------------
+# Runs AFTER the lowercasing above so canonical URLs, og:url, and the
+# JSON-LD "url" field are built from each file's real, final, served path
+# rather than docfx's pre-lowercase internal path — see
+# docfx/pulumi-template/partials/head.tmpl.partial for why this can't be
+# done inside the Mustache template itself.
+step "Injecting SEO head metadata (canonical, truncated description, JSON-LD)"
+python3 "$(dirname "$0")/docfx_seo_postprocess.py" \
+    "$DOTNET_OUT" \
+    "https://www.pulumi.com/docs/reference/pkg/dotnet" \
+    ${DOCFX_SDK_VERSION:+--sdk-version "$DOCFX_SDK_VERSION"}
+
 step "Done"

@@ -150,12 +150,14 @@ permalinks:
     category: /blog/category/:slug/
     series: /blog/series/:slug/
     industry: /customers/industry/:slug/
-  # The category/series/industry taxonomy LIST pages (the directories rendered
-  # by layouts/taxonomy/{category,series,industry}.terms.html). Without these
-  # they would sit at Hugo's default /category/, /series/, and /industry/,
-  # leaving /blog/category/, /blog/series/, and /customers/industry/ 404s even
-  # though every term page lives beneath them.
+  # The taxonomy LIST pages (the directories rendered by
+  # layouts/taxonomy/<singular>.terms.html). Without these they would sit at
+  # Hugo's default /authors/, /tags/, /category/, /series/, and /industry/,
+  # leaving the parent of every term URL (/blog/author/, /blog/tag/, ...) a 404.
+  # content/{authors,tags}/_index.md alias the old /authors/ and /tags/ URLs.
   taxonomy:
+    authors: /blog/author/
+    tags: /blog/tag/
     category: /blog/category/
     series: /blog/series/
     industry: /customers/industry/
