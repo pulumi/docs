@@ -68,7 +68,7 @@ make clean                # Remove build artifacts and dependencies
 - Hugo 0.157.0
 - Yarn 1.22.x (not strictly enforced in CI)
 - Go 1.26.x (for documentation generation)
-- Python 3.9 (for testing workflows) and 3.13 (for SDK documentation generation)
+- Python 3.12 (for testing workflows) and 3.13 (for SDK documentation generation)
 - Pulumi CLI (for infrastructure deployments)
 
 **Optional Tools:**
