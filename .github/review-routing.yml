@@ -470,7 +470,7 @@ external_contributors: { skip_gates: [review-ran, findings-answered] }
 
 sla:
   tools: { business_days: 1, escalate_to: "CamSoper" }
-  docs-guild: { business_days: 3, escalate_to: "tatcoo-pulumi" }
+  docs-guild: { business_days: 3, escalate_to: "jkodroff" }
   blog: { business_days: 3, escalate_to: "cnunciato" }
   marketing: { business_days: 3, escalate_to: "cnunciato" }
 
