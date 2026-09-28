@@ -540,6 +540,18 @@ In order to enable the [Pulumi IDP Registry](/docs/idp/concepts/private-registry
 | PULUMI_REGISTRY_PUBLIC_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting public registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
 | PULUMI_REGISTRY_PRIVATE_BLOB_STORAGE_ENDPOINT  | The storage endpoint for persisting private registry artifacts. The value takes the format: `azblob://<blob-container>`.                                                                                                    |
 
+## Terraform state backend
+
+To let Terraform and OpenTofu use your self-hosted Pulumi Cloud as a [state backend](/docs/integrations/terraform/state-backend/), set the following environment variable on the API service:
+
+| Variable Name     | Description |
+|-------------------|-------------|
+| PULUMI_TFE_DOMAIN | The domain that serves the Terraform-compatible API, for example `tf.pulumiapi.acmecorp.com`. When unset, the Terraform-compatible API is disabled and its routes aren't registered. |
+
+Point the DNS record for this domain at the same host that serves `PULUMI_API_DOMAIN`. A separate domain keeps the Terraform-compatible API distinct from the Pulumi API, but it isn't required: you can set `PULUMI_TFE_DOMAIN` to the same value as `PULUMI_API_DOMAIN` if you don't want a second DNS record.
+
+In the Terraform or OpenTofu configuration, the `terraform login` or `tofu login` command, and the `TF_TOKEN_*` variable name, use the `PULUMI_TFE_DOMAIN` value wherever the [state backend guide](/docs/integrations/terraform/state-backend/) uses `tf.pulumi.com`.
+
 ## Operations guide
 
 For production deployment best practices including compute sizing, high-availability configuration, monitoring, backup and recovery, and security hardening, see the [Self-hosted operations guide](/docs/administration/self-hosting/operations/).
