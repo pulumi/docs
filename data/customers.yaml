@@ -611,3 +611,8 @@ customers:
     name: NCICS (NOAA)
     url: https://ncics.org/
     industry: public-sector
+  - id: toptal
+    name: Toptal
+    url: https://www.toptal.com/
+    industry: technology
+    color: "#204ECF"
