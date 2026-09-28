@@ -93,3 +93,25 @@ def test_update_lane_trigger_leaves_new_review_to_the_mention_gate():
     assert "#new-review" not in gate["if"], "the trigger must not screen #new-review by substring"
     runs = "\n".join(s.get("run") or "" for s in gate.get("steps") or [])
     assert "--hashtag update-review --exclude new-review" in runs, "the mention gate must still apply the exclusion"
+
+
+_BOT_ALLOWLIST_RE = __import__("re").compile(r'"\$AUTHOR" == "([^"]+)"')
+_ACCESS_CHECKERS = ("claude-new.yml", "claude-update.yml", "claude-code-review.yml", "claude-triage.yml")
+
+
+def test_trusted_bot_allowlist_is_identical_in_every_access_check():
+    """The collaborator-permission API says `none` for a GitHub App, so each
+    lane that gates on write access carries a list of trusted bots. The four
+    copies said "keep in sync" and claude-new.yml had none at all: every
+    workprentice `#new-review` was silently dropped (#21936)."""
+    lists = {}
+    for name in _ACCESS_CHECKERS:
+        text = (_WF_DIR / name).read_text()
+        blocks = __import__("re").findall(
+            r'if \[\[ "\$AUTHOR" == "github-copilot\[bot\]".*?\]\]; then', text, __import__("re").S)
+        assert len(blocks) == 1, f"{name}: expected one trusted-bot block, found {len(blocks)}"
+        lists[name] = frozenset(_BOT_ALLOWLIST_RE.findall(blocks[0]))
+    reference = lists["claude-update.yml"]
+    assert "workprentice[bot]" in reference and "app/workprentice" in reference
+    for name, bots in lists.items():
+        assert bots == reference, f"{name} trusts {sorted(bots)}, claude-update.yml trusts {sorted(reference)}"

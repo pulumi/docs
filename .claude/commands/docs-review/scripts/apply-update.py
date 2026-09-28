@@ -36,10 +36,21 @@ classifier, which this must never contradict):
   - `resolve` writes REVIEW_STATE disposition `fixed` (actor `update-lane`,
     sha = the new head): the gate reads it as answered, and the scraper's
     resolved-bucket row reads as `fixed`.
-  - `concede` writes NO disposition. The ✅ row's `concede:` annotation IS
-    the machine record (CONCEDE_ANNOTATION_RE); writing `refuted` here would
-    flip the scraper's dispute adjudication from "conceded" (model yielded)
-    to "refuted" (author answer standing un-reviewed) — a different claim.
+  - `concede` writes disposition `not-applicable` (actor `update-lane`,
+    note `conceded: <reason>`). It used to write nothing, on the theory that
+    the ✅ row's `concede:` annotation was the machine record — but the card
+    itself tells readers "a finding ID absent from [REVIEW_STATE] is OPEN",
+    so a card whose four findings were all conceded shipped `{}` and read as
+    four open findings to anyone taking it at its word (pulumi/docs#21790,
+    and one conceded row each on #21793/#21796/#21798/#21799/#21801/#21828).
+    Every ✅ row now carries a disposition. Not `refuted`: that would flip
+    the scraper's dispute adjudication from "conceded" (model yielded) to
+    "refuted" (author answer standing un-reviewed) — a different claim.
+    `not-applicable` leaves the scraper's resolved-bucket `conceded`
+    classification (keyed on the annotation) exactly as it was.
+  - ✅ rows that predate that change carry no disposition; every refresh
+    backfills one (`backfill_resolved_dispositions`) so an old card heals on
+    its next update instead of needing a hand edit.
   - `hold` writes NO disposition: the finding is still open; the author may
     still fix it.
 
@@ -318,6 +329,35 @@ def _reopen_row(fid: str, resolved: dict, prior_findings: dict) -> dict:
             "parsed": parsed, "raw": resolved["raw"], "reopened": True}
 
 
+def backfill_resolved_dispositions(state: dict, resolved_rows: list[str], *,
+                                   sha: str = "", now: datetime | None = None) -> dict:
+    """Give every ✅ Resolved row a REVIEW_STATE disposition it lacks.
+
+    The contract (compose-review.py's note under the block, Sentinel G2,
+    review-worklist.py) is that the block is the complete disposition
+    record. A ✅ row with no entry breaks it: the row is closed on screen and
+    open by the letter of the block. A `concede:` cell backfills to
+    `not-applicable` (the concede action's own mapping), anything else to
+    `fixed`. Existing entries are never touched — a human's answer wins.
+    """
+    findings = state.get("findings", {})
+    for line in resolved_rows:
+        parsed = cr.parse_finding_line(line)
+        if not parsed or parsed["id"] == "F?" or parsed["id"] in findings:
+            continue
+        body = parsed["body"]
+        if CONCEDE_SEP in body:
+            reason = body.split(CONCEDE_SEP, 1)[1].strip() or "conceded"
+            state = review_state.set_disposition(
+                state, parsed["id"], "not-applicable", actor="update-lane",
+                note=f"conceded: {reason}", sha=sha, now=now)
+        else:
+            state = review_state.set_disposition(
+                state, parsed["id"], "fixed", actor="update-lane", sha=sha, now=now)
+        findings = state.get("findings", {})
+    return state
+
+
 def _collect_resolved(author_body: str) -> list[str]:
     lines = author_body.splitlines()
     out: list[str] = []
@@ -546,6 +586,10 @@ def apply(
                 f"{row['parsed']['body']}{CONCEDE_SEP}{reason}",
                 link_base=link_base))
             del rows[fid]
+            disposition_state = review_state.set_disposition(
+                disposition_state, fid, "not-applicable",
+                actor="update-lane", note=f"conceded: {reason}",
+                sha=head_sha[:12], now=now)
         elif action == "hold":
             # The author answered and the model still disagrees: that is a
             # judgment call for the human reviewer, not a lock on the author.
@@ -608,6 +652,8 @@ def apply(
         live = merged_state["findings"].get(fid)
         if isinstance(live, dict) and live.get("actor") == "update-lane" and fid not in disposition_state["findings"]:
             del merged_state["findings"][fid]
+    merged_state = backfill_resolved_dispositions(
+        merged_state, resolved_rows, sha=head_sha[:12], now=now)
 
     author_out = _render_doc(author_body, rows, resolved_rows, doc="author",
                              link_base=link_base, edit_base=edit_base,

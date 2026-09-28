@@ -146,6 +146,14 @@ STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 # evidence. Anyone with push access can write a commit status, so an
 # unattributed one is not evidence of anything.
 STAGING_STATUS_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
+# Who may have posted a page of a legacy (v2) review. The initial lane posts
+# as github-actions[bot], but the v2 update lane runs claude-code-action with
+# PULUMI_BOT_TOKEN, so a page it (re)posted — typically page 2 of a split
+# review that grew on refresh — is pulumi-bot's. Reading only the first login
+# made G2 report "legacy page 2 unreadable" on #21210, #21487 and #21149.
+# The v3 role cards stay github-actions[bot]-only (`_find_comment`): nothing
+# but the deterministic publish job ever writes them.
+LEGACY_PAGE_WRITERS = frozenset({BOT_LOGIN, "pulumi-bot"})
 # The workflow the staging lane dispatches, and the one G4 verifies against
 # directly when the commit status is missing. See `_staging_evidence`.
 STAGING_WORKFLOW_FILE = "testing-build-and-deploy.yml"
@@ -427,8 +435,9 @@ def legacy_pages(comments: list[dict]) -> dict | None:
     total = 0
     for c in comments:
         # Bot-authored only, same rule as `_find_comment`: the first-line
-        # anchor below stops a quoted marker, but not a forged page.
-        if (c.get("user") or {}).get("login") != BOT_LOGIN:
+        # anchor below stops a quoted marker, but not a forged page. Both
+        # identities the v2 lanes post under count (LEGACY_PAGE_WRITERS).
+        if (c.get("user") or {}).get("login") not in LEGACY_PAGE_WRITERS:
             continue
         body = c.get("body") or ""
         # A v3 role card opens with a `1/1` marker of its own, so the role

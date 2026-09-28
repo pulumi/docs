@@ -1827,3 +1827,24 @@ def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
     assert _gate(v, "G2").status == "error"
     assert "page(s) 2 could not be read" in _gate(v, "G2").message
     assert v.conclusion != "success"
+
+
+def test_a_legacy_page_the_v2_update_lane_posted_as_pulumi_bot_is_read():
+    """#21210/#21487/#21149: the v2 update lane runs claude-code-action on
+    PULUMI_BOT_TOKEN, so the page it re-posts is pulumi-bot's. G2 read only
+    github-actions[bot] pages and reported page 2 unreadable."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    page2 = {"id": 10, "user": {"login": "pulumi-bot"},
+             "body": ("<!-- CLAUDE_REVIEW 2/2 -->\n### 🚨 Outstanding in this PR\n\n"
+                      "- **[L10-12]** `f.md` — broken thing\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page1, page2],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "1 🚨 Outstanding" in _gate(v, "G2").message
+    # The v3 role cards stay github-actions[bot]-only.
+    card = {"id": 11, "user": {"login": "pulumi-bot"},
+            "body": sentinel.AUTHOR_MARKER + "\n"}
+    assert sentinel._find_comment([card], sentinel.AUTHOR_MARKER) is None

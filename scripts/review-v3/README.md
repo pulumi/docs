@@ -73,6 +73,13 @@ Lives as an HTML comment in the bot-owned author comment:
 - Dispositions: `fixed | refuted | deferred | accepted | not-applicable`
   (note required for `deferred`/`accepted`/`not-applicable` — same closed set
   as `review-worklist.py`).
+- Completeness: every finding that has left the 🚨/❓ tables carries an
+  entry — `resolve` → `fixed`, `hold` → `refuted`, `accept` → `accepted`,
+  `concede` → `not-applicable` (note `conceded: <reason>`). An id with no
+  entry is open. `concede` used to write nothing, so a card whose findings
+  were all conceded shipped `{}` under a note calling them open (#21790);
+  `apply-update.py` now backfills any ✅ row missing an entry on every
+  refresh, so older cards heal on their next update.
 - Writers: the full-review lane publishes the block with the card; only the
   update lane (`apply-update.py`) records dispositions in it. Runs of the two
   overlap routinely, so the update lane merges per finding-id (latest

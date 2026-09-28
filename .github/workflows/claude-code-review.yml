@@ -53,6 +53,11 @@ on:
         required: false
         type: string
         default: ''
+      prior_high_water:
+        description: 'REVIEW_STATE high_water of the review the dispatcher cleared (claude-new.yml only); new finding ids start above it so they never reuse a retired id'
+        required: false
+        type: string
+        default: '0'
       # Set only by this workflow's own `redispatch` job. Counts how many
       # automatic re-dispatches this run is downstream of, so the publish
       # guard can stop chaining at handoff_guard.py's MAX_DEPTH instead of
@@ -1225,7 +1230,23 @@ jobs:
           # v21 validation fail and the run lands on the error path instead
           # of publishing something unverifiable.
           if [[ "$REVIEW_V3" == "1" ]]; then
+            # Finding ids never restart: continue above the high-water mark
+            # of whatever review this one replaces — the live author card
+            # when there is one, else what `#new-review` read off the card
+            # it cleared (the input). Unreadable either way → 0, the old
+            # behavior.
+            PRIOR_HW="${{ github.event.inputs.prior_high_water || '0' }}"
+            [[ "$PRIOR_HW" =~ ^[0-9]+$ ]] || PRIOR_HW=0
+            CARD_ID=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh find \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" --role author 2>/dev/null || true)
+            if [[ -n "$CARD_ID" ]]; then
+              LIVE_HW=$(gh api "repos/$GITHUB_REPOSITORY/issues/comments/$CARD_ID" --jq .body 2>/dev/null \
+                | python3 scripts/review-v3/review_state.py high-water 2>/dev/null || echo 0)
+              [[ "$LIVE_HW" =~ ^[0-9]+$ ]] && (( LIVE_HW > PRIOR_HW )) && PRIOR_HW=$LIVE_HW
+            fi
+            echo "compose: finding ids start above high_water=$PRIOR_HW"
             python3 .claude/commands/docs-review/scripts/compose-review.py \
+              --prior-high-water "$PRIOR_HW" \
               --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
               --out .review-draft.md --surface v3 --run-id "${{ github.run_id }}" \
               --timestamp "${{ steps.now.outputs.value }}" \

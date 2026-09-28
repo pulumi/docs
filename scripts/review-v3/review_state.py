@@ -244,16 +244,40 @@ def _self_test() -> int:
     reparsed = parse_state(replaced)
     assert reparsed is not None and set(reparsed["findings"]) == {"F3", "F4"}
 
+    assert high_water_of(replaced) == reparsed["high_water"]
+    assert high_water_of("no block here") == 0
+    assert high_water_of("<!-- REVIEW_STATE {broken -->") == 0
+
     print("review_state self-test passed")
     return 0
+
+
+def high_water_of(body: str) -> int:
+    """The block's high_water, or 0 when there is no parseable block. A
+    caller uses it to continue finding ids, so "unknown" must degrade to the
+    old restart-at-F1 behavior, never raise."""
+    try:
+        state = parse_state(body)
+    except ValueError:
+        return 0
+    try:
+        return max(0, int((state or {}).get("high_water", 0)))
+    except (TypeError, ValueError):
+        return 0
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("command", nargs="?", choices=("high-water",),
+                        help="high-water: print the high_water of the REVIEW_STATE "
+                             "block in the card on stdin (0 when absent or corrupt)")
     args = parser.parse_args()
     if args.self_test:
         return _self_test()
+    if args.command == "high-water":
+        print(high_water_of(sys.stdin.read()))
+        return 0
     parser.print_help()
     return 2
 

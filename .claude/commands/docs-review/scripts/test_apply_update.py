@@ -576,3 +576,39 @@ def test_old_card_footer_is_replaced_by_the_current_one():
                               repo="pulumi/docs", pr=999)
     assert "This is the reviewer's guide" not in b_tip and new_tip in b_tip
     assert _footer(b_out) == au.cr.render_reviewer_footer("x").rstrip("\n") + "\n"
+
+
+def test_concede_records_a_disposition_so_the_block_is_complete():
+    """pulumi/docs#21790: four conceded findings, a `{}` REVIEW_STATE — and a
+    note under that block saying an id absent from it is OPEN. A conceded
+    finding is closed; the block has to say so."""
+    up = _update([{"id": "F2", "action": "concede", "reason": "author named the source"}], case="dispute")
+    a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    entry = state["findings"]["F2"]
+    assert entry["disposition"] == "not-applicable"
+    assert entry["actor"] == "update-lane", "a reopen sheds it like a lane `fixed`"
+    assert entry["note"] == "conceded: author named the source"
+    assert "concede: author named the source" in a_out, "the scraper's annotation is unchanged"
+    assert "F2" not in _open_author_ids(a_out)
+
+
+def test_resolved_rows_without_a_disposition_are_backfilled_on_refresh():
+    """Cards published before concede wrote a disposition heal on their next
+    refresh: every ✅ row leaves with an entry, and a human's is untouched."""
+    up = _update([{"id": "F2", "action": "concede", "reason": "fine"},
+                  {"id": "F1", "action": "resolve", "annotation": "fixed in 1cb28d8"}])
+    a1, b1, _, _ = au.apply(AUTHOR, BRIEF, up, head_sha="1" * 40, actor="cam", auto=False)
+    # Simulate the pre-fix card: strip both entries from the block.
+    rs = au.review_state
+    st = rs.parse_state(a1)
+    st["findings"] = {}
+    a1 = rs.replace_block(a1, st)
+    a2, _, state2, _ = au.apply(a1, b1, _update([]), head_sha="2" * 40, actor="cam", auto=False)
+    assert state2["findings"]["F2"]["disposition"] == "not-applicable"
+    assert state2["findings"]["F2"]["note"] == "conceded: fine"
+    assert state2["findings"]["F1"]["disposition"] == "fixed"
+    assert rs.parse_state(a2)["findings"].keys() >= {"F1", "F2"}
+    # A human disposition already present is never overwritten.
+    st = rs.set_disposition(rs.parse_state(a2), "F1", "accepted", actor="cam", note="mine")
+    out = au.backfill_resolved_dispositions(st, au._collect_resolved(a2))
+    assert out["findings"]["F1"]["disposition"] == "accepted"

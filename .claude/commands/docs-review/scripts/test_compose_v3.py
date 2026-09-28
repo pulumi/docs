@@ -757,3 +757,24 @@ def test_stale_vocabulary_check_skips_text_quoted_from_the_pr():
                                  "type": "positioning"}], v3=True)
     assert cr.stale_v2_tokens(stance) == [], "a quoted stance is the PR's text, not composer scaffolding"
     assert cr.stale_v2_tokens("### ⚠️ Low-confidence\n") == ["⚠️ Low-confidence"], "composer text still trips it"
+
+
+def test_a_rereview_continues_ids_above_the_prior_high_water(tmp_path, v3_outputs):
+    """#21798: a full re-review restarted at F1, so the new F3 inherited the
+    old F3's `fixed` record and the author's reply to "F3" meant the wrong
+    finding. Ids continue from the previous card's high_water."""
+    _, _, base_ev = v3_outputs
+    n = len(base_ev["findings"])
+    assert n > 0
+    author, brief, evidence = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"),
+        "--out-author", str(author), "--out-brief", str(brief), "--out-evidence", str(evidence),
+    ]) + ["--prior-high-water", "7"]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    ev = json.loads(evidence.read_text())
+    ids = sorted(int(f["id"][1:]) for f in ev["findings"])
+    assert ids == list(range(8, 8 + n))
+    assert review_state.parse_state(author.read_text())["high_water"] == 7 + n
+    assert "**F1**" not in author.read_text() + brief.read_text()
