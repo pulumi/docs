@@ -60,4 +60,9 @@ sections:
     heading: GitHub Issues
     link: /docs/support/filing-issues/
     description: Learn how to report bugs and request features in the right repository.
+
+  - icon: shield-check
+    heading: Provider support policy
+    link: /docs/support/provider-support-policy/
+    description: How long Pulumi maintains each provider major version, and which providers get long-term security updates.
 ---
