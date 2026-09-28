@@ -2364,7 +2364,14 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
 
     # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, ⚠️.
     findings: list[dict] = []
-    next_id = 1
+    # Ids continue from the previous review's high-water mark: `F<n>` is
+    # "monotonically increasing per PR, never reused" (README §Finding IDs),
+    # and every id-keyed join across generations — REVIEW_STATE, the
+    # evidence merge in record-evidence.py, an author's `F3 is wrong`
+    # reply — depends on it. Restarting at F1 on every full review handed
+    # #21798's new F3 (an alias-syntax finding) the v1 F3's `fixed` record
+    # and left the author's reply to v1 F3 pointing at the wrong finding.
+    next_id = max(0, int(getattr(args, "prior_high_water", 0) or 0)) + 1
 
     def _assign(stub: dict, bucket: str, rendered: str) -> tuple[str, dict]:
         nonlocal next_id
@@ -2866,6 +2873,8 @@ def main() -> int:
     p.add_argument("--out-evidence", default="", help="v3 evidence-base path (default: .review-evidence-base.json beside --out)")
     p.add_argument("--head-repo", default="", help="v3: head repo full name (owner/name) for ✏️ edit links")
     p.add_argument("--head-branch", default="", help="v3: head branch for ✏️ edit links")
+    p.add_argument("--prior-high-water", type=int, default=0,
+                   help="v3: the previous review's REVIEW_STATE high_water; new ids start above it")
     p.add_argument("--routed-team", default="", help="v3: approval-team display string for the reviewer brief")
     args = p.parse_args()
 

@@ -478,3 +478,66 @@ def test_unreadable_published_card_warns_before_failing_open(env):
     assert r.returncode == 0, r.stderr
     assert "could not read the published" in r.stdout + r.stderr
     assert (stub_dir / "patched-11.body").exists(), "must still publish"
+
+
+# ---- a legacy monolith beside a v3 card (#21066) ------------------------------
+
+
+def _legacy_monolith(sha: str) -> str:
+    return (f"<!-- CLAUDE_REVIEW 1/1 -->\n## Pre-merge Review\n"
+            f"<!-- CLAUDE_REVIEW_HEAD {sha} -->\n\n### 🚨 Outstanding in this PR\n\n" + FOOTER)
+
+
+def _bot(c: dict, login: str = "github-actions[bot]") -> dict:
+    return {**c, "user": {"login": login}}
+
+
+def test_a_v3_card_beats_an_older_legacy_monolith(env):
+    """#21066: the legacy monolith (older, lower id) and the v3 author card
+    both open `1/1`; the sort tied them and last-reviewed-sha read the
+    monolith's five-week-old head. The author card is the review."""
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("89f9510" + "0" * 33))),
+        _bot(comment(51, author_card(sha="d94fdd4" + "0" * 33))),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "last-reviewed-sha", "--pr", "7").stdout.strip().startswith("d94fdd4")
+    assert run(env, "find", "--pr", "7").stdout.split() == ["51"]
+    fetched = run(env, "fetch", "--pr", "7").stdout
+    assert "CLAUDE_REVIEW_AUTHOR" in fetched and "Outstanding in this PR" not in fetched
+
+
+def test_clear_still_sweeps_the_hidden_legacy_monolith(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("1" * 40))),
+        _bot(comment(51, author_card())),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "clear", "--pr", "7").returncode == 0
+    deletes = sorted(json.loads(l)[-1].rsplit("/", 1)[1]
+                     for l in (stub_dir / "calls.log").read_text().splitlines() if "DELETE" in l)
+    assert deletes == ["40", "51", "52"]
+
+
+def test_prune_legacy_deletes_only_bot_legacy_pages_beside_a_v3_card(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [
+        _bot(comment(40, _legacy_monolith("1" * 40))),
+        _bot(comment(41, "<!-- CLAUDE_REVIEW 2/2 -->\nlegacy tail\n"), login="pulumi-bot"),
+        _bot(comment(42, "<!-- CLAUDE_REVIEW 1/1 -->\nsomeone quoting\n"), login="a-human"),
+        _bot(comment(51, author_card())),
+        _bot(comment(52, brief_card())),
+    ])
+    assert run(env, "prune-legacy", "--pr", "7").returncode == 0
+    deletes = sorted(json.loads(l)[-1].rsplit("/", 1)[1]
+                     for l in (stub_dir / "calls.log").read_text().splitlines() if "DELETE" in l)
+    assert deletes == ["40", "41"]
+
+
+def test_prune_legacy_is_a_no_op_without_a_v3_card(env):
+    stub_dir, _ = env
+    set_comments(stub_dir, [_bot(comment(40, _legacy_monolith("1" * 40)))])
+    assert run(env, "prune-legacy", "--pr", "7").returncode == 0
+    assert "DELETE" not in (stub_dir / "calls.log").read_text()
