@@ -371,6 +371,14 @@ def cmd_verify(a) -> int:
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     changed = changed_lines(pristine, current)
+    if a.restored_from:
+        # Post-open autofix: `pristine` is the PR head and a revert restores
+        # master's text. A line put back verbatim is not a new claim; the
+        # glow-up is withdrawing one, so it is not this check's to judge.
+        base_lines = {ln.strip() for ln in _lines(Path(a.restored_from).read_text()) if ln.strip()}
+        cur = _lines(current)
+        changed = {n for n in changed
+                   if not (0 < n <= len(cur) and cur[n - 1].strip() and cur[n - 1].strip() in base_lines)}
     result = {"schema_version": SCHEMA_VERSION, "round": a.round, "article": article,
               "changed_lines": len(changed), "claims": [], "must_address": 0,
               "degraded": False, "errors": [], "log": [],
@@ -752,6 +760,7 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--round", type=int, required=True)
     v.add_argument("--prior", action="append", help="earlier round files (verdict cache)")
     v.add_argument("--out", required=True)
+    v.add_argument("--restored-from", help="lines matching this file verbatim are restorations, not edits")
     v.add_argument("--dry-run", action="store_true", help="pass --dry-run to the model-calling scripts")
 
     r = sub.add_parser("revert")

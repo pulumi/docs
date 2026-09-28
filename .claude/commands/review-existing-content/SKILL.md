@@ -707,6 +707,67 @@ to the routed team by name. The ledger records status `glowup` (a completed
 review: it advances the staleness clock and starts the selector's 90-day
 glow-up cooldown).
 
+## Post-open autofix
+
+`.github/workflows/content-review-glowup-autofix.yml` runs you on an **open**
+glow-up PR whose pre-merge review still has blocking findings (🚨 or ❓)
+nobody has answered. Pre-verification is supposed to make this rare; this is
+the fallback. The PR's author is pulumi-bot, which never reads the review
+card, so you answer it the way `/address-review` would, once. The working
+tree is the PR's head.
+
+**Inputs** in `.autofix/`:
+
+- `select.json` — `open`: the findings to settle, each with `id` (`F<n>`),
+  `bucket` (`outstanding` = 🚨, `author-answer` = ❓), `anchor` (PR-head line
+  range), and `summary`.
+- `card.md` — the review's author card. Each finding's `#### F<n> · Do this`
+  block quotes the line, says why, and proposes the fix.
+- `base.md` — the article as it is on master (before the glow-up).
+- `head.md` — the article as it is at the PR head (what the review read).
+
+**For each open finding, choose exactly one disposition** (closed set; a bot
+can't own `accepted` or `deferred`, which need a human):
+
+- `fixed` — change the text so it says what the source says. Only when the
+  card's evidence, the verifier's source, or a source you check now states
+  the value outright. Prefer the card's proposed fix when it is right. Never
+  guess a value.
+- `reverted` — withdraw the glow-up's edit: restore the anchored lines to
+  `base.md`'s text. The right answer for a ❓ on a claim the glow-up added
+  or reworded, and for any finding on text the glow-up only restyled. A
+  glow-up that says less is fine; one that says something unverified is not.
+- `refuted` — the finding is wrong. Only with a `source` you actually read
+  this run (a repo path, a URL, a `gh` query) that shows it. Your `note`
+  says what the source says. Disagreeing without a source is `unresolved`.
+- `unresolved` — none of the above is safe. A human decides; say why in
+  one line.
+
+Touch only the anchored lines of the one article, plus whatever a fix needs
+in the same paragraph. Don't restyle, don't add claims, don't edit any other
+file. Every changed line is re-verified after you finish with the same
+verifier (`preverify-glowup.py`), and a change that doesn't verify is
+withdrawn and its finding reported `unresolved`, whatever you wrote.
+
+**Output**: `.autofix/dispositions.json`:
+
+```json
+{"findings": [
+  {"id": "F1", "disposition": "fixed", "note": "<what the text says now, and why>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F3", "disposition": "reverted", "note": "<which edit was withdrawn>"},
+  {"id": "F5", "disposition": "refuted", "note": "<what the source says>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F6", "disposition": "unresolved", "note": "<why no safe answer exists>"}
+]}
+```
+
+Every id in `select.json`'s `open` gets exactly one entry; a missing or
+malformed entry is recorded `unresolved`. The workflow, not you, commits and
+pushes as pulumi-bot, posts one `@claude … #update-review` comment with your
+dispositions (the update lane then refreshes the card), records them in the
+PR body's **Post-open review findings** table, and hands every `unresolved`
+finding to the routed team by name. There are at most two passes per PR and
+never two on the same head.
+
 ## Report-only mode — no model runs
 
 When the queue article carries `"mode": "report"`, **this skill does not run

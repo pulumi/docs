@@ -845,7 +845,8 @@ jobs:
             revert. You have no write access: do not commit, push, or open PRs.
           claude_args: |
             --model claude-opus-5-5 --effort medium --max-turns 40
-            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,Bash"
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 
       - name: Pre-verify glow-up edits (round 2)
         id: pv2
@@ -877,7 +878,8 @@ jobs:
             revert. You have no write access: do not commit, push, or open PRs.
           claude_args: |
             --model claude-opus-5-5 --effort medium --max-turns 40
-            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,Bash"
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 
       - name: Pre-verify glow-up edits (round 3)
         id: pv3
