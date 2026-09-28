@@ -833,9 +833,17 @@ def test_human_card_has_no_automated_marker(v3_outputs):
 def test_content_review_card_addresses_the_reviewer(tmp_path):
     author = _compose_on_branch(tmp_path, "content-review/glowup-docs-x")
     lines = author.splitlines()
-    assert lines[3] == cr.AUTOMATED_AUTHOR_MARKER
+    assert lines[3] == cr.AUTOFIX_AUTHOR_MARKER
+    assert "autofix" in author
     assert author.count("CLAUDE_REVIEW_HEAD") == 1
     assert "You = the PR author" not in author
+    assert "requested reviewer" in author
+
+
+def test_fix_lane_card_promises_no_autofix(tmp_path):
+    author = _compose_on_branch(tmp_path, "content-review/docs-x")
+    assert author.splitlines()[3] == cr.AUTOMATED_AUTHOR_MARKER
+    assert "autofix" not in author.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0].lower()
     assert "requested reviewer" in author
 
 
@@ -853,4 +861,6 @@ def test_fix_header_keeps_the_automated_audience(tmp_path):
 def test_orient_forms():
     assert "You = the PR author" in "\n".join(cr.render_author_orient(1))
     assert "requested reviewer" in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" not in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" in "\n".join(cr.render_author_orient(1, automated=True, autofix=True))
     assert "needs an answer" in "\n".join(cr.render_author_orient(0, automated=True))

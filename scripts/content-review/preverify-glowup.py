@@ -69,6 +69,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import hashlib
 import json
 import os
 import re
@@ -116,6 +117,10 @@ def parse_range(lr) -> tuple[int, int] | None:
     a = int(m.group(1))
     b = int(m.group(2) or a)
     return (min(a, b), max(a, b))
+
+
+def sha256(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def _lines(text: str) -> list[str]:
@@ -383,6 +388,9 @@ def cmd_verify(a) -> int:
         changed = {n for n in changed
                    if not (0 < n <= len(cur) and cur[n - 1].strip() and cur[n - 1].strip() in base_lines)}
     result = {"schema_version": SCHEMA_VERSION, "round": a.round, "article": article,
+              # What this round verified. The backstop refuses to revert
+              # against a round whose article has since changed.
+              "article_sha256": sha256(current),
               "changed_lines": len(changed), "claims": [], "must_address": 0,
               "degraded": False, "errors": [], "log": [],
               "usage": {"extract": {}, "verify": {}}, "n_cached": 0}
@@ -488,6 +496,68 @@ def revert_blocks(pristine: str, current: str, targets: list[tuple[str, tuple[in
     return "".join(out), blocks, unmapped
 
 
+def _line_of(item: dict) -> tuple[int, int] | None:
+    """A banked item's pristine line range, when this run knows it: the
+    fresh stubs carry `line_range`, and a banked item re-found by this run's
+    verifier carries it on `fresh_verdict`. Both use this run's pristine
+    numbering, the same numbering as a reverted block's `pristine_lines`."""
+    return parse_range(item.get("line_range") or (item.get("fresh_verdict") or {}).get("line_range"))
+
+
+def move_reverted_rows(blocks: list[dict], backlog: dict, verdict: dict, body: str
+                       ) -> tuple[dict, str, list[str], list[str]]:
+    """Keep the records honest after a revert: a Backlog executed row whose
+    line the backstop restored moves to Backlog declined, and its id moves
+    from `executed_ids` to `declined_ids`. Returns (verdict, body, moved ids,
+    executed ids with no known line, which the receipts ask a human to
+    check)."""
+    items = list(backlog.get("banked") or []) + list(((backlog.get("reconciled") or {}).get("fresh_stubs")) or [])
+    executed = list(verdict.get("executed_ids") or [])
+    moved, unknown = [], []
+    for it in items:
+        iid = str(it.get("id"))
+        if iid not in executed:
+            continue
+        rng = _line_of(it)
+        if not rng:
+            unknown.append(iid)
+            continue
+        if any(b["pristine_lines"][0] - 2 <= rng[1] and rng[0] <= b["pristine_lines"][1] + 2
+               for b in blocks if b.get("pristine_lines")):
+            moved.append(iid)
+    if not moved:
+        return verdict, body, moved, unknown
+
+    def section(name: str):
+        return re.search(rf"^##\s+{re.escape(name)}\s*$(.*?)(?=^##\s|\Z)", body, re.M | re.S)
+
+    ex = section("Backlog executed")
+    rows = []
+    if ex:
+        kept = []
+        for ln in ex.group(1).splitlines(keepends=True):
+            m = re.match(r"^\|\s*`([^`]+)`", ln.strip())
+            if m and m.group(1) in moved:
+                cells = [c for c in re.split(r"(?<!\\)\|", ln.strip())[1:-1]]
+                rows.append("|" + "|".join(cells[:-1]) + "| Reverted by pre-verification: "
+                            "the edit did not verify, so the original text was restored. |\n")
+            else:
+                kept.append(ln)
+        body = body[:ex.start(1)] + "".join(kept) + body[ex.end(1):]
+    de = section("Backlog declined")
+    if de and rows:
+        seg = de.group(1).rstrip("\n") + "\n" + "".join(rows) + "\n"
+        body = body[:de.start(1)] + seg + body[de.end(1):]
+    v = dict(verdict)
+    v["executed_ids"] = [i for i in executed if i not in moved]
+    v["declined_ids"] = list(v.get("declined_ids") or []) + moved
+    if isinstance(v.get("fixes"), int):
+        v["fixes"] = max(0, v["fixes"] - len(moved))
+    if isinstance(v.get("skipped_findings"), int):
+        v["skipped_findings"] = v["skipped_findings"] + len(moved)
+    return v, body, moved, unknown
+
+
 def cmd_revert(a) -> int:
     rnd = _load(Path(a.round_file), {}) or {}
     targets = []
@@ -501,11 +571,59 @@ def cmd_revert(a) -> int:
     if blocks:
         Path(a.article).write_text(new)
     rec = {"schema_version": SCHEMA_VERSION, "round": rnd.get("round"), "blocks": blocks,
-           "unmapped": unmapped}
+           "unmapped": unmapped, "moved_rows": [], "unchecked_rows": []}
+    if blocks and a.backlog and a.verdict and a.body and all(
+            Path(x).exists() for x in (a.backlog, a.verdict, a.body)):
+        v, body, moved, unknown = move_reverted_rows(
+            blocks, _load(Path(a.backlog), {}) or {}, _load(Path(a.verdict), {}) or {},
+            Path(a.body).read_text())
+        if moved:
+            Path(a.verdict).write_text(json.dumps(v, indent=2) + "\n")
+            Path(a.body).write_text(body)
+        rec.update(moved_rows=moved, unchecked_rows=unknown)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(rec, indent=2) + "\n")
     print(f"preverify revert: {len(blocks)} block(s) restored to pristine for "
           f"{len(targets)} must-address claim(s); {len(unmapped)} unmapped", file=sys.stderr)
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# settle
+# ---------------------------------------------------------------------------
+
+def cmd_settle(a) -> int:
+    """Make the workspace match what the last round verified before the
+    backstop reverts against it. A repair step that failed, or a round that
+    crashed after a repair, leaves an article the last round never saw; the
+    round's line ranges then point at the wrong text. Restore the pre-repair
+    snapshot when it is the article the round verified (checked by hash),
+    else fall back to the pristine page, which the publish gate refuses as an
+    empty glow-up, so nothing unverified ships."""
+    rnd = _load(Path(a.round_file), {}) if a.round_file else {}
+    want = (rnd or {}).get("article_sha256")
+    art = Path(a.article)
+    cur = sha256(art.read_text()) if art.exists() else ""
+    status = "no-rounds"
+    if want and cur == want:
+        status = "consistent"
+    elif want:
+        snap = Path(a.prerepair_dir) if a.prerepair_dir else None
+        snap_art = snap / "article" if snap else None
+        if snap_art and snap_art.exists() and sha256(snap_art.read_text()) == want:
+            art.write_text(snap_art.read_text())
+            for name, dest in (("body", a.body), ("verdict", a.verdict)):
+                src = snap / name
+                if dest and src.exists():
+                    Path(dest).write_text(src.read_text())
+            status = "restored-pre-repair"
+        else:
+            art.write_text(Path(a.pristine).read_text())
+            status = "restored-pristine"
+    rec = {"schema_version": SCHEMA_VERSION, "status": status, "round": (rnd or {}).get("round")}
+    Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+    Path(a.out).write_text(json.dumps(rec, indent=2) + "\n")
+    print(f"preverify settle: {status}", file=sys.stderr)
     return 0
 
 
@@ -518,9 +636,10 @@ def _cell(text, cap: int = CELL_CAP) -> str:
     return t if len(t) <= cap else t[: cap - 1] + "…"
 
 
-def summarize(rounds: list[dict], reverted: dict | None) -> dict:
+def summarize(rounds: list[dict], reverted: dict | None, settle: dict | None = None) -> dict:
     """Fold the round files into one per-claim outcome list."""
     reverted = reverted or {}
+    settled = (settle or {}).get("status") or ""
     rev_ids = {cid for b in reverted.get("blocks") or [] for cid in b.get("claims") or []}
     final = rounds[-1] if rounds else {}
     final_keys = {norm(r.get("text", "")) for r in final.get("claims") or []}
@@ -556,7 +675,10 @@ def summarize(rounds: list[dict], reverted: dict | None) -> dict:
         "reverted_blocks": len(reverted.get("blocks") or []),
         "open": open_n,
         "degraded": degraded,
-        "clean": bool(rounds) and not degraded and open_n == 0,
+        "clean": bool(rounds) and not degraded and open_n == 0 and settled != "restored-pristine",
+        "settle": settled,
+        "moved_rows": reverted.get("moved_rows") or [],
+        "unchecked_rows": reverted.get("unchecked_rows") or [],
         "errors": sorted({e for rnd in rounds for e in rnd.get("errors") or []})[:10],
         "usage": usage,
         "rows": rows,
@@ -566,7 +688,7 @@ def summarize(rounds: list[dict], reverted: dict | None) -> dict:
 
 def render_section(s: dict) -> str:
     marker = {k: s[k] for k in ("schema_version", "clean", "degraded", "rounds", "claims_checked",
-                                 "repaired", "reverted_blocks", "open")}
+                                 "repaired", "reverted_blocks", "open", "settle")}
     out = [f"## {SECTION}", "", f"<!-- {MARKER} {json.dumps(marker, sort_keys=True)} -->", ""]
     if not s["rounds"]:
         out.append("> [!WARNING]\n> Pre-verification did not run. Treat every changed claim as unverified.")
@@ -581,6 +703,14 @@ def render_section(s: dict) -> str:
         tail.append(f"{s['reverted_blocks']} edited block(s) reverted to the pristine text")
     out.append(head + (": " + "; ".join(tail) if tail else "") + ".")
     out.append("")
+    if s.get("settle") == "restored-pristine":
+        out.append("> [!CAUTION]\n> **The article no longer matched any verified round**, so the workflow "
+                   "restored the original page. Nothing unverified ships; this glow-up should not publish.")
+        out.append("")
+    elif s.get("settle") == "restored-pre-repair":
+        out.append("> [!NOTE]\n> A repair step failed or was not re-verified, so the workflow restored "
+                   "the article to the last verified round before reverting.")
+        out.append("")
     if s["degraded"]:
         out.append("> [!WARNING]\n> **Pre-verification was degraded** (a pipeline stage failed; see errors "
                    "below). The verdicts here are incomplete, so a human must check the changed claims.")
@@ -619,6 +749,15 @@ def render_section(s: dict) -> str:
             out.append(f"- L{b['current_lines'][0]}-{b['current_lines'][1]} of the edited page, for "
                        f"{', '.join(b['claims'])}: removed “{_cell(b['removed'], 200)}”")
         out.append("")
+    if s.get("moved_rows"):
+        out.append("Moved to Backlog declined because the backstop reverted their lines: "
+                   + ", ".join(f"`{i}`" for i in s["moved_rows"]) + ".")
+        out.append("")
+    if s["reverted"] and s.get("unchecked_rows"):
+        out.append("> [!WARNING]\n> These Backlog executed rows have no known line, so the workflow couldn't "
+                   "tell whether a reverted block undid them. Check each against the reverted blocks above: "
+                   + ", ".join(f"`{i}`" for i in s["unchecked_rows"]) + ".")
+        out.append("")
     u = s["usage"]
     fmt = lambda d: (f"{d.get('input_tokens', 0):,} in / {d.get('output_tokens', 0):,} out"
                      f" / {d.get('cache_read_input_tokens', 0):,} cache-read")
@@ -647,7 +786,8 @@ def cmd_receipts(a) -> int:
     rounds = [r for r in (_load(Path(p), None) for p in a.round_file or []) if isinstance(r, dict)]
     rounds.sort(key=lambda r: int(r.get("round") or 0))
     reverted = _load(Path(a.reverted), None) if a.reverted else None
-    s = summarize(rounds, reverted)
+    settle = _load(Path(a.settle), None) if a.settle else None
+    s = summarize(rounds, reverted, settle)
     if a.out_json:
         Path(a.out_json).parent.mkdir(parents=True, exist_ok=True)
         Path(a.out_json).write_text(json.dumps(s, indent=2) + "\n")
@@ -756,6 +896,55 @@ def self_test() -> int:
     check(read_marker(spliced)["clean"] is True, "marker round-trips")
     check(read_marker("no marker") is None, "missing marker")
 
+    # Row moves after a revert.
+    body = ("## Backlog executed\n\n| Banked finding | Source PR | What changed |\n| --- | --- | --- |\n"
+            "| `fresh-c7` — **four properties** | this run | Changed three to four |\n"
+            "| `pr1-f2` — **tone** | #1 | Tightened the intro |\n\n"
+            "## Backlog declined\n\n| Banked finding | Source PR | Why not executed |\n| --- | --- | --- |\n\n"
+            "## Secondary sweep\n\nx\n")
+    backlog = {"banked": [{"id": "pr1-f2"}],
+               "reconciled": {"fresh_stubs": [{"id": "fresh-c7", "line_range": "L3"}]}}
+    verdict = {"verdict": "glowup", "fixes": 2, "skipped_findings": 0,
+               "executed_ids": ["fresh-c7", "pr1-f2"], "declined_ids": []}
+    v, b, moved, unknown = move_reverted_rows([{"pristine_lines": [3, 3]}], backlog, verdict, body)
+    check(moved == ["fresh-c7"] and unknown == ["pr1-f2"], f"moved {moved} unknown {unknown}")
+    check(v["executed_ids"] == ["pr1-f2"] and v["declined_ids"] == ["fresh-c7"]
+          and v["fixes"] == 1 and v["skipped_findings"] == 1, f"verdict {v}")
+    exe = b.split("## Backlog declined")[0]
+    dec = b.split("## Backlog declined")[1].split("## Secondary")[0]
+    check("fresh-c7" not in exe and "`fresh-c7`" in dec and "Reverted by pre-verification" in dec,
+          "row moved between tables")
+    check("`pr1-f2`" in exe, "unmatched row stays")
+
+    # Settle: the article must be the one the last round verified.
+    import tempfile as _tf
+    with _tf.TemporaryDirectory() as td:
+        t = Path(td)
+        (t / "pristine.md").write_text(pristine)
+        (t / "art.md").write_text(current)
+        rf = t / "r.json"
+        rf.write_text(json.dumps({"round": 1, "article_sha256": sha256(current)}))
+        ns = argparse.Namespace(article=str(t / "art.md"), pristine=str(t / "pristine.md"),
+                                round_file=str(rf), prerepair_dir=str(t / "snap"), body=None,
+                                verdict=None, out=str(t / "s.json"))
+        cmd_settle(ns)
+        check(json.loads((t / "s.json").read_text())["status"] == "consistent", "settle consistent")
+        (t / "snap").mkdir()
+        (t / "snap" / "article").write_text(current)
+        (t / "art.md").write_text(current + "half-applied repair\n")
+        cmd_settle(ns)
+        check((t / "art.md").read_text() == current
+              and json.loads((t / "s.json").read_text())["status"] == "restored-pre-repair",
+              "settle restores the verified pre-repair article")
+        (t / "snap" / "article").write_text("tampered\n")
+        (t / "art.md").write_text(current + "half-applied repair\n")
+        cmd_settle(ns)
+        check((t / "art.md").read_text() == pristine
+              and json.loads((t / "s.json").read_text())["status"] == "restored-pristine",
+              "a snapshot that isn't the verified article falls back to pristine")
+        s = summarize([{"round": 1, "claims": []}], None, {"status": "restored-pristine"})
+        check(not s["clean"], "restored-pristine is never clean")
+
     if fails:
         for f in fails:
             print(f"FAIL: {f}", file=sys.stderr)
@@ -789,14 +978,29 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--round-file", required=True)
     r.add_argument("--out", required=True)
 
+    r.add_argument("--backlog", help="reconciled .glowup-backlog.json (row moves)")
+    r.add_argument("--verdict", help=".content-review-verdict.json (row moves)")
+    r.add_argument("--body", help=".pr-body-draft.md (row moves)")
+
+    st = sub.add_parser("settle")
+    st.add_argument("--article", required=True)
+    st.add_argument("--pristine", required=True)
+    st.add_argument("--round-file")
+    st.add_argument("--prerepair-dir", help="snapshot taken before the repair that followed --round-file")
+    st.add_argument("--body")
+    st.add_argument("--verdict")
+    st.add_argument("--out", required=True)
+
     c = sub.add_parser("receipts")
     c.add_argument("--round-file", action="append")
     c.add_argument("--reverted")
+    c.add_argument("--settle")
     c.add_argument("--body")
     c.add_argument("--out-json")
 
     a = p.parse_args(argv)
-    return {"verify": cmd_verify, "revert": cmd_revert, "receipts": cmd_receipts}[a.cmd](a)
+    return {"verify": cmd_verify, "revert": cmd_revert, "settle": cmd_settle,
+            "receipts": cmd_receipts}[a.cmd](a)
 
 
 if __name__ == "__main__":

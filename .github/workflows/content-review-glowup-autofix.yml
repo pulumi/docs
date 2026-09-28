@@ -21,7 +21,9 @@ name: "Scheduled jobs: Glow-up autofix (post-open)"
 # deterministic, bounds the patch (one file, verify-glowup-scope.py against
 # master, make lint), and owns every write.
 #
-# Kill switch: repo variable GLOWUP_AUTOFIX = '0' turns the whole lane off.
+# Opt-in: nothing runs until the repo variable GLOWUP_AUTOFIX is set to '1'
+# (the same default-off pattern as the SLA sweep). Merging this file turns on
+# no bot pushes by itself.
 
 on:
   # Every lane that publishes or refreshes a review card. The run's own
@@ -51,7 +53,7 @@ concurrency:
 jobs:
   select:
     name: Select PRs (deterministic)
-    if: vars.GLOWUP_AUTOFIX != '0'
+    if: vars.GLOWUP_AUTOFIX == '1'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -88,12 +90,16 @@ jobs:
           for PR in $PRS; do
             D=".autofix-select/$PR"; mkdir -p "$D"
             gh pr view "$PR" --repo "$REPO" \
-              --json number,headRefOid,headRefName,author,state,isDraft,files > "$D/pr.json" || continue
+              --json number,headRefOid,headRefName,author,state,isDraft,files,commits > "$D/pr.json" || continue
             gh api --paginate "repos/$REPO/issues/$PR/comments" | jq -s 'add // []' > "$D/comments.json" \
               || echo '[]' > "$D/comments.json"
+            # The card comes from the review bot's comments only: anyone who
+            # can comment can post a body carrying the card's markers.
+            python3 "$S" cards --comments "$D/comments.json" \
+              --author-out "$D/card.md" --brief-out "$D/brief.md"
             python3 .claude/commands/docs-review/scripts/review-worklist.py \
-              --pr "$PR" --repo "$REPO" --format json > "$D/worklist.json" 2>"$D/worklist.err" \
-              || echo '{}' > "$D/worklist.json"
+              --body-file "$D/card.md" --brief-file "$D/brief.md" --format json \
+              > "$D/worklist.json" 2>"$D/worklist.err" || echo '{}' > "$D/worklist.json"
             python3 "$S" select --pr-json "$D/pr.json" --worklist "$D/worklist.json" \
               --comments "$D/comments.json" > "$D/select.json" || continue
             ACTION=$(jq -r .action "$D/select.json")
@@ -175,10 +181,10 @@ jobs:
           cp ".autofix-select/${{ matrix.pr.pr }}/select.json" .autofix/select.json
           cp ".autofix-master/$ARTICLE" .autofix/base.md 2>/dev/null || : > .autofix/base.md
           cp "$ARTICLE" .autofix/head.md
-          # The card, for the per-finding Do-this blocks.
-          gh api --paginate "repos/${{ github.repository }}/issues/${{ matrix.pr.pr }}/comments" \
-            | jq -rs 'add // [] | map(select(.body | contains("<!-- CLAUDE_REVIEW_AUTHOR -->"))) | .[].body' \
-            > .autofix/card.md || : > .autofix/card.md
+          # The card, for the per-finding Do-this blocks: the review bot's
+          # copy, filtered by the same code the selection used.
+          cp ".autofix-select/${{ matrix.pr.pr }}/card.md" .autofix/card.md 2>/dev/null \
+            || : > .autofix/card.md
           python3 -m pip install --quiet pyyaml
       - name: Run Claude Code
         id: claude
@@ -186,6 +192,9 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           allowed_bots: 'github-actions[bot]'
+          # No Bash, no web: this model reads review text that commenters can
+          # influence, in a job that holds an API key. It edits one file and
+          # writes one JSON; refutes cite sources in the checkout.
           prompt: |
             The working tree is glow-up PR #${{ matrix.pr.pr }}'s head. Follow
             `.autofix-master/.claude/commands/review-existing-content/SKILL.md`,
@@ -197,13 +206,24 @@ jobs:
           claude_args: |
             --model claude-opus-5-5 --effort medium --max-turns 60
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
-            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
+            --allowed-tools "Read,Write,Edit,Glob,Grep,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines"
       # The model's change is held to the same bar as a glow-up edit: re-run
       # the review's verifier over what the pass changed (lines restored to
       # master's text excepted), and withdraw any change that doesn't verify.
       # A finding whose fix gets withdrawn is reported unresolved, whatever
       # the model said.
+      # The model's Write/Edit tools could reach the master checkout, so it is
+      # checked out again before any of its scripts run.
+      - name: Re-checkout master (trusted scripts)
+        if: steps.claude.outcome == 'success'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: .autofix-master
       - name: Re-verify the fix (deterministic post-check)
+        id: postcheck
         if: steps.claude.outcome == 'success'
         continue-on-error: true
         env:
@@ -211,20 +231,46 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ARTICLE: ${{ matrix.pr.article }}
         run: |
-          S=.autofix-master/scripts/content-review/preverify-glowup.py
-          python3 "$S" verify --article "$ARTICLE" --pristine .autofix/head.md \
-            --restored-from .autofix/base.md --round 1 --out .autofix/postcheck-round.json
-          python3 "$S" revert --article "$ARTICLE" --pristine .autofix/head.md \
+          set -e
+          # Both inputs are rebuilt from sources the model can't write: the
+          # PR head from git, master's text from the fresh checkout.
+          git show "HEAD:$ARTICLE" > .autofix/head.md
+          cp ".autofix-master/$ARTICLE" .autofix/base.md 2>/dev/null || : > .autofix/base.md
+          # Verify inside the master checkout with only the article overlaid:
+          # the extractor reads its prompt, and the verifier its sibling
+          # pages, from the working directory.
+          cp "$ARTICLE" ".autofix-master/$ARTICLE"
+          ( cd .autofix-master && python3 scripts/content-review/preverify-glowup.py verify \
+              --article "$ARTICLE" --pristine ../.autofix/head.md \
+              --restored-from ../.autofix/base.md --round 1 \
+              --out ../.autofix/postcheck-round.json )
+          python3 .autofix-master/scripts/content-review/preverify-glowup.py revert \
+            --article "$ARTICLE" --pristine .autofix/head.md \
             --round-file .autofix/postcheck-round.json --out .autofix/postcheck.json
+          # Fail closed: a degraded verification is not a verified change.
+          if [ "$(jq -r .degraded .autofix/postcheck-round.json)" = "false" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::post-check verification was degraded; withholding the change"
+          fi
       - name: Export
         if: always()
         env:
           ARTICLE: ${{ matrix.pr.article }}
         run: |
           mkdir -p .autofix-out
-          git diff --binary -- "$ARTICLE" > .autofix-out/changes.patch
-          # Every changed non-dot path; publish refuses anything but the article.
-          git status --porcelain --untracked-files=all -- ':!.*' ':!.*/**' > .autofix-out/status.txt
+          # Only a change the model finished AND the post-check verified leaves
+          # this job. Anything else ships an empty patch, and publish records
+          # every fixed/reverted claim as unresolved.
+          if [ "${{ steps.claude.outcome }}" = "success" ] && [ "${{ steps.postcheck.outputs.ok }}" = "true" ]; then
+            git diff --binary -- "$ARTICLE" > .autofix-out/changes.patch
+            # Every changed non-dot path; publish refuses anything but the article.
+            git status --porcelain --untracked-files=all -- ':!.*' ':!.*/**' > .autofix-out/status.txt
+          else
+            echo "::warning::withholding the change (model: ${{ steps.claude.outcome }}, post-check ok: ${{ steps.postcheck.outputs.ok }})"
+            : > .autofix-out/changes.patch
+            : > .autofix-out/status.txt
+          fi
           for f in dispositions.json postcheck.json postcheck-round.json base.md; do
             [ -f ".autofix/$f" ] && cp ".autofix/$f" .autofix-out/ || true
           done

@@ -293,8 +293,8 @@ HUMAN_REVIEW_NOTICE = (
     "glow-up PRs and no automation approves them; triage requests the approver "
     "team `.github/review-routing.yml` routes this page to. Every claim on an "
     "edited line was checked before this PR opened (see **Pre-verification**). "
-    "If the pre-merge review still blocks, an automated pass answers each "
-    "finding on the review card and hands anything it can't settle to that "
+    "If the pre-merge review still blocks, the glow-up autofix (where enabled) "
+    "makes one pass at each finding and hands anything it can't settle to that "
     "team. Adjudicate the Backlog executed / Backlog declined tables below and "
     "merge manually."
 )

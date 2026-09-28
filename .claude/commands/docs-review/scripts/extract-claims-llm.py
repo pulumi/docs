@@ -569,8 +569,16 @@ def split_user_text(user_text: str) -> list[str] | None:
     if len(lines) < 4:
         return None
     mid = len(lines) // 2
-    heads = [i for i, ln in enumerate(lines)
-             if i and (ln.split("\t", 1)[1] if "\t" in ln else ln).startswith("## ")]
+
+    def body(ln: str) -> str:
+        # Whole-file bodies are "N\t<line>"; standard-scope hunks are
+        # "N\t+ <line>" / "N\t  <line>", so strip the diff marker too.
+        b = ln.split("\t", 1)[1] if "\t" in ln else ln
+        return b[2:] if b[:2] in ("+ ", "  ") else b
+
+    # Prefer an H2, then a hunk boundary, then the midpoint.
+    heads = [i for i, ln in enumerate(lines) if i and body(ln).startswith("## ")] or \
+            [i for i, ln in enumerate(lines) if i and ln.startswith("  @@ changed region")]
     cut = min(heads, key=lambda i: abs(i - mid)) if heads else mid
     if not 0 < cut < len(lines):
         cut = mid

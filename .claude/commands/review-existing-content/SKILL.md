@@ -699,8 +699,9 @@ above (`verify-glowup-scope.py` against the pristine copy and
 auto-merge**. The PR opens ready for review, and triage requests the approver
 team `.github/review-routing.yml` routes the page to (docs-guild, or
 marketing for a Get Started page). If the pre-merge review still posts
-blocking findings, `content-review-glowup-autofix.yml` makes one bounded
-pass at them as pulumi-bot (the PR's author): it fixes, refutes, or reverts
+blocking findings and the repo variable `GLOWUP_AUTOFIX` is `'1'` (it is
+off by default), `content-review-glowup-autofix.yml` makes one bounded pass
+at them as pulumi-bot (the PR's author): it fixes, refutes, or reverts
 each finding, answers it on the review card the way `/address-review` would,
 records the dispositions in the PR body, and hands anything it can't settle
 to the routed team by name. The ledger records status `glowup` (a completed
@@ -730,7 +731,7 @@ tree is the PR's head.
 can't own `accepted` or `deferred`, which need a human):
 
 - `fixed` — change the text so it says what the source says. Only when the
-  card's evidence, the verifier's source, or a source you check now states
+  card's evidence, the verifier's source, or a file in the checkout states
   the value outright. Prefer the card's proposed fix when it is right. Never
   guess a value.
 - `reverted` — withdraw the glow-up's edit: restore the anchored lines to
@@ -738,8 +739,11 @@ can't own `accepted` or `deferred`, which need a human):
   or reworded, and for any finding on text the glow-up only restyled. A
   glow-up that says less is fine; one that says something unverified is not.
 - `refuted` — the finding is wrong. Only with a `source` you actually read
-  this run (a repo path, a URL, a `gh` query) that shows it. Your `note`
-  says what the source says. Disagreeing without a source is `unresolved`.
+  this run in the checkout (a repo path, e.g. `.autofix-master/content/...`
+  for master's text, or a line of `card.md`'s own evidence) that shows it.
+  Your `note` says what the source says. Disagreeing without a source is
+  `unresolved`. You have no shell and no web access in this job: it reads
+  review text anyone can comment on while holding an API key.
 - `unresolved` — none of the above is safe. A human decides; say why in
   one line.
 
@@ -766,7 +770,8 @@ pushes as pulumi-bot, posts one `@claude … #update-review` comment with your
 dispositions (the update lane then refreshes the card), records them in the
 PR body's **Post-open review findings** table, and hands every `unresolved`
 finding to the routed team by name. There are at most two passes per PR and
-never two on the same head.
+never two on the same head. The autofix stands down on any PR a person has
+pushed to or answered `#update-review` on: from then on it is theirs.
 
 ## Report-only mode — no model runs
 

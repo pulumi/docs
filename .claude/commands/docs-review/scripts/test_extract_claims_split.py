@@ -38,6 +38,12 @@ def test_split_keeps_preamble_line_numbers_and_trailer():
     assert second_body.split("\t", 1)[1].startswith("## Section")
 
 
+def test_split_finds_h2_in_standard_scope_hunks():
+    body = [f"{i}\t+ ## Heading {i}" if i == 13 else f"{i}\t  line {i}" for i in range(1, 41)]
+    halves = ecl.split_user_text("preamble\n```\n" + "\n".join(body) + "\n```\n")
+    assert halves[1].split("```\n", 1)[1].startswith("13\t+ ## Heading 13")
+
+
 def test_split_refuses_tiny_or_unfenced_bodies():
     assert ecl.split_user_text("no fence here") is None
     assert ecl.split_user_text("```\n1\ta\n```") is None
