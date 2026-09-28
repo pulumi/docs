@@ -50,7 +50,16 @@ output "ecr_repository_url" {
 
 ### Reference local state files
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 For Terraform workspaces using local state files, you can reference them directly, via the [`getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/) function:
+
+{{% /choosable %}}
+{{% choosable language "hcl" %}}
+
+For Terraform workspaces using local state files, read the state file with the same `terraform_remote_state` data source you would use in Terraform. The [`terraform`](/registry/packages/terraform/) provider serves it, and `pulumi install` fetches that provider for you:
+
+{{% /choosable %}}
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
@@ -204,8 +213,6 @@ outputs:
 
 {{% choosable language "hcl" %}}
 
-In Pulumi HCL, read the state file with the same `terraform_remote_state` data source you would use in Terraform. The [`terraform`](/registry/packages/terraform/) provider serves it, and `pulumi install` fetches that provider for you:
-
 ```hcl
 # Reference local Terraform state
 data "terraform_remote_state" "infra" {
@@ -230,7 +237,16 @@ output "repositoryUrl" {
 
 ### Reference remote state
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 For production environments, many prefer to store their state in Terraform Cloud. To reference remote state, use the [`getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) function:
+
+{{% /choosable %}}
+{{% choosable language "hcl" %}}
+
+For production environments, many prefer to store their state in Terraform Cloud. To reference remote state, switch the same data source to the `remote` backend. Keep the API token out of the program by declaring it as a sensitive variable, which Pulumi stores as a [secret](/docs/iac/concepts/secrets/):
+
+{{% /choosable %}}
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
@@ -414,8 +430,6 @@ outputs:
 {{% /choosable %}}
 
 {{% choosable language "hcl" %}}
-
-Switch the same data source to the `remote` backend. Keep the API token out of the program by declaring it as a sensitive variable, which Pulumi stores as a [secret](/docs/iac/concepts/secrets/):
 
 ```hcl
 variable "tfe_token" {
