@@ -15,19 +15,9 @@ aliases:
   - /docs/iac/concepts/options/retainOnDelete/
 ---
 
-The `retainOnDelete` resource option marks a resource to be retained. If this option is set then Pulumi will not call through to the resource provider's `Delete` method when deleting or replacing the resource during `pulumi up` or `pulumi destroy`. As a result, the resource will not be deleted from the backing cloud provider, but will be removed from the Pulumi state.
+The `retainOnDelete` resource option marks a resource to be retained. If this option is set, Pulumi does not call through to the resource provider's `Delete` method when deleting or replacing the resource during `pulumi up` or `pulumi destroy`. As a result, the resource is not deleted from the backing cloud provider, but is removed from the Pulumi state.
 
 {{< resource-option-scope "retainOnDelete" >}}
-
-If a retained resource is deleted by Pulumi and you later want to actually delete it from the backing cloud provider you will either need to use your provider's manual interface to find and delete the resource, or import the resource back into Pulumi to unset `retainOnDelete` and delete it again fully.
-
-To actually delete a retained resource, this setting must first be set to `false`.
-
-* Set `retainOnDelete: false` and then run `pulumi up`
-
-Once the resource is no longer marked retained, it can be fully deleted as part of a following update.
-
-The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
 For a complete walkthrough of using this option to remove a resource from a stack without deleting the underlying infrastructure, including how it compares to `pulumi state delete`, see [Removing resources without deleting them](/docs/iac/operations/stack-management/removing-resources-without-deleting-them/).
 
@@ -36,7 +26,7 @@ For a complete walkthrough of using this option to remove a resource from a stac
 {{% choosable language typescript %}}
 
 ```typescript
-let db = new Database("db", {}, { retainOnDelete: true });
+const db = new Database("db", {}, { retainOnDelete: true });
 ```
 
 {{% /choosable %}}
@@ -50,7 +40,7 @@ db = Database("db", opts=ResourceOptions(retain_on_delete=True))
 {{% choosable language go %}}
 
 ```go
-db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.RetainOnDelete(true));
+db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.RetainOnDelete(true))
 ```
 
 {{% /choosable %}}
@@ -99,3 +89,17 @@ resource "database" "db" {
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Deleting a retained resource
+
+To delete a retained resource from the backing cloud provider, first set `retainOnDelete: false` and run `pulumi up`. Once the resource is no longer marked retained, a later update that removes it, or `pulumi destroy`, deletes it fully.
+
+If Pulumi has already removed a retained resource from the stack, the resource still exists in the cloud provider. To delete it, either use the provider's console or CLI, or [import](/docs/iac/concepts/resources/options/import/) it back into Pulumi, unset `retainOnDelete`, and delete it again.
+
+## Inheritance from parent
+
+`retainOnDelete` is inherited from a resource's [`parent`](/docs/iac/concepts/resources/options/parent/), and defaults to `false` for resources without a parent. Setting `retainOnDelete` on a parent retains every descendant in the resource tree, which makes it the way to retain all of the resources in a [component resource](/docs/iac/concepts/components/).
+
+Because a component has no infrastructure of its own in the cloud provider, setting `retainOnDelete` on a component has no direct effect on the component. Its effect comes entirely from propagating the value to the component's children.
+
+A child can override an inherited value by setting `retainOnDelete` explicitly. For example, set `retainOnDelete: false` on a child to delete it normally even though its parent is retained. For the full list of options children inherit, see [Inherited resource options](/docs/iac/concepts/resources/options/parent/#inherited-resource-options).
