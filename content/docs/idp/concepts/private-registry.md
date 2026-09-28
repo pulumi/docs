@@ -22,6 +22,7 @@ For detailed information about different component packaging approaches, see [Pa
 1. You need a [Pulumi Cloud](https://app.pulumi.com) account.
 1. You need the [Pulumi CLI](/docs/install/) installed.
 1. Your component must be pushed to a GitHub or GitLab repository that Pulumi can access. Private repositories are supported — see [Authenticating with private repositories](#authenticating-with-private-repositories).
+1. Your component repository must have a `README.md` in its root directory, or you must specify a custom location with the `--readme` flag. See [README](#readme).
 1. If you haven't built a component yet, see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/).
 
 ## Quick start
@@ -197,9 +198,9 @@ Browse all packages available to your organization, including public providers a
 
 ### Private components
 
-This tab shows only the component packages published by your organization via `pulumi package publish`.
+This tab shows only the component packages published by your organization.
 
-### Usage tracking
+## Usage tracking
 
 ![Package list showing usage columns and filters](/docs/idp/concepts/usage-columns.png)
 
