@@ -1286,8 +1286,14 @@ jobs:
               [[ "$LIVE_HW" =~ ^[0-9]+$ ]] && (( LIVE_HW > PRIOR_HW )) && PRIOR_HW=$LIVE_HW
             fi
             echo "compose: finding ids start above high_water=$PRIOR_HW"
+            # The composer runs from the PR head checkout: a branch cut before
+            # the flag existed would reject it and error the whole review.
+            HW_ARGS=()
+            if grep -q -- '--prior-high-water' .claude/commands/docs-review/scripts/compose-review.py; then
+              HW_ARGS=(--prior-high-water "$PRIOR_HW")
+            fi
             python3 .claude/commands/docs-review/scripts/compose-review.py \
-              --prior-high-water "$PRIOR_HW" \
+              "${HW_ARGS[@]}" \
               --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
               --out .review-draft.md --surface v3 --run-id "${{ github.run_id }}" \
               --timestamp "${{ steps.now.outputs.value }}" \
