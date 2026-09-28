@@ -70,8 +70,9 @@ jobs:
   #
   # The bot-author exclusion below skips the high-volume bot PRs nobody
   # reviews (SDK doc regens, dependabot) — but it must carve out
-  # `content-review/*` and `fix/broken-links-*`, matching the same carve-out
-  # the review job's own skip logic makes ("Bot-authored PRs are slop-skipped
+  # `content-review/*`, `fix/broken-links-*`, and `vale/brand-sync-*`,
+  # matching the same carve-out the review job's own skip logic makes
+  # ("Bot-authored PRs are slop-skipped
   # — EXCEPT content-review/*"). Those PRs are authored by pulumi-bot and DO get a
   # full review, and being bot-authored is exactly why a human pushes to
   # them (applying suggestions, answering findings). Without the carve-out
@@ -87,7 +88,8 @@ jobs:
         ( github.event.pull_request.user.login != 'pulumi-bot' &&
           github.event.pull_request.user.login != 'dependabot[bot]' ) ||
         startsWith(github.event.pull_request.head.ref, 'content-review/') ||
-        startsWith(github.event.pull_request.head.ref, 'fix/broken-links-')
+        startsWith(github.event.pull_request.head.ref, 'fix/broken-links-') ||
+        startsWith(github.event.pull_request.head.ref, 'vale/brand-sync-')
       )
     runs-on: ubuntu-latest
     permissions:
@@ -513,9 +515,10 @@ jobs:
             # the alternatives.
             elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
               SKIP="oversized"
-            # Bot-authored PRs are slop-skipped — EXCEPT content-review/* and
-            # fix/broken-links-* (the broken-link fixer), which are first-class
-            # automated docs fixes we want reviewed. Those fall
+            # Bot-authored PRs are slop-skipped — EXCEPT content-review/*,
+            # fix/broken-links-* (the broken-link fixer), and vale/brand-sync-*
+            # (the weekly brand-guide sync), which are first-class automated
+            # docs fixes we want reviewed. Those fall
             # through to the already-reviewed guard below (so they still can't
             # re-review loop) and otherwise get a normal review. Triage already
             # ran on them and applied any trivial / frontmatter-only short-circuit
@@ -523,7 +526,8 @@ jobs:
             # there instead of being force-reviewed.
             elif [[ ( "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ) \
                     && "$HEAD_BRANCH" != content-review/* \
-                    && "$HEAD_BRANCH" != fix/broken-links-* ]]; then
+                    && "$HEAD_BRANCH" != fix/broken-links-* \
+                    && "$HEAD_BRANCH" != vale/brand-sync-* ]]; then
               SKIP="bot-author"
             # Auto-fire path (workflow_run from triage) on a PR that the
             # review pipeline has already touched: don't burn API on a
