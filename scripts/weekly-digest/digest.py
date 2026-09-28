@@ -342,7 +342,12 @@ def collect_sla(enabled, ledger_bucket):
     except (OSError, RuntimeError, subprocess.TimeoutExpired, json.JSONDecodeError) as exc:
         sys.stderr.write(f"warning: sla-sweep dry-run failed: {str(exc)[:500]}\n")
         return {"available": False, "enabled": enabled}
-    return shape_sla(record, policy, enabled)
+    shaped = shape_sla(record, policy, enabled)
+    # Without the ledger the dry run evaluates from an empty state dir, so a
+    # PR the sweep already warned reads as un-warned (a longer notice than it
+    # really has). The renderer flags it.
+    shaped["ledger"] = bool(ledger_bucket)
+    return shaped
 
 
 def collect_review_outcomes(since):
@@ -559,6 +564,10 @@ def throughput(start, end=None):
 def main():
     cutoff_dt = NOW - timedelta(days=WINDOW_DAYS)
     cutoff = cutoff_dt.date().isoformat()
+    # Throughput compares two equal windows of whole days: the 7 days before
+    # today and the 7 before those. (A `>=cutoff` open-ended window would
+    # run ~7.6 days against 7 and bias the week-over-week shift.)
+    yesterday = (NOW - timedelta(days=1)).date().isoformat()
     prev_start = (cutoff_dt - timedelta(days=WINDOW_DAYS)).date().isoformat()
     prev_end = (cutoff_dt - timedelta(days=1)).date().isoformat()
     prs = shape_prs(
@@ -578,7 +587,7 @@ def main():
             ]
         )
     )
-    this_week = throughput(cutoff)
+    this_week = throughput(cutoff, yesterday)
     # Kept for readers of the old field names (the backlog delta).
     issues["opened_last_7d"] = this_week["issues_opened"]
     issues["closed_last_7d"] = this_week["issues_closed"]

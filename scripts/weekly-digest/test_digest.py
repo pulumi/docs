@@ -224,7 +224,7 @@ def test_sweep_off_vs_on_wording():
     # Abandoned context has to survive promotion into the top list, so it
     # rides in the candidate's facts, not only in the section header.
     off = render.render(base_digest(), None)
-    assert "the sweep is off, so close or rescue it by hand" in off and "closes in" not in off
+    assert "close or rescue it by hand" in off and "closes in" not in off
     d = base_digest()
     d["sla"] = digest.shape_sla(sweep_record(), POLICY, "on")
     d["v3_ops"] = {"available": True, "escalations_total": 6, "warns": 1, "closes": 0, "waives": 0}
@@ -238,6 +238,60 @@ def test_abandoned_section_header_when_not_promoted():
     ranking = {"order": [{"ref": "pr:10", "why": "x"}]}
     msg = render.render(d, ranking)
     assert "*Abandoned* (author idle >14d)" in msg and "close or rescue it by hand" in msg
+
+
+def test_no_verdicts_never_says_merge_it():
+    # C&C review F1: with SLA verdicts missing, every green no-blockers PR
+    # looked verdict-free and was offered as "merge it".
+    d = base_digest(sla={"available": False, "enabled": "on"})
+    kinds = {c["kind"] for c in render.build_view(d)["candidates"]}
+    assert not kinds & {"merge-now", "keep-or-kill"}
+    assert "merge it" not in render.render(d, None)
+
+
+def test_close_without_projection_reads_next_sweep():
+    d = base_digest()
+    rec = sweep_record()
+    rec["actions"][3]["action"] = {"type": "close", "idle_days": 23.0}
+    d["sla"] = digest.shape_sla(rec, POLICY, "on")
+    msg = render.render(d, None)
+    assert "closes at the next sweep" in msg and "None" not in msg
+
+
+def test_unknown_sweep_state_never_reads_as_off():
+    d = base_digest(switches=digest.shape_switches(None))
+    d["sla"] = digest.shape_sla(sweep_record(), POLICY, "unknown")
+    msg = render.render(d, None)
+    assert "closes on its own only if the SLA sweep is on" in msg
+    assert "off:" not in msg and "unknown: SLA sweep" in msg
+
+
+def test_missing_ledger_is_flagged():
+    d = base_digest()
+    d["sla"]["ledger"] = False
+    assert ":warning: *Review ledger unreadable*" in render.render(d, None)
+    d["sla"]["ledger"] = True
+    assert "Review ledger unreadable" not in render.render(d, None)
+
+
+def test_sweep_off_said_once():
+    msg = render.render(base_digest(), None)
+    assert msg.count("sweep is off") == 0 and msg.count("SLA sweep") == 1  # the Switches line
+
+
+def test_blog_count_excludes_prs_listed_elsewhere():
+    d = base_digest()
+    d["prs"][3]["labels"] = ["domain:blog"]  # PR 13 is abandoned and listed on its own
+    assert render.build_view(d)["blog"]["open"] == 1
+
+
+def test_no_candidates_no_fallback_footer_and_no_delta_suffix_without_data():
+    d = base_digest(prs=[], review_outcomes={"available": False}, throughput={},
+                    workflow_failures={"total_runs": 5, "failing": []})
+    d["issues"]["new_this_week"] = []
+    msg = render.render(d, {})
+    assert "Nothing this week." in msg and "model ranking unavailable" not in msg
+    assert "vs last week" not in msg
 
 
 def test_sla_unavailable_is_loud():

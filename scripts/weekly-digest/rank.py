@@ -21,7 +21,6 @@ import json
 import os
 import re
 import sys
-import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -89,7 +88,7 @@ def main() -> int:
         return 0
     try:
         result = rank(candidates, key)
-    except (urllib.error.URLError, OSError, ValueError, RuntimeError, json.JSONDecodeError) as exc:
+    except Exception as exc:  # noqa: BLE001 -- by contract nothing here may fail the job
         sys.stderr.write(f"::warning::ranking failed ({str(exc)[:300]}); digest uses the fixed priority order\n")
         print("{}")
         return 0

@@ -131,7 +131,7 @@ def build_view(d: dict) -> dict:
     sla = d.get("sla") or {}
     verdicts = {v["pr"]: v for v in sla.get("verdicts") or []} if sla.get("available") else {}
     policy = sla.get("policy") or {}
-    sweep_on = sla.get("enabled") == "on"
+    sweep = sla.get("enabled")  # "on" | "off" | "unknown"
 
     def in_blog_lane(n: int) -> bool:
         v = verdicts.get(n)
@@ -188,16 +188,26 @@ def build_view(d: dict) -> dict:
             if v.get("abandoned"):
                 findings = v.get("undecided_count")
                 what = f"{findings} findings open" if findings else "changes requested"
-                fate = (f"closes in {v.get('closes_in_days')}d" if sweep_on
-                        else "the sweep is off, so close or rescue it by hand")
+                days = v.get("closes_in_days")
+                if sweep == "on":
+                    # No projection (a `close` the dry run would issue now, or
+                    # one that failed last sweep) means it's due immediately.
+                    fate = f"closes in {days}d" if days else "closes at the next sweep"
+                elif sweep == "off":
+                    fate = "close or rescue it by hand"
+                else:
+                    fate = "closes on its own only if the SLA sweep is on"
                 add("abandoned", f"pr:{n}", n, pr["title"], pr_url(n),
                     f"author idle {round(v['idle_days'])}d, {what}; {fate}",
                     idle_days=v["idle_days"], closes_in_days=v.get("closes_in_days"),
-                    sort_key=v.get("closes_in_days") or 0)
+                    sort_key=days or 0)
             elif not in_blog_lane(n):
                 waiting_on_author += 1
 
-    for n, pr in sorted(humans.items()):
+    # "No verdict" only means "no reviewer clock" when the sweep's verdicts
+    # actually arrived. Without them every PR looks verdict-free, and an
+    # approval-bound PR would read as "merge it".
+    for n, pr in sorted(humans.items()) if sla.get("available") else []:
         if pr.get("isDraft") or n in verdicts or in_blog_lane(n):
             continue
         labels = set(pr.get("labels") or [])
@@ -218,7 +228,8 @@ def build_view(d: dict) -> dict:
                 "new issue, not triaged", sort_key=-(i.get("age_days") or 0))
 
     listed = {c["number"] for c in candidates if c["ref"].startswith("pr:")}
-    blog_open = [n for n, p in humans.items() if not p.get("isDraft") and in_blog_lane(n)]
+    blog_open = [n for n, p in humans.items()
+                 if not p.get("isDraft") and in_blog_lane(n) and n not in listed]
     blog_oldest = max(blog_overdue, key=lambda t: t[1]["waited"], default=None)
     return {
         "candidates": candidates,
@@ -286,7 +297,8 @@ def _header(d: dict) -> list[str]:
     head = f"*{open_prs}* open PRs" + (f" ({signed(pr_d)})" if pr_d is not None else "")
     if open_issues is not None:
         head += f" · *{open_issues}* issues" + (f" ({signed(is_d)})" if is_d is not None else "")
-    lines = [f":clipboard: *Docs weekly* · {date}".rstrip(" ·"), head + " vs last week"]
+    suffix = " vs last week" if pr_d is not None or is_d is not None else ""
+    lines = [f":clipboard: *Docs weekly* · {date}".rstrip(" ·"), head + suffix]
 
     # Throughput only earns a line when it moved: a flat week is already
     # summed up by the deltas above.
@@ -345,8 +357,7 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
     else:
         overdue = by_kind.get("overdue") or []
         if overdue:
-            note = "" if sla.get("enabled") == "on" else " (the sweep is off: nobody was pinged)"
-            out += ["", f"*Over review SLA*{note}"]
+            out += ["", "*Over review SLA*"]
             teams: dict[str, list[dict]] = {}
             for c in overdue:
                 teams.setdefault(c["role"], []).append(c)
@@ -442,6 +453,10 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
     else:
         out.append(":warning: *Failed runs*: run history unavailable")
 
+    if sla.get("available") and sla.get("ledger") is False:
+        out.append(":warning: *Review ledger unreadable*: the sweep's per-PR state is missing, so "
+                   "a PR it already warned may close sooner than shown")
+
     switches = d.get("switches") or []
     unknown = [s for s in switches if s["state"] == "unknown"]
     known = [s for s in switches if s["state"] != "unknown"]
@@ -470,7 +485,7 @@ def render(d: dict, ranking: dict | None = None) -> str:
     top, source = resolve_ranking(view["candidates"], ranking)
     shown = {t["ref"] for t in top}
     lines = _header(d) + [""] + _top(view, top) + _sections(view, shown) + _summary(d, view, shown)
-    if source == "fallback" and ranking is not None:
+    if source == "fallback" and ranking is not None and top:
         lines.append("_Top list in fixed priority order (model ranking unavailable)._")
     return "\n".join(lines).strip() + "\n"
 

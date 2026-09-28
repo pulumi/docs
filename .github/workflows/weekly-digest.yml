@@ -57,8 +57,8 @@ jobs:
       # Pulumi needed) feeds two readers: collect_v3_ops() reads the sweep's
       # pr-review/runs/ records, and the read-only sweep reads its per-PR
       # pr-review/state/ so a PR it already warned shows its real remaining
-      # notice. Without credentials both degrade (the digest flags "review
-      # ledger unreadable") and the rest of the digest stays intact.
+      # notice. Without credentials both degrade (the digest shows a "Review
+      # ledger unreadable" warning) and the rest of the digest stays intact.
       - name: Configure AWS credentials
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
@@ -100,7 +100,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 scripts/weekly-digest/render.py candidates /tmp/digest.json > /tmp/candidates.json
-          python3 scripts/weekly-digest/rank.py /tmp/candidates.json > /tmp/ranking.json
+          python3 scripts/weekly-digest/rank.py /tmp/candidates.json > /tmp/ranking.json || echo '{}' > /tmp/ranking.json
           echo "Ranked $(jq 'length' /tmp/candidates.json) candidates; model order: $(jq -c '[.order[]?.ref]' /tmp/ranking.json)"
 
       # 3. RENDER: deterministic Slack mrkdwn, one message.
