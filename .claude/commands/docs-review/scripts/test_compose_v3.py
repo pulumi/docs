@@ -778,3 +778,22 @@ def test_a_rereview_continues_ids_above_the_prior_high_water(tmp_path, v3_output
     assert ids == list(range(8, 8 + n))
     assert review_state.parse_state(author.read_text())["high_water"] == 7 + n
     assert "**F1**" not in author.read_text() + brief.read_text()
+
+
+def test_a_header_only_checks_table_collapses_even_with_the_handoff_hint():
+    """#21948's own brief: every ⚠️ row filed off, the "_Not your area?_"
+    hint left behind, and the header-only table survived the collapse under
+    "Check the ⚠️ items, then approve"."""
+    be = _load("build_evidence_for_handoff", HERE / "build-evidence.py")
+    brief = "\n".join([
+        "## Reviewer's guide v1 — not for the author", "",
+        cr.CHECKS_HEADING, "",
+        cr.FINDING_TABLE_HEADER, cr.FINDING_TABLE_SEPARATOR, "",
+        "_Not your area? Hand it to another member of @pulumi/docs-tools rather than approving on faith._",
+        "", "### ✅ What you can rubber-stamp", "",
+    ])
+    out = be._collapse_empty_tables(brief, be.BRIEF_SECTIONS)
+    assert cr.FINDING_TABLE_HEADER not in out and "Not your area" not in out
+    assert cr._V3_EMPTY_CHECKS in out
+    kept = brief.replace(cr.FINDING_TABLE_SEPARATOR, cr.FINDING_TABLE_SEPARATOR + "\n| **F1** | `x.md` L1 | y |")
+    assert be._collapse_empty_tables(kept, be.BRIEF_SECTIONS) == kept, "a live row keeps its table and hint"
