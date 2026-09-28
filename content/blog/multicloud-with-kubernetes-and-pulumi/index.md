@@ -1,7 +1,7 @@
 ---
 title: "Multicloud with Kubernetes and Pulumi"
 date: 2022-06-09T11:40:47-07:00
-meta_desc: "Build a self-service Kubernetes platform with Pulumi Components and the Automation API, provisioning clusters on Civo, Linode, and KinD through one golden-path abstraction."
+meta_desc: "Build a self-service Kubernetes platform with Pulumi Components and the Automation API, provisioning Civo, Linode, and KinD clusters through one golden path."
 authors:
     - guinevere-saenger
 tags:
