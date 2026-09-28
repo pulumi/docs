@@ -130,6 +130,11 @@ def cards(comments: list[dict]) -> tuple[str, str, str]:
             (brief[-1].get("body") or "") if brief else "", updated)
 
 
+# `F3: ...`, `F3 is wrong`, "accepting all open items": the reply shapes the
+# card's How-to-answer section teaches.
+_ANSWER_RE = re.compile(r"\bF\d+\b|\baccept(?:ing|ed)?\b", re.I)
+
+
 def human_activity(pr: dict, comments: list[dict]) -> str:
     """Why a person owns this PR now, or "" if nobody has stepped in. A
     `reverted` disposition would otherwise overwrite their edit."""
@@ -140,7 +145,11 @@ def human_activity(pr: dict, comments: list[dict]) -> str:
                 return f"{login} pushed to this PR"
     for c in comments or []:
         login = _login(c)
-        if login and login not in AUTOMATION and "#update-review" in (c.get("body") or ""):
+        body = c.get("body") or ""
+        # An answer to a finding, not a bare refresh: the Sentinel and the
+        # brief tell people to post `@claude #update-review` just to refresh
+        # a stale card, and that must not end the autofix for the PR.
+        if login and login not in AUTOMATION and "#update-review" in body and _ANSWER_RE.search(body):
             return f"{login} answered the review card"
     return ""
 
@@ -383,7 +392,10 @@ def cmd_answer(a) -> int:
     history.append({"pass": sel.get("pass"), "commit": a.commit, "rows": rows})
     (od / "body.md").write_text(splice_section(body, render_section(history)))
     unresolved = [r["id"] for r in rows if r["disposition"] == "unresolved"]
-    escalate = (bool(unresolved) or int(sel.get("pass") or 0) >= MAX_PASSES) and not sel.get("escalated")
+    # Escalate what this pass could not settle. A budget-spent PR whose
+    # refreshed card still has open items escalates through `select` instead,
+    # which lists the items actually open then, not ones this pass fixed.
+    escalate = bool(unresolved) and not sel.get("escalated")
     (od / "rows.json").write_text(json.dumps({"rows": rows, "unresolved": unresolved,
                                               "escalate": escalate}, indent=2) + "\n")
     teams = [t for t in (a.teams or "").split() if t]
@@ -470,7 +482,9 @@ def self_test() -> int:
     human = {**pr, "commits": [{"authors": [{"login": "cnunciato"}]}]}
     check(select(human, wl, [])["action"] == "none", "human commit stands the autofix down")
     answered = [{"user": {"login": "tatcoo-pulumi"}, "body": "@claude F1: fine as is #update-review"}]
-    check(select(pr, wl, answered)["action"] == "none", "human #update-review stands it down")
+    check(select(pr, wl, answered)["action"] == "none", "a human answer to a finding stands it down")
+    refresh = [{"user": {"login": "jkodroff"}, "body": "@claude #update-review"}]
+    check(select(pr, wl, refresh)["action"] == "fix", "a bare human refresh request does not")
     check(select({**pr, "commits": [{"authors": [{"login": BOT}]}]}, wl, [])["action"] == "fix",
           "bot-only commits are fine")
     # Only the review bot's card counts.
@@ -517,6 +531,31 @@ def self_test() -> int:
     check(body2.count(f"## {SECTION}") == 1 and len(history_from_body(body2)) == 2, "section accumulates")
     esc = render_escalation(s, [{**rows[0], "disposition": "unresolved", "note": "x"}], ["pulumi/docs-guild"])
     check("@pulumi/docs-guild" in esc and ESCALATED_MARKER in esc and "**F1**" in esc, "escalation")
+
+    # Pass 2 that fixed everything must not escalate (it used to, and then
+    # listed already-fixed items as the team's to decide).
+    import argparse as _ap
+    import tempfile as _tf
+    with _tf.TemporaryDirectory() as td:
+        t = Path(td)
+        sel2 = {**s, "pass": 2, "head_sha": head}
+        (t / "sel.json").write_text(json.dumps(sel2))
+        (t / "d.json").write_text(json.dumps({"findings": [
+            {"id": "F1", "disposition": "fixed", "note": "Dropped the count."},
+            {"id": "F2", "disposition": "reverted", "note": "Restored master's sentence."}]}))
+        ns = _ap.Namespace(select=str(t / "sel.json"), dispositions=str(t / "d.json"), postcheck=None,
+                           commit="d" * 40, body=None, teams="pulumi/docs-guild", out_dir=str(t / "o"))
+        cmd_answer(ns)
+        r = json.loads((t / "o" / "rows.json").read_text())
+        check(r["escalate"] is False and not r["unresolved"], f"all-fixed pass 2 does not escalate {r}")
+        (t / "d.json").write_text(json.dumps({"findings": [
+            {"id": "F1", "disposition": "fixed", "note": "x"}]}))
+        cmd_answer(ns)
+        r = json.loads((t / "o" / "rows.json").read_text())
+        check(r["escalate"] is True and r["unresolved"] == ["F2"], f"unresolved rows escalate {r}")
+        (t / "sel.json").write_text(json.dumps({**sel2, "escalated": True}))
+        cmd_answer(ns)
+        check(json.loads((t / "o" / "rows.json").read_text())["escalate"] is False, "never twice")
 
     if fails:
         for f in fails:

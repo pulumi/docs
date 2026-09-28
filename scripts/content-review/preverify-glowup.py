@@ -598,8 +598,11 @@ def cmd_settle(a) -> int:
     crashed after a repair, leaves an article the last round never saw; the
     round's line ranges then point at the wrong text. Restore the pre-repair
     snapshot when it is the article the round verified (checked by hash),
-    else fall back to the pristine page, which the publish gate refuses as an
-    empty glow-up, so nothing unverified ships."""
+    else fall back to the pristine page AND withhold the verdict sentinel:
+    with no verdict the publish job opens nothing and the ledger records the
+    page incomplete, so it is retried. (Restoring the article alone was not
+    enough: a glow-up that also changed a bundle asset would still have a
+    non-empty patch, and a body describing edits that are gone.)"""
     rnd = _load(Path(a.round_file), {}) if a.round_file else {}
     want = (rnd or {}).get("article_sha256")
     art = Path(a.article)
@@ -620,6 +623,10 @@ def cmd_settle(a) -> int:
         else:
             art.write_text(Path(a.pristine).read_text())
             status = "restored-pristine"
+            if a.verdict and Path(a.verdict).exists():
+                held = Path(a.out).parent / "withheld-verdict.json"
+                held.parent.mkdir(parents=True, exist_ok=True)
+                Path(a.verdict).replace(held)
     rec = {"schema_version": SCHEMA_VERSION, "status": status, "round": (rnd or {}).get("round")}
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(rec, indent=2) + "\n")
@@ -705,7 +712,8 @@ def render_section(s: dict) -> str:
     out.append("")
     if s.get("settle") == "restored-pristine":
         out.append("> [!CAUTION]\n> **The article no longer matched any verified round**, so the workflow "
-                   "restored the original page. Nothing unverified ships; this glow-up should not publish.")
+                   "restored the original page and withheld the verdict. Nothing publishes; the page is "
+                   "recorded incomplete and retried.")
         out.append("")
     elif s.get("settle") == "restored-pre-repair":
         out.append("> [!NOTE]\n> A repair step failed or was not re-verified, so the workflow restored "
@@ -938,10 +946,14 @@ def self_test() -> int:
               "settle restores the verified pre-repair article")
         (t / "snap" / "article").write_text("tampered\n")
         (t / "art.md").write_text(current + "half-applied repair\n")
+        (t / "verdict.json").write_text('{"verdict": "glowup"}')
+        ns.verdict = str(t / "verdict.json")
         cmd_settle(ns)
         check((t / "art.md").read_text() == pristine
               and json.loads((t / "s.json").read_text())["status"] == "restored-pristine",
               "a snapshot that isn't the verified article falls back to pristine")
+        check(not (t / "verdict.json").exists() and (t / "withheld-verdict.json").exists(),
+              "restored-pristine withholds the verdict so nothing publishes")
         s = summarize([{"round": 1, "claims": []}], None, {"status": "restored-pristine"})
         check(not s["clean"], "restored-pristine is never clean")
 

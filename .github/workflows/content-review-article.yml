@@ -830,6 +830,12 @@ jobs:
       # about what the pre-merge review's own verification of the same diff
       # costs -- $1-6 per glow-up in the Sept 2026 replays.
       # ---------------------------------------------------------------------
+      # A fresh directory every time: checkout into an existing one keeps its
+      # .git, where a model step with Bash could have planted a hook or a
+      # core.fsmonitor that the checkout itself would run.
+      - name: Clear the trusted pre-verify checkout (round 1)
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && vars.GLOWUP_PREVERIFY != '0'
+        run: rm -rf .preverify-code
       - name: Checkout trusted pre-verify code (round 1)
         if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && vars.GLOWUP_PREVERIFY != '0'
         continue-on-error: true
@@ -894,6 +900,12 @@ jobs:
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 
+      # A fresh directory every time: checkout into an existing one keeps its
+      # .git, where a model step with Bash could have planted a hook or a
+      # core.fsmonitor that the checkout itself would run.
+      - name: Clear the trusted pre-verify checkout (round 2)
+        if: steps.repair1.outcome == 'success'
+        run: rm -rf .preverify-code
       - name: Checkout trusted pre-verify code (round 2)
         if: steps.repair1.outcome == 'success'
         continue-on-error: true
@@ -958,6 +970,12 @@ jobs:
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
 
+      # A fresh directory every time: checkout into an existing one keeps its
+      # .git, where a model step with Bash could have planted a hook or a
+      # core.fsmonitor that the checkout itself would run.
+      - name: Clear the trusted pre-verify checkout (round 3)
+        if: steps.repair2.outcome == 'success'
+        run: rm -rf .preverify-code
       - name: Checkout trusted pre-verify code (round 3)
         if: steps.repair2.outcome == 'success'
         continue-on-error: true
@@ -1008,6 +1026,12 @@ jobs:
         with:
           name: review-snapshot
           path: .preverify-final/snapshot
+      # A fresh directory every time: checkout into an existing one keeps its
+      # .git, where a model step with Bash could have planted a hook or a
+      # core.fsmonitor that the checkout itself would run.
+      - name: Clear the trusted pre-verify checkout (backstop)
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+        run: rm -rf .preverify-code
       - name: Checkout trusted pre-verify code (backstop)
         if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
         continue-on-error: true

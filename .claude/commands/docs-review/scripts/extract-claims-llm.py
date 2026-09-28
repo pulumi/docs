@@ -554,7 +554,7 @@ class TruncatedError(RuntimeError):
 # truncated on both passes of every whole-page run in September 2026, so the
 # content-review lanes verified it on the regex floor alone. A truncated call
 # is retried as two halves of its numbered body, split at the H2 nearest the
-# middle, down to SPLIT_DEPTH levels (at most 4 calls for one body).
+# middle, down to SPLIT_DEPTH levels (at most 1 + 2 + 4 = 7 calls for one body).
 SPLIT_DEPTH = 2
 _FENCE_RE = re.compile(r"(```\n)(.*?)(\n```)", re.S)
 
