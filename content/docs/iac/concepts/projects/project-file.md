@@ -116,14 +116,14 @@ Commit `Pulumi.yaml` to source control. When a teammate or CI job checks out the
 
 #### String shorthand
 
-Each package value can be a plain string in the same format as the argument to `pulumi package add`, for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version. `pulumi package add` writes this form whenever a package needs no parameters, as with a component added from a Git repository or a local directory:
+Each package value can be a plain string in the same format as the argument to `pulumi package add`, for example `"aws@6.0.0"`. The string is split on `@` into a source and optional version. `pulumi package add` writes this form whenever a package needs no parameters (unless every existing entry already uses the structured form), as with a component added from a Git repository or a local directory:
 
 ```yaml
 packages:
-  # Added with: pulumi package add https://github.com/pulumi/staticpagecomponent@v0.1.0
-  staticpagecomponent: https://github.com/pulumi/staticpagecomponent@v0.1.0
-  # Added with: pulumi package add ./path/to/my-components
-  my-components: ./path/to/my-components
+  # Added with: pulumi package add https://github.com/my-org/static-page@v1.0.0
+  static-page: https://github.com/my-org/static-page@v1.0.0
+  # Added with: pulumi package add ./components/networking
+  networking: ./components/networking
 ```
 
 #### Structured declarations
@@ -282,7 +282,7 @@ author: Your Name
 website: https://example.com
 license: Apache-2.0
 packages:
-  staticpagecomponent: https://github.com/pulumi/staticpagecomponent@v0.1.0
+  static-page: https://github.com/my-org/static-page@v1.0.0
   random:
     source: terraform-provider
     version: 1.4.0
