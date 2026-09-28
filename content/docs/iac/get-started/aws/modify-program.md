@@ -581,7 +581,7 @@ Outputs:
 
 Resources:
     + 4 to create
-    4 changes. 2 unchanged
+    2 unchanged
 
 Do you want to perform this update?
 > yes
@@ -608,7 +608,7 @@ Outputs:
 
 Resources:
     + 4 created
-    4 changes. 2 unchanged
+    2 unchanged
 
 Duration: 8s
 ```
