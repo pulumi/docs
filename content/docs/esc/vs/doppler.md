@@ -151,8 +151,8 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Secure Environment Variables</td>
-        <td>Yes, the <code>pulumi env run</code> CLI command can be used to specify which secrets are available as environment variables</td>
-        <td>No, all values are available as environment variables</td>
+        <td>Yes, the <code>pulumi env run</code> CLI command injects only the values an environment exports under <code>environmentVariables</code>, and redacts secret values from the command's output</td>
+        <td>Yes, the <code>doppler run</code> CLI command's <code>--only-secrets</code> flag limits the injected secrets to a named list</td>
     </tr>
     <tr>
         <td>Plaintext Read Only Mode</td>
