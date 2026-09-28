@@ -54,8 +54,9 @@ author card. `#new-review` clears that card first, so it reads the mark
 beforehand and passes it as the `prior_high_water` dispatch input, which the
 redispatch job forwards. If a forced run errors or times out before its card
 publishes, its failure notice carries `<!-- REVIEW_HIGH_WATER n -->`, and the
-next review takes the larger of the card and any such notice from
-`github-actions[bot]` (`review_state.py high-water-marker`).
+next review takes the larger of the card and any such failure notice
+(`<!-- CLAUDE_PROGRESS -->` from `github-actions[bot]`; other bot comments can
+quote PR text) (`review_state.py high-water-marker`).
 
 ### Buckets
 

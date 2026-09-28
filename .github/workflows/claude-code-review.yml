@@ -1286,9 +1286,10 @@ jobs:
               [[ "$LIVE_HW" =~ ^[0-9]+$ ]] && (( LIVE_HW > PRIOR_HW )) && PRIOR_HW=$LIVE_HW
             fi
             # An earlier forced run that errored after its card was cleared
-            # left the mark on its failure notice (bot comments only).
+            # left the mark on its failure notice. Failure notices only: other bot
+            # comments (cards, triage prose) can quote PR-derived text.
             MARK_HW=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/${{ steps.pr-context.outputs.pr_number }}/comments" \
-                --jq '.[] | select(.user.login == "github-actions[bot]") | .body' 2>/dev/null \
+                --jq '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | .body' 2>/dev/null \
               | python3 scripts/review-v3/review_state.py high-water-marker 2>/dev/null || echo 0)
             [[ "$MARK_HW" =~ ^[0-9]+$ ]] && (( MARK_HW > PRIOR_HW )) && PRIOR_HW=$MARK_HW
             echo "compose: finding ids start above high_water=$PRIOR_HW"

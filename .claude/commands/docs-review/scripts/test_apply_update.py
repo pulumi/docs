@@ -707,6 +707,7 @@ def test_change_bullets_that_do_not_name_a_file_are_kept():
              "> - `scripts/review-v3/` — new cleanup script.\n"
              "> - `gone.py` — removed later.\n"
              "> - `pinned-comment.sh prune-legacy` — new subcommand.\n"
+             "> - `@pulumi/aws` — bumped to v7.\n"
              ">\n"
              "> **Review confidence:**\n"
              ">\n"
@@ -716,7 +717,7 @@ def test_change_bullets_that_do_not_name_a_file_are_kept():
     out, dropped = au.prune_changes_bullets(brief, files)
     assert dropped == ["scripts/review-v3/", "gone.py"]
     for kept in ("`restamp_body()`", "`review:stale`", "`content/docs/iac/`",
-                 "`pinned-comment.sh prune-legacy`", "`elsewhere.py`"):
+                 "`pinned-comment.sh prune-legacy`", "`@pulumi/aws`", "`elsewhere.py`"):
         assert kept in out, kept
     assert au.prune_changes_bullets(out, files) == (out, []), "idempotent"
 
@@ -729,6 +730,8 @@ def test_a_summary_that_reports_settled_checks_is_kept():
         "the review checked two claims about stack outputs and confirmed both hold",
         "This PR documents a setting your stacks need; the review confirmed the default",
         "three findings from the first pass are fixed, and no open findings remain",
+        "The page explains what you need to configure before the first deploy",
+        "the guide notes you have to set PULUMI_ACCESS_TOKEN first",
     ):
         card = ("## Author action guide v3 — nothing blocks merge\n\n"
                 f"_{text}._\n\n### ✅ Resolved\n")
@@ -737,7 +740,7 @@ def test_a_summary_that_reports_settled_checks_is_kept():
         "these four need a source from you before merge",
         "only you can confirm the pricing figure",
         "two claims still need your confirmation",
-        "you need to confirm the quota numbers",
+        "the pricing figure is waiting on you",
     ):
         card = ("## Author action guide v3 — nothing blocks merge\n\n"
                 f"_{text}._\n\n### ✅ Resolved\n")

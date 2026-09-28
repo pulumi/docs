@@ -145,6 +145,12 @@ def test_failure_notices_carry_the_prior_high_water():
     assert text.count("PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}") == 2
     assert "review_state.py high-water-marker" in text
     assert "review_state.py high-water-marker" in (_WF_DIR / "claude-new.yml").read_text()
+    # Only failure notices: a card or triage prose can quote PR text, and a
+    # quoted marker would inflate the next review's ids.
+    for wf in ("claude-code-review.yml", "claude-new.yml"):
+        reader = next(l for l in (_WF_DIR / wf).read_text().splitlines()
+                      if "select(.user.login == \"github-actions[bot]\")" in l and ".body' 2>/dev/null" in l)
+        assert 'startswith("<!-- CLAUDE_PROGRESS -->")' in reader, wf
 
 
 def test_reconcile_re_evaluates_the_sentinel_after_it_repairs_a_card():

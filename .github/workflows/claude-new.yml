@@ -187,9 +187,10 @@ jobs:
               | python3 scripts/review-v3/review_state.py high-water 2>/dev/null || echo 0)
           fi
           # No card (an earlier forced run cleared it, then errored): its
-          # failure notice carries the mark. Bot comments only.
+          # failure notice carries the mark. Failure notices only: other bot
+          # comments (cards, triage prose) can quote PR-derived text.
           MARK=$(gh api --paginate "repos/${{ github.repository }}/issues/${{ steps.pr-context.outputs.pr_number }}/comments" \
-              --jq '.[] | select(.user.login == "github-actions[bot]") | .body' 2>/dev/null \
+              --jq '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | .body' 2>/dev/null \
             | python3 scripts/review-v3/review_state.py high-water-marker 2>/dev/null || echo 0)
           [[ "$HW" =~ ^[0-9]+$ ]] || HW=0
           [[ "$MARK" =~ ^[0-9]+$ ]] && (( MARK > HW )) && HW=$MARK

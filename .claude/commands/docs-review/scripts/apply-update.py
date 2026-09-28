@@ -443,10 +443,13 @@ SETTLED_NOTE = "Settled since this was written — see ✅ Resolved on the autho
 # checked claims ("checked two claims … confirmed both hold") or a verb like
 # "need"/"confirm" in a description of the PR ("a setting your stacks need;
 # the review confirmed …") is a correct summary, not open work.
+# Nor is a docs PR's summary of what the page tells ITS reader ("explains
+# what you need to configure", "you have to set PULUMI_ACCESS_TOKEN"), so
+# bare "you need/must/have to" doesn't count either.
 _OPEN_WORK_RE = re.compile(
-    r"\bfrom you\b|\bonly you\b|\bfor you to\b|\bwaiting on you\b"
-    r"|\byou (need|must|have|'ll need|will need) to\b"
-    r"|\b(need|needs|needing|awaiting|await) your\b",
+    r"\bfrom you\b|\bonly you can\b|\bwaiting on you\b"
+    r"|\b(need|needs|needing|awaiting|await) your "
+    r"(answer|confirmation|input|source|decision|call|review|reply)s?\b",
     re.I)
 # A "What this PR changes" bullet names a file when its lead is one token
 # with a slash or an extension. Anything else (`restamp_body()`,
@@ -458,7 +461,9 @@ _CHANGES_HEAD_RE = re.compile(r"^> \*\*What this PR changes:?\*\*")
 
 
 def _names_a_file(name: str) -> bool:
-    return bool(_PATHLIKE_RE.match(name)) and ("/" in name or bool(_EXT_RE.search(name)))
+    # `@pulumi/aws` has a slash but is a package, not a path.
+    return (not name.startswith("@") and bool(_PATHLIKE_RE.match(name))
+            and ("/" in name or bool(_EXT_RE.search(name))))
 
 
 def _still_changed(name: str, pr_files: list[str]) -> bool:
