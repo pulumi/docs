@@ -434,11 +434,7 @@ def _caption_text(files_url: str, nits: bool = False, legend: bool = True) -> st
     link = f"[Files changed]({files_url})" if files_url else "Files changed"
     source = ("pattern-based linting and the review's own read"
               if nits else "pattern-based linting")
-    tail = (f" ✏️ marks one you can apply from the {link} tab — use **Add suggestion to batch** "
-            "on each, then **Commit suggestions** to take several in a single commit."
-            if legend else "")
-    return (f"*Optional polish from {source} — never blocking, not counted above. "
-            f"Take the ones that read better and ignore the rest.{tail}*")
+    return _compose().style_caption(source, link, v3=nits, legend=legend)
 
 
 def _reconcile_caption(lines: list[str], files_url: str, nits: bool = False,
@@ -801,6 +797,17 @@ def _span_mismatch(content: str, original: str, replacement: str) -> str | None:
         if max(pre, suf) < need:
             return "quote is the whole line but the fence doesn't read as a whole-line rewrite"
     return None
+
+
+_COMPOSE = None
+
+
+def _compose():
+    """compose-review.py, loaded once (the caption text lives there)."""
+    global _COMPOSE
+    if _COMPOSE is None:
+        _COMPOSE = _load_compose()
+    return _COMPOSE
 
 
 def _load_compose():
