@@ -803,6 +803,44 @@ CR = lambda who, at="2026-09-12T00:00:00Z", commit_id=None: {  # noqa: E731
     "user": {"login": who, "type": "User"}, "state": "CHANGES_REQUESTED", "submitted_at": at, "commit_id": commit_id}
 
 
+AP = lambda who, at="2026-09-28T00:00:00Z", commit_id=None: {  # noqa: E731
+    "user": {"login": who, "type": "User"}, "state": "APPROVED", "submitted_at": at, "commit_id": commit_id}
+
+
+def test_own_approval_on_a_human_pr_waits_on_the_author_to_merge():
+    """`--stamp` approves a human-authored PR without merging it; the next
+    move is the author's. With no push since, the row parks under "Waiting
+    on the author" rather than offering the same approval again."""
+    head = HEAD_V3
+    human = dict(author="jdoe", author_type="User")
+    q = run([stampable(1, reviews=[AP("CamSoper", commit_id=head)], **human),
+             stampable(2, title="Pushed since", reviews=[AP("CamSoper", commit_id="0" * 40)], files=[_file("content/docs/b.md", ["x"])], **human),
+             stampable(3, title="Bot", reviews=[AP("CamSoper", commit_id=head)], author="workprentice[bot]", author_type="Bot",
+                       files=[_file("content/docs/c.md", ["x"])]),
+             stampable(4, title="Someone else", reviews=[AP("cnunciato", commit_id=head)], files=[_file("content/docs/d.md", ["x"])], **human),
+             stampable(5, title="Approved, then sent back", reviews=[AP("CamSoper", commit_id=head),
+                                                                    CR("CamSoper", at="2026-09-29T00:00:00Z", commit_id=head)],
+                       files=[_file("content/docs/e.md", ["x"])], **human)])
+    p = row(q, 1)
+    assert "approved:2026-09-28" in p["reasons"] and "merging-over:approved-by:CamSoper" not in p["reasons"]
+    assert p["approved"] == {"at": "2026-09-28", "by": "CamSoper", "commit_id": head, "head_moved": False}
+    assert p["waiting_on_author"] is True and p["actions"] == []
+    # a push since the approval brings the row back, decisions and all
+    p = row(q, 2)
+    assert p["waiting_on_author"] is False and p["approved"]["head_moved"] is True and p["actions"][0]["cmd"] == "--stamp 2"
+    # act.py merges bot PRs, so an approved-but-open bot row is still mine to merge
+    b = row(q, 3)
+    assert b["waiting_on_author"] is False and "approved:2026-09-28" in b["reasons"] and b["actions"][0]["id"] == "stamp"
+    # someone else's approval is background, not a reason to park
+    o = row(q, 4)
+    assert o["waiting_on_author"] is False and "merging-over:approved-by:cnunciato" in o["reasons"] and o["approved"] is None
+    # the latest word wins: a send-back after the approval is a send-back
+    s = row(q, 5)
+    assert s["approved"] is None and "sent-back:2026-09-29" in s["reasons"] and s["waiting_on_author"] is True
+    assert q["counts"]["waiting-on-author"] == 2
+    assert_every_row_has_a_button(q)
+
+
 def test_no_verdict_leaves_the_approver_without_a_button():
     specs = [
         fresh(1, mergeable_state="dirty"),
