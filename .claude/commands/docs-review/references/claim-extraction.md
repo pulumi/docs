@@ -9,7 +9,7 @@ A "claim" is any assertion in PR-changed content that **could be wrong** and is 
 
 This file is loaded by two consumers:
 
-1. **The claim-extraction pre-step** (`extract-claims-llm.py`) — two redundant Sonnet passes that read each changed `content/**/*.md` file and emit a JSON claim list. This file is their system prompt.
+1. **The claim-extraction pre-step** (`extract-claims-llm.py`) — two redundant LLM passes that read each changed `content/**/*.md` file and emit a JSON claim list. This file is their system prompt.
 2. **The main review's verification step** (`docs-review:references:fact-check` §Claim extraction) — which reads the merged pre-step artifact `.candidate-claims.json` as the claim *floor* (verify every entry; may add more) and applies the routing / triage / framing rules downstream.
 
 Both consumers use the *same* definition of "claim" — that's the point of having one file.
@@ -163,7 +163,7 @@ Both modes use the same taxonomy, the same not-a-claim list, and the same record
 
 ## Worked examples
 
-Real patterns from the corpus, with the extracted record(s) and the reasoning. The hard cases are claims a single Opus run got right one run and wrong the next — these examples train extraction to be reliable on exactly that shape.
+Real patterns from the corpus, with the extracted record(s) and the reasoning. The hard cases are claims a single review run got right one run and wrong the next — these examples train extraction to be reliable on exactly that shape.
 
 **1 — The StrongDM holdout-mechanics paragraph**
 
