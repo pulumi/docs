@@ -235,11 +235,11 @@ jobs:
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           python3 $S/merge-claims.py \
             --regex .candidate-claims-regex.json \
             --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
@@ -315,11 +315,11 @@ jobs:
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           python3 $S/merge-claims.py \
             --regex .candidate-claims-regex.json \
             --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \

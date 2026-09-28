@@ -18,11 +18,11 @@ executes the banked findings under human review.
 Why a direct Anthropic API call (not `claude-code-action`): one bounded model
 call per page against a strict tool-use schema, which `claude-code-action`
 doesn't expose. It runs on Opus 5.5 at `high` effort with adaptive thinking
-(`extract-claims-llm.py` shares the call shape but stays on Sonnet 5 with
-thinking disabled and a forced `tool_choice`). Opus 5.5 can't disable
-thinking and rejects a forced `tool_choice` (both 400), so the tool is offered
-with `tool_choice: auto` and a response without it is an error, not an empty
-result. The system prompt is `references/readthrough.md`
+(`extract-claims-llm.py` shares the call shape on Sonnet 5.5, with
+`thinking: between_tools` so its single tool call runs without thinking).
+Opus 5.5 can't disable thinking and rejects a forced `tool_choice` (both 400),
+so the tool is offered with `tool_choice: auto` and a response without it is
+an error, not an empty result. The system prompt is `references/readthrough.md`
 (the rubric: a closed list of anchored failure modes + the `fix_class` boundary),
 verbatim, so the stable prefix stays prompt-cacheable.
 

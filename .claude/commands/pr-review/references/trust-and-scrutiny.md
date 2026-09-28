@@ -76,7 +76,7 @@ some-user
 
 `collect.py::ai_suspect` searches the PR body and every commit message in the PR for known AI-authoring markers:
 
-- `Co-Authored-By: Claude` (any model variant — Sonnet, Opus, Haiku)
+- `Co-Authored-By: Claude` (any model variant)
 - `Co-Authored-By: Claude Code`
 - `Generated with Claude Code`
 - `noreply@anthropic.com`

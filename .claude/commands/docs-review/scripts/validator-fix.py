@@ -63,16 +63,23 @@ SURGICAL_CLASSES: set[str] = {
     "verified-claims-trail-faithful",
 }
 
-# Sonnet 5 for the splice model. Pre-v16 used Haiku 4.5 per call, which
+# Sonnet 5.5 for the splice model. Pre-v16 used Haiku 4.5 per call, which
 # handled single-violation splices fine but lacked the reasoning headroom
 # for batched multi-fix prompts — Haiku tracking 30+ independent edit
 # targets in one rewrite started dropping fixes. Sonnet costs ~3× per token
 # but the per-rule batching (see build_batched_prompt) collapses N sequential
 # calls into 1 call per rule_id, keeping the review-level cost low with lower
-# fumble risk. (Sonnet 5 is near-Opus on this kind of structured editing; its
-# tokenizer runs ~30% heavier than Sonnet 4.6, which is why MAX_OUTPUT_TOKENS
-# below carries extra headroom for the verbatim full-body echo.)
-SPLICE_MODEL = "claude-sonnet-5"
+# fumble risk. (Sonnet's tokenizer runs ~30% heavier than Sonnet 4.6, which is
+# why MAX_OUTPUT_TOKENS below carries extra headroom for the verbatim
+# full-body echo.)
+#
+# Sonnet 5.5 at effort "low" (2026-09-28 benchmark, planted-violation bodies
+# x 3 reps; campaign 2026-09-28-sonnet55-effort-sweep in
+# pulumi/docs-review-benchmarks): 18/18 achievable bodies restored exactly vs
+# 14/18 for Sonnet 5 with thinking disabled (which also damaged 5 bodies), at
+# the same per-call cost and ~40% lower latency. Higher effort bought nothing.
+SPLICE_MODEL = "claude-sonnet-5-5"
+SPLICE_EFFORT = "low"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 # 180s per call — Sonnet processes large prompts faster than Haiku but the
@@ -490,7 +497,7 @@ def extract_splice_output(payload: dict, input_body_len: int) -> str | None:
 
 
 def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | None:
-    """Run one splice call (Sonnet 5) via the Anthropic Messages API.
+    """Run one splice call (Sonnet 5.5) via the Anthropic Messages API.
     Returns the edited body or None on error.
 
     Pre-v16 used the `claude` CLI as a subprocess, which silently failed in
@@ -500,7 +507,7 @@ def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | Non
     argument). Direct API calls surface errors as plain readable strings
     and use the same auth path verify-claims.py uses (proven to work in CI).
 
-    Splice model: Sonnet 5 (see SPLICE_MODEL note). Haiku 4.5 worked
+    Splice model: Sonnet 5.5 (see SPLICE_MODEL note). Haiku 4.5 worked
     fine on single-violation prompts but lost fixes when ~30 independent
     edits were batched into one call; Sonnet's reasoning headroom is
     worth the ~4× per-token cost when per-rule batching collapses the
@@ -509,11 +516,13 @@ def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | Non
     body = {
         "model": SPLICE_MODEL,
         "max_tokens": MAX_OUTPUT_TOKENS,
-        # Sonnet 5 defaults adaptive thinking ON when `thinking` is omitted.
-        # This call echoes the full review body verbatim and needs every output
-        # token for that body, so disable thinking (no sampling params are set
-        # here, so there's nothing else to strip for the model swap).
-        "thinking": {"type": "disabled"},
+        # Sonnet 5.5 rejects `thinking: {type: "disabled"}` with a 400, so ask
+        # for adaptive thinking at low effort: in the benchmark it never chose
+        # to think on this job, which keeps every output token for the verbatim
+        # body echo. extract_splice_output() reads only `text` blocks, so a
+        # thinking block, if one ever appears, is ignored.
+        "thinking": {"type": "adaptive"},
+        "output_config": {"effort": SPLICE_EFFORT},
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": prompt}],
     }

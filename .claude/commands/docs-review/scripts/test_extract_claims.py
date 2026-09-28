@@ -438,7 +438,7 @@ def _llm_doc(pass_name: str, claims: list[dict], errors: list[str] | None = None
         c.setdefault("confidence", "medium")
         c.setdefault("found_by", [f"llm-{pass_name}"])
         out.append(c)
-    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-5",
+    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-5-5",
             "claims": out, "errors": errors or [],
             "meta": {"input_tokens": 10, "output_tokens": 5, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}
 
@@ -696,6 +696,74 @@ def test_llm_file_cap_prefers_biggest_edits() -> None:
               f"llm cap: over-cap skip is surfaced in errors[]; got {doc['errors'][:2]}")
 
 
+def _llm_call(responses: list[dict]) -> tuple[list[dict], dict, list[dict]]:
+    """Run call_anthropic against canned responses; return (claims, usage, bodies sent)."""
+    m = _llm_mod()
+    sent: list[dict] = []
+    queue = list(responses)
+
+    def fake_post(api_key, body):
+        sent.append(body)
+        return queue.pop(0)
+
+    m._post_messages = fake_post
+    claims, usage = m.call_anthropic("key", "system", "MODE: atomic", "user text", m.DEFAULT_MODEL)
+    return claims, usage, sent
+
+
+def _tool(claims: list[dict]) -> dict:
+    return {"type": "tool_use", "id": "t", "name": "extract_claims", "input": {"claims": claims}}
+
+
+def _claim(n: int) -> dict:
+    return {"line_range": f"L{n}", "text": f"claim {n}", "type": "behavior", "confidence": "high"}
+
+
+def test_llm_request_shape_and_tool_handling() -> None:
+    print("test_llm_request_shape_and_tool_handling (Sonnet 5.5 request, retries, split tool calls)")
+    before = len(_failures)
+    usage = {"input_tokens": 10, "output_tokens": 5}
+
+    claims, _, sent = _llm_call([{"stop_reason": "tool_use", "usage": usage,
+                                  "content": [_tool([_claim(1)])]}])
+    body = sent[0]
+    check(body["model"] == "claude-sonnet-5-5", f"llm call: model is Sonnet 5.5; got {body['model']}")
+    check(body["thinking"] == {"type": "between_tools"},
+          f"llm call: thinking is between_tools (Sonnet 5.5 400s on disabled); got {body['thinking']}")
+    check(body["tool_choice"] == {"type": "auto"},
+          f"llm call: tool_choice is auto (Sonnet 5.5 400s on forced); got {body['tool_choice']}")
+    check("output_config" not in body, "llm call: effort stays unset")
+    check(len(claims) == 1 and len(sent) == 1, "llm call: one clean call, one claim")
+
+    # Sonnet 5.5 once split its answer across two extract_claims calls (1 + 37
+    # claims); reading only the first dropped 37 claims.
+    claims, _, _ = _llm_call([{"stop_reason": "tool_use", "usage": usage,
+                               "content": [_tool([_claim(1)]), _tool([_claim(2), _claim(3)])]}])
+    check([c["line_range"] for c in claims] == ["L1", "L2", "L3"],
+          f"llm call: claims from every extract_claims block are kept; got {claims}")
+
+    # A prose-only answer (possible under tool_choice auto) is retried.
+    claims, got_usage, sent = _llm_call([
+        {"stop_reason": "end_turn", "usage": usage, "content": [{"type": "text", "text": "Here are the claims"}]},
+        {"stop_reason": "tool_use", "usage": usage, "content": [_tool([_claim(4)])]},
+    ])
+    check(len(sent) == 2 and len(claims) == 1, "llm call: a missing tool call is retried once")
+    check(got_usage.get("input_tokens") == 20, f"llm call: usage sums across the retry; got {got_usage}")
+
+    prose = {"stop_reason": "end_turn", "usage": usage, "content": [{"type": "text", "text": "no tool"}]}
+    try:
+        _llm_call([prose, prose])
+        check(False, "llm call: two prose-only answers must raise, not record zero claims")
+    except RuntimeError as e:
+        check("no extract_claims tool call" in str(e), f"llm call: error names the missing tool call; got {e}")
+
+    trunc = {"stop_reason": "max_tokens", "usage": usage, "content": [_tool([])]}
+    claims, _, sent = _llm_call([trunc, {"stop_reason": "tool_use", "usage": usage,
+                                         "content": [_tool([_claim(5)])]}])
+    check(len(sent) == 2 and len(claims) == 1, "llm call: a max_tokens stop is retried once")
+    assert_clean("test_llm_request_shape_and_tool_handling", before)
+
+
 # ---- main ---------------------------------------------------------------------
 
 def main() -> int:
@@ -726,6 +794,7 @@ def main() -> int:
         test_merge_missing_and_error_inputs,
         test_llm_scrutiny_per_file,
         test_llm_file_cap_prefers_biggest_edits,
+        test_llm_request_shape_and_tool_handling,
     ]
     for t in tests:
         try:
