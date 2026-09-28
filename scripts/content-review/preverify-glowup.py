@@ -602,7 +602,13 @@ def cmd_settle(a) -> int:
     with no verdict the publish job opens nothing and the ledger records the
     page incomplete, so it is retried. (Restoring the article alone was not
     enough: a glow-up that also changed a bundle asset would still have a
-    non-empty patch, and a body describing edits that are gone.)"""
+    non-empty patch, and a body describing edits that are gone.)
+
+    Withholding the verdict alone would NOT make the ledger say incomplete:
+    record-review.py reads "no sentinel, run succeeded, no branch" as a derived
+    clean and advances the page's review clock. So restored-pristine also
+    writes `--incomplete-marker`, which the ledger step reads and records as
+    incomplete instead."""
     rnd = _load(Path(a.round_file), {}) if a.round_file else {}
     want = (rnd or {}).get("article_sha256")
     art = Path(a.article)
@@ -627,6 +633,13 @@ def cmd_settle(a) -> int:
                 held = Path(a.out).parent / "withheld-verdict.json"
                 held.parent.mkdir(parents=True, exist_ok=True)
                 Path(a.verdict).replace(held)
+            marker = getattr(a, "incomplete_marker", None)
+            if marker:
+                Path(marker).parent.mkdir(parents=True, exist_ok=True)
+                Path(marker).write_text(json.dumps({
+                    "schema_version": SCHEMA_VERSION, "source": "preverify settle",
+                    "reason": "pre-verification restored the pristine page; the glow-up "
+                              "was withheld and is owed a retry"}, indent=2) + "\n")
     rec = {"schema_version": SCHEMA_VERSION, "status": status, "round": (rnd or {}).get("round")}
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(rec, indent=2) + "\n")
@@ -934,9 +947,11 @@ def self_test() -> int:
         rf.write_text(json.dumps({"round": 1, "article_sha256": sha256(current)}))
         ns = argparse.Namespace(article=str(t / "art.md"), pristine=str(t / "pristine.md"),
                                 round_file=str(rf), prerepair_dir=str(t / "snap"), body=None,
-                                verdict=None, out=str(t / "s.json"))
+                                verdict=None, out=str(t / "s.json"),
+                                incomplete_marker=str(t / "incomplete.json"))
         cmd_settle(ns)
         check(json.loads((t / "s.json").read_text())["status"] == "consistent", "settle consistent")
+        check(not (t / "incomplete.json").exists(), "a consistent settle leaves no incomplete marker")
         (t / "snap").mkdir()
         (t / "snap" / "article").write_text(current)
         (t / "art.md").write_text(current + "half-applied repair\n")
@@ -954,6 +969,8 @@ def self_test() -> int:
               "a snapshot that isn't the verified article falls back to pristine")
         check(not (t / "verdict.json").exists() and (t / "withheld-verdict.json").exists(),
               "restored-pristine withholds the verdict so nothing publishes")
+        check("owed a retry" in (t / "incomplete.json").read_text(),
+              "restored-pristine leaves the incomplete marker the ledger step reads")
         s = summarize([{"round": 1, "claims": []}], None, {"status": "restored-pristine"})
         check(not s["clean"], "restored-pristine is never clean")
 
@@ -1001,6 +1018,8 @@ def main(argv: list[str] | None = None) -> int:
     st.add_argument("--prerepair-dir", help="snapshot taken before the repair that followed --round-file")
     st.add_argument("--body")
     st.add_argument("--verdict")
+    st.add_argument("--incomplete-marker",
+                    help="written on restored-pristine; record-review.py records the page incomplete")
     st.add_argument("--out", required=True)
 
     c = sub.add_parser("receipts")

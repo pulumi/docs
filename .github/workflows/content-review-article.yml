@@ -821,9 +821,11 @@ jobs:
       #   - Each round records the hash of the article it verified. If the
       #     article no longer matches the last round (a repair failed, or the
       #     round after it crashed), `settle` restores the pre-repair snapshot
-      #     with that hash, or else the pristine page, which the publish gate
-      #     refuses as an empty glow-up. A receipt can't claim "clean" for
-      #     text no round verified.
+      #     with that hash, or else the pristine page: it withholds the
+      #     verdict (nothing publishes) and writes
+      #     .content-review-incomplete.json, which the ledger step reads so
+      #     the page is recorded incomplete and retried, not derived clean.
+      #     A receipt can't claim "clean" for text no round verified.
       #
       # Kill switch: repo variable GLOWUP_PREVERIFY = '0' skips every round
       # (the receipts then say pre-verification did not run). Round 1 costs
@@ -1059,6 +1061,7 @@ jobs:
               --pristine "$T/snapshot/article-base.txt" --round-file "$LAST" \
               --prerepair-dir "$T/prerepair/preverify-prerepair-$N" \
               --body .pr-body-draft.md --verdict .content-review-verdict.json \
+              --incomplete-marker .content-review-incomplete.json \
               --out .preverify/settle.json
             python3 "$S" revert --article "$ARTICLE_PATH" \
               --pristine "$T/snapshot/article-base.txt" \
@@ -1120,6 +1123,7 @@ jobs:
           path: |
             .content-review-queue.json
             .content-review-verdict.json
+            .content-review-incomplete.json
             .pr-body-draft.md
             .review-changes.patch
             .review-changes.paths
@@ -1548,6 +1552,7 @@ jobs:
           python3 scripts/content-review/record-review.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
+            --incomplete-marker .content-review-incomplete.json \
             --claude-outcome "${{ needs.review.outputs.claude_outcome }}"
 
       # Persist the page's verified claims to the claims index (same bucket,
