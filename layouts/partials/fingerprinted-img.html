@@ -2,6 +2,20 @@
 {{/* Strip a leading "/" so frontmatter paths like "/images/foo.svg" resolve correctly. */}}
 {{ $src := .src | strings.TrimPrefix "/" }}
 {{ $img := resources.Get (printf "fingerprinted/%s" $src) }}
+{{/* Callers with a static src already write width/height as literals alongside it. A
+     dynamic src (a front-matter field, a range variable, a printf-composed path) can't
+     carry a literal at the call site, so derive intrinsic dimensions here instead: from
+     the resource itself for a raster image, or from the SVG's own markup when it's an
+     SVG (resources.Get returns SVGs as a generic, dimension-less resource). Either way,
+     an explicit "width"/"height" passed by the caller always wins. */}}
+{{ $intrinsic := dict }}
+{{ if eq $img.MediaType.SubType "svg" }}
+    {{ $intrinsic = partialCached "svg-dimensions.html" $img $src }}
+{{ else }}
+    {{ $intrinsic = dict "width" $img.Width "height" $img.Height }}
+{{ end }}
+{{ $w := $.width | default $intrinsic.width }}
+{{ $h := $.height | default $intrinsic.height }}
 {{ if ne $img.MediaType.SubType "svg" }}
     {{ $maxWidth := .maxWidth | default 800 }}
     {{/* Default to q90; raise via `quality` for screenshots / images with fine text where
@@ -38,8 +52,8 @@
     {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
-<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ else }}
     {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}
