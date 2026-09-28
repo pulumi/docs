@@ -863,9 +863,10 @@ def pr_file_count(pr_data: dict) -> int:
 
 
 def is_oversized(additions: int, deletions: int, file_count: int) -> bool:
-    """The one definition of oversized: triage labels by it, and the
-    Sentinel computes it from the PR itself rather than trusting that the
-    label has landed yet (#21936: G5 said "not oversized" beside the label)."""
+    """The one definition of oversized. Triage labels by it, and the label
+    is what the Sentinel reads: computing size there would flip PRs already
+    approved under the normal gates. Triage re-dispatches the Sentinel when
+    it moves the label (#21936: G5 said "not oversized" beside it)."""
     return (additions + deletions) > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES
 
 

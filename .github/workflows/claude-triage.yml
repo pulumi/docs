@@ -74,6 +74,7 @@ jobs:
       contents: read
       pull-requests: write
       id-token: write
+      actions: write # re-evaluate the Sentinel after a label it reads changes
 
     steps:
       # Surface "triage is running" as visible label state from workflow
@@ -201,22 +202,18 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
           EVENT_ACTION: ${{ github.event.action }}
+          SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
 
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
             --json title,body,author,files,labels,additions,deletions,commits,isDraft,changedFiles)
-          # `gh pr view --json files` is one GraphQL page: 100 files, silently.
-          # On #21936 (1,156 files) that made the oversized comment say "100
-          # files", left the classifier's 150-file axis unreachable, and
-          # classified domains from the first 100 paths. The REST list pages
-          # (up to 3,000); swap it in, same {path, additions, deletions} shape.
-          ALL_FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[] | {path: .filename, additions, deletions}' 2>/dev/null | jq -s . 2>/dev/null || echo '[]')
-          if [ "$(echo "$ALL_FILES" | jq 'length')" -gt 0 ]; then
-            PR_DATA=$(echo "$PR_DATA" | jq --argjson f "$ALL_FILES" '.files = $f')
-          fi
+          # `gh pr view --json files` is one 100-file GraphQL page; swap in the
+          # paginated REST list. Never via argv: a ~1,000-file list overflows
+          # MAX_ARG_STRLEN (see with-pr-files.sh).
+          PR_DATA=$(printf '%s' "$PR_DATA" \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR")
           # 100KB diff cap. The
           # classifier doesn't need every byte to detect frontmatter /
           # link / code-block / version-claim signals.
@@ -377,6 +374,24 @@ jobs:
           if (( ${#ARGS[@]} > 0 )); then
             gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
           fi
+          # 7b. The Sentinel reads review:oversized and review:trivial, and
+          # listens for their `labeled` events -- but a GITHUB_TOKEN label
+          # write fires none. Its `opened` run beat this label on #21936, so
+          # G5 said "not oversized" beside the label for good. The label is
+          # the Sentinel's source of truth (a size computed there would flip
+          # PRs already reviewed and approved under the normal gates), so
+          # triage re-evaluates it whenever that label moves.
+          # (review:oversized is re-added on every run -- see step 5 -- so
+          # "moved" means it wasn't on the PR before this run.)
+          MOVED=""
+          [[ " ${ADD_LIST[*]:-} ${REMOVE_LIST[*]:-} " == *" review:trivial "* ]] && MOVED=1
+          if [[ "$OVERSIZED" == "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            MOVED=1
+          fi
+          if [[ -n "$MOVED" && ( "$SENTINEL_MODE" == "report" || "$SENTINEL_MODE" == "1" ) ]]; then
+            gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$PR" || true
+          fi
 
           # 8. Prose-check advisory comment.
           # Always delete any prior TRIAGE_PROSE comment first so re-triage
@@ -506,10 +521,9 @@ jobs:
           DIFF_FILE=$(mktemp)
           trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
           # Paginated file list — see the classification step (100-file cap).
-          gh pr view "$PR" --repo "$REPO" --json additions,deletions,changedFiles \
-            | jq --argjson f "$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-                  --jq '.[] | {path: .filename, additions, deletions}' | jq -s .)" \
-                 '.files = $f' > "$PR_DATA_FILE"
+          gh pr view "$PR" --repo "$REPO" --json files,additions,deletions,changedFiles \
+            | bash .claude/commands/docs-review/scripts/with-pr-files.sh --repo "$REPO" --pr "$PR" \
+            > "$PR_DATA_FILE"
           gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
           ROUTE=$(python3 scripts/review-v3/route-pr.py \
             --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")

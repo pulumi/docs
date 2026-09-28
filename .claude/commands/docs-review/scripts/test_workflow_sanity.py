@@ -115,3 +115,60 @@ def test_trusted_bot_allowlist_is_identical_in_every_access_check():
     assert "workprentice[bot]" in reference and "app/workprentice" in reference
     for name, bots in lists.items():
         assert bots == reference, f"{name} trusts {sorted(bots)}, claude-update.yml trusts {sorted(reference)}"
+
+
+def _job_run_text(wf_name: str, job: str) -> str:
+    data = yaml.safe_load((_WF_DIR / wf_name).read_text())
+    return "\n".join(str(s.get("run", "")) for s in data["jobs"][job].get("steps") or [])
+
+
+def test_redispatch_forwards_every_new_review_input():
+    """Adversarial review of #21948: the redispatch forwarded force /
+    mention_author / ack_target but not prior_high_water, so a #new-review
+    superseded after `clear` re-ran with no card and restarted at F1."""
+    data = yaml.safe_load((_WF_DIR / "claude-code-review.yml").read_text())
+    trigger = data.get("on") or data.get(True)
+    inputs = set((trigger["workflow_dispatch"].get("inputs") or {}))
+    run = _job_run_text("claude-code-review.yml", "redispatch")
+    # dispatcher_comment_id is deliberately dropped (the guard deleted it);
+    # the rest are the re-run's own bookkeeping or its resolved head.
+    carried = inputs - {"dispatcher_comment_id", "supersede_depth", "head_sha", "pr_number"}
+    missing = sorted(i for i in carried if f"-f {i}=" not in run)
+    assert not missing, f"redispatch drops {missing}"
+
+
+def test_failure_notices_carry_the_prior_high_water():
+    """An errored forced run's card is already gone; its notice keeps the
+    mark, and both readers look for it."""
+    text = (_WF_DIR / "claude-code-review.yml").read_text()
+    assert text.count("<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->") == 2
+    assert text.count("PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}") == 2
+    assert "review_state.py high-water-marker" in text
+    assert "review_state.py high-water-marker" in (_WF_DIR / "claude-new.yml").read_text()
+
+
+def test_reconcile_re_evaluates_the_sentinel_after_it_repairs_a_card():
+    """Adversarial review of #21948: the cron restamped cards and un-staled
+    labels, but GITHUB_TOKEN writes fire no event, so G1 stayed red."""
+    wf = _WF_DIR / "review-label-reconcile.yml"
+    data = yaml.safe_load(wf.read_text())
+    assert data["permissions"].get("actions") == "write"
+    run = _job_run_text("review-label-reconcile.yml", "reconcile")
+    assert "gh workflow run review-sentinel.yml" in run
+    # After the loop-1 restamp and after the loop-3 label write.
+    restamp_branch = run.split("review carried across", 1)[1].split("continue", 1)[0]
+    assert 'sentinel "$pr"' in restamp_branch
+    unstale = run.split("review:stale → $label", 1)[1].split("done", 1)[0]
+    assert 'sentinel "$pr"' in unstale
+
+
+def test_triage_re_evaluates_the_sentinel_when_it_moves_a_label_the_gate_reads():
+    """The Sentinel decides oversized/trivial from the label alone, and a
+    GITHUB_TOKEN label write fires no `labeled` event (#21936's G5 race)."""
+    data = yaml.safe_load((_WF_DIR / "claude-triage.yml").read_text())
+    job = next(iter(data["jobs"].values()))
+    assert job["permissions"].get("actions") == "write"
+    text = (_WF_DIR / "claude-triage.yml").read_text()
+    apply_at = text.index('gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}"')
+    dispatch_at = text.index("gh workflow run review-sentinel.yml")
+    assert dispatch_at > apply_at, "dispatch after the labels land"

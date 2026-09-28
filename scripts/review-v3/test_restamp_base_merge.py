@@ -72,6 +72,10 @@ class FakeGh:
         assert (base, sha) == ("master", REVIEWED)
         return self.files_then
 
+    def get(self, path):
+        assert path.endswith("/issues/comments/7")
+        return {"id": 7, "body": getattr(self, "body_at_write", self.body)}
+
     def patch(self, path, body):
         self.patched.append((path, body["body"]))
 
@@ -115,3 +119,28 @@ def test_a_current_card_is_left_alone():
 def test_dry_run_decides_without_writing():
     gh = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES_AFTER_MERGE)
     assert rb.run(gh, 1, dry_run=True)["restamped"] is True and not gh.patched
+
+
+def test_a_card_republished_mid_decision_is_not_overwritten():
+    """Adversarial review of #21948: the restamp read the card, made several
+    API calls, then PATCHed the whole stale body over a refresh that landed
+    in between."""
+    gh = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)], FILES, FILES_AFTER_MERGE)
+    gh.body_at_write = card().replace("nothing blocks merge", "1 item needs your answer")
+    out = rb.run(gh, 1)
+    assert out["restamped"] is False and "changed" in out["reason"] and not gh.patched
+
+
+def test_a_patchless_file_must_keep_its_blob_to_count_as_unchanged():
+    """Adversarial review of #21948: GitHub omits `patch` for large and
+    binary files, and two empty patches compared equal whatever changed."""
+    big_then = [{"filename": "static/big.json", "sha": "a" * 40}]
+    big_now = [{"filename": "static/big.json", "sha": "b" * 40}]
+    gh = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)], big_then, big_now)
+    out = rb.run(gh, 1)
+    assert out["restamped"] is False and "patch" in out["reason"] and not gh.patched
+    same = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)], big_then, list(big_then))
+    assert rb.run(same, 1)["restamped"] is True
+    no_sha = FakeGh(card(), [commit(REVIEWED), commit(HEAD, 2)],
+                    [{"filename": "static/big.json"}], [{"filename": "static/big.json"}])
+    assert rb.run(no_sha, 1)["restamped"] is False, "no blob sha → fail closed"

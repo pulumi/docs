@@ -49,6 +49,14 @@ the next index. IDs are the join key across the author comment's checklist,
 REVIEW_STATE, the evidence object, `#update-review` mentions, and the
 Sentinel's red messages.
 
+A re-review continues above the prior high-water mark, read from the live
+author card. `#new-review` clears that card first, so it reads the mark
+beforehand and passes it as the `prior_high_water` dispatch input, which the
+redispatch job forwards. If a forced run errors or times out before its card
+publishes, its failure notice carries `<!-- REVIEW_HIGH_WATER n -->`, and the
+next review takes the larger of the card and any such notice from
+`github-actions[bot]` (`review_state.py high-water-marker`).
+
 ### Buckets
 
 - `outstanding` (🚨 must fix or refute — blocks)
@@ -231,7 +239,10 @@ the marker and the sub line's `head commit` — and nothing else, so the
 composition stamp still orders it for the stale-publish guard. Callers:
 `claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
 Sentinel) and `review-label-reconcile.yml` (before staling, and in its
-un-stale sweep). Any read it can't make answers "not base-only". Before it,
+un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
+it can't make answers "not base-only", and so does a large or binary file
+(no `patch`) whose blob changed. It re-reads the card just before writing and
+backs off if a refresh published in the meantime. Before it,
 #21673's master merge left a clean review at `review:stale` with nothing
 scheduled to clear it.
 
@@ -239,8 +250,9 @@ scheduled to clear it.
 (dry run; `--apply` to write, `--extra-pr 2` to also sweep the stray
 Sentinel status comment the old `workflow_run` resolution posted on #2)
 lists what the pre-fix loop left on open PRs: `review:stale` on a review that
-is current (or current across a base merge), `Review errored` notices older
-than the live card, and legacy v2 pages beside a v3 card. Meant to be run
+is current (or current across a base merge), `Review errored` notices from
+before the live card was composed (its `updated` stamp, not the comment's
+edit time), and legacy v2 pages beside a v3 card. Meant to be run
 once by a maintainer, not scheduled.
 
 ## Superseded handoffs

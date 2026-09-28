@@ -266,17 +266,41 @@ def high_water_of(body: str) -> int:
         return 0
 
 
+# A forced `#new-review` clears the author card before its replacement is
+# composed, so the card's high_water lives only in the dispatch input until
+# the new card publishes. A run that errors or times out in between would
+# lose it, and the next review would restart at F1 (#21798). The failure
+# notice carries it instead: `<!-- REVIEW_HIGH_WATER n -->`, written only by
+# github-actions[bot] and read back only from its comments.
+HW_MARKER_RE = re.compile(r"<!-- REVIEW_HIGH_WATER (\d+) -->")
+
+
+def hw_marker(n: int) -> str:
+    return f"<!-- REVIEW_HIGH_WATER {int(n)} -->" if int(n) > 0 else ""
+
+
+def marker_high_water(text: str) -> int:
+    """The largest REVIEW_HIGH_WATER marker in `text` (many comment bodies
+    concatenated is fine), or 0."""
+    return max((int(m) for m in HW_MARKER_RE.findall(text or "")), default=0)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--self-test", action="store_true")
-    parser.add_argument("command", nargs="?", choices=("high-water",),
+    parser.add_argument("command", nargs="?", choices=("high-water", "high-water-marker"),
                         help="high-water: print the high_water of the REVIEW_STATE "
-                             "block in the card on stdin (0 when absent or corrupt)")
+                             "block in the card on stdin (0 when absent or corrupt); "
+                             "high-water-marker: the largest REVIEW_HIGH_WATER marker "
+                             "in the bot comment bodies on stdin (0 when none)")
     args = parser.parse_args()
     if args.self_test:
         return _self_test()
     if args.command == "high-water":
         print(high_water_of(sys.stdin.read()))
+        return 0
+    if args.command == "high-water-marker":
+        print(marker_high_water(sys.stdin.read()))
         return 0
     parser.print_help()
     return 2

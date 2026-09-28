@@ -52,6 +52,21 @@ def restamp_body(author_body: str, head_sha: str) -> str:
     return _SUB_HEAD_RE.sub(lambda m: f"{m.group(1)}{head_sha[:7]}{m.group(2)}", body, count=1)
 
 
+def _patchless_file_changed(files_then: list[dict], files_now: list[dict]) -> bool:
+    """`collect.same_diff` reads `patch`, which GitHub omits for large and
+    binary files, so two patchless snapshots compare equal whatever changed.
+    For those, the blob `sha` has to match on both sides; a missing one
+    fails closed."""
+    then = {(f.get("filename") or f.get("path") or ""): f for f in files_then}
+    for f in files_now:
+        if f.get("patch"):
+            continue
+        t = then.get(f.get("filename") or f.get("path") or "")
+        if t is None or not f.get("sha") or f.get("sha") != t.get("sha"):
+            return True
+    return False
+
+
 def decide(author_body: str, head_sha: str, commits: list[dict],
            files_then: list[dict] | None, files_now: list[dict]) -> tuple[bool, str]:
     """(restamp?, reason). Pure — every input already fetched."""
@@ -66,6 +81,8 @@ def decide(author_body: str, head_sha: str, commits: list[dict],
         return False, "could not read the diff at the reviewed head"
     if not collect.same_diff(files_then, files_now):
         return False, "a merge changed the PR's own lines (conflict resolution)"
+    if _patchless_file_changed(files_then, files_now):
+        return False, "a file without a patch (large or binary) can't be shown unchanged"
     return True, f"only base merges since {reviewed[:9]} and the diff is unchanged"
 
 
@@ -93,7 +110,18 @@ def run(gh: GhClient, pr: int, *, dry_run: bool = False) -> dict:
         if new_body == body:
             return {"restamped": False, "reason": "nothing to restamp", "head": head_sha}
         if not dry_run:
-            gh.patch(f"repos/{gh.repo}/issues/comments/{card['id']}", {"body": new_body})
+            # The reads above take a few API calls, and this PATCH replaces
+            # the whole body, bypassing pinned-comment.sh's stale-publish
+            # guard. A refresh that published in that window would be
+            # reverted and its predecessor stamped current. Re-read right
+            # before writing and back off if the card moved; the next
+            # synchronize or reconcile pass re-decides against the new card.
+            path = f"repos/{gh.repo}/issues/comments/{card['id']}"
+            fresh = gh.get(path) or {}
+            if (fresh.get("body") or "") != body:
+                return {"restamped": False, "reason": "card changed while deciding; left for the next pass",
+                        "head": head_sha}
+            gh.patch(path, {"body": new_body})
     return {"restamped": ok, "reason": reason, "head": head_sha}
 
 

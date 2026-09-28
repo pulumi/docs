@@ -26,13 +26,14 @@ HEAD = "d" * 40
 BOT = {"login": "github-actions[bot]"}
 
 
-def card(head=HEAD, open_row=False):
+def card(head=HEAD, open_row=False, composed="2026-09-21T00:00:00Z"):
     rows = ("| ID | Where | Finding |\n|---|---|---|\n| **F1** | `x.md` L1 | bad |\n"
             if open_row else "_Nothing to fix — this section is empty._\n")
     return ("<!-- CLAUDE_REVIEW 1/1 -->\n" + sentinel.AUTHOR_MARKER + "\n"
             f"<!-- CLAUDE_REVIEW_HEAD {head} -->\n## Author action guide v2 — x\n\n"
             "### 🚨 Fix or disagree\n\n" + rows + "\n"
-            '<!-- REVIEW_STATE {"findings":{},"high_water":1,"schema":1} -->\n')
+            '<!-- REVIEW_STATE {"findings":{},"high_water":1,"schema":1} -->\n\n'
+            f"<sub>Review v2 · updated {composed} · head commit {head[:7]}</sub>\n")
 
 
 class FakeGh:
@@ -108,3 +109,23 @@ def test_a_closed_pr_only_loses_the_stray_status_comment():
     gh = FakeGh([{"id": 8, "user": BOT, "body": sentinel.STATUS_MARKER + "\n## Sentinel"},
                  {"id": 9, "user": BOT, "body": card()}], state="closed")
     assert cl.plan_pr(gh, 2) == [{"pr": 2, "kind": "stray-status", "delete_comment": 8}]
+
+
+def test_a_banner_or_restamp_edit_does_not_age_a_later_failure():
+    """Adversarial review of #21948: the card comment's updated_at moves on
+    a 🔄 banner or a restamp, so a notice from a refresh that failed AFTER
+    the card was composed read as older than it and was deleted."""
+    comments = [
+        {"id": 3, "user": BOT, "created_at": "2026-09-21T00:00:00Z", "updated_at": "2026-09-25T00:00:00Z",
+         "body": card(composed="2026-09-21T00:00:00Z")},
+        # Spinner posted before the card was composed, edited to "errored"
+        # after: it failed later than the card, so it is still news.
+        {"id": 4, "user": BOT, "created_at": "2026-09-20T23:00:00Z", "updated_at": "2026-09-22T00:00:00Z",
+         "body": "<!-- CLAUDE_PROGRESS -->\n🤖 Review errored. Flip to draft…"},
+        {"id": 5, "user": BOT, "created_at": "2026-09-20T00:00:00Z", "updated_at": "2026-09-20T00:05:00Z",
+         "body": "<!-- CLAUDE_PROGRESS -->\n🤖 Review errored. Flip to draft…"},
+    ]
+    kinds = {(a["kind"], a.get("delete_comment")) for a in cl.plan_pr(FakeGh(comments, labels=()), 7)}
+    assert kinds == {("errored-notice", 5)}
+    unstamped = [{**comments[0], "body": card().split("<sub>")[0]}, comments[2]]
+    assert cl.plan_pr(FakeGh(unstamped, labels=()), 7) == [], "no composition stamp → keep notices"

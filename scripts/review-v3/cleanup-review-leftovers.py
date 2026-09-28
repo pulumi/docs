@@ -50,6 +50,8 @@ STATE_LABELS = ("review:in-progress", "review:outstanding-issues", "review:no-bl
                 "review:stale", "review:error")
 LEGACY_WRITERS = sentinel.LEGACY_PAGE_WRITERS
 FAILURE_RE = re.compile(r"errored|timed out|Couldn.t start|superseded")
+# `<sub>Review v2 · updated 2026-09-28T19:14:42Z · head commit daddce5</sub>`
+COMPOSED_RE = re.compile(r"<sub>(?:Review )?v\d+ · updated (\d{4}-\d\d-\d\dT[\d:]+Z)")
 PROGRESS_MARKER = "<!-- CLAUDE_PROGRESS -->"
 
 
@@ -80,12 +82,20 @@ def plan_pr(gh: GhClient, pr: int) -> list[dict]:
         return actions
 
     if card:
-        card_updated = card.get("updated_at") or card.get("created_at") or ""
+        # The card's COMPOSITION stamp, not the comment's updated_at: a 🔄
+        # banner or a base-merge restamp edits the comment without a new
+        # review, so updated_at would make a later failed refresh's notice
+        # look older than the card. No stamp → keep every notice.
+        m = COMPOSED_RE.search(card.get("body") or "")
+        composed = m.group(1) if m else ""
         for c in comments:
             body = c.get("body") or ""
-            if ((c.get("user") or {}).get("login") == sentinel.BOT_LOGIN
+            # A failure notice is usually the run's spinner edited in place,
+            # so when it failed is its updated_at, not when it was posted.
+            failed_at = c.get("updated_at") or c.get("created_at") or ""
+            if (composed and (c.get("user") or {}).get("login") == sentinel.BOT_LOGIN
                     and body.startswith(PROGRESS_MARKER) and FAILURE_RE.search(body)
-                    and (c.get("created_at") or "") < card_updated):
+                    and failed_at < composed):
                 actions.append({"pr": pr, "kind": "errored-notice", "delete_comment": c["id"]})
         for c in comments:
             if c["id"] == card["id"] or (c.get("user") or {}).get("login") not in LEGACY_WRITERS:

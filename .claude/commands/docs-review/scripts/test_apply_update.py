@@ -690,3 +690,55 @@ def test_a_summary_naming_open_work_goes_when_nothing_blocks():
     assert au.drop_stale_summary(card, 2) == (card, False)
     neutral = card.replace("these four need a source from you before merge", "the review checked each claim")
     assert au.drop_stale_summary(neutral, 0) == (neutral, False)
+
+
+def test_change_bullets_that_do_not_name_a_file_are_kept():
+    """Adversarial review of #21948: a bullet led by a function, a label, or
+    a directory was pruned because no PR path equalled or ended with it.
+    Only a file-looking name is checked against the PR's paths, a directory
+    survives while the PR changes anything under it, and nothing outside the
+    "What this PR changes" block is touched."""
+    brief = ("> [!NOTE]\n"
+             "> **What this PR changes:**\n"
+             ">\n"
+             "> - `restamp_body()` — moves the head markers.\n"
+             "> - `review:stale` — now clears after a base merge.\n"
+             "> - `content/docs/iac/` — retitles three pages.\n"
+             "> - `scripts/review-v3/` — new cleanup script.\n"
+             "> - `gone.py` — removed later.\n"
+             "> - `pinned-comment.sh prune-legacy` — new subcommand.\n"
+             ">\n"
+             "> **Review confidence:**\n"
+             ">\n"
+             "> - `elsewhere.py` — a bullet outside the changes block.\n")
+    files = ["content/docs/iac/concepts/stacks.md",
+             ".claude/commands/docs-review/scripts/pinned-comment.sh"]
+    out, dropped = au.prune_changes_bullets(brief, files)
+    assert dropped == ["scripts/review-v3/", "gone.py"]
+    for kept in ("`restamp_body()`", "`review:stale`", "`content/docs/iac/`",
+                 "`pinned-comment.sh prune-legacy`", "`elsewhere.py`"):
+        assert kept in out, kept
+    assert au.prune_changes_bullets(out, files) == (out, []), "idempotent"
+
+
+def test_a_summary_that_reports_settled_checks_is_kept():
+    """Adversarial review of #21948: count words and "need … confirm"
+    matched summaries that describe completed checks, deleting a correct
+    summary on every refresh."""
+    for text in (
+        "the review checked two claims about stack outputs and confirmed both hold",
+        "This PR documents a setting your stacks need; the review confirmed the default",
+        "three findings from the first pass are fixed, and no open findings remain",
+    ):
+        card = ("## Author action guide v3 — nothing blocks merge\n\n"
+                f"_{text}._\n\n### ✅ Resolved\n")
+        assert au.drop_stale_summary(card, 0) == (card, False), text
+    for text in (
+        "these four need a source from you before merge",
+        "only you can confirm the pricing figure",
+        "two claims still need your confirmation",
+        "you need to confirm the quota numbers",
+    ):
+        card = ("## Author action guide v3 — nothing blocks merge\n\n"
+                f"_{text}._\n\n### ✅ Resolved\n")
+        assert au.drop_stale_summary(card, 0)[1], text

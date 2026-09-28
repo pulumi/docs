@@ -65,6 +65,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  actions: write # re-evaluate the Sentinel after a restamp or an un-stale
 
 jobs:
   reconcile:
@@ -83,6 +84,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
+          SENTINEL_MODE: ${{ vars.REVIEW_V3_SENTINEL }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet pyyaml >/dev/null 2>&1 || true
@@ -91,6 +93,16 @@ jobs:
           # reviewed_sha <pr>: the SHA the live review covers (v3 card first).
           reviewed_sha() {
             bash "$SCRIPTS/pinned-comment.sh" last-reviewed-sha --pr "$1" --repo "$REPO" 2>/dev/null || true
+          }
+          # sentinel <pr>: re-evaluate the merge gate. A restamp moves the card
+          # head (G1's input) and an un-stale moves the label, but neither
+          # fires an event the Sentinel listens to: GITHUB_TOKEN writes start
+          # no workflow. Without this, a card the cron repaired kept G1 red
+          # until something else poked it (the #21673 symptom).
+          sentinel() {
+            case "$SENTINEL_MODE" in report|1) ;; *) return 0 ;; esac
+            gh workflow run review-sentinel.yml --repo "$REPO" -f pr_number="$1" \
+              || echo "PR #$1: Sentinel dispatch failed; the next event re-evaluates it"
           }
           # restamped <pr>: true when a base-only merge was carried across.
           restamped() {
@@ -129,6 +141,7 @@ jobs:
               esac
               if [ "$(restamped "$pr")" = "true" ]; then
                 echo "PR #$pr: head moved only by a base merge since $reviewed; review carried across"
+                sentinel "$pr"
                 continue
               fi
               echo "PR #$pr: reviewed SHA $reviewed != head $head_sha; marking stale"
@@ -188,6 +201,7 @@ jobs:
             if [ "$outstanding" -gt 0 ]; then label=review:outstanding-issues; else label=review:no-blockers; fi
             echo "PR #$pr: review is current at $head_sha; review:stale → $label"
             bash "$SCRIPTS/set-review-label.sh" --pr "$pr" --repo "$REPO" --label "$label" || true
+            sentinel "$pr"
           done
 
           # ---- orphaned review:in-progress -------------------------------

@@ -1285,6 +1285,12 @@ jobs:
                 | python3 scripts/review-v3/review_state.py high-water 2>/dev/null || echo 0)
               [[ "$LIVE_HW" =~ ^[0-9]+$ ]] && (( LIVE_HW > PRIOR_HW )) && PRIOR_HW=$LIVE_HW
             fi
+            # An earlier forced run that errored after its card was cleared
+            # left the mark on its failure notice (bot comments only).
+            MARK_HW=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/${{ steps.pr-context.outputs.pr_number }}/comments" \
+                --jq '.[] | select(.user.login == "github-actions[bot]") | .body' 2>/dev/null \
+              | python3 scripts/review-v3/review_state.py high-water-marker 2>/dev/null || echo 0)
+            [[ "$MARK_HW" =~ ^[0-9]+$ ]] && (( MARK_HW > PRIOR_HW )) && PRIOR_HW=$MARK_HW
             echo "compose: finding ids start above high_water=$PRIOR_HW"
             # The composer runs from the PR head checkout: a branch cut before
             # the flag existed would reject it and error the whole review.
@@ -1948,6 +1954,7 @@ jobs:
           REVIEW_V3: ${{ steps.pr-context.outputs.v3 == 'true' && '1' || '' }}
           V3_READY: ${{ steps.v3-build.outputs.ready }}
           ACK_TARGET: ${{ github.event.inputs.ack_target }}
+          PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
@@ -1966,10 +1973,16 @@ jobs:
               bash "$ACK" --clear --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
             fi
           }
+          # A forced #new-review cleared the card this run was replacing; its
+          # high_water survives only in the input. Carry it on any failure
+          # notice so the next review continues above it (review_state.py
+          # high-water-marker).
+          HW_MARK=""
+          [[ "$PRIOR_HW_IN" =~ ^[1-9][0-9]*$ ]] && HW_MARK=$'\n'"<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->"
           # Terminal message: edit the spinner in place, or — with none to
           # edit — clear the 👀 and post it, addressed to the requester.
           say() {
-            local msg="$1" body
+            local msg="$1$HW_MARK" body
             if [ -n "$COMMENT_ID" ]; then
               body=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$msg")
               gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
@@ -2579,6 +2592,7 @@ jobs:
         if: failure() && steps.current.outputs.superseded != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIOR_HW_IN: ${{ github.event.inputs.prior_high_water }}
         run: |
           set +e
           PR="${{ steps.current.outputs.pr }}"
@@ -2595,15 +2609,18 @@ jobs:
           MSG='🤖 Review errored while publishing. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
           ACK_TARGET="${{ github.event.inputs.ack_target }}"
           MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+          # Same high-water carry as "Finalize progress signal".
+          HW_MARK=""
+          [[ "$PRIOR_HW_IN" =~ ^[1-9][0-9]*$ ]] && HW_MARK=$'\n'"<!-- REVIEW_HIGH_WATER $PRIOR_HW_IN -->"
           if [ -n "$PROGRESS_ID" ]; then
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s%s' "$MSG" "$HW_MARK")
             gh api --method PATCH "repos/$REPO/issues/comments/$PROGRESS_ID" -f body="$BODY" >/dev/null || true
           elif [ -n "$ACK_TARGET" ]; then
             # 👀-signalled request: clear it and tell the requester directly.
             bash .claude/commands/docs-review/scripts/ack-request.sh --clear \
               --pr "$PR" --repo "$REPO" --target "$ACK_TARGET"
             [ -z "$MENTION_AUTHOR" ] || MSG="🤖 @${MENTION_AUTHOR} — review errored while publishing. Flip to draft and back to ready, or mention \`@claude #update-review\`, to retry."
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s%s' "$MSG" "$HW_MARK")
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
           exit 0
@@ -2685,8 +2702,9 @@ jobs:
             exit 0
           fi
           echo "redispatch: PR #$PR at $HEAD (depth $NEXT_DEPTH)"
-          # force / mention_author / ack_target carry a human #new-review's
-          # intent through to the re-run; dispatcher_comment_id does not
+          # force / mention_author / ack_target / prior_high_water carry a
+          # human #new-review's intent through to the re-run (without the
+          # last, a re-run after `clear` finds no card and restarts at F1); dispatcher_comment_id does not
           # (deleted by the guard — the re-run posts its own spinner).
           gh workflow run claude-code-review.yml --repo "$REPO" \
             -f pr_number="$PR" \
@@ -2694,4 +2712,5 @@ jobs:
             -f force="${{ github.event.inputs.force || 'false' }}" \
             -f mention_author="${{ github.event.inputs.mention_author }}" \
             -f ack_target="${{ github.event.inputs.ack_target }}" \
+            -f prior_high_water="${{ github.event.inputs.prior_high_water || '0' }}" \
             -f supersede_depth="$NEXT_DEPTH"

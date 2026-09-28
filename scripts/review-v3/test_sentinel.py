@@ -1905,16 +1905,21 @@ def test_g2_does_not_call_a_stale_card_answered():
     assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
 
 
-def test_oversized_is_computed_from_the_pr_not_only_the_label():
-    """#21936: the Sentinel evaluated before triage's label landed and G5
-    said "not oversized" on a 1,156-file PR for good."""
+def test_oversized_is_the_label_not_the_size():
+    """Adversarial review of #21948: deciding "oversized" by size flipped PRs
+    reviewed before the size check existed -- G1/G2 skipped (so open 🚨
+    findings stopped blocking) and G5 newly red on approved PRs. The label is
+    the source of truth; triage re-dispatches the Sentinel when it moves it
+    (#21936's race)."""
     meta = pr_meta()
     meta.update(additions=31000, deletions=382, changed_files=1156)
-    gh = StubGh(pr=meta, files=[docs_file_substantive()])
+    gh = StubGh(pr=meta, files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")]), brief_comment()])
     v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+    assert _gate(v, "G5").status == "skip"
+    labelled = pr_meta(labels=["review:oversized"])
+    labelled.update(additions=31000, deletions=382, changed_files=1156)
+    v = sentinel.evaluate(StubGh(pr=labelled, files=[docs_file_substantive()]), CONFIG)
     assert _gate(v, "G1").status == "skip" and "oversized" in _gate(v, "G1").message
     assert _gate(v, "G5").status == "red"
-    small = pr_meta()
-    small.update(additions=10, deletions=2, changed_files=1)
-    v = sentinel.evaluate(StubGh(pr=small, files=[docs_file_substantive()]), CONFIG)
-    assert _gate(v, "G5").status == "skip"

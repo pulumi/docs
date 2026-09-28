@@ -607,19 +607,6 @@ def _mechanical_and_claims(
         return False, False, [f"classifier error (treated as substantive): {exc}"]
 
 
-def _size_oversized(pr_detail: dict) -> bool:
-    """triage-classify.py's `is_oversized` over the PR's own totals. Fails
-    closed to "not oversized" (the stricter gates) when the classifier or
-    the totals can't be read."""
-    try:
-        return bool(_replay.tc.is_oversized(
-            int(pr_detail.get("additions") or 0),
-            int(pr_detail.get("deletions") or 0),
-            int(pr_detail.get("changed_files") or 0)))
-    except Exception:  # noqa: BLE001 — never crash the gate
-        return False
-
-
 def _author_card_nothing_blocks(body: str) -> bool:
     """Does the author card's header say nothing blocks merge?
 
@@ -857,14 +844,13 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
     author_card = _find_comment(comments, AUTHOR_MARKER)
     brief = _find_comment(comments, BRIEF_MARKER)
     legacy = _find_legacy_comment(comments) if author_card is None else None
-    # One definition of oversized: triage-classify's thresholds, computed
-    # here from the PR itself. Trusting only the label raced triage — on
-    # #21936 the `opened` evaluation ran before the label landed, and a
-    # GITHUB_TOKEN label write fires no event to re-run it, so G5 said "not
-    # oversized" beside a `review:oversized` PR for good. The label still
-    # counts: it is how a maintainer marks a PR that timed out under the
-    # thresholds.
-    oversized = OVERSIZED_LABEL in labels or _size_oversized(pr)
+    # The label is the one source of truth. Computing size here instead
+    # would flip PRs already reviewed and approved under the normal gates
+    # (G1/G2 skipped, G5 newly red), and a forced #new-review could never put
+    # an oversized PR back under them. #21936's race — this evaluation ran
+    # before triage's label landed — is closed on the triage side: it
+    # re-dispatches the Sentinel whenever it moves the label.
+    oversized = OVERSIZED_LABEL in labels
     trivial = TRIVIAL_LABEL in labels
     triage_prose = _find_comment(comments, TRIAGE_PROSE_MARKER) if trivial else None
     trivial_standin = False  # set when triage's prose comment satisfies G1

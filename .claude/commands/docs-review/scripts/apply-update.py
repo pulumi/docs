@@ -437,28 +437,56 @@ _CONF_ROW_RE = re.compile(r"^(> \| [^|]+\| [^|]+\| )(.*?)( \|\s*)$")
 _POINTER_RE = re.compile(r"→ see|list below|row below|on the author'?s card|⚠️ list", re.I)
 _FID_RE = re.compile(r"\bF(\d+)\b")
 SETTLED_NOTE = "Settled since this was written — see ✅ Resolved on the author card."
-# The summary names open work: counts, asks, or "only you can …". Only
-# consulted when nothing blocks — a card with open items may say so.
+# The summary names open work FOR THE AUTHOR: an ask addressed to them.
+# Only consulted when nothing blocks — a card with open items may say so.
+# Deliberately narrow, because a match deletes the sentence: a count of
+# checked claims ("checked two claims … confirmed both hold") or a verb like
+# "need"/"confirm" in a description of the PR ("a setting your stacks need;
+# the review confirmed …") is a correct summary, not open work.
 _OPEN_WORK_RE = re.compile(
-    r"\b(need|needs|needing)\b[^.]*\b(from you|your|source|answer|confirm)"
-    r"|\bonly you\b|\bfrom you\b|\bopen (item|question|finding)s?\b"
-    r"|\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+) (item|question|finding|claim)s?\b[^.]*\b(block|open|need|confirm)",
+    r"\bfrom you\b|\bonly you\b|\bfor you to\b|\bwaiting on you\b"
+    r"|\byou (need|must|have|'ll need|will need) to\b"
+    r"|\b(need|needs|needing|awaiting|await) your\b",
     re.I)
+# A "What this PR changes" bullet names a file when its lead is one token
+# with a slash or an extension. Anything else (`restamp_body()`,
+# `review:stale`, `pinned-comment.sh prune-legacy`) isn't a path, and the
+# file list can't say whether the PR still changes it.
+_PATHLIKE_RE = re.compile(r"^[\w.@+-]*(/[\w.@+-]*)*$")
+_EXT_RE = re.compile(r"\.[A-Za-z][A-Za-z0-9]{0,7}$")
+_CHANGES_HEAD_RE = re.compile(r"^> \*\*What this PR changes:?\*\*")
+
+
+def _names_a_file(name: str) -> bool:
+    return bool(_PATHLIKE_RE.match(name)) and ("/" in name or bool(_EXT_RE.search(name)))
+
+
+def _still_changed(name: str, pr_files: list[str]) -> bool:
+    if name.endswith("/"):
+        return any(p.startswith(name) or ("/" + name) in p for p in pr_files)
+    return any(p == name or p.endswith("/" + name) for p in pr_files)
 
 
 def prune_changes_bullets(brief: str, pr_files: list[str] | None) -> tuple[str, list[str]]:
     """Drop "What this PR changes" bullets naming a file the PR no longer
-    changes. A bullet names a basename or a path; it survives when any PR
-    path equals it or ends with `/<it>`. No file list → no change."""
+    changes. Only bullets inside that block whose lead names a file (see
+    `_names_a_file`) are candidates; a file survives when any PR path equals
+    it or ends with `/<it>`, a directory (`dir/`) while any PR path sits
+    under it. No file list → no change."""
     if not pr_files:
         return brief, []
     dropped = []
     out = []
+    in_block = False
     for line in brief.splitlines():
-        m = _CHANGES_BULLET_RE.match(line)
+        if _CHANGES_HEAD_RE.match(line):
+            in_block = True
+        elif in_block and (not line.startswith(">") or line.startswith("> **")):
+            in_block = False
+        m = _CHANGES_BULLET_RE.match(line) if in_block else None
         if m:
             name = m.group(1).strip()
-            if not any(p == name or p.endswith("/" + name) for p in pr_files):
+            if _names_a_file(name) and not _still_changed(name, pr_files):
                 dropped.append(name)
                 continue
         out.append(line)
@@ -500,7 +528,7 @@ def drop_stale_summary(author: str, n_blocking: int) -> tuple[str, bool]:
     for i, ln in enumerate(lines):
         st = ln.strip()
         if st.startswith("_") and st.endswith("_") and len(st) > 2 and not st.startswith("_No ") \
-                and not st.startswith("_Nothing") and _OPEN_WORK_RE.search(st):
+                and not st.startswith("_Nothing") and _OPEN_WORK_RE.search(st.strip("_")):
             del lines[i]
             if i < len(lines) and not lines[i].strip() and i > 0 and not lines[i - 1].strip():
                 del lines[i]
