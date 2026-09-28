@@ -7,16 +7,25 @@
      carry a literal at the call site, so derive intrinsic dimensions here instead: from
      the resource itself for a raster image, or from the SVG's own markup when it's an
      SVG (resources.Get returns SVGs as a generic, dimension-less resource). Either way,
-     an explicit "width"/"height" passed by the caller always wins. */}}
-{{ $intrinsic := dict }}
+     an explicit "width"/"height" passed by the caller always wins.
+
+     For a raster image this MUST be captured from the resource actually emitted as
+     `src` (i.e. after the resize-to-maxWidth step below), not the original asset: a
+     caller with no CSS sizing class relies on width/height alone to size the <img>, so
+     a dimension taken from a 2400x1600 original while the emitted src is resized to
+     800px wide would render 3x oversized/upscaled instead of at the image's actual
+     rendered size. Aspect ratio is unaffected either way (resize preserves it), but the
+     absolute pixel size is not, so $w/$h for a raster image are only set after
+     processing, further down. */}}
+{{ $w := "" }}
+{{ $h := "" }}
 {{ if eq $img.MediaType.SubType "svg" }}
-    {{ $intrinsic = partialCached "svg-dimensions.html" $img $src }}
+    {{ $intrinsic := partialCached "svg-dimensions.html" $img $src }}
+    {{ $w = $.width | default $intrinsic.width }}
+    {{ $h = $.height | default $intrinsic.height }}
+    {{ $img = $img | fingerprint }}
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ else }}
-    {{ $intrinsic = dict "width" $img.Width "height" $img.Height }}
-{{ end }}
-{{ $w := $.width | default $intrinsic.width }}
-{{ $h := $.height | default $intrinsic.height }}
-{{ if ne $img.MediaType.SubType "svg" }}
     {{ $maxWidth := .maxWidth | default 800 }}
     {{/* Default to q90; raise via `quality` for screenshots / images with fine text where
          lossy artifacts are visible. */}}
@@ -30,6 +39,8 @@
     {{ else }}
         {{ $img = $img.Process $processArgs }}
     {{ end }}
+    {{ $w = $.width | default $img.Width }}
+    {{ $h = $.height | default $img.Height }}
     {{/* Skip srcset for very small images (maxWidth < 400) — src already covers 1x and 2x. */}}
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
@@ -53,7 +64,4 @@
     {{ end }}
     {{ $img = $img | fingerprint }}
 <img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
-{{ else }}
-    {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with $w }}width="{{ . }}"{{ end }} {{ with $h }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}"{{ with .fetchpriority }} fetchpriority="{{ . }}"{{ end }} decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}
