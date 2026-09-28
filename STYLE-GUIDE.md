@@ -303,6 +303,29 @@ Rules:
 
 ---
 
+## Neutral tone toward other products
+
+Docs under `content/docs/` exist to inform readers, not to convince them. This matters most on comparison pages (`content/docs/iac/comparisons/`, `content/docs/esc/vs/`, `content/docs/deployments/versus.md`), but it applies anywhere docs mention another product. A reader who arrives on a comparison page is often still deciding, and a page that reads like a sales pitch loses their trust in the rest of the docs. Persuasive copy belongs on product and marketing pages (`content/product/`, the homepage), not in docs. The brand guide's [voice and tone](https://brand.pulumi.com/voice/voice-and-tone/) section asks for grounded copy without "overly promotional, salesy, or marketing-heavy language"; this section applies that to the Hugo docs tree.
+
+This is about how docs treat *other products*, not a ban on opinions. Docs can and should recommend best practices for using Pulumi itself ("we recommend a general-purpose language for projects that need unit tests," "use one stack per environment") and patterns we've found effective for using Pulumi alongside other products ("provision the cluster with Pulumi and install charts with `helm.Release`"). State those as recommendations, with the reasoning, rather than as claims that the other product falls short.
+
+Write docs so that a user of the other product would call them fair:
+
+- **Describe, don't rank.** State what each product does and how. No superlatives or verdicts between products: "the best alternative," "Pulumi is the better choice," "more powerful than X." Let the reader draw the conclusion.
+- **No persuasion framing.** Don't write sections whose purpose is to move the reader, such as "Why teams are leaving X," "What you get in return," "One platform, not a pile of point tools," or "X is no longer a reason to wait." Headings describe content ("Policy as code," "Pricing models"); they don't argue.
+- **No fear, uncertainty, or doubt.** Leave out acquisitions, ownership changes, licensing controversies, pricing changes, or plan retirements unless the fact directly changes what the reader can do (for example, a free tier's resource limit, or a deprecated product like CDKTF). When one belongs, state it once, plainly, with a `<!-- verified: YYYY-MM -->` marker, and don't speculate about its consequences.
+- **Represent the other product accurately and at its best.** Describe its equivalent features by name before saying what it lacks. "No equivalent" and "Limited" need to be true and specific; check the other product's current docs rather than working from memory. Don't frame a design difference as a defect (Vault storing only secrets isn't a missing "open ecosystem").
+- **Keep table cells factual and parallel.** Each cell says what the product does, in the same register for both columns. No loaded qualifiers ("powerful," "requires significant management overhead," "a narrower training target") and no one-word judgments in place of a description.
+- **Give the other product real "choose when" reasons.** A "When to choose" section lists genuine reasons to pick the other product, and doesn't follow them with a rebuttal. Put Pulumi's interoperability facts (HCL support, state backends, module reuse) in the adoption section instead.
+- **No testimonials or sales proof.** Customer results, "proven at scale" sections, and vendor benchmarks don't belong in docs. Link to `/customers/` from a **Learn more** block if it's relevant.
+- **Link to docs, not marketing pages.** Point to `/docs/...` pages for Pulumi features, not `/product/...` pages.
+- **Compare Pulumi to other products, never other products to each other.** Every comparison is Pulumi vs. something else. Don't write pages, sections, table columns, or sentences that weigh two non-Pulumi products against each other (for example, "CDK vs. Terraform," or a table with Pulumi, AWS CDK, and Terraform columns side by side). Adjudicating between other vendors' products isn't our place, and we can't keep those claims accurate. A category page such as TACOS can describe what the category's products have in common, but compares the category to Pulumi, not its members to one another.
+- **Front matter follows the same rules.** `title_tag`, `meta_desc`, and `h1` describe the comparison ("Pulumi vs. HCP Terraform") instead of selling it ("The best Terraform Cloud alternative").
+
+Comparison pages share a structure; follow it for new ones: an intro stating what both products are and how they differ, **What is Pulumi?** (the `what-is-pulumi` shortcode), **What is _X_?**, **Detailed comparison** (a table), **Key differences**, **When to choose Pulumi vs. _X_**, **Adoption**, **Frequently asked questions**, and **Next steps**. `content/docs/iac/comparisons/crossplane.md` is a representative example.
+
+---
+
 ## Tutorials
 
 - End with a **Next steps** or **Learn more** section as appropriate — see [Cross-reference sections](#cross-reference-sections).

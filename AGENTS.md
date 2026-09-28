@@ -106,6 +106,12 @@ What that means when you work here:
 
 ---
 
+## Neutral tone in docs
+
+Docs that discuss other products, especially comparison pages (`content/docs/iac/comparisons/`, `content/docs/esc/vs/`), must inform rather than persuade. Follow `STYLE-GUIDE.md` §Neutral tone toward other products when writing or reviewing any docs page that mentions another product.
+
+---
+
 ## AI and agent positioning
 
 Pulumi supports the full spectrum of AI agents, and content must never present Neo as the only way to use AI with Pulumi or frame Neo as an either-or choice against other coding agents.
