@@ -107,8 +107,7 @@ done
 # --- SEO/AEO head metadata post-pass --------------------------------------
 # TypeDoc's default theme is used as-is in this repo (no editable .hbs
 # templates to hook into), so the fix runs as a post-process over the
-# already-generated HTML instead — see docfx_seo_postprocess.py's own
-# header comment for why the sibling .NET (docfx) generator does the same.
+# already-generated HTML instead of a template change.
 # Runs over the whole OUTDIR so it covers every package generated above.
 echo -e "\033[0;93mInjecting SEO head metadata (canonical, per-page description, JSON-LD)\033[0m"
 python3 "${SCRIPT_DIR}/typedoc_seo_postprocess.py" \
