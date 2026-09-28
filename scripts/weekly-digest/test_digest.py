@@ -71,7 +71,8 @@ def base_digest(**over):
                        "prev_week": {"prs_opened": 25, "prs_merged": 20, "prs_closed": 3,
                                      "issues_opened": 6, "issues_closed": 4}},
         "workflow_failures": {"total_runs": 100, "failing": [
-            {"workflow": "Audit Logs", "runs": 4, "failures": 4, "last_failure_url": "https://x/run/1"}]},
+            {"workflow": "Audit Logs", "runs": 4, "failures": 4, "streak": 4, "last_failure_url": "https://x/run/1"},
+            {"workflow": "Deploy", "runs": 50, "failures": 2, "streak": 0, "last_failure_url": "https://x/run/2"}]},
         "switches": digest.shape_switches({"REVIEW_V3_SLA": "", "BLOG_REVIEW_COUNT": "0",
                                            "REVIEW_V3_SENTINEL": "1"}),
         "sla": digest.shape_sla(sweep_record(), POLICY, "off"),
@@ -115,19 +116,32 @@ def test_shape_sla_keeps_the_sweeps_numbers():
     assert by[11]["overdue"] == []
     assert by[13]["abandoned"] and by[13]["closes_in_days"] == 7
     assert not by[14]["abandoned"]
-    assert sla["policy"] == {"warn_days": 14, "close_days": 21}
+    assert sla["policy"] == {"warn_days": 14, "close_days": 21, "escalate_to": POLICY["escalate_to"]}
 
 
-def test_workflow_failures_counts_only_failed_workflows():
+def test_workflow_failures_sorts_newest_first_and_tracks_the_streak():
+    # Two `gh run list` calls are concatenated, so input order isn't time order.
     wf = digest.shape_workflow_failures([
-        {"workflowName": "A", "status": "completed", "conclusion": "failure", "url": "u1"},
-        {"workflowName": "A", "status": "completed", "conclusion": "failure", "url": "u0"},
-        {"workflowName": "A", "status": "completed", "conclusion": "success"},
-        {"workflowName": "B", "status": "completed", "conclusion": "skipped"},
-        {"workflowName": "C", "status": "in_progress", "conclusion": ""},
+        {"workflowName": "A", "status": "completed", "conclusion": "success", "createdAt": "2026-09-20", "url": "u0"},
+        {"workflowName": "A", "status": "completed", "conclusion": "failure", "createdAt": "2026-09-27", "url": "u2"},
+        {"workflowName": "A", "status": "completed", "conclusion": "failure", "createdAt": "2026-09-26", "url": "u1"},
+        {"workflowName": "B", "status": "completed", "conclusion": "failure", "createdAt": "2026-09-22", "url": "b0"},
+        {"workflowName": "B", "status": "completed", "conclusion": "success", "createdAt": "2026-09-25"},
+        {"workflowName": "B", "status": "completed", "conclusion": "skipped", "createdAt": "2026-09-26"},
+        {"workflowName": "C", "status": "in_progress", "conclusion": "", "createdAt": "2026-09-27"},
     ])
-    assert wf["total_runs"] == 4
-    assert wf["failing"] == [{"workflow": "A", "runs": 3, "failures": 2, "last_failure_url": "u1"}]
+    assert wf["total_runs"] == 6
+    a, b = wf["failing"]
+    assert (a["workflow"], a["streak"], a["last_failure_url"]) == ("A", 2, "u2")
+    assert (b["workflow"], b["streak"], b["failures"], b["runs"]) == ("B", 0, 1, 3)
+
+
+def test_broken_workflow_promoted_flaky_collapsed():
+    msg = render.render(base_digest(), None)
+    top = msg.split("*Needs a human*")[1].split("\n\n")[0]
+    assert "Audit Logs" in top and "failed its last 4 runs" in top
+    line = next(line for line in msg.splitlines() if line.startswith("*Failed runs*"))
+    assert line == "*Failed runs* (scheduled + master): 1 flaky (2 failed runs)"
 
 
 # ---- render.py ---------------------------------------------------------------
@@ -135,7 +149,7 @@ def test_workflow_failures_counts_only_failed_workflows():
 
 def test_each_pr_appears_once():
     msg = render.render(base_digest())
-    for n in (10, 13, 15, 20, 21, 30):
+    for n in (10, 13, 15, 20, 21, 30, 12):
         assert msg.count(f"/pull/{n}|") == 1, n
 
 
@@ -143,20 +157,41 @@ def test_blog_prs_collapse_to_one_line():
     msg = render.render(base_digest())
     assert "/pull/12|" in msg  # only as the blog line's "longest wait"
     blog_line = next(line for line in msg.splitlines() if line.startswith("*Blog/marketing*"))
-    assert "1 open · 1 over SLA" in blog_line and "20bd (blog)" in blog_line
+    assert blog_line.startswith("*Blog/marketing* → cnunciato: 1 open · 1 over SLA")
+    assert blog_line.endswith("20bd")
 
 
 def test_multi_role_pr_groups_under_its_worst_breach():
     view = render.build_view(base_digest())
     c = next(c for c in view["candidates"] if c["number"] == 10)
     assert c["role"] == "tools"  # 3 over a 1bd SLA beats 1 over a 3bd SLA
+    assert c["facts"] == "tools review 4bd on a 1bd SLA → CamSoper; docs-guild also overdue"
+
+
+def test_blog_labelled_pr_overdue_for_docs_stays_visible():
+    d = base_digest()
+    d["prs"][0]["labels"] = ["domain:blog", "domain:mixed"]  # PR 10: tools + docs-guild overdue
+    view = render.build_view(d)
+    assert any(c["number"] == 10 for c in view["candidates"])
+    assert view["blog"]["overdue"] == 1  # only PR 12, whose overdue roles are all blog
+
+
+def test_same_age_batch_compresses():
+    d = base_digest()
+    d["sla"]["verdicts"] += [{"pr": 40 + i, "kind": "reviewer", "roles": [],
+                              "overdue": [{"role": "docs-guild", "waited": 5, "sla": 3, "escalate_to": "t"}]}
+                             for i in range(6)]
+    d["prs"] += [pr(40 + i) for i in range(6)]
+    msg = render.render(d, {"order": [{"ref": "pr:30", "why": "x"}]})
+    line = next(line for line in msg.splitlines() if line.startswith("• docs-guild"))
+    assert line.startswith("• docs-guild → tatcoo-pulumi (SLA 3bd): 7 PRs at 5bd: ") and "+3 more" in line
 
 
 def test_fallback_order_is_priority_then_severity():
     view = render.build_view(base_digest())
     top, source = render.resolve_ranking(view["candidates"], None)
     assert source == "fallback"
-    assert [t["ref"] for t in top] == ["pr:30", "pr:13", "pr:10", "pr:15", "pr:20"]
+    assert [t["ref"] for t in top] == ["pr:30", "workflow:Audit Logs", "pr:13", "pr:10", "pr:15"]
 
 
 def test_model_ranking_is_validated():
@@ -178,7 +213,7 @@ def test_sweep_off_vs_on_wording():
     # Abandoned context has to survive promotion into the top list, so it
     # rides in the candidate's facts, not only in the section header.
     off = render.render(base_digest(), None)
-    assert "would close once the SLA sweep is on" in off and "closes in" not in off
+    assert "the sweep is off, so close or rescue it by hand" in off and "closes in" not in off
     d = base_digest()
     d["sla"] = digest.shape_sla(sweep_record(), POLICY, "on")
     d["v3_ops"] = {"available": True, "escalations_total": 6, "warns": 1, "closes": 0, "waives": 0}
@@ -191,7 +226,7 @@ def test_abandoned_section_header_when_not_promoted():
     d = base_digest(review_outcomes={"available": False})
     ranking = {"order": [{"ref": "pr:10", "why": "x"}]}
     msg = render.render(d, ranking)
-    assert "*Abandoned* (author idle >14d; the SLA sweep is off, so they'd close 7d after" in msg
+    assert "*Abandoned* (author idle >14d)" in msg and "close or rescue it by hand" in msg
 
 
 def test_sla_unavailable_is_loud():
@@ -202,7 +237,8 @@ def test_sla_unavailable_is_loud():
 def test_switch_line_lists_only_whats_off():
     msg = render.render(base_digest(), None)
     line = next(line for line in msg.splitlines() if line.startswith("*Switches*"))
-    assert line == "*Switches*: off: SLA sweep, blog review index"
+    assert line.startswith("*Switches*: off: SLA sweep, blog review index; unknown: content review")
+    assert line.endswith(":warning: review ledger unreadable")
 
 
 def test_titles_are_escaped_for_mrkdwn():

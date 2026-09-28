@@ -194,23 +194,39 @@ FAILED_CONCLUSIONS = {"failure", "timed_out", "startup_failure"}
 
 def shape_workflow_failures(raw):
     """Pure transform: raw `gh run list` objects (scheduled runs plus pushes
-    to master, trailing window) -> per-workflow failure counts, worst first.
+    to master, trailing window) -> per-workflow failure stats, worst first.
 
-    Only failed workflows are listed; `total_runs` is the denominator so a
-    quiet week still reads as "0 of N" rather than as missing data.
+    `streak` is how many of the workflow's most recent runs failed in a row
+    (0 = its latest run passed), which separates "broken right now" from
+    "flaked once on Tuesday". Only workflows with a failure are listed;
+    `total_runs` is the denominator so a quiet week still reads as "0 of N".
+    Runs are re-sorted newest first here: the input is two `gh run list`
+    calls concatenated, so its order is not chronological.
     """
-    runs = [r for r in raw if r.get("status") == "completed"]
+    runs = sorted((r for r in raw if r.get("status") == "completed"),
+                  key=lambda r: r.get("createdAt") or "", reverse=True)
     by_wf = {}
     for r in runs:
         name = r.get("workflowName") or "unknown"
-        entry = by_wf.setdefault(name, {"workflow": name, "runs": 0, "failures": 0, "last_failure_url": None})
-        entry["runs"] += 1
-        if r.get("conclusion") in FAILED_CONCLUSIONS:
-            entry["failures"] += 1
-            if entry["last_failure_url"] is None:  # gh lists newest first
-                entry["last_failure_url"] = r.get("url")
-    failing = sorted((e for e in by_wf.values() if e["failures"]),
-                     key=lambda e: (-e["failures"], e["workflow"]))
+        e = by_wf.setdefault(name, {"workflow": name, "runs": 0, "failures": 0, "streak": 0,
+                                    "last_failure_url": None, "_streak_open": True})
+        e["runs"] += 1
+        failed = r.get("conclusion") in FAILED_CONCLUSIONS
+        if failed:
+            e["failures"] += 1
+            if e["last_failure_url"] is None:
+                e["last_failure_url"] = r.get("url")
+        if e["_streak_open"]:
+            if failed:
+                e["streak"] += 1
+            elif r.get("conclusion") not in ("skipped", "cancelled"):
+                e["_streak_open"] = False
+    failing = []
+    for e in by_wf.values():
+        e.pop("_streak_open")
+        if e["failures"]:
+            failing.append(e)
+    failing.sort(key=lambda e: (-e["streak"], -e["failures"] / e["runs"], e["workflow"]))
     return {"total_runs": len(runs), "failing": failing}
 
 
@@ -274,7 +290,8 @@ def shape_sla(record, config, enabled):
             overdue = [r for r in roles if r["waited"] > r["sla"]]
             verdicts.append({"pr": entry["pr"], "kind": "reviewer", "roles": roles, "overdue": overdue})
     return {"available": True, "enabled": enabled, "policy": {
-        "warn_days": config["warn_days"], "close_days": config["close_days"]}, "verdicts": verdicts}
+        "warn_days": config["warn_days"], "close_days": config["close_days"],
+        "escalate_to": config["escalate_to"]}, "verdicts": verdicts}
 
 
 def load_sla_policy():

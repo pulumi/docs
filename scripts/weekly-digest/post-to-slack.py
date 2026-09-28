@@ -3,11 +3,12 @@
 # requires-python = ">=3.11"
 # dependencies = []
 # ///
-"""Post the combined weekly digest to Slack, split across as many messages as
-needed so nothing is truncated.
+"""Post the weekly digest to Slack, split across as many messages as needed so
+nothing is truncated.
 
-Slack truncates long messages, so a single long digest gets clipped. This reads
-the assembled digest (one document with headings), splits it on line boundaries
+The digest is rendered to fit one message (render.py), but Slack truncates long
+messages, so a heavy week would get clipped. This reads the rendered digest,
+splits it on line boundaries
 into chunks under a safe size, and posts them sequentially via chat.postMessage
 so they read as one continuous run in the channel. Mirrors the link checker's
 Slack-API posting path (scripts/link-checker/check-links.js): `SLACK_ACCESS_TOKEN`

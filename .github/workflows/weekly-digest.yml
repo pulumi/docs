@@ -53,12 +53,12 @@ jobs:
 
       - uses: astral-sh/setup-uv@v7
 
-      # collect_v3_ops() reads the pr-review/ prefixes of the content-review
-      # ledger bucket (discovered by name prefix, no Pulumi needed). Without
-      # credentials it degrades to {"available": false} on every scheduled
-      # run — the exact silent-dark failure the section is meant to surface.
-      # Best-effort like the other ledger readers: a credential failure
-      # leaves the rest of the digest intact.
+      # The content-review ledger bucket (discovered by name prefix, no
+      # Pulumi needed) feeds two readers: collect_v3_ops() reads the sweep's
+      # pr-review/runs/ records, and the read-only sweep reads its per-PR
+      # pr-review/state/ so a PR it already warned shows its real remaining
+      # notice. Without credentials both degrade (the digest flags "review
+      # ledger unreadable") and the rest of the digest stays intact.
       - name: Configure AWS credentials
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
