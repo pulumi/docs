@@ -26,6 +26,7 @@ def _load(name: str, path: Path):
 digest = _load("weekly_digest_collect", HERE / "digest.py")
 render = _load("weekly_digest_render", HERE / "render.py")
 rank = _load("weekly_digest_rank", HERE / "rank.py")
+poster = _load("weekly_digest_post", HERE / "post-to-slack.py")
 
 POLICY = {"warn_days": 14, "close_days": 21,
           "escalate_to": {"tools": "CamSoper", "docs-guild": "tatcoo-pulumi", "blog": "cnunciato"}}
@@ -371,6 +372,82 @@ def test_fits_in_one_slack_message():
     assert len(render.render(base_digest(), None)) < 3500
 
 
+# ---- thread reply -------------------------------------------------------------
+
+
+def _many_overdue(d, count=7):
+    d["sla"]["verdicts"] += [{"pr": 40 + i, "kind": "reviewer", "roles": [],
+                              "overdue": [{"role": "docs-guild", "waited": 5, "sla": 3, "escalate_to": "t"}]}
+                             for i in range(count)]
+    d["prs"] += [pr(40 + i, title=f"HCL tabs part {i}") for i in range(count)]
+    return d
+
+
+def test_every_cut_list_lands_in_the_thread():
+    d = _many_overdue(base_digest())
+    msg, thread = render.render_parts(d, {"order": [{"ref": "pr:30", "why": "x"}]})
+    line = next(l for l in msg.splitlines() if l.startswith("• docs-guild"))
+    assert line.endswith("· +4 more in thread")
+    assert "*Over review SLA*: docs-guild → tatcoo-pulumi (SLA 3bd)" in thread
+    for i in range(7):
+        assert f"/pull/{40 + i}|#{40 + i} HCL tabs part {i}> — 5bd" in thread
+
+
+def test_needs_a_human_says_top_n_and_continues_in_thread():
+    msg, thread = render.render_parts(base_digest(), None)
+    total = len(render.build_view(base_digest())["candidates"])
+    assert f"*Needs a human* (top 5 of {total})" in msg
+    assert f"_+{total - 5} more in thread_" in msg
+    assert f"*Needs a human*, 6–{total} (fixed priority order)" in thread
+    assert "\n6. <" in thread
+
+
+def test_no_cuts_no_thread():
+    d = base_digest(review_outcomes={"available": False})
+    d["issues"]["new_this_week"] = []
+    d["workflow_failures"] = {"total_runs": 5, "failing": []}
+    d["prs"] = [pr(20, labels=["review:no-blockers"], sentinel="ready")]
+    d["sla"]["verdicts"] = []
+    msg, thread = render.render_parts(d, None)
+    assert thread == "" and "in thread" not in msg
+
+
+def test_poster_args():
+    assert poster.parse_args(["m.txt"]) == ("m.txt", None, False)
+    assert poster.parse_args(["m.txt", "--thread", "t.txt", "--dry-run"]) == ("m.txt", "t.txt", True)
+
+
+def test_poster_threads_replies_under_the_first_message(monkeypatch, tmp_path):
+    msg, thr = tmp_path / "m.txt", tmp_path / "t.txt"
+    msg.write_text("digest")
+    thr.write_text("full lists")
+    calls = []
+
+    def fake_post(token, channel, text, retries=3, thread_ts=None):
+        calls.append((channel, text, thread_ts))
+        return {"ok": True, "ts": "111.222", "channel": "C123"}
+
+    monkeypatch.setattr(poster, "post_chunk", fake_post)
+    monkeypatch.setattr(poster, "_force_ipv4", lambda: None)
+    monkeypatch.setenv("SLACK_ACCESS_TOKEN", "x")
+    monkeypatch.setattr(sys, "argv", ["post", str(msg), "--thread", str(thr)])
+    poster.main()
+    assert calls == [("#docs-ops", "digest", None), ("C123", "full lists", "111.222")]
+
+
+def test_poster_skips_empty_thread(monkeypatch, tmp_path):
+    msg, thr = tmp_path / "m.txt", tmp_path / "t.txt"
+    msg.write_text("digest")
+    thr.write_text("")
+    calls = []
+    monkeypatch.setattr(poster, "post_chunk", lambda *a, **k: calls.append(k) or {"ok": True, "ts": "1"})
+    monkeypatch.setattr(poster, "_force_ipv4", lambda: None)
+    monkeypatch.setenv("SLACK_ACCESS_TOKEN", "x")
+    monkeypatch.setattr(sys, "argv", ["post", str(msg), "--thread", str(thr)])
+    poster.main()
+    assert len(calls) == 1
+
+
 # ---- rank.py -----------------------------------------------------------------
 
 
@@ -419,7 +496,9 @@ def test_rank_main_is_never_fatal():
 
 
 def run_standalone() -> int:
-    tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
+    import inspect  # noqa: PLC0415
+    tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)
+             and not inspect.signature(v).parameters]  # fixture tests run under pytest only
     failures = 0
     for t in tests:
         try:

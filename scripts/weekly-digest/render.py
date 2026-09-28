@@ -13,9 +13,15 @@ priority order, so the digest never depends on the model.
 Each PR appears at most once: whatever the top list shows is removed from the
 grouped sections under it.
 
+Grouped sections are capped to keep the message short. Whatever a cap cuts
+goes to a thread reply instead (`render_parts` returns both texts), and the
+cut reads "+N more in thread", so no "+N" in the digest is a dead end.
+
 Usage:
   render.py candidates <digest.json>                 -> candidates JSON (rank.py input)
-  render.py render <digest.json> [--ranking r.json]  -> Slack mrkdwn message
+  render.py render <digest.json> [--ranking r.json] [--thread-out t.txt]
+                                                     -> Slack mrkdwn message
+                                                        (+ thread reply text)
 """
 
 from __future__ import annotations
@@ -92,10 +98,37 @@ def signed(n) -> str:
     return f"+{n}" if n > 0 else ("±0" if n == 0 else f"−{-n}")
 
 
-def inline(items: list[str], limit: int = INLINE_MAX) -> str:
+THREAD_TITLE_MAX = 60
+
+
+class Spill:
+    """Collects the full version of every list a cap shortened, for the
+    thread reply. Each entry is (heading, lines)."""
+
+    def __init__(self):
+        self.sections: list[tuple[str, list[str]]] = []
+
+    def add(self, heading: str, lines: list[str]) -> None:
+        self.sections.append((heading, lines))
+
+
+def inline(items: list[str], limit: int = INLINE_MAX, spill: Spill | None = None,
+           heading: str = "", full: list[str] | None = None) -> str:
+    """Join items with a cap. With a Spill, a cut sends `full` (one line per
+    item, same order as `items`) to the thread and says so."""
     shown = items[:limit]
     extra = len(items) - len(shown)
-    return " · ".join(shown) + (f" · +{extra} more" if extra > 0 else "")
+    if extra <= 0:
+        return " · ".join(shown)
+    if spill is not None and full is not None:
+        spill.add(heading, full)
+        return " · ".join(shown) + f" · +{extra} more in thread"
+    return " · ".join(shown) + f" · +{extra} more"
+
+
+def pr_line(url: str, n: int, title: str, detail: str = "") -> str:
+    """One thread-reply line: a titled link plus its key fact."""
+    return f"• {link(url, '#%d ' % n + short(title, THREAD_TITLE_MAX))}" + (f" — {esc(detail)}" if detail else "")
 
 
 def owner(policy: dict, role: str) -> str:
@@ -228,9 +261,9 @@ def build_view(d: dict) -> dict:
     }
 
 
-def fallback_ranking(candidates: list[dict]) -> list[dict]:
+def fallback_ranking(candidates: list[dict], limit: int | None = TOP_N) -> list[dict]:
     ordered = sorted(candidates, key=lambda c: (KIND_PRIORITY[c["kind"]], c.get("sort_key", 0), c["ref"]))
-    return [{"ref": c["ref"], "why": c["facts"]} for c in ordered[:TOP_N]]
+    return [{"ref": c["ref"], "why": c["facts"]} for c in ordered[:limit]]
 
 
 def resolve_ranking(candidates: list[dict], ranking: dict | None) -> tuple[list[dict], str]:
@@ -290,22 +323,37 @@ def _header(d: dict) -> list[str]:
     return lines
 
 
-def _top(view: dict, top: list[dict]) -> list[str]:
+def _cand_label(c: dict) -> str:
+    return short(c["title"]) if c["number"] is None else "#%d " % c["number"] + short(c["title"])
+
+
+def _top(view: dict, top: list[dict], spill: Spill) -> list[str]:
     by_ref = {c["ref"]: c for c in view["candidates"]}
     if not top:
         return ["*Needs a human*", "Nothing this week."]
-    out = ["*Needs a human*"]
+    total = len(view["candidates"])
+    head = "*Needs a human*" + (f" (top {len(top)} of {total})" if total > len(top) else "")
+    out = [head]
     for i, t in enumerate(top, 1):
         c = by_ref[t["ref"]]
-        label = short(c["title"]) if c["number"] is None else "#%d " % c["number"] + short(c["title"])
-        out.append(f"{i}. {link(c['url'], label)} — {esc(t['why'])}")
+        out.append(f"{i}. {link(c['url'], _cand_label(c))} — {esc(t['why'])}")
+    if total > len(top):
+        # The model ranks only the top five; the rest continue in the fixed
+        # priority order, numbered on from there. Each also sits in its
+        # grouped section below, so the thread is the one ranked view.
+        shown = {t["ref"] for t in top}
+        rest = [r for r in fallback_ranking(view["candidates"], limit=None) if r["ref"] not in shown]
+        lines = [f"{i}. {link(by_ref[r['ref']]['url'], _cand_label(by_ref[r['ref']]))} — {esc(r['why'])}"
+                 for i, r in enumerate(rest, len(top) + 1)]
+        spill.add(f"*Needs a human*, {len(top) + 1}–{total} (fixed priority order)", lines)
+        out.append(f"_+{len(rest)} more in thread_")
     return out
 
 
 READY_MAX = 12  # ready PRs are few and each is a click; list nearly all of them
 
 
-def _queues(view: dict) -> list[str]:
+def _queues(view: dict, spill: Spill) -> list[str]:
     """Two lines of standing queues, each item a link: Sentinel-green PRs
     (the merge gate says every sign-off is in) and, per routed team, the
     no-blockers PRs with that team's review still requested."""
@@ -316,8 +364,10 @@ def _queues(view: dict) -> list[str]:
         out.append(":warning: *Ready to merge*: Sentinel verdicts unreadable this week")
     elif r["humans"]:
         items = [num(pr_url(p["number"]), p["number"]) for p in r["humans"]]
+        full = [pr_line(pr_url(p["number"]), p["number"], p["title"]) for p in r["humans"]]
         out.append(f"*Ready to merge* ({len(r['humans'])}, Sentinel green): "
-                   + inline(items, READY_MAX) + (f" · {bots}" if bots else ""))
+                   + inline(items, READY_MAX, spill, "*Ready to merge* (Sentinel green)", full)
+                   + (f" · {bots}" if bots else ""))
     else:
         out.append("*Ready to merge*: none" + (f" ({bots})" if bots else ""))
     queues = view.get("queues") or []
@@ -327,7 +377,7 @@ def _queues(view: dict) -> list[str]:
     return out
 
 
-def _team_line(role: str, items: list[dict], policy: dict) -> str:
+def _team_line(role: str, items: list[dict], policy: dict, spill: Spill) -> str:
     # Red-CI PRs first and labelled: they need a fix from the author, not an
     # approval, so they must not hide behind "+N more".
     items.sort(key=lambda c: (not c.get("red"), -c["waited"], c["number"]))
@@ -342,10 +392,13 @@ def _team_line(role: str, items: list[dict], policy: dict) -> str:
             text += f" {c['waited']}bd"
         return text + (" red CI" if c.get("red") else "")
 
-    return head + inline([item(c) for c in items])
+    full = [pr_line(c["url"], c["number"], c["title"],
+                    f"{c['waited']}bd" + (", red CI" if c.get("red") else "")) for c in items]
+    heading = f"*Over review SLA*: {role}{owner(policy, role)} (SLA {items[0]['sla']}bd)"
+    return head + inline([item(c) for c in items], INLINE_MAX, spill, heading, full)
 
 
-def _sections(view: dict, shown: set[str]) -> list[str]:
+def _sections(view: dict, shown: set[str], spill: Spill) -> list[str]:
     rest = [c for c in view["candidates"] if c["ref"] not in shown]
     by_kind: dict[str, list[dict]] = {}
     for c in rest:
@@ -365,7 +418,7 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
             for c in overdue:
                 teams.setdefault(c["role"], []).append(c)
             for role, items in sorted(teams.items(), key=lambda kv: -max(i["waited"] for i in kv[1])):
-                out.append(_team_line(role, items, policy))
+                out.append(_team_line(role, items, policy, spill))
 
         abandoned = by_kind.get("abandoned") or []
         if abandoned:
@@ -375,15 +428,19 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
 
     kok = by_kind.get("keep-or-kill") or []
     if kok:
+        full = [pr_line(c["url"], c["number"], c["title"], f"open {fmt_age(c['age_days'])}") for c in kok]
         out += ["", "*Keep or close?* (never reviewed): "
-                + inline([f"{num(c['url'], c['number'])} {fmt_age(c['age_days'])}" for c in kok])]
+                + inline([f"{num(c['url'], c['number'])} {fmt_age(c['age_days'])}" for c in kok],
+                         INLINE_MAX, spill, "*Keep or close?* (never reviewed)", full)]
     untriaged = by_kind.get("untriaged-issue") or []
     if untriaged:
-        out += ["", "*Untriaged issues*: " + inline([num(c["url"], c["number"]) for c in untriaged])]
+        full = [pr_line(c["url"], c["number"], c["title"]) for c in untriaged]
+        out += ["", "*Untriaged issues*: " + inline([num(c["url"], c["number"]) for c in untriaged],
+                                                     INLINE_MAX, spill, "*Untriaged issues*", full)]
     return out
 
 
-def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
+def _summary(d: dict, view: dict, shown: set[str], spill: Spill) -> list[str]:
     out = [""]
 
     ro = d.get("review_outcomes") or {}
@@ -402,8 +459,11 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
             line += f" · :warning: {gap} of {ro['prs_scraped']} had no review data"
         merged_over = [m for m in ro.get("merged_with_outstanding") or [] if f"pr:{m['pr']}" not in shown]
         if merged_over:
+            full = [pr_line(m.get("url") or pr_url(m["pr"]), m["pr"], m.get("title") or "",
+                            f"{len(m.get('findings') or [])} finding(s) unanswered at merge") for m in merged_over]
             line += " · also merged over findings: " + inline(
-                [num(m.get("url") or pr_url(m["pr"]), m["pr"]) for m in merged_over])
+                [num(m.get("url") or pr_url(m["pr"]), m["pr"]) for m in merged_over],
+                INLINE_MAX, spill, "*Merged over findings*", full)
         out.append(line)
 
     sla = view["sla"]
@@ -426,8 +486,10 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
     if failing:
         parts = []
         if broken:
+            full = [f"• {link(f['last_failure_url'] or REPO_URL, f['workflow'])} — failed its last "
+                    f"{f['streak']} runs ({f['failures']}/{f['runs']} this week)" for f in broken]
             parts.append(inline([f"{link(f['last_failure_url'] or REPO_URL, f['workflow'])} {f['failures']}/{f['runs']}"
-                                 for f in broken], 3))
+                                 for f in broken], 3, spill, "*Broken workflows*", full))
         if flaky:
             failed = sum(f["failures"] for f in flaky)
             text = f"{len(flaky)} flaky ({failed} of {wf.get('total_runs')} runs"
@@ -471,15 +533,29 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
     return out
 
 
-def render(d: dict, ranking: dict | None = None) -> str:
+def render_parts(d: dict, ranking: dict | None = None) -> tuple[str, str]:
+    """(message, thread). The thread holds the full version of every list
+    the message shortened; it's "" when nothing was cut, and the poster
+    then skips the reply."""
     view = build_view(d)
     top, source = resolve_ranking(view["candidates"], ranking)
     shown = {t["ref"] for t in top}
-    lines = (_header(d) + [""] + _top(view, top) + [""] + _queues(view)
-             + _sections(view, shown) + _summary(d, view, shown))
+    spill = Spill()
+    lines = (_header(d) + [""] + _top(view, top, spill) + [""] + _queues(view, spill)
+             + _sections(view, shown, spill) + _summary(d, view, shown, spill))
     if source == "fallback" and ranking is not None and top:
         lines.append("_Top list in fixed priority order (model ranking unavailable)._")
-    return "\n".join(lines).strip() + "\n"
+    message = "\n".join(lines).strip() + "\n"
+    if not spill.sections:
+        return message, ""
+    thread = ["Full lists for everything the digest above shortened:"]
+    for heading, items in spill.sections:
+        thread += ["", heading, *items]
+    return message, "\n".join(thread) + "\n"
+
+
+def render(d: dict, ranking: dict | None = None) -> str:
+    return render_parts(d, ranking)[0]
 
 
 def candidates_for_model(d: dict) -> list[dict]:
@@ -493,6 +569,7 @@ def main() -> int:
     ap.add_argument("mode", choices=["candidates", "render"])
     ap.add_argument("digest")
     ap.add_argument("--ranking", help="rank.py output; omit for the fixed priority order")
+    ap.add_argument("--thread-out", help="write the thread-reply text here (empty file when nothing was cut)")
     args = ap.parse_args()
     with open(args.digest, encoding="utf-8") as f:
         d = json.load(f)
@@ -508,7 +585,11 @@ def main() -> int:
         except (OSError, json.JSONDecodeError) as exc:
             sys.stderr.write(f"warning: unreadable ranking ({exc}); using the fallback order\n")
             ranking = {}
-    sys.stdout.write(render(d, ranking))
+    message, thread = render_parts(d, ranking)
+    sys.stdout.write(message)
+    if args.thread_out:
+        with open(args.thread_out, "w", encoding="utf-8") as f:
+            f.write(thread)
     return 0
 
 

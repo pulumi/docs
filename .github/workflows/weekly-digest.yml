@@ -103,15 +103,20 @@ jobs:
           python3 scripts/weekly-digest/rank.py /tmp/candidates.json > /tmp/ranking.json || echo '{}' > /tmp/ranking.json
           echo "Ranked $(jq 'length' /tmp/candidates.json) candidates; model order: $(jq -c '[.order[]?.ref]' /tmp/ranking.json)"
 
-      # 3. RENDER: deterministic Slack mrkdwn, one message.
+      # 3. RENDER: deterministic Slack mrkdwn: the digest, plus a thread
+      # reply with the full lists behind every "+N more in thread" (empty
+      # when nothing was cut, and then no reply is posted).
       - name: Render digest
-        run: python3 scripts/weekly-digest/render.py render /tmp/digest.json --ranking /tmp/ranking.json > /tmp/digest-message.txt
+        run: >-
+          python3 scripts/weekly-digest/render.py render /tmp/digest.json
+          --ranking /tmp/ranking.json --thread-out /tmp/digest-thread.txt
+          > /tmp/digest-message.txt
 
       # 3a. DRY RUN: print the message and the chunk boundaries it would post
       # as, skip posting (no token needed).
       - name: Preview digest (dry run)
         if: ${{ inputs.dry_run }}
-        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --dry-run
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt --dry-run
 
       # 3b. POST: via the Slack API (chat.postMessage), cloning the link
       # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no
@@ -123,7 +128,7 @@ jobs:
         env:
           SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           SLACK_CHANNEL: docs-ops
-        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt
+        run: python3 scripts/weekly-digest/post-to-slack.py /tmp/digest-message.txt --thread /tmp/digest-thread.txt
 
 env:
   ESC_ACTION_OIDC_AUTH: true
