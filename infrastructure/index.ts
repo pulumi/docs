@@ -972,6 +972,27 @@ if (config.registryStack) {
         }
     );
     registryBehaviors.push(
+        // Registry hashed CSS/JS bundles (e.g. /registry/css/bundle-registry.push-<sha>.css)
+        // get a fresh filename on every deploy, so they're safe to cache immutably
+        // for a year. Must come BEFORE "/registry*" below so this more specific
+        // pattern matches first; otherwise the broader pattern's 30-minute cache
+        // policy and default (non-immutable) response headers would win.
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/css/bundle-registry.*.css",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            targetOriginId: registryCDN,
+            pathPattern: "/registry/js/bundle-registry.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
         {
             ...baseCacheBehavior,
             targetOriginId: registryCDN,
