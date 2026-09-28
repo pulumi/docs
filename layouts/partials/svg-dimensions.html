@@ -1,0 +1,43 @@
+{{/*
+Derives an SVG's intrinsic display dimensions from its markup, for callers that need a
+width/height hint but only have a dynamic src (so no literal dimensions can be written at
+the call site). Returns a dict `(dict "width" W "height" H)` with rounded integer pixel
+values, or an empty dict if nothing parseable was found -- callers should always guard the
+result with `with` rather than assuming both keys are present.
+
+Usage: {{ $dims := partialCached "svg-dimensions.html" $img $src }}
+The second partialCached argument is the cache key: pass the resource's asset path so the
+regex-and-parse work runs once per unique SVG per build, since a shared icon or logo is
+often referenced from many pages.
+
+Resolution order:
+  1. The viewBox's width/height (3rd and 4th numbers, which must be non-negative per the SVG
+     spec). This is what actually determines the SVG's aspect ratio, and is present on
+     effectively every hand-authored icon/logo, including ones with no width/height attrs.
+  2. The root <svg> element's own unitless width/height attributes, when no viewBox parsed.
+Percentage or unit-suffixed width/height attributes (e.g. "100%") are deliberately not
+matched -- they carry no absolute pixel size to reserve layout with.
+*/}}
+{{ $content := .Content }}
+{{ $result := dict }}
+{{ $vb := findRESubmatch `(?is)<svg\b[^>]*\bviewBox\s*=\s*["']\s*(-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)[,\s]+(-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)[,\s]+(\d+(?:\.\d+)?)[,\s]+(\d+(?:\.\d+)?)\s*["']` $content }}
+{{ if $vb }}
+    {{ $match := index $vb 0 }}
+    {{ $w := partial "round-num-str.html" (index $match 3) }}
+    {{ $h := partial "round-num-str.html" (index $match 4) }}
+    {{ if and (gt $w 0) (gt $h 0) }}
+        {{ $result = dict "width" $w "height" $h }}
+    {{ end }}
+{{ end }}
+{{ if not (and $result.width $result.height) }}
+    {{ $wAttr := findRESubmatch `(?is)<svg\b[^>]*\bwidth\s*=\s*["'](\d+(?:\.\d+)?)["']` $content }}
+    {{ $hAttr := findRESubmatch `(?is)<svg\b[^>]*\bheight\s*=\s*["'](\d+(?:\.\d+)?)["']` $content }}
+    {{ if and $wAttr $hAttr }}
+        {{ $w := partial "round-num-str.html" (index (index $wAttr 0) 1) }}
+        {{ $h := partial "round-num-str.html" (index (index $hAttr 0) 1) }}
+        {{ if and (gt $w 0) (gt $h 0) }}
+            {{ $result = dict "width" $w "height" $h }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ return $result }}
