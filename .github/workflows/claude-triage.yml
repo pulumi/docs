@@ -438,9 +438,7 @@ jobs:
           A diff this size is usually mostly generated output, which an automated line-review can't finish (and wouldn't add value to). What works better:
 
           - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
-          - Have a human spot-check a sample of the generated output here.
-
-          \`@claude #new-review\` still force-runs a full review, but on a diff this size it will likely hit the job timeout.
+          - Have a human review this PR by hand, assisted by their own AI subscription seat (for example, Claude Code running \`/docs-review\` locally against this PR). A local session has no job timeout, so it can focus on the hand-written source and spot-check a sample of the generated output.
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
