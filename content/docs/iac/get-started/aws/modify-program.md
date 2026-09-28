@@ -542,8 +542,7 @@ output "url" {
 {{% /choosable %}}
 
 The bucket's website endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#working-with-outputs)
-that AWS assigns at deployment time, so its value isn't known in advance. That's why each example builds the URL with an
-output-aware helper rather than plain string concatenation. The endpoint is a bare hostname, so the examples prepend `http://`.
+that AWS assigns at deployment time, so its value isn't known in advance. For values like these, Pulumi has [output-aware helpers](/docs/iac/concepts/inputs-outputs/helpers/) that you can use to prepend plain strings like `http://`.
 
 ### Deploy the changes
 
