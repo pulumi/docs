@@ -57,6 +57,23 @@ The brand guide owns link *text* (descriptive, no "here"/"click here"). This sit
   - Incorrect: `[stacks](./stacks/)`, `![diagram](./diagram.png)`, `[stacks](../stacks/)`
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
+### Linking to the Dev Center
+
+The [Dev Center](/dev/) (tutorials, templates, examples, and a glossary) ships from a different repo, [pulumi/marketing-web](https://github.com/pulumi/marketing-web). Individual tutorials there can be renamed or retired without this repo finding out, so link to pages built to last rather than to single tutorials. Dev Center content is technical examples, not marketing, so linking to it from the docs is fine.
+
+**What to link to**, most stable first:
+
+1. **Facet landing pages**: `/dev/browse/cloud/<cloud>/`, `/dev/browse/language/<language>/`, and `/dev/browse/collection/<collection>/` (for example `/dev/browse/cloud/aws/`).
+1. **Filter URLs** when you need more than one facet: `/dev/browse/?cloud=aws&tag=containers`. The query parameters (`type`, `cloud`, `language`, `collection`, `tag`, `q`) are a frozen contract on the Dev Center side, so these URLs always resolve.
+1. **Hubs and template groups**: `/dev/`, `/dev/tutorials/`, `/dev/templates/`, a tutorial series index (such as `/dev/tutorials/pulumi-fundamentals/`), or a template group (`/dev/templates/<group>/[<cloud>/]`).
+1. **Tag landing pages**: `/dev/browse/tag/<tag>/`. A tag page exists only while at least five items carry the tag (currently; set by `MIN_LANDING_ROWS` in marketing-web's `apps/www/src/lib/dev-facets.ts`), so it can disappear. Link to one only if it's listed at `https://www.pulumi.com/dev/sitemap-0.xml`, and prefer a filter URL (`/dev/browse/?tag=<tag>`) when a tag has few items.
+
+**Deep links to a single tutorial** (`/dev/tutorials/<slug>/`) are fine only when that tutorial is the hands-on companion to the docs page, for example a concept page that links to the tutorial walking through it. Don't use a list of individual tutorials as a page's navigation.
+
+**Where to link:** "Next steps" and "Learn more" sections, cloud and integration index pages, and get-started next steps. Don't send readers to the Dev Center in place of a docs page that explains a concept.
+
+Always use root-relative `/dev/...` paths with a trailing slash. Never link to `/tutorials/` or `/templates/`; those only redirect.
+
 ### External link indicator
 
 Links that take users to a different UI/experience should include the ↗ (U+2197 North East Arrow) symbol when they appear in navigation menus or landing-page cards.
