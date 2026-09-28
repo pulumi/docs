@@ -75,8 +75,10 @@ jobs:
     name: Review one article (model, unprivileged)
     runs-on: ubuntu-latest
     # Hard cost ceiling for a single-article review; a hung run dies rather
-    # than burning API budget.
-    timeout-minutes: 25
+    # than burning API budget. A glow-up gets 20 more minutes for its
+    # pre-verification rounds (up to three verify passes and two narrow
+    # repair turns after the main model step).
+    timeout-minutes: ${{ github.event.inputs.mode == 'glowup' && 45 || 25 }}
     # Deliberately minimal: `contents: read` to clone, `id-token: write`
     # because anthropics/claude-code-action@v1 requests an OIDC token of its
     # own at startup. No `environment: production`, no ESC, no AWS — the
@@ -754,9 +756,18 @@ jobs:
               you landed them. Without them the findings record would file
               the work you just did as still outstanding, so it records
               nothing for the run instead.
-            - Your PR will NOT auto-merge: it opens for human review (the
-              sweep assigns reviewers). Write the body tables for that
-              reader.
+            - Your PR will NOT auto-merge: it opens for human review
+              (triage requests the routed approver team). Write the body
+              tables for that reader. Leave the `## Pre-verification`
+              section's placeholder alone: after your turn the workflow
+              verifies every claim on the lines you changed with the
+              pre-merge review's own verifier, may call you back for a
+              narrow repair turn, reverts edits that still don't verify,
+              and writes that section. So do not change a number, flag,
+              version, or sample output unless an artifact verdict gives
+              you the value (#21939 "three" -> "four" properties and
+              #21897's invented `pulumi up` summary were both exactly
+              that).
           # Broad Bash is deliberate and is what the job's privilege profile
           # buys: this job holds no push token, no AWS creds, and no
           # production environment, so compound commands (`make ensure &&
@@ -776,6 +787,166 @@ jobs:
             --model claude-opus-5-5 --effort medium
             --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
             --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"
+
+      # ---------------------------------------------------------------------
+      # GLOW-UP PRE-VERIFICATION (glow-up lane only)
+      #
+      # The pre-steps above verified the PRISTINE page; the model then
+      # rewrote it, and until this block nothing checked the rewrite before
+      # the PR opened. The pre-merge review then did, and caught what the
+      # glow-up had introduced (#21939 "four properties" where the source
+      # declares five; #21897 a `pulumi up` summary the CLI never prints) --
+      # findings addressed to an author, pulumi-bot, who never answers.
+      #
+      # So run the review's own claim pipeline where the review will: over
+      # the EDITED spans only (scripts/content-review/preverify-glowup.py).
+      # At most three verify rounds with a narrow repair pass between them,
+      # then a deterministic revert of any edited block still carrying a
+      # contradicted/unverifiable claim, then the receipts into the PR body.
+      # This is the glow-up lane's iteration and only this lane may do it:
+      # the fix lane's scope gate matches pre-fix line ranges from the
+      # immutable snapshot, and a fix traceable only to a later round would
+      # fail it (AGENTS.md, "Only the glow-up lane may iterate").
+      #
+      # Trust: each round file is uploaded as an artifact the moment it is
+      # written, and every later round and the receipts read the rounds and
+      # the pristine snapshot from fresh downloads, never the workspace copy
+      # a repair model step could have edited. The revert and receipts steps
+      # run after the last model step, so nothing can amend them.
+      # ---------------------------------------------------------------------
+      - name: Pre-verify glow-up edits (round 1)
+        id: pv1
+        if: >-
+          github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+        continue-on-error: true
+        uses: ./.github/actions/glowup-preverify-round
+        with:
+          round: '1'
+          article: ${{ github.event.inputs.path }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Repair pre-verification failures (after round 1)
+        id: repair1
+        if: steps.pv1.outputs.must_address != '' && steps.pv1.outputs.must_address != '0'
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: 'github-actions[bot]'
+          # The repair instructions live in the skill (one copy for both
+          # repair steps), under "Pre-verification repair".
+          prompt: |
+            Follow `.claude/commands/review-existing-content/SKILL.md`,
+            section "### Pre-verification repair" (under "## Glow-up mode"),
+            exactly. You are repairing the glow-up an earlier step made to the
+            article in `.content-review-queue.json`; the newest
+            `.preverify-trusted/rounds/round-*.json` lists the claims to fix or
+            revert. You have no write access: do not commit, push, or open PRs.
+          claude_args: |
+            --model claude-opus-5-5 --effort medium --max-turns 40
+            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,Bash"
+
+      - name: Pre-verify glow-up edits (round 2)
+        id: pv2
+        if: steps.repair1.outcome == 'success'
+        continue-on-error: true
+        uses: ./.github/actions/glowup-preverify-round
+        with:
+          round: '2'
+          article: ${{ github.event.inputs.path }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Repair pre-verification failures (after round 2)
+        id: repair2
+        if: steps.pv2.outputs.must_address != '' && steps.pv2.outputs.must_address != '0'
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: 'github-actions[bot]'
+          # The repair instructions live in the skill (one copy for both
+          # repair steps), under "Pre-verification repair".
+          prompt: |
+            Follow `.claude/commands/review-existing-content/SKILL.md`,
+            section "### Pre-verification repair" (under "## Glow-up mode"),
+            exactly. You are repairing the glow-up an earlier step made to the
+            article in `.content-review-queue.json`; the newest
+            `.preverify-trusted/rounds/round-*.json` lists the claims to fix or
+            revert. You have no write access: do not commit, push, or open PRs.
+          claude_args: |
+            --model claude-opus-5-5 --effort medium --max-turns 40
+            --allowed-tools "Read,Write,Edit,Glob,Grep,WebFetch,Bash"
+
+      - name: Pre-verify glow-up edits (round 3)
+        id: pv3
+        if: steps.repair2.outcome == 'success'
+        continue-on-error: true
+        uses: ./.github/actions/glowup-preverify-round
+        with:
+          round: '3'
+          article: ${{ github.event.inputs.path }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # The backstop and the receipts. Runs whenever the model step
+      # succeeded, so a pre-verify round that crashed still produces a body
+      # section saying so (receipts with no rounds render a warning and
+      # `clean: false`, which is what hands the PR to a human post-open).
+      # Fresh copies again: the last repair step ran after the last round was
+      # written, and could have edited the workspace copies.
+      - name: Download pre-verification rounds for the backstop (fresh)
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          pattern: preverify-round-*
+          path: .preverify-final/rounds
+          merge-multiple: true
+      - name: Download the pristine snapshot for the backstop (fresh)
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          name: review-snapshot
+          path: .preverify-final/snapshot
+      - name: Revert unverified edits and write pre-verification receipts
+        id: pv-final
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+        continue-on-error: true
+        env:
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          T=.preverify-final
+          S=scripts/content-review/preverify-glowup.py
+          ROUNDS=$(ls "$T"/rounds/round-*.json 2>/dev/null | sort -V || true)
+          LAST=$(printf '%s\n' $ROUNDS | tail -1)
+          mkdir -p .preverify
+          if [ -n "$LAST" ] && [ -f "$T/snapshot/article-base.txt" ]; then
+            python3 "$S" revert --article "$ARTICLE_PATH" \
+              --pristine "$T/snapshot/article-base.txt" \
+              --round-file "$LAST" --out .preverify/reverted.json
+          fi
+          ARGS=()
+          for f in $ROUNDS; do ARGS+=(--round-file "$f"); done
+          [ -f .preverify/reverted.json ] && ARGS+=(--reverted .preverify/reverted.json)
+          python3 "$S" receipts "${ARGS[@]}" --body .pr-body-draft.md \
+            --out-json .preverify/receipts.json
+          echo "--- pre-verification receipts ---"
+          sed -n '/^## Pre-verification/,/^## /p' .pr-body-draft.md | head -80
+      - name: Upload pre-verification receipts
+        if: always() && steps.pv-final.outcome != 'skipped'
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: preverify
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 30
+          path: |
+            .preverify/
+            .preverify-final/rounds/
 
       # Hand the model's work to the publish job as data. Stage everything
       # EXCEPT dot-paths — that excludes the runtime artifacts above AND

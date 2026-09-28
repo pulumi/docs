@@ -108,6 +108,7 @@ MODE_PR_SECTIONS = {
         "Backlog executed",
         "Backlog declined",
         "Secondary sweep",
+        "Pre-verification",
         "Screenshot check",
         "Verification",
     ],
@@ -823,6 +824,7 @@ def self_test() -> int:
         check("glowup body check uses the glowup sections",
               check_pr_body("## Why this page\n## Backlog executed\n"
                             "## Backlog declined\n## Secondary sweep\n"
+                            "## Pre-verification\n"
                             "## Screenshot check\n## Verification\n",
                             "glowup") == [])
         check("glowup body check flags missing backlog sections",
