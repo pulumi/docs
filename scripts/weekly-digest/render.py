@@ -174,11 +174,11 @@ def build_view(d: dict) -> dict:
                 continue
             listed_roles = [r for r in v["overdue"] if r["role"] not in BLOG_ROLES]
             worst = _worst_role(listed_roles)
-            others = [r["role"] for r in v["overdue"] if r is not worst]
+            others = [r["role"] + owner(policy, r["role"]) for r in v["overdue"] if r is not worst]
             facts = (f"{worst['role']} review {worst['waited']}bd on a {worst['sla']}bd SLA"
                      f"{owner(policy, worst['role'])}")
             if others:
-                facts += f"; {', '.join(others)} also overdue"
+                facts += f"; also overdue: {', '.join(others)}"
             add("overdue", f"pr:{n}", n, pr["title"], pr_url(n), facts,
                 role=worst["role"], waited=worst["waited"], sla=worst["sla"], red=pr.get("checks") == "red",
                 sort_key=-(worst["waited"] - worst["sla"]))
@@ -313,16 +313,21 @@ def _top(view: dict, top: list[dict]) -> list[str]:
 
 
 def _team_line(role: str, items: list[dict], policy: dict) -> str:
-    items.sort(key=lambda c: (-c["waited"], c["number"]))
-    waits = {c["waited"] for c in items}
-    red = sum(1 for c in items if c.get("red"))
+    # Red-CI PRs first and labelled: they need a fix from the author, not an
+    # approval, so they must not hide behind "+N more".
+    items.sort(key=lambda c: (not c.get("red"), -c["waited"], c["number"]))
+    same_wait = len({c["waited"] for c in items}) == 1
     head = f"• {role}{owner(policy, role)} (SLA {items[0]['sla']}bd): "
-    if len(waits) == 1:
+    if same_wait:
         head += f"{len(items)} PR{'s' if len(items) > 1 else ''} at {items[0]['waited']}bd: "
-        body = inline([num(c["url"], c["number"]) for c in items])
-    else:
-        body = inline([f"{num(c['url'], c['number'])} {c['waited']}bd" for c in items])
-    return head + body + (f" ({red} red CI)" if red else "")
+
+    def item(c):
+        text = num(c["url"], c["number"])
+        if not same_wait:
+            text += f" {c['waited']}bd"
+        return text + (" red CI" if c.get("red") else "")
+
+    return head + inline([item(c) for c in items])
 
 
 def _sections(view: dict, shown: set[str]) -> list[str]:
@@ -392,14 +397,13 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
         gap = ro.get("prs_no_review_data") or 0
         with_data = max(ro["prs_scraped"] - gap, 0)
         line = (f"*Review loop* (findings on {with_data} closed PRs): {h.get('fixed', 0)} fixed"
-                f" · {ignored} ignored at merge · {h.get('unconfirmed_at_merge', 0)} unconfirmed")
+                f" · {ignored} ignored at merge")
         if ro["prs_scraped"] and gap / ro["prs_scraped"] > TELEMETRY_GAP:
             line += f" · :warning: {gap} of {ro['prs_scraped']} had no review data"
         merged_over = [m for m in ro.get("merged_with_outstanding") or [] if f"pr:{m['pr']}" not in shown]
         if merged_over:
             line += " · also merged over findings: " + inline(
-                [f"{num(m.get('url') or pr_url(m['pr']), m['pr'])} ({len(m.get('findings') or [])})"
-                 for m in merged_over])
+                [num(m.get("url") or pr_url(m["pr"]), m["pr"]) for m in merged_over])
         out.append(line)
 
     sla = view["sla"]
@@ -425,12 +429,13 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
             parts.append(inline([f"{link(f['last_failure_url'] or REPO_URL, f['workflow'])} {f['failures']}/{f['runs']}"
                                  for f in broken], 3))
         if flaky:
-            now = [f for f in flaky if f.get("streak")]
-            text = f"{len(flaky)} flaky ({sum(f['failures'] for f in flaky)} failed runs)"
-            if now:
-                text += "; failing now: " + inline(
-                    [link(f["last_failure_url"] or REPO_URL, f["workflow"]) for f in now], 3)
-            parts.append(text)
+            failed = sum(f["failures"] for f in flaky)
+            text = f"{len(flaky)} flaky ({failed} of {wf.get('total_runs')} runs"
+            noisiest = max(flaky, key=lambda f: f["failures"])
+            if len(flaky) > 1 and noisiest["failures"] * 2 > failed:
+                text += (f", {noisiest['failures']} in "
+                         f"{link(noisiest['last_failure_url'] or REPO_URL, noisiest['workflow'])}")
+            parts.append(text + ")")
         out.append("*Failed runs* (scheduled + master): " + " · ".join(parts))
     elif wf.get("total_runs"):
         out.append(f"*Failed runs*: none in {wf['total_runs']} scheduled + master runs")
@@ -449,8 +454,6 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
         bits.append("report-only: " + ", ".join(report))
     if unknown:
         bits.append("unknown: " + ", ".join(s["label"] for s in unknown))
-    if not ops.get("available"):
-        bits.append(":warning: review ledger unreadable")
     out.append("*Switches*: " + ("; ".join(bits) if bits else "all lanes on"))
 
     o = view["other_open"]

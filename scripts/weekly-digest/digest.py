@@ -199,7 +199,9 @@ def shape_workflow_failures(raw):
     `streak` is how many of the workflow's most recent runs failed in a row
     (0 = its latest run passed), which separates "broken right now" from
     "flaked once on Tuesday". Only workflows with a failure are listed;
-    `total_runs` is the denominator so a quiet week still reads as "0 of N".
+    `total_runs` is the denominator so a quiet week still reads as "0 of N";
+    it excludes skipped runs (fork-only guards like Upstream Sync skip every
+    run and would otherwise swamp it).
     Runs are re-sorted newest first here: the input is two `gh run list`
     calls concatenated, so its order is not chronological.
     """
@@ -227,7 +229,8 @@ def shape_workflow_failures(raw):
         if e["failures"]:
             failing.append(e)
     failing.sort(key=lambda e: (-e["streak"], -e["failures"] / e["runs"], e["workflow"]))
-    return {"total_runs": len(runs), "failing": failing}
+    ran = sum(1 for r in runs if r.get("conclusion") != "skipped")
+    return {"total_runs": ran, "failing": failing}
 
 
 def shape_switches(raw_vars):

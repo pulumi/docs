@@ -130,7 +130,7 @@ def test_workflow_failures_sorts_newest_first_and_tracks_the_streak():
         {"workflowName": "B", "status": "completed", "conclusion": "skipped", "createdAt": "2026-09-26"},
         {"workflowName": "C", "status": "in_progress", "conclusion": "", "createdAt": "2026-09-27"},
     ])
-    assert wf["total_runs"] == 6
+    assert wf["total_runs"] == 5  # the skipped run doesn't count
     a, b = wf["failing"]
     assert (a["workflow"], a["streak"], a["last_failure_url"]) == ("A", 2, "u2")
     assert (b["workflow"], b["streak"], b["failures"], b["runs"]) == ("B", 0, 1, 3)
@@ -141,7 +141,7 @@ def test_broken_workflow_promoted_flaky_collapsed():
     top = msg.split("*Needs a human*")[1].split("\n\n")[0]
     assert "Audit Logs" in top and "failed its last 4 runs" in top
     line = next(line for line in msg.splitlines() if line.startswith("*Failed runs*"))
-    assert line == "*Failed runs* (scheduled + master): 1 flaky (2 failed runs)"
+    assert line == "*Failed runs* (scheduled + master): 1 flaky (2 of 100 runs)"
 
 
 # ---- render.py ---------------------------------------------------------------
@@ -165,7 +165,7 @@ def test_multi_role_pr_groups_under_its_worst_breach():
     view = render.build_view(base_digest())
     c = next(c for c in view["candidates"] if c["number"] == 10)
     assert c["role"] == "tools"  # 3 over a 1bd SLA beats 1 over a 3bd SLA
-    assert c["facts"] == "tools review 4bd on a 1bd SLA → CamSoper; docs-guild also overdue"
+    assert c["facts"] == "tools review 4bd on a 1bd SLA → CamSoper; also overdue: docs-guild → tatcoo-pulumi"
 
 
 def test_blog_labelled_pr_overdue_for_docs_stays_visible():
@@ -185,6 +185,17 @@ def test_same_age_batch_compresses():
     msg = render.render(d, {"order": [{"ref": "pr:30", "why": "x"}]})
     line = next(line for line in msg.splitlines() if line.startswith("• docs-guild"))
     assert line.startswith("• docs-guild → tatcoo-pulumi (SLA 3bd): 7 PRs at 5bd: ") and "+3 more" in line
+
+
+def test_red_ci_pr_is_named_not_hidden():
+    d = base_digest()
+    d["sla"]["verdicts"] += [{"pr": 40 + i, "kind": "reviewer", "roles": [],
+                              "overdue": [{"role": "docs-guild", "waited": 5, "sla": 3, "escalate_to": "t"}]}
+                             for i in range(6)]
+    d["prs"] += [pr(40 + i, checks="red" if i == 5 else "green") for i in range(6)]
+    msg = render.render(d, {"order": [{"ref": "pr:30", "why": "x"}]})
+    line = next(line for line in msg.splitlines() if line.startswith("• docs-guild"))
+    assert line.split(": ", 2)[2].startswith("<https://github.com/pulumi/docs/pull/45|#45> red CI")
 
 
 def test_fallback_order_is_priority_then_severity():
@@ -238,7 +249,7 @@ def test_switch_line_lists_only_whats_off():
     msg = render.render(base_digest(), None)
     line = next(line for line in msg.splitlines() if line.startswith("*Switches*"))
     assert line.startswith("*Switches*: off: SLA sweep, blog review index; unknown: content review")
-    assert line.endswith(":warning: review ledger unreadable")
+    assert "ledger" not in line
 
 
 def test_titles_are_escaped_for_mrkdwn():
