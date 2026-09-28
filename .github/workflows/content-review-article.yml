@@ -816,8 +816,13 @@ jobs:
       # ---------------------------------------------------------------------
       - name: Pre-verify glow-up edits (round 1)
         id: pv1
+        # Kill switch: repo variable GLOWUP_PREVERIFY = '0' skips every round
+        # (the receipts then say pre-verification did not run). Round 1 costs
+        # about what the pre-merge review's own verification of the same diff
+        # costs -- $1-6 per glow-up in the Sept 2026 replays.
         if: >-
           github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success'
+          && vars.GLOWUP_PREVERIFY != '0'
         continue-on-error: true
         uses: ./.github/actions/glowup-preverify-round
         with:

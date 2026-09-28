@@ -326,8 +326,8 @@ def run_pipeline(article: str, patch_file: Path, work: Path, dry_run: bool,
             r = dict(hit)
             r.update({"line_range": c.get("line_range"), "cached": True})
             reused.append(r)
-        else:
-            todo.append(c)
+            continue
+        todo.append(c)
 
     verdicts: list[dict] = list(reused)
     if todo:
@@ -346,7 +346,10 @@ def run_pipeline(article: str, patch_file: Path, work: Path, dry_run: bool,
         if not got:
             return verdicts, usage, errors + ["verify-claims produced no verdicts"], True
         verdicts += got
-    degraded = llm_errs == 2 and not (cand.get("claims") or [])
+    # Both LLM passes failing leaves the regex floor alone, which misses the
+    # prose claims a glow-up rewrites; that is degraded even when the regex
+    # layer found something.
+    degraded = llm_errs == 2
     return verdicts, usage, errors, degraded
 
 
@@ -384,12 +387,28 @@ def cmd_verify(a) -> int:
               "degraded": False, "errors": [], "log": [],
               "usage": {"extract": {}, "verify": {}}, "n_cached": 0}
     if changed:
-        with tempfile.TemporaryDirectory(prefix="preverify-") as td:
-            work = Path(td)
-            pf = work / "edited.patch"
-            pf.write_text(build_patch(article, pristine, current))
-            verdicts, usage, errors, degraded = run_pipeline(
-                article, pf, work, a.dry_run, cached, changed, result["log"])
+        if a.verdicts_file:
+            # Replay: classify verdicts some other run already produced over
+            # the same pristine→edited diff (e.g. the pre-merge review's own
+            # .verified-claims.json), with no model calls. For measuring what
+            # this step would have done on a PR that predates it.
+            vd = _load(Path(a.verdicts_file), {}) or {}
+            verdicts = []
+            for v in vd.get("verdicts") or []:
+                rng = parse_range(v.get("line_range"))
+                if v.get("file") in (None, article) and rng and any(
+                        ln in changed for ln in range(rng[0], rng[1] + 1)):
+                    verdicts.append(v)
+            usage = {"extract": {}, "verify": _usage(vd.get("meta"))}
+            errors, degraded = list(vd.get("errors") or [])[:5], False
+            result["log"].append(f"replayed {len(verdicts)} verdict(s) from {a.verdicts_file}")
+        else:
+            with tempfile.TemporaryDirectory(prefix="preverify-") as td:
+                work = Path(td)
+                pf = work / "edited.patch"
+                pf.write_text(build_patch(article, pristine, current))
+                verdicts, usage, errors, degraded = run_pipeline(
+                    article, pf, work, a.dry_run, cached, changed, result["log"])
         n2o = new_to_old(pristine, current)
         for i, v in enumerate(verdicts, 1):
             cls = classify(v)
@@ -762,6 +781,7 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("--out", required=True)
     v.add_argument("--restored-from", help="lines matching this file verbatim are restorations, not edits")
     v.add_argument("--dry-run", action="store_true", help="pass --dry-run to the model-calling scripts")
+    v.add_argument("--verdicts-file", help="replay: classify these verdicts instead of running the pipeline")
 
     r = sub.add_parser("revert")
     r.add_argument("--article", required=True)
