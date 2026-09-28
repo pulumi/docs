@@ -128,7 +128,14 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
         run: |
           python3 -m pip install --quiet pyyaml >/dev/null 2>&1 || true
-          RESULT=$(python3 scripts/review-v3/restamp-base-merge.py --repo "${{ github.repository }}" --pr "$PR")
+          # A stacked PR's base branch may predate the script; that's the old
+          # behavior (mark stale), not a failure.
+          if [ ! -f scripts/review-v3/restamp-base-merge.py ]; then
+            echo "restamped=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          RESULT=$(python3 scripts/review-v3/restamp-base-merge.py --repo "${{ github.repository }}" --pr "$PR") \
+            || RESULT='{"restamped":false,"reason":"restamp script failed on this base"}'
           echo "restamp: $RESULT" | tee -a "$GITHUB_STEP_SUMMARY"
           echo "restamped=$(echo "$RESULT" | jq -r '.restamped')" >> "$GITHUB_OUTPUT"
 

@@ -708,16 +708,20 @@ def test_change_bullets_that_do_not_name_a_file_are_kept():
              "> - `gone.py` — removed later.\n"
              "> - `pinned-comment.sh prune-legacy` — new subcommand.\n"
              "> - `@pulumi/aws` — bumped to v7.\n"
+             "> - `/docs/iac/concepts/stacks/` — the page this retitles.\n"
+             "> - `old-name.md` — renamed; the REST list carries it as previous_filename.\n"
              ">\n"
              "> **Review confidence:**\n"
              ">\n"
              "> - `elsewhere.py` — a bullet outside the changes block.\n")
     files = ["content/docs/iac/concepts/stacks.md",
-             ".claude/commands/docs-review/scripts/pinned-comment.sh"]
+             ".claude/commands/docs-review/scripts/pinned-comment.sh",
+             "content/docs/new-name.md", "content/docs/old-name.md"]
     out, dropped = au.prune_changes_bullets(brief, files)
     assert dropped == ["scripts/review-v3/", "gone.py"]
     for kept in ("`restamp_body()`", "`review:stale`", "`content/docs/iac/`",
-                 "`pinned-comment.sh prune-legacy`", "`@pulumi/aws`", "`elsewhere.py`"):
+                 "`pinned-comment.sh prune-legacy`", "`@pulumi/aws`",
+                 "`/docs/iac/concepts/stacks/`", "`old-name.md`", "`elsewhere.py`"):
         assert kept in out, kept
     assert au.prune_changes_bullets(out, files) == (out, []), "idempotent"
 
@@ -732,15 +736,17 @@ def test_a_summary_that_reports_settled_checks_is_kept():
         "three findings from the first pass are fixed, and no open findings remain",
         "The page explains what you need to configure before the first deploy",
         "the guide notes you have to set PULUMI_ACCESS_TOKEN first",
+        "both claims checked out, so nothing more is needed from you",
+        "It documents the steps that need your input from the IdP console",
     ):
         card = ("## Author action guide v3 — nothing blocks merge\n\n"
                 f"_{text}._\n\n### ✅ Resolved\n")
         assert au.drop_stale_summary(card, 0) == (card, False), text
     for text in (
         "these four need a source from you before merge",
-        "only you can confirm the pricing figure",
+        "only you can confirm these two figures",
         "two claims still need your confirmation",
-        "the pricing figure is waiting on you",
+        "three rows are waiting on you",
     ):
         card = ("## Author action guide v3 — nothing blocks merge\n\n"
                 f"_{text}._\n\n### ✅ Resolved\n")

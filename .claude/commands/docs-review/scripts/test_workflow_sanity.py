@@ -178,3 +178,33 @@ def test_triage_re_evaluates_the_sentinel_when_it_moves_a_label_the_gate_reads()
     apply_at = text.index('gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}"')
     dispatch_at = text.index("gh workflow run review-sentinel.yml")
     assert dispatch_at > apply_at, "dispatch after the labels land"
+
+
+def test_the_sentinel_job_keeps_its_default_name():
+    """Blast-radius review of #21948: renaming the job made /pr-review's
+    `_is_sentinel` (act.py, analyze.py) count it as an ordinary pending
+    check, stalling every stamp preflight after a push, label or review."""
+    data = yaml.safe_load((_WF_DIR / "review-sentinel.yml").read_text())
+    assert "name" not in data["jobs"]["sentinel"]
+
+
+def test_a_push_never_newly_flags_a_pr_as_oversized_by_file_count():
+    """The paginated count made the 150-file axis reachable; on a push that
+    would flip open PRs reviewed and approved under the normal gates."""
+    text = (_WF_DIR / "claude-triage.yml").read_text()
+    gate = text.index('"$OVERSIZED" == "true" && "$EVENT_ACTION" == "synchronize"')
+    assert ".oversized_by_lines // false" in text[gate:gate + 300]
+    assert gate < text.index('TARGET["review:oversized"]=1')
+
+
+def test_pr_file_listings_page_by_100_and_keep_renamed_paths():
+    helper = (_WF_DIR.parent.parent / ".claude/commands/docs-review/scripts/with-pr-files.sh").read_text()
+    assert "pulls/$PR/files?per_page=100" in helper
+    update = (_WF_DIR / "claude-update.yml").read_text()
+    assert "pulls/$PR/files?per_page=100" in update and "previous_filename" in update
+
+
+def test_restamp_step_tolerates_a_base_without_the_script():
+    run = _job_run_text("claude-code-review.yml", "mark-stale")
+    assert "[ ! -f scripts/review-v3/restamp-base-merge.py ]" in run
+    assert "|| RESULT=" in run

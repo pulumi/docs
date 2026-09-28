@@ -891,7 +891,8 @@ jobs:
           [ "$IS_AUTO" = "true" ] && AUTO_FLAG=(--auto)
           # The PR's live file list, so the brief stops describing files a
           # rework moved out (#21801). Empty on a failed read → no pruning.
-          gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[].filename' \
+          gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" \
+            --jq '.[] | .filename, (.previous_filename // empty)' \
             > .pr-files.txt 2>/dev/null || : > .pr-files.txt
           python3 .review-tools/.claude/commands/docs-review/scripts/apply-update.py \
             --author-card .review-card-author.md \

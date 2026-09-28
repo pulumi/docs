@@ -80,6 +80,7 @@ def test_oversized_threshold() -> None:
                                            "content/docs/reference/x/_index.md",
                                            "scripts/gen-policy-docs.ts"]))
     check(big["oversized"] is True, f"99K-line PR classifies oversized; got {big['oversized']}")
+    check(big["oversized_by_lines"] is True, "the line axis is reported on its own")
 
     # Exactly at the threshold: not oversized (strict >).
     at = run_classify(_pr(10_000, 5_000, ["content/docs/a.md"]))
@@ -107,6 +108,7 @@ def test_oversized_threshold() -> None:
     capped["changedFiles"] = 1_156
     got = run_classify(capped)
     check(got["oversized"] is True, f"1,156 changedFiles behind a 100-file page IS oversized; got {got['oversized']}")
+    check(got["oversized_by_lines"] is False, "a file-count-only oversized PR is not oversized by lines")
     assert_clean("test_oversized_threshold", before)
 
 

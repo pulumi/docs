@@ -34,7 +34,7 @@ FILES=$(mktemp)
 trap 'rm -f "$IN" "$FILES"' EXIT
 cat > "$IN"
 
-if gh api --paginate "repos/$REPO/pulls/$PR/files" \
+if gh api --paginate "repos/$REPO/pulls/$PR/files?per_page=100" \
      --jq '.[] | {path: .filename, additions, deletions}' 2>/dev/null \
    | jq -s . > "$FILES" 2>/dev/null \
    && [ "$(jq 'length' "$FILES" 2>/dev/null || echo 0)" -gt 0 ]; then

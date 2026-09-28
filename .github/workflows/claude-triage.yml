@@ -314,6 +314,17 @@ jobs:
           elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
             TARGET["review:frontmatter-only"]=1
           fi
+          # The file-count axis only became reachable with the paginated
+          # file list. On a push, a PR that isn't already labelled is flagged
+          # by the line axis alone, as before: newly flagging an open PR by
+          # its file count would skip G1/G2 and turn G5 red on a PR reviewed
+          # and approved under the normal gates. Open / ready / reopen use
+          # both axes.
+          if [[ "$OVERSIZED" == "true" && "$EVENT_ACTION" == "synchronize" ]] \
+             && [[ "$(echo "$CLASS" | jq -r '.oversized_by_lines // false')" != "true" ]] \
+             && ! echo "$PR_DATA" | jq -e '.labels[] | select(.name == "review:oversized")' >/dev/null; then
+            OVERSIZED=false
+          fi
           [[ "$OVERSIZED" == "true" ]] && TARGET["review:oversized"]=1
           # Prose concerns flag — applies to either trivial or
           # frontmatter-only when EITHER the Haiku spelling/grammar check

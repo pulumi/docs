@@ -437,20 +437,29 @@ _CONF_ROW_RE = re.compile(r"^(> \| [^|]+\| [^|]+\| )(.*?)( \|\s*)$")
 _POINTER_RE = re.compile(r"→ see|list below|row below|on the author'?s card|⚠️ list", re.I)
 _FID_RE = re.compile(r"\bF(\d+)\b")
 SETTLED_NOTE = "Settled since this was written — see ✅ Resolved on the author card."
-# The summary names open work FOR THE AUTHOR: an ask addressed to them.
+# The summary names open work FOR THE AUTHOR: an ask addressed to them
+# about a counted set of items ("these four need a source from you").
 # Only consulted when nothing blocks — a card with open items may say so.
-# Deliberately narrow, because a match deletes the sentence: a count of
-# checked claims ("checked two claims … confirmed both hold") or a verb like
-# "need"/"confirm" in a description of the PR ("a setting your stacks need;
-# the review confirmed …") is a correct summary, not open work.
-# Nor is a docs PR's summary of what the page tells ITS reader ("explains
-# what you need to configure", "you have to set PULUMI_ACCESS_TOKEN"), so
-# bare "you need/must/have to" doesn't count either.
-_OPEN_WORK_RE = re.compile(
+# Deliberately narrow, because a match deletes the sentence. An ask phrase
+# alone isn't enough: summaries describe what a PR's page asks of ITS reader
+# ("steps that need your input from the IdP console", "what you need to
+# configure"), and say that work is done ("nothing more is needed from
+# you"). So the sentence also needs a count of items and no negation; a
+# count alone isn't enough either ("checked two claims … confirmed both").
+_ASK_RE = re.compile(
     r"\bfrom you\b|\bonly you can\b|\bwaiting on you\b"
     r"|\b(need|needs|needing|awaiting|await) your "
     r"(answer|confirmation|input|source|decision|call|review|reply)s?\b",
     re.I)
+_COUNT_RE = re.compile(
+    r"\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|both|these|those)\b", re.I)
+_NEGATED_RE = re.compile(r"\b(nothing|none|no longer|no more|not needed)\b", re.I)
+
+
+def _names_open_work(text: str) -> bool:
+    return bool(_ASK_RE.search(text) and _COUNT_RE.search(text) and not _NEGATED_RE.search(text))
+
+
 # A "What this PR changes" bullet names a file when its lead is one token
 # with a slash or an extension. Anything else (`restamp_body()`,
 # `review:stale`, `pinned-comment.sh prune-legacy`) isn't a path, and the
@@ -461,8 +470,9 @@ _CHANGES_HEAD_RE = re.compile(r"^> \*\*What this PR changes:?\*\*")
 
 
 def _names_a_file(name: str) -> bool:
-    # `@pulumi/aws` has a slash but is a package, not a path.
-    return (not name.startswith("@") and bool(_PATHLIKE_RE.match(name))
+    # `@pulumi/aws` has a slash but is a package, not a path, and
+    # `/docs/iac/concepts/stacks/` is a site URL, not a repo path.
+    return (not name.startswith(("@", "/")) and bool(_PATHLIKE_RE.match(name))
             and ("/" in name or bool(_EXT_RE.search(name))))
 
 
@@ -533,7 +543,7 @@ def drop_stale_summary(author: str, n_blocking: int) -> tuple[str, bool]:
     for i, ln in enumerate(lines):
         st = ln.strip()
         if st.startswith("_") and st.endswith("_") and len(st) > 2 and not st.startswith("_No ") \
-                and not st.startswith("_Nothing") and _OPEN_WORK_RE.search(st.strip("_")):
+                and not st.startswith("_Nothing") and _names_open_work(st.strip("_")):
             del lines[i]
             if i < len(lines) and not lines[i].strip() and i > 0 and not lines[i - 1].strip():
                 del lines[i]

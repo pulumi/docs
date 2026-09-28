@@ -939,6 +939,10 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
         "oversized": is_oversized(additions, deletions, file_count),
+        # The line axis alone. Before the paginated file count, the 150-file
+        # axis was unreachable; triage uses this to keep a push from newly
+        # flagging an open PR by file count (see claude-triage.yml step 4).
+        "oversized_by_lines": total_lines > OVERSIZED_TOTAL_LINES,
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,
