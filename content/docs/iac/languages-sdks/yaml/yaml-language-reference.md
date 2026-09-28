@@ -45,7 +45,7 @@ Pulumi YAML programs declare config using the same project-level `config` schema
 
 `config` is a map of config property keys to either values or structured declarations. The value of `config` is an object whose keys are logical names by which the config input is referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required; when `type` is omitted, the type is inferred from `default`.
 
-A config key can also map directly to a scalar value as a shorthand for a structured declaration with only `default` set. For example, `replicas: 3` is equivalent to `replicas: { default: 3 }`.
+A config key in the project's own namespace can also map directly to a scalar or array value as a shorthand for a structured declaration with only `default` set. For example, `replicas: 3` is equivalent to `replicas: { default: 3 }`. A key namespaced by another package, such as `aws:region: us-west-2`, sets that key's `value` instead.
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
@@ -335,7 +335,7 @@ Expressions can be used in several contexts:
 
 Generally speaking, most values permit an expression, and exceptions are documented as not permitting an expression.
 
-In these contexts, any JSON/YAML value may be provided. If that value is a string, it is interpolated. If that value is an object, and the object has a key with a prefix of `fn::`, it is evaluated as an expression.
+In these contexts, you can provide any JSON/YAML value. Pulumi interpolates a string value, and evaluates an object that has a key with a prefix of `fn::` as an expression.
 
 ### Interpolation
 
@@ -457,7 +457,7 @@ variables:
       key2: 123
 ```
 
-The expression `${item}` returns a JSON value `{ "key1": "value1", "key2": 123 }`.
+The expression `${item}` returns the JSON string `{"key1":"value1","key2":123}`.
 
 ### `fn::invoke`
 
@@ -575,7 +575,7 @@ The expression `${policyVersion}` has the value `v1.1`.
 
 ### `fn::*Asset` and `fn::*Archive`
 
-[Assets and archives](/docs/iac/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
+[Assets and archives](/docs/iac/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value, except `fn::assetArchive`, which takes a map.
 
 | Built-in | Argument type | Description |
 | - | - | - |
@@ -773,7 +773,7 @@ Built-in variables accessible within any Pulumi YAML program.
 
 ### `pulumi`
 
-The built-in `pulumi` variable contains four properties, which can be useful for retrieving information
+The built-in `pulumi` variable contains properties that can be useful for retrieving information
 about your current workspace.
 
 ```yaml
@@ -781,10 +781,12 @@ about your current workspace.
       cwd: ${pulumi.cwd}
       organization: ${pulumi.organization}
       project: ${pulumi.project}
+      rootDirectory: ${pulumi.rootDirectory}
       stack: ${pulumi.stack}
 ```
 
 * `${pulumi.cwd}` retrieves the current working directory
 * `${pulumi.organization}` retrieves the current Pulumi organization
 * `${pulumi.project}` retrieves the current project
+* `${pulumi.rootDirectory}` retrieves the project's root directory, which contains the `Pulumi.yaml` file
 * `${pulumi.stack}` retrieves the current stack
