@@ -864,6 +864,17 @@ def test_get_started_routes_to_marketing_everywhere_it_lives():
         assert r.subjects[path] == "docs", path
 
 
+def test_what_is_routes_to_marketing(live_config):
+    """What-is articles are marketing's SEO content, not docs-guild's, but
+    they keep the docs subject and therefore the docs review criteria."""
+    for path, subject in (("content/what-is/what-is-pulumi.md", "docs"),
+                          ("data/what_is_sections.yml", "docs")):
+        r = routing.resolve_lanes([path], mechanical=False, claims=False, config=live_config)
+        assert r.roles == {"marketing"}, path
+        assert r.subjects[path] == subject, path
+        assert r.overridden == {path: "marketing"}, path
+
+
 def test_ordinary_paths_are_untouched_by_the_overrides():
     """An override list that quietly re-owns the ordinary case is worse than
     no override list."""
