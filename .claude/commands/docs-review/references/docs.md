@@ -60,6 +60,8 @@ Vale catches product-name capitalization, the Pulumi Policies singular-verb rule
 
 Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
 
+**Neutral tone toward other products.** When the diff describes another product (always on `content/docs/iac/comparisons/**` and `content/docs/esc/vs/**`), apply `STYLE-GUIDE.md` §Neutral tone toward other products, quoting and rewriting each violation. A claim that the other product has "no equivalent" is also a fact-check claim; verify it against that product's current docs.
+
 ### Priority 6 — SEO and discoverability
 
 Quote-and-rewrite mandate. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.

@@ -21,9 +21,4 @@
     <loc>{{ .Site.Params.canonicalURL }}/sitemap.xml</loc>
     <lastmod>{{ safeHTML ( site.Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
   </sitemap>
-  {{/* Built and deployed separately by pulumi/registry; lastmod intentionally
-       omitted, see comment above. */ -}}
-  <sitemap>
-    <loc>{{ .Site.Params.canonicalURL }}/registry/sitemap.xml</loc>
-  </sitemap>
 </sitemapindex>
