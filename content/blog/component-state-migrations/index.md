@@ -3,7 +3,7 @@ title: "Change your components, keep your infrastructure"
 date: 2026-09-25
 draft: false
 meta_desc: "Evolve reusable Pulumi components with state migrations that preserve existing infrastructure and ship upgrade paths alongside your component code."
-feature_image:
+feature_image: feature.png
 authors:
     - julien-poissonnier
 tags:
