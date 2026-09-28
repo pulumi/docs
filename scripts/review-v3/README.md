@@ -49,6 +49,15 @@ the next index. IDs are the join key across the author comment's checklist,
 REVIEW_STATE, the evidence object, `#update-review` mentions, and the
 Sentinel's red messages.
 
+A re-review continues above the prior high-water mark, read from the live
+author card. `#new-review` clears that card first, so it reads the mark
+beforehand and passes it as the `prior_high_water` dispatch input, which the
+redispatch job forwards. If a forced run errors or times out before its card
+publishes, its failure notice carries `<!-- REVIEW_HIGH_WATER n -->`, and the
+next review takes the larger of the card and any such failure notice
+(`<!-- CLAUDE_PROGRESS -->` from `github-actions[bot]`; other bot comments can
+quote PR text) (`review_state.py high-water-marker`).
+
 ### Buckets
 
 - `outstanding` (🚨 must fix or refute — blocks)
@@ -73,6 +82,13 @@ Lives as an HTML comment in the bot-owned author comment:
 - Dispositions: `fixed | refuted | deferred | accepted | not-applicable`
   (note required for `deferred`/`accepted`/`not-applicable` — same closed set
   as `review-worklist.py`).
+- Completeness: every finding that has left the 🚨/❓ tables carries an
+  entry — `resolve` → `fixed`, `hold` → `refuted`, `accept` → `accepted`,
+  `concede` → `not-applicable` (note `conceded: <reason>`). An id with no
+  entry is open. `concede` used to write nothing, so a card whose findings
+  were all conceded shipped `{}` under a note calling them open (#21790);
+  `apply-update.py` now backfills any ✅ row missing an entry on every
+  refresh, so older cards heal on their next update.
 - Writers: the full-review lane publishes the block with the card; only the
   update lane (`apply-update.py`) records dispositions in it. Runs of the two
   overlap routinely, so the update lane merges per finding-id (latest
@@ -213,6 +229,32 @@ default-branch-triggered workflow** — `workflow_run`, `schedule`,
 `pull_request_target`, or a dispatch pinned to the default ref. Its
 `workflow_dispatch` entry (`run_id`, optional `pr_number`) backfills a
 status for a deploy that already finished.
+
+## Base-only merges
+
+`restamp-base-merge.py` carries a v3 review across a push that only merges
+the base: every commit after the card's `CLAUDE_REVIEW_HEAD` has two parents
+AND the PR's `+`/`-` lines at the reviewed head equal the ones now (the same
+test `/pr-review` uses in `collect.py`). It moves the card's head carriers —
+the marker and the sub line's `head commit` — and nothing else, so the
+composition stamp still orders it for the stale-publish guard. Callers:
+`claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
+Sentinel) and `review-label-reconcile.yml` (before staling, and in its
+un-stale sweep; it re-dispatches the Sentinel after either repair). Any read
+it can't make answers "not base-only", and so does a large or binary file
+(no `patch`) whose blob changed. It re-reads the card just before writing and
+backs off if a refresh published in the meantime. Before it,
+#21673's master merge left a clean review at `review:stale` with nothing
+scheduled to clear it.
+
+**One-time cleanup.** `cleanup-review-leftovers.py --repo pulumi/docs`
+(dry run; `--apply` to write, `--extra-pr 2` to also sweep the stray
+Sentinel status comment the old `workflow_run` resolution posted on #2)
+lists what the pre-fix loop left on open PRs: `review:stale` on a review that
+is current (or current across a base merge), `Review errored` notices from
+before the live card was composed (its `updated` stamp, not the comment's
+edit time), and legacy v2 pages beside a v3 card. Meant to be run
+once by a maintainer, not scheduled.
 
 ## Superseded handoffs
 

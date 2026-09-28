@@ -10,6 +10,10 @@ Match the pages already under `content/docs/iac/comparisons/`: `h1: Pulumi vs. X
 
 Fixing or improving pages we already own: go ahead. Proposing a whole new category of content, however good the Search Console numbers look: open an issue and make the case first.
 
+## Refresh the review after you push a reviewer's change
+
+A push only refreshes the pinned review on its own when it fixes lines a 🚨 finding flagged. Anything else, including a change a human reviewer asked for, leaves the review stale and the Sentinel's G1 red. After such a push, comment `@claude <one line on what changed> #update-review`. (Merging the base branch is the exception: an unchanged diff carries the review across automatically.)
+
 ## The M&Ms clause
 
 Van Halen's rider asked for a bowl of M&Ms with the brown ones picked out, as a cheap tell for whether the promoter had read the rigging specs. Ours:

@@ -1827,3 +1827,99 @@ def test_a_legacy_review_missing_a_page_errors_g2_rather_than_passing_it():
     assert _gate(v, "G2").status == "error"
     assert "page(s) 2 could not be read" in _gate(v, "G2").message
     assert v.conclusion != "success"
+
+
+def test_a_legacy_page_the_v2_update_lane_posted_as_pulumi_bot_is_read():
+    """#21210/#21487/#21149: the v2 update lane runs claude-code-action on
+    PULUMI_BOT_TOKEN, so the page it re-posts is pulumi-bot's. G2 read only
+    github-actions[bot] pages and reported page 2 unreadable."""
+    page1 = {"id": 9, "user": {"login": "github-actions[bot]"},
+             "body": (f"<!-- CLAUDE_REVIEW 1/2 -->\n## Pre-merge Review\n"
+                      f"<!-- CLAUDE_REVIEW_HEAD {HEAD} -->\n### 📜 Review history\n")}
+    page2 = {"id": 10, "user": {"login": "pulumi-bot"},
+             "body": ("<!-- CLAUDE_REVIEW 2/2 -->\n### 🚨 Outstanding in this PR\n\n"
+                      "- **[L10-12]** `f.md` — broken thing\n")}
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[page1, page2],
+                reviews=[approval("guild-member")],
+                memberships={("docs-guild", "guild-member"): "active"})
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "1 🚨 Outstanding" in _gate(v, "G2").message
+    # The v3 role cards stay github-actions[bot]-only.
+    card = {"id": 11, "user": {"login": "pulumi-bot"},
+            "body": sentinel.AUTHOR_MARKER + "\n"}
+    assert sentinel._find_comment([card], sentinel.AUTHOR_MARKER) is None
+
+
+def test_a_transient_5xx_on_a_read_is_retried(monkeypatch):
+    """Run 35938827723: one HTTP 500 on `pulls/N` failed the evaluation."""
+    calls = []
+
+    class R:
+        def __init__(self, rc, err="", out="{}"):
+            self.returncode, self.stderr, self.stdout = rc, err, out
+
+    results = [R(1, "gh: HTTP 500"), R(1, "gh: HTTP 502"), R(0)]
+
+    def fake_run(argv, **_kw):
+        calls.append(argv)
+        return results.pop(0)
+
+    monkeypatch.setattr(sentinel.subprocess, "run", fake_run)
+    monkeypatch.setattr(sentinel, "RETRY_SLEEP_S", 0)
+    gh = sentinel.Gh("pulumi/docs", 1)
+    gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    assert len(calls) == 3
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 500"), R(0)]
+    try:
+        gh._run(["api", "-X", "PATCH", "repos/pulumi/docs/issues/comments/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "writes never retry"
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 404"), R(0)]
+    try:
+        gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "a 4xx is an answer, not a flake"
+
+
+def test_g2_does_not_call_a_stale_card_answered():
+    """#21840: G1 red "no current review" beside G2 green "every finding
+    answered" about a card at an older head. An answered stale card defers to
+    G1; undecided findings on it stay red — they are real until answered."""
+    old = "b" * 40
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card(head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red" and "#update-review" in _gate(v, "G1").message
+    assert "push to refresh" not in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "skip" and "not current" in _gate(v, "G2").message
+
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")], head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+
+
+def test_oversized_is_the_label_not_the_size():
+    """Adversarial review of #21948: deciding "oversized" by size flipped PRs
+    reviewed before the size check existed -- G1/G2 skipped (so open 🚨
+    findings stopped blocking) and G5 newly red on approved PRs. The label is
+    the source of truth; triage re-dispatches the Sentinel when it moves it
+    (#21936's race)."""
+    meta = pr_meta()
+    meta.update(additions=31000, deletions=382, changed_files=1156)
+    gh = StubGh(pr=meta, files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")]), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+    assert _gate(v, "G5").status == "skip"
+    labelled = pr_meta(labels=["review:oversized"])
+    labelled.update(additions=31000, deletions=382, changed_files=1156)
+    v = sentinel.evaluate(StubGh(pr=labelled, files=[docs_file_substantive()]), CONFIG)
+    assert _gate(v, "G1").status == "skip" and "oversized" in _gate(v, "G1").message
+    assert _gate(v, "G5").status == "red"

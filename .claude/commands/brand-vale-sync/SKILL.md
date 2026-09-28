@@ -1,6 +1,6 @@
 ---
 name: brand-vale-sync
-description: Weekly drift check of the offline Vale mirror (styles/Pulumi/) against the Pulumi brand guide served by the brand MCP server, with deprecated/retired terms as the priority. Opens a draft PR when the mirror has fallen behind; updates only the sync manifest when it hasn't. Invoked by the brand-style-sync workflow; also user-invocable for an on-demand check.
+description: Weekly drift check of the offline Vale mirror (styles/Pulumi/) against the Pulumi brand guide served by the brand MCP server, with deprecated/retired terms as the priority. Opens a PR (ready for review when validation passes) when the mirror has fallen behind; updates only the sync manifest when it hasn't. Invoked by the brand-style-sync workflow; also user-invocable for an on-demand check.
 ---
 
 # Brand → Vale sync review
@@ -70,12 +70,17 @@ edit the brand guide side of anything (that's `pulumi/marketing-web`).
    intended. Run `make lint`.
 1. **Report.**
    - **Drift found:** update the rule files and `BRAND-SYNC.yaml`
-     (`last_synced` + any mapping changes), and open a **draft PR** titled
+     (`last_synced` + any mapping changes), and open a PR titled
      `vale: sync brand-guide mirror (<date>)`. The body must list every
      change as *guide says X → mirror said Y → now Z*, plus the
-     intentionally-unmirrored notes. Draft, not ready: tier placement
-     (blocker vs. advisory) is a human call.
+     intentionally-unmirrored notes.
    - **No drift:** commit only the `last_synced` bump in `BRAND-SYNC.yaml`
-     directly to a PR the same way (a one-line draft PR is fine and cheap to
+     directly to a PR the same way (a one-line PR is fine and cheap to
      merge), or if invoked interactively, just report "in sync".
+   - **Ready vs. draft:** open the PR ready for review when validation
+     passes, and as a draft only when it fails (say what failed in the
+     body). A draft requests no review team and gets no pre-merge review,
+     so it sits unnoticed. Tier placement (blocker vs. advisory) is still a
+     human call, and the required approval from a review team is where it
+     gets made.
    - Never push to `master` directly.

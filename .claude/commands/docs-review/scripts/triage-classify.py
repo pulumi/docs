@@ -850,11 +850,31 @@ def claims_signal_reasons(files: list[dict], diff_text: str) -> list[str]:
 # ---- PR-level aggregation --------------------------------------------------
 
 
+def pr_file_count(pr_data: dict) -> int:
+    """The PR's true changed-file count. `files` may be a capped page (gh's
+    GraphQL `files` stops at 100); `changedFiles` is GitHub's own total when
+    the caller asked for it. The larger wins, so neither a capped list nor a
+    missing total can under-count."""
+    try:
+        total = int(pr_data.get("changedFiles") or pr_data.get("changed_files") or 0)
+    except (TypeError, ValueError):
+        total = 0
+    return max(total, len(pr_data.get("files") or []))
+
+
+def is_oversized(additions: int, deletions: int, file_count: int) -> bool:
+    """The one definition of oversized. Triage labels by it, and the label
+    is what the Sentinel reads: computing size there would flip PRs already
+    approved under the normal gates. Triage re-dispatches the Sentinel when
+    it moves the label (#21936: G5 said "not oversized" beside it)."""
+    return (additions + deletions) > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES
+
+
 def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
     additions = int(pr_data.get("additions") or 0)
     deletions = int(pr_data.get("deletions") or 0)
     files = pr_data.get("files") or []
-    file_count = len(files)
+    file_count = pr_file_count(pr_data)
     total_lines = additions + deletions
 
     domains: set[str] = set()
@@ -918,7 +938,11 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         "mixed": len(domains) > 1,
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
-        "oversized": total_lines > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES,
+        "oversized": is_oversized(additions, deletions, file_count),
+        # The line axis alone. Before the paginated file count, the 150-file
+        # axis was unreachable; triage uses this to keep a push from newly
+        # flagging an open PR by file count (see claude-triage.yml step 4).
+        "oversized_by_lines": total_lines > OVERSIZED_TOTAL_LINES,
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,

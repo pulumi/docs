@@ -68,7 +68,9 @@ def _normalize(author: Path, brief: Path, base: Path, summary: Path | None = Non
                                      ("21722", "v3-finding-grammar"),
                                      ("21748", "v3-finding-grammar"),
                                      ("21759", "v3-finding-grammar"),
-                                     ("21782", "v3-blocking-count")])
+                                     ("21782", "v3-blocking-count"),
+                                     ("21885", "v3-section-order"),
+                                     ("21892", "v3-detail-blocks")])
 def test_fixture_refused_then_accepted_then_idempotent(tmp_path, pr, rule):
     author, brief, base = _fixture(tmp_path, pr)
     rc, out = _validate(author, brief, base)
@@ -341,3 +343,27 @@ def test_four_cell_row_left_alone_when_the_join_would_not_parse():
              "| **F2** | not a where cell | one | two |", ""]
     out = nv._normalize_tables(lines, nv.BRIEF_SECTIONS, "brief", rep)
     assert out == lines and not rep.items
+
+
+def test_21892_unnumbered_detail_block_dropped_row_kept():
+    """Run 36135544570: the model wrote a `#### F? · Do this` block for its
+    added row and the whole review was refused. The row stays (build-evidence
+    numbers it); the block goes. A quoted heading inside a fence is untouched,
+    and a numbered block after it survives."""
+    lines = [
+        "### 🚨 Fix or disagree", "",
+        "| ID | Where | Finding |", "|---|---|---|",
+        "| **F?** | `x.md` L62 | a second more-divider |", "",
+        "#### F? · Do this", "", "- **Fix:** delete it", "",
+        "```markdown", "#### F? · Do this", "```", "",
+        "#### F1 · Do this", "", "- **Fix:** keep", "",
+        "### ❓ Questions for you",
+    ]
+    rep = nv.Repairs()
+    out = nv._drop_unnumbered_blocks(lines, rep)
+    assert "| **F?** | `x.md` L62 | a second more-divider |" in out
+    assert "- **Fix:** delete it" not in out
+    assert "#### F1 · Do this" in out and "- **Fix:** keep" in out
+    assert [r["rule"] for r in rep.items] == ["unnumbered-detail-block"]
+    # idempotent
+    assert nv._drop_unnumbered_blocks(out, nv.Repairs()) == out

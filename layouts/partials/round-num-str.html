@@ -1,0 +1,15 @@
+{{/*
+Rounds a decimal numeric string (e.g. "342.62") to the nearest non-negative integer, using
+plain string splitting and integer arithmetic -- this Hugo version has no float-parsing
+template func (no `strconv` namespace) to round with directly. Half rounds up. The caller
+is expected to have already validated `.` as clean numeric syntax via regex.
+*/}}
+{{ $parts := split . "." }}
+{{ $whole := int (index $parts 0) }}
+{{ if gt (len $parts) 1 }}
+    {{ $frac := index $parts 1 }}
+    {{ if and (gt (len $frac) 0) (ge (int (substr $frac 0 1)) 5) }}
+        {{ $whole = add $whole 1 }}
+    {{ end }}
+{{ end }}
+{{ return $whole }}

@@ -607,6 +607,9 @@ _EMPTY_SENTINEL = {
 }
 
 
+_HANDOFF_HINT_PREFIX = "_Not your area? "
+
+
 def _collapse_empty_tables(body: str, headings: dict[str, str]) -> str:
     """A section whose every row was filed off the card keeps only its table
     furniture after _clean(); render the composer's empty sentinel instead
@@ -614,7 +617,12 @@ def _collapse_empty_tables(body: str, headings: dict[str, str]) -> str:
     lines = body.splitlines()
     edits: list[tuple[int, int, list[str]]] = []
     for bucket, start, end in _sections(body, headings):
-        content = [ln for ln in lines[start:end] if ln.strip()]
+        # The ⚠️ hand-off hint ("_Not your area? Hand it to …_") is composed
+        # only beside rows, so once every row is filed off it goes with them.
+        # Counting it as content left #21948's brief with a header-only ⚠️
+        # table under "Check the ⚠️ items, then approve".
+        content = [ln for ln in lines[start:end]
+                   if ln.strip() and not ln.startswith(_HANDOFF_HINT_PREFIX)]
         if content and all(ln.startswith("|") and cr.is_table_furniture(ln) for ln in content):
             sentinel = _EMPTY_SENTINEL.get(bucket, "")
             if bucket == "reviewer-check":

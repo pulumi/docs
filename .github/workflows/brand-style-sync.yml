@@ -4,8 +4,9 @@ name: "Scheduled jobs: Brand style sync"
 # Pulumi brand guide, with retired/deprecated product names as the priority.
 # Vale can't call the brand MCP at lint time, so this job is what keeps the
 # mirror honest: it re-reads the brand sections each mirrored rule tracks
-# (per styles/Pulumi/BRAND-SYNC.yaml) and opens a draft PR when they've
-# drifted. See .claude/commands/brand-vale-sync/SKILL.md for the process.
+# (per styles/Pulumi/BRAND-SYNC.yaml) and opens a PR when they've
+# drifted -- ready for review when validation passes, so triage requests a
+# review team and the pre-merge review runs; draft only when it fails. See .claude/commands/brand-vale-sync/SKILL.md for the process.
 on:
   schedule:
     # Mondays at 14:20 UTC. Offset from weekly-digest.yml, which runs at 14:00.
@@ -118,12 +119,18 @@ jobs:
               sync PR is already open, push your changes onto **that** branch
               and update its body instead of opening a second one. Two open
               sync PRs edit the same rule files and are guaranteed to conflict.
-            - If the mirror has drifted, fix it and open a **draft** PR on a
-              branch named `vale/brand-sync-<YYYY-MM-DD>` with the auditable
-              body the skill describes.
+            - If the mirror has drifted, fix it and open a PR on a branch
+              named `vale/brand-sync-<YYYY-MM-DD>` with the auditable body the
+              skill describes.
             - If nothing drifted, bump `last_synced` in
-              `styles/Pulumi/BRAND-SYNC.yaml` and open the same draft PR with
-              just that change.
+              `styles/Pulumi/BRAND-SYNC.yaml` and open the same PR with just
+              that change.
+            - Open the PR **ready for review** (no `--draft`) when the
+              validation below passes. Open it as a **draft** only if
+              validation fails, and say in the body what failed. A ready PR
+              is what gets a review team requested and the pre-merge review
+              run; the required human approval is where tier placement gets
+              decided.
             - Validate with `make lint` and by running `vale` against a scratch
               fixture that exercises each rule you touched, positive and
               negative cases. Do NOT rely on `make lint-prose` here: this job
