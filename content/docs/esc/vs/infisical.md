@@ -24,7 +24,7 @@ Like Infisical, Pulumi ESC is a secrets manager for cloud applications and infra
 
 ## Pulumi ESC vs. Infisical: Key differences {#differences}
 
-Infisical and Pulumi ESC differ in four fundamental ways. First, Infisical manages secrets in its own store and syncs them out to other destinations, while ESC takes an open ecosystem approach: it pulls secrets stored in most secrets and password managers at runtime so you can use them anywhere. Teams can keep using the secrets management solution that fits their needs. Second, ESC environments are composable and hierarchical: an environment can import other environments and inherit their values, so shared configuration is inherited rather than duplicated. Third, ESC takes a software engineering approach to versioning: you can tag an environment and import specific collections of secrets and configuration by those tags, like tags in Docker. Fourth, ESC provisions dynamic, short-term credentials through a more secure, limited-privilege path than Infisical.
+Infisical and Pulumi ESC differ in three fundamental ways. First, Infisical manages secrets in its own store and syncs them out to other destinations, while ESC takes an open ecosystem approach: it pulls secrets stored in most secrets and password managers at runtime so you can use them anywhere. Teams can keep using the secrets management solution that fits their needs. Second, ESC environments are composable and hierarchical: an environment can import other environments and inherit their values, so shared configuration is inherited rather than duplicated. Third, ESC takes a software engineering approach to versioning: you can tag an environment and import specific collections of secrets and configuration by those tags, like tags in Docker.
 
 Here's a detailed comparison of the two:
 
@@ -41,7 +41,7 @@ Here's a detailed comparison of the two:
     <tr>
         <td>OSS License</td>
         <td>Yes, Apache License 2.0</td>
-        <td>Yes, MIT expat license</td>
+        <td>Yes, MIT expat license, except for enterprise features in the <code>ee</code> directory, which require an Infisical license</td>
     </tr>
     <tr>
         <td>Document Store</td>
@@ -119,7 +119,7 @@ Here's a detailed comparison of the two:
     <tr>
         <td>Built-in Functions</td>
         <td>Yes, support for functions like <code>toJSON, fromJSON, fromBase64, toString</code> allows data manipulation for any scenario</td>
-        <td>No</td>
+        <td>Partial, the Infisical Agent and Kubernetes Operator render secrets through Go templates with Sprig functions; stored values support references but not functions</td>
     </tr>
     <tr>
         <th colspan=3>Security and Compliance</th>
@@ -142,7 +142,7 @@ Here's a detailed comparison of the two:
     <tr>
         <td>Secure Dynamic Cloud Provider Credentials</td>
         <td>Yes, uses OIDC flows to generate dynamic credentials. Available for AWS, Azure, and Google Cloud.</td>
-        <td>No, less secure as it requires access keys for highly privileged root accounts</td>
+        <td>Yes, dynamic secrets generate AWS IAM users or temporary credentials; Infisical connects to AWS by assuming an IAM role, with IRSA, or with access keys</td>
     </tr>
     <tr>
         <td>OIDC Trust</td>
@@ -151,13 +151,13 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Secure Environment Variables</td>
-        <td>Yes, the <code>pulumi env run</code> CLI command can be used to specify which secrets are available as environment variables</td>
+        <td>Yes, the <code>pulumi env run</code> CLI command injects only the values an environment exports under <code>environmentVariables</code>, and redacts secret values from the command's output</td>
         <td>Yes, the <code>infisical run</code> CLI command can scope the injected secrets by folder path or tag</td>
     </tr>
     <tr>
         <td>Plaintext Read Only Mode</td>
         <td>Yes, ESC offers a <code>read</code> mode that allows reading only plaintext values while not being able to decrypt secrets or access dynamic credentials</td>
-        <td>No</td>
+        <td>Partial, the Describe Secret permission shows secret keys and metadata without their values; Infisical has no separate plaintext value type</td>
     </tr>
 </table>
 </div>
