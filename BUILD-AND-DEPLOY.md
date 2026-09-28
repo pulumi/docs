@@ -1017,31 +1017,22 @@ The repository has 62 workflows in `.github/workflows/`. They fall into five fam
 
 ```mermaid
 flowchart LR
-  subgraph IN["What fires workflows"]
-    direction TB
-    A1["`Push to master`"]
-    A2["`PR opened or pushed`"]
-    A3["`@claude comment or review`"]
-    A4["`Cron schedule`"]
-    A5["`Upstream repos: pulumi/pulumi, pulumi/esc, SDK repos, marketing-web`"]
-  end
-  subgraph WF["Workflow families"]
-    direction TB
-    F1["`Ship (8)`"]
-    F2["`PR checks and preview (10)`"]
-    F3["`AI review and merge gate (10)`"]
-    F4["`Content upkeep (10)`"]
-    F5["`Generated reference docs (22)`"]
-  end
-  subgraph OUT["What they change"]
-    direction TB
-    O1["`www.pulumi.com`"]
-    O2["`www.pulumi-test.io`"]
-    O3["`PR preview bucket`"]
-    O4["`Bot-authored PRs`"]
-    O5["`PR labels, review cards, Sentinel check`"]
-    O6["`S3 ledgers and indexes`"]
-  end
+  A1(["`Push to master`"])
+  A2(["`PR opened or pushed`"])
+  A3(["`@claude comment or review`"])
+  A4(["`Cron schedule`"])
+  A5(["`Upstream repo releases`"])
+  F1["`Ship (8)`"]
+  F2["`PR checks and preview (10)`"]
+  F3["`AI review and merge gate (10)`"]
+  F4["`Content upkeep (10)`"]
+  F5["`Generated reference docs (22)`"]
+  O1[("`www.pulumi.com`")]
+  O2[("`www.pulumi-test.io`")]
+  O3[("`PR preview bucket`")]
+  O5[("`PR labels, cards, Sentinel check`")]
+  O4[("`Bot-authored PRs`")]
+  O7[("`S3 ledgers and indexes`")]
   A1 --> F1
   A2 --> F2
   A2 --> F3
@@ -1056,10 +1047,11 @@ flowchart LR
   F2 --> O2
   F3 --> O5
   F4 --> O4
-  F4 --> O6
+  F4 --> O7
   F5 --> O4
-  O4 -.->|re-enter as PRs| A2
 ```
+
+Rounded boxes are triggers, rectangles are workflow families, and cylinders are what they change. Bot-authored PRs then re-enter as ordinary PRs and go through the same checks.
 
 ### Shared conventions
 
