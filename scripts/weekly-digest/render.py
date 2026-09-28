@@ -352,8 +352,8 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
 
     sla = view["sla"]
     if not sla.get("available"):
-        out += ["", ":warning: SLA verdicts unavailable this week (the sweep dry-run failed); "
-                    "overdue and abandoned lists are missing."]
+        out += ["", ":warning: SLA verdicts unavailable this week (the sweep dry-run failed): "
+                    "overdue, abandoned, and ready-to-merge lists are missing."]
     else:
         overdue = by_kind.get("overdue") or []
         if overdue:
@@ -472,7 +472,9 @@ def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
     out.append("*Switches*: " + ("; ".join(bits) if bits else "all lanes on"))
 
     o = view["other_open"]
-    rest = [(o["in_progress"], "in progress within SLA"), (o["waiting_on_author"], "waiting on author"),
+    # "Within SLA" is the sweep's verdict; without verdicts it's unknown.
+    in_progress = "in progress within SLA" if view["sla"].get("available") else "other open"
+    rest = [(o["in_progress"], in_progress), (o["waiting_on_author"], "waiting on author"),
             (o["drafts"], "drafts"), (o["bots"], "bot PRs")]
     rest = [f"{n} {what}" for n, what in rest if n]
     if rest:

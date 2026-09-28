@@ -297,6 +297,16 @@ def test_no_candidates_no_fallback_footer_and_no_delta_suffix_without_data():
 def test_sla_unavailable_is_loud():
     msg = render.render(base_digest(sla={"available": False, "enabled": "off"}), None)
     assert ":warning: SLA verdicts unavailable" in msg
+    assert "ready-to-merge lists are missing" in msg
+
+
+def test_sla_unavailable_never_claims_within_sla():
+    # Without verdicts nothing is known to be within SLA; the footer must
+    # not reassure about PRs that may be the most overdue in the queue.
+    for ranking in (None, {}):
+        msg = render.render(base_digest(sla={"available": False, "enabled": "off"}), ranking)
+        assert "within SLA" not in msg and "other open" in msg
+    assert "in progress within SLA" in render.render(base_digest(), None)
 
 
 def test_switch_line_lists_only_whats_off():
@@ -332,6 +342,36 @@ def test_rank_rejects_wrong_shape():
         except (ValueError, Exception):
             continue
         raise AssertionError(f"accepted {bad!r}")
+
+
+def test_rank_main_is_never_fatal():
+    # C&C review F4: an exception outside the old except list
+    # (IncompleteRead, AttributeError on a malformed body) must still print
+    # {} and exit 0, or `set -euo pipefail` fails the whole digest job.
+    import io
+    import json
+    import os
+    import tempfile
+
+    def boom(*_a, **_k):
+        raise AttributeError("'NoneType' object has no attribute 'get'")
+
+    saved = (rank.rank, sys.argv, sys.stdout, sys.stderr, os.environ.get("ANTHROPIC_API_KEY"))
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+        json.dump([{"ref": "pr:1", "kind": "overdue", "title": "t", "facts": "f"}], f)
+    try:
+        rank.rank, sys.argv, sys.stdout, sys.stderr = boom, ["rank.py", f.name], io.StringIO(), io.StringIO()
+        os.environ["ANTHROPIC_API_KEY"] = "test"
+        rc = rank.main()
+        out = sys.stdout.getvalue()
+    finally:
+        rank.rank, sys.argv, sys.stdout, sys.stderr = saved[:4]
+        if saved[4] is None:
+            os.environ.pop("ANTHROPIC_API_KEY", None)
+        else:
+            os.environ["ANTHROPIC_API_KEY"] = saved[4]
+        os.unlink(f.name)
+    assert rc == 0 and out.strip() == "{}"
 
 
 def run_standalone() -> int:
