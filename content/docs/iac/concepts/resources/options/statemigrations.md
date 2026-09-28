@@ -69,8 +69,6 @@ API reference: [StateMigrationArgs](https://pkg.go.dev/github.com/pulumi/pulumi/
 
 {{< /chooser >}}
 
-See the [state migrations guide](/docs/iac/guides/building-extending/components/state-migrations/) for a complete example.
-
 ## Behavior
 
 Callbacks run during previews and updates when prior state exists. They must be idempotent and return no result when the state no longer needs migration. They rewrite state without performing provider operations.
