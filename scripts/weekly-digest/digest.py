@@ -25,6 +25,7 @@ import os
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -147,6 +148,7 @@ def shape_prs(raw):
                 "isDraft": pr.get("isDraft", False),
                 "checks": rollup_state(pr),
                 "is_bot": login in BOT_LOGINS,
+                "head_sha": pr.get("headRefOid"),
             }
         )
     return prs
@@ -547,6 +549,74 @@ def search_count(qualifier):
         return None
 
 
+SENTINEL_CHECK = "Sentinel"
+
+
+def sentinel_state(check_runs):
+    """Pure transform: a head commit's check runs -> the Sentinel's verdict
+    for that PR: ready | blocked | none.
+
+    Reads what the merge gate itself concluded, so "ready to merge" can't
+    mean something different here than on the PR page. The gate runs in
+    preview (report-only) mode for now, concluding `neutral` with the real
+    verdict in its title ("Preview — would be: success"); an enforcing run
+    concludes `success` outright. Both read as ready. The newest run wins,
+    since each gate event re-posts the check.
+    """
+    runs = [r for r in check_runs or [] if r.get("name") == SENTINEL_CHECK and r.get("status") == "completed"]
+    if not runs:
+        return "none"
+    latest = max(runs, key=lambda r: r.get("completed_at") or "")
+    title = ((latest.get("output") or {}).get("title") or "").lower()
+    if latest.get("conclusion") == "success" or "would be: success" in title:
+        return "ready"
+    return "blocked"
+
+
+def collect_sentinel(prs):
+    """Attach each non-draft PR's Sentinel verdict (one check-runs read per
+    PR head). A failed read is "unknown", never "blocked": the renderer
+    must not report a PR as not-ready on missing data."""
+    for pr in prs:
+        if pr.get("isDraft") or not pr.get("head_sha"):
+            continue
+        out = run_gh(["api", f"repos/{REPO}/commits/{pr['head_sha']}/check-runs?check_name={SENTINEL_CHECK}&per_page=20"])
+        try:
+            pr["sentinel"] = sentinel_state(json.loads(out).get("check_runs")) if out.strip() else "unknown"
+        except (json.JSONDecodeError, AttributeError):
+            pr["sentinel"] = "unknown"
+
+
+def search_url(qualifiers):
+    return f"https://github.com/{REPO}/pulls?q=" + urllib.parse.quote_plus(qualifiers)
+
+
+def collect_review_queues():
+    """Per routed team: open, non-draft `review:no-blockers` PRs with a pending
+    review request for that team. The count comes from the same search the
+    link opens, so the number in Slack always matches the page it links to.
+
+    The teams come from review-routing.yml (the same map triage uses to
+    request them). GitHub drops a team's request once any member submits
+    a review, so this is "requested and not yet reviewed", not "awaiting
+    an approval"; the SLA section carries the approval-based view.
+    """
+    try:
+        sys.path.insert(0, str(SLA_SWEEP.parent))
+        import routing  # noqa: PLC0415 -- lives beside sla-sweep.py
+
+        teams = routing.load_config(str(ROUTING_CONFIG)).teams
+    except Exception as exc:  # noqa: BLE001 -- a config problem drops this line, not the digest
+        sys.stderr.write(f"warning: could not load review teams: {exc}\n")
+        return []
+    queues = []
+    for role, team in teams.items():
+        q = f"is:pr is:open -is:draft label:review:no-blockers team-review-requested:{team}"
+        queues.append({"role": role, "team": team, "count": search_count(q),
+                       "url": search_url(q)})
+    return queues
+
+
 def throughput(start, end=None):
     """Opened / merged / closed-unmerged PR counts and opened / closed issue
     counts for [start, end) -- end None means "through now". Exact counts
@@ -575,7 +645,7 @@ def main():
             [
                 "pr", "list", "--repo", REPO, "--state", "open", "--limit", "200",
                 "--json",
-                "number,title,author,createdAt,updatedAt,labels,isDraft,statusCheckRollup",
+                "number,title,author,createdAt,updatedAt,labels,isDraft,statusCheckRollup,headRefOid",
             ]
         )
     )
@@ -599,6 +669,7 @@ def main():
                 "--limit", "1000", "--json", "workflowName,status,conclusion,createdAt,url",
             ]
         )
+    collect_sentinel(prs)
     switches = collect_switches()
     sweep_state = next((sw["state"] for sw in switches if sw["var"] == "REVIEW_V3_SLA"), "unknown")
     bucket = resolve_ledger_bucket()
@@ -611,6 +682,7 @@ def main():
         "issues": issues,
         "throughput": {"this_week": this_week, "prev_week": throughput(prev_start, prev_end)},
         "workflow_failures": shape_workflow_failures(runs),
+        "review_queues": collect_review_queues(),
         "switches": switches,
         "sla": collect_sla(sweep_state, bucket),
         "review_outcomes": review_outcomes,

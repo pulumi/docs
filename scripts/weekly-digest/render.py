@@ -2,8 +2,9 @@
 """Render the weekly #docs-ops digest from digest.py's JSON.
 
 Everything structured is rendered here, deterministically: the SLA sweep's
-verdicts grouped by team, the abandoned-PR list, the one-line blog/marketing
-backlog, review-loop outcomes, failing workflows, and the lane switches. The
+verdicts grouped by team, the abandoned-PR list, the Sentinel-green PRs
+ready to merge, per-team review-queue links, review-loop outcomes, failing
+workflows, and the lane switches. The
 only model-written part is the order (and a short "why") of the top "Needs a
 human" list, which rank.py produces from `candidates` below; with no ranking
 (model unavailable, or no --ranking) the renderer falls back to a fixed
@@ -25,13 +26,6 @@ import sys
 from datetime import datetime
 
 REPO_URL = "https://github.com/pulumi/docs"
-# Blog and marketing PRs are the bulk of the open queue and have their own
-# owners, so they collapse to one summary line instead of per-PR entries. A
-# PR the SLA sweep has verdicts for is classified by its overdue roles (a
-# blog post also overdue for docs-guild review stays visible under
-# docs-guild); anything else by its domain label.
-BLOG_LABELS = {"domain:blog", "domain:website"}
-BLOG_ROLES = {"blog", "marketing"}
 TOP_N = 5
 TITLE_MAX = 40
 INLINE_MAX = 4          # links per grouped line before "+N more"
@@ -46,9 +40,8 @@ KIND_PRIORITY = {
     "broken-workflow": 1,
     "abandoned": 2,
     "overdue": 3,
-    "merge-now": 4,
-    "keep-or-kill": 5,
-    "untriaged-issue": 6,
+    "keep-or-kill": 4,
+    "untriaged-issue": 5,
 }
 
 
@@ -113,10 +106,6 @@ def owner(policy: dict, role: str) -> str:
 # ---- view model ---------------------------------------------------------------
 
 
-def _labelled_blog(pr: dict) -> bool:
-    return bool(BLOG_LABELS & set(pr.get("labels") or []))
-
-
 def _worst_role(roles: list[dict]) -> dict:
     # Most overdue relative to its own SLA; a 1bd tools SLA blown by 3 days
     # outranks a 3bd docs-guild SLA blown by 1.
@@ -132,14 +121,6 @@ def build_view(d: dict) -> dict:
     verdicts = {v["pr"]: v for v in sla.get("verdicts") or []} if sla.get("available") else {}
     policy = sla.get("policy") or {}
     sweep = sla.get("enabled")  # "on" | "off" | "unknown"
-
-    def in_blog_lane(n: int) -> bool:
-        v = verdicts.get(n)
-        if v and v["kind"] == "reviewer" and v.get("overdue"):
-            return all(r["role"] in BLOG_ROLES for r in v["overdue"])
-        if v and v["kind"] == "reviewer" and v.get("roles"):
-            return all(r["role"] in BLOG_ROLES for r in v["roles"])
-        return _labelled_blog(humans[n])
 
     candidates: list[dict] = []
 
@@ -162,18 +143,24 @@ def build_view(d: dict) -> dict:
                 f"failed its last {wf['streak']} runs ({wf['failures']}/{wf['runs']} this week); fix or disable",
                 sort_key=-wf["streak"])
 
-    blog_overdue = []
+    # Ready to merge is the merge gate's own verdict (digest.py reads each
+    # PR's Sentinel check), not a rebuild of it here. Humans are listed;
+    # bot PRs (Dependabot, pulumi-bot) are only counted, since they go out
+    # in batches.
+    ready = [p for p in prs.values() if not p.get("isDraft") and p.get("sentinel") == "ready"]
+    ready_humans = sorted((p for p in ready if not p.get("is_bot")), key=lambda p: -(p.get("age_days") or 0))
+    ready_numbers = {p["number"] for p in ready}
+    # A Sentinel-green PR is listed once, as ready. The sweep can still call
+    # it overdue: the gate accepts an approval from any review team, while
+    # the sweep waits on the routed team. The gate decides mergeability.
+
     waiting_on_author = 0
     for n, v in sorted(verdicts.items()):
         pr = humans.get(n)
-        if pr is None:
+        if pr is None or n in ready_numbers:
             continue
         if v["kind"] == "reviewer" and v.get("overdue"):
-            if in_blog_lane(n):
-                blog_overdue.append((n, _worst_role(v["overdue"])))
-                continue
-            listed_roles = [r for r in v["overdue"] if r["role"] not in BLOG_ROLES]
-            worst = _worst_role(listed_roles)
+            worst = _worst_role(v["overdue"])
             others = [r["role"] + owner(policy, r["role"]) for r in v["overdue"] if r is not worst]
             facts = (f"{worst['role']} review {worst['waited']}bd on a {worst['sla']}bd SLA"
                      f"{owner(policy, worst['role'])}")
@@ -183,8 +170,6 @@ def build_view(d: dict) -> dict:
                 role=worst["role"], waited=worst["waited"], sla=worst["sla"], red=pr.get("checks") == "red",
                 sort_key=-(worst["waited"] - worst["sla"]))
         elif v["kind"] == "author":
-            # Abandoned PRs are listed even when they're blog posts: a close
-            # is consequential and lands on the author, not the review queue.
             if v.get("abandoned"):
                 findings = v.get("undecided_count")
                 what = f"{findings} findings open" if findings else "changes requested"
@@ -201,22 +186,18 @@ def build_view(d: dict) -> dict:
                     f"author idle {round(v['idle_days'])}d, {what}; {fate}",
                     idle_days=v["idle_days"], closes_in_days=v.get("closes_in_days"),
                     sort_key=days or 0)
-            elif not in_blog_lane(n):
+            else:
                 waiting_on_author += 1
 
     # "No verdict" only means "no reviewer clock" when the sweep's verdicts
-    # actually arrived. Without them every PR looks verdict-free, and an
-    # approval-bound PR would read as "merge it".
+    # actually arrived. Without them every PR looks verdict-free, and one
+    # that simply wasn't evaluated would read as "never reviewed".
     for n, pr in sorted(humans.items()) if sla.get("available") else []:
-        if pr.get("isDraft") or n in verdicts or in_blog_lane(n):
+        if pr.get("isDraft") or n in verdicts or n in ready_numbers:
             continue
         labels = set(pr.get("labels") or [])
-        if "review:no-blockers" in labels and pr.get("checks") == "green" and "do-not-merge" not in labels:
-            add("merge-now", f"pr:{n}", n, pr["title"], pr_url(n),
-                "green, no blockers, no required reviewer: merge it",
-                sort_key=-(pr.get("age_days") or 0))
-        elif (pr.get("age_days") or 0) > KEEP_OR_KILL_DAYS and not (labels & {"review:no-blockers",
-                                                                             "review:outstanding-issues"}):
+        if (pr.get("age_days") or 0) > KEEP_OR_KILL_DAYS and not (labels & {"review:no-blockers",
+                                                                           "review:outstanding-issues"}):
             add("keep-or-kill", f"pr:{n}", n, pr["title"], pr_url(n),
                 f"open {pr['age_days']}d, never reviewed: keep or close",
                 age_days=pr["age_days"], sort_key=-(pr.get("age_days") or 0))
@@ -227,22 +208,19 @@ def build_view(d: dict) -> dict:
             add("untriaged-issue", f"issue:{i['number']}", i["number"], i["title"], issue_url(i["number"]),
                 "new issue, not triaged", sort_key=-(i.get("age_days") or 0))
 
-    listed = {c["number"] for c in candidates if c["ref"].startswith("pr:")}
-    blog_open = [n for n, p in humans.items()
-                 if not p.get("isDraft") and in_blog_lane(n) and n not in listed]
-    blog_oldest = max(blog_overdue, key=lambda t: t[1]["waited"], default=None)
+    listed = {c["number"] for c in candidates if c["ref"].startswith("pr:")} | ready_numbers
+    sentinel_seen = any(p.get("sentinel") in ("ready", "blocked", "none") for p in prs.values())
     return {
         "candidates": candidates,
-        "blog": {"open": len(blog_open), "overdue": len(blog_overdue),
-                 "oldest": ({"number": blog_oldest[0], "waited": blog_oldest[1]["waited"]}
-                            if blog_oldest else None),
-                 "oldest_age": max((humans[n].get("age_days") or 0 for n in blog_open), default=None)},
+        "ready": {"available": sentinel_seen, "humans": ready_humans,
+                  "bots": sum(1 for p in ready if p.get("is_bot"))},
+        "queues": d.get("review_queues"),
         "other_open": {
-            "drafts": sum(1 for n, p in humans.items() if p.get("isDraft") and not in_blog_lane(n)),
+            "drafts": sum(1 for p in humans.values() if p.get("isDraft")),
             "waiting_on_author": waiting_on_author,
-            "bots": sum(1 for p in prs.values() if p.get("is_bot")),
+            "bots": sum(1 for p in prs.values() if p.get("is_bot") and p["number"] not in ready_numbers),
             "in_progress": sum(1 for n, p in humans.items()
-                               if not p.get("isDraft") and not in_blog_lane(n) and n not in listed
+                               if not p.get("isDraft") and n not in listed
                                and verdicts.get(n, {}).get("kind") != "author"),
         },
         "policy": policy,
@@ -324,6 +302,31 @@ def _top(view: dict, top: list[dict]) -> list[str]:
     return out
 
 
+READY_MAX = 12  # ready PRs are few and each is a click; list nearly all of them
+
+
+def _queues(view: dict) -> list[str]:
+    """Two lines of standing queues, each item a link: Sentinel-green PRs
+    (the merge gate says every sign-off is in) and, per routed team, the
+    no-blockers PRs with that team's review still requested."""
+    out = []
+    r = view["ready"]
+    bots = f"+{r['bots']} bot PR{'s' if r['bots'] != 1 else ''}" if r["bots"] else ""
+    if not r["available"]:
+        out.append(":warning: *Ready to merge*: Sentinel verdicts unreadable this week")
+    elif r["humans"]:
+        items = [num(pr_url(p["number"]), p["number"]) for p in r["humans"]]
+        out.append(f"*Ready to merge* ({len(r['humans'])}, Sentinel green): "
+                   + inline(items, READY_MAX) + (f" · {bots}" if bots else ""))
+    else:
+        out.append("*Ready to merge*: none" + (f" ({bots})" if bots else ""))
+    queues = view.get("queues") or []
+    if queues:
+        links = [link(q["url"], f"{q['role']} {q['count'] if q['count'] is not None else '?'}") for q in queues]
+        out.append("*Awaiting review* (no blockers, team requested): " + " · ".join(links))
+    return out
+
+
 def _team_line(role: str, items: list[dict], policy: dict) -> str:
     # Red-CI PRs first and labelled: they need a fix from the author, not an
     # approval, so they must not hide behind "+N more".
@@ -353,7 +356,7 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
     sla = view["sla"]
     if not sla.get("available"):
         out += ["", ":warning: SLA verdicts unavailable this week (the sweep dry-run failed): "
-                    "overdue, abandoned, and ready-to-merge lists are missing."]
+                    "overdue and abandoned lists are missing."]
     else:
         overdue = by_kind.get("overdue") or []
         if overdue:
@@ -370,10 +373,6 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
             for c in sorted(abandoned, key=lambda c: (c.get("closes_in_days") or 0, c["number"])):
                 out.append(f"• {link(c['url'], '#%d ' % c['number'] + short(c['title'], 32))} — {esc(c['facts'])}")
 
-    merge_now = by_kind.get("merge-now") or []
-    if merge_now:
-        out += ["", "*Ready to merge* (no reviewer required): "
-                + inline([num(c["url"], c["number"]) for c in merge_now])]
     kok = by_kind.get("keep-or-kill") or []
     if kok:
         out += ["", "*Keep or close?* (never reviewed): "
@@ -386,16 +385,6 @@ def _sections(view: dict, shown: set[str]) -> list[str]:
 
 def _summary(d: dict, view: dict, shown: set[str]) -> list[str]:
     out = [""]
-    b = view["blog"]
-    blog = f"*Blog/marketing*{owner(view['policy'], 'blog')}: {b['open']} open"
-    if view["sla"].get("available"):
-        blog += f" · {b['overdue']} over SLA"
-        if b["oldest"]:
-            o = b["oldest"]
-            blog += f" · longest wait {num(pr_url(o['number']), o['number'])} {o['waited']}bd"
-    elif b["oldest_age"] is not None:
-        blog += f" · oldest {fmt_age(b['oldest_age'])}"
-    out.append(blog)
 
     ro = d.get("review_outcomes") or {}
     if not ro.get("available"):
@@ -486,7 +475,8 @@ def render(d: dict, ranking: dict | None = None) -> str:
     view = build_view(d)
     top, source = resolve_ranking(view["candidates"], ranking)
     shown = {t["ref"] for t in top}
-    lines = _header(d) + [""] + _top(view, top) + _sections(view, shown) + _summary(d, view, shown)
+    lines = (_header(d) + [""] + _top(view, top) + [""] + _queues(view)
+             + _sections(view, shown) + _summary(d, view, shown))
     if source == "fallback" and ranking is not None and top:
         lines.append("_Top list in fixed priority order (model ranking unavailable)._")
     return "\n".join(lines).strip() + "\n"

@@ -3,7 +3,7 @@ You rank the "Needs a human" list at the top of the pulumi/docs team's weekly Sl
 You receive a JSON array of candidates. Each has:
 
 - `ref`: an opaque id (`pr:123`, `issue:456`, or `workflow:<name>`); echo it back exactly.
-- `kind`: one of `merged-over-findings` (a PR merged this week with unanswered blocking review findings), `broken-workflow` (a scheduled or master workflow whose recent runs all failed), `overdue` (a PR past its team's review SLA), `abandoned` (the author went quiet with review findings unanswered; the SLA sweep closes these when it is switched on), `merge-now` (green with no blockers and no required reviewer), `keep-or-kill` (open for weeks with no review state), or `untriaged-issue`.
+- `kind`: one of `merged-over-findings` (a PR merged this week with unanswered blocking review findings), `broken-workflow` (a scheduled or master workflow whose recent runs all failed), `overdue` (a PR past its team's review SLA), `abandoned` (the author went quiet with review findings unanswered; the SLA sweep closes these when it is switched on), `keep-or-kill` (open for weeks with no review state), or `untriaged-issue`.
 - `title` and `facts`: what is known. Don't invent anything beyond them.
 
 Pick the five that most need a person this week, most urgent first. Weigh:

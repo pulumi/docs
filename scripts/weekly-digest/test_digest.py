@@ -31,10 +31,10 @@ POLICY = {"warn_days": 14, "close_days": 21,
           "escalate_to": {"tools": "CamSoper", "docs-guild": "tatcoo-pulumi", "blog": "cnunciato"}}
 
 
-def pr(n, *, labels=(), draft=False, age=3, checks="green", bot=False, title=None):
+def pr(n, *, labels=(), draft=False, age=3, checks="green", bot=False, title=None, sentinel="blocked"):
     return {"number": n, "title": title or f"PR {n}", "author": "bot" if bot else "someone",
             "age_days": age, "updated_days": 1, "labels": list(labels), "isDraft": draft,
-            "checks": checks, "is_bot": bot}
+            "checks": checks, "is_bot": bot, "sentinel": sentinel}
 
 
 def sweep_record():
@@ -60,8 +60,8 @@ def base_digest(**over):
         "generated_at": "2026-09-28T14:00:00+00:00",
         "window_days": 7,
         "prs": [pr(10), pr(11), pr(12, labels=["domain:blog"]), pr(13), pr(14), pr(15),
-                pr(20, labels=["review:no-blockers"]), pr(21, age=40), pr(22, draft=True),
-                pr(23, bot=True)],
+                pr(20, labels=["review:no-blockers"], sentinel="ready"), pr(21, age=40), pr(22, draft=True),
+                pr(23, bot=True, sentinel="ready"), pr(24, bot=True)],
         "issues": {"all_open_count": 50, "new_this_week": [
             {"number": 900, "title": "Broken link", "author": "x", "age_days": 1, "needs_triage": True}],
             "oldest_open": [{"number": 1, "title": "old", "age_days": 1800}],
@@ -83,6 +83,10 @@ def base_digest(**over):
                             "merged_with_outstanding": [{"pr": 30, "title": "Reorg", "url": "https://github.com/pulumi/docs/pull/30",
                                                          "findings": ["a", "b"]}]},
         "v3_ops": {"available": False},
+        "review_queues": [
+            {"role": "docs-guild", "team": "pulumi/docs-guild", "count": 13, "url": "https://github.com/pulumi/docs/pulls?q=a"},
+            {"role": "tools", "team": "pulumi/docs-tools", "count": None, "url": "https://github.com/pulumi/docs/pulls?q=b"},
+        ],
     }
     d.update(over)
     return d
@@ -153,27 +157,11 @@ def test_each_pr_appears_once():
         assert msg.count(f"/pull/{n}|") == 1, n
 
 
-def test_blog_prs_collapse_to_one_line():
-    msg = render.render(base_digest())
-    assert "/pull/12|" in msg  # only as the blog line's "longest wait"
-    blog_line = next(line for line in msg.splitlines() if line.startswith("*Blog/marketing*"))
-    assert blog_line.startswith("*Blog/marketing* → cnunciato: 1 open · 1 over SLA")
-    assert blog_line.endswith("20bd")
-
-
 def test_multi_role_pr_groups_under_its_worst_breach():
     view = render.build_view(base_digest())
     c = next(c for c in view["candidates"] if c["number"] == 10)
     assert c["role"] == "tools"  # 3 over a 1bd SLA beats 1 over a 3bd SLA
     assert c["facts"] == "tools review 4bd on a 1bd SLA → CamSoper; also overdue: docs-guild → tatcoo-pulumi"
-
-
-def test_blog_labelled_pr_overdue_for_docs_stays_visible():
-    d = base_digest()
-    d["prs"][0]["labels"] = ["domain:blog", "domain:mixed"]  # PR 10: tools + docs-guild overdue
-    view = render.build_view(d)
-    assert any(c["number"] == 10 for c in view["candidates"])
-    assert view["blog"]["overdue"] == 1  # only PR 12, whose overdue roles are all blog
 
 
 def test_same_age_batch_compresses():
@@ -202,7 +190,7 @@ def test_fallback_order_is_priority_then_severity():
     view = render.build_view(base_digest())
     top, source = render.resolve_ranking(view["candidates"], None)
     assert source == "fallback"
-    assert [t["ref"] for t in top] == ["pr:30", "workflow:Audit Logs", "pr:13", "pr:10", "pr:15"]
+    assert [t["ref"] for t in top] == ["pr:30", "workflow:Audit Logs", "pr:13", "pr:12", "pr:10"]
 
 
 def test_model_ranking_is_validated():
@@ -240,12 +228,72 @@ def test_abandoned_section_header_when_not_promoted():
     assert "*Abandoned* (author idle >14d)" in msg and "close or rescue it by hand" in msg
 
 
+def test_sentinel_state_reads_the_gate():
+    run = lambda concl, title, at="2026-09-28T10:00:00Z": {
+        "name": "Sentinel", "status": "completed", "conclusion": concl,
+        "completed_at": at, "output": {"title": title}}
+    assert digest.sentinel_state([]) == "none"
+    assert digest.sentinel_state([run("success", "All gates green")]) == "ready"
+    assert digest.sentinel_state([run("neutral", "Preview — would be: success (not enforced yet)")]) == "ready"
+    assert digest.sentinel_state([run("neutral", "Preview — would be: failure (not enforced yet)")]) == "blocked"
+    # the newest run wins
+    assert digest.sentinel_state([
+        run("neutral", "Preview — would be: success", "2026-09-28T09:00:00Z"),
+        run("neutral", "Preview — would be: failure", "2026-09-28T11:00:00Z")]) == "blocked"
+    assert digest.sentinel_state([{"name": "sentinel", "status": "completed", "conclusion": "success"}]) == "none"
+
+
+def test_ready_line_lists_humans_and_counts_bots():
+    msg = render.render(base_digest(), None)
+    line = next(l for l in msg.splitlines() if l.startswith("*Ready to merge*"))
+    assert line == "*Ready to merge* (1, Sentinel green): <https://github.com/pulumi/docs/pull/20|#20> · +1 bot PR"
+
+
+def test_ready_line_none_and_unreadable():
+    d = base_digest()
+    for p in d["prs"]:
+        p["sentinel"] = "blocked"
+    assert "*Ready to merge*: none\n" in render.render(d, None)
+    for p in d["prs"]:
+        p["sentinel"] = "unknown"
+    assert ":warning: *Ready to merge*: Sentinel verdicts unreadable" in render.render(d, None)
+
+
+def test_ready_pr_is_not_also_overdue():
+    d = base_digest()
+    d["prs"][0]["sentinel"] = "ready"  # PR 10: overdue for tools per the sweep
+    msg = render.render(d, None)
+    assert msg.count("/pull/10|") == 1
+    assert "*Ready to merge* (2, Sentinel green)" in msg
+
+
+def test_review_queue_links_carry_their_counts():
+    msg = render.render(base_digest(), None)
+    line = next(l for l in msg.splitlines() if l.startswith("*Awaiting review*"))
+    assert line == ("*Awaiting review* (no blockers, team requested): "
+                    "<https://github.com/pulumi/docs/pulls?q=a|docs-guild 13> · "
+                    "<https://github.com/pulumi/docs/pulls?q=b|tools ?>")
+
+
+def test_review_queue_search_matches_the_link():
+    q = "is:pr is:open -is:draft label:review:no-blockers team-review-requested:pulumi/docs-guild"
+    assert digest.search_url(q) == (
+        "https://github.com/pulumi/docs/pulls?q=is%3Apr+is%3Aopen+-is%3Adraft+label%3Areview%3Ano-blockers"
+        "+team-review-requested%3Apulumi%2Fdocs-guild")
+
+
+def test_blog_prs_are_no_longer_collapsed():
+    msg = render.render(base_digest(), None)
+    assert "Blog/marketing" not in msg
+    assert "/pull/12|" in msg and "blog review 20bd on a 3bd SLA → cnunciato" in msg
+
+
 def test_no_verdicts_never_says_merge_it():
     # C&C review F1: with SLA verdicts missing, every green no-blockers PR
     # looked verdict-free and was offered as "merge it".
     d = base_digest(sla={"available": False, "enabled": "on"})
     kinds = {c["kind"] for c in render.build_view(d)["candidates"]}
-    assert not kinds & {"merge-now", "keep-or-kill"}
+    assert "keep-or-kill" not in kinds
     assert "merge it" not in render.render(d, None)
 
 
@@ -279,12 +327,6 @@ def test_sweep_off_said_once():
     assert msg.count("sweep is off") == 0 and msg.count("SLA sweep") == 1  # the Switches line
 
 
-def test_blog_count_excludes_prs_listed_elsewhere():
-    d = base_digest()
-    d["prs"][3]["labels"] = ["domain:blog"]  # PR 13 is abandoned and listed on its own
-    assert render.build_view(d)["blog"]["open"] == 1
-
-
 def test_no_candidates_no_fallback_footer_and_no_delta_suffix_without_data():
     d = base_digest(prs=[], review_outcomes={"available": False}, throughput={},
                     workflow_failures={"total_runs": 5, "failing": []})
@@ -297,7 +339,9 @@ def test_no_candidates_no_fallback_footer_and_no_delta_suffix_without_data():
 def test_sla_unavailable_is_loud():
     msg = render.render(base_digest(sla={"available": False, "enabled": "off"}), None)
     assert ":warning: SLA verdicts unavailable" in msg
-    assert "ready-to-merge lists are missing" in msg
+    assert "overdue and abandoned lists are missing" in msg
+    # Ready to merge comes from Sentinel, not the sweep, so it survives.
+    assert "*Ready to merge* (1, Sentinel green)" in msg
 
 
 def test_sla_unavailable_never_claims_within_sla():

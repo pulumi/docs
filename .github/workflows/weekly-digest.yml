@@ -1,10 +1,10 @@
 name: Weekly review digest
 
 # Replaces the recurring docs review meeting with one Slack message to
-# #docs-ops every Monday: what needs a human this week, the SLA sweep's
+# #docs-ops every Monday: what needs a human this week, the Sentinel-green
+# PRs ready to merge, a search link per team's review queue, the SLA sweep's
 # verdicts (overdue reviews by team, abandoned PRs), and one line each for
-# the blog/marketing backlog, issues, review-loop outcomes, failed runs, and
-# lane switches.
+# review-loop outcomes, failed runs, and lane switches.
 #
 # collect (digest.py, deterministic) -> rank (rank.py, the only model call:
 # orders the top "Needs a human" list; best-effort) -> render (render.py,
