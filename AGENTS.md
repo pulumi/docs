@@ -108,7 +108,7 @@ What that means when you work here:
 
 ## Neutral tone in docs
 
-Docs under `content/docs/` inform readers; they don't try to convince them. When docs discuss other products, especially on comparison pages (`content/docs/iac/comparisons/`, `content/docs/esc/vs/`), write so that a user of the other product would call the page fair: describe what each product does, name the other product's equivalent features, and leave the verdict to the reader. No superlatives ("the best alternative"), persuasion sections ("Why teams are leaving X"), fear, uncertainty, and doubt about the other vendor (acquisitions, pricing scares), rebuttals after the other product's "choose when" list, loaded table cells ("Limited," "powerful," "significant overhead"), customer testimonials, or `/product/` links in place of docs links. Compare Pulumi to other products, never two non-Pulumi products to each other: no "X vs. Y" pages, sections, or side-by-side table columns for other vendors. Opinions are still welcome where they're about Pulumi itself: recommend best practices for using Pulumi, and patterns we've found effective for using Pulumi together with other products. Persuasive copy about why to pick Pulumi over something else belongs in `content/product/` and on the homepage. The full rules and the standard comparison-page structure live in `STYLE-GUIDE.md` §Neutral tone toward other products; follow them when writing or reviewing any docs page that mentions another product.
+Docs that discuss other products, especially comparison pages (`content/docs/iac/comparisons/`, `content/docs/esc/vs/`), must inform rather than persuade. Follow `STYLE-GUIDE.md` §Neutral tone toward other products when writing or reviewing any docs page that mentions another product.
 
 ---
 

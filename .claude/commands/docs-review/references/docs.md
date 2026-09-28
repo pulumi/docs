@@ -59,7 +59,7 @@ Vale catches product-name capitalization, the Pulumi Policies singular-verb rule
 
 Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
 
-**Neutral tone toward other products.** When the diff describes another product (always on `content/docs/iac/comparisons/**` and `content/docs/esc/vs/**`), apply `STYLE-GUIDE.md` §Neutral tone toward other products. Quote and rewrite each superlative or verdict between products ("the best alternative," "Pulumi is the better choice"), persuasion heading, FUD about the other vendor, loaded table cell ("Limited," "powerful," "significant overhead"), rebuttal after the other product's "choose when" list, customer testimonial, direct comparison of two non-Pulumi products to each other, and selling `title_tag`/`meta_desc`/`h1`. A claim that the other product has "no equivalent" is also a fact-check claim; verify it against that product's current docs. Don't flag recommendations about how to use Pulumi, or about effective ways to use Pulumi with another product; those are opinions docs are meant to offer.
+**Neutral tone toward other products.** When the diff describes another product (always on `content/docs/iac/comparisons/**` and `content/docs/esc/vs/**`), apply `STYLE-GUIDE.md` §Neutral tone toward other products, quoting and rewriting each violation. A claim that the other product has "no equivalent" is also a fact-check claim; verify it against that product's current docs.
 
 ### Priority 6 — SEO and discoverability
 
