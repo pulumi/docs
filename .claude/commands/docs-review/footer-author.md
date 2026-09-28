@@ -35,4 +35,4 @@ Full mechanics: [CONTRIBUTING.md §AI-assisted contributions](%%CONTRIBUTING_URL
 
 </details>
 
-Please don't edit, hide, or delete this comment — it is the review's record.
+Please don't edit or delete this comment; it's the review's record.

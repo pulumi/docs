@@ -731,3 +731,29 @@ def test_author_cell_names_the_claim_and_the_block_carries_the_reason(tmp_path):
     evidence = json.loads((tmp_path / "e.json").read_text())
     f3 = next(f for f in evidence["findings"] if f["id"] == "F3")
     assert len(f3["text"]) > len(quoted), "the evidence record keeps the longer claim text"
+
+
+def test_empty_stance_list_renders_nothing_on_v3_but_explicit_empty_on_v2():
+    cr = _load("cr_stances", HERE / "compose-review.py")
+    assert cr.render_stances([], v3=True) == ""
+    assert cr.STANCES_EMPTY in cr.render_stances([])
+    one = [{"file": "a.md", "line_range": "L3", "text": "the fastest way", "type": "positioning"}]
+    assert cr.STANCES_NOTE_V3 in cr.render_stances(one, v3=True)
+    assert cr.STANCES_NOTE in cr.render_stances(one)
+
+
+def test_author_footer_folds_how_to_answer_only_while_something_blocks():
+    cr = _load("cr_footer", HERE / "compose-review.py")
+    blocking, clear = cr.render_author_footer("u", 2), cr.render_author_footer("u", 0)
+    assert "<summary><strong>How to answer</strong>" in blocking
+    assert "How to answer" not in clear and "</details>" not in clear
+    assert clear.startswith(cr.FOOTER_SENTINEL) and clear.rstrip().endswith("the review's record.")
+
+
+def test_stale_vocabulary_check_skips_text_quoted_from_the_pr():
+    cr = _load("cr_stale", HERE / "compose-review.py")
+    stance = cr.render_stances([{"file": "references/output-format.md", "line_range": "L340",
+                                 "text": "renders a second H4 inside ⚠️ Low-confidence, before the style block",
+                                 "type": "positioning"}], v3=True)
+    assert cr.stale_v2_tokens(stance) == [], "a quoted stance is the PR's text, not composer scaffolding"
+    assert cr.stale_v2_tokens("### ⚠️ Low-confidence\n") == ["⚠️ Low-confidence"], "composer text still trips it"

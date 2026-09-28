@@ -859,6 +859,10 @@ STANCES_HEADING = "#### Editorial stances introduced by this PR"
 STANCES_NOTE = ("*Superlative, ranking, or comparative language the diff adds. No verdict — a page's own "
                 "framing isn't fact-checkable — but confirm each is a stance the docs should take, "
                 "and that no agent-written rewrite introduced it unasked.*")
+# The v3 brief's shorter caption (the v2 monolith keeps the one above: its
+# golden output is pinned byte-identical).
+STANCES_NOTE_V3 = ("*Superlatives and comparisons the diff adds. Framing isn't fact-checkable, so "
+                   "confirm each is a stance the docs should take.*")
 STANCES_EMPTY = "_None — the extractor found no positioning or comparison language in this PR's added lines._"
 
 # Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
@@ -1042,13 +1046,34 @@ def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def render_stances(stances: list[dict] | None) -> str:
+def style_caption(source: str, files_link: str, v3: bool, legend: bool = True) -> str:
+    """The italic caption under the style heading. post-style-suggestions.py
+    reconciles every card to this exact string (test_caption_matches_composer
+    pins the two). v3 cards get the short form; the v2 monolith keeps the
+    long one, since its golden output is pinned byte-identical."""
+    if v3:
+        tail = (f" ✏️ marks one you can apply from the {files_link} tab "
+                "(**Add suggestion to batch** on each, then **Commit suggestions**)."
+                if legend else "")
+        return f"*Optional polish from {source}; never blocking.{tail}*"
+    tail = (f" ✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
+            "on each, then **Commit suggestions** to take several in a single commit."
+            if legend else "")
+    return (f"*Optional polish from {source} — never blocking, not counted above. "
+            f"Take the ones that read better and ignore the rest.{tail}*")
+
+
+def render_stances(stances: list[dict] | None, v3: bool = False) -> str:
     """The no-verdict stance list. None (artifact absent / pre-v2) renders
-    nothing at all; an empty list renders the explicit-empty form so the
-    validator can tell "checked, none" from "didn't check"."""
-    if stances is None:
+    nothing at all; an empty list renders the explicit-empty form on the v2
+    monolith. The v3 brief (v3=True) renders nothing for an empty list:
+    a heading, a caption, and "None" under a ⚠️ section that already said
+    stances "still need a human eye" was three lines contradicting each other
+    (#21918's brief). The validator treats an absent block with no records as
+    fine, and the evidence page keeps the extractor's record either way."""
+    if stances is None or (not stances and v3):
         return ""
-    out = [STANCES_HEADING, "", STANCES_NOTE, ""]
+    out = [STANCES_HEADING, "", STANCES_NOTE_V3 if v3 else STANCES_NOTE, ""]
     if not stances:
         out.append(STANCES_EMPTY)
         return "\n".join(out)
@@ -1174,10 +1199,7 @@ def _render_style_findings(findings: list[dict], files_url: str = "",
     out = [
         STYLE_HEADING,
         "",
-        f"*Optional polish from {source} — never blocking, not counted above. "
-        "Take the ones that read better and ignore the rest. "
-        f"✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
-        "on each, then **Commit suggestions** to take several in a single commit.*",
+        style_caption(source, files_link, v3=allow_nits),
         "",
     ]
     if allow_nits and not by_file:
@@ -2035,12 +2057,10 @@ def render_waiting_block(findings: list[dict], state_findings: dict) -> list[str
         if answered:
             more = "more is" if len(answered) == 1 else "more are"
             head += f" ({len(answered)} {more} answered — see State)"
-        head += ("; you don't need to police them, but check the final diff shows "
-                 "them answered before you approve:")
+        head += ". Before you approve, check the final diff answers them:"
     else:
-        head = ("**Answered by the author** — nothing blocks merge from the author's "
-                "card any more; their answers are listed so you can weigh them "
-                "before you approve:")
+        head = ("**Answered by the author** — nothing blocks merge. Weigh their "
+                "answers before you approve:")
     lines = [
         AUTHOR_STATE_BEGIN,
         head,
@@ -2077,6 +2097,22 @@ def replace_waiting_block(brief_body: str, findings: list[dict],
     return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
 
 
+def render_brief_orient() -> list[str]:
+    """The TIP callout under the brief header. Owned here so the update lane
+    can re-stamp it on cards composed with older wording
+    (build-evidence.restamp_brief_orient)."""
+    return [
+        "> [!TIP]",
+        "> **Check the ⚠️ items, then approve.** Your approval covers only "
+        "those; links, shortcodes, metadata, and verified claims were checked "
+        "by machine (receipts on the evidence page). Code samples are read, "
+        "not compiled.",
+        ">",
+        '> _PR author: nothing here is yours. Your to-do list is the "Author '
+        'action guide" comment._',
+    ]
+
+
 def render_author_orient(n_blocking: int) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
@@ -2091,18 +2127,16 @@ def render_author_orient(n_blocking: int) -> list[str]:
     if n_blocking:
         return [
             "> [!IMPORTANT]",
-            "> **You = the PR author.** This review needs your answers before this "
-            "PR can merge. A human reviewer still approves the merge.",
+            "> **You = the PR author.** Answer every item below before this PR can merge.",
             ">",
-            "> **To answer:** push a fix, or reply with the item's ID — "
+            "> **To answer:** push a fix, or reply "
             "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
-            "The `#update-review` tag is required; a reply without it doesn't count. "
-            "Worked examples: **How to answer** at the bottom.",
+            "A reply without the `#update-review` tag doesn't count. "
+            "Examples: **How to answer** at the bottom.",
         ]
     return [
         "> [!NOTE]",
-        "> Nothing here blocks merge — no open items need an answer from you. "
-        "A human reviewer still approves the merge.",
+        "> Nothing here needs an answer from you. A human reviewer still approves the merge.",
     ]
 
 
@@ -2136,6 +2170,33 @@ def render_detail_scaffold(fid: str, framing: str = "") -> list[str]:
 
 
 CONTRIBUTING_URL_TOKEN = "%%CONTRIBUTING_URL%%"
+
+
+def contributing_url_for(repo: str) -> str:
+    return (f"https://github.com/{repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
+            if repo else "")
+
+
+# The collapsed **How to answer** fold in footer-author.md. It exists only
+# while something blocks: on a "nothing blocks merge" card it was a fold of
+# instructions for items that don't exist, opening "Every 🚨 and ❓ item
+# above needs one of these" (reader feedback, 2026-09-25).
+_HOW_TO_ANSWER_RE = re.compile(
+    r"^<details>\n<summary><strong>How to answer</strong>.*?\n</details>\n\n?", re.S | re.M)
+
+
+def render_author_footer(contributing_url: str = "", n_blocking: int = 1) -> str:
+    """The author card's footer, from FOOTER_SENTINEL to the end. Both
+    refresh lanes re-stamp it through build-evidence.restamp_footer, so a
+    card follows the current footer (and gains or loses the How-to-answer
+    fold as its count crosses zero) instead of keeping whatever footer it
+    was first published with."""
+    text = _read_footer(FOOTER_AUTHOR_PATH, contributing_url)
+    return text if n_blocking else _HOW_TO_ANSWER_RE.sub("", text)
+
+
+def render_reviewer_footer(contributing_url: str = "") -> str:
+    return _read_footer(FOOTER_REVIEWER_PATH, contributing_url)
 
 
 def _read_footer(path: Path, contributing_url: str = "") -> str:
@@ -2210,6 +2271,19 @@ _V3_TODO_REWRITES: tuple[tuple[str, str], ...] = (
 # Stale v2 vocabulary that must never reach a published v3 card; the
 # self-check greps for these (TODO text only — the style H4 is fine).
 _V3_STALE_TOKENS = ("📋 Triaged", "⚠️ Low-confidence", "### 💡 Pre-existing", "trail-verdict-bucket-promotion")
+# Text the composer quotes from the PR (claim cells, stance bullets) always
+# renders through quote() inside italics: *"…"*, with inner double quotes
+# already turned to single ones.
+_QUOTED_SPAN_RE = re.compile(r'\*"[^"\n]*"\*')
+
+
+def stale_v2_tokens(draft: str) -> list[str]:
+    """v2 vocabulary in the composer's own text. Quoted PR text is skipped:
+    a PR that edits the review docs can quote "⚠️ Low-confidence" in a
+    stance bullet, and failing the self-check on that stopped #21920's
+    first review cold."""
+    own = _QUOTED_SPAN_RE.sub("", draft)
+    return [tok for tok in _V3_STALE_TOKENS if tok in own]
 
 
 def _v3_adapt_todo(bullet: str) -> str:
@@ -2267,8 +2341,8 @@ def empty_checks_sentinel(stances_follow: bool) -> str:
 # through the 📎 line behind it, cost the author card its evidence link on the
 # first live #update-review (2026-09-01).
 V3_BROWSER_HINT_PREFIX = "_Editing in the browser?"
-V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " The ✏️ links open the file in "
-                   "GitHub's editor — Ctrl+F for the quoted line._")
+V3_BROWSER_HINT = (V3_BROWSER_HINT_PREFIX + " ✏️ opens the file in GitHub's editor; "
+                   "Ctrl+F for the quoted line._")
 
 
 def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
@@ -2286,9 +2360,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
     edit_base = (f"https://github.com/{args.head_repo}/edit/{args.head_branch}/"
                  if getattr(args, "head_repo", "") and getattr(args, "head_branch", "")
                  else "")
-    contributing_url = (
-        f"https://github.com/{args.repo}/blob/master/CONTRIBUTING.md#ai-assisted-contributions"
-        if args.repo else "")
+    contributing_url = contributing_url_for(args.repo)
 
     # Assign finding ids in render order: 🚨 stubs, 🚨 style-blockers, ❓, ⚠️.
     findings: list[dict] = []
@@ -2490,7 +2562,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         sub_line,
         "",
-        _read_footer(FOOTER_AUTHOR_PATH, contributing_url),
+        render_author_footer(contributing_url, n_blocking),
         "",
     ]
     author_draft = "\n".join(a for a in author if a is not None)
@@ -2531,15 +2603,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         BRIEF_MARKER,
         f"## Reviewer's guide v{rev} — not for the author",
         "",
-        "> [!TIP]",
-        "> **This is the reviewer's guide.** Work through the ⚠️ checklist "
-        "below, then approve — **approving asserts only that the ⚠️ items "
-        "looked right to you.** Machine-verified this run: links, shortcodes, "
-        "page metadata, and every claim marked verified (receipts on the "
-        "evidence page). Code samples are read, not compiled.",
-        ">",
-        '> _PR author: your to-do list is the other review comment, "Author '
-        'action guide" — nothing on this card is yours._',
+        *render_brief_orient(),
         "",
     ]
     if prep["outage_banner"]:
@@ -2571,12 +2635,12 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         CHECKS_HEADING,
         "",
     ]
-    stance_block = render_stances(prep["candidate_stances"])
+    stance_block = render_stances(prep["candidate_stances"], v3=True)
     brief += _finding_table(check_lines, empty_checks_sentinel(bool(stance_block)))
     if check_lines:
         _team_txt = getattr(args, "routed_team", "") or "the routed reviewer team"
-        brief += ["", f"_Not your area? Any member of {_team_txt} can approve "
-                  "— hand it off rather than approving on faith._"]
+        brief += ["", f"_Not your area? Hand it to another member of {_team_txt} "
+                  "rather than approving on faith._"]
     # Editorial stances ride the brief, not the author card: they are
     # reviewer-check material by nature (a page's own framing, no verdict,
     # nothing for the author to answer) and the same verdict-free H4 the v2
@@ -2600,7 +2664,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "",
         sub_line,
         "",
-        _read_footer(FOOTER_REVIEWER_PATH, contributing_url),
+        render_reviewer_footer(contributing_url),
         "",
     ]
     brief_draft = "\n".join(b for b in brief if b is not None)
@@ -2678,9 +2742,8 @@ def v3_self_check(author_draft: str, brief_draft: str, evidence_base: dict) -> l
     if blocking_ids and AUTHOR_STATE_BEGIN not in brief_draft:
         problems.append("brief draft missing the Waiting-on-the-author block")
     for name, draft in (("author", author_draft), ("brief", brief_draft)):
-        for tok in _V3_STALE_TOKENS:
-            if tok in draft:
-                problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
+        for tok in stale_v2_tokens(draft):
+            problems.append(f"{name} draft carries stale v2 vocabulary: {tok!r} — update _V3_TODO_REWRITES")
     ids = [f["id"] for f in evidence_base.get("findings", [])]
     if len(ids) != len(set(ids)):
         problems.append("duplicate finding ids in evidence base")

@@ -1,6 +1,6 @@
 ---
 title: "Self-driving infrastructure with Pulumi and Jev"
-date: 2026-09-25
+date: 2026-09-28
 draft: false
 meta_desc: "GeoDeploy pairs TypeSafe Jev's confidence-scored decisions with the Pulumi Automation API to place and scale Kubernetes across AWS, Azure, and Google Cloud."
 # Leave blank — add a real hero image later with /blog-feature-image or a
