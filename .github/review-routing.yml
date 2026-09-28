@@ -211,6 +211,18 @@ overrides:
       get-started trees -- administration, ai/neo, deployments,
       discovery-governance, esc, iac, and the top-level one.
 
+  - paths:
+      - content/what-is/
+      # The section index that groups the what-is pages
+      - data/what_is_sections.yml
+    role: marketing
+    why: >-
+      The what-is articles are SEO content that marketing owns (and is
+      rebooting, pulumi/marketing#1735), not general docs. They classify as
+      `domain:docs` so they keep the docs review criteria, but docs-guild
+      was being asked to approve them. The what-is templates under layouts/
+      already reach marketing through `domain:frontend`.
+
 # -----------------------------------------------------------------------------
 # STAGING EVIDENCE
 # -----------------------------------------------------------------------------
