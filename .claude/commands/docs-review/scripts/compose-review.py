@@ -2113,7 +2113,22 @@ def render_brief_orient() -> list[str]:
     ]
 
 
-def render_author_orient(n_blocking: int) -> list[str]:
+# A PR whose author is an automation that never reads this card. Today that
+# is the content-review lanes (pulumi-bot pushes `content-review/*`). Their
+# cards used to tell "the PR author" to answer, and the author never did:
+# glow-up findings sat open for days with nobody addressed (#21897). The
+# marker rides the card so the refresh lanes, which re-stamp the orienting
+# callout from the card alone (build-evidence._fix_header), keep the right
+# audience without knowing the PR's branch.
+AUTOMATED_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR -->"
+AUTOMATED_AUTHOR_BRANCH_PREFIXES = ("content-review/",)
+
+
+def is_automated_branch(branch: str) -> bool:
+    return any(str(branch or "").startswith(p) for p in AUTOMATED_AUTHOR_BRANCH_PREFIXES)
+
+
+def render_author_orient(n_blocking: int, automated: bool = False) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
@@ -2124,6 +2139,27 @@ def render_author_orient(n_blocking: int) -> list[str]:
     authors lost the open items under a screenful of instructions). The
     callout is the part of the card everyone reads; the fold keeps the
     worked examples one click away."""
+    if automated and n_blocking:
+        # Nobody on the author side will answer. Say who does: the
+        # content-review autofix makes one pass as the author, and whatever
+        # it leaves open belongs to the reviewer triage requested.
+        return [
+            "> [!IMPORTANT]",
+            "> **Automation opened this PR and does not read this card.** The content-review "
+            "autofix answers each item once; anything still open after that is for **you, the "
+            "requested reviewer**, to settle before merge.",
+            ">",
+            "> **To settle an item:** push a fix, or reply "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "A reply without the `#update-review` tag doesn't count. "
+            "Examples: **How to answer** at the bottom.",
+        ]
+    if automated:
+        return [
+            "> [!NOTE]",
+            "> Nothing here needs an answer. Automation opened this PR; a human reviewer "
+            "still approves the merge.",
+        ]
     if n_blocking:
         return [
             "> [!IMPORTANT]",
@@ -2517,7 +2553,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         header_verb = f"{n_blocking} {noun} merge"
     else:
         header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
-    orient = render_author_orient(n_blocking)
+    automated = is_automated_branch(getattr(args, "head_branch", ""))
+    orient = render_author_orient(n_blocking, automated)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
         if not rows:
@@ -2528,6 +2565,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
+        *([AUTOMATED_AUTHOR_MARKER] if automated else []),
         f"{AUTHOR_HEADER_PREFIX}{rev} — {header_verb}",
         "",
         *orient,

@@ -747,7 +747,8 @@ def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
                 k = j
                 while k < len(lines) and lines[k].startswith(">"):
                     k += 1
-                lines[j:k] = cr.render_author_orient(n_blocking)
+                lines[j:k] = cr.render_author_orient(
+                    n_blocking, cr.AUTOMATED_AUTHOR_MARKER in body)
             break
     return "\n".join(lines) + ("\n" if body.endswith("\n") else "")
 
