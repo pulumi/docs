@@ -20,14 +20,25 @@ aliases:
 
 Now run `pulumi up` to start deploying your new storage bucket:
 
+{{% choosable "os" "macos,linux" %}}
+
 ```bash
 $ pulumi up
 ```
 
+{{% /choosable %}}
+{{% choosable "os" "windows" %}}
+
+```powershell
+> pulumi up
+```
+
+{{% /choosable %}}
+
 This command first shows you a **preview** of the changes that will be made:
 
 ```output
-Previewing update (dev)
+Previewing update (dev):
 
      Type                   Name            Plan
  +   pulumi:pulumi:Stack    quickstart-dev  create
@@ -80,6 +91,8 @@ The bucket name is available as a stack output. To view it:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
+{{% choosable os "linux,macos" %}}
+
 {{% choosable language typescript %}}
 
 ```bash
@@ -125,6 +138,60 @@ $ pulumi stack output bucketName
 ```bash
 $ pulumi stack output bucketName
 ```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
+{{% choosable os "windows" %}}
+
+{{% choosable language typescript %}}
+
+```powershell
+> pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python,hcl" %}}
+
+```powershell
+> pulumi stack output bucket_name
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```powershell
+> pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```powershell
+> pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```powershell
+> pulumi stack output bucketName
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```powershell
+> pulumi stack output bucketName
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 

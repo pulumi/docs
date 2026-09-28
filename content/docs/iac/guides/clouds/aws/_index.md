@@ -37,19 +37,10 @@ The guides use the following packages:
 - [Choosing a provider](/docs/iac/guides/clouds/aws/providers/)
 - [Pulumi CDK Adapter](/dev/tutorials/aws-cdk/)
 
-## Containers
+## Tutorials and examples
 
-- [Elastic Container Service (ECS)](/dev/tutorials/aws-ecs/)
-- [Elastic Kubernetes Service (EKS)](/dev/tutorials/aws-eks/)
-- [Elastic Container Registry (ECR)](/dev/tutorials/aws-ecr/)
+The [Dev Center](/dev/browse/cloud/aws/) has hands-on AWS tutorials, templates, and examples. Browse them by topic:
 
-## Serverless
-
-- [Lambda](/dev/tutorials/aws-lambda/)
-- [API Gateway](/dev/tutorials/aws-api-gateway/)
-
-## Core infrastructure
-
-- [Elastic Load Balancing (ELB)](/dev/tutorials/aws-elb/)
-- [Identity and Access Management (IAM)](/dev/tutorials/aws-iam/)
-- [Virtual Private Cloud (VPC)](/dev/tutorials/aws-vpc/)
+- [Containers](/dev/browse/?cloud=aws&tag=containers): Amazon ECS, Amazon EKS, and Amazon ECR
+- [Serverless](/dev/browse/?cloud=aws&tag=serverless): AWS Lambda and Amazon API Gateway
+- [Networking](/dev/browse/?cloud=aws&tag=networking): VPCs, load balancers, and related infrastructure
