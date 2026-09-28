@@ -122,16 +122,6 @@
                   "refuted",
                   "deferred",
                   "accepted",
-                  "not-applicable",
-                  "author-accepted"
-                ]
-              },
-              "original_disposition": {
-                "description": "The disposition the PR author actually typed, before resolve-handler.py collapsed it into `author-accepted` (issue #21640). Present only when disposition is `author-accepted`; one of refuted/deferred/accepted/not-applicable.",
-                "enum": [
-                  "refuted",
-                  "deferred",
-                  "accepted",
                   "not-applicable"
                 ]
               },

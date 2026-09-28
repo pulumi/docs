@@ -298,7 +298,7 @@ jobs:
 
             Review each platform's copy using the rules in `.claude/commands/social-media-review/SKILL.md`.
 
-            IMPORTANT: Keep the review short and scannable. Use `#### Platform — PASS` or `#### Platform — FAIL` headings with bullet-pointed reasons. No analysis paragraphs, no rubric citations. A blogger should read it in 30 seconds.
+            IMPORTANT: Keep the review short and scannable. Use `#### Platform — PASS` or `#### Platform — FAIL` headings with bullet-pointed reasons. No analysis paragraphs, no rubric citations. A blogger should read it in 30 seconds. Follow SKILL.md §Output format exactly: the orienting `> [!NOTE]` line under the title, one line instead of three `— missing` headings when every platform is missing, and `### Suggested copy` / `### Suggestions (advisory)` collapsed inside `<details>`.
 
             Write the review to `.social-review.md`. Do NOT post a PR comment — a subsequent workflow step handles that. The file's body must:
 

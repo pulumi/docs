@@ -14,7 +14,7 @@ menu:
 When using Pulumi Deployments, you have options for where your workflows run:
 
 - **[Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/)**: runners in the Pulumi hosted pool, managed by Pulumi.
-- **[Customer-managed deployment runners](/docs/deployments/concepts/customer-managed-runners/)**: self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/discovery-governance/discovery/) scans, and [policy evaluations](/docs/discovery-governance/policy/).
+- **[Customer-managed deployment runners](/docs/deployments/concepts/customer-managed-runners/)**: self-hosted runners that can access private networks and resources, supporting deployments, [Discovery](/docs/discovery-governance/concepts/discovery/) scans, and [policy evaluations](/docs/discovery-governance/concepts/policy-as-code/).
 
 To choose where a stack's deployments run, open the stack's **Settings** → **Deploy** page and pick a pool from the **Deployment runner pool** dropdown. Choose **Pulumi hosted pool** to use Pulumi-managed runners.
 

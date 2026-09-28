@@ -704,6 +704,8 @@ subshell
 substring
 subteam
 subteams
+subtree
+subtrees
 Supabase
 supergraph
 superlinearly

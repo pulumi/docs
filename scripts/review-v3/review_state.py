@@ -4,25 +4,19 @@
 REVIEW_STATE is the disposition source of truth for the v3 review workflow: a
 single-line HTML comment embedded in the bot-owned author-facing pinned
 comment, carrying every finding's answer (fixed / refuted / deferred /
-accepted / not-applicable / author-accepted). It lives on the PR — not in
-S3 — because the Sentinel must read it uncredentialed, from fork PRs,
+accepted / not-applicable). It lives on the PR — not in S3 — because the Sentinel must read it uncredentialed, from fork PRs,
 atomically with the findings it answers; the credentialed record job
 mirrors it one-way into `pr-review/<pr>/latest.json` for telemetry.
 
-`author-accepted` (issue #21640) is never typed by a human; resolve-handler
-derives it whenever the resolving actor is the PR author and the disposition
-they typed is one of AUTHOR_COLLAPSIBLE. The entry keeps the author's actual
-answer in `original_disposition` — needed both to weigh the note-required
-check against the answer that was actually given, and to show the human
-approver what the author waved through rather than just that they did.
-
-Three writers share this module and MUST merge rather than overwrite:
-`review-resolve.yml` (the deterministic `/resolve` command), the update lane
-(`apply-update.py`), and nothing else. Merging is per finding-id with the
-newest `updated_at` winning — the update lane's model step can take ~10
-minutes between fetching the comment and writing it back, and a `/resolve`
-landing in that window must survive (the lost-update race from the v3 design
-review).
+Two lanes publish the author card, and this block with it: the full-review
+lane (claude-code-review.yml — a ready-transition, triage's auto-fire,
+`#new-review`) and the update lane (`apply-update.py`), which is the only one
+that records dispositions. Their runs overlap routinely (#21785, #21871), and
+the update lane's model step can take ~10 minutes between fetching the card
+and writing it back. So it MUST merge rather than overwrite: per finding-id,
+newest `updated_at` winning, against a card re-fetched just before publish.
+pinned-comment.sh's stale-publish guard (#21788) is the other half: it
+refuses to publish a card composed before the one already on the PR.
 
 Serialization escapes `<` and `>` inside the JSON payload: an HTML comment
 terminates at the first `-->`, so a disposition note containing one would
@@ -41,18 +35,7 @@ import sys
 from datetime import datetime, timezone
 
 SCHEMA = 1
-DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable", "author-accepted")
-# The disposition a human may type in a `/resolve` comment. `author-accepted`
-# is never typed directly — resolve-handler.py derives it from USER_DISPOSITIONS
-# plus the actor's identity (see AUTHOR_COLLAPSIBLE below), so it is excluded
-# here to keep it out of the user-facing grammar.
-USER_DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
-# The subset of USER_DISPOSITIONS that collapse into `author-accepted` when
-# the resolving actor is the PR author (issue #21640): the author's own word
-# on a judgment call, not a verified fix, so it must stay visible to the
-# human approver instead of reading exactly like a maintainer's answer.
-# `fixed` is excluded — a real code change, not a disposition to relabel.
-AUTHOR_COLLAPSIBLE = ("refuted", "deferred", "accepted", "not-applicable")
+DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
 NOTE_REQUIRED = ("deferred", "accepted", "not-applicable")
 FINDING_ID_RE = re.compile(r"^F\d+$")
 BLOCK_RE = re.compile(r"<!-- REVIEW_STATE (\{.*?\}) -->")
@@ -116,25 +99,8 @@ def validate_state(state: object) -> list[str]:
         disposition = entry.get("disposition")
         if disposition not in DISPOSITIONS:
             problems.append(f"{prefix}: disposition must be one of {DISPOSITIONS}")
-        original_disposition = entry.get("original_disposition")
-        if disposition == "author-accepted":
-            if original_disposition not in AUTHOR_COLLAPSIBLE:
-                problems.append(
-                    f"{prefix}: original_disposition must be one of {AUTHOR_COLLAPSIBLE} "
-                    f"when disposition is 'author-accepted'"
-                )
-        elif original_disposition is not None:
-            problems.append(f"{prefix}: original_disposition only applies to 'author-accepted'")
-        # The note requirement follows the disposition the actor actually
-        # answered with. `author-accepted` collapses four dispositions —
-        # including `refuted`, which never requires a note — into one value,
-        # so keying the check off the collapsed value would either demand a
-        # note `refuted` never needed or (worse) waive the note `accepted`
-        # always needed. original_disposition keeps the bar exactly where it
-        # was before the collapse.
-        note_check = original_disposition if disposition == "author-accepted" else disposition
-        if note_check in NOTE_REQUIRED and not str(entry.get("note", "")).strip():
-            problems.append(f"{prefix}: disposition '{note_check}' requires a note")
+        if disposition in NOTE_REQUIRED and not str(entry.get("note", "")).strip():
+            problems.append(f"{prefix}: disposition '{disposition}' requires a note")
         if not str(entry.get("actor", "")).strip():
             problems.append(f"{prefix}: actor is required")
         ts = entry.get("updated_at")
@@ -143,7 +109,7 @@ def validate_state(state: object) -> list[str]:
         if "bulk" in entry and not isinstance(entry["bulk"], bool):
             problems.append(f"{prefix}: bulk must be a boolean")
         unknown = set(entry) - {
-            "disposition", "note", "actor", "sha", "bulk", "updated_at", "original_disposition",
+            "disposition", "note", "actor", "sha", "bulk", "updated_at",
         }
         if unknown:
             problems.append(f"{prefix}: unknown keys {sorted(unknown)}")
@@ -189,26 +155,12 @@ def set_disposition(
     sha: str = "",
     bulk: bool = False,
     now: datetime | None = None,
-    original_disposition: str | None = None,
 ) -> dict:
-    """Return a new state with one disposition applied (validated).
-
-    `original_disposition` is required (and must be in AUTHOR_COLLAPSIBLE)
-    when `disposition` is `author-accepted`, and forbidden otherwise — see
-    the matching rule in validate_state.
-    """
+    """Return a new state with one disposition applied (validated)."""
     if disposition not in DISPOSITIONS:
         raise ValueError(f"unknown disposition '{disposition}'")
-    if disposition == "author-accepted":
-        if original_disposition not in AUTHOR_COLLAPSIBLE:
-            raise ValueError(
-                f"'author-accepted' requires original_disposition in {AUTHOR_COLLAPSIBLE}"
-            )
-    elif original_disposition is not None:
-        raise ValueError("original_disposition only applies to 'author-accepted'")
-    note_check = original_disposition if disposition == "author-accepted" else disposition
-    if note_check in NOTE_REQUIRED and not note.strip():
-        raise ValueError(f"disposition '{note_check}' requires a note")
+    if disposition in NOTE_REQUIRED and not note.strip():
+        raise ValueError(f"disposition '{disposition}' requires a note")
     if not FINDING_ID_RE.match(finding_id):
         raise ValueError(f"bad finding id '{finding_id}'")
     if not actor.strip():
@@ -219,8 +171,6 @@ def set_disposition(
         entry["note"] = note.strip()
     if sha:
         entry["sha"] = sha
-    if original_disposition is not None:
-        entry["original_disposition"] = original_disposition
     new_state = {
         "schema": SCHEMA,
         "high_water": state.get("high_water", 0),
@@ -280,58 +230,6 @@ def _self_test() -> int:
         pass
     else:
         raise AssertionError("accepted without a note must be rejected")
-
-    # author-accepted: the collapsed disposition an author's own /resolve
-    # produces (issue #21640) — original_disposition required, and the note
-    # requirement follows the ORIGINAL disposition, not the collapsed one.
-    aa = set_disposition(
-        empty_state(), "F5", "author-accepted", actor="alice",
-        note="will fix in a follow-up", original_disposition="accepted", now=now,
-    )
-    assert aa["findings"]["F5"]["disposition"] == "author-accepted"
-    assert aa["findings"]["F5"]["original_disposition"] == "accepted"
-    round_tripped_aa = parse_state("x\n" + serialize_block(aa) + "\ny")
-    assert round_tripped_aa is not None
-    assert round_tripped_aa["findings"]["F5"]["original_disposition"] == "accepted"
-
-    # original_disposition 'refuted' never required a note — that must still
-    # hold true after the collapse.
-    aa_refuted = set_disposition(
-        empty_state(), "F6", "author-accepted", actor="alice",
-        original_disposition="refuted", now=now,
-    )
-    assert "note" not in aa_refuted["findings"]["F6"]
-
-    try:
-        set_disposition(empty_state(), "F7", "author-accepted", actor="alice",
-                        note="x", original_disposition="accepted")
-    except ValueError:
-        raise AssertionError("author-accepted 'accepted' with a note must be accepted, not rejected")
-
-    try:
-        set_disposition(empty_state(), "F8", "author-accepted", actor="alice",
-                        original_disposition="accepted")
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("author-accepted collapsing 'accepted' without a note must be rejected")
-
-    try:
-        set_disposition(empty_state(), "F10", "author-accepted", actor="alice", note="n")
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("author-accepted with no original_disposition must be rejected")
-
-    try:
-        set_disposition(empty_state(), "F11", "fixed", actor="alice", original_disposition="accepted")
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("original_disposition on a non-author-accepted entry must be rejected")
-
-    assert "author-accepted" not in USER_DISPOSITIONS
-    assert set(AUTHOR_COLLAPSIBLE) <= set(USER_DISPOSITIONS)
 
     assert parse_state("no block here") is None
     try:

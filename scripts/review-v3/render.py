@@ -60,7 +60,7 @@ BUCKET_LABEL = {
 }
 HIDDEN_REASON_PREFIXES = ("owner:", "label:")  # rendered elsewhere on the row
 # Chips that change what you'd click stay visible; the rest fold behind "why".
-PRIMARY_CODES = ("warnings", "outstanding", "self-accepted", "cluster", "directional", "duplicate", "mergeable", "checks",
+PRIMARY_CODES = ("warnings", "outstanding", "cluster", "directional", "duplicate", "mergeable", "checks",
                  "review", "scrutiny", "blog", "handed-off", "draft", "route", "merging-over", "link-fixes", "gate",
                  "sent-back", "unblock")
 # Whole codes (not families) that change what you'd click: `author:self`
@@ -233,7 +233,6 @@ SIMPLE_HELP = {
     "not-governed": "The Sentinel merge gate does not apply to this PR.",
     "draft": "A draft PR. It only appears because you asked for it by number.",
     "trust:membership-unreadable": "The token could not read org membership, so the author is treated as external and gets the stricter treatment.",
-    "self-accepted": "A finding on this PR was marked answered by the PR's own author. Their call on their own work, so the queue does not count it as answered.",
 }
 
 
@@ -280,18 +279,11 @@ def chip_title(r: str) -> str:  # noqa: C901 — one branch per code, flat on pu
             ids = detail.partition(":")[2]
             text = (f"{n} reviewer-check finding{'s' if n != '1' else ''} the review raised and nobody has answered"
                     + (f" ({ids})" if ids else "") + ". They do not block a merge, but they are unanswered.")
-        elif code == "outstanding" and first == "judged":
-            ids = detail.partition(":")[2]
-            text = ("Blocking findings the judge step has answered"
-                    + (f" ({ids})" if ids else "") + ": approving this row posts their /resolve lines before it merges, "
-                    "so they no longer hold it. Change a call to deferred and the row goes back to blocked.")
         elif code == "outstanding":
             n = first or "Some"
             ids = detail.partition(":")[2]
             text = (f"{n} blocking finding{'s' if n != '1' else ''} still open on the author card"
-                    + (f" ({ids})" if ids else "") + ". Answer or refute them before this merges.")
-        elif code == "self-accepted":
-            text = f"{detail} was marked answered by the PR's own author, so the queue does not count it as answered."
+                    + (f" ({ids})" if ids else "") + ". The author answers them — a fix, or @claude #update-review — before this merges.")
         elif code == "cluster":
             cid = first
             rest = detail.partition(":")[2]
@@ -411,7 +403,7 @@ VERDICT_HELP = {
     "blocked": "Nothing you can do here until something else moves. The box below names the blocker.",
 }
 ACTION_HELP = {
-    "stamp": "Approve this PR, recording a /resolve comment for each judged finding first.",
+    "stamp": "Approve this PR.",
     "stamp-merge": "Approve and squash-merge, even though the author is a person and would normally merge their own PR.",
     "stamp-no-merge": "Approve without merging, leaving the merge to someone else.",
     "request-changes": "Post a changes-requested review built from this row's findings and label it needs-author-response. Nothing merges; the author's turn.",
@@ -506,13 +498,13 @@ def diffq(j: dict, *, open_: bool = True) -> str:
 
 
 # The badge answers "why doesn't this finding stop the merge?", in the
-# reader's terms, and the title says what approving the row does about it.
-# Nothing here is the author speaking: the PR's author has not answered.
+# reader's terms. It is the approver's own call, kept on the board: nothing
+# is posted for it, and it never answers a finding on the author's behalf.
 DISPOSITION_BADGE = {
-    "fixed": ("go", "already fixed", "The diff already addresses this finding. Approving records it as fixed."),
-    "refuted": ("go", "not a real issue", "The review got this one wrong. Approving posts `/resolve <id> refuted` with the reason below, and the finding closes."),
-    "accepted": ("go", "fair, not blocking", "The finding stands but is not worth holding the PR for. Approving posts `/resolve <id> accepted` with the reason below."),
-    "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR. Approving posts `/resolve <id> not-applicable` with the reason below."),
+    "fixed": ("go", "already fixed", "The diff already addresses this finding."),
+    "refuted": ("go", "not a real issue", "The review got this one wrong."),
+    "accepted": ("go", "fair, not blocking", "The finding stands but is not worth holding the PR for."),
+    "not-applicable": ("go", "doesn't apply", "The finding does not apply to this PR."),
     "deferred": ("hold", "needs the author", "Not yours to fix. Use the row's send-back button and this becomes the author's to answer."),
 }
 DEFERRED_NO_AUTHOR = ("hold", "no author to ask",
@@ -533,11 +525,8 @@ def judgment_footer(pr: dict) -> str:
     if not js:
         return ""
     held = [j for j in js if j.get("disposition") == "deferred"]
-    resolved = [j for j in js if j.get("disposition") in ("fixed", "refuted", "accepted", "not-applicable")]
     sends_back = any(a.get("id") == "request-changes" for a in pr.get("actions") or [])
     bits = []
-    if resolved:
-        bits.append(f"Approving the row records {'these calls' if len(resolved) != 1 else 'this call'} on the PR, one `/resolve` comment each, then merges if the button says merge.")
     if held:
         bits.append(("Sending it back" if sends_back else "Closing it out")
                     + f" hands {'the ones' if len(held) != 1 else 'the one'} marked "
@@ -869,7 +858,7 @@ def pending_judgment(queue: dict, pr: dict) -> str:
         # Nothing open on the review, but the row still needs a call. Say what
         # is asking for one instead of implying findings nobody can see.
         why = next((r for r in pr.get("reasons") or []
-                    if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape", "self-accepted",
+                    if r.split(":")[0] in ("review", "scrutiny", "blog", "size", "shape",
                                            "directional", "duplicate", "desc", "brief", "merging-over")), None)
         because = chip_title(why).rsplit(" (", 1)[0] if why else "The queue could not clear every stamp gate on this row."
         skipped = why_no_review(pr) if (why or "").startswith("review:absent") else ""
@@ -1147,7 +1136,7 @@ HELP_SECTIONS = [
     ]),
     ("Judgment badges", [
         "A badge says why a finding does not stop the merge. It is never the author's answer: nobody has answered anything here.",
-        "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are recorded on the PR as <code>/resolve</code> comments when you approve the row, before it merges.",
+        "<b>not a real issue</b>, <b>fair, not blocking</b> and <b>doesn't apply</b> are your own calls, kept on the board. Nothing is posted for them, and they never answer a blocking finding: those are the author's, so a row with one stays blocked.",
         "<b>needs the author</b> goes back with the send-back button; <b>no author to ask</b> means a workflow opened the PR, so a send-back would go unread — fix the branch yourself, ask Claude on the PR, or close it out and let the lane re-queue the page.",
     ]),
     ("Where a row came from", [
@@ -1405,7 +1394,7 @@ def render_board(queue: dict, *, artifact: bool = False, include_handed_off: boo
         style=STYLE,
         eyebrow=header_line(queue),
         h1="PR review queue",
-        dek=esc(f"{len(prs)} open PRs, one verdict each (stamp / judge / route / blocked), grouped by owner and domain and listed in PR number order. Stamp rows start selected; every other decision is a button on the row it concerns, and every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding says why it does not stop the merge; the author has not answered anything here."),
+        dek=esc(f"{len(prs)} open PRs, one verdict each (stamp / judge / route / blocked), grouped by owner and domain and listed in PR number order. Stamp rows start selected; every other decision is a button on the row it concerns, and every button is a toggle that adds to the command at the bottom — the page never talks to GitHub. A badge beside a finding is your own call on it: it stays on the board, is never posted, and never answers a blocking finding for the author."),
         tally=f'<div class="tally">{tally}</div>' + help_html() + '<div class="progress" id="progress"></div>',
         filters=filter_bar({**queue, "prs": prs}),
         clusters="",
@@ -1620,7 +1609,7 @@ button.pr.rowfold{cursor:pointer;color:var(--ink-3);font-weight:500;font-size:11
 .meta{font-size:12.5px;color:var(--ink-3);margin-bottom:4px}.meta span{margin-right:10px}.meta .age{font-family:"IBM Plex Mono",monospace;font-size:11px;margin-right:0}.meta .age.old{color:var(--hold)}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px}
 .chip{font-size:10.5px;border:1px solid var(--line-2);border-radius:2px;padding:1px 6px;color:var(--ink-2);background:var(--surface-2);white-space:nowrap}
-.chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-self-accepted,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
+.chip.r-collision,.chip.r-directional,.chip.r-duplicate,.chip.r-checks,.chip.r-mergeable{border-color:var(--stop);color:var(--stop)}
 .empty{margin:1rem 0;color:var(--ink-2);font-size:.95rem}.empty .btn{margin-left:.5rem}
 .chip.r-warnings,.chip.r-outstanding,.chip.r-scrutiny,.chip.r-blog,.chip.r-size,.chip.r-shape,.chip.r-review{border-color:var(--hold);color:var(--hold)}
 .chip.r-route{border-color:var(--route);color:var(--route)}

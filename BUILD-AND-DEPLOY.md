@@ -1568,7 +1568,7 @@ The docs CloudFront distribution uses StackReferences to dynamically configure o
 1. External stack (for example, registry) deploys → creates new CloudFront distribution with new domain
 2. Docs infrastructure automatically reads the updated output via StackReference on next deployment
 3. Docs CloudFront distribution origins are updated with the new domain
-4. CloudFront changes propagate globally (15-20 minutes)
+4. CloudFront changes propagate globally (typically within several minutes)
 
 **Important:** StackReferences always read the latest outputs from referenced stacks. No manual refresh is needed.
 
@@ -1602,6 +1602,76 @@ Examples:
 - Object ownership: BucketOwnerPreferred
 - Versioning: Disabled (ephemeral buckets)
 - Lifecycle: Manual cleanup via bucket-cleanup workflows
+
+**Bucket metadata (`origin-bucket-metadata.json`):**
+
+At the end of `sync-and-test-bucket.sh`, `render_origin_bucket_metadata()` (in
+`scripts/common.sh`) writes this document to the project root and uploads a copy into the
+bucket it just built, where it is served as `/metadata.json`:
+
+```json
+{
+  "timestamp": 1758400000000,
+  "commit": "a1b2c3d4e5f6...",
+  "runId": 35266996109,
+  "runAttempt": 1,
+  "bucket": "www-production-pulumi-docs-origin-push-a1b2c3d4-k3f9j2",
+  "url": "http://www-production-pulumi-docs-origin-....s3-website.us-west-2.amazonaws.com"
+}
+```
+
+`runId` and `runAttempt` are the GitHub Actions run that produced the bucket, as JSON
+numbers, or `null` for a build that didn't come from CI (a laptop or dev-stack deploy).
+Consumers:
+
+- `infrastructure/index.ts` reads `.bucket` and makes it the CloudFront origin. This is
+  the publish: `pulumi up` swings the live origin to whatever this file names.
+- `scripts/check-publish-ordering.js` reads `.runId`, `.commit`, and `.timestamp` from
+  both this file and the live bucket's uploaded copy (see below).
+- `scripts/list-recent-buckets.sh` reads `.bucket`, `.url`, `.commit`, and `.timestamp`
+  when deciding which buckets are safe to delete.
+
+**Publish-ordering guard:**
+
+Because `pulumi up` publishes whatever the local metadata file names, and because
+`scripts/await-in-progress.js` serializes deploys only probabilistically (it waits on
+runs with a lower run id, and gives up after 45 minutes), an older run can reach
+`pulumi up` after a newer run has already published and flip the live origin backwards.
+Nothing about that is visible: the run reports green, and
+`post-deployment-health-check.yml` checks that the site is up, never which commit it is
+serving.
+
+`scripts/check-publish-ordering.js` runs immediately before `pulumi up` in
+`scripts/run-pulumi.sh` and refuses that publish. It compares the incoming build's
+`runId` against the `runId` in the metadata of the bucket the stack currently names as
+its origin (`pulumi stack output originS3BucketName`, then an S3 read of that bucket's
+`metadata.json`). Run ids are assigned by GitHub and strictly increasing, so the
+comparison needs no clock and no git history.
+
+| Stack | Behavior |
+| --- | --- |
+| `www-production` | Aborts the deploy (exit 1) |
+| `www-testing` | Logs a `::warning::` and continues |
+| Dev stacks, `staging`, PR previews | Skipped |
+
+Testing is warn-only because its deploys are deliberately unordered — `staging-deploy.sh`
+dispatches `testing-build-and-deploy.yml` at PR branch refs, and the next merge to master
+resets `pulumi-test.io` by design.
+
+Everything the check can't determine — a first deploy, a cleaned-up live bucket,
+unreadable or run-id-less metadata — resolves to "allow, and say so." The one thing it
+will not do is guess: if it can't tell which stack it's about to publish to, it exits 2
+rather than skip, because a skipped check reads exactly like a passing one.
+
+**Overriding it for a deliberate rollback:** the ordinary rollback (`git revert` and
+push) needs nothing — a revert is a new commit in a newer run. To re-publish an *older*
+build as-is, dispatch a *new* "Build and deploy" run via `workflow_dispatch` at that
+ref: a new run has a newer run id, so it publishes normally. Re-running the old run
+won't work, because a re-run keeps its old run id. Check the **Publish even if a newer
+deploy already published** input only if another run may publish while yours waits
+its turn. From a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`. Pinning
+`originBucketNameOverride` also bypasses the check, since the metadata file isn't what
+gets published in that case.
 
 **Uploads Bucket (Persistent):**
 
@@ -1848,6 +1918,9 @@ The atomic deployment strategy ensures zero-downtime deployments with instant ro
    ./scripts/run-pulumi.sh
    ```
 
+   - Checks publish ordering first (`scripts/check-publish-ordering.js`) and aborts on
+     production if a newer run has already published — see "Publish-ordering guard"
+     under Origin Bucket, above
    - Pulumi reads `origin-bucket-metadata.json`
    - Updates CloudFront origin to new bucket
    - Applies infrastructure changes
@@ -1931,6 +2004,15 @@ CloudFront switches origins within 1-2 minutes (no rebuild required).
 **When to use:** Infrastructure issues, external service problems, need fast rollback
 **Pros:** Very fast (~1-2 min), no rebuild needed
 **Cons:** Requires Pulumi Cloud access, doesn't fix code issues
+
+**Note on the publish-ordering guard:** neither Method 1 nor Method 2 is affected by it.
+A revert is a new commit in a newer run, and a pinned `originBucketNameOverride` bypasses
+the check outright. The only rollback it stops is re-publishing an *older* build as-is —
+re-running an earlier "Build and deploy" run. Dispatch a new run at the older ref
+instead; it publishes normally because it's the newer run. Check the **Publish even if
+a newer deploy already published** input only if another run may publish while yours
+waits (or, from a laptop, set `ALLOW_OUT_OF_ORDER_PUBLISH=true`). The failure message
+says all of this too, so you don't have to remember it.
 
 **Important:** After the issue is resolved, clear the override to resume normal deployments:
 

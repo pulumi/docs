@@ -150,7 +150,7 @@ def test_blocking_count_accepts_composed_count_over_in_place_rewrite() -> None:
     """The model rewrote F1 in place as Spurious and, as instructed, left the
     composer's header alone. build-evidence.py recomputes the header after
     validation, so the composed count (3) is legal here — and so is the
-    recomputed one (2), which the update/resolve lanes re-validate
+    recomputed one (2), which the update lane re-validates
     (pulumi/docs#21372: refusing the composed count failed the review)."""
     row = next(l for l in AUTHOR.splitlines() if l.startswith("| **F1** |"))
     cells = row.split(" | ")
@@ -300,7 +300,7 @@ if __name__ == "__main__":
 
 
 def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
-    """A `/resolve F3 accepted` racing an update run leaves F3's row in ❓ with
+    """A disposition from a racing update run leaves F3's row in ❓ with
     a disposition; the header counts it as answered and this rule must agree."""
     import importlib.util, sys
     from pathlib import Path
@@ -320,3 +320,12 @@ def test_blocking_count_excludes_dispositioned_and_rewritten_rows(tmp_path):
                         "--brief-file", str(b), "--pr", "999", "--repo", "pulumi/docs"],
                        capture_output=True, text=True)
     assert "v3-blocking-count" not in r.stdout + r.stderr, r.stdout + r.stderr
+
+
+def test_struck_through_resolved_bullet_counts():
+    """update.md says to strike a fixed finding through as it moves to ✅
+    Resolved; the count-table check must still see it as a finding."""
+    body = ("### ✅ Resolved since last review\n\n"
+            "- ~~**[L6]** `content/docs/x.md` — stale version~~ (resolved in abc1234)\n"
+            "- **[L9]** `content/docs/x.md` — concede: author is right\n")
+    assert len(vp.extract_bucket_bullets(body, "✅ Resolved")) == 2

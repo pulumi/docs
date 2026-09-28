@@ -11,15 +11,18 @@ procedure step, a page trying to be two things — against a forced tool schema.
 `.readthrough-findings.json`) and synthesizes one `🚩 flagged` detector verdict
 per finding (`route: "preflight"`); Opus then triages each into the normal
 buckets with the standard two-question test (a reader-blocking defect can be a
-🚨 blocker). The existing-content sweep reads the same artifact directly: it
-applies `local_repair` findings as fixes and flags `reconception` findings
-without rewriting them.
+🚨 blocker). The existing-content sweep reads the same artifact directly: its
+fix lane banks every finding without applying it, and its glow-up lane
+executes the banked findings under human review.
 
-Why a direct Anthropic API call (not `claude-code-action`): same rationale as
-`extract-claims-llm.py` — one model call against a forced tool-use schema
-(`tool_choice`, `strict`) with `thinking: {type: "disabled"}` (Sonnet 5 defaults
-adaptive thinking on and rejects non-default sampling params, so we disable
-thinking and let the strict schema constrain the output). The system prompt is `references/readthrough.md`
+Why a direct Anthropic API call (not `claude-code-action`): one bounded model
+call per page against a strict tool-use schema, which `claude-code-action`
+doesn't expose. It runs on Opus 5.5 at `high` effort with adaptive thinking
+(`extract-claims-llm.py` shares the call shape but stays on Sonnet 5 with
+thinking disabled and a forced `tool_choice`). Opus 5.5 can't disable
+thinking and rejects a forced `tool_choice` (both 400), so the tool is offered
+with `tool_choice: auto` and a response without it is an error, not an empty
+result. The system prompt is `references/readthrough.md`
 (the rubric: a closed list of anchored failure modes + the `fix_class` boundary),
 verbatim, so the stable prefix stays prompt-cacheable.
 
@@ -37,7 +40,7 @@ Output schema:
     {
       "schema_version": 1,
       "ran": true,                       # false only when the lane was skipped (no API key)
-      "model": "claude-sonnet-5",
+      "model": "claude-opus-5-5",
       "findings": [
         {"file": "content/docs/x.md",
          "line_range": "L40-58",         # references the numbered file body we sent,
@@ -78,11 +81,23 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-5"
+DEFAULT_MODEL = "claude-opus-5-5"
+EFFORT = "high"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-MAX_TOKENS = 8192
-HTTP_TIMEOUT = 120  # seconds per API call
+# Thinking shares this budget. At 8192, Sonnet 5 already truncated 3 of 21
+# page-calls mid-tool-call and the findings vanished silently (2026-09-22).
+MAX_TOKENS = 32000
+HTTP_TIMEOUT = 300  # seconds per API call; a high-effort page can think for minutes
+# Wall-clock budget for the whole run. Once it's spent, calls that haven't started
+# are skipped (recorded in errors[]) and in-flight calls get only what's left, so
+# the lane can't eat the review job's budget: 5 waves of 2 x 300s would be ~50 min.
+RUN_BUDGET_S = 600
+_START = time.monotonic()
+
+
+def _remaining() -> float:
+    return RUN_BUDGET_S - (time.monotonic() - _START)
 MAX_RETRIES = 3
 MAX_CONCURRENCY = 4
 FILE_CAP = 20  # process at most this many content files
@@ -420,8 +435,11 @@ def _post_messages(api_key: str, body: dict) -> dict:
     )
     last_err: Exception | None = None
     for attempt in range(MAX_RETRIES):
+        left = _remaining()
+        if left <= 0:
+            raise RuntimeError(f"readthrough time budget ({RUN_BUDGET_S}s) exhausted; call skipped")
         try:
-            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as resp:
+            with urllib.request.urlopen(req, timeout=min(HTTP_TIMEOUT, max(30.0, left))) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             code = e.code
@@ -445,33 +463,41 @@ def _post_messages(api_key: str, body: dict) -> dict:
 
 
 def call_anthropic(api_key: str, system_body: str, user_text: str, model: str) -> tuple[list[dict], dict]:
-    """One forced-tool call. Returns (findings, usage). Raises on hard failure."""
+    """One tool call. Returns (findings, usage). Raises on hard failure,
+    including a truncated response or one that never calls the tool."""
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
-        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
-        # This is one forced-tool call, so disable thinking to preserve the
-        # prior no-thinking behavior; the strict schema does the constraining.
-        "thinking": {"type": "disabled"},
+        "thinking": {"type": "adaptive"},
+        "output_config": {"effort": EFFORT},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
         ],
         "tools": [RECORD_FINDINGS_TOOL],
-        "tool_choice": {"type": "tool", "name": "record_findings"},
+        "tool_choice": {"type": "auto"},
         "messages": [{"role": "user", "content": user_text}],
     }
-    resp = _post_messages(api_key, body)
-    usage = resp.get("usage", {}) or {}
-    findings: list[dict] = []
+    usage: dict = {}
+    for attempt in range(2):
+        resp = _post_messages(api_key, body)
+        for k, v in (resp.get("usage", {}) or {}).items():
+            if isinstance(v, int):
+                usage[k] = usage.get(k, 0) + v
+        # A max_tokens stop mid-tool-call returns an empty tool input; retry once
+        # rather than record "no findings".
+        if resp.get("stop_reason") == "max_tokens" and attempt == 0:
+            continue
+        break
+    if resp.get("stop_reason") == "max_tokens":
+        raise RuntimeError(f"response truncated at max_tokens={MAX_TOKENS} (twice)")
     for block in resp.get("content", []) or []:
         if isinstance(block, dict) and block.get("type") == "tool_use" and block.get("name") == "record_findings":
             inp = block.get("input") or {}
             raw = inp.get("findings")
-            if isinstance(raw, list):
-                findings = [f for f in raw if isinstance(f, dict)]
-            break
-    return findings, usage
+            if not isinstance(raw, list):
+                raise RuntimeError("record_findings call carried no findings list")
+            return [f for f in raw if isinstance(f, dict)], usage
+    raise RuntimeError(f"response never called record_findings (stop_reason={resp.get('stop_reason')})")
 
 
 # ---- per-file processing ---------------------------------------------------

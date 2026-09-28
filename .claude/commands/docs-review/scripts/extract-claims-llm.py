@@ -587,8 +587,19 @@ def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: 
         "tool_choice": {"type": "tool", "name": "extract_claims"},
         "messages": [{"role": "user", "content": user_text}],
     }
-    resp = _post_messages(api_key, body)
-    usage = resp.get("usage", {}) or {}
+    usage: dict = {}
+    for attempt in range(2):
+        resp = _post_messages(api_key, body)
+        for k, v in (resp.get("usage", {}) or {}).items():
+            if isinstance(v, int):
+                usage[k] = usage.get(k, 0) + v
+        # A max_tokens stop mid-tool-call returns an empty tool input; retry once
+        # rather than record "no claims".
+        if resp.get("stop_reason") == "max_tokens" and attempt == 0:
+            continue
+        break
+    if resp.get("stop_reason") == "max_tokens":
+        raise RuntimeError(f"response truncated at max_tokens={MAX_TOKENS} (twice)")
     claims: list[dict] = []
     for block in resp.get("content", []) or []:
         if isinstance(block, dict) and block.get("type") == "tool_use" and block.get("name") == "extract_claims":

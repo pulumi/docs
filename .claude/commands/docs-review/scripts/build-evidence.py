@@ -72,7 +72,7 @@ _BUCKET_RANK = {"reviewer-check": 0, "author-answer": 1, "outstanding": 2, "pree
 # line off the author card on the first live #update-review (2026-09-01).
 _SECTION_TERMINATORS = (
     "### ", "#### ", "<!-- REVIEW_STATE", "<!-- AUTHOR_STATE", "<!-- CLAUDE_REVIEW",
-    "<sub>", "📎 ",
+    "<sub>", *cr.EVIDENCE_LINE_PREFIXES,
 )
 
 
@@ -85,7 +85,8 @@ def is_section_terminator(line: str) -> bool:
 # stub as triaged (caught by test_build_evidence_on_fixtures).
 _SPURIOUS_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*(Spurious|Mis-sourced):\*\*\s*(?P<note>.*)$")
 _PREEXISTING_RE = re.compile(r"^(?:\*[\"']?.{0,160}?[\"']?\*\s+—\s+)?\*\*Pre-existing:\*\*\s*(?P<note>.*)$")
-_PREEXISTING_COUNT_RE = re.compile(r"(💡 \*\*Pre-existing issues in touched files:\*\* )\d+")
+_PREEXISTING_COUNT_RE = re.compile(r"((?:💡 )?\*\*Pre-existing issues in touched files:\*\* )\d+")
+_STYLE_LINE_RE = re.compile(r"^- \*\*Style:\*\* .*$", re.M)
 _HEADER_RE = re.compile(r"^## Author action guide v(?P<rev>\d+) — (?:\d+ items? blocks? merge|nothing blocks merge)\s*$")
 _SUMMARY_RE = re.compile(r"^> \*\*Summary:\*\*\s*(?P<text>.+)$")
 _DETAIL_HEADING_RE = re.compile(r"^#### (?P<id>F\d+|F\?) · Do this\s*$")
@@ -420,15 +421,27 @@ def build(author_body: str, brief_body: str, base: dict,
     brief_out = refresh_facts_line(brief_out, findings)
     # A model-added `F?` row got a real id above; the author card's
     # REVIEW_STATE high-water mark must move with it, or every later reader
-    # (validate-pinned's grammar rule, /resolve's range check) rejects the id
+    # (validate-pinned's grammar rule) rejects the id
     # (fork PR 245, 2026-09-01: brief carried F1 against high_water 0).
     if evidence["high_water"] != state.get("high_water", 0):
         author_out = review_state.replace_block(
             author_out, dict(state, high_water=evidence["high_water"]))
     n_blocking = sum(1 for f in findings if f["bucket"] in ("outstanding", "author-answer"))
     author_out = _fix_header(author_out, n_blocking)
+    _contrib = cr.contributing_url_for(base.get("repo") or "")
+    author_out = restamp_footer(author_out, cr.render_author_footer(_contrib, n_blocking))
+    brief_out = restamp_footer(brief_out, cr.render_reviewer_footer(_contrib))
     n_pre = sum(1 for f in findings if f["bucket"] == "preexisting")
     brief_out = _PREEXISTING_COUNT_RE.sub(lambda m: m.group(1) + str(n_pre), brief_out)
+    # The advisory block is the author card's only non-blocking lane, and the
+    # model may have added `[nit]` bullets to it. Recount before the empty
+    # block is dropped, and restate the brief's rubber-stamp line from the
+    # recount — a stale Vale-only number would under-report the card.
+    n_style, n_nits = count_style_bullets(author_out)
+    evidence["style_suggestions_count"] = n_style + n_nits
+    brief_out = refresh_style_line(brief_out, n_style, n_nits)
+    author_out = drop_empty_style_block(author_out)
+    author_out = drop_empty_author_sections(author_out)
     # The Waiting-on-the-author block is composer-owned: regenerate it from
     # the FINAL findings + dispositions so model edits (promotions included)
     # can never leave it stale.
@@ -485,6 +498,106 @@ def refresh_facts_line(brief_body: str, findings: list[dict]) -> str:
         line += " — " + ", ".join(parts)
     return brief_body[:m.start()] + line + "." + brief_body[m.end():]
 
+
+
+def count_style_bullets(author_body: str) -> tuple[int, int]:
+    """`(linting, nits)` from the author card's advisory block."""
+    bullets = cr.walk_style_bullets(author_body)
+    nits = sum(1 for b in bullets if b["tag"] == cr.NIT_TAG)
+    return len(bullets) - nits, nits
+
+
+def refresh_style_line(brief_body: str, n_style: int, n_nits: int) -> str:
+    """Re-derive the brief's rubber-stamp **Style** bullet from the author
+    card as published. The composer fixes it at Vale's count, but the model
+    may add `[nit]` bullets during the editorial pass, and the reviewer is
+    asked to rubber-stamp that number — so it has to be the number actually on
+    the card, not the one Vale produced before the model read the diff."""
+    return _STYLE_LINE_RE.sub(
+        lambda _m: cr.render_style_line(n_style, n_nits), brief_body, count=1)
+
+
+def drop_empty_style_block(author_body: str) -> str:
+    """Remove the advisory block when nothing landed in it.
+
+    The composer renders the block unconditionally on v3 so the model has a
+    stable anchor to append a `[nit]` under (see compose-review.NIT_TAG). If it
+    didn't, an empty heading + caption + sentinel would ship on every clean PR
+    — three lines of furniture saying nothing. Runs after the annotator, which
+    no-ops on an empty block either way."""
+    if cr.walk_style_bullets(author_body):
+        return author_body
+    lines = author_body.splitlines()
+    start = next((i for i, ln in enumerate(lines) if ln.strip() in cr.STYLE_HEADINGS), None)
+    if start is None:
+        return author_body
+    end = start + 1
+    while end < len(lines) and not is_section_terminator(lines[end]):
+        end += 1
+    # Leave one blank line behind so the surrounding sections stay separated.
+    while start > 0 and not lines[start - 1].strip():
+        start -= 1
+    lines[start:end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
+
+
+_EMPTY_AUTHOR_BLOCK = [
+    "### 🚨 Fix or disagree", "", cr._V3_EMPTY_OUTSTANDING, "",
+    "### ❓ Questions for you", "", cr._V3_EMPTY_QUESTIONS,
+]
+
+
+def drop_empty_author_sections(author_body: str) -> str:
+    """Remove 🚨 and ❓ when BOTH hold nothing but their empty placeholder.
+
+    A card with nothing for the author to do opened with a NOTE saying so
+    and then spent eight lines on two headed sections each saying "nothing
+    here" (reader feedback, 2026-09-25). The NOTE is the whole message.
+
+    Strict on purpose: any row, bullet, or other text in either section
+    keeps both. "Nothing blocks merge" is not the test — the header counts
+    dispositions from REVIEW_STATE, and a row that carries one still sits in
+    its section until a refresh moves it, so it must stay visible. The
+    update lane re-inserts the pair (ensure_author_sections) before placing
+    a reopened, added, or promoted row, then calls this again."""
+    lines = author_body.splitlines()
+    spans = _sections(author_body, AUTHOR_SECTIONS)
+    if sorted(b for b, _s, _e in spans) != ["author-answer", "outstanding"]:
+        return author_body
+    allowed = {cr._V3_EMPTY_OUTSTANDING, cr._V3_EMPTY_QUESTIONS}
+    for _bucket, start, end in spans:
+        if any(ln.strip() and ln.strip() not in allowed for ln in lines[start:end]):
+            return author_body
+    (_b1, first_start, first_end), (_b2, second_start, second_end) = sorted(spans, key=lambda t: t[1])
+    if first_end != second_start - 1:
+        return author_body  # not adjacent (something sits between them): leave it alone
+    head = first_start - 1  # _sections spans start on the line after the heading
+    while head > 0 and not lines[head - 1].strip():
+        head -= 1
+    lines[head:second_end] = [""]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
+
+
+def ensure_author_sections(author_body: str) -> str:
+    """Inverse of drop_empty_author_sections: when a card has neither 🚨
+    nor ❓, put the empty pair back where the composer renders it (after
+    the header region, before the first H3/H4 or card furniture), so a
+    re-render has somewhere to place a row. A card with either heading is
+    returned unchanged."""
+    lines = author_body.splitlines()
+    # Line-anchored: finding text can quote a heading (the composer's own
+    # TODO stubs say "promote to `### 🚨 Fix or disagree`").
+    if any(ln.startswith(h) for ln in lines for h in AUTHOR_SECTIONS):
+        return author_body
+    head = next((i for i, ln in enumerate(lines) if _HEADER_RE.match(ln)), None)
+    if head is None:
+        return author_body
+    at = next((i for i in range(head + 1, len(lines)) if is_section_terminator(lines[i])),
+              len(lines))
+    while at > head + 1 and not lines[at - 1].strip():
+        at -= 1
+    lines[at:at] = ["", *_EMPTY_AUTHOR_BLOCK]
+    return "\n".join(lines) + ("\n" if author_body.endswith("\n") else "")
 
 
 _EMPTY_SENTINEL = {
@@ -548,23 +661,59 @@ def count_blocking(findings: list[dict], state_findings: dict) -> int:
 def refresh_counts(author_body: str, brief_body: str | None, state: dict | None) -> tuple[str, str | None]:
     """Recompute everything that depends on dispositions after REVIEW_STATE
     changes: the author header's blocking count and the brief's "Waiting on
-    the author" block. Shared by apply-update.py (update lane) and
-    resolve-handler.py (/resolve lane) — before this, a `/resolve F1
-    accepted` left both saying "1 item blocks merge" (2026-09-01 smoke)."""
+    the author" block. Called by apply-update.py (update lane) — before
+    this, an accepted F1 left both saying "1 item blocks merge" (2026-09-01
+    smoke)."""
     findings = open_author_findings(author_body)
     sf = (state or {}).get("findings", {}) or {}
     author_body = _fix_header(author_body, count_blocking(findings, sf))
     if brief_body is not None:
         brief_body = cr.replace_waiting_block(brief_body, findings, sf)
         # The Facts bullet moves too (an accepted ❓ is no longer "open").
-        # No evidence object here (the /resolve lane is uncredentialed), so
-        # rows stand in: origin "model" + the claim-quote heuristic.
+        # No evidence object here, so rows stand in: origin "model" + the claim-quote heuristic.
         rows = [dict(f, origin="model", status="open", disposition=sf.get(f["id"])) for f in findings]
         rows += [{"id": p["id"], "bucket": b, "text": p["body"], "origin": "model", "status": "open",
                   "disposition": sf.get(p["id"])}
                  for b, _i, p, _r in _walk(brief_body, BRIEF_SECTIONS, "brief")]
         brief_body = refresh_facts_line(brief_body, rows)
     return author_body, brief_body
+
+
+def restamp_footer(body: str, footer: str) -> str:
+    """Replace everything from FOOTER_SENTINEL to the end with `footer`.
+
+    The footer is the card's last block by contract (output-format.md), and
+    both cards' footers are composer-owned, so a refresh re-stamps them
+    rather than carrying forward whatever the card was first published with.
+    Without this, a card composed before a footer change kept the old one
+    through every refresh (#21760 kept an expanded "### How to answer" after
+    the fold shipped). A body with no sentinel is returned unchanged; the
+    validator reports that separately."""
+    at = body.find(cr.FOOTER_SENTINEL)
+    if at < 0:
+        return body
+    return body[:at] + footer.rstrip("\n") + "\n"
+
+
+def restamp_brief_orient(brief_body: str) -> str:
+    """Replace the TIP callout directly under the brief header with the
+    composer's current one, so a refreshed guide doesn't keep the intro it
+    was first published with. Only a `> [!TIP]` block right under the
+    header is touched; anything else there is left alone."""
+    lines = brief_body.splitlines()
+    head = next((i for i, ln in enumerate(lines) if ln.startswith("## Reviewer's guide v")), None)
+    if head is None:
+        return brief_body
+    j = head + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines) or lines[j].strip() != "> [!TIP]":
+        return brief_body
+    k = j
+    while k < len(lines) and lines[k].startswith(">"):
+        k += 1
+    lines[j:k] = cr.render_brief_orient()
+    return "\n".join(lines) + ("\n" if brief_body.endswith("\n") else "")
 
 
 def _fix_header(body: str, n_blocking: int, rev: int | None = None) -> str:
@@ -728,9 +877,9 @@ def _self_test() -> int:
             fx_all, fid, "accepted", actor="alice", note="ship it",
             now=datetime(2026, 9, 1, 20, 1, tzinfo=timezone.utc))
     ra_all, _ = refresh_counts(review_state.replace_block(fx_author, fx_all), None, fx_all)
-    assert "— nothing blocks merge" in ra_all and "> [!NOTE]" in ra_all and "needs your answers" not in ra_all, "callout swaps at zero"
+    assert "— nothing blocks merge" in ra_all and "> [!NOTE]" in ra_all and "Answer every item" not in ra_all, "callout swaps at zero"
     ra_back, _ = refresh_counts(ra_all, None, None)
-    assert "> [!IMPORTANT]" in ra_back and "needs your answers" in ra_back, "and swaps back"
+    assert "> [!IMPORTANT]" in ra_back and "Answer every item" in ra_back, "and swaps back"
     assert "✋ accepted as-is by the author" in rb and "(1 more is answered — see State)" in rb, rb
     assert "1 settled — see the evidence page" in rb or "Facts:" not in fx_brief, rb
     ra0, _ = refresh_counts(fx_author, None, None)

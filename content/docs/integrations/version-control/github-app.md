@@ -38,7 +38,7 @@ To install the GitHub app, you must have admin permissions in **both** the targe
 
 1. [Sign in to your Pulumi account.](https://app.pulumi.com/signin)
 1. Select the Pulumi organization you wish to use from the Organization drop-down.
-1. Navigate to **Management** > **Version control**.
+1. Navigate to **Settings** > **Version control**.
 1. Select **Add account** and choose **GitHub**, then follow the prompts.
 
 ### Install from the GitHub Marketplace
@@ -47,13 +47,13 @@ You can also start the installation from GitHub instead of Pulumi Cloud, either 
 
 ### Link an existing installation
 
-If the app is already installed in GitHub but not connected to your Pulumi organization, the **Management** > **Version control** page lists installations you can link, each with a **Link** action. The **Add account** > **GitHub** wizard offers the same **Link existing install** option when Pulumi finds one. As with Marketplace installs, you may be prompted to connect your GitHub account so Pulumi can verify that you control the installation.
+If the app is already installed in GitHub but not connected to your Pulumi organization, the **Settings** > **Version control** page lists installations you can link, each with a **Link** action. The **Add account** > **GitHub** wizard offers the same **Link existing install** option when Pulumi finds one. As with Marketplace installs, you may be prompted to connect your GitHub account so Pulumi can verify that you control the installation.
 
 An installation can be linked to one Pulumi organization this way. If it's already linked to a different Pulumi organization, linking fails; see [Multiple GitHub organizations](#multiple-github-organizations) for sharing a GitHub organization across Pulumi organizations.
 
 ### Multiple GitHub organizations
 
-Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
+Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Settings** > **Version control** > **Add account**.
 
 {{% notes type="info" %}}
 Mapping a single GitHub organization to multiple Pulumi organizations requires contacting [Pulumi support](/support/new/). This option is only available for Pro and Enterprise customers.
@@ -77,14 +77,14 @@ This setting applies only to self-hosted GitHub Enterprise Server integrations. 
 
 Only organization admins can change this setting. You can enable it in either of two places:
 
-- **On an existing integration**: navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and turn on **Individual user authentication** in the **Security** section.
+- **On an existing integration**: navigate to **Settings** > **Version control**, select your GitHub Enterprise integration, and turn on **Individual user authentication** in the **Security** section.
 - **During setup**: the GitHub Enterprise install wizard shows the same **Individual user authentication** toggle while you connect the server.
 
 Once the setting is enabled, a **Your GitHub Enterprise account** section appears on the integration page so members can connect their accounts. Organization admins can see who has connected an account in the organization's member list, which shows a **GitHub Enterprise** column while any integration has the setting enabled.
 
 #### Connect your GitHub Enterprise account
 
-Any organization member can connect their own account; admin permissions are not required. Navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account** in the **Your GitHub Enterprise account** section. After you authorize Pulumi on your GitHub Enterprise server, the card shows the connected account and connection date. To remove the link, select **Disconnect account**.
+Any organization member can connect their own account; admin permissions are not required. Navigate to **Settings** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account** in the **Your GitHub Enterprise account** section. After you authorize Pulumi on your GitHub Enterprise server, the card shows the connected account and connection date. To remove the link, select **Disconnect account**.
 
 Your account is linked per GitHub Enterprise host, not per Pulumi organization. Connecting or disconnecting it also applies to any other Pulumi organization that uses the same GitHub Enterprise server. Connecting again replaces the previously linked identity. Tokens refresh automatically; if your authorization expires or is revoked, operations prompt you to reconnect.
 
@@ -121,7 +121,7 @@ To fix this, add the callback URL to the Pulumi GitHub App on your GitHub Enterp
 
 1. Save your changes.
 
-1. Verify the setup: in the Pulumi Cloud console, navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account**. After authorizing on your GitHub Enterprise server, you should be redirected back to Pulumi and see your GitHub Enterprise username listed as connected.
+1. Verify the setup: in the Pulumi Cloud console, navigate to **Settings** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account**. After authorizing on your GitHub Enterprise server, you should be redirected back to Pulumi and see your GitHub Enterprise username listed as connected.
 
 {{% notes type="info" %}}
 If authorization fails with an error mentioning the redirect URI, the callback URL doesn't match: check the hostname for typos, and confirm it contains no scheme, port, or trailing slash.
@@ -129,7 +129,7 @@ If authorization fails with an error mentioning the redirect URI, the callback U
 
 ### Individual user setup
 
-Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Settings** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
 
 Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/neo/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
 
@@ -139,7 +139,7 @@ To remove your individual identity, select your identity on the integration card
 
 ## Integration settings
 
-After installing the app, you can configure pull request behavior. Toggle these settings per integration under **Management** > **Version control**:
+After installing the app, you can configure pull request behavior. Toggle these settings per integration under **Settings** > **Version control**:
 
 | Setting | Default | Description |
 |---|---|---|
@@ -207,7 +207,7 @@ Once installed in your organization, any `pulumi preview` or `pulumi up` run in 
 
 The GitHub app can be uninstalled using either of the following methods:
 
-- **From Pulumi Cloud**: Navigate to **Management** > **Version control**, select your GitHub organization, and select **Uninstall**. This automatically removes the app from GitHub as well.
+- **From Pulumi Cloud**: Navigate to **Settings** > **Version control**, select your GitHub organization, and select **Uninstall**. This automatically removes the app from GitHub as well.
 - **From GitHub**: Follow [GitHub's instructions for reviewing and modifying installed GitHub Apps](https://docs.github.com/en/apps/using-github-apps/reviewing-and-modifying-installed-github-apps#navigating-to-the-github-app-you-want-to-review-or-modify).
 
 {{% notes type="warning" %}}
@@ -220,7 +220,7 @@ Uninstalling the GitHub app will delete any push-to-deploy and review stack conf
 
 If you previously installed the GitHub app but Pulumi Cloud does not show it as connected to your desired organization, try the following:
 
-1. Navigate to **Management** > **Version control** and check whether the installation is listed as available to link, then select **Link**. See [Link an existing installation](#link-an-existing-installation).
+1. Navigate to **Settings** > **Version control** and check whether the installation is listed as available to link, then select **Link**. See [Link an existing installation](#link-an-existing-installation).
 1. Ensure you're a GitHub admin of the GitHub organization where the app is installed.
 1. If the installation still doesn't appear, uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
 
@@ -231,7 +231,7 @@ If comments aren't appearing on your pull requests, verify that:
 1. The `.git` folder is present in your Pulumi project directory during CI runs.
 1. If you copy your Pulumi code into a container, you also include the `.git` folder.
 1. The commit being built matches a commit in an open pull request.
-1. The GitHub app has access to the repository — navigate to **Management** > **Version control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
+1. The GitHub app has access to the repository — navigate to **Settings** > **Version control**, select your GitHub organization, and check the **Repositories** tab. If the repository is not listed, select **Configure repository access** to update the app's permissions in GitHub.
 
 ## Learn more
 

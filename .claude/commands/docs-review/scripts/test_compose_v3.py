@@ -581,3 +581,179 @@ def test_trail_metadata_vocabularies_match_the_evidence_validator():
     assert set(cr._TRAIL_CONFIDENCES) == ve.CONFIDENCES
     assert set(cr._TRAIL_FRAMINGS) == ve.FRAMINGS
 
+
+# ---- the `[nit]` lane -------------------------------------------------------
+# The v3 author card's advisory block is its only non-blocking lane, so it also
+# carries the nits the review finds itself (compose-review.NIT_TAG). Before
+# that, PR #21787 F3 shipped "Typo: `i. e.` has a stray space … Trivial fix for
+# the author" on the reviewer's card, which is headed "not for the author".
+
+NIT_BULLET = "- **line 73:** [nit] _typo_ — `i. e.` has a stray space; use `i.e.`"
+
+
+def _append_nit(author: str, bullet: str = NIT_BULLET) -> str:
+    """Drop a bullet under the last `##### <path>` group, the way the
+    editorial pass does."""
+    lines = author.splitlines()
+    last = max(i for i, ln in enumerate(lines) if ln.startswith("- **line "))
+    lines.insert(last + 1, bullet)
+    return "\n".join(lines) + "\n"
+
+
+def _compose_v3_without_vale(tmp_path) -> tuple[str, str, dict]:
+    vale = tmp_path / "vale-empty.json"
+    vale.write_text("[]")
+    author, brief, ev = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(brief), "--out-evidence", str(ev),
+    ])
+    cmd[cmd.index("--vale-findings") + 1] = str(vale)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(ev.read_text())
+
+
+def test_style_block_is_always_composed_on_v3(tmp_path):
+    """The model needs a stable anchor to append a `[nit]` under; asking it to
+    author the H4 and caption verbatim is how you get a malformed block."""
+    author, _brief, _ev = _compose_v3_without_vale(tmp_path)
+    assert cr.STYLE_HEADING in author
+    assert cr._V3_EMPTY_STYLE in author
+
+
+def test_empty_style_block_is_dropped_at_publish(tmp_path):
+    """...but an empty one never reaches the published card."""
+    author, brief, base = _compose_v3_without_vale(tmp_path)
+    be_mod = _load("build_evidence_for_style", HERE / "build-evidence.py")
+    _ev, author_out, _brief_out = be_mod.build(author, brief, base)
+    assert cr.STYLE_HEADING not in author_out
+    assert cr._V3_EMPTY_STYLE not in author_out
+    assert "\n\n\n" not in author_out, "collapsing the block left a gap"
+
+
+def test_model_added_nit_keeps_the_block(tmp_path):
+    author, brief, base = _compose_v3_without_vale(tmp_path)
+    lines = author.splitlines()
+    i = lines.index(cr._V3_EMPTY_STYLE)
+    lines[i:i + 1] = ["##### content/docs/iac/x.md", "", NIT_BULLET]
+    be_mod = _load("build_evidence_for_style2", HERE / "build-evidence.py")
+    ev, author_out, brief_out = be_mod.build("\n".join(lines) + "\n", brief, base)
+    assert NIT_BULLET in author_out
+    assert ev["style_suggestions_count"] == 1
+    assert "0 from linting, 1 found by the review" in brief_out
+
+
+def test_nit_moves_the_briefs_rubber_stamp_count(v3_outputs, tmp_path):
+    """The reviewer is asked to rubber-stamp this number, so it has to be the
+    number on the card — not the one Vale produced before the model read the
+    diff."""
+    author, brief, base = v3_outputs
+    assert "- **Style:** 1 advisory suggestion left" in brief
+    final = _run_build_evidence(_append_nit(author), brief, base, tmp_path)
+    assert final["style_suggestions_count"] == 2
+    published = (tmp_path / "b-clean.md").read_text()
+    assert "- **Style:** 2 advisory suggestions (1 from linting, 1 found by the review)" in published
+
+
+def test_update_lane_recounts_nits(v3_outputs):
+    """A refresh re-renders the block; carrying the prior count forward would
+    pin the brief to whatever Vale said on the first run."""
+    author, brief, base = v3_outputs
+    ev = _update_round(base, _append_nit(author), brief)
+    assert ev["style_suggestions_count"] == 2
+
+
+def _compose_v3_clean(tmp_path) -> tuple[str, str, dict]:
+    """A v3 compose with nothing to report: no Vale findings, no verdicts,
+    no detector artifacts."""
+    empty = tmp_path / "empty.json"
+    empty.write_text("[]")
+    author, brief, ev = tmp_path / "a.md", tmp_path / "b.md", tmp_path / "e.json"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(brief), "--out-evidence", str(ev),
+    ])
+    for flag in ("--vale-findings", "--verified-claims"):
+        cmd[cmd.index(flag) + 1] = str(empty)
+    for flag in ("--frontmatter", "--hugo-build", "--editorial-balance", "--cross-sibling"):
+        cmd[cmd.index(flag) + 1] = "/dev/null"
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text(), brief.read_text(), json.loads(ev.read_text())
+
+
+def test_clean_card_publishes_without_the_empty_blocking_sections(tmp_path):
+    """The composer keeps both sections so the model has somewhere to add a
+    finding; with none added, the published card is just the NOTE."""
+    author, brief, base = _compose_v3_clean(tmp_path)
+    assert "\n### 🚨 Fix or disagree\n" in author and "\n### ❓ Questions for you\n" in author
+    be_mod = _load("build_evidence_for_clean", HERE / "build-evidence.py")
+    _ev, author_out, brief_out = be_mod.build(author, brief, base)
+    assert "— nothing blocks merge" in author_out
+    assert "\n### 🚨" not in author_out and "\n### ❓" not in author_out
+    assert "\n\n\n" not in author_out.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0]
+    import test_validate_pinned_v3 as tv
+    assert [v.rule_id for v in tv.check(author_out, brief_out, _ev)] == []
+
+
+LONG_CLAIM = ("The GitHub repository at https://github.com/pulumi/examples/tree/master/"
+              "aws-ts-awsx-vpc-state-migration contains all three example programs (v1, v2, v3) "
+              "and the migration code shown in this post")
+FRAMING = "The page loads, but the fetched body says nothing about the directory's contents."
+
+
+def test_author_cell_names_the_claim_and_the_block_carries_the_reason(tmp_path):
+    """pulumi/docs#21871: each ❓ row quoted its claim in the cell, then the
+    Do-this block quoted the line again, and the framing note in the cell
+    said what the Why bullet then said again."""
+    art = json.loads((ART / "verified-claims.json").read_text())
+    art["verdicts"][1] = dict(art["verdicts"][1], text=LONG_CLAIM, framing_note=FRAMING)
+    vc = tmp_path / "vc.json"
+    vc.write_text(json.dumps(art))
+    author = tmp_path / "a.md"
+    cmd = regen_cmd("v3", ["--out", str(tmp_path / "u.md"), "--out-author", str(author),
+                           "--out-brief", str(tmp_path / "b.md"), "--out-evidence", str(tmp_path / "e.json")])
+    cmd[cmd.index("--verified-claims") + 1] = str(vc)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    card = author.read_text()
+    row = next(ln for ln in card.splitlines() if ln.startswith("| **F3** |"))
+    parsed = cr.parse_finding_line(row)
+    assert parsed is not None and "— verdict: unverifiable" in parsed["body"]
+    quoted = parsed["body"].split('"')[1]
+    assert quoted.endswith("…") and len(quoted) <= cr.AUTHOR_CELL_TRUNC
+    assert LONG_CLAIM.startswith(quoted[:-1].rstrip())
+    assert "framing:" not in row, "the note moved to the Why prompt"
+    block = card.split("#### F3 · Do this", 1)[1]
+    why = next(ln for ln in block.splitlines() if ln.startswith("- **Why:**"))
+    assert FRAMING in why
+    evidence = json.loads((tmp_path / "e.json").read_text())
+    f3 = next(f for f in evidence["findings"] if f["id"] == "F3")
+    assert len(f3["text"]) > len(quoted), "the evidence record keeps the longer claim text"
+
+
+def test_empty_stance_list_renders_nothing_on_v3_but_explicit_empty_on_v2():
+    cr = _load("cr_stances", HERE / "compose-review.py")
+    assert cr.render_stances([], v3=True) == ""
+    assert cr.STANCES_EMPTY in cr.render_stances([])
+    one = [{"file": "a.md", "line_range": "L3", "text": "the fastest way", "type": "positioning"}]
+    assert cr.STANCES_NOTE_V3 in cr.render_stances(one, v3=True)
+    assert cr.STANCES_NOTE in cr.render_stances(one)
+
+
+def test_author_footer_folds_how_to_answer_only_while_something_blocks():
+    cr = _load("cr_footer", HERE / "compose-review.py")
+    blocking, clear = cr.render_author_footer("u", 2), cr.render_author_footer("u", 0)
+    assert "<summary><strong>How to answer</strong>" in blocking
+    assert "How to answer" not in clear and "</details>" not in clear
+    assert clear.startswith(cr.FOOTER_SENTINEL) and clear.rstrip().endswith("the review's record.")
+
+
+def test_stale_vocabulary_check_skips_text_quoted_from_the_pr():
+    cr = _load("cr_stale", HERE / "compose-review.py")
+    stance = cr.render_stances([{"file": "references/output-format.md", "line_range": "L340",
+                                 "text": "renders a second H4 inside ⚠️ Low-confidence, before the style block",
+                                 "type": "positioning"}], v3=True)
+    assert cr.stale_v2_tokens(stance) == [], "a quoted stance is the PR's text, not composer scaffolding"
+    assert cr.stale_v2_tokens("### ⚠️ Low-confidence\n") == ["⚠️ Low-confidence"], "composer text still trips it"
