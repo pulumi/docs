@@ -3,22 +3,22 @@
 
 One of two redundant, deliberately differently-framed Sonnet passes over each
 changed `content/**/*.md` file. Each pass emits a JSON claim list against a
-forced tool schema; `merge-claims.py` unions Layer A (regex) + the two LLM
+strict tool schema; `merge-claims.py` unions Layer A (regex) + the two LLM
 passes into `.candidate-claims.json`, and the main review MUST verify every
 entry.
 
 Why a direct Anthropic API call (not `claude-code-action`):
   - extraction needs no agentic loop — it's "read input → produce structured
     output", one model call;
-  - a direct `/v1/messages` call gives us a forced tool-use JSON schema
-    (`tool_choice: {type:"tool", name:"extract_claims"}`, `strict`) plus an
-    explicit `thinking: {type: "disabled"}`, neither of which
-    `claude-code-action` exposes — and those are exactly the "format
-    consistency" levers this exercise is about. (Sonnet 5 turns adaptive
-    thinking on by default when `thinking` is omitted, and rejects non-default
-    sampling params such as `temperature`; we disable thinking to keep
-    extraction one deterministic forced-tool call and let the strict schema do
-    the constraining.)
+  - a direct `/v1/messages` call gives us a strict tool-use JSON schema
+    (`extract_claims`, `strict: true`) plus explicit control over thinking,
+    neither of which `claude-code-action` exposes — and those are exactly the
+    "format consistency" levers this exercise is about. (Sonnet 5.5 rejects
+    both `thinking: {type: "disabled"}` and a forced `tool_choice`
+    (`tool`/`any`) with a 400, so we ask for `thinking: {type:
+    "between_tools"}` — no thinking before the first tool call, which on this
+    one-call job means none at all — with `tool_choice: auto`, and retry once
+    if the model answers in prose instead of calling the tool.)
   - precedent: `claude-triage.yml` already calls `/v1/messages` via curl in
     this repo.
 
@@ -43,7 +43,7 @@ Output schema:
     {
       "schema_version": 1,
       "pass": "atomic" | "holistic",
-      "model": "claude-sonnet-5",
+      "model": "claude-sonnet-5-5",
       "claims": [
         {"file": "content/blog/foo.md",
          "line_range": "L42",            # or "L42-47"; references the numbered file body we sent
@@ -82,11 +82,20 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-5"
+# Sonnet 5.5 with thinking off and effort unset (2026-09-28 benchmark, 15
+# fixtures x 3 reps, graded by an independent auditor; campaign
+# 2026-09-28-sonnet55-effort-sweep in pulumi/docs-review-benchmarks): same
+# high-importance recall as Sonnet 5 (95.2% vs 94.8%), 72/72 known defects
+# covered, ~6x fewer duplicate claims, ~16% cheaper and ~40% faster per call.
+# Low/medium effort lost 12-19 points of high-importance recall; xhigh turned
+# thinking on, cost 37% more, and bought nothing.
+DEFAULT_MODEL = "claude-sonnet-5-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-MAX_TOKENS = 8192
-HTTP_TIMEOUT = 120  # seconds per API call
+# Sonnet 5.5 is more thorough than Sonnet 5 on long heightened-scrutiny files;
+# its largest benchmark response was ~8.5K output tokens, past the old 8192.
+MAX_TOKENS = 32000
+HTTP_TIMEOUT = 300  # seconds per API call (benchmark p95 24s, max 40s)
 MAX_RETRIES = 3
 MAX_CONCURRENCY = 4
 FILE_CAP = 20  # process at most this many content files per pass
@@ -569,46 +578,60 @@ def _post_messages(api_key: str, body: dict) -> dict:
 
 
 def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: str, model: str) -> tuple[list[dict], dict]:
-    """One forced-tool call. Returns (claims, usage). Raises on hard failure."""
+    """One strict-tool call. Returns (claims, usage). Raises on hard failure."""
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
-        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
-        # Extraction is a single forced-tool call, so we disable thinking to
-        # preserve the prior no-thinking behavior; the strict schema does the
-        # format constraining that `temperature: 0` used to reinforce.
-        "thinking": {"type": "disabled"},
+        # Sonnet 5.5 rejects `thinking: {type: "disabled"}` (400) and rejects
+        # non-default sampling params (temperature/top_p/top_k). `between_tools`
+        # skips thinking before the first tool call, and this job makes exactly
+        # one, so extraction stays a no-thinking call; the strict schema does
+        # the format constraining that `temperature: 0` used to reinforce.
+        # Effort is deliberately unset: lower effort cost recall.
+        "thinking": {"type": "between_tools"},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
             {"type": "text", "text": mode_header},
         ],
         "tools": [EXTRACT_CLAIMS_TOOL],
-        "tool_choice": {"type": "tool", "name": "extract_claims"},
+        # Sonnet 5.5 rejects a forced tool_choice (`tool`/`any`) with a 400;
+        # `auto` plus the retry below covers a prose-only answer.
+        "tool_choice": {"type": "auto"},
         "messages": [{"role": "user", "content": user_text}],
     }
     usage: dict = {}
+    blocks: list[dict] = []
     for attempt in range(2):
         resp = _post_messages(api_key, body)
         for k, v in (resp.get("usage", {}) or {}).items():
             if isinstance(v, int):
                 usage[k] = usage.get(k, 0) + v
-        # A max_tokens stop mid-tool-call returns an empty tool input; retry once
-        # rather than record "no claims".
-        if resp.get("stop_reason") == "max_tokens" and attempt == 0:
-            continue
+        blocks = extract_claims_blocks(resp)
+        # A max_tokens stop mid-tool-call returns an empty tool input, and an
+        # `auto` tool_choice can answer in prose with no tool call at all;
+        # retry once rather than record "no claims".
+        if resp.get("stop_reason") == "max_tokens" or not blocks:
+            if attempt == 0:
+                continue
         break
     if resp.get("stop_reason") == "max_tokens":
         raise RuntimeError(f"response truncated at max_tokens={MAX_TOKENS} (twice)")
+    if not blocks:
+        raise RuntimeError(f"no extract_claims tool call in the response (twice; "
+                           f"stop_reason={resp.get('stop_reason')!r})")
+    # The model occasionally splits its answer across more than one
+    # extract_claims call; keep every call's claims, not just the first's.
     claims: list[dict] = []
-    for block in resp.get("content", []) or []:
-        if isinstance(block, dict) and block.get("type") == "tool_use" and block.get("name") == "extract_claims":
-            inp = block.get("input") or {}
-            raw_claims = inp.get("claims")
-            if isinstance(raw_claims, list):
-                claims = [c for c in raw_claims if isinstance(c, dict)]
-            break
+    for block in blocks:
+        raw_claims = (block.get("input") or {}).get("claims")
+        if isinstance(raw_claims, list):
+            claims.extend(c for c in raw_claims if isinstance(c, dict))
     return claims, usage
+
+
+def extract_claims_blocks(resp: dict) -> list[dict]:
+    return [b for b in resp.get("content", []) or []
+            if isinstance(b, dict) and b.get("type") == "tool_use" and b.get("name") == "extract_claims"]
 
 
 # ---- per-file processing ---------------------------------------------------

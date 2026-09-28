@@ -23,8 +23,8 @@ judgment (triage / bucket-promotion / framing / rendering) in the review.
 Why a direct API call (not `claude-code-action`): we need a strict tool
 schema, explicit thinking/effort control (Opus 5.5 at `medium`, adaptive
 thinking, `tool_choice: auto`), and a small bounded loop, none of which
-`claude-code-action` exposes. `extract-claims-llm.py` and `claude-triage.yml`
-also call `/v1/messages`, on Sonnet 5 with thinking disabled.
+`claude-code-action` exposes. `extract-claims-llm.py` (Sonnet 5.5, no
+thinking) and `claude-triage.yml` (Haiku 4.5) also call `/v1/messages`.
 
 Routing (first match wins):
   0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
