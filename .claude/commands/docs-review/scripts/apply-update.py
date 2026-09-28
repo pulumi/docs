@@ -206,6 +206,17 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
         if text is None or text == "" or (isinstance(text, str) and text.startswith("<") and text.endswith(">")):
             del u["summary"]
             notes.append("empty/placeholder `summary` dropped")
+    if isinstance(u.get("findings"), list):
+        fixed = []
+        for e in u["findings"]:
+            if isinstance(e, dict) and e.get("action") == "add" and isinstance(e.get("bucket"), str):
+                raw = e["bucket"].strip()
+                mapped = _BUCKET_ALIASES.get(raw.lower(), _BUCKET_ALIASES.get(raw))
+                if raw not in ADD_BUCKETS and mapped:
+                    e = dict(e, bucket=mapped)
+                    notes.append(f"add bucket `{raw}` → `{mapped}`")
+            fixed.append(e)
+        u["findings"] = fixed
     if u.get("case") is None and isinstance(u.get("findings"), list):
         acts = {e.get("action") for e in u["findings"] if isinstance(e, dict)}
         if acts and acts <= {"resolve", "add"}:
@@ -217,6 +228,55 @@ def normalize_update(update: dict) -> tuple[dict, list[str]]:
         u["case"] = case
         notes.append(f"`case` inferred as {case}")
     return u, notes
+
+
+# The card's own vocabulary leaks into `add` buckets: the header says "N items
+# block merge", so the model wrote `bucket: "blocking"` and the whole refresh
+# failed (run 35626815279, #21761). Map the words and glyphs a card shows to
+# the closed set; an unmapped value still fails validation.
+_BUCKET_ALIASES = {
+    "blocking": "outstanding", "block": "outstanding", "blocker": "outstanding",
+    "must-fix": "outstanding", "fix": "outstanding", "🚨": "outstanding",
+    "question": "author-answer", "questions": "author-answer", "author": "author-answer",
+    "❓": "author-answer",
+    "low-confidence": "reviewer-check", "reviewer": "reviewer-check",
+    "advisory": "reviewer-check", "check": "reviewer-check", "⚠️": "reviewer-check",
+}
+
+
+def drop_stale_targets(update: dict, known_ids: set[str],
+                       resolved_ids: set[str]) -> tuple[dict, list[str]]:
+    """Drop entries that target a finding this card no longer has open.
+
+    Two shapes, both observed, neither worth failing a refresh over:
+      - `resolve`/`concede` on an id already in ✅: a concurrent refresh
+        resolved it while this run's model read the older card (#21614,
+        run 34988034588 — six ids, the whole refresh lost). The finding is
+        already where the action would put it.
+      - any non-`add` action on an id the card never had: the model gave an
+        untracked ⚠️ prose bullet an invented id (#21785, run 35650017269).
+    Dropping is the safe direction: an open finding the model failed to
+    name stays open. Every drop is logged; nothing else is repaired here.
+    """
+    if not isinstance(update, dict) or not isinstance(update.get("findings"), list):
+        return update, []
+    kept, notes = [], []
+    for entry in update["findings"]:
+        if not isinstance(entry, dict) or entry.get("action") == "add" or entry.get("action") not in ACTIONS:
+            kept.append(entry)
+            continue
+        fid = entry.get("id")
+        if not isinstance(fid, str) or fid in known_ids:
+            kept.append(entry)
+        elif fid in resolved_ids and entry["action"] in ("resolve", "concede"):
+            notes.append(f"{entry['action']} {fid}: already resolved (concurrent refresh) — no-op")
+        elif fid in resolved_ids:
+            kept.append(entry)  # a reopening action; validate_update decides
+        elif re.match(r"^F\d+$", fid):
+            notes.append(f"{entry['action']} {fid}: not a finding on this card — dropped")
+        else:
+            kept.append(entry)
+    return dict(update, findings=kept), notes
 
 
 def validate_update(update: dict, known_ids: set[str],
@@ -505,6 +565,10 @@ def apply(
     if repairs:
         print("::warning::apply-update repaired the patch envelope: " + "; ".join(repairs),
               file=sys.stderr)
+    update, dropped_targets = drop_stale_targets(update, set(rows), set(resolved_by_id))
+    if dropped_targets:
+        print("::warning::apply-update dropped action(s) on findings this card no longer has open: "
+              + "; ".join(dropped_targets), file=sys.stderr)
     problems = validate_update(update, set(rows), set(resolved_by_id))
     if problems:
         raise UpdateError("; ".join(problems))
@@ -1012,12 +1076,16 @@ def _self_test() -> int:
     assert state3["findings"].get("F1", {}).get("disposition") == "fixed"
     assert "concede: nope" not in a3 and r3["dropped_in_auto"] == ["concede F2"]
 
-    # Demotion rejected; unknown id rejected.
+    # Demotion rejected. An unknown id is dropped (logged), not fatal:
+    # the finding it failed to name stays open (#21785).
+    a99, _b99, s99, _r99 = apply(author, brief, {
+        "schema": 1, "case": "mixed", "history_summary": "x",
+        "findings": [{"id": "F99", "action": "resolve", "annotation": "a"}]},
+        head_sha=sha, actor="x", auto=False)
+    assert "F99" not in s99["findings"]
     for bad in (
         {"schema": 1, "case": "mixed", "history_summary": "x",
          "findings": [{"id": "F1", "action": "promote", "to": "author-answer", "reason": "r"}]},
-        {"schema": 1, "case": "mixed", "history_summary": "x",
-         "findings": [{"id": "F99", "action": "resolve", "annotation": "a"}]},
     ):
         try:
             apply(author, brief, bad, head_sha=sha, actor="x", auto=False)

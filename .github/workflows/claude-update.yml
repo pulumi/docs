@@ -754,7 +754,7 @@ jobs:
             - `hold` (id, reason with evidence) — the author answered and you still disagree; the row moves to the reviewer's ⚠️ list for a human to weigh and STOPS blocking the author.
             - `accept` (id, reason[, bulk: true]) — the mention ACCEPTS the finding as-is ("accepting as-is — <reason>", or "accepting all open items" → one entry per open 🚨/❓ id with `bulk: true`); no adjudication, the reason is the author's; the row moves to the reviewer's ⚠️ list with a ✋ marker.
             - `promote` (id, to: author-answer|outstanding, reason) — upward only.
-            - `add` (bucket, file, lines, text) — a NEW problem in the pushed lines only.
+            - `add` (bucket: `outstanding` | `author-answer` | `reviewer-check`, file, lines, text) — a NEW problem in the pushed lines only.
             - `retext` (id, text[, detail: {why, fix[, keep]}]) — sharpen a finding that stays open on its own merits; the cell stays ONE line (claim quote + verdict), any new action goes in `detail.fix`.
             Findings you have nothing to say about get no entry — they carry forward unchanged. Include `history_summary` (one line, ≤120 chars). Read the author card's italic one-sentence summary under the header: if it names open items, counts, or anything "only you can confirm" that your actions change, include `summary` — a replacement sentence (≤300 chars) that describes the PR and what the review checked, with no open-item counts; omit `summary` when the existing sentence stays true. The file's exact envelope — these four top-level keys plus `summary` when you send one (omit the key otherwise; never write it empty), the list under `findings`, nothing else is accepted:
             {"schema": 1, "case": "fix-response|dispute|re-verify|mixed", "history_summary": "<one line>", "findings": [{"id": "F1", "action": "resolve", "annotation": "fixed in <sha7>"}, {"id": "F2", "action": "concede", "reason": "…"}]}
@@ -809,6 +809,26 @@ jobs:
           [ -n "$BASE_URL" ] && echo "pages_base_url=$BASE_URL" >> "$GITHUB_OUTPUT"
           [ -z "$LEDGER" ] && echo "::warning::evidence bucket unresolved; publishing degraded (artifact only)"
           exit 0
+
+      # The deterministic publish chain runs from the DEFAULT branch, never the
+      # PR head this job checked out for the model. Two reasons. Skew: a PR
+      # that changes the card grammar itself (#21908, run 36193992403) ran
+      # its own half-finished validate-pinned.py against cards master's
+      # composer wrote, and failed 4 rules that master's copy passes.
+      # Trust: these scripts run with the bot token and, a step later, AWS
+      # credentials; the PR under review must not supply them. Same rule as
+      # review-sentinel.yml and the initial lane's publish job.
+      - name: Checkout review tooling (default branch)
+        if: steps.claude-v3.outcome == 'success'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          path: .review-tools
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
 
       # One step, one ordering, one failure surface: prior evidence → fresh
       # card re-fetch (merges whatever another run published during the
@@ -869,7 +889,7 @@ jobs:
 
           AUTO_FLAG=()
           [ "$IS_AUTO" = "true" ] && AUTO_FLAG=(--auto)
-          python3 .claude/commands/docs-review/scripts/apply-update.py \
+          python3 .review-tools/.claude/commands/docs-review/scripts/apply-update.py \
             --author-card .review-card-author.md \
             --brief-card .review-card-brief.md \
             --update .review-update.json \
@@ -882,16 +902,16 @@ jobs:
             --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH" \
             --evidence-url "$EVIDENCE_URL"
 
-          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+          python3 .review-tools/.claude/commands/docs-review/scripts/validate-pinned.py check \
             --body-file .review-card-author.out.md \
             --brief-file .review-card-brief.out.md \
             --pr "$PR" --repo "$REPO"
 
-          python3 scripts/review-v3/record-evidence.py \
+          python3 .review-tools/scripts/review-v3/record-evidence.py \
             --evidence .review-evidence.json --pr "$PR" --head-sha "$HEAD_SHA"
 
           if [ -n "${PAGES_BUCKET:-}" ]; then
-            python3 scripts/review-v3/render-evidence-html.py \
+            python3 .review-tools/scripts/review-v3/render-evidence-html.py \
               --evidence .review-evidence.json --output .review-evidence.html
             aws s3 cp .review-evidence.html "s3://$PAGES_BUCKET/$PR/$HEAD_SHA.html" \
               --content-type text/html --no-progress
@@ -903,9 +923,9 @@ jobs:
             fi
           fi
 
-          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+          bash .review-tools/.claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --pr "$PR" --repo "$REPO" --role brief --body-file .review-card-brief.out.md
-          bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+          bash .review-tools/.claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --pr "$PR" --repo "$REPO" --role author --body-file .review-card-author.out.md
 
       # One-click fixes for what blocks merge (reader feedback, 2026-09-25:
@@ -922,7 +942,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+          python3 .review-tools/.claude/commands/docs-review/scripts/post-style-suggestions.py \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
             --fixes-from-author-card .review-card-author.out.md

@@ -372,16 +372,18 @@ def test_reopen_keeps_a_human_disposition_that_landed_meanwhile():
     assert state2["findings"]["F1"]["disposition"] == "accepted" and state2["findings"]["F1"]["actor"] == "alice"
 
 
-def test_resolve_and_concede_on_a_resolved_finding_are_rejected():
+def test_resolve_and_concede_on_a_resolved_finding_are_no_ops():
+    """#21614 run 34988034588: a concurrent refresh resolved six ids while this
+    run's model read the older card, and "already resolved" failed the whole
+    publish. The finding is already where the action would put it."""
     a1, b1 = _resolved_fixture()
     for action, extra in (("resolve", {"annotation": "x"}), ("concede", {"reason": "x"})):
-        up = _update([{"id": "F1", "action": action, **extra}])
-        try:
-            au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
-        except au.UpdateError as exc:
-            assert "already resolved" in str(exc)
-        else:
-            raise AssertionError(f"{action} on a resolved finding must be rejected")
+        up = _update([{"id": "F1", "action": action, **extra},
+                      {"id": "F2", "action": "resolve", "annotation": "fixed in 2cb28d8"}])
+        a2, _, state, _ = au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
+        assert au._collect_resolved(a2).count(next(l for l in au._collect_resolved(a1) if "**F1**" in l)) == 1
+        assert state["findings"]["F1"]["disposition"] == "fixed", "the first resolution stands"
+        assert state["findings"]["F2"]["disposition"] == "fixed", "the rest of the patch still applies"
     up = _update([{"id": "F1", "action": "reopen"}])
     try:
         au.apply(a1, b1, up, head_sha="2" * 40, actor="cam", auto=False)
@@ -612,3 +614,28 @@ def test_resolved_rows_without_a_disposition_are_backfilled_on_refresh():
     st = rs.set_disposition(rs.parse_state(a2), "F1", "accepted", actor="cam", note="mine")
     out = au.backfill_resolved_dispositions(st, au._collect_resolved(a2))
     assert out["findings"]["F1"]["disposition"] == "accepted"
+
+
+def test_an_invented_id_is_dropped_and_the_rest_applies():
+    """#21785 run 35650017269: the model gave an untracked ⚠️ prose bullet an
+    id the card never had, and the refresh failed outright."""
+    up = _update([{"id": "F42", "action": "resolve", "annotation": "fixed"},
+                  {"id": "F1", "action": "resolve", "annotation": "fixed in 1cb28d8"}])
+    a_out, _, state, _ = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "F42" not in state["findings"] and state["findings"]["F1"]["disposition"] == "fixed"
+
+
+def test_add_bucket_uses_the_cards_words():
+    """#21761 run 35626815279: `bucket: "blocking"` — the card's header word —
+    failed the whole refresh. It means 🚨."""
+    up = _update([{"action": "add", "bucket": "blocking", "file": "content/docs/iac/x.md",
+                   "lines": [3, 3], "text": "a new problem"}])
+    a_out, _, state, report = au.apply(AUTHOR, BRIEF, up, head_sha=SHA, actor="cam", auto=False)
+    assert "a new problem" in a_out.split("### ❓")[0], "landed in 🚨"
+    bad = _update([{"action": "add", "bucket": "whatever", "file": "x.md", "text": "t"}])
+    try:
+        au.apply(AUTHOR, BRIEF, bad, head_sha=SHA, actor="cam", auto=False)
+    except au.UpdateError as exc:
+        assert "bucket" in str(exc)
+    else:
+        raise AssertionError("an unmappable bucket is still a contract violation")
