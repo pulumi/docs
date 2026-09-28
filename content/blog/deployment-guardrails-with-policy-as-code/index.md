@@ -21,7 +21,7 @@ category: best-practices
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi Policies](/docs/discovery-governance/policy/) to create deployment guardrails that make self-service infrastructure both powerful and safe.
 
-Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer is **automated guardrails** powered by policy as code, which make speed and safety possible at the same time.
+Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer is automated guardrails powered by policy as code, which make speed and safety possible at the same time.
 
 <!--more-->
 
@@ -228,7 +228,7 @@ The third model integrates policies directly into your deployment pipeline. This
 
 ## Policy Remediation: Beyond Detection
 
-Modern policy frameworks can also **[automatically fix](/docs/discovery-governance/policy/policy-packs/authoring/#remediating-policy-violations)** the violations they detect:
+Modern policy frameworks can also [automatically fix](/docs/discovery-governance/policy/policy-packs/authoring/#remediating-policy-violations) the violations they detect:
 
 ```python
 def auto_tag_resources(args, report_violation):
