@@ -235,6 +235,14 @@ un-stale sweep). Any read it can't make answers "not base-only". Before it,
 #21673's master merge left a clean review at `review:stale` with nothing
 scheduled to clear it.
 
+**One-time cleanup.** `cleanup-review-leftovers.py --repo pulumi/docs`
+(dry run; `--apply` to write, `--extra-pr 2` to also sweep the stray
+Sentinel status comment the old `workflow_run` resolution posted on #2)
+lists what the pre-fix loop left on open PRs: `review:stale` on a review that
+is current (or current across a base merge), `Review errored` notices older
+than the live card, and legacy v2 pages beside a v3 card. Meant to be run
+once by a maintainer, not scheduled.
+
 ## Superseded handoffs
 
 The model job hands its validated review to the credentialed publish job as

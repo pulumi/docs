@@ -639,3 +639,54 @@ def test_add_bucket_uses_the_cards_words():
         assert "bucket" in str(exc)
     else:
         raise AssertionError("an unmappable bucket is still a contract violation")
+
+
+_BRIEF_21801 = """<!-- CLAUDE_REVIEW_BRIEF -->
+> [!NOTE]
+> **What this PR changes:**
+>
+> - `from-terraform.md` — adds an HCL tab.
+> - `use-terraform-module.md` — adds an HCL tab for a module.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH | |
+> | facts | MEDIUM | One CLI claim contradicts another page in this same PR — → see F1. |
+> | code correctness | MEDIUM | one AWS argument may not exist — → see the `from-serverless.md` row below. |
+> | cross-sibling | MEDIUM | differ in scoping — → see F7. |
+
+### ⚠️ Check these before approving
+
+_No findings to check._
+"""
+
+
+def test_brief_drift_after_a_rework_is_settled_not_carried():
+    """#21801: a file that left the PR stays in "What this PR changes", and
+    notes point at a conceded F1 and an empty ⚠️ list. A pointer at a still
+    open finding (F7) is kept."""
+    files = ["content/docs/iac/guides/migration/migrating-to-pulumi/from-terraform.md"]
+    out, dropped = au.prune_changes_bullets(_BRIEF_21801, files)
+    assert dropped == ["use-terraform-module.md"] and "`from-terraform.md`" in out
+    assert au.prune_changes_bullets(_BRIEF_21801, None)[0] == _BRIEF_21801, "no file list → untouched"
+    out, n = au.settle_confidence_pointers(out, open_ids={"F7"}, open_checks=False)
+    assert n == 2
+    assert "→ see F1" not in out and "row below" not in out
+    assert "→ see F7" in out
+    assert out.count(au.SETTLED_NOTE) == 2
+    assert au.settle_confidence_pointers(out, {"F7"}, False)[1] == 0, "idempotent"
+
+
+def test_a_summary_naming_open_work_goes_when_nothing_blocks():
+    """#21790: "these four need a source from you" under "nothing blocks
+    merge". Removed only when nothing blocks; a neutral summary stays."""
+    card = ("## Author action guide v3 — nothing blocks merge\n\n"
+            "_This PR adds pricing claims; these four need a source from you before merge._\n\n"
+            "### 🚨 Fix or disagree\n")
+    out, gone = au.drop_stale_summary(card, 0)
+    assert gone and "need a source" not in out and "### 🚨" in out
+    assert au.drop_stale_summary(card, 2) == (card, False)
+    neutral = card.replace("these four need a source from you before merge", "the review checked each claim")
+    assert au.drop_stale_summary(neutral, 0) == (neutral, False)

@@ -206,7 +206,17 @@ jobs:
 
           # 1. Gather PR state.
           PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
-            --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+            --json title,body,author,files,labels,additions,deletions,commits,isDraft,changedFiles)
+          # `gh pr view --json files` is one GraphQL page: 100 files, silently.
+          # On #21936 (1,156 files) that made the oversized comment say "100
+          # files", left the classifier's 150-file axis unreachable, and
+          # classified domains from the first 100 paths. The REST list pages
+          # (up to 3,000); swap it in, same {path, additions, deletions} shape.
+          ALL_FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
+            --jq '.[] | {path: .filename, additions, deletions}' 2>/dev/null | jq -s . 2>/dev/null || echo '[]')
+          if [ "$(echo "$ALL_FILES" | jq 'length')" -gt 0 ]; then
+            PR_DATA=$(echo "$PR_DATA" | jq --argjson f "$ALL_FILES" '.files = $f')
+          fi
           # 100KB diff cap. The
           # classifier doesn't need every byte to detect frontmatter /
           # link / code-block / version-claim signals.
@@ -430,7 +440,7 @@ jobs:
           if [[ "$OVERSIZED" == "true" ]]; then
               PR_ADDITIONS=$(echo "$PR_DATA" | jq -r '.additions')
               PR_DELETIONS=$(echo "$PR_DATA" | jq -r '.deletions')
-              PR_FILES=$(echo "$PR_DATA" | jq -r '.files | length')
+              PR_FILES=$(echo "$PR_DATA" | jq -r '.changedFiles // (.files | length)')
               BODY=$(cat <<EOF
           <!-- TRIAGE_OVERSIZED -->
           📦 **Oversized PR** — this diff (+$PR_ADDITIONS/−$PR_DELETIONS across $PR_FILES files) exceeds the automated review budget, so the Claude review is skipped (\`review:oversized\`).
@@ -495,8 +505,11 @@ jobs:
           PR_DATA_FILE=$(mktemp)
           DIFF_FILE=$(mktemp)
           trap 'rm -f "$PR_DATA_FILE" "$DIFF_FILE"' EXIT
-          gh pr view "$PR" --repo "$REPO" \
-            --json files,additions,deletions > "$PR_DATA_FILE"
+          # Paginated file list — see the classification step (100-file cap).
+          gh pr view "$PR" --repo "$REPO" --json additions,deletions,changedFiles \
+            | jq --argjson f "$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
+                  --jq '.[] | {path: .filename, additions, deletions}' | jq -s .)" \
+                 '.files = $f' > "$PR_DATA_FILE"
           gh pr diff "$PR" --repo "$REPO" | head -c 100000 > "$DIFF_FILE" || true
           ROUTE=$(python3 scripts/review-v3/route-pr.py \
             --pr-data "$PR_DATA_FILE" --diff "$DIFF_FILE")

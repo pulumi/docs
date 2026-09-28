@@ -889,6 +889,10 @@ jobs:
 
           AUTO_FLAG=()
           [ "$IS_AUTO" = "true" ] && AUTO_FLAG=(--auto)
+          # The PR's live file list, so the brief stops describing files a
+          # rework moved out (#21801). Empty on a failed read → no pruning.
+          gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[].filename' \
+            > .pr-files.txt 2>/dev/null || : > .pr-files.txt
           python3 .review-tools/.claude/commands/docs-review/scripts/apply-update.py \
             --author-card .review-card-author.md \
             --brief-card .review-card-brief.md \
@@ -900,7 +904,7 @@ jobs:
             --brief-out .review-card-brief.out.md \
             --evidence-out .review-evidence.json \
             --head-repo "$HEAD_REPO" --head-branch "$HEAD_BRANCH" \
-            --evidence-url "$EVIDENCE_URL"
+            --evidence-url "$EVIDENCE_URL" --pr-files .pr-files.txt
 
           python3 .review-tools/.claude/commands/docs-review/scripts/validate-pinned.py check \
             --body-file .review-card-author.out.md \

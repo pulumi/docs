@@ -418,6 +418,125 @@ def backfill_resolved_dispositions(state: dict, resolved_rows: list[str], *,
     return state
 
 
+# ---- brief/summary drift after a rework --------------------------------
+#
+# The brief's "What this PR changes" bullets and Review-confidence notes, and
+# the author card's one-sentence summary, are composed once by the full
+# review and carried verbatim by every refresh. After a rework they describe
+# a diff that no longer exists: #21801's brief still listed
+# `use-terraform-module.md` (moved out of the PR), its confidence notes said
+# "→ see F1" about a conceded finding, #21798/#21799/#21828 pointed at an
+# empty ⚠️ list, and #21790's card said "these four need a source from you"
+# under "nothing blocks merge". The model may send a new `summary`, but
+# nothing made the carried text agree with the live card. These repairs are
+# deterministic and only ever REMOVE or neutralize a statement the card
+# itself now contradicts; they never write new analysis.
+
+_CHANGES_BULLET_RE = re.compile(r"^> - `([^`]+)` — ")
+_CONF_ROW_RE = re.compile(r"^(> \| [^|]+\| [^|]+\| )(.*?)( \|\s*)$")
+_POINTER_RE = re.compile(r"→ see|list below|row below|on the author'?s card|⚠️ list", re.I)
+_FID_RE = re.compile(r"\bF(\d+)\b")
+SETTLED_NOTE = "Settled since this was written — see ✅ Resolved on the author card."
+# The summary names open work: counts, asks, or "only you can …". Only
+# consulted when nothing blocks — a card with open items may say so.
+_OPEN_WORK_RE = re.compile(
+    r"\b(need|needs|needing)\b[^.]*\b(from you|your|source|answer|confirm)"
+    r"|\bonly you\b|\bfrom you\b|\bopen (item|question|finding)s?\b"
+    r"|\b(one|two|three|four|five|six|seven|eight|nine|ten|\d+) (item|question|finding|claim)s?\b[^.]*\b(block|open|need|confirm)",
+    re.I)
+
+
+def prune_changes_bullets(brief: str, pr_files: list[str] | None) -> tuple[str, list[str]]:
+    """Drop "What this PR changes" bullets naming a file the PR no longer
+    changes. A bullet names a basename or a path; it survives when any PR
+    path equals it or ends with `/<it>`. No file list → no change."""
+    if not pr_files:
+        return brief, []
+    dropped = []
+    out = []
+    for line in brief.splitlines():
+        m = _CHANGES_BULLET_RE.match(line)
+        if m:
+            name = m.group(1).strip()
+            if not any(p == name or p.endswith("/" + name) for p in pr_files):
+                dropped.append(name)
+                continue
+        out.append(line)
+    return "\n".join(out) + ("\n" if brief.endswith("\n") else ""), dropped
+
+
+def settle_confidence_pointers(brief: str, open_ids: set[str], open_checks: bool,
+                               open_author: bool | None = None) -> tuple[str, int]:
+    """A Review-confidence note that points at a finding which is no longer
+    open (by id), or at a ⚠️ list / author card with nothing open on it,
+    is replaced by SETTLED_NOTE. The level cell is left alone."""
+    n = 0
+    out = []
+    for line in brief.splitlines():
+        m = _CONF_ROW_RE.match(line)
+        if m and _POINTER_RE.search(m.group(2)) and m.group(2).strip() != SETTLED_NOTE:
+            note = m.group(2)
+            ids = {f"F{x}" for x in _FID_RE.findall(note)}
+            if ids:
+                stale = not (ids & open_ids)
+            elif re.search(r"author'?s card", note, re.I):
+                stale = not (open_author if open_author is not None else open_ids)
+            else:
+                stale = not open_checks
+            if stale:
+                line = f"{m.group(1)}{SETTLED_NOTE}{m.group(3)}"
+                n += 1
+        out.append(line)
+    return "\n".join(out) + ("\n" if brief.endswith("\n") else ""), n
+
+
+def drop_stale_summary(author: str, n_blocking: int) -> tuple[str, bool]:
+    """With nothing blocking, an italic summary that still names open work
+    for the author contradicts the header right above it; remove it (the
+    header and sections carry the live state). Anything else is kept."""
+    if n_blocking:
+        return author, False
+    lines = author.splitlines()
+    for i, ln in enumerate(lines):
+        st = ln.strip()
+        if st.startswith("_") and st.endswith("_") and len(st) > 2 and not st.startswith("_No ") \
+                and not st.startswith("_Nothing") and _OPEN_WORK_RE.search(st):
+            del lines[i]
+            if i < len(lines) and not lines[i].strip() and i > 0 and not lines[i - 1].strip():
+                del lines[i]
+            return "\n".join(lines) + ("\n" if author.endswith("\n") else ""), True
+        if st.startswith("### "):
+            break  # the summary sits above the first section
+    return author, False
+
+
+def refresh_carried_text(brief: str, author: str, state: dict, n_blocking: int,
+                         pr_files: list[str] | None) -> tuple[str, str]:
+    """Apply the three drift repairs above against the live cards."""
+    answered = set((state or {}).get("findings", {}))
+    open_author = {r[0] for r in (_walk_ids(author, be.AUTHOR_SECTIONS, "author"))} - answered
+    open_checks = bool(_walk_ids(brief, be.BRIEF_SECTIONS, "brief"))
+    open_ids = open_author | {r[0] for r in _walk_ids(brief, be.BRIEF_SECTIONS, "brief")}
+    brief, dropped = prune_changes_bullets(brief, pr_files)
+    brief, settled = settle_confidence_pointers(brief, open_ids, open_checks, bool(open_author))
+    author, gone = drop_stale_summary(author, n_blocking)
+    notes = []
+    if dropped:
+        notes.append("dropped change bullet(s) for files no longer in the PR: " + ", ".join(dropped))
+    if settled:
+        notes.append(f"{settled} review-confidence note(s) pointed at settled findings")
+    if gone:
+        notes.append("removed a summary sentence that named open work under 'nothing blocks merge'")
+    if notes:
+        print("::notice::apply-update: " + "; ".join(notes), file=sys.stderr)
+    return brief, author
+
+
+def _walk_ids(body: str, headings, doc: str) -> list[tuple[str]]:
+    return [(parsed["id"],) for _b, _i, parsed, _raw in be._walk(body, headings, doc)
+            if parsed and parsed.get("id") != "F?"]
+
+
 def _collect_resolved(author_body: str) -> list[str]:
     lines = author_body.splitlines()
     out: list[str] = []
@@ -959,6 +1078,8 @@ def main() -> int:
     parser.add_argument("--head-repo", default="", help="head repo full name for ✏️ edit links")
     parser.add_argument("--head-branch", default="", help="head branch for ✏️ edit links")
     parser.add_argument("--evidence-url", default="", help="URL for the evidence line on both cards")
+    parser.add_argument("--pr-files", default="",
+                        help="file of the PR's changed paths, one per line (prunes stale brief bullets)")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
     if args.self_test:
@@ -982,6 +1103,9 @@ def main() -> int:
         except json.JSONDecodeError:
             print("apply-update: prior evidence unreadable; proceeding degraded", file=sys.stderr)
 
+    pr_files = None
+    if args.pr_files and Path(args.pr_files).is_file():
+        pr_files = [ln.strip() for ln in Path(args.pr_files).read_text().splitlines() if ln.strip()] or None
     try:
         author_out, brief_out, merged_state, report = apply(
             author_body, brief_body, update,
@@ -993,6 +1117,8 @@ def main() -> int:
             repo=args.repo, pr=args.pr, head_sha=args.head_sha,
             run_id=args.run_id, timestamp=report["timestamp"])
         brief_out = refresh_facts_line(brief_out, evidence["findings"])
+        brief_out, author_out = refresh_carried_text(
+            brief_out, author_out, merged_state, report["blocking"], pr_files)
         # The brief's rubber-stamp Style line follows the card too (the
         # evidence count moves with it inside assemble_evidence). No empty-block
         # drop here: build-evidence already removed any empty block before the

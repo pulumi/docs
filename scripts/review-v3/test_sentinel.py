@@ -1903,3 +1903,18 @@ def test_g2_does_not_call_a_stale_card_answered():
                 comments=[author_card([("F1", "must")], head=old), brief_comment()])
     v = sentinel.evaluate(gh, CONFIG)
     assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message
+
+
+def test_oversized_is_computed_from_the_pr_not_only_the_label():
+    """#21936: the Sentinel evaluated before triage's label landed and G5
+    said "not oversized" on a 1,156-file PR for good."""
+    meta = pr_meta()
+    meta.update(additions=31000, deletions=382, changed_files=1156)
+    gh = StubGh(pr=meta, files=[docs_file_substantive()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "skip" and "oversized" in _gate(v, "G1").message
+    assert _gate(v, "G5").status == "red"
+    small = pr_meta()
+    small.update(additions=10, deletions=2, changed_files=1)
+    v = sentinel.evaluate(StubGh(pr=small, files=[docs_file_substantive()]), CONFIG)
+    assert _gate(v, "G5").status == "skip"

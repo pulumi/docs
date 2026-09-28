@@ -101,6 +101,11 @@ env:
 
 jobs:
   sentinel:
+    # Named so it can't be mistaken for the gate. The merge gate is the
+    # "Sentinel" CHECK-RUN this job publishes; the job itself succeeds
+    # whenever it evaluated, red verdict or not, and used to show up in the
+    # checks list as a second, always-green "sentinel" beside it.
+    name: Evaluate (publishes the Sentinel check)
     # Label events re-evaluate only for the labels the evaluator reads; every
     # other label change cannot move a gate. Keep this list in step with
     # sentinel.py — a label the evaluator reads but this list omits still
