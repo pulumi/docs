@@ -98,11 +98,52 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      actions: write # re-evaluate the Sentinel after a base-merge restamp
     outputs:
       was_outstanding: ${{ steps.transition.outputs.was_outstanding }}
     steps:
+      # A push that only merges the base leaves the diff the review read
+      # untouched. Marking it stale sent #21673 to review:stale with nothing
+      # scheduled to clear it (the review lane is skipped on synchronize).
+      # restamp-base-merge.py moves the v3 card's head marker to the new head
+      # instead — only when every commit since the reviewed head is a merge
+      # AND the PR's own +/- lines are unchanged; anything else, or any read
+      # it can't make, falls through to the stale transition below. Scripts
+      # from the BASE ref, never the PR head.
+      - name: Checkout review scripts (base ref)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts/review-v3
+            .claude/commands/docs-review
+            .github
+
+      - name: Carry the review across a base-only merge
+        id: restamp
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          python3 -m pip install --quiet pyyaml >/dev/null 2>&1 || true
+          RESULT=$(python3 scripts/review-v3/restamp-base-merge.py --repo "${{ github.repository }}" --pr "$PR")
+          echo "restamp: $RESULT" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "restamped=$(echo "$RESULT" | jq -r '.restamped')" >> "$GITHUB_OUTPUT"
+
+      - name: Re-evaluate Sentinel after a restamp
+        if: steps.restamp.outputs.restamped == 'true' && (vars.REVIEW_V3_SENTINEL == 'report' || vars.REVIEW_V3_SENTINEL == '1')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run review-sentinel.yml --repo "${{ github.repository }}" \
+            -f pr_number="${{ github.event.pull_request.number }}"
+
       - name: Mark previous Claude review as stale
         id: transition
+        if: steps.restamp.outputs.restamped != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
@@ -2436,11 +2477,19 @@ jobs:
             --role brief --pr "$PR" --body-file .review-brief.md
           bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
             --role author --pr "$PR" --body-file .review-author.md
+          # The cards are the review now: remove any legacy v2 pages left
+          # beside them. #21066 carried a month-old monolith next to its v3
+          # card, and the reconcile cron and auto-refresh gate both read the
+          # monolith's head. Best-effort — a leftover page is noise, not a
+          # failed publish.
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh prune-legacy --pr "$PR" \
+            || echo "::warning::prune-legacy failed; a legacy review page may remain on PR #$PR"
 
       - name: Finalize label, check-run, progress signal
         if: steps.current.outputs.superseded == 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_FAILURE_JQ: '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | select(.body | test("errored|timed out|Couldn.t start|superseded")) | .id'
         run: |
           set +e
           PR="${{ steps.current.outputs.pr }}"
@@ -2469,6 +2518,15 @@ jobs:
           if [ -n "$PROGRESS_ID" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$PROGRESS_ID" >/dev/null 2>&1 || true
           fi
+          # A published review answers every earlier run's failure notice:
+          # "Review errored — retry" under a fresh card is wrong advice
+          # (#21787 kept three, #21920 one). Only the bot's own terminal
+          # CLAUDE_PROGRESS notices go; a live spinner does not match.
+          gh api --paginate "repos/$REPO/issues/$PR/comments" \
+            --jq "$PROGRESS_FAILURE_JQ" 2>/dev/null \
+            | while read -r cid; do
+                [ -n "$cid" ] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+              done
           # Dispatcher cleanup + terminal comment (the #new-review path) —
           # deferred from the model job so "regenerating" stays accurate
           # until the cards actually landed.

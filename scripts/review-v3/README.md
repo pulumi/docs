@@ -221,6 +221,20 @@ default-branch-triggered workflow** — `workflow_run`, `schedule`,
 `workflow_dispatch` entry (`run_id`, optional `pr_number`) backfills a
 status for a deploy that already finished.
 
+## Base-only merges
+
+`restamp-base-merge.py` carries a v3 review across a push that only merges
+the base: every commit after the card's `CLAUDE_REVIEW_HEAD` has two parents
+AND the PR's `+`/`-` lines at the reviewed head equal the ones now (the same
+test `/pr-review` uses in `collect.py`). It moves the card's head carriers —
+the marker and the sub line's `head commit` — and nothing else, so the
+composition stamp still orders it for the stale-publish guard. Callers:
+`claude-code-review.yml`'s `mark-stale` (instead of staling; then pokes the
+Sentinel) and `review-label-reconcile.yml` (before staling, and in its
+un-stale sweep). Any read it can't make answers "not base-only". Before it,
+#21673's master merge left a clean review at `review:stale` with nothing
+scheduled to clear it.
+
 ## Superseded handoffs
 
 The model job hands its validated review to the credentialed publish job as

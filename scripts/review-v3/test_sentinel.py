@@ -1848,3 +1848,58 @@ def test_a_legacy_page_the_v2_update_lane_posted_as_pulumi_bot_is_read():
     card = {"id": 11, "user": {"login": "pulumi-bot"},
             "body": sentinel.AUTHOR_MARKER + "\n"}
     assert sentinel._find_comment([card], sentinel.AUTHOR_MARKER) is None
+
+
+def test_a_transient_5xx_on_a_read_is_retried(monkeypatch):
+    """Run 35938827723: one HTTP 500 on `pulls/N` failed the evaluation."""
+    calls = []
+
+    class R:
+        def __init__(self, rc, err="", out="{}"):
+            self.returncode, self.stderr, self.stdout = rc, err, out
+
+    results = [R(1, "gh: HTTP 500"), R(1, "gh: HTTP 502"), R(0)]
+
+    def fake_run(argv, **_kw):
+        calls.append(argv)
+        return results.pop(0)
+
+    monkeypatch.setattr(sentinel.subprocess, "run", fake_run)
+    monkeypatch.setattr(sentinel, "RETRY_SLEEP_S", 0)
+    gh = sentinel.Gh("pulumi/docs", 1)
+    gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    assert len(calls) == 3
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 500"), R(0)]
+    try:
+        gh._run(["api", "-X", "PATCH", "repos/pulumi/docs/issues/comments/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "writes never retry"
+
+    calls.clear()
+    results[:] = [R(1, "gh: HTTP 404"), R(0)]
+    try:
+        gh._run(["api", "repos/pulumi/docs/pulls/1"])
+    except sentinel.SentinelDataError:
+        pass
+    assert len(calls) == 1, "a 4xx is an answer, not a flake"
+
+
+def test_g2_does_not_call_a_stale_card_answered():
+    """#21840: G1 red "no current review" beside G2 green "every finding
+    answered" about a card at an older head. An answered stale card defers to
+    G1; undecided findings on it stay red — they are real until answered."""
+    old = "b" * 40
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card(head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G1").status == "red" and "#update-review" in _gate(v, "G1").message
+    assert "push to refresh" not in _gate(v, "G1").message
+    assert _gate(v, "G2").status == "skip" and "not current" in _gate(v, "G2").message
+
+    gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()],
+                comments=[author_card([("F1", "must")], head=old), brief_comment()])
+    v = sentinel.evaluate(gh, CONFIG)
+    assert _gate(v, "G2").status == "red" and "F1" in _gate(v, "G2").message

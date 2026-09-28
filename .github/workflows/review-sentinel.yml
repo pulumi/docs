@@ -140,7 +140,17 @@ jobs:
         id: pr
         env:
           EVENT_PR: ${{ github.event.pull_request.number }}
-          RUN_PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+          # `workflow_run.pull_requests[]` is only this run's PR when the
+          # upstream run was itself a pull_request event at that PR's head.
+          # The review lanes' dispatched and chained runs execute on master,
+          # and GitHub fills their `pull_requests` with whatever old PRs point
+          # at master — here #2 and #71. Every such Sentinel run evaluated
+          # pulumi/docs#2 (a 622-file PR from 2017), 500'd on it twice
+          # (runs 35875114067, 35913662488 → `422 No commit found for SHA:`),
+          # and posted a status comment on it. Those lanes poke the Sentinel
+          # with the right PR number themselves; this path is only for the
+          # genuine pull_request case.
+          RUN_PR: ${{ github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.pull_requests[0].head.sha == github.event.workflow_run.head_sha && github.event.workflow_run.pull_requests[0].number || '' }}
           INPUT_PR: ${{ inputs.pr_number }}
         run: |
           set -uo pipefail
@@ -259,6 +269,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # A verdict with no head SHA is an evaluation that could not read
+          # the PR at all (sentinel.py's SentinelDataError path). Posting it
+          # is a guaranteed `422 No commit found for SHA:` that reads as a
+          # publish bug; say what actually happened instead.
+          if [ -z "$(jq -r '.head_sha // ""' verdict.json)" ]; then
+            echo "::error::The Sentinel could not read PR #${{ steps.pr.outputs.pr }} (see the Evaluate step); no check-run to publish. Re-run this job."
+            exit 1
+          fi
           jq --arg run_id "${{ github.run_id }}" \
              '{name: "Sentinel", head_sha: .head_sha, status: "completed",
                conclusion: .conclusion, external_id: $run_id,

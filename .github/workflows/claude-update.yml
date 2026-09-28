@@ -1124,6 +1124,7 @@ jobs:
         if: always() && steps.progress.outputs.signal != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROGRESS_FAILURE_JQ: '.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- CLAUDE_PROGRESS -->")) | select(.body | test("errored|timed out|Couldn.t start|superseded")) | .id'
           # The API path of the comment that asked for this run, for the
           # 👀 → 🚀 swap. Empty for events that can't take one.
           ACK_TARGET: ${{ github.event_name == 'issue_comment' && format('issues/comments/{0}', github.event.comment.id) || github.event_name == 'pull_request_review_comment' && format('pulls/comments/{0}', github.event.comment.id) || '' }}
@@ -1183,6 +1184,13 @@ jobs:
             if [ -n "$COMMENT_ID" ]; then
               gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
             fi
+            # A fresh review answers every earlier run's failure notice
+            # (#21787 kept three "Review errored" comments under a good card).
+            gh api --paginate "repos/$REPO/issues/$PR/comments" \
+              --jq "$PROGRESS_FAILURE_JQ" 2>/dev/null \
+              | while read -r cid; do
+                  [ -n "$cid" ] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+                done
             if [ "$AUTHOR" != "auto-refresh" ]; then
               MSG="🤖 Review updated on @${AUTHOR}'s request."
               if [ -f "$ACK" ]; then

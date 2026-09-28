@@ -88,6 +88,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -175,6 +176,9 @@ BREAK_GLASS = (
 CHECK_NAME = "Sentinel"
 
 
+RETRY_SLEEP_S = 3
+
+
 class SentinelDataError(Exception):
     """An API read failed in a way that must surface as action_required."""
 
@@ -194,9 +198,18 @@ class Gh:
         if token_env and os.environ.get(token_env):
             env = dict(os.environ)
             env["GH_TOKEN"] = os.environ[token_env]
-        result = subprocess.run(
-            ["gh", *args], text=True, capture_output=True, env=env,
-        )
+        # Reads retry a transient 5xx twice: one GitHub 500 on `pulls/N`
+        # (run 35938827723) was enough to fail a whole evaluation. Writes
+        # never retry — a PATCH that timed out may have landed.
+        is_read = not any(a in ("-X", "--method") for a in args) and "--input" not in args
+        for attempt in range(3 if is_read else 1):
+            result = subprocess.run(
+                ["gh", *args], text=True, capture_output=True, env=env,
+            )
+            if result.returncode == 0 or not re.search(r"HTTP 5\d\d", result.stderr or ""):
+                break
+            if attempt < 2:
+                time.sleep(RETRY_SLEEP_S * (attempt + 1))
         if result.returncode != 0:
             # `check=True` would raise CalledProcessError, whose message is
             # the argv and an exit code — gh's actual explanation goes in
@@ -879,10 +892,15 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
             "removes `review:trivial` and pushes.",
         ))
     else:
+        # Not "push to refresh": a push refreshes the review automatically
+        # only when it touches lines a 🚨 finding flagged. On a clean review
+        # (#21840) a push just marks it stale, so the advice sent authors
+        # round a loop that never closed.
         gates.append(Gate(
             "G1 review-ran", "red",
-            f"No current review for `{head_sha[:9]}` — push to refresh, comment "
-            "`@claude #update-review`, or flip the PR to draft and back to ready.",
+            f"No current review for `{head_sha[:9]}` — comment "
+            "`@claude <what changed> #update-review` to refresh it, or "
+            "`@claude #new-review` for a fresh one.",
         ))
 
     # G2 findings-answered ------------------------------------------------
@@ -936,6 +954,19 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"`@claude F3 is wrong because <why> #update-review` or "
                     f"`@claude I know what I'm doing, mark everything resolved #update-review`.",
                 ))
+            elif not _body_matches_head(body, head_sha):
+                # "Every finding answered" about a review of an older diff
+                # is a claim about content that may no longer exist, and it
+                # sat green beside G1's red "no current review" on #21840.
+                # Undecided findings on a stale card stay red above (they
+                # are real until someone answers them); an all-answered
+                # stale card defers to G1 like a missing one does.
+                m = HEAD_MARKER_RE.search(body)
+                at = f" at `{m.group(1)[:9]}`" if m else ""
+                gates.append(Gate(
+                    "G2 findings-answered", "skip",
+                    f"the review{at} is not current — see G1",
+                ))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "every finding answered"))
     elif legacy:
@@ -967,6 +998,9 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"{outstanding} 🚨 Outstanding finding(s) on the legacy review — "
                     "work them per CONTRIBUTING §Working the review to zero.",
                 ))
+            elif not _body_matches_head(legacy.get("body") or "", head_sha):
+                gates.append(Gate("G2 findings-answered", "skip",
+                                  "the legacy review is not current — see G1"))
             else:
                 gates.append(Gate("G2 findings-answered", "ok", "legacy review clean"))
     elif trivial_standin:
