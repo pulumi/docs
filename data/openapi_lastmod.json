@@ -46,8 +46,8 @@
       "lastmod": "2026-09-09"
     },
     "AccessTokens": {
-      "hash": "bfec584ee8838ced12b09b0181075138a167318b5acbebb792467aade23e753f",
-      "lastmod": "2026-09-15"
+      "hash": "6b48183f88a0bff6f862fbaf89129e043b9c7ededae87f19b650f7767c302fec",
+      "lastmod": "2026-09-29"
     },
     "AuditLogs": {
       "hash": "67c8250dc397ac22ec0412f0894218668bd9b9a60a6b4da093359d91d0f774e8",
@@ -66,8 +66,8 @@
       "lastmod": "2026-05-13"
     },
     "Deployments": {
-      "hash": "c5b227ff8f1b7ea1b1d011d6ca80ca673fc4d33ee21b5c3a76c99fdd82f25987",
-      "lastmod": "2026-09-15"
+      "hash": "1197d58d85430efbfe998f194e3238b061406d677f7f017aac37bc16244d6f59",
+      "lastmod": "2026-09-29"
     },
     "Environments": {
       "hash": "7545d4be751e9c109da90fc3872628a3ce2247e3768e66cd0f44a6211c6931bd",
@@ -1259,8 +1259,8 @@
       "lastmod": "2026-09-15"
     },
     "DeploymentJob": {
-      "hash": "3f89bdc7ce8ec6114c94a3b56c9a722037850620604255de6d8d87097c82d018",
-      "lastmod": "2026-09-15"
+      "hash": "26764d0d27cbea145361ede3bb5d7dccf17615a289b9d2ce810e314af9de10af",
+      "lastmod": "2026-09-29"
     },
     "DeploymentLogLine": {
       "hash": "3b510ade0f29eead49b6f92663f469287da22260029a92d46057aa0f0b7f8509"
@@ -1276,8 +1276,8 @@
       "lastmod": "2026-09-15"
     },
     "DeploymentNestedUpdate": {
-      "hash": "6cae21d936b90adeafa33c184556b6ffd89c2d3fdff007b300a6b6d66905c24f",
-      "lastmod": "2026-09-15"
+      "hash": "5b9d04617b933343590d74ed71fc836c13386c7be84f676f2d98205a93366188",
+      "lastmod": "2026-09-29"
     },
     "DeploymentRole": {
       "hash": "6a3958994fbe174521b5d882d37fe971aaf27ed37ed2ff4ba8b43a09150db48d",
@@ -1374,12 +1374,12 @@
       "lastmod": "2026-09-15"
     },
     "DriftRun": {
-      "hash": "bd7734b92e12c39478d41c5d7a2c394f9e7d8f5a531a4812066a12226b86e729",
-      "lastmod": "2026-09-15"
+      "hash": "ae9dc8746b2709d8fcd6a4ec98db6ada3e896b9b7ba2e5de9729debda06d334d",
+      "lastmod": "2026-09-29"
     },
     "DriftRunUpdate": {
-      "hash": "0ef848558771feb065429a83b9811977b173b3e1e4d2ad8698ded9585ffcb6ca",
-      "lastmod": "2026-09-15"
+      "hash": "688771a13101edd1f5f6d871167fad21adcd7df3e7494ee67a5793849a2d16da",
+      "lastmod": "2026-09-29"
     },
     "EncryptEnvironmentSecretsRequest": {
       "hash": "93a42eb99b3ad2694573511c4f20fb29a6f72394bdaa46cf8297b69469c7a0de",
@@ -1528,8 +1528,8 @@
       "hash": "d3602fcc3959e640b637a4be3df093611afdcbe4a9b478c23016b57ad4ce8889"
     },
     "GetDeploymentResponse": {
-      "hash": "1b1ad3338f7e99cdda588318366e3e74fe89cc51c80226bab181bf480cf32ed3",
-      "lastmod": "2026-09-15"
+      "hash": "cfd0cf7612037e746bd1aa9c394b24a9f722e2dd33856c08f09815aff64d63f1",
+      "lastmod": "2026-09-29"
     },
     "GetDiscoveredProjectResponse": {
       "hash": "0c4f2778d82149acad398bce85c539cfa21d4248f1cdc9b9a53de85fbec0ab4d",
@@ -1928,8 +1928,8 @@
       "lastmod": "2026-09-15"
     },
     "JobRun": {
-      "hash": "5c178dfe4eded42778ba6552c34d386b0d5e8c9cc6cb73c21dfec3b7442d1860",
-      "lastmod": "2026-09-15"
+      "hash": "dcadbed405c7c8c6d9e593f6159f87e3880e69c6978e373a24467f0be055495b",
+      "lastmod": "2026-09-29"
     },
     "KeyEncryptionKeyMigration": {
       "hash": "8c6fb67be24365452eb32cc71ca9224e678f76388efac5a79457fae5fa17a754"
@@ -1984,8 +1984,8 @@
       "hash": "21b0da986e59010889ede27ff5d5bfde450af7d2e021ff1d2fedd93f7d7e858b"
     },
     "ListDeploymentResponse": {
-      "hash": "693f19276959ee19a624c01d792aed3a0f262c676152f2d4db3f67e0ad2c5c19",
-      "lastmod": "2026-09-15"
+      "hash": "4d460610d69c1ee26d8c22973feafdea431ddd13d0ce17121cf251ed1ac9ff25",
+      "lastmod": "2026-09-29"
     },
     "ListDeploymentResponseV2": {
       "hash": "8362a498cd08971711e7cfa694630d0d02db459fe3d8d587cd67a2b756e9052b",
@@ -2824,8 +2824,8 @@
       "hash": "ce0047ca86eae34af5eb16b4174a9fe7679848c9374ab6d50b9e2eace1e1d24d"
     },
     "StepRun": {
-      "hash": "bfa6b43a906f4b2198d68137166fd89d7328c18dc2995da9fa35508a82d6a7f3",
-      "lastmod": "2026-09-15"
+      "hash": "64915ee71cde74348d3216ac42a2d849dc734dfc26ac0a5cdf63be5d1921160b",
+      "lastmod": "2026-09-29"
     },
     "SubmitChangeRequestRequest": {
       "hash": "7d1352b49d9c6b8cba7179225bc6f3d9c4fe14b26a2e9e29727bc4a7bdd53a3c"
