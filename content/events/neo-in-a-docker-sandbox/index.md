@@ -34,6 +34,7 @@ duration: 60 minutes
 sessions:
     - label: Americas
       sortable_date: 2026-09-16T09:00:00.000-07:00
+      youtube_url: https://www.youtube.com/embed/aTimO_kMS0c
       form:
           hubspot_form_id: 37d15e98-1e00-4b10-864c-629d7f55d4a1
           salesforce_campaign_id: 701PQ00000yEUGcYAO
