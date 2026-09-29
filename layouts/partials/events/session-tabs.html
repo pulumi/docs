@@ -16,8 +16,9 @@
     belongs to is already visible.
 
     A session that has already run keeps its tab — the page is a record of both
-    dates — but reads as muted and says so, and its register panel points at the
-    session that's still ahead.
+    dates — but reads as muted and says so: "(recording)" when its panel now holds
+    a video, "(passed)" otherwise. Its register panel points at the session that's
+    still ahead, or shows the recording when it has one.
 
     Parameters:
     - sessions: the normalized session slice (see events/sessions.html), each
@@ -43,7 +44,7 @@
             class="tab{{ if eq .key $active }} is-active{{ end }}{{ if .passed }} opacity-60{{ end }}">
             {{/* The date localizes client-side (resources.ts) so the tab agrees with
                  the card that linked here, which localizes its calendar tile. */}}
-            {{ .label }} &middot; <span data-local-date="{{ .date | time.Format "2006-01-02T15:04:05Z07:00" }}" data-local-date-format="short">{{ .date | time.Format "Jan 2" }}</span>{{ if .passed }} (passed){{ end }}
+            {{ .label }} &middot; <span data-local-date="{{ .date | time.Format "2006-01-02T15:04:05Z07:00" }}" data-local-date-format="short">{{ .date | time.Format "Jan 2" }}</span>{{ if .passed }}{{ if .youtube_url }} (recording){{ else }} (passed){{ end }}{{ end }}
         </a>
     {{ end }}
 </nav>
