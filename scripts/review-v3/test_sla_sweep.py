@@ -282,6 +282,33 @@ def test_close_only_after_warn_aged_enough():
         assert "Closing this PR as stale" in gh.closed[0][1]
 
 
+def test_projected_close_days_matches_the_close_rule():
+    # CONFIG: warn_days 14, close_days 21 -> a 7-day notice gap after the warn.
+    proj = sla_sweep.projected_close_days
+    assert proj(CONFIG, 5.0, None) == 16      # not yet warned: idle clock dominates
+    assert proj(CONFIG, 16.0, None) == 7      # past warn_days, unwarned: warn fires, then 7d notice
+    assert proj(CONFIG, 16.0, 0.0) == 7       # warned this sweep
+    assert proj(CONFIG, 25.0, 3.0) == 4       # idle already past close_days; notice still running
+    assert proj(CONFIG, 19.5, 5.5) == 2       # both clocks agree, partial days round up
+    assert proj(CONFIG, 30.0, 9.0) == 0       # closable now
+
+
+def test_author_actions_carry_the_projected_close():
+    with tempfile.TemporaryDirectory() as d:
+        state_dir = Path(d)
+        gh = StubGh()
+        gh.add_pr(1, comments=[author_card([("F1", "must")])], files=[docs_file_substantive()],
+                  timeline=[committed(iso(NOW - timedelta(days=25)))])
+        warned = sla_sweep.empty_sweep_state()
+        warned["warns"] = [{"at": iso(NOW - timedelta(days=3)), "head_sha": HEAD}]
+        sla_sweep.save_state(1, warned, "", state_dir)
+        record = sla_sweep.sweep(gh, CONFIG, now=NOW, dry_run=True, state_dir=state_dir, evidence_uri="")
+        action = record["actions"][0]["action"]
+        assert action["type"] == "none" and action["closes_in_days"] == 4
+        assert action["undecided_count"] == 1
+        assert gh.closed == [] and gh.comments_posted == []
+
+
 def test_activity_clears_warn_and_label():
     with tempfile.TemporaryDirectory() as d:
         state_dir = Path(d)
