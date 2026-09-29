@@ -18,8 +18,7 @@ gated: true
 event_type: workshop
 
 # URL for embedding a URL for ungated events.
-youtube_url: 
-
+youtube_url: https://www.youtube.com/embed/CKQrrE-aQtM
 # Sortable date. The datetime Hugo will use to sort the events in date order.
 sortable_date: 2025-02-26T16:00:00+11:00
 
@@ -42,15 +41,12 @@ learn:
 
 # The event presenters
 presenters:
-    - name: Josh Kodroff 
+    - name: Josh Kodroff
       role: Principal Solutions Architect, Pulumi
       photo: /images/team/josh-kodroff.jpg
-    - name: Aurélien Requiem
-      role: Customer Engineer, Pulumi
-      photo: /images/team/aurelien-requiem.jpg
-    - name: Abdul Javed
-      role: Regional GTM Leader (APAC), Pulumi
-      photo: /images/team/abdul-javed.jpg
+    - name: Torian Crane
+      role: Senior Technical Content Engineer, Pulumi
+      photo: /images/team/torian-crane.jpg
 
 # case-sensitive
 tags:
