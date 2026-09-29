@@ -31,9 +31,7 @@ Investigate as content triggers each priority below.
 
 Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. The reference owns claim extraction; in blog copy, pay particular attention to **performance multipliers**, **competitor claims**, and **adoption / market-position statistics** — common in this domain and high-blast-radius when wrong.
 
-### Priority 1.5 — Third-party claims, endorsement, and adaptation
-
-Fact-check verifies that an attributed claim is *true*. This lane checks that it is *framed* safely: a true third-party metric can still be a publishing problem if the post moves it onto Pulumi or implies a relationship that doesn't exist. Findings follow the standard bucket rules in `docs-review:references:output-format`.
+**Third-party framing.** Fact-check verifies that an attributed claim is *true*. This pass, run alongside it, checks that the claim is *framed* safely: a true third-party metric can still be a publishing problem if the post moves it onto Pulumi or implies a relationship that doesn't exist. Findings follow the standard bucket rules in `docs-review:references:output-format`.
 
 - **Metrics are attributed where they're used.** A third-party number ("cut deploy time by 70%") names its source in the same sentence every time the post uses it, not only in an earlier paragraph or a footnote. Quote the unattributed use; propose "According to <source>, …" or "<Source> reports …".
 - **No implied Pulumi causation or guarantee.** Flag constructions that move a third party's outcome onto Pulumi: "With Pulumi, you'll cut deploy time by 70%", "Pulumi guarantees …". Quote the construction; propose a rewrite that keeps the metric with its source and says plainly what Pulumi does.
