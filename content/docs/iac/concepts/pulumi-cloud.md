@@ -39,7 +39,7 @@ When you sign up for Pulumi Cloud, you automatically get an individual organizat
 
 Your program can read the name of the organization it is deploying into at runtime, which is useful for naming or tagging resources or for constructing references to other stacks.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -81,6 +81,15 @@ var organization = ctx.organizationName();
 ```yaml
 variables:
   organization: ${pulumi.organization}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  organization = pulumi.organization
+}
 ```
 
 {{% /choosable %}}
