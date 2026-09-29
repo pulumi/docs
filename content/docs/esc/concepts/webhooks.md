@@ -72,9 +72,9 @@ You must be an admin of the organization to create organization webhooks.
 
 The following example shows how to create an Environment webhook in a Pulumi IaC program by declaring a [Webhook resource](/registry/packages/pulumiservice/api-docs/webhook/) with the [Pulumi Cloud provider](/registry/packages/pulumiservice).
 
-To create an Organization webhook instead of an Environment webhook, the code is virtually identical - just omit the `environmentName` value when declaring the webhook resource.
+To create an Organization webhook instead of an Environment webhook, the code is virtually identical - just omit the `projectName` and `environmentName` values when declaring the webhook resource.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -84,6 +84,7 @@ const webhook = new pulumiservice.Webhook("example-webhook", {
     active: true,
     displayName: "webhook example",
     organizationName: "example",
+    projectName: "my-project",
     environmentName: "my-environment",
     payloadUrl: "https://example.com/webhook",
 });
@@ -99,6 +100,7 @@ webhook = pcloud.Webhook("example-webhook",
     active=True,
     display_name="webhook example",
     organization_name="example",
+    project_name="my-project",
     environment_name="my-environment",
     payload_url="https://example.com/webhook"
 )
@@ -119,7 +121,8 @@ func main() {
    Active:           pulumi.Bool(true),
    DisplayName:      pulumi.String("example webhook"),
    OrganizationName: pulumi.String("example"),
-      EnvironmentName:  pulumi.String("my-environment"),
+   ProjectName:      pulumi.String("my-project"),
+   EnvironmentName:  pulumi.String("my-environment"),
    PayloadURL:       pulumi.String("https://example.com/webhook"),
   }, nil)
   if err != nil {
@@ -144,6 +147,7 @@ class PulumiServiceWebhook: Stack
             Active = true,
             DisplayName = "example webhook",
             OrganizationName = "example",
+            ProjectName = "my-project",
             EnvironmentName = "my-environment",
             PayloadUrl = "https://example.com/webhook"
         });
@@ -152,6 +156,32 @@ class PulumiServiceWebhook: Stack
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_webhook" "example_webhook" {
+  active            = true
+  display_name      = "webhook example"
+  organization_name = "example"
+  project_name      = "my-project"
+  environment_name  = "my-environment"
+  payload_url       = "https://example.com/webhook"
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ## Event Filtering

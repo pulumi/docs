@@ -32,7 +32,7 @@ Be careful when you change a resource's name because changing the name of a reso
 
 Every resource managed by Pulumi has a logical name that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -85,6 +85,29 @@ to refer to it. Unlike other languages, Pulumi YAML has no distinct variable nam
 {{% /notes %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+A resource's second label is its logical name, so this role's logical name is `my_role`. (`aws_iam_role` requires an assume-role policy. This example and the ones below read it from an `aws_iam_policy_document` data source named `assume_role`, which isn't shown.)
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+The label is also how the rest of the program refers to the resource, as `aws_iam_role.my_role`. To give the resource a logical name that differs from its label — to match the `my-role` the other languages use here, for instance — set `name` in the resource's [`pulumi` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#resource-options):
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+
+  pulumi {
+    name = "my-role"
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -120,7 +143,7 @@ The exact format of auto-generated physical names varies by provider. While the 
 
 For cases that require specific names, you can override auto-naming by specifying a physical name. Most resources have a `name` property that you can use to name the resource yourself. Specify your name in the argument object to the constructor. Here’s an example.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -178,6 +201,18 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+The physical name is an ordinary argument in the resource body, distinct from the `name` in the `pulumi` block, which sets the logical name:
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  name               = "my-role-001"
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -187,7 +222,7 @@ Overriding auto-naming makes your project susceptible to naming collisions. As a
 
 Because physical and logical names do not need to match, you can construct the physical name by using your project and stack names. Similarly to auto-naming, this approach protects you from naming collisions while still having meaningful names. Note that `deleteBeforeReplace` is still necessary:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -254,6 +289,23 @@ resources:
     options:
       deleteBeforeReplace: true
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_iam_role" "my_role" {
+  name               = "my-role-${pulumi.project}-${pulumi.stack}"
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
+```
+
+{{% notes type="info" %}}
+Pulumi HCL needs no `deleteBeforeReplace` here. It keeps Terraform's replacement ordering,
+destroying the old resource before creating its replacement, which is what that option asks
+for elsewhere. Set `create_before_destroy = true` in a `lifecycle` block to opt into
+Pulumi's create-first ordering instead.
+{{% /notes %}}
 
 {{% /choosable %}}
 
@@ -466,7 +518,7 @@ Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not
 The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/iac/concepts/secrets/#the-resource-id-cannot-be-made-secret).
 {{% /notes %}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -566,6 +618,21 @@ resources:
       content: "Hello, Pulumi!"
       key: hello.txt
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "my_bucket" {}
+
+resource "aws_s3_object" "hello_txt" {
+  bucket  = aws_s3_bucket.my_bucket.id # The AWS-assigned bucket name.
+  content = "Hello, Pulumi!"
+  key     = "hello.txt"
+}
+```
+
+Pulumi HCL has no `Output` wrapper to unpack, so a not-yet-known `id` is referenced like any other value; the engine resolves the dependency for you. `pulumiresourceurn`, `pulumiresourcename`, and `pulumiresourcetype` return a resource's [URN](#urns), logical name, and [type token](#types) when you need those instead.
 
 {{% /choosable %}}
 

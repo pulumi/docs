@@ -89,7 +89,7 @@ flowchart LR
 
 For example, here's all it takes to declare an AWS S3 bucket. You state that the bucket should exist; the engine decides whether to create it, leave it alone, or update it to match:
 
-{{< chooser language "typescript,python" / >}}
+{{< chooser language "typescript,python,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -114,6 +114,19 @@ import pulumi_aws as aws
 bucket = aws.s3.BucketV2("my-bucket")
 
 pulumi.export("bucket_name", bucket.bucket)
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+# Declare a bucket. Pulumi creates, updates, or replaces it to match.
+resource "aws_s3_bucket" "my_bucket" {}
+
+output "bucket_name" {
+  value = aws_s3_bucket.my_bucket.bucket
+}
 ```
 
 {{% /choosable %}}

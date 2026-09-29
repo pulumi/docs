@@ -56,7 +56,7 @@ Two safeguards apply by default:
 
 `pulumi state delete` is well suited to a one-time cleanup you run by hand, but it isn't something you want a CI pipeline invoking on your behalf: a mistyped URN or a stale pipeline run could remove the wrong resource from state with nobody watching. When the removal should happen as a normal part of `pulumi up`, set the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) resource option instead:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -107,6 +107,22 @@ resources:
     options:
       retainOnDelete: true
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "my_bucket" {
+  # ...
+
+  pulumi {
+    retain_on_delete = true
+  }
+}
+```
+
+Coming from Terraform, the block you'd reach for here is `removed`, but it won't do this job: Pulumi HCL requires `lifecycle { destroy = true }` inside a `removed` block, and rejects Terraform's `destroy = false` "forget" behavior outright, pointing you at `pulumi state delete` instead. Set `retain_on_delete` first, run `pulumi up` so the option lands in state, and only then drop the declaration.
 
 {{% /choosable %}}
 
