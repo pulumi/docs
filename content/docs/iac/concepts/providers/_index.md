@@ -180,9 +180,9 @@ Then, you deploy the following Pulumi program:
 {{% choosable language typescript %}}
 
 ```typescript
-let aws = require("@pulumi/aws");
+import * as aws from "@pulumi/aws";
 
-let instance = new aws.ec2.Instance("myInstance", {
+const instance = new aws.ec2.Instance("myInstance", {
     instanceType: "t2.micro",
     ami: "myAMI",
 });
@@ -270,20 +270,20 @@ Then deploy the following program, which uses an explicit provider for the certi
 {{% choosable language typescript %}}
 
 ```typescript
-let pulumi = require("@pulumi/pulumi");
-let aws = require("@pulumi/aws");
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 
 // Create an AWS provider for the us-east-1 region.
-let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
+const useast1 = new aws.Provider("useast1", { region: "us-east-1" });
 
 // Create an ACM certificate in us-east-1.
-let cert = new aws.acm.Certificate("cert", {
+const cert = new aws.acm.Certificate("cert", {
     domainName: "foo.com",
     validationMethod: "EMAIL",
 }, { provider: useast1 });
 
 // Create an ALB listener in the default region that references the ACM certificate created above.
-let listener = new aws.lb.Listener("listener", {
+const listener = new aws.lb.Listener("listener", {
     loadBalancerArn: loadBalancerArn,
     port: 443,
     protocol: "HTTPS",
@@ -484,15 +484,16 @@ Component resources also accept a set of providers to use with their child resou
 
 ```typescript
 class MyResource extends pulumi.ComponentResource {
-    constructor(name, opts) {
-        let instance = new aws.ec2.Instance("instance", { ... }, { parent: this });
-        let pod = new kubernetes.core.v1.Pod("pod", { ... }, { parent: this });
+    constructor(name: string, opts?: pulumi.ComponentResourceOptions) {
+        super("example:index:MyResource", name, {}, opts);
+        const instance = new aws.ec2.Instance("instance", { ... }, { parent: this });
+        const pod = new kubernetes.core.v1.Pod("pod", { ... }, { parent: this });
     }
 }
 
-let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
-let myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
-let myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
+const useast1 = new aws.Provider("useast1", { region: "us-east-1" });
+const myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
+const myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
 ```
 
 {{% /choosable %}}
