@@ -545,6 +545,16 @@
       "authenticationFailure": false,
       "category": "environments",
       "deprecated": false,
+      "description": "An ESC environment minted an OIDC token for an external service through the fn::open::oidc provider.",
+      "displayName": "Environment OIDC Token Issued",
+      "event": "environment-oidc-token-issued",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "environments",
+      "deprecated": false,
       "description": "An ESC environment was opened, evaluating its definition and resolving its providers.",
       "displayName": "Environment Open",
       "event": "environment-open",
@@ -978,6 +988,16 @@
       "description": "An expired-trial organization was downgraded to the Free plan. The downgrading admin became the owner and all other members were suspended.",
       "displayName": "Organization Downgraded To Free",
       "event": "org-downgraded-to-free",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "The organization was moved to the Pro plan.",
+      "displayName": "Organization Upgraded To Pro",
+      "event": "org-upgraded-to-pro",
       "requiresOrgAdmin": true,
       "requiresStackAdmin": false
     },
