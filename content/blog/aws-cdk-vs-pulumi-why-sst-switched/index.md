@@ -8,7 +8,7 @@ title: "AWS CDK vs Pulumi: Why SST Chose Pulumi"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2024-09-25T07:32:40Z
-updated: 2025-03-05
+updated: 2026-09-16
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -73,12 +73,12 @@ TL;DR: Pulumi lets SST offer a faster, more flexible, and provider-agnostic infr
 
 ## In This Article:
 
-- [The Beginnings of SST](/blog/from-cdk-pulumi-evolution-of-sst/#the-beginnings-of-sst)
-- [CDK and CloudFormation Limitations](/blog/from-cdk-pulumi-evolution-of-sst/#cdk-and-cloudformation-limitations)
-- [A Provider-agnostic Solution: Discovering Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#a-provider-agnostic-solution-discovering-pulumi)
-- [Transitioning to Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#transitioning-to-pulumi)
-- [The Benefits of Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-benefits-of-pulumi)
-- [The Future of SST with Pulumi](/blog/from-cdk-pulumi-evolution-of-sst/#the-future-of-sst-with-pulumi)
+- [The Beginnings of SST](#the-beginnings-of-sst)
+- [CDK and CloudFormation Limitations](#cdk-and-cloudformation-limitations)
+- [A Provider-agnostic Solution: Discovering Pulumi](#a-provider-agnostic-solution-discovering-pulumi)
+- [Transitioning to Pulumi](#transitioning-to-pulumi)
+- [The Benefits of Pulumi](#the-benefits-of-pulumi)
+- [The Future of SST with Pulumi](#the-future-of-sst-with-pulumi)
 
 ## The Beginnings of SST
 
@@ -168,7 +168,7 @@ With Pulumi's foundation in place, they can now focus on further enhancing the d
 - **Improved Deployment Workflows**: Building on Pulumi's extensibility, they can create [more advanced deployment workflows](/docs/deployments/concepts/) that address the specific needs of application developers, such as faster deployment times, better rollback capabilities, and more granular control over the deployment process.
 - **Enhanced Observability and Monitoring**: By treating the infrastructure code as a first-class program, they can provide their users with [better visibility](https://www.pulumi.com/product/pulumi-insights/) into the deployment process and more robust monitoring and observability capabilities, helping them to identify and resolve issues quickly.
 
-As the SST team continues to evolve with Pulumi at its core, they aim to deliver an even more powerful and user-friendly infrastructure management experience for developers. This will empower teams to focus on building great applications while effortlessly managing the underlying infrastructure.
+Two years on, that bet has held: SST shipped its Pulumi-based engine as v3 in August 2024 and has kept building on it through its v4 releases, while the SST team's own attention has broadened to new projects like OpenCode, an open-source AI coding agent. The engine choice made in this migration is now load-bearing for every SST app that deploys with v3 or later.
 
 ## Conclusion
 
@@ -189,7 +189,7 @@ SST is a framework that makes building modern full-stack applications on your in
 
 ### What is SST's Ion?
 
-Ion is the code name for a new engine for deploying SST applications. The constructs (or components) are deployed using Pulumi instead of CDK and CloudFormation (CFN). Once Ion is stable, it will be released as SST v3.
+Ion was the code name for SST's Pulumi-based deployment engine, which replaced CDK and CloudFormation for deploying SST's constructs and components. It shipped as SST v3 in August 2024, and SST has continued to build on that same Pulumi engine and Terraform-bridged providers through its v4 releases.
 
 ### Does SST use mostly Terraform or Pulumi?
 
@@ -197,4 +197,4 @@ SST leverages Pulumi behind the scenes for its providers and deployment engine w
 
 ### How does SST make money?
 
-SST (Serverless Stack) makes money primarily through its managed service, called SST Console. The Console is optional and includes a free tier. In short, SST primarily relies on SaaS (Software as a Service) revenue through its managed platform and potentially supplemental income streams like enterprise services and consulting.
+SST (Serverless Stack) makes money primarily through its managed dashboard, called SST Console, which is optional, comes with a free tier, and [bills based on the number of active resources](https://sst.dev/docs/console/#pricing) you run through it. In short, SST relies on SaaS revenue from Console alongside potential supplemental income streams like enterprise services and consulting.
