@@ -828,7 +828,11 @@ jobs:
       #     A receipt can't claim "clean" for text no round verified.
       #
       # Kill switch: repo variable GLOWUP_PREVERIFY = '0' skips every round
-      # (the receipts then say pre-verification did not run). Round 1 costs
+      # (the receipts then say pre-verification did not run). The gates wrap
+      # it in format('{0}', ...) -- do not "simplify" that to a bare
+      # `vars.GLOWUP_PREVERIFY != '0'`: an unset variable is null, GitHub
+      # coerces null-vs-'0' to numbers (0 != 0 is false), and unset would
+      # silently mean OFF. A fork smoke run caught exactly that. Round 1 costs
       # about what the pre-merge review's own verification of the same diff
       # costs -- $1-6 per glow-up in the Sept 2026 replays.
       # ---------------------------------------------------------------------
@@ -836,10 +840,10 @@ jobs:
       # .git, where a model step with Bash could have planted a hook or a
       # core.fsmonitor that the checkout itself would run.
       - name: Clear the trusted pre-verify checkout (round 1)
-        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && vars.GLOWUP_PREVERIFY != '0'
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && format('{0}', vars.GLOWUP_PREVERIFY) != '0'
         run: rm -rf .preverify-code
       - name: Checkout trusted pre-verify code (round 1)
-        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && vars.GLOWUP_PREVERIFY != '0'
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && format('{0}', vars.GLOWUP_PREVERIFY) != '0'
         continue-on-error: true
         uses: actions/checkout@v7
         with:
@@ -849,7 +853,7 @@ jobs:
           path: .preverify-code
       - name: Pre-verify glow-up edits (round 1)
         id: pv1
-        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && vars.GLOWUP_PREVERIFY != '0'
+        if: github.event.inputs.mode == 'glowup' && steps.claude.outcome == 'success' && format('{0}', vars.GLOWUP_PREVERIFY) != '0'
         continue-on-error: true
         uses: ./.preverify-code/.github/actions/glowup-preverify-round
         with:
