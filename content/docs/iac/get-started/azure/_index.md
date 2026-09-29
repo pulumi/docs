@@ -9,10 +9,6 @@ menu:
         parent: iac-get-started
         identifier: azure-get-started
         weight: 2
-    clouds:
-        parent: azure
-        identifier: azure-get-started
-        weight: 2
 aliases:
     - /docs/get-started/azure/
     - /docs/quickstart/azure/
