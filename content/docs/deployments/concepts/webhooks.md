@@ -53,7 +53,7 @@ Pulumi Webhooks may be created through the UI using the steps outlined below, by
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
 or by [using the API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 {{% choosable language typescript %}}
 
 ```typescript
@@ -127,6 +127,30 @@ class PulumiServiceWebhook: Stack
 ```
 
 {{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    pulumiservice = {
+      source = "pulumi/pulumiservice"
+    }
+  }
+}
+
+resource "pulumiservice_webhook" "example_webhook" {
+  active            = true
+  display_name      = "webhook example"
+  organization_name = "example"
+  payload_url       = "https://example.com/webhook"
+}
+```
+
+The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 #### Create an Organization Webhook
