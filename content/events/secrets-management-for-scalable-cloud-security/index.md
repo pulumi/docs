@@ -41,15 +41,12 @@ learn:
 
 # The event presenters
 presenters:
-    - name: Josh Kodroff 
+    - name: Josh Kodroff
       role: Principal Solutions Architect, Pulumi
       photo: /images/team/josh-kodroff.jpg
-    - name: Aurélien Requiem
-      role: Customer Engineer, Pulumi
-      photo: /images/team/aurelien-requiem.jpg
-    - name: Abdul Javed
-      role: Regional GTM Leader (APAC), Pulumi
-      photo: /images/team/abdul-javed.jpg
+    - name: Torian Crane
+      role: Senior Technical Content Engineer, Pulumi
+      photo: /images/team/torian-crane.jpg
 
 # case-sensitive
 tags:
