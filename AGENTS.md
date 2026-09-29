@@ -25,7 +25,7 @@ Agents must use these exact commands:
 - Fix trailing spaces:  
   `sed -i '' 's/[[:space:]]*$//' file1.md file2.md ...`
 
-Do not substitute other tools or commands, or change `package.json` to use pnpm (Yarn/npm only).
+Do not substitute other tools or commands. The root, `theme/`, and `infrastructure/` are Yarn projects, each with its own `yarn.lock`: install and run packages there with `yarn`, never `npm install` or pnpm, and don't change `package.json` to use another package manager. A stray `package-lock.json` beside a `yarn.lock` is a mistake. npm is only for the few directories that deliberately carry their own `package-lock.json` (e.g. `scripts/snippet-sweep/`).
 
 ---
 
