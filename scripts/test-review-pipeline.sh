@@ -54,6 +54,10 @@ echo "== pytest: review-admin"
 run "pytest scripts/review-admin/" \
     python3 -m pytest scripts/review-admin/ -q
 
+echo "== pytest: weekly digest"
+run "pytest scripts/weekly-digest/" \
+    python3 -m pytest scripts/weekly-digest/ -q -p no:cacheprovider
+
 echo "== standalone harnesses"
 for f in scripts/content-review/test_*.py scripts/blog-review/test_*.py; do
     [ -e "$f" ] || continue

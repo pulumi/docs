@@ -540,6 +540,57 @@ def chunk_numbered_body(numbered: str) -> list[str]:
 # ---- Anthropic API ---------------------------------------------------------
 
 
+class TruncatedError(RuntimeError):
+    """The claim list outgrew MAX_TOKENS twice. Carries the usage the failed
+    attempts spent, so a split-and-retry still bills them."""
+
+    def __init__(self, msg: str, usage: dict | None = None):
+        super().__init__(msg)
+        self.usage = usage or {}
+
+
+# A dense page's claim list can outgrow MAX_TOKENS long before its body
+# reaches MAX_FILE_CHARS: the 770-line Pulumi YAML reference (30 KB)
+# truncated on both passes of every whole-page run in September 2026, so the
+# content-review lanes verified it on the regex floor alone. A truncated call
+# is retried as two halves of its numbered body, split at the H2 nearest the
+# middle, down to SPLIT_DEPTH levels (at most 1 + 2 + 4 = 7 calls for one body).
+SPLIT_DEPTH = 2
+_FENCE_RE = re.compile(r"(```\n)(.*?)(\n```)", re.S)
+
+
+def split_user_text(user_text: str) -> list[str] | None:
+    """Split a prompt's numbered-body fence into two prompts that keep the
+    preamble and the file's own line numbers. None when it can't split."""
+    m = _FENCE_RE.search(user_text)
+    if not m:
+        return None
+    lines = m.group(2).split("\n")
+    if len(lines) < 4:
+        return None
+    mid = len(lines) // 2
+
+    def body(ln: str) -> str:
+        # Whole-file bodies are "N\t<line>"; standard-scope hunks are
+        # "N\t+ <line>" / "N\t  <line>", so strip the diff marker too.
+        b = ln.split("\t", 1)[1] if "\t" in ln else ln
+        return b[2:] if b[:2] in ("+ ", "  ") else b
+
+    # Prefer an H2, then a hunk boundary, then the midpoint.
+    heads = [i for i, ln in enumerate(lines) if i and body(ln).startswith("## ")] or \
+            [i for i, ln in enumerate(lines) if i and ln.startswith("  @@ changed region")]
+    cut = min(heads, key=lambda i: abs(i - mid)) if heads else mid
+    if not 0 < cut < len(lines):
+        cut = mid
+    out = []
+    for n, part in enumerate((lines[:cut], lines[cut:]), 1):
+        note = (f"(Part {n} of 2 of this file's changed region. Line numbers are the file's own; "
+                "extract only from the lines shown.)\n")
+        out.append(user_text[:m.start()] + note + m.group(1) + "\n".join(part) + m.group(3)
+                   + user_text[m.end():])
+    return out
+
+
 def _post_messages(api_key: str, body: dict) -> dict:
     req = urllib.request.Request(
         ANTHROPIC_URL,
@@ -615,7 +666,7 @@ def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: 
                 continue
         break
     if resp.get("stop_reason") == "max_tokens":
-        raise RuntimeError(f"response truncated at max_tokens={MAX_TOKENS} (twice)")
+        raise TruncatedError(f"response truncated at max_tokens={MAX_TOKENS} (twice)", usage)
     if not blocks:
         raise RuntimeError(f"no extract_claims tool call in the response (twice; "
                            f"stop_reason={resp.get('stop_reason')!r})")
@@ -672,12 +723,22 @@ def process_file(api_key: str, repo_root: Path, patch: str, path: str, scrutiny:
                  "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
     all_claims: list[dict] = []
     errors: list[str] = []
-    for body_text in bodies:
+    queue = [(b, 0) for b in bodies]
+    while queue:
+        body_text, depth = queue.pop(0)
         try:
             claims, usage = call_anthropic(api_key, system_body, mode_header, body_text, model)
             all_claims.extend(claims)
             for k in agg_usage:
                 agg_usage[k] += int(usage.get(k, 0) or 0)
+        except TruncatedError as e:
+            for k in agg_usage:
+                agg_usage[k] += int(e.usage.get(k, 0) or 0)
+            halves = split_user_text(body_text) if depth < SPLIT_DEPTH else None
+            if halves:
+                queue[:0] = [(h, depth + 1) for h in halves]
+            else:
+                errors.append(f"{path}: API call failed: TruncatedError: {e}")
         except Exception as e:  # noqa: BLE001
             errors.append(f"{path}: API call failed: {type(e).__name__}: {e}")
     # Stamp file + found_by; drop entries missing required fields.

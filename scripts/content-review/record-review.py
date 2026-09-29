@@ -21,6 +21,7 @@ Outcome derivation:
   * verdict "fixed"  + no PR on the canonical branch     -> status "incomplete"
   * sentinel absent, run succeeded, no branch pushed     -> status "clean"
   * sentinel absent, run failed OR a branch exists       -> status "incomplete"
+  * sentinel withheld (--incomplete-marker present)      -> status "incomplete"
 
 A "skipped" outcome is built and written locally but never uploaded. It is
 the workflow's open-PR pre-check saying a previous run still owns this page's
@@ -108,6 +109,7 @@ MODE_PR_SECTIONS = {
         "Backlog executed",
         "Backlog declined",
         "Secondary sweep",
+        "Pre-verification",
         "Screenshot check",
         "Verification",
     ],
@@ -417,7 +419,8 @@ def carry_markers(article: dict, verdict: dict | None) -> list[dict]:
 
 def build_record(article: dict, verdict: dict | None, pr: dict | None,
                  slug: str, claude_succeeded: bool = False,
-                 branch_exists: bool = False, prior: dict | None = None) -> dict:
+                 branch_exists: bool = False, prior: dict | None = None,
+                 withheld: str | None = None) -> dict:
     """Build the canonical ledger record from the queue, verdict, and PR state.
 
     `prior` is the page's previous record (see load_prior). It is read from, never
@@ -437,7 +440,9 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
     rather than defaulted to incomplete: a run that succeeded and pushed no
     canonical branch (`claude_succeeded and not branch_exists`) is recorded
     "clean"; a failed run, or one that left a branch behind without a PR, is
-    "incomplete" and stays due.
+    "incomplete" and stays due. So is a run whose sentinel a deterministic step
+    withheld on purpose (`withheld`, the reason it gave): that is not a clean
+    review, whatever the run's outcome says.
     """
     prior_attempts = int(article.get("attempts") or 0)
     rec = {
@@ -492,7 +497,13 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         rec["stale_claims"] = markers
 
     if verdict is None:
-        if claude_succeeded and not branch_exists:
+        if withheld:
+            # A deterministic step withheld the sentinel on purpose (preverify
+            # settle restored the pristine page). The run "succeeded" and left
+            # no branch, which would otherwise read as derived clean and
+            # advance the clock past a glow-up that never landed.
+            rec["note"] = f"verdict withheld: {withheld}"
+        elif claude_succeeded and not branch_exists:
             # Successful review that produced no branch == clean, even though the
             # model skipped the sentinel. Advance the clock instead of looping.
             rec["status"] = "clean"
@@ -623,9 +634,19 @@ def run(args) -> int:
     uri = os.environ.get("CONTENT_REVIEW_LEDGER_URI", "").strip()
     prior = load_prior(slug, uri, args.prior)
 
+    withheld = None
+    marker = Path(args.incomplete_marker) if args.incomplete_marker else None
+    if verdict is None and marker and marker.is_file():
+        try:
+            withheld = str(json.loads(marker.read_text()).get("reason") or "").strip()
+        except (json.JSONDecodeError, AttributeError):
+            withheld = ""
+        withheld = withheld or "incomplete marker present"
+
     record = build_record(article, verdict, pr, slug,
                           claude_succeeded=claude_succeeded,
-                          branch_exists=branch_exists, prior=prior)
+                          branch_exists=branch_exists, prior=prior,
+                          withheld=withheld)
 
     # PR-body section check (non-blocking) for fix and glow-up PRs.
     if record["status"] in ("reviewed", "glowup") and pr is not None:
@@ -787,6 +808,40 @@ def self_test() -> int:
         check("derived-clean notes the derivation",
               "derived clean" in (rec["note"] or ""))
 
+        # Verdict withheld by preverify settle (restored the pristine page): the
+        # run succeeded and left no branch, but it is owed a retry, not clean.
+        rec = build_record(article, None, None, article["slug"],
+                           claude_succeeded=True, branch_exists=False,
+                           withheld="pre-verification restored the pristine page")
+        check("withheld verdict + success + no branch -> incomplete",
+              rec["status"] == "incomplete")
+        check("withheld verdict bumps attempts (retried under the cap)", rec["attempts"] == 1)
+        check("withheld verdict names why", "restored the pristine page" in (rec["note"] or ""))
+
+        # End to end through run(): settle's marker file, not the kwarg.
+        mk = d / "incomplete.json"
+        mk.write_text(json.dumps({"reason": "pre-verification restored the pristine page"}))
+        prior_f = d / "prior.json"
+        prior_f.write_text("{}")
+        out_f = d / "ledger-out.json"
+        saved_uri = os.environ.pop("CONTENT_REVIEW_LEDGER_URI", None)
+        try:
+            ns = argparse.Namespace(queue=str(queue), verdict=str(d / "absent-verdict.json"),
+                                    pr_json=None, prior=str(prior_f), claude_outcome="success",
+                                    branch_exists="false", incomplete_marker=str(mk),
+                                    out=str(out_f))
+            run(ns)
+            got = json.loads(out_f.read_text())
+            check("run(): settle's incomplete marker records incomplete, not derived clean",
+                  got["status"] == "incomplete" and got["attempts"] == 1)
+            mk.unlink()
+            run(ns)
+            check("run(): without the marker the same run is still derived clean",
+                  json.loads(out_f.read_text())["status"] == "clean")
+        finally:
+            if saved_uri is not None:
+                os.environ["CONTENT_REVIEW_LEDGER_URI"] = saved_uri
+
         # No verdict + success but a branch was left behind -> incomplete (half fix).
         rec = build_record(article, None, None, article["slug"],
                            claude_succeeded=True, branch_exists=True)
@@ -823,6 +878,7 @@ def self_test() -> int:
         check("glowup body check uses the glowup sections",
               check_pr_body("## Why this page\n## Backlog executed\n"
                             "## Backlog declined\n## Secondary sweep\n"
+                            "## Pre-verification\n"
                             "## Screenshot check\n## Verification\n",
                             "glowup") == [])
         check("glowup body check flags missing backlog sections",
@@ -1078,6 +1134,9 @@ def main() -> int:
                         "With no sentinel, 'success' + no pushed branch => clean; anything else => incomplete.")
     p.add_argument("--branch-exists", choices=["true", "false"],
                    help="inject canonical-branch existence (tests); omit to probe origin via git ls-remote")
+    p.add_argument("--incomplete-marker",
+                   help="written by preverify settle when it withheld the verdict; "
+                        "a no-sentinel run is then recorded incomplete, not derived clean")
     p.add_argument("--out", default=".content-review-ledger.json",
                    help="local ledger artifact path")
     p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")

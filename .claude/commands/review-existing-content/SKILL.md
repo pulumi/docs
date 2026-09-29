@@ -629,12 +629,150 @@ Each banked item is split in two, and the split is the point:
    `resolved_claims`, or it carries forward with `unresolved_reviews`
    incremented.
 
+### Pre-verification (the workflow's, after you finish)
+
+When your turn ends, the workflow verifies what you changed before any PR
+exists. `scripts/content-review/preverify-glowup.py` builds the
+pristine→edited patch and runs the pre-merge review's **own** claim pipeline
+over it (URL fetch, regex + atomic + holistic extraction at `standard`
+scrutiny, merge, `verify-claims.py`), so it checks exactly the claims the
+review will check, on the lines you changed and nowhere else. A claim is
+**must-address** when the review would block on it: `contradicted`,
+`mismatch`, or `flagged` (🚨), `unverifiable` (❓), or a `framing-drift` your
+edit introduced. Each carries a provenance against the pristine page's own
+verdicts: `introduced` (your edit created or broke it) or `carried` (the page
+already had it and your edit touched the line, which puts it in front of a
+diff-scoped review).
+
+This is why the rules above matter more than they look: "a glow-up does not
+say different things" is now checked, not just asked. The two findings that
+motivated it were both numbers the glow-up changed without evidence: "three
+properties" → "four" on #21939 (the source declares five), and a sample
+`pulumi up` summary → "4 changes. 2 unchanged" on #21897 (the CLI prints no
+total for a create-only run). Don't touch a number, a flag, a version, or a
+sample output unless an artifact verdict gives you the value.
+
+The loop is bounded at **three verify rounds** — the lane's fixpoint bound,
+shared in spirit with the Vale loop above — with a narrow repair turn
+between rounds (below). After the last round, the workflow deterministically
+reverts every changed block that still carries a must-address claim to the
+pristine text, then writes the **Pre-verification** section of the PR body:
+every claim on an edited line, its verdict and source, and what happened to
+it. Leave that section's placeholder alone; the workflow replaces it. Round
+files are uploaded as artifacts as they are written and re-downloaded before
+each later step, so nothing in the workspace can change what they say.
+
+### Pre-verification repair
+
+You run this only when the workflow invokes you for a repair turn. The newest
+`.preverify-trusted/rounds/round-*.json` (highest number) lists every claim on
+an edited line; the entries with `"must_address": true` are your whole job.
+The pristine page is `.preverify-trusted/snapshot/article-base.txt`.
+
+For **each** must-address claim, do exactly one of these, touching only the
+lines in its `line_range`:
+
+- **Correct it** — only when `verdict` is `contradicted`/`mismatch` **and**
+  its `evidence` states the correct value outright. Write that value and
+  nothing more. Never guess a value the evidence doesn't state.
+- **Revert it** — restore those lines to the pristine text. Always right for
+  an `unverifiable` claim you `introduced` (a glow-up must not add a claim
+  nothing verifies) and for any `carried` claim (the pristine page already
+  had the problem; your edit only re-exposed it, and a rewrite of a
+  pre-existing unverified sentence is not this lane's call).
+
+Read each entry's `action`, `provenance`, `evidence`, and `source` first. Do
+not change any other line, add a claim, or reword to dodge the verifier: the
+next round re-extracts and re-verifies every edited line.
+
+Then keep the body and sentinel consistent. If a revert undid the change a
+**Backlog executed** row describes, move that whole row to **Backlog
+declined** with the reason `reverted by pre-verification: <verdict> — <one
+line>`, and move its id from `executed_ids` to `declined_ids` (adjusting
+`fixes` / `skipped_findings`) in `.content-review-verdict.json`. Do not touch
+the **Pre-verification** section. Re-run both self-checks from the procedure
+above (`verify-glowup-scope.py` against the pristine copy and
+`compose-pr-body.py --check-accounting`), and `make lint`.
+
 **What happens downstream**: the publish job derives the branch
 `content-review/glowup-<slug>`, classes the PR `glow-up`, and **never arms
-auto-merge** — the PR opens ready for human review and the PR-review sweep
-assigns the reviewers. The ledger records status `glowup` (a completed
+auto-merge**. The PR opens ready for review, and triage requests the approver
+team `.github/review-routing.yml` routes the page to (docs-guild, or
+marketing for a Get Started page). If the pre-merge review still posts
+blocking findings and the repo variable `GLOWUP_AUTOFIX` is `'1'` (it is
+off by default), `content-review-glowup-autofix.yml` makes one bounded pass
+at them as pulumi-bot (the PR's author): it fixes, refutes, or reverts
+each finding, answers it on the review card the way `/address-review` would,
+records the dispositions in the PR body, and hands anything it can't settle
+to the routed team by name. The ledger records status `glowup` (a completed
 review: it advances the staleness clock and starts the selector's 90-day
 glow-up cooldown).
+
+## Post-open autofix
+
+`.github/workflows/content-review-glowup-autofix.yml` runs you on an **open**
+glow-up PR whose pre-merge review still has blocking findings (🚨 or ❓)
+nobody has answered. Pre-verification is supposed to make this rare; this is
+the fallback. The PR's author is pulumi-bot, which never reads the review
+card, so you answer it the way `/address-review` would, once. The working
+tree is the PR's head.
+
+**Inputs** in `.autofix/`:
+
+- `select.json` — `open`: the findings to settle, each with `id` (`F<n>`),
+  `bucket` (`outstanding` = 🚨, `author-answer` = ❓), `anchor` (PR-head line
+  range), and `summary`.
+- `card.md` — the review's author card. Each finding's `#### F<n> · Do this`
+  block quotes the line, says why, and proposes the fix.
+- `base.md` — the article as it is on master (before the glow-up).
+- `head.md` — the article as it is at the PR head (what the review read).
+
+**For each open finding, choose exactly one disposition** (closed set; a bot
+can't own `accepted` or `deferred`, which need a human):
+
+- `fixed` — change the text so it says what the source says. Only when the
+  card's evidence, the verifier's source, or a file in the checkout states
+  the value outright. Prefer the card's proposed fix when it is right. Never
+  guess a value.
+- `reverted` — withdraw the glow-up's edit: restore the anchored lines to
+  `base.md`'s text. The right answer for a ❓ on a claim the glow-up added
+  or reworded, and for any finding on text the glow-up only restyled. A
+  glow-up that says less is fine; one that says something unverified is not.
+- `refuted` — the finding is wrong. Only with a `source` you actually read
+  this run in the checkout (a repo path, e.g. `.autofix-master/content/...`
+  for master's text, or a line of `card.md`'s own evidence) that shows it.
+  Your `note` says what the source says. Disagreeing without a source is
+  `unresolved`. You have no shell and no web access in this job: it reads
+  review text anyone can comment on while holding an API key.
+- `unresolved` — none of the above is safe. A human decides; say why in
+  one line.
+
+Touch only the anchored lines of the one article, plus whatever a fix needs
+in the same paragraph. Don't restyle, don't add claims, don't edit any other
+file. Every changed line is re-verified after you finish with the same
+verifier (`preverify-glowup.py`), and a change that doesn't verify is
+withdrawn and its finding reported `unresolved`, whatever you wrote.
+
+**Output**: `.autofix/dispositions.json`:
+
+```json
+{"findings": [
+  {"id": "F1", "disposition": "fixed", "note": "<what the text says now, and why>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F3", "disposition": "reverted", "note": "<which edit was withdrawn>"},
+  {"id": "F5", "disposition": "refuted", "note": "<what the source says>", "source": "<repo:path, URL, or gh query>"},
+  {"id": "F6", "disposition": "unresolved", "note": "<why no safe answer exists>"}
+]}
+```
+
+Every id in `select.json`'s `open` gets exactly one entry; a missing or
+malformed entry is recorded `unresolved`. The workflow, not you, commits and
+pushes as pulumi-bot, posts one `@claude … #update-review` comment with your
+dispositions (the update lane then refreshes the card), records them in the
+PR body's **Post-open review findings** table, and hands every `unresolved`
+finding to the routed team by name. There are at most two passes per PR and
+never two on the same head. The autofix stands down on any PR a person has
+pushed to or answered a finding on (`@claude F3: … #update-review`; a bare
+`@claude #update-review` refresh doesn't count): from then on it is theirs.
 
 ## Report-only mode — no model runs
 

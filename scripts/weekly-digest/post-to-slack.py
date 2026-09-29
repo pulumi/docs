@@ -3,17 +3,20 @@
 # requires-python = ">=3.11"
 # dependencies = []
 # ///
-"""Post the combined weekly digest to Slack, split across as many messages as
-needed so nothing is truncated.
+"""Post the weekly digest to Slack, split across as many messages as needed so
+nothing is truncated.
 
-Slack truncates long messages, so a single long digest gets clipped. This reads
-the assembled digest (one document with headings), splits it on line boundaries
+The digest is rendered to fit one message (render.py), but Slack truncates long
+messages, so a heavy week would get clipped. This reads the rendered digest,
+splits it on line boundaries
 into chunks under a safe size, and posts them sequentially via chat.postMessage
 so they read as one continuous run in the channel. Mirrors the link checker's
 Slack-API posting path (scripts/link-checker/check-links.js): `SLACK_ACCESS_TOKEN`
 from ESC, mrkdwn on, link unfurling off.
 
-Usage: post-to-slack.py <digest-file> [--dry-run]
+Usage: post-to-slack.py <digest-file> [--thread <thread-file>] [--dry-run]
+  --thread posts that file as a reply under the digest (the full lists the
+  digest shortened); an empty or missing file posts no reply.
   --dry-run prints the chunk boundaries and count without posting (no token
   needed); used by the workflow's dry_run path.
 Env: SLACK_ACCESS_TOKEN (required unless --dry-run), SLACK_CHANNEL (default
@@ -84,10 +87,11 @@ def chunk_text(text, max_chars=MAX_CHARS):
     return [c for c in chunks if c.strip()]
 
 
-def post_chunk(token, channel, text, retries=3):
-    body = json.dumps(
-        {"channel": channel, "text": text, "mrkdwn": True, "unfurl_links": False, "as_user": True}
-    ).encode("utf-8")
+def post_chunk(token, channel, text, retries=3, thread_ts=None):
+    payload = {"channel": channel, "text": text, "mrkdwn": True, "unfurl_links": False, "as_user": True}
+    if thread_ts:
+        payload["thread_ts"] = thread_ts
+    body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         POST_URL,
         data=body,
@@ -115,21 +119,48 @@ def post_chunk(token, channel, text, retries=3):
             delay *= 2
 
 
+def parse_args(argv):
+    """(digest_path, thread_path | None, dry_run). Pure / testable."""
+    dry_run = "--dry-run" in argv
+    rest = [a for a in argv if a != "--dry-run"]
+    thread = None
+    if "--thread" in rest:
+        i = rest.index("--thread")
+        if i + 1 >= len(rest):
+            sys.exit("--thread needs a file")
+        thread = rest[i + 1]
+        del rest[i:i + 2]
+    if len(rest) != 1:
+        sys.exit("usage: post-to-slack.py <digest-file> [--thread <thread-file>] [--dry-run]")
+    return rest[0], thread, dry_run
+
+
+def read_thread(path):
+    if not path:
+        return []
+    try:
+        return chunk_text(open(path, encoding="utf-8").read())
+    except OSError:
+        sys.stderr.write(f"warning: thread file {path} unreadable; posting no reply\n")
+        return []
+
+
 def main():
-    args = [a for a in sys.argv[1:] if a != "--dry-run"]
-    dry_run = "--dry-run" in sys.argv[1:]
-    if not args:
-        sys.exit("usage: post-to-slack.py <digest-file> [--dry-run]")
-    text = open(args[0], encoding="utf-8").read()
+    digest_path, thread_path, dry_run = parse_args(sys.argv[1:])
+    text = open(digest_path, encoding="utf-8").read()
     chunks = chunk_text(text)
     if not chunks:
         sys.stderr.write("nothing to post (empty digest)\n")
         return
+    replies = read_thread(thread_path)
 
     if dry_run:
-        print(f"Would post {len(chunks)} message(s):")
+        print(f"Would post {len(chunks)} message(s) and {len(replies)} thread repl{'y' if len(replies) == 1 else 'ies'}:")
         for i, chunk in enumerate(chunks, 1):
             print(f"\n----- message {i}/{len(chunks)} ({len(chunk)} chars) -----")
+            print(chunk)
+        for i, chunk in enumerate(replies, 1):
+            print(f"\n----- thread reply {i}/{len(replies)} ({len(chunk)} chars) -----")
             print(chunk)
         return
 
@@ -140,9 +171,25 @@ def main():
     channel = os.environ.get("SLACK_CHANNEL", "#docs-ops")
     if not channel.startswith(("#", "C", "G")):
         channel = f"#{channel}"
+    first = None
     for i, chunk in enumerate(chunks, 1):
-        post_chunk(token, channel, chunk)
+        data = post_chunk(token, channel, chunk)
+        first = first or data
         print(f"posted message {i}/{len(chunks)} ({len(chunk)} chars)")
+    # Replies thread under the first message. chat.postMessage returns the
+    # channel's ID; a reply must use it (a #name doesn't resolve for
+    # thread_ts). A failed reply is a warning: the digest itself is out.
+    ts, channel_id = (first or {}).get("ts"), (first or {}).get("channel") or channel
+    if replies and not ts:
+        sys.stderr.write("::warning::Slack returned no ts for the digest; skipping the thread reply\n")
+        return
+    for i, chunk in enumerate(replies, 1):
+        try:
+            post_chunk(token, channel_id, chunk, thread_ts=ts)
+        except (OSError, RuntimeError) as exc:
+            sys.stderr.write(f"::warning::thread reply {i}/{len(replies)} failed ({exc}); stopping replies\n")
+            return
+        print(f"posted thread reply {i}/{len(replies)} ({len(chunk)} chars)")
 
 
 if __name__ == "__main__":

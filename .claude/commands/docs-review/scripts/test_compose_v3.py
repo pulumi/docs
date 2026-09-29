@@ -797,3 +797,70 @@ def test_a_header_only_checks_table_collapses_even_with_the_handoff_hint():
     assert cr._V3_EMPTY_CHECKS in out
     kept = brief.replace(cr.FINDING_TABLE_SEPARATOR, cr.FINDING_TABLE_SEPARATOR + "\n| **F1** | `x.md` L1 | y |")
     assert be._collapse_empty_tables(kept, be.BRIEF_SECTIONS) == kept, "a live row keeps its table and hint"
+
+
+# ---- automated-author cards (content-review/* branches) --------------------
+# pulumi-bot opens the content-review PRs and never reads the card, so a card
+# that tells "the PR author" to answer addresses nobody (#21897 sat three days
+# with two open 🚨 items). Those cards carry AUTOMATED_AUTHOR_MARKER and
+# address the requested reviewer instead; the refresh lanes keep that.
+
+def _compose_on_branch(tmp_path, branch: str) -> str:
+    author = tmp_path / "a.md"
+    cmd = regen_cmd("v3", [
+        "--out", str(tmp_path / "unused.md"), "--out-author", str(author),
+        "--out-brief", str(tmp_path / "b.md"), "--out-evidence", str(tmp_path / "e.json"),
+    ])
+    cmd[cmd.index("--head-branch") + 1] = branch
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    return author.read_text()
+
+
+def test_automated_branch_detection():
+    assert cr.is_automated_branch("content-review/glowup-docs-x")
+    assert cr.is_automated_branch("content-review/docs-x")
+    assert not cr.is_automated_branch("fix/component-doc")
+    assert not cr.is_automated_branch("")
+
+
+def test_human_card_has_no_automated_marker(v3_outputs):
+    author, _, _ = v3_outputs
+    assert cr.AUTOMATED_AUTHOR_MARKER not in author
+    assert "You = the PR author" in author
+
+
+def test_content_review_card_addresses_the_reviewer(tmp_path):
+    author = _compose_on_branch(tmp_path, "content-review/glowup-docs-x")
+    lines = author.splitlines()
+    assert lines[3] == cr.AUTOFIX_AUTHOR_MARKER
+    assert "autofix" in author
+    assert author.count("CLAUDE_REVIEW_HEAD") == 1
+    assert "You = the PR author" not in author
+    assert "requested reviewer" in author
+
+
+def test_fix_lane_card_promises_no_autofix(tmp_path):
+    author = _compose_on_branch(tmp_path, "content-review/docs-x")
+    assert author.splitlines()[3] == cr.AUTOMATED_AUTHOR_MARKER
+    assert "autofix" not in author.split("<!-- CLAUDE_REVIEW_FOOTER -->")[0].lower()
+    assert "requested reviewer" in author
+
+
+def test_fix_header_keeps_the_automated_audience(tmp_path):
+    be = _load("build_evidence", HERE / "build-evidence.py")
+    author = _compose_on_branch(tmp_path, "content-review/glowup-docs-x")
+    cleared = be._fix_header(author, 0)
+    assert "Automation opened this PR" in cleared
+    assert "You = the PR author" not in cleared
+    reopened = be._fix_header(cleared, 2)
+    assert "requested reviewer" in reopened
+    assert "You = the PR author" not in reopened
+
+
+def test_orient_forms():
+    assert "You = the PR author" in "\n".join(cr.render_author_orient(1))
+    assert "requested reviewer" in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" not in "\n".join(cr.render_author_orient(1, automated=True))
+    assert "autofix" in "\n".join(cr.render_author_orient(1, automated=True, autofix=True))
+    assert "needs an answer" in "\n".join(cr.render_author_orient(0, automated=True))

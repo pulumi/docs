@@ -1,0 +1,97 @@
+name: Glow-up pre-verification round
+description: >-
+  One round of glow-up pre-verification for content-review-article.yml: run
+  the pre-merge review's claim extraction and verification over the lines the
+  glow-up changed (scripts/content-review/preverify-glowup.py verify), reusing
+  the verdicts of earlier rounds, and upload the round file as an artifact the
+  moment it exists.
+
+  The pristine snapshot and the earlier rounds are always read from fresh
+  artifact downloads into .preverify-trusted/, never from files in the
+  workspace, because a repair model step runs between rounds and could
+  otherwise edit the cache into calling something verified. The caller must
+  check out this workflow's own commit into .preverify-code first and load
+  this action from there; the verification runs inside that checkout.
+
+inputs:
+  round:
+    description: Round number (1-3)
+    required: true
+  article:
+    description: The queued article path (the trusted dispatch input)
+    required: true
+  anthropic_api_key:
+    description: For the review's extraction and verification scripts
+    required: true
+  github_token:
+    description: Read-scoped token for the verifier's gh lookups
+    required: true
+
+outputs:
+  must_address:
+    description: Claims on edited lines that would block the pre-merge review
+    value: ${{ steps.verify.outputs.must_address }}
+  degraded:
+    description: true when a pipeline stage failed
+    value: ${{ steps.verify.outputs.degraded }}
+
+runs:
+  using: composite
+  steps:
+    # Downloads merge into existing directories, so a file a repair step
+    # planted here (a fake round-9.json) would otherwise ride along.
+    - name: Clear the trusted directory
+      shell: bash
+      run: rm -rf .preverify-trusted
+    - name: Download the pristine snapshot (fresh)
+      uses: actions/download-artifact@v8
+      with:
+        name: review-snapshot
+        path: .preverify-trusted/snapshot
+    - name: Download earlier rounds (fresh)
+      if: inputs.round != '1'
+      uses: actions/download-artifact@v8
+      with:
+        pattern: preverify-round-*
+        path: .preverify-trusted/rounds
+        merge-multiple: true
+    # Runs inside the trusted checkout the workflow made just before this
+    # step (.preverify-code, this workflow's own commit), with only the
+    # edited article copied in. The extractor reads its system prompt, and
+    # the verifier reads sibling pages, from the working directory; a model
+    # step with Bash could have edited either in the workspace.
+    - name: Verify the edited spans
+      id: verify
+      shell: bash
+      working-directory: .preverify-code
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+        GH_TOKEN: ${{ inputs.github_token }}
+        ROUND: ${{ inputs.round }}
+        ARTICLE_PATH: ${{ inputs.article }}
+      run: |
+        W="$GITHUB_WORKSPACE"
+        T="$W/.preverify-trusted"
+        mkdir -p "$T/rounds" "$W/.preverify"
+        cp "$W/$ARTICLE_PATH" "$ARTICLE_PATH"
+        PRIOR=()
+        for f in "$T"/rounds/round-*.json; do
+          [ -f "$f" ] && PRIOR+=(--prior "$f")
+        done
+        python3 scripts/content-review/preverify-glowup.py verify \
+          --article "$ARTICLE_PATH" \
+          --pristine "$T/snapshot/article-base.txt" \
+          --pristine-verdicts "$T/snapshot/.verified-claims.json" \
+          --round "$ROUND" "${PRIOR[@]}" \
+          --out "$W/.preverify/round-$ROUND.json"
+        # The upload below is the copy later rounds trust; the workspace copy
+        # is only for this job's log.
+        cp "$W/.preverify/round-$ROUND.json" "$T/rounds/round-$ROUND.json"
+    - name: Upload the round file
+      uses: actions/upload-artifact@v7
+      with:
+        name: preverify-round-${{ inputs.round }}
+        path: .preverify/round-${{ inputs.round }}.json
+        include-hidden-files: true
+        retention-days: 7
+        if-no-files-found: error

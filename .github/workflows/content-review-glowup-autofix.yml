@@ -1,0 +1,521 @@
+name: "Scheduled jobs: Glow-up autofix (post-open)"
+
+# The fallback half of "glow-ups that come out clean". Pre-verification in
+# content-review-article.yml is the primary path: a glow-up PR opens with
+# every claim on its edited lines already verified by the pre-merge review's
+# own verifier. This workflow handles what the pre-merge review still finds
+# after the PR opens -- the review reads more than claims -- on PRs whose
+# author, pulumi-bot, never answers the review card.
+#
+# One bounded pass per PR per head, at most MAX_PASSES (2) per PR
+# (scripts/content-review/glowup-autofix.py). A pass fixes, refutes, or
+# reverts each open 🚨/❓ finding, re-verifies its own change with
+# preverify-glowup.py (withdrawing any change that doesn't verify), pushes as
+# pulumi-bot, and answers the card with one `@claude … #update-review`
+# comment, exactly as /address-review would. The update lane then refreshes
+# the card; a card current at the NEW head can start pass 2. Whatever is
+# still open after that is handed to the routed approver team by name, once.
+#
+# Four jobs, and the model's output never meets anything it could have
+# tampered with:
+#   select    deterministic; reads the review bot's cards only.
+#   fix       the model (Read/Write/Edit/Glob/Grep only), then an upload of
+#             two files by path. Nothing else runs on that runner after it.
+#   postcheck a fresh runner re-verifies the change with preverify-glowup.py
+#             and builds the patch; fails closed to an empty patch.
+#   publish   credentialed and deterministic; bounds the patch (one file,
+#             verify-glowup-scope.py against master, make lint) and owns
+#             every write.
+#
+# Opt-in: nothing runs until the repo variable GLOWUP_AUTOFIX is set to '1'
+# (the same default-off pattern as the SLA sweep). Merging this file turns on
+# no bot pushes by itself.
+
+on:
+  # Every lane that publishes or refreshes a review card. The run's own
+  # PR can't be recovered reliably from a workflow_run (dispatched update
+  # runs carry no pull_requests), so every trigger sweeps the open glow-up
+  # PRs; there are only ever a handful, and `select` is cheap.
+  workflow_run:
+    workflows:
+      - "Pre-merge Review (main)"
+      - "Pre-merge Review (update-review)"
+      - "Pre-merge Review (new-review)"
+    types: [completed]
+  # Backstop for a missed event.
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'One PR to consider (default: every open pulumi-bot glow-up PR)'
+        required: false
+        default: ''
+
+concurrency:
+  group: content-review-glowup-autofix
+  cancel-in-progress: false
+
+jobs:
+  select:
+    name: Select PRs (deterministic)
+    if: vars.GLOWUP_AUTOFIX == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+    outputs:
+      fix: ${{ steps.select.outputs.fix }}
+      escalate: ${{ steps.select.outputs.escalate }}
+    steps:
+      - name: Checkout repository (default branch)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Select
+        id: select
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          ONLY: ${{ github.event.inputs.pr_number }}
+        run: |
+          set -uo pipefail
+          S=scripts/content-review/glowup-autofix.py
+          if [ -n "$ONLY" ]; then
+            PRS="$ONLY"
+          else
+            PRS=$(gh pr list --repo "$REPO" --author pulumi-bot --state open --limit 100 \
+                    --json number,headRefName \
+                    --jq '.[] | select(.headRefName | startswith("content-review/glowup-")) | .number' || true)
+          fi
+          FIX='[]'; ESC='[]'
+          for PR in $PRS; do
+            D=".autofix-select/$PR"; mkdir -p "$D"
+            gh pr view "$PR" --repo "$REPO" \
+              --json number,headRefOid,headRefName,author,state,isDraft,files,commits > "$D/pr.json" || continue
+            gh api --paginate "repos/$REPO/issues/$PR/comments" | jq -s 'add // []' > "$D/comments.json" \
+              || echo '[]' > "$D/comments.json"
+            # The card comes from the review bot's comments only: anyone who
+            # can comment can post a body carrying the card's markers.
+            python3 "$S" cards --comments "$D/comments.json" \
+              --author-out "$D/card.md" --brief-out "$D/brief.md"
+            python3 .claude/commands/docs-review/scripts/review-worklist.py \
+              --body-file "$D/card.md" --brief-file "$D/brief.md" --format json \
+              > "$D/worklist.json" 2>"$D/worklist.err" || echo '{}' > "$D/worklist.json"
+            python3 "$S" select --pr-json "$D/pr.json" --worklist "$D/worklist.json" \
+              --comments "$D/comments.json" > "$D/select.json" || continue
+            ACTION=$(jq -r .action "$D/select.json")
+            case "$ACTION" in
+              fix) FIX=$(jq -c --slurpfile s "$D/select.json" \
+                     '. + [$s[0] | {pr, head_sha, head_ref, article}]' <<<"$FIX") ;;
+              escalate) ESC=$(jq -c --arg p "$PR" '. + [$p|tonumber]' <<<"$ESC") ;;
+            esac
+          done
+          echo "fix=$FIX" >> "$GITHUB_OUTPUT"
+          echo "escalate=$ESC" >> "$GITHUB_OUTPUT"
+          echo "fix: $FIX  escalate: $ESC"
+      - name: Upload selections
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: autofix-select
+          path: .autofix-select/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
+  fix:
+    name: Fix PR ${{ matrix.pr.pr }} (model, unprivileged)
+    needs: select
+    if: needs.select.outputs.fix != '' && needs.select.outputs.fix != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        pr: ${{ fromJSON(needs.select.outputs.fix) }}
+    # Same profile as content-review-article.yml's review job: no push token,
+    # no ESC, no AWS. The model reads review text, which anyone who can
+    # comment on the PR can influence.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout the PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ matrix.pr.head_sha }}
+          fetch-depth: 1
+          persist-credentials: false
+      # Scripts and the skill run from master's copy, never the PR head's.
+      # A dot-path, so nothing under it can ride the exported patch.
+      - name: Checkout master (trusted scripts, pristine text)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: .autofix-master
+      - name: Assert the model environment is credential-free
+        run: |
+          FAIL=0
+          if [ -n "${AWS_ACCESS_KEY_ID:-}${AWS_SECRET_ACCESS_KEY:-}${AWS_SESSION_TOKEN:-}" ]; then
+            echo "::error::AWS credentials are present in the model job"; FAIL=1
+          fi
+          for d in . .autofix-master; do
+            if git -C "$d" config --local --get-regexp '^http\..*\.extraheader$' > /dev/null 2>&1; then
+              echo "::error::a git credential extraheader is persisted in $d/.git/config"; FAIL=1
+            fi
+          done
+          exit "$FAIL"
+      - name: Download selection
+        uses: actions/download-artifact@v8
+        with:
+          name: autofix-select
+          path: .autofix-select
+      - name: Stage inputs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ARTICLE: ${{ matrix.pr.article }}
+        run: |
+          mkdir -p .autofix
+          cp ".autofix-select/${{ matrix.pr.pr }}/select.json" .autofix/select.json
+          cp ".autofix-master/$ARTICLE" .autofix/base.md 2>/dev/null || : > .autofix/base.md
+          cp "$ARTICLE" .autofix/head.md
+          # The card, for the per-finding Do-this blocks: the review bot's
+          # copy, filtered by the same code the selection used.
+          cp ".autofix-select/${{ matrix.pr.pr }}/card.md" .autofix/card.md 2>/dev/null \
+            || : > .autofix/card.md
+          python3 -m pip install --quiet pyyaml
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: 'github-actions[bot]'
+          # No Bash, no web: this model reads review text that commenters can
+          # influence, in a job that holds an API key. It edits one file and
+          # writes one JSON; refutes cite sources in the checkout. The deny
+          # list overrides any allow rule in the PR head's .claude/settings.json.
+          prompt: |
+            The working tree is glow-up PR #${{ matrix.pr.pr }}'s head. Follow
+            `.autofix-master/.claude/commands/review-existing-content/SKILL.md`,
+            section "## Post-open autofix", exactly (master's copy of the
+            skill; ignore the PR head's). Your inputs are in `.autofix/`;
+            your only outputs are edits to the article
+            `${{ matrix.pr.article }}` and `.autofix/dispositions.json`.
+            You have no write access: do not commit, push, comment, or open PRs.
+          claude_args: |
+            --model claude-opus-5-5 --effort medium --max-turns 60
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines"
+            --disallowed-tools "Bash,WebFetch,WebSearch"
+      # Nothing runs in this job after the model except the upload of two
+      # files by path: no git (a Write tool can plant core.fsmonitor or a
+      # hook in .git), no Python (or a usercustomize.py). Verification and
+      # the patch are built in the next job, on a fresh runner.
+      - name: Hand off the raw result
+        if: always()
+        env:
+          ARTICLE: ${{ matrix.pr.article }}
+        run: |
+          mkdir -p .autofix-raw
+          if [ "${{ steps.claude.outcome }}" = "success" ]; then
+            cp "$ARTICLE" .autofix-raw/article
+            cp .autofix/dispositions.json .autofix-raw/dispositions.json 2>/dev/null || true
+          fi
+          echo "${{ steps.claude.outcome }}" > .autofix-raw/model-outcome
+      - name: Upload the raw result
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: autofix-raw-${{ matrix.pr.pr }}
+          path: .autofix-raw/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
+
+  # The model's change is held to the same bar as a glow-up edit, on a runner
+  # the model never touched: re-run the review's verifier over what the pass
+  # changed (lines restored to master's text excepted), withdraw any change
+  # that doesn't verify, and build the patch. The change leaves this job only
+  # if the model finished and the verification was not degraded; otherwise the
+  # patch is empty and publish records every fixed/reverted as unresolved.
+  postcheck:
+    name: Verify PR ${{ matrix.pr.pr }} (deterministic, unprivileged)
+    needs: [select, fix]
+    if: always() && needs.fix.result != 'skipped' && needs.fix.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        pr: ${{ fromJSON(needs.select.outputs.fix) }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout the PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ matrix.pr.head_sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: work
+      - name: Checkout master (scripts and master's text)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: master
+      - name: Download the raw result
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          name: autofix-raw-${{ matrix.pr.pr }}
+          path: raw
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+      - name: Verify and build the patch
+        id: postcheck
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ARTICLE: ${{ matrix.pr.article }}
+        run: |
+          set -e
+          mkdir -p out
+          cp "master/$ARTICLE" out/base.md 2>/dev/null || : > out/base.md
+          cp "raw/dispositions.json" out/dispositions.json 2>/dev/null || true
+          if [ "$(cat raw/model-outcome 2>/dev/null)" != "success" ] || [ ! -f raw/article ]; then
+            echo "::warning::the model step did not finish; withholding any change"
+            exit 0
+          fi
+          cp "work/$ARTICLE" out/head.md
+          # Verify inside the master checkout with only the article overlaid:
+          # the extractor reads its prompt, and the verifier its sibling
+          # pages, from the working directory.
+          cp raw/article "master/$ARTICLE"
+          ( cd master && python3 scripts/content-review/preverify-glowup.py verify \
+              --article "$ARTICLE" --pristine ../out/head.md \
+              --restored-from ../out/base.md --round 1 \
+              --out ../out/postcheck-round.json )
+          cp raw/article "work/$ARTICLE"
+          python3 master/scripts/content-review/preverify-glowup.py revert \
+            --article "work/$ARTICLE" --pristine out/head.md \
+            --round-file out/postcheck-round.json --out out/postcheck.json
+          # Fail closed: a degraded verification is not a verified change.
+          if [ "$(jq -r .degraded out/postcheck-round.json)" != "false" ]; then
+            echo "::warning::post-check verification was degraded; withholding the change"
+            exit 0
+          fi
+          git -C work diff --binary -- "$ARTICLE" > out/changes.patch
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+      - name: Make sure a failed check ships no change
+        if: always() && steps.postcheck.outputs.ok != 'true'
+        run: |
+          mkdir -p out
+          : > out/changes.patch
+      - name: Upload the verified handoff
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: autofix-handoff-${{ matrix.pr.pr }}
+          path: out/
+          if-no-files-found: warn
+          retention-days: 14
+
+  publish:
+    name: Publish PR ${{ matrix.pr.pr }} (deterministic, credentialed)
+    needs: [select, postcheck]
+    if: always() && needs.postcheck.result != 'skipped' && needs.postcheck.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        pr: ${{ fromJSON(needs.select.outputs.fix) }}
+    environment: production
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc
+        uses: pulumi/esc-action@v3
+      - name: Download handoff
+        continue-on-error: true
+        uses: actions/download-artifact@v8
+        with:
+          name: autofix-handoff-${{ matrix.pr.pr }}
+          path: .autofix-out
+      - name: Download selection
+        uses: actions/download-artifact@v8
+        with:
+          name: autofix-select
+          path: .autofix-select
+      # Scripts from master; the PR head is only ever patched, never run.
+      - name: Checkout master (trusted scripts)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: master
+      - name: Checkout the PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ matrix.pr.head_ref }}
+          token: ${{ steps.esc.outputs.PULUMI_BOT_TOKEN }}
+          fetch-depth: 1
+          path: work
+      - name: Install Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: work/yarn.lock
+      - name: Apply, bound, lint, and push
+        id: push
+        working-directory: work
+        env:
+          ARTICLE: ${{ matrix.pr.article }}
+          EXPECT: ${{ matrix.pr.head_sha }}
+          HEAD_REF: ${{ matrix.pr.head_ref }}
+        run: |
+          set -euo pipefail
+          # The head must not have moved since `select`: a push by anyone
+          # else means this pass answered a card that's already stale.
+          if [ "$(git rev-parse HEAD)" != "$EXPECT" ]; then
+            echo "::warning::head moved ($(git rev-parse --short HEAD) != ${EXPECT:0:7}); skipping this pass"
+            echo "commit=" >> "$GITHUB_OUTPUT"; echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          OUT=../.autofix-out
+          # The patch was built from the one article on a clean runner; the
+          # applied-paths check below still refuses anything else.
+          COMMIT="$EXPECT"
+          if [ -s "$OUT/changes.patch" ]; then
+            git apply --index "$OUT/changes.patch"
+            if git diff --cached --name-only | grep -vxF "$ARTICLE" | grep -q .; then
+              echo "::error::the patch touches files other than $ARTICLE"; exit 1
+            fi
+            # Same bounds as the glow-up itself, judged against master's text.
+            cp "$OUT/base.md" ../base.md 2>/dev/null || : > ../base.md
+            { echo "diff --git a/$ARTICLE b/$ARTICLE"
+              diff -U0 ../base.md "$ARTICLE" | sed "1s|.*|--- a/$ARTICLE|;2s|.*|+++ b/$ARTICLE|"
+            } > ../vs-master.u0.diff || true
+            python3 ../master/scripts/content-review/verify-glowup-scope.py \
+              --diff-file ../vs-master.u0.diff --article "$ARTICLE" --article-blob ../base.md \
+              --out ../scope.json || { cat ../scope.json; exit 1; }
+            yarn install --frozen-lockfile --prefer-offline > /dev/null
+            make lint > ../lint.log 2>&1 || { echo "::error::make lint failed"; tail -50 ../lint.log; exit 1; }
+            git config --local user.name "pulumi-bot"
+            git config --local user.email "bot@pulumi.com"
+            git commit -m "Glow-up autofix: answer the pre-merge review" \
+              -m "Automated post-open pass (content-review-glowup-autofix.yml)." \
+              -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+            # Plain push: never force. If the head moved, this fails and the
+            # next event re-selects against the new card.
+            git push origin "HEAD:$HEAD_REF"
+            COMMIT=$(git rev-parse HEAD)
+          fi
+          echo "commit=$COMMIT" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+      - name: Route, answer, and record
+        if: steps.push.outputs.skip == 'false'
+        working-directory: work
+        env:
+          GH_TOKEN: ${{ steps.esc.outputs.PULUMI_BOT_TOKEN }}
+          PR: ${{ matrix.pr.pr }}
+          REPO: ${{ github.repository }}
+          COMMIT: ${{ steps.push.outputs.commit }}
+        run: |
+          set -uo pipefail
+          M=../master
+          gh pr view "$PR" --repo "$REPO" --json files,additions,deletions > ../route-pr.json
+          gh pr diff "$PR" --repo "$REPO" | head -c 100000 > ../route.diff || true
+          TEAMS=$(python3 "$M/scripts/review-v3/route-pr.py" --pr-data ../route-pr.json --diff ../route.diff \
+                    --config "$M/.github/review-routing.yml" --repo-root "$M" | jq -r '.teams | join(" ")' || true)
+          echo "teams=$TEAMS" >> "$GITHUB_OUTPUT"
+          gh pr view "$PR" --repo "$REPO" --json body --jq .body > ../body.md
+          python3 "$M/scripts/content-review/glowup-autofix.py" answer \
+            --select "../.autofix-select/$PR/select.json" \
+            --dispositions ../.autofix-out/dispositions.json \
+            --postcheck ../.autofix-out/postcheck.json \
+            --commit "$COMMIT" --body ../body.md --teams "$TEAMS" --out-dir ../.autofix-answer
+          # The answer goes out right after the push. The push's own
+          # auto-refresh takes minutes to reach its gate, and that gate
+          # yields to an explicit #update-review already in flight, so the
+          # refresh that runs is the one carrying these dispositions.
+          gh pr comment "$PR" --repo "$REPO" --body-file ../.autofix-answer/answer.md
+          gh pr edit "$PR" --repo "$REPO" --body-file ../.autofix-answer/body.md \
+            || echo "::warning::could not update the PR body"
+          if [ "$(jq -r .escalate ../.autofix-answer/rows.json)" = "true" ]; then
+            for t in $TEAMS; do
+              gh pr edit "$PR" --repo "$REPO" --add-reviewer "$t" || echo "::warning::could not request $t"
+            done
+            gh pr comment "$PR" --repo "$REPO" --body-file ../.autofix-answer/escalation.md
+            gh pr edit "$PR" --repo "$REPO" --add-label content-review/needs-human \
+              || echo "::warning::label content-review/needs-human missing"
+          fi
+
+  escalate:
+    name: Escalate PR ${{ matrix.pr }}
+    needs: select
+    if: needs.select.outputs.escalate != '' && needs.select.outputs.escalate != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        pr: ${{ fromJSON(needs.select.outputs.escalate) }}
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc
+        uses: pulumi/esc-action@v3
+      - name: Checkout master (trusted scripts)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Download selection
+        uses: actions/download-artifact@v8
+        with:
+          name: autofix-select
+          path: .autofix-select
+      - name: Hand the open findings to the routed team
+        env:
+          GH_TOKEN: ${{ steps.esc.outputs.PULUMI_BOT_TOKEN }}
+          PR: ${{ matrix.pr }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          gh pr view "$PR" --repo "$REPO" --json files,additions,deletions > route-pr.json
+          gh pr diff "$PR" --repo "$REPO" | head -c 100000 > route.diff || true
+          TEAMS=$(python3 scripts/review-v3/route-pr.py --pr-data route-pr.json --diff route.diff \
+                    | jq -r '.teams | join(" ")' || true)
+          python3 scripts/content-review/glowup-autofix.py escalation \
+            --select ".autofix-select/$PR/select.json" --teams "$TEAMS" --out escalation.md
+          for t in $TEAMS; do
+            gh pr edit "$PR" --repo "$REPO" --add-reviewer "$t" || echo "::warning::could not request $t"
+          done
+          gh pr comment "$PR" --repo "$REPO" --body-file escalation.md
+          gh pr edit "$PR" --repo "$REPO" --add-label content-review/needs-human \
+            || echo "::warning::label content-review/needs-human missing"
