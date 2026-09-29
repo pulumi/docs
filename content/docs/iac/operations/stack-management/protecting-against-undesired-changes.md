@@ -22,7 +22,7 @@ The [`protect`](/docs/iac/concepts/resources/options/protect/) resource option m
 
 Rather than hard-code `protect: true`, drive it from [stack configuration](/docs/iac/concepts/config/) so that production stacks protect the resource while development stacks can still be torn down freely:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -92,6 +92,29 @@ resources:
     options:
       protect: ${protect}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+variable "protect" {
+  type    = bool
+  default = false
+}
+
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    protect = var.protect
+  }
+}
+```
+
+Set the variable per stack with `pulumi config set`, the same as any other HCL variable.
+
+Pulumi HCL also honors Terraform's `lifecycle { prevent_destroy = true }`, but the two guards are not the same thing. `prevent_destroy` is enforced by the language plugin and re-evaluated on every run from the program text, so the guard disappears the moment you remove the argument — including when you delete the whole resource block, which is exactly the case `protect` exists to catch. `protect` is a Pulumi resource option recorded in state, so it keeps refusing the delete until you unprotect it. Use `prevent_destroy` to guard against an accidental replacement while the resource is still declared; use `protect` for a resource that must survive being dropped from the program.
 
 {{% /choosable %}}
 
