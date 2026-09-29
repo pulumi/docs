@@ -48,7 +48,7 @@ sections:
           package main
 
           import (
-              "github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/storage"
+              "github.com/pulumi/pulumi-gcp/sdk/v10/go/gcp/storage"
               "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
@@ -121,103 +121,6 @@ sections:
     anchor: benefits
 
   - type: section_header_with_code
-    flip: true
-    title: Reduce your complexity with shared packages
-    description: |
-      Pulumi Packages enable you to define cloud infrastructure once and then consume that package in any supported Pulumi language. You can easily reduce boilerplate code, define best practices, and allow teammates to use your package in the language of their choice, regardless of the language you authored the package with.
-
-      [Pulumi Registry](/registry/) is the central location where you can find all of the Pulumi Packages you can use.
-    cta_text: Browse the registry
-    cta_link: /registry/
-    code_title: cloudrun.ts
-    code_snippets:
-      - language: typescript
-        label: TypeScript
-        title: cloudrun.ts
-        code: |
-          import * as pulumi from "@pulumi/pulumi";
-          import * as cloudrun from "@pulumi/gcp-global-cloudrun";
-
-          const conf = new pulumi.Config()
-          const project = conf.require("project")
-
-          const deployment = new cloudrun.Deployment("my-sample-deployment", {
-              projectId: project,
-              imageName: "gcr.io/ahmetb-public/zoneprinter",
-              serviceName: "demo-service-ts"
-          });
-
-          export const ip = deployment.ipAddress;
-      - language: python
-        label: Python
-        title: __main__.py
-        code: |
-          import pulumi
-          import pulumi_gcp_global_cloudrun as cloudrun
-
-          config = pulumi.Config()
-          project = config.require("project")
-
-          deployment = cloudrun.Deployment("my-sample-deployment",
-                                          project_id=project,
-                                          image_name="gcr.io/ahmetb-public/zoneprinter",
-                                          service_name="demo-service-py")
-
-          pulumi.export('ip', deployment.ip_address)
-      - language: go
-        label: Go
-        title: main.go
-        code: |
-          package main
-
-          import (
-            "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-            "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-            cloudrun "github.com/pulumi/pulumi-gcp-global-cloudrun/sdk/go/gcp"
-          )
-
-          func main() {
-            pulumi.Run(func(ctx *pulumi.Context) error {
-              c := config.New(ctx, "")
-              project := c.Require("project")
-
-              deployment, err := cloudrun.NewDeployment(ctx, "demo-deployment-go", &cloudrun.DeploymentArgs{
-                ImageName:   pulumi.String("gcr.io/ahmetb-public/zoneprinter"),
-                ServiceName: "demo-service-ts",
-                ProjectId:   project,
-              })
-              if err != nil {
-                return err
-              }
-
-              ctx.Export("ip", deployment.IpAddress)
-
-              return nil
-            })
-          }
-      - language: yaml
-        label: YAML
-        title: Pulumi.yaml
-        code: |
-          name: gcp-cloud-run
-          runtime: yaml
-          description: A simple Pulumi program.
-          configuration:
-            project:
-              type: String
-              default: "project"
-          resources:
-            deployment:
-              type: gcp-global-cloudrun:index:Deployment
-              properties:
-                imageName: "gcr.io/ahmetb-public/zoneprinter"
-                serviceName: "demo-service-yaml"
-                projectId: ${project}
-          outputs:
-            ip: ${deployment.ipAddress}
-    anchor: packages
-
-  - type: section_header_with_code
     title: Create your own GKE cluster
     description: |
       Pulumi supports programming against Kubernetes — Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Google GKE. This code defines a GKE cluster with configurable settings that could be packaged in a module and then used to deploy an app to the cluster.
@@ -284,7 +187,7 @@ sections:
           package main
 
           import (
-              "github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/container"
+              "github.com/pulumi/pulumi-gcp/sdk/v10/go/gcp/container"
               "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
           )
 
