@@ -2113,7 +2113,42 @@ def render_brief_orient() -> list[str]:
     ]
 
 
-def render_author_orient(n_blocking: int) -> list[str]:
+# A PR whose author is an automation that never reads this card. Today that
+# is the content-review lanes (pulumi-bot pushes `content-review/*`). Their
+# cards used to tell "the PR author" to answer, and the author never did:
+# glow-up findings sat open for days with nobody addressed (#21897). The
+# marker rides the card so the refresh lanes, which re-stamp the orienting
+# callout from the card alone (build-evidence._fix_header), keep the right
+# audience without knowing the PR's branch.
+# Only glow-ups have a post-open autofix (content-review-glowup-autofix.yml);
+# fix- and retire-lane cards must not promise one. The marker carries the
+# lane so a refresh re-stamps the same copy.
+AUTOMATED_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR -->"
+AUTOFIX_AUTHOR_MARKER = "<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR autofix -->"
+AUTOMATED_AUTHOR_BRANCH_PREFIXES = ("content-review/",)
+AUTOFIX_BRANCH_PREFIXES = ("content-review/glowup-",)
+
+
+def is_automated_branch(branch: str) -> bool:
+    return any(str(branch or "").startswith(p) for p in AUTOMATED_AUTHOR_BRANCH_PREFIXES)
+
+
+def is_autofix_branch(branch: str) -> bool:
+    return any(str(branch or "").startswith(p) for p in AUTOFIX_BRANCH_PREFIXES)
+
+
+def automated_marker(branch: str) -> str:
+    if is_autofix_branch(branch):
+        return AUTOFIX_AUTHOR_MARKER
+    return AUTOMATED_AUTHOR_MARKER if is_automated_branch(branch) else ""
+
+
+def orient_audience(body: str) -> tuple[bool, bool]:
+    """(automated, autofix) from a card's marker, for the refresh lanes."""
+    return ("<!-- CLAUDE_REVIEW_AUTOMATED_AUTHOR" in body, AUTOFIX_AUTHOR_MARKER in body)
+
+
+def render_author_orient(n_blocking: int, automated: bool = False, autofix: bool = False) -> list[str]:
     """The callout under the author header. Owned here so the refresh lanes
     (build-evidence._fix_header) can swap it when the count crosses zero —
     a "nothing blocks merge" card must not open with "needs your answers
@@ -2124,6 +2159,30 @@ def render_author_orient(n_blocking: int) -> list[str]:
     authors lost the open items under a screenful of instructions). The
     callout is the part of the card everyone reads; the fold keeps the
     worked examples one click away."""
+    if automated and n_blocking:
+        # Nobody on the author side will answer. Say who does: the reviewer
+        # triage requested, after the glow-up autofix's pass where it runs.
+        lead = ("> **Automation opened this PR and does not read this card.** Where the glow-up "
+                "autofix is enabled it answers each item once; anything still open is for **you, "
+                "the requested reviewer**, to settle before merge."
+                if autofix else
+                "> **Automation opened this PR and does not read this card.** Each item below is "
+                "for **you, the requested reviewer**, to settle before merge.")
+        return [
+            "> [!IMPORTANT]",
+            lead,
+            ">",
+            "> **To settle an item:** push a fix, or reply "
+            "`@claude F1: <what you fixed, why it's wrong, or \"accepting as-is — why\"> #update-review`. "
+            "A reply without the `#update-review` tag doesn't count. "
+            "Examples: **How to answer** at the bottom.",
+        ]
+    if automated:
+        return [
+            "> [!NOTE]",
+            "> Nothing here needs an answer. Automation opened this PR; a human reviewer "
+            "still approves the merge.",
+        ]
     if n_blocking:
         return [
             "> [!IMPORTANT]",
@@ -2517,7 +2576,8 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         header_verb = f"{n_blocking} {noun} merge"
     else:
         header_verb = AUTHOR_HEADER_NOTHING_BLOCKS
-    orient = render_author_orient(n_blocking)
+    marker = automated_marker(getattr(args, "head_branch", ""))
+    orient = render_author_orient(n_blocking, bool(marker), marker == AUTOFIX_AUTHOR_MARKER)
 
     def _finding_table(rows: list[str], empty_sentinel: str) -> list[str]:
         if not rows:
@@ -2528,6 +2588,7 @@ def compose_v3(args: argparse.Namespace) -> tuple[str, str, dict]:
         "<!-- CLAUDE_REVIEW 1/1 -->",
         AUTHOR_MARKER,
         f"<!-- CLAUDE_REVIEW_HEAD {head_sha} -->" if head_sha else "",
+        *([marker] if marker else []),
         f"{AUTHOR_HEADER_PREFIX}{rev} — {header_verb}",
         "",
         *orient,

@@ -282,14 +282,31 @@ JUDGMENT_NOTICE = (
 )
 
 # The glow-up lane's notice: these PRs are the product of a whole-page rehab
-# and exist to be human-reviewed. Auto-merge is never armed and the review
-# sweep never stamps them; it assigns the reviewers instead.
+# and exist to be human-reviewed. Auto-merge is never armed and no automation
+# approves them. Who is asked: triage requests the approver team that
+# .github/review-routing.yml routes the page to (docs-guild, or marketing for
+# a Get Started page). This notice used to say "the PR-review sweep assigns
+# the reviewers", which no sweep did -- triage always had.
 HUMAN_REVIEW_NOTICE = (
     "> [!IMPORTANT]\n"
     "> **Glow-up PR — human review required.** Auto-merge is never armed on "
-    "glow-up PRs and the automated PR-review sweep never approves them; it "
-    "assigns the reviewers. Adjudicate the Backlog executed / Backlog declined "
-    "tables below and merge manually."
+    "glow-up PRs and no automation approves them; triage requests the approver "
+    "team `.github/review-routing.yml` routes this page to. Every claim on an "
+    "edited line was checked before this PR opened (see **Pre-verification**). "
+    "If the pre-merge review still blocks, the glow-up autofix (where enabled) "
+    "makes one pass at each finding and hands anything it can't settle to that "
+    "team. Adjudicate the Backlog executed / Backlog declined tables below and "
+    "merge manually."
+)
+
+# The receipts placeholder. The workflow replaces the whole section after the
+# model finishes (preverify-glowup.py receipts); the model never writes it.
+PREVERIFY_PLACEHOLDER = (
+    "## Pre-verification\n\n"
+    "<!-- Written by the workflow after the glow-up (scripts/content-review/"
+    "preverify-glowup.py receipts). Leave this section exactly as it is. -->\n"
+    "_Pending: the workflow verifies the edited lines after the glow-up and "
+    "writes the results here._\n"
 )
 
 # Glow-up body sections — keep in lockstep with record-review.py's
@@ -299,6 +316,7 @@ GLOWUP_SECTIONS = [
     "Backlog executed",
     "Backlog declined",
     "Secondary sweep",
+    "Pre-verification",
     "Screenshot check",
     "Verification",
 ]
@@ -815,6 +833,8 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
         "\n".join(declined),
         "",
         "\n".join(sweep),
+        "",
+        PREVERIFY_PLACEHOLDER.rstrip(),
         "",
         render_screenshot(gates).rstrip(),
         "",
