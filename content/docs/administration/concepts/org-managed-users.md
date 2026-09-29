@@ -7,7 +7,7 @@ menu:
     administration:
         name: Organization-Managed Users
         parent: administration-concepts
-        weight: 4
+        weight: 5
 pulumi_cloud_feature: saml-sso
 ---
 
@@ -20,7 +20,7 @@ For an administrator, this is what makes your Pulumi organization a closed syste
 An account becomes organization-managed in one of three ways:
 
 - **Signing in to a SAML organization for the first time.** If you have no Pulumi account and you authenticate through an organization's [SAML single sign-on](/docs/administration/guides/saml/), Pulumi creates one for you. That account is managed by the organization from the moment it exists.
-- **SCIM provisioning.** An organization that uses [SCIM](/docs/administration/guides/scim/) provisions accounts from its identity provider. Every account SCIM creates is organization-managed.
+- **SCIM provisioning.** An organization that uses [SCIM](/docs/administration/concepts/scim/) provisions accounts from its identity provider. Every account SCIM creates is organization-managed.
 - **Migrating an existing account.** If you already have an ordinary Pulumi account, you can hand it over to an organization yourself with the **Migrate to Org-Managed Account** control in **Account settings**. The migration is opt-in, and it's [destructive](#migrating-an-existing-account).
 
 ## Organization-managed is not the same as SAML membership
@@ -34,7 +34,7 @@ Belonging to a SAML-backed organization does not make an account organization-ma
 
 An ordinary account that joins a SAML organization keeps everything an ordinary account has. It gains a SAML identity, and nothing else changes: it can still belong to other organizations, connect other identity providers, and create organizations.
 
-An organization that uses SCIM is the exception. SCIM can convert an account that already existed, without the user opting in, the next time the identity provider activates or deactivates them. See [Provisioned users are managed by your organization](/docs/administration/guides/scim/#provisioned-users-are-managed-by-your-organization).
+An organization that uses SCIM is the exception. SCIM can convert an account that already existed, without the user opting in, the next time the identity provider activates or deactivates them. See [Provisioned users are managed by your organization](/docs/administration/concepts/scim/#provisioned-users-are-managed-by-your-organization).
 
 ## Restrictions
 

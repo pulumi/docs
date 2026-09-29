@@ -82,7 +82,7 @@ Suggested Resolution: Update the username attribute in your identity provider’
 }
 ```
 
-Cause: Pulumi usernames are immutable and cannot be updated. See [Usernames cannot change](/docs/administration/guides/scim/#usernames-cannot-change).
+Cause: Pulumi usernames are immutable and cannot be updated. See [Usernames cannot change](/docs/administration/concepts/scim/#usernames-cannot-change).
 
 Suggested Resolution: Update the attribute mapping in the identity provider so that `userName` is updated only during creation, not creation and update. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
@@ -109,7 +109,7 @@ Cause: Pulumi only supports adding or updating the following user attributes:
 - `emails[type eq "work"].value`
 - `active`
 
-Provisioning jobs that try to add or update any other attribute fail. For the complete supported surface, including group attributes, see [Supported attributes](/docs/administration/guides/scim/#supported-attributes).
+Provisioning jobs that try to add or update any other attribute fail. For the complete supported surface, including group attributes, see [Supported attributes](/docs/administration/concepts/scim/#supported-attributes).
 
 Suggested Resolution: Update the attribute mappings in the identity provider and delete all unsupported attributes. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 

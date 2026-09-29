@@ -111,9 +111,11 @@ With the block of XML text in your clipboard:
 1. Paste the IdP metadata descriptor into the text area.
 1. Select **Apply changes**.
 
-## Configuring session lifetime
+## Optional: configure session lifetime
 
-The Pulumi Cloud uses the `SessionNotOnOrAfter` attribute in the `AuthnStatement` element to configure the session lifetime. To configure this in Okta, you must use a [SAML assertion inline hook](https://developer.okta.com/docs/guides/saml-inline-hook/main/).
+This step is optional. If you skip it, Pulumi Cloud uses the default session lifetime of 12 hours. For details, see [Session lifetime](/docs/administration/guides/saml/sso/#session-lifetime).
+
+Pulumi Cloud uses the `SessionNotOnOrAfter` attribute in the `AuthnStatement` element to set the session lifetime. To set this attribute in Okta, use a [SAML assertion inline hook](https://developer.okta.com/docs/guides/saml-inline-hook/main/).
 
 The JSON payload the inline hook sends to Okta should contain the following:
 

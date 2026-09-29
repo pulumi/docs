@@ -7,7 +7,7 @@ menu:
   administration:
     name: Accounts
     parent: administration-concepts
-    weight: 3
+    weight: 4
 aliases:
 - /docs/administration/organizations-teams/accounts/
 - /docs/intro/console/accounts/
@@ -56,7 +56,7 @@ Two attributes identify your account:
 Your username and email are separate from the identities you use to sign in. Adding a GitHub identity to your account does not change your Pulumi username.
 
 {{% notes type="info" %}}
-For accounts synchronized by SCIM, `userName` is immutable once the account exists, and an identity provider that pushes a changed `userName` on an update gets an error. This is a SCIM-specific rule and is distinct from renaming your own account in the console. See [Usernames cannot change](/docs/administration/guides/scim/#usernames-cannot-change).
+For accounts synchronized by SCIM, `userName` is immutable once the account exists, and an identity provider that pushes a changed `userName` on an update gets an error. This is a SCIM-specific rule and is distinct from renaming your own account in the console. See [Usernames cannot change](/docs/administration/concepts/scim/#usernames-cannot-change).
 {{% /notes %}}
 
 ## Renaming your account

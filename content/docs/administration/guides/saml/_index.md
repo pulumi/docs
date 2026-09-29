@@ -3,8 +3,8 @@ title_tag: SAML Single Sign-On (SSO) Guides
 meta_desc:
   This page provides an overview of how to configure any SAML 2.0 identity provider
   with Pulumi Cloud.
-title: SAML(SSO)
-h1: Pulumi Cloud SAML(SSO)
+title: SAML SSO
+h1: Pulumi Cloud SAML SSO
 menu:
   administration:
     parent: administration-guides
