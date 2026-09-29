@@ -84,7 +84,7 @@ For instance, let's say your infrastructure team has provisioned your network in
 
 Instead, you can look up that stack by name and use one of its output values. The following example reads an AWS CloudFormation stack named `my-network-stack` and then uses the exported `SubnetId` value to provision a brand new EC2 instance that runs in that subnet:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -197,6 +197,26 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+data "aws_cloudformation_stack" "network" {
+  name = "my-network-stack"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0adc0e3ef2558cb1f" # us-west-2 AMI
+  instance_type = "t3.micro"
+  subnet_id     = data.aws_cloudformation_stack.network.outputs["SubnetId"]
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 All we need to do is run `pulumi up` and the Pulumi runtime will know how to query the CloudFormation stack and retrieve its output values. In this case, the CloudFormation stack is treated entirely as read-only, and Pulumi will never attempt to modify it or any resources managed by it.
@@ -218,7 +238,7 @@ The Pulumi AWS package [provides a CloudFormation Stack](/registry/packages/aws/
 
 For instance, this code deploys a simple CloudFormation template using the given parameters, and exports the resulting VPC ID:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -424,6 +444,56 @@ class Program
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_cloudformation_stack" "network" {
+  name = "my-network-stack"
+
+  parameters = {
+    VPCCidr = "10.0.0.0/16"
+  }
+
+  template_body = <<-JSON
+    {
+        "Parameters" : {
+            "VPCCidr" : {
+                "Type" : "String",
+                "Default" : "10.0.0.0/16",
+                "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+            }
+        },
+        "Resources": {
+            "myVpc": {
+                "Type" : "AWS::EC2::VPC",
+                "Properties" : {
+                    "CidrBlock" : { "Ref" : "VPCCidr" },
+                    "Tags" : [
+                        {"Key": "Name", "Value": "Primary_CF_VPC"}
+                    ]
+                }
+            }
+        },
+        "Outputs": {
+            "VpcId": {
+                "Value": { "Ref": "myVpc" }
+            }
+        }
+    }
+  JSON
+}
+
+output "vpc_id" {
+  value = aws_cloudformation_stack.network.outputs["VpcId"]
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 > We could have just as well read the template off disk, instead of putting it right in the source code.
@@ -491,7 +561,7 @@ Remember to run `pulumi up` so that your changes are applied before moving on.
 
 Next, we can adopt the resources under Pulumi's control, by using `import` IDs. For this example, recall that our VPC ID from above was `"vpc-0e1a74859af1da17f"`, which is what we will use for illustration purposes. Also, in this example, there is just one resource, so we can simply delete the CloudFormation stack in its entirety and replace it with a Pulumi definition of the VPC. In cases where multiple resources exist, you can delete them one by one, until the stack is eventually empty.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -591,6 +661,35 @@ class Program
     }
 }
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+import {
+  to = aws_vpc.my_vpc
+  id = "vpc-0e1a74859af1da17f"
+}
+
+resource "aws_vpc" "my_vpc" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "Primary_CF_VPC"
+  }
+}
+
+output "vpc_id" {
+  value = aws_vpc.my_vpc.id
+}
+```
+
+Once the import has run, delete the `import` block; the `resource` block alone keeps managing the VPC.
 
 {{% /choosable %}}
 

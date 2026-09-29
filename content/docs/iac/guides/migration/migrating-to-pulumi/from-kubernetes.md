@@ -44,7 +44,7 @@ $ curl -L --remote-name \
 
 This Pulumi program uses `ConfigFile` to read that YAML file, provision the resources inside it, and export the resulting IP addresses:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -178,11 +178,47 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
+
+# Create resources from standard Kubernetes guestbook YAML example.
+resource "kubernetes_yaml_v2_config_file" "guestbook" {
+  file = "guestbook-all-in-one.yaml"
+}
+```
+
+`ConfigFile` exposes the objects it created as its `resources` output. HCL has no equivalent of the `getResource` helper the other languages use to pick one out by kind and name, so this program deploys the guestbook without exporting the frontend service's IP address.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 As we can see here, the `getResource` function lets us retrieve an internal resource by type and name, so that we can interact with its properties. These will be strongly typed based on the resource type. Be careful using this, as it makes your code subject to the internal implementation details of the YAML configuration &mdash; however, it's often necessary to find the information you need, like the auto-assigned IP addresses.
 
+{{% /choosable %}}
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Running `pulumi up` will deploy the resources and then export the resulting frontend service's auto-assigned cluster IP address:
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Running `pulumi up` deploys the same resources. Because the HCL program exports nothing, its output omits the `Outputs` section shown here:
+
+{{% /choosable %}}
 
 ```bash
 Updating (dev)
@@ -220,7 +256,7 @@ $ popd
 
 This Pulumi program uses `ConfigGroup` to read these YAML files, provision the resources inside of them, and export the resulting IP addresses:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -359,9 +395,41 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
+
+# Create resources from standard Kubernetes guestbook YAML example.
+resource "kubernetes_yaml_v2_config_group" "guestbook" {
+  files = ["yaml/*.yaml"]
+}
+```
+
+As with `ConfigFile`, HCL can't pick the frontend service out of the group's `resources` output, so this program exports no IP address.
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Running `pulumi up` will deploy the resources in every YAML file and then export the resulting frontend service's auto-assigned cluster IP address:
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Running `pulumi up` deploys the resources in every YAML file. Because the HCL program exports nothing, its output omits the `Outputs` section shown here:
+
+{{% /choosable %}}
 
 ```bash
 Updating (dev)
@@ -776,7 +844,7 @@ To render YAML during a `pulumi up` rather than have Pulumi perform the deployme
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -978,6 +1046,64 @@ class Program
     }
 }
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "pulumi/kubernetes"
+      version = "4.23.0"
+    }
+  }
+}
+
+# Instantiate a Kubernetes provider and specify the render directory.
+provider "kubernetes" {
+  alias                    = "renderer"
+  render_yaml_to_directory = "yaml"
+}
+
+locals {
+  labels = { app = "nginx" }
+}
+
+# Create an NGINX Deployment and load-balanced Service that use it.
+resource "kubernetes_apps_v1_deployment" "nginx-dep" {
+  provider = kubernetes.renderer
+
+  spec = {
+    selector = { match_labels = local.labels }
+    replicas = 1
+    template = {
+      metadata = { labels = local.labels }
+      spec = {
+        containers = [{
+          name  = "nginx"
+          image = "nginx"
+        }]
+      }
+    }
+  }
+}
+
+resource "kubernetes_core_v1_service" "nginx-svc" {
+  provider = kubernetes.renderer
+
+  metadata = { labels = local.labels }
+
+  spec = {
+    type     = "LoadBalancer"
+    ports    = [{ port = 80, target_port = 80, protocol = "TCP" }]
+    selector = local.labels
+  }
+}
+```
+
+Property names are snake_case in HCL and are translated to the provider's camelCase, so `match_labels` and `target_port` reach the API as `matchLabels` and `targetPort`.
 
 {{% /choosable %}}
 

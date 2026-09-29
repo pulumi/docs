@@ -253,7 +253,7 @@ $ pulumi import --file ./my-resources.json
 
 After adding the specified resources to the current stack state, Pulumi generates the code necessary for managing the resources from that point forward:
 
-{{< chooser language "typescript,python,csharp,go" >}}
+{{< chooser language "typescript,python,csharp,go,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -485,6 +485,88 @@ class MyStack : Stack
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+resource "aws_ec2_vpc" "application-vpc" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_generated_ipv6_cidr_block = false
+  cidr_block                       = "172.16.0.0/16"
+  enable_dns_support               = true
+  instance_tenancy                 = "default"
+  tags = {
+    "Name"    = "pulumi-vpc"
+    "Owner"   = "pulumi"
+    "Project" = "pulumi-k8s-aws-cluster"
+  }
+}
+
+resource "aws_ec2_subnet" "public-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.32.0/19"
+  map_public_ip_on_launch         = true
+  tags = {
+    "Name"                   = "pulumi-vpc-public-1"
+    "Owner"                  = "pulumi"
+    "Project"                = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/elb" = "1"
+    "type"                   = "public"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+
+resource "aws_ec2_subnet" "private-1" {
+  pulumi {
+    protect = true
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+  assign_ipv6_address_on_creation = false
+  cidr_block                      = "172.16.160.0/19"
+  map_public_ip_on_launch         = false
+  tags = {
+    "Name"                            = "pulumi-vpc-private-1"
+    "Owner"                           = "pulumi"
+    "Project"                         = "pulumi-k8s-aws-cluster"
+    "kubernetes.io/role/internal-elb" = "1"
+    "type"                            = "private"
+  }
+  vpc_id = "vpc-0ad77710973388316"
+}
+```
+
+The import file names resources by Pulumi type tokens such as `aws:ec2/vpc:Vpc`, so the generated program uses the `pulumi/aws` provider and its matching types (`aws_ec2_vpc`, `aws_ec2_subnet`). Keep that provider. The Terraform `aws` provider's `aws_vpc` and `aws_subnet` register under different tokens (`aws:index:Vpc`), so Pulumi would treat them as new resources rather than the ones you just imported.
+
+If the resources you are importing are already described by a Terraform or OpenTofu state file, skip the import file entirely and point the converter at the state file instead:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads your `.tf` files alongside the state file, so run it from the project directory. See [Keep your code in HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#keep-your-code-in-hcl) for the full workflow.
+
+{{% /choosable %}}
+
 {{% /chooser %}}
 
 ### Import file schema
@@ -521,7 +603,7 @@ Code-based import also differs from the CLI-based approach in that it doesn't im
 
 The following example imports an existing AWS EC2 security group with an assigned cloud provider ID of `sg-04aeda9a214730248`:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -604,6 +686,40 @@ var group = new SecurityGroup("my-sg",
         ImportId = "sg-04aeda9a214730248"
     }
 );
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_security_group" "my_sg" {
+  name = "my-sg-62a569b"
+
+  ingress {
+    protocol    = "tcp"
+    from_port   = 80
+    to_port     = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  pulumi {
+    import_id = "sg-04aeda9a214730248"
+  }
+}
+```
+
+A standalone [`import` block](/docs/iac/languages-sdks/hcl/hcl-language-reference/#import-blocks) does the same job and leaves the resource body unchanged:
+
+```hcl
+import {
+  to = aws_security_group.my_sg
+  id = "sg-04aeda9a214730248"
+}
 ```
 
 {{% /choosable %}}
