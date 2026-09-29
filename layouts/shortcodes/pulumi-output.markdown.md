@@ -1,9 +1,9 @@
 <!-- chooser: language -->
 <!-- option: javascript -->
-[`Output`](/docs/reference/pkg/nodejs/pulumi/pulumi/#Output)
+[`Output`](/docs/reference/pkg/nodejs/pulumi/pulumi/types/Output.html)
 <!-- /option -->
 <!-- option: typescript -->
-[`Output<T>`](/docs/reference/pkg/nodejs/pulumi/pulumi/#Output)
+[`Output<T>`](/docs/reference/pkg/nodejs/pulumi/pulumi/types/Output.html)
 <!-- /option -->
 <!-- option: python -->
 [`Output[T]`](/docs/reference/pkg/python/pulumi/#pulumi.Output)
