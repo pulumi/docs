@@ -31,6 +31,14 @@ Investigate as content triggers each priority below.
 
 Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. The reference owns claim extraction; in blog copy, pay particular attention to **performance multipliers**, **competitor claims**, and **adoption / market-position statistics** — common in this domain and high-blast-radius when wrong.
 
+**Third-party framing.** Fact-check verifies that an attributed claim is *true*. This pass, run alongside it, checks that the claim is *framed* safely: a true third-party metric can still be a publishing problem if the post moves it onto Pulumi or implies a relationship that doesn't exist. Findings follow the standard bucket rules in `docs-review:references:output-format`.
+
+- **Metrics are attributed where they're used.** A third-party number ("cut deploy time by 70%") names its source in the same sentence every time the post uses it, not only in an earlier paragraph or a footnote. Quote the unattributed use; propose "According to <source>, …" or "<Source> reports …".
+- **No implied Pulumi causation or guarantee.** Flag constructions that move a third party's outcome onto Pulumi: "With Pulumi, you'll cut deploy time by 70%", "Pulumi guarantees …". Quote the construction; propose a rewrite that keeps the metric with its source and says plainly what Pulumi does.
+- **No implied endorsement.** A named company, project, or person must not read as recommending or using Pulumi unless the cited source says so. Quote the construction ("X recommends …", "trusted by X", a named company alongside a Pulumi CTA); propose neutral framing. Companies Pulumi names publicly as customers are the ones in `data/customers.yaml`.
+- **Adaptations are labeled.** When a post rebuilds a third party's published architecture or case study with Pulumi, it says so, and says the result is not that party's implementation. Quote the first description of the architecture; propose a one-sentence disclaimer ("This post adapts that architecture with Pulumi. It is not <party>'s implementation.").
+- **Summarize and link; don't copy.** A passage that tracks a source's wording closely, beyond a short quoted and attributed excerpt, is a finding. Quote the passage and the matching source text; propose a summary with a link.
+
 ### Priority 2 — Prose patterns and spelling/grammar
 
 Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
